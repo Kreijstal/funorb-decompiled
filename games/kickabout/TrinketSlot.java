@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TrinketSlot extends UiLayoutNode implements lv {
+final class TrinketSlot extends UiLayoutNode implements PopupCard {
     private ArgbSprite field_Cb;
     private String field_Hb;
     static DualLinkHashTable field_Eb;
@@ -22,9 +22,9 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         }
     }
 
-    public final void a(int param0, int param1, int param2) {
-        int var4 = this.b(0);
-        int var5 = this.a(param1 ^ 24);
+    public final void drawCentered(int param0, int param1, int param2) {
+        int var4 = this.getWidth(0);
+        int var5 = this.getHeight(param1 ^ 24);
         int var6 = -(var4 >> 1) + param2;
         int var7 = -(var5 >> 1) + param0;
         SoftwareRasterizer.a(var6, var7, var4, var5, 52479, 60);
@@ -44,20 +44,20 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         }
     }
 
-    final static vn a(boolean param0, int param1, boolean[][] param2, byte param3, boolean[][] param4, int param5, int param6) {
-        vn[] array$0 = null;
-        vn stackIn_7_0;
-        vn stackIn_7_1;
-        vn[] stackIn_7_2;
-        vn[] stackIn_7_3;
+    final static MeshData a(boolean param0, int param1, boolean[][] param2, byte param3, boolean[][] param4, int param5, int param6) {
+        MeshData[] array$0 = null;
+        MeshData stackIn_7_0;
+        MeshData stackIn_7_1;
+        MeshData[] stackIn_7_2;
+        MeshData[] stackIn_7_3;
         int stackIn_7_4;
-        vn stackIn_8_0 = null;
-        vn stackIn_8_1 = null;
-        vn stackIn_8_5 = null;
-        vn stackIn_12_0 = null;
+        MeshData stackIn_8_0 = null;
+        MeshData stackIn_8_1 = null;
+        MeshData stackIn_8_5 = null;
+        MeshData stackIn_12_0 = null;
         int stackIn_29_0 = 0;
         int stackIn_45_0 = 0;
-        vn stackIn_53_0 = null;
+        MeshData stackIn_53_0 = null;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
         String stackIn_57_2 = null;
@@ -66,11 +66,11 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         int var8_int = 0;
-        vn var8 = null;
+        MeshData var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        vn var12 = null;
+        MeshData var12 = null;
         int var13 = 0;
         int var14 = 0;
         short[] var16 = null;
@@ -81,9 +81,9 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        vn var24 = null;
+        MeshData var24 = null;
         int var25 = 0;
-        vn var26 = null;
+        MeshData var26 = null;
         short[] var30 = null;
         int var9Lifetime1;
         int var13Lifetime1;
@@ -98,7 +98,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         int var22Lifetime1;
         var23 = Kickabout.field_G;
         try {
-          var24 = new vn(new vn[]{IndexedSpriteState.field_j[param1]}, 1);
+          var24 = new MeshData(new MeshData[]{IndexedSpriteState.field_j[param1]}, 1);
           var26 = var24;
           if (param0) {
             var8_int = wc.field_e[param1];
@@ -107,7 +107,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
               var26.field_l[var9] = var8_int + (-var8_int + var24.field_l[var9]) * 3;
             }
           }
-          array$0 = new vn[2];
+          array$0 = new MeshData[2];
           stackIn_7_0 = null;
           stackIn_7_1 = null;
           stackIn_7_2 = array$0;
@@ -123,11 +123,11 @@ final class TrinketSlot extends UiLayoutNode implements lv {
             stackIn_8_5 = PacketBuffer.field_m[param1];
           }
           stackIn_7_3[stackIn_7_4] = stackIn_8_5;
-          var8 = new vn(stackIn_7_2, 2);
+          var8 = new MeshData(stackIn_7_2, 2);
           var10 = -10 % ((param3 + 49) / 51);
           var9Lifetime1 = (short)param5;
           var11 = (short)param6;
-          var12 = new vn(var8, true, false, true, true);
+          var12 = new MeshData(var8, true, false, true, true);
           if (param2 == null &&
             param4 == null) {
             stackIn_12_0 = var12;
@@ -206,7 +206,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         }
     }
 
-    public final int b(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != 0) {
           return -18;
         }
@@ -231,13 +231,13 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         int var5 = 83 % ((40 - param0) / 43);
     }
 
-    public final int a(int param0) {
+    public final int getHeight(int param0) {
         int var2 = 50;
         if (param0 != 15) {
           return -84;
         }
         if (this.field_Bb.field_h != 0) {
-          var2 = var2 + (20 + ConsoleTokenCursor.field_d.paragraphHeight(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
+          var2 = var2 + (20 + ConsoleTokenCursor.field_d.paragraphHeight(us.field_h[this.field_Bb.field_h], this.getWidth(param0 ^ 15) - 10, 12));
         }
         return var2;
     }

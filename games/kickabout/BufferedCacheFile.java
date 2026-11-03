@@ -63,9 +63,9 @@ final class BufferedCacheFile {
             return false;
           }
           if (NodeHashTableIterator.field_b == 2 &&
-            null != qi.field_o) {
+            null != PlayerStatSortCriterion.field_o) {
             var3 = (CharSequence) ((Object) param1);
-            if (!qi.field_o.equals(MatchAgent.a(0, var3))) {
+            if (!PlayerStatSortCriterion.field_o.equals(MatchAgent.a(0, var3))) {
               return false;
             }
             return true;
@@ -89,7 +89,7 @@ final class BufferedCacheFile {
         try {
           vp.field_k = param1;
           MainMenuScreen.field_F = param3;
-          cv.field_f = param2;
+          MeshObject.field_f = param2;
           int var4_int = 82 / ((60 - param0) / 61);
           ClientException.a(SoftwareRasterizer.field_f / 2, 0, SoftwareRasterizer.field_g / 2);
           StringCursor.a(param3.field_L, param3.field_p + param3.field_L, param2.field_L, param2.field_p + param2.field_L, (byte) 5);

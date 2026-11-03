@@ -10,7 +10,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
     static wp[] field_F;
 
     final void buildWidgets(int param0) {
-        this.field_A = eo.a("", 7126504, un.field_d, -1, false);
+        this.field_A = eo.createRenderedButton("", 7126504, un.field_d, -1, false);
         if (param0 != -38) {
           this.updateScreen((byte) -76, false);
         }

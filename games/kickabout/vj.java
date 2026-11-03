@@ -48,7 +48,7 @@ final class vj {
     final static void a(int param0, boolean param1) {
         int var2 = -25 % ((param0 - 38) / 59);
         if (GameModesHelpScreen.field_G != null) {
-          cv.a((byte) 93);
+          MeshObject.a((byte) 93);
         }
         DelayedServerPacket.a(AuctionLogEntry.field_h.previousScreenId, param1, -2);
     }

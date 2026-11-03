@@ -1072,7 +1072,7 @@ final class GameOverView extends MatchPhaseView {
                   }
                   var9 = stackIn_76_0 + (stackIn_73_1 - stackIn_74_2);
                   this.field_o[var8Lifetime1].a(true, 50, var9, 100, 100);
-                  this.field_s[var8Lifetime1] = eo.a(so.field_a.toLowerCase(), 7126504, un.field_d, 80, true);
+                  this.field_s[var8Lifetime1] = eo.createRenderedButton(so.field_a.toLowerCase(), 7126504, un.field_d, 80, true);
                   this.field_s[var8Lifetime1].a(true, this.field_s[var8Lifetime1].field_q, var9 - 15, 230, this.field_s[var8Lifetime1].field_mb);
                   var8Lifetime1++;
                 }

@@ -113,7 +113,7 @@ final class ql {
           var3_int = FriendsListPanel.a(false, (byte) 71);
           if (4 == vt.field_c.phase) {
             sk.a(1, var3_int);
-            od.a(param2, var3_int, vt.field_c.participantStatus, 14839);
+            PlayerValueSortCriterion.a(param2, var3_int, vt.field_c.participantStatus, 14839);
             if (ContextMenuItem.field_Cb == -2 ||
               !vt.field_c.participantStatus[ContextMenuItem.field_Cb].isActive(3511)) {
               ig.a(param1, 16777215, var3_int);

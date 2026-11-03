@@ -125,7 +125,7 @@ final class rr {
           }
           NodeHashTableIterator.field_b = 2;
           var5 = (CharSequence) ((Object) param0);
-          qi.field_o = MatchAgent.a(param1 ^ -70, var5);
+          PlayerStatSortCriterion.field_o = MatchAgent.a(param1 ^ -70, var5);
           IntDoubleCommand.field_A = param2;
           PlayArea.a(true);
         } catch (RuntimeException runtimeException) {

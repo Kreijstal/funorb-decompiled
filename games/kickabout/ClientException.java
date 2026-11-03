@@ -83,6 +83,6 @@ final class ClientException extends RuntimeException {
 
     static {
         field_b = "This is your auction.";
-        field_a = (SortCriterion) ((Object) new qi());
+        field_a = (SortCriterion) ((Object) new PlayerStatSortCriterion());
     }
 }

@@ -67,16 +67,16 @@ final class DualLinkDeque {
         }
     }
 
-    final static ModelMesh a(int param0, vn param1) {
+    final static ModelMesh a(int param0, MeshData param1) {
         int var5 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4_int = 0;
         ModelMesh var4 = null;
         int var6 = 0;
-        vn var7 = null;
+        MeshData var7 = null;
         int var8 = 0;
-        vn var9 = null;
+        MeshData var9 = null;
         ModelMesh stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -85,7 +85,7 @@ final class DualLinkDeque {
         int var4_intLifetime1;
         var6 = Kickabout.field_G;
         try {
-          var7 = new vn(param1, false, false, true, true);
+          var7 = new MeshData(param1, false, false, true, true);
           var9 = var7;
           var3 = 91 / ((param0 - 2) / 60);
           for (var4_int = 0; var9.field_p.length > var4_int; var4_int++) {
@@ -97,7 +97,7 @@ final class DualLinkDeque {
             var9.field_l[var8] = (var9.field_l[var8] << 1) / 3;
             var8++;
           }
-          var4 = (ModelMesh) (var9.a(127, 131072, 10, 10, 10));
+          var4 = (ModelMesh) (var9.createModel(127, 131072, 10, 10, 10));
           for (var5 = 0; var5 < var4.field_n.length; var5++) {
             var4.field_n[var5] = -1;
           }

@@ -107,7 +107,7 @@ final class SquadPickerDialog extends MessageDialog {
           this.field_H.a(101, false);
           this.field_H.k((byte) 84);
           if (-1 != this.field_H.field_Fb) {
-            GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
+            GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
             if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
               if (AuctionLogEntry.e(15137) &&
                 !ScrollPane.h((byte) 5)) {
@@ -155,7 +155,7 @@ final class SquadPickerDialog extends MessageDialog {
         this.field_H.a(101, false);
         this.field_H.k((byte) 84);
         if (-1 != this.field_H.field_Fb) {
-          GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
+          GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
           if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
             if (!AuctionLogEntry.e(15137)) {
               if (this.field_H.field_Fb != -1 &&

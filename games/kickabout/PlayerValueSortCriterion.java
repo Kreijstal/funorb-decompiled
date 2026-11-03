@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends SortCriterion {
+final class PlayerValueSortCriterion extends SortCriterion {
     static Sprite field_p;
     static boolean field_n;
     static String field_o;
 
-    od() {
+    PlayerValueSortCriterion() {
     }
 
     final int compare(int param0, Object param1, Object param2) {

@@ -402,7 +402,7 @@ final class DebugConsole extends ConsolePanel {
           else {
             this.field_k.setCaret(-85, 1 + var5);
           }
-          cv.field_c = IsaacRandom.a(this.field_k.getText((byte) -16), 120);
+          MeshObject.field_c = IsaacRandom.a(this.field_k.getText((byte) -16), 120);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -628,7 +628,7 @@ final class DebugConsole extends ConsolePanel {
         try {
           var4 = this.field_k.field_Lb.field_E;
           String var2 = var4;
-          this.field_k.field_Lb.field_E = cv.field_c;
+          this.field_k.field_Lb.field_E = MeshObject.field_c;
           int var3 = 114 % ((param0 - 50) / 45);
           super.a(-76);
           this.field_k.field_Lb.field_E = var4;

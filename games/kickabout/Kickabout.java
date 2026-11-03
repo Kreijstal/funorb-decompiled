@@ -48,7 +48,7 @@ public final class Kickabout extends GameLoopApplet {
         ((GameResourceLoader) (NetworkGameClient.field_t)).pollMessageOfTheDay(0);
         if (um.field_e == null &&
           !FadingSoundPlayer.field_q &&
-          !od.field_n ||
+          !PlayerValueSortCriterion.field_n ||
           null != um.field_e &&
           MyKitScreen.field_O) {
           MenuButton.a(2);
@@ -83,7 +83,7 @@ public final class Kickabout extends GameLoopApplet {
           var6 = -var5 + 256;
           FormationAgent.field_f = var5 * po.a(AuctionLogEntry.field_h, -4) + po.a(GameModesHelpScreen.field_G, -4) * var6 >> 8;
           if (BuyPlayerDialog.field_I == 24) {
-            cv.a((byte) 105);
+            MeshObject.a((byte) 105);
           }
         }
         ImageProducerRasterBuffer.b(true);
@@ -157,7 +157,7 @@ public final class Kickabout extends GameLoopApplet {
           QuickChatPhraseCache.field_d = true;
           LoginText.field_e = true;
         } else {
-          if (od.field_n) {
+          if (PlayerValueSortCriterion.field_n) {
             TextButton.field_B = true;
             FriendsListPanel.field_Db = true;
             k.field_k = true;
@@ -178,7 +178,7 @@ public final class Kickabout extends GameLoopApplet {
                 DelayedServerPacket.a(18, false, -2);
               }
             }
-            od.field_n = false;
+            PlayerValueSortCriterion.field_n = false;
             vr.b(1);
           }
           LoginText.field_e = false;
@@ -710,7 +710,7 @@ public final class Kickabout extends GameLoopApplet {
         if (param0 >= -70) {
           return true;
         }
-        stackIn_8_0 = (od.field_n) || (LoginText.field_e) || (QuickChatPhraseCache.field_d);
+        stackIn_8_0 = (PlayerValueSortCriterion.field_n) || (LoginText.field_e) || (QuickChatPhraseCache.field_d);
         return stackIn_8_0;
     }
 
@@ -985,31 +985,31 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param0 == 9) {
-              cv.a((byte) 87);
+              MeshObject.a((byte) 87);
               LoginText.field_e = false;
               DelayedServerPacket.a(10, false, -2);
               ka.a(2, param1.readString(param2 - 98));
               return true;
             }
             if (param0 == 14) {
-              cv.a((byte) 81);
+              MeshObject.a((byte) 81);
               ConsoleTokenCursor.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), AnimationPlayer.b(-116), UrlRequest.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
               DropTargetWidget.a(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
               LoginText.field_e = false;
-              od.field_n = true;
+              PlayerValueSortCriterion.field_n = true;
               if (!QuickChatPhraseCache.field_d) {
                 DelayedServerPacket.a(-3, false, -2);
               }
               return true;
             }
             if (param0 == 15) {
-              if (od.field_n) {
+              if (PlayerValueSortCriterion.field_n) {
                 ReceivedAuctionItem.f((byte) 119);
                 ContextMenuItem.b(122);
                 DelayedServerPacket.a(0, false, -2);
                 TextButton.field_B = true;
                 k.field_k = true;
-                od.field_n = false;
+                PlayerValueSortCriterion.field_n = false;
                 FriendsListPanel.field_Db = true;
                 vr.b(1);
               }
@@ -1018,7 +1018,7 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (10 == param0 &&
-              od.field_n) {
+              PlayerValueSortCriterion.field_n) {
               VerticalScrollbar.i(14);
               return true;
             }
@@ -1220,7 +1220,7 @@ public final class Kickabout extends GameLoopApplet {
               TextButton.field_B = true;
             }
             var4_intLifetime7 = param1.field_n;
-            cv.a((byte) 72);
+            MeshObject.a((byte) 72);
             stackIn_160_0 = (0 == param1.readUnsignedByte((byte) -106)) ? 0 : 1;
             var5Lifetime5 = stackIn_160_0;
             stackIn_163_0 = (0 == param1.readUnsignedByte((byte) -116)) ? 0 : 1;
@@ -1766,7 +1766,7 @@ public final class Kickabout extends GameLoopApplet {
         FormationView.f(param0 - 15646);
         LineupView.releaseStatics((byte) -113);
         DateOfBirthPanel.a(param0 + 905215451);
-        cv.releaseStatics((byte) -39);
+        MeshObject.releaseStatics((byte) -39);
         ia.a((byte) 107);
         rn.releaseStatics(-66);
         AnimationSkeleton.a(-1);
@@ -1869,9 +1869,9 @@ public final class Kickabout extends GameLoopApplet {
         ConsoleTokenCursor.releaseStatics(-84);
         en.b((byte) 38);
         rl.releaseStatics(20);
-        ba.c((byte) -35);
-        od.releaseStatics(param0 - 6);
-        qi.b((byte) 85);
+        TrinketCountSortCriterion.c((byte) -35);
+        PlayerValueSortCriterion.releaseStatics(param0 - 6);
+        PlayerStatSortCriterion.b((byte) 85);
         SortCriterion.a((byte) 121);
         nk.a(-15207);
         pa.c((byte) 125);

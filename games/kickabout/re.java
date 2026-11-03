@@ -121,7 +121,7 @@ final class re implements WidgetPainter {
               var1_int = var1_int + pr.field_d;
             }
             if (var4 < 0) {
-              cv.field_f.a(var6, var8Lifetime1, jl.field_d + var1_int, var5, -1);
+              MeshObject.field_f.a(var6, var8Lifetime1, jl.field_d + var1_int, var5, -1);
               var1_int = var1_int + PlayArea.field_c;
             } else {
               MainMenuScreen.field_F.a(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
@@ -276,7 +276,7 @@ final class re implements WidgetPainter {
               GameResourceLoader.a((byte) -48);
             }
             if (ih.field_c == 2) {
-              cv.a(11383);
+              MeshObject.a(11383);
             }
             vd.a(0, 10);
             vp.a(-4121, RankingsScreen.field_C);

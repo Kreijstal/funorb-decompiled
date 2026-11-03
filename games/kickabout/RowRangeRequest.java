@@ -8,7 +8,7 @@ final class RowRangeRequest extends IntrusiveNode {
     private int count;
     private int startIndex;
     static String field_g;
-    static vn field_k;
+    static MeshData field_k;
     static Sprite field_f;
 
     final void writeToPacket(CipherPacketBuffer param0, byte param1) {

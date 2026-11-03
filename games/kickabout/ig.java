@@ -138,7 +138,7 @@ final class ig {
             ig.a(127L, (String) null, (byte) 87);
           }
           var6 = (CharSequence) ((Object) param1);
-          qi.field_o = MatchAgent.a(0, var6);
+          PlayerStatSortCriterion.field_o = MatchAgent.a(0, var6);
           IntDoubleCommand.field_A = param0;
           TextFieldNode.field_Wb = true;
         } catch (RuntimeException runtimeException) {

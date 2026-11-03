@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PlayerStats implements lv {
+final class PlayerStats implements PopupCard {
     static String field_d;
     static ResourceArchive field_m;
     int archetype;
@@ -327,7 +327,7 @@ final class PlayerStats implements lv {
         return false;
     }
 
-    public final int a(int param0) {
+    public final int getHeight(int param0) {
         if (param0 != 15) {
           this.f(71);
         }
@@ -619,7 +619,7 @@ final class PlayerStats implements lv {
         }
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void drawCentered(int param0, int param1, int param2) {
         ClubState var7 = null;
         if (this.isEmpty(-2)) {
           return;
@@ -636,7 +636,7 @@ final class PlayerStats implements lv {
           var6 = var7.field_R;
           var5 = var7.field_k;
         }
-        this.a((byte) 70, -(this.b(0) >> 1) + param2, false, var6, var4, var5, -(this.a(param1 ^ 24) >> 1) + param0, false);
+        this.a((byte) 70, -(this.getWidth(0) >> 1) + param2, false, var6, var4, var5, -(this.getHeight(param1 ^ 24) >> 1) + param0, false);
     }
 
     final void clear(byte param0) {
@@ -943,7 +943,7 @@ final class PlayerStats implements lv {
         stackIn_20_1 = 3;
         stackIn_21_2 = (!param2) ? 0 : 20;
         stackIn_20_0[stackIn_20_1] = stackIn_21_2;
-        var13 = this.b(0);
+        var13 = this.getWidth(0);
         var14 = 0;
         var15 = param6;
         var16_int = 0;
@@ -1071,7 +1071,7 @@ final class PlayerStats implements lv {
         field_k = null;
     }
 
-    public final int b(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != 0) {
           field_p = 95;
         }

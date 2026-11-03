@@ -28,7 +28,7 @@ final class tr implements OverlayLayer {
         if (param0 <= 63) {
           field_e = (int[]) null;
         }
-        stackIn_6_0 = (od.field_n) && (MainMenuScreen.isScreenShown(-3, -1));
+        stackIn_6_0 = (PlayerValueSortCriterion.field_n) && (MainMenuScreen.isScreenShown(-3, -1));
         return stackIn_6_0;
     }
 
@@ -282,7 +282,7 @@ final class tr implements OverlayLayer {
         if (param0 != -25) {
           field_e = (int[]) null;
         }
-        if (od.field_n) {
+        if (PlayerValueSortCriterion.field_n) {
           if (this.c(-1) &&
             this.field_a < 20) {
             this.field_a = this.field_a + 1;

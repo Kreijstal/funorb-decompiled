@@ -18,7 +18,7 @@ final class CheatCodeListener implements OverlayLayer {
     private final void a(int param0, int param1) {
         int var4 = 0;
         boolean[][][] var11 = null;
-        vn var6 = null;
+        MeshData var6 = null;
         int var7 = Kickabout.field_G;
         int var3 = param1 != 0 ? 0 : 1;
         for (var4 = 0; 4 > var4; var4++) {

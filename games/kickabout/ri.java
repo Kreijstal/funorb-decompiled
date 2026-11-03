@@ -810,6 +810,6 @@ class ri extends TextWidgetPainter {
         field_s = "Pending";
         field_v = "to go straight into a multiplayer Exhibition Game with a preset team";
         field_r = 200;
-        field_u = (SortCriterion) ((Object) new ba());
+        field_u = (SortCriterion) ((Object) new TrinketCountSortCriterion());
     }
 }

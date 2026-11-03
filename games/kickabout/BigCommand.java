@@ -28,7 +28,7 @@ final class BigCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(qi.b(3));
+            stackIn_4_0 = new ConsoleValue(PlayerStatSortCriterion.b(3));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

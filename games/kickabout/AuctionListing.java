@@ -455,7 +455,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -52, "mu_invite_withdrawn");
                 if (null != var2) {
-                  cv.field_g = BlackFadeScreen.a(var2, param0);
+                  MeshObject.field_g = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -127, "mu_request_declined");
                 if (null != var2) {
@@ -1297,7 +1297,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -82, "justplay");
                 if (var2 != null) {
-                  ba.field_o = BlackFadeScreen.a(var2, param0);
+                  TrinketCountSortCriterion.field_o = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -120, "justplay_excl");
                 if (var2 != null) {
@@ -1765,7 +1765,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -119, "create_password_tooltip");
                 if (null != var2) {
-                  od.field_o = BlackFadeScreen.a(var2, true);
+                  PlayerValueSortCriterion.field_o = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -88, "create_password_hint");
                 if (!param0) {

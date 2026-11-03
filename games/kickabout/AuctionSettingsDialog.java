@@ -216,7 +216,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         int var12;
         var12 = Kickabout.field_G;
         super.a((byte) -124, param1, param2);
-        wk.field_c.a(150 + param2, 23, param1 + 98);
+        wk.field_c.drawCentered(150 + param2, 23, param1 + 98);
         IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
         if (param0 > -11) {
           field_J = (UiLayoutNode) null;

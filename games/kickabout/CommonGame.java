@@ -2624,7 +2624,7 @@ final class CommonGame {
             return;
           }
           this.phase = param0;
-          this.phaseTime = cv.field_a[this.phase];
+          this.phaseTime = MeshObject.field_a[this.phase];
           if (this.phase == 0) {
             this.field_n = new TeamSelectionAgent(this.participantStatus);
             if (var7 == 0) {

@@ -156,7 +156,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           for (var22 = 0; var22 < 2; var22++) {
             if (var7 != 0) {
-              ListRow.a(-12376, var14 + var12 * var22, -var5 + var15, od.field_p);
+              ListRow.a(-12376, var14 + var12 * var22, -var5 + var15, PlayerValueSortCriterion.field_p);
               AuctionsScreen.a(-840618968, var12 * var22 + var14, DualLinkNode.field_h[var1_int], -var18 + var15);
             }
             if (var9 != 0) {

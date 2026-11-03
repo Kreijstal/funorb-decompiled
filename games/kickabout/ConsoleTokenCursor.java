@@ -30,10 +30,10 @@ final class ConsoleTokenCursor {
         try {
           rp.field_x = param5;
           AnimationPlayer.field_c = -1L;
-          qi.field_p = param8;
+          PlayerStatSortCriterion.field_p = param8;
           ss.field_j = param5.length;
           InstrumentNoteMask.field_k = false;
-          er.field_h = new byte[(7 + qi.field_p) / 8];
+          er.field_h = new byte[(7 + PlayerStatSortCriterion.field_p) / 8];
           PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
           var10_int = 0;

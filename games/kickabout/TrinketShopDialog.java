@@ -97,16 +97,16 @@ final class TrinketShopDialog extends MessageDialog {
           var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.c(33));
         }
         if (this.field_t != var5) {
-          this.a(this.field_v, (lv) (var5), (Sprite) null, -94, this.field_u);
+          this.a(this.field_v, (PopupCard) (var5), (Sprite) null, -94, this.field_u);
         }
         TeamManagementScreen.e(123);
         if (null != this.field_H) {
           var6 = 130 + param1;
           var7 = 160 + param2;
-          var8 = this.field_H.field_Cb.b(0);
-          var9 = this.field_H.field_Cb.a(15);
+          var8 = this.field_H.field_Cb.getWidth(0);
+          var9 = this.field_H.field_Cb.getHeight(15);
           SoftwareRasterizer.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
-          this.field_H.field_Cb.a(var7, 23, var6);
+          this.field_H.field_Cb.drawCentered(var7, 23, var6);
           IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
             IsSixCommand.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);

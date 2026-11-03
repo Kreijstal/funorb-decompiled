@@ -212,7 +212,7 @@ abstract class SortCriterion {
         field_b = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_j = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         field_m = "This game has been updated! Please reload this page.";
-        field_k = (SortCriterion) ((Object) new od());
+        field_k = (SortCriterion) ((Object) new PlayerValueSortCriterion());
         field_e = "<%0> has been removed.";
         field_g = new String[]{"total goals", "posession"};
     }

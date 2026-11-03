@@ -45,7 +45,7 @@ final class MatchScreen extends AppScreen {
 
     final static void loadMatchSprites(byte param0, ResourceArchive param1) {
         int var3_int = 0;
-        vn[] var3 = null;
+        MeshData[] var3 = null;
         int var4 = 0;
         int[] var5 = null;
         int var6 = 0;
@@ -64,23 +64,23 @@ final class MatchScreen extends AppScreen {
           sk.a(param0 - 15, 5, 1);
           var9 = new String[]{"tank", "striker", "specialist", "scout", "keeper"};
           for (var3_int = 0; var3_int < 5; var3_int++) {
-            PacketBuffer.field_m[var3_int] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_body");
+            PacketBuffer.field_m[var3_int] = MeshData.load(param1, "", "Characters/" + var9[var3_int] + "_body");
             for (var4 = 0; var4 < 5; var4++) {
-              WidgetContainer.field_v[var3_int][var4] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 + 1));
+              WidgetContainer.field_v[var3_int][var4] = MeshData.load(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 + 1));
             }
-            WriteIntegersCommand.field_B[var3_int] = DualLinkDeque.a(107, new vn(new vn[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
+            WriteIntegersCommand.field_B[var3_int] = DualLinkDeque.a(107, new MeshData(new MeshData[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
           }
           sk.a(param0 + 111, 5, 2);
-          var3 = new vn[9];
-          var3[0] = vn.a(param1, "", "balls/skin_football");
-          var3[1] = vn.a(param1, "", "balls/skin_beachball");
-          var3[2] = vn.a(param1, "", "balls/skin_basketball");
-          var3[3] = vn.a(param1, "", "balls/skin_atom");
-          var3[4] = vn.a(param1, "", "balls/skin_tennisball");
-          var3[5] = vn.a(param1, "", "balls/sphere");
-          var3[8] = vn.a(param1, "", "balls/sphere_halloween");
-          var3[6] = vn.a(param1, "", "balls/planet2");
-          var3[7] = vn.a(param1, "", "balls/asteroid_craters_3");
+          var3 = new MeshData[9];
+          var3[0] = MeshData.load(param1, "", "balls/skin_football");
+          var3[1] = MeshData.load(param1, "", "balls/skin_beachball");
+          var3[2] = MeshData.load(param1, "", "balls/skin_basketball");
+          var3[3] = MeshData.load(param1, "", "balls/skin_atom");
+          var3[4] = MeshData.load(param1, "", "balls/skin_tennisball");
+          var3[5] = MeshData.load(param1, "", "balls/sphere");
+          var3[8] = MeshData.load(param1, "", "balls/sphere_halloween");
+          var3[6] = MeshData.load(param1, "", "balls/planet2");
+          var3[7] = MeshData.load(param1, "", "balls/asteroid_craters_3");
           sk.a(-104, 5, 3);
           if (param0 != -34) {
             MatchScreen.a(true);
@@ -90,22 +90,22 @@ final class MatchScreen extends AppScreen {
               var5 = new int[]{1000, -1000, 45, 532};
               var6 = var5[0] * TriangleRasterizer.field_o[0] >> 16;
               var7 = var5[0] * TriangleRasterizer.field_f[0] >> 16;
-              EmailSyntaxValidator.field_l[var4Lifetime1] = var3[var4Lifetime1].b(var5[2], var5[3], var6, var5[1], var7);
+              EmailSyntaxValidator.field_l[var4Lifetime1] = var3[var4Lifetime1].createModelMesh(var5[2], var5[3], var6, var5[1], var7);
             } else {
-              EmailSyntaxValidator.field_l[var4Lifetime1] = (ModelMesh) (var3[var4Lifetime1].a(110, 131072, 1, 1, 1));
+              EmailSyntaxValidator.field_l[var4Lifetime1] = (ModelMesh) (var3[var4Lifetime1].createModel(110, 131072, 1, 1, 1));
             }
           }
           sk.a(72, 5, 4);
-          gw.field_f[0] = vn.a(param1, "", "fans/fan_01");
-          gw.field_f[1] = vn.a(param1, "", "fans/fan_02");
-          gw.field_f[2] = vn.a(param1, "", "fans/fan_03");
-          gw.field_f[3] = vn.a(param1, "", "fans/fan_04");
-          gw.field_f[4] = vn.a(param1, "", "fans/fan_05");
-          of.field_f = vn.a(param1, "", "characters/torso");
-          RowRangeRequest.field_k = vn.a(param1, "", "characters/keeper_body_halloween");
-          IndexedSpriteState.field_j = new vn[5];
+          gw.field_f[0] = MeshData.load(param1, "", "fans/fan_01");
+          gw.field_f[1] = MeshData.load(param1, "", "fans/fan_02");
+          gw.field_f[2] = MeshData.load(param1, "", "fans/fan_03");
+          gw.field_f[3] = MeshData.load(param1, "", "fans/fan_04");
+          gw.field_f[4] = MeshData.load(param1, "", "fans/fan_05");
+          of.field_f = MeshData.load(param1, "", "characters/torso");
+          RowRangeRequest.field_k = MeshData.load(param1, "", "characters/keeper_body_halloween");
+          IndexedSpriteState.field_j = new MeshData[5];
           for (var4Lifetime2 = 0; 5 > var4Lifetime2; var4Lifetime2++) {
-            IndexedSpriteState.field_j[var4Lifetime2] = vn.a(param1, "", "characters/" + var9[var4Lifetime2] + "_head_halloween");
+            IndexedSpriteState.field_j[var4Lifetime2] = MeshData.load(param1, "", "characters/" + var9[var4Lifetime2] + "_head_halloween");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -41,7 +41,7 @@ final class mg {
     }
 
     final static RenderedFootballer a(PlayerStats param0, int param1, int param2, boolean param3, int param4, byte param5) {
-        vn var6 = null;
+        MeshData var6 = null;
         RuntimeException var6_ref = null;
         RenderedFootballer var7 = null;
         PlayerStats var8 = null;

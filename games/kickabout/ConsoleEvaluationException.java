@@ -56,8 +56,8 @@ final class ConsoleEvaluationException extends Exception {
                 lp.a(SplashScreen.field_m, (byte) -64);
               }
               if (ArchiveIndex.field_h == null &&
-                cv.field_e) {
-                ba.a(param0, param1 + 6, var2);
+                MeshObject.field_e) {
+                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
               }
               return;
             }
@@ -67,8 +67,8 @@ final class ConsoleEvaluationException extends Exception {
               var2 = 2;
               lp.a(SplashScreen.field_m, (byte) -64);
               if (ArchiveIndex.field_h == null &&
-                cv.field_e) {
-                ba.a(param0, param1 + 6, var2);
+                MeshObject.field_e) {
+                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
               }
               return;
             }
@@ -80,16 +80,16 @@ final class ConsoleEvaluationException extends Exception {
             if (!PlayArea.a(100)) {
               var2 = 1;
               if (ArchiveIndex.field_h == null &&
-                cv.field_e) {
-                ba.a(param0, param1 + 6, var2);
+                MeshObject.field_e) {
+                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
                 return;
               }
               return;
             }
             var2 = 0;
             if (ArchiveIndex.field_h == null &&
-              cv.field_e) {
-              ba.a(param0, param1 + 6, var2);
+              MeshObject.field_e) {
+              TrinketCountSortCriterion.a(param0, param1 + 6, var2);
               return;
             }
             return;
@@ -110,10 +110,10 @@ final class ConsoleEvaluationException extends Exception {
         if (ArchiveIndex.field_h != null) {
           return;
         }
-        if (!cv.field_e) {
+        if (!MeshObject.field_e) {
           return;
         }
-        ba.a(param0, param1 + 6, var2);
+        TrinketCountSortCriterion.a(param0, param1 + 6, var2);
     }
 
     ConsoleEvaluationException(String param0) {

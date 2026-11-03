@@ -10,7 +10,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
     static String[] field_D;
 
     final void buildWidgets(int param0) {
-        this.field_B = eo.a("", 7126504, un.field_d, -1, false);
+        this.field_B = eo.createRenderedButton("", 7126504, un.field_d, -1, false);
         if (param0 != -38) {
           this.field_B = (UiLayoutNode) null;
         }

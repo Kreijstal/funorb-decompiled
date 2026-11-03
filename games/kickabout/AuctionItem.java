@@ -49,7 +49,7 @@ class AuctionItem extends IntrusiveNode {
         }
     }
 
-    final static vn a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
+    final static MeshData a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
         if (param7) {
           Class var13 = (Class) null;
           AuctionItem.a(100, (Class) null);
@@ -100,12 +100,12 @@ class AuctionItem extends IntrusiveNode {
         var20 = Kickabout.field_G;
         try {
           ImageProducerRasterBuffer.field_i = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = ba.field_n.length;
+          var1_int = TrinketCountSortCriterion.field_n.length;
           var22 = new int[var1_int];
           var21 = var22;
           var2 = var21;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_kk = ba.field_n[var3];
+            var4_ref_kk = TrinketCountSortCriterion.field_n[var3];
             var4_ref_kk.computeBounds(false);
             MouseWheelInput.a(var3, 1);
             var5 = var4_ref_kk.field_y + var4_ref_kk.field_h >> 1;
@@ -144,15 +144,15 @@ class AuctionItem extends IntrusiveNode {
           var14 = (int)((double)var14 * var10Lifetime1);
           var15 = (int)((double)var15 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var16 = 0; ba.field_n.length > var16; var16++) {
+          for (var16 = 0; TrinketCountSortCriterion.field_n.length > var16; var16++) {
             var17 = 0;
-            for (var18_int = 1; var18_int < ba.field_n.length; var18_int++) {
+            for (var18_int = 1; var18_int < TrinketCountSortCriterion.field_n.length; var18_int++) {
               if (var22[var17] < var22[var18_int]) {
                 var17 = var18_int;
               }
             }
             var22[var17] = -2147483648;
-            var18 = ba.field_n[var17];
+            var18 = TrinketCountSortCriterion.field_n[var17];
             MouseWheelInput.a(var17, 1);
             for (var19 = 0; var19 < 3; var19++) {
               hh.field_g[var19] = hh.field_g[var19] + sm.field_l[var16][var19];

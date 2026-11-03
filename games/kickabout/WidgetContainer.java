@@ -9,7 +9,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
     static String[] field_w;
     static boolean field_z;
     static int field_A;
-    static vn[][] field_v;
+    static MeshData[][] field_v;
 
     UiWidget findFocusedChild(boolean param0) {
         IntrusiveDequeCursor var2 = null;
@@ -23,7 +23,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
           if (param0) {
-            field_v = (vn[][]) null;
+            field_v = (MeshData[][]) null;
           }
           var3 = (UiWidget) (var2.a((byte) 77));
           while (null != var3) {
@@ -51,7 +51,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           return;
         }
         try {
-          field_v = (vn[][]) null;
+          field_v = (MeshData[][]) null;
           field_w = null;
           field_x = null;
         } catch (RuntimeException runtimeException) {
@@ -910,7 +910,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17883) {
-            field_v = (vn[][]) null;
+            field_v = (MeshData[][]) null;
           }
           if (this.a(1, param3, param2, param1)) {
             this.b(param1, param3, param2, param0 - 36451);
@@ -1126,6 +1126,6 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
     static {
         field_z = true;
         field_A = 0;
-        field_v = new vn[5][5];
+        field_v = new MeshData[5][5];
     }
 }

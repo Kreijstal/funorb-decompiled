@@ -53,7 +53,7 @@ final class ea {
           var16 = Integer.toString(var8);
           var10 = var16;
           if (!(2 <= var16.length())) {
-            var10 = LeaguesScreen.a('0', (byte) -83) + var16;
+            var10 = LeaguesScreen.charToString('0', (byte) -83) + var16;
           }
           var11 = -25 + param3 - (var7 >= 10 ? 0 : 3);
           var12 = -4 + (param1 + 20);

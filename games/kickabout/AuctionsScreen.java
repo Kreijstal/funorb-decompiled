@@ -37,8 +37,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (param0 != -38) {
           this.field_B = (ReceivedAuctionItemRow[]) null;
         }
-        this.field_R = eo.a(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
-        this.field_P = eo.a(vd.field_b, 16679959, un.field_d, 162, true);
+        this.field_R = eo.createRenderedButton(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
+        this.field_P = eo.createRenderedButton(vd.field_b, 16679959, un.field_d, 162, true);
         this.field_R.field_s = 10;
         this.field_R.field_J = 56;
         this.field_P.field_J = 86;

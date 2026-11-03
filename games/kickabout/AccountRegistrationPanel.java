@@ -235,7 +235,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_E.field_u = SortCriterion.field_b;
         this.field_S.field_u = ColourSwatchTile.field_Bb;
         this.field_K.field_u = TutorialChoiceDialog.field_G;
-        this.field_T.field_u = od.field_o;
+        this.field_T.field_u = PlayerValueSortCriterion.field_o;
         this.field_N.field_u = UiLayoutNode.field_Z;
         this.field_J.field_u = SpriteState.field_r;
         this.field_O.field_u = le.field_b;

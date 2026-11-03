@@ -355,7 +355,7 @@ final class Bzip2State {
                   var20 = param0.field_I[var18];
                   var21Lifetime2 = param0.field_v[var18];
                   HelpTipDialog.field_F[var18] = var9 * var19 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
-                  ba.field_q[var18] = var16 * var21Lifetime2 + (var19 * var10 + var13 * var20) >> 16;
+                  TrinketCountSortCriterion.field_q[var18] = var16 * var21Lifetime2 + (var19 * var10 + var13 * var20) >> 16;
                   BytePlusOneCommand.field_E[var18] = var14 * var20 + (var11 * var19 + var21Lifetime2 * var17) >> 16;
                   var18++;
                 }

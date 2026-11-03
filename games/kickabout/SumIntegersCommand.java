@@ -71,7 +71,7 @@ final class SumIntegersCommand extends ConsoleCommand {
           if (param0 != 84) {
             field_A = (java.awt.Color) null;
           }
-          stackIn_3_0 = new ConsoleValue(LobbyPlayerRow.a((byte) -13, (int[]) (param1[0].field_d)));
+          stackIn_3_0 = new ConsoleValue(LobbyPlayerRow.sumInts((byte) -13, (int[]) (param1[0].field_d)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -36,7 +36,7 @@ final class r {
         if (!param0) {
           field_b = (String[]) null;
         }
-        ba.b((byte) 44);
+        TrinketCountSortCriterion.b((byte) 44);
         if (cr.b(0)) {
           or.field_d.b(1, (byte) -106);
           c.a(0, false);

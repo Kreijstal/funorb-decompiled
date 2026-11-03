@@ -29,16 +29,16 @@ final class MusicPatch extends IntrusiveNode {
         var1 = nj.monotonicMillis(-128);
         var3 = var1 - pc.field_c;
         if (30000L < var3) {
-          cv.field_d = 0;
+          MeshObject.field_d = 0;
           pc.field_c = var1;
           return true;
         }
         var5 = 3000;
-        if (cv.field_d >= 7) {
+        if (MeshObject.field_d >= 7) {
           var5 = 12000;
         } else {
-          if (cv.field_d < 5) {
-            if (cv.field_d >= 3) {
+          if (MeshObject.field_d < 5) {
+            if (MeshObject.field_d >= 3) {
               var5 = 6000;
             }
           } else {
@@ -49,7 +49,7 @@ final class MusicPatch extends IntrusiveNode {
           return false;
         }
         pc.field_c = var1;
-        cv.field_d = cv.field_d + 1;
+        MeshObject.field_d = MeshObject.field_d + 1;
         return true;
     }
 

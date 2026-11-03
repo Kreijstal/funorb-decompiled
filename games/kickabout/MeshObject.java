@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cv {
+abstract class MeshObject {
     static int field_d;
     static boolean field_e;
     static Sprite[][] field_b;
@@ -283,7 +283,7 @@ abstract class cv {
         field_a = null;
         field_b = (Sprite[][]) null;
         if (param0 > -5) {
-          cv.a(117);
+          MeshObject.a(117);
         }
     }
 

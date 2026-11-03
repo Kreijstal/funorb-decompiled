@@ -6,7 +6,7 @@ abstract class IndexedSpriteState {
     static IntrusiveDeque field_c;
     static boolean[][] field_e;
     int field_h;
-    static vn[] field_j;
+    static MeshData[] field_j;
     int field_b;
     int field_d;
     static int field_g;

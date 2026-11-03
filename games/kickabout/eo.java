@@ -646,7 +646,7 @@ final class eo {
 
     private final static UiLayoutNode a(String param0, int param1, BitmapFont param2) {
         int var3 = param2.a(param0) + 24;
-        return eo.a(param0, param1, param2, var3, true);
+        return eo.createRenderedButton(param0, param1, param2, var3, true);
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -861,7 +861,7 @@ final class eo {
         return;
     }
 
-    final static UiLayoutNode a(String param0, int param1, BitmapFont param2, int param3, boolean param4) {
+    final static UiLayoutNode createRenderedButton(String param0, int param1, BitmapFont param2, int param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
         param0 = param0.toLowerCase();
@@ -903,7 +903,7 @@ final class eo {
         return var6;
     }
 
-    final static ArgbSprite b(ArgbSprite param0) {
+    final static ArgbSprite mirrorVertically(ArgbSprite param0) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -1521,7 +1521,7 @@ final class eo {
         }
     }
 
-    final static ArgbSprite a(ArgbSprite param0) {
+    final static ArgbSprite mirrorHorizontally(ArgbSprite param0) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;

@@ -185,7 +185,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
               var3 = kj.field_b[var5];
             } else {
               if (mn.field_b[var1_int] > 0) {
-                var4 = qi.field_n[-1 + mn.field_b[var1_int]];
+                var4 = PlayerStatSortCriterion.field_n[-1 + mn.field_b[var1_int]];
                 var3 = TrinketUnlockNotice.field_a[mn.field_b[var1_int] - 1];
               }
             }

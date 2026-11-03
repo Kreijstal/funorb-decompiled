@@ -16,7 +16,7 @@ final class MyKitScreen extends TeamManagementScreen {
     private UiLayoutNode field_Y;
     private String field_T;
     private UiLayoutNode field_F;
-    private vn field_db;
+    private MeshData field_db;
     private int field_R;
     private UiLayoutNode[] field_J;
     private UiLayoutNode field_H;
@@ -91,7 +91,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var4Lifetime1 = stackIn_28_0 + stackIn_29_1;
         }
         if (var4Lifetime1 != 0) {
-          this.c(-75, var4Lifetime1);
+          this.stepSelection(-75, var4Lifetime1);
         }
         if (this.field_bb != ic.field_h.field_w ||
           this.field_N != ic.field_h.field_k ||
@@ -224,7 +224,7 @@ final class MyKitScreen extends TeamManagementScreen {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void stepSelection(int param0, int param1) {
         int var3 = this.field_U;
         this.field_U = this.field_U + param1;
         if (param0 >= -7) {
@@ -243,10 +243,10 @@ final class MyKitScreen extends TeamManagementScreen {
 
     final boolean handleKey(int param0, int param1, char param2) {
         if (param0 == 96) {
-          this.c(-22, -1);
+          this.stepSelection(-22, -1);
         }
         if (param0 == 97) {
-          this.c(-87, 1);
+          this.stepSelection(-87, 1);
         }
         if (param1 > -5) {
           this.drawScreen(78, true);
@@ -453,7 +453,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var12 = OffscreenPlayerArrow.field_f;
           var5 = TriangleRasterizer.field_o[var3] * var12[0] >> 16;
           var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
-          var7 = (ModelMesh) (this.field_cb.a(this.field_db.b(var12[2], var12[3], var5, var12[1], var6), false, true, true));
+          var7 = (ModelMesh) (this.field_cb.a(this.field_db.createModelMesh(var12[2], var12[3], var5, var12[1], var6), false, true, true));
           var7.a(0, var3, 0, 0, 0, 0, 0, 540);
           var8 = Math.max(120, IsSixCommand.field_C.a(this.field_T) + 30);
           SoftwareRasterizer.a(this.slideOffsetX + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);

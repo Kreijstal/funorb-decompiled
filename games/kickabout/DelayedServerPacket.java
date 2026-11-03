@@ -64,11 +64,11 @@ final class DelayedServerPacket extends IntrusiveNode {
         if (param0 <= 25) {
           DelayedServerPacket.a(111);
           pc.field_c = nj.monotonicMillis(82);
-          cv.field_d = 0;
+          MeshObject.field_d = 0;
           return;
         }
         pc.field_c = nj.monotonicMillis(82);
-        cv.field_d = 0;
+        MeshObject.field_d = 0;
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -89,7 +89,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         var6 = Kickabout.field_G;
         try {
           if (null != GameModesHelpScreen.field_G) {
-            cv.a((byte) 78);
+            MeshObject.a((byte) 78);
           }
           if (AuctionLogEntry.field_h.screenId == param0) {
             return;

@@ -766,7 +766,7 @@ final class PlayingView extends MatchPhaseView {
         PlayerStats var13_ref_up = null;
         int var13 = 0;
         int var14_int = 0;
-        vn var14 = null;
+        MeshData var14 = null;
         RenderedFootballer var15 = null;
         int var16 = 0;
         var16 = Kickabout.field_G;
@@ -1452,7 +1452,7 @@ final class PlayingView extends MatchPhaseView {
         PlayerStats var11_ref_up;
         int var11;
         int var12_int;
-        vn var12;
+        MeshData var12;
         int var13;
         var13 = Kickabout.field_G;
         var2 = 0;

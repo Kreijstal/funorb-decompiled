@@ -147,7 +147,7 @@ final class vr {
         Object var3;
         String var5;
         String var6;
-        if (null != cv.field_b[param1][param0]) {
+        if (null != MeshObject.field_b[param1][param0]) {
           return -1;
         }
         var3 = null;
@@ -168,14 +168,14 @@ final class vr {
         if (!QuickChatKeysHelpPanel.field_Cb.a(false, var6)) {
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName(var6, -16248);
         }
-        cv.field_b[param1][param0] = wa.a((byte) 113, var6, QuickChatKeysHelpPanel.field_Cb, "");
+        MeshObject.field_b[param1][param0] = wa.a((byte) 113, var6, QuickChatKeysHelpPanel.field_Cb, "");
         if (param1 != 1) {
           return -1;
         }
         if (param0 != 3) {
           return -1;
         }
-        nh.adjustSpriteHsv(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
+        nh.adjustSpriteHsv(MeshObject.field_b[param1][param0], 0.0, 1.6, 1.0);
         return -1;
     }
 

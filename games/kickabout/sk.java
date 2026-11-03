@@ -55,7 +55,7 @@ final class sk {
         var1Lifetime1.c((byte) -109);
     }
 
-    final static void a(int param0, int param1, lv param2) {
+    final static void a(int param0, int param1, PopupCard param2) {
         if (param1 != 16586) {
           return;
         }

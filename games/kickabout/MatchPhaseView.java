@@ -62,12 +62,12 @@ abstract class MatchPhaseView {
         return stackIn_6_0;
     }
 
-    final static vn a(boolean param0, int param1, int param2, int param3, boolean[][] param4, int param5, boolean[][] param6, byte param7, int param8, boolean param9, int param10) {
-        vn stackIn_4_0 = null;
-        vn stackIn_13_0 = null;
+    final static MeshData a(boolean param0, int param1, int param2, int param3, boolean[][] param4, int param5, boolean[][] param6, byte param7, int param8, boolean param9, int param10) {
+        MeshData stackIn_4_0 = null;
+        MeshData stackIn_13_0 = null;
         int stackIn_57_0 = 0;
         int stackIn_72_0 = 0;
-        vn stackIn_80_0 = null;
+        MeshData stackIn_80_0 = null;
         RuntimeException stackIn_83_0 = null;
         StringBuilder stackIn_83_1 = null;
         String stackIn_84_2 = null;
@@ -76,10 +76,10 @@ abstract class MatchPhaseView {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var11 = null;
         int var12_int = 0;
-        vn var12 = null;
+        MeshData var12 = null;
         int var13 = 0;
         int var14 = 0;
-        vn var15 = null;
+        MeshData var15 = null;
         int var16 = 0;
         int var17 = 0;
         short[] var19 = null;
@@ -90,9 +90,9 @@ abstract class MatchPhaseView {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        vn var27 = null;
+        MeshData var27 = null;
         int var28 = 0;
-        vn var29 = null;
+        MeshData var29 = null;
         short[] var33 = null;
         int var13Lifetime1;
         int var16Lifetime1;
@@ -122,7 +122,7 @@ abstract class MatchPhaseView {
             stackIn_4_0 = TrinketSlot.a(param9, param2, param4, (byte) -103, param6, param3, param10);
             return stackIn_4_0;
           }
-          var27 = new vn(new vn[]{WidgetContainer.field_v[param2][param8]}, 1);
+          var27 = new MeshData(new MeshData[]{WidgetContainer.field_v[param2][param8]}, 1);
           var29 = var27;
           if (param9) {
             var12_int = wc.field_e[param2];
@@ -131,10 +131,10 @@ abstract class MatchPhaseView {
               var29.field_l[var13] = 3 * (var27.field_l[var13] - var12_int) + var12_int;
             }
           }
-          var12 = new vn(new vn[]{var29, PacketBuffer.field_m[param2]}, 2);
+          var12 = new MeshData(new MeshData[]{var29, PacketBuffer.field_m[param2]}, 2);
           var13Lifetime1 = (short)param3;
           var14 = (short)param10;
-          var15 = new vn(var12, true, false, true, true);
+          var15 = new MeshData(var12, true, false, true, true);
           if (param4 == null &&
             param6 == null) {
             stackIn_13_0 = var15;

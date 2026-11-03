@@ -155,7 +155,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             return stackIn_12_0;
           }
           if (param0 == 9) {
-            stackIn_16_0 = cv.field_g;
+            stackIn_16_0 = MeshObject.field_g;
             return stackIn_16_0;
           }
           if (param0 == 10) {

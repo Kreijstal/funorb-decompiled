@@ -148,7 +148,7 @@ final class CascadingMenu extends UiLayoutNode {
           var12 = "</col>";
           for (var13 = 0; this.field_Fb > var13; var13++) {
             if (this.field_Hb[var13] > 0) {
-              param6[var13] = var11 + LeaguesScreen.a(this.field_Hb[var13], (byte) -83).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + LeaguesScreen.charToString(this.field_Hb[var13], (byte) -83).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_Ob[var13] != null ||

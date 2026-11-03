@@ -551,7 +551,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               var9 = stackIn_140_0;
               if (var29 != null) {
                 if (var9 != 0) {
-                  var29.a((byte) -2, var28, var27);
+                  var29.setNames((byte) -2, var28, var27);
                 }
               } else {
                 var8 = new LobbyPlayerRow(var27, var28, var3);

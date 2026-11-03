@@ -195,7 +195,7 @@ final class fv implements OverlayLayer {
             if (AccountTermsPanel.field_G.isEmpty(-2)) {
               return;
             }
-            var6_int = 6 + AccountTermsPanel.field_G.b(0);
+            var6_int = 6 + AccountTermsPanel.field_G.getWidth(0);
             var7 = AccountTermsPanel.field_G.a(ok.field_c, CachedListingRow.field_j, (byte) 77) + 7;
             var24 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
             var3 = var24[1];
@@ -204,13 +204,13 @@ final class fv implements OverlayLayer {
             AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
             if (AuctionItem.field_e == 6) {
-              var6_int = pc.field_a.b(0) + 6;
-              var7 = pc.field_a.a(15) + 7;
+              var6_int = pc.field_a.getWidth(0) + 6;
+              var7 = pc.field_a.getHeight(15) + 7;
               var26 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
               var2 = var26[0];
               var3 = var26[1];
               SoftwareRasterizer.a(-2 + var2, var3 - 2, var6_int + 4, var7 + 4, 6, 65793, 200);
-              pc.field_a.a((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
+              pc.field_a.drawCentered((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
             } else {
               if (AuctionItem.field_e == 1) {
                 var6_int = ((BitmapFont) ((Object) var4)).b(wp.field_h, 200);

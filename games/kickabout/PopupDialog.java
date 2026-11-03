@@ -258,7 +258,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var5 = -(95 * var4_int) - 5 * (var4_int - 1) + 640 >> 1;
           for (var6 = 0; this.field_i.length > var6; var6++) {
             param1[var6] = param1[var6].toLowerCase();
-            this.field_i[var6] = eo.a(param1[var6], 7126504, un.field_d, 90, false);
+            this.field_i[var6] = eo.createRenderedButton(param1[var6], 7126504, un.field_d, 90, false);
             var7 = this.field_k + this.field_r + (-this.field_i[var6].field_mb - 10);
             this.field_i[var6].field_s = 100 * var6 + var5;
             this.field_i[var6].field_J = var7;

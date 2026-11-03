@@ -258,7 +258,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ba.field_o;
+              stackIn_19_3 = TrinketCountSortCriterion.field_o;
             }
             this.field_F = new TextButton(stackIn_19_3, (UiListener) null);
             if (this.field_I) {

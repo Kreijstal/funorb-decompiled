@@ -24,14 +24,14 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         }
     }
 
-    final static vn a(int param0, int param1, boolean param2, int param3) {
+    final static MeshData a(int param0, int param1, boolean param2, int param3) {
         int stackIn_7_0 = 0;
         int stackIn_24_0 = 0;
         boolean[][] var4;
         boolean[][] var5;
         int var6;
         int var7;
-        vn var8;
+        MeshData var8;
         int var9;
         int var10;
         short[] var12;
@@ -68,7 +68,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         var5 = var24;
         var6 = (short)param3;
         var7 = (short)param1;
-        var8 = new vn(of.field_f, param2, false, true, true);
+        var8 = new MeshData(of.field_f, param2, false, true, true);
         var29 = of.field_f.field_p;
         var12 = var8.field_p;
         var13 = 0;

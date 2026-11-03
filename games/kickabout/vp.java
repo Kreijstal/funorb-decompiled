@@ -97,7 +97,7 @@ final class vp implements OverlayLayer {
           return false;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (od.field_n && (MainMenuScreen.isScreenShown(-1, param0 - 9) ||
+        if (PlayerValueSortCriterion.field_n && (MainMenuScreen.isScreenShown(-1, param0 - 9) ||
           MainMenuScreen.isScreenShown(-2, param0 - 9))) {
           stackIn_8_0 = true;
           decompiledFrameRemainder0 = false;

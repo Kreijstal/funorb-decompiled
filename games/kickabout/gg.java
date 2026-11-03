@@ -117,7 +117,7 @@ final class gg extends UiLayoutNode {
     }
 
     final static void a(int param0) {
-        ba.a(112, true);
+        TrinketCountSortCriterion.a(112, true);
         if (param0 != -32053) {
           field_Db = 59;
         }

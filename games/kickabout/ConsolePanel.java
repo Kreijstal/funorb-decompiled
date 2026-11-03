@@ -415,7 +415,7 @@ abstract class ConsolePanel implements OverlayLayer {
         int var2;
         boolean stackIn_10_0 = false;
         var1 = bk.a(2);
-        var2 = qi.a(false);
+        var2 = PlayerStatSortCriterion.a(false);
         if (param0 < 45) {
           field_q = (UiLayoutNode) null;
         }

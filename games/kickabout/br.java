@@ -21,7 +21,7 @@ final class br {
             !c.a(param1, 0, BufferedSocket.field_f)) {
             var4 = ContextMenuItem.field_Gb;
           }
-          ScrollPane.field_Jb.a(new MessageDialog(35, (lv) null, var2, var4), 3);
+          ScrollPane.field_Jb.a(new MessageDialog(35, (PopupCard) null, var2, var4), 3);
           return;
         }
         field_b = (String) null;
@@ -35,7 +35,7 @@ final class br {
           !c.a(param1, 0, BufferedSocket.field_f)) {
           var4 = ContextMenuItem.field_Gb;
         }
-        ScrollPane.field_Jb.a(new MessageDialog(35, (lv) null, var2, var4), 3);
+        ScrollPane.field_Jb.a(new MessageDialog(35, (PopupCard) null, var2, var4), 3);
     }
 
     final static boolean a(int param0) {

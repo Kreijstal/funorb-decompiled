@@ -4,7 +4,7 @@
 class PacketBuffer extends IntrusiveNode {
     byte[] field_f;
     static int[] field_e;
-    static vn[] field_m;
+    static MeshData[] field_m;
     static String field_j;
     int field_n;
     static Sprite[] field_h;
@@ -399,7 +399,7 @@ class PacketBuffer extends IntrusiveNode {
     final int a(byte param0) {
         this.field_n = this.field_n + 2;
         if (param0 != 81) {
-          field_m = (vn[]) null;
+          field_m = (MeshData[]) null;
         }
         return (255 & this.field_f[-1 + this.field_n]) + (this.field_f[-2 + this.field_n] << 8 & 65280);
     }
@@ -849,7 +849,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     static {
-        field_m = new vn[5];
+        field_m = new MeshData[5];
         field_e = new int[73];
         field_j = "This player is already in an auction";
         field_k = "Camera Attached";

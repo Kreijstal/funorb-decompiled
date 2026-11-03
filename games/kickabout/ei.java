@@ -166,7 +166,7 @@ final class ei implements WidgetPainter {
           if (param5 != -125) {
             ei.a(0);
           }
-          var63 = ba.field_q;
+          var63 = TrinketCountSortCriterion.field_q;
           var61 = BytePlusOneCommand.field_E;
           for (var13 = 0; param6.field_k > var13; var13++) {
             var14 = param3 * var61[var13] + (var62[var13] * param1 + param0 * var63[var13]) >> 8;

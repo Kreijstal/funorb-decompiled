@@ -126,9 +126,9 @@ final class wc {
         this.field_b = 15658734;
         this.field_j = 15658734;
         this.field_f = -1;
-        var4.a(0, param1 ^ -8811).b(-2, 15658734).a(true, ba.a(7829367, 10066329, 8947848, (byte) -88));
-        var4.a(1, -12085).a(true, ba.a(13421772, 10066329, 11184810, (byte) 46));
-        var4.a(3, -12085).a(true, ba.a(10066329, 7829367, 8947848, (byte) 46)).a((byte) -90, 1).b((byte) 111, 1);
+        var4.a(0, param1 ^ -8811).b(-2, 15658734).a(true, TrinketCountSortCriterion.a(7829367, 10066329, 8947848, (byte) -88));
+        var4.a(1, -12085).a(true, TrinketCountSortCriterion.a(13421772, 10066329, 11184810, (byte) 46));
+        var4.a(3, -12085).a(true, TrinketCountSortCriterion.a(10066329, 7829367, 8947848, (byte) 46)).a((byte) -90, 1).b((byte) 111, 1);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -154,7 +154,7 @@ final class wc {
           discarded$1 = new du(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var17.a(var8, (byte) -87);
-          var8.a(0, param1 ^ -8811).a(true, ba.a(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);
+          var8.a(0, param1 ^ -8811).a(true, TrinketCountSortCriterion.a(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);
           var8.a(4, param1 ^ -8811).a(true, (byte) -58).a(true, var5);
           this.field_h = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];

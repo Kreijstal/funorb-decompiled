@@ -194,15 +194,15 @@ final class rf {
             var14[var3Lifetime1] = var4Lifetime1Lifetime1;
           }
           kj.field_b = new byte[210][];
-          qi.field_n = new int[16];
+          PlayerStatSortCriterion.field_n = new int[16];
           TrinketUnlockNotice.field_a = new byte[16][];
           for (var3Lifetime2 = 0; var3Lifetime2 < 210; var3Lifetime2++) {
             kj.field_b[var3Lifetime2] = eo.a(var13, var3Lifetime2, 210);
           }
           var4Lifetime2 = -20 % ((param0 + 71) / 47);
           for (var3Lifetime3 = 0; var3Lifetime3 < 16; var3Lifetime3++) {
-            qi.field_n[var3Lifetime3] = (-(90 * var3Lifetime3) + 1440 >> 4) + 72;
-            TrinketUnlockNotice.field_a[var3Lifetime3] = eo.a(var14, var3Lifetime3, 16, qi.field_n[var3Lifetime3]);
+            PlayerStatSortCriterion.field_n[var3Lifetime3] = (-(90 * var3Lifetime3) + 1440 >> 4) + 72;
+            TrinketUnlockNotice.field_a[var3Lifetime3] = eo.a(var14, var3Lifetime3, 16, PlayerStatSortCriterion.field_n[var3Lifetime3]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

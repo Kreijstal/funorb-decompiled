@@ -148,7 +148,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           return;
         }
         try {
-          ba.field_p = param3;
+          TrinketCountSortCriterion.field_p = param3;
           ProxySocketConnector.field_f = param0;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tm.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

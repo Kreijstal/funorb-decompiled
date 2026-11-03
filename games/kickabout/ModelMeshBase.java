@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ModelMeshBase extends cv {
+abstract class ModelMeshBase extends MeshObject {
     private final void a(AnimationSkeleton param0, AnimationFrame param1, AnimationFrame param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
         int var11;
         int var12;

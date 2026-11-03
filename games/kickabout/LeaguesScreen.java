@@ -34,7 +34,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         TournamentChampionDialog.b(AnimationSkeleton.field_k, 500);
     }
 
-    final static String a(char param0, byte param1) {
+    final static String charToString(char param0, byte param1) {
         if (param1 != -83) {
           LeaguesScreen.releaseStatics(77);
         }
@@ -223,7 +223,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
     final boolean handleKey(int param0, int param1, char param2) {
         String var4 = null;
         if (param1 > -5) {
-          LeaguesScreen.a('c', (byte) -84);
+          LeaguesScreen.charToString('c', (byte) -84);
         }
         boolean discarded$3 = super.handleKey(param0, -11, param2);
         if (!PlayArea.a(100) &&

@@ -4,7 +4,7 @@
 final class gw {
     static UiLayoutNode field_a;
     static String field_e;
-    static vn[] field_f;
+    static MeshData[] field_f;
     static Sprite[] field_d;
     static int field_c;
     static String field_b;
@@ -160,7 +160,7 @@ final class gw {
     }
 
     static {
-        field_f = new vn[5];
+        field_f = new MeshData[5];
         field_e = "Cancel rematch";
         field_b = "You";
     }
