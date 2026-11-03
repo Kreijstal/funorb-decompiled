@@ -24,14 +24,14 @@ final class gd {
         cl.field_g = new wo(TimerBar.field_m, vd.field_c);
         GreenGrowTheRushesBackground.field_n = new SceneWidget(0L, (SceneWidget) null);
         if (param0 != -7) {
-          gd.a(-71);
+          gd.releaseStatics(-71);
         }
         GreenGrowTheRushesBackground.field_n.addChild(cl.field_g.field_g, (byte) 26);
         GreenGrowTheRushesBackground.field_n.addChild(ValidatedTextWidget.field_cb, (byte) 26);
         PacketBuffer.b(false);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_j = null;
         field_h = null;

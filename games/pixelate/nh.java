@@ -28,12 +28,12 @@ final class nh {
         return var5;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_d = null;
         field_c = null;
         if (param0 <= 61) {
-          nh.b((byte) -92);
+          nh.releaseStatics((byte) -92);
         }
     }
 

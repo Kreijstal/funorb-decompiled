@@ -669,7 +669,7 @@ final class ResourceArchive {
           return 0;
         }
         if (param1 != -78) {
-          ResourceArchive.a(-74);
+          ResourceArchive.releaseStatics(-74);
         }
         if (null != this.packedGroups[param0]) {
           return 100;
@@ -786,7 +786,7 @@ final class ResourceArchive {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -71 % ((44 - param0) / 47);
         field_d = null;
         field_b = null;

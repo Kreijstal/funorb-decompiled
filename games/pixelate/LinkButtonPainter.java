@@ -86,11 +86,11 @@ final class LinkButtonPainter implements WidgetPainter {
         ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 >= -74) {
-          LinkButtonPainter.a(92);
+          LinkButtonPainter.releaseStatics(92);
         }
     }
 

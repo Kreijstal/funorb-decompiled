@@ -146,7 +146,7 @@ final class fd {
         return new byte[param1];
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -24465) {
           field_d = null;
           field_c = null;
@@ -154,7 +154,7 @@ final class fd {
           field_b = null;
           return;
         }
-        fd.b(119);
+        fd.releaseStatics(119);
         field_d = null;
         field_c = null;
         field_a = null;

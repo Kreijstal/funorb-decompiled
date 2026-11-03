@@ -126,7 +126,7 @@ class EditableTextWidget extends TextButton {
         this.l(126);
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         field_Z = null;
         field_Y = null;
         field_O = null;
@@ -488,7 +488,7 @@ class EditableTextWidget extends TextButton {
           this.selectionAnchor = dupTemp$1;
           this.caretIndex = dupTemp$1;
           if (param1 != 87) {
-            EditableTextWidget.o(97);
+            EditableTextWidget.releaseStatics(97);
           }
           if (!param0) {
             this.n(1392153825);

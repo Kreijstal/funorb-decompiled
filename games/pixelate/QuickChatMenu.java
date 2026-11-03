@@ -390,7 +390,7 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Qb = null;
         if (param0 != 1) {
           field_Eb = (String) null;

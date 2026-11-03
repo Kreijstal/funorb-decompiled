@@ -211,7 +211,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         this.b(this.field_L, 80);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         if (param0 != -123) {
           return;

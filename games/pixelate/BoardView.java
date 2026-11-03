@@ -343,9 +343,9 @@ final class BoardView {
         return stackIn_9_0;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          BoardView.b(true);
+          BoardView.releaseStatics(true);
         }
         field_l = null;
         field_b = null;

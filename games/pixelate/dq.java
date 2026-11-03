@@ -55,7 +55,7 @@ final class dq {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = (String[][]) null;
         field_c = null;
         field_a = null;

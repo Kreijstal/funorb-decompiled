@@ -8,7 +8,7 @@ abstract class TickClock {
     static String[] field_c;
     static int field_a;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

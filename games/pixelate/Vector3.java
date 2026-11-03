@@ -312,7 +312,7 @@ final class Vector3 {
     private final int a(boolean param0) {
         int var2 = (this.field_h >> 2) * (this.field_h >> 2) - (-((this.field_g >> 2) * (this.field_g >> 2)) - (this.field_i >> 2) * (this.field_i >> 2));
         if (!param0) {
-          Vector3.b((byte) 96);
+          Vector3.releaseStatics((byte) 96);
           if (var2 < 0) {
             throw new RuntimeException();
           }
@@ -357,7 +357,7 @@ final class Vector3 {
         throw new RuntimeException();
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         int var1 = 14 / ((param0 + 59) / 32);
         field_j = null;

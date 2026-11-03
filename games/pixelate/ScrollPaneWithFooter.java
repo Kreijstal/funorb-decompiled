@@ -10,10 +10,10 @@ final class ScrollPaneWithFooter extends SceneWidget {
     SceneWidget field_Fb;
     ScrollContainer field_Gb;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Kb = null;
         if (param0 >= -79) {
-          ScrollPaneWithFooter.b((byte) -19);
+          ScrollPaneWithFooter.releaseStatics((byte) -19);
         }
     }
 

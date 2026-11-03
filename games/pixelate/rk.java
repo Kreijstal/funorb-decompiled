@@ -8,7 +8,7 @@ final class rk {
     int field_c;
     static char field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10934) {
           ResourceArchive var2 = (ResourceArchive) null;
           rk.a(-99, true, (ResourceArchive) null, 69);

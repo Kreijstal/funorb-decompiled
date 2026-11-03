@@ -8,7 +8,7 @@ abstract class LoginCredentials {
     static byte[] field_d;
     static IntrusiveDeque field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 == 1762) {
@@ -17,7 +17,7 @@ abstract class LoginCredentials {
           field_d = null;
           return;
         }
-        LoginCredentials.a(-41);
+        LoginCredentials.releaseStatics(-41);
         field_c = null;
         field_e = null;
         field_d = null;

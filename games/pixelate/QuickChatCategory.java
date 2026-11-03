@@ -36,7 +36,7 @@ final class QuickChatCategory extends DualLinkNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = null;
         int var1 = -33 / ((10 - param0) / 52);
         field_w = null;

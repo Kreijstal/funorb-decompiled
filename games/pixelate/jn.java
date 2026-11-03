@@ -18,11 +18,11 @@ final class jn extends IntrusiveNode {
     int field_u;
     int field_w;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_m = null;
         if (param0 != 29353) {
-          jn.a(-63);
+          jn.releaseStatics(-63);
         }
     }
 

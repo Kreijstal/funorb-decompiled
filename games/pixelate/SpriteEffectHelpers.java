@@ -32,7 +32,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_b = null;
     }
 

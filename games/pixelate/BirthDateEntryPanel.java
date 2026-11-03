@@ -18,7 +18,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         field_R = null;
         if (param0 != -8012) {
           field_N = (int[]) null;

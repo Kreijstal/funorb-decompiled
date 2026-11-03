@@ -233,7 +233,7 @@ final class IntArraySorter {
         IntArraySorter.a(var2 + 4, param1);
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_c = null;
     }
 

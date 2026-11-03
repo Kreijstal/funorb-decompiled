@@ -324,7 +324,7 @@ final class bq {
 
     final static boolean a(byte param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (param0 != -124) {
-          bq.a((byte) -16);
+          bq.releaseStatics((byte) -16);
         }
         if (MarkerSlider.a((byte) 117)) {
           vd.a(param3, param1, param4, (byte) -86);
@@ -340,7 +340,7 @@ final class bq {
         return param3;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 60 % ((param0 - 61) / 61);
         field_a = null;
         field_b = null;

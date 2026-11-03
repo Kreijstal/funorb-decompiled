@@ -23,7 +23,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_n = (SceneWidget) null;
           field_n = null;
@@ -34,7 +34,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
 
     final static boolean e(int param0) {
         if (param0 < 94) {
-          GreenGrowTheRushesBackground.f(30);
+          GreenGrowTheRushesBackground.releaseStatics(30);
           if (null == NetworkGameClient.field_x) {
             return false;
           }

@@ -9,7 +9,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
     static boolean field_l;
     private EditableTextWidget field_j;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_h = null;
         field_k = null;

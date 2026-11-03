@@ -36,7 +36,7 @@ final class MeshRasterState {
         }
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_g = null;
         field_a = null;
         field_c = null;

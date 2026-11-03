@@ -143,7 +143,7 @@ final class NightToRememberBackground extends BackgroundScene {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -12424) {
           return;
         }

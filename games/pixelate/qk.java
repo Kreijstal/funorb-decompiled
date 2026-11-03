@@ -48,7 +48,7 @@ final class qk {
         this.d(6);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 6) {
           field_d = null;
           field_c = null;
@@ -72,7 +72,7 @@ final class qk {
         if (param3 < -122) {
           return param0;
         }
-        qk.a(-3);
+        qk.releaseStatics(-3);
         return param0;
     }
 

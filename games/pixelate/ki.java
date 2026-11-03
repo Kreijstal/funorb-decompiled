@@ -170,7 +170,7 @@ final class ki {
         SoftwareRasterizer.drawLine(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 25335) {
           return;
         }
@@ -186,7 +186,7 @@ final class ki {
           gq.a(param1 + 1, param3, param0, Integer.toString(param2));
           return;
         }
-        ki.c(-60);
+        ki.releaseStatics(-60);
         gq.a(param1 + 1, param3, param0, Integer.toString(param2));
     }
 

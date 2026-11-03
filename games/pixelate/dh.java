@@ -9,7 +9,7 @@ final class dh {
 
     final static void a(byte param0, boolean param1) {
         if (param0 != 58) {
-          dh.a(true);
+          dh.releaseStatics(true);
           if (oo.field_b <= 0) {
             if (0 < vn.field_g) {
               if (EmergentBehaviourBackground.field_o) {
@@ -96,12 +96,12 @@ final class dh {
           jk.field_d = null;
           return;
         }
-        dh.a(false);
+        dh.releaseStatics(false);
         sm.field_l = false;
         jk.field_d = null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_c = null;
         field_d = null;

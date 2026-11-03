@@ -18,7 +18,7 @@ final class DialWidget extends TextButton {
             Js5ArchiveManager.b(98);
           }
           if (param0 != -1913) {
-            DialWidget.a((byte) -51);
+            DialWidget.releaseStatics((byte) -51);
           }
           mi.a(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
           fj.a(0, 0, (byte) 113, param1);
@@ -57,12 +57,12 @@ final class DialWidget extends TextButton {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_S = null;
         if (param0 == 95) {
           return;
         }
-        DialWidget.a((byte) 28);
+        DialWidget.releaseStatics((byte) 28);
     }
 
     final boolean handlePointerPress(byte param0, UiComponent param1, int param2, int param3, int param4, int param5, int param6) {

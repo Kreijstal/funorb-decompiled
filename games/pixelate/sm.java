@@ -144,12 +144,12 @@ final class sm extends IntrusiveNode {
         return;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_k = null;
         field_n = null;
         if (param0 >= -99) {
-          sm.a((byte) -113);
+          sm.releaseStatics((byte) -113);
         }
     }
 

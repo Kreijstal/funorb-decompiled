@@ -49,14 +49,14 @@ final class dj {
           GzipDecoder.a(88);
           return;
         }
-        dj.b(-112);
+        dj.releaseStatics(-112);
         var1Lifetime1 = ResizableModalPanel.m(param0 + 1501881973);
         var2Lifetime1 = EmailCredentials.c(107);
         NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);
         GzipDecoder.a(88);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 > -113) {
           return;

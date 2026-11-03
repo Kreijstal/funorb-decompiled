@@ -167,7 +167,7 @@ final class OptionsScreen extends MenuScreen {
         int var2 = 23 / ((-16 - param0) / 43);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_q = null;
         int var1 = 3 % ((26 - param0) / 48);
@@ -185,7 +185,7 @@ final class OptionsScreen extends MenuScreen {
 
     final int a(int param0, int param1) {
         if (param0 != -28071) {
-          OptionsScreen.f((byte) -35);
+          OptionsScreen.releaseStatics((byte) -35);
         }
         if (1 == param1 ||
           2 == param1) {

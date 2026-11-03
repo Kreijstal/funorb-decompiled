@@ -110,7 +110,7 @@ final class cm extends IntrusiveNode {
         return param0 & param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 128) {
           field_l = null;
           field_o = null;

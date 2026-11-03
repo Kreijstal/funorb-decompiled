@@ -12,7 +12,7 @@ class DualLinkNode extends IntrusiveNode {
     static int[] field_s;
     static String[] field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_l = null;
         field_o = null;

@@ -93,7 +93,7 @@ final class dk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_e = null;
         if (param0 >= -81) {

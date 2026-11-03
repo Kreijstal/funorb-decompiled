@@ -12,7 +12,7 @@ final class AlphaContainer extends SingleChildContainer {
     static int field_L;
     static boolean field_I;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 74 % ((param0 - 31) / 58);
         field_Q = null;
         field_M = null;

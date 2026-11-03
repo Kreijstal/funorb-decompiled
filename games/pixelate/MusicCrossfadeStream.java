@@ -178,7 +178,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         field_s = null;
         field_L = null;

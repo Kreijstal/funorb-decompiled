@@ -39,7 +39,7 @@ final class StripedProgressBar extends UiComponent {
         this.field_L = new Sprite(this.field_C >> 1, this.field_C);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_U = null;
         field_H = null;
         if (param0 == -9) {

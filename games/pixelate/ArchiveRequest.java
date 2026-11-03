@@ -43,7 +43,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         ClientException.field_f.a(19692);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         field_z = null;
         field_w = null;

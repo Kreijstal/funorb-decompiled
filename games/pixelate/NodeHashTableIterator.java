@@ -44,7 +44,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         if (!param0) {
           field_c = (String) null;

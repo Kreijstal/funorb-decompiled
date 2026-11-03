@@ -86,7 +86,7 @@ final class fo {
         return ek.field_c;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         int var1 = 89 / ((35 - param0) / 41);
         field_a = null;

@@ -74,7 +74,7 @@ final class Puzzle {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_a = null;
         field_c = null;

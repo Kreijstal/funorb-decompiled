@@ -61,11 +61,11 @@ final class ib {
     final static void b(int param0) {
         mh.a(ContextActionMenu.field_Rb, (byte) 95);
         if (param0 != 20558) {
-          ib.a(-8);
+          ib.releaseStatics(-8);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         field_h = null;

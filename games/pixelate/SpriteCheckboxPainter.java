@@ -13,7 +13,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != -31) {
-            SpriteCheckboxPainter.a(-63);
+            SpriteCheckboxPainter.releaseStatics(-63);
           }
           var3 = aa.field_f;
           var3.g(param1, 15514);
@@ -74,7 +74,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 14518) {
           return;

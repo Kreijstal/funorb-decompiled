@@ -39,10 +39,10 @@ final class ba {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 3) {
-          ba.c(105);
+          ba.releaseStatics(105);
         }
     }
 

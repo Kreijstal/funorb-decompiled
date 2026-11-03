@@ -185,9 +185,9 @@ final class GrowableIntList {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          GrowableIntList.a(23);
+          GrowableIntList.releaseStatics(23);
         }
         field_e = null;
         field_h = null;

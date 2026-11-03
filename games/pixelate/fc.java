@@ -8,7 +8,7 @@ final class fc {
     static String field_c;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         if (param0 != 32) {

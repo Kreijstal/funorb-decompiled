@@ -357,7 +357,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_bb = null;
         int var1 = 90 / ((param0 - 62) / 41);
     }

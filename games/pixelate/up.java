@@ -20,14 +20,14 @@ final class up {
     static String[] field_a;
     static int field_j;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_a = null;
         field_g = null;
         field_d = null;
         field_c = null;
         if (param0 < 59) {
-          up.a((byte) 127);
+          up.releaseStatics((byte) 127);
         }
         field_e = null;
         field_i = null;

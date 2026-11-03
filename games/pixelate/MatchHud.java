@@ -208,10 +208,10 @@ final class MatchHud {
         this.field_e = AlphaContainer.a(field_b, 73, new String[]{Integer.toString(var2), Integer.toString(this.field_g.puzzle.pictures.length)});
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != -1) {
-          MatchHud.c(-122);
+          MatchHud.releaseStatics(-122);
         }
         field_h = null;
         field_m = null;

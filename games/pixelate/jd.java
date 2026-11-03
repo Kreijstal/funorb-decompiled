@@ -16,7 +16,7 @@ final class jd extends IntrusiveNode {
     int field_v;
     int field_m;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_p = null;
         if (param0 != -32301) {

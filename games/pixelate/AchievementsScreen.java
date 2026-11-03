@@ -300,7 +300,7 @@ final class AchievementsScreen extends MenuScreen {
         return new rk(var2, var3, of.a(var4, 65536));
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           AchievementsScreen.b(3, (byte) 57);
         }

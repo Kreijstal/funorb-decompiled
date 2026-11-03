@@ -45,7 +45,7 @@ final class NodeHashTable {
         nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(PairedTextColumns.field_Gb, vd.field_a);
         ff.field_h = new SceneWidget(0L, (SceneWidget) null);
         if (param1 >= -68) {
-          NodeHashTable.b(-102);
+          NodeHashTable.releaseStatics(-102);
         }
         ff.field_h.addChild(nd.field_b.field_g, (byte) 26);
         ff.field_h.addChild(ValidatedTextWidget.field_kb, (byte) 26);
@@ -252,7 +252,7 @@ final class NodeHashTable {
         return var2_ref_fa;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_b = null;
         field_d = null;

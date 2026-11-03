@@ -17,9 +17,9 @@ final class SocialListEntry extends SceneWidget {
     SceneWidget field_Eb;
     private static String field_Rb;
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -25942) {
-          SocialListEntry.j(-7);
+          SocialListEntry.releaseStatics(-7);
           field_Hb = null;
           field_Lb = null;
           field_Mb = null;

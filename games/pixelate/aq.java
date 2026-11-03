@@ -35,7 +35,7 @@ final class aq {
             return stackIn_5_0;
           }
           if (param3 != -20867) {
-            aq.a((byte) 117);
+            aq.releaseStatics((byte) 117);
           }
           var7 = DisplayNameForm.findFriend(param2, 114);
           if (var7 == null) {
@@ -141,7 +141,7 @@ final class aq {
         return param1 + var2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         int var1 = 17 / ((param0 - 13) / 60);

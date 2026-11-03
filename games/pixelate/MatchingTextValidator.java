@@ -20,7 +20,7 @@ final class MatchingTextValidator extends TextFieldValidator {
 
     final static String e(int param0) {
         if (param0 != 480) {
-          MatchingTextValidator.b(false);
+          MatchingTextValidator.releaseStatics(false);
           return MusicCrossfadeStream.field_o.readString(5);
         }
         return MusicCrossfadeStream.field_o.readString(5);
@@ -73,7 +73,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         field_y = null;
         field_v = null;

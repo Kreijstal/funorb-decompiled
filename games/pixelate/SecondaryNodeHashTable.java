@@ -348,7 +348,7 @@ final class SecondaryNodeHashTable {
               if (param1 == 10000) {
                 return;
               }
-              SecondaryNodeHashTable.a(true);
+              SecondaryNodeHashTable.releaseStatics(true);
               return;
             }
           }
@@ -376,7 +376,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           SecondaryNodeHashTable.a(-87L, (byte) 117);
           field_e = null;

@@ -38,9 +38,9 @@ final class r {
         ProxyAuthenticationException.a(0, 80, 30, AccountChoicePanel.field_O, param1, 0, var4, param0, (byte) -113);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -31558) {
-          r.a(48);
+          r.releaseStatics(48);
           field_b = null;
           return;
         }

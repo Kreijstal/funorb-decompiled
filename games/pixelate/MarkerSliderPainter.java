@@ -13,7 +13,7 @@ final class MarkerSliderPainter implements WidgetPainter {
     private int field_a;
     private int field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_i = null;
         int var1 = -35 / ((param0 - 19) / 58);
@@ -35,7 +35,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         var11 = Pixelate.field_H ? 1 : 0;
         try {
           if (param1 != -124) {
-            MarkerSliderPainter.a(-84);
+            MarkerSliderPainter.releaseStatics(-84);
           }
           if (!(param0 instanceof MarkerSlider)) {
             stackIn_6_0 = null;

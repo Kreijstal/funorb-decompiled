@@ -33,7 +33,7 @@ final class LabeledField extends SingleChildContainer {
         return var3Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_N = null;
         if (param0 == -84) {
           field_Q = null;
@@ -71,7 +71,7 @@ final class LabeledField extends SingleChildContainer {
         try {
           var4 = re.findFriend(param2, -1);
           if (!param0) {
-            LabeledField.a((byte) 102);
+            LabeledField.releaseStatics((byte) 102);
           }
           if (var4 != null &&
             null != var4.field_Nb) {
@@ -170,7 +170,7 @@ final class LabeledField extends SingleChildContainer {
               stackIn_13_0 = (fl.a(param3, param1, param2, 0));
               return stackIn_13_0;
             }
-            LabeledField.a((byte) 0);
+            LabeledField.releaseStatics((byte) 0);
             if (ArrayWidgetContainer.k(1)) {
               return true;
             }
@@ -197,7 +197,7 @@ final class LabeledField extends SingleChildContainer {
           }
         }
         if (!param0) {
-          LabeledField.a((byte) 0);
+          LabeledField.releaseStatics((byte) 0);
         }
         if (ArrayWidgetContainer.k(1)) {
           return true;

@@ -13,7 +13,7 @@ final class li {
     static String field_j;
     static LoginCredentials field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -58,7 +58,7 @@ final class li {
           ThreeSliceButtonPainter.field_r = param2;
           PicturePreview.field_o = param0;
           if (param1 != -1) {
-            li.a((byte) -73);
+            li.releaseStatics((byte) -73);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "li.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

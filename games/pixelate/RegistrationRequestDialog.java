@@ -34,7 +34,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         if (param0 == 22452) {
           return GameModeCard.field_f > 250 ? true : false;
         }
-        RegistrationRequestDialog.r(-8);
+        RegistrationRequestDialog.releaseStatics(-8);
         return GameModeCard.field_f > 250 ? true : false;
     }
 
@@ -70,7 +70,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         return super.c(false);
     }
 
-    public static void r(int param0) {
+    public static void releaseStatics(int param0) {
         field_zb = null;
         if (param0 > -19) {
           field_zb = (int[]) null;

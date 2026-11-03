@@ -391,7 +391,7 @@ final class mc extends IntrusiveNode {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != -1) {
           field_n = (String) null;

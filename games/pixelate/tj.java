@@ -8,7 +8,7 @@ final class tj extends ah {
     static int field_y;
     static int field_v;
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         field_w = null;
         if (param0 <= 77) {
@@ -249,7 +249,7 @@ final class tj extends ah {
           nk.a((byte) 93, 256);
         }
         if (param0 != 32) {
-          tj.j(117);
+          tj.releaseStatics(117);
         }
     }
 

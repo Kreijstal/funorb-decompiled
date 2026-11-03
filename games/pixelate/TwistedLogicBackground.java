@@ -14,7 +14,7 @@ final class TwistedLogicBackground extends BackgroundScene {
         return ArrayWidgetContainer.l(72);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_p = null;
         int var1 = -88 % ((param0 - 59) / 34);

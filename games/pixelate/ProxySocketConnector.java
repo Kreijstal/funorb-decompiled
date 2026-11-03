@@ -356,7 +356,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -6835) {
           return;
         }

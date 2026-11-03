@@ -207,7 +207,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1861726552) {
           return;
         }

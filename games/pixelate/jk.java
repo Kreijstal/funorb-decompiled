@@ -8,7 +8,7 @@ final class jk {
     static Sprite field_a;
     int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 20) {
           jk.a(false, (byte) 23);

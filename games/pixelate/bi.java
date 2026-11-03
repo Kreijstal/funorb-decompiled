@@ -30,7 +30,7 @@ final class bi {
           }
           return;
         }
-        bi.a(1);
+        bi.releaseStatics(1);
         if (null != this.field_a) {
           DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
           var2 = var2 + (8 + pe.field_c);
@@ -88,7 +88,7 @@ final class bi {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -8) {
           field_g = (Sprite[]) null;
@@ -100,7 +100,7 @@ final class bi {
 
     final static UiTheme b(int param0) {
         if (param0 != 4) {
-          bi.a(-128);
+          bi.releaseStatics(-128);
           if (null == JaggrabDownloader.field_c) {
             JaggrabDownloader.field_c = new UiTheme();
             JaggrabDownloader.field_c.a(4, he.field_d);

@@ -14,7 +14,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           dc.a((byte) -124, this.field_f, param1);
           if (param0 != 6511) {
-            FullscreenFocusCanvas.a((byte) 114);
+            FullscreenFocusCanvas.releaseStatics((byte) 114);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -24,7 +24,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void update(java.awt.Graphics param0) {
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < -81) {
           field_a = null;
           field_e = null;

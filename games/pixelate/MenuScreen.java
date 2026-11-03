@@ -190,7 +190,7 @@ abstract class MenuScreen {
         var2 = 44 / ((param0 + 21) / 50);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != -1) {
           return;

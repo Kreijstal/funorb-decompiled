@@ -115,7 +115,7 @@ final class IntKeyLookup {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 11924) {
           return;
         }

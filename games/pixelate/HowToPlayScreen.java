@@ -8,7 +8,7 @@ final class HowToPlayScreen extends MenuScreen {
     static int field_o;
     static String field_p;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -41 / ((17 - param0) / 51);
         field_p = null;
         field_s = null;

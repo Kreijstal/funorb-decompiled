@@ -20,7 +20,7 @@ final class og extends IntrusiveNode {
         return ra.a(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         int var1 = 25 / ((param0 + 44) / 41);
     }

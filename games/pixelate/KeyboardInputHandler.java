@@ -140,7 +140,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -1) {
           return;

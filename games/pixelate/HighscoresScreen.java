@@ -588,7 +588,7 @@ final class HighscoresScreen extends MenuScreen {
         var24.drawParagraph(var4Lifetime2, 50, 150, 540, 200, 0, -1, 1, 1, var3Lifetime1);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_s = null;
         field_q = null;
         field_r = null;

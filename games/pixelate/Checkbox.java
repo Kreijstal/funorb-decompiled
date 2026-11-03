@@ -69,7 +69,7 @@ final class Checkbox extends TextButton {
         return new io[]{ig.field_e, vm.field_a, cd.field_c};
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_U = null;
         field_P = null;
         field_S = null;

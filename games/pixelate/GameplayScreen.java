@@ -128,7 +128,7 @@ final class GameplayScreen extends MenuScreen {
         return super.b(118, param1) - var3;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 != 2) {
           return;

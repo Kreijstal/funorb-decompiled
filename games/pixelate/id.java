@@ -12,7 +12,7 @@ final class id {
     int field_a;
     static int field_b;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 64 / ((-80 - param0) / 37);
         field_d = null;
     }

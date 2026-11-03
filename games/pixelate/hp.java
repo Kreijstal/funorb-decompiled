@@ -146,7 +146,7 @@ final class hp extends SceneWidget {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Fb = null;
         if (param0 != -15) {
           field_Gb = (Sprite) null;

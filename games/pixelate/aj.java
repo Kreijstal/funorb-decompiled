@@ -60,7 +60,7 @@ final class aj extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         if (param0 != -38) {
           return;

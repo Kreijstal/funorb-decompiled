@@ -11,7 +11,7 @@ final class fe {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -67 % ((-51 - param0) / 36);
         field_b = null;
     }

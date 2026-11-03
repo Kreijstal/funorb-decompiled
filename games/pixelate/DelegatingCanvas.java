@@ -27,7 +27,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         field_d = null;
@@ -43,7 +43,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (param0 < -61) {
           return ib.field_e + ((GradientOutlineTextPainter.field_v << 2) + (io.field_e << 4));
         }
-        DelegatingCanvas.a(54);
+        DelegatingCanvas.releaseStatics(54);
         return ib.field_e + ((GradientOutlineTextPainter.field_v << 2) + (io.field_e << 4));
     }
 

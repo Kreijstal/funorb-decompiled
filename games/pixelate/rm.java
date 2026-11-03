@@ -12,7 +12,7 @@ final class rm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = 4 % ((param0 + 61) / 54);
         field_b = null;

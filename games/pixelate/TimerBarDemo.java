@@ -45,7 +45,7 @@ final class TimerBarDemo extends StatusBar {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_n = null;
         if (param0 <= 98) {

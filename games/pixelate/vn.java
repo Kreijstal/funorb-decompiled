@@ -41,7 +41,7 @@ final class vn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = (boolean[][]) null;
         field_d = null;
         field_c = null;

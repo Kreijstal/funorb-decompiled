@@ -177,7 +177,7 @@ final class KiteBackground extends BackgroundScene {
         return true;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 21476) {
           field_o = (PlatformTask) null;

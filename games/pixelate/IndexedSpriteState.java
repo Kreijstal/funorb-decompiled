@@ -20,7 +20,7 @@ abstract class IndexedSpriteState {
 
     abstract void draw(int param0, int param1);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_j = null;
           field_b = null;

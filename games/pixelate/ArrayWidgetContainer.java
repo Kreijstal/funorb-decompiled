@@ -477,7 +477,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         field_M = null;
         field_F = null;

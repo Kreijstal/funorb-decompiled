@@ -90,7 +90,7 @@ final class wo {
         MouseWheelHandler.field_e.a(20, true, 2, DelegatingCanvas.field_b);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_a = null;
         field_f = (byte[][]) null;

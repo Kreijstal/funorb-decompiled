@@ -12,14 +12,14 @@ final class sk {
         try {
           jf.field_a = param1;
           if (param0 >= -45) {
-            sk.a((byte) -101);
+            sk.releaseStatics((byte) -101);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         field_c = null;

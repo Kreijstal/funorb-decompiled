@@ -77,7 +77,7 @@ abstract class ah extends DualLinkNode {
         }
         var7Lifetime1 = 0;
         if (param0 >= -90) {
-          ah.g(-107);
+          ah.releaseStatics(-107);
           for (var8 = 0; AlphaContainer.field_L > var8; var8++) {
             var14 = MenuScreen.field_e[var8];
             if (var14.field_q != null) {
@@ -236,9 +236,9 @@ abstract class ah extends DualLinkNode {
 
     abstract Object a(byte param0);
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -520925311) {
-          ah.g(-22);
+          ah.releaseStatics(-22);
           field_u = null;
           return;
         }

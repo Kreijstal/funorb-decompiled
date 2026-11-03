@@ -11,7 +11,7 @@ final class AccountNamePrompt extends SceneWidget {
     private SceneWidget field_Fb;
     private int field_Hb;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -70) {
           return;
         }

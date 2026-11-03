@@ -131,7 +131,7 @@ final class ScoreMarkerBar extends StatusBar {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -95) {
           return;
         }
@@ -284,7 +284,7 @@ final class ScoreMarkerBar extends StatusBar {
         var7 = Pixelate.field_H ? 1 : 0;
         super.a((byte) 21);
         if (param0 != 12804) {
-          ScoreMarkerBar.c((byte) 73);
+          ScoreMarkerBar.releaseStatics((byte) 73);
         }
         var3 = this.field_t[1] - this.field_t[0];
         if (var3 > 1024) {

@@ -382,7 +382,7 @@ final class FallingPieceView {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_m = null;
         field_d = null;

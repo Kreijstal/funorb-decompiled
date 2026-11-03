@@ -55,7 +55,7 @@ final class TimerBar extends StatusBar {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_n = null;
         if (param0 > -35) {

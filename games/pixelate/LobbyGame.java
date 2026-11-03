@@ -64,7 +64,7 @@ final class LobbyGame extends SceneWidget {
         return !this.f(0) ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Xb = null;
         field_Hb = null;
         field_fc = null;

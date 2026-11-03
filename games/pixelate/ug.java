@@ -44,7 +44,7 @@ final class ug extends IntrusiveNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 == 24857) {
           field_p = null;

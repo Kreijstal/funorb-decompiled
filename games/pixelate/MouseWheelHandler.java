@@ -15,9 +15,9 @@ abstract class MouseWheelHandler {
 
     abstract void a(java.awt.Component param0, int param1);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
-          MouseWheelHandler.a(true);
+          MouseWheelHandler.releaseStatics(true);
           field_b = null;
           field_a = null;
           field_e = null;

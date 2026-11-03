@@ -168,10 +168,10 @@ final class IntrusiveDeque {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 != 76) {
-          IntrusiveDeque.a((byte) -113);
+          IntrusiveDeque.releaseStatics((byte) -113);
           field_a = null;
           field_d = null;
           return;

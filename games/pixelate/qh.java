@@ -20,7 +20,7 @@ final class qh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 256) {
           field_a = null;
           field_f = null;
@@ -28,7 +28,7 @@ final class qh {
           field_d = null;
           return;
         }
-        qh.a(3);
+        qh.releaseStatics(3);
         field_a = null;
         field_f = null;
         field_e = null;

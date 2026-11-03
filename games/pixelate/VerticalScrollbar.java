@@ -18,7 +18,7 @@ final class VerticalScrollbar extends SceneWidget {
     static int field_Lb;
     static IntrusiveDeque field_Hb;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Qb = null;
         field_Hb = null;
         int var1 = -33 % ((49 - param0) / 39);
@@ -106,7 +106,7 @@ final class VerticalScrollbar extends SceneWidget {
               return true;
             }
             if (param0 < 118) {
-              VerticalScrollbar.c((byte) -109);
+              VerticalScrollbar.releaseStatics((byte) -109);
               return false;
             }
             return false;
@@ -116,7 +116,7 @@ final class VerticalScrollbar extends SceneWidget {
             return true;
           }
           if (param0 < 118) {
-            VerticalScrollbar.c((byte) -109);
+            VerticalScrollbar.releaseStatics((byte) -109);
             return false;
           }
           return false;
@@ -124,7 +124,7 @@ final class VerticalScrollbar extends SceneWidget {
         if (param0 >= 118) {
           return false;
         }
-        VerticalScrollbar.c((byte) -109);
+        VerticalScrollbar.releaseStatics((byte) -109);
         return false;
     }
 
@@ -323,7 +323,7 @@ final class VerticalScrollbar extends SceneWidget {
         if (param0 > 24) {
           return false;
         }
-        VerticalScrollbar.c((byte) -65);
+        VerticalScrollbar.releaseStatics((byte) -65);
         return false;
     }
 

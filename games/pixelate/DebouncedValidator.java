@@ -350,7 +350,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -88 / ((-1 - param0) / 35);
         field_e = null;
         field_b = null;

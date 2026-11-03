@@ -10,7 +10,7 @@ final class TextLayoutLine {
     static String field_f;
     static int field_e;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 != -26) {

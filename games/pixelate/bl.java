@@ -19,7 +19,7 @@ final class bl {
         int stackIn_15_3;
         boolean stackIn_16_4 = false;
         if (param0 >= -22) {
-          bl.b(-59);
+          bl.releaseStatics(-59);
         }
         IntrusiveDequeCursor.c(-1);
         if (null != io.field_c) {
@@ -44,7 +44,7 @@ final class bl {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         if (param0 != -46342) {
@@ -57,7 +57,7 @@ final class bl {
 
     final static int a(boolean param0) {
         if (!param0) {
-          bl.b(-26);
+          bl.releaseStatics(-26);
         }
         return MouseInputHandler.field_b;
     }

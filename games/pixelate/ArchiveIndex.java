@@ -22,7 +22,7 @@ final class ArchiveIndex {
     byte[][] groupDigests;
     IntKeyLookup groupNameLookup;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 47) {
           return;
         }

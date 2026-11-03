@@ -20,7 +20,7 @@ final class BlastFromThePastBackground extends BackgroundScene {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 17) {
           field_n = (SceneWidget) null;
         }
@@ -50,7 +50,7 @@ final class BlastFromThePastBackground extends BackgroundScene {
           var4.b(73);
         }
         if (param0) {
-          BlastFromThePastBackground.b((byte) 76);
+          BlastFromThePastBackground.releaseStatics((byte) 76);
         }
     }
 

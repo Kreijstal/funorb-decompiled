@@ -8,11 +8,11 @@ final class JavaRandomHelpers {
     static String field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 > -105) {
-          JavaRandomHelpers.a((byte) -61);
+          JavaRandomHelpers.releaseStatics((byte) -61);
           field_b = null;
           return;
         }

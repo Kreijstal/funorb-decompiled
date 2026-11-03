@@ -13,7 +13,7 @@ final class cl {
     static String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_i = null;

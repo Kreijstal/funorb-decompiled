@@ -204,7 +204,7 @@ final class lg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -241,7 +241,7 @@ final class lg {
           bd.field_c = param5;
           MarkerSlider.field_N = param3;
           if (param2 >= -114) {
-            lg.a((byte) 57);
+            lg.releaseStatics((byte) 57);
           }
           LoadingProgressDialog.field_fb = param4;
           AccountTermsPanel.field_J = param1;

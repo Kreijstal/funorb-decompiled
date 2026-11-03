@@ -27,7 +27,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     final static void a(int param0, boolean param1) {
         wa.field_c.a(0, 0, 120);
         if (param0 <= 73) {
-          Js5NetworkRequest.c((byte) 4);
+          Js5NetworkRequest.releaseStatics((byte) 4);
         }
     }
 
@@ -100,12 +100,12 @@ final class Js5NetworkRequest extends ArchiveRequest {
         ClientException.field_f.a(19692);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_G = null;
         field_F = null;
         field_C = null;
         if (param0 > -44) {
-          Js5NetworkRequest.c((byte) -123);
+          Js5NetworkRequest.releaseStatics((byte) -123);
         }
     }
 

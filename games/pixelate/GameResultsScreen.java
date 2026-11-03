@@ -32,7 +32,7 @@ final class GameResultsScreen extends MenuScreen {
         var12 = Pixelate.field_H ? 1 : 0;
         this.field_G = 0;
         if (param7 != 2) {
-          GameResultsScreen.f((byte) -64);
+          GameResultsScreen.releaseStatics((byte) -64);
         }
         this.field_v = this.e(10, param0);
         this.field_E = param1;
@@ -241,7 +241,7 @@ final class GameResultsScreen extends MenuScreen {
     final void c(byte param0) {
         this.b((byte) 12, false);
         if (param0 > -13) {
-          GameResultsScreen.f((byte) 29);
+          GameResultsScreen.releaseStatics((byte) 29);
         }
     }
 
@@ -371,7 +371,7 @@ final class GameResultsScreen extends MenuScreen {
         int var6_int = 0;
         int var4 = param0 * 2;
         if (!param1) {
-          GameResultsScreen.f((byte) -107);
+          GameResultsScreen.releaseStatics((byte) -107);
         }
         int var5 = 128 <= param0 ? param0 * 2 - 256 : 0;
         if (param2) {
@@ -461,7 +461,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_D = null;
         field_q = null;
         if (param0 >= -37) {
@@ -509,7 +509,7 @@ final class GameResultsScreen extends MenuScreen {
           }
         }
         if (param0 >= -35) {
-          GameResultsScreen.f((byte) -122);
+          GameResultsScreen.releaseStatics((byte) -122);
         }
         this.field_g.b((byte) -71);
     }

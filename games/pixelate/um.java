@@ -49,7 +49,7 @@ final class um extends IntrusiveNode {
             StatefulTextPainter.a(param10, param8 - param0, var17[4], param4 - param7, var17[5], var17[7], var17[6], param6, (byte) -38, param9);
           }
           if (param5 > -85) {
-            um.a(-74);
+            um.releaseStatics(-74);
           }
           if (param2.field_f[7] <= 0) {
             StatefulTextPainter.a(param10, param3 - param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
@@ -116,7 +116,7 @@ final class um extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         int var1 = -127 / ((param0 - 74) / 32);
         field_q = null;

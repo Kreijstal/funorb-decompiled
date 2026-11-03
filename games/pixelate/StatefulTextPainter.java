@@ -76,7 +76,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         int var1 = 43 % ((param0 - 8) / 48);
         field_u = null;

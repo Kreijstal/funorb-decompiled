@@ -72,7 +72,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -74) {
           field_c = (String) null;
           field_d = null;

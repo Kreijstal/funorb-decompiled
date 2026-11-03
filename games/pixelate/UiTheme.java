@@ -25,7 +25,7 @@ final class UiTheme {
     static String field_h;
     int field_n;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (!param0) {
           return;

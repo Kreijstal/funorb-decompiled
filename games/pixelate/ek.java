@@ -24,7 +24,7 @@ final class ek {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = -83 / ((param0 + 65) / 59);
         field_b = null;

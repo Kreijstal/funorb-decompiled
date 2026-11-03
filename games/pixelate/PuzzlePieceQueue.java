@@ -50,7 +50,7 @@ final class PuzzlePieceQueue {
           this.field_g = this.field_l;
         }
         if (param0 != 27420) {
-          PuzzlePieceQueue.a(true);
+          PuzzlePieceQueue.releaseStatics(true);
         }
     }
 
@@ -123,7 +123,7 @@ final class PuzzlePieceQueue {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_d = (Sprite[]) null;
         }

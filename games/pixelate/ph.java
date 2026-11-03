@@ -94,7 +94,7 @@ final class ph extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 < 104) {
           return;
@@ -139,7 +139,7 @@ final class ph extends IntrusiveNode {
           if (param1 == -106) {
             return;
           }
-          ph.a(-30);
+          ph.releaseStatics(-30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

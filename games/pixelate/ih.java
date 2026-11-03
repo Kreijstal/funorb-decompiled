@@ -18,7 +18,7 @@ final class ih {
         return Js5Transport.field_d;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

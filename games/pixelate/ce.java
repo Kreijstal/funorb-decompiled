@@ -77,10 +77,10 @@ final class ce {
         return 1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         if (!param0) {
-          ce.a(true);
+          ce.releaseStatics(true);
         }
     }
 

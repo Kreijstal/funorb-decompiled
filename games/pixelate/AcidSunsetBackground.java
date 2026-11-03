@@ -25,9 +25,9 @@ final class AcidSunsetBackground extends BackgroundScene {
         this.field_p = this.field_p - DialWidgetPainter.field_f.length;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          AcidSunsetBackground.d(35);
+          AcidSunsetBackground.releaseStatics(35);
           field_o = null;
           return;
         }

@@ -140,7 +140,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         return param0 < param2 ? param0 : param2;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_r = null;
         if (param0 != 0) {

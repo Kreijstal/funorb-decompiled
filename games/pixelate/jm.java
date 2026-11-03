@@ -42,7 +42,7 @@ final class jm {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_i = null;
         field_k = null;

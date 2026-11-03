@@ -73,7 +73,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_I = null;
         field_N = null;
         field_J = null;

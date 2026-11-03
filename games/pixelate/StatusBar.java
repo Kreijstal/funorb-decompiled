@@ -55,7 +55,7 @@ abstract class StatusBar {
         this.b(38);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_d = null;
         field_l = null;

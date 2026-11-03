@@ -18,7 +18,7 @@ final class ClientContextMenu {
     private int[] field_j;
     static int[] field_f;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 52) {
           field_e = null;
           field_f = null;

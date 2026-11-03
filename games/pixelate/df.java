@@ -54,7 +54,7 @@ final class df extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3) {
           field_m = (String) null;
           field_r = null;

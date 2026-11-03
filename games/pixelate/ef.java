@@ -188,7 +188,7 @@ final class ef {
             na.a(!param0);
           }
           if (param0) {
-            ef.a(false);
+            ef.releaseStatics(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class ef {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         if (!param0) {
           return;

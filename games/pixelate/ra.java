@@ -13,7 +13,7 @@ final class ra {
     static int field_c;
     static PlatformTask field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_e = null;
         if (param0) {

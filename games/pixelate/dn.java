@@ -6,7 +6,7 @@ final class dn implements hj {
     static SceneWidget field_c;
     static String[][] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = (String[][]) null;
         field_c = null;

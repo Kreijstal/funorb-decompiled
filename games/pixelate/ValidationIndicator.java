@@ -205,7 +205,7 @@ final class ValidationIndicator extends TextButton {
         QuickChatPhraseCache.field_k.drawAdditive(var5 - var16.field_A, var7 - var16.field_B, 256);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -84) {
           field_N = null;
           field_O = null;

@@ -137,7 +137,7 @@ class BackgroundScene {
         jd.field_r = jd.field_r + 1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != -4136) {
           return;

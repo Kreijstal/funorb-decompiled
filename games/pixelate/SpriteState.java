@@ -18,7 +18,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_E;
     int field_A;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_z = null;
         field_u = null;
         field_H = null;
@@ -48,7 +48,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 500) {
-            SpriteState.a((byte) -8);
+            SpriteState.releaseStatics((byte) -8);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||

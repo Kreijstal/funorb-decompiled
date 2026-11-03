@@ -34,7 +34,7 @@ final class MainMenuScreen extends MenuScreen {
         this.b((byte) -71);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_r = null;
         int var1 = 127 % ((-44 - param0) / 39);

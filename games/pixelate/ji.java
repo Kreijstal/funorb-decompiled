@@ -9,7 +9,7 @@ final class ji {
     static String field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -14186) {
           return;

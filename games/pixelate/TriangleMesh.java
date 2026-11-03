@@ -63,7 +63,7 @@ final class TriangleMesh {
         this.a(-125);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         field_e = null;
         field_m = null;

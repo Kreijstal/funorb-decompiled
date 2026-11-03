@@ -274,11 +274,11 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_b = null;
         if (param0 > -55) {
-          BufferedSocket.a((byte) 57);
+          BufferedSocket.releaseStatics((byte) 57);
         }
     }
 

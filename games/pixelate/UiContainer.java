@@ -384,7 +384,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_H = null;
         field_G = null;
         int var1 = -42 / ((3 - param0) / 46);

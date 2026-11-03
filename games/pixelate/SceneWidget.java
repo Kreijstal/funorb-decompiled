@@ -553,7 +553,7 @@ class SceneWidget extends SceneWidgetNode {
         AccountTermsPanel.field_M = null;
         mj.a(false);
         if (param0 != 0) {
-          SceneWidget.a((byte) -43);
+          SceneWidget.releaseStatics((byte) -43);
         }
     }
 
@@ -706,7 +706,7 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         field_db = null;
         if (param0 != 59) {

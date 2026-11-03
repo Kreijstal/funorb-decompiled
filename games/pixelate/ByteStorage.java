@@ -10,7 +10,7 @@ abstract class ByteStorage {
     static long[] field_a;
     static boolean field_b;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         if (param0 == -8871) {

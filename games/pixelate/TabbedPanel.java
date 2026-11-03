@@ -335,7 +335,7 @@ final class TabbedPanel extends SceneWidget {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 15967) {
           return;
         }

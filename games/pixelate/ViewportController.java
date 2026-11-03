@@ -165,7 +165,7 @@ final class ViewportController {
         int var2 = 99 % ((param0 + 17) / 62);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_k = null;
         field_e = null;

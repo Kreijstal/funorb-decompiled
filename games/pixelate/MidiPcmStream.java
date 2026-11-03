@@ -699,7 +699,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -106 % ((34 - param0) / 60);
         field_E = null;
     }

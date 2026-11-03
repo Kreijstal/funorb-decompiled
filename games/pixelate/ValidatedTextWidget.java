@@ -147,7 +147,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_eb = null;
         field_kb = null;
         field_jb = null;
