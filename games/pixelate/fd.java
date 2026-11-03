@@ -11,7 +11,7 @@ final class fd {
         if (param0 != 0) {
           return (SceneWidget) null;
         }
-        return jm.field_b.field_Fb;
+        return jm.field_b.content;
     }
 
     final synchronized static byte[] a(int param0, int param1) {

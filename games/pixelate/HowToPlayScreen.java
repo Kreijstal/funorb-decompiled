@@ -41,22 +41,22 @@ final class HowToPlayScreen extends MenuScreen {
         }
         if (!this.field_g.c((byte) 35)) {
           if (ke.field_a == 96) {
-            if (var2 >= this.field_g.field_j) {
+            if (var2 >= this.field_g.selectedIndex) {
               this.field_g.a(false, var3);
             } else {
-              this.field_g.a(false, this.field_g.field_j - 1);
+              this.field_g.a(false, this.field_g.selectedIndex - 1);
             }
           }
           if (ke.field_a == 97) {
-            if (this.field_g.field_j >= 0 &&
-              this.field_g.field_j < var3) {
-              this.field_g.a(false, this.field_g.field_j + 1);
+            if (this.field_g.selectedIndex >= 0 &&
+              this.field_g.selectedIndex < var3) {
+              this.field_g.a(false, this.field_g.selectedIndex + 1);
             } else {
               this.field_g.a(false, var2);
             }
           }
           if ((ke.field_a == 98 ||
-            ke.field_a == 99) && this.field_g.field_j == -1) {
+            ke.field_a == 99) && this.field_g.selectedIndex == -1) {
             this.field_g.a(false, 1);
           }
         }

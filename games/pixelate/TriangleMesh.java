@@ -176,7 +176,7 @@ final class TriangleMesh {
             }
             var2 = 1;
           }
-          mj.field_c.a(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
+          mj.field_c.updatePointer(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
           if (param0 <= 74) {
             TriangleMesh.b((byte) -77);
           }
@@ -185,8 +185,8 @@ final class TriangleMesh {
           }
           var3 = 0;
           if (var1_int != 0 &&
-            mj.field_c.field_j >= 0) {
-            var3 = BackgroundScene.field_h[mj.field_c.field_j];
+            mj.field_c.selectedIndex >= 0) {
+            var3 = BackgroundScene.field_h[mj.field_c.selectedIndex];
             if (var3 == 2 ||
               var3 == 5) {
               dh.a(0);

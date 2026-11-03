@@ -58,7 +58,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         }
     }
 
-    boolean c(boolean param0) {
+    boolean tickLayerAndCheckHidden(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -84,7 +84,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         if (param0) {
           this.e(false);
         }
-        return super.c(param0);
+        return super.tickLayerAndCheckHidden(param0);
     }
 
     public static void l(int param0) {
@@ -137,7 +137,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         this.field_Y = this.field_C;
     }
 
-    void a(int param0, int param1, boolean param2) {
+    void drawDialogBackground(int param0, int param1, boolean param2) {
         int var4;
         int var5;
         int var6;

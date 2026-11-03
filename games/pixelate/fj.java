@@ -74,7 +74,7 @@ final class fj {
           var13 = ProxySocketConnector.field_n;
           var3 = BufferedRandomAccessFile.field_a;
           var4 = ji.field_c;
-          var13.field_b.b(0, var3, 88, var4, 0);
+          var13.field_b.layoutPopup(0, var3, 88, var4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

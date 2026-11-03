@@ -480,7 +480,7 @@ final class GameResultsScreen extends MenuScreen {
         var3 = Pixelate.field_H ? 1 : 0;
         var2 = ke.field_a;
         if (!this.field_g.c((byte) 35)) {
-          if (this.field_g.field_j == -1 && (var2 == 98 ||
+          if (this.field_g.selectedIndex == -1 && (var2 == 98 ||
             var2 == 99)) {
             stackIn_16_0 = this.field_g;
             stackIn_16_1 = false;
@@ -493,7 +493,7 @@ final class GameResultsScreen extends MenuScreen {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_g.field_j == 0 &&
+            if (this.field_g.selectedIndex == 0 &&
               var2 == 97) {
               if (!(!this.c(-119, 1))) {
                 this.field_g.a(false, 1);
@@ -501,7 +501,7 @@ final class GameResultsScreen extends MenuScreen {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (1 == this.field_g.field_j &&
+              if (1 == this.field_g.selectedIndex &&
                 var2 == 96) {
                 this.field_g.a(false, 0);
               }

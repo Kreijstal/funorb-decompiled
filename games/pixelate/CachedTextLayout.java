@@ -6,15 +6,15 @@ final class CachedTextLayout extends TextLayout {
     static String field_n;
     static Sprite[] field_p;
     static String field_g;
-    private int field_i;
+    private int cachedHorizontalAlignment;
     static String field_j;
     static int field_h;
     private int field_e;
     private int field_q;
     private int field_k;
-    private String field_m;
-    private boolean field_o;
-    private BitmapFont field_l;
+    private String cachedText;
+    private boolean singleLineMode;
+    private BitmapFont cachedFont;
 
     final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, LobbyGame param6, int param7) {
         int stackIn_4_0 = 0;
@@ -368,25 +368,25 @@ final class CachedTextLayout extends TextLayout {
             this.lines = null;
             return;
           }
-          if (param3 == this.field_l &&
-            !this.field_o &&
-            param5 == this.field_i &&
+          if (param3 == this.cachedFont &&
+            !this.singleLineMode &&
+            param5 == this.cachedHorizontalAlignment &&
             ~param6 == ~this.field_f &&
             this.field_e == param7 &&
             this.field_q == param4 &&
             ~this.field_k == ~param0 &&
-            null != this.field_m &&
-            this.field_m.equals(param2)) {
+            null != this.cachedText &&
+            this.cachedText.equals(param2)) {
             return;
           }
           this.field_q = param4;
           this.field_f = param6;
-          this.field_l = param3;
-          this.field_i = param5;
+          this.cachedFont = param3;
+          this.cachedHorizontalAlignment = param5;
           this.field_e = param7;
           this.field_k = param0;
-          this.field_o = false;
-          this.field_m = param2;
+          this.singleLineMode = false;
+          this.cachedText = param2;
           var16 = new String[1 + param3.wrappedLineCount(param2, param0)];
           var17 = var16;
           var10 = Math.max(1, param3.wrapText(param2, new int[]{param0}, var17));
@@ -479,7 +479,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(String param0, boolean param1, int param2, BitmapFont param3, int param4) {
+    final void layoutCenteredLine(String param0, boolean param1, int param2, BitmapFont param3, int param4) {
         TextLayoutLine var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -489,14 +489,14 @@ final class CachedTextLayout extends TextLayout {
         if (param1) {
           field_g = (String) null;
         }
-        if (this.field_l == param3 && this.field_o && 1 == this.field_i && null != this.field_m &&
-          this.field_m.equals(param0)) {
+        if (this.cachedFont == param3 && this.singleLineMode && 1 == this.cachedHorizontalAlignment && null != this.cachedText &&
+          this.cachedText.equals(param0)) {
           return;
         }
         try {
-          this.field_i = 1;
-          this.field_o = true;
-          this.field_l = param3;
+          this.cachedHorizontalAlignment = 1;
+          this.singleLineMode = true;
+          this.cachedFont = param3;
           var8 = this.createSingleLine(param0, 0, param3, param2);
           var7 = param3.textWidth(param0);
           var8.field_g[0] = param4 - (var7 >> 1);
@@ -593,7 +593,7 @@ final class CachedTextLayout extends TextLayout {
             if (!AccountRegistrationPanel.m(param1 + 98)) {
               var9_ref_String = io.field_c.field_pc;
               VerticalScrollbar.field_Qb.field_cb = AlphaContainer.a(HowToPlayScreen.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
-              nk.field_e.a(Bzip2State.field_A.height - 40, 40, 0, param1 + 255, Bzip2State.field_A.field_K);
+              nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, param1 + 255, Bzip2State.field_A.field_K);
               nk.field_e.field_cb = AlphaContainer.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
               var8 = nk.field_e;
               decompiledFrameRemainder3 = (var19 != 0);
@@ -601,7 +601,7 @@ final class CachedTextLayout extends TextLayout {
             if (decompiledFrameRemainder3) {
               VerticalScrollbar.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
               var9 = (Bzip2State.field_A.field_K + 2) / 2;
-              wm.field_d.a(Bzip2State.field_A.height - 40, 40, 0, 256, var9 - 2);
+              wm.field_d.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, var9 - 2);
               if (io.field_c.field_ec <= io.field_c.field_mc) {
                 wm.field_d.field_cb = fo.field_m.toUpperCase();
                 wm.field_d.field_rb = false;
@@ -629,7 +629,7 @@ final class CachedTextLayout extends TextLayout {
                   wm.field_d.field_zb = PicturePreview.field_k.field_ab;
                 }
               }
-              ep.field_a.a(-40 + Bzip2State.field_A.height, 40, var9, 256, -var9 + Bzip2State.field_A.field_K);
+              ep.field_a.setBounds(-40 + Bzip2State.field_A.height, 40, var9, 256, -var9 + Bzip2State.field_A.field_K);
               ep.field_a.field_cb = DateInputWidget.field_J.toUpperCase();
               var8 = ep.field_a;
               stackIn_21_0 = ep.field_a;
@@ -784,7 +784,7 @@ final class CachedTextLayout extends TextLayout {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = Vector3.field_c.field_Fb.children;
+                var17 = Vector3.field_c.content.children;
                 var18_ref = (LobbyPlayer) (var17.c(1504642273));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -860,7 +860,7 @@ final class CachedTextLayout extends TextLayout {
                   (decompiledFrameRemainder1)) {
                   ep.field_a.field_rb = false;
                   if (ep.field_a.field_R) {
-                    boolean decompiledSharedTail0 = (0 != nd.field_b.field_g.field_Jb);
+                    boolean decompiledSharedTail0 = (0 != nd.field_b.field_g.selectedTab);
                     if (!decompiledSharedTail0) {
                       up.field_o = CipherPacketBuffer.field_u;
                       decompiledSharedTail0 = (var19 != 0);
@@ -954,7 +954,7 @@ final class CachedTextLayout extends TextLayout {
           stackIn_191_1 = -28476;
           stackIn_192_2 = (param4) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_191_0).a(stackIn_191_1, stackIn_192_2);
-          nd.field_b.field_g.b((byte) -122);
+          nd.field_b.field_g.processTabPresses((byte) -122);
           if (null != io.field_c) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
               qg.a(io.field_c.c((byte) 8), param2, false);
@@ -1072,24 +1072,24 @@ final class CachedTextLayout extends TextLayout {
         return -SpriteCheckboxPainter.field_c + hm.a(64);
     }
 
-    final void a(BitmapFont param0, int param1, int param2, boolean param3, String param4) {
+    final void layoutLeftAlignedLine(BitmapFont param0, int param1, int param2, boolean param3, String param4) {
         TextLayoutLine var8 = null;
         TextLayoutLine var9 = null;
         if (param4 == null) {
           this.lines = null;
           return;
         }
-        if (this.field_l == param0 &&
-          this.field_o &&
-          this.field_i == 2 &&
-          this.field_m != null &&
-          this.field_m.equals(param4)) {
+        if (this.cachedFont == param0 &&
+          this.singleLineMode &&
+          this.cachedHorizontalAlignment == 2 &&
+          this.cachedText != null &&
+          this.cachedText.equals(param4)) {
           return;
         }
-        this.field_m = param4;
-        this.field_i = 2;
-        this.field_o = true;
-        this.field_l = param0;
+        this.cachedText = param4;
+        this.cachedHorizontalAlignment = 2;
+        this.singleLineMode = true;
+        this.cachedFont = param0;
         if (param3) {
           return;
         }
@@ -1146,25 +1146,25 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
+    final void layoutLeftAligned(String param0, int param1, BitmapFont param2, int param3, int param4) {
         TextLayoutLine var7 = null;
         int var6_int = -72 % ((param4 + 70) / 49);
         if (param0 == null) {
           this.lines = null;
           return;
         }
-        if (this.field_l == param2 &&
-          this.field_o &&
-          0 == this.field_i &&
-          this.field_m != null &&
-          this.field_m.equals(param0)) {
+        if (this.cachedFont == param2 &&
+          this.singleLineMode &&
+          0 == this.cachedHorizontalAlignment &&
+          this.cachedText != null &&
+          this.cachedText.equals(param0)) {
           return;
         }
         try {
-          this.field_o = true;
-          this.field_l = param2;
-          this.field_i = 0;
-          this.field_m = param0;
+          this.singleLineMode = true;
+          this.cachedFont = param2;
+          this.cachedHorizontalAlignment = 0;
+          this.cachedText = param0;
           var7 = this.createSingleLine(param0, 0, param2, param1);
           var7.field_g[0] = param3;
           var7.field_g[param0.length()] = param2.textWidth(param0) + param3;

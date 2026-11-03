@@ -190,9 +190,9 @@ final class WidgetStyleLayer {
             return;
           }
           if (var6 != null &&
-            param4.field_a != null &&
+            param4.font != null &&
             this.field_g >= 0) {
-            stackIn_18_0 = param4.field_a;
+            stackIn_18_0 = param4.font;
             stackIn_18_1 = var6;
             stackIn_18_2 = param4.field_h;
             stackIn_18_3 = param1 + param2.field_z;

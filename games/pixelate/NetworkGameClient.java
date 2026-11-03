@@ -22,7 +22,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param1 != 96) {
           this.g((byte) 41);
         }
-        return this.a(param1 ^ 96, param0, true);
+        return this.processAccountUiActions(param1 ^ 96, param0, true);
     }
 
     private final void m(int param0) {
@@ -36,7 +36,7 @@ abstract class NetworkGameClient extends GameApplet {
         Checkbox.field_P[6] = true;
     }
 
-    private final int a(int param0, boolean param1, boolean param2) {
+    private final int processAccountUiActions(int param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -398,7 +398,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
+    final void initializeFramework(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -508,7 +508,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.o(-126);
         }
         if (re.a(122)) {
-          discarded$1 = this.a(0, ib.field_f != null ? true : false, false);
+          discarded$1 = this.processAccountUiActions(0, ib.field_f != null ? true : false, false);
         } else {
           if (hf.field_q < 10) {
           } else {
@@ -518,7 +518,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (el.field_b != 0) {
                 NameSuggestionsPanel.a((byte) -104, lp.field_i);
               } else {
-                discarded$2 = this.a(0, false, false);
+                discarded$2 = this.processAccountUiActions(0, false, false);
               }
             }
           }
@@ -568,7 +568,7 @@ abstract class NetworkGameClient extends GameApplet {
               this.field_t = Integer.parseInt(var9);
             }
             NightToRememberBackground.field_n = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param1, (byte) -104, param2, param3, this.field_u, param4, 32);
+            this.startAppletThread(param1, (byte) -104, param2, param3, this.field_u, param4, 32);
             if (param0 != -128) {
               this.m(-94);
             }
@@ -760,7 +760,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = BackgroundScene.field_b - 1;
         byte[] var5 = new byte[var4];
-        MusicCrossfadeStream.field_o.b(var5, 0, 88, var4);
+        MusicCrossfadeStream.field_o.readCipheredBytes(var5, 0, 88, var4);
         LinkButtonPainter.openUrlInNewWindow(var3 != 0, of.a(var5, 1), -33, AudioService.a(param0 ^ 13840));
     }
 

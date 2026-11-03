@@ -9,7 +9,7 @@ final class IntrusiveDequeCursor {
     static int field_c;
     static boolean field_d;
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         IntrusiveNode var2 = this.cursor;
         if (var2 == this.deque.sentinel) {
           this.cursor = null;

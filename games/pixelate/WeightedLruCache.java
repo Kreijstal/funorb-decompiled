@@ -13,7 +13,7 @@ final class WeightedLruCache {
     static int field_c;
     private int field_a;
 
-    private final void a(Object param0, boolean param1, long param2, int param3) {
+    private final void putWeighted(Object param0, boolean param1, long param2, int param3) {
         ah var6 = null;
         tj var6_ref = null;
         int var7 = Pixelate.field_H ? 1 : 0;
@@ -41,7 +41,7 @@ final class WeightedLruCache {
 
     final void a(long param0, Object param1, byte param2) {
         try {
-          this.a(param1, true, param0, 1);
+          this.putWeighted(param1, true, param0, 1);
           if (param2 <= 75) {
             WeightedLruCache.a(false);
           }

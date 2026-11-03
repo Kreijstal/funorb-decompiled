@@ -79,21 +79,21 @@ final class hp extends SceneWidget {
             var13 = new SceneWidget(0L, param3, SpriteState.field_I[var12]);
             var14 = new SceneWidget(0L, param3, TextLayout.field_c[var12]);
             var15 = param3.font.textWidth(TextLayout.field_c[var12]);
-            var13.a(var10, 15, 20, 256, 65);
+            var13.setBounds(var10, 15, 20, 256, 65);
             if (var11 < var15) {
               var11 = var15;
             }
-            var14.a(var10, 15, 90, 256, 640);
+            var14.setBounds(var10, 15, 90, 256, 640);
             var8.addChild(var13, (byte) 26);
             var10 += 30;
             var8.addChild(var14, (byte) 26);
           }
-          var17.a(0, 24, 0, 256, 20 + (var11 + 90));
+          var17.setBounds(0, 24, 0, 256, 20 + (var11 + 90));
           var10 += 15;
-          this.a(100, var17.height + var10, 100, 256, var17.field_K);
-          this.field_Eb.a(5, 15, -20 + var17.field_K, 256, 15);
-          var8.a(var17.height, this.height - var17.height, 0, 256, this.field_K);
-          var9.a(20, 15, 0, 256, this.field_K);
+          this.setBounds(100, var17.height + var10, 100, 256, var17.field_K);
+          this.field_Eb.setBounds(5, 15, -20 + var17.field_K, 256, 15);
+          var8.setBounds(var17.height, this.height - var17.height, 0, 256, this.field_K);
+          var9.setBounds(20, 15, 0, 256, this.field_K);
           var8.field_zb = OptionsScreen.a(8421504, 16, 11579568, var8.height, 2105376, 3);
           var17.addChild(this.field_Eb, (byte) 26);
           var8.addChild(var9, (byte) 26);

@@ -51,7 +51,7 @@ final class fq extends MenuScreen {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.field_g.c((byte) 35)) {
-          var2 = this.field_g.field_j;
+          var2 = this.field_g.selectedIndex;
           var3 = ke.field_a;
           if (var2 == -1 && (var3 == 96 ||
             var3 == 97 ||

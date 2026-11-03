@@ -16,10 +16,10 @@ final class ModalStack extends SingleChildContainer {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
         ModalPanel var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
-          if (var3.c(false)) {
+          if (var3.tickLayerAndCheckHidden(false)) {
             var3.unlink(2779);
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         if (param0 < 99) {
           this.drawLayer(-63, 101, 32, (byte) 105);
@@ -59,7 +59,7 @@ final class ModalStack extends SingleChildContainer {
           if (var3.field_N) {
             return var3.k(97);
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         return null;
     }
@@ -97,7 +97,7 @@ final class ModalStack extends SingleChildContainer {
           if (var3.field_N) {
             return var3;
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         return null;
     }
@@ -109,7 +109,7 @@ final class ModalStack extends SingleChildContainer {
         return param1 >= 2 ? true : false;
     }
 
-    final void e(byte param0) {
+    final void refreshPanelVisibility(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != 54) {
           this.field_N = (IntrusiveDeque) null;
@@ -118,7 +118,7 @@ final class ModalStack extends SingleChildContainer {
         ModalPanel var3 = (ModalPanel) (var2.d(param0 ^ 54));
         while (var3 != null) {
           var3.field_N = false;
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
         this.child = null;
     }
@@ -143,7 +143,7 @@ final class ModalStack extends SingleChildContainer {
           if (var3.a((byte) 123)) {
             var3.unlink(2779);
           }
-          var3 = (ModalPanel) (var2.a((byte) -104));
+          var3 = (ModalPanel) (var2.first((byte) -104));
         }
     }
 

@@ -6,7 +6,7 @@ final class gq extends EmailCredentials {
     static String field_m;
     static int field_n;
 
-    final ea b(int param0) {
+    final ea getCredentialKind(int param0) {
         if (param0 != -27096) {
           field_n = -3;
         }

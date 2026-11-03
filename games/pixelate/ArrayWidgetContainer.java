@@ -137,7 +137,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         if (param0 != 1) {
           return true;
         }
-        stackIn_6_0 = (null != he.field_f) && (he.field_f.c((byte) -87));
+        stackIn_6_0 = (null != he.field_f) && (he.field_f.handleNormalizedNameKey((byte) -87));
         return stackIn_6_0;
     }
 

@@ -148,7 +148,7 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    final int b(int param0, boolean param1) {
+    final int updateAndPollAction(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         this.a(param0 ^ 24573, param1);
@@ -200,7 +200,7 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutPopup(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var6;
         int var7;
@@ -231,7 +231,7 @@ final class ContextActionMenu extends SceneWidget {
         var7Lifetime1 = this.field_Qb * this.itemCount + (this.field_Eb + this.field_Eb);
         var8Lifetime1 = ui.a(param4, param1, var6, (byte) -1);
         var9 = pj.a(var7Lifetime1, param3, param0, (byte) 45);
-        this.a(var9, var7Lifetime1, var8Lifetime1, 256, var6);
+        this.setBounds(var9, var7Lifetime1, var8Lifetime1, 256, var6);
         for (var10 = 0; var10 < this.itemCount; var10++) {
           this.items[var10].a(this.field_Qb, this.field_Nb, this.field_Lb, this.field_Eb + this.field_Qb * var10, this.field_Ob, var6 - 2 * this.field_Ob, -2147483648);
         }

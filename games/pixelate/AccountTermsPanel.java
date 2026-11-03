@@ -47,7 +47,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
     private final String a(int param0) {
         if (param0 >= -16) {
           TextHotspotWidget var3 = (TextHotspotWidget) null;
-          this.a(15, 52, -1, (TextHotspotWidget) null);
+          this.onHotspotAction(15, 52, -1, (TextHotspotWidget) null);
         }
         return "</col></u>";
     }
@@ -90,7 +90,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         }
     }
 
-    public final void a(int param0, int param1, int param2, TextHotspotWidget param3) {
+    public final void onHotspotAction(int param0, int param1, int param2, TextHotspotWidget param3) {
         int var6 = 0;
         TextHotspotWidget var7 = null;
         RuntimeException stackIn_12_0 = null;
@@ -102,7 +102,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         try {
           if (param2 != -8894) {
             var7 = (TextHotspotWidget) null;
-            this.a(87, -45, 104, (TextHotspotWidget) null);
+            this.onHotspotAction(87, -45, 104, (TextHotspotWidget) null);
           }
           if (param0 != 0) {
             if (param0 != 1) {

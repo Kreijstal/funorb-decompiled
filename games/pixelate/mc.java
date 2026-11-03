@@ -299,13 +299,13 @@ final class mc extends IntrusiveNode {
             AccountChoicePanel.field_O != null) {
             wo.field_c.b(231, 390);
             var1 = ro.field_b;
-            if (NameSuggestionsPanel.field_I.field_j == 0) {
+            if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
               var1 = ph.field_n;
             }
             var1.b(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = qk.field_e;
-            if (NameSuggestionsPanel.field_I.field_j == 0) {
+            if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
               stackIn_52_2 = 4;
             } else {
               stackIn_52_2 = 3;
@@ -323,19 +323,19 @@ final class mc extends IntrusiveNode {
             }
             stackIn_57_0 = ui.field_b;
             stackIn_57_1 = AlphaContainer.field_K;
-            stackIn_58_2 = (NameSuggestionsPanel.field_I.field_j == 0);
+            stackIn_58_2 = (NameSuggestionsPanel.field_I.selectedIndex == 0);
             r.a(stackIn_57_0, stackIn_57_1, stackIn_58_2, param0 ^ -44);
           }
           if (wo.field_c != null &&
             AccountChoicePanel.field_O != null) {
             wo.field_c.b(434, 390);
             ResizableModalPanel.field_P.b(0, 0);
-            if (NameSuggestionsPanel.field_I.field_j == 1) {
+            if (NameSuggestionsPanel.field_I.selectedIndex == 1) {
               nh.a(wo.field_c.field_E * 7 / 12, 64, 436, 392, 121, wo.field_c.field_F - 4);
             }
             stackIn_66_0 = DraggableWidget.field_Q;
             stackIn_66_1 = JaggrabDownloader.field_a;
-            stackIn_67_2 = (NameSuggestionsPanel.field_I.field_j == 1);
+            stackIn_67_2 = (NameSuggestionsPanel.field_I.selectedIndex == 1);
             r.a(stackIn_66_0, stackIn_66_1, stackIn_67_2, -40);
           }
           if (ScrollContainer.field_Kb != null) {

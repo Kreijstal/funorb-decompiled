@@ -69,7 +69,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           return;
         }
         try {
-          ui.a(123, this.field_Q.e((byte) 83), this.field_Q.c(true), this.field_Q.getMonthIndex(25));
+          ui.a(123, this.field_Q.getDay((byte) 83), this.field_Q.c(true), this.field_Q.getMonthIndex(25));
           if (param2 != 11) {
             field_R = (String) null;
           }

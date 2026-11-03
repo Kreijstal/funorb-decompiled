@@ -119,7 +119,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    abstract dj a(boolean param0);
+    abstract dj evaluateState(boolean param0);
 
     final static boolean a(byte param0, SocialListEntry param1, SocialListEntry param2) {
         int var3_int = 0;
@@ -218,7 +218,7 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           cm.b(stackIn_6_0, 4740);
           nd.field_b.a(ff.field_h.field_K, -42 + ff.field_h.height, 0, 0, param0 ^ 37);
-          MatchingTextValidator.field_q.a(0, fq.field_q, 0, 256, vd.field_a.field_K);
+          MatchingTextValidator.field_q.setBounds(0, fq.field_q, 0, 256, vd.field_a.field_K);
           stackIn_8_0 = WeightedLruCache.field_h;
           stackIn_8_1 = 2 + fq.field_q;
           stackIn_8_2 = 18;
@@ -229,12 +229,12 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_9_5 = 0;
           }
-          ((SceneWidget) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, -stackIn_9_5 + vd.field_a.field_K);
-          wa.field_g.a(2 + fq.field_q, 18, -40 + vd.field_a.field_K - (DelegatingCanvas.field_b + 2), 256, 42 + DelegatingCanvas.field_b);
+          ((SceneWidget) (Object) stackIn_8_0).setBounds(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, -stackIn_9_5 + vd.field_a.field_K);
+          wa.field_g.setBounds(2 + fq.field_q, 18, -40 + vd.field_a.field_K - (DelegatingCanvas.field_b + 2), 256, 42 + DelegatingCanvas.field_b);
           Vector3.field_c.a(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.height), DelegatingCanvas.field_b);
-          ValidatedTextWidget.field_kb.a(ff.field_h.height - 40, 40, 0, 256, ff.field_h.field_K);
-          VerticalScrollbar.field_Qb.a(0, 30, 0, 256, Bzip2State.field_A.field_K);
-          dc.field_a.a(30, -40 + (Bzip2State.field_A.height - 2 - 30), 0, 256, Bzip2State.field_A.field_K);
+          ValidatedTextWidget.field_kb.setBounds(ff.field_h.height - 40, 40, 0, 256, ff.field_h.field_K);
+          VerticalScrollbar.field_Qb.setBounds(0, 30, 0, 256, Bzip2State.field_A.field_K);
+          dc.field_a.setBounds(30, -40 + (Bzip2State.field_A.height - 2 - 30), 0, 256, Bzip2State.field_A.field_K);
           var2_int = 3 + fj.field_b;
           if (LinkButtonPainter.field_a.length < 2) {
             var2_int--;
@@ -250,7 +250,7 @@ abstract class DebouncedValidator implements ValidationSource {
           if (40 < var4) {
             var4 = 40;
           }
-          sm.field_m.a(5, var4, 5, param0 ^ 288, dc.field_a.field_K - 5 - 5);
+          sm.field_m.setBounds(5, var4, 5, param0 ^ 288, dc.field_a.field_K - 5 - 5);
           var5 = 2 + var4 + 5;
           for (var6 = 0; fj.field_b + 4 > var6; var6++) {
             if ((1 != var6 ||
@@ -312,7 +312,7 @@ abstract class DebouncedValidator implements ValidationSource {
                     var17++;
                   }
                 } else {
-                  dh.field_b[var6].a(var5, var3, 5, 256, 103);
+                  dh.field_b[var6].setBounds(var5, var3, 5, 256, 103);
                   var8 = 110;
                   if (!param1) {
                     if (AccountTermsPanel.field_L[var6][0] != null) {
@@ -335,12 +335,12 @@ abstract class DebouncedValidator implements ValidationSource {
               }
             }
           }
-          ra.field_e.a(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
-          ih.field_g.a(0, 24, 0, 256, ra.field_e.field_K);
-          kh.field_a.a(24, -24 + ra.field_e.height, 0, 256, ra.field_e.field_K);
+          ra.field_e.setBounds(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
+          ih.field_g.setBounds(0, 24, 0, 256, ra.field_e.field_K);
+          kh.field_a.setBounds(24, -24 + ra.field_e.height, 0, 256, ra.field_e.field_K);
           kh.field_a.field_zb = OptionsScreen.a(8421504, param0 ^ 48, 11579568, kh.field_a.height, 1, 3);
-          StripedProgressBar.field_O.a(5, -2 + kh.field_a.height - 10 - 24, 5, param0 + 224, kh.field_a.field_K - 10);
-          ContentTransitionDialog.field_eb.a(-24 + kh.field_a.height - 5, 24, (-80 + kh.field_a.field_K) / 2, 256, 80);
+          StripedProgressBar.field_O.setBounds(5, -2 + kh.field_a.height - 10 - 24, 5, param0 + 224, kh.field_a.field_K - 10);
+          ContentTransitionDialog.field_eb.setBounds(-24 + kh.field_a.height - 5, 24, (-80 + kh.field_a.field_K) / 2, 256, 80);
           mi.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -366,7 +366,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (!((350L + this.field_c) <= hm.a(64))) {
           return BufferedRandomAccessFile.field_b;
         }
-        return this.a(true);
+        return this.evaluateState(true);
     }
 
     public final void b(int param0) {

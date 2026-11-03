@@ -8,9 +8,9 @@ final class TabbedPanel extends SceneWidget {
     static String field_Nb;
     static int field_Gb;
     static String field_Hb;
-    int field_Jb;
+    int selectedTab;
     private SceneWidget[] field_Mb;
-    private SceneWidget[] field_Lb;
+    private SceneWidget[] tabButtons;
     static String field_Fb;
     static String field_Eb;
     static String field_Ib;
@@ -25,22 +25,22 @@ final class TabbedPanel extends SceneWidget {
         int var4Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         if (param0 < 103) {
-          this.b((byte) 55);
+          this.processTabPresses((byte) 55);
         }
-        for (var4 = 0; this.field_Lb.length > var4; var4++) {
-          var5 = this.field_K * var4 / this.field_Lb.length;
-          var6 = this.field_K * (var4 + 1) / this.field_Lb.length;
-          this.field_Lb[var4].field_D = var5;
-          this.field_Lb[var4].field_S = 0;
-          this.field_Lb[var4].field_K = var6 - var5;
-          this.field_Lb[var4].height = param1;
+        for (var4 = 0; this.tabButtons.length > var4; var4++) {
+          var5 = this.field_K * var4 / this.tabButtons.length;
+          var6 = this.field_K * (var4 + 1) / this.tabButtons.length;
+          this.tabButtons[var4].field_D = var5;
+          this.tabButtons[var4].field_S = 0;
+          this.tabButtons[var4].field_K = var6 - var5;
+          this.tabButtons[var4].height = param1;
         }
-        this.field_Kb.a(param1, this.height - param1, 0, 256, this.field_K);
+        this.field_Kb.setBounds(param1, this.height - param1, 0, 256, this.field_K);
         var8 = 0;
         var4Lifetime1 = var8;
         while (var8 < this.field_Mb.length) {
-          this.field_Mb[var8].a(param2, -(2 * param2) + this.field_Kb.height, param2, 256, -(param2 * 2) + this.field_Kb.field_K);
-          if (this.field_Jb != var8) {
+          this.field_Mb[var8].setBounds(param2, -(2 * param2) + this.field_Kb.height, param2, 256, -(param2 * 2) + this.field_Kb.field_K);
+          if (this.selectedTab != var8) {
             dupTemp$0 = this.field_Mb[var8];
             dupTemp$0.field_D = dupTemp$0.field_D + 10000;
           }
@@ -220,13 +220,13 @@ final class TabbedPanel extends SceneWidget {
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Lb = new SceneWidget[param2.length];
+          this.tabButtons = new SceneWidget[param2.length];
           this.field_Kb = new SceneWidget(0L, param3);
           this.field_Mb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
             var9 = new SceneWidget(0L, param1);
             var9.field_cb = param2[var8_int];
-            this.field_Lb[var8_int] = var9;
+            this.tabButtons[var8_int] = var9;
             this.addChild(var9, (byte) 26);
           }
           this.addChild(this.field_Kb, (byte) 26);
@@ -236,8 +236,8 @@ final class TabbedPanel extends SceneWidget {
             this.field_Kb.addChild(param4[var11], (byte) 26);
             var11++;
           }
-          this.field_Jb = param5;
-          this.field_Lb[param5].field_U = true;
+          this.selectedTab = param5;
+          this.tabButtons[param5].field_U = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -278,20 +278,20 @@ final class TabbedPanel extends SceneWidget {
         return param2 + JavaRandomHelpers.a(SceneWidgetNode.field_v, -120, -param2 + 1 + param1);
     }
 
-    final void b(byte param0) {
+    final void processTabPresses(byte param0) {
         int var2 = 0;
         SceneWidget dupTemp$0 = null;
         SceneWidget dupTemp$1 = null;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        for (var2 = 0; this.field_Lb.length > var2; var2++) {
-          if (var2 != this.field_Jb &&
-            this.field_Lb[var2].field_P != 0) {
-            this.field_Lb[this.field_Jb].field_U = false;
-            dupTemp$0 = this.field_Mb[this.field_Jb];
+        for (var2 = 0; this.tabButtons.length > var2; var2++) {
+          if (var2 != this.selectedTab &&
+            this.tabButtons[var2].field_P != 0) {
+            this.tabButtons[this.selectedTab].field_U = false;
+            dupTemp$0 = this.field_Mb[this.selectedTab];
             dupTemp$0.field_D = dupTemp$0.field_D + 10000;
-            this.field_Jb = var2;
-            this.field_Lb[var2].field_U = true;
+            this.selectedTab = var2;
+            this.tabButtons[var2].field_U = true;
             dupTemp$1 = this.field_Mb[var2];
             dupTemp$1.field_D = dupTemp$1.field_D - 10000;
           }

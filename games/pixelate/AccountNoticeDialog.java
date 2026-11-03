@@ -5,7 +5,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
     static String[] field_bb;
     private TextButton field_ab;
 
-    private final TextButton a(String param0, byte param1, UiListener param2) {
+    private final TextButton appendButton(String param0, byte param1, UiListener param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -123,7 +123,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_p = 50;
           var4.field_y = (WidgetPainter) ((Object) new TextWidgetPainter(ep.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, 80);
-          this.field_ab = this.a(TabbedPanel.field_Hb, (byte) -126, (UiListener) (this));
+          this.field_ab = this.appendButton(TabbedPanel.field_Hb, (byte) -126, (UiListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,8 +197,8 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             var6.field_K = 0;
             VerticalScrollbar.field_Qb.field_cb = vn.field_d.toUpperCase();
             var7 = (Bzip2State.field_A.field_K + 2) / 2;
-            nk.field_e.a(Bzip2State.field_A.height - 40, 40, 0, 256, -2 + var7);
-            ep.field_a.a(Bzip2State.field_A.height - 40, 40, var7, 256, Bzip2State.field_A.field_K - var7);
+            nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, -2 + var7);
+            ep.field_a.setBounds(Bzip2State.field_A.height - 40, 40, var7, 256, Bzip2State.field_A.field_K - var7);
             if (LinkButtonPainter.field_a.length == 1 &&
               LinkButtonPainter.field_a[0] == 2) {
               var8 = 0;
@@ -335,7 +335,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           stackIn_81_1 = param2 ^ -28473;
           stackIn_82_2 = (param1) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
-          nd.field_b.field_g.b((byte) -108);
+          nd.field_b.field_g.processTabPresses((byte) -108);
           if (null != DraggableWidget.field_S) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
               PairedTextColumns.a(1, param0);

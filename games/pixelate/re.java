@@ -98,7 +98,7 @@ final class re {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (SocialListEntry) (vm.field_b.b((byte) 47));
+            var3 = (SocialListEntry) (vm.field_b.findNext((byte) 47));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -9,51 +9,51 @@ final class SecondaryNodeHashTable {
     private int field_d;
     private DualLinkNode[] field_a;
     static String field_e;
-    private DualLinkNode field_g;
+    private DualLinkNode lookupCursor;
     private DualLinkNode field_c;
     private long field_b;
     static String field_f;
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode findNext(byte param0) {
         DualLinkNode var2;
         DualLinkNode var3;
         int var4;
         DualLinkNode var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
-        if (this.field_g == null) {
+        if (this.lookupCursor == null) {
           return null;
         }
         var2 = this.field_a[(int)((long)(-1 + this.field_h) & this.field_b)];
         if (param0 == 47) {
           while (true) {
-            if (this.field_g == var2) {
-              this.field_g = null;
+            if (this.lookupCursor == var2) {
+              this.lookupCursor = null;
               return null;
             }
-            if (this.field_g.field_q != this.field_b) {
-              this.field_g = this.field_g.secondaryNext;
+            if (this.lookupCursor.field_q != this.field_b) {
+              this.lookupCursor = this.lookupCursor.secondaryNext;
               continue;
             }
             break;
           }
-          var3 = this.field_g;
-          this.field_g = this.field_g.secondaryNext;
+          var3 = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.secondaryNext;
           return var3;
         }
         this.a((byte) -113);
         while (true) {
-          if (this.field_g == var2) {
-            this.field_g = null;
+          if (this.lookupCursor == var2) {
+            this.lookupCursor = null;
             return null;
           }
-          if (this.field_g.field_q != this.field_b) {
-            this.field_g = this.field_g.secondaryNext;
+          if (this.lookupCursor.field_q != this.field_b) {
+            this.lookupCursor = this.lookupCursor.secondaryNext;
             continue;
           }
           break;
         }
-        var3Lifetime1 = this.field_g;
-        this.field_g = this.field_g.secondaryNext;
+        var3Lifetime1 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.secondaryNext;
         return var3Lifetime1;
     }
 
@@ -270,39 +270,39 @@ final class SecondaryNodeHashTable {
         if (param0 == -11434) {
           this.field_b = param1;
           var4 = this.field_a[(int)(param1 & (long)(this.field_h - 1))];
-          this.field_g = var4.secondaryNext;
+          this.lookupCursor = var4.secondaryNext;
           while (true) {
-            if (this.field_g == var4) {
-              this.field_g = null;
+            if (this.lookupCursor == var4) {
+              this.lookupCursor = null;
               return null;
             }
-            if (~param1 != ~this.field_g.field_q) {
-              this.field_g = this.field_g.secondaryNext;
+            if (~param1 != ~this.lookupCursor.field_q) {
+              this.lookupCursor = this.lookupCursor.secondaryNext;
               continue;
             }
             break;
           }
-          var5 = this.field_g;
-          this.field_g = this.field_g.secondaryNext;
+          var5 = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.secondaryNext;
           return var5;
         }
         this.field_c = (DualLinkNode) null;
         this.field_b = param1;
         var4Lifetime1 = this.field_a[(int)(param1 & (long)(this.field_h - 1))];
-        this.field_g = var4Lifetime1.secondaryNext;
+        this.lookupCursor = var4Lifetime1.secondaryNext;
         while (true) {
-          if (this.field_g == var4Lifetime1) {
-            this.field_g = null;
+          if (this.lookupCursor == var4Lifetime1) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~param1 != ~this.field_g.field_q) {
-            this.field_g = this.field_g.secondaryNext;
+          if (~param1 != ~this.lookupCursor.field_q) {
+            this.lookupCursor = this.lookupCursor.secondaryNext;
             continue;
           }
           break;
         }
-        var5Lifetime1 = this.field_g;
-        this.field_g = this.field_g.secondaryNext;
+        var5Lifetime1 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.secondaryNext;
         return var5Lifetime1;
     }
 

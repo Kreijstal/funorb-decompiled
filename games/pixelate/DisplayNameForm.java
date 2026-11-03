@@ -14,7 +14,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     static int field_L;
     static dq field_I;
 
-    private final int a(byte param0, int param1, String param2, UiComponent param3, String param4, int param5) {
+    private final int appendStandardValidatedField(byte param0, int param1, String param2, UiComponent param3, String param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -28,7 +28,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         RuntimeException decompiledCaughtException = null;
         try {
           var7_int = -111 / ((param0 - 7) / 43);
-          stackIn_1_0 = this.a(param5, param3, param1, param2, (byte) -121, param4, 35);
+          stackIn_1_0 = this.appendValidatedField(param5, param3, param1, param2, (byte) -121, param4, 35);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         ((NameAvailabilityValidator) (this.field_O.a(1))).f(63);
     }
 
-    private final int a(int param0, UiComponent param1, int param2, String param3, byte param4, String param5, int param6) {
+    private final int appendValidatedField(int param0, UiComponent param1, int param2, String param3, byte param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         int var10 = 0;
@@ -223,7 +223,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         int discarded$0 = 0;
         if (param0 != 8) {
           String var3 = (String) null;
-          discarded$0 = this.a((byte) 21, -50, (String) null, (UiComponent) null, (String) null, -110);
+          discarded$0 = this.appendStandardValidatedField((byte) 21, -50, (String) null, (UiComponent) null, (String) null, -110);
           if (this.g((byte) -59)) {
             LobbyPlayer.a(-1710418464, this.field_O.field_q);
             return;
@@ -274,7 +274,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         int var5 = 200;
         this.addChild(var2, 80);
         var3 += 50;
-        var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, this.field_O, BufferedSocket.field_i, 170));
+        var3 = var3 + (5 + this.appendStandardValidatedField((byte) 52, var3, na.field_a, this.field_O, BufferedSocket.field_i, 170));
         this.field_P.a(var5, (byte) 49, var3, 496 - var5 >> 1, 40);
         this.field_N.a(60, (byte) 38, 15 + var3, 3 + var4, 40);
         this.field_N.field_n = (UiListener) (this);
@@ -325,7 +325,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
               stackIn_15_0 = var4;
               return stackIn_15_0;
             }
-            var4 = (SocialListEntry) (GameResultsScreen.field_q.b((byte) 47));
+            var4 = (SocialListEntry) (GameResultsScreen.field_q.findNext((byte) 47));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

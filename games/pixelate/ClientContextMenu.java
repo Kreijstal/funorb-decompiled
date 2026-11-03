@@ -445,7 +445,7 @@ final class ClientContextMenu {
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3, boolean param4) {
-        int var6 = this.field_b.b(-12487, param4);
+        int var6 = this.field_b.updateAndPollAction(-12487, param4);
         if (param2) {
           return true;
         }

@@ -149,13 +149,13 @@ final class vf {
               var7 = 1;
             }
             var6.field_K = MouseWheelHandler.field_e.field_Fb.field_K;
-            var6.field_Pb.a(0, fq.field_q, 0, param1 ^ 256, var6.field_K);
+            var6.field_Pb.setBounds(0, fq.field_q, 0, param1 ^ 256, var6.field_K);
             var8 = 0;
             if (null != var6.field_Gb &&
               !var6.field_Gb.equals("")) {
               var6.field_Ob.field_y = 16737894;
               var6.field_Ob.field_H = dk.field_e;
-              var6.field_Ob.a(0, fq.field_q, 0, param1 + 256, dk.field_e.field_A + 3);
+              var6.field_Ob.setBounds(0, fq.field_q, 0, param1 + 256, dk.field_e.field_A + 3);
               var8 = 1;
             }
             var9 = 0;
@@ -173,7 +173,7 @@ final class vf {
             stackIn_20_0.field_cb = stackIn_21_1;
             stackIn_24_0 = (var6.field_Pb.field_cb.equals(var6.field_Fb)) ? 0 : 1;
             var11 = stackIn_24_0;
-            var6.field_Pb.a(0, fq.field_q, var9, param1 + 256, var10);
+            var6.field_Pb.setBounds(0, fq.field_q, var9, param1 + 256, var10);
             if (var3_int == 0) {
               var6.pendingHeightDelta = fq.field_q - var6.height;
             }
@@ -197,7 +197,7 @@ final class vf {
               var18 = ProxySocketConnector.field_n;
               var13 = BufferedRandomAccessFile.field_a;
               var14 = ji.field_c;
-              var18.field_b.b(0, var13, 43, var14, 0);
+              var18.field_b.layoutPopup(0, var13, 43, var14, 0);
             }
             var5 = var6;
             var6 = (SocialListEntry) (var4.last(1504642273));

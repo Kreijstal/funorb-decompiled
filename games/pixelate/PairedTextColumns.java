@@ -32,9 +32,9 @@ final class PairedTextColumns extends SceneWidget {
     }
 
     private final void b(int param0, boolean param1) {
-        this.field_Fb.a(0, this.height, 0, 256, this.field_Fb.g(0));
+        this.field_Fb.setBounds(0, this.height, 0, 256, this.field_Fb.g(0));
         int var3 = param0 + this.field_Fb.field_K;
-        this.field_Ib.a(0, this.height, var3, 256, -var3 + this.field_K);
+        this.field_Ib.setBounds(0, this.height, var3, 256, -var3 + this.field_K);
         if (!param1) {
           return;
         }
@@ -43,7 +43,7 @@ final class PairedTextColumns extends SceneWidget {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.a(param2, param0, param1, param5 + 256, param3);
+        this.setBounds(param2, param0, param1, param5 + 256, param3);
         if (param5 == 0) {
           this.b(param4, false);
           return;
@@ -157,7 +157,7 @@ final class PairedTextColumns extends SceneWidget {
           var15 = ProxySocketConnector.field_n;
           var5 = BufferedRandomAccessFile.field_a;
           var7 = ji.field_c;
-          var15.field_b.b(0, var5, 62, var7, 0);
+          var15.field_b.layoutPopup(0, var5, 62, var7, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

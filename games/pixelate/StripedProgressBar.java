@@ -8,8 +8,8 @@ final class StripedProgressBar extends UiComponent {
     static Sprite field_N;
     private Sprite field_K;
     boolean field_Y;
-    private Sprite field_L;
-    private Sprite field_F;
+    private Sprite capWorkSurface;
+    private Sprite rightCapMask;
     private int field_M;
     static MenuScreen[] field_H;
     static Sprite field_S;
@@ -27,16 +27,16 @@ final class StripedProgressBar extends UiComponent {
     private final void d(byte param0) {
         this.field_P = new Sprite[]{this.a(this.field_Z, this.field_I, (byte) -121), this.a(this.field_V, this.field_T, (byte) -125)};
         if (param0 > 73) {
-          this.field_F = this.c(true);
-          this.field_K = this.field_F.copyFlippedHorizontal();
-          this.field_L = new Sprite(this.field_C >> 1, this.field_C);
+          this.rightCapMask = this.c(true);
+          this.field_K = this.rightCapMask.copyFlippedHorizontal();
+          this.capWorkSurface = new Sprite(this.field_C >> 1, this.field_C);
           return;
         }
         UiComponent var3 = (UiComponent) null;
         this.updatePointer(59, -16, -71, (UiComponent) null);
-        this.field_F = this.c(true);
-        this.field_K = this.field_F.copyFlippedHorizontal();
-        this.field_L = new Sprite(this.field_C >> 1, this.field_C);
+        this.rightCapMask = this.c(true);
+        this.field_K = this.rightCapMask.copyFlippedHorizontal();
+        this.capWorkSurface = new Sprite(this.field_C >> 1, this.field_C);
     }
 
     public static void releaseStatics(byte param0) {
@@ -121,12 +121,12 @@ final class StripedProgressBar extends UiComponent {
         int var5 = 19 % ((param3 - 70) / 49);
         int var6 = this.field_z + param2;
         int var7 = this.field_p + param0;
-        this.a(this.field_P[0], 1177347297, var6, var7);
+        this.drawStripedBar(this.field_P[0], 1177347297, var6, var7);
         if (65536 <= this.field_Q) {
           return;
         }
         hp.a(var6 + (this.field_E * this.field_Q >> 16), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
-        this.a(this.field_P[1], 1177347297, var6, var7);
+        this.drawStripedBar(this.field_P[1], 1177347297, var6, var7);
         LinkButtonPainter.a((byte) 92);
     }
 
@@ -255,7 +255,7 @@ final class StripedProgressBar extends UiComponent {
         return var15;
     }
 
-    private final void a(Sprite param0, int param1, int param2, int param3) {
+    private final void drawStripedBar(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -271,30 +271,30 @@ final class StripedProgressBar extends UiComponent {
           if (param1 != 1177347297) {
             this.field_M = -54;
           }
-          hp.a(this.field_F.field_F + param2, this.field_C + param3, var5_int - this.field_F.field_F, (byte) -112, param3);
+          hp.a(this.rightCapMask.field_F + param2, this.field_C + param3, var5_int - this.rightCapMask.field_F, (byte) -112, param3);
           for (var6 = param2 - this.stripeOffset; var5_int > var6; var6 = var6 + param0.field_F) {
             param0.b(var6, param3);
           }
           LinkButtonPainter.a((byte) 92);
-          if (this.field_F.field_F + param2 >= SoftwareRasterizer.field_e) {
-            Checkbox.a(-122, this.field_L);
+          if (this.rightCapMask.field_F + param2 >= SoftwareRasterizer.field_e) {
+            Checkbox.a(-122, this.capWorkSurface);
             param0.b(-this.stripeOffset, 0);
             param0.b(-this.stripeOffset + this.field_M * 2, 0);
             this.field_K.g(0, 0);
             LinkButtonPainter.a((byte) 92);
-            this.field_L.b(param2, param3);
+            this.capWorkSurface.b(param2, param3);
           }
-          if (-this.field_F.field_F + var5_int > SoftwareRasterizer.field_h) {
+          if (-this.rightCapMask.field_F + var5_int > SoftwareRasterizer.field_h) {
             return;
           }
-          Checkbox.a(param1 - 1177347371, this.field_L);
-          for (var7 = this.field_E - (this.field_F.field_F - this.stripeOffset); this.field_M * 2 < var7; var7 = var7 - 2 * this.field_M) {
+          Checkbox.a(param1 - 1177347371, this.capWorkSurface);
+          for (var7 = this.field_E - (this.rightCapMask.field_F - this.stripeOffset); this.field_M * 2 < var7; var7 = var7 - 2 * this.field_M) {
           }
           param0.b(-var7, 0);
           param0.b(-var7 + this.field_M * 2, 0);
-          this.field_F.g(0, 0);
+          this.rightCapMask.g(0, 0);
           LinkButtonPainter.a((byte) 92);
-          this.field_L.b(-this.field_F.field_F + var5_int, param3);
+          this.capWorkSurface.b(-this.rightCapMask.field_F + var5_int, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

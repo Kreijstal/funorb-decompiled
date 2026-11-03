@@ -9,7 +9,7 @@ final class AccountNamePrompt extends SceneWidget {
     static int field_Kb;
     private SceneWidget field_Lb;
     private SceneWidget field_Fb;
-    private int field_Hb;
+    private int completionState;
 
     public static void releaseStatics(byte param0) {
         if (param0 != -70) {
@@ -20,7 +20,7 @@ final class AccountNamePrompt extends SceneWidget {
         field_Gb = null;
     }
 
-    final boolean c(byte param0) {
+    final boolean handleNormalizedNameKey(byte param0) {
         StringBuilder discarded$6 = null;
         StringBuilder discarded$8 = null;
         StringBuilder discarded$7 = null;
@@ -36,7 +36,7 @@ final class AccountNamePrompt extends SceneWidget {
         int var2Lifetime2;
         int var3Lifetime1;
         int var3Lifetime2;
-        if (this.field_Hb != 0) {
+        if (this.completionState != 0) {
           return false;
         }
         if (ke.field_a != 85) {
@@ -46,17 +46,17 @@ final class AccountNamePrompt extends SceneWidget {
               if (ke.field_a != 13) {
                 return true;
               }
-              this.field_Hb = 1;
+              this.completionState = 1;
               return true;
             }
             if (this.field_Eb.length() <= 0) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             } else {
               this.field_cb = this.field_Eb.toString();
-              this.field_Hb = 2;
+              this.completionState = 2;
             }
             if (ke.field_a == 13) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             }
             return true;
           }
@@ -72,43 +72,43 @@ final class AccountNamePrompt extends SceneWidget {
             discarded$8 = this.field_Eb.append((char) var3);
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
-                this.field_Hb = 1;
+                this.completionState = 1;
               } else {
                 this.field_cb = this.field_Eb.toString();
-                this.field_Hb = 2;
+                this.completionState = 2;
               }
             }
             if (ke.field_a == 13) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             }
             return true;
           }
           if (!MidiPcmStream.a(124, (char) var3)) {
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
-                this.field_Hb = 1;
+                this.completionState = 1;
               } else {
                 this.field_cb = this.field_Eb.toString();
-                this.field_Hb = 2;
+                this.completionState = 2;
               }
             }
             if (ke.field_a != 13) {
               return true;
             }
-            this.field_Hb = 1;
+            this.completionState = 1;
             return true;
           }
           discarded$7 = this.field_Eb.append((char) var3);
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             } else {
               this.field_cb = this.field_Eb.toString();
-              this.field_Hb = 2;
+              this.completionState = 2;
             }
           }
           if (ke.field_a == 13) {
-            this.field_Hb = 1;
+            this.completionState = 1;
           }
           return true;
         }
@@ -117,16 +117,16 @@ final class AccountNamePrompt extends SceneWidget {
           if (this.field_Eb.length() >= 12) {
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
-                this.field_Hb = 1;
+                this.completionState = 1;
               } else {
                 this.field_cb = this.field_Eb.toString();
-                this.field_Hb = 2;
+                this.completionState = 2;
               }
             }
             if (ke.field_a != 13) {
               return true;
             }
-            this.field_Hb = 1;
+            this.completionState = 1;
             return true;
           }
           var3Lifetime1 = Character.toLowerCase(DualLinkDeque.field_f);
@@ -141,42 +141,42 @@ final class AccountNamePrompt extends SceneWidget {
             discarded$5 = this.field_Eb.append((char) var3Lifetime1);
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
-                this.field_Hb = 1;
+                this.completionState = 1;
               } else {
                 this.field_cb = this.field_Eb.toString();
-                this.field_Hb = 2;
+                this.completionState = 2;
               }
             }
             if (ke.field_a == 13) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             }
             return true;
           }
           if (!MidiPcmStream.a(124, (char) var3Lifetime1)) {
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
-                this.field_Hb = 1;
+                this.completionState = 1;
               } else {
                 this.field_cb = this.field_Eb.toString();
-                this.field_Hb = 2;
+                this.completionState = 2;
               }
             }
             if (ke.field_a == 13) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             }
             return true;
           }
           discarded$4 = this.field_Eb.append((char) var3Lifetime1);
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             } else {
               this.field_cb = this.field_Eb.toString();
-              this.field_Hb = 2;
+              this.completionState = 2;
             }
           }
           if (ke.field_a == 13) {
-            this.field_Hb = 1;
+            this.completionState = 1;
           }
           return true;
         }
@@ -185,16 +185,16 @@ final class AccountNamePrompt extends SceneWidget {
         if (this.field_Eb.length() >= 12) {
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             } else {
               this.field_cb = this.field_Eb.toString();
-              this.field_Hb = 2;
+              this.completionState = 2;
             }
           }
           if (ke.field_a != 13) {
             return true;
           }
-          this.field_Hb = 1;
+          this.completionState = 1;
           return true;
         }
         var3Lifetime2 = Character.toLowerCase(DualLinkDeque.field_f);
@@ -209,45 +209,45 @@ final class AccountNamePrompt extends SceneWidget {
           discarded$1 = this.field_Eb.append((char) var3Lifetime2);
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             } else {
               this.field_cb = this.field_Eb.toString();
-              this.field_Hb = 2;
+              this.completionState = 2;
             }
           }
           if (ke.field_a != 13) {
             return true;
           }
-          this.field_Hb = 1;
+          this.completionState = 1;
           return true;
         }
         if (!MidiPcmStream.a(124, (char) var3Lifetime2)) {
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
-              this.field_Hb = 1;
+              this.completionState = 1;
             } else {
               this.field_cb = this.field_Eb.toString();
-              this.field_Hb = 2;
+              this.completionState = 2;
             }
           }
           if (ke.field_a == 13) {
-            this.field_Hb = 1;
+            this.completionState = 1;
           }
           return true;
         }
         discarded$2 = this.field_Eb.append((char) var3Lifetime2);
         if (ke.field_a == 84) {
           if (this.field_Eb.length() <= 0) {
-            this.field_Hb = 1;
+            this.completionState = 1;
           } else {
             this.field_cb = this.field_Eb.toString();
-            this.field_Hb = 2;
+            this.completionState = 2;
           }
         }
         if (ke.field_a != 13) {
           return true;
         }
-        this.field_Hb = 1;
+        this.completionState = 1;
         return true;
     }
 
@@ -321,7 +321,7 @@ final class AccountNamePrompt extends SceneWidget {
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
-    final int b(int param0, boolean param1) {
+    final int updateAndPollNameInput(int param0, boolean param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -334,22 +334,22 @@ final class AccountNamePrompt extends SceneWidget {
         }
         if (!param1) {
           this.field_Lb.field_cb = this.field_Eb.toString();
-          return this.field_Hb;
+          return this.completionState;
         }
         while (true) {
           if (!DirectByteStorage.$cfr$intArgs$b$c4997cb15529(108)) {
             this.field_Lb.field_cb = this.field_Eb.toString();
             if (!param1) {
-              return this.field_Hb;
+              return this.completionState;
             }
             if (IntrusiveDequeCursor.field_c == 0) {
-              return this.field_Hb;
+              return this.completionState;
             }
             if (this.field_P != 0) {
-              return this.field_Hb;
+              return this.completionState;
             }
-            this.field_Hb = 1;
-            return this.field_Hb;
+            this.completionState = 1;
+            return this.completionState;
           }
           if (ke.field_a == 85 &&
             this.field_Eb.length() > 0) {
@@ -405,7 +405,7 @@ final class AccountNamePrompt extends SceneWidget {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        this.field_Hb = 0;
+        this.completionState = 0;
         try {
           this.field_Fb = new SceneWidget(0L, param6, param4);
           this.addChild(this.field_Fb, (byte) 26);
@@ -415,13 +415,13 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Lb.field_qb = "|";
           this.field_Eb = new StringBuilder(12);
           var9_int = this.field_Fb.g(0);
-          this.field_Fb.a(3, fq.field_q, 5, 256, var9_int);
-          this.field_Lb.a(3 + fq.field_q, fq.field_q, 5, 256, var9_int);
+          this.field_Fb.setBounds(3, fq.field_q, 5, 256, var9_int);
+          this.field_Lb.setBounds(3 + fq.field_q, fq.field_q, 5, 256, var9_int);
           var10 = var9_int + 10;
           var11 = 6 + 2 * fq.field_q;
           var12 = ui.a(param2, param0, var10, (byte) -1);
           var13 = pj.a(var11, param1, param3, (byte) 67);
-          this.a(var13, var11, var12, 256, var10);
+          this.setBounds(var13, var11, var12, 256, var10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

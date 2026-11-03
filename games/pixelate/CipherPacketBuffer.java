@@ -15,7 +15,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void b(byte[] param0, int param1, int param2, int param3) {
+    final void readCipheredBytes(byte[] param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -174,7 +174,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     !var7.field_Gb.equals("")) {
                     var7.field_Ob.field_y = var11;
                     var7.field_Ob.field_H = dk.field_e;
-                    var7.field_Ob.a(var9, fq.field_q, 0, 256, 3 + dk.field_e.field_A);
+                    var7.field_Ob.setBounds(var9, fq.field_q, 0, 256, 3 + dk.field_e.field_A);
                     var12 = 1;
                   }
                   var7.field_Eb.field_y = var11;
@@ -198,7 +198,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     stackIn_46_1 = var7.field_Fb;
                   }
                   stackIn_45_0.field_cb = stackIn_46_1;
-                  var7.field_Pb.a(var9, fq.field_q, var13, 256, var14);
+                  var7.field_Pb.setBounds(var9, fq.field_q, var13, 256, var14);
                   stackIn_49_0 = var7.field_Eb;
                   if (null != var7.field_Nb) {
                     stackIn_50_1 = var7.field_Nb;
@@ -206,7 +206,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     stackIn_50_1 = re.field_g;
                   }
                   stackIn_49_0.field_cb = stackIn_50_1;
-                  var7.field_Eb.a(var9, fq.field_q, -80 + var7.field_K, 256, 80);
+                  var7.field_Eb.setBounds(var9, fq.field_q, -80 + var7.field_K, 256, 80);
                   stackIn_54_0 = (var7.field_Pb.field_cb.equals(var7.field_Fb)) ? 0 : 1;
                   var15 = stackIn_54_0;
                   var9 = var9 + fq.field_q;

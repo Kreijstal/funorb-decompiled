@@ -60,7 +60,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         }
     }
 
-    final dj a(boolean param0) {
+    final dj evaluateState(boolean param0) {
         if (param0) {
           return this.validateText(this.field_j.field_q, param0);
         }

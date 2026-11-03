@@ -7,7 +7,7 @@ abstract class TextLayout {
     static String field_d;
     TextLayoutLine[] lines;
 
-    final int a(int param0, int param1, int param2) {
+    final int hitTestCharacter(int param0, int param1, int param2) {
         int var5 = 0;
         TextLayoutLine var6 = null;
         int var7 = 0;
@@ -177,7 +177,7 @@ abstract class TextLayout {
         }
     }
 
-    final int b(int param0) {
+    final int getLayoutHeight(int param0) {
         int stackIn_7_0 = 0;
         if (param0 != 1) {
           field_d = (String) null;

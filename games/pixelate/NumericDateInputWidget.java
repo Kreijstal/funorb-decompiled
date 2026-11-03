@@ -118,7 +118,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final int e(byte param0) {
+    final int getDay(byte param0) {
         int stackIn_1_0 = 0;
         Throwable decompiledCaughtException = null;
         int var2_int = 0;

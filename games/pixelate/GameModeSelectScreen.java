@@ -3083,7 +3083,7 @@ final class GameModeSelectScreen extends MenuScreen {
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var2_int = this.field_g.field_j;
+          var2_int = this.field_g.selectedIndex;
           if (param0 > -35) {
             GameModeSelectScreen.a(-67, (ResourceArchive) null);
           }
@@ -3396,14 +3396,14 @@ final class GameModeSelectScreen extends MenuScreen {
           super.e((byte) -95);
           stackIn_3_0 = this.field_p;
           stackIn_3_1 = -127;
-          stackIn_4_2 = (this.field_g.field_j == 0);
+          stackIn_4_2 = (this.field_g.selectedIndex == 0);
           ((GameModeCard) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2);
           if (param0 >= -64) {
             return;
           }
           stackIn_9_0 = this.field_o;
           stackIn_9_1 = -125;
-          stackIn_10_2 = (this.field_g.field_j == 1);
+          stackIn_10_2 = (this.field_g.selectedIndex == 1);
           ((GameModeCard) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -10,7 +10,7 @@ abstract class ModalPanel extends UiContainer {
     static int[] field_L;
     static boolean field_K;
 
-    abstract void a(int param0, int param1, boolean param2);
+    abstract void drawDialogBackground(int param0, int param1, boolean param2);
 
     final UiComponent k(int param0) {
         UiComponent var2 = super.k(48);
@@ -82,7 +82,7 @@ abstract class ModalPanel extends UiContainer {
           if (param1 != 0) {
             return;
           }
-          this.a(param2 + this.field_z, param0 + this.field_p, true);
+          this.drawDialogBackground(param2 + this.field_z, param0 + this.field_p, true);
           super.drawLayer(param0, param1, param2, (byte) 119);
           return;
         }
@@ -90,7 +90,7 @@ abstract class ModalPanel extends UiContainer {
           fd.field_a = new Sprite(this.field_E, this.field_C);
           Checkbox.a(-90, fd.field_a);
           SoftwareRasterizer.clear();
-          this.a(0, 0, true);
+          this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5 = -94 / ((param3 - 70) / 49);
           LinkButtonPainter.a((byte) 92);
@@ -101,7 +101,7 @@ abstract class ModalPanel extends UiContainer {
           fd.field_a = new Sprite(this.field_E, this.field_C);
           Checkbox.a(-90, fd.field_a);
           SoftwareRasterizer.clear();
-          this.a(0, 0, true);
+          this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime1 = -94 / ((param3 - 70) / 49);
           LinkButtonPainter.a((byte) 92);
@@ -112,7 +112,7 @@ abstract class ModalPanel extends UiContainer {
           fd.field_a = new Sprite(this.field_E, this.field_C);
           Checkbox.a(-90, fd.field_a);
           SoftwareRasterizer.clear();
-          this.a(0, 0, true);
+          this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime2 = -94 / ((param3 - 70) / 49);
           LinkButtonPainter.a((byte) 92);
@@ -121,14 +121,14 @@ abstract class ModalPanel extends UiContainer {
         }
         Checkbox.a(-90, fd.field_a);
         SoftwareRasterizer.clear();
-        this.a(0, 0, true);
+        this.drawDialogBackground(0, 0, true);
         super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
         var5Lifetime3 = -94 / ((param3 - 70) / 49);
         LinkButtonPainter.a((byte) 92);
         fd.field_a.a(this.field_z + param2, this.field_p + param0, this.field_J);
     }
 
-    boolean c(boolean param0) {
+    boolean tickLayerAndCheckHidden(boolean param0) {
         boolean stackIn_8_0 = false;
         boolean stackIn_15_0 = false;
         boolean stackIn_24_0 = false;
@@ -142,7 +142,7 @@ abstract class ModalPanel extends UiContainer {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0) {
-          this.a(-46, -6, false);
+          this.drawDialogBackground(-46, -6, false);
           var2 = this.d(param0);
           var3 = -this.field_J + var2;
           if (var3 <= 0) {

@@ -38,36 +38,36 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         return GameModeCard.field_f > 250 ? true : false;
     }
 
-    final boolean c(boolean param0) {
+    final boolean tickLayerAndCheckHidden(boolean param0) {
         id var2 = null;
         id var2Lifetime1;
         if (param0) {
           this.h((byte) -120);
           if (!this.field_N) {
-            return super.c(false);
+            return super.tickLayerAndCheckHidden(false);
           }
           if (this.field_xb) {
-            return super.c(false);
+            return super.tickLayerAndCheckHidden(false);
           }
           var2 = CachedArchiveProvider.d((byte) 52);
           if (var2 != null) {
-            this.a(var2, -127, false);
-            return super.c(false);
+            this.handleRegistrationResult(var2, -127, false);
+            return super.tickLayerAndCheckHidden(false);
           }
-          return super.c(false);
+          return super.tickLayerAndCheckHidden(false);
         }
         if (!this.field_N) {
-          return super.c(false);
+          return super.tickLayerAndCheckHidden(false);
         }
         if (this.field_xb) {
-          return super.c(false);
+          return super.tickLayerAndCheckHidden(false);
         }
         var2Lifetime1 = CachedArchiveProvider.d((byte) 52);
         if (var2Lifetime1 != null) {
-          this.a(var2Lifetime1, -127, false);
-          return super.c(false);
+          this.handleRegistrationResult(var2Lifetime1, -127, false);
+          return super.tickLayerAndCheckHidden(false);
         }
-        return super.c(false);
+        return super.tickLayerAndCheckHidden(false);
     }
 
     public static void releaseStatics(int param0) {
@@ -77,7 +77,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    private final void a(id param0, int param1, boolean param2) {
+    private final void handleRegistrationResult(id param0, int param1, boolean param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -191,11 +191,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     final void h(byte param0) {
         if (param0 <= -96) {
-          this.a(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
+          this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
           return;
         }
         RegistrationRequestDialog.a(true, false, -97);
-        this.a(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
+        this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
     }
 
     static {

@@ -49,7 +49,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           var2 = (LobbyGame) (nk.field_a.c(1504642273));
           while (var2 != null) {
-            if (var2.a((byte) 110, param1)) {
+            if (var2.comesBeforeGame((byte) 110, param1)) {
               var2 = (LobbyGame) (nk.field_a.last(1504642273));
               continue;
             }
@@ -342,7 +342,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final void a(int param0, int param1, Sprite[] param2) {
+    final void setStateFrameSprites(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           if (param0 <= 88) {

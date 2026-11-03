@@ -125,7 +125,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return (-param0 & param0) == param0 ? true : false;
     }
 
-    final dj a(boolean param0) {
+    final dj evaluateState(boolean param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -136,7 +136,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         dj stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_g.e((byte) 90);
+          var2_int = this.field_g.getDay((byte) 90);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.c(param0);
           var5 = wa.b(-80);
@@ -187,7 +187,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         String stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_g.e((byte) -84);
+          var2_int = this.field_g.getDay((byte) -84);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.c(true);
           var5 = wa.b(-127);

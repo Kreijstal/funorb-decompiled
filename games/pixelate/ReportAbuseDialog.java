@@ -203,30 +203,30 @@ final class ReportAbuseDialog extends SceneWidget {
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
             var18Lifetime3 = this.appendReasonHeading((byte) 126, var18Lifetime3, param6, var16Lifetime2, var28[0], DirectByteStorage.field_l);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 110, var16Lifetime2, this.offenceButtons[6]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 112, var16Lifetime2, this.offenceButtons[9]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 101, var16Lifetime2, this.offenceButtons[5]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 126, var16Lifetime2, this.offenceButtons[7]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 98, var16Lifetime2, this.offenceButtons[15]);
-            var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 108, var16Lifetime2, this.offenceButtons[4]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 110, var16Lifetime2, this.offenceButtons[6]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 112, var16Lifetime2, this.offenceButtons[9]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 101, var16Lifetime2, this.offenceButtons[5]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 126, var16Lifetime2, this.offenceButtons[7]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 98, var16Lifetime2, this.offenceButtons[15]);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var18Lifetime3, (byte) 108, var16Lifetime2, this.offenceButtons[4]);
             if (var17Lifetime5 < var18Lifetime3) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
             var18Lifetime4 = this.appendReasonHeading((byte) 112, var18Lifetime4, param6, var16Lifetime2, var28[1], MusicPatchPcmStream.field_t);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 114, var16Lifetime2, this.offenceButtons[16]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[17]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[18]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 99, var16Lifetime2, this.offenceButtons[19]);
-            var18Lifetime4 = this.a(var28[1], var18Lifetime4, (byte) 108, var16Lifetime2, this.offenceButtons[20]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 114, var16Lifetime2, this.offenceButtons[16]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[17]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 95, var16Lifetime2, this.offenceButtons[18]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 99, var16Lifetime2, this.offenceButtons[19]);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var18Lifetime4, (byte) 108, var16Lifetime2, this.offenceButtons[20]);
             if (var17Lifetime5 < var18Lifetime4) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
             var18Lifetime5 = this.appendReasonHeading((byte) 114, var18Lifetime5, param6, var16Lifetime2, var28[2], IsaacRandom.field_j);
-            var18Lifetime5 = this.a(var28[2], var18Lifetime5, (byte) 94, var16Lifetime2, this.offenceButtons[13]);
-            var18Lifetime5 = this.a(var28[2], var18Lifetime5, (byte) 98, var16Lifetime2, this.offenceButtons[21]);
-            var18Lifetime5 = this.a(var28[2], var18Lifetime5, (byte) 120, var16Lifetime2, this.offenceButtons[11]);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var18Lifetime5, (byte) 94, var16Lifetime2, this.offenceButtons[13]);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var18Lifetime5, (byte) 98, var16Lifetime2, this.offenceButtons[21]);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var18Lifetime5, (byte) 120, var16Lifetime2, this.offenceButtons[11]);
             if (var17Lifetime5 < var18Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
@@ -241,31 +241,31 @@ final class ReportAbuseDialog extends SceneWidget {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Eb.a(0, 24, 0, 256, 13 + (var19 + 13));
-            this.field_Ob.a(5, 15, this.field_Eb.field_K - 20, 256, 15);
+            this.field_Eb.setBounds(0, 24, 0, 256, 13 + (var19 + 13));
+            this.field_Ob.setBounds(5, 15, this.field_Eb.field_K - 20, 256, 15);
             var21 = 10;
-            this.field_Tb.a(var21, 2 * fq.field_q, 13, 256, var19);
+            this.field_Tb.setBounds(var21, 2 * fq.field_q, 13, 256, var19);
             var21 = var21 + 2 * fq.field_q;
-            this.field_Fb.a(var21, 2 * fq.field_q, 13, 256, var19);
+            this.field_Fb.setBounds(var21, 2 * fq.field_q, 13, 256, var19);
             var21 = var21 + (fq.field_q * 2 + 10);
-            this.targetNameComponent.a(var21, fq.field_q, 0, 256, 0);
+            this.targetNameComponent.setBounds(var21, fq.field_q, 0, 256, 0);
             var21 = var21 + (fq.field_q + 10);
             if (this.muteControl != null) {
               var20Lifetime3 = this.muteControl.b((byte) 115, 4);
               this.muteControl.a(fq.field_q, (var19 - var20Lifetime3) / 2 + 13, var21, var20Lifetime3, 4, 0);
               var21 = var21 + (fq.field_q + 10);
             }
-            var28[0].a(var21, var17Lifetime5, 13, 256, var16Lifetime2);
-            var28[1].a(var21, var17Lifetime5, 26 + var16Lifetime2, 256, var16Lifetime2);
-            var28[2].a(var21, var17Lifetime5, 39 + 2 * var16Lifetime2, 256, var16Lifetime2);
+            var28[0].setBounds(var21, var17Lifetime5, 13, 256, var16Lifetime2);
+            var28[1].setBounds(var21, var17Lifetime5, 26 + var16Lifetime2, 256, var16Lifetime2);
+            var28[2].setBounds(var21, var17Lifetime5, 39 + 2 * var16Lifetime2, 256, var16Lifetime2);
             var22 = var21;
-            this.field_Qb.a(24, var17Lifetime5 + (var22 + 10), 0, 256, 13 + (var19 + 13));
+            this.field_Qb.setBounds(24, var17Lifetime5 + (var22 + 10), 0, 256, 13 + (var19 + 13));
             this.field_Qb.field_zb = OptionsScreen.a(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
             var23 = 13 + (var19 + 13);
             var24 = var17Lifetime5 + (24 + var22) + 10;
             var25 = ui.a(param2, param0, var23, (byte) -1);
             var26 = pj.a(var24, param1, param3, (byte) 110);
-            this.a(var26, var24, var25, 256, var23);
+            this.setBounds(var26, var24, var25, 256, var23);
             return;
           }
           this.field_Tb = new SceneWidget(0L, param8, SocialListEntry.field_Lb);
@@ -275,15 +275,15 @@ final class ReportAbuseDialog extends SceneWidget {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Tb.font.wrappedLineCount(this.field_Tb.field_cb, var15_int);
-          this.field_Tb.a(var16Lifetime1, var17Lifetime1 * fq.field_q, 13, 256, var15_int);
+          this.field_Tb.setBounds(var16Lifetime1, var17Lifetime1 * fq.field_q, 13, 256, var15_int);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * fq.field_q;
-          this.field_Qb.a(24, var16Lifetime1 + 10, 0, 256, 13 + (var15_int + 13));
+          this.field_Qb.setBounds(24, var16Lifetime1 + 10, 0, 256, 13 + (var15_int + 13));
           this.field_Qb.field_zb = OptionsScreen.a(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ui.a(param2, param0, var18Lifetime1, (byte) -1);
           var21Lifetime1 = pj.a(var19Lifetime1, param1, param3, (byte) 32);
-          this.a(var21Lifetime1, var19Lifetime1, var20Lifetime1, 256, var18Lifetime1);
+          this.setBounds(var21Lifetime1, var19Lifetime1, var20Lifetime1, 256, var18Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -750,7 +750,7 @@ final class ReportAbuseDialog extends SceneWidget {
         return stackIn_6_0;
     }
 
-    private final int a(SceneWidget param0, int param1, byte param2, int param3, SceneWidget param4) {
+    private final int appendReasonButton(SceneWidget param0, int param1, byte param2, int param3, SceneWidget param4) {
         int discarded$1 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -765,10 +765,10 @@ final class ReportAbuseDialog extends SceneWidget {
         try {
           param1 += 8;
           var6_int = param4.font.paragraphHeight(param4.field_cb, -(param4.field_C * 2) + param3, param4.field_mb);
-          param4.a(param1, var6_int, 0, 256, param3);
+          param4.setBounds(param1, var6_int, 0, 256, param3);
           if (param2 < 93) {
             var7 = (SceneWidget) null;
-            discarded$1 = this.a((SceneWidget) null, 19, (byte) -78, -14, (SceneWidget) null);
+            discarded$1 = this.appendReasonButton((SceneWidget) null, 19, (byte) -78, -14, (SceneWidget) null);
           }
           param0.addChild(param4, (byte) 26);
           param1 = param1 + (var6_int - 0);
@@ -798,7 +798,7 @@ final class ReportAbuseDialog extends SceneWidget {
         int discarded$0 = 0;
         if (param0 <= 102) {
           SceneWidget var3 = (SceneWidget) null;
-          discarded$0 = this.a((SceneWidget) null, 8, (byte) 76, -63, (SceneWidget) null);
+          discarded$0 = this.appendReasonButton((SceneWidget) null, 8, (byte) 76, -63, (SceneWidget) null);
         }
         return this.field_Ib.toString();
     }

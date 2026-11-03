@@ -124,7 +124,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var6Lifetime1 = this.field_W.a((byte) 97);
           var29 = (WidgetTextLayout) ((Object) this.field_y);
           var9 = this.field_z + param2;
-          var10 = var29.a(param0, (UiComponent) (this), (byte) 107) + (var29.getTextLayout(-117, (UiComponent) (this)).b(1) >> 1);
+          var10 = var29.getTextOriginY(param0, (UiComponent) (this), (byte) 107) + (var29.getTextLayout(-117, (UiComponent) (this)).getLayoutHeight(1) >> 1);
           var11 = -23 / ((param3 - 70) / 49);
           if (var6Lifetime1 != BufferedRandomAccessFile.field_b &&
             UiTheme.field_j != var6Lifetime1) {
@@ -171,7 +171,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var6Lifetime2 = this.field_W.a((byte) 97);
         var28 = (WidgetTextLayout) ((Object) this.field_y);
         var9Lifetime1 = this.field_z + param2;
-        var10Lifetime1 = var28.a(param0, (UiComponent) (this), (byte) 107) + (var28.getTextLayout(-117, (UiComponent) (this)).b(1) >> 1);
+        var10Lifetime1 = var28.getTextOriginY(param0, (UiComponent) (this), (byte) 107) + (var28.getTextLayout(-117, (UiComponent) (this)).getLayoutHeight(1) >> 1);
         var11Lifetime1 = -23 / ((param3 - 70) / 49);
         if (var6Lifetime2 == BufferedRandomAccessFile.field_b) {
           var19 = CanvasRasterBuffer.field_g[0];

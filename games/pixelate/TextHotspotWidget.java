@@ -23,8 +23,8 @@ class TextHotspotWidget extends TextButton {
         ni var7 = this.hoveredHotspot;
         if (var7 == null) {
         } else {
-          var8 = var6.a((byte) 69, (UiComponent) (this), param2);
-          var9 = var6.a(param0, (UiComponent) (this), (byte) -119);
+          var8 = var6.textOriginY((byte) 69, (UiComponent) (this), param2);
+          var9 = var6.getTextOriginY(param0, (UiComponent) (this), (byte) -119);
           do {
             ValidatedTextWidget.a(var7.field_k + var8 - 2, -2 + var7.field_r + var9, (byte) -128, 2 + var7.field_t, 2 + var7.field_u);
             var7 = var7.field_l;
@@ -226,7 +226,7 @@ class TextHotspotWidget extends TextButton {
         ni var7 = this.hotspotAt(var5, -22562, var6);
         if (var7 != null &&
           this.field_n != null) {
-          ((TextHotspotListener) ((Object) this.field_n)).a(var7.field_n, param2, -8894, this);
+          ((TextHotspotListener) ((Object) this.field_n)).onHotspotAction(var7.field_n, param2, -8894, this);
         }
     }
 

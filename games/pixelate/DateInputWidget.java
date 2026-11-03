@@ -95,7 +95,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         return (ValidationSource) ((Object) this.field_K);
     }
 
-    abstract int e(byte param0);
+    abstract int getDay(byte param0);
 
     abstract int c(boolean param0);
 

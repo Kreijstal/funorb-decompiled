@@ -256,7 +256,7 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0, BitmapFont param1) {
+    final void initializePainters(int param0, BitmapFont param1) {
         TextWidgetPainter var17 = null;
         StatefulTextPainter var4 = null;
         Sprite[] var5 = null;
@@ -332,8 +332,8 @@ final class UiTheme {
           var10[param0].pixels = new int[]{6710886, 7829367};
           var11 = new StatefulTextPainter();
           var12 = new StatefulTextPainter();
-          var11.a(122, 0, var9);
-          var12.a(92, 0, var10);
+          var11.setStateFrameSprites(122, 0, var9);
+          var12.setStateFrameSprites(92, 0, var10);
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);

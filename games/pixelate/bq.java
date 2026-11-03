@@ -306,9 +306,9 @@ final class bq {
             var4Lifetime3++;
           }
           if (CanvasRasterBuffer.field_h != 2) {
-            mj.field_c.a(param0, mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
+            mj.field_c.initializeSelection(param0, mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
           } else {
-            mj.field_c.a(param0, -1, 17068, -1);
+            mj.field_c.initializeSelection(param0, -1, 17068, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

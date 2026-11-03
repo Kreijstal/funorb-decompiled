@@ -83,9 +83,9 @@ final class wo {
         int var6 = 24;
         int var7 = param4;
         this.field_g.a(-19360, param2, var7, param0, param1, var6, param3);
-        SceneWidget.field_E.a(0, fq.field_q, 0, param4 ^ 261, wa.field_f.field_K);
-        EmailConfirmationValidator.field_u.a(fq.field_q + 2, 18, 0, 256, -2 + (-DelegatingCanvas.field_b + (wa.field_f.field_K - 2) - 80));
-        Vector3.field_e.a(fq.field_q + 2, 18, -80 + (-2 + (-DelegatingCanvas.field_b + wa.field_f.field_K)), 256, 82 + DelegatingCanvas.field_b);
+        SceneWidget.field_E.setBounds(0, fq.field_q, 0, param4 ^ 261, wa.field_f.field_K);
+        EmailConfirmationValidator.field_u.setBounds(fq.field_q + 2, 18, 0, 256, -2 + (-DelegatingCanvas.field_b + (wa.field_f.field_K - 2) - 80));
+        Vector3.field_e.setBounds(fq.field_q + 2, 18, -80 + (-2 + (-DelegatingCanvas.field_b + wa.field_f.field_K)), 256, 82 + DelegatingCanvas.field_b);
         ScoreMarkerBar.field_z.a(0, wa.field_f.field_K, 20, fq.field_q + 2 + 20, false, DelegatingCanvas.field_b, 2, -fq.field_q + wa.field_f.height - 22);
         MouseWheelHandler.field_e.a(20, true, 2, DelegatingCanvas.field_b);
     }

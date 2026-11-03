@@ -149,7 +149,7 @@ final class LobbyPlayer extends SceneWidget {
         }
     }
 
-    final boolean a(LobbyPlayer param0, byte param1) {
+    final boolean sortsBefore(LobbyPlayer param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -312,7 +312,7 @@ final class LobbyPlayer extends SceneWidget {
         }
     }
 
-    final void a(String param0, String param1, boolean param2) {
+    final void updateNames(String param0, String param1, boolean param2) {
         CharSequence var5 = null;
         this.field_Ub = param1;
         if (param2) {

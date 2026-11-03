@@ -14,7 +14,7 @@ class EmailCredentials extends LoginCredentials {
         return nf.field_c;
     }
 
-    ea b(int param0) {
+    ea getCredentialKind(int param0) {
         if (param0 != -27096) {
           return (ea) null;
         }

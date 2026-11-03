@@ -10,7 +10,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
     private int[] field_I;
     static BitmapFont field_Q;
     static String field_R;
-    private int field_P;
+    private int buttonCount;
     static SceneWidget field_L;
 
     public static void releaseStaticReferences(int param0) {
@@ -29,22 +29,22 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         int var5 = -57 / ((param3 - 70) / 49);
     }
 
-    private final void a(int param0, int param1) {
+    private final void ensureButtonCapacity(int param0, int param1) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
-        if (param1 <= this.field_P) {
+        if (param1 <= this.buttonCount) {
           return;
         }
         TextButton[] var7 = new TextButton[param1];
         TextButton[] var3 = var7;
         int[] var4 = new int[param1];
-        for (var5 = 0; var5 < this.field_P; var5++) {
+        for (var5 = 0; var5 < this.buttonCount; var5++) {
           var7[var5] = this.field_S[var5];
           var4[var5] = this.field_I[var5];
         }
         this.field_I = var4;
         this.field_S = var3;
-        this.field_P = param1;
+        this.buttonCount = param1;
         if (param0 > -57) {
           AccountMessagePanel.b(94, 86, 20);
         }
@@ -53,7 +53,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
     AccountMessagePanel(AccountRequestDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
-        this.field_P = 0;
+        this.buttonCount = 0;
         try {
           this.field_M = param0;
           this.field_O = param1;
@@ -79,7 +79,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           if (param2 != 11) {
             field_R = (String) null;
           }
-          for (var6_int = 0; var6_int < this.field_P; var6_int++) {
+          for (var6_int = 0; var6_int < this.buttonCount; var6_int++) {
             if (this.field_S[var6_int] != param0) {
               continue;
             }
@@ -109,8 +109,8 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
     final void a(int param0, int param1, String param2) {
         int var4_int = 0;
         try {
-          var4_int = this.field_P;
-          this.a(param1 ^ 114, var4_int - param1);
+          var4_int = this.buttonCount;
+          this.ensureButtonCapacity(param1 ^ 114, var4_int - param1);
           this.field_S[var4_int] = this.appendButton(1707, (UiListener) (this), param2);
           this.field_I[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
@@ -133,7 +133,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           var4 = new TextButton(param2, param1);
           var4.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           if (param0 != 1707) {
-            this.field_P = 66;
+            this.buttonCount = 66;
           }
           var5 = -2 + this.field_C;
           this.a(this.field_E, (byte) 63, 0, 0, this.field_C + 34);

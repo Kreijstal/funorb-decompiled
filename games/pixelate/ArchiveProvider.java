@@ -24,18 +24,18 @@ abstract class ArchiveProvider {
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 <= 110) {
           ArchiveProvider.releaseStatics((byte) -3);
-          DraggableWidget.field_I.a(param5, param0, param4, 256, param2);
+          DraggableWidget.field_I.setBounds(param5, param0, param4, 256, param2);
           if (null != bo.field_h) {
-            bo.field_h.a(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
+            bo.field_h.layoutMenu(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
             return;
           }
           return;
         }
-        DraggableWidget.field_I.a(param5, param0, param4, 256, param2);
+        DraggableWidget.field_I.setBounds(param5, param0, param4, 256, param2);
         if (null == bo.field_h) {
           return;
         }
-        bo.field_h.a(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
+        bo.field_h.layoutMenu(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
     }
 
     final static void a(int param0) {

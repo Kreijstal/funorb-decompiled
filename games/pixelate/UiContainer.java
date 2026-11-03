@@ -37,7 +37,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
               discarded$4 = param3.append(' ');
             }
             var6.appendWidgetDiagnostics(param3, false, param0 + 1, param1);
-            var6 = (UiComponent) (var10.a((byte) -104));
+            var6 = (UiComponent) (var10.first((byte) -104));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,7 +81,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
                 var8.onFocusedKey(param0, param1 + 0, param2, param3)) {
                 return true;
               }
-              var8 = (UiComponent) (var9.a((byte) -104));
+              var8 = (UiComponent) (var9.first((byte) -104));
               continue;
             }
             break;
@@ -138,7 +138,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
                 var9.onMouseWheel(param0, (byte) 112, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (UiComponent) (var12.a((byte) -104));
+              var9 = (UiComponent) (var12.first((byte) -104));
               continue;
             }
             break;
@@ -223,7 +223,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           while (var6 != null) {
             if (var6.b(param0 - 40)) {
               var6.updatePointer(40, param1 + this.field_p, param2 + this.field_z, param3);
-              var6 = (UiComponent) (var5.a((byte) -104));
+              var6 = (UiComponent) (var5.first((byte) -104));
               continue;
             }
             break;
@@ -265,16 +265,16 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             if (var4.b(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.firstFrom((byte) -87, var4);
-              var6 = (UiComponent) (var5.a((byte) -104));
+              var6 = (UiComponent) (var5.first((byte) -104));
               while (var6 != null) {
                 if (!var6.focusNext(param1, 27)) {
-                  var6 = (UiComponent) (var5.a((byte) -104));
+                  var6 = (UiComponent) (var5.first((byte) -104));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiComponent) (var8.a((byte) -104));
+            var4 = (UiComponent) (var8.first((byte) -104));
           }
           if (param0 == 10) {
             return false;
@@ -305,7 +305,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         UiComponent var3 = (UiComponent) (var2.d(0));
         while (var3 != null) {
           var3.blur(2);
-          var3 = (UiComponent) (var2.a((byte) -104));
+          var3 = (UiComponent) (var2.first((byte) -104));
         }
     }
 
@@ -340,7 +340,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
               if (var9.handlePointerPress((byte) -58, param1, param2, this.field_p + param3, param4, this.field_z + param5, param6)) {
                 return true;
               }
-              var9 = (UiComponent) (var12.a((byte) -104));
+              var9 = (UiComponent) (var12.first((byte) -104));
               continue;
             }
             break;
@@ -410,7 +410,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             if (var4.focusNext(param0, 27)) {
               return true;
             }
-            var4 = (UiComponent) (var3.a((byte) -104));
+            var4 = (UiComponent) (var3.first((byte) -104));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -443,7 +443,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           while (var8 != null) {
             if (var8.b(0)) {
               var8.handlePointerRelease(param0, param1 + this.field_z, param2, 0, param4 + this.field_p, param5);
-              var8 = (UiComponent) (var7.a((byte) -104));
+              var8 = (UiComponent) (var7.first((byte) -104));
               continue;
             }
             break;
@@ -533,7 +533,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiComponent) (var2.a((byte) -104));
+          var3 = (UiComponent) (var2.first((byte) -104));
         }
         return null;
     }
@@ -546,7 +546,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (var3_ref_ng.b(true)) {
             return var3_ref_ng;
           }
-          var3_ref_ng = (UiComponent) (var2.a((byte) -104));
+          var3_ref_ng = (UiComponent) (var2.first((byte) -104));
         }
         int var3 = 125 % ((-51 - param0) / 39);
         return null;
@@ -566,7 +566,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (UiComponent) (var3.a((byte) -104));
+          var4 = (UiComponent) (var3.first((byte) -104));
         }
         return var2;
     }
@@ -577,7 +577,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         UiComponent var3 = (UiComponent) (var2.d(param0 ^ param0));
         while (var3 != null) {
           var3.c((byte) 51);
-          var3 = (UiComponent) (var2.a((byte) -104));
+          var3 = (UiComponent) (var2.first((byte) -104));
         }
     }
 

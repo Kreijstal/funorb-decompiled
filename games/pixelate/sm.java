@@ -54,7 +54,7 @@ final class sm extends IntrusiveNode {
           if (he.field_f == null) {
             return;
           }
-          var3 = he.field_f.b(-126, param1);
+          var3 = he.field_f.updateAndPollNameInput(-126, param1);
           if (var3 == 0) {
             return;
           }
@@ -94,7 +94,7 @@ final class sm extends IntrusiveNode {
         if (he.field_f == null) {
           return;
         }
-        var3Lifetime1 = he.field_f.b(-126, param1);
+        var3Lifetime1 = he.field_f.updateAndPollNameInput(-126, param1);
         if (var3Lifetime1 == 0) {
           return;
         }

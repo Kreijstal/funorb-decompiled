@@ -225,7 +225,7 @@ final class OptionsScreen extends MenuScreen {
             stackIn_6_0 = (98 != ke.field_a) ? 0 : 1;
             var2 = stackIn_6_0;
           }
-          var3 = this.field_g.field_j;
+          var3 = this.field_g.selectedIndex;
           if (var3 != -1 &&
             var3 != 1 &&
             var3 != 2) {
@@ -245,7 +245,7 @@ final class OptionsScreen extends MenuScreen {
                 var4 = (-PasswordFieldPainter.field_A + 532) / 2;
                 if (var2 != 0) {
                   this.field_g.a(false, -1 + var3);
-                  if (this.b(115, this.field_g.field_j) < var4) {
+                  if (this.b(115, this.field_g.selectedIndex) < var4) {
                     this.field_o = this.field_o - PasswordFieldPainter.field_A;
                   }
                   if (0 <= this.field_o) {
@@ -254,7 +254,7 @@ final class OptionsScreen extends MenuScreen {
                   this.field_o = 0;
                 } else {
                   this.field_g.a(false, var3 + 1);
-                  if (this.b(69, this.field_g.field_j) > var4) {
+                  if (this.b(69, this.field_g.selectedIndex) > var4) {
                     this.field_o = this.field_o + PasswordFieldPainter.field_A;
                   }
                   if (this.field_o > DirectByteStorage.field_k) {
@@ -336,7 +336,7 @@ final class OptionsScreen extends MenuScreen {
         }
         this.field_r = 0;
         super.e((byte) -100);
-        int var2 = this.field_g.field_j < 3 ? -1 : -3 + this.field_g.field_j;
+        int var2 = this.field_g.selectedIndex < 3 ? -1 : -3 + this.field_g.selectedIndex;
         for (var3 = 0; ModalPanel.field_I.length > var3; var3++) {
           ModalPanel.field_I[var3].a(var3 == var2 ? true : false, 20);
         }

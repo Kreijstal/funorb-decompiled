@@ -143,8 +143,8 @@ class EditableTextWidget extends TextButton {
         }
         int var2 = qh.field_c * qh.field_c;
         int var3 = var2 - oo.field_b * oo.field_b;
-        GreenGrowTheRushesBackground.field_n.a(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
-        MidiPcmStream.field_E.a(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
+        GreenGrowTheRushesBackground.field_n.setBounds(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
+        MidiPcmStream.field_E.setBounds(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
     }
 
     private final String selectedText(byte param0) {
@@ -421,7 +421,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.field_y instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((WidgetTextLayout) ((Object) this.field_y)).a(param3, param5, 0, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
+          var8_int = ((WidgetTextLayout) ((Object) this.field_y)).hitTestCaretIndex(param3, param5, 0, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -522,7 +522,7 @@ class EditableTextWidget extends TextButton {
           if (this.field_k == 1) {
             if (this.field_y instanceof WidgetTextLayout) {
               var5 = (WidgetTextLayout) ((Object) this.field_y);
-              var6 = var5.a(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
+              var6 = var5.hitTestCaretIndex(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
               if (var6 != -1) {
                 if (this.field_P &&
                   var6 < this.field_V &&

@@ -601,27 +601,27 @@ class PacketBuffer extends IntrusiveNode {
         ni.field_q = SoftwareRasterizer.field_j;
         EditableTextWidget.m(21);
         cl.field_g.a(GreenGrowTheRushesBackground.field_n.field_K, -2 + (-40 + GreenGrowTheRushesBackground.field_n.height), 0, 0, 5);
-        ValidatedTextWidget.field_lb.a(0, fq.field_q, 0, 256, vd.field_c.field_K);
+        ValidatedTextWidget.field_lb.setBounds(0, fq.field_q, 0, 256, vd.field_c.field_K);
         int var1 = 2 + fq.field_q;
-        StripedProgressBar.field_O.a(!DialWidgetPainter.field_n ? 0 : var1, vd.field_c.height - (!DialWidgetPainter.field_n ? 0 : var1), 0, 256, vd.field_c.field_K);
+        StripedProgressBar.field_O.setBounds(!DialWidgetPainter.field_n ? 0 : var1, vd.field_c.height - (!DialWidgetPainter.field_n ? 0 : var1), 0, 256, vd.field_c.field_K);
         mi.b(param0);
-        ValidatedTextWidget.field_cb.a(-40 + GreenGrowTheRushesBackground.field_n.height, 40, 0, 256, GreenGrowTheRushesBackground.field_n.field_K);
-        AlphaContainer.field_P.a(0, 30, 0, 256, MidiPcmStream.field_E.field_K);
-        DiskCacheWorker.field_a.a(30, -70 + MidiPcmStream.field_E.height - 2, 0, 256, MidiPcmStream.field_E.field_K);
-        BlastFromThePastBackground.field_n.a(5, 30, 5, 256, 68);
-        IsaacRandom.field_b.a(5, 30, 75, 256, 78);
-        LoginDialog.field_pb.a(5, 30, 155, 256, 48);
-        be.field_P.a(5, 30, 205, 256, 48);
+        ValidatedTextWidget.field_cb.setBounds(-40 + GreenGrowTheRushesBackground.field_n.height, 40, 0, 256, GreenGrowTheRushesBackground.field_n.field_K);
+        AlphaContainer.field_P.setBounds(0, 30, 0, 256, MidiPcmStream.field_E.field_K);
+        DiskCacheWorker.field_a.setBounds(30, -70 + MidiPcmStream.field_E.height - 2, 0, 256, MidiPcmStream.field_E.field_K);
+        BlastFromThePastBackground.field_n.setBounds(5, 30, 5, 256, 68);
+        IsaacRandom.field_b.setBounds(5, 30, 75, 256, 78);
+        LoginDialog.field_pb.setBounds(5, 30, 155, 256, 48);
+        be.field_P.setBounds(5, 30, 205, 256, 48);
         int var2 = DialWidgetPainter.field_n ? 250 : 200;
-        PasswordValidator.field_o.a(5, 30, var2 + 5, 256, 363 - var2);
-        SocketJs5Transport.field_t.a(5, 30, 370, 256, -375 + MidiPcmStream.field_E.field_K);
+        PasswordValidator.field_o.setBounds(5, 30, var2 + 5, 256, 363 - var2);
+        SocketJs5Transport.field_t.setBounds(5, 30, 370, 256, -375 + MidiPcmStream.field_E.field_K);
         aj.field_k.a(5, 2, (byte) 52, -5 + DiskCacheWorker.field_a.field_K - 5, 37, -10 + DiskCacheWorker.field_a.height - 32, DelegatingCanvas.field_b);
         int var3 = (2 + MidiPcmStream.field_E.field_K) / 2;
-        lg.field_c.a(-40 + MidiPcmStream.field_E.height, 40, 0, 256, var3 - 2);
+        lg.field_c.setBounds(-40 + MidiPcmStream.field_E.height, 40, 0, 256, var3 - 2);
         if (!DialWidgetPainter.field_n) {
           var3 = 0;
         }
-        MusicPatchNode.field_p.a(-40 + MidiPcmStream.field_E.height, 40, var3, 256, -var3 + MidiPcmStream.field_E.field_K);
+        MusicPatchNode.field_p.setBounds(-40 + MidiPcmStream.field_E.height, 40, var3, 256, -var3 + MidiPcmStream.field_E.field_K);
     }
 
     final void a(int param0, int param1) {

@@ -86,8 +86,8 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         var3 = var3 + this.addLabeledField(DialWidget.field_S, -21, this.field_P, 170, var3);
         var3 = var3 + (5 + this.addFieldWithHelp(mp.field_d, this.field_L, 20, 170, var3, 126, ""));
         var3 = var3 + this.addLabeledField(AccountRequestDialog.field_qb, -86, this.field_V, 170, var3);
-        var3 = var3 + (5 + this.a(PictureStrip.field_i, var3, this.field_X, 35, 170, r.field_b));
-        var3 = var3 + (this.a(na.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
+        var3 = var3 + (5 + this.addFieldWithHelp(PictureStrip.field_i, var3, this.field_X, 35, 170, r.field_b));
+        var3 = var3 + (this.addFieldWithHelp(na.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
         var3 = var3 + this.addLabeledFieldWithValidationIcon((byte) 85, 170, this.field_Q, var3, TriangleMesh.field_O);
         LabeledField var4 = new LabeledField(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);
         this.addChild(var4, 80);
@@ -295,7 +295,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                   stackIn_51_1 = var22;
                   stackIn_51_2 = var21;
                   stackIn_52_3 = !(param0);
-                  ((LobbyPlayer) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_51_2, stackIn_52_3);
+                  ((LobbyPlayer) (Object) stackIn_51_0).updateNames(stackIn_51_1, stackIn_51_2, stackIn_52_3);
                 }
               } else {
                 var8_ref_uj = new LobbyPlayer(var21, var22, var3);
@@ -584,7 +584,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         }
     }
 
-    public final void a(int param0, int param1, int param2, TextHotspotWidget param3) {
+    public final void onHotspotAction(int param0, int param1, int param2, TextHotspotWidget param3) {
         int discarded$1 = 0;
         int var6 = 0;
         UiComponent var7 = null;
@@ -658,7 +658,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         }
     }
 
-    private final boolean a(ValidationProvider param0, boolean param1) {
+    private final boolean isFieldReady(ValidationProvider param0, boolean param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         dj var4 = null;
@@ -834,24 +834,24 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         boolean stackIn_22_2 = false;
         if (!param0) {
           var3 = (ValidationProvider) null;
-          discarded$1 = this.a((ValidationProvider) null, false);
+          discarded$1 = this.isFieldReady((ValidationProvider) null, false);
         }
         stackIn_4_1 = this.field_U;
         stackIn_5_2 = !(param0);
-        if (this.a(stackIn_4_1, stackIn_5_2) &&
-          this.a(this.field_P, false)) {
+        if (this.isFieldReady(stackIn_4_1, stackIn_5_2) &&
+          this.isFieldReady(this.field_P, false)) {
           stackIn_9_1 = this.field_L;
           stackIn_10_2 = !(param0);
-          if (this.a(stackIn_9_1, stackIn_10_2)) {
+          if (this.isFieldReady(stackIn_9_1, stackIn_10_2)) {
             stackIn_13_1 = this.field_V;
             stackIn_14_2 = !(param0);
-            if (this.a(stackIn_13_1, stackIn_14_2)) {
+            if (this.isFieldReady(stackIn_13_1, stackIn_14_2)) {
               stackIn_17_1 = this.field_X;
               stackIn_18_2 = !(param0);
-              if (this.a(stackIn_17_1, stackIn_18_2)) {
+              if (this.isFieldReady(stackIn_17_1, stackIn_18_2)) {
                 stackIn_21_1 = this.field_Q;
                 stackIn_22_2 = !(param0);
-                if (this.a(stackIn_21_1, stackIn_22_2)) {
+                if (this.isFieldReady(stackIn_21_1, stackIn_22_2)) {
                   return true;
                 }
               }
@@ -876,7 +876,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         return DebouncedValidator.field_f == io.field_c.field_kc ? true : false;
     }
 
-    private final int a(String param0, int param1, UiComponent param2, int param3, int param4, String param5) {
+    private final int addFieldWithHelp(String param0, int param1, UiComponent param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

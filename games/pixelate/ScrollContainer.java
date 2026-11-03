@@ -5,7 +5,7 @@ final class ScrollContainer extends SceneWidget {
     static String field_Jb;
     static String field_Eb;
     static MouseWheelHandler field_Lb;
-    SceneWidget field_Fb;
+    SceneWidget content;
     static String[] field_Hb;
     VerticalScrollbar field_Gb;
     SceneWidget field_Ib;
@@ -18,7 +18,7 @@ final class ScrollContainer extends SceneWidget {
           this.field_Gb = new VerticalScrollbar(0L, param3);
           this.addChild(this.field_Ib, (byte) 26);
           this.addChild(this.field_Gb, (byte) 26);
-          this.field_Fb = param1;
+          this.content = param1;
           this.field_Ib.addChild(param1, (byte) 26);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -87,58 +87,58 @@ final class ScrollContainer extends SceneWidget {
     private final void a(boolean param0, int param1, int param2, int param3, byte param4) {
         int var6;
         if (this.field_Gb.e((byte) 123)) {
-          this.field_Fb.pendingYDelta = this.field_Fb.pendingYDelta + param2;
+          this.content.pendingYDelta = this.content.pendingYDelta + param2;
         }
         var6 = 13 / ((70 - param4) / 55);
         if (this.field_Gb.pollLineDown((byte) 70)) {
-          this.field_Fb.pendingYDelta = this.field_Fb.pendingYDelta - param2;
+          this.content.pendingYDelta = this.content.pendingYDelta - param2;
         }
-        if (this.field_Gb.f((byte) 83)) {
-          this.field_Fb.pendingYDelta = this.field_Fb.pendingYDelta + param1;
+        if (this.field_Gb.pollPageUp((byte) 83)) {
+          this.content.pendingYDelta = this.content.pendingYDelta + param1;
         }
         if (this.field_Gb.j(-1)) {
-          this.field_Fb.pendingYDelta = this.field_Fb.pendingYDelta - param1;
+          this.content.pendingYDelta = this.content.pendingYDelta - param1;
         }
         if (this.field_W) {
-          this.field_Fb.pendingYDelta = this.field_Fb.pendingYDelta - param3;
+          this.content.pendingYDelta = this.content.pendingYDelta - param3;
         }
         if (param0) {
-          if (0 > -(this.field_Fb.field_S + this.field_Fb.pendingYDelta)) {
-            this.field_Fb.pendingYDelta = -this.field_Fb.field_S;
+          if (0 > -(this.content.field_S + this.content.pendingYDelta)) {
+            this.content.pendingYDelta = -this.content.field_S;
           }
-          if (this.field_Fb.pendingHeightDelta + this.field_Fb.height - this.field_Ib.height < -(this.field_Fb.pendingYDelta + this.field_Fb.field_S)) {
-            this.field_Fb.pendingYDelta = -(this.field_Fb.height + this.field_Fb.pendingHeightDelta - this.field_Ib.height) - this.field_Fb.field_S;
+          if (this.content.pendingHeightDelta + this.content.height - this.field_Ib.height < -(this.content.pendingYDelta + this.content.field_S)) {
+            this.content.pendingYDelta = -(this.content.height + this.content.pendingHeightDelta - this.field_Ib.height) - this.content.field_S;
           }
         } else {
-          if (this.field_Fb.pendingHeightDelta + this.field_Fb.height - this.field_Ib.height < -(this.field_Fb.pendingYDelta + this.field_Fb.field_S)) {
-            this.field_Fb.pendingYDelta = -(this.field_Fb.height + this.field_Fb.pendingHeightDelta - this.field_Ib.height) - this.field_Fb.field_S;
+          if (this.content.pendingHeightDelta + this.content.height - this.field_Ib.height < -(this.content.pendingYDelta + this.content.field_S)) {
+            this.content.pendingYDelta = -(this.content.height + this.content.pendingHeightDelta - this.field_Ib.height) - this.content.field_S;
           }
-          if (-(this.field_Fb.pendingYDelta + this.field_Fb.field_S) < 0) {
-            this.field_Fb.pendingYDelta = -this.field_Fb.field_S;
+          if (-(this.content.pendingYDelta + this.content.field_S) < 0) {
+            this.content.pendingYDelta = -this.content.field_S;
           }
         }
         if (this.field_Gb.k(92)) {
-          this.field_Fb.field_S = -this.field_Gb.a(3, this.field_Fb.height, param0, this.field_Ib.height);
-          this.field_Fb.pendingYDelta = 0;
+          this.content.field_S = -this.field_Gb.a(3, this.content.height, param0, this.field_Ib.height);
+          this.content.pendingYDelta = 0;
         }
-        this.field_Gb.a(this.field_Ib.height, (byte) 108, -this.field_Fb.field_S, this.field_Fb.height);
+        this.field_Gb.layoutScrollbar(this.field_Ib.height, (byte) 108, -this.content.field_S, this.content.height);
     }
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void layoutViewport(boolean param0, int param1, int param2) {
         if (!param0) {
           this.field_Ib.height = this.height;
           this.field_Ib.field_K = -param2 + (this.field_K - param1);
-          this.field_Fb.field_D = 0;
-          this.field_Fb.field_K = -param2 + (this.field_K - param1);
-          this.field_Gb.a(-param2 + this.field_K, this.field_Fb.height, this.height, this.field_Ib.height, -this.field_Fb.field_S, param2, 0, -1);
+          this.content.field_D = 0;
+          this.content.field_K = -param2 + (this.field_K - param1);
+          this.field_Gb.a(-param2 + this.field_K, this.content.height, this.height, this.field_Ib.height, -this.content.field_S, param2, 0, -1);
           return;
         }
         field_Jb = (String) null;
         this.field_Ib.height = this.height;
         this.field_Ib.field_K = -param2 + (this.field_K - param1);
-        this.field_Fb.field_D = 0;
-        this.field_Fb.field_K = -param2 + (this.field_K - param1);
-        this.field_Gb.a(-param2 + this.field_K, this.field_Fb.height, this.height, this.field_Ib.height, -this.field_Fb.field_S, param2, 0, -1);
+        this.content.field_D = 0;
+        this.content.field_K = -param2 + (this.field_K - param1);
+        this.field_Gb.a(-param2 + this.field_K, this.content.height, this.height, this.field_Ib.height, -this.content.field_S, param2, 0, -1);
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
@@ -147,7 +147,7 @@ final class ScrollContainer extends SceneWidget {
         this.field_S = param4;
         this.field_D = param0;
         if (param2 >= 43) {
-          this.a(false, param1, param6);
+          this.layoutViewport(false, param1, param6);
           return;
         }
     }
@@ -161,46 +161,46 @@ final class ScrollContainer extends SceneWidget {
           if (!this.field_W) {
             var8 = 0;
             if (param5 == 7736) {
-              this.field_Fb.a(param1, (byte) -128, var8 != 0, this.field_Ib.height);
+              this.content.layoutVerticalContent(param1, (byte) -128, var8 != 0, this.field_Ib.height);
               this.a(false, param4, param2, param0, (byte) 127);
               return var8 != 0;
             }
             ScrollContainer.a(-48, -99L);
-            this.field_Fb.a(param1, (byte) -128, var8 != 0, this.field_Ib.height);
+            this.content.layoutVerticalContent(param1, (byte) -128, var8 != 0, this.field_Ib.height);
             this.a(false, param4, param2, param0, (byte) 127);
             return var8 != 0;
           }
           if (param6) {
             var8Lifetime2 = 0;
             if (param5 == 7736) {
-              this.field_Fb.a(param1, (byte) -128, var8Lifetime2 != 0, this.field_Ib.height);
+              this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime2 != 0, this.field_Ib.height);
               this.a(false, param4, param2, param0, (byte) 127);
               return var8Lifetime2 != 0;
             }
             ScrollContainer.a(-48, -99L);
-            this.field_Fb.a(param1, (byte) -128, var8Lifetime2 != 0, this.field_Ib.height);
+            this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime2 != 0, this.field_Ib.height);
             this.a(false, param4, param2, param0, (byte) 127);
             return var8Lifetime2 != 0;
           }
           var8Lifetime3 = 1;
           if (param5 == 7736) {
-            this.field_Fb.a(param1, (byte) -128, var8Lifetime3 != 0, this.field_Ib.height);
+            this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime3 != 0, this.field_Ib.height);
             this.a(false, param4, param2, param0, (byte) 127);
             return var8Lifetime3 != 0;
           }
           ScrollContainer.a(-48, -99L);
-          this.field_Fb.a(param1, (byte) -128, var8Lifetime3 != 0, this.field_Ib.height);
+          this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime3 != 0, this.field_Ib.height);
           this.a(false, param4, param2, param0, (byte) 127);
           return var8Lifetime3 != 0;
         }
         var8Lifetime1 = 1;
         if (param5 == 7736) {
-          this.field_Fb.a(param1, (byte) -128, var8Lifetime1 != 0, this.field_Ib.height);
+          this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime1 != 0, this.field_Ib.height);
           this.a(false, param4, param2, param0, (byte) 127);
           return var8Lifetime1 != 0;
         }
         ScrollContainer.a(-48, -99L);
-        this.field_Fb.a(param1, (byte) -128, var8Lifetime1 != 0, this.field_Ib.height);
+        this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime1 != 0, this.field_Ib.height);
         this.a(false, param4, param2, param0, (byte) 127);
         return var8Lifetime1 != 0;
     }

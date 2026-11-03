@@ -40,7 +40,7 @@ final class GzipDecoder {
             if (var4 < 0) {
               var5 = PlayerBoard.field_n;
             } else {
-              if (var4 == VerticalScrollbar.field_Gb.field_j) {
+              if (var4 == VerticalScrollbar.field_Gb.selectedIndex) {
                 var5 = mj.field_k;
               } else {
                 var5 = mh.field_a;
@@ -53,7 +53,7 @@ final class GzipDecoder {
             var7 = ArchiveProvider.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
             var8 = bq.field_d - (var7 >> 1);
             if (var4 >= 0) {
-              if (VerticalScrollbar.field_Gb.field_j != var4) {
+              if (VerticalScrollbar.field_Gb.selectedIndex != var4) {
                 stackIn_18_0 = BufferedRandomAccessFile.field_m;
               } else {
                 stackIn_18_0 = Matrix3.field_d;

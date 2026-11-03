@@ -140,7 +140,7 @@ abstract class MenuScreen {
         for (var2 = 0; this.field_g.field_h > var2; var2++) {
           if (this.c(param0 - 47, var2)) {
             stackIn_7_1 = -125;
-            stackIn_8_2 = (var2 == this.field_g.field_j);
+            stackIn_8_2 = (var2 == this.field_g.selectedIndex);
             this.a((byte) stackIn_7_1, stackIn_8_2, var2);
           }
         }
@@ -154,8 +154,8 @@ abstract class MenuScreen {
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (ke.field_a == 96) {
-          if (0 < this.field_g.field_j) {
-            if (this.field_g.field_j != 2) {
+          if (0 < this.field_g.selectedIndex) {
+            if (this.field_g.selectedIndex != 2) {
               this.field_g.a(false, 0);
             }
           } else {
@@ -163,8 +163,8 @@ abstract class MenuScreen {
           }
         }
         if (ke.field_a == 97) {
-          if (this.field_g.field_j != 1) {
-            if (this.field_g.field_j != 2) {
+          if (this.field_g.selectedIndex != 1) {
+            if (this.field_g.selectedIndex != 2) {
               this.field_g.a(false, 1);
             }
           } else {
@@ -172,15 +172,15 @@ abstract class MenuScreen {
           }
         }
         if (ke.field_a == 99) {
-          if (0 <= this.field_g.field_j &&
-            this.field_g.field_j <= 1) {
+          if (0 <= this.field_g.selectedIndex &&
+            this.field_g.selectedIndex <= 1) {
             this.field_g.a(false, 2);
           } else {
             this.field_g.a(false, d.field_c);
           }
         }
         if (ke.field_a == 98) {
-          if (2 == this.field_g.field_j) {
+          if (2 == this.field_g.selectedIndex) {
             this.field_g.a(false, d.field_c);
           } else {
             this.field_g.a(false, 2);
@@ -207,7 +207,7 @@ abstract class MenuScreen {
     }
 
     void a(int param0, int param1, boolean param2) {
-        this.field_g.a(param2, this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -119), 17068, param1);
+        this.field_g.initializeSelection(param2, this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -119), 17068, param1);
         nk.field_i = pa.field_b;
         if (param0 != 2) {
           field_h = -13;
@@ -550,14 +550,14 @@ abstract class MenuScreen {
               continue;
             }
             this.b(-36);
-            if (-1 == this.field_g.field_j) {
+            if (-1 == this.field_g.selectedIndex) {
               continue;
             }
-            this.a(this.field_g.field_j, (byte) -114, false);
+            this.a(this.field_g.selectedIndex, (byte) -114, false);
           }
-          this.field_g.a(this.a(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -115), -1);
-          if (-1 != this.field_g.field_j) {
-            this.a(this.field_g.field_j, (byte) -128, true);
+          this.field_g.updatePointer(this.a(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -115), -1);
+          if (-1 != this.field_g.selectedIndex) {
+            this.a(this.field_g.selectedIndex, (byte) -128, true);
           }
         }
         if (param0 > -64) {

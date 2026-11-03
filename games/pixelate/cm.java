@@ -54,8 +54,8 @@ final class cm extends IntrusiveNode {
         int var3 = qh.field_c * qh.field_c;
         int var4 = -(param0 * param0) + var3;
         if (param1 == 4740) {
-          ff.field_h.a(90, -124 + (SoftwareRasterizer.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
-          Bzip2State.field_A.a(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
+          ff.field_h.setBounds(90, -124 + (SoftwareRasterizer.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
+          Bzip2State.field_A.setBounds(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
           return;
         }
     }

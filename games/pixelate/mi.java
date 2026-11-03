@@ -157,7 +157,7 @@ final class mi extends MenuScreen {
               }
               aa.field_f.position = 0;
               aa.field_f.writeByte(160, 14);
-              aa.field_f.writeByte(160, li.field_g.b(-27096).field_a);
+              aa.field_f.writeByte(160, li.field_g.getCredentialKind(-27096).field_a);
               SecondaryNodeHashTable.b(-1, 10000);
               GameModeSelectScreen.field_s = cn.field_a;
             }
@@ -246,10 +246,10 @@ final class mi extends MenuScreen {
               LobbyGame.field_Hb = dh.a(var11, (byte) 54);
               ra.field_g = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               GameModeSelectScreen.field_s = Pixelate.field_G;
-              if (li.field_g.b(-27096) == l.field_r) {
+              if (li.field_g.getCredentialKind(-27096) == l.field_r) {
                 ig.field_e.a(AudioService.a(13867), -80419032);
               } else {
-                if (li.field_g.b(-27096) == QuickChatMenu.field_Nb) {
+                if (li.field_g.getCredentialKind(-27096) == QuickChatMenu.field_Nb) {
                   vm.field_a.a(AudioService.a(13867), -80419032);
                 }
               }
@@ -354,7 +354,7 @@ final class mi extends MenuScreen {
           if (param2 != -1) {
             field_o = false;
           }
-          cn.field_b.a(param3, param1, 7595, param0);
+          cn.field_b.setProgress(param3, param1, 7595, param0);
           SoftwareRasterizer.clear();
           Js5NetworkRequest.a(94, true);
         } catch (RuntimeException runtimeException) {
@@ -406,11 +406,11 @@ final class mi extends MenuScreen {
     }
 
     final static void b(boolean param0) {
-        TextTableInitializer.field_g.a(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
+        TextTableInitializer.field_g.setBounds(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
         if (param0) {
           field_o = false;
         }
-        l.field_s.a(0, 18, -40 + (-DelegatingCanvas.field_b + (StripedProgressBar.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
+        l.field_s.setBounds(0, 18, -40 + (-DelegatingCanvas.field_b + (StripedProgressBar.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
         jm.field_b.a(0, 2, (byte) 102, StripedProgressBar.field_O.field_K, 20, StripedProgressBar.field_O.height - 20, DelegatingCanvas.field_b);
     }
 

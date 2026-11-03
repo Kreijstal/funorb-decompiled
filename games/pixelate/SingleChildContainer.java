@@ -25,7 +25,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -95) {
-            this.j(110);
+            this.refreshChildLayout(110);
           }
           stackIn_7_0 = (this.child != null) && (!this.child.b(true)) && (this.child.focusNext(param1, 27));
           return stackIn_7_0;
@@ -84,7 +84,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    void j(int param0) {
+    void refreshChildLayout(int param0) {
         if (this.child != null) {
           this.child.c((byte) 99);
         }
@@ -305,7 +305,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           return;
         }
         super.a(param0, (byte) 113, param2, param3, param4);
-        this.j(0);
+        this.refreshChildLayout(0);
     }
 
     final int getTopLayer(int param0) {

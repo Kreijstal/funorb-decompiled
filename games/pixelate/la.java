@@ -211,7 +211,7 @@ final class la {
         if (param0 > -84) {
           la.a((byte) -93);
         }
-        return aj.field_k.field_Fb;
+        return aj.field_k.content;
     }
 
     final static void a(int param0, int param1, ScrollContainer param2, int param3, boolean param4) {
@@ -331,7 +331,7 @@ final class la {
           stackIn_46_2 = (bj.field_d == param2);
           stackIn_49_0 = (!((ScrollContainer) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_46_2, 2, (fq.field_q * 4 + 8) * param3, 0, 2 * fq.field_q + 4)) ? 0 : 1;
           var9Lifetime1 = stackIn_49_0;
-          var10 = param2.field_Fb.children;
+          var10 = param2.content.children;
           var11 = null;
           var12 = (LobbyPlayer) (var10.c(1504642273));
           while (var12 != null) {
@@ -373,7 +373,7 @@ final class la {
             var12.field_Sb.height = 0;
             var18 = var12.field_Sb;
             var18.field_K = 0;
-            var12.field_K = param2.field_Fb.field_K;
+            var12.field_K = param2.content.field_K;
             var19 = 0;
             var32 = var12.field_Fb;
             var20 = var32;
@@ -443,7 +443,7 @@ final class la {
                 DebouncedValidator.field_f != var12.field_Nb) {
                 if (null != var12.field_Zb.field_cb) {
                   var26 = var12.field_Zb.g(0) + MouseWheelHandler.field_c * 2;
-                  var12.field_Zb.a(var19, fq.field_q, var25_int, 256, var26);
+                  var12.field_Zb.setBounds(var19, fq.field_q, var25_int, 256, var26);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Mb.field_cb) {
@@ -452,7 +452,7 @@ final class la {
                   } else {
                     var26Lifetime2 = var12.field_Mb.g(0) + 2 * MouseWheelHandler.field_c;
                   }
-                  var12.field_Mb.a(var19, fq.field_q, var25_int, 256, var26Lifetime2);
+                  var12.field_Mb.setBounds(var19, fq.field_q, var25_int, 256, var26Lifetime2);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -466,9 +466,9 @@ final class la {
               } else {
                 stackIn_98_5 = 42;
               }
-              ((SceneWidget) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_97_4, -stackIn_98_5 + var12.field_K - var25_int);
+              ((SceneWidget) (Object) stackIn_97_0).setBounds(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_97_4, -stackIn_98_5 + var12.field_K - var25_int);
               var12.field_Gb.field_cb = Integer.toString(var12.field_Rb);
-              var12.field_Gb.a(var19, fq.field_q, var12.field_K - 40, 256, 40);
+              var12.field_Gb.setBounds(var19, fq.field_q, var12.field_K - 40, 256, 40);
               if (var12.field_Hb.field_W &&
                 var22 != 0) {
                 up.field_o = var12.field_Fb;
@@ -494,14 +494,14 @@ final class la {
               var24_intLifetime1 = var12.field_Sb.font.wrappedLineCount(var23, -MouseWheelHandler.field_c + (var12.field_K - MouseWheelHandler.field_c));
               var12.field_Sb.field_cb = var23;
               var12.field_Sb.textOpacity = var12.field_Tb * 256 / mh.field_b;
-              var12.field_Sb.a(var19, fq.field_q * var24_intLifetime1, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
+              var12.field_Sb.setBounds(var19, fq.field_q * var24_intLifetime1, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
               var19 = var19 + var24_intLifetime1 * fq.field_q;
             }
             if (var9Lifetime1 == 0) {
               var12.pendingHeightDelta = -var12.height + var19;
             }
             if (var13 != 0) {
-              param2.field_Fb.positionAfter(var12, 2, -1, (SceneWidget) (var11));
+              param2.content.positionAfter(var12, 2, -1, (SceneWidget) (var11));
             }
             if (var12.field_P != 0 &&
               !var12.b((byte) -89)) {

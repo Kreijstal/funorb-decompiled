@@ -138,7 +138,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           if (param0 != -13) {
             field_H = (PictureStrip) null;
           }
-          var38.field_b.b(var7, var4, 91, var5, var6);
+          var38.field_b.layoutPopup(var7, var4, 91, var5, var6);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

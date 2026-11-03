@@ -14,7 +14,7 @@ final class IconTextComponent extends SceneWidget {
     static String field_Lb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param3, param0, param4, 256, param5);
+        this.setBounds(param3, param0, param4, 256, param5);
         if (param6 == -2147483648) {
           this.b(param6 ^ 0, param2, param1);
           return;
@@ -145,13 +145,13 @@ final class IconTextComponent extends SceneWidget {
           param2 = param2 + (this.field_K - var6);
         }
         if (null != this.field_Fb) {
-          this.field_Fb.a(0, this.height, param2, param0 - 2147483392, var4);
+          this.field_Fb.setBounds(0, this.height, param2, param0 - 2147483392, var4);
           this.field_Fb.verticalAlignment = this.verticalAlignment;
         }
         if (this.field_Eb == null) {
           return;
         }
-        this.field_Eb.a(0, this.height, param2 + var4 + param1, 256, var5);
+        this.field_Eb.setBounds(0, this.height, param2 + var4 + param1, 256, var5);
         if (this.field_Fb == null) {
           this.field_Eb.horizontalAlignment = this.horizontalAlignment;
         } else {

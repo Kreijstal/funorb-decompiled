@@ -61,7 +61,7 @@ final class fl {
     }
 
     final static void a(byte param0) {
-        wa.field_c.e((byte) 54);
+        wa.field_c.refreshPanelVisibility((byte) 54);
         int var1 = -119 / ((param0 + 55) / 51);
         if (null != cn.field_b) {
           wa.field_c.b(-6183, cn.field_b);

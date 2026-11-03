@@ -71,7 +71,7 @@ final class LobbyGame extends SceneWidget {
         int var1 = -86 / ((28 - param0) / 46);
     }
 
-    final boolean a(byte param0, LobbyGame param1) {
+    final boolean comesBeforeGame(byte param0, LobbyGame param1) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;

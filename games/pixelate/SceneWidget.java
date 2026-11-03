@@ -130,7 +130,7 @@ class SceneWidget extends SceneWidgetNode {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.pendingXDelta = 0;
         this.field_D = param2;
         this.pendingWidthDelta = 0;
@@ -144,7 +144,7 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    final void a(int param0, byte param1, boolean param2, int param3) {
+    final void layoutVerticalContent(int param0, byte param1, boolean param2, int param3) {
         SceneWidget var10_ref_ak = null;
         int var9 = 0;
         int var11 = Pixelate.field_H ? 1 : 0;

@@ -226,7 +226,7 @@ final class PlayerController {
             nf.field_c = stackIn_36_0 + stackIn_37_1;
           }
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
-          VerticalScrollbar.field_Gb.a(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), param3 ^ 17068, 0);
+          VerticalScrollbar.field_Gb.initializeSelection(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), param3 ^ 17068, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

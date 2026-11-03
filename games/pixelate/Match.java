@@ -77,7 +77,7 @@ final class Match {
           for (var3 = 0; vm.field_e.length > var3; var3++) {
             var4 = fo.field_a[var3];
             if (var4 >= 0) {
-              if (var4 == mj.field_c.field_j) {
+              if (var4 == mj.field_c.selectedIndex) {
                 var5 = IndexedSpriteState.field_l;
               } else {
                 var5 = ce.field_b;
@@ -128,7 +128,7 @@ final class Match {
             var7Lifetime1 = sb.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             var8Lifetime1 = QuickChatCategory.field_u - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              if (var4 == mj.field_c.field_j) {
+              if (var4 == mj.field_c.selectedIndex) {
                 stackIn_44_0 = MarkerSlider.field_N;
               } else {
                 stackIn_44_0 = AudioService.field_e;

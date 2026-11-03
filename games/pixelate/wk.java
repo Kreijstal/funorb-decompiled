@@ -32,7 +32,7 @@ final class wk extends LoginCredentials {
         field_i = null;
     }
 
-    final ea b(int param0) {
+    final ea getCredentialKind(int param0) {
         if (param0 != -27096) {
           wk.a(45, 71, -79);
           return l.field_r;

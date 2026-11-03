@@ -7,7 +7,7 @@ public final class Pixelate extends NetworkGameClient {
     public static boolean field_H;
 
     final void initializeClient(byte param0) {
-        this.a(55, false, 4, 2, true, 12, 1, 0);
+        this.initializeFramework(55, false, 4, 2, true, 12, 1, 0);
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_x.a(true, 9, 128);
         var3.field_H.a(true, 9, 128);
@@ -934,7 +934,7 @@ public final class Pixelate extends NetworkGameClient {
           if (param1 != 69) {
             return;
           }
-          var8 = aj.field_k.field_Fb.children;
+          var8 = aj.field_k.content.children;
           var9 = hm.a(64);
           var11 = null;
           var12 = (LobbyGame) (var8.c(1504642273));
@@ -1103,7 +1103,7 @@ public final class Pixelate extends NetworkGameClient {
             var30 = var12.field_rc;
             var12.field_rc.height = 0;
             var30.field_K = 0;
-            var12.field_K = aj.field_k.field_Fb.field_K;
+            var12.field_K = aj.field_k.content.field_K;
             var31 = 0;
             var32 = var12.field_pc;
             if (!var12.j(param1 + 364)) {
@@ -1140,12 +1140,12 @@ public final class Pixelate extends NetworkGameClient {
                 }
               }
               if (null != var12.field_jc.field_cb) {
-                var12.field_jc.a(var31, fq.field_q, 0, 256, 68);
+                var12.field_jc.setBounds(var31, fq.field_q, 0, 256, 68);
               } else {
-                var12.field_Nb.a(var31, fq.field_q, 0, 256, 68);
+                var12.field_Nb.setBounds(var31, fq.field_q, 0, 256, 68);
               }
               var12.field_qc.field_cb = BitmapFont.truncateWithEllipsis(var12.field_qc.font, var32, 78);
-              var12.field_qc.a(var31, fq.field_q, 70, 256, 78);
+              var12.field_qc.setBounds(var31, fq.field_q, 70, 256, 78);
               if (var12.field_qc.field_W &&
                 !var12.field_qc.field_cb.equals(var32)) {
                 up.field_o = var32;
@@ -1155,22 +1155,22 @@ public final class Pixelate extends NetworkGameClient {
                 var12.field_Sb.field_cb = "/" + var12.field_ec;
                 var12.field_Yb.horizontalAlignment = 2;
                 var33_int = (348 - var12.field_Sb.font.textWidth("/")) / 2;
-                var12.field_Yb.a(var31, fq.field_q, 150, 256, var33_int - 150);
-                var12.field_Sb.a(var31, fq.field_q, var33_int, 256, 198 - var33_int);
+                var12.field_Yb.setBounds(var31, fq.field_q, 150, 256, var33_int - 150);
+                var12.field_Sb.setBounds(var31, fq.field_q, var33_int, 256, 198 - var33_int);
               } else {
                 var12.field_Yb.horizontalAlignment = 1;
-                var12.field_Yb.a(var31, fq.field_q, 150, 256, 48);
+                var12.field_Yb.setBounds(var31, fq.field_q, 150, 256, 48);
               }
               var12.field_gc.field_cb = Integer.toString(var12.field_bc);
-              var12.field_gc.a(var31, fq.field_q, 200, 256, 48);
+              var12.field_gc.setBounds(var31, fq.field_q, 200, 256, 48);
               stackIn_69_0 = (!DialWidgetPainter.field_n) ? 200 : 250;
               var33_intLifetime1 = stackIn_69_0;
-              var12.field_Zb.a(var31, fq.field_q, var33_intLifetime1, param1 + 187, -2 + (-var33_intLifetime1 + 365));
+              var12.field_Zb.setBounds(var31, fq.field_q, var33_intLifetime1, param1 + 187, -2 + (-var33_intLifetime1 + 365));
               var34_int = PlayerBoard.field_q;
               if ((1 << ek.field_a & var14Lifetime1) != 0) {
                 var50_ref = DraggableWidget.field_P[var12.field_Ib];
                 var12.field_ic.field_H = var50_ref;
-                var12.field_ic.a(0, var12.field_Zb.height, var34_int, 256, var50_ref.field_A);
+                var12.field_ic.setBounds(0, var12.field_Zb.height, var34_int, 256, var50_ref.field_A);
                 var34_int = var34_int + (var50_ref.field_A + PlayerBoard.field_q);
               }
               if ((var14Lifetime1 & 1 << ef.field_f) != 0) {
@@ -1188,13 +1188,13 @@ public final class Pixelate extends NetworkGameClient {
                 }
                 var51_ref = stackIn_80_0[stackIn_81_1];
                 var12.field_Jb.field_H = var51_ref;
-                var12.field_Jb.a(0, var12.field_Zb.height, var34_int, 256, var51_ref.field_A);
+                var12.field_Jb.setBounds(0, var12.field_Zb.height, var34_int, 256, var51_ref.field_A);
                 var34_int = var34_int + (PlayerBoard.field_q + var51_ref.field_A);
               }
               if ((1 << PasswordValidator.field_m & var14Lifetime1) != 0) {
                 var52_ref = PuzzlePieceQueue.field_d[-1 + var12.field_Tb];
                 var12.field_Fb.field_H = var52_ref;
-                var12.field_Fb.a(0, var12.field_Zb.height, var34_int, 256, var52_ref.field_A);
+                var12.field_Fb.setBounds(0, var12.field_Zb.height, var34_int, 256, var52_ref.field_A);
                 var34_int = var34_int + (PlayerBoard.field_q + var52_ref.field_A);
               }
               if ((var14Lifetime1 & 1 << ClientException.field_e) != 0) {
@@ -1206,7 +1206,7 @@ public final class Pixelate extends NetworkGameClient {
                 }
                 var53_ref = stackIn_88_0[stackIn_89_1];
                 var12.field_Vb.field_H = var53_ref;
-                var12.field_Vb.a(0, var12.field_Zb.height, var34_int, 256, var53_ref.field_A);
+                var12.field_Vb.setBounds(0, var12.field_Zb.height, var34_int, 256, var53_ref.field_A);
                 var34_int = var34_int + (PlayerBoard.field_q + var53_ref.field_A);
               }
               if (ig.field_a != null) {
@@ -1216,7 +1216,7 @@ public final class Pixelate extends NetworkGameClient {
                     var42 = ig.field_a[var36Lifetime1][255 & var12.field_Eb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_ac[var36Lifetime1].field_H = var42;
-                    var12.field_ac[var36Lifetime1].a(0, var12.field_Zb.height, var34_int, 256, var54.field_A);
+                    var12.field_ac[var36Lifetime1].setBounds(0, var12.field_Zb.height, var34_int, 256, var54.field_A);
                     var34_int = var34_int + (PlayerBoard.field_q + var54.field_A);
                   }
                 }
@@ -1248,7 +1248,7 @@ public final class Pixelate extends NetworkGameClient {
                   var12.field_Gb.field_cb = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Gb.a(var31, fq.field_q, 365, 256, var12.field_K - 365);
+              var12.field_Gb.setBounds(var31, fq.field_q, 365, 256, var12.field_K - 365);
               var31 = var31 + fq.field_q;
               if (var12.field_Ub != null) {
                 var31 += 2;
@@ -1262,17 +1262,17 @@ public final class Pixelate extends NetworkGameClient {
                 var38 = var37.toString();
                 var12.field_Kb.field_cb = var38;
                 var39Lifetime1 = var12.field_Kb.font.wrappedLineCount(var38, var12.field_K - 2 * var12.field_Kb.field_C);
-                var12.field_Kb.a(var31, fq.field_q * var39Lifetime1, 0, 256, var12.field_K);
+                var12.field_Kb.setBounds(var31, fq.field_q * var39Lifetime1, 0, 256, var12.field_K);
                 var31 = var31 + fq.field_q * var39Lifetime1;
               }
               if (var12.field_cc) {
                 var12.field_Wb.field_cb = AlphaContainer.a(JavaRandomHelpers.field_a, param1 - 22, new String[]{var32});
-                var12.field_Wb.a(var31, fq.field_q, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
+                var12.field_Wb.setBounds(var31, fq.field_q, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
                 var31 = var31 + fq.field_q;
               }
               if (var12.field_Ob) {
                 var12.field_lc.field_cb = AlphaContainer.a(NodeHashTable.field_h, param1 ^ 25, new String[]{var32});
-                var12.field_lc.a(var31, fq.field_q, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
+                var12.field_lc.setBounds(var31, fq.field_q, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
                 var31 = var31 + fq.field_q;
               }
             }
@@ -1281,14 +1281,14 @@ public final class Pixelate extends NetworkGameClient {
               var34_intLifetime1 = var12.field_rc.font.wrappedLineCount(var33, -MouseWheelHandler.field_c + var12.field_K - MouseWheelHandler.field_c);
               var12.field_rc.field_cb = var33;
               var12.field_rc.textOpacity = var12.field_Rb * 256 / mh.field_b;
-              var12.field_rc.a(var31, fq.field_q * var34_intLifetime1, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
+              var12.field_rc.setBounds(var31, fq.field_q * var34_intLifetime1, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
               var31 = var31 + var34_intLifetime1 * fq.field_q;
             }
             if (var7_int == 0) {
               var12.pendingHeightDelta = -var12.height + var31;
             }
             if (var13 != 0) {
-              aj.field_k.field_Fb.positionAfter(var12, 2, param1 - 70, (SceneWidget) (var11));
+              aj.field_k.content.positionAfter(var12, 2, param1 - 70, (SceneWidget) (var11));
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < fj.field_b; var34_intLifetime2++) {
               if (var12.field_ac[var34_intLifetime2].field_W) {

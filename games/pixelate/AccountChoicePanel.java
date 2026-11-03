@@ -68,7 +68,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_69_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
         }
-        cl.field_g.field_g.b((byte) -88);
+        cl.field_g.field_g.processTabPresses((byte) -88);
         if (ValidatedTextWidget.field_cb.field_P != 0) {
           fc.field_a = true;
         }

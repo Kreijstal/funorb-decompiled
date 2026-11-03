@@ -56,14 +56,14 @@ final class QuickChatCategory extends DualLinkNode {
         try {
           if (param0) {
             var5 = (PacketBuffer) null;
-            this.a(113, 78, (PacketBuffer) null);
+            this.decodeTag(113, 78, (PacketBuffer) null);
           }
           while (true) {
             var3_int = param1.readUnsignedByte(255);
             if (0 == var3_int) {
               return;
             }
-            this.a(var3_int, 3, param1);
+            this.decodeTag(var3_int, 3, param1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class QuickChatCategory extends DualLinkNode {
         this.field_y = false;
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2) {
+    private final void decodeTag(int param0, int param1, PacketBuffer param2) {
         char[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         char stackIn_10_2 = 0;

@@ -103,7 +103,7 @@ final class bi {
           bi.releaseStatics(-128);
           if (null == JaggrabDownloader.field_c) {
             JaggrabDownloader.field_c = new UiTheme();
-            JaggrabDownloader.field_c.a(4, he.field_d);
+            JaggrabDownloader.field_c.initializePainters(4, he.field_d);
             JaggrabDownloader.field_c.field_p = 5;
             JaggrabDownloader.field_c.field_d = 7697781;
             JaggrabDownloader.field_c.field_q = 14;
@@ -117,7 +117,7 @@ final class bi {
         }
         if (null == JaggrabDownloader.field_c) {
           JaggrabDownloader.field_c = new UiTheme();
-          JaggrabDownloader.field_c.a(4, he.field_d);
+          JaggrabDownloader.field_c.initializePainters(4, he.field_d);
           JaggrabDownloader.field_c.field_p = 5;
           JaggrabDownloader.field_c.field_d = 7697781;
           JaggrabDownloader.field_c.field_q = 14;

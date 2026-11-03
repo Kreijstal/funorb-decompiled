@@ -88,7 +88,7 @@ final class tj extends ah {
         if (param0 != 20) {
           field_w = (String) null;
         }
-        wa.field_c.e((byte) 54);
+        wa.field_c.refreshPanelVisibility((byte) 54);
         LoadingProgressDialog.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 

@@ -302,13 +302,13 @@ final class ro {
             }
           }
           if (param1) {
-            NameSuggestionsPanel.field_I.a(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(StatusBar.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
+            NameSuggestionsPanel.field_I.updatePointer(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(StatusBar.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
             if (NameSuggestionsPanel.field_I.isActivated(19)) {
-              if (NameSuggestionsPanel.field_I.field_j == 0) {
+              if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
                 stackIn_63_0 = 3;
                 return stackIn_63_0;
               }
-              if (NameSuggestionsPanel.field_I.field_j == 1) {
+              if (NameSuggestionsPanel.field_I.selectedIndex == 1) {
                 stackIn_67_0 = 2;
                 return stackIn_67_0;
               }
@@ -317,11 +317,11 @@ final class ro {
             while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(stackIn_70_0)) {
               NameSuggestionsPanel.field_I.a(99, 0);
               if (NameSuggestionsPanel.field_I.isActivated(57)) {
-                if (NameSuggestionsPanel.field_I.field_j == 0) {
+                if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
                   stackIn_75_0 = 3;
                   return stackIn_75_0;
                 }
-                if (NameSuggestionsPanel.field_I.field_j == 1) {
+                if (NameSuggestionsPanel.field_I.selectedIndex == 1) {
                   stackIn_79_0 = 1;
                   return stackIn_79_0;
                 }
