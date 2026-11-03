@@ -87,7 +87,7 @@ final class kb extends MenuComponent {
         int var8Lifetime2;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          na.field_r = param3;
+          Bzip2State.field_r = param3;
           TurnEventLog.field_b = param1;
           var11 = param4;
           if (param2) {
@@ -96,7 +96,7 @@ final class kb extends MenuComponent {
             stackIn_7_0 = jm.field_s;
           }
           var6 = stackIn_7_0;
-          if (na.field_r == 0) {
+          if (Bzip2State.field_r == 0) {
             var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = 3 + var7;
             StarLinkPlanner.field_c = new String[var8];
@@ -116,7 +116,7 @@ final class kb extends MenuComponent {
             pr.field_d[-1 + var8] = 1;
             Player.field_y[1] = 2;
           } else {
-            if (1 != na.field_r) {
+            if (1 != Bzip2State.field_r) {
               throw new IllegalArgumentException();
             }
             var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);

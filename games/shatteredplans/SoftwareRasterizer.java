@@ -911,9 +911,9 @@ final class SoftwareRasterizer {
         var29 = field_g;
         var26 = var29;
         var11 = var26;
-        ps.a(var27, 0, param8);
-        ps.a(var28, 0, param8);
-        ps.a(var29, 0, param8);
+        ArrayOperations.zeroFill(var27, 0, param8);
+        ArrayOperations.zeroFill(var28, 0, param8);
+        ArrayOperations.zeroFill(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {

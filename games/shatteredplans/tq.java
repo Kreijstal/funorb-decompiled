@@ -87,7 +87,7 @@ final class tq {
           return;
         }
         String[] var3 = new String[this.a(param1, 231)];
-        ps.a(this.field_d, 0, var3, 0, this.field_d.length);
+        ArrayOperations.copyObjects(this.field_d, 0, var3, 0, this.field_d.length);
         this.field_d = var3;
     }
 
@@ -96,7 +96,7 @@ final class tq {
         if (param0 != 220) {
           this.field_e = 1;
         }
-        ps.a(this.field_d, 0, var2, 0, this.field_e + 1);
+        ArrayOperations.copyObjects(this.field_d, 0, var2, 0, this.field_e + 1);
         return var2;
     }
 

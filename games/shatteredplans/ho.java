@@ -29,7 +29,7 @@ final class ho {
         ho.a(-86);
     }
 
-    final static SocketConnector a(int param0, int param1, String param2) {
+    final static SocketConnector createSocketConnector(int param0, int param1, String param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         ProxySocketConnector stackIn_3_0 = null;

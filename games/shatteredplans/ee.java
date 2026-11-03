@@ -1551,7 +1551,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_production", 105);
                 if (var2 != null) {
-                  na.field_s = IterableNodeHashTable.a(var2, 17746);
+                  Bzip2State.field_s = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_systems", 114);
                 if (var2 != null) {

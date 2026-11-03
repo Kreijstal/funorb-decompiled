@@ -92,7 +92,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 > -22) {
           this.readLong(102);
         }
-        int var3 = bs.a(this.position, this.payload, (byte) -76, param0);
+        int var3 = bs.crc32(this.position, this.payload, (byte) -76, param0);
         this.writeInt(11135, var3);
         return var3;
     }
@@ -734,7 +734,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyChecksum(byte param0) {
         this.position = this.position - 4;
-        int var2 = bs.a(this.position, this.payload, (byte) -83, 0);
+        int var2 = bs.crc32(this.position, this.payload, (byte) -83, 0);
         if (param0 <= 54) {
           this.writeLong48((byte) -45, 52L);
         }
@@ -753,7 +753,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = lr.a(param0, 101);
+        this.payload = lr.allocateByteArray(param0, 101);
         this.position = 0;
     }
 

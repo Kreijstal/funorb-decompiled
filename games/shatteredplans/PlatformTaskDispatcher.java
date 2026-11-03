@@ -220,7 +220,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (lg) null;
-                      var8.field_e = ho.a(var8.field_g, -4276, (String) (var8.field_b)).connect(-10463);
+                      var8.field_e = ho.createSocketConnector(var8.field_g, -4276, (String) (var8.field_b)).connect(-10463);
                     } catch (lg decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (lg) (Object) decompiledCaughtException;

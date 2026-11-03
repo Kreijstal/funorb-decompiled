@@ -16,10 +16,10 @@ final class mq {
     }
 
     final static int[] a(int param0, byte param1, int param2) {
-        int var3 = je.a(param0, (byte) -104);
-        int var4 = IntrusiveNode.b(param0, param1 ^ 96);
-        int var5 = je.a(param2, (byte) -104);
-        int var6 = IntrusiveNode.b(param2, param1 - 207);
+        int var3 = je.sine(param0, (byte) -104);
+        int var4 = IntrusiveNode.cosine(param0, param1 ^ 96);
+        int var5 = je.sine(param2, (byte) -104);
+        int var6 = IntrusiveNode.cosine(param2, param1 - 207);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);

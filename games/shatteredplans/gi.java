@@ -35,7 +35,7 @@ final class gi {
           if (ms.a(param0, (byte) -53, param2)) {
             return false;
           }
-          if (!na.a(param0, 127, param2)) {
+          if (!Bzip2State.a(param0, 127, param2)) {
             return true;
           }
           return false;
@@ -179,8 +179,8 @@ final class gi {
         int var6 = 0;
         String var7 = null;
         try {
-          qn.field_b[0] = na.field_u.nextInt();
-          qn.field_b[1] = na.field_u.nextInt();
+          qn.field_b[0] = Bzip2State.field_u.nextInt();
+          qn.field_b[1] = Bzip2State.field_u.nextInt();
           eo.field_cb.position = 0;
           qn.field_b[3] = (int)Dialog.field_I;
           qn.field_b[2] = (int)(Dialog.field_I >> 32);

@@ -10,7 +10,7 @@ class IntrusiveNode {
     static Sprite[] field_d;
     IntrusiveNode previous;
 
-    final static int b(int param0, int param1) {
+    final static int cosine(int param0, int param1) {
         int var2 = 94 % ((-61 - param1) / 58);
         param0 = param0 & 8191;
         if (param0 < 4096) {

@@ -331,8 +331,8 @@ final class vf extends hb {
     final static void a(int param0, int param1, int param2, int param3) {
         eo.field_cb.position = 0;
         eo.field_cb.writeByte(12, (byte) -128);
-        eo.field_cb.writeInt(11135, na.field_u.nextInt());
-        eo.field_cb.writeInt(11135, na.field_u.nextInt());
+        eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+        eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
         eo.field_cb.writeByte(param3, (byte) -85);
         eo.field_cb.writeByte(param1, (byte) -123);
         eo.field_cb.writeShort(param0, 255);

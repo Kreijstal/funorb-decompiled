@@ -82,8 +82,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             sa.field_d = null;
             if (param5 == null) {
               eo.field_cb.position = 0;
-              eo.field_cb.writeInt(11135, na.field_u.nextInt());
-              eo.field_cb.writeInt(11135, na.field_u.nextInt());
+              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
               stackIn_21_0 = eo.field_cb;
               stackIn_21_1 = 95;
               if (!param3.a(2)) {
@@ -111,8 +111,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               if (param6) {
                 var9 = var9 | 1;
               }
-              eo.field_cb.writeInt(11135, na.field_u.nextInt());
-              eo.field_cb.writeInt(11135, na.field_u.nextInt());
+              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
               eo.field_cb.writeMarkedString((byte) 95, var14);
               eo.field_cb.writeMarkedString((byte) 95, var8);
               var15 = (CharSequence) ((Object) param5);

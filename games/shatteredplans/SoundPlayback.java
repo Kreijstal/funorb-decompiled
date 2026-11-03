@@ -171,9 +171,9 @@ final class SoundPlayback extends IntrusiveNode {
               throw new IllegalStateException();
             }
             kp.field_o = new String[var4];
-            ps.a(ts.field_K, 0, kp.field_o, 0, var4);
+            ArrayOperations.copyObjects(ts.field_K, 0, kp.field_o, 0, var4);
             kd.field_b = new String[-1 + (var3_int - var4)];
-            ps.a(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
+            ArrayOperations.copyObjects(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
             var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -187,9 +187,9 @@ final class SoundPlayback extends IntrusiveNode {
               throw new IllegalStateException();
             }
             TertiaryNodeList.field_d = new String[var4];
-            ps.a(ts.field_K, 0, TertiaryNodeList.field_d, 0, var4);
+            ArrayOperations.copyObjects(ts.field_K, 0, TertiaryNodeList.field_d, 0, var4);
             PanelNode.field_p = new String[-1 + (var3_int - var4)];
-            ps.a(ts.field_K, var4 + 1, PanelNode.field_p, 0, var3_int - var4 - 1);
+            ArrayOperations.copyObjects(ts.field_K, var4 + 1, PanelNode.field_p, 0, var3_int - var4 - 1);
             if (kp.field_o.length >= TertiaryNodeList.field_d.length) {
               stackIn_37_0 = kp.field_o.length;
             } else {

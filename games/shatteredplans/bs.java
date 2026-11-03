@@ -42,7 +42,7 @@ final class bs {
         wh.field_a.a(param0, 88);
     }
 
-    final static int a(int param0, byte[] param1, byte param2, int param3) {
+    final static int crc32(int param0, byte[] param1, byte param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

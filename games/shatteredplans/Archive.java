@@ -841,7 +841,7 @@ final class Archive {
                     var21 = var32[var20];
                   }
                   if (param0 == var21) {
-                    ps.a(var41, var17Lifetime4, var42, var14_intLifetime1, var19Lifetime2);
+                    ArrayOperations.copyBytes(var41, var17Lifetime4, var42, var14_intLifetime1, var19Lifetime2);
                     var14_intLifetime1 = var14_intLifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -880,7 +880,7 @@ final class Archive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var13Lifetime1.readInt(16711680);
-                ps.a(var41, var16Lifetime3, var38[var19Lifetime1], var37[var19Lifetime1], var18Lifetime1);
+                ArrayOperations.copyBytes(var41, var16Lifetime3, var38[var19Lifetime1], var37[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
               }

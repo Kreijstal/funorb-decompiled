@@ -417,7 +417,7 @@ final class WhirlpoolHasher {
             this.field_o = this.field_o + 1;
             this.field_a[fieldTemp$1] = (byte) 0;
           }
-          ps.a(this.field_k, 0, this.field_a, 32, 32);
+          ArrayOperations.copyBytes(this.field_k, 0, this.field_a, 32, 32);
           this.processBlock((byte) -55);
           var4_int = 0;
           var5 = param0;

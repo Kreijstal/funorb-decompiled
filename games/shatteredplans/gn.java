@@ -104,7 +104,7 @@ final class gn extends WidgetTheme {
             }
             return;
           }
-          ps.a(this.field_C, 0, param0.field_C, 0, 6);
+          ArrayOperations.copyObjects(this.field_C, 0, param0.field_C, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

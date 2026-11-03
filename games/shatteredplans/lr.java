@@ -144,7 +144,7 @@ final class lr {
         }
     }
 
-    final static void a(int param0, int param1, int[] param2, byte param3, Object[] param4) {
+    final static void quickSort(int param0, int param1, int[] param2, byte param3, Object[] param4) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int stackIn_7_0 = 0;
@@ -195,8 +195,8 @@ final class lr {
             param2[var6] = var7;
             param4[param1] = param4[var6];
             param4[var6] = var8;
-            lr.a(param0, var6 - 1, param2, (byte) 69, param4);
-            lr.a(var6 + 1, param1, param2, (byte) 77, param4);
+            lr.quickSort(param0, var6 - 1, param2, (byte) 69, param4);
+            lr.quickSort(var6 + 1, param1, param2, (byte) 77, param4);
             return;
           }
           return;
@@ -252,12 +252,12 @@ final class lr {
     final static int nextRandomInt(byte param0) {
         if (param0 != 27) {
           Object[] var2 = (Object[]) null;
-          lr.a(-35, -18, (int[]) null, (byte) 95, (Object[]) null);
+          lr.quickSort(-35, -18, (int[]) null, (byte) 95, (Object[]) null);
         }
         return tg.field_b.nextInt();
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] allocateByteArray(int param0, int param1) {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
@@ -336,7 +336,7 @@ final class lr {
         try {
           if (param0 < 65) {
             var9 = (Object[]) null;
-            lr.a(121, -50, (int[]) null, (byte) -33, (Object[]) null);
+            lr.quickSort(121, -50, (int[]) null, (byte) -33, (Object[]) null);
           }
           var13 = sa.field_a;
           var2 = var13.readUnsignedByte(-100);

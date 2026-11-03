@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class na {
+final class Bzip2State {
     int field_x;
     byte[][] field_C;
     int field_g;
@@ -68,7 +68,7 @@ final class na {
           var3 = dn.a(param2, true);
           if (param1 < 126) {
             var4 = (String) null;
-            na.a((String) null, 75, (String) null);
+            Bzip2State.a((String) null, 75, (String) null);
           }
           stackIn_7_0 = (-1 != param0.indexOf(param2)) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
@@ -181,7 +181,7 @@ final class na {
         }
     }
 
-    na() {
+    Bzip2State() {
         this.field_C = new byte[6][258];
         this.field_c = new byte[18002];
         this.field_o = new int[6][258];

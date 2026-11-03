@@ -58,7 +58,7 @@ final class ProxySocketConnector extends SocketConnector {
                   ig.field_a.a(var12, var9, 5591);
                 }
               } else {
-                lb.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decoder.decompress(var12, var5_int, param0, var4, 9);
               }
               stackIn_21_0 = var6;
               return stackIn_21_0;

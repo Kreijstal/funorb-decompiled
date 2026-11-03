@@ -320,7 +320,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_31_0 = TutorialVictoryChecker.field_k;
             return stackIn_31_0;
           }
-          if (!na.a(var5, 127, var6)) {
+          if (!Bzip2State.a(var5, 127, var6)) {
             return ab.field_b;
           }
           stackIn_35_0 = po.field_e;

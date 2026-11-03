@@ -41,9 +41,9 @@ final class TutorialVictoryChecker extends VictoryChecker {
           ig.field_d = 2064384 & var2_intLifetime1 << 15;
           ig.field_d = ig.field_d + (param0.readUnsignedByte(-122) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-127);
-          na.field_L = (1 & var2_intLifetime2) << 16;
+          Bzip2State.field_L = (1 & var2_intLifetime2) << 16;
           ig.field_d = ig.field_d + (var2_intLifetime2 >> 1);
-          na.field_L = na.field_L + param0.readUnsignedShort(-20976);
+          Bzip2State.field_L = Bzip2State.field_L + param0.readUnsignedShort(-20976);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

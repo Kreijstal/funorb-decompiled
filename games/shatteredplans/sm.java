@@ -1257,8 +1257,8 @@ final class sm {
                 }
                 for (var16_int = 0; var16_int < 6; var16_int++) {
                   var17_int = (-var15 + var16_int * 8192) / 6;
-                  var18_int = (20 * je.a(var17_int, (byte) -104) >> 12) + (param3 + 35 << 4);
-                  var19 = (20 * IntrusiveNode.b(var17_int, -122) >> 12) + (40 + param0 << 4);
+                  var18_int = (20 * je.sine(var17_int, (byte) -104) >> 12) + (param3 + 35 << 4);
+                  var19 = (20 * IntrusiveNode.cosine(var17_int, -122) >> 12) + (40 + param0 << 4);
                   SoftwareRasterizer.b(var18_int, var19, 64, 255, vj.field_F);
                 }
                 for (var16_intLifetime1 = 0; var16_intLifetime1 < 10; var16_intLifetime1++) {

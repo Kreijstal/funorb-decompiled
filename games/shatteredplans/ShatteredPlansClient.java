@@ -584,7 +584,7 @@ public final class ShatteredPlansClient extends tl {
         boolean stackIn_77_0 = false;
         int var4;
         var4 = field_F ? 1 : 0;
-        na.a((byte) 51);
+        Bzip2State.a((byte) 51);
         if (null == IntHashIndex.field_a) {
           if (StrongCacheEntry.field_z != null) {
             nj.a(75.0f, 2, cq.field_I);
@@ -952,8 +952,8 @@ public final class ShatteredPlansClient extends tl {
         bb.clearStatics((byte) 26);
         IntHashIndex.clearStatics((byte) -26);
         le.a(124);
-        lb.clearStatics();
-        na.clearStatics((byte) -105);
+        Bzip2Decoder.clearStatics();
+        Bzip2State.clearStatics((byte) -105);
         lr.clearStatics(3);
         gi.clearStatics(32);
         CheckboxPainter.a(false);
@@ -1177,14 +1177,14 @@ public final class ShatteredPlansClient extends tl {
               BattleContribution.field_s = false;
               jb.field_g = WidgetTheme.field_n;
             } else {
-              na.field_F = na.field_F - 1;
-              if (na.field_F == 0) {
+              Bzip2State.field_F = Bzip2State.field_F - 1;
+              if (Bzip2State.field_F == 0) {
                 jb.field_g = jb.field_c;
               }
             }
           } else {
-            na.field_F = na.field_F + 1;
-            if (na.field_F == 16) {
+            Bzip2State.field_F = Bzip2State.field_F + 1;
+            if (Bzip2State.field_F == 16) {
               if (BattleContribution.field_s) {
                 oq.a(param0);
               } else {
@@ -1489,7 +1489,7 @@ public final class ShatteredPlansClient extends tl {
           }
         }
         if (jb.field_g != jb.field_c) {
-          var3_int = na.field_F * 256 / 16;
+          var3_int = Bzip2State.field_F * 256 / 16;
           if (var3_int > 0) {
             SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, 0, var3_int);
           }

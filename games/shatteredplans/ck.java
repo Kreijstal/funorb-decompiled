@@ -428,7 +428,7 @@ final class ck {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          ps.a(param0, 0, var3, 0, var2_int);
+          ArrayOperations.copyBytes(param0, 0, var3, 0, var2_int);
           if (param1) {
             var4 = (Archive) null;
             ck.a((Archive) null, (java.applet.Applet) null, (Archive) null, (Archive) null, (Archive) null, (Archive) null, (byte) 57);

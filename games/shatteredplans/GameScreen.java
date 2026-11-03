@@ -1789,7 +1789,7 @@ final class GameScreen {
             while (var11_int < var4) {
               array$0 = new int[var5];
               var10[var11_int] = array$0;
-              ps.a(this.field_Z[var11_int], var9_int, var10[var11_int], 0, var8);
+              ArrayOperations.copyInts(this.field_Z[var11_int], var9_int, var10[var11_int], 0, var8);
               stackIn_44_0 = var7_int;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -5204,7 +5204,7 @@ final class GameScreen {
             this.field_B.addLast((byte) -113, this.field_M);
             this.field_hb = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, ja.field_n.toUpperCase(), 16777215, -1, (Sprite) null, ja.field_n.toUpperCase(), 2805974);
             this.field_F.addChild(this.field_hb, 8);
-            this.field_gb = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, na.field_s.toUpperCase(), 16777215, -1, (Sprite) null, na.field_s.toUpperCase(), 2805974);
+            this.field_gb = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, Bzip2State.field_s.toUpperCase(), 16777215, -1, (Sprite) null, Bzip2State.field_s.toUpperCase(), 2805974);
             this.field_lb.addChild(this.field_gb, 8);
             this.field_db = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, po.field_a.toUpperCase(), 16777215, -1, (Sprite) null, po.field_a.toUpperCase(), 2805974);
             this.field_m.addChild(this.field_db, 8);

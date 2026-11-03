@@ -46,7 +46,7 @@ final class BufferedCacheFile {
             if (this.field_n != -1L &&
               this.field_d + (long)param1 > (long)this.field_o.length + this.field_n) {
               var5_int = (int)((long)this.field_o.length + this.field_n - this.field_d);
-              ps.a(param3, param2, this.field_o, (int)(-this.field_n + this.field_d), var5_int);
+              ArrayOperations.copyBytes(param3, param2, this.field_o, (int)(-this.field_n + this.field_d), var5_int);
               this.field_d = this.field_d + (long)var5_int;
               param1 = param1 - var5_int;
               param2 = param2 + var5_int;
@@ -61,7 +61,7 @@ final class BufferedCacheFile {
               if (-1L == this.field_n) {
                 this.field_n = this.field_d;
               }
-              ps.a(param3, param2, this.field_o, (int)(-this.field_n + this.field_d), param1);
+              ArrayOperations.copyBytes(param3, param2, this.field_o, (int)(-this.field_n + this.field_d), param1);
               this.field_d = this.field_d + (long)param1;
               if ((long)this.field_b < this.field_d - this.field_n) {
                 this.field_b = (int)(-this.field_n + this.field_d);
@@ -107,7 +107,7 @@ final class BufferedCacheFile {
             if (var6 > -1L &&
               var6 < var8) {
               var10 = (int)(var8 - var6);
-              ps.a(param3, (int)(var6 + (long)param2 - this.field_d), this.field_k, (int)(var6 - this.field_i), var10);
+              ArrayOperations.copyBytes(param3, (int)(var6 + (long)param2 - this.field_d), this.field_k, (int)(var6 - this.field_i), var10);
             }
             this.field_d = this.field_d + (long)param1;
             return;
@@ -274,7 +274,7 @@ final class BufferedCacheFile {
             if (this.field_n != -1L &&
               this.field_d >= this.field_n &&
               ((long)this.field_b + this.field_n) >= (this.field_d + (long)param0)) {
-              ps.a(this.field_o, (int)(-this.field_n + this.field_d), param1, param3, param0);
+              ArrayOperations.copyBytes(this.field_o, (int)(-this.field_n + this.field_d), param1, param3, param0);
               this.field_d = this.field_d + (long)param0;
               return;
             }
@@ -287,7 +287,7 @@ final class BufferedCacheFile {
               if (param0 < var9) {
                 var9 = param0;
               }
-              ps.a(this.field_k, (int)(this.field_d - this.field_i), param1, param3, var9);
+              ArrayOperations.copyBytes(this.field_k, (int)(this.field_d - this.field_i), param1, param3, var9);
               this.field_d = this.field_d + (long)var9;
               param0 = param0 - var9;
               param3 = param3 + var9;
@@ -302,7 +302,7 @@ final class BufferedCacheFile {
               if (var10_int > this.field_a) {
                 var10_int = this.field_a;
               }
-              ps.a(this.field_k, 0, param1, param3, var10_int);
+              ArrayOperations.copyBytes(this.field_k, 0, param1, param3, var10_int);
               this.field_d = this.field_d + (long)var10_int;
               param0 = param0 - var10_int;
               param3 = param3 + var10_int;
@@ -389,7 +389,7 @@ final class BufferedCacheFile {
                   if (-1L < var10 &&
                     var10 < var12) {
                     var14 = (int)(var12 - var10);
-                    ps.a(this.field_o, (int)(var10 - this.field_n), param1, var7 + (int)(var10 - var5_long), var14);
+                    ArrayOperations.copyBytes(this.field_o, (int)(var10 - this.field_n), param1, var7 + (int)(var10 - var5_long), var14);
                     if (this.field_d < var12) {
                       param0 = (int)((long)param0 - (var12 - this.field_d));
                       this.field_d = var12;
@@ -580,7 +580,7 @@ final class BufferedCacheFile {
               return;
             }
           }
-          var4 = (rk) (na.field_J.startForward(0));
+          var4 = (rk) (Bzip2State.field_J.startForward(0));
           if (var4 == null) {
             q.g(-108);
             return;
@@ -656,7 +656,7 @@ final class BufferedCacheFile {
             if (-1L < var3 &&
               var5 > var3) {
               var7 = (int)(var5 - var3);
-              ps.a(this.field_o, (int)(-this.field_n + var3), this.field_k, (int)(var3 - this.field_i), var7);
+              ArrayOperations.copyBytes(this.field_o, (int)(-this.field_n + var3), this.field_k, (int)(var3 - this.field_i), var7);
             }
             this.field_b = 0;
             this.field_n = -1L;

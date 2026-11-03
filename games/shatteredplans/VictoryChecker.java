@@ -186,7 +186,7 @@ abstract class VictoryChecker {
             var4 = (byte[]) null;
             VictoryChecker.a(-118, (byte[]) null, -21);
           }
-          stackIn_3_0 = bs.a(param2, param1, (byte) -53, 0);
+          stackIn_3_0 = bs.crc32(param2, param1, (byte) -53, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -248,7 +248,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void sortParallel(int[] param0, int param1, Object[] param2) {
         try {
           int var3_int = 105 / ((param1 - 42) / 55);
-          lr.a(0, param0.length - 1, param0, (byte) 78, param2);
+          lr.quickSort(0, param0.length - 1, param0, (byte) 78, param2);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

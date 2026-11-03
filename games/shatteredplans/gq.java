@@ -211,8 +211,8 @@ final class gq {
           var5Lifetime1 = CandidateLink.field_p[11] >> 8;
           var6Lifetime1 = js.field_j << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = je.a(var6Lifetime1, (byte) -104) >> 8;
-          var9Lifetime1 = IntrusiveNode.b(var6Lifetime1, -123) >> 8;
+          var8Lifetime1 = je.sine(var6Lifetime1, (byte) -104) >> 8;
+          var9Lifetime1 = IntrusiveNode.cosine(var6Lifetime1, -123) >> 8;
           if (-1 != pd.field_k &&
             bb.field_b != -1) {
             var7Lifetime1 = pd.field_k - 320;

@@ -76,7 +76,7 @@ final class di extends IntrusiveNode {
             }
             var4 = ArchiveRequest.field_o;
             if (0.0 != aq.field_h) {
-              var4 = (int)((double)var4 + na.field_u.nextGaussian() * aq.field_h);
+              var4 = (int)((double)var4 + Bzip2State.field_u.nextGaussian() * aq.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }

@@ -297,7 +297,7 @@ final class qp extends WidgetTheme {
           var15 = new int[CipherPacketBuffer.field_r];
           var14 = var15;
           var8 = var14;
-          ps.a(ai.field_b, 0, var15, 0, CipherPacketBuffer.field_r);
+          ArrayOperations.copyInts(ai.field_b, 0, var15, 0, CipherPacketBuffer.field_r);
           stackIn_65_0 = var8;
           return stackIn_65_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
