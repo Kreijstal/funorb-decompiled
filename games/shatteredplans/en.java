@@ -59,12 +59,12 @@ final class en {
           if (param0 != 15471) {
             return;
           }
-          vd.field_q.a(42 + pe.field_K, 18, (byte) 84, cr.field_c + 2, -40 + (so.field_t.field_K - pe.field_K) - 2);
+          MenuComponent.field_q.a(42 + pe.field_K, 18, (byte) 84, cr.field_c + 2, -40 + (so.field_t.field_K - pe.field_K) - 2);
           ro.field_a.a(so.field_t.field_K, 22 + cr.field_c, 0, 2, -128, -cr.field_c + (so.field_t.field_mb - 2) - 20, pe.field_K);
           DialPainter.field_g.a(am.field_xb.field_K, 40, (byte) 107, -40 + am.field_xb.field_mb, 0);
           ArchiveSourceManager.field_f.a(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
           bj.field_D.a(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);
-          var2_int = 3 + em.field_k;
+          var2_int = 3 + ProductionContent.field_k;
           if (nl.field_a.length < 2) {
             var2_int--;
           }
@@ -81,14 +81,14 @@ final class en {
           }
           StarAnnotation.field_l.a(bj.field_D.field_K - 5 - 5, var4, (byte) 83, 5, 5);
           var5 = 2 + var4 + 5;
-          for (var6 = 0; em.field_k + 4 > var6; var6++) {
+          for (var6 = 0; ProductionContent.field_k + 4 > var6; var6++) {
             if ((var6 != 1 ||
               !(nl.field_a.length < 2)) && (3 != var6 ||
               !(FleetMove.field_A <= 1))) {
               if (!param1 &&
                 var6 == 3) {
-                var7_ref_qr = re.field_g[var6];
-                re.field_g[var6].field_mb = 0;
+                var7_ref_qr = QuickChatCategoryRegistry.field_g[var6];
+                QuickChatCategoryRegistry.field_g[var6].field_mb = 0;
                 var7_ref_qr.field_K = 0;
                 for (var8 = 0; var8 < ByteArrayNode.field_p[var6].length; var8++) {
                   if (ByteArrayNode.field_p[var6][var8] != null) {
@@ -99,10 +99,10 @@ final class en {
                 }
               } else if (param1 &&
                 var6 == 0) {
-                dupTemp$0 = re.field_g[var6];
+                dupTemp$0 = QuickChatCategoryRegistry.field_g[var6];
                 var14 = dupTemp$0;
                 var7_ref_qr = dupTemp$0;
-                re.field_g[var6].field_mb = 0;
+                QuickChatCategoryRegistry.field_g[var6].field_mb = 0;
                 var14.field_K = 0;
                 for (var8 = 0; ByteArrayNode.field_p[var6].length > var8; var8++) {
                   if (null != ByteArrayNode.field_p[var6][var8]) {
@@ -127,8 +127,8 @@ final class en {
                 }
                 var7 = stackIn_59_0;
                 if (var7 != 0) {
-                  var8_ref_qr = re.field_g[var6];
-                  re.field_g[var6].field_mb = 0;
+                  var8_ref_qr = QuickChatCategoryRegistry.field_g[var6];
+                  QuickChatCategoryRegistry.field_g[var6].field_mb = 0;
                   var8_ref_qr.field_K = 0;
                   for (var9 = 0; var9 < ByteArrayNode.field_p[var6].length; var9++) {
                     if (null != ByteArrayNode.field_p[var6][var9]) {
@@ -138,7 +138,7 @@ final class en {
                     }
                   }
                 } else {
-                  re.field_g[var6].a(103, var3, (byte) 74, var5, 5);
+                  QuickChatCategoryRegistry.field_g[var6].a(103, var3, (byte) 74, var5, 5);
                   var8 = 110;
                   if (param1) {
                     ByteArrayNode.field_p[var6][0].a(50, var3, var5, 2, qo.field_b, 38, var8);
@@ -163,16 +163,16 @@ final class en {
           }
           MouseInputHandler.field_d.a(360, -10 + gf.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + gf.field_b >> 1);
           ValidationIndicator.field_K.a(MouseInputHandler.field_d.field_K, 24, (byte) 80, 0, 0);
-          jo.field_a.a(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
-          jo.field_a.field_F = Wormhole.a(16, 3, jo.field_a.field_mb, 11579568, 8421504, 1);
-          lp.field_v.a(jo.field_a.field_K - 10, -2 + jo.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
-          oo.field_c.a(80, 24, (byte) 108, -5 + jo.field_a.field_mb - 24, (jo.field_a.field_K - 80) / 2);
+          QuickChatPhraseRegistry.field_a.a(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
+          QuickChatPhraseRegistry.field_a.field_F = Wormhole.a(16, 3, QuickChatPhraseRegistry.field_a.field_mb, 11579568, 8421504, 1);
+          MenuList.field_v.a(QuickChatPhraseRegistry.field_a.field_K - 10, -2 + QuickChatPhraseRegistry.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
+          oo.field_c.a(80, 24, (byte) 108, -5 + QuickChatPhraseRegistry.field_a.field_mb - 24, (QuickChatPhraseRegistry.field_a.field_K - 80) / 2);
           CachedArchiveSource.d(18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "en.A(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "en.A(" + param0 + ',' + param1 + ')');
         }
     }
 

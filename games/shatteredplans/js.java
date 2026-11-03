@@ -14,36 +14,36 @@ final class js {
     static int field_e;
 
     final static void a(int param0, int param1) {
-        gm var2 = null;
+        SoundPlayback var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        gm var2Lifetime1;
+        SoundPlayback var2Lifetime1;
         try {
           CheckboxPainter.field_p = param0;
           if (param1 != 197126152) {
             js.b((byte) -92);
           }
-          var2 = (gm) (eo.field_ab.startForward(0));
+          var2 = (SoundPlayback) (eo.field_ab.startForward(0));
           while (var2 != null) {
             if (var2.field_n.isLinked(param1 - 197124104)) {
               var2.field_p.setVolume(var2.field_h * CheckboxPainter.field_p + 128 >> 8);
             } else {
               var2.unlink((byte) -75);
             }
-            var2 = (gm) (eo.field_ab.nextForward((byte) -71));
+            var2 = (SoundPlayback) (eo.field_ab.nextForward((byte) -71));
           }
-          if (nc.field_v != null) {
-            var2Lifetime1 = (gm) (nc.field_v.startForward(0));
+          if (CandidateLink.field_v != null) {
+            var2Lifetime1 = (SoundPlayback) (CandidateLink.field_v.startForward(0));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_n.isLinked(param1 - 197124104)) {
                 var2Lifetime1.unlink((byte) -69);
               } else {
                 var2Lifetime1.field_p.setVolume(128 + CheckboxPainter.field_p * var2Lifetime1.field_h >> 8);
               }
-              var2Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
+              var2Lifetime1 = (SoundPlayback) (CandidateLink.field_v.nextForward((byte) -71));
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "js.C(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "js.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class js {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3), "js.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3), "js.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class js {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -218,7 +218,7 @@ final class js {
               scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
-                    em.field_k != param0) {
+                    ProductionContent.field_k != param0) {
                     break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -370,7 +370,7 @@ final class js {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -386,11 +386,11 @@ final class js {
         try {
           be.field_h = oi.field_a;
           kp.field_j = jb.field_d;
-          ph.field_g = false;
+          ListContent.field_g = false;
           WhirlpoolHasher.field_g = false;
           DerelictMapGenerator.field_q = SliderPainter.field_b;
           WeightedLruCache.field_g = hm.field_q;
-          ArchiveRequest.field_r = fe.field_B;
+          ArchiveRequest.field_r = MenuButton.field_B;
           VictoryChecker.field_j = false;
           SliderWidget.field_L = false;
           AchievementProgress.field_k = false;
@@ -414,7 +414,7 @@ final class js {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "js.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "js.A(" + param0 + ')');
         }
     }
 

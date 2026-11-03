@@ -44,7 +44,7 @@ abstract class bq {
           wg.field_a.field_Db.field_zb.field_G = 1;
           var3.field_y = 1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bq.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bq.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm {
+final class IntHashIndex {
     private int[] field_d;
     static Archive field_a;
     static ro field_e;
@@ -10,7 +10,7 @@ final class cm {
     static String field_c;
     static Sprite field_b;
 
-    cm(int[] param0) {
+    IntHashIndex(int[] param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -48,17 +48,17 @@ final class cm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final int a(int param0, int param1) {
+    final int get(int param0, int param1) {
         int var3;
         int var4;
         int var5;
         var3 = (this.field_d.length >> 1) - 1;
         if (param0 != 24396) {
-          cm.a((byte) -59);
+          IntHashIndex.a((byte) -59);
         }
         var4 = var3 & param1;
         while (true) {
@@ -78,7 +78,7 @@ final class cm {
         field_e = null;
         field_b = null;
         if (param0 != -26) {
-          cm.a((byte) 94);
+          IntHashIndex.a((byte) 94);
         }
         field_a = null;
         field_g = null;

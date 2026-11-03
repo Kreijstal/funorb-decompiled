@@ -59,12 +59,12 @@ final class ha {
         }
         if (param0 <= 94) {
           ha.a((byte) 11);
-          if (em.field_h == 0) {
+          if (ProductionContent.field_h == 0) {
             return true;
           }
           return false;
         }
-        if (em.field_h == 0) {
+        if (ProductionContent.field_h == 0) {
           return true;
         }
         return false;

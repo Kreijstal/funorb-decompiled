@@ -105,7 +105,7 @@ final class IsolationistAi extends StandardAi {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -169,9 +169,9 @@ final class IsolationistAi extends StandardAi {
             if (!param1.field_h) {
               if (param1.field_l == 0 &&
                 param1.field_e == 0) {
-                var3 = re.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
+                var3 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
               } else {
-                var3 = re.a(cf.field_M, 4371, new String[]{(String) (var2)});
+                var3 = QuickChatCategoryRegistry.a(cf.field_M, 4371, new String[]{(String) (var2)});
               }
             }
           } else {
@@ -180,7 +180,7 @@ final class IsolationistAi extends StandardAi {
               var3 = "[" + ds.field_a + "] ";
             }
             if (param1.field_n == 1) {
-              var3 = "[" + re.a(he.field_q, 4371, new String[]{param1.field_o}) + "] ";
+              var3 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{param1.field_o}) + "] ";
             }
             if (param1.field_n == 4 &&
               AiTask.field_m != null) {
@@ -205,7 +205,7 @@ final class IsolationistAi extends StandardAi {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

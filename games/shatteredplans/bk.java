@@ -42,7 +42,7 @@ final class bk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "bk.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "bk.C(" + param0 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class bk {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class bk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "bk.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "bk.D(" + param0 + ')');
         }
     }
 
@@ -167,21 +167,21 @@ final class bk {
           var1 = null;
           var2 = null;
           var3 = 85 / ((-64 - param0) / 60);
-          if (0 == em.field_h &&
+          if (0 == ProductionContent.field_h &&
             null != he.field_p) {
             var2 = di.field_k;
           }
-          if (em.field_h == 2 &&
+          if (ProductionContent.field_h == 2 &&
             !lh.e((byte) 75)) {
             if (!DebouncedValidator.a(-30106, nd.field_k)) {
-              var2 = re.a(of.field_g, 4371, new String[]{gi.field_a});
+              var2 = QuickChatCategoryRegistry.a(of.field_g, 4371, new String[]{gi.field_a});
               if (var11 != 0) {
-                var2 = re.a(oi.field_g, 4371, new String[]{gi.field_a});
+                var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{gi.field_a});
               }
             } else {
-              var2 = re.a(oi.field_g, 4371, new String[]{gi.field_a});
+              var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{gi.field_a});
             }
-            if (dp.field_t) {
+            if (QuickChatCategoryDefinition.field_t) {
               md.a(2, (String) (var2), 0, (String) null, (String) null, -16169);
               eo.f(false);
             }
@@ -198,11 +198,11 @@ final class bk {
             var4 = v.a(var4, (byte) 19);
             var5 = "";
             var6 = "|";
-            var7 = em.field_h;
+            var7 = ProductionContent.field_h;
             var8 = 0;
             if (var7 == 2) {
-              var5 = re.a(MatchingTextValidator.field_q, 4371, new String[]{gi.field_a});
-              var9 = re.a(cf.field_M, 4371, new String[]{var4});
+              var5 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{gi.field_a});
+              var9 = QuickChatCategoryRegistry.a(cf.field_M, 4371, new String[]{var4});
               var8 = -485 + uq.field_j.field_K - (-cg.field_C.field_K - ho.field_f.stringWidth(var9) + ho.field_f.stringWidth(var5));
               if (var8 < 0) {
                 var8 = 0;
@@ -222,7 +222,7 @@ final class bk {
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var5 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                    var5 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                   }
                 }
               }
@@ -266,7 +266,7 @@ final class bk {
               cg.field_C.field_L = false;
             }
             if (cg.field_C.field_L) {
-              var1 = re.a(StarLink.field_m, 4371, new String[]{var4, gi.field_a});
+              var1 = QuickChatCategoryRegistry.a(StarLink.field_m, 4371, new String[]{var4, gi.field_a});
             }
           }
           stackIn_97_0 = var1;
@@ -274,7 +274,7 @@ final class bk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (var1), "bk.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) (var1), "bk.A(" + param0 + ')');
         }
     }
 

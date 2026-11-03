@@ -24,7 +24,7 @@ final class ls {
 
     final static int a(int param0, int param1) {
         if (param1 == 2) {
-          return (int)((param0 % 2 == 0 ? 0.25 * (rh.field_d * 200.0) : 0.75 * (200.0 * rh.field_d)) + (double)(param0 / 2) * 1.5 * rh.field_d * 200.0);
+          return (int)((param0 % 2 == 0 ? 0.25 * (ProjectsContent.field_d * 200.0) : 0.75 * (200.0 * ProjectsContent.field_d)) + (double)(param0 / 2) * 1.5 * ProjectsContent.field_d * 200.0);
         }
         return 18;
     }

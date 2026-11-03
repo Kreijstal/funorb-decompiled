@@ -195,14 +195,14 @@ final class ck {
             mj.field_Nb[var13_int] = ds.a(true, param0, "", "res_side_" + var13_int);
             ts.field_L[var13_int] = ds.a(true, param0, "", "res_low_" + var13_int);
           }
-          qk.field_y = va.a("defnet_anim_small", 0, "", param0);
-          for (var13_intLifetime1 = 0; var13_intLifetime1 < qk.field_y[0].field_B.length; var13_intLifetime1++) {
-            if (qk.field_y[0].field_B[var13_intLifetime1] != 0) {
-              qk.field_y[0].field_B[var13_intLifetime1] = ((qk.field_y[0].field_B[var13_intLifetime1] >>> 24) / 4 << 24) + 6006988;
+          MenuLabel.field_y = va.a("defnet_anim_small", 0, "", param0);
+          for (var13_intLifetime1 = 0; var13_intLifetime1 < MenuLabel.field_y[0].field_B.length; var13_intLifetime1++) {
+            if (MenuLabel.field_y[0].field_B[var13_intLifetime1] != 0) {
+              MenuLabel.field_y[0].field_B[var13_intLifetime1] = ((MenuLabel.field_y[0].field_B[var13_intLifetime1] >>> 24) / 4 << 24) + 6006988;
             }
           }
           for (var13_intLifetime2 = 1; 13 > var13_intLifetime2; var13_intLifetime2++) {
-            var27 = qk.field_y[var13_intLifetime2];
+            var27 = MenuLabel.field_y[var13_intLifetime2];
             for (var15_int = 0; var27.field_B.length > var15_int; var15_int++) {
               if ((var27.field_B[var15_int] & -16777216) == 0) {
                 var27.field_B[var15_int] = 0;
@@ -278,7 +278,7 @@ final class ck {
           kj.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
-          cm.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
+          IntHashIndex.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
           var13 = StarAnnotation.field_m > 0 ? "unachieved" : "locked";
           ArchiveRequest.a(14, id.a(param6 ^ -6, param2, "basic", var13));
           CellVertex.field_j = ae.a(param6 + 70, "", param0, "achievements");
@@ -314,7 +314,7 @@ final class ck {
           WidgetTheme.field_k = bg.field_a.copy();
           WidgetTheme.field_k.flipVertical();
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class ck {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -406,7 +406,7 @@ final class ck {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -445,7 +445,7 @@ final class ck {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

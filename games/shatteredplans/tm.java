@@ -9,7 +9,7 @@ final class tm extends IntrusiveNode {
     private boolean field_n;
     static Sprite field_r;
     static ds field_p;
-    static qh field_k;
+    static MenuWindow field_k;
     static java.awt.Canvas field_i;
     static int field_h;
     static String field_j;
@@ -80,7 +80,7 @@ final class tm extends IntrusiveNode {
           var3_int = 20 + ss.field_b.stringWidth(this.field_l);
           this.field_s = Math.max(400, var3_int);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class tm extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

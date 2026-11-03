@@ -40,26 +40,26 @@ final class hd extends IntrusiveNode {
           DualLinkDeque.field_a.b(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
           Dialog.field_D.b(var1_intLifetime1, 0, 4227327);
-          oi.field_d.drawAlpha(var1_intLifetime1, 0, dp.field_r / 8);
-          var7 = fe.field_y;
+          oi.field_d.drawAlpha(var1_intLifetime1, 0, QuickChatCategoryDefinition.field_r / 8);
+          var7 = MenuButton.field_y;
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var9 = var7[var4];
             if (var9.field_a != 0) {
-              gf.b(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, fe.field_u);
+              gf.b(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, MenuButton.field_u);
             }
           }
           var1_intLifetime2 = -250 + var2 / 4;
           vm.field_Jb.b(var1_intLifetime2, 120, 8421631);
-          SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, dp.field_r / 4);
-          sr.field_F.drawAlpha(var1_intLifetime2, 120, dp.field_r);
-          var3Lifetime1 = fe.field_H;
+          SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, QuickChatCategoryDefinition.field_r / 4);
+          sr.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatCategoryDefinition.field_r);
+          var3Lifetime1 = MenuButton.field_H;
           var8 = 0;
           var4Lifetime1 = var8;
           while (var3Lifetime1.length > var8) {
             var10 = var3Lifetime1[var8];
             if (0 != var10.field_a) {
-              gf.b(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, fe.field_u);
+              gf.b(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, MenuButton.field_u);
             }
             var8++;
           }
@@ -67,7 +67,7 @@ final class hd extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "hd.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "hd.A(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class hd extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class hd extends IntrusiveNode {
           }
           kb.field_A = kb.field_A - 294;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hd.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hd.B(" + param0 + ')');
         }
     }
 

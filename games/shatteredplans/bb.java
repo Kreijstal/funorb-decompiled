@@ -35,7 +35,7 @@ final class bb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class bb {
           js.field_f.writeByte(param3 ? 1 : 0, (byte) -96);
           js.field_f.patchLengthByte(js.field_f.position - var7_int, (byte) 118);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class bb {
               DialPainter.field_g.field_s = false;
               IntrusiveNode.field_c.field_z = nb.field_c;
               if (var8 == 0) {
-                stackIn_57_0 = cm.field_c;
+                stackIn_57_0 = IntHashIndex.field_c;
               } else {
                 stackIn_57_0 = mp.field_f;
               }
@@ -198,7 +198,7 @@ final class bb {
               } else {
                 stackIn_29_1 = qp.field_v;
               }
-              stackIn_28_0.field_z = re.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
+              stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
               dn.field_f.field_z = wg.field_b;
               DialPainter.field_g.field_s = true;
               wg.field_d = true;
@@ -206,16 +206,16 @@ final class bb {
                 wg.field_d = false;
                 RasterBuffer.field_h = false;
                 if (lr.field_c == null) {
-                  lr.field_c = new byte[em.field_k];
-                  ek.field_F = new boolean[em.field_k];
+                  lr.field_c = new byte[ProductionContent.field_k];
+                  ek.field_F = new boolean[ProductionContent.field_k];
                 }
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (var13 < em.field_k) {
+                while (var13 < ProductionContent.field_k) {
                   ek.field_F[var13] = false;
                   var13++;
                 }
-                js.a(-1, param2 + 3, he.field_p, em.field_k, 0, true, -1, -1);
+                js.a(-1, param2 + 3, he.field_p, ProductionContent.field_k, 0, true, -1, -1);
                 if (!(bs.field_b < 2) &&
                   di.field_p[12]) {
                   wg.field_d = true;
@@ -232,9 +232,9 @@ final class bb {
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; em.field_k > var10Lifetime1; var10Lifetime1++) {
+                  for (var10Lifetime1 = 0; ProductionContent.field_k > var10Lifetime1; var10Lifetime1++) {
                     if (ek.field_F[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + gm.field_l[var10Lifetime1] + "</col>";
+                      var11_ref = "<col=A00000>" + SoundPlayback.field_l[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 == null) {
@@ -277,7 +277,7 @@ final class bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4), "bb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4), "bb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

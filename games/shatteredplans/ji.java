@@ -42,7 +42,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
             ji.a((String[]) null, 46);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ji.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ji.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
           while (var3 < args.length) {
             var4 = args[var3];
             if (var2_int != -1) {
-              args[var3] = re.a("<col=<%0>>", nc.a(param1, 4397), new String[]{Integer.toString(var2_int, 16)}) + var4;
+              args[var3] = QuickChatCategoryRegistry.a("<col=<%0>>", CandidateLink.a(param1, 4397), new String[]{Integer.toString(var2_int, 16)}) + var4;
             }
             var5 = SectorCacheStore.a(var4, "<col=", 0);
             var6 = SectorCacheStore.a(var4, "</col>", param1 - 62);
@@ -189,7 +189,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
             stackIn_4_0 = null;
             return (kj) (stackIn_4_0);
           }
-          if (rh.field_g == MatchingTextValidator.field_s &&
+          if (ProjectsContent.field_g == MatchingTextValidator.field_s &&
             param1.equals(gp.field_b)) {
             MatchingTextValidator.field_s = oj.field_Fb;
             stackIn_8_0 = ij.field_a;
@@ -231,7 +231,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

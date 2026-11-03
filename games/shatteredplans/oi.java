@@ -36,7 +36,7 @@ final class oi {
             mp.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
           ce.field_v = EmailValidator.a(param1, "", "win", false);
-          dp.field_s = EmailValidator.a(param1, "", "lose", false);
+          QuickChatCategoryDefinition.field_s = EmailValidator.a(param1, "", "lose", false);
           if (param0 != -126) {
             var4 = (Archive) null;
             oi.a((byte) -117, (Archive) null);
@@ -52,7 +52,7 @@ final class oi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

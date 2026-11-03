@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm extends IntrusiveNode {
+final class SoundPlayback extends IntrusiveNode {
     static String[] field_l;
     static qr field_m;
     int field_h;
@@ -119,7 +119,7 @@ final class gm extends IntrusiveNode {
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else if (4 == eh.field_C) {
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, lp.field_z, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, MenuList.field_z, ts.field_K, 3);
               var4 = var3_int + 2;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -158,7 +158,7 @@ final class gm extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, re.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ts.field_K[var5])) {
@@ -175,7 +175,7 @@ final class gm extends IntrusiveNode {
             kd.field_b = new String[-1 + (var3_int - var4)];
             ps.a(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, re.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ts.field_K[var5])) {
                 continue;
@@ -318,7 +318,7 @@ final class gm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3), "gm.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3), "gm.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class gm extends IntrusiveNode {
         try {
           qj.a((byte) -127, 12);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -351,14 +351,14 @@ final class gm extends IntrusiveNode {
         int var3 = 85 % ((param0 - 59) / 59);
     }
 
-    gm(PcmSampleStream param0, IntrusiveNode param1) {
+    SoundPlayback(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_p = param0;
           this.field_h = param0.getVolume();
           this.field_n = param1;
           this.field_p.setVolume(128 + this.field_h * CheckboxPainter.field_p >> 8);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

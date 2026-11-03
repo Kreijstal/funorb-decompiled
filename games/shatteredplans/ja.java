@@ -16,7 +16,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
           }
           this.b(param1 - 158);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ja.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ja.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
               return (String) (stackIn_9_0);
             }
           } else {
-            stackIn_6_0 = re.a(PlayerStats.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_6_0 = QuickChatCategoryRegistry.a(PlayerStats.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_6_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -194,7 +194,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
             field_l = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ja.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ja.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

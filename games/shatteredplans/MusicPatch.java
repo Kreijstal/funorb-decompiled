@@ -89,7 +89,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class MusicPatch extends IntrusiveNode {
         if (oj.field_Fb == ee.field_l) {
           throw new IllegalStateException();
         }
-        if (ee.field_l == rh.field_g) {
+        if (ee.field_l == ProjectsContent.field_g) {
           ee.field_l = oj.field_Fb;
           return wh.field_c;
         }
@@ -641,7 +641,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_210_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_209_0), ((StringBuilder) (Object) stackIn_209_1).append(stackIn_210_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_209_0), ((StringBuilder) (Object) stackIn_209_1).append(stackIn_210_2).append(')').toString());
         }
     }
 

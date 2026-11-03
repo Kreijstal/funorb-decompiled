@@ -73,7 +73,7 @@ final class ArchiveSourceManager {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class ArchiveSourceManager {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = dp.a(var10.payload, -5 - var13.length + var10.position, -26131, 5);
+        var15 = QuickChatCategoryDefinition.a(var10.payload, -5 - var13.length + var10.position, -26131, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (~var5[var7 + 1] != ~var15[var7]) {
             throw new RuntimeException();
@@ -231,7 +231,7 @@ final class ArchiveSourceManager {
             this.field_c = this.field_e.a(true, 255, (byte) 0, -2057056416, 255);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

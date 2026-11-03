@@ -15,7 +15,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_o = param2;
           this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class PasswordValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4), "cc.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4), "cc.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class PasswordValidator extends TextFieldValidator {
         Throwable decompiledCaughtException = null;
         var1 = im.field_c;
         synchronized (var1) {
-          if (DialogRoot.field_B == fe.field_J) {
+          if (DialogRoot.field_B == MenuButton.field_J) {
             return false;
           }
           oq.field_j = ng.field_a[DialogRoot.field_B];
@@ -335,7 +335,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class PasswordValidator extends TextFieldValidator {
         Throwable decompiledCaughtException = null;
         var1 = im.field_c;
         synchronized (var1) {
-          if (DialogRoot.field_B == fe.field_J) {
+          if (DialogRoot.field_B == MenuButton.field_J) {
             return false;
           }
           oq.field_j = ng.field_a[DialogRoot.field_B];

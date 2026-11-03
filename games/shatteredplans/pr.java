@@ -19,7 +19,7 @@ final class pr {
           param0.addKeyListener(im.field_c);
           param0.addFocusListener(im.field_c);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -54,7 +54,7 @@ final class IsaacRandom {
             if (gb.field_i == 2) {
               js.field_a = new BufferedSocket((java.net.Socket) (oj.field_Gb.field_e), dh.field_a);
               var2 = new PacketBuffer(13);
-              hq.a(ae.field_h, si.field_u, var2, (byte) 20, sr.field_q);
+              hq.a(ae.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);
               var2.writeInt(11135, sg.field_Cb);
               js.field_a.write(13, 0, var2.payload, -13976);
@@ -277,7 +277,7 @@ final class IsaacRandom {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "mh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "mh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class IsaacRandom {
           }
           this.a((byte) 75);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

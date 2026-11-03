@@ -31,7 +31,7 @@ final class bo extends jl implements ButtonListener {
                 var3 = AggressiveAi.field_p;
               }
             } else {
-              var3 = lp.field_z;
+              var3 = MenuList.field_z;
               this.field_n = this.field_n + 10;
               if (cb.c((byte) 58)) {
                 this.field_n = this.field_n + 20;
@@ -66,7 +66,7 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class bo extends jl implements ButtonListener {
         char[] var7 = null;
         vm[] var8 = null;
         int var9 = 0;
-        dp var11 = null;
+        QuickChatCategoryDefinition var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
@@ -252,7 +252,7 @@ final class bo extends jl implements ButtonListener {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

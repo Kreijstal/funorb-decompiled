@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc extends IntrusiveNode {
-    nc field_k;
+final class CandidateLink extends IntrusiveNode {
+    CandidateLink field_k;
     float field_h;
     Star field_q;
-    nc field_r;
+    CandidateLink field_r;
     static int field_t;
     static IntrusiveDeque field_v;
     static int[] field_p;
@@ -39,7 +39,7 @@ final class nc extends IntrusiveNode {
         try {
           if (param1 != 2) {
             var5 = (nf) null;
-            nc.a((nf) null, 0);
+            CandidateLink.a((nf) null, 0);
           }
           if (param0.field_k == null) {
             return;
@@ -73,7 +73,7 @@ final class nc extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class nc extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class nc extends IntrusiveNode {
         }
     }
 
-    nc(Star param0, Star param1) {
+    CandidateLink(Star param0, Star param1) {
         try {
           this.field_k = null;
           this.field_q = param0;
@@ -151,11 +151,11 @@ final class nc extends IntrusiveNode {
           this.field_j = -10000.0f;
           this.field_h = (float)(this.field_q.field_A + this.field_u.field_A) / 2.0f;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    nc(Star param0, nc param1, nc param2, int param3, int param4, int param5, int param6) {
+    CandidateLink(Star param0, CandidateLink param1, CandidateLink param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_h = (float)(param5 + param3) / 2.0f;
           this.field_j = -1.0f;
@@ -168,7 +168,7 @@ final class nc extends IntrusiveNode {
           this.field_u = null;
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

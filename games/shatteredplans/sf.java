@@ -41,12 +41,12 @@ final class sf {
         }
     }
 
-    sf(gm param0, int param1) {
+    sf(SoundPlayback param0, int param1) {
         try {
           this.field_c = param1;
           this.field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

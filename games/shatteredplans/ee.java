@@ -33,7 +33,7 @@ final class ee extends ms {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ final class ee extends ms {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class ee extends ms {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class ee extends ms {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "ee.G(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "ee.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -733,7 +733,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_youhavebeendefeated", 102);
                 if (null != var2) {
-                  lp.field_A = IterableNodeHashTable.a(var2, 17746);
+                  MenuList.field_A = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_victory", 108);
                 if (var2 != null) {
@@ -753,7 +753,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_peace2", 105);
                 if (null != var2) {
-                  ad.field_b = IterableNodeHashTable.a(var2, 17746);
+                  StatusContent.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_peace3", 110);
                 if (null != var2) {
@@ -1071,7 +1071,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_icon_homeworld", 126);
                 if (var2 != null) {
-                  vd.field_n = IterableNodeHashTable.a(var2, 17746);
+                  MenuComponent.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_placement", 97);
                 if (null != var2) {
@@ -1123,7 +1123,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_animation_fleetmove", 106);
                 if (null != var2) {
-                  ph.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ListContent.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_animation_combat", 108);
                 if (var2 != null) {
@@ -1559,7 +1559,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_overview", 114);
                 if (null != var2) {
-                  ph.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ListContent.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_ready", 109);
                 if (null != var2) {
@@ -1672,7 +1672,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_desc_max_total_fleet_size", 109);
                 if (null != var2) {
-                  qk.field_v = IterableNodeHashTable.a(var2, 17746);
+                  MenuLabel.field_v = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_desc_ships_destroyed", 121);
                 if (null != var2) {
@@ -1972,7 +1972,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipTotalFleetProduction", 125);
                 if (var2 != null) {
-                  si.field_w = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_w = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipPlaceFleets", 117);
                 if (null != var2) {
@@ -1988,7 +1988,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipOneFleetRemaining", 101);
                 if (var2 != null) {
-                  ad.field_a = IterableNodeHashTable.a(var2, 17746);
+                  StatusContent.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
@@ -2022,7 +2022,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipProductionButtonShow", 120);
                 if (null != var2) {
-                  t.field_b = IterableNodeHashTable.a(var2, 17746);
+                  StarLinkPlanner.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipProjectsButtonShow", 125);
                 if (var2 != null) {
@@ -2153,7 +2153,7 @@ final class ee extends ms {
                   } else {
                     stackIn_1732_2 = "{...}";
                   }
-                  throw r.a((Throwable) ((Object) stackIn_1731_0), ((StringBuilder) (Object) stackIn_1731_1).append(stackIn_1732_2).append(')').toString());
+                  throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_1731_0), ((StringBuilder) (Object) stackIn_1731_1).append(stackIn_1732_2).append(')').toString());
                 }
                 if (var4 != 0) {
                   var5 = GameApplet.field_l;
@@ -2178,7 +2178,7 @@ final class ee extends ms {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "ee.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "ee.B(" + param0 + ')');
         }
     }
 
@@ -2210,7 +2210,7 @@ final class ee extends ms {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -2223,7 +2223,7 @@ final class ee extends ms {
             ee.a(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ee.I(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ee.I(" + param0 + ')');
         }
     }
 

@@ -21,14 +21,14 @@ final class sj {
           if (CipherPacketBuffer.field_m == null) {
             CipherPacketBuffer.field_m = new SecondaryNodeHashTable(64);
           }
-          vd.field_j = param1.field_M;
+          MenuComponent.field_j = param1.field_M;
           FrameTimer.field_b = param2.field_M;
           if (param0 <= 42) {
             field_a = (int[]) null;
           }
           an.a(true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class sj {
                 stackIn_18_0 = -1;
                 stackIn_18_1 = ~((Territory) ((Object) var2)).field_u[var8];
                 if (stackIn_18_0 == stackIn_18_1) {
-                  var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), MusicCrossfadeStream.field_x[var8]});
+                  var9 = QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(SoundPlayback.field_k[var8], 16), MusicCrossfadeStream.field_x[var8]});
                   var6_ref = var9;
                   if (var5_intLifetime2 != 0) {
                     if (var5_intLifetime2 == 1) {
@@ -109,7 +109,7 @@ final class sj {
                 }
                 var7_int++;
               }
-              var6_ref = re.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
+              var6_ref = QuickChatCategoryRegistry.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
               if (1 != var5_intLifetime2) {
                 var6_ref = (String) (var6_ref) + oo.field_f;
               } else {
@@ -137,7 +137,7 @@ final class sj {
           while (var11 < 4) {
             if (var12.field_u[var11] > 0 &&
               var3[var11]) {
-              var7_ref = re.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(bg.field_e[var11], 16), or.field_d[var11]});
+              var7_ref = QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(bg.field_e[var11], 16), or.field_d[var11]});
               var5Lifetime1 = var7_ref;
               if (var4Lifetime2 == 0) {
                 var5Lifetime1 = var7_ref;
@@ -157,7 +157,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "sj.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "sj.A(" + param0 + ')');
         }
     }
 

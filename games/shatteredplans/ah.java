@@ -22,7 +22,7 @@ final class ah extends ts {
           this.field_W = param1;
           this.setBounds(param3, param5, (byte) 113, param2, param4);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class ah extends ts {
           this.field_N = this.field_N + 1;
           super.updateHover(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ah.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ah.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class ah extends ts {
           var9 = this.field_m + param3;
           var10 = var43.a(param2, (UiWidget) (this), 66) + (var43.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h == var6) {
-            var20 = lp.field_w[0];
+            var20 = MenuList.field_w[0];
             var11 = var20.field_o << 1;
             var12 = var20.field_p << 1;
             if (this.field_V == null) {
@@ -143,18 +143,18 @@ final class ah extends ts {
           }
           if (var6 != lm.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
-              var22 = lp.field_w[2];
+              var22 = MenuList.field_w[2];
               var22.c(var9, var10 - (var22.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6) {
               return;
             }
-            var21 = lp.field_w[1];
+            var21 = MenuList.field_w[1];
             var21.c(var9, -(var21.field_w >> 1) + var10, 256);
             return;
           }
-          var19 = lp.field_w[0];
+          var19 = MenuList.field_w[0];
           var11Lifetime5 = var19.field_o << 1;
           var12Lifetime5 = var19.field_p << 1;
           if (this.field_V != null &&
@@ -183,7 +183,7 @@ final class ah extends ts {
           var9Lifetime1 = this.field_m + param3;
           var10Lifetime1 = var44.a(param2, (UiWidget) (this), 66) + (var44.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h == var6) {
-            var26 = lp.field_w[0];
+            var26 = MenuList.field_w[0];
             var11Lifetime1 = var26.field_o << 1;
             var12Lifetime1 = var26.field_p << 1;
             if (this.field_V == null) {
@@ -210,18 +210,18 @@ final class ah extends ts {
           }
           if (var6 != lm.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
-              var28 = lp.field_w[2];
+              var28 = MenuList.field_w[2];
               var28.c(var9Lifetime1, var10Lifetime1 - (var28.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6) {
               return;
             }
-            var27 = lp.field_w[1];
+            var27 = MenuList.field_w[1];
             var27.c(var9Lifetime1, -(var27.field_w >> 1) + var10Lifetime1, 256);
             return;
           }
-          var25 = lp.field_w[0];
+          var25 = MenuList.field_w[0];
           var11Lifetime1Lifetime1 = var25.field_o << 1;
           var12Lifetime1Lifetime1 = var25.field_p << 1;
           if (this.field_V != null &&
@@ -254,18 +254,18 @@ final class ah extends ts {
           if (pd.field_h != var6Lifetime1 &&
             var6Lifetime1 != lm.field_d) {
             if (var6Lifetime1 == ArchiveSourceManager.field_b) {
-              var37 = lp.field_w[2];
+              var37 = MenuList.field_w[2];
               var37.c(var9Lifetime2, var10Lifetime2 - (var37.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6Lifetime1) {
               return;
             }
-            var35 = lp.field_w[1];
+            var35 = MenuList.field_w[1];
             var35.c(var9Lifetime2, -(var35.field_w >> 1) + var10Lifetime2, 256);
             return;
           }
-          var31 = lp.field_w[0];
+          var31 = MenuList.field_w[0];
           var14 = var31;
           var11Lifetime2 = var31.field_o << 1;
           var12Lifetime2 = var31.field_p << 1;
@@ -301,7 +301,7 @@ final class ah extends ts {
         var9Lifetime3 = this.field_m + param3;
         var10Lifetime3 = var46.a(param2, (UiWidget) (this), 66) + (var46.a((UiWidget) (this), true).b(438) >> 1);
         if (pd.field_h == var6Lifetime2) {
-          var40 = lp.field_w[0];
+          var40 = MenuList.field_w[0];
           var11Lifetime3 = var40.field_o << 1;
           var12Lifetime3 = var40.field_p << 1;
           if (this.field_V != null &&
@@ -320,18 +320,18 @@ final class ah extends ts {
         }
         if (var6Lifetime2 != lm.field_d) {
           if (var6Lifetime2 == ArchiveSourceManager.field_b) {
-            var42 = lp.field_w[2];
+            var42 = MenuList.field_w[2];
             var42.c(var9Lifetime3, var10Lifetime3 - (var42.field_w >> 1), 256);
           } else {
             if (CachedArchiveSource.field_g == var6Lifetime2) {
-              var41 = lp.field_w[1];
+              var41 = MenuList.field_w[1];
               var41.c(var9Lifetime3, -(var41.field_w >> 1) + var10Lifetime3, 256);
               return;
             }
           }
           return;
         }
-        var39 = lp.field_w[0];
+        var39 = MenuList.field_w[0];
         var11Lifetime4 = var39.field_o << 1;
         var12Lifetime4 = var39.field_p << 1;
         if (this.field_V != null &&
@@ -368,7 +368,7 @@ final class ah extends ts {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class ah extends ts {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "ah.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "ah.A(" + param0 + ')');
         }
     }
 

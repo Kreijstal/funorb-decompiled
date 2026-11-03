@@ -32,7 +32,7 @@ class StandardMapGenerator implements MapGenerator {
         try {
           og.a(-119, this.field_f, this.field_c, this.field_b);
           var3_int = nn.a(param0.field_e, 0);
-          vf.a(this.field_c, var3_int, (int)(200.0 * rh.field_d / 2.0), true, param0.field_e, param0.field_j, this.field_f);
+          vf.a(this.field_c, var3_int, (int)(200.0 * ProjectsContent.field_d / 2.0), true, param0.field_e, param0.field_j, this.field_f);
           var8 = param0.field_e;
           for (var5 = 0; var8.length > var5; var5++) {
             var11 = var8[var5];
@@ -51,7 +51,7 @@ class StandardMapGenerator implements MapGenerator {
           }
           param0.a(param1 + 26253);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -173,14 +173,14 @@ class StandardMapGenerator implements MapGenerator {
               var6[5] = this.field_f[var7Lifetime5];
             }
             var3.field_r = new CellVertex[6];
-            var3.field_r[0] = new CellVertex(var3, var6[0], (Star) null, var3.field_A, (int)(-(0.5 * (200.0 * rh.field_d)) + (double)var3.field_S), 0);
-            var3.field_r[1] = new CellVertex(var3, var6[1], (Star) null, 100 + var3.field_A, (int)(-(0.25 * (rh.field_d * 200.0)) + (double)var3.field_S), 0);
-            var3.field_r[2] = new CellVertex(var3, var6[2], (Star) null, 100 + var3.field_A, (int)(0.25 * (rh.field_d * 200.0) + (double)var3.field_S), 0);
-            var3.field_r[3] = new CellVertex(var3, var6[3], (Star) null, var3.field_A, (int)(rh.field_d * 200.0 * 0.5 + (double)var3.field_S), 0);
-            var3.field_r[4] = new CellVertex(var3, var6[4], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S + 0.25 * (rh.field_d * 200.0)), 0);
-            var3.field_r[5] = new CellVertex(var3, var6[5], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S - 200.0 * rh.field_d * 0.25), 0);
+            var3.field_r[0] = new CellVertex(var3, var6[0], (Star) null, var3.field_A, (int)(-(0.5 * (200.0 * ProjectsContent.field_d)) + (double)var3.field_S), 0);
+            var3.field_r[1] = new CellVertex(var3, var6[1], (Star) null, 100 + var3.field_A, (int)(-(0.25 * (ProjectsContent.field_d * 200.0)) + (double)var3.field_S), 0);
+            var3.field_r[2] = new CellVertex(var3, var6[2], (Star) null, 100 + var3.field_A, (int)(0.25 * (ProjectsContent.field_d * 200.0) + (double)var3.field_S), 0);
+            var3.field_r[3] = new CellVertex(var3, var6[3], (Star) null, var3.field_A, (int)(ProjectsContent.field_d * 200.0 * 0.5 + (double)var3.field_S), 0);
+            var3.field_r[4] = new CellVertex(var3, var6[4], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S + 0.25 * (ProjectsContent.field_d * 200.0)), 0);
+            var3.field_r[5] = new CellVertex(var3, var6[5], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S - 200.0 * ProjectsContent.field_d * 0.25), 0);
             for (var8 = 0; 6 > var8; var8++) {
-              var3.field_r[var8].field_g = (int)(0.5 * (rh.field_d * 200.0));
+              var3.field_r[var8].field_g = (int)(0.5 * (ProjectsContent.field_d * 200.0));
             }
           }
         }
@@ -385,7 +385,7 @@ class StandardMapGenerator implements MapGenerator {
             } else {
               stackIn_66_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -428,7 +428,7 @@ class StandardMapGenerator implements MapGenerator {
           this.assignStarResources(param3, param2, 0);
           this.b(param3, param0 ^ 92);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -442,20 +442,20 @@ class StandardMapGenerator implements MapGenerator {
           }
           var5_intLifetime1 = -105 % ((param2 + 36) / 38);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
           ae.a((java.awt.Component) ((Object) param0), 18014);
-          sb.a((byte) 89, (java.awt.Component) ((Object) param0));
+          Particle.a((byte) 89, (java.awt.Component) ((Object) param0));
           if (aj.field_b != null) {
             aj.field_b.detachFrom((java.awt.Component) ((Object) param0), 120);
           }
           int var2_int = 84 % ((param1 + 39) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -471,7 +471,7 @@ class StandardMapGenerator implements MapGenerator {
         int var6_int = 0;
         Star[] var6 = null;
         int var7_int = 0;
-        t var7 = null;
+        StarLinkPlanner var7 = null;
         Star var8 = null;
         int var9 = 0;
         int[] var10 = null;
@@ -570,8 +570,8 @@ class StandardMapGenerator implements MapGenerator {
             }
           }
           param1.field_e = var6Lifetime1;
-          var7 = new t(param1.field_e);
-          var7.a(true, 1);
+          var7 = new StarLinkPlanner(param1.field_e);
+          var7.buildLinks(true, 1);
           this.findHexNeighbours(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -584,7 +584,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -631,7 +631,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -680,7 +680,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -698,7 +698,7 @@ class StandardMapGenerator implements MapGenerator {
           this.a(1, 0, param0, param1, 2, (byte) 96, param2);
           this.a(4, 4, param0, param1, 4, (byte) 105, 12);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hs.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -831,7 +831,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -944,7 +944,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -993,7 +993,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -1003,8 +1003,8 @@ class StandardMapGenerator implements MapGenerator {
         int var7 = var6 % 2 == 0 ? 1 : 0;
         int var9 = var7 != 0 ? 100 : 200;
         var9 = 200 * (param0 - var6 * param1) + var9;
-        int var10 = (int)(0.5 * (200.0 * rh.field_d));
-        var10 = (int)((double)var6 * (0.75 * (rh.field_d * 200.0))) + var10;
+        int var10 = (int)(0.5 * (200.0 * ProjectsContent.field_d));
+        var10 = (int)((double)var6 * (0.75 * (ProjectsContent.field_d * 200.0))) + var10;
         int var11 = 0;
         return new Star(param4, var9, var10, var11);
     }
@@ -1182,7 +1182,7 @@ class StandardMapGenerator implements MapGenerator {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param8).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param8).append(')').toString());
         }
     }
 

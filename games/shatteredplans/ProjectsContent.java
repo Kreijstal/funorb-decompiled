@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh implements jk {
+final class ProjectsContent implements MenuContent {
     static String field_a;
-    qk[] field_b;
-    lp[] field_c;
+    MenuLabel[] field_b;
+    MenuList[] field_c;
     static mp field_g;
     static int[] field_f;
     static double field_e;
@@ -47,7 +47,7 @@ final class rh implements jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "rh.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "rh.B(" + param0 + ')');
         }
     }
 
@@ -70,9 +70,9 @@ final class rh implements jk {
         jp.g((byte) 122);
     }
 
-    public rh() {
-        this.field_b = new qk[4];
-        this.field_c = new lp[4];
+    public ProjectsContent() {
+        this.field_b = new MenuLabel[4];
+        this.field_c = new MenuList[4];
     }
 
     static {

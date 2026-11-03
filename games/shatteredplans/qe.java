@@ -4,7 +4,7 @@
 class qe extends IntrusiveNode {
     static String field_l;
     Star field_h;
-    gm field_i;
+    SoundPlayback field_i;
     static fg field_k;
     static Sprite field_j;
 

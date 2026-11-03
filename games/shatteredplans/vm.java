@@ -96,7 +96,7 @@ final class vm extends qr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class vm extends qr {
           } else {
             if (this.field_Hb[param2] != -1) {
               var5 = 32768 | this.field_Hb[param2];
-              var6 = em.field_h;
+              var6 = ProductionContent.field_h;
               if (var6 == 0 &&
                 null != np.field_a) {
                 var6 = 1;
@@ -185,8 +185,8 @@ final class vm extends qr {
                 gb.a((byte) 75, param1, 1, var6);
               }
               String var8 = (String) null;
-              ih.a(gi.field_a, 2, var5, em.field_h, (String) null, param3);
-              un.a(gi.field_a, (byte) 123, hd.field_k, em.field_h, var5);
+              ih.a(gi.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
+              un.a(gi.field_a, (byte) 123, hd.field_k, ProductionContent.field_h, var5);
               jp.g((byte) 119);
               GameState.a(-5883);
             } else {
@@ -373,7 +373,7 @@ final class vm extends qr {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -466,7 +466,7 @@ final class vm extends qr {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

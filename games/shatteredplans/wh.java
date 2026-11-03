@@ -91,7 +91,7 @@ final class wh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -99,11 +99,11 @@ final class wh {
         String[] var3 = null;
         qr[] var4 = null;
         try {
-          var3 = new String[]{param0, gm.field_o, wk.field_b};
+          var3 = new String[]{param0, SoundPlayback.field_o, wk.field_b};
           var4 = new qr[]{param1, cg.field_A, (qr) ((Object) wg.field_a)};
-          this.field_d = new q(0L, re.field_h, var3, tm.field_t, var4, 0);
+          this.field_d = new q(0L, QuickChatCategoryRegistry.field_h, var3, tm.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

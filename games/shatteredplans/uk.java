@@ -77,7 +77,7 @@ final class uk {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class uk {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
         }
     }
 

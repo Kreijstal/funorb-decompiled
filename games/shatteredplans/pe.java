@@ -19,7 +19,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           field_D = (int[][]) null;
           field_J = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "pe.D(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "pe.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           this.field_I = param0;
           this.field_H = new FocusableWidget(gq.field_b, (WidgetListener) null);
           this.field_H.field_p = (WidgetPainter) ((Object) new qp());
-          var2 = re.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
+          var2 = QuickChatCategoryRegistry.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;
           var4 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
           this.field_G = new ts(var2, var4);
@@ -85,7 +85,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -100,22 +100,22 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         try {
           if (0 != param1) {
             if (param1 == 1) {
-              gm.a(param2 ^ 104, "privacy.ws");
+              SoundPlayback.a(param2 ^ 104, "privacy.ws");
               if ((var6 != 0) &&
                 (param1 == 2)) {
-                gm.a(param2 ^ 127, "conduct.ws");
-                gm.a(57, "terms.ws");
+                SoundPlayback.a(param2 ^ 127, "conduct.ws");
+                SoundPlayback.a(57, "terms.ws");
               }
             } else {
               if (param1 == 2) {
-                gm.a(param2 ^ 127, "conduct.ws");
+                SoundPlayback.a(param2 ^ 127, "conduct.ws");
                 if (var6 != 0) {
-                  gm.a(57, "terms.ws");
+                  SoundPlayback.a(57, "terms.ws");
                 }
               }
             }
           } else {
-            gm.a(57, "terms.ws");
+            SoundPlayback.a(57, "terms.ws");
           }
           if (param2 != 2) {
             pe.a(false, (int[]) null, false, 25, (int[]) null, true, (sr) null);
@@ -131,7 +131,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "pe.I(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "pe.I(" + param0 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "pe.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "pe.A(" + param0 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -307,14 +307,14 @@ final class pe extends WidgetContainer implements op, ButtonListener {
               stackIn_40_0 = var3.field_y.field_s;
             }
             var4 = stackIn_40_0;
-            uq.field_m.a(re.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
+            uq.field_m.a(QuickChatCategoryRegistry.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
             var2++;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "pe.J(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "pe.J(" + param0 + ')');
         }
     }
 
@@ -526,7 +526,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -543,7 +543,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
         }
     }
 
@@ -572,7 +572,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

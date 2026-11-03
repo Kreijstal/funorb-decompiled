@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends vd {
+final class lh extends MenuComponent {
     static IntrusiveDeque field_v;
     private int field_C;
     static int[] field_y;
@@ -39,7 +39,7 @@ final class lh extends vd {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void resize(boolean param0, int param1, int param2) {
         if (param1 < 10) {
           param1 = 10;
         }
@@ -115,7 +115,7 @@ final class lh extends vd {
           ClientException.a(0, -2147483648, param2.length - 1, param1, param2);
           int var3_int = -92 % ((-25 - param0) / 57);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "lh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

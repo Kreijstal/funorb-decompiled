@@ -103,7 +103,7 @@ final class ObjectList {
             ArchiveIndex.field_h != null ||
             null != pg.field_A ||
             null != ji.field_D)) {
-            for (var9 = 0; var9 < em.field_k; var9++) {
+            for (var9 = 0; var9 < ProductionContent.field_k; var9++) {
               var10_int = np.field_a.field_dc[var9] & 255;
               if (SliderWidget.field_E != null &&
                 null != SliderWidget.field_E[var9] &&
@@ -234,13 +234,13 @@ final class ObjectList {
               var12.field_Jb.field_jb = var24_int;
               if (ro.field_a != param2) {
                 if (var12.field_Tb) {
-                  var12.field_Ab.field_z = re.a(WidgetTheme.field_q, 4371, new String[]{var20});
+                  var12.field_Ab.field_z = QuickChatCategoryRegistry.a(WidgetTheme.field_q, 4371, new String[]{var20});
                   var12.field_Mb.field_z = fb.field_bc;
                 } else {
                   if (!var12.field_Vb) {
                     var12.field_Jb.field_z = PlayerStats.field_p;
                   } else {
-                    var12.field_Ab.field_z = re.a(FleetMove.field_E, 4371, new String[]{var20});
+                    var12.field_Ab.field_z = QuickChatCategoryRegistry.a(FleetMove.field_E, 4371, new String[]{var20});
                     var12.field_Jb.field_z = WidgetTheme.field_m;
                     var12.field_Mb.field_z = ValidationIndicator.field_J;
                   }
@@ -336,7 +336,7 @@ final class ObjectList {
               if (UsernameAvailabilityValidator.field_p != var12.field_Ib) {
                 if (var5_int != 0 &&
                   !var12.field_Ub) {
-                  var24Lifetime2 = re.a(fb.field_kc, param1 ^ 4371, new String[]{var20});
+                  var24Lifetime2 = QuickChatCategoryRegistry.a(fb.field_kc, param1 ^ 4371, new String[]{var20});
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -347,23 +347,23 @@ final class ObjectList {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
                         var25_int = DualLinkDeque.a(param1 + 38, var8 & ~var12.field_Wb);
-                        var24Lifetime2 = re.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
+                        var24Lifetime2 = QuickChatCategoryRegistry.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
                         if (0 < var25_int &&
                           null != PlacementOrder.field_s &&
                           var25_int <= PlacementOrder.field_s.length &&
                           PlacementOrder.field_s[var25_int - 1] != null) {
-                          var24Lifetime2 = re.a(PlacementOrder.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
+                          var24Lifetime2 = QuickChatCategoryRegistry.a(PlacementOrder.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
                         }
                       }
                     } else {
-                      var24Lifetime2 = re.a(mq.field_b, 4371, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = QuickChatCategoryRegistry.a(mq.field_b, 4371, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_Fb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = re.a(NanoFrameTimer.field_i, 4371, new String[]{var20});
+                      var24Lifetime2 = QuickChatCategoryRegistry.a(NanoFrameTimer.field_i, 4371, new String[]{var20});
                     }
-                    var24Lifetime2 = re.a(em.field_b, 4371, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = QuickChatCategoryRegistry.a(ProductionContent.field_b, 4371, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -376,7 +376,7 @@ final class ObjectList {
                     if (var25_int == 1) {
                       var24Lifetime2 = fc.field_d;
                     }
-                    var24Lifetime2 = re.a(as.field_h, param1 ^ 4371, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = QuickChatCategoryRegistry.a(as.field_h, param1 ^ 4371, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
@@ -390,7 +390,7 @@ final class ObjectList {
                         }
                       }
                     } else {
-                      var24Lifetime2 = re.a(mk.field_f, 4371, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = QuickChatCategoryRegistry.a(mk.field_f, 4371, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -404,7 +404,7 @@ final class ObjectList {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; var27_int < em.field_k; var27_int++) {
+                for (var27_int = 0; var27_int < ProductionContent.field_k; var27_int++) {
                   var28 = 255 & np.field_a.field_dc[var27_int];
                   var29 = 0;
                   if (SliderWidget.field_E != null &&
@@ -443,7 +443,7 @@ final class ObjectList {
                     var29 = 1;
                   }
                   if (var29 != 0) {
-                    var30_refLifetime2 = "<col=A00000>" + gm.field_l[var27_int] + "</col>";
+                    var30_refLifetime2 = "<col=A00000>" + SoundPlayback.field_l[var27_int] + "</col>";
                     var25 = var30_refLifetime2;
                     var24Lifetime2 = var25;
                     var25 = var30_refLifetime2;
@@ -462,19 +462,19 @@ final class ObjectList {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + BattleEvent.field_s + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + re.a(ud.field_d, 4371, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(ud.field_d, 4371, new String[]{(String) (var25)});
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + Territory.field_y + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + re.a(ef.field_e, param1 + 4371, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(ef.field_e, param1 + 4371, new String[]{(String) (var25)});
                   }
                 }
                 if (ro.field_a == param2 &&
                   !SecondaryNodeDequeIterator.a((byte) -126)) {
                   var27 = np.field_a.field_Xb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + re.a(ve.field_Gb, 4371, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatCategoryRegistry.a(ve.field_Gb, 4371, new String[]{var27});
                 }
                 dn.field_k = (String) (var24Lifetime2);
               }
@@ -493,12 +493,12 @@ final class ObjectList {
           } else {
             stackIn_223_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_222_0), ((StringBuilder) (Object) stackIn_222_1).append(stackIn_223_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_222_0), ((StringBuilder) (Object) stackIn_222_1).append(stackIn_223_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
-        de.field_h = ff.field_v[param1];
+        de.field_h = SpriteButton.field_v[param1];
         DialPainter.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
           ub var3 = (ub) null;
@@ -531,7 +531,7 @@ final class ObjectList {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -548,7 +548,7 @@ final class ObjectList {
           this.field_g = this.field_g + 1;
           this.field_b[fieldTemp$0] = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "dm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "dm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

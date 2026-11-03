@@ -19,7 +19,7 @@ final class ba {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "ba.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "ba.A(" + param0 + ')');
         }
     }
 
@@ -88,14 +88,14 @@ final class ba {
           var16 = new Sprite[9];
           var16[4] = var12;
           tg.field_c = new qr(0L, param7);
-          ad.field_c = new qr(0L, param6);
-          tg.field_c.a(4, ad.field_c);
+          StatusContent.field_c = new qr(0L, param6);
+          tg.field_c.a(4, StatusContent.field_c);
           var17 = new qr(0L, (qr) null);
           var17.field_M = new IntrusiveDeque();
           ji.field_I = new ub(0L, var17, param1, param4);
-          ad.field_c.a(4, ji.field_I);
+          StatusContent.field_c.a(4, ji.field_I);
           TaskAi.field_o = new qr(0L, param3);
-          ad.field_c.a(4, TaskAi.field_o);
+          StatusContent.field_c.a(4, TaskAi.field_o);
           uq.field_j = new qr(0L, param10);
           uq.field_j.field_nb = ho.field_f;
           TaskAi.field_o.a(4, uq.field_j);
@@ -127,7 +127,7 @@ final class ba {
                   var19 = CellVertex.field_e;
                 }
               } else {
-                var19 = jo.field_c;
+                var19 = QuickChatPhraseRegistry.field_c;
               }
               if (decompiledFrameRemainder0) {
                 oq.field_b[var18] = new qr(0L, param5);
@@ -224,7 +224,7 @@ final class ba {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 

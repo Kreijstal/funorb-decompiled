@@ -33,7 +33,7 @@ abstract class FrameTimer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -171,14 +171,14 @@ abstract class FrameTimer {
                         var18 = -1 + wn.field_c - var17;
                       }
                       if (var17 >= 0) {
-                        dp.a(var17 + var16Lifetime2, param6, -1, param4, var18);
+                        QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
                       } else {
-                        dp.a(var16Lifetime2, param6, -1, param4, var17 + var18);
+                        QuickChatCategoryDefinition.a(var16Lifetime2, param6, -1, param4, var17 + var18);
                       }
                     } else {
                       if (var17 >= 0 &&
                         var17 < wn.field_c) {
-                        dp.a(var17 + var16Lifetime2, param6, -1, param4, var18);
+                        QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
                       }
                     }
                   }
@@ -220,16 +220,16 @@ abstract class FrameTimer {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     wn.field_c > var16Lifetime1) {
-                    dp.a(var15Lifetime1 + var16Lifetime1, param6, -1, param4, var17Lifetime1);
+                    QuickChatCategoryDefinition.a(var15Lifetime1 + var16Lifetime1, param6, -1, param4, var17Lifetime1);
                   }
                 } else {
                   if (var16Lifetime1 + var17Lifetime1 >= wn.field_c) {
                     var17Lifetime1 = -1 + wn.field_c - var16Lifetime1;
                   }
                   if (var16Lifetime1 < 0) {
-                    dp.a(var15Lifetime1, param6, -1, param4, var17Lifetime1 + var16Lifetime1);
+                    QuickChatCategoryDefinition.a(var15Lifetime1, param6, -1, param4, var17Lifetime1 + var16Lifetime1);
                   } else {
-                    dp.a(var16Lifetime1 + var15Lifetime1, param6, -1, param4, var17Lifetime1);
+                    QuickChatCategoryDefinition.a(var16Lifetime1 + var15Lifetime1, param6, -1, param4, var17Lifetime1);
                   }
                 }
               }
@@ -254,7 +254,7 @@ abstract class FrameTimer {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

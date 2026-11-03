@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends vd {
+final class MenuButton extends MenuComponent {
     private String field_F;
     static int[] field_v;
     static nd[] field_C;
@@ -58,13 +58,13 @@ final class fe extends vd {
         MatchingTextValidator.field_s = oj.field_Fb;
     }
 
-    final void a(byte param0, int param1, String param2) {
+    final void setLabel(byte param0, int param1, String param2) {
         try {
           this.field_G = param1;
           this.field_F = param2;
           int var4_int = -8 / ((52 - param0) / 41);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fe.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fe.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class fe extends vd {
           StrongCacheEntry.a((byte) -52, param17, param10, param15, param8);
           bq.a(27770, param8);
           if (param16 > -113) {
-            fe.g(125);
+            MenuButton.g(125);
           }
           tb.a(param6, param4, param9, param14, param8, param18, param12, param11, param19, param13, param3, param5, param1, -7966, param2);
           DiskArchiveRequest.a(param7, (byte) -81, param0, param8);
@@ -208,11 +208,11 @@ final class fe extends vd {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param19).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param19).append(')').toString());
         }
     }
 
-    fe(int param0, int param1, int param2, int param3, int param4, Sprite param5, String param6, int param7) {
+    MenuButton(int param0, int param1, int param2, int param3, int param4, Sprite param5, String param6, int param7) {
         super(param0, param1, param2, param3);
         try {
           this.field_G = param7;
@@ -220,7 +220,7 @@ final class fe extends vd {
           this.field_F = param6;
           this.field_D = param5;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "fe.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fe.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

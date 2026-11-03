@@ -43,14 +43,14 @@ final class ul extends qr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        re.field_d[wm.field_c] = param4;
+        QuickChatCategoryRegistry.field_d[wm.field_c] = param4;
         lg.field_d[wm.field_c] = wm.field_c;
         GameApplet.field_f[wm.field_c] = param1;
         if (!(us.field_b >= param1)) {
           GzipInflater.field_e = param1;
         }
         if (!(ef.field_a <= param1)) {
-          ff.field_u = param1;
+          SpriteButton.field_u = param1;
         }
         fb.field_zb[wm.field_c] = param2;
         aj.field_d[wm.field_c] = param3;
@@ -60,15 +60,15 @@ final class ul extends qr {
         GameState.field_c[wm.field_c] = var7;
         if (var7 <= GzipInflater.field_e) {
           wm.field_c = wm.field_c + 1;
-          if (!(ff.field_u <= var7)) {
-            ff.field_u = var7;
+          if (!(SpriteButton.field_u <= var7)) {
+            SpriteButton.field_u = var7;
           }
           return;
         }
         GzipInflater.field_e = var7;
         wm.field_c = wm.field_c + 1;
-        if (!(ff.field_u <= var7)) {
-          ff.field_u = var7;
+        if (!(SpriteButton.field_u <= var7)) {
+          SpriteButton.field_u = var7;
         }
     }
 
@@ -85,7 +85,7 @@ final class ul extends qr {
           this.field_Ib[this.field_Pb] = param3;
           this.field_Pb = this.field_Pb + 1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ul.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ul.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class ul extends qr {
           this.field_Ib[this.field_Pb] = param1;
           this.field_Pb = this.field_Pb + 1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class ul extends qr {
           this.field_Eb = param5;
           this.field_yb = param7;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

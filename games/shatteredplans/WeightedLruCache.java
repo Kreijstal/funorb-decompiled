@@ -34,7 +34,7 @@ final class WeightedLruCache {
           this.field_c.addLast(var6_ref, 6);
           ((WeightedCacheEntry) ((Object) var6_ref)).field_l = (long)param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,21 +133,21 @@ final class WeightedLruCache {
     }
 
     final static os a(byte param0) {
-        ff var2 = null;
+        SpriteButton var2 = null;
         bd var3 = null;
         bd var4 = null;
         TextFieldWidget.field_E = new os(5, 5, 500, 45);
-        ad var1 = new ad();
-        TextFieldWidget.field_E.field_v = (jk) ((Object) var1);
+        StatusContent var1 = new StatusContent();
+        TextFieldWidget.field_E.field_v = (MenuContent) ((Object) var1);
         if (param0 == 69) {
-          var2 = new ff(15, 10, 36, 36, (Sprite) null);
-          TextFieldWidget.field_E.a(var2, 8);
+          var2 = new SpriteButton(15, 10, 36, 36, (Sprite) null);
+          TextFieldWidget.field_E.addChild(var2, 8);
           var1.field_e = var2;
           var3 = new bd(15, 5 - (-(TextFieldWidget.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
           var4 = new bd(15, TextFieldWidget.field_E.field_i - rs.field_Cb.field_J, 450, rs.field_Cb.field_J, (String) null, 2);
           var1.field_f = var3;
-          TextFieldWidget.field_E.a(var3, 8);
-          TextFieldWidget.field_E.a(var4, param0 ^ 77);
+          TextFieldWidget.field_E.addChild(var3, 8);
+          TextFieldWidget.field_E.addChild(var4, param0 ^ 77);
           return TextFieldWidget.field_E;
         }
         return (os) null;
@@ -180,7 +180,7 @@ final class WeightedLruCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class WeightedLruCache {
         try {
           this.insert(param0, 1, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ol.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ol.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

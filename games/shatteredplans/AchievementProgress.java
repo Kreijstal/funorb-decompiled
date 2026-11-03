@@ -73,7 +73,7 @@ final class AchievementProgress {
           while (var6 >= 192) {
             param4.writeByte(191, (byte) -104);
             for (var10 = 0; var10 < 192; var10++) {
-              lp.a(var12, (byte) -106, param4);
+              MenuList.a(var12, (byte) -106, param4);
               var12 = (FleetMove) (param3.a(false));
             }
             var6 -= 192;
@@ -81,7 +81,7 @@ final class AchievementProgress {
           if (var6 > 0) {
             param4.writeByte(var6 - 1, (byte) -103);
             while (var12 != null) {
-              lp.a(var12, (byte) -88, param4);
+              MenuList.a(var12, (byte) -88, param4);
               var12 = (FleetMove) (param3.a(false));
             }
             return;
@@ -115,7 +115,7 @@ final class AchievementProgress {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class AchievementProgress {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "se.B(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "se.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class AchievementProgress {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 

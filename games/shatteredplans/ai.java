@@ -79,7 +79,7 @@ final class ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var7), "ai.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var7), "ai.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -95,16 +95,16 @@ final class ai {
     final static void a(boolean param0) {
         double var1 = 3.141592653589793 * (double)(cl.field_n % 512) / 256.0;
         int var3 = 16 * (UiWidget.field_t.field_z / 2 - 9);
-        em.field_c[0] = (int)((double)var3 * Math.sin(var1));
+        ProductionContent.field_c[0] = (int)((double)var3 * Math.sin(var1));
         ul.field_Db[0] = (int)(Math.cos(var1) * (double)var3);
-        em.field_c[1] = -em.field_c[0];
+        ProductionContent.field_c[1] = -ProductionContent.field_c[0];
         ul.field_Db[1] = -ul.field_Db[0];
         var1 = var1 + 2.0943951023931953;
-        em.field_c[2] = (int)(Math.sin(var1) * (double)var3);
+        ProductionContent.field_c[2] = (int)(Math.sin(var1) * (double)var3);
         if (param0) {
           ul.field_Db[2] = (int)((double)var3 * Math.cos(var1));
           var1 = var1 + 2.0943951023931953;
-          em.field_c[3] = (int)(Math.sin(var1) * (double)var3);
+          ProductionContent.field_c[3] = (int)(Math.sin(var1) * (double)var3);
           ul.field_Db[3] = (int)(Math.cos(var1) * (double)var3);
           return;
         }
@@ -116,10 +116,10 @@ final class ai {
             ai.a((byte) -80);
           }
           oj.field_Ib = param3;
-          qh.field_B = param2;
+          MenuWindow.field_B = param2;
           ByteArrayNode.a(ClientException.field_c, param1 ^ -80, param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -69,7 +69,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -78,12 +78,12 @@ final class DiskArchiveRequest extends ArchiveRequest {
           int var4_int = -57 / ((param1 - 22) / 37);
           ba.a(n.field_o, ObjectList.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, gn.field_w);
           BoundsRect.field_m = ae.a(93, "lobby", param3, "chatfilter");
-          jf.field_d[1] = gm.field_o;
+          jf.field_d[1] = SoundPlayback.field_o;
           jf.field_d[0] = bf.field_b;
           jf.field_d[2] = ue.field_d;
           BattleContribution.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,14 +148,14 @@ final class DiskArchiveRequest extends ArchiveRequest {
         int var2 = 0;
         int var2Lifetime1;
         wm.field_b = param1;
-        if (jh.field_B == null) {
+        if (ToggleButton.field_B == null) {
           if (null != ValidationState.field_b) {
             ValidationState.field_b.a(param1, 0);
           }
           var2 = -9 / ((62 - param0) / 62);
           return;
         }
-        jh.field_B.c(598, param1);
+        ToggleButton.field_B.c(598, param1);
         if (null != ValidationState.field_b) {
           ValidationState.field_b.a(param1, 0);
         }
@@ -224,7 +224,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           int var3_int = 105 / ((param1 - 42) / 55);
           lr.a(0, param0.length - 1, param0, (byte) 78, param2);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

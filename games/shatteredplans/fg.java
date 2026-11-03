@@ -46,7 +46,7 @@ final class fg {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = cm.field_e;
+            stackIn_7_0 = IntHashIndex.field_e;
             return stackIn_7_0;
           }
           var3 = so.a(param0, '.', -92);
@@ -76,7 +76,7 @@ final class fg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

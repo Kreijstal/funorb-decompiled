@@ -42,13 +42,13 @@ final class DialWidget extends FocusableWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static gm a(int param0, qf param1, int param2) {
+    final static SoundPlayback a(int param0, qf param1, int param2) {
         RuntimeException var3 = null;
-        gm stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -69,7 +69,7 @@ final class DialWidget extends FocusableWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class DialWidget extends FocusableWidget {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -276,7 +276,7 @@ final class DialWidget extends FocusableWidget {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
               var4 = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3));
               if (var4 == null) {
-                var4 = new fb(em.field_k);
+                var4 = new fb(ProductionContent.field_k);
                 IsaacBackedRandom.field_b.put((long)var3, var4, true);
               }
               mi.a((byte) -89, var4, var1, true);
@@ -473,7 +473,7 @@ final class DialWidget extends FocusableWidget {
             np.field_a = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-            np.field_a = new fb(em.field_k);
+            np.field_a = new fb(ProductionContent.field_k);
             np.field_a.setSecondaryKey(16, (long)var3Lifetime1);
             mi.a((byte) -89, np.field_a, var1, false);
             sf.field_e = 0L;
@@ -483,7 +483,7 @@ final class DialWidget extends FocusableWidget {
             he.field_p = null;
           } else {
             if (he.field_p == null) {
-              he.field_p = new fb(em.field_k);
+              he.field_p = new fb(ProductionContent.field_k);
             }
           }
           if (var2 != 3) {
@@ -503,7 +503,7 @@ final class DialWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "rp.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "rp.A(" + param0 + ')');
         }
     }
 
@@ -566,7 +566,7 @@ final class DialWidget extends FocusableWidget {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

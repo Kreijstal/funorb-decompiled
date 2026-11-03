@@ -80,7 +80,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           ql.a(this.field_d, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "eb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (di.field_m < var4) {
               stackIn_6_0 = var10;
             } else {
-              stackIn_6_0 = re.a(var10, -var4 + var5, -var4 + di.field_m, var11, param0 - 320);
+              stackIn_6_0 = QuickChatCategoryRegistry.a(var10, -var4 + var5, -var4 + di.field_m, var11, param0 - 320);
             }
           } else {
             stackIn_6_0 = var11;
@@ -200,7 +200,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (di.field_m < var4) {
               stackIn_11_0 = 0;
             } else {
-              stackIn_11_0 = re.a(0, -var4 + var5, di.field_m - var4, 205 + var10 << 4, 0);
+              stackIn_11_0 = QuickChatCategoryRegistry.a(0, -var4 + var5, di.field_m - var4, 205 + var10 << 4, 0);
             }
           }
           var13 = stackIn_11_0;
@@ -208,7 +208,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var15 = -var13 + (var10 + 374 + var2Lifetime1 << 4);
           var16 = 32 + vc.a((byte) -39, 32);
           if (var6 > di.field_m) {
-            gf.b(var14, var15, var16, 128, fe.field_u);
+            gf.b(var14, var15, var16, 128, MenuButton.field_u);
           }
           var17 = 454 + (var1_intLifetime1 + 3);
           var18 = var17 << 4;
@@ -292,7 +292,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var32 = var32 + var20;
               if ((var22Lifetime1 + 320) >= var31) {
                 gf.g(var17, var19, var31 >> 4, var32 >> 4, 0);
-                gf.b(var31, var32, 64, var29, fe.field_x);
+                gf.b(var31, var32, 64, var29, MenuButton.field_x);
                 CachedArchiveSource.field_A[Territory.field_p] = var31;
                 np.field_f[Territory.field_p] = var32;
                 fieldTemp$0 = Territory.field_p + 1;
@@ -310,20 +310,20 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 var31Lifetime1 += 600;
               }
               var33 = 256 * (var30Lifetime1 - var32Lifetime1) / 600;
-              gf.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33, 12, fe.field_x);
-              gf.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33 >> 2, 128, fe.field_x);
+              gf.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33, 12, MenuButton.field_x);
+              gf.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33 >> 2, 128, MenuButton.field_x);
               var31Lifetime1--;
             }
           }
           if (900 < di.field_m) {
             if (di.field_m > 950) {
-              var16Lifetime1 = re.a(0, 50, -900 + di.field_m, 256, 0);
+              var16Lifetime1 = QuickChatCategoryRegistry.a(0, 50, -900 + di.field_m, 256, 0);
             } else {
-              var16Lifetime1 = re.a(256, 50, -950 + di.field_m, 0, 0);
+              var16Lifetime1 = QuickChatCategoryRegistry.a(256, 50, -950 + di.field_m, 0, 0);
             }
-            gf.a(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, fe.field_v);
-            gf.a(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, fe.field_v);
-            gf.a(var22Lifetime1 + 256, var23Lifetime1 - 32, var16Lifetime1 >> 2, 12, fe.field_v);
+            gf.a(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, MenuButton.field_v);
+            gf.a(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, MenuButton.field_v);
+            gf.a(var22Lifetime1 + 256, var23Lifetime1 - 32, var16Lifetime1 >> 2, 12, MenuButton.field_v);
           }
           var25Lifetime2 = -var22Lifetime1 + var18;
           if (var25Lifetime2 > 0) {
@@ -333,13 +333,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var18 = var18 + (var16Lifetime2 - 320 << 1);
               var16Lifetime2 = -(var16Lifetime2 >> 2) + 320;
             }
-            gf.b(var18, var20, var16Lifetime2, 256, fe.field_u);
+            gf.b(var18, var20, var16Lifetime2, 256, MenuButton.field_u);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "eb.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "eb.A(" + param0 + ')');
         }
     }
 

@@ -36,7 +36,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -54,20 +54,20 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.c((byte) 125);
     }
 
-    final static gm a(int param0, PcmSampleStream param1) {
-        gm var2 = null;
+    final static SoundPlayback a(int param0, PcmSampleStream param1) {
+        SoundPlayback var2 = null;
         RuntimeException var2_ref = null;
-        gm stackIn_2_0 = null;
-        gm stackIn_4_0 = null;
+        SoundPlayback stackIn_2_0 = null;
+        SoundPlayback stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new gm(param1, param1);
+          var2 = new SoundPlayback(param1, param1);
           eo.field_ab.addLast((byte) -113, var2);
           if (param0 > -121) {
-            stackIn_2_0 = (gm) null;
+            stackIn_2_0 = (SoundPlayback) null;
             return stackIn_2_0;
           }
           jp.field_Bb.addChild(param1);
@@ -83,7 +83,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ abstract class DebouncedValidator implements ValidationSource {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -172,7 +172,7 @@ abstract class DebouncedValidator implements ValidationSource {
           ValidationState.field_b.a(wm.field_b, 0);
           aj.field_e.setSourceStream(ValidationState.field_b);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "da.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "da.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

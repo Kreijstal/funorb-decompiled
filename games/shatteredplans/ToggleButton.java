@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends vd implements ok {
+final class ToggleButton extends MenuComponent implements ok {
     private boolean field_y;
     static String field_v;
     private int field_x;
@@ -15,10 +15,10 @@ final class jh extends vd implements ok {
     private Sprite field_F;
     private int field_w;
 
-    final void g(int param0) {
+    final void select(int param0) {
         this.field_y = true;
         if (param0 < 80) {
-          this.e((byte) 91);
+          this.toggle((byte) 91);
         }
     }
 
@@ -32,7 +32,7 @@ final class jh extends vd implements ok {
         field_B = null;
     }
 
-    final boolean f(int param0) {
+    final boolean isSelected(int param0) {
         if (param0 != 244874369) {
           this.field_G = (String) null;
           return this.field_y;
@@ -132,7 +132,7 @@ final class jh extends vd implements ok {
           uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
           fa.field_X = new qr(0L, param1);
           AgeValidator.field_n = new qr(0L, param2);
-          fe.field_w = new qr(0L, (qr) null);
+          MenuButton.field_w = new qr(0L, (qr) null);
           sg.field_Ab = new qr(0L, param3);
           uq.field_j = new qr((long)param4, param0);
           uq.field_j.field_nb = ho.field_f;
@@ -142,10 +142,10 @@ final class jh extends vd implements ok {
           hd.field_m = new qr(0L, BoundsRect.field_k, ld.field_n);
           cb.field_l = new qr(0L, BoundsRect.field_k);
           fa.field_X.a(4, AgeValidator.field_n);
-          fa.field_X.a(4, fe.field_w);
-          fe.field_w.a(4, sg.field_Ab);
-          fe.field_w.a(param4 + 4, hd.field_m);
-          fe.field_w.a(4, cb.field_l);
+          fa.field_X.a(4, MenuButton.field_w);
+          MenuButton.field_w.a(4, sg.field_Ab);
+          MenuButton.field_w.a(param4 + 4, hd.field_m);
+          MenuButton.field_w.a(4, cb.field_l);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,11 +175,11 @@ final class jh extends vd implements ok {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    jh(int param0, int param1, int param2, int param3, int param4, Sprite param5, String param6, int param7, int param8, Sprite param9, String param10, int param11) {
+    ToggleButton(int param0, int param1, int param2, int param3, int param4, Sprite param5, String param6, int param7, int param8, Sprite param9, String param10, int param11) {
         super(param0, param1, param2, param3);
         try {
           this.field_y = false;
@@ -192,11 +192,11 @@ final class jh extends vd implements ok {
           this.field_w = param4;
           this.field_C = param6;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');
         }
     }
 
-    final void e(byte param0) {
+    final void toggle(byte param0) {
         this.field_y = !this.field_y ? true : false;
         if (param0 <= 1) {
           field_B = (MidiPcmStream) null;
@@ -204,7 +204,7 @@ final class jh extends vd implements ok {
         }
     }
 
-    final void d(boolean param0) {
+    final void setSelected(boolean param0) {
         this.field_y = param0 ? true : false;
     }
 

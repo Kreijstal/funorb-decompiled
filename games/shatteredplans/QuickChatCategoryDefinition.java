@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends DualLinkNode {
+final class QuickChatCategoryDefinition extends DualLinkNode {
     static int field_u;
     private int[] field_w;
     private String[] field_y;
@@ -18,7 +18,7 @@ final class dp extends DualLinkNode {
         cq.a(-50);
         if (param0 != -23771) {
           byte[] var2 = (byte[]) null;
-          dp.a((byte[]) null, -8, -126, -100);
+          QuickChatCategoryDefinition.a((byte[]) null, -8, -126, -100);
         }
     }
 
@@ -38,7 +38,7 @@ final class dp extends DualLinkNode {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param2 != -26131) {
-            dp.f((byte) 115);
+            QuickChatCategoryDefinition.f((byte) 115);
           }
           if (param3 > 0) {
             var8 = new byte[param1];
@@ -66,7 +66,7 @@ final class dp extends DualLinkNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class dp extends DualLinkNode {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -101,7 +101,7 @@ final class dp extends DualLinkNode {
             if (0 == var3_int) {
               return;
             }
-            this.a(1, var3_int, param0);
+            this.decodeOpcode(1, var3_int, param0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,11 +113,11 @@ final class dp extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2) {
+    private final void decodeOpcode(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -176,7 +176,7 @@ final class dp extends DualLinkNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class dp extends DualLinkNode {
         field_x = null;
         field_s = null;
         if (param0 != -50) {
-          dp.a(-94, -30, 68);
+          QuickChatCategoryDefinition.a(-94, -30, 68);
         }
     }
 
@@ -207,13 +207,13 @@ final class dp extends DualLinkNode {
         return var2.toString();
     }
 
-    dp() {
+    QuickChatCategoryDefinition() {
     }
 
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_11_0 = false;
         if (param0 >= -84) {
-          dp.e(2);
+          QuickChatCategoryDefinition.e(2);
         }
         if (13 == oq.field_j) {
           eo.f(false);
@@ -265,7 +265,7 @@ final class dp extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

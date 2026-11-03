@@ -18,11 +18,11 @@ final class v {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 < -102) {
-          em.a(param0, param3, 7, param2, this.field_c, param1);
+          ProductionContent.a(param0, param3, 7, param2, this.field_c, param1);
           return;
         }
         field_d = -42;
-        em.a(param0, param3, 7, param2, this.field_c, param1);
+        ProductionContent.a(param0, param3, 7, param2, this.field_c, param1);
     }
 
     final static String a(String param0, byte param1) {
@@ -58,7 +58,7 @@ final class v {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class v {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "v.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "v.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

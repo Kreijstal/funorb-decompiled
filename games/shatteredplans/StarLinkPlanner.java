@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class t {
+final class StarLinkPlanner {
     private Star[] field_d;
     static int field_f;
     static String field_e;
@@ -9,7 +9,7 @@ final class t {
     static String[] field_c;
     static String field_a;
 
-    final void a(boolean param0, int param1) throws jn {
+    final void buildLinks(boolean param0, int param1) throws jn {
         int var4 = 0;
         int var10_int = 0;
         int var11 = 0;
@@ -32,7 +32,7 @@ final class t {
         int var8;
         Star[] var9_ref_ln__;
         int var9;
-        nc[] var10;
+        CandidateLink[] var10;
         Object var12;
         int var12_int;
         int var13_int;
@@ -41,24 +41,24 @@ final class t {
         int var15_int;
         ObjectList var15;
         Object var16;
-        nc var16_ref;
+        CandidateLink var16_ref;
         int var16_int;
         int var17;
-        nc var17_ref_nc;
+        CandidateLink var17_ref_nc;
         int var18;
         int var20;
         int var21;
         Star[] var22;
         Star var23;
-        nc[] var24;
+        CandidateLink[] var24;
         IntrusiveDeque var25;
-        nc[] var26;
+        CandidateLink[] var26;
         int var7Lifetime1;
         int var8Lifetime1;
         int var15_intLifetime1;
         int var16_intLifetime1;
         int var17Lifetime1;
-        nc[] var10Lifetime1;
+        CandidateLink[] var10Lifetime1;
         Object var12Lifetime1;
         int var9Lifetime1;
         int var13_intLifetime1;
@@ -67,7 +67,7 @@ final class t {
         var20 = ShatteredPlansClient.field_F ? 1 : 0;
         var22 = this.field_d;
         if (param1 != 1) {
-          t.a((byte) 25);
+          StarLinkPlanner.a((byte) 25);
         }
         for (var4 = 0; var22.length > var4; var4++) {
           var5 = var22[var4];
@@ -76,11 +76,11 @@ final class t {
           for (var10_int = 0; var9_ref_ln__.length > var10_int; var10_int++) {
             var23 = var9_ref_ln__[var10_int];
             if (var5 != var23) {
-              var6.addLast((byte) -113, new nc(var5, var23));
+              var6.addLast((byte) -113, new CandidateLink(var5, var23));
             }
           }
           var9 = var6.size(param1 ^ 1);
-          var24 = new nc[var9];
+          var24 = new CandidateLink[var9];
           var10 = var24;
           var6.copyToArray((byte) -127, var10);
           for (var11 = 0; var9 > var11; var11++) {
@@ -89,15 +89,15 @@ final class t {
               eo.a(var24[var11], param0, -10000, var24[var13_int]);
             }
           }
-          ad.a(var6, param1 ^ -24926);
+          StatusContent.a(var6, param1 ^ -24926);
           var9Lifetime1 = var6.size(0);
           var25 = new IntrusiveDeque();
-          var12 = (nc) (var6.startForward(0));
+          var12 = (CandidateLink) (var6.startForward(0));
           while (null != var12) {
-            if (((nc) (var12)).field_u != null) {
-              var25.addLast((byte) -113, new StarLink(var5, ((nc) (var12)).field_u));
+            if (((CandidateLink) (var12)).field_u != null) {
+              var25.addLast((byte) -113, new StarLink(var5, ((CandidateLink) (var12)).field_u));
             }
-            var12 = (nc) (var6.nextForward((byte) -71));
+            var12 = (CandidateLink) (var6.nextForward((byte) -71));
           }
           if (!var25.isEmpty(-117)) {
             var13_intLifetime1 = var25.size(0);
@@ -113,9 +113,9 @@ final class t {
             for (var14 = 0; var14 < 12; var14++) {
               var15_int = var5.field_A + (int)(200.0 * Math.cos(3.141592653589793 * (double)(2 * var14 + 1) / 12.0));
               var16_int = var5.field_S - (int)(Math.sin((double)(var14 * 2 + 1) * 3.141592653589793 / 12.0) * 200.0);
-              var17_ref_nc = new nc(var5, (nc) (var12Lifetime1), (nc) null, var7, var8, var15_int, var16_int);
+              var17_ref_nc = new CandidateLink(var5, (CandidateLink) (var12Lifetime1), (CandidateLink) null, var7, var8, var15_int, var16_int);
               if (null != var12Lifetime1) {
-                ((nc) (var12Lifetime1)).field_k = var17_ref_nc;
+                ((CandidateLink) (var12Lifetime1)).field_k = var17_ref_nc;
               } else {
                 var13 = var17_ref_nc;
               }
@@ -124,10 +124,10 @@ final class t {
               var8 = var16_int;
               var6.addLast((byte) -113, var17_ref_nc);
             }
-            ((nc) (var12Lifetime1)).field_k = (nc) (var13);
-            ((nc) (var13)).field_r = (nc) (var12Lifetime1);
+            ((CandidateLink) (var12Lifetime1)).field_k = (CandidateLink) (var13);
+            ((CandidateLink) (var13)).field_r = (CandidateLink) (var12Lifetime1);
             var14Lifetime1 = var6.size(param1 - 1);
-            var26 = new nc[var14Lifetime1];
+            var26 = new CandidateLink[var14Lifetime1];
             var10Lifetime1 = var26;
             var6.copyToArray((byte) 95, var10Lifetime1);
             for (var15_intLifetime1 = 0; var9Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
@@ -138,10 +138,10 @@ final class t {
                 var21++;
               }
             }
-            ad.a(var6, -24925);
+            StatusContent.a(var6, -24925);
             ValidationIndicator.a(var6, true);
             var15 = new ObjectList();
-            var16_ref = (nc) (var6.startForward(param1 ^ 1));
+            var16_ref = (CandidateLink) (var6.startForward(param1 ^ 1));
             while (var16_ref != null) {
               if (var16_ref.field_k != null &&
                 var16_ref.field_k.field_q != null &&
@@ -185,7 +185,7 @@ final class t {
                 stackIn_63_6 = var16_ref.field_k.field_u;
               }
               ((ObjectList) (Object) stackIn_62_0).add(stackIn_62_1, new CellVertex(stackIn_62_4, stackIn_62_5, stackIn_63_6, (int)(var16_ref.field_h + var16_ref.field_i * var16_ref.field_o), (int)(var16_ref.field_l + var16_ref.field_o * var16_ref.field_s), var17));
-              var16_ref = (nc) (var6.nextForward((byte) -71));
+              var16_ref = (CandidateLink) (var6.nextForward((byte) -71));
             }
             var9Lifetime1 = var15.field_g;
             var5.field_r = new CellVertex[var9Lifetime1];
@@ -212,15 +212,15 @@ final class t {
         field_e = null;
         field_a = null;
         if (param0 != -11) {
-          t.a((byte) 61);
+          StarLinkPlanner.a((byte) 61);
         }
     }
 
-    t(Star[] param0) {
+    StarLinkPlanner(Star[] param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

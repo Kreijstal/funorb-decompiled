@@ -64,7 +64,7 @@ final class cq extends WidgetContainer implements ButtonListener {
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              gm.a(true, 56, 5);
+              SoundPlayback.a(true, 56, 5);
             }
           }
           stackIn_26_0 = var3;
@@ -72,7 +72,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "cq.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "cq.A(" + param0 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           ld.field_p = new IntrusiveDeque();
           PlacementEvent.field_l = new tm[7];
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           uq.field_j.field_K = uq.field_j.field_K - cg.field_C.field_K;
           cg.field_C.field_hb = cg.field_C.field_hb - cg.field_C.field_K;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "cq.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cq.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         this.field_J.field_u = (WidgetListener) (this);
         this.field_H.field_u = (WidgetListener) (this);
         this.field_G.field_u = (WidgetListener) (this);
-        this.field_H.field_v = nc.field_m;
+        this.field_H.field_v = CandidateLink.field_m;
         this.field_G.field_v = bs.field_c;
         this.b((byte) -46, this.field_J);
         this.b((byte) -62, this.field_H);

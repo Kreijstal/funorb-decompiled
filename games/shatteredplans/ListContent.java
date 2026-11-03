@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ph implements jk {
+final class ListContent implements MenuContent {
     static String field_c;
     static int[] field_b;
-    lp[] field_h;
-    fe[] field_i;
+    MenuList[] field_h;
+    MenuButton[] field_i;
     static String field_e;
     static String field_d;
     static String field_a;
     static boolean field_g;
-    ff[][] field_f;
+    SpriteButton[][] field_f;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (bg.field_g) {
           return wi.field_c.a(oq.field_j, ho.field_h, true);
         }
-        if (dp.field_t) {
-          return dp.a(-85, param1, param3);
+        if (QuickChatCategoryDefinition.field_t) {
+          return QuickChatCategoryDefinition.a(-85, param1, param3);
         }
         if (MouseInputHandler.a(param0 ^ 5, param3, param1)) {
           return true;
@@ -53,7 +53,7 @@ final class ph implements jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "ph.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "ph.B(" + param0 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class ph implements jk {
           DialogRoot.a((byte) 23, param0.getFileByName(true, "tutorial.txt", ""));
           int var2_int = -90 / ((param1 + 9) / 32);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ph.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ph.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -75,10 +75,10 @@ final class ph implements jk {
         int var1 = -96 / ((param0 - 53) / 46);
     }
 
-    ph(int param0) {
-        this.field_h = new lp[param0];
-        this.field_f = new ff[param0][-1 + param0];
-        this.field_i = new fe[param0 - 1];
+    ListContent(int param0) {
+        this.field_h = new MenuList[param0];
+        this.field_f = new SpriteButton[param0][-1 + param0];
+        this.field_i = new MenuButton[param0 - 1];
     }
 
     static {

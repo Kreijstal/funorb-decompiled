@@ -17,7 +17,7 @@ final class HuffmanCodec {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 > ~StarAnnotation.field_m) {
           if (null == BoundsRect.field_p) {
-            bj.field_K = si.a(640, fa.field_W, 0, (byte) 98, 0, 480);
+            bj.field_K = QuickChatPhraseDefinition.a(640, fa.field_W, 0, (byte) 98, 0, 480);
           } else {
             bj.field_K = BoundsRect.field_p.a(0);
             GameRules.a(param1 - 15468, 2);
@@ -25,7 +25,7 @@ final class HuffmanCodec {
           if (null == bj.field_K) {
             var2 = 3;
           } else {
-            re.a(bj.field_K, false);
+            QuickChatCategoryRegistry.a(bj.field_K, false);
             var2 = 2;
           }
         } else {
@@ -33,7 +33,7 @@ final class HuffmanCodec {
         }
         if (null == BoundsRect.field_p &&
           cp.field_u) {
-          gm.a(param0, 125, var2);
+          SoundPlayback.a(param0, 125, var2);
         }
     }
 
@@ -239,7 +239,7 @@ final class HuffmanCodec {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -334,7 +334,7 @@ final class HuffmanCodec {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -461,7 +461,7 @@ final class HuffmanCodec {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

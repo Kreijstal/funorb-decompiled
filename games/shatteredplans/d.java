@@ -28,14 +28,14 @@ final class d {
             var5 = (Random) null;
             d.a((byte) -70, 114, 120, (Random) null);
           }
-          if (jo.field_d == param1.field_xb) {
+          if (QuickChatPhraseRegistry.field_d == param1.field_xb) {
             var3_int -= 200;
           } else {
             if (null == param1.field_xb) {
               var3_int += 200;
             }
           }
-          if (param0.field_xb == jo.field_d) {
+          if (param0.field_xb == QuickChatPhraseRegistry.field_d) {
             var3_int += 200;
           } else {
             if (param0.field_xb == null) {
@@ -59,7 +59,7 @@ final class d {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class d {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -59,7 +59,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -357,13 +357,13 @@ final class PointsVictoryChecker extends VictoryChecker {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         vh.field_b = param2;
-        fe.field_A = param3;
+        MenuButton.field_A = param3;
         we.field_c = param0;
         if (param4 != 2) {
           return;
@@ -401,7 +401,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         int[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
-        qk[] var23 = null;
+        MenuLabel[] var23 = null;
         int[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
@@ -448,7 +448,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           if (var5Lifetime2 > 0) {
             lh.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
           }
-          var23 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
+          var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
           var7 = new Player[this.field_i.length];
           var28 = new int[this.field_i.length];
           var22 = var28;
@@ -488,7 +488,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           }
           var3_intLifetime1 = 23 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "nh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

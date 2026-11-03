@@ -96,7 +96,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -174,28 +174,28 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static lp a(int param0, int param1, Player param2, int param3) {
+    final static MenuList a(int param0, int param1, Player param2, int param3) {
         RuntimeException var4 = null;
         uc var5 = null;
-        ff var6 = null;
-        qk var7 = null;
-        lp var8 = null;
-        lp stackIn_3_0 = null;
+        SpriteButton var6 = null;
+        MenuLabel var7 = null;
+        MenuList var8 = null;
+        MenuList stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new lp(0, 0, 182, kb.field_y.field_o + 4);
+          var8 = new MenuList(0, 0, 182, kb.field_y.field_o + 4);
           var5 = new uc(0, var8.field_i / 2 - 3, param3, 6, 0, param2.field_k);
-          var8.a(var5, 8);
+          var8.addChild(var5, 8);
           if (param1 != -30577) {
             field_r = 123;
           }
-          var6 = new ff(-(param2.field_v.field_o / 2) + param3, -(param2.field_v.field_p / 2) + var8.field_i / 2, param2.field_v);
-          var8.a(var6, 8);
-          var7 = new qk(-(param2.field_v.field_o / 2) + param3, var8.field_i / 2 - rs.field_Cb.field_J / 2, param2.field_v.field_o, rs.field_Cb.field_J, Integer.toString(param0));
-          var8.a(var7, 8);
+          var6 = new SpriteButton(-(param2.field_v.field_o / 2) + param3, -(param2.field_v.field_p / 2) + var8.field_i / 2, param2.field_v);
+          var8.addChild(var6, 8);
+          var7 = new MenuLabel(-(param2.field_v.field_o / 2) + param3, var8.field_i / 2 - rs.field_Cb.field_J / 2, param2.field_v.field_o, rs.field_Cb.field_J, Integer.toString(param0));
+          var8.addChild(var7, 8);
           stackIn_3_0 = var8;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           int var3_int = 31 / ((param1 - 45) / 58);
           this.field_o = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sl.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sl.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -248,9 +248,9 @@ final class CipherPacketBuffer extends PacketBuffer {
           DerelictMapReader.field_h = param1;
           SectorCacheStore.field_f.field_M.clear(param0);
           SectorCacheStore.field_f.a(4, DerelictMapReader.field_h);
-          dp.field_t = true;
+          QuickChatCategoryDefinition.field_t = true;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

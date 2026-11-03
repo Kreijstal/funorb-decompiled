@@ -20,15 +20,15 @@ class IntrusiveNode {
     }
 
     final static void b(int param0) {
-        if (param0 == ~gm.field_i) {
-          qk.g(-125);
-          gm.field_i = 11;
+        if (param0 == ~SoundPlayback.field_i) {
+          MenuLabel.g(-125);
+          SoundPlayback.field_i = 11;
           oi.field_f = true;
           return;
         }
         if (!dh.a(-12165)) {
-          qk.g(-125);
-          gm.field_i = 11;
+          MenuLabel.g(-125);
+          SoundPlayback.field_i = 11;
           oi.field_f = true;
           return;
         }

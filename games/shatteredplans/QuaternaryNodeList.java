@@ -125,7 +125,7 @@ final class QuaternaryNodeList {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class QuaternaryNodeList {
           param1.field_u.field_x = param1;
           param1.field_x.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class QuaternaryNodeList {
         if (param0 <= 79) {
           QuaternaryNodeList.a(25);
         }
-        stackIn_6_0 = (gm.field_i >= 10) && (DefensiveAi.field_p >= 13);
+        stackIn_6_0 = (SoundPlayback.field_i >= 10) && (DefensiveAi.field_p >= 13);
         return stackIn_6_0;
     }
 

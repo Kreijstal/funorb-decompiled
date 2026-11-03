@@ -28,7 +28,7 @@ final class cp {
     final boolean b(int param0) {
         if (param0 != -1) {
           this.a(-62);
-          if (re.field_a < this.field_p) {
+          if (QuickChatCategoryRegistry.field_a < this.field_p) {
             return false;
           }
           if (StarAnnotation.field_m > 0) {
@@ -36,7 +36,7 @@ final class cp {
           }
           return false;
         }
-        if (re.field_a < this.field_p) {
+        if (QuickChatCategoryRegistry.field_a < this.field_p) {
           return false;
         }
         if (StarAnnotation.field_m > 0) {
@@ -176,7 +176,7 @@ final class cp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class cp {
             return;
           }
           this.field_i = this.field_m;
-          if (this.field_p > re.field_a) {
+          if (this.field_p > QuickChatCategoryRegistry.field_a) {
             this.field_b = false;
           } else {
             this.a((byte) 45);
@@ -235,7 +235,7 @@ final class cp {
         this.field_n = VictoryChecker.field_e;
         this.field_s.a(this.field_g, this.field_k, param0 ^ -12725);
         IntrusiveDeque.field_c = false;
-        FullscreenFocusCanvas var2 = si.a(this.field_k, fa.field_W, 0, (byte) 125, param0, this.field_g);
+        FullscreenFocusCanvas var2 = QuickChatPhraseDefinition.a(this.field_k, fa.field_W, 0, (byte) 125, param0, this.field_g);
         if (var2 == null) {
           this.c(param0 ^ -115);
         }

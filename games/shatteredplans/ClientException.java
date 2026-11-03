@@ -13,7 +13,7 @@ final class ClientException extends RuntimeException {
     static int field_a;
 
     final static void a(boolean param0) {
-        em.field_h = 0;
+        ProductionContent.field_h = 0;
         bo.r(0);
         if (!param0) {
           int[] var2 = (int[]) null;
@@ -54,7 +54,7 @@ final class ClientException extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "rg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "rg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -89,10 +89,10 @@ final class ClientException extends RuntimeException {
           if (param0 <= 32) {
             return;
           }
-          for (var3 = 0; t.field_c.length > var3; var3++) {
+          for (var3 = 0; StarLinkPlanner.field_c.length > var3; var3++) {
             var4 = pr.field_d[var3];
             if (0 > var4) {
-              var5 = em.field_j;
+              var5 = ProductionContent.field_j;
             } else {
               if (var4 == ns.field_nb.field_c) {
                 var5 = wo.field_a;
@@ -100,7 +100,7 @@ final class ClientException extends RuntimeException {
                 var5 = ih.field_b;
               }
             }
-            var6 = t.field_c[var3];
+            var6 = StarLinkPlanner.field_c[var3];
             stackIn_13_0 = !(var4 < 0);
             var7 = or.a(stackIn_13_0, var6, true);
             var8 = WeightedLruCache.field_e - (var7 >> 1);
@@ -122,14 +122,14 @@ final class ClientException extends RuntimeException {
               var2 = var2 + (vh.field_b + js.field_e + uo.field_g);
             } else {
               lq.field_k.drawString(var6, var8, var2 + WidgetStyle.field_r, var5, -1);
-              var2 = var2 + fe.field_A;
+              var2 = var2 + MenuButton.field_A;
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "rg.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "rg.B(" + param0 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

@@ -32,7 +32,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class AgeValidator extends TextFieldValidator {
           id.a(param20, param5, param3 + 26883, param10, param7);
           BattleEvent.b(param2, param8, param3);
           te.a(-4440, param19, param13, param14, param9, param12);
-          ad.a(param4, param15, param1, (byte) 106);
+          StatusContent.a(param4, param15, param1, (byte) 106);
           gn.a(param0, param18, false, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,7 +92,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param20).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

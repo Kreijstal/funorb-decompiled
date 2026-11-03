@@ -29,16 +29,16 @@ final class FleetMove extends QuaternaryLinkNode {
         }
     }
 
-    final static qh d(int param0, int param1) {
-        gb.field_n = new qh(420, 60, 200, param0 + ClientException.field_a * param1, vj.field_B.toUpperCase());
-        fe var2 = new fe(-16 + (gb.field_n.field_k + 200), 2 + gb.field_n.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+    final static MenuWindow d(int param0, int param1) {
+        gb.field_n = new MenuWindow(420, 60, 200, param0 + ClientException.field_a * param1, vj.field_B.toUpperCase());
+        MenuButton var2 = new MenuButton(-16 + (gb.field_n.field_k + 200), 2 + gb.field_n.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
         var2.field_h = gb.field_n;
-        gb.field_n.a(var2, param0 ^ 20);
-        lp var3 = new lp(gb.field_n.field_k + 9, gb.field_n.field_t + 20, 182, param1 * ClientException.field_a);
-        gb.field_n.a(var3, param0 ^ 20);
+        gb.field_n.addChild(var2, param0 ^ 20);
+        MenuList var3 = new MenuList(gb.field_n.field_k + 9, gb.field_n.field_t + 20, 182, param1 * ClientException.field_a);
+        gb.field_n.addChild(var3, param0 ^ 20);
         gb.field_n.field_z = var3;
-        ph var4 = new ph(param1);
-        gb.field_n.field_x = (jk) ((Object) var4);
+        ListContent var4 = new ListContent(param1);
+        gb.field_n.field_x = (MenuContent) ((Object) var4);
         return gb.field_n;
     }
 
@@ -49,7 +49,7 @@ final class FleetMove extends QuaternaryLinkNode {
           this.field_z = param2;
           this.field_G = this.field_y.field_y;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class FleetMove extends QuaternaryLinkNode {
           this.field_y = param0;
           this.field_B = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class FleetMove extends QuaternaryLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

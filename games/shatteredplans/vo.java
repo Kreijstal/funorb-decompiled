@@ -29,7 +29,7 @@ final class vo {
           ub.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
           sf.field_g = gg.a(128, 256, "shatteredplans_next_close");
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

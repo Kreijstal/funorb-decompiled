@@ -69,7 +69,7 @@ final class sa {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class sa {
         if (param1 >= -102) {
           field_a = (CipherPacketBuffer) null;
         }
-        return 1 + (int)(((double)param0 - 50.0 * rh.field_d) / (rh.field_d * 150.0));
+        return 1 + (int)(((double)param0 - 50.0 * ProjectsContent.field_d) / (ProjectsContent.field_d * 150.0));
     }
 
     static {

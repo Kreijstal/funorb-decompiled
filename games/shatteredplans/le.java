@@ -53,17 +53,17 @@ abstract class le {
           fa.field_X == null) {
           var3 = 0;
         }
-        if (em.field_h == 0 &&
+        if (ProductionContent.field_h == 0 &&
           he.field_p != null) {
           var3 = 0;
         }
-        if (2 == em.field_h &&
+        if (2 == ProductionContent.field_h &&
           !lh.e((byte) 53)) {
           var3 = 0;
         }
         if (oq.field_j == 84) {
           if (var3 == 0) {
-            if (em.field_h == 0) {
+            if (ProductionContent.field_h == 0) {
               return true;
             }
             MusicVoice.c(false);
@@ -83,18 +83,18 @@ abstract class le {
               MusicVoice.c(param2);
               return true;
             }
-            var5 = em.field_h;
+            var5 = ProductionContent.field_h;
             if (var5 == 0 &&
               null != np.field_a) {
               var5 = 1;
             }
             if (id.a(-7019, var5) == 2) {
               gb.a((byte) 91, param0, 1, var5);
-              ih.a(gi.field_a, 2, -1, em.field_h, var4_ref_String, param1);
+              ih.a(gi.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
               MusicVoice.c(param2);
               return true;
             }
-            ih.a(gi.field_a, 2, -1, em.field_h, var4_ref_String, param1);
+            ih.a(gi.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
             MusicVoice.c(param2);
           }
           return true;
@@ -128,10 +128,10 @@ abstract class le {
         var17 = Star.field_o;
         var16 = v.a(var17, (byte) 17);
         var18 = var16;
-        if (em.field_h == 2) {
+        if (ProductionContent.field_h == 2) {
           var61 = (CharSequence) ((Object) gi.field_a);
-          var20 = re.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
-          var8 = re.a(cf.field_M, 4371, new String[]{var16});
+          var20 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
+          var8 = QuickChatCategoryRegistry.a(cf.field_M, 4371, new String[]{var16});
           var9 = ho.field_f.stringWidth(var20);
           var10 = ho.field_f.stringWidth(var8);
           if (var9 <= var10) {
@@ -144,7 +144,7 @@ abstract class le {
           var5Lifetime1 = var5Lifetime1 - var9;
         } else {
           var7 = "";
-          if (0 != em.field_h) {
+          if (0 != ProductionContent.field_h) {
             var59 = var7 + var18 + ": ";
             var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59);
             if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
@@ -164,7 +164,7 @@ abstract class le {
                 return true;
               }
               if (!DialPainter.field_c) {
-                var50 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                var50 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var51 = var50 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var51);
                 if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
@@ -173,7 +173,7 @@ abstract class le {
                 return true;
               }
               if (AiTask.field_m == null) {
-                var48 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                var48 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var49 = var48 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var49);
                 if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
@@ -193,7 +193,7 @@ abstract class le {
           }
           if (null != np.field_a) {
             if (!DialPainter.field_c) {
-              var57 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+              var57 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var58 = var57 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var58);
               if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
@@ -202,7 +202,7 @@ abstract class le {
               return true;
             }
             if (AiTask.field_m == null) {
-              var55 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+              var55 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var56 = var55 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var56);
               if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {

@@ -3,7 +3,7 @@
  */
 final class dn extends hb {
     static String field_k;
-    static vd field_h;
+    static MenuComponent field_h;
     private DualLinkDeque field_i;
     static String field_g;
     static int field_l;
@@ -43,7 +43,7 @@ final class dn extends hb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class dn extends hb {
           param1.field_j = var5.readInt(16711680);
           var5.patchLengthByte(var5.position - var4, (byte) 119);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "dn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "dn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class dn extends hb {
           field_h = null;
           return;
         }
-        field_h = (vd) null;
+        field_h = (MenuComponent) null;
         field_j = null;
         field_g = null;
         field_h = null;
@@ -124,7 +124,7 @@ final class dn extends hb {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "dn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "dn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

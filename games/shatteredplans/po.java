@@ -27,7 +27,7 @@ final class po {
     }
 
     final static void a(int param0) {
-        em.field_h = 0;
+        ProductionContent.field_h = 0;
         int var1 = 42 % ((param0 - 4) / 47);
         sr.field_h = true;
     }

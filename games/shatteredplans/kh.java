@@ -137,7 +137,7 @@ final class kh extends qr {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = t.field_e;
+                    stackIn_8_5 = StarLinkPlanner.field_e;
                     break regionExit1;
                   }
                 }
@@ -328,7 +328,7 @@ final class kh extends qr {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -374,7 +374,7 @@ final class kh extends qr {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -394,7 +394,7 @@ final class kh extends qr {
           kh.a(false, false);
         }
         SecondaryNodeDequeIterator.field_b = pr.a(param0 + 14341) + 15000L;
-        return gm.field_i == 11 ? true : false;
+        return SoundPlayback.field_i == 11 ? true : false;
     }
 
     private final int a(byte param0, qr param1, qr param2, int param3, int param4) {
@@ -433,7 +433,7 @@ final class kh extends qr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

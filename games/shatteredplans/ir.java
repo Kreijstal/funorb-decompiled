@@ -55,7 +55,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           super.updateHover(param0, param1, param2, param3);
           this.field_I.field_y = this.k(-60);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ir.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ir.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           var4 = param1;
           ((TextFieldWidget) ((Object) var3)).a(63, var4, false);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         FullscreenFocusCanvas.field_f[9] = qj.field_a;
         FullscreenFocusCanvas.field_f[15] = Archive.field_h;
         if (param0 == 1062) {
-          FullscreenFocusCanvas.field_f[20] = qh.field_w;
+          FullscreenFocusCanvas.field_f[20] = MenuWindow.field_w;
           FullscreenFocusCanvas.field_f[19] = pl.field_a;
           FullscreenFocusCanvas.field_f[5] = qf.field_b;
           FullscreenFocusCanvas.field_f[13] = cg.field_G;
@@ -123,7 +123,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           return;
         }
         ir.l(-42);
-        FullscreenFocusCanvas.field_f[20] = qh.field_w;
+        FullscreenFocusCanvas.field_f[20] = MenuWindow.field_w;
         FullscreenFocusCanvas.field_f[19] = pl.field_a;
         FullscreenFocusCanvas.field_f[5] = qf.field_b;
         FullscreenFocusCanvas.field_f[13] = cg.field_G;
@@ -160,7 +160,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qk extends vd {
+class MenuLabel extends MenuComponent {
     static String field_z;
     static Sprite[] field_y;
     private int field_w;
@@ -9,28 +9,28 @@ class qk extends vd {
     static String field_v;
     static int field_x;
 
-    final void a(byte param0, String param1) {
+    final void setText(byte param0, String param1) {
         try {
           if (param0 >= -81) {
             this.field_w = 9;
           }
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    qk(int param0, int param1, String param2) {
+    MenuLabel(int param0, int param1, String param2) {
         this(param0, param1, rs.field_Cb.stringWidth(param2), rs.field_Cb.field_J, param2);
     }
 
-    qk(int param0, int param1, int param2, int param3, String param4) {
+    MenuLabel(int param0, int param1, int param2, int param3, String param4) {
         super(param0, param1, param2, param3);
         try {
           this.field_u = param4;
           this.field_w = 16777215;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,14 +89,14 @@ class qk extends vd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static gm a(qf param0, int param1) {
+    final static SoundPlayback a(qf param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
-        gm stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -104,7 +104,7 @@ class qk extends vd {
         try {
           if (param1 < 44) {
             var3 = (String) null;
-            qk.a((String) null, 122, (byte) 75);
+            MenuLabel.a((String) null, 122, (byte) 75);
           }
           stackIn_3_0 = e.a(param0.field_a, -124, param0.field_f);
           return stackIn_3_0;
@@ -118,7 +118,7 @@ class qk extends vd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ class qk extends vd {
     }
 
     final static void g(int param0) {
-        fe.f(-1);
+        MenuButton.f(-1);
         oe.field_f = true;
         TertiaryNodeList.field_b = true;
         le.field_e.k(99);
@@ -150,13 +150,13 @@ class qk extends vd {
         int var1 = -126 / ((param0 - 53) / 36);
     }
 
-    qk(int param0, int param1, int param2, int param3, String param4, int param5) {
+    MenuLabel(int param0, int param1, int param2, int param3, String param4, int param5) {
         super(param0, param1, param2, param3);
         try {
           this.field_u = param4;
           this.field_w = param5;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -164,12 +164,12 @@ class qk extends vd {
         try {
           if (param2 < 74) {
             qf var4 = (qf) null;
-            qk.a((qf) null, 124);
+            MenuLabel.a((qf) null, 124);
           }
           jb.field_g = po.field_f;
           SolMapReader.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

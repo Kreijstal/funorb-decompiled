@@ -27,7 +27,7 @@ final class sk extends IntrusiveNode {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        dp var9 = null;
+        QuickChatCategoryDefinition var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var8 = sa.field_a;
         var3 = var8.readUnsignedByte(param1 ^ 113);
@@ -47,9 +47,9 @@ final class sk extends IntrusiveNode {
         var4 = stackIn_9_0;
         ArchiveRequest.field_s = var8.readString(param1 ^ 0);
         if (var4 == 0) {
-          em.field_a = ArchiveRequest.field_s;
+          ProductionContent.field_a = ArchiveRequest.field_s;
         } else {
-          em.field_a = var8.readString(-1);
+          ProductionContent.field_a = var8.readString(-1);
         }
         if (PacketBuffer.field_k != 1 &&
           PacketBuffer.field_k != 4) {
@@ -68,7 +68,7 @@ final class sk extends IntrusiveNode {
         try {
           var9 = dh.field_c.a((byte) 47, var5);
           BufferedSocket.field_h = var9.f(80);
-          if (em.field_a.equals(Star.field_o)) {
+          if (ProductionContent.field_a.equals(Star.field_o)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_o;
@@ -91,7 +91,7 @@ final class sk extends IntrusiveNode {
           this.field_j = param1;
           this.field_h = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

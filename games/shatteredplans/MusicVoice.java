@@ -71,7 +71,7 @@ final class MusicVoice extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class MusicVoice extends IntrusiveNode {
           return;
         }
         cg.field_E.setLength(0);
-        em.field_h = 0;
+        ProductionContent.field_h = 0;
     }
 
     MusicVoice() {

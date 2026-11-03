@@ -78,45 +78,45 @@ final class ql extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        gm var1 = null;
+        SoundPlayback var1 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        gm var1Lifetime1;
+        SoundPlayback var1Lifetime1;
         try {
           aj.field_e.service();
           IsolationistAi.field_q.service();
           if (param0 != -26848) {
             ql.a((byte) 108);
           }
-          dp.field_u = dp.field_u - 1;
-          if (dp.field_u == 0) {
-            dp.field_u = 200;
-            var1 = (gm) (eo.field_ab.startForward(param0 ^ -26848));
+          QuickChatCategoryDefinition.field_u = QuickChatCategoryDefinition.field_u - 1;
+          if (QuickChatCategoryDefinition.field_u == 0) {
+            QuickChatCategoryDefinition.field_u = 200;
+            var1 = (SoundPlayback) (eo.field_ab.startForward(param0 ^ -26848));
             while (var1 != null) {
               if (!var1.field_n.isLinked(2048)) {
                 var1.unlink((byte) -108);
               }
-              var1 = (gm) (eo.field_ab.nextForward((byte) -71));
+              var1 = (SoundPlayback) (eo.field_ab.nextForward((byte) -71));
             }
-            if (nc.field_v != null) {
-              var1Lifetime1 = (gm) (nc.field_v.startForward(0));
+            if (CandidateLink.field_v != null) {
+              var1Lifetime1 = (SoundPlayback) (CandidateLink.field_v.startForward(0));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_n.isLinked(2048)) {
                   var1Lifetime1.unlink((byte) -84);
                 }
-                var1Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
+                var1Lifetime1 = (SoundPlayback) (CandidateLink.field_v.nextForward((byte) -71));
               }
             }
           }
-          if (jh.field_B != null &&
-            jh.field_B.isPlaying(5309)) {
+          if (ToggleButton.field_B != null &&
+            ToggleButton.field_B.isPlaying(5309)) {
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class ql extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

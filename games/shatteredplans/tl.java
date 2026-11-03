@@ -40,7 +40,7 @@ abstract class tl extends GameApplet {
           this.readAppletParameters(480, param1, -85, param0, 640);
           int var4_int = -28 % ((57 - param2) / 47);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -101,14 +101,14 @@ abstract class tl extends GameApplet {
                   GarrisonTask.field_o = pd.field_l;
                   LinkPainter.c(98);
                   eh.field_P = false;
-                  gm.field_i = 10;
+                  SoundPlayback.field_i = 10;
                 }
               }
             }
           }
           if (var4 == 4) {
             if (!DualLinkDeque.field_b) {
-              gm.field_i = 10;
+              SoundPlayback.field_i = 10;
               eh.field_P = true;
             } else {
               oj.a(0, GameScreen.getHostApplet((byte) 127));
@@ -119,7 +119,7 @@ abstract class tl extends GameApplet {
           }
           if (var4 == 6 &&
             or.field_a) {
-            gm.field_i = 10;
+            SoundPlayback.field_i = 10;
           }
           if (var4 == 7) {
             id.a(GameScreen.getHostApplet((byte) 127), (byte) -119);
@@ -142,7 +142,7 @@ abstract class tl extends GameApplet {
           if (var4 == 13) {
             try {
               if (va.field_g == null) {
-                va.field_g = new r(fa.field_W, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                va.field_g = new UrlLoader(fa.field_W, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (va.field_g.b(10000)) {
                 var12 = va.field_g.a(true);
@@ -165,7 +165,7 @@ abstract class tl extends GameApplet {
             }
           }
           if (15 == var4) {
-            gm.field_i = 10;
+            SoundPlayback.field_i = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -195,7 +195,7 @@ abstract class tl extends GameApplet {
         IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, fa.field_W, this.field_s, this.field_x);
         lm.a((byte) 100);
         aj.field_b = cg.e(true);
-        re.a(tm.field_i, false);
+        QuickChatCategoryRegistry.a(tm.field_i, false);
         ConquestVictoryChecker.field_k = param2;
         ai.field_a = param5;
         ArchiveRequest.field_p = param1;
@@ -237,7 +237,7 @@ abstract class tl extends GameApplet {
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      r.a((byte) 67);
+                      UrlLoader.a((byte) 67);
                     } else {
                       if (var2 == 7) {
                         this.b(false);
@@ -266,7 +266,7 @@ abstract class tl extends GameApplet {
                             }
                             stackIn_32_0 = (var2 == 12);
                             var3 = sk.a(stackIn_32_0, -1);
-                            nc.a(var3, 2);
+                            CandidateLink.a(var3, 2);
                           } else {
                             kb.f(-92);
                           }
@@ -388,7 +388,7 @@ abstract class tl extends GameApplet {
         we.a((byte) -59);
         ae.b((byte) 62);
         if (!uf.a(false) &&
-          gm.field_i != 11) {
+          SoundPlayback.field_i != 11) {
           Archive.c(-78);
         }
         if (aj.field_b != null) {
@@ -415,7 +415,7 @@ abstract class tl extends GameApplet {
           qj.field_g = ValidationState.a(-95);
           if (var3Lifetime1 != 0 &&
             qj.field_g == 0 &&
-            gm.field_i == 11 &&
+            SoundPlayback.field_i == 11 &&
             !ArchiveRequest.f(-11)) {
             LinkPainter.c(86);
           }
@@ -427,7 +427,7 @@ abstract class tl extends GameApplet {
         if (-1 != qj.field_g &&
           qj.field_g != 0) {
           if (DefensiveAi.field_p >= 10) {
-            if (gm.field_i >= 10) {
+            if (SoundPlayback.field_i >= 10) {
               IntrusiveNode.b(-11);
               if (3 != qj.field_g) {
                 if (4 == qj.field_g) {
@@ -534,7 +534,7 @@ abstract class tl extends GameApplet {
             stackIn_110_3 = !(TextFieldWidget.field_D);
             jm.$cfr$intArgs$a$88c6728ee5b1(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
           }
-          if (cm.field_f) {
+          if (IntHashIndex.field_f) {
             oo.a((byte) -58);
           }
           if (null == ns.field_rb) {
@@ -559,7 +559,7 @@ abstract class tl extends GameApplet {
         if (DefensiveAi.field_p == 11) {
           if (StandardAi.field_e != null && (!StandardAi.field_e.isIndexLoaded((byte) -88) ||
             !StandardAi.field_e.preloadAll(-1))) {
-            nj.a(0.0f, 2, nc.a(DialPainter.field_a, StandardAi.field_e, -80, ns.field_xb));
+            nj.a(0.0f, 2, CandidateLink.a(DialPainter.field_a, StandardAi.field_e, -80, ns.field_xb));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -586,10 +586,10 @@ abstract class tl extends GameApplet {
           IntrusiveDeque.field_c) {
           StandardMapGenerator.a(tm.field_i, (byte) 125);
           this.createCanvas(0);
-          re.a(tm.field_i, false);
+          QuickChatCategoryRegistry.a(tm.field_i, false);
         }
         if (ud.field_c[8]) {
-          vd.d(2147483647);
+          MenuComponent.d(2147483647);
         }
     }
 
@@ -641,7 +641,7 @@ abstract class tl extends GameApplet {
         } else {
           if (DefensiveAi.field_p >= 10) {
             if (or.a(250)) {
-              if (gm.field_i == 0) {
+              if (SoundPlayback.field_i == 0) {
                 discarded$2 = this.a(false, 1, false);
               } else {
                 te.a(0, so.field_o);
@@ -680,7 +680,7 @@ abstract class tl extends GameApplet {
         }
         if (var2 == 0 ||
           var2 == 1) {
-          if (11 == gm.field_i &&
+          if (11 == SoundPlayback.field_i &&
             0 == qj.field_g) {
             LinkPainter.c(60);
           }
@@ -741,7 +741,7 @@ abstract class tl extends GameApplet {
             if (var9 != null) {
               this.field_B = Integer.parseInt(var9);
             }
-            cm.field_f = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            IntHashIndex.field_f = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.startup((byte) -50, param1, param0, 32, param3, this.field_r, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -761,7 +761,7 @@ abstract class tl extends GameApplet {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -856,7 +856,7 @@ abstract class tl extends GameApplet {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

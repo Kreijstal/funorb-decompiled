@@ -21,7 +21,7 @@ abstract class Dialog extends WidgetContainer {
             Dialog.a(-61);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "w.BA(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "w.BA(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ abstract class Dialog extends WidgetContainer {
             return stackIn_4_0;
           }
           if (var2_int > 63) {
-            stackIn_7_0 = cm.field_e;
+            stackIn_7_0 = IntHashIndex.field_e;
             return stackIn_7_0;
           }
           var3 = 121 % ((param0 + 23) / 41);
@@ -183,7 +183,7 @@ abstract class Dialog extends WidgetContainer {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ abstract class Dialog extends WidgetContainer {
           this.field_F = param0;
           this.field_G = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

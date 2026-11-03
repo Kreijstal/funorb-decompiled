@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends vd {
+final class uc extends MenuComponent {
     static int field_v;
     static String field_z;
     static String field_y;
@@ -41,7 +41,7 @@ final class uc extends vd {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_7_0 = cm.field_e;
+            stackIn_7_0 = IntHashIndex.field_e;
             return stackIn_7_0;
           }
           if (param1.charAt(0) == 34) {
@@ -105,7 +105,7 @@ final class uc extends vd {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class uc extends vd {
             stackIn_2_0 = null;
             return (hh) (stackIn_2_0);
           }
-          var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, cm.field_g, hd.field_q);
+          var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
           pd.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -137,7 +137,7 @@ final class uc extends vd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -156,10 +156,10 @@ final class uc extends vd {
           if (param8 != -87) {
             uc.e((byte) -47);
           }
-          ub.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, em.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, dn.field_l, StellarBombEvent.field_j, new v(param7));
+          ub.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, dn.field_l, StellarBombEvent.field_j, new v(param7));
           kb.a(param6, true, param12, param14, param5);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 

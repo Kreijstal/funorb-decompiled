@@ -42,11 +42,11 @@ final class sm {
         var8 = 20 + var3;
         var9 = var5 - 10;
         var10 = var6 + 10;
-        kp.field_m = qh.a(kp.field_m, var9 - 3, 24, -3 + var7, -1, 24);
-        SolMapGenerator.field_q = qh.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
+        kp.field_m = MenuWindow.a(kp.field_m, var9 - 3, 24, -3 + var7, -1, 24);
+        SolMapGenerator.field_q = MenuWindow.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
         if (MatchingTextValidator.field_t.field_a == 2) {
           sn.a(var8, -50, var10, param1 + 128, var7, var9);
-          bs.field_a = qh.a(bs.field_a, var9, var8, var7, -1, var10);
+          bs.field_a = MenuWindow.a(bs.field_a, var9, var8, var7, -1, var10);
           bs.a(bs.field_a, 107);
           gf.b(3, 3, 0, 0, var8, var10);
           bs.field_a.drawAlpha(var7, var9, 128 - param1 << 1);
@@ -234,7 +234,7 @@ final class sm {
         int var14_intLifetime1;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         if (jn.field_b != 0) {
-          stackIn_3_0 = re.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0);
+          stackIn_3_0 = QuickChatCategoryRegistry.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0);
         } else {
           stackIn_3_0 = DefendTask.field_w;
         }
@@ -284,7 +284,7 @@ final class sm {
           return;
         }
         param1 += 8;
-        var10 = nc.field_t;
+        var10 = CandidateLink.field_t;
         for (var11 = 0; -1 + var5 > var11; var11++) {
           var12 = Star.field_H[var11];
           if (12 < var12) {
@@ -407,7 +407,7 @@ final class sm {
         if (var5 < 0) {
           var5 = WidgetTheme.field_s;
         }
-        nc.field_t = 0;
+        CandidateLink.field_t = 0;
         for (var4Lifetime1 = 0; var4Lifetime1 < Star.field_H.length; var4Lifetime1++) {
           var6 = Star.field_H[var4Lifetime1];
           if (var5 == var4Lifetime1) {
@@ -428,7 +428,7 @@ final class sm {
           if (var6 > 12) {
             var6 = 12;
           }
-          nc.field_t = nc.field_t + var6;
+          CandidateLink.field_t = CandidateLink.field_t + var6;
         }
         if (jn.field_b != 0) {
           fieldTemp$0 = jn.field_b + 1;
@@ -538,7 +538,7 @@ final class sm {
     private final void e(byte param0) {
         gf.a(MusicEnvelope.field_m);
         gf.a();
-        int var2 = re.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
+        int var2 = QuickChatCategoryRegistry.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
         int var3 = 200;
         int var4 = this.b(false) - (var2 - this.c(32) >> 1);
         int var5 = -48 + this.h(-104) - var3;
@@ -654,7 +654,7 @@ final class sm {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -696,7 +696,7 @@ final class sm {
           var17 = param5 + "%";
           rs.field_Cb.drawCentred(var17, BattleSnapshot.field_r[5] + param4, param6, param8, -1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -778,7 +778,7 @@ final class sm {
         if (ri.field_I == null) {
           ri.field_I = GameApplet.a((byte) 85, 0, 7, 10);
         }
-        var2 = re.a(0, 32, nb.field_a, 560, param0 ^ -23);
+        var2 = QuickChatCategoryRegistry.a(0, 32, nb.field_a, 560, param0 ^ -23);
         var3 = 200;
         var4 = this.b(false) - (-this.c(32) + var2 >> 1);
         var5 = this.h(param0 - 71) - var3 - 24;
@@ -800,8 +800,8 @@ final class sm {
           } else {
             if (null != ri.field_I.field_n) {
               var8 = BattleContribution.field_q;
-              var9 = ri.field_I.field_n[ff.field_y];
-              var10 = ri.field_I.field_m[ff.field_y];
+              var9 = ri.field_I.field_n[SpriteButton.field_y];
+              var10 = ri.field_I.field_m[SpriteButton.field_y];
               var11 = 0;
               for (var12 = 0; var12 < 10; var12++) {
                 if (null != var9[var12]) {
@@ -837,7 +837,7 @@ final class sm {
         if (param0 != 2) {
           this.a(-30, 106, 23);
         }
-        int var3 = re.a(0, 32, nb.field_a, var2, 0);
+        int var3 = QuickChatCategoryRegistry.a(0, 32, nb.field_a, var2, 0);
         int var4 = 80;
         int var5 = this.b(false) - (var3 - this.c(32) >> 1);
         int var6 = -60 + this.h(-122) - var4 - 48;
@@ -881,7 +881,7 @@ final class sm {
           SecondaryNodeDeque.field_d = 0;
         }
         BattleContribution.field_o = -1;
-        nc.field_t = 24;
+        CandidateLink.field_t = 24;
         Star.field_H[0] = 24;
         if (cb.field_i == null && (6 == this.field_a ||
           this.field_a == 7)) {
@@ -991,7 +991,7 @@ final class sm {
         }
         if (q.field_Bb != var3) {
           if (ek.field_A != 0) {
-            SecondaryNodeDeque.field_d = re.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
+            SecondaryNodeDeque.field_d = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
           }
           ek.field_A = 1;
           q.field_Bb = var3;
@@ -1153,25 +1153,25 @@ final class sm {
                   var12 = 390;
                 }
                 ai.a(true);
-                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.drawString(sk.field_i, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
-                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
-                gf.b(em.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.drawString(pg.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
                 param0 += 40;
-                gf.b(16 * var12 + em.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
-                gf.b(em.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
-                gf.b(em.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
-                rs.field_Cb.drawString(vd.field_n, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                gf.b(16 * var12 + ProductionContent.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(ProductionContent.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(ProductionContent.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                rs.field_Cb.drawString(MenuComponent.field_n, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
-                qk.field_y[0].drawScaled(var12 - 15, param0 - 15, 30, 30);
+                MenuLabel.field_y[0].drawScaled(var12 - 15, param0 - 15, 30, 30);
                 var13 = cl.field_n % 104;
                 if (4 < var13 &&
                   48 >= var13) {
-                  qk.field_y[var13 / 4].c(var12 - 15, param0 - 15, 30, 30, 128);
+                  MenuLabel.field_y[var13 / 4].c(var12 - 15, param0 - 15, 30, 30, 128);
                 } else {
-                  qk.field_y[12].c(-15 + var12, -15 + param0, 30, 30, 128);
+                  MenuLabel.field_y[12].c(-15 + var12, -15 + param0, 30, 30, 128);
                 }
                 rs.field_Cb.drawString(or.field_d[0], var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 return;
@@ -1328,14 +1328,14 @@ final class sm {
                 if (null != oo.field_b) {
                   var19Lifetime2 = cl.field_n % 50;
                   for (var20Lifetime2 = 0; 5 > var20Lifetime2; var20Lifetime2++) {
-                    oo.field_b[var20Lifetime2] = re.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
+                    oo.field_b[var20Lifetime2] = QuickChatCategoryRegistry.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
                   }
                   var20Lifetime2Lifetime1 = param3 + 10;
                   var21Lifetime2 = oo.field_b[0] + (10 + param0);
                   for (var22 = 1; var22 < 5; var22++) {
                     for (var23 = 0; var23 < 10; var23++) {
                       var24 = var22 * 10 + (param3 + var23);
-                      var25 = 10 + param0 + re.a(oo.field_b[-1 + var22], 10, var23, oo.field_b[var22], 0);
+                      var25 = 10 + param0 + QuickChatCategoryRegistry.a(oo.field_b[-1 + var22], 10, var23, oo.field_b[var22], 0);
                       gf.g(var20Lifetime2Lifetime1, var21Lifetime2, var24, var25, 12632256);
                       var21Lifetime2 = var25;
                       var20Lifetime2Lifetime1 = var24;
@@ -1359,7 +1359,7 @@ final class sm {
                 var14 = 150;
                 var15 = 125;
                 var16 = new String[16];
-                var17 = wg.field_e.a(5607, ph.field_d);
+                var17 = wg.field_e.a(5607, ListContent.field_d);
                 var18 = wg.field_e.a(5607, jb.field_h);
                 var19Lifetime1 = rs.field_Cb.wrapText(var17, new int[]{var14}, var16);
                 var20Lifetime1 = rs.field_Cb.wrapText(var18, new int[]{var15}, var16);
@@ -1495,11 +1495,11 @@ final class sm {
         if (var7 >= 25) {
         } else {
           if (param5 <= 125) {
-            var8 = re.a(param1, 25, param5, 0, 0);
+            var8 = QuickChatCategoryRegistry.a(param1, 25, param5, 0, 0);
           } else {
-            var8 = re.a(0, 25, param5 - 125, -param1, 0);
+            var8 = QuickChatCategoryRegistry.a(0, 25, param5 - 125, -param1, 0);
           }
-          param1 = re.a(param1 / 2, 25, var7, param1, 0);
+          param1 = QuickChatCategoryRegistry.a(param1 / 2, 25, var7, param1, 0);
         }
         int var9 = 103 / ((param4 - 25) / 40);
         if (param2 != -1) {
@@ -1554,7 +1554,7 @@ final class sm {
         param1 = var4 - param1;
         var7 = -(var6 * 21) + 310;
         var8 = -12 % ((param0 - 41) / 43);
-        var9 = nc.field_t;
+        var9 = CandidateLink.field_t;
         for (var10 = 0; var6 > var10; var10++) {
           var11 = Star.field_H[var10];
           if (var11 > 12) {
@@ -1690,7 +1690,7 @@ final class sm {
           GameRules.field_c != gr.field_o) {
           var2 = TutorialVictoryChecker.field_p[GameRules.field_c].length * TutorialVictoryChecker.field_l[GameRules.field_c] + (TutorialVictoryChecker.field_t[GameRules.field_c] + 10);
           var3 = TutorialVictoryChecker.field_t[gr.field_o] + TutorialVictoryChecker.field_l[gr.field_o] * TutorialVictoryChecker.field_p[gr.field_o].length + 10;
-          return re.a(var2, 32, eh.field_Q, var3, 0);
+          return QuickChatCategoryRegistry.a(var2, 32, eh.field_Q, var3, 0);
         }
         if (param0 != -98) {
           this.field_h = -2;
@@ -1702,7 +1702,7 @@ final class sm {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         WidgetTheme.field_s = param1;
-        pr.field_g = 0 != jn.field_b ? re.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
+        pr.field_g = 0 != jn.field_b ? QuickChatCategoryRegistry.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
         DefendTask.field_w = 0;
         if (param0 != 4) {
           this.a((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
@@ -1814,7 +1814,7 @@ final class sm {
             }
             if (((var5 != 0)) && ((!(this.field_d.b((byte) -114)) ||
               !(cl.field_n <= TutorialVictoryChecker.field_q)))) {
-              qk.a(SocketArchiveNetworkClient.field_w, 89);
+              MenuLabel.a(SocketArchiveNetworkClient.field_w, 89);
               TutorialVictoryChecker.field_q = 25 + cl.field_n;
             }
             decompiledFrameRemainder0 = false;
@@ -2016,7 +2016,7 @@ final class sm {
         var8Lifetime1.drawOpaque(0, 0);
         cg.i(0);
         var9 = 64 + (int)(64.0 * Math.cos(3.141592653589793 * (double)(cl.field_n * 2) / 150.0));
-        var10 = re.a(0, 32, le.field_b, 600, 0);
+        var10 = QuickChatCategoryRegistry.a(0, 32, le.field_b, 600, 0);
         var11 = 155;
         var12 = (640 - var10) / 2;
         var13 = 220;
@@ -2041,7 +2041,7 @@ final class sm {
         if (-1 != var6 &&
           var6 != 24) {
           mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + mp.field_b.field_J), 2805974, -1);
-          var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+          var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
           var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
           rs.field_Cb.a(a.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
@@ -2049,7 +2049,7 @@ final class sm {
           if (var6 == 24) {
             mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
-              var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+              var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
               var22_ref_String = ul.field_Qb[var6];
             } else {
               var21_ref_String = "(" + kj.field_i + "???)";
@@ -2069,11 +2069,11 @@ final class sm {
           }
         }
         if (ek.field_A != 0) {
-          var21 = re.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
+          var21 = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
         } else {
           var21 = q.field_Bb;
         }
-        var21 = re.a(0, 32, le.field_b, var21, 0);
+        var21 = QuickChatCategoryRegistry.a(0, 32, le.field_b, var21, 0);
         if (var21 > 20) {
           var18Lifetime1 = 52;
           var2Lifetime2 = 89 + var14;
@@ -2092,10 +2092,10 @@ final class sm {
               }
               var25 = var20Lifetime1 + var24 - 24;
               for (var26 = 0; var22Lifetime1 > var26; var26++) {
-                cm.field_b.c(var2Lifetime2 + 10, var23Lifetime1 + (var26 * (var25 - var23Lifetime1) / (var22Lifetime1 - 1) - 16), 32, 32);
+                IntHashIndex.field_b.c(var2Lifetime2 + 10, var23Lifetime1 + (var26 * (var25 - var23Lifetime1) / (var22Lifetime1 - 1) - 16), 32, 32);
               }
             } else {
-              cm.field_b.c(10 + var2Lifetime2, var20Lifetime1 + ((var21 >> 1) - 16), 32, 32);
+              IntHashIndex.field_b.c(10 + var2Lifetime2, var20Lifetime1 + ((var21 >> 1) - 16), 32, 32);
             }
           }
         }
@@ -2120,13 +2120,13 @@ final class sm {
         }
         var2 = 85 / ((-27 - param0) / 45);
         if (2 == oq.field_j) {
-          em.a(us.b(0), 1);
+          ProductionContent.a(us.b(0), 1);
         }
         if (oq.field_j == 3) {
-          em.a(dg.g(1), 1);
+          ProductionContent.a(dg.g(1), 1);
         }
         if (oq.field_j == 4) {
-          em.a(mq.c((byte) 67), 1);
+          ProductionContent.a(mq.c((byte) 67), 1);
         }
         if (GameRules.field_c == 6) {
           this.e(170);
@@ -2187,7 +2187,7 @@ final class sm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -2353,10 +2353,10 @@ final class sm {
                                                 var5 != 16 &&
                                                 var5 != 17) {
                                                 if (var5 == 18) {
-                                                  ff.field_y = 0;
+                                                  SpriteButton.field_y = 0;
                                                 } else {
                                                   if (19 == var5) {
-                                                    ff.field_y = 1;
+                                                    SpriteButton.field_y = 1;
                                                   } else {
                                                     if (var5 == 24) {
                                                       if (this.field_a != 8 &&
@@ -2365,7 +2365,7 @@ final class sm {
                                                           ts.a(GameScreen.getHostApplet((byte) 126), (byte) 51);
                                                         }
                                                       } else {
-                                                        qk.a(AchievementProgress.field_a, this.field_a, (byte) 123);
+                                                        MenuLabel.a(AchievementProgress.field_a, this.field_a, (byte) 123);
                                                       }
                                                       break regionExit1;
                                                     }
@@ -2422,11 +2422,11 @@ final class sm {
                                                             if (oq.field_i[32] == MidiPcmStream.field_L) {
                                                               hk.field_nb = js.field_i;
                                                               oq.field_i[32] = RecklessAi.field_r;
-                                                              jo.a(32767, hk.field_nb, true, 50);
+                                                              QuickChatPhraseRegistry.a(32767, hk.field_nb, true, 50);
                                                             } else {
                                                               oq.field_i[32] = MidiPcmStream.field_L;
                                                               hk.field_nb = wp.field_a;
-                                                              jo.a(32767, hk.field_nb, true, 50);
+                                                              QuickChatPhraseRegistry.a(32767, hk.field_nb, true, 50);
                                                             }
                                                           }
                                                         }
@@ -2513,7 +2513,7 @@ final class sm {
         if (gr.field_o != GameRules.field_c &&
           PointsVictoryChecker.a((byte) -119, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -88, gr.field_o)) {
-          return re.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_m[gr.field_o], 0);
+          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_m[gr.field_o], 0);
         }
         return TutorialVictoryChecker.field_m[this.field_a];
     }
@@ -2676,7 +2676,7 @@ final class sm {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -2818,7 +2818,7 @@ final class sm {
         }
         if (PointsVictoryChecker.a((byte) -103, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -125, gr.field_o)) {
-          return re.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_r[gr.field_o], 0);
+          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_r[gr.field_o], 0);
         }
         double var2 = wm.a(eh.field_Q, (byte) 109, param0);
         if (this.field_a == GameRules.field_c) {

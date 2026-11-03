@@ -37,7 +37,7 @@ final class of {
             return wh.field_a.a(98);
           }
           if (ue.field_a != MatchingTextValidator.field_s) {
-            return qh.field_B;
+            return MenuWindow.field_B;
           }
           return wh.field_a.a(-45);
         }
@@ -45,7 +45,7 @@ final class of {
           return wh.field_a.a(98);
         }
         if (ue.field_a != MatchingTextValidator.field_s) {
-          return qh.field_B;
+          return MenuWindow.field_B;
         }
         return wh.field_a.a(-45);
     }

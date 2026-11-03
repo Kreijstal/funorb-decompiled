@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends vd {
+final class kb extends MenuComponent {
     private int field_D;
     private boolean field_B;
     private int field_u;
@@ -61,7 +61,7 @@ final class kb extends vd {
           gf.a(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
           cg.i(0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -99,20 +99,20 @@ final class kb extends vd {
           if (na.field_r == 0) {
             var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = 3 + var7;
-            t.field_c = new String[var8];
+            StarLinkPlanner.field_c = new String[var8];
             pr.field_d = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
               pr.field_d[var9] = -1;
             }
             Player.field_y = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              t.field_c[var9] = ks.field_b[var9];
+              StarLinkPlanner.field_c[var9] = ks.field_b[var9];
             }
-            t.field_c[var8 - 3] = "";
-            t.field_c[-2 + var8] = var6;
+            StarLinkPlanner.field_c[var8 - 3] = "";
+            StarLinkPlanner.field_c[-2 + var8] = var6;
             pr.field_d[var8 - 2] = 0;
             Player.field_y[0] = 1;
-            t.field_c[-1 + var8] = nf.field_i;
+            StarLinkPlanner.field_c[-1 + var8] = nf.field_i;
             pr.field_d[-1 + var8] = 1;
             Player.field_y[1] = 2;
           } else {
@@ -121,25 +121,25 @@ final class kb extends vd {
             }
             var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = var7 + 2;
-            t.field_c = new String[var8];
+            StarLinkPlanner.field_c = new String[var8];
             pr.field_d = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
               pr.field_d[var9] = -1;
             }
             Player.field_y = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
-              t.field_c[var9] = ks.field_b[var9];
+              StarLinkPlanner.field_c[var9] = ks.field_b[var9];
             }
-            t.field_c[-2 + var8] = "";
-            t.field_c[var8 - 1] = nf.field_i;
+            StarLinkPlanner.field_c[-2 + var8] = "";
+            StarLinkPlanner.field_c[var8 - 1] = nf.field_i;
             pr.field_d[-1 + var8] = 0;
             Player.field_y[0] = 2;
           }
           ns.field_nb.field_b = Player.field_y.length;
           var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; t.field_c.length > var8Lifetime1; var8Lifetime1++) {
+          for (var8Lifetime1 = 0; StarLinkPlanner.field_c.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_29_0 = !(pr.field_d[var8Lifetime1] < 0);
-            var9Lifetime1 = or.a(stackIn_29_0, t.field_c[var8Lifetime1], true);
+            var9Lifetime1 = or.a(stackIn_29_0, StarLinkPlanner.field_c[var8Lifetime1], true);
             if (pr.field_d[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + 2 * js.field_g;
             }
@@ -150,12 +150,12 @@ final class kb extends vd {
           ah.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
           ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
           DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
-          for (var8Lifetime2 = 0; var8Lifetime2 < t.field_c.length; var8Lifetime2++) {
+          for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {
             stackIn_40_0 = DiskCacheWorker.field_b;
             if (pr.field_d[var8Lifetime2] >= 0) {
               stackIn_41_1 = vh.field_b;
             } else {
-              stackIn_41_1 = fe.field_A;
+              stackIn_41_1 = MenuButton.field_A;
             }
             DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
@@ -172,7 +172,7 @@ final class kb extends vd {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 

@@ -9,28 +9,28 @@ final class lr {
     static int[] field_b;
     static String field_e;
 
-    final static lp a(ph param0, Player param1, byte param2, Player param3, Player[] param4) {
+    final static MenuList a(ListContent param0, Player param1, byte param2, Player param3, Player[] param4) {
         String dupTemp$1 = null;
         int var9_int = 0;
         RuntimeException var5 = null;
         kb var6 = null;
-        fe var7 = null;
-        ff var8 = null;
-        ff var9 = null;
-        ff var10 = null;
+        MenuButton var7 = null;
+        SpriteButton var8 = null;
+        SpriteButton var9 = null;
+        SpriteButton var10 = null;
         int var11 = 0;
-        lp var12 = null;
-        lp var13 = null;
-        lp[] stackIn_3_0 = null;
+        MenuList var12 = null;
+        MenuList var13 = null;
+        MenuList[] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
-        fe[] stackIn_6_0 = null;
+        MenuButton[] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
-        lp stackIn_9_0 = null;
-        ff[][] stackIn_12_0 = null;
+        MenuList stackIn_9_0 = null;
+        SpriteButton[][] stackIn_12_0 = null;
         int stackIn_13_1 = 0;
-        ff[][] stackIn_17_0 = null;
+        SpriteButton[][] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        lp stackIn_20_0 = null;
+        MenuList stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -43,7 +43,7 @@ final class lr {
         RuntimeException decompiledCaughtException = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var12 = new lp(0, 0, 182, ClientException.field_a);
+          var12 = new MenuList(0, 0, 182, ClientException.field_a);
           var13 = var12;
           var13.field_h = param3;
           stackIn_3_0 = param0.field_h;
@@ -54,9 +54,9 @@ final class lr {
           }
           stackIn_3_0[stackIn_4_1] = var12;
           var6 = new kb(IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - rs.field_Cb.field_J), 182 - IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.name, 16777215, true);
-          var13.a(var6, 8);
-          var7 = new fe(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), FullscreenFocusCanvas.field_e, 3375155);
-          var13.a(var7, param2 - 13);
+          var13.addChild(var6, 8);
+          var7 = new MenuButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), FullscreenFocusCanvas.field_e, 3375155);
+          var13.addChild(var7, param2 - 13);
           stackIn_6_0 = param0.field_i;
           if (param3.field_x >= param1.field_x) {
             stackIn_7_1 = -1 + param3.field_x;
@@ -64,18 +64,18 @@ final class lr {
             stackIn_7_1 = param3.field_x;
           }
           stackIn_6_0[stackIn_7_1] = var7;
-          dupTemp$1 = re.a(AudioService.field_f, 4371, new String[]{param3.name});
+          dupTemp$1 = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
           var7.field_o = dupTemp$1;
           var6.field_o = dupTemp$1;
           var13.field_o = dupTemp$1;
           if (param2 != 21) {
-            stackIn_9_0 = (lp) null;
+            stackIn_9_0 = (MenuList) null;
             return stackIn_9_0;
           }
           bg.a(-2612, param4.length);
-          var8 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, BattleContribution.a(-1, false));
-          var13.a(var8, 8);
-          var8.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
+          var8 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, BattleContribution.a(-1, false));
+          var13.addChild(var8, 8);
+          var8.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_12_0 = param0.field_f;
           if (param1.field_x < param3.field_x) {
             stackIn_13_1 = param3.field_x;
@@ -84,9 +84,9 @@ final class lr {
           }
           stackIn_12_0[stackIn_13_1][0] = var8;
           for (var9_int = 1; param4.length - 1 > var9_int; var9_int++) {
-            var10 = new ff(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + rs.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
-            var13.a(var10, 8);
-            var10.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
+            var10 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + rs.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
+            var13.addChild(var10, 8);
+            var10.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
             stackIn_17_0 = param0.field_f;
             if (param3.field_x <= param1.field_x) {
               stackIn_18_1 = 1 + param3.field_x;
@@ -95,9 +95,9 @@ final class lr {
             }
             stackIn_17_0[stackIn_18_1][var9_int] = var10;
           }
-          var9 = new ff(0, (var12.field_i - IntrusiveDeque.field_a[param3.field_x].field_w) / 2, IntrusiveDeque.field_a[param3.field_x]);
-          var13.a(var9, param2 ^ 29);
-          var9.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
+          var9 = new SpriteButton(0, (var12.field_i - IntrusiveDeque.field_a[param3.field_x].field_w) / 2, IntrusiveDeque.field_a[param3.field_x]);
+          var13.addChild(var9, param2 ^ 29);
+          var9.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_20_0 = var13;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ final class lr {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class lr {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class lr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -392,7 +392,7 @@ final class lr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "lr.G(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "lr.G(" + param0 + ')');
         }
     }
 
@@ -726,7 +726,7 @@ final class lr {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 

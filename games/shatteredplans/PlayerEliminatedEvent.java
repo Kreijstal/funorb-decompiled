@@ -22,7 +22,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
         int var12 = 0;
         try {
           AgeValidator.field_n.field_z = param3;
-          if (em.field_h == 2) {
+          if (ProductionContent.field_h == 2) {
             cb.field_l.field_z = kh.field_Kb;
           } else {
             cb.field_l.field_z = StellarBombEvent.field_m;
@@ -38,12 +38,12 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           cb.field_l.a(var11, param1, (byte) 39, var10, -var11 + (-5 + var9_int));
           var12 = 5 + (var10 + param1);
           AgeValidator.field_n.a(var9_int, param7, (byte) 70, 0, 0);
-          fe.field_w.a(var9_int, var12, (byte) 48, param7, 0);
-          fe.field_w.field_F = Wormhole.a(16, 3, fe.field_w.field_mb, 11579568, 8421504, 2105376);
+          MenuButton.field_w.a(var9_int, var12, (byte) 48, param7, 0);
+          MenuButton.field_w.field_F = Wormhole.a(16, 3, MenuButton.field_w.field_mb, 11579568, 8421504, 2105376);
           var12 = var12 + param7;
           fa.field_X.a(var9_int, var12, (byte) 106, -(var12 / 2) + param8, -(var9_int / 2) + param0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ca.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ca.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

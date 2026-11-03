@@ -3,7 +3,7 @@
  */
 final class va {
     static boolean field_j;
-    static r field_g;
+    static UrlLoader field_g;
     static int field_b;
     static Sprite field_e;
     static String field_i;
@@ -72,7 +72,7 @@ final class va {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class va {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ee.field_l = rh.field_g;
+          ee.field_l = ProjectsContent.field_g;
           if (param1 != -113) {
             var6 = (Archive) null;
             va.a((String) null, -24, (String) null, (Archive) null);
@@ -127,7 +127,7 @@ final class va {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class va {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class va {
         RuntimeException var3_ref = null;
         try {
           if (param1 != -1) {
-            field_g = (r) null;
+            field_g = (UrlLoader) null;
           }
           var3 = dn.a(param0, true);
           if (param2.indexOf(param0) != -1) {
@@ -219,7 +219,7 @@ final class va {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

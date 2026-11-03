@@ -39,7 +39,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_l.field_D.payload[this.field_l.field_D.position + var17] = (byte)nc.a((int) this.field_l.field_D.payload[this.field_l.field_D.position + var17], (int) this.field_d);
+                      this.field_l.field_D.payload[this.field_l.field_D.position + var17] = (byte)CandidateLink.a((int) this.field_l.field_D.payload[this.field_l.field_D.position + var17], (int) this.field_d);
                       var17++;
                     }
                   }
@@ -168,7 +168,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.field_v.readFully(this.field_q.payload, var5, this.field_q.position, (byte) -52);
                   if (0 != this.field_d) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_q.payload[this.field_q.position + var6] = (byte)nc.a((int) this.field_q.payload[this.field_q.position + var6], (int) this.field_d);
+                      this.field_q.payload[this.field_q.position + var6] = (byte)CandidateLink.a((int) this.field_q.payload[this.field_q.position + var6], (int) this.field_d);
                     }
                   }
                   this.field_q.position = this.field_q.position + var5;
@@ -352,7 +352,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -468,7 +468,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

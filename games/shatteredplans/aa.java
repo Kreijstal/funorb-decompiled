@@ -28,14 +28,14 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         try {
           if (param1 != 0) {
             if (param1 == 1) {
-              gm.a(111, "privacy.ws");
+              SoundPlayback.a(111, "privacy.ws");
             } else {
               if (param1 == 2) {
-                gm.a(62, "conduct.ws");
+                SoundPlayback.a(62, "conduct.ws");
               }
             }
           } else {
-            gm.a(64, "terms.ws");
+            SoundPlayback.a(64, "terms.ws");
           }
           if (param2 != 2) {
             this.field_F = (fa) null;
@@ -51,7 +51,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
             aa.a((String) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "aa.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aa.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         ce dupTemp$1 = new ce(10000536);
         this.field_H.field_p = (WidgetPainter) ((Object) dupTemp$1);
         this.field_J.field_p = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = re.a(bo.field_Y, 4371, new String[]{this.l(-63), this.k(15)});
+        String var2 = QuickChatCategoryRegistry.a(bo.field_Y, 4371, new String[]{this.l(-63), this.k(15)});
         int var3 = 20;
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
@@ -296,7 +296,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
         var3 = var3 + (this.a(170, AllianceExpiredEvent.field_m, var3, (byte) -128, this.field_Q, MapView.field_zb) + 5);
         var3 = var3 + this.a(SolMapGenerator.field_m, this.field_L, var3, (byte) -123, 170);
-        pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, EmailValidator.field_x, 11579568, fe.field_E);
+        pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, EmailValidator.field_x, 11579568, MenuButton.field_E);
         this.b((byte) -71, var4);
         var3 = var3 + var4.field_n;
         WidgetTheme var5 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, gn.field_u.field_J, -1, 2147483647, true);
@@ -363,7 +363,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -394,7 +394,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           super.updateHover(param0, param1, param2, param3);
           this.field_E.field_y = this.m(param3 - 46);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "aa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -599,7 +599,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -640,7 +640,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -701,7 +701,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

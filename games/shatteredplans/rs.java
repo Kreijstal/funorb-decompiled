@@ -6,7 +6,7 @@ final class rs extends qr {
     private qr field_Ab;
     private qr field_xb;
     static int field_Fb;
-    static vd field_Db;
+    static MenuComponent field_Db;
     static String field_yb;
     static String field_zb;
     static th field_Cb;
@@ -22,7 +22,7 @@ final class rs extends qr {
           this.a(4, this.field_Ab);
           this.e((byte) -123);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class rs extends qr {
           this.field_xb.field_G = param3;
           this.field_xb.field_Z = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class rs extends qr {
           if (param0 < -70) {
             return;
           }
-          field_Db = (vd) null;
+          field_Db = (MenuComponent) null;
           return;
         }
         var1 = im.field_c;
@@ -80,7 +80,7 @@ final class rs extends qr {
           im.field_c = null;
         }
         if (param0 >= -70) {
-          field_Db = (vd) null;
+          field_Db = (MenuComponent) null;
         }
     }
 

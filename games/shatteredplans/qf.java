@@ -35,7 +35,7 @@ final class qf {
           if (DefendTask.d(97)) {
             return true;
           }
-          if (ph.a(4, param1, param3, param2)) {
+          if (ListContent.a(4, param1, param3, param2)) {
             return true;
           }
           return false;
@@ -51,7 +51,7 @@ final class qf {
           if (DefendTask.d(97)) {
             return true;
           }
-          if (ph.a(4, param1, param3, param2)) {
+          if (ListContent.a(4, param1, param3, param2)) {
             return true;
           }
           return false;
@@ -65,7 +65,7 @@ final class qf {
           if (DefendTask.d(97)) {
             return true;
           }
-          if (ph.a(4, param1, param3, param2)) {
+          if (ListContent.a(4, param1, param3, param2)) {
             return true;
           }
           return false;
@@ -74,7 +74,7 @@ final class qf {
         if (DefendTask.d(97)) {
           return true;
         }
-        if (!ph.a(4, param1, param3, param2)) {
+        if (!ListContent.a(4, param1, param3, param2)) {
           return false;
         }
         return true;
@@ -91,7 +91,7 @@ final class qf {
         CachedArchiveSource.field_n = false;
         bj.field_L = 0;
         MusicTrack var2 = (MusicTrack) null;
-        jo.a(32767, (MusicTrack) null, true, 50);
+        QuickChatPhraseRegistry.a(32767, (MusicTrack) null, true, 50);
         FocusableWidget.f((byte) -123);
     }
 
@@ -118,7 +118,7 @@ final class qf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -127,12 +127,12 @@ final class qf {
           this.field_a = param1;
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void b(byte param0) {
-        jh.a(SpriteState.field_u, ho.field_j, un.field_g, VictoryChecker.field_d, 0);
+        ToggleButton.a(SpriteState.field_u, ho.field_j, un.field_g, VictoryChecker.field_d, 0);
         int var1 = -114 / ((param0 - 34) / 56);
     }
 

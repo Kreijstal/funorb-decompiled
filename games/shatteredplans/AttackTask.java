@@ -214,7 +214,7 @@ final class AttackTask extends AiTask {
           } else {
             stackIn_89_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class AttackTask extends AiTask {
           gf.f(param2 + 1, param1 + (param4 - 2), param6 - 1, 0);
           gf.a(-3 + param2 + param6 + 4, param1 + param4 - 2, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

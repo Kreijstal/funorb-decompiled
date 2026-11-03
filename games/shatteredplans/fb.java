@@ -65,10 +65,10 @@ final class fb extends qr {
         field_gc = null;
     }
 
-    final static lp a(int param0, int param1, int param2, int param3, Player param4, int param5, Player[] param6, GameState param7) {
+    final static MenuList a(int param0, int param1, int param2, int param3, Player param4, int param5, Player[] param6, GameState param7) {
         int var12_int = 0;
         int stackIn_9_0 = 0;
-        lp stackIn_32_0 = null;
+        MenuList stackIn_32_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -84,18 +84,18 @@ final class fb extends qr {
         int var11 = 0;
         b var12 = null;
         Player var13 = null;
-        ff var13_ref = null;
-        qk var13_ref2 = null;
+        SpriteButton var13_ref = null;
+        MenuLabel var13_ref2 = null;
         String var14 = null;
-        vd var15 = null;
+        MenuComponent var15 = null;
         int var16 = 0;
-        lp var17 = null;
-        ff var13_refLifetime1;
-        qk var13_ref2Lifetime1;
+        MenuList var17 = null;
+        SpriteButton var13_refLifetime1;
+        MenuLabel var13_ref2Lifetime1;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var9 = -18 % ((param2 + 43) / 35);
-          var17 = new lp(0, 0, 182, PasswordValidator.field_n);
+          var17 = new MenuList(0, 0, 182, PasswordValidator.field_n);
           var10 = 0;
           var11_ref_fs__ = param6;
           for (var12_int = 0; var11_ref_fs__.length > var12_int; var12_int++) {
@@ -109,32 +109,32 @@ final class fb extends qr {
           stackIn_9_0 = (var10 != 0) ? 8421504 : 2105376;
           var11 = stackIn_9_0;
           var12 = new b(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
-          var17.a(var12, 8);
+          var17.addChild(var12, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
-            var13_ref = new ff(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), WhirlpoolHasher.a(param5, (byte) -127, param1, param4, param3));
-            var17.a(var13_ref, 8);
+            var13_ref = new SpriteButton(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), WhirlpoolHasher.a(param5, (byte) -127, param1, param4, param3));
+            var17.addChild(var13_ref, 8);
           } else {
-            var13_ref2 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
-            var17.a(var13_ref2, 8);
+            var13_ref2 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
+            var17.addChild(var13_ref2, 8);
           }
           if (var10 != 0 &&
             param0 <= 3 &&
             0 < param0) {
-            var13_ref2Lifetime1 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(StandardAi.field_m, 4371, new String[]{Integer.toString(param0)}));
-            var17.a(var13_ref2Lifetime1, 8);
+            var13_ref2Lifetime1 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(StandardAi.field_m, 4371, new String[]{Integer.toString(param0)}));
+            var17.addChild(var13_ref2Lifetime1, 8);
           }
-          var13_refLifetime1 = new ff(0, (-IntrusiveDeque.field_a[param4.field_x].field_w + var17.field_i) / 2, IntrusiveDeque.field_a[param4.field_x]);
-          var17.a(var13_refLifetime1, 8);
+          var13_refLifetime1 = new SpriteButton(0, (-IntrusiveDeque.field_a[param4.field_x].field_w + var17.field_i) / 2, IntrusiveDeque.field_a[param4.field_x]);
+          var17.addChild(var13_refLifetime1, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
             if (1 != param3) {
               if (param5 == 1) {
-                var14 = re.a(fa.field_S, 4371, new String[]{Integer.toString(param3)});
+                var14 = QuickChatCategoryRegistry.a(fa.field_S, 4371, new String[]{Integer.toString(param3)});
               } else {
-                var14 = re.a(jm.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
+                var14 = QuickChatCategoryRegistry.a(jm.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
               }
             } else {
               if (param5 != 1) {
-                var14 = re.a(ms.field_b, 4371, new String[]{Integer.toString(param5)});
+                var14 = QuickChatCategoryRegistry.a(ms.field_b, 4371, new String[]{Integer.toString(param5)});
               } else {
                 var14 = Archive.field_a;
               }
@@ -144,10 +144,10 @@ final class fb extends qr {
               var14 = var14 + " " + SolVictoryChecker.field_q;
             }
             var17.field_o = var14;
-            var15 = (vd) (var17.field_l.startForward(0));
+            var15 = (MenuComponent) (var17.field_l.startForward(0));
             while (var15 != null) {
               var15.field_o = var14;
-              var15 = (vd) (var17.field_l.nextForward((byte) -71));
+              var15 = (MenuComponent) (var17.field_l.nextForward((byte) -71));
             }
           }
           stackIn_32_0 = var17;
@@ -174,7 +174,7 @@ final class fb extends qr {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -220,11 +220,11 @@ final class fb extends qr {
         }
         if (IntrusiveNodeHashTable.field_e &&
           np.field_a.field_Eb <= np.field_a.field_Lb) {
-          ls.field_a.field_zb.field_z = gm.field_j;
-          lp.field_v.field_s = false;
+          ls.field_a.field_zb.field_z = SoundPlayback.field_j;
+          MenuList.field_v.field_s = false;
           MatchingTextValidator.a(false, ls.field_a.field_xb);
         } else {
-          lp.field_v.field_s = true;
+          MenuList.field_v.field_s = true;
           ls.field_a.field_zb.field_z = null;
           ObjectList.a(param4, 0, ls.field_a, param1, param2);
         }
@@ -350,7 +350,7 @@ final class fb extends qr {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(')').toString());
         }
     }
 

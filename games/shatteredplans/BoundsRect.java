@@ -115,7 +115,7 @@ final class BoundsRect extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -130,11 +130,11 @@ final class BoundsRect extends IntrusiveNode {
           return gp.field_b;
         }
         if (param0 < -61) {
-          return qh.field_B;
+          return MenuWindow.field_B;
         }
         String var2 = (String) null;
         BoundsRect.a((String) null, (Archive) null, (byte) 30, (String) null, (String) null);
-        return qh.field_B;
+        return MenuWindow.field_B;
     }
 
     final static void a(int param0, byte param1) {
@@ -153,7 +153,7 @@ final class BoundsRect extends IntrusiveNode {
           for (var2_int = 0; wm.field_c > var2_int; var2_int++) {
             lg.field_d[var2_int + param0] = var2_int;
           }
-          ai.a(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, ff.field_u, GzipInflater.field_e);
+          ai.a(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, SpriteButton.field_u, GzipInflater.field_e);
           if (wm.field_c <= param0) {
             return;
           }
@@ -162,7 +162,7 @@ final class BoundsRect extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "bh.A(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "bh.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class BoundsRect extends IntrusiveNode {
           ai.a(false, -1, param2, param1);
           int var3_int = 19 % ((param0 - 37) / 41);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

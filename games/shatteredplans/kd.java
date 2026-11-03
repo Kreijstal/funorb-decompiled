@@ -60,7 +60,7 @@ final class kd {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class kd {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 
@@ -312,7 +312,7 @@ final class kd {
               ql.field_n.drawString(var6, var8Lifetime1, var1_int + je.field_g, var5, -1);
               var1_int = var1_int + (id.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
-              PlayerStats.field_c.drawString(var6, var8Lifetime1, dp.field_v + var1_int, var5, -1);
+              PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatCategoryDefinition.field_v + var1_int, var5, -1);
               var1_int = var1_int + e.field_d;
             }
           }
@@ -320,7 +320,7 @@ final class kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "kd.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "kd.C(" + param0 + ')');
         }
     }
 

@@ -71,7 +71,7 @@ final class vj extends SingleChildWidget {
           GameKeyHandler.field_d = param0;
           if (!AggressiveAi.field_q &&
             LinkPainter.field_e < ri.field_F &&
-            r.field_d) {
+            UrlLoader.field_d) {
             LinkPainter.field_e = 0;
             rs.field_Fb = cb.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
@@ -82,7 +82,7 @@ final class vj extends SingleChildWidget {
           }
           cb.field_n = -1;
           if (AggressiveAi.field_q &&
-            LinkPainter.field_e == t.field_f) {
+            LinkPainter.field_e == StarLinkPlanner.field_f) {
             AggressiveAi.field_q = false;
             LinkPainter.field_e = 0;
             return;
@@ -98,7 +98,7 @@ final class vj extends SingleChildWidget {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class vj extends SingleChildWidget {
           return MouseInputHandler.field_e;
         }
         if (!GalaxyMap.field_g.preloadAll(-1)) {
-          return jh.field_v + " - " + GalaxyMap.field_g.getOverallProgress(100) + "%";
+          return ToggleButton.field_v + " - " + GalaxyMap.field_g.getOverallProgress(100) + "%";
         }
         return IsaacBackedRandom.field_d;
     }
@@ -173,7 +173,7 @@ final class vj extends SingleChildWidget {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vj.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vj.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class vj extends SingleChildWidget {
         try {
           this.field_z = param6;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

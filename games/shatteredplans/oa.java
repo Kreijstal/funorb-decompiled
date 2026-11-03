@@ -51,7 +51,7 @@ final class oa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class oa {
               }
             }
           } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ')');
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

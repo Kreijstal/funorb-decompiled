@@ -5,7 +5,7 @@ final class BattleContribution extends IntrusiveNode {
     int field_r;
     static boolean field_s;
     Star field_k;
-    static qh field_l;
+    static MenuWindow field_l;
     static int field_o;
     Player field_h;
     int field_i;
@@ -76,7 +76,7 @@ final class BattleContribution extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var7), "ne.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var7), "ne.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class BattleContribution extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        si var4 = null;
+        QuickChatPhraseDefinition var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -155,8 +155,8 @@ final class BattleContribution extends IntrusiveNode {
           }
           param0.field_k = 0;
           param0.field_j = false;
-          GameScreen.field_A = new jo(var3_int, param0, param0);
-          dh.field_c = new re(var3_int, param0, param0, new ch());
+          GameScreen.field_A = new QuickChatPhraseRegistry(var3_int, param0, param0);
+          dh.field_c = new QuickChatCategoryRegistry(var3_int, param0, param0, new ch());
           var4 = hc.a(false);
           if (var4 == null) {
             GameKeyHandler.a(-29901, (Throwable) null, "QC2");
@@ -197,7 +197,7 @@ final class BattleContribution extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class BattleContribution extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "ne.E(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "ne.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class BattleContribution extends IntrusiveNode {
           this.field_r = param2;
           this.field_k = param0.field_y;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class BattleContribution extends IntrusiveNode {
           this.field_p = param2;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

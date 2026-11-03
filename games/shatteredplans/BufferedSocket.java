@@ -71,7 +71,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static void a(int param0, si param1) {
+    final static void a(int param0, QuickChatPhraseDefinition param1) {
         try {
           param1.field_s = new char[]{(char)63};
           if (param0 >= -39) {
@@ -309,7 +309,7 @@ final class BufferedSocket implements Runnable {
           }
           param1.field_x = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ke.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ke.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class BufferedSocket implements Runnable {
           this.field_n = this.field_o.getOutputStream();
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ke.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ke.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -368,9 +368,9 @@ final class BufferedSocket implements Runnable {
             var10 = var10 ^ 285L;
           }
           var12 = var10 ^ var2;
-          field_l[0][var0] = ff.a(var12, ff.a(ff.a(var8 << 16, ff.a(var10 << 24, ff.a(var2 << 32, ff.a(ff.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8));
+          field_l[0][var0] = SpriteButton.a(var12, SpriteButton.a(SpriteButton.a(var8 << 16, SpriteButton.a(var10 << 24, SpriteButton.a(var2 << 32, SpriteButton.a(SpriteButton.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8));
           for (var14 = 1; var14 < 8; var14++) {
-            field_l[var14][var0] = ff.a(field_l[-1 + var14][var0] >>> 8, field_l[-1 + var14][var0] << 56);
+            field_l[var14][var0] = SpriteButton.a(field_l[-1 + var14][var0] >>> 8, field_l[-1 + var14][var0] << 56);
           }
           var0++;
         }

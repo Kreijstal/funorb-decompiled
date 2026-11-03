@@ -19,7 +19,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
             this.resultsPanelHeight(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           ig.field_d = ig.field_d + (var2_intLifetime2 >> 1);
           na.field_L = na.field_L + param0.readUnsignedShort(-20976);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         int[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
-        qk[] var27 = null;
+        MenuLabel[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
@@ -116,7 +116,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           if (var5Lifetime1 > 0) {
             lh.a((byte) 50, var4, (int[]) ((Object) this.field_n.clone()));
           }
-          var27 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(10)}))};
+          var27 = new MenuLabel[]{new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(10)}))};
           var7 = new Player[this.field_i.length];
           var32 = new int[this.field_i.length];
           var26 = var32;
@@ -187,7 +187,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           this.field_n = new int[this.field_i.length];
           this.field_s = new int[this.field_i.length];
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -278,7 +278,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         try {
           int var3_int = 1 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -326,7 +326,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

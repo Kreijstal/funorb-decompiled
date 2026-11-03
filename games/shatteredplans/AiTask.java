@@ -16,7 +16,7 @@ class AiTask extends IntrusiveNode {
           if (la.field_h != null) {
             var2 = la.field_h;
             String var1 = var2;
-            bf.a(113, re.a(ei.field_b, param0 ^ -12062, new String[]{var2}));
+            bf.a(113, QuickChatCategoryRegistry.a(ei.field_b, param0 ^ -12062, new String[]{var2}));
             la.field_h = null;
           }
           return;
@@ -38,7 +38,7 @@ class AiTask extends IntrusiveNode {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

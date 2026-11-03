@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class os extends vd {
-    jk field_v;
+final class os extends MenuComponent {
+    MenuContent field_v;
     static Sprite[] field_u;
 
     final static char a(char param0, int param1) {
@@ -138,7 +138,7 @@ final class os extends vd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -165,12 +165,12 @@ final class os extends vd {
             return stackIn_3_0;
           }
           if (po.field_b != 2) {
-            stackIn_7_0 = qh.field_C;
+            stackIn_7_0 = MenuWindow.field_C;
             return stackIn_7_0;
           }
           var7 = di.a(param2, param0 ^ 12);
           if (var7 == null) {
-            stackIn_10_0 = re.a(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
+            stackIn_10_0 = QuickChatCategoryRegistry.a(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
             return stackIn_10_0;
           }
           var7.unlink((byte) -74);
@@ -204,7 +204,7 @@ final class os extends vd {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -262,25 +262,25 @@ final class os extends vd {
           gf.a(-1 + (this.field_m + this.field_k), var3 + (this.field_t + 10), var5);
           var3++;
         }
-        vd var8 = (vd) (this.field_l.startReverse(3725));
+        MenuComponent var8 = (MenuComponent) (this.field_l.startReverse(3725));
         while (var8 != null) {
           var8.a(-101);
-          var8 = (vd) (this.field_l.nextReverse(-128));
+          var8 = (MenuComponent) (this.field_l.nextReverse(-128));
         }
     }
 
-    final vd b(byte param0, int param1, int param2) {
+    final MenuComponent findComponentAt(byte param0, int param1, int param2) {
         if (!this.field_s) {
           return null;
         }
-        vd var4 = as.a(this.field_l, param1, (byte) 118, param2);
+        MenuComponent var4 = as.a(this.field_l, param1, (byte) 118, param2);
         if (param0 < 51) {
-          return (vd) null;
+          return (MenuComponent) null;
         }
         if (var4 != null) {
           return var4;
         }
-        return super.b((byte) 69, param1, param2);
+        return super.findComponentAt((byte) 69, param1, param2);
     }
 
     public static void d(boolean param0) {

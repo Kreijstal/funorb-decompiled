@@ -73,7 +73,7 @@ final class pd extends hb {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class pd extends hb {
 
     final static void a(int param0) {
         hd.field_q = (byte[][]) null;
-        cm.field_g = null;
+        IntHashIndex.field_g = null;
         if (param0 == 0) {
           cf.field_H = null;
           WeightedCacheEntry.field_s = null;

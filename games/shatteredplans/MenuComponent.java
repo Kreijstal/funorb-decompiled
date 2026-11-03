@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vd extends IntrusiveNode {
+class MenuComponent extends IntrusiveNode {
     static IntrusiveDeque field_j;
     static String field_n;
     static String field_r;
@@ -16,17 +16,17 @@ class vd extends IntrusiveNode {
     boolean field_p;
     static qr field_q;
 
-    final void d(int param0, int param1, int param2) {
-        vd var6 = null;
+    final void translate(int param0, int param1, int param2) {
+        MenuComponent var6 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        vd var6Lifetime1;
+        MenuComponent var6Lifetime1;
         if (param1 != 0) {
           this.field_k = this.field_k + param1;
           this.field_t = this.field_t + param0;
-          var6 = (vd) (this.field_l.startForward(param2));
+          var6 = (MenuComponent) (this.field_l.startForward(param2));
           while (var6 != null) {
-            var6.d(param0, param1, 0);
-            var6 = (vd) (this.field_l.nextForward((byte) -71));
+            var6.translate(param0, param1, 0);
+            var6 = (MenuComponent) (this.field_l.nextForward((byte) -71));
           }
           return;
         }
@@ -35,27 +35,27 @@ class vd extends IntrusiveNode {
         }
         this.field_k = this.field_k + param1;
         this.field_t = this.field_t + param0;
-        var6Lifetime1 = (vd) (this.field_l.startForward(param2));
+        var6Lifetime1 = (MenuComponent) (this.field_l.startForward(param2));
         while (var6Lifetime1 != null) {
-          var6Lifetime1.d(param0, param1, 0);
-          var6Lifetime1 = (vd) (this.field_l.nextForward((byte) -71));
+          var6Lifetime1.translate(param0, param1, 0);
+          var6Lifetime1 = (MenuComponent) (this.field_l.nextForward((byte) -71));
         }
     }
 
-    void e(int param0) {
+    void unlinkChildren(int param0) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        vd var4 = (vd) (this.field_l.startForward(param0 ^ param0));
+        MenuComponent var4 = (MenuComponent) (this.field_l.startForward(param0 ^ param0));
         while (var4 != null) {
           var4.unlink((byte) -69);
-          var4 = (vd) (this.field_l.nextForward((byte) -71));
+          var4 = (MenuComponent) (this.field_l.nextForward((byte) -71));
         }
     }
 
-    final boolean a(byte param0, vd param1) {
+    final boolean isOrContains(byte param0, MenuComponent param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        vd var6 = null;
+        MenuComponent var6 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -66,12 +66,12 @@ class vd extends IntrusiveNode {
             return true;
           }
           var4 = -85 / ((-63 - param0) / 47);
-          var6 = (vd) (this.field_l.startForward(0));
+          var6 = (MenuComponent) (this.field_l.startForward(0));
           while (var6 != null) {
-            if (var6.a((byte) -125, param1)) {
+            if (var6.isOrContains((byte) -125, param1)) {
               return true;
             }
-            var6 = (vd) (this.field_l.nextForward((byte) -71));
+            var6 = (MenuComponent) (this.field_l.nextForward((byte) -71));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,11 +84,11 @@ class vd extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final boolean c(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         boolean stackIn_11_0 = false;
         boolean stackIn_18_0 = false;
         if (!this.field_p) {
@@ -103,7 +103,7 @@ class vd extends IntrusiveNode {
           stackIn_11_0 = (0 <= param1) && (param0 >= 0) && (this.field_m > param1) && (param0 < this.field_i);
           return stackIn_11_0;
         }
-        vd.d(-118);
+        MenuComponent.d(-118);
         stackIn_18_0 = (0 <= param1) && (param0 >= 0) && (this.field_m > param1) && (param0 < this.field_i);
         return stackIn_18_0;
     }
@@ -137,13 +137,13 @@ class vd extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, byte param2) {
-        if (null != re.field_d) {
-          if (param1 <= re.field_d.length) {
+        if (null != QuickChatCategoryRegistry.field_d) {
+          if (param1 <= QuickChatCategoryRegistry.field_d.length) {
             if (null == GameApplet.field_f ||
               !(param1 <= GameApplet.field_f.length)) {
               GameApplet.field_f = new int[param1 * 2];
@@ -173,7 +173,7 @@ class vd extends IntrusiveNode {
               aq.field_p = new boolean[2 * param1];
             }
           } else {
-            re.field_d = new int[param1 * 2];
+            QuickChatCategoryRegistry.field_d = new int[param1 * 2];
             if (null == GameApplet.field_f ||
               !(param1 <= GameApplet.field_f.length)) {
               GameApplet.field_f = new int[param1 * 2];
@@ -216,7 +216,7 @@ class vd extends IntrusiveNode {
             }
           }
         } else {
-          re.field_d = new int[param1 * 2];
+          QuickChatCategoryRegistry.field_d = new int[param1 * 2];
           if (null == GameApplet.field_f) {
             GameApplet.field_f = new int[param1 * 2];
             if (null == fb.field_zb ||
@@ -312,42 +312,42 @@ class vd extends IntrusiveNode {
         }
         wm.field_c = 0;
         if (param2 != 18) {
-          vd.a((byte) 6);
+          MenuComponent.a((byte) 6);
         }
-        ff.field_u = 2147483647;
+        SpriteButton.field_u = 2147483647;
         GzipInflater.field_e = -2147483648;
         us.field_b = -2147483648;
         ef.field_a = 2147483647;
     }
 
-    final void c(boolean param0) {
-        vd var4 = null;
+    final void dispose(boolean param0) {
+        MenuComponent var4 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        vd var4Lifetime1;
+        MenuComponent var4Lifetime1;
         if (param0) {
-          this.a((byte) 48, 44, -59);
+          this.moveTo((byte) 48, 44, -59);
         } else {
-          var4 = (vd) (this.field_l.startForward(0));
+          var4 = (MenuComponent) (this.field_l.startForward(0));
           while (var4 != null) {
-            var4.c(false);
-            var4 = (vd) (this.field_l.nextForward((byte) -71));
+            var4.dispose(false);
+            var4 = (MenuComponent) (this.field_l.nextForward((byte) -71));
           }
-          this.e(0);
+          this.unlinkChildren(0);
           return;
         }
-        var4Lifetime1 = (vd) (this.field_l.startForward(0));
+        var4Lifetime1 = (MenuComponent) (this.field_l.startForward(0));
         while (var4Lifetime1 != null) {
-          var4Lifetime1.c(false);
-          var4Lifetime1 = (vd) (this.field_l.nextForward((byte) -71));
+          var4Lifetime1.dispose(false);
+          var4Lifetime1 = (MenuComponent) (this.field_l.nextForward((byte) -71));
         }
-        this.e(0);
+        this.unlinkChildren(0);
     }
 
-    void a(vd param0, int param1) {
+    void addChild(MenuComponent param0, int param1) {
         try {
           this.field_l.addFirst(param0, param1 ^ param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vd.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vd.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -366,13 +366,13 @@ class vd extends IntrusiveNode {
           return;
         }
         Archive var2 = (Archive) null;
-        vd.a(40, (Archive) null, 88, 85);
+        MenuComponent.a(40, (Archive) null, 88, 85);
         field_q = null;
         field_j = null;
         field_r = null;
     }
 
-    void a(boolean param0, int param1, int param2) {
+    void resize(boolean param0, int param1, int param2) {
         this.field_i = param1;
         if (param0) {
           this.field_m = param2;
@@ -403,18 +403,18 @@ class vd extends IntrusiveNode {
           }
           if (param0 != 2147483647) {
             var4 = (Archive) null;
-            vd.a(0, (Archive) null, -70, 78);
+            MenuComponent.a(0, (Archive) null, -70, 78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "vd.HA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "vd.HA(" + param0 + ')');
         }
     }
 
-    vd b(byte param0, int param1, int param2) {
-        if (this.c(param1, param2, 0)) {
+    MenuComponent findComponentAt(byte param0, int param1, int param2) {
+        if (this.containsPoint(param1, param2, 0)) {
           return this;
         }
         if (param0 > 51) {
@@ -424,20 +424,20 @@ class vd extends IntrusiveNode {
         return null;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void moveTo(byte param0, int param1, int param2) {
         if (param1 != this.field_k) {
-          this.d(param2 - this.field_t, -this.field_k + param1, 0);
+          this.translate(param2 - this.field_t, -this.field_k + param1, 0);
           if (param0 < 37) {
-            this.b((byte) -125, 17, -8);
+            this.findComponentAt((byte) -125, 17, -8);
           }
           return;
         }
         if (param2 == this.field_t) {
           return;
         }
-        this.d(param2 - this.field_t, -this.field_k + param1, 0);
+        this.translate(param2 - this.field_t, -this.field_k + param1, 0);
         if (param0 < 37) {
-          this.b((byte) -125, 17, -8);
+          this.findComponentAt((byte) -125, 17, -8);
         }
     }
 
@@ -445,7 +445,7 @@ class vd extends IntrusiveNode {
         int var2 = 27 / ((param0 - 67) / 47);
     }
 
-    vd(int param0, int param1, int param2, int param3) {
+    MenuComponent(int param0, int param1, int param2, int param3) {
         rs.field_Cb.stringWidth("200");
         this.field_k = param0;
         this.field_h = null;

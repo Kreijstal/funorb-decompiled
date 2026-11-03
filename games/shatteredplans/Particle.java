@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends IntrusiveNode {
+final class Particle extends IntrusiveNode {
     float field_p;
     float field_k;
     float field_n;
@@ -23,11 +23,11 @@ final class sb extends IntrusiveNode {
           v.field_d = 0;
           int var2_int = -125 % ((param0 + 60) / 36);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    sb(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7) {
+    Particle(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7) {
         int var9 = 0;
         this.field_o = new float[50];
         this.field_s = param7;

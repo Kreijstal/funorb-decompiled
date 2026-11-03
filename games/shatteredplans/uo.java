@@ -64,7 +64,7 @@ final class uo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "uo.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "uo.A(" + param0 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class uo {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -201,25 +201,25 @@ final class uo {
             var7.field_K = 0;
             if (!SecondaryNodeDequeIterator.a((byte) -94)) {
               var9_ref_String = np.field_a.field_Xb;
-              ArchiveSourceManager.field_f.field_z = re.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
+              ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
               dn.field_f.a(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
-              dn.field_f.field_z = re.a(gq.field_a, 4371, new String[]{var9_ref_String});
+              dn.field_f.field_z = QuickChatCategoryRegistry.a(gq.field_a, 4371, new String[]{var9_ref_String});
               var8 = dn.field_f;
             } else {
               ArchiveSourceManager.field_f.field_z = n.field_m.toUpperCase();
               var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
               TextFieldWidget.field_I.a(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
               if (np.field_a.field_Lb >= np.field_a.field_Eb) {
-                TextFieldWidget.field_I.field_z = gm.field_j.toUpperCase();
+                TextFieldWidget.field_I.field_z = SoundPlayback.field_j.toUpperCase();
                 TextFieldWidget.field_I.field_s = false;
               } else {
-                TextFieldWidget.field_I.field_z = ph.field_c.toUpperCase();
+                TextFieldWidget.field_I.field_z = ListContent.field_c.toUpperCase();
                 TextFieldWidget.field_I.field_s = true;
               }
               TextFieldWidget.field_I.field_F = IsaacBackedRandom.field_a.field_F;
               if (0 < ah.field_X) {
                 if (ah.field_X != 1) {
-                  var10_ref_String = re.a(AudioService.field_e, 4371, new String[]{Integer.toString(ah.field_X)});
+                  var10_ref_String = QuickChatCategoryRegistry.a(AudioService.field_e, 4371, new String[]{Integer.toString(ah.field_X)});
                 } else {
                   var10_ref_String = SolVictoryChecker.field_k;
                 }
@@ -230,7 +230,7 @@ final class uo {
                 TextFieldWidget.field_I.field_z = TextFieldWidget.field_I.field_z + "<br>" + var10_ref_String;
               }
               aq.field_j.a(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
-              aq.field_j.field_z = lp.field_u.toUpperCase();
+              aq.field_j.field_z = MenuList.field_u.toUpperCase();
               stackIn_20_0 = aq.field_j;
               stackIn_21_1 = (param3) && (sf.field_e == 0L);
               stackIn_20_0.field_s = stackIn_21_1;
@@ -238,10 +238,10 @@ final class uo {
               var10 = 2;
               if (pe.field_D != null) {
                 if (lr.field_c == null) {
-                  lr.field_c = new byte[em.field_k];
-                  ek.field_F = new boolean[em.field_k];
+                  lr.field_c = new byte[ProductionContent.field_k];
+                  ek.field_F = new boolean[ProductionContent.field_k];
                 }
-                for (var11_int = 0; var11_int < em.field_k; var11_int++) {
+                for (var11_int = 0; var11_int < ProductionContent.field_k; var11_int++) {
                   ek.field_F[var11_int] = false;
                 }
                 var10 = 0;
@@ -315,7 +315,7 @@ final class uo {
                   var13_int = 0;
                   var14_intLifetime1 = 0;
                   var15Lifetime1 = 0;
-                  for (var16Lifetime1 = 0; em.field_k > var16Lifetime1; var16Lifetime1++) {
+                  for (var16Lifetime1 = 0; ProductionContent.field_k > var16Lifetime1; var16Lifetime1++) {
                     var17_intLifetime1 = 255 & np.field_a.field_dc[var16Lifetime1];
                     if (null != SliderWidget.field_E &&
                       SliderWidget.field_E[var16Lifetime1] != null &&
@@ -392,7 +392,7 @@ final class uo {
                       if (n.field_h.field_d.field_zb == 0) {
                         dn.field_k = IntrusiveDequeCursor.field_a;
                       } else {
-                        dn.field_k = re.a(jr.field_l, param0 ^ 4356, new String[]{jo.field_c});
+                        dn.field_k = QuickChatCategoryRegistry.a(jr.field_l, param0 ^ 4356, new String[]{QuickChatPhraseRegistry.field_c});
                       }
                     }
                   }
@@ -404,9 +404,9 @@ final class uo {
                 if (aq.field_j.field_v) {
                   var11 = null;
                   var12Lifetime2 = 0;
-                  for (var13_intLifetime1 = 0; em.field_k > var13_intLifetime1; var13_intLifetime1++) {
+                  for (var13_intLifetime1 = 0; ProductionContent.field_k > var13_intLifetime1; var13_intLifetime1++) {
                     if (ek.field_F[var13_intLifetime1]) {
-                      var23 = "<col=A00000>" + gm.field_l[var13_intLifetime1] + "</col>";
+                      var23 = "<col=A00000>" + SoundPlayback.field_l[var13_intLifetime1] + "</col>";
                       if (var11 == null) {
                         var11 = var23;
                       } else {
@@ -418,7 +418,7 @@ final class uo {
                   if (var10 != 0) {
                     var13_ref = md.field_I;
                     if (var12Lifetime2 == 0) {
-                      var14 = re.a(r.field_f, 4371, new String[]{(String) (var11)});
+                      var14 = QuickChatCategoryRegistry.a(UrlLoader.field_f, 4371, new String[]{(String) (var11)});
                     } else {
                       var14 = mi.field_b + (String) (var11);
                     }
@@ -427,7 +427,7 @@ final class uo {
                     if (var12Lifetime2 != 0) {
                       var14 = MusicPatch.field_l + (String) (var11);
                     } else {
-                      var14 = re.a(js.field_h, 4371, new String[]{(String) (var11)});
+                      var14 = QuickChatCategoryRegistry.a(js.field_h, 4371, new String[]{(String) (var11)});
                     }
                   }
                   dn.field_k = "<col=A00000>" + var13_ref + "<br>" + var14;
@@ -440,9 +440,9 @@ final class uo {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_z = re.a(oe.field_b, 4371, new String[]{Integer.toString(var9)});
+              var8.field_z = QuickChatCategoryRegistry.a(oe.field_b, 4371, new String[]{Integer.toString(var9)});
             }
-            DefendTask.field_x.field_z = re.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(np.field_a.field_Lb), Integer.toString(np.field_a.field_Eb)});
+            DefendTask.field_x.field_z = QuickChatCategoryRegistry.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(np.field_a.field_Lb), Integer.toString(np.field_a.field_Eb)});
           }
           stackIn_159_0 = am.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
@@ -477,7 +477,7 @@ final class uo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var5), "uo.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var5), "uo.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

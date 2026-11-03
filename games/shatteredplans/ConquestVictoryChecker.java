@@ -35,7 +35,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
         try {
           int var3_int = -114 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         nk[] var1 = new nk[en.field_c];
         for (var2 = 0; en.field_c > var2; var2++) {
-          var1[var2] = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], hd.field_q[var2], eo.field_fb);
+          var1[var2] = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], hd.field_q[var2], eo.field_fb);
         }
         if (param0) {
           pd.a(0);
@@ -126,7 +126,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
             field_o = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

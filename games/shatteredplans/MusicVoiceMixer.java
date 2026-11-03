@@ -94,19 +94,19 @@ final class MusicVoiceMixer extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static lp a(byte param0, Territory param1, em param2, boolean param3) {
+    final static MenuList a(byte param0, Territory param1, ProductionContent param2, boolean param3) {
         int var11_int = 0;
         String dupTemp$0 = null;
         int var18 = 0;
-        jh stackIn_17_0 = null;
-        qk stackIn_17_1 = null;
+        ToggleButton stackIn_17_0 = null;
+        MenuLabel stackIn_17_1 = null;
         StringBuilder stackIn_17_2 = null;
         String stackIn_18_3;
-        lp stackIn_25_0 = null;
+        MenuList stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -114,39 +114,39 @@ final class MusicVoiceMixer extends PcmStream {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ff var5 = null;
+        SpriteButton var5 = null;
         String var6 = null;
         kb var7 = null;
         int var8 = 0;
-        ff var9 = null;
+        SpriteButton var9 = null;
         b var10 = null;
         b var11 = null;
         int var12 = 0;
         b var12_ref_b = null;
-        qk var13 = null;
+        MenuLabel var13 = null;
         int var13_int = 0;
-        ff var14 = null;
-        qk var14_ref = null;
-        qk var15 = null;
-        ff var15_ref = null;
+        SpriteButton var14 = null;
+        MenuLabel var14_ref = null;
+        MenuLabel var15 = null;
+        SpriteButton var15_ref = null;
         String var16 = null;
-        qk var17 = null;
+        MenuLabel var17 = null;
         int var19 = 0;
-        em var20 = null;
-        lp var21 = null;
+        ProductionContent var20 = null;
+        MenuList var21 = null;
         String var22 = null;
         String var23 = null;
         Object var24 = null;
-        jh var24_ref = null;
+        ToggleButton var24_ref = null;
         String var6Lifetime1;
         String var6Lifetime2;
         var24 = null;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var21 = new lp(0, 0, 209, 70);
+          var21 = new MenuList(0, 0, 209, 70);
           var21.field_h = param1;
-          var5 = new ff(-5 + (40 - (-((5 + ObjectList.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, MatchingTextValidator.field_r);
-          var21.a(var5, 8);
+          var5 = new SpriteButton(-5 + (40 - (-((5 + ObjectList.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, MatchingTextValidator.field_r);
+          var21.addChild(var5, 8);
           var22 = param1.field_q.name;
           var6 = var22;
           var6Lifetime1 = var22;
@@ -155,23 +155,23 @@ final class MusicVoiceMixer extends PcmStream {
             var6Lifetime2 = var22 + " (" + param1.field_o.name + ")";
           }
           var7 = new kb(0, 0, 209, param1.field_o.field_k, var6Lifetime2, 16777215, false);
-          var21.a(var7, 8);
+          var21.addChild(var7, 8);
           var8 = 7;
-          var9 = new ff(0, var8 + var7.field_i, 35, 35, uk.a(false, param1.field_q));
-          var21.a(var9, 8);
+          var9 = new SpriteButton(0, var8 + var7.field_i, 35, 35, uk.a(false, param1.field_q));
+          var21.addChild(var9, 8);
           var10 = new b(40, var8 + (var7.field_i + ObjectList.field_d[0].field_w), 4 * ObjectList.field_d[0].field_z + 15, 35 - ObjectList.field_d[0].field_w, 2, 2105376);
-          var21.a(var10, 8);
+          var21.addChild(var10, 8);
           for (var11_int = 0; 4 > var11_int; var11_int++) {
             var12_ref_b = new b(var11_int * (5 + ObjectList.field_d[var11_int].field_z) + 40, var7.field_i + var8 + ObjectList.field_d[var11_int].field_w / 2, ObjectList.field_d[var11_int].field_z, 35 - ObjectList.field_d[var11_int].field_w / 2, 2, 2105376);
-            var21.a(var12_ref_b, 8);
+            var21.addChild(var12_ref_b, 8);
             var13_int = param1.field_r + param1.field_u[var11_int];
             if (var13_int < 0) {
               var13_int = 0;
             }
-            var14_ref = new qk((ObjectList.field_d[var11_int].field_z + 5) * var11_int + 40, ObjectList.field_d[var11_int].field_w + var7.field_i + var8, ObjectList.field_d[var11_int].field_z, rs.field_Cb.field_J, Integer.toString(var13_int));
-            var21.a(var14_ref, 8);
-            var15_ref = new ff(40 + var11_int * (5 + ObjectList.field_d[var11_int].field_z), var7.field_i + var8, ObjectList.field_d[var11_int]);
-            var21.a(var15_ref, 8);
+            var14_ref = new MenuLabel((ObjectList.field_d[var11_int].field_z + 5) * var11_int + 40, ObjectList.field_d[var11_int].field_w + var7.field_i + var8, ObjectList.field_d[var11_int].field_z, rs.field_Cb.field_J, Integer.toString(var13_int));
+            var21.addChild(var14_ref, 8);
+            var15_ref = new SpriteButton(40 + var11_int * (5 + ObjectList.field_d[var11_int].field_z), var7.field_i + var8, ObjectList.field_d[var11_int]);
+            var21.addChild(var15_ref, 8);
             var23 = BattleContribution.field_m[var11_int];
             var16 = var23;
             if (0 == param1.field_u[var11_int]) {
@@ -182,37 +182,37 @@ final class MusicVoiceMixer extends PcmStream {
             var12_ref_b.field_o = var16;
           }
           var11 = new b(ObjectList.field_d[0].field_z * 4 + 60, var8 + (var7.field_i + ObjectList.field_d[0].field_w / 2), TurnEventLog.field_d.field_z, -(ObjectList.field_d[0].field_w / 2) + 35, 2, 534312);
-          var21.a(var11, 8);
+          var21.addChild(var11, 8);
           var12 = param1.field_r;
           if (var12 < 0) {
             var12 = 0;
           }
           if (param0 <= 117) {
-            var20 = (em) null;
-            MusicVoiceMixer.a((byte) -57, (Territory) null, (em) null, true);
+            var20 = (ProductionContent) null;
+            MusicVoiceMixer.a((byte) -57, (Territory) null, (ProductionContent) null, true);
           }
-          var13 = new qk(20 + 4 * ObjectList.field_d[0].field_z + 40, ObjectList.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
-          var21.a(var13, 8);
-          var14 = new ff(20 - (-(4 * ObjectList.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), TurnEventLog.field_d);
-          var21.a(var14, 8);
-          var14.field_o = si.field_w;
-          var13.field_o = si.field_w;
-          var11.field_o = si.field_w;
-          var15 = new qk(54 + ObjectList.field_d[0].field_z * 4, var7.field_i + (var8 + ObjectList.field_d[0].field_w), "=");
-          var21.a(var15, 8);
-          var24_ref = new jh(4 * ObjectList.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, aq.field_i.field_z, aq.field_i.field_w, -1, aq.field_i, (String) null, -1, -1, hq.field_a, (String) null, -1);
+          var13 = new MenuLabel(20 + 4 * ObjectList.field_d[0].field_z + 40, ObjectList.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
+          var21.addChild(var13, 8);
+          var14 = new SpriteButton(20 - (-(4 * ObjectList.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), TurnEventLog.field_d);
+          var21.addChild(var14, 8);
+          var14.field_o = QuickChatPhraseDefinition.field_w;
+          var13.field_o = QuickChatPhraseDefinition.field_w;
+          var11.field_o = QuickChatPhraseDefinition.field_w;
+          var15 = new MenuLabel(54 + ObjectList.field_d[0].field_z * 4, var7.field_i + (var8 + ObjectList.field_d[0].field_w), "=");
+          var21.addChild(var15, 8);
+          var24_ref = new ToggleButton(4 * ObjectList.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, aq.field_i.field_z, aq.field_i.field_w, -1, aq.field_i, (String) null, -1, -1, hq.field_a, (String) null, -1);
           var24_ref.field_h = param1;
-          var21.a(var24_ref, 8);
-          var17 = new qk(var24_ref.field_k, 29 + var24_ref.field_t, var24_ref.field_m, rs.field_Cb.field_J, Integer.toString(param1.field_x));
+          var21.addChild(var24_ref, 8);
+          var17 = new MenuLabel(var24_ref.field_k, 29 + var24_ref.field_t, var24_ref.field_m, rs.field_Cb.field_J, Integer.toString(param1.field_x));
           var17.field_h = param1;
-          var21.a(var17, 8);
+          var21.addChild(var17, 8);
           stackIn_17_0 = var24_ref;
           stackIn_17_1 = var17;
           stackIn_17_2 = new StringBuilder().append(hd.field_j).append(" ");
           if (1 == param1.field_x) {
-            stackIn_18_3 = ad.field_a;
+            stackIn_18_3 = StatusContent.field_a;
           } else {
-            stackIn_18_3 = re.a(d.field_c, 4371, new String[]{Integer.toString(param1.field_x)});
+            stackIn_18_3 = QuickChatCategoryRegistry.a(d.field_c, 4371, new String[]{Integer.toString(param1.field_x)});
           }
           dupTemp$0 = ((StringBuilder) (Object) stackIn_17_2).append(stackIn_18_3).toString();
           stackIn_17_1.field_o = dupTemp$0;
@@ -244,7 +244,7 @@ final class MusicVoiceMixer extends PcmStream {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -316,7 +316,7 @@ final class MusicVoiceMixer extends PcmStream {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class MusicVoiceMixer extends PcmStream {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -412,7 +412,7 @@ final class MusicVoiceMixer extends PcmStream {
         try {
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

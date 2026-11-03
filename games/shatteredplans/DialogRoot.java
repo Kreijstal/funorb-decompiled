@@ -112,7 +112,7 @@ final class DialogRoot extends SingleChildWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class DialogRoot extends SingleChildWidget {
           var3.field_E = param0 ? true : false;
           var3.containsWidget((byte) 126, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -437,7 +437,7 @@ final class DialogRoot extends SingleChildWidget {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void a(boolean param0, boolean param1) {
-        n.field_h = !param1 ? new wh(jo.field_c, so.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
+        n.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, so.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
         am.field_xb = new qr(0L, (qr) null);
         am.field_xb.a(4, n.field_h.field_d);
         am.field_xb.a(4, DialPainter.field_g);
@@ -466,22 +466,22 @@ final class DialogRoot extends SingleChildWidget {
         if (!param0) {
           DialogRoot.a('x', 117);
         }
-        jo.field_a = new qr(0L, (qr) null);
+        QuickChatPhraseRegistry.field_a = new qr(0L, (qr) null);
         MouseInputHandler.field_d.a(4, ValidationIndicator.field_K);
-        MouseInputHandler.field_d.a(4, jo.field_a);
-        jo.field_a.a(4, lp.field_v);
-        jo.field_a.a(4, oo.field_c);
+        MouseInputHandler.field_d.a(4, QuickChatPhraseRegistry.field_a);
+        QuickChatPhraseRegistry.field_a.a(4, MenuList.field_v);
+        QuickChatPhraseRegistry.field_a.a(4, oo.field_c);
         en.a(15471, param1);
     }
 
     final static void a(byte param0, byte[] param1) {
         try {
-          ql.a((byte) 50, qk.a(param1, 13));
+          ql.a((byte) 50, MenuLabel.a(param1, 13));
           if (param0 <= 21) {
             DialogRoot.e(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "tc.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tc.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -511,7 +511,7 @@ final class DialogRoot extends SingleChildWidget {
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
         nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
         int var1 = cr.field_c + 2;
-        lp.field_v.a(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
+        MenuList.field_v.a(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
         vm.field_Ab.a(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
         sg.field_zb.a(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);

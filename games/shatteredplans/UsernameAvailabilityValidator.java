@@ -20,7 +20,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           mj.field_Hb[param2] = new sm(param2);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ec.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ec.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             ShatteredPlansClient.field_H = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RandomAccessCacheFile.a(-104);
         var4.bindAsRenderTarget();
         for (var5 = 0; var4.field_z > var5; var5++) {
-          gf.j(var5, 0, var4.field_w, SolVictoryChecker.a(0, gm.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
+          gf.j(var5, 0, var4.field_w, SolVictoryChecker.a(0, SoundPlayback.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
         }
         for (var5Lifetime1 = 0; -1 + var4.field_z > var5Lifetime1; var5Lifetime1++) {
           var4.field_B[var5Lifetime1] = SolVictoryChecker.a(0, var4.field_B[var5Lifetime1], -92, 128);
@@ -319,7 +319,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

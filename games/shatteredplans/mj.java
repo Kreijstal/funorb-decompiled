@@ -36,7 +36,7 @@ final class mj extends qr {
         if (DerelictVictoryChecker.field_m != null) {
           DerelictVictoryChecker.field_m.a(13505, param1);
           if (param0 == 0) {
-            r.a((byte) -82, param1);
+            UrlLoader.a((byte) -82, param1);
             if (null != DialogRoot.field_G) {
               DialogRoot.field_G.b(param1, -68);
             }
@@ -46,7 +46,7 @@ final class mj extends qr {
           return;
         }
         if (param0 == 0) {
-          r.a((byte) -82, param1);
+          UrlLoader.a((byte) -82, param1);
           if (null != DialogRoot.field_G) {
             DialogRoot.field_G.b(param1, -68);
           }
@@ -104,7 +104,7 @@ final class mj extends qr {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class mj extends qr {
           var5 = (CharSequence) ((Object) this.field_Db);
           ji.a(var5, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class mj extends qr {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class mj extends qr {
           var6 = (CharSequence) ((Object) this.field_Db);
           ji.a(var6, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

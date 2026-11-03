@@ -58,7 +58,7 @@ final class SecondaryNodeHashTable {
           if (param0 != 15) {
             field_f = (Sprite) null;
           }
-          var2 = new th(param1, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, cm.field_g, eo.field_fb, hd.field_q);
+          var2 = new th(param1, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, eo.field_fb, hd.field_q);
           pd.a(param0 - 15);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -72,7 +72,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -443,24 +443,24 @@ final class SecondaryNodeHashTable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var6), "in.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var6), "in.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static qh a(int param0, boolean param1) {
-        fe var2 = null;
-        lp var3 = null;
-        tq.field_j = new qh(320, -param0 + 479 - 28, 200, param0 + 28, ih.field_a.toUpperCase());
+    final static MenuWindow a(int param0, boolean param1) {
+        MenuButton var2 = null;
+        MenuList var3 = null;
+        tq.field_j = new MenuWindow(320, -param0 + 479 - 28, 200, param0 + 28, ih.field_a.toUpperCase());
         if (param1) {
-          var2 = new fe(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+          var2 = new MenuButton(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
           var2.field_h = tq.field_j;
-          tq.field_j.a(var2, 8);
-          var3 = new lp(tq.field_j.field_k + 9, tq.field_j.field_t + 20, 182, param0);
-          tq.field_j.a(var3, 8);
+          tq.field_j.addChild(var2, 8);
+          var3 = new MenuList(tq.field_j.field_k + 9, tq.field_j.field_t + 20, 182, param0);
+          tq.field_j.addChild(var3, 8);
           tq.field_j.field_z = var3;
           return tq.field_j;
         }
-        return (qh) null;
+        return (MenuWindow) null;
     }
 
     final void put(long param0, DualLinkNode param1, boolean param2) {
@@ -494,7 +494,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -541,7 +541,7 @@ final class SecondaryNodeHashTable {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -582,7 +582,7 @@ final class SecondaryNodeHashTable {
         if (ns.field_pb) {
           cp.field_a.a(4, nm.field_c);
         }
-        cp.field_a.a(4, lp.field_v);
+        cp.field_a.a(4, MenuList.field_v);
         Archive.field_g = new wh(ds.field_a, cp.field_a);
         if (param0 != -83) {
           field_i = (Sprite) null;

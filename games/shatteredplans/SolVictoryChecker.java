@@ -103,7 +103,7 @@ final class SolVictoryChecker extends VictoryChecker {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class SolVictoryChecker extends VictoryChecker {
           }
           int var4 = -70 % ((param0 + 72) / 45);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class SolVictoryChecker extends VictoryChecker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class SolVictoryChecker extends VictoryChecker {
         int[] var5 = null;
         int var6 = 0;
         int[] var7 = null;
-        qk[] var7_array = null;
+        MenuLabel[] var7_array = null;
         Player[] var8 = null;
         int[] var9 = null;
         int var9_int = 0;
@@ -255,7 +255,7 @@ final class SolVictoryChecker extends VictoryChecker {
         Player var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        qk[] var19 = null;
+        MenuLabel[] var19 = null;
         int[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
@@ -285,15 +285,15 @@ final class SolVictoryChecker extends VictoryChecker {
           if (var6Lifetime1 > 0) {
             lh.a((byte) 84, var5, (int[]) ((Object) this.field_n.clone()));
           }
-          var19 = new qk[3];
+          var19 = new MenuLabel[3];
           var7_array = var19;
-          var7_array[0] = new qk(0, 0, 182, rs.field_Cb.field_J, re.a(hr.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
+          var7_array[0] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(hr.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
           if (var16 == null) {
-            var7_array[1] = new qk(0, 0, 182, rs.field_Cb.field_J, TutorialAi.field_t);
-            var7_array[2] = new qk(0, 0, 182, rs.field_Cb.field_J, (String) null);
+            var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, TutorialAi.field_t);
+            var7_array[2] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, (String) null);
           } else {
-            var7_array[1] = new qk(0, 0, 182, rs.field_Cb.field_J, ms.field_h);
-            var7_array[2] = new qk(0, 0, 182, rs.field_Cb.field_J, var16.name, var16.field_k);
+            var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, ms.field_h);
+            var7_array[2] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, var16.name, var16.field_k);
           }
           var8 = new Player[this.field_i.length];
           var23 = new int[this.field_i.length];
@@ -338,7 +338,7 @@ final class SolVictoryChecker extends VictoryChecker {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ final class SolVictoryChecker extends VictoryChecker {
               va.field_j = stackIn_44_0;
               if (!param2) {
                 stackIn_48_0 = ((4 & var7) != 0);
-                si.field_v = stackIn_48_0;
+                QuickChatPhraseDefinition.field_v = stackIn_48_0;
                 stackIn_51_0 = ((var7 & 8) != 0);
                 bg.field_g = stackIn_51_0;
                 stackIn_54_0 = ((2 & var7) != 0);
@@ -498,7 +498,7 @@ final class SolVictoryChecker extends VictoryChecker {
                 jf.a(-25602, var6, GameScreen.getHostApplet((byte) 125));
               }
               if (StarAnnotation.field_m <= 0 &&
-                !si.field_v) {
+                !QuickChatPhraseDefinition.field_v) {
                 try {
                   ll.a("unzap", GameScreen.getHostApplet((byte) 127), (byte) 121);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -578,7 +578,7 @@ final class SolVictoryChecker extends VictoryChecker {
             } else {
               stackIn_111_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -592,7 +592,7 @@ final class SolVictoryChecker extends VictoryChecker {
         try {
           this.field_n = new int[this.field_i.length];
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

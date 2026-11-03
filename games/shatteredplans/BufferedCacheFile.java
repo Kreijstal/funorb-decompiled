@@ -127,7 +127,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class BufferedCacheFile {
           field_f = null;
           field_j = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ej.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ej.C(" + param0 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "ej.B(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ej.B(" + param0 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "ej.G(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "ej.G(" + param0 + ')');
         }
     }
 
@@ -420,7 +420,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -446,7 +446,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -471,7 +471,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "ej.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "ej.E(" + param0 + ')');
         }
     }
 
@@ -488,7 +488,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "ej.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "ej.A(" + param0 + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "ej.K(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ej.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -516,7 +516,7 @@ final class BufferedCacheFile {
           int var2_int = 115 % ((param0 - 72) / 44);
           this.field_c.close(10);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ej.I(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ej.I(" + param0 + ')');
         }
     }
 
@@ -603,7 +603,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "ej.M(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "ej.M(" + param0 + ')');
         }
     }
 
@@ -665,7 +665,7 @@ final class BufferedCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "ej.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "ej.D(" + param0 + ')');
         }
     }
 
@@ -698,7 +698,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -843,7 +843,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -995,7 +995,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 }

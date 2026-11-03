@@ -104,7 +104,7 @@ final class be extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var9), "be.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var9), "be.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -128,13 +128,13 @@ final class be extends IntrusiveNode {
           if (param5 != -122) {
             return;
           }
-          sb.field_h = param6;
+          Particle.field_h = param6;
           ks.field_e = param8;
           UsernameAvailabilityValidator.field_p = -1L;
-          em.field_k = param8.length;
+          ProductionContent.field_k = param8.length;
           he.field_p = null;
           np.field_a = null;
-          id.field_c = new byte[(sb.field_h + 7) / 8];
+          id.field_c = new byte[(Particle.field_h + 7) / 8];
           TurnEventLog.field_i = false;
           var10_int = 0;
           for (var11 = 0; var11 < ks.field_e.length; var11++) {
@@ -195,7 +195,7 @@ final class be extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param9).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class be extends IntrusiveNode {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

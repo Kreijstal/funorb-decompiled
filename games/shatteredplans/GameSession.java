@@ -84,7 +84,7 @@ final class GameSession implements AiHost {
           var4 = param0.name + ": ";
           var5 = ji.field_I.field_K;
           if (this.field_f) {
-            var5 = var5 - ho.field_f.stringWidth("[" + re.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
+            var5 = var5 - ho.field_f.stringWidth("[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
           }
           if (this.field_f) {
             stackIn_16_0 = 0;
@@ -127,7 +127,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.WA(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -557,7 +557,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_145_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_144_0), ((StringBuilder) (Object) stackIn_144_1).append(stackIn_145_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_144_0), ((StringBuilder) (Object) stackIn_144_1).append(stackIn_145_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -636,7 +636,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -672,7 +672,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -695,7 +695,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.D(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -727,7 +727,7 @@ final class GameSession implements AiHost {
             this.field_y = false;
             if (!this.field_T) {
               if (this.field_m != 0) {
-                qk.a(us.field_d, param0 ^ -3671);
+                MenuLabel.a(us.field_d, param0 ^ -3671);
                 this.field_Y.a(-76, 0);
                 if (var5 == 0) {
                   return;
@@ -759,7 +759,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4_ref), "km.L(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4_ref), "km.L(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -822,7 +822,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -967,12 +967,12 @@ final class GameSession implements AiHost {
               (this.field_P.field_w & 1 << this.field_h) == 0) &&
               !(this.field_P.field_x.isLoser((byte) 123, this.field_n)));
             if (!decompiledSharedTail0) {
-              jo.a(param0 ^ 18008, wh.field_b, false, 10);
+              QuickChatPhraseRegistry.a(param0 ^ 18008, wh.field_b, false, 10);
               decompiledSharedTail0 = (var11 != 0);
             }
             if ((decompiledSharedTail0) &&
               (this.field_P.field_z)) {
-              jo.a(32767, PlacementEvent.field_n, false, 10);
+              QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
             }
             if (sm.field_e &&
               (1 << this.field_h & this.field_P.field_e) == 0) {
@@ -1021,7 +1021,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.M(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.M(" + param0 + ')');
         }
     }
 
@@ -1086,7 +1086,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1269,7 +1269,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3_ref), "km.AB(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3_ref), "km.AB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1288,7 +1288,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.H(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.H(" + param0 + ')');
         }
     }
 
@@ -1487,7 +1487,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.W(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.W(" + param0 + ')');
         }
     }
 
@@ -1563,7 +1563,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -1595,7 +1595,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.VA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.VA(" + param0 + ')');
         }
     }
 
@@ -1636,7 +1636,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1674,7 +1674,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.PA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.PA(" + param0 + ')');
         }
     }
 
@@ -1693,7 +1693,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.C(" + param0 + ')');
         }
     }
 
@@ -1810,7 +1810,7 @@ final class GameSession implements AiHost {
                 var3_intLifetime1 = var5.field_J - var6;
               }
               if (var3_intLifetime1 <= 0) {
-                qk.a(ConquestVictoryChecker.field_l, 47);
+                MenuLabel.a(ConquestVictoryChecker.field_l, 47);
                 if (var7 != 0) {
                   this.changeMoveSize(this.field_z.field_S, var3_intLifetime1, 10755);
                 }
@@ -1837,7 +1837,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
         }
     }
 
@@ -1890,7 +1890,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.A(" + param0 + ')');
         }
     }
 
@@ -1923,7 +1923,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.QA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.QA(" + param0 + ')');
         }
     }
 
@@ -1945,7 +1945,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.N(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.N(" + param0 + ')');
         }
     }
 
@@ -1961,15 +1961,15 @@ final class GameSession implements AiHost {
         try {
           if (this.field_n != param0) {
             if (param1 == this.field_n) {
-              var4 = re.a(AiTask.field_h, 4371, new String[]{param0.name});
+              var4 = QuickChatCategoryRegistry.a(AiTask.field_h, 4371, new String[]{param0.name});
               this.field_H.addFirst(new n(param0, (Player) null, var4), 0);
               if (ShatteredPlansClient.field_F) {
-                var4 = re.a(ud.field_b, 4371, new String[]{param1.name});
+                var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
                 this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
               }
             }
           } else {
-            var4 = re.a(ud.field_b, 4371, new String[]{param1.name});
+            var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
             this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
@@ -1995,7 +1995,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2014,7 +2014,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.E(" + param0 + ')');
         }
     }
 
@@ -2033,7 +2033,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4), "km.NA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4), "km.NA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2103,7 +2103,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.AA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.AA(" + param0 + ')');
         }
     }
 
@@ -2184,7 +2184,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2235,7 +2235,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2497,7 +2497,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_163_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_162_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_162_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(')').toString());
         }
     }
 
@@ -2564,7 +2564,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -2583,7 +2583,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.LA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.LA(" + param0 + ')');
         }
     }
 
@@ -2638,7 +2638,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -2743,7 +2743,7 @@ final class GameSession implements AiHost {
             di.field_p[81] &&
             oq.field_j == 16) {
             sm.field_e = true;
-            em.a(mq.c((byte) 73), 1);
+            ProductionContent.a(mq.c((byte) 73), 1);
             this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
             var2_ref = (FleetMove) (this.field_P.field_p.a(true));
             while (null != var2_ref) {
@@ -2821,7 +2821,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref2), "km.G(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref2), "km.G(" + param0 + ')');
         }
     }
 
@@ -2835,7 +2835,7 @@ final class GameSession implements AiHost {
         int var4_int = 0;
         Star[] var4 = null;
         Star var4_ref = null;
-        gm var4_ref2 = null;
+        SoundPlayback var4_ref2 = null;
         RuntimeException var4_ref3 = null;
         int var5_int = 0;
         Star[] var5 = null;
@@ -2904,12 +2904,12 @@ final class GameSession implements AiHost {
                       this.a(false, var5_int, this.field_z.field_p, this.field_K);
                       if (this.field_n != this.field_z.field_p.field_y && (null != this.field_z.field_p.field_y ||
                         this.field_z.field_p.field_x != 0)) {
-                        qk.a(ConquestVictoryChecker.field_l, 78);
+                        MenuLabel.a(ConquestVictoryChecker.field_l, 78);
                         if (var8 != 0) {
-                          qk.a(StandardMapGenerator.field_l, 89);
+                          MenuLabel.a(StandardMapGenerator.field_l, 89);
                         }
                       } else {
-                        qk.a(StandardMapGenerator.field_l, 89);
+                        MenuLabel.a(StandardMapGenerator.field_l, 89);
                       }
                     }
                     this.refreshMapView(2);
@@ -3039,7 +3039,7 @@ final class GameSession implements AiHost {
                 return;
               }
               this.field_K = this.field_z.field_p;
-              qk.a(us.field_d, 74);
+              MenuLabel.a(us.field_d, 74);
               this.field_Y.a(-107, 1);
               this.field_z.field_z[this.field_K.field_p] = 1;
               var4 = this.field_K.field_D;
@@ -3091,10 +3091,10 @@ final class GameSession implements AiHost {
               }
               var4_ref2 = DialWidget.a(96, SocketArchiveNetworkClient.field_w, var6);
               if (var8 != 0) {
-                var4_ref2 = qk.a(SocketArchiveNetworkClient.field_w, 78);
+                var4_ref2 = MenuLabel.a(SocketArchiveNetworkClient.field_w, 78);
               }
             } else {
-              var4_ref2 = qk.a(SocketArchiveNetworkClient.field_w, 78);
+              var4_ref2 = MenuLabel.a(SocketArchiveNetworkClient.field_w, 78);
             }
             if (null != this.field_E) {
               var5_ref2 = this.field_E;
@@ -3122,7 +3122,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var4_ref3), "km.BA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var4_ref3), "km.BA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3214,7 +3214,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.TA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.TA(" + param0 + ')');
         }
     }
 
@@ -3259,7 +3259,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3_ref), "km.BB(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3_ref), "km.BB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3274,7 +3274,7 @@ final class GameSession implements AiHost {
             GameSession.h(24);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "km.JA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.JA(" + param0 + ')');
         }
     }
 
@@ -3370,7 +3370,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3_ref), "km.GA(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3_ref), "km.GA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3387,28 +3387,28 @@ final class GameSession implements AiHost {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_n == param0) {
-            var4 = re.a(jb.field_a, 4371, new String[]{param2.name});
+            var4 = QuickChatCategoryRegistry.a(jb.field_a, 4371, new String[]{param2.name});
             this.field_H.addFirst(new n(param0, param2, var4), 0);
             if (var5 != 0) {
               if (param2 == this.field_n) {
-                var4 = re.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
+                var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
-                var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
               } else {
-                var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
               }
             }
           } else {
             boolean decompiledSharedTail0 = (param2 != this.field_n);
             if (!decompiledSharedTail0) {
-              var4 = re.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
+              var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
               this.field_H.addFirst(new n(param2, param0, var4), 0);
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
-              var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+              var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
               this.field_H.addFirst(new n(param2, param0, var4), 0);
             }
           }
@@ -3439,7 +3439,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -3511,7 +3511,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.DA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.DA(" + param0 + ')');
         }
     }
 
@@ -3687,13 +3687,13 @@ final class GameSession implements AiHost {
           if ((this.field_n == null ||
             (1 << this.field_h & this.field_P.field_w) == 0) && !this.field_P.field_x.isLoser((byte) -123, this.field_n)) {
             if (this.field_P.field_z) {
-              jo.a(32767, PlacementEvent.field_n, false, 10);
+              QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
               if (var6 != 0) {
-                jo.a(32767, wh.field_b, false, 10);
+                QuickChatPhraseRegistry.a(32767, wh.field_b, false, 10);
               }
             }
           } else {
-            jo.a(32767, wh.field_b, false, 10);
+            QuickChatPhraseRegistry.a(32767, wh.field_b, false, 10);
           }
           if (sm.field_e &&
             (this.field_P.field_e & 1 << this.field_h) == 0) {
@@ -3703,7 +3703,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref3), "km.J(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref3), "km.J(" + param0 + ')');
         }
     }
 
@@ -3866,7 +3866,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "km.T(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "km.T(" + param0 + ')');
         }
     }
 
@@ -3900,7 +3900,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "km.CA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "km.CA(" + param0 + ')');
         }
     }
 
@@ -4038,7 +4038,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4120,7 +4120,7 @@ final class GameSession implements AiHost {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2_ref), "km.UA(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2_ref), "km.UA(" + param0 + ')');
         }
     }
 
@@ -4195,7 +4195,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4399,7 +4399,7 @@ final class GameSession implements AiHost {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
         }
     }
 

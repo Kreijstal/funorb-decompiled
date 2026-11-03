@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si extends DualLinkNode {
+final class QuickChatPhraseDefinition extends DualLinkNode {
     static String field_w;
     static boolean field_v;
     boolean field_y;
@@ -20,10 +20,10 @@ final class si extends DualLinkNode {
         }
         or.field_a = true;
         wk.a(false, true);
-        gm.field_i = 0;
+        SoundPlayback.field_i = 0;
         if (param0 != -91) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
-          si.a(-82, (PlatformTaskDispatcher) null, -122, (byte) -43, -19, -109);
+          QuickChatPhraseDefinition.a(-82, (PlatformTaskDispatcher) null, -122, (byte) -43, -19, -109);
         }
     }
 
@@ -156,7 +156,7 @@ final class si extends DualLinkNode {
                 BufferedCacheFile.field_e = var9Lifetime1;
                 rr.field_t = -1;
               } else {
-                StarAnnotation.a(119, nc.a(-85));
+                StarAnnotation.a(119, CandidateLink.a(-85));
                 sa.field_d = new Boolean(ro.a((byte) -24, sa.field_a));
                 sa.field_a.position = 0;
               }
@@ -234,7 +234,7 @@ final class si extends DualLinkNode {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param6).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -265,7 +265,7 @@ final class si extends DualLinkNode {
         }
     }
 
-    private final void a(PacketBuffer param0, byte param1, int param2) {
+    private final void decodeOpcode(PacketBuffer param0, byte param1, int param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -340,7 +340,7 @@ final class si extends DualLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -380,11 +380,11 @@ final class si extends DualLinkNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -397,7 +397,7 @@ final class si extends DualLinkNode {
           while (true) {
             var3_int = param0.readUnsignedByte(param1 ^ 109);
             if (var3_int != 0) {
-              this.a(param0, (byte) -67, var3_int);
+              this.decodeOpcode(param0, (byte) -67, var3_int);
               continue;
             }
             break;
@@ -416,11 +416,11 @@ final class si extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    si() {
+    QuickChatPhraseDefinition() {
         this.field_y = false;
     }
 

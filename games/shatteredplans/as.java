@@ -22,12 +22,12 @@ final class as extends IntrusiveNode {
     int field_k;
     static String field_h;
 
-    final static vd a(IntrusiveDeque param0, int param1, byte param2, int param3) {
-        vd var5 = null;
+    final static MenuComponent a(IntrusiveDeque param0, int param1, byte param2, int param3) {
+        MenuComponent var5 = null;
         int var6 = 0;
         int var7 = 0;
-        vd var8 = null;
-        vd stackIn_10_0 = null;
+        MenuComponent var8 = null;
+        MenuComponent stackIn_10_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -38,16 +38,16 @@ final class as extends IntrusiveNode {
           if (param0 == null) {
             return null;
           }
-          var8 = (vd) (param0.startForward(0));
+          var8 = (MenuComponent) (param0.startForward(0));
           var6 = -44 / ((47 - param2) / 57);
           while (var8 != null) {
-            var5 = var8.b((byte) 105, param1, param3);
+            var5 = var8.findComponentAt((byte) 105, param1, param3);
             if (var5 != null &&
               var5.field_s) {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
-            var8 = (vd) (param0.nextForward((byte) -71));
+            var8 = (MenuComponent) (param0.nextForward((byte) -71));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,7 +60,7 @@ final class as extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class as extends IntrusiveNode {
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "as.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "as.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class as extends IntrusiveNode {
           this.field_v = (int)Math.sqrt((double)((-this.field_r + this.field_j) * (this.field_j - this.field_r) + (this.field_k - this.field_n) * (-this.field_n + this.field_k))) / 2;
           this.field_z = -1;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "as.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "as.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

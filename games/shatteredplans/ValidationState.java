@@ -116,7 +116,7 @@ final class ValidationState {
         try {
           DerelictVictoryChecker.field_p = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "u.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "u.A(" + param0 + ')');
         }
     }
 

@@ -25,7 +25,7 @@ final class gn extends WidgetTheme {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 != -9861) {
           qr var5 = (qr) null;
-          gn.a(122, (si) null, (qr) null, (qr) null, (qr) null);
+          gn.a(122, (QuickChatPhraseDefinition) null, (qr) null, (qr) null, (qr) null);
         }
         if (bq.field_h != null &&
           13 == oq.field_j) {
@@ -33,11 +33,11 @@ final class gn extends WidgetTheme {
           return true;
         }
         if (!sr.field_h) {
-          if (dp.field_t ||
+          if (QuickChatCategoryDefinition.field_t ||
             oq.field_j == 9 ||
             oq.field_j == 10 ||
             oq.field_j == 11) {
-            return dp.a(param1 ^ 9952, param0, param3);
+            return QuickChatCategoryDefinition.a(param1 ^ 9952, param0, param3);
           }
           if (oq.field_j == 80 &&
             b.d((byte) 108)) {
@@ -116,7 +116,7 @@ final class gn extends WidgetTheme {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class gn extends WidgetTheme {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class gn extends WidgetTheme {
         try {
           param0.a(this, param1, -21979);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -192,12 +192,12 @@ final class gn extends WidgetTheme {
         field_x = null;
         if (!param0) {
           qr var2 = (qr) null;
-          gn.a(-46, (si) null, (qr) null, (qr) null, (qr) null);
+          gn.a(-46, (QuickChatPhraseDefinition) null, (qr) null, (qr) null, (qr) null);
         }
         field_y = null;
     }
 
-    final static vm a(int param0, si param1, qr param2, qr param3, qr param4) {
+    final static vm a(int param0, QuickChatPhraseDefinition param1, qr param2, qr param3, qr param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -223,10 +223,10 @@ final class gn extends WidgetTheme {
         int[] var10 = null;
         vm[] var11 = null;
         int var12 = 0;
-        si var13_ref_si = null;
+        QuickChatPhraseDefinition var13_ref_si = null;
         int var13 = 0;
         int var15 = 0;
-        dp var16 = null;
+        QuickChatCategoryDefinition var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;
@@ -278,7 +278,7 @@ final class gn extends WidgetTheme {
             for (var14 = 0; var14 < param1.field_x.length; var14++) {
               var15 = param1.field_x[var14];
               if (-1 == var15) {
-                var8[var12Lifetime1 + var14] = qh.field_u;
+                var8[var12Lifetime1 + var14] = MenuWindow.field_u;
                 var9[var12Lifetime1 + var14] = param1.field_s[var14];
                 var10[var14 + var12Lifetime1] = param1.field_x[var14];
               } else {
@@ -323,7 +323,7 @@ final class gn extends WidgetTheme {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -362,7 +362,7 @@ final class gn extends WidgetTheme {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -378,7 +378,7 @@ final class gn extends WidgetTheme {
           }
           this.field_C[param1].field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "gn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -460,7 +460,7 @@ final class gn extends WidgetTheme {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

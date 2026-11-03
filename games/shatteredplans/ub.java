@@ -179,7 +179,7 @@ final class ub extends qr {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class ub extends qr {
           this.field_xb = param1;
           this.field_zb.a(4, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class ub extends qr {
             if (bj.field_L <= 0) {
               continue;
             }
-            ph.a(param0 ^ 93);
+            ListContent.a(param0 ^ 93);
             if (SolVictoryChecker.field_m >= 5) {
               stackIn_21_0 = -1;
             } else {
@@ -275,31 +275,31 @@ final class ub extends qr {
           }
           var1_int = cl.field_n - ValidationState.field_a;
           if (0 > var1_int) {
-            dp.field_r = 0;
+            QuickChatCategoryDefinition.field_r = 0;
           } else {
             if (var1_int < 10) {
-              dp.field_r = var1_int * 25;
+              QuickChatCategoryDefinition.field_r = var1_int * 25;
             } else {
               if (var1_int >= 15) {
                 if (20 > var1_int) {
-                  dp.field_r = -150 + 25 * var1_int;
+                  QuickChatCategoryDefinition.field_r = -150 + 25 * var1_int;
                 } else {
                   if (var1_int < 25) {
-                    dp.field_r = 750 - var1_int * 25;
+                    QuickChatCategoryDefinition.field_r = 750 - var1_int * 25;
                   } else {
                     if (var1_int >= 30) {
                       if (var1_int < 40) {
-                        dp.field_r = 1000 - var1_int * 25;
+                        QuickChatCategoryDefinition.field_r = 1000 - var1_int * 25;
                       } else {
-                        dp.field_r = 0;
+                        QuickChatCategoryDefinition.field_r = 0;
                       }
                     } else {
-                      dp.field_r = 25 * var1_int - 400;
+                      QuickChatCategoryDefinition.field_r = 25 * var1_int - 400;
                     }
                   }
                 }
               } else {
-                dp.field_r = 500 - 25 * var1_int;
+                QuickChatCategoryDefinition.field_r = 500 - 25 * var1_int;
               }
             }
           }
@@ -385,7 +385,7 @@ final class ub extends qr {
               if (bj.field_L <= 0) {
                 return;
               }
-              ph.a(0);
+              ListContent.a(0);
               if (5 > SolVictoryChecker.field_m) {
                 stackIn_88_0 = 1 + SolVictoryChecker.field_m;
               } else {
@@ -399,7 +399,7 @@ final class ub extends qr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "ub.I(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "ub.I(" + param0 + ')');
         }
     }
 

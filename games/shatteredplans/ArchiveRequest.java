@@ -15,7 +15,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         MusicEnvelope.field_i = param0;
         CachedArchiveSource.field_n = true;
         if (param0 == 1) {
-          jo.a(32767, sf.field_d, true, 476);
+          QuickChatPhraseRegistry.a(32767, sf.field_d, true, 476);
         }
     }
 
@@ -76,7 +76,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,14 +88,14 @@ abstract class ArchiveRequest extends DualLinkNode {
           var2.b();
           int var3 = 38 / ((param0 - 28) / 50);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean f(int param0) {
         if (param0 != -11) {
           field_s = (String) null;
-          if (gm.field_i < 10) {
+          if (SoundPlayback.field_i < 10) {
             return false;
           }
           if (!eh.field_P) {
@@ -103,7 +103,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           }
           return false;
         }
-        if (gm.field_i < 10) {
+        if (SoundPlayback.field_i < 10) {
           return false;
         }
         if (!eh.field_P) {
@@ -138,7 +138,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           gf.b(3, 3, 0, 0, 64, 64);
           cg.i(0);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

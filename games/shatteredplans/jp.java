@@ -353,7 +353,7 @@ final class jp extends qr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -421,7 +421,7 @@ final class jp extends qr {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -524,17 +524,17 @@ final class jp extends qr {
           gf.b();
           og.a(0, true);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void g(byte param0) {
         String[] var2 = null;
         String[] var2Lifetime1;
-        dp.field_t = false;
+        QuickChatCategoryDefinition.field_t = false;
         if (DerelictMapReader.field_h != null) {
           DerelictMapReader.field_h.h(0);
-          if (0 != em.field_h) {
+          if (0 != ProductionContent.field_h) {
             MusicVoice.c(false);
           }
           ConquestVictoryChecker.field_m = 0;
@@ -545,7 +545,7 @@ final class jp extends qr {
           }
           return;
         }
-        if (0 != em.field_h) {
+        if (0 != ProductionContent.field_h) {
           MusicVoice.c(false);
         }
         ConquestVictoryChecker.field_m = 0;
@@ -568,7 +568,7 @@ final class jp extends qr {
             sj.field_b.field_F.a(args, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jp.D(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.D(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -43,7 +43,7 @@ final class IntrusiveNodeHashTable {
           int var6 = 113 / ((-54 - param1) / 63);
           param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class IntrusiveNodeHashTable {
           return (Sprite[]) null;
         }
         for (var2 = 0; var2 < en.field_c; var2++) {
-          var3 = WeightedCacheEntry.field_s[var2] * cm.field_g[var2];
+          var3 = WeightedCacheEntry.field_s[var2] * IntHashIndex.field_g[var2];
           var20 = hd.field_q[var2];
           if (!SectorCacheStore.field_h[var2]) {
             var9 = new int[var3];
@@ -95,7 +95,7 @@ final class IntrusiveNodeHashTable {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = eo.field_fb[we.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var21);
+            var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var21);
           } else {
             var22 = MusicEnvelope.field_l[var2];
             var16 = new int[var3];
@@ -104,7 +104,7 @@ final class IntrusiveNodeHashTable {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = ee.a(eo.field_fb[we.a((int) var20[var7], 255)], we.a(255, (int) var22[var7]) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var16));
           }
         }
         pd.a(0);
@@ -116,7 +116,7 @@ final class IntrusiveNodeHashTable {
           ae.field_h = param3;
           dh.field_a = param6;
           StandardMapReader.field_d = param7;
-          si.field_u = param0;
+          QuickChatPhraseDefinition.field_u = param0;
           hn.field_i = param1;
           if (param5 != 1491341222) {
             field_j = (String) null;
@@ -128,7 +128,7 @@ final class IntrusiveNodeHashTable {
           BattleSnapshot.field_w = new DiskCacheWorker(param6);
           lg.field_c = new ArchiveSourceManager(TertiaryLinkNode.field_o, BattleSnapshot.field_w);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ti.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ti.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class IntrusiveNodeHashTable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class IntrusiveNodeHashTable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

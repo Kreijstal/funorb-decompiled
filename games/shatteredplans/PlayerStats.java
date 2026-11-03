@@ -77,7 +77,7 @@ final class PlayerStats {
         int var2 = 0;
         int var3 = 0;
         nd[] var4 = null;
-        sb var4_ref = null;
+        Particle var4_ref = null;
         int var5 = 0;
         nd var7 = null;
         float var8 = 0.0f;
@@ -91,7 +91,7 @@ final class PlayerStats {
           var1_int = di.field_m * 100 / 1000 - 80;
           var2 = 465;
           var3 = 324 + (var1_int + 675);
-          var13 = fe.field_C;
+          var13 = MenuButton.field_C;
           var4 = var13;
           var5 = -99 % ((param0 + 2) / 55);
           for (var6 = 0; var13.length > var6; var6++) {
@@ -106,7 +106,7 @@ final class PlayerStats {
                 var9 = (float)((double)var9 + (Math.random() - 0.5) / 5.0);
                 var10 = 0.0f;
                 var11 = 0.0f;
-                DialWidget.field_K.addLast((byte) -113, new sb((float)(var7.field_e - 5), (float)(var1_int + var7.field_j), 0.0f, 0.0f, var8 / 200.0f, var9 / 200.0f, var10, var11));
+                DialWidget.field_K.addLast((byte) -113, new Particle((float)(var7.field_e - 5), (float)(var1_int + var7.field_j), 0.0f, 0.0f, var8 / 200.0f, var9 / 200.0f, var10, var11));
               }
               if (var7.field_a <= 0) {
                 var7.field_a = 0;
@@ -119,7 +119,7 @@ final class PlayerStats {
               var7.field_h = 10;
             }
           }
-          var4_ref = (sb) (DialWidget.field_K.startForward(0));
+          var4_ref = (Particle) (DialWidget.field_K.startForward(0));
           while (var4_ref != null) {
             var4_ref.field_o[var4_ref.field_q] = var4_ref.field_l;
             var4_ref.field_i[var4_ref.field_q] = var4_ref.field_n;
@@ -134,7 +134,7 @@ final class PlayerStats {
             var4_ref.field_k = var4_ref.field_k + var4_ref.field_p;
             var4_ref.field_n = var4_ref.field_n + var4_ref.field_j;
             var4_ref.field_l = var4_ref.field_l + var4_ref.field_k;
-            var4_ref = (sb) (DialWidget.field_K.nextForward((byte) -71));
+            var4_ref = (Particle) (DialWidget.field_K.nextForward((byte) -71));
           }
           if (di.field_m == 0) {
             sg.a(true, false, 100, RandomAccessCacheFile.field_c, NetworkArchiveRequest.field_C);
@@ -150,7 +150,7 @@ final class PlayerStats {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "um.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "um.E(" + param0 + ')');
         }
     }
 
@@ -183,13 +183,13 @@ final class PlayerStats {
           var2[14] = SocketArchiveNetworkClient.field_t;
           var2[12] = SocketArchiveNetworkClient.field_t;
           var2[13] = SocketArchiveNetworkClient.field_t;
-          var2[15] = re.a(jl.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
+          var2[15] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
           return var2;
         }
-        var2[12] = re.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + this.field_u * 2) / (this.field_l * 2))});
-        var2[13] = re.a(jl.field_O, 4371, new String[]{Integer.toString((2 * this.field_w + this.field_l) / (2 * this.field_l))});
-        var2[14] = re.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + 2 * this.field_z) / (this.field_l * 2))});
-        var2[15] = re.a(jl.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
+        var2[12] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + this.field_u * 2) / (this.field_l * 2))});
+        var2[13] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString((2 * this.field_w + this.field_l) / (2 * this.field_l))});
+        var2[14] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + 2 * this.field_z) / (this.field_l * 2))});
+        var2[15] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
         return var2;
     }
 
@@ -202,7 +202,7 @@ final class PlayerStats {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param0, param1, param2, 2)) {
+          if (!MenuComponent.a(param0, param1, param2, 2)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }
@@ -221,7 +221,7 @@ final class PlayerStats {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

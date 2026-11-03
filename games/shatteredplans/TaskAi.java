@@ -649,7 +649,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -727,7 +727,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -836,7 +836,7 @@ final class TaskAi implements Ai {
           field_d = (String) null;
         }
         if (0 <= a.field_j) {
-          nm.field_c.field_z = re.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(a.field_j)});
+          nm.field_c.field_z = QuickChatCategoryRegistry.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(a.field_j)});
         } else {
           nm.field_c.field_z = null;
         }
@@ -867,10 +867,10 @@ final class TaskAi implements Ai {
         }
         if (LinkPainter.field_b.field_rb != 0) {
           if (1 == nl.field_a.length &&
-            nl.field_a[0] != qk.field_x) {
-            qk.field_x = nl.field_a[0];
+            nl.field_a[0] != MenuLabel.field_x) {
+            MenuLabel.field_x = nl.field_a[0];
           }
-          ei.a(param3, qk.field_x, mk.field_d, true, false, 0);
+          ei.a(param3, MenuLabel.field_x, mk.field_d, true, false, 0);
         }
         if (SocketConnector.field_d.field_rb != 0) {
           IntrusiveDequeCursor.field_b = false;
@@ -1040,7 +1040,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
@@ -1175,7 +1175,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1232,7 +1232,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1286,7 +1286,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1436,7 +1436,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1503,7 +1503,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -1545,7 +1545,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1669,7 +1669,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1758,7 +1758,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2047,7 +2047,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2517,7 +2517,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -2843,7 +2843,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_159_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_158_1).append(stackIn_159_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_158_1).append(stackIn_159_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2903,7 +2903,7 @@ final class TaskAi implements Ai {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

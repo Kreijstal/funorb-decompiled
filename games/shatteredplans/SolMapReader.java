@@ -111,7 +111,7 @@ final class SolMapReader implements MapGenerator {
           param0.field_r = var4;
           param0.field_w = EmailValidator.a((byte) 74, var12);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class SolMapReader implements MapGenerator {
           this.field_d = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class SolMapReader implements MapGenerator {
             var8_ref_nf.field_j = null;
           } else {
             if (null != var8_ref_nf.field_j &&
-              !qh.field_v) {
+              !MenuWindow.field_v) {
               var5++;
             } else {
               if (null != var8_ref_nf.field_j) {
@@ -244,12 +244,12 @@ final class SolMapReader implements MapGenerator {
         var8Lifetime1 = -var7Lifetime1 + var6 + (ji.field_I.field_xb.field_mb + ji.field_I.field_xb.field_gb);
         ji.field_I.field_xb.field_mb = ji.field_I.field_xb.field_mb - var8Lifetime1;
         ji.field_I.field_xb.field_db = ji.field_I.field_xb.field_db + var8Lifetime1;
-        if (qh.field_v) {
+        if (MenuWindow.field_v) {
           ji.field_I.field_xb.field_mb = var7Lifetime1;
         }
         ji.field_I.field_xb.field_gb = -ji.field_I.field_xb.field_mb + var7Lifetime1;
-        if (qh.field_v) {
-          qh.field_v = false;
+        if (MenuWindow.field_v) {
+          MenuWindow.field_v = false;
           ji.field_I.field_xb.field_w = 0;
           ShatteredPlansClient.field_K = true;
           ji.field_I.field_xb.field_db = -ji.field_I.field_xb.field_mb + ji.field_I.field_zb.field_mb;

@@ -40,7 +40,7 @@ final class aj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -66,18 +66,18 @@ final class aj {
           if (param2.field_Ab && (param2.field_Fb == 2 ||
             !(bs.field_b < 2))) {
             var7 = DerelictVictoryChecker.field_m;
-            var8 = re.a(ByteArrayNode.field_o, 4371, new String[]{param3});
+            var8 = QuickChatCategoryRegistry.a(ByteArrayNode.field_o, 4371, new String[]{param3});
             var7.field_j.a(1, 10, var8);
           }
           DerelictVictoryChecker.field_m.a(false);
           if (param0) {
             if (GameApplet.field_g == DerelictVictoryChecker.field_m.field_f) {
               var11 = DerelictVictoryChecker.field_m;
-              var12 = re.a(id.field_e, 4371, new String[]{param3});
+              var12 = QuickChatCategoryRegistry.a(id.field_e, 4371, new String[]{param3});
               var11.field_j.a(1, 16, var12);
             } else {
               var9 = DerelictVictoryChecker.field_m;
-              var10 = re.a(cb.field_g, 4371, new String[]{param3});
+              var10 = QuickChatCategoryRegistry.a(cb.field_g, 4371, new String[]{param3});
               var9.field_j.a(1, 15, var10);
             }
           }
@@ -105,7 +105,7 @@ final class aj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class aj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class aj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

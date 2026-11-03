@@ -55,7 +55,7 @@ final class gi {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -118,12 +118,12 @@ final class gi {
             ByteArrayNode.field_k = be.field_h;
             AttackTask.field_o = DerelictMapGenerator.field_q;
           } else {
-            e.field_f = re.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, fe.field_B, 0);
-            ByteArrayNode.field_k = re.a(be.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
-            ei.field_e = re.a(kp.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
+            e.field_f = QuickChatCategoryRegistry.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, MenuButton.field_B, 0);
+            ByteArrayNode.field_k = QuickChatCategoryRegistry.a(be.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
+            ei.field_e = QuickChatCategoryRegistry.a(kp.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
             stackIn_28_0 = DerelictMapGenerator.field_q;
             stackIn_28_1 = 32;
-            AttackTask.field_o = re.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, SliderPainter.field_b, 0);
+            AttackTask.field_o = QuickChatCategoryRegistry.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, SliderPainter.field_b, 0);
           }
           if (null != oi.field_i) {
             var1_int = 1;
@@ -147,17 +147,17 @@ final class gi {
                 var2 = js.field_b[fieldTemp$1];
               }
               if (!is.field_b) {
-                lp.a(1546006977, var2);
+                MenuList.a(1546006977, var2);
                 return;
               }
               is.field_b = false;
               var3 = js.field_b[ImageProducerRasterBuffer.field_i];
               if (var3 != null &&
                 var3 != WeightedLruCache.field_g) {
-                lp.a(1546006977, var3);
+                MenuList.a(1546006977, var3);
                 return;
               }
-              lp.a(1546006977, var2);
+              MenuList.a(1546006977, var2);
               return;
             }
           }
@@ -165,7 +165,7 @@ final class gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "gi.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "gi.C(" + param0 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class gi {
           eo.field_cb.writeInt(11135, qn.field_b[1]);
           eo.field_cb.writeInt(11135, qn.field_b[2]);
           eo.field_cb.writeInt(11135, qn.field_b[3]);
-          jo.a(24, eo.field_cb);
+          QuickChatPhraseRegistry.a(24, eo.field_cb);
           if (param3 > -36) {
             return;
           }
@@ -240,7 +240,7 @@ final class gi {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

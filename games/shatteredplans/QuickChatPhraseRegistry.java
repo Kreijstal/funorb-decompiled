@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jo {
+final class QuickChatPhraseRegistry {
     static String field_e;
     private Archive field_f;
     private Archive field_h;
@@ -18,7 +18,7 @@ final class jo {
         field_c = null;
         field_e = null;
         if (!param0) {
-          jo.a(false);
+          QuickChatPhraseRegistry.a(false);
         }
         field_d = null;
         field_a = null;
@@ -81,7 +81,7 @@ final class jo {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -94,15 +94,15 @@ final class jo {
         try {
           if (param0 != 32767) {
             MusicTrack var5 = (MusicTrack) null;
-            jo.a(6, (MusicTrack) null, false, -66);
+            QuickChatPhraseRegistry.a(6, (MusicTrack) null, false, -66);
           }
           ValidationState.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "jo.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jo.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    jo(int param0, Archive param1, Archive param2) {
+    QuickChatPhraseRegistry(int param0, Archive param1, Archive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -137,17 +137,17 @@ final class jo {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final si a(int param0, byte param1) {
+    final QuickChatPhraseDefinition a(int param0, byte param1) {
         byte[] var4 = null;
         if (param1 != 100) {
           MusicTrack var5 = (MusicTrack) null;
-          jo.a(71, (MusicTrack) null, true, -32);
+          QuickChatPhraseRegistry.a(71, (MusicTrack) null, true, -32);
         }
-        si var3 = (si) (this.field_b.get((long)param0, param1 - 100));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_b.get((long)param0, param1 - 100));
         if (var3 != null) {
           return var3;
         }
@@ -156,9 +156,9 @@ final class jo {
         } else {
           var4 = this.field_h.getFile(0, param1 ^ -101, param0 & 32767);
         }
-        si var6 = new si();
+        QuickChatPhraseDefinition var6 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var6.a(new PacketBuffer(var4), -1);
+          var6.decode(new PacketBuffer(var4), -1);
         }
         if (param0 >= 32768) {
           var6.e(-81);

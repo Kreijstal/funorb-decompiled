@@ -45,49 +45,49 @@ abstract class ArchiveSource {
             return stackIn_2_0;
           }
           if (param0 == 1) {
-            stackIn_5_0 = re.a(IsaacBackedRandom.field_e, 4371, new String[]{param2});
+            stackIn_5_0 = QuickChatCategoryRegistry.a(IsaacBackedRandom.field_e, 4371, new String[]{param2});
             return stackIn_5_0;
           }
           if (param0 == 2) {
-            stackIn_8_0 = re.a(CachedArchiveSource.field_y, 4371, new String[]{param2});
+            stackIn_8_0 = QuickChatCategoryRegistry.a(CachedArchiveSource.field_y, 4371, new String[]{param2});
             return stackIn_8_0;
           }
           if (3 == param0) {
-            stackIn_12_0 = re.a(fa.field_Y, 4371, new String[]{param2});
+            stackIn_12_0 = QuickChatCategoryRegistry.a(fa.field_Y, 4371, new String[]{param2});
             return stackIn_12_0;
           }
           if (4 == param0) {
-            stackIn_15_0 = re.a(BattleSnapshot.field_p, 4371, new String[]{param2});
+            stackIn_15_0 = QuickChatCategoryRegistry.a(BattleSnapshot.field_p, 4371, new String[]{param2});
             return stackIn_15_0;
           }
           if (param0 == 5) {
-            stackIn_18_0 = re.a(eh.field_N, 4371, new String[]{param2});
+            stackIn_18_0 = QuickChatCategoryRegistry.a(eh.field_N, 4371, new String[]{param2});
             return stackIn_18_0;
           }
           if (6 == param0) {
-            stackIn_22_0 = re.a(lh.field_E, 4371, new String[]{param2});
+            stackIn_22_0 = QuickChatCategoryRegistry.a(lh.field_E, 4371, new String[]{param2});
             return stackIn_22_0;
           }
           if (7 == param0) {
-            stackIn_26_0 = re.a(GameScreen.field_i, 4371, new String[]{param2});
+            stackIn_26_0 = QuickChatCategoryRegistry.a(GameScreen.field_i, 4371, new String[]{param2});
             return stackIn_26_0;
           }
           if (param0 == 8) {
-            stackIn_30_0 = re.a(cq.field_F, 4371, new String[]{param2});
+            stackIn_30_0 = QuickChatCategoryRegistry.a(cq.field_F, 4371, new String[]{param2});
             return stackIn_30_0;
           }
           if (11 == param0) {
-            stackIn_34_0 = re.a(GzipInflater.field_b, 4371, new String[]{param2});
+            stackIn_34_0 = QuickChatCategoryRegistry.a(GzipInflater.field_b, 4371, new String[]{param2});
             return stackIn_34_0;
           }
           if (param0 == 12) {
-            stackIn_38_0 = re.a(ja.field_l, 4371, new String[]{param2});
+            stackIn_38_0 = QuickChatCategoryRegistry.a(ja.field_l, 4371, new String[]{param2});
             return stackIn_38_0;
           }
           if (param0 != 13) {
             return null;
           }
-          stackIn_42_0 = re.a(sa.field_c, 4371, new String[]{param2});
+          stackIn_42_0 = QuickChatCategoryRegistry.a(sa.field_c, 4371, new String[]{param2});
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ abstract class ArchiveSource {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 

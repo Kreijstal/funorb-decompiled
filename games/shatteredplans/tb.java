@@ -60,10 +60,10 @@ final class tb {
         int var17_intLifetime4;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          si.field_o = param5;
+          QuickChatPhraseDefinition.field_o = param5;
           mk.field_d = param14;
-          gm.field_l = param11;
-          qk.field_x = param10;
+          SoundPlayback.field_l = param11;
+          MenuLabel.field_x = param10;
           wa.field_d = param3;
           Star.field_O = param9;
           ei.field_f = param2;
@@ -78,19 +78,19 @@ final class tb {
           LegacyAi.field_s = ae.a(71, "lobby", param4, "allowspectators");
           mk.field_e = new String[5];
           mk.field_e[0] = mm.field_p;
-          mk.field_e[4] = si.field_q;
+          mk.field_e[4] = QuickChatPhraseDefinition.field_q;
           mk.field_e[3] = ls.field_b;
           mk.field_e[1] = id.field_a;
           mk.field_e[2] = MouseWheelInput.field_e;
-          lp.field_v = new qr(0L, (qr) null);
-          gm.field_m = new qr(0L, SliderWidget.field_N, gd.field_c);
+          MenuList.field_v = new qr(0L, (qr) null);
+          SoundPlayback.field_m = new qr(0L, SliderWidget.field_N, gd.field_c);
           sf.field_f = new qr(0L, vm.field_Cb, mk.field_b);
           ls.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
-          lp.field_v.a(param13 ^ -7962, gm.field_m);
+          MenuList.field_v.a(param13 ^ -7962, SoundPlayback.field_m);
           if (ns.field_pb) {
-            lp.field_v.a(4, sf.field_f);
+            MenuList.field_v.a(4, sf.field_f);
           }
-          lp.field_v.a(4, ls.field_a);
+          MenuList.field_v.a(4, ls.field_a);
           ls.field_a.field_zb.a(SpriteState.field_u, false);
           ls.field_a.field_zb.field_G = 1;
           var23 = ls.field_a.field_zb;
@@ -121,7 +121,7 @@ final class tb {
           } else {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
-            stackIn_7_4 = rh.field_a;
+            stackIn_7_4 = ProjectsContent.field_a;
           }
           LinkPainter.field_b = new qr(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           AchievementProgress.field_i = new qr(0L, (qr) null);
@@ -156,21 +156,21 @@ final class tb {
           DefendTask.field_x = new qr(0L, SpriteState.field_u);
           DefendTask.field_x.field_y = 1;
           lr.field_a = new qr(0L, SliderWidget.field_N, gd.field_c);
-          vd.field_q = new qr(0L, vm.field_Cb, mk.field_b);
+          MenuComponent.field_q = new qr(0L, vm.field_Cb, mk.field_b);
           ro.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
           so.field_t.a(4, DefendTask.field_x);
           so.field_t.a(4, lr.field_a);
           if (ns.field_pb) {
-            so.field_t.a(4, vd.field_q);
+            so.field_t.a(4, MenuComponent.field_q);
           }
           so.field_t.a(param13 + 7970, ro.field_a);
           DialPainter.field_g = new qr(0L, bd.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new qr(0L, gg.field_d);
           bj.field_D = new qr(0L, rs.field_Eb);
           StarAnnotation.field_l = new qr(0L, nl.field_b, ds.field_e.toUpperCase());
-          re.field_g = new qr[4 + param0];
+          QuickChatCategoryRegistry.field_g = new qr[4 + param0];
           ByteArrayNode.field_p = new sg[4 + param0][];
-          re.field_g[0] = new qr(0L, ObjectList.field_h, am.field_Ab);
+          QuickChatCategoryRegistry.field_g[0] = new qr(0L, ObjectList.field_h, am.field_Ab);
           ByteArrayNode.field_p[0] = new sg[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             ByteArrayNode.field_p[0][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
@@ -179,7 +179,7 @@ final class tb {
             tb.a(-52);
           }
           if (nl.field_a.length >= 2) {
-            re.field_g[1] = new qr(0L, ObjectList.field_h, wl.field_b);
+            QuickChatCategoryRegistry.field_g[1] = new qr(0L, ObjectList.field_h, wl.field_b);
             array$0 = new sg[1 + nl.field_a.length];
             ByteArrayNode.field_p[1] = array$0;
             ByteArrayNode.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
@@ -187,19 +187,19 @@ final class tb {
               ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, Integer.toString(nl.field_a[var17_intLifetime1]));
             }
           }
-          re.field_g[2] = new qr(0L, ObjectList.field_h, sq.field_s);
+          QuickChatCategoryRegistry.field_g[2] = new qr(0L, ObjectList.field_h, sq.field_s);
           ByteArrayNode.field_p[2] = new sg[]{new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, an.field_d, (qr) null, gn.field_w, LegacyAi.field_s[0], mi.field_c), new sg(0L, an.field_d, (qr) null, gn.field_w, LegacyAi.field_s[1], he.field_j)};
           if (FleetMove.field_A > 1) {
-            re.field_g[3] = new qr(0L, ObjectList.field_h, jo.field_e);
+            QuickChatCategoryRegistry.field_g[3] = new qr(0L, ObjectList.field_h, QuickChatPhraseRegistry.field_e);
             array$1 = new sg[1 + FleetMove.field_A];
             ByteArrayNode.field_p[3] = array$1;
             ByteArrayNode.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < FleetMove.field_A; var17_intLifetime2++) {
-              ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, si.field_o[var17_intLifetime2]);
+              ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, QuickChatPhraseDefinition.field_o[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param0 > var17_intLifetime3; var17_intLifetime3++) {
-            re.field_g[4 + var17_intLifetime3] = new qr(0L, ObjectList.field_h, gm.field_l[var17_intLifetime3]);
+            QuickChatCategoryRegistry.field_g[4 + var17_intLifetime3] = new qr(0L, ObjectList.field_h, SoundPlayback.field_l[var17_intLifetime3]);
             array$2 = new sg[1 + we.a(255, (int) so.field_r[var17_intLifetime3])];
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
             ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
@@ -226,8 +226,8 @@ final class tb {
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param0; var17_intLifetime4++) {
-            if (re.field_g[var17_intLifetime4] != null) {
-              re.field_g[var17_intLifetime4].field_Y = 11;
+            if (QuickChatCategoryRegistry.field_g[var17_intLifetime4] != null) {
+              QuickChatCategoryRegistry.field_g[var17_intLifetime4].field_Y = 11;
             }
             if (null != ByteArrayNode.field_p[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; var18Lifetime1 < ByteArrayNode.field_p[var17_intLifetime4].length; var18Lifetime1++) {
@@ -253,7 +253,7 @@ final class tb {
             if ((var18Lifetime2 != 1 ||
               !(nl.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(FleetMove.field_A <= 1))) {
-              bj.field_D.a(4, re.field_g[var18Lifetime2]);
+              bj.field_D.a(4, QuickChatCategoryRegistry.field_g[var18Lifetime2]);
               for (var19 = 0; var19 < ByteArrayNode.field_p[var18Lifetime2].length; var19++) {
                 if (null != ByteArrayNode.field_p[var18Lifetime2][var19]) {
                   bj.field_D.a(4, ByteArrayNode.field_p[var18Lifetime2][var19]);
@@ -264,7 +264,7 @@ final class tb {
           IntrusiveDeque.field_g.a(4, TextFieldWidget.field_I);
           IntrusiveDeque.field_g.a(param13 + 7970, aq.field_j);
           IntrusiveDeque.field_g.a(4, dn.field_f);
-          ValidationIndicator.field_K = new qr(0L, un.field_g, ph.field_c.toUpperCase());
+          ValidationIndicator.field_K = new qr(0L, un.field_g, ListContent.field_c.toUpperCase());
           oo.field_c = new qr(0L, DelegatingCanvas.field_f, uq.field_n.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -337,7 +337,7 @@ final class tb {
           } else {
             stackIn_110_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
         }
     }
 

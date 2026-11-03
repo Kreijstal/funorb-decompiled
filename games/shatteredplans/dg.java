@@ -59,7 +59,7 @@ final class dg extends qr {
         qr var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new qr(0L, param1, qh.field_u.toUpperCase());
+          var17 = new qr(0L, param1, MenuWindow.field_u.toUpperCase());
           var17.field_y = 1;
           this.field_xb = new qr(0L, param2);
           var8 = new qr(0L, param3);
@@ -134,7 +134,7 @@ final class dg extends qr {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

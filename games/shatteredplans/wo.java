@@ -32,7 +32,7 @@ final class wo {
             var6 = (String) null;
             wo.a(10, (byte) 112, (String[]) null, (String) null);
           }
-          MatchingTextValidator.field_s = rh.field_g;
+          MatchingTextValidator.field_s = ProjectsContent.field_g;
           if (param0 != 255) {
             if (100 <= param0 &&
               param0 <= 105) {
@@ -66,7 +66,7 @@ final class wo {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

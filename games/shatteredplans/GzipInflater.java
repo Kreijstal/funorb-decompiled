@@ -110,14 +110,14 @@ final class GzipInflater {
             }
             po.field_b = 1;
             var3 = var1.readString(-1);
-            jo.field_d = ((String) (var3)).intern();
+            QuickChatPhraseRegistry.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-71);
             os.a(-82, var4);
             return;
           }
           if (BattleEvent.field_q == null) {
             BattleEvent.field_q = new SecondaryNodeHashTable(128);
-            r.field_c = 0;
+            UrlLoader.field_c = 0;
           }
           var3Lifetime1 = var1.readString(-1);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -135,10 +135,10 @@ final class GzipInflater {
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ve();
             BattleEvent.field_q.put((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
-            fieldTemp$1 = r.field_c;
-            r.field_c = r.field_c + 1;
+            fieldTemp$1 = UrlLoader.field_c;
+            UrlLoader.field_c = UrlLoader.field_c + 1;
             var6Lifetime1.field_zb = fieldTemp$1;
-            vd.field_j.addLast((byte) -113, var6Lifetime1);
+            MenuComponent.field_j.addLast((byte) -113, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -147,7 +147,7 @@ final class GzipInflater {
           var6Lifetime1.field_xb = (String) (var3Lifetime1);
           var6Lifetime1.field_Bb = var5Lifetime1;
           var6Lifetime1.unlink((byte) -125);
-          var7_ref = (ve) (vd.field_j.startForward(0));
+          var7_ref = (ve) (MenuComponent.field_j.startForward(0));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
@@ -157,7 +157,7 @@ final class GzipInflater {
               decompiledFrameRemainder0 = (var9 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_43_0)) {
-                var7_ref = (ve) (vd.field_j.nextForward((byte) -71));
+                var7_ref = (ve) (MenuComponent.field_j.nextForward((byte) -71));
                 continue;
               }
             }
@@ -173,12 +173,12 @@ final class GzipInflater {
             }
             break;
           }
-          vd.field_j.addLast((byte) -113, var6Lifetime1);
+          MenuComponent.field_j.addLast((byte) -113, var6Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "s.A(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "s.A(" + param0 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class GzipInflater {
             UsernameAvailabilityValidator.a(param0 ^ -2, lm.field_e, 4);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "s.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "s.C(" + param0 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class GzipInflater {
             field_e = 10;
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "s.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "s.D(" + param0 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class GzipInflater {
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw r.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

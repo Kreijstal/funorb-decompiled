@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff extends vd {
+final class SpriteButton extends MenuComponent {
     static int[][] field_x;
     static int field_u;
     private Sprite field_w;
@@ -27,12 +27,12 @@ final class ff extends vd {
         this.field_w.drawScaled(this.field_k, this.field_t, this.field_m, this.field_i);
     }
 
-    ff(int param0, int param1, int param2, int param3, Sprite param4) {
+    SpriteButton(int param0, int param1, int param2, int param3, Sprite param4) {
         super(param0, param1, param2, param3);
         try {
           this.field_w = param4;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,12 +48,12 @@ final class ff extends vd {
         return param0 | param1;
     }
 
-    ff(int param0, int param1, Sprite param2) {
+    SpriteButton(int param0, int param1, Sprite param2) {
         super(param0, param1, param2.field_z, param2.field_w);
         try {
           this.field_w = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class ff extends vd {
             this.d((byte) 56);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

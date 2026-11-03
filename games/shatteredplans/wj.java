@@ -75,7 +75,7 @@ final class wj extends IntrusiveNode {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class wj extends IntrusiveNode {
         int var5 = 0;
         int var6 = 0;
         nd[] var7 = null;
-        sb var7_ref = null;
+        Particle var7_ref = null;
         int var8 = 0;
         int var9 = 0;
         nd var9_ref_nd = null;
@@ -143,9 +143,9 @@ final class wj extends IntrusiveNode {
           stackIn_13_1 = 0;
           stackIn_13_2 = var4;
           stackIn_13_3 = var6;
-          if (0 <= dp.field_r) {
-            if (dp.field_r <= 256) {
-              stackIn_16_4 = dp.field_r;
+          if (0 <= QuickChatCategoryDefinition.field_r) {
+            if (QuickChatCategoryDefinition.field_r <= 256) {
+              stackIn_16_4 = QuickChatCategoryDefinition.field_r;
             } else {
               stackIn_16_4 = 256;
             }
@@ -154,35 +154,35 @@ final class wj extends IntrusiveNode {
           }
           ((Sprite) (Object) stackIn_13_0).c(stackIn_13_1, stackIn_13_2, stackIn_13_3 * stackIn_16_4 >> 8);
           WeightedCacheEntry.field_u.c(0, var4, var6);
-          var11 = fe.field_C;
+          var11 = MenuButton.field_C;
           var7 = var11;
           for (var8 = 0; var11.length > var8; var8++) {
             var9_ref_nd = var11[var8];
             if (0 != var9_ref_nd.field_a) {
-              gf.b(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, fe.field_u);
+              gf.b(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, MenuButton.field_u);
             }
           }
-          var7_ref = (sb) (DialWidget.field_K.startForward(0));
+          var7_ref = (Particle) (DialWidget.field_K.startForward(0));
           while (var7_ref != null) {
             var2Lifetime2 = (int)var7_ref.field_n;
             var1_intLifetime2 = (int)var7_ref.field_l;
             for (var8Lifetime1 = 1; var8Lifetime1 < 50; var8Lifetime1++) {
               var9 = -var8Lifetime1 + var7_ref.field_q;
-              gf.b(var1_intLifetime2 << 4, var2Lifetime2 << 4, -var8Lifetime1 + 50, -(var8Lifetime1 * 2) + 100, fe.field_u);
+              gf.b(var1_intLifetime2 << 4, var2Lifetime2 << 4, -var8Lifetime1 + 50, -(var8Lifetime1 * 2) + 100, MenuButton.field_u);
               if (var9 < 0) {
                 var9 += 50;
               }
               var1_intLifetime2 = (int)var7_ref.field_o[var9];
               var2Lifetime2 = (int)var7_ref.field_i[var9];
             }
-            gf.b((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, fe.field_u);
-            var7_ref = (sb) (DialWidget.field_K.nextForward((byte) -71));
+            gf.b((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, MenuButton.field_u);
+            var7_ref = (Particle) (DialWidget.field_K.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "wj.C(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "wj.C(" + param0 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class wj extends IntrusiveNode {
           var5.writeChecksum(var4, param0 - 446);
           var5.patchLengthByte(-var4 + var5.position, (byte) 127);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "wj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

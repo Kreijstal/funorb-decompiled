@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re {
+final class QuickChatCategoryRegistry {
     static int[] field_d;
     private Archive field_c;
     private Archive field_e;
@@ -14,7 +14,7 @@ final class re {
     final static int a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 0) {
           String[] var6 = (String[]) null;
-          re.a((String) null, -43, (String[]) null);
+          QuickChatCategoryRegistry.a((String) null, -43, (String[]) null);
         }
         return (int)((double)(-param0 + param3) * wm.a(param2, (byte) 114, param1)) + param0;
     }
@@ -30,7 +30,7 @@ final class re {
             aj.field_b.attachTo((java.awt.Component) ((Object) param0), !param1 ? true : false);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "re.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "re.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -141,15 +141,15 @@ final class re {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
-    final dp a(byte param0, int param1) {
+    final QuickChatCategoryDefinition a(byte param0, int param1) {
         byte[] var4 = null;
-        dp var3 = (dp) (this.field_f.get((long)param1, 0));
+        QuickChatCategoryDefinition var3 = (QuickChatCategoryDefinition) (this.field_f.get((long)param1, 0));
         if (param0 != 47) {
-          return (dp) null;
+          return (QuickChatCategoryDefinition) null;
         }
         if (var3 != null) {
           return var3;
@@ -159,9 +159,9 @@ final class re {
         } else {
           var4 = this.field_e.getFile(1, param0 - 48, param1);
         }
-        var3 = new dp();
+        var3 = new QuickChatCategoryDefinition();
         if (var4 != null) {
-          var3.a(new PacketBuffer(var4), 0);
+          var3.decode(new PacketBuffer(var4), 0);
         }
         if (32768 <= param1) {
           var3.e((byte) -117);
@@ -179,7 +179,7 @@ final class re {
         field_h = null;
     }
 
-    re(int param0, Archive param1, Archive param2, wr param3) {
+    QuickChatCategoryRegistry(int param0, Archive param1, Archive param2, wr param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -222,7 +222,7 @@ final class re {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class re {
             param0[var2_int].field_p = param0[var2_int].field_w;
           }
           if (param1 <= 32) {
-            re.a((byte) 21);
+            QuickChatCategoryRegistry.a((byte) 21);
           }
           stackIn_7_0 = (Sprite[]) (param0);
           return stackIn_7_0;
@@ -260,7 +260,7 @@ final class re {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

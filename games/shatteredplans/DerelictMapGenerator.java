@@ -116,7 +116,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           stackIn_12_3 = null;
           stackIn_12_7 = 1;
         }
-        stackIn_11_0[stackIn_11_1] = new CellVertex(stackIn_11_4, stackIn_11_5[stackIn_11_6 - stackIn_12_7], (Star) null, var4.field_A, (int)((double)var4.field_S - rh.field_d * 200.0 * 0.5), 0);
+        stackIn_11_0[stackIn_11_1] = new CellVertex(stackIn_11_4, stackIn_11_5[stackIn_11_6 - stackIn_12_7], (Star) null, var4.field_A, (int)((double)var4.field_S - ProjectsContent.field_d * 200.0 * 0.5), 0);
         stackIn_14_0 = var4.field_r;
         stackIn_14_1 = 1;
         stackIn_14_2 = null;
@@ -134,8 +134,8 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           stackIn_15_3 = null;
           stackIn_15_8 = 1;
         }
-        stackIn_14_0[stackIn_14_1] = new CellVertex(stackIn_14_4, stackIn_14_5[stackIn_14_6 - (stackIn_14_7 - stackIn_15_8)], (Star) null, 100 + var4.field_A, (int)((double)var4.field_S - 0.25 * (200.0 * rh.field_d)), 0);
-        var4.field_r[2] = new CellVertex(var4, this.field_f[var3 + 1], (Star) null, 100 + var4.field_A, (int)((double)var4.field_S + 0.25 * (rh.field_d * 200.0)), 0);
+        stackIn_14_0[stackIn_14_1] = new CellVertex(stackIn_14_4, stackIn_14_5[stackIn_14_6 - (stackIn_14_7 - stackIn_15_8)], (Star) null, 100 + var4.field_A, (int)((double)var4.field_S - 0.25 * (200.0 * ProjectsContent.field_d)), 0);
+        var4.field_r[2] = new CellVertex(var4, this.field_f[var3 + 1], (Star) null, 100 + var4.field_A, (int)((double)var4.field_S + 0.25 * (ProjectsContent.field_d * 200.0)), 0);
         stackIn_17_0 = var4.field_r;
         stackIn_17_1 = 3;
         stackIn_17_2 = null;
@@ -153,7 +153,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           stackIn_18_3 = null;
           stackIn_18_8 = 0;
         }
-        stackIn_17_0[stackIn_17_1] = new CellVertex(stackIn_17_4, stackIn_17_5[stackIn_17_6 + (stackIn_17_7 + stackIn_18_8)], (Star) null, var4.field_A, (int)(rh.field_d * 200.0 * 0.5 + (double)var4.field_S), 0);
+        stackIn_17_0[stackIn_17_1] = new CellVertex(stackIn_17_4, stackIn_17_5[stackIn_17_6 + (stackIn_17_7 + stackIn_18_8)], (Star) null, var4.field_A, (int)(ProjectsContent.field_d * 200.0 * 0.5 + (double)var4.field_S), 0);
         stackIn_20_0 = var4.field_r;
         stackIn_20_1 = 4;
         stackIn_20_2 = null;
@@ -171,10 +171,10 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           stackIn_21_3 = null;
           stackIn_21_8 = 1;
         }
-        stackIn_20_0[stackIn_20_1] = new CellVertex(stackIn_20_4, stackIn_20_5[stackIn_20_6 - (stackIn_20_7 + stackIn_21_8)], (Star) null, -100 + var4.field_A, (int)(0.25 * (200.0 * rh.field_d) + (double)var4.field_S), 0);
-        var4.field_r[5] = new CellVertex(var4, this.field_f[-1 + var3], (Star) null, -100 + var4.field_A, (int)((double)var4.field_S - 0.25 * (200.0 * rh.field_d)), 0);
+        stackIn_20_0[stackIn_20_1] = new CellVertex(stackIn_20_4, stackIn_20_5[stackIn_20_6 - (stackIn_20_7 + stackIn_21_8)], (Star) null, -100 + var4.field_A, (int)(0.25 * (200.0 * ProjectsContent.field_d) + (double)var4.field_S), 0);
+        var4.field_r[5] = new CellVertex(var4, this.field_f[-1 + var3], (Star) null, -100 + var4.field_A, (int)((double)var4.field_S - 0.25 * (200.0 * ProjectsContent.field_d)), 0);
         for (var7_int = 0; var7_int < 6; var7_int++) {
-          var4.field_r[var7_int].field_g = (int)(0.5 * (200.0 * rh.field_d));
+          var4.field_r[var7_int].field_g = (int)(0.5 * (200.0 * ProjectsContent.field_d));
         }
         var4.field_D = new Star[]{};
         var7 = new Star[var13.field_e.length + 1];
@@ -240,7 +240,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

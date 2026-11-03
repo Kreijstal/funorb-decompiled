@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class em implements jk {
-    qk[] field_i;
+final class ProductionContent implements MenuContent {
+    MenuLabel[] field_i;
     static String field_b;
     static int field_j;
     static int[] field_c;
@@ -11,8 +11,8 @@ final class em implements jk {
     static int field_h;
     static String field_g;
     lh field_e;
-    jh[] field_d;
-    lp[] field_f;
+    ToggleButton[] field_d;
+    MenuList[] field_f;
 
     final static int a(int param0, byte param1, int param2) {
         int var3_int = 0;
@@ -43,7 +43,7 @@ final class em implements jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var3), "em.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var3), "em.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class em implements jk {
         field_c = null;
         field_b = null;
         if (param0 != 3) {
-          em.a(-116);
+          ProductionContent.a(-116);
         }
     }
 
@@ -82,7 +82,7 @@ final class em implements jk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -166,26 +166,26 @@ final class em implements jk {
               var19 = param3 + var8 * param0 / (var8 + var9);
               var18 = param3 + var8 * param0 / (var8 + var9);
             }
-            gf.a(ph.field_b);
+            gf.a(ListContent.field_b);
             if (null != param4[0]) {
               gf.i(param5, param3, var16, var18);
               param4[0].draw(param5, param3);
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (param4[2] != null) {
               gf.i(var17, param3, var10, var18);
               param4[2].draw(var13, param3);
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (param4[6] != null) {
               gf.i(param5, var19, var16, var11);
               param4[6].draw(param5, var15);
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (null != param4[8]) {
               gf.i(var17, var19, var10, var11);
               param4[8].draw(var13, var15);
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (null != param4[1] &&
               param4[1].field_o != 0) {
@@ -193,7 +193,7 @@ final class em implements jk {
               for (var20 = var12; var13 > var20; var20 = var20 + param4[1].field_o) {
                 param4[1].draw(var20, param3);
               }
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (param4[7] != null &&
               param4[7].field_o != 0) {
@@ -201,7 +201,7 @@ final class em implements jk {
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param4[7].field_o) {
                 param4[7].draw(var20Lifetime1, var15);
               }
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (null != param4[3] &&
               param4[3].field_p != 0) {
@@ -209,7 +209,7 @@ final class em implements jk {
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param4[3].field_p) {
                 param4[3].draw(param5, var20Lifetime2);
               }
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (param4[5] != null &&
               param4[5].field_p != 0) {
@@ -217,7 +217,7 @@ final class em implements jk {
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param4[5].field_p) {
                 param4[5].draw(var13, var20Lifetime3);
               }
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             if (null != param4[4] &&
               param4[4].field_o != 0) {
@@ -230,7 +230,7 @@ final class em implements jk {
                   param4[4].draw(var21, var20Lifetime4);
                 }
               }
-              gf.b(ph.field_b);
+              gf.b(ListContent.field_b);
             }
             return;
           }
@@ -245,7 +245,7 @@ final class em implements jk {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
         }
     }
 

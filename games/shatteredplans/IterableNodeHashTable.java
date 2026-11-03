@@ -37,10 +37,10 @@ final class IterableNodeHashTable implements Iterable {
         if (param0 > -28) {
           byte[] var2 = (byte[]) null;
           IterableNodeHashTable.a((byte[]) null, -113);
-          jh.field_D = true;
+          ToggleButton.field_D = true;
           return;
         }
-        jh.field_D = true;
+        ToggleButton.field_D = true;
     }
 
     final static String a(byte[] param0, int param1) {
@@ -66,7 +66,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class IterableNodeHashTable implements Iterable {
           param0.next.previous = param0;
           param0.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

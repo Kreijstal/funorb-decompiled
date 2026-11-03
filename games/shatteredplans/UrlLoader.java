@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class r implements Runnable {
+final class UrlLoader implements Runnable {
     private PacketBuffer field_k;
     private PlatformTaskDispatcher field_l;
     static String field_f;
@@ -65,7 +65,7 @@ final class r implements Runnable {
             for (var7_int = 1; var5 > var7_int; var7_int++) {
               QuaternaryNodeList.field_a[var7_int] = var15.readString(-1);
             }
-            vd.a(var6, var5, (byte) 18);
+            MenuComponent.a(var6, var5, (byte) 18);
             for (var7_intLifetime1 = 0; var5 > var7_intLifetime1; var7_intLifetime1++) {
               TutorialVictoryChecker.a(var15, false);
               if (var7_intLifetime1 != 0) {
@@ -128,7 +128,7 @@ final class r implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1), "r.E(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1), "r.E(" + param0 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class r implements Runnable {
           var1.drawHalfSize(0, 0);
           Star.f((byte) -70);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "r.D(" + param0 + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class r implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -9) {
-            r.a((byte) 30, false);
+            UrlLoader.a((byte) 30, false);
           }
           var3 = new ByteArrayNode(param0);
           MapView.field_vb.addLast((byte) -113, var3);
@@ -229,7 +229,7 @@ final class r implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class r implements Runnable {
               break;
             }
             if (this.field_k.position == this.field_k.payload.length) {
-              throw r.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_k.payload.length + " " + this.field_e));
+              throw UrlLoader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_k.payload.length + " " + this.field_e));
             }
             var1 = this;
             synchronized (var1) {
@@ -377,7 +377,7 @@ final class r implements Runnable {
         return false;
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapThrowable(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -388,13 +388,13 @@ final class r implements Runnable {
         return var2;
     }
 
-    r(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    UrlLoader(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_e = param1;
           this.field_l = param0;
           this.field_k = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -402,7 +402,7 @@ final class r implements Runnable {
         field_j = null;
         field_f = null;
         if (param0 != 0) {
-          r.a((byte) 121, false);
+          UrlLoader.a((byte) 121, false);
         }
     }
 

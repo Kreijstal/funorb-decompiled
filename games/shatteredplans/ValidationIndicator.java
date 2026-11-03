@@ -20,9 +20,9 @@ final class ValidationIndicator extends FocusableWidget {
 
     final static void a(IntrusiveDeque param0, boolean param1) throws jn {
         RuntimeException runtimeException = null;
-        nc var3 = null;
-        nc var4 = null;
-        nc var5 = null;
+        CandidateLink var3 = null;
+        CandidateLink var4 = null;
+        CandidateLink var5 = null;
         int var6 = 0;
         IntrusiveDeque var7 = null;
         RuntimeException stackIn_27_0 = null;
@@ -35,16 +35,16 @@ final class ValidationIndicator extends FocusableWidget {
             ValidationIndicator.a((byte) -92);
           }
           var7 = new IntrusiveDeque();
-          var3 = (nc) (param0.pollFirst(72));
+          var3 = (CandidateLink) (param0.pollFirst(72));
           var4 = var3;
           var7.addLast((byte) -113, var4);
           while (!param0.isEmpty(-87)) {
             boolean decompiledFrameRemainder0 = true;
             if (null == var4.field_k) {
-              var5 = (nc) (param0.startForward(0));
+              var5 = (CandidateLink) (param0.startForward(0));
               while (var5 != null) {
                 if (var5.field_r != null) {
-                  var5 = (nc) (param0.nextForward((byte) -71));
+                  var5 = (CandidateLink) (param0.nextForward((byte) -71));
                   continue;
                 }
                 break;
@@ -88,7 +88,7 @@ final class ValidationIndicator extends FocusableWidget {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class ValidationIndicator extends FocusableWidget {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class ValidationIndicator extends FocusableWidget {
           this.field_F = this.field_F + 1;
           super.updateHover(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hl.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hl.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -209,18 +209,18 @@ final class ValidationIndicator extends FocusableWidget {
         if (pd.field_h != var8 &&
           lm.field_d != var8) {
           if (ArchiveSourceManager.field_b == var8) {
-            var13 = lp.field_w[2];
+            var13 = MenuList.field_w[2];
             var13.c(-(var13.field_z >> 1) + var5, var6 - (var13.field_w >> 1), 256);
             return;
           }
           if (CachedArchiveSource.field_g != var8) {
             return;
           }
-          var12 = lp.field_w[1];
+          var12 = MenuList.field_w[1];
           var12.c(-(var12.field_z >> 1) + var5, -(var12.field_w >> 1) + var6, 256);
           return;
         }
-        var14 = lp.field_w[0];
+        var14 = MenuList.field_w[0];
         var9 = var14.field_o << 1;
         var10 = var14.field_p << 1;
         if (null != gg.field_e &&
@@ -242,7 +242,7 @@ final class ValidationIndicator extends FocusableWidget {
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

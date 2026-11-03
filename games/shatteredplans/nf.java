@@ -107,7 +107,7 @@ final class nf {
           if (1 == var2_int) {
             stackIn_18_0 = bk.field_d;
           } else {
-            stackIn_18_0 = re.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
+            stackIn_18_0 = QuickChatCategoryRegistry.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
           }
           var9 = stackIn_18_0;
           var5 = var9;
@@ -121,9 +121,9 @@ final class nf {
                 var4.field_r != 0 &&
                 null != var4.field_k) {
                 if (var4.field_r != 1) {
-                  var7 = re.a(wl.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
+                  var7 = QuickChatCategoryRegistry.a(wl.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
                 } else {
-                  var7 = re.a(lh.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
+                  var7 = QuickChatCategoryRegistry.a(lh.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
                 }
                 incrementValue$0 = var3;
                 var3++;
@@ -145,7 +145,7 @@ final class nf {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class nf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class nf {
         } else {
           this.field_f = null;
         }
-        this.field_b = em.field_a;
+        this.field_b = ProductionContent.field_a;
         this.field_k = BufferedSocket.field_h;
         this.field_c = nj.field_a;
         this.field_h = kr.field_b;
@@ -281,7 +281,7 @@ final class nf {
           this.field_b = param1;
           this.field_l = 0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "nf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -62,13 +62,13 @@ final class SolMapGenerator extends StandardMapGenerator {
           boolean decompiledFrameRemainder0 = true;
           var13 = param8;
           if (var13 == 2) {
-            var10[0] = rh.field_f[0];
-            var10[1] = rh.field_f[3];
+            var10[0] = ProjectsContent.field_f[0];
+            var10[1] = ProjectsContent.field_f[3];
           } else {
             if (var13 == 3) {
-              var10[0] = rh.field_f[0];
-              var10[1] = rh.field_f[2];
-              var10[2] = rh.field_f[4];
+              var10[0] = ProjectsContent.field_f[0];
+              var10[1] = ProjectsContent.field_f[2];
+              var10[2] = ProjectsContent.field_f[4];
             } else {
               if (var13 != 4) {
                 if (var13 != 5) {
@@ -76,7 +76,7 @@ final class SolMapGenerator extends StandardMapGenerator {
                     throw new jn("Sol Map does not support " + param8 + " players.");
                   }
                   for (var13 = 0; var13 < param8; var13++) {
-                    var10[var13] = rh.field_f[var13];
+                    var10[var13] = ProjectsContent.field_f[var13];
                   }
                 } else {
                   var12 = 0;
@@ -85,16 +85,16 @@ final class SolMapGenerator extends StandardMapGenerator {
                     if (var11Lifetime1 <= var13) {
                       var12 = 1;
                     }
-                    var10[var13] = rh.field_f[var12 + var13];
+                    var10[var13] = ProjectsContent.field_f[var12 + var13];
                   }
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                var10[1] = rh.field_f[1];
-                var10[2] = rh.field_f[3];
-                var10[0] = rh.field_f[0];
-                var10[3] = rh.field_f[4];
+                var10[1] = ProjectsContent.field_f[1];
+                var10[2] = ProjectsContent.field_f[3];
+                var10[0] = ProjectsContent.field_f[0];
+                var10[3] = ProjectsContent.field_f[4];
               }
             }
           }
@@ -128,7 +128,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param8).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         IntrusiveNode.field_d = ae.a(-125, "commonui", param1, "frame_bottom");
         kb.field_v = id.a(2, param1, "commonui", "jagex_logo_grey");
         AttackTask.field_q = ae.a(-80, "commonui", param1, "button");
-        lp.field_w = va.a("validation", 0, "commonui", param1);
+        MenuList.field_w = va.a("validation", 0, "commonui", param1);
         EmailValidator.field_x = (nq) ((Object) ri.a("arezzo12", "commonui", param1, param2, (byte) -17));
         gn.field_u = (nq) ((Object) ri.a("arezzo14", "commonui", param1, param2, (byte) 90));
         CipherPacketBuffer.field_p = (nq) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
@@ -197,7 +197,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           Star.f((byte) 67);
           AttackTask.field_q = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "vl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         Star[] var4 = null;
         int var5 = 0;
         int var6_int = 0;
-        t var6 = null;
+        StarLinkPlanner var6 = null;
         int var7 = 0;
         int var8 = 0;
         Archive var9 = null;
@@ -267,8 +267,8 @@ final class SolMapGenerator extends StandardMapGenerator {
             var11++;
           }
           param1.field_e = var4;
-          var6 = new t(param1.field_e);
-          var6.a(true, 1);
+          var6 = new StarLinkPlanner(param1.field_e);
+          var6.buildLinks(true, 1);
           this.findHexNeighbours(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) (stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

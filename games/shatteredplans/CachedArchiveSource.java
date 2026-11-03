@@ -250,9 +250,9 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     final static void d(int param0) {
-        gm.field_m.a(lp.field_v.field_K - (ns.field_pb ? 42 + (pe.field_K + 2) : 0), 18, (byte) 39, 0, 0);
-        sf.field_f.a(42 + pe.field_K, param0, (byte) 42, 0, -40 + (lp.field_v.field_K - (pe.field_K + 2)));
-        ls.field_a.a(lp.field_v.field_K, 20, 0, 2, -122, lp.field_v.field_mb - 20, pe.field_K);
+        SoundPlayback.field_m.a(MenuList.field_v.field_K - (ns.field_pb ? 42 + (pe.field_K + 2) : 0), 18, (byte) 39, 0, 0);
+        sf.field_f.a(42 + pe.field_K, param0, (byte) 42, 0, -40 + (MenuList.field_v.field_K - (pe.field_K + 2)));
+        ls.field_a.a(MenuList.field_v.field_K, 20, 0, 2, -122, MenuList.field_v.field_mb - 20, pe.field_K);
     }
 
     final ArchiveIndex a(int param0) {
@@ -453,7 +453,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (null != this.field_p.field_j &&
                 this.field_p.field_j[param2] != null) {
                 var30 = this.field_p.field_j[param2];
-                var29 = dp.a(var5, var18.length - 2, param1 ^ -26131, 0);
+                var29 = QuickChatCategoryDefinition.a(var5, var18.length - 2, param1 ^ -26131, 0);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -506,7 +506,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (null != this.field_p.field_j &&
               this.field_p.field_j[param2] != null) {
               var27 = this.field_p.field_j[param2];
-              var28 = dp.a(var5, -2 + var18.length, param1 ^ -26131, 0);
+              var28 = QuickChatCategoryDefinition.a(var5, -2 + var18.length, param1 ^ -26131, 0);
               for (var9 = 0; 64 > var9; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();
@@ -620,7 +620,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

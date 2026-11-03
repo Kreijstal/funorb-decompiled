@@ -26,7 +26,7 @@ final class EmailValidator extends TextFieldValidator {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vd.a(param1, param2, param0, 2)) {
+          if (!MenuComponent.a(param1, param2, param0, 2)) {
             return null;
           }
           if (param4 > -83) {
@@ -53,17 +53,17 @@ final class EmailValidator extends TextFieldValidator {
             stackIn_16_0 = stackIn_11_0;
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static lp a(qk[] param0, boolean param1) {
+    final static MenuList a(MenuLabel[] param0, boolean param1) {
         int var3 = 0;
-        lp var2 = null;
+        MenuList var2 = null;
         int var4 = 0;
-        lp var5 = null;
-        lp stackIn_7_0 = null;
-        lp stackIn_9_0 = null;
+        MenuList var5 = null;
+        MenuList stackIn_7_0 = null;
+        MenuList stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -71,17 +71,17 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException var2_ref = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5 = new lp(0, 0, 182, param0.length * rs.field_Cb.field_J);
+          var5 = new MenuList(0, 0, 182, param0.length * rs.field_Cb.field_J);
           var2 = var5;
           for (var3 = 0; param0.length > var3; var3++) {
-            param0[var3].a((byte) 119, 0, rs.field_Cb.field_J * var3);
-            var5.a(param0[var3], 8);
+            param0[var3].moveTo((byte) 119, 0, rs.field_Cb.field_J * var3);
+            var5.addChild(param0[var3], 8);
           }
           if (param1) {
             stackIn_9_0 = var2;
             return stackIn_9_0;
           }
-          stackIn_7_0 = (lp) null;
+          stackIn_7_0 = (MenuList) null;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class EmailValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var2), "mf.U(" + param0 + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var2), "mf.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class EmailValidator extends TextFieldValidator {
           field_q = null;
           field_v = null;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "mf.T(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mf.T(" + param0 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class EmailValidator extends TextFieldValidator {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -351,7 +351,7 @@ final class EmailValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref), "mf.O(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref), "mf.O(" + param0 + ')');
         }
     }
 
@@ -434,7 +434,7 @@ final class EmailValidator extends TextFieldValidator {
             stackIn_24_0 = stackIn_20_0;
             stackIn_24_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -497,7 +497,7 @@ final class EmailValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref3 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var1_ref3), "mf.V(" + param0 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) var1_ref3), "mf.V(" + param0 + ')');
         }
     }
 
@@ -549,7 +549,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

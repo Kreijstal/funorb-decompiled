@@ -5,7 +5,7 @@ final class dh {
     static PlatformTaskDispatcher field_a;
     static String field_d;
     static String field_b;
-    static re field_c;
+    static QuickChatCategoryRegistry field_c;
 
     final static boolean a(int param0) {
         if (param0 != -12165) {

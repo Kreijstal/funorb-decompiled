@@ -208,7 +208,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param9).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         try {
           this.field_y = param0;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -323,16 +323,16 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var11 = var10;
           var11.field_y = 1;
           gg.field_d = new qr(0L, var8);
-          gg.field_d.field_F = re.a(ae.a(-82, "lobby", param4, "heading"), 123);
+          gg.field_d.field_F = QuickChatCategoryRegistry.a(ae.a(-82, "lobby", param4, "heading"), 123);
           IntrusiveNode.field_a = new qr(0L, (qr) null);
           IntrusiveNode.field_a.field_F = ArchiveSourceManager.a(false, 4210752, false, 120, 8421504, (byte) -63);
           GalaxyMap.field_a = new qr(0L, (qr) null);
           GalaxyMap.field_a.field_F = Wormhole.a(16, 3, 114, 6316128, 6316128, 1);
           MusicCrossfadeStream.field_v = new qr(0L, (qr) null);
-          MusicCrossfadeStream.field_v.field_F = re.a(ae.a(-113, "lobby", param4, "popup"), 122);
-          var12 = re.a(ae.a(124, "lobby", param4, "popup_mouseover"), 117);
+          MusicCrossfadeStream.field_v.field_F = QuickChatCategoryRegistry.a(ae.a(-113, "lobby", param4, "popup"), 122);
+          var12 = QuickChatCategoryRegistry.a(ae.a(124, "lobby", param4, "popup_mouseover"), 117);
           var13 = ae.a(32, "lobby", param4, "button");
-          var14 = re.a(ae.a(-97, "lobby", param4, "tab_active"), 82);
+          var14 = QuickChatCategoryRegistry.a(ae.a(-97, "lobby", param4, "tab_active"), 82);
           un.field_g = new qr(0L, var8);
           un.field_g.field_F = var14;
           po.field_d = new qr(0L, (qr) null);
@@ -390,11 +390,11 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           StandardMapReader.field_h.field_sb = ae.a(62, "lobby", param4, "button_active");
           StandardMapReader.field_h.field_wb = ae.a(-104, "lobby", param4, "button_disabled");
           StandardMapReader.field_h.field_y = 1;
-          re.field_h = new qr(0L, gn.field_w);
-          re.field_h.field_y = 1;
-          re.field_h.field_F = re.a(ae.a(73, "lobby", param4, "tab_inactive"), 127);
-          re.field_h.field_lb = re.a(ae.a(100, "lobby", param4, "tab_mouseover"), 85);
-          re.field_h.field_sb = var14;
+          QuickChatCategoryRegistry.field_h = new qr(0L, gn.field_w);
+          QuickChatCategoryRegistry.field_h.field_y = 1;
+          QuickChatCategoryRegistry.field_h.field_F = QuickChatCategoryRegistry.a(ae.a(73, "lobby", param4, "tab_inactive"), 127);
+          QuickChatCategoryRegistry.field_h.field_lb = QuickChatCategoryRegistry.a(ae.a(100, "lobby", param4, "tab_mouseover"), 85);
+          QuickChatCategoryRegistry.field_h.field_sb = var14;
           tm.field_t = new qr(0L, (qr) null);
           tm.field_t.field_F = Wormhole.a(16, 3, 206, 1856141, 1127256, -1);
           rs.field_Eb = new qr(0L, (qr) null);
@@ -418,43 +418,43 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           n.field_o = new qr(0L, jf.field_b);
           WeightedCacheEntry.field_o = new qr(0L, jf.field_b);
           an.field_d = new qr(0L, jf.field_b);
-          jf.field_b.field_F = re.a(ae.a(106, "lobby", param4, "smallbutton"), 47);
-          jf.field_b.field_lb = re.a(ae.a(-79, "lobby", param4, "smallbutton_mouseover"), 103);
-          dupTemp$0 = re.a(ae.a(-114, "lobby", param4, "smallbutton_active"), 51);
+          jf.field_b.field_F = QuickChatCategoryRegistry.a(ae.a(106, "lobby", param4, "smallbutton"), 47);
+          jf.field_b.field_lb = QuickChatCategoryRegistry.a(ae.a(-79, "lobby", param4, "smallbutton_mouseover"), 103);
+          dupTemp$0 = QuickChatCategoryRegistry.a(ae.a(-114, "lobby", param4, "smallbutton_active"), 51);
           jf.field_b.field_sb = dupTemp$0;
           jf.field_b.field_vb = dupTemp$0;
-          jf.field_b.field_wb = re.a(ae.a(109, "lobby", param4, "smallbutton_disabled"), 65);
-          DelegatingCanvas.field_f.field_F = re.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
-          DelegatingCanvas.field_f.field_lb = re.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
-          DelegatingCanvas.field_f.field_vb = re.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
-          IsaacBackedRandom.field_a.field_F = re.a(ae.a(-121, "lobby", param4, "bigbutton"), 53);
-          IsaacBackedRandom.field_a.field_lb = re.a(ae.a(92, "lobby", param4, "bigbutton_mouseover"), 76);
-          IsaacBackedRandom.field_a.field_vb = re.a(ae.a(-108, "lobby", param4, "bigbutton_mouseheld"), 127);
-          IsaacBackedRandom.field_a.field_wb = re.a(ae.a(-98, "lobby", param4, "bigbutton_disabled"), 122);
-          GameScreen.field_h.field_F = re.a(ae.a(-86, "lobby", param4, "greenbutton"), 76);
-          GameScreen.field_h.field_lb = re.a(ae.a(-78, "lobby", param4, "greenbutton_mouseover"), 91);
-          GameScreen.field_h.field_vb = re.a(ae.a(-98, "lobby", param4, "greenbutton_mouseheld"), 39);
-          AllianceExpiredEvent.field_l.field_F = re.a(ae.a(-126, "lobby", param4, "redbutton"), 56);
-          AllianceExpiredEvent.field_l.field_lb = re.a(ae.a(120, "lobby", param4, "redbutton_mouseover"), 55);
-          AllianceExpiredEvent.field_l.field_vb = re.a(ae.a(126, "lobby", param4, "redbutton_mouseheld"), 103);
-          bd.field_E.field_F = re.a(ae.a(-101, "lobby", param4, "backbutton"), 48);
-          bd.field_E.field_lb = re.a(ae.a(-103, "lobby", param4, "backbutton_mouseover"), 60);
-          bd.field_E.field_vb = re.a(ae.a(-104, "lobby", param4, "backbutton_mouseheld"), 123);
-          bd.field_E.field_wb = re.a(ae.a(53, "lobby", param4, "backbutton_disabled"), 40);
-          an.field_d.field_F = re.a(ae.a(115, "lobby", param4, "gameoptionbutton"), 57);
-          an.field_d.field_lb = re.a(ae.a(54, "lobby", param4, "gameoptionbutton_mouseover"), 117);
-          dupTemp$1 = re.a(ae.a(77, "lobby", param4, "gameoptionbutton_active"), 52);
+          jf.field_b.field_wb = QuickChatCategoryRegistry.a(ae.a(109, "lobby", param4, "smallbutton_disabled"), 65);
+          DelegatingCanvas.field_f.field_F = QuickChatCategoryRegistry.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
+          DelegatingCanvas.field_f.field_lb = QuickChatCategoryRegistry.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
+          DelegatingCanvas.field_f.field_vb = QuickChatCategoryRegistry.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
+          IsaacBackedRandom.field_a.field_F = QuickChatCategoryRegistry.a(ae.a(-121, "lobby", param4, "bigbutton"), 53);
+          IsaacBackedRandom.field_a.field_lb = QuickChatCategoryRegistry.a(ae.a(92, "lobby", param4, "bigbutton_mouseover"), 76);
+          IsaacBackedRandom.field_a.field_vb = QuickChatCategoryRegistry.a(ae.a(-108, "lobby", param4, "bigbutton_mouseheld"), 127);
+          IsaacBackedRandom.field_a.field_wb = QuickChatCategoryRegistry.a(ae.a(-98, "lobby", param4, "bigbutton_disabled"), 122);
+          GameScreen.field_h.field_F = QuickChatCategoryRegistry.a(ae.a(-86, "lobby", param4, "greenbutton"), 76);
+          GameScreen.field_h.field_lb = QuickChatCategoryRegistry.a(ae.a(-78, "lobby", param4, "greenbutton_mouseover"), 91);
+          GameScreen.field_h.field_vb = QuickChatCategoryRegistry.a(ae.a(-98, "lobby", param4, "greenbutton_mouseheld"), 39);
+          AllianceExpiredEvent.field_l.field_F = QuickChatCategoryRegistry.a(ae.a(-126, "lobby", param4, "redbutton"), 56);
+          AllianceExpiredEvent.field_l.field_lb = QuickChatCategoryRegistry.a(ae.a(120, "lobby", param4, "redbutton_mouseover"), 55);
+          AllianceExpiredEvent.field_l.field_vb = QuickChatCategoryRegistry.a(ae.a(126, "lobby", param4, "redbutton_mouseheld"), 103);
+          bd.field_E.field_F = QuickChatCategoryRegistry.a(ae.a(-101, "lobby", param4, "backbutton"), 48);
+          bd.field_E.field_lb = QuickChatCategoryRegistry.a(ae.a(-103, "lobby", param4, "backbutton_mouseover"), 60);
+          bd.field_E.field_vb = QuickChatCategoryRegistry.a(ae.a(-104, "lobby", param4, "backbutton_mouseheld"), 123);
+          bd.field_E.field_wb = QuickChatCategoryRegistry.a(ae.a(53, "lobby", param4, "backbutton_disabled"), 40);
+          an.field_d.field_F = QuickChatCategoryRegistry.a(ae.a(115, "lobby", param4, "gameoptionbutton"), 57);
+          an.field_d.field_lb = QuickChatCategoryRegistry.a(ae.a(54, "lobby", param4, "gameoptionbutton_mouseover"), 117);
+          dupTemp$1 = QuickChatCategoryRegistry.a(ae.a(77, "lobby", param4, "gameoptionbutton_active"), 52);
           an.field_d.field_sb = dupTemp$1;
           an.field_d.field_vb = dupTemp$1;
-          an.field_d.field_wb = re.a(ae.a(-114, "lobby", param4, "gameoptionbutton_disabled"), 121);
-          n.field_o.field_F = re.a(ae.a(-117, "lobby", param4, "chatbutton"), 75);
-          n.field_o.field_lb = re.a(ae.a(84, "lobby", param4, "chatbutton_mouseover"), 122);
-          dupTemp$2 = re.a(ae.a(124, "lobby", param4, "chatbutton_active"), 53);
+          an.field_d.field_wb = QuickChatCategoryRegistry.a(ae.a(-114, "lobby", param4, "gameoptionbutton_disabled"), 121);
+          n.field_o.field_F = QuickChatCategoryRegistry.a(ae.a(-117, "lobby", param4, "chatbutton"), 75);
+          n.field_o.field_lb = QuickChatCategoryRegistry.a(ae.a(84, "lobby", param4, "chatbutton_mouseover"), 122);
+          dupTemp$2 = QuickChatCategoryRegistry.a(ae.a(124, "lobby", param4, "chatbutton_active"), 53);
           n.field_o.field_sb = dupTemp$2;
           n.field_o.field_vb = dupTemp$2;
-          WeightedCacheEntry.field_o.field_F = re.a(ae.a(74, "lobby", param4, "chatfilterbutton"), 104);
-          WeightedCacheEntry.field_o.field_lb = re.a(ae.a(-95, "lobby", param4, "chatfilterbutton_mouseover"), 101);
-          dupTemp$3 = re.a(ae.a(91, "lobby", param4, "chatfilterbutton_active"), 77);
+          WeightedCacheEntry.field_o.field_F = QuickChatCategoryRegistry.a(ae.a(74, "lobby", param4, "chatfilterbutton"), 104);
+          WeightedCacheEntry.field_o.field_lb = QuickChatCategoryRegistry.a(ae.a(-95, "lobby", param4, "chatfilterbutton_mouseover"), 101);
+          dupTemp$3 = QuickChatCategoryRegistry.a(ae.a(91, "lobby", param4, "chatfilterbutton_active"), 77);
           WeightedCacheEntry.field_o.field_sb = dupTemp$3;
           WeightedCacheEntry.field_o.field_vb = dupTemp$3;
           var17 = ae.a(-118, "lobby", param4, "checkbox");
@@ -465,10 +465,10 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           sj.field_c.field_vb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_mouseheld"));
           sj.field_c.field_wb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_disabled"));
           TextFieldValidator.field_l = new qr(0L, (qr) null);
-          TextFieldValidator.field_l.field_F = re.a(ae.a(126, "lobby", param4, "dragbar"), 33);
-          TextFieldValidator.field_l.field_lb = re.a(ae.a(-109, "lobby", param4, "dragbar_mouseover"), 118);
-          TextFieldValidator.field_l.field_vb = re.a(ae.a(-77, "lobby", param4, "dragbar_mouseheld"), 67);
-          TextFieldValidator.field_l.field_wb = re.a(ae.a(57, "lobby", param4, "dragbar_disabled"), 126);
+          TextFieldValidator.field_l.field_F = QuickChatCategoryRegistry.a(ae.a(126, "lobby", param4, "dragbar"), 33);
+          TextFieldValidator.field_l.field_lb = QuickChatCategoryRegistry.a(ae.a(-109, "lobby", param4, "dragbar_mouseover"), 118);
+          TextFieldValidator.field_l.field_vb = QuickChatCategoryRegistry.a(ae.a(-77, "lobby", param4, "dragbar_mouseheld"), 67);
+          TextFieldValidator.field_l.field_wb = QuickChatCategoryRegistry.a(ae.a(57, "lobby", param4, "dragbar_disabled"), 126);
           sk.field_k = new qr(0L, (qr) null);
           sk.field_k.field_pb = id.a(2, param4, "lobby", "upbutton");
           sk.field_k.field_fb = id.a(2, param4, "lobby", "upbutton_mouseover");
@@ -510,7 +510,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -570,7 +570,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
         }
     }
 

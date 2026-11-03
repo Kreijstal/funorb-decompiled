@@ -50,11 +50,11 @@ final class bf {
             if (8 == param1) {
               param1 = 2;
               if (TertiaryNodeList.field_b) {
-                param2 = dp.field_p;
+                param2 = QuickChatCategoryDefinition.field_p;
               } else {
                 param2 = aa.field_N;
               }
-              no.field_e.a(16311, qh.field_B);
+              no.field_e.a(16311, MenuWindow.field_B);
             }
             var3_int = 1;
             if (10 == param1) {
@@ -63,9 +63,9 @@ final class bf {
             }
             if (var3_int != 0) {
               if (oe.field_f) {
-                param2 = re.a(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
+                param2 = QuickChatCategoryRegistry.a(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
               }
-              if (jh.field_D) {
+              if (ToggleButton.field_D) {
                 param2 = eo.field_ib;
               }
               ji.field_G.a(param2, param1, -86);
@@ -78,7 +78,7 @@ final class bf {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class bf {
           SoundCache.field_c.a(-24 + so.field_v.field_K - 24, -24 + so.field_v.field_mb - 20, (byte) 67, 16, 24);
           SocketConnector.field_d.a(80, 24, (byte) 115, so.field_v.field_mb - 20 - 24, 120);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "bf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends vd {
+final class MenuWindow extends MenuComponent {
     static String field_D;
-    jk field_x;
+    MenuContent field_x;
     boolean field_A;
-    lp field_z;
+    MenuList field_z;
     static String field_u;
     private String field_y;
     static String field_B;
@@ -87,7 +87,7 @@ final class qh extends vd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -176,23 +176,23 @@ final class qh extends vd {
           VictoryChecker.field_h.c(var10, this.field_t + 3, var9);
         }
         rs.field_Cb.drawCentred(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
-        vd var12 = (vd) (this.field_l.startReverse(3725));
+        MenuComponent var12 = (MenuComponent) (this.field_l.startReverse(3725));
         while (var12 != null) {
           var12.a(-14);
-          var12 = (vd) (this.field_l.nextReverse(-124));
+          var12 = (MenuComponent) (this.field_l.nextReverse(-124));
         }
     }
 
-    final vd b(byte param0, int param1, int param2) {
+    final MenuComponent findComponentAt(byte param0, int param1, int param2) {
         if (!this.field_s) {
           return null;
         }
-        vd var4 = as.a(this.field_l, param1, (byte) -112, param2);
+        MenuComponent var4 = as.a(this.field_l, param1, (byte) -112, param2);
         if (param0 < 51) {
-          return (vd) null;
+          return (MenuComponent) null;
         }
         if (var4 == null) {
-          return super.b((byte) 123, param1, param2);
+          return super.findComponentAt((byte) 123, param1, param2);
         }
         return var4;
     }
@@ -231,7 +231,7 @@ final class qh extends vd {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void resize(boolean param0, int param1, int param2) {
         if (39 > param1) {
           param1 = 39;
         }
@@ -268,20 +268,20 @@ final class qh extends vd {
         if (!(var7 + this.field_t <= 465)) {
           var7 = 465 - this.field_t;
         }
-        this.d(var7, var6, 0);
+        this.translate(var7, var6, 0);
     }
 
-    qh(int param0, int param1, int param2, int param3, String param4) {
+    MenuWindow(int param0, int param1, int param2, int param3, String param4) {
         super(param0, param1, param2, param3);
         try {
           this.field_y = param4;
-          this.a(true, param3, param2);
+          this.resize(true, param3, param2);
           this.field_l = new IntrusiveDeque();
           this.field_p = true;
           this.field_s = false;
           this.field_A = false;
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "qh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

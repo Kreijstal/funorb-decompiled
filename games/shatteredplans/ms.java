@@ -49,7 +49,7 @@ abstract class ms {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ abstract class ms {
 
     final static void b(int param0) {
         if (param0 == 20975) {
-          if (dp.field_t) {
+          if (QuickChatCategoryDefinition.field_t) {
             gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
             SectorCacheStore.field_f.b(false, -104);
           }
@@ -78,7 +78,7 @@ abstract class ms {
         }
         String var2 = (String) null;
         ms.a((String) null, (byte) -111, (String) null);
-        if (dp.field_t) {
+        if (QuickChatCategoryDefinition.field_t) {
           gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
           SectorCacheStore.field_f.b(false, -104);
         }

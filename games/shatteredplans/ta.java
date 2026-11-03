@@ -70,7 +70,7 @@ final class ta {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class ta {
     }
 
     final static nk c(byte param0) {
-        nk var1 = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
+        nk var1 = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], hd.field_q[0], eo.field_fb);
         pd.a(0);
         if (param0 > 82) {
           return var1;
@@ -141,7 +141,7 @@ final class ta {
           var1 = var2;
           var2[0] = (byte) 0;
           var2[1] = (byte)de.field_j;
-          r.a(var2, (byte) -78, 6);
+          UrlLoader.a(var2, (byte) -78, 6);
           uc.field_A = de.field_j;
           return;
         }
@@ -159,7 +159,7 @@ final class ta {
         var1Lifetime1 = var2Lifetime1;
         var2Lifetime1[0] = (byte) 0;
         var2Lifetime1[1] = (byte)de.field_j;
-        r.a(var2Lifetime1, (byte) -78, 6);
+        UrlLoader.a(var2Lifetime1, (byte) -78, 6);
         uc.field_A = de.field_j;
     }
 

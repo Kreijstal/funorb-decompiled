@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad implements jk {
+final class StatusContent implements MenuContent {
     static String field_d;
     static qr field_c;
-    ff field_e;
+    SpriteButton field_e;
     bd field_f;
     static String field_a;
     static String field_g;
@@ -17,7 +17,7 @@ final class ad implements jk {
         field_b = null;
         field_g = null;
         if (param0 != 18973) {
-          ad.a('`', 73, -40);
+          StatusContent.a('`', 73, -40);
         }
     }
 
@@ -39,15 +39,15 @@ final class ad implements jk {
         try {
           if (param3 <= 92) {
             v var5 = (v) null;
-            ad.a(-96, (v) null, -95, (byte) -3);
+            StatusContent.a(-96, (v) null, -95, (byte) -3);
           }
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "ad.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ad.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void a(IntrusiveDeque param0, int param1) {
-        nc var2 = null;
+        CandidateLink var2 = null;
         int var3 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -59,12 +59,12 @@ final class ad implements jk {
           if (param1 != -24925) {
             field_d = (String) null;
           }
-          var2 = (nc) (param0.startForward(0));
+          var2 = (CandidateLink) (param0.startForward(0));
           while (var2 != null) {
             if (var2.field_o <= var2.field_j) {
               var2.unlink((byte) -71);
             }
-            var2 = (nc) (param0.nextForward((byte) -71));
+            var2 = (CandidateLink) (param0.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ final class ad implements jk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

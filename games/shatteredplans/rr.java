@@ -41,7 +41,7 @@ class rr extends WidgetTheme {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -56,14 +56,14 @@ class rr extends WidgetTheme {
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw r.a((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static boolean a(vd param0, IntrusiveDeque param1, byte param2) {
+    final static boolean a(MenuComponent param0, IntrusiveDeque param1, byte param2) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        vd var4 = null;
+        MenuComponent var4 = null;
         int var5 = 0;
         IntrusiveDeque var6 = null;
         RuntimeException stackIn_14_0 = null;
@@ -76,8 +76,8 @@ class rr extends WidgetTheme {
         try {
           var3 = param1.startForward(0);
           while (var3 != null) {
-            var4 = (vd) (var3);
-            if (var4.a((byte) -118, param0)) {
+            var4 = (MenuComponent) (var3);
+            if (var4.isOrContains((byte) -118, param0)) {
               return true;
             }
             var3 = param1.nextForward((byte) -71);
@@ -104,7 +104,7 @@ class rr extends WidgetTheme {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
