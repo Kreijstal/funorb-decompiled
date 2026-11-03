@@ -23,7 +23,7 @@ abstract class SocketConnector {
         field_c = null;
     }
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket connectDirect(int param0) throws IOException {
         if (param0 > 108) {
           return new java.net.Socket(this.host, this.port);
         }
@@ -31,7 +31,7 @@ abstract class SocketConnector {
         return new java.net.Socket(this.host, this.port);
     }
 
-    abstract java.net.Socket b(int param0) throws IOException;
+    abstract java.net.Socket connect(int param0) throws IOException;
 
     static {
         field_e = "Select a system adjacent to a friendly system to cause a destructive stellar flare, or right click to cancel this project.";

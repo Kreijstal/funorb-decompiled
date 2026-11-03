@@ -88,7 +88,7 @@ final class mq {
                     sa.a(var3, var1_int, (byte) 89, 16, var5[var7_int], var2);
                   }
                 } else {
-                  var7 = sp.field_m[var4Lifetime1];
+                  var7 = WidgetStyle.field_m[var4Lifetime1];
                   if (var6 <= 32) {
                     var6 = (var6 << 8) / 32;
                     var10 = 0;

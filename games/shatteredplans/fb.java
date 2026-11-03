@@ -226,10 +226,10 @@ final class fb extends qr {
         } else {
           lp.field_v.field_s = true;
           ls.field_a.field_zb.field_z = null;
-          dm.a(param4, 0, ls.field_a, param1, param2);
+          ObjectList.a(param4, 0, ls.field_a, param1, param2);
         }
         MidiPcmStream.a(param1, (byte) 116, param3, param6, param2, param4, param8);
-        dm.a(param4, 0, ro.field_a, param1, param2);
+        ObjectList.a(param4, 0, ro.field_a, param1, param2);
         Star.field_w = Star.field_w + 1;
     }
 

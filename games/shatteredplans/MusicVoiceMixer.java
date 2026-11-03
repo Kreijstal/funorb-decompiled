@@ -145,7 +145,7 @@ final class MusicVoiceMixer extends PcmStream {
         try {
           var21 = new lp(0, 0, 209, 70);
           var21.field_h = param1;
-          var5 = new ff(-5 + (40 - (-((5 + dm.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, MatchingTextValidator.field_r);
+          var5 = new ff(-5 + (40 - (-((5 + ObjectList.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, MatchingTextValidator.field_r);
           var21.a(var5, 8);
           var22 = param1.field_q.name;
           var6 = var22;
@@ -159,18 +159,18 @@ final class MusicVoiceMixer extends PcmStream {
           var8 = 7;
           var9 = new ff(0, var8 + var7.field_i, 35, 35, uk.a(false, param1.field_q));
           var21.a(var9, 8);
-          var10 = new b(40, var8 + (var7.field_i + dm.field_d[0].field_w), 4 * dm.field_d[0].field_z + 15, 35 - dm.field_d[0].field_w, 2, 2105376);
+          var10 = new b(40, var8 + (var7.field_i + ObjectList.field_d[0].field_w), 4 * ObjectList.field_d[0].field_z + 15, 35 - ObjectList.field_d[0].field_w, 2, 2105376);
           var21.a(var10, 8);
           for (var11_int = 0; 4 > var11_int; var11_int++) {
-            var12_ref_b = new b(var11_int * (5 + dm.field_d[var11_int].field_z) + 40, var7.field_i + var8 + dm.field_d[var11_int].field_w / 2, dm.field_d[var11_int].field_z, 35 - dm.field_d[var11_int].field_w / 2, 2, 2105376);
+            var12_ref_b = new b(var11_int * (5 + ObjectList.field_d[var11_int].field_z) + 40, var7.field_i + var8 + ObjectList.field_d[var11_int].field_w / 2, ObjectList.field_d[var11_int].field_z, 35 - ObjectList.field_d[var11_int].field_w / 2, 2, 2105376);
             var21.a(var12_ref_b, 8);
             var13_int = param1.field_r + param1.field_u[var11_int];
             if (var13_int < 0) {
               var13_int = 0;
             }
-            var14_ref = new qk((dm.field_d[var11_int].field_z + 5) * var11_int + 40, dm.field_d[var11_int].field_w + var7.field_i + var8, dm.field_d[var11_int].field_z, rs.field_Cb.field_J, Integer.toString(var13_int));
+            var14_ref = new qk((ObjectList.field_d[var11_int].field_z + 5) * var11_int + 40, ObjectList.field_d[var11_int].field_w + var7.field_i + var8, ObjectList.field_d[var11_int].field_z, rs.field_Cb.field_J, Integer.toString(var13_int));
             var21.a(var14_ref, 8);
-            var15_ref = new ff(40 + var11_int * (5 + dm.field_d[var11_int].field_z), var7.field_i + var8, dm.field_d[var11_int]);
+            var15_ref = new ff(40 + var11_int * (5 + ObjectList.field_d[var11_int].field_z), var7.field_i + var8, ObjectList.field_d[var11_int]);
             var21.a(var15_ref, 8);
             var23 = BattleContribution.field_m[var11_int];
             var16 = var23;
@@ -181,7 +181,7 @@ final class MusicVoiceMixer extends PcmStream {
             var14_ref.field_o = var16;
             var12_ref_b.field_o = var16;
           }
-          var11 = new b(dm.field_d[0].field_z * 4 + 60, var8 + (var7.field_i + dm.field_d[0].field_w / 2), TurnEventLog.field_d.field_z, -(dm.field_d[0].field_w / 2) + 35, 2, 534312);
+          var11 = new b(ObjectList.field_d[0].field_z * 4 + 60, var8 + (var7.field_i + ObjectList.field_d[0].field_w / 2), TurnEventLog.field_d.field_z, -(ObjectList.field_d[0].field_w / 2) + 35, 2, 534312);
           var21.a(var11, 8);
           var12 = param1.field_r;
           if (var12 < 0) {
@@ -191,16 +191,16 @@ final class MusicVoiceMixer extends PcmStream {
             var20 = (em) null;
             MusicVoiceMixer.a((byte) -57, (Territory) null, (em) null, true);
           }
-          var13 = new qk(20 + 4 * dm.field_d[0].field_z + 40, dm.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
+          var13 = new qk(20 + 4 * ObjectList.field_d[0].field_z + 40, ObjectList.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
           var21.a(var13, 8);
-          var14 = new ff(20 - (-(4 * dm.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), TurnEventLog.field_d);
+          var14 = new ff(20 - (-(4 * ObjectList.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), TurnEventLog.field_d);
           var21.a(var14, 8);
           var14.field_o = si.field_w;
           var13.field_o = si.field_w;
           var11.field_o = si.field_w;
-          var15 = new qk(54 + dm.field_d[0].field_z * 4, var7.field_i + (var8 + dm.field_d[0].field_w), "=");
+          var15 = new qk(54 + ObjectList.field_d[0].field_z * 4, var7.field_i + (var8 + ObjectList.field_d[0].field_w), "=");
           var21.a(var15, 8);
-          var24_ref = new jh(4 * dm.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, aq.field_i.field_z, aq.field_i.field_w, -1, aq.field_i, (String) null, -1, -1, hq.field_a, (String) null, -1);
+          var24_ref = new jh(4 * ObjectList.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, aq.field_i.field_z, aq.field_i.field_w, -1, aq.field_i, (String) null, -1, -1, hq.field_a, (String) null, -1);
           var24_ref.field_h = param1;
           var21.a(var24_ref, 8);
           var17 = new qk(var24_ref.field_k, 29 + var24_ref.field_t, var24_ref.field_m, rs.field_Cb.field_J, Integer.toString(param1.field_x));

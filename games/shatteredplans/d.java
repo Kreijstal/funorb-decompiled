@@ -89,7 +89,7 @@ final class d {
             }
             if (js.field_f.position > 0) {
               try {
-                wg.field_f.a(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
+                wg.field_f.write(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
                 mj.field_Pb = pr.a(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ final class d {
             }
             if (js.field_f.position > 0) {
               try {
-                wg.field_f.a(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
+                wg.field_f.write(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
                 mj.field_Pb = pr.a(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

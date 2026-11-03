@@ -26,7 +26,7 @@ final class ql extends IntrusiveNode {
         sq var6 = null;
         int var7 = 0;
         int var8 = 0;
-        dm var9 = null;
+        ObjectList var9 = null;
         int var4Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -40,10 +40,10 @@ final class ql extends IntrusiveNode {
           }
           PlayerStats.field_k = 0;
           SliderPainter.b((byte) 93);
-          var9 = new dm();
+          var9 = new ObjectList();
           var3 = nd.a((byte) -106);
           while (var3 != null) {
-            var9.a(false, var3);
+            var9.add(false, var3);
             var3 = nd.a((byte) 118);
           }
           EmailValidator.field_q = new sq[var9.field_g];

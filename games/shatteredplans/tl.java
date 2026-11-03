@@ -190,7 +190,7 @@ abstract class tl extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         ai.field_e = this.field_v;
-        dm.a(0, ai.field_e);
+        ObjectList.a(0, ai.field_e);
         GameKeyHandler.a(0, fa.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
         IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, fa.field_W, this.field_s, this.field_x);
         lm.a((byte) 100);
@@ -392,7 +392,7 @@ abstract class tl extends GameApplet {
           Archive.c(-78);
         }
         if (aj.field_b != null) {
-          so.field_o = aj.field_b.b(86);
+          so.field_o = aj.field_b.takeRotation(86);
         }
         if (cb.b((byte) -117)) {
           var3 = ArchiveSourceManager.a(0) * 1200;

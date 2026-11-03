@@ -28,7 +28,7 @@ final class StarAnnotation extends IntrusiveNode {
           }
           try {
             var3 = 52 % ((param0 - 38) / 63);
-            var2_int = wg.field_f.a(-1);
+            var2_int = wg.field_f.available(-1);
             if (var2_int <= 0) {
               if (var2_int < 0) {
                 q.g(-114);
@@ -43,7 +43,7 @@ final class StarAnnotation extends IntrusiveNode {
             if (var2_int > param1 - sa.field_a.position) {
               var2_int = param1 - sa.field_a.position;
             }
-            wg.field_f.a(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
+            wg.field_f.readFully(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
             IntrusiveDeque.field_e = pr.a(14274);
             sa.field_a.position = sa.field_a.position + var2_int;
             if (sa.field_a.position < param1) {

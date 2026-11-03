@@ -488,7 +488,7 @@ final class SolVictoryChecker extends VictoryChecker {
               Wormhole.field_j = ih.field_f;
               if (mq.field_c.a((byte) 115) != IsolationistAi.field_u) {
                 if (mq.field_c.a((byte) 123) == oi.field_b) {
-                  dm.field_f.a(GameScreen.getHostApplet((byte) 126), true);
+                  ObjectList.field_f.a(GameScreen.getHostApplet((byte) 126), true);
                 }
               } else {
                 og.field_b.a(GameScreen.getHostApplet((byte) 127), true);

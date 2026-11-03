@@ -287,7 +287,7 @@ final class gm extends IntrusiveNode {
             }
             DerelictMapReader.field_a = stackIn_115_0 + stackIn_116_1;
           }
-          uq.field_k = dm.field_i - (DerelictMapReader.field_a >> 1);
+          uq.field_k = ObjectList.field_i - (DerelictMapReader.field_a >> 1);
           StrongCacheEntry.field_w = new int[kr.field_f.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = -123 / ((-15 - param1) / 55);

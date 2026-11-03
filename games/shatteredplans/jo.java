@@ -147,7 +147,7 @@ final class jo {
           MusicTrack var5 = (MusicTrack) null;
           jo.a(71, (MusicTrack) null, true, -32);
         }
-        si var3 = (si) (this.field_b.a((long)param0, param1 - 100));
+        si var3 = (si) (this.field_b.get((long)param0, param1 - 100));
         if (var3 != null) {
           return var3;
         }
@@ -163,7 +163,7 @@ final class jo {
         if (param0 >= 32768) {
           var6.e(-81);
         }
-        this.field_b.a((long)param0, var6, (byte) -108);
+        this.field_b.put((long)param0, var6, (byte) -108);
         return var6;
     }
 

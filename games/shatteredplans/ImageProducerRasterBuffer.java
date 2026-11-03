@@ -199,7 +199,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         this.field_o.imageComplete(2);
     }
 
-    final void a(int param0, java.awt.Component param1, byte param2, int param3) {
+    final void allocate(int param0, java.awt.Component param1, byte param2, int param3) {
         try {
           this.field_d = param0;
           this.field_g = param3;
@@ -212,7 +212,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
           this.b(49);
           param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.a((byte) 109);
+          this.bindAsRenderTarget((byte) 109);
           if (param2 > -91) {
             field_m = (String) null;
           }
@@ -346,7 +346,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
+    final void paint(java.awt.Graphics param0, int param1, byte param2, int param3) {
         try {
           this.b(101);
           if (param2 >= -56) {

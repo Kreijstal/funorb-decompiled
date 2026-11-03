@@ -27,7 +27,7 @@ final class re {
         try {
           wk.a((byte) -58, (java.awt.Component) ((Object) param0));
           if (aj.field_b != null) {
-            aj.field_b.a((java.awt.Component) ((Object) param0), !param1 ? true : false);
+            aj.field_b.attachTo((java.awt.Component) ((Object) param0), !param1 ? true : false);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "re.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -147,7 +147,7 @@ final class re {
 
     final dp a(byte param0, int param1) {
         byte[] var4 = null;
-        dp var3 = (dp) (this.field_f.a((long)param1, 0));
+        dp var3 = (dp) (this.field_f.get((long)param1, 0));
         if (param0 != 47) {
           return (dp) null;
         }
@@ -166,7 +166,7 @@ final class re {
         if (32768 <= param1) {
           var3.e((byte) -117);
         }
-        this.field_f.a((long)param1, var3, (byte) -108);
+        this.field_f.put((long)param1, var3, (byte) -108);
         return var3;
     }
 

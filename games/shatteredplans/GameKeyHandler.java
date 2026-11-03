@@ -348,7 +348,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             DualLinkDeque.field_b = param8;
             uk.field_a = param9;
             e.field_b = param10;
-            sp.field_g = param11;
+            WidgetStyle.field_g = param11;
             if (StarAbandonedEvent.field_l.field_a == null) {
               return;
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm {
+final class ObjectList {
     static qr field_h;
     static bg field_f;
     static Sprite[] field_d;
@@ -12,7 +12,7 @@ final class dm {
     private int field_e;
     static int field_i;
 
-    private final void a(int param0) {
+    private final void grow(int param0) {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != -11470) {
@@ -502,12 +502,12 @@ final class dm {
         DialPainter.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
           ub var3 = (ub) null;
-          dm.a(-32, 115, (ub) null, false, 125);
+          ObjectList.a(-32, 115, (ub) null, false, 125);
         }
         ns.field_xb = ae.field_c[param1];
     }
 
-    final void a(Object[] param0, int param1) {
+    final void copyTo(Object[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -535,14 +535,14 @@ final class dm {
         }
     }
 
-    final void a(boolean param0, Object param1) {
+    final void add(boolean param0, Object param1) {
         int fieldTemp$0 = 0;
         try {
           if (this.field_e == this.field_g) {
-            this.a(-11470);
+            this.grow(-11470);
           }
           if (param0) {
-            dm.a(((boolean[]) (((Object[]) (((Object[]) (this.field_b[7]))[2]))[1]))[4]);
+            ObjectList.a(((boolean[]) (((Object[]) (((Object[]) (this.field_b[7]))[2]))[1]))[4]);
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
@@ -552,7 +552,7 @@ final class dm {
         }
     }
 
-    public dm() {
+    public ObjectList() {
         this.field_e = 10;
         this.field_g = 0;
         this.field_b = new Object[10];
@@ -566,7 +566,7 @@ final class dm {
         field_a = null;
         if (param0) {
           ub var2 = (ub) null;
-          dm.a(-33, 120, (ub) null, true, 27);
+          ObjectList.a(-33, 120, (ub) null, true, 27);
         }
     }
 

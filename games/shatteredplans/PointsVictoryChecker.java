@@ -368,7 +368,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         if (param4 != 2) {
           return;
         }
-        sp.field_r = param1;
+        WidgetStyle.field_r = param1;
     }
 
     final void showResults(byte param0, GameState param1, GameScreen param2) {

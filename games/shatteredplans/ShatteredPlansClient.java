@@ -222,7 +222,7 @@ public final class ShatteredPlansClient extends tl {
                       if (3 == var3) {
                         BattleContribution.field_s = false;
                         StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
-                        fm.a(true, -1);
+                        HuffmanCodec.a(true, -1);
                       } else {
                         if (var3 != 4) {
                           this.b(false, true);
@@ -556,7 +556,7 @@ public final class ShatteredPlansClient extends tl {
           wg.field_e.a(re.a("<col=<%0>><%1></col>", param0 ^ 4370, new String[]{Integer.toString(gm.field_k[var2_int], 16), MusicCrossfadeStream.field_x[var2_int]}), 27275, "Resource" + var2_int);
         }
         wg.field_e.a(field_L, 27275, "territories");
-        wg.field_e.a(dm.field_c, 27275, "uioptions");
+        wg.field_e.a(ObjectList.field_c, 27275, "uioptions");
         wg.field_e.a(ba.field_a, 27275, "fleetinfo");
         wg.field_e.a(MouseWheelInput.field_c, param0 ^ 27274, "projects");
         wg.field_e.a(vj.field_B, 27275, "diplomacy");
@@ -619,7 +619,7 @@ public final class ShatteredPlansClient extends tl {
             return false;
           }
           if (null != oi.field_h) {
-            CellVertex.a(1, new fm(oi.field_h.getFileByName(true, "huffman", "")));
+            CellVertex.a(1, new HuffmanCodec(oi.field_h.getFileByName(true, "huffman", "")));
             oi.field_h = null;
             ValidationState.c(126);
             return false;
@@ -778,7 +778,7 @@ public final class ShatteredPlansClient extends tl {
         c.b();
         nq.a();
         sj.a((byte) -106);
-        dm.a(false);
+        ObjectList.a(false);
         pl.a(param0 ^ -17251);
         nb.a((byte) 123);
         dh.a((byte) -98);
@@ -830,7 +830,7 @@ public final class ShatteredPlansClient extends tl {
         cq.a((byte) 121);
         ri.a((byte) -73);
         e.b(param0 + 2129445);
-        sp.a(3);
+        WidgetStyle.a(3);
         wc.a(-23092);
         IsaacBackedRandom.a((byte) -109);
         Player.a(param0 ^ -24065);
@@ -840,7 +840,7 @@ public final class ShatteredPlansClient extends tl {
         FleetMove.g((byte) -106);
         PlacementOrder.e(21758);
         an.b(true);
-        fm.a(110);
+        HuffmanCodec.a(110);
         MapViewState.c(param0 ^ 28675);
         MapView.g(0);
         ConquestVictoryChecker.c(45);
@@ -1163,7 +1163,7 @@ public final class ShatteredPlansClient extends tl {
                 if (BattleContribution.field_s) {
                   BattleContribution.field_s = false;
                   StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_q + mp.field_b.field_K, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
-                  fm.a(false, -1);
+                  HuffmanCodec.a(false, -1);
                 }
                 if (ns.field_ob) {
                   ta.a(gr.field_o, -6, (byte) 96, false);

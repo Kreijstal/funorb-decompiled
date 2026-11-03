@@ -160,7 +160,7 @@ class ts extends FocusableWidget {
               kp.field_n = stackIn_9_0;
               Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
-              hq.a(sp.field_g, ee.field_o, js.field_f, (byte) 20, uk.field_a);
+              hq.a(WidgetStyle.field_g, ee.field_o, js.field_f, (byte) 20, uk.field_a);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

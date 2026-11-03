@@ -199,7 +199,7 @@ final class q extends qr {
           field_Cb = (Sprite) null;
         }
         if (wg.field_f != null) {
-          wg.field_f.b(111);
+          wg.field_f.close(111);
           wg.field_f = null;
         }
     }

@@ -65,12 +65,12 @@ final class CellVertex {
         field_d = null;
     }
 
-    final static void a(int param0, fm param1) {
+    final static void a(int param0, HuffmanCodec param1) {
         try {
           DiskArchiveRequest.field_v = param1;
           if (param0 != 1) {
-            fm var3 = (fm) null;
-            CellVertex.a(-29, (fm) null);
+            HuffmanCodec var3 = (HuffmanCodec) null;
+            CellVertex.a(-29, (HuffmanCodec) null);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "jd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

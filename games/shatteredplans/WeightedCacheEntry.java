@@ -41,7 +41,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
         try {
           try {
             var4 = param2.getGraphics();
-            so.field_q.a(var4, param3, (byte) -92, param1);
+            so.field_q.paint(var4, param3, (byte) -92, param1);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

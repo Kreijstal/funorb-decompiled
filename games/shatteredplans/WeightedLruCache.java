@@ -15,7 +15,7 @@ final class WeightedLruCache {
     private int field_b;
     static String field_d;
 
-    private final void a(long param0, int param1, int param2, Object param3) {
+    private final void insert(long param0, int param1, int param2, Object param3) {
         WeightedCacheEntry var6 = null;
         StrongCacheEntry var6_ref = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -23,11 +23,11 @@ final class WeightedLruCache {
           if (param1 > this.field_b) {
             throw new IllegalStateException();
           }
-          this.a(false, param0);
+          this.remove(false, param0);
           this.field_k = this.field_k - param1;
           while (this.field_k < 0) {
             var6 = (WeightedCacheEntry) (this.field_c.pollFirst((byte) -20));
-            this.a(var6, (byte) -88);
+            this.removeEntry(var6, (byte) -88);
           }
           var6_ref = new StrongCacheEntry(param3, param1);
           this.field_h.put(var6_ref, true, param0);
@@ -38,7 +38,7 @@ final class WeightedLruCache {
         }
     }
 
-    final Object a(long param0, int param1) {
+    final Object get(long param0, int param1) {
         Object var8 = null;
         StrongCacheEntry var6 = null;
         WeightedCacheEntry var7 = (WeightedCacheEntry) (this.field_h.get(-78, param0));
@@ -153,7 +153,7 @@ final class WeightedLruCache {
         return (os) null;
     }
 
-    private final void a(WeightedCacheEntry param0, byte param1) {
+    private final void removeEntry(WeightedCacheEntry param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -161,7 +161,7 @@ final class WeightedLruCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -88) {
-            this.a(89L, -55);
+            this.get(89L, -55);
           }
           if (param0 == null) {
             return;
@@ -184,9 +184,9 @@ final class WeightedLruCache {
         }
     }
 
-    private final void a(boolean param0, long param1) {
+    private final void remove(boolean param0, long param1) {
         WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_h.get(-99, param1));
-        this.a(var4, (byte) -88);
+        this.removeEntry(var4, (byte) -88);
         if (param0) {
           field_l = (String) null;
           return;
@@ -197,12 +197,12 @@ final class WeightedLruCache {
         this(param0, param0);
     }
 
-    final void a(long param0, Object param1, byte param2) {
+    final void put(long param0, Object param1, byte param2) {
         if (param2 != -108) {
           return;
         }
         try {
-          this.a(param0, 1, 0, param1);
+          this.insert(param0, 1, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ol.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

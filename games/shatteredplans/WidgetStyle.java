@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sp {
+final class WidgetStyle {
     int field_e;
     int field_i;
     static String field_b;
@@ -407,7 +407,7 @@ final class sp {
         }
     }
 
-    public sp() {
+    public WidgetStyle() {
         this.field_n = true;
     }
 

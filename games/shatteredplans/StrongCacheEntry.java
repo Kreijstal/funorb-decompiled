@@ -367,12 +367,12 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           fg.field_b = new qr(0L, SpriteState.field_u);
           fg.field_b.field_F = ArchiveSourceManager.a(false, 2236962, false, 16, 2236962, (byte) -40);
           fg.field_b.field_kb = 2;
-          dm.field_h = new qr(0L, SpriteState.field_u);
-          dm.field_h.field_F = ArchiveSourceManager.a(false, 1513239, false, 16, 1513239, (byte) -36);
-          dm.field_h.field_kb = 2;
+          ObjectList.field_h = new qr(0L, SpriteState.field_u);
+          ObjectList.field_h.field_F = ArchiveSourceManager.a(false, 1513239, false, 16, 1513239, (byte) -36);
+          ObjectList.field_h.field_kb = 2;
           oj.field_zb = new qr(0L, fg.field_b);
           oj.field_zb.a(gn.field_w, false);
-          ek.field_E = new qr(0L, dm.field_h);
+          ek.field_E = new qr(0L, ObjectList.field_h);
           ek.field_E.a(gn.field_w, false);
           var16 = ae.a(-82, "lobby", param4, "button_mouseover");
           hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, gn.field_w, 3, 2, qo.field_b, 3, cr.field_c);

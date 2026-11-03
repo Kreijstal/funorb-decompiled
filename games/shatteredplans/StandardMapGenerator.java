@@ -451,7 +451,7 @@ class StandardMapGenerator implements MapGenerator {
           ae.a((java.awt.Component) ((Object) param0), 18014);
           sb.a((byte) 89, (java.awt.Component) ((Object) param0));
           if (aj.field_b != null) {
-            aj.field_b.a((java.awt.Component) ((Object) param0), 120);
+            aj.field_b.detachFrom((java.awt.Component) ((Object) param0), 120);
           }
           int var2_int = 84 % ((param1 + 39) / 45);
         } catch (RuntimeException runtimeException) {

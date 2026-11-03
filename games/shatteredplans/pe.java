@@ -189,7 +189,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
+            param0.position = param0.position + DiskArchiveRequest.field_v.decode(var4, param0.payload, var3_int, 7, param0.position, param1);
             var5 = StellarBombEvent.a(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
@@ -480,7 +480,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
                 var17 = param4[11];
                 var18 = 0;
                 while (!(param6.field_e <= var18)) {
-                  stackIn_65_0 = fm.field_c.length;
+                  stackIn_65_0 = HuffmanCodec.field_c.length;
                   stackIn_65_1 = var18;
                   if (var30 != 0) {
                     break scanLoop1;
@@ -491,7 +491,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
                   var19 = param6.field_I[var18];
                   var20 = param6.field_y[var18];
                   var21Lifetime2 = param6.field_v[var18];
-                  fm.field_c[var18] = var21Lifetime2 * var15 + (var20 * var12 + var9 * var19) >> 16;
+                  HuffmanCodec.field_c[var18] = var21Lifetime2 * var15 + (var20 * var12 + var9 * var19) >> 16;
                   RandomAccessCacheFile.field_f[var18] = var21Lifetime2 * var16 + (var19 * var10 + var13 * var20) >> 16;
                   hk.field_ob[var18] = var11 * var19 - (-(var14 * var20) - var21Lifetime2 * var17) >> 16;
                   var18++;

@@ -35,7 +35,7 @@ final class sk extends IntrusiveNode {
         kr.field_b = stackIn_3_0;
         PacketBuffer.field_k = var3 & 127;
         nj.field_a = var8.readUnsignedByte(-77);
-        sp.field_j = var8.readLong(param1 ^ -31);
+        WidgetStyle.field_j = var8.readLong(param1 ^ -31);
         if (PacketBuffer.field_k != 2) {
           TertiaryNodeList.field_f = 0;
           va.field_b = 0;
@@ -53,10 +53,10 @@ final class sk extends IntrusiveNode {
         }
         if (PacketBuffer.field_k != 1 &&
           PacketBuffer.field_k != 4) {
-          fm.field_f = 0;
+          HuffmanCodec.field_f = 0;
           WeightedCacheEntry.field_q = null;
         } else {
-          fm.field_f = var8.readUnsignedShort(param1 - 20975);
+          HuffmanCodec.field_f = var8.readUnsignedShort(param1 - 20975);
           WeightedCacheEntry.field_q = var8.readString(param1 + 0);
         }
         if (!param0) {

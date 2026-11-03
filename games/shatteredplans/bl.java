@@ -6,15 +6,15 @@ import java.util.*;
 final class bl extends RasterBuffer {
     private java.awt.Component field_i;
 
-    final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
+    final void paint(java.awt.Graphics param0, int param1, byte param2, int param3) {
         param0.drawImage(this.field_b, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
         if (param2 >= -56) {
           java.awt.Graphics var6 = (java.awt.Graphics) null;
-          this.a((java.awt.Graphics) null, -17, (byte) -63, -24);
+          this.paint((java.awt.Graphics) null, -17, (byte) -63, -24);
         }
     }
 
-    final void a(int param0, java.awt.Component param1, byte param2, int param3) {
+    final void allocate(int param0, java.awt.Component param1, byte param2, int param3) {
         java.awt.image.DataBufferInt var5 = null;
         java.awt.image.DirectColorModel var6 = null;
         java.awt.image.WritableRaster var7 = null;
@@ -30,11 +30,11 @@ final class bl extends RasterBuffer {
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_g, this.field_d), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
           this.field_b = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_i = param1;
-          this.a((byte) 109);
+          this.bindAsRenderTarget((byte) 109);
           return;
         }
         java.awt.Component var8 = (java.awt.Component) null;
-        this.a(-82, (java.awt.Component) null, (byte) -8, -67);
+        this.allocate(-82, (java.awt.Component) null, (byte) -8, -67);
         this.field_c = new int[param3 * param0 + 1];
         this.field_d = param0;
         var5Lifetime1 = new java.awt.image.DataBufferInt(this.field_c, this.field_c.length);
@@ -42,7 +42,7 @@ final class bl extends RasterBuffer {
         var7Lifetime1 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6Lifetime1)).createCompatibleSampleModel(this.field_g, this.field_d), (java.awt.image.DataBuffer) ((Object) var5Lifetime1), (java.awt.Point) null);
         this.field_b = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6Lifetime1), var7Lifetime1, false, new Hashtable()));
         this.field_i = param1;
-        this.a((byte) 109);
+        this.bindAsRenderTarget((byte) 109);
     }
 
     public bl() {

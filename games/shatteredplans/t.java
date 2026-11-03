@@ -17,7 +17,7 @@ final class t {
         int stackIn_48_0 = 0;
         int stackIn_55_0 = 0;
         int stackIn_59_0 = 0;
-        dm stackIn_62_0;
+        ObjectList stackIn_62_0;
         boolean stackIn_62_1;
         CellVertex stackIn_62_2;
         CellVertex stackIn_62_3;
@@ -39,7 +39,7 @@ final class t {
         Object var13;
         int var14;
         int var15_int;
-        dm var15;
+        ObjectList var15;
         Object var16;
         nc var16_ref;
         int var16_int;
@@ -140,7 +140,7 @@ final class t {
             }
             ad.a(var6, -24925);
             ValidationIndicator.a(var6, true);
-            var15 = new dm();
+            var15 = new ObjectList();
             var16_ref = (nc) (var6.startForward(param1 ^ 1));
             while (var16_ref != null) {
               if (var16_ref.field_k != null &&
@@ -184,12 +184,12 @@ final class t {
                 stackIn_63_3 = null;
                 stackIn_63_6 = var16_ref.field_k.field_u;
               }
-              ((dm) (Object) stackIn_62_0).a(stackIn_62_1, new CellVertex(stackIn_62_4, stackIn_62_5, stackIn_63_6, (int)(var16_ref.field_h + var16_ref.field_i * var16_ref.field_o), (int)(var16_ref.field_l + var16_ref.field_o * var16_ref.field_s), var17));
+              ((ObjectList) (Object) stackIn_62_0).add(stackIn_62_1, new CellVertex(stackIn_62_4, stackIn_62_5, stackIn_63_6, (int)(var16_ref.field_h + var16_ref.field_i * var16_ref.field_o), (int)(var16_ref.field_l + var16_ref.field_o * var16_ref.field_s), var17));
               var16_ref = (nc) (var6.nextForward((byte) -71));
             }
             var9Lifetime1 = var15.field_g;
             var5.field_r = new CellVertex[var9Lifetime1];
-            var15.a(var5.field_r, 0);
+            var15.copyTo(var5.field_r, 0);
             var17Lifetime1 = var5.field_r[var9Lifetime1 - 1].field_c;
             var18 = var5.field_r[var9Lifetime1 - 1].field_f;
             for (var19 = 0; var5.field_r.length > var19; var19++) {

@@ -63,11 +63,11 @@ final class ck {
           gf.b(3, 3, 0, 0, var7_int, var8);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
           cg.i(param6 + 8);
-          fm.field_d = ae.a(101, "", param0, "edge_orbs");
+          HuffmanCodec.field_d = ae.a(101, "", param0, "edge_orbs");
           IsaacRandom.field_b = new Sprite[4];
           RandomAccessCacheFile.a(param6 ^ 108);
           for (var9_int = 0; 4 > var9_int; var9_int++) {
-            var19 = fm.field_d[var9_int];
+            var19 = HuffmanCodec.field_d[var9_int];
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
             var20.bindAsRenderTarget();
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 16777215);
@@ -83,7 +83,7 @@ final class ck {
           var9 = va.a("hud_icons", 0, "", param0);
           TurnEventLog.field_d = var9[3];
           MusicCrossfadeStream.field_F = var9[2];
-          fm.field_e = var9[0];
+          HuffmanCodec.field_e = var9[0];
           wl.field_d = var9[4];
           tm.field_r = var9[1];
           var21 = va.a("hud_icons_red", param6 + 8, "", param0);
@@ -99,7 +99,7 @@ final class ck {
           GameKeyHandler.field_b = var22[1];
           ArchiveIndex.field_p = var22[2];
           Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
-          dm.field_d = va.a("production_icons", 0, "", param0);
+          ObjectList.field_d = va.a("production_icons", 0, "", param0);
           aq.field_i = ds.a(true, param0, "", "production_button");
           hq.field_a = ds.a(true, param0, "", "production_button_down");
           d.field_b = va.a("project_icons", 0, "", param0);
@@ -245,8 +245,8 @@ final class ck {
           kb.field_y.drawHalfSize(0, 0);
           pr.field_a.bindAsRenderTarget();
           AllianceExpiredEvent.field_k.b(1, 1, 8421504);
-          fm.field_b = new Sprite(10, 12);
-          fm.field_b.bindAsRenderTarget();
+          HuffmanCodec.field_b = new Sprite(10, 12);
+          HuffmanCodec.field_b.bindAsRenderTarget();
           wo.field_b.b(1, 1, 8421504);
           ef.field_f = new Sprite(12, 12);
           ef.field_f.bindAsRenderTarget();
@@ -268,7 +268,7 @@ final class ck {
           bd.field_G.b(1, 1, 8421504);
           cg.i(0);
           pr.field_a.addOutline(16777215);
-          fm.field_b.addOutline(16777215);
+          HuffmanCodec.field_b.addOutline(16777215);
           if (param6 != -8) {
             ck.a(-23);
           }

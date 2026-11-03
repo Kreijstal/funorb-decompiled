@@ -81,7 +81,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_n = this.field_n + var4;
             if (this.field_n > 30000) {
               try {
-                this.field_v.b(100);
+                this.field_v.close(100);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -97,13 +97,13 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             return false;
           }
           try {
-            this.field_v.a(false);
+            this.field_v.checkError(false);
             var2 = (NetworkArchiveRequest) (this.field_h.startForward(-128));
             while (var2 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(1, (byte) -85);
               this.field_c.writeLong40(param0 + 1729379144, var2.field_l);
-              this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, -13976);
+              this.field_v.write(this.field_c.payload.length, 0, this.field_c.payload, -13976);
               this.field_j.addLast(var2, 32);
               var2 = (NetworkArchiveRequest) (this.field_h.nextForward(32));
             }
@@ -112,12 +112,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.field_c.position = 0;
               this.field_c.writeByte(0, (byte) -109);
               this.field_c.writeLong40(param0 ^ 1729379144, var2Lifetime1.field_l);
-              this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, param0 - 13976);
+              this.field_v.write(this.field_c.payload.length, 0, this.field_c.payload, param0 - 13976);
               this.field_f.addLast(var2Lifetime1, 32);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_m.nextForward(32));
             }
             for (var2_int = param0; var2_int < 100; var2_int++) {
-              var3_int = this.field_v.a(-1);
+              var3_int = this.field_v.available(-1);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -140,7 +140,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_v.a(this.field_l.field_D.payload, var6, this.field_l.field_D.position, (byte) 112);
+                  this.field_v.readFully(this.field_l.field_D.payload, var6, this.field_l.field_D.position, (byte) 112);
                   if (this.field_d != 0) {
                     var17 = 0;
                     var7 = var17;
@@ -165,7 +165,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_v.a(this.field_q.payload, var5, this.field_q.position, (byte) -52);
+                  this.field_v.readFully(this.field_q.payload, var5, this.field_q.position, (byte) -52);
                   if (0 != this.field_d) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.field_q.payload[this.field_q.position + var6] = (byte)nc.a((int) this.field_q.payload[this.field_q.position + var6], (int) this.field_d);
@@ -240,7 +240,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_v.b(117);
+              this.field_v.close(117);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -289,7 +289,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           try {
             if (this.field_v != null) {
               try {
-                this.field_v.b(116);
+                this.field_v.close(116);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -323,12 +323,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 this.field_c.writeByte(4, (byte) -86);
                 this.field_c.writeByte((int) this.field_d, (byte) -88);
                 this.field_c.writeInt(11135, 0);
-                this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, -13976);
+                this.field_v.write(this.field_c.payload.length, 0, this.field_c.payload, -13976);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_v.b(127);
+                  this.field_v.close(127);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -363,7 +363,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final void b(byte param0) {
         try {
-          this.field_v.b(param0 + 209);
+          this.field_v.close(param0 + 209);
         } catch (Exception exception) {
         }
         if (param0 != -91) {
@@ -380,7 +380,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           field_s = (String) null;
         }
         if (null != this.field_v) {
-          this.field_v.b(126);
+          this.field_v.close(126);
         }
     }
 
@@ -415,12 +415,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               SocketArchiveNetworkClient.f(88);
             }
             this.field_c.writeLong40(param1 + 1729379141, 0L);
-            this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, param1 - 13979);
+            this.field_v.write(this.field_c.payload.length, 0, this.field_c.payload, param1 - 13979);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_v.b(89);
+              this.field_v.close(89);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -490,12 +490,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               var4 = (int[]) null;
               SocketArchiveNetworkClient.a(88, -57, (int[]) null, 10);
             }
-            this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, -13976);
+            this.field_v.write(this.field_c.payload.length, 0, this.field_c.payload, -13976);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_v.b(124);
+              this.field_v.close(124);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;

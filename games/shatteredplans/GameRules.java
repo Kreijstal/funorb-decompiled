@@ -8,7 +8,7 @@ final class GameRules {
     boolean field_f;
     boolean field_k;
     boolean field_h;
-    static sp field_a;
+    static WidgetStyle field_a;
     static int field_c;
     boolean field_j;
     static int field_m;

@@ -5091,13 +5091,13 @@ final class GameScreen {
             this.field_S.field_o = n.field_j;
             this.field_y.addLast((byte) -113, this.field_S);
           }
-          this.field_n = new jh(MusicCrossfadeStream.field_F.field_z / 2 + 512, 5, fm.field_e.field_z, fm.field_e.field_w, -1, fm.field_e, (String) null, 0, -1, bd.field_D, (String) null, 0);
+          this.field_n = new jh(MusicCrossfadeStream.field_F.field_z / 2 + 512, 5, HuffmanCodec.field_e.field_z, HuffmanCodec.field_e.field_w, -1, HuffmanCodec.field_e, (String) null, 0, -1, bd.field_D, (String) null, 0);
           this.field_n.field_o = rk.field_o;
           this.field_y.addLast((byte) -113, this.field_n);
           this.field_W = new jh(513 + MusicCrossfadeStream.field_F.field_z, 25, TurnEventLog.field_d.field_z, TurnEventLog.field_d.field_w, -1, TurnEventLog.field_d, (String) null, 0, -1, Wormhole.field_h, (String) null, 0);
           this.field_W.field_o = wm.field_a;
           this.field_y.addLast((byte) -113, this.field_W);
-          this.field_mb = new jh(fm.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, tm.field_r.field_z, tm.field_r.field_w, -1, tm.field_r, (String) null, 0, -1, je.field_b, (String) null, 0);
+          this.field_mb = new jh(HuffmanCodec.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, tm.field_r.field_z, tm.field_r.field_w, -1, tm.field_r, (String) null, 0, -1, je.field_b, (String) null, 0);
           this.field_mb.field_o = t.field_b;
           this.field_y.addLast((byte) -113, this.field_mb);
           if (this.field_nb != null) {
@@ -5175,7 +5175,7 @@ final class GameScreen {
               qn.b(116);
               var3_ref_qr = new qr(0L, (qr) null);
               var3_ref_qr.field_M = new IntrusiveDeque();
-              this.field_E = new ub(0L, var3_ref_qr, dm.field_h, AchievementProgress.field_m);
+              this.field_E = new ub(0L, var3_ref_qr, ObjectList.field_h, AchievementProgress.field_m);
               var4_ref = new qr(0L, GalaxyMap.field_a);
               this.field_O = new qr(0L, IntrusiveNode.field_a);
               this.field_O.a(640, 120, (byte) 116, 480, 0);

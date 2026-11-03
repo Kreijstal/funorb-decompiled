@@ -527,7 +527,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         if (8 == param0) {
           var11 = StandardMapGenerator.field_g;
           var6Lifetime6 = wk.a(-9615, wg.field_e.a(5607, var11), rs.field_Cb, new int[]{var4 - 40});
-          var12 = sp.field_b;
+          var12 = WidgetStyle.field_b;
           var5 = var5 + ((3 + var6Lifetime6 * 4) * var3 >> 2);
           var6Lifetime6Lifetime1 = wk.a(-9615, wg.field_e.a(5607, var12), rs.field_Cb, new int[]{var4 - 40});
           var5 = var5 + ((4 * var6Lifetime6Lifetime1 + 3) * var3 >> 2);
@@ -545,7 +545,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           return stackIn_53_0;
         }
         if (param0 == 9) {
-          var6Lifetime7 = wk.a(-9615, wg.field_e.a(5607, dm.field_a), rs.field_Cb, new int[]{var4});
+          var6Lifetime7 = wk.a(-9615, wg.field_e.a(5607, ObjectList.field_a), rs.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime7;
           if (param1 != -71) {
             return -98;

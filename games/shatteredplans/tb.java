@@ -170,7 +170,7 @@ final class tb {
           StarAnnotation.field_l = new qr(0L, nl.field_b, ds.field_e.toUpperCase());
           re.field_g = new qr[4 + param0];
           ByteArrayNode.field_p = new sg[4 + param0][];
-          re.field_g[0] = new qr(0L, dm.field_h, am.field_Ab);
+          re.field_g[0] = new qr(0L, ObjectList.field_h, am.field_Ab);
           ByteArrayNode.field_p[0] = new sg[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             ByteArrayNode.field_p[0][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
@@ -179,7 +179,7 @@ final class tb {
             tb.a(-52);
           }
           if (nl.field_a.length >= 2) {
-            re.field_g[1] = new qr(0L, dm.field_h, wl.field_b);
+            re.field_g[1] = new qr(0L, ObjectList.field_h, wl.field_b);
             array$0 = new sg[1 + nl.field_a.length];
             ByteArrayNode.field_p[1] = array$0;
             ByteArrayNode.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
@@ -187,10 +187,10 @@ final class tb {
               ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, Integer.toString(nl.field_a[var17_intLifetime1]));
             }
           }
-          re.field_g[2] = new qr(0L, dm.field_h, sq.field_s);
+          re.field_g[2] = new qr(0L, ObjectList.field_h, sq.field_s);
           ByteArrayNode.field_p[2] = new sg[]{new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, an.field_d, (qr) null, gn.field_w, LegacyAi.field_s[0], mi.field_c), new sg(0L, an.field_d, (qr) null, gn.field_w, LegacyAi.field_s[1], he.field_j)};
           if (FleetMove.field_A > 1) {
-            re.field_g[3] = new qr(0L, dm.field_h, jo.field_e);
+            re.field_g[3] = new qr(0L, ObjectList.field_h, jo.field_e);
             array$1 = new sg[1 + FleetMove.field_A];
             ByteArrayNode.field_p[3] = array$1;
             ByteArrayNode.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
@@ -199,7 +199,7 @@ final class tb {
             }
           }
           for (var17_intLifetime3 = 0; param0 > var17_intLifetime3; var17_intLifetime3++) {
-            re.field_g[4 + var17_intLifetime3] = new qr(0L, dm.field_h, gm.field_l[var17_intLifetime3]);
+            re.field_g[4 + var17_intLifetime3] = new qr(0L, ObjectList.field_h, gm.field_l[var17_intLifetime3]);
             array$2 = new sg[1 + we.a(255, (int) so.field_r[var17_intLifetime3])];
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
             ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);

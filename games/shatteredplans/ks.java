@@ -186,9 +186,9 @@ final class ks {
         }
     }
 
-    final static sp c(int param0) {
+    final static WidgetStyle c(int param0) {
         if (GameRules.field_a == null) {
-          GameRules.field_a = new sp();
+          GameRules.field_a = new WidgetStyle();
           GameRules.field_a.a(gn.field_u, true);
           GameRules.field_a.field_h = EmailValidator.field_x;
           GameRules.field_a.field_l = 14;

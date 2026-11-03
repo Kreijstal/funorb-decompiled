@@ -520,14 +520,14 @@ final class SecondaryNodeHashTable {
                 return stackIn_2_0;
               }
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(param3, param0, (byte) -111, param2);
+              var5.allocate(param3, param0, (byte) -111, param2);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param3, param0, (byte) -99, param2);
+              ((RasterBuffer) ((Object) var5_ref)).allocate(param3, param0, (byte) -99, param2);
               stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }

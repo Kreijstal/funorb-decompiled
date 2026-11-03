@@ -85,7 +85,7 @@ final class gi {
               if (var1 != null) {
                 for (var2_int = 0; var5.length > var2_int; var2_int++) {
                   if (0 == ClientException.field_f[var2_int] &&
-                    sp.a(var5[var2_int].field_c, (byte) -125)) {
+                    WidgetStyle.a(var5[var2_int].field_c, (byte) -125)) {
                     ClientException.field_f[var2_int] = 1;
                     BattleSnapshot.a(0);
                   }

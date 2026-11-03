@@ -82,11 +82,11 @@ abstract class MouseWheelInput {
         field_f = null;
     }
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void attachTo(java.awt.Component param0, boolean param1);
 
-    abstract int b(int param0);
+    abstract int takeRotation(int param0);
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detachFrom(java.awt.Component param0, int param1);
 
     static {
         field_c = "Projects";

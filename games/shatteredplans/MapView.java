@@ -923,7 +923,7 @@ final class MapView extends MapViewState {
             if (var4.field_j != null) {
               stackIn_9_0 = var4.field_j.field_o;
             } else {
-              stackIn_9_0 = fm.field_b;
+              stackIn_9_0 = HuffmanCodec.field_b;
             }
             var31 = stackIn_9_0;
             var11Lifetime1 = var31;

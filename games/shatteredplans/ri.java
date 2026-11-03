@@ -299,7 +299,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           if (var9 == og.field_b) {
             var8 = QuaternaryLinkNode.field_v;
           } else {
-            if (dm.field_f == var9) {
+            if (ObjectList.field_f == var9) {
               var8 = ba.field_b;
             }
           }

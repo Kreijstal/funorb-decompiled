@@ -81,7 +81,7 @@ final class ee extends ms {
           if (param1 >= -36) {
             ee.a(true);
           }
-          param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.position, -6309, param0.payload, 0, var4.length);
+          param0.position = param0.position + DiskArchiveRequest.field_v.encode(var4, param0.position, -6309, param0.payload, 0, var4.length);
           stackIn_4_0 = -var3_int + param0.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1107,7 +1107,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_project_biomass", 114);
                 if (var2 != null) {
-                  sp.field_b = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStyle.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_project_energy", 112);
                 if (null != var2) {
@@ -1155,7 +1155,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_gametype", 99);
                 if (var2 != null) {
-                  dm.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ObjectList.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_classic", 116);
                 if (null != var2) {
@@ -1459,7 +1459,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tabname_uioptions", 99);
                 if (var2 != null) {
-                  dm.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ObjectList.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tabname_fleetinfo", 106);
                 if (var2 != null) {

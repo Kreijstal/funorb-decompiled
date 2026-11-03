@@ -247,9 +247,9 @@ final class nf {
         this.field_c = nj.field_a;
         this.field_h = kr.field_b;
         this.field_o = WeightedCacheEntry.field_q;
-        this.field_p = sp.field_j;
+        this.field_p = WidgetStyle.field_j;
         this.field_l = TertiaryNodeList.field_f;
-        this.field_g = fm.field_f;
+        this.field_g = HuffmanCodec.field_f;
         this.field_n = PacketBuffer.field_k;
         this.field_d = ArchiveRequest.field_s;
     }

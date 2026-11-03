@@ -1430,7 +1430,7 @@ final class sm {
                 var9Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.a(param3 + 15, 20, 0, param0 + (rs.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, cl.field_n % 200);
                 param0 = param0 + ((3 + var9Lifetime3 * 4) * var8 >> 2);
-                var39 = sp.field_b;
+                var39 = WidgetStyle.field_b;
                 var9Lifetime3Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
                 this.a(15 + param3, 20, 1, param0 + (rs.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (cl.field_n + 185) % 200);
                 param0 = param0 + (var8 * (3 + 4 * var9Lifetime3Lifetime1) >> 2);
@@ -1454,7 +1454,7 @@ final class sm {
                 }
                 var5 = DualLinkNode.field_m + DefendTask.field_v;
               } else {
-                var5 = dm.field_a;
+                var5 = ObjectList.field_a;
               }
             } else {
               var5 = CellVertex.field_a;
@@ -2320,7 +2320,7 @@ final class sm {
                                         var5 = param1 ? 1 : 0;
                                         BattleContribution.field_s = false;
                                         StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
-                                        fm.a(var5 != 0, -1);
+                                        HuffmanCodec.a(var5 != 0, -1);
                                       }
                                       break regionExit1;
                                     }

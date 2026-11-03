@@ -139,7 +139,7 @@ final class BattleEvent extends IntrusiveNode {
         if (param2 != 0) {
           field_u = (qr) null;
         }
-        dm.field_i = param1;
+        ObjectList.field_i = param1;
     }
 
     static {

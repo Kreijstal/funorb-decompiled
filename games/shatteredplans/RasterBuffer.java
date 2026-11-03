@@ -11,9 +11,9 @@ abstract class RasterBuffer {
     java.awt.Image field_b;
     int field_d;
 
-    abstract void a(int param0, java.awt.Component param1, byte param2, int param3);
+    abstract void allocate(int param0, java.awt.Component param1, byte param2, int param3);
 
-    final void a(byte param0) {
+    final void bindAsRenderTarget(byte param0) {
         gf.a(this.field_c, this.field_g, this.field_d);
         if (param0 != 109) {
           this.field_b = (java.awt.Image) null;
@@ -35,7 +35,7 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(java.awt.Graphics param0, int param1, byte param2, int param3);
+    abstract void paint(java.awt.Graphics param0, int param1, byte param2, int param3);
 
     static {
     }

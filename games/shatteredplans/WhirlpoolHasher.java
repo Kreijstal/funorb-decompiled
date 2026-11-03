@@ -235,7 +235,7 @@ final class WhirlpoolHasher {
           var41 = var49;
           var8 = var41;
           var64 = new int[param5.field_e];
-          var61 = fm.field_c;
+          var61 = HuffmanCodec.field_c;
           var62 = RandomAccessCacheFile.field_f;
           var63 = hk.field_ob;
           for (var13 = 0; param5.field_e > var13; var13++) {
@@ -273,19 +273,19 @@ final class WhirlpoolHasher {
             var15Lifetime1 = param5.field_s[var14Lifetime1];
             var16 = param5.field_i[var14Lifetime1];
             var17 = param5.field_B[var14Lifetime1];
-            if (param5.field_M[var14Lifetime1] >= fm.field_c.length) {
+            if (param5.field_M[var14Lifetime1] >= HuffmanCodec.field_c.length) {
               stackIn_26_0 = -1;
             } else {
               stackIn_26_0 = param5.field_M[var14Lifetime1];
             }
             var18 = stackIn_26_0;
-            if (param5.field_P[var14Lifetime1] >= fm.field_c.length) {
+            if (param5.field_P[var14Lifetime1] >= HuffmanCodec.field_c.length) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param5.field_P[var14Lifetime1];
             }
             var19 = stackIn_29_0;
-            if (param5.field_n[var14Lifetime1] < fm.field_c.length) {
+            if (param5.field_n[var14Lifetime1] < HuffmanCodec.field_c.length) {
               stackIn_32_0 = param5.field_n[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm {
+final class HuffmanCodec {
     static int field_f;
     private int[] field_a;
     static Sprite[] field_d;
@@ -37,7 +37,7 @@ final class fm {
         }
     }
 
-    final int a(byte[] param0, byte[] param1, int param2, int param3, int param4, int param5) {
+    final int decode(byte[] param0, byte[] param1, int param2, int param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -243,7 +243,7 @@ final class fm {
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, byte[] param3, int param4, int param5) {
+    final int encode(byte[] param0, int param1, int param2, byte[] param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_23_0 = 0;
@@ -348,7 +348,7 @@ final class fm {
         field_b = null;
     }
 
-    fm(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_37_0 = null;

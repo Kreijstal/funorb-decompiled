@@ -22,7 +22,7 @@ final class BufferedSocket implements Runnable {
     private InputStream field_f;
     static String field_h;
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -75,7 +75,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void b(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -119,7 +119,7 @@ final class BufferedSocket implements Runnable {
         field_i = null;
     }
 
-    final int a(byte param0) throws IOException {
+    final int readByte(byte param0) throws IOException {
         if (this.field_c) {
           return 0;
         }
@@ -129,7 +129,7 @@ final class BufferedSocket implements Runnable {
         return this.field_f.read();
     }
 
-    final void a(boolean param0) throws IOException {
+    final void checkError(boolean param0) throws IOException {
         if (this.field_c) {
           return;
         }
@@ -143,7 +143,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.b(104);
+        this.close(104);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -154,7 +154,7 @@ final class BufferedSocket implements Runnable {
         gf.i(param4, param3, param1, param2);
     }
 
-    final int a(int param0) throws IOException {
+    final int available(int param0) throws IOException {
         if (this.field_c) {
           return 0;
         }
@@ -259,7 +259,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, byte param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, byte param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
