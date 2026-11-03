@@ -80,7 +80,7 @@ final class BattleContribution extends IntrusiveNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_q = null;
         field_m = null;
         field_l = null;

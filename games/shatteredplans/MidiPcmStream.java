@@ -1691,7 +1691,7 @@ final class MidiPcmStream extends PcmStream {
             if (param2 != 2) {
               this.setPitchBend(-71, -84, -11);
             }
-            param3.field_K.a(param3.field_p, this.computeVolume(param3, -1481279096), this.computePan(param3, (byte) 122));
+            param3.field_K.rampVolume(param3.field_p, this.computeVolume(param3, -1481279096), this.computePan(param3, (byte) 122));
             return false;
           }
           param3.field_K.g(param3.field_p);

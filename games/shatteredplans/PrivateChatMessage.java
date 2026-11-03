@@ -79,7 +79,7 @@ final class PrivateChatMessage extends ChatMessage {
           var4 = AchievementProgress.a((byte) 86, (CharSequence) ((Object) param2));
           param0.writeSmart(0, var4.length);
           if (param1 >= -36) {
-            PrivateChatMessage.a(true);
+            PrivateChatMessage.clearStatics(true);
           }
           param0.position = param0.position + DiskArchiveRequest.field_v.encode(var4, param0.position, -6309, param0.payload, 0, var4.length);
           stackIn_4_0 = -var3_int + param0.position;
@@ -2214,13 +2214,13 @@ final class PrivateChatMessage extends ChatMessage {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         try {
           field_n = null;
           field_l = null;
           field_j = null;
           if (param0) {
-            PrivateChatMessage.a(true);
+            PrivateChatMessage.clearStatics(true);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ee.I(" + param0 + ')');

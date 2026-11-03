@@ -82,7 +82,7 @@ final class e {
 
     final boolean a(int param0) {
         if (param0 != 2) {
-          e.b(20);
+          e.clearStatics(20);
           return this.field_a;
         }
         return this.field_a;
@@ -114,7 +114,7 @@ final class e {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 2105376) {
           field_d = -47;
           field_e = null;

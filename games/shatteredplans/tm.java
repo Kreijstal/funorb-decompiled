@@ -16,7 +16,7 @@ final class tm extends IntrusiveNode {
     static String field_o;
     static AnimatedPanel field_t;
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_j = null;
         if (param0 != -30032) {
           short[] var2 = (short[]) null;

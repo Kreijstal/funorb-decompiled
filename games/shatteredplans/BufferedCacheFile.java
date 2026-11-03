@@ -131,7 +131,7 @@ final class BufferedCacheFile {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (param0) {
           return;
         }

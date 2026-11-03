@@ -189,7 +189,7 @@ final class ae {
         return new int[8];
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         if (param0 != -17358) {
           field_b = false;

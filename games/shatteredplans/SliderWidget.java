@@ -47,13 +47,13 @@ final class SliderWidget extends FocusableWidget {
           }
           var8_int = this.field_F * var8_int / var9;
           if (param0 == 1) {
-            this.field_J.a(13378, var8_int);
+            this.field_J.add(13378, var8_int);
           } else {
             if (param0 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_J.a((byte) 56) > var12; var12++) {
-                var13 = -var8_int + this.field_J.a((byte) -117, var12);
+              for (var12 = 0; this.field_J.size((byte) 56) > var12; var12++) {
+                var13 = -var8_int + this.field_J.get((byte) -117, var12);
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var11 = var12;
@@ -63,7 +63,7 @@ final class SliderWidget extends FocusableWidget {
               if (0 > var11) {
                 return true;
               }
-              this.field_J.a(var11, false);
+              this.field_J.removeAt(var11, false);
             }
           }
           return true;
@@ -127,23 +127,23 @@ final class SliderWidget extends FocusableWidget {
     final int g(byte param0) {
         if (param0 != 93) {
           field_K = (GameRules) null;
-          return this.field_J.a((byte) 56);
+          return this.field_J.size((byte) 56);
         }
-        return this.field_J.a((byte) 56);
+        return this.field_J.size((byte) 56);
     }
 
     final int a(int param0, byte param1) {
         if (param0 < 0) {
           return -1;
         }
-        if (param0 >= this.field_J.a((byte) 56)) {
+        if (param0 >= this.field_J.size((byte) 56)) {
           return -1;
         }
         if (param1 == -58) {
-          return this.field_J.a((byte) 124, param0);
+          return this.field_J.get((byte) 124, param0);
         }
         this.a((byte) -8);
-        return this.field_J.a((byte) 124, param0);
+        return this.field_J.get((byte) 124, param0);
     }
 
     private SliderWidget() throws Throwable {

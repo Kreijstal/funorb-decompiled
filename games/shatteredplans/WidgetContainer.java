@@ -483,7 +483,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearStatics(int param0) {
         field_z = null;
         if (param0 < 88) {
           field_C = true;

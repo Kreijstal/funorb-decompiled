@@ -9,7 +9,7 @@ final class GarrisonTask extends AiTask {
     static ArgbSprite field_s;
     static String field_r;
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_r = null;
         field_t = null;
         field_q = null;

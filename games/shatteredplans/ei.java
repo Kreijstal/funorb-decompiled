@@ -215,7 +215,7 @@ final class ei {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = (String[][]) null;
         field_b = null;
         if (param0 >= -67) {

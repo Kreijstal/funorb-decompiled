@@ -187,7 +187,7 @@ final class UrlLoader implements Runnable {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void clearStatics(byte param0, boolean param1) {
         if (null != lg.field_e) {
           lg.field_e.drawFullRaster(param1, 125);
           if (param0 > -81) {
@@ -212,7 +212,7 @@ final class UrlLoader implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -9) {
-            UrlLoader.a((byte) 30, false);
+            UrlLoader.clearStatics((byte) 30, false);
           }
           var3 = new ByteArrayNode(param0);
           MapView.field_vb.addLast((byte) -113, var3);
@@ -402,7 +402,7 @@ final class UrlLoader implements Runnable {
         field_j = null;
         field_f = null;
         if (param0 != 0) {
-          UrlLoader.a((byte) 121, false);
+          UrlLoader.clearStatics((byte) 121, false);
         }
     }
 

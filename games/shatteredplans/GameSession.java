@@ -2023,7 +2023,7 @@ final class GameSession implements AiHost {
         RuntimeException var4 = null;
         try {
           this.field_P.c(0);
-          this.field_P.b(param2, 0);
+          this.field_P.decodeAllianceMatrix(param2, 0);
           if (param0 <= 89) {
             this.field_n = (Player) null;
           }

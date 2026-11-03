@@ -56,7 +56,7 @@ final class sq {
             throw new IllegalArgumentException();
           }
           var5 = (le) (param1);
-          stackIn_15_0 = var5.a(false);
+          stackIn_15_0 = var5.toByteArray(false);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

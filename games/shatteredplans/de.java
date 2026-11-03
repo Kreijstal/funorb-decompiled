@@ -8,7 +8,7 @@ final class de extends IntrusiveNode {
     static String field_h;
     static int field_i;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_h = null;
         field_k = null;
         if (param0 != 102) {

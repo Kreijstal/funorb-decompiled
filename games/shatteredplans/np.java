@@ -123,7 +123,7 @@ final class np {
         return 97 == this.field_i ? true : false;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_l = null;
         field_a = null;
         field_f = null;

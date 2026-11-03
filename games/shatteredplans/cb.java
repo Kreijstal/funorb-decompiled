@@ -16,7 +16,7 @@ final class cb extends le {
     cb() {
     }
 
-    final void a(byte[] param0, byte param1) {
+    final void setBytes(byte[] param0, byte param1) {
         try {
           this.field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
           this.field_k.position(0);
@@ -68,7 +68,7 @@ final class cb extends le {
         field_f = null;
     }
 
-    final byte[] a(boolean param0) {
+    final byte[] toByteArray(boolean param0) {
         byte[] var3 = new byte[this.field_k.capacity()];
         byte[] var2 = var3;
         this.field_k.position(0);

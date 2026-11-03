@@ -128,7 +128,7 @@ final class CandidateLink extends IntrusiveNode {
         return param0 ^ param1;
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_v = null;
         field_n = null;
         field_m = null;

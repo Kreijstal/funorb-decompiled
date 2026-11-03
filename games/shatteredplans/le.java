@@ -8,7 +8,7 @@ abstract class le {
     static int field_b;
     static Sprite field_d;
 
-    abstract void a(byte[] param0, byte param1);
+    abstract void setBytes(byte[] param0, byte param1);
 
     final static boolean a(int param0, int param1, boolean param2) {
         StringBuilder discarded$0 = null;
@@ -114,7 +114,7 @@ abstract class le {
           if (!param2) {
             return false;
           }
-          le.a(36);
+          le.clearStatics(36);
           return false;
         }
         if (var3 == 0) {
@@ -228,7 +228,7 @@ abstract class le {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -240,7 +240,7 @@ abstract class le {
         field_a = null;
     }
 
-    abstract byte[] a(boolean param0);
+    abstract byte[] toByteArray(boolean param0);
 
     static {
         field_a = "Waiting for music";

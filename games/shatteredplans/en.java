@@ -176,7 +176,7 @@ final class en {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         if (param0 != -5) {
           field_c = 21;

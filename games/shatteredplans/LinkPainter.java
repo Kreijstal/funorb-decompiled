@@ -13,7 +13,7 @@ final class LinkPainter implements WidgetPainter {
     private int field_a;
     private int field_d;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         if (param0 >= -47) {
           return;

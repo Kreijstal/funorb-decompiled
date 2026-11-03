@@ -368,7 +368,7 @@ final class MusicVoiceMixer extends PcmStream {
                 stackIn_13_2 = (MusicVoice) (param2);
                 stackIn_14_3 = !(param2.field_A.field_k[param2.field_H] >= 0);
                 ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
-                param2.field_K.a(var9, var11.getVolume());
+                param2.field_K.rampVolumeKeepPan(var9, var11.getVolume());
               }
               if (0 > param2.field_A.field_k[param2.field_H]) {
                 param2.field_K.setLoopMode(-1);

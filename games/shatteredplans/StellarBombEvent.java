@@ -50,7 +50,7 @@ final class StellarBombEvent extends IntrusiveNode {
             }
           }
           if (param3 > -113) {
-            StellarBombEvent.a(0);
+            StellarBombEvent.clearStatics(0);
           }
           stackIn_18_0 = new String(var12, 0, var5);
           return stackIn_18_0;
@@ -68,7 +68,7 @@ final class StellarBombEvent extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_m = null;
         field_h = null;
         if (param0 != 0) {

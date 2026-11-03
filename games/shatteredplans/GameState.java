@@ -1326,7 +1326,7 @@ final class GameState {
         }
     }
 
-    final boolean[][] b(int param0, int param1) {
+    final boolean[][] decodeAllianceMatrix(int param0, int param1) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         boolean[][] var3 = new boolean[this.field_r][this.field_r];
