@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends ak {
+final class lo extends SceneWidget {
     static int field_Mb;
     static String field_Kb;
     static int[] field_Ib;
     static int field_Jb;
-    ak field_Eb;
-    private ak field_Fb;
+    SceneWidget field_Eb;
+    private SceneWidget field_Fb;
     static String field_Gb;
     static int field_Hb;
     static boolean field_Nb;
@@ -23,7 +23,7 @@ final class lo extends ak {
         this.b(param6 ^ 0, param2, param1);
     }
 
-    lo(long param0, ak param1, ak param2, ak param3, Sprite param4, String param5) {
+    lo(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -40,12 +40,12 @@ final class lo extends ak {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Fb = new ak(0L, param2);
+            this.field_Fb = new SceneWidget(0L, param2);
             this.field_Fb.field_H = param4;
             this.a(this.field_Fb, (byte) 26);
           }
           if (param5 != null) {
-            this.field_Eb = new ak(0L, param3, param5);
+            this.field_Eb = new SceneWidget(0L, param3, param5);
             this.a(this.field_Eb, (byte) 26);
             this.h(-257);
           } else {
@@ -138,26 +138,26 @@ final class lo extends ak {
           var5 = var5 + (-var6 + this.field_K);
           var6 = this.field_K;
         }
-        if (this.field_Bb == 1) {
+        if (this.horizontalAlignment == 1) {
           param2 = param2 + (this.field_K - var6) / 2;
         }
-        if (this.field_Bb == 2) {
+        if (this.horizontalAlignment == 2) {
           param2 = param2 + (this.field_K - var6);
         }
         if (null != this.field_Fb) {
-          this.field_Fb.a(0, this.field_nb, param2, param0 - 2147483392, var4);
-          this.field_Fb.field_kb = this.field_kb;
+          this.field_Fb.a(0, this.height, param2, param0 - 2147483392, var4);
+          this.field_Fb.verticalAlignment = this.verticalAlignment;
         }
         if (this.field_Eb == null) {
           return;
         }
-        this.field_Eb.a(0, this.field_nb, param2 + var4 + param1, 256, var5);
+        this.field_Eb.a(0, this.height, param2 + var4 + param1, 256, var5);
         if (this.field_Fb == null) {
-          this.field_Eb.field_Bb = this.field_Bb;
+          this.field_Eb.horizontalAlignment = this.horizontalAlignment;
         } else {
-          this.field_Eb.field_Bb = 0;
+          this.field_Eb.horizontalAlignment = 0;
         }
-        this.field_Eb.field_kb = this.field_kb;
+        this.field_Eb.verticalAlignment = this.verticalAlignment;
         return;
     }
 
@@ -175,29 +175,29 @@ final class lo extends ak {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (ca.field_a == null) {
-          ca.field_a = new int[2 * param2];
+        if (WhirlpoolHasher.field_a == null) {
+          WhirlpoolHasher.field_a = new int[2 * param2];
           if (ep.field_c == null ||
             !(ep.field_c.length >= param2)) {
             ep.field_c = new int[2 * param2];
           }
-          if (null == uc.field_b ||
-            !(param2 <= uc.field_b.length)) {
-            uc.field_b = new int[param2 * 2];
+          if (null == TextWidgetPainter.field_b ||
+            !(param2 <= TextWidgetPainter.field_b.length)) {
+            TextWidgetPainter.field_b = new int[param2 * 2];
           }
-          if (vp.field_Fb == null ||
-            !(param2 <= vp.field_Fb.length)) {
-            vp.field_Fb = new int[2 * param2];
+          if (VerticalScrollbar.field_Fb == null ||
+            !(param2 <= VerticalScrollbar.field_Fb.length)) {
+            VerticalScrollbar.field_Fb = new int[2 * param2];
           }
-          if (gh.field_q == null ||
-            !(gh.field_q.length >= param2)) {
-            gh.field_q = new int[2 * param2];
+          if (GradientOutlineTextPainter.field_q == null ||
+            !(GradientOutlineTextPainter.field_q.length >= param2)) {
+            GradientOutlineTextPainter.field_q = new int[2 * param2];
           }
           if (SecondaryNodeDequeIterator.field_c == null) {
             SecondaryNodeDequeIterator.field_c = new int[2 * param2];
-            if (null == gn.field_A ||
-              !(param1 + param2 <= gn.field_A.length)) {
-              gn.field_A = new int[2 * (param1 + param2)];
+            if (null == ArchiveRequest.field_A ||
+              !(param1 + param2 <= ArchiveRequest.field_A.length)) {
+              ArchiveRequest.field_A = new int[2 * (param1 + param2)];
             }
             if (dp.field_o == null ||
               !(param2 <= dp.field_o.length)) {
@@ -205,9 +205,9 @@ final class lo extends ak {
             }
           } else {
             if (param2 <= SecondaryNodeDequeIterator.field_c.length) {
-              if (null == gn.field_A ||
-                !(param1 + param2 <= gn.field_A.length)) {
-                gn.field_A = new int[2 * (param1 + param2)];
+              if (null == ArchiveRequest.field_A ||
+                !(param1 + param2 <= ArchiveRequest.field_A.length)) {
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               }
               if (dp.field_o == null ||
                 !(param2 <= dp.field_o.length)) {
@@ -215,9 +215,9 @@ final class lo extends ak {
               }
             } else {
               SecondaryNodeDequeIterator.field_c = new int[2 * param2];
-              if (null == gn.field_A ||
-                !(param1 + param2 <= gn.field_A.length)) {
-                gn.field_A = new int[2 * (param1 + param2)];
+              if (null == ArchiveRequest.field_A ||
+                !(param1 + param2 <= ArchiveRequest.field_A.length)) {
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               }
               if (dp.field_o == null ||
                 !(param2 <= dp.field_o.length)) {
@@ -226,42 +226,42 @@ final class lo extends ak {
             }
           }
         } else {
-          if (ca.field_a.length < param2) {
-            ca.field_a = new int[2 * param2];
+          if (WhirlpoolHasher.field_a.length < param2) {
+            WhirlpoolHasher.field_a = new int[2 * param2];
             if (ep.field_c == null ||
               !(ep.field_c.length >= param2)) {
               ep.field_c = new int[2 * param2];
             }
-            if (null == uc.field_b ||
-              !(param2 <= uc.field_b.length)) {
-              uc.field_b = new int[param2 * 2];
+            if (null == TextWidgetPainter.field_b ||
+              !(param2 <= TextWidgetPainter.field_b.length)) {
+              TextWidgetPainter.field_b = new int[param2 * 2];
             }
-            if (vp.field_Fb == null ||
-              !(param2 <= vp.field_Fb.length)) {
-              vp.field_Fb = new int[2 * param2];
+            if (VerticalScrollbar.field_Fb == null ||
+              !(param2 <= VerticalScrollbar.field_Fb.length)) {
+              VerticalScrollbar.field_Fb = new int[2 * param2];
             }
-            if (gh.field_q == null ||
-              !(gh.field_q.length >= param2)) {
-              gh.field_q = new int[2 * param2];
+            if (GradientOutlineTextPainter.field_q == null ||
+              !(GradientOutlineTextPainter.field_q.length >= param2)) {
+              GradientOutlineTextPainter.field_q = new int[2 * param2];
             }
             if (SecondaryNodeDequeIterator.field_c == null ||
               !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
               SecondaryNodeDequeIterator.field_c = new int[2 * param2];
             }
-            if (null == gn.field_A) {
-              gn.field_A = new int[2 * (param1 + param2)];
+            if (null == ArchiveRequest.field_A) {
+              ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               if (dp.field_o == null ||
                 !(param2 <= dp.field_o.length)) {
                 dp.field_o = new boolean[2 * param2];
               }
             } else {
-              if (param1 + param2 <= gn.field_A.length) {
+              if (param1 + param2 <= ArchiveRequest.field_A.length) {
                 if (dp.field_o == null ||
                   !(param2 <= dp.field_o.length)) {
                   dp.field_o = new boolean[2 * param2];
                 }
               } else {
-                gn.field_A = new int[2 * (param1 + param2)];
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                 if (dp.field_o == null ||
                   !(param2 <= dp.field_o.length)) {
                   dp.field_o = new boolean[2 * param2];
@@ -273,34 +273,34 @@ final class lo extends ak {
               !(ep.field_c.length >= param2)) {
               ep.field_c = new int[2 * param2];
             }
-            if (null == uc.field_b ||
-              !(param2 <= uc.field_b.length)) {
-              uc.field_b = new int[param2 * 2];
+            if (null == TextWidgetPainter.field_b ||
+              !(param2 <= TextWidgetPainter.field_b.length)) {
+              TextWidgetPainter.field_b = new int[param2 * 2];
             }
-            if (vp.field_Fb == null ||
-              !(param2 <= vp.field_Fb.length)) {
-              vp.field_Fb = new int[2 * param2];
+            if (VerticalScrollbar.field_Fb == null ||
+              !(param2 <= VerticalScrollbar.field_Fb.length)) {
+              VerticalScrollbar.field_Fb = new int[2 * param2];
             }
-            if (gh.field_q == null) {
-              gh.field_q = new int[2 * param2];
+            if (GradientOutlineTextPainter.field_q == null) {
+              GradientOutlineTextPainter.field_q = new int[2 * param2];
               if (SecondaryNodeDequeIterator.field_c == null ||
                 !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
                 SecondaryNodeDequeIterator.field_c = new int[2 * param2];
               }
-              if (null == gn.field_A) {
-                gn.field_A = new int[2 * (param1 + param2)];
+              if (null == ArchiveRequest.field_A) {
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                 if (dp.field_o == null ||
                   !(param2 <= dp.field_o.length)) {
                   dp.field_o = new boolean[2 * param2];
                 }
               } else {
-                if (param1 + param2 <= gn.field_A.length) {
+                if (param1 + param2 <= ArchiveRequest.field_A.length) {
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
                   }
                 } else {
-                  gn.field_A = new int[2 * (param1 + param2)];
+                  ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
@@ -308,25 +308,25 @@ final class lo extends ak {
                 }
               }
             } else {
-              if (gh.field_q.length >= param2) {
+              if (GradientOutlineTextPainter.field_q.length >= param2) {
                 if (SecondaryNodeDequeIterator.field_c == null ||
                   !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
                   SecondaryNodeDequeIterator.field_c = new int[2 * param2];
                 }
-                if (null == gn.field_A) {
-                  gn.field_A = new int[2 * (param1 + param2)];
+                if (null == ArchiveRequest.field_A) {
+                  ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
                   }
                 } else {
-                  if (param1 + param2 <= gn.field_A.length) {
+                  if (param1 + param2 <= ArchiveRequest.field_A.length) {
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];
                     }
                   } else {
-                    gn.field_A = new int[2 * (param1 + param2)];
+                    ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];
@@ -334,25 +334,25 @@ final class lo extends ak {
                   }
                 }
               } else {
-                gh.field_q = new int[2 * param2];
+                GradientOutlineTextPainter.field_q = new int[2 * param2];
                 if (SecondaryNodeDequeIterator.field_c == null ||
                   !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
                   SecondaryNodeDequeIterator.field_c = new int[2 * param2];
                 }
-                if (null == gn.field_A) {
-                  gn.field_A = new int[2 * (param1 + param2)];
+                if (null == ArchiveRequest.field_A) {
+                  ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
                   }
                 } else {
-                  if (param1 + param2 <= gn.field_A.length) {
+                  if (param1 + param2 <= ArchiveRequest.field_A.length) {
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];
                     }
                   } else {
-                    gn.field_A = new int[2 * (param1 + param2)];
+                    ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];
@@ -364,7 +364,7 @@ final class lo extends ak {
           }
         }
         aa.field_o = -2147483648;
-        w.field_s = param0;
+        StatefulTextPainter.field_s = param0;
         qn.field_k = -2147483648;
         SecondaryNodeDeque.field_e = 0;
         ro.field_a = 2147483647;

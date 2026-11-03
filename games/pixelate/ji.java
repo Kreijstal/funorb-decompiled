@@ -3,7 +3,7 @@
  */
 final class ji {
     static String field_d;
-    static fm field_b;
+    static ResourceArchive field_b;
     static String field_a;
     static int field_c;
     static String field_e;

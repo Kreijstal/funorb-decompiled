@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends de {
+final class ol extends MenuScreen {
     static String[] field_p;
     static boolean field_o;
     static int field_q;
@@ -21,13 +21,13 @@ final class ol extends de {
           if (null != ib.field_f) {
             ln.a(75);
           }
-          m.a(ao.a(13867), -60);
+          m.a(AudioService.a(13867), -60);
         }
         if (var2 == 1) {
-          la.a(ti.field_t, 0, false, -25528);
+          la.a(MidiPcmStream.field_t, 0, false, -25528);
         }
         if (var2 == 2) {
-          la.a(ti.field_t, 0, true, -25528);
+          la.a(MidiPcmStream.field_t, 0, true, -25528);
         }
     }
 
@@ -51,29 +51,29 @@ final class ol extends de {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          am.field_b = new int[4];
-          am.field_b[2] = 12554336;
-          am.field_b[0] = 6322367;
-          am.field_b[1] = 12542143;
-          am.field_b[3] = 11321184;
-          am.field_i = new int[512];
+          Js5ArchiveManager.field_b = new int[4];
+          Js5ArchiveManager.field_b[2] = 12554336;
+          Js5ArchiveManager.field_b[0] = 6322367;
+          Js5ArchiveManager.field_b[1] = 12542143;
+          Js5ArchiveManager.field_b[3] = 11321184;
+          Js5ArchiveManager.field_i = new int[512];
           if (param0 != 2071) {
             return;
           }
-          for (var1_int = 0; var1_int < am.field_i.length; var1_int++) {
-            var2 = var1_int * 4 / am.field_i.length;
+          for (var1_int = 0; var1_int < Js5ArchiveManager.field_i.length; var1_int++) {
+            var2 = var1_int * 4 / Js5ArchiveManager.field_i.length;
             if (var2 != 3) {
               stackIn_7_0 = var2 + 1;
             } else {
               stackIn_7_0 = 0;
             }
             var3 = stackIn_7_0;
-            var3 = am.field_b[var3];
-            var2 = am.field_b[var2];
-            var4 = am.field_i.length >> 2;
+            var3 = Js5ArchiveManager.field_b[var3];
+            var2 = Js5ArchiveManager.field_b[var2];
+            var4 = Js5ArchiveManager.field_i.length >> 2;
             var5 = var1_int % var4;
             var6 = var4 - var5;
-            am.field_i[var1_int] = cm.a(cm.a(var3, 65280) * var5 / var4, 65280) + (cm.a(16711935, var5 * cm.a(16711935, var3) / var4) + cm.a(var6 * cm.a(var2, 65280) / var4, 65280) + cm.a(16711935, cm.a(var2, 16711935) * var6 / var4));
+            Js5ArchiveManager.field_i[var1_int] = cm.a(cm.a(var3, 65280) * var5 / var4, 65280) + (cm.a(16711935, var5 * cm.a(16711935, var3) / var4) + cm.a(var6 * cm.a(var2, 65280) / var4, 65280) + cm.a(16711935, cm.a(var2, 16711935) * var6 / var4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

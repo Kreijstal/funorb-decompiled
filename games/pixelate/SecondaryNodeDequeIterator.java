@@ -37,8 +37,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
             sb var5 = (sb) null;
             SecondaryNodeDequeIterator.a(-44, 85, 83, (sb) null);
           }
-          nl.field_c = param3;
-          ao.field_d = param0;
+          NodeHashTable.field_c = param3;
+          AudioService.field_d = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "nb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -71,44 +71,44 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (param2 != -53) {
             field_b = (String) null;
           }
-          if (null == kb.field_L) {
-            kb.field_L = rk.field_e;
+          if (null == DateInputWidget.field_L) {
+            DateInputWidget.field_L = rk.field_e;
           }
           var6 = new Sprite[]{param1[0], param1[1]};
           var7 = var6;
           var4 = wc.field_m[param0];
           if (param0 == 0) {
-            rj.field_C[param0] = (jj) ((Object) new ql(var4, var6));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ql(var4, var6));
             return;
           }
           if (1 == param0) {
-            rj.field_C[param0] = (jj) ((Object) new qi(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new qi(var4, var7));
             return;
           }
           if (param0 == 2) {
-            rj.field_C[param0] = (jj) ((Object) new ci(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ci(var4, var7));
             return;
           }
           if (param0 == 3) {
-            rj.field_C[param0] = (jj) ((Object) new lk(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new lk(var4, var7));
             return;
           }
           if (param0 == 4) {
-            rj.field_C[param0] = (jj) ((Object) new se(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new se(var4, var7));
             return;
           }
           if (param0 == 5) {
-            rj.field_C[param0] = (jj) ((Object) new da(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new da(var4, var7));
             return;
           }
           if (param0 == 6) {
-            rj.field_C[param0] = (jj) ((Object) new bm(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new bm(var4, var7));
             return;
           }
           if (param0 != 7) {
             return;
           }
-          rj.field_C[param0] = (jj) ((Object) new wc(var4, var7));
+          Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new wc(var4, var7));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

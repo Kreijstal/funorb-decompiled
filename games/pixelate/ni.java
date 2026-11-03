@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ni extends IntrusiveNode {
-    static ak field_s;
+    static SceneWidget field_s;
     static Sprite field_m;
     int field_r;
     int field_t;
@@ -26,20 +26,20 @@ final class ni extends IntrusiveNode {
 
     final static um a(int param0, int param1) {
         um var2 = new um();
-        bq.field_a.a(22125, var2);
+        bq.field_a.addFirst(22125, var2);
         sd.a(true, param0);
         int var3 = -62 / ((param1 - 48) / 62);
         return var2;
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, jl param8, int param9, int param10) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, int param10) {
         try {
           cl.field_d = param2;
           bl.field_c = param3;
           FullscreenFocusCanvas.field_d = param0;
           ImageProducerRasterBuffer.field_l = param1;
           r.field_a = param7;
-          vp.field_Lb = param9;
+          VerticalScrollbar.field_Lb = param9;
           if (param5) {
             ni.a(88);
           }
@@ -51,19 +51,19 @@ final class ni extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        oc.field_H[5].a(ug.field_n, (byte) -24);
-        oc.field_H[6].a(DualLinkNode.field_s, (byte) -24);
-        oc.field_H[8].a(db.field_T, (byte) -24);
+        StripedProgressBar.field_H[5].a(ug.field_n, (byte) -24);
+        StripedProgressBar.field_H[6].a(DualLinkNode.field_s, (byte) -24);
+        StripedProgressBar.field_H[8].a(TextHotspotWidget.field_T, (byte) -24);
         if (!gq.d(121)) {
-          oc.field_H[1].a(oj.field_N, (byte) -24);
-          oc.field_H[2].a(vp.field_Sb, (byte) -24);
-          oc.field_H[4].a(ng.field_m, (byte) -24);
+          StripedProgressBar.field_H[1].a(oj.field_N, (byte) -24);
+          StripedProgressBar.field_H[2].a(VerticalScrollbar.field_Sb, (byte) -24);
+          StripedProgressBar.field_H[4].a(UiComponent.field_m, (byte) -24);
         }
         if (param0 == -31470) {
           return;
         }
-        jl var2 = (jl) null;
-        ni.a((Sprite) null, -53, -40, -46, -15, true, 64, 51, (jl) null, -14, -74);
+        BitmapFont var2 = (BitmapFont) null;
+        ni.a((Sprite) null, -53, -40, -46, -15, true, 64, 51, (BitmapFont) null, -14, -74);
     }
 
     final static int a(byte param0, int param1) {

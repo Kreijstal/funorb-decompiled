@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends ch implements hi, vo {
+final class be extends UiContainer implements TextInputListener, ButtonListener {
     private String field_S;
-    private qm field_Q;
-    private c field_O;
-    static ak field_R;
-    private c field_J;
-    private qm field_N;
+    private TextButton field_Q;
+    private EditableTextWidget field_O;
+    static SceneWidget field_R;
+    private EditableTextWidget field_J;
+    private TextButton field_N;
     private boolean field_I;
     private boolean field_K;
-    private qm field_L;
-    static ak field_P;
+    private TextButton field_L;
+    static SceneWidget field_P;
     private boolean field_M;
 
-    public final void a(c param0, int param1) {
+    public final void a(EditableTextWidget param0, int param1) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -22,10 +22,10 @@ final class be extends ch implements hi, vo {
         RuntimeException var3 = null;
         try {
           if (this.field_J == param0) {
-            this.field_O.a((ng) (this), 27);
+            this.field_O.focusNext((UiComponent) (this), 27);
           }
           if (param1 != 4) {
-            be.a(-101, (fm) null);
+            be.a(-101, (ResourceArchive) null);
           }
           if (this.field_O == param0) {
             this.a((byte) 125);
@@ -51,7 +51,7 @@ final class be extends ch implements hi, vo {
         try {
           this.field_J.p(-86);
           if (param0 != -10515) {
-            this.field_L = (qm) null;
+            this.field_L = (TextButton) null;
           }
           this.field_O.p(param0 + 10639);
           return;
@@ -62,7 +62,7 @@ final class be extends ch implements hi, vo {
         }
     }
 
-    final static void a(boolean param0, eq param1, int param2, int param3) {
+    final static void a(boolean param0, LobbyGame param1, int param2, int param3) {
         lo dupTemp$0 = null;
         int stackIn_8_0 = 0;
         int stackIn_18_0 = 0;
@@ -173,12 +173,12 @@ final class be extends ch implements hi, vo {
         var26 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0) {
-            stackIn_8_0 = (rl.field_r) ? 0 : 1;
+            stackIn_8_0 = (TriangleMesh.field_r) ? 0 : 1;
             var4_int = stackIn_8_0;
           }
           if (!param0 ||
             var26 != 0) {
-            if (pl.m(param3 + 100) &&
+            if (AccountRegistrationPanel.m(param3 + 100) &&
               !param1.field_dc) {
               stackIn_18_0 = 1;
             } else {
@@ -188,7 +188,7 @@ final class be extends ch implements hi, vo {
           }
           var5 = 0;
           if (param3 != -1) {
-            field_P = (ak) null;
+            field_P = (SceneWidget) null;
           }
           if (!param0) {
             var6 = 0;
@@ -197,30 +197,30 @@ final class be extends ch implements hi, vo {
                 stackIn_49_0 = var4_int;
                 if (var26 == 0) {
                   if (stackIn_49_0 != 0 &&
-                    hc.field_L[0][1 + var6].field_P != 0 &&
+                    AccountTermsPanel.field_L[0][1 + var6].field_P != 0 &&
                     var6 != param1.field_Ib) {
                     var5 = 1;
                     param1.field_Ib = var6;
                   }
-                  hc.field_L[0][var6 + 1].field_rb = var4_int != 0;
-                  if (!f.field_n &&
+                  AccountTermsPanel.field_L[0][var6 + 1].field_rb = var4_int != 0;
+                  if (!DialWidgetPainter.field_n &&
                     var6 == 3) {
-                    hc.field_L[0][1 + var6].field_rb = false;
+                    AccountTermsPanel.field_L[0][1 + var6].field_rb = false;
                   }
-                  stackIn_46_0 = hc.field_L[0][var6 + 1];
+                  stackIn_46_0 = AccountTermsPanel.field_L[0][var6 + 1];
                   stackIn_47_1 = (~var6 == ~param1.field_Ib);
                   stackIn_46_0.field_U = stackIn_47_1;
                   var6++;
                   continue;
                 }
               } else {
-                stackIn_49_0 = hc.field_L[0][2].field_R ? 1 : 0;
+                stackIn_49_0 = AccountTermsPanel.field_L[0][2].field_R ? 1 : 0;
               }
               if (stackIn_49_0 == 0) {
                 break;
               }
-              if (pl.m(param3 + 100)) {
-                up.field_o = wi.field_g;
+              if (AccountRegistrationPanel.m(param3 + 100)) {
+                up.field_o = ClientContextMenu.field_g;
                 if (var26 == 0) {
                   break;
                 }
@@ -230,7 +230,7 @@ final class be extends ch implements hi, vo {
             }
           }
           boolean decompiledFrameCompleted1 = true;
-          if (2 <= ia.field_a.length) {
+          if (2 <= LinkButtonPainter.field_a.length) {
             if (param0 &&
               ki.field_d != -1) {
               stackIn_68_0 = 1;
@@ -242,8 +242,8 @@ final class be extends ch implements hi, vo {
             if (var6Lifetime1 != 0) {
               var7 = ki.field_d;
               var8_int = 0;
-              while (var8_int < qm.field_J.length) {
-                qm.field_J[var8_int] = (byte) 0;
+              while (var8_int < TextButton.field_J.length) {
+                TextButton.field_J[var8_int] = (byte) 0;
                 var8_int++;
                 if (var26 != 0) {
                   decompiledFrameCompleted2 = false;
@@ -251,12 +251,12 @@ final class be extends ch implements hi, vo {
                 }
               }
               if (decompiledFrameCompleted2) {
-                qm.field_J[var7 / 8] = (byte)bq.a((int) qm.field_J[var7 / 8], 1 << var7 % 8);
+                TextButton.field_J[var7 / 8] = (byte)bq.a((int) TextButton.field_J[var7 / 8], 1 << var7 % 8);
               }
             }
             stackIn_82_0 = (param0) ? -1 : 0;
             var7 = stackIn_82_0;
-            while (!(var7 >= ia.field_a.length)) {
+            while (!(var7 >= LinkButtonPainter.field_a.length)) {
               stackIn_155_0 = var6Lifetime1;
               if (var26 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -271,23 +271,23 @@ final class be extends ch implements hi, vo {
               boolean decompiledFrameRemainder0 = true;
               var8_intLifetime1 = stackIn_94_0;
               if (var4_int != 0 &&
-                hc.field_L[1][var7 + 1].field_P != 0) {
+                AccountTermsPanel.field_L[1][var7 + 1].field_P != 0) {
                 if (param0) {
                   if ((var6Lifetime1 == 0)) {
                     if (var7 == -1) {
                       var9 = 0;
-                      while (qm.field_J.length > var9) {
-                        qm.field_J[var9] = (byte) 0;
+                      while (TextButton.field_J.length > var9) {
+                        TextButton.field_J[var9] = (byte) 0;
                         var9++;
                       }
                     } else {
-                      qm.field_J[var7 / 8] = (byte)bn.a((int) qm.field_J[var7 / 8], 1 << cm.a(var7, 7));
+                      TextButton.field_J[var7 / 8] = (byte)DraggableWidget.a((int) TextButton.field_J[var7 / 8], 1 << cm.a(var7, 7));
                     }
                   }
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var9 = ia.field_a[var7];
+                  var9 = LinkButtonPainter.field_a[var7];
                   if (var9 != param1.field_ec) {
                     var5 = 1;
                     param1.field_ec = var9;
@@ -295,34 +295,34 @@ final class be extends ch implements hi, vo {
                 }
               }
               if (!param0) {
-                var9 = ia.field_a[var7];
-                stackIn_123_0 = hc.field_L[1][1 + var7];
+                var9 = LinkButtonPainter.field_a[var7];
+                stackIn_123_0 = AccountTermsPanel.field_L[1][1 + var7];
                 stackIn_124_1 = (var9 == param1.field_ec);
                 stackIn_123_0.field_U = stackIn_124_1;
               } else if (-1 == var7) {
-                hc.field_L[1][1 + var7].field_U = true;
+                AccountTermsPanel.field_L[1][1 + var7].field_U = true;
                 var9 = 0;
-                while (ia.field_a.length > var9) {
-                  dupTemp$0 = hc.field_L[1][var7 + 1];
+                while (LinkButtonPainter.field_a.length > var9) {
+                  dupTemp$0 = AccountTermsPanel.field_L[1][var7 + 1];
                   stackIn_141_0 = dupTemp$0;
                   stackOut_130_1 = dupTemp$0.field_U;
                   stackIn_141_1 = stackOut_130_1 ? 1 : 0;
                   stackIn_131_1 = stackOut_130_1;
                   stackIn_141_2 = 0;
-                  stackIn_141_3 = qm.field_J[var9 / 8] & 1 << (var9 & 7);
+                  stackIn_141_3 = TextButton.field_J[var9 / 8] & 1 << (var9 & 7);
                   stackIn_137_2 = (stackIn_141_2 == stackIn_141_3);
                   stackIn_141_0.field_U = stackIn_131_1 & stackIn_137_2;
                   var9++;
                 }
               } else {
-                stackIn_141_0 = hc.field_L[1][1 + var7];
+                stackIn_141_0 = AccountTermsPanel.field_L[1][1 + var7];
                 stackIn_141_1 = 0;
-                stackIn_141_2 = qm.field_J[var7 / 8];
+                stackIn_141_2 = TextButton.field_J[var7 / 8];
                 stackIn_141_3 = 1 << (7 & var7);
                 stackIn_145_1 = (stackIn_141_1 != (stackIn_141_2 & stackIn_141_3));
                 stackIn_141_0.field_U = stackIn_145_1;
               }
-              stackIn_152_0 = hc.field_L[1][1 + var7];
+              stackIn_152_0 = AccountTermsPanel.field_L[1][1 + var7];
               stackIn_153_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_152_0.field_rb = stackIn_153_1;
               var7++;
@@ -335,7 +335,7 @@ final class be extends ch implements hi, vo {
           var6Lifetime2 = stackIn_159_0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (3 <= var6Lifetime2))) {
-            var7_ref_lo = hc.field_L[2][var6Lifetime2];
+            var7_ref_lo = AccountTermsPanel.field_L[2][var6Lifetime2];
             stackIn_212_0 = var4_int;
             if (var26 == 0) {
               boolean decompiledFrameRemainder4 = true;
@@ -350,9 +350,9 @@ final class be extends ch implements hi, vo {
                 }
                 else {
                   if (var6Lifetime2 != 0) {
-                    mg.field_i = mg.field_i ^ var6Lifetime2;
+                    TextFieldValidator.field_i = TextFieldValidator.field_i ^ var6Lifetime2;
                   } else {
-                    mg.field_i = 0;
+                    TextFieldValidator.field_i = 0;
                   }
                 }
               }
@@ -363,11 +363,11 @@ final class be extends ch implements hi, vo {
                 stackIn_191_0.field_U = stackIn_192_1;
               } else if (0 == var6Lifetime2) {
                 stackIn_201_0 = var7_ref_lo;
-                stackIn_202_1 = (mg.field_i == 0);
+                stackIn_202_1 = (TextFieldValidator.field_i == 0);
                 stackIn_201_0.field_U = stackIn_202_1;
               } else {
                 stackIn_208_0 = var7_ref_lo;
-                stackIn_209_1 = (0 != (mg.field_i & var6Lifetime2));
+                stackIn_209_1 = (0 != (TextFieldValidator.field_i & var6Lifetime2));
                 stackIn_208_0.field_U = stackIn_209_1;
               }
               var6Lifetime2++;
@@ -383,7 +383,7 @@ final class be extends ch implements hi, vo {
             1 < ff.field_i) {
             var6Lifetime2 = 0;
             while (!(var6Lifetime2 >= (1 + ff.field_i))) {
-              var7_ref_loLifetime1 = hc.field_L[3][var6Lifetime2];
+              var7_ref_loLifetime1 = AccountTermsPanel.field_L[3][var6Lifetime2];
               stackIn_249_0 = var4_int;
               if (var26 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -419,7 +419,7 @@ final class be extends ch implements hi, vo {
           var7 = stackIn_249_0;
           scanLoop1: while (true) {
             if (fj.field_b > var7) {
-              var8_array = hc.field_L[var7 + 4];
+              var8_array = AccountTermsPanel.field_L[var7 + 4];
               stackOut_251_0 = param0;
               stackIn_560_0 = stackOut_251_0 ? 1 : 0;
               stackIn_252_0 = stackOut_251_0;
@@ -440,26 +440,26 @@ final class be extends ch implements hi, vo {
                   var9 >= 0) {
                   if (oo.field_e != null &&
                     null != oo.field_e[var7] &&
-                    0 < (oo.field_e[var7][var9] & ~ii.field_t)) {
-                    var15 = cl.a((byte) -99, ~ii.field_t & oo.field_e[var7][var9]);
+                    0 < (oo.field_e[var7][var9] & ~MatchController.field_t)) {
+                    var15 = cl.a((byte) -99, ~MatchController.field_t & oo.field_e[var7][var9]);
                     var14 = 1;
                   }
                   if (null != jm.field_r &&
                     null != jm.field_r[var7] &&
-                    uo.field_j <= 0 &&
+                    BufferedRandomAccessFile.field_j <= 0 &&
                     jm.field_r[var7][var9]) {
                     var10 = 1;
                   }
-                  if (w.field_z != null &&
-                    null != w.field_z[var7]) {
-                    var16 = w.field_z[var7][var9];
+                  if (StatefulTextPainter.field_z != null &&
+                    null != StatefulTextPainter.field_z[var7]) {
+                    var16 = StatefulTextPainter.field_z[var7][var9];
                     if (var16 > 0 &&
                       gi.field_a < var16) {
                       var12 = 1;
                     }
                     if (var16 != 0 &&
                       !fe.field_a &&
-                      uo.field_j <= 0) {
+                      BufferedRandomAccessFile.field_j <= 0) {
                       var10 = 1;
                     }
                   }
@@ -468,7 +468,7 @@ final class be extends ch implements hi, vo {
                     var16Lifetime2 = pa.field_a[var7][var9];
                     if (0 != var16Lifetime2 &&
                       !fe.field_a &&
-                      uo.field_j <= 0) {
+                      BufferedRandomAccessFile.field_j <= 0) {
                       var10 = 1;
                     }
                     if (var16Lifetime2 > 0 &&
@@ -477,9 +477,9 @@ final class be extends ch implements hi, vo {
                     }
                   }
                   if (param0 &&
-                    bh.field_h != null &&
-                    bh.field_h[var7] != null &&
-                    bh.field_h[var7][var9]) {
+                    DirectByteStorage.field_h != null &&
+                    DirectByteStorage.field_h[var7] != null &&
+                    DirectByteStorage.field_h[var7][var9]) {
                     stackIn_339_0 = 1;
                   } else {
                     stackIn_339_0 = 0;
@@ -487,7 +487,7 @@ final class be extends ch implements hi, vo {
                   var13 = stackIn_339_0;
                 }
                 if (wo.field_h >= 2 &&
-                  bc.field_m[12]) {
+                  EmailValidator.field_m[12]) {
                   var11 = 0;
                   var13 = 0;
                   var10 = 0;
@@ -507,8 +507,8 @@ final class be extends ch implements hi, vo {
                 pb.field_f = true;
                 if (var16Lifetime1 == 0 &&
                   var9 >= 0 &&
-                  null != h.field_Z && (!param0 ||
-                  !rl.field_r)) {
+                  null != Checkbox.field_Z && (!param0 ||
+                  !TriangleMesh.field_r)) {
                   pb.field_f = false;
                   ib.field_b = false;
                   if (kf.field_o == null) {
@@ -522,9 +522,9 @@ final class be extends ch implements hi, vo {
                       var17_int++;
                       continue;
                     }
-                    no.a(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
+                    CachedTextLayout.a(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
                     if (wo.field_h >= 2 &&
-                      bc.field_m[12]) {
+                      EmailValidator.field_m[12]) {
                       pb.field_f = true;
                     }
                     if (pb.field_f) {
@@ -548,11 +548,11 @@ final class be extends ch implements hi, vo {
                   }
                   else {
                     if (var9 != -1) {
-                      k.field_k[(var6Lifetime2 + var9) / 8] = (byte)bn.a((int) k.field_k[(var6Lifetime2 + var9) / 8], 1 << cm.a(7, var6Lifetime2 + var9));
+                      NanoTickClock.field_k[(var6Lifetime2 + var9) / 8] = (byte)DraggableWidget.a((int) NanoTickClock.field_k[(var6Lifetime2 + var9) / 8], 1 << cm.a(7, var6Lifetime2 + var9));
                     } else {
                       var18 = var6Lifetime2;
                       while ((var8_array.length + (var6Lifetime2 - 1)) > var18) {
-                        k.field_k[var18 / 8] = (byte)cm.a((int) k.field_k[var18 / 8], ~(1 << cm.a(7, var18)));
+                        NanoTickClock.field_k[var18 / 8] = (byte)cm.a((int) NanoTickClock.field_k[var18 / 8], ~(1 << cm.a(7, var18)));
                         var18++;
                       }
                     }
@@ -560,7 +560,7 @@ final class be extends ch implements hi, vo {
                 }
                 if (param0 &&
                   var16Lifetime1 != 0) {
-                  k.field_k[(var9 + var6Lifetime2) / 8] = (byte)cm.a((int) k.field_k[(var9 + var6Lifetime2) / 8], ~(1 << cm.a(var6Lifetime2 + var9, 7)));
+                  NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] = (byte)cm.a((int) NanoTickClock.field_k[(var9 + var6Lifetime2) / 8], ~(1 << cm.a(var6Lifetime2 + var9, 7)));
                 }
                 if (0 <= var9 &&
                   var17.field_R) {
@@ -591,19 +591,19 @@ final class be extends ch implements hi, vo {
                   }
                   var21 = null;
                   if (var13 != 0) {
-                    var21 = gf.field_f;
+                    var21 = ByteStorage.field_f;
                   } else {
                     if (var10 == 0) {
                       if (var11 != 0) {
                         var22_int = pa.field_a[var7][var9] - ui.field_e;
                         if (1 == var22_int) {
-                          var21 = hd.field_l;
+                          var21 = PlayerBoard.field_l;
                         } else {
                           var21 = sd.a(nj.field_c, 45, new String[]{Integer.toString(var22_int)});
                         }
                       }
                       if (var12 != 0) {
-                        var22 = sd.a(eh.field_d, 103, new String[]{Integer.toString(gi.field_a), Integer.toString(w.field_z[var7][var9])});
+                        var22 = sd.a(SocketConnector.field_d, 103, new String[]{Integer.toString(gi.field_a), Integer.toString(StatefulTextPainter.field_z[var7][var9])});
                         if (null != var21) {
                           var21 = (String) (var21) + "<br>" + (String) (var22);
                         } else {
@@ -625,7 +625,7 @@ final class be extends ch implements hi, vo {
                         }
                       }
                     } else {
-                      var21 = nl.field_b;
+                      var21 = NodeHashTable.field_b;
                     }
                   }
                   if (var4_int != 0 &&
@@ -655,7 +655,7 @@ final class be extends ch implements hi, vo {
                       }
                       stackIn_507_0Lifetime1 = var23;
                       if (stackIn_507_0Lifetime1 != 0) {
-                        var21 = uj.field_Kb + (String) (var22);
+                        var21 = LobbyPlayer.field_Kb + (String) (var22);
                         break;
                       }
                       var21 = sd.a(ki.field_a, 41, new String[]{(String) (var22)});
@@ -664,7 +664,7 @@ final class be extends ch implements hi, vo {
                   }
                   if (var21 != null) {
                     var21 = "<col=A00000>" + (String) (var21);
-                    var21 = w.a((String) (var21), (byte) -67, "<br><col=A00000>", "<br>");
+                    var21 = StatefulTextPainter.a((String) (var21), (byte) -67, "<br><col=A00000>", "<br>");
                     if (null != var20) {
                       var20 = (String) (var20) + "<br>" + (String) (var21);
                     } else {
@@ -680,7 +680,7 @@ final class be extends ch implements hi, vo {
                 if (param0) {
                   if (var9 != -1) {
                     stackIn_526_0 = var17;
-                    stackIn_527_1 = (0 != (k.field_k[(var9 + var6Lifetime2) / 8] & 1 << (7 & var6Lifetime2 + var9)));
+                    stackIn_527_1 = (0 != (NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] & 1 << (7 & var6Lifetime2 + var9)));
                     stackIn_526_0.field_U = stackIn_527_1;
                   } else {
                     var17.field_U = true;
@@ -691,7 +691,7 @@ final class be extends ch implements hi, vo {
                       stackIn_544_1 = stackOut_530_1 ? 1 : 0;
                       stackIn_531_1 = stackOut_530_1;
                       stackIn_544_2 = 0;
-                      stackIn_544_3 = k.field_k[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
+                      stackIn_544_3 = NanoTickClock.field_k[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
                       stackIn_537_2 = (stackIn_544_2 == stackIn_544_3);
                       stackIn_544_0.field_U = stackIn_531_1 & stackIn_537_2;
                       var18Lifetime1++;
@@ -726,7 +726,7 @@ final class be extends ch implements hi, vo {
                 stackIn_555_0.field_rb = stackIn_556_1;
                 var9++;
               }
-              stackIn_558_0Lifetime1 = var6Lifetime2 + (oe.field_Rb[var7] & 255);
+              stackIn_558_0Lifetime1 = var6Lifetime2 + (ReportAbuseDialog.field_Rb[var7] & 255);
               var6Lifetime2 = stackIn_558_0Lifetime1;
               var7++;
               continue scanLoop1;
@@ -736,7 +736,7 @@ final class be extends ch implements hi, vo {
           }
           if (stackIn_560_0 != 0 &&
             !param0) {
-            uc.a(param2, (byte) 126);
+            TextWidgetPainter.a(param2, (byte) 126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -760,7 +760,7 @@ final class be extends ch implements hi, vo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -24832) {
-            this.a((qm) null, 127, -54, 0, 14);
+            this.onAction((TextButton) null, 127, -54, 0, 14);
           }
           if (null == this.field_J.field_q) {
             stackIn_7_0 = "";
@@ -781,7 +781,7 @@ final class be extends ch implements hi, vo {
         RuntimeException var5 = null;
         try {
           if (null != this.field_S) {
-            he.field_d.a(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.field_w);
+            he.field_d.drawParagraph(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
           }
           if (this.field_Q != null) {
             SoftwareRasterizer.b(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
@@ -796,7 +796,7 @@ final class be extends ch implements hi, vo {
         }
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -815,21 +815,21 @@ final class be extends ch implements hi, vo {
               if (param0 == this.field_N) {
                 if (!this.field_I) {
                   if (!this.field_K) {
-                    ie.k(8149);
+                    SingleChildContainer.k(8149);
                     if (var7 != 0) {
                       mj.c(param2 ^ 24507);
-                      bn.n(2147483647);
+                      DraggableWidget.n(2147483647);
                       id.a(param2 ^ 117);
                     }
                   } else {
                     mj.c(param2 ^ 24507);
                     if (var7 != 0) {
-                      bn.n(2147483647);
+                      DraggableWidget.n(2147483647);
                       id.a(param2 ^ 117);
                     }
                   }
                 } else {
-                  bn.n(2147483647);
+                  DraggableWidget.n(2147483647);
                   if (var7 != 0) {
                     id.a(param2 ^ 117);
                   }
@@ -879,7 +879,7 @@ final class be extends ch implements hi, vo {
 
     final void a(String param0, int param1) {
         RuntimeException runtimeException = null;
-        c var3 = null;
+        EditableTextWidget var3 = null;
         String var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -891,7 +891,7 @@ final class be extends ch implements hi, vo {
             this.field_K = false;
           }
           var4 = param0;
-          var3.a(false, (byte) 87, var4);
+          var3.setText(false, (byte) 87, var4);
           this.field_O.p(-58);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -908,7 +908,7 @@ final class be extends ch implements hi, vo {
         }
     }
 
-    final static void a(int param0, fm param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_529_0 = null;
         StringBuilder stackIn_529_1 = null;
         String stackIn_530_2 = null;
@@ -1067,596 +1067,596 @@ final class be extends ch implements hi, vo {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           ig.field_b = param1;
-          var2 = hb.a("text_game_name", (byte) 119);
+          var2 = ContentTransitionDialog.a("text_game_name", (byte) 119);
           if (null != var2) {
-            po.field_e = of.a(var2, 1);
+            SoundCache.field_e = of.a(var2, 1);
           }
-          var2Lifetime1 = hb.a("text_benefits,0", (byte) -12);
+          var2Lifetime1 = ContentTransitionDialog.a("text_benefits,0", (byte) -12);
           if (null != var2Lifetime1) {
-            ic.field_bb[0] = of.a(var2Lifetime1, 1);
+            AccountNoticeDialog.field_bb[0] = of.a(var2Lifetime1, 1);
           }
-          var2Lifetime2 = hb.a("text_benefits,1", (byte) -40);
+          var2Lifetime2 = ContentTransitionDialog.a("text_benefits,1", (byte) -40);
           if (null != var2Lifetime2) {
-            ic.field_bb[1] = of.a(var2Lifetime2, 1);
+            AccountNoticeDialog.field_bb[1] = of.a(var2Lifetime2, 1);
           }
-          var2Lifetime3 = hb.a("text_benefits,2", (byte) 115);
+          var2Lifetime3 = ContentTransitionDialog.a("text_benefits,2", (byte) 115);
           if (var2Lifetime3 != null) {
-            ic.field_bb[2] = of.a(var2Lifetime3, 1);
+            AccountNoticeDialog.field_bb[2] = of.a(var2Lifetime3, 1);
           }
-          var2Lifetime4 = hb.a("text_benefits,3", (byte) 124);
+          var2Lifetime4 = ContentTransitionDialog.a("text_benefits,3", (byte) 124);
           if (var2Lifetime4 != null) {
-            ic.field_bb[3] = of.a(var2Lifetime4, 1);
+            AccountNoticeDialog.field_bb[3] = of.a(var2Lifetime4, 1);
           }
-          var2Lifetime5 = hb.a("achievement_names,0", (byte) -110);
+          var2Lifetime5 = ContentTransitionDialog.a("achievement_names,0", (byte) -110);
           if (var2Lifetime5 != null) {
             GameApplet.field_n[0] = of.a(var2Lifetime5, 1);
           }
-          var2Lifetime6 = hb.a("achievement_names,1", (byte) -11);
+          var2Lifetime6 = ContentTransitionDialog.a("achievement_names,1", (byte) -11);
           if (var2Lifetime6 != null) {
             GameApplet.field_n[1] = of.a(var2Lifetime6, 1);
           }
-          var2Lifetime7 = hb.a("achievement_names,2", (byte) 109);
+          var2Lifetime7 = ContentTransitionDialog.a("achievement_names,2", (byte) 109);
           if (null != var2Lifetime7) {
             GameApplet.field_n[2] = of.a(var2Lifetime7, 1);
           }
-          var2Lifetime8 = hb.a("achievement_names,3", (byte) -9);
+          var2Lifetime8 = ContentTransitionDialog.a("achievement_names,3", (byte) -9);
           if (null != var2Lifetime8) {
             GameApplet.field_n[3] = of.a(var2Lifetime8, 1);
           }
-          var2Lifetime9 = hb.a("achievement_names,4", (byte) -61);
+          var2Lifetime9 = ContentTransitionDialog.a("achievement_names,4", (byte) -61);
           if (var2Lifetime9 != null) {
             GameApplet.field_n[4] = of.a(var2Lifetime9, 1);
           }
-          var2Lifetime10 = hb.a("achievement_names,5", (byte) -86);
+          var2Lifetime10 = ContentTransitionDialog.a("achievement_names,5", (byte) -86);
           if (null != var2Lifetime10) {
             GameApplet.field_n[5] = of.a(var2Lifetime10, 1);
           }
-          var2Lifetime11 = hb.a("achievement_names,6", (byte) 117);
+          var2Lifetime11 = ContentTransitionDialog.a("achievement_names,6", (byte) 117);
           if (var2Lifetime11 != null) {
             GameApplet.field_n[6] = of.a(var2Lifetime11, 1);
           }
-          var2Lifetime12 = hb.a("achievement_names,7", (byte) -100);
+          var2Lifetime12 = ContentTransitionDialog.a("achievement_names,7", (byte) -100);
           if (null != var2Lifetime12) {
             GameApplet.field_n[7] = of.a(var2Lifetime12, 1);
           }
-          var2Lifetime13 = hb.a("achievement_names,8", (byte) 112);
+          var2Lifetime13 = ContentTransitionDialog.a("achievement_names,8", (byte) 112);
           if (null != var2Lifetime13) {
             GameApplet.field_n[8] = of.a(var2Lifetime13, 1);
           }
-          var2Lifetime14 = hb.a("achievement_names,9", (byte) -32);
+          var2Lifetime14 = ContentTransitionDialog.a("achievement_names,9", (byte) -32);
           if (null != var2Lifetime14) {
             GameApplet.field_n[9] = of.a(var2Lifetime14, 1);
           }
-          var2Lifetime15 = hb.a("achievement_names,10", (byte) -67);
+          var2Lifetime15 = ContentTransitionDialog.a("achievement_names,10", (byte) -67);
           var3 = 98 / ((param0 - 33) / 43);
           if (var2Lifetime15 != null) {
             GameApplet.field_n[10] = of.a(var2Lifetime15, 1);
           }
-          var2Lifetime16 = hb.a("achievement_names,11", (byte) -118);
+          var2Lifetime16 = ContentTransitionDialog.a("achievement_names,11", (byte) -118);
           if (var2Lifetime16 != null) {
             GameApplet.field_n[11] = of.a(var2Lifetime16, 1);
           }
-          var2Lifetime17 = hb.a("achievement_names,12", (byte) 117);
+          var2Lifetime17 = ContentTransitionDialog.a("achievement_names,12", (byte) 117);
           if (var2Lifetime17 != null) {
             GameApplet.field_n[12] = of.a(var2Lifetime17, 1);
           }
-          var2Lifetime18 = hb.a("achievement_names,13", (byte) 127);
+          var2Lifetime18 = ContentTransitionDialog.a("achievement_names,13", (byte) 127);
           if (null != var2Lifetime18) {
             GameApplet.field_n[13] = of.a(var2Lifetime18, 1);
           }
-          var2Lifetime19 = hb.a("achievement_names,14", (byte) 123);
+          var2Lifetime19 = ContentTransitionDialog.a("achievement_names,14", (byte) 123);
           if (null != var2Lifetime19) {
             GameApplet.field_n[14] = of.a(var2Lifetime19, 1);
           }
-          var2Lifetime20 = hb.a("achievement_names,15", (byte) -79);
+          var2Lifetime20 = ContentTransitionDialog.a("achievement_names,15", (byte) -79);
           if (var2Lifetime20 != null) {
             GameApplet.field_n[15] = of.a(var2Lifetime20, 1);
           }
-          var2Lifetime21 = hb.a("achievement_names,16", (byte) 112);
+          var2Lifetime21 = ContentTransitionDialog.a("achievement_names,16", (byte) 112);
           if (null != var2Lifetime21) {
             GameApplet.field_n[16] = of.a(var2Lifetime21, 1);
           }
-          var2Lifetime22 = hb.a("achievement_names,17", (byte) -113);
+          var2Lifetime22 = ContentTransitionDialog.a("achievement_names,17", (byte) -113);
           if (null != var2Lifetime22) {
             GameApplet.field_n[17] = of.a(var2Lifetime22, 1);
           }
-          var2Lifetime23 = hb.a("achievement_names,18", (byte) -45);
+          var2Lifetime23 = ContentTransitionDialog.a("achievement_names,18", (byte) -45);
           if (null != var2Lifetime23) {
             GameApplet.field_n[18] = of.a(var2Lifetime23, 1);
           }
-          var2Lifetime24 = hb.a("achievement_names,19", (byte) -103);
+          var2Lifetime24 = ContentTransitionDialog.a("achievement_names,19", (byte) -103);
           if (var2Lifetime24 != null) {
             GameApplet.field_n[19] = of.a(var2Lifetime24, 1);
           }
-          var2Lifetime25 = hb.a("achievement_names,20", (byte) 124);
+          var2Lifetime25 = ContentTransitionDialog.a("achievement_names,20", (byte) 124);
           if (var2Lifetime25 != null) {
             GameApplet.field_n[20] = of.a(var2Lifetime25, 1);
           }
-          var2Lifetime26 = hb.a("achievement_names,21", (byte) 114);
+          var2Lifetime26 = ContentTransitionDialog.a("achievement_names,21", (byte) 114);
           if (var2Lifetime26 != null) {
             GameApplet.field_n[21] = of.a(var2Lifetime26, 1);
           }
-          var2Lifetime27 = hb.a("achievement_criteria,0", (byte) 122);
+          var2Lifetime27 = ContentTransitionDialog.a("achievement_criteria,0", (byte) 122);
           if (var2Lifetime27 != null) {
             ClientException.field_a[0] = of.a(var2Lifetime27, 1);
           }
-          var2Lifetime28 = hb.a("achievement_criteria,1", (byte) -12);
+          var2Lifetime28 = ContentTransitionDialog.a("achievement_criteria,1", (byte) -12);
           if (var2Lifetime28 != null) {
             ClientException.field_a[1] = of.a(var2Lifetime28, 1);
           }
-          var2Lifetime29 = hb.a("achievement_criteria,2", (byte) 122);
+          var2Lifetime29 = ContentTransitionDialog.a("achievement_criteria,2", (byte) 122);
           if (null != var2Lifetime29) {
             ClientException.field_a[2] = of.a(var2Lifetime29, 1);
           }
-          var2Lifetime30 = hb.a("achievement_criteria,3", (byte) 123);
+          var2Lifetime30 = ContentTransitionDialog.a("achievement_criteria,3", (byte) 123);
           if (var2Lifetime30 != null) {
             ClientException.field_a[3] = of.a(var2Lifetime30, 1);
           }
-          var2Lifetime31 = hb.a("achievement_criteria,4", (byte) 113);
+          var2Lifetime31 = ContentTransitionDialog.a("achievement_criteria,4", (byte) 113);
           if (var2Lifetime31 != null) {
             ClientException.field_a[4] = of.a(var2Lifetime31, 1);
           }
-          var2Lifetime32 = hb.a("achievement_criteria,5", (byte) 118);
+          var2Lifetime32 = ContentTransitionDialog.a("achievement_criteria,5", (byte) 118);
           if (null != var2Lifetime32) {
             ClientException.field_a[5] = of.a(var2Lifetime32, 1);
           }
-          var2Lifetime33 = hb.a("achievement_criteria,6", (byte) 118);
+          var2Lifetime33 = ContentTransitionDialog.a("achievement_criteria,6", (byte) 118);
           if (null != var2Lifetime33) {
             ClientException.field_a[6] = of.a(var2Lifetime33, 1);
           }
-          var2Lifetime34 = hb.a("achievement_criteria,7", (byte) 116);
+          var2Lifetime34 = ContentTransitionDialog.a("achievement_criteria,7", (byte) 116);
           if (null != var2Lifetime34) {
             ClientException.field_a[7] = of.a(var2Lifetime34, 1);
           }
-          var2Lifetime35 = hb.a("achievement_criteria,8", (byte) 108);
+          var2Lifetime35 = ContentTransitionDialog.a("achievement_criteria,8", (byte) 108);
           if (null != var2Lifetime35) {
             ClientException.field_a[8] = of.a(var2Lifetime35, 1);
           }
-          var2Lifetime36 = hb.a("achievement_criteria,9", (byte) 118);
+          var2Lifetime36 = ContentTransitionDialog.a("achievement_criteria,9", (byte) 118);
           if (var2Lifetime36 != null) {
             ClientException.field_a[9] = of.a(var2Lifetime36, 1);
           }
-          var2Lifetime37 = hb.a("achievement_criteria,10", (byte) 124);
+          var2Lifetime37 = ContentTransitionDialog.a("achievement_criteria,10", (byte) 124);
           if (null != var2Lifetime37) {
             ClientException.field_a[10] = of.a(var2Lifetime37, 1);
           }
-          var2Lifetime38 = hb.a("achievement_criteria,11", (byte) -5);
+          var2Lifetime38 = ContentTransitionDialog.a("achievement_criteria,11", (byte) -5);
           if (null != var2Lifetime38) {
             ClientException.field_a[11] = of.a(var2Lifetime38, 1);
           }
-          var2Lifetime39 = hb.a("achievement_criteria,12", (byte) 107);
+          var2Lifetime39 = ContentTransitionDialog.a("achievement_criteria,12", (byte) 107);
           if (var2Lifetime39 != null) {
             ClientException.field_a[12] = of.a(var2Lifetime39, 1);
           }
-          var2Lifetime40 = hb.a("achievement_criteria,13", (byte) -90);
+          var2Lifetime40 = ContentTransitionDialog.a("achievement_criteria,13", (byte) -90);
           if (null != var2Lifetime40) {
             ClientException.field_a[13] = of.a(var2Lifetime40, 1);
           }
-          var2Lifetime41 = hb.a("achievement_criteria,14", (byte) 109);
+          var2Lifetime41 = ContentTransitionDialog.a("achievement_criteria,14", (byte) 109);
           if (var2Lifetime41 != null) {
             ClientException.field_a[14] = of.a(var2Lifetime41, 1);
           }
-          var2Lifetime42 = hb.a("achievement_criteria,15", (byte) 118);
+          var2Lifetime42 = ContentTransitionDialog.a("achievement_criteria,15", (byte) 118);
           if (var2Lifetime42 != null) {
             ClientException.field_a[15] = of.a(var2Lifetime42, 1);
           }
-          var2Lifetime43 = hb.a("achievement_criteria,16", (byte) -10);
+          var2Lifetime43 = ContentTransitionDialog.a("achievement_criteria,16", (byte) -10);
           if (var2Lifetime43 != null) {
             ClientException.field_a[16] = of.a(var2Lifetime43, 1);
           }
-          var2Lifetime44 = hb.a("achievement_criteria,17", (byte) -12);
+          var2Lifetime44 = ContentTransitionDialog.a("achievement_criteria,17", (byte) -12);
           if (var2Lifetime44 != null) {
             ClientException.field_a[17] = of.a(var2Lifetime44, 1);
           }
-          var2Lifetime45 = hb.a("achievement_criteria,18", (byte) 123);
+          var2Lifetime45 = ContentTransitionDialog.a("achievement_criteria,18", (byte) 123);
           if (var2Lifetime45 != null) {
             ClientException.field_a[18] = of.a(var2Lifetime45, 1);
           }
-          var2Lifetime46 = hb.a("achievement_criteria,19", (byte) -17);
+          var2Lifetime46 = ContentTransitionDialog.a("achievement_criteria,19", (byte) -17);
           if (var2Lifetime46 != null) {
             ClientException.field_a[19] = of.a(var2Lifetime46, 1);
           }
-          var2Lifetime47 = hb.a("achievement_criteria,20", (byte) 118);
+          var2Lifetime47 = ContentTransitionDialog.a("achievement_criteria,20", (byte) 118);
           if (null != var2Lifetime47) {
             ClientException.field_a[20] = of.a(var2Lifetime47, 1);
           }
-          var2Lifetime48 = hb.a("achievement_criteria,21", (byte) 116);
+          var2Lifetime48 = ContentTransitionDialog.a("achievement_criteria,21", (byte) 116);
           if (var2Lifetime48 != null) {
             ClientException.field_a[21] = of.a(var2Lifetime48, 1);
           }
-          var2Lifetime49 = hb.a("tutorial_title,0", (byte) 114);
+          var2Lifetime49 = ContentTransitionDialog.a("tutorial_title,0", (byte) 114);
           if (var2Lifetime49 != null) {
-            gh.field_w[0] = of.a(var2Lifetime49, 1);
+            GradientOutlineTextPainter.field_w[0] = of.a(var2Lifetime49, 1);
           }
-          var2Lifetime50 = hb.a("tutorial_title,2", (byte) 108);
+          var2Lifetime50 = ContentTransitionDialog.a("tutorial_title,2", (byte) 108);
           if (null != var2Lifetime50) {
-            gh.field_w[2] = of.a(var2Lifetime50, 1);
+            GradientOutlineTextPainter.field_w[2] = of.a(var2Lifetime50, 1);
           }
-          var2Lifetime51 = hb.a("tutorial1,0", (byte) -26);
+          var2Lifetime51 = ContentTransitionDialog.a("tutorial1,0", (byte) -26);
           if (var2Lifetime51 != null) {
             hm.field_f[0] = of.a(var2Lifetime51, 1);
           }
-          var2Lifetime52 = hb.a("tutorial1,1", (byte) -61);
+          var2Lifetime52 = ContentTransitionDialog.a("tutorial1,1", (byte) -61);
           if (null != var2Lifetime52) {
             hm.field_f[1] = of.a(var2Lifetime52, 1);
           }
-          var2Lifetime53 = hb.a("tutorial1,2", (byte) -90);
+          var2Lifetime53 = ContentTransitionDialog.a("tutorial1,2", (byte) -90);
           if (var2Lifetime53 != null) {
             hm.field_f[2] = of.a(var2Lifetime53, 1);
           }
-          var2Lifetime54 = hb.a("tutorial2,0", (byte) 106);
+          var2Lifetime54 = ContentTransitionDialog.a("tutorial2,0", (byte) 106);
           if (null != var2Lifetime54) {
-            qo.field_t[0] = of.a(var2Lifetime54, 1);
+            MatchingTextValidator.field_t[0] = of.a(var2Lifetime54, 1);
           }
-          var2Lifetime55 = hb.a("tutorial2,1", (byte) 113);
+          var2Lifetime55 = ContentTransitionDialog.a("tutorial2,1", (byte) 113);
           if (null != var2Lifetime55) {
-            qo.field_t[1] = of.a(var2Lifetime55, 1);
+            MatchingTextValidator.field_t[1] = of.a(var2Lifetime55, 1);
           }
-          var2Lifetime56 = hb.a("tutorial3,0", (byte) -47);
+          var2Lifetime56 = ContentTransitionDialog.a("tutorial3,0", (byte) -47);
           if (null != var2Lifetime56) {
             um.field_l[0] = of.a(var2Lifetime56, 1);
           }
-          var2Lifetime57 = hb.a("tutorial4,0", (byte) 122);
+          var2Lifetime57 = ContentTransitionDialog.a("tutorial4,0", (byte) 122);
           if (var2Lifetime57 != null) {
             ol.field_p[0] = of.a(var2Lifetime57, 1);
           }
-          var2Lifetime58 = hb.a("tutorial5,0", (byte) -95);
+          var2Lifetime58 = ContentTransitionDialog.a("tutorial5,0", (byte) -95);
           if (var2Lifetime58 != null) {
             ui.field_h[0] = of.a(var2Lifetime58, 1);
           }
-          var2Lifetime59 = hb.a("tutorial5,1", (byte) 125);
+          var2Lifetime59 = ContentTransitionDialog.a("tutorial5,1", (byte) 125);
           if (null != var2Lifetime59) {
             ui.field_h[1] = of.a(var2Lifetime59, 1);
           }
-          var2Lifetime60 = hb.a("tutorial6,0", (byte) 104);
+          var2Lifetime60 = ContentTransitionDialog.a("tutorial6,0", (byte) 104);
           if (var2Lifetime60 != null) {
             qg.field_d[0] = of.a(var2Lifetime60, 1);
           }
-          var2Lifetime61 = hb.a("tutorial6,1", (byte) 115);
+          var2Lifetime61 = ContentTransitionDialog.a("tutorial6,1", (byte) 115);
           if (var2Lifetime61 != null) {
             qg.field_d[1] = of.a(var2Lifetime61, 1);
           }
-          var2Lifetime62 = hb.a("instructions1,0", (byte) 107);
+          var2Lifetime62 = ContentTransitionDialog.a("instructions1,0", (byte) 107);
           if (null != var2Lifetime62) {
             up.field_a[0] = of.a(var2Lifetime62, 1);
           }
-          var2Lifetime63 = hb.a("instructions1,1", (byte) -78);
+          var2Lifetime63 = ContentTransitionDialog.a("instructions1,1", (byte) -78);
           if (var2Lifetime63 != null) {
             up.field_a[1] = of.a(var2Lifetime63, 1);
           }
-          var2Lifetime64 = hb.a("instructions2,0", (byte) -10);
+          var2Lifetime64 = ContentTransitionDialog.a("instructions2,0", (byte) -10);
           if (var2Lifetime64 != null) {
-            gp.field_Hb[0] = of.a(var2Lifetime64, 1);
+            ScrollContainer.field_Hb[0] = of.a(var2Lifetime64, 1);
           }
-          var2Lifetime65 = hb.a("instructions3,0", (byte) -104);
+          var2Lifetime65 = ContentTransitionDialog.a("instructions3,0", (byte) -104);
           if (null != var2Lifetime65) {
             qh.field_d[0] = of.a(var2Lifetime65, 1);
           }
-          var2Lifetime66 = hb.a("instructions3,1", (byte) 114);
+          var2Lifetime66 = ContentTransitionDialog.a("instructions3,1", (byte) 114);
           if (null != var2Lifetime66) {
             qh.field_d[1] = of.a(var2Lifetime66, 1);
           }
-          var2Lifetime67 = hb.a("instructions3,2", (byte) 111);
+          var2Lifetime67 = ContentTransitionDialog.a("instructions3,2", (byte) 111);
           if (null != var2Lifetime67) {
             qh.field_d[2] = of.a(var2Lifetime67, 1);
           }
-          var2Lifetime68 = hb.a("instructions3,3", (byte) 117);
+          var2Lifetime68 = ContentTransitionDialog.a("instructions3,3", (byte) 117);
           if (var2Lifetime68 != null) {
             qh.field_d[3] = of.a(var2Lifetime68, 1);
           }
-          var2Lifetime69 = hb.a("instructions3,4", (byte) 116);
+          var2Lifetime69 = ContentTransitionDialog.a("instructions3,4", (byte) 116);
           if (var2Lifetime69 != null) {
             qh.field_d[4] = of.a(var2Lifetime69, 1);
           }
-          var2Lifetime70 = hb.a("instructions4,0", (byte) 121);
+          var2Lifetime70 = ContentTransitionDialog.a("instructions4,0", (byte) 121);
           if (null != var2Lifetime70) {
             wk.field_i[0] = of.a(var2Lifetime70, 1);
           }
-          var2Lifetime71 = hb.a("instructions4,1", (byte) 109);
+          var2Lifetime71 = ContentTransitionDialog.a("instructions4,1", (byte) 109);
           if (null != var2Lifetime71) {
             wk.field_i[1] = of.a(var2Lifetime71, 1);
           }
-          var2Lifetime72 = hb.a("instructions5,0", (byte) -123);
+          var2Lifetime72 = ContentTransitionDialog.a("instructions5,0", (byte) -123);
           if (var2Lifetime72 != null) {
             GameApplet.field_k[0] = of.a(var2Lifetime72, 1);
           }
-          var2Lifetime73 = hb.a("instructions5,1", (byte) 111);
+          var2Lifetime73 = ContentTransitionDialog.a("instructions5,1", (byte) 111);
           if (null != var2Lifetime73) {
             GameApplet.field_k[1] = of.a(var2Lifetime73, 1);
           }
-          var2Lifetime74 = hb.a("instructions6,0", (byte) -89);
+          var2Lifetime74 = ContentTransitionDialog.a("instructions6,0", (byte) -89);
           if (var2Lifetime74 != null) {
-            gj.field_R[0] = of.a(var2Lifetime74, 1);
+            NumericDateInputWidget.field_R[0] = of.a(var2Lifetime74, 1);
           }
-          var2Lifetime75 = hb.a("instructions7,0", (byte) -63);
+          var2Lifetime75 = ContentTransitionDialog.a("instructions7,0", (byte) -63);
           if (var2Lifetime75 != null) {
             uk.field_q[0] = of.a(var2Lifetime75, 1);
           }
-          var2Lifetime76 = hb.a("instructions8,0", (byte) -100);
+          var2Lifetime76 = ContentTransitionDialog.a("instructions8,0", (byte) -100);
           if (var2Lifetime76 != null) {
             vd.field_d[0] = of.a(var2Lifetime76, 1);
           }
-          var2Lifetime77 = hb.a("instructions8,1", (byte) 123);
+          var2Lifetime77 = ContentTransitionDialog.a("instructions8,1", (byte) 123);
           if (null != var2Lifetime77) {
             vd.field_d[1] = of.a(var2Lifetime77, 1);
           }
-          var2Lifetime78 = hb.a("instructions8,2", (byte) 115);
+          var2Lifetime78 = ContentTransitionDialog.a("instructions8,2", (byte) 115);
           if (var2Lifetime78 != null) {
             vd.field_d[2] = of.a(var2Lifetime78, 1);
           }
-          var2Lifetime79 = hb.a("instructions_title,0", (byte) 116);
+          var2Lifetime79 = ContentTransitionDialog.a("instructions_title,0", (byte) 116);
           if (null != var2Lifetime79) {
             pk.field_d[0] = of.a(var2Lifetime79, 1);
           }
-          var2Lifetime80 = hb.a("instructions_title,1", (byte) 123);
+          var2Lifetime80 = ContentTransitionDialog.a("instructions_title,1", (byte) 123);
           if (null != var2Lifetime80) {
             pk.field_d[1] = of.a(var2Lifetime80, 1);
           }
-          var2Lifetime81 = hb.a("instructions_title,2", (byte) 112);
+          var2Lifetime81 = ContentTransitionDialog.a("instructions_title,2", (byte) 112);
           if (var2Lifetime81 != null) {
             pk.field_d[2] = of.a(var2Lifetime81, 1);
           }
-          var2Lifetime82 = hb.a("instructions_title,3", (byte) -85);
+          var2Lifetime82 = ContentTransitionDialog.a("instructions_title,3", (byte) -85);
           if (var2Lifetime82 != null) {
             pk.field_d[3] = of.a(var2Lifetime82, 1);
           }
-          var2Lifetime83 = hb.a("instructions_title,4", (byte) 105);
+          var2Lifetime83 = ContentTransitionDialog.a("instructions_title,4", (byte) 105);
           if (var2Lifetime83 != null) {
             pk.field_d[4] = of.a(var2Lifetime83, 1);
           }
-          var2Lifetime84 = hb.a("instructions_title,5", (byte) 108);
+          var2Lifetime84 = ContentTransitionDialog.a("instructions_title,5", (byte) 108);
           if (var2Lifetime84 != null) {
             pk.field_d[5] = of.a(var2Lifetime84, 1);
           }
-          var2Lifetime85 = hb.a("instructions_title,6", (byte) 112);
+          var2Lifetime85 = ContentTransitionDialog.a("instructions_title,6", (byte) 112);
           if (var2Lifetime85 != null) {
             pk.field_d[6] = of.a(var2Lifetime85, 1);
           }
-          var2Lifetime86 = hb.a("instructions_title,7", (byte) -94);
+          var2Lifetime86 = ContentTransitionDialog.a("instructions_title,7", (byte) -94);
           if (var2Lifetime86 != null) {
             pk.field_d[7] = of.a(var2Lifetime86, 1);
           }
-          var2Lifetime87 = hb.a("you", (byte) 127);
+          var2Lifetime87 = ContentTransitionDialog.a("you", (byte) 127);
           if (var2Lifetime87 != null) {
-            ng.field_t = of.a(var2Lifetime87, 1);
+            UiComponent.field_t = of.a(var2Lifetime87, 1);
           }
-          var2Lifetime88 = hb.a("end_of_free_game", (byte) 116);
+          var2Lifetime88 = ContentTransitionDialog.a("end_of_free_game", (byte) 116);
           if (null != var2Lifetime88) {
-            gf.field_c = of.a(var2Lifetime88, 1);
+            ByteStorage.field_c = of.a(var2Lifetime88, 1);
           }
-          var2Lifetime89 = hb.a("achievement_hidden", (byte) 108);
+          var2Lifetime89 = ContentTransitionDialog.a("achievement_hidden", (byte) 108);
           if (var2Lifetime89 != null) {
             dq.field_a = of.a(var2Lifetime89, 1);
           }
-          var2Lifetime90 = hb.a("skin_fireworks", (byte) -42);
+          var2Lifetime90 = ContentTransitionDialog.a("skin_fireworks", (byte) -42);
           if (var2Lifetime90 != null) {
             bo.field_a = of.a(var2Lifetime90, 1);
           }
-          var2Lifetime91 = hb.a("skin_rushes", (byte) -42);
+          var2Lifetime91 = ContentTransitionDialog.a("skin_rushes", (byte) -42);
           if (var2Lifetime91 != null) {
-            bn.field_L = of.a(var2Lifetime91, 1);
+            DraggableWidget.field_L = of.a(var2Lifetime91, 1);
           }
-          var2Lifetime92 = hb.a("skin_clouds", (byte) 125);
+          var2Lifetime92 = ContentTransitionDialog.a("skin_clouds", (byte) 125);
           if (null != var2Lifetime92) {
             ce.field_e = of.a(var2Lifetime92, 1);
           }
-          var2Lifetime93 = hb.a("skin_emergent", (byte) 109);
+          var2Lifetime93 = ContentTransitionDialog.a("skin_emergent", (byte) 109);
           if (var2Lifetime93 != null) {
-            oe.field_Vb = of.a(var2Lifetime93, 1);
+            ReportAbuseDialog.field_Vb = of.a(var2Lifetime93, 1);
           }
-          var2Lifetime94 = hb.a("skin_retro", (byte) 119);
+          var2Lifetime94 = ContentTransitionDialog.a("skin_retro", (byte) 119);
           if (null != var2Lifetime94) {
             qf.field_d = of.a(var2Lifetime94, 1);
           }
-          var2Lifetime95 = hb.a("skin_rubiks", (byte) -105);
+          var2Lifetime95 = ContentTransitionDialog.a("skin_rubiks", (byte) -105);
           if (var2Lifetime95 != null) {
             ro.field_f = of.a(var2Lifetime95, 1);
           }
-          var2Lifetime96 = hb.a("skin_twotone", (byte) -18);
+          var2Lifetime96 = ContentTransitionDialog.a("skin_twotone", (byte) -18);
           if (null != var2Lifetime96) {
-            vh.field_b = of.a(var2Lifetime96, 1);
+            GzipDecoder.field_b = of.a(var2Lifetime96, 1);
           }
-          var2Lifetime97 = hb.a("skin_bouncedown", (byte) -110);
+          var2Lifetime97 = ContentTransitionDialog.a("skin_bouncedown", (byte) -110);
           if (var2Lifetime97 != null) {
             wa.field_e = of.a(var2Lifetime97, 1);
           }
-          var2Lifetime98 = hb.a("skin_empty", (byte) -89);
+          var2Lifetime98 = ContentTransitionDialog.a("skin_empty", (byte) -89);
           if (null != var2Lifetime98) {
             bl.field_f = of.a(var2Lifetime98, 1);
           }
-          var2Lifetime99 = hb.a("levelcolonspace", (byte) -11);
+          var2Lifetime99 = ContentTransitionDialog.a("levelcolonspace", (byte) -11);
           if (var2Lifetime99 != null) {
-            po.field_j = of.a(var2Lifetime99, 1);
+            SoundCache.field_j = of.a(var2Lifetime99, 1);
           }
-          var2Lifetime100 = hb.a("scorecolonspace", (byte) -91);
+          var2Lifetime100 = ContentTransitionDialog.a("scorecolonspace", (byte) -91);
           if (var2Lifetime100 != null) {
             fg.field_e = of.a(var2Lifetime100, 1);
           }
-          var2Lifetime101 = hb.a("bestcolonspace", (byte) -18);
+          var2Lifetime101 = ContentTransitionDialog.a("bestcolonspace", (byte) -18);
           if (null != var2Lifetime101) {
-            bb.field_e = of.a(var2Lifetime101, 1);
+            IntrusiveDeque.field_e = of.a(var2Lifetime101, 1);
           }
-          var2Lifetime102 = hb.a("name_wins", (byte) 103);
+          var2Lifetime102 = ContentTransitionDialog.a("name_wins", (byte) 103);
           if (var2Lifetime102 != null) {
-            qm.field_G = of.a(var2Lifetime102, 1);
+            TextButton.field_G = of.a(var2Lifetime102, 1);
           }
-          var2Lifetime103 = hb.a("its_a_draw", (byte) 104);
+          var2Lifetime103 = ContentTransitionDialog.a("its_a_draw", (byte) 104);
           if (null != var2Lifetime103) {
             td.field_c = of.a(var2Lifetime103, 1);
           }
-          var2Lifetime104 = hb.a("lobby", (byte) 110);
+          var2Lifetime104 = ContentTransitionDialog.a("lobby", (byte) 110);
           if (null != var2Lifetime104) {
-            ko.field_jb = of.a(var2Lifetime104, 1);
+            LoadingProgressDialog.field_jb = of.a(var2Lifetime104, 1);
           }
-          var2Lifetime105 = hb.a("puzzle", (byte) 127);
+          var2Lifetime105 = ContentTransitionDialog.a("puzzle", (byte) 127);
           if (null != var2Lifetime105) {
             ki.field_m = of.a(var2Lifetime105, 1);
           }
-          var2Lifetime106 = hb.a("slash", (byte) 107);
+          var2Lifetime106 = ContentTransitionDialog.a("slash", (byte) 107);
           if (null != var2Lifetime106) {
-            nn.field_b = of.a(var2Lifetime106, 1);
+            MatchHud.field_b = of.a(var2Lifetime106, 1);
           }
-          var2Lifetime107 = hb.a("comma_seperated_values", (byte) 119);
+          var2Lifetime107 = ContentTransitionDialog.a("comma_seperated_values", (byte) 119);
           if (null != var2Lifetime107) {
             wl.field_f = of.a(var2Lifetime107, 1);
           }
-          var2Lifetime108 = hb.a("name_resigned", (byte) -104);
+          var2Lifetime108 = ContentTransitionDialog.a("name_resigned", (byte) -104);
           if (null != var2Lifetime108) {
             e.field_e = of.a(var2Lifetime108, 1);
           }
-          var2Lifetime109 = hb.a("name_disconnected", (byte) 106);
+          var2Lifetime109 = ContentTransitionDialog.a("name_disconnected", (byte) 106);
           if (null != var2Lifetime109) {
-            jg.field_M = of.a(var2Lifetime109, 1);
+            ArrayWidgetContainer.field_M = of.a(var2Lifetime109, 1);
           }
-          var2Lifetime110 = hb.a("gameoptlabels,0", (byte) 111);
+          var2Lifetime110 = ContentTransitionDialog.a("gameoptlabels,0", (byte) 111);
           if (var2Lifetime110 != null) {
             hp.field_Hb[0] = of.a(var2Lifetime110, 1);
           }
-          var2Lifetime111 = hb.a("gameoptlabels,1", (byte) -85);
+          var2Lifetime111 = ContentTransitionDialog.a("gameoptlabels,1", (byte) -85);
           if (var2Lifetime111 != null) {
             hp.field_Hb[1] = of.a(var2Lifetime111, 1);
           }
-          var2Lifetime112 = hb.a("gameoptnames,0,0", (byte) 108);
+          var2Lifetime112 = ContentTransitionDialog.a("gameoptnames,0,0", (byte) 108);
           if (null != var2Lifetime112) {
             lp.field_c[0][0] = of.a(var2Lifetime112, 1);
           }
-          var2Lifetime113 = hb.a("gameoptnames,0,1", (byte) -10);
+          var2Lifetime113 = ContentTransitionDialog.a("gameoptnames,0,1", (byte) -10);
           if (null != var2Lifetime113) {
             lp.field_c[0][1] = of.a(var2Lifetime113, 1);
           }
-          var2Lifetime114 = hb.a("gameoptnames,0,2", (byte) 118);
+          var2Lifetime114 = ContentTransitionDialog.a("gameoptnames,0,2", (byte) 118);
           if (null != var2Lifetime114) {
             lp.field_c[0][2] = of.a(var2Lifetime114, 1);
           }
-          var2Lifetime115 = hb.a("gameoptnames,1,0", (byte) -18);
+          var2Lifetime115 = ContentTransitionDialog.a("gameoptnames,1,0", (byte) -18);
           if (null != var2Lifetime115) {
             lp.field_c[1][0] = of.a(var2Lifetime115, 1);
           }
-          var2Lifetime116 = hb.a("gameoptnames,1,1", (byte) -30);
+          var2Lifetime116 = ContentTransitionDialog.a("gameoptnames,1,1", (byte) -30);
           if (null != var2Lifetime116) {
             lp.field_c[1][1] = of.a(var2Lifetime116, 1);
           }
-          var2Lifetime117 = hb.a("gameoptnames,1,2", (byte) 109);
+          var2Lifetime117 = ContentTransitionDialog.a("gameoptnames,1,2", (byte) 109);
           if (var2Lifetime117 != null) {
             lp.field_c[1][2] = of.a(var2Lifetime117, 1);
           }
-          var2Lifetime118 = hb.a("gameopttooltips,0,0", (byte) -114);
+          var2Lifetime118 = ContentTransitionDialog.a("gameopttooltips,0,0", (byte) -114);
           if (null != var2Lifetime118) {
             ap.field_d[0][0] = of.a(var2Lifetime118, 1);
           }
-          var2Lifetime119 = hb.a("gameopttooltips,0,1", (byte) -48);
+          var2Lifetime119 = ContentTransitionDialog.a("gameopttooltips,0,1", (byte) -48);
           if (var2Lifetime119 != null) {
             ap.field_d[0][1] = of.a(var2Lifetime119, 1);
           }
-          var2Lifetime120 = hb.a("gameopttooltips,0,2", (byte) -93);
+          var2Lifetime120 = ContentTransitionDialog.a("gameopttooltips,0,2", (byte) -93);
           if (null != var2Lifetime120) {
             ap.field_d[0][2] = of.a(var2Lifetime120, 1);
           }
-          var2Lifetime121 = hb.a("gameopttooltips,1,0", (byte) -6);
+          var2Lifetime121 = ContentTransitionDialog.a("gameopttooltips,1,0", (byte) -6);
           if (null != var2Lifetime121) {
             ap.field_d[1][0] = of.a(var2Lifetime121, 1);
           }
-          var2Lifetime122 = hb.a("gameopttooltips,1,1", (byte) -122);
+          var2Lifetime122 = ContentTransitionDialog.a("gameopttooltips,1,1", (byte) -122);
           if (null != var2Lifetime122) {
             ap.field_d[1][1] = of.a(var2Lifetime122, 1);
           }
-          var2Lifetime123 = hb.a("gameopttooltips,1,2", (byte) -41);
+          var2Lifetime123 = ContentTransitionDialog.a("gameopttooltips,1,2", (byte) -41);
           if (null != var2Lifetime123) {
             ap.field_d[1][2] = of.a(var2Lifetime123, 1);
           }
-          var2Lifetime124 = hb.a("high_detail", (byte) -93);
+          var2Lifetime124 = ContentTransitionDialog.a("high_detail", (byte) -93);
           if (var2Lifetime124 != null) {
             IterableNodeHashTable.field_d = of.a(var2Lifetime124, 1);
           }
-          var2Lifetime125 = hb.a("low_detail", (byte) 119);
+          var2Lifetime125 = ContentTransitionDialog.a("low_detail", (byte) 119);
           if (var2Lifetime125 != null) {
             ef.field_c = of.a(var2Lifetime125, 1);
           }
-          var2Lifetime126 = hb.a("puzzlecomplete", (byte) 103);
+          var2Lifetime126 = ContentTransitionDialog.a("puzzlecomplete", (byte) 103);
           if (null != var2Lifetime126) {
             MouseInputHandler.field_a = of.a(var2Lifetime126, 1);
           }
-          var2Lifetime127 = hb.a("puzzlefailed", (byte) -63);
+          var2Lifetime127 = ContentTransitionDialog.a("puzzlefailed", (byte) -63);
           if (var2Lifetime127 != null) {
             qj.field_c = of.a(var2Lifetime127, 1);
           }
-          var2Lifetime128 = hb.a("puzzles", (byte) 110);
+          var2Lifetime128 = ContentTransitionDialog.a("puzzles", (byte) 110);
           if (null != var2Lifetime128) {
             GameApplet.field_f = of.a(var2Lifetime128, 1);
           }
-          var2Lifetime129 = hb.a("a_of_b", (byte) -22);
+          var2Lifetime129 = ContentTransitionDialog.a("a_of_b", (byte) -22);
           if (null != var2Lifetime129) {
-            lj.field_b = of.a(var2Lifetime129, 1);
+            BoundedRandomAccessFile.field_b = of.a(var2Lifetime129, 1);
           }
-          var2Lifetime130 = hb.a("totaltime", (byte) -18);
+          var2Lifetime130 = ContentTransitionDialog.a("totaltime", (byte) -18);
           if (null != var2Lifetime130) {
-            tg.field_b = of.a(var2Lifetime130, 1);
+            UiTheme.field_b = of.a(var2Lifetime130, 1);
           }
-          var2Lifetime131 = hb.a("tilesdropped", (byte) 109);
+          var2Lifetime131 = ContentTransitionDialog.a("tilesdropped", (byte) 109);
           if (null != var2Lifetime131) {
             ep.field_d = of.a(var2Lifetime131, 1);
           }
-          var2Lifetime132 = hb.a("perfectlandings", (byte) 117);
+          var2Lifetime132 = ContentTransitionDialog.a("perfectlandings", (byte) 117);
           if (var2Lifetime132 != null) {
-            vi.field_E = of.a(var2Lifetime132, 1);
+            MusicCrossfadeStream.field_E = of.a(var2Lifetime132, 1);
           }
-          var2Lifetime133 = hb.a("picturescompleted", (byte) 116);
+          var2Lifetime133 = ContentTransitionDialog.a("picturescompleted", (byte) 116);
           if (var2Lifetime133 != null) {
             lo.field_Lb = of.a(var2Lifetime133, 1);
           }
-          var2Lifetime134 = hb.a("finalscore", (byte) 124);
+          var2Lifetime134 = ContentTransitionDialog.a("finalscore", (byte) 124);
           if (var2Lifetime134 != null) {
             he.field_c = of.a(var2Lifetime134, 1);
           }
-          var2Lifetime135 = hb.a("next_puzzle", (byte) 114);
+          var2Lifetime135 = ContentTransitionDialog.a("next_puzzle", (byte) 114);
           if (null != var2Lifetime135) {
-            kn.field_P = of.a(var2Lifetime135, 1);
+            ModalStack.field_P = of.a(var2Lifetime135, 1);
           }
-          var2Lifetime136 = hb.a("try_again", (byte) 118);
+          var2Lifetime136 = ContentTransitionDialog.a("try_again", (byte) 118);
           if (null != var2Lifetime136) {
             vm.field_f = of.a(var2Lifetime136, 1);
           }
-          var2Lifetime137 = hb.a("rank", (byte) -54);
+          var2Lifetime137 = ContentTransitionDialog.a("rank", (byte) -54);
           if (null != var2Lifetime137) {
             kh.field_b = of.a(var2Lifetime137, 1);
           }
-          var2Lifetime138 = hb.a("name", (byte) 110);
+          var2Lifetime138 = ContentTransitionDialog.a("name", (byte) 110);
           if (null != var2Lifetime138) {
             ij.field_q = of.a(var2Lifetime138, 1);
           }
-          var2Lifetime139 = hb.a("score", (byte) -12);
+          var2Lifetime139 = ContentTransitionDialog.a("score", (byte) -12);
           if (null != var2Lifetime139) {
             lo.field_Kb = of.a(var2Lifetime139, 1);
           }
-          var2Lifetime140 = hb.a("challengemode", (byte) 111);
+          var2Lifetime140 = ContentTransitionDialog.a("challengemode", (byte) 111);
           if (var2Lifetime140 != null) {
             jm.field_s = of.a(var2Lifetime140, 1);
           }
-          var2Lifetime141 = hb.a("puzzlemode", (byte) 111);
+          var2Lifetime141 = ContentTransitionDialog.a("puzzlemode", (byte) 111);
           if (null != var2Lifetime141) {
             ge.field_a = of.a(var2Lifetime141, 1);
           }
-          var2Lifetime142 = hb.a("singleplayer", (byte) 117);
+          var2Lifetime142 = ContentTransitionDialog.a("singleplayer", (byte) 117);
           if (var2Lifetime142 != null) {
-            h.field_O = of.a(var2Lifetime142, 1);
+            Checkbox.field_O = of.a(var2Lifetime142, 1);
           }
-          var2Lifetime143 = hb.a("keycode_w", (byte) -6);
+          var2Lifetime143 = ContentTransitionDialog.a("keycode_w", (byte) -6);
           if (null != var2Lifetime143) {
             el.field_a = 255 & var2Lifetime143[0];
           }
-          var2Lifetime144 = hb.a("keycode_a", (byte) -53);
+          var2Lifetime144 = ContentTransitionDialog.a("keycode_a", (byte) -53);
           if (null != var2Lifetime144) {
-            cg.field_F = 255 & var2Lifetime144[0];
+            DiskCacheRequest.field_F = 255 & var2Lifetime144[0];
           }
-          var2Lifetime145 = hb.a("keycode_s", (byte) -11);
+          var2Lifetime145 = ContentTransitionDialog.a("keycode_s", (byte) -11);
           if (null != var2Lifetime145) {
             ae.field_d = var2Lifetime145[0] & 255;
           }
-          var2Lifetime146 = hb.a("keycode_d", (byte) 126);
+          var2Lifetime146 = ContentTransitionDialog.a("keycode_d", (byte) 126);
           if (var2Lifetime146 != null) {
-            hg.field_g = var2Lifetime146[0] & 255;
+            MarkerSliderPainter.field_g = var2Lifetime146[0] & 255;
           }
-          var2Lifetime147 = hb.a("keycode_x", (byte) 127);
+          var2Lifetime147 = ContentTransitionDialog.a("keycode_x", (byte) 127);
           if (var2Lifetime147 != null) {
             ap.field_e = 255 & var2Lifetime147[0];
           }
@@ -1678,7 +1678,7 @@ final class be extends ch implements hi, vo {
         }
     }
 
-    final boolean a(int param0, int param1, ng param2, char param3) {
+    final boolean onFocusedKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -1687,11 +1687,11 @@ final class be extends ch implements hi, vo {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.onFocusedKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
-            stackIn_7_0 = this.a(param1 ^ 3, param2);
+            stackIn_7_0 = this.focusNextChild(param1 ^ 3, param2);
             return stackIn_7_0;
           }
           if (param0 != 99) {
@@ -1718,7 +1718,7 @@ final class be extends ch implements hi, vo {
         RuntimeException var1 = null;
         try {
           if (param0 < 112) {
-            be.a(true, (eq) null, 0, 10);
+            be.a(true, (LobbyGame) null, 0, 10);
           }
           field_P = null;
           field_R = null;
@@ -1731,13 +1731,13 @@ final class be extends ch implements hi, vo {
     }
 
     be(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (eb) null);
-        qp dupTemp$0 = null;
-        qp dupTemp$1 = null;
-        qm stackIn_14_1 = null;
-        qm stackIn_14_2 = null;
-        qm stackIn_15_1 = null;
-        qm stackIn_15_2 = null;
+        super(0, 0, 310, 190, (WidgetPainter) null);
+        LabeledField dupTemp$0 = null;
+        LabeledField dupTemp$1 = null;
+        TextButton stackIn_14_1 = null;
+        TextButton stackIn_14_2 = null;
+        TextButton stackIn_15_1 = null;
+        TextButton stackIn_15_2 = null;
         String stackIn_15_3 = null;
         RuntimeException stackIn_90_0 = null;
         StringBuilder stackIn_90_1 = null;
@@ -1745,14 +1745,14 @@ final class be extends ch implements hi, vo {
         StringBuilder stackIn_94_1 = null;
         String stackIn_95_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ad var6 = null;
+        ThreeSliceButtonPainter var6 = null;
         RuntimeException var6_ref = null;
-        jl var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         io var9 = null;
-        qp var10 = null;
+        LabeledField var10 = null;
         int var11 = 0;
-        qp var10Lifetime1;
+        LabeledField var10Lifetime1;
         var11 = Pixelate.field_H ? 1 : 0;
         try {
           this.field_I = param2;
@@ -1763,10 +1763,10 @@ final class be extends ch implements hi, vo {
             this.field_K)) {
             throw new IllegalStateException();
           }
-          this.field_J = (c) ((Object) new gk(param0, (fn) (this), 100));
-          this.field_O = (c) ((Object) new gk("", (fn) (this), 20));
+          this.field_J = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
+          this.field_O = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (!this.field_I) {
-            this.field_L = new qm(ca.field_m, (fn) null);
+            this.field_L = new TextButton(WhirlpoolHasher.field_m, (UiListener) null);
             stackIn_14_1 = null;
             stackIn_14_2 = null;
             if (this.field_K) {
@@ -1778,29 +1778,29 @@ final class be extends ch implements hi, vo {
               stackIn_15_2 = null;
               stackIn_15_3 = bo.field_f;
             }
-            this.field_N = new qm(stackIn_15_3, (fn) null);
+            this.field_N = new TextButton(stackIn_15_3, (UiListener) null);
             if (this.field_M) {
-              this.field_Q = new qm(sd.field_M, (fn) (this));
+              this.field_Q = new TextButton(sd.field_M, (UiListener) (this));
               if (var11 != 0) {
-                this.field_L = new qm(bo.field_k, (fn) null);
-                this.field_N = new qm(FullscreenFocusCanvas.field_e, (fn) null);
+                this.field_L = new TextButton(bo.field_k, (UiListener) null);
+                this.field_N = new TextButton(FullscreenFocusCanvas.field_e, (UiListener) null);
                 this.field_J.field_H = false;
               }
             }
           } else {
-            this.field_L = new qm(bo.field_k, (fn) null);
-            this.field_N = new qm(FullscreenFocusCanvas.field_e, (fn) null);
+            this.field_L = new TextButton(bo.field_k, (UiListener) null);
+            this.field_N = new TextButton(FullscreenFocusCanvas.field_e, (UiListener) null);
             this.field_J.field_H = false;
           }
-          this.field_J.field_y = (eb) ((Object) new gh(10000536));
-          this.field_O.field_y = (eb) ((Object) new ip(10000536));
-          var6 = new ad();
-          this.field_L.field_y = (eb) ((Object) var6);
+          this.field_J.field_y = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
+          this.field_O.field_y = (WidgetPainter) ((Object) new PasswordFieldPainter(10000536));
+          var6 = new ThreeSliceButtonPainter();
+          this.field_L.field_y = (WidgetPainter) ((Object) var6);
           if (this.field_N != null) {
-            this.field_N.field_y = (eb) ((Object) var6);
+            this.field_N.field_y = (WidgetPainter) ((Object) var6);
           }
           if (null != this.field_Q) {
-            this.field_Q.field_y = (eb) ((Object) var6);
+            this.field_Q.field_y = (WidgetPainter) ((Object) var6);
           }
           this.field_J.field_l = rm.field_c;
           if (null != this.field_Q) {
@@ -1809,13 +1809,13 @@ final class be extends ch implements hi, vo {
           if (!this.field_I) {
             if (this.field_K) {
               this.field_N.field_l = up.field_q;
-              this.field_N.field_y = (eb) ((Object) new ia());
+              this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
               if (var11 != 0) {
-                this.field_N.field_y = (eb) ((Object) new ia());
+                this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
                 this.field_N.field_l = ed.field_a;
               }
             } else {
-              this.field_N.field_y = (eb) ((Object) new ia());
+              this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
               if (var11 != 0) {
                 this.field_N.field_l = ed.field_a;
               }
@@ -1826,35 +1826,35 @@ final class be extends ch implements hi, vo {
           this.field_p = 15;
           var7 = he.field_d;
           if (null != this.field_S) {
-            this.field_p = this.field_p + (var7.a(this.field_S, this.field_E - 40, var7.field_w) + 5);
+            this.field_p = this.field_p + (var7.paragraphHeight(this.field_S, this.field_E - 40, var7.maxAscent) + 5);
           }
           var8 = ui.field_d;
-          var9 = lg.a(ao.a(13867), -18992);
+          var9 = lg.a(AudioService.a(13867), -18992);
           if (ig.field_e == var9) {
             var8 = rb.field_r;
             if ((var11 != 0) &&
               (var9 == vm.field_a)) {
-              var8 = sn.field_k;
+              var8 = MusicPatch.field_k;
             }
           } else {
             if (var9 == vm.field_a) {
-              var8 = sn.field_k;
+              var8 = MusicPatch.field_k;
             }
           }
-          dupTemp$0 = new qp(10, this.field_p, this.field_E - 20, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledField(10, this.field_p, this.field_E - 20, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
           var10 = dupTemp$0;
           this.b(dupTemp$0, 80);
-          this.field_p = this.field_p + (((ng) ((Object) var10)).field_C + 5);
-          dupTemp$1 = new qp(10, this.field_p, -20 + this.field_E, 25, this.field_O, false, 80, 3, var7, 16777215, vk.field_qb);
+          this.field_p = this.field_p + (((UiComponent) ((Object) var10)).field_C + 5);
+          dupTemp$1 = new LabeledField(10, this.field_p, -20 + this.field_E, 25, this.field_O, false, 80, 3, var7, 16777215, AccountRequestDialog.field_qb);
           var10Lifetime1 = dupTemp$1;
           this.b(dupTemp$1, 80);
-          this.field_L.field_n = (fn) (this);
-          this.field_p = this.field_p + (5 + ((ng) ((Object) var10Lifetime1)).field_C);
+          this.field_L.field_n = (UiListener) (this);
+          this.field_p = this.field_p + (5 + ((UiComponent) ((Object) var10Lifetime1)).field_C);
           if (this.field_Q != null) {
-            this.field_Q.field_n = (fn) (this);
+            this.field_Q.field_n = (UiListener) (this);
           }
           if (null != this.field_N) {
-            this.field_N.field_n = (fn) (this);
+            this.field_N.field_n = (UiListener) (this);
           }
           boolean decompiledSharedTail1 = (null == this.field_Q);
           if (!decompiledSharedTail1) {
@@ -1912,7 +1912,7 @@ final class be extends ch implements hi, vo {
         }
     }
 
-    public final void a(int param0, c param1) {
+    public final void a(int param0, EditableTextWidget param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;

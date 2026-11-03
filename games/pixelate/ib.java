@@ -6,7 +6,7 @@ final class ib {
     static String[] field_c;
     static int field_e;
     static int field_a;
-    static mm field_h;
+    static AudioOutput field_h;
     static int[] field_i;
     static boolean field_b;
     int field_d;
@@ -59,7 +59,7 @@ final class ib {
     }
 
     final static void b(int param0) {
-        mh.a(pi.field_Rb, (byte) 95);
+        mh.a(ContextActionMenu.field_Rb, (byte) 95);
         if (param0 != 20558) {
           ib.a(-8);
         }

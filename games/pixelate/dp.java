@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends de {
+final class dp extends MenuScreen {
     static String field_p;
     static boolean[] field_o;
 
@@ -27,27 +27,27 @@ final class dp extends de {
           var4 = var5;
           var5 = var6_int;
         }
-        if (null == c.field_R) {
-          c.field_R = vk.a(480, 2, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
+        if (null == EditableTextWidget.field_R) {
+          EditableTextWidget.field_R = AccountRequestDialog.a(480, 2, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
         if (param1) {
           var6 = ClientException.field_f;
-          ClientException.field_f = c.field_R;
+          ClientException.field_f = EditableTextWidget.field_R;
           ClientException.field_f.a(19692);
           this.c(0);
           ClientException.field_f = var6;
           ClientException.field_f.a(19692);
-          fi.a(c.field_R.field_e, var4, var5);
+          fi.a(EditableTextWidget.field_R.field_e, var4, var5);
           return;
         }
         field_p = (String) null;
         var6Lifetime1 = ClientException.field_f;
-        ClientException.field_f = c.field_R;
+        ClientException.field_f = EditableTextWidget.field_R;
         ClientException.field_f.a(19692);
         this.c(0);
         ClientException.field_f = var6Lifetime1;
         ClientException.field_f.a(19692);
-        fi.a(c.field_R.field_e, var4, var5);
+        fi.a(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
     final void a(int param0) {
@@ -58,7 +58,7 @@ final class dp extends de {
         int var2Lifetime1;
         int var3Lifetime1;
         if (this.field_l == 1) {
-          gj.field_W[2].b(0, 45);
+          NumericDateInputWidget.field_W[2].b(0, 45);
         }
         if (param0 == 11) {
           var2 = 0;
@@ -147,14 +147,14 @@ final class dp extends de {
         try {
           var2_int = ProxyAuthenticationException.field_d;
           var3 = bg.field_k;
-          var4 = mg.field_h.field_Db.b(param0, 500);
-          var5 = mg.field_h.field_Db.a(param0, 500) + 6;
+          var4 = TextFieldValidator.field_h.font.wrappedLineCount(param0, 500);
+          var5 = TextFieldValidator.field_h.font.getWrappedWidth(param0, 500) + 6;
           var6 = 2 + var4 * fq.field_q;
           var7 = ui.a(12, var2_int, var5, (byte) -1);
           var8 = pj.a(var6, var3, 20, (byte) 112);
           SoftwareRasterizer.a(var7, var8, var5, var6, 0);
           SoftwareRasterizer.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
-          mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 - mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+          TextFieldValidator.field_h.font.drawParagraph(param0, 3 + var7, TickClock.field_d + (1 + (var8 - TextFieldValidator.field_h.font.maxAscent)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -169,10 +169,10 @@ final class dp extends de {
 
     final void c(int param0) {
         Object var2;
-        ii var2_ref;
-        ii var3;
-        ii var4;
-        ii var5;
+        MatchController var2_ref;
+        MatchController var3;
+        MatchController var4;
+        MatchController var5;
         var2 = null;
         if (this.field_l == 1) {
           var4 = ro.field_e;
@@ -203,14 +203,14 @@ final class dp extends de {
               if (var2 == null) {
                 super.c(0);
               } else {
-                ((ii) (var2)).a(false, param0 + param0);
+                ((MatchController) (var2)).a(false, param0 + param0);
                 if (this.field_l == 1) {
                   SoftwareRasterizer.a(0, 0, 640, 480);
                   rh.b((byte) 121);
                 }
               }
             } else {
-              var5 = qo.field_r;
+              var5 = MatchingTextValidator.field_r;
               if (var5 == null) {
                 super.c(0);
               } else {

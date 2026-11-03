@@ -4,7 +4,7 @@
 abstract class SpriteState extends DualLinkNode {
     int field_B;
     static Sprite field_t;
-    static kk field_C;
+    static BoardView field_C;
     static String field_H;
     static String field_z;
     static String field_w;
@@ -52,7 +52,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||
-            qp.a(true, param0, param2))) {
+            LabeledField.a(true, param0, param2))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }

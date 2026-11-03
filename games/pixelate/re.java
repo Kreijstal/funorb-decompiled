@@ -46,9 +46,9 @@ final class re {
         }
     }
 
-    final static void a(boolean param0, oh param1) {
+    final static void a(boolean param0, HuffmanCodec param1) {
         try {
-          kp.field_v = param1;
+          QuickChatPhraseDefinition.field_v = param1;
           if (!param0) {
             byte[] var3 = (byte[]) null;
             re.a(true, (byte[]) null);
@@ -143,7 +143,7 @@ final class re {
         e.field_b = null;
         wo.field_f = (byte[][]) null;
         ge.field_c = null;
-        gf.field_g = null;
+        ByteStorage.field_g = null;
         fl.field_g = null;
     }
 
@@ -207,21 +207,21 @@ final class re {
           var1 = mc.field_r;
           synchronized (var1) {
             qn.field_p = ln.field_p;
-            ia.field_i = ia.field_i + 1;
+            LinkButtonPainter.field_i = LinkButtonPainter.field_i + 1;
             if (0 > ol.field_q) {
               for (var2 = 0; var2 < 112; var2++) {
-                bc.field_m[var2] = false;
+                EmailValidator.field_m[var2] = false;
               }
               ol.field_q = wm.field_c;
             } else {
               while (ol.field_q != wm.field_c) {
-                var2 = qp.field_Q[wm.field_c];
+                var2 = LabeledField.field_Q[wm.field_c];
                 wm.field_c = 127 & 1 + wm.field_c;
                 if (var2 >= 0) {
-                  bc.field_m[var2] = true;
+                  EmailValidator.field_m[var2] = true;
                   continue;
                 }
-                bc.field_m[~var2] = false;
+                EmailValidator.field_m[~var2] = false;
               }
             }
             var2Lifetime1 = 37 % ((param0 + 53) / 47);
@@ -256,8 +256,8 @@ final class re {
             return false;
           }
           if (var4.field_f != null &&
-            !var4.field_d.a(var4.field_f, -1)) {
-            this.a((byte) -93, var2, var4.field_d.c(108, var4.field_f));
+            !var4.field_d.ensureGroupAvailableByName(var4.field_f, -1)) {
+            this.a((byte) -93, var2, var4.field_d.getGroupProgressByName(108, var4.field_f));
             return false;
           }
           if (var4.field_b < 0 &&

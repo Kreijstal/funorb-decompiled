@@ -5,20 +5,20 @@ final class vm {
     static String[] field_c;
     static String[] field_e;
     static String field_f;
-    static vg field_b;
+    static SecondaryNodeHashTable field_b;
     static io field_a;
     static boolean field_d;
     static String field_g;
 
-    final static eq a(int param0, byte param1) {
+    final static LobbyGame a(int param0, byte param1) {
         if (param1 <= -102) {
-          return null == dg.field_f ? null : (eq) (dg.field_f.a(-11434, (long)param0));
+          return null == dg.field_f ? null : (LobbyGame) (dg.field_f.a(-11434, (long)param0));
         }
         vm.b(-99, (byte) 98);
-        return null == dg.field_f ? null : (eq) (dg.field_f.a(-11434, (long)param0));
+        return null == dg.field_f ? null : (LobbyGame) (dg.field_f.a(-11434, (long)param0));
     }
 
-    final static fm a(boolean param0, byte param1, boolean param2, int param3, int param4) {
+    final static ResourceArchive a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         if (param1 == 22) {
           return el.a(-107, param0, false, param3, param4, param2);
         }
@@ -33,9 +33,9 @@ final class vm {
         io.field_e = 3 & param0 >> 4;
         if (io.field_e > 2) {
           io.field_e = 2;
-          gh.field_v = (14 & param0) >> 2;
-          if (!(gh.field_v <= 2)) {
-            gh.field_v = 2;
+          GradientOutlineTextPainter.field_v = (14 & param0) >> 2;
+          if (!(GradientOutlineTextPainter.field_v <= 2)) {
+            GradientOutlineTextPainter.field_v = 2;
           }
           ib.field_e = param0 & 3;
           if (ib.field_e > 2) {
@@ -44,9 +44,9 @@ final class vm {
           }
           return;
         }
-        gh.field_v = (14 & param0) >> 2;
-        if (!(gh.field_v <= 2)) {
-          gh.field_v = 2;
+        GradientOutlineTextPainter.field_v = (14 & param0) >> 2;
+        if (!(GradientOutlineTextPainter.field_v <= 2)) {
+          GradientOutlineTextPainter.field_v = 2;
         }
         ib.field_e = param0 & 3;
         if (ib.field_e <= 2) {

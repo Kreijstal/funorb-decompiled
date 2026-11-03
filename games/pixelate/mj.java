@@ -8,7 +8,7 @@ final class mj {
     static String field_i;
     private ma field_f;
     static int field_b;
-    static pf field_c;
+    static MenuInputState field_c;
     static int field_j;
     private int field_d;
     static int field_k;
@@ -36,7 +36,7 @@ final class mj {
             return;
           }
           this.field_a[0] = 0;
-          this.field_a[1] = 300 + ok.a(ea.field_b, bn.a(param0, -327), 300);
+          this.field_a[1] = 300 + ok.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
             mj.c(43);
@@ -67,9 +67,9 @@ final class mj {
 
     final static void a(int param0, sb param1, int param2, int param3, int param4, sb param5) {
         try {
-          uo.field_m = param1;
+          BufferedRandomAccessFile.field_m = param1;
           ProxyAuthenticationException.field_a = param2;
-          lf.field_b = param4;
+          WidgetStyleLayer.field_b = param4;
           wg.field_d = param5;
           if (param3 != 300) {
             sb var7 = (sb) null;
@@ -94,7 +94,7 @@ final class mj {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        pc var6 = null;
+        CipherPacketBuffer var6 = null;
         CharSequence var7 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -114,11 +114,11 @@ final class mj {
             return stackIn_3_0;
           }
           if (sm.a(param1, -1)) {
-            stackIn_6_0 = wd.field_h;
+            stackIn_6_0 = GrowableIntList.field_h;
             return stackIn_6_0;
           }
-          if (gk.field_db != 2) {
-            stackIn_9_0 = le.field_d;
+          if (ValidatedTextWidget.field_db != 2) {
+            stackIn_9_0 = WeightedLruCache.field_d;
             return stackIn_9_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param1)) {
@@ -126,11 +126,11 @@ final class mj {
             return stackIn_13_0;
           }
           if (aj.field_t >= 100) {
-            stackIn_17_0 = co.field_k;
+            stackIn_17_0 = ViewportController.field_k;
             return stackIn_17_0;
           }
           if (CanvasRasterBuffer.a(param1, (byte) 37)) {
-            stackIn_20_0 = sd.a(jp.field_b, 89, new String[]{param1});
+            stackIn_20_0 = sd.a(ArchiveProvider.field_b, 89, new String[]{param1});
             return stackIn_20_0;
           }
           var6 = aa.field_f;
@@ -166,7 +166,7 @@ final class mj {
     }
 
     final static void c(int param0) {
-        ph.field_l.c(new jh(), -115);
+        ph.field_l.transitionToContent(new AccountChoicePanel(), -115);
         if (param0 != 24496) {
           String var2 = (String) null;
           mj.a(-69, (String) null, 1);
@@ -193,7 +193,7 @@ final class mj {
         field_i = "Discard";
         field_h = "Create a free account to start using this feature";
         field_g = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
-        field_c = new pf(1);
+        field_c = new MenuInputState(1);
         field_e = "Music: ";
     }
 }

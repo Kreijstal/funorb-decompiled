@@ -27,7 +27,7 @@ final class ja {
         field_e = param3 - param1;
         ja.b();
         if (field_g.length < field_e) {
-          field_g = new int[ne.a(-1879863704, field_e)];
+          field_g = new int[DropTargetWidget.a(-1879863704, field_e)];
         }
         int var4 = param1 * SoftwareRasterizer.field_j + param0;
         for (var5 = 0; var5 < field_e; var5++) {

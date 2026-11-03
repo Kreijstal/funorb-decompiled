@@ -9,33 +9,33 @@ final class r {
     final static void b(int param0) {
         int var3 = -76 % ((param0 - 21) / 44);
         int var1 = qh.field_c * qh.field_c;
-        int var2 = -(oh.field_b * oh.field_b) + var1;
-        int var4 = var2 * (qo.field_o - wa.field_i) / var1 + wa.field_i;
+        int var2 = -(HuffmanCodec.field_b * HuffmanCodec.field_b) + var1;
+        int var4 = var2 * (MatchingTextValidator.field_o - wa.field_i) / var1 + wa.field_i;
         ui.field_i.a(var4, 120, ho.field_c, 256, 640);
-        jp.a(-24 + qo.field_o, (byte) 116, 640, hd.field_q, 5, 0, MouseWheelHandler.field_c);
+        ArchiveProvider.a(-24 + MatchingTextValidator.field_o, (byte) 116, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4;
-        jh.field_O.b(param1, param0);
+        AccountChoicePanel.field_O.b(param1, param0);
         if (param3 != -40) {
           return;
         }
         if (!param2) {
           return;
         }
-        var4 = qk.field_e % jh.field_O.field_F * 2;
-        if (jh.field_O.field_F <= var4) {
-          var4 = jh.field_O.field_F + (-var4 + jh.field_O.field_F);
+        var4 = qk.field_e % AccountChoicePanel.field_O.field_F * 2;
+        if (AccountChoicePanel.field_O.field_F <= var4) {
+          var4 = AccountChoicePanel.field_O.field_F + (-var4 + AccountChoicePanel.field_O.field_F);
         }
         if (10 > var4) {
           var4 = 10;
         } else {
-          if (-40 + jh.field_O.field_F < var4) {
-            var4 = jh.field_O.field_F - 40;
+          if (-40 + AccountChoicePanel.field_O.field_F < var4) {
+            var4 = AccountChoicePanel.field_O.field_F - 40;
           }
         }
-        ProxyAuthenticationException.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
+        ProxyAuthenticationException.a(0, 80, 30, AccountChoicePanel.field_O, param1, 0, var4, param0, (byte) -113);
     }
 
     public static void a(int param0) {
@@ -48,15 +48,15 @@ final class r {
     }
 
     final static void a(int param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param1, param0 ^ 15514);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(160, 2);
-        var2.a(qm.field_J.length, 0, -3493, qm.field_J);
+        var2.a(TextButton.field_J.length, 0, -3493, TextButton.field_J);
         var2.writeByte(160, ib.field_a);
-        var2.writeByte(160, mg.field_i);
-        var2.a(k.field_k.length, param0, -3493, k.field_k);
+        var2.writeByte(160, TextFieldValidator.field_i);
+        var2.a(NanoTickClock.field_k.length, param0, -3493, NanoTickClock.field_k);
         var2.f(var2.position - var3, -1);
     }
 

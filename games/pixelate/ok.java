@@ -36,7 +36,7 @@ final class ok {
           if (0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (oa.a(param2, 1890)) {
+          if (DateOfBirthValidator.a(param2, 1890)) {
             stackIn_6_0 = (int)((long)param2 * (4294967295L & (long)param0.nextInt()) >> 32);
             return stackIn_6_0;
           }
@@ -48,7 +48,7 @@ final class ok {
           do {
             var4 = param0.nextInt();
           } while (var4 >= var3_int);
-          stackIn_13_0 = eh.a(var4, param2, -510336929);
+          stackIn_13_0 = SocketConnector.a(var4, param2, -510336929);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

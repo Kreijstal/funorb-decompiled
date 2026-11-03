@@ -7,17 +7,17 @@ final class ra {
     static volatile int field_d;
     static java.util.zip.CRC32 field_h;
     static int field_a;
-    static ak field_e;
+    static SceneWidget field_e;
     static int field_g;
     static String field_f;
     static int field_c;
-    static ei field_b;
+    static PlatformTask field_b;
 
     public static void a(boolean param0) {
         field_b = null;
         field_e = null;
         if (param0) {
-          field_b = (ei) null;
+          field_b = (PlatformTask) null;
         }
         field_f = null;
         field_h = null;
@@ -93,28 +93,28 @@ final class ra {
         if (param0 >= -79) {
           return false;
         }
-        return qp.a(true, fp.field_e, fp.field_d);
+        return LabeledField.a(true, fp.field_e, fp.field_d);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         if (!un.field_l) {
           return;
         }
-        bn.field_I.a(param3 ^ 4400, param2);
+        DraggableWidget.field_I.a(param3 ^ 4400, param2);
         int var4 = bo.field_h.m(14685) ? 1 : 0;
         if (param3 != -32268) {
           field_f = (String) null;
         }
-        if (nm.field_c != 0 &&
+        if (IntrusiveDequeCursor.field_c != 0 &&
           var4 == 0) {
-          po.a(true);
+          SoundCache.a(true);
           param2 = false;
         }
         if (param2) {
           bo.field_h.b(param1, param3 ^ 32267, param0);
         }
         if (var4 != 0) {
-          bn.field_I.a(-28476, param2);
+          DraggableWidget.field_I.a(-28476, param2);
         }
         int var5 = bo.field_h.k(-16200) + bo.field_h.field_tb;
         if (var5 > 640) {

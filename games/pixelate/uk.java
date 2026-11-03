@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends de {
+final class uk extends MenuScreen {
     private int field_t;
     static PacketBuffer field_v;
     private ga field_o;
-    static fm field_u;
+    static ResourceArchive field_u;
     static bd field_s;
     private ga field_p;
     static String[] field_r;
     static String[] field_q;
 
-    final static void a(int param0, fm param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2602_0;
             StringBuilder stackIn_2602_1;
@@ -22,9 +22,9 @@ final class uk extends de {
             int var3;
             int var4;
             int param0;
-            fm param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, fm initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2602_0 = null;
@@ -40,7 +40,7 @@ final class uk extends de {
                 fl.field_b = param1;
                 var2 = vd.a("loginm3", 0);
                 if (var2 != null) {
-                  vc.field_N = of.a(var2, 1);
+                  ValidationIndicator.field_N = of.a(var2, 1);
                 }
                 var2 = vd.a("loginm2", param0 ^ 31873);
                 if (var2 != null) {
@@ -60,15 +60,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("error_js5io", 0);
                 if (var2 != null) {
-                  od.field_Ib = of.a(var2, param0 ^ 31872);
+                  TabbedPanel.field_Ib = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("error_js5connect_full", 0);
                 if (var2 != null) {
-                  rn.field_g = of.a(var2, 1);
+                  SectorCacheStore.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("error_js5connect", 0);
                 if (null != var2) {
-                  ll.field_k = of.a(var2, 1);
+                  JaggrabDownloader.field_k = of.a(var2, 1);
                 }
                 var2 = vd.a("login_gameupdated", 0);
                 if (null != var2) {
@@ -80,7 +80,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_ineligible", 0);
                 if (var2 != null) {
-                  ao.field_b = of.a(var2, param0 - 31872);
+                  AudioService.field_b = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("usernameprompt", 0);
                 if (null != var2) {
@@ -120,15 +120,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_chat_on", 0);
                 if (null != var2) {
-                  kc.field_m = of.a(var2, 1);
+                  EmailConfirmationValidator.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_friends", 0);
                 if (var2 != null) {
-                  a.field_J = of.a(var2, 1);
+                  NameSuggestionsPanel.field_J = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_off", 0);
                 if (null != var2) {
-                  wd.field_e = of.a(var2, param0 ^ 31872);
+                  GrowableIntList.field_e = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("mu_chat_lobby", 0);
                 if (var2 != null) {
@@ -144,7 +144,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_chat_tips", 0);
                 if (null != var2) {
-                  ch.field_H = of.a(var2, 1);
+                  UiContainer.field_H = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_game", param0 ^ 31873);
                 if (null != var2) {
@@ -164,7 +164,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_entered_other_game", param0 ^ 31873);
                 if (var2 != null) {
-                  gg.field_v = of.a(var2, 1);
+                  CachedArchiveProvider.field_v = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_left_lobby", 0);
                 if (var2 != null) {
@@ -172,15 +172,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_lost_con", param0 ^ 31873);
                 if (var2 != null) {
-                  ll.field_p = of.a(var2, param0 - 31872);
+                  JaggrabDownloader.field_p = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_x_cannot_join_full", 0);
                 if (var2 != null) {
-                  kc.field_n = of.a(var2, 1);
+                  EmailConfirmationValidator.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_cannot_join_inprogress", 0);
                 if (var2 != null) {
-                  wi.field_e = of.a(var2, 1);
+                  ClientContextMenu.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_declined_invite", 0);
                 if (var2 != null) {
@@ -188,7 +188,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_withdrew_request", 0);
                 if (null != var2) {
-                  vg.field_e = of.a(var2, 1);
+                  SecondaryNodeHashTable.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_removed", param0 ^ 31873);
                 if (var2 != null) {
@@ -200,7 +200,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_entered_other_game", 0);
                 if (var2 != null) {
-                  ko.field_ib = of.a(var2, param0 - 31872);
+                  LoadingProgressDialog.field_ib = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_game_is_full", 0);
                 if (null != var2) {
@@ -220,15 +220,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_request_declined", 0);
                 if (null != var2) {
-                  c.field_O = of.a(var2, param0 ^ 31872);
+                  EditableTextWidget.field_O = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("mu_request_withdrawn", 0);
                 if (var2 != null) {
-                  ve.field_Gb = of.a(var2, 1);
+                  AccountNamePrompt.field_Gb = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_all_players_have_left", 0);
                 if (null != var2) {
-                  dd.field_m = of.a(var2, 1);
+                  Puzzle.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_lobby_name", 0);
                 if (null != var2) {
@@ -240,7 +240,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_lobby_friend_add", 0);
                 if (null != var2) {
-                  tp.field_u = of.a(var2, 1);
+                  SceneWidgetNode.field_u = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_lobby_friend_rm", 0);
                 if (null != var2) {
@@ -252,11 +252,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_lobby_name_rm", param0 - 31873);
                 if (null != var2) {
-                  k.field_n = of.a(var2, 1);
+                  NanoTickClock.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_lobby_location", 0);
                 if (var2 != null) {
-                  gp.field_Jb = of.a(var2, 1);
+                  ScrollContainer.field_Jb = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gamelist_all_games", 0);
                 if (var2 != null) {
@@ -268,7 +268,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_gamelist_owner", 0);
                 if (null != var2) {
-                  co.field_u = of.a(var2, 1);
+                  ViewportController.field_u = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gamelist_players", 0);
                 if (null != var2) {
@@ -276,11 +276,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_gamelist_avg_rating", param0 - 31873);
                 if (null != var2) {
-                  km.field_q = of.a(var2, 1);
+                  MusicPatchPcmStream.field_q = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gamelist_options", 0);
                 if (null != var2) {
-                  ii.field_b = of.a(var2, param0 - 31872);
+                  MatchController.field_b = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_gamelist_elapsed_time", 0);
                 if (null != var2) {
@@ -312,11 +312,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_options_allow_spectate", 0);
                 if (null != var2) {
-                  eq.field_Xb = of.a(var2, 1);
+                  LobbyGame.field_Xb = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_options_ratedgametype", 0);
                 if (null != var2) {
-                  ii.field_c = of.a(var2, 1);
+                  MatchController.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("yes", 0);
                 if (var2 != null) {
@@ -324,15 +324,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("no", 0);
                 if (var2 != null) {
-                  gk.field_eb = of.a(var2, param0 - 31872);
+                  ValidatedTextWidget.field_eb = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_invite_players", param0 - 31873);
                 if (null != var2) {
-                  ca.field_k = of.a(var2, 1);
+                  WhirlpoolHasher.field_k = of.a(var2, 1);
                 }
                 var2 = vd.a("close", 0);
                 if (null != var2) {
-                  ec.field_o = of.a(var2, 1);
+                  NameAvailabilityValidator.field_o = of.a(var2, 1);
                 }
                 var2 = vd.a("add_x_to_friends", 0);
                 if (var2 != null) {
@@ -372,15 +372,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("join_xs_game", param0 ^ 31873);
                 if (null != var2) {
-                  vg.field_f = of.a(var2, 1);
+                  SecondaryNodeHashTable.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("join_request_xs_game", 0);
                 if (var2 != null) {
-                  hd.field_o = of.a(var2, param0 ^ 31872);
+                  PlayerBoard.field_o = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("join_withdraw_request_xs_game", 0);
                 if (null != var2) {
-                  ve.field_Jb = of.a(var2, 1);
+                  AccountNamePrompt.field_Jb = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gameopt_kick_x_from_this_game", param0 ^ 31873);
                 if (var2 != null) {
@@ -388,15 +388,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_gameopt_withdraw_invite_to_x", 0);
                 if (var2 != null) {
-                  fm.field_j = of.a(var2, 1);
+                  ResourceArchive.field_j = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gameopt_accept_x_into_game", 0);
                 if (null != var2) {
-                  md.field_V = of.a(var2, 1);
+                  ValidationHelpWidget.field_V = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gameopt_reject_x_from_game", 0);
                 if (null != var2) {
-                  po.field_f = of.a(var2, 1);
+                  SoundCache.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gameopt_invite_x_to_game", 0);
                 if (null != var2) {
@@ -404,7 +404,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("report_x_for_abuse", 0);
                 if (null != var2) {
-                  sl.field_j = of.a(var2, param0 - 31872);
+                  IndexedSpriteState.field_j = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("unable_to_send_message_password_a", 0);
                 if (var2 != null) {
@@ -428,7 +428,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_chat_lobby_hide", 0);
                 if (null != var2) {
-                  uo.field_d = of.a(var2, 1);
+                  BufferedRandomAccessFile.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_game_show_all", 0);
                 if (null != var2) {
@@ -444,7 +444,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_chat_game_hide", 0);
                 if (null != var2) {
-                  ec.field_n = of.a(var2, 1);
+                  NameAvailabilityValidator.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_pm_show_all", 0);
                 if (null != var2) {
@@ -452,7 +452,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_chat_pm_friends_only", param0 - 31873);
                 if (null != var2) {
-                  gf.field_d = of.a(var2, 1);
+                  ByteStorage.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_pm_friends", 0);
                 if (null != var2) {
@@ -480,7 +480,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("unrated_game", param0 ^ 31873);
                 if (null != var2) {
-                  w.field_t = of.a(var2, 1);
+                  StatefulTextPainter.field_t = of.a(var2, 1);
                 }
                 var2 = vd.a("rated_game_tips", param0 - 31873);
                 if (var2 != null) {
@@ -492,23 +492,23 @@ final class uk extends de {
                 }
                 var2 = vd.a("searching_for_opponents_plural", param0 - 31873);
                 if (var2 != null) {
-                  ag.field_o = of.a(var2, 1);
+                  AgeValidator.field_o = of.a(var2, 1);
                 }
                 var2 = vd.a("find_opponent_singular", 0);
                 if (null != var2) {
-                  bc.field_n = of.a(var2, 1);
+                  EmailValidator.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("find_opponents_plural", param0 - 31873);
                 if (var2 != null) {
-                  qo.field_x = of.a(var2, 1);
+                  MatchingTextValidator.field_x = of.a(var2, 1);
                 }
                 var2 = vd.a("rated_game_tips_setup_singular", 0);
                 if (var2 != null) {
-                  vk.field_sb = of.a(var2, 1);
+                  AccountRequestDialog.field_sb = of.a(var2, 1);
                 }
                 var2 = vd.a("rated_game_tips_setup_plural", 0);
                 if (var2 != null) {
-                  oh.field_d = of.a(var2, 1);
+                  HuffmanCodec.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("waiting_to_start_hint", 0);
                 if (var2 != null) {
@@ -540,23 +540,23 @@ final class uk extends de {
                 }
                 var2 = vd.a("game_options_changed", 0);
                 if (null != var2) {
-                  ao.field_i = of.a(var2, param0 - 31872);
+                  AudioService.field_i = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("players_x_of_y", 0);
                 if (null != var2) {
-                  oe.field_Gb = of.a(var2, 1);
+                  ReportAbuseDialog.field_Gb = of.a(var2, 1);
                 }
                 var2 = vd.a("message_lobby", 0);
                 if (null != var2) {
-                  kc.field_s = of.a(var2, 1);
+                  EmailConfirmationValidator.field_s = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_lobby", param0 - 31873);
                 if (var2 != null) {
-                  nn.field_h = of.a(var2, 1);
+                  MatchHud.field_h = of.a(var2, 1);
                 }
                 var2 = vd.a("message_game", 0);
                 if (var2 != null) {
-                  ee.field_c = of.a(var2, 1);
+                  InputQueue.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("message_team", 0);
                 if (var2 != null) {
@@ -564,23 +564,23 @@ final class uk extends de {
                 }
                 var2 = vd.a("quickchat_game", 0);
                 if (null != var2) {
-                  od.field_Eb = of.a(var2, 1);
+                  TabbedPanel.field_Eb = of.a(var2, 1);
                 }
                 var2 = vd.a("kick", 0);
                 if (null != var2) {
-                  pf.field_m = of.a(var2, 1);
+                  MenuInputState.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("inviting_x", 0);
                 if (var2 != null) {
-                  gf.field_e = of.a(var2, 1);
+                  ByteStorage.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("x_wants_to_join", 0);
                 if (var2 != null) {
-                  ud.field_O = of.a(var2, 1);
+                  ModalPanel.field_O = of.a(var2, 1);
                 }
                 var2 = vd.a("accept", 0);
                 if (null != var2) {
-                  fh.field_M = of.a(var2, 1);
+                  DisplayNameForm.field_M = of.a(var2, 1);
                 }
                 var2 = vd.a("reject", 0);
                 if (var2 != null) {
@@ -596,15 +596,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("status_spectate", param0 - 31873);
                 if (null != var2) {
-                  wd.field_g = of.a(var2, 1);
+                  GrowableIntList.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("status_playing", param0 ^ 31873);
                 if (var2 != null) {
-                  f.field_j = of.a(var2, param0 - 31872);
+                  DialWidgetPainter.field_j = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("status_join", 0);
                 if (var2 != null) {
-                  h.field_S = of.a(var2, param0 - 31872);
+                  Checkbox.field_S = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("status_private", 0);
                 if (var2 != null) {
@@ -616,7 +616,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("players_in_game", 0);
                 if (null != var2) {
-                  od.field_Fb = of.a(var2, 1);
+                  TabbedPanel.field_Fb = of.a(var2, 1);
                 }
                 var2 = vd.a("you_are_invited_to_xs_game", 0);
                 if (null != var2) {
@@ -624,11 +624,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("asking_to_join_xs_game", 0);
                 if (var2 != null) {
-                  nl.field_h = of.a(var2, 1);
+                  NodeHashTable.field_h = of.a(var2, 1);
                 }
                 var2 = vd.a("who_can_join", 0);
                 if (var2 != null) {
-                  fh.field_R = of.a(var2, 1);
+                  DisplayNameForm.field_R = of.a(var2, 1);
                 }
                 var2 = vd.a("you_can_join", param0 - 31873);
                 if (var2 != null) {
@@ -648,15 +648,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("you_can_not_spectate", 0);
                 if (null != var2) {
-                  f.field_i = of.a(var2, param0 - 31872);
+                  DialWidgetPainter.field_i = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("spectate_xs_game", 0);
                 if (null != var2) {
-                  oe.field_Kb = of.a(var2, param0 - 31872);
+                  ReportAbuseDialog.field_Kb = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("hide_players_in_xs_game", param0 - 31873);
                 if (var2 != null) {
-                  kb.field_M = of.a(var2, 1);
+                  DateInputWidget.field_M = of.a(var2, 1);
                 }
                 var2 = vd.a("show_players_in_xs_game", 0);
                 if (var2 != null) {
@@ -676,11 +676,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("multiconst_invite_only", 0);
                 if (var2 != null) {
-                  pc.field_t = of.a(var2, 1);
+                  CipherPacketBuffer.field_t = of.a(var2, 1);
                 }
                 var2 = vd.a("multiconst_clan", 0);
                 if (null != var2) {
-                  nm.field_b = of.a(var2, 1);
+                  IntrusiveDequeCursor.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("multiconst_friends", 0);
                 if (null != var2) {
@@ -716,7 +716,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("dob_enterforchat", 0);
                 if (null != var2) {
-                  ng.field_v = of.a(var2, 1);
+                  UiComponent.field_v = of.a(var2, 1);
                 }
                 var2 = vd.a("tab_hidechattemporarily", param0 - 31873);
                 if (var2 != null) {
@@ -740,11 +740,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("privatechat_blankarea_explanation", param0 - 31873);
                 if (null != var2) {
-                  nn.field_m = of.a(var2, 1);
+                  MatchHud.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("publicchat_unavailable_ratedgame", 0);
                 if (null != var2) {
-                  jh.field_P = of.a(var2, 1);
+                  AccountChoicePanel.field_P = of.a(var2, 1);
                 }
                 var2 = vd.a("privatechat_friend_offline", param0 - 31873);
                 if (null != var2) {
@@ -756,11 +756,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("chatviewscrolledup", 0);
                 if (null != var2) {
-                  a.field_M = of.a(var2, 1);
+                  NameSuggestionsPanel.field_M = of.a(var2, 1);
                 }
                 var2 = vd.a("thisisrunescapeclan", param0 ^ 31873);
                 if (var2 != null) {
-                  wi.field_g = of.a(var2, param0 - 31872);
+                  ClientContextMenu.field_g = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("thisisrunescapeclan_notowner", param0 - 31873);
                 if (var2 != null) {
@@ -776,11 +776,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_membersonly", 0);
                 if (var2 != null) {
-                  nl.field_b = of.a(var2, 1);
+                  NodeHashTable.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_1moreratedgame", 0);
                 if (null != var2) {
-                  hd.field_l = of.a(var2, 1);
+                  PlayerBoard.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_moreratedgames", 0);
                 if (var2 != null) {
@@ -788,11 +788,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_needrating", 0);
                 if (var2 != null) {
-                  eh.field_d = of.a(var2, 1);
+                  SocketConnector.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_unratedonly", param0 - 31873);
                 if (null != var2) {
-                  gf.field_f = of.a(var2, param0 ^ 31872);
+                  ByteStorage.field_f = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("gameopt_notunlocked", 0);
                 if (var2 != null) {
@@ -804,7 +804,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_cannotbecombined2", 0);
                 if (null != var2) {
-                  uj.field_Kb = of.a(var2, 1);
+                  LobbyPlayer.field_Kb = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_playernotmember", 0);
                 if (null != var2) {
@@ -812,11 +812,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_younotmember", 0);
                 if (null != var2) {
-                  ll.field_g = of.a(var2, 1);
+                  JaggrabDownloader.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_playerneedsrating", 0);
                 if (null != var2) {
-                  jj.field_e = of.a(var2, 1);
+                  BackgroundScene.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_youneedrating", param0 ^ 31873);
                 if (var2 != null) {
@@ -824,11 +824,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_playerneedsratedgames", param0 - 31873);
                 if (null != var2) {
-                  tg.field_l = of.a(var2, 1);
+                  UiTheme.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_youneedratedgames", 0);
                 if (null != var2) {
-                  ll.field_f = of.a(var2, 1);
+                  JaggrabDownloader.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_playerneeds1ratedgame", param0 ^ 31873);
                 if (null != var2) {
@@ -836,23 +836,23 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_youneed1ratedgame", param0 ^ 31873);
                 if (null != var2) {
-                  oe.field_Mb = of.a(var2, param0 - 31872);
+                  ReportAbuseDialog.field_Mb = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("gameopt_playerhasntunlocked", 0);
                 if (var2 != null) {
-                  hg.field_i = of.a(var2, param0 - 31872);
+                  MarkerSliderPainter.field_i = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("gameopt_youhaventunlocked", 0);
                 if (var2 != null) {
-                  jp.field_d = of.a(var2, 1);
+                  ArchiveProvider.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_trychanging1", 0);
                 if (var2 != null) {
-                  tk.field_q = of.a(var2, 1);
+                  BoardParticle.field_q = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_trychanging2", 0);
                 if (null != var2) {
-                  le.field_i = of.a(var2, 1);
+                  WeightedLruCache.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_needchanging1", param0 ^ 31873);
                 if (null != var2) {
@@ -860,7 +860,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_needchanging2", 0);
                 if (null != var2) {
-                  bh.field_i = of.a(var2, 1);
+                  DirectByteStorage.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_mightchange", param0 - 31873);
                 if (null != var2) {
@@ -868,7 +868,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_playersdontqualify", 0);
                 if (null != var2) {
-                  pc.field_u = of.a(var2, 1);
+                  CipherPacketBuffer.field_u = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_playersdontqualify_selectgametab", 0);
                 if (var2 != null) {
@@ -908,7 +908,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("ra_title", param0 ^ 31873);
                 if (var2 != null) {
-                  qo.field_m = of.a(var2, 1);
+                  MatchingTextValidator.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("ra_mutethisplayer", 0);
                 if (null != var2) {
@@ -916,7 +916,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("ra_suggestmute", 0);
                 if (var2 != null) {
-                  wi.field_c = of.a(var2, 1);
+                  ClientContextMenu.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("ra_intro", 0);
                 if (null != var2) {
@@ -928,11 +928,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("ra_explanation", param0 ^ 31873);
                 if (var2 != null) {
-                  no.field_j = of.a(var2, param0 ^ 31872);
+                  CachedTextLayout.field_j = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("rule_pillar_0", 0);
                 if (var2 != null) {
-                  bh.field_l = of.a(var2, 1);
+                  DirectByteStorage.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_0_0", 0);
                 if (null != var2) {
@@ -948,7 +948,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rule_0_3", 0);
                 if (null != var2) {
-                  uc.field_m = of.a(var2, 1);
+                  TextWidgetPainter.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_0_4", 0);
                 if (var2 != null) {
@@ -958,15 +958,15 @@ final class uk extends de {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  ch.field_G = of.a(var2, 1);
+                  UiContainer.field_G = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_pillar_1", 0);
                 if (var2 != null) {
-                  km.field_t = of.a(var2, 1);
+                  MusicPatchPcmStream.field_t = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_1_0", 0);
                 if (var2 != null) {
-                  w.field_u = of.a(var2, 1);
+                  StatefulTextPainter.field_u = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_1_1", param0 ^ 31873);
                 if (var2 != null) {
@@ -974,7 +974,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rule_1_2", 0);
                 if (var2 != null) {
-                  gp.field_Eb = of.a(var2, 1);
+                  ScrollContainer.field_Eb = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_1_3", param0 - 31873);
                 if (null != var2) {
@@ -986,11 +986,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("rule_pillar_2", 0);
                 if (var2 != null) {
-                  lh.field_j = of.a(var2, param0 ^ 31872);
+                  IsaacRandom.field_j = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("rule_2_0", 0);
                 if (null != var2) {
-                  no.field_n = of.a(var2, param0 - 31872);
+                  CachedTextLayout.field_n = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("rule_2_1", 0);
                 if (null != var2) {
@@ -1014,11 +1014,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("pleaselogin", param0 ^ 31873);
                 if (var2 != null) {
-                  te.field_Ib = of.a(var2, 1);
+                  QuickChatMenu.field_Ib = of.a(var2, 1);
                 }
                 var2 = vd.a("pleaselogin_member", 0);
                 if (null != var2) {
-                  ee.field_a = of.a(var2, 1);
+                  InputQueue.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("invaliduserorpass", param0 - 31873);
                 if (null != var2) {
@@ -1026,7 +1026,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("pleasetryagain", 0);
                 if (null != var2) {
-                  lh.field_a = of.a(var2, param0 ^ 31872);
+                  IsaacRandom.field_a = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("pleasereenterpass", 0);
                 if (null != var2) {
@@ -1034,11 +1034,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("playfreeversion", param0 ^ 31873);
                 if (var2 != null) {
-                  oc.field_X = of.a(var2, 1);
+                  StripedProgressBar.field_X = of.a(var2, 1);
                 }
                 var2 = vd.a("reloadgame", 0);
                 if (var2 != null) {
-                  jj.field_c = of.a(var2, 1);
+                  BackgroundScene.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("toserverlist", 0);
                 if (null != var2) {
@@ -1066,11 +1066,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("login", param0 - 31873);
                 if (null != var2) {
-                  ca.field_m = of.a(var2, 1);
+                  WhirlpoolHasher.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("goback", 0);
                 if (var2 != null) {
-                  ii.field_v = of.a(var2, 1);
+                  MatchController.field_v = of.a(var2, 1);
                 }
                 var2 = vd.a("otheroptions", 0);
                 if (null != var2) {
@@ -1090,7 +1090,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("logging_in", param0 - 31873);
                 if (null != var2) {
-                  rl.field_e = of.a(var2, 1);
+                  TriangleMesh.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("reconnect", 0);
                 if (var2 != null) {
@@ -1142,7 +1142,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("connectionrestored", 0);
                 if (null != var2) {
-                  hq.field_D = of.a(var2, 1);
+                  GameResultsScreen.field_D = of.a(var2, 1);
                 }
                 var2 = vd.a("warning_ifyouquit", 0);
                 if (null != var2) {
@@ -1234,7 +1234,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("checking", 0);
                 if (null != var2) {
-                  ec.field_m = of.a(var2, param0 ^ 31872);
+                  NameAvailabilityValidator.field_m = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("create_namealreadytaken", param0 - 31873);
                 if (null != var2) {
@@ -1354,7 +1354,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("monthnames,5", param0 - 31873);
                 if (var2 != null) {
-                  dh.field_c[5] = of.a(var2, bn.a(param0, 31872));
+                  dh.field_c[5] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("monthnames,6", 0);
                 if (null != var2) {
@@ -1362,7 +1362,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("monthnames,7", 0);
                 if (null != var2) {
-                  dh.field_c[7] = of.a(var2, bn.a(param0, 31872));
+                  dh.field_c[7] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("monthnames,8", 0);
                 if (null != var2) {
@@ -1382,7 +1382,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_welcome", 0);
                 if (null != var2) {
-                  wi.field_n = of.a(var2, 1);
+                  ClientContextMenu.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("create_u13_welcome", 0);
                 if (var2 != null) {
@@ -1402,7 +1402,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_password", 0);
                 if (null != var2) {
-                  vk.field_qb = of.a(var2, 1);
+                  AccountRequestDialog.field_qb = of.a(var2, 1);
                 }
                 var2 = vd.a("create_password_confirm", 0);
                 if (null != var2) {
@@ -1410,7 +1410,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_email", 0);
                 if (var2 != null) {
-                  si.field_S = of.a(var2, 1);
+                  DialWidget.field_S = of.a(var2, 1);
                 }
                 var2 = vd.a("create_email_confirm", 0);
                 if (var2 != null) {
@@ -1418,7 +1418,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_age", 0);
                 if (null != var2) {
-                  rl.field_O = of.a(var2, 1);
+                  TriangleMesh.field_O = of.a(var2, 1);
                 }
                 var2 = vd.a("create_u13_email", 0);
                 if (var2 != null) {
@@ -1466,7 +1466,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_u13terms", param0 - 31873);
                 if (var2 != null) {
-                  sl.field_e = of.a(var2, param0 ^ 31872);
+                  IndexedSpriteState.field_e = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("login_username_email", 0);
                 if (null != var2) {
@@ -1474,7 +1474,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("login_username", 0);
                 if (null != var2) {
-                  sn.field_k = of.a(var2, 1);
+                  MusicPatch.field_k = of.a(var2, 1);
                 }
                 var2 = vd.a("login_email", 0);
                 if (null != var2) {
@@ -1506,7 +1506,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("login_no_displayname", 0);
                 if (null != var2) {
-                  uh.field_d = of.a(var2, 1);
+                  PlayerController.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("create_username_tooltip", 0);
                 if (null != var2) {
@@ -1526,7 +1526,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_password_tooltip", 0);
                 if (var2 != null) {
-                  te.field_Eb = of.a(var2, param0 ^ 31872);
+                  QuickChatMenu.field_Eb = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("create_password_hint", 0);
                 if (null != var2) {
@@ -1534,11 +1534,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_password_confirm_tooltip", param0 - 31873);
                 if (var2 != null) {
-                  dd.field_f = of.a(var2, 1);
+                  Puzzle.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("create_email_tooltip", 0);
                 if (null != var2) {
-                  qp.field_N = of.a(var2, 1);
+                  LabeledField.field_N = of.a(var2, 1);
                 }
                 var2 = vd.a("create_email_confirm_tooltip", 0);
                 if (null != var2) {
@@ -1546,7 +1546,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_age_tooltip", 0);
                 if (null != var2) {
-                  bb.field_d = of.a(var2, 1);
+                  IntrusiveDeque.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("create_optin_news_tooltip", param0 ^ 31873);
                 if (var2 != null) {
@@ -1582,7 +1582,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_username_available", param0 ^ 31873);
                 if (null != var2) {
-                  vi.field_L = of.a(var2, param0 ^ 31872);
+                  MusicCrossfadeStream.field_L = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("create_alert_namelength", 0);
                 if (null != var2) {
@@ -1594,7 +1594,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_alert_nameleadingspace", 0);
                 if (null != var2) {
-                  ii.field_k = of.a(var2, 1);
+                  MatchController.field_k = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_doublespace", 0);
                 if (var2 != null) {
@@ -1602,15 +1602,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_alert_passchars", 0);
                 if (var2 != null) {
-                  ka.field_R = of.a(var2, param0 ^ 31872);
+                  ResizableModalPanel.field_R = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("create_alert_passrepeated", param0 ^ 31873);
                 if (var2 != null) {
-                  ag.field_n = of.a(var2, param0 ^ 31872);
+                  AgeValidator.field_n = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("create_alert_passlength", 0);
                 if (var2 != null) {
-                  vi.field_y = of.a(var2, 1);
+                  MusicCrossfadeStream.field_y = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_passcontainsname", 0);
                 if (var2 != null) {
@@ -1630,11 +1630,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_alert_invalidemail", 0);
                 if (null != var2) {
-                  kp.field_A = of.a(var2, 1);
+                  QuickChatPhraseDefinition.field_A = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_email_unavailable", param0 - 31873);
                 if (var2 != null) {
-                  jc.field_e = of.a(var2, param0 - 31872);
+                  SpriteCheckboxPainter.field_e = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("create_alert_invaliddate", 0);
                 if (var2 != null) {
@@ -1646,7 +1646,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_alert_yearrange", 0);
                 if (null != var2) {
-                  kd.field_d = of.a(var2, 1);
+                  TextLayout.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_mismatch", 0);
                 if (var2 != null) {
@@ -1662,7 +1662,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_account_success", 0);
                 if (null != var2) {
-                  gk.field_jb = of.a(var2, 1);
+                  ValidatedTextWidget.field_jb = of.a(var2, 1);
                 }
                 var2 = vd.a("invalid_name", param0 - 31873);
                 if (var2 != null) {
@@ -1670,7 +1670,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("cannot_add_yourself", param0 - 31873);
                 if (null != var2) {
-                  wd.field_h = of.a(var2, param0 - 31872);
+                  GrowableIntList.field_h = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("unable_to_add_friend", 0);
                 if (var2 != null) {
@@ -1678,7 +1678,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("unable_to_add_ignore", 0);
                 if (var2 != null) {
-                  le.field_d = of.a(var2, param0 - 31872);
+                  WeightedLruCache.field_d = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("unable_to_delete_friend", 0);
                 if (null != var2) {
@@ -1690,7 +1690,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("friendlistfull", 0);
                 if (null != var2) {
-                  tm.field_Q = of.a(var2, 1);
+                  MarkerSlider.field_Q = of.a(var2, 1);
                 }
                 var2 = vd.a("friendlistdupe", 0);
                 if (null != var2) {
@@ -1698,11 +1698,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("friendnotfound", param0 ^ 31873);
                 if (null != var2) {
-                  vl.field_R = of.a(var2, 1);
+                  AccountMessagePanel.field_R = of.a(var2, 1);
                 }
                 var2 = vd.a("ignorelistfull", 0);
                 if (null != var2) {
-                  co.field_k = of.a(var2, 1);
+                  ViewportController.field_k = of.a(var2, 1);
                 }
                 var2 = vd.a("ignorelistdupe", 0);
                 if (null != var2) {
@@ -1718,11 +1718,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("removefriendfirst", 0);
                 if (null != var2) {
-                  jp.field_b = of.a(var2, param0 - 31872);
+                  ArchiveProvider.field_b = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("enterfriend_add", 0);
                 if (null != var2) {
-                  jj.field_j = of.a(var2, 1);
+                  BackgroundScene.field_j = of.a(var2, 1);
                 }
                 var2 = vd.a("enterfriend_del", 0);
                 if (var2 != null) {
@@ -1738,7 +1738,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("text_removed_from_game", 0);
                 if (var2 != null) {
-                  bb.field_a = of.a(var2, param0 ^ 31872);
+                  IntrusiveDeque.field_a = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("text_lobby_pleaselogin_free", 0);
                 if (var2 != null) {
@@ -1802,7 +1802,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("loading_graphics", 0);
                 if (var2 != null) {
-                  g.field_q = of.a(var2, param0 - 31872);
+                  PasswordValidator.field_q = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("loading_models", 0);
                 if (var2 != null) {
@@ -1810,7 +1810,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("loading_fonts", 0);
                 if (null != var2) {
-                  pc.field_x = of.a(var2, param0 ^ 31872);
+                  CipherPacketBuffer.field_x = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("loading_soundeffects", param0 ^ 31873);
                 if (null != var2) {
@@ -1818,7 +1818,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("loading_music", 0);
                 if (null != var2) {
-                  jh.field_I = of.a(var2, 1);
+                  AccountChoicePanel.field_I = of.a(var2, 1);
                 }
                 var2 = vd.a("loading_instruments", param0 ^ 31873);
                 if (var2 != null) {
@@ -1846,7 +1846,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("unpacking_graphics", 0);
                 if (null != var2) {
-                  no.field_g = of.a(var2, 1);
+                  CachedTextLayout.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("unpacking_models", 0);
                 if (null != var2) {
@@ -1910,7 +1910,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rankings", 0);
                 if (null != var2) {
-                  nn.field_l = of.a(var2, param0 - 31872);
+                  MatchHud.field_l = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("achievements", 0);
                 if (null != var2) {
@@ -1944,7 +1944,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("returntomainmenu", 0);
                 if (null != var2) {
-                  jh.field_K = of.a(var2, 1);
+                  AccountChoicePanel.field_K = of.a(var2, 1);
                 }
                 var2 = vd.a("returntopausemenu", 0);
                 if (var2 != null) {
@@ -1964,7 +1964,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("optionsmenu_notpaused", param0 ^ 31873);
                 if (null != var2) {
-                  mg.field_k = of.a(var2, param0 - 31872);
+                  TextFieldValidator.field_k = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("menu", param0 - 31873);
                 if (var2 != null) {
@@ -1980,7 +1980,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("startgame", param0 - 31873);
                 if (var2 != null) {
-                  kb.field_J = of.a(var2, param0 ^ 31872);
+                  DateInputWidget.field_J = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("newgame", 0);
                 if (null != var2) {
@@ -2036,7 +2036,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("previous", 0);
                 if (null != var2) {
-                  ip.field_z = of.a(var2, param0 ^ 31872);
+                  PasswordFieldPainter.field_z = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("prev", param0 - 31873);
                 if (var2 != null) {
@@ -2056,11 +2056,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("entermultiplayerlobby", 0);
                 if (null != var2) {
-                  jo.field_c = of.a(var2, 1);
+                  CheckboxPainter.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("singleplayergame", 0);
                 if (null != var2) {
-                  od.field_Nb = of.a(var2, 1);
+                  TabbedPanel.field_Nb = of.a(var2, 1);
                 }
                 var2 = vd.a("returntogame", 0);
                 if (null != var2) {
@@ -2084,7 +2084,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("resign", 0);
                 if (null != var2) {
-                  al.field_d = of.a(var2, 1);
+                  FallingPieceView.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("returntolobby", 0);
                 if (null != var2) {
@@ -2092,7 +2092,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("cont", 0);
                 if (null != var2) {
-                  vi.field_J = of.a(var2, 1);
+                  MusicCrossfadeStream.field_J = of.a(var2, 1);
                 }
                 var2 = vd.a("continue_spectating", 0);
                 if (var2 != null) {
@@ -2264,7 +2264,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("achieved", param0 - 31873);
                 if (var2 != null) {
-                  co.field_d = of.a(var2, 1);
+                  ViewportController.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("orbpoints", 0);
                 if (null != var2) {
@@ -2280,7 +2280,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("orbcoins_colon", 0);
                 if (null != var2) {
-                  fh.field_K = of.a(var2, param0 - 31872);
+                  DisplayNameForm.field_K = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("achieved_colon_description", 0);
                 if (null != var2) {
@@ -2456,11 +2456,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("click_to_quickchat", param0 - 31873);
                 if (var2 != null) {
-                  ll.field_i = of.a(var2, 1);
+                  JaggrabDownloader.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("autorespond", param0 ^ 31873);
                 if (null != var2) {
-                  nl.field_d = of.a(var2, 1);
+                  NodeHashTable.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_help", param0 ^ 31873);
                 if (null != var2) {
@@ -2468,31 +2468,31 @@ final class uk extends de {
                 }
                 var2 = vd.a("quickchat_help_title", 0);
                 if (null != var2) {
-                  mg.field_g = of.a(var2, 1);
+                  TextFieldValidator.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_help,0", param0 - 31873);
                 if (null != var2) {
-                  kd.field_c[0] = of.a(var2, 1);
+                  TextLayout.field_c[0] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_help,1", param0 - 31873);
                 if (null != var2) {
-                  kd.field_c[1] = of.a(var2, 1);
+                  TextLayout.field_c[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_help,2", param0 ^ 31873);
                 if (null != var2) {
-                  kd.field_c[2] = of.a(var2, param0 - 31872);
+                  TextLayout.field_c[2] = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("quickchat_shortcut_help,3", 0);
                 if (var2 != null) {
-                  kd.field_c[3] = of.a(var2, 1);
+                  TextLayout.field_c[3] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_help,4", 0);
                 if (var2 != null) {
-                  kd.field_c[4] = of.a(var2, bn.a(param0, 31872));
+                  TextLayout.field_c[4] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("quickchat_shortcut_help,5", 0);
                 if (null != var2) {
-                  kd.field_c[5] = of.a(var2, bn.a(param0, 31872));
+                  TextLayout.field_c[5] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("quickchat_shortcut_keys,0", 0);
                 if (null != var2) {
@@ -2500,7 +2500,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("quickchat_shortcut_keys,1", 0);
                 if (var2 != null) {
-                  SpriteState.field_I[1] = of.a(var2, bn.a(param0, 31872));
+                  SpriteState.field_I[1] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("quickchat_shortcut_keys,2", 0);
                 if (var2 != null) {
@@ -2528,11 +2528,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("rating_rating", 0);
                 if (null != var2) {
-                  hg.field_b = of.a(var2, 1);
+                  MarkerSliderPainter.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("rating_played", 0);
                 if (null != var2) {
-                  db.field_N = of.a(var2, 1);
+                  TextHotspotWidget.field_N = of.a(var2, 1);
                 }
                 var2 = vd.a("rating_won", 0);
                 if (null != var2) {
@@ -2560,15 +2560,15 @@ final class uk extends de {
                 }
                 var2 = vd.a("members_expansion_benefits,0", param0 ^ 31873);
                 if (var2 != null) {
-                  kb.field_I[0] = of.a(var2, 1);
+                  DateInputWidget.field_I[0] = of.a(var2, 1);
                 }
                 var2 = vd.a("members_expansion_benefits,1", param0 - 31873);
                 if (null != var2) {
-                  kb.field_I[1] = of.a(var2, 1);
+                  DateInputWidget.field_I[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("members_expansion_benefits,2", 0);
                 if (null != var2) {
-                  kb.field_I[2] = of.a(var2, 1);
+                  DateInputWidget.field_I[2] = of.a(var2, 1);
                 }
                 var2 = vd.a("members_expansion_price_top", param0 - 31873);
                 if (null != var2) {
@@ -2648,7 +2648,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_button_accept", param0 - 31873);
                 if (var2 != null) {
-                  sn.field_q = of.a(var2, 1);
+                  MusicPatch.field_q = of.a(var2, 1);
                 }
                 var2 = vd.a("fs_accept_afteraccept", 0);
                 if (var2 != null) {
@@ -2660,7 +2660,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_accept_aftercancel", param0 ^ 31873);
                 if (var2 != null) {
-                  bh.field_m = of.a(var2, param0 - 31872);
+                  DirectByteStorage.field_m = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("fs_accept_countdown_sing", 0);
                 if (null != var2) {
@@ -2676,7 +2676,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_button_close", 0);
                 if (var2 != null) {
-                  od.field_Hb = of.a(var2, 1);
+                  TabbedPanel.field_Hb = of.a(var2, 1);
                 }
                 var2 = vd.a("fs_button_members", 0);
                 if (null != var2) {
@@ -2688,7 +2688,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_unavailable_try_signed_applet", param0 - 31873);
                 if (var2 != null) {
-                  mn.field_a = of.a(var2, param0 ^ 31872);
+                  TextLayoutLine.field_a = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("fs_focus", 0);
                 if (null != var2) {
@@ -2696,7 +2696,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_focus_or_resolution", param0 ^ 31873);
                 if (var2 != null) {
-                  co.field_e = of.a(var2, 1);
+                  ViewportController.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("fs_timeout", 0);
                 if (var2 != null) {
@@ -2720,7 +2720,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mb_full_access_1", param0 ^ 31873);
                 if (var2 != null) {
-                  vi.field_s = of.a(var2, 1);
+                  MusicCrossfadeStream.field_s = of.a(var2, 1);
                 }
                 var2 = vd.a("mb_full_access_2", 0);
                 if (var2 != null) {
@@ -2732,11 +2732,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("mb_achievement_count_2", 0);
                 if (var2 != null) {
-                  kk.field_l = of.a(var2, 1);
+                  BoardView.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("mb_exclusive_1", 0);
                 if (var2 != null) {
-                  ng.field_w = of.a(var2, 1);
+                  UiComponent.field_w = of.a(var2, 1);
                 }
                 var2 = vd.a("mb_exclusive_2", 0);
                 if (var2 != null) {
@@ -2748,7 +2748,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("hs_friend_tip", 0);
                 if (var2 != null) {
-                  pf.field_b = of.a(var2, 1);
+                  MenuInputState.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("hs_friend_tip_multi", param0 ^ 31873);
                 if (null != var2) {
@@ -2816,11 +2816,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("pleasewait_dotdotdot", param0 ^ param0);
                 if (var2 != null) {
-                  wd.field_b = of.a(var2, 1);
+                  GrowableIntList.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("serviceunavailable", param0 - 31873);
                 if (null != var2) {
-                  pf.field_l = of.a(var2, 1);
+                  MenuInputState.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("createtouse", param0 - 31873);
                 if (null != var2) {
@@ -2852,7 +2852,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mustlogin2,3", 0);
                 if (null != var2) {
-                  fp.field_a[3] = of.a(var2, bn.a(param0, 31872));
+                  fp.field_a[3] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("mustlogin2,4", 0);
                 if (var2 != null) {
@@ -2864,7 +2864,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mustlogin2,6", param0 - 31873);
                 if (null != var2) {
-                  fp.field_a[6] = of.a(var2, bn.a(param0, 31872));
+                  fp.field_a[6] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("mustlogin2,7", 0);
                 if (var2 != null) {
@@ -2872,31 +2872,31 @@ final class uk extends de {
                 }
                 var2 = vd.a("mustlogin3,1", 0);
                 if (var2 != null) {
-                  lf.field_i[1] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,2", 0);
                 if (null != var2) {
-                  lf.field_i[2] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[2] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,3", 0);
                 if (null != var2) {
-                  lf.field_i[3] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[3] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,4", 0);
                 if (var2 != null) {
-                  lf.field_i[4] = of.a(var2, param0 - 31872);
+                  WidgetStyleLayer.field_i[4] = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mustlogin3,5", 0);
                 if (var2 != null) {
-                  lf.field_i[5] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[5] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,6", 0);
                 if (var2 != null) {
-                  lf.field_i[6] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[6] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,7", 0);
                 if (null != var2) {
-                  lf.field_i[7] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[7] = of.a(var2, 1);
                 }
                 var2 = vd.a("discard", 0);
                 if (null != var2) {
@@ -2908,7 +2908,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mustlogin4,2", param0 ^ 31873);
                 if (null != var2) {
-                  ho.field_a[2] = of.a(var2, bn.a(param0, 31872));
+                  ho.field_a[2] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("mustlogin4,3", 0);
                 if (null != var2) {
@@ -2934,7 +2934,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mustlogin_notloggedin", 0);
                 if (null != var2) {
-                  bc.field_p = of.a(var2, 1);
+                  EmailValidator.field_p = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin_alternate,1", 0);
                 if (var2 != null) {
@@ -2974,7 +2974,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("subscription_cost_monthly,2", 0);
                 if (var2 != null) {
-                  wp.field_b[2] = of.a(var2, bn.a(param0, 31872));
+                  wp.field_b[2] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("subscription_cost_monthly,3", 0);
                 if (var2 != null) {
@@ -3085,7 +3085,7 @@ final class uk extends de {
         try {
           var2_int = this.field_g.field_j;
           if (param0 > -35) {
-            uk.a(-67, (fm) null);
+            uk.a(-67, (ResourceArchive) null);
           }
           if (ke.field_a != 96 &&
             ke.field_a != 97 &&
@@ -3130,7 +3130,7 @@ final class uk extends de {
         }
     }
 
-    final static void a(int param0, rl param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, TriangleMesh param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_26_0 = 0;
         int[] stackIn_29_0 = null;
         int stackIn_30_1 = 0;
@@ -3146,7 +3146,7 @@ final class uk extends de {
         StringBuilder stackIn_84_1 = null;
         String stackIn_85_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rl var8 = null;
+        TriangleMesh var8 = null;
         int[] var8_array = null;
         RuntimeException var8_ref = null;
         byte[] var9 = null;
@@ -3200,19 +3200,19 @@ final class uk extends de {
             var9 = var8.field_n;
             pk.a(var9, 0, sc.field_i, 77, 0);
             if (var40 != 0) {
-              ee.c(0);
+              InputQueue.c(0);
             }
           } else {
-            ee.c(0);
+            InputQueue.c(0);
           }
           if (param6 != 20126) {
-            field_u = (fm) null;
+            field_u = (ResourceArchive) null;
           }
           var8_array = new int[param1.field_a];
           var9_array = new int[param1.field_a];
-          var10 = wd.field_i;
+          var10 = GrowableIntList.field_i;
           var11 = lo.field_Ib;
-          var12 = wn.field_q;
+          var12 = SocketJs5Transport.field_q;
           var13 = 0;
           while (param1.field_a > var13) {
             var14 = var11[var13] * param4 + param7 * var10[var13] + param3 * var12[var13] >> 8;
@@ -3272,19 +3272,19 @@ final class uk extends de {
             if (var40 != 0) {
               return;
             }
-            if (param1.field_J[var14Lifetime1] < wd.field_i.length) {
+            if (param1.field_J[var14Lifetime1] < GrowableIntList.field_i.length) {
               stackIn_41_0 = param1.field_J[var14Lifetime1];
             } else {
               stackIn_41_0 = -1;
             }
             var18 = stackIn_41_0;
-            if (param1.field_s[var14Lifetime1] >= wd.field_i.length) {
+            if (param1.field_s[var14Lifetime1] >= GrowableIntList.field_i.length) {
               stackIn_45_0 = -1;
             } else {
               stackIn_45_0 = param1.field_s[var14Lifetime1];
             }
             var19 = stackIn_45_0;
-            if (wd.field_i.length > param1.field_i[var14Lifetime1]) {
+            if (GrowableIntList.field_i.length > param1.field_i[var14Lifetime1]) {
               stackIn_49_0 = param1.field_i[var14Lifetime1];
             } else {
               stackIn_49_0 = -1;
@@ -3300,12 +3300,12 @@ final class uk extends de {
               stackIn_65_0 = null;
             }
             var21 = stackIn_65_0;
-            var22 = jp.field_a[var15Lifetime1];
-            var23 = al.field_m[var15Lifetime1];
-            var24 = jp.field_a[var16Lifetime1];
-            var25 = al.field_m[var16Lifetime1];
-            var26 = jp.field_a[var17Lifetime1];
-            var27 = al.field_m[var17Lifetime1];
+            var22 = ArchiveProvider.field_a[var15Lifetime1];
+            var23 = FallingPieceView.field_m[var15Lifetime1];
+            var24 = ArchiveProvider.field_a[var16Lifetime1];
+            var25 = FallingPieceView.field_m[var16Lifetime1];
+            var26 = ArchiveProvider.field_a[var17Lifetime1];
+            var27 = FallingPieceView.field_m[var17Lifetime1];
             if (~var19 == ~var18 &&
               ~var20 == ~var19) {
               var28 = var8_array[var18];
@@ -3363,7 +3363,7 @@ final class uk extends de {
 
     final void c(byte param0) {
         try {
-          la.a(this.field_l, nc.field_a, false, -25528);
+          la.a(this.field_l, TickClock.field_a, false, -25528);
           if (param0 > -13) {
             this.a(57);
           }
@@ -3463,7 +3463,7 @@ final class uk extends de {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          gj.field_W[3].b(0, 45);
+          NumericDateInputWidget.field_W[3].b(0, 45);
           if (param0 != 11) {
             return;
           }

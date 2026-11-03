@@ -22,14 +22,14 @@ final class ga {
         try {
           var3_int = this.field_b != 0 ? 65280 : 16762115;
           if (NodeHashTableIterator.field_f <= this.field_c) {
-            fi.a(320, 332, 35, oc.field_S, var3_int);
+            fi.a(320, 332, 35, StripedProgressBar.field_S, var3_int);
           } else {
             var4 = this.field_c * 35 / 1000;
             var5 = var4 >> 1;
-            fi.a(320, 349 - var5, var4, oc.field_S, var3_int);
+            fi.a(320, 349 - var5, var4, StripedProgressBar.field_S, var3_int);
             SoftwareRasterizer.f(0, -var5 + 355, 640, var4 / 2 + 343);
           }
-          rk.field_e.b(param1, 320, 360, 0, -1);
+          rk.field_e.drawCentered(param1, 320, 360, 0, -1);
           SoftwareRasterizer.c();
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -122,11 +122,11 @@ final class ga {
 
     final static rk a(int param0, int param1) {
         double var2 = 1.0;
-        var2 = var2 + (((double)param0 - (double)param1) / 16.0 + ((double)ok.a(tg.field_f, -99, 7) - 3.0) / 10.0);
-        return new rk(1 + ok.a(tg.field_f, param1 ^ -102, 14), 10, of.a(var2, 65536));
+        var2 = var2 + (((double)param0 - (double)param1) / 16.0 + ((double)ok.a(UiTheme.field_f, -99, 7) - 3.0) / 10.0);
+        return new rk(1 + ok.a(UiTheme.field_f, param1 ^ -102, 14), 10, of.a(var2, 65536));
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ak param4, ak param5, byte[] param6, int param7, int param8, ak param9) {
+    final static void a(int param0, int param1, int param2, int param3, SceneWidget param4, SceneWidget param5, byte[] param6, int param7, int param8, SceneWidget param9) {
         int var11 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -143,45 +143,45 @@ final class ga {
         int var12 = 0;
         var12 = Pixelate.field_H ? 1 : 0;
         try {
-          hn.field_f = -1L;
-          oe.field_Rb = param6;
+          DebouncedValidator.field_f = -1L;
+          ReportAbuseDialog.field_Rb = param6;
           um.field_k = param8;
           fj.field_b = param6.length;
-          bn.field_S = null;
-          rl.field_r = false;
-          qm.field_J = new byte[(7 + um.field_k) / 8];
+          DraggableWidget.field_S = null;
+          TriangleMesh.field_r = false;
+          TextButton.field_J = new byte[(7 + um.field_k) / 8];
           io.field_c = null;
           var10_int = 0;
-          for (var11 = 0; oe.field_Rb.length > var11; var11++) {
-            var10_int = var10_int + (255 & oe.field_Rb[var11]);
+          for (var11 = 0; ReportAbuseDialog.field_Rb.length > var11; var11++) {
+            var10_int = var10_int + (255 & ReportAbuseDialog.field_Rb[var11]);
           }
           var10_int = (7 + var10_int) / 8;
-          k.field_k = new byte[var10_int];
-          if (null == param5.field_L) {
-            param5.field_L = new bb();
+          NanoTickClock.field_k = new byte[var10_int];
+          if (null == param5.children) {
+            param5.children = new IntrusiveDeque();
           }
-          ImageProducerRasterBuffer.field_n = param5.field_L;
+          ImageProducerRasterBuffer.field_n = param5.children;
           ImageProducerRasterBuffer.field_n.e(param3 ^ -121);
-          il.field_d = new vg(param1);
-          ka.field_X = 0;
-          ec.field_r = 0;
+          il.field_d = new SecondaryNodeHashTable(param1);
+          ResizableModalPanel.field_X = 0;
+          NameAvailabilityValidator.field_r = 0;
           gi.field_a = -1;
           ui.field_e = -1;
-          if (param9.field_L == null) {
-            param9.field_L = new bb();
+          if (param9.children == null) {
+            param9.children = new IntrusiveDeque();
           }
-          nk.field_a = param9.field_L;
+          nk.field_a = param9.children;
           nk.field_a.e(123);
-          dg.field_f = new vg(param2);
-          if (null == param4.field_L) {
-            param4.field_L = new bb();
+          dg.field_f = new SecondaryNodeHashTable(param2);
+          if (null == param4.children) {
+            param4.children = new IntrusiveDeque();
           }
-          wi.field_a = param4.field_L;
+          ClientContextMenu.field_a = param4.children;
           if (param3 != 3) {
             field_d = 20;
           }
-          wi.field_a.e(param3 ^ 91);
-          eh.field_f = new vg(param7);
+          ClientContextMenu.field_a.e(param3 ^ 91);
+          SocketConnector.field_f = new SecondaryNodeHashTable(param7);
           bo.field_e = 0L;
           mh.field_b = param0;
           return;

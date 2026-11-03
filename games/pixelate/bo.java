@@ -4,14 +4,14 @@
 final class bo {
     int field_l;
     static String field_a;
-    static te field_h;
+    static QuickChatMenu field_h;
     int field_i;
     static String field_f;
     static String field_k;
     int field_g;
     static String field_b;
     int field_j;
-    static bb field_d;
+    static IntrusiveDeque field_d;
     static int[] field_c;
     static long field_e;
 
@@ -26,7 +26,7 @@ final class bo {
           var4 = (og) (wk.field_g.c(1504642273));
           while (var4 != null) {
             dq.a(param0, -18989, var4);
-            var4 = (og) (wk.field_g.f(param1 + 1504642266));
+            var4 = (og) (wk.field_g.last(param1 + 1504642266));
           }
           if (param1 != 7) {
             field_k = (String) null;
@@ -34,7 +34,7 @@ final class bo {
           var2 = bq.field_a.c(1504642273);
           while (var2 != null) {
             sd.a(true, param0);
-            var2 = bq.field_a.f(1504642273);
+            var2 = bq.field_a.last(1504642273);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,14 +60,14 @@ final class bo {
     final static byte[] a(int param0) {
         byte[] var2 = new byte[8];
         byte[] var1 = var2;
-        var2[6] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 48);
-        var2[2] = (byte)(int)FullscreenFocusCanvas.a((long)param0, jo.field_h >> 16);
-        var2[3] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 24, 255L);
-        var2[5] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 40, 255L);
-        var2[1] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 8);
-        var2[0] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 0, 255L);
-        var2[4] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 32);
-        var2[7] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 56);
+        var2[6] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 48);
+        var2[2] = (byte)(int)FullscreenFocusCanvas.a((long)param0, CheckboxPainter.field_h >> 16);
+        var2[3] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 24, 255L);
+        var2[5] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 40, 255L);
+        var2[1] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 8);
+        var2[0] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 0, 255L);
+        var2[4] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 32);
+        var2[7] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 56);
         return var2;
     }
 
@@ -91,7 +91,7 @@ final class bo {
         field_f = "Back";
         field_b = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_k = "Retry";
-        field_d = new bb();
+        field_d = new IntrusiveDeque();
         field_c = new int[16];
         for (var0 = 0; field_c.length > var0; var0++) {
           field_c[var0] = 256 / field_c.length * 65793 * var0;

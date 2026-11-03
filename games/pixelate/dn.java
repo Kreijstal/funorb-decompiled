@@ -3,7 +3,7 @@
  */
 final class dn implements hj {
     static String field_b;
-    static ak field_c;
+    static SceneWidget field_c;
     static String[][] field_a;
 
     public static void a(byte param0) {

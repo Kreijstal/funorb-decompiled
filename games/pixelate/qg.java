@@ -5,7 +5,7 @@ final class qg {
     static String field_c;
     static String[] field_d;
     static String field_b;
-    static hh[] field_a;
+    static IndexedSprite[] field_a;
 
     public static void a(byte param0) {
         field_d = null;
@@ -18,8 +18,8 @@ final class qg {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pc var3 = null;
-        pc var3Lifetime1;
+        CipherPacketBuffer var3 = null;
+        CipherPacketBuffer var3Lifetime1;
         if (!param2) {
           var3 = aa.field_f;
           var3.g(param1, 15514);

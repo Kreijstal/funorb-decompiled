@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg {
-    static ak field_c;
+    static SceneWidget field_c;
     static Sprite[] field_d;
     static String[] field_b;
     static int field_a;
@@ -24,7 +24,7 @@ final class lg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (3 == param2) {
-            stackIn_3_0 = ko.field_ib;
+            stackIn_3_0 = LoadingProgressDialog.field_ib;
             return stackIn_3_0;
           }
           if (param2 == 6) {
@@ -44,15 +44,15 @@ final class lg {
             return stackIn_18_0;
           }
           if (10 == param2) {
-            stackIn_22_0 = c.field_O;
+            stackIn_22_0 = EditableTextWidget.field_O;
             return stackIn_22_0;
           }
           if (param2 == 11) {
-            stackIn_26_0 = ve.field_Gb;
+            stackIn_26_0 = AccountNamePrompt.field_Gb;
             return stackIn_26_0;
           }
           if (param2 == 14) {
-            stackIn_29_0 = sd.a(dd.field_m, 28, new String[]{param1});
+            stackIn_29_0 = sd.a(Puzzle.field_m, 28, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 > 113) {
@@ -93,7 +93,7 @@ final class lg {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        fm var9 = null;
+        ResourceArchive var9 = null;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           if (param2 == null) {
@@ -106,16 +106,16 @@ final class lg {
             var4 = dh.a(param2, (byte) 97);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!ii.a((byte) 122, var4.charAt(0)) &&
-                !ii.a((byte) 126, var4.charAt(-1 + var4.length()))) {
+              if (!MatchController.a((byte) 122, var4.charAt(0)) &&
+                !MatchController.a((byte) 126, var4.charAt(-1 + var4.length()))) {
                 if (param0 != 11) {
-                  var9 = (fm) null;
-                  lg.a(55, (fm) null);
+                  var9 = (ResourceArchive) null;
+                  lg.a(55, (ResourceArchive) null);
                 }
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
                   var7 = param2.charAt(var6);
-                  if (!ii.a((byte) 118, (char) var7)) {
+                  if (!MatchController.a((byte) 118, (char) var7)) {
                     var5 = 0;
                   } else {
                     var5++;
@@ -129,10 +129,10 @@ final class lg {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_36_0 = ii.field_k;
+                stackIn_36_0 = MatchController.field_k;
                 return stackIn_36_0;
               }
-              stackIn_19_0 = ii.field_k;
+              stackIn_19_0 = MatchController.field_k;
               return stackIn_19_0;
             }
             stackIn_14_0 = em.field_b;
@@ -180,7 +180,7 @@ final class lg {
             stackIn_6_0 = cd.field_c;
             return stackIn_6_0;
           }
-          var3 = h.a((byte) -8);
+          var3 = Checkbox.a((byte) -8);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5.a(var2, -66)) {
@@ -211,26 +211,26 @@ final class lg {
         int var1 = -115 / ((param0 + 84) / 35);
     }
 
-    final static void a(int param0, fm param1) {
+    final static void a(int param0, ResourceArchive param1) {
         try {
-          bj.field_c[0] = ua.a(param1, "", "pix_title");
-          bj.field_c[1] = ua.a(param1, "", "pix_end_game");
-          bj.field_c[2] = ua.a(param1, "", "skin1");
-          bj.field_c[param0] = ua.a(param1, "", "skin8");
-          bj.field_c[4] = ua.a(param1, "", "skin2");
-          bj.field_c[5] = ua.a(param1, "", "skin9");
-          bj.field_c[6] = ua.a(param1, "", "skin3");
-          bj.field_c[7] = ua.a(param1, "", "skin16");
-          bj.field_c[8] = ua.a(param1, "", "skin4");
-          bj.field_c[9] = ua.a(param1, "", "skin11");
-          bj.field_c[10] = ua.a(param1, "", "skin12");
-          bj.field_c[11] = ua.a(param1, "", "skin7");
-          bj.field_c[12] = ua.a(param1, "", "skin5");
-          bj.field_c[13] = ua.a(param1, "", "skin6");
-          bj.field_c[14] = ua.a(param1, "", "skin13");
-          bj.field_c[15] = ua.a(param1, "", "skin14");
-          bj.field_c[16] = ua.a(param1, "", "skin15");
-          bj.field_c[17] = ua.a(param1, "", "skin10");
+          bj.field_c[0] = MusicTrack.a(param1, "", "pix_title");
+          bj.field_c[1] = MusicTrack.a(param1, "", "pix_end_game");
+          bj.field_c[2] = MusicTrack.a(param1, "", "skin1");
+          bj.field_c[param0] = MusicTrack.a(param1, "", "skin8");
+          bj.field_c[4] = MusicTrack.a(param1, "", "skin2");
+          bj.field_c[5] = MusicTrack.a(param1, "", "skin9");
+          bj.field_c[6] = MusicTrack.a(param1, "", "skin3");
+          bj.field_c[7] = MusicTrack.a(param1, "", "skin16");
+          bj.field_c[8] = MusicTrack.a(param1, "", "skin4");
+          bj.field_c[9] = MusicTrack.a(param1, "", "skin11");
+          bj.field_c[10] = MusicTrack.a(param1, "", "skin12");
+          bj.field_c[11] = MusicTrack.a(param1, "", "skin7");
+          bj.field_c[12] = MusicTrack.a(param1, "", "skin5");
+          bj.field_c[13] = MusicTrack.a(param1, "", "skin6");
+          bj.field_c[14] = MusicTrack.a(param1, "", "skin13");
+          bj.field_c[15] = MusicTrack.a(param1, "", "skin14");
+          bj.field_c[16] = MusicTrack.a(param1, "", "skin15");
+          bj.field_c[17] = MusicTrack.a(param1, "", "skin10");
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "lg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -239,13 +239,13 @@ final class lg {
     final static void a(sb param0, int param1, int param2, sb param3, int param4, int param5) {
         try {
           bd.field_c = param5;
-          tm.field_N = param3;
+          MarkerSlider.field_N = param3;
           if (param2 >= -114) {
             lg.a((byte) 57);
           }
-          ko.field_fb = param4;
-          hc.field_J = param1;
-          ao.field_e = param0;
+          LoadingProgressDialog.field_fb = param4;
+          AccountTermsPanel.field_J = param1;
+          AudioService.field_e = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -269,15 +269,15 @@ final class lg {
           }
           var3 = null;
           var4 = null;
-          if (null != jp.field_c &&
-            !jp.field_c.equals(param1.getParameter("settings"))) {
-            var3 = jp.field_c;
+          if (null != ArchiveProvider.field_c &&
+            !ArchiveProvider.field_c.equals(param1.getParameter("settings"))) {
+            var3 = ArchiveProvider.field_c;
             var4 = var3;
             var4 = var3;
           }
-          if (null != bh.field_n &&
-            !bh.field_n.equals(param1.getParameter("session"))) {
-            var4 = bh.field_n;
+          if (null != DirectByteStorage.field_n &&
+            !DirectByteStorage.field_n.equals(param1.getParameter("session"))) {
+            var4 = DirectByteStorage.field_n;
           }
           stackIn_10_0 = ub.a(-102, param2, (String) (var3), (String) (var4), -1);
           return stackIn_10_0;

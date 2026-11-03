@@ -1,0 +1,483 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountNamePrompt extends SceneWidget {
+    static String field_Jb;
+    static SceneWidget field_Ib;
+    static String field_Gb;
+    private StringBuilder field_Eb;
+    static int field_Kb;
+    private SceneWidget field_Lb;
+    private SceneWidget field_Fb;
+    private int field_Hb;
+
+    public static void b(byte param0) {
+        if (param0 != -70) {
+          return;
+        }
+        field_Ib = null;
+        field_Jb = null;
+        field_Gb = null;
+    }
+
+    final boolean c(byte param0) {
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        int var2;
+        int var3;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        if (this.field_Hb != 0) {
+          return false;
+        }
+        if (ke.field_a != 85) {
+          var2 = 17 / ((-8 - param0) / 50);
+          if (this.field_Eb.length() >= 12) {
+            if (ke.field_a != 84) {
+              if (ke.field_a != 13) {
+                return true;
+              }
+              this.field_Hb = 1;
+              return true;
+            }
+            if (this.field_Eb.length() <= 0) {
+              this.field_Hb = 1;
+            } else {
+              this.field_cb = this.field_Eb.toString();
+              this.field_Hb = 2;
+            }
+            if (ke.field_a == 13) {
+              this.field_Hb = 1;
+            }
+            return true;
+          }
+          var3 = Character.toLowerCase(nj.field_f);
+          if (var3 == 32) {
+            var3 = 95;
+          }
+          if (var3 == 95 &&
+            this.field_Eb.length() > 0) {
+            discarded$6 = this.field_Eb.append((char) var3);
+          }
+          if (BoardParticle.a(-66, (char) var3)) {
+            discarded$8 = this.field_Eb.append((char) var3);
+            if (ke.field_a == 84) {
+              if (this.field_Eb.length() <= 0) {
+                this.field_Hb = 1;
+              } else {
+                this.field_cb = this.field_Eb.toString();
+                this.field_Hb = 2;
+              }
+            }
+            if (ke.field_a == 13) {
+              this.field_Hb = 1;
+            }
+            return true;
+          }
+          if (!MidiPcmStream.a(124, (char) var3)) {
+            if (ke.field_a == 84) {
+              if (this.field_Eb.length() <= 0) {
+                this.field_Hb = 1;
+              } else {
+                this.field_cb = this.field_Eb.toString();
+                this.field_Hb = 2;
+              }
+            }
+            if (ke.field_a != 13) {
+              return true;
+            }
+            this.field_Hb = 1;
+            return true;
+          }
+          discarded$7 = this.field_Eb.append((char) var3);
+          if (ke.field_a == 84) {
+            if (this.field_Eb.length() <= 0) {
+              this.field_Hb = 1;
+            } else {
+              this.field_cb = this.field_Eb.toString();
+              this.field_Hb = 2;
+            }
+          }
+          if (ke.field_a == 13) {
+            this.field_Hb = 1;
+          }
+          return true;
+        }
+        if (this.field_Eb.length() <= 0) {
+          var2Lifetime1 = 17 / ((-8 - param0) / 50);
+          if (this.field_Eb.length() >= 12) {
+            if (ke.field_a == 84) {
+              if (this.field_Eb.length() <= 0) {
+                this.field_Hb = 1;
+              } else {
+                this.field_cb = this.field_Eb.toString();
+                this.field_Hb = 2;
+              }
+            }
+            if (ke.field_a != 13) {
+              return true;
+            }
+            this.field_Hb = 1;
+            return true;
+          }
+          var3Lifetime1 = Character.toLowerCase(nj.field_f);
+          if (var3Lifetime1 == 32) {
+            var3Lifetime1 = 95;
+          }
+          if (var3Lifetime1 == 95 &&
+            this.field_Eb.length() > 0) {
+            discarded$3 = this.field_Eb.append((char) var3Lifetime1);
+          }
+          if (BoardParticle.a(-66, (char) var3Lifetime1)) {
+            discarded$5 = this.field_Eb.append((char) var3Lifetime1);
+            if (ke.field_a == 84) {
+              if (this.field_Eb.length() <= 0) {
+                this.field_Hb = 1;
+              } else {
+                this.field_cb = this.field_Eb.toString();
+                this.field_Hb = 2;
+              }
+            }
+            if (ke.field_a == 13) {
+              this.field_Hb = 1;
+            }
+            return true;
+          }
+          if (!MidiPcmStream.a(124, (char) var3Lifetime1)) {
+            if (ke.field_a == 84) {
+              if (this.field_Eb.length() <= 0) {
+                this.field_Hb = 1;
+              } else {
+                this.field_cb = this.field_Eb.toString();
+                this.field_Hb = 2;
+              }
+            }
+            if (ke.field_a == 13) {
+              this.field_Hb = 1;
+            }
+            return true;
+          }
+          discarded$4 = this.field_Eb.append((char) var3Lifetime1);
+          if (ke.field_a == 84) {
+            if (this.field_Eb.length() <= 0) {
+              this.field_Hb = 1;
+            } else {
+              this.field_cb = this.field_Eb.toString();
+              this.field_Hb = 2;
+            }
+          }
+          if (ke.field_a == 13) {
+            this.field_Hb = 1;
+          }
+          return true;
+        }
+        nk.a(this.field_Eb, this.field_Eb.length() - 1, ' ', 16736352);
+        var2Lifetime2 = 17 / ((-8 - param0) / 50);
+        if (this.field_Eb.length() >= 12) {
+          if (ke.field_a == 84) {
+            if (this.field_Eb.length() <= 0) {
+              this.field_Hb = 1;
+            } else {
+              this.field_cb = this.field_Eb.toString();
+              this.field_Hb = 2;
+            }
+          }
+          if (ke.field_a != 13) {
+            return true;
+          }
+          this.field_Hb = 1;
+          return true;
+        }
+        var3Lifetime2 = Character.toLowerCase(nj.field_f);
+        if (var3Lifetime2 == 32) {
+          var3Lifetime2 = 95;
+        }
+        if (var3Lifetime2 == 95 &&
+          this.field_Eb.length() > 0) {
+          discarded$0 = this.field_Eb.append((char) var3Lifetime2);
+        }
+        if (BoardParticle.a(-66, (char) var3Lifetime2)) {
+          discarded$1 = this.field_Eb.append((char) var3Lifetime2);
+          if (ke.field_a == 84) {
+            if (this.field_Eb.length() <= 0) {
+              this.field_Hb = 1;
+            } else {
+              this.field_cb = this.field_Eb.toString();
+              this.field_Hb = 2;
+            }
+          }
+          if (ke.field_a != 13) {
+            return true;
+          }
+          this.field_Hb = 1;
+          return true;
+        }
+        if (!MidiPcmStream.a(124, (char) var3Lifetime2)) {
+          if (ke.field_a == 84) {
+            if (this.field_Eb.length() <= 0) {
+              this.field_Hb = 1;
+            } else {
+              this.field_cb = this.field_Eb.toString();
+              this.field_Hb = 2;
+            }
+          }
+          if (ke.field_a == 13) {
+            this.field_Hb = 1;
+          }
+          return true;
+        }
+        discarded$2 = this.field_Eb.append((char) var3Lifetime2);
+        if (ke.field_a == 84) {
+          if (this.field_Eb.length() <= 0) {
+            this.field_Hb = 1;
+          } else {
+            this.field_cb = this.field_Eb.toString();
+            this.field_Hb = 2;
+          }
+        }
+        if (ke.field_a != 13) {
+          return true;
+        }
+        this.field_Hb = 1;
+        return true;
+    }
+
+    final static Sprite[] a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+        Sprite var19 = null;
+        Sprite var20 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
+        Object var10 = null;
+        Object var11 = null;
+        int[] var16 = SoftwareRasterizer.field_k;
+        int[] var15 = var16;
+        int[] var12 = var15;
+        int[] var6 = var12;
+        int var7 = SoftwareRasterizer.field_j;
+        int var8 = SoftwareRasterizer.field_d;
+        Sprite var9 = new Sprite(16, param3);
+        var9.c();
+        if (param4) {
+          SoftwareRasterizer.g(0, 0, 16, param3, param5, param2);
+          var10 = null;
+          if (param0) {
+            var19 = var9.a();
+            var10 = var19;
+            var19.c();
+            SoftwareRasterizer.b(0, 0, 5, 0);
+            SoftwareRasterizer.b(0, 1, 3, 0);
+            SoftwareRasterizer.b(0, 2, 2, 0);
+            SoftwareRasterizer.b(0, 3, 1, 0);
+            SoftwareRasterizer.b(0, 4, 1, 0);
+          }
+          var11 = null;
+          if (param1) {
+            var20 = var9.a();
+            var11 = var20;
+            var20.c();
+            SoftwareRasterizer.b(11, 0, 5, 0);
+            SoftwareRasterizer.b(13, 1, 3, 0);
+            SoftwareRasterizer.b(14, 2, 2, 0);
+            SoftwareRasterizer.b(15, 3, 1, 0);
+            SoftwareRasterizer.b(15, 4, 1, 0);
+          }
+          SoftwareRasterizer.a(var16, var7, var8);
+          return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
+        }
+        field_Kb = 20;
+        SoftwareRasterizer.g(0, 0, 16, param3, param5, param2);
+        var10 = null;
+        if (param0) {
+          var17 = var9.a();
+          var10 = var17;
+          var17.c();
+          SoftwareRasterizer.b(0, 0, 5, 0);
+          SoftwareRasterizer.b(0, 1, 3, 0);
+          SoftwareRasterizer.b(0, 2, 2, 0);
+          SoftwareRasterizer.b(0, 3, 1, 0);
+          SoftwareRasterizer.b(0, 4, 1, 0);
+        }
+        var11 = null;
+        if (param1) {
+          var18 = var9.a();
+          var11 = var18;
+          var18.c();
+          SoftwareRasterizer.b(11, 0, 5, 0);
+          SoftwareRasterizer.b(13, 1, 3, 0);
+          SoftwareRasterizer.b(14, 2, 2, 0);
+          SoftwareRasterizer.b(15, 3, 1, 0);
+          SoftwareRasterizer.b(15, 4, 1, 0);
+        }
+        SoftwareRasterizer.a(var16, var7, var8);
+        return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
+    }
+
+    final int b(int param0, boolean param1) {
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int var4;
+        var4 = Pixelate.field_H ? 1 : 0;
+        this.a(-28476, param1);
+        if (param0 >= -92) {
+          return 124;
+        }
+        if (!param1) {
+          this.field_Lb.field_cb = this.field_Eb.toString();
+          return this.field_Hb;
+        }
+        while (true) {
+          if (!DirectByteStorage.$cfr$intArgs$b$c4997cb15529(108)) {
+            this.field_Lb.field_cb = this.field_Eb.toString();
+            if (!param1) {
+              return this.field_Hb;
+            }
+            if (IntrusiveDequeCursor.field_c == 0) {
+              return this.field_Hb;
+            }
+            if (this.field_P != 0) {
+              return this.field_Hb;
+            }
+            this.field_Hb = 1;
+            return this.field_Hb;
+          }
+          if (ke.field_a == 85 &&
+            this.field_Eb.length() > 0) {
+            nk.a(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
+          }
+          if (aq.a(nj.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
+            discarded$0 = this.field_Eb.append(nj.field_f);
+          } else {
+            if (this.field_Eb.length() == 0 &&
+              nj.field_f == 91) {
+              discarded$1 = this.field_Eb.append(nj.field_f);
+            } else {
+              if (this.field_Eb.length() == 1 &&
+                nj.field_f == 35) {
+                discarded$2 = this.field_Eb.append(nj.field_f);
+              } else {
+                if (nj.field_f == 93) {
+                  discarded$3 = this.field_Eb.append(nj.field_f);
+                }
+              }
+            }
+          }
+          if (84 != ke.field_a) {
+            if (13 == ke.field_a) {
+              return 1;
+            }
+            continue;
+          }
+          break;
+        }
+        if (this.field_Eb.length() <= 0) {
+          return 1;
+        }
+        this.field_cb = this.field_Eb.toString();
+        return 2;
+    }
+
+    AccountNamePrompt(int param0, int param1, int param2, int param3, String param4, SceneWidget param5, SceneWidget param6, SceneWidget param7) {
+        super(0L, param5);
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_6_2 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        this.field_Hb = 0;
+        try {
+          this.field_Fb = new SceneWidget(0L, param6, param4);
+          this.a(this.field_Fb, (byte) 26);
+          this.field_Lb = new SceneWidget(0L, param7);
+          this.field_Lb.field_N = 16764006;
+          this.a(this.field_Lb, (byte) 26);
+          this.field_Lb.field_qb = "|";
+          this.field_Eb = new StringBuilder(12);
+          var9_int = this.field_Fb.g(0);
+          this.field_Fb.a(3, fq.field_q, 5, 256, var9_int);
+          this.field_Lb.a(3 + fq.field_q, fq.field_q, 5, 256, var9_int);
+          var10 = var9_int + 10;
+          var11 = 6 + 2 * fq.field_q;
+          var12 = ui.a(param2, param0, var10, (byte) -1);
+          var13 = pj.a(var11, param1, param3, (byte) 67);
+          this.a(var13, var11, var12, 256, var10);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9 = decompiledCaughtException;
+          stackIn_5_0 = var9;
+          stackIn_5_1 = new StringBuilder().append("ve.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_6_2 = "null";
+          } else {
+            stackIn_6_2 = "{...}";
+          }
+          stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',');
+          if (param5 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
+          if (param6 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          if (param7 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    final static void j(int param0) {
+        cd.field_e = new String[d.field_b];
+        cd.field_e[17] = ap.field_i;
+        cd.field_e[20] = NodeHashTableIterator.field_c;
+        cd.field_e[21] = nk.field_g;
+        cd.field_e[5] = wf.field_a;
+        cd.field_e[18] = ScrollContainer.field_Eb;
+        cd.field_e[15] = dq.field_d;
+        cd.field_e[7] = TextWidgetPainter.field_m;
+        cd.field_e[19] = nk.field_h;
+        cd.field_e[4] = UiContainer.field_G;
+        if (param0 == 1565) {
+          cd.field_e[11] = nj.field_d;
+          cd.field_e[13] = CachedTextLayout.field_n;
+          cd.field_e[9] = ke.field_c;
+          cd.field_e[6] = ae.field_j;
+          cd.field_e[16] = StatefulTextPainter.field_u;
+          return;
+        }
+    }
+
+    static {
+        field_Jb = "Withdraw request to join <%0>'s game";
+        field_Gb = "You have withdrawn your request to join.";
+    }
+}

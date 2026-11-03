@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ik {
-    fm field_d;
+    ResourceArchive field_d;
     String field_e;
     String field_c;
     String field_f;

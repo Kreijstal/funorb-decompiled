@@ -3,7 +3,7 @@
  */
 final class aa {
     long field_k;
-    ak field_q;
+    SceneWidget field_q;
     static ue field_p;
     int field_j;
     String field_n;
@@ -12,8 +12,8 @@ final class aa {
     int[] field_l;
     String field_h;
     int field_b;
-    static fh field_c;
-    static pc field_f;
+    static DisplayNameForm field_c;
+    static CipherPacketBuffer field_f;
     String field_m;
     int field_d;
     boolean field_a;
@@ -31,10 +31,10 @@ final class aa {
             return 2;
           }
           var2 = 43 / ((param0 - 42) / 57);
-          if (this.field_k == hn.field_f) {
+          if (this.field_k == DebouncedValidator.field_f) {
             return 1;
           }
-          if (2 != gk.field_db) {
+          if (2 != ValidatedTextWidget.field_db) {
             return 0;
           }
           if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
@@ -43,10 +43,10 @@ final class aa {
           return 0;
         }
         var2Lifetime1 = 43 / ((param0 - 42) / 57);
-        if (this.field_k == hn.field_f) {
+        if (this.field_k == DebouncedValidator.field_f) {
           return 1;
         }
-        if (2 != gk.field_db) {
+        if (2 != ValidatedTextWidget.field_db) {
           return 0;
         }
         if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
@@ -84,15 +84,15 @@ final class aa {
         this.field_n = op.field_t;
         this.field_h = cl.field_h;
         if (param0) {
-          this.field_l = oh.field_g;
+          this.field_l = HuffmanCodec.field_g;
         } else {
           this.field_l = null;
         }
         this.field_j = fk.field_o;
-        this.field_m = dd.field_a;
-        this.field_i = lj.field_d;
-        this.field_e = kn.field_I;
-        this.field_a = uc.field_n;
+        this.field_m = Puzzle.field_a;
+        this.field_i = BoundedRandomAccessFile.field_d;
+        this.field_e = ModalStack.field_I;
+        this.field_a = TextWidgetPainter.field_n;
         this.field_k = cd.field_g;
         this.field_d = qf.field_b;
         this.field_g = pb.field_j;

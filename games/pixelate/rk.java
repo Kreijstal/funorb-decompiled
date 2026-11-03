@@ -4,21 +4,21 @@
 final class rk {
     int field_a;
     int field_b;
-    static ob field_e;
+    static PaletteBitmapFont field_e;
     int field_c;
     static char field_d;
 
     public static void a(int param0) {
         if (param0 != 10934) {
-          fm var2 = (fm) null;
-          rk.a(-99, true, (fm) null, 69);
+          ResourceArchive var2 = (ResourceArchive) null;
+          rk.a(-99, true, (ResourceArchive) null, 69);
           field_e = null;
           return;
         }
         field_e = null;
     }
 
-    final static boolean a(int param0, boolean param1, fm param2, int param3) {
+    final static boolean a(int param0, boolean param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

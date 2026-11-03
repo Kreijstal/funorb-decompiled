@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kh {
-    static ak field_a;
+    static SceneWidget field_a;
     static int[] field_c;
     static String field_b;
 
     final static void a(boolean param0, String param1) {
         try {
           if (param0) {
-            field_a = (ak) null;
+            field_a = (SceneWidget) null;
           }
           sc.field_a = param1;
         } catch (RuntimeException runtimeException) {

@@ -77,7 +77,7 @@ final class wg {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nm.a(param0, 24)) {
+          if (IntrusiveDequeCursor.a(param0, 24)) {
             return false;
           }
           if (cm.a(param0, param2 ^ -98)) {
@@ -93,10 +93,10 @@ final class wg {
           if (param1.length() == 0) {
             return true;
           }
-          if (kb.a(param0, param1, (byte) -123)) {
+          if (DateInputWidget.a(param0, param1, (byte) -123)) {
             return false;
           }
-          if (pc.a(param0, (byte) -47, param1)) {
+          if (CipherPacketBuffer.a(param0, (byte) -47, param1)) {
             return false;
           }
           if (!gb.a(param0, param1, 95)) {
@@ -196,12 +196,12 @@ final class wg {
     final static mc b(int param0, int param1) {
         mc var2 = new mc();
         if (param0 == 255) {
-          tj.field_z.a(22125, var2);
+          tj.field_z.addFirst(22125, var2);
           ro.a(127, param1);
           return var2;
         }
         wg.a((byte) 74);
-        tj.field_z.a(22125, var2);
+        tj.field_z.addFirst(22125, var2);
         ro.a(127, param1);
         return var2;
     }

@@ -9,7 +9,7 @@ final class dk {
     static boolean field_c;
     static String field_f;
 
-    final static Sprite a(int param0, fm param1, int param2, int param3) {
+    final static Sprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;
@@ -24,7 +24,7 @@ final class dk {
             return (Sprite) (stackIn_2_0);
           }
           if (param3 == -1) {
-            stackIn_7_0 = ca.a(0);
+            stackIn_7_0 = WhirlpoolHasher.a(0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -43,9 +43,9 @@ final class dk {
         }
     }
 
-    final static String a(String param0, int param1, String param2, fm param3) {
+    final static String a(String param0, int param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        fm var5 = null;
+        ResourceArchive var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -62,8 +62,8 @@ final class dk {
             return stackIn_2_0;
           }
           if (param1 != 0) {
-            var5 = (fm) null;
-            dk.a(-69, (fm) null, 92, 117);
+            var5 = (ResourceArchive) null;
+            dk.a(-69, (ResourceArchive) null, 92, 117);
           }
           stackIn_6_0 = param0 + " - " + param3.c(0) + "%";
           return stackIn_6_0;
@@ -97,22 +97,22 @@ final class dk {
         field_f = null;
         field_e = null;
         if (param0 >= -81) {
-          fm var2 = (fm) null;
-          dk.a((String) null, 119, (String) null, (fm) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          dk.a((String) null, 119, (String) null, (ResourceArchive) null);
         }
         field_a = (Sprite[][]) null;
     }
 
-    final static void a(boolean param0, fm param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
-        rl var5 = null;
+        TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         Sprite[] var8 = null;
-        pc var9 = null;
+        CipherPacketBuffer var9 = null;
         int var10 = 0;
-        pc var11 = null;
+        CipherPacketBuffer var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -121,12 +121,12 @@ final class dk {
         int var4Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          var9 = new pc(param1.a((byte) 24, "", "logo.fo3d"));
+          var9 = new CipherPacketBuffer(param1.a((byte) 24, "", "logo.fo3d"));
           var11 = var9;
           var3 = var11.f(255);
           var11.n(-110);
-          qn.field_q = pf.a(var11, (byte) 77);
-          ck.field_b = new rl[var3];
+          qn.field_q = MenuInputState.a(var11, (byte) 77);
+          ck.field_b = new TriangleMesh[var3];
           wc.field_p = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             ck.field_b[var4] = pk.a(var9, -1);
@@ -137,10 +137,10 @@ final class dk {
           while (var10 < var3) {
             var5 = ck.field_b[var10];
             var5.a(6, 6, 6, true, 1);
-            var5.a((byte) -17);
+            var5.ensureBounds((byte) -17);
             var6 = new int[]{var5.field_b + var5.field_c >> 1, var5.field_F + var5.field_t >> 1, var5.field_x + var5.field_g >> 1};
             wc.field_p[var10] = var6;
-            var5.a(-var6[0], -var6[2], -var6[1], (byte) -83);
+            var5.translateVertices(-var6[0], -var6[2], -var6[1], (byte) -83);
             var10++;
           }
           if (param0) {

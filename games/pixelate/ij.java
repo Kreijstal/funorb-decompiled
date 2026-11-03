@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends de {
+final class ij extends MenuScreen {
     static bd field_o;
     static String field_q;
     static String field_r;
@@ -27,13 +27,13 @@ final class ij extends de {
           if (param0 != -5516) {
             field_r = (String) null;
           }
-          if (fh.field_L == -1 &&
-            -1 == h.field_Q) {
-            fh.field_L = ProxyAuthenticationException.field_d;
-            h.field_Q = bg.field_k;
+          if (DisplayNameForm.field_L == -1 &&
+            -1 == Checkbox.field_Q) {
+            DisplayNameForm.field_L = ProxyAuthenticationException.field_d;
+            Checkbox.field_Q = bg.field_k;
           }
           boolean decompiledFrameRemainder0 = true;
-          no.field_h = no.field_h + 1;
+          CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
           if (param1 != null) {
             decompiledFrameRemainder0 = !(param1.equals(qg.field_b));
           } else {
@@ -41,8 +41,8 @@ final class ij extends de {
           }
           if (decompiledFrameRemainder0) {
             if (!re.field_h) {
-              if (no.field_h >= am.field_c) {
-                stackIn_20_0 = (pc.field_s + am.field_c > no.field_h) ? 1 : 0;
+              if (CachedTextLayout.field_h >= Js5ArchiveManager.field_c) {
+                stackIn_20_0 = (CipherPacketBuffer.field_s + Js5ArchiveManager.field_c > CachedTextLayout.field_h) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }
@@ -51,20 +51,20 @@ final class ij extends de {
             }
             var2_int = stackIn_20_0;
             if (param1 == null) {
-              no.field_h = 0;
+              CachedTextLayout.field_h = 0;
             } else {
               if (re.field_h) {
-                no.field_h = am.field_c;
+                CachedTextLayout.field_h = Js5ArchiveManager.field_c;
               } else {
                 if (var2_int == 0) {
-                  no.field_h = 0;
+                  CachedTextLayout.field_h = 0;
                 } else {
-                  no.field_h = am.field_c;
+                  CachedTextLayout.field_h = Js5ArchiveManager.field_c;
                 }
               }
             }
-            oo.field_f = h.field_Q;
-            tm.field_V = fh.field_L;
+            oo.field_f = Checkbox.field_Q;
+            MarkerSlider.field_V = DisplayNameForm.field_L;
             if (param1 != null) {
               re.field_h = false;
             } else {
@@ -75,18 +75,18 @@ final class ij extends de {
           }
           qg.field_b = param1;
           if (!re.field_h &&
-            no.field_h < am.field_c &&
+            CachedTextLayout.field_h < Js5ArchiveManager.field_c &&
             im.field_Jb) {
-            tm.field_V = fh.field_L;
-            oo.field_f = h.field_Q;
-            no.field_h = 0;
+            MarkerSlider.field_V = DisplayNameForm.field_L;
+            oo.field_f = Checkbox.field_Q;
+            CachedTextLayout.field_h = 0;
           }
-          h.field_Q = -1;
-          fh.field_L = -1;
+          Checkbox.field_Q = -1;
+          DisplayNameForm.field_L = -1;
           if (re.field_h &&
-            no.field_h == pi.field_Fb) {
+            CachedTextLayout.field_h == ContextActionMenu.field_Fb) {
             re.field_h = false;
-            no.field_h = 0;
+            CachedTextLayout.field_h = 0;
             return;
           }
           return;

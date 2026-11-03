@@ -121,7 +121,7 @@ final class fi {
         }
     }
 
-    final static void a(Sprite param0, hh param1, int param2, int param3) {
+    final static void a(Sprite param0, IndexedSprite param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -162,7 +162,7 @@ final class fi {
           var6 <= 0) {
           return;
         }
-        fi.a(SoftwareRasterizer.field_k, param0.field_G, 0, var5, var4, var7, var6, var8, var9, param1.field_n);
+        fi.a(SoftwareRasterizer.field_k, param0.field_G, 0, var5, var4, var7, var6, var8, var9, param1.indices);
     }
 
     final static void a(int[] param0, int param1, int param2) {
@@ -268,7 +268,7 @@ final class fi {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int var15 = 0;
         int var15Lifetime1;
-        if (!jc.field_d) {
+        if (!SpriteCheckboxPainter.field_d) {
           SoftwareRasterizer.b(param0, param1, param2, param3, param6[param5]);
           return;
         }
@@ -497,9 +497,9 @@ final class fi {
         fi.a(param0, param1, param2, param3, 65280);
     }
 
-    final static void a(jl param0, String param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        param0.b(param1, param4, param5, param6, param7, param8);
-        param0.b(param2, param4 + param3, param5, param6, param7, param8);
+    final static void a(BitmapFont param0, String param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        param0.drawLeftAlpha(param1, param4, param5, param6, param7, param8);
+        param0.drawLeftAlpha(param2, param4 + param3, param5, param6, param7, param8);
     }
 
     final static Sprite a(int param0) {

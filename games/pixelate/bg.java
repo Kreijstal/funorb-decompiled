@@ -10,14 +10,14 @@ abstract class bg {
     static byte[] field_d;
     static bd field_l;
     static String field_f;
-    static jl field_j;
+    static BitmapFont field_j;
     static String field_i;
     static String field_c;
     static int field_k;
 
     final static void a(long param0, int param1, int param2) {
         int var5 = 0;
-        pc var4 = aa.field_f;
+        CipherPacketBuffer var4 = aa.field_f;
         int var5Lifetime1;
         var4.g(param1, 15514);
         if (param2 == -26231) {
@@ -103,7 +103,7 @@ abstract class bg {
     }
 
     final static void a(int param0) {
-        oa.field_j = param0;
+        DateOfBirthValidator.field_j = param0;
     }
 
     final void a(int param0, int param1) {
@@ -134,7 +134,7 @@ abstract class bg {
         mh.a(param2, gd.field_h[param1], var8, 0);
         SoftwareRasterizer.a(bf.field_r);
         SoftwareRasterizer.f(0, 0, 320, 480);
-        ec.field_q.a(var5 + 2, param2, 128);
+        NameAvailabilityValidator.field_q.a(var5 + 2, param2, 128);
         SoftwareRasterizer.f(320, 0, 640, 480);
         di.field_c.a(-1 + param3 + (var5 - di.field_c.field_A), param2, 128);
         SoftwareRasterizer.b(bf.field_r);

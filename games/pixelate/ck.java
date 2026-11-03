@@ -12,9 +12,9 @@ final class ck {
     static String field_g;
     private int field_k;
     private float field_a;
-    static am field_j;
+    static Js5ArchiveManager field_j;
     private float field_e;
-    static rl[] field_b;
+    static TriangleMesh[] field_b;
 
     public static void a(byte param0) {
         field_g = null;
@@ -26,12 +26,12 @@ final class ck {
         }
     }
 
-    final static rg a(String param0, String param1, boolean param2, long param3, int param4) {
+    final static LoginCredentials a(String param0, String param1, boolean param2, long param3, int param4) {
         RuntimeException var6 = null;
         gq stackIn_5_0 = null;
         wk stackIn_7_0 = null;
-        rg stackIn_10_0 = null;
-        go stackIn_12_0 = null;
+        LoginCredentials stackIn_10_0 = null;
+        EmailCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -42,17 +42,17 @@ final class ck {
           if (param3 == 0L &&
             param1 != null) {
             stackIn_7_0 = new wk(param1, param0);
-            return (rg) ((Object) stackIn_7_0);
+            return (LoginCredentials) ((Object) stackIn_7_0);
           }
           if (param2) {
             stackIn_5_0 = new gq(param3, param0);
-            return (rg) ((Object) stackIn_5_0);
+            return (LoginCredentials) ((Object) stackIn_5_0);
           }
           if (param4 >= 60) {
-            stackIn_12_0 = new go(param3, param0);
-            return (rg) ((Object) stackIn_12_0);
+            stackIn_12_0 = new EmailCredentials(param3, param0);
+            return (LoginCredentials) ((Object) stackIn_12_0);
           }
-          stackIn_10_0 = (rg) null;
+          stackIn_10_0 = (LoginCredentials) null;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class ck {
         }
         var4 = 320 - (int)this.field_h;
         var5 = 240 - (int)this.field_a;
-        this.field_c = (float)hd.a(var4 * var4 + var5 * var5, param0 + 23096);
+        this.field_c = (float)PlayerBoard.a(var4 * var4 + var5 * var5, param0 + 23096);
         var6 = this.field_d / this.field_c;
         this.field_i = var6 * (float)var4;
         if (param0 != -22970) {
@@ -162,13 +162,13 @@ final class ck {
           if (var5 > 5) {
             var5 = 5;
           }
-          if (jc.field_d) {
+          if (SpriteCheckboxPainter.field_d) {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
           } else {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
           }
         } else {
-          if (!jc.field_d) {
+          if (!SpriteCheckboxPainter.field_d) {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
           } else {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
@@ -176,7 +176,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, jl param1, fm param2) {
+    final static void a(int param0, BitmapFont param1, ResourceArchive param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -186,38 +186,38 @@ final class ck {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        qe var4 = null;
+        QuickChatCategory var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        jl var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var3_int = wo.field_d;
-          bn.field_I = new ak(0L, (ak) null);
+          DraggableWidget.field_I = new SceneWidget(0L, (SceneWidget) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            jo.a(1, "QC1", (Throwable) null);
+            CheckboxPainter.a(1, "QC1", (Throwable) null);
             return;
           }
-          param2.field_i = false;
+          param2.discardPackedGroups = false;
           param2.field_e = 0;
-          w.field_y = new il(var3_int, param2, param2);
+          StatefulTextPainter.field_y = new il(var3_int, param2, param2);
           jd.field_k = new u(var3_int, param2, param2, new dn());
           var4 = fl.c(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;
-            jo.a(1, "QC2", (Throwable) null);
+            CheckboxPainter.a(1, "QC2", (Throwable) null);
             return;
           }
           oo.a(-1, var4);
-          var12 = (jl) null;
-          vl.field_L = ka.a(65793, 4020342, 65793, (jl) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
-          ue.field_t = ka.a(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
-          ve.field_Ib = ka.a(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
+          var12 = (BitmapFont) null;
+          AccountMessagePanel.field_L = ResizableModalPanel.a(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
+          ue.field_t = ResizableModalPanel.a(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
+          AccountNamePrompt.field_Ib = ResizableModalPanel.a(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
           var5 = SoftwareRasterizer.field_j;
           var6 = SoftwareRasterizer.field_d;
           var16 = SoftwareRasterizer.field_k;
@@ -227,8 +227,8 @@ final class ck {
             SoftwareRasterizer.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          pi.field_Rb = lj.a(ue.field_t, ve.field_Ib, -55, vl.field_L, var4);
-          bn.field_I.field_L = new bb();
+          ContextActionMenu.field_Rb = BoundedRandomAccessFile.a(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
+          DraggableWidget.field_I.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class ck {
           RuntimeException var2_ref2 = null;
           var7 = Pixelate.field_H ? 1 : 0;
           try {
-            if (c.field_T) {
+            if (EditableTextWidget.field_T) {
               return true;
             }
             try {
@@ -276,7 +276,7 @@ final class ck {
                 return true;
               }
               var3 = (String) (cq.a("getcookies", (byte) -113, param1));
-              var4 = dd.a(var3, (byte) -52, ';');
+              var4 = Puzzle.a(var3, (byte) -52, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

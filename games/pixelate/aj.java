@@ -3,25 +3,25 @@
  */
 final class aj extends IntrusiveNode {
     int[] field_r;
-    static gp field_k;
+    static ScrollContainer field_k;
     static long field_m;
     static int field_t;
     int[] field_u;
     int field_p;
     static int field_n;
     int field_s;
-    ei[] field_v;
+    PlatformTask[] field_v;
     byte[][][] field_w;
     int[] field_q;
-    ei[] field_l;
+    PlatformTask[] field_l;
     static int[] field_o;
 
     final static Object a(boolean param0, byte[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        bh var4 = null;
+        DirectByteStorage var4 = null;
         Object stackIn_2_0 = null;
-        bh stackIn_5_0 = null;
+        DirectByteStorage stackIn_5_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -35,8 +35,8 @@ final class aj extends IntrusiveNode {
           }
           var3_int = -39 / ((param2 + 35) / 52);
           if (param1.length > 136) {
-            var4 = new bh();
-            ((gf) ((Object) var4)).a(param1, true);
+            var4 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var4)).setBytes(param1, true);
             stackIn_5_0 = var4;
             return stackIn_5_0;
           }
@@ -68,14 +68,14 @@ final class aj extends IntrusiveNode {
         field_k = null;
     }
 
-    final static void a(fm param0, fm param1, boolean param2, int param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          nk.a(eg.field_k, c.field_Y, ug.field_s, sc.field_g, (byte) 125, kj.field_l, dn.field_c, bl.field_d, qk.field_d, param2, mg.field_h, l.field_q);
-          h.field_V = eh.a("chatfilter", "lobby", (byte) 47, param1);
-          rg.field_a[1] = a.field_J;
+          nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, sc.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
+          Checkbox.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
+          LoginCredentials.field_a[1] = NameSuggestionsPanel.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);
-          rg.field_a[0] = kc.field_m;
-          rg.field_a[2] = wd.field_e;
+          LoginCredentials.field_a[0] = EmailConfirmationValidator.field_m;
+          LoginCredentials.field_a[2] = GrowableIntList.field_e;
           ck.a(65793, ig.field_d, param0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -87,20 +87,20 @@ final class aj extends IntrusiveNode {
           byte[] var2 = (byte[]) null;
           aj.a(false, (byte[]) null, -36);
           if (!ik.field_a) {
-            return jg.a((byte) 78) ? true : false;
+            return ArrayWidgetContainer.a((byte) 78) ? true : false;
           }
-          if (!db.field_U) {
-            return jg.a((byte) 78) ? true : false;
+          if (!TextHotspotWidget.field_U) {
+            return ArrayWidgetContainer.a((byte) 78) ? true : false;
           }
           return true;
         }
         if (ik.field_a) {
-          if (db.field_U) {
+          if (TextHotspotWidget.field_U) {
             return true;
           }
-          return jg.a((byte) 78) ? true : false;
+          return ArrayWidgetContainer.a((byte) 78) ? true : false;
         }
-        if (!jg.a((byte) 78)) {
+        if (!ArrayWidgetContainer.a((byte) 78)) {
           return false;
         }
         return true;

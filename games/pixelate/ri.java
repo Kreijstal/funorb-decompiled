@@ -10,7 +10,7 @@ final class ri {
     static hp field_f;
     static int field_h;
     static boolean field_b;
-    static vi field_a;
+    static MusicCrossfadeStream field_a;
 
     public static void b(int param0) {
         field_f = null;
@@ -44,9 +44,9 @@ final class ri {
     }
 
     final static void a(int param0, byte param1) {
-        de.field_e = new aa[param0 * 15];
-        ee.field_d = param0;
-        tm.field_O = new int[3];
+        MenuScreen.field_e = new aa[param0 * 15];
+        InputQueue.field_d = param0;
+        MarkerSlider.field_O = new int[3];
         int var2 = 20 / ((param1 + 94) / 32);
         sd.field_L = 0;
     }

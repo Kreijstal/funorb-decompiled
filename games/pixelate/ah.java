@@ -40,15 +40,15 @@ abstract class ah extends DualLinkNode {
         int var8Lifetime3;
         int var9Lifetime2Lifetime1;
         var13 = Pixelate.field_H ? 1 : 0;
-        l.field_p.field_Fb.field_L.e(33);
+        l.field_p.field_Fb.children.e(33);
         var4 = null;
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + sd.field_L; var7 >= 0; var7--) {
-          var8_ref_aa = de.field_e[var7];
+          var8_ref_aa = MenuScreen.field_e[var7];
           var9 = 0;
           if (!ln.field_q &&
-            var5 < ee.field_d) {
+            var5 < InputQueue.field_d) {
             var10_int = IterableNodeHashTable.a(var8_ref_aa.field_j, 0);
             if (var8_ref_aa.a((byte) -54) >= var10_int && (var8_ref_aa.field_a ||
               !ImageProducerRasterBuffer.a(-640, var8_ref_aa.field_n))) {
@@ -60,18 +60,18 @@ abstract class ah extends DualLinkNode {
           } else {
             var5++;
             if (null == var8_ref_aa.field_q ||
-              si.field_P) {
+              DialWidget.field_P) {
               if (var8_ref_aa.field_q != null) {
               }
-              var10 = uc.a(var8_ref_aa, -77);
-              var11 = var10 + jl.b(var8_ref_aa.field_g);
+              var10 = TextWidgetPainter.a(var8_ref_aa, -77);
+              var11 = var10 + BitmapFont.b(var8_ref_aa.field_g);
               var12 = lc.a(var8_ref_aa, false);
-              var8_ref_aa.field_q = new ak(0L, oi.field_e, var11);
+              var8_ref_aa.field_q = new SceneWidget(0L, oi.field_e, var11);
               var8_ref_aa.field_q.field_y = ((16711423 & oi.field_e.field_y) >> 1) + (var12 - (var12 >> 1 & 8355711));
               var8_ref_aa.field_q.field_N = var12;
               var6 = var6 + param1;
               var8_ref_aa.field_q.field_pb = ((oi.field_e.field_pb & 16711422) >> 1) - ((var12 & 16711422) >> 1) + var12;
-              var8_ref_aa.field_q.field_Db = vl.field_Q;
+              var8_ref_aa.field_q.font = AccountMessagePanel.field_Q;
             }
           }
         }
@@ -79,7 +79,7 @@ abstract class ah extends DualLinkNode {
         if (param0 >= -90) {
           ah.g(-107);
           for (var8 = 0; sd.field_L > var8; var8++) {
-            var14 = de.field_e[var8];
+            var14 = MenuScreen.field_e[var8];
             if (var14.field_q != null) {
               l.field_p.field_Fb.a(var14.field_q, (byte) 26);
               var14.field_q.a(var7Lifetime1, param1, param3, 256, var14.field_q.g(0));
@@ -89,38 +89,38 @@ abstract class ah extends DualLinkNode {
               var7Lifetime1 = var7Lifetime1 + param1;
             }
           }
-          var8Lifetime3 = l.field_p.field_Fb.field_nb + l.field_p.field_Fb.field_Z + (-var7Lifetime1 + var6);
-          l.field_p.field_Fb.field_nb = l.field_p.field_Fb.field_nb - var8Lifetime3;
+          var8Lifetime3 = l.field_p.field_Fb.height + l.field_p.field_Fb.pendingHeightDelta + (-var7Lifetime1 + var6);
+          l.field_p.field_Fb.height = l.field_p.field_Fb.height - var8Lifetime3;
           l.field_p.field_Fb.field_S = l.field_p.field_Fb.field_S + var8Lifetime3;
-          if (si.field_P) {
-            l.field_p.field_Fb.field_nb = var7Lifetime1;
+          if (DialWidget.field_P) {
+            l.field_p.field_Fb.height = var7Lifetime1;
           }
-          l.field_p.field_Fb.field_Z = var7Lifetime1 - l.field_p.field_Fb.field_nb;
-          if (si.field_P) {
-            l.field_p.field_Fb.field_wb = 0;
-            l.field_p.field_Fb.field_S = -l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-            qo.field_z = true;
-            si.field_P = false;
+          l.field_p.field_Fb.pendingHeightDelta = var7Lifetime1 - l.field_p.field_Fb.height;
+          if (DialWidget.field_P) {
+            l.field_p.field_Fb.pendingYDelta = 0;
+            l.field_p.field_Fb.field_S = -l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            MatchingTextValidator.field_z = true;
+            DialWidget.field_P = false;
           }
           if (oo.field_d &&
-            ko.field_eb != null) {
-            qo.field_z = true;
+            LoadingProgressDialog.field_eb != null) {
+            MatchingTextValidator.field_z = true;
           }
-          var9Lifetime1 = -l.field_p.field_Fb.field_Z - l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-          if (!qo.field_z) {
+          var9Lifetime1 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          if (!MatchingTextValidator.field_z) {
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_48_0 = (var9Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-            qo.field_z = stackIn_48_0;
+            stackIn_48_0 = (var9Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            MatchingTextValidator.field_z = stackIn_48_0;
           } else {
-            l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9Lifetime1;
+            l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime1;
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_44_0 = (var9Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-            qo.field_z = stackIn_44_0;
+            stackIn_44_0 = (var9Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            MatchingTextValidator.field_z = stackIn_44_0;
           }
           return (aa) (var4);
         }
         for (var8Lifetime1 = 0; sd.field_L > var8Lifetime1; var8Lifetime1++) {
-          var16 = de.field_e[var8Lifetime1];
+          var16 = MenuScreen.field_e[var8Lifetime1];
           if (var16.field_q != null) {
             l.field_p.field_Fb.a(var16.field_q, (byte) 26);
             var16.field_q.a(var7Lifetime1, param1, param3, 256, var16.field_q.g(0));
@@ -130,87 +130,87 @@ abstract class ah extends DualLinkNode {
             var7Lifetime1 = var7Lifetime1 + param1;
           }
         }
-        var8Lifetime2 = l.field_p.field_Fb.field_nb + l.field_p.field_Fb.field_Z + (-var7Lifetime1 + var6);
-        l.field_p.field_Fb.field_nb = l.field_p.field_Fb.field_nb - var8Lifetime2;
+        var8Lifetime2 = l.field_p.field_Fb.height + l.field_p.field_Fb.pendingHeightDelta + (-var7Lifetime1 + var6);
+        l.field_p.field_Fb.height = l.field_p.field_Fb.height - var8Lifetime2;
         l.field_p.field_Fb.field_S = l.field_p.field_Fb.field_S + var8Lifetime2;
-        if (!si.field_P) {
-          l.field_p.field_Fb.field_Z = var7Lifetime1 - l.field_p.field_Fb.field_nb;
-          if (si.field_P) {
-            l.field_p.field_Fb.field_wb = 0;
-            l.field_p.field_Fb.field_S = -l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-            qo.field_z = true;
-            si.field_P = false;
+        if (!DialWidget.field_P) {
+          l.field_p.field_Fb.pendingHeightDelta = var7Lifetime1 - l.field_p.field_Fb.height;
+          if (DialWidget.field_P) {
+            l.field_p.field_Fb.pendingYDelta = 0;
+            l.field_p.field_Fb.field_S = -l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            MatchingTextValidator.field_z = true;
+            DialWidget.field_P = false;
           }
           if (oo.field_d &&
-            ko.field_eb != null) {
-            qo.field_z = true;
-            var9Lifetime2 = -l.field_p.field_Fb.field_Z - l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-            if (!qo.field_z) {
+            LoadingProgressDialog.field_eb != null) {
+            MatchingTextValidator.field_z = true;
+            var9Lifetime2 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            if (!MatchingTextValidator.field_z) {
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_101_0 = (var9Lifetime2 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-              qo.field_z = stackIn_101_0;
+              stackIn_101_0 = (var9Lifetime2 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              MatchingTextValidator.field_z = stackIn_101_0;
             } else {
-              l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9Lifetime2;
+              l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime2;
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_105_0 = (var9Lifetime2 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-              qo.field_z = stackIn_105_0;
+              stackIn_105_0 = (var9Lifetime2 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              MatchingTextValidator.field_z = stackIn_105_0;
             }
             return (aa) (var4);
           }
-          var9Lifetime2Lifetime1 = -l.field_p.field_Fb.field_Z - l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-          if (!qo.field_z) {
+          var9Lifetime2Lifetime1 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          if (!MatchingTextValidator.field_z) {
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_111_0 = (var9Lifetime2Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-            qo.field_z = stackIn_111_0;
+            stackIn_111_0 = (var9Lifetime2Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            MatchingTextValidator.field_z = stackIn_111_0;
           } else {
-            l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9Lifetime2Lifetime1;
+            l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime2Lifetime1;
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_115_0 = (var9Lifetime2Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-            qo.field_z = stackIn_115_0;
+            stackIn_115_0 = (var9Lifetime2Lifetime1 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            MatchingTextValidator.field_z = stackIn_115_0;
           }
           return (aa) (var4);
         }
-        l.field_p.field_Fb.field_nb = var7Lifetime1;
-        l.field_p.field_Fb.field_Z = var7Lifetime1 - l.field_p.field_Fb.field_nb;
-        if (si.field_P) {
-          l.field_p.field_Fb.field_wb = 0;
-          l.field_p.field_Fb.field_S = -l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-          qo.field_z = true;
-          si.field_P = false;
+        l.field_p.field_Fb.height = var7Lifetime1;
+        l.field_p.field_Fb.pendingHeightDelta = var7Lifetime1 - l.field_p.field_Fb.height;
+        if (DialWidget.field_P) {
+          l.field_p.field_Fb.pendingYDelta = 0;
+          l.field_p.field_Fb.field_S = -l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          MatchingTextValidator.field_z = true;
+          DialWidget.field_P = false;
         }
         if (!oo.field_d) {
-          var9Lifetime3 = -l.field_p.field_Fb.field_Z - l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-          if (!qo.field_z) {
+          var9Lifetime3 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+          if (!MatchingTextValidator.field_z) {
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_69_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-            qo.field_z = stackIn_69_0;
+            stackIn_69_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            MatchingTextValidator.field_z = stackIn_69_0;
           } else {
-            l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9Lifetime3;
+            l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime3;
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_73_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-            qo.field_z = stackIn_73_0;
+            stackIn_73_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            MatchingTextValidator.field_z = stackIn_73_0;
           }
         } else {
-          if (ko.field_eb != null) {
-            qo.field_z = true;
-            var9Lifetime3 = -l.field_p.field_Fb.field_Z - l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-            if (qo.field_z) {
-              l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9Lifetime3;
+          if (LoadingProgressDialog.field_eb != null) {
+            MatchingTextValidator.field_z = true;
+            var9Lifetime3 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            if (MatchingTextValidator.field_z) {
+              l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime3;
             }
             l.field_p.a(-100, param1, true, param2 * 2 * param1);
-            stackIn_81_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-            qo.field_z = stackIn_81_0;
+            stackIn_81_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+            MatchingTextValidator.field_z = stackIn_81_0;
           } else {
-            var9Lifetime3 = -l.field_p.field_Fb.field_Z - l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
-            if (!qo.field_z) {
+            var9Lifetime3 = -l.field_p.field_Fb.pendingHeightDelta - l.field_p.field_Fb.height + l.field_p.field_Ib.height;
+            if (!MatchingTextValidator.field_z) {
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_86_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-              qo.field_z = stackIn_86_0;
+              stackIn_86_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              MatchingTextValidator.field_z = stackIn_86_0;
             } else {
-              l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9Lifetime3;
+              l.field_p.field_Fb.pendingYDelta = -l.field_p.field_Fb.field_S + var9Lifetime3;
               l.field_p.a(-100, param1, true, param2 * 2 * param1);
-              stackIn_90_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.field_wb);
-              qo.field_z = stackIn_90_0;
+              stackIn_90_0 = (var9Lifetime3 == l.field_p.field_Fb.field_S + l.field_p.field_Fb.pendingYDelta);
+              MatchingTextValidator.field_z = stackIn_90_0;
             }
           }
         }
@@ -220,7 +220,7 @@ abstract class ah extends DualLinkNode {
     final static void a(int param0, byte param1) {
         try {
           try {
-            cq.a(ao.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
+            cq.a(AudioService.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
           } catch (Throwable throwable) {
           }
           if (param1 > 69) {

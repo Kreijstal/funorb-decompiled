@@ -5,7 +5,7 @@ final class pj {
     static Sprite field_a;
     private int field_h;
     private Sprite field_e;
-    static ak field_i;
+    static SceneWidget field_i;
     boolean field_f;
     private int field_b;
     private int field_g;
@@ -20,7 +20,7 @@ final class pj {
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0 <= 87) {
-            field_i = (ak) null;
+            field_i = (SceneWidget) null;
           }
           if (param1 ||
             io.field_c == null) {
@@ -35,10 +35,10 @@ final class pj {
               vn.field_g = vn.field_g - 1;
               return;
             }
-            if (0 >= h.field_W) {
+            if (0 >= Checkbox.field_W) {
               return;
             }
-            h.field_W = h.field_W - 1;
+            Checkbox.field_W = Checkbox.field_W - 1;
             return;
           }
           if (io.field_c != null) {
@@ -50,29 +50,29 @@ final class pj {
               vn.field_g = vn.field_g - 1;
               return;
             }
-            if (qh.field_c <= h.field_W) {
+            if (qh.field_c <= Checkbox.field_W) {
               return;
             }
-            if (0 == h.field_W) {
-              nl.a(false, -102);
+            if (0 == Checkbox.field_W) {
+              NodeHashTable.a(false, -102);
             }
-            h.field_W = h.field_W + 1;
+            Checkbox.field_W = Checkbox.field_W + 1;
             return;
           }
-          if (null != bn.field_S) {
+          if (null != DraggableWidget.field_S) {
             if (oo.field_b > 0) {
               oo.field_b = oo.field_b - 1;
               return;
             }
-            if (h.field_W > 0) {
-              h.field_W = h.field_W - 1;
+            if (Checkbox.field_W > 0) {
+              Checkbox.field_W = Checkbox.field_W - 1;
               return;
             }
             if (vn.field_g >= qh.field_c) {
               return;
             }
             if (vn.field_g == 0) {
-              nl.a(true, -71);
+              NodeHashTable.a(true, -71);
             }
             vn.field_g = vn.field_g + 1;
             return;
@@ -82,8 +82,8 @@ final class pj {
             vn.field_g = vn.field_g - 1;
             return;
           }
-          if (h.field_W > 0) {
-            h.field_W = h.field_W - 1;
+          if (Checkbox.field_W > 0) {
+            Checkbox.field_W = Checkbox.field_W - 1;
             return;
           }
           if (qh.field_c <= oo.field_b) {
@@ -118,13 +118,13 @@ final class pj {
           this.field_d = param3;
           this.field_f = false;
           this.field_j = 0;
-          var5_int = rk.field_e.c(param0);
+          var5_int = rk.field_e.textWidth(param0);
           if (var5_int > this.field_e.field_A) {
             this.field_e = new Sprite(10 + var5_int, this.field_e.field_B);
           }
           this.field_e.c();
           SoftwareRasterizer.d();
-          rk.field_e.b(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
+          rk.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
           ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

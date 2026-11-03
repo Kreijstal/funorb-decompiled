@@ -3,14 +3,14 @@
  */
 final class oi {
     static String field_b;
-    static ak field_e;
+    static SceneWidget field_e;
     static volatile int field_c;
     static String field_a;
     static String field_d;
 
-    final static boolean a(pl param0, int param1, boolean param2, String param3, byte param4, String param5, String param6) {
+    final static boolean a(AccountRegistrationPanel param0, int param1, boolean param2, String param3, byte param4, String param5, String param6) {
         RuntimeException var7 = null;
-        dm var8 = null;
+        RegistrationRequestDialog var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -22,19 +22,19 @@ final class oi {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wm.field_a != tm.field_X) {
+          if (wm.field_a != MarkerSlider.field_X) {
             return false;
           }
-          var8 = new dm(wa.field_c, param0);
+          var8 = new RegistrationRequestDialog(wa.field_c, param0);
           wa.field_c.b(-6183, var8);
           if (!og.a((byte) -96)) {
-            tm.field_X = rj.field_F;
+            MarkerSlider.field_X = Js5NetworkRequest.field_F;
             MouseWheelHandler.field_b = null;
-            oc.field_J = param2;
+            StripedProgressBar.field_J = param2;
             nk.field_b = param3;
             um.field_r = param1;
-            pm.field_s = param5;
-            vp.field_Nb = param6;
+            Match.field_s = param5;
+            VerticalScrollbar.field_Nb = param6;
           } else {
             var8.h((byte) -118);
           }
@@ -79,9 +79,9 @@ final class oi {
         try {
           if (param2 != -33) {
             String var4 = (String) null;
-            oi.a((pl) null, -20, true, (String) null, (byte) -44, (String) null, (String) null);
+            oi.a((AccountRegistrationPanel) null, -20, true, (String) null, (byte) -44, (String) null, (String) null);
           }
-          gf.a(param1, false, 32, param0);
+          ByteStorage.a(param1, false, 32, param0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -97,19 +97,19 @@ final class oi {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, uj param4, int param5, gp param6) {
-        wi var8 = null;
+    final static void a(int param0, int param1, int param2, byte param3, LobbyPlayer param4, int param5, ScrollContainer param6) {
+        ClientContextMenu var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         try {
           em.a(param4.field_Fb, param4.field_Nb, param4.field_Ub, -1, param4, -163, param6, (int[]) null, -1);
-          eg.field_n.b(true, (byte) -98);
-          eg.field_n.a(0, (int[]) null, -3);
+          ProxySocketConnector.field_n.b(true, (byte) -98);
+          ProxySocketConnector.field_n.a(0, (int[]) null, -3);
           int var7_int = -127 / ((param3 - 0) / 38);
-          eg.field_n.b(8893);
-          var8 = eg.field_n;
+          ProxySocketConnector.field_n.b(8893);
+          var8 = ProxySocketConnector.field_n;
           var9 = param0;
           var10 = param2;
           var11 = param5;

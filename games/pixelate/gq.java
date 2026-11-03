@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gq extends go {
+final class gq extends EmailCredentials {
     static String field_l;
     static String field_m;
     static int field_n;
@@ -67,7 +67,7 @@ final class gq extends go {
         if (param0 <= 55) {
           field_m = (String) null;
         }
-        stackIn_7_0 = (jg.a((byte) 59)) || !(uo.field_j > 0);
+        stackIn_7_0 = (ArrayWidgetContainer.a((byte) 59)) || !(BufferedRandomAccessFile.field_j > 0);
         return stackIn_7_0;
     }
 

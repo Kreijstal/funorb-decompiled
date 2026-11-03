@@ -44,23 +44,23 @@ final class um extends IntrusiveNode {
             var17[var12] = param2.a(var17[var12], (byte) 83);
           }
           if (param2.field_f[8] > 0) {
-            w.a(param10, param8 - param0, var18[1], param4 - param7, var18[0], var18[2], var18[3], param6, (byte) -43, param9);
+            StatefulTextPainter.a(param10, param8 - param0, var18[1], param4 - param7, var18[0], var18[2], var18[3], param6, (byte) -43, param9);
           } else {
-            w.a(param10, param8 - param0, var17[4], param4 - param7, var17[5], var17[7], var17[6], param6, (byte) -38, param9);
+            StatefulTextPainter.a(param10, param8 - param0, var17[4], param4 - param7, var17[5], var17[7], var17[6], param6, (byte) -38, param9);
           }
           if (param5 > -85) {
             um.a(-74);
           }
           if (param2.field_f[7] <= 0) {
-            w.a(param10, param3 - param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
+            StatefulTextPainter.a(param10, param3 - param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
           } else {
-            w.a(param10, param3 - param1, var18[4], -param0 + param8, var18[0], var18[1], var18[5], param6, (byte) -125, param9);
+            StatefulTextPainter.a(param10, param3 - param1, var18[4], -param0 + param8, var18[0], var18[1], var18[5], param6, (byte) -125, param9);
           }
           if (param2.field_f[6] > 0) {
-            w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
+            StatefulTextPainter.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
             return;
           }
-          w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
+          StatefulTextPainter.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,10 +76,10 @@ final class um extends IntrusiveNode {
         }
     }
 
-    final static tc a(fm param0, fm param1, int param2, int param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
-        tc stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -95,7 +95,7 @@ final class um extends IntrusiveNode {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (tc) (stackIn_4_0);
+          return (BinaryBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

@@ -6,8 +6,8 @@ import java.io.*;
 final class ep {
     static String field_d;
     static int[] field_c;
-    static ak field_a;
-    static jl field_b;
+    static SceneWidget field_a;
+    static BitmapFont field_b;
 
     final static int[] a(int[] param0, int param1) {
         int var7_int = 0;
@@ -359,18 +359,18 @@ final class ep {
           IOException var2 = null;
           var3 = Pixelate.field_H ? 1 : 0;
           try {
-            if (pm.field_h != null) {
-              pm.field_h.b((byte) 119);
+            if (Match.field_h != null) {
+              Match.field_h.b((byte) 119);
             }
             if (param0 != -26721) {
               return;
             }
-            if (fh.field_J != null) {
-              fh.field_J.a((byte) -92);
+            if (DisplayNameForm.field_J != null) {
+              DisplayNameForm.field_J.shutdown((byte) -92);
             }
-            if (null != rj.field_G) {
+            if (null != Js5NetworkRequest.field_G) {
               try {
-                rj.field_G.a(true);
+                Js5NetworkRequest.field_G.a(true);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -416,7 +416,7 @@ final class ep {
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 30022) {
-          field_a = (ak) null;
+          field_a = (SceneWidget) null;
         }
         stackIn_6_0 = (wp.a(-8798)) && ((8 & pa.field_b) == 0);
         return stackIn_6_0;

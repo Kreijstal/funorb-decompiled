@@ -4,15 +4,15 @@
 import java.util.*;
 
 final class bj {
-    static gp field_d;
+    static ScrollContainer field_d;
     static int field_a;
     static int[] field_b;
-    static ua[] field_c;
+    static MusicTrack[] field_c;
 
     final static void a(byte param0) {
         if (un.field_l) {
           SoftwareRasterizer.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
-          bn.field_I.a(false, 0);
+          DraggableWidget.field_I.a(false, 0);
         }
         if (param0 == 1) {
           return;
@@ -20,7 +20,7 @@ final class bj {
         field_b = (int[]) null;
     }
 
-    final static dd a(int param0, int param1) {
+    final static Puzzle a(int param0, int param1) {
         int var2 = 0;
         if (param0 >= 10) {
           if (10 > param0) {
@@ -50,6 +50,6 @@ final class bj {
     }
 
     static {
-        field_c = new ua[18];
+        field_c = new MusicTrack[18];
     }
 }

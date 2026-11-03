@@ -28,14 +28,14 @@ final class dq {
     }
 
     final static void a(int param0, int param1, og param2) {
-        pc var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (param1 != -18989) {
             field_c = (String) null;
           }
           var5 = aa.field_f;
-          pc var3 = var5;
+          CipherPacketBuffer var3 = var5;
           var5.g(param0, 15514);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -63,12 +63,12 @@ final class dq {
         int var1 = -55 % ((param0 + 67) / 53);
     }
 
-    final static hh a(byte param0, String param1, String param2, fm param3) {
+    final static IndexedSprite a(byte param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hh stackIn_2_0 = null;
-        hh stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -79,12 +79,12 @@ final class dq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 31) {
-            stackIn_2_0 = (hh) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var4_int = param3.a(117, param2);
-          var5 = param3.a((byte) -125, param1, var4_int);
-          stackIn_4_0 = lh.a(var4_int, param3, var5, 119);
+          var4_int = param3.getGroupId(117, param2);
+          var5 = param3.getFileId((byte) -125, param1, var4_int);
+          stackIn_4_0 = IsaacRandom.a(var4_int, param3, var5, 119);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

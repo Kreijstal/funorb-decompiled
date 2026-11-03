@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im extends ak {
+final class im extends SceneWidget {
     String field_Nb;
     static boolean field_Jb;
     static int field_Qb;
     static String field_Mb;
     static Sprite[] field_Hb;
-    ak field_Pb;
-    ak field_Ob;
+    SceneWidget field_Pb;
+    SceneWidget field_Ob;
     int field_Kb;
     String field_Ib;
     String field_Gb;
     static String field_Lb;
     String field_Fb;
-    ak field_Eb;
+    SceneWidget field_Eb;
     private static String field_Rb;
 
     public static void j(int param0) {
@@ -31,7 +31,7 @@ final class im extends ak {
     }
 
     im() {
-        super(0L, (ak) null);
+        super(0L, (SceneWidget) null);
     }
 
     static {

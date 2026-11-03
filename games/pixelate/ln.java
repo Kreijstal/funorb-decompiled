@@ -8,7 +8,7 @@ final class ln extends IntrusiveNode {
     static String[][] field_m;
     static int field_p;
     static String field_k;
-    pp field_o;
+    PcmSampleStream field_o;
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
@@ -36,7 +36,7 @@ final class ln extends IntrusiveNode {
                 ln.a(122);
               }
               var4 = (String) (cq.a("getcookies", (byte) -43, param0));
-              var5 = dd.a(var4, (byte) -37, ';');
+              var5 = Puzzle.a(var4, (byte) -37, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -49,10 +49,10 @@ final class ln extends IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (jp.field_c == null) {
+            if (ArchiveProvider.field_c == null) {
               return param0.getParameter("settings");
             }
-            stackIn_16_0 = jp.field_c;
+            stackIn_16_0 = ArchiveProvider.field_c;
             return stackIn_16_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -83,8 +83,8 @@ final class ln extends IntrusiveNode {
     }
 
     ln(int param0) {
-        this.field_o = pp.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
-        mn.a(-21317, this.field_o);
+        this.field_o = PcmSampleStream.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
+        TextLayoutLine.a(-21317, this.field_o);
     }
 
     final static void a(int param0) {
@@ -94,13 +94,13 @@ final class ln extends IntrusiveNode {
         if (null == ib.field_f) {
           return;
         }
-        pf.a(ib.field_f, 0);
+        MenuInputState.a(ib.field_f, 0);
         ib.field_f.a(6511, mc.field_k);
         ib.field_f = null;
-        if (vh.field_c != null) {
-          vh.field_c.b(-101);
+        if (GzipDecoder.field_c != null) {
+          GzipDecoder.field_c.b(-101);
         }
-        ec.field_u.requestFocus();
+        NameAvailabilityValidator.field_u.requestFocus();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

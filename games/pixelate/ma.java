@@ -7,9 +7,9 @@ final class ma extends bg {
     private int field_v;
     private int field_A;
     private boolean field_w;
-    static jl field_y;
+    static BitmapFont field_y;
     private int field_r;
-    static bb field_o;
+    static IntrusiveDeque field_o;
     private int field_m;
     private int field_s;
     private int[] field_t;
@@ -25,7 +25,7 @@ final class ma extends bg {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        rl var4_ref_rl = null;
+        TriangleMesh var4_ref_rl = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -39,14 +39,14 @@ final class ma extends bg {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        rl var17 = null;
+        TriangleMesh var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        rl var17Lifetime1;
-        rl var17Lifetime2;
+        TriangleMesh var17Lifetime1;
+        TriangleMesh var17Lifetime2;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -67,17 +67,17 @@ final class ma extends bg {
             var4_ref_rl = ck.field_b[var3];
             var17 = var4_ref_rl;
             var17Lifetime2 = var4_ref_rl;
-            var4_ref_rl.a((byte) -17);
-            g.a(var3, 67);
+            var4_ref_rl.ensureBounds((byte) -17);
+            PasswordValidator.a(var3, 67);
             var5 = var4_ref_rl.field_c + var4_ref_rl.field_b >> 1;
             var6 = var4_ref_rl.field_F + var4_ref_rl.field_t >> 1;
             var7 = var4_ref_rl.field_g + var4_ref_rl.field_x >> 1;
             var8 = bg.field_a[9] >> 2;
             var9 = bg.field_a[10] >> 2;
             var10_int = bg.field_a[11] >> 2;
-            var11 = var8 * oe.field_Hb[3] + (var9 * oe.field_Hb[4] + var10_int * oe.field_Hb[5]) >> 14;
-            var12 = var9 * oe.field_Hb[7] + var8 * oe.field_Hb[6] + oe.field_Hb[8] * var10_int >> 14;
-            var13 = var10_int * oe.field_Hb[11] + var9 * oe.field_Hb[10] + var8 * oe.field_Hb[9] >> 14;
+            var11 = var8 * ReportAbuseDialog.field_Hb[3] + (var9 * ReportAbuseDialog.field_Hb[4] + var10_int * ReportAbuseDialog.field_Hb[5]) >> 14;
+            var12 = var9 * ReportAbuseDialog.field_Hb[7] + var8 * ReportAbuseDialog.field_Hb[6] + ReportAbuseDialog.field_Hb[8] * var10_int >> 14;
+            var13 = var10_int * ReportAbuseDialog.field_Hb[11] + var9 * ReportAbuseDialog.field_Hb[10] + var8 * ReportAbuseDialog.field_Hb[9] >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var12 * var6 >> 16;
           }
           if (param0 != 106) {
@@ -116,11 +116,11 @@ final class ma extends bg {
             }
             var21[var16] = -2147483648;
             var17Lifetime1 = ck.field_b[var16];
-            g.a(var16, 100);
+            PasswordValidator.a(var16, 100);
             for (var18 = 0; var18 < 3; var18++) {
-              oe.field_Hb[var18] = oe.field_Hb[var18] + wc.field_p[var15][var18];
+              ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + wc.field_p[var15][var18];
             }
-            qm.a(var17Lifetime1, bg.field_a, false, oe.field_Hb, (byte) 98, true, false);
+            TextButton.a(var17Lifetime1, bg.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
             uk.a(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);
           }
           return;
@@ -157,17 +157,17 @@ final class ma extends bg {
         var3 = -io.field_d + var1;
         if (30000L < var3) {
           io.field_d = var1;
-          on.field_ob = 0;
+          LoginDialog.field_ob = 0;
           return true;
         }
         var5 = 3000;
-        if (on.field_ob >= 7) {
+        if (LoginDialog.field_ob >= 7) {
           var5 = 12000;
         } else {
-          if (on.field_ob >= 5) {
+          if (LoginDialog.field_ob >= 5) {
             var5 = 9000;
           } else {
-            if (on.field_ob >= 3) {
+            if (LoginDialog.field_ob >= 3) {
               var5 = 6000;
             }
           }
@@ -175,7 +175,7 @@ final class ma extends bg {
         if (var3 <= (long)var5) {
           return false;
         }
-        on.field_ob = on.field_ob + 1;
+        LoginDialog.field_ob = LoginDialog.field_ob + 1;
         io.field_d = var1;
         return true;
     }
@@ -187,7 +187,7 @@ final class ma extends bg {
           } catch (InterruptedException interruptedException) {
           }
           if (param0 != 37) {
-            field_o = (bb) null;
+            field_o = (IntrusiveDeque) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -245,9 +245,9 @@ final class ma extends bg {
           for (var5 = var3; var4 > var5; var5 += 2) {
             if (var5 != 0) {
               if (0 > var5) {
-                stackIn_22_0 = kp.field_z;
+                stackIn_22_0 = QuickChatPhraseDefinition.field_z;
               } else {
-                stackIn_22_0 = kp.field_w;
+                stackIn_22_0 = QuickChatPhraseDefinition.field_w;
               }
               var10 = stackIn_22_0;
               var9 = var10;
@@ -271,7 +271,7 @@ final class ma extends bg {
         if (0 < this.field_v) {
           var3Lifetime1 = 2;
         }
-        ll.field_m[var3Lifetime1].b(-8 + (this.field_v + 320), -10 + this.field_m);
+        JaggrabDownloader.field_m[var3Lifetime1].b(-8 + (this.field_v + 320), -10 + this.field_m);
     }
 
     final void a(int param0, boolean param1) {
@@ -346,6 +346,6 @@ final class ma extends bg {
     }
 
     static {
-        field_o = new bb();
+        field_o = new IntrusiveDeque();
     }
 }

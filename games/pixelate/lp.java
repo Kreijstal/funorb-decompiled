@@ -31,24 +31,24 @@ final class lp {
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           var1_int = 0;
-          while (bh.$cfr$intArgs$b$c4997cb15529(107)) {
-            vp.field_Gb.a((byte) -48);
-            if (!vp.field_Gb.a(121)) {
+          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(107)) {
+            VerticalScrollbar.field_Gb.a((byte) -48);
+            if (!VerticalScrollbar.field_Gb.isActivated(121)) {
               continue;
             }
             var1_int = 1;
           }
-          vp.field_Gb.a(ec.a(false, uo.field_a, ji.field_c), ec.a(false, ProxyAuthenticationException.field_d, bg.field_k), -1);
+          VerticalScrollbar.field_Gb.a(NameAvailabilityValidator.a(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, bg.field_k), -1);
           if (param0 != 2) {
             field_d = 101;
           }
-          if (vp.field_Gb.a(117)) {
+          if (VerticalScrollbar.field_Gb.isActivated(117)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            vp.field_Gb.field_j >= 0) {
-            var2 = di.field_b[vp.field_Gb.field_j];
+            VerticalScrollbar.field_Gb.field_j >= 0) {
+            var2 = di.field_b[VerticalScrollbar.field_Gb.field_j];
             if (2 == var2) {
               un.a(true);
             }
@@ -89,7 +89,7 @@ final class lp {
           for (var7 = -var3; var7 < 0; var7++) {
             incrementValue$0 = var5;
             var5++;
-            SoftwareRasterizer.field_k[incrementValue$0] = SoftwareRasterizer.field_k[incrementValue$0] + uj.field_Ob;
+            SoftwareRasterizer.field_k[incrementValue$0] = SoftwareRasterizer.field_k[incrementValue$0] + LobbyPlayer.field_Ob;
           }
           var5 = var5 + var4;
         }

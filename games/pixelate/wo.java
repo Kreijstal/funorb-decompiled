@@ -5,7 +5,7 @@ import java.util.*;
 
 final class wo {
     static int field_d;
-    od field_g;
+    TabbedPanel field_g;
     static String field_e;
     static String field_b;
     static String field_a;
@@ -13,13 +13,13 @@ final class wo {
     static Sprite field_c;
     static int field_h;
 
-    wo(String param0, ak param1) {
+    wo(String param0, SceneWidget param1) {
         String[] var3 = null;
-        ak[] var4 = null;
+        SceneWidget[] var4 = null;
         try {
-          var3 = new String[]{param0, a.field_J, fl.field_c};
-          var4 = new ak[]{param1, wa.field_f, (ak) ((Object) MouseWheelHandler.field_e)};
-          this.field_g = new od(0L, ab.field_a, var3, vl.field_J, var4, 0);
+          var3 = new String[]{param0, NameSuggestionsPanel.field_J, fl.field_c};
+          var4 = new SceneWidget[]{param1, wa.field_f, (SceneWidget) ((Object) MouseWheelHandler.field_e)};
+          this.field_g = new TabbedPanel(0L, ab.field_a, var3, AccountMessagePanel.field_J, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -35,17 +35,17 @@ final class wo {
         wa.field_b = 1000000000L / (long)param0;
     }
 
-    final static de b(int param0, int param1) {
+    final static MenuScreen b(int param0, int param1) {
         int var2 = -108 / ((34 - param0) / 49);
-        return oc.field_H[param1];
+        return StripedProgressBar.field_H[param1];
     }
 
-    final static dd a(int param0, int param1, Random param2, byte param3) {
+    final static Puzzle a(int param0, int param1, Random param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
-        dd stackIn_9_0 = null;
-        dd stackIn_11_0 = null;
+        Puzzle stackIn_9_0 = null;
+        Puzzle stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -60,10 +60,10 @@ final class wo {
             var4_int = 1;
           }
           if (param3 == 116) {
-            stackIn_11_0 = mc.a(param2, param1, var4_int != 0, tm.field_Y[param0], -67);
+            stackIn_11_0 = mc.a(param2, param1, var4_int != 0, MarkerSlider.field_Y[param0], -67);
             return stackIn_11_0;
           }
-          stackIn_9_0 = (dd) null;
+          stackIn_9_0 = (Puzzle) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,10 +83,10 @@ final class wo {
         int var6 = 24;
         int var7 = param4;
         this.field_g.a(-19360, param2, var7, param0, param1, var6, param3);
-        ak.field_E.a(0, fq.field_q, 0, param4 ^ 261, wa.field_f.field_K);
-        kc.field_u.a(fq.field_q + 2, 18, 0, 256, -2 + (-DelegatingCanvas.field_b + (wa.field_f.field_K - 2) - 80));
+        SceneWidget.field_E.a(0, fq.field_q, 0, param4 ^ 261, wa.field_f.field_K);
+        EmailConfirmationValidator.field_u.a(fq.field_q + 2, 18, 0, 256, -2 + (-DelegatingCanvas.field_b + (wa.field_f.field_K - 2) - 80));
         ae.field_e.a(fq.field_q + 2, 18, -80 + (-2 + (-DelegatingCanvas.field_b + wa.field_f.field_K)), 256, 82 + DelegatingCanvas.field_b);
-        ma.field_z.a(0, wa.field_f.field_K, 20, fq.field_q + 2 + 20, false, DelegatingCanvas.field_b, 2, -fq.field_q + wa.field_f.field_nb - 22);
+        ma.field_z.a(0, wa.field_f.field_K, 20, fq.field_q + 2 + 20, false, DelegatingCanvas.field_b, 2, -fq.field_q + wa.field_f.height - 22);
         MouseWheelHandler.field_e.a(20, true, 2, DelegatingCanvas.field_b);
     }
 
@@ -105,8 +105,8 @@ final class wo {
     }
 
     final static void c(int param0, int param1) {
-        pc var2 = null;
-        pc var2Lifetime1;
+        CipherPacketBuffer var2 = null;
+        CipherPacketBuffer var2Lifetime1;
         if (param0 == -1) {
           var2 = aa.field_f;
           var2.g(param1, 15514);
@@ -127,18 +127,18 @@ final class wo {
         int var3 = Pixelate.field_H ? 1 : 0;
         try {
           var1 = new Sprite(50, 30);
-          pm.field_l = new Sprite[param0];
+          Match.field_l = new Sprite[param0];
           for (var2 = 3; var2 > 0; var2--) {
             var1.c();
             SoftwareRasterizer.d();
-            rk.field_e.b(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
-            pm.field_l[-var2 + 3] = new Sprite(150, 90);
-            pm.field_l[3 - var2].c();
+            rk.field_e.drawCentered(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
+            Match.field_l[-var2 + 3] = new Sprite(150, 90);
+            Match.field_l[3 - var2].c();
             var1.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           }
           ClientException.field_f.a(param0 ^ 19695);
-          jg.field_J = rk.field_e.c(bb.field_e);
-          rf.field_n = rk.field_e.c(po.field_j);
+          ArrayWidgetContainer.field_J = rk.field_e.textWidth(IntrusiveDeque.field_e);
+          Js5Transport.field_n = rk.field_e.textWidth(SoundCache.field_j);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
         }
@@ -156,7 +156,7 @@ final class wo {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = uc.a(param0, param5, param4, param2, param3, true);
+          var8 = TextWidgetPainter.a(param0, param5, param4, param2, param3, true);
           var6 = var8;
           if (param1 != 150) {
             stackIn_2_0 = (FullscreenFocusCanvas) null;

@@ -3,15 +3,15 @@
  */
 final class dg {
     static boolean field_a;
-    static fm field_d;
-    static vg field_f;
+    static ResourceArchive field_d;
+    static SecondaryNodeHashTable field_f;
     static String field_b;
     static String[] field_c;
     static String field_e;
 
     final static void a(boolean param0, int param1, int param2, String param3, String param4, int param5) {
         int var7 = 0;
-        pc var8 = aa.field_f;
+        CipherPacketBuffer var8 = aa.field_f;
         var8.g(param5, 15514);
         var8.position = var8.position + 1;
         if (!param0) {
@@ -24,7 +24,7 @@ final class dg {
             var8.b((byte) -41, param4);
           }
           if (param3 != null) {
-            hn.a(!param0 ? true : false, param3, var8);
+            DebouncedValidator.a(!param0 ? true : false, param3, var8);
           } else {
             var8.writeShort(1276387944, param2);
           }

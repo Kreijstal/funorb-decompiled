@@ -66,7 +66,7 @@ final class vf {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (dd.a(param1, (byte) 122)) {
+          if (Puzzle.a(param1, (byte) 122)) {
             return true;
           }
           var2 = wh.field_r;
@@ -81,7 +81,7 @@ final class vf {
             }
             var3++;
           }
-          var2Lifetime1 = uh.field_b;
+          var2Lifetime1 = PlayerController.field_b;
           for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime1.length; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (param1 == var4Lifetime1) {
@@ -97,16 +97,16 @@ final class vf {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        gp stackIn_3_0 = null;
+        ScrollContainer stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         boolean stackIn_4_2 = false;
-        ak stackIn_20_0 = null;
+        SceneWidget stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        bb var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         im var6 = null;
         int var7 = 0;
@@ -118,20 +118,20 @@ final class vf {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        wi var17 = null;
-        wi var18 = null;
+        ClientContextMenu var17 = null;
+        ClientContextMenu var18 = null;
         var15 = Pixelate.field_H ? 1 : 0;
         try {
           stackIn_3_0 = MouseWheelHandler.field_e.field_Gb;
           stackIn_3_1 = param0;
           stackIn_4_2 = (bj.field_d == MouseWheelHandler.field_e.field_Gb);
-          var3_int = ((gp) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, 3 * (fq.field_q + 2) * param2, param1 ^ param1, 2 + fq.field_q) ? 1 : 0;
-          var4 = MouseWheelHandler.field_e.field_Fb.field_L;
-          if (2 != gk.field_db &&
-            1 != gk.field_db) {
+          var3_int = ((ScrollContainer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, 3 * (fq.field_q + 2) * param2, param1 ^ param1, 2 + fq.field_q) ? 1 : 0;
+          var4 = MouseWheelHandler.field_e.field_Fb.children;
+          if (2 != ValidatedTextWidget.field_db &&
+            1 != ValidatedTextWidget.field_db) {
             MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
             MouseWheelHandler.field_e.field_rb = false;
-            wd.a(MouseWheelHandler.field_e.field_Fb, false);
+            GrowableIntList.a(MouseWheelHandler.field_e.field_Fb, false);
             return;
           }
           MouseWheelHandler.field_e.field_rb = true;
@@ -140,10 +140,10 @@ final class vf {
           var6 = (im) (var4.c(1504642273));
           while (var6 != null) {
             var7 = 0;
-            if (null == var6.field_L) {
-              var6.field_Pb = new ak(0L, ak.field_T);
+            if (null == var6.children) {
+              var6.field_Pb = new SceneWidget(0L, SceneWidget.field_T);
               var6.a(var6.field_Pb, (byte) 26);
-              var6.field_Ob = new ak(0L, ak.field_T);
+              var6.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
               var6.a(var6.field_Ob, (byte) 26);
               var6.h(-257);
               var7 = 1;
@@ -168,17 +168,17 @@ final class vf {
             if (0 >= var10) {
               stackIn_21_1 = var6.field_Fb;
             } else {
-              stackIn_21_1 = jl.a(var6.field_Pb.field_Db, var6.field_Fb, var10);
+              stackIn_21_1 = BitmapFont.a(var6.field_Pb.font, var6.field_Fb, var10);
             }
             stackIn_20_0.field_cb = stackIn_21_1;
             stackIn_24_0 = (var6.field_Pb.field_cb.equals(var6.field_Fb)) ? 0 : 1;
             var11 = stackIn_24_0;
             var6.field_Pb.a(0, fq.field_q, var9, param1 + 256, var10);
             if (var3_int == 0) {
-              var6.field_Z = fq.field_q - var6.field_nb;
+              var6.pendingHeightDelta = fq.field_q - var6.height;
             }
             if (var7 != 0) {
-              MouseWheelHandler.field_e.field_Fb.a(var6, 2, -1, (ak) (var5));
+              MouseWheelHandler.field_e.field_Fb.positionAfter(var6, 2, -1, (SceneWidget) (var5));
             }
             if (var6.field_Ob != null &&
               var6.field_Ob.field_W) {
@@ -191,25 +191,25 @@ final class vf {
             }
             if (var6.field_P != 0) {
               em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
-              var17 = eg.field_n;
-              var13_ref_String = k.field_n;
-              var17.field_b.a(var13_ref_String, (byte) -107, 7);
-              var18 = eg.field_n;
-              var13 = uo.field_a;
+              var17 = ProxySocketConnector.field_n;
+              var13_ref_String = NanoTickClock.field_n;
+              var17.field_b.addAction(var13_ref_String, (byte) -107, 7);
+              var18 = ProxySocketConnector.field_n;
+              var13 = BufferedRandomAccessFile.field_a;
               var14 = ji.field_c;
               var18.field_b.b(0, var13, 43, var14, 0);
             }
             var5 = var6;
-            var6 = (im) (var4.f(1504642273));
+            var6 = (im) (var4.last(1504642273));
           }
           if (MouseWheelHandler.field_e.field_Ib.field_P != 0) {
-            he.field_f = new ve(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.field_gb, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.field_nb, dp.field_p, po.field_c, mg.field_h, mg.field_h);
+            he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.screenY, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.height, dp.field_p, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
             il.field_e = 2;
           }
           if (MouseWheelHandler.field_e.field_Hb.field_P == 0) {
             return;
           }
-          he.field_f = new ve(MouseWheelHandler.field_e.field_Hb.field_tb, MouseWheelHandler.field_e.field_Hb.field_gb, MouseWheelHandler.field_e.field_Hb.field_K, MouseWheelHandler.field_e.field_Hb.field_nb, ProxyAuthenticationException.field_f, po.field_c, mg.field_h, mg.field_h);
+          he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Hb.field_tb, MouseWheelHandler.field_e.field_Hb.screenY, MouseWheelHandler.field_e.field_Hb.field_K, MouseWheelHandler.field_e.field_Hb.height, ProxyAuthenticationException.field_f, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
           il.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

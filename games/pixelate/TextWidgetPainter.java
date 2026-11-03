@@ -1,0 +1,899 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
+    int field_e;
+    int field_j;
+    private int field_p;
+    static String field_m;
+    int field_c;
+    int field_h;
+    int field_k;
+    BitmapFont field_a;
+    static boolean field_n;
+    private boolean field_i;
+    int field_g;
+    int field_f;
+    int field_o;
+    static int[] field_b;
+    int field_d;
+    int field_l;
+
+    private final void a(int param0, UiComponent param1, int param2, int param3) {
+        try {
+          if (param0 > -71) {
+            UiComponent var6 = (UiComponent) null;
+            this.a(74, (UiComponent) null, (byte) -48);
+          }
+          this.a(0, this.field_p, param1, param2, this.field_g, param3, -3, 0);
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "uc.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final static void a(int param0, byte param1) {
+        if (param1 <= 124) {
+          TextWidgetPainter.a(117, (byte) 117);
+        }
+        CipherPacketBuffer var2 = aa.field_f;
+        var2.g(param0, 15514);
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
+        var2.writeByte(160, 5);
+        var2.writeByte(160, io.field_c.field_ec);
+        int var4 = io.field_c.field_Ib + (io.field_c.field_Tb << 6);
+        var2.writeByte(160, var4);
+        var2.a(io.field_c.field_Eb.length, 0, -3493, io.field_c.field_Eb);
+        var2.f(var2.position - var3, -1);
+    }
+
+    public final int a(int param0) {
+        if (param0 != -3) {
+          java.awt.Canvas var3 = (java.awt.Canvas) null;
+          TextWidgetPainter.a(false, -120, (java.awt.Canvas) null);
+        }
+        return this.field_a.maxDescent + this.field_a.maxAscent;
+    }
+
+    public final int a(byte param0, UiComponent param1, int param2) {
+        RuntimeException var4 = null;
+        UiComponent var5 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 69) {
+            var5 = (UiComponent) null;
+            this.getPreferredWidth(113, (UiComponent) null);
+          }
+          stackIn_3_0 = this.b(param2, param1, 2, 0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("uc.T(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void b(int param0) {
+        field_b = null;
+        field_m = null;
+        if (param0 > -107) {
+          field_b = (int[]) null;
+        }
+    }
+
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, boolean param5) {
+        int var8 = 0;
+        Object stackIn_3_0 = null;
+        Object stackIn_7_0 = null;
+        java.awt.Frame stackIn_29_0 = null;
+        Object stackIn_35_0 = null;
+        Object stackIn_39_0 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_43_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        bo[] var6 = null;
+        RuntimeException var6_ref = null;
+        int var7_int = 0;
+        java.awt.Frame var7 = null;
+        int var9 = 0;
+        bo[] var10 = null;
+        PlatformTask var11 = null;
+        var9 = Pixelate.field_H ? 1 : 0;
+        try {
+          if (!param0.a((byte) -125)) {
+            stackIn_3_0 = null;
+            return (java.awt.Frame) (stackIn_3_0);
+          }
+          if (0 == param1) {
+            var10 = BackgroundScene.a(param0, -855969982);
+            var6 = var10;
+            if (var6 == null) {
+              stackIn_7_0 = null;
+              return (java.awt.Frame) (stackIn_7_0);
+            }
+            var7_int = 0;
+            for (var8 = 0; var8 < var10.length; var8++) {
+              if (var10[var8].field_l == param2 &&
+                var10[var8].field_i == param3 && ((param4 == 0 ||
+                var10[var8].field_g == param4) &&
+                (var7_int == 0 ||
+                !(param1 >= var10[var8].field_j)))) {
+                var7_int = 1;
+                param1 = var10[var8].field_j;
+              }
+            }
+            if (var7_int == 0) {
+              return null;
+            }
+          }
+          if (!param5) {
+            stackIn_29_0 = (java.awt.Frame) null;
+            return stackIn_29_0;
+          }
+          var11 = param0.a(param1, param3, param2, 27705, param4);
+          while (var11.field_b == 0) {
+            SecondaryNodeHashTable.a(10L, (byte) 23);
+          }
+          var7 = (java.awt.Frame) (var11.field_e);
+          if (var7 == null) {
+            stackIn_35_0 = null;
+            return (java.awt.Frame) (stackIn_35_0);
+          }
+          if (var11.field_b != 2) {
+            return var7;
+          }
+          dc.a((byte) -124, var7, param0);
+          stackIn_39_0 = null;
+          return (java.awt.Frame) (stackIn_39_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          stackIn_42_0 = var6_ref;
+          stackIn_42_1 = new StringBuilder().append("uc.FA(");
+          if (param0 == null) {
+            stackIn_43_2 = "null";
+          } else {
+            stackIn_43_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    public void drawWidget(UiComponent param0, byte param1, int param2, int param3, boolean param4) {
+        if (param1 != -124) {
+          return;
+        }
+        if (this.field_a == null) {
+          return;
+        }
+        try {
+          this.a(-115, param0, param2, param3);
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "uc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+    }
+
+    final static String a(aa param0, int param1) {
+        String stackIn_31_0 = null;
+        Object stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object var2 = null;
+        String var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        String var6 = null;
+        var5 = Pixelate.field_H ? 1 : 0;
+        try {
+          var2 = null;
+          if (param0.field_m != null) {
+            var6 = param0.field_m;
+            var2 = var6;
+            var2 = var6;
+            var2 = var6;
+            if (1 == param0.field_i) {
+              var2 = "<img=0>" + var6;
+            }
+            if (param0.field_i == 2) {
+              var2 = "<img=1>" + (String) (var2);
+            }
+          }
+          var4 = -2 / ((54 - param1) / 62);
+          var3 = "";
+          if (param0.field_j != 2) {
+            if (param0.field_j == 0 &&
+              ge.field_f) {
+              var3 = "[" + ul.field_m + "] ";
+            }
+            if (1 == param0.field_j) {
+              var3 = "[" + sd.a(fk.field_q, 106, new String[]{param0.field_h}) + "] ";
+            }
+            if (param0.field_j == 4 &&
+              null != TextLayoutLine.field_f) {
+              var3 = "[" + TextLayoutLine.field_f + "] ";
+            }
+            if (param0.field_j == 3) {
+              var3 = "[#" + param0.field_h + "] ";
+            }
+            if (!param0.field_a) {
+              var3 = var3 + (String) (var2) + ": ";
+            }
+          } else {
+            if (!param0.field_a) {
+              if (param0.field_d == 0 &&
+                param0.field_e == 0) {
+                var3 = sd.a(dg.field_b, 77, new String[]{(String) (var2)});
+              } else {
+                var3 = sd.a(sk.field_c, 109, new String[]{(String) (var2)});
+              }
+            }
+          }
+          stackIn_31_0 = var3;
+          return stackIn_31_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_34_0 = var2;
+          stackIn_34_1 = new StringBuilder().append("uc.LA(");
+          if (param0 == null) {
+            stackIn_35_2 = "null";
+          } else {
+            stackIn_35_2 = "{...}";
+          }
+          throw aa.a((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final int b(int param0, UiComponent param1, int param2, int param3) {
+        RuntimeException var5 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 == 2) {
+            stackIn_4_0 = param1.field_B + param1.field_z + (param0 - (-this.field_h - param3));
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = -19;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = var5;
+          stackIn_7_1 = new StringBuilder().append("uc.DA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final int c(int param0, UiComponent param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3_int = 124 / ((param0 - 39) / 54);
+          stackIn_1_0 = param1.field_C - this.field_k - this.field_f;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("uc.BA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+        }
+    }
+
+    public final TextLayout getTextLayout(int param0, UiComponent param1) {
+        RuntimeException var3 = null;
+        TextLayout stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1.field_r == null) {
+            param1.field_r = (TextLayout) ((Object) new CachedTextLayout());
+          }
+          if (this.field_i) {
+            ((CachedTextLayout) (param1.field_r)).a(this.getAvailableTextHeight(true, param1), -1, this.getDisplayText(param1, -472248767), this.field_a, this.c(-114, param1), this.field_l, this.field_d, this.field_j);
+          } else {
+            this.d(3, param1);
+          }
+          if (param0 >= -28) {
+            this.field_d = -33;
+          }
+          stackIn_8_0 = param1.field_r;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("uc.U(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    public final int a(int param0, UiComponent param1, byte param2) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4_int = -10 % ((param2 - 12) / 61);
+          stackIn_1_0 = this.computeTextX(45, 0, param0, param1);
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_4_0 = var4;
+          stackIn_4_1 = new StringBuilder().append("uc.O(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public final void drawSelection(int param0, UiComponent param1, int param2, int param3, int param4, int param5) {
+        int var12 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        TextLayoutLine var13 = null;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        UiComponent var17 = null;
+        TextLayout var18 = null;
+        TextLayout var19 = null;
+        var16 = Pixelate.field_H ? 1 : 0;
+        try {
+          if (param2 != -1) {
+            var17 = (UiComponent) null;
+            this.a(-51, -38, 41, 14, 84, (UiComponent) null);
+          }
+          if (param0 == param3) {
+            return;
+          }
+          if (param1.b(true)) {
+            var18 = this.getTextLayout(param2 ^ 44, param1);
+            var19 = var18;
+            if (param0 >= param3) {
+              var8 = param3;
+              var9 = param0;
+            } else {
+              var9 = param3;
+              var8 = param0;
+            }
+            var10 = var19.getLineIndex(false, var8);
+            var11 = var19.getLineIndex(false, var9);
+            hp.a(param1.field_z + param5, param4 + (param1.field_p + param1.field_C), param1.field_E + (param5 + param1.field_z), (byte) -104, param4 + param1.field_p);
+            for (var12 = var10; var11 >= var12; var12++) {
+              var13 = var18.lines[var12];
+              if (var10 != var12) {
+                stackIn_15_0 = var13.field_g[0];
+              } else {
+                stackIn_15_0 = var19.b(true, var8);
+              }
+              var14 = stackIn_15_0;
+              if (var12 != var11) {
+                if (var13 == null) {
+                  stackIn_20_0 = 0;
+                } else {
+                  stackIn_20_0 = var13.field_g[-1 + var13.field_g.length];
+                }
+              } else {
+                stackIn_20_0 = var19.b(true, var9);
+              }
+              var15 = stackIn_20_0;
+              Checkbox.field_X.a(this.field_o >>> 24, this.field_o, this.b(param5, param1, 2, var14), var13.field_d, var15 - var14, -90, param1.field_x + (param4 + param1.field_p + (this.field_k + var13.field_b)));
+            }
+            LinkButtonPainter.a((byte) 92);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_25_0 = var7;
+          stackIn_25_1 = new StringBuilder().append("uc.W(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    final void copyStyleTo(TextWidgetPainter param0, byte param1) {
+        try {
+          param0.field_k = this.field_k;
+          param0.field_f = this.field_f;
+          param0.field_a = this.field_a;
+          param0.field_g = this.field_g;
+          param0.field_d = this.field_d;
+          if (param1 < 125) {
+            this.field_o = -99;
+          }
+          param0.field_e = this.field_e;
+          param0.field_h = this.field_h;
+          param0.field_j = this.field_j;
+          param0.field_o = this.field_o;
+          param0.field_i = this.field_i;
+          param0.field_c = this.field_c;
+          param0.field_p = this.field_p;
+          param0.field_l = this.field_l;
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "uc.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    private final int computeTextX(int param0, int param1, int param2, UiComponent param3) {
+        RuntimeException var5 = null;
+        UiComponent var6 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 < 41) {
+            var6 = (UiComponent) null;
+            this.d(-45, (UiComponent) null);
+          }
+          stackIn_3_0 = param2 + (param3.field_p + this.field_k) - (-param3.field_x - param1);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("uc.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    String getDisplayText(UiComponent param0, int param1) {
+        RuntimeException var3 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -472248767) {
+            this.field_a = (BitmapFont) null;
+          }
+          stackIn_3_0 = param0.field_q;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("uc.M(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void a(boolean param0, int param1, java.awt.Canvas param2) {
+        int var3_int = 0;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        var5 = Pixelate.field_H ? 1 : 0;
+        try {
+          var3_int = 72 / ((param1 - 19) / 45);
+          if (hf.field_q >= 10) {
+            if (RegistrationRequestDialog.q(22452)) {
+              if (el.field_b != 0) {
+                DialWidget.a(-1913, param2);
+              } else {
+                RegistrationRequestDialog.a(false, param0, 0);
+                fj.a(0, 0, (byte) -82, param2);
+              }
+            } else {
+              SoftwareRasterizer.d();
+              io.a(240, (byte) -99, 320);
+              fj.a(0, 0, (byte) 119, param2);
+            }
+          } else {
+            var4 = 0;
+            if (MusicPatch.field_s) {
+              MusicPatch.field_s = false;
+              var4 = 1;
+            }
+            LoginDialog.a(true, var4 != 0, IndexedSpriteState.field_i, NodeHashTable.a(false), sc.c(16422));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_14_0 = var3;
+          stackIn_14_1 = new StringBuilder().append("uc.KA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
+    }
+
+    public final void a(int param0, int param1, byte param2, UiComponent param3, int param4) {
+        TextLayout var7 = null;
+        int var8 = 0;
+        TextLayoutLine var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        try {
+          int var6_int = 97 % ((-46 - param2) / 40);
+          if (param3.b(true)) {
+            var7 = this.getTextLayout(-86, param3);
+            var8 = var7.getLineIndex(false, param4);
+            var9 = var7.lines[var8];
+            var10 = var7.b(true, param4);
+            var11 = this.b(param0, param3, 2, var10);
+            var12 = this.a(param1, param3, (byte) 80) + Math.max(0, var9.field_b);
+            var13 = this.a(param1, param3, (byte) -57) + Math.min(this.c(101, param3), Math.min(var9.field_d, var7.lines.length <= 1 + var8 ? var9.field_d : var7.lines[1 + var8].field_b));
+            hp.a(param0 + param3.field_z, param3.field_p + param1 + param3.field_C, param3.field_E + param0 + param3.field_z, (byte) -91, param1 + param3.field_p);
+            Checkbox.field_X.a(var12, var13, var11, var11, this.field_e, false);
+            LinkButtonPainter.a((byte) 92);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "uc.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+        }
+    }
+
+    public final int getAvailableTextHeight(boolean param0, UiComponent param1) {
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0) {
+            stackIn_4_0 = -this.field_c - this.field_h + param1.field_E;
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = -103;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("uc.R(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    public final int getPreferredWidth(int param0, UiComponent param1) {
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.getTextLayout(-82, param1);
+          if (param0 == 14871) {
+            stackIn_4_0 = param1.field_r.a(0) - (-this.field_h - this.field_c);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = -70;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("uc.Q(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    public final int a(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
+        RuntimeException var7 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.getTextLayout(-80, param5);
+          if (param2 != 0) {
+            this.field_e = 41;
+          }
+          stackIn_3_0 = param5.field_r.a(param4 - this.a(param0, param5, (byte) -70), param2 + 126, -this.a((byte) 69, param5, param1) + param3);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_6_0 = var7;
+          stackIn_6_1 = new StringBuilder().append("uc.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    public final int getPreferredWidth(UiComponent param0, int param1) {
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.getTextLayout(-36, param0);
+          if (param1 == 4592) {
+            stackIn_4_0 = param0.field_r.b(1) - (-this.field_k - this.field_f);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = -5;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("uc.V(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final void a(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6, int param7) {
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var12Lifetime1;
+        var13 = Pixelate.field_H ? 1 : 0;
+        try {
+          hp.a(param2.field_z + param5, param2.field_C + param3 + param2.field_p, param2.field_E + param5 + param2.field_z, (byte) -103, param2.field_p + param3);
+          if (param6 != -3) {
+            this.field_i = false;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          var9_int = this.getAvailableTextHeight(true, param2);
+          var10 = this.c(113, param2);
+          if (!this.field_i) {
+            var12 = this.field_d;
+            if (var12 != 0) {
+              if (var12 == 2) {
+                var11 = var10 - this.field_a.maxDescent;
+              } else {
+                if (3 != var12 &&
+                  var12 != 1) {
+                }
+                var11 = (-this.field_a.maxDescent + (var10 - this.field_a.maxAscent) >> 1) + this.field_a.maxAscent;
+              }
+            } else {
+              var11 = this.field_a.maxAscent;
+            }
+            var12Lifetime1 = this.field_l;
+            if (0 != var12Lifetime1 &&
+              3 != var12Lifetime1) {
+              if (1 == var12Lifetime1) {
+                this.field_a.drawCentered(this.getDisplayText(param2, -472248767), (var9_int >> 1) + this.b(param5, param2, param6 + 5, param7), this.computeTextX(99, param0, param3, param2) + var11, param4, param1);
+              } else {
+                if ((var12Lifetime1 == 2)) {
+                  this.field_a.drawRightAlignedText(this.getDisplayText(param2, -472248767), var9_int + this.b(param5, param2, 2, param7), this.computeTextX(param6 + 59, param0, param3, param2) + var11, param4, param1);
+                }
+              }
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              this.field_a.drawText(this.getDisplayText(param2, param6 - 472248764), this.b(param5, param2, 2, param7), var11 + this.computeTextX(88, param0, param3, param2), param4, param1);
+            }
+          } else {
+            this.field_a.drawParagraph(this.getDisplayText(param2, -472248767), this.b(param5, param2, 2, param7), this.computeTextX(95, param0, param3, param2), var9_int, var10, param4, param1, this.field_l, this.field_d, this.field_j);
+          }
+          LinkButtonPainter.a((byte) 92);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9 = decompiledCaughtException;
+          stackIn_28_0 = var9;
+          stackIn_28_1 = new StringBuilder().append("uc.GA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+        }
+    }
+
+    protected TextWidgetPainter() {
+    }
+
+    private final void d(int param0, UiComponent param1) {
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_36_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var6Lifetime1;
+        var7 = Pixelate.field_H ? 1 : 0;
+        try {
+          if (null == param1.field_r) {
+            param1.field_r = (TextLayout) ((Object) new CachedTextLayout());
+          }
+          var3_int = this.getAvailableTextHeight(true, param1);
+          var4 = this.c(-94, param1);
+          var6 = this.field_d;
+          if (var6 != 0) {
+            if (var6 != 2) {
+              if (var6 != 3 &&
+                var6 == 1) {
+              }
+              var5 = this.field_a.maxAscent + (-this.field_a.maxDescent + var4 - this.field_a.maxAscent >> 1);
+            } else {
+              var5 = -this.field_a.maxDescent + var4;
+            }
+          } else {
+            var5 = this.field_a.maxAscent;
+          }
+          if (param0 != 3) {
+            this.field_j = 122;
+          }
+          var6Lifetime1 = this.field_l;
+          if (var6Lifetime1 != 0 &&
+            var6Lifetime1 != 3) {
+            if (1 == var6Lifetime1) {
+              if (!(param1.field_r instanceof CachedTextLayout)) {
+                return;
+              }
+              ((CachedTextLayout) (param1.field_r)).a(this.getDisplayText(param1, param0 - 472248770), false, var5, this.field_a, var3_int >> 1);
+              return;
+            }
+            if (var6Lifetime1 != 2) {
+              return;
+            }
+            if (!(param1.field_r instanceof CachedTextLayout)) {
+              return;
+            }
+            ((CachedTextLayout) (param1.field_r)).a(this.field_a, var5, var3_int, false, this.getDisplayText(param1, -472248767));
+            return;
+          }
+          if (param1.field_r instanceof CachedTextLayout) {
+            ((CachedTextLayout) (param1.field_r)).a(this.getDisplayText(param1, -472248767), var5, this.field_a, 0, 61);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_35_0 = var3;
+          stackIn_35_1 = new StringBuilder().append("uc.HA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_36_2 = "null";
+          } else {
+            stackIn_36_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+        }
+    }
+
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+        try {
+          this.field_f = param4;
+          this.field_i = param12 ? true : false;
+          this.field_e = param10;
+          this.field_j = param9;
+          this.field_o = param11;
+          this.field_c = param2;
+          this.field_g = param5;
+          this.field_h = param1;
+          this.field_d = param8;
+          this.field_a = param0;
+          this.field_k = param3;
+          this.field_l = param7;
+          this.field_p = param6;
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+        }
+    }
+
+    static {
+        field_m = "Macroing or use of bots";
+    }
+}

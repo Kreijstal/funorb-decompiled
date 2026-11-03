@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends jj {
+final class qi extends BackgroundScene {
     private int field_m;
-    private bb field_n;
+    private IntrusiveDeque field_n;
     static String field_o;
     static boolean[] field_p;
 
@@ -11,7 +11,7 @@ final class qi extends jj {
         if (param0 != 6388) {
           return -3;
         }
-        return jg.l(72);
+        return ArrayWidgetContainer.l(72);
     }
 
     public static void b(byte param0) {
@@ -27,8 +27,8 @@ final class qi extends jj {
         if (!param0) {
           var4 = (jn) (this.field_n.c(1504642273));
           while (var4 != null) {
-            sn.a(var4, 1183261192);
-            var4 = (jn) (this.field_n.f(1504642273));
+            MusicPatch.a(var4, 1183261192);
+            var4 = (jn) (this.field_n.last(1504642273));
           }
           return;
         }
@@ -53,7 +53,7 @@ final class qi extends jj {
           var2.field_x = var2.field_x + 1;
           if (var2.field_w <= fieldTemp$1) {
             var2.field_x = 0;
-            var3 = ii.c(5, (byte) -120);
+            var3 = MatchController.c(5, (byte) -120);
             stackIn_7_0 = var2;
             if (var3 != var2.field_n) {
               stackIn_8_1 = var3;
@@ -68,26 +68,26 @@ final class qi extends jj {
           if (var2.field_r > 148480) {
             var2.c(2779);
           }
-          var2 = (jn) (this.field_n.f(param0 + 1504642274));
+          var2 = (jn) (this.field_n.last(param0 + 1504642274));
         }
         int fieldTemp$0 = this.field_m - 1;
         this.field_m = this.field_m - 1;
         if (~fieldTemp$0 <= param0) {
           return;
         }
-        this.field_n.a(22125, new jn(od.a((byte) 41, 189440, -25600), -25600));
-        this.field_m = od.a((byte) 41, 75, 25);
+        this.field_n.addFirst(22125, new jn(TabbedPanel.a((byte) 41, 189440, -25600), -25600));
+        this.field_m = TabbedPanel.a((byte) 41, 75, 25);
     }
 
     qi(String param0, Sprite[] param1) {
         super(param0, param1);
         int var3_int = 0;
         try {
-          this.field_n = new bb();
+          this.field_n = new IntrusiveDeque();
           for (var3_int = 0; 5 > var3_int; var3_int++) {
-            this.field_n.a(22125, new jn(od.a((byte) 41, 189440, -25600), od.a((byte) 41, 148480, -25600)));
+            this.field_n.addFirst(22125, new jn(TabbedPanel.a((byte) 41, 189440, -25600), TabbedPanel.a((byte) 41, 148480, -25600)));
           }
-          this.field_m = od.a((byte) 41, 75, 25);
+          this.field_m = TabbedPanel.a((byte) 41, 75, 25);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

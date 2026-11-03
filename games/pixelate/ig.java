@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig {
-    static tc field_d;
+    static BinaryBitmapFont field_d;
     static io field_e;
     static String field_c;
     static Sprite[][] field_a;
-    static fm field_b;
+    static ResourceArchive field_b;
 
     final static String a(int param0, char param1) {
         if (param0 < 123) {
@@ -26,21 +26,21 @@ final class ig {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 200) {
-            field_b = (fm) null;
+            field_b = (ResourceArchive) null;
           }
-          if (qo.field_n == rj.field_F) {
+          if (MatchingTextValidator.field_n == Js5NetworkRequest.field_F) {
             stackIn_4_0 = null;
             return (id) (stackIn_4_0);
           }
-          if (qo.field_n == h.field_N &&
-            param1.equals(uh.field_m)) {
-            qo.field_n = wm.field_a;
-            stackIn_8_0 = jc.field_f;
+          if (MatchingTextValidator.field_n == Checkbox.field_N &&
+            param1.equals(PlayerController.field_m)) {
+            MatchingTextValidator.field_n = wm.field_a;
+            stackIn_8_0 = SpriteCheckboxPainter.field_f;
             return stackIn_8_0;
           }
-          qo.field_n = rj.field_F;
-          uh.field_m = param1;
-          jc.field_f = null;
+          MatchingTextValidator.field_n = Js5NetworkRequest.field_F;
+          PlayerController.field_m = param1;
+          SpriteCheckboxPainter.field_f = null;
           stackIn_10_0 = null;
           return (id) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,8 +76,8 @@ final class ig {
         cm var2Lifetime1;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          to.field_t.b();
-          ib.field_h.b();
+          to.field_t.serviceOutput();
+          ib.field_h.serviceOutput();
           var1_int = -121 % ((param0 - 54) / 39);
           e.field_a = e.field_a - 1;
           if (e.field_a == 0) {
@@ -87,15 +87,15 @@ final class ig {
               if (!var2.field_k.b(0)) {
                 var2.c(2779);
               }
-              var2 = (cm) (bo.field_d.f(1504642273));
+              var2 = (cm) (bo.field_d.last(1504642273));
             }
-            if (rg.field_b != null) {
-              var2Lifetime1 = (cm) (rg.field_b.c(1504642273));
+            if (LoginCredentials.field_b != null) {
+              var2Lifetime1 = (cm) (LoginCredentials.field_b.c(1504642273));
               while (var2Lifetime1 != null) {
                 if (!var2Lifetime1.field_k.b(0)) {
                   var2Lifetime1.c(2779);
                 }
-                var2Lifetime1 = (cm) (rg.field_b.f(1504642273));
+                var2Lifetime1 = (cm) (LoginCredentials.field_b.last(1504642273));
               }
             }
           }

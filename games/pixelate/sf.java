@@ -14,12 +14,12 @@ final class sf {
         int var2 = Pixelate.field_H ? 1 : 0;
         int var1_intLifetime1;
         try {
-          gn.field_y.a(true);
+          ArchiveRequest.field_y.a(true);
           for (var1_int = param0; 32 > var1_int; var1_int++) {
             rh.field_x[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-            gf.field_a[var1_intLifetime1] = 0L;
+            ByteStorage.field_a[var1_intLifetime1] = 0L;
           }
           id.field_b = 0;
         } catch (RuntimeException runtimeException) {

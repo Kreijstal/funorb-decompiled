@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fq extends de {
-    static jj field_o;
+final class fq extends MenuScreen {
+    static BackgroundScene field_o;
     static String field_p;
     static int field_q;
 
@@ -16,7 +16,7 @@ final class fq extends de {
 
     final int b(int param0, int param1) {
         int var3 = -58 % ((-13 - param0) / 37);
-        if (jg.a((byte) 88)) {
+        if (ArrayWidgetContainer.a((byte) 88)) {
           return (this.field_i >> 1) + this.field_d;
         }
         if (param1 < 2) {
@@ -33,7 +33,7 @@ final class fq extends de {
         if (param1 != 90) {
           return 74;
         }
-        if (jg.a((byte) 62)) {
+        if (ArrayWidgetContainer.a((byte) 62)) {
           return param0 != 0 ? 470 : 50;
         }
         int var3 = param0 > 1 ? -2 + param0 : param0;
@@ -45,7 +45,7 @@ final class fq extends de {
         int var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
-        if (jg.a((byte) 115)) {
+        if (ArrayWidgetContainer.a((byte) 115)) {
           this.field_g.a(53, 0);
           return;
         }
@@ -100,11 +100,11 @@ final class fq extends de {
           fq.g((byte) 97);
         }
         stackIn_5_1 = 35;
-        if (jg.a((byte) 101) &&
+        if (ArrayWidgetContainer.a((byte) 101) &&
           param2 == 0) {
-          stackIn_7_2 = oc.field_S;
+          stackIn_7_2 = StripedProgressBar.field_S;
         } else {
-          stackIn_7_2 = oc.field_N;
+          stackIn_7_2 = StripedProgressBar.field_N;
         }
         super.a((byte) stackIn_5_1, stackIn_7_2, param1, param2);
     }
@@ -121,7 +121,7 @@ final class fq extends de {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           if (param1 != 64) {
-            field_o = (jj) null;
+            field_o = (BackgroundScene) null;
           }
           if (null == param0.field_g) {
             return;
@@ -129,7 +129,7 @@ final class fq extends de {
           if (param0.field_d != 0 ||
             param0.field_e != 0) {
             for (var2_int = 0; var2_int < sd.field_L; var2_int++) {
-              var3 = de.field_e[var2_int];
+              var3 = MenuScreen.field_e[var2_int];
               if (var3.field_j == 2 &&
                 var3.field_d == param0.field_d &&
                 var3.field_e == param0.field_e) {
@@ -139,7 +139,7 @@ final class fq extends de {
           }
           if (param0.field_l != null) {
             um.field_o = param0.field_n;
-            vi.field_F = param0.field_k;
+            MusicCrossfadeStream.field_F = param0.field_k;
             up.field_h = param0.field_l;
             hm.field_b = param0.field_j;
           }
@@ -164,7 +164,7 @@ final class fq extends de {
           field_q = -11;
         }
         int var3 = (-(2 * this.field_m) + 640) / 2;
-        if (!jg.a((byte) 116)) {
+        if (!ArrayWidgetContainer.a((byte) 116)) {
           return this.a(param0, (byte) 90) + var3;
         }
         if (0 == param0) {
@@ -174,14 +174,14 @@ final class fq extends de {
     }
 
     final void c(byte param0) {
-        la.a(this.field_l, nc.field_a, false, -25528);
+        la.a(this.field_l, TickClock.field_a, false, -25528);
         if (param0 >= -13) {
           field_q = -93;
         }
     }
 
     final static void g(byte param0) {
-        ql.a(ao.a(13867), -7624);
+        ql.a(AudioService.a(13867), -7624);
         if (param0 >= -46) {
           fq.g((byte) -70);
         }
@@ -191,7 +191,7 @@ final class fq extends de {
         int stackIn_15_0 = 0;
         String stackIn_28_0 = null;
         String var2;
-        ob var3_ref_ob;
+        PaletteBitmapFont var3_ref_ob;
         int var3;
         ue var4;
         String[] var5;
@@ -210,14 +210,14 @@ final class fq extends de {
         String var2Lifetime1;
         regionExit1: {
           var16 = Pixelate.field_H ? 1 : 0;
-          gj.field_W[5].b(0, 45);
+          NumericDateInputWidget.field_W[5].b(0, 45);
           this.b((byte) -71);
           this.d((byte) -63);
-          if (jg.a((byte) 74)) {
+          if (ArrayWidgetContainer.a((byte) 74)) {
             var2 = wo.field_a;
           } else {
             if (aa.field_p == null) {
-              aa.field_p = g.a(3, (byte) 103, 1, 10, 0);
+              aa.field_p = PasswordValidator.a(3, (byte) 103, 1, 10, 0);
             }
             var3_ref_ob = rk.field_e;
             var4 = aa.field_p;
@@ -230,10 +230,10 @@ final class fq extends de {
                 var8 = 16777215;
                 var9 = 0;
                 var10 = 16711680;
-                var11 = var3_ref_ob.field_w + 150;
-                var3_ref_ob.c(kh.field_b, 150, var11, 0, 0);
-                var3_ref_ob.a(ij.field_q, 170, var11, 0, 0);
-                var3_ref_ob.c(lo.field_Kb, 500, var11, 0, 0);
+                var11 = var3_ref_ob.maxAscent + 150;
+                var3_ref_ob.drawRightAlignedText(kh.field_b, 150, var11, 0, 0);
+                var3_ref_ob.drawText(ij.field_q, 170, var11, 0, 0);
+                var3_ref_ob.drawRightAlignedText(lo.field_Kb, 500, var11, 0, 0);
                 var11 += 20;
                 for (var12 = 0; var12 < 10; var12++) {
                   if (var5[var12] != null) {
@@ -241,9 +241,9 @@ final class fq extends de {
                     var14 = var5[var12];
                     stackIn_15_0 = (var12 == var7) ? var10 : var8;
                     var15 = stackIn_15_0;
-                    qj.field_e.c(1 + var12 + ". ", 140, var11, var15, var9);
-                    qj.field_e.a(var14, 180, var11, var15, var9);
-                    qj.field_e.c(Integer.toString(var13), 480, var11, var15, var9);
+                    qj.field_e.drawRightAlignedText(1 + var12 + ". ", 140, var11, var15, var9);
+                    qj.field_e.drawText(var14, 180, var11, var15, var9);
+                    qj.field_e.drawRightAlignedText(Integer.toString(var13), 480, var11, var15, var9);
                     var2 = "";
                   }
                   var11 += 15;
@@ -251,29 +251,29 @@ final class fq extends de {
                 if (((null != wh.field_p)) &&
                   ((var7 == -1))) {
                   var12Lifetime1 = wh.field_p.field_k[0];
-                  qj.field_e.a(kn.field_J, 180, var11, var8, var9);
-                  qj.field_e.c(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
+                  qj.field_e.drawText(ModalStack.field_J, 180, var11, var8, var9);
+                  qj.field_e.drawRightAlignedText(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
                 }
                 break regionExit1;
               }
-              var2 = pf.field_l;
+              var2 = MenuInputState.field_l;
             } else {
-              var2 = wd.field_b;
+              var2 = GrowableIntList.field_b;
             }
           }
         }
         if (param0 != 11) {
-          field_o = (jj) null;
+          field_o = (BackgroundScene) null;
         }
-        var3 = 225 + rk.field_e.field_w;
-        rk.field_e.b(var2, 330, var3, 0, 0);
-        if (jg.a((byte) 96)) {
+        var3 = 225 + rk.field_e.maxAscent;
+        rk.field_e.drawCentered(var2, 330, var3, 0, 0);
+        if (ArrayWidgetContainer.a((byte) 96)) {
           stackIn_28_0 = mj.field_h;
         } else {
-          stackIn_28_0 = pf.field_b;
+          stackIn_28_0 = MenuInputState.field_b;
         }
         var2Lifetime1 = stackIn_28_0;
-        qj.field_e.b(var2Lifetime1, 320, 330 + (rk.field_e.field_w + 12), 14540253, 3355443);
+        qj.field_e.drawCentered(var2Lifetime1, 320, 330 + (rk.field_e.maxAscent + 12), 14540253, 3355443);
     }
 
     static {

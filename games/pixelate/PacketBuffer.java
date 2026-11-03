@@ -6,7 +6,7 @@ class PacketBuffer extends IntrusiveNode {
     static String[] field_o;
     int position;
     static String field_l;
-    static fm field_p;
+    static ResourceArchive field_p;
     byte[] payload;
 
     final int j(int param0) {
@@ -218,7 +218,7 @@ class PacketBuffer extends IntrusiveNode {
           this.payload[fieldTemp$0] = (byte) 0;
         }
         if (!param1) {
-          field_p = (fm) null;
+          field_p = (ResourceArchive) null;
         }
     }
 
@@ -290,7 +290,7 @@ class PacketBuffer extends IntrusiveNode {
     final int b(int param0, byte param1) {
         int var3 = da.a(this.payload, (byte) 122, param0, this.position);
         if (param1 <= 27) {
-          field_p = (fm) null;
+          field_p = (ResourceArchive) null;
         }
         this.d(var3, -104);
         return var3;
@@ -373,8 +373,8 @@ class PacketBuffer extends IntrusiveNode {
           var4 = dh.a(param2, (byte) 58);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!ii.a((byte) 123, var4.charAt(0)) &&
-              !ii.a((byte) 124, var4.charAt(var4.length() - 1))) {
+            if (!MatchController.a((byte) 123, var4.charAt(0)) &&
+              !MatchController.a((byte) 124, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               var6 = 0;
               if (param1 != 5832) {
@@ -383,7 +383,7 @@ class PacketBuffer extends IntrusiveNode {
               stackIn_25_0 = (CharSequence) (param2);
               while (((CharSequence) (Object) stackIn_25_0).length() > var6) {
                 var7 = param2.charAt(var6);
-                if (!ii.a((byte) 119, (char) var7)) {
+                if (!MatchController.a((byte) 119, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;
@@ -599,29 +599,29 @@ class PacketBuffer extends IntrusiveNode {
     final static void b(boolean param0) {
         wg.field_b = SoftwareRasterizer.field_d;
         ni.field_q = SoftwareRasterizer.field_j;
-        c.m(21);
-        cl.field_g.a(ql.field_n.field_K, -2 + (-40 + ql.field_n.field_nb), 0, 0, 5);
-        gk.field_lb.a(0, fq.field_q, 0, 256, vd.field_c.field_K);
+        EditableTextWidget.m(21);
+        cl.field_g.a(ql.field_n.field_K, -2 + (-40 + ql.field_n.height), 0, 0, 5);
+        ValidatedTextWidget.field_lb.a(0, fq.field_q, 0, 256, vd.field_c.field_K);
         int var1 = 2 + fq.field_q;
-        oc.field_O.a(!f.field_n ? 0 : var1, vd.field_c.field_nb - (!f.field_n ? 0 : var1), 0, 256, vd.field_c.field_K);
+        StripedProgressBar.field_O.a(!DialWidgetPainter.field_n ? 0 : var1, vd.field_c.height - (!DialWidgetPainter.field_n ? 0 : var1), 0, 256, vd.field_c.field_K);
         mi.b(param0);
-        gk.field_cb.a(-40 + ql.field_n.field_nb, 40, 0, 256, ql.field_n.field_K);
-        sd.field_P.a(0, 30, 0, 256, ti.field_E.field_K);
-        gm.field_a.a(30, -70 + ti.field_E.field_nb - 2, 0, 256, ti.field_E.field_K);
+        ValidatedTextWidget.field_cb.a(-40 + ql.field_n.height, 40, 0, 256, ql.field_n.field_K);
+        sd.field_P.a(0, 30, 0, 256, MidiPcmStream.field_E.field_K);
+        DiskCacheWorker.field_a.a(30, -70 + MidiPcmStream.field_E.height - 2, 0, 256, MidiPcmStream.field_E.field_K);
         wc.field_n.a(5, 30, 5, 256, 68);
-        lh.field_b.a(5, 30, 75, 256, 78);
-        on.field_pb.a(5, 30, 155, 256, 48);
+        IsaacRandom.field_b.a(5, 30, 75, 256, 78);
+        LoginDialog.field_pb.a(5, 30, 155, 256, 48);
         be.field_P.a(5, 30, 205, 256, 48);
-        int var2 = f.field_n ? 250 : 200;
-        g.field_o.a(5, 30, var2 + 5, 256, 363 - var2);
-        wn.field_t.a(5, 30, 370, 256, -375 + ti.field_E.field_K);
-        aj.field_k.a(5, 2, (byte) 52, -5 + gm.field_a.field_K - 5, 37, -10 + gm.field_a.field_nb - 32, DelegatingCanvas.field_b);
-        int var3 = (2 + ti.field_E.field_K) / 2;
-        lg.field_c.a(-40 + ti.field_E.field_nb, 40, 0, 256, var3 - 2);
-        if (!f.field_n) {
+        int var2 = DialWidgetPainter.field_n ? 250 : 200;
+        PasswordValidator.field_o.a(5, 30, var2 + 5, 256, 363 - var2);
+        SocketJs5Transport.field_t.a(5, 30, 370, 256, -375 + MidiPcmStream.field_E.field_K);
+        aj.field_k.a(5, 2, (byte) 52, -5 + DiskCacheWorker.field_a.field_K - 5, 37, -10 + DiskCacheWorker.field_a.height - 32, DelegatingCanvas.field_b);
+        int var3 = (2 + MidiPcmStream.field_E.field_K) / 2;
+        lg.field_c.a(-40 + MidiPcmStream.field_E.height, 40, 0, 256, var3 - 2);
+        if (!DialWidgetPainter.field_n) {
           var3 = 0;
         }
-        in.field_p.a(-40 + ti.field_E.field_nb, 40, var3, 256, -var3 + ti.field_E.field_K);
+        MusicPatchNode.field_p.a(-40 + MidiPcmStream.field_E.height, 40, var3, 256, -var3 + MidiPcmStream.field_E.field_K);
     }
 
     final void a(int param0, int param1) {
@@ -667,7 +667,7 @@ class PacketBuffer extends IntrusiveNode {
             if (var6 <= var7) {
               this.position = var5_int;
               if (param1 != 19324) {
-                field_p = (fm) null;
+                field_p = (ResourceArchive) null;
               }
               return;
             }
@@ -783,7 +783,7 @@ class PacketBuffer extends IntrusiveNode {
         while (param0 != 0L) {
           var7 = param0;
           param0 = param0 / 37L;
-          var9 = gg.field_h[(int)(var7 - param0 * 37L)];
+          var9 = CachedArchiveProvider.field_h[(int)(var7 - param0 * 37L)];
           if (var9 == 95) {
             var10 = var6.length() - 1;
             var9 = 160;

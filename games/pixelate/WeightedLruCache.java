@@ -1,0 +1,234 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class WeightedLruCache {
+    static int field_j;
+    private int remainingCapacity;
+    static SceneWidget field_h;
+    private SecondaryNodeDeque field_g;
+    static int[] field_b;
+    static String field_d;
+    static String field_i;
+    private IterableNodeHashTable field_e;
+    static int field_c;
+    private int field_a;
+
+    private final void a(Object param0, boolean param1, long param2, int param3) {
+        ah var6 = null;
+        tj var6_ref = null;
+        int var7 = Pixelate.field_H ? 1 : 0;
+        if (this.field_a < param3) {
+          throw new IllegalStateException();
+        }
+        this.a(param2, (byte) 11);
+        if (!param1) {
+          return;
+        }
+        try {
+          this.remainingCapacity = this.remainingCapacity - param3;
+          while (this.remainingCapacity < 0) {
+            var6 = (ah) (this.field_g.a(113));
+            this.removeEntry(var6, -26133);
+          }
+          var6_ref = new tj(param0, param3);
+          this.field_e.a(var6_ref, param2, -1);
+          this.field_g.a((byte) 99, var6_ref);
+          ((ah) ((Object) var6_ref)).field_q = 0L;
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final void a(long param0, Object param1, byte param2) {
+        try {
+          this.a(param1, true, param0, 1);
+          if (param2 <= 75) {
+            WeightedLruCache.a(false);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "le.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final static void a(boolean param0) {
+        jd.field_r = 0;
+        if (!param0) {
+          WeightedLruCache.a(-100);
+        }
+    }
+
+    private final void a(long param0, byte param1) {
+        ah var4 = (ah) (this.field_e.a(1, param0));
+        if (param1 == 11) {
+          this.removeEntry(var4, -26133);
+          return;
+        }
+        field_j = -95;
+        this.removeEntry(var4, -26133);
+    }
+
+    final Object a(long param0, int param1) {
+        Object var5;
+        tj var6;
+        ah var7;
+        tj var6Lifetime1;
+        var7 = (ah) (this.field_e.a(param1 ^ 1, param0));
+        if (var7 == null) {
+          return null;
+        }
+        var5 = var7.a((byte) -55);
+        if (param1 == 0) {
+          if (var5 == null) {
+            var7.c(2779);
+            var7.e(17);
+            this.remainingCapacity = this.remainingCapacity + var7.field_t;
+            return null;
+          }
+          if (var7.b(true)) {
+            var6 = new tj(var5, var7.field_t);
+            this.field_e.a(var6, var7.field_e, -1);
+            this.field_g.a((byte) 83, var6);
+            ((ah) ((Object) var6)).field_q = 0L;
+            var7.c(2779);
+            var7.e(param1 ^ 17);
+          } else {
+            this.field_g.a((byte) 91, var7);
+            var7.field_q = 0L;
+          }
+          return var5;
+        }
+        WeightedLruCache.a(107);
+        if (var5 == null) {
+          var7.c(2779);
+          var7.e(17);
+          this.remainingCapacity = this.remainingCapacity + var7.field_t;
+          return null;
+        }
+        if (var7.b(true)) {
+          var6Lifetime1 = new tj(var5, var7.field_t);
+          this.field_e.a(var6Lifetime1, var7.field_e, -1);
+          this.field_g.a((byte) 83, var6Lifetime1);
+          ((ah) ((Object) var6Lifetime1)).field_q = 0L;
+          var7.c(2779);
+          var7.e(param1 ^ 17);
+        } else {
+          this.field_g.a((byte) 91, var7);
+          var7.field_q = 0L;
+        }
+        return var5;
+    }
+
+    private final void removeEntry(ah param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -26133) {
+            field_c = -20;
+          }
+          if (param0 == null) {
+            return;
+          }
+          param0.c(2779);
+          param0.e(17);
+          this.remainingCapacity = this.remainingCapacity + param0.field_t;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("le.B(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static int a(CharSequence param0, byte param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var6 = Pixelate.field_H ? 1 : 0;
+        try {
+          var2_int = param0.length();
+          var3 = 0;
+          var4 = 0;
+          var5 = -16 / ((-26 - param1) / 59);
+          while (var2_int > var4) {
+            var3 = (var3 << 5) - var3 + MenuInputState.a((byte) -118, param0.charAt(var4));
+            var4++;
+          }
+          stackIn_5_0 = var3;
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("le.C(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void a(int param0) {
+        field_h = null;
+        field_b = null;
+        if (param0 == 1) {
+          field_i = null;
+          field_d = null;
+          return;
+        }
+        field_d = (String) null;
+        field_i = null;
+        field_d = null;
+    }
+
+    WeightedLruCache(int param0) {
+        this(param0, param0);
+    }
+
+    private WeightedLruCache(int param0, int param1) {
+        int var3;
+        this.field_g = new SecondaryNodeDeque();
+        this.remainingCapacity = param0;
+        this.field_a = param0;
+        var3 = 1;
+        while (true) {
+          if (param0 <= var3 + var3) {
+            this.field_e = new IterableNodeHashTable(var3);
+            return;
+          }
+          if (param1 > var3) {
+            var3 = var3 + var3;
+            continue;
+          }
+          break;
+        }
+        this.field_e = new IterableNodeHashTable(var3);
+        return;
+    }
+
+    static {
+        field_b = new int[8192];
+        field_d = "Unable to add name - system busy";
+        field_i = "Try changing the following settings:  ";
+        field_c = 0;
+    }
+}

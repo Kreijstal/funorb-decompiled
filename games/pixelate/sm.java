@@ -6,7 +6,7 @@ final class sm extends IntrusiveNode {
     static String field_n;
     static boolean field_l;
     int field_p;
-    static ak field_m;
+    static SceneWidget field_m;
     static String field_k;
 
     final static boolean a(String param0, int param1) {
@@ -22,7 +22,7 @@ final class sm extends IntrusiveNode {
             return true;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_4_0 = eq.field_Hb.equals(dh.a(var3, (byte) 72));
+          stackIn_4_0 = LobbyGame.field_Hb.equals(dh.a(var3, (byte) 72));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class sm extends IntrusiveNode {
             }
             if (var5 != null) {
               var6 = (String) null;
-              ti.a(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
+              MidiPcmStream.a(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
             }
           }
           he.field_f = null;
@@ -138,7 +138,7 @@ final class sm extends IntrusiveNode {
           return;
         }
         var6Lifetime1 = (String) null;
-        ti.a(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
+        MidiPcmStream.a(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
         he.field_f = null;
         il.field_e = -1;
         return;

@@ -47,35 +47,35 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          pc var4 = null;
-          pc var5 = null;
+          CipherPacketBuffer var4 = null;
+          CipherPacketBuffer var5 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (ra.field_b == null) {
-            ra.field_b = op.field_p.a(param0 ^ 20278, ii.field_B, gd.field_g);
+            ra.field_b = op.field_p.a(param0 ^ 20278, MatchController.field_B, gd.field_g);
           }
           if (param0 == ra.field_b.field_b) {
             return false;
           }
           dupTemp$1 = hm.a(64);
           aj.field_m = dupTemp$1;
-          jc.field_c = dupTemp$1;
+          SpriteCheckboxPainter.field_c = dupTemp$1;
           if (ra.field_b.field_b != 1) {
             uk.field_s = jm.field_q;
           } else {
             try {
               NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (ra.field_b.field_e), op.field_p);
               aa.field_f.position = 0;
-              var4 = vi.field_o;
+              var4 = MusicCrossfadeStream.field_o;
               var5 = var4;
               uk.field_s = ij.field_o;
               var5.position = 0;
               stackIn_11_0 = (param1) ? -2 : -1;
               oj.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;
-              tm.field_U = stackIn_11_0;
-              al.a(pc.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
-              vg.b(-1, 10000);
+              MarkerSlider.field_U = stackIn_11_0;
+              FallingPieceView.a(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
+              SecondaryNodeHashTable.b(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
@@ -167,7 +167,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != fj.field_c) {
             oi.field_c = 0;
-            c.field_X = param0.getX();
+            EditableTextWidget.field_X = param0.getX();
             IntrusiveNode.field_j = param0.getY();
             hm.a(64);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
@@ -255,11 +255,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static hh a(hh param0, boolean param1, int[] param2) {
-        hh var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, boolean param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        hh stackIn_2_0 = null;
-        hh stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -267,16 +267,16 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new hh(0, 0, 0);
-          var3.field_o = param2;
+          var3 = new IndexedSprite(0, 0, 0);
+          var3.palette = param2;
           var3.field_h = param0.field_h;
           var3.field_f = param0.field_f;
           if (param1) {
-            stackIn_2_0 = (hh) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var3.field_d = param0.field_d;
-          var3.field_n = param0.field_n;
+          var3.indices = param0.indices;
           var3.field_m = param0.field_m;
           var3.field_a = param0.field_a;
           var3.field_g = param0.field_g;
@@ -302,9 +302,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static fm a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 != 124) {
-          return (fm) null;
+          return (ResourceArchive) null;
         }
         return el.a(-115, true, false, param0, 1, false);
     }
@@ -330,175 +330,175 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         bi var1Lifetime1;
         bi var1Lifetime2;
         var2 = Pixelate.field_H ? 1 : 0;
-        if (le.field_j > 0) {
-          le.field_j = le.field_j - 1;
+        if (WeightedLruCache.field_j > 0) {
+          WeightedLruCache.field_j = WeightedLruCache.field_j - 1;
           return;
         }
         if (!sd.field_N) {
           if (param0 == 5) {
             if (of.field_d == ql.field_m) {
-              if (lb.field_D > 0) {
-                lb.field_D = lb.field_D - 1;
+              if (NetworkGameClient.field_D > 0) {
+                NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
               } else {
-                if (pl.field_S > 0) {
-                  pl.field_S = pl.field_S - 1;
+                if (AccountRegistrationPanel.field_S > 0) {
+                  AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                 }
               }
             } else {
-              fieldTemp$6 = pl.field_S;
-              pl.field_S = pl.field_S + 1;
+              fieldTemp$6 = AccountRegistrationPanel.field_S;
+              AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
               if (fieldTemp$6 >= 15) {
                 of.field_d = ql.field_m;
                 stackIn_10_0 = (5 != ql.field_m) ? 15 : 75;
-                lb.field_D = stackIn_10_0;
+                NetworkGameClient.field_D = stackIn_10_0;
               }
             }
           } else {
             field_c = -69;
             if (of.field_d == ql.field_m) {
-              if (lb.field_D > 0) {
-                lb.field_D = lb.field_D - 1;
+              if (NetworkGameClient.field_D > 0) {
+                NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
               } else {
-                if (pl.field_S > 0) {
-                  pl.field_S = pl.field_S - 1;
+                if (AccountRegistrationPanel.field_S > 0) {
+                  AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                 }
               }
             } else {
-              fieldTemp$5 = pl.field_S;
-              pl.field_S = pl.field_S + 1;
+              fieldTemp$5 = AccountRegistrationPanel.field_S;
+              AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
               if (fieldTemp$5 >= 15) {
                 of.field_d = ql.field_m;
                 stackIn_23_0 = (5 != ql.field_m) ? 15 : 75;
-                lb.field_D = stackIn_23_0;
+                NetworkGameClient.field_D = stackIn_23_0;
               }
             }
           }
         } else {
-          if (GameApplet.field_i == w.field_v.field_d.field_d) {
+          if (GameApplet.field_i == StatefulTextPainter.field_v.puzzle.pictureIndex) {
             if (param0 == 5) {
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$4 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$4 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$4 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_39_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_39_0;
+                  NetworkGameClient.field_D = stackIn_39_0;
                 }
               }
             } else {
               field_c = -69;
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$3 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$3 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$3 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_52_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_52_0;
+                  NetworkGameClient.field_D = stackIn_52_0;
                 }
               }
             }
           } else {
-            GameApplet.field_i = w.field_v.field_d.field_d;
-            if (w.field_v.field_r == 0) {
-              ql.field_m = w.field_v.field_d.field_d;
+            GameApplet.field_i = StatefulTextPainter.field_v.puzzle.pictureIndex;
+            if (StatefulTextPainter.field_v.field_r == 0) {
+              ql.field_m = StatefulTextPainter.field_v.puzzle.pictureIndex;
               if (param0 != 5) {
                 field_c = -69;
               }
               if (of.field_d != ql.field_m) {
-                fieldTemp$0 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$0 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$0 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_107_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_107_0;
+                  NetworkGameClient.field_D = stackIn_107_0;
                 }
                 if (-1 != of.field_d) {
                   var1 = jb.field_b[of.field_d];
-                  var1.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                  var1.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                 }
                 return;
               }
-              if (lb.field_D > 0) {
-                lb.field_D = lb.field_D - 1;
+              if (NetworkGameClient.field_D > 0) {
+                NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 if (-1 != of.field_d) {
                   var1Lifetime2 = jb.field_b[of.field_d];
-                  var1Lifetime2.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                  var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                 }
               } else {
-                if (pl.field_S <= 0) {
+                if (AccountRegistrationPanel.field_S <= 0) {
                   if (-1 != of.field_d) {
                     var1Lifetime2 = jb.field_b[of.field_d];
-                    var1Lifetime2.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                    var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                   }
                 } else {
-                  pl.field_S = pl.field_S - 1;
+                  AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   if (-1 != of.field_d) {
                     var1Lifetime2 = jb.field_b[of.field_d];
-                    var1Lifetime2.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                    var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                   }
                 }
               }
               return;
             }
-            if (w.field_v.field_r != 1) {
+            if (StatefulTextPainter.field_v.field_r != 1) {
               ql.field_m = -1;
               if (param0 != 5) {
                 field_c = -69;
               }
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$2 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$2 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$2 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_70_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_70_0;
+                  NetworkGameClient.field_D = stackIn_70_0;
                 }
               }
             } else {
-              stackIn_81_0 = (0 != w.field_v.field_d.field_d) ? -1 : 5;
+              stackIn_81_0 = (0 != StatefulTextPainter.field_v.puzzle.pictureIndex) ? -1 : 5;
               ql.field_m = stackIn_81_0;
               if (param0 != 5) {
                 field_c = -69;
               }
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$1 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$1 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$1 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_88_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_88_0;
+                  NetworkGameClient.field_D = stackIn_88_0;
                 }
               }
             }
@@ -506,7 +506,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
         if (-1 != of.field_d) {
           var1Lifetime1 = jb.field_b[of.field_d];
-          var1Lifetime1.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+          var1Lifetime1.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
         }
     }
 

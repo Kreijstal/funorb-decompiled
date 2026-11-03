@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends jg implements vo {
-    private qm field_O;
-    static bb field_P;
+final class oj extends ArrayWidgetContainer implements ButtonListener {
+    private TextButton field_O;
+    static IntrusiveDeque field_P;
     static int field_G;
-    private gj field_Q;
+    private NumericDateInputWidget field_Q;
     static int[] field_N;
     static String field_R;
 
@@ -30,25 +30,25 @@ final class oj extends jg implements vo {
         field_P = null;
     }
 
-    final void a(int param0, int param1, int param2, ng param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         RuntimeException var5 = null;
-        ng var6 = null;
-        qm stackIn_2_0 = null;
+        UiComponent var6 = null;
+        TextButton stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0 ^ 0, param1, param2, param3);
+          super.updatePointer(param0 ^ 0, param1, param2, param3);
           stackIn_2_0 = this.field_O;
           stackIn_3_1 = (this.field_Q.a(1).a((byte) 88) == qk.field_g);
           stackIn_2_0.field_H = stackIn_3_1;
           if (param0 == 40) {
             return;
           }
-          var6 = (ng) null;
-          this.a(78, -97, 93, (ng) null);
+          var6 = (UiComponent) null;
+          this.updatePointer(78, -97, 93, (UiComponent) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,12 +64,12 @@ final class oj extends jg implements vo {
         }
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton param0, int param1, int param2, int param3, int param4) {
         if (this.field_Q.a(1).a((byte) 69) != qk.field_g) {
           return;
         }
         try {
-          ui.a(123, this.field_Q.e((byte) 83), this.field_Q.c(true), this.field_Q.l(25));
+          ui.a(123, this.field_Q.e((byte) 83), this.field_Q.c(true), this.field_Q.getMonthIndex(25));
           if (param2 != 11) {
             field_R = (String) null;
           }
@@ -79,24 +79,24 @@ final class oj extends jg implements vo {
     }
 
     oj(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (eb) null);
-        this.field_Q = new gj(new gh(10000536), mg.field_l, 0, 0, 140, 25);
-        this.field_Q.a(new oa(), 20672);
-        this.field_O = new qm(vi.field_J, (fn) (this));
-        this.field_L = new ng[]{(ng) ((Object) this.field_Q), (ng) ((Object) this.field_O)};
-        this.field_O.field_y = (eb) ((Object) new ad());
+        super(param0, param1, param2, param3, (WidgetPainter) null);
+        this.field_Q = new NumericDateInputWidget(new GradientOutlineTextPainter(10000536), TextFieldValidator.field_l, 0, 0, 140, 25);
+        this.field_Q.a(new DateOfBirthValidator(), 20672);
+        this.field_O = new TextButton(MusicCrossfadeStream.field_J, (UiListener) (this));
+        this.children = new UiComponent[]{(UiComponent) ((Object) this.field_Q), (UiComponent) ((Object) this.field_O)};
+        this.field_O.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.c((byte) 121);
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, (byte) 119);
-        ep.field_b.a(ng.field_v, 4 + param2 + this.field_z, ep.field_b.field_w + (param0 + this.field_p + 4), 16777215, -1);
+        ep.field_b.drawText(UiComponent.field_v, 4 + param2 + this.field_z, ep.field_b.maxAscent + (param0 + this.field_p + 4), 16777215, -1);
         int var5 = -53 % ((70 - param3) / 49);
     }
 
     static {
         field_G = -1;
-        field_P = new bb();
+        field_P = new IntrusiveDeque();
         field_N = new int[]{2, 20, 21, 27, 6, 5, 9};
         field_R = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }

@@ -11,12 +11,12 @@ final class ef {
     static int field_f;
 
     final static void a(int param0) {
-        m var1 = (m) (on.field_nb.c(1504642273));
+        m var1 = (m) (LoginDialog.field_nb.c(1504642273));
         if (var1 == null) {
           na.a(true);
           return;
         }
-        pc var2 = vi.field_o;
+        CipherPacketBuffer var2 = MusicCrossfadeStream.field_o;
         var2.readInt(0);
         var2.readInt(0);
         var2.readInt(0);
@@ -63,19 +63,19 @@ final class ef {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        pc var28 = null;
+        CipherPacketBuffer var28 = null;
         int var25Lifetime1;
         int var25Lifetime2;
         var26 = Pixelate.field_H ? 1 : 0;
         try {
-          var28 = vi.field_o;
+          var28 = MusicCrossfadeStream.field_o;
           var2 = var28.f(255);
           if (var2 == 0) {
             var3 = var28.a((byte) 86);
-            var4 = (ue) (f.field_c.c(1504642273));
+            var4 = (ue) (DialWidgetPainter.field_c.c(1504642273));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (ue) (f.field_c.f(1504642273));
+                var4 = (ue) (DialWidgetPainter.field_c.last(1504642273));
                 continue;
               }
               break;
@@ -87,7 +87,7 @@ final class ef {
             var5 = var28.f(255);
             if (0 != var5) {
               var6 = var4.field_m;
-              rh.field_u[0].field_e = kn.field_J;
+              rh.field_u[0].field_e = ModalStack.field_J;
               rh.field_u[0].field_f = null;
               var7 = var4.field_s;
               rh.field_u[0].field_c = false;
@@ -136,7 +136,7 @@ final class ef {
                   }
                   if (var21 != null &&
                     sm.a(var21, -1)) {
-                    var8[1][var13] = kn.field_J;
+                    var8[1][var13] = ModalStack.field_J;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var28.position = var24;
@@ -169,10 +169,10 @@ final class ef {
           } else if (var2 == 1) {
             var3 = var28.a((byte) -125);
             var4_long = var28.a(false);
-            var6_ref_rh = (rh) (de.field_b.c(1504642273));
+            var6_ref_rh = (rh) (MenuScreen.field_b.c(1504642273));
             while (var6_ref_rh != null) {
               if (var3 != var6_ref_rh.field_o) {
-                var6_ref_rh = (rh) (de.field_b.f(1504642273));
+                var6_ref_rh = (rh) (MenuScreen.field_b.last(1504642273));
                 continue;
               }
               break;
@@ -184,7 +184,7 @@ final class ef {
             var6_ref_rh.field_q = var4_long;
             var6_ref_rh.c(2779);
           } else {
-            jo.a(1, "HS1: " + jm.b(-63), (Throwable) null);
+            CheckboxPainter.a(1, "HS1: " + jm.b(-63), (Throwable) null);
             na.a(!param0);
           }
           if (param0) {

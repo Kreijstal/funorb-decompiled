@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class l extends de {
+final class l extends MenuScreen {
     static ea field_r;
-    static ak field_s;
+    static SceneWidget field_s;
     static String field_u;
     static String field_t;
-    static gp field_p;
-    static ak field_q;
+    static ScrollContainer field_p;
+    static SceneWidget field_q;
     static String field_o;
 
     l(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -39,30 +39,30 @@ final class l extends de {
         if (param0 != 19854) {
           PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
           l.a(false, -75, -15, true, 99, -28L, (String) null, -112, -64, true, 118, -87, 71, (PlatformTaskDispatcher) null);
-          if (tm.a((byte) 127)) {
+          if (MarkerSlider.a((byte) 127)) {
             param1 = false;
           }
-          am.a((byte) 29, param1);
+          Js5ArchiveManager.a((byte) 29, param1);
           if (dk.field_b) {
-            SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
+            SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
             nd.field_b.field_g.a(param1, 0);
-            no.a(param1, (byte) 34);
+            CachedTextLayout.a(param1, (byte) 34);
             return;
           }
-          no.a(param1, (byte) 34);
+          CachedTextLayout.a(param1, (byte) 34);
           return;
         }
-        if (tm.a((byte) 127)) {
+        if (MarkerSlider.a((byte) 127)) {
           param1 = false;
         }
-        am.a((byte) 29, param1);
+        Js5ArchiveManager.a((byte) 29, param1);
         if (!dk.field_b) {
-          no.a(param1, (byte) 34);
+          CachedTextLayout.a(param1, (byte) 34);
           return;
         }
-        SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
+        SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
         nd.field_b.field_g.a(param1, 0);
-        no.a(param1, (byte) 34);
+        CachedTextLayout.a(param1, (byte) 34);
     }
 
     final void a(byte param0, boolean param1, int param2) {
@@ -81,7 +81,7 @@ final class l extends de {
     }
 
     final void c(byte param0) {
-        la.a(nc.field_a, nc.field_a, false, -25528);
+        la.a(TickClock.field_a, TickClock.field_a, false, -25528);
         if (param0 > -13) {
           l.e(-78);
         }
@@ -99,18 +99,18 @@ final class l extends de {
           RuntimeException var15_ref = null;
           PlatformTaskDispatcher var16 = null;
           try {
-            vi.field_o = new pc(param8);
-            aa.field_f = new pc(param2);
+            MusicCrossfadeStream.field_o = new CipherPacketBuffer(param8);
+            aa.field_f = new CipherPacketBuffer(param2);
             bj.field_a = param1;
             hf.field_n = param7;
             op.field_p = param13;
             vm.field_d = param9;
             hf.field_t = param5;
-            uj.field_Lb = param3;
+            LobbyPlayer.field_Lb = param3;
             cd.field_b = param11;
-            pc.field_q = param12;
+            CipherPacketBuffer.field_q = param12;
             ra.field_c = param4;
-            ii.field_B = param6;
+            MatchController.field_B = param6;
             gd.field_g = param10;
             if (param0) {
               var16 = (PlatformTaskDispatcher) null;
@@ -120,7 +120,7 @@ final class l extends de {
               return;
             }
             try {
-              vi.field_p = new uo(op.field_p.field_e, 64, 0);
+              MusicCrossfadeStream.field_p = new BufferedRandomAccessFile(op.field_p.field_e, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,25 +153,25 @@ final class l extends de {
     }
 
     final static void b(boolean param0) {
-        if (qo.field_o != ClientException.field_f.field_i) {
-          wa.field_i = wa.field_i + (ClientException.field_f.field_i - qo.field_o);
-          qo.field_o = ClientException.field_f.field_i;
-          if (!(oh.field_b <= 0)) {
-            oh.field_b = oh.field_b - 1;
+        if (MatchingTextValidator.field_o != ClientException.field_f.field_i) {
+          wa.field_i = wa.field_i + (ClientException.field_f.field_i - MatchingTextValidator.field_o);
+          MatchingTextValidator.field_o = ClientException.field_f.field_i;
+          if (!(HuffmanCodec.field_b <= 0)) {
+            HuffmanCodec.field_b = HuffmanCodec.field_b - 1;
           }
           if (param0) {
-            if (!(oh.field_b <= 0)) {
+            if (!(HuffmanCodec.field_b <= 0)) {
               r.b(-96);
             }
             return;
           }
           return;
         }
-        if (!(oh.field_b <= 0)) {
-          oh.field_b = oh.field_b - 1;
+        if (!(HuffmanCodec.field_b <= 0)) {
+          HuffmanCodec.field_b = HuffmanCodec.field_b - 1;
         }
         if (param0) {
-          if (!(oh.field_b <= 0)) {
+          if (!(HuffmanCodec.field_b <= 0)) {
             r.b(-96);
           }
           return;
@@ -179,22 +179,22 @@ final class l extends de {
     }
 
     final void a(int param0) {
-        tc var2 = null;
+        BinaryBitmapFont var2 = null;
         int var3 = 0;
-        tc var2Lifetime1;
+        BinaryBitmapFont var2Lifetime1;
         int var3Lifetime1;
         this.d((byte) -65);
         this.b((byte) -71);
         if (param0 == 11) {
           var2 = qj.field_e;
-          var3 = 1 + (var2.field_w + var2.field_z);
-          var2.a(ie.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3);
+          var3 = 1 + (var2.maxAscent + var2.maxDescent);
+          var2.drawParagraph(SingleChildContainer.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3);
           return;
         }
         this.a((byte) 119, false, 7);
         var2Lifetime1 = qj.field_e;
-        var3Lifetime1 = 1 + (var2Lifetime1.field_w + var2Lifetime1.field_z);
-        var2Lifetime1.a(ie.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3Lifetime1);
+        var3Lifetime1 = 1 + (var2Lifetime1.maxAscent + var2Lifetime1.maxDescent);
+        var2Lifetime1.drawParagraph(SingleChildContainer.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3Lifetime1);
     }
 
     static {

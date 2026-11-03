@@ -4,7 +4,7 @@
 final class ge {
     static int[] field_c;
     static String field_a;
-    static ak field_h;
+    static SceneWidget field_h;
     static String field_b;
     static boolean field_f;
     static Sprite field_g;
@@ -12,7 +12,7 @@ final class ge {
     static String field_e;
     static el field_i;
 
-    final static void a(String[] args, int param1, fm param2, byte[] param3, Sprite[][] param4, int param5, String[][] param6, fm param7, byte[] param8, String[] param9, Sprite[][] param10, hh[] param11, String[][] param12, fm param13, String[] param14, int[] param15, int param16, boolean param17, int[] param18, byte param19) {
+    final static void a(String[] args, int param1, ResourceArchive param2, byte[] param3, Sprite[][] param4, int param5, String[][] param6, ResourceArchive param7, byte[] param8, String[] param9, Sprite[][] param10, IndexedSprite[] param11, String[][] param12, ResourceArchive param13, String[] param14, int[] param15, int param16, boolean param17, int[] param18, byte param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -47,16 +47,16 @@ final class ge {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          oe.a(param19 - 84, param2, param11, param18, param13);
+          ReportAbuseDialog.a(param19 - 84, param2, param11, param18, param13);
           ph.a(param2, (byte) -106);
           IntrusiveNode.a(param14, param2, param15, (byte) 126, param10, param16, param8, param4, args, param12, param6, param9, param5, param1, param3);
           aj.a(param7, param2, param17, -94);
           if (param19 != -41) {
             field_g = (Sprite) null;
           }
-          ve.j(1565);
+          AccountNamePrompt.j(1565);
           gd.a((byte) -7);
-          jj.a(0);
+          BackgroundScene.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,7 +166,7 @@ final class ge {
         field_d = null;
         if (param0 != -1) {
           int[] var2 = (int[]) null;
-          ge.a((String[]) null, -96, (fm) null, (byte[]) null, (Sprite[][]) null, 52, (String[][]) null, (fm) null, (byte[]) null, (String[]) null, (Sprite[][]) null, (hh[]) null, (String[][]) null, (fm) null, (String[]) null, (int[]) null, 27, true, (int[]) null, (byte) -67);
+          ge.a((String[]) null, -96, (ResourceArchive) null, (byte[]) null, (Sprite[][]) null, 52, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null, (IndexedSprite[]) null, (String[][]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 27, true, (int[]) null, (byte) -67);
         }
         field_c = null;
     }

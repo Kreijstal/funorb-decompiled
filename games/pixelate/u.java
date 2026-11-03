@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class u {
-    static ak field_l;
+    static SceneWidget field_l;
     static wm field_d;
     static volatile boolean field_j;
     static Sprite field_k;
-    private fm field_c;
-    private fm field_m;
+    private ResourceArchive field_c;
+    private ResourceArchive field_m;
     static volatile int field_b;
     static String field_e;
-    private le field_i;
+    private WeightedLruCache field_i;
     static String field_g;
     static int field_h;
-    static ak field_a;
+    static SceneWidget field_a;
     static Sprite field_f;
     static String field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6, jl param7, int param8, Sprite[] param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6, BitmapFont param7, int param8, Sprite[] param9, int param10, boolean param11) {
         try {
           if (param1 != -879) {
             field_h = 78;
@@ -28,14 +28,14 @@ final class u {
         }
     }
 
-    final kp a(int param0, int param1) {
-        kp var3;
+    final QuickChatPhraseDefinition a(int param0, int param1) {
+        QuickChatPhraseDefinition var3;
         byte[] var4;
-        kp var3Lifetime1;
+        QuickChatPhraseDefinition var3Lifetime1;
         if (param0 != -21209) {
-          return (kp) null;
+          return (QuickChatPhraseDefinition) null;
         }
-        var3 = (kp) (this.field_i.a((long)param1, 0));
+        var3 = (QuickChatPhraseDefinition) (this.field_i.a((long)param1, 0));
         if (var3 != null) {
           return var3;
         }
@@ -44,9 +44,9 @@ final class u {
         } else {
           var4 = this.field_c.a(1, param1, true);
         }
-        var3Lifetime1 = new kp();
+        var3Lifetime1 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var3Lifetime1.a(param0 ^ 21212, new PacketBuffer(var4));
+          var3Lifetime1.decode(param0 ^ 21212, new PacketBuffer(var4));
         }
         if (32768 <= param1) {
           var3Lifetime1.g(126);
@@ -72,7 +72,7 @@ final class u {
         field_l = null;
     }
 
-    u(int param0, fm param1, fm param2, hj param3) {
+    u(int param0, ResourceArchive param1, ResourceArchive param2, hj param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -82,7 +82,7 @@ final class u {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_i = new le(64);
+        this.field_i = new WeightedLruCache(64);
         try {
           this.field_c = param1;
           this.field_m = param2;

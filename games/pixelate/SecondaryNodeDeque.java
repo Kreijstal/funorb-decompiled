@@ -9,7 +9,7 @@ final class SecondaryNodeDeque implements Iterable {
     static int field_e;
     static long[][] field_b;
     static String field_d;
-    static sp[] field_f;
+    static PcmSample[] field_f;
 
     final DualLinkNode a(int param0) {
         if (param0 < 57) {
@@ -46,14 +46,14 @@ final class SecondaryNodeDeque implements Iterable {
         var10 = Pixelate.field_H ? 1 : 0;
         try {
           var7_int = un.a(param3, 108);
-          if (qo.field_y == null) {
-            qo.field_y = new java.security.SecureRandom();
+          if (MatchingTextValidator.field_y == null) {
+            MatchingTextValidator.field_y = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = qo.field_y.nextInt();
+            var8[var9] = MatchingTextValidator.field_y.nextInt();
           }
           if (ed.field_b == null ||
             !(var7_int <= ed.field_b.payload.length)) {
@@ -194,9 +194,9 @@ final class SecondaryNodeDeque implements Iterable {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_b[0][var0] = tg.a(tg.a(tg.a(tg.a(var10 << 24, tg.a(tg.a(tg.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
+            field_b[0][var0] = UiTheme.a(UiTheme.a(UiTheme.a(UiTheme.a(var10 << 24, UiTheme.a(UiTheme.a(UiTheme.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_b[var14][var0] = tg.a(field_b[-1 + var14][var0] << 56, field_b[-1 + var14][var0] >>> 8);
+                field_b[var14][var0] = UiTheme.a(field_b[-1 + var14][var0] << 56, field_b[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
@@ -205,7 +205,7 @@ final class SecondaryNodeDeque implements Iterable {
             var1 = (var0 - 1) * 8;
             field_c[var0] = fp.a(fp.a(fp.a(fp.a(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.a(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.a(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.a(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
         }
-        field_f = new sp[132];
+        field_f = new PcmSample[132];
         field_d = "Achievements";
     }
 }

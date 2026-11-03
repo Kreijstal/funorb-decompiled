@@ -19,24 +19,24 @@ final class bd {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ak var5 = null;
+        SceneWidget var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         aa var9 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          if (qo.field_o != ClientException.field_f.field_i) {
-            wa.field_i = wa.field_i + (ClientException.field_f.field_i - qo.field_o);
-            qo.field_o = ClientException.field_f.field_i;
+          if (MatchingTextValidator.field_o != ClientException.field_f.field_i) {
+            wa.field_i = wa.field_i + (ClientException.field_f.field_i - MatchingTextValidator.field_o);
+            MatchingTextValidator.field_o = ClientException.field_f.field_i;
           }
           if (param0 > -50) {
             return;
           }
-          if (oh.field_b < qh.field_c) {
-            oh.field_b = oh.field_b + 1;
+          if (HuffmanCodec.field_b < qh.field_c) {
+            HuffmanCodec.field_b = HuffmanCodec.field_b + 1;
           }
-          if (oh.field_b <= 0) {
+          if (HuffmanCodec.field_b <= 0) {
             return;
           }
           r.b(-96);
@@ -45,22 +45,22 @@ final class bd {
             if (!ln.field_q) {
               td.field_b = null;
             } else {
-              td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
+              td.field_b.a(ui.field_i.screenY, param1, (byte) 99, ui.field_i.field_tb);
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
-            var5 = fm.field_f[var4_int];
+            var5 = ResourceArchive.field_f[var4_int];
             if (var5 != null) {
               if (var5.field_P != 0) {
-                cg.a((byte) -13, var5, var4_int);
+                DiskCacheRequest.a((byte) -13, var5, var4_int);
               }
               var6 = IterableNodeHashTable.a(var4_int, 0);
-              fm.field_h[var4_int].field_H = h.field_V[var6];
-              DelegatingCanvas.field_e[var4_int].field_cb = rg.field_a[var6];
+              ResourceArchive.field_h[var4_int].field_H = Checkbox.field_V[var6];
+              DelegatingCanvas.field_e[var4_int].field_cb = LoginCredentials.field_a[var6];
             }
           }
-          if (0 != gh.field_u.field_P) {
-            hc.field_M = new oe(gh.field_u.field_tb, gh.field_u.field_gb, gh.field_u.field_K, gh.field_u.field_nb, param3, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, (String) null, 0L);
+          if (0 != GradientOutlineTextPainter.field_u.field_P) {
+            AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, pj.field_i, ae.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
           }
           var9 = ah.a((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {
@@ -115,7 +115,7 @@ final class bd {
         if (param0 != -21) {
           return true;
         }
-        if (kk.field_b == this) {
+        if (BoardView.field_b == this) {
           return true;
         }
         if (e.field_d == this) {
@@ -133,24 +133,24 @@ final class bd {
         DualLinkNode var1Lifetime1;
         try {
           aj.field_t = 0;
-          f.field_q = 0;
-          qp.field_L = null;
+          DialWidgetPainter.field_q = 0;
+          LabeledField.field_L = null;
           if (param0 != -1) {
             field_c = 75;
           }
-          vp.field_Hb.e(param0 - 110);
+          VerticalScrollbar.field_Hb.e(param0 - 110);
           bq.field_b.e(-127);
           var1 = vm.field_b.a(-89);
           while (var1 != null) {
             var1.e(17);
             var1 = vm.field_b.a((byte) 50);
           }
-          var1Lifetime1 = hq.field_q.a(-84);
+          var1Lifetime1 = GameResultsScreen.field_q.a(-84);
           while (var1Lifetime1 != null) {
             var1Lifetime1.e(17);
-            var1Lifetime1 = hq.field_q.a((byte) 50);
+            var1Lifetime1 = GameResultsScreen.field_q.a((byte) 50);
           }
-          gk.field_db = 0;
+          ValidatedTextWidget.field_db = 0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
         }

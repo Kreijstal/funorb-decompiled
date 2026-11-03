@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bq {
-    static bb field_a;
-    static bb field_b;
+    static IntrusiveDeque field_a;
+    static IntrusiveDeque field_b;
     static int field_d;
     static int field_c;
 
@@ -57,46 +57,46 @@ final class bq {
           sm.field_l = true;
           CanvasRasterBuffer.field_h = param2;
           if (CanvasRasterBuffer.field_h == 0) {
-            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, kc.field_p, -128, bg.field_j);
+            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, bg.field_j);
             var4 = var3_int + 3;
             fo.field_a = new int[var4];
             vm.field_e = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               fo.field_a[var5] = -1;
             }
-            jj.field_h = new int[2];
+            BackgroundScene.field_h = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              vm.field_e[var5] = kc.field_p[var5];
+              vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
             }
             vm.field_e[-3 + var4] = "";
             vm.field_e[var4 - 2] = ln.field_k;
             fo.field_a[-2 + var4] = 0;
-            jj.field_h[0] = 4;
-            vm.field_e[-1 + var4] = od.field_Hb;
+            BackgroundScene.field_h[0] = 4;
+            vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
             fo.field_a[-1 + var4] = 1;
-            jj.field_h[1] = 5;
+            BackgroundScene.field_h[1] = 5;
           } else if (CanvasRasterBuffer.field_h == 1) {
-            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, kc.field_p, -102, bg.field_j);
+            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -102, bg.field_j);
             var4 = 2 + var3_int;
             fo.field_a = new int[var4];
             vm.field_e = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               fo.field_a[var5] = -1;
             }
-            jj.field_h = new int[1];
+            BackgroundScene.field_h = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              vm.field_e[var5] = kc.field_p[var5];
+              vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
             }
             vm.field_e[-2 + var4] = "";
-            vm.field_e[-1 + var4] = od.field_Hb;
+            vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
             fo.field_a[-1 + var4] = 0;
-            jj.field_h[0] = 5;
+            BackgroundScene.field_h[0] = 5;
           } else if (CanvasRasterBuffer.field_h != 2) {
             if (3 == CanvasRasterBuffer.field_h) {
               if (!mc.field_k.field_x) {
-                var3_int = qn.a(mn.field_a, MouseInputHandler.field_c, kc.field_p, -120, bg.field_j);
+                var3_int = qn.a(TextLayoutLine.field_a, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -120, bg.field_j);
               } else {
-                var3_int = qn.a(el.field_c, MouseInputHandler.field_c, kc.field_p, -115, bg.field_j);
+                var3_int = qn.a(el.field_c, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -115, bg.field_j);
               }
               var4 = 2 + var3_int;
               fo.field_a = new int[var4];
@@ -104,58 +104,58 @@ final class bq {
               for (var5 = 0; var5 < var4; var5++) {
                 fo.field_a[var5] = -1;
               }
-              jj.field_h = new int[1];
+              BackgroundScene.field_h = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                vm.field_e[var5] = kc.field_p[var5];
+                vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
               }
               vm.field_e[var4 - 2] = "";
-              vm.field_e[var4 - 1] = od.field_Hb;
+              vm.field_e[var4 - 1] = TabbedPanel.field_Hb;
               fo.field_a[var4 - 1] = 0;
-              jj.field_h[0] = 5;
+              BackgroundScene.field_h[0] = 5;
             } else if (CanvasRasterBuffer.field_h == 4) {
-              var3_int = qn.a(l.field_o, MouseInputHandler.field_c, kc.field_p, -118, bg.field_j);
+              var3_int = qn.a(l.field_o, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, bg.field_j);
               var4 = 2 + var3_int;
               vm.field_e = new String[var4];
               fo.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 fo.field_a[var5] = -1;
               }
-              jj.field_h = new int[1];
+              BackgroundScene.field_h = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                vm.field_e[var5] = kc.field_p[var5];
+                vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
               }
               vm.field_e[-2 + var4] = "";
-              vm.field_e[-1 + var4] = od.field_Hb;
+              vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
               fo.field_a[var4 - 1] = 0;
-              jj.field_h[0] = 5;
+              BackgroundScene.field_h[0] = 5;
             } else {
               if (CanvasRasterBuffer.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = qn.a(CanvasRasterBuffer.field_k, MouseInputHandler.field_c, kc.field_p, -118, bg.field_j);
+              var3_int = qn.a(CanvasRasterBuffer.field_k, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, bg.field_j);
               var4 = var3_int + 3;
               fo.field_a = new int[var4];
               vm.field_e = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 fo.field_a[var5] = -1;
               }
-              jj.field_h = new int[2];
+              BackgroundScene.field_h = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                vm.field_e[var5] = kc.field_p[var5];
+                vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
               }
               vm.field_e[var4 - 3] = "";
               vm.field_e[var4 - 2] = bg.field_b;
               fo.field_a[var4 - 2] = 0;
-              jj.field_h[0] = 3;
-              vm.field_e[var4 - 1] = od.field_Hb;
+              BackgroundScene.field_h[0] = 3;
+              vm.field_e[var4 - 1] = TabbedPanel.field_Hb;
               fo.field_a[-1 + var4] = 1;
-              jj.field_h[1] = 5;
+              BackgroundScene.field_h[1] = 5;
             }
           } else {
-            var3_int = qn.a(sd.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, kc.field_p, -128, bg.field_j);
+            var3_int = qn.a(sd.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(kc.field_p[var5])) {
+              if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
                 continue;
               }
               var4 = var5;
@@ -165,13 +165,13 @@ final class bq {
               throw new IllegalStateException();
             }
             df.field_r = new String[var4];
-            qb.a(kc.field_p, 0, df.field_r, 0, var4);
+            qb.a(EmailConfirmationValidator.field_p, 0, df.field_r, 0, var4);
             uk.field_r = new String[-1 + (var3_int - var4)];
-            qb.a(kc.field_p, var4 + 1, uk.field_r, 0, var3_int + (-var4 - 1));
-            var3_int = qn.a(sd.a(oj.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, kc.field_p, -106, bg.field_j);
+            qb.a(EmailConfirmationValidator.field_p, var4 + 1, uk.field_r, 0, var3_int + (-var4 - 1));
+            var3_int = qn.a(sd.a(oj.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(kc.field_p[var5])) {
+              if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
                 continue;
               }
               var4 = var5;
@@ -181,19 +181,19 @@ final class bq {
               throw new IllegalStateException();
             }
             jk.field_d = new String[var4];
-            qb.a(kc.field_p, 0, jk.field_d, 0, var4);
-            hb.field_jb = new String[-var4 + (var3_int - 1)];
-            qb.a(kc.field_p, 1 + var4, hb.field_jb, 0, -1 + (-var4 + var3_int));
+            qb.a(EmailConfirmationValidator.field_p, 0, jk.field_d, 0, var4);
+            ContentTransitionDialog.field_jb = new String[-var4 + (var3_int - 1)];
+            qb.a(EmailConfirmationValidator.field_p, 1 + var4, ContentTransitionDialog.field_jb, 0, -1 + (-var4 + var3_int));
             if (df.field_r.length < jk.field_d.length) {
               stackIn_23_0 = jk.field_d.length;
             } else {
               stackIn_23_0 = df.field_r.length;
             }
             var5 = stackIn_23_0;
-            if (uk.field_r.length >= hb.field_jb.length) {
+            if (uk.field_r.length >= ContentTransitionDialog.field_jb.length) {
               stackIn_26_0 = uk.field_r.length;
             } else {
-              stackIn_26_0 = hb.field_jb.length;
+              stackIn_26_0 = ContentTransitionDialog.field_jb.length;
             }
             var6 = stackIn_26_0;
             var7 = var5 + (7 + var6);
@@ -204,15 +204,15 @@ final class bq {
             }
             fo.field_a[1] = 0;
             vm.field_e[0] = vf.field_c;
-            vm.field_e[1] = sn.field_q;
-            jj.field_h = new int[2];
-            vm.field_e[4] = bh.field_m;
+            vm.field_e[1] = MusicPatch.field_q;
+            BackgroundScene.field_h = new int[2];
+            vm.field_e[4] = DirectByteStorage.field_m;
             vm.field_e[5] = "";
             fo.field_a[3] = 1;
             vm.field_e[3] = vm.field_g;
             vm.field_e[2] = u.field_n;
-            jj.field_h[1] = 2;
-            jj.field_h[0] = 5;
+            BackgroundScene.field_h[1] = 2;
+            BackgroundScene.field_h[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_33_0 = vm.field_e;
               stackIn_33_1 = 6 + var8Lifetime2;
@@ -228,18 +228,18 @@ final class bq {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_38_0 = vm.field_e;
               stackIn_38_1 = var8Lifetime3 + var5 + 7;
-              stackIn_38_2 = ~hb.field_jb.length;
+              stackIn_38_2 = ~ContentTransitionDialog.field_jb.length;
               stackIn_38_3 = ~var8Lifetime3;
               if (stackIn_38_2 >= stackIn_38_3) {
                 stackIn_41_2 = "";
               } else {
-                stackIn_41_2 = hb.field_jb[var8Lifetime3];
+                stackIn_41_2 = ContentTransitionDialog.field_jb[var8Lifetime3];
               }
               stackIn_38_0[stackIn_38_1] = stackIn_41_2;
             }
             pk.field_g = hm.a(64);
           }
-          mj.field_c.field_h = jj.field_h.length;
+          mj.field_c.field_h = BackgroundScene.field_h.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < vm.field_e.length; var4Lifetime1++) {
             stackIn_89_0 = 3;
@@ -272,36 +272,36 @@ final class bq {
           if (param1 >= -64) {
             return;
           }
-          ib.field_g = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + qe.field_u;
-          MouseInputHandler.field_b = (ko.field_fb + bd.field_c << 1) * mj.field_c.field_h;
-          ko.field_cb = -(var3_intLifetime1 >> 1) + qe.field_u;
+          ib.field_g = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + QuickChatCategory.field_u;
+          MouseInputHandler.field_b = (LoadingProgressDialog.field_fb + bd.field_c << 1) * mj.field_c.field_h;
+          LoadingProgressDialog.field_cb = -(var3_intLifetime1 >> 1) + QuickChatCategory.field_u;
           for (var4Lifetime2 = 0; var4Lifetime2 < vm.field_e.length; var4Lifetime2++) {
             stackIn_115_0 = MouseInputHandler.field_b;
             if (fo.field_a[var4Lifetime2] < 0) {
-              stackIn_116_1 = hq.field_r;
+              stackIn_116_1 = GameResultsScreen.field_r;
             } else {
-              stackIn_116_1 = gk.field_fb;
+              stackIn_116_1 = ValidatedTextWidget.field_fb;
             }
             MouseInputHandler.field_b = stackIn_115_0 + stackIn_116_1;
           }
-          de.field_h = bb.field_b - (MouseInputHandler.field_b >> 1);
+          MenuScreen.field_h = IntrusiveDeque.field_b - (MouseInputHandler.field_b >> 1);
           so.field_c = new int[vm.field_e.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = de.field_h;
+          var5Lifetime3 = MenuScreen.field_h;
           while (var4Lifetime3 < vm.field_e.length) {
             var6Lifetime1 = fo.field_a[var4Lifetime3];
             if (var6Lifetime1 < 0) {
-              var5Lifetime3 = var5Lifetime3 + hq.field_r;
+              var5Lifetime3 = var5Lifetime3 + GameResultsScreen.field_r;
             } else {
               var7Lifetime2 = sb.a(3, vm.field_e[var4Lifetime3], true);
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + qe.field_u;
-              var5Lifetime3 = var5Lifetime3 + ko.field_fb;
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + QuickChatCategory.field_u;
+              var5Lifetime3 = var5Lifetime3 + LoadingProgressDialog.field_fb;
               so.field_c[var4Lifetime3] = new int[4];
-              so.field_c[var4Lifetime3][0] = var8Lifetime1 - hc.field_J;
+              so.field_c[var4Lifetime3][0] = var8Lifetime1 - AccountTermsPanel.field_J;
               so.field_c[var4Lifetime3][1] = var5Lifetime3;
-              so.field_c[var4Lifetime3][2] = (hc.field_J << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (gk.field_fb + (bd.field_c << 1) + ko.field_fb);
-              so.field_c[var4Lifetime3][3] = (bd.field_c << 1) + gk.field_fb;
+              so.field_c[var4Lifetime3][2] = (AccountTermsPanel.field_J << 1) + var7Lifetime2;
+              var5Lifetime3 = var5Lifetime3 + (ValidatedTextWidget.field_fb + (bd.field_c << 1) + LoadingProgressDialog.field_fb);
+              so.field_c[var4Lifetime3][3] = (bd.field_c << 1) + ValidatedTextWidget.field_fb;
             }
             var4Lifetime3++;
           }
@@ -326,11 +326,11 @@ final class bq {
         if (param0 != -124) {
           bq.a((byte) -16);
         }
-        if (tm.a((byte) 117)) {
+        if (MarkerSlider.a((byte) 117)) {
           vd.a(param3, param1, param4, (byte) -86);
-          if (null != eg.field_n &&
-            eg.field_n.a(param4, param6, false, param5, param3)) {
-            jp.a(71);
+          if (null != ProxySocketConnector.field_n &&
+            ProxySocketConnector.field_n.a(param4, param6, false, param5, param3)) {
+            ArchiveProvider.a(71);
             param3 = false;
           }
           sm.a(param4, param3, 0);
@@ -347,6 +347,6 @@ final class bq {
     }
 
     static {
-        field_a = new bb();
+        field_a = new IntrusiveDeque();
     }
 }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends ak {
+final class fb extends SceneWidget {
     static String field_Eb;
     static String field_Gb;
-    private ak field_Ib;
-    private ak field_Fb;
+    private SceneWidget field_Ib;
+    private SceneWidget field_Fb;
     static int field_Hb;
 
     public static void j(int param0) {
@@ -24,22 +24,22 @@ final class fb extends ak {
         return this.field_Fb.g(0) + param1 + this.field_Ib.g(0);
     }
 
-    final static ak c(byte param0) {
+    final static SceneWidget c(byte param0) {
         if (param0 < 93) {
-          return (ak) null;
+          return (SceneWidget) null;
         }
         return MouseWheelHandler.field_e.field_Fb;
     }
 
     private final void b(int param0, boolean param1) {
-        this.field_Fb.a(0, this.field_nb, 0, 256, this.field_Fb.g(0));
+        this.field_Fb.a(0, this.height, 0, 256, this.field_Fb.g(0));
         int var3 = param0 + this.field_Fb.field_K;
-        this.field_Ib.a(0, this.field_nb, var3, 256, -var3 + this.field_K);
+        this.field_Ib.a(0, this.height, var3, 256, -var3 + this.field_K);
         if (!param1) {
           return;
         }
-        eq var4 = (eq) null;
-        fb.a(false, (String) null, (eq) null, 102);
+        LobbyGame var4 = (LobbyGame) null;
+        fb.a(false, (String) null, (LobbyGame) null, 102);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -53,16 +53,16 @@ final class fb extends ak {
     }
 
     final static void a(int param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param1, 15514);
         var2.writeByte(160, param0);
         var2.writeByte(160, 1);
     }
 
-    fb(long param0, Sprite param1, Sprite param2, int param3, ak param4, String param5) {
-        this(param0, (ak) null, param4, param5);
+    fb(long param0, Sprite param1, Sprite param2, int param3, SceneWidget param4, String param5) {
+        this(param0, (SceneWidget) null, param4, param5);
         try {
-          this.field_Fb.field_kb = param3;
+          this.field_Fb.verticalAlignment = param3;
           this.field_Fb.field_z = param1;
           this.field_Fb.field_H = param2;
         } catch (RuntimeException runtimeException) {
@@ -70,18 +70,18 @@ final class fb extends ak {
         }
     }
 
-    final static ak b(byte param0) {
+    final static SceneWidget b(byte param0) {
         if (param0 <= 77) {
-          return (ak) null;
+          return (SceneWidget) null;
         }
         return fd.a(0);
     }
 
-    private fb(long param0, ak param1, ak param2, String param3) {
-        super(param0, (ak) null);
+    private fb(long param0, SceneWidget param1, SceneWidget param2, String param3) {
+        super(param0, (SceneWidget) null);
         try {
-          this.field_Fb = new ak(0L, param1);
-          this.field_Ib = new ak(0L, param2);
+          this.field_Fb = new SceneWidget(0L, param1);
+          this.field_Ib = new SceneWidget(0L, param2);
           this.field_Ib.field_cb = param3;
           this.a(this.field_Fb, (byte) 26);
           this.a(this.field_Ib, (byte) 26);
@@ -115,7 +115,7 @@ final class fb extends ak {
         return 0;
     }
 
-    final static void a(boolean param0, String param1, eq param2, int param3) {
+    final static void a(boolean param0, String param1, LobbyGame param2, int param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -126,36 +126,36 @@ final class fb extends ak {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        wi var9 = null;
+        ClientContextMenu var9 = null;
         String var10 = null;
-        wi var11 = null;
+        ClientContextMenu var11 = null;
         String var12 = null;
-        wi var13 = null;
+        ClientContextMenu var13 = null;
         String var14 = null;
-        wi var15 = null;
+        ClientContextMenu var15 = null;
         try {
           em.a((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, aj.field_k, (int[]) null, -1);
           if (param2.field_dc && (param2.field_Tb == 2 ||
             !(wo.field_h < 2))) {
-            var9 = eg.field_n;
-            var10 = sd.a(oe.field_Kb, 103, new String[]{param1});
-            var9.field_b.a(var10, (byte) -112, 10);
+            var9 = ProxySocketConnector.field_n;
+            var10 = sd.a(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
+            var9.field_b.addAction(var10, (byte) -112, 10);
           }
-          eg.field_n.c(-107);
+          ProxySocketConnector.field_n.c(-107);
           if (param0) {
-            if (ec.field_r == eg.field_n.field_m) {
-              var13 = eg.field_n;
-              var14 = sd.a(kb.field_M, 77, new String[]{param1});
-              var13.field_b.a(var14, (byte) -111, 16);
+            if (NameAvailabilityValidator.field_r == ProxySocketConnector.field_n.field_m) {
+              var13 = ProxySocketConnector.field_n;
+              var14 = sd.a(DateInputWidget.field_M, 77, new String[]{param1});
+              var13.field_b.addAction(var14, (byte) -111, 16);
             } else {
-              var11 = eg.field_n;
+              var11 = ProxySocketConnector.field_n;
               var12 = sd.a(sd.field_J, 89, new String[]{param1});
-              var11.field_b.a(var12, (byte) -61, 15);
+              var11.field_b.addAction(var12, (byte) -61, 15);
             }
           }
           var6 = -41 / ((23 - param3) / 40);
-          var15 = eg.field_n;
-          var5 = uo.field_a;
+          var15 = ProxySocketConnector.field_n;
+          var5 = BufferedRandomAccessFile.field_a;
           var7 = ji.field_c;
           var15.field_b.b(0, var5, 62, var7, 0);
           return;

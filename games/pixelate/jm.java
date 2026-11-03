@@ -14,11 +14,11 @@ final class jm {
     static String field_k;
     static ck[] field_d;
     int field_l;
-    static gp field_b;
+    static ScrollContainer field_b;
     int field_f;
     static bd field_q;
     static Sprite[] field_i;
-    static ak field_h;
+    static SceneWidget field_h;
     static int[] field_g;
     static String field_s;
     static String field_p;
@@ -68,14 +68,14 @@ final class jm {
         String var7;
         String var8;
         var5 = Pixelate.field_H ? 1 : 0;
-        var6 = "(" + oj.field_G + " " + gb.field_d + " " + tm.field_U + ") " + mn.field_e;
+        var6 = "(" + oj.field_G + " " + gb.field_d + " " + MarkerSlider.field_U + ") " + TextLayoutLine.field_e;
         var1 = var6;
-        if (0 < jj.field_b) {
+        if (0 < BackgroundScene.field_b) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < jj.field_b; var2++) {
+          for (var2 = 0; var2 < BackgroundScene.field_b; var2++) {
             var7 = var1 + ' ';
             var1 = var7;
-            var3 = 255 & vi.field_o.payload[var2];
+            var3 = 255 & MusicCrossfadeStream.field_o.payload[var2];
             var4 = var3 >> 4;
             if (10 <= var4) {
               var4 += 55;

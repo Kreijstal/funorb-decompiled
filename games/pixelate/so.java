@@ -54,11 +54,11 @@ final class so {
         }
     }
 
-    final dd b(int param0) {
+    final Puzzle b(int param0) {
         if (param0 != -3060) {
           this.field_a = 17;
         }
-        return new dd(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new hh[]{lk.field_o[this.field_e]});
+        return new Puzzle(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new IndexedSprite[]{lk.field_o[this.field_e]});
     }
 
     final void b(boolean param0) {
@@ -80,46 +80,46 @@ final class so {
             pk.field_f = wg.b(255, 4);
           }
           if (pk.field_f.field_p) {
-            go.field_k = go.field_k & ~pk.field_f.field_s;
-            de.field_n = de.field_n | pk.field_f.field_s;
+            EmailCredentials.field_k = EmailCredentials.field_k & ~pk.field_f.field_s;
+            MenuScreen.field_n = MenuScreen.field_n | pk.field_f.field_s;
             ik.field_a = true;
             pk.field_f = null;
           }
         }
-        if (!db.field_U) {
+        if (!TextHotspotWidget.field_U) {
           if (null == up.field_g) {
             up.field_g = ni.a(6, -90);
           }
           if (up.field_g.field_p) {
-            db.a(false, up.field_g.field_n);
+            TextHotspotWidget.a(false, up.field_g.field_n);
             if (ef.field_a) {
-              kp.b((byte) 74);
+              QuickChatPhraseDefinition.b((byte) 74);
             }
             up.field_g = null;
-            db.field_U = true;
+            TextHotspotWidget.field_U = true;
           }
         }
         if (ik.field_a &&
-          db.field_U) {
-          eh.c(5);
+          TextHotspotWidget.field_U) {
+          SocketConnector.c(5);
           ni.a(-31470);
           if (fc.field_e == 9 &&
-            go.field_k == 0) {
+            EmailCredentials.field_k == 0) {
             fc.field_e = 5;
-            la.a(ti.field_t, 5, false, -25528);
+            la.a(MidiPcmStream.field_t, 5, false, -25528);
           }
         }
     }
 
     final void e(int param0) {
         this.field_n = true;
-        long var2 = 1L << this.field_e | jo.field_h;
+        long var2 = 1L << this.field_e | CheckboxPainter.field_h;
         if (param0 != 20604) {
           return;
         }
-        if (var2 != jo.field_h) {
-          jo.field_h = var2;
-          kp.b((byte) 74);
+        if (var2 != CheckboxPainter.field_h) {
+          CheckboxPainter.field_h = var2;
+          QuickChatPhraseDefinition.b((byte) 74);
         }
     }
 
@@ -154,28 +154,28 @@ final class so {
         }
         for (var3 = 0; var3 < this.field_i.length; var3++) {
           var4 = vn.field_e[this.field_i[var3]];
-          stackIn_6_0 = rg.field_e.field_a;
+          stackIn_6_0 = LoginCredentials.field_e.field_a;
           if (!var4[0]) {
             stackIn_7_1 = 0;
           } else {
             stackIn_7_1 = 1;
           }
           ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).b(550, var2);
-          stackIn_9_0 = rg.field_e.field_a;
+          stackIn_9_0 = LoginCredentials.field_e.field_a;
           if (var4[1]) {
             stackIn_10_1 = 1;
           } else {
             stackIn_10_1 = 0;
           }
           ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).b(566, var2);
-          stackIn_12_0 = rg.field_e.field_a;
+          stackIn_12_0 = LoginCredentials.field_e.field_a;
           if (var4[2]) {
             stackIn_13_1 = 1;
           } else {
             stackIn_13_1 = 0;
           }
           ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).b(550, var2 + 16);
-          stackIn_15_0 = rg.field_e.field_a;
+          stackIn_15_0 = LoginCredentials.field_e.field_a;
           if (!var4[3]) {
             stackIn_16_1 = 0;
           } else {
@@ -187,7 +187,7 @@ final class so {
           }
           var2 += 37;
         }
-        rk.field_e.a("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
+        rk.field_e.drawText("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
     }
 
     so(int param0, int param1, int param2, int param3, int param4, int[] param5) {

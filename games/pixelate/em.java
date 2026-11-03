@@ -9,18 +9,18 @@ final class em {
     final static void a(byte param0) {
         if (param0 > -13) {
           field_a = (String) null;
-          oa.field_j = 0;
+          DateOfBirthValidator.field_j = 0;
           return;
         }
-        oa.field_j = 0;
+        DateOfBirthValidator.field_j = 0;
     }
 
     final static void a(byte param0, lc param1, int param2) {
-        pc var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           if (param0 != -7) {
             int[] var4 = (int[]) null;
-            em.a((String) null, 12L, (String) null, 43, (ak) null, -102, (gp) null, (int[]) null, 46);
+            em.a((String) null, 12L, (String) null, 43, (SceneWidget) null, -102, (ScrollContainer) null, (int[]) null, 46);
           }
           var3 = aa.field_f;
           var3.g(param2, 15514);
@@ -44,16 +44,16 @@ final class em {
         try {
           jm.field_i = param0;
           var2_int = param0[0].field_A;
-          rn.field_b = var2_int;
+          SectorCacheStore.field_b = var2_int;
           hf.field_k = var2_int;
           lo.field_Jb = (800 - var2_int) / 2;
-          ip.field_A = rk.field_e.field_w + rk.field_e.field_z;
-          bh.field_k = ip.field_A * 50 - 163;
+          PasswordFieldPainter.field_A = rk.field_e.maxAscent + rk.field_e.maxDescent;
+          DirectByteStorage.field_k = PasswordFieldPainter.field_A * 50 - 163;
           if (param1 >= -75) {
             field_b = (String) null;
           }
           for (var3 = 0; var3 < 50; var3++) {
-            ud.field_I[var3] = new up(var3);
+            ModalPanel.field_I[var3] = new up(var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,13 +70,13 @@ final class em {
         }
     }
 
-    final static void a(String param0, long param1, String param2, int param3, ak param4, int param5, gp param6, int[] param7, int param8) {
+    final static void a(String param0, long param1, String param2, int param3, SceneWidget param4, int param5, ScrollContainer param6, int[] param7, int param8) {
         try {
           if (param5 != -163) {
             em.a((byte) 53);
           }
           bj.field_d = param6;
-          eg.field_n = new wi(param4, param1, param2, param0, param3, param8, param7);
+          ProxySocketConnector.field_n = new ClientContextMenu(param4, param1, param2, param0, param3, param8, param7);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "em.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
@@ -91,14 +91,14 @@ final class em {
         field_a = null;
     }
 
-    final static void a(vj param0, int param1, int param2, fm param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
-          ub.field_a = pf.a(true) * param2 / 1000;
+          ub.field_a = MenuInputState.a(true) * param2 / 1000;
           nj.a(param3, (byte) 14);
           dk.a(false, param3);
-          ec.a(false, param3);
+          NameAvailabilityValidator.a(false, param3);
           op.e(260);
-          ng.g(0);
+          UiComponent.g(0);
           ga.field_f = -ub.field_a + 0;
           int var4_int = 26 % ((param1 - 1) / 55);
         } catch (RuntimeException runtimeException) {

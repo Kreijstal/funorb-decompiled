@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends ak {
-    ak field_Ib;
+final class pd extends SceneWidget {
+    SceneWidget field_Ib;
     static el field_Kb;
     static int field_Jb;
-    ak field_Hb;
+    SceneWidget field_Hb;
     static int field_Eb;
-    ak field_Fb;
-    gp field_Gb;
+    SceneWidget field_Fb;
+    ScrollContainer field_Gb;
 
     public static void b(byte param0) {
         field_Kb = null;
@@ -20,7 +20,7 @@ final class pd extends ak {
     final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         this.field_D = param0;
         this.field_S = param3;
-        this.field_nb = param7;
+        this.height = param7;
         this.field_K = param1;
         this.a(param2, true, param6, param5);
         if (param4) {
@@ -30,33 +30,33 @@ final class pd extends ak {
 
     final void a(int param0, boolean param1, int param2, int param3) {
         int var5 = (param2 + this.field_K) / 2;
-        int var6 = -param0 + this.field_nb;
+        int var6 = -param0 + this.height;
         if (param1) {
           this.field_Gb.a(0, param2, (byte) 97, this.field_K, 0, var6 - param2, param3);
           this.field_Ib.field_S = var6;
-          this.field_Ib.field_nb = param0;
+          this.field_Ib.height = param0;
           this.field_Ib.field_K = -param2 + var5;
           this.field_Ib.field_D = 0;
           this.field_Hb.field_S = var6;
           this.field_Hb.field_K = this.field_K - var5;
           this.field_Hb.field_D = var5;
-          this.field_Hb.field_nb = param0;
+          this.field_Hb.height = param0;
           return;
         }
     }
 
     final static void j(int param0) {
-        ri.field_f = new hp(cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c);
+        ri.field_f = new hp(cm.field_o, pj.field_i, ae.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
         int var1 = 40 / ((param0 + 90) / 35);
     }
 
-    pd(long param0, ak param1, ak param2, vp param3, ak param4, String param5, String param6) {
+    pd(long param0, SceneWidget param1, SceneWidget param2, VerticalScrollbar param3, SceneWidget param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Fb = new ak(0L, (ak) null);
-          this.field_Gb = new gp(0L, this.field_Fb, param2, param3);
-          this.field_Ib = new ak(0L, param4);
-          this.field_Hb = new ak(0L, param4);
+          this.field_Fb = new SceneWidget(0L, (SceneWidget) null);
+          this.field_Gb = new ScrollContainer(0L, this.field_Fb, param2, param3);
+          this.field_Ib = new SceneWidget(0L, param4);
+          this.field_Hb = new SceneWidget(0L, param4);
           this.field_Ib.field_cb = param5;
           this.field_Hb.field_cb = param6;
           this.a(this.field_Gb, (byte) 26);
@@ -70,9 +70,9 @@ final class pd extends ak {
     final static boolean k(int param0) {
         if (param0 != 0) {
           pd.k(-125);
-          return oc.field_J;
+          return StripedProgressBar.field_J;
         }
-        return oc.field_J;
+        return StripedProgressBar.field_J;
     }
 
     pd(long param0, pd param1, String param2, String param3) {

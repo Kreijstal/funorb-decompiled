@@ -8,15 +8,15 @@ final class kf extends bg {
     private int field_m;
     static byte[] field_o;
     static String field_n;
-    static fm field_p;
+    static ResourceArchive field_p;
     private int field_s;
 
-    final static tc a(byte[] param0, int param1) {
-        tc var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         Object stackIn_2_0 = null;
-        tc stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -24,9 +24,9 @@ final class kf extends bg {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (tc) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new tc(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, wo.field_f);
+          var2 = new BinaryBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, wo.field_f);
           re.b(140);
           var3 = -91 % ((77 - param1) / 37);
           stackIn_4_0 = var2;

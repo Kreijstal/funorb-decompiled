@@ -5,15 +5,15 @@ final class ff {
     static String field_f;
     static int field_i;
     static long field_d;
-    static ak field_j;
-    static ak field_g;
-    static ak field_h;
+    static SceneWidget field_j;
+    static SceneWidget field_g;
+    static SceneWidget field_h;
     static String field_e;
     static String field_c;
     static String field_b;
-    static ak field_a;
+    static SceneWidget field_a;
 
-    final static Sprite[] a(fm param0, int param1, int param2, int param3) {
+    final static Sprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -69,7 +69,7 @@ final class ff {
         int var6 = 0;
         im var7 = null;
         im var8 = null;
-        pc var9 = null;
+        CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
@@ -78,18 +78,18 @@ final class ff {
             stackIn_4_0 = qn.field_n;
             return stackIn_4_0;
           }
-          if (gk.field_db != 2) {
+          if (ValidatedTextWidget.field_db != 2) {
             stackIn_8_0 = qg.field_c;
             return stackIn_8_0;
           }
           var8 = re.a(param1, -1);
           if (var8 == null) {
-            stackIn_11_0 = sd.a(vl.field_R, 41, new String[]{param1});
+            stackIn_11_0 = sd.a(AccountMessagePanel.field_R, 41, new String[]{param1});
             return stackIn_11_0;
           }
-          vp.field_Hb.a(var8, param2 + 1504642379);
+          VerticalScrollbar.field_Hb.traverseFrom(var8, param2 + 1504642379);
           while (true) {
-            var7 = (im) (vp.field_Hb.f(param2 ^ -1504642185));
+            var7 = (im) (VerticalScrollbar.field_Hb.last(param2 ^ -1504642185));
             if (var7 != null) {
               var7.field_Kb = var7.field_Kb - 1;
               continue;
@@ -101,7 +101,7 @@ final class ff {
           if (param2 != -106) {
             field_d = -123L;
           }
-          f.field_q = f.field_q - 1;
+          DialWidgetPainter.field_q = DialWidgetPainter.field_q - 1;
           var9 = aa.field_f;
           var9.g(param0, 15514);
           var9.position = var9.position + 1;
@@ -134,22 +134,22 @@ final class ff {
         int var7 = Pixelate.field_H ? 1 : 0;
         Sprite[] var1 = new Sprite[im.field_Qb];
         for (var2 = param0; var2 < im.field_Qb; var2++) {
-          var3 = ge.field_c[var2] * gf.field_g[var2];
+          var3 = ge.field_c[var2] * ByteStorage.field_g[var2];
           var4 = wo.field_f[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = fl.field_g[cm.a((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var5);
+          var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var5);
         }
         re.b(140);
         return var1;
     }
 
-    final static hh[] a(fm param0, int param1, int param2, byte param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        hh[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

@@ -3,20 +3,20 @@
  */
 final class dj {
     static boolean field_c;
-    static ak field_a;
+    static SceneWidget field_a;
     static int[] field_b;
 
-    final static void a(byte param0, jl param1, jl param2, int param3) {
+    final static void a(byte param0, BitmapFont param1, BitmapFont param2, int param3) {
         try {
           if (param0 >= -98) {
-            jl var5 = (jl) null;
-            dj.a((byte) -124, (jl) null, (jl) null, -15);
+            BitmapFont var5 = (BitmapFont) null;
+            dj.a((byte) -124, (BitmapFont) null, (BitmapFont) null, -15);
           }
           MouseInputHandler.field_c = param3;
           bg.field_j = param2;
           ma.field_y = param1;
           op.b(SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_j / 2, true);
-          jj.a(param2.field_z + param2.field_D, false, param1.field_D, param2.field_D, param1.field_D + param1.field_z);
+          BackgroundScene.a(param2.maxDescent + param2.field_D, false, param1.field_D, param2.field_D, param1.field_D + param1.maxDescent);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -28,8 +28,8 @@ final class dj {
 
     final static void a(int param0, int param1, Sprite[] param2, int param3) {
         try {
-          nl.field_c = new sb(param2);
-          ao.field_d = param1;
+          NodeHashTable.field_c = new sb(param2);
+          AudioService.field_d = param1;
           MouseWheelHandler.field_d = param0;
           dj.a(param3);
         } catch (RuntimeException runtimeException) {
@@ -43,17 +43,17 @@ final class dj {
         int var1Lifetime1;
         int var2Lifetime1;
         if (param0 == -1501881951) {
-          var1 = ka.m(param0 + 1501881973);
-          var2 = go.c(107);
-          nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1, -MouseWheelHandler.field_d + qn.field_o);
-          vh.a(88);
+          var1 = ResizableModalPanel.m(param0 + 1501881973);
+          var2 = EmailCredentials.c(107);
+          NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1, -MouseWheelHandler.field_d + qn.field_o);
+          GzipDecoder.a(88);
           return;
         }
         dj.b(-112);
-        var1Lifetime1 = ka.m(param0 + 1501881973);
-        var2Lifetime1 = go.c(107);
-        nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);
-        vh.a(88);
+        var1Lifetime1 = ResizableModalPanel.m(param0 + 1501881973);
+        var2Lifetime1 = EmailCredentials.c(107);
+        NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);
+        GzipDecoder.a(88);
     }
 
     public static void b(int param0) {

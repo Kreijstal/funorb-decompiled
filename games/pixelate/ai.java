@@ -38,7 +38,7 @@ final class ai {
     static String field_C;
     int field_c;
     int[] field_u;
-    static ak field_A;
+    static SceneWidget field_A;
     int[][] field_B;
     static int[] field_e;
 
@@ -85,10 +85,10 @@ final class ai {
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param1 == 6) {
-          if (uo.field_j <= 0) {
-            if (!jg.a((byte) 58)) {
+          if (BufferedRandomAccessFile.field_j <= 0) {
+            if (!ArrayWidgetContainer.a((byte) 58)) {
               var2 = 1;
-              if (vh.field_c != null) {
+              if (GzipDecoder.field_c != null) {
                 return;
               }
               if (dg.field_a) {
@@ -98,10 +98,10 @@ final class ai {
             }
             var2 = 0;
           } else {
-            if (vh.field_c == null) {
+            if (GzipDecoder.field_c == null) {
               ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = vh.field_c.b(false);
+              ib.field_f = GzipDecoder.field_c.b(false);
               ah.a(2, (byte) 114);
             }
             if (ib.field_f == null) {
@@ -113,17 +113,17 @@ final class ai {
           }
         } else {
           field_C = (String) null;
-          if (uo.field_j <= 0) {
-            if (!jg.a((byte) 58)) {
+          if (BufferedRandomAccessFile.field_j <= 0) {
+            if (!ArrayWidgetContainer.a((byte) 58)) {
               var2 = 1;
             } else {
               var2 = 0;
             }
           } else {
-            if (vh.field_c == null) {
+            if (GzipDecoder.field_c == null) {
               ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = vh.field_c.b(false);
+              ib.field_f = GzipDecoder.field_c.b(false);
               ah.a(2, (byte) 114);
             }
             if (ib.field_f == null) {
@@ -134,7 +134,7 @@ final class ai {
             }
           }
         }
-        if (vh.field_c != null) {
+        if (GzipDecoder.field_c != null) {
           return;
         }
         if (dg.field_a) {

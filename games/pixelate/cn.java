@@ -3,7 +3,7 @@
  */
 final class cn {
     static bd field_a;
-    static ko field_b;
+    static LoadingProgressDialog field_b;
 
     final static int a(String param0, int param1, int param2, boolean param3, sc param4, int param5, sc param6) {
         int var12 = 0;
@@ -59,7 +59,7 @@ final class cn {
           }
           if (uk.field_s == ij.field_o) {
             aa.field_f.position = 0;
-            kj.field_j = null;
+            ArchiveIndex.field_j = null;
             if (param0 != null) {
               var9 = 0;
               uk.field_v.position = 0;
@@ -78,12 +78,12 @@ final class cn {
               aa.field_f.writeByte(160, 18);
               aa.field_f.position = aa.field_f.position + 2;
               var10 = aa.field_f.position;
-              var11_ref_StringLifetime2 = ln.a(ao.a(13867), (byte) -85);
+              var11_ref_StringLifetime2 = ln.a(AudioService.a(13867), (byte) -85);
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
               aa.field_f.b((byte) -41, var11_ref_StringLifetime2);
-              wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
+              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
               aa.field_f.c(7519, aa.field_f.position - var10);
             } else {
               uk.field_v.position = 0;
@@ -108,23 +108,23 @@ final class cn {
               aa.field_f.writeByte(160, 16);
               aa.field_f.position = aa.field_f.position + 1;
               var9 = aa.field_f.position;
-              wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
+              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
               aa.field_f.f(aa.field_f.position - var9, -1);
             }
-            vg.b(-1, 10000);
-            uk.field_s = mn.field_c;
+            SecondaryNodeHashTable.b(-1, 10000);
+            uk.field_s = TextLayoutLine.field_c;
           }
-          if (mn.field_c == uk.field_s &&
-            rd.a(1, false)) {
-            var9Lifetime1 = vi.field_o.f(255);
-            vi.field_o.position = 0;
+          if (TextLayoutLine.field_c == uk.field_s &&
+            QueuedInput.a(1, false)) {
+            var9Lifetime1 = MusicCrossfadeStream.field_o.f(255);
+            MusicCrossfadeStream.field_o.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              ii.field_y = new String[-100 + var9Lifetime1];
-              uk.field_s = c.field_Z;
+              MatchController.field_y = new String[-100 + var9Lifetime1];
+              uk.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
-                ql.a(ao.a(13867), -7624);
+                ql.a(AudioService.a(13867), -7624);
                 gi.field_b = ph.field_m;
                 na.a(true);
                 qj.field_b = false;
@@ -132,25 +132,25 @@ final class cn {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 != 99) {
-                mn.field_e = var9Lifetime1;
+                TextLayoutLine.field_e = var9Lifetime1;
                 uk.field_s = bg.field_l;
-                jj.field_b = -1;
+                BackgroundScene.field_b = -1;
               } else {
-                rd.a(wl.a(23062), false);
-                kj.field_j = new Boolean(rn.a((byte) 107, vi.field_o));
-                vi.field_o.position = 0;
+                QueuedInput.a(wl.a(23062), false);
+                ArchiveIndex.field_j = new Boolean(SectorCacheStore.a((byte) 107, MusicCrossfadeStream.field_o));
+                MusicCrossfadeStream.field_o.position = 0;
               }
             }
           }
-          if (uk.field_s == c.field_Z) {
+          if (uk.field_s == EditableTextWidget.field_Z) {
             var9Lifetime2 = 2;
-            if (rd.a(var9Lifetime2, false)) {
-              var10Lifetime1 = vi.field_o.a((byte) 82);
-              vi.field_o.position = 0;
-              if (rd.a(var10Lifetime1, false)) {
-                var11 = ii.field_y.length;
+            if (QueuedInput.a(var9Lifetime2, false)) {
+              var10Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 82);
+              MusicCrossfadeStream.field_o.position = 0;
+              if (QueuedInput.a(var10Lifetime1, false)) {
+                var11 = MatchController.field_y.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ii.field_y[var12] = vi.field_o.e(122);
+                  MatchController.field_y[var12] = MusicCrossfadeStream.field_o.e(122);
                 }
                 na.a(true);
                 qj.field_b = false;
@@ -160,24 +160,24 @@ final class cn {
             }
           }
           if (uk.field_s == bg.field_l &&
-            in.e(-18481)) {
-            if (mn.field_e == 255) {
-              var9_ref_String = vi.field_o.e((byte) 40);
+            MusicPatchNode.e(-18481)) {
+            if (TextLayoutLine.field_e == 255) {
+              var9_ref_String = MusicCrossfadeStream.field_o.e((byte) 40);
               if (var9_ref_String != null) {
-                rd.a(var9_ref_String, 126, ao.a(13867));
+                QueuedInput.a(var9_ref_String, 126, AudioService.a(13867));
               }
             } else {
-              gi.field_b = vi.field_o.h(5);
+              gi.field_b = MusicCrossfadeStream.field_o.h(5);
             }
             na.a(true);
             qj.field_b = false;
-            stackIn_56_0 = mn.field_e;
+            stackIn_56_0 = TextLayoutLine.field_e;
             return stackIn_56_0;
           }
           if (NodeHashTableIterator.field_e == null) {
             if (qj.field_b) {
-              if (no.d(8) > 30000L) {
-                gi.field_b = vc.field_N;
+              if (CachedTextLayout.d(8) > 30000L) {
+                gi.field_b = ValidationIndicator.field_N;
               } else {
                 gi.field_b = ho.field_b;
               }
@@ -306,16 +306,16 @@ final class cn {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < ja.field_d) {
-                        eg.a(var18, 1022226145, var17 + var16Lifetime2, param5, param3);
+                        ProxySocketConnector.a(var18, 1022226145, var17 + var16Lifetime2, param5, param3);
                       }
                     } else {
                       if (var17 + var18 >= ja.field_d) {
                         var18 = -1 + (-var17 + ja.field_d);
                       }
                       if (0 <= var17) {
-                        eg.a(var18, 1022226145, var16Lifetime2 + var17, param5, param3);
+                        ProxySocketConnector.a(var18, 1022226145, var16Lifetime2 + var17, param5, param3);
                       } else {
-                        eg.a(var17 + var18, 1022226145, var16Lifetime2, param5, param3);
+                        ProxySocketConnector.a(var17 + var18, 1022226145, var16Lifetime2, param5, param3);
                       }
                     }
                   }
@@ -386,14 +386,14 @@ final class cn {
                     var17Lifetime1 = ja.field_d - var16Lifetime1 - 1;
                   }
                   if (var16Lifetime1 >= 0) {
-                    eg.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
+                    ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
                   } else {
-                    eg.a(var17Lifetime1 + var16Lifetime1, 1022226145, var15Lifetime1, param5, param3);
+                    ProxySocketConnector.a(var17Lifetime1 + var16Lifetime1, 1022226145, var15Lifetime1, param5, param3);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     ja.field_d > var16Lifetime1) {
-                    eg.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
+                    ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
                   }
                 }
               }
@@ -424,12 +424,12 @@ final class cn {
 
     final static lc a(int param0, int param1, int param2, int param3) {
         int var5 = Pixelate.field_H ? 1 : 0;
-        lc var4 = (lc) (rg.field_c.c(1504642273));
+        lc var4 = (lc) (LoginCredentials.field_c.c(1504642273));
         while (var4 != null) {
           if (~param0 == ~var4.field_k) {
             return var4;
           }
-          var4 = (lc) (rg.field_c.f(1504642273));
+          var4 = (lc) (LoginCredentials.field_c.last(1504642273));
         }
         var4 = new lc();
         if (param3 > -16) {
@@ -437,7 +437,7 @@ final class cn {
         }
         var4.field_k = param0;
         var4.field_s = param2;
-        rg.field_c.a(22125, var4);
+        LoginCredentials.field_c.addFirst(22125, var4);
         em.a((byte) -7, var4, param1);
         return var4;
     }

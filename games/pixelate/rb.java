@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rb extends de {
+final class rb extends MenuScreen {
     static String field_r;
     static int field_q;
     static int field_o;
@@ -29,7 +29,7 @@ final class rb extends de {
         if (param0 >= -95) {
           return -69;
         }
-        return this.field_l == 9 ? go.field_k : de.field_n;
+        return this.field_l == 9 ? EmailCredentials.field_k : MenuScreen.field_n;
     }
 
     private final boolean c(int param0, byte param1) {
@@ -74,8 +74,8 @@ final class rb extends de {
         int stackIn_3_0 = 0;
         int stackIn_24_0 = 0;
         int var2;
-        ob var3;
-        tc var4;
+        PaletteBitmapFont var3;
+        BinaryBitmapFont var4;
         int var5;
         int var6;
         Sprite var6_ref_tf;
@@ -97,7 +97,7 @@ final class rb extends de {
           rb.b(-94, (byte) 78);
         }
         var4 = qj.field_e;
-        gj.field_W[6].b(0, 45);
+        NumericDateInputWidget.field_W[6].b(0, 45);
         this.b((byte) -71);
         for (var5 = 0; var5 < GameApplet.field_n.length; var5++) {
           var6_ref_tf = this.b((byte) 37, var5);
@@ -121,31 +121,31 @@ final class rb extends de {
         }
         var5Lifetime1 = stackIn_24_0;
         if (-1 != var5Lifetime1) {
-          var6 = var3.field_z + var3.field_D;
-          var7Lifetime1 = var4.field_D + (var4.field_z + 3);
-          var3.b(GameApplet.field_n[var5Lifetime1], 320, 280, 0, -1);
+          var6 = var3.maxDescent + var3.field_D;
+          var7Lifetime1 = var4.field_D + (var4.maxDescent + 3);
+          var3.drawCentered(GameApplet.field_n[var5Lifetime1], 320, 280, 0, -1);
           if (this.a((byte) 66, var5Lifetime1)) {
-            var3.b(co.field_d, 320, 280 + var6, 0, -1);
+            var3.drawCentered(ViewportController.field_d, 320, 280 + var6, 0, -1);
           } else {
-            var3.b(bf.field_t, 320, var6 + 280, 1, -1);
+            var3.drawCentered(bf.field_t, 320, var6 + 280, 1, -1);
           }
           var9 = this.b((byte) 37, var5Lifetime1);
           var9.b(60, 120);
-          var10 = var4.a(this.a(true, var5Lifetime1), 120, 320, 400, 400, 16777215, 0, 0, 0, var7Lifetime1);
+          var10 = var4.drawParagraph(this.a(true, var5Lifetime1), 120, 320, 400, 400, 16777215, 0, 0, 0, var7Lifetime1);
           var11 = 320 + (var7Lifetime1 * var10 + 24);
-          var4.a(to.field_p + ri.field_c[var5Lifetime1], 120, var11, 16777215, 0);
+          var4.drawText(to.field_p + ri.field_c[var5Lifetime1], 120, var11, 16777215, 0);
           var11 = var11 + (4 + var7Lifetime1);
-          var4.a(fh.field_K, 120, var11, 16777215, 0);
-          var12 = var4.c(fh.field_K) + 120;
+          var4.drawText(DisplayNameForm.field_K, 120, var11, 16777215, 0);
+          var12 = var4.textWidth(DisplayNameForm.field_K) + 120;
           var13 = var11;
           for (var14 = 0; var14 < ri.field_e[var5Lifetime1]; var14++) {
             vn.field_c.b((vn.field_c.field_A >> 1) * var14 + var12, -vn.field_c.field_B + (var13 + 4));
           }
         } else {
-          var3.a(th.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);
-          if (jg.a((byte) 109)) {
+          var3.drawParagraph(th.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);
+          if (ArrayWidgetContainer.a((byte) 109)) {
             var6 = 280 + this.field_d >> 1;
-            var4.b(mj.field_h, 320, var6, 16777215, 0);
+            var4.drawCentered(mj.field_h, 320, var6, 16777215, 0);
           }
         }
     }
@@ -211,7 +211,7 @@ final class rb extends de {
         if (param0 >= -13) {
           return;
         }
-        la.a(this.field_l, nc.field_a, false, -25528);
+        la.a(this.field_l, TickClock.field_a, false, -25528);
     }
 
     rb(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -273,7 +273,7 @@ final class rb extends de {
         }
         jn.field_v = this.b(4, ProxyAuthenticationException.field_d, bg.field_k);
         if (jn.field_v != -1 &&
-          nm.field_c == 1) {
+          IntrusiveDequeCursor.field_c == 1) {
           mc.a(128, -126);
           if (jn.field_v == jm.field_j) {
             jm.field_j = -1;
@@ -295,7 +295,7 @@ final class rb extends de {
         if (param1 < 26) {
           field_o = 88;
         }
-        int var3 = 3 + ok.a(tg.field_f, -124, 17);
+        int var3 = 3 + ok.a(UiTheme.field_f, -124, 17);
         double var4 = (double)(param0 - 10) / 10.0 + 7.0;
         return new rk(var2, var3, of.a(var4, 65536));
     }
@@ -312,7 +312,7 @@ final class rb extends de {
         if (param0 >= -107) {
           return 80;
         }
-        return rk.field_e.c(this.d(param1, 7698)) + (0 == param1 ? sn.field_m.field_A : 0);
+        return rk.field_e.textWidth(this.d(param1, 7698)) + (0 == param1 ? MusicPatch.field_m.field_A : 0);
     }
 
     final void a(byte param0, boolean param1, int param2) {
@@ -322,9 +322,9 @@ final class rb extends de {
         var4 = this.d(param2, 7698);
         if (param2 == 1 &&
           this.field_k[param2] == 23) {
-          stackIn_5_0 = oc.field_S;
+          stackIn_5_0 = StripedProgressBar.field_S;
         } else {
-          stackIn_5_0 = oc.field_N;
+          stackIn_5_0 = StripedProgressBar.field_N;
         }
         var5 = stackIn_5_0;
         if (param2 == 0) {

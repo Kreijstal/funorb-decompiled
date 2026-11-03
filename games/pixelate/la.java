@@ -21,13 +21,13 @@ final class la {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        pc var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         hf var12 = null;
-        pc var13 = null;
+        CipherPacketBuffer var13 = null;
         int[] var14 = null;
         mc var15 = null;
         Object var16 = null;
@@ -36,7 +36,7 @@ final class la {
         var16 = null;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          var13 = vi.field_o;
+          var13 = MusicCrossfadeStream.field_o;
           if (param0 < 120) {
             field_a = (int[]) null;
           }
@@ -66,7 +66,7 @@ final class la {
           }
           if (var2 != 1) {
             if (var2 != 2) {
-              jo.a(1, "A1: " + jm.b(-79), (Throwable) null);
+              CheckboxPainter.a(1, "A1: " + jm.b(-79), (Throwable) null);
               na.a(true);
             } else {
               var16_ref = (mc) (tj.field_z.c(1504642273));
@@ -207,21 +207,21 @@ final class la {
         }
     }
 
-    final static ak b(byte param0) {
+    final static SceneWidget b(byte param0) {
         if (param0 > -84) {
           la.a((byte) -93);
         }
         return aj.field_k.field_Fb;
     }
 
-    final static void a(int param0, int param1, gp param2, int param3, boolean param4) {
+    final static void a(int param0, int param1, ScrollContainer param2, int param3, boolean param4) {
         int var27_int = 0;
-        gp stackIn_45_0 = null;
+        ScrollContainer stackIn_45_0 = null;
         boolean stackIn_45_1 = false;
         boolean stackIn_46_2 = false;
         int stackIn_49_0 = 0;
         int stackIn_61_0 = 0;
-        ak stackIn_97_0;
+        SceneWidget stackIn_97_0;
         int stackIn_97_1;
         int stackIn_97_2;
         int stackIn_97_3;
@@ -238,16 +238,16 @@ final class la {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        bb var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        uj var12 = null;
+        LobbyPlayer var12 = null;
         int var13 = 0;
-        ak var14 = null;
-        ak var15 = null;
-        ak var16 = null;
-        ak var17 = null;
-        ak var18 = null;
+        SceneWidget var14 = null;
+        SceneWidget var15 = null;
+        SceneWidget var16 = null;
+        SceneWidget var17 = null;
+        SceneWidget var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -288,7 +288,7 @@ final class la {
           var7 = 0;
           var8 = 0;
           if (null != io.field_c && (null != jm.field_r ||
-            null != w.field_z ||
+            null != StatefulTextPainter.field_z ||
             null != pa.field_a ||
             oo.field_e != null)) {
             for (var9 = 0; fj.field_b > var9; var9++) {
@@ -298,9 +298,9 @@ final class la {
                 jm.field_r[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (null != w.field_z &&
-                null != w.field_z[var9]) {
-                var11_int = w.field_z[var9][var10_int];
+              if (null != StatefulTextPainter.field_z &&
+                null != StatefulTextPainter.field_z[var9]) {
+                var11_int = StatefulTextPainter.field_z[var9][var10_int];
                 if (0 != var11_int &&
                   !fe.field_a) {
                   var5_int = 1;
@@ -326,51 +326,51 @@ final class la {
               }
             }
           }
-          stackIn_45_0 = (gp) (param2);
+          stackIn_45_0 = (ScrollContainer) (param2);
           stackIn_45_1 = param4;
           stackIn_46_2 = (bj.field_d == param2);
-          stackIn_49_0 = (!((gp) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_46_2, 2, (fq.field_q * 4 + 8) * param3, 0, 2 * fq.field_q + 4)) ? 0 : 1;
+          stackIn_49_0 = (!((ScrollContainer) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_46_2, 2, (fq.field_q * 4 + 8) * param3, 0, 2 * fq.field_q + 4)) ? 0 : 1;
           var9Lifetime1 = stackIn_49_0;
-          var10 = param2.field_Fb.field_L;
+          var10 = param2.field_Fb.children;
           var11 = null;
-          var12 = (uj) (var10.c(1504642273));
+          var12 = (LobbyPlayer) (var10.c(1504642273));
           while (var12 != null) {
             var13 = 0;
-            if (var12.field_L == null) {
-              var12.field_Hb = new ak(0L, ak.field_T);
+            if (var12.children == null) {
+              var12.field_Hb = new SceneWidget(0L, SceneWidget.field_T);
               var12.a(var12.field_Hb, (byte) 26);
-              var12.field_Gb = new ak(0L, of.field_i);
-              if (f.field_n) {
+              var12.field_Gb = new SceneWidget(0L, of.field_i);
+              if (DialWidgetPainter.field_n) {
                 var12.a(var12.field_Gb, (byte) 26);
               }
-              var12.field_Gb.field_Bb = 2;
-              var12.field_Sb = new ak(0L, mg.field_h);
+              var12.field_Gb.horizontalAlignment = 2;
+              var12.field_Sb = new SceneWidget(0L, TextFieldValidator.field_h);
               var12.a(var12.field_Sb, (byte) 26);
               var12.h(-257);
-              var12.field_Zb = new ak(0L, ul.field_p);
+              var12.field_Zb = new SceneWidget(0L, ul.field_p);
               var12.a(var12.field_Zb, (byte) 26);
-              var12.field_Mb = new ak(0L, ge.field_h);
+              var12.field_Mb = new SceneWidget(0L, ge.field_h);
               var12.a(var12.field_Mb, (byte) 26);
               var13 = 1;
             }
             var12.field_Hb.field_cb = null;
             var14 = var12.field_Hb;
-            var12.field_Hb.field_nb = 0;
+            var12.field_Hb.height = 0;
             var14.field_K = 0;
             var12.field_Gb.field_cb = null;
             var15 = var12.field_Gb;
-            var12.field_Gb.field_nb = 0;
+            var12.field_Gb.height = 0;
             var15.field_K = 0;
             var12.field_Zb.field_cb = null;
-            var12.field_Zb.field_nb = 0;
+            var12.field_Zb.height = 0;
             var16 = var12.field_Zb;
             var12.field_Mb.field_cb = null;
             var16.field_K = 0;
-            var12.field_Mb.field_nb = 0;
+            var12.field_Mb.height = 0;
             var17 = var12.field_Mb;
             var17.field_K = 0;
             var12.field_Sb.field_cb = null;
-            var12.field_Sb.field_nb = 0;
+            var12.field_Sb.height = 0;
             var18 = var12.field_Sb;
             var18.field_K = 0;
             var12.field_K = param2.field_Fb.field_K;
@@ -382,14 +382,14 @@ final class la {
             if (jm.field_b == param2) {
               var21 += 42;
             }
-            var33 = jl.a(var12.field_Hb.field_Db, var32, var21);
+            var33 = BitmapFont.a(var12.field_Hb.font, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
             stackIn_61_0 = (var33.equals(var12.field_Fb)) ? 0 : 1;
             var22 = stackIn_61_0;
             if (4 <= var12.field_Qb) {
-              var20 = "<img=" + (-4 + var12.field_Qb + kk.field_s) + ">" + var33;
+              var20 = "<img=" + (-4 + var12.field_Qb + BoardView.field_s) + ">" + var33;
             } else {
               if (var12.field_Qb > 0) {
                 var20 = "<img=" + (var12.field_Qb - 1) + ">" + var33;
@@ -421,16 +421,16 @@ final class la {
               var12.field_Zb.field_y = var24_int;
               if (param2 == ae.field_c) {
                 if (!io.field_c.field_dc) {
-                  var12.field_Mb.field_cb = pf.field_m;
+                  var12.field_Mb.field_cb = MenuInputState.field_m;
                 }
               } else {
                 if (var12.field_Vb) {
-                  var12.field_Hb.field_cb = sd.a(gf.field_e, 111, new String[]{var20});
+                  var12.field_Hb.field_cb = sd.a(ByteStorage.field_e, 111, new String[]{var20});
                   var12.field_Mb.field_cb = IntrusiveNode.field_f;
                 } else {
                   if (var12.field_Jb) {
-                    var12.field_Hb.field_cb = sd.a(ud.field_O, 58, new String[]{var20});
-                    var12.field_Zb.field_cb = fh.field_M;
+                    var12.field_Hb.field_cb = sd.a(ModalPanel.field_O, 58, new String[]{var20});
+                    var12.field_Zb.field_cb = DisplayNameForm.field_M;
                     var12.field_Mb.field_cb = u.field_e;
                   } else {
                     var12.field_Zb.field_cb = ih.field_b;
@@ -439,8 +439,8 @@ final class la {
               }
               var25_int = 0;
               if (io.field_c != null &&
-                pl.m(99) &&
-                hn.field_f != var12.field_Nb) {
+                AccountRegistrationPanel.m(99) &&
+                DebouncedValidator.field_f != var12.field_Nb) {
                 if (null != var12.field_Zb.field_cb) {
                   var26 = var12.field_Zb.g(0) + MouseWheelHandler.field_c * 2;
                   var12.field_Zb.a(var19, fq.field_q, var25_int, 256, var26);
@@ -461,12 +461,12 @@ final class la {
               stackIn_97_2 = fq.field_q;
               stackIn_97_3 = var25_int;
               stackIn_97_4 = 256;
-              if (!f.field_n) {
+              if (!DialWidgetPainter.field_n) {
                 stackIn_98_5 = 0;
               } else {
                 stackIn_98_5 = 42;
               }
-              ((ak) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_97_4, -stackIn_98_5 + var12.field_K - var25_int);
+              ((SceneWidget) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_97_4, -stackIn_98_5 + var12.field_K - var25_int);
               var12.field_Gb.field_cb = Integer.toString(var12.field_Rb);
               var12.field_Gb.a(var19, fq.field_q, var12.field_K - 40, 256, 40);
               if (var12.field_Hb.field_W &&
@@ -485,29 +485,29 @@ final class la {
               }
               var19 = var19 + fq.field_q;
             }
-            var23 = on.a(var12.field_Eb, var20, -17279);
+            var23 = LoginDialog.a(var12.field_Eb, var20, -17279);
             var24 = var23;
             var30 = var24;
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Sb.field_Db.b(var23, -MouseWheelHandler.field_c + (var12.field_K - MouseWheelHandler.field_c));
+              var24_intLifetime1 = var12.field_Sb.font.wrappedLineCount(var23, -MouseWheelHandler.field_c + (var12.field_K - MouseWheelHandler.field_c));
               var12.field_Sb.field_cb = var23;
-              var12.field_Sb.field_yb = var12.field_Tb * 256 / mh.field_b;
+              var12.field_Sb.textOpacity = var12.field_Tb * 256 / mh.field_b;
               var12.field_Sb.a(var19, fq.field_q * var24_intLifetime1, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
               var19 = var19 + var24_intLifetime1 * fq.field_q;
             }
             if (var9Lifetime1 == 0) {
-              var12.field_Z = -var12.field_nb + var19;
+              var12.pendingHeightDelta = -var12.height + var19;
             }
             if (var13 != 0) {
-              param2.field_Fb.a(var12, 2, -1, (ak) (var11));
+              param2.field_Fb.positionAfter(var12, 2, -1, (SceneWidget) (var11));
             }
             if (var12.field_P != 0 &&
               !var12.b((byte) -89)) {
               if (var12.field_Zb.field_P == 0) {
                 if (0 == var12.field_Mb.field_P) {
-                  oi.a(uo.field_a, 0, ji.field_c, (byte) -110, var12, 0, param2);
+                  oi.a(BufferedRandomAccessFile.field_a, 0, ji.field_c, (byte) -110, var12, 0, param2);
                 } else {
                   pe.a(7, param1, var12.field_Nb);
                 }
@@ -519,7 +519,7 @@ final class la {
             if (var12.field_R &&
               !var12.b((byte) -110)) {
               var24Lifetime2 = null;
-              if (~hn.field_f != ~var12.field_Nb) {
+              if (~DebouncedValidator.field_f != ~var12.field_Nb) {
                 if (var5_int != 0 &&
                   !var12.field_Xb) {
                   var24Lifetime2 = sd.a(rh.field_w, 46, new String[]{var20});
@@ -528,7 +528,7 @@ final class la {
                     if (var6 <= var12.field_Rb) {
                       if ((var8 & ~var12.field_Ib) != 0) {
                         var25_int = cl.a((byte) -101, var8 & ~var12.field_Ib);
-                        var24Lifetime2 = sd.a(hg.field_i, 27, new String[]{var20});
+                        var24Lifetime2 = sd.a(MarkerSliderPainter.field_i, 27, new String[]{var20});
                         if (var25_int > 0 &&
                           null != lc.field_l &&
                           var25_int <= lc.field_l.length &&
@@ -542,32 +542,32 @@ final class la {
                         }
                       }
                     } else {
-                      var24Lifetime2 = sd.a(jj.field_e, 40, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = sd.a(BackgroundScene.field_e, 40, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_Yb + var7;
                     if (var25_int == 1) {
                       var24Lifetime2 = sd.a(jm.field_k, 22, new String[]{var20});
                     }
-                    var24Lifetime2 = sd.a(tg.field_l, 62, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = sd.a(UiTheme.field_l, 62, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Xb) {
-                  var24Lifetime2 = ll.field_g;
+                  var24Lifetime2 = JaggrabDownloader.field_g;
                 } else {
                   if (var7 > var12.field_Yb) {
                     var25_int = -var12.field_Yb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = oe.field_Mb;
+                      var24Lifetime2 = ReportAbuseDialog.field_Mb;
                     }
-                    var24Lifetime2 = sd.a(ll.field_f, 95, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = sd.a(JaggrabDownloader.field_f, 95, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Rb) {
                       if (0 != (var8 & ~var12.field_Ib)) {
                         var25_int = cl.a((byte) -100, var8 & ~var12.field_Ib);
-                        var24Lifetime2 = jp.field_d;
+                        var24Lifetime2 = ArchiveProvider.field_d;
                         if (var25_int > 0 &&
                           null != lc.field_l &&
                           lc.field_l.length >= var25_int &&
@@ -599,9 +599,9 @@ final class la {
                     !var12.field_Xb) {
                     var29 = 1;
                   }
-                  if (w.field_z != null &&
-                    null != w.field_z[var27_int]) {
-                    var30_int = w.field_z[var27_int][var28];
+                  if (StatefulTextPainter.field_z != null &&
+                    null != StatefulTextPainter.field_z[var27_int]) {
+                    var30_int = StatefulTextPainter.field_z[var27_int][var28];
                     if (var30_int != 0 &&
                       !fe.field_a &&
                       !var12.field_Xb) {
@@ -644,28 +644,28 @@ final class la {
                   }
                 }
                 if (param2 == ae.field_c &&
-                  pl.m(99)) {
+                  AccountRegistrationPanel.m(99)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.a(tk.field_q, 96, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + sd.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + le.field_i + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + WeightedLruCache.field_i + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + sd.a(PacketBuffer.field_l, 102, new String[]{(String) (var25)});
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + bh.field_i + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + DirectByteStorage.field_i + (String) (var25);
                   }
                 }
                 if (param2 == ae.field_c &&
-                  !pl.m(99)) {
+                  !AccountRegistrationPanel.m(99)) {
                   var27 = io.field_c.field_pc;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + sd.a(ff.field_c, 93, new String[]{var27});
                 }
                 up.field_o = (String) (var24Lifetime2);
               }
             }
-            var12 = (uj) (var10.f(1504642273));
+            var12 = (LobbyPlayer) (var10.last(1504642273));
           }
           if (param0 < 19) {
             field_a = (int[]) null;
@@ -687,24 +687,24 @@ final class la {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4;
-        ec.field_t = 0;
-        nc.field_a = param0;
-        ti.field_t = param1;
-        if (ti.field_t == -4 ||
-          ti.field_t == -2 ||
-          ti.field_t == -5 ||
-          ti.field_t == 0 ||
-          ti.field_t == 12 ||
-          ti.field_t == 17) {
+        NameAvailabilityValidator.field_t = 0;
+        TickClock.field_a = param0;
+        MidiPcmStream.field_t = param1;
+        if (MidiPcmStream.field_t == -4 ||
+          MidiPcmStream.field_t == -2 ||
+          MidiPcmStream.field_t == -5 ||
+          MidiPcmStream.field_t == 0 ||
+          MidiPcmStream.field_t == 12 ||
+          MidiPcmStream.field_t == 17) {
           dg.a(0, (byte) -91);
         }
-        if (tk.a((byte) -104, ti.field_t)) {
+        if (BoardParticle.a((byte) -104, MidiPcmStream.field_t)) {
           var4 = 0;
-          if (ti.field_t == 12) {
+          if (MidiPcmStream.field_t == 12) {
             var4 = -1;
           }
-          wo.b(-92, ti.field_t).a(2, var4, param2);
-          if (ti.field_t == 12) {
+          wo.b(-92, MidiPcmStream.field_t).a(2, var4, param2);
+          if (MidiPcmStream.field_t == 12) {
             id.a(param2, (byte) 110);
           }
         }
@@ -717,7 +717,7 @@ final class la {
         if (param0 != -59) {
           field_a = (int[]) null;
         }
-        return ib.field_g - ko.field_cb;
+        return ib.field_g - LoadingProgressDialog.field_cb;
     }
 
     final static byte[] a(byte[] param0, int param1) {
@@ -760,11 +760,11 @@ final class la {
               var10 = var12;
               var6 = var10;
               if (1 == var3) {
-                q.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decoder.a(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = fd.field_b;
                 synchronized (var7) {
-                  fd.field_b.a(param1 ^ -8, var12, var9);
+                  fd.field_b.decompress(param1 ^ -8, var12, var9);
                 }
               }
               stackIn_19_0 = var6;

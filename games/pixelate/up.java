@@ -12,7 +12,7 @@ final class up {
     private int field_m;
     static int[] field_c;
     static String field_q;
-    static dd[] field_d;
+    static Puzzle[] field_d;
     static int[] field_i;
     static pj[] field_n;
     static int[] field_h;
@@ -76,11 +76,11 @@ final class up {
         }
         int var2 = (-this.field_b + 255) / 10;
         this.field_l.a(-var2 + 80, 180, this.field_b);
-        if (uo.field_j <= 0 &&
+        if (BufferedRandomAccessFile.field_j <= 0 &&
           10 <= this.field_m) {
           var3 = 3 * this.field_b >> 2;
-          hd.field_w.a(-var2 + 96, 196, var3);
-          hd.field_w.b(-var2 + 96, 196, var3);
+          PlayerBoard.field_w.a(-var2 + 96, 196, var3);
+          PlayerBoard.field_w.b(-var2 + 96, 196, var3);
         }
     }
 
@@ -88,14 +88,14 @@ final class up {
         int var7 = 0;
         int var8 = 0;
         int var9 = Pixelate.field_H ? 1 : 0;
-        hh var10 = lk.field_o[this.field_m];
-        hh var11 = var10;
-        jj var3 = rj.field_C[gd.field_e[this.field_m].field_a];
+        IndexedSprite var10 = lk.field_o[this.field_m];
+        IndexedSprite var11 = var10;
+        BackgroundScene var3 = Js5NetworkRequest.field_C[gd.field_e[this.field_m].field_a];
         this.field_l = new Sprite(160, 160);
         this.field_l.c();
         int var4 = param0 * (5 - var11.field_f);
         int var5 = (-var11.field_a + 5) * 16;
-        boolean[] var6 = ad.a(var11, 21922);
+        boolean[] var6 = ThreeSliceButtonPainter.a(var11, 21922);
         for (var7 = 0; var7 < var11.field_a; var7++) {
           for (var8 = 0; var8 < var11.field_f; var8++) {
             var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
@@ -114,7 +114,7 @@ final class up {
         field_q = "Play the game without logging in just yet";
         field_i = new int[10];
         field_k = new int[10];
-        field_d = new dd[10];
+        field_d = new Puzzle[10];
         field_f = new int[10];
         field_e = new int[10];
         field_p = new int[10];

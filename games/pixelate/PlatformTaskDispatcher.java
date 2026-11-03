@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class PlatformTaskDispatcher implements Runnable {
-    lj field_m;
+    BoundedRandomAccessFile field_m;
     static String field_p;
     private boolean field_v;
     boolean field_x;
@@ -12,11 +12,11 @@ final class PlatformTaskDispatcher implements Runnable {
     private static volatile long field_c;
     private static String field_r;
     static String field_l;
-    lj field_k;
-    private ei field_q;
+    BoundedRandomAccessFile field_k;
+    private PlatformTask field_q;
     private static String field_i;
     private Object field_g;
-    private ei field_h;
+    private PlatformTask field_h;
     private Object field_n;
     private boolean field_f;
     static java.lang.reflect.Method field_j;
@@ -25,16 +25,16 @@ final class PlatformTaskDispatcher implements Runnable {
     static String field_o;
     private static String field_a;
     private static int field_t;
-    lj[] field_u;
+    BoundedRandomAccessFile[] field_u;
     private DisplayModeEnumerator field_s;
-    lj field_e;
+    BoundedRandomAccessFile field_e;
 
-    private final ei a(int param0, int param1, int param2, Object param3, int param4) {
-        ei var6 = null;
+    private final PlatformTask a(int param0, int param1, int param2, Object param3, int param4) {
+        PlatformTask var6 = null;
         int var8 = 0;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
-        var6 = new ei();
+        var6 = new PlatformTask();
         var6.field_g = param3;
         var6.field_a = param4;
         var6.field_d = param1;
@@ -54,22 +54,22 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    final ei a(int param0, Class[] param1, String param2, Class param3) {
+    final PlatformTask a(int param0, Class[] param1, String param2, Class param3) {
         if (param0 != 0) {
-          return (ei) null;
+          return (PlatformTask) null;
         }
         return this.a(0, 8, 19, new Object[]{param3, param2, param1}, 0);
     }
 
-    private final static lj a(int param0, String param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile a(int param0, String param1, String param2, int param3) {
         try {
           int var6 = 0;
-          lj stackIn_15_0 = null;
+          BoundedRandomAccessFile stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          lj var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           String var9 = null;
           if (param3 == 33) {
@@ -91,7 +91,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new lj(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -185,12 +185,12 @@ final class PlatformTaskDispatcher implements Runnable {
           InterruptedException var3_ref_InterruptedException = null;
           int var3 = 0;
           Exception var3_ref_Exception = null;
-          lj var3_ref_lj = null;
+          BoundedRandomAccessFile var3_ref_lj = null;
           ProxyAuthenticationException var3_ref_uf = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
-          ei var8 = null;
+          PlatformTask var8 = null;
           Thread var9 = null;
           Object[] var10 = null;
           Object[] var11 = null;
@@ -250,7 +250,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_e = var16;
                         var16.setResizable(false);
                         if (!this.field_v) {
-                          Class.forName("gl").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_g, new Object[]{var16, new Integer(var8.field_a >>> 16), new Integer(65535 & var8.field_a), new Integer(var8.field_c >> 16), new Integer(65535 & var8.field_c)});
+                          Class.forName("FullscreenDisplayController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_g, new Object[]{var16, new Integer(var8.field_a >>> 16), new Integer(65535 & var8.field_a), new Integer(var8.field_c >> 16), new Integer(65535 & var8.field_c)});
                         } else {
                           this.field_s.a(65535 & var8.field_a, (byte) 122, 65535 & var8.field_c, var8.field_c >> 16, var8.field_a >>> 16, var16);
                         }
@@ -259,7 +259,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_v) {
                           this.field_s.a(8, (java.awt.Frame) (var8.field_g));
                         } else {
-                          Class.forName("gl").getMethod("exit", new Class[]{}).invoke(this.field_g, new Object[]{});
+                          Class.forName("FullscreenDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_g, new Object[]{});
                         }
                         break;
                       case 16:
@@ -269,7 +269,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3 = var8.field_a;
                           var4 = var8.field_c;
                           if (!this.field_v) {
-                            Class.forName("cj").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_n, new Object[]{new Integer(var3), new Integer(var4)});
+                            Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_n, new Object[]{new Integer(var3), new Integer(var4)});
                           } else {
                             this.field_d.a(var3, var4, (byte) 112);
                           }
@@ -283,14 +283,14 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_v) {
                             this.field_d.a(var13, var3 != 0, false);
                           } else {
-                            Class.forName("cj").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_n, new Object[]{var13, new Boolean(var3 != 0)});
+                            Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_n, new Object[]{var13, new Boolean(var3 != 0)});
                           }
                           break;
                         }
                         if (!this.field_v &&
                           var2_int == 17) {
                           var14 = (Object[]) (var8.field_g);
-                          Class.forName("cj").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_n, new Object[]{var14[0], var14[1], new Integer(var8.field_a), new Integer(var8.field_c), var14[2]});
+                          Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_n, new Object[]{var14[0], var14[1], new Integer(var8.field_a), new Integer(var8.field_c), var14[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -330,7 +330,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 5:
                         if (!this.field_v) {
-                          var8.field_e = Class.forName("gl").getMethod("listmodes", new Class[]{}).invoke(this.field_g, new Object[]{});
+                          var8.field_e = Class.forName("FullscreenDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_g, new Object[]{});
                         } else {
                           var8.field_e = this.field_s.a(5003);
                         }
@@ -385,7 +385,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var8.field_e = qe.a((String) (var8.field_g), var8.field_a, (byte) 126).a(116);
+                      var8.field_e = QuickChatCategory.a((String) (var8.field_g), var8.field_a, (byte) 126).connect(116);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_uf = (ProxyAuthenticationException) (Object) decompiledCaughtException;
@@ -423,14 +423,14 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final ei a(int param0, String param1, int param2) {
+    final PlatformTask a(int param0, String param1, int param2) {
         if (param0 != 20278) {
           this.field_n = (Object) null;
         }
         return this.a(false, param2, false, param1);
     }
 
-    final ei a(java.awt.Frame param0, int param1) {
+    final PlatformTask a(java.awt.Frame param0, int param1) {
         if (param1 >= -71) {
           String var4 = (String) null;
           PlatformTaskDispatcher.a(112, (String) null, (String) null, 9);
@@ -438,7 +438,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.a(0, 7, -102, param0, 0);
     }
 
-    final ei a(int param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 27705) {
           String var7 = (String) null;
           PlatformTaskDispatcher.a(-61, (String) null, (String) null, -124);
@@ -457,33 +457,33 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.field_s != null ? true : false;
     }
 
-    final ei a(String param0, Class param1, byte param2) {
+    final PlatformTask a(String param0, Class param1, byte param2) {
         int var4 = -55 / ((param2 + 22) / 54);
         return this.a(0, 9, 123, new Object[]{param1, param0}, 0);
     }
 
-    private final ei a(boolean param0, int param1, boolean param2, String param3) {
+    private final PlatformTask a(boolean param0, int param1, boolean param2, String param3) {
         if (param2) {
           field_i = (String) null;
         }
         return this.a(0, param0 ? 22 : 1, 34, param3, param1);
     }
 
-    final ei a(int param0, Runnable param1, byte param2) {
+    final PlatformTask a(int param0, Runnable param1, byte param2) {
         if (param2 != -123) {
-          return (ei) null;
+          return (PlatformTask) null;
         }
         return this.a(0, 2, param2 + 249, param1, param0);
     }
 
-    final ei a(boolean param0) {
+    final PlatformTask a(boolean param0) {
         if (!param0) {
-          return (ei) null;
+          return (PlatformTask) null;
         }
         return this.a(0, 5, -110, (Object) null, 0);
     }
 
-    final ei a(byte param0, java.net.URL param1) {
+    final PlatformTask a(byte param0, java.net.URL param1) {
         if (param0 != -44) {
           this.field_n = (Object) null;
         }
@@ -573,14 +573,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        va.a(field_r, 71, field_t);
+        CacheFileLocator.a(field_r, 71, field_t);
         if (this.field_x) {
-          this.field_e = new lj(va.a((String) null, field_t, true, "random.dat"), "rw", 25L);
-          this.field_k = new lj(va.a("main_file_cache.dat2", (byte) -61), "rw", 314572800L);
-          this.field_m = new lj(va.a("main_file_cache.idx255", (byte) -61), "rw", 1048576L);
-          this.field_u = new lj[param2];
+          this.field_e = new BoundedRandomAccessFile(CacheFileLocator.a((String) null, field_t, true, "random.dat"), "rw", 25L);
+          this.field_k = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.dat2", (byte) -61), "rw", 314572800L);
+          this.field_m = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx255", (byte) -61), "rw", 1048576L);
+          this.field_u = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_u[var5_int] = new lj(va.a("main_file_cache.idx" + var5_int, (byte) -61), "rw", 1048576L);
+            this.field_u[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx" + var5_int, (byte) -61), "rw", 1048576L);
           }
           if (this.field_v) {
             try {
@@ -592,7 +592,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_v) {
-              this.field_g = Class.forName("gl").newInstance();
+              this.field_g = Class.forName("FullscreenDisplayController").newInstance();
             } else {
               var6 = new DisplayModeEnumerator();
               this.field_s = var6;
@@ -603,7 +603,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_v) {
-              this.field_n = Class.forName("cj").newInstance();
+              this.field_n = Class.forName("CursorController").newInstance();
             } else {
               this.field_d = new NativeWindowCallback();
             }

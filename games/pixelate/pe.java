@@ -19,7 +19,7 @@ final class pe {
         field_a = null;
     }
 
-    final static boolean a(fm param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -47,7 +47,7 @@ final class pe {
     }
 
     final static void a(int param0, int param1, long param2) {
-        pc var4 = aa.field_f;
+        CipherPacketBuffer var4 = aa.field_f;
         var4.g(param1, 15514);
         var4.position = var4.position + 1;
         int var5 = var4.position;
@@ -57,7 +57,7 @@ final class pe {
     }
 
     final static boolean a(boolean param0) {
-        am.field_e = true;
+        Js5ArchiveManager.field_e = true;
         if (!param0) {
           mc.field_q = 15000L + hm.a(64);
           return el.field_b == 11 ? true : false;

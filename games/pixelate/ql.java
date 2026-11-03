@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends jj {
+final class ql extends BackgroundScene {
     static int field_m;
     static int field_o;
-    static ak field_n;
+    static SceneWidget field_n;
 
     final static int g(int param0) {
         if (param0 != 13428) {
@@ -15,9 +15,9 @@ final class ql extends jj {
     }
 
     final static void b(boolean param0) {
-        h.field_X = bi.b(4);
-        wa.field_c = new kn();
-        rd.a(true, -17130, true);
+        Checkbox.field_X = bi.b(4);
+        wa.field_c = new ModalStack();
+        QueuedInput.a(true, -17130, true);
         if (param0) {
           ql.d(-24);
         }
@@ -25,7 +25,7 @@ final class ql extends jj {
 
     public static void f(int param0) {
         if (param0 != 0) {
-          field_n = (ak) null;
+          field_n = (SceneWidget) null;
           field_n = null;
           return;
         }
@@ -35,18 +35,18 @@ final class ql extends jj {
     final static boolean e(int param0) {
         if (param0 < 94) {
           ql.f(30);
-          if (null == lb.field_x) {
+          if (null == NetworkGameClient.field_x) {
             return false;
           }
-          if (null != lb.field_x.n(640)) {
+          if (null != NetworkGameClient.field_x.n(640)) {
             return true;
           }
           return false;
         }
-        if (null == lb.field_x) {
+        if (null == NetworkGameClient.field_x) {
           return false;
         }
-        if (null != lb.field_x.n(640)) {
+        if (null != NetworkGameClient.field_x.n(640)) {
           return true;
         }
         return false;
@@ -64,14 +64,14 @@ final class ql extends jj {
         String var3 = null;
         long var4 = 0L;
         try {
-          c.field_T = true;
+          EditableTextWidget.field_T = true;
           var2 = "tuhstatbut";
           if (param1 != -7624) {
             field_o = 58;
           }
           var3 = "rvnadlm";
           var4 = -1L;
-          nn.a(param0, 78, var3, var2, var4);
+          MatchHud.a(param0, 78, var3, var2, var4);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

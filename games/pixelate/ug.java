@@ -5,9 +5,9 @@ final class ug extends IntrusiveNode {
     byte[] field_r;
     int field_m;
     static int[] field_n;
-    static vp field_s;
+    static VerticalScrollbar field_s;
     static pb field_q;
-    static uo[] field_l;
+    static BufferedRandomAccessFile[] field_l;
     long field_o;
     static int field_k;
     static String field_p;
@@ -25,7 +25,7 @@ final class ug extends IntrusiveNode {
         if (null != wo.field_b) {
           var2 = wo.field_b;
           String var1 = var2;
-          rg.a(sd.a(ek.field_d, 113, new String[]{var2}), false);
+          LoginCredentials.a(sd.a(ek.field_d, 113, new String[]{var2}), false);
           wo.field_b = null;
         }
         if (param0 == 2586) {

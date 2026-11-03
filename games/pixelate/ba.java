@@ -4,19 +4,19 @@
 import java.util.*;
 
 final class ba {
-    static jl field_d;
+    static BitmapFont field_d;
     static int field_f;
     private int field_b;
     private int field_a;
     private wl[] field_e;
     private int field_c;
 
-    final static ak a(int param0) {
+    final static SceneWidget a(int param0) {
         if (param0 != -26573) {
           ba.a(77);
-          return g.b(false);
+          return PasswordValidator.b(false);
         }
-        return g.b(false);
+        return PasswordValidator.b(false);
     }
 
     final void b(int param0) {
@@ -64,7 +64,7 @@ final class ba {
     ba(int param0, int param1, int param2, int param3, int[] param4) {
         int var6_int = 0;
         try {
-          hd.d(-90);
+          PlayerBoard.d(-90);
           this.field_b = ok.a(ea.field_b, -119, param2) + param0;
           this.field_a = param1 + ok.a(ea.field_b, -103, param3);
           this.field_e = new wl[50 + ok.a(ea.field_b, -102, 5)];

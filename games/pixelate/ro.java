@@ -3,14 +3,14 @@
  */
 final class ro {
     static Sprite field_b;
-    static ii field_e;
+    static MatchController field_e;
     static boolean field_d;
     static int field_a;
     static int field_c;
     static String field_f;
 
     final static void a(int param0, boolean param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param0, 15514);
         var2.writeByte(160, 2);
         var2.writeByte(160, 4);
@@ -34,7 +34,7 @@ final class ro {
     }
 
     final static void a(int param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param1, 15514);
         if (param0 > 124) {
           var2.writeByte(160, 1);
@@ -50,8 +50,8 @@ final class ro {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fm.field_b != null) {
-            fm.field_b.field_W.a((byte) -98, args);
+          if (ResourceArchive.field_b != null) {
+            ResourceArchive.field_b.field_W.setSuggestions((byte) -98, args);
           }
           if (param1 != 2) {
             return;
@@ -59,7 +59,7 @@ final class ro {
           if (aa.field_c == null) {
             return;
           }
-          aa.field_c.field_S.a((byte) -90, args);
+          aa.field_c.field_S.setSuggestions((byte) -90, args);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class ro {
         }
     }
 
-    final static void a(boolean param0, Sprite[][] param1, int param2, int param3, fm param4, String[] param5, int[] param6, String[][] param7, hh[] param8, int param9, int[] param10, byte[] param11, String[][] param12, fm param13, Sprite[][] param14, byte[] param15, fm param16) {
+    final static void a(boolean param0, Sprite[][] param1, int param2, int param3, ResourceArchive param4, String[] param5, int[] param6, String[][] param7, IndexedSprite[] param8, int param9, int[] param10, byte[] param11, String[][] param12, ResourceArchive param13, Sprite[][] param14, byte[] param15, ResourceArchive param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -217,9 +217,9 @@ final class ro {
         int var5 = 0;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          oe.field_Sb = oe.field_Sb + 65536;
-          while (fp.a(true, ui.field_j, oe.field_Sb) >= 65536) {
-            oe.field_Sb = oe.field_Sb - ui.field_j;
+          ReportAbuseDialog.field_Sb = ReportAbuseDialog.field_Sb + 65536;
+          while (fp.a(true, ui.field_j, ReportAbuseDialog.field_Sb) >= 65536) {
+            ReportAbuseDialog.field_Sb = ReportAbuseDialog.field_Sb - ui.field_j;
             qk.field_e = qk.field_e + 1;
           }
           var2_int = -1;
@@ -247,8 +247,8 @@ final class ro {
               }
             }
             if (ui.field_a <= jn.field_q) {
-              jc.field_b = ae.field_b;
-              if (!pm.field_e) {
+              SpriteCheckboxPainter.field_b = ae.field_b;
+              if (!Match.field_e) {
                 ae.field_b = ae.field_b - 1;
                 if (ae.field_b < 0) {
                   ae.field_b = ae.field_b + var2_int;
@@ -262,66 +262,66 @@ final class ro {
               jn.field_q = jn.field_q - ui.field_a;
             }
             if (jn.field_q > ui.field_k) {
-              pm.field_e = true;
+              Match.field_e = true;
             }
           }
           if (param0 >= -21) {
             field_c = 69;
           }
-          if (gp.field_Kb != null) {
-            var3 = 357 - gp.field_Kb.field_B / 2;
+          if (ScrollContainer.field_Kb != null) {
+            var3 = 357 - ScrollContainer.field_Kb.field_B / 2;
             var4 = 0;
-            if (nm.field_c != 0 &&
+            if (IntrusiveDequeCursor.field_c != 0 &&
               ji.field_c > var3 &&
-              ji.field_c < gp.field_Kb.field_E + var3) {
-              if (-gp.field_Kb.field_F + 269 < uo.field_a &&
-                269 > uo.field_a) {
+              ji.field_c < ScrollContainer.field_Kb.field_E + var3) {
+              if (-ScrollContainer.field_Kb.field_F + 269 < BufferedRandomAccessFile.field_a &&
+                269 > BufferedRandomAccessFile.field_a) {
                 jn.field_q = ui.field_a;
-                pm.field_e = false;
+                Match.field_e = false;
                 var4 = 1;
               }
-              if (586 < uo.field_a &&
-                uo.field_a < 586 + gp.field_Kb.field_F) {
+              if (586 < BufferedRandomAccessFile.field_a &&
+                BufferedRandomAccessFile.field_a < 586 + ScrollContainer.field_Kb.field_F) {
                 var4 = 1;
-                pm.field_e = true;
+                Match.field_e = true;
                 jn.field_q = ui.field_a;
               }
             }
             if (var4 == 0 &&
               jn.field_q > ui.field_k &&
               bg.field_k > var3 &&
-              var3 + gp.field_Kb.field_E > bg.field_k) {
-              if (ProxyAuthenticationException.field_d > -gp.field_Kb.field_F + 269 &&
+              var3 + ScrollContainer.field_Kb.field_E > bg.field_k) {
+              if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&
                 269 > ProxyAuthenticationException.field_d) {
                 jn.field_q = ui.field_k;
               }
               if (ProxyAuthenticationException.field_d > 586 &&
-                ProxyAuthenticationException.field_d < gp.field_Kb.field_F + 586) {
+                ProxyAuthenticationException.field_d < ScrollContainer.field_Kb.field_F + 586) {
                 jn.field_q = ui.field_k;
               }
             }
           }
           if (param1) {
-            a.field_I.a(el.a(ji.field_c, (byte) 126, uo.field_a), el.a(bg.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
-            if (a.field_I.a(19)) {
-              if (a.field_I.field_j == 0) {
+            NameSuggestionsPanel.field_I.a(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(bg.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
+            if (NameSuggestionsPanel.field_I.isActivated(19)) {
+              if (NameSuggestionsPanel.field_I.field_j == 0) {
                 stackIn_63_0 = 3;
                 return stackIn_63_0;
               }
-              if (a.field_I.field_j == 1) {
+              if (NameSuggestionsPanel.field_I.field_j == 1) {
                 stackIn_67_0 = 2;
                 return stackIn_67_0;
               }
             }
             stackIn_70_0 = 116;
-            while (bh.$cfr$intArgs$b$c4997cb15529(stackIn_70_0)) {
-              a.field_I.a(99, 0);
-              if (a.field_I.a(57)) {
-                if (a.field_I.field_j == 0) {
+            while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(stackIn_70_0)) {
+              NameSuggestionsPanel.field_I.a(99, 0);
+              if (NameSuggestionsPanel.field_I.isActivated(57)) {
+                if (NameSuggestionsPanel.field_I.field_j == 0) {
                   stackIn_75_0 = 3;
                   return stackIn_75_0;
                 }
-                if (a.field_I.field_j == 1) {
+                if (NameSuggestionsPanel.field_I.field_j == 1) {
                   stackIn_79_0 = 1;
                   return stackIn_79_0;
                 }

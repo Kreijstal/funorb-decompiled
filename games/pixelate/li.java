@@ -11,7 +11,7 @@ final class li {
     static Sprite field_d;
     static Sprite[] field_h;
     static String field_j;
-    static rg field_g;
+    static LoginCredentials field_g;
 
     public static void a(byte param0) {
         field_a = null;
@@ -55,7 +55,7 @@ final class li {
 
     final static void a(float param0, int param1, String param2) {
         try {
-          ad.field_r = param2;
+          ThreeSliceButtonPainter.field_r = param2;
           bf.field_o = param0;
           if (param1 != -1) {
             li.a((byte) -73);

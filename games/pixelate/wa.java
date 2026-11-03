@@ -4,11 +4,11 @@
 import java.util.*;
 
 final class wa {
-    static kn field_c;
+    static ModalStack field_c;
     static long field_h;
     static int field_i;
-    static ak field_g;
-    static ak field_f;
+    static SceneWidget field_g;
+    static SceneWidget field_f;
     static String field_a;
     static String field_e;
     static long field_b;
@@ -31,15 +31,15 @@ final class wa {
         var8 = Pixelate.field_H ? 1 : 0;
         var1 = new Sprite[im.field_Qb];
         for (var2 = 0; im.field_Qb > var2; var2++) {
-          var3 = ge.field_c[var2] * gf.field_g[var2];
+          var3 = ge.field_c[var2] * ByteStorage.field_g[var2];
           var20 = wo.field_f[var2];
-          if (!rl.field_m[var2]) {
+          if (!TriangleMesh.field_m[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = fl.field_g[cm.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var21);
+            var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var21);
           } else {
             var22 = gd.field_k[var2];
             var16 = new int[var3];
@@ -48,7 +48,7 @@ final class wa {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = bq.a(fl.field_g[cm.a(255, (int) var20[var7])], cm.a(var22[var7] << 24, -16777216));
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var16));
           }
         }
         if (param0 >= -116) {
@@ -66,21 +66,21 @@ final class wa {
         if (param5 >= param1) {
           if (param0 <= param5) {
             if (param0 <= param1) {
-              hc.a(param9, param5, param8, param15, -94333456, param13, param7, param14, param6, param12, param0, SoftwareRasterizer.field_k, param10, param1, param2, param3, param4);
+              AccountTermsPanel.a(param9, param5, param8, param15, -94333456, param13, param7, param14, param6, param12, param0, SoftwareRasterizer.field_k, param10, param1, param2, param3, param4);
             } else {
-              hc.a(param9, param5, param2, param3, -94333456, param7, param13, param14, param12, param6, param1, SoftwareRasterizer.field_k, param10, param0, param8, param15, param4);
+              AccountTermsPanel.a(param9, param5, param2, param3, -94333456, param7, param13, param14, param12, param6, param1, SoftwareRasterizer.field_k, param10, param0, param8, param15, param4);
             }
           } else {
-            hc.a(param12, param0, param2, param4, -94333456, param7, param14, param13, param9, param6, param1, SoftwareRasterizer.field_k, param8, param5, param10, param15, param3);
+            AccountTermsPanel.a(param12, param0, param2, param4, -94333456, param7, param14, param13, param9, param6, param1, SoftwareRasterizer.field_k, param8, param5, param10, param15, param3);
           }
         } else {
           if (param1 < param0) {
-            hc.a(param12, param0, param10, param15, -94333456, param14, param7, param13, param6, param9, param5, SoftwareRasterizer.field_k, param8, param1, param2, param4, param3);
+            AccountTermsPanel.a(param12, param0, param10, param15, -94333456, param14, param7, param13, param6, param9, param5, SoftwareRasterizer.field_k, param8, param1, param2, param4, param3);
           } else {
             if (param0 > param5) {
-              hc.a(param6, param1, param10, param3, -94333456, param14, param13, param7, param12, param9, param5, SoftwareRasterizer.field_k, param2, param0, param8, param4, param15);
+              AccountTermsPanel.a(param6, param1, param10, param3, -94333456, param14, param13, param7, param12, param9, param5, SoftwareRasterizer.field_k, param2, param0, param8, param4, param15);
             } else {
-              hc.a(param6, param1, param8, param4, -94333456, param13, param14, param7, param9, param12, param0, SoftwareRasterizer.field_k, param2, param5, param10, param3, param15);
+              AccountTermsPanel.a(param6, param1, param8, param4, -94333456, param13, param14, param7, param9, param12, param0, SoftwareRasterizer.field_k, param2, param5, param10, param3, param15);
             }
           }
         }

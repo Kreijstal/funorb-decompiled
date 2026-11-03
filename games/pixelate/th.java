@@ -14,7 +14,7 @@ final class th {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = fb.a(wo.field_h, (byte) 119, rj.field_I);
+          var2_int = fb.a(wo.field_h, (byte) 119, Js5NetworkRequest.field_I);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }
@@ -50,19 +50,19 @@ final class th {
     final static int a(int param0, int param1) {
         param0 = param0 & param1;
         if (param0 >= 4096) {
-          return param0 >= 6144 ? k.field_i[param0 - 6144] : -k.field_i[-param0 + 6144];
+          return param0 >= 6144 ? NanoTickClock.field_i[param0 - 6144] : -NanoTickClock.field_i[-param0 + 6144];
         }
-        return param0 < 2048 ? k.field_i[2048 - param0] : -k.field_i[-2048 + param0];
+        return param0 < 2048 ? NanoTickClock.field_i[2048 - param0] : -NanoTickClock.field_i[-2048 + param0];
     }
 
     final static void a(int param0) {
         if (param0 == 8191) {
-          gf.a(pm.field_s, true, 32, nk.field_b);
+          ByteStorage.a(Match.field_s, true, 32, nk.field_b);
           ke.field_d = true;
           return;
         }
         th.a(17);
-        gf.a(pm.field_s, true, 32, nk.field_b);
+        ByteStorage.a(Match.field_s, true, 32, nk.field_b);
         ke.field_d = true;
     }
 

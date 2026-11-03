@@ -4,7 +4,7 @@
 final class nf {
     static int field_f;
     static be field_b;
-    static ak field_d;
+    static SceneWidget field_d;
     static int field_c;
     static int field_a;
     static String field_e;
@@ -15,7 +15,7 @@ final class nf {
         field_d = null;
         field_e = null;
         if (param0 != -107) {
-          field_d = (ak) null;
+          field_d = (SceneWidget) null;
         }
     }
 

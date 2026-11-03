@@ -1,0 +1,234 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TriangleMesh {
+    static boolean[] field_m;
+    static String field_O;
+    short[] field_I;
+    int[] field_R;
+    short[] field_D;
+    short[] vertexX;
+    short[] vertexY;
+    int field_t;
+    int[] field_P;
+    int[] field_M;
+    short[] field_l;
+    int field_b;
+    int[] field_v;
+    short[] field_o;
+    short[] field_p;
+    static boolean field_r;
+    int[] field_y;
+    int[] field_H;
+    short[] field_J;
+    short[] field_L;
+    static double[] field_G;
+    int field_g;
+    short field_a;
+    byte field_B;
+    int field_x;
+    short[] field_s;
+    short[] field_h;
+    static double[] field_f;
+    int field_c;
+    short[] field_d;
+    int field_F;
+    private boolean field_Q;
+    short[] field_z;
+    short vertexCount;
+    static String field_e;
+    short[] field_q;
+    int[] field_C;
+    short[] field_i;
+    short[] vertexZ;
+    byte[] field_n;
+    int[] field_w;
+    int[] field_u;
+    short[] field_K;
+    short[] field_S;
+    short field_j;
+
+    final void a(int param0, int param1, int param2, boolean param3, int param4) {
+        int var7 = Pixelate.field_H ? 1 : 0;
+        int var6 = 0;
+        if (!param3) {
+          field_G = (double[]) null;
+        }
+        while (this.vertexCount > var6) {
+          this.vertexX[var6] = (short)(param2 * this.vertexX[var6] / param4);
+          this.vertexY[var6] = (short)(this.vertexY[var6] * param0 / param4);
+          this.vertexZ[var6] = (short)(this.vertexZ[var6] * param1 / param4);
+          var6++;
+        }
+        this.a(-125);
+    }
+
+    public static void c(byte param0) {
+        field_O = null;
+        field_e = null;
+        field_m = null;
+        field_f = null;
+        field_G = null;
+        if (param0 >= -77) {
+          field_f = (double[]) null;
+        }
+    }
+
+    final void ensureBounds(byte param0) {
+        int var8 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        var12 = Pixelate.field_H ? 1 : 0;
+        if (this.field_Q) {
+          return;
+        }
+        this.field_Q = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        if (param0 != -17) {
+          this.field_j = (short) -116;
+        }
+        for (var8 = 0; this.vertexCount > var8; var8++) {
+          var9 = this.vertexX[var8];
+          var10 = this.vertexY[var8];
+          var11 = this.vertexZ[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var10 < var3) {
+            var3 = var10;
+          }
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          if (var11 > var7) {
+            var7 = var11;
+          }
+          if (var4 > var11) {
+            var4 = var11;
+          }
+        }
+        this.field_g = var7;
+        this.field_t = var3;
+        this.field_x = var4;
+        this.field_b = var2;
+        this.field_F = var6;
+        this.field_c = var5;
+    }
+
+    final void translateVertices(int param0, int param1, int param2, byte param3) {
+        int var5 = 0;
+        int var6 = Pixelate.field_H ? 1 : 0;
+        if (param3 != -83) {
+          this.ensureBounds((byte) 65);
+        }
+        for (var5 = 0; this.vertexCount > var5; var5++) {
+          this.vertexX[var5] = (short)(this.vertexX[var5] + param0);
+          this.vertexY[var5] = (short)(this.vertexY[var5] + param2);
+          this.vertexZ[var5] = (short)(this.vertexZ[var5] + param1);
+        }
+        this.a(-126);
+    }
+
+    private final void a(int param0) {
+        if (param0 >= -122) {
+          return;
+        }
+        this.field_Q = false;
+    }
+
+    final static int b(byte param0) {
+        int stackIn_31_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        long var4 = 0L;
+        int var6 = 0;
+        int var7 = 0;
+        var7 = Pixelate.field_H ? 1 : 0;
+        try {
+          var1_int = 0;
+          var2 = 0;
+          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(123)) {
+            mj.field_c.a((byte) -48);
+            if (mj.field_c.isActivated(84)) {
+              var1_int = 1;
+            }
+            if (ke.field_a != 13) {
+              continue;
+            }
+            var2 = 1;
+          }
+          mj.field_c.a(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -73), -1);
+          if (param0 <= 74) {
+            TriangleMesh.b((byte) -77);
+          }
+          if (mj.field_c.isActivated(17)) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int != 0 &&
+            mj.field_c.field_j >= 0) {
+            var3 = BackgroundScene.field_h[mj.field_c.field_j];
+            if (var3 == 2 ||
+              var3 == 5) {
+              dh.a(0);
+            }
+          } else {
+            if (var2 != 0 &&
+              CanvasRasterBuffer.field_h != 2) {
+              dh.a(0);
+            }
+          }
+          if (0 == var3 &&
+            CanvasRasterBuffer.field_h == 2) {
+            var4 = hm.a(64) - pk.field_g;
+            var6 = (int)((10999L - var4) / 1000L);
+            if (var6 <= 0) {
+              var3 = 2;
+              bq.a(true, (byte) -65, 5);
+            }
+          }
+          stackIn_31_0 = var3;
+          return stackIn_31_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw aa.a((Throwable) ((Object) var1), "rl.B(" + param0 + ')');
+        }
+    }
+
+    TriangleMesh() {
+        this.field_B = (byte) 0;
+        this.field_Q = false;
+    }
+
+    static {
+        int var0 = 0;
+        field_O = "Age:";
+        field_e = "Logging in...";
+        field_f = new double[65536];
+        field_G = new double[65536];
+        for (var0 = 0; var0 < 65536; var0++) {
+          field_f[var0] = Math.sin((double)var0 * 3.141592653589793 / 32768.0);
+          field_G[var0] = Math.cos((double)var0 * 3.141592653589793 / 32768.0);
+        }
+    }
+}

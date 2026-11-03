@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends ie {
+final class sd extends SingleChildContainer {
     int field_O;
     static int[] field_Q;
     static String field_J;
-    static ak field_P;
+    static SceneWidget field_P;
     static int field_K;
     static boolean field_N;
     static String field_M;
@@ -20,12 +20,12 @@ final class sd extends ie {
         field_P = null;
     }
 
-    sd(ng param0) {
-        super(param0.field_z, param0.field_p, param0.field_E, param0.field_C, (eb) null, (fn) null);
+    sd(UiComponent param0) {
+        super(param0.field_z, param0.field_p, param0.field_E, param0.field_C, (WidgetPainter) null, (UiListener) null);
         try {
           param0.a(this.field_E, (byte) 89, 0, 0, this.field_C);
           this.field_O = 256;
-          this.field_H = param0;
+          this.child = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -35,21 +35,21 @@ final class sd extends ie {
         if (param1 != 0) {
           return;
         }
-        if (null == this.field_H) {
+        if (null == this.child) {
           return;
         }
         if (this.field_O == 0) {
           return;
         }
         if (256 == this.field_O) {
-          this.field_H.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 122);
+          this.child.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 122);
           return;
         }
-        Sprite var7 = new Sprite(this.field_H.field_E, this.field_H.field_C);
-        h.a(-111, var7);
+        Sprite var7 = new Sprite(this.child.field_E, this.child.field_C);
+        Checkbox.a(-111, var7);
         int var6 = -5 % ((70 - param3) / 49);
-        this.field_H.a(0, param1, 0, (byte) -79);
-        ia.a((byte) 92);
+        this.child.a(0, param1, 0, (byte) -79);
+        LinkButtonPainter.a((byte) 92);
         var7.a(this.field_z + param2, this.field_p + param0, this.field_O);
     }
 
@@ -91,7 +91,7 @@ final class sd extends ie {
             if (0 <= var6_int) {
               stackIn_6_0 = 2 + var6_int;
               for (var5 = stackIn_6_0; var5 < var3_int; var5++) {
-                if (ti.a(121, param0.charAt(var5))) {
+                if (MidiPcmStream.a(121, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -129,7 +129,7 @@ final class sd extends ie {
             }
             stackIn_19_0 = 2 + var8Lifetime1;
             for (var5Lifetime1 = stackIn_19_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (ti.a(112, param0.charAt(var5Lifetime1))) {
+              if (MidiPcmStream.a(112, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -171,8 +171,8 @@ final class sd extends ie {
     }
 
     final static void a(byte param0, rh param1, int param2) {
-        pc var7 = null;
-        pc var8 = null;
+        CipherPacketBuffer var7 = null;
+        CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
@@ -205,7 +205,7 @@ final class sd extends ie {
     }
 
     public sd() {
-        super(0, 0, 0, 0, (eb) null, (fn) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (UiListener) null);
         this.field_O = 256;
     }
 
@@ -253,8 +253,8 @@ final class sd extends ie {
           var18.position = -2 + param1.length;
           im.field_Qb = var18.a((byte) 97);
           gd.field_k = new byte[im.field_Qb][];
-          rl.field_m = new boolean[im.field_Qb];
-          gf.field_g = new int[im.field_Qb];
+          TriangleMesh.field_m = new boolean[im.field_Qb];
+          ByteStorage.field_g = new int[im.field_Qb];
           ge.field_c = new int[im.field_Qb];
           IntrusiveNode.field_b = new int[im.field_Qb];
           e.field_b = new int[im.field_Qb];
@@ -274,7 +274,7 @@ final class sd extends ie {
             e.field_b[var4Lifetime1] = var18.a((byte) -122);
           }
           for (var4Lifetime2 = 0; im.field_Qb > var4Lifetime2; var4Lifetime2++) {
-            gf.field_g[var4Lifetime2] = var18.a((byte) -14);
+            ByteStorage.field_g[var4Lifetime2] = var18.a((byte) -14);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < im.field_Qb; var4Lifetime3++) {
             ge.field_c[var4Lifetime3] = var18.a((byte) -116);
@@ -289,7 +289,7 @@ final class sd extends ie {
           }
           var18.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < im.field_Qb; var4Lifetime5++) {
-            var5 = gf.field_g[var4Lifetime5];
+            var5 = ByteStorage.field_g[var4Lifetime5];
             var6 = ge.field_c[var4Lifetime5];
             var7 = var5 * var6;
             var21 = new byte[var7];
@@ -308,7 +308,7 @@ final class sd extends ie {
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var18.a(bn.a((int) param0, -95));
+                  dupTemp$1 = var18.a(DraggableWidget.a((int) param0, -95));
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;
@@ -343,7 +343,7 @@ final class sd extends ie {
                 }
               }
             }
-            rl.field_m[var4Lifetime5] = var10 != 0;
+            TriangleMesh.field_m[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -361,7 +361,7 @@ final class sd extends ie {
     }
 
     final static void a(boolean param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         if (!param0) {
           return;
         }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends jj {
+final class da extends BackgroundScene {
     private vn[] field_n;
     static ea field_o;
     static int field_m;
 
-    final static void a(Sprite[] param0, int param1, Sprite[] param2, int param3, jl param4, int param5, int param6, jl param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
+    final static void a(Sprite[] param0, int param1, Sprite[] param2, int param3, BitmapFont param4, int param5, int param6, BitmapFont param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -22,7 +22,7 @@ final class da extends jj {
         int var21_int = 0;
         RuntimeException var21 = null;
         try {
-          vc.a(param17, param12, param9, new sb(param2), param14, new sb(param16), param8, param11, param13, param7, param5, param18, param3, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
+          ValidationIndicator.a(param17, param12, param9, new sb(param2), param14, new sb(param16), param8, param11, param13, param7, param5, param18, param3, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
           var21_int = -40 / ((-41 - param10) / 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class da extends jj {
         RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var5 = kb.field_N;
+          var5 = DateInputWidget.field_N;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -123,7 +123,7 @@ final class da extends jj {
         int var5;
         vn[] var6;
         var5 = Pixelate.field_H ? 1 : 0;
-        jg.field_H.f(0, 0);
+        ArrayWidgetContainer.field_H.f(0, 0);
         var6 = this.field_n;
         var2 = var6;
         if (!param0) {
@@ -196,7 +196,7 @@ final class da extends jj {
             return stackIn_3_0;
           }
           while (param3 > var5) {
-            var4_int = var4_int >>> 8 ^ dm.field_zb[255 & (var4_int ^ param0[var5])];
+            var4_int = var4_int >>> 8 ^ RegistrationRequestDialog.field_zb[255 & (var4_int ^ param0[var5])];
             var5++;
           }
           var4_int = ~var4_int;

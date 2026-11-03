@@ -7,7 +7,7 @@ final class BufferedSocket implements Runnable {
     static int field_k;
     static String field_i;
     private OutputStream field_j;
-    private ei field_m;
+    private PlatformTask field_m;
     private PlatformTaskDispatcher field_e;
     private int field_n;
     private int field_l;
@@ -105,7 +105,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            jo.a(1, (String) null, (Throwable) ((Object) var1_ref));
+            CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -144,7 +144,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_m) {
             while (this.field_m.field_b == 0) {
-              vg.a(1L, (byte) 23);
+              SecondaryNodeHashTable.a(1L, (byte) 23);
             }
             if (this.field_m.field_b == 1) {
               try {

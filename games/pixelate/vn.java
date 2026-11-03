@@ -27,10 +27,10 @@ final class vn {
     }
 
     final static void a(int param0, boolean param1, boolean param2, String param3) {
-        uj.j(param0 - 705633292);
+        LobbyPlayer.j(param0 - 705633292);
         wa.field_c.e((byte) 54);
-        nf.field_b = new be(h.field_U, (String) null, to.field_s, param1, param2);
-        ph.field_l = new on(wa.field_c, nf.field_b);
+        nf.field_b = new be(Checkbox.field_U, (String) null, to.field_s, param1, param2);
+        ph.field_l = new LoginDialog(wa.field_c, nf.field_b);
         if (param0 != -20) {
           return;
         }
@@ -50,11 +50,11 @@ final class vn {
         }
     }
 
-    final static ob a(fm param0, String param1, String param2, fm param3, int param4) {
+    final static PaletteBitmapFont a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ob stackIn_3_0 = null;
+        PaletteBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -69,8 +69,8 @@ final class vn {
           if (param4 != 22510) {
             field_c = (Sprite) null;
           }
-          var5_int = param0.a(122, param1);
-          var6 = param0.a((byte) -95, param2, var5_int);
+          var5_int = param0.getGroupId(122, param1);
+          var6 = param0.getFileId((byte) -95, param2, var5_int);
           stackIn_3_0 = jf.a(param3, var5_int, param0, var6, (byte) 126);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ final class vn {
     }
 
     final void a(byte param0) {
-        hn.field_b.b(this.field_f, (int)this.field_a);
+        DebouncedValidator.field_b.b(this.field_f, (int)this.field_a);
         if (param0 < 122) {
           field_g = -53;
         }

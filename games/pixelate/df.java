@@ -12,20 +12,20 @@ final class df extends IntrusiveNode {
     int field_n;
 
     final static void a(int param0, int param1, int param2) {
-        eq var12 = null;
-        eq var9 = null;
-        eq var7 = null;
-        eq var6 = null;
-        pc var4 = null;
-        eq var6Lifetime1;
-        pc var4Lifetime1;
-        eq var6Lifetime1Lifetime1;
+        LobbyGame var12 = null;
+        LobbyGame var9 = null;
+        LobbyGame var7 = null;
+        LobbyGame var6 = null;
+        CipherPacketBuffer var4 = null;
+        LobbyGame var6Lifetime1;
+        CipherPacketBuffer var4Lifetime1;
+        LobbyGame var6Lifetime1Lifetime1;
         if (param0 == 3) {
-          if (ec.field_r != param1) {
-            var12 = (eq) (dg.field_f.a(-11434, (long)ec.field_r));
+          if (NameAvailabilityValidator.field_r != param1) {
+            var12 = (LobbyGame) (dg.field_f.a(-11434, (long)NameAvailabilityValidator.field_r));
             var6 = var12;
             var9 = var12;
-            ec.field_r = param1;
+            NameAvailabilityValidator.field_r = param1;
             if (var9 != null) {
               var9.field_Ub = null;
             }
@@ -38,11 +38,11 @@ final class df extends IntrusiveNode {
           return;
         }
         field_m = (String) null;
-        if (ec.field_r != param1) {
-          var6Lifetime1 = (eq) (dg.field_f.a(-11434, (long)ec.field_r));
+        if (NameAvailabilityValidator.field_r != param1) {
+          var6Lifetime1 = (LobbyGame) (dg.field_f.a(-11434, (long)NameAvailabilityValidator.field_r));
           var7 = var6Lifetime1;
           var6Lifetime1Lifetime1 = var7;
-          ec.field_r = param1;
+          NameAvailabilityValidator.field_r = param1;
           if (var7 != null) {
             var7.field_Ub = null;
           }

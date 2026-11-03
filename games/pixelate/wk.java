@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wk extends rg {
-    static fm field_j;
+final class wk extends LoginCredentials {
+    static ResourceArchive field_j;
     private String field_k;
     static String[] field_i;
-    static bb field_g;
+    static IntrusiveDeque field_g;
     private String field_h;
     static String field_f;
 
     final static Sprite[] a(int param0, int param1, int param2) {
         if (param2 != 1) {
           wk.c(-57);
-          return tk.a(1, param1, true, param0);
+          return BoardParticle.a(1, param1, true, param0);
         }
-        return tk.a(1, param1, true, param0);
+        return BoardParticle.a(1, param1, true, param0);
     }
 
     public static void c(int param0) {
@@ -25,7 +25,7 @@ final class wk extends rg {
           field_i = null;
           return;
         }
-        field_g = (bb) null;
+        field_g = (IntrusiveDeque) null;
         field_j = null;
         field_f = null;
         field_g = null;
@@ -70,6 +70,6 @@ final class wk extends rg {
     static {
         field_i = new String[]{"The single-player challenge is simple - make as many pictures as you can for points and Achievements!", "The <col=FF9900>timer bar</col> is slowly draining at the bottom of the screen. Complete pictures quickly to <col=FF9900>bump</col> it back up. If it disappears completely the game is over."};
         field_f = "Fullscreen";
-        field_g = new bb();
+        field_g = new IntrusiveDeque();
     }
 }

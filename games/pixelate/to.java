@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class to extends de {
-    static mm field_t;
+final class to extends MenuScreen {
+    static AudioOutput field_t;
     static boolean field_s;
-    static vk field_r;
-    static ti field_q;
+    static AccountRequestDialog field_r;
+    static MidiPcmStream field_q;
     static String field_p;
     static String field_o;
 
@@ -19,7 +19,7 @@ final class to extends de {
             el.field_b = 11;
           }
         }
-        go.field_f = true;
+        EmailCredentials.field_f = true;
         if (param0 > 36) {
           return;
         }
@@ -27,7 +27,7 @@ final class to extends de {
     }
 
     final void a(int param0) {
-        gj.field_W[0].b(0, 45);
+        NumericDateInputWidget.field_W[0].b(0, 45);
         if (param0 != 11) {
           return;
         }
@@ -49,7 +49,7 @@ final class to extends de {
 
     final void c(byte param0) {
         if (param0 > -13) {
-          field_t = (mm) null;
+          field_t = (AudioOutput) null;
         }
     }
 
