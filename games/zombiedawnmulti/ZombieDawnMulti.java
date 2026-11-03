@@ -744,7 +744,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     while (var9_int < 5) {
                       dupTemp$2 = s.field_e.readUnsignedByte(31365);
                       FullscreenFocusCanvas.field_k.field_g[var9_int] = dupTemp$2;
-                      var8.field_f[var9_int] = dupTemp$2;
+                      var8.powerupLevels[var9_int] = dupTemp$2;
                       var9_int++;
                     }
                     var9_int = 0;
@@ -1473,7 +1473,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               hp.field_t.b();
               qb.field_h = wq.a(-126, "", ii.field_a, "results_tube");
               na.field_I = wq.a(0, "", ii.field_a, "crate_box");
-              qj.field_m = wq.a(-42, "", ii.field_a, "curve_tube");
+              PowerupCommand.field_m = wq.a(-42, "", ii.field_a, "curve_tube");
               DateInputWidget.field_J = wq.a(24, "", ii.field_a, "curve_tube_empty");
               hn.field_i = wq.a(93, "", ii.field_a, "empty_jar");
               SingleChildWidget.field_C = wq.a(-124, "", ii.field_a, "main_tube");
@@ -2049,7 +2049,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           MusicPatchNode.a(0);
           gi.a(-1569388056);
           cr.b(true);
-          qj.b(false);
+          PowerupCommand.b(false);
           uc.c(118);
           ip.c((byte) 124);
           DelayedPacket.clearSharedReferences(-18535);

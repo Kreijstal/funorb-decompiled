@@ -68,7 +68,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           return;
         }
         if (FadingDialog.field_I) {
-          UiWidget.field_s.a(0, param3, param5, param0, false);
+          UiWidget.field_s.orderZombie(0, param3, param5, param0, false);
           return;
         }
         try {

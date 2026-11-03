@@ -243,7 +243,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[54][1] = ResourceArchive.field_h;
         wq.field_g[53][1] = cr.field_g;
         wq.field_g[52][1] = wj.field_j;
-        wq.field_g[51][1] = qj.field_l;
+        wq.field_g[51][1] = PowerupCommand.field_l;
         wq.field_g[50][1] = dd.field_b;
         wq.field_g[49][1] = PowerupButton.field_g;
         wq.field_g[48][1] = BirthDateEntryPanel.field_O;
@@ -426,7 +426,7 @@ final class UnitStateEvent extends GameEvent {
                   var10_ref_String = vl.a(uk.field_R, new String[]{Integer.toString(cb.field_i)}, 2);
                 }
                 en.field_b.field_wb = en.field_b.field_wb + "<br>" + var10_ref_String;
-                if ((qj.field_i & 16) == 0 &&
+                if ((PowerupCommand.field_i & 16) == 0 &&
                   !io.field_b) {
                   en.field_b.field_ab = LinkButtonPainter.field_i.field_X;
                 }

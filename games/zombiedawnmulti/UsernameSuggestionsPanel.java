@@ -129,7 +129,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           var3[var4_int] = UsernameAvailabilityValidator.field_t[ScrollPane.b(255, (int) var2[var4_int])];
           var4_int++;
         }
-        Sprite var4 = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], var3);
+        Sprite var4 = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], PowerupCommand.field_o[0], oq.field_w[0], vj.field_p[0], var3);
         fd.h((byte) 126);
         return var4;
     }

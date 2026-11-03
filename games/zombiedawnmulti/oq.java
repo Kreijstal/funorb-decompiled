@@ -68,12 +68,12 @@ final class oq extends TextWidgetPainter {
     }
 
     final static void c(byte param0) {
-        if (qj.field_p) {
+        if (PowerupCommand.field_p) {
           WidgetContainer.field_E = 0;
-          qj.field_p = false;
+          PowerupCommand.field_p = false;
           io.field_g = false;
         } else {
-          qj.field_p = true;
+          PowerupCommand.field_p = true;
           if (pp.field_n) {
             TranslatedUiText.a((byte) -86, 21);
           }

@@ -708,7 +708,7 @@ final class si extends MenuScreen {
           for (var11Lifetime1Lifetime1 = 0; var11Lifetime1Lifetime1 < 3; var11Lifetime1Lifetime1++) {
             var12Lifetime1Lifetime1 = FullscreenFocusCanvas.field_k.field_s[var11Lifetime1Lifetime1];
             if (var12Lifetime1Lifetime1 != 255) {
-              qj.field_m.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
+              PowerupCommand.field_m.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               SoftwareRasterizer.setClip(0, 0, 640, 366);
               for (var13Lifetime1Lifetime1 = 0; 16 > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
                 SoftwareRasterizer.fillRadialGlow((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (PowerupEvent.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);

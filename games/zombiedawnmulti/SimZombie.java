@@ -41,8 +41,8 @@ final class SimZombie extends SimUnit {
         this.setState(6, (byte) -89);
     }
 
-    final boolean a(int param0, boolean param1) {
-        if (this.c(true)) {
+    final boolean startScreech(int param0, boolean param1) {
+        if (this.isBusy(true)) {
           return false;
         }
         this.setState(!param1 ? 15 : 34, (byte) -89);
@@ -133,8 +133,8 @@ final class SimZombie extends SimUnit {
               this.a(var3, 750, var2);
             }
           }
-          this.n(-26310);
-          this.n((byte) 106);
+          this.seekAndBiteHumans(-26310);
+          this.fightEnemyZombies((byte) 106);
         } else {
           if (this.state == 23) {
             fieldTemp$0 = this.field_Db - 1;
@@ -246,10 +246,10 @@ final class SimZombie extends SimUnit {
                                     if (this.state == 17) {
                                       if (this.animationFrame == 3 &&
                                         0 == this.animationTicks) {
-                                        this.simulation.a(this.getX((byte) -112), -22930, this.field_gb, this.getY(1829947600));
+                                        this.simulation.addAreaEffect(this.getX((byte) -112), -22930, this.field_gb, this.getY(1829947600));
                                       }
                                       if (!(this.animationFrame < 5)) {
-                                        this.m((byte) 85);
+                                        this.die((byte) 85);
                                         this.simulation.world.addEntity(-113, (TertiaryLinkNode) (this));
                                       }
                                     } else {
@@ -360,7 +360,7 @@ final class SimZombie extends SimUnit {
                       if (fieldTemp$3 <= 60) {
                         if ((this.field_tb.state == 1 ||
                           this.field_tb.state == 2)) {
-                          this.q((byte) -98);
+                          this.chaseTargetHuman((byte) -98);
                         }
                         decompiledFrameRemainder0 = false;
                       }
@@ -372,7 +372,7 @@ final class SimZombie extends SimUnit {
                       this.followPath((byte) 27);
                     }
                     this.applyVelocity((byte) 110);
-                    this.n(-26310);
+                    this.seekAndBiteHumans(-26310);
                   }
                 } else {
                   if (0 < this.field_fb) {
@@ -384,8 +384,8 @@ final class SimZombie extends SimUnit {
                     this.velocityY == 0) {
                     this.setState(4, (byte) -89);
                   }
-                  this.n(-26310);
-                  this.n((byte) 33);
+                  this.seekAndBiteHumans(-26310);
+                  this.fightEnemyZombies((byte) 33);
                 }
               }
             } else {
@@ -402,8 +402,8 @@ final class SimZombie extends SimUnit {
               if (null == this.simulation) {
                 return;
               }
-              this.n(-26310);
-              this.n((byte) 15);
+              this.seekAndBiteHumans(-26310);
+              this.fightEnemyZombies((byte) 15);
             }
           }
         }
@@ -442,7 +442,7 @@ final class SimZombie extends SimUnit {
         int var2 = 82 / ((-11 - param0) / 51);
     }
 
-    private final void q(byte param0) {
+    private final void chaseTargetHuman(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -484,7 +484,7 @@ final class SimZombie extends SimUnit {
         this.needsSync = true;
     }
 
-    final void e(int param0, int param1) {
+    final void becomeCursedBy(int param0, int param1) {
         this.setState(31, (byte) -89);
         int var3 = 100 % ((30 - param0) / 32);
         this.field_hb = this.field_hb | 1 << this.field_gb;
@@ -492,8 +492,8 @@ final class SimZombie extends SimUnit {
         this.field_gb = param1;
     }
 
-    final void e(boolean param0) {
-        if (this.c(true)) {
+    final void startTeleport(boolean param0) {
+        if (this.isBusy(true)) {
           return;
         }
         if (param0) {
@@ -554,7 +554,7 @@ final class SimZombie extends SimUnit {
                     if (((this.state == 8)) &&
                       ((this.simulation == null)) &&
                       ((this.field_tb != null))) {
-                      this.field_tb.j((byte) 118);
+                      this.field_tb.startBeingBitten((byte) 118);
                     }
                   }
                 }
@@ -591,18 +591,18 @@ final class SimZombie extends SimUnit {
         this.field_nb = hp.a((byte) -80, g.field_a, 120);
     }
 
-    final void m(int param0) {
+    final void startCharm(int param0) {
         if (param0 != -6556) {
           this.tick(-45);
         }
-        if (this.c(true)) {
+        if (this.isBusy(true)) {
           return;
         }
         this.setState(27, (byte) -89);
         this.needsSync = true;
     }
 
-    private final void n(byte param0) {
+    private final void fightEnemyZombies(byte param0) {
         int fieldTemp$0 = 0;
         int stackIn_12_0 = 0;
         boolean stackIn_17_0 = false;
@@ -689,7 +689,7 @@ final class SimZombie extends SimUnit {
                         this.positionY = var11Lifetime1;
                         this.positionX = var10Lifetime1;
                       }
-                      this.simulation.a(-89, var9, this);
+                      this.simulation.emitFightEvent(-89, var9, this);
                       return;
                     }
                   }
@@ -704,7 +704,7 @@ final class SimZombie extends SimUnit {
 
     final void j(byte param0) {
         if (7 == this.state) {
-          this.q((byte) -110);
+          this.chaseTargetHuman((byte) -110);
         } else {
           if (this.state == 5 ||
             this.state == 6) {
@@ -716,7 +716,7 @@ final class SimZombie extends SimUnit {
         int var2 = 9 % ((param0 - 3) / 53);
     }
 
-    final void m(byte param0) {
+    final void die(byte param0) {
         int fieldTemp$0 = this.field_kb;
         this.field_kb = this.field_kb - 1;
         if (0 < fieldTemp$0 ||
@@ -750,8 +750,8 @@ final class SimZombie extends SimUnit {
         }
     }
 
-    final boolean a(boolean param0, byte param1) {
-        if (this.c(true)) {
+    final boolean startDetonate(boolean param0, byte param1) {
+        if (this.isBusy(true)) {
           return false;
         }
         this.setState(13, (byte) -89);
@@ -763,8 +763,8 @@ final class SimZombie extends SimUnit {
         return true;
     }
 
-    final void l(int param0) {
-        if (this.c(true)) {
+    final void startFear(int param0) {
+        if (this.isBusy(true)) {
           return;
         }
         if (param0 != 34) {
@@ -786,7 +786,7 @@ final class SimZombie extends SimUnit {
             this.field_nb = 0;
             this.field_wb = (Waypoint) (param1.a((byte) 115));
             this.field_Cb = param1;
-            if (!this.c(param0)) {
+            if (!this.isBusy(param0)) {
               this.followPath((byte) 27);
             }
             return;
@@ -841,7 +841,7 @@ final class SimZombie extends SimUnit {
         this.setState(4, (byte) -89);
     }
 
-    private final void n(int param0) {
+    private final void seekAndBiteHumans(int param0) {
         int fieldTemp$0 = 0;
         int stackIn_11_0 = 0;
         boolean stackIn_17_0 = false;
@@ -935,10 +935,10 @@ final class SimZombie extends SimUnit {
                       }
                       if (400 > var5) {
                         this.field_tb = var10;
-                        var10.j((byte) 120);
+                        var10.startBeingBitten((byte) 120);
                         this.setState(8, (byte) -89);
                         this.field_Ab = 70;
-                        this.simulation.a(var10, this, (var10.getX((byte) -112) + this.getX((byte) -112)) / 2, (var10.getY(1829947600) + this.getY(1829947600)) / 2, (byte) -63);
+                        this.simulation.emitAttackEvent(var10, this, (var10.getX((byte) -112) + this.getX((byte) -112)) / 2, (var10.getY(1829947600) + this.getY(1829947600)) / 2, (byte) -63);
                         return;
                       }
                       if (var2 == null ||
@@ -956,7 +956,7 @@ final class SimZombie extends SimUnit {
         }
     }
 
-    final boolean d(byte param0, int param1) {
+    final boolean hasBeenCursedBy(byte param0, int param1) {
         if (param0 != 61) {
           this.field_Db = -106;
         }
@@ -977,7 +977,7 @@ final class SimZombie extends SimUnit {
         return this.field_ub > 0 ? true : false;
     }
 
-    final void d(int param0, int param1) {
+    final void startStun(int param0, int param1) {
         if (this.state == 8) {
           return;
         }
@@ -1024,7 +1024,7 @@ final class SimZombie extends SimUnit {
         return this.field_xb > 0 ? true : false;
     }
 
-    final void f(boolean param0) {
+    final void clearStatusEffects(boolean param0) {
         if (0 < this.field_xb ||
           0 < this.field_ub ||
           this.field_Bb) {
@@ -1034,11 +1034,11 @@ final class SimZombie extends SimUnit {
           this.field_ub = 0;
         }
         if (!param0) {
-          this.d(-44, -117);
+          this.startStun(-44, -117);
         }
     }
 
-    private final boolean c(boolean param0) {
+    private final boolean isBusy(boolean param0) {
         boolean stackIn_18_0 = false;
         if (!param0) {
           return false;
@@ -1054,8 +1054,8 @@ final class SimZombie extends SimUnit {
         return this.field_D == 0 ? true : false;
     }
 
-    final boolean l(byte param0) {
-        if (this.c(true)) {
+    final boolean startMeltdown(byte param0) {
+        if (this.isBusy(true)) {
           return false;
         }
         this.setState(17, (byte) -89);
@@ -1066,8 +1066,8 @@ final class SimZombie extends SimUnit {
         return true;
     }
 
-    final boolean b(boolean param0, byte param1) {
-        if (this.c(true)) {
+    final boolean startPhantom(boolean param0, byte param1) {
+        if (this.isBusy(true)) {
           return false;
         }
         if (param1 > -100) {

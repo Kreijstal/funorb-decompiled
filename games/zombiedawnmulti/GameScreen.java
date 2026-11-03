@@ -412,7 +412,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 107) {
-            stackIn_4_0 = PortalEntryEvent.field_m.getPowerupCooldown(tg.field_e.field_f[param0], tg.field_e.powerupTypes[param0], this.localTeam, false);
+            stackIn_4_0 = PortalEntryEvent.field_m.getPowerupCooldown(tg.field_e.powerupLevels[param0], tg.field_e.powerupTypes[param0], this.localTeam, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = 126;
@@ -2525,7 +2525,7 @@ final class GameScreen {
                   var9_int = var8_ref3.g((byte) -116);
                   var10Lifetime1 = 0;
                   while (var9_int > var10Lifetime1) {
-                    this.field_I.a(87, tg.field_e.powerupTypes[var10Lifetime1], tg.field_e.field_f[var10Lifetime1]);
+                    this.field_I.a(87, tg.field_e.powerupTypes[var10Lifetime1], tg.field_e.powerupLevels[var10Lifetime1]);
                     var10Lifetime1++;
                     if (var14 != 0) {
                       break scanLoop1;

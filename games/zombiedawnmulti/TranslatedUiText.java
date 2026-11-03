@@ -330,7 +330,7 @@ final class TranslatedUiText {
                 }
                 var2 = ChaseEvent.a("mu_options_allow_spectate", (byte) 83);
                 if (var2 != null) {
-                  qj.field_j = qe.a(-2739, var2);
+                  PowerupCommand.field_j = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_options_ratedgametype", (byte) 83);
                 if (null != var2) {

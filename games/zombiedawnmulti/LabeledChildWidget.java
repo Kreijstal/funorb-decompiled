@@ -317,7 +317,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         if (param3 != 2) {
           return;
         }
-        qj.field_i = qj.field_i + 1;
+        PowerupCommand.field_i = PowerupCommand.field_i + 1;
     }
 
     final String getHoverText(byte param0) {

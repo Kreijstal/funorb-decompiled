@@ -234,7 +234,7 @@ final class nk extends IntrusiveNode {
             if (!(var5 instanceof SimZombie)) {
               if (var5 instanceof SimHuman) {
                 if (!this.field_g) {
-                  ((SimHuman) (var5)).a(800, true);
+                  ((SimHuman) (var5)).stun(800, true);
                 } else {
                   ((SimHuman) (var5)).c(false);
                 }
@@ -242,9 +242,9 @@ final class nk extends IntrusiveNode {
             } else {
               if (var5 != this.field_t &&
                 !this.field_g) {
-                ((SimZombie) (var5)).d(400, -118);
+                ((SimZombie) (var5)).startStun(400, -118);
               } else {
-                ((SimZombie) (var5)).m((byte) 42);
+                ((SimZombie) (var5)).die((byte) 42);
                 this.field_t = null;
               }
             }

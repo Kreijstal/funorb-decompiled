@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlayerLoadout {
-    int[] field_f;
+    int[] powerupLevels;
     int[] powerupReadyTick;
     int[] powerupTypes;
     static boolean field_a;
@@ -48,7 +48,7 @@ final class PlayerLoadout {
         bl.a((byte) 49);
         this.field_c = new int[3];
         this.powerupTypes = new int[5];
-        this.field_f = new int[5];
+        this.powerupLevels = new int[5];
     }
 
     public static void a(byte param0) {

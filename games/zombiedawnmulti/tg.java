@@ -625,13 +625,13 @@ final class tg implements Runnable {
             if (!pp.field_n) {
               for (var9_intLifetime1 = 0; var9_intLifetime1 < 5; var9_intLifetime1++) {
                 var8[0].powerupTypes[var9_intLifetime1] = FullscreenFocusCanvas.field_k.field_m[var9_intLifetime1];
-                var8[0].field_f[var9_intLifetime1] = FullscreenFocusCanvas.field_k.field_g[var9_intLifetime1];
+                var8[0].powerupLevels[var9_intLifetime1] = FullscreenFocusCanvas.field_k.field_g[var9_intLifetime1];
               }
             } else {
               var8[0].powerupTypes[0] = 0;
-              var8[0].field_f[0] = 255;
+              var8[0].powerupLevels[0] = 255;
               for (var9_intLifetime1 = 1; var9_intLifetime1 < 5; var9_intLifetime1++) {
-                var18 = var8[0].field_f;
+                var18 = var8[0].powerupLevels;
                 var15 = var18;
                 var13 = var15;
                 var10 = var13;
@@ -709,7 +709,7 @@ final class tg implements Runnable {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = UsernameAvailabilityValidator.field_t[ScrollPane.b(255, (int) var21[var6])];
             }
-            var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
+            var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
           } else {
             var16 = vf.field_b[var2];
             var12 = var16;
@@ -721,7 +721,7 @@ final class tg implements Runnable {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = cr.b(UsernameAvailabilityValidator.field_t[ScrollPane.b((int) var21[var7], 255)], ScrollPane.b(255, (int) var16[var7]) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
           }
         }
         fd.h((byte) 125);

@@ -1639,7 +1639,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "tip_TRAIT_GENERAL");
                 if (var2 != null) {
-                  qj.field_l = qe.a(-2739, var2);
+                  PowerupCommand.field_l = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "tip_TRAIT_READY");
                 if (null != var2) {

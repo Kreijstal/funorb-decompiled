@@ -121,7 +121,7 @@ final class pd {
           var17.position = -2 + param1.length;
           qc.field_v = var17.readUnsignedShort((byte) 69);
           FullscreenFocusCanvas.field_h = new boolean[qc.field_v];
-          qj.field_o = new int[qc.field_v];
+          PowerupCommand.field_o = new int[qc.field_v];
           PacketBuffer.field_i = new int[qc.field_v];
           if (param0 <= 82) {
             field_e = (String) null;
@@ -138,7 +138,7 @@ final class pd {
             PacketBuffer.field_i[var4] = var16.readUnsignedShort((byte) 69);
           }
           for (var4Lifetime1 = 0; qc.field_v > var4Lifetime1; var4Lifetime1++) {
-            qj.field_o[var4Lifetime1] = var17.readUnsignedShort((byte) 69);
+            PowerupCommand.field_o[var4Lifetime1] = var17.readUnsignedShort((byte) 69);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < qc.field_v; var4Lifetime2++) {
             oq.field_w[var4Lifetime2] = var17.readUnsignedShort((byte) 69);

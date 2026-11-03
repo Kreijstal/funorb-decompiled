@@ -140,7 +140,7 @@ final class fd extends SceneObject {
     final static void h(byte param0) {
         oq.field_w = null;
         MatchingTextValidator.field_t = (byte[][]) null;
-        qj.field_o = null;
+        PowerupCommand.field_o = null;
         vj.field_p = null;
         PacketBuffer.field_i = null;
         if (param0 <= 124) {

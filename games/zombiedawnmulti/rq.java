@@ -131,7 +131,7 @@ final class rq extends IntrusiveNode {
         int var2Lifetime2;
         int var3Lifetime1;
         int var3Lifetime2;
-        if (!qj.field_p) {
+        if (!PowerupCommand.field_p) {
           return;
         }
         if (null != MessageDialogContent.field_G) {

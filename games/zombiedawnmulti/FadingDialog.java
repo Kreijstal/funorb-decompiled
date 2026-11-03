@@ -62,7 +62,7 @@ abstract class FadingDialog extends WidgetContainer {
         if (param1 != 0) {
           jh.field_ic = param1;
         }
-        io.field_g = qj.field_p;
+        io.field_g = PowerupCommand.field_p;
         if (param0 != -17306) {
           return;
         }
@@ -71,7 +71,7 @@ abstract class FadingDialog extends WidgetContainer {
 
     final static String a(int param0) {
         int var1 = -20 % ((-50 - param0) / 60);
-        if (qj.field_p) {
+        if (PowerupCommand.field_p) {
           return vi.field_a[0];
         }
         return vi.field_a[1];

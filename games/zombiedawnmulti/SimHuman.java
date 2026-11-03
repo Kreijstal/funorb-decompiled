@@ -270,7 +270,7 @@ abstract class SimHuman extends SimUnit {
         }
     }
 
-    final void j(byte param0) {
+    final void startBeingBitten(byte param0) {
         this.setState(20, (byte) -89);
         if (param0 <= 101) {
           this.field_lb = -17;
@@ -657,7 +657,7 @@ abstract class SimHuman extends SimUnit {
         return false;
     }
 
-    final void a(int param0, boolean param1) {
+    final void stun(int param0, boolean param1) {
         if (this.state == 20) {
           return;
         }

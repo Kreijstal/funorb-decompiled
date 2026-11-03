@@ -66,7 +66,7 @@ final class ji {
         ud.field_ab = true;
         IntrusiveDequeCursor.field_e = true;
         nb.field_a.h(-120);
-        qj.a(pn.field_i, false, 127);
+        PowerupCommand.a(pn.field_i, false, 127);
     }
 
     static {

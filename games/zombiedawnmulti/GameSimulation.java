@@ -31,7 +31,7 @@ final class GameSimulation {
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        qj var9 = null;
+        PowerupCommand var9 = null;
         try {
           if (param1 != -11513) {
             return;
@@ -47,8 +47,8 @@ final class GameSimulation {
               return;
             }
             var7 = var6.powerupTypes[param3];
-            var8 = var6.field_f[param3];
-            var9 = new qj(this.world.currentTick + 50, param2, var7, var8, param4, param0);
+            var8 = var6.powerupLevels[param3];
+            var9 = new PowerupCommand(this.world.currentTick + 50, param2, var7, var8, param4, param0);
             this.field_e.a(var9, false);
             this.queueEvent(-7737, rm.a(this.world.currentTick, param4, param0, var7, var8, param2, param1 ^ -13113, param4));
             var6.powerupReadyTick[param3] = this.world.currentTick + this.world.getPowerupCooldown(var8, var7, param2, false);
@@ -108,7 +108,7 @@ final class GameSimulation {
           var7.field_gb = param0;
           this.world.teamScores[var7.field_gb] = this.world.teamScores[var7.field_gb] + param3.o(-116);
           this.entities.a(var7, false);
-          this.a(param3, var7, param1, false);
+          this.emitInfectionEvent(param3, var7, param1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -272,7 +272,7 @@ final class GameSimulation {
           }
           if (var4 instanceof SimZombie) {
             var3 = (SimZombie) (var4);
-            var3.f(true);
+            var3.clearStatusEffects(true);
             var3.t(4);
             var3.r((byte) -111);
             if (var3.state != 29) {
@@ -1208,13 +1208,13 @@ final class GameSimulation {
                 (param0 == 37)) {
                 var8Lifetime2 = (SimZombie) (var9);
                 if (this.field_o) {
-                  System.out.println("cursing, owner " + var8Lifetime2.field_gb + ", prev 0 " + var8Lifetime2.d((byte) 61, 0) + " 1 " + var8Lifetime2.d((byte) 61, 1));
+                  System.out.println("cursing, owner " + var8Lifetime2.field_gb + ", prev 0 " + var8Lifetime2.hasBeenCursedBy((byte) 61, 0) + " 1 " + var8Lifetime2.hasBeenCursedBy((byte) 61, 1));
                 }
                 if (var8Lifetime2.field_gb != param5 &&
-                  var8Lifetime2.d((byte) 61, param5)) {
+                  var8Lifetime2.hasBeenCursedBy((byte) 61, param5)) {
                   this.field_k[param5] = cr.b(this.field_k[param5], 2);
                 }
-                var8Lifetime2.e(93, param5);
+                var8Lifetime2.becomeCursedBy(93, param5);
                 if (var14 != 0) {
                   var10 = this.getHuman(417600865, var7_int);
                   if (var10.state != 20 &&
@@ -1241,7 +1241,7 @@ final class GameSimulation {
             }
             stackIn_220_0 = var8Lifetime3;
             stackIn_221_1 = (param0 == 34);
-            ((SimZombie) (Object) stackIn_220_0).a(stackIn_221_1, (byte) 100);
+            ((SimZombie) (Object) stackIn_220_0).startDetonate(stackIn_221_1, (byte) 100);
             return true;
           }
           if ((var13Lifetime1 != 10 ||
@@ -1259,7 +1259,7 @@ final class GameSimulation {
               if (var8Lifetime4 == null) {
                 return false;
               }
-              var8Lifetime4.l((byte) -52);
+              var8Lifetime4.startMeltdown((byte) -52);
               return true;
             }
             if (var13Lifetime1 == 2 &&
@@ -1270,7 +1270,7 @@ final class GameSimulation {
               }
               stackIn_244_0 = var8Lifetime4Lifetime1;
               stackIn_245_1 = (param0 == 38);
-              ((SimZombie) (Object) stackIn_244_0).b(stackIn_245_1, (byte) -127);
+              ((SimZombie) (Object) stackIn_244_0).startPhantom(stackIn_245_1, (byte) -127);
               return true;
             }
             if (var13Lifetime1 == 16) {
@@ -1278,7 +1278,7 @@ final class GameSimulation {
               if (var8Lifetime4Lifetime2 == null) {
                 return false;
               }
-              var8Lifetime4Lifetime2.m(-6556);
+              var8Lifetime4Lifetime2.startCharm(-6556);
               return true;
             }
             if (var13Lifetime1 == 14 &&
@@ -1287,7 +1287,7 @@ final class GameSimulation {
               if (var8Lifetime4Lifetime3 == null) {
                 return false;
               }
-              var8Lifetime4Lifetime3.l(34);
+              var8Lifetime4Lifetime3.startFear(34);
               return true;
             }
             if (5 == var13Lifetime1 &&
@@ -1299,7 +1299,7 @@ final class GameSimulation {
               stackIn_265_0 = var8Lifetime4Lifetime4;
               stackIn_265_1 = 47;
               stackIn_266_2 = (param0 == 35);
-              ((SimZombie) (Object) stackIn_265_0).a(stackIn_265_1, stackIn_266_2);
+              ((SimZombie) (Object) stackIn_265_0).startScreech(stackIn_265_1, stackIn_266_2);
               return true;
             }
             if (var13Lifetime1 == 0 &&
@@ -1317,7 +1317,7 @@ final class GameSimulation {
               if (null == var8Lifetime4Lifetime5) {
                 return false;
               }
-              var8Lifetime4Lifetime5.e(false);
+              var8Lifetime4Lifetime5.startTeleport(false);
               return true;
             }
             if (15 == var13Lifetime1 &&
@@ -1335,28 +1335,28 @@ final class GameSimulation {
               if (!(var9 instanceof SimZombie)) {
                 if (var9 instanceof SimHuman) {
                   if (param0 != 34) {
-                    ((SimHuman) (var9)).a(var11 * 3 / 4, true);
+                    ((SimHuman) (var9)).stun(var11 * 3 / 4, true);
                   }
                   if (param0 == 34 ||
                     var14 != 0) {
                     ((SimHuman) (var9)).c(false);
                     if (var14 != 0) {
                       if (34 == param0) {
-                        ((SimZombie) (var9)).m((byte) 124);
-                        ((SimZombie) (var9)).d(var11, -96);
+                        ((SimZombie) (var9)).die((byte) 124);
+                        ((SimZombie) (var9)).startStun(var11, -96);
                       } else {
-                        ((SimZombie) (var9)).d(var11, -96);
+                        ((SimZombie) (var9)).startStun(var11, -96);
                       }
                     }
                   }}
               } else {
                 if (34 == param0) {
-                  ((SimZombie) (var9)).m((byte) 124);
+                  ((SimZombie) (var9)).die((byte) 124);
                   if (var14 != 0) {
-                    ((SimZombie) (var9)).d(var11, -96);
+                    ((SimZombie) (var9)).startStun(var11, -96);
                   }
                 } else {
-                  ((SimZombie) (var9)).d(var11, -96);
+                  ((SimZombie) (var9)).startStun(var11, -96);
                 }
               }
               return true;
@@ -1460,7 +1460,7 @@ final class GameSimulation {
         SimUnit var4 = null;
         ce var4_ref = null;
         IntrusiveNode var4_ref2 = null;
-        qj var4_ref3 = null;
+        PowerupCommand var4_ref3 = null;
         SimZombie var5_ref_ge = null;
         int var5 = 0;
         int var6 = 0;
@@ -1681,7 +1681,7 @@ final class GameSimulation {
             }
             if (decompiledFrameCompleted0) {
               if (!stackIn_129_0) {
-                var4_ref3 = (qj) (this.field_e.g(50));
+                var4_ref3 = (PowerupCommand) (this.field_e.g(50));
                 return;
               }
               return;
@@ -1692,20 +1692,20 @@ final class GameSimulation {
             if (stackIn_129_0) {
               return;
             }
-            var4_ref3 = (qj) (this.field_e.g(50));
+            var4_ref3 = (PowerupCommand) (this.field_e.g(50));
             if (var6 != 0) {
               return;
             }
-            if (var4_ref3.field_g > this.world.currentTick) {
+            if (var4_ref3.executeTick > this.world.currentTick) {
               break;
             }
-            var5 = this.executePowerup(var4_ref3.field_h, var4_ref3.field_q, var4_ref3.field_f, -84, var4_ref3.field_k, var4_ref3.field_n) ? 1 : 0;
+            var5 = this.executePowerup(var4_ref3.powerupLevel, var4_ref3.powerupType, var4_ref3.targetOid, -84, var4_ref3.extraArgument, var4_ref3.player) ? 1 : 0;
             if (var5 != 0) {
-              if (this.field_j[var4_ref3.field_n] == 255) {
-                this.field_j[var4_ref3.field_n] = var4_ref3.field_q;
+              if (this.field_j[var4_ref3.player] == 255) {
+                this.field_j[var4_ref3.player] = var4_ref3.powerupType;
               } else {
-                if (~this.field_j[var4_ref3.field_n] != ~var4_ref3.field_q) {
-                  this.field_j[var4_ref3.field_n] = -2;
+                if (~this.field_j[var4_ref3.player] != ~var4_ref3.powerupType) {
+                  this.field_j[var4_ref3.player] = -2;
                 }
               }
             }
@@ -1767,13 +1767,13 @@ final class GameSimulation {
               if (var7 instanceof SimZombie) {
                 var8 = (SimZombie) (var7);
                 if (var6.a(var8.getX((byte) -112), var8.getY(1829947600), -1)) {
-                  var8.d(200, -124);
+                  var8.startStun(200, -124);
                 }
               } else {
                 if (var7 instanceof SimHuman) {
                   var8_ref = (SimHuman) (var7);
                   if (var6.a(var8_ref.getX((byte) -112), var8_ref.getY(1829947600), -1)) {
-                    var8_ref.a(200, true);
+                    var8_ref.stun(200, true);
                   }
                 }
               }
@@ -1870,7 +1870,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void addAreaEffect(int param0, int param1, int param2, int param3) {
         try {
           this.world.field_A.a(new bf(this.navigation, param2, param0, param3), false);
           if (param1 != -22930) {
@@ -1881,7 +1881,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(SimHuman param0, SimZombie param1, int param2, int param3, byte param4) {
+    final void emitAttackEvent(SimHuman param0, SimZombie param1, int param2, int param3, byte param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -1920,7 +1920,7 @@ final class GameSimulation {
         }
     }
 
-    private final void a(SimHuman param0, SimZombie param1, SimZombie param2, boolean param3) {
+    private final void emitInfectionEvent(SimHuman param0, SimZombie param1, SimZombie param2, boolean param3) {
         InfectionEvent var5 = null;
         InfectionEvent stackIn_3_0 = null;
         InfectionEvent stackIn_3_1 = null;
@@ -2203,7 +2203,7 @@ final class GameSimulation {
           }
           var7Lifetime1 = 0;
           if (param0 != 2) {
-            this.a((SimHuman) null, (SimZombie) null, -111, -126, (byte) -27);
+            this.emitAttackEvent((SimHuman) null, (SimZombie) null, -111, -126, (byte) -27);
           }
           var8 = 0;
           while (true) {
@@ -2234,7 +2234,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(int param0, SimZombie param1, SimZombie param2) {
+    final void emitFightEvent(int param0, SimZombie param1, SimZombie param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         RuntimeException stackIn_12_0 = null;
@@ -2271,7 +2271,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void executeCheat(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         PlayerLoadout var7 = null;
         RuntimeException var7_ref = null;
@@ -2359,7 +2359,7 @@ final class GameSimulation {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, boolean param4) {
+    final boolean orderZombie(int param0, int param1, int param2, int param3, boolean param4) {
         SimZombie var6 = null;
         RuntimeException var6_ref = null;
         SimZombie stackIn_22_0 = null;

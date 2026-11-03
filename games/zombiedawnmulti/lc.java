@@ -20,7 +20,7 @@ final class lc extends IntrusiveNode {
           ResourceArchive var2 = (ResourceArchive) null;
           lc.a(-40, (ResourceArchive) null, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null);
         }
-        IndexedSprite var1 = new IndexedSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], MatchingTextValidator.field_t[0], UsernameAvailabilityValidator.field_t);
+        IndexedSprite var1 = new IndexedSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], PowerupCommand.field_o[0], oq.field_w[0], vj.field_p[0], MatchingTextValidator.field_t[0], UsernameAvailabilityValidator.field_t);
         fd.h((byte) 126);
         return var1;
     }

@@ -479,7 +479,7 @@ final class TriangleMesh {
               ma.field_b[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, Integer.toString(qo.field_r[var17_intLifetime1]));
             }
           }
-          StateIconLabel.field_Ib[2] = new UiComponent(0L, m.field_B, qj.field_j);
+          StateIconLabel.field_Ib[2] = new UiComponent(0L, m.field_B, PowerupCommand.field_j);
           ma.field_b[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb), new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[1], PowerupEvent.field_k)};
           if (r.field_f > 1) {
             StateIconLabel.field_Ib[3] = new UiComponent(0L, m.field_B, gj.field_d);

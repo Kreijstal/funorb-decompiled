@@ -66,7 +66,7 @@ final class na extends SingleChildWidget {
         int var3;
         int var4;
         int var5;
-        if (qj.field_p &&
+        if (PowerupCommand.field_p &&
           io.field_g &&
           WidgetContainer.field_E > 0) {
           var3 = (400 - WidgetContainer.field_E >> 1) + 10;

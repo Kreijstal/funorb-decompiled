@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj extends IntrusiveNode {
+final class PowerupCommand extends IntrusiveNode {
     static int field_i;
-    int field_f;
+    int targetOid;
     static int[] field_o;
-    int field_h;
-    int field_g;
+    int powerupLevel;
+    int executeTick;
     static IndexedSprite field_m;
     static String field_l;
-    int field_k;
+    int extraArgument;
     static boolean field_p;
-    int field_q;
+    int powerupType;
     static String field_j;
-    int field_n;
+    int player;
 
     final static void a(String param0, boolean param1, int param2) {
         try {
@@ -38,19 +38,19 @@ final class qj extends IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        qj.a((String) null, false, 17);
+        PowerupCommand.a((String) null, false, 17);
         field_m = null;
         field_o = null;
         field_l = null;
     }
 
-    qj(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.field_k = param5;
-        this.field_h = param3;
-        this.field_q = param2;
-        this.field_f = param4;
-        this.field_g = param0;
-        this.field_n = param1;
+    PowerupCommand(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.extraArgument = param5;
+        this.powerupLevel = param3;
+        this.powerupType = param2;
+        this.targetOid = param4;
+        this.executeTick = param0;
+        this.player = param1;
     }
 
     static {

@@ -154,7 +154,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           return;
         }
         if (FadingDialog.field_I) {
-          UiWidget.field_s.a(param4, param0, 0, param3, 3, param5);
+          UiWidget.field_s.executeCheat(param4, param0, 0, param3, 3, param5);
           return;
         }
         try {

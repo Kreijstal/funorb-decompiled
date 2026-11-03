@@ -68,7 +68,7 @@ final class bc {
           return (IndexedSprite[]) null;
         }
         while (var2 < qc.field_v) {
-          var1[var2] = new IndexedSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], MatchingTextValidator.field_t[var2], UsernameAvailabilityValidator.field_t);
+          var1[var2] = new IndexedSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], oq.field_w[var2], vj.field_p[var2], MatchingTextValidator.field_t[var2], UsernameAvailabilityValidator.field_t);
           var2++;
         }
         fd.h((byte) 125);

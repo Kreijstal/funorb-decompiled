@@ -292,7 +292,7 @@ final class PowerupBar {
           if (this.field_a != -1 &&
             this.field_a < tg.field_e.powerupTypes.length) {
             var2_int = tg.field_e.powerupTypes[this.field_a];
-            var3Lifetime1 = tg.field_e.field_f[this.field_a];
+            var3Lifetime1 = tg.field_e.powerupLevels[this.field_a];
             if (255 != var2_int) {
               g.a(AccountCreationForm.field_W[var2_int], this.field_f - 100, 453);
               BirthDateEntryPanel.field_M[var2_int].g(-100 + this.field_f, 453);

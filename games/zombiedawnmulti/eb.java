@@ -68,7 +68,7 @@ final class eb {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = UsernameAvailabilityValidator.field_t[ScrollPane.b((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
+          var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
         }
         if (param0 <= 2) {
           eb.a(true, false, -9);

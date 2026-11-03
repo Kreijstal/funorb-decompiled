@@ -116,13 +116,13 @@ final class gg {
               var10Lifetime1 = eb.field_B.field_yb.textWidth(var16) + 3 * eb.field_B.field_yb.charWidth('.');
               eb.field_B.field_R = 0;
               eb.field_B.field_V = (-var10Lifetime1 + eb.field_B.field_zb) / 2;
-              if ((48 & qj.field_i) == 16) {
+              if ((48 & PowerupCommand.field_i) == 16) {
                 var9 = var16 + ".";
               }
-              if ((48 & qj.field_i) == 32) {
+              if ((48 & PowerupCommand.field_i) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((48 & qj.field_i) == 48) {
+              if ((48 & PowerupCommand.field_i) == 48) {
                 var9 = (String) (var9) + "...";
               }
               eb.field_B.field_wb = (String) (var9);
