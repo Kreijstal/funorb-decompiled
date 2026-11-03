@@ -126,7 +126,7 @@ final class lj extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class lj extends IntrusiveNode {
           AttackEvent.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 1633);
           SimEntity.a(param0.field_J, param2.maxDescent + param2.field_J, 1829947600, param2.field_J, param0.maxDescent + param0.field_J);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

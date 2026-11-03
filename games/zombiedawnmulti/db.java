@@ -24,7 +24,7 @@ final class db {
         try {
           kk.a(param1, param5, param1, (byte) 119, param2, param0, param4, param3);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "db.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "db.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

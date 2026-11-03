@@ -256,27 +256,27 @@ final class SimZombie extends SimUnit {
                                       if (this.state != 19 &&
                                         this.state != 24) {
                                         if (this.state == 27) {
-                                          if (this.animationFrame == gg.field_j[27] / 2) {
+                                          if (this.animationFrame == MessageDialogContent.field_j[27] / 2) {
                                             this.field_Bb = false;
                                             this.field_ub = 0;
                                             this.field_xb = this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 2250);
                                           }
-                                          if ((~(-1 + gg.field_j[27]) == ~this.animationFrame)) {
+                                          if ((~(-1 + MessageDialogContent.field_j[27]) == ~this.animationFrame)) {
                                             this.setState(4, (byte) -89);
                                           }
                                         } else {
                                           if (this.state == 31) {
-                                            if ((~this.animationFrame == ~(gg.field_j[31] - 1))) {
+                                            if ((~this.animationFrame == ~(MessageDialogContent.field_j[31] - 1))) {
                                               this.setState(4, (byte) -89);
                                             }
                                           } else {
                                             if ((this.state == 28)) {
-                                              if (gg.field_j[28] / 2 == this.animationFrame) {
+                                              if (MessageDialogContent.field_j[28] / 2 == this.animationFrame) {
                                                 this.field_xb = 0;
                                                 this.field_Bb = false;
                                                 this.field_ub = this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 2250);
                                               }
-                                              if ((gg.field_j[28] - 1 == this.animationFrame)) {
+                                              if ((MessageDialogContent.field_j[28] - 1 == this.animationFrame)) {
                                                 this.setState(4, (byte) -89);
                                               }
                                             }
@@ -433,7 +433,7 @@ final class SimZombie extends SimUnit {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "ge.EC(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ge.EC(" + param0 + ')');
         }
     }
 
@@ -511,7 +511,7 @@ final class SimZombie extends SimUnit {
           rb.field_a = param0;
           PowerupButton.a(12, 74);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ge.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -802,7 +802,7 @@ final class SimZombie extends SimUnit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

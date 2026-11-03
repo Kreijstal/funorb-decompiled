@@ -51,7 +51,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref), "am.C(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "am.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class am {
         }
         boolean decompiledFrameRemainder0 = true;
         if (ArrayWidgetGroup.field_I != 10 && (-7 != ArrayWidgetGroup.field_I ||
-          df.field_I)) {
+          FadingDialog.field_I)) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }

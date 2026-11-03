@@ -243,7 +243,7 @@ final class vi {
                 } else {
                   if (var12.field_Ob) {
                     var12.field_Ub.field_wb = vl.a(oi.field_b, new String[]{var20}, 2);
-                    var12.field_Tb.field_wb = df.field_J;
+                    var12.field_Tb.field_wb = FadingDialog.field_J;
                     var12.field_cc.field_wb = bn.field_a;
                   } else {
                     var12.field_Tb.field_wb = nn.field_a;
@@ -253,7 +253,7 @@ final class vi {
               var25_int = 0;
               if (null != JaggrabDownloader.field_c &&
                 hl.b(param2 ^ 45) &&
-                ~ie.field_sb != ~var12.field_ec) {
+                ~ContentTransitionDialog.field_sb != ~var12.field_ec) {
                 if (null != var12.field_Tb.field_wb) {
                   var26 = var12.field_Tb.e(param2 - 45) + 2 * nj.field_h;
                   var12.field_Tb.setBounds(jk.field_f, var19, var26, var25_int, -3344);
@@ -331,7 +331,7 @@ final class vi {
             if (var12.field_pb &&
               !var12.c((byte) 15)) {
               var24Lifetime2 = null;
-              if (~var12.field_ec == ~ie.field_sb) {
+              if (~var12.field_ec == ~ContentTransitionDialog.field_sb) {
                 if (var5_int != 0 &&
                   !var12.field_Nb) {
                   var24Lifetime2 = lj.field_s;
@@ -495,7 +495,7 @@ final class vi {
           } else {
             stackIn_227_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_226_0), ((StringBuilder) (Object) stackIn_226_1).append(stackIn_227_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_226_0), ((StringBuilder) (Object) stackIn_226_1).append(stackIn_227_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -509,7 +509,7 @@ final class vi {
           var3.writeByte(119, param1.field_i);
           var3.writeByte(-21, param1.field_p);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

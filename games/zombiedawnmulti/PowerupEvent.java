@@ -16,7 +16,7 @@ final class PowerupEvent extends GameEvent {
     static String field_n;
 
     final static void a(int param0, int param1, int param2) {
-        em.field_O[param0] = cr.b(em.field_O[param0], 1 << -32 + param1);
+        BirthDateInputWidget.field_O[param0] = cr.b(BirthDateInputWidget.field_O[param0], 1 << -32 + param1);
         if (param2 != -1) {
           field_k = (String) null;
         }
@@ -29,7 +29,7 @@ final class PowerupEvent extends GameEvent {
             lo.field_g.a((byte) 50, ql.field_b);
           }
           lo.field_g.a((byte) 50, pd.field_b);
-          de.field_b = new qh(ne.field_vb, lo.field_g);
+          de.field_b = new qh(MessageDialog.field_vb, lo.field_g);
           qe.field_k = new UiComponent(0L, (UiComponent) null);
           qe.field_k.a((byte) 50, de.field_b.field_c);
           qe.field_k.a((byte) 50, kj.field_u);
@@ -79,7 +79,7 @@ final class PowerupEvent extends GameEvent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class PowerupEvent extends GameEvent {
           } else {
             stackIn_96_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(')').toString());
         }
     }
 

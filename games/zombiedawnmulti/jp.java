@@ -80,7 +80,7 @@ final class jp {
               if (var6 == 0) {
                 if (JaggrabDownloader.field_c == null &&
                   ContextMenu.field_Hb) {
-                  var4 = "[" + ne.field_vb + "] ";
+                  var4 = "[" + MessageDialog.field_vb + "] ";
                 }
                 if (null != JaggrabDownloader.field_c) {
                   var6 = 1;
@@ -131,7 +131,7 @@ final class jp {
               }
             }
             IterableNodeHashTable.a(6, pq.field_m[var6], var7, var4 + BitmapFont.escapeMarkup(rm.field_a.toString()), var5);
-            if (!sq.field_N) {
+            if (!HotspotTextWidget.field_N) {
               ua.field_E.field_L = false;
             }
             if (ua.field_E.field_L) {
@@ -143,7 +143,7 @@ final class jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (var1), "jp.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (var1), "jp.B(" + param0 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class jp {
           field_b = null;
           field_c = null;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "jp.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jp.A(" + param0 + ')');
         }
     }
 

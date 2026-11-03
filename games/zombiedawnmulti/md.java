@@ -66,7 +66,7 @@ final class md {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "md.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "md.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class md {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class md {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class md {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -368,7 +368,7 @@ final class md {
           na.field_G = pb.a("lobby", param3, -256, "opentome");
           we.field_j = pb.a("lobby", param3, -256, "allowspectators");
           t.field_c = new String[5];
-          t.field_c[2] = al.field_W;
+          t.field_c[2] = ResizableDialog.field_W;
           t.field_c[3] = dm.field_Xb;
           t.field_c[4] = vo.field_s;
           t.field_c[0] = vb.field_g;
@@ -393,10 +393,10 @@ final class md {
           ro.field_O = new UiComponent(0L, LevelFileCatalog.field_d, AttackEvent.field_j.toUpperCase());
           ml.field_Lb = new UiComponent(0L, cg.field_f);
           PacketBuffer.field_g = new UiComponent(0L, vd.field_a, vh.field_Nb);
-          ud.field_M = new UiComponent(0L, al.field_fb, GameWorld.field_p);
-          LaboratoryScreen.field_l = new UiComponent(0L, al.field_fb, ck.field_b);
-          sc.field_d = new UiComponent(0L, al.field_fb, StatefulTextPainter.field_t);
-          InflaterDecompressor.field_h = new UiComponent(0L, al.field_fb, PortalEntryEvent.field_k);
+          ud.field_M = new UiComponent(0L, ResizableDialog.field_fb, GameWorld.field_p);
+          LaboratoryScreen.field_l = new UiComponent(0L, ResizableDialog.field_fb, ck.field_b);
+          sc.field_d = new UiComponent(0L, ResizableDialog.field_fb, StatefulTextPainter.field_t);
+          InflaterDecompressor.field_h = new UiComponent(0L, ResizableDialog.field_fb, PortalEntryEvent.field_k);
           AgeValidator.field_w = new UiComponent(0L, pn.field_g, fd.field_N);
           SimEntity.field_H = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           PasswordValidator.field_t = new UiComponent(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
@@ -450,17 +450,17 @@ final class md {
           CipherPacketBuffer.field_r = new UiComponent(0L, (UiComponent) null);
           ClientException.field_h = new UiComponent(0L, vo.field_m);
           ClientException.field_h.field_R = 1;
-          ie.field_jb = new UiComponent(0L, vd.field_a, GameScreen.field_r);
+          ContentTransitionDialog.field_jb = new UiComponent(0L, vd.field_a, GameScreen.field_r);
           bf.field_h = new UiComponent(0L, pn.field_g, cg.field_j);
           bf.field_n = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           CipherPacketBuffer.field_r.a((byte) 50, ClientException.field_h);
-          CipherPacketBuffer.field_r.a((byte) 50, ie.field_jb);
+          CipherPacketBuffer.field_r.a((byte) 50, ContentTransitionDialog.field_jb);
           if (GradientOutlineTextPainter.field_u) {
             CipherPacketBuffer.field_r.a((byte) 50, bf.field_h);
           }
           CipherPacketBuffer.field_r.a((byte) 50, bf.field_n);
           jp.field_b = new UiComponent(0L, ai.field_c, pi.field_b.toUpperCase());
-          gg.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
+          MessageDialogContent.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
           SocketConnector.field_a = new UiComponent(0L, cg.field_f);
           ik.field_d = new UiComponent(0L, EmailAvailabilityValidator.field_x, vb.field_d.toUpperCase());
           mi.field_Ib = new UiComponent[4 + param9];
@@ -538,7 +538,7 @@ final class md {
           var17 = eb.field_B;
           var17.field_R = 1;
           LevelData.field_a = new UiComponent(0L, (UiComponent) null);
-          LevelData.field_a.a((byte) 50, gg.field_m);
+          LevelData.field_a.a((byte) 50, MessageDialogContent.field_m);
           LevelData.field_a.a((byte) 50, SocketConnector.field_a);
           SocketConnector.field_a.a((byte) 50, ik.field_d);
           for (var18Lifetime2 = 0; 4 + param9 > var18Lifetime2; var18Lifetime2++) {
@@ -629,7 +629,7 @@ final class md {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
         }
     }
 
@@ -719,7 +719,7 @@ final class md {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

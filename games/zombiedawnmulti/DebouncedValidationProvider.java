@@ -49,7 +49,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
           if (SimEntity.field_z.field_T != 0 &&
             !nh.field_m) {
             if (!SimPortal.field_L) {
-              sq.field_N = true;
+              HotspotTextWidget.field_N = true;
             } else {
               q.a(13151);
             }
@@ -57,23 +57,23 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
           if (param0 <= 92) {
             DebouncedValidationProvider.a(true);
           }
-          if (sq.field_N) {
+          if (HotspotTextWidget.field_N) {
             ce.a(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
             lj.field_v.a(-11838, param7);
             if (!param7) {
               return;
             }
             if (0 != dp.field_c.field_T) {
-              sq.field_N = false;
+              HotspotTextWidget.field_N = false;
             }
             if (jk.field_d.field_T != 0) {
               pf.a(-103);
-              sq.field_N = false;
+              HotspotTextWidget.field_N = false;
               return;
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "gf.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gf.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

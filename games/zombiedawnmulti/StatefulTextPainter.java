@@ -68,7 +68,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           this.field_s[param1].field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "jl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         try {
           param0.copyStatesTo(this, param1, (byte) -122);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
               }
             }
           }
-          if (param4.c(126)) {
+          if (param4.hasKeyboardFocus(126)) {
             var14 = this.field_s[5];
             if (var14 != null) {
               var14.applyTo(-11108, param3, param1, this, param4, this.field_w);
@@ -264,7 +264,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -76,8 +76,8 @@ final class MatchingTextValidator extends TextInputValidator {
           if (param0) {
             field_r = (String) null;
           }
-          if (this.field_q instanceof kh) {
-            var3 = ((kh) ((Object) this.field_q)).a((byte) 101);
+          if (this.field_q instanceof ValidationProviderSource) {
+            var3 = ((ValidationProviderSource) ((Object) this.field_q)).getValidationProvider((byte) 101);
             if (var3 != null &&
               var3.getDebouncedValidationState(49) != db.field_b) {
               stackIn_6_0 = jq.field_b;
@@ -100,7 +100,7 @@ final class MatchingTextValidator extends TextInputValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class MatchingTextValidator extends TextInputValidator {
         try {
           this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,8 +125,8 @@ final class MatchingTextValidator extends TextInputValidator {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_q instanceof kh) {
-            var3 = ((kh) ((Object) this.field_q)).a((byte) 85);
+          if (this.field_q instanceof ValidationProviderSource) {
+            var3 = ((ValidationProviderSource) ((Object) this.field_q)).getValidationProvider((byte) 85);
             if (var3 != null) {
               if (var3.getDebouncedValidationState(125) == db.field_b &&
                 !param0.equals(this.field_q.field_j)) {
@@ -157,7 +157,7 @@ final class MatchingTextValidator extends TextInputValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

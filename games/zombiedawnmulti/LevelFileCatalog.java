@@ -18,7 +18,7 @@ final class LevelFileCatalog {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (dj.field_k == ta.field_hb) {
+          if (BirthDateValidator.field_k == ta.field_hb) {
             return null;
           }
           if (param0 != 127) {
@@ -33,7 +33,7 @@ final class LevelFileCatalog {
           }
           ai.field_g = null;
           ih.field_a = param1;
-          ta.field_hb = dj.field_k;
+          ta.field_hb = BirthDateValidator.field_k;
           stackIn_10_0 = null;
           return (gh) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -46,7 +46,7 @@ final class LevelFileCatalog {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class LevelFileCatalog {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class LevelFileCatalog {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

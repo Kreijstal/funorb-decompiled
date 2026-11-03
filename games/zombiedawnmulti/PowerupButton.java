@@ -73,7 +73,7 @@ final class PowerupButton {
           int var2_int = 54 / ((23 - param1) / 40);
           param0.field_B = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "fb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

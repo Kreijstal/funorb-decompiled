@@ -24,7 +24,7 @@ final class ho extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "ho.V(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ho.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ho extends MenuScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class ho extends MenuScreen {
             param0.field_z != null) {
             DelegatingCanvas.a(0);
           }
-          tf.field_Eb = 0;
+          AccountCreationDialog.field_Eb = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param0.field_B > var8)))) {
@@ -160,7 +160,7 @@ final class ho extends MenuScreen {
                           dupTemp$0 = param0.field_z[var8];
                           nn.field_c[dupTemp$0] = nn.field_c[dupTemp$0] + 1;
                         }
-                        tf.field_Eb = tf.field_Eb + 1;
+                        AccountCreationDialog.field_Eb = AccountCreationDialog.field_Eb + 1;
                         break;
                       }
                     }
@@ -200,7 +200,7 @@ final class ho extends MenuScreen {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class ho extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "ho.J(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ho.J(" + param0 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class ho extends MenuScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class ho extends MenuScreen {
             } else {
               stackIn_30_2 = "{...}";
             }
-            throw fa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -377,7 +377,7 @@ final class ho extends MenuScreen {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ final class ho extends MenuScreen {
           no.field_Jb.a(0, 0);
           super.a(param0);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ho.H(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ho.H(" + param0 + ')');
         }
     }
 
@@ -462,7 +462,7 @@ final class ho extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ho.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ho.G(" + param0 + ')');
         }
     }
 
@@ -479,7 +479,7 @@ final class ho extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "ho.AA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ho.AA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -518,7 +518,7 @@ final class ho extends MenuScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 }

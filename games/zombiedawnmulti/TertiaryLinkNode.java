@@ -84,7 +84,7 @@ class TertiaryLinkNode extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ff.IA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ff.IA(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ArrayWidgetGroup implements in {
-    private em field_P;
+final class oj extends ArrayWidgetGroup implements ButtonActivationListener {
+    private BirthDateInputWidget field_P;
     static Sprite[] field_M;
     static String field_H;
     static cd field_Q;
@@ -10,17 +10,17 @@ final class oj extends ArrayWidgetGroup implements in {
     static byte[][] field_N;
     static String field_O;
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
-        if (this.field_P.a((byte) 78).getDebouncedValidationState(117) != db.field_b) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+        if (this.field_P.getValidationProvider((byte) 78).getDebouncedValidationState(117) != db.field_b) {
           return;
         }
         try {
-          mp.a(0, this.field_P.j(-194), this.field_P.i(1), this.field_P.g((byte) -126));
+          mp.a(0, this.field_P.j(-194), this.field_P.i(1), this.field_P.getMonthIndex((byte) -126));
           if (param3 >= -83) {
             oj.h(103);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "oj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -37,8 +37,8 @@ final class oj extends ArrayWidgetGroup implements in {
 
     oj(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
-        this.field_P = new em(new GradientOutlineTextPainter(10000536), tm.field_b, 0, 0, 140, 25);
-        this.field_P.a(3, new dj());
+        this.field_P = new BirthDateInputWidget(new GradientOutlineTextPainter(10000536), tm.field_b, 0, 0, 140, 25);
+        this.field_P.setBirthDateValidator(3, new BirthDateValidator());
         this.field_B = new ButtonWidget(ub.field_xb, (WidgetListener) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_P), (UiWidget) ((Object) this.field_B)};
         this.field_B.painter = (WidgetPainter) ((Object) new oq());
@@ -67,9 +67,9 @@ final class oj extends ArrayWidgetGroup implements in {
     final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_B.field_F = this.field_P.a((byte) 126).getDebouncedValidationState(53) == db.field_b ? true : false;
+          this.field_B.field_F = this.field_P.getValidationProvider((byte) 126).getDebouncedValidationState(53) == db.field_b ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "oj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

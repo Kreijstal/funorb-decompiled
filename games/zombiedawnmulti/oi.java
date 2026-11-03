@@ -21,14 +21,14 @@ final class oi {
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
         try {
-          al.j(-1);
+          ResizableDialog.j(-1);
           nb.field_a.h(-92);
-          b.field_c = new qm(fa.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
+          b.field_c = new qm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);
           int var4_int = 120 / ((64 - param2) / 61);
-          nb.field_a.b(3016, wj.field_i);
+          nb.field_a.showDialog(3016, wj.field_i);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -59,14 +59,14 @@ final class oi {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$88c6728ee5b1(String param0, boolean param1, int param2, boolean param3) {
         try {
-          al.j(-1);
+          ResizableDialog.j(-1);
           nb.field_a.h(-92);
-          b.field_c = new qm(fa.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
+          b.field_c = new qm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);
           int var4_int = 120 / ((64 - param2) / 61);
-          nb.field_a.b(3016, wj.field_i);
+          nb.field_a.showDialog(3016, wj.field_i);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 }

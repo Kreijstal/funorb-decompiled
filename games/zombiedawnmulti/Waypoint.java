@@ -43,7 +43,7 @@ final class Waypoint extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class Waypoint extends IntrusiveNode {
           }
           vo.field_m.field_yb.drawParagraph(param0, var7 + 3, -vo.field_m.field_yb.maxAscent + 1 + (var8 + jp.field_f), 500, 1000, 0, -1, 0, 0, jk.field_f);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

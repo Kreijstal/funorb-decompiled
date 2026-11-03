@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj extends DebouncedValidationProvider implements TextInputListener, qg {
+final class BirthDateValidator extends DebouncedValidationProvider implements TextInputListener, qg {
     wk field_n;
     static ak field_k;
     static IndexedSprite field_p;
@@ -9,7 +9,7 @@ final class dj extends DebouncedValidationProvider implements TextInputListener,
     static boolean field_l;
     static String field_o;
 
-    public dj() {
+    public BirthDateValidator() {
     }
 
     public final void onTextInputSubmitted(TextInputWidget param0, boolean param1) {
@@ -18,11 +18,11 @@ final class dj extends DebouncedValidationProvider implements TextInputListener,
             this.field_n = (wk) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dj.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dj.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -3) {
           field_o = null;
           field_k = null;
@@ -39,7 +39,7 @@ final class dj extends DebouncedValidationProvider implements TextInputListener,
         if (param0 != -3) {
           return false;
         }
-        return this.field_n.a(1872);
+        return this.field_n.isDateIncomplete(1872);
     }
 
     final ValidationState currentValidationState(int param0) {
@@ -55,7 +55,7 @@ final class dj extends DebouncedValidationProvider implements TextInputListener,
         try {
           var2_int = this.field_n.i(1);
           var3 = this.field_n.j(param0 - 191);
-          var4 = this.field_n.g((byte) -118);
+          var4 = this.field_n.getMonthIndex((byte) -118);
           var5 = oa.b((byte) -63);
           if (var4 < 1890) {
             stackIn_2_0 = jq.field_b;
@@ -84,7 +84,7 @@ final class dj extends DebouncedValidationProvider implements TextInputListener,
         try {
           this.resetValidationDelay(-1306);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class dj extends DebouncedValidationProvider implements TextInputListener,
         try {
           var2_int = this.field_n.i(1);
           var3 = this.field_n.j(param0 - 191);
-          var4 = this.field_n.g((byte) -86);
+          var4 = this.field_n.getMonthIndex((byte) -86);
           var5 = oa.b((byte) -44);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {

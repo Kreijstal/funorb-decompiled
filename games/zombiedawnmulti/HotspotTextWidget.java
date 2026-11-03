@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class sq extends ButtonWidget {
+class HotspotTextWidget extends ButtonWidget {
     static int field_R;
     private String[] field_M;
     private IntrusiveDeque field_T;
@@ -54,7 +54,7 @@ class sq extends ButtonWidget {
             var21 = param4.copy();
             var30 = SoftwareRasterizer.pixels;
             if (param0 != 5) {
-              sq.g(-57);
+              HotspotTextWidget.g(-57);
             }
             var10 = SoftwareRasterizer.width;
             var11 = SoftwareRasterizer.height;
@@ -111,22 +111,22 @@ class sq extends ButtonWidget {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateButton(byte param0, int param1, int param2, int param3) {
+        super.activateButton(param0, param1, param2, param3);
         int var5 = -this.field_y + param2;
         int var6 = -this.field_i + param3;
-        wi var7 = this.a((byte) 23, var5, var6);
+        wi var7 = this.findHotspot((byte) 23, var5, var6);
         if (var7 != null &&
           null != this.field_A) {
-          ((co) ((Object) this.field_A)).a(param1, this, -38, var7.field_l);
+          ((HotspotActivationListener) ((Object) this.field_A)).onHotspotActivated(param1, this, -38, var7.field_l);
         }
     }
 
-    private final wi a(byte param0, int param1, int param2) {
+    private final wi findHotspot(byte param0, int param1, int param2) {
         wi var4;
         wi var5;
         int var6;
@@ -170,7 +170,7 @@ class sq extends ButtonWidget {
           if (this.field_l) {
             var5_int = MouseInputHandler.field_g - (param2 + this.field_y);
             var6 = bo.field_d + (-param3 - this.field_i);
-            this.field_V = this.a((byte) 23, var5_int, var6);
+            this.field_V = this.findHotspot((byte) 23, var5_int, var6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -183,7 +183,7 @@ class sq extends ButtonWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ class sq extends ButtonWidget {
         this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.painter)).a((byte) 39, (UiWidget) (this)));
     }
 
-    final void a(byte param0) {
+    final void rebuildHotspotBounds(byte param0) {
         int var11 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
@@ -217,7 +217,7 @@ class sq extends ButtonWidget {
         this.field_T = new IntrusiveDeque();
         var2 = 0;
         if (param0 != 94) {
-          this.a((byte) -110);
+          this.rebuildHotspotBounds((byte) -110);
         }
         var3 = (rk) ((Object) this.painter);
         var4 = var3.a((UiWidget) (this), -102);
@@ -269,7 +269,7 @@ class sq extends ButtonWidget {
         field_U = null;
     }
 
-    String d(byte param0) {
+    String getHoverText(byte param0) {
         if (null == this.field_V) {
           return null;
         }
@@ -291,7 +291,7 @@ class sq extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.a((byte) 97);
+            this.rebuildHotspotBounds((byte) 97);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,17 +304,17 @@ class sq extends ButtonWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    sq(String param0, WidgetPainter param1) {
+    HotspotTextWidget(String param0, WidgetPainter param1) {
         super(param0, (WidgetListener) null);
         this.field_V = null;
         try {
           this.painter = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -337,7 +337,7 @@ class sq extends ButtonWidget {
         }
     }
 
-    final void a(int param0, byte param1, String param2) {
+    final void setHotspotHoverText(int param0, byte param1, String param2) {
         String[] var7 = null;
         String[] var8 = null;
         int var5 = 0;
@@ -360,13 +360,13 @@ class sq extends ButtonWidget {
         try {
           this.field_M[param0] = param2;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "sq.OA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sq.OA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setWidgetBounds(param0, param1, param2, param3, param4);
-        this.a((byte) 94);
+        this.rebuildHotspotBounds((byte) 94);
     }
 
     final static void g(int param0) {
@@ -459,7 +459,7 @@ class sq extends ButtonWidget {
             var7Lifetime1 = hn.a(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var8Lifetime1 = am.field_c - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              var1_int = var1_int + al.field_bb;
+              var1_int = var1_int + ResizableDialog.field_bb;
               if (var4 != NetworkGameClient.field_B.field_d) {
                 stackIn_44_0 = RandomAccessCacheFile.field_a;
               } else {
@@ -473,7 +473,7 @@ class sq extends ButtonWidget {
             }
             if (var4 >= 0) {
               m.field_C.c(var6, var8Lifetime1, var1_int + MenuScreen.field_h, var5, -1);
-              var1_int = var1_int + (al.field_bb + (wk.field_G + me.field_h));
+              var1_int = var1_int + (ResizableDialog.field_bb + (wk.field_G + me.field_h));
             } else {
               uq.field_f.c(var6, var8Lifetime1, var1_int + bf.field_g, var5, -1);
               var1_int = var1_int + WidgetContainer.field_C;
@@ -484,7 +484,7 @@ class sq extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "sq.WA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "sq.WA(" + param0 + ')');
         }
     }
 
@@ -497,9 +497,9 @@ class sq extends ButtonWidget {
         RuntimeException var3 = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          fa.field_Qb[param0] = param1;
+          ReportAbuseDialog.field_Qb[param0] = param1;
           if (param2) {
-            sq.f(-7);
+            HotspotTextWidget.f(-7);
           }
           if (0 == param0) {
             param1[6].bindAsRenderTarget();
@@ -631,7 +631,7 @@ class sq extends ButtonWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

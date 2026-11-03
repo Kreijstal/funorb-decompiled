@@ -50,7 +50,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         return var2;
     }
 
-    final boolean a(byte param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean requestKeyboardFocus(byte param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var10 = 0;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -100,8 +100,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           for (var10 = 0; var9.length > var10; var10++) {
             var11 = var9[var10];
             if (var11 != null &&
-              var11.c(127) &&
-              var11.a((byte) -14, param1, param2, param3, param4, param5, param6)) {
+              var11.hasKeyboardFocus(127) &&
+              var11.requestKeyboardFocus((byte) -14, param1, param2, param3, param4, param5, param6)) {
               return true;
             }
           }
@@ -116,11 +116,11 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final boolean c(int param0) {
+    final boolean hasKeyboardFocus(int param0) {
         if (param0 < 123) {
           field_L = (UiComponent) null;
         }
@@ -160,7 +160,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -218,13 +218,13 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     abstract void g(int param0);
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var4 = 0;
         int var2;
         UiWidget[] var3;
@@ -240,7 +240,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.d((byte) 123);
+            var6 = var5.getHoverText((byte) 123);
             if (var6 != null) {
               return var6;
             }
@@ -264,7 +264,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.c(126)) {
+            var4.hasKeyboardFocus(126)) {
             return var4;
           }
         }
@@ -313,7 +313,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -367,7 +367,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -394,7 +394,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -443,7 +443,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
             var6 = var5;
             var6Lifetime1 = var5;
             if (var5 != null &&
-              var5.c(127)) {
+              var5.hasKeyboardFocus(127)) {
               for (var4_int = var4_int + param2; var4_int < this.field_E.length; var4_int = var4_int + param2) {
                 var6Lifetime2 = this.field_E[var4_int];
                 if (var6Lifetime2 != null &&
@@ -469,7 +469,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -510,7 +510,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -537,7 +537,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
         if (param0 != 32) {
           var6 = (UiWidget) null;
-          this.a((byte) 74, 95, -68, -35, 42, 88, (UiWidget) null);
+          this.requestKeyboardFocus((byte) 74, 95, -68, -35, 42, 88, (UiWidget) null);
         }
     }
 
@@ -585,7 +585,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           while (0 <= var4_int) {
             var5 = this.field_E[var4_int];
             if (var5 != null &&
-              var5.c(param1 + 93)) {
+              var5.hasKeyboardFocus(param1 + 93)) {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
                 var6 = this.field_E[var4_int];
                 if (var6 != null &&
@@ -607,7 +607,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -621,7 +621,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           this.painter.paintWidget(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (param0 != -2) {
-          this.c(31);
+          this.hasKeyboardFocus(31);
         }
         if (null != this.field_E) {
           for (var5 = -1 + this.field_E.length; var5 >= 0; var5--) {
@@ -657,7 +657,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           for (var6 = 0; var6 < var10.length; var6++) {
             var7 = var10[var6];
             if (var7 != null &&
-              var7.c(125) &&
+              var7.hasKeyboardFocus(125) &&
               var7.handleKeyInput(param0, param1, param2, -6208)) {
               return true;
             }
@@ -686,7 +686,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 

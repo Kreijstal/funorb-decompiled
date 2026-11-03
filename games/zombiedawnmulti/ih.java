@@ -24,7 +24,7 @@ final class ih {
           }
           SocketConnector.field_h.b((byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class ih {
         try {
           MenuScreen.a(param0, param1, 92, param2);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ih.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ih.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class ih {
         if (cr.a((byte) -115)) {
           cn.a(param0, param5, param6, (byte) -120);
           if (pk.field_b != null) {
-            if (!pk.field_b.a(param3, param4, (byte) -8, param5, param0)) {
+            if (!pk.field_b.handleMenuSelection(param3, param4, (byte) -8, param5, param0)) {
               m.a(param5, 0, param0);
               UiWidget.a(param2, param5, true);
               param5 = false;
@@ -101,7 +101,7 @@ final class ih {
           param0.field_h = var5.readInt(-1478490344);
           var5.e(41, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ih.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ih.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class ih {
           var6.f(var4, 117);
           var6.e(35, var6.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

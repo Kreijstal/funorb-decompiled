@@ -177,10 +177,10 @@ abstract class HumanView extends UnitView {
             g.a(stackIn_27_0, stackIn_27_1 + stackIn_28_2, 43 + var4);
           }
           var5Lifetime1 = this.animationFrame;
-          if (gg.field_i[this.state] != null) {
-            var5Lifetime1 = gg.field_i[this.state][this.animationFrame];
+          if (MessageDialogContent.field_i[this.state] != null) {
+            var5Lifetime1 = MessageDialogContent.field_i[this.state][this.animationFrame];
           }
-          var6 = var5Lifetime1 + gg.field_l[this.state];
+          var6 = var5Lifetime1 + MessageDialogContent.field_l[this.state];
           if (param0 != -10136) {
             return;
           }
@@ -261,7 +261,7 @@ abstract class HumanView extends UnitView {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -520,10 +520,10 @@ abstract class HumanView extends UnitView {
           qf.field_g = param1;
           var5 = (CharSequence) ((Object) param1);
           ql.field_a = tg.a(var5, false);
-          sq.field_N = true;
+          HotspotTextWidget.field_N = true;
           jj.field_M = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "gm.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gm.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

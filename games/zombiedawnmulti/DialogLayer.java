@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends rg {
+final class DialogLayer extends SingleChildWidget {
     static String field_K;
     static int[] field_J;
     private IntrusiveDeque field_H;
@@ -11,21 +11,21 @@ final class vk extends rg {
     static pd field_I;
     static String[] field_L;
 
-    final void b(int param0, UiWidget param1) {
-        df var3 = null;
-        if (!(param1 instanceof df)) {
+    final void showDialog(int param0, UiWidget param1) {
+        FadingDialog var3 = null;
+        if (!(param1 instanceof FadingDialog)) {
           throw new IllegalArgumentException();
         }
         if (param0 != 3016) {
           return;
         }
         try {
-          var3 = (df) (param1);
+          var3 = (FadingDialog) (param1);
           this.field_H.a(-25612, var3);
           var3.field_R = true;
           var3.requestKeyboardFocus((UiWidget) (this), 0);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "vk.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vk.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class vk extends rg {
         boolean stackIn_9_0 = false;
         if (param0 > -121) {
           var2 = (CharSequence) null;
-          vk.a(-28, (CharSequence) null);
+          DialogLayer.a(-28, (CharSequence) null);
         }
         boolean decompiledFrameRemainder0 = true;
         if (ClientException.field_i >= 20 &&
@@ -52,20 +52,20 @@ final class vk extends rg {
     final void h(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        df var3 = (df) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.c(-3));
         if (param0 > -84) {
-          vk.l((byte) 127);
+          DialogLayer.l((byte) 127);
         }
         while (var3 != null) {
-          if (var3.i(-27388)) {
+          if (var3.advanceDialogAnimation(-27388)) {
             var3.unlink(true);
           }
-          var3 = (df) (var2.a((byte) -113));
+          var3 = (FadingDialog) (var2.a((byte) -113));
         }
         this.field_B = (UiWidget) ((Object) this.j((byte) -119));
     }
 
-    public static void k(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         field_I = null;
         int var1 = 90 / ((30 - param0) / 47);
@@ -138,7 +138,7 @@ final class vk extends rg {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class vk extends rg {
         try {
           if (param0 != 20) {
             var3 = (int[]) null;
-            vk.a((int[]) null, true, 94, 30, (byte) 84, (int[]) null, 90, 72, -73);
+            DialogLayer.a((int[]) null, true, 94, 30, (byte) 84, (int[]) null, 90, 72, -73);
           }
           stackIn_3_0 = UnitStateEvent.a(false, -52, param1);
           return stackIn_3_0;
@@ -167,7 +167,7 @@ final class vk extends rg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class vk extends rg {
         boolean stackIn_6_0 = false;
         if (param0 != -39) {
           var2 = (int[]) null;
-          vk.a((int[]) null, false, -127, -95, (byte) -9, (int[]) null, -29, -30, -79);
+          DialogLayer.a((int[]) null, false, -127, -95, (byte) -9, (int[]) null, -29, -30, -79);
         }
         stackIn_6_0 = (a.a(-107)) && ((8 & PowerupEvent.field_m) == 0);
         return stackIn_6_0;
@@ -185,31 +185,31 @@ final class vk extends rg {
     final void h(int param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        df var3 = (df) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.c(-3));
         while (var3 != null) {
           var3.field_R = false;
-          var3 = (df) (var2.a((byte) -112));
+          var3 = (FadingDialog) (var2.a((byte) -112));
         }
         this.field_B = null;
         if (param0 >= -81) {
-          vk.i((byte) 56);
+          DialogLayer.i((byte) 56);
         }
     }
 
-    final df j(byte param0) {
+    final FadingDialog j(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        df var3 = (df) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.c(-3));
         while (var3 != null) {
           if (var3.field_R) {
             return var3;
           }
-          var3 = (df) (var2.a((byte) -48));
+          var3 = (FadingDialog) (var2.a((byte) -48));
         }
         if (param0 < -118) {
           return null;
         }
-        return (df) null;
+        return (FadingDialog) null;
     }
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
@@ -228,21 +228,21 @@ final class vk extends rg {
         }
     }
 
-    final UiWidget f(int param0) {
+    final UiWidget findFocusTarget(int param0) {
         IntrusiveDequeCursor var2;
-        df var3;
+        FadingDialog var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != -1963) {
           return (UiWidget) null;
         }
-        var3 = (df) (var2.c(-3));
+        var3 = (FadingDialog) (var2.c(-3));
         while (var3 != null) {
           if (var3.field_R) {
-            return var3.g(122);
+            return var3.findFocusTarget(122);
           }
-          var3 = (df) (var2.a((byte) -38));
+          var3 = (FadingDialog) (var2.a((byte) -38));
         }
         return null;
     }
@@ -259,7 +259,7 @@ final class vk extends rg {
             return null;
           }
           if (param0 < 32) {
-            vk.i((byte) -118);
+            DialogLayer.i((byte) -118);
           }
           stackIn_6_0 = eb.a(33);
           return stackIn_6_0;
@@ -273,7 +273,7 @@ final class vk extends rg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -349,27 +349,27 @@ final class vk extends rg {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
-    public vk() {
+    public DialogLayer() {
         super(0, 0, ub.field_wb, kc.field_a, (WidgetPainter) null, (WidgetListener) null);
         this.field_H = new IntrusiveDeque();
     }
 
-    final void g(byte param0) {
+    final void settleDialogAnimations(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != 118) {
           field_J = (int[]) null;
         }
-        df var3 = (df) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.c(-3));
         while (var3 != null) {
           if (var3.h(-6134)) {
             var3.unlink(true);
           }
-          var3 = (df) (var2.a((byte) -30));
+          var3 = (FadingDialog) (var2.a((byte) -30));
         }
     }
 

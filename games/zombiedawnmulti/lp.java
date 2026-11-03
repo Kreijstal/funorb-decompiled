@@ -146,7 +146,7 @@ final class lp extends IntrusiveNode {
           }
           if (ng.field_g != null) {
             rn.field_f = ng.field_g.f(0);
-            al.b(true, 2);
+            ResizableDialog.b(true, 2);
             if (null == rn.field_f) {
               var2 = 3;
             } else {
@@ -181,7 +181,7 @@ final class lp extends IntrusiveNode {
           }
           if (ng.field_g != null) {
             rn.field_f = ng.field_g.f(0);
-            al.b(true, 2);
+            ResizableDialog.b(true, 2);
             if (null == rn.field_f) {
               var2 = 3;
             } else {

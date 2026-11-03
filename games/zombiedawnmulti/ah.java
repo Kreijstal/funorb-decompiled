@@ -26,7 +26,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "ah.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ah.A(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("ticketing_xunread", (byte) 83);
                 if (null != var2) {
-                  al.field_cb = qe.a(-2739, var2);
+                  ResizableDialog.field_cb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("ticketing_gotowebsite", (byte) 83);
                 if (null != var2) {
@@ -147,7 +147,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_chat_lobby", (byte) 83);
                 if (null != var2) {
-                  ne.field_vb = qe.a(-2739, var2);
+                  MessageDialog.field_vb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_chat_public", (byte) 83);
                 if (var2 != null) {
@@ -246,7 +246,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_all_players_have_left", (byte) 83);
                 if (null != var2) {
-                  gl.field_K = qe.a(-2739, var2);
+                  UsernameSuggestionsPanel.field_K = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_lobby_name", (byte) 83);
                 if (null != var2) {
@@ -386,7 +386,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("invite_decline_xs_game", (byte) 83);
                 if (var2 != null) {
-                  gg.field_e = qe.a(-2739, var2);
+                  MessageDialogContent.field_e = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("join_xs_game", (byte) 83);
                 if (var2 != null) {
@@ -478,7 +478,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_chat_invisible_and_silent_mode", (byte) 83);
                 if (null != var2) {
-                  gg.field_n = qe.a(-2739, var2);
+                  MessageDialogContent.field_n = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("you_have_been_removed_from_xs_game", (byte) 83);
                 if (null != var2) {
@@ -570,7 +570,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("quickchat_lobby", (byte) 83);
                 if (var2 != null) {
-                  sq.field_P = qe.a(-2739, var2);
+                  HotspotTextWidget.field_P = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("message_game", (byte) 83);
                 if (var2 != null) {
@@ -598,7 +598,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("accept", (byte) 83);
                 if (null != var2) {
-                  df.field_J = qe.a(-2739, var2);
+                  FadingDialog.field_J = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("reject", (byte) 83);
                 if (null != var2) {
@@ -618,7 +618,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("status_playing", (byte) 83);
                 if (var2 != null) {
-                  jb.field_a = qe.a(-2739, var2);
+                  PlayerContextMenu.field_a = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("status_join", (byte) 83);
                 if (var2 != null) {
@@ -682,7 +682,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("connecting_to_friend_server_twoline", (byte) 83);
                 if (var2 != null) {
-                  rg.field_D = qe.a(-2739, var2);
+                  SingleChildWidget.field_D = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("loading", (byte) 83);
                 if (var2 != null) {
@@ -702,7 +702,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("multiconst_friends", (byte) 83);
                 if (null != var2) {
-                  al.field_W = qe.a(-2739, var2);
+                  ResizableDialog.field_W = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("multiconst_similar_rating", (byte) 83);
                 if (var2 != null) {
@@ -794,7 +794,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_membersonly", (byte) 83);
                 if (var2 != null) {
-                  fa.field_Ub = qe.a(-2739, var2);
+                  ReportAbuseDialog.field_Ub = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_1moreratedgame", (byte) 83);
                 if (null != var2) {
@@ -1468,7 +1468,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_more_suggestions", (byte) 83);
                 if (var2 != null) {
-                  al.field_ab = qe.a(-2739, var2);
+                  ResizableDialog.field_ab = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_select_alternative", (byte) 83);
                 if (null != var2) {
@@ -1496,7 +1496,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("login_email", (byte) 83);
                 if (null != var2) {
-                  fa.field_Gb = qe.a(-2739, var2);
+                  ReportAbuseDialog.field_Gb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("login_username_tooltip", (byte) 83);
                 if (var2 != null) {
@@ -1628,7 +1628,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_alert_passlength", (byte) 83);
                 if (var2 != null) {
-                  jb.field_k = qe.a(-2739, var2);
+                  PlayerContextMenu.field_k = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_alert_passcontainsname", (byte) 83);
                 if (null != var2) {
@@ -1744,7 +1744,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("enterfriend_del", (byte) 83);
                 if (null != var2) {
-                  fe.field_Q = qe.a(-2739, var2);
+                  AccountCreationForm.field_Q = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("enterignore_add", (byte) 83);
                 if (null != var2) {
@@ -1914,7 +1914,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("music_colon", (byte) 83);
                 if (var2 != null) {
-                  vk.field_K = qe.a(-2739, var2);
+                  DialogLayer.field_K = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("fullscreen", (byte) 83);
                 if (var2 != null) {
@@ -2066,7 +2066,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("graphics_colon", (byte) 83);
                 if (null != var2) {
-                  df.field_L = qe.a(-2739, var2);
+                  FadingDialog.field_L = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("hotseatmultiplayer", (byte) 83);
                 if (null != var2) {
@@ -2730,11 +2730,11 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mb_caption_title", (byte) 83);
                 if (var2 != null) {
-                  tf.field_Cb = qe.a(-2739, var2);
+                  AccountCreationDialog.field_Cb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mb_including_gamename", (byte) 83);
                 if (var2 != null) {
-                  vk.field_F = qe.a(-2739, var2);
+                  DialogLayer.field_F = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mb_full_access_1", (byte) 83);
                 if (null != var2) {
@@ -2984,55 +2984,55 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,0", (byte) 83);
                 if (null != var2) {
-                  vk.field_L[0] = qe.a(-2739, var2);
+                  DialogLayer.field_L[0] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,1", (byte) 83);
                 if (var2 != null) {
-                  vk.field_L[1] = qe.a(-2739, var2);
+                  DialogLayer.field_L[1] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,2", (byte) 83);
                 if (null != var2) {
-                  vk.field_L[2] = qe.a(-2739, var2);
+                  DialogLayer.field_L[2] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,3", (byte) 83);
                 if (var2 != null) {
-                  vk.field_L[3] = qe.a(-2739, var2);
+                  DialogLayer.field_L[3] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,4", (byte) 83);
                 if (null != var2) {
-                  vk.field_L[4] = qe.a(-2739, var2);
+                  DialogLayer.field_L[4] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,5", (byte) 83);
                 if (var2 != null) {
-                  vk.field_L[5] = qe.a(-2739, var2);
+                  DialogLayer.field_L[5] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,6", (byte) 83);
                 if (var2 != null) {
-                  vk.field_L[6] = qe.a(-2739, var2);
+                  DialogLayer.field_L[6] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,7", (byte) 83);
                 if (null != var2) {
-                  vk.field_L[7] = qe.a(-2739, var2);
+                  DialogLayer.field_L[7] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,8", (byte) 83);
                 if (null != var2) {
-                  vk.field_L[8] = qe.a(-2739, var2);
+                  DialogLayer.field_L[8] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,9", (byte) 83);
                 if (var2 != null) {
-                  vk.field_L[9] = qe.a(-2739, var2);
+                  DialogLayer.field_L[9] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,10", (byte) 83);
                 if (null != var2) {
-                  vk.field_L[10] = qe.a(-2739, var2);
+                  DialogLayer.field_L[10] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,11", (byte) 83);
                 if (var2 != null) {
-                  vk.field_L[11] = qe.a(-2739, var2);
+                  DialogLayer.field_L[11] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("subscription_cost_monthly,12", (byte) 83);
                 if (null != var2) {
-                  vk.field_L[12] = qe.a(-2739, var2);
+                  DialogLayer.field_L[12] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("sentence_separator", (byte) 83);
                 if (null != var2) {
@@ -3061,7 +3061,7 @@ final class ah {
                   } else {
                     stackIn_2609_2 = "{...}";
                   }
-                  throw fa.a((Throwable) ((Object) stackIn_2608_0), ((StringBuilder) (Object) stackIn_2608_1).append(stackIn_2609_2).append(')').toString());
+                  throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_2608_0), ((StringBuilder) (Object) stackIn_2608_1).append(stackIn_2609_2).append(')').toString());
                 }
             }
         }
@@ -3149,7 +3149,7 @@ final class ah {
             }
           }
           if (decompiledFrameCompleted0) {
-            df.a(-17306, 0);
+            FadingDialog.a(-17306, 0);
           }
           if (param0 != -86) {
             ah.a((byte) 4, 55);
@@ -3158,7 +3158,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ah.B(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ah.B(" + param0 + ',' + param1 + ')');
         }
     }
 

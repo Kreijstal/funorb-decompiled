@@ -65,7 +65,7 @@ final class dd implements dr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "dd.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "dd.C(" + param0 + ')');
         }
     }
 
@@ -120,14 +120,14 @@ final class dd implements dr {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
         }
         stackIn_20_0 = fd.field_F;
         try {
           while (true) {
             if (stackIn_20_0 < 0) {
               s.field_e.position = 0;
-              if (!fa.b(10, 1)) {
+              if (!ReportAbuseDialog.b(10, 1)) {
                 return false;
               }
               fd.field_F = s.field_e.readCipheredOpcode(101);
@@ -170,26 +170,26 @@ final class dd implements dr {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static boolean a(int param0) {
         if (param0 == ~EmailAvailabilityValidator.field_q) {
-          if (!fa.b(10, 1)) {
+          if (!ReportAbuseDialog.b(10, 1)) {
             return false;
           }
           EmailAvailabilityValidator.field_q = s.field_e.readUnsignedByte(param0 + 31365);
           s.field_e.position = 0;
         }
         if (EmailAvailabilityValidator.field_q == -2) {
-          if (!fa.b(param0 + 10, 2)) {
+          if (!ReportAbuseDialog.b(param0 + 10, 2)) {
             return false;
           }
           EmailAvailabilityValidator.field_q = s.field_e.readUnsignedShort((byte) 69);
           s.field_e.position = 0;
         }
-        return fa.b(10, EmailAvailabilityValidator.field_q);
+        return ReportAbuseDialog.b(10, EmailAvailabilityValidator.field_q);
     }
 
     final static void a(int param0, String[] param1, String param2, int param3) {
@@ -248,7 +248,7 @@ final class dd implements dr {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 

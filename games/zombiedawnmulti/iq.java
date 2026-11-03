@@ -22,7 +22,7 @@ final class iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "iq.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "iq.A(" + param0 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "iq.C(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "iq.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class iq {
           pi.a(200, true, 194, true, new int[]{15, 16}, 446, 7, 100);
           pi.a(400, false, 50, true, new int[]{5}, 288, 14, 40);
           pi.a(400, false, 50, true, new int[]{5}, 288, 8, 40);
-          vk.a(new int[]{5, 39, 26, 27, 28, 29, 30, 31, 32, 33}, false, 9, 240, (byte) 123, new int[]{5, 39, 22, 23, 24, 25}, 400, 160, 428);
+          DialogLayer.a(new int[]{5, 39, 26, 27, 28, 29, 30, 31, 32, 33}, false, 9, 240, (byte) 123, new int[]{5, 39, 22, 23, 24, 25}, 400, 160, 428);
           int[] var2 = (int[]) null;
           pi.a(310, false, 180, true, (int[]) null, 440, 10, 60);
           pi.a(0, true, 0, true, new int[]{}, 0, 11, 0);
@@ -83,7 +83,7 @@ final class iq {
           pi.a(430, true, 170, true, new int[]{6}, 470, 13, 0);
           pi.a(430, false, 30, true, new int[]{45, 5}, 468, 15, 330);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "iq.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "iq.E(" + param0 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class iq {
             iq.a(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "iq.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "iq.B(" + param0 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class iq {
                 if (io.field_g) {
                   return;
                 }
-                df.a(param1 ^ -17403, 0);
+                FadingDialog.a(param1 ^ -17403, 0);
                 return;
               }
               if (-14 != param0) {
@@ -146,18 +146,18 @@ final class iq {
                 io.field_g = false;
                 return;
               }
-              df.a(param1 ^ -17403, 1 + ArmedHumanView.field_rb);
+              FadingDialog.a(param1 ^ -17403, 1 + ArmedHumanView.field_rb);
               return;
             }
             if (param0 == -1) {
-              df.a(-17306, 0);
+              FadingDialog.a(-17306, 0);
               return;
             }
             if (param0 != -14) {
               return;
             }
             if (-1 + SimHuman.field_pb > ArmedHumanView.field_rb) {
-              df.a(-17306, 1 + ArmedHumanView.field_rb);
+              FadingDialog.a(-17306, 1 + ArmedHumanView.field_rb);
               return;
             }
             if (pp.field_n) {
@@ -173,71 +173,71 @@ final class iq {
           }
           if (param0 == -1) {
             w.field_m = 0;
-            df.a(-17306, 1);
+            FadingDialog.a(-17306, 1);
           }
           if (PowerupButton.field_e.selection.size((byte) 98) == 0) {
             w.field_m = w.field_m & -9;
           }
           if (-12 == param0) {
-            df.a(-17306, 0);
+            FadingDialog.a(-17306, 0);
           }
           if (ArmedHumanView.field_rb == 0 && (gh.a(-3, param1 + 11554) ||
             param0 == -14)) {
-            df.a(-17306, jh.field_ic);
+            FadingDialog.a(-17306, jh.field_ic);
           }
           if (1 == ArmedHumanView.field_rb &&
             gh.a(-8, 11653)) {
-            df.a(param1 ^ -17403, 2);
+            FadingDialog.a(param1 ^ -17403, 2);
           }
           if (2 == ArmedHumanView.field_rb &&
             gh.a(-7, 11653)) {
-            df.a(param1 - 17405, 3);
+            FadingDialog.a(param1 - 17405, 3);
           }
           if (ArmedHumanView.field_rb == 3 &&
             gh.a(-3, 11653)) {
-            df.a(-17306, 4);
+            FadingDialog.a(-17306, 4);
           }
           if (4 == ArmedHumanView.field_rb &&
             gh.a(-13, 11653)) {
-            df.a(param1 ^ -17403, 5);
+            FadingDialog.a(param1 ^ -17403, 5);
           }
           if (5 == ArmedHumanView.field_rb &&
             gh.a(-4, 11653)) {
             if (PowerupButton.field_e.selection.size((byte) 98) > 0) {
-              df.a(param1 ^ -17403, 6);
+              FadingDialog.a(param1 ^ -17403, 6);
             } else {
-              df.a(param1 - 17405, 7);
+              FadingDialog.a(param1 - 17405, 7);
             }
           }
           if (ArmedHumanView.field_rb == 6 &&
             gh.a(-6, 11653)) {
-            df.a(-17306, 7);
+            FadingDialog.a(-17306, 7);
           }
           if (ArmedHumanView.field_rb == 7 &&
             gh.a(-5, 11653)) {
-            df.a(-17306, 6);
+            FadingDialog.a(-17306, 6);
           }
           if ((6 == ArmedHumanView.field_rb ||
             ArmedHumanView.field_rb == 7) &&
             (gh.a(-6, 11653) &&
             gh.a(-5, 11653))) {
-            df.a(-17306, 8);
+            FadingDialog.a(-17306, 8);
           }
           if (8 == ArmedHumanView.field_rb &&
             gh.a(-9, 11653)) {
-            df.a(param1 - 17405, 9);
+            FadingDialog.a(param1 - 17405, 9);
           }
           if (ArmedHumanView.field_rb == 9 &&
             gh.a(-10, 11653)) {
-            df.a(-17306, 10);
+            FadingDialog.a(-17306, 10);
           }
           if (ArmedHumanView.field_rb == 10 &&
             gh.a(-11, 11653)) {
-            df.a(-17306, 11);
+            FadingDialog.a(-17306, 11);
           }
           if (ArmedHumanView.field_rb == 4 &&
             !gh.a(-3, param1 + 11554)) {
-            df.a(-17306, 3);
+            FadingDialog.a(-17306, 3);
           }
           if (ArmedHumanView.field_rb != var2_int) {
             if (!io.field_g &&
@@ -251,7 +251,7 @@ final class iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "iq.D(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "iq.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -280,12 +280,12 @@ final class iq {
             } else {
               var6 = hn.a(0, TextWidgetPainter.field_m[var3_int], true);
               var7 = am.field_c - (var6 >> 1);
-              var4 = var4 + al.field_bb;
+              var4 = var4 + ResizableDialog.field_bb;
               if (IntrusiveDeque.a(param0, var7 - no.field_Gb, param2, var6 + (no.field_Gb << 1), var4, (wk.field_G << 1) + me.field_h, -18)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (al.field_bb + (wk.field_G << 1) + me.field_h);
+              var4 = var4 + (ResizableDialog.field_bb + (wk.field_G << 1) + me.field_h);
             }
             var3_int++;
           }
@@ -294,7 +294,7 @@ final class iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "iq.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "iq.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

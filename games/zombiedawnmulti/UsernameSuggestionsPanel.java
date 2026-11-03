@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends WidgetContainer implements in {
+final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonActivationListener {
     private ButtonWidget[] field_I;
     static String field_K;
     static hh field_H;
     private String[] field_G;
     static cd field_L;
-    private jn field_J;
+    private UsernameSuggestionListener field_J;
 
     final static void b(boolean param0, int param1) {
         int var3 = 0;
@@ -23,7 +23,7 @@ final class gl extends WidgetContainer implements in {
             var4 = (hp) (JaggrabDownloader.field_l.b(6));
           }
           if (!param0) {
-            gl.c(false);
+            UsernameSuggestionsPanel.c(false);
           }
           var5 = (u) (cp.field_T.c(59));
           while (var5 != null) {
@@ -34,20 +34,20 @@ final class gl extends WidgetContainer implements in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "gl.D(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "gl.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    gl(jn param0) {
+    UsernameSuggestionsPanel(UsernameSuggestionListener param0) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, String[] param1) {
+    final void setSuggestions(byte param0, String[] param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -80,7 +80,7 @@ final class gl extends WidgetContainer implements in {
               this.field_I[var5].setWidgetBounds(0, 20 + var5 * 16, 28972, 80, 15);
               this.b((byte) 94, this.field_I[var5]);
             }
-            this.field_I[var3_int] = new ButtonWidget(al.field_ab, (WidgetListener) (this));
+            this.field_I[var3_int] = new ButtonWidget(ResizableDialog.field_ab, (WidgetListener) (this));
             this.field_I[var3_int].painter = (WidgetPainter) ((Object) var4);
             this.field_I[var3_int].setWidgetBounds(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
             this.b((byte) 55, this.field_I[var3_int]);
@@ -98,7 +98,7 @@ final class gl extends WidgetContainer implements in {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -129,14 +129,14 @@ final class gl extends WidgetContainer implements in {
           var3[var4_int] = UsernameAvailabilityValidator.field_t[tq.b(255, (int) var2[var4_int])];
           var4_int++;
         }
-        Sprite var4 = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], var3);
+        Sprite var4 = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], var3);
         fd.h((byte) 126);
         return var4;
     }
 
     public static void c(boolean param0) {
         if (!param0) {
-          gl.b(true, -119);
+          UsernameSuggestionsPanel.b(true, -119);
         }
         field_H = null;
         field_L = null;
@@ -174,11 +174,11 @@ final class gl extends WidgetContainer implements in {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         UiWidget var8 = null;
@@ -195,11 +195,11 @@ final class gl extends WidgetContainer implements in {
           }
           for (var6_int = 0; this.field_G.length > var6_int; var6_int++) {
             if (param2 == this.field_I[var6_int]) {
-              this.field_J.a(this.field_G[var6_int], 1);
+              this.field_J.onSuggestionSelected(this.field_G[var6_int], 1);
             }
           }
           if (this.field_I[this.field_G.length] == param2) {
-            this.field_J.a(496);
+            this.field_J.onMoreSuggestionsRequested(496);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -212,7 +212,7 @@ final class gl extends WidgetContainer implements in {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

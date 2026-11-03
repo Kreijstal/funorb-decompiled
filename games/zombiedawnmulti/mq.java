@@ -77,7 +77,7 @@ final class mq extends MenuScreen {
           }
         }
         var7.b(GameWorld.field_E, 320, var8 + 72, 16777215, 0);
-        var7.b(vk.field_G, 320, 18 + (40 + (var8 + 32)), 14540083, 0);
+        var7.b(DialogLayer.field_G, 320, 18 + (40 + (var8 + 32)), 14540083, 0);
         var9Lifetime1 = -1;
         if (this.field_t == -1) {
           if (-1 != this.field_n) {
@@ -230,7 +230,7 @@ final class mq extends MenuScreen {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 

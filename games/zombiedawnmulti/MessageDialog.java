@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ne extends ie implements in {
+class MessageDialog extends ContentTransitionDialog implements ButtonActivationListener {
     private boolean field_wb;
     private boolean field_xb;
     static Sprite[] field_Ab;
@@ -12,7 +12,7 @@ class ne extends ie implements in {
     static String field_vb;
     static int field_tb;
 
-    final void a(String param0, int param1, int param2) {
+    final void installErrorContent(String param0, int param1, int param2) {
         boolean stackIn_6_1 = false;
         wd stackIn_11_0 = null;
         String stackIn_12_1 = null;
@@ -82,11 +82,11 @@ class ne extends ie implements in {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void m(int param0) {
+    final void dismissDialog(int param0) {
         if (!this.field_R) {
           return;
         }
@@ -123,7 +123,7 @@ class ne extends ie implements in {
         field_Ab = null;
         field_vb = null;
         if (param0 != 10) {
-          ne.c(10, -105, -88, -20, 64);
+          MessageDialog.c(10, -105, -88, -20, 64);
         }
     }
 
@@ -137,7 +137,7 @@ class ne extends ie implements in {
         }
     }
 
-    public void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -146,7 +146,7 @@ class ne extends ie implements in {
         try {
           if (this.field_yb) {
             PowerupButton.a(3, 118);
-            this.m(-7435);
+            this.dismissDialog(-7435);
           } else {
             ic.a(StatefulTextPainter.b(0), "tochangedisplayname.ws", 114);
           }
@@ -165,12 +165,12 @@ class ne extends ie implements in {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    ne(vk param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new wd((ne) null, param1, param2), 77, 10, 10);
+    MessageDialog(DialogLayer param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+        super(param0, new wd((MessageDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_yb = false;
           this.field_wb = param3 ? true : false;
@@ -181,7 +181,7 @@ class ne extends ie implements in {
           this.field_Bb.field_L = true;
           this.b((byte) 104, this.field_Bb);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -195,12 +195,12 @@ class ne extends ie implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 13) {
-            this.m(-7435);
+            this.dismissDialog(-7435);
             return true;
           }
           if (param3 != -6208) {
             var6 = (ButtonWidget) null;
-            this.a(110, 74, (ButtonWidget) null, -12, 106);
+            this.onButtonActivated(110, 74, (ButtonWidget) null, -12, 106);
           }
           stackIn_7_0 = super.handleKeyInput(param0, param1, param2, -6208);
           return stackIn_7_0;
@@ -214,7 +214,7 @@ class ne extends ie implements in {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fa extends UiComponent {
+final class ReportAbuseDialog extends UiComponent {
     private mi field_Hb;
     static String field_Ib;
     private UiComponent[] field_Jb;
@@ -22,7 +22,7 @@ final class fa extends UiComponent {
     static String field_Ub;
     private UiComponent field_Mb;
 
-    final boolean k(int param0) {
+    final boolean handleCancelKey(int param0) {
         if (param0 < 99) {
           field_Ub = (String) null;
         }
@@ -36,7 +36,7 @@ final class fa extends UiComponent {
         return true;
     }
 
-    final int a(byte param0, boolean param1) {
+    final int updateAndPollReason(byte param0, boolean param1) {
         int var3 = 0;
         mi stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
@@ -88,14 +88,14 @@ final class fa extends UiComponent {
         return fl.field_a - ZombieDawnMulti.field_H;
     }
 
-    final String h(int param0) {
+    final String getReportedName(int param0) {
         if (param0 != -26895) {
           return (String) null;
         }
         return this.field_Nb.toString();
     }
 
-    final boolean i(int param0) {
+    final boolean isMuteRequested(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -23217) {
           this.field_Nb = (StringBuilder) null;
@@ -104,7 +104,7 @@ final class fa extends UiComponent {
         return stackIn_6_0;
     }
 
-    private final int a(String param0, int param1, int param2, UiComponent param3, UiComponent param4, int param5) {
+    private final int appendReasonHeading(String param0, int param1, int param2, UiComponent param3, UiComponent param4, int param5) {
         UiComponent var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_2_0 = 0;
@@ -149,11 +149,11 @@ final class fa extends UiComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException addExceptionContext(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -222,7 +222,7 @@ final class fa extends UiComponent {
         return param2 + "/" + param1;
     }
 
-    fa(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, mi param9, UiComponent param10, String param11, long param12) {
+    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, mi param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         int var15_int = 0;
@@ -389,7 +389,7 @@ final class fa extends UiComponent {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(mn.field_q, var18Lifetime3, var16Lifetime2, var28[0], param6, 113);
+            var18Lifetime3 = this.appendReasonHeading(mn.field_q, var18Lifetime3, var16Lifetime2, var28[0], param6, 113);
             var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[6], var18Lifetime3, (byte) -55);
             var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[9], var18Lifetime3, (byte) -55);
             var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[5], var18Lifetime3, (byte) -55);
@@ -400,7 +400,7 @@ final class fa extends UiComponent {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(ho.field_p, var18Lifetime4, var16Lifetime2, var28[1], param6, 114);
+            var18Lifetime4 = this.appendReasonHeading(ho.field_p, var18Lifetime4, var16Lifetime2, var28[1], param6, 114);
             var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[16], var18Lifetime4, (byte) -55);
             var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[17], var18Lifetime4, (byte) -55);
             var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[18], var18Lifetime4, (byte) -55);
@@ -410,7 +410,7 @@ final class fa extends UiComponent {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(ki.field_p, var18Lifetime5, var16Lifetime2, var28[2], param6, 119);
+            var18Lifetime5 = this.appendReasonHeading(ki.field_p, var18Lifetime5, var16Lifetime2, var28[2], param6, 119);
             var18Lifetime5 = this.a(var28[2], var16Lifetime2, this.field_Jb[13], var18Lifetime5, (byte) -55);
             var18Lifetime5 = this.a(var28[2], var16Lifetime2, this.field_Jb[21], var18Lifetime5, (byte) -55);
             var18Lifetime5 = this.a(var28[2], var16Lifetime2, this.field_Jb[11], var18Lifetime5, (byte) -55);
@@ -518,7 +518,7 @@ final class fa extends UiComponent {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -562,7 +562,7 @@ final class fa extends UiComponent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -35,7 +35,7 @@ final class FightEvent extends GameEvent {
         try {
           param1.applyFight(this.field_q, this.field_r, this.field_m, this.field_i, this.field_o, false, this.field_j);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "jm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class FightEvent extends GameEvent {
         }
         if (null == ki.field_e ||
           InfectionEvent.field_p != 13) {
-          if (sq.field_N) {
+          if (HotspotTextWidget.field_N) {
             if (!uk.a((byte) -120)) {
               return false;
             }
@@ -99,12 +99,12 @@ final class FightEvent extends GameEvent {
             if (InfectionEvent.field_p == 80 ||
               InfectionEvent.field_p == 84) {
               var4 = 1;
-              sq.field_N = false;
+              HotspotTextWidget.field_N = false;
             }
             if (InfectionEvent.field_p == 13) {
               pf.a(-77);
               var4 = 1;
-              sq.field_N = false;
+              HotspotTextWidget.field_N = false;
             }
             return var4 != 0;
           }
@@ -114,7 +114,7 @@ final class FightEvent extends GameEvent {
             11 != InfectionEvent.field_p) {
             if (InfectionEvent.field_p == 80 &&
               uk.a((byte) -111)) {
-              sq.field_N = true;
+              HotspotTextWidget.field_N = true;
               return true;
             }
             return false;
@@ -170,7 +170,7 @@ final class FightEvent extends GameEvent {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

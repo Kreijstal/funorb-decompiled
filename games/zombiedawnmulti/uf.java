@@ -62,7 +62,7 @@ final class uf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -128,29 +128,29 @@ final class uf {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        jb var17 = null;
-        jb var18 = null;
+        PlayerContextMenu var17 = null;
+        PlayerContextMenu var18 = null;
         var15 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param2 != 39) {
             return;
           }
-          stackIn_5_0 = gl.field_L.field_Jb;
+          stackIn_5_0 = UsernameSuggestionsPanel.field_L.field_Jb;
           stackIn_5_1 = 2;
           stackIn_5_2 = param1;
           stackIn_5_3 = 2 + jk.field_f;
-          stackIn_6_4 = (vc.field_d == gl.field_L.field_Jb);
+          stackIn_6_4 = (vc.field_d == UsernameSuggestionsPanel.field_L.field_Jb);
           var3_int = ((tq) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0 * (3 * jk.field_f + 6), -90) ? 1 : 0;
-          var4 = gl.field_L.field_Ib.field_Cb;
+          var4 = UsernameSuggestionsPanel.field_L.field_Ib.field_Cb;
           if (SimZombie.field_zb != 2 &&
             SimZombie.field_zb != 1) {
-            gl.field_L.field_Z = false;
-            gl.field_L.field_Jb.field_Jb.field_wb = hj.field_e;
-            ob.a(gl.field_L.field_Ib, 37);
+            UsernameSuggestionsPanel.field_L.field_Z = false;
+            UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.field_wb = hj.field_e;
+            ob.a(UsernameSuggestionsPanel.field_L.field_Ib, 37);
             return;
           }
-          gl.field_L.field_Z = true;
-          gl.field_L.field_Jb.field_Jb.field_wb = null;
+          UsernameSuggestionsPanel.field_L.field_Z = true;
+          UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.field_wb = null;
           var5 = null;
           var6 = (ml) (var4.c(43));
           while (var6 != null) {
@@ -163,7 +163,7 @@ final class uf {
               var7 = 1;
               var6.markDescendantsToInheritVisualState(-128);
             }
-            var6.field_zb = gl.field_L.field_Ib.field_zb;
+            var6.field_zb = UsernameSuggestionsPanel.field_L.field_Ib.field_zb;
             var6.field_Ib.setBounds(jk.field_f, 0, var6.field_zb, 0, -3344);
             var8 = 0;
             if (var6.field_Kb != null &&
@@ -193,7 +193,7 @@ final class uf {
               var6.field_I = -var6.field_z + jk.field_f;
             }
             if (var7 != 0) {
-              gl.field_L.field_Ib.placeBelow(2, var6, 1300, (UiComponent) (var5));
+              UsernameSuggestionsPanel.field_L.field_Ib.placeBelow(2, var6, 1300, (UiComponent) (var5));
             }
             if (null != var6.field_Gb &&
               var6.field_Gb.field_L) {
@@ -205,7 +205,7 @@ final class uf {
               }
             }
             if (var6.field_T != 0) {
-              ve.a(0L, 196, var6.field_Hb, gl.field_L.field_Jb, var6.field_Pb, var6, -1, (int[]) null, -1);
+              ve.a(0L, 196, var6.field_Hb, UsernameSuggestionsPanel.field_L.field_Jb, var6.field_Pb, var6, -1, (int[]) null, -1);
               var17 = pk.field_b;
               var13_ref_String = qh.field_d;
               var17.field_j.a((byte) -118, var13_ref_String, 7);
@@ -217,20 +217,20 @@ final class uf {
             var5 = var6;
             var6 = (ml) (var4.b(6));
           }
-          if (0 != gl.field_L.field_Gb.field_T) {
-            gi.field_i = new dk(gl.field_L.field_Gb.field_w, gl.field_L.field_Gb.field_qb, gl.field_L.field_Gb.field_zb, gl.field_L.field_Gb.field_z, ArrayWidgetGroup.field_K, kd.field_a, vo.field_m, vo.field_m);
+          if (0 != UsernameSuggestionsPanel.field_L.field_Gb.field_T) {
+            gi.field_i = new dk(UsernameSuggestionsPanel.field_L.field_Gb.field_w, UsernameSuggestionsPanel.field_L.field_Gb.field_qb, UsernameSuggestionsPanel.field_L.field_Gb.field_zb, UsernameSuggestionsPanel.field_L.field_Gb.field_z, ArrayWidgetGroup.field_K, kd.field_a, vo.field_m, vo.field_m);
             ic.field_e = 2;
           }
-          if (gl.field_L.field_Hb.field_T == 0) {
+          if (UsernameSuggestionsPanel.field_L.field_Hb.field_T == 0) {
             return;
           }
-          gi.field_i = new dk(gl.field_L.field_Hb.field_w, gl.field_L.field_Hb.field_qb, gl.field_L.field_Hb.field_zb, gl.field_L.field_Hb.field_z, DebouncedValidationProvider.field_d, kd.field_a, vo.field_m, vo.field_m);
+          gi.field_i = new dk(UsernameSuggestionsPanel.field_L.field_Hb.field_w, UsernameSuggestionsPanel.field_L.field_Hb.field_qb, UsernameSuggestionsPanel.field_L.field_Hb.field_zb, UsernameSuggestionsPanel.field_L.field_Hb.field_z, DebouncedValidationProvider.field_d, kd.field_a, vo.field_m, vo.field_m);
           ic.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "uf.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "uf.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

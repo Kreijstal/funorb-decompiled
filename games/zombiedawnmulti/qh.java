@@ -19,9 +19,9 @@ final class qh {
           this.field_c.a(9736, param0, param1, var7, var6, param4, param2);
           dp.field_b.setBounds(jk.field_f, 0, SimUnit.field_O.field_zb, 0, -3344);
           bi.field_f.setBounds(18, 2 + jk.field_f, -80 + SimUnit.field_O.field_zb - DualLinkNode.field_o - 4, 0, -3344);
-          jb.field_c.setBounds(18, jk.field_f + 2, DualLinkNode.field_o + 82, -80 + (SimUnit.field_O.field_zb - (DualLinkNode.field_o + 2)), param3 ^ 3398);
+          PlayerContextMenu.field_c.setBounds(18, jk.field_f + 2, DualLinkNode.field_o + 82, -80 + (SimUnit.field_O.field_zb - (DualLinkNode.field_o + 2)), param3 ^ 3398);
           eg.field_B.a(param3 + 74, DualLinkNode.field_o, SimUnit.field_O.field_z + (-jk.field_f - 22), SimUnit.field_O.field_zb, 2, 0, 2 + (jk.field_f + 20), 20);
-          gl.field_L.a(2, (byte) 123, DualLinkNode.field_o, 20);
+          UsernameSuggestionsPanel.field_L.a(2, (byte) 123, DualLinkNode.field_o, 20);
           return;
         }
     }
@@ -42,11 +42,11 @@ final class qh {
           var7 = param2.field_t[param0];
           var8 = cr.a(param0, param1 ^ 30026);
           ol.field_n.c(param4, param3, param5);
-          dj.field_p.a(param4 + 71, param3 + 17, param5);
+          BirthDateValidator.field_p.a(param4 + 71, param3 + 17, param5);
           if (param5 < 255) {
-            em.field_X.a(22 + param4, param3 + 77, param5);
+            BirthDateInputWidget.field_X.a(22 + param4, param3 + 77, param5);
           } else {
-            em.field_X.drawFadedToColour(param4 + 22, param3 + 77, 150 + (on.a(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
+            BirthDateInputWidget.field_X.drawFadedToColour(param4 + 22, param3 + 77, 150 + (on.a(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
           }
           if (hh.field_h == null) {
             hh.field_h = new Sprite(12, 32);
@@ -82,7 +82,7 @@ final class qh {
             var11.a(var15 | (var13 | var14), 85 + param4, true, 18 + param3, 16777215, -1963);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qh.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qh.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -101,10 +101,10 @@ final class qh {
         UiComponent[] var4 = null;
         try {
           var3 = new String[]{param0, BufferedFile.field_p, tm.field_e};
-          var4 = new UiComponent[]{param1, SimUnit.field_O, (UiComponent) ((Object) gl.field_L)};
+          var4 = new UiComponent[]{param1, SimUnit.field_O, (UiComponent) ((Object) UsernameSuggestionsPanel.field_L)};
           this.field_c = new dc(0L, ProxySocketConnector.field_i, var3, aa.field_l, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

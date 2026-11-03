@@ -48,7 +48,7 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3_ref), "mp.C(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3_ref), "mp.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ abstract class mp {
           ma.field_a.writeBytes(TextInputWidget.field_R.payload, TextInputWidget.field_R.position, 0, 126);
           ma.field_a.e(72, -var4_int + ma.field_a.position);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "mp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "mp.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "mp.A(" + param0 + ')');
         }
     }
 
@@ -125,10 +125,10 @@ abstract class mp {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        jb var17 = null;
+        PlayerContextMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        jb var17Lifetime1;
+        PlayerContextMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -260,7 +260,7 @@ abstract class mp {
               ic.field_e = 0;
             }
             if (eg.field_B.field_Hb.field_T != 0) {
-              gi.field_i = new dk(eg.field_B.field_Hb.field_w, eg.field_B.field_Hb.field_qb, eg.field_B.field_Hb.field_zb, eg.field_B.field_Hb.field_z, fe.field_Q, kd.field_a, vo.field_m, vo.field_m);
+              gi.field_i = new dk(eg.field_B.field_Hb.field_w, eg.field_B.field_Hb.field_qb, eg.field_B.field_Hb.field_zb, eg.field_B.field_Hb.field_z, AccountCreationForm.field_Q, kd.field_a, vo.field_m, vo.field_m);
               ic.field_e = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -269,7 +269,7 @@ abstract class mp {
             SimUnit.field_O.field_Z = false;
             dp.field_b.field_wb = PortalEntryEvent.field_l;
             if (1 == SimZombie.field_zb) {
-              eg.field_B.field_Jb.field_Jb.field_wb = rg.field_D;
+              eg.field_B.field_Jb.field_Jb.field_wb = SingleChildWidget.field_D;
               if (var19 != 0) {
                 eg.field_B.field_Jb.field_Jb.field_wb = hj.field_e;
               }
@@ -286,7 +286,7 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "mp.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "mp.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -353,7 +353,7 @@ abstract class mp {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -393,7 +393,7 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "mp.E(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "mp.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ abstract class mp {
           field_b = null;
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "mp.H(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mp.H(" + param0 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "mp.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "mp.B(" + param0 + ')');
         }
     }
 
@@ -519,7 +519,7 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "mp.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "mp.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

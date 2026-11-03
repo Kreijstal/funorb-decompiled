@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends sq {
+final class km extends HotspotTextWidget {
     static ao field_W;
     private ValidationProvider field_Y;
     static boolean[] field_ab;
@@ -39,7 +39,7 @@ final class km extends sq {
         }
         if (!var5.equals(this.field_j)) {
           this.field_j = var5;
-          this.a((byte) 94);
+          this.rebuildHotspotBounds((byte) 94);
         }
         super.renderWidget(param0, param1, param2, param3);
         var6Lifetime1 = this.field_Y.getDebouncedValidationState(97);
@@ -134,7 +134,7 @@ final class km extends sq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "km.D(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "km.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class km extends sq {
           }
           super.updatePointerState(param0 ^ 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "km.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "km.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -165,19 +165,19 @@ final class km extends sq {
         try {
           SimUnit.field_T = fl.a("basic", "display_name_changed", param0, 11091);
           eg.field_B = new cd(0L, oj.field_Q, iq.field_a, dg.field_I);
-          gl.field_L = new cd(0L, oj.field_Q, kg.field_i, qh.field_d);
+          UsernameSuggestionsPanel.field_L = new cd(0L, oj.field_Q, kg.field_i, qh.field_d);
           SimUnit.field_O = new UiComponent(0L, (UiComponent) null);
           dp.field_b = new UiComponent(0L, vo.field_m);
           dp.field_b.field_R = 1;
           bi.field_f = new UiComponent(0L, vd.field_a, GameScreen.field_r);
-          jb.field_c = new UiComponent(0L, pn.field_g, PowerupBar.field_h);
+          PlayerContextMenu.field_c = new UiComponent(0L, pn.field_g, PowerupBar.field_h);
           lk.field_J = new UiComponent(0L, cm.field_b);
           if (param1 > -106) {
             km.h(-103);
           }
           SimUnit.field_O.a((byte) 50, dp.field_b);
           SimUnit.field_O.a((byte) 50, bi.field_f);
-          SimUnit.field_O.a((byte) 50, jb.field_c);
+          SimUnit.field_O.a((byte) 50, PlayerContextMenu.field_c);
           SimUnit.field_O.a((byte) 50, eg.field_B);
           SimUnit.field_O.a((byte) 50, lk.field_J);
           eg.field_B.field_Jb.field_Jb.copyStyle((byte) -32, vo.field_m);
@@ -185,16 +185,16 @@ final class km extends sq {
           var5 = eg.field_B.field_Jb.field_Jb;
           var6 = var5;
           var6.field_R = 1;
-          gl.field_L.field_Jb.field_Jb.copyStyle((byte) -32, vo.field_m);
-          gl.field_L.field_Jb.field_Jb.field_lb = 1;
-          var3 = gl.field_L.field_Jb.field_Jb;
+          UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.copyStyle((byte) -32, vo.field_m);
+          UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.field_lb = 1;
+          var3 = UsernameSuggestionsPanel.field_L.field_Jb.field_Jb;
           var3.field_R = 1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "km.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "km.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var2 = 82 / ((param0 - 53) / 57);
         return null;
     }
@@ -220,7 +220,7 @@ final class km extends sq {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -319,7 +319,7 @@ final class km extends sq {
         }
         tn.field_A.field_Gb.field_I = var7Lifetime1 - tn.field_A.field_Gb.field_z;
         if (!bn.field_b) {
-          if (sq.field_N) {
+          if (HotspotTextWidget.field_N) {
             if (null == lj.field_v) {
               var10Lifetime1 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
               if (!sp.field_h) {
@@ -353,7 +353,7 @@ final class km extends sq {
         bn.field_b = false;
         tn.field_A.field_Gb.field_Q = -tn.field_A.field_Gb.field_z + tn.field_A.field_Jb.field_z;
         sp.field_h = true;
-        if (!sq.field_N) {
+        if (!HotspotTextWidget.field_N) {
           var10Lifetime2 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
           if (!sp.field_h) {
             tn.field_A.a(2 * (param2 * param1), 112, param2, true);
@@ -391,7 +391,7 @@ final class km extends sq {
           this.field_Y = param0;
           this.setWidgetBounds(param2, param3, 28972, param4, param5);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

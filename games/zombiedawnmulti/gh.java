@@ -126,7 +126,7 @@ final class gh {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; tf.field_Eb > var13Lifetime1; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; AccountCreationDialog.field_Eb > var13Lifetime1; var13Lifetime1++) {
             var14Lifetime1 = ah.field_f[var13Lifetime1];
             var15Lifetime1 = param0.field_y[var14Lifetime1];
             var16 = param0.field_L[var14Lifetime1];
@@ -215,7 +215,7 @@ final class gh {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

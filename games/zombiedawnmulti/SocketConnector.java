@@ -128,7 +128,7 @@ abstract class SocketConnector {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ abstract class SocketConnector {
           }
           g.b();
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dl.J(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dl.J(" + param0 + ')');
         }
     }
 

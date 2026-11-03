@@ -944,10 +944,10 @@ abstract class SimUnit extends SimEntity {
     final void advanceAnimation(byte param0, int param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        if (!(this.animationFrame < gg.field_j[param1])) {
+        if (!(this.animationFrame < MessageDialogContent.field_j[param1])) {
           this.animationFrame = 0;
         }
-        int var3 = gg.field_b[param1];
+        int var3 = MessageDialogContent.field_b[param1];
         if (param0 <= 116) {
           this.applySlow(55, -76);
           if (2 > this.speedMultiplier) {
@@ -960,7 +960,7 @@ abstract class SimUnit extends SimEntity {
           }
           fieldTemp$1 = this.animationFrame + 1;
           this.animationFrame = this.animationFrame + 1;
-          if (fieldTemp$1 == gg.field_j[param1]) {
+          if (fieldTemp$1 == MessageDialogContent.field_j[param1]) {
             this.animationFrame = 0;
           } else {
             this.animationTicks = 0;
@@ -979,7 +979,7 @@ abstract class SimUnit extends SimEntity {
         }
         int fieldTemp$3 = this.animationFrame + 1;
         this.animationFrame = this.animationFrame + 1;
-        if (fieldTemp$3 == gg.field_j[param1]) {
+        if (fieldTemp$3 == MessageDialogContent.field_j[param1]) {
           this.animationFrame = 0;
         } else {
           this.animationTicks = 0;

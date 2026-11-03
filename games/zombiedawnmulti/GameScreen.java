@@ -113,7 +113,7 @@ final class GameScreen {
             var2_int = t.field_d;
           }
           if (!iq.field_f ||
-            !sq.field_N ||
+            !HotspotTextWidget.field_N ||
             !ValidationState.field_b) {
             if (lc.field_m[26] ||
               lc.field_m[88]) {
@@ -369,7 +369,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "qd.VA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qd.VA(" + param0 + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var8_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var8_ref2), "qd.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var8_ref2), "qd.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -420,7 +420,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "qd.KA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "qd.KA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -544,7 +544,7 @@ final class GameScreen {
           }
           if (param1) {
             if (!iq.field_f ||
-              !sq.field_N ||
+              !HotspotTextWidget.field_N ||
               !ValidationState.field_b) {
               boolean decompiledFrameRemainder1 = true;
               stackIn_84_0 = this.camera;
@@ -596,7 +596,7 @@ final class GameScreen {
               this.field_a = var9 - 20L;
             }
             var11 = this.field_W + (int)((-this.field_t + var9) / 20L);
-            if (df.field_I) {
+            if (FadingDialog.field_I) {
               var11 = PortalEntryEvent.field_m.currentTick;
             }
             boolean decompiledFrameRemainder2 = true;
@@ -699,7 +699,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "qd.L(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "qd.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -969,7 +969,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "qd.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "qd.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -995,7 +995,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var6), "qd.HB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6), "qd.HB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1033,7 +1033,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "qd.GB(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qd.GB(" + param0 + ')');
         }
     }
 
@@ -1055,7 +1055,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.BB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.BB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1126,7 +1126,7 @@ final class GameScreen {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -1230,7 +1230,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "qd.DB(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "qd.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1261,14 +1261,14 @@ final class GameScreen {
           }
           if (!DebouncedValidationProvider.field_h &&
             this.isInProgress((byte) 124)) {
-            if (!df.field_I) {
+            if (!FadingDialog.field_I) {
               if (param1 == 84) {
                 stackIn_28_0 = !(iq.field_f);
                 iq.field_f = stackIn_28_0;
               }
               if ((param1 == 80) &&
                 (!iq.field_f)) {
-                sq.field_N = true;
+                HotspotTextWidget.field_N = true;
                 iq.field_f = true;
                 if ((var4 != 0) && (83 == param1 ||
                   param1 == 84)) {
@@ -1293,8 +1293,8 @@ final class GameScreen {
                 IterableNodeHashTable.field_c = stackIn_63_0;
               }
               if (param1 == 85) {
-                stackIn_71_0 = !(vk.field_E);
-                vk.field_E = stackIn_71_0;
+                stackIn_71_0 = !(DialogLayer.field_E);
+                DialogLayer.field_E = stackIn_71_0;
               }
               boolean decompiledFrameRemainder1 = true;
               if (lc.field_m[86]) {
@@ -1476,7 +1476,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "qd.J(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "qd.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1526,7 +1526,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var6_ref), "qd.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6_ref), "qd.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1537,7 +1537,7 @@ final class GameScreen {
         try {
           this.field_O.a(new lj(param3, param2, param0), false);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.UA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.UA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1705,7 +1705,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var5_ref2), "qd.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5_ref2), "qd.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1740,7 +1740,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1820,7 +1820,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4_ref), "qd.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4_ref), "qd.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1854,7 +1854,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1956,7 +1956,7 @@ final class GameScreen {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -1975,7 +1975,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "qd.DA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qd.DA(" + param0 + ')');
         }
     }
 
@@ -2034,7 +2034,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var5), "qd.WA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "qd.WA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2062,7 +2062,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2082,7 +2082,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.NA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.NA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2129,7 +2129,7 @@ final class GameScreen {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -2158,7 +2158,7 @@ final class GameScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -2180,7 +2180,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2269,7 +2269,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3_ref), "qd.IB(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3_ref), "qd.IB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2311,7 +2311,7 @@ final class GameScreen {
           this.field_jb = 0;
           this.field_A = 0;
           on.j((byte) 113);
-          if (df.field_I) {
+          if (FadingDialog.field_I) {
             if (!pp.field_n) {
               if (!PortalEntryEvent.field_m.hasUpgrade((byte) -128, 45, this.localTeam)) {
                 ah.a((byte) -86, 19);
@@ -2333,7 +2333,7 @@ final class GameScreen {
           this.field_w = true;
           this.field_mb = null;
           if (!pp.field_n) {
-            if (!df.field_I) {
+            if (!FadingDialog.field_I) {
               if (DebouncedValidationProvider.field_h) {
                 we.field_g[7] = pi.field_b;
                 if (var14 != 0) {
@@ -2453,7 +2453,7 @@ final class GameScreen {
                       var6 = var11;
                     }
                   }
-                  if (df.field_I) {
+                  if (FadingDialog.field_I) {
                     gk.field_c = var11;
                     hc.field_c = var10;
                   }
@@ -2470,7 +2470,7 @@ final class GameScreen {
             stackIn_112_0 = DebouncedValidationProvider.field_h;
           }
           if (stackIn_112_0 ||
-            df.field_I) {
+            FadingDialog.field_I) {
             this.field_h = this.navigation.pixelHeight / 2;
             this.field_R = this.navigation.pixelWidth / 2;
           }
@@ -2554,7 +2554,7 @@ final class GameScreen {
             this.field_l = 0;
           }
           this.field_G.c(0);
-          if (!df.field_I) {
+          if (!FadingDialog.field_I) {
             if (!DebouncedValidationProvider.field_h ||
               PortalEntryEvent.field_m.phase != 0) {
               this.enterPhase((byte) -110, PortalEntryEvent.field_m.phase, PortalEntryEvent.field_m.field_C);
@@ -2598,7 +2598,7 @@ final class GameScreen {
           } else {
             stackIn_181_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_180_0), ((StringBuilder) (Object) stackIn_180_1).append(stackIn_181_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_180_0), ((StringBuilder) (Object) stackIn_180_1).append(stackIn_181_2).append(')').toString());
         }
     }
 
@@ -2608,14 +2608,14 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -11 % ((param0 + 61) / 43);
-          if (!df.field_I) {
+          if (!FadingDialog.field_I) {
             lb.a(this.field_ib, false, this.field_fb);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.QA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.QA(" + param0 + ')');
         }
     }
 
@@ -2661,7 +2661,7 @@ final class GameScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -2692,7 +2692,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.H(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.H(" + param0 + ')');
         }
     }
 
@@ -2703,7 +2703,7 @@ final class GameScreen {
             this.field_O = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.EA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.EA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2737,7 +2737,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var6_ref), "qd.PA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6_ref), "qd.PA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -2773,7 +2773,7 @@ final class GameScreen {
                 return;
               }
             }
-            if (!df.field_I) {
+            if (!FadingDialog.field_I) {
               return;
             }
             if (0 != PortalEntryEvent.field_m.teamCharacterCounts[this.localTeam]) {
@@ -2822,7 +2822,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref), "qd.CB(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "qd.CB(" + param0 + ')');
         }
     }
 
@@ -2874,7 +2874,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var9_ref), "qd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var9_ref), "qd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -2914,7 +2914,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "qd.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "qd.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2930,7 +2930,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "qd.IA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qd.IA(" + param0 + ')');
         }
     }
 
@@ -2956,7 +2956,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2972,7 +2972,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "qd.EB(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qd.EB(" + param0 + ')');
         }
     }
 
@@ -3007,7 +3007,7 @@ final class GameScreen {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -3016,7 +3016,7 @@ final class GameScreen {
           this.field_n = FullscreenFocusCanvas.field_k.b((byte) -1);
           int var2_int = -91 % ((param0 + 12) / 44);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.JA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.JA(" + param0 + ')');
         }
     }
 
@@ -3103,7 +3103,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var6_ref), "qd.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6_ref), "qd.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3114,7 +3114,7 @@ final class GameScreen {
             GameScreen.a(-96, (BitmapFont) null, 119, -9, -35, -122, 29, (byte) 90, -18, -112, -60, -50, 117);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.Q(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.Q(" + param0 + ')');
         }
     }
 
@@ -3135,7 +3135,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "qd.LA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "qd.LA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3231,7 +3231,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "qd.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "qd.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3243,7 +3243,7 @@ final class GameScreen {
             discarded$0 = this.isInProgress((byte) -123);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3287,7 +3287,7 @@ final class GameScreen {
                 }
               }
             }
-            if (df.field_I) {
+            if (FadingDialog.field_I) {
               GameCharacter.l((byte) -68);
               LevelActorSpawner.a(false, 15, 125, sp.field_g);
               return;
@@ -3306,7 +3306,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4_ref2), "qd.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4_ref2), "qd.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3957,7 +3957,7 @@ final class GameScreen {
           if (sc.field_a) {
             MatchingTextValidator.field_w.c("cam=(" + this.camera.centerX + ", " + this.camera.centerY + ") bk=" + kd.field_b + " k=" + pq.field_f + " mouse=(" + MouseInputHandler.field_g + "," + bo.field_d + ")", 5, 13, 16777215, 0);
           }
-          if (vk.field_E) {
+          if (DialogLayer.field_E) {
             var8.c(Integer.toString(ji.field_b), 10, 40, 2, -1);
             var8.c(Integer.toString(ei.field_b), 10, 40, 2, -1);
             var8.c(Integer.toString(PortalEntryEvent.field_m.currentTick), 10, 80, 2, -1);
@@ -3974,7 +3974,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "qd.FA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "qd.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3996,7 +3996,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -4087,7 +4087,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "qd.RA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "qd.RA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4121,7 +4121,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "qd.G(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4211,7 +4211,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "qd.AB(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qd.AB(" + param0 + ')');
         }
     }
 
@@ -4236,7 +4236,7 @@ final class GameScreen {
           this.field_z = false;
           stackIn_5_0 = (ArrayWidgetGroup.field_I != 10) ? 0 : 1;
           var3_int = stackIn_5_0;
-          if (!df.field_I) {
+          if (!FadingDialog.field_I) {
             boolean decompiledFrameRemainder0 = true;
             pb.field_i = SceneObject.field_x;
             if ((iq.field_f) &&
@@ -4278,9 +4278,9 @@ final class GameScreen {
               nf.field_d = stackIn_35_0 + stackIn_36_1;
             }
           }
-          if (!df.field_I &&
+          if (!FadingDialog.field_I &&
             param0 && (!ValidationState.field_b ||
-            !sq.field_N ||
+            !HotspotTextWidget.field_N ||
             DebouncedValidationProvider.field_h)) {
             if (!tj.field_f) {
               stackIn_56_0 = oi.field_h;
@@ -4315,7 +4315,7 @@ final class GameScreen {
             stackIn_91_1 = this.field_z;
             stackIn_92_2 = !(ImageProducerRasterBuffer.field_k.field_qb > bo.field_d);
             this.field_z = stackIn_91_1 | stackIn_92_2;
-            if (sq.field_N &&
+            if (HotspotTextWidget.field_N &&
               ValidationState.field_b) {
               this.field_z = true;
             }
@@ -4329,7 +4329,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "qd.T(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "qd.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4350,7 +4350,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "qd.P(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "qd.P(" + param0 + ')');
         }
     }
 
@@ -4582,7 +4582,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) (var2), "qd.HA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (var2), "qd.HA(" + param0 + ')');
         }
     }
 
@@ -4627,7 +4627,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "qd.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "qd.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4653,7 +4653,7 @@ final class GameScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4701,7 +4701,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var9_ref), "qd.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var9_ref), "qd.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -4717,7 +4717,7 @@ final class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "qd.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "qd.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4844,7 +4844,7 @@ final class GameScreen {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param2).append(')').toString());
         }
     }
 

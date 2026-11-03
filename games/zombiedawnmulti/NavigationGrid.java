@@ -65,7 +65,7 @@ final class NavigationGrid {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -381,7 +381,7 @@ final class NavigationGrid {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "fh.P(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "fh.P(" + param0 + ')');
         }
     }
 
@@ -522,7 +522,7 @@ final class NavigationGrid {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ final class NavigationGrid {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -612,7 +612,7 @@ final class NavigationGrid {
           }
           this.field_k = new boolean[this.level.field_e][this.level.field_d];
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -890,11 +890,11 @@ final class NavigationGrid {
                               var11 = 9;
                             }
                             if (0 <= var11 &&
-                              var11 < ne.field_Ab.length) {
-                              ne.field_Ab[var11].c(var5_int, var6, 128);
+                              var11 < MessageDialog.field_Ab.length) {
+                              MessageDialog.field_Ab[var11].c(var5_int, var6, 128);
                             } else {
                               SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 0, 128);
-                              ne.field_Ab[21].c(var5_int, var6 + 24, 128);
+                              MessageDialog.field_Ab[21].c(var5_int, var6 + 24, 128);
                             }
                           } else {
                             SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 0, 128);
@@ -968,7 +968,7 @@ final class NavigationGrid {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param3).append(')').toString());
         }
     }
 

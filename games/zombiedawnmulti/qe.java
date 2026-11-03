@@ -167,7 +167,7 @@ final class qe {
           ql.a(true);
           ui.field_k = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qe.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qe.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class qe {
     final void g(int param0) {
         int var3 = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!df.field_I &&
+        if (!FadingDialog.field_I &&
           this.field_j &&
           this.field_l > 0) {
           g.a(jj.field_F[5], 430, 40);
@@ -318,7 +318,7 @@ final class qe {
         RasterBuffer.field_a = param0;
         kg.field_k = null;
         bl.field_c = -1;
-        tf.field_Db = -1;
+        AccountCreationDialog.field_Db = -1;
         cb.field_l = false;
     }
 
@@ -434,7 +434,7 @@ final class qe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -556,7 +556,7 @@ final class qe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

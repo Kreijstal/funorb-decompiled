@@ -39,7 +39,7 @@ final class wj extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -71,9 +71,9 @@ final class wj extends IntrusiveNode {
     }
 
     wj(int param0) {
-        if (df.field_H) {
+        if (FadingDialog.field_H) {
           this.field_m = PcmSampleStream.createAtRatePercent(ei.field_a[param0], 100, 256);
-          tf.a(this.field_m, (byte) -93);
+          AccountCreationDialog.a(this.field_m, (byte) -93);
         }
         if (93 == param0) {
         }

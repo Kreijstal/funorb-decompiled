@@ -149,7 +149,7 @@ final class hh {
               pq.field_f != 0) {
               if (0 >= this.field_j) {
                 this.field_f = this.field_k;
-                this.field_j = dj.field_m;
+                this.field_j = BirthDateValidator.field_m;
               }
               this.field_j = this.field_j - 1;
             }
@@ -182,7 +182,7 @@ final class hh {
             pq.field_f != 0) {
             if (0 >= this.field_j) {
               this.field_f = this.field_k;
-              this.field_j = dj.field_m;
+              this.field_j = BirthDateValidator.field_m;
             }
             this.field_j = this.field_j - 1;
           }
@@ -289,7 +289,7 @@ final class hh {
           if (pq.field_f != 0) {
             if (0 >= this.field_j) {
               this.field_f = this.field_k;
-              this.field_j = dj.field_m;
+              this.field_j = BirthDateValidator.field_m;
             }
             this.field_j = this.field_j - 1;
           }
@@ -385,7 +385,7 @@ final class hh {
         } else {
           if (0 >= this.field_j) {
             this.field_f = this.field_k;
-            this.field_j = dj.field_m;
+            this.field_j = BirthDateValidator.field_m;
           }
           this.field_j = this.field_j - 1;
           if (kd.field_b == 0) {
@@ -473,8 +473,8 @@ final class hh {
         if (JaggrabDownloader.field_h > 0) {
           JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
         } else {
-          if (sq.field_Q > 0) {
-            sq.field_Q = sq.field_Q - 1;
+          if (HotspotTextWidget.field_Q > 0) {
+            HotspotTextWidget.field_Q = HotspotTextWidget.field_Q - 1;
           } else {
             if (InflaterDecompressor.field_a > 0) {
               InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
@@ -484,8 +484,8 @@ final class hh {
         if (JaggrabDownloader.field_h > 0) {
           v.a(param0 + 199);
         }
-        if (sq.field_Q > 0) {
-          MouseWheelInput.a(sq.field_Q, false);
+        if (HotspotTextWidget.field_Q > 0) {
+          MouseWheelInput.a(HotspotTextWidget.field_Q, false);
         }
         if (param0 >= InflaterDecompressor.field_a) {
           return;

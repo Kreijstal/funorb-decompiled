@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vm extends al implements in {
+final class vm extends ResizableDialog implements ButtonActivationListener {
     static int field_hb;
     static String[] field_gb;
     static Sprite field_lb;
@@ -31,7 +31,7 @@ final class vm extends al implements in {
         wp.a(param2, param1, 255, 0);
     }
 
-    vm(vk param0, db param1) {
+    vm(DialogLayer param0, db param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -85,7 +85,7 @@ final class vm extends al implements in {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -141,11 +141,11 @@ final class vm extends al implements in {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         if (param3 > -83) {
           return;
         }
@@ -154,7 +154,7 @@ final class vm extends al implements in {
             this.l(0);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "vm.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vm.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -166,9 +166,9 @@ final class vm extends al implements in {
             vm.a((String) null, -13, (String) null, (String) null, -118, 91);
           }
           var6 = new ka(param4, param0, param1, param2, param3);
-          vk.a(var6, (byte) 83);
+          DialogLayer.a(var6, (byte) 83);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "vm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

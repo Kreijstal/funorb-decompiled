@@ -47,7 +47,7 @@ final class qq {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class qq {
     }
 
     final static PcmSampleStream b(int param0, int param1) {
-        if (!df.field_H) {
+        if (!FadingDialog.field_H) {
           return null;
         }
         if (4 <= jp.field_c.a(param0 ^ param0)) {

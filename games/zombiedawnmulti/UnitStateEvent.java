@@ -51,7 +51,7 @@ final class UnitStateEvent extends GameEvent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class UnitStateEvent extends GameEvent {
           param0.addMouseMotionListener(on.field_Z);
           param0.addFocusListener(on.field_Z);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "so.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class UnitStateEvent extends GameEvent {
         we.field_g[12] = cd.field_Fb;
         we.field_g[16] = kj.field_s;
         we.field_g[18] = ci.field_h;
-        we.field_g[13] = vk.field_K;
+        we.field_g[13] = DialogLayer.field_K;
         we.field_g[6] = qo.field_t;
         we.field_g[0] = Waypoint.field_f;
         we.field_g[19] = ah.field_b;
@@ -109,7 +109,7 @@ final class UnitStateEvent extends GameEvent {
         we.field_g[39] = "Shouldn't See Me";
         we.field_g[35] = DualLinkDeque.field_a;
         we.field_g[49] = vl.field_j[1];
-        we.field_g[50] = df.field_L;
+        we.field_g[50] = FadingDialog.field_L;
         we.field_g[48] = vl.field_j[0];
         we.field_g[40] = HuffmanCodec.field_c;
         we.field_g[46] = lj.field_m;
@@ -159,7 +159,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[10] = SimArmedHuman.field_Eb;
         gh.field_f[61] = qc.field_w;
         gh.field_f[17] = PacketBuffer.field_h;
-        gh.field_f[37] = df.field_G;
+        gh.field_f[37] = FadingDialog.field_G;
         gh.field_f[36] = fk.field_l;
         gh.field_f[13] = hf.field_a;
         gh.field_f[44] = kn.field_e;
@@ -191,9 +191,9 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[59][0] = TextWidgetPainter.field_k;
         wq.field_g[58][0] = MusicPatch.field_i;
         wq.field_g[57][0] = wi.field_p;
-        wq.field_g[56][0] = em.field_V;
+        wq.field_g[56][0] = BirthDateInputWidget.field_V;
         wq.field_g[55][0] = PortalView.field_F;
-        wq.field_g[54][0] = df.field_O;
+        wq.field_g[54][0] = FadingDialog.field_O;
         wq.field_g[53][0] = PasswordValidator.field_u;
         wq.field_g[52][0] = bb.field_m;
         wq.field_g[51][0] = nk.field_f;
@@ -205,8 +205,8 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[45][0] = me.field_m;
         wq.field_g[44][0] = hn.field_b;
         wq.field_g[32][0] = ic.field_j;
-        wq.field_g[33][0] = al.field_U;
-        wq.field_g[34][0] = fa.field_Ob;
+        wq.field_g[33][0] = ResizableDialog.field_U;
+        wq.field_g[34][0] = ReportAbuseDialog.field_Ob;
         wq.field_g[35][0] = dd.field_c;
         wq.field_g[36][0] = mn.field_s;
         wq.field_g[37][0] = uf.field_c;
@@ -248,7 +248,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[49][1] = PowerupButton.field_g;
         wq.field_g[48][1] = oj.field_O;
         wq.field_g[47][1] = ResourceArchive.field_i;
-        wq.field_g[46][1] = fe.field_X;
+        wq.field_g[46][1] = AccountCreationForm.field_X;
         wq.field_g[45][1] = ip.field_d;
         wq.field_g[44][1] = TertiaryLinkNode.field_q;
         wq.field_g[32][1] = UiWidget.field_o;
@@ -304,7 +304,7 @@ final class UnitStateEvent extends GameEvent {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -401,7 +401,7 @@ final class UnitStateEvent extends GameEvent {
             var7 = eb.field_B;
             var7.field_zb = 0;
             if (hl.b(0)) {
-              gg.field_m.field_wb = ClientException.field_l.toUpperCase();
+              MessageDialogContent.field_m.field_wb = ClientException.field_l.toUpperCase();
               var9 = (2 + LevelData.field_a.field_zb) / 2;
               en.field_b.setBounds(40, LevelData.field_a.field_z - 40, var9 - 2, 0, -3344);
               if (JaggrabDownloader.field_c.field_mc > JaggrabDownloader.field_c.field_cc) {
@@ -705,7 +705,7 @@ final class UnitStateEvent extends GameEvent {
                     if (!GameKeyHandler.field_a.field_pb) {
                       break;
                     }
-                    if (em.field_U.field_c.field_Kb != 0) {
+                    if (BirthDateInputWidget.field_U.field_c.field_Kb != 0) {
                       ui.field_j = vl.a(rn.field_b, new String[]{RasterBuffer.field_d}, 2);
                       if (var19 == 0) {
                         break;
@@ -719,14 +719,14 @@ final class UnitStateEvent extends GameEvent {
               if ((decompiledFrameCompleted0) &&
                 (var19 != 0)) {
                 var9_ref_String = JaggrabDownloader.field_c.field_Nb;
-                gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
+                MessageDialogContent.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
                 eb.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
                 eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
                 var8 = eb.field_B;
               }
             } else {
               var9_ref_String = JaggrabDownloader.field_c.field_Nb;
-              gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
+              MessageDialogContent.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
               eb.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
               eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
               var8 = eb.field_B;
@@ -759,7 +759,7 @@ final class UnitStateEvent extends GameEvent {
             stackIn_186_1 = -11838;
             stackIn_187_2 = (param1) && (!param2) && (io.field_b);
             ((UiComponent) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
-            em.field_U.field_c.h(-40);
+            BirthDateInputWidget.field_U.field_c.h(-40);
             stackIn_188_0 = null;
           }
           if (stackIn_188_0 != JaggrabDownloader.field_c) {
@@ -781,7 +781,7 @@ final class UnitStateEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var5), "so.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "so.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -825,7 +825,7 @@ final class UnitStateEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "so.P(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "so.P(" + param0 + ')');
         }
     }
 
@@ -885,7 +885,7 @@ final class UnitStateEvent extends GameEvent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -896,7 +896,7 @@ final class UnitStateEvent extends GameEvent {
             UnitStateEvent.a(-46, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "so.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

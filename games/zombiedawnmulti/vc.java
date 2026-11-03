@@ -48,7 +48,7 @@ final class vc {
           param1.next.previous = param1;
           param1.previous.next = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class vc {
           ke.a(16777215, 11, -17895, 4473924, 5481009);
           ke.a(4096, 12, -17895, 16384, 16556032);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "vc.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.D(" + param0 + ')');
         }
     }
 

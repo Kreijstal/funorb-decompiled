@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends WidgetContainer implements in {
+final class wd extends WidgetContainer implements ButtonActivationListener {
     static IndexedSprite field_P;
     static SceneObject field_G;
     static int[] field_Q;
     private String field_O;
     static MidiPcmStream field_L;
-    private ne field_R;
+    private MessageDialog field_R;
     private int[] field_N;
     private ButtonWidget[] field_H;
     private int field_J;
@@ -35,7 +35,7 @@ final class wd extends WidgetContainer implements in {
         try {
           ok.a(param1 - 126, param1, param4, param3, param0, param2);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "wd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class wd extends WidgetContainer implements in {
         if (param4 < 21) {
           return;
         }
-        if (df.field_I) {
+        if (FadingDialog.field_I) {
           UiWidget.field_s.a(0, param3, param5, param0, false);
           return;
         }
@@ -78,11 +78,11 @@ final class wd extends WidgetContainer implements in {
           param2.writeShort(param3, (byte) -47);
           param2.writeShort(param5, (byte) -109);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    wd(ne param0, BitmapFont param1, String param2) {
+    wd(MessageDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_J = 0;
@@ -93,7 +93,7 @@ final class wd extends WidgetContainer implements in {
           var4_int = this.field_O != null ? this.field_M.measureWrappedHeight(this.field_O, 260, this.field_M.maxAscent) : 0;
           this.setWidgetBounds(0, 0, 28972, 288, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class wd extends WidgetContainer implements in {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -151,11 +151,11 @@ final class wd extends WidgetContainer implements in {
           this.field_H[var4_int] = this.a(param0, -108, (WidgetListener) (this));
           this.field_N[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -172,7 +172,7 @@ final class wd extends WidgetContainer implements in {
             }
             var7 = this.field_N[var6_int];
             if (var7 == -1) {
-              this.field_R.m(-7435);
+              this.field_R.dismissDialog(-7435);
             } else {
               PowerupButton.a(this.field_N[var6_int], 111);
             }
@@ -192,7 +192,7 @@ final class wd extends WidgetContainer implements in {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

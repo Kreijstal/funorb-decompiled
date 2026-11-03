@@ -69,7 +69,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          var3 = vk.a(param1 ^ -1276425052, var6);
+          var3 = DialogLayer.a(param1 ^ -1276425052, var6);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -122,7 +122,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

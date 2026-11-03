@@ -517,7 +517,7 @@ final class LaboratoryScreen extends MenuScreen {
             rq.field_u[var10] = var10 * 65793;
           }
           AgeValidator.field_u.field_ab = wc.field_M;
-          cr.field_i.field_ab = df.field_Q;
+          cr.field_i.field_ab = FadingDialog.field_Q;
           b.field_a = new mj(0L, ih.field_d, var12, var9, AgeValidator.field_u, cr.field_i, false);
           b.field_a.field_Q = 315;
           b.field_a.field_zb = 631;
@@ -525,7 +525,7 @@ final class LaboratoryScreen extends MenuScreen {
           b.field_a.field_x = 5;
           b.field_a.field_z = 15;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "tk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -695,7 +695,7 @@ final class LaboratoryScreen extends MenuScreen {
           var6.f(var4, 115);
           var6.e(70, var6.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "tk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -728,7 +728,7 @@ final class LaboratoryScreen extends MenuScreen {
         int var23Lifetime1;
         var24 = ZombieDawnMulti.field_E ? 1 : 0;
         SoftwareRasterizer.setClip(5, 54, 635, 330);
-        var34 = em.field_Y[ao.field_d];
+        var34 = BirthDateInputWidget.field_Y[ao.field_d];
         var7 = 0;
         var8 = -9 / ((-16 - param4) / 50);
         while (var7 < var34.length) {
@@ -764,7 +764,7 @@ final class LaboratoryScreen extends MenuScreen {
                 }
                 var14Lifetime1 = on.field_bb[var13].field_c;
                 if (FullscreenFocusCanvas.field_k.g(var14Lifetime1, 4)) {
-                  var36 = em.field_ab[var14Lifetime1];
+                  var36 = BirthDateInputWidget.field_ab[var14Lifetime1];
                   for (var16 = 0; var36.length > var16; var16++) {
                     var17 = var36[var16];
                     if (var17 != 255 &&
@@ -913,9 +913,9 @@ final class LaboratoryScreen extends MenuScreen {
         }
         if (TertiaryLinkDeque.field_b &&
           pq.field_f != 0) {
-          stackIn_56_0 = !(PowerupEvent.field_m - sq.field_S >= 25);
+          stackIn_56_0 = !(PowerupEvent.field_m - HotspotTextWidget.field_S >= 25);
           kk.field_u = stackIn_56_0;
-          sq.field_S = PowerupEvent.field_m;
+          HotspotTextWidget.field_S = PowerupEvent.field_m;
         } else {
           kk.field_u = false;
         }

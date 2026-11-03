@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends al {
+final class ta extends ResizableDialog {
     static String field_jb;
     static String field_ob;
     static int[] field_ib;
@@ -36,7 +36,7 @@ final class ta extends al {
         }
     }
 
-    ta(vk param0, String param1) {
+    ta(DialogLayer param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
@@ -51,7 +51,7 @@ final class ta extends al {
           this.field_nb = false;
           this.b((byte) 107, this.field_qb);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class ta extends al {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -103,13 +103,13 @@ final class ta extends al {
         try {
           int var2_int = 34 / ((param0 + 20) / 42);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ta.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ta.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void drawDialogFrame(boolean param0, int param1, int param2) {
         if (param0) {
-          super.a(param0, param1, param2);
+          super.drawDialogFrame(param0, param1, param2);
           ci.field_d.b(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
           if (null != this.field_mb) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);
@@ -118,7 +118,7 @@ final class ta extends al {
           return;
         }
         field_hb = (ak) null;
-        super.a(param0, param1, param2);
+        super.drawDialogFrame(param0, param1, param2);
         ci.field_d.b(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
         if (null != this.field_mb) {
           SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);

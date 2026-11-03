@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class el extends rg {
+final class el extends SingleChildWidget {
     private String field_J;
     private int field_I;
     private boolean field_K;
@@ -62,8 +62,8 @@ final class el extends rg {
             }
             eb.field_B.field_R = 1;
             eb.field_B.field_V = qc.field_u.field_V;
-            if (sq.field_Q > 0) {
-              gg.a(param7, param4, param9, true);
+            if (HotspotTextWidget.field_Q > 0) {
+              MessageDialogContent.a(param7, param4, param9, true);
             }
             if (0 < InflaterDecompressor.field_a) {
               UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -85,8 +85,8 @@ final class el extends rg {
               PowerupBar.a(param4, param7, false, param9);
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
-              if (sq.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+              if (HotspotTextWidget.field_Q > 0) {
+                MessageDialogContent.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -104,8 +104,8 @@ final class el extends rg {
             } else {
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
-              if (sq.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+              if (HotspotTextWidget.field_Q > 0) {
+                MessageDialogContent.a(param7, param4, param9, true);
                 if (0 < InflaterDecompressor.field_a) {
                   UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                 }
@@ -164,8 +164,8 @@ final class el extends rg {
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
-              if (sq.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+              if (HotspotTextWidget.field_Q > 0) {
+                MessageDialogContent.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -188,8 +188,8 @@ final class el extends rg {
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
-              if (sq.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+              if (HotspotTextWidget.field_Q > 0) {
+                MessageDialogContent.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -231,8 +231,8 @@ final class el extends rg {
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
-              if (sq.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+              if (HotspotTextWidget.field_Q > 0) {
+                MessageDialogContent.a(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
                 UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -254,8 +254,8 @@ final class el extends rg {
                 PowerupBar.a(param4, param7, false, param9);
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
-                if (sq.field_Q > 0) {
-                  gg.a(param7, param4, param9, true);
+                if (HotspotTextWidget.field_Q > 0) {
+                  MessageDialogContent.a(param7, param4, param9, true);
                 }
                 if (0 < InflaterDecompressor.field_a) {
                   UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
@@ -273,8 +273,8 @@ final class el extends rg {
               } else {
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
-                if (sq.field_Q > 0) {
-                  gg.a(param7, param4, param9, true);
+                if (HotspotTextWidget.field_Q > 0) {
+                  MessageDialogContent.a(param7, param4, param9, true);
                   if (0 < InflaterDecompressor.field_a) {
                     UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
                   }
@@ -320,10 +320,10 @@ final class el extends rg {
         qj.field_i = qj.field_i + 1;
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var2 = this.field_B.field_l ? 1 : 0;
         this.field_B.field_l = this.field_l;
-        String var3 = this.field_B.d((byte) -84);
+        String var3 = this.field_B.getHoverText((byte) -84);
         this.field_B.field_l = var2 != 0 ? true : false;
         int var4 = -127 % ((53 - param0) / 57);
         return var3;
@@ -374,7 +374,7 @@ final class el extends rg {
           this.field_G.drawParagraph(this.field_J, this.field_I + (var7 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.maxAscent);
           return;
         }
-        this.d((byte) 56);
+        this.getHoverText((byte) 56);
         var7Lifetime1 = this.field_K ? -this.field_L + this.field_n - this.field_I * 2 : 0;
         this.field_G.drawParagraph(this.field_J, this.field_I + (var7Lifetime1 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.maxAscent);
     }
@@ -441,7 +441,7 @@ final class el extends rg {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

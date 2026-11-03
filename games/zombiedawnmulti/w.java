@@ -26,7 +26,7 @@ final class w extends PcmStream {
           param0.a(param2, param1, false);
           param0.a((byte) -116, param3);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "w.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "w.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class w extends PcmStream {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class w extends PcmStream {
           return false;
         }
         if (bk.field_i != null &&
-          bk.field_i.k(param3 ^ 18562)) {
+          bk.field_i.handleCancelKey(param3 ^ 18562)) {
           bk.field_i = null;
           q.b(46);
           return true;
@@ -497,7 +497,7 @@ final class w extends PcmStream {
           }
           uf.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "w.I(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "w.I(" + param0 + ')');
         }
     }
 
@@ -661,7 +661,7 @@ final class w extends PcmStream {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

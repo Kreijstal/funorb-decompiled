@@ -95,7 +95,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param7 > -35) {
           this.e((byte) 2);
         }
-        sq.field_R = param6;
+        HotspotTextWidget.field_R = param6;
         m.field_y = param4;
         this.initializeAccountPacketLengths((byte) 27);
         jo.a((byte) 81);
@@ -207,7 +207,7 @@ abstract class NetworkGameClient extends GameApplet {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0) {
           return;
         }
-        String var2 = al.k(103);
+        String var2 = ResizableDialog.k(103);
         ra.a(StatefulTextPainter.b(0), -44, var2);
     }
 
@@ -241,28 +241,28 @@ abstract class NetworkGameClient extends GameApplet {
           int var4_int = 121 % ((-11 - param2) / 51);
           this.a(param0, 640, 480, param1, (byte) -126);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "aq.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aq.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void initializeAccountPacketLengths(byte param0) {
-        sq.field_U[3] = -1;
-        sq.field_U[10] = -1;
-        sq.field_U[5] = -1;
-        sq.field_U[6] = -2;
-        sq.field_U[7] = -1;
-        sq.field_U[8] = -2;
-        sq.field_U[11] = -1;
-        sq.field_U[2] = -2;
-        sq.field_U[1] = 16;
-        sq.field_U[17] = -1;
-        sq.field_U[13] = -1;
-        sq.field_U[16] = -1;
-        sq.field_U[18] = 1;
+        HotspotTextWidget.field_U[3] = -1;
+        HotspotTextWidget.field_U[10] = -1;
+        HotspotTextWidget.field_U[5] = -1;
+        HotspotTextWidget.field_U[6] = -2;
+        HotspotTextWidget.field_U[7] = -1;
+        HotspotTextWidget.field_U[8] = -2;
+        HotspotTextWidget.field_U[11] = -1;
+        HotspotTextWidget.field_U[2] = -2;
+        HotspotTextWidget.field_U[1] = 16;
+        HotspotTextWidget.field_U[17] = -1;
+        HotspotTextWidget.field_U[13] = -1;
+        HotspotTextWidget.field_U[16] = -1;
+        HotspotTextWidget.field_U[18] = 1;
         if (param0 == 27) {
-          sq.field_U[12] = -1;
-          sq.field_U[9] = -1;
-          sq.field_U[4] = -1;
+          HotspotTextWidget.field_U[12] = -1;
+          HotspotTextWidget.field_U[9] = -1;
+          HotspotTextWidget.field_U[4] = -1;
           return;
         }
     }
@@ -391,7 +391,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = SimEntity.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
+            var5_intLifetime1 = SimEntity.a(nh.c((byte) -98), this.field_q, MessageDialogContent.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
             if (var5_intLifetime1 != -1) {
               InfectionEvent.a(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
               hb.field_b = null;
@@ -449,7 +449,7 @@ abstract class NetworkGameClient extends GameApplet {
             ma.field_a.b((byte) -35, 17);
           }
           if (var4 == 11) {
-            em.a(false, StatefulTextPainter.b(0));
+            BirthDateInputWidget.a(false, StatefulTextPainter.b(0));
           }
           if (var4 == 12) {
             ic.a(StatefulTextPainter.b(0), qe.b(6958), 49);
@@ -530,7 +530,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         ik.a(param0 ^ 50);
         ArmedHumanView.latchInputState((byte) -126);
-        if (!vk.l((byte) -126) &&
+        if (!DialogLayer.l((byte) -126) &&
           11 != a.field_b) {
           PortalEntryEvent.c(param0 - 93);
         }
@@ -638,11 +638,11 @@ abstract class NetworkGameClient extends GameApplet {
             cp.field_P = u.a(5, ContextMenu.field_Lb);
           }
           ra.field_l = oj.a(false, PortalView.field_G, 1, -24285, true);
-          fe.field_L = oj.a(false, m.field_y, 1, -24285, true);
+          AccountCreationForm.field_L = oj.a(false, m.field_y, 1, -24285, true);
           wm.field_V = oj.a(false, m.field_z, 1, -24285, true);
           ClientException.field_i = 2;
-          he.field_f = fe.field_L;
-          al.field_eb = ra.field_l;
+          he.field_f = AccountCreationForm.field_L;
+          ResizableDialog.field_eb = ra.field_l;
         }
         if (ClientException.field_i == 2) {
           if (cp.field_P != null &&
@@ -662,13 +662,13 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (ClientException.field_i == 3 &&
-          PortalView.areGraphicsArchivesReady(fe.field_L, param0 ^ -3795, ra.field_l, wm.field_V) &&
+          PortalView.areGraphicsArchivesReady(AccountCreationForm.field_L, param0 ^ -3795, ra.field_l, wm.field_V) &&
           jo.a(wm.field_V, 0)) {
           sc.b(1);
           lc.a(62);
           hh.field_m = false;
           SimArmedHuman.field_Bb = hj.field_e;
-          si.a(false, cm.field_e, wm.field_V, ra.field_l, fe.field_L);
+          si.a(false, cm.field_e, wm.field_V, ra.field_l, AccountCreationForm.field_L);
           if (gj.field_f ||
             null != kj.field_g) {
             stackIn_103_0 = kj.field_g;
@@ -686,7 +686,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           ud.a(-3758, TertiaryLinkDeque.field_e, wm.field_V, PacketBuffer.field_l);
           wm.field_V = null;
-          fe.field_L = null;
+          AccountCreationForm.field_L = null;
           ra.field_l = null;
           bk.a((java.applet.Applet) (this), -17708);
           IsaacRandom.d(26673);
@@ -694,7 +694,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (ClientException.field_i == 10) {
           if (p.field_e != 0) {
-            qc.field_s = u.a(5, sq.field_R);
+            qc.field_s = u.a(5, HotspotTextWidget.field_R);
           }
           ClientException.field_i = 11;
         }
@@ -821,10 +821,10 @@ abstract class NetworkGameClient extends GameApplet {
             km.a(4, (byte) 73);
           }
           if (wj.field_l[4]) {
-            gl.b(true, 5);
+            UsernameSuggestionsPanel.b(true, 5);
           }
           if (wj.field_l[5]) {
-            fe.a((byte) -121, 6);
+            AccountCreationForm.a((byte) -121, 6);
           }
           if (wj.field_l[6]) {
             TertiaryLinkNode.a((byte) 126, 7);

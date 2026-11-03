@@ -55,38 +55,38 @@ final class cm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, UiComponent param2) {
-        jb var13 = null;
+        PlayerContextMenu var13 = null;
         Sprite var14 = null;
         String var15 = null;
-        jb var16 = null;
+        PlayerContextMenu var16 = null;
         Sprite var17 = null;
         String var18 = null;
-        jb var19 = null;
+        PlayerContextMenu var19 = null;
         Sprite var20 = null;
         String var21 = null;
-        jb var22 = null;
+        PlayerContextMenu var22 = null;
         Sprite var23 = null;
         String var24 = null;
-        jb var25 = null;
+        PlayerContextMenu var25 = null;
         Sprite var26 = null;
         String var27 = null;
-        jb var28 = null;
+        PlayerContextMenu var28 = null;
         Sprite var29 = null;
         String var30 = null;
-        jb var31 = null;
+        PlayerContextMenu var31 = null;
         String var33 = null;
-        jb var34 = null;
+        PlayerContextMenu var34 = null;
         Sprite var35 = null;
         String var36 = null;
-        jb var37 = null;
+        PlayerContextMenu var37 = null;
         Sprite var38 = null;
         String var39 = null;
-        jb var40 = null;
+        PlayerContextMenu var40 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -146,7 +146,7 @@ final class cm {
             var34.field_j.a(var35, 12, var36, true);
             var37 = pk.field_b;
             var38 = wp.field_j[2];
-            var39 = gg.field_n;
+            var39 = MessageDialogContent.field_n;
             var37.field_j.a(var38, 13, var39, true);
           }
           var40 = pk.field_b;
@@ -156,7 +156,7 @@ final class cm {
           var8 = param2.field_z;
           var40.field_j.layoutAtAnchor(4542, var5, var8, var6, var7);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "cm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

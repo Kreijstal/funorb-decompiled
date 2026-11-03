@@ -62,22 +62,22 @@ final class NodeHashTableIterator implements Iterator {
             if (var4 >= 0) {
               var2 = var2 + pb.field_b;
               if (var4 == mo.field_Jb.field_d) {
-                stackIn_16_0 = vk.field_I;
+                stackIn_16_0 = DialogLayer.field_I;
               } else {
                 stackIn_16_0 = li.field_E;
               }
               var9 = stackIn_16_0;
               if (var9 != null) {
-                var9.a(var2, -GameCharacter.field_db + var8, (GameCharacter.field_db << 1) + var7, (ne.field_tb << 1) + MusicPatch.field_n, 12018);
+                var9.a(var2, -GameCharacter.field_db + var8, (GameCharacter.field_db << 1) + var7, (MessageDialog.field_tb << 1) + MusicPatch.field_n, 12018);
               }
-              var2 = var2 + ne.field_tb;
+              var2 = var2 + MessageDialog.field_tb;
             }
             if (var4 < 0) {
               SecondaryNodeDeque.field_c.c(var6, var8, mg.field_H + var2, var5, -1);
               var2 = var2 + ImageProducerRasterBuffer.field_l;
             } else {
               wn.field_u.c(var6, var8, var2 + LaboratoryScreen.field_n, var5, -1);
-              var2 = var2 + (MusicPatch.field_n + (pb.field_b + ne.field_tb));
+              var2 = var2 + (MusicPatch.field_n + (pb.field_b + MessageDialog.field_tb));
             }
           }
           var4Lifetime1 = -17 / ((param0 + 59) / 46);
@@ -85,7 +85,7 @@ final class NodeHashTableIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "up.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "up.C(" + param0 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_h = param0;
           this.c(1);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

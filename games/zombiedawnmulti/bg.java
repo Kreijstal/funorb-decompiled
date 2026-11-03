@@ -39,15 +39,15 @@ final class bg implements WidgetPainter {
 
     final static void a(int param0, byte param1, boolean param2) {
         ml var3 = null;
-        jb var4 = null;
+        PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         ml var3Lifetime1;
-        jb var4Lifetime1;
+        PlayerContextMenu var4Lifetime1;
         String var5_ref_StringLifetime1;
-        jb var4Lifetime2;
-        jb var4Lifetime1Lifetime1;
+        PlayerContextMenu var4Lifetime2;
+        PlayerContextMenu var4Lifetime1Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
         if (param1 > 43) {
@@ -119,16 +119,16 @@ final class bg implements WidgetPainter {
             this.field_g.drawParagraph(param4.field_j, var13 + (param4.field_y + param3), this.field_l + (param1 + param4.field_i), param4.field_n - this.field_h - var13, -(this.field_h << 1) + param4.field_w, this.field_c, this.field_i, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0) {
         if (param0 == 2) {
-          return dj.field_k == ta.field_hb ? true : false;
+          return BirthDateValidator.field_k == ta.field_hb ? true : false;
         }
         bg.a(-5, (byte) 74, true);
-        return dj.field_k == ta.field_hb ? true : false;
+        return BirthDateValidator.field_k == ta.field_hb ? true : false;
     }
 
     bg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -142,7 +142,7 @@ final class bg implements WidgetPainter {
           this.field_l = param2;
           this.field_b = param6;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

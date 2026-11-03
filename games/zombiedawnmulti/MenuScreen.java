@@ -46,7 +46,7 @@ class MenuScreen {
           bi.field_e = true;
           kk.a(-97, 0, 11);
         } else {
-          if (df.field_I) {
+          if (FadingDialog.field_I) {
             var3 = pp.field_n ? 1 : 0;
             GameCharacter.l((byte) 124);
             if (var3 == 0) {
@@ -197,7 +197,7 @@ class MenuScreen {
         var6 = var4;
         if (var6 == 40) {
           if (this.field_g.c(-85)) {
-            df.field_I = false;
+            FadingDialog.field_I = false;
             if (!wc.j(127)) {
               var6 = param1 ? 1 : 0;
               LevelActorSpawner.a(var6 != 0, -4, 126, sp.field_g);
@@ -394,7 +394,7 @@ class MenuScreen {
                                         case 34:
                                           if (this.field_g.c(-85)) {
                                             oq.c((byte) 127);
-                                            we.field_g[34] = df.a(-128);
+                                            we.field_g[34] = FadingDialog.a(-128);
                                             FullscreenFocusCanvas.field_k.field_i = FullscreenFocusCanvas.field_k.field_i ^ 2;
                                             IntrusiveDeque.b((byte) -61);
                                           }
@@ -608,9 +608,9 @@ class MenuScreen {
           var3 = 4 + ah.field_e.maxDescent + ah.field_e.field_J;
           var4 = 16777215;
           pb.field_e.b(af.field_a, 320, var2, var4, -1);
-          pb.field_e.b(FightEvent.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
-          pb.field_e.b(on.a(true, gg.field_k, vh.field_Mb, false), 320, var2 + (3 * var3 + 38), var4, -1);
-          pb.field_e.b(PortalEntryEvent.a(vh.field_Mb, gg.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
+          pb.field_e.b(FightEvent.a(vh.field_Mb, false, 118, MessageDialogContent.field_k), 320, var3 + var2, var4, -1);
+          pb.field_e.b(on.a(true, MessageDialogContent.field_k, vh.field_Mb, false), 320, var2 + (3 * var3 + 38), var4, -1);
+          pb.field_e.b(PortalEntryEvent.a(vh.field_Mb, MessageDialogContent.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
         }
         if (!param0) {
           this.a(-45);
@@ -744,7 +744,7 @@ class MenuScreen {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -859,7 +859,7 @@ class MenuScreen {
         var3Lifetime2 = 1;
         if (am.a(param0 ^ -112) &&
           PowerupButton.field_e != null &&
-          !df.field_I) {
+          !FadingDialog.field_I) {
           stackIn_65_0 = (PowerupButton.field_e.a(true, 15978)) ? 0 : 1;
           var3Lifetime2 = stackIn_65_0;
           if (ValidationState.field_b) {
@@ -1023,7 +1023,7 @@ class MenuScreen {
           this.field_i = param2;
           this.field_g = new hh(this.field_j.length);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "nc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

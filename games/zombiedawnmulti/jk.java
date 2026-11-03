@@ -35,7 +35,7 @@ final class jk {
         if (param0 > -38) {
           jk.a((byte) -103, -99);
         }
-        stackIn_7_0 = (param1 != 255) && (param1 >= 0) && ((1L << param1 & em.field_N) != 0L);
+        stackIn_7_0 = (param1 != 255) && (param1 >= 0) && ((1L << param1 & BirthDateInputWidget.field_N) != 0L);
         return stackIn_7_0;
     }
 
@@ -77,7 +77,7 @@ final class jk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -89,10 +89,10 @@ final class jk {
         RuntimeException var2 = null;
         try {
           if (EmailAvailabilityValidator.field_s != null) {
-            EmailAvailabilityValidator.field_s.field_J.a((byte) -112, param1);
+            EmailAvailabilityValidator.field_s.field_J.setSuggestions((byte) -112, param1);
           }
           if (qe.field_e != null) {
-            qe.field_e.field_V.a((byte) -112, param1);
+            qe.field_e.field_V.setSuggestions((byte) -112, param1);
           }
           if (param0 != 0) {
             jk.a((byte) 88, 116);
@@ -108,7 +108,7 @@ final class jk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

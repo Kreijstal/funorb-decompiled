@@ -44,7 +44,7 @@ final class ai implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class ai implements Runnable {
           qj.a(StatefulTextPainter.field_v, false, 102);
           int var2_int = -102 % ((52 - param1) / 40);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ai.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ai.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class ai implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -238,20 +238,20 @@ final class ai implements Runnable {
               qh.field_a = true;
             }
           }
-          if (fa.field_Tb != null) {
-            var3 = -(fa.field_Tb.field_u / 2) + 357;
+          if (ReportAbuseDialog.field_Tb != null) {
+            var3 = -(ReportAbuseDialog.field_Tb.field_u / 2) + 357;
             var4 = 0;
             if (kd.field_b != 0 &&
               ka.field_t > var3 &&
-              fa.field_Tb.height + var3 > ka.field_t) {
-              if (269 - fa.field_Tb.width < vb.field_f &&
+              ReportAbuseDialog.field_Tb.height + var3 > ka.field_t) {
+              if (269 - ReportAbuseDialog.field_Tb.width < vb.field_f &&
                 vb.field_f < 269) {
                 var4 = 1;
                 lb.field_a = nf.field_c;
                 qh.field_a = false;
               }
               if (vb.field_f > 586 &&
-                vb.field_f < fa.field_Tb.width + 586) {
+                vb.field_f < ReportAbuseDialog.field_Tb.width + 586) {
                 var4 = 1;
                 qh.field_a = true;
                 lb.field_a = nf.field_c;
@@ -260,13 +260,13 @@ final class ai implements Runnable {
             if (var4 == 0 &&
               nf.field_a < lb.field_a &&
               bo.field_d > var3 &&
-              fa.field_Tb.height + var3 > bo.field_d) {
-              if (-fa.field_Tb.width + 269 < MouseInputHandler.field_g &&
+              ReportAbuseDialog.field_Tb.height + var3 > bo.field_d) {
+              if (-ReportAbuseDialog.field_Tb.width + 269 < MouseInputHandler.field_g &&
                 269 > MouseInputHandler.field_g) {
                 lb.field_a = nf.field_a;
               }
               if (MouseInputHandler.field_g > 586 &&
-                MouseInputHandler.field_g < 586 + fa.field_Tb.width) {
+                MouseInputHandler.field_g < 586 + ReportAbuseDialog.field_Tb.width) {
                 lb.field_a = nf.field_a;
               }
             }
@@ -274,13 +274,13 @@ final class ai implements Runnable {
           if (!param0) {
             return 0;
           }
-          gl.field_H.a(al.c(bo.field_d, -1, MouseInputHandler.field_g), 104, al.c(ka.field_t, param1 - 111, vb.field_f));
-          if (gl.field_H.c(-85)) {
-            if (gl.field_H.field_d == 0) {
+          UsernameSuggestionsPanel.field_H.a(ResizableDialog.c(bo.field_d, -1, MouseInputHandler.field_g), 104, ResizableDialog.c(ka.field_t, param1 - 111, vb.field_f));
+          if (UsernameSuggestionsPanel.field_H.c(-85)) {
+            if (UsernameSuggestionsPanel.field_H.field_d == 0) {
               stackIn_63_0 = 3;
               return stackIn_63_0;
             }
-            if (gl.field_H.field_d == 1) {
+            if (UsernameSuggestionsPanel.field_H.field_d == 1) {
               stackIn_66_0 = 2;
               return stackIn_66_0;
             }
@@ -290,13 +290,13 @@ final class ai implements Runnable {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }
-            gl.field_H.a(0, false);
-            if (gl.field_H.c(-85)) {
-              if (gl.field_H.field_d == 0) {
+            UsernameSuggestionsPanel.field_H.a(0, false);
+            if (UsernameSuggestionsPanel.field_H.c(-85)) {
+              if (UsernameSuggestionsPanel.field_H.field_d == 0) {
                 stackIn_72_0 = 3;
                 return stackIn_72_0;
               }
-              if (gl.field_H.field_d == 1) {
+              if (UsernameSuggestionsPanel.field_H.field_d == 1) {
                 stackIn_76_0 = 1;
                 return stackIn_76_0;
               }
@@ -311,7 +311,7 @@ final class ai implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ai.E(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ai.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class ai implements Runnable {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class ai implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -499,7 +499,7 @@ final class ai implements Runnable {
           }
           this.field_i = (Thread) (var2.field_d);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

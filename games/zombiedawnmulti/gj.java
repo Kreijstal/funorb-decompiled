@@ -32,7 +32,7 @@ final class gj {
     final static void a(int param0) {
         IntrusiveNode var1 = null;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!df.field_H) {
+        if (!FadingDialog.field_H) {
           return;
         }
         try {
@@ -58,7 +58,7 @@ final class gj {
           qo.field_q.e(-30986);
           jp.field_c.e(param0 ^ -25148);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ')');
         }
     }
 

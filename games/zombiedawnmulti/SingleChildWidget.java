@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-abstract class rg extends UiWidget implements ChildWidgetOwner {
+abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     UiWidget field_B;
     static IndexedSprite field_C;
     static String field_D;
 
-    final void a(Hashtable param0, boolean param1, StringBuilder param2, int param3) {
+    final void appendChildDiagnostics(Hashtable param0, boolean param1, StringBuilder param2, int param3) {
         StringBuilder discarded$4 = null;
         int var5_int = 0;
         StringBuilder discarded$6 = null;
@@ -24,7 +24,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (!param1) {
-            this.f(-102);
+            this.findFocusTarget(-102);
           }
           discarded$4 = param2.append('\n');
           for (var5_int = 0; var5_int <= param3; var5_int++) {
@@ -52,7 +52,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -68,10 +68,10 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
         try {
           if (this.a(param1, 9, param3, param2)) {
             this.a(param2, param3, (byte) 26, param1);
-            this.a(param1, true, param3, param2);
+            this.appendChildDiagnostics(param1, true, param3, param2);
           }
           if (param0 != 7) {
-            this.c(-4);
+            this.hasKeyboardFocus(-4);
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -91,7 +91,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -104,12 +104,12 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    String d(byte param0) {
+    String getHoverText(byte param0) {
         String var4 = null;
-        String var2 = super.d((byte) 117);
+        String var2 = super.getHoverText((byte) 117);
         int var3 = 6 % ((53 - param0) / 57);
         if (this.field_B != null) {
-          var4 = this.field_B.d((byte) 110);
+          var4 = this.field_B.getHoverText((byte) 110);
           if (var4 != null) {
             return var4;
           }
@@ -148,11 +148,11 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final boolean a(UiWidget param0, byte param1) {
+    private final boolean handlePointerPress(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -163,7 +163,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           if (param1 > -124) {
             this.field_B = (UiWidget) null;
           }
-          stackIn_7_0 = (this.field_B != null) && (!this.field_B.c(125)) && (this.field_B.requestKeyboardFocus(param0, 0));
+          stackIn_7_0 = (this.field_B != null) && (!this.field_B.hasKeyboardFocus(125)) && (this.field_B.requestKeyboardFocus(param0, 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,15 +175,15 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    rg(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
+    SingleChildWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final boolean a(byte param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean requestKeyboardFocus(byte param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_5_0 = false;
@@ -193,7 +193,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = 66 / ((param0 - 48) / 37);
-          stackIn_5_0 = (null != this.field_B) && (this.field_B.c(125)) && (this.field_B.a((byte) -125, param1, param2, param3, param4, param5, param6));
+          stackIn_5_0 = (null != this.field_B) && (this.field_B.hasKeyboardFocus(125)) && (this.field_B.requestKeyboardFocus((byte) -125, param1, param2, param3, param4, param5, param6));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,11 +205,11 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    UiWidget f(int param0) {
+    UiWidget findFocusTarget(int param0) {
         if (param0 != -1963) {
           field_C = (IndexedSprite) null;
         }
@@ -217,7 +217,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
         if (var2 == null) {
           return null;
         }
-        if (!var2.c(param0 ^ -2005)) {
+        if (!var2.hasKeyboardFocus(param0 ^ -2005)) {
           return null;
         }
         return var2;
@@ -225,7 +225,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
 
     public static void a(byte param0) {
         if (param0 != -39) {
-          rg.a((byte) 21);
+          SingleChildWidget.a((byte) 21);
         }
         field_D = null;
         field_C = null;
@@ -247,7 +247,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
             this.field_B.updatePointerState(-5407, param1, this.field_y + param2, this.field_i + param3);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "rg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
             field_C = (IndexedSprite) null;
           }
           if (this.field_B != null &&
-            this.field_B.c(127) &&
+            this.field_B.hasKeyboardFocus(127) &&
             this.field_B.handleKeyInput(param0, param1, param2, -6208)) {
             return true;
           }
@@ -280,7 +280,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           if (lc.field_m[81]) {
             stackIn_12_0 = this.a(-81, param2);
           } else {
-            stackIn_12_0 = this.a(param2, (byte) -125);
+            stackIn_12_0 = this.handlePointerPress(param2, (byte) -125);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -293,7 +293,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -306,9 +306,9 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -81) {
-            this.c(-108);
+            this.hasKeyboardFocus(-108);
           }
-          stackIn_7_0 = (null != this.field_B) && (!this.field_B.c(127)) && (this.field_B.requestKeyboardFocus(param1, 0));
+          stackIn_7_0 = (null != this.field_B) && (!this.field_B.hasKeyboardFocus(127)) && (this.field_B.requestKeyboardFocus(param1, 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -320,7 +320,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -360,15 +360,15 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean c(int param0) {
+    final boolean hasKeyboardFocus(int param0) {
         if (param0 < 123) {
           field_D = (String) null;
         }
-        return null != this.f(-1963) ? true : false;
+        return null != this.findFocusTarget(-1963) ? true : false;
     }
 
     final static UiTheme g(int param0) {
@@ -413,7 +413,7 @@ abstract class rg extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

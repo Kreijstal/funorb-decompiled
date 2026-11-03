@@ -121,7 +121,7 @@ final class mg extends SceneObject {
             vo.field_l = MouseWheelInput.field_c;
           }
           if (MouseWheelInput.field_c == vo.field_l &&
-            fa.b(10, 1)) {
+            ReportAbuseDialog.b(10, 1)) {
             var9Lifetime1 = s.field_e.readUnsignedByte(31365);
             s.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -138,7 +138,7 @@ final class mg extends SceneObject {
                 return stackIn_31_0;
               }
               if (var9Lifetime1 == 99) {
-                fa.b(10, wm.f(1));
+                ReportAbuseDialog.b(10, wm.f(1));
                 dd.field_d = new Boolean(PhaseChangeEvent.a(s.field_e, (byte) -114));
                 s.field_e.position = 0;
               } else {
@@ -150,10 +150,10 @@ final class mg extends SceneObject {
           }
           if (sa.field_n == vo.field_l) {
             var9Lifetime2 = 2;
-            if (fa.b(param6 ^ -82, var9Lifetime2)) {
+            if (ReportAbuseDialog.b(param6 ^ -82, var9Lifetime2)) {
               var10Lifetime1 = s.field_e.readUnsignedShort((byte) 69);
               s.field_e.position = 0;
-              if (fa.b(10, var10Lifetime1)) {
+              if (ReportAbuseDialog.b(10, var10Lifetime1)) {
                 var11 = hb.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   hb.field_b[var12] = s.field_e.c(0);
@@ -223,7 +223,7 @@ final class mg extends SceneObject {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class mg extends SceneObject {
           }
           ((BitmapFont) ((Object) var8)).a(gh.field_f[param0], param6 + 29, 58 + param3, 16777215, 1, param5);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "mg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ final class mg extends SceneObject {
           rp var2 = (rp) null;
           mg.a(-13, 21, (byte) 127, 95, (rp) null, 24, -18);
         }
-        sq.field_N = true;
+        HotspotTextWidget.field_N = true;
         va.field_a = 0;
     }
 
@@ -388,7 +388,7 @@ final class mg extends SceneObject {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

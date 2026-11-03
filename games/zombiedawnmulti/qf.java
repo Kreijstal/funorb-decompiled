@@ -100,7 +100,7 @@ final class qf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class qf {
           b.field_b = param1;
           sc.a(ah.field_e.maxAscent + ah.field_e.maxDescent, NavigationGrid.field_h, param4, true, 320, 240, 15, ah.field_e, 10, (byte) -103, 5, param0, ah.field_e.maxAscent, param2, GameSimulation.field_a);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

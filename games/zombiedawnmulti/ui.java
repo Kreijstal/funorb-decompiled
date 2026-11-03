@@ -36,7 +36,7 @@ final class ui extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ final class ui extends IntrusiveNode {
             discarded$0 = this.a(105);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class ui extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ui.C(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ui.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ui extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "ui.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "ui.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -157,20 +157,20 @@ final class ui extends IntrusiveNode {
             ((BinaryBitmapFont) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, -1);
             SoftwareRasterizer.restoreClip(var13);
             if (hh.field_b &&
-              sq.field_N &&
-              !df.field_I) {
+              HotspotTextWidget.field_N &&
+              !FadingDialog.field_I) {
               stackIn_40_0 = 1;
             } else {
               stackIn_40_0 = 0;
             }
             var9 = stackIn_40_0;
-            stackIn_46_0 = (param0) && (vk.i((byte) -39)) && (var9 == 0);
+            stackIn_46_0 = (param0) && (DialogLayer.i((byte) -39)) && (var9 == 0);
             dd.a(stackIn_46_0, 0);
             if (ValidationState.field_b) {
               if (var9 == 0) {
                 return;
               }
-              stackIn_56_0 = (param0) && (vk.i((byte) -39));
+              stackIn_56_0 = (param0) && (DialogLayer.i((byte) -39));
               kg.a(stackIn_56_0, (byte) 117);
             }
           }
@@ -178,7 +178,7 @@ final class ui extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ui.E(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ui.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class ui extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ui.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ui.D(" + param0 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class ui extends IntrusiveNode {
             field_j = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ui.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.F(" + param0 + ')');
         }
     }
 
@@ -232,8 +232,8 @@ final class ui extends IntrusiveNode {
               if (JaggrabDownloader.field_h > 0) {
                 JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
               } else {
-                if (sq.field_Q > 0) {
-                  sq.field_Q = sq.field_Q - 1;
+                if (HotspotTextWidget.field_Q > 0) {
+                  HotspotTextWidget.field_Q = HotspotTextWidget.field_Q - 1;
                 } else {
                   if (InflaterDecompressor.field_a >= b.field_d) {
                     var2_int = -72 / ((-39 - param0) / 44);
@@ -248,8 +248,8 @@ final class ui extends IntrusiveNode {
             } else {
               if (BufferedSocket.field_n == null) {
                 io.field_b = false;
-                if (sq.field_Q > 0) {
-                  sq.field_Q = sq.field_Q - 1;
+                if (HotspotTextWidget.field_Q > 0) {
+                  HotspotTextWidget.field_Q = HotspotTextWidget.field_Q - 1;
                 } else {
                   if (InflaterDecompressor.field_a <= 0) {
                     if (JaggrabDownloader.field_h < b.field_d) {
@@ -267,11 +267,11 @@ final class ui extends IntrusiveNode {
                   JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
                 } else {
                   if (InflaterDecompressor.field_a <= 0) {
-                    if (sq.field_Q < b.field_d) {
-                      if (0 == sq.field_Q) {
+                    if (HotspotTextWidget.field_Q < b.field_d) {
+                      if (0 == HotspotTextWidget.field_Q) {
                         jq.a(true, (byte) 126);
                       }
-                      sq.field_Q = sq.field_Q + 1;
+                      HotspotTextWidget.field_Q = HotspotTextWidget.field_Q + 1;
                     }
                   } else {
                     InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
@@ -283,12 +283,12 @@ final class ui extends IntrusiveNode {
             if (JaggrabDownloader.field_h > 0) {
               JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
             } else {
-              if (0 >= sq.field_Q) {
+              if (0 >= HotspotTextWidget.field_Q) {
                 if (InflaterDecompressor.field_a > 0) {
                   InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
                 }
               } else {
-                sq.field_Q = sq.field_Q - 1;
+                HotspotTextWidget.field_Q = HotspotTextWidget.field_Q - 1;
               }
             }
           }
@@ -297,7 +297,7 @@ final class ui extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ui.G(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ui.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class ui extends IntrusiveNode {
           this.field_h = 24 * this.field_l - (-12 - this.a(-29394));
           this.field_m = 12 + (24 * this.field_g + this.a(-29394));
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

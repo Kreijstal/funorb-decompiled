@@ -118,7 +118,7 @@ final class vl extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class vl extends IntrusiveNode {
         try {
           wk.field_G = param4;
           no.field_Gb = param3;
-          al.field_bb = param5;
+          ResizableDialog.field_bb = param5;
           RandomAccessCacheFile.field_a = param0;
           en.field_d = param1;
           if (param2 <= 43) {
@@ -134,7 +134,7 @@ final class vl extends IntrusiveNode {
             vl.a((pd) null, (pd) null, -67, -110, -57, -56);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "vl.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vl.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

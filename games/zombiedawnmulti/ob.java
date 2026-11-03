@@ -110,7 +110,7 @@ final class ob extends DualLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class ob extends DualLinkNode {
           }
           var3_intLifetime1 = -23 / ((param0 - 19) / 42);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ob.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ob.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class ob extends DualLinkNode {
           param0.field_z = 0;
           param0.field_mb = 0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ob.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ob.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

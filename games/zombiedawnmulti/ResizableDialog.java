@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class al extends df {
+abstract class ResizableDialog extends FadingDialog {
     static String field_U;
     static String field_ab;
     static UiComponent field_fb;
@@ -43,14 +43,14 @@ abstract class al extends df {
         }
     }
 
-    boolean i(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
         int var5 = 0;
         int var4 = 0;
         if (param0 != -27388) {
-          this.a(-14, (byte) 3, 7, -57);
+          this.startResizeTransition(-14, (byte) 3, 7, -57);
         }
         if (this.field_db <= 0) {
         } else {
@@ -69,7 +69,7 @@ abstract class al extends df {
           }
           this.b(var2, var3, param0 + 27505);
         }
-        return super.i(-27388);
+        return super.advanceDialogAnimation(-27388);
     }
 
     final static String k(int param0) {
@@ -97,13 +97,13 @@ abstract class al extends df {
         field_W = null;
     }
 
-    al(vk param0, int param1, int param2) {
+    ResizableDialog(DialogLayer param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_S = 0;
         this.field_db = 0;
     }
 
-    void a(boolean param0, int param1, int param2) {
+    void drawDialogFrame(boolean param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -225,8 +225,8 @@ abstract class al extends df {
           cr.field_j + er.field_j.height > param0) {
           return 0;
         }
-        if (RasterSnapshot.field_k <= param2 && param2 < RasterSnapshot.field_k + er.field_j.width && param0 >= sq.field_O &&
-          !(param0 >= sq.field_O + er.field_j.height)) {
+        if (RasterSnapshot.field_k <= param2 && param2 < RasterSnapshot.field_k + er.field_j.width && param0 >= HotspotTextWidget.field_O &&
+          !(param0 >= HotspotTextWidget.field_O + er.field_j.height)) {
           return 1;
         }
         if (param1 != -1) {
@@ -255,7 +255,7 @@ abstract class al extends df {
         this.j((byte) -116);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void startResizeTransition(int param0, byte param1, int param2, int param3) {
         if (param0 <= 0) {
           this.b(param3, param2, 73);
           return;

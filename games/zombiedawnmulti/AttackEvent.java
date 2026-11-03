@@ -62,7 +62,7 @@ final class AttackEvent extends GameEvent {
             this.field_k = 117;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "uo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

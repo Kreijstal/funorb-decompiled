@@ -69,7 +69,7 @@ final class dk extends UiComponent {
               stackIn_10_0 = cm.field_a;
               stackIn_11_1 = (param0) && (!ee.field_a);
               ((UiComponent) (Object) stackIn_10_0).c(stackIn_11_1, -1);
-              if (!(sq.field_Q <= 0) ||
+              if (!(HotspotTextWidget.field_Q <= 0) ||
                 !(InflaterDecompressor.field_a <= 0)) {
                 if (vm.field_lb != null) {
                   vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
@@ -92,7 +92,7 @@ final class dk extends UiComponent {
             stackIn_35_1 = (param0) && (!ee.field_a);
             ((UiComponent) (Object) stackIn_34_0).c(stackIn_35_1, -1);
           }
-          if (sq.field_Q > 0) {
+          if (HotspotTextWidget.field_Q > 0) {
             if (vm.field_lb != null) {
               vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
             }
@@ -117,7 +117,7 @@ final class dk extends UiComponent {
           }
         } else {
           if (0 >= JaggrabDownloader.field_h) {
-            if (sq.field_Q > 0) {
+            if (HotspotTextWidget.field_Q > 0) {
               if (vm.field_lb != null) {
                 vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
               }
@@ -150,7 +150,7 @@ final class dk extends UiComponent {
             stackIn_74_0 = cm.field_a;
             stackIn_75_1 = (param0) && (!ee.field_a);
             ((UiComponent) (Object) stackIn_74_0).c(stackIn_75_1, -1);
-            if (sq.field_Q > 0) {
+            if (HotspotTextWidget.field_Q > 0) {
               if (vm.field_lb != null) {
                 vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
               }
@@ -580,7 +580,7 @@ final class dk extends UiComponent {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

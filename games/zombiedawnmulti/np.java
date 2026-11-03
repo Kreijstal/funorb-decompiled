@@ -19,7 +19,7 @@ final class np extends GameEvent {
             this.a(-4, true, -103, 39);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "np.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "np.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

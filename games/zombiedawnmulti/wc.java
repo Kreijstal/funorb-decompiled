@@ -62,7 +62,7 @@ final class wc extends SceneObject {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "wc.L(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "wc.L(" + param0 + ')');
         }
     }
 
@@ -123,16 +123,16 @@ final class wc extends SceneObject {
             stackIn_4_0 = stackIn_17_0;
             stackIn_4_1 = true;
             stackIn_7_2 = (ib.field_a <= 50) ? false : true;
-            df.a(stackIn_4_0 != 0, stackIn_4_1, stackIn_7_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+            FadingDialog.a(stackIn_4_0 != 0, stackIn_4_1, stackIn_7_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
           } else {
             if (cp.field_K) {
               stackIn_33_1 = true;
               stackIn_34_2 = (ib.field_a <= 50) ? false : true;
-              df.a(stackIn_17_0 != 0, stackIn_33_1, stackIn_34_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              FadingDialog.a(stackIn_17_0 != 0, stackIn_33_1, stackIn_34_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
               stackIn_20_1 = false;
               stackIn_21_2 = (ib.field_a <= 50) ? false : true;
-              df.a(stackIn_17_0 != 0, stackIn_20_1, stackIn_21_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              FadingDialog.a(stackIn_17_0 != 0, stackIn_20_1, stackIn_21_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             }
           }
         } else {
@@ -143,16 +143,16 @@ final class wc extends SceneObject {
               stackIn_138_0 = stackIn_151_0;
               stackIn_138_1 = true;
               stackIn_141_2 = (ib.field_a <= 50) ? false : true;
-              df.a(stackIn_138_0 != 0, stackIn_138_1, stackIn_141_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              FadingDialog.a(stackIn_138_0 != 0, stackIn_138_1, stackIn_141_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
               if (cp.field_K) {
                 stackIn_167_1 = true;
                 stackIn_168_2 = (ib.field_a <= 50) ? false : true;
-                df.a(stackIn_151_0 != 0, stackIn_167_1, stackIn_168_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+                FadingDialog.a(stackIn_151_0 != 0, stackIn_167_1, stackIn_168_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               } else {
                 stackIn_154_1 = false;
                 stackIn_155_2 = (ib.field_a <= 50) ? false : true;
-                df.a(stackIn_151_0 != 0, stackIn_154_1, stackIn_155_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+                FadingDialog.a(stackIn_151_0 != 0, stackIn_154_1, stackIn_155_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               }
             }
             if (UiWidget.field_r) {
@@ -176,16 +176,16 @@ final class wc extends SceneObject {
               stackIn_94_0 = stackIn_107_0;
               stackIn_94_1 = true;
               stackIn_97_2 = (ib.field_a <= 50) ? false : true;
-              df.a(stackIn_94_0 != 0, stackIn_94_1, stackIn_97_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              FadingDialog.a(stackIn_94_0 != 0, stackIn_94_1, stackIn_97_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
               if (cp.field_K) {
                 stackIn_123_1 = true;
                 stackIn_124_2 = (ib.field_a <= 50) ? false : true;
-                df.a(stackIn_107_0 != 0, stackIn_123_1, stackIn_124_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+                FadingDialog.a(stackIn_107_0 != 0, stackIn_123_1, stackIn_124_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               } else {
                 stackIn_110_1 = false;
                 stackIn_111_2 = (ib.field_a <= 50) ? false : true;
-                df.a(stackIn_107_0 != 0, stackIn_110_1, stackIn_111_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+                FadingDialog.a(stackIn_107_0 != 0, stackIn_110_1, stackIn_111_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               }
             }
           } else {
@@ -195,16 +195,16 @@ final class wc extends SceneObject {
               stackIn_50_0 = stackIn_63_0;
               stackIn_50_1 = true;
               stackIn_53_2 = (ib.field_a <= 50) ? false : true;
-              df.a(stackIn_50_0 != 0, stackIn_50_1, stackIn_53_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              FadingDialog.a(stackIn_50_0 != 0, stackIn_50_1, stackIn_53_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
               if (cp.field_K) {
                 stackIn_79_1 = true;
                 stackIn_80_2 = (ib.field_a <= 50) ? false : true;
-                df.a(stackIn_63_0 != 0, stackIn_79_1, stackIn_80_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+                FadingDialog.a(stackIn_63_0 != 0, stackIn_79_1, stackIn_80_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               } else {
                 stackIn_66_1 = false;
                 stackIn_67_2 = (ib.field_a <= 50) ? false : true;
-                df.a(stackIn_63_0 != 0, stackIn_66_1, stackIn_67_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+                FadingDialog.a(stackIn_63_0 != 0, stackIn_66_1, stackIn_67_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               }
             }
           }
@@ -289,7 +289,7 @@ final class wc extends SceneObject {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

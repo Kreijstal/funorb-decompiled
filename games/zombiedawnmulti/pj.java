@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj extends WidgetContainer implements co, in {
-    private tf field_H;
+final class pj extends WidgetContainer implements HotspotActivationListener, ButtonActivationListener {
+    private AccountCreationDialog field_H;
     static long[] field_K;
-    private sq field_L;
+    private HotspotTextWidget field_L;
     static ta field_I;
     private ButtonWidget field_G;
     static String field_J;
@@ -16,7 +16,7 @@ final class pj extends WidgetContainer implements co, in {
         return "</col></u>";
     }
 
-    public final void a(int param0, sq param1, int param2, int param3) {
+    public final void onHotspotActivated(int param0, HotspotTextWidget param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -51,11 +51,11 @@ final class pj extends WidgetContainer implements co, in {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    pj(tf param0) {
+    pj(AccountCreationDialog param0) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
@@ -69,10 +69,10 @@ final class pj extends WidgetContainer implements co, in {
           var7 = vl.a(ng.field_a, new String[]{this.h(-1), this.a(111)}, 2);
           var3 = 20;
           var4 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.maxAscent, -1, 2147483647, true);
-          this.field_L = new sq(var7, var4);
+          this.field_L = new HotspotTextWidget(var7, var4);
           this.field_L.field_x = "";
-          this.field_L.a(0, (byte) -107, mp.field_d);
-          this.field_L.a(1, (byte) -115, mp.field_d);
+          this.field_L.setHotspotHoverText(0, (byte) -107, mp.field_d);
+          this.field_L.setHotspotHoverText(1, (byte) -115, mp.field_d);
           this.field_L.field_A = (WidgetListener) (this);
           this.field_L.field_n = -40 + this.field_n;
           this.field_L.a(this.field_n - 40, var3, (byte) -4, 26);
@@ -85,7 +85,7 @@ final class pj extends WidgetContainer implements co, in {
           this.b((byte) 59, this.field_G);
           this.setWidgetBounds(0, 0, 28972, 300, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class pj extends WidgetContainer implements co, in {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -195,11 +195,11 @@ final class pj extends WidgetContainer implements co, in {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         ButtonWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -209,13 +209,13 @@ final class pj extends WidgetContainer implements co, in {
         try {
           if (param2 == this.field_G) {
             va.a((byte) 62);
-            this.field_H.m(-7435);
+            this.field_H.dismissDialog(-7435);
           }
           if (param3 < -83) {
             return;
           }
           var7 = (ButtonWidget) null;
-          this.a(82, -128, (ButtonWidget) null, -108, 33);
+          this.onButtonActivated(82, -128, (ButtonWidget) null, -108, 33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class pj extends WidgetContainer implements co, in {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class pj extends WidgetContainer implements co, in {
           var7[-1 + var7.length] = new hn(param3, param4, param1, param6, param0, param2);
           PasswordValidator.field_x = var7;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "pj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -58,14 +58,14 @@ final class lb {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1, int param2) {
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!df.field_H) {
+        if (!FadingDialog.field_H) {
           return;
         }
         if (-1 == param0) {
@@ -102,11 +102,11 @@ final class lb {
           throw new IllegalStateException();
         }
         if (PortalView.field_L != null) {
-          PortalView.field_L.m(-7435);
+          PortalView.field_L.dismissDialog(-7435);
         }
         String var1 = ob.e(-24093);
         b.field_c = new qm(var1, (String) null, true, false, false);
-        nb.field_a.b(3016, wj.field_i);
+        nb.field_a.showDialog(3016, wj.field_i);
         wj.field_i.a((UiWidget) (b.field_c), (byte) -123);
         if (param0 == 9047) {
           wj.field_i.h((byte) 49);

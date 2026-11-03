@@ -43,7 +43,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               return;
             }
           } else {
-            if (vk.l((byte) -127)) {
+            if (DialogLayer.l((byte) -127)) {
               if (null != rn.field_f) {
                 stackIn_15_0 = true;
               } else {
@@ -194,7 +194,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref), "ZombieDawnMulti.IA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "ZombieDawnMulti.IA(" + param0 + ')');
         }
     }
 
@@ -205,35 +205,35 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           IsaacRandom.field_j = true;
           PowerupEvent.field_m = 5000 * (int)Math.random();
           FullscreenFocusCanvas.field_k = new rp();
-          df.field_H = true;
+          FadingDialog.field_H = true;
           var2 = new MidiPcmStream();
           var2.f(128, 15, 9);
           db.a(ArrayWidgetGroup.field_J, 22050, (java.awt.Component) ((Object) dk.field_Ib), var2, 1024, true);
           this.a(true, (byte) -27, false, true, true, false, true);
-          sq.field_U[64] = 1;
-          sq.field_U[79] = 14;
-          sq.field_U[10] = -1;
-          sq.field_U[9] = -1;
-          sq.field_U[76] = 5;
-          sq.field_U[66] = 1;
-          sq.field_U[61] = 25;
-          sq.field_U[65] = 1;
-          sq.field_U[62] = -1;
-          sq.field_U[77] = -1;
-          sq.field_U[57] = -2;
-          sq.field_U[81] = 25;
-          sq.field_U[70] = 2;
-          sq.field_U[71] = -1;
-          sq.field_U[74] = 10;
-          sq.field_U[param0] = 17;
-          sq.field_U[80] = 11;
-          sq.field_U[82] = 4;
-          sq.field_U[69] = -1;
-          sq.field_U[58] = -2;
-          sq.field_U[78] = 5;
-          sq.field_U[72] = 6;
+          HotspotTextWidget.field_U[64] = 1;
+          HotspotTextWidget.field_U[79] = 14;
+          HotspotTextWidget.field_U[10] = -1;
+          HotspotTextWidget.field_U[9] = -1;
+          HotspotTextWidget.field_U[76] = 5;
+          HotspotTextWidget.field_U[66] = 1;
+          HotspotTextWidget.field_U[61] = 25;
+          HotspotTextWidget.field_U[65] = 1;
+          HotspotTextWidget.field_U[62] = -1;
+          HotspotTextWidget.field_U[77] = -1;
+          HotspotTextWidget.field_U[57] = -2;
+          HotspotTextWidget.field_U[81] = 25;
+          HotspotTextWidget.field_U[70] = 2;
+          HotspotTextWidget.field_U[71] = -1;
+          HotspotTextWidget.field_U[74] = 10;
+          HotspotTextWidget.field_U[param0] = 17;
+          HotspotTextWidget.field_U[80] = 11;
+          HotspotTextWidget.field_U[82] = 4;
+          HotspotTextWidget.field_U[69] = -1;
+          HotspotTextWidget.field_U[58] = -2;
+          HotspotTextWidget.field_U[78] = 5;
+          HotspotTextWidget.field_U[72] = 6;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ZombieDawnMulti.JA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ZombieDawnMulti.JA(" + param0 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               !vo.field_q) {
               if (ValidationState.field_b &&
                 hh.field_b &&
-                sq.field_N) {
+                HotspotTextWidget.field_N) {
                 var3_int = 0;
               }
               if (am.a(-116)) {
@@ -361,7 +361,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                   break;
                 }
                 if (stackIn_98_0 &&
-                  sq.field_N) {
+                  HotspotTextWidget.field_N) {
                   continue;
                 }
                 np.field_m.handleKeyPress(-78, InfectionEvent.field_p);
@@ -385,7 +385,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     break;
                   }
                   if (stackIn_129_0 &&
-                    sq.field_N) {
+                    HotspotTextWidget.field_N) {
                     continue;
                   }
                   np.field_m.handleKeyPress(119, InfectionEvent.field_p);
@@ -397,7 +397,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                 stackIn_120_0 = true;
                 stackIn_123_1 = (hh.field_b) || (cp.field_K);
                 stackIn_127_2 = !(ib.field_a <= 50);
-                df.a(stackIn_120_0, stackIn_123_1, stackIn_127_2, -92, 15, 0, false, 11, 13, t.field_d, 14, true);
+                FadingDialog.a(stackIn_120_0, stackIn_123_1, stackIn_127_2, -92, 15, 0, false, 11, 13, t.field_d, 14, true);
               }
             }
             if (decompiledFrameCompleted0) {
@@ -488,7 +488,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "ZombieDawnMulti.BA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ZombieDawnMulti.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -529,7 +529,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         try {
           ib.field_a = b.a(true);
           if (uk.field_O) {
-            if (vk.l((byte) -122)) {
+            if (DialogLayer.l((byte) -122)) {
               if (!IsaacRandom.field_i) {
                 IsaacRandom.field_i = true;
                 if ((var10 != 0) && (LaboratoryScreen.field_q != dk.field_Ib ||
@@ -563,9 +563,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             kn.field_f = false;
           }
           PowerupEvent.field_m = PowerupEvent.field_m + 1;
-          if (vk.l((byte) -123)) {
+          if (DialogLayer.l((byte) -123)) {
             this.p(50);
-            if (vk.l((byte) -126)) {
+            if (DialogLayer.l((byte) -126)) {
               if (SimZombie.p(-88)) {
                 discarded$0 = this.advanceLoading(false, 123);
               }
@@ -653,7 +653,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             }
           }
           while (true) {
-            stackIn_126_0 = dd.a(sq.field_U, (byte) -126);
+            stackIn_126_0 = dd.a(HotspotTextWidget.field_U, (byte) -126);
             if (stackIn_126_0) {
               stackIn_334_0 = 9;
               stackIn_334_1 = PortalEntryEvent.field_i;
@@ -997,7 +997,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref5 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref5), "ZombieDawnMulti.MA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref5), "ZombieDawnMulti.MA(" + param0 + ')');
         }
     }
 
@@ -1010,7 +1010,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           field_K = null;
           field_M = null;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ZombieDawnMulti.EA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ZombieDawnMulti.EA(" + param0 + ')');
         }
     }
 
@@ -1033,14 +1033,14 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           pf.field_b = u.a(5, 4);
           rn.field_e = u.a(5, 5);
           de.field_e = u.a(5, 6);
-          df.field_M = u.a(5, 7);
+          FadingDialog.field_M = u.a(5, 7);
           ha.field_g = u.a(5, 11);
           RasterSnapshot.field_n = u.a(5, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ZombieDawnMulti.LA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ZombieDawnMulti.LA(" + param0 + ')');
         }
     }
 
@@ -1072,7 +1072,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) runtimeException), "ZombieDawnMulti.GA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ZombieDawnMulti.GA(" + param0 + ')');
         }
     }
 
@@ -1114,7 +1114,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1140,14 +1140,14 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         try {
           UnitStateEvent.d(-6445);
           if (pf.field_b != null) {
-            if (al.field_eb.a((byte) -110) &&
-              al.field_eb.a(false, "basic")) {
-              if (al.field_eb.a((byte) -124) &&
-                al.field_eb.a(false, "lobby")) {
+            if (ResizableDialog.field_eb.a((byte) -110) &&
+              ResizableDialog.field_eb.a(false, "basic")) {
+              if (ResizableDialog.field_eb.a((byte) -124) &&
+                ResizableDialog.field_eb.a(false, "lobby")) {
                 if (he.field_f.a((byte) -108) &&
                   he.field_f.a(false, "lobby")) {
-                  if (al.field_eb.a((byte) -120) &&
-                    al.field_eb.a(false, "arialish12")) {
+                  if (ResizableDialog.field_eb.a((byte) -120) &&
+                    ResizableDialog.field_eb.a(false, "arialish12")) {
                     if (he.field_f.a((byte) -128) &&
                       he.field_f.a(false, "arialish12")) {
                       if (pf.field_b.a((byte) -116) &&
@@ -1158,8 +1158,8 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                             rn.field_e.a(0)) {
                             if (de.field_e.a((byte) -118) &&
                               de.field_e.a(0)) {
-                              if (df.field_M.a((byte) -126) &&
-                                df.field_M.a(0)) {
+                              if (FadingDialog.field_M.a((byte) -126) &&
+                                FadingDialog.field_M.a(0)) {
                                 if (ii.field_a.a((byte) -115) &&
                                   ii.field_a.a(0)) {
                                   if (cg.field_n.a((byte) -124) &&
@@ -1230,7 +1230,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                                 qm.a(50.0f, 80, ki.a(bc.field_a, "", ii.field_a, (byte) 76, ei.field_e));
                                 return false;
                               }
-                              qm.a(40.0f, 80, ki.a(m.field_A, "", df.field_M, (byte) 76, i.field_d));
+                              qm.a(40.0f, 80, ki.a(m.field_A, "", FadingDialog.field_M, (byte) 76, i.field_d));
                               return false;
                             }
                             qm.a(30.0f, 80, mo.a(bk.field_k, 0, -3, bb.field_o, de.field_e));
@@ -1248,16 +1248,16 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     qm.a(5.0f, 80, ki.a(bc.field_a, "arialish12", he.field_f, (byte) 76, ei.field_e));
                     return false;
                   }
-                  qm.a(4.0f, 80, ki.a(bc.field_a, "arialish12", al.field_eb, (byte) 76, ei.field_e));
+                  qm.a(4.0f, 80, ki.a(bc.field_a, "arialish12", ResizableDialog.field_eb, (byte) 76, ei.field_e));
                   return false;
                 }
                 qm.a(17.0f, 80, ki.a(sm.field_b, "lobby", he.field_f, (byte) 76, bc.field_b));
                 return false;
               }
-              qm.a(3.0f, 80, ki.a(bc.field_a, "basic", al.field_eb, (byte) 76, ei.field_e));
+              qm.a(3.0f, 80, ki.a(bc.field_a, "basic", ResizableDialog.field_eb, (byte) 76, ei.field_e));
               return false;
             }
-            qm.a(3.0f, 80, ki.a(bc.field_a, "basic", al.field_eb, (byte) 76, ei.field_e));
+            qm.a(3.0f, 80, ki.a(bc.field_a, "basic", ResizableDialog.field_eb, (byte) 76, ei.field_e));
             return false;
           }
           if (rn.field_e != null) {
@@ -1300,21 +1300,21 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             IsaacRandom.d(26673);
             return false;
           }
-          if (null != df.field_M) {
+          if (null != FadingDialog.field_M) {
             qm.a(75.0f, 80, me.field_e);
             this.drawFrame(-30169);
-            hl.field_d[0] = MusicTrack.a(df.field_M, "", "ZD_multi_TITLESCREEn");
-            hl.field_d[10] = MusicTrack.a(df.field_M, "", "ZD_multi_laboratory");
-            hl.field_d[12] = MusicTrack.a(df.field_M, "", "ZD_multi_PANIC_LOOP");
-            hl.field_d[11] = MusicTrack.a(df.field_M, "", "ZD_multi_GAME_FINISH");
-            hl.field_d[13] = MusicTrack.a(df.field_M, "", "ZD_multi_GAME_WIN");
-            hl.field_d[14] = MusicTrack.a(df.field_M, "", "ZD_multi_GAME_LOSE");
-            hl.field_d[1] = MusicTrack.a(df.field_M, "", "zombie dawn mall");
-            hl.field_d[2] = MusicTrack.a(df.field_M, "", "zombie dawn powerplant");
-            hl.field_d[3] = MusicTrack.a(df.field_M, "", "zombie dawn precinct");
-            hl.field_d[4] = MusicTrack.a(df.field_M, "", "zombie dawn white house");
-            hl.field_d[9] = MusicTrack.a(df.field_M, "", "zombie dawn instructions loop");
-            df.field_M = null;
+            hl.field_d[0] = MusicTrack.a(FadingDialog.field_M, "", "ZD_multi_TITLESCREEn");
+            hl.field_d[10] = MusicTrack.a(FadingDialog.field_M, "", "ZD_multi_laboratory");
+            hl.field_d[12] = MusicTrack.a(FadingDialog.field_M, "", "ZD_multi_PANIC_LOOP");
+            hl.field_d[11] = MusicTrack.a(FadingDialog.field_M, "", "ZD_multi_GAME_FINISH");
+            hl.field_d[13] = MusicTrack.a(FadingDialog.field_M, "", "ZD_multi_GAME_WIN");
+            hl.field_d[14] = MusicTrack.a(FadingDialog.field_M, "", "ZD_multi_GAME_LOSE");
+            hl.field_d[1] = MusicTrack.a(FadingDialog.field_M, "", "zombie dawn mall");
+            hl.field_d[2] = MusicTrack.a(FadingDialog.field_M, "", "zombie dawn powerplant");
+            hl.field_d[3] = MusicTrack.a(FadingDialog.field_M, "", "zombie dawn precinct");
+            hl.field_d[4] = MusicTrack.a(FadingDialog.field_M, "", "zombie dawn white house");
+            hl.field_d[9] = MusicTrack.a(FadingDialog.field_M, "", "zombie dawn instructions loop");
+            FadingDialog.field_M = null;
             IsaacRandom.d(26673);
             return false;
           }
@@ -1356,15 +1356,15 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             IsaacRandom.d(26673);
             return false;
           }
-          if (null != al.field_eb &&
+          if (null != ResizableDialog.field_eb &&
             null != ii.field_a) {
             qm.a(85.0f, 80, bn.field_c);
             this.drawFrame(-30169);
-            MatchingTextValidator.field_w = pj.a(al.field_eb, 4, he.field_f, "", "arialish12");
+            MatchingTextValidator.field_w = pj.a(ResizableDialog.field_eb, 4, he.field_f, "", "arialish12");
             if (!he.field_a) {
-              InflaterDecompressor.a("locked", al.field_eb, (byte) 19, "basic");
-              WhirlpoolHasher.field_l = InflaterDecompressor.a("unachieved", al.field_eb, (byte) 19, "basic")[0];
-              BufferedFile.field_k = fl.a("basic", "orbcoin", al.field_eb, 11091);
+              InflaterDecompressor.a("locked", ResizableDialog.field_eb, (byte) 19, "basic");
+              WhirlpoolHasher.field_l = InflaterDecompressor.a("unachieved", ResizableDialog.field_eb, (byte) 19, "basic")[0];
+              BufferedFile.field_k = fl.a("basic", "orbcoin", ResizableDialog.field_eb, 11091);
               fj.a(100, BufferedFile.field_k);
               var3_array = new Sprite[2][];
               var3_array[0] = pb.a("", ii.field_a, -256, "levelstyle_iconssmall");
@@ -1372,14 +1372,14 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               var4_ref_ja____ = new Sprite[1][];
               var4_ref_ja____[0] = pb.a("", ii.field_a, -256, "levelstyle_iconslarge");
               var5_array = tj.field_e;
-              ub.a(var5_array, he.field_f, true, (String[][]) null, field_K, al.field_eb, 4, InflaterDecompressor.field_b, RasterSnapshot.field_n, 1, cb.field_j, eg.field_E, true, var3_array, var4_ref_ja____);
+              ub.a(var5_array, he.field_f, true, (String[][]) null, field_K, ResizableDialog.field_eb, 4, InflaterDecompressor.field_b, RasterSnapshot.field_n, 1, cb.field_j, eg.field_E, true, var3_array, var4_ref_ja____);
               bo.field_e = true;
               lp.a(200, -82);
-              ua.a(he.field_f, al.field_eb, (byte) 23);
+              ua.a(he.field_f, ResizableDialog.field_eb, (byte) 23);
               bo.a(16777215, 0, 0, uc.field_b, 0, (java.applet.Applet) (this));
             }
             he.field_f = null;
-            al.field_eb = null;
+            ResizableDialog.field_eb = null;
             IsaacRandom.d(26673);
             qm.a(90.0f, 80, bn.field_c);
             this.drawFrame(-30169);
@@ -1439,11 +1439,11 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               AttackEvent.field_n = ip.field_e.d();
               AttackEvent.field_n.b();
               jq.field_c = wq.a(-116, "", ii.field_a, "battery_small_empty");
-              dj.field_p = wq.a(-117, "", ii.field_a, "battery_big_empty");
+              BirthDateValidator.field_p = wq.a(-117, "", ii.field_a, "battery_big_empty");
               wq.a(-121, "", ii.field_a, "battery_big_full");
               ol.field_n = fl.a("", "vat", ii.field_a, 11091);
               wq.a(70, "", ii.field_a, "vat_outline");
-              em.field_X = wq.a(47, "", ii.field_a, "lab_pipe");
+              BirthDateInputWidget.field_X = wq.a(47, "", ii.field_a, "lab_pipe");
               Camera.field_w = fl.a("", "lab_box_1", ii.field_a, 11091);
               wq.a(-122, "", ii.field_a, "lab_box_2");
               wq.a(-125, "", ii.field_a, "lab_box_3");
@@ -1460,7 +1460,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               el.field_E = wq.a(-120, "", ii.field_a, "forbidden_big");
               nj.field_d = wq.a(-124, "", ii.field_a, "scrollbar_arrow_over");
               PhaseChangeEvent.field_k = fl.a("", "scrollbar_arrow_off", ii.field_a, 11091);
-              df.field_Q = pb.a("", ii.field_a, -256, "scrollbar_block");
+              FadingDialog.field_Q = pb.a("", ii.field_a, -256, "scrollbar_block");
               wc.field_M = pb.a("", ii.field_a, -256, "scrollbar_background");
               kj.field_m = wq.a(102, "", ii.field_a, "scrollbar_bg");
               wq.a(-127, "", ii.field_a, "scrollbar_bar_h");
@@ -1476,7 +1476,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               qj.field_m = wq.a(-42, "", ii.field_a, "curve_tube");
               wk.field_J = wq.a(24, "", ii.field_a, "curve_tube_empty");
               hn.field_i = wq.a(93, "", ii.field_a, "empty_jar");
-              rg.field_C = wq.a(-124, "", ii.field_a, "main_tube");
+              SingleChildWidget.field_C = wq.a(-124, "", ii.field_a, "main_tube");
               ResourceArchive.field_f = wq.a(-122, "", ii.field_a, "plug_01");
               rq.field_l = wq.a(35, "", ii.field_a, "plug_02");
               pq.field_o = wq.a(56, "", ii.field_a, "vert_tube");
@@ -1531,15 +1531,15 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             ig.field_d = pb.a("", ii.field_a, -256, "character_common");
             BufferedSocket.a(fl.a("", "zombie_counter_instructions", ii.field_a, 11091), (byte) -100, fl.a("", "hud", ii.field_a, 11091));
             rq.a(pb.a("", ii.field_a, -256, "popup"), 16777215);
-            sq.a(4, pb.a("", ii.field_a, -256, "carpark_floor"), false);
+            HotspotTextWidget.a(4, pb.a("", ii.field_a, -256, "carpark_floor"), false);
             MidiPcmStream.a(false, 4, pb.a("", ii.field_a, -256, "carpark_tiles"));
-            sq.a(0, pb.a("", ii.field_a, -256, "mall_floor"), false);
+            HotspotTextWidget.a(0, pb.a("", ii.field_a, -256, "mall_floor"), false);
             MidiPcmStream.a(false, 0, pb.a("", ii.field_a, -256, "mall_tiles"));
-            sq.a(1, pb.a("", ii.field_a, -256, "powerplant_floor"), false);
+            HotspotTextWidget.a(1, pb.a("", ii.field_a, -256, "powerplant_floor"), false);
             MidiPcmStream.a(false, 1, pb.a("", ii.field_a, -256, "powerplant_tiles"));
-            sq.a(2, pb.a("", ii.field_a, -256, "precinct_floor"), false);
+            HotspotTextWidget.a(2, pb.a("", ii.field_a, -256, "precinct_floor"), false);
             MidiPcmStream.a(false, 2, pb.a("", ii.field_a, -256, "precinct_tiles"));
-            sq.a(3, pb.a("", ii.field_a, -256, "whitehouse_floor"), false);
+            HotspotTextWidget.a(3, pb.a("", ii.field_a, -256, "whitehouse_floor"), false);
             MidiPcmStream.a(false, 3, pb.a("", ii.field_a, -256, "whitehouse_tiles"));
             pf.field_e[0] = pb.a("", ii.field_a, -256, "dimming0");
             pf.field_e[1] = pb.a("", ii.field_a, -256, "dimming1");
@@ -1556,7 +1556,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             vo.field_p.flipVertical();
             md.field_N = pb.a("", ii.field_a, -256, "instructions_controls");
             IntrusiveDequeCursor.field_b = pb.a("", ii.field_a, -256, "instructions_survivors");
-            tf.field_Hb = pb.a("", ii.field_a, -256, "instructions_zombies");
+            AccountCreationDialog.field_Hb = pb.a("", ii.field_a, -256, "instructions_zombies");
             cc.field_b = fj.a("frame", "", 3, ii.field_a);
             field_I = fj.a("button_frame", "", 3, ii.field_a);
             lf.field_c = fj.a("button_raised", "", 3, ii.field_a);
@@ -1612,7 +1612,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3_ref), "ZombieDawnMulti.DA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3_ref), "ZombieDawnMulti.DA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1632,7 +1632,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ZombieDawnMulti.HA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ZombieDawnMulti.HA(" + param0 + ')');
         }
     }
 
@@ -1640,7 +1640,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         try {
           this.a("zombiedawnmulti", 14, (byte) 82);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ZombieDawnMulti.init()");
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ZombieDawnMulti.init()");
         }
     }
 
@@ -1718,7 +1718,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref), "ZombieDawnMulti.FA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "ZombieDawnMulti.FA(" + param0 + ')');
         }
     }
 
@@ -1845,12 +1845,12 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           ng.a(816);
           bc.c(22382);
           ql.a(4);
-          vk.k((byte) 95);
-          tf.o(101);
+          DialogLayer.releaseStatics((byte) 95);
+          AccountCreationDialog.o(101);
           ta.k((byte) -66);
           ub.o(61);
-          ne.n(10);
-          fe.c(false);
+          MessageDialog.n(10);
+          AccountCreationForm.releaseStatics(false);
           dg.a((byte) 84);
           qm.a(64);
           cp.c(true);
@@ -1871,9 +1871,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           hi.c((byte) -81);
           ContextMenu.releaseStatics((byte) 117);
           cd.d(false);
-          jb.a(-2);
+          PlayerContextMenu.a(-2);
           tq.h(0);
-          fa.j(57);
+          ReportAbuseDialog.j(57);
           wq.b((byte) 121);
           lo.a(0);
           BitmapFont.a();
@@ -1968,9 +1968,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           mp.a(12);
           UiWidget.e((byte) -90);
           ButtonWidget.a(-118);
-          rg.a((byte) -39);
-          al.i((byte) -92);
-          df.g((byte) 84);
+          SingleChildWidget.a((byte) -39);
+          ResizableDialog.i((byte) -92);
+          FadingDialog.g((byte) 84);
           WidgetContainer.b(false);
           IntrusiveDequeCursor.d(-1);
           bh.a((byte) -8);
@@ -1988,8 +1988,8 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           tj.a(false);
           sa.a(-119);
           nk.a((byte) -26);
-          dj.g(-3);
-          em.k(4);
+          BirthDateValidator.releaseStatics(-3);
+          BirthDateInputWidget.k(4);
           ArrayWidgetGroup.f(114);
           rn.a((byte) 88);
           ArmedHumanView.c(true);
@@ -2003,10 +2003,10 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           el.h(3);
           on.l(29829);
           TextInputWidget.d(false);
-          ie.l(7181);
+          ContentTransitionDialog.l(7181);
           le.a(0);
-          gl.c(true);
-          sq.f(2);
+          UsernameSuggestionsPanel.c(true);
+          HotspotTextWidget.f(2);
           uk.f(-1562977759);
           km.i(0);
           TextInputValidator.releaseStatics(-1317848592);
@@ -2044,7 +2044,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           kj.a(-2);
           oi.b(5378);
           ml.c((byte) -102);
-          gg.a((byte) -126);
+          MessageDialogContent.a((byte) -126);
           ra.b(true);
           ab.a(0);
           gi.a(-1569388056);
@@ -2091,7 +2091,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ZombieDawnMulti.KA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ZombieDawnMulti.KA(" + param0 + ')');
         }
     }
 

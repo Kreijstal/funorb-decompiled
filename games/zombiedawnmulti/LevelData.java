@@ -33,8 +33,8 @@ class LevelData {
         if (param0 < 121) {
           return;
         }
-        gl.field_H = new hh(2);
-        gl.field_H.a(-1, param1, -31458, al.c(bo.field_d, -1, MouseInputHandler.field_g));
+        UsernameSuggestionsPanel.field_H = new hh(2);
+        UsernameSuggestionsPanel.field_H.a(-1, param1, -31458, ResizableDialog.c(bo.field_d, -1, MouseInputHandler.field_g));
     }
 
     private final SceneObject createObject(int param0, int param1, byte param2, int param3, int param4) {
@@ -177,7 +177,7 @@ class LevelData {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ class LevelData {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -547,7 +547,7 @@ class LevelData {
           this.field_h = new int[param0.length][param0[0].length];
           this.a((byte) 121);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

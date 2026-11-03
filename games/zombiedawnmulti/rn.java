@@ -52,7 +52,7 @@ final class rn {
         if (param0 != 28579) {
           return (UiComponent) null;
         }
-        return gl.field_L.field_Ib;
+        return UsernameSuggestionsPanel.field_L.field_Ib;
     }
 
     static {

@@ -127,7 +127,7 @@ final class fd extends SceneObject {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class fd extends SceneObject {
               return stackIn_14_0;
             }
             if (de.field_h == vo.field_l &&
-              fa.b(10, 1)) {
+              ReportAbuseDialog.b(10, 1)) {
               var6_int = s.field_e.readUnsignedByte(param0 ^ 31371);
               s.field_e.position = 0;
               if (var6_int == 0) {
@@ -219,7 +219,7 @@ final class fd extends SceneObject {
               }
             }
             if (ResourceArchive.field_n == vo.field_l &&
-              fa.b(10, 8)) {
+              ReportAbuseDialog.b(10, 8)) {
               Camera.field_c = s.field_e.readLong((byte) -30);
               s.field_e.position = 0;
               pi.a((byte) -59, param2, param1, ki.field_a, param5);
@@ -227,7 +227,7 @@ final class fd extends SceneObject {
             }
             boolean decompiledFrameRemainder0 = true;
             if (vo.field_l == lc.field_l &&
-              fa.b(10, 1)) {
+              ReportAbuseDialog.b(10, 1)) {
               var6_intLifetime1 = s.field_e.readUnsignedByte(31365);
               s.field_e.position = 0;
               oe.field_f = null;
@@ -393,7 +393,7 @@ final class fd extends SceneObject {
             } else {
               stackIn_122_2 = "{...}";
             }
-            throw fa.a((Throwable) ((Object) stackIn_118_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(',').append(param5).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_118_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

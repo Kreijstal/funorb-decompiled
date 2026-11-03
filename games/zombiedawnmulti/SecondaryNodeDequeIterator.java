@@ -55,7 +55,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_a = null;
           this.field_e = this.field_b.field_d.secondaryPrevious;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

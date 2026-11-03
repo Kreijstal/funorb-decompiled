@@ -105,7 +105,7 @@ final class eo {
           param0.addKeyListener(um.field_c);
           param0.addFocusListener(um.field_c);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "eo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "eo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class an {
             an.a((byte) 16, (ld) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "an.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "an.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class an {
         if (param0 != 1) {
           return (hf) null;
         }
-        return new hf(gg.a(91), MusicPatch.c(128));
+        return new hf(MessageDialogContent.a(91), MusicPatch.c(128));
     }
 
     an(int param0, ResourceArchive param1, ResourceArchive param2, dr param3) {
@@ -115,7 +115,7 @@ final class an {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

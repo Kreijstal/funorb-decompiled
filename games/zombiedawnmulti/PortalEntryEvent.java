@@ -33,7 +33,7 @@ final class PortalEntryEvent extends GameEvent {
             if (rn.field_f != null &&
               rn.field_f.field_e) {
               rn.a(param0 ^ -79);
-              me.field_k.b(3016, new vm(me.field_k, hl.field_b));
+              me.field_k.showDialog(3016, new vm(me.field_k, hl.field_b));
             }
             return;
           }
@@ -46,7 +46,7 @@ final class PortalEntryEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "op.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "op.G(" + param0 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class PortalEntryEvent extends GameEvent {
             this.field_p = -21;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "op.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "op.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

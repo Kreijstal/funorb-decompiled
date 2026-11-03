@@ -44,7 +44,7 @@ final class bl {
             return (Sprite) (stackIn_2_0);
           }
           if (param0 == 50) {
-            stackIn_7_0 = gl.a(15);
+            stackIn_7_0 = UsernameSuggestionsPanel.a(15);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -59,7 +59,7 @@ final class bl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class bl {
             wp.field_h = null;
             hh.field_b = false;
             cp.field_K = false;
-            df.field_I = false;
+            FadingDialog.field_I = false;
             bi.field_e = false;
             af.field_e = null;
             np.field_m = null;
@@ -143,7 +143,7 @@ final class bl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "bl.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "bl.A(" + param0 + ')');
         }
     }
 

@@ -139,7 +139,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param18).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param18).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class SecondaryNodeDeque implements Iterable {
           param0.secondaryNext.secondaryPrevious = param0;
           param0.secondaryPrevious.secondaryNext = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "e.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "e.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class SecondaryNodeDeque implements Iterable {
           param1.field_b = var3;
           param1.pixelIndices = var4;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "e.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "e.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

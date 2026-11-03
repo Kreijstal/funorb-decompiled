@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg {
+final class MessageDialogContent {
     static String field_n;
     static int[] field_j;
     static int[][] field_i;
@@ -55,7 +55,7 @@ final class gg {
         int var10Lifetime1;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          MouseWheelInput.a(sq.field_Q, false);
+          MouseWheelInput.a(HotspotTextWidget.field_Q, false);
           if (BufferedSocket.field_n != null) {
             var15 = en.field_b;
             var17 = var15;
@@ -144,10 +144,10 @@ final class gg {
               stackIn_27_0.field_wb = vl.a(stackIn_28_1, new String[]{GameKeyHandler.field_a.field_wb}, 2);
               jp.field_b.field_Z = true;
               eb.field_B.field_wb = ob.field_t;
-              dj.field_l = true;
+              BirthDateValidator.field_l = true;
               if (null != iq.field_b) {
                 lp.field_p = false;
-                dj.field_l = false;
+                BirthDateValidator.field_l = false;
                 if (null == GameSimulation.field_v) {
                   FullscreenFocusCanvas.field_c = new boolean[kj.field_h];
                   GameSimulation.field_v = new byte[kj.field_h];
@@ -161,10 +161,10 @@ final class gg {
                 bh.a(-1712, -1, 0, BufferedSocket.field_n, true, kj.field_h, -1, -1);
                 if (!(2 > kj.field_q) &&
                   lc.field_m[12]) {
-                  dj.field_l = true;
+                  BirthDateValidator.field_l = true;
                 }
               }
-              if (!dj.field_l) {
+              if (!BirthDateValidator.field_l) {
                 GameKeyHandler.field_a.field_Z = false;
                 if (GameKeyHandler.field_a.field_pb) {
                   var9 = null;
@@ -207,7 +207,7 @@ final class gg {
           if (!param3) {
             return;
           }
-          em.field_U.field_c.h(-56);
+          BirthDateInputWidget.field_U.field_c.h(-56);
           if (null != BufferedSocket.field_n) {
             if (jp.field_b.field_T != 0) {
               jk.a(param0, 1);
@@ -225,12 +225,12 @@ final class gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "gg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "gg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static String a(int param0) {
-        if (dj.field_k == SceneObject.field_B) {
+        if (BirthDateValidator.field_k == SceneObject.field_B) {
           return RandomAccessCacheFile.field_g;
         }
         if (param0 <= 0) {
@@ -239,10 +239,10 @@ final class gg {
         if (!tg.field_g.d(-88)) {
           return tg.field_g.a(31027);
         }
-        if (dj.field_k == ta.field_hb) {
+        if (BirthDateValidator.field_k == ta.field_hb) {
           return tg.field_g.a(31027);
         }
-        return fa.field_Ib;
+        return ReportAbuseDialog.field_Ib;
     }
 
     public static void a(byte param0) {
@@ -258,7 +258,7 @@ final class gg {
         field_l = null;
     }
 
-    private gg() throws Throwable {
+    private MessageDialogContent() throws Throwable {
         throw new Error();
     }
 
@@ -268,7 +268,7 @@ final class gg {
           SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.width, ImageProducerRasterBuffer.field_k.field_qb);
           SimHuman.field_gb.c(param1, -1);
         }
-        if ((sq.field_Q > 0 || InflaterDecompressor.field_a > 0) &&
+        if ((HotspotTextWidget.field_Q > 0 || InflaterDecompressor.field_a > 0) &&
           io.field_b) {
           SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.width, ImageProducerRasterBuffer.field_k.field_qb);
           qf.field_b.c(param1, -1);

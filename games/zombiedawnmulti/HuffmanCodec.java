@@ -199,7 +199,7 @@ final class HuffmanCodec {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class HuffmanCodec {
           }
           ql.a(true);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "eh.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "eh.A(" + param0 + ')');
         }
     }
 
@@ -443,7 +443,7 @@ final class HuffmanCodec {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -536,7 +536,7 @@ final class HuffmanCodec {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -640,7 +640,7 @@ final class HuffmanCodec {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

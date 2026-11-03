@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ie extends al {
+abstract class ContentTransitionDialog extends ResizableDialog {
     private int field_mb;
     private UiWidget field_kb;
     private int field_rb;
@@ -25,7 +25,7 @@ abstract class ie extends al {
         field_ib = null;
     }
 
-    boolean i(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -37,26 +37,26 @@ abstract class ie extends al {
               this.field_hb.field_E = 256 - (this.field_lb << 8) / this.field_qb;
               if (param0 != -27388) {
                 this.h(-5);
-                return super.i(-27388);
+                return super.advanceDialogAnimation(-27388);
               }
-              return super.i(-27388);
+              return super.advanceDialogAnimation(-27388);
             }
             this.field_pb = FullscreenFocusCanvas.field_j;
-            this.a(this.field_mb, (byte) -112, this.field_rb + (12 + this.field_kb.field_w), 12 + this.field_kb.field_n);
+            this.startResizeTransition(this.field_mb, (byte) -112, this.field_rb + (12 + this.field_kb.field_w), 12 + this.field_kb.field_n);
             this.field_lb = 0;
             this.field_hb.field_E = 0;
             if (param0 != -27388) {
               this.h(-5);
-              return super.i(-27388);
+              return super.advanceDialogAnimation(-27388);
             }
-            return super.i(-27388);
+            return super.advanceDialogAnimation(-27388);
           }
           if (this.field_pb != lf.field_a) {
             if (param0 == -27388) {
-              return super.i(-27388);
+              return super.advanceDialogAnimation(-27388);
             }
             this.h(-5);
-            return super.i(-27388);
+            return super.advanceDialogAnimation(-27388);
           }
           fieldTemp$1 = this.field_lb + 1;
           this.field_lb = this.field_lb + 1;
@@ -64,23 +64,23 @@ abstract class ie extends al {
             this.field_hb.field_E = 256;
             this.field_pb = null;
             if (param0 == -27388) {
-              return super.i(-27388);
+              return super.advanceDialogAnimation(-27388);
             }
             this.h(-5);
-            return super.i(-27388);
+            return super.advanceDialogAnimation(-27388);
           }
           this.field_hb.field_E = (this.field_lb << 8) / this.field_gb;
           if (param0 == -27388) {
-            return super.i(-27388);
+            return super.advanceDialogAnimation(-27388);
           }
           this.h(-5);
-          return super.i(-27388);
+          return super.advanceDialogAnimation(-27388);
         }
         if (param0 == -27388) {
-          return super.i(-27388);
+          return super.advanceDialogAnimation(-27388);
         }
         this.h(-5);
-        return super.i(-27388);
+        return super.advanceDialogAnimation(-27388);
     }
 
     boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
@@ -113,7 +113,7 @@ abstract class ie extends al {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ abstract class ie extends al {
           if (ld.field_Rb != this.field_pb) {
             this.field_pb = lf.field_a;
             this.field_lb = 0;
-            this.a(this.field_kb, false);
+            this.installContent(this.field_kb, false);
             this.field_hb.field_E = 0;
             this.field_kb = null;
             return;
@@ -149,7 +149,7 @@ abstract class ie extends al {
         if (ld.field_Rb != this.field_pb) {
           this.field_pb = lf.field_a;
           this.field_lb = 0;
-          this.a(this.field_kb, false);
+          this.installContent(this.field_kb, false);
           this.field_hb.field_E = 0;
           this.field_kb = null;
           return;
@@ -164,16 +164,16 @@ abstract class ie extends al {
         return super.h(-6134);
     }
 
-    ie(vk param0, UiWidget param1, int param2, int param3, int param4) {
+    ContentTransitionDialog(DialogLayer param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_n, 12 + (param2 + param1.field_w));
         try {
           this.field_gb = param3;
           this.field_qb = param3;
           this.field_mb = param4;
           this.field_rb = param2;
-          this.a(param1, false);
+          this.installContent(param1, false);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ie.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ie.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ abstract class ie extends al {
         }
         if (this.field_pb != lf.field_a) {
           this.b(12 + this.field_kb.field_n, this.field_kb.field_w + (this.field_rb + 12), 78);
-          this.a(this.field_kb, false);
+          this.installContent(this.field_kb, false);
         } else {
           this.field_pb = null;
           this.field_hb.field_E = 256;
@@ -219,7 +219,7 @@ abstract class ie extends al {
           this.field_kb = param0;
           var3_int = -11 % ((param1 - 61) / 56);
           if (this.field_pb == FullscreenFocusCanvas.field_j) {
-            this.a(this.field_mb, (byte) -112, 12 + this.field_rb + this.field_kb.field_w, this.field_kb.field_n + 12);
+            this.startResizeTransition(this.field_mb, (byte) -112, 12 + this.field_rb + this.field_kb.field_w, this.field_kb.field_n + 12);
             this.field_lb = 0;
             return;
           }
@@ -239,11 +239,11 @@ abstract class ie extends al {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(UiWidget param0, boolean param1) {
+    private final void installContent(UiWidget param0, boolean param1) {
         try {
           if (param1) {
             this.field_lb = -61;
@@ -260,7 +260,7 @@ abstract class ie extends al {
           this.b((byte) 95, this.field_hb);
           this.field_kb = null;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ie.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ie.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

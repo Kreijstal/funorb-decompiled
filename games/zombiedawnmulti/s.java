@@ -102,7 +102,7 @@ final class s {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -265,24 +265,24 @@ final class s {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static String a(byte param0) {
-        if (dj.field_k == SceneObject.field_B) {
+        if (BirthDateValidator.field_k == SceneObject.field_B) {
           return IntrusiveDequeCursor.field_j;
         }
         if (param0 != 32) {
           return (String) null;
         }
-        if (dj.field_k == ta.field_hb) {
+        if (BirthDateValidator.field_k == ta.field_hb) {
           return ih.field_a;
         }
         if (!tg.field_g.d(-107)) {
           return ih.field_a;
         }
-        return fa.field_Ib;
+        return ReportAbuseDialog.field_Ib;
     }
 
     final static void a(int param0, byte param1, int param2) {
@@ -295,17 +295,17 @@ final class s {
           !(lb.field_c.length >= param0)) {
           lb.field_c = new int[2 * param0];
         }
-        if (null == vk.field_J ||
-          !(param0 <= vk.field_J.length)) {
-          vk.field_J = new int[2 * param0];
+        if (null == DialogLayer.field_J ||
+          !(param0 <= DialogLayer.field_J.length)) {
+          DialogLayer.field_J = new int[2 * param0];
         }
         if (kj.field_p == null ||
           !(param0 <= kj.field_p.length)) {
           kj.field_p = new int[param0 * 2];
         }
-        if (ie.field_ob == null ||
-          !(ie.field_ob.length >= param0)) {
-          ie.field_ob = new int[param0 * 2];
+        if (ContentTransitionDialog.field_ob == null ||
+          !(ContentTransitionDialog.field_ob.length >= param0)) {
+          ContentTransitionDialog.field_ob = new int[param0 * 2];
         }
         if (hn.field_f == null ||
           !(hn.field_f.length >= param0)) {

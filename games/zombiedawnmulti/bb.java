@@ -35,7 +35,7 @@ final class bb extends IntrusiveNode {
     }
 
     final static String c(int param0) {
-        if (dj.field_k == SceneObject.field_B) {
+        if (BirthDateValidator.field_k == SceneObject.field_B) {
           return am.field_a;
         }
         if (param0 != -19385) {
@@ -50,7 +50,7 @@ final class bb extends IntrusiveNode {
           this.field_f = param2;
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "bb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

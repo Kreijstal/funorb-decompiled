@@ -22,7 +22,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             this.focusGained((java.awt.event.FocusEvent) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ll.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ll.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_e = true;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ll.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ll.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

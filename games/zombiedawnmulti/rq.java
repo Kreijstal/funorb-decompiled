@@ -109,7 +109,7 @@ final class rq extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -223,23 +223,23 @@ final class rq extends IntrusiveNode {
           el.field_H[2].f(5, -5, 0);
           el.field_H[3].f(5, -5, 0);
           oj.field_M = new Sprite[39];
-          fe.field_W = new Sprite[oj.field_M.length];
+          AccountCreationForm.field_W = new Sprite[oj.field_M.length];
           for (var2_int = 0; var2_int < oj.field_M.length; var2_int++) {
             oj.field_M[var2_int] = new Sprite(200, 25);
             oj.field_M[var2_int].bindAsRenderTarget();
             var3 = lh.a((byte) -12, var2_int);
             pb.field_e.b(var3, 100, 17, 16777215, -1);
-            fe.field_W[var2_int] = g.b(oj.field_M[var2_int]);
+            AccountCreationForm.field_W[var2_int] = g.b(oj.field_M[var2_int]);
           }
           SocketConnector.field_c = InflaterDecompressor.a(9, np.field_l);
-          fe.field_U = InflaterDecompressor.a(param1 ^ -16777125, mj.field_Sb);
+          AccountCreationForm.field_U = InflaterDecompressor.a(param1 ^ -16777125, mj.field_Sb);
           mi.field_Mb = InflaterDecompressor.a(104, mq.field_o);
           NodeHashTableIterator.field_f = InflaterDecompressor.a(4, wm.field_U);
           la.field_j = InflaterDecompressor.a(70, vc.field_a);
           SectorCacheStore.field_a = InflaterDecompressor.a(-113, BufferedSocket.field_k);
           wp.field_e = InflaterDecompressor.a(100, bg.field_p);
           bf.field_f = g.b(SocketConnector.field_c);
-          ap.field_t = g.b(fe.field_U);
+          ap.field_t = g.b(AccountCreationForm.field_U);
           ii.field_c = g.b(SectorCacheStore.field_a);
           NetworkGameClient.field_u = g.b(mi.field_Mb);
           kj.field_o = g.b(la.field_j);
@@ -247,7 +247,7 @@ final class rq extends IntrusiveNode {
           vl.field_k = g.b(wp.field_e);
           g.b();
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "rq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

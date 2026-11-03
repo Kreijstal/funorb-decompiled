@@ -90,7 +90,7 @@ class UiComponent extends qo {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ class UiComponent extends qo {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ class UiComponent extends qo {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -684,7 +684,7 @@ class UiComponent extends qo {
     }
 
     final static void d(boolean param0, int param1) {
-        if (!df.field_H) {
+        if (!FadingDialog.field_H) {
           return;
         }
         fk.a(hl.field_d[param1], true);
@@ -710,11 +710,11 @@ class UiComponent extends qo {
         if (!ra.field_l.a(false, "commonui")) {
           return ei.field_e + " - " + ra.field_l.a(0, "commonui") + "%";
         }
-        if (!fe.field_L.a((byte) -123)) {
+        if (!AccountCreationForm.field_L.a((byte) -123)) {
           return sm.field_b;
         }
-        if (!fe.field_L.a(false, "commonui")) {
-          return bc.field_b + " - " + fe.field_L.a(0, "commonui") + "%";
+        if (!AccountCreationForm.field_L.a(false, "commonui")) {
+          return bc.field_b + " - " + AccountCreationForm.field_L.a(0, "commonui") + "%";
         }
         if (!wm.field_V.a((byte) -117)) {
           return pd.field_a;
@@ -756,7 +756,7 @@ class UiComponent extends qo {
             if (param0.field_l == 4) {
               var2_intLifetime1 = wp.field_c[param0.field_l];
             } else {
-              if (ie.field_sb != param0.field_a) {
+              if (ContentTransitionDialog.field_sb != param0.field_a) {
                 var2_intLifetime1 = wp.field_c[param0.field_l];
               } else {
                 var2_intLifetime1 = pq.field_m[param0.field_l];
@@ -775,7 +775,7 @@ class UiComponent extends qo {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -891,7 +891,7 @@ class UiComponent extends qo {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

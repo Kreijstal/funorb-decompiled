@@ -76,7 +76,7 @@ final class hb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class hb {
     }
 
     final static void a(int param0) {
-        EmailAvailabilityValidator.field_s = new fe();
+        EmailAvailabilityValidator.field_s = new AccountCreationForm();
         wj.field_i.a((UiWidget) (EmailAvailabilityValidator.field_s), (byte) 121);
         if (param0 != 0) {
           field_a = (String) null;

@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class cp extends WidgetContainer implements jn, in {
+final class cp extends WidgetContainer implements UsernameSuggestionListener, ButtonActivationListener {
     static String field_L;
     static BitmapFont field_H;
     private ButtonWidget field_M;
-    gl field_V;
+    UsernameSuggestionsPanel field_V;
     static ResourceArchive field_P;
     static Calendar field_U;
     private ButtonWidget field_W;
@@ -54,7 +54,7 @@ final class cp extends WidgetContainer implements jn, in {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -69,14 +69,14 @@ final class cp extends WidgetContainer implements jn, in {
         }
     }
 
-    public final void a(int param0) {
+    public final void onMoreSuggestionsRequested(int param0) {
         if (param0 != 496) {
           return;
         }
-        ((UsernameAvailabilityValidator) (this.field_G.a((byte) -67))).i(-22837);
+        ((UsernameAvailabilityValidator) (this.field_G.getValidationProvider((byte) -67))).i(-22837);
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -105,11 +105,11 @@ final class cp extends WidgetContainer implements jn, in {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final boolean a(kh param0, int param1) {
+    private final boolean a(ValidationProviderSource param0, int param1) {
         ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -121,7 +121,7 @@ final class cp extends WidgetContainer implements jn, in {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = 75 / ((param1 + 51) / 54);
-          var3 = param0.a((byte) -119);
+          var3 = param0.getValidationProvider((byte) -119);
           if (var3 == null) {
             return true;
           }
@@ -138,7 +138,7 @@ final class cp extends WidgetContainer implements jn, in {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class cp extends WidgetContainer implements jn, in {
         this.field_M.field_A = (WidgetListener) (this);
         this.b((byte) 61, this.field_M);
         this.b((byte) 81, this.field_W);
-        this.field_V = new gl((jn) (this));
+        this.field_V = new UsernameSuggestionsPanel((UsernameSuggestionListener) (this));
         this.field_V.setWidgetBounds(60 + this.field_G.field_n + this.field_G.field_y, 20, 28972, -60 + (this.field_n - this.field_G.field_y - this.field_G.field_n), 150);
         this.b((byte) 120, this.field_V);
         this.setWidgetBounds(0, 0, 28972, 496, var4 + 55 + var3);
@@ -209,7 +209,7 @@ final class cp extends WidgetContainer implements jn, in {
           super.updatePointerState(param0, param1, param2, param3);
           this.field_M.field_F = this.h(param0 + 5427);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "cp.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cp.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class cp extends WidgetContainer implements jn, in {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class cp extends WidgetContainer implements jn, in {
         return param0 | param1;
     }
 
-    public final void a(String param0, int param1) {
+    public final void onSuggestionSelected(String param0, int param1) {
         on var3 = null;
         String var4 = null;
         if (param1 != 1) {
@@ -274,7 +274,7 @@ final class cp extends WidgetContainer implements jn, in {
           var4 = param0;
           ((TextInputWidget) ((Object) var3)).setInputText(false, var4, (byte) 117);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "cp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -297,7 +297,7 @@ final class cp extends WidgetContainer implements jn, in {
           }
           var10 = new el(20, param0, 120 + param6, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
           this.b((byte) 115, var10);
-          var9 = new km(((kh) ((Object) param1)).a((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
+          var9 = new km(((ValidationProviderSource) ((Object) param1)).getValidationProvider((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
           var9.field_A = (WidgetListener) (this);
           this.b((byte) 91, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;
@@ -324,12 +324,12 @@ final class cp extends WidgetContainer implements jn, in {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     private final boolean h(int param0) {
-        if (!this.a((kh) (this.field_G), param0 + 104)) {
+        if (!this.a((ValidationProviderSource) (this.field_G), param0 + 104)) {
           return false;
         }
         if (param0 == 20) {

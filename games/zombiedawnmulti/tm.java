@@ -33,8 +33,8 @@ final class tm {
         }
         dk.e(param0, -7579);
         if (sa.field_f) {
-          SoftwareRasterizer.clearRect(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
-          em.field_U.field_c.c(param0, -1);
+          SoftwareRasterizer.clearRect(BirthDateInputWidget.field_U.field_c.field_x, BirthDateInputWidget.field_U.field_c.field_Q, BirthDateInputWidget.field_U.field_c.field_zb, BirthDateInputWidget.field_U.field_c.field_z);
+          BirthDateInputWidget.field_U.field_c.c(param0, -1);
           if (param1) {
             field_a = (String[]) null;
             an.a(1, param0);

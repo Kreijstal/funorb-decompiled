@@ -48,7 +48,7 @@ final class er extends IntrusiveNode {
           if (ai.field_b == 21 &&
             10 == ArmedHumanView.field_rb &&
             !PowerupButton.field_e.field_I.a(true)) {
-            df.a(param0 - 16504, 9);
+            FadingDialog.a(param0 - 16504, 9);
             w.field_m = w.field_m & -1025;
           }
           if (param0 == -802) {
@@ -69,7 +69,7 @@ final class er extends IntrusiveNode {
               if (ai.field_b == 21 &&
                 10 == ArmedHumanView.field_rb &&
                 !PowerupButton.field_e.field_I.a(true)) {
-                df.a(param0 - 16504, 9);
+                FadingDialog.a(param0 - 16504, 9);
                 w.field_m = w.field_m & -1025;
               }
               if (param0 == -802) {
@@ -92,7 +92,7 @@ final class er extends IntrusiveNode {
               if (ai.field_b == 21 &&
                 10 == ArmedHumanView.field_rb &&
                 !PowerupButton.field_e.field_I.a(true)) {
-                df.a(param0 - 16504, 9);
+                FadingDialog.a(param0 - 16504, 9);
                 w.field_m = w.field_m & -1025;
               }
             } else {
@@ -100,7 +100,7 @@ final class er extends IntrusiveNode {
                 if (ai.field_b == 21 &&
                   10 == ArmedHumanView.field_rb &&
                   !PowerupButton.field_e.field_I.a(true)) {
-                  df.a(param0 - 16504, 9);
+                  FadingDialog.a(param0 - 16504, 9);
                   w.field_m = w.field_m & -1025;
                 }
               } else {
@@ -111,7 +111,7 @@ final class er extends IntrusiveNode {
                 if (ai.field_b == 21 &&
                   10 == ArmedHumanView.field_rb &&
                   !PowerupButton.field_e.field_I.a(true)) {
-                  df.a(param0 - 16504, 9);
+                  FadingDialog.a(param0 - 16504, 9);
                   w.field_m = w.field_m & -1025;
                 }
               }
@@ -130,7 +130,7 @@ final class er extends IntrusiveNode {
             if (ai.field_b == 21 &&
               10 == ArmedHumanView.field_rb &&
               !PowerupButton.field_e.field_I.a(true)) {
-              df.a(param0 - 16504, 9);
+              FadingDialog.a(param0 - 16504, 9);
               w.field_m = w.field_m & -1025;
             }
             if (param0 == -802) {
@@ -150,7 +150,7 @@ final class er extends IntrusiveNode {
         if (ai.field_b == 21 &&
           10 == ArmedHumanView.field_rb &&
           !PowerupButton.field_e.field_I.a(true)) {
-          df.a(param0 - 16504, 9);
+          FadingDialog.a(param0 - 16504, 9);
           w.field_m = w.field_m & -1025;
         }
         if (param0 != -802) {
@@ -195,7 +195,7 @@ final class er extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

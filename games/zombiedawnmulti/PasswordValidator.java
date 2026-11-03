@@ -47,7 +47,7 @@ final class PasswordValidator extends TextInputValidator {
           }
           var5 = var4;
           if (ButtonWidget.b((byte) 62, var5)) {
-            stackIn_5_0 = jb.field_k;
+            stackIn_5_0 = PlayerContextMenu.field_k;
             return stackIn_5_0;
           }
           if (ol.a(var5, false)) {
@@ -79,7 +79,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_26_0;
           }
           if (!PasswordValidator.a(101, var6, var5)) {
-            return jb.field_k;
+            return PlayerContextMenu.field_k;
           }
           stackIn_30_0 = kc.field_b;
           return stackIn_30_0;
@@ -93,7 +93,7 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class PasswordValidator extends TextInputValidator {
           this.field_q = param2;
           this.field_z = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

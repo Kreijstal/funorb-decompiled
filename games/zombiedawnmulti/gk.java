@@ -110,7 +110,7 @@ final class gk {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          ArrayWidgetGroup.field_F = mo.field_Jb.field_c * (ne.field_tb + pb.field_b << 1);
+          ArrayWidgetGroup.field_F = mo.field_Jb.field_c * (MessageDialog.field_tb + pb.field_b << 1);
           RandomAccessCacheFile.field_e = NetworkGameClient.field_x - (-var7Lifetime1 + (var7Lifetime1 >> 1));
           IntrusiveDequeCursor.field_i = -(var7Lifetime1 >> 1) + NetworkGameClient.field_x;
           var8Lifetime2 = 0;
@@ -141,7 +141,7 @@ final class gk {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

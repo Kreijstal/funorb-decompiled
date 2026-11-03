@@ -192,7 +192,7 @@ final class BufferedSocket implements Runnable {
           rb.field_e[1].f(-35, 5, 0);
           g.b();
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ej.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ej.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -221,10 +221,10 @@ final class BufferedSocket implements Runnable {
         try {
           var1_long = 0L;
           var3 = -15 / ((35 - param0) / 62);
-          for (var4 = 0; var4 < em.field_Y.length; var4++) {
-            for (var5 = 0; var5 < em.field_Y[var4][0].length; var5++) {
-              if (em.field_Y[var4][0][var5] != 255) {
-                var1_long = var1_long | 1L << em.field_Y[var4][0][var5];
+          for (var4 = 0; var4 < BirthDateInputWidget.field_Y.length; var4++) {
+            for (var5 = 0; var5 < BirthDateInputWidget.field_Y[var4][0].length; var5++) {
+              if (BirthDateInputWidget.field_Y[var4][0][var5] != 255) {
+                var1_long = var1_long | 1L << BirthDateInputWidget.field_Y[var4][0][var5];
               }
             }
           }
@@ -233,7 +233,7 @@ final class BufferedSocket implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "ej.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ej.C(" + param0 + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ final class BufferedSocket implements Runnable {
           this.field_l = this.field_f.getOutputStream();
           this.field_m = param2;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

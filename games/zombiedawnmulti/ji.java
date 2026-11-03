@@ -51,7 +51,7 @@ final class ji {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -61,7 +61,7 @@ final class ji {
     }
 
     final static void b(int param0) {
-        al.j(-1);
+        ResizableDialog.j(-1);
         int var1 = -108 / ((param0 - 38) / 61);
         ud.field_ab = true;
         IntrusiveDequeCursor.field_e = true;

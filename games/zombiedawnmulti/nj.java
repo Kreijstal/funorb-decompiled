@@ -49,7 +49,7 @@ final class nj {
         }
         wc.field_N = var3 & 127;
         stackIn_5_0 = ((var3 & 128) != 0);
-        fe.field_R = stackIn_5_0;
+        AccountCreationForm.field_R = stackIn_5_0;
         BufferedFile.field_g = var8.readUnsignedByte(31365);
         SimEntity.field_K = var8.readLong((byte) -30);
         if (2 == wc.field_N) {

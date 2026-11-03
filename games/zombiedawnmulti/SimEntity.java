@@ -59,7 +59,7 @@ abstract class SimEntity extends TertiaryLinkNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ abstract class SimEntity extends TertiaryLinkNode {
             field_J = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ek.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ek.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

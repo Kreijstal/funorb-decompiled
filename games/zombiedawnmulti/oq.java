@@ -30,7 +30,7 @@ final class oq extends TextWidgetPainter {
             this.field_s = 28;
           }
           if (!param4.field_l) {
-            stackIn_8_0 = (param4.c(124)) ? 1 : 0;
+            stackIn_8_0 = (param4.hasKeyboardFocus(124)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -63,7 +63,7 @@ final class oq extends TextWidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

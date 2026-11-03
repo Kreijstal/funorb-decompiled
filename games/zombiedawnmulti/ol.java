@@ -197,11 +197,11 @@ final class ol extends MenuScreen {
                 ah.field_e.c(cp.field_J[0][1], 20, 210 + var5, 2, 0);
                 pb.field_e.drawParagraph(cp.field_S[0][1], 20, 230 + var5, var3, 440, 16777215, 0, 0, 0, var2);
                 if (var7 != 0) {
-                  pb.field_e.a(fa.a(120, 1 + cp.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
+                  pb.field_e.a(ReportAbuseDialog.a(120, 1 + cp.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
                   break regionExit1;
                 }
-                tf.field_Hb[0].g(530, 150);
-                tf.field_Hb[1].g(230, 242);
+                AccountCreationDialog.field_Hb[0].g(530, 150);
+                AccountCreationDialog.field_Hb[1].g(230, 242);
                 if (var16 == 0) {
                   break;
                 }
@@ -369,7 +369,7 @@ final class ol extends MenuScreen {
               default:
                 break;
             }
-            pb.field_e.a(fa.a(120, 1 + cp.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
+            pb.field_e.a(ReportAbuseDialog.a(120, 1 + cp.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
           }
         }
     }
@@ -437,7 +437,7 @@ final class ol extends MenuScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

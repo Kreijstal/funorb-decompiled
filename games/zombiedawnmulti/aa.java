@@ -116,7 +116,7 @@ final class aa extends ii {
         try {
           bh.field_a.a(param1);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "aa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

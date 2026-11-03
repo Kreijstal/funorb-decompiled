@@ -19,7 +19,7 @@ abstract class ii {
             ii.b((byte) -126);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ii.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ii.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ abstract class ii {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "ii.L(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ii.L(" + param0 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ abstract class ii {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!em.a(var6, (byte) -38)) {
+          if (!BirthDateInputWidget.a(var6, (byte) -38)) {
             stackIn_3_0 = u.field_f;
             return stackIn_3_0;
           }
@@ -149,7 +149,7 @@ abstract class ii {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ abstract class ii {
                 }
               }
             }
-            tf.field_Db = hl.field_a;
+            AccountCreationDialog.field_Db = hl.field_a;
             bl.field_c = tn.field_z;
             if (param1 == null) {
               if (var2_int != 0) {
@@ -216,7 +216,7 @@ abstract class ii {
             wc.field_J) {
             RasterBuffer.field_a = 0;
             bl.field_c = tn.field_z;
-            tf.field_Db = hl.field_a;
+            AccountCreationDialog.field_Db = hl.field_a;
           }
           if (param0 != -16898) {
             ii.b((byte) -126);
@@ -239,7 +239,7 @@ abstract class ii {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 

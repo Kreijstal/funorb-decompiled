@@ -3,7 +3,7 @@
  */
 final class pk {
     static int[] field_a;
-    static jb field_b;
+    static PlayerContextMenu field_b;
     static Sprite field_c;
 
     final static UiComponent b(int param0) {

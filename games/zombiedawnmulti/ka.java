@@ -31,7 +31,7 @@ final class ka {
           if (this.field_h > 0) {
             return 2;
           }
-          if (this.field_a == ie.field_sb) {
+          if (this.field_a == ContentTransitionDialog.field_sb) {
             return 1;
           }
           if (SimZombie.field_zb != 2) {
@@ -50,7 +50,7 @@ final class ka {
           field_c = (String) null;
           return 0;
         }
-        if (this.field_a == ie.field_sb) {
+        if (this.field_a == ContentTransitionDialog.field_sb) {
           return 1;
         }
         if (SimZombie.field_zb == 2 &&
@@ -111,7 +111,7 @@ final class ka {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class ka {
         this.field_l = wc.field_N;
         this.field_h = BufferedFile.field_g;
         this.field_g = ContextMenu.field_Ib;
-        this.field_k = fe.field_R;
+        this.field_k = AccountCreationForm.field_R;
         this.field_a = SimEntity.field_K;
         this.field_n = kk.field_s;
         this.field_o = UnitView.field_W;
@@ -149,7 +149,7 @@ final class ka {
           this.field_e = param1;
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ka.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ka.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

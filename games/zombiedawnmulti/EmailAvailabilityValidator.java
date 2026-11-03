@@ -11,7 +11,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     static ao field_w;
     static String field_t;
     static UiComponent field_x;
-    static fe field_s;
+    static AccountCreationForm field_s;
     static int field_q;
     static int field_u;
 
@@ -22,7 +22,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         try {
           this.field_z = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           qi.a(0, true, param0, param3.position, param2, param3.payload, param4);
           int var5_int = 19 % ((-76 - param1) / 44);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             } else {
               stackIn_64_2 = "{...}";
             }
-            throw fa.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -403,7 +403,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           if (param0 != 14) {
             return null;
           }
-          stackIn_27_0 = vl.a(gl.field_K, new String[]{param1}, 2);
+          stackIn_27_0 = vl.a(UsernameSuggestionsPanel.field_K, new String[]{param1}, 2);
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -415,7 +415,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

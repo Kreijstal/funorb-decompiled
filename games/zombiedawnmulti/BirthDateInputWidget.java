@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class em extends wk {
+final class BirthDateInputWidget extends wk {
     private TextInputWidget field_R;
     static int[] field_W;
     static int[][] field_ab;
@@ -18,8 +18,8 @@ final class em extends wk {
     static volatile int field_cb;
     private TextInputWidget field_Q;
 
-    final String d(byte param0) {
-        String var2 = this.field_T.d((byte) -113);
+    final String getHoverText(byte param0) {
+        String var2 = this.field_T.getHoverText((byte) -113);
         if (var2 != null) {
           return var2;
         }
@@ -49,29 +49,29 @@ final class em extends wk {
         }
     }
 
-    private final void a(String param0, int param1, int param2, UiWidget param3, boolean param4) {
+    private final void drawCenteredLabel(String param0, int param1, int param2, UiWidget param3, boolean param4) {
         if (!param4) {
           return;
         }
         try {
           cp.field_H.b(param0, param3.field_y + param1 + (param3.field_n >> 1), param3.field_i + (param2 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "em.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, dj param1) {
+    final void setBirthDateValidator(int param0, BirthDateValidator param1) {
         try {
-          super.a(param0 ^ 0, param1);
+          super.setBirthDateValidator(param0 ^ 0, param1);
           this.field_R.field_A = (WidgetListener) ((Object) param1);
           this.field_T.field_A = (WidgetListener) ((Object) param1);
           if (param0 != 3) {
-            dj var4 = (dj) null;
-            this.a(-101, (dj) null);
+            BirthDateValidator var4 = (BirthDateValidator) null;
+            this.setBirthDateValidator(-101, (BirthDateValidator) null);
           }
           this.field_Q.field_A = (WidgetListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "em.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class em extends wk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class em extends wk {
         Throwable decompiledCaughtException = null;
         if (param0 != 1) {
           var3 = (CharSequence) null;
-          em.a((CharSequence) null, (byte) 36);
+          BirthDateInputWidget.a((CharSequence) null, (byte) 36);
         }
         try {
           stackIn_3_0 = Integer.parseInt(this.field_R.field_j);
@@ -178,7 +178,7 @@ final class em extends wk {
         field_V = null;
     }
 
-    final boolean a(int param0) {
+    final boolean isDateIncomplete(int param0) {
         if (null != this.field_R.field_j &&
           this.field_R.field_j.length() != 0) {
           if (this.field_T.field_j == null) {
@@ -216,7 +216,7 @@ final class em extends wk {
           while (true) {
             if (var2_int >= param0.length()) {
               if (param1 != -38) {
-                em.k(19);
+                BirthDateInputWidget.k(19);
               }
               return true;
             }
@@ -237,7 +237,7 @@ final class em extends wk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -248,15 +248,15 @@ final class em extends wk {
         }
         param3 = param3 + this.field_y;
         param1 = param1 + this.field_i;
-        this.a(wg.field_b, param3, param1, this.field_R, true);
-        this.a(eo.field_a, param3, param1, this.field_T, true);
-        this.a(ij.field_a, param3, param1, this.field_Q, true);
+        this.drawCenteredLabel(wg.field_b, param3, param1, this.field_R, true);
+        this.drawCenteredLabel(eo.field_a, param3, param1, this.field_T, true);
+        this.drawCenteredLabel(ij.field_a, param3, param1, this.field_Q, true);
         if (param0 != -2) {
           field_cb = -58;
         }
     }
 
-    private em(WidgetPainter param0, boolean param1) {
+    private BirthDateInputWidget(WidgetPainter param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_R = (TextInputWidget) ((Object) new on("", (WidgetListener) null, 2));
@@ -275,20 +275,20 @@ final class em extends wk {
           }
           this.b((byte) 124, this.field_Q);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    em(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
+    BirthDateInputWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.setWidgetBounds(param2, param3, 28972, param4, param5);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final int g(byte param0) {
+    final int getMonthIndex(byte param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -346,7 +346,7 @@ final class em extends wk {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -46,7 +46,7 @@ final class ib implements WidgetPainter {
             ((ButtonWidget) (param4)).field_G) {
             var8.drawAdditive(var6_int + 1 + (-var8.fullWidth + param4.field_n >> 1), (param4.field_w - var8.field_u >> 1) + var7 + 1, 256);
           }
-          if (!param4.c(124)) {
+          if (!param4.hasKeyboardFocus(124)) {
             return;
           }
           hl.a(2 + var7, 2 + var6_int, (byte) 111, param4.field_n - 4, param4.field_w - 4);
@@ -61,7 +61,7 @@ final class ib implements WidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class ib implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 112) {
-            stackIn_4_0 = tf.a(PcmSampleStream.createAtRatePercent(param1, 100, 96), (byte) -98);
+            stackIn_4_0 = AccountCreationDialog.a(PcmSampleStream.createAtRatePercent(param1, 100, 96), (byte) -98);
             return stackIn_4_0;
           }
           stackIn_2_0 = (we) null;
@@ -116,7 +116,7 @@ final class ib implements WidgetPainter {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

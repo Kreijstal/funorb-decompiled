@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class df extends WidgetContainer {
+abstract class FadingDialog extends WidgetContainer {
     static ResourceArchive field_M;
     static volatile boolean field_P;
     private int field_K;
     static String field_G;
     static boolean field_I;
-    private vk field_N;
+    private DialogLayer field_N;
     boolean field_R;
     static String field_J;
     static boolean field_H;
@@ -29,18 +29,18 @@ abstract class df extends WidgetContainer {
         return false;
     }
 
-    df(vk param0, int param1, int param2) {
+    FadingDialog(DialogLayer param0, int param1, int param2) {
         super(ub.field_wb - param1 >> 1, -param2 + kc.field_a >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_N = param0;
           this.field_R = false;
           this.field_K = 0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    abstract void a(boolean param0, int param1, int param2);
+    abstract void drawDialogFrame(boolean param0, int param1, int param2);
 
     public static void g(byte param0) {
         field_Q = null;
@@ -77,7 +77,7 @@ abstract class df extends WidgetContainer {
         return vi.field_a[1];
     }
 
-    boolean i(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         boolean stackIn_11_0 = false;
         boolean stackIn_20_0 = false;
         boolean stackIn_32_0 = false;
@@ -87,7 +87,7 @@ abstract class df extends WidgetContainer {
         var2 = this.a((byte) -55);
         var3 = -this.field_K + var2;
         if (param0 != -27388) {
-          this.field_N = (vk) null;
+          this.field_N = (DialogLayer) null;
           if (0 < var3) {
             this.field_K = this.field_K + (-1 + (8 + var3)) / 8;
           }
@@ -133,7 +133,7 @@ abstract class df extends WidgetContainer {
           this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
           return;
         }
-        df.g((byte) -100);
+        FadingDialog.g((byte) -100);
         this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
     }
 
@@ -143,7 +143,7 @@ abstract class df extends WidgetContainer {
         }
         if (this.field_K >= 256) {
           if (param2 == 0) {
-            this.a(true, param3 + this.field_y, param1 + this.field_i);
+            this.drawDialogFrame(true, param3 + this.field_y, param1 + this.field_i);
             super.renderWidget(param0 ^ 0, param1, param2, param3);
             return;
           }
@@ -153,54 +153,54 @@ abstract class df extends WidgetContainer {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
           r.a(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
-          this.a(true, 0, 0);
+          this.drawDialogFrame(true, 0, 0);
           super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
           BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
-          this.g(76);
+          this.findFocusTarget(76);
           return;
         }
         if (BufferedSocket.field_g.width < this.field_n) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
           r.a(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
-          this.a(true, 0, 0);
+          this.drawDialogFrame(true, 0, 0);
           super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
           BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
-          this.g(76);
+          this.findFocusTarget(76);
           return;
         }
         if (BufferedSocket.field_g.height < this.field_w) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
           r.a(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
-          this.a(true, 0, 0);
+          this.drawDialogFrame(true, 0, 0);
           super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
           BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
-          this.g(76);
+          this.findFocusTarget(76);
           return;
         }
         r.a(0, BufferedSocket.field_g);
         SoftwareRasterizer.clear();
-        this.a(true, 0, 0);
+        this.drawDialogFrame(true, 0, 0);
         super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
         ql.a(true);
         BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
         if (param0 == -2) {
           return;
         }
-        this.g(76);
+        this.findFocusTarget(76);
     }
 
     private final int a(byte param0) {
@@ -208,8 +208,8 @@ abstract class df extends WidgetContainer {
         return this.field_R ? this.field_N.j((byte) -121) != this ? 0 : 256 : 0;
     }
 
-    final UiWidget g(int param0) {
-        UiWidget var2 = super.g(110);
+    final UiWidget findFocusTarget(int param0) {
+        UiWidget var2 = super.findFocusTarget(110);
         if (var2 != null) {
           return var2;
         }

@@ -23,7 +23,7 @@ final class ck {
           var2[var2.length - 1] = param0;
           rb.field_c = var2;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ck.D(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ck.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class ck {
                     return;
                   }
                   if (var2 == 23) {
-                    ie.field_sb = ((PacketBuffer) ((Object) var1)).readLong((byte) -30);
+                    ContentTransitionDialog.field_sb = ((PacketBuffer) ((Object) var1)).readLong((byte) -30);
                     return;
                   }
                   MouseInputHandler.a("L1: " + ci.a(0), (Throwable) null, false);
@@ -391,7 +391,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "ck.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ck.C(" + param0 + ')');
         }
     }
 
@@ -430,7 +430,7 @@ final class ck {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

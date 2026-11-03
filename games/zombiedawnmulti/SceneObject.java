@@ -57,7 +57,7 @@ abstract class SceneObject extends TertiaryLinkNode {
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "id.S(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "id.S(" + param0 + ')');
         }
     }
 
@@ -159,7 +159,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

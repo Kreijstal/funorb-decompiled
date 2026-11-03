@@ -48,7 +48,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         if (PortalEntryEvent.field_m.field_c) {
           return;
         }
-        if (df.field_I) {
+        if (FadingDialog.field_I) {
           UiWidget.field_s.a(param4, param0, 0, param3, 3, param5);
           return;
         }
@@ -168,7 +168,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           param2.writeShort(param3, (byte) -110);
           param2.writeShort(param4, (byte) -64);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "tl.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tl.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

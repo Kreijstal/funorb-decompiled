@@ -33,14 +33,14 @@ final class he implements WidgetPainter {
             field_k = (IntrusiveDeque) null;
           }
           if (!param4.field_l &&
-            !param4.c(param2 ^ -15226)) {
+            !param4.hasKeyboardFocus(param2 ^ -15226)) {
             stackIn_7_0 = 2188450;
           } else {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
           this.field_g.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_j + "</u>", param3 + param4.field_y, param4.field_i + param1, param4.field_n, param4.field_w, var6_int, -1, this.field_j, this.field_h, this.field_g.maxDescent + this.field_g.maxAscent);
-          if (param4.c(127)) {
+          if (param4.hasKeyboardFocus(127)) {
             var7 = this.field_g.textWidth(param4.field_j);
             var8 = this.field_g.maxDescent + this.field_g.maxAscent;
             var9 = param4.field_y + param3;
@@ -72,7 +72,7 @@ final class he implements WidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class he implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "he.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "he.B(" + param0 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class he implements WidgetPainter {
           this.field_h = param2;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

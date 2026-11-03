@@ -108,7 +108,7 @@ final class DualLinkDeque {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class DualLinkDeque {
           param1.secondaryNext.secondaryPrevious = param1;
           param1.secondaryPrevious.secondaryNext = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "lq.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lq.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

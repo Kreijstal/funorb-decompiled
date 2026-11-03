@@ -24,7 +24,7 @@ final class ra extends IntrusiveNode {
           TertiaryLinkDeque.a(eb.field_p, (byte) -100, lh.field_i, SimArmedHuman.field_Bb);
           t.a(false, 0, param0, 0);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class ra extends IntrusiveNode {
             }
             ak.a(14158, param0);
           } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "ra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

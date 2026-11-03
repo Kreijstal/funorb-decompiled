@@ -20,7 +20,7 @@ final class lc extends IntrusiveNode {
           ResourceArchive var2 = (ResourceArchive) null;
           lc.a(-40, (ResourceArchive) null, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null);
         }
-        IndexedSprite var1 = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], MatchingTextValidator.field_t[0], UsernameAvailabilityValidator.field_t);
+        IndexedSprite var1 = new IndexedSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], MatchingTextValidator.field_t[0], UsernameAvailabilityValidator.field_t);
         fd.h((byte) 126);
         return var1;
     }
@@ -106,7 +106,7 @@ final class lc extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class lc extends IntrusiveNode {
           }
           this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "lc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -264,9 +264,9 @@ final class lc extends IntrusiveNode {
           vd.field_a = new UiComponent(0L, var10);
           vd.field_a.field_V = 2;
           vd.field_a.field_ab = el.a(30, 3815994, param0 + 12035, 2039583, false, true);
-          al.field_fb = new UiComponent(0L, var10);
-          al.field_fb.field_V = 2;
-          al.field_fb.field_ab = el.a(30, 3815994, 0, 2039583, false, false);
+          ResizableDialog.field_fb = new UiComponent(0L, var10);
+          ResizableDialog.field_fb.field_V = 2;
+          ResizableDialog.field_fb.field_ab = el.a(30, 3815994, 0, 2039583, false, false);
           pn.field_g = new UiComponent(0L, var10);
           pn.field_g.field_V = 2;
           pn.field_g.field_ab = el.a(30, 3815994, 0, 2039583, true, false);
@@ -428,7 +428,7 @@ final class lc extends IntrusiveNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 

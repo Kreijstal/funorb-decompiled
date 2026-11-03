@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wk extends WidgetContainer implements kh {
+abstract class wk extends WidgetContainer implements ValidationProviderSource {
     static String field_K;
     static IndexedSprite field_J;
     static JaggrabDownloader field_I;
-    private dj field_H;
+    private BirthDateValidator field_H;
     static int[] field_L;
     static int field_G;
 
-    public final ValidationProvider a(byte param0) {
+    public final ValidationProvider getValidationProvider(byte param0) {
         int var2 = 108 / ((param0 - 0) / 43);
         return (ValidationProvider) ((Object) this.field_H);
     }
@@ -20,13 +20,13 @@ abstract class wk extends WidgetContainer implements kh {
 
     abstract int j(int param0);
 
-    abstract int g(byte param0);
+    abstract int getMonthIndex(byte param0);
 
     abstract int i(int param0);
 
-    abstract boolean a(int param0);
+    abstract boolean isDateIncomplete(int param0);
 
-    void a(int param0, dj param1) {
+    void setBirthDateValidator(int param0, BirthDateValidator param1) {
         try {
           if (param0 != 3) {
             this.j(-11);
@@ -34,7 +34,7 @@ abstract class wk extends WidgetContainer implements kh {
           this.field_H = param1;
           this.field_H.field_n = this;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "wk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ abstract class wk extends WidgetContainer implements kh {
           }
           oe.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "wk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

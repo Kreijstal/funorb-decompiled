@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends WidgetContainer implements TextInputListener, in {
+final class qm extends WidgetContainer implements TextInputListener, ButtonActivationListener {
     static String field_I;
     private TextInputWidget field_M;
     private boolean field_L;
@@ -24,7 +24,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           var4.setInputText(false, var5, (byte) 119);
           this.field_M.clearInputText(true);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,13 +38,13 @@ final class qm extends WidgetContainer implements TextInputListener, in {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        jb var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        jb var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        jb var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        jb var13 = null;
+        PlayerContextMenu var13 = null;
         try {
           ve.a(0L, 196, (String) null, SimEntity.field_H, (String) null, param0, -1, (int[]) null, param0.i(6));
           if (param0.field_Fb && (param0.field_fc == 2 ||
@@ -89,11 +89,11 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -135,7 +135,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -265,7 +265,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
               var8 = lj.field_f;
             }
           } else {
-            var8 = fa.field_Gb;
+            var8 = ReportAbuseDialog.field_Gb;
           }
           dupTemp$0 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
@@ -328,7 +328,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -406,7 +406,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
             qm.a(-1.2370823621749878f, -17, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -448,7 +448,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -484,7 +484,7 @@ final class qm extends WidgetContainer implements TextInputListener, in {
           }
           SimArmedHuman.field_Bb = param2;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "qm.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qm.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

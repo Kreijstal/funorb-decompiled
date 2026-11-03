@@ -47,15 +47,15 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean c(int param0) {
+    final boolean hasKeyboardFocus(int param0) {
         if (param0 < 123) {
           return false;
         }
-        return this.g(121) != null ? true : false;
+        return this.findFocusTarget(121) != null ? true : false;
     }
 
     boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
@@ -76,7 +76,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var9 = (UiWidget) (var10.c(-3));
           while (var9 != null) {
             if (var9.b(4)) {
-              if (var9.c(127) &&
+              if (var9.hasKeyboardFocus(127) &&
                 var9.handleKeyInput(param0, param1, param2, -6208)) {
                 return true;
               }
@@ -109,7 +109,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var8 = new IntrusiveDequeCursor(this.field_B);
           var4 = (UiWidget) (var8.c(-3));
           while (var4 != null) {
-            if (var4.c(126)) {
+            if (var4.hasKeyboardFocus(126)) {
               var5 = new IntrusiveDequeCursor(this.field_B);
               var5.a(2680, var4);
               var6 = (UiWidget) (var5.a((byte) -36));
@@ -200,11 +200,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
-    String d(byte param0) {
+    String getHoverText(byte param0) {
         IntrusiveDequeCursor var2;
         int var3;
         UiWidget var4;
@@ -215,7 +215,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var3 = -21 / ((53 - param0) / 57);
         var4 = (UiWidget) (var2.c(-3));
         while (var4 != null) {
-          var5 = var4.d((byte) 112);
+          var5 = var4.getHoverText((byte) 112);
           if (var5 != null) {
             return var5;
           }
@@ -276,7 +276,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           }
           var4 = (UiWidget) (var9.a(32397));
           while (var4 != null) {
-            if (var4.c(125)) {
+            if (var4.hasKeyboardFocus(125)) {
               var5 = new IntrusiveDequeCursor(this.field_B);
               var5.b(-4, var4);
               var6 = (UiWidget) (var5.e(-3));
@@ -301,7 +301,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -390,7 +390,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -427,11 +427,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean requestKeyboardFocus(byte param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
@@ -448,8 +448,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var10 = (UiWidget) (var8.c(-3));
           while (var10 != null) {
             if (var10.b(4)) {
-              if (var10.c(126) &&
-                var10.a((byte) 105, param1, param2, param3, param4, param5, param6)) {
+              if (var10.hasKeyboardFocus(126) &&
+                var10.requestKeyboardFocus((byte) 105, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
               var10 = (UiWidget) (var8.a((byte) -50));
@@ -468,7 +468,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -487,7 +487,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           }
           this.field_B.a(param1, false);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "se.EB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "se.EB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -534,7 +534,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         this.field_B = new IntrusiveDeque();
     }
 
-    UiWidget g(int param0) {
+    UiWidget findFocusTarget(int param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
@@ -545,7 +545,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var2 = new IntrusiveDequeCursor(this.field_B);
         var3 = (UiWidget) (var2.c(-3));
         while (var3 != null) {
-          if (var3.c(125)) {
+          if (var3.hasKeyboardFocus(125)) {
             return var3;
           }
           var3 = (UiWidget) (var2.a((byte) -40));
@@ -590,7 +590,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

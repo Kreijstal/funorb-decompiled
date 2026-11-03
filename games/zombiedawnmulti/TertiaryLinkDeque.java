@@ -298,7 +298,7 @@ final class TertiaryLinkDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -325,14 +325,14 @@ final class TertiaryLinkDeque {
         try {
           if (null == pj.field_I) {
             pj.field_I = new ta(nb.field_a, TextInputWidget.field_P);
-            nb.field_a.b(3016, pj.field_I);
+            nb.field_a.showDialog(3016, pj.field_I);
           }
           pj.field_I.a(param3, param2, 66, param0);
           SoftwareRasterizer.clear();
           int var4_int = 30 % ((param1 + 45) / 37);
           wj.b(true, -114);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "c.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "c.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class TertiaryLinkDeque {
           param0.tertiaryPrevious.tertiaryNext = param0;
           param0.tertiaryNext.tertiaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "c.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "c.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

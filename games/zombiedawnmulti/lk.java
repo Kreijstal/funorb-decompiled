@@ -108,7 +108,7 @@ final class lk extends SceneObject {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class lk extends SceneObject {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (ta.field_hb == dj.field_k) {
+          if (ta.field_hb == BirthDateValidator.field_k) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -166,7 +166,7 @@ final class lk extends SceneObject {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (dj.field_k != SceneObject.field_B) {
+          if (BirthDateValidator.field_k != SceneObject.field_B) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }
@@ -175,7 +175,7 @@ final class lk extends SceneObject {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "lk.L(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "lk.L(" + param0 + ')');
         }
     }
 

@@ -197,7 +197,7 @@ final class si extends MenuScreen {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class si extends MenuScreen {
           SceneObject.field_B = mp.field_b;
           ta.field_hb = mp.field_b;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "si.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "si.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -325,7 +325,7 @@ final class si extends MenuScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class si extends MenuScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -484,7 +484,7 @@ final class si extends MenuScreen {
           if (null == this.field_l) {
             return;
           }
-          MatchingTextValidator.field_w.a(dj.field_o, 90, 134, 16777215, 1, var6);
+          MatchingTextValidator.field_w.a(BirthDateValidator.field_o, 90, 134, 16777215, 1, var6);
           MatchingTextValidator.field_w.a(qm.field_N, 478, 134, 16777215, 1, var6);
           var8_int = 555;
           if (this.field_z.field_i) {
@@ -584,9 +584,9 @@ final class si extends MenuScreen {
             var21 = PortalEntryEvent.field_m.field_D[var13][0];
             var22 = PortalEntryEvent.field_m.field_D[var13][1];
             var23 = 4;
-            var24 = PowerupEvent.field_m / gg.field_b[var23];
-            var24 = var24 % gg.field_j[var23];
-            var24 = var24 + gg.field_l[var23];
+            var24 = PowerupEvent.field_m / MessageDialogContent.field_b[var23];
+            var24 = var24 % MessageDialogContent.field_j[var23];
+            var24 = var24 + MessageDialogContent.field_l[var23];
             am.a(var24, var22, var11, 1, var21).c(8, var10 - 11, var6);
             var25 = am.a(var24, var22, -var11 + 1, 1, var21);
             var25.flipHorizontal();
@@ -628,7 +628,7 @@ final class si extends MenuScreen {
             stackIn_87_0 = 255 - var5;
           }
           var6Lifetime1 = stackIn_87_0;
-          rg.field_C.a(-40, 233, var6Lifetime1);
+          SingleChildWidget.field_C.a(-40, 233, var6Lifetime1);
           var7Lifetime1 = 0;
           var8 = new int[]{30, 239, 448};
           for (var9Lifetime1 = 0; 5 > var9Lifetime1; var9Lifetime1++) {

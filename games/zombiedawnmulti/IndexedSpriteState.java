@@ -106,7 +106,7 @@ abstract class IndexedSpriteState {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(')').toString());
         }
     }
 

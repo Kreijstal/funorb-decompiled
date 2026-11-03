@@ -55,7 +55,7 @@ final class bh {
           if (2 != param1.field_l) {
             if (param1.field_l == 0 &&
               ContextMenu.field_Hb) {
-              var3 = "[" + ne.field_vb + "] ";
+              var3 = "[" + MessageDialog.field_vb + "] ";
             }
             if (param1.field_l == 1) {
               var3 = "[" + vl.a(GameEvent.field_g, new String[]{param1.field_g}, 2) + "] ";
@@ -92,7 +92,7 @@ final class bh {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw fa.a((Throwable) (stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class bh {
                 if (var8_int == 0) {
                   return;
                 }
-                dj.field_l = true;
+                BirthDateValidator.field_l = true;
                 return;
               }
               var20 = iq.field_b[var9];
@@ -241,7 +241,7 @@ final class bh {
                     GameSimulation.field_v[param7] = (byte)var11;
                   }
                   bh.a(-1712, param1, param2, param3, param4, param5, param6, param7 + 1);
-                  if (dj.field_l) {
+                  if (BirthDateValidator.field_l) {
                     return;
                   }
                 }
@@ -283,7 +283,7 @@ final class bh {
               var10_intLifetime1 = 1;
               bh.a(-1712, param1, param2, param3, param4, param5, param6, param7 + 1);
             }
-            if (dj.field_l) {
+            if (BirthDateValidator.field_l) {
               return;
             }
             var11++;
@@ -298,7 +298,7 @@ final class bh {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

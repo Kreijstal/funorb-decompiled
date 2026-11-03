@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends ie {
+final class ub extends ContentTransitionDialog {
     static int field_wb;
     static String field_tb;
     static String field_xb;
@@ -46,7 +46,7 @@ final class ub extends ie {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "ub.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ub.B(" + param0 + ')');
         }
     }
 
@@ -156,11 +156,11 @@ final class ub extends ie {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
-    ub(vk param0, UiWidget param1) {
+    ub(DialogLayer param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -218,7 +218,7 @@ final class ub extends ie {
           }
           int var10_int = -50 / ((param3 - 47) / 32);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ub.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ub.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class ub extends ie {
           super.a(param0, (byte) -32);
           int var3_int = -36 / ((param1 - 61) / 56);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ub.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ub.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

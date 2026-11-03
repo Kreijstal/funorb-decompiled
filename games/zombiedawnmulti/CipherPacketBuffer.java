@@ -17,7 +17,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           int var3_int = -83 / ((26 - param0) / 43);
           this.field_p = new IsaacRandom(param1);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ga.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ga.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,11 +106,11 @@ final class CipherPacketBuffer extends PacketBuffer {
               var11 = la.field_c[var9];
               var6[0][var10] = kk.field_v[var11];
               var7[0][var10 * 4] = lb.field_c[var11];
-              var7[0][1 + 4 * var10] = vk.field_J[var11];
+              var7[0][1 + 4 * var10] = DialogLayer.field_J[var11];
               var7[0][2 + var10 * 4] = kj.field_p[var11];
-              var7[0][3 + 4 * var10] = ie.field_ob[var11];
+              var7[0][3 + 4 * var10] = ContentTransitionDialog.field_ob[var11];
               if (sf.a(1, kk.field_v[var11]) &&
-                vk.field_J[var11] + kj.field_p[var11] + ie.field_ob[var11] == 0) {
+                DialogLayer.field_J[var11] + kj.field_p[var11] + ContentTransitionDialog.field_ob[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -124,11 +124,11 @@ final class CipherPacketBuffer extends PacketBuffer {
               var11Lifetime1 = la.field_c[var9Lifetime1 + var5];
               var6[1][var14] = kk.field_v[var11Lifetime1];
               var7[1][var14 * 4] = lb.field_c[var11Lifetime1];
-              var7[1][4 * var14 + 1] = vk.field_J[var11Lifetime1];
+              var7[1][4 * var14 + 1] = DialogLayer.field_J[var11Lifetime1];
               var7[1][2 + 4 * var14] = kj.field_p[var11Lifetime1];
-              var7[1][3 + var14 * 4] = ie.field_ob[var11Lifetime1];
+              var7[1][3 + var14 * 4] = ContentTransitionDialog.field_ob[var11Lifetime1];
               if (sf.a(1, kk.field_v[var11Lifetime1]) &&
-                0 == vk.field_J[var11Lifetime1] + kj.field_p[var11Lifetime1] + ie.field_ob[var11Lifetime1]) {
+                0 == DialogLayer.field_J[var11Lifetime1] + kj.field_p[var11Lifetime1] + ContentTransitionDialog.field_ob[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -142,7 +142,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "ga.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ga.G(" + param0 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

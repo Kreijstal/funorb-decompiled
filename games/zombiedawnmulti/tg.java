@@ -148,7 +148,7 @@ final class tg implements Runnable {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -200,10 +200,10 @@ final class tg implements Runnable {
           if (!ra.field_l.a(false, "commonui")) {
             return 40;
           }
-          if (!fe.field_L.a((byte) -111)) {
+          if (!AccountCreationForm.field_L.a((byte) -111)) {
             return 50;
           }
-          if (!fe.field_L.a(false, "commonui")) {
+          if (!AccountCreationForm.field_L.a(false, "commonui")) {
             return 60;
           }
           if (!wm.field_V.a((byte) -117)) {
@@ -230,10 +230,10 @@ final class tg implements Runnable {
           if (!ra.field_l.a(false, "commonui")) {
             return 57;
           }
-          if (!fe.field_L.a((byte) -115)) {
+          if (!AccountCreationForm.field_L.a((byte) -115)) {
             return 71;
           }
-          if (!fe.field_L.a(false, "commonui")) {
+          if (!AccountCreationForm.field_L.a(false, "commonui")) {
             return 80;
           }
           if (!wm.field_V.a((byte) -122)) {
@@ -272,7 +272,7 @@ final class tg implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class tg implements Runnable {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -443,9 +443,9 @@ final class tg implements Runnable {
               SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
               var12 = 1;
               var6Lifetime3 = (int)(1.1 * (double)PowerupEvent.field_m) / 64 % 10;
-              var8Lifetime2 = gg.field_l[var12];
-              var7Lifetime3 = gg.field_b[var12];
-              var9Lifetime1 = gg.field_j[var12];
+              var8Lifetime2 = MessageDialogContent.field_l[var12];
+              var7Lifetime3 = MessageDialogContent.field_b[var12];
+              var9Lifetime1 = MessageDialogContent.field_j[var12];
               var13 = (int)((double)PowerupEvent.field_m * 1.1) % 64;
               var10Lifetime2 = (8 + PowerupEvent.field_m) / var7Lifetime3 % var9Lifetime1 + var8Lifetime2;
               var14 = var4 + 8;
@@ -476,18 +476,18 @@ final class tg implements Runnable {
               if (400 > PowerupEvent.field_m % 1000) {
                 MatchingTextValidator.field_w.drawParagraph(SpriteState.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
                 SoftwareRasterizer.resetClip();
-                tm.a(vk.i((byte) -39), false);
-                IntrusiveNode.a(vk.i((byte) -39), 2);
-                TextInputWidget.a(false, vk.i((byte) -39));
+                tm.a(DialogLayer.i((byte) -39), false);
+                IntrusiveNode.a(DialogLayer.i((byte) -39), 2);
+                TextInputWidget.a(false, DialogLayer.i((byte) -39));
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if ((500 + PowerupEvent.field_m) % 1000 < 400) {
                   MatchingTextValidator.field_w.drawParagraph(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
                   SoftwareRasterizer.resetClip();
-                  tm.a(vk.i((byte) -39), false);
-                  IntrusiveNode.a(vk.i((byte) -39), 2);
-                  TextInputWidget.a(false, vk.i((byte) -39));
+                  tm.a(DialogLayer.i((byte) -39), false);
+                  IntrusiveNode.a(DialogLayer.i((byte) -39), 2);
+                  TextInputWidget.a(false, DialogLayer.i((byte) -39));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -496,9 +496,9 @@ final class tg implements Runnable {
               }
             }
             if (decompiledFrameRemainder0) {
-              tm.a(vk.i((byte) -39), false);
-              IntrusiveNode.a(vk.i((byte) -39), 2);
-              TextInputWidget.a(false, vk.i((byte) -39));
+              tm.a(DialogLayer.i((byte) -39), false);
+              IntrusiveNode.a(DialogLayer.i((byte) -39), 2);
+              TextInputWidget.a(false, DialogLayer.i((byte) -39));
             }
           } else {
             gk.a(2, param2).b(0);
@@ -591,7 +591,7 @@ final class tg implements Runnable {
           }
           try {
             pp.field_n = param1;
-            df.field_I = true;
+            FadingDialog.field_I = true;
             var2 = ta.field_lb;
             if (var2 == null) {
               var2 = oe.field_d;
@@ -666,7 +666,7 @@ final class tg implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref2), "tg.B(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref2), "tg.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -709,7 +709,7 @@ final class tg implements Runnable {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = UsernameAvailabilityValidator.field_t[tq.b(255, (int) var21[var6])];
             }
-            var1[var2] = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
+            var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
           } else {
             var16 = vf.field_b[var2];
             var12 = var16;
@@ -721,7 +721,7 @@ final class tg implements Runnable {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = cr.b(UsernameAvailabilityValidator.field_t[tq.b((int) var21[var7], 255)], tq.b(255, (int) var16[var7]) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
           }
         }
         fd.h((byte) 125);

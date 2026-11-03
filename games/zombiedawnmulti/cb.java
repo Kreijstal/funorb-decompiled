@@ -173,7 +173,7 @@ final class cb extends IntrusiveNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -221,12 +221,12 @@ final class cb extends IntrusiveNode {
         }
         try {
           if (PortalView.field_L != null) {
-            PortalView.field_L.m(-7435);
+            PortalView.field_L.dismissDialog(-7435);
           }
           b.field_c = new qm(param2, param0, false, true, true);
           wj.field_i.a((UiWidget) (b.field_c), (byte) -110);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "cb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -413,7 +413,7 @@ final class cb extends IntrusiveNode {
           ic.field_g = param0;
           qf.field_c = param3;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "cb.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cb.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

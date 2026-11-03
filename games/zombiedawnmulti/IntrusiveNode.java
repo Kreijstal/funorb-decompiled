@@ -52,7 +52,7 @@ class IntrusiveNode {
         if (cr.a((byte) 27)) {
           param0 = false;
         }
-        gg.a(124, param0);
+        MessageDialogContent.a(124, param0);
         TextWidgetPainter.b((byte) 117);
         if (param1 != 2) {
           field_a = -119;
@@ -70,7 +70,7 @@ class IntrusiveNode {
           param1[4 * param0 + 2] = (byte)(param3 >>> 8);
           param1[3 + 4 * param0] = (byte)param3;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "br.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "br.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

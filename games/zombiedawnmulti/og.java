@@ -87,7 +87,7 @@ final class og extends SimEntity {
           }
           this.field_R = this.simulation.world.computeEffectDuration((byte) 32, this.field_O, 3000);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "og.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "og.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class og extends SimEntity {
                   }
                   else {
                     if (2 != var12.field_fc) {
-                      var12.field_Kb.field_wb = jb.field_a;
+                      var12.field_Kb.field_wb = PlayerContextMenu.field_a;
                     } else {
                       var12.field_oc.field_wb = ap.field_u;
                     }
@@ -653,7 +653,7 @@ final class og extends SimEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var7), "og.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var7), "og.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -686,7 +686,7 @@ final class og extends SimEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "og.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "og.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -717,7 +717,7 @@ final class og extends SimEntity {
           var4 = -1L;
           dc.a(var4, param1, var2, -100, var3);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "og.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "og.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

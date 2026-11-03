@@ -4,7 +4,7 @@
 final class bk extends t {
     static boolean field_g;
     private java.nio.ByteBuffer field_h;
-    static fa field_i;
+    static ReportAbuseDialog field_i;
     static String field_j;
     static String field_k;
 
@@ -18,7 +18,7 @@ final class bk extends t {
 
     final static Sprite[] a(int param0, int param1, byte param2) {
         if (param2 != 28) {
-          field_i = (fa) null;
+          field_i = (ReportAbuseDialog) null;
           return PortalView.a((byte) -112, param0, 1, param1);
         }
         return PortalView.a((byte) -112, param0, 1, param1);
@@ -33,7 +33,7 @@ final class bk extends t {
           this.field_h.position(0);
           this.field_h.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "bk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class bk extends t {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class bk extends t {
         field_i = null;
         field_j = null;
         if (param0 != 4912) {
-          field_i = (fa) null;
+          field_i = (ReportAbuseDialog) null;
           field_k = null;
           return;
         }

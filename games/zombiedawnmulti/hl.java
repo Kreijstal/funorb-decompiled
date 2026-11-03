@@ -118,7 +118,7 @@ final class hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var5), "hl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "hl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class hl {
         int var12 = 0;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          ie.field_sb = -1L;
+          ContentTransitionDialog.field_sb = -1L;
           SimArmedHuman.field_Gb = param0;
           DualLinkNode.field_h = param5;
           kj.field_h = param0.length;
@@ -209,7 +209,7 @@ final class hl {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class hl {
         if (param0 != 0) {
           field_b = (db) null;
         }
-        return ie.field_sb == JaggrabDownloader.field_c.field_nc ? true : false;
+        return ContentTransitionDialog.field_sb == JaggrabDownloader.field_c.field_nc ? true : false;
     }
 
     static {

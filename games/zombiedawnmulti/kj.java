@@ -46,7 +46,7 @@ final class kj extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -86,15 +86,15 @@ final class kj extends IntrusiveNode {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        jb var5 = null;
+        PlayerContextMenu var5 = null;
         String var6 = null;
-        jb var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        jb var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        jb var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        jb var13 = null;
+        PlayerContextMenu var13 = null;
         try {
           stackIn_2_0 = param1.field_a;
           stackIn_2_1 = 196;
@@ -120,7 +120,7 @@ final class kj extends IntrusiveNode {
               var5.field_j.a((byte) -118, var6, 14);
             }
             var7 = pk.field_b;
-            var8 = sq.field_P;
+            var8 = HotspotTextWidget.field_P;
             var7.field_j.a((byte) -118, var8, 20);
           }
           if (param0 != -31806) {
@@ -141,9 +141,9 @@ final class kj extends IntrusiveNode {
           }
           pk.field_b.a((byte) -75);
           pk.field_b.a(false, (byte) -101);
-          pk.field_b.a(param1.field_l, param1.field_r, (byte) 13);
+          pk.field_b.buildPlayerMenu(param1.field_l, param1.field_r, (byte) 13);
           pk.field_b.c(-56);
-          pk.field_b.a(param1, param0 ^ -31808);
+          pk.field_b.addChatFilterActions(param1, param0 ^ -31808);
           var13 = pk.field_b;
           var3 = vb.field_f;
           var4 = ka.field_t;
@@ -159,7 +159,7 @@ final class kj extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

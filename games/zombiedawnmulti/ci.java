@@ -27,7 +27,7 @@ final class ci {
           }
           this.field_b.a(var3, false);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ci.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ci.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,14 +129,14 @@ final class ci {
           dm.field_Qb = SoftwareRasterizer.height;
           kp.field_l = SoftwareRasterizer.width;
           if (param0) {
-            stackIn_4_0 = sq.field_Q;
+            stackIn_4_0 = HotspotTextWidget.field_Q;
           } else {
             stackIn_4_0 = InflaterDecompressor.field_a;
           }
           MouseWheelInput.a(stackIn_4_0, false);
-          em.field_U.a(0, JaggrabDownloader.field_i.field_zb, 0, (byte) -74, -2 + (-40 + JaggrabDownloader.field_i.field_z));
+          BirthDateInputWidget.field_U.a(0, JaggrabDownloader.field_i.field_zb, 0, (byte) -74, -2 + (-40 + JaggrabDownloader.field_i.field_z));
           ClientException.field_h.setBounds(jk.field_f, 0, CipherPacketBuffer.field_r.field_zb, 0, -3344);
-          stackIn_6_0 = ie.field_jb;
+          stackIn_6_0 = ContentTransitionDialog.field_jb;
           stackIn_6_1 = 18;
           stackIn_6_2 = 2 + jk.field_f;
           if (GradientOutlineTextPainter.field_u) {
@@ -148,7 +148,7 @@ final class ci {
           bf.field_h.setBounds(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + CipherPacketBuffer.field_r.field_zb, -3344);
           bf.field_n.a(DualLinkNode.field_o, 2, CipherPacketBuffer.field_r.field_zb, 0, -2 - jk.field_f + (CipherPacketBuffer.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
           jp.field_b.setBounds(40, JaggrabDownloader.field_i.field_z - 40, JaggrabDownloader.field_i.field_zb, 0, -3344);
-          gg.field_m.setBounds(30, 0, LevelData.field_a.field_zb, 0, -3344);
+          MessageDialogContent.field_m.setBounds(30, 0, LevelData.field_a.field_zb, 0, -3344);
           SocketConnector.field_a.setBounds(-2 + LevelData.field_a.field_z - 70, 30, LevelData.field_a.field_zb, 0, -3344);
           var2_int = 3 + kj.field_h;
           if (2 > qo.field_r.length) {
@@ -261,7 +261,7 @@ final class ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ci.C(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ci.C(" + param0 + ',' + param1 + ')');
         }
     }
 

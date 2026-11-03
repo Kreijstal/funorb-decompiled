@@ -7,9 +7,9 @@ final class cc {
     static String field_a;
     static String field_d;
 
-    final static boolean a(String param0, String param1, String param2, int param3, int param4, fe param5, boolean param6) {
+    final static boolean a(String param0, String param1, String param2, int param3, int param4, AccountCreationForm param5, boolean param6) {
         RuntimeException var7 = null;
-        tf var8 = null;
+        AccountCreationDialog var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -27,8 +27,8 @@ final class cc {
           if (param4 != -10663) {
             field_b = (Sprite[]) null;
           }
-          var8 = new tf(nb.field_a, param5);
-          nb.field_a.b(param4 ^ -8815, var8);
+          var8 = new AccountCreationDialog(nb.field_a, param5);
+          nb.field_a.showDialog(param4 ^ -8815, var8);
           if (sd.h(3853)) {
             var8.p(param4 ^ -10591);
             return true;
@@ -37,7 +37,7 @@ final class cc {
           RandomAccessCacheFile.field_g = param2;
           am.field_a = param0;
           ab.field_k = param6;
-          SceneObject.field_B = dj.field_k;
+          SceneObject.field_B = BirthDateValidator.field_k;
           rj.field_J = param3;
           IntrusiveDequeCursor.field_j = param1;
           return true;
@@ -69,7 +69,7 @@ final class cc {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
         }
     }
 

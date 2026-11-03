@@ -14,7 +14,7 @@ final class vb {
         if (InflaterDecompressor.field_a > 0) {
           return SocketConnector.field_a;
         }
-        if (sq.field_Q > 0) {
+        if (HotspotTextWidget.field_Q > 0) {
           return SocketConnector.field_a;
         }
         if (param0 != 21262) {
@@ -200,7 +200,7 @@ final class vb {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 

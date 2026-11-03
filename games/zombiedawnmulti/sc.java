@@ -22,7 +22,7 @@ final class sc {
             field_a = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "sc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class sc {
           param1.secondaryKey = param2;
           param1.secondaryPrevious.secondaryNext = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "sc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -210,13 +210,13 @@ final class sc {
         jk.field_d = null;
         if (param0 != 87) {
           field_f = -103;
-          sq.field_N = true;
+          HotspotTextWidget.field_N = true;
           lj.field_v = null;
           dp.field_c = null;
           IntrusiveNode.field_c = null;
           return;
         }
-        sq.field_N = true;
+        HotspotTextWidget.field_N = true;
         lj.field_v = null;
         dp.field_c = null;
         IntrusiveNode.field_c = null;
@@ -229,16 +229,16 @@ final class sc {
         int var2Lifetime1;
         if (param0 != 0) {
           field_d = (UiComponent) null;
-          var1 = fa.d(false);
+          var1 = ReportAbuseDialog.d(false);
           var2 = UiTheme.a((byte) -99);
           MusicPatch.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1 + (um.field_a << 1), (la.field_m << 1) + var2, 12018);
-          sq.g(param0 + 114);
+          HotspotTextWidget.g(param0 + 114);
           return;
         }
-        var1Lifetime1 = fa.d(false);
+        var1Lifetime1 = ReportAbuseDialog.d(false);
         var2Lifetime1 = UiTheme.a((byte) -99);
         MusicPatch.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1Lifetime1 + (um.field_a << 1), (la.field_m << 1) + var2Lifetime1, 12018);
-        sq.g(param0 + 114);
+        HotspotTextWidget.g(param0 + 114);
     }
 
     final static void b(int param0) {

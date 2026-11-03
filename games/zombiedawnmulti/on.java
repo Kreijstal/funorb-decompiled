@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends TextInputWidget implements kh {
+final class on extends TextInputWidget implements ValidationProviderSource {
     static MouseInputHandler field_Z;
     private ValidationProvider field_ab;
     static ki[] field_bb;
@@ -16,7 +16,7 @@ final class on extends TextInputWidget implements kh {
           }
           this.field_Y = -this.field_y + MouseInputHandler.field_g - param2;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "on.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "on.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class on extends TextInputWidget implements kh {
         return we.field_n[var4];
     }
 
-    public final ValidationProvider a(byte param0) {
+    public final ValidationProvider getValidationProvider(byte param0) {
         int var2 = -13 / ((0 - param0) / 43);
         return this.field_ab;
     }
@@ -69,10 +69,10 @@ final class on extends TextInputWidget implements kh {
         try {
           this.field_ab = param1;
           if (param0 != -27) {
-            this.a((byte) -17);
+            this.getValidationProvider((byte) -17);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "on.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "on.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class on extends TextInputWidget implements kh {
         }
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         if (!this.field_l) {
           return null;
         }

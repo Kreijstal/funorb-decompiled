@@ -139,7 +139,7 @@ final class jh extends UiComponent {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class jh extends UiComponent {
             }
             ak.a(param1 + 14159, param0);
           } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "jh.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jh.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

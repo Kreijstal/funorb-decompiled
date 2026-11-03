@@ -29,7 +29,7 @@ class pp extends ic {
           this.field_p = param0;
           this.field_m = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "pp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ class pp extends ic {
           }
           param0.a(13066, this.field_m);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "pp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

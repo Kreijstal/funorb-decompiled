@@ -68,7 +68,7 @@ final class eb {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = UsernameAvailabilityValidator.field_t[tq.b((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
+          var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
         }
         if (param0 <= 2) {
           eb.a(true, false, -9);
@@ -350,7 +350,7 @@ final class eb {
               }
             }
           }
-          Waypoint.field_j = NetworkGameClient.field_B.field_c * (al.field_bb + wk.field_G << 1);
+          Waypoint.field_j = NetworkGameClient.field_B.field_c * (ResizableDialog.field_bb + wk.field_G << 1);
           ZombieDawnMulti.field_H = am.field_c - (var3_intLifetime1 >> 1);
           fl.field_a = -(var3_intLifetime1 >> 1) + (am.field_c + var3_intLifetime1);
           for (var4Lifetime2 = 0; TextWidgetPainter.field_m.length > var4Lifetime2; var4Lifetime2++) {
@@ -376,13 +376,13 @@ final class eb {
             } else {
               var7Lifetime2 = hn.a(0, TextWidgetPainter.field_m[var4Lifetime3], true);
               var8Lifetime1 = am.field_c - (var7Lifetime2 >> 1);
-              var5Lifetime3 = var5Lifetime3 + al.field_bb;
+              var5Lifetime3 = var5Lifetime3 + ResizableDialog.field_bb;
               uf.field_b[var4Lifetime3] = new int[4];
               uf.field_b[var4Lifetime3][0] = var8Lifetime1 - no.field_Gb;
               uf.field_b[var4Lifetime3][1] = var5Lifetime3;
               uf.field_b[var4Lifetime3][2] = var7Lifetime2 + (no.field_Gb << 1);
               uf.field_b[var4Lifetime3][3] = (wk.field_G << 1) + me.field_h;
-              var5Lifetime3 = var5Lifetime3 + ((wk.field_G << 1) - (-al.field_bb - me.field_h));
+              var5Lifetime3 = var5Lifetime3 + ((wk.field_G << 1) - (-ResizableDialog.field_bb - me.field_h));
             }
             var4Lifetime3++;
           }
@@ -395,7 +395,7 @@ final class eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "eb.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "eb.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

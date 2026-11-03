@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb {
+final class PlayerContextMenu {
     ContextMenu field_j;
     String field_f;
     static String field_a;
@@ -86,7 +86,7 @@ final class jb {
           this.c(-88);
           return;
         }
-        if (this.field_i == ie.field_sb) {
+        if (this.field_i == ContentTransitionDialog.field_sb) {
           if (param1 < -80) {
             return;
           }
@@ -109,7 +109,7 @@ final class jb {
         }
         var7 = en.a((byte) 50, this.field_i);
         var4 = vm.a(this.field_i, (byte) -104);
-        var5 = this.b(-20516);
+        var5 = this.getTargetName(-20516);
         if (var4 != null) {
           if (!JaggrabDownloader.field_c.field_Fb) {
             this.field_j.a((byte) -118, vl.a(lk.field_I, new String[]{var5}, 2), 1);
@@ -204,7 +204,7 @@ final class jb {
         var3 = var5.field_Nb;
         if (var5.field_lc) {
           this.field_j.a((byte) -118, vl.a(ke.field_d, new String[]{var3}, 2), 2);
-          this.field_j.a((byte) -118, vl.a(gg.field_e, new String[]{var3}, 2), 3);
+          this.field_j.a((byte) -118, vl.a(MessageDialogContent.field_e, new String[]{var3}, 2), 3);
         } else {
           if (var5.field_Ob) {
             this.field_j.a((byte) -118, vl.a(jo.field_c, new String[]{var3}, 2), 2);
@@ -234,7 +234,7 @@ final class jb {
     final boolean a(boolean param0) {
         String discarded$2 = null;
         if (param0) {
-          discarded$2 = this.b(95);
+          discarded$2 = this.getTargetName(95);
           if (this.field_j == null) {
             return false;
           }
@@ -252,7 +252,7 @@ final class jb {
         return false;
     }
 
-    final boolean a(int param0, int param1, byte param2, boolean param3, int param4) {
+    final boolean handleMenuSelection(int param0, int param1, byte param2, boolean param3, int param4) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         boolean discarded$2 = false;
@@ -265,18 +265,18 @@ final class jb {
           discarded$0 = this.b(param0, 19, var6);
           discarded$1 = this.a(param4, var6, (byte) 57);
           discarded$2 = this.a((byte) 98, var6, param4);
-          discarded$3 = this.a(17, var6, param1);
+          discarded$3 = this.openReportAbuse(17, var6, param1);
           return true;
         }
         this.field_b = -116;
         boolean discarded$4 = this.b(param0, 19, var6);
         boolean discarded$5 = this.a(param4, var6, (byte) 57);
         boolean discarded$6 = this.a((byte) 98, var6, param4);
-        boolean discarded$7 = this.a(17, var6, param1);
+        boolean discarded$7 = this.openReportAbuse(17, var6, param1);
         return true;
     }
 
-    final void a(ka param0, int param1) {
+    final void addChatFilterActions(ka param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -308,7 +308,7 @@ final class jb {
           if (0 == ba.field_q) {
             this.field_j.a((byte) -118, aj.field_i, 12);
           }
-          this.field_j.a((byte) -118, gg.field_n, 13);
+          this.field_j.a((byte) -118, MessageDialogContent.field_n, 13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -320,7 +320,7 @@ final class jb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -378,15 +378,15 @@ final class jb {
         return true;
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean openReportAbuse(int param0, int param1, int param2) {
         if (param0 != param1) {
           return false;
         }
-        bk.field_i = new fa(this.field_e.field_w, this.field_e.field_qb, this.field_e.field_zb, this.field_e.field_z, param2, wa.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b, this.field_f, this.field_i);
+        bk.field_i = new ReportAbuseDialog(this.field_e.field_w, this.field_e.field_qb, this.field_e.field_zb, this.field_e.field_z, param2, wa.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b, this.field_f, this.field_i);
         return true;
     }
 
-    private final String b(int param0) {
+    private final String getTargetName(int param0) {
         String var2 = null;
         String var2Lifetime1;
         if (param0 == -20516) {
@@ -412,8 +412,8 @@ final class jb {
         String var2Lifetime1;
         if (param0 < -45) {
           if (null != this.field_f &&
-            ~ie.field_sb != ~this.field_i) {
-            var3 = this.b(-20516);
+            ~ContentTransitionDialog.field_sb != ~this.field_i) {
+            var3 = this.getTargetName(-20516);
             var2 = var3;
             this.field_j.a((byte) -118, vl.a(mi.field_Jb, new String[]{var3}, 2), 17);
           }
@@ -421,14 +421,14 @@ final class jb {
         }
         field_c = (UiComponent) null;
         if (null != this.field_f &&
-          ~ie.field_sb != ~this.field_i) {
-          var3 = this.b(-20516);
+          ~ContentTransitionDialog.field_sb != ~this.field_i) {
+          var3 = this.getTargetName(-20516);
           var2Lifetime1 = var3;
           this.field_j.a((byte) -118, vl.a(mi.field_Jb, new String[]{var3}, 2), 17);
         }
     }
 
-    final void a(int param0, int[] param1, byte param2) {
+    final void buildPlayerMenu(int param0, int[] param1, byte param2) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -439,9 +439,9 @@ final class jb {
         int var6 = 0;
         String var7 = null;
         try {
-          if (this.field_f != null && (ie.field_sb != this.field_i ||
+          if (this.field_f != null && (ContentTransitionDialog.field_sb != this.field_i ||
             2 == param0) && SimZombie.field_zb == 2) {
-            var7 = this.b(-20516);
+            var7 = this.getTargetName(-20516);
             var4 = var7;
             var5 = dn.a(this.field_f, false);
             var6 = hp.a(this.field_f, param2 ^ 1009) ? 1 : 0;
@@ -489,11 +489,11 @@ final class jb {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    jb(UiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    PlayerContextMenu(UiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new ContextMenu(ql.field_d);
           this.field_f = param2;
@@ -505,7 +505,7 @@ final class jb {
           this.field_e = param0;
           param0.field_Ab = true;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

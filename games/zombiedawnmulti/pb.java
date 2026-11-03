@@ -23,7 +23,7 @@ final class pb {
           return false;
         }
         if (param0 < 19) {
-          return (1 << -32 + param2 & em.field_O[param0]) != 0 ? true : false;
+          return (1 << -32 + param2 & BirthDateInputWidget.field_O[param0]) != 0 ? true : false;
         }
         return false;
     }
@@ -47,7 +47,7 @@ final class pb {
           }
           var4_int = param1.a(param0, (byte) -70);
           var5 = param1.a(param3, var4_int, -1);
-          stackIn_3_0 = vk.a(38, var5, param1, var4_int);
+          stackIn_3_0 = DialogLayer.a(38, var5, param1, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class pb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -110,12 +110,12 @@ final class pb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static PcmSampleStream a(byte param0, int param1) {
-        if (!df.field_H) {
+        if (!FadingDialog.field_H) {
           return null;
         }
         if (qo.field_q.a(0) >= 4) {
@@ -160,7 +160,7 @@ final class pb {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static PcmSampleStream $cfr$intArgs$a$90ed9136db05(int param0, int param1) {
-        if (!df.field_H) {
+        if (!FadingDialog.field_H) {
           return null;
         }
         if (qo.field_q.a(0) >= 4) {

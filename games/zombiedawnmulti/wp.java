@@ -38,7 +38,7 @@ final class wp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "wp.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "wp.D(" + param0 + ')');
         }
     }
 
@@ -73,8 +73,8 @@ final class wp {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        em.field_ab[param1][param3] = param0;
-        em.field_ab[param1][1] = param2;
+        BirthDateInputWidget.field_ab[param1][param3] = param0;
+        BirthDateInputWidget.field_ab[param1][1] = param2;
     }
 
     final static void b(int param0) {
@@ -119,7 +119,7 @@ final class wp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1_ref), "wp.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "wp.A(" + param0 + ')');
         }
     }
 

@@ -98,7 +98,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -382,7 +382,7 @@ final class WhirlpoolHasher {
             if (va.field_a == 0) {
               if (null == JaggrabDownloader.field_c &&
                 ContextMenu.field_Hb) {
-                var7Lifetime6 = "[" + ne.field_vb + "] ";
+                var7Lifetime6 = "[" + MessageDialog.field_vb + "] ";
               }
               if (JaggrabDownloader.field_c != null) {
                 if (wa.field_k &&
@@ -419,7 +419,7 @@ final class WhirlpoolHasher {
     }
 
     final static void a(int param0, tq param1, int param2, int param3, byte param4, int param5, dm param6) {
-        jb var13 = null;
+        PlayerContextMenu var13 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -427,7 +427,7 @@ final class WhirlpoolHasher {
         try {
           ve.a(param6.field_ec, 196, param6.field_Lb, param1, param6.field_Jb, param6, -1, (int[]) null, -1);
           pk.field_b.a(true, (byte) -102);
-          pk.field_b.a(0, (int[]) null, (byte) 13);
+          pk.field_b.buildPlayerMenu(0, (int[]) null, (byte) 13);
           pk.field_b.c(param4 ^ -42);
           if (param4 != 81) {
             WhirlpoolHasher.a(-56, -95, -27);
@@ -439,7 +439,7 @@ final class WhirlpoolHasher {
           var11 = param2;
           var13.field_j.layoutAtAnchor(4542, var8, var11, var9, var10);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "wl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

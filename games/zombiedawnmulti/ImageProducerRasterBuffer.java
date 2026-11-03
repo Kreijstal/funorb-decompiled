@@ -17,7 +17,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             this.field_n = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dq.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dq.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             this.isConsumer((java.awt.image.ImageConsumer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dq.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dq.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_m);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dq.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dq.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

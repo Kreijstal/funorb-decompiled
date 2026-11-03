@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends WidgetContainer implements co, in, jn {
+final class AccountCreationForm extends WidgetContainer implements HotspotActivationListener, ButtonActivationListener, UsernameSuggestionListener {
     private on field_I;
     static Sprite field_U;
     private ButtonWidget field_O;
     private on field_P;
     static ResourceArchive field_L;
     private on field_T;
-    gl field_J;
+    UsernameSuggestionsPanel field_J;
     private fj field_H;
     private on field_N;
-    private sq field_G;
+    private HotspotTextWidget field_G;
     static Sprite[] field_W;
     private ButtonWidget field_S;
     private on field_M;
@@ -20,15 +20,15 @@ final class fe extends WidgetContainer implements co, in, jn {
     private on field_V;
     static String field_X;
 
-    public final void a(int param0) {
-        ((UsernameAvailabilityValidator) (this.field_V.a((byte) -43))).i(param0 ^ -22725);
+    public final void onMoreSuggestionsRequested(int param0) {
+        ((UsernameAvailabilityValidator) (this.field_V.getValidationProvider((byte) -43))).i(param0 ^ -22725);
         if (param0 == 496) {
           return;
         }
         this.field_I = (on) null;
     }
 
-    private final boolean a(kh param0, int param1) {
+    private final boolean isInputValid(ValidationProviderSource param0, int param1) {
         ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -40,7 +40,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           if (param1 != 60) {
             return true;
           }
-          var3 = param0.a((byte) -61);
+          var3 = param0.getValidationProvider((byte) -61);
           if (var3 == null) {
             return true;
           }
@@ -65,7 +65,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -94,11 +94,11 @@ final class fe extends WidgetContainer implements co, in, jn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref), "fe.I(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "fe.I(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
@@ -116,7 +116,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           if (param2 != this.field_S) {
             return;
           }
-          discarded$1 = this.a((byte) -79);
+          discarded$1 = this.submitAccountCreation((byte) -79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,7 +128,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -176,11 +176,11 @@ final class fe extends WidgetContainer implements co, in, jn {
           super.updatePointerState(param0, param1, param2, param3);
           this.field_S.field_F = this.h(-38);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "fe.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fe.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final void a(int param0, sq param1, int param2, int param3) {
+    public final void onHotspotActivated(int param0, HotspotTextWidget param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -215,7 +215,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
+    private final int addLabeledFieldWithDefaultMessageWidth(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -273,11 +273,11 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_X = null;
         field_U = null;
         if (!param0) {
@@ -286,13 +286,13 @@ final class fe extends WidgetContainer implements co, in, jn {
           field_Q = null;
           return;
         }
-        fe.c(true);
+        AccountCreationForm.releaseStatics(true);
         field_W = null;
         field_L = null;
         field_Q = null;
     }
 
-    private final boolean a(byte param0) {
+    private final boolean submitAccountCreation(byte param0) {
         if (!this.h(-122)) {
           return false;
         }
@@ -322,7 +322,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         try {
           var9 = new el(20, param4, 120 + param2, 25, param0, false, 120, 3, ke.field_h, 16777215, param3);
           this.b((byte) 45, var9);
-          var7 = new uk(((kh) ((Object) param0)).a((byte) -109));
+          var7 = new uk(((ValidationProviderSource) ((Object) param0)).getValidationProvider((byte) -109));
           this.b((byte) 57, var7);
           var7.setWidgetBounds(3 + (var9.field_y + var9.field_n), (var9.field_w - 15 >> 1) + var9.field_i, 28972, 15, 15);
           var8 = -40 / ((param1 - 34) / 43);
@@ -344,27 +344,27 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
     private final boolean h(int param0) {
-        if (!this.a((kh) (this.field_V), 60)) {
+        if (!this.isInputValid((ValidationProviderSource) (this.field_V), 60)) {
           return false;
         }
-        if (!this.a((kh) (this.field_M), 60)) {
+        if (!this.isInputValid((ValidationProviderSource) (this.field_M), 60)) {
           return false;
         }
-        if (!this.a((kh) (this.field_T), 60)) {
+        if (!this.isInputValid((ValidationProviderSource) (this.field_T), 60)) {
           return false;
         }
-        if (!this.a((kh) (this.field_P), 60)) {
+        if (!this.isInputValid((ValidationProviderSource) (this.field_P), 60)) {
           return false;
         }
-        if (!this.a((kh) (this.field_I), 60)) {
+        if (!this.isInputValid((ValidationProviderSource) (this.field_I), 60)) {
           return false;
         }
-        if (!this.a((kh) (this.field_N), 60)) {
+        if (!this.isInputValid((ValidationProviderSource) (this.field_N), 60)) {
           return false;
         }
         if (param0 < -20) {
@@ -375,7 +375,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         return true;
     }
 
-    public final void a(String param0, int param1) {
+    public final void onSuggestionSelected(String param0, int param1) {
         on var3 = null;
         String var4 = null;
         try {
@@ -386,7 +386,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           var4 = param0;
           ((TextInputWidget) ((Object) var3)).setInputText(false, var4, (byte) 103);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "fe.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fe.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -406,10 +406,10 @@ final class fe extends WidgetContainer implements co, in, jn {
         try {
           var10 = new el(20, param5, 120 + param6, 25, param2, false, 120, 3, ke.field_h, 16777215, param3);
           if (!param1) {
-            this.field_J = (gl) null;
+            this.field_J = (UsernameSuggestionsPanel) null;
           }
           this.b((byte) 86, var10);
-          var9 = new km(((kh) ((Object) param2)).a((byte) -109), param4, 126, param5 + var10.field_w, 50 + param6, param0);
+          var9 = new km(((ValidationProviderSource) ((Object) param2)).getValidationProvider((byte) -109), param4, 126, param5 + var10.field_w, 50 + param6, param0);
           var9.field_A = (WidgetListener) (this);
           this.b((byte) 49, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;
@@ -436,7 +436,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -476,11 +476,11 @@ final class fe extends WidgetContainer implements co, in, jn {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public fe() {
+    public AccountCreationForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_V = new on("", (WidgetListener) null, 12);
         this.field_M = new on("", (WidgetListener) null, 100);
@@ -522,17 +522,17 @@ final class fe extends WidgetContainer implements co, in, jn {
         var3 = var3 + this.a(170, this.field_M, var3, 73, InflaterDecompressor.field_i);
         var3 = var3 + (5 + this.a(20, true, this.field_T, cq.field_d, "", var3, 170));
         var3 = var3 + this.a(170, this.field_P, var3, 47, ButtonWidget.field_D);
-        var3 = var3 + (5 + this.a(oi.field_f, MouseInputHandler.field_b, var3, 170, this.field_I, 35));
-        var3 = var3 + (this.a(r.field_e, PasswordValidator.field_w, var3, 170, this.field_V, 35) + 5);
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(oi.field_f, MouseInputHandler.field_b, var3, 170, this.field_I, 35));
+        var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(r.field_e, PasswordValidator.field_w, var3, 170, this.field_V, 35) + 5);
         var3 = var3 + this.a(this.field_N, -99, 170, gj.field_a, var3);
         el var4 = new el(46, var3, -90 + this.field_n, 25, this.field_H, true, -120 + this.field_n, 5, cp.field_H, 11579568, uq.field_e);
         this.b((byte) 115, var4);
         var3 = var3 + var4.field_w;
         TextWidgetPainter var5 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ke.field_h.maxAscent, -1, 2147483647, true);
-        this.field_G = new sq(var2, var5);
+        this.field_G = new HotspotTextWidget(var2, var5);
         this.field_G.field_x = "";
-        this.field_G.a(0, (byte) -104, mp.field_d);
-        this.field_G.a(1, (byte) -127, mp.field_d);
+        this.field_G.setHotspotHoverText(0, (byte) -104, mp.field_d);
+        this.field_G.setHotspotHoverText(1, (byte) -127, mp.field_d);
         this.field_G.field_A = (WidgetListener) (this);
         this.field_G.a(this.field_n - 90, var3, (byte) -4, 46);
         var3 = var3 + (this.field_G.field_w + 15);
@@ -545,7 +545,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         this.field_S.field_A = (WidgetListener) (this);
         this.b((byte) 78, this.field_S);
         this.b((byte) 75, this.field_O);
-        this.field_J = new gl((jn) (this));
+        this.field_J = new UsernameSuggestionsPanel((UsernameSuggestionListener) (this));
         this.field_J.setWidgetBounds(60 + this.field_V.field_n + this.field_V.field_y, 20 + this.field_V.field_i, 28972, -60 + (-this.field_V.field_n + (this.field_n - this.field_V.field_y)), 150);
         this.b((byte) 97, this.field_J);
         this.setWidgetBounds(0, 0, 28972, 496, var3 + 55 + var6);

@@ -14,7 +14,7 @@ final class aj extends GameEvent {
         try {
           param1.b(this.field_k, 10);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "aj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class aj extends GameEvent {
           if (param19 <= 50) {
             aj.a(-22, false, -26);
           }
-          ne.c(param13, 20341, param3, param8, param11);
+          MessageDialog.c(param13, 20341, param3, param8, param11);
           cb.a(param17, param10, -8388, param0);
           wq.a(param5, param14, param1, param12, param9, false);
           ei.a(param4, 25938, param2);
@@ -78,7 +78,7 @@ final class aj extends GameEvent {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 
@@ -110,11 +110,11 @@ final class aj extends GameEvent {
               var6 = vh.a(true, -121, eo.field_e[var3_int]);
               var7 = NetworkGameClient.field_x - (var6 >> 1);
               var4 = var4 + pb.field_b;
-              if (IntrusiveDeque.a(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, MusicPatch.field_n + (ne.field_tb << 1), 93)) {
+              if (IntrusiveDeque.a(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, MusicPatch.field_n + (MessageDialog.field_tb << 1), 93)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + ((ne.field_tb << 1) + (pb.field_b + MusicPatch.field_n));
+              var4 = var4 + ((MessageDialog.field_tb << 1) + (pb.field_b + MusicPatch.field_n));
             }
             var3_int++;
           }
@@ -123,7 +123,7 @@ final class aj extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "aj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "aj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

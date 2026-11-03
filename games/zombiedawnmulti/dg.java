@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends WidgetContainer implements in {
+final class dg extends WidgetContainer implements ButtonActivationListener {
     static IntrusiveDeque field_K;
     private ButtonWidget field_N;
     private ButtonWidget field_H;
@@ -14,8 +14,8 @@ final class dg extends WidgetContainer implements in {
     static String field_I;
 
     final static void i(int param0) {
-        ra.field_o = rg.g(-18799);
-        nb.field_a = new vk();
+        ra.field_o = SingleChildWidget.g(-18799);
+        nb.field_a = new DialogLayer();
         if (param0 == 4) {
           io.a(-21113, true, true);
           return;
@@ -32,7 +32,7 @@ final class dg extends WidgetContainer implements in {
         return bh.field_a;
     }
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -67,7 +67,7 @@ final class dg extends WidgetContainer implements in {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class dg extends WidgetContainer implements in {
             field_J = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "dg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class dg extends WidgetContainer implements in {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -40,11 +40,11 @@ final class a {
           if (1 == var1) {
             TextInputWidget.field_P = rp.field_e;
           } else {
-            TextInputWidget.field_P = vl.a(al.field_cb, new String[]{Integer.toString(var1)}, 2);
+            TextInputWidget.field_P = vl.a(ResizableDialog.field_cb, new String[]{Integer.toString(var1)}, 2);
           }
           TextInputWidget.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) TextInputWidget.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
         }
-        PortalView.field_L.m(-7435);
+        PortalView.field_L.dismissDialog(-7435);
         sp.c(param0 + 1);
         if (param0 == -1) {
           return;
@@ -86,7 +86,7 @@ final class a {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class a {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

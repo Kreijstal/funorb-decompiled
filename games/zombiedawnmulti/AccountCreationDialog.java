@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf extends ne implements in {
+final class AccountCreationDialog extends MessageDialog implements ButtonActivationListener {
     static Sprite[] field_Hb;
     private boolean field_Ib;
     static int field_Eb;
     static int field_Db;
     static String field_Cb;
-    private fe field_Gb;
+    private AccountCreationForm field_Gb;
     private boolean field_Fb;
 
-    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         if (param3 >= -83) {
           return;
         }
@@ -20,43 +20,43 @@ final class tf extends ne implements in {
         }
         try {
           va.a((byte) 62);
-          this.m(-7435);
+          this.dismissDialog(-7435);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "tf.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tf.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final boolean i(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         gh var2 = null;
         gh var2Lifetime1;
         if (param0 != -27388) {
           PcmSampleStream var3 = (PcmSampleStream) null;
-          tf.a((PcmSampleStream) null, (byte) -100);
+          AccountCreationDialog.a((PcmSampleStream) null, (byte) -100);
           if (!this.field_R) {
-            return super.i(-27388);
+            return super.advanceDialogAnimation(-27388);
           }
           if (this.field_Fb) {
-            return super.i(-27388);
+            return super.advanceDialogAnimation(-27388);
           }
           var2 = BufferedFile.d(param0 ^ -27388);
           if (var2 != null) {
             this.a(-6, false, var2);
-            return super.i(-27388);
+            return super.advanceDialogAnimation(-27388);
           }
-          return super.i(-27388);
+          return super.advanceDialogAnimation(-27388);
         }
         if (!this.field_R) {
-          return super.i(-27388);
+          return super.advanceDialogAnimation(-27388);
         }
         if (this.field_Fb) {
-          return super.i(-27388);
+          return super.advanceDialogAnimation(-27388);
         }
         var2Lifetime1 = BufferedFile.d(param0 ^ -27388);
         if (var2Lifetime1 != null) {
           this.a(-6, false, var2Lifetime1);
-          return super.i(-27388);
+          return super.advanceDialogAnimation(-27388);
         }
-        return super.i(-27388);
+        return super.advanceDialogAnimation(-27388);
     }
 
     private final void a(int param0, boolean param1, gh param2) {
@@ -78,7 +78,7 @@ final class tf extends ne implements in {
             if (param2.field_b != null) {
               var4 = wg.field_d;
               if (this.field_Gb != null) {
-                this.field_Gb.a(496);
+                this.field_Gb.onMoreSuggestionsRequested(496);
               }
             } else {
               var4 = param2.field_h;
@@ -93,7 +93,7 @@ final class tf extends ne implements in {
           } else {
             var4 = DualLinkNode.field_g;
           }
-          var5 = new wd((ne) (this), ci.field_d, var4);
+          var5 = new wd((MessageDialog) (this), ci.field_d, var4);
           if (!param2.field_d) {
             if (!this.field_Ib) {
               if (param2.field_c != 5) {
@@ -131,7 +131,7 @@ final class tf extends ne implements in {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class tf extends ne implements in {
         try {
           if (param1 > -62) {
             var3 = (PcmSampleStream) null;
-            tf.a((PcmSampleStream) null, (byte) 86);
+            AccountCreationDialog.a((PcmSampleStream) null, (byte) 86);
           }
           var2 = new we(param0, param0);
           GameKeyHandler.field_e.a(var2, false);
@@ -164,16 +164,16 @@ final class tf extends ne implements in {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    tf(vk param0, fe param1) {
+    AccountCreationDialog(DialogLayer param0, AccountCreationForm param1) {
         super(param0, ci.field_d, og.field_M, false, false);
         try {
           this.field_Gb = param1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -24,7 +24,7 @@ final class PowerupBar {
           field_h = null;
           field_k = null;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ko.K(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.K(" + param0 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class PowerupBar {
             stackIn_12_0 = stackIn_7_0;
             stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "ko.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "ko.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.H(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.H(" + param0 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.J(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.J(" + param0 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4_ref), "ko.L(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4_ref), "ko.L(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "ko.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "ko.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.E(" + param0 + ')');
         }
     }
 
@@ -294,10 +294,10 @@ final class PowerupBar {
             var2_int = tg.field_e.powerupTypes[this.field_a];
             var3Lifetime1 = tg.field_e.field_f[this.field_a];
             if (255 != var2_int) {
-              g.a(fe.field_W[var2_int], this.field_f - 100, 453);
+              g.a(AccountCreationForm.field_W[var2_int], this.field_f - 100, 453);
               oj.field_M[var2_int].g(-100 + this.field_f, 453);
               if (var3Lifetime1 != 255) {
-                g.a(fe.field_W[var3Lifetime1], -100 + this.field_f, 438);
+                g.a(AccountCreationForm.field_W[var3Lifetime1], -100 + this.field_f, 438);
                 oj.field_M[var3Lifetime1].g(-100 + this.field_f, 438);
               }
             }
@@ -323,7 +323,7 @@ final class PowerupBar {
                       this.a(SectorCacheStore.field_a, (byte) 59, ii.field_c);
                     } else {
                       if (this.field_d) {
-                        this.a(fe.field_U, (byte) 59, ap.field_t);
+                        this.a(AccountCreationForm.field_U, (byte) 59, ap.field_t);
                       }
                     }
                   }
@@ -351,7 +351,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2_ref), "ko.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "ko.A(" + param0 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.G(" + param0 + ')');
         }
     }
 
@@ -392,7 +392,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3), "ko.B(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ko.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -409,7 +409,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.R(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.R(" + param0 + ')');
         }
     }
 
@@ -432,7 +432,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.O(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.O(" + param0 + ')');
         }
     }
 
@@ -539,7 +539,7 @@ final class PowerupBar {
                 this.field_e = true;
               }
             }
-            if (!df.field_I) {
+            if (!FadingDialog.field_I) {
               return true;
             }
             ah.a((byte) -86, var3_int);
@@ -551,7 +551,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var3_ref), "ko.P(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3_ref), "ko.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -575,7 +575,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var4), "ko.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "ko.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -601,7 +601,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.D(" + param0 + ')');
         }
     }
 
@@ -708,7 +708,7 @@ final class PowerupBar {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -725,7 +725,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.M(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.M(" + param0 + ')');
         }
     }
 
@@ -753,7 +753,7 @@ final class PowerupBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var2), "ko.N(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ko.N(" + param0 + ')');
         }
     }
 
@@ -769,7 +769,7 @@ final class PowerupBar {
           this.field_m = 0;
           this.field_l = -1;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "ko.<init>()");
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.<init>()");
         }
     }
 

@@ -21,7 +21,7 @@ final class uk extends ButtonWidget {
           var3.writeByte(param0 ^ -41, param1.field_g);
           var3.writeShort(param1.field_i, (byte) -92);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "uk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class uk extends ButtonWidget {
         }
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         if (this.field_l) {
           return this.field_P.getDebouncedValidationMessage(-117);
         }
@@ -137,7 +137,7 @@ final class uk extends ButtonWidget {
           this.field_Q = this.field_Q + 1;
           super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "uk.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uk.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class uk extends ButtonWidget {
         try {
           this.field_P = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class uk extends ButtonWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

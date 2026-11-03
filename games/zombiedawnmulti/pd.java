@@ -64,7 +64,7 @@ final class pd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ final class pd {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw fa.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class pd {
           MatchingTextValidator.field_t = new byte[qc.field_v][];
           vj.field_p = new int[qc.field_v];
           var17.position = param1.length - 7 - 8 * qc.field_v;
-          ie.field_nb = var17.readUnsignedShort((byte) 69);
+          ContentTransitionDialog.field_nb = var17.readUnsignedShort((byte) 69);
           hj.field_a = var17.readUnsignedShort((byte) 69);
           var3 = 1 + (var17.readUnsignedByte(31365) & 255);
           for (var4 = 0; var4 < qc.field_v; var4++) {
@@ -225,7 +225,7 @@ final class pd {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
