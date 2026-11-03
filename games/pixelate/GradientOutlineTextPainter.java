@@ -24,7 +24,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
     final static void d(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pc var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -34,7 +34,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
           if (param0 != 8) {
             GradientOutlineTextPainter.d(110);
           }
-          while (lf.a((byte) -91)) {
+          while (WidgetStyleLayer.a((byte) -91)) {
             var1.g(8, 15514);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

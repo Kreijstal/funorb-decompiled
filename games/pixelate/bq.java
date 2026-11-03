@@ -64,17 +64,17 @@ final class bq {
             for (var5 = 0; var4 > var5; var5++) {
               fo.field_a[var5] = -1;
             }
-            jj.field_h = new int[2];
+            BackgroundScene.field_h = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
             }
             vm.field_e[-3 + var4] = "";
             vm.field_e[var4 - 2] = ln.field_k;
             fo.field_a[-2 + var4] = 0;
-            jj.field_h[0] = 4;
+            BackgroundScene.field_h[0] = 4;
             vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
             fo.field_a[-1 + var4] = 1;
-            jj.field_h[1] = 5;
+            BackgroundScene.field_h[1] = 5;
           } else if (CanvasRasterBuffer.field_h == 1) {
             var3_int = qn.a(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -102, bg.field_j);
             var4 = 2 + var3_int;
@@ -83,14 +83,14 @@ final class bq {
             for (var5 = 0; var5 < var4; var5++) {
               fo.field_a[var5] = -1;
             }
-            jj.field_h = new int[1];
+            BackgroundScene.field_h = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
             }
             vm.field_e[-2 + var4] = "";
             vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
             fo.field_a[-1 + var4] = 0;
-            jj.field_h[0] = 5;
+            BackgroundScene.field_h[0] = 5;
           } else if (CanvasRasterBuffer.field_h != 2) {
             if (3 == CanvasRasterBuffer.field_h) {
               if (!mc.field_k.field_x) {
@@ -104,14 +104,14 @@ final class bq {
               for (var5 = 0; var5 < var4; var5++) {
                 fo.field_a[var5] = -1;
               }
-              jj.field_h = new int[1];
+              BackgroundScene.field_h = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
               }
               vm.field_e[var4 - 2] = "";
               vm.field_e[var4 - 1] = TabbedPanel.field_Hb;
               fo.field_a[var4 - 1] = 0;
-              jj.field_h[0] = 5;
+              BackgroundScene.field_h[0] = 5;
             } else if (CanvasRasterBuffer.field_h == 4) {
               var3_int = qn.a(l.field_o, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, bg.field_j);
               var4 = 2 + var3_int;
@@ -120,14 +120,14 @@ final class bq {
               for (var5 = 0; var4 > var5; var5++) {
                 fo.field_a[var5] = -1;
               }
-              jj.field_h = new int[1];
+              BackgroundScene.field_h = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
               }
               vm.field_e[-2 + var4] = "";
               vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
               fo.field_a[var4 - 1] = 0;
-              jj.field_h[0] = 5;
+              BackgroundScene.field_h[0] = 5;
             } else {
               if (CanvasRasterBuffer.field_h != 5) {
                 throw new IllegalArgumentException();
@@ -139,17 +139,17 @@ final class bq {
               for (var5 = 0; var4 > var5; var5++) {
                 fo.field_a[var5] = -1;
               }
-              jj.field_h = new int[2];
+              BackgroundScene.field_h = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
               }
               vm.field_e[var4 - 3] = "";
               vm.field_e[var4 - 2] = bg.field_b;
               fo.field_a[var4 - 2] = 0;
-              jj.field_h[0] = 3;
+              BackgroundScene.field_h[0] = 3;
               vm.field_e[var4 - 1] = TabbedPanel.field_Hb;
               fo.field_a[-1 + var4] = 1;
-              jj.field_h[1] = 5;
+              BackgroundScene.field_h[1] = 5;
             }
           } else {
             var3_int = qn.a(sd.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, bg.field_j);
@@ -205,14 +205,14 @@ final class bq {
             fo.field_a[1] = 0;
             vm.field_e[0] = vf.field_c;
             vm.field_e[1] = MusicPatch.field_q;
-            jj.field_h = new int[2];
+            BackgroundScene.field_h = new int[2];
             vm.field_e[4] = DirectByteStorage.field_m;
             vm.field_e[5] = "";
             fo.field_a[3] = 1;
             vm.field_e[3] = vm.field_g;
             vm.field_e[2] = u.field_n;
-            jj.field_h[1] = 2;
-            jj.field_h[0] = 5;
+            BackgroundScene.field_h[1] = 2;
+            BackgroundScene.field_h[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_33_0 = vm.field_e;
               stackIn_33_1 = 6 + var8Lifetime2;
@@ -239,7 +239,7 @@ final class bq {
             }
             pk.field_g = hm.a(64);
           }
-          mj.field_c.field_h = jj.field_h.length;
+          mj.field_c.field_h = BackgroundScene.field_h.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < vm.field_e.length; var4Lifetime1++) {
             stackIn_89_0 = 3;
@@ -284,10 +284,10 @@ final class bq {
             }
             MouseInputHandler.field_b = stackIn_115_0 + stackIn_116_1;
           }
-          de.field_h = IntrusiveDeque.field_b - (MouseInputHandler.field_b >> 1);
+          MenuScreen.field_h = IntrusiveDeque.field_b - (MouseInputHandler.field_b >> 1);
           so.field_c = new int[vm.field_e.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = de.field_h;
+          var5Lifetime3 = MenuScreen.field_h;
           while (var4Lifetime3 < vm.field_e.length) {
             var6Lifetime1 = fo.field_a[var4Lifetime3];
             if (var6Lifetime1 < 0) {

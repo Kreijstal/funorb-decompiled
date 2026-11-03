@@ -186,7 +186,7 @@ final class TriangleMesh {
           var3 = 0;
           if (var1_int != 0 &&
             mj.field_c.field_j >= 0) {
-            var3 = jj.field_h[mj.field_c.field_j];
+            var3 = BackgroundScene.field_h[mj.field_c.field_j];
             if (var3 == 2 ||
               var3 == 5) {
               dh.a(0);

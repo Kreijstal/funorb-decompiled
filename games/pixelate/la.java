@@ -21,13 +21,13 @@ final class la {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        pc var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         hf var12 = null;
-        pc var13 = null;
+        CipherPacketBuffer var13 = null;
         int[] var14 = null;
         mc var15 = null;
         Object var16 = null;
@@ -542,7 +542,7 @@ final class la {
                         }
                       }
                     } else {
-                      var24Lifetime2 = sd.a(jj.field_e, 40, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = sd.a(BackgroundScene.field_e, 40, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_Yb + var7;
@@ -688,7 +688,7 @@ final class la {
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4;
         NameAvailabilityValidator.field_t = 0;
-        nc.field_a = param0;
+        TickClock.field_a = param0;
         MidiPcmStream.field_t = param1;
         if (MidiPcmStream.field_t == -4 ||
           MidiPcmStream.field_t == -2 ||

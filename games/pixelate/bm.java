@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends jj {
+final class bm extends BackgroundScene {
     static String field_r;
     static String field_t;
     static boolean field_o;
@@ -67,7 +67,7 @@ final class bm extends jj {
         }
     }
 
-    final static short[] a(short[] param0, byte param1, pc param2, int param3) {
+    final static short[] a(short[] param0, byte param1, CipherPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

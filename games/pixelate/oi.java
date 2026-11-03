@@ -98,7 +98,7 @@ final class oi {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, LobbyPlayer param4, int param5, ScrollContainer param6) {
-        wi var8 = null;
+        ClientContextMenu var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;

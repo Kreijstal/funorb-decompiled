@@ -43,9 +43,9 @@ final class jf {
             if (var4_ref_ug != null &&
               var2_long > var4_ref_ug.field_o) {
               var4_ref_ug.c(2779);
-              jj.field_b = var4_ref_ug.field_r.length;
+              BackgroundScene.field_b = var4_ref_ug.field_r.length;
               MusicCrossfadeStream.field_o.position = 0;
-              for (var5_int = 0; jj.field_b > var5_int; var5_int++) {
+              for (var5_int = 0; BackgroundScene.field_b > var5_int; var5_int++) {
                 MusicCrossfadeStream.field_o.payload[var5_int] = var4_ref_ug.field_r[var5_int];
               }
               oj.field_G = gb.field_d;
@@ -63,7 +63,7 @@ final class jf {
               }
               AudioService.field_c = MusicCrossfadeStream.field_o.f((byte) 114);
               MusicCrossfadeStream.field_o.position = 0;
-              jj.field_b = param1[AudioService.field_c];
+              BackgroundScene.field_b = param1[AudioService.field_c];
             }
             if (!MusicPatchNode.e(-18481)) {
               return false;
@@ -77,14 +77,14 @@ final class jf {
               return true;
             }
             var4 = ij.field_s;
-            if (k.field_h != 0.0) {
-              var4 = (int)((double)var4 + ai.field_d.nextGaussian() * k.field_h);
+            if (NanoTickClock.field_h != 0.0) {
+              var4 = (int)((double)var4 + ai.field_d.nextGaussian() * NanoTickClock.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
-            var5 = new ug(var2_long + (long)var4, AudioService.field_c, new byte[jj.field_b]);
-            for (var6 = 0; var6 < jj.field_b; var6++) {
+            var5 = new ug(var2_long + (long)var4, AudioService.field_c, new byte[BackgroundScene.field_b]);
+            for (var6 = 0; var6 < BackgroundScene.field_b; var6++) {
               var5.field_r[var6] = MusicCrossfadeStream.field_o.payload[var6];
             }
             id.field_d.addFirst(22125, var5);
@@ -119,7 +119,7 @@ final class jf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        pc var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);

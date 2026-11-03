@@ -8,7 +8,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     byte field_B;
     static BufferedRandomAccessFile field_G;
     static int field_I;
-    static jj[] field_C;
+    static BackgroundScene[] field_C;
 
     final int g(int param0) {
         if (param0 >= -92) {
@@ -31,12 +31,12 @@ final class Js5NetworkRequest extends ArchiveRequest {
         }
     }
 
-    final static nc j(int param0) {
+    final static TickClock j(int param0) {
         if (param0 != -30272) {
           field_G = (BufferedRandomAccessFile) null;
-          return (nc) ((Object) new k());
+          return (TickClock) ((Object) new NanoTickClock());
         }
-        return (nc) ((Object) new k());
+        return (TickClock) ((Object) new NanoTickClock());
     }
 
     final byte[] h(int param0) {
@@ -84,7 +84,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
           ClientException.field_f.a(19692);
           return;
         }
-        field_C = (jj[]) null;
+        field_C = (BackgroundScene[]) null;
         SoftwareRasterizer.g(-5 + SoftwareRasterizer.field_j, 0, SoftwareRasterizer.field_d, var2);
         SoftwareRasterizer.g(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
         SoftwareRasterizer.b(4, 0, -8 + SoftwareRasterizer.field_j, var2);
@@ -111,6 +111,6 @@ final class Js5NetworkRequest extends ArchiveRequest {
 
     static {
         field_F = new ge();
-        field_C = new jj[8];
+        field_C = new BackgroundScene[8];
     }
 }

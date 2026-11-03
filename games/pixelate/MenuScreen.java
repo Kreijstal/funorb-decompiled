@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class de {
+abstract class MenuScreen {
     int field_d;
     int field_i;
     MenuInputState field_g;
@@ -237,7 +237,7 @@ abstract class de {
 
     int a(int param0, int param1) {
         if (param0 != -28071) {
-          de.a((byte) -105, true);
+          MenuScreen.a((byte) -105, true);
         }
         return 30;
     }
@@ -328,7 +328,7 @@ abstract class de {
         return this.field_m;
     }
 
-    de(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    MenuScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         try {
           this.field_m = param1;
           this.field_l = param0;
@@ -406,15 +406,15 @@ abstract class de {
           boolean decompiledFrameRemainder0 = true;
           var6_int = this.field_k[param2];
           if (var6_int == 8) {
-            if (nc.field_a != 0 &&
+            if (TickClock.field_a != 0 &&
               0 != MidiPcmStream.field_t &&
-              nc.field_a != 12 &&
+              TickClock.field_a != 12 &&
               MidiPcmStream.field_t != 12) {
-              if (1 != nc.field_a &&
+              if (1 != TickClock.field_a &&
                 MidiPcmStream.field_t != 1) {
-                if ((nc.field_a == 2 ||
+                if ((TickClock.field_a == 2 ||
                   MidiPcmStream.field_t == 2 ||
-                  nc.field_a == 4 ||
+                  TickClock.field_a == 4 ||
                   MidiPcmStream.field_t == 4)) {
                   param0 = TextFieldValidator.field_k;
                 }
@@ -877,7 +877,7 @@ abstract class de {
                           }
                         } else {
                           if (this.field_g.isActivated(59)) {
-                            var6 = nc.field_a;
+                            var6 = TickClock.field_a;
                             var7_int = param2 ? 1 : 0;
                             la.a(MidiPcmStream.field_t, var6, var7_int != 0, -25528);
                           }

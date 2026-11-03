@@ -134,7 +134,7 @@ final class cn {
               if (var9Lifetime1 != 99) {
                 TextLayoutLine.field_e = var9Lifetime1;
                 uk.field_s = bg.field_l;
-                jj.field_b = -1;
+                BackgroundScene.field_b = -1;
               } else {
                 QueuedInput.a(wl.a(23062), false);
                 ArchiveIndex.field_j = new Boolean(SectorCacheStore.a((byte) 107, MusicCrossfadeStream.field_o));

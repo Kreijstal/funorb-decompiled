@@ -37,7 +37,7 @@ final class ho {
           PacketBuffer.field_o[5] = cm.field_l;
           PacketBuffer.field_o[2] = sk.field_b;
           PacketBuffer.field_o[13] = ra.field_f;
-          PacketBuffer.field_o[4] = nn.field_l;
+          PacketBuffer.field_o[4] = MatchHud.field_l;
           PacketBuffer.field_o[19] = cl.field_c;
           PacketBuffer.field_o[17] = dg.field_c[0];
           PacketBuffer.field_o[15] = re.field_k[1];

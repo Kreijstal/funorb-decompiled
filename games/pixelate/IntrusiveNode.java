@@ -87,7 +87,7 @@ class IntrusiveNode {
           rb.field_p[3] = il.field_c;
           rb.field_p[2] = cl.field_b;
           rb.field_p[4] = u.field_g;
-          rb.field_p[0] = pc.field_t;
+          rb.field_p[0] = CipherPacketBuffer.field_t;
           rb.field_p[1] = IntrusiveDequeCursor.field_b;
           StripedProgressBar.field_O = new SceneWidget(0L, (SceneWidget) null);
           ho.field_g = new SceneWidget(0L, u.field_l, qn.field_m);
@@ -154,9 +154,9 @@ class IntrusiveNode {
           jm.field_h.verticalAlignment = 0;
           jm.field_h.horizontalAlignment = 1;
           DelegatingCanvas.field_h = new SceneWidget(0L, nk.field_f, ig.field_c.toUpperCase());
-          nc.field_e = new SceneWidget(0L, cm.field_o);
-          nc.field_e.a(jm.field_h, (byte) 26);
-          nc.field_e.a(DelegatingCanvas.field_h, (byte) 26);
+          TickClock.field_e = new SceneWidget(0L, cm.field_o);
+          TickClock.field_e.a(jm.field_h, (byte) 26);
+          TickClock.field_e.a(DelegatingCanvas.field_h, (byte) 26);
           an.field_a = new SceneWidget(0L, ff.field_g);
           an.field_a.applyStyle(-27813, TextFieldValidator.field_h);
           var16 = an.field_a;

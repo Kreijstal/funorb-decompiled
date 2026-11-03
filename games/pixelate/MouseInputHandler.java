@@ -47,8 +47,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          pc var4 = null;
-          pc var5 = null;
+          CipherPacketBuffer var4 = null;
+          CipherPacketBuffer var5 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (ra.field_b == null) {
@@ -74,7 +74,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               oj.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
-              FallingPieceView.a(pc.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
+              FallingPieceView.a(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
               SecondaryNodeHashTable.b(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

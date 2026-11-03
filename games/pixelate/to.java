@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class to extends de {
+final class to extends MenuScreen {
     static AudioOutput field_t;
     static boolean field_s;
     static AccountRequestDialog field_r;

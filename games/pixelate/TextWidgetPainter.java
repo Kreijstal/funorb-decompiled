@@ -35,7 +35,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         if (param1 <= 124) {
           TextWidgetPainter.a(117, (byte) 117);
         }
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param0, 15514);
         var2.position = var2.position + 1;
         int var3 = var2.position;
@@ -117,7 +117,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (0 == param1) {
-            var10 = jj.a(param0, -855969982);
+            var10 = BackgroundScene.a(param0, -855969982);
             var6 = var10;
             if (var6 == null) {
               stackIn_7_0 = null;

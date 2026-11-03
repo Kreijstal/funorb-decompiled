@@ -42,24 +42,24 @@ final class ProxyAuthenticationException extends IOException {
           SoftwareRasterizer.d(var9_int, 0, var10, param0 + var11);
           param3.b(param4 - 1, -1 + param7, param1);
           param3.b(param4 - 1, 1 + param7, param1);
-          SoftwareRasterizer.b(wi.field_f);
+          SoftwareRasterizer.b(ClientContextMenu.field_f);
           SoftwareRasterizer.d(1 + var9_int, 0, var10 + 1, var11 + param0);
           param3.b(1 + param4, param7 - 1, param1);
           param3.b(1 + param4, param7 + 1, param1);
-          SoftwareRasterizer.b(wi.field_f);
+          SoftwareRasterizer.b(ClientContextMenu.field_f);
           var10Lifetime1 = param3.field_D + (param3.field_F + param4 - param6 - param5);
           var9_intLifetime1 = -param2 + (param4 + param3.field_D) + param3.field_F - param6;
           SoftwareRasterizer.d(var9_intLifetime1, -param0 + var11, var10Lifetime1, 480);
           param3.b(param4 - 1, param7 - 1, param1);
           param3.b(-1 + param4, 1 + param7, param1);
-          SoftwareRasterizer.b(wi.field_f);
+          SoftwareRasterizer.b(ClientContextMenu.field_f);
           if (param8 > -81) {
             field_e = (int[]) null;
           }
           SoftwareRasterizer.d(1 + var9_intLifetime1, -param0 + var11, 1 + var10Lifetime1, 480);
           param3.b(1 + param4, -1 + param7, param1);
           param3.b(param4 + 1, 1 + param7, param1);
-          SoftwareRasterizer.b(wi.field_f);
+          SoftwareRasterizer.b(ClientContextMenu.field_f);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

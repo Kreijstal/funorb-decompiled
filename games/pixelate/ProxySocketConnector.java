@@ -8,7 +8,7 @@ final class ProxySocketConnector extends SocketConnector {
     static int[] field_h;
     static int[] field_l;
     static SceneWidget field_k;
-    static wi field_n;
+    static ClientContextMenu field_n;
     private java.net.ProxySelector proxySelector;
     static java.awt.Frame field_i;
     static java.awt.Frame field_j;
@@ -185,7 +185,7 @@ final class ProxySocketConnector extends SocketConnector {
           return VerticalScrollbar.field_Nb;
         }
         if (param0 != 8192) {
-          field_n = (wi) null;
+          field_n = (ClientContextMenu) null;
         }
         if (MatchingTextValidator.field_n == Js5NetworkRequest.field_F) {
           return PlayerController.field_m;
@@ -335,7 +335,7 @@ final class ProxySocketConnector extends SocketConnector {
           }
         }
         if (param0 < 114) {
-          field_n = (wi) null;
+          field_n = (ClientContextMenu) null;
         }
         if (var7 == null) {
           return this.b(-2);

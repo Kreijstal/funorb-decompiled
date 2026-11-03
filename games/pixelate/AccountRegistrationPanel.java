@@ -204,16 +204,16 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         boolean stackIn_52_3;
         LobbyPlayer stackIn_55_0 = null;
         boolean stackIn_56_1 = false;
-        pc stackIn_100_0 = null;
+        CipherPacketBuffer stackIn_100_0 = null;
         boolean stackIn_101_1 = false;
         SecondaryNodeHashTable stackIn_105_0 = null;
         boolean stackIn_106_1 = false;
         LobbyPlayer stackIn_109_0 = null;
         boolean stackIn_110_1 = false;
-        pc stackIn_113_0 = null;
+        CipherPacketBuffer stackIn_113_0 = null;
         boolean stackIn_114_1 = false;
         RuntimeException decompiledCaughtException = null;
-        pc var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         long var3 = 0L;
@@ -468,7 +468,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                   var7.field_Yb = var8 >> 1;
                   var7.field_Qb = ((PacketBuffer) ((Object) var1)).f(255);
                   var7.field_Ib = ((PacketBuffer) ((Object) var1)).f(255);
-                  wi.field_a.addFirst(22125, var7);
+                  ClientContextMenu.field_a.addFirst(22125, var7);
                   return;
                 }
                 stackIn_113_0 = var1;
@@ -523,11 +523,11 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             StatefulTextPainter.a((byte) -48, var28);
             return;
           }
-          var3_ref_uj = (LobbyPlayer) (wi.field_a.c(1504642273));
+          var3_ref_uj = (LobbyPlayer) (ClientContextMenu.field_a.c(1504642273));
           while (var3_ref_uj != null) {
             var3_ref_uj.c(2779);
             var3_ref_uj.e(17);
-            var3_ref_uj = (LobbyPlayer) (wi.field_a.last(1504642273));
+            var3_ref_uj = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));
           }
           var3_ref_ujLifetime1 = (LobbyPlayer) (il.field_d.a(-110));
           while (var3_ref_ujLifetime1 != null) {
@@ -573,8 +573,8 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           }
           ib.field_a = ((PacketBuffer) ((Object) var1)).f(255);
           TextFieldValidator.field_i = ((PacketBuffer) ((Object) var1)).f(255);
-          for (var3_intLifetime3 = 0; k.field_k.length > var3_intLifetime3; var3_intLifetime3++) {
-            k.field_k[var3_intLifetime3] = ((PacketBuffer) ((Object) var1)).a(0);
+          for (var3_intLifetime3 = 0; NanoTickClock.field_k.length > var3_intLifetime3; var3_intLifetime3++) {
+            NanoTickClock.field_k[var3_intLifetime3] = ((PacketBuffer) ((Object) var1)).a(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

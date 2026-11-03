@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi {
+final class ClientContextMenu {
     static String field_c;
     static String field_n;
     static String field_g;
@@ -152,7 +152,7 @@ final class wi {
           return true;
         }
         if (param0 == 2) {
-          wi.b(param1, param2 ^ -7903, this.field_m);
+          ClientContextMenu.b(param1, param2 ^ -7903, this.field_m);
           if (param2 == 7490) {
             return true;
           }
@@ -332,8 +332,8 @@ final class wi {
     }
 
     final static void b(int param0, int param1, int param2) {
-        pc var3 = null;
-        pc var3Lifetime1;
+        CipherPacketBuffer var3 = null;
+        CipherPacketBuffer var3Lifetime1;
         if (param1 == -925) {
           var3 = aa.field_f;
           var3.g(param0, 15514);
@@ -497,7 +497,7 @@ final class wi {
         if (param1 == 10) {
           return true;
         }
-        wi.b((byte) -113);
+        ClientContextMenu.b((byte) -113);
         return true;
     }
 
@@ -553,7 +553,7 @@ final class wi {
         this.field_b.addAction(sd.a(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
     }
 
-    wi(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    ClientContextMenu(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_b = new ContextActionMenu(NameSuggestionsPanel.field_O);
           param0.field_U = true;

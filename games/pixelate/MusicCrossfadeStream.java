@@ -21,7 +21,7 @@ final class MusicCrossfadeStream extends PcmStream {
     private int field_z;
     private MusicTrack field_G;
     private int fadeStep;
-    static pc field_o;
+    static CipherPacketBuffer field_o;
     private int field_D;
     static String field_L;
     MidiPcmStream field_H;

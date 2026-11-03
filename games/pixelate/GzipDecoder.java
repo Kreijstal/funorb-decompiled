@@ -61,13 +61,13 @@ final class GzipDecoder {
               var9 = stackIn_18_0;
               var2 = var2 + ki.field_e;
               if (var9 != null) {
-                var9.a(var2, dk.field_d + (lf.field_b << 1), -1, (ProxyAuthenticationException.field_a << 1) + var7, var8 - ProxyAuthenticationException.field_a);
+                var9.a(var2, dk.field_d + (WidgetStyleLayer.field_b << 1), -1, (ProxyAuthenticationException.field_a << 1) + var7, var8 - ProxyAuthenticationException.field_a);
               }
-              var2 = var2 + lf.field_b;
+              var2 = var2 + WidgetStyleLayer.field_b;
             }
             if (var4 >= 0) {
               SingleChildContainer.field_G.drawText(var6, var8, var2 + StatefulTextPainter.field_q, var5, -1);
-              var2 = var2 + (dk.field_d + lf.field_b + ki.field_e);
+              var2 = var2 + (dk.field_d + WidgetStyleLayer.field_b + ki.field_e);
             } else {
               DualLinkNode.field_o.drawText(var6, var8, ab.field_b + var2, var5, -1);
               var2 = var2 + da.field_m;

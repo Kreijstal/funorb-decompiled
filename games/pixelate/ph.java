@@ -115,7 +115,7 @@ final class ph extends IntrusiveNode {
         try {
           dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
           ma.field_z = new pd(0L, rm.field_a, SceneWidgetNode.field_u, op.field_q);
-          MouseWheelHandler.field_e = new pd(0L, rm.field_a, qh.field_e, k.field_n);
+          MouseWheelHandler.field_e = new pd(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
           wa.field_f = new SceneWidget(0L, (SceneWidget) null);
           SceneWidget.field_E = new SceneWidget(0L, TextFieldValidator.field_h);
           SceneWidget.field_E.horizontalAlignment = 1;

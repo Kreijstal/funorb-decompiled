@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends de {
+final class fk extends MenuScreen {
     static String field_q;
     private int field_r;
     static Sprite[] field_s;
@@ -163,7 +163,7 @@ final class fk extends de {
     }
 
     final void a(int param0) {
-        jj var2;
+        BackgroundScene var2;
         int var3;
         PaletteBitmapFont var4;
         BinaryBitmapFont var5;
@@ -176,7 +176,7 @@ final class fk extends de {
         int var12;
         int var13;
         int stackIn_29_0 = 0;
-        jj[] stackIn_31_0 = null;
+        BackgroundScene[] stackIn_31_0 = null;
         int stackIn_32_1 = 0;
         Puzzle var8;
         PlayerBoard var9;
@@ -330,7 +330,7 @@ final class fk extends de {
         if (param0 >= -13) {
           this.b(-19);
         }
-        la.a(this.field_l, nc.field_a, false, -25528);
+        la.a(this.field_l, TickClock.field_a, false, -25528);
     }
 
     static {

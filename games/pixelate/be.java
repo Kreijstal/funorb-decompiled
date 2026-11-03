@@ -220,7 +220,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 break;
               }
               if (AccountRegistrationPanel.m(param3 + 100)) {
-                up.field_o = wi.field_g;
+                up.field_o = ClientContextMenu.field_g;
                 if (var26 == 0) {
                   break;
                 }
@@ -548,11 +548,11 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                   }
                   else {
                     if (var9 != -1) {
-                      k.field_k[(var6Lifetime2 + var9) / 8] = (byte)DraggableWidget.a((int) k.field_k[(var6Lifetime2 + var9) / 8], 1 << cm.a(7, var6Lifetime2 + var9));
+                      NanoTickClock.field_k[(var6Lifetime2 + var9) / 8] = (byte)DraggableWidget.a((int) NanoTickClock.field_k[(var6Lifetime2 + var9) / 8], 1 << cm.a(7, var6Lifetime2 + var9));
                     } else {
                       var18 = var6Lifetime2;
                       while ((var8_array.length + (var6Lifetime2 - 1)) > var18) {
-                        k.field_k[var18 / 8] = (byte)cm.a((int) k.field_k[var18 / 8], ~(1 << cm.a(7, var18)));
+                        NanoTickClock.field_k[var18 / 8] = (byte)cm.a((int) NanoTickClock.field_k[var18 / 8], ~(1 << cm.a(7, var18)));
                         var18++;
                       }
                     }
@@ -560,7 +560,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 }
                 if (param0 &&
                   var16Lifetime1 != 0) {
-                  k.field_k[(var9 + var6Lifetime2) / 8] = (byte)cm.a((int) k.field_k[(var9 + var6Lifetime2) / 8], ~(1 << cm.a(var6Lifetime2 + var9, 7)));
+                  NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] = (byte)cm.a((int) NanoTickClock.field_k[(var9 + var6Lifetime2) / 8], ~(1 << cm.a(var6Lifetime2 + var9, 7)));
                 }
                 if (0 <= var9 &&
                   var17.field_R) {
@@ -680,7 +680,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 if (param0) {
                   if (var9 != -1) {
                     stackIn_526_0 = var17;
-                    stackIn_527_1 = (0 != (k.field_k[(var9 + var6Lifetime2) / 8] & 1 << (7 & var6Lifetime2 + var9)));
+                    stackIn_527_1 = (0 != (NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] & 1 << (7 & var6Lifetime2 + var9)));
                     stackIn_526_0.field_U = stackIn_527_1;
                   } else {
                     var17.field_U = true;
@@ -691,7 +691,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                       stackIn_544_1 = stackOut_530_1 ? 1 : 0;
                       stackIn_531_1 = stackOut_530_1;
                       stackIn_544_2 = 0;
-                      stackIn_544_3 = k.field_k[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
+                      stackIn_544_3 = NanoTickClock.field_k[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
                       stackIn_537_2 = (stackIn_544_2 == stackIn_544_3);
                       stackIn_544_0.field_U = stackIn_531_1 & stackIn_537_2;
                       var18Lifetime1++;
@@ -1494,7 +1494,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime106 = ContentTransitionDialog.a("slash", (byte) 107);
           if (null != var2Lifetime106) {
-            nn.field_b = of.a(var2Lifetime106, 1);
+            MatchHud.field_b = of.a(var2Lifetime106, 1);
           }
           var2Lifetime107 = ContentTransitionDialog.a("comma_seperated_values", (byte) 119);
           if (null != var2Lifetime107) {

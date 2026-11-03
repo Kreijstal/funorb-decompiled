@@ -62,7 +62,7 @@ final class Match {
         int var8Lifetime1;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          var1_int = de.field_h;
+          var1_int = MenuScreen.field_h;
           var2 = 0;
           if (2 == CanvasRasterBuffer.field_h) {
             var3_long = -pk.field_g + hm.a(64);

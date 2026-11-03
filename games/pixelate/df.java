@@ -16,9 +16,9 @@ final class df extends IntrusiveNode {
         LobbyGame var9 = null;
         LobbyGame var7 = null;
         LobbyGame var6 = null;
-        pc var4 = null;
+        CipherPacketBuffer var4 = null;
         LobbyGame var6Lifetime1;
-        pc var4Lifetime1;
+        CipherPacketBuffer var4Lifetime1;
         LobbyGame var6Lifetime1Lifetime1;
         if (param0 == 3) {
           if (NameAvailabilityValidator.field_r != param1) {

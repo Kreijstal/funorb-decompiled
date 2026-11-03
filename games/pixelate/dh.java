@@ -49,7 +49,7 @@ final class dh {
             return;
           }
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-          nc.field_e.a(param1, 0);
+          TickClock.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
             return;
@@ -64,7 +64,7 @@ final class dh {
         if (oo.field_b > 0 &&
           LobbyPlayer.field_Wb) {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-          nc.field_e.a(param1, 0);
+          TickClock.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
             return;

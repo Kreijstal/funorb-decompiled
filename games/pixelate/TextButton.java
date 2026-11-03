@@ -483,7 +483,7 @@ class TextButton extends UiComponent {
           SecondaryNodeDequeIterator.a(param5, param6, 7, param1);
           mj.a(param2, param4, param0, 300, param12, param8);
           ug.a(param15, param19, -26104);
-          k.a(param7, param18, -14129, param16);
+          NanoTickClock.a(param7, param18, -14129, param16);
           if (param17 < 105) {
             field_L = (java.applet.Applet) null;
           }

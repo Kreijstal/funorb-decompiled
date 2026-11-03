@@ -117,7 +117,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               if (param0.field_a != 5) {
                 var5.a(-1, -1, bo.field_f);
               } else {
-                var5.a(11, -1, jj.field_c);
+                var5.a(11, -1, BackgroundScene.field_c);
                 var5.a(17, -1, FullscreenFocusCanvas.field_e);
               }
             } else {

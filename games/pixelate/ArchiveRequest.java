@@ -3,7 +3,7 @@
  */
 abstract class ArchiveRequest extends DualLinkNode {
     volatile boolean field_v;
-    static nc field_y;
+    static TickClock field_y;
     boolean field_t;
     static int[] field_z;
     static String[] field_w;

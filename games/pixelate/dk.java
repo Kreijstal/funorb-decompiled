@@ -110,9 +110,9 @@ final class dk {
         int[] var6 = null;
         int var7 = 0;
         Sprite[] var8 = null;
-        pc var9 = null;
+        CipherPacketBuffer var9 = null;
         int var10 = 0;
-        pc var11 = null;
+        CipherPacketBuffer var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -121,7 +121,7 @@ final class dk {
         int var4Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          var9 = new pc(param1.a((byte) 24, "", "logo.fo3d"));
+          var9 = new CipherPacketBuffer(param1.a((byte) 24, "", "logo.fo3d"));
           var11 = var9;
           var3 = var11.f(255);
           var11.n(-110);

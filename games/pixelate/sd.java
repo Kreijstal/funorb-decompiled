@@ -171,8 +171,8 @@ final class sd extends SingleChildContainer {
     }
 
     final static void a(byte param0, rh param1, int param2) {
-        pc var7 = null;
-        pc var8 = null;
+        CipherPacketBuffer var7 = null;
+        CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
@@ -361,7 +361,7 @@ final class sd extends SingleChildContainer {
     }
 
     final static void a(boolean param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         if (!param0) {
           return;
         }

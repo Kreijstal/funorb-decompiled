@@ -16,7 +16,7 @@ final class em {
     }
 
     final static void a(byte param0, lc param1, int param2) {
-        pc var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           if (param0 != -7) {
             int[] var4 = (int[]) null;
@@ -76,7 +76,7 @@ final class em {
             em.a((byte) 53);
           }
           bj.field_d = param6;
-          ProxySocketConnector.field_n = new wi(param4, param1, param2, param0, param3, param8, param7);
+          ProxySocketConnector.field_n = new ClientContextMenu(param4, param1, param2, param0, param3, param8, param7);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "em.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

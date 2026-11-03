@@ -56,7 +56,7 @@ final class ge {
           }
           AccountNamePrompt.j(1565);
           gd.a((byte) -7);
-          jj.a(0);
+          BackgroundScene.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

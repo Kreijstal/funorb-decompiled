@@ -96,15 +96,15 @@ public final class Pixelate extends NetworkGameClient {
         if (ib.field_f != null &&
           ib.field_f.field_g) {
           ln.a(116);
-          wi.b((byte) -53);
+          ClientContextMenu.b((byte) -53);
         }
         stackIn_5_1 = 0;
         stackIn_6_2 = (ib.field_f != null);
         this.a(stackIn_5_1, stackIn_6_2);
         pa.field_b = pa.field_b + 1;
-        if (nn.field_i) {
+        if (MatchHud.field_i) {
           this.openArchives(-18528);
-          nn.field_i = false;
+          MatchHud.field_i = false;
         }
         stackIn_11_0 = !param0;
         if (bd.a(stackIn_11_0)) {
@@ -205,7 +205,7 @@ public final class Pixelate extends NetworkGameClient {
               var3 = this.j(1272);
               if (0 == var3 ||
                 var3 == 1) {
-                nn.a(true);
+                MatchHud.a(true);
                 if (var3 != 1) {
                   if (StripedProgressBar.field_G) {
                     og.field_l = true;
@@ -259,7 +259,7 @@ public final class Pixelate extends NetworkGameClient {
           if (TextLayoutLine.field_e == 14) {
             IntrusiveDequeCursor.a(0);
             ga.a(150, DropTargetWidget.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), LoginCredentials.field_d, DropTargetWidget.a(-1879863704, 8), cl.field_f.length, IndexedSpriteState.a(1));
-            fc.a(ba.a(-26573), 64, nc.b(119));
+            fc.a(ba.a(-26573), 64, TickClock.b(119));
             MidiPcmStream.field_t = -2;
             StripedProgressBar.field_G = true;
             dj.field_c = false;
@@ -452,13 +452,13 @@ public final class Pixelate extends NetworkGameClient {
         IntrusiveDeque.a((byte) 76);
         ef.a(true);
         ck.a((byte) -109);
-        de.d(-1);
+        MenuScreen.d(-1);
         uk.b(false);
         ab.a(false);
         oo.a(true);
         MusicCrossfadeStream.e(-97);
         ho.b(11799);
-        jj.b(-4136);
+        BackgroundScene.b(-4136);
         KeyboardInputHandler.a(-1);
         vf.a(-109);
         vd.a(70);
@@ -486,7 +486,7 @@ public final class Pixelate extends NetworkGameClient {
         dk.a((byte) -93);
         aa.a(-127);
         bl.b(-46342);
-        nc.b(false);
+        TickClock.b(false);
         CanvasRasterBuffer.a(true);
         re.a(true);
         FullscreenFocusCanvas.a((byte) -85);
@@ -508,7 +508,7 @@ public final class Pixelate extends NetworkGameClient {
         lg.a((byte) -120);
         ea.a(true);
         LoginCredentials.a(1762);
-        pc.m(25208);
+        CipherPacketBuffer.m(25208);
         IsaacRandom.c(7);
         MidiPcmStream.h(-69);
         NodeHashTable.b(-101);
@@ -579,7 +579,7 @@ public final class Pixelate extends NetworkGameClient {
         VerticalScrollbar.c((byte) 89);
         ContextActionMenu.b((byte) 122);
         pd.b((byte) -88);
-        wi.c((byte) 121);
+        ClientContextMenu.c((byte) 121);
         ReportAbuseDialog.m(1);
         wo.a(true);
         ci.d(-12424);
@@ -590,7 +590,7 @@ public final class Pixelate extends NetworkGameClient {
         em.a(param0 ^ 23098);
         HuffmanCodec.a(false);
         bf.a((byte) -91);
-        nn.c(param0 - 23119);
+        MatchHud.c(param0 - 23119);
         Match.b(0);
         IndexedSpriteState.a(false);
         bj.b((byte) 109);
@@ -669,7 +669,7 @@ public final class Pixelate extends NetworkGameClient {
         WeightedLruCache.a(1);
         SocketConnector.d(29731);
         ProxyAuthenticationException.a((byte) 73);
-        k.d(false);
+        NanoTickClock.d(false);
         ImageProducerRasterBuffer.c(-56);
         vm.a(116);
         bo.a(true);
@@ -771,7 +771,7 @@ public final class Pixelate extends NetworkGameClient {
         fp.a(param0 + 329385410);
         sm.a((byte) -115);
         df.a(3);
-        lf.a(0);
+        WidgetStyleLayer.a(0);
         TextLayoutLine.b((byte) -26);
         bi.a(-8);
         QueuedInput.a(-5778);
@@ -790,7 +790,7 @@ public final class Pixelate extends NetworkGameClient {
     }
 
     final static void a(int param0, byte param1, df param2) {
-        pc var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (param1 <= 90) {
@@ -1361,7 +1361,7 @@ public final class Pixelate extends NetworkGameClient {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  wi.b(param5, -925, var12.c((byte) 8));
+                  ClientContextMenu.b(param5, -925, var12.c((byte) 8));
                 }
               }
             }
@@ -1382,7 +1382,7 @@ public final class Pixelate extends NetworkGameClient {
         int stackIn_12_0 = 0;
         boolean stackIn_51_0 = false;
         int var3;
-        de var4;
+        MenuScreen var4;
         int var5;
         java.awt.Canvas var6;
         int var3Lifetime1;
@@ -1543,7 +1543,7 @@ public final class Pixelate extends NetworkGameClient {
                                 li.a(75.0f, -1, TextLayoutLine.a(120, SocketConnector.field_a, em.field_a, "", jd.field_p));
                                 return false;
                               }
-                              li.a(75.0f, -1, TextLayoutLine.a(53, PlayerBoard.field_c, pc.field_x, "basic", CanvasRasterBuffer.field_f));
+                              li.a(75.0f, -1, TextLayoutLine.a(53, PlayerBoard.field_c, CipherPacketBuffer.field_x, "basic", CanvasRasterBuffer.field_f));
                               return false;
                             }
                             li.a(75.0f, -1, TextLayoutLine.a(param1 + 113, MenuInputState.field_d, PasswordValidator.field_q, "basic", im.field_Mb));
@@ -1561,13 +1561,13 @@ public final class Pixelate extends NetworkGameClient {
                     li.a(20.0f, -1, TextLayoutLine.a(125, ji.field_b, bm.field_n, "", l.field_u));
                     return false;
                   }
-                  li.a(17.0f, -1, TextLayoutLine.a(107, dg.field_d, pc.field_x, "lobby", CanvasRasterBuffer.field_f));
+                  li.a(17.0f, -1, TextLayoutLine.a(107, dg.field_d, CipherPacketBuffer.field_x, "lobby", CanvasRasterBuffer.field_f));
                   return false;
                 }
                 li.a(13.0f, -1, TextLayoutLine.a(56, qn.field_l, PasswordValidator.field_q, "lobby", im.field_Mb));
                 return false;
               }
-              li.a(12.0f, -1, TextLayoutLine.a(57, dg.field_d, pc.field_x, "arial13", CanvasRasterBuffer.field_f));
+              li.a(12.0f, -1, TextLayoutLine.a(57, dg.field_d, CipherPacketBuffer.field_x, "arial13", CanvasRasterBuffer.field_f));
               return false;
             }
             li.a(11.0f, param1 ^ -5, TextLayoutLine.a(78, qn.field_l, PasswordValidator.field_q, "arial13", im.field_Mb));
@@ -1724,10 +1724,10 @@ public final class Pixelate extends NetworkGameClient {
         vn.field_c.c();
         var6.a(0, 0, 16, 16);
         CanvasRasterBuffer.field_b = new Sprite(22, 48);
-        de.field_c = new Sprite(22, 48);
+        MenuScreen.field_c = new Sprite(22, 48);
         CanvasRasterBuffer.field_b.c();
         SoftwareRasterizer.d(-22, 0, 42, 48, 20, 65793);
-        de.field_c.c();
+        MenuScreen.field_c.c();
         CanvasRasterBuffer.field_b.a(0, 0);
         ClientException.field_f.a(19692);
         var7 = new Sprite[fo.field_u.length][];
@@ -1752,9 +1752,9 @@ public final class Pixelate extends NetworkGameClient {
     }
 
     private final void openArchives(int param0) {
-        if (null != lf.field_f) {
-          be.a(79, lf.field_f);
-          lf.field_f = null;
+        if (null != WidgetStyleLayer.field_f) {
+          be.a(79, WidgetStyleLayer.field_f);
+          WidgetStyleLayer.field_f = null;
           sf.a(0);
         }
         if (param0 != -18528) {
@@ -1940,7 +1940,7 @@ public final class Pixelate extends NetworkGameClient {
         if (MidiPcmStream.field_t == -3) {
           wh.field_p = null;
           ro.field_e = new MatchController();
-          stackIn_97_0 = (!de.field_f) ? 0 : 1;
+          stackIn_97_0 = (!MenuScreen.field_f) ? 0 : 1;
           var3Lifetime1 = stackIn_97_0;
           stackIn_100_0 = (gq.d(108)) ? 12 : 0;
           la.a(stackIn_100_0, -1, var3Lifetime1 != 0, -25528);

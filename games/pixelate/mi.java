@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class mi extends de {
+final class mi extends MenuScreen {
     static boolean field_o;
 
     final void c(byte param0) {
@@ -39,18 +39,18 @@ final class mi extends de {
           if (var3 != null) {
             MatchController.field_q = var3.field_k;
             ki.field_f = 300;
-            nn.field_a = qj.field_e.textWidth(GameApplet.field_n[MatchController.field_q]) + 56;
-            ValidatedTextWidget.field_bb = 50 + nn.field_a;
+            MatchHud.field_a = qj.field_e.textWidth(GameApplet.field_n[MatchController.field_q]) + 56;
+            ValidatedTextWidget.field_bb = 50 + MatchHud.field_a;
           }
         } else {
           ki.field_f = ki.field_f - 1;
           if (ki.field_f < 16) {
             var1 = 16 - ki.field_f;
-            ValidatedTextWidget.field_bb = var1 * (var1 * (50 + nn.field_a)) >> 8;
+            ValidatedTextWidget.field_bb = var1 * (var1 * (50 + MatchHud.field_a)) >> 8;
           } else {
             if (284 < ki.field_f) {
               var1 = ki.field_f - 284;
-              ValidatedTextWidget.field_bb = var1 * (nn.field_a + 50) * var1 >> 8;
+              ValidatedTextWidget.field_bb = var1 * (MatchHud.field_a + 50) * var1 >> 8;
             }
           }
         }
@@ -101,9 +101,9 @@ final class mi extends de {
         }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
-          return param1 >= 6144 ? -k.field_i[-param1 + 8192] : -k.field_i[param1 - 4096];
+          return param1 >= 6144 ? -NanoTickClock.field_i[-param1 + 8192] : -NanoTickClock.field_i[param1 - 4096];
         }
-        return param1 < 2048 ? k.field_i[param1] : k.field_i[-param1 + 4096];
+        return param1 < 2048 ? NanoTickClock.field_i[param1] : NanoTickClock.field_i[-param1 + 4096];
     }
 
     mi(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -153,7 +153,7 @@ final class mi extends de {
                 var10 = (String) null;
                 li.field_g = ck.a(param2, (String) null, false, vn.field_b, 83);
               } else {
-                li.field_g = k.a(param2, false, -61, param5);
+                li.field_g = NanoTickClock.a(param2, false, -61, param5);
               }
               aa.field_f.position = 0;
               aa.field_f.writeByte(160, 14);
@@ -168,7 +168,7 @@ final class mi extends de {
               if (var6_int != 0) {
                 TextLayoutLine.field_e = var6_int;
                 uk.field_s = IndexedSpriteState.field_b;
-                jj.field_b = -1;
+                BackgroundScene.field_b = -1;
               } else {
                 uk.field_s = ke.field_b;
               }
@@ -191,7 +191,7 @@ final class mi extends de {
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
                   uk.field_s = IndexedSpriteState.field_b;
-                  jj.field_b = -1;
+                  BackgroundScene.field_b = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -202,7 +202,7 @@ final class mi extends de {
                 }
               }
               if (decompiledFrameRemainder0) {
-                jj.field_b = -1;
+                BackgroundScene.field_b = -1;
                 uk.field_s = e.field_d;
               }
             }
@@ -376,7 +376,7 @@ final class mi extends de {
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = de.field_h;
+          var4 = MenuScreen.field_h;
           if (param2 > -72) {
             field_o = true;
           }

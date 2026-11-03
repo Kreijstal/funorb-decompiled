@@ -16,7 +16,7 @@ final class ef {
           na.a(true);
           return;
         }
-        pc var2 = MusicCrossfadeStream.field_o;
+        CipherPacketBuffer var2 = MusicCrossfadeStream.field_o;
         var2.readInt(0);
         var2.readInt(0);
         var2.readInt(0);
@@ -63,7 +63,7 @@ final class ef {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        pc var28 = null;
+        CipherPacketBuffer var28 = null;
         int var25Lifetime1;
         int var25Lifetime2;
         var26 = Pixelate.field_H ? 1 : 0;
@@ -169,10 +169,10 @@ final class ef {
           } else if (var2 == 1) {
             var3 = var28.a((byte) -125);
             var4_long = var28.a(false);
-            var6_ref_rh = (rh) (de.field_b.c(1504642273));
+            var6_ref_rh = (rh) (MenuScreen.field_b.c(1504642273));
             while (var6_ref_rh != null) {
               if (var3 != var6_ref_rh.field_o) {
-                var6_ref_rh = (rh) (de.field_b.last(1504642273));
+                var6_ref_rh = (rh) (MenuScreen.field_b.last(1504642273));
                 continue;
               }
               break;

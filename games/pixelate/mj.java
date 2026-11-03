@@ -69,7 +69,7 @@ final class mj {
         try {
           BufferedRandomAccessFile.field_m = param1;
           ProxyAuthenticationException.field_a = param2;
-          lf.field_b = param4;
+          WidgetStyleLayer.field_b = param4;
           wg.field_d = param5;
           if (param3 != 300) {
             sb var7 = (sb) null;
@@ -94,7 +94,7 @@ final class mj {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        pc var6 = null;
+        CipherPacketBuffer var6 = null;
         CharSequence var7 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;

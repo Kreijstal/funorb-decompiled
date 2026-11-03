@@ -16,7 +16,7 @@ final class tj extends ah {
         }
     }
 
-    final static boolean a(pc param0, int param1) {
+    final static boolean a(CipherPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

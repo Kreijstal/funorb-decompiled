@@ -333,7 +333,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               BufferedRandomAccessFile.field_i = param2;
               ValidatedTextWidget.field_ib = param2;
               wp.field_c = param0;
-              de.field_j = param0;
+              MenuScreen.field_j = param0;
               AccountChoicePanel.field_M = param4;
               mc.field_m = 0;
               TextButton.field_L = AudioService.a(13867);
@@ -430,7 +430,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (ValidatedTextWidget.field_ib > var2.width) {
                   return;
                 }
-                if (var2.height < de.field_j) {
+                if (var2.height < MenuScreen.field_j) {
                   return;
                 }
               }

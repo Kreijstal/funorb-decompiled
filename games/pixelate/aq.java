@@ -10,7 +10,7 @@ final class aq {
 
     final static String a(String param0, int param1, String param2, int param3) {
         RuntimeException var4 = null;
-        pc var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         im var7 = null;
         CharSequence var8 = null;

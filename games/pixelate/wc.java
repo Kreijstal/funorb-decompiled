@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc extends jj {
+final class wc extends BackgroundScene {
     static int[][] field_p;
     static SceneWidget field_n;
     static String[] field_m;

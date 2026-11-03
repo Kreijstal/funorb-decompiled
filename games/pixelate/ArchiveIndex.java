@@ -50,9 +50,9 @@ final class ArchiveIndex {
             nk.field_a = null;
           }
           dg.field_f = null;
-          if (null != wi.field_a) {
-            wi.field_a.e(126);
-            wi.field_a = null;
+          if (null != ClientContextMenu.field_a) {
+            ClientContextMenu.field_a.e(126);
+            ClientContextMenu.field_a = null;
           }
           SocketConnector.field_f = null;
           if (il.field_d != null) {

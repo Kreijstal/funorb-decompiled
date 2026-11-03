@@ -157,7 +157,7 @@ class EmailCredentials extends LoginCredentials {
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var34);
                 break regionExit1;
               }
-              if (!nc.field_b) {
+              if (!TickClock.field_b) {
                 var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);

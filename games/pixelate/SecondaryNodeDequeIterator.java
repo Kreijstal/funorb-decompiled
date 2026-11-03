@@ -78,37 +78,37 @@ final class SecondaryNodeDequeIterator implements Iterator {
           var7 = var6;
           var4 = wc.field_m[param0];
           if (param0 == 0) {
-            Js5NetworkRequest.field_C[param0] = (jj) ((Object) new ql(var4, var6));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ql(var4, var6));
             return;
           }
           if (1 == param0) {
-            Js5NetworkRequest.field_C[param0] = (jj) ((Object) new qi(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new qi(var4, var7));
             return;
           }
           if (param0 == 2) {
-            Js5NetworkRequest.field_C[param0] = (jj) ((Object) new ci(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ci(var4, var7));
             return;
           }
           if (param0 == 3) {
-            Js5NetworkRequest.field_C[param0] = (jj) ((Object) new lk(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new lk(var4, var7));
             return;
           }
           if (param0 == 4) {
-            Js5NetworkRequest.field_C[param0] = (jj) ((Object) new se(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new se(var4, var7));
             return;
           }
           if (param0 == 5) {
-            Js5NetworkRequest.field_C[param0] = (jj) ((Object) new da(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new da(var4, var7));
             return;
           }
           if (param0 == 6) {
-            Js5NetworkRequest.field_C[param0] = (jj) ((Object) new bm(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new bm(var4, var7));
             return;
           }
           if (param0 != 7) {
             return;
           }
-          Js5NetworkRequest.field_C[param0] = (jj) ((Object) new wc(var4, var7));
+          Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new wc(var4, var7));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

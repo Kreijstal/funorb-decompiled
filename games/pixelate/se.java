@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends jj {
+final class se extends BackgroundScene {
     private fo[] field_m;
     static PlatformTask field_o;
     private jm[] field_n;
@@ -103,10 +103,10 @@ final class se extends jj {
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (rh) (de.field_b.c(1504642273));
+          var4 = (rh) (MenuScreen.field_b.c(1504642273));
           while (var4 != null) {
             sd.a((byte) -76, var4, param1);
-            var4 = (rh) (de.field_b.last(1504642273));
+            var4 = (rh) (MenuScreen.field_b.last(1504642273));
           }
           var5 = (ue) (DialWidgetPainter.field_c.c(1504642273));
           while (var5 != null) {

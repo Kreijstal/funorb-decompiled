@@ -13,7 +13,7 @@ final class aa {
     String field_h;
     int field_b;
     static DisplayNameForm field_c;
-    static pc field_f;
+    static CipherPacketBuffer field_f;
     String field_m;
     int field_d;
     boolean field_a;

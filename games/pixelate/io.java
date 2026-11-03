@@ -52,7 +52,7 @@ final class io {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        pc var15 = null;
+        CipherPacketBuffer var15 = null;
         int var7_intLifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -470,7 +470,7 @@ final class io {
             java.applet.Applet var4 = (java.applet.Applet) null;
             this.a((java.applet.Applet) null, 6);
           }
-          nn.a(param0, -75, this.field_b, "jagex-last-login-method", 31536000L);
+          MatchHud.a(param0, -75, this.field_b, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "io.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

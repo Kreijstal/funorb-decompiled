@@ -10,7 +10,7 @@ final class ro {
     static String field_f;
 
     final static void a(int param0, boolean param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param0, 15514);
         var2.writeByte(160, 2);
         var2.writeByte(160, 4);
@@ -34,7 +34,7 @@ final class ro {
     }
 
     final static void a(int param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param1, 15514);
         if (param0 > 124) {
           var2.writeByte(160, 1);

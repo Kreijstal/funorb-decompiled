@@ -128,7 +128,7 @@ final class il {
             return;
           }
           stackIn_10_0 = 126;
-          jj.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_10_0, var2, param1);
+          BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_10_0, var2, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

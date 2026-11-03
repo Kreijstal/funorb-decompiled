@@ -118,8 +118,8 @@ final class vf {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        wi var17 = null;
-        wi var18 = null;
+        ClientContextMenu var17 = null;
+        ClientContextMenu var18 = null;
         var15 = Pixelate.field_H ? 1 : 0;
         try {
           stackIn_3_0 = MouseWheelHandler.field_e.field_Gb;
@@ -192,7 +192,7 @@ final class vf {
             if (var6.field_P != 0) {
               em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
               var17 = ProxySocketConnector.field_n;
-              var13_ref_String = k.field_n;
+              var13_ref_String = NanoTickClock.field_n;
               var17.field_b.addAction(var13_ref_String, (byte) -107, 7);
               var18 = ProxySocketConnector.field_n;
               var13 = BufferedRandomAccessFile.field_a;

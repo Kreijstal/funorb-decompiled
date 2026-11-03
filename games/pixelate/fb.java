@@ -53,7 +53,7 @@ final class fb extends SceneWidget {
     }
 
     final static void a(int param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param1, 15514);
         var2.writeByte(160, param0);
         var2.writeByte(160, 1);
@@ -126,13 +126,13 @@ final class fb extends SceneWidget {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        wi var9 = null;
+        ClientContextMenu var9 = null;
         String var10 = null;
-        wi var11 = null;
+        ClientContextMenu var11 = null;
         String var12 = null;
-        wi var13 = null;
+        ClientContextMenu var13 = null;
         String var14 = null;
-        wi var15 = null;
+        ClientContextMenu var15 = null;
         try {
           em.a((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, aj.field_k, (int[]) null, -1);
           if (param2.field_dc && (param2.field_Tb == 2 ||

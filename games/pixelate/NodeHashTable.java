@@ -17,7 +17,7 @@ final class NodeHashTable {
         int var6 = Pixelate.field_H ? 1 : 0;
         if (param0 != -25484) {
           byte[] var7 = (byte[]) null;
-          NodeHashTable.a((pc) null, (byte[]) null, -80, 17);
+          NodeHashTable.a((CipherPacketBuffer) null, (byte[]) null, -80, 17);
         }
         IntrusiveNode var4 = this.field_g[(int)(param1 & (long)(this.field_a - 1))];
         this.field_i = var4.field_a;
@@ -58,7 +58,7 @@ final class NodeHashTable {
         DebouncedValidator.a((byte) 32, param0);
     }
 
-    final static byte[] a(pc param0, byte[] param1, int param2, int param3) {
+    final static byte[] a(CipherPacketBuffer param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -78,7 +78,7 @@ final class NodeHashTable {
         try {
           if (param3 < 59) {
             var9 = (byte[]) null;
-            NodeHashTable.a((pc) null, (byte[]) null, 62, -90);
+            NodeHashTable.a((CipherPacketBuffer) null, (byte[]) null, 62, -90);
           }
           var4_int = param0.c(param2, (byte) -34);
           if (var4_int == 0) {

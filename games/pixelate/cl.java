@@ -207,7 +207,7 @@ final class cl {
         if (null != ProxySocketConnector.field_n) {
           ProxySocketConnector.field_n.a(param1, (byte) 20);
         }
-        de.a((byte) 28, param1);
+        MenuScreen.a((byte) 28, param1);
         if (AccountTermsPanel.field_M != null) {
           AccountTermsPanel.field_M.a(param1, 0);
         }

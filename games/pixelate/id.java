@@ -18,7 +18,7 @@ final class id {
     }
 
     final static void a(byte param0, hf param1, int param2) {
-        pc var5 = aa.field_f;
+        CipherPacketBuffer var5 = aa.field_f;
         var5.g(param2, 15514);
         var5.position = var5.position + 1;
         int var4 = var5.position;

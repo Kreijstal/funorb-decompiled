@@ -90,7 +90,7 @@ final class up {
         int var9 = Pixelate.field_H ? 1 : 0;
         IndexedSprite var10 = lk.field_o[this.field_m];
         IndexedSprite var11 = var10;
-        jj var3 = Js5NetworkRequest.field_C[gd.field_e[this.field_m].field_a];
+        BackgroundScene var3 = Js5NetworkRequest.field_C[gd.field_e[this.field_m].field_a];
         this.field_l = new Sprite(160, 160);
         this.field_l.c();
         int var4 = param0 * (5 - var11.field_f);

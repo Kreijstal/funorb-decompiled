@@ -84,13 +84,13 @@ final class IntrusiveDequeCursor {
             }
             var1_ref = (LobbyGame) (nk.field_a.last(1504642273));
           }
-          var1Lifetime1 = (LobbyPlayer) (wi.field_a.c(1504642273));
+          var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.c(1504642273));
           while (var1Lifetime1 != null) {
             stackIn_23_0 = -1;
             if (stackIn_23_0 > ~var1Lifetime1.field_Tb) {
               var1Lifetime1.field_Tb = var1Lifetime1.field_Tb - 1;
               if (var1Lifetime1.field_Tb != 0) {
-                var1Lifetime1 = (LobbyPlayer) (wi.field_a.last(1504642273));
+                var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));
                 continue;
               }
               var1Lifetime1.field_Eb = 0;
@@ -98,7 +98,7 @@ final class IntrusiveDequeCursor {
                 var1Lifetime1.c(2779);
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (wi.field_a.last(1504642273));
+            var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class IntrusiveDequeCursor {
           nj.field_h = new IntrusiveDeque();
           EmailCredentials.field_k = 0;
           ce.field_a = false;
-          de.field_n = 0;
+          MenuScreen.field_n = 0;
         }
         if (mi.field_o) {
           SceneWidget.i(param0 ^ 0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn {
+final class MatchHud {
     private int[] field_j;
     String field_f;
     private int field_d;
@@ -26,7 +26,7 @@ final class nn {
         ma.field_o = new IntrusiveDeque();
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          nn.a(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
+          MatchHud.a(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
@@ -211,7 +211,7 @@ final class nn {
     public static void c(int param0) {
         field_l = null;
         if (param0 != -1) {
-          nn.c(-122);
+          MatchHud.c(-122);
         }
         field_h = null;
         field_m = null;
@@ -317,7 +317,7 @@ final class nn {
         }
     }
 
-    nn(Match param0, int[] param1, int[] param2, boolean param3) {
+    MatchHud(Match param0, int[] param1, int[] param2, boolean param3) {
         int var5_int = 0;
         this.field_d = 0;
         this.field_k = 0;

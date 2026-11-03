@@ -52,7 +52,7 @@ abstract class DebouncedValidator implements ValidationSource {
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         an.field_e = MatchController.a((byte) 122, "");
         an.field_e.a(param1 - 27848, false);
-        nn.a(param1 + 4740151, param3, param2, param0);
+        MatchHud.a(param1 + 4740151, param3, param2, param0);
         ql.b(false);
         if (param1 != 27848) {
           return;

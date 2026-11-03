@@ -140,7 +140,7 @@ final class ReportAbuseDialog extends SceneWidget {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = wi.field_c;
+                    stackIn_8_5 = ClientContextMenu.field_c;
                     break regionExit1;
                   }
                 }
@@ -524,7 +524,7 @@ final class ReportAbuseDialog extends SceneWidget {
           }
           MouseWheelHandler.field_c = 4;
           fq.field_q = 15;
-          nc.field_d = 11;
+          TickClock.field_d = 11;
           r.field_c = 2;
           PlayerBoard.field_q = 2;
           var7 = bf.a(0, param4, "largefont", param1, "lobby");

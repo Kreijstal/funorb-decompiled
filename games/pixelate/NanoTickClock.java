@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k extends nc {
+final class NanoTickClock extends TickClock {
     private int field_f;
     static String field_n;
     private long field_m;
@@ -30,7 +30,7 @@ final class k extends nc {
         field_n = null;
         if (param0) {
           String var2 = (String) null;
-          k.a((String) null, false, -90, (String) null);
+          NanoTickClock.a((String) null, false, -90, (String) null);
         }
     }
 
@@ -141,7 +141,7 @@ final class k extends nc {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0) {
-          k.d(true);
+          NanoTickClock.d(true);
         }
         if (this.field_g < this.field_m) {
           this.field_o = this.field_o + (-this.field_g + this.field_m);
@@ -184,7 +184,7 @@ final class k extends nc {
             var6 = param3;
           }
           if (param2 >= -54) {
-            k.a(-82, 96, 5, -81);
+            NanoTickClock.a(-82, 96, 5, -81);
           }
           stackIn_6_0 = ck.a(param0, (String) (var6), param1, var4_long, 96);
           return stackIn_6_0;
@@ -208,7 +208,7 @@ final class k extends nc {
         }
     }
 
-    k() {
+    NanoTickClock() {
         this.field_f = 0;
         this.field_m = 0L;
         this.field_j = 1;

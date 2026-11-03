@@ -14,7 +14,7 @@ final class AudioService implements Runnable {
     volatile AudioOutput[] field_h;
     static String field_b;
 
-    final static void a(pc param0, int param1) {
+    final static void a(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -285,7 +285,7 @@ final class AudioService implements Runnable {
     }
 
     final static void a(int param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         int var3 = 77 % ((29 - param0) / 46);
         var2.g(param1, 15514);
         var2.writeByte(160, 1);

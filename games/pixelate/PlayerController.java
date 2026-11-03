@@ -161,7 +161,7 @@ final class PlayerController {
           }
           var6 = stackIn_4_0;
           if (ProxyAuthenticationException.field_g == 0) {
-            var7 = qn.a(var11, 480, nc.field_c, -121, DualLinkNode.field_o);
+            var7 = qn.a(var11, 480, TickClock.field_c, -121, DualLinkNode.field_o);
             var8 = var7 + 3;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
@@ -170,7 +170,7 @@ final class PlayerController {
             }
             di.field_b = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              AccountRegistrationPanel.field_J[var9] = nc.field_c[var9];
+              AccountRegistrationPanel.field_J[var9] = TickClock.field_c[var9];
             }
             AccountRegistrationPanel.field_J[-3 + var8] = "";
             AccountRegistrationPanel.field_J[var8 - 2] = var6;
@@ -183,7 +183,7 @@ final class PlayerController {
             if (1 != ProxyAuthenticationException.field_g) {
               throw new IllegalArgumentException();
             }
-            var7 = qn.a(var11, 480, nc.field_c, -109, DualLinkNode.field_o);
+            var7 = qn.a(var11, 480, TickClock.field_c, -109, DualLinkNode.field_o);
             var8 = var7 + 2;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
@@ -192,7 +192,7 @@ final class PlayerController {
             }
             di.field_b = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
-              AccountRegistrationPanel.field_J[var9] = nc.field_c[var9];
+              AccountRegistrationPanel.field_J[var9] = TickClock.field_c[var9];
             }
             AccountRegistrationPanel.field_J[-2 + var8] = "";
             AccountRegistrationPanel.field_J[var8 - 1] = TabbedPanel.field_Hb;
@@ -215,7 +215,7 @@ final class PlayerController {
           }
           qn.field_o = -(var7Lifetime1 >> 1) + bq.field_d;
           LinkButtonPainter.field_e = -(var7Lifetime1 >> 1) + (bq.field_d + var7Lifetime1);
-          nf.field_c = (lf.field_b + ki.field_e << 1) * VerticalScrollbar.field_Gb.field_h;
+          nf.field_c = (WidgetStyleLayer.field_b + ki.field_e << 1) * VerticalScrollbar.field_Gb.field_h;
           for (var8Lifetime2 = param3; AccountRegistrationPanel.field_J.length > var8Lifetime2; var8Lifetime2++) {
             stackIn_36_0 = nf.field_c;
             if (ProxyAuthenticationException.field_e[var8Lifetime2] >= 0) {

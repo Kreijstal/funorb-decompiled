@@ -88,7 +88,7 @@ final class pk {
         try {
           field_b = null;
           if (param0 != 4194303) {
-            pk.a((pc) null, -21);
+            pk.a((CipherPacketBuffer) null, -21);
           }
           field_c = null;
           field_e = null;
@@ -123,7 +123,7 @@ final class pk {
         }
     }
 
-    final static TriangleMesh a(pc param0, int param1) {
+    final static TriangleMesh a(CipherPacketBuffer param0, int param1) {
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
         TriangleMesh stackIn_36_0 = null;
@@ -315,7 +315,7 @@ final class pk {
                   var4 = "[" + ul.field_m + "] ";
                 }
                 if (null != io.field_c) {
-                  if (!nc.field_b ||
+                  if (!TickClock.field_b ||
                     TextLayoutLine.field_f == null) {
                     var4 = "[" + sd.a(fk.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
                     if (var10 != 0) {
@@ -367,7 +367,7 @@ final class pk {
               rh.field_y.field_W = false;
             }
             if (rh.field_y.field_W) {
-              var1 = sd.a(nn.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
+              var1 = sd.a(MatchHud.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
             }
           }
           stackIn_96_0 = var1;

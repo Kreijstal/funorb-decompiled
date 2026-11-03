@@ -10,7 +10,7 @@ final class he {
     static BitmapFont field_d;
 
     final static void a(byte param0, int param1, sm param2) {
-        pc var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

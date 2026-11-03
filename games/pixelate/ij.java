@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends de {
+final class ij extends MenuScreen {
     static bd field_o;
     static String field_q;
     static String field_r;
@@ -42,7 +42,7 @@ final class ij extends de {
           if (decompiledFrameRemainder0) {
             if (!re.field_h) {
               if (CachedTextLayout.field_h >= Js5ArchiveManager.field_c) {
-                stackIn_20_0 = (pc.field_s + Js5ArchiveManager.field_c > CachedTextLayout.field_h) ? 1 : 0;
+                stackIn_20_0 = (CipherPacketBuffer.field_s + Js5ArchiveManager.field_c > CachedTextLayout.field_h) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }

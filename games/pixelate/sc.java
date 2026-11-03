@@ -48,7 +48,7 @@ final class sc {
           return CanvasRasterBuffer.field_f;
         }
         if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
-          return pc.field_x + " - " + io.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
+          return CipherPacketBuffer.field_x + " - " + io.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
         }
         if (!MatchingTextValidator.field_u.b(-3)) {
           return jd.field_p;

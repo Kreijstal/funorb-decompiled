@@ -11,7 +11,7 @@ final class dg {
 
     final static void a(boolean param0, int param1, int param2, String param3, String param4, int param5) {
         int var7 = 0;
-        pc var8 = aa.field_f;
+        CipherPacketBuffer var8 = aa.field_f;
         var8.g(param5, 15514);
         var8.position = var8.position + 1;
         if (!param0) {

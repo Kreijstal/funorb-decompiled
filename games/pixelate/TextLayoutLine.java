@@ -77,7 +77,7 @@ final class TextLayoutLine {
           }
           var2 = new cm(param1, param1);
           bo.field_d.addFirst(22125, var2);
-          wi.field_d.a(param1);
+          ClientContextMenu.field_d.a(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

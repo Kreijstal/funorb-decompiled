@@ -61,7 +61,7 @@ final class LoginDialog extends ContentTransitionDialog {
             return stackIn_19_0;
           }
           if (param0 == 7) {
-            stackIn_22_0 = sd.a(wi.field_e, 41, new String[]{param1});
+            stackIn_22_0 = sd.a(ClientContextMenu.field_e, 41, new String[]{param1});
             return stackIn_22_0;
           }
           if (param0 == 8) {

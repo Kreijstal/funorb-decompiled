@@ -28,14 +28,14 @@ final class dq {
     }
 
     final static void a(int param0, int param1, og param2) {
-        pc var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (param1 != -18989) {
             field_c = (String) null;
           }
           var5 = aa.field_f;
-          pc var3 = var5;
+          CipherPacketBuffer var3 = var5;
           var5.g(param0, 15514);
           var5.position = var5.position + 1;
           var4 = var5.position;

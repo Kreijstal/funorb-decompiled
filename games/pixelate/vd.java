@@ -58,8 +58,8 @@ final class vd {
             MarkerSlider.field_O[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < sd.field_L; var2_intLifetime1++) {
-            if (param1.field_j == de.field_e[var2_intLifetime1].field_j) {
-              dupTemp$3 = de.field_e[var2_intLifetime1].a((byte) 123);
+            if (param1.field_j == MenuScreen.field_e[var2_intLifetime1].field_j) {
+              dupTemp$3 = MenuScreen.field_e[var2_intLifetime1].a((byte) 123);
               MarkerSlider.field_O[dupTemp$3] = MarkerSlider.field_O[dupTemp$3] + 1;
             }
           }
@@ -68,8 +68,8 @@ final class vd {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < sd.field_L; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (de.field_e[var3].field_j == param1.field_j) {
-              var4 = de.field_e[var3].a((byte) -27);
+            if (MenuScreen.field_e[var3].field_j == param1.field_j) {
+              var4 = MenuScreen.field_e[var3].a((byte) -27);
               if (MarkerSlider.field_O[var4] > InputQueue.field_d) {
                 MarkerSlider.field_O[var4] = MarkerSlider.field_O[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -78,7 +78,7 @@ final class vd {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              de.field_e[incrementValue$2] = de.field_e[var3];
+              MenuScreen.field_e[incrementValue$2] = MenuScreen.field_e[var3];
             }
           }
           sd.field_L = var2_intLifetime2;
@@ -87,7 +87,7 @@ final class vd {
           }
           fieldTemp$1 = sd.field_L;
           sd.field_L = sd.field_L + 1;
-          de.field_e[fieldTemp$1] = param1;
+          MenuScreen.field_e[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

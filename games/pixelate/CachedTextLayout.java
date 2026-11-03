@@ -163,7 +163,7 @@ final class CachedTextLayout extends TextLayout {
                     var10 = 0;
                     scanLoop4: while (true) {
                       if (var10 < var16.length - 1) {
-                        stackIn_52_0 = k.field_k[(var10 + param1) / 8] & 1 << (7 & var10 + param1);
+                        stackIn_52_0 = NanoTickClock.field_k[(var10 + param1) / 8] & 1 << (7 & var10 + param1);
                         if (var15 != 0) {
                           break scanLoop4;
                         }
@@ -862,7 +862,7 @@ final class CachedTextLayout extends TextLayout {
                   if (ep.field_a.field_R) {
                     boolean decompiledSharedTail0 = (0 != nd.field_b.field_g.field_Jb);
                     if (!decompiledSharedTail0) {
-                      up.field_o = pc.field_u;
+                      up.field_o = CipherPacketBuffer.field_u;
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {

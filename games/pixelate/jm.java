@@ -70,9 +70,9 @@ final class jm {
         var5 = Pixelate.field_H ? 1 : 0;
         var6 = "(" + oj.field_G + " " + gb.field_d + " " + MarkerSlider.field_U + ") " + TextLayoutLine.field_e;
         var1 = var6;
-        if (0 < jj.field_b) {
+        if (0 < BackgroundScene.field_b) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < jj.field_b; var2++) {
+          for (var2 = 0; var2 < BackgroundScene.field_b; var2++) {
             var7 = var1 + ' ';
             var1 = var7;
             var3 = 255 & MusicCrossfadeStream.field_o.payload[var2];

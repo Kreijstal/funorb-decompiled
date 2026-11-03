@@ -63,9 +63,9 @@ final class VerticalScrollbar extends SceneWidget {
     final static PcmStreamMixer d(byte param0) {
         if (param0 != -58) {
           field_Lb = -5;
-          return wi.field_d;
+          return ClientContextMenu.field_d;
         }
-        return wi.field_d;
+        return ClientContextMenu.field_d;
     }
 
     VerticalScrollbar(long param0, VerticalScrollbar param1) {

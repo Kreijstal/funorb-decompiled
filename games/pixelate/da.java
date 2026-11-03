@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends jj {
+final class da extends BackgroundScene {
     private vn[] field_n;
     static ea field_o;
     static int field_m;

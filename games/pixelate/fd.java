@@ -70,8 +70,8 @@ final class fd {
           if (0 < jd.field_n) {
             fieldTemp$14 = jd.field_n - 1;
             jd.field_n = jd.field_n - 1;
-            var2_ref_byte__Lifetime4 = pc.field_w[fieldTemp$14];
-            pc.field_w[jd.field_n] = null;
+            var2_ref_byte__Lifetime4 = CipherPacketBuffer.field_w[fieldTemp$14];
+            CipherPacketBuffer.field_w[jd.field_n] = null;
             return var2_ref_byte__Lifetime4;
           }
           if (null == jd.field_o) {
@@ -125,8 +125,8 @@ final class fd {
         if (0 < jd.field_n) {
           fieldTemp$7 = jd.field_n - 1;
           jd.field_n = jd.field_n - 1;
-          var2_ref_byte__Lifetime3 = pc.field_w[fieldTemp$7];
-          pc.field_w[jd.field_n] = null;
+          var2_ref_byte__Lifetime3 = CipherPacketBuffer.field_w[fieldTemp$7];
+          CipherPacketBuffer.field_w[jd.field_n] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (null == jd.field_o) {

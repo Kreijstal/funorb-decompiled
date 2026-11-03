@@ -6,10 +6,10 @@ final class StatefulTextPainter extends TextWidgetPainter {
     static wm field_w;
     static String field_t;
     static int field_s;
-    private lf field_x;
+    private WidgetStyleLayer field_x;
     static il field_y;
     static int[][] field_z;
-    private lf[] field_r;
+    private WidgetStyleLayer[] field_r;
     static String field_u;
     static int field_q;
 
@@ -22,12 +22,12 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final lf a(int param0, int param1) {
+    final WidgetStyleLayer a(int param0, int param1) {
         if (param1 != 7177) {
           StatefulTextPainter var4 = (StatefulTextPainter) null;
           this.copyStatesTo((StatefulTextPainter) null, true, true);
         }
-        lf dupTemp$0 = new lf();
+        WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_r[param0] = dupTemp$0;
         return dupTemp$0;
     }
@@ -59,7 +59,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             nk.field_a.addFirst(22125, param1);
           } else {
             stackIn_9_0 = -4;
-            jj.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_9_0, var2, param1);
+            BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_9_0, var2, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,11 +87,11 @@ final class StatefulTextPainter extends TextWidgetPainter {
     }
 
     public StatefulTextPainter() {
-        this.field_r = new lf[6];
-        this.field_x = new lf();
-        lf dupTemp$0 = new lf();
+        this.field_r = new WidgetStyleLayer[6];
+        this.field_x = new WidgetStyleLayer();
+        WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_r[0] = dupTemp$0;
-        lf var1 = dupTemp$0;
+        WidgetStyleLayer var1 = dupTemp$0;
         var1.a(true);
     }
 
@@ -102,14 +102,14 @@ final class StatefulTextPainter extends TextWidgetPainter {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        lf var7 = null;
-        lf var9 = null;
+        WidgetStyleLayer var7 = null;
+        WidgetStyleLayer var9 = null;
         LobbyGame var10 = null;
         TextButton var11 = null;
-        lf var12 = null;
-        lf var13 = null;
-        lf var14 = null;
-        lf var15 = null;
+        WidgetStyleLayer var12 = null;
+        WidgetStyleLayer var13 = null;
+        WidgetStyleLayer var14 = null;
+        WidgetStyleLayer var15 = null;
         try {
           if (param0 instanceof TextButton) {
             stackIn_3_0 = (UiComponent) (param0);
@@ -351,7 +351,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           var4_int = param1;
           if (this.field_r[var4_int] == null) {
-            this.field_r[var4_int] = new lf();
+            this.field_r[var4_int] = new WidgetStyleLayer();
           }
           this.field_r[param1].field_k = param2;
         } catch (RuntimeException runtimeException) {
@@ -361,16 +361,16 @@ final class StatefulTextPainter extends TextWidgetPainter {
 
     private final void copyStatesTo(StatefulTextPainter param0, boolean param1, boolean param2) {
         int var4_int = 0;
-        lf dupTemp$0 = null;
-        lf stackIn_10_0 = null;
-        lf stackIn_11_1 = null;
+        WidgetStyleLayer dupTemp$0 = null;
+        WidgetStyleLayer stackIn_10_0 = null;
+        WidgetStyleLayer stackIn_11_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        lf var5 = null;
-        lf var6 = null;
+        WidgetStyleLayer var5 = null;
+        WidgetStyleLayer var6 = null;
         int var7 = 0;
         ae var8 = null;
         var7 = Pixelate.field_H ? 1 : 0;
@@ -389,13 +389,13 @@ final class StatefulTextPainter extends TextWidgetPainter {
                 var6 = param0.field_r[var4_int];
                 stackIn_10_0 = var5;
                 if (var6 == null) {
-                  dupTemp$0 = new lf();
+                  dupTemp$0 = new WidgetStyleLayer();
                   param0.field_r[var4_int] = dupTemp$0;
                   stackIn_11_1 = dupTemp$0;
                 } else {
                   stackIn_11_1 = var6;
                 }
-                ((lf) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 89);
+                ((WidgetStyleLayer) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 89);
               }
             }
             return;
@@ -418,10 +418,10 @@ final class StatefulTextPainter extends TextWidgetPainter {
 
     final void setContentSprite(int param0, Sprite[] param1) {
         int var4 = 0;
-        lf[] var3 = null;
-        lf var5 = null;
+        WidgetStyleLayer[] var3 = null;
+        WidgetStyleLayer var5 = null;
         int var6 = 0;
-        lf[] var7 = null;
+        WidgetStyleLayer[] var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -453,13 +453,13 @@ final class StatefulTextPainter extends TextWidgetPainter {
     }
 
     final void a(int param0, Sprite param1) {
-        lf[] var7 = null;
+        WidgetStyleLayer[] var7 = null;
         int var4 = 0;
-        lf var5_ref_lf = null;
+        WidgetStyleLayer var5_ref_lf = null;
         int var6 = Pixelate.field_H ? 1 : 0;
         try {
           var7 = this.field_r;
-          lf[] var3 = var7;
+          WidgetStyleLayer[] var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5_ref_lf = var7[var4];
             if (var5_ref_lf != null) {

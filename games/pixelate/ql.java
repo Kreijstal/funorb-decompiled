@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends jj {
+final class ql extends BackgroundScene {
     static int field_m;
     static int field_o;
     static SceneWidget field_n;
@@ -71,7 +71,7 @@ final class ql extends jj {
           }
           var3 = "rvnadlm";
           var4 = -1L;
-          nn.a(param0, 78, var3, var2, var4);
+          MatchHud.a(param0, 78, var3, var2, var4);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

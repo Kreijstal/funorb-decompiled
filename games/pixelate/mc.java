@@ -137,11 +137,11 @@ final class mc extends IntrusiveNode {
             var28 = SoftwareRasterizer.field_k;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.a(wi.field_f);
+            SoftwareRasterizer.a(ClientContextMenu.field_f);
             var12 = new Sprite(4 + ScrollContainer.field_Kb.field_F, ScrollContainer.field_Kb.field_E + 4);
             var12.c();
             ScrollContainer.field_Kb.c(2, 2, ug.field_k);
-            de.a(0, 0, 1, var12, var12.field_F, -1, 2, var12.field_E);
+            MenuScreen.a(0, 0, 1, var12, var12.field_F, -1, 2, var12.field_E);
             ScrollContainer.field_Kb = var12;
             hf.field_m = ScrollContainer.field_Kb.e();
             var13 = new Sprite(195, 221);
@@ -153,20 +153,20 @@ final class mc extends IntrusiveNode {
             QuickChatCategory.field_A.drawCentered(sd.a(BoardView.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
             EmailConfirmationValidator.field_r.drawCentered(UiComponent.field_w, var6, 180, 16777215, -1);
             QuickChatCategory.field_A.drawCentered(ri.field_d, var6, 200, 16777215, -1);
-            de.a(0, 0, 1, var13, var13.field_F, -1, 3, var13.field_E);
+            MenuScreen.a(0, 0, 1, var13, var13.field_F, -1, 3, var13.field_E);
             SpriteCheckboxPainter.field_a.c();
             var13.b(-SpriteCheckboxPainter.field_a.field_D + 18, 241 - SpriteCheckboxPainter.field_a.field_y);
             for (var7 = 0; MarkerSlider.field_S.length > var7; var7++) {
               li.field_a[var7].c();
               QuickChatCategory.field_A.drawParagraph(MarkerSlider.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E - 6, ug.field_k, -1, 1, 1, QuickChatCategory.field_A.maxDescent + QuickChatCategory.field_A.maxAscent);
-              de.a(0, 0, 1, li.field_a[var7], li.field_a[var7].field_F, -1, 3, li.field_a[var7].field_E);
+              MenuScreen.a(0, 0, 1, li.field_a[var7], li.field_a[var7].field_F, -1, 3, li.field_a[var7].field_E);
             }
             MarkerSlider.field_S = null;
             ph.field_n = ro.field_b.a();
             ph.field_n.c();
             nh.a(SoftwareRasterizer.field_d * 2 / 3, 64, 0, 0, 126, SoftwareRasterizer.field_j);
             SoftwareRasterizer.a(var28, var2, var3);
-            SoftwareRasterizer.b(wi.field_f);
+            SoftwareRasterizer.b(ClientContextMenu.field_f);
             pb.field_n = null;
             JaggrabDownloader.field_a = (wo.field_c.field_F - AccountChoicePanel.field_O.field_F) / 2 + 434;
             DraggableWidget.field_Q = (wo.field_c.field_E - AccountChoicePanel.field_O.field_E) / 2 + 390;
@@ -181,7 +181,7 @@ final class mc extends IntrusiveNode {
             var29 = SoftwareRasterizer.field_k;
             var2Lifetime1 = SoftwareRasterizer.field_j;
             var3Lifetime1 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.a(wi.field_f);
+            SoftwareRasterizer.a(ClientContextMenu.field_f);
             var15 = sd.a(jm.field_p, 93, new String[]{wp.field_b[gb.field_c]});
             var5 = EmailConfirmationValidator.field_r.getWrappedWidth(var15, mp.field_f);
             var6Lifetime1 = EmailConfirmationValidator.field_r.paragraphHeight(var15, mp.field_f, EmailConfirmationValidator.field_r.maxAscent + EmailConfirmationValidator.field_r.maxDescent);
@@ -231,7 +231,7 @@ final class mc extends IntrusiveNode {
             var9 = new Sprite(FullscreenFocusCanvas.field_d.field_A, FullscreenFocusCanvas.field_d.field_B);
             var9.c();
             EmailConfirmationValidator.field_r.drawParagraph(var15, bl.field_c, cl.field_d, mp.field_f, VerticalScrollbar.field_Lb, 16777215, -1, 1, 1, EmailConfirmationValidator.field_r.maxAscent + EmailConfirmationValidator.field_r.maxDescent);
-            de.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
+            MenuScreen.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
             FullscreenFocusCanvas.field_d.c();
             var9.b(0, 0);
             ni.field_m = new Sprite(640, 480);
@@ -240,45 +240,45 @@ final class mc extends IntrusiveNode {
             FullscreenFocusCanvas.field_d = null;
             ni.field_m.f();
             SoftwareRasterizer.a(var29, var2Lifetime1, var3Lifetime1);
-            SoftwareRasterizer.b(wi.field_f);
+            SoftwareRasterizer.b(ClientContextMenu.field_f);
           }
           if (IntrusiveNode.field_i != null &&
             QuickChatCategory.field_A != null) {
             var30 = SoftwareRasterizer.field_k;
             var2Lifetime2 = SoftwareRasterizer.field_j;
             var3Lifetime2 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.a(wi.field_f);
+            SoftwareRasterizer.a(ClientContextMenu.field_f);
             var17 = new Sprite(412, 43);
             var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
             IntrusiveNode.field_i = null;
             var17.c();
             QuickChatCategory.field_A.drawParagraph(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, QuickChatCategory.field_A.maxAscent + QuickChatCategory.field_A.maxDescent);
-            de.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
+            MenuScreen.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
             qf.field_c.c();
             var17.b(199 - qf.field_c.field_D, -qf.field_c.field_y + 83);
             SoftwareRasterizer.a(var30, var2Lifetime2, var3Lifetime2);
-            SoftwareRasterizer.b(wi.field_f);
+            SoftwareRasterizer.b(ClientContextMenu.field_f);
           }
           if (null != jf.field_a &&
             QuickChatCategory.field_A != null) {
             var31 = SoftwareRasterizer.field_k;
             var2Lifetime3 = SoftwareRasterizer.field_j;
             var3Lifetime3 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.a(wi.field_f);
+            SoftwareRasterizer.a(ClientContextMenu.field_f);
             var4 = 6 + QuickChatCategory.field_A.getWrappedWidth(ri.field_i, 640);
             var5Lifetime1 = jf.field_a.field_A + var4 + 20;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = var6Lifetime2 - (-jf.field_a.field_A - 20);
             qf.field_c.c();
             QuickChatCategory.field_A.drawText(ri.field_i, -qf.field_c.field_D + var7Lifetime2, 155 - qf.field_c.field_y + QuickChatCategory.field_A.maxAscent + QuickChatCategory.field_A.maxDescent, 16777215, -1);
-            de.a(-qf.field_c.field_D + (var7Lifetime2 - 4), 155 - qf.field_c.field_y, 1, qf.field_c, var4, -1, 3, 50);
+            MenuScreen.a(-qf.field_c.field_D + (var7Lifetime2 - 4), 155 - qf.field_c.field_y, 1, qf.field_c, var4, -1, 3, 50);
             var8Lifetime1 = 155 - qf.field_c.field_y - (-QuickChatCategory.field_A.maxDescent - QuickChatCategory.field_A.maxAscent + (-3 + jf.field_a.field_B)) / 2;
             jf.field_a.b(var6Lifetime2 - qf.field_c.field_D, var8Lifetime1);
             SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
-            SoftwareRasterizer.b(wi.field_f);
+            SoftwareRasterizer.b(ClientContextMenu.field_f);
             jf.field_a = null;
           }
-          SoftwareRasterizer.a(wi.field_f);
+          SoftwareRasterizer.a(ClientContextMenu.field_f);
           SoftwareRasterizer.a(16, 16, 608, 112, 15, MusicPatchNode.field_t, gq.field_n);
           SoftwareRasterizer.a(231, 144, 393, 232, 15, MusicPatchNode.field_t, gq.field_n);
           if (EmailCredentials.field_i != null) {

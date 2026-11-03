@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends de {
+final class wh extends MenuScreen {
     static rh field_p;
     static String field_s;
     static dj field_o;
@@ -137,7 +137,7 @@ final class wh extends de {
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        pc var11 = null;
+        CipherPacketBuffer var11 = null;
         int[] var12 = null;
         int[] var13 = null;
         var9 = Pixelate.field_H ? 1 : 0;
@@ -152,7 +152,7 @@ final class wh extends de {
               na.a(true);
               return;
             }
-            var6_int = -var11.position + jj.field_b;
+            var6_int = -var11.position + BackgroundScene.field_b;
             var13 = var5_ref_sm.field_o;
             var12 = var13;
             var7 = var12;
@@ -645,11 +645,11 @@ final class wh extends de {
 
     final void c(byte param0) {
         if (param0 < -13) {
-          la.a(this.field_l, nc.field_a, false, -25528);
+          la.a(this.field_l, TickClock.field_a, false, -25528);
           return;
         }
         field_s = (String) null;
-        la.a(this.field_l, nc.field_a, false, -25528);
+        la.a(this.field_l, TickClock.field_a, false, -25528);
     }
 
     wh(int param0, int param1, int param2, int param3, int param4, int[] param5) {

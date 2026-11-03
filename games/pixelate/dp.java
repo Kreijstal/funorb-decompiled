@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends de {
+final class dp extends MenuScreen {
     static String field_p;
     static boolean[] field_o;
 
@@ -154,7 +154,7 @@ final class dp extends de {
           var8 = pj.a(var6, var3, 20, (byte) 112);
           SoftwareRasterizer.a(var7, var8, var5, var6, 0);
           SoftwareRasterizer.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
-          TextFieldValidator.field_h.font.drawParagraph(param0, 3 + var7, nc.field_d + (1 + (var8 - TextFieldValidator.field_h.font.maxAscent)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+          TextFieldValidator.field_h.font.drawParagraph(param0, 3 + var7, TickClock.field_d + (1 + (var8 - TextFieldValidator.field_h.font.maxAscent)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -26,7 +26,7 @@ final class LobbyPlayer extends SceneWidget {
     boolean field_Jb;
 
     final static void a(int param0, ue param1, int param2) {
-        pc var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = aa.field_f;
           var3.g(param0, 15514);
@@ -63,13 +63,13 @@ final class LobbyPlayer extends SceneWidget {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        pc var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        pc var8 = null;
+        CipherPacketBuffer var8 = null;
         QuickChatPhraseDefinition var9 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         if (param1 <= 84) {

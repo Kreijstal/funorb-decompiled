@@ -17,7 +17,7 @@ abstract class bg {
 
     final static void a(long param0, int param1, int param2) {
         int var5 = 0;
-        pc var4 = aa.field_f;
+        CipherPacketBuffer var4 = aa.field_f;
         int var5Lifetime1;
         var4.g(param1, 15514);
         if (param2 == -26231) {

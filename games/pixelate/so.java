@@ -81,7 +81,7 @@ final class so {
           }
           if (pk.field_f.field_p) {
             EmailCredentials.field_k = EmailCredentials.field_k & ~pk.field_f.field_s;
-            de.field_n = de.field_n | pk.field_f.field_s;
+            MenuScreen.field_n = MenuScreen.field_n | pk.field_f.field_s;
             ik.field_a = true;
             pk.field_f = null;
           }

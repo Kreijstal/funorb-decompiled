@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc extends PacketBuffer {
+final class CipherPacketBuffer extends PacketBuffer {
     static String field_t;
     static int field_q;
     static int field_s;
@@ -11,7 +11,7 @@ final class pc extends PacketBuffer {
     static byte[][] field_w;
     private int field_r;
 
-    pc(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -103,10 +103,10 @@ final class pc extends PacketBuffer {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        wi var17 = null;
+        ClientContextMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        wi var17Lifetime1;
+        ClientContextMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
@@ -249,7 +249,7 @@ final class pc extends PacketBuffer {
                 stackIn_95_0 = ma.field_z.field_Ib;
               }
               if (((SceneWidget) (stackIn_95_0)).field_P != 0) {
-                he.field_f = new AccountNamePrompt(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.screenY, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.height, jj.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+                he.field_f = new AccountNamePrompt(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.screenY, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
                 il.field_e = 0;
               }
               if (ma.field_z.field_Hb.field_P == 0) {
@@ -307,7 +307,7 @@ final class pc extends PacketBuffer {
         }
     }
 
-    pc(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -354,7 +354,7 @@ final class pc extends PacketBuffer {
         RuntimeException var2 = null;
         try {
           if (param0 >= -2) {
-            pc.a((String) null, (byte) -7, (String) null);
+            CipherPacketBuffer.a((String) null, (byte) -7, (String) null);
           }
           this.field_r = this.position * 8;
           return;

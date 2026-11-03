@@ -41,7 +41,7 @@ final class ki {
         int var6 = 0;
         byte[] var8 = null;
         um var9 = null;
-        pc var10 = null;
+        CipherPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         var6 = Pixelate.field_H ? 1 : 0;

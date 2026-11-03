@@ -112,12 +112,12 @@ final class HuffmanCodec {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        wi var4 = null;
+        ClientContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        im var3 = pc.a(param2, param0, (byte) 113);
-        wi var4Lifetime1;
+        im var3 = CipherPacketBuffer.a(param2, param0, (byte) 113);
+        ClientContextMenu var4Lifetime1;
         if (var3 != null) {
           ProxySocketConnector.field_n.b(false, (byte) -98);
           var4 = ProxySocketConnector.field_n;
@@ -243,9 +243,9 @@ final class HuffmanCodec {
           AudioOutput.a(param1, param2, 10);
           to.field_t = AudioOutput.a(param6, param5, 0, param3);
           ib.field_h = AudioOutput.a(param6, param5, 1, param0);
-          wi.field_d = new PcmStreamMixer();
+          ClientContextMenu.field_d = new PcmStreamMixer();
           ba.field_f = param0;
-          ib.field_h.b(wi.field_d);
+          ib.field_h.b(ClientContextMenu.field_d);
           ri.field_a = param7;
           ri.field_a.a(SocketJs5Transport.field_u, (byte) 2);
           to.field_t.b(ri.field_a);

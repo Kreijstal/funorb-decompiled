@@ -10,7 +10,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
     static int field_b;
 
     final static void a(byte param0, int param1, m param2) {
-        pc var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           if (param0 != -31) {
             SpriteCheckboxPainter.a(-63);

@@ -18,15 +18,15 @@ final class fj {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        wi var5 = null;
+        ClientContextMenu var5 = null;
         String var6 = null;
-        wi var7 = null;
+        ClientContextMenu var7 = null;
         String var8 = null;
-        wi var9 = null;
+        ClientContextMenu var9 = null;
         String var10 = null;
-        wi var11 = null;
+        ClientContextMenu var11 = null;
         String var12 = null;
-        wi var13 = null;
+        ClientContextMenu var13 = null;
         try {
           stackIn_2_0 = param0.field_m;
           stackIn_2_1 = param0.field_k;
@@ -47,7 +47,7 @@ final class fj {
               var5.field_b.addAction(var6, (byte) -33, 14);
             }
             var7 = ProxySocketConnector.field_n;
-            var8 = nn.field_h;
+            var8 = MatchHud.field_h;
             var7.field_b.addAction(var8, (byte) -128, 20);
           }
           if (param0.field_j == 1 &&

@@ -26,8 +26,8 @@ final class qj {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        pc var3 = null;
-        pc var3Lifetime1;
+        CipherPacketBuffer var3 = null;
+        CipherPacketBuffer var3Lifetime1;
         if (!param0) {
           var3 = aa.field_f;
           var3.g(param2, 15514);

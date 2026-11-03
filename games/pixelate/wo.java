@@ -35,7 +35,7 @@ final class wo {
         wa.field_b = 1000000000L / (long)param0;
     }
 
-    final static de b(int param0, int param1) {
+    final static MenuScreen b(int param0, int param1) {
         int var2 = -108 / ((34 - param0) / 49);
         return StripedProgressBar.field_H[param1];
     }
@@ -105,8 +105,8 @@ final class wo {
     }
 
     final static void c(int param0, int param1) {
-        pc var2 = null;
-        pc var2Lifetime1;
+        CipherPacketBuffer var2 = null;
+        CipherPacketBuffer var2Lifetime1;
         if (param0 == -1) {
           var2 = aa.field_f;
           var2.g(param1, 15514);

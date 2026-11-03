@@ -41,7 +41,7 @@ final class InputQueue {
         int stackIn_60_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_49_0;
-        pc var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -185,7 +185,7 @@ final class InputQueue {
             stackIn_60_0 = 95;
             break;
           }
-          jj.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_60_0, var7_ref, var6Lifetime1);
+          BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_60_0, var7_ref, var6Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

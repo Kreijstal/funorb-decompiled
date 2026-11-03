@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends de {
+final class ol extends MenuScreen {
     static String[] field_p;
     static boolean field_o;
     static int field_q;

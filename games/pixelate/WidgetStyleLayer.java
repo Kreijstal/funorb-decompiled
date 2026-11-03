@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lf {
+final class WidgetStyleLayer {
     static int field_b;
     Sprite[] field_k;
     private int field_g;
@@ -14,7 +14,7 @@ final class lf {
     private int field_a;
     static ResourceArchive field_f;
 
-    final void a(lf param0, int param1, StatefulTextPainter param2, byte param3, int param4, UiComponent param5) {
+    final void a(WidgetStyleLayer param0, int param1, StatefulTextPainter param2, byte param3, int param4, UiComponent param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -114,9 +114,9 @@ final class lf {
         }
     }
 
-    final lf a(Sprite[] param0, byte param1) {
+    final WidgetStyleLayer a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
-        lf stackIn_2_0 = null;
+        WidgetStyleLayer stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -126,7 +126,7 @@ final class lf {
           if (param1 == -65) {
             return this;
           }
-          stackIn_2_0 = (lf) null;
+          stackIn_2_0 = (WidgetStyleLayer) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,7 +240,7 @@ final class lf {
         }
     }
 
-    final lf a(int param0, byte param1) {
+    final WidgetStyleLayer a(int param0, byte param1) {
         if (param1 != -68) {
           this.field_a = 97;
         }
@@ -248,7 +248,7 @@ final class lf {
         return this;
     }
 
-    final lf a(byte param0, int param1) {
+    final WidgetStyleLayer a(byte param0, int param1) {
         int var3 = -32 % ((56 - param0) / 46);
         this.field_d = param1;
         return this;
@@ -267,7 +267,7 @@ final class lf {
         this.field_h = 0;
     }
 
-    final void a(lf param0, byte param1) {
+    final void a(WidgetStyleLayer param0, byte param1) {
         try {
           param0.field_h = this.field_h;
           param0.field_e = this.field_e;
@@ -283,9 +283,9 @@ final class lf {
         }
     }
 
-    final lf a(boolean param0, boolean param1) {
+    final WidgetStyleLayer a(boolean param0, boolean param1) {
         if (!param0) {
-          return (lf) null;
+          return (WidgetStyleLayer) null;
         }
         this.field_c = param1 ? true : false;
         return this;
@@ -299,7 +299,7 @@ final class lf {
         field_i = null;
     }
 
-    final lf a(int param0, boolean param1) {
+    final WidgetStyleLayer a(int param0, boolean param1) {
         this.field_h = param0;
         if (param1) {
           this.field_g = 122;
@@ -307,7 +307,7 @@ final class lf {
         return this;
     }
 
-    final lf a(int param0, int param1) {
+    final WidgetStyleLayer a(int param0, int param1) {
         this.field_g = param0;
         if (param1 != 15115) {
           this.field_d = 118;
@@ -315,7 +315,7 @@ final class lf {
         return this;
     }
 
-    lf() {
+    WidgetStyleLayer() {
         this.field_j = null;
         this.field_k = null;
         this.field_e = -2;

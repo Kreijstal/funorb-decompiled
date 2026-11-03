@@ -111,7 +111,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_23_0 = tj.field_w;
             return stackIn_23_0;
           }
-          if (pc.a(var5, (byte) -47, var6)) {
+          if (CipherPacketBuffer.a(var5, (byte) -47, var6)) {
             stackIn_27_0 = pk.field_b;
             return stackIn_27_0;
           }

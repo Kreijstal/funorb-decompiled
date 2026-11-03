@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class l extends de {
+final class l extends MenuScreen {
     static ea field_r;
     static SceneWidget field_s;
     static String field_u;
@@ -81,7 +81,7 @@ final class l extends de {
     }
 
     final void c(byte param0) {
-        la.a(nc.field_a, nc.field_a, false, -25528);
+        la.a(TickClock.field_a, TickClock.field_a, false, -25528);
         if (param0 > -13) {
           l.e(-78);
         }
@@ -99,8 +99,8 @@ final class l extends de {
           RuntimeException var15_ref = null;
           PlatformTaskDispatcher var16 = null;
           try {
-            MusicCrossfadeStream.field_o = new pc(param8);
-            aa.field_f = new pc(param2);
+            MusicCrossfadeStream.field_o = new CipherPacketBuffer(param8);
+            aa.field_f = new CipherPacketBuffer(param2);
             bj.field_a = param1;
             hf.field_n = param7;
             op.field_p = param13;
@@ -108,7 +108,7 @@ final class l extends de {
             hf.field_t = param5;
             LobbyPlayer.field_Lb = param3;
             cd.field_b = param11;
-            pc.field_q = param12;
+            CipherPacketBuffer.field_q = param12;
             ra.field_c = param4;
             MatchController.field_B = param6;
             gd.field_g = param10;

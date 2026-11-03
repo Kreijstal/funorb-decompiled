@@ -325,7 +325,7 @@ final class MenuInputState {
         return this.keyCode == 96 ? true : false;
     }
 
-    final static jk[] a(pc param0, byte param1) {
+    final static jk[] a(CipherPacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

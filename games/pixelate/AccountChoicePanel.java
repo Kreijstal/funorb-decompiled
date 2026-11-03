@@ -46,7 +46,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_15_1 = param0 - 28478;
           stackIn_16_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (io.field_c == null) && (null == DraggableWidget.field_S);
           ((SceneWidget) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
-          stackIn_20_0 = nc.field_e;
+          stackIn_20_0 = TickClock.field_e;
           stackIn_20_1 = param0 - 28478;
           stackIn_21_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2);
@@ -63,7 +63,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_63_1 = param0 - 28478;
           stackIn_64_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (io.field_c == null) && (null == DraggableWidget.field_S);
           ((SceneWidget) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
-          stackIn_68_0 = nc.field_e;
+          stackIn_68_0 = TickClock.field_e;
           stackIn_68_1 = param0 - 28478;
           stackIn_69_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
@@ -107,7 +107,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         int var5 = this.field_z + param2;
         int var6 = this.field_p + param0;
         int var7 = 87 % ((70 - param3) / 49);
-        he.field_d.drawParagraph(wi.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
+        he.field_d.drawParagraph(ClientContextMenu.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
         super.a(param0, param1, param2, (byte) 122);
     }
 

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rb extends de {
+final class rb extends MenuScreen {
     static String field_r;
     static int field_q;
     static int field_o;
@@ -29,7 +29,7 @@ final class rb extends de {
         if (param0 >= -95) {
           return -69;
         }
-        return this.field_l == 9 ? EmailCredentials.field_k : de.field_n;
+        return this.field_l == 9 ? EmailCredentials.field_k : MenuScreen.field_n;
     }
 
     private final boolean c(int param0, byte param1) {
@@ -211,7 +211,7 @@ final class rb extends de {
         if (param0 >= -13) {
           return;
         }
-        la.a(this.field_l, nc.field_a, false, -25528);
+        la.a(this.field_l, TickClock.field_a, false, -25528);
     }
 
     rb(int param0, int param1, int param2, int param3, int param4, int[] param5) {

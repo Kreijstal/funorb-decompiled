@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fq extends de {
-    static jj field_o;
+final class fq extends MenuScreen {
+    static BackgroundScene field_o;
     static String field_p;
     static int field_q;
 
@@ -121,7 +121,7 @@ final class fq extends de {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           if (param1 != 64) {
-            field_o = (jj) null;
+            field_o = (BackgroundScene) null;
           }
           if (null == param0.field_g) {
             return;
@@ -129,7 +129,7 @@ final class fq extends de {
           if (param0.field_d != 0 ||
             param0.field_e != 0) {
             for (var2_int = 0; var2_int < sd.field_L; var2_int++) {
-              var3 = de.field_e[var2_int];
+              var3 = MenuScreen.field_e[var2_int];
               if (var3.field_j == 2 &&
                 var3.field_d == param0.field_d &&
                 var3.field_e == param0.field_e) {
@@ -174,7 +174,7 @@ final class fq extends de {
     }
 
     final void c(byte param0) {
-        la.a(this.field_l, nc.field_a, false, -25528);
+        la.a(this.field_l, TickClock.field_a, false, -25528);
         if (param0 >= -13) {
           field_q = -93;
         }
@@ -263,7 +263,7 @@ final class fq extends de {
           }
         }
         if (param0 != 11) {
-          field_o = (jj) null;
+          field_o = (BackgroundScene) null;
         }
         var3 = 225 + rk.field_e.maxAscent;
         rk.field_e.drawCentered(var2, 330, var3, 0, 0);

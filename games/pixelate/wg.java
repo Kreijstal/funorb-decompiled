@@ -96,7 +96,7 @@ final class wg {
           if (DateInputWidget.a(param0, param1, (byte) -123)) {
             return false;
           }
-          if (pc.a(param0, (byte) -47, param1)) {
+          if (CipherPacketBuffer.a(param0, (byte) -47, param1)) {
             return false;
           }
           if (!gb.a(param0, param1, 95)) {

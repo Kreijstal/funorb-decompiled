@@ -165,7 +165,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             AccountRequestDialog.n(117);
           }
           if (5 == param0) {
-            var6.a(11, -1, jj.field_c);
+            var6.a(11, -1, BackgroundScene.field_c);
             var6.a(17, -1, FullscreenFocusCanvas.field_e);
           } else {
             if (param0 != 256) {

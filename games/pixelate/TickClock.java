@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nc {
+abstract class TickClock {
     static boolean field_b;
     static SceneWidget field_e;
     static int field_d;
@@ -20,7 +20,7 @@ abstract class nc {
 
     final static SceneWidget b(int param0) {
         if (param0 <= 101) {
-          nc.b(47);
+          TickClock.b(47);
           return fb.c((byte) 123);
         }
         return fb.c((byte) 123);

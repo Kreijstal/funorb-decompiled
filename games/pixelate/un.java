@@ -20,9 +20,9 @@ final class un {
         int var1 = 0;
         if (-1 != MatchController.field_q) {
           var1 = -ValidatedTextWidget.field_bb + 50;
-          SoftwareRasterizer.a(var1, 70, nn.field_a, 48, 65793, 160);
-          CanvasRasterBuffer.field_b.a(nn.field_a + var1, 70, 160);
-          de.field_c.a(var1 - 22, 70, 160);
+          SoftwareRasterizer.a(var1, 70, MatchHud.field_a, 48, 65793, 160);
+          CanvasRasterBuffer.field_b.a(MatchHud.field_a + var1, 70, 160);
+          MenuScreen.field_c.a(var1 - 22, 70, 160);
           oo.field_c[MatchController.field_q].e(var1, 78);
           qj.field_e.drawText(GameApplet.field_n[MatchController.field_q], var1 + 16 + 32, 99, 16777215, -1);
         }

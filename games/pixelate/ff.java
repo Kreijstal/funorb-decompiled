@@ -69,7 +69,7 @@ final class ff {
         int var6 = 0;
         im var7 = null;
         im var8 = null;
-        pc var9 = null;
+        CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = Pixelate.field_H ? 1 : 0;
         try {

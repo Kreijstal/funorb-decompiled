@@ -50,9 +50,9 @@ final class th {
     final static int a(int param0, int param1) {
         param0 = param0 & param1;
         if (param0 >= 4096) {
-          return param0 >= 6144 ? k.field_i[param0 - 6144] : -k.field_i[-param0 + 6144];
+          return param0 >= 6144 ? NanoTickClock.field_i[param0 - 6144] : -NanoTickClock.field_i[-param0 + 6144];
         }
-        return param0 < 2048 ? k.field_i[2048 - param0] : -k.field_i[-2048 + param0];
+        return param0 < 2048 ? NanoTickClock.field_i[2048 - param0] : -NanoTickClock.field_i[-2048 + param0];
     }
 
     final static void a(int param0) {

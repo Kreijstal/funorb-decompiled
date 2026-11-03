@@ -48,7 +48,7 @@ final class r {
     }
 
     final static void a(int param0, int param1) {
-        pc var2 = aa.field_f;
+        CipherPacketBuffer var2 = aa.field_f;
         var2.g(param1, param0 ^ 15514);
         var2.position = var2.position + 1;
         int var3 = var2.position;
@@ -56,7 +56,7 @@ final class r {
         var2.a(TextButton.field_J.length, 0, -3493, TextButton.field_J);
         var2.writeByte(160, ib.field_a);
         var2.writeByte(160, TextFieldValidator.field_i);
-        var2.a(k.field_k.length, param0, -3493, k.field_k);
+        var2.a(NanoTickClock.field_k.length, param0, -3493, NanoTickClock.field_k);
         var2.f(var2.position - var3, -1);
     }
 

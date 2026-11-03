@@ -73,7 +73,7 @@ final class ValidationIndicator extends TextButton {
         RuntimeException var21 = null;
         try {
           dj.a((byte) -109, param15, param9, param6);
-          jj.a(param17, false, param0, param7, param18);
+          BackgroundScene.a(param17, false, param0, param7, param18);
           op.b(param8, param20, true);
           lg.a(param5, param2, -118, param3, param4, param1);
           pb.a(param12, param13, 16, param10);

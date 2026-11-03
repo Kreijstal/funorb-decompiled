@@ -42,33 +42,33 @@ final class DiskCacheRequest extends ArchiveRequest {
     }
 
     final static void a(byte param0, SceneWidget param1, int param2) {
-        wi var11 = null;
+        ClientContextMenu var11 = null;
         Sprite var12 = null;
         String var13 = null;
-        wi var14 = null;
+        ClientContextMenu var14 = null;
         Sprite var15 = null;
         String var16 = null;
-        wi var17 = null;
+        ClientContextMenu var17 = null;
         Sprite var18 = null;
         String var19 = null;
-        wi var20 = null;
+        ClientContextMenu var20 = null;
         Sprite var21 = null;
         String var22 = null;
-        wi var23 = null;
+        ClientContextMenu var23 = null;
         Sprite var24 = null;
         String var25 = null;
-        wi var26 = null;
+        ClientContextMenu var26 = null;
         Sprite var27 = null;
         String var28 = null;
-        wi var29 = null;
+        ClientContextMenu var29 = null;
         String var31 = null;
-        wi var32 = null;
+        ClientContextMenu var32 = null;
         Sprite var33 = null;
         String var34 = null;
-        wi var35 = null;
+        ClientContextMenu var35 = null;
         Sprite var36 = null;
         String var37 = null;
-        wi var38 = null;
+        ClientContextMenu var38 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

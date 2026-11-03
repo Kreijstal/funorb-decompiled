@@ -11,7 +11,7 @@ final class StripedProgressBar extends UiComponent {
     private Sprite field_L;
     private Sprite field_F;
     private int field_M;
-    static de[] field_H;
+    static MenuScreen[] field_H;
     static Sprite field_S;
     private int field_V;
     private int field_Z;
@@ -320,7 +320,7 @@ final class StripedProgressBar extends UiComponent {
     }
 
     static {
-        field_H = new de[18];
+        field_H = new MenuScreen[18];
         ContentTransitionDialog.a(true, 127, 0, 590, new int[]{28, 1, 5, 20, 21, 27, 6, 4, 3, 22, 19}, 30, 50);
         ContentTransitionDialog.a(true, 175, 1, 460, new int[]{2, 20, 21, 27, 5, 9}, 30, 180);
         ContentTransitionDialog.a(true, 175, 2, 460, new int[]{2, 20, 21, 27, 5, 11, 13}, 30, 180);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jj {
+class BackgroundScene {
     private String field_l;
     int field_d;
     static String field_j;
@@ -52,7 +52,7 @@ class jj {
         }
         if (param0 > -87) {
           var9 = (IntrusiveNode) null;
-          jj.$cfr$intArgs$a$2d0b7bdf67eb(106, (IntrusiveNode) null, (IntrusiveNode) null);
+          BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(106, (IntrusiveNode) null, (IntrusiveNode) null);
         }
     }
 
@@ -173,7 +173,7 @@ class jj {
         }
     }
 
-    jj(String param0, Sprite[] param1) {
+    BackgroundScene(String param0, Sprite[] param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

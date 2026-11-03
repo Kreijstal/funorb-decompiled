@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends jj {
+final class qi extends BackgroundScene {
     private int field_m;
     private IntrusiveDeque field_n;
     static String field_o;

@@ -29,7 +29,7 @@ final class MatchController {
     int field_z;
     int field_o;
     private boolean field_g;
-    private nn field_e;
+    private MatchHud field_e;
     private PlayerController[] field_d;
     Match field_a;
 
@@ -190,10 +190,10 @@ final class MatchController {
     final void a(int param0, byte param1, int param2) {
         boolean discarded$0 = false;
         int var4 = 1 << param0;
-        if ((de.field_n & var4) != 0) {
+        if ((MenuScreen.field_n & var4) != 0) {
           return;
         }
-        de.field_n = de.field_n | var4;
+        MenuScreen.field_n = MenuScreen.field_n | var4;
         EmailCredentials.field_k = EmailCredentials.field_k | var4;
         if (param1 != 58) {
           discarded$0 = this.a(-117, 64);
@@ -990,14 +990,14 @@ final class MatchController {
         PlayerController stackIn_19_3 = null;
         boolean stackIn_19_6 = false;
         Object stackIn_21_0;
-        nn stackIn_21_1;
-        nn stackIn_21_2;
+        MatchHud stackIn_21_1;
+        MatchHud stackIn_21_2;
         Match stackIn_21_3;
         int[] stackIn_21_4;
         int[] stackIn_21_5;
         Object stackIn_22_0;
-        nn stackIn_22_1;
-        nn stackIn_22_2;
+        MatchHud stackIn_22_1;
+        MatchHud stackIn_22_2;
         boolean stackIn_22_6;
         int var2;
         int var3;
@@ -1063,12 +1063,12 @@ final class MatchController {
             stackIn_22_2 = null;
             stackIn_22_6 = true;
           }
-          this.field_e = new nn(stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_22_6);
+          this.field_e = new MatchHud(stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_22_6);
         } else {
           this.field_d = new PlayerController[1];
           this.field_d[0] = new PlayerController(this.field_a, 0, false, this.field_a.puzzle, 384, 256);
           this.field_A = new pb(this.field_a.puzzle, 110, 240);
-          this.field_e = new nn(this.field_a, new int[]{384}, new int[]{256}, false);
+          this.field_e = new MatchHud(this.field_a, new int[]{384}, new int[]{256}, false);
         }
         if (this.field_j != null) {
           this.field_j.a(this.field_a.puzzle.field_j, -74);

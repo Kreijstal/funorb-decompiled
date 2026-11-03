@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends de {
+final class uk extends MenuScreen {
     private int field_t;
     static PacketBuffer field_v;
     private ga field_o;
@@ -180,7 +180,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_cannot_join_inprogress", 0);
                 if (var2 != null) {
-                  wi.field_e = of.a(var2, 1);
+                  ClientContextMenu.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_declined_invite", 0);
                 if (var2 != null) {
@@ -252,7 +252,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_lobby_name_rm", param0 - 31873);
                 if (null != var2) {
-                  k.field_n = of.a(var2, 1);
+                  NanoTickClock.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_lobby_location", 0);
                 if (var2 != null) {
@@ -552,7 +552,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("quickchat_lobby", param0 - 31873);
                 if (var2 != null) {
-                  nn.field_h = of.a(var2, 1);
+                  MatchHud.field_h = of.a(var2, 1);
                 }
                 var2 = vd.a("message_game", 0);
                 if (var2 != null) {
@@ -676,7 +676,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("multiconst_invite_only", 0);
                 if (var2 != null) {
-                  pc.field_t = of.a(var2, 1);
+                  CipherPacketBuffer.field_t = of.a(var2, 1);
                 }
                 var2 = vd.a("multiconst_clan", 0);
                 if (null != var2) {
@@ -740,7 +740,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("privatechat_blankarea_explanation", param0 - 31873);
                 if (null != var2) {
-                  nn.field_m = of.a(var2, 1);
+                  MatchHud.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("publicchat_unavailable_ratedgame", 0);
                 if (null != var2) {
@@ -760,7 +760,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("thisisrunescapeclan", param0 ^ 31873);
                 if (var2 != null) {
-                  wi.field_g = of.a(var2, param0 - 31872);
+                  ClientContextMenu.field_g = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("thisisrunescapeclan_notowner", param0 - 31873);
                 if (var2 != null) {
@@ -816,7 +816,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_playerneedsrating", 0);
                 if (null != var2) {
-                  jj.field_e = of.a(var2, 1);
+                  BackgroundScene.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_youneedrating", param0 ^ 31873);
                 if (var2 != null) {
@@ -868,7 +868,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_playersdontqualify", 0);
                 if (null != var2) {
-                  pc.field_u = of.a(var2, 1);
+                  CipherPacketBuffer.field_u = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_playersdontqualify_selectgametab", 0);
                 if (var2 != null) {
@@ -916,7 +916,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("ra_suggestmute", 0);
                 if (var2 != null) {
-                  wi.field_c = of.a(var2, 1);
+                  ClientContextMenu.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("ra_intro", 0);
                 if (null != var2) {
@@ -1038,7 +1038,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("reloadgame", 0);
                 if (var2 != null) {
-                  jj.field_c = of.a(var2, 1);
+                  BackgroundScene.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("toserverlist", 0);
                 if (null != var2) {
@@ -1382,7 +1382,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_welcome", 0);
                 if (null != var2) {
-                  wi.field_n = of.a(var2, 1);
+                  ClientContextMenu.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("create_u13_welcome", 0);
                 if (var2 != null) {
@@ -1722,7 +1722,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("enterfriend_add", 0);
                 if (null != var2) {
-                  jj.field_j = of.a(var2, 1);
+                  BackgroundScene.field_j = of.a(var2, 1);
                 }
                 var2 = vd.a("enterfriend_del", 0);
                 if (var2 != null) {
@@ -1810,7 +1810,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("loading_fonts", 0);
                 if (null != var2) {
-                  pc.field_x = of.a(var2, param0 ^ 31872);
+                  CipherPacketBuffer.field_x = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("loading_soundeffects", param0 ^ 31873);
                 if (null != var2) {
@@ -1910,7 +1910,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rankings", 0);
                 if (null != var2) {
-                  nn.field_l = of.a(var2, param0 - 31872);
+                  MatchHud.field_l = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("achievements", 0);
                 if (null != var2) {
@@ -2872,31 +2872,31 @@ final class uk extends de {
                 }
                 var2 = vd.a("mustlogin3,1", 0);
                 if (var2 != null) {
-                  lf.field_i[1] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,2", 0);
                 if (null != var2) {
-                  lf.field_i[2] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[2] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,3", 0);
                 if (null != var2) {
-                  lf.field_i[3] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[3] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,4", 0);
                 if (var2 != null) {
-                  lf.field_i[4] = of.a(var2, param0 - 31872);
+                  WidgetStyleLayer.field_i[4] = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mustlogin3,5", 0);
                 if (var2 != null) {
-                  lf.field_i[5] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[5] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,6", 0);
                 if (var2 != null) {
-                  lf.field_i[6] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[6] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin3,7", 0);
                 if (null != var2) {
-                  lf.field_i[7] = of.a(var2, 1);
+                  WidgetStyleLayer.field_i[7] = of.a(var2, 1);
                 }
                 var2 = vd.a("discard", 0);
                 if (null != var2) {
@@ -3363,7 +3363,7 @@ final class uk extends de {
 
     final void c(byte param0) {
         try {
-          la.a(this.field_l, nc.field_a, false, -25528);
+          la.a(this.field_l, TickClock.field_a, false, -25528);
           if (param0 > -13) {
             this.a(57);
           }

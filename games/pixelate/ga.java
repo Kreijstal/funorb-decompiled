@@ -156,7 +156,7 @@ final class ga {
             var10_int = var10_int + (255 & ReportAbuseDialog.field_Rb[var11]);
           }
           var10_int = (7 + var10_int) / 8;
-          k.field_k = new byte[var10_int];
+          NanoTickClock.field_k = new byte[var10_int];
           if (null == param5.children) {
             param5.children = new IntrusiveDeque();
           }
@@ -176,11 +176,11 @@ final class ga {
           if (null == param4.children) {
             param4.children = new IntrusiveDeque();
           }
-          wi.field_a = param4.children;
+          ClientContextMenu.field_a = param4.children;
           if (param3 != 3) {
             field_d = 20;
           }
-          wi.field_a.e(param3 ^ 91);
+          ClientContextMenu.field_a.e(param3 ^ 91);
           SocketConnector.field_f = new SecondaryNodeHashTable(param7);
           bo.field_e = 0L;
           mh.field_b = param0;

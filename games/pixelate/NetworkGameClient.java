@@ -356,24 +356,24 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (hf.field_q == 10) {
           if (wo.field_d != 0) {
-            lf.field_f = MouseInputHandler.a(ro.field_c, (byte) 124);
+            WidgetStyleLayer.field_f = MouseInputHandler.a(ro.field_c, (byte) 124);
           }
           hf.field_q = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (hf.field_q == 11) {
-          if (null != lf.field_f && (!lf.field_f.b(-3) ||
-            !lf.field_f.a((byte) 92))) {
-            li.a(0.0f, -1, dk.a(wa.field_a, 0, hm.field_a, lf.field_f));
+          if (null != WidgetStyleLayer.field_f && (!WidgetStyleLayer.field_f.b(-3) ||
+            !WidgetStyleLayer.field_f.a((byte) 92))) {
+            li.a(0.0f, -1, dk.a(wa.field_a, 0, hm.field_a, WidgetStyleLayer.field_f));
             decompiledFrameRemainder0 = false;
           }
           else {
-            nn.field_i = true;
+            MatchHud.field_i = true;
             hf.field_q = 12;
           }
         }
         if (hf.field_q == 12 &&
-          !nn.field_i) {
+          !MatchHud.field_i) {
           hf.field_q = 13;
         }
         if (hf.field_q == 13) {
@@ -479,7 +479,7 @@ abstract class NetworkGameClient extends GameApplet {
                             nk.a(16711935);
                           }
                         } else {
-                          TabbedPanel.a(-5, MusicCrossfadeStream.field_o, jj.field_b, mc.field_k);
+                          TabbedPanel.a(-5, MusicCrossfadeStream.field_o, BackgroundScene.field_b, mc.field_k);
                         }
                       }
                     }
@@ -664,7 +664,7 @@ abstract class NetworkGameClient extends GameApplet {
             AgeValidator.a((byte) -116, 7);
           }
           if (Checkbox.field_P[8]) {
-            nn.a(true);
+            MatchHud.a(true);
           }
         }
         return var2;
@@ -758,7 +758,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.field_B = -116;
         }
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = jj.field_b - 1;
+        int var4 = BackgroundScene.field_b - 1;
         byte[] var5 = new byte[var4];
         MusicCrossfadeStream.field_o.b(var5, 0, 88, var4);
         LinkButtonPainter.a(var3 != 0, of.a(var5, 1), -33, AudioService.a(param0 ^ 13840));

@@ -45,7 +45,7 @@ abstract class ah extends DualLinkNode {
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + sd.field_L; var7 >= 0; var7--) {
-          var8_ref_aa = de.field_e[var7];
+          var8_ref_aa = MenuScreen.field_e[var7];
           var9 = 0;
           if (!ln.field_q &&
             var5 < InputQueue.field_d) {
@@ -79,7 +79,7 @@ abstract class ah extends DualLinkNode {
         if (param0 >= -90) {
           ah.g(-107);
           for (var8 = 0; sd.field_L > var8; var8++) {
-            var14 = de.field_e[var8];
+            var14 = MenuScreen.field_e[var8];
             if (var14.field_q != null) {
               l.field_p.field_Fb.a(var14.field_q, (byte) 26);
               var14.field_q.a(var7Lifetime1, param1, param3, 256, var14.field_q.g(0));
@@ -120,7 +120,7 @@ abstract class ah extends DualLinkNode {
           return (aa) (var4);
         }
         for (var8Lifetime1 = 0; sd.field_L > var8Lifetime1; var8Lifetime1++) {
-          var16 = de.field_e[var8Lifetime1];
+          var16 = MenuScreen.field_e[var8Lifetime1];
           if (var16.field_q != null) {
             l.field_p.field_Fb.a(var16.field_q, (byte) 26);
             var16.field_q.a(var7Lifetime1, param1, param3, 256, var16.field_q.g(0));

@@ -28,38 +28,38 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
               param2 != 2 &&
               param2 != 1) {
               if (param2 == 5) {
-                StripedProgressBar.field_H[param2] = (de) ((Object) new fq(param2, param6, param3, param1, param5, param4));
+                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new fq(param2, param6, param3, param1, param5, param4));
               } else {
                 if (param2 == 6) {
-                  StripedProgressBar.field_H[param2] = (de) ((Object) new wh(param2, param6, param3, param1, param5, param4));
+                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new wh(param2, param6, param3, param1, param5, param4));
                 } else {
                   if (param2 == 7) {
-                    StripedProgressBar.field_H[param2] = (de) ((Object) new fk(param2, param6, param3, param1, param5, param4));
+                    StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new fk(param2, param6, param3, param1, param5, param4));
                   } else {
                     if (param2 != 8 &&
                       param2 != 9) {
                       if (param2 == 10) {
-                        StripedProgressBar.field_H[param2] = (de) ((Object) new mi(param2, param6, param3, param1, param5, param4));
+                        StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new mi(param2, param6, param3, param1, param5, param4));
                       } else {
                         if (11 == param2) {
-                          StripedProgressBar.field_H[param2] = (de) ((Object) new l(param2, param6, param3, param1, param5, param4));
+                          StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new l(param2, param6, param3, param1, param5, param4));
                         } else {
                           if (param2 == 12) {
-                            StripedProgressBar.field_H[param2] = (de) ((Object) new ol(param2, param6, param3, param1, param5, param4));
+                            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new ol(param2, param6, param3, param1, param5, param4));
                           } else {
                             if (param2 == 13) {
-                              StripedProgressBar.field_H[param2] = (de) ((Object) new hq(param2, param6, param3, param1, param5, param4));
+                              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new hq(param2, param6, param3, param1, param5, param4));
                             } else {
                               if (param2 == 16) {
-                                StripedProgressBar.field_H[param2] = (de) ((Object) new uk(param2, param6, param3, param1, param5, param4));
+                                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new uk(param2, param6, param3, param1, param5, param4));
                               } else {
                                 if (17 == param2) {
-                                  StripedProgressBar.field_H[param2] = (de) ((Object) new op(param2, param6, param3, param1, param5, param4));
+                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new op(param2, param6, param3, param1, param5, param4));
                                 } else {
                                   if (param2 != 14) {
                                     throw new IllegalStateException("No class defined for id=" + param2);
                                   }
-                                  StripedProgressBar.field_H[param2] = (de) ((Object) new ij(param2, param6, param3, param1, param5, param4));
+                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new ij(param2, param6, param3, param1, param5, param4));
                                 }
                               }
                             }
@@ -67,7 +67,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                         }
                       }
                     } else {
-                      StripedProgressBar.field_H[param2] = (de) ((Object) new rb(param2, param6, param3, param1, param5, param4));
+                      StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new rb(param2, param6, param3, param1, param5, param4));
                     }
                   }
                 }
@@ -75,10 +75,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
               decompiledFrameRemainder0 = false;
             }
             else {
-              StripedProgressBar.field_H[param2] = (de) ((Object) new dp(param2, param6, param3, param1, param5, param4));
+              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new dp(param2, param6, param3, param1, param5, param4));
             }
           } else {
-            StripedProgressBar.field_H[param2] = (de) ((Object) new to(param2, param6, param3, param1, param5, param4));
+            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new to(param2, param6, param3, param1, param5, param4));
           }
           if (param0) {
             return;
@@ -356,7 +356,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (Js5ArchiveManager.field_c > CachedTextLayout.field_h) {
           return null;
         }
-        if (!(Js5ArchiveManager.field_c + pc.field_s <= CachedTextLayout.field_h)) {
+        if (!(Js5ArchiveManager.field_c + CipherPacketBuffer.field_s <= CachedTextLayout.field_h)) {
           return qg.field_b;
         }
         return null;
