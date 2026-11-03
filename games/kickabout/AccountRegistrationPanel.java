@@ -279,16 +279,16 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.a(-45, this.field_R);
         int var6 = 4;
         int var7 = 200;
-        this.field_Q.a(40, 1, -var7 + 496 >> 1, var7, var3);
-        this.field_F.a(40, 1, 3 + var6, 60, var3 + 15);
+        this.field_Q.setBounds(40, 1, -var7 + 496 >> 1, var7, var3);
+        this.field_F.setBounds(40, 1, 3 + var6, 60, var3 + 15);
         this.field_F.field_k = (UiListener) (this);
         this.field_Q.field_k = (UiListener) (this);
         this.a(-106, this.field_Q);
         this.a(-29, this.field_F);
         this.field_L = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_L.a(150, 1, 60 + this.field_E.field_n + this.field_E.field_t, this.field_n - this.field_E.field_t + (-this.field_E.field_n - 60), this.field_E.field_g + 20);
+        this.field_L.setBounds(150, 1, 60 + this.field_E.field_n + this.field_E.field_t, this.field_n - this.field_E.field_t + (-this.field_E.field_n - 60), this.field_E.field_g + 20);
         this.a(-56, this.field_L);
-        this.a(var6 + (55 + var3), 1, 0, 496, 0);
+        this.setBounds(var6 + (55 + var3), 1, 0, 496, 0);
     }
 
     private final int a(int param0, boolean param1, String param2, UiWidget param3, int param4, String param5, int param6) {
@@ -566,7 +566,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           this.a(-111, var7);
           var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).a((byte) -117));
           this.a(-48, var8);
-          var8.a(15, 1, 3 + (var7.field_n + var7.field_t), 15, var7.field_g + (var7.field_i - 15 >> 1));
+          var8.setBounds(15, 1, 3 + (var7.field_n + var7.field_t), 15, var7.field_g + (var7.field_i - 15 >> 1));
           stackIn_1_0 = var7.field_i;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

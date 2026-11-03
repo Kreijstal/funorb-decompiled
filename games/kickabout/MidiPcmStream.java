@@ -51,7 +51,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream nextSubstream() {
         return null;
     }
 
@@ -516,7 +516,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             var5 = (int)((long)this.field_s[param1.field_q] * (long)var4_int >> 6);
           }
-          param1.field_F.i(var5);
+          param1.field_F.setSamplePositionFixed(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1180,11 +1180,11 @@ final class MidiPcmStream extends PcmStream {
         this.field_q[param0] = TextLayoutLine.b(param1, -128);
         this.a(param1, param2 ^ 164, param0);
         if (param2 != 36) {
-          this.c();
+          this.firstSubstream();
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream firstSubstream() {
         return (PcmStream) ((Object) this.field_m);
     }
 

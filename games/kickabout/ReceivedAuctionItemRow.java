@@ -286,7 +286,7 @@ final class ReceivedAuctionItemRow extends ListRow {
             stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
-          var4 = param0.a(0, param1);
+          var4 = param0.getSingleFile(0, param1);
           var3 = var4;
           if (var4 != null) {
             stackIn_7_0 = new MusicPatch(var4);

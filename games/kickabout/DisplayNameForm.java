@@ -168,20 +168,20 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(50, 1, 20, 270, var3);
+        var2.setBounds(50, 1, 20, 270, var3);
         this.a(-86, var2);
         var3 += 50;
         var3 = var3 + (5 + this.a(var3, MusicPatch.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
-        this.field_B.a(40, 1, -var5 + 496 >> 1, var5, var3);
-        this.field_E.a(40, 1, var4 + 3, 60, 15 + var3);
+        this.field_B.setBounds(40, 1, -var5 + 496 >> 1, var5, var3);
+        this.field_E.setBounds(40, 1, var4 + 3, 60, 15 + var3);
         this.field_E.field_k = (UiListener) (this);
         this.field_B.field_k = (UiListener) (this);
         this.a(-50, this.field_B);
         this.a(-84, this.field_E);
         this.field_G = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_G.a(150, 1, this.field_C.field_t + (this.field_C.field_n + 60), -this.field_C.field_n + this.field_n - this.field_C.field_t - 60, 20);
+        this.field_G.setBounds(150, 1, this.field_C.field_t + (this.field_C.field_n + 60), -this.field_C.field_n + this.field_n - this.field_C.field_t - 60, 20);
         this.a(-16, this.field_G);
-        this.a(var4 + (var3 + 55), 1, 0, 496, 0);
+        this.setBounds(var4 + (var3 + 55), 1, 0, 496, 0);
     }
 
     private final boolean isNameValid(int param0) {

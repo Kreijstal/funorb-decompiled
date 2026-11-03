@@ -193,7 +193,7 @@ final class vp implements OverlayLayer {
         return stackIn_6_0;
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
         if (this.a((byte) 87)) {
           ei.a((this.field_i & 8) == 0 ? true : false, false);

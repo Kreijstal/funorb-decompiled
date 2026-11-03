@@ -1300,7 +1300,7 @@ public final class Kickabout extends GameLoopApplet {
         }
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         int incrementValue$0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;

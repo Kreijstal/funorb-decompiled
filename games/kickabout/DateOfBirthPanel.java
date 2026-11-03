@@ -62,8 +62,8 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
 
     final void a(byte param0) {
         int var2 = 250;
-        this.field_G.a(25, param0 + 119, -var2 + this.field_n >> 1, 140, 20 + this.field_i - 25 >> 1);
-        this.field_D.a(30, 1, 140 + (this.field_n - var2 >> 1) + 10, 100, (20 + (this.field_i - 30) >> 1) + 2);
+        this.field_G.setBounds(25, param0 + 119, -var2 + this.field_n >> 1, 140, 20 + this.field_i - 25 >> 1);
+        this.field_D.setBounds(30, 1, 140 + (this.field_n - var2 >> 1) + 10, 100, (20 + (this.field_i - 30) >> 1) + 2);
         if (param0 == -118) {
           return;
         }
@@ -82,7 +82,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         this.field_D = new TextButton(RowRangeRequest.field_g, (UiListener) (this));
         this.field_w = new UiWidget[]{(UiWidget) ((Object) this.field_G), (UiWidget) ((Object) this.field_D)};
         this.field_D.field_r = (WidgetPainter) ((Object) new op());
-        this.e(-1947);
+        this.refreshLayout(-1947);
     }
 
     public static void a(int param0) {

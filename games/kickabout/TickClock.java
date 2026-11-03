@@ -92,7 +92,7 @@ abstract class TickClock {
 
     abstract long b(byte param0);
 
-    abstract void b(int param0);
+    abstract void resetTiming(int param0);
 
     final static double a(double param0, double param1, boolean param2) {
         if (param2) {

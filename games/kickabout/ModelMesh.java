@@ -723,7 +723,7 @@ final class ModelMesh extends ModelMeshBase {
         }
     }
 
-    private final static int d(int param0) {
+    private final static int clampHslLightness(int param0) {
         if (param0 < 2) {
           param0 = 2;
         } else {
@@ -2112,7 +2112,7 @@ final class ModelMesh extends ModelMeshBase {
               } else {
                 var19 = param0.field_J[var16];
                 var14 = param1 + (param3 * var19.field_f + param4 * var19.field_a + param5 * var19.field_g) / (var8 + var8 / 2);
-                this.field_kb[var16] = ModelMesh.d(var14);
+                this.field_kb[var16] = ModelMesh.clampHslLightness(var14);
                 this.field_n[var16] = -1;
               }
             } else {
@@ -2123,7 +2123,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_gb[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_kb[var16] = ModelMesh.d(var14);
+              this.field_kb[var16] = ModelMesh.clampHslLightness(var14);
               if (param0.field_q != null &&
                 param0.field_q[this.field_S[var16]] != null) {
                 var13 = param0.field_q[this.field_S[var16]];
@@ -2131,7 +2131,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_S[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_v[var16] = ModelMesh.d(var14);
+              this.field_v[var16] = ModelMesh.clampHslLightness(var14);
               if (param0.field_q != null &&
                 param0.field_q[this.field_h[var16]] != null) {
                 var13 = param0.field_q[this.field_h[var16]];
@@ -2139,7 +2139,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_h[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_n[var16] = ModelMesh.d(var14);
+              this.field_n[var16] = ModelMesh.clampHslLightness(var14);
             }
           } else {
             if (var10Lifetime2 != 0) {

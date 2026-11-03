@@ -27,7 +27,7 @@ final class AnimationPlayer {
           if (this.field_h > 0) {
             return false;
           }
-          return this.c(0);
+          return this.advanceFrame(0);
         }
         if (0 > this.field_i) {
           if (param0 < 121) {
@@ -38,7 +38,7 @@ final class AnimationPlayer {
           }
           this.field_h = this.field_h - 1;
           if (this.field_h <= 0) {
-            return this.c(0);
+            return this.advanceFrame(0);
           }
           return false;
         }
@@ -62,7 +62,7 @@ final class AnimationPlayer {
             }
             this.field_h = this.field_h - 1;
             if (this.field_h <= 0) {
-              return this.c(0);
+              return this.advanceFrame(0);
             }
             return false;
           }
@@ -76,7 +76,7 @@ final class AnimationPlayer {
         }
         this.field_h = this.field_h - 1;
         if (this.field_h <= 0) {
-          return this.c(0);
+          return this.advanceFrame(0);
         }
         return false;
     }
@@ -105,7 +105,7 @@ final class AnimationPlayer {
         int var2 = Kickabout.field_G;
         int var1_intLifetime1;
         try {
-          SplashScreen.field_k.b(-1);
+          SplashScreen.field_k.resetTiming(-1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             mi.field_b[var1_int] = 0L;
           }
@@ -128,7 +128,7 @@ final class AnimationPlayer {
         return this.field_e.field_e.length;
     }
 
-    private final boolean c(int param0) {
+    private final boolean advanceFrame(int param0) {
         this.field_b = this.field_b + 1;
         if (this.field_e.field_e.length <= this.field_b) {
           this.field_a = this.field_a + 1;

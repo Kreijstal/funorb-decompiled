@@ -4420,6 +4420,14 @@
       "renamedSymbol": "F:FormationAgent.formationChoice:[I"
     },
     {
+      "symbol": "M:Kickabout.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Kickabout.drawConsole(I)V"
+    },
+    {
       "symbol": "M:Kickabout.a(IB)V",
       "originalName": "a",
       "to": "onConnectionResult",
@@ -4564,6 +4572,14 @@
       "renamedSymbol": "M:KeyedLoginCredentials.releaseStatics(B)V"
     },
     {
+      "symbol": "M:ac.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrinketUnlockNotice.drawConsole(I)V"
+    },
+    {
       "symbol": "M:ac.b(B)V",
       "originalName": "b",
       "to": "releaseStatics",
@@ -4668,6 +4684,14 @@
       "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
     },
     {
+      "symbol": "M:ah.a(IIIBILjava/lang/String;I)V",
+      "originalName": "a",
+      "to": "startAppletShell",
+      "evidence": "Matches armiesofgielinor GameAppletShell.startAppletShell by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V"
+    },
+    {
       "symbol": "M:ah.a(ZB)V",
       "originalName": "a",
       "to": "shutdownShell",
@@ -4698,6 +4722,14 @@
       "evidence": "Called when the applet stops: stops sound and music (ph.a, r.a). Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameAppletShell.onShutdown(B)V"
+    },
+    {
+      "symbol": "M:ah.d(B)Z",
+      "originalName": "d",
+      "to": "isHostAllowed",
+      "evidence": "Matches escapevector GameAppletShell.isHostAllowed by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.isHostAllowed(B)Z"
     },
     {
       "symbol": "M:ah.e(B)V",
@@ -4922,6 +4954,14 @@
       "evidence": "Body closely matches steelsentinels IsaacRandom.initializeState.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IsaacRandom.initializeState(B)V"
+    },
+    {
+      "symbol": "M:aq.a(I)V",
+      "originalName": "a",
+      "to": "generateResults",
+      "evidence": "Matches steelsentinels IsaacRandom.generateResults by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V"
     },
     {
       "symbol": "M:aq.b(B)I",
@@ -5244,6 +5284,14 @@
       "renamedSymbol": "M:UnreadMessagesScreen.releaseStatics(I)V"
     },
     {
+      "symbol": "M:be.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ConsolePanel.drawConsole(I)V"
+    },
+    {
       "symbol": "M:be.d(B)V",
       "originalName": "d",
       "to": "releaseStatics",
@@ -5530,6 +5578,14 @@
       "evidence": "Body closely matches tetralink/vertigo2 PlatformTaskDispatcher.enqueueTask.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlatformTaskDispatcher.enqueueTask(IIILjava/lang/Object;I)LPlatformTask;"
+    },
+    {
+      "symbol": "M:bu.a(IIZII)Lwu;",
+      "originalName": "a",
+      "to": "requestEnterFullscreen",
+      "evidence": "Matches geoblox PlatformTaskDispatcher.requestEnterFullscreen by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestEnterFullscreen(IIZII)LPlatformTask;"
     },
     {
       "symbol": "M:bu.a(I[Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Lwu;",
@@ -5836,6 +5892,14 @@
       "renamedSymbol": "M:SingleChildContainer.drawLayer(IIII)V"
     },
     {
+      "symbol": "M:ct.a(IIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Matches escapevector SingleChildContainer.setBounds by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SingleChildContainer.setBounds(IIIII)V"
+    },
+    {
       "symbol": "M:ct.a(IIILfd;II)V",
       "originalName": "a",
       "to": "handlePointerRelease",
@@ -5954,6 +6018,14 @@
       "evidence": "Matches armiesofgielinor AnimationPlayer.applyCurrentFrame by signature and body shape.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AnimationPlayer.applyCurrentFrame(LModelMeshBase;ZZZ)LModelMeshBase;"
+    },
+    {
+      "symbol": "M:dd.c(I)Z",
+      "originalName": "c",
+      "to": "advanceFrame",
+      "evidence": "Matches armiesofgielinor AnimationPlayer.advanceFrame by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AnimationPlayer.advanceFrame(I)Z"
     },
     {
       "symbol": "M:df.a(IZ)V",
@@ -6122,6 +6194,22 @@
       "evidence": "Body closely matches steelsentinels PcmStreamMixer.mixInto. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ReverbPcmStream.mixInto([III)V"
+    },
+    {
+      "symbol": "M:dp.b()Llq;",
+      "originalName": "b",
+      "to": "nextSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.nextSubstream by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReverbPcmStream.nextSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:dp.c()Llq;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.firstSubstream by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReverbPcmStream.firstSubstream()LPcmStream;"
     },
     {
       "symbol": "M:dp.c(F)V",
@@ -6434,6 +6522,14 @@
       "evidence": "Body is identical to armiesofgielinor ModelMesh.releaseStatics.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ModelMesh.releaseStatics()V"
+    },
+    {
+      "symbol": "M:eg.d(I)I",
+      "originalName": "d",
+      "to": "clampHslLightness",
+      "evidence": "Matches armiesofgielinor ModelMesh.clampHslLightness by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ModelMesh.clampHslLightness(I)I"
     },
     {
       "symbol": "M:eg.e()V",
@@ -6780,6 +6876,14 @@
       "renamedSymbol": "M:NumericDateInputWidget.drawLayer(IIII)V"
     },
     {
+      "symbol": "M:fb.a(IIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Matches vertigo2 UiWidget.setBounds by signature and body shape. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NumericDateInputWidget.setBounds(IIIII)V"
+    },
+    {
       "symbol": "M:fb.f(I)Ljava/lang/String;",
       "originalName": "f",
       "to": "getTooltip",
@@ -6828,6 +6932,14 @@
       "renamedSymbol": "M:UiWidget.drawLayer(IIII)V"
     },
     {
+      "symbol": "M:fd.a(IIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Matches vertigo2 UiWidget.setBounds by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiWidget.setBounds(IIIII)V"
+    },
+    {
       "symbol": "M:fd.a(IIILfd;II)V",
       "originalName": "a",
       "to": "handlePointerRelease",
@@ -6866,6 +6978,14 @@
       "evidence": "Matches geoblox UiWidget.appendWidgetDiagnosticProperties by signature and body shape.",
       "confidence": "reviewed",
       "renamedSymbol": "M:UiWidget.appendWidgetDiagnosticProperties(ILjava/lang/StringBuilder;Ljava/util/Hashtable;I)V"
+    },
+    {
+      "symbol": "M:fd.e(I)V",
+      "originalName": "e",
+      "to": "refreshLayout",
+      "evidence": "Matches geoblox UiWidget.refreshLayout by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiWidget.refreshLayout(I)V"
     },
     {
       "symbol": "M:fd.f(I)Ljava/lang/String;",
@@ -7324,6 +7444,14 @@
       "renamedSymbol": "M:fv.openUrlWithShell(BLjava/lang/String;)Z"
     },
     {
+      "symbol": "M:fv.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fv.drawConsole(I)V"
+    },
+    {
       "symbol": "M:fv.b(B)V",
       "originalName": "b",
       "to": "releaseStatics",
@@ -7402,6 +7530,22 @@
       "evidence": "Body closely matches steelsentinels TextButton.handlePointerPress. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextInputWidget.handlePointerPress(ZIILUiWidget;III)Z"
+    },
+    {
+      "symbol": "M:ga.i(B)V",
+      "originalName": "i",
+      "to": "clearInputText",
+      "evidence": "Matches geoblox TextInputWidget.clearInputText by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.clearInputText(B)V"
+    },
+    {
+      "symbol": "M:ga.k(B)V",
+      "originalName": "k",
+      "to": "copySelectedTextToClipboard",
+      "evidence": "Matches geoblox TextInputWidget.copySelectedTextToClipboard by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputWidget.copySelectedTextToClipboard(B)V"
     },
     {
       "symbol": "M:ga.k(I)Ljava/lang/String;",
@@ -7708,6 +7852,14 @@
       "renamedSymbol": "M:PcmStreamMixer.mixInto([III)V"
     },
     {
+      "symbol": "M:gq.b()Llq;",
+      "originalName": "b",
+      "to": "nextSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.nextSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStreamMixer.nextSubstream()LPcmStream;"
+    },
+    {
       "symbol": "M:gq.b(I)V",
       "originalName": "b",
       "to": "skipChildStreams",
@@ -7722,6 +7874,14 @@
       "evidence": "Body is identical to escapevector PcmStreamMixer.removeSubstream.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmStreamMixer.removeSubstream(LPcmStream;)V"
+    },
+    {
+      "symbol": "M:gq.c()Llq;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.firstSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStreamMixer.firstSubstream()LPcmStream;"
     },
     {
       "symbol": "M:gq.c([III)V",
@@ -7946,6 +8106,14 @@
       "evidence": "Body is identical to steelsentinels VorbisResidue.decodeResidue.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VorbisResidue.decodeResidue([FIZ)V"
+    },
+    {
+      "symbol": "M:hc.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OverlayLayer.drawConsole(I)V"
     },
     {
       "symbol": "M:hd.a(BLhd;)V",
@@ -8636,6 +8804,14 @@
       "renamedSymbol": "M:PacketBuffer.appendCrc32(IZ)I"
     },
     {
+      "symbol": "M:iw.a(I[IZI)V",
+      "originalName": "a",
+      "to": "xteaDecryptRange",
+      "evidence": "Matches steelsentinels PacketBuffer.xteaDecryptRange by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.xteaDecryptRange(I[IZI)V"
+    },
+    {
       "symbol": "M:iw.a(JI)V",
       "originalName": "a",
       "to": "writeLong",
@@ -9188,6 +9364,22 @@
       "renamedSymbol": "M:MusicTrackMixer.mixInto([III)V"
     },
     {
+      "symbol": "M:jj.b()Llq;",
+      "originalName": "b",
+      "to": "nextSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.nextSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicTrackMixer.nextSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:jj.c()Llq;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.firstSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicTrackMixer.firstSubstream()LPcmStream;"
+    },
+    {
       "symbol": "M:jj.d()I",
       "originalName": "d",
       "to": "getSchedulingCost",
@@ -9396,6 +9588,14 @@
       "renamedSymbol": "M:IntrusiveNodeHashTable.put(LIntrusiveNode;IJ)V"
     },
     {
+      "symbol": "M:kd.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor DebugConsole.drawConsole by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DebugConsole.drawConsole(I)V"
+    },
+    {
       "symbol": "M:kd.c(I)V",
       "originalName": "c",
       "to": "releaseStatics",
@@ -9490,6 +9690,14 @@
       "evidence": "Body is identical to armiesofgielinor/brickabrac IndexedSprite.toRgbSprite.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IndexedSprite.toRgbSprite()LSprite;"
+    },
+    {
+      "symbol": "M:kg.a(III)V",
+      "originalName": "a",
+      "to": "drawAlpha",
+      "evidence": "Matches steelsentinels IndexedSprite.drawAlpha by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.drawAlpha(III)V"
     },
     {
       "symbol": "M:kg.a(IIII)V",
@@ -9868,6 +10076,14 @@
       "renamedSymbol": "M:TextHotspotWidget.drawLayer(IIII)V"
     },
     {
+      "symbol": "M:lb.a(IIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Matches vertigo2 UiWidget.setBounds by signature and body shape. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.setBounds(IIIII)V"
+    },
+    {
       "symbol": "M:lb.f(I)Ljava/lang/String;",
       "originalName": "f",
       "to": "getTooltip",
@@ -10098,6 +10314,22 @@
       "evidence": "Body closely matches steelsentinels PcmStreamMixer.mixInto. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmStream.mixInto([III)V"
+    },
+    {
+      "symbol": "M:lq.b()Llq;",
+      "originalName": "b",
+      "to": "nextSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.nextSubstream by signature and body shape. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.nextSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:lq.c()Llq;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.firstSubstream by signature and body shape. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.firstSubstream()LPcmStream;"
     },
     {
       "symbol": "M:lq.d()I",
@@ -10410,6 +10642,22 @@
       "evidence": "Matches escapevector/steelsentinels NanoTickClock.advanceTicks by signature and body shape. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TickClock.advanceTicks(IJ)I"
+    },
+    {
+      "symbol": "M:mc.b(I)V",
+      "originalName": "b",
+      "to": "resetTiming",
+      "evidence": "Matches escapevector NanoTickClock.resetTiming by signature and body shape. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TickClock.resetTiming(I)V"
+    },
+    {
+      "symbol": "M:md.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CheatCodeListener.drawConsole(I)V"
     },
     {
       "symbol": "M:md.c(I)V",
@@ -11804,6 +12052,14 @@
       "renamedSymbol": "M:StripedProgressBar.drawLayer(IIII)V"
     },
     {
+      "symbol": "M:ou.a(IIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Matches escapevector StripedProgressBar.setBounds by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StripedProgressBar.setBounds(IIIII)V"
+    },
+    {
       "symbol": "M:ou.a(Lut;IBI)V",
       "originalName": "a",
       "to": "drawStripedBar",
@@ -12026,6 +12282,22 @@
       "evidence": "Body closely matches steelsentinels PcmStreamMixer.mixInto. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MusicPatchPcmStream.mixInto([III)V"
+    },
+    {
+      "symbol": "M:pp.b()Llq;",
+      "originalName": "b",
+      "to": "nextSubstream",
+      "evidence": "Matches steelsentinels MusicPatchPcmStream.nextSubstream by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicPatchPcmStream.nextSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:pp.c()Llq;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "Matches steelsentinels MusicPatchPcmStream.firstSubstream by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicPatchPcmStream.firstSubstream()LPcmStream;"
     },
     {
       "symbol": "M:pp.d()I",
@@ -12274,6 +12546,14 @@
       "evidence": "Body is identical to armiesofgielinor ModelMesh.beginAnimation. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ModelMeshBase.beginAnimation()Z"
+    },
+    {
+      "symbol": "M:qd.a(III)V",
+      "originalName": "a",
+      "to": "drawAlpha",
+      "evidence": "Matches steelsentinels IndexedSprite.drawAlpha by signature and body shape. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSpriteState.drawAlpha(III)V"
     },
     {
       "symbol": "M:qg.a(BII[IIIII)V",
@@ -13116,6 +13396,22 @@
       "renamedSymbol": "M:MidiPcmStream.mixInto([III)V"
     },
     {
+      "symbol": "M:ru.b()Llq;",
+      "originalName": "b",
+      "to": "nextSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.nextSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.nextSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:ru.c()Llq;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.firstSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.firstSubstream()LPcmStream;"
+    },
+    {
       "symbol": "M:ru.d()I",
       "originalName": "d",
       "to": "getSchedulingCost",
@@ -13364,6 +13660,14 @@
       "renamedSymbol": "M:ResourceArchive.loadPackedGroup(IB)V"
     },
     {
+      "symbol": "M:sj.a(II)[B",
+      "originalName": "a",
+      "to": "getSingleFile",
+      "evidence": "Matches geoblox ResourceArchive.getSingleFile by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getSingleFile(II)[B"
+    },
+    {
       "symbol": "M:sj.a(III)Z",
       "originalName": "a",
       "to": "ensureFileAvailable",
@@ -13426,6 +13730,14 @@
       "evidence": "Returns the download percentage of a group id, as in three other games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ResourceArchive.getGroupProgress(IB)I"
+    },
+    {
+      "symbol": "M:sj.b(II)Z",
+      "originalName": "b",
+      "to": "ensureFlatFileAvailable",
+      "evidence": "Matches armiesofgielinor ResourceArchive.ensureFlatFileAvailable by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.ensureFlatFileAvailable(II)Z"
     },
     {
       "symbol": "M:sj.b(Ljava/lang/String;I)I",
@@ -13916,12 +14228,28 @@
       "renamedSymbol": "M:tl.releaseStatics(I)V"
     },
     {
+      "symbol": "M:tr.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tr.drawConsole(I)V"
+    },
+    {
       "symbol": "M:ts.a(B)V",
       "originalName": "a",
       "to": "releaseStatics",
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ts.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:tu.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameLoopApplet.drawConsole(I)V"
     },
     {
       "symbol": "M:tu.a(IB)V",
@@ -14460,6 +14788,14 @@
       "renamedSymbol": "M:Sprite.copy()LSprite;"
     },
     {
+      "symbol": "M:ut.b(IIIII)V",
+      "originalName": "b",
+      "to": "drawBilinearPixel",
+      "evidence": "Matches escapevector Sprite.drawBilinearPixel by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.drawBilinearPixel(IIIII)V"
+    },
+    {
       "symbol": "M:ut.b([I[IIIIIIII)V",
       "originalName": "b",
       "to": "blitSilhouette",
@@ -14892,6 +15228,14 @@
       "renamedSymbol": "M:NanoTickClock.advanceTicks(IJ)I"
     },
     {
+      "symbol": "M:vi.b(I)V",
+      "originalName": "b",
+      "to": "resetTiming",
+      "evidence": "Matches escapevector NanoTickClock.resetTiming by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoTickClock.resetTiming(I)V"
+    },
+    {
       "symbol": "M:vi.d(I)V",
       "originalName": "d",
       "to": "releaseStatics",
@@ -15044,6 +15388,14 @@
       "renamedSymbol": "M:PcmSampleStream.mixInto([III)V"
     },
     {
+      "symbol": "M:vm.b()Llq;",
+      "originalName": "b",
+      "to": "nextSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.nextSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.nextSubstream()LPcmStream;"
+    },
+    {
       "symbol": "M:vm.b(II)V",
       "originalName": "b",
       "to": "setVolumeAndPan",
@@ -15106,6 +15458,14 @@
       "evidence": "Body is identical to steelsentinels PcmSampleStream.mixForwardMonoAligned.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmSampleStream.mixForwardMonoAligned([B[IIIIIIILPcmSampleStream;)I"
+    },
+    {
+      "symbol": "M:vm.c()Llq;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "Matches escapevector ReverbPcmStream.firstSubstream by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.firstSubstream()LPcmStream;"
     },
     {
       "symbol": "M:vm.c(II[B[IIIIIIIILvm;II)I",
@@ -15188,6 +15548,14 @@
       "renamedSymbol": "M:PcmSampleStream.playBackwardFromEnd()V"
     },
     {
+      "symbol": "M:vm.i(I)V",
+      "originalName": "i",
+      "to": "setSamplePositionFixed",
+      "evidence": "Matches geoblox PcmSampleStream.setSamplePositionFixed by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.setSamplePositionFixed(I)V"
+    },
+    {
       "symbol": "M:vm.j()Z",
       "originalName": "j",
       "to": "adjustRampOrStop",
@@ -15268,6 +15636,14 @@
       "renamedSymbol": "M:MeshData.decodeLegacyFormat([B)V"
     },
     {
+      "symbol": "M:vp.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:vp.drawConsole(I)V"
+    },
+    {
       "symbol": "M:vq.a(B)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -15322,6 +15698,14 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:vv.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:w.a(I)V",
+      "originalName": "a",
+      "to": "drawConsole",
+      "evidence": "Matches armiesofgielinor ConsolePanel.drawConsole by signature and body shape. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DialogOverlay.drawConsole(I)V"
     },
     {
       "symbol": "M:w.b(I)V",
@@ -15660,6 +16044,14 @@
       "renamedSymbol": "M:WidgetContainer.drawLayer(IIII)V"
     },
     {
+      "symbol": "M:wj.a(IIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Matches vertigo2 WidgetContainer.setBounds by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WidgetContainer.setBounds(IIIII)V"
+    },
+    {
       "symbol": "M:wj.a(IIILfd;II)V",
       "originalName": "a",
       "to": "handlePointerRelease",
@@ -15850,6 +16242,14 @@
       "evidence": "Matches escapevector/steelsentinels NameSuggestionsPanel.drawLayer by signature and body shape. Resolved override family. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArrayWidgetContainer.drawLayer(IIII)V"
+    },
+    {
+      "symbol": "M:wt.a(IIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Matches armiesofgielinor ArrayWidgetContainer.setBounds by signature and body shape.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArrayWidgetContainer.setBounds(IIIII)V"
     },
     {
       "symbol": "M:wt.a(IIILfd;II)V",
@@ -74106,7 +74506,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#0",
-      "renamedSymbol": "L:Kickabout.a(I)V#0",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -74117,7 +74517,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#1",
-      "renamedSymbol": "L:Kickabout.a(I)V#1",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -74128,7 +74528,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#10",
-      "renamedSymbol": "L:Kickabout.a(I)V#10",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#10",
       "originalName": "stackIn_63_1",
       "renamedName": "stackIn_63_1",
       "declaration": {
@@ -74139,7 +74539,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#11",
-      "renamedSymbol": "L:Kickabout.a(I)V#11",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#11",
       "originalName": "stackIn_64_2",
       "renamedName": "stackIn_64_2",
       "declaration": {
@@ -74150,7 +74550,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#12",
-      "renamedSymbol": "L:Kickabout.a(I)V#12",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#12",
       "originalName": "stackIn_74_0",
       "renamedName": "stackIn_74_0",
       "declaration": {
@@ -74161,7 +74561,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#13",
-      "renamedSymbol": "L:Kickabout.a(I)V#13",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#13",
       "originalName": "stackIn_75_1",
       "renamedName": "stackIn_75_1",
       "declaration": {
@@ -74172,7 +74572,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#14",
-      "renamedSymbol": "L:Kickabout.a(I)V#14",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#14",
       "originalName": "stackIn_85_0",
       "renamedName": "stackIn_85_0",
       "declaration": {
@@ -74183,7 +74583,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#15",
-      "renamedSymbol": "L:Kickabout.a(I)V#15",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#15",
       "originalName": "stackIn_85_1",
       "renamedName": "stackIn_85_1",
       "declaration": {
@@ -74194,7 +74594,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#16",
-      "renamedSymbol": "L:Kickabout.a(I)V#16",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#16",
       "originalName": "stackIn_86_2",
       "renamedName": "stackIn_86_2",
       "declaration": {
@@ -74205,7 +74605,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#17",
-      "renamedSymbol": "L:Kickabout.a(I)V#17",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#17",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -74216,7 +74616,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#18",
-      "renamedSymbol": "L:Kickabout.a(I)V#18",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#18",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -74227,7 +74627,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#19",
-      "renamedSymbol": "L:Kickabout.a(I)V#19",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#19",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -74238,7 +74638,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#2",
-      "renamedSymbol": "L:Kickabout.a(I)V#2",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -74249,7 +74649,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#20",
-      "renamedSymbol": "L:Kickabout.a(I)V#20",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#20",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -74260,7 +74660,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#21",
-      "renamedSymbol": "L:Kickabout.a(I)V#21",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#21",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -74271,7 +74671,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#22",
-      "renamedSymbol": "L:Kickabout.a(I)V#22",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#22",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -74282,7 +74682,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#23",
-      "renamedSymbol": "L:Kickabout.a(I)V#23",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#23",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -74293,7 +74693,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#24",
-      "renamedSymbol": "L:Kickabout.a(I)V#24",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#24",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -74304,7 +74704,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#25",
-      "renamedSymbol": "L:Kickabout.a(I)V#25",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#25",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -74315,7 +74715,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#26",
-      "renamedSymbol": "L:Kickabout.a(I)V#26",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#26",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -74326,7 +74726,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#27",
-      "renamedSymbol": "L:Kickabout.a(I)V#27",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#27",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -74337,7 +74737,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#3",
-      "renamedSymbol": "L:Kickabout.a(I)V#3",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#3",
       "originalName": "stackIn_44_0",
       "renamedName": "stackIn_44_0",
       "declaration": {
@@ -74348,7 +74748,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#4",
-      "renamedSymbol": "L:Kickabout.a(I)V#4",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#4",
       "originalName": "stackIn_44_1",
       "renamedName": "stackIn_44_1",
       "declaration": {
@@ -74359,7 +74759,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#5",
-      "renamedSymbol": "L:Kickabout.a(I)V#5",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#5",
       "originalName": "stackIn_45_2",
       "renamedName": "stackIn_45_2",
       "declaration": {
@@ -74370,7 +74770,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#6",
-      "renamedSymbol": "L:Kickabout.a(I)V#6",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#6",
       "originalName": "stackIn_53_0",
       "renamedName": "stackIn_53_0",
       "declaration": {
@@ -74381,7 +74781,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#7",
-      "renamedSymbol": "L:Kickabout.a(I)V#7",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#7",
       "originalName": "stackIn_53_1",
       "renamedName": "stackIn_53_1",
       "declaration": {
@@ -74392,7 +74792,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#8",
-      "renamedSymbol": "L:Kickabout.a(I)V#8",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#8",
       "originalName": "stackIn_54_2",
       "renamedName": "stackIn_54_2",
       "declaration": {
@@ -74403,7 +74803,7 @@
     },
     {
       "symbol": "L:Kickabout.a(I)V#9",
-      "renamedSymbol": "L:Kickabout.a(I)V#9",
+      "renamedSymbol": "L:Kickabout.drawConsole(I)V#9",
       "originalName": "stackIn_63_0",
       "renamedName": "stackIn_63_0",
       "declaration": {
@@ -77296,7 +77696,7 @@
     },
     {
       "symbol": "L:ac.a(I)V#0",
-      "renamedSymbol": "L:TrinketUnlockNotice.a(I)V#0",
+      "renamedSymbol": "L:TrinketUnlockNotice.drawConsole(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -77307,7 +77707,7 @@
     },
     {
       "symbol": "L:ac.a(I)V#1",
-      "renamedSymbol": "L:TrinketUnlockNotice.a(I)V#1",
+      "renamedSymbol": "L:TrinketUnlockNotice.drawConsole(I)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -79441,7 +79841,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#0",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#0",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -79452,7 +79852,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#1",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#1",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#1",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -79463,7 +79863,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#10",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#10",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#10",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -79474,7 +79874,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#11",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#11",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -79485,7 +79885,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#12",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#12",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -79496,7 +79896,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#2",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#2",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#2",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -79507,7 +79907,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#3",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#3",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#3",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -79518,7 +79918,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#4",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#4",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -79529,7 +79929,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#5",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#5",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -79540,7 +79940,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#6",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#6",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#6",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -79551,7 +79951,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#7",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#7",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#7",
       "originalName": "var8_ref2",
       "renamedName": "var8_ref2",
       "declaration": {
@@ -79562,7 +79962,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#8",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#8",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -79573,7 +79973,7 @@
     },
     {
       "symbol": "L:ah.a(IIIBILjava/lang/String;I)V#9",
-      "renamedSymbol": "L:GameAppletShell.a(IIIBILjava/lang/String;I)V#9",
+      "renamedSymbol": "L:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -83753,7 +84153,7 @@
     },
     {
       "symbol": "L:aq.a(I)V#0",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -83764,7 +84164,7 @@
     },
     {
       "symbol": "L:aq.a(I)V#1",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -83775,7 +84175,7 @@
     },
     {
       "symbol": "L:aq.a(I)V#2",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -83786,7 +84186,7 @@
     },
     {
       "symbol": "L:aq.a(I)V#3",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -83797,7 +84197,7 @@
     },
     {
       "symbol": "L:aq.a(I)V#4",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -83808,7 +84208,7 @@
     },
     {
       "symbol": "L:aq.a(I)V#5",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -83819,7 +84219,7 @@
     },
     {
       "symbol": "L:aq.a(I)V#6",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -88901,7 +89301,7 @@
     },
     {
       "symbol": "L:be.a(I)V#0",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#0",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -88912,7 +89312,7 @@
     },
     {
       "symbol": "L:be.a(I)V#1",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#1",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -88923,7 +89323,7 @@
     },
     {
       "symbol": "L:be.a(I)V#2",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#2",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -88934,7 +89334,7 @@
     },
     {
       "symbol": "L:be.a(I)V#3",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#3",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -88945,7 +89345,7 @@
     },
     {
       "symbol": "L:be.a(I)V#4",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#4",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -88956,7 +89356,7 @@
     },
     {
       "symbol": "L:be.a(I)V#5",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#5",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#5",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -88967,7 +89367,7 @@
     },
     {
       "symbol": "L:be.a(I)V#6",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#6",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#6",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -88978,7 +89378,7 @@
     },
     {
       "symbol": "L:be.a(I)V#7",
-      "renamedSymbol": "L:ConsolePanel.a(I)V#7",
+      "renamedSymbol": "L:ConsolePanel.drawConsole(I)V#7",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -127731,7 +128131,7 @@
     },
     {
       "symbol": "L:fb.a(IIIII)V#0",
-      "renamedSymbol": "L:NumericDateInputWidget.a(IIIII)V#0",
+      "renamedSymbol": "L:NumericDateInputWidget.setBounds(IIIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -129183,7 +129583,7 @@
     },
     {
       "symbol": "L:fd.e(I)V#0",
-      "renamedSymbol": "L:UiWidget.e(I)V#0",
+      "renamedSymbol": "L:UiWidget.refreshLayout(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -134694,7 +135094,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#0",
-      "renamedSymbol": "L:fv.a(I)V#0",
+      "renamedSymbol": "L:fv.drawConsole(I)V#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -134705,7 +135105,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#1",
-      "renamedSymbol": "L:fv.a(I)V#1",
+      "renamedSymbol": "L:fv.drawConsole(I)V#1",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -134716,7 +135116,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#10",
-      "renamedSymbol": "L:fv.a(I)V#10",
+      "renamedSymbol": "L:fv.drawConsole(I)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -134727,7 +135127,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#11",
-      "renamedSymbol": "L:fv.a(I)V#11",
+      "renamedSymbol": "L:fv.drawConsole(I)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -134738,7 +135138,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#12",
-      "renamedSymbol": "L:fv.a(I)V#12",
+      "renamedSymbol": "L:fv.drawConsole(I)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -134749,7 +135149,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#13",
-      "renamedSymbol": "L:fv.a(I)V#13",
+      "renamedSymbol": "L:fv.drawConsole(I)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -134760,7 +135160,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#14",
-      "renamedSymbol": "L:fv.a(I)V#14",
+      "renamedSymbol": "L:fv.drawConsole(I)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -134771,7 +135171,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#15",
-      "renamedSymbol": "L:fv.a(I)V#15",
+      "renamedSymbol": "L:fv.drawConsole(I)V#15",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -134782,7 +135182,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#16",
-      "renamedSymbol": "L:fv.a(I)V#16",
+      "renamedSymbol": "L:fv.drawConsole(I)V#16",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -134793,7 +135193,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#17",
-      "renamedSymbol": "L:fv.a(I)V#17",
+      "renamedSymbol": "L:fv.drawConsole(I)V#17",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -134804,7 +135204,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#18",
-      "renamedSymbol": "L:fv.a(I)V#18",
+      "renamedSymbol": "L:fv.drawConsole(I)V#18",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -134815,7 +135215,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#19",
-      "renamedSymbol": "L:fv.a(I)V#19",
+      "renamedSymbol": "L:fv.drawConsole(I)V#19",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -134826,7 +135226,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#2",
-      "renamedSymbol": "L:fv.a(I)V#2",
+      "renamedSymbol": "L:fv.drawConsole(I)V#2",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -134837,7 +135237,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#3",
-      "renamedSymbol": "L:fv.a(I)V#3",
+      "renamedSymbol": "L:fv.drawConsole(I)V#3",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -134848,7 +135248,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#4",
-      "renamedSymbol": "L:fv.a(I)V#4",
+      "renamedSymbol": "L:fv.drawConsole(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -134859,7 +135259,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#5",
-      "renamedSymbol": "L:fv.a(I)V#5",
+      "renamedSymbol": "L:fv.drawConsole(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -134870,7 +135270,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#6",
-      "renamedSymbol": "L:fv.a(I)V#6",
+      "renamedSymbol": "L:fv.drawConsole(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -134881,7 +135281,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#7",
-      "renamedSymbol": "L:fv.a(I)V#7",
+      "renamedSymbol": "L:fv.drawConsole(I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -134892,7 +135292,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#8",
-      "renamedSymbol": "L:fv.a(I)V#8",
+      "renamedSymbol": "L:fv.drawConsole(I)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -134903,7 +135303,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#9",
-      "renamedSymbol": "L:fv.a(I)V#9",
+      "renamedSymbol": "L:fv.drawConsole(I)V#9",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -136454,7 +136854,7 @@
     },
     {
       "symbol": "L:ga.k(B)V#0",
-      "renamedSymbol": "L:TextInputWidget.k(B)V#0",
+      "renamedSymbol": "L:TextInputWidget.copySelectedTextToClipboard(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -166341,7 +166741,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#0",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -166352,7 +166752,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#1",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -166363,7 +166763,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#10",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#10",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -166374,7 +166774,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#11",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#11",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -166385,7 +166785,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#12",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#12",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -166396,7 +166796,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#13",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#13",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -166407,7 +166807,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#14",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#14",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -166418,7 +166818,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#15",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#15",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -166429,7 +166829,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#2",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#2",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -166440,7 +166840,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#3",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#3",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -166451,7 +166851,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#4",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -166462,7 +166862,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#5",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#5",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -166473,7 +166873,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#6",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#6",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -166484,7 +166884,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#7",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#7",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -166495,7 +166895,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#8",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#8",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -166506,7 +166906,7 @@
     },
     {
       "symbol": "L:iw.a(I[IZI)V#9",
-      "renamedSymbol": "L:PacketBuffer.a(I[IZI)V#9",
+      "renamedSymbol": "L:PacketBuffer.xteaDecryptRange(I[IZI)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -180124,7 +180524,7 @@
     },
     {
       "symbol": "L:kd.a(I)V#0",
-      "renamedSymbol": "L:DebugConsole.a(I)V#0",
+      "renamedSymbol": "L:DebugConsole.drawConsole(I)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -180135,7 +180535,7 @@
     },
     {
       "symbol": "L:kd.a(I)V#1",
-      "renamedSymbol": "L:DebugConsole.a(I)V#1",
+      "renamedSymbol": "L:DebugConsole.drawConsole(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -180146,7 +180546,7 @@
     },
     {
       "symbol": "L:kd.a(I)V#2",
-      "renamedSymbol": "L:DebugConsole.a(I)V#2",
+      "renamedSymbol": "L:DebugConsole.drawConsole(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -180157,7 +180557,7 @@
     },
     {
       "symbol": "L:kd.a(I)V#3",
-      "renamedSymbol": "L:DebugConsole.a(I)V#3",
+      "renamedSymbol": "L:DebugConsole.drawConsole(I)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -182203,7 +182603,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#0",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#0",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -182214,7 +182614,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#1",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#1",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -182225,7 +182625,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#2",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#2",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -182236,7 +182636,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#3",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#3",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -182247,7 +182647,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#4",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#4",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -182258,7 +182658,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#5",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#5",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -182269,7 +182669,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#6",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#6",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -182280,7 +182680,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#7",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#7",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -182291,7 +182691,7 @@
     },
     {
       "symbol": "L:kg.a(III)V#8",
-      "renamedSymbol": "L:IndexedSprite.a(III)V#8",
+      "renamedSymbol": "L:IndexedSprite.drawAlpha(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -203466,7 +203866,7 @@
     },
     {
       "symbol": "L:md.a(I)V#0",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#0",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -203477,7 +203877,7 @@
     },
     {
       "symbol": "L:md.a(I)V#1",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#1",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -203488,7 +203888,7 @@
     },
     {
       "symbol": "L:md.a(I)V#10",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#10",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -203499,7 +203899,7 @@
     },
     {
       "symbol": "L:md.a(I)V#11",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#11",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -203510,7 +203910,7 @@
     },
     {
       "symbol": "L:md.a(I)V#12",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#12",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#12",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -203521,7 +203921,7 @@
     },
     {
       "symbol": "L:md.a(I)V#2",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#2",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#2",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -203532,7 +203932,7 @@
     },
     {
       "symbol": "L:md.a(I)V#3",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#3",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -203543,7 +203943,7 @@
     },
     {
       "symbol": "L:md.a(I)V#4",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#4",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -203554,7 +203954,7 @@
     },
     {
       "symbol": "L:md.a(I)V#5",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#5",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -203565,7 +203965,7 @@
     },
     {
       "symbol": "L:md.a(I)V#6",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#6",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -203576,7 +203976,7 @@
     },
     {
       "symbol": "L:md.a(I)V#7",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#7",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -203587,7 +203987,7 @@
     },
     {
       "symbol": "L:md.a(I)V#8",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#8",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -203598,7 +203998,7 @@
     },
     {
       "symbol": "L:md.a(I)V#9",
-      "renamedSymbol": "L:CheatCodeListener.a(I)V#9",
+      "renamedSymbol": "L:CheatCodeListener.drawConsole(I)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -249974,7 +250374,7 @@
     },
     {
       "symbol": "L:pp.b()Llq;#0",
-      "renamedSymbol": "L:MusicPatchPcmStream.b()LPcmStream;#0",
+      "renamedSymbol": "L:MusicPatchPcmStream.nextSubstream()LPcmStream;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -250766,7 +251166,7 @@
     },
     {
       "symbol": "L:pp.c()Llq;#0",
-      "renamedSymbol": "L:MusicPatchPcmStream.c()LPcmStream;#0",
+      "renamedSymbol": "L:MusicPatchPcmStream.firstSubstream()LPcmStream;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -297131,7 +297531,7 @@
     },
     {
       "symbol": "L:tr.a(I)V#0",
-      "renamedSymbol": "L:tr.a(I)V#0",
+      "renamedSymbol": "L:tr.drawConsole(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -297142,7 +297542,7 @@
     },
     {
       "symbol": "L:tr.a(I)V#1",
-      "renamedSymbol": "L:tr.a(I)V#1",
+      "renamedSymbol": "L:tr.drawConsole(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -297153,7 +297553,7 @@
     },
     {
       "symbol": "L:tr.a(I)V#2",
-      "renamedSymbol": "L:tr.a(I)V#2",
+      "renamedSymbol": "L:tr.drawConsole(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -297164,7 +297564,7 @@
     },
     {
       "symbol": "L:tr.a(I)V#3",
-      "renamedSymbol": "L:tr.a(I)V#3",
+      "renamedSymbol": "L:tr.drawConsole(I)V#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -309407,7 +309807,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#0",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#0",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -309418,7 +309818,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#1",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#1",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#1",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -309429,7 +309829,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#10",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#10",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -309440,7 +309840,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#11",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#11",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -309451,7 +309851,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#12",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#12",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -309462,7 +309862,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#13",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#13",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -309473,7 +309873,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#14",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#14",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -309484,7 +309884,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#15",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#15",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#15",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -309495,7 +309895,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#16",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#16",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#16",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -309506,7 +309906,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#2",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#2",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#2",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -309517,7 +309917,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#3",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#3",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#3",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -309528,7 +309928,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#4",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#4",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -309539,7 +309939,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#5",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#5",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -309550,7 +309950,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#6",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#6",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -309561,7 +309961,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#7",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#7",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -309572,7 +309972,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#8",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#8",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -309583,7 +309983,7 @@
     },
     {
       "symbol": "L:ut.b(IIIII)V#9",
-      "renamedSymbol": "L:Sprite.b(IIIII)V#9",
+      "renamedSymbol": "L:Sprite.drawBilinearPixel(IIIII)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -320627,7 +321027,7 @@
     },
     {
       "symbol": "L:vm.i(I)V#0",
-      "renamedSymbol": "L:PcmSampleStream.i(I)V#0",
+      "renamedSymbol": "L:PcmSampleStream.setSamplePositionFixed(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -324026,7 +324426,7 @@
     },
     {
       "symbol": "L:vp.a(I)V#0",
-      "renamedSymbol": "L:vp.a(I)V#0",
+      "renamedSymbol": "L:vp.drawConsole(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -325456,7 +325856,7 @@
     },
     {
       "symbol": "L:w.a(I)V#0",
-      "renamedSymbol": "L:DialogOverlay.a(I)V#0",
+      "renamedSymbol": "L:DialogOverlay.drawConsole(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -331638,7 +332038,7 @@
     },
     {
       "symbol": "L:wj.a(IIIII)V#0",
-      "renamedSymbol": "L:WidgetContainer.a(IIIII)V#0",
+      "renamedSymbol": "L:WidgetContainer.setBounds(IIIII)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -341725,9 +342125,9 @@
     },
     {
       "symbol": "M:Kickabout.a(I)V",
-      "renamedSymbol": "M:Kickabout.a(I)V",
+      "renamedSymbol": "M:Kickabout.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "Kickabout.java",
         "start": 45398,
@@ -342055,9 +342455,9 @@
     },
     {
       "symbol": "M:ac.a(I)V",
-      "renamedSymbol": "M:TrinketUnlockNotice.a(I)V",
+      "renamedSymbol": "M:TrinketUnlockNotice.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "ac.java",
         "start": 438,
@@ -342528,9 +342928,9 @@
     },
     {
       "symbol": "M:ah.a(IIIBILjava/lang/String;I)V",
-      "renamedSymbol": "M:GameAppletShell.a(IIIBILjava/lang/String;I)V",
+      "renamedSymbol": "M:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startAppletShell",
       "declaration": {
         "file": "ah.java",
         "start": 26260,
@@ -342616,9 +343016,9 @@
     },
     {
       "symbol": "M:ah.d(B)Z",
-      "renamedSymbol": "M:GameAppletShell.d(B)Z",
+      "renamedSymbol": "M:GameAppletShell.isHostAllowed(B)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "isHostAllowed",
       "declaration": {
         "file": "ah.java",
         "start": 680,
@@ -343727,9 +344127,9 @@
     },
     {
       "symbol": "M:aq.a(I)V",
-      "renamedSymbol": "M:IsaacRandom.a(I)V",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "aq.java",
         "start": 10173,
@@ -344651,9 +345051,9 @@
     },
     {
       "symbol": "M:be.a(I)V",
-      "renamedSymbol": "M:ConsolePanel.a(I)V",
+      "renamedSymbol": "M:ConsolePanel.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "be.java",
         "start": 2332,
@@ -346202,9 +346602,9 @@
     },
     {
       "symbol": "M:bu.a(IIZII)Lwu;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IIZII)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestEnterFullscreen(IIZII)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestEnterFullscreen",
       "declaration": {
         "file": "bu.java",
         "start": 15052,
@@ -347786,9 +348186,9 @@
     },
     {
       "symbol": "M:ct.a(IIIII)V",
-      "renamedSymbol": "M:SingleChildContainer.a(IIIII)V",
+      "renamedSymbol": "M:SingleChildContainer.setBounds(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "ct.java",
         "start": 16983,
@@ -348325,9 +348725,9 @@
     },
     {
       "symbol": "M:dd.c(I)Z",
-      "renamedSymbol": "M:AnimationPlayer.c(I)Z",
+      "renamedSymbol": "M:AnimationPlayer.advanceFrame(I)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "advanceFrame",
       "declaration": {
         "file": "dd.java",
         "start": 3410,
@@ -349128,9 +349528,9 @@
     },
     {
       "symbol": "M:dp.b()Llq;",
-      "renamedSymbol": "M:ReverbPcmStream.b()LPcmStream;",
+      "renamedSymbol": "M:ReverbPcmStream.nextSubstream()LPcmStream;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "dp.java",
         "start": 13215,
@@ -349150,9 +349550,9 @@
     },
     {
       "symbol": "M:dp.c()Llq;",
-      "renamedSymbol": "M:ReverbPcmStream.c()LPcmStream;",
+      "renamedSymbol": "M:ReverbPcmStream.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "dp.java",
         "start": 13262,
@@ -350228,9 +350628,9 @@
     },
     {
       "symbol": "M:eg.d(I)I",
-      "renamedSymbol": "M:ModelMesh.d(I)I",
+      "renamedSymbol": "M:ModelMesh.clampHslLightness(I)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "clampHslLightness",
       "declaration": {
         "file": "eg.java",
         "start": 30259,
@@ -352010,9 +352410,9 @@
     },
     {
       "symbol": "M:fb.a(IIIII)V",
-      "renamedSymbol": "M:NumericDateInputWidget.a(IIIII)V",
+      "renamedSymbol": "M:NumericDateInputWidget.setBounds(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "fb.java",
         "start": 6256,
@@ -352263,9 +352663,9 @@
     },
     {
       "symbol": "M:fd.a(IIIII)V",
-      "renamedSymbol": "M:UiWidget.a(IIIII)V",
+      "renamedSymbol": "M:UiWidget.setBounds(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "fd.java",
         "start": 11458,
@@ -352384,9 +352784,9 @@
     },
     {
       "symbol": "M:fd.e(I)V",
-      "renamedSymbol": "M:UiWidget.e(I)V",
+      "renamedSymbol": "M:UiWidget.refreshLayout(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "refreshLayout",
       "declaration": {
         "file": "fd.java",
         "start": 19882,
@@ -353781,9 +354181,9 @@
     },
     {
       "symbol": "M:fv.a(I)V",
-      "renamedSymbol": "M:fv.a(I)V",
+      "renamedSymbol": "M:fv.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "fv.java",
         "start": 4236,
@@ -354089,9 +354489,9 @@
     },
     {
       "symbol": "M:ga.i(B)V",
-      "renamedSymbol": "M:TextInputWidget.i(B)V",
+      "renamedSymbol": "M:TextInputWidget.clearInputText(B)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "clearInputText",
       "declaration": {
         "file": "ga.java",
         "start": 8220,
@@ -354133,9 +354533,9 @@
     },
     {
       "symbol": "M:ga.k(B)V",
-      "renamedSymbol": "M:TextInputWidget.k(B)V",
+      "renamedSymbol": "M:TextInputWidget.copySelectedTextToClipboard(B)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "copySelectedTextToClipboard",
       "declaration": {
         "file": "ga.java",
         "start": 2857,
@@ -355299,9 +355699,9 @@
     },
     {
       "symbol": "M:gq.b()Llq;",
-      "renamedSymbol": "M:PcmStreamMixer.b()LPcmStream;",
+      "renamedSymbol": "M:PcmStreamMixer.nextSubstream()LPcmStream;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "gq.java",
         "start": 178,
@@ -355332,9 +355732,9 @@
     },
     {
       "symbol": "M:gq.c()Llq;",
-      "renamedSymbol": "M:PcmStreamMixer.c()LPcmStream;",
+      "renamedSymbol": "M:PcmStreamMixer.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "gq.java",
         "start": 3089,
@@ -356201,9 +356601,9 @@
     },
     {
       "symbol": "M:hc.a(I)V",
-      "renamedSymbol": "M:OverlayLayer.a(I)V",
+      "renamedSymbol": "M:OverlayLayer.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "hc.java",
         "start": 78,
@@ -359732,9 +360132,9 @@
     },
     {
       "symbol": "M:iw.a(I[IZI)V",
-      "renamedSymbol": "M:PacketBuffer.a(I[IZI)V",
+      "renamedSymbol": "M:PacketBuffer.xteaDecryptRange(I[IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "xteaDecryptRange",
       "declaration": {
         "file": "iw.java",
         "start": 14095,
@@ -361206,9 +361606,9 @@
     },
     {
       "symbol": "M:jj.b()Llq;",
-      "renamedSymbol": "M:MusicTrackMixer.b()LPcmStream;",
+      "renamedSymbol": "M:MusicTrackMixer.nextSubstream()LPcmStream;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "jj.java",
         "start": 5317,
@@ -361217,9 +361617,9 @@
     },
     {
       "symbol": "M:jj.c()Llq;",
-      "renamedSymbol": "M:MusicTrackMixer.c()LPcmStream;",
+      "renamedSymbol": "M:MusicTrackMixer.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "jj.java",
         "start": 10683,
@@ -362328,9 +362728,9 @@
     },
     {
       "symbol": "M:kd.a(I)V",
-      "renamedSymbol": "M:DebugConsole.a(I)V",
+      "renamedSymbol": "M:DebugConsole.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "kd.java",
         "start": 22274,
@@ -362647,9 +363047,9 @@
     },
     {
       "symbol": "M:kg.a(III)V",
-      "renamedSymbol": "M:IndexedSprite.a(III)V",
+      "renamedSymbol": "M:IndexedSprite.drawAlpha(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawAlpha",
       "declaration": {
         "file": "kg.java",
         "start": 3630,
@@ -364319,9 +364719,9 @@
     },
     {
       "symbol": "M:lb.a(IIIII)V",
-      "renamedSymbol": "M:TextHotspotWidget.a(IIIII)V",
+      "renamedSymbol": "M:TextHotspotWidget.setBounds(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "lb.java",
         "start": 5692,
@@ -365628,9 +366028,9 @@
     },
     {
       "symbol": "M:lq.b()Llq;",
-      "renamedSymbol": "M:PcmStream.b()LPcmStream;",
+      "renamedSymbol": "M:PcmStream.nextSubstream()LPcmStream;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "lq.java",
         "start": 509,
@@ -365650,9 +366050,9 @@
     },
     {
       "symbol": "M:lq.c()Llq;",
-      "renamedSymbol": "M:PcmStream.c()LPcmStream;",
+      "renamedSymbol": "M:PcmStream.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "lq.java",
         "start": 300,
@@ -366618,9 +367018,9 @@
     },
     {
       "symbol": "M:mc.b(I)V",
-      "renamedSymbol": "M:TickClock.b(I)V",
+      "renamedSymbol": "M:TickClock.resetTiming(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetTiming",
       "declaration": {
         "file": "mc.java",
         "start": 2316,
@@ -366651,9 +367051,9 @@
     },
     {
       "symbol": "M:md.a(I)V",
-      "renamedSymbol": "M:CheatCodeListener.a(I)V",
+      "renamedSymbol": "M:CheatCodeListener.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "md.java",
         "start": 3408,
@@ -372855,9 +373255,9 @@
     },
     {
       "symbol": "M:ou.a(IIIII)V",
-      "renamedSymbol": "M:StripedProgressBar.a(IIIII)V",
+      "renamedSymbol": "M:StripedProgressBar.setBounds(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "ou.java",
         "start": 6260,
@@ -374087,9 +374487,9 @@
     },
     {
       "symbol": "M:pp.b()Llq;",
-      "renamedSymbol": "M:MusicPatchPcmStream.b()LPcmStream;",
+      "renamedSymbol": "M:MusicPatchPcmStream.nextSubstream()LPcmStream;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "pp.java",
         "start": 235,
@@ -374109,9 +374509,9 @@
     },
     {
       "symbol": "M:pp.c()Llq;",
-      "renamedSymbol": "M:MusicPatchPcmStream.c()LPcmStream;",
+      "renamedSymbol": "M:MusicPatchPcmStream.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "pp.java",
         "start": 521,
@@ -375099,9 +375499,9 @@
     },
     {
       "symbol": "M:qd.a(III)V",
-      "renamedSymbol": "M:IndexedSpriteState.a(III)V",
+      "renamedSymbol": "M:IndexedSpriteState.drawAlpha(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawAlpha",
       "declaration": {
         "file": "qd.java",
         "start": 1944,
@@ -378652,9 +379052,9 @@
     },
     {
       "symbol": "M:ru.b()Llq;",
-      "renamedSymbol": "M:MidiPcmStream.b()LPcmStream;",
+      "renamedSymbol": "M:MidiPcmStream.nextSubstream()LPcmStream;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "ru.java",
         "start": 1424,
@@ -378718,9 +379118,9 @@
     },
     {
       "symbol": "M:ru.c()Llq;",
-      "renamedSymbol": "M:MidiPcmStream.c()LPcmStream;",
+      "renamedSymbol": "M:MidiPcmStream.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "ru.java",
         "start": 41583,
@@ -379664,9 +380064,9 @@
     },
     {
       "symbol": "M:sj.a(II)[B",
-      "renamedSymbol": "M:ResourceArchive.a(II)[B",
+      "renamedSymbol": "M:ResourceArchive.getSingleFile(II)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSingleFile",
       "declaration": {
         "file": "sj.java",
         "start": 11844,
@@ -379840,9 +380240,9 @@
     },
     {
       "symbol": "M:sj.b(II)Z",
-      "renamedSymbol": "M:ResourceArchive.b(II)Z",
+      "renamedSymbol": "M:ResourceArchive.ensureFlatFileAvailable(II)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "ensureFlatFileAvailable",
       "declaration": {
         "file": "sj.java",
         "start": 13310,
@@ -382194,9 +382594,9 @@
     },
     {
       "symbol": "M:tr.a(I)V",
-      "renamedSymbol": "M:tr.a(I)V",
+      "renamedSymbol": "M:tr.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "tr.java",
         "start": 902,
@@ -382392,9 +382792,9 @@
     },
     {
       "symbol": "M:tu.a(I)V",
-      "renamedSymbol": "M:GameLoopApplet.a(I)V",
+      "renamedSymbol": "M:GameLoopApplet.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "tu.java",
         "start": 9805,
@@ -384636,9 +385036,9 @@
     },
     {
       "symbol": "M:ut.b(IIIII)V",
-      "renamedSymbol": "M:Sprite.b(IIIII)V",
+      "renamedSymbol": "M:Sprite.drawBilinearPixel(IIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawBilinearPixel",
       "declaration": {
         "file": "ut.java",
         "start": 46872,
@@ -386264,9 +386664,9 @@
     },
     {
       "symbol": "M:vi.b(I)V",
-      "renamedSymbol": "M:NanoTickClock.b(I)V",
+      "renamedSymbol": "M:NanoTickClock.resetTiming(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetTiming",
       "declaration": {
         "file": "vi.java",
         "start": 7212,
@@ -386671,9 +387071,9 @@
     },
     {
       "symbol": "M:vm.b()Llq;",
-      "renamedSymbol": "M:PcmSampleStream.b()LPcmStream;",
+      "renamedSymbol": "M:PcmSampleStream.nextSubstream()LPcmStream;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "vm.java",
         "start": 4470,
@@ -386803,9 +387203,9 @@
     },
     {
       "symbol": "M:vm.c()Llq;",
-      "renamedSymbol": "M:PcmSampleStream.c()LPcmStream;",
+      "renamedSymbol": "M:PcmSampleStream.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "vm.java",
         "start": 2077,
@@ -386968,9 +387368,9 @@
     },
     {
       "symbol": "M:vm.i(I)V",
-      "renamedSymbol": "M:PcmSampleStream.i(I)V",
+      "renamedSymbol": "M:PcmSampleStream.setSamplePositionFixed(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "setSamplePositionFixed",
       "declaration": {
         "file": "vm.java",
         "start": 45930,
@@ -387243,9 +387643,9 @@
     },
     {
       "symbol": "M:vp.a(I)V",
-      "renamedSymbol": "M:vp.a(I)V",
+      "renamedSymbol": "M:vp.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "vp.java",
         "start": 5859,
@@ -387760,9 +388160,9 @@
     },
     {
       "symbol": "M:w.a(I)V",
-      "renamedSymbol": "M:DialogOverlay.a(I)V",
+      "renamedSymbol": "M:DialogOverlay.drawConsole(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawConsole",
       "declaration": {
         "file": "w.java",
         "start": 1620,
@@ -388827,9 +389227,9 @@
     },
     {
       "symbol": "M:wj.a(IIIII)V",
-      "renamedSymbol": "M:WidgetContainer.a(IIIII)V",
+      "renamedSymbol": "M:WidgetContainer.setBounds(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "wj.java",
         "start": 30815,
@@ -389751,9 +390151,9 @@
     },
     {
       "symbol": "M:wt.a(IIIII)V",
-      "renamedSymbol": "M:ArrayWidgetContainer.a(IIIII)V",
+      "renamedSymbol": "M:ArrayWidgetContainer.setBounds(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "wt.java",
         "start": 7736,
@@ -390081,7 +390481,7 @@
     },
     {
       "symbol": "P:Kickabout.a(I)V#0",
-      "renamedSymbol": "P:Kickabout.a(I)V#0",
+      "renamedSymbol": "P:Kickabout.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390488,7 +390888,7 @@
     },
     {
       "symbol": "P:ac.a(I)V#0",
-      "renamedSymbol": "P:TrinketUnlockNotice.a(I)V#0",
+      "renamedSymbol": "P:TrinketUnlockNotice.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391445,7 +391845,7 @@
     },
     {
       "symbol": "P:ah.a(IIIBILjava/lang/String;I)V#0",
-      "renamedSymbol": "P:GameAppletShell.a(IIIBILjava/lang/String;I)V#0",
+      "renamedSymbol": "P:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391456,7 +391856,7 @@
     },
     {
       "symbol": "P:ah.a(IIIBILjava/lang/String;I)V#1",
-      "renamedSymbol": "P:GameAppletShell.a(IIIBILjava/lang/String;I)V#1",
+      "renamedSymbol": "P:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -391467,7 +391867,7 @@
     },
     {
       "symbol": "P:ah.a(IIIBILjava/lang/String;I)V#2",
-      "renamedSymbol": "P:GameAppletShell.a(IIIBILjava/lang/String;I)V#2",
+      "renamedSymbol": "P:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -391478,7 +391878,7 @@
     },
     {
       "symbol": "P:ah.a(IIIBILjava/lang/String;I)V#3",
-      "renamedSymbol": "P:GameAppletShell.a(IIIBILjava/lang/String;I)V#3",
+      "renamedSymbol": "P:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -391489,7 +391889,7 @@
     },
     {
       "symbol": "P:ah.a(IIIBILjava/lang/String;I)V#4",
-      "renamedSymbol": "P:GameAppletShell.a(IIIBILjava/lang/String;I)V#4",
+      "renamedSymbol": "P:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -391500,7 +391900,7 @@
     },
     {
       "symbol": "P:ah.a(IIIBILjava/lang/String;I)V#5",
-      "renamedSymbol": "P:GameAppletShell.a(IIIBILjava/lang/String;I)V#5",
+      "renamedSymbol": "P:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -391511,7 +391911,7 @@
     },
     {
       "symbol": "P:ah.a(IIIBILjava/lang/String;I)V#6",
-      "renamedSymbol": "P:GameAppletShell.a(IIIBILjava/lang/String;I)V#6",
+      "renamedSymbol": "P:GameAppletShell.startAppletShell(IIIBILjava/lang/String;I)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -391621,7 +392021,7 @@
     },
     {
       "symbol": "P:ah.d(B)Z#0",
-      "renamedSymbol": "P:GameAppletShell.d(B)Z#0",
+      "renamedSymbol": "P:GameAppletShell.isHostAllowed(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393623,7 +394023,7 @@
     },
     {
       "symbol": "P:aq.a(I)V#0",
-      "renamedSymbol": "P:IsaacRandom.a(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.generateResults(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -395339,7 +395739,7 @@
     },
     {
       "symbol": "P:be.a(I)V#0",
-      "renamedSymbol": "P:ConsolePanel.a(I)V#0",
+      "renamedSymbol": "P:ConsolePanel.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398507,7 +398907,7 @@
     },
     {
       "symbol": "P:bu.a(IIZII)Lwu;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIZII)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIZII)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398518,7 +398918,7 @@
     },
     {
       "symbol": "P:bu.a(IIZII)Lwu;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIZII)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIZII)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -398529,7 +398929,7 @@
     },
     {
       "symbol": "P:bu.a(IIZII)Lwu;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIZII)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIZII)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -398540,7 +398940,7 @@
     },
     {
       "symbol": "P:bu.a(IIZII)Lwu;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIZII)LPlatformTask;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIZII)LPlatformTask;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -398551,7 +398951,7 @@
     },
     {
       "symbol": "P:bu.a(IIZII)Lwu;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIZII)LPlatformTask;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIZII)LPlatformTask;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -402874,7 +403274,7 @@
     },
     {
       "symbol": "P:ct.a(IIIII)V#0",
-      "renamedSymbol": "P:SingleChildContainer.a(IIIII)V#0",
+      "renamedSymbol": "P:SingleChildContainer.setBounds(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -402885,7 +403285,7 @@
     },
     {
       "symbol": "P:ct.a(IIIII)V#1",
-      "renamedSymbol": "P:SingleChildContainer.a(IIIII)V#1",
+      "renamedSymbol": "P:SingleChildContainer.setBounds(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -402896,7 +403296,7 @@
     },
     {
       "symbol": "P:ct.a(IIIII)V#2",
-      "renamedSymbol": "P:SingleChildContainer.a(IIIII)V#2",
+      "renamedSymbol": "P:SingleChildContainer.setBounds(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -402907,7 +403307,7 @@
     },
     {
       "symbol": "P:ct.a(IIIII)V#3",
-      "renamedSymbol": "P:SingleChildContainer.a(IIIII)V#3",
+      "renamedSymbol": "P:SingleChildContainer.setBounds(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -402918,7 +403318,7 @@
     },
     {
       "symbol": "P:ct.a(IIIII)V#4",
-      "renamedSymbol": "P:SingleChildContainer.a(IIIII)V#4",
+      "renamedSymbol": "P:SingleChildContainer.setBounds(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -403996,7 +404396,7 @@
     },
     {
       "symbol": "P:dd.c(I)Z#0",
-      "renamedSymbol": "P:AnimationPlayer.c(I)Z#0",
+      "renamedSymbol": "P:AnimationPlayer.advanceFrame(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -407923,7 +408323,7 @@
     },
     {
       "symbol": "P:eg.d(I)I#0",
-      "renamedSymbol": "P:ModelMesh.d(I)I#0",
+      "renamedSymbol": "P:ModelMesh.clampHslLightness(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413456,7 +413856,7 @@
     },
     {
       "symbol": "P:fb.a(IIIII)V#0",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IIIII)V#0",
+      "renamedSymbol": "P:NumericDateInputWidget.setBounds(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413467,7 +413867,7 @@
     },
     {
       "symbol": "P:fb.a(IIIII)V#1",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IIIII)V#1",
+      "renamedSymbol": "P:NumericDateInputWidget.setBounds(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -413478,7 +413878,7 @@
     },
     {
       "symbol": "P:fb.a(IIIII)V#2",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IIIII)V#2",
+      "renamedSymbol": "P:NumericDateInputWidget.setBounds(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -413489,7 +413889,7 @@
     },
     {
       "symbol": "P:fb.a(IIIII)V#3",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IIIII)V#3",
+      "renamedSymbol": "P:NumericDateInputWidget.setBounds(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -413500,7 +413900,7 @@
     },
     {
       "symbol": "P:fb.a(IIIII)V#4",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IIIII)V#4",
+      "renamedSymbol": "P:NumericDateInputWidget.setBounds(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -414105,7 +414505,7 @@
     },
     {
       "symbol": "P:fd.a(IIIII)V#0",
-      "renamedSymbol": "P:UiWidget.a(IIIII)V#0",
+      "renamedSymbol": "P:UiWidget.setBounds(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -414116,7 +414516,7 @@
     },
     {
       "symbol": "P:fd.a(IIIII)V#1",
-      "renamedSymbol": "P:UiWidget.a(IIIII)V#1",
+      "renamedSymbol": "P:UiWidget.setBounds(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -414127,7 +414527,7 @@
     },
     {
       "symbol": "P:fd.a(IIIII)V#2",
-      "renamedSymbol": "P:UiWidget.a(IIIII)V#2",
+      "renamedSymbol": "P:UiWidget.setBounds(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -414138,7 +414538,7 @@
     },
     {
       "symbol": "P:fd.a(IIIII)V#3",
-      "renamedSymbol": "P:UiWidget.a(IIIII)V#3",
+      "renamedSymbol": "P:UiWidget.setBounds(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -414149,7 +414549,7 @@
     },
     {
       "symbol": "P:fd.a(IIIII)V#4",
-      "renamedSymbol": "P:UiWidget.a(IIIII)V#4",
+      "renamedSymbol": "P:UiWidget.setBounds(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -414644,7 +415044,7 @@
     },
     {
       "symbol": "P:fd.e(I)V#0",
-      "renamedSymbol": "P:UiWidget.e(I)V#0",
+      "renamedSymbol": "P:UiWidget.refreshLayout(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416998,7 +417398,7 @@
     },
     {
       "symbol": "P:fv.a(I)V#0",
-      "renamedSymbol": "P:fv.a(I)V#0",
+      "renamedSymbol": "P:fv.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -417680,7 +418080,7 @@
     },
     {
       "symbol": "P:ga.i(B)V#0",
-      "renamedSymbol": "P:TextInputWidget.i(B)V#0",
+      "renamedSymbol": "P:TextInputWidget.clearInputText(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -417724,7 +418124,7 @@
     },
     {
       "symbol": "P:ga.k(B)V#0",
-      "renamedSymbol": "P:TextInputWidget.k(B)V#0",
+      "renamedSymbol": "P:TextInputWidget.copySelectedTextToClipboard(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -422278,7 +422678,7 @@
     },
     {
       "symbol": "P:hc.a(I)V#0",
-      "renamedSymbol": "P:OverlayLayer.a(I)V#0",
+      "renamedSymbol": "P:OverlayLayer.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430616,7 +431016,7 @@
     },
     {
       "symbol": "P:iw.a(I[IZI)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(I[IZI)V#0",
+      "renamedSymbol": "P:PacketBuffer.xteaDecryptRange(I[IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430627,7 +431027,7 @@
     },
     {
       "symbol": "P:iw.a(I[IZI)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(I[IZI)V#1",
+      "renamedSymbol": "P:PacketBuffer.xteaDecryptRange(I[IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430638,7 +431038,7 @@
     },
     {
       "symbol": "P:iw.a(I[IZI)V#2",
-      "renamedSymbol": "P:PacketBuffer.a(I[IZI)V#2",
+      "renamedSymbol": "P:PacketBuffer.xteaDecryptRange(I[IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -430649,7 +431049,7 @@
     },
     {
       "symbol": "P:iw.a(I[IZI)V#3",
-      "renamedSymbol": "P:PacketBuffer.a(I[IZI)V#3",
+      "renamedSymbol": "P:PacketBuffer.xteaDecryptRange(I[IZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -436116,7 +436516,7 @@
     },
     {
       "symbol": "P:kd.a(I)V#0",
-      "renamedSymbol": "P:DebugConsole.a(I)V#0",
+      "renamedSymbol": "P:DebugConsole.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -437062,7 +437462,7 @@
     },
     {
       "symbol": "P:kg.a(III)V#0",
-      "renamedSymbol": "P:IndexedSprite.a(III)V#0",
+      "renamedSymbol": "P:IndexedSprite.drawAlpha(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -437073,7 +437473,7 @@
     },
     {
       "symbol": "P:kg.a(III)V#1",
-      "renamedSymbol": "P:IndexedSprite.a(III)V#1",
+      "renamedSymbol": "P:IndexedSprite.drawAlpha(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -437084,7 +437484,7 @@
     },
     {
       "symbol": "P:kg.a(III)V#2",
-      "renamedSymbol": "P:IndexedSprite.a(III)V#2",
+      "renamedSymbol": "P:IndexedSprite.drawAlpha(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -440670,7 +441070,7 @@
     },
     {
       "symbol": "P:lb.a(IIIII)V#0",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIIII)V#0",
+      "renamedSymbol": "P:TextHotspotWidget.setBounds(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -440681,7 +441081,7 @@
     },
     {
       "symbol": "P:lb.a(IIIII)V#1",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIIII)V#1",
+      "renamedSymbol": "P:TextHotspotWidget.setBounds(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -440692,7 +441092,7 @@
     },
     {
       "symbol": "P:lb.a(IIIII)V#2",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIIII)V#2",
+      "renamedSymbol": "P:TextHotspotWidget.setBounds(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -440703,7 +441103,7 @@
     },
     {
       "symbol": "P:lb.a(IIIII)V#3",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIIII)V#3",
+      "renamedSymbol": "P:TextHotspotWidget.setBounds(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -440714,7 +441114,7 @@
     },
     {
       "symbol": "P:lb.a(IIIII)V#4",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIIII)V#4",
+      "renamedSymbol": "P:TextHotspotWidget.setBounds(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -445345,7 +445745,7 @@
     },
     {
       "symbol": "P:mc.b(I)V#0",
-      "renamedSymbol": "P:TickClock.b(I)V#0",
+      "renamedSymbol": "P:TickClock.resetTiming(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -445367,7 +445767,7 @@
     },
     {
       "symbol": "P:md.a(I)V#0",
-      "renamedSymbol": "P:CheatCodeListener.a(I)V#0",
+      "renamedSymbol": "P:CheatCodeListener.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -461548,7 +461948,7 @@
     },
     {
       "symbol": "P:ou.a(IIIII)V#0",
-      "renamedSymbol": "P:StripedProgressBar.a(IIIII)V#0",
+      "renamedSymbol": "P:StripedProgressBar.setBounds(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -461559,7 +461959,7 @@
     },
     {
       "symbol": "P:ou.a(IIIII)V#1",
-      "renamedSymbol": "P:StripedProgressBar.a(IIIII)V#1",
+      "renamedSymbol": "P:StripedProgressBar.setBounds(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -461570,7 +461970,7 @@
     },
     {
       "symbol": "P:ou.a(IIIII)V#2",
-      "renamedSymbol": "P:StripedProgressBar.a(IIIII)V#2",
+      "renamedSymbol": "P:StripedProgressBar.setBounds(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -461581,7 +461981,7 @@
     },
     {
       "symbol": "P:ou.a(IIIII)V#3",
-      "renamedSymbol": "P:StripedProgressBar.a(IIIII)V#3",
+      "renamedSymbol": "P:StripedProgressBar.setBounds(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -461592,7 +461992,7 @@
     },
     {
       "symbol": "P:ou.a(IIIII)V#4",
-      "renamedSymbol": "P:StripedProgressBar.a(IIIII)V#4",
+      "renamedSymbol": "P:StripedProgressBar.setBounds(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -465959,7 +466359,7 @@
     },
     {
       "symbol": "P:qd.a(III)V#0",
-      "renamedSymbol": "P:IndexedSpriteState.a(III)V#0",
+      "renamedSymbol": "P:IndexedSpriteState.drawAlpha(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -465970,7 +466370,7 @@
     },
     {
       "symbol": "P:qd.a(III)V#1",
-      "renamedSymbol": "P:IndexedSpriteState.a(III)V#1",
+      "renamedSymbol": "P:IndexedSpriteState.drawAlpha(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -465981,7 +466381,7 @@
     },
     {
       "symbol": "P:qd.a(III)V#2",
-      "renamedSymbol": "P:IndexedSpriteState.a(III)V#2",
+      "renamedSymbol": "P:IndexedSpriteState.drawAlpha(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476244,7 +476644,7 @@
     },
     {
       "symbol": "P:sj.a(II)[B#0",
-      "renamedSymbol": "P:ResourceArchive.a(II)[B#0",
+      "renamedSymbol": "P:ResourceArchive.getSingleFile(II)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476255,7 +476655,7 @@
     },
     {
       "symbol": "P:sj.a(II)[B#1",
-      "renamedSymbol": "P:ResourceArchive.a(II)[B#1",
+      "renamedSymbol": "P:ResourceArchive.getSingleFile(II)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476673,7 +477073,7 @@
     },
     {
       "symbol": "P:sj.b(II)Z#0",
-      "renamedSymbol": "P:ResourceArchive.b(II)Z#0",
+      "renamedSymbol": "P:ResourceArchive.ensureFlatFileAvailable(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476684,7 +477084,7 @@
     },
     {
       "symbol": "P:sj.b(II)Z#1",
-      "renamedSymbol": "P:ResourceArchive.b(II)Z#1",
+      "renamedSymbol": "P:ResourceArchive.ensureFlatFileAvailable(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -482448,7 +482848,7 @@
     },
     {
       "symbol": "P:tr.a(I)V#0",
-      "renamedSymbol": "P:tr.a(I)V#0",
+      "renamedSymbol": "P:tr.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -482789,7 +483189,7 @@
     },
     {
       "symbol": "P:tu.a(I)V#0",
-      "renamedSymbol": "P:GameLoopApplet.a(I)V#0",
+      "renamedSymbol": "P:GameLoopApplet.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -489114,7 +489514,7 @@
     },
     {
       "symbol": "P:ut.b(IIIII)V#0",
-      "renamedSymbol": "P:Sprite.b(IIIII)V#0",
+      "renamedSymbol": "P:Sprite.drawBilinearPixel(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -489125,7 +489525,7 @@
     },
     {
       "symbol": "P:ut.b(IIIII)V#1",
-      "renamedSymbol": "P:Sprite.b(IIIII)V#1",
+      "renamedSymbol": "P:Sprite.drawBilinearPixel(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -489136,7 +489536,7 @@
     },
     {
       "symbol": "P:ut.b(IIIII)V#2",
-      "renamedSymbol": "P:Sprite.b(IIIII)V#2",
+      "renamedSymbol": "P:Sprite.drawBilinearPixel(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -489147,7 +489547,7 @@
     },
     {
       "symbol": "P:ut.b(IIIII)V#3",
-      "renamedSymbol": "P:Sprite.b(IIIII)V#3",
+      "renamedSymbol": "P:Sprite.drawBilinearPixel(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -489158,7 +489558,7 @@
     },
     {
       "symbol": "P:ut.b(IIIII)V#4",
-      "renamedSymbol": "P:Sprite.b(IIIII)V#4",
+      "renamedSymbol": "P:Sprite.drawBilinearPixel(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -492744,7 +493144,7 @@
     },
     {
       "symbol": "P:vi.b(I)V#0",
-      "renamedSymbol": "P:NanoTickClock.b(I)V#0",
+      "renamedSymbol": "P:NanoTickClock.resetTiming(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -495846,7 +496246,7 @@
     },
     {
       "symbol": "P:vm.i(I)V#0",
-      "renamedSymbol": "P:PcmSampleStream.i(I)V#0",
+      "renamedSymbol": "P:PcmSampleStream.setSamplePositionFixed(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -496297,7 +496697,7 @@
     },
     {
       "symbol": "P:vp.a(I)V#0",
-      "renamedSymbol": "P:vp.a(I)V#0",
+      "renamedSymbol": "P:vp.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -497254,7 +497654,7 @@
     },
     {
       "symbol": "P:w.a(I)V#0",
-      "renamedSymbol": "P:DialogOverlay.a(I)V#0",
+      "renamedSymbol": "P:DialogOverlay.drawConsole(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -499938,7 +500338,7 @@
     },
     {
       "symbol": "P:wj.a(IIIII)V#0",
-      "renamedSymbol": "P:WidgetContainer.a(IIIII)V#0",
+      "renamedSymbol": "P:WidgetContainer.setBounds(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -499949,7 +500349,7 @@
     },
     {
       "symbol": "P:wj.a(IIIII)V#1",
-      "renamedSymbol": "P:WidgetContainer.a(IIIII)V#1",
+      "renamedSymbol": "P:WidgetContainer.setBounds(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -499960,7 +500360,7 @@
     },
     {
       "symbol": "P:wj.a(IIIII)V#2",
-      "renamedSymbol": "P:WidgetContainer.a(IIIII)V#2",
+      "renamedSymbol": "P:WidgetContainer.setBounds(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -499971,7 +500371,7 @@
     },
     {
       "symbol": "P:wj.a(IIIII)V#3",
-      "renamedSymbol": "P:WidgetContainer.a(IIIII)V#3",
+      "renamedSymbol": "P:WidgetContainer.setBounds(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -499982,7 +500382,7 @@
     },
     {
       "symbol": "P:wj.a(IIIII)V#4",
-      "renamedSymbol": "P:WidgetContainer.a(IIIII)V#4",
+      "renamedSymbol": "P:WidgetContainer.setBounds(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -502391,7 +502791,7 @@
     },
     {
       "symbol": "P:wt.a(IIIII)V#0",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(IIIII)V#0",
+      "renamedSymbol": "P:ArrayWidgetContainer.setBounds(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -502402,7 +502802,7 @@
     },
     {
       "symbol": "P:wt.a(IIIII)V#1",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(IIIII)V#1",
+      "renamedSymbol": "P:ArrayWidgetContainer.setBounds(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -502413,7 +502813,7 @@
     },
     {
       "symbol": "P:wt.a(IIIII)V#2",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(IIIII)V#2",
+      "renamedSymbol": "P:ArrayWidgetContainer.setBounds(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -502424,7 +502824,7 @@
     },
     {
       "symbol": "P:wt.a(IIIII)V#3",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(IIIII)V#3",
+      "renamedSymbol": "P:ArrayWidgetContainer.setBounds(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -502435,7 +502835,7 @@
     },
     {
       "symbol": "P:wt.a(IIIII)V#4",
-      "renamedSymbol": "P:ArrayWidgetContainer.a(IIIII)V#4",
+      "renamedSymbol": "P:ArrayWidgetContainer.setBounds(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -503396,7 +503796,7 @@
       "original": "Kickabout.java",
       "renamed": "Kickabout.java",
       "inputSha256": "5d14d4972d6e4017842856f8df09e4446dfe4b433e7552af0462ecdd073b46a4",
-      "outputSha256": "2d9ab2ff485de1ad952b13c359ac9a5f489b9b9618ab25836a3e82d38d97b654",
+      "outputSha256": "ab7ac0f567d82e18b1ea54cc4af1d7146f94faa0b94a4d53a441ae37bcc6c3ed",
       "edits": [
         {
           "start": 75,
@@ -506610,6 +507010,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 45398,
+          "end": 45399,
+          "symbol": "M:Kickabout.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 45515,
@@ -511492,7 +511899,7 @@
       "original": "ac.java",
       "renamed": "TrinketUnlockNotice.java",
       "inputSha256": "249b0188d4a72560f6a887116c56f844983f67e9bf72041d9a471b705e810ee9",
-      "outputSha256": "e8864c482c0ccd5f6d141213b20b4146a3309b9c9566ae4ad9283ace25bad21c",
+      "outputSha256": "4a7c8e834a0d89e8659246552501f14a050a7c16798a36fbb4d0d8cfad0e62fb",
       "edits": [
         {
           "start": 71,
@@ -511528,6 +511935,13 @@
           "symbol": "M:ac.b(B)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 438,
+          "end": 439,
+          "symbol": "M:ac.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 550,
@@ -531080,7 +531494,7 @@
       "original": "ae.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "a0a57c00befaa21290bbf46943fc50f37fe1a59ffc71e674fd0b9b36d672bf9d",
-      "outputSha256": "a09d9b71b12942334d2ffefd4bfba3e0d42387d137fa251d527545ebe4080b77",
+      "outputSha256": "09030bb89904927b5a86c6a5e7f8f5fb1567eebcd9440876780eae1ea1c85aa6",
       "edits": [
         {
           "start": 50,
@@ -532119,6 +532533,20 @@
           "renamed": "UiListener"
         },
         {
+          "start": 10576,
+          "end": 10577,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 10637,
+          "end": 10638,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 10704,
           "end": 10706,
           "symbol": "C:jv",
@@ -532145,6 +532573,20 @@
           "symbol": "C:ur",
           "original": "ur",
           "renamed": "NameSuggestionListener"
+        },
+        {
+          "start": 10896,
+          "end": 10897,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 11100,
+          "end": 11101,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 11211,
@@ -532532,6 +532974,13 @@
           "renamed": "ValidationProvider"
         },
         {
+          "start": 21282,
+          "end": 21283,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 22145,
           "end": 22147,
           "symbol": "C:nb",
@@ -532854,7 +533303,7 @@
       "original": "ah.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "0feecd19782081ffd4313fc388718f458d108e34f9e19222d9a7627adcd9ddd6",
-      "outputSha256": "15baef295a97ddacdf45e7ddb1c856d55e9452e5aea690da74cd770e84778fae",
+      "outputSha256": "732d9a4256b941d8d1d570f1017ff21e11c922bcfc5f265e421c57f5aaa486a5",
       "edits": [
         {
           "start": 60,
@@ -532869,6 +533318,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 680,
+          "end": 681,
+          "symbol": "M:ah.d(B)Z",
+          "original": "d",
+          "renamed": "isHostAllowed"
         },
         {
           "start": 1096,
@@ -533865,6 +534321,13 @@
           "renamed": "runFrameStep"
         },
         {
+          "start": 26260,
+          "end": 26261,
+          "symbol": "M:ah.a(IIIBILjava/lang/String;I)V",
+          "original": "a",
+          "renamed": "startAppletShell"
+        },
+        {
           "start": 26376,
           "end": 26378,
           "symbol": "C:bu",
@@ -534101,7 +534564,7 @@
       "original": "ai.java",
       "renamed": "AccountTermsPanel.java",
       "inputSha256": "07300a888d584d8364e6bfc123ca5c22b9e5dabe74fb9bc8485290d42ff488a3",
-      "outputSha256": "0cbb675cf50da5c0cc04c0304894d871a75a16f6ace45247c84777ad2564ab32",
+      "outputSha256": "c5ed4632be6c8ddbf3b2ae6a6d9de1c3cb1ea40213c8a61b5091a18b8dcadd31",
       "edits": [
         {
           "start": 50,
@@ -534286,11 +534749,25 @@
           "renamed": "UiListener"
         },
         {
+          "start": 2228,
+          "end": 2229,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2301,
           "end": 2303,
           "symbol": "C:jv",
           "original": "jv",
           "renamed": "UiListener"
+        },
+        {
+          "start": 2365,
+          "end": 2366,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2472,
@@ -538638,7 +539115,7 @@
       "original": "aq.java",
       "renamed": "IsaacRandom.java",
       "inputSha256": "171dc7561f6bd4d5e5e96d7e9a7d2cc82d7be6919a37648c4a566edd191b8bce",
-      "outputSha256": "b6f3c0363d4187a3e7865cffcf49f8f85ece0d1c3eacf18ee28462f903a6487e",
+      "outputSha256": "a3727bb1bf3a4d88f6aacb4764e44af9c3ee781c5a0438c27a0e3e541aabb303",
       "edits": [
         {
           "start": 50,
@@ -538653,6 +539130,13 @@
           "symbol": "M:aq.b(B)I",
           "original": "b",
           "renamed": "nextInt"
+        },
+        {
+          "start": 412,
+          "end": 413,
+          "symbol": "M:aq.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 641,
@@ -538695,6 +539179,13 @@
           "symbol": "M:aq.a(B)V",
           "original": "a",
           "renamed": "initializeState"
+        },
+        {
+          "start": 6604,
+          "end": 6605,
+          "symbol": "M:aq.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 7233,
@@ -538814,6 +539305,13 @@
           "symbol": "C:jr",
           "original": "jr",
           "renamed": "ReceivedAuctionItemRow"
+        },
+        {
+          "start": 10173,
+          "end": 10174,
+          "symbol": "M:aq.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 11242,
@@ -543862,7 +544360,7 @@
       "original": "be.java",
       "renamed": "ConsolePanel.java",
       "inputSha256": "e93f54ea8a15dbba25ed430188a5361a10c57942fde1d2cc0edb7465bef096fa",
-      "outputSha256": "5d6896e91ff94c820b3e511b1bbc5cd9a83b9f2a0f751b952b10f9790c343735",
+      "outputSha256": "6bf2b8fbb56228e989876fdb65bd4a482f6915e314d1ccc7af155d920e3ece9d",
       "edits": [
         {
           "start": 53,
@@ -544010,6 +544508,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2332,
+          "end": 2333,
+          "symbol": "M:be.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 2629,
@@ -551942,7 +552447,7 @@
       "original": "bu.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "61da8a5cb190087dfc47ec84cca0ed12b09d451a5f4312ff0d43f234eb925aa8",
-      "outputSha256": "5658ea2be56a450b3ee5c03455e46dc3121f94435a594397def25e16252e97b5",
+      "outputSha256": "38ab5fb0056be70b7782a34c9ef34856f71468c8c4a9c38b79e91855ad0e6237",
       "edits": [
         {
           "start": 69,
@@ -552376,6 +552881,13 @@
           "symbol": "C:wu",
           "original": "wu",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 15052,
+          "end": 15053,
+          "symbol": "M:bu.a(IIZII)Lwu;",
+          "original": "a",
+          "renamed": "requestEnterFullscreen"
         },
         {
           "start": 15160,
@@ -554578,7 +555090,7 @@
       "original": "cg.java",
       "renamed": "cg.java",
       "inputSha256": "163505caa115e9b2cbedc48d595a749b70df1eccba8b657f6295401f245777fd",
-      "outputSha256": "594d1eced6deb92ec34f22ecc03f8e882817c3d13b1bb9dc4af87241222ba469",
+      "outputSha256": "8ff5f250efb8b69e4686af8eaf1d6ccebe21f5d9f3421e19d1de3df0c46c0693",
       "edits": [
         {
           "start": 61,
@@ -554810,6 +555322,20 @@
           "symbol": "M:hu.c(Ljava/lang/String;II)I",
           "original": "c",
           "renamed": "paragraphHeight"
+        },
+        {
+          "start": 5635,
+          "end": 5636,
+          "symbol": "M:ct.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5938,
+          "end": 5939,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7199,
@@ -558167,7 +558693,7 @@
       "original": "ct.java",
       "renamed": "SingleChildContainer.java",
       "inputSha256": "67a84962316146c455a8e95656d0813e0ecfa35e2047a40ec1810c9901c69cf6",
-      "outputSha256": "82b947699b5431964c1d1ff71d55c0de76147c59dc76e0960ff243284726f96b",
+      "outputSha256": "920c0ef0699ce90643e88f8975510de9c31e2ff7ab2cc0b13bcf6998cf9e17a8",
       "edits": [
         {
           "start": 74,
@@ -558380,6 +558906,20 @@
           "renamed": "wrapException"
         },
         {
+          "start": 5490,
+          "end": 5491,
+          "symbol": "M:ct.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5587,
+          "end": 5588,
+          "symbol": "M:fd.e(I)V",
+          "original": "e",
+          "renamed": "refreshLayout"
+        },
+        {
           "start": 5866,
           "end": 5868,
           "symbol": "C:fd",
@@ -558541,6 +559081,13 @@
           "renamed": "layoutChild"
         },
         {
+          "start": 13341,
+          "end": 13342,
+          "symbol": "M:ct.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 13392,
           "end": 13393,
           "symbol": "M:ct.a(IIILfd;II)V",
@@ -558604,11 +559151,32 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 16983,
+          "end": 16984,
+          "symbol": "M:ct.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 17061,
+          "end": 17062,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 17150,
           "end": 17151,
           "symbol": "M:ct.f(I)Ljava/lang/String;",
           "original": "f",
           "renamed": "getTooltip"
+        },
+        {
+          "start": 17237,
+          "end": 17238,
+          "symbol": "M:ct.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 17302,
@@ -560170,7 +560738,7 @@
       "original": "dd.java",
       "renamed": "AnimationPlayer.java",
       "inputSha256": "6e01a9b3e717bd263262a8bf3e37eeb201f1dc235283977ac342c7df1019e565",
-      "outputSha256": "afd5c3e117ebbf3ed2a653488f6a8b5137ca031dceb56627555e3c8e3d829d3a",
+      "outputSha256": "ced4e98524367b37b890b940401332baee411ecf065e30791129ac35363b62c7",
       "edits": [
         {
           "start": 50,
@@ -560192,6 +560760,34 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "AnimationClip"
+        },
+        {
+          "start": 693,
+          "end": 694,
+          "symbol": "M:dd.c(I)Z",
+          "original": "c",
+          "renamed": "advanceFrame"
+        },
+        {
+          "start": 985,
+          "end": 986,
+          "symbol": "M:dd.c(I)Z",
+          "original": "c",
+          "renamed": "advanceFrame"
+        },
+        {
+          "start": 1784,
+          "end": 1785,
+          "symbol": "M:dd.c(I)Z",
+          "original": "c",
+          "renamed": "advanceFrame"
+        },
+        {
+          "start": 2107,
+          "end": 2108,
+          "symbol": "M:dd.c(I)Z",
+          "original": "c",
+          "renamed": "advanceFrame"
         },
         {
           "start": 2429,
@@ -560220,6 +560816,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "SplashScreen"
+        },
+        {
+          "start": 2726,
+          "end": 2727,
+          "symbol": "M:mc.b(I)V",
+          "original": "b",
+          "renamed": "resetTiming"
         },
         {
           "start": 2884,
@@ -560255,6 +560858,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3410,
+          "end": 3411,
+          "symbol": "M:dd.c(I)Z",
+          "original": "c",
+          "renamed": "advanceFrame"
         },
         {
           "start": 4094,
@@ -564255,7 +564865,7 @@
       "original": "dp.java",
       "renamed": "ReverbPcmStream.java",
       "inputSha256": "ddda1b7115c2b3af92a994d9d9e9c46b59abbb285eb383f98c26e96fc7c873ba",
-      "outputSha256": "038f8347cb54c842c1d057b2b38bc4bd6a9492a3843a516414c29b65fe6e9dca",
+      "outputSha256": "cc0e0e00c5dfa738b4a5f14b5a1ad236d4234c5e28357eef41b5fa30a7427ce4",
       "edits": [
         {
           "start": 50,
@@ -564643,11 +565253,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 13215,
+          "end": 13216,
+          "symbol": "M:dp.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
+        },
+        {
           "start": 13259,
           "end": 13261,
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 13262,
+          "end": 13263,
+          "symbol": "M:dp.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 13332,
@@ -569323,7 +569947,7 @@
       "original": "ef.java",
       "renamed": "ef.java",
       "inputSha256": "35ba699ff8e550fad65c92e831f7179d78addb521941008e28d898c98bc66dc8",
-      "outputSha256": "6127c75d0e215aa707a952a15bcd949eedda59c6a6728affd052b7c80051e2d2",
+      "outputSha256": "40915cedb03fdd596b91b2cc115d558dfe42ed136a901a3b778108a48f6cc17e",
       "edits": [
         {
           "start": 61,
@@ -569445,6 +570069,13 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 3273,
+          "end": 3274,
+          "symbol": "M:sj.b(II)Z",
+          "original": "b",
+          "renamed": "ensureFlatFileAvailable"
+        },
+        {
           "start": 3444,
           "end": 3446,
           "symbol": "C:tf",
@@ -569508,6 +570139,13 @@
           "renamed": "AnimationSkeleton"
         },
         {
+          "start": 4127,
+          "end": 4128,
+          "symbol": "M:sj.a(II)[B",
+          "original": "a",
+          "renamed": "getSingleFile"
+        },
+        {
           "start": 4185,
           "end": 4186,
           "symbol": "M:tf.a(Lgn;I)V",
@@ -569534,7 +570172,7 @@
       "original": "eg.java",
       "renamed": "ModelMesh.java",
       "inputSha256": "6c82265fa09c2c9454b5d20b3581d8a937d0d225fc130e4375465eb628c319d8",
-      "outputSha256": "ed1c9df8cee630120441444e54edbbd62314ab2f1845698ec6e6dabe5e88aec4",
+      "outputSha256": "6c4457aaa1be7d5206211d8aba9e7788c577a7634b3f12a8b1193810b461e66e",
       "edits": [
         {
           "start": 50,
@@ -570048,6 +570686,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 30259,
+          "end": 30260,
+          "symbol": "M:eg.d(I)I",
+          "original": "d",
+          "renamed": "clampHslLightness"
+        },
+        {
           "start": 32948,
           "end": 32951,
           "symbol": "B:eg.a(ZZJII)V#0",
@@ -570374,11 +571019,25 @@
           "renamed": "ModelMesh"
         },
         {
+          "start": 85030,
+          "end": 85031,
+          "symbol": "M:eg.d(I)I",
+          "original": "d",
+          "renamed": "clampHslLightness"
+        },
+        {
           "start": 85559,
           "end": 85561,
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "ModelMesh"
+        },
+        {
+          "start": 85562,
+          "end": 85563,
+          "symbol": "M:eg.d(I)I",
+          "original": "d",
+          "renamed": "clampHslLightness"
         },
         {
           "start": 86008,
@@ -570388,11 +571047,25 @@
           "renamed": "ModelMesh"
         },
         {
+          "start": 86011,
+          "end": 86012,
+          "symbol": "M:eg.d(I)I",
+          "original": "d",
+          "renamed": "clampHslLightness"
+        },
+        {
           "start": 86457,
           "end": 86459,
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "ModelMesh"
+        },
+        {
+          "start": 86460,
+          "end": 86461,
+          "symbol": "M:eg.d(I)I",
+          "original": "d",
+          "renamed": "clampHslLightness"
         },
         {
           "start": 87055,
@@ -583158,7 +583831,7 @@
       "original": "fb.java",
       "renamed": "NumericDateInputWidget.java",
       "inputSha256": "d302ea07e2ff6d1b396a9b3eb83953824cd92504f0262794190ed845c0354f48",
-      "outputSha256": "bc58987b9c5eb434c98519922b823ac5e12dd1ee80b3122e063592d4b7e9a82e",
+      "outputSha256": "b99d000ed0e677f234b53e4ed2ab413a9aa342365273b26f7fef9de1d31e7c14",
       "edits": [
         {
           "start": 50,
@@ -583462,6 +584135,13 @@
           "renamed": "WidgetPainter"
         },
         {
+          "start": 4892,
+          "end": 4893,
+          "symbol": "M:fb.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 5000,
           "end": 5002,
           "symbol": "C:nb",
@@ -583593,6 +584273,55 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "ScrollContainer"
+        },
+        {
+          "start": 6256,
+          "end": 6257,
+          "symbol": "M:fb.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6334,
+          "end": 6335,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6471,
+          "end": 6472,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6521,
+          "end": 6522,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6602,
+          "end": 6603,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6652,
+          "end": 6653,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6724,
+          "end": 6725,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6783,
@@ -583748,7 +584477,7 @@
       "original": "fd.java",
       "renamed": "UiWidget.java",
       "inputSha256": "defa7d10f46d0ef52abfb665c3d3d32e7f24a01f4e2d3bb938b6732071033d36",
-      "outputSha256": "6d3ac16b7316f31f2d25f8bde5cd68ffd4b1801b1fd8353ad87976efa92b340a",
+      "outputSha256": "2d2e8de811b43d68ea717f30cf6622a62a441df46d351030d1e565646f9b4438",
       "edits": [
         {
           "start": 65,
@@ -584192,6 +584921,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 11458,
+          "end": 11459,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 12137,
           "end": 12139,
           "symbol": "C:fd",
@@ -584479,6 +585215,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 19882,
+          "end": 19883,
+          "symbol": "M:fd.e(I)V",
+          "original": "e",
+          "renamed": "refreshLayout"
+        },
+        {
           "start": 19939,
           "end": 19941,
           "symbol": "C:fd",
@@ -584498,6 +585241,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 20034,
+          "end": 20035,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 20112,
@@ -589363,7 +590113,7 @@
       "original": "fr.java",
       "renamed": "NameSuggestionsPanel.java",
       "inputSha256": "edf78a27a699cd5609b2e3377b4f7169968933b3e2aef473f27c3c4c957941d8",
-      "outputSha256": "a2d6f1d6c87e178cbac8a50508deebb818ab68cfa2b8800c98e8af2d8f548f17",
+      "outputSha256": "23bd5a9d439cf009525f3711a226361f59da2badf7c7a8fa45164de1e8b8da2b",
       "edits": [
         {
           "start": 50,
@@ -589464,6 +590214,13 @@
           "renamed": "TextHotspotWidget"
         },
         {
+          "start": 3612,
+          "end": 3613,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 3747,
           "end": 3749,
           "symbol": "C:wi",
@@ -589490,6 +590247,13 @@
           "symbol": "C:gj",
           "original": "gj",
           "renamed": "WidgetPainter"
+        },
+        {
+          "start": 3878,
+          "end": 3879,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 4479,
@@ -590591,7 +591355,7 @@
       "original": "fv.java",
       "renamed": "fv.java",
       "inputSha256": "b4d97653b8e89b096f87390f4846de74a9d4313bd64fc9df25dd3f32256c562f",
-      "outputSha256": "cadc43e48b0c3f87d2b2699341b6c9ef4bb6a42194e6601ff10e9b9852851f6d",
+      "outputSha256": "d68d4d90dc95b8522d34c24727cd4456a920c9d126cf8659372aafb79c889b54",
       "edits": [
         {
           "start": 64,
@@ -590725,6 +591489,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4236,
+          "end": 4237,
+          "symbol": "M:fv.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 4423,
@@ -592036,7 +592807,7 @@
       "original": "ga.java",
       "renamed": "TextInputWidget.java",
       "inputSha256": "af993b73ee884b5cbf840f8ae51390c14bc57ff370a71d0ec1f4500bf170ff98",
-      "outputSha256": "72c356e7bbf3cd0bba2aa2dad751e18b9fd9ee7b58cff8471b81a8eca418cebf",
+      "outputSha256": "e06aa58918bc3ba8ee8c782c3730db7b7b7889681ead3e5abcdeac835098ed96",
       "edits": [
         {
           "start": 44,
@@ -592135,6 +592906,20 @@
           "symbol": "M:ga.k(I)Ljava/lang/String;",
           "original": "k",
           "renamed": "getSelectedText"
+        },
+        {
+          "start": 2857,
+          "end": 2858,
+          "symbol": "M:ga.k(B)V",
+          "original": "k",
+          "renamed": "copySelectedTextToClipboard"
+        },
+        {
+          "start": 2916,
+          "end": 2917,
+          "symbol": "M:ga.i(B)V",
+          "original": "i",
+          "renamed": "clearInputText"
         },
         {
           "start": 2968,
@@ -592324,6 +593109,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 8220,
+          "end": 8221,
+          "symbol": "M:ga.i(B)V",
+          "original": "i",
+          "renamed": "clearInputText"
         },
         {
           "start": 8340,
@@ -592550,6 +593342,13 @@
           "renamed": "monotonicMillis"
         },
         {
+          "start": 14397,
+          "end": 14398,
+          "symbol": "M:ga.i(B)V",
+          "original": "i",
+          "renamed": "clearInputText"
+        },
+        {
           "start": 14947,
           "end": 14949,
           "symbol": "C:ne",
@@ -592562,6 +593361,13 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "GameplayHelpScreen"
+        },
+        {
+          "start": 15191,
+          "end": 15192,
+          "symbol": "M:ga.k(B)V",
+          "original": "k",
+          "renamed": "copySelectedTextToClipboard"
         },
         {
           "start": 15281,
@@ -592597,6 +593403,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 18076,
+          "end": 18077,
+          "symbol": "M:ga.k(B)V",
+          "original": "k",
+          "renamed": "copySelectedTextToClipboard"
         },
         {
           "start": 20173,
@@ -598505,7 +599318,7 @@
       "original": "gq.java",
       "renamed": "PcmStreamMixer.java",
       "inputSha256": "6c1d840cff6392092e8c6f6fc1049a94126613383ebc01cb69c188c12b676563",
-      "outputSha256": "1c2d9a45b2bf710490cfeebec20f92f8c68a9a85f11b82fc53c963e3dd38cf63",
+      "outputSha256": "4ab02828c600836c797a1f4c3ba888d6e32b234c4cf9f1ed6dc3b7627f12f494",
       "edits": [
         {
           "start": 50,
@@ -598541,6 +599354,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 178,
+          "end": 179,
+          "symbol": "M:gq.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
         },
         {
           "start": 200,
@@ -598695,6 +599515,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 3089,
+          "end": 3090,
+          "symbol": "M:gq.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 3111,
@@ -604437,7 +605264,7 @@
       "original": "hc.java",
       "renamed": "OverlayLayer.java",
       "inputSha256": "d1ba8fb1cef758e07b1376c1b4875c02146c301f95c198f590e1745b14b9f07c",
-      "outputSha256": "6449f8be123b82248ec75c8bdd43c4dba8593f58ab799c1a76a2f089fec0407f",
+      "outputSha256": "69229fb9cb3b6f0031e1c3c128f9d1c61d5787e6aa3edd5a92f0d106f1f9fdb1",
       "edits": [
         {
           "start": 48,
@@ -604445,6 +605272,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "OverlayLayer"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "symbol": "M:hc.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         }
       ]
     },
@@ -613030,7 +613864,7 @@
       "original": "hu.java",
       "renamed": "BitmapFont.java",
       "inputSha256": "440a3d78996f58ac4bfad31be3c94931f49274d29bc27551d668046946c58546",
-      "outputSha256": "ad9dc52b2d3cc0649c142c36ec75185cc4ec8b75e47df210a3907474a9855f26",
+      "outputSha256": "7dcbd4b437d07fe7f9033fc90856ae44045a28fc42c590ad007c79146e36a114",
       "edits": [
         {
           "start": 53,
@@ -613164,6 +613998,13 @@
           "symbol": "C:qd",
           "original": "qd",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 15428,
+          "end": 15429,
+          "symbol": "M:qd.a(III)V",
+          "original": "a",
+          "renamed": "drawAlpha"
         },
         {
           "start": 17033,
@@ -614568,7 +615409,7 @@
       "original": "ib.java",
       "renamed": "DateOfBirthPanel.java",
       "inputSha256": "9248c5354e175684e59c152642526e500d93ad62eb46b495fdbeb3ea6ff6d0b5",
-      "outputSha256": "1580afe698d63e1ec3622f02ba1ba92ad8d66531a8d0f175edbaf02228fb6ee1",
+      "outputSha256": "f1622bd18943573b4d068490671c5ea46d07eeb2fcb0d4932140a74eb8649dba",
       "edits": [
         {
           "start": 50,
@@ -614739,6 +615580,20 @@
           "renamed": "wrapException"
         },
         {
+          "start": 2481,
+          "end": 2482,
+          "symbol": "M:fb.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 2584,
+          "end": 2585,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2787,
           "end": 2788,
           "symbol": "M:ib.a(IIII)V",
@@ -614842,6 +615697,13 @@
           "symbol": "C:gj",
           "original": "gj",
           "renamed": "WidgetPainter"
+        },
+        {
+          "start": 3481,
+          "end": 3482,
+          "symbol": "M:fd.e(I)V",
+          "original": "e",
+          "renamed": "refreshLayout"
         },
         {
           "start": 3654,
@@ -624409,7 +625271,7 @@
       "original": "iw.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "178fbcfe3164cdd948eb5ae08eecbd962b32c130938660faa52667bc72d30257",
-      "outputSha256": "e8e1c1dc9592262755405c69382d42544087b81db16b98837d7dc8ce7861a8ea",
+      "outputSha256": "47f980e825cd5ece0ea2049ce82e06cfd4b37c532b2eef708dd408f22f65fb2d",
       "edits": [
         {
           "start": 44,
@@ -624650,6 +625512,13 @@
           "renamed": "readBytes"
         },
         {
+          "start": 7863,
+          "end": 7864,
+          "symbol": "M:iw.a(I[IZI)V",
+          "original": "a",
+          "renamed": "xteaDecryptRange"
+        },
+        {
           "start": 8584,
           "end": 8586,
           "symbol": "C:nb",
@@ -624830,6 +625699,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "MeshData"
+        },
+        {
+          "start": 14095,
+          "end": 14096,
+          "symbol": "M:iw.a(I[IZI)V",
+          "original": "a",
+          "renamed": "xteaDecryptRange"
         },
         {
           "start": 14900,
@@ -629200,7 +630076,7 @@
       "original": "jg.java",
       "renamed": "DraggableWidget.java",
       "inputSha256": "3c2c8b6ac21d16bdc3d9ee2326b2305e8b97115520b6e4fbad7b099d389c1d0a",
-      "outputSha256": "0ee2f5cfd63a5560995812a7d90ffd1fdf8a8e374e0fbe072764df3ae0b3681d",
+      "outputSha256": "7a4ac3ca90b82b1126ea1615cd57951d97b094d63127ba12c8e2a25a957f4bad",
       "edits": [
         {
           "start": 71,
@@ -629628,6 +630504,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 11558,
+          "end": 11559,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 11771,
@@ -630918,7 +631801,7 @@
       "original": "jj.java",
       "renamed": "MusicTrackMixer.java",
       "inputSha256": "673e789dcd4ad8b90a2819a0908aa1e2251d47d51e0f5d45f71e852731276e32",
-      "outputSha256": "2e7b2c5a6de3709e28ceecbf1fd84322fc51d2362d69e77d8ca89fee9197c981",
+      "outputSha256": "61c2d214cc2eb4204311de313bfa1eb3a9af1caa4c33e0bd1e5a3fcbefd7edea",
       "edits": [
         {
           "start": 50,
@@ -631026,6 +631909,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 5317,
+          "end": 5318,
+          "symbol": "M:jj.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
+        },
+        {
           "start": 5396,
           "end": 5398,
           "symbol": "C:qm",
@@ -631122,6 +632012,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 10683,
+          "end": 10684,
+          "symbol": "M:jj.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 10721,
@@ -633684,7 +634581,7 @@
       "original": "jr.java",
       "renamed": "ReceivedAuctionItemRow.java",
       "inputSha256": "7d5e58738c606da4bbfa96fe897ffb2fd83d7458426cb74a0c6c1146a979c0f2",
-      "outputSha256": "55da17164ef7966add3994d2eb65bb3508c1214b8f2da0c83dbae4c426063dc9",
+      "outputSha256": "3e3a6b22b6fb7238d9da2616db140eb97c873e92b02550215f7e58eb27c4be84",
       "edits": [
         {
           "start": 50,
@@ -634427,6 +635324,13 @@
           "symbol": "C:jk",
           "original": "jk",
           "renamed": "MusicPatch"
+        },
+        {
+          "start": 11133,
+          "end": 11134,
+          "symbol": "M:sj.a(II)[B",
+          "original": "a",
+          "renamed": "getSingleFile"
         },
         {
           "start": 11230,
@@ -636613,7 +637517,7 @@
       "original": "ju.java",
       "renamed": "ValidationHelpWidget.java",
       "inputSha256": "f36f3ead56d4a514f804902f39a57065fa4f3c33c7afc02ecbf020b07b1c57b3",
-      "outputSha256": "b8beaddf4e4a3d7fcb77bb806ef1f6bf4f66118005d825fa77a991984d0ecbe3",
+      "outputSha256": "2cd37e03fadb288e2f488a4279d64044f843072a5c78de4d382ee267d8b2c986",
       "edits": [
         {
           "start": 50,
@@ -636831,6 +637735,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "NameSuggestionsPanel"
+        },
+        {
+          "start": 4491,
+          "end": 4492,
+          "symbol": "M:lb.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 4599,
@@ -638554,7 +639465,7 @@
       "original": "kd.java",
       "renamed": "DebugConsole.java",
       "inputSha256": "8324b03fbf81a74085513a50b4be9f3cd503fd5f1c245f64b224e773bcbb9e63",
-      "outputSha256": "f60297336c5dffdbda9da2fb5bf035b2494b4219e40629b94c7f51249b6a45e4",
+      "outputSha256": "44669ca083c3f0453e1c2cf7ddaa1eb6e17d6863ad7e22efd0c2abda87312192",
       "edits": [
         {
           "start": 71,
@@ -639460,11 +640371,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 22274,
+          "end": 22275,
+          "symbol": "M:kd.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
+        },
+        {
           "start": 22452,
           "end": 22454,
           "symbol": "C:cv",
           "original": "cv",
           "renamed": "MeshObject"
+        },
+        {
+          "start": 22529,
+          "end": 22530,
+          "symbol": "M:be.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 22655,
@@ -640076,7 +641001,7 @@
       "original": "kg.java",
       "renamed": "IndexedSprite.java",
       "inputSha256": "01db1020991a7735d0c1f910c65488440740c8d024362f4d08105ff3caf5be0e",
-      "outputSha256": "736abbb912739082134ee36d3cef97c1767b1df0384b4fe43998582df2ed5bc4",
+      "outputSha256": "0b9264eb535a77799272d8b9697be5486bf8a89771bdc79307e288482894072f",
       "edits": [
         {
           "start": 50,
@@ -640210,6 +641135,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 3630,
+          "end": 3631,
+          "symbol": "M:kg.a(III)V",
+          "original": "a",
+          "renamed": "drawAlpha"
         },
         {
           "start": 3866,
@@ -648279,7 +649211,7 @@
       "original": "lb.java",
       "renamed": "TextHotspotWidget.java",
       "inputSha256": "b9d567de4d14ad9ad0ec1eabf0178b5fbf798a1dae65b1fc715141502f0012a7",
-      "outputSha256": "104ee181acfcdc0120086958443455015a9a24a35180b8f1b6f01753b4f9e56e",
+      "outputSha256": "82c07a6632556ab399c9bbfdde2258a513b0b9b17f9dd90ce380ae9484909a56",
       "edits": [
         {
           "start": 44,
@@ -648371,6 +649303,13 @@
           "symbol": "M:iw.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 2431,
+          "end": 2432,
+          "symbol": "M:lb.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2435,
@@ -648532,6 +649471,20 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 5692,
+          "end": 5693,
+          "symbol": "M:lb.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5770,
+          "end": 5771,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7397,
@@ -653467,7 +654420,7 @@
       "original": "lq.java",
       "renamed": "PcmStream.java",
       "inputSha256": "33f8189d96df2cbe3071a8223ca233131adb55e4b93b9f1f5ace1a438178e69c",
-      "outputSha256": "cadad7b24fe4c29f5f25b8f37a0ad816df33d630b7c2d32f35f717ed11c6b6c1",
+      "outputSha256": "69b24c9006e8710add446a915f685580a87c6dcd7ef4e4b9caedb1f7d77cb6d2",
       "edits": [
         {
           "start": 53,
@@ -653519,6 +654472,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 300,
+          "end": 301,
+          "symbol": "M:lq.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
           "start": 406,
           "end": 407,
           "symbol": "M:lq.a([III)V",
@@ -653538,6 +654498,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 509,
+          "end": 510,
+          "symbol": "M:lq.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
         },
         {
           "start": 532,
@@ -656807,7 +657774,7 @@
       "original": "ma.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "43e44039e2ddab484eaa8944704f7e84e52c9962117c03493868d73f67a2307e",
-      "outputSha256": "ff8311035178faa0e02bb33a2b53ee2d947261c298bf8d125a74dd2b0e907fc3",
+      "outputSha256": "dc35c769a67ab57e67ae46d455253e91c7b925c6aa15245c07c86d9322b38074",
       "edits": [
         {
           "start": 53,
@@ -659379,11 +660346,25 @@
           "renamed": "readAppletParameters"
         },
         {
+          "start": 45664,
+          "end": 45665,
+          "symbol": "M:ah.d(B)Z",
+          "original": "d",
+          "renamed": "isHostAllowed"
+        },
+        {
           "start": 46932,
           "end": 46933,
           "symbol": "C:o",
           "original": "o",
           "renamed": "DualLinkDeque"
+        },
+        {
+          "start": 47026,
+          "end": 47027,
+          "symbol": "M:ah.a(IIIBILjava/lang/String;I)V",
+          "original": "a",
+          "renamed": "startAppletShell"
         },
         {
           "start": 47347,
@@ -659615,7 +660596,7 @@
       "original": "mb.java",
       "renamed": "DisplayNameForm.java",
       "inputSha256": "d21088b995895465cbeb9dc3889ed9e46390d039b93fbadc5ab28136cc04a570",
-      "outputSha256": "946485e403b300ceedcef8e5e39ed67a220682e204677f2e0c4a9c2677b7e415",
+      "outputSha256": "0e150d63175cfc5f986ef56d6a66274f64fd79a8a057a97f2ac8ea295713da72",
       "edits": [
         {
           "start": 50,
@@ -659975,6 +660956,13 @@
           "renamed": "WidgetPainter"
         },
         {
+          "start": 6688,
+          "end": 6689,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6800,
           "end": 6802,
           "symbol": "C:jk",
@@ -659987,6 +660975,20 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "GoalStateAgent"
+        },
+        {
+          "start": 6877,
+          "end": 6878,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6938,
+          "end": 6939,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7005,
@@ -660015,6 +661017,20 @@
           "symbol": "C:ur",
           "original": "ur",
           "renamed": "NameSuggestionListener"
+        },
+        {
+          "start": 7196,
+          "end": 7197,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 7377,
+          "end": 7378,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7447,
@@ -660211,7 +661227,7 @@
       "original": "mc.java",
       "renamed": "TickClock.java",
       "inputSha256": "d2dc310019c0f324bbf9f02a6b8cc149389d9433d0161269d31689fa9d95b595",
-      "outputSha256": "8ba47fa6bfc6ad1327189fb34007f1a5c1906de6d06941d8b65ebfc54c5343aa",
+      "outputSha256": "69fa38d1f7e50093f888d6eaff9d80610fd1997688e2839461d0d41ba38b8bc6",
       "edits": [
         {
           "start": 53,
@@ -660347,6 +661363,13 @@
           "renamed": "advanceTicks"
         },
         {
+          "start": 2316,
+          "end": 2317,
+          "symbol": "M:mc.b(I)V",
+          "original": "b",
+          "renamed": "resetTiming"
+        },
+        {
           "start": 2438,
           "end": 2440,
           "symbol": "C:mc",
@@ -660366,7 +661389,7 @@
       "original": "md.java",
       "renamed": "CheatCodeListener.java",
       "inputSha256": "72cd72a01043155e42af68bad213b162ac17365dd00ce13a12b6d9e37526bd1e",
-      "outputSha256": "4b2b79fee8e9b12570b6f1cb840f75f51d6e7c09284b486600a2a355a0e1ca3b",
+      "outputSha256": "a66146cb1a834635afa33c8c53b5d2a7c9a1ca43f23b4ad65695b0329fed9401",
       "edits": [
         {
           "start": 71,
@@ -660563,6 +661586,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "CheatCodeListener"
+        },
+        {
+          "start": 3408,
+          "end": 3409,
+          "symbol": "M:md.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 4521,
@@ -666928,7 +667958,7 @@
       "original": "mu.java",
       "renamed": "ContentTransitionDialog.java",
       "inputSha256": "b14328f492e0d940bc91e0a9ec972ca86fc99071d402b99d3ed0c0375a42de74",
-      "outputSha256": "80a6db9bec0d04114d9a2c68aae31e948bfb576ff7bb813688b87352dcf82621",
+      "outputSha256": "1292e2ba3fae3ffe15df2193d573ca52a8daf2cb38c0e7a2280621c7e87f37b7",
       "edits": [
         {
           "start": 53,
@@ -666978,6 +668008,13 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "AlphaContainer"
+        },
+        {
+          "start": 689,
+          "end": 690,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 780,
@@ -678543,7 +679580,7 @@
       "original": "nn.java",
       "renamed": "AccountChoicePanel.java",
       "inputSha256": "0cfdb4892361832573486462fde41cba2edb2a9389d10830f9bcf778e3165ad0",
-      "outputSha256": "2a71fc1308f3b97f0e10c5b216e8c12987098ddf836d4480c0232955ed15aa51",
+      "outputSha256": "15ba64856e07ed7c6483c2a58331298a43a6fe41d9792a91ae55e5fd7caec478",
       "edits": [
         {
           "start": 50,
@@ -678761,6 +679798,27 @@
           "symbol": "C:gj",
           "original": "gj",
           "renamed": "WidgetPainter"
+        },
+        {
+          "start": 3055,
+          "end": 3056,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 3147,
+          "end": 3148,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 3258,
+          "end": 3259,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 3367,
@@ -693660,7 +694718,7 @@
       "original": "ol.java",
       "renamed": "GameOverView.java",
       "inputSha256": "a9ce06c8445929dc798c0f12447343f087341ed92024590f1219fe3940b60612",
-      "outputSha256": "abf712826ed78c5f4a6306feee0d1e5f22a1d5c0f8c8072178a6fba38212460a",
+      "outputSha256": "48cf57212ebb69666923aa720e8cf6843a38f924099cbd8371833e0987fb7337",
       "edits": [
         {
           "start": 50,
@@ -696131,6 +697189,13 @@
           "symbol": "M:bu.b(I)Z",
           "original": "b",
           "renamed": "hasFullscreenSupport"
+        },
+        {
+          "start": 67327,
+          "end": 67328,
+          "symbol": "M:bu.a(IIZII)Lwu;",
+          "original": "a",
+          "renamed": "requestEnterFullscreen"
         },
         {
           "start": 67971,
@@ -700489,7 +701554,7 @@
       "original": "ou.java",
       "renamed": "StripedProgressBar.java",
       "inputSha256": "e9fe557d139f4bd2a0adfbd77cd63215e882f7a54c9073d4ff43623f467eace3",
-      "outputSha256": "ffb2461f7d457d71cfb00bee906ff5d183c46c064d68be2589e311aec39d4196",
+      "outputSha256": "363a77cbb10f5c4ad363b87ed206b673c76aa2e52bc4dcb724538b46dcf825e9",
       "edits": [
         {
           "start": 50,
@@ -700863,6 +701928,20 @@
           "renamed": "rebuildSprites"
         },
         {
+          "start": 6260,
+          "end": 6261,
+          "symbol": "M:ou.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6338,
+          "end": 6339,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6394,
           "end": 6395,
           "symbol": "M:ou.a(B)V",
@@ -701099,6 +702178,13 @@
           "symbol": "M:ou.<init>(IIIIIIIII)V",
           "original": "ou",
           "renamed": "StripedProgressBar"
+        },
+        {
+          "start": 11228,
+          "end": 11229,
+          "symbol": "M:ou.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         }
       ]
     },
@@ -702827,7 +703913,7 @@
       "original": "pd.java",
       "renamed": "LoginForm.java",
       "inputSha256": "0fcc92e3b4c7b37ee6ed663c12dfae946f9b6b7774b09265d43d8523ae142f55",
-      "outputSha256": "1f2bacdf0f28c6dd9c86cb3ede33bef002c00568430592f8fd07448db9f5a070",
+      "outputSha256": "a543454b385f7f1d871fec7f76883d2557b9da227a29fe66c39b081e9aa60f01",
       "edits": [
         {
           "start": 71,
@@ -702905,6 +703991,20 @@
           "symbol": "M:pd.h(B)V",
           "original": "h",
           "renamed": "focusFields"
+        },
+        {
+          "start": 499,
+          "end": 500,
+          "symbol": "M:ga.i(B)V",
+          "original": "i",
+          "renamed": "clearInputText"
+        },
+        {
+          "start": 535,
+          "end": 536,
+          "symbol": "M:ga.i(B)V",
+          "original": "i",
+          "renamed": "clearInputText"
         },
         {
           "start": 651,
@@ -703129,6 +704229,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 6368,
+          "end": 6369,
+          "symbol": "M:ga.i(B)V",
+          "original": "i",
+          "renamed": "clearInputText"
         },
         {
           "start": 6453,
@@ -703528,6 +704635,48 @@
           "symbol": "C:jv",
           "original": "jv",
           "renamed": "UiListener"
+        },
+        {
+          "start": 11639,
+          "end": 11640,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 11783,
+          "end": 11784,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 11952,
+          "end": 11953,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 12186,
+          "end": 12187,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 12313,
+          "end": 12314,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 12455,
+          "end": 12456,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 13405,
@@ -705269,7 +706418,7 @@
       "original": "pj.java",
       "renamed": "AlphaContainer.java",
       "inputSha256": "cd407795b5558d9eb086ee10423ce281410423c0ce3dbe8e1cfff1f7dac6e259",
-      "outputSha256": "3a717bd1293af3b89ab7781ceeb54147f5dd70cc3ea4647b237645d00214c171",
+      "outputSha256": "234f411169da7dd080e81e0c56f27419775b33891f2fa52ca6af84d897723315",
       "edits": [
         {
           "start": 50,
@@ -705445,6 +706594,13 @@
           "symbol": "C:jv",
           "original": "jv",
           "renamed": "UiListener"
+        },
+        {
+          "start": 2431,
+          "end": 2432,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2604,
@@ -706198,7 +707354,7 @@
       "original": "pp.java",
       "renamed": "MusicPatchPcmStream.java",
       "inputSha256": "d1e095ae1be12dd9acbd3419d12a4329cdc1deb5005eb9b10a959694425159fd",
-      "outputSha256": "8e629c52fa362b44b30e6a399a65ac535b50c525af9d8edc841e2027dcc14d5f",
+      "outputSha256": "9610c7e51bf8a652f9835044e3ad896faaa427b3f1f721e090a74eae45985735",
       "edits": [
         {
           "start": 50,
@@ -706250,6 +707406,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 235,
+          "end": 236,
+          "symbol": "M:pp.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
+        },
+        {
           "start": 249,
           "end": 251,
           "symbol": "C:da",
@@ -706278,6 +707441,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 521,
+          "end": 522,
+          "symbol": "M:pp.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
           "start": 535,
           "end": 537,
           "symbol": "C:da",
@@ -706297,6 +707467,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 749,
+          "end": 750,
+          "symbol": "M:pp.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
         },
         {
           "start": 776,
@@ -720952,7 +722129,7 @@
       "original": "qd.java",
       "renamed": "IndexedSpriteState.java",
       "inputSha256": "7b70323c2ba795daa0430e890cc82bb448fdf9e96c46976ea0163ba93c311a89",
-      "outputSha256": "a030a430bfcfd3071fee9fcd0e52227f9ee96be1c970a201f69195d39cb8822a",
+      "outputSha256": "1f961caae33a5e66830525515cdd2dcb1670b99c25f1ee561a8d6e8d88509d58",
       "edits": [
         {
           "start": 53,
@@ -721058,6 +722235,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1944,
+          "end": 1945,
+          "symbol": "M:qd.a(III)V",
+          "original": "a",
+          "renamed": "drawAlpha"
         },
         {
           "start": 2324,
@@ -723977,7 +725161,7 @@
       "original": "qn.java",
       "renamed": "qn.java",
       "inputSha256": "8b459e940267b19559a3d24d9c1e0b2904ac50d766cadf14af2f2a53f8e0a4f1",
-      "outputSha256": "6e4ee1a0fb40a3deed3f96afb8b89401feaa09a07537d5181b6bca60f4057eb5",
+      "outputSha256": "43953a008aae8d71ab25e6697eba7c9cfaeb5e932ea05f9c9d2bf5795310af16",
       "edits": [
         {
           "start": 143,
@@ -724048,6 +725232,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "PlayArea"
+        },
+        {
+          "start": 1354,
+          "end": 1355,
+          "symbol": "M:wt.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 1356,
@@ -724784,7 +725975,7 @@
       "original": "qp.java",
       "renamed": "AccountMessagePanel.java",
       "inputSha256": "4082779b737c2ca1b72757612206bd70abf83b14d81c551bfaf1ee7a5cbd461c",
-      "outputSha256": "38181caae43dd3beb2dae983c54fee85bbb3b87eea2281bcfb056f69518ac0c8",
+      "outputSha256": "16f5436f9b8aa56b588d82fef529a68cb2bf38a1253c02797a50f49fc56217bd",
       "edits": [
         {
           "start": 50,
@@ -724976,6 +726167,20 @@
           "renamed": "WidgetPainter"
         },
         {
+          "start": 3946,
+          "end": 3947,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 4006,
+          "end": 4007,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 4806,
           "end": 4808,
           "symbol": "C:nb",
@@ -725044,6 +726249,13 @@
           "symbol": "M:hu.c(Ljava/lang/String;II)I",
           "original": "c",
           "renamed": "paragraphHeight"
+        },
+        {
+          "start": 5987,
+          "end": 5988,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6089,
@@ -741591,7 +742803,7 @@
       "original": "ru.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "6bc03d771e2aded38fa68a3d3e1a691b05a6c3c4274b3aa31fa58158b7f8228b",
-      "outputSha256": "64393d7afb5ef50c905718b91cb34421b822a2c9983f59869d98b661be3ed4fb",
+      "outputSha256": "1024d55aa6d09ca15d44e3ee18b9adbbd5dd6d103139754d6c0e8904a50bbcd3",
       "edits": [
         {
           "start": 71,
@@ -741683,6 +742895,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 1424,
+          "end": 1425,
+          "symbol": "M:ru.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
         },
         {
           "start": 1575,
@@ -742138,6 +743357,13 @@
           "symbol": "M:vm.a(Z)V",
           "original": "a",
           "renamed": "setReversePlayback"
+        },
+        {
+          "start": 18758,
+          "end": 18759,
+          "symbol": "M:vm.i(I)V",
+          "original": "i",
+          "renamed": "setSamplePositionFixed"
         },
         {
           "start": 19240,
@@ -742847,11 +744073,25 @@
           "renamed": "TextLayoutLine"
         },
         {
+          "start": 41535,
+          "end": 41536,
+          "symbol": "M:ru.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
           "start": 41580,
           "end": 41582,
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 41583,
+          "end": 41584,
+          "symbol": "M:ru.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 41605,
@@ -746568,7 +747808,7 @@
       "original": "sj.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "f6538b227d3d2d481c399e98f312c901fc906b583225b93ce285e62cdebc2d95",
-      "outputSha256": "999e078b1dd02201f41594020b4394638e8af8d1cd200b90bcdc1a80800f0ca4",
+      "outputSha256": "164e043f90fc5f1e74ed213031c6535a1e0dff25820e5ac28cff9c843e19c148",
       "edits": [
         {
           "start": 50,
@@ -746802,6 +748042,13 @@
           "renamed": "AuctionLogEntry"
         },
         {
+          "start": 6654,
+          "end": 6655,
+          "symbol": "M:sj.b(II)Z",
+          "original": "b",
+          "renamed": "ensureFlatFileAvailable"
+        },
+        {
           "start": 6741,
           "end": 6742,
           "symbol": "M:sj.a(Ljava/lang/String;Ljava/lang/String;I)[B",
@@ -746928,6 +748175,13 @@
           "renamed": "ensureIndex"
         },
         {
+          "start": 11844,
+          "end": 11845,
+          "symbol": "M:sj.a(II)[B",
+          "original": "a",
+          "renamed": "getSingleFile"
+        },
+        {
           "start": 11890,
           "end": 11891,
           "symbol": "M:sj.d(I)Z",
@@ -746968,6 +748222,13 @@
           "symbol": "M:sj.d(I)Z",
           "original": "d",
           "renamed": "ensureIndex"
+        },
+        {
+          "start": 13310,
+          "end": 13311,
+          "symbol": "M:sj.b(II)Z",
+          "original": "b",
+          "renamed": "ensureFlatFileAvailable"
         },
         {
           "start": 13356,
@@ -747129,6 +748390,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 18987,
+          "end": 18988,
+          "symbol": "M:sj.b(II)Z",
+          "original": "b",
+          "renamed": "ensureFlatFileAvailable"
         },
         {
           "start": 19028,
@@ -747451,6 +748719,13 @@
           "symbol": "C:iw",
           "original": "iw",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 25297,
+          "end": 25298,
+          "symbol": "M:iw.a(I[IZI)V",
+          "original": "a",
+          "renamed": "xteaDecryptRange"
         },
         {
           "start": 25434,
@@ -763544,7 +764819,7 @@
       "original": "tr.java",
       "renamed": "tr.java",
       "inputSha256": "ea0e92691c3b41b61b4dd93cdc4d22b62c47d029b11835d8a6176a818902b0da",
-      "outputSha256": "a026ad6255b87b618b3a96e5591ef7dc5777b7ec09baa62b521a7efff98b9634",
+      "outputSha256": "f1e8054fca4985823eb5daf216fc788f2ddd0a3844b2d0b8fcbe650b9d687648",
       "edits": [
         {
           "start": 64,
@@ -763678,6 +764953,13 @@
           "symbol": "M:sf.c(II)Z",
           "original": "c",
           "renamed": "isScreenShown"
+        },
+        {
+          "start": 902,
+          "end": 903,
+          "symbol": "M:tr.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 1013,
@@ -764627,7 +765909,7 @@
       "original": "tu.java",
       "renamed": "GameLoopApplet.java",
       "inputSha256": "c4116bd2e2214ec5bc4cac019aab1f6348149579386518006487543a11b911ee",
-      "outputSha256": "7d9dadc89f9b5e164faa9c592b7c0f639d7a1a18b88df4fa5cef193a6fbe2033",
+      "outputSha256": "35661dc89c3f86e025d6273c2262aa63f9a599cb628ca8935434026203b08bf8",
       "edits": [
         {
           "start": 74,
@@ -765015,6 +766297,13 @@
           "renamed": "removeFirst"
         },
         {
+          "start": 3200,
+          "end": 3201,
+          "symbol": "M:tu.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
+        },
+        {
           "start": 3243,
           "end": 3245,
           "symbol": "C:vg",
@@ -765379,6 +766668,13 @@
           "renamed": "UrlRequest"
         },
         {
+          "start": 8041,
+          "end": 8042,
+          "symbol": "M:hc.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
+        },
+        {
           "start": 8140,
           "end": 8142,
           "symbol": "C:vg",
@@ -765475,6 +766771,13 @@
           "symbol": "M:tu.a(III)I",
           "original": "a",
           "renamed": "fixedPointDistance"
+        },
+        {
+          "start": 9805,
+          "end": 9806,
+          "symbol": "M:tu.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 9844,
@@ -766332,7 +767635,7 @@
       "original": "ub.java",
       "renamed": "ModalPanel.java",
       "inputSha256": "d4890fc5c58f92cce58e0d535426ee691cd1faf528312b6b20fac3513647205d",
-      "outputSha256": "26a4909aae141780355375add7c469d2f43fa568a9f99d24d7513c616fe4be3c",
+      "outputSha256": "f37f12bee93aa85d382656a64960a2b62af7c18809484c1979452e99e59aa7ad",
       "edits": [
         {
           "start": 53,
@@ -766795,6 +768098,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4492,
+          "end": 4493,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 4549,
@@ -770083,7 +771393,7 @@
       "original": "uh.java",
       "renamed": "PcmPlayerService.java",
       "inputSha256": "87cee1fd3bad9ef66f5e2c44c302ca5413146e9b28eb95bafc2b575a2addefa5",
-      "outputSha256": "f7d4a57740881f25e3c53d9252b4b64d4183f1902689d7f8809d7faedb0a6228",
+      "outputSha256": "4d63837d23b1ea6c36cee785613cdf7cf3febb5b5c1b40d5007410e0bc429806",
       "edits": [
         {
           "start": 44,
@@ -770214,6 +771524,20 @@
           "kind": "label"
         },
         {
+          "start": 2879,
+          "end": 2880,
+          "symbol": "M:lq.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
+          "start": 3170,
+          "end": 3171,
+          "symbol": "M:lq.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
+        },
+        {
           "start": 3371,
           "end": 3373,
           "symbol": "C:lq",
@@ -770277,11 +771601,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 5146,
+          "end": 5147,
+          "symbol": "M:lq.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
           "start": 5192,
           "end": 5194,
           "symbol": "C:uh",
           "original": "uh",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 5228,
+          "end": 5229,
+          "symbol": "M:lq.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
         },
         {
           "start": 5267,
@@ -775431,7 +776769,7 @@
       "original": "ut.java",
       "renamed": "Sprite.java",
       "inputSha256": "786e7060e77fe8aa12753707b50b3288b0aae01cc68d173fa9f00d6a40c2ecea",
-      "outputSha256": "9c3df96d646bf9b9a929e096fedb94f60f3cf223b3cd1dcf0e3feeb98f08dd3b",
+      "outputSha256": "46e057735d601f64b67feb277cf3cc665cbfc391e8aff37c1200e7b2fe40343b",
       "edits": [
         {
           "start": 44,
@@ -776316,6 +777654,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 46872,
+          "end": 46873,
+          "symbol": "M:ut.b(IIIII)V",
+          "original": "b",
+          "renamed": "drawBilinearPixel"
+        },
+        {
           "start": 49806,
           "end": 49808,
           "symbol": "C:on",
@@ -776580,6 +777925,34 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 62878,
+          "end": 62879,
+          "symbol": "M:ut.b(IIIII)V",
+          "original": "b",
+          "renamed": "drawBilinearPixel"
+        },
+        {
+          "start": 65544,
+          "end": 65545,
+          "symbol": "M:ut.b(IIIII)V",
+          "original": "b",
+          "renamed": "drawBilinearPixel"
+        },
+        {
+          "start": 68297,
+          "end": 68298,
+          "symbol": "M:ut.b(IIIII)V",
+          "original": "b",
+          "renamed": "drawBilinearPixel"
+        },
+        {
+          "start": 70927,
+          "end": 70928,
+          "symbol": "M:ut.b(IIIII)V",
+          "original": "b",
+          "renamed": "drawBilinearPixel"
         },
         {
           "start": 71508,
@@ -782903,7 +784276,7 @@
       "original": "ve.java",
       "renamed": "ve.java",
       "inputSha256": "5995b713f52b9877abb60483e9eb7ac0cdaf5dd7897fdeec2563e42dbe61ee98",
-      "outputSha256": "fa7eb3cd28590e53987a6f941ef666c633cd1209a0be010d548fd6602667200b",
+      "outputSha256": "05736c58c0a1215a4cedabc91f93c52d60b1ef032e3e8f4ee3f4b7c49e25d8a1",
       "edits": [
         {
           "start": 61,
@@ -783177,6 +784550,20 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 3449,
+          "end": 3450,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 3559,
+          "end": 3560,
+          "symbol": "M:fd.e(I)V",
+          "original": "e",
+          "renamed": "refreshLayout"
         },
         {
           "start": 4317,
@@ -784608,7 +785995,7 @@
       "original": "vi.java",
       "renamed": "NanoTickClock.java",
       "inputSha256": "514bd4599627ea72425a529a96dc97dc40b3247fdb88bfbb30719fc05799021b",
-      "outputSha256": "3648fe37946e661e89e56ed29f906f22939d395afacd0f8d495c04f84c7df332",
+      "outputSha256": "698e288f4dc73a2fec59bbfe9776119cb4cbe22a03d2fecdb27c872ed8390a7d",
       "edits": [
         {
           "start": 50,
@@ -784975,6 +786362,13 @@
           "symbol": "C:an",
           "original": "an",
           "renamed": "QuickChatPhraseCache"
+        },
+        {
+          "start": 7212,
+          "end": 7213,
+          "symbol": "M:vi.b(I)V",
+          "original": "b",
+          "renamed": "resetTiming"
         },
         {
           "start": 8213,
@@ -785580,7 +786974,7 @@
       "original": "vm.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "7ecfe6a2243c06024d2bba6f26d374598e04a8c083eb6a90c1b5f8ccaf1745a1",
-      "outputSha256": "5a98ac4371b18fac4fcdfa9535297dd24edf1e1175e0735d5d8d6e4770587b90",
+      "outputSha256": "19c39f3cfe6e1bf126850f34767166b50f4723e534ae698d8172539febb548fe",
       "edits": [
         {
           "start": 50,
@@ -785623,6 +787017,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 2077,
+          "end": 2078,
+          "symbol": "M:vm.c()Llq;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 2365,
@@ -785847,6 +787248,13 @@
           "symbol": "C:lq",
           "original": "lq",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 4470,
+          "end": 4471,
+          "symbol": "M:vm.b()Llq;",
+          "original": "b",
+          "renamed": "nextSubstream"
         },
         {
           "start": 4593,
@@ -786344,6 +787752,13 @@
           "symbol": "C:to",
           "original": "to",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 45930,
+          "end": 45931,
+          "symbol": "M:vm.i(I)V",
+          "original": "i",
+          "renamed": "setSamplePositionFixed"
         },
         {
           "start": 45967,
@@ -788194,7 +789609,7 @@
       "original": "vp.java",
       "renamed": "vp.java",
       "inputSha256": "07feff1fbaf60c176d67e9256f62e2ecd9e215629d620cf441558c25338a6a35",
-      "outputSha256": "ff9d7a340976102ac7280e08b732dab8305b7b676813a3178f15273076d0a8e3",
+      "outputSha256": "bdf8cef31f6151bcddbcd44580487da80c5d3f7e0022b6fa0e463bc5449d5bd6",
       "edits": [
         {
           "start": 64,
@@ -788559,6 +789974,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "MatchTransitionScreen"
+        },
+        {
+          "start": 5859,
+          "end": 5860,
+          "symbol": "M:vp.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 6516,
@@ -789818,7 +791240,7 @@
       "original": "w.java",
       "renamed": "DialogOverlay.java",
       "inputSha256": "45e47826b35e787364042afd4415752ce03234373fe797b173ea428490e9439c",
-      "outputSha256": "9838a6f463645e5514d809f2a3a62ebaa6728ebc0d2274837ca8dd5aa683717e",
+      "outputSha256": "184a415e3b1969b6bb859460c9ac08e517ae094eb522563ad253540c1449241f",
       "edits": [
         {
           "start": 50,
@@ -789910,6 +791332,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1620,
+          "end": 1621,
+          "symbol": "M:w.a(I)V",
+          "original": "a",
+          "renamed": "drawConsole"
         },
         {
           "start": 1947,
@@ -796660,7 +798089,7 @@
       "original": "wj.java",
       "renamed": "WidgetContainer.java",
       "inputSha256": "ffb7e6b384bfca049f9e4ffd59b71588b01eea799ef4a3873d9718faa6f14c7d",
-      "outputSha256": "25c71a5d7f25578175608065943b0fcaaa6af11cf871248cf5663b43b57284f6",
+      "outputSha256": "191d6b7423c0b71d3deb8bf948eb6c9d24d9bd13f610981dc2934d17373e1676",
       "edits": [
         {
           "start": 65,
@@ -797864,6 +799293,20 @@
           "renamed": "wrapException"
         },
         {
+          "start": 30815,
+          "end": 30816,
+          "symbol": "M:wj.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 30909,
+          "end": 30910,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 31043,
           "end": 31045,
           "symbol": "C:nb",
@@ -798165,6 +799608,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 38653,
+          "end": 38654,
+          "symbol": "M:fd.e(I)V",
+          "original": "e",
+          "renamed": "refreshLayout"
         },
         {
           "start": 38683,
@@ -803363,7 +804813,7 @@
       "original": "wt.java",
       "renamed": "ArrayWidgetContainer.java",
       "inputSha256": "87fe406b210059ed7e518b40d846fc7af18dd7bc815dc8a7132d5ae38b43f6fc",
-      "outputSha256": "459b78cafa2df62900567f3f260f4d999240915147513e82c975300f156657d9",
+      "outputSha256": "6cf1fe1167c00b996f2df708750e4efd679981c568d1cfb7006830a7fa4bd40b",
       "edits": [
         {
           "start": 74,
@@ -803637,6 +805087,20 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 7736,
+          "end": 7737,
+          "symbol": "M:wt.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 7814,
+          "end": 7815,
+          "symbol": "M:fd.a(IIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7921,
@@ -804946,10 +806410,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "971b7c3f62e4b1ad06cdc1ff41e0c51541be17cdf2ae69110cad3df3466b51eb",
+    "rulesSha256": "636e6375eac157cd4aa80b1d12a838199a9f2cf93bbd9fc19950b6d42f030b23",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "2ddec7d8c6008294f461618edc82817378d056df848e4117299b573cb848f564",
+    "outputTreeSha256": "d54e3ca71be1a38f2a1fb987694fe1b5423af9f4e22475bac14c02a268765d13",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

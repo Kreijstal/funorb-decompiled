@@ -129,7 +129,7 @@ abstract class ModalPanel extends WidgetContainer {
 
     final void a(byte param0, int param1, int param2) {
         if (param0 >= 90) {
-          this.a(param1, 1, il.field_b - param2 >> 1, param2, -param1 + ListRow.field_Ab >> 1);
+          this.setBounds(param1, 1, il.field_b - param2 >> 1, param2, -param1 + ListRow.field_Ab >> 1);
           return;
         }
     }

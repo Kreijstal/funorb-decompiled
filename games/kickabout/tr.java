@@ -32,7 +32,7 @@ final class tr implements OverlayLayer {
         return stackIn_6_0;
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         int var2;
         int var3;
         int var4;

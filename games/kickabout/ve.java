@@ -106,9 +106,9 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             field_S = (UiLayoutNode) null;
           }
           this.field_i = this.field_i + 38;
-          var4.a(30, param0 ^ -54, 15, -16 + (this.field_n - 14), var5);
+          var4.setBounds(30, param0 ^ -54, 15, -16 + (this.field_n - 14), var5);
           this.a(param0 - 12, var4);
-          this.e(-1947);
+          this.refreshLayout(-1947);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

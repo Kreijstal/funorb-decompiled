@@ -340,7 +340,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(19, 0, 8128, param1, 0);
     }
 
-    final PlatformTask a(int param0, int param1, boolean param2, int param3, int param4) {
+    final PlatformTask requestEnterFullscreen(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
           return (PlatformTask) null;
         }

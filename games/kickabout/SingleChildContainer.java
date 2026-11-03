@@ -162,10 +162,10 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
 
     void a(byte param0) {
         if (param0 != -32) {
-          this.a(43, 116, 100, 117, -104);
+          this.setBounds(43, 116, 100, 117, -104);
         }
         if (this.field_z != null) {
-          this.field_z.e(-1947);
+          this.field_z.refreshLayout(-1947);
         }
     }
 
@@ -346,7 +346,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           this.field_z.layoutChild(84);
         }
         if (param0 != 84) {
-          this.a(99, 40, 102, 127, 55);
+          this.setBounds(99, 40, 102, 127, 55);
         }
     }
 
@@ -434,15 +434,15 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         field_y = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a((byte) -32);
     }
 
     String getTooltip(int param0) {
         String var3 = null;
         if (param0 != -1) {
-          this.a(82, -102, -71, 69, -83);
+          this.setBounds(82, -102, -71, 69, -83);
         }
         String var2 = super.getTooltip(param0 + 0);
         if (null != this.field_z) {

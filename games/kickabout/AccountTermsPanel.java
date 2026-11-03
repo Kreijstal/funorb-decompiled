@@ -74,10 +74,10 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           this.a(-103, this.field_D);
           var5 = 4;
           var6 = 200;
-          this.field_I.a(40, 1, 300 - var6 >> 1, var6, var3);
+          this.field_I.setBounds(40, 1, 300 - var6 >> 1, var6, var3);
           this.field_I.field_k = (UiListener) (this);
           this.a(-43, this.field_I);
-          this.a(55 + (var3 + var5), 1, 0, 300, 0);
+          this.setBounds(55 + (var3 + var5), 1, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

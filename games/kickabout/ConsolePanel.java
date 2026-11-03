@@ -70,7 +70,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    public void a(int param0) {
+    public void drawConsole(int param0) {
         int var6 = 0;
         int var2 = 0;
         int var3 = 0;

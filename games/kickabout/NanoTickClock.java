@@ -207,7 +207,7 @@ final class NanoTickClock extends TickClock {
         return 0L;
     }
 
-    final void b(int param0) {
+    final void resetTiming(int param0) {
         this.field_u = 0L;
         if (param0 != -1) {
           field_s = -62;

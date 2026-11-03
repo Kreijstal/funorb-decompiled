@@ -338,11 +338,11 @@ final class ReverbPcmStream extends PcmStream {
         this.field_u = param0;
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return this.field_r;
     }
 

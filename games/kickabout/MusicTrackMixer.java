@@ -148,7 +148,7 @@ final class MusicTrackMixer extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
@@ -298,7 +298,7 @@ final class MusicTrackMixer extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 

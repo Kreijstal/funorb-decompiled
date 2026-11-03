@@ -119,8 +119,8 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           var4 = new TextButton(param0, param1);
           var4.field_r = (WidgetPainter) ((Object) new op());
           var5 = -2 + this.field_i;
-          this.a(34 + this.field_i, 1, 0, this.field_n, 0);
-          var4.a(30, param2 ^ 78, 7, this.field_n - 14, var5);
+          this.setBounds(34 + this.field_i, 1, 0, this.field_n, 0);
+          var4.setBounds(30, param2 ^ 78, 7, this.field_n - 14, var5);
           this.a(-102, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -169,7 +169,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           this.field_E = param0;
           this.field_B = param1;
           var4_int = null == this.field_D ? 0 : this.field_B.paragraphHeight(this.field_D, 260, this.field_B.field_G);
-          this.a(22 + var4_int, 1, 0, 288, 0);
+          this.setBounds(22 + var4_int, 1, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

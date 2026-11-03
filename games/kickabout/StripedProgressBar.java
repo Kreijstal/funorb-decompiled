@@ -179,8 +179,8 @@ final class StripedProgressBar extends UiWidget {
         this.rebuildSprites((byte) 121);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.rebuildSprites((byte) 121);
     }
 
@@ -310,7 +310,7 @@ final class StripedProgressBar extends UiWidget {
         this.field_A = param6;
         this.field_F = param7;
         this.field_E = param5;
-        this.a(param3, 1, param0, param2, param1);
+        this.setBounds(param3, 1, param0, param2, param1);
     }
 
     static {

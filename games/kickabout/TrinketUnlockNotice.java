@@ -19,7 +19,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
         return false;
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (field_c != -1) {

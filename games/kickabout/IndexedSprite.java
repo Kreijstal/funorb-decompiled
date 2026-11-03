@@ -111,7 +111,7 @@ final class IndexedSprite extends IndexedSpriteState {
         IndexedSprite.copyNonzeroPaletteRows(SoftwareRasterizer.field_a, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

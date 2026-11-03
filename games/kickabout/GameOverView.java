@@ -1774,7 +1774,7 @@ final class GameOverView extends MatchPhaseView {
               return (java.awt.Frame) (stackIn_38_0);
             }
           }
-          var6_ref = param4.a(param2, param3, false, param1, param5);
+          var6_ref = param4.requestEnterFullscreen(param2, param3, false, param1, param5);
           if (param0 != -9027) {
             stackIn_41_0 = (java.awt.Frame) null;
             return stackIn_41_0;

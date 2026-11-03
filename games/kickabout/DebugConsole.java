@@ -623,14 +623,14 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         String var4 = null;
         try {
           var4 = this.field_k.field_Lb.field_E;
           String var2 = var4;
           this.field_k.field_Lb.field_E = MeshObject.field_c;
           int var3 = 114 % ((param0 - 50) / 45);
-          super.a(-76);
+          super.drawConsole(-76);
           this.field_k.field_Lb.field_E = var4;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kd.L(" + param0 + ')');

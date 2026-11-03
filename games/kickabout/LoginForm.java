@@ -19,8 +19,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     static String[] field_M;
 
     final void focusFields(byte param0) {
-        this.field_N.i((byte) -55);
-        this.field_J.i((byte) -70);
+        this.field_N.clearInputText((byte) -55);
+        this.field_J.clearInputText((byte) -70);
         if (param0 >= -65) {
           this.field_C = false;
         }
@@ -182,7 +182,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var4 = param0;
           int var5 = 25 % ((33 - param1) / 48);
           var3.a(var4, (byte) -17, false);
-          this.field_J.i((byte) -41);
+          this.field_J.clearInputText((byte) -41);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -323,27 +323,27 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_F.field_k = (UiListener) (this);
           }
           if (this.field_L == null) {
-            this.field_K.a(30, 1, 8, -10 + (-6 + this.field_n), this.field_g);
+            this.field_K.setBounds(30, 1, 8, -10 + (-6 + this.field_n), this.field_g);
             this.field_g = this.field_g + 35;
           } else {
-            this.field_K.a(30, 1, 85, -95 + this.field_n, this.field_g);
+            this.field_K.setBounds(30, 1, 85, -95 + this.field_n, this.field_g);
             this.field_g = this.field_g + 60;
           }
           if (null != this.field_L) {
-            this.field_L.a(30, 1, 8, -16 + this.field_n, this.field_g);
+            this.field_L.setBounds(30, 1, 8, -16 + this.field_n, this.field_g);
             this.field_g = this.field_g + 35;
           }
           if (this.field_F != null) {
             if (!this.field_H &&
               !this.field_C) {
-              this.field_F.a(20, 1, 8, 40, this.field_g);
+              this.field_F.setBounds(20, 1, 8, 40, this.field_g);
               this.field_g = this.field_g + 25;
             } else {
-              this.field_F.a(30, 1, 8, -10 + (this.field_n - 6), this.field_g);
+              this.field_F.setBounds(30, 1, 8, -10 + (this.field_n - 6), this.field_g);
               this.field_g = this.field_g + 35;
             }
           }
-          this.a(this.field_g + 3, 1, 0, this.field_n, 0);
+          this.setBounds(this.field_g + 3, 1, 0, this.field_n, 0);
           this.a(-63, this.field_K);
           if (null != this.field_L) {
             this.a(-42, this.field_L);

@@ -15,7 +15,7 @@ final class IsaacRandom {
     final int nextInt(byte param0) {
         int var2 = 102 / ((2 - param0) / 62);
         if (this.field_e == 0) {
-          this.a(256);
+          this.generateResults(256);
           this.field_e = 256;
         }
         int fieldTemp$0 = this.field_e - 1;
@@ -182,7 +182,7 @@ final class IsaacRandom {
           this.field_i[6 + var2Lifetime2] = var9;
           this.field_i[7 + var2Lifetime2] = var10;
         }
-        this.a(256);
+        this.generateResults(256);
         this.field_e = 256;
     }
 
@@ -283,7 +283,7 @@ final class IsaacRandom {
         return (int)ReceivedAuctionItemRow.field_Gb;
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;

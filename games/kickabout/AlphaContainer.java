@@ -70,7 +70,7 @@ final class AlphaContainer extends SingleChildContainer {
     AlphaContainer(UiWidget param0) {
         super(param0.field_t, param0.field_g, param0.field_n, param0.field_i, (WidgetPainter) null, (UiListener) null);
         try {
-          param0.a(this.field_i, 1, 0, this.field_n, 0);
+          param0.setBounds(this.field_i, 1, 0, this.field_n, 0);
           this.field_F = 256;
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {

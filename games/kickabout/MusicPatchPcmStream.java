@@ -12,7 +12,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         MusicPatchNode var1;
         while (true) {
           var1 = (MusicPatchNode) (this.field_j.c(33));
@@ -25,7 +25,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         MusicPatchNode var1 = (MusicPatchNode) (this.field_j.g(24009));
         if (var1 == null) {
           return null;
@@ -33,7 +33,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (var1.field_F != null) {
           return (PcmStream) ((Object) var1.field_F);
         }
-        return this.b();
+        return this.nextSubstream();
     }
 
     final void skipFrames(int param0) {

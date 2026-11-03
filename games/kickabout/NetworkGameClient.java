@@ -1343,7 +1343,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         String var10 = null;
         try {
           try {
-            if (!this.d((byte) 118)) {
+            if (!this.isHostAllowed((byte) 118)) {
               return;
             }
             this.field_z = this.getCodeBase().getHost();
@@ -1374,7 +1374,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.field_r = Integer.parseInt(var9);
             }
             DualLinkDeque.field_d = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param1, param3, this.field_B, (byte) -126, param2, param0, 32);
+            this.startAppletShell(param1, param3, this.field_B, (byte) -126, param2, param0, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;

@@ -46,7 +46,7 @@ final class DialogOverlay implements OverlayLayer {
         }
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         int var2 = 8 / ((50 - param0) / 45);
         if (null != su.field_c) {
           su.field_c.b(false);

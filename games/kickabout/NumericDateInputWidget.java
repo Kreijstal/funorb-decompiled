@@ -145,7 +145,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     NumericDateInputWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param5, 1, param2, param4, param3);
+          this.setBounds(param5, 1, param2, param4, param3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -176,17 +176,17 @@ final class NumericDateInputWidget extends DateInputWidget {
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1 + 0, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1 + 0, param2, param3, param4);
         int var6 = -130 + param3 >> 1;
         if (this.field_U) {
-          this.field_K.a(param0, 1, var6, 25, 0);
-          this.field_L.a(param0, param1 + 0, 45 + var6, 25, 0);
+          this.field_K.setBounds(param0, 1, var6, 25, 0);
+          this.field_L.setBounds(param0, param1 + 0, 45 + var6, 25, 0);
         } else {
-          this.field_L.a(param0, 1, var6, 25, 0);
-          this.field_K.a(param0, param1 + 0, var6 + 45, 25, 0);
+          this.field_L.setBounds(param0, 1, var6, 25, 0);
+          this.field_K.setBounds(param0, param1 + 0, var6 + 45, 25, 0);
         }
-        this.field_P.a(param0, param1, 90 + var6, 40, 0);
+        this.field_P.setBounds(param0, param1, 90 + var6, 40, 0);
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {

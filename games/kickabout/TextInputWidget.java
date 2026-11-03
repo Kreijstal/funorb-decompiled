@@ -94,9 +94,9 @@ class TextInputWidget extends TextButton {
         return this.field_q.substring(var2, var3);
     }
 
-    private final void k(byte param0) {
+    private final void copySelectedTextToClipboard(byte param0) {
         if (param0 < 99) {
-          this.i((byte) 116);
+          this.clearInputText((byte) 116);
         }
         String var2 = this.getSelectedText(82);
         if (0 < var2.length()) {
@@ -239,7 +239,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final void i(byte param0) {
+    final void clearInputText(byte param0) {
         this.field_I = 0;
         this.field_q = "";
         if (param0 >= -11) {
@@ -401,7 +401,7 @@ class TextInputWidget extends TextButton {
           if (param3 != 85) {
             if (param3 != 101) {
               if (param3 == 13) {
-                this.i((byte) -107);
+                this.clearInputText((byte) -107);
                 return true;
               }
               if (96 != param3) {
@@ -425,7 +425,7 @@ class TextInputWidget extends TextButton {
                   }
                   if (GameplayHelpScreen.field_G[82] &&
                     param3 == 66) {
-                    this.k((byte) 109);
+                    this.copySelectedTextToClipboard((byte) 109);
                     return true;
                   }
                   if (GameplayHelpScreen.field_G[82] &&
@@ -515,7 +515,7 @@ class TextInputWidget extends TextButton {
         if (param0 != -13630) {
           return;
         }
-        this.k((byte) 119);
+        this.copySelectedTextToClipboard((byte) 119);
         this.i(-124);
     }
 

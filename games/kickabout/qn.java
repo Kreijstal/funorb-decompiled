@@ -34,7 +34,7 @@ final class qn {
           var7 = var7 - (param4 + 2);
           AuctionSettingsDialog.field_G.setLayout(2, 110, var7 - 5, 5, 5, 485 + (param3 - (-2 - param5)), param5);
           if (null != PlayArea.field_a) {
-            PlayArea.field_a.a(AuctionSettingsDialog.field_G.field_mb, param0 ^ -24824, AuctionSettingsDialog.field_G.field_s, AuctionSettingsDialog.field_G.field_q, AuctionSettingsDialog.field_G.field_J);
+            PlayArea.field_a.setBounds(AuctionSettingsDialog.field_G.field_mb, param0 ^ -24824, AuctionSettingsDialog.field_G.field_s, AuctionSettingsDialog.field_G.field_q, AuctionSettingsDialog.field_G.field_J);
           }
           var8 = -var6_int + (-param3 + g.field_a.field_q);
           var9 = var8 / 2;

@@ -85,7 +85,7 @@ class TextHotspotWidget extends TextButton {
         if (param0 != -1) {
           field_H = (String) null;
         }
-        this.a(((WidgetTextLayout) ((Object) this.field_r)).preferredHeight(param0 + 4, (UiWidget) (this)), 1, param2, param1, param3);
+        this.setBounds(((WidgetTextLayout) ((Object) this.field_r)).preferredHeight(param0 + 4, (UiWidget) (this)), 1, param2, param1, param3);
     }
 
     TextHotspotWidget(String param0, WidgetPainter param1) {
@@ -176,8 +176,8 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1 ^ 0, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1 ^ 0, param2, param3, param4);
         this.a((byte) -41);
         if (param1 != 1) {
           field_H = (String) null;

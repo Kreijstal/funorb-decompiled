@@ -330,7 +330,7 @@ class UiWidget extends IntrusiveNode {
         field_e = null;
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != 1) {
           return;
         }
@@ -558,12 +558,12 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void e(int param0) {
+    final void refreshLayout(int param0) {
         if (param0 != -1947) {
           UiWidget var3 = (UiWidget) null;
           this.a('ﾜ', (byte) -95, (UiWidget) null, -57);
         }
-        this.a(this.field_i, 1, this.field_t, this.field_n, this.field_g);
+        this.setBounds(this.field_i, 1, this.field_t, this.field_n, this.field_g);
     }
 
     void drawLayer(int param0, int param1, int param2, int param3) {

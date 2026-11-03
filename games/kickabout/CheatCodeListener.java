@@ -115,7 +115,7 @@ final class CheatCodeListener implements OverlayLayer {
         return false;
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         int stackIn_6_0 = 0;
         float stackIn_13_0 = 0.0f;
         float stackIn_16_0 = 0.0f;

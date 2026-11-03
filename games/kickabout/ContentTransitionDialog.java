@@ -25,7 +25,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (param0 == null) {
             this.field_ab = new AlphaContainer();
           } else {
-            param0.a(param0.field_i, 1, 6, param0.field_n, this.field_R + 6);
+            param0.setBounds(param0.field_i, 1, 6, param0.field_n, this.field_R + 6);
             this.field_ab = new AlphaContainer(param0);
           }
           this.a(-83, this.field_ab);

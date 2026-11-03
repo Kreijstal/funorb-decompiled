@@ -96,9 +96,9 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_J.a(30, 1, this.field_n - var3 >> 1, var4, -var2 + (this.field_i - 48));
-        this.field_H.a(30, 1, var4 + ((-var3 + this.field_n >> 1) + var2), var4, -48 + (this.field_i - var2));
-        this.field_E.a(30, 1, this.field_n - var3 >> 1, var3, -(var2 * 2) + (this.field_i - 78));
+        this.field_J.setBounds(30, 1, this.field_n - var3 >> 1, var4, -var2 + (this.field_i - 48));
+        this.field_H.setBounds(30, 1, var4 + ((-var3 + this.field_n >> 1) + var2), var4, -48 + (this.field_i - var2));
+        this.field_E.setBounds(30, 1, this.field_n - var3 >> 1, var3, -(var2 * 2) + (this.field_i - 78));
         this.field_J.field_k = (UiListener) (this);
         this.field_E.field_k = (UiListener) (this);
         this.field_H.field_k = (UiListener) (this);

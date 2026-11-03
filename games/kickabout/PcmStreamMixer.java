@@ -7,7 +7,7 @@ final class PcmStreamMixer extends PcmStream {
     private int field_j;
     private int field_l;
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return (PcmStream) (this.field_k.c(33));
     }
 
@@ -114,7 +114,7 @@ final class PcmStreamMixer extends PcmStream {
         return 0;
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return (PcmStream) (this.field_k.g(24009));
     }
 

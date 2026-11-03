@@ -847,9 +847,9 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         try {
-          super.a(param0, param1, param2, param3, param4);
+          super.setBounds(param0, param1, param2, param3, param4);
           this.j(5);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -1056,7 +1056,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           }
           var3 = (UiWidget) (var2.a((byte) 106));
           while (null != var3) {
-            var3.e(-1947);
+            var3.refreshLayout(-1947);
             var3 = (UiWidget) (var2.a(0));
             if (var4 != 0) {
               return;

@@ -86,12 +86,12 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
               this.field_F[var5] = new TextButton(this.field_H[var5], (UiListener) (this));
               this.field_F[var5].field_r = (WidgetPainter) ((Object) var4);
               this.field_F[var5].field_u = TextHotspotWidget.field_G;
-              this.field_F[var5].a(15, 1, 0, 80, var5 * 16 + 20);
+              this.field_F[var5].setBounds(15, 1, 0, 80, var5 * 16 + 20);
               this.a(-23, this.field_F[var5]);
             }
             this.field_F[var3_int] = new TextButton(PlayingView.field_K, (UiListener) (this));
             this.field_F[var3_int].field_r = (WidgetPainter) ((Object) var4);
-            this.field_F[var3_int].a(15, 1, 0, 100, 20 + 16 * (var3_int + 1));
+            this.field_F[var3_int].setBounds(15, 1, 0, 100, 20 + 16 * (var3_int + 1));
             this.a(-52, this.field_F[var3_int]);
             return;
           }

@@ -122,7 +122,7 @@ final class fv implements OverlayLayer {
         }
     }
 
-    public final void a(int param0) {
+    public final void drawConsole(int param0) {
         int var12 = 0;
         String[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;

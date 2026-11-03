@@ -213,8 +213,8 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a((byte) -118);
     }
 

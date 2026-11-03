@@ -162,7 +162,7 @@ final class cg extends SingleChildContainer {
           var12_int = this.field_M - this.field_J;
           var13 = this.field_I.paragraphHeight(param10, var12_int, this.field_I.field_G) + 2 * this.field_J;
           if (param3 < var13) {
-            this.a(var13, 1, param0, param2, param1);
+            this.setBounds(var13, 1, param0, param2, param1);
           } else {
             var13 = param3;
           }
@@ -172,7 +172,7 @@ final class cg extends SingleChildContainer {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_z.a(-(this.field_J * 2) + param3, 1, var14, -this.field_M + (param2 - this.field_J * 3), this.field_J + (var13 - param3 >> 1));
+          this.field_z.setBounds(-(this.field_J * 2) + param3, 1, var14, -this.field_M + (param2 - this.field_J * 3), this.field_J + (var13 - param3 >> 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
