@@ -334,7 +334,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           } else {
             var11 = 0;
           }
-          param2.a(50, var7, var27, var28, var10, var23, (byte) -47, var11);
+          param2.showResultsDialog(50, var7, var27, var28, var10, var23, (byte) -47, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

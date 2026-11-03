@@ -320,7 +320,7 @@ final class SolVictoryChecker extends VictoryChecker {
           } else {
             this.field_r = 20 - param1.field_O;
           }
-          param2.a(20, var8, var22, var23, var11, var19, (byte) -47, this.field_r);
+          param2.showResultsDialog(20, var8, var22, var23, var11, var19, (byte) -47, this.field_r);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

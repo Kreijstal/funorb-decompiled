@@ -169,7 +169,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
             var10 = this.field_g;
             var11 = 0;
           }
-          param2.a(10, var7, var31, var32, var10, var27, (byte) -47, var11);
+          param2.showResultsDialog(10, var7, var31, var32, var10, var27, (byte) -47, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

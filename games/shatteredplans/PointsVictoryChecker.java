@@ -470,7 +470,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           } else {
             var11 = 0;
           }
-          param2.a(this.field_k, var7, var27, var28, var10, var23, (byte) -47, var11);
+          param2.showResultsDialog(this.field_k, var7, var27, var28, var10, var23, (byte) -47, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

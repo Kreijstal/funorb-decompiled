@@ -2066,7 +2066,7 @@ final class GameScreen {
         }
     }
 
-    final void a(Player[] param0, int param1) {
+    final void updatePlayerList(Player[] param0, int param1) {
         int[] array$0 = null;
         int[] array$1 = null;
         RuntimeException stackIn_43_0 = null;
@@ -2955,7 +2955,7 @@ final class GameScreen {
             this.b(-rs.field_Cb.field_J + 450 - 11, rs.field_Cb.field_J + var5, 27, rs.field_Cb.field_J / 2 + (var4 + 5));
           }
           if (var9 instanceof DerelictVictoryChecker) {
-            this.a(5 + rs.field_Cb.field_J / 2 + var4, -rs.field_Cb.field_J + 439, -117, rs.field_Cb.field_J + var5);
+            this.drawResourceHelp(5 + rs.field_Cb.field_J / 2 + var4, -rs.field_Cb.field_J + 439, -117, rs.field_Cb.field_J + var5);
           }
           SoftwareRasterizer.restoreClip(var7);
           return;
@@ -4813,7 +4813,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawResourceHelp(int param0, int param1, int param2, int param3) {
         String var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -4842,7 +4842,7 @@ final class GameScreen {
         }
     }
 
-    final void a(int param0, Player[] param1, int[] param2, int[] param3, Player[] param4, MenuLabel[] param5, byte param6, int param7) {
+    final void showResultsDialog(int param0, Player[] param1, int[] param2, int[] param3, Player[] param4, MenuLabel[] param5, byte param6, int param7) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
