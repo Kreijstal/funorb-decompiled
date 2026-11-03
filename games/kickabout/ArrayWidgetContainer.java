@@ -458,7 +458,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         var7 = Kickabout.field_G;
         if (0 == param0 &&
           null != this.field_r) {
-          this.field_r.a(126, true, param3, (UiWidget) (this), param2);
+          this.field_r.drawWidget(126, true, param3, (UiWidget) (this), param2);
         }
         if (param1 != 65) {
           field_x = -84;

@@ -16,7 +16,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
         if (0 == param0 &&
           null != this.field_r) {
-          this.field_r.a(121, true, param3, (UiWidget) (this), param2);
+          this.field_r.drawWidget(121, true, param3, (UiWidget) (this), param2);
         }
         if (null != this.field_z) {
           this.field_z.a(param0, 65, param2 + this.field_t, param3 + this.field_g);

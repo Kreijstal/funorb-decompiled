@@ -506,12 +506,12 @@ class ri extends TextWidgetPainter {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         try {
           if (param1) {
             kj.a(12105912, param2 + param3.field_g, param3.field_t + param4, param3.field_i, param3.field_n);
           }
-          super.a(-21, param1, param2, param3, param4);
+          super.drawWidget(-21, param1, param2, param3, param4);
           int var6_int = 92 % ((59 - param0) / 53);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

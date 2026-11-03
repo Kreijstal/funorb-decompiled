@@ -569,7 +569,7 @@ class UiWidget extends IntrusiveNode {
     void a(int param0, int param1, int param2, int param3) {
         if (param0 == 0 &&
           this.field_r != null) {
-          this.field_r.a(126, true, param3, this, param2);
+          this.field_r.drawWidget(126, true, param3, this, param2);
         }
         if (param1 != 65) {
           field_e = (Sprite) null;
@@ -619,8 +619,8 @@ class UiWidget extends IntrusiveNode {
           this.field_r = param1;
           if (this.field_r instanceof WidgetTextLayout) {
             var4 = (WidgetTextLayout) ((Object) this.field_r);
-            this.field_n = var4.a(this, 56);
-            this.field_i = var4.b(3, this);
+            this.field_n = var4.preferredWidth(this, 56);
+            this.field_i = var4.preferredHeight(3, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

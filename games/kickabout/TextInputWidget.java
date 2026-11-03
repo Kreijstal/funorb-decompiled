@@ -189,15 +189,15 @@ class TextInputWidget extends TextButton {
         long var6 = 0L;
         if (null != this.field_r &&
           0 == param0) {
-          this.field_r.a(127, this.field_y, param3, (UiWidget) (this), param2);
+          this.field_r.drawWidget(127, this.field_y, param3, (UiWidget) (this), param2);
           if (this.field_r instanceof WidgetTextLayout) {
             var8 = (WidgetTextLayout) ((Object) this.field_r);
             if (this.field_I != this.field_Q) {
-              var8.a(param2, this.field_I, this.field_Q, (UiWidget) (this), 91, param3);
+              var8.drawSelection(param2, this.field_I, this.field_Q, (UiWidget) (this), 91, param3);
             }
             var6 = nj.monotonicMillis(30);
             if ((var6 - this.field_L) % 1000L < 500L) {
-              var8.a(this.field_I, param2, param3, true, (UiWidget) (this));
+              var8.drawCaret(this.field_I, param2, param3, true, (UiWidget) (this));
             }
           }
         }
@@ -289,7 +289,7 @@ class TextInputWidget extends TextButton {
           if (this.field_p == 1) {
             if (this.field_r instanceof WidgetTextLayout) {
               var7 = (WidgetTextLayout) ((Object) this.field_r);
-              var6 = var7.a(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param2, param3, 0);
+              var6 = var7.characterIndexAtPosition(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param2, param3, 0);
               if (var6 != -1) {
                 if (this.field_G && var6 < this.field_T &&
                   this.field_Q < var6) {
@@ -322,7 +322,7 @@ class TextInputWidget extends TextButton {
           if (!(this.field_r instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((WidgetTextLayout) ((Object) this.field_r)).a(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param5, param1, 0);
+          var8_int = ((WidgetTextLayout) ((Object) this.field_r)).characterIndexAtPosition(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param5, param1, 0);
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -603,10 +603,10 @@ class TextInputWidget extends TextButton {
         }
         var10 = (WidgetTextLayout) ((Object) this.field_r);
         var3 = 21 / ((param0 - 45) / 37);
-        var4 = var10.a(5035, (UiWidget) (this));
+        var4 = var10.ensureTextLayout(5035, (UiWidget) (this));
         var5 = var4.a((byte) -25);
-        var6 = var10.a((byte) -124, (UiWidget) (this));
-        var7 = var10.a((byte) -76) >> 1;
+        var6 = var10.contentWidth((byte) -124, (UiWidget) (this));
+        var7 = var10.lineHeight((byte) -76) >> 1;
         if (var5 < var6 - var7) {
           this.field_s = 0;
           this.field_o = 0;

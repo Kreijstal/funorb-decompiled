@@ -114,7 +114,7 @@ final class wc {
         var17.field_b = 16777215;
         this.field_c = (WidgetPainter) ((Object) var17);
         StatefulTextPainter var4 = new StatefulTextPainter();
-        var17.a(var4, (byte) -92);
+        var17.copyStyleTo(var4, (byte) -92);
         this.field_t = 5592405;
         var4.field_i = 15658734;
         this.field_a = param0;
@@ -153,7 +153,7 @@ final class wc {
           discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new du(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
-          var17.a(var8, (byte) -87);
+          var17.copyStyleTo(var8, (byte) -87);
           var8.a(0, param1 ^ -8811).a(true, TrinketCountSortCriterion.a(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);
           var8.a(4, param1 ^ -8811).a(true, (byte) -58).a(true, var5);
           this.field_h = (WidgetPainter) ((Object) var8);

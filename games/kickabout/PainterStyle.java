@@ -385,7 +385,7 @@ final class PainterStyle {
             }
             this.field_j.c(var6_int, var7);
           }
-          var6 = param1.b((byte) -83, param0);
+          var6 = param1.displayText((byte) -83, param0);
           if (var6 != null &&
             null != param1.field_a) {
             if (this.field_f < 0) {

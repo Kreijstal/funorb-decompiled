@@ -379,7 +379,7 @@ final class re implements WidgetPainter {
         return var2;
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         Checkbox var12 = null;
         int var7 = 0;
         int var8 = 0;

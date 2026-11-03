@@ -419,7 +419,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           }
           if (param0 == 0 &&
             this.field_r != null) {
-            this.field_r.a(-103, true, param3, (UiWidget) (this), param2);
+            this.field_r.drawWidget(-103, true, param3, (UiWidget) (this), param2);
           }
           var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (UiWidget) (var5.b(0));

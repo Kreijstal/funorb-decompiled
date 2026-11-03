@@ -188,7 +188,7 @@ final class rp extends ri {
         super(param0, param1);
     }
 
-    final String b(byte param0, UiWidget param1) {
+    final String displayText(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

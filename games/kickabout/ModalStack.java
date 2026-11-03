@@ -298,7 +298,7 @@ final class ModalStack extends SingleChildContainer {
             return;
           }
           if (null != this.field_r) {
-            this.field_r.a(113, true, param3, (UiWidget) (this), param2);
+            this.field_r.drawWidget(113, true, param3, (UiWidget) (this), param2);
           }
           var5 = new IntrusiveDequeCursor(this.field_A);
           var6 = (UiWidget) (var5.b(0));

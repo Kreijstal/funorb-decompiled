@@ -27,7 +27,7 @@ final class ei implements WidgetPainter {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;

@@ -18,7 +18,7 @@ final class mn implements WidgetPainter {
         field_e = null;
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

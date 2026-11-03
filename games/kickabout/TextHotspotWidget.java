@@ -85,7 +85,7 @@ class TextHotspotWidget extends TextButton {
         if (param0 != -1) {
           field_H = (String) null;
         }
-        this.a(((WidgetTextLayout) ((Object) this.field_r)).b(param0 + 4, (UiWidget) (this)), 1, param2, param1, param3);
+        this.a(((WidgetTextLayout) ((Object) this.field_r)).preferredHeight(param0 + 4, (UiWidget) (this)), 1, param2, param1, param3);
     }
 
     TextHotspotWidget(String param0, WidgetPainter param1) {
@@ -263,8 +263,8 @@ class TextHotspotWidget extends TextButton {
         WidgetTextLayout var5 = (WidgetTextLayout) ((Object) this.field_r);
         er var6 = this.field_I;
         if (var6 != null) {
-          var7 = var5.a((UiWidget) (this), param2, -1);
-          var8 = var5.a(true, (UiWidget) (this), param3);
+          var7 = var5.textOriginX((UiWidget) (this), param2, -1);
+          var8 = var5.textOriginY(true, (UiWidget) (this), param3);
           do {
             RenderedBall.b(param1 - 63, 2 + var6.field_e, var6.field_m + (var8 - 2), var6.field_f + 2, -2 + (var7 + var6.field_g));
             var6 = var6.field_j;
@@ -295,7 +295,7 @@ class TextHotspotWidget extends TextButton {
         this.field_E = new IntrusiveDeque();
         var2 = 0;
         var3 = (WidgetTextLayout) ((Object) this.field_r);
-        var4 = var3.a(param0 ^ -4996, (UiWidget) (this));
+        var4 = var3.ensureTextLayout(param0 ^ -4996, (UiWidget) (this));
         if (param0 != -41) {
           field_H = (String) null;
         }
@@ -329,7 +329,7 @@ class TextHotspotWidget extends TextButton {
               }
             }
             var14 = stackIn_14_0;
-            var15 = new er(var7Lifetime1, var13, var12.field_g, -var13 + var14, Math.max(var3.a((byte) -76), -var12.field_g + var12.field_d));
+            var15 = new er(var7Lifetime1, var13, var12.field_g, -var13 + var14, Math.max(var3.lineHeight((byte) -76), -var12.field_g + var12.field_d));
             if (var10 != null) {
               ((er) (var10)).field_j = var15;
             }
