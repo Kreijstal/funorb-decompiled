@@ -109,7 +109,7 @@ final class hr {
           cg.field_C.a(cg.field_C.field_K, param1, (byte) 95, 0, param2 + uq.field_j.field_K);
           ji.field_I.a(485 + param2 - (-2 - param4), 5, 5, 2, -123, -5 + var7, param4);
           if (wi.field_c != null) {
-            wi.field_c.a(ji.field_I.field_db, ji.field_I.field_mb, (byte) 117, ji.field_I.field_hb, ji.field_I.field_K);
+            wi.field_c.setBounds(ji.field_I.field_db, ji.field_I.field_mb, (byte) 117, ji.field_I.field_hb, ji.field_I.field_K);
           }
           var8 = -var6_int - param2 + tg.field_c.field_K;
           var9 = var8 / 2;

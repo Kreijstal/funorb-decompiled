@@ -15,7 +15,7 @@ final class SecondaryNodeHashTable {
     static GameSession field_g;
     static Sprite field_f;
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode nextInTraversal(byte param0) {
         int fieldTemp$0 = 0;
         DualLinkNode var2;
         int var3;
@@ -463,7 +463,7 @@ final class SecondaryNodeHashTable {
         return (qh) null;
     }
 
-    final void a(long param0, DualLinkNode param1, boolean param2) {
+    final void put(long param0, DualLinkNode param1, boolean param2) {
         DualLinkNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -550,7 +550,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final DualLinkNode d(byte param0) {
+    final DualLinkNode getNextWithKey(byte param0) {
         int var2;
         DualLinkNode var3;
         DualLinkNode var4;
@@ -593,15 +593,15 @@ final class SecondaryNodeHashTable {
         DialogRoot.j(96);
     }
 
-    final DualLinkNode c(byte param0) {
+    final DualLinkNode startTraversal(byte param0) {
         if (param0 > -66) {
           this.field_c = -75;
         }
         this.field_c = 0;
-        return this.b((byte) -107);
+        return this.nextInTraversal((byte) -107);
     }
 
-    final DualLinkNode a(int param0, long param1) {
+    final DualLinkNode get(int param0, long param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;

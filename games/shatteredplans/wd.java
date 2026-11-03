@@ -24,42 +24,42 @@ final class wd extends ji {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         int var6 = 0;
         int var6Lifetime1;
-        super.a(param0, param1, (byte) 119, param3, param4);
+        super.setBounds(param0, param1, (byte) 119, param3, param4);
         if (param2 <= 99) {
           this.field_M = (TextFieldWidget) null;
           var6 = -130 + param4 >> 1;
           if (this.field_J) {
-            this.field_M.a(0, param1, (byte) 125, var6, 25);
-            this.field_O.a(0, param1, (byte) 113, 45 + var6, 25);
-            this.field_R.a(0, param1, (byte) 103, 90 + var6, 40);
+            this.field_M.setBounds(0, param1, (byte) 125, var6, 25);
+            this.field_O.setBounds(0, param1, (byte) 113, 45 + var6, 25);
+            this.field_R.setBounds(0, param1, (byte) 103, 90 + var6, 40);
             return;
           }
-          this.field_O.a(0, param1, (byte) 108, var6, 25);
-          this.field_M.a(0, param1, (byte) 122, var6 + 45, 25);
-          this.field_R.a(0, param1, (byte) 103, 90 + var6, 40);
+          this.field_O.setBounds(0, param1, (byte) 108, var6, 25);
+          this.field_M.setBounds(0, param1, (byte) 122, var6 + 45, 25);
+          this.field_R.setBounds(0, param1, (byte) 103, 90 + var6, 40);
           return;
         }
         var6Lifetime1 = -130 + param4 >> 1;
         if (this.field_J) {
-          this.field_M.a(0, param1, (byte) 125, var6Lifetime1, 25);
-          this.field_O.a(0, param1, (byte) 113, 45 + var6Lifetime1, 25);
-          this.field_R.a(0, param1, (byte) 103, 90 + var6Lifetime1, 40);
+          this.field_M.setBounds(0, param1, (byte) 125, var6Lifetime1, 25);
+          this.field_O.setBounds(0, param1, (byte) 113, 45 + var6Lifetime1, 25);
+          this.field_R.setBounds(0, param1, (byte) 103, 90 + var6Lifetime1, 40);
           return;
         }
-        this.field_O.a(0, param1, (byte) 108, var6Lifetime1, 25);
-        this.field_M.a(0, param1, (byte) 122, var6Lifetime1 + 45, 25);
-        this.field_R.a(0, param1, (byte) 103, 90 + var6Lifetime1, 40);
+        this.field_O.setBounds(0, param1, (byte) 108, var6Lifetime1, 25);
+        this.field_M.setBounds(0, param1, (byte) 122, var6Lifetime1 + 45, 25);
+        this.field_R.setBounds(0, param1, (byte) 103, 90 + var6Lifetime1, 40);
     }
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         String var2 = null;
         String var2Lifetime1;
         if (!param0) {
           field_K = (String) null;
-          var2 = this.field_M.c(param0);
+          var2 = this.field_M.getTooltip(param0);
           if (var2 != null) {
             return var2;
           }
@@ -68,7 +68,7 @@ final class wd extends ji {
           }
           return null;
         }
-        var2Lifetime1 = this.field_M.c(param0);
+        var2Lifetime1 = this.field_M.getTooltip(param0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
@@ -153,7 +153,7 @@ final class wd extends ji {
     wd(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param3, param5, (byte) 110, param2, param4);
+          this.setBounds(param3, param5, (byte) 110, param2, param4);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -193,8 +193,8 @@ final class wd extends ji {
         return 0;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1 + 0, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1 + 0, param2, param3);
         if (0 != param0) {
           return;
         }

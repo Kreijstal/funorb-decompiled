@@ -9,11 +9,11 @@ final class cq extends WidgetContainer implements ButtonListener {
     static int field_E;
     static String field_I;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param3 + this.field_m;
         int var6 = param2 + this.field_q;
         gn.field_u.a(StarLink.field_j, var5 + 20, var6 + 20, this.field_x - 40, -50 + this.field_n, 16777215, -1, 1, 0, gn.field_u.field_J);
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     final static int d(boolean param0) {
@@ -89,7 +89,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -98,7 +98,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -214,9 +214,9 @@ final class cq extends WidgetContainer implements ButtonListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_J.a(this.field_n - 48 - var2, 30, (byte) 113, -var3 + this.field_x >> 1, var4);
-        this.field_G.a(-var2 - 48 + this.field_n, 30, (byte) 104, var2 + var4 + (this.field_x - var3 >> 1), var4);
-        this.field_H.a(this.field_n - (78 + var2 * 2), 30, (byte) 104, this.field_x - var3 >> 1, var3);
+        this.field_J.setBounds(this.field_n - 48 - var2, 30, (byte) 113, -var3 + this.field_x >> 1, var4);
+        this.field_G.setBounds(-var2 - 48 + this.field_n, 30, (byte) 104, var2 + var4 + (this.field_x - var3 >> 1), var4);
+        this.field_H.setBounds(this.field_n - (78 + var2 * 2), 30, (byte) 104, this.field_x - var3 >> 1, var3);
         this.field_J.field_u = (WidgetListener) (this);
         this.field_H.field_u = (WidgetListener) (this);
         this.field_G.field_u = (WidgetListener) (this);

@@ -20,7 +20,7 @@ final class WhirlpoolHasher {
     private long[] field_m;
     private byte[] field_k;
 
-    final void a(byte param0, long param1, byte[] param2) {
+    final void update(byte param0, long param1, byte[] param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -61,7 +61,7 @@ final class WhirlpoolHasher {
               this.field_o = this.field_o + 1;
               this.field_d = this.field_d + (8 - var7);
               if (this.field_d == 512) {
-                this.a((byte) -55);
+                this.processBlock((byte) -55);
                 this.field_o = 0;
                 this.field_d = 0;
               }
@@ -86,7 +86,7 @@ final class WhirlpoolHasher {
             this.field_o = this.field_o + 1;
             this.field_d = this.field_d + (8 - var7);
             if (this.field_d == 512) {
-              this.a((byte) -55);
+              this.processBlock((byte) -55);
               this.field_o = 0;
               this.field_d = 0;
             }
@@ -386,7 +386,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(int param0, byte param1, byte[] param2) {
+    final void finish(int param0, byte param1, byte[] param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -409,7 +409,7 @@ final class WhirlpoolHasher {
               this.field_o = this.field_o + 1;
               this.field_a[fieldTemp$0] = (byte) 0;
             }
-            this.a((byte) -55);
+            this.processBlock((byte) -55);
             this.field_o = 0;
           }
           while (this.field_o < 32) {
@@ -418,7 +418,7 @@ final class WhirlpoolHasher {
             this.field_a[fieldTemp$1] = (byte) 0;
           }
           ps.a(this.field_k, 0, this.field_a, 32, 32);
-          this.a((byte) -55);
+          this.processBlock((byte) -55);
           var4_int = 0;
           var5 = param0;
           var6 = 59 % ((param1 - 19) / 32);
@@ -529,7 +529,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    private final void a(byte param0) {
+    private final void processBlock(byte param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -613,7 +613,7 @@ final class WhirlpoolHasher {
         field_p = null;
     }
 
-    final void b(int param0) {
+    final void reset(int param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2Lifetime1;

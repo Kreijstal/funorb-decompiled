@@ -70,10 +70,10 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           this.b((byte) -46, this.field_G);
           var5 = 4;
           var6 = 200;
-          this.field_H.a(var3, 40, (byte) 115, -var6 + 300 >> 1, var6);
+          this.field_H.setBounds(var3, 40, (byte) 115, -var6 + 300 >> 1, var6);
           this.field_H.field_u = (WidgetListener) (this);
           this.b((byte) -126, this.field_H);
-          this.a(0, var3 + 55 + var5, (byte) 121, 0, 300);
+          this.setBounds(0, var3 + 55 + var5, (byte) 121, 0, 300);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -213,7 +213,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
@@ -222,7 +222,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param0) {

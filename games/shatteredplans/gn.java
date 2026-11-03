@@ -431,7 +431,7 @@ final class gn extends WidgetTheme {
               }
             }
           }
-          if (param0.f(1)) {
+          if (param0.isFocused(1)) {
             var14 = this.field_C[5];
             if (var14 != null) {
               var14.a(param0, this.field_z, this, param1, 0, param3);

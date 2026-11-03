@@ -12,9 +12,9 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
     private int field_U;
     static qr field_X;
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_U = pd.field_k - (this.field_m + param0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -25,7 +25,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         super(param0, param1, param2);
     }
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (!this.field_k) {
           return null;
         }

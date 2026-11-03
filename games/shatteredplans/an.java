@@ -20,15 +20,15 @@ final class an {
         try {
           vd.field_j.clear(0);
           FrameTimer.field_b.clear(0);
-          var1 = BattleEvent.field_q.c((byte) -86);
+          var1 = BattleEvent.field_q.startTraversal((byte) -86);
           while (var1 != null) {
             var1.unlinkSecondary(16);
-            var1 = BattleEvent.field_q.b((byte) -107);
+            var1 = BattleEvent.field_q.nextInTraversal((byte) -107);
           }
-          var1Lifetime1 = CipherPacketBuffer.field_m.c((byte) -70);
+          var1Lifetime1 = CipherPacketBuffer.field_m.startTraversal((byte) -70);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(16);
-            var1Lifetime1 = CipherPacketBuffer.field_m.b((byte) -107);
+            var1Lifetime1 = CipherPacketBuffer.field_m.nextInTraversal((byte) -107);
           }
           po.field_b = 0;
         } catch (RuntimeException runtimeException) {

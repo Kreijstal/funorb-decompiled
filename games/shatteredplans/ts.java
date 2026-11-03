@@ -14,10 +14,10 @@ class ts extends FocusableWidget {
     static GameApplet field_G;
     static String field_F;
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (0 != param0) {
           return;
         }
@@ -88,15 +88,15 @@ class ts extends FocusableWidget {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, (byte) 122, param3, param4);
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, (byte) 122, param3, param4);
         this.e(false);
         if (param2 < 99) {
-          this.a(23, -42, -29, 82);
+          this.drawLayer(23, -42, -29, 82);
         }
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -138,7 +138,7 @@ class ts extends FocusableWidget {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (DebouncedValidator.field_e == null) {
-            DebouncedValidator.field_e = StarAbandonedEvent.field_l.a(65535, of.field_f, mk.field_c);
+            DebouncedValidator.field_e = StarAbandonedEvent.field_l.requestSocket(65535, of.field_f, mk.field_c);
           }
           if (DebouncedValidator.field_e.field_d == 0) {
             return false;
@@ -221,7 +221,7 @@ class ts extends FocusableWidget {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        this.a(param1, ((WidgetMetrics) ((Object) this.field_p)).a(true, (UiWidget) (this)), (byte) 100, param0, param3);
+        this.setBounds(param1, ((WidgetMetrics) ((Object) this.field_p)).a(true, (UiWidget) (this)), (byte) 100, param0, param3);
         if (param2 != 57) {
           field_E = (String) null;
         }
@@ -438,7 +438,7 @@ class ts extends FocusableWidget {
         return null;
     }
 
-    String c(boolean param0) {
+    String getTooltip(boolean param0) {
         if (null == this.field_I) {
           return null;
         }
@@ -455,11 +455,11 @@ class ts extends FocusableWidget {
         return this.field_J[this.field_I.field_i];
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_I = null;
           if (this.field_k) {
             var5_int = -this.field_m + (-param0 + pd.field_k);

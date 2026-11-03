@@ -299,7 +299,7 @@ final class r implements Runnable {
         }
         if (this.field_h == 0) {
           if (null == this.field_b) {
-            this.field_b = this.field_l.a(this.field_e, false);
+            this.field_b = this.field_l.requestUrl(this.field_e, false);
           }
           if (this.field_b.field_d == 0) {
             return false;
@@ -315,7 +315,7 @@ final class r implements Runnable {
         }
         if (this.field_h == 1) {
           if (this.field_i == null) {
-            this.field_i = this.field_l.a(65535, 443, this.field_e.getHost());
+            this.field_i = this.field_l.requestSocket(65535, 443, this.field_e.getHost());
           }
           if (this.field_i.field_d == 0) {
             return false;
@@ -351,7 +351,7 @@ final class r implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (null == this.field_a) {
-              this.field_a = this.field_l.a(true, 5, (Runnable) (this));
+              this.field_a = this.field_l.requestThread(true, 5, (Runnable) (this));
             }
             if (this.field_a.field_d == 0) {
               return false;
@@ -365,7 +365,7 @@ final class r implements Runnable {
           }
         }
         if (null == this.field_a) {
-          this.field_a = this.field_l.a(true, 5, (Runnable) (this));
+          this.field_a = this.field_l.requestThread(true, 5, (Runnable) (this));
         }
         if (this.field_a.field_d == 0) {
           return false;

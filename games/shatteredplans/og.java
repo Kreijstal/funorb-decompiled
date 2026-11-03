@@ -106,7 +106,7 @@ final class og implements WidgetPainter {
     }
 
     final static void a(int param0, boolean param1) {
-        le.field_e.a(0, param0, (byte) -66);
+        le.field_e.draw(0, param0, (byte) -66);
     }
 
     public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
@@ -130,7 +130,7 @@ final class og implements WidgetPainter {
             ((FocusableWidget) (param0)).field_z) {
             var8.c(1 + (var6_int + (param0.field_x - var8.field_o >> 1)), (-var8.field_p + param0.field_n >> 1) + 1 + var7, 256);
           }
-          if (!param0.f(param4 ^ 13)) {
+          if (!param0.isFocused(param4 ^ 13)) {
             return;
           }
           dd.a(-4 + param0.field_n, 1, -4 + param0.field_x, var6_int + 2, 2 + var7);

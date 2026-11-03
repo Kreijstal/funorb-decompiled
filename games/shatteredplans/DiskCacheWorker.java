@@ -452,7 +452,7 @@ final class DiskCacheWorker implements Runnable {
         this.field_f = false;
         this.field_d = 0;
         try {
-          var2 = param0.a(true, 5, (Runnable) (this));
+          var2 = param0.requestThread(true, 5, (Runnable) (this));
           while (var2.field_d == 0) {
             jb.a((byte) -107, 10L);
           }

@@ -182,7 +182,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         var7[var13.field_e.length] = var4;
         var13.field_e = var7;
         var13.a(26253);
-        var13.b((byte) 80);
+        var13.computeDistances((byte) 80);
         var8 = var13.field_e;
         for (var9 = 0; var9 < var8.length; var9++) {
           var10 = var8[var9];

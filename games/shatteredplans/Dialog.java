@@ -62,7 +62,7 @@ abstract class Dialog extends WidgetContainer {
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_G == 0) {
           return;
         }
@@ -71,7 +71,7 @@ abstract class Dialog extends WidgetContainer {
             return;
           }
           this.a(param3 + this.field_m, 103, this.field_q + param2);
-          super.a(param0, -11857, param2, param3);
+          super.drawLayer(param0, -11857, param2, param3);
           return;
         }
         if (ArchiveIndex.field_r == null ||
@@ -82,7 +82,7 @@ abstract class Dialog extends WidgetContainer {
         aq.a((byte) 110, ArchiveIndex.field_r);
         gf.b();
         this.a(0, 103, 0);
-        super.a(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
+        super.drawLayer(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
         Star.f((byte) -50);
         ArchiveIndex.field_r.drawAlpha(this.field_m + param3, this.field_q + param2, this.field_G);
     }
@@ -127,7 +127,7 @@ abstract class Dialog extends WidgetContainer {
         if (param2 >= -103) {
           Dialog.m(11);
         }
-        this.a(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ep.field_a - param1 >> 1, param1);
+        this.setBounds(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ep.field_a - param1 >> 1, param1);
     }
 
     final static ro a(byte param0, String param1) {
@@ -227,7 +227,7 @@ abstract class Dialog extends WidgetContainer {
 
     private final int e(boolean param0) {
         if (param0) {
-          this.a(-109, -11, -57, 34);
+          this.drawLayer(-109, -11, -57, 34);
         }
         return this.field_E ? this != this.field_F.g((byte) 119) ? 0 : 256 : 0;
     }

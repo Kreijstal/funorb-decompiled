@@ -17,7 +17,7 @@ final class GalaxyMap {
     Random field_j;
     static int field_f;
 
-    final void b(byte param0) {
+    final void computeDistances(byte param0) {
         this.field_h = QuaternaryNodeList.a(this.field_e, 0);
         if (param0 != 80) {
           PacketBuffer var3 = (PacketBuffer) null;
@@ -42,7 +42,7 @@ final class GalaxyMap {
         this.field_c = AgeValidator.a(this.field_e, false);
     }
 
-    private final void a(Player param0, GameRules param1, int param2, Star param3) {
+    private final void assignHomeStar(Player param0, GameRules param1, int param2, Star param3) {
         Territory var5 = null;
         lo var6 = null;
         try {
@@ -172,7 +172,7 @@ final class GalaxyMap {
         }
     }
 
-    final void a(Player[] param0, GameRules param1, int param2) {
+    final void assignHomeStars(Player[] param0, GameRules param1, int param2) {
         int var4_int = 0;
         Star[] var5 = null;
         int var6 = 0;
@@ -194,7 +194,7 @@ final class GalaxyMap {
             if (var5.length > var6) {
               var7 = var5[var6];
               if (var7.field_L == 3) {
-                this.a(param0[var4_int], param1, param2 ^ 32443, var7);
+                this.assignHomeStar(param0[var4_int], param1, param2 ^ 32443, var7);
                 var4_int++;
                 if (var4_int == param0.length) {
                   break scanLoop1;
@@ -207,9 +207,9 @@ final class GalaxyMap {
           }
           if (param2 != 4) {
             field_g = (Archive) null;
-            this.b((byte) 80);
+            this.computeDistances((byte) 80);
           } else {
-            this.b((byte) 80);
+            this.computeDistances((byte) 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

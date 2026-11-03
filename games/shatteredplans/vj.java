@@ -152,15 +152,15 @@ final class vj extends SingleChildWidget {
         field_H = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
-        super.a(param0, param1, param2, param3, param4 + 0, param5);
+    final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+        super.handleRelease(param0, param1, param2, param3, param4 + 0, param5);
         fr var8 = oa.field_b;
         if (param4 != -600269855) {
           return;
         }
         try {
           if (var8 != null &&
-            this.a(param0, 87, param3, param1, param2)) {
+            this.containsPoint(param0, 87, param3, param1, param2)) {
             if (this.field_u instanceof lf) {
               ((lf) (this.field_u)).a(-27619, this, var8);
               oa.field_b = null;

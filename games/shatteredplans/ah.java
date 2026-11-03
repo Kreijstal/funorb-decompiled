@@ -20,7 +20,7 @@ final class ah extends ts {
         try {
           this.field_M = param0;
           this.field_W = param1;
-          this.a(param3, param5, (byte) 113, param2, param4);
+          this.setBounds(param3, param5, (byte) 113, param2, param4);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -34,16 +34,16 @@ final class ah extends ts {
         return DiskCacheWorker.field_b;
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
           this.field_N = this.field_N + 1;
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ah.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
         ValidationState var6;
         int var9;
@@ -110,7 +110,7 @@ final class ah extends ts {
             this.field_s = var17;
             this.e(false);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(param0, param1, param2, param3);
           var6 = this.field_M.c(-123);
           var43 = (WidgetMetrics) ((Object) this.field_p);
           var9 = this.field_m + param3;
@@ -177,7 +177,7 @@ final class ah extends ts {
             this.field_s = var23;
             this.e(false);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(param0, param1, param2, param3);
           var6 = this.field_M.c(-123);
           var44 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime1 = this.field_m + param3;
@@ -246,7 +246,7 @@ final class ah extends ts {
             this.field_s = var29;
             this.e(false);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(param0, param1, param2, param3);
           var6Lifetime1 = this.field_M.c(-123);
           var45 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime2 = this.field_m + param3;
@@ -295,7 +295,7 @@ final class ah extends ts {
           this.field_s = var5;
           this.e(false);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         var6Lifetime2 = this.field_M.c(-123);
         var46 = (WidgetMetrics) ((Object) this.field_p);
         var9Lifetime3 = this.field_m + param3;
@@ -348,7 +348,7 @@ final class ah extends ts {
         this.field_V.c(var9Lifetime3 - (var39.field_o >> 1), -var39.field_p + var10Lifetime3, 256);
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -406,7 +406,7 @@ final class ah extends ts {
         }
     }
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (param0) {
           return null;
         }

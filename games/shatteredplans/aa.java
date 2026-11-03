@@ -310,16 +310,16 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         this.b((byte) -66, this.field_I);
         int var6 = 4;
         int var7 = 200;
-        this.field_E.a(var3, 40, (byte) 102, 496 - var7 >> 1, var7);
-        this.field_O.a(15 + var3, 40, (byte) 100, var6 + 3, 60);
+        this.field_E.setBounds(var3, 40, (byte) 102, 496 - var7 >> 1, var7);
+        this.field_O.setBounds(15 + var3, 40, (byte) 100, var6 + 3, 60);
         this.field_O.field_u = (WidgetListener) (this);
         this.field_E.field_u = (WidgetListener) (this);
         this.b((byte) -115, this.field_E);
         this.b((byte) -119, this.field_O);
         this.field_D = new bj((dl) (this));
-        this.field_D.a(this.field_Q.field_q + 20, 150, (byte) 115, 60 + (this.field_Q.field_m + this.field_Q.field_x), -60 + (-this.field_Q.field_m + this.field_x) - this.field_Q.field_x);
+        this.field_D.setBounds(this.field_Q.field_q + 20, 150, (byte) 115, 60 + (this.field_Q.field_m + this.field_Q.field_x), -60 + (-this.field_Q.field_m + this.field_x) - this.field_Q.field_x);
         this.b((byte) -120, this.field_D);
-        this.a(0, var3 + 55 + var6, (byte) 122, 0, 496);
+        this.setBounds(0, var3 + 55 + var6, (byte) 122, 0, 496);
     }
 
     private final int a(int param0, String param1, int param2, byte param3, UiWidget param4, String param5) {
@@ -389,9 +389,9 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_E.field_y = this.m(param3 - 46);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "aa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -565,7 +565,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         return stackIn_39_0;
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
@@ -574,7 +574,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2 ^ 0, param3)) {
+          if (super.handleKey(param0, param1, param2 ^ 0, param3)) {
             return true;
           }
           if (98 == param0) {
@@ -621,7 +621,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           var7 = new ValidationIndicator(((ValidatableWidget) ((Object) param1)).a((byte) 106));
           var8 = -33 / ((param3 + 88) / 35);
           this.b((byte) -116, var7);
-          var7.a(var9.field_q + (-15 + var9.field_n >> 1), 15, (byte) 118, var9.field_x + (var9.field_m + 3), 15);
+          var7.setBounds(var9.field_q + (-15 + var9.field_n >> 1), 15, (byte) 118, var9.field_x + (var9.field_m + 3), 15);
           stackIn_1_0 = var9.field_n;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

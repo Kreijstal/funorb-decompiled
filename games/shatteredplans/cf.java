@@ -189,12 +189,12 @@ final class cf extends WidgetContainer implements ButtonListener {
           var4 = new FocusableWidget(param2, param0);
           var4.field_p = (WidgetPainter) ((Object) new qp());
           var5 = -2 + this.field_n;
-          this.a(0, this.field_n + 34, (byte) 127, 0, this.field_x);
+          this.setBounds(0, this.field_n + 34, (byte) 127, 0, this.field_x);
           if (param1 <= 119) {
             stackIn_2_0 = (FocusableWidget) null;
             return stackIn_2_0;
           }
-          var4.a(var5, 30, (byte) 103, 7, -14 + this.field_x);
+          var4.setBounds(var5, 30, (byte) 103, 7, -14 + this.field_x);
           this.b((byte) -82, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -245,7 +245,7 @@ final class cf extends WidgetContainer implements ButtonListener {
           this.field_K = param0;
           this.field_L = param2;
           var4_int = this.field_L != null ? this.field_J.textHeight(this.field_L, 260, this.field_J.field_J) : 0;
-          this.a(0, 22 + var4_int, (byte) 121, 0, 288);
+          this.setBounds(0, 22 + var4_int, (byte) 121, 0, 288);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -266,8 +266,8 @@ final class cf extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1 ^ 0, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1 ^ 0, param2, param3);
         this.field_J.a(this.field_L, param3 + (this.field_m + 14), 10 + this.field_q + param2, this.field_x - 28, this.field_n, 16777215, -1, 0, 0, this.field_J.field_J);
         if (param1 != -11857) {
           field_D = 28;

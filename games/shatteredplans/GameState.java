@@ -861,7 +861,7 @@ final class GameState {
           }
           this.recomputePlayerTotals(-60);
           this.field_O = this.field_O + 1;
-          this.field_g.b((byte) 80);
+          this.field_g.computeDistances((byte) 80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1127,11 +1127,11 @@ final class GameState {
         int[] var10 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!param0.a(false)) {
+          if (!param0.isReady(false)) {
             stackIn_3_0 = new DisplayModeInfo[]{};
             return stackIn_3_0;
           }
-          var8 = param0.a(12);
+          var8 = param0.requestDisplayModes(12);
           while (0 == var8.field_d) {
             jb.a((byte) -100, 10L);
           }
@@ -2046,7 +2046,7 @@ final class GameState {
           this.a(param2, false, (byte) 125);
           this.a(param0, false, (byte) 114);
           this.field_g.a(param1 ^ 26249);
-          this.field_g.b((byte) 80);
+          this.field_g.computeDistances((byte) 80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2467,7 +2467,7 @@ final class GameState {
                 this.a(var3_ref.field_n, false, (byte) 123);
                 this.a(var3_ref.field_k, false, (byte) 118);
                 this.field_g.a(26253);
-                this.field_g.b((byte) 80);
+                this.field_g.computeDistances((byte) 80);
                 var3_ref.unlink((byte) -101);
               }
               var3_ref = (Wormhole) (this.field_A.nextForward((byte) -71));

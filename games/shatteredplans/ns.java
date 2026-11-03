@@ -116,7 +116,7 @@ class ns extends il implements ButtonListener {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -125,7 +125,7 @@ class ns extends il implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != param2) {
-            stackIn_5_0 = super.a(param0, param1, param2 + 0, param3);
+            stackIn_5_0 = super.handleKey(param0, param1, param2 + 0, param3);
             return stackIn_5_0;
           }
           this.i((byte) -104);

@@ -47,7 +47,7 @@ final class cg extends SingleChildWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var6 = null;
         if (0 != param0) {
           return;
@@ -61,12 +61,12 @@ final class cg extends SingleChildWidget {
         if (this.field_J != 256) {
           var6 = new Sprite(this.field_z.field_x, this.field_z.field_n);
           aq.a((byte) 114, var6);
-          this.field_z.a(param0, param1, 0, 0);
+          this.field_z.drawLayer(param0, param1, 0, 0);
           Star.f((byte) -78);
           var6.drawAlpha(param3 + this.field_m, param2 + this.field_q, this.field_J);
           return;
         }
-        this.field_z.a(param0, -11857, param2 + this.field_q, param3 + this.field_m);
+        this.field_z.drawLayer(param0, -11857, param2 + this.field_q, param3 + this.field_m);
     }
 
     final static Sprite[] a(int param0, Sprite param1) {
@@ -228,7 +228,7 @@ final class cg extends SingleChildWidget {
     cg(UiWidget param0) {
         super(param0.field_m, param0.field_q, param0.field_x, param0.field_n, (WidgetPainter) null, (WidgetListener) null);
         try {
-          param0.a(0, this.field_n, (byte) 120, 0, this.field_x);
+          param0.setBounds(0, this.field_n, (byte) 120, 0, this.field_x);
           this.field_z = param0;
           this.field_J = 256;
         } catch (RuntimeException runtimeException) {

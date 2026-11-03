@@ -3877,7 +3877,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
           var2.field_e = this.field_f;
           var2.a(26253);
           var3 = 12 % ((-67 - param0) / 44);
-          var2.b((byte) 80);
+          var2.computeDistances((byte) 80);
           var4 = new t(var2.field_e);
           var4.a(true, 1);
           this.findHexNeighbours(-11);
@@ -4094,7 +4094,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
               this.a(30429, param1);
             }
             var4.a(26253);
-            var4.b((byte) 80);
+            var4.computeDistances((byte) 80);
             var6 = new t(var4.field_e);
             var6.a(true, 1);
             this.findHexNeighbours(-11);

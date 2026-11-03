@@ -98,9 +98,9 @@ final class bo extends jl implements ButtonListener {
           if (param2 != 0) {
             bo.p(-92);
           }
-          var4.a(var5, 30, (byte) 126, 15, this.field_x - 14 - 16);
+          var4.setBounds(var5, 30, (byte) 126, 15, this.field_x - 14 - 16);
           this.b((byte) -50, var4);
-          this.d((byte) 90);
+          this.reapplyBounds((byte) 90);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

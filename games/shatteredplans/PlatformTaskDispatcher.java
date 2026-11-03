@@ -33,24 +33,24 @@ final class PlatformTaskDispatcher implements Runnable {
         if (param3 > -96) {
           return (PlatformTask) null;
         }
-        return this.a(param0, !param1 ? 1 : 22, param2, (byte) -120, 0);
+        return this.submit(param0, !param1 ? 1 : 22, param2, (byte) -120, 0);
     }
 
-    final PlatformTask a(Class[] param0, String param1, int param2, Class param3) {
+    final PlatformTask requestMethod(Class[] param0, String param1, int param2, Class param3) {
         if (param2 < 72) {
           field_d = (String) null;
         }
-        return this.a(0, 8, new Object[]{param3, param1, param0}, (byte) -122, 0);
+        return this.submit(0, 8, new Object[]{param3, param1, param0}, (byte) -122, 0);
     }
 
-    final PlatformTask a(boolean param0, int param1, Runnable param2) {
+    final PlatformTask requestThread(boolean param0, int param1, Runnable param2) {
         if (!param0) {
           return (PlatformTask) null;
         }
-        return this.a(param1, 2, param2, (byte) -100, 0);
+        return this.submit(param1, 2, param2, (byte) -100, 0);
     }
 
-    final PlatformTask a(int param0, int param1, String param2) {
+    final PlatformTask requestSocket(int param0, int param1, String param2) {
         if (param0 != 65535) {
           this.field_e = true;
         }
@@ -61,10 +61,10 @@ final class PlatformTaskDispatcher implements Runnable {
         if (param4 != -1194) {
           this.field_k = (RandomAccessCacheFile) null;
         }
-        return this.a(param1 + (param2 << 16), 6, (Object) null, (byte) 47, (param3 << 16) + param0);
+        return this.submit(param1 + (param2 << 16), 6, (Object) null, (byte) 47, (param3 << 16) + param0);
     }
 
-    final boolean a(boolean param0) {
+    final boolean isReady(boolean param0) {
         if (param0) {
           String var3 = (String) null;
           PlatformTaskDispatcher.a((String) null, -128, (String) null, true);
@@ -78,16 +78,16 @@ final class PlatformTaskDispatcher implements Runnable {
         return null != this.field_t ? true : false;
     }
 
-    final PlatformTask a(java.net.URL param0, boolean param1) {
+    final PlatformTask requestUrl(java.net.URL param0, boolean param1) {
         PlatformTask discarded$0 = null;
         if (param1) {
           String var4 = (String) null;
           discarded$0 = this.a(-90, true, (String) null, -75);
         }
-        return this.a(0, 4, param0, (byte) 92, 0);
+        return this.submit(0, 4, param0, (byte) 92, 0);
     }
 
-    private final PlatformTask a(int param0, int param1, Object param2, byte param3, int param4) {
+    private final PlatformTask submit(int param0, int param1, Object param2, byte param3, int param4) {
         PlatformTask var6 = null;
         int var8 = 0;
         Throwable decompiledCaughtException = null;
@@ -407,7 +407,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final void b(int param0) {
+    final void shutdown(int param0) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
@@ -472,25 +472,25 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(java.awt.Frame param0, byte param1) {
+    final PlatformTask requestFrame(java.awt.Frame param0, byte param1) {
         if (param1 <= 119) {
           this.field_k = (RandomAccessCacheFile) null;
         }
-        return this.a(0, 7, param0, (byte) 55, 0);
+        return this.submit(0, 7, param0, (byte) 55, 0);
     }
 
-    final PlatformTask a(int param0) {
+    final PlatformTask requestDisplayModes(int param0) {
         if (param0 != 12) {
           return (PlatformTask) null;
         }
-        return this.a(0, 5, (Object) null, (byte) -110, 0);
+        return this.submit(0, 5, (Object) null, (byte) -110, 0);
     }
 
-    final PlatformTask a(Class param0, byte param1, String param2) {
+    final PlatformTask requestField(Class param0, byte param1, String param2) {
         if (param1 <= 24) {
-          this.a(false);
+          this.isReady(false);
         }
-        return this.a(0, 9, new Object[]{param0, param2}, (byte) -110, 0);
+        return this.submit(0, 9, new Object[]{param0, param2}, (byte) -110, 0);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {

@@ -51,7 +51,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -60,7 +60,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -161,14 +161,14 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_J != null) {
           gn.field_u.a(this.field_J, 20 + (param3 + this.field_m), 15 + this.field_q + param2, -40 + this.field_x, this.field_n, 16777215, -1, 1, 0, gn.field_u.field_J);
         }
         if (this.field_Q != null) {
           gf.f(param3 + 10, 134 + param2, this.field_x - 20, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     public final void a(int param0, TextFieldWidget param1) {
@@ -180,7 +180,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_H) {
-            this.field_R.a((byte) -21, (UiWidget) (this));
+            this.field_R.containsWidget((byte) -21, (UiWidget) (this));
           }
           if (this.field_R == param1) {
             this.a(param0 - 4468);
@@ -319,27 +319,27 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
             this.field_P.field_u = (WidgetListener) (this);
           }
           if (null == this.field_Q) {
-            this.field_K.a(this.field_q, 30, (byte) 106, 8, -6 + (this.field_x - 10));
+            this.field_K.setBounds(this.field_q, 30, (byte) 106, 8, -6 + (this.field_x - 10));
             this.field_q = this.field_q + 35;
           } else {
-            this.field_K.a(this.field_q, 30, (byte) 110, 85, this.field_x - 95);
+            this.field_K.setBounds(this.field_q, 30, (byte) 110, 85, this.field_x - 95);
             this.field_q = this.field_q + 60;
           }
           if (null != this.field_Q) {
-            this.field_Q.a(this.field_q, 30, (byte) 115, 8, this.field_x - 16);
+            this.field_Q.setBounds(this.field_q, 30, (byte) 115, 8, this.field_x - 16);
             this.field_q = this.field_q + 35;
           }
           if (this.field_P != null) {
             if (!this.field_L &&
               !this.field_D) {
-              this.field_P.a(this.field_q, 20, (byte) 108, 8, 40);
+              this.field_P.setBounds(this.field_q, 20, (byte) 108, 8, 40);
               this.field_q = this.field_q + 25;
             } else {
-              this.field_P.a(this.field_q, 30, (byte) 124, 8, -10 + this.field_x - 6);
+              this.field_P.setBounds(this.field_q, 30, (byte) 124, 8, -10 + this.field_x - 6);
               this.field_q = this.field_q + 35;
             }
           }
-          this.a(0, this.field_q + 3, (byte) 100, 0, this.field_x);
+          this.setBounds(0, this.field_q + 3, (byte) 100, 0, this.field_x);
           this.b((byte) -98, this.field_K);
           if (null != this.field_Q) {
             this.b((byte) -44, this.field_Q);

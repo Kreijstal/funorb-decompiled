@@ -38,7 +38,7 @@ final class MidiPcmStream extends PcmStream {
     private MusicTrack field_z;
 
     final synchronized void e(int param0) {
-        this.b(16384, true);
+        this.stopTrack(16384, true);
         if (param0 != 15) {
           this.field_r = (int[]) null;
         }
@@ -145,10 +145,10 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != 256) {
           this.field_r = (int[]) null;
         }
-        MusicPatch var4 = (MusicPatch) (this.field_Q.c(83));
+        MusicPatch var4 = (MusicPatch) (this.field_Q.startTraversal(83));
         while (var4 != null) {
           var4.e(26005);
-          var4 = (MusicPatch) (this.field_Q.a(false));
+          var4 = (MusicPatch) (this.field_Q.nextInTraversal(false));
         }
     }
 
@@ -194,7 +194,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(int param0, boolean param1) {
+    final synchronized void setTempoScale(int param0, boolean param1) {
         this.field_M = param0;
         if (param1) {
           this.field_t = (int[]) null;
@@ -214,7 +214,7 @@ final class MidiPcmStream extends PcmStream {
         this.a(param2, param0, (byte) -16);
     }
 
-    final synchronized void a(byte param0, int param1, int param2) {
+    final synchronized void setChannelVolume(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 > -67) {
@@ -229,7 +229,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(Archive param0, MusicTrack param1, int param2, int param3, SoundCache param4) {
+    final synchronized boolean preparePatches(Archive param0, MusicTrack param1, int param2, int param3, SoundCache param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -258,14 +258,14 @@ final class MidiPcmStream extends PcmStream {
           if (0 < param3) {
             var7 = new int[]{param3};
           }
-          var8 = (be) (param1.field_i.c(-126));
+          var8 = (be) (param1.field_i.startTraversal(-126));
           while (var8 != null) {
             var9 = (int)var8.key;
-            var12 = (MusicPatch) (this.field_Q.a((long)var9, -25064));
+            var12 = (MusicPatch) (this.field_Q.get((long)var9, -25064));
             if (var12 == null) {
               var13 = lo.a(param0, (byte) 125, var9);
               if (var13 != null) {
-                this.field_Q.a(var13, 87, (long)var9);
+                this.field_Q.put(var13, 87, (long)var9);
                 if (!var13.a(param4, var8.field_j, (int[]) (var7), 1)) {
                   var6_int = 0;
                 }
@@ -275,11 +275,11 @@ final class MidiPcmStream extends PcmStream {
             } else {
               if (!var12.a(param4, var8.field_j, (int[]) (var7), 1)) {
                 var6_int = 0;
-                var8 = (be) (param1.field_i.a(false));
+                var8 = (be) (param1.field_i.nextInTraversal(false));
                 continue;
               }
             }
-            var8 = (be) (param1.field_i.a(false));
+            var8 = (be) (param1.field_i.nextInTraversal(false));
           }
           if (var6_int != 0) {
             param1.b();
@@ -1028,16 +1028,16 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void b(int param0, boolean param1) {
+    private final synchronized void stopTrack(int param0, boolean param1) {
         this.field_x.release();
         if (param0 != 16384) {
-          this.h(18);
+          this.isPlaying(18);
         }
         this.field_z = null;
         this.a(-1, param1);
     }
 
-    private final void b(int param0, byte param1) {
+    private final void removeChannelVoices(int param0, byte param1) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         MusicVoice var3 = (MusicVoice) (this.field_l.field_n.startForward(0));
         if (param1 != 68) {
@@ -1095,9 +1095,9 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(MusicTrack param0, byte param1, boolean param2) {
+    final synchronized void playTrack(MusicTrack param0, byte param1, boolean param2) {
         try {
-          this.a(param2, param0, 114, true);
+          this.startTrack(param2, param0, 114, true);
           if (param1 != 101) {
             this.field_n = -99L;
           }
@@ -1155,12 +1155,12 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void resetChannel(byte param0, int param1) {
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 < 0) {
           for (param1 = 0; param1 < 16; param1++) {
-            this.a((byte) -63, param1);
+            this.resetChannel((byte) -63, param1);
           }
         } else {
           this.field_y[param1] = 12800;
@@ -1189,9 +1189,9 @@ final class MidiPcmStream extends PcmStream {
         if (!param1) {
           this.a(-1, 2);
         } else {
-          this.b(-1, (byte) 68);
+          this.removeChannelVoices(-1, (byte) 68);
         }
-        this.a((byte) -63, param0);
+        this.resetChannel((byte) -63, param0);
         for (var3 = 0; var3 < 16; var3++) {
           this.field_I[var3] = this.field_m[var3];
         }
@@ -1383,10 +1383,10 @@ final class MidiPcmStream extends PcmStream {
           this.field_q[var5Lifetime4] = 16384 + (we.a(this.field_q[var5Lifetime4], 16256) + var7Lifetime3);
         }
         if (var6Lifetime4 == 120) {
-          this.b(var5Lifetime4, (byte) 68);
+          this.removeChannelVoices(var5Lifetime4, (byte) 68);
         }
         if (var6Lifetime4 == 121) {
-          this.a((byte) -63, var5Lifetime4);
+          this.resetChannel((byte) -63, var5Lifetime4);
         }
         if (var6Lifetime4 == 123) {
           this.a(var5Lifetime4, 2);
@@ -1446,7 +1446,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(boolean param0, MusicTrack param1, int param2, boolean param3) {
+    private final synchronized void startTrack(boolean param0, MusicTrack param1, int param2, boolean param3) {
         int var6 = 0;
         int var5_int = 0;
         int var7 = 0;
@@ -1458,7 +1458,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var5 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.b(16384, param3);
+          this.stopTrack(16384, param3);
           this.field_x.load(param1.field_h);
           stackIn_4_1 = (param0);
           this.field_v = stackIn_4_1;
@@ -1473,7 +1473,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_D = this.field_x.field_b[this.field_C];
           this.field_n = this.field_x.eventTime(this.field_D);
           if (param2 < 32) {
-            this.b(-59, true);
+            this.stopTrack(-59, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1541,7 +1541,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (MusicVoice) (this.field_l.field_n.nextReverse(-123));
           }
         }
-        var11 = (MusicPatch) (this.field_Q.a((long)this.field_I[param1], -25064));
+        var11 = (MusicPatch) (this.field_Q.get((long)this.field_I[param1], -25064));
         var12 = var11;
         if (var12 == null) {
           return;
@@ -1802,7 +1802,7 @@ final class MidiPcmStream extends PcmStream {
         var4 = this.field_n;
         if (null != this.field_z &&
           this.field_S == var3) {
-          this.a(this.field_v, this.field_z, 33, this.field_B);
+          this.startTrack(this.field_v, this.field_z, 33, this.field_B);
           this.a((byte) 109);
           return;
         }
@@ -1838,7 +1838,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_x.savePosition(var2);
             if (this.field_x.isFinished()) {
               if (null != this.field_z) {
-                this.a(this.field_z, (byte) 101, this.field_v);
+                this.playTrack(this.field_z, (byte) 101, this.field_v);
                 this.a((byte) 29);
                 return;
               }
@@ -1984,7 +1984,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean h(int param0) {
+    final synchronized boolean isPlaying(int param0) {
         if (param0 != 5309) {
           field_L = (String) null;
         }
@@ -2015,7 +2015,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_x = new MidiFileReader();
         this.field_l = new MusicVoiceMixer(this);
         this.field_Q = new IntrusiveNodeHashTable(128);
-        this.a((byte) -90, -1, 256);
+        this.setChannelVolume((byte) -90, -1, 256);
         this.a(-1, true);
     }
 
@@ -2044,7 +2044,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_l = new MusicVoiceMixer(this);
         try {
           this.field_Q = param0.field_Q;
-          this.a((byte) -75, -1, 256);
+          this.setChannelVolume((byte) -75, -1, 256);
           this.a(-1, true);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');

@@ -10,7 +10,7 @@ class FocusableWidget extends UiWidget {
     static String field_C;
     boolean field_y;
 
-    final StringBuilder a(byte param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder describeTree(byte param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         int var5_int = 0;
@@ -24,8 +24,8 @@ class FocusableWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 111 % ((64 - param0) / 61);
-          if (this.a(false, param2, param3, param1)) {
-            this.a(param1, param2, false, param3);
+          if (this.markVisited(false, param2, param3, param1)) {
+            this.appendDescription(param1, param2, false, param3);
             if (this.field_z) {
               discarded$2 = param3.append(" active");
             }
@@ -55,7 +55,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_13_0 = null;
@@ -70,7 +70,7 @@ class FocusableWidget extends UiWidget {
           if (!this.field_B) {
             return false;
           }
-          param1.e((byte) -122);
+          param1.blur((byte) -122);
           this.field_A = true;
           if (this.field_u != null &&
             this.field_u instanceof dj) {
@@ -91,7 +91,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 1) {
           this.field_y = false;
           return this.field_A;
@@ -99,7 +99,7 @@ class FocusableWidget extends UiWidget {
         return this.field_A;
     }
 
-    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -107,8 +107,8 @@ class FocusableWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_y &&
-            this.a(param1, 39, param3, param5, param4)) {
-            this.a((byte) 124, param6);
+            this.containsPoint(param1, 39, param3, param5, param4)) {
+            this.containsWidget((byte) 124, param6);
             this.field_o = param0;
             if (null != this.field_u &&
               this.field_u instanceof dr) {
@@ -146,7 +146,7 @@ class FocusableWidget extends UiWidget {
         this(param0, MusicVoice.field_I.field_q, param1);
     }
 
-    final void e(byte param0) {
+    final void blur(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -195,25 +195,25 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           if (this.field_o != 0) {
             if (AllianceExpiredEvent.field_n == this.field_o) {
               return;
             }
-            if (this.a(pd.field_k, 72, bb.field_b, param1, param0) &&
+            if (this.containsPoint(pd.field_k, 72, bb.field_b, param1, param0) &&
               AllianceExpiredEvent.field_n == 0) {
               this.a(this.field_o, pd.field_k - param0, -param1 + bb.field_b, (byte) -109);
             }
-            this.a(pd.field_k, param1, param0, bb.field_b, -600269855, param2);
+            this.handleRelease(pd.field_k, param1, param0, bb.field_b, -600269855, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kg.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    boolean a(int param0, char param1, int param2, UiWidget param3) {
+    boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -223,7 +223,7 @@ class FocusableWidget extends UiWidget {
           if (param2 != 13) {
             return true;
           }
-          if (!this.f(1)) {
+          if (!this.isFocused(1)) {
             return false;
           }
           if (param0 != 84 &&
@@ -273,7 +273,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         if (param4 != -600269855) {
           return;
         }

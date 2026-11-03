@@ -165,7 +165,7 @@ final class ta {
 
     final static mj a(int param0, long param1) {
         int var3 = -91 % ((59 - param0) / 56);
-        return (mj) (ShatteredPlansClient.field_H.a(65280, param1));
+        return (mj) (ShatteredPlansClient.field_H.get(65280, param1));
     }
 
     final static void a(int param0, int param1, byte param2, boolean param3) {

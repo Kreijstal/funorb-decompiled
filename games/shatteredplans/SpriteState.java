@@ -22,9 +22,9 @@ abstract class SpriteState extends DualLinkNode {
         hk.field_nb = wp.field_a;
         PlacementEvent.field_n = MusicTrack.a(param0, "", "shattered_plans_win");
         wh.field_b = MusicTrack.a(param0, "", "shattered_plans_lose");
-        ValidationState.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
-        ValidationState.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
-        ValidationState.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, sf.field_d, 50, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, wp.field_a, 41, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, js.field_i, 111, 0, mj.field_Sb);
         if (param2 < 26) {
           return;
         }

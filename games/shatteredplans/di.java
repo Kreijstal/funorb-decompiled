@@ -128,7 +128,7 @@ final class di extends IntrusiveNode {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (ve) (CipherPacketBuffer.field_m.a(65280, (long)var2.hashCode()));
+          var3 = (ve) (CipherPacketBuffer.field_m.get(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
             var4 = ji.a(var7, true);
@@ -139,7 +139,7 @@ final class di extends IntrusiveNode {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (ve) (CipherPacketBuffer.field_m.d((byte) -116));
+            var3 = (ve) (CipherPacketBuffer.field_m.getNextWithKey((byte) -116));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

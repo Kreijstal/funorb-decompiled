@@ -84,7 +84,7 @@ final class vq {
                       var12[var17] = ImageProducerRasterBuffer.a(-134, var10[var17]);
                       var17++;
                     }
-                    var18.field_n[var5] = param1.a(var12, var8, param3 + 83, ImageProducerRasterBuffer.a(-134, var20));
+                    var18.field_n[var5] = param1.requestMethod(var12, var8, param3 + 83, ImageProducerRasterBuffer.a(-134, var20));
                     var18.field_h[var5] = var21;
                   }
                 } else {
@@ -98,7 +98,7 @@ final class vq {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_r[var5] = var9;
-                  var18.field_q[var5] = param1.a(ImageProducerRasterBuffer.a(-134, var15), (byte) 77, var16);
+                  var18.field_q[var5] = param1.requestField(ImageProducerRasterBuffer.a(-134, var15), (byte) 77, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -335,7 +335,7 @@ final class qp extends WidgetTheme {
             field_v = (String) null;
           }
           if (!param0.field_k) {
-            stackIn_8_0 = (param0.f(1)) ? 1 : 0;
+            stackIn_8_0 = (param0.isFocused(1)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }

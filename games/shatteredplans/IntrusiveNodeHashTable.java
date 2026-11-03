@@ -29,7 +29,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final void a(IntrusiveNode param0, int param1, long param2) {
+    final void put(IntrusiveNode param0, int param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param0.previous != null) {
@@ -47,7 +47,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         IntrusiveNode var4 = this.field_a[(int)(param0 & (long)(-1 + this.field_b))];
@@ -61,7 +61,7 @@ final class IntrusiveNodeHashTable {
           this.field_l = this.field_l.next;
         }
         if (param1 != -25064) {
-          this.a(61L, 9);
+          this.get(61L, 9);
         }
         this.field_l = null;
         return null;
@@ -212,7 +212,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode nextInTraversal(boolean param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;
@@ -241,10 +241,10 @@ final class IntrusiveNodeHashTable {
         return var2;
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode startTraversal(int param0) {
         int var2 = 61 % ((param0 + 63) / 54);
         this.field_c = 0;
-        return this.a(false);
+        return this.nextInTraversal(false);
     }
 
     final static void a(int param0, int param1) {

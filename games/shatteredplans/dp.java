@@ -50,10 +50,10 @@ final class dp extends DualLinkNode {
             var4 = param0;
           }
           var5 = new WhirlpoolHasher();
-          var5.b(param2 ^ 169946828);
-          var5.a((byte) 36, (long)(param1 * 8), var4);
+          var5.reset(param2 ^ 169946828);
+          var5.update((byte) 36, (long)(param1 * 8), var4);
           var6 = new byte[64];
-          var5.a(0, (byte) 111, var6);
+          var5.finish(0, (byte) 111, var6);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

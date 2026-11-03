@@ -44,14 +44,14 @@ final class LinkPainter implements WidgetPainter {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param0.field_k &&
-            !param0.f(1)) {
+            !param0.isFocused(1)) {
             stackIn_8_0 = 2188450;
           } else {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
           this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_s + "</u>", param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, var6_int, -1, this.field_a, this.field_d, this.field_f.field_q + this.field_f.field_J);
-          if (param0.f(1)) {
+          if (param0.isFocused(1)) {
             var7 = this.field_f.stringWidth(param0.field_s);
             var8 = this.field_f.field_J + this.field_f.field_q;
             var9 = param0.field_m + param1;

@@ -227,7 +227,7 @@ final class uk {
               var32[var20].addStar(-21771, var33);
             }
           }
-          var15.b((byte) 80);
+          var15.computeDistances((byte) 80);
           for (var20Lifetime1 = 0; var20Lifetime1 < param4.length; var20Lifetime1++) {
             if (!param7.field_i) {
               var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.startForward(0));

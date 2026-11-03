@@ -121,7 +121,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
           tg.field_c.b(param1, -43);
           var2 = wi.field_c;
           if (var2 != null) {
-            var2.a(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
+            var2.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
             return;
           }
           return;
@@ -131,7 +131,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         if (var2Lifetime1 == null) {
           return;
         }
-        var2Lifetime1.a(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
+        var2Lifetime1.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
     }
 
     public static void d(byte param0) {

@@ -113,7 +113,7 @@ final class ql extends IntrusiveNode {
             }
           }
           if (jh.field_B != null &&
-            jh.field_B.h(5309)) {
+            jh.field_B.isPlaying(5309)) {
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ')');
@@ -133,7 +133,7 @@ final class ql extends IntrusiveNode {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           while (true) {
-            var3 = param2.a(param0, (byte) 127);
+            var3 = param2.requestFrame(param0, (byte) 127);
             while (var3.field_d == 0) {
               jb.a((byte) -94, 10L);
             }

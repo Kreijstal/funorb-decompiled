@@ -14,7 +14,7 @@ final class SliderWidget extends FocusableWidget {
     static boolean[][] field_E;
     int field_I;
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int var12 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -30,10 +30,10 @@ final class SliderWidget extends FocusableWidget {
         UiWidget var15 = null;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!super.a(param0, param1, (byte) 101, param3, param4, param5, param6)) {
+          if (!super.handlePress(param0, param1, (byte) 101, param3, param4, param5, param6)) {
             if (param2 <= 95) {
               var15 = (UiWidget) null;
-              this.a(83, 56, (byte) 48, -95, 108, -98, (UiWidget) null);
+              this.handlePress(83, 56, (byte) 48, -95, 108, -98, (UiWidget) null);
             }
             return false;
           }

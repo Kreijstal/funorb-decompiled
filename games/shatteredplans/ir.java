@@ -59,9 +59,9 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_I.field_y = this.k(-60);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ir.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -223,7 +223,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         return false;
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         boolean stackIn_5_0 = false;
@@ -233,7 +233,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2 ^ 0, param3)) {
+          if (super.handleKey(param0, param1, param2 ^ 0, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -242,7 +242,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           }
           if (param2 != 13) {
             var6 = (UiWidget) null;
-            this.a(59, 66, (UiWidget) null, (byte) 56);
+            this.updateHover(59, 66, (UiWidget) null, (byte) 56);
           }
           if (99 != param0) {
             return false;
@@ -313,20 +313,20 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(var3, 50, (byte) 121, 20, 270);
+        var2.setBounds(var3, 50, (byte) 121, 20, 270);
         this.b((byte) -47, var2);
         var3 += 50;
         var3 = var3 + (this.a((byte) -110, 170, var3, this.field_H, AllianceExpiredEvent.field_m, MapView.field_zb) + 5);
-        this.field_I.a(var3, 40, (byte) 123, 496 - var5 >> 1, var5);
-        this.field_G.a(var3 + 15, 40, (byte) 127, var4 + 3, 60);
+        this.field_I.setBounds(var3, 40, (byte) 123, 496 - var5 >> 1, var5);
+        this.field_G.setBounds(var3 + 15, 40, (byte) 127, var4 + 3, 60);
         this.field_G.field_u = (WidgetListener) (this);
         this.field_I.field_u = (WidgetListener) (this);
         this.b((byte) -63, this.field_I);
         this.b((byte) -48, this.field_G);
         this.field_F = new bj((dl) (this));
-        this.field_F.a(20, 150, (byte) 115, this.field_H.field_m - (-this.field_H.field_x - 60), this.field_x - this.field_H.field_m + (-this.field_H.field_x - 60));
+        this.field_F.setBounds(20, 150, (byte) 115, this.field_H.field_m - (-this.field_H.field_x - 60), this.field_x - this.field_H.field_m + (-this.field_H.field_x - 60));
         this.b((byte) -98, this.field_F);
-        this.a(0, 55 + var3 + var4, (byte) 117, 0, 496);
+        this.setBounds(0, 55 + var3 + var4, (byte) 117, 0, 496);
     }
 
     static {

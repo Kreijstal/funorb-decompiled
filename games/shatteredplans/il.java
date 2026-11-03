@@ -30,7 +30,7 @@ abstract class il extends jl {
             this.field_eb.unlink((byte) -124);
           }
           if (param1 != null) {
-            param1.a(6 + this.field_db, param1.field_n, (byte) 121, 6, param1.field_x);
+            param1.setBounds(6 + this.field_db, param1.field_n, (byte) 121, 6, param1.field_x);
             this.field_eb = new cg(param1);
           } else {
             this.field_eb = new cg();
@@ -69,22 +69,22 @@ abstract class il extends jl {
         }
     }
 
-    boolean a(int param0, char param1, int param2, UiWidget param3) {
+    boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_eb != null) {
             if (98 == param0) {
-              this.field_eb.a((byte) -60, param3);
+              this.field_eb.containsWidget((byte) -60, param3);
             }
             if (param0 == 99) {
-              this.field_eb.a((byte) -23, param3);
+              this.field_eb.containsWidget((byte) -23, param3);
               return false;
             }
           }

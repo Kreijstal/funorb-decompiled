@@ -68,7 +68,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           return;
         }
         try {
-          if (param4.f(1)) {
+          if (param4.isFocused(1)) {
             var13 = this.a(param4, true);
             var14 = var13;
             var7 = var14.a((byte) 81, param0);
@@ -204,7 +204,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           if (param0 == param3) {
             return;
           }
-          if (param5.f(1)) {
+          if (param5.isFocused(1)) {
             var18 = this.a(param5, true);
             var19 = var18;
             if (param0 < param3) {

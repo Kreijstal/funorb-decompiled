@@ -103,10 +103,10 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           qp.field_w = null;
           if (ShatteredPlansClient.field_H != null) {
-            var3 = (mj) (ShatteredPlansClient.field_H.c((byte) -102));
+            var3 = (mj) (ShatteredPlansClient.field_H.startTraversal((byte) -102));
             while (var3 != null) {
               var3.unlinkSecondary(16);
-              var3 = (mj) (ShatteredPlansClient.field_H.b((byte) -107));
+              var3 = (mj) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
             }
             ShatteredPlansClient.field_H = null;
           }

@@ -11,9 +11,9 @@ final class eh extends ek implements ButtonListener {
     static boolean field_P;
     static int field_Q;
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_M.field_y = this.field_J.a((byte) 127).c(100) == CachedArchiveSource.field_g ? true : false;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "eh.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -56,13 +56,13 @@ final class eh extends ek implements ButtonListener {
 
     final void h(int param0) {
         int var2 = 250;
-        this.field_J.a(this.field_n + 20 - 25 >> 1, 25, (byte) 118, -var2 + this.field_x >> 1, 140);
-        this.field_M.a((this.field_n - 10 >> 1) + 2, 30, (byte) 103, 140 + ((this.field_x - var2 >> 1) + 10), 100);
+        this.field_J.setBounds(this.field_n + 20 - 25 >> 1, 25, (byte) 118, -var2 + this.field_x >> 1, 140);
+        this.field_M.setBounds((this.field_n - 10 >> 1) + 2, 30, (byte) 103, 140 + ((this.field_x - var2 >> 1) + 10), 100);
         int var3 = -95 / ((param0 + 31) / 62);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         EmailValidator.field_x.drawString(kr.field_c, this.field_m + (param3 + 4), this.field_q + (param2 + (EmailValidator.field_x.field_J + 4)), 16777215, -1);
     }
 
@@ -87,7 +87,7 @@ final class eh extends ek implements ButtonListener {
         this.field_M = new FocusableWidget(gq.field_b, (WidgetListener) (this));
         this.field_B = new UiWidget[]{(UiWidget) ((Object) this.field_J), (UiWidget) ((Object) this.field_M)};
         this.field_M.field_p = (WidgetPainter) ((Object) new qp());
-        this.d((byte) -118);
+        this.reapplyBounds((byte) -118);
     }
 
     static {

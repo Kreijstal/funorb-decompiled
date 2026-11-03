@@ -79,7 +79,7 @@ class TextFieldWidget extends FocusableWidget {
         this.i(5018);
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -91,7 +91,7 @@ class TextFieldWidget extends FocusableWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1, (byte) 100, param3, param4, param5, param6) &&
+          if (super.handlePress(param0, param1, (byte) 100, param3, param4, param5, param6) &&
             this.field_p instanceof WidgetMetrics) {
             var8_int = ((WidgetMetrics) ((Object) this.field_p)).a(param4, pd.field_k, param5, (UiWidget) (this), true, bb.field_b);
             stackIn_5_1 = 119;
@@ -184,7 +184,7 @@ class TextFieldWidget extends FocusableWidget {
         return;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 != -11857) {
           return;
         }
@@ -220,7 +220,7 @@ class TextFieldWidget extends FocusableWidget {
         this.field_N = this.field_H;
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_49_1 = 0;
         int stackIn_50_2 = 0;
@@ -411,11 +411,11 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         WidgetMetrics var5 = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.j((byte) -59);
           if (1 == this.field_o) {
             if (this.field_p instanceof WidgetMetrics) {

@@ -71,12 +71,12 @@ final class GzipInflater {
             if (var6 == null) {
               var6 = di.a(var7, 124);
               if (null != var6) {
-                CipherPacketBuffer.field_m.a((long)var8.hashCode(), var6, true);
+                CipherPacketBuffer.field_m.put((long)var8.hashCode(), var6, true);
               }
             }
             if (null == var6) {
               var6 = new ve();
-              CipherPacketBuffer.field_m.a((long)var8.hashCode(), var6, param0);
+              CipherPacketBuffer.field_m.put((long)var8.hashCode(), var6, param0);
               fieldTemp$0 = oi.field_e;
               oi.field_e = oi.field_e + 1;
               var6.field_zb = fieldTemp$0;
@@ -129,12 +129,12 @@ final class GzipInflater {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = hb.a((byte) -90, var5Lifetime1);
             if (null != var6Lifetime1) {
-              BattleEvent.field_q.a((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0).hashCode(), var6Lifetime1, true);
+              BattleEvent.field_q.put((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0).hashCode(), var6Lifetime1, true);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ve();
-            BattleEvent.field_q.a((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
+            BattleEvent.field_q.put((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
             fieldTemp$1 = r.field_c;
             r.field_c = r.field_c + 1;
             var6Lifetime1.field_zb = fieldTemp$1;

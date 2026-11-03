@@ -104,7 +104,7 @@ final class ValidationIndicator extends FocusableWidget {
         field_J = null;
     }
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (this.field_k) {
           return this.field_G.a((byte) -63);
         }
@@ -114,7 +114,7 @@ final class ValidationIndicator extends FocusableWidget {
         return (String) null;
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean containsWidget(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -138,10 +138,10 @@ final class ValidationIndicator extends FocusableWidget {
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
           this.field_F = this.field_F + 1;
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "hl.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -185,7 +185,7 @@ final class ValidationIndicator extends FocusableWidget {
         return var2;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         ValidationState var8;
@@ -196,7 +196,7 @@ final class ValidationIndicator extends FocusableWidget {
         Sprite var13;
         Sprite var14;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        super.a(param0, param1 + 0, param2, param3);
+        super.drawLayer(param0, param1 + 0, param2, param3);
         if (param0 != 0) {
           return;
         }

@@ -112,8 +112,8 @@ final class md extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, (byte) 107, param3, param4);
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, (byte) 107, param3, param4);
         if (param2 <= 99) {
           return;
         }
@@ -179,7 +179,7 @@ final class md extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, byte param3) {
+    final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -210,13 +210,13 @@ final class md extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param0 != 0) {
           return;
         }
         if (param1 != -11857) {
           UiWidget var7 = (UiWidget) null;
-          this.a(-111, -4, (UiWidget) null, (byte) -84);
+          this.updateHover(-111, -4, (UiWidget) null, (byte) -84);
         }
         int var5 = param3 + this.field_m;
         int var6 = this.field_q + param2;
@@ -325,7 +325,7 @@ final class md extends UiWidget {
         this.field_F = param6;
         this.field_A = param7;
         this.field_H = param4;
-        this.a(param1, param3, (byte) 122, param0, param2);
+        this.setBounds(param1, param3, (byte) 122, param0, param2);
     }
 
     static {

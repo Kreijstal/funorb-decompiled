@@ -30,7 +30,7 @@ class WidgetContainer extends UiWidget implements ni {
           var9 = (UiWidget) (var12.a(2));
           while (var9 != null) {
             if (var9.isLinked(param0 + 2048)) {
-              if (var9.f(1) &&
+              if (var9.isFocused(1) &&
                 var9.a(0, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
@@ -54,7 +54,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -74,7 +74,7 @@ class WidgetContainer extends UiWidget implements ni {
           var9 = (UiWidget) (var12.a(2));
           while (var9 != null) {
             if (var9.isLinked(2048)) {
-              if (!var9.a(param0, param1, (byte) 109, param3, param4 + this.field_m, param5 + this.field_q, param6)) {
+              if (!var9.handlePress(param0, param1, (byte) 109, param3, param4 + this.field_m, param5 + this.field_q, param6)) {
                 var9 = (UiWidget) (var12.a((byte) 87));
                 continue;
               }
@@ -97,7 +97,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    boolean a(int param0, char param1, int param2, UiWidget param3) {
+    boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         UiWidget var6_ref_vg = null;
         int var6 = 0;
@@ -114,8 +114,8 @@ class WidgetContainer extends UiWidget implements ni {
           var6_ref_vg = (UiWidget) (var8.a(param2 ^ 15));
           while (var6_ref_vg != null) {
             if (var6_ref_vg.isLinked(param2 ^ 2061)) {
-              if (var6_ref_vg.f(1) &&
-                var6_ref_vg.a(param0, param1, 13, param3)) {
+              if (var6_ref_vg.isFocused(1) &&
+                var6_ref_vg.handleKey(param0, param1, 13, param3)) {
                 return true;
               }
               var6_ref_vg = (UiWidget) (var8.a((byte) 84));
@@ -161,7 +161,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
         var3 = (UiWidget) (var2.a(param0 ^ 3));
         while (var3 != null) {
-          if (var3.f(1)) {
+          if (var3.isFocused(1)) {
             return var3;
           }
           var3 = (UiWidget) (var2.a((byte) 121));
@@ -169,8 +169,8 @@ class WidgetContainer extends UiWidget implements ni {
         return null;
     }
 
-    void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param0, param1, (byte) 103, param3, param4);
+    void setBounds(int param0, int param1, byte param2, int param3, int param4) {
+        super.setBounds(param0, param1, (byte) 103, param3, param4);
         if (param2 < 99) {
           this.i(-8);
         }
@@ -203,7 +203,7 @@ class WidgetContainer extends UiWidget implements ni {
             for (var7 = 0; var7 <= param3; var7++) {
               discarded$4 = param0.append(' ');
             }
-            var6.a((byte) 125, param1, param3 + 1, param0);
+            var6.describeTree((byte) 125, param1, param3 + 1, param0);
             var6 = (UiWidget) (var5.a((byte) 89));
           }
           return;
@@ -227,14 +227,14 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final int e(int param0) {
+    final int maxLayer(int param0) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var4 = (UiWidget) (var3.a(2));
         while (var4 != null) {
-          var5 = var4.e(param0 ^ 0);
+          var5 = var4.maxLayer(param0 ^ 0);
           if (var5 > var2) {
             var2 = var5;
           }
@@ -246,7 +246,7 @@ class WidgetContainer extends UiWidget implements ni {
         return var2;
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean containsWidget(byte param0, UiWidget param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -265,7 +265,7 @@ class WidgetContainer extends UiWidget implements ni {
               var4 = -111 / ((param0 - 61) / 59);
               return false;
             }
-            if (!var6.a((byte) 125, param1)) {
+            if (!var6.containsWidget((byte) 125, param1)) {
               var6 = (UiWidget) (var3.a((byte) 100));
               continue;
             }
@@ -308,12 +308,12 @@ class WidgetContainer extends UiWidget implements ni {
           }
           var4 = (UiWidget) (var8.c(-30));
           while (var4 != null) {
-            if (var4.f(1)) {
+            if (var4.isFocused(1)) {
               var5 = new IntrusiveDequeCursor(this.field_A);
               var5.a((byte) 109, var4);
               var6 = (UiWidget) (var5.b((byte) -124));
               while (var6 != null) {
-                if (!var6.a((byte) 124, param0)) {
+                if (!var6.containsWidget((byte) 124, param0)) {
                   var6 = (UiWidget) (var5.b((byte) -124));
                   continue;
                 }
@@ -358,12 +358,12 @@ class WidgetContainer extends UiWidget implements ni {
           var9 = new IntrusiveDequeCursor(this.field_A);
           var5 = (UiWidget) (var9.a(2));
           while (var5 != null) {
-            if (var5.f(1)) {
+            if (var5.isFocused(1)) {
               var6 = new IntrusiveDequeCursor(this.field_A);
               var6.a(false, var5);
               var7 = (UiWidget) (var6.a((byte) 54));
               while (var7 != null) {
-                if (var7.a((byte) 123, param0)) {
+                if (var7.containsWidget((byte) 123, param0)) {
                   return true;
                 }
                 var7 = (UiWidget) (var6.a((byte) 68));
@@ -386,7 +386,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 == 0 &&
           null != this.field_p) {
@@ -398,12 +398,12 @@ class WidgetContainer extends UiWidget implements ni {
         }
         UiWidget var6 = (UiWidget) (var5.c(param1 ^ -11803));
         while (var6 != null) {
-          var6.a(param0, -11857, this.field_q + param2, this.field_m + param3);
+          var6.drawLayer(param0, -11857, this.field_q + param2, this.field_m + param3);
           var6 = (UiWidget) (var5.b((byte) -124));
         }
     }
 
-    final StringBuilder a(byte param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder describeTree(byte param0, Hashtable param1, int param2, StringBuilder param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_4_0 = null;
@@ -415,8 +415,8 @@ class WidgetContainer extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 31 % ((64 - param0) / 61);
-          if (this.a(false, param2, param3, param1)) {
-            this.a(param1, param2, false, param3);
+          if (this.markVisited(false, param2, param3, param1)) {
+            this.appendDescription(param1, param2, false, param3);
             this.a(param3, param1, (byte) -114, param2);
           }
           stackIn_4_0 = (StringBuilder) (param3);
@@ -496,12 +496,12 @@ class WidgetContainer extends UiWidget implements ni {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= -58) {
           UiWidget var5 = (UiWidget) null;
-          this.a((byte) -71, (UiWidget) null);
+          this.containsWidget((byte) -71, (UiWidget) null);
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var3 = (UiWidget) (var2.a(2));
         while (var3 != null) {
-          var3.d((byte) 90);
+          var3.reapplyBounds((byte) 90);
           var3 = (UiWidget) (var2.a((byte) 63));
         }
     }
@@ -517,7 +517,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
@@ -535,7 +535,7 @@ class WidgetContainer extends UiWidget implements ni {
           }
           while (var8 != null) {
             if (var8.isLinked(2048)) {
-              var8.a(param0, this.field_q + param1, param2 + this.field_m, param3, -600269855, param5);
+              var8.handleRelease(param0, this.field_q + param1, param2 + this.field_m, param3, -600269855, param5);
               var8 = (UiWidget) (var7.a((byte) 60));
               continue;
             }
@@ -556,18 +556,18 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final void e(byte param0) {
+    final void blur(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = -104 / ((param0 + 84) / 33);
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var4 = (UiWidget) (var3.a(2));
         while (var4 != null) {
-          var4.e((byte) -121);
+          var4.blur((byte) -121);
           var4 = (UiWidget) (var3.a((byte) 88));
         }
     }
 
-    String c(boolean param0) {
+    String getTooltip(boolean param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         String var4;
@@ -579,7 +579,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
         var3 = (UiWidget) (var2.a(2));
         while (var3 != null) {
-          var4 = var3.c(true);
+          var4 = var3.getTooltip(true);
           if (var4 != null) {
             return var4;
           }
@@ -593,7 +593,7 @@ class WidgetContainer extends UiWidget implements ni {
         this.field_A = new IntrusiveDeque();
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
@@ -604,12 +604,12 @@ class WidgetContainer extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.field_A);
           var6 = (UiWidget) (var5.a(2));
           while (var6 != null) {
             if (var6.isLinked(2048)) {
-              var6.a(this.field_m + param0, this.field_q + param1, param2, (byte) 91);
+              var6.updateHover(this.field_m + param0, this.field_q + param1, param2, (byte) 91);
               var6 = (UiWidget) (var5.a((byte) 94));
               continue;
             }
@@ -630,7 +630,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 1) {
           field_z = (String) null;
         }

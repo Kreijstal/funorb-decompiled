@@ -53,8 +53,8 @@ final class bj extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         if (param0 != 0) {
           return;
         }
@@ -80,7 +80,7 @@ final class bj extends WidgetContainer implements ButtonListener {
             }
           }
           if (param1 != 6) {
-            this.a(105, -29, -115, 86);
+            this.drawLayer(105, -29, -115, 86);
           }
           if (this.field_I[this.field_G.length] == param0) {
             this.field_F.a(2147483647);
@@ -136,12 +136,12 @@ final class bj extends WidgetContainer implements ButtonListener {
               this.field_I[var5] = new FocusableWidget(this.field_G[var5], (WidgetListener) (this));
               this.field_I[var5].field_p = (WidgetPainter) ((Object) var4);
               this.field_I[var5].field_v = SecondaryNodeDequeIterator.field_f;
-              this.field_I[var5].a(20 + var5 * 16, 15, (byte) 112, 0, 80);
+              this.field_I[var5].setBounds(20 + var5 * 16, 15, (byte) 112, 0, 80);
               this.b((byte) -107, this.field_I[var5]);
             }
             this.field_I[var3_int] = new FocusableWidget(SolMapGenerator.field_p, (WidgetListener) (this));
             this.field_I[var3_int].field_p = (WidgetPainter) ((Object) var4);
-            this.field_I[var3_int].a(16 + (var3_int * 16 + 20), 15, (byte) 102, 0, 100);
+            this.field_I[var3_int].setBounds(16 + (var3_int * 16 + 20), 15, (byte) 102, 0, 100);
             this.b((byte) -65, this.field_I[var3_int]);
             return;
           }
@@ -161,7 +161,7 @@ final class bj extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_13_0 = false;
@@ -170,7 +170,7 @@ final class bj extends WidgetContainer implements ButtonListener {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2 + 0, param3)) {
+          if (super.handleKey(param0, param1, param2 + 0, param3)) {
             return true;
           }
           if (param0 == 98) {

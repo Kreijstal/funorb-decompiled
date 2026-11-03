@@ -39,11 +39,11 @@ abstract class ek extends UiWidget implements ni {
             var7 = var6;
             var7Lifetime1 = var6;
             if (null != var6 &&
-              var6.f(1)) {
+              var6.isFocused(1)) {
               for (var5 = var5 - param0; var5 >= 0; var5 = var5 - param0) {
                 var7Lifetime2 = this.field_B[var5];
                 if (null != var7Lifetime2 &&
-                  var7Lifetime2.a((byte) 123, param2)) {
+                  var7Lifetime2.containsWidget((byte) 123, param2)) {
                   return true;
                 }
               }
@@ -86,7 +86,7 @@ abstract class ek extends UiWidget implements ni {
           for (var9 = param0; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.f(1) &&
+              var10.isFocused(1) &&
               var10.a(param0 ^ 0, param1, param2, param3, param4, param5, param6)) {
               return true;
             }
@@ -110,7 +110,7 @@ abstract class ek extends UiWidget implements ni {
         super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         int var5_int = 0;
@@ -136,8 +136,8 @@ abstract class ek extends UiWidget implements ni {
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null &&
-              var7.f(1) &&
-              var7.a(param0, param1, 13, param3)) {
+              var7.isFocused(1) &&
+              var7.handleKey(param0, param1, 13, param3)) {
               return true;
             }
           }
@@ -223,7 +223,7 @@ abstract class ek extends UiWidget implements ni {
             if (var7 == null) {
               discarded$5 = param1.append("null");
             } else {
-              var7.a((byte) -28, param2, 1 + param0, param1);
+              var7.describeTree((byte) -28, param2, 1 + param0, param1);
             }
           }
           return;
@@ -247,12 +247,12 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         UiWidget discarded$0 = null;
         if (param2 <= 99) {
           discarded$0 = this.a((byte) 48);
         }
-        super.a(param0, param1, (byte) 101, param3, param4);
+        super.setBounds(param0, param1, (byte) 101, param3, param4);
         this.h(116);
     }
 
@@ -272,7 +272,7 @@ abstract class ek extends UiWidget implements ni {
         return stackIn_8_0;
     }
 
-    final void e(byte param0) {
+    final void blur(byte param0) {
         int var4 = 0;
         UiWidget[] var2;
         int var3;
@@ -286,7 +286,7 @@ abstract class ek extends UiWidget implements ni {
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
           if (var5 != null) {
-            var5.e((byte) 6);
+            var5.blur((byte) 6);
           }
         }
     }
@@ -304,7 +304,7 @@ abstract class ek extends UiWidget implements ni {
         field_H = null;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         UiWidget var6;
         int var7;
@@ -314,19 +314,19 @@ abstract class ek extends UiWidget implements ni {
           this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         if (param1 != -11857) {
-          this.a(-17, 93, (byte) 121, 115, -79);
+          this.setBounds(-17, 93, (byte) 121, 115, -79);
         }
         if (this.field_B != null) {
           for (var5 = -1 + this.field_B.length; var5 >= 0; var5--) {
             var6 = this.field_B[var5];
             if (var6 != null) {
-              var6.a(param0, param1 ^ 0, this.field_q + param2, this.field_m + param3);
+              var6.drawLayer(param0, param1 ^ 0, this.field_q + param2, this.field_m + param3);
             }
           }
         }
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePress(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -347,7 +347,7 @@ abstract class ek extends UiWidget implements ni {
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.a(param0, param1, (byte) 111, param3, this.field_m + param4, this.field_q + param5, param6)) {
+              var10.handlePress(param0, param1, (byte) 111, param3, this.field_m + param4, this.field_q + param5, param6)) {
               return true;
             }
           }
@@ -384,7 +384,7 @@ abstract class ek extends UiWidget implements ni {
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.f(1)) {
+            var4.isFocused(1)) {
             return var4;
           }
         }
@@ -395,14 +395,14 @@ abstract class ek extends UiWidget implements ni {
         return null;
     }
 
-    final boolean f(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 1) {
           return false;
         }
         return null != this.a((byte) -96) ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         UiWidget[] var11 = null;
         int var8 = 0;
         UiWidget var9 = null;
@@ -416,7 +416,7 @@ abstract class ek extends UiWidget implements ni {
           for (var8 = 0; var8 < var11.length; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(param0, this.field_q + param1, param2 + this.field_m, param3, -600269855, param5);
+              var9.handleRelease(param0, this.field_q + param1, param2 + this.field_m, param3, -600269855, param5);
             }
           }
           if (param4 != -600269855) {
@@ -429,7 +429,7 @@ abstract class ek extends UiWidget implements ni {
 
     abstract void h(int param0);
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean containsWidget(byte param0, UiWidget param1) {
         int var5 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -449,7 +449,7 @@ abstract class ek extends UiWidget implements ni {
           for (var5 = 0; var5 < var8.length; var5++) {
             var6 = var8[var5];
             if (var6 != null &&
-              var6.a((byte) -10, param1)) {
+              var6.containsWidget((byte) -10, param1)) {
               return true;
             }
           }
@@ -494,11 +494,11 @@ abstract class ek extends UiWidget implements ni {
             var6 = var5;
             var6Lifetime1 = var5;
             if (var5 != null &&
-              var5.f(1)) {
+              var5.isFocused(1)) {
               for (var4_int = var4_int + param2; var4_int < this.field_B.length; var4_int = var4_int + param2) {
                 var6Lifetime2 = this.field_B[var4_int];
                 if (var6Lifetime2 != null &&
-                  var6Lifetime2.a((byte) 126, param0)) {
+                  var6Lifetime2.containsWidget((byte) 126, param0)) {
                   return true;
                 }
               }
@@ -520,7 +520,7 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    void a(int param0, int param1, UiWidget param2, byte param3) {
+    void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         UiWidget var7 = null;
@@ -533,7 +533,7 @@ abstract class ek extends UiWidget implements ni {
         RuntimeException var5_ref = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           if (null == this.field_B) {
             return;
           }
@@ -542,7 +542,7 @@ abstract class ek extends UiWidget implements ni {
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(this.field_m + param0, param1 + this.field_q, param2, (byte) 91);
+              var7.updateHover(this.field_m + param0, param1 + this.field_q, param2, (byte) 91);
             }
           }
           return;
@@ -560,7 +560,7 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    final int e(int param0) {
+    final int maxLayer(int param0) {
         int var4 = 0;
         int var2;
         UiWidget[] var3;
@@ -576,7 +576,7 @@ abstract class ek extends UiWidget implements ni {
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.e(param0 + 0);
+            var6 = var5.maxLayer(param0 + 0);
             if (var6 > var2) {
               var2 = var6;
             }
@@ -612,7 +612,7 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    final StringBuilder a(byte param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder describeTree(byte param0, Hashtable param1, int param2, StringBuilder param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
@@ -623,8 +623,8 @@ abstract class ek extends UiWidget implements ni {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(false, param2, param3, param1)) {
-            this.a(param1, param2, false, param3);
+          if (this.markVisited(false, param2, param3, param1)) {
+            this.appendDescription(param1, param2, false, param3);
             this.a(param2, param3, param1, 0);
           }
           var5_int = -103 % ((64 - param0) / 61);
@@ -650,7 +650,7 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    final String c(boolean param0) {
+    final String getTooltip(boolean param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -665,7 +665,7 @@ abstract class ek extends UiWidget implements ni {
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
           if (var4 != null) {
-            var5 = var4.c(true);
+            var5 = var4.getTooltip(true);
             if (var5 != null) {
               return var5;
             }

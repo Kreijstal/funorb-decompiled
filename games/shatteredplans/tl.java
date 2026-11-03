@@ -801,7 +801,7 @@ abstract class tl extends GameApplet {
         PlatformTask var11 = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!param1.a(false)) {
+          if (!param1.isReady(false)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }

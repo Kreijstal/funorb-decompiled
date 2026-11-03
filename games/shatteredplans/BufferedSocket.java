@@ -53,7 +53,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_p) {
-              this.field_p = this.field_m.a(true, 3, (Runnable) (this));
+              this.field_p = this.field_m.requestThread(true, 3, (Runnable) (this));
             }
             this.notifyAll();
           }

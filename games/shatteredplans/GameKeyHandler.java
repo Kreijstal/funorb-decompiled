@@ -219,7 +219,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               stackIn_14_2 = null;
               stackIn_14_5 = bj.field_E;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
             while (0 == var4.field_d) {
               jb.a((byte) -106, 1L);
             }

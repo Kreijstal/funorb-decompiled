@@ -30,7 +30,7 @@ final class SoundCache {
           var5_int = param3 ^ (param0 << 4 & 65523 | param0 >>> 12);
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_d.a(var6, -25064));
+          var8 = (PcmSample) (this.field_d.get(var6, -25064));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -46,7 +46,7 @@ final class SoundCache {
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
-          this.field_d.a(var8Lifetime1, 13, var6);
+          this.field_d.put(var8Lifetime1, 13, var6);
           if (param1 != null) {
             param1[0] = param1[0] - var10.field_m.length;
           }
@@ -209,7 +209,7 @@ final class SoundCache {
           var5_int = (param2 >>> 12 | 65520 & param2 << 4) ^ param1;
           var5_int = var5_int | param2 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (PcmSample) (this.field_d.a(var6, -25064));
+          var8 = (PcmSample) (this.field_d.get(var6, -25064));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -218,20 +218,20 @@ final class SoundCache {
             0 >= param3[0]) {
             return null;
           }
-          var9 = (VorbisSample) (this.field_a.a(var6, -25064));
+          var9 = (VorbisSample) (this.field_a.get(var6, -25064));
           if (var9 == null) {
             var9 = VorbisSample.a(this.field_e, param2, param1);
             if (var9 == null) {
               return null;
             }
-            this.field_a.a(var9, 66, var6);
+            this.field_a.put(var9, 66, var6);
           }
           var8Lifetime1 = var9.a(param3);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink((byte) -98);
-          this.field_d.a(var8Lifetime1, -128, var6);
+          this.field_d.put(var8Lifetime1, -128, var6);
           if (param0 == -12203) {
             stackIn_20_0 = var8Lifetime1;
             return stackIn_20_0;

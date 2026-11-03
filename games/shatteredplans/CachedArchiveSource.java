@@ -112,7 +112,7 @@ final class CachedArchiveSource extends ArchiveSource {
               decompiledFrameRemainder0 = (this.field_s);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = !(pr.a(14274) < this.field_e))) {
-                var2 = (ArchiveRequest) (this.field_f.c(77));
+                var2 = (ArchiveRequest) (this.field_f.startTraversal(77));
                 while (var2 != null) {
                   if (!var2.field_u) {
                     if (var2.field_t) {
@@ -124,7 +124,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       var2.field_t = true;
                     }
                   }
-                  var2 = (ArchiveRequest) (this.field_f.a(false));
+                  var2 = (ArchiveRequest) (this.field_f.nextInTraversal(false));
                 }
                 decompiledFrameRemainder1 = false;
               }
@@ -184,7 +184,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if ((decompiledFrameRemainder1) && ((decompiledFrameRemainder0) &&
           (decompiledFrameRemainder0 = (this.field_s)) &&
           (decompiledFrameRemainder0 = !(pr.a(14274) < this.field_e)))) {
-          var2Lifetime1 = (ArchiveRequest) (this.field_f.c(77));
+          var2Lifetime1 = (ArchiveRequest) (this.field_f.startTraversal(77));
           while (var2Lifetime1 != null) {
             if (!var2Lifetime1.field_u) {
               if (var2Lifetime1.field_t) {
@@ -196,7 +196,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 var2Lifetime1.field_t = true;
               }
             }
-            var2Lifetime1 = (ArchiveRequest) (this.field_f.a(false));
+            var2Lifetime1 = (ArchiveRequest) (this.field_f.nextInTraversal(false));
           }
         }
         if (decompiledFrameRemainder0) {
@@ -337,7 +337,7 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     final int a(int param0, byte param1) {
-        ArchiveRequest var3 = (ArchiveRequest) (this.field_f.a((long)param0, -25064));
+        ArchiveRequest var3 = (ArchiveRequest) (this.field_f.get((long)param0, -25064));
         if (var3 != null) {
           return var3.e(0);
         }
@@ -390,7 +390,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (param1 != 0) {
           this.a(55, (byte) -28);
         }
-        var12 = (ArchiveRequest) (this.field_f.a((long)param2, -25064));
+        var12 = (ArchiveRequest) (this.field_f.get((long)param2, -25064));
         var4 = var12;
         if (var12 != null &&
           param0 == 0 &&
@@ -432,7 +432,7 @@ final class CachedArchiveSource extends ArchiveSource {
               var4 = this.field_w.a(true, this.field_j, (byte) 2, -2057056416, param2);
             }
           }
-          this.field_f.a((IntrusiveNode) (var4), -120, (long)param2);
+          this.field_f.put((IntrusiveNode) (var4), -120, (long)param2);
         }
         if (((ArchiveRequest) (var4)).field_u) {
           return null;
@@ -489,7 +489,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 return null;
               }
               var4 = this.field_w.a(true, this.field_j, (byte) 2, -2057056416, param2);
-              this.field_f.a((IntrusiveNode) (var4), 81, (long)param2);
+              this.field_f.put((IntrusiveNode) (var4), 81, (long)param2);
             }
             return null;
           }
@@ -526,7 +526,7 @@ final class CachedArchiveSource extends ArchiveSource {
           if (((ArchiveRequest) (var4)).field_q &&
             !this.field_w.c(27356)) {
             var4 = this.field_w.a(true, this.field_j, (byte) 2, -2057056416, param2);
-            this.field_f.a((IntrusiveNode) (var4), 64, (long)param2);
+            this.field_f.put((IntrusiveNode) (var4), 64, (long)param2);
           }
           return null;
         }

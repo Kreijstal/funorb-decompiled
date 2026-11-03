@@ -116,7 +116,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != -11857) {
           DialogRoot.e(false);
@@ -127,7 +127,7 @@ final class DialogRoot extends SingleChildWidget {
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
         UiWidget var6 = (UiWidget) (var5.c(105));
         while (var6 != null) {
-          var6.a(param0, -11857, this.field_q + param2, param3 + this.field_m);
+          var6.drawLayer(param0, -11857, this.field_q + param2, param3 + this.field_m);
           var6 = (UiWidget) (var5.b((byte) -124));
         }
     }
@@ -141,7 +141,7 @@ final class DialogRoot extends SingleChildWidget {
           var3 = (Dialog) (param1);
           this.field_H.addFirst(var3, 0);
           var3.field_E = param0 ? true : false;
-          var3.a((byte) 126, (UiWidget) (this));
+          var3.containsWidget((byte) 126, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "tc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

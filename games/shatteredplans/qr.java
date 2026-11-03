@@ -202,7 +202,7 @@ class qr extends hm {
                   var16 = new StandardMapGenerator(var12, var12, var10_int, var8, var15.field_v.length);
                   var15.field_g = var16.generate((byte) -126);
                 }
-                var15.field_g.a(var15.field_v, param3, param1 - 46);
+                var15.field_g.assignHomeStars(var15.field_v, param3, param1 - 46);
                 var15.e(param1 - 50);
                 var15.recomputePlayerTotals(param1 - 151);
                 stackIn_17_0 = var15;
