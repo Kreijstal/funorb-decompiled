@@ -35,7 +35,7 @@ final class ec {
           try {
             try {
               var8 = (String) (JavaScriptBridge.b(param0, 13093, "getcookies"));
-              var4 = mk.a(';', false, var8);
+              var4 = WidgetStyleLayer.a(';', false, var8);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp extends un {
+final class UsernameAvailabilityValidator extends un {
     static String field_u;
     static java.math.BigInteger field_v;
     private boolean field_q;
@@ -13,7 +13,7 @@ final class tp extends un {
         field_u = null;
         field_t = null;
         if (param0 != 66) {
-          tp.h(102);
+          UsernameAvailabilityValidator.h(102);
           field_v = null;
           return;
         }
@@ -51,7 +51,7 @@ final class tp extends un {
           }
           if (param0) {
             var4 = (String) null;
-            this.a((String) null, 126);
+            this.validationMessageForText((String) null, 126);
           }
           if (this.field_q) {
             stackIn_16_0 = db.field_b;
@@ -73,7 +73,7 @@ final class tp extends un {
         }
     }
 
-    final String a(String param0, int param1) {
+    final String validationMessageForText(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         gh var4 = null;
@@ -126,14 +126,14 @@ final class tp extends un {
         }
     }
 
-    tp(pm param0) {
+    UsernameAvailabilityValidator(TextInputWidget param0) {
         super(param0);
         this.field_q = false;
     }
 
     final void i(int param0) {
         if (param0 != -22837) {
-          tp.h(-36);
+          UsernameAvailabilityValidator.h(-36);
           this.field_r = null;
           return;
         }

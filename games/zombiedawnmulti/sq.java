@@ -151,7 +151,7 @@ class sq extends gn {
         return null;
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         UiWidget var7 = null;
@@ -161,10 +161,10 @@ class sq extends gn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0 ^ 0, param1, param2, param3);
+          super.updatePointerState(param0 ^ 0, param1, param2, param3);
           if (param0 != -5407) {
             var7 = (UiWidget) null;
-            this.a(93, (UiWidget) null, 109, -90);
+            this.updatePointerState(93, (UiWidget) null, 109, -90);
           }
           this.field_V = null;
           if (this.field_l) {
@@ -191,7 +191,7 @@ class sq extends gn {
         if (param2 != -4) {
           field_S = 74;
         }
-        this.b(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.listener)).a((byte) 39, (UiWidget) (this)));
+        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.listener)).a((byte) 39, (UiWidget) (this)));
     }
 
     final void a(byte param0) {
@@ -318,10 +318,10 @@ class sq extends gn {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderWidget(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.renderWidget(param0, param1, param2, param3);
         if (0 != param2) {
           return;
         }
@@ -364,8 +364,8 @@ class sq extends gn {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setWidgetBounds(param0, param1, param2, param3, param4);
         this.a((byte) 94);
     }
 
@@ -405,7 +405,7 @@ class sq extends gn {
               var2 = 0;
             }
           }
-          for (var3 = 0; hq.field_m.length > var3; var3++) {
+          for (var3 = 0; TextWidgetPainter.field_m.length > var3; var3++) {
             var4 = wd.field_Q[var3];
             if (var4 >= 0) {
               if (var4 != NetworkGameClient.field_B.field_d) {
@@ -416,7 +416,7 @@ class sq extends gn {
             } else {
               var5 = qh.field_e;
             }
-            var6 = hq.field_m[var3];
+            var6 = TextWidgetPainter.field_m[var3];
             if (ho.field_q == 2 &&
               var2 == 1) {
               if (aa.field_n.length < q.field_a.length) {

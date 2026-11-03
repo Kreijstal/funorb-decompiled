@@ -10,7 +10,7 @@ final class km extends sq {
     private int field_X;
     static int field_cb;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         String var5;
         re var6;
         int var13;
@@ -41,7 +41,7 @@ final class km extends sq {
           this.field_j = var5;
           this.a((byte) 94);
         }
-        super.a(param0, param1, param2, param3);
+        super.renderWidget(param0, param1, param2, param3);
         var6Lifetime1 = this.field_Y.d(97);
         var8 = (rk) ((Object) this.listener);
         var9 = this.field_y + param3;
@@ -138,13 +138,13 @@ final class km extends sq {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_X = this.field_X + 1;
           if (param0 != -5407) {
             km.i(56);
           }
-          super.a(param0 ^ 0, param1, param2, param3);
+          super.updatePointerState(param0 ^ 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "km.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -271,7 +271,7 @@ final class km extends sq {
           var9 = 0;
           if (!nh.field_m &&
             var5 < InfectionEvent.field_m) {
-            var10 = ga.a(var8_ref_ka.field_l, true);
+            var10 = CipherPacketBuffer.a(var8_ref_ka.field_l, true);
             if (var8_ref_ka.a(true) >= var10 && (var8_ref_ka.field_k ||
               !hp.a(var8_ref_ka.field_e, 1020))) {
               var9 = 1;
@@ -389,7 +389,7 @@ final class km extends sq {
         try {
           this.field_bb = param1;
           this.field_Y = param0;
-          this.b(param2, param3, 28972, param4, param5);
+          this.setWidgetBounds(param2, param3, 28972, param4, param5);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

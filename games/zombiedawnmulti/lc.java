@@ -20,7 +20,7 @@ final class lc extends IntrusiveNode {
           ResourceArchive var2 = (ResourceArchive) null;
           lc.a(-40, (ResourceArchive) null, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null);
         }
-        IndexedSprite var1 = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], tp.field_t);
+        IndexedSprite var1 = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], UsernameAvailabilityValidator.field_t);
         fd.h((byte) 126);
         return var1;
     }
@@ -296,7 +296,7 @@ final class lc extends IntrusiveNode {
           m.field_x = new cj(0L, m.field_B);
           m.field_x.b((byte) -32, cm.field_b);
           var16 = pb.a("lobby", param1, -256, "button_mouseover");
-          ql.field_d = new sn(kd.field_a, var12, vo.field_m, cm.field_b, 3, 2, LevelFileCatalog.field_c, 3, jk.field_f);
+          ql.field_d = new ContextMenu(kd.field_a, var12, vo.field_m, cm.field_b, 3, 2, LevelFileCatalog.field_c, 3, jk.field_f);
           ta.field_gb = new cj(0L, cm.field_b);
           ta.field_gb.field_X = var16;
           ta.field_gb.field_sb = 1;

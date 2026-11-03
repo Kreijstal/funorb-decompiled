@@ -23,7 +23,7 @@ final class cp extends WidgetContainer implements jn, in {
     static String[] field_R;
     static String[][] field_N;
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -32,7 +32,7 @@ final class cp extends WidgetContainer implements jn, in {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -73,7 +73,7 @@ final class cp extends WidgetContainer implements jn, in {
         if (param0 != 496) {
           return;
         }
-        ((tp) (this.field_G.a((byte) -67))).i(-22837);
+        ((UsernameAvailabilityValidator) (this.field_G.a((byte) -67))).i(-22837);
     }
 
     public final void a(int param0, int param1, gn param2, int param3, int param4) {
@@ -145,33 +145,33 @@ final class cp extends WidgetContainer implements jn, in {
     public cp() {
         super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_G = new on("", (bj) null, 12);
-        hq var1 = new hq(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(la.field_e, var1, (bj) null);
         this.field_M = new gn(ji.field_e, (bj) null);
         this.field_W = new gn(gk.field_a, (bj) null);
         this.field_G.field_x = bi.field_d;
-        this.field_G.a((byte) -27, new tp(this.field_G));
+        this.field_G.a((byte) -27, new UsernameAvailabilityValidator(this.field_G));
         this.field_M.field_F = false;
         this.field_M.listener = (WidgetActionListener) ((Object) new oq());
         this.field_W.listener = (WidgetActionListener) ((Object) new he());
         this.field_G.listener = (WidgetActionListener) ((Object) new tb(10000536));
         int var3 = 20;
         int var4 = 4;
-        var2.b(20, var3, 28972, 270, 50);
+        var2.setWidgetBounds(20, var3, 28972, 270, 50);
         int var5 = 200;
         var3 += 50;
         this.b((byte) 101, var2);
         var3 = var3 + (this.a(var3, ia.field_w, 170, this.field_G, -43, r.field_e) + 5);
-        this.field_M.b(-var5 + 496 >> 1, var3, 28972, var5, 40);
-        this.field_W.b(3 + var4, var3 + 15, 28972, 60, 40);
+        this.field_M.setWidgetBounds(-var5 + 496 >> 1, var3, 28972, var5, 40);
+        this.field_W.setWidgetBounds(3 + var4, var3 + 15, 28972, 60, 40);
         this.field_W.field_A = (bj) (this);
         this.field_M.field_A = (bj) (this);
         this.b((byte) 61, this.field_M);
         this.b((byte) 81, this.field_W);
         this.field_V = new gl((jn) (this));
-        this.field_V.b(60 + this.field_G.field_n + this.field_G.field_y, 20, 28972, -60 + (this.field_n - this.field_G.field_y - this.field_G.field_n), 150);
+        this.field_V.setWidgetBounds(60 + this.field_G.field_n + this.field_G.field_y, 20, 28972, -60 + (this.field_n - this.field_G.field_y - this.field_G.field_n), 150);
         this.b((byte) 120, this.field_V);
-        this.b(0, 0, 28972, 496, var4 + 55 + var3);
+        this.setWidgetBounds(0, 0, 28972, 496, var4 + 55 + var3);
     }
 
     public static void c(boolean param0) {
@@ -204,9 +204,9 @@ final class cp extends WidgetContainer implements jn, in {
         field_U = null;
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_M.field_F = this.h(param0 + 5427);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "cp.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -272,7 +272,7 @@ final class cp extends WidgetContainer implements jn, in {
         try {
           var3 = this.field_G;
           var4 = param0;
-          ((pm) ((Object) var3)).a(false, var4, (byte) 117);
+          ((TextInputWidget) ((Object) var3)).setInputText(false, var4, (byte) 117);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "cp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -336,7 +336,7 @@ final class cp extends WidgetContainer implements jn, in {
           return true;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a(-4, (UiWidget) null, -95, 88);
+        this.updatePointerState(-4, (UiWidget) null, -95, 88);
         return true;
     }
 

@@ -174,11 +174,11 @@ final class m extends tb {
     }
 
     final static void c(int param0) {
-        il var1 = (il) (db.field_a.a(true));
+        RasterSnapshot var1 = (RasterSnapshot) (db.field_a.a(true));
         if (var1 == null) {
-          var1 = new il();
+          var1 = new RasterSnapshot();
         }
-        var1.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_d, SoftwareRasterizer.field_g, (byte) -120, SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+        var1.capture(SoftwareRasterizer.field_e, SoftwareRasterizer.field_d, SoftwareRasterizer.field_g, (byte) -120, SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
         if (param0 == 540) {
           mo.field_Fb.a(var1, false);
           return;

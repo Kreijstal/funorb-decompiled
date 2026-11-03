@@ -4,12 +4,12 @@
 final class ia extends un {
     static cj field_t;
     static Sprite field_y;
-    private pm field_q;
+    private TextInputWidget field_q;
     static String field_u;
     static String field_w;
     static boolean field_r;
     static String field_v;
-    private pm field_z;
+    private TextInputWidget field_z;
     static int field_s;
     static hn[] field_x;
 
@@ -21,7 +21,7 @@ final class ia extends un {
         }
     }
 
-    final String a(String param0, int param1) {
+    final String validationMessageForText(String param0, int param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
@@ -97,7 +97,7 @@ final class ia extends un {
         }
     }
 
-    ia(pm param0, pm param1, pm param2) {
+    ia(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
         super(param0);
         try {
           this.field_q = param2;

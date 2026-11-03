@@ -135,7 +135,7 @@ final class ci {
           }
           MouseWheelInput.a(stackIn_4_0, false);
           em.field_U.a(0, JaggrabDownloader.field_i.field_zb, 0, (byte) -74, -2 + (-40 + JaggrabDownloader.field_i.field_z));
-          ClientException.field_h.a(jk.field_f, 0, ga.field_r.field_zb, 0, -3344);
+          ClientException.field_h.a(jk.field_f, 0, CipherPacketBuffer.field_r.field_zb, 0, -3344);
           stackIn_6_0 = ie.field_jb;
           stackIn_6_1 = 18;
           stackIn_6_2 = 2 + jk.field_f;
@@ -144,9 +144,9 @@ final class ci {
           } else {
             stackIn_7_3 = 0;
           }
-          ((cj) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, -stackIn_7_3 + ga.field_r.field_zb, 0, -3344);
-          bf.field_h.a(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + ga.field_r.field_zb, -3344);
-          bf.field_n.a(DualLinkNode.field_o, 2, ga.field_r.field_zb, 0, -2 - jk.field_f + (ga.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
+          ((cj) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, -stackIn_7_3 + CipherPacketBuffer.field_r.field_zb, 0, -3344);
+          bf.field_h.a(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + CipherPacketBuffer.field_r.field_zb, -3344);
+          bf.field_n.a(DualLinkNode.field_o, 2, CipherPacketBuffer.field_r.field_zb, 0, -2 - jk.field_f + (CipherPacketBuffer.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
           jp.field_b.a(40, JaggrabDownloader.field_i.field_z - 40, JaggrabDownloader.field_i.field_zb, 0, -3344);
           gg.field_m.a(30, 0, LevelData.field_a.field_zb, 0, -3344);
           SocketConnector.field_a.a(-2 + LevelData.field_a.field_z - 70, 30, LevelData.field_a.field_zb, 0, -3344);

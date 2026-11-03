@@ -147,11 +147,11 @@ final class pd {
             vj.field_p[var4Lifetime3] = var17.readUnsignedShort((byte) 69);
           }
           var17.position = -(var3 * 3) - 4 + (param1.length - 8 * qc.field_v);
-          tp.field_t = new int[var3];
+          UsernameAvailabilityValidator.field_t = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            tp.field_t[var4Lifetime4] = var17.readUnsignedMedium(128);
-            if (tp.field_t[var4Lifetime4] == 0) {
-              tp.field_t[var4Lifetime4] = 1;
+            UsernameAvailabilityValidator.field_t[var4Lifetime4] = var17.readUnsignedMedium(128);
+            if (UsernameAvailabilityValidator.field_t[var4Lifetime4] == 0) {
+              UsernameAvailabilityValidator.field_t[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

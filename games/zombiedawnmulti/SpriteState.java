@@ -61,7 +61,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static GameEvent a(int param0, ga param1) {
+    final static GameEvent a(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -100,7 +100,7 @@ abstract class SpriteState extends DualLinkNode {
         char[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        ga var7 = null;
+        CipherPacketBuffer var7 = null;
         char[] var8 = null;
         char[] var9 = null;
         String stackIn_22_0 = null;
@@ -113,8 +113,8 @@ abstract class SpriteState extends DualLinkNode {
         try {
           var2_int = param1.length();
           if (param0 > -21) {
-            var7 = (ga) null;
-            SpriteState.a(-8, (ga) null);
+            var7 = (CipherPacketBuffer) null;
+            SpriteState.a(-8, (CipherPacketBuffer) null);
           }
           if (var2_int > 20) {
             var2_int = 20;

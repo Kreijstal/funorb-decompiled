@@ -319,14 +319,14 @@ final class NavigationGrid {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        ga var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         ra var12 = null;
         ab var13 = null;
-        ga var14 = null;
+        CipherPacketBuffer var14 = null;
         ra var15 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {

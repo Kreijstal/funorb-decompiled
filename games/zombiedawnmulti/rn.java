@@ -28,7 +28,7 @@ final class rn {
         SpriteState.a(95, field_f);
         if (param0 > -26) {
           field_a = (Sprite[]) null;
-          field_f.a(8192, pl.field_J);
+          field_f.a(8192, ArrayWidgetGroup.field_J);
           field_f = null;
           if (null != ng.field_g) {
             ng.field_g.d(-33);
@@ -38,7 +38,7 @@ final class rn {
           dk.field_Ib.requestFocus();
           return;
         }
-        field_f.a(8192, pl.field_J);
+        field_f.a(8192, ArrayWidgetGroup.field_J);
         field_f = null;
         if (null == ng.field_g) {
           dk.field_Ib.requestFocus();

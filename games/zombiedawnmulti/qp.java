@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qp extends un {
-    private pm field_q;
+    private TextInputWidget field_q;
     static byte[][] field_t;
     static Sprite field_v;
     static String[] field_s;
@@ -104,7 +104,7 @@ final class qp extends un {
         }
     }
 
-    qp(pm param0, pm param1) {
+    qp(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         try {
           this.field_q = param1;
@@ -113,7 +113,7 @@ final class qp extends un {
         }
     }
 
-    final String a(String param0, int param1) {
+    final String validationMessageForText(String param0, int param1) {
         j var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_5_0 = null;

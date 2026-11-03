@@ -314,7 +314,7 @@ final class WhirlpoolHasher {
           var3 = 0;
         }
         if (va.field_a == 2 &&
-          !tl.d((byte) -20)) {
+          !QuickChatPhraseDefinition.d((byte) -20)) {
           var3 = 0;
         }
         if (InfectionEvent.field_p == 84) {
@@ -327,7 +327,7 @@ final class WhirlpoolHasher {
                   JaggrabDownloader.field_c != null) {
                   var5 = 1;
                 }
-                if (ga.a(var5, true) == 2) {
+                if (CipherPacketBuffer.a(var5, true) == 2) {
                   kp.a(var5, param2, 1, true);
                 }
                 GameWorld.a(-1, qf.field_g, param0, var4_ref_String, va.field_a, 29602);
@@ -381,7 +381,7 @@ final class WhirlpoolHasher {
             var7Lifetime6 = "";
             if (va.field_a == 0) {
               if (null == JaggrabDownloader.field_c &&
-                sn.field_Hb) {
+                ContextMenu.field_Hb) {
                 var7Lifetime6 = "[" + ne.field_vb + "] ";
               }
               if (JaggrabDownloader.field_c != null) {
@@ -437,7 +437,7 @@ final class WhirlpoolHasher {
           var9 = param0;
           var10 = param3;
           var11 = param2;
-          var13.field_j.b(4542, var8, var11, var9, var10);
+          var13.field_j.layoutAtAnchor(4542, var8, var11, var9, var10);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "wl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

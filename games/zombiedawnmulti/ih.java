@@ -82,7 +82,7 @@ final class ih {
     }
 
     final static void a(n param0, int param1, int param2) {
-        ga var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = ma.field_a;
@@ -106,7 +106,7 @@ final class ih {
     }
 
     final static void a(byte param0, ab param1, int param2) {
-        ga var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = ma.field_a;

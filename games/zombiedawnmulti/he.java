@@ -87,7 +87,7 @@ final class he implements WidgetActionListener {
         int var6 = 0;
         byte[] var8 = null;
         cr var9 = null;
-        ga var10 = null;
+        CipherPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;

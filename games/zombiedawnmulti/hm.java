@@ -9,7 +9,7 @@ final class hm extends un {
         return String.valueOf(param1);
     }
 
-    final String a(String param0, int param1) {
+    final String validationMessageForText(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -50,7 +50,7 @@ final class hm extends un {
         }
     }
 
-    hm(pm param0) {
+    hm(TextInputWidget param0) {
         super(param0);
     }
 

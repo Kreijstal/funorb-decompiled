@@ -110,7 +110,7 @@ final class si extends nc {
           } else {
             if (this.field_z.field_i &&
               this.field_t > 0) {
-              stackIn_14_1 = ga.field_s;
+              stackIn_14_1 = CipherPacketBuffer.field_s;
             } else {
               stackIn_14_1 = wk.field_L;
             }
@@ -634,7 +634,7 @@ final class si extends nc {
           for (var9Lifetime1 = 0; 5 > var9Lifetime1; var9Lifetime1++) {
             var10Lifetime1 = FullscreenFocusCanvas.field_k.field_m[var9Lifetime1];
             if (255 != var10Lifetime1) {
-              var7Lifetime1 = ga.field_v[var9Lifetime1];
+              var7Lifetime1 = CipherPacketBuffer.field_v[var9Lifetime1];
             }
           }
           for (var9Lifetime1Lifetime1 = 0; var9Lifetime1Lifetime1 < 3; var9Lifetime1Lifetime1++) {
@@ -661,22 +661,22 @@ final class si extends nc {
           for (var11Lifetime1 = 0; var11Lifetime1 < var10Lifetime1Lifetime2; var11Lifetime1++) {
             var12Lifetime1 = FullscreenFocusCanvas.field_k.field_m[var11Lifetime1];
             var13Lifetime1 = FullscreenFocusCanvas.field_k.field_g[var11Lifetime1];
-            na.field_I.a(-32 + ga.field_v[var11Lifetime1], 126, var6Lifetime1);
+            na.field_I.a(-32 + CipherPacketBuffer.field_v[var11Lifetime1], 126, var6Lifetime1);
             if (255 != var12Lifetime1 &&
               63 > var12Lifetime1) {
-              pq.field_o.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
+              pq.field_o.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
               for (var14Lifetime1 = 0; var14Lifetime1 < 8; var14Lifetime1++) {
-                SoftwareRasterizer.a(10 + ga.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * PowerupEvent.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
+                SoftwareRasterizer.a(10 + CipherPacketBuffer.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * PowerupEvent.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
-              w.field_z.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
-              mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + ga.field_v[var11Lifetime1]);
+              w.field_z.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
+              mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + CipherPacketBuffer.field_v[var11Lifetime1]);
               var14Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1];
               var15Lifetime1 = cr.a(var12Lifetime1, -107);
               incrementValue$1 = var9Lifetime1Lifetime3;
               var9Lifetime1Lifetime3++;
               stackIn_116_0 = qp.field_w;
               stackIn_116_1 = eb.a(this.field_r[incrementValue$1], true, true);
-              stackIn_116_2 = ga.field_v[var11Lifetime1] - 50;
+              stackIn_116_2 = CipherPacketBuffer.field_v[var11Lifetime1] - 50;
               stackIn_116_3 = 123;
               if (var14Lifetime1Lifetime2 < var15Lifetime1) {
                 stackIn_117_4 = 16777215;
@@ -692,7 +692,7 @@ final class si extends nc {
                 var9Lifetime1Lifetime3++;
                 stackIn_125_0 = qp.field_w;
                 stackIn_125_1 = eb.a(this.field_r[incrementValue$2], true, true);
-                stackIn_125_2 = -73 + ga.field_v[var11Lifetime1];
+                stackIn_125_2 = -73 + CipherPacketBuffer.field_v[var11Lifetime1];
                 stackIn_125_3 = 111;
                 if (var14Lifetime1Lifetime3 >= var15Lifetime1Lifetime1) {
                   stackIn_126_4 = 16711680;
@@ -702,7 +702,7 @@ final class si extends nc {
                 ((BinaryBitmapFont) (Object) stackIn_125_0).b(stackIn_125_1, stackIn_125_2, stackIn_125_3, stackIn_126_4, 1, var6Lifetime1);
               }
             } else {
-              tm.field_f.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
+              tm.field_f.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
             }
           }
           for (var11Lifetime1Lifetime1 = 0; var11Lifetime1Lifetime1 < 3; var11Lifetime1Lifetime1++) {
@@ -716,7 +716,7 @@ final class si extends nc {
               for (var13Lifetime1Lifetime1Lifetime1 = 0; var13Lifetime1Lifetime1Lifetime1 < 8; var13Lifetime1Lifetime1Lifetime1++) {
                 SoftwareRasterizer.a(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * PowerupEvent.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
               }
-              pm.field_N.a(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
+              TextInputWidget.field_N.a(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
               SoftwareRasterizer.resetClip();
               qh.a(var12Lifetime1Lifetime1, -29990, FullscreenFocusCanvas.field_k, 280, var11Lifetime1Lifetime1 * 209 + 91, var6Lifetime1);
               var13Lifetime1Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1Lifetime1];

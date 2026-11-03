@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends pl implements in {
+final class oj extends ArrayWidgetGroup implements in {
     private em field_P;
     static Sprite[] field_M;
     static String field_H;
@@ -26,12 +26,12 @@ final class oj extends pl implements in {
 
     final void g(int param0) {
         int var2 = 250;
-        this.field_P.b(-var2 + this.field_n >> 1, 20 + (this.field_w - 25) >> 1, 28972, param0, 25);
-        this.field_B.b((-var2 + this.field_n >> 1) + 150, (20 + (this.field_w - 30) >> 1) + 2, param0 ^ 29088, 100, 30);
+        this.field_P.setWidgetBounds(-var2 + this.field_n >> 1, 20 + (this.field_w - 25) >> 1, 28972, param0, 25);
+        this.field_B.setWidgetBounds((-var2 + this.field_n >> 1) + 150, (20 + (this.field_w - 30) >> 1) + 2, param0 ^ 29088, 100, 30);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void renderWidget(int param0, int param1, int param2, int param3) {
+        super.renderWidget(param0, param1, param2, param3);
         cp.field_H.c(DualLinkNode.field_m, 4 + param3 + this.field_y, 4 + param1 - (-this.field_i - cp.field_H.field_C), 16777215, -1);
     }
 
@@ -64,9 +64,9 @@ final class oj extends pl implements in {
         field_N = (byte[][]) null;
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_B.field_F = this.field_P.a((byte) 126).d(53) == db.field_b ? true : false;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "oj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

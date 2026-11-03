@@ -113,7 +113,7 @@ final class ui extends IntrusiveNode {
           }
           if (null != PortalEntryEvent.field_m &&
             1 < PortalEntryEvent.field_m.teamCount) {
-            stackIn_8_0 = (pl.field_I == 10) ? 1 : 0;
+            stackIn_8_0 = (ArrayWidgetGroup.field_I == 10) ? 1 : 0;
             var2_int = stackIn_8_0;
             if (!iq.field_f) {
               stackIn_14_0 = 0;

@@ -41,7 +41,7 @@ final class nk extends IntrusiveNode {
         ab.field_o = param0;
     }
 
-    final static GameEvent a(int param0, ga param1) {
+    final static GameEvent a(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

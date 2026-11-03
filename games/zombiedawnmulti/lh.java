@@ -5,7 +5,7 @@ final class lh {
     private gg[] field_f;
     private int field_k;
     String field_j;
-    static sk field_g;
+    static UiTheme field_g;
     static int field_l;
     private int field_h;
     float field_d;
@@ -70,9 +70,9 @@ final class lh {
         md var6 = null;
         int[] var7 = null;
         int var8 = 0;
-        ga var9 = null;
+        CipherPacketBuffer var9 = null;
         int var10 = 0;
-        ga var11 = null;
+        CipherPacketBuffer var11 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -81,7 +81,7 @@ final class lh {
         int var4Lifetime1;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var9 = new ga(param1.a("logo.fo3d", "", false));
+          var9 = new CipherPacketBuffer(param1.a("logo.fo3d", "", false));
           var11 = var9;
           var3 = var11.readUnsignedByte(31365);
           var11.k(-1136);

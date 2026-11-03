@@ -33,7 +33,7 @@ final class ChaseEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 83) {
-            stackIn_4_0 = mk.field_b.a("", param0, false);
+            stackIn_4_0 = WidgetStyleLayer.field_b.a("", param0, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

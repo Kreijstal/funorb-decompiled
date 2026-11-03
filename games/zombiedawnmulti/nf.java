@@ -37,7 +37,7 @@ final class nf {
             stackIn_6_0 = er.field_f;
             return stackIn_6_0;
           }
-          var3 = mk.a('.', false, param1);
+          var3 = WidgetStyleLayer.a('.', false, param1);
           if (2 > var3.length) {
             stackIn_9_0 = jo.field_e;
             return stackIn_9_0;

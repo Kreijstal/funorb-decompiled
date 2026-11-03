@@ -86,7 +86,7 @@ final class en extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 50) {
-            stackIn_4_0 = (dm) (hq.field_c.a(param1, -22877));
+            stackIn_4_0 = (dm) (TextWidgetPainter.field_c.a(param1, -22877));
             return stackIn_4_0;
           }
           stackIn_2_0 = (dm) null;
@@ -139,7 +139,7 @@ final class en extends IOException {
           pq.field_m[3] = param8;
           pq.field_m[4] = 16711935;
           pq.field_m[1] = 6356832;
-          sn.field_Hb = param6;
+          ContextMenu.field_Hb = param6;
           pq.field_m[0] = 16764000;
           w.field_A = param2;
           qq.field_f = param0;
@@ -189,7 +189,7 @@ final class en extends IOException {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_28_0 != stackIn_28_1) {
                 if (1 != var18 ||
-                  !sn.field_Hb) {
+                  !ContextMenu.field_Hb) {
                   decompiledFrameRemainder0 = (var18 == 2);
                   if (decompiledFrameRemainder0) {
                     var19 = lo.field_c;
@@ -198,7 +198,7 @@ final class en extends IOException {
                   var19 = RasterBuffer.field_d;
                 }
               } else {
-                if (!sn.field_Hb) {
+                if (!ContextMenu.field_Hb) {
                   stackIn_24_0 = uq.field_c;
                 } else {
                   stackIn_24_0 = ne.field_vb;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq extends hq {
+final class oq extends TextWidgetPainter {
     static String field_v;
     static int[] field_w;
     private int field_s;

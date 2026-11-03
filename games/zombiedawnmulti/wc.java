@@ -36,7 +36,7 @@ final class wc extends SceneObject {
             cg.field_i.e(-30986);
             cg.field_i = null;
           }
-          hq.field_c = null;
+          TextWidgetPainter.field_c = null;
           if (tn.field_C != null) {
             tn.field_C.e(-30986);
             tn.field_C = null;
@@ -47,13 +47,13 @@ final class wc extends SceneObject {
             nh.field_g = null;
           }
           kp.field_o = null;
-          if (hq.field_c != null) {
-            var1 = (dm) (hq.field_c.a((byte) 7));
+          if (TextWidgetPainter.field_c != null) {
+            var1 = (dm) (TextWidgetPainter.field_c.a((byte) 7));
             while (var1 != null) {
               var1.a(param0 ^ 32692);
-              var1 = (dm) (hq.field_c.c((byte) 97));
+              var1 = (dm) (TextWidgetPainter.field_c.c((byte) 97));
             }
-            hq.field_c = null;
+            TextWidgetPainter.field_c = null;
           }
           if (param0 != -28264) {
             field_M = (Sprite[]) null;
@@ -164,7 +164,7 @@ final class wc extends SceneObject {
               uk.field_N = false;
             }
             if (pb.field_f) {
-              qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
+              qf.a(1, ArrayWidgetGroup.field_I, true, (byte) 93, bl.field_e);
               pb.field_f = false;
             }
             return;
@@ -218,7 +218,7 @@ final class wc extends SceneObject {
           uk.field_N = false;
         }
         if (pb.field_f) {
-          qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
+          qf.a(1, ArrayWidgetGroup.field_I, true, (byte) 93, bl.field_e);
           pb.field_f = false;
         }
     }

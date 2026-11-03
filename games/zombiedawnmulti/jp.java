@@ -36,7 +36,7 @@ final class jp {
             var2 = bc.field_d;
           }
           if (va.field_a == 2 &&
-            !tl.d((byte) -20)) {
+            !QuickChatPhraseDefinition.d((byte) -20)) {
             if (!kj.a((byte) -94, ql.field_a)) {
               var2 = vl.a(ta.field_jb, new String[]{qf.field_g}, 2);
               if (var10 != 0) {
@@ -79,7 +79,7 @@ final class jp {
               var10 != 0) {
               if (var6 == 0) {
                 if (JaggrabDownloader.field_c == null &&
-                  sn.field_Hb) {
+                  ContextMenu.field_Hb) {
                   var4 = "[" + ne.field_vb + "] ";
                 }
                 if (null != JaggrabDownloader.field_c) {

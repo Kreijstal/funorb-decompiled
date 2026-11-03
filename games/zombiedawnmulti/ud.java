@@ -53,7 +53,7 @@ final class ud extends gn {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -66,7 +66,7 @@ final class ud extends gn {
         PcmStreamMixer var13 = null;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4 ^ 0, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4 ^ 0, param5, param6)) {
             if (param4 != -24) {
               var13 = (PcmStreamMixer) null;
               ud.a(17, -37, (ResourceArchive) null, (PcmStreamMixer) null);

@@ -188,9 +188,9 @@ final class JaggrabDownloader implements Runnable {
 
     final static void c(int param0) {
         vl var1 = null;
-        ga var2 = null;
+        CipherPacketBuffer var2 = null;
         vl var1Lifetime1;
-        ga var2Lifetime1;
+        CipherPacketBuffer var2Lifetime1;
         if (param0 != 0) {
           field_l = (IntrusiveDeque) null;
           var1 = (vl) (lf.field_e.c(param0 + 69));

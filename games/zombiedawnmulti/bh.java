@@ -54,7 +54,7 @@ final class bh {
           var3 = "";
           if (2 != param1.field_l) {
             if (param1.field_l == 0 &&
-              sn.field_Hb) {
+              ContextMenu.field_Hb) {
               var3 = "[" + ne.field_vb + "] ";
             }
             if (param1.field_l == 1) {

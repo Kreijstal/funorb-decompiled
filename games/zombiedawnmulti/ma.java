@@ -3,7 +3,7 @@
  */
 final class ma {
     static int field_d;
-    static ga field_a;
+    static CipherPacketBuffer field_a;
     static mo[][] field_b;
     static String field_c;
 

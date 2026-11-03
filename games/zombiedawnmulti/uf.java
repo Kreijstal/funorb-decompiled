@@ -212,13 +212,13 @@ final class uf {
               var18 = pk.field_b;
               var13 = vb.field_f;
               var14 = ka.field_t;
-              var18.field_j.b(4542, var13, 0, var14, 0);
+              var18.field_j.layoutAtAnchor(4542, var13, 0, var14, 0);
             }
             var5 = var6;
             var6 = (ml) (var4.b(6));
           }
           if (0 != gl.field_L.field_Gb.field_T) {
-            gi.field_i = new dk(gl.field_L.field_Gb.field_w, gl.field_L.field_Gb.field_qb, gl.field_L.field_Gb.field_zb, gl.field_L.field_Gb.field_z, pl.field_K, kd.field_a, vo.field_m, vo.field_m);
+            gi.field_i = new dk(gl.field_L.field_Gb.field_w, gl.field_L.field_Gb.field_qb, gl.field_L.field_Gb.field_zb, gl.field_L.field_Gb.field_z, ArrayWidgetGroup.field_K, kd.field_a, vo.field_m, vo.field_m);
             ic.field_e = 2;
           }
           if (gl.field_L.field_Hb.field_T == 0) {

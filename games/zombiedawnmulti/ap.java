@@ -95,7 +95,7 @@ final class ap extends qb {
             SoftwareRasterizer.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var17, var6, var7);
-          tl.field_t = HuffmanCodec.a(false, tg.field_d, bb.field_k, GameWorld.field_x, var5);
+          QuickChatPhraseDefinition.field_t = HuffmanCodec.a(false, tg.field_d, bb.field_k, GameWorld.field_x, var5);
           rp.field_l.field_Cb = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ap.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -345,7 +345,7 @@ final class ap extends qb {
           }
           var5_int = param0.a(param2, (byte) 123);
           var6 = param0.a(param4, var5_int, -1);
-          stackIn_4_0 = pm.a(param1, var6, var5_int, param0, -29435);
+          stackIn_4_0 = TextInputWidget.a(param1, var6, var5_int, param0, -29435);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

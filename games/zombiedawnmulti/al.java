@@ -197,8 +197,8 @@ abstract class al extends df {
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        hq.field_e.g(-90 + param1 + this.field_n, 10 + param2);
-        fk.a(param1 + 5, this.field_n - 10, param0, sn.field_Nb, 35 + param2);
+        TextWidgetPainter.field_e.g(-90 + param1 + this.field_n, 10 + param2);
+        fk.a(param1 + 5, this.field_n - 10, param0, ContextMenu.field_Nb, 35 + param2);
         fk.a(param1, this.field_n, true, jh.field_Hb, this.field_w + param2 - 22);
         var5Lifetime2 = 169;
         var4Lifetime2 = this.field_w - 79;
@@ -225,7 +225,7 @@ abstract class al extends df {
           cr.field_j + er.field_j.height > param0) {
           return 0;
         }
-        if (il.field_k <= param2 && param2 < il.field_k + er.field_j.width && param0 >= sq.field_O &&
+        if (RasterSnapshot.field_k <= param2 && param2 < RasterSnapshot.field_k + er.field_j.width && param0 >= sq.field_O &&
           !(param0 >= sq.field_O + er.field_j.height)) {
           return 1;
         }

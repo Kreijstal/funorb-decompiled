@@ -790,14 +790,14 @@ abstract class SimUnit extends SimEntity {
         return true;
     }
 
-    final static hq g(byte param0) {
+    final static TextWidgetPainter g(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (hj.field_d != null) {
           var1 = -122 % ((53 - param0) / 62);
           return hj.field_d;
         }
-        hj.field_d = new hq(cp.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, cp.field_H.field_C, -1, 2147483647, true);
+        hj.field_d = new TextWidgetPainter(cp.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, cp.field_H.field_C, -1, 2147483647, true);
         var1Lifetime1 = -122 % ((53 - param0) / 62);
         return hj.field_d;
     }

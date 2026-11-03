@@ -52,14 +52,14 @@ final class ah {
                 this.var2_ref = null;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                mk.field_b = param1;
+                WidgetStyleLayer.field_b = param1;
                 var2 = ChaseEvent.a("loginm3", (byte) 83);
                 if (null != var2) {
                   aj.field_l = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("loginm2", (byte) 83);
                 if (var2 != null) {
-                  ga.field_w = qe.a(-2739, var2);
+                  CipherPacketBuffer.field_w = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("loginm1", (byte) 83);
                 if (null != var2) {
@@ -159,7 +159,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_chat_tips", (byte) 83);
                 if (null != var2) {
-                  mk.field_n = qe.a(-2739, var2);
+                  WidgetStyleLayer.field_n = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_chat_game", (byte) 83);
                 if (null != var2) {
@@ -215,7 +215,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_entered_other_game", (byte) 83);
                 if (var2 != null) {
-                  ga.field_q = qe.a(-2739, var2);
+                  CipherPacketBuffer.field_q = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_game_is_full", (byte) 83);
                 if (null != var2) {
@@ -306,7 +306,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_play_rated", (byte) 83);
                 if (null != var2) {
-                  sn.field_Gb = qe.a(-2739, var2);
+                  ContextMenu.field_Gb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_create_unrated", (byte) 83);
                 if (null != var2) {
@@ -494,7 +494,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("rated_game", (byte) 83);
                 if (null != var2) {
-                  mk.field_l = qe.a(-2739, var2);
+                  WidgetStyleLayer.field_l = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("unrated_game", (byte) 83);
                 if (null != var2) {
@@ -1068,7 +1068,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("changedisplayname", (byte) 83);
                 if (null != var2) {
-                  il.field_l = qe.a(-2739, var2);
+                  RasterSnapshot.field_l = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("returntohomepage", (byte) 83);
                 if (null != var2) {
@@ -1148,7 +1148,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("back", (byte) 83);
                 if (null != var2) {
-                  sn.field_Zb = qe.a(-2739, var2);
+                  ContextMenu.field_Zb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("exitfullscreenmode", (byte) 83);
                 if (null != var2) {
@@ -1748,7 +1748,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("enterignore_add", (byte) 83);
                 if (null != var2) {
-                  pl.field_K = qe.a(-2739, var2);
+                  ArrayWidgetGroup.field_K = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("enterignore_del", (byte) 83);
                 if (var2 != null) {
@@ -2714,11 +2714,11 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("fs_focus_or_resolution", (byte) 83);
                 if (null != var2) {
-                  sk.field_r = qe.a(-2739, var2);
+                  UiTheme.field_r = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("fs_timeout", (byte) 83);
                 if (var2 != null) {
-                  ga.field_t = qe.a(-2739, var2);
+                  CipherPacketBuffer.field_t = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("fs_button_tryagain", (byte) 83);
                 if (var2 != null) {
@@ -2754,7 +2754,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mb_exclusive_1", (byte) 83);
                 if (var2 != null) {
-                  sn.field_Yb = qe.a(-2739, var2);
+                  ContextMenu.field_Yb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mb_exclusive_2", (byte) 83);
                 if (var2 != null) {
@@ -2796,11 +2796,11 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("rating_mode_long_name,0", (byte) 83);
                 if (var2 != null) {
-                  mk.field_c[0] = qe.a(-2739, var2);
+                  WidgetStyleLayer.field_c[0] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("rating_mode_long_name,1", (byte) 83);
                 if (null != var2) {
-                  mk.field_c[1] = qe.a(-2739, var2);
+                  WidgetStyleLayer.field_c[1] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("graphics_config_fixed_size", (byte) 83);
                 if (null != var2) {
@@ -3038,7 +3038,7 @@ final class ah {
                 if (null != var2) {
                   qe.a(-2739, var2);
                 }
-                mk.field_b = null;
+                WidgetStyleLayer.field_b = null;
                 finished = true; return;
             }
             void run() {

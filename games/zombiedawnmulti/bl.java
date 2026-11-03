@@ -92,17 +92,17 @@ final class bl {
         int var2Lifetime1;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (pl.field_I == sp.field_g) {
+          if (ArrayWidgetGroup.field_I == sp.field_g) {
             return;
           }
-          if (lb.a((byte) 53, pl.field_I)) {
-            gk.a(2, pl.field_I).b((byte) 69);
+          if (lb.a((byte) 53, ArrayWidgetGroup.field_I)) {
+            gk.a(2, ArrayWidgetGroup.field_I).b((byte) 69);
           }
           gk.field_b = 0;
           if (param0 != -9) {
             return;
           }
-          pl.field_I = sp.field_g;
+          ArrayWidgetGroup.field_I = sp.field_g;
           if (bi.field_e) {
             wp.field_h = null;
             hh.field_b = false;

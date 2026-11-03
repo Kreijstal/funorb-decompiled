@@ -7,7 +7,7 @@ final class oa {
     static ao field_a;
     static String field_b;
 
-    final static PhaseChangeEvent a(ga param0, int param1) {
+    final static PhaseChangeEvent a(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

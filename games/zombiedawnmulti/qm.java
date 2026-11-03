@@ -3,26 +3,26 @@
  */
 final class qm extends WidgetContainer implements fi, in {
     static String field_I;
-    private pm field_M;
+    private TextInputWidget field_M;
     private boolean field_L;
     private gn field_P;
     private gn field_J;
     private boolean field_K;
     static String field_N;
-    private pm field_H;
+    private TextInputWidget field_H;
     private gn field_G;
     private boolean field_Q;
     private String field_O;
 
     final void a(int param0, String param1) {
-        pm var4 = null;
+        TextInputWidget var4 = null;
         String var5 = null;
         try {
           int var3_int = 62 / ((-46 - param0) / 51);
           var4 = this.field_H;
           var5 = param1;
-          var4.a(false, var5, (byte) 119);
-          this.field_M.b(true);
+          var4.setInputText(false, var5, (byte) 119);
+          this.field_M.clearInputText(true);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -71,7 +71,7 @@ final class qm extends WidgetContainer implements fi, in {
             field_I = (String) null;
           }
           var6 = ka.field_t;
-          var13.field_j.b(4542, var5, 0, var6, 0);
+          var13.field_j.layoutAtAnchor(4542, var5, 0, var6, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -139,14 +139,14 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         if (null != this.field_O) {
           ke.field_h.a(this.field_O, param3 - (-this.field_y - 20), 15 + (this.field_i + param1), this.field_n - 40, this.field_w, 16777215, -1, 1, 0, ke.field_h.field_C);
         }
         if (null != this.field_P) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, param1 + 134, -20 + this.field_n, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.renderWidget(param0, param1, param2, param3);
     }
 
     final String h(int param0) {
@@ -160,12 +160,12 @@ final class qm extends WidgetContainer implements fi, in {
     }
 
     final void g(byte param0) {
-        this.field_H.b(true);
+        this.field_H.clearInputText(true);
         if (param0 < 101) {
           UiWidget var3 = (UiWidget) null;
-          this.a(39, '￟', (UiWidget) null, 8);
+          this.handleKeyInput(39, '￟', (UiWidget) null, 8);
         }
-        this.field_M.b(true);
+        this.field_M.clearInputText(true);
     }
 
     qm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
@@ -205,8 +205,8 @@ final class qm extends WidgetContainer implements fi, in {
             this.field_L)) {
             throw new IllegalStateException();
           }
-          this.field_H = (pm) ((Object) new on(param0, (bj) (this), 100));
-          this.field_M = (pm) ((Object) new on("", (bj) (this), 20));
+          this.field_H = (TextInputWidget) ((Object) new on(param0, (bj) (this), 100));
+          this.field_M = (TextInputWidget) ((Object) new on("", (bj) (this), 20));
           if (!this.field_K) {
             this.field_G = new gn(qo.field_s, (bj) null);
             stackIn_18_1 = null;
@@ -214,7 +214,7 @@ final class qm extends WidgetContainer implements fi, in {
             if (!this.field_L) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = sn.field_Zb;
+              stackIn_19_3 = ContextMenu.field_Zb;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -283,27 +283,27 @@ final class qm extends WidgetContainer implements fi, in {
             this.field_J.field_A = (bj) (this);
           }
           if (this.field_P == null) {
-            this.field_G.b(8, this.field_i, 28972, this.field_n - 6 - 10, 30);
+            this.field_G.setWidgetBounds(8, this.field_i, 28972, this.field_n - 6 - 10, 30);
             this.field_i = this.field_i + 35;
           } else {
-            this.field_G.b(85, this.field_i, 28972, this.field_n - 95, 30);
+            this.field_G.setWidgetBounds(85, this.field_i, 28972, this.field_n - 95, 30);
             this.field_i = this.field_i + 60;
           }
           if (this.field_P != null) {
-            this.field_P.b(8, this.field_i, 28972, -10 + (-6 + this.field_n), 30);
+            this.field_P.setWidgetBounds(8, this.field_i, 28972, -10 + (-6 + this.field_n), 30);
             this.field_i = this.field_i + 35;
           }
           if (null != this.field_J) {
             if (!this.field_K &&
               !this.field_L) {
-              this.field_J.b(8, this.field_i, 28972, 40, 20);
+              this.field_J.setWidgetBounds(8, this.field_i, 28972, 40, 20);
               this.field_i = this.field_i + 25;
             } else {
-              this.field_J.b(8, this.field_i, 28972, -10 + (this.field_n - 6), 30);
+              this.field_J.setWidgetBounds(8, this.field_i, 28972, -10 + (this.field_n - 6), 30);
               this.field_i = this.field_i + 35;
             }
           }
-          this.b(0, 0, 28972, this.field_n, 3 + this.field_i);
+          this.setWidgetBounds(0, 0, 28972, this.field_n, 3 + this.field_i);
           this.b((byte) 70, this.field_G);
           if (null != this.field_P) {
             this.b((byte) 71, this.field_P);
@@ -338,7 +338,7 @@ final class qm extends WidgetContainer implements fi, in {
         field_I = null;
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -347,7 +347,7 @@ final class qm extends WidgetContainer implements fi, in {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -373,7 +373,7 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    final static GameEvent a(ga param0, boolean param1) {
+    final static GameEvent a(CipherPacketBuffer param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -410,7 +410,7 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    public final void a(pm param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         try {
           if (param1 != 0) {
             String var4 = (String) null;
@@ -421,7 +421,7 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    public final void a(pm param0, boolean param1) {
+    public final void a(TextInputWidget param0, boolean param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -494,7 +494,7 @@ final class qm extends WidgetContainer implements fi, in {
         if (aa.e(0) ||
           !(this.field_H.field_j.length() <= 0) &&
           !(this.field_M.field_j.length() <= 0)) {
-          hq.a(this.field_H.field_j, (byte) -125, this.field_M.field_j);
+          TextWidgetPainter.a(this.field_H.field_j, (byte) -125, this.field_M.field_j);
         }
     }
 

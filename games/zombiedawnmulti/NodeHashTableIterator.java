@@ -42,7 +42,7 @@ final class NodeHashTableIterator implements Iterator {
           var1_int = RandomAccessCacheFile.field_e - IntrusiveDequeCursor.field_i;
           IntrusiveDequeCursor.field_i = NetworkGameClient.field_x - (var1_int >> 1);
           RandomAccessCacheFile.field_e = IntrusiveDequeCursor.field_i + var1_int;
-          eb.field_M = pm.field_Q - (pl.field_F >> 1);
+          eb.field_M = TextInputWidget.field_Q - (ArrayWidgetGroup.field_F >> 1);
           var2 = eb.field_M;
           for (var3 = 0; var3 < eo.field_e.length; var3++) {
             var4 = dn.field_a[var3];

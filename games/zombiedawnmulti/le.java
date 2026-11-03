@@ -157,12 +157,12 @@ final class le extends UiWidget {
         field_P = null;
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setWidgetBounds(param0, param1, param2, param3, param4);
         this.f(-506198655);
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -176,7 +176,7 @@ final class le extends UiWidget {
             }
           }
           if (param0 != -5407) {
-            this.b(-97, -4, 31, 91, 52);
+            this.setWidgetBounds(-97, -4, 31, 91, 52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +193,7 @@ final class le extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         if (param2 != 0) {
           return;
         }
@@ -284,7 +284,7 @@ final class le extends UiWidget {
         this.field_H = param7;
         this.field_D = param4;
         this.field_K = param8;
-        this.b(param0, param1, 28972, param2, param3);
+        this.setWidgetBounds(param0, param1, 28972, param2, param3);
     }
 
     private final void f(int param0) {
@@ -293,7 +293,7 @@ final class le extends UiWidget {
         this.field_O = this.field_M.f();
         this.field_C = new Sprite(this.field_w >> 1, this.field_w);
         if (param0 != -506198655) {
-          this.b(-93, 112, 105, 48, -63);
+          this.setWidgetBounds(-93, 112, 105, 48, -63);
         }
     }
 

@@ -228,7 +228,7 @@ final class ko {
               ii.a(param1, -1);
             }
           }
-          if (pl.field_L.field_T != 0) {
+          if (ArrayWidgetGroup.field_L.field_T != 0) {
             if (1 == qo.field_r.length &&
               i.field_e != qo.field_r[0]) {
               i.field_e = qo.field_r[0];

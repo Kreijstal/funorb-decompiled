@@ -324,7 +324,7 @@ final class TertiaryLinkDeque {
     final static void a(boolean param0, byte param1, float param2, String param3) {
         try {
           if (null == pj.field_I) {
-            pj.field_I = new ta(nb.field_a, pm.field_P);
+            pj.field_I = new ta(nb.field_a, TextInputWidget.field_P);
             nb.field_a.b(3016, pj.field_I);
           }
           pj.field_I.a(param3, param2, 66, param0);

@@ -318,11 +318,11 @@ class GameWorld {
     }
 
     final static void a(int param0, String param1, int param2, String param3, int param4, int param5) {
-        ga var8 = null;
+        CipherPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = ma.field_a;
-          ga var6 = var8;
+          CipherPacketBuffer var6 = var8;
           var8.b((byte) -35, param2);
           if (param5 != 29602) {
             field_w = (String) null;

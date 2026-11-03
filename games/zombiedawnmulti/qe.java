@@ -114,9 +114,9 @@ final class qe {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          sn.field_Nb = pb.a("commonui", param2, -256, "frame_top");
+          ContextMenu.field_Nb = pb.a("commonui", param2, -256, "frame_top");
           jh.field_Hb = pb.a("commonui", param2, -256, "frame_bottom");
-          hq.field_e = fl.a("commonui", "jagex_logo_grey", param2, 11091);
+          TextWidgetPainter.field_e = fl.a("commonui", "jagex_logo_grey", param2, 11091);
           ui.field_k = pb.a("commonui", param2, -256, "button");
           rj.field_I = cn.a(true, "validation", param2, "commonui");
           cp.field_H = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo12", param0, param2));

@@ -66,7 +66,7 @@ final class ok {
           return;
         }
         this.field_v = this.field_g;
-        if (!(this.field_f <= mk.field_d)) {
+        if (!(this.field_f <= WidgetStyleLayer.field_d)) {
           this.field_a = false;
           return;
         }
@@ -130,21 +130,21 @@ final class ok {
         int var9_intLifetime3;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (pl.field_C != null &&
-            pl.field_C.a((byte) -124) &&
-            pl.field_C.a(false, "benefits") &&
+          if (ArrayWidgetGroup.field_C != null &&
+            ArrayWidgetGroup.field_C.a((byte) -124) &&
+            ArrayWidgetGroup.field_C.a(false, "benefits") &&
             lb.field_d != null &&
             lb.field_d.a((byte) -108) &&
             lb.field_d.a(false, "benefits")) {
-            GameApplet.field_b = fl.a("benefits", "headline", pl.field_C, 11091);
-            pn.field_a = fl.a("benefits", "blurbpane", pl.field_C, 11091);
-            ha.field_l = fl.a("benefits", "button", pl.field_C, 11091);
-            ig.field_e = fl.a("benefits", "signup_text", pl.field_C, 11091);
-            ia.field_y = fl.a("benefits", "menu_text", pl.field_C, 11091);
-            er.field_j = fl.a("benefits", "button_frame", pl.field_C, 11091);
-            fa.field_Tb = fl.a("benefits", "arrow", pl.field_C, 11091);
-            dc.field_Lb = (BitmapFont) ((Object) pj.a(pl.field_C, 4, lb.field_d, "large_font", "benefits"));
-            gf.field_e = (BitmapFont) ((Object) pj.a(pl.field_C, 4, lb.field_d, "small_font", "benefits"));
+            GameApplet.field_b = fl.a("benefits", "headline", ArrayWidgetGroup.field_C, 11091);
+            pn.field_a = fl.a("benefits", "blurbpane", ArrayWidgetGroup.field_C, 11091);
+            ha.field_l = fl.a("benefits", "button", ArrayWidgetGroup.field_C, 11091);
+            ig.field_e = fl.a("benefits", "signup_text", ArrayWidgetGroup.field_C, 11091);
+            ia.field_y = fl.a("benefits", "menu_text", ArrayWidgetGroup.field_C, 11091);
+            er.field_j = fl.a("benefits", "button_frame", ArrayWidgetGroup.field_C, 11091);
+            fa.field_Tb = fl.a("benefits", "arrow", ArrayWidgetGroup.field_C, 11091);
+            dc.field_Lb = (BitmapFont) ((Object) pj.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "large_font", "benefits"));
+            gf.field_e = (BitmapFont) ((Object) pj.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "small_font", "benefits"));
             var27 = SoftwareRasterizer.field_i;
             var2 = SoftwareRasterizer.field_b;
             var3 = SoftwareRasterizer.field_l;
@@ -162,7 +162,7 @@ final class ok {
             gf.field_e.b(vl.a(ob.field_w, new String[]{ql.field_e}, 2), var6, 60, 16777215, -1);
             dc.field_Lb.b(vl.a(ck.field_c, new String[]{eo.field_b}, 2), var6, 110, 16777215, -1);
             gf.field_e.b(vl.a(wc.field_G, new String[]{eo.field_b}, 2), var6, 130, 16777215, -1);
-            dc.field_Lb.b(sn.field_Yb, var6, 180, 16777215, -1);
+            dc.field_Lb.b(ContextMenu.field_Yb, var6, 180, 16777215, -1);
             gf.field_e.b(um.field_f, var6, 200, 16777215, -1);
             sq.a(5, var12.width, 3, var12.height, var12, 1, 0, 0);
             pn.field_a.a();
@@ -181,8 +181,8 @@ final class ok {
             jp.field_d = (ha.field_l.width - er.field_j.width) / 2 + 231;
             cr.field_j = (-er.field_j.height + ha.field_l.height) / 2 + 390;
             sq.field_O = (-er.field_j.height + ha.field_l.height) / 2 + 390;
-            pl.field_C = null;
-            il.field_k = (ha.field_l.width - er.field_j.width) / 2 + 434;
+            ArrayWidgetGroup.field_C = null;
+            RasterSnapshot.field_k = (ha.field_l.width - er.field_j.width) / 2 + 434;
           }
           if (rq.field_v == null) {
             return;
@@ -341,7 +341,7 @@ final class ok {
             if (1 == gl.field_H.field_d) {
               pi.a((byte) -122, 436, 64, -4 + ha.field_l.width, ha.field_l.height * 7 / 12, 392);
             }
-            stackIn_63_0 = il.field_k;
+            stackIn_63_0 = RasterSnapshot.field_k;
             stackIn_63_1 = sq.field_O;
             stackIn_63_2 = -59;
             stackIn_64_3 = (1 == gl.field_H.field_d);
@@ -391,7 +391,7 @@ final class ok {
         this.field_j = ng.field_d;
         this.field_u.a((byte) -26, this.field_q, this.field_e);
         hn.field_h = false;
-        FullscreenFocusCanvas var2 = u.a(param0 + 10386, pl.field_J, this.field_q, 0, param0, this.field_e);
+        FullscreenFocusCanvas var2 = u.a(param0 + 10386, ArrayWidgetGroup.field_J, this.field_q, 0, param0, this.field_e);
         if (var2 == null) {
           this.d(param0 - 44);
         }
@@ -460,7 +460,7 @@ final class ok {
         this.field_u.a((byte) -85, this.field_x, this.field_j);
     }
 
-    final static void a(int param0, int param1, ga param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         if (PortalEntryEvent.field_m.field_c) {
           return;
         }
@@ -487,7 +487,7 @@ final class ok {
         if (param0 != 0) {
           return true;
         }
-        stackIn_5_0 = (mk.field_d >= this.field_f) && (0 < vl.field_h);
+        stackIn_5_0 = (WidgetStyleLayer.field_d >= this.field_f) && (0 < vl.field_h);
         return stackIn_5_0;
     }
 

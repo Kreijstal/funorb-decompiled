@@ -110,25 +110,25 @@ final class gk {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          pl.field_F = mo.field_Jb.field_c * (ne.field_tb + pb.field_b << 1);
+          ArrayWidgetGroup.field_F = mo.field_Jb.field_c * (ne.field_tb + pb.field_b << 1);
           RandomAccessCacheFile.field_e = NetworkGameClient.field_x - (-var7Lifetime1 + (var7Lifetime1 >> 1));
           IntrusiveDequeCursor.field_i = -(var7Lifetime1 >> 1) + NetworkGameClient.field_x;
           var8Lifetime2 = 0;
           while (var8Lifetime2 < eo.field_e.length) {
-            stackIn_38_0 = pl.field_F;
+            stackIn_38_0 = ArrayWidgetGroup.field_F;
             stackIn_38_1 = dn.field_a[var8Lifetime2];
             if (stackIn_38_1 < 0) {
               stackIn_41_1 = ImageProducerRasterBuffer.field_l;
             } else {
               stackIn_41_1 = MusicPatch.field_n;
             }
-            pl.field_F = stackIn_38_0 + stackIn_41_1;
+            ArrayWidgetGroup.field_F = stackIn_38_0 + stackIn_41_1;
             var8Lifetime2++;
           }
           if (param1 != 2) {
             gk.a((byte) -33);
           }
-          eb.field_M = -(pl.field_F >> 1) + pm.field_Q;
+          eb.field_M = -(ArrayWidgetGroup.field_F >> 1) + TextInputWidget.field_Q;
           mo.field_Jb.a(0, param0, -31458, aj.a(bo.field_d, false, MouseInputHandler.field_g));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

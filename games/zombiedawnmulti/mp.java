@@ -56,19 +56,19 @@ abstract class mp {
         int fieldTemp$0 = 0;
         int var4_int = 0;
         try {
-          pm.field_R.position = param0;
-          pm.field_R.a(param0 ^ -108, 12);
-          pm.field_R.writeInt(-114, TertiaryLinkDeque.field_c.nextInt());
-          pm.field_R.writeInt(-118, TertiaryLinkDeque.field_c.nextInt());
-          pm.field_R.a(123, param2);
-          pm.field_R.a(-67, param1);
-          pm.field_R.a(param3, (byte) -128);
-          pm.field_R.a(tp.field_v, -2628, gn.field_L);
+          TextInputWidget.field_R.position = param0;
+          TextInputWidget.field_R.a(param0 ^ -108, 12);
+          TextInputWidget.field_R.writeInt(-114, TertiaryLinkDeque.field_c.nextInt());
+          TextInputWidget.field_R.writeInt(-118, TertiaryLinkDeque.field_c.nextInt());
+          TextInputWidget.field_R.a(123, param2);
+          TextInputWidget.field_R.a(-67, param1);
+          TextInputWidget.field_R.a(param3, (byte) -128);
+          TextInputWidget.field_R.a(UsernameAvailabilityValidator.field_v, -2628, gn.field_L);
           ma.field_a.b((byte) -35, 18);
           fieldTemp$0 = ma.field_a.position + 1;
           ma.field_a.position = ma.field_a.position + 1;
           var4_int = fieldTemp$0;
-          ma.field_a.a(pm.field_R.payload, pm.field_R.position, 0, 126);
+          ma.field_a.a(TextInputWidget.field_R.payload, TextInputWidget.field_R.position, 0, 126);
           ma.field_a.e(72, -var4_int + ma.field_a.position);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "mp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

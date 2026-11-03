@@ -47,7 +47,7 @@ final class cg extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, long param2) {
-        ga var4 = ma.field_a;
+        CipherPacketBuffer var4 = ma.field_a;
         var4.b((byte) -35, param0);
         if (param1 != -27404) {
           cg.a(-60, -93, 81L);

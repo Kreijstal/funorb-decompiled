@@ -67,7 +67,7 @@ final class gg {
             var6 = eb.field_B;
             eb.field_B.field_z = 0;
             var6.field_zb = 0;
-            field_m.field_wb = mk.field_l.toUpperCase();
+            field_m.field_wb = WidgetStyleLayer.field_l.toUpperCase();
             var7 = (2 + LevelData.field_a.field_zb) / 2;
             eb.field_B.a(40, -40 + LevelData.field_a.field_z, -2 + var7, 0, -3344);
             GameKeyHandler.field_a.a(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb - var7, var7, -3344);
@@ -102,7 +102,7 @@ final class gg {
             }
             GameKeyHandler.field_a.field_Z = true;
             if (la.field_k) {
-              sk.field_i.field_wb = GameScreen.field_K;
+              UiTheme.field_i.field_wb = GameScreen.field_K;
               jp.field_b.field_Z = false;
               if (var8 != 0) {
                 stackIn_57_0 = vc.field_c;
@@ -135,7 +135,7 @@ final class gg {
                 stackIn_25_1 = dk.field_Jb;
               }
               stackIn_24_0.field_wb = ((String) (Object) stackIn_25_1).toUpperCase();
-              stackIn_27_0 = sk.field_i;
+              stackIn_27_0 = UiTheme.field_i;
               if (var8 == 0) {
                 stackIn_28_1 = ImageProducerRasterBuffer.field_i;
               } else {

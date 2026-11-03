@@ -66,7 +66,7 @@ final class eb {
           var4 = qp.field_t[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = tp.field_t[tq.b((int) var4[var6], 255)];
+            var5[var6] = UsernameAvailabilityValidator.field_t[tq.b((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
         }
@@ -140,95 +140,95 @@ final class eb {
           if (ho.field_q == 0) {
             var3_int = mb.a(uq.field_f, false, oi.field_e, cq.field_e, ib.field_b);
             var4 = 3 + var3_int;
-            hq.field_m = new String[var4];
+            TextWidgetPainter.field_m = new String[var4];
             wd.field_Q = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               wd.field_Q[var5] = -1;
             }
             v.field_b = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              hq.field_m[var5] = cq.field_e[var5];
+              TextWidgetPainter.field_m[var5] = cq.field_e[var5];
             }
-            hq.field_m[-3 + var4] = "";
-            hq.field_m[-2 + var4] = p.field_b;
+            TextWidgetPainter.field_m[-3 + var4] = "";
+            TextWidgetPainter.field_m[-2 + var4] = p.field_b;
             wd.field_Q[var4 - 2] = 0;
             v.field_b[0] = 4;
-            hq.field_m[var4 - 1] = ic.field_f;
+            TextWidgetPainter.field_m[var4 - 1] = ic.field_f;
             wd.field_Q[var4 - 1] = 1;
             v.field_b[1] = 5;
           } else if (ho.field_q == 1) {
             var3_int = mb.a(uq.field_f, false, oi.field_e, cq.field_e, ib.field_b);
             var4 = var3_int + 2;
             wd.field_Q = new int[var4];
-            hq.field_m = new String[var4];
+            TextWidgetPainter.field_m = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               wd.field_Q[var5] = -1;
             }
             v.field_b = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              hq.field_m[var5] = cq.field_e[var5];
+              TextWidgetPainter.field_m[var5] = cq.field_e[var5];
             }
-            hq.field_m[var4 - 2] = "";
-            hq.field_m[var4 - 1] = ic.field_f;
+            TextWidgetPainter.field_m[var4 - 2] = "";
+            TextWidgetPainter.field_m[var4 - 1] = ic.field_f;
             wd.field_Q[var4 - 1] = 0;
             v.field_b[0] = 5;
           } else if (ho.field_q != 2) {
             if (ho.field_q == 3) {
-              if (pl.field_J.field_d) {
+              if (ArrayWidgetGroup.field_J.field_d) {
                 var3_int = mb.a(uq.field_f, param0, ArmedHumanView.field_sb, cq.field_e, ib.field_b);
               } else {
                 var3_int = mb.a(uq.field_f, false, aa.field_j, cq.field_e, ib.field_b);
               }
               var4 = 2 + var3_int;
               wd.field_Q = new int[var4];
-              hq.field_m = new String[var4];
+              TextWidgetPainter.field_m = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 wd.field_Q[var5] = -1;
               }
               v.field_b = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                hq.field_m[var5] = cq.field_e[var5];
+                TextWidgetPainter.field_m[var5] = cq.field_e[var5];
               }
-              hq.field_m[-2 + var4] = "";
-              hq.field_m[-1 + var4] = ic.field_f;
+              TextWidgetPainter.field_m[-2 + var4] = "";
+              TextWidgetPainter.field_m[-1 + var4] = ic.field_f;
               wd.field_Q[-1 + var4] = 0;
               v.field_b[0] = 5;
             } else if (ho.field_q == 4) {
               var3_int = mb.a(uq.field_f, false, on.field_cb, cq.field_e, ib.field_b);
               var4 = 2 + var3_int;
-              hq.field_m = new String[var4];
+              TextWidgetPainter.field_m = new String[var4];
               wd.field_Q = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 wd.field_Q[var5] = -1;
               }
               v.field_b = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                hq.field_m[var5] = cq.field_e[var5];
+                TextWidgetPainter.field_m[var5] = cq.field_e[var5];
               }
-              hq.field_m[var4 - 2] = "";
-              hq.field_m[var4 - 1] = ic.field_f;
+              TextWidgetPainter.field_m[var4 - 2] = "";
+              TextWidgetPainter.field_m[var4 - 1] = ic.field_f;
               wd.field_Q[var4 - 1] = 0;
               v.field_b[0] = 5;
             } else {
               if (ho.field_q != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = mb.a(uq.field_f, false, ga.field_t, cq.field_e, ib.field_b);
+              var3_int = mb.a(uq.field_f, false, CipherPacketBuffer.field_t, cq.field_e, ib.field_b);
               var4 = 3 + var3_int;
               wd.field_Q = new int[var4];
-              hq.field_m = new String[var4];
+              TextWidgetPainter.field_m = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 wd.field_Q[var5] = -1;
               }
               v.field_b = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                hq.field_m[var5] = cq.field_e[var5];
+                TextWidgetPainter.field_m[var5] = cq.field_e[var5];
               }
-              hq.field_m[-3 + var4] = "";
-              hq.field_m[-2 + var4] = ei.field_d;
+              TextWidgetPainter.field_m[-3 + var4] = "";
+              TextWidgetPainter.field_m[-2 + var4] = ei.field_d;
               wd.field_Q[-2 + var4] = 0;
               v.field_b[0] = 3;
-              hq.field_m[var4 - 1] = ic.field_f;
+              TextWidgetPainter.field_m[var4 - 1] = ic.field_f;
               wd.field_Q[-1 + var4] = 1;
               v.field_b[1] = 5;
             }
@@ -278,24 +278,24 @@ final class eb {
             }
             var6 = stackIn_60_0;
             var7 = var6 + var5 + 7;
-            hq.field_m = new String[var7];
+            TextWidgetPainter.field_m = new String[var7];
             wd.field_Q = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
               wd.field_Q[var8] = -1;
             }
             v.field_b = new int[2];
             wd.field_Q[1] = 0;
-            hq.field_m[1] = rb.field_b;
-            hq.field_m[0] = mq.field_q;
-            hq.field_m[3] = dd.field_e;
+            TextWidgetPainter.field_m[1] = rb.field_b;
+            TextWidgetPainter.field_m[0] = mq.field_q;
+            TextWidgetPainter.field_m[3] = dd.field_e;
             v.field_b[1] = 2;
             v.field_b[0] = 5;
-            hq.field_m[2] = cq.field_a;
-            hq.field_m[4] = wj.field_h;
-            hq.field_m[5] = "";
+            TextWidgetPainter.field_m[2] = cq.field_a;
+            TextWidgetPainter.field_m[4] = wj.field_h;
+            TextWidgetPainter.field_m[5] = "";
             wd.field_Q[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
-              stackIn_67_0 = hq.field_m;
+              stackIn_67_0 = TextWidgetPainter.field_m;
               stackIn_67_1 = 6 + var8Lifetime2;
               if (0 > var8Lifetime2 + (q.field_a.length - var5)) {
                 stackIn_68_2 = "";
@@ -304,10 +304,10 @@ final class eb {
               }
               stackIn_67_0[stackIn_67_1] = stackIn_68_2;
             }
-            hq.field_m[6 + var5] = null;
+            TextWidgetPainter.field_m[6 + var5] = null;
             wd.field_Q[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_72_0 = hq.field_m;
+              stackIn_72_0 = TextWidgetPainter.field_m;
               stackIn_72_1 = var5 + 7 + var8Lifetime3;
               stackIn_72_2 = ~var8Lifetime3;
               stackIn_72_3 = ~ud.field_N.length;
@@ -322,9 +322,9 @@ final class eb {
           }
           NetworkGameClient.field_B.field_c = v.field_b.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; hq.field_m.length > var4Lifetime1; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; TextWidgetPainter.field_m.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_88_0 = 0;
-            stackIn_88_1 = hq.field_m[var4Lifetime1];
+            stackIn_88_1 = TextWidgetPainter.field_m[var4Lifetime1];
             stackIn_89_2 = !(0 > wd.field_Q[var4Lifetime1]);
             var5Lifetime1 = hn.a(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var3_intLifetime1 < var5Lifetime1) {
@@ -353,7 +353,7 @@ final class eb {
           Waypoint.field_j = NetworkGameClient.field_B.field_c * (al.field_bb + wk.field_G << 1);
           ZombieDawnMulti.field_H = am.field_c - (var3_intLifetime1 >> 1);
           fl.field_a = -(var3_intLifetime1 >> 1) + (am.field_c + var3_intLifetime1);
-          for (var4Lifetime2 = 0; hq.field_m.length > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; TextWidgetPainter.field_m.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_111_0 = Waypoint.field_j;
             if (wd.field_Q[var4Lifetime2] >= 0) {
               stackIn_112_1 = me.field_h;
@@ -363,18 +363,18 @@ final class eb {
             Waypoint.field_j = stackIn_111_0 + stackIn_112_1;
           }
           ce.field_k = bp.field_r - (Waypoint.field_j >> 1);
-          uf.field_b = new int[hq.field_m.length][];
+          uf.field_b = new int[TextWidgetPainter.field_m.length][];
           if (param0) {
             field_M = -108;
           }
           var4Lifetime3 = 0;
           var5Lifetime3 = ce.field_k;
-          while (var4Lifetime3 < hq.field_m.length) {
+          while (var4Lifetime3 < TextWidgetPainter.field_m.length) {
             var6Lifetime1 = wd.field_Q[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + WidgetContainer.field_C;
             } else {
-              var7Lifetime2 = hn.a(0, hq.field_m[var4Lifetime3], true);
+              var7Lifetime2 = hn.a(0, TextWidgetPainter.field_m[var4Lifetime3], true);
               var8Lifetime1 = am.field_c - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + al.field_bb;
               uf.field_b[var4Lifetime3] = new int[4];

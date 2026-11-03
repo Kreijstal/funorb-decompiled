@@ -91,19 +91,19 @@ final class dg extends WidgetContainer implements in {
         field_L = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         int var5 = this.field_y + param3;
         int var6 = this.field_i + param1;
         ke.field_h.a(UnitView.field_H, 20 + var5, var6 + 20, this.field_n - 40, this.field_w - 50, 16777215, -1, 1, 0, ke.field_h.field_C);
-        super.a(param0, param1, param2, param3);
+        super.renderWidget(param0, param1, param2, param3);
     }
 
     final static void h(int param0) {
         if (rm.field_b != null) {
           rm.field_b.h();
         }
-        if (ga.field_u != null) {
-          ga.field_u.h();
+        if (CipherPacketBuffer.field_u != null) {
+          CipherPacketBuffer.field_u.h();
         }
         if (param0 > -50) {
           dg.i(87);
@@ -123,9 +123,9 @@ final class dg extends WidgetContainer implements in {
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_N.b(-var3 + this.field_n >> 1, -var2 + (-48 + this.field_w), 28972, var4, 30);
-        this.field_H.b((this.field_n - var3 >> 1) + (var4 + var2), -48 + (this.field_w - var2), 28972, var4, 30);
-        this.field_P.b(this.field_n - var3 >> 1, -(var2 * 2) + (-78 + this.field_w), 28972, var3, 30);
+        this.field_N.setWidgetBounds(-var3 + this.field_n >> 1, -var2 + (-48 + this.field_w), 28972, var4, 30);
+        this.field_H.setWidgetBounds((this.field_n - var3 >> 1) + (var4 + var2), -48 + (this.field_w - var2), 28972, var4, 30);
+        this.field_P.setWidgetBounds(this.field_n - var3 >> 1, -(var2 * 2) + (-78 + this.field_w), 28972, var3, 30);
         this.field_N.field_A = (bj) (this);
         this.field_P.field_A = (bj) (this);
         this.field_P.field_x = qm.field_I;
@@ -136,7 +136,7 @@ final class dg extends WidgetContainer implements in {
         this.b((byte) 60, this.field_H);
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -145,7 +145,7 @@ final class dg extends WidgetContainer implements in {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param0) {

@@ -83,14 +83,14 @@ abstract class ie extends al {
         return super.i(-27388);
     }
 
-    boolean a(int param0, char param1, UiWidget param2, int param3) {
+    boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_hb == null) {
@@ -252,7 +252,7 @@ abstract class ie extends al {
             this.field_hb.unlink(true);
           }
           if (param0 != null) {
-            param0.b(6, 6 + this.field_rb, 28972, param0.field_n, param0.field_w);
+            param0.setWidgetBounds(6, 6 + this.field_rb, 28972, param0.field_n, param0.field_w);
             this.field_hb = new na(param0);
           } else {
             this.field_hb = new na();

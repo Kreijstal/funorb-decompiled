@@ -102,7 +102,7 @@ final class HuffmanCodec {
         ob var13_ref_ob = null;
         int var13 = 0;
         int var15 = 0;
-        tl var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         ob var18 = null;
         int[] var19 = null;

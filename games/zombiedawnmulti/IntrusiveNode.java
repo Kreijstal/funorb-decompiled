@@ -53,7 +53,7 @@ class IntrusiveNode {
           param0 = false;
         }
         gg.a(124, param0);
-        hq.b((byte) 117);
+        TextWidgetPainter.b((byte) 117);
         if (param1 != 2) {
           field_a = -119;
           return;

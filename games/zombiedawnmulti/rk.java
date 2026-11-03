@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface rk {
-    public abstract void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5);
+    public abstract void drawSelection(int param0, int param1, int param2, int param3, int param4, UiWidget param5);
 
     public abstract int a(int param0);
 
@@ -10,7 +10,7 @@ interface rk {
 
     public abstract int a(boolean param0, int param1, UiWidget param2);
 
-    public abstract int b(UiWidget param0, int param1);
+    public abstract int contentHeight(UiWidget param0, int param1);
 
     public abstract mp a(UiWidget param0, int param1);
 

@@ -212,7 +212,7 @@ final class vk extends rg {
         return (df) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.listener != null) {
           this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
@@ -223,7 +223,7 @@ final class vk extends rg {
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
         UiWidget var6 = (UiWidget) (var5.a(32397));
         while (var6 != null) {
-          var6.a(-2, param1 + this.field_i, param2, param3 + this.field_y);
+          var6.renderWidget(-2, param1 + this.field_i, param2, param3 + this.field_y);
           var6 = (UiWidget) (var5.e(-3));
         }
     }

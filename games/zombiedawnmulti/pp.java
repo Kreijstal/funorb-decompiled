@@ -19,9 +19,9 @@ class pp extends ic {
     pi b(int param0) {
         if (param0 != 7) {
           field_o = (String) null;
-          return pl.field_G;
+          return ArrayWidgetGroup.field_G;
         }
-        return pl.field_G;
+        return ArrayWidgetGroup.field_G;
     }
 
     pp(long param0, String param1) {

@@ -497,7 +497,7 @@ final class rp {
         int stackIn_12_0 = 0;
         ml stackIn_55_0 = null;
         RuntimeException decompiledCaughtException = null;
-        ga var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;

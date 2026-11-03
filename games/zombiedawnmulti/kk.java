@@ -16,10 +16,10 @@ abstract class kk extends DualLinkNode {
         try {
           PcmPlayerService.a(param0, param1, 10);
           rm.field_b = PcmPlayerService.a(param5, param4, 0, param2);
-          ga.field_u = PcmPlayerService.a(param5, param4, 1, param6);
+          CipherPacketBuffer.field_u = PcmPlayerService.a(param5, param4, 1, param6);
           bh.field_a = new PcmStreamMixer();
           DualLinkDeque.field_d = param6 * 1000 / param0;
-          ga.field_u.a(bh.field_a);
+          CipherPacketBuffer.field_u.a(bh.field_a);
           wd.field_L = param7;
           wd.field_L.a(uk.field_S, (byte) 116);
           int var8_int = 37 / ((param3 - 49) / 49);
@@ -49,7 +49,7 @@ abstract class kk extends DualLinkNode {
     abstract Object e(int param0);
 
     final static void a(int param0, int param1, int param2) {
-        ga var3 = ma.field_a;
+        CipherPacketBuffer var3 = ma.field_a;
         var3.b((byte) -35, param2);
         var3.a(109, 3);
         var3.a(-59, 10);

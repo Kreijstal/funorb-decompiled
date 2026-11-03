@@ -124,7 +124,7 @@ final class rj extends SceneObject {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        ga var28 = null;
+        CipherPacketBuffer var28 = null;
         long[][] var35 = null;
         int[][] var36 = null;
         int var3Lifetime1;

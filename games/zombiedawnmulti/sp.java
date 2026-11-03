@@ -109,7 +109,7 @@ final class sp extends mp {
     final static void c(int param0) {
         nb.field_a.h(param0 ^ -123);
         if (pj.field_I == null) {
-          pj.field_I = new ta(nb.field_a, pm.field_P);
+          pj.field_I = new ta(nb.field_a, TextInputWidget.field_P);
         }
         if (param0 != 0) {
           java.awt.Frame var2 = (java.awt.Frame) null;

@@ -53,7 +53,7 @@ final class LevelFileCatalog {
     final static void a(String param0, long param1, int param2, int param3, boolean param4, int param5) {
         int var7_int = 0;
         ResourceArchive var8 = null;
-        ga stackIn_2_0 = null;
+        CipherPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -75,7 +75,7 @@ final class LevelFileCatalog {
           } else {
             stackIn_3_2 = 1;
           }
-          ((ga) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2);
+          ((CipherPacketBuffer) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2);
           ma.field_a.e(76, -var7_int + ma.field_a.position);
           if (param5 != 21965) {
             var8 = (ResourceArchive) null;

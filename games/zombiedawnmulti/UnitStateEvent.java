@@ -188,7 +188,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[18][0] = UnitView.field_Z;
         wq.field_g[61][0] = fk.field_o;
         wq.field_g[60][0] = og.field_P;
-        wq.field_g[59][0] = hq.field_k;
+        wq.field_g[59][0] = TextWidgetPainter.field_k;
         wq.field_g[58][0] = MusicPatch.field_i;
         wq.field_g[57][0] = wi.field_p;
         wq.field_g[56][0] = em.field_V;
@@ -198,7 +198,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[52][0] = bb.field_m;
         wq.field_g[51][0] = nk.field_f;
         wq.field_g[50][0] = SocketConnector.field_d;
-        wq.field_g[49][0] = sn.field_Sb;
+        wq.field_g[49][0] = ContextMenu.field_Sb;
         wq.field_g[48][0] = uf.field_d;
         wq.field_g[47][0] = cn.field_u;
         wq.field_g[46][0] = SimHuman.field_ob;
@@ -227,14 +227,14 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[13][1] = rq.field_n;
         wq.field_g[14][1] = cc.field_d;
         wq.field_g[15][1] = pp.field_o;
-        wq.field_g[16][1] = pl.field_D;
+        wq.field_g[16][1] = ArrayWidgetGroup.field_D;
         wq.field_g[17][1] = NavigationGrid.field_e;
         wq.field_g[18][1] = vf.field_a;
         wq.field_g[61][1] = lj.field_q;
         wq.field_g[60][1] = ih.field_b;
         wq.field_g[59][1] = vc.field_f;
         wq.field_g[58][1] = ok.field_i;
-        wq.field_g[57][1] = tp.field_u;
+        wq.field_g[57][1] = UsernameAvailabilityValidator.field_u;
         wq.field_g[56][1] = lh.field_a;
         wq.field_g[55][1] = ResourceArchive.field_c;
         if (param0 != -6445) {
@@ -257,7 +257,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[35][1] = wq.field_e;
         wq.field_g[36][1] = va.field_b;
         wq.field_g[37][1] = cb.field_r;
-        wq.field_g[38][1] = sk.field_q;
+        wq.field_g[38][1] = UiTheme.field_q;
     }
 
     final static String a(boolean param0, int param1, CharSequence param2) {
@@ -309,7 +309,7 @@ final class UnitStateEvent extends GameEvent {
     }
 
     final static void a(int param0, long param1, int param2) {
-        ga var4 = ma.field_a;
+        CipherPacketBuffer var4 = ma.field_a;
         var4.b((byte) -35, param2);
         var4.position = var4.position + 1;
         int var5 = var4.position;

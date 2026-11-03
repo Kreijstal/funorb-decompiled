@@ -147,7 +147,7 @@ final class kj extends IntrusiveNode {
           var13 = pk.field_b;
           var3 = vb.field_f;
           var4 = ka.field_t;
-          var13.field_j.b(4542, var3, 0, var4, 0);
+          var13.field_j.layoutAtAnchor(4542, var3, 0, var4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -15,7 +15,7 @@ final class hd extends un {
     static int field_q;
     static int field_u;
 
-    hd(pm param0, pm param1) {
+    hd(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         this.field_v = "";
         this.field_y = false;
@@ -42,7 +42,7 @@ final class hd extends un {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_v)) {
-            var3 = ga.a(param1, false);
+            var3 = CipherPacketBuffer.a(param1, false);
             if (!var3.d(-99)) {
               stackIn_7_0 = ua.field_I;
               return stackIn_7_0;
@@ -70,7 +70,7 @@ final class hd extends un {
         }
     }
 
-    final String a(String param0, int param1) {
+    final String validationMessageForText(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -82,7 +82,7 @@ final class hd extends un {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_z.a(false, param0) == jq.field_b) {
-            stackIn_3_0 = this.field_z.a(param0, -1276425040);
+            stackIn_3_0 = this.field_z.validationMessageForText(param0, -1276425040);
             return stackIn_3_0;
           }
           if (param1 != -1276425040) {
@@ -142,7 +142,7 @@ final class hd extends un {
         field_s = null;
     }
 
-    final static void a(ga param0, int param1) {
+    final static void a(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -373,7 +373,7 @@ final class hd extends un {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 3) {
-            stackIn_3_0 = ga.field_q;
+            stackIn_3_0 = CipherPacketBuffer.field_q;
             return stackIn_3_0;
           }
           if (param0 == 6) {

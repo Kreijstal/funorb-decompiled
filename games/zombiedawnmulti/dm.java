@@ -83,7 +83,7 @@ final class dm extends cj {
         return !this.c(0) ? true : false;
     }
 
-    final static InfectionEvent a(byte param0, ga param1) {
+    final static InfectionEvent a(byte param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

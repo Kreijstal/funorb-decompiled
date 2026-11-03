@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pm extends gn {
+class TextInputWidget extends gn {
     private long field_T;
     static String field_P;
     static PacketBuffer field_R;
@@ -15,7 +15,7 @@ class pm extends gn {
     private int field_S;
     static IndexedSprite field_N;
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         int dupTemp$0 = 0;
         boolean stackIn_26_1 = false;
         int stackIn_27_2 = 0;
@@ -33,7 +33,7 @@ class pm extends gn {
             if (param1 >= 32 &&
               param1 <= 126) {
               if (this.field_S != this.field_O) {
-                this.c(false);
+                this.deleteSelectedText(false);
               }
               if (this.field_W != -1 &&
                 this.field_j.length() >= this.field_W) {
@@ -54,28 +54,28 @@ class pm extends gn {
             }
             if (param0 == 85) {
               if (this.field_O != this.field_S) {
-                this.c(false);
+                this.deleteSelectedText(false);
                 return true;
               }
               if (this.field_O > 0) {
                 this.field_S = -1 + this.field_O;
-                this.c(false);
+                this.deleteSelectedText(false);
                 return true;
               }
             } else {
               if (param0 == 101) {
                 if (this.field_O != this.field_S) {
-                  this.c(false);
+                  this.deleteSelectedText(false);
                   return true;
                 }
                 if (this.field_O < this.field_j.length()) {
                   this.field_S = this.field_O + 1;
-                  this.c(false);
+                  this.deleteSelectedText(false);
                   return true;
                 }
               } else {
                 if (param0 == 13) {
-                  this.b(true);
+                  this.clearInputText(true);
                   return true;
                 }
                 if (param0 != 96) {
@@ -99,12 +99,12 @@ class pm extends gn {
                     }
                     if (lc.field_m[82] &&
                       param0 == 66) {
-                      this.i((byte) -60);
+                      this.copySelectedTextToClipboard((byte) -60);
                       return true;
                     }
                     if (lc.field_m[82] &&
                       param0 == 67) {
-                      this.i(param3 + 6458);
+                      this.pasteClipboardText(param3 + 6458);
                       return true;
                     }
                   } else {
@@ -113,7 +113,7 @@ class pm extends gn {
                       if (!lc.field_m[82]) {
                         stackIn_34_2 = this.field_O + 1;
                       } else {
-                        stackIn_34_2 = this.g(param3 + 6329);
+                        stackIn_34_2 = this.findNextWordBoundary(param3 + 6329);
                       }
                       this.b(stackIn_33_1, stackIn_34_2);
                       return true;
@@ -123,7 +123,7 @@ class pm extends gn {
                   if (this.field_O > 0) {
                     stackIn_26_1 = false;
                     if (lc.field_m[82]) {
-                      stackIn_27_2 = this.h((byte) -110);
+                      stackIn_27_2 = this.findPreviousWordBoundary((byte) -110);
                     } else {
                       stackIn_27_2 = -1 + this.field_O;
                     }
@@ -162,17 +162,17 @@ class pm extends gn {
         field_N = null;
     }
 
-    private final void i(byte param0) {
+    private final void copySelectedTextToClipboard(byte param0) {
         if (param0 != -60) {
           field_R = (PacketBuffer) null;
         }
-        String var2 = this.k(-112);
+        String var2 = this.getSelectedText(-112);
         if (var2.length() > 0) {
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.k(param0 ^ 67))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText(param0 ^ 67))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         boolean stackIn_4_1 = false;
         int stackIn_5_2 = 0;
         boolean stackIn_8_1 = false;
@@ -184,7 +184,7 @@ class pm extends gn {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
+          if (super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) &&
             this.listener instanceof rk) {
             var8_int = ((rk) ((Object) this.listener)).b(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
             stackIn_4_1 = false;
@@ -198,8 +198,8 @@ class pm extends gn {
             stackIn_8_1 = !(-this.field_X + var8_long >= 250L);
             this.field_M = stackIn_8_1;
             if (this.field_M) {
-              this.field_S = this.h((byte) -110);
-              this.field_O = this.g(114);
+              this.field_S = this.findPreviousWordBoundary((byte) -110);
+              this.field_O = this.findNextWordBoundary(114);
               if (this.field_O > 0 &&
                 32 == this.field_j.charAt(-1 + this.field_O)) {
                 this.field_O = this.field_O - 1;
@@ -224,7 +224,7 @@ class pm extends gn {
         }
     }
 
-    final void b(boolean param0) {
+    final void clearInputText(boolean param0) {
         this.field_S = 0;
         if (!param0) {
           this.field_V = 88;
@@ -234,13 +234,13 @@ class pm extends gn {
         this.j(8192);
     }
 
-    private final int g(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 <= 110) {
-          pm.d(true);
+          TextInputWidget.d(true);
         }
         var2 = this.field_j.length();
         if (this.field_O == var2) {
@@ -255,7 +255,7 @@ class pm extends gn {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         rk var8 = null;
         long var6 = 0L;
         if (param0 != -2) {
@@ -267,7 +267,7 @@ class pm extends gn {
           if (this.listener instanceof rk) {
             var8 = (rk) ((Object) this.listener);
             if (this.field_S != this.field_O) {
-              var8.a(this.field_S, param1, this.field_O, param3, param0 ^ -93, (UiWidget) (this));
+              var8.drawSelection(this.field_S, param1, this.field_O, param3, param0 ^ -93, (UiWidget) (this));
             }
             var6 = bl.a((byte) 56);
             if (500L > (-this.field_T + var6) % 1000L) {
@@ -277,7 +277,7 @@ class pm extends gn {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void deleteSelectedText(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         if (this.field_S != this.field_O) {
@@ -341,7 +341,7 @@ class pm extends gn {
         return;
     }
 
-    pm(String param0, bj param1, int param2) {
+    TextInputWidget(String param0, bj param1, int param2) {
         super(param0, param1);
         this.field_M = false;
         this.field_V = -1;
@@ -349,7 +349,7 @@ class pm extends gn {
         try {
           this.field_W = param2;
           this.listener = ra.field_o.field_o;
-          this.a(true, param0, (byte) 108);
+          this.setInputText(true, param0, (byte) 108);
           this.field_U = true;
           this.field_T = bl.a((byte) 106);
         } catch (RuntimeException runtimeException) {
@@ -357,24 +357,24 @@ class pm extends gn {
         }
     }
 
-    private final String k(int param0) {
+    private final String getSelectedText(int param0) {
         int var2 = this.field_O > this.field_S ? this.field_S : this.field_O;
         int var3 = this.field_O <= this.field_S ? this.field_S : this.field_O;
         if (param0 >= -98) {
           ResourceArchive var4 = (ResourceArchive) null;
-          pm.a((ResourceArchive) null, -5, 40, (ResourceArchive) null, -102);
+          TextInputWidget.a((ResourceArchive) null, -5, 40, (ResourceArchive) null, -102);
         }
         return this.field_j.substring(var2, var3);
     }
 
-    private final void i(int param0) {
+    private final void pasteClipboardText(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           String var2 = null;
           Exception var2_ref = null;
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.c(false);
+            this.deleteSelectedText(false);
             if (param0 != 250) {
               return;
             }
@@ -390,11 +390,11 @@ class pm extends gn {
         }
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         rk var5 = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.g((byte) -84);
           if (1 == this.field_u) {
             if (this.listener instanceof rk) {
@@ -436,7 +436,7 @@ class pm extends gn {
         }
     }
 
-    private final int h(byte param0) {
+    private final int findPreviousWordBoundary(byte param0) {
         int var2;
         int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -482,8 +482,8 @@ class pm extends gn {
     }
 
     private final void f(int param0) {
-        this.i((byte) -60);
-        this.c(false);
+        this.copySelectedTextToClipboard((byte) -60);
+        this.deleteSelectedText(false);
         if (param0 != 102) {
           this.b(true, -83);
         }
@@ -495,7 +495,7 @@ class pm extends gn {
         }
         if (param0) {
           ResourceArchive var3 = (ResourceArchive) null;
-          pm.a((ResourceArchive) null, -81, 46, (ResourceArchive) null, -115);
+          TextInputWidget.a((ResourceArchive) null, -81, 46, (ResourceArchive) null, -115);
         }
         if (null != pk.field_b) {
           pk.field_b.b(param1, (byte) 47);
@@ -554,7 +554,7 @@ class pm extends gn {
         }
     }
 
-    final void a(boolean param0, String param1, byte param2) {
+    final void setInputText(boolean param0, String param1, byte param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_13_0 = null;
@@ -579,7 +579,7 @@ class pm extends gn {
             this.j(8192);
           }
           if (param2 <= 102) {
-            this.a(91, 117, 22, -113);
+            this.renderWidget(91, 117, 22, -113);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

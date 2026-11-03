@@ -8,7 +8,7 @@ final class hj {
     static int field_g;
     static String field_e;
     static int field_c;
-    static hq field_d;
+    static TextWidgetPainter field_d;
     static int field_f;
     private static String field_z;
 

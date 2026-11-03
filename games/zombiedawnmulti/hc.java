@@ -23,7 +23,7 @@ final class hc {
           if (!param0) {
             field_c = -66;
           }
-          var2 = new AntialiasedBitmapFont(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
+          var2 = new AntialiasedBitmapFont(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, UsernameAvailabilityValidator.field_t, qp.field_t);
           fd.h((byte) 125);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -87,7 +87,7 @@ final class hc {
         }
     }
 
-    final static GameEvent a(int param0, ga param1) {
+    final static GameEvent a(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

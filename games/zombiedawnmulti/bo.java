@@ -9,7 +9,7 @@ final class bo {
     static boolean field_e;
     static int field_d;
 
-    final static af[] a(int param0, ga param1) {
+    final static af[] a(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         af[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -26,7 +26,7 @@ final class bo {
         byte[] var8 = null;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var2_int = param1.h(8, 14862);
+          var2_int = param1.readBits(8, 14862);
           if (0 < var2_int) {
             return null;
           }
@@ -34,21 +34,21 @@ final class bo {
             var8 = (byte[]) null;
             bo.a((byte[]) null, 106);
           }
-          var3 = param1.h(12, 14862);
+          var3 = param1.readBits(12, 14862);
           var4 = new af[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!PhaseChangeEvent.a(68, param1)) {
-              var6 = param1.h(ImageProducerRasterBuffer.b(-1 + var5, param0 - 30800), param0 ^ 17006);
+              var6 = param1.readBits(ImageProducerRasterBuffer.b(-1 + var5, param0 - 30800), param0 ^ 17006);
               var4[var5] = var4[var6];
             } else {
               var6_ref_af = new af();
-              param1.h(24, 14862);
-              param1.h(24, 14862);
-              var6_ref_af.field_f = param1.h(24, 14862);
-              param1.h(9, param0 ^ 17006);
-              param1.h(12, 14862);
-              param1.h(12, 14862);
-              param1.h(12, 14862);
+              param1.readBits(24, 14862);
+              param1.readBits(24, 14862);
+              var6_ref_af.field_f = param1.readBits(24, 14862);
+              param1.readBits(9, param0 ^ 17006);
+              param1.readBits(12, 14862);
+              param1.readBits(12, 14862);
+              param1.readBits(12, 14862);
               var4[var5] = var6_ref_af;
             }
           }

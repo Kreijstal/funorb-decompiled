@@ -500,7 +500,7 @@ final class vi {
     }
 
     final static void a(int param0, vg param1, byte param2) {
-        ga var3 = ma.field_a;
+        CipherPacketBuffer var3 = ma.field_a;
         if (param2 > -120) {
           return;
         }

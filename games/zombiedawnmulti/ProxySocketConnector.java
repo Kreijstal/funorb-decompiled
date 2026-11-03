@@ -173,7 +173,7 @@ final class ProxySocketConnector extends SocketConnector {
           var7 = var7 - (2 + param5);
           tn.field_A.a(param3, 2, param3 + (param0 + param2) + 485, 5, var7 - 5, param0 ^ -31467, 5);
           if (ra.field_f != null) {
-            ra.field_f.b(tn.field_A.field_x, tn.field_A.field_Q, 28972, tn.field_A.field_zb, tn.field_A.field_z);
+            ra.field_f.setWidgetBounds(tn.field_A.field_x, tn.field_A.field_Q, 28972, tn.field_A.field_zb, tn.field_A.field_z);
           }
           var8 = -var6_int - param2 + ImageProducerRasterBuffer.field_k.field_zb;
           var9 = var8 / 2;

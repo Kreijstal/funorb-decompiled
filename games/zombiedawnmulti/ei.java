@@ -25,7 +25,7 @@ final class ei {
 
     final static void a(int param0, int param1, int param2) {
         NetworkGameClient.field_x = param2;
-        pm.field_Q = param0;
+        TextInputWidget.field_Q = param0;
         if (param1 != 25938) {
           field_d = (String) null;
         }

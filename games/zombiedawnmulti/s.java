@@ -7,7 +7,7 @@ final class s {
     static IndexedSprite field_c;
     static String field_a;
     static volatile int field_f;
-    static ga field_e;
+    static CipherPacketBuffer field_e;
     static String field_d;
     static String field_h;
 
@@ -23,7 +23,7 @@ final class s {
         field_h = null;
     }
 
-    final static md a(ga param0, byte param1) {
+    final static md a(CipherPacketBuffer param0, byte param1) {
         int var8 = 0;
         md stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
@@ -41,23 +41,23 @@ final class s {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var3 = 76 / ((param1 + 22) / 54);
-          var2_int = param0.h(8, 14862);
+          var2_int = param0.readBits(8, 14862);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var4 = PhaseChangeEvent.a(-128, param0) ? 1 : 0;
           var5 = PhaseChangeEvent.a(-86, param0) ? 1 : 0;
           var6 = new md();
-          var6.field_n = (short)param0.h(16, 14862);
+          var6.field_n = (short)param0.readBits(16, 14862);
           var6.field_k = lo.a(16, var6.field_k, param0, (byte) -104);
           var6.field_E = lo.a(16, var6.field_E, param0, (byte) -120);
           var6.field_v = lo.a(16, var6.field_v, param0, (byte) -122);
-          var6.field_B = (short)param0.h(16, 14862);
+          var6.field_B = (short)param0.readBits(16, 14862);
           var6.field_y = lo.a(16, var6.field_y, param0, (byte) -128);
           var6.field_L = lo.a(16, var6.field_L, param0, (byte) -106);
           var6.field_H = lo.a(16, var6.field_H, param0, (byte) -119);
           if (var4 != 0) {
-            var6.field_o = (short)param0.h(16, 14862);
+            var6.field_o = (short)param0.readBits(16, 14862);
             var6.field_A = lo.a(16, var6.field_A, param0, (byte) -108);
             var6.field_p = lo.a(16, var6.field_p, param0, (byte) -103);
             var6.field_b = lo.a(16, var6.field_b, param0, (byte) -119);
@@ -66,7 +66,7 @@ final class s {
             var6.field_x = lo.a(16, var6.field_x, param0, (byte) -127);
           }
           if (var5 != 0) {
-            param0.h(16, 14862);
+            param0.readBits(16, 14862);
             var6.field_M = lo.a(16, var6.field_M, param0, (byte) -117);
             var6.field_s = lo.a(16, var6.field_s, param0, (byte) -126);
             var6.field_g = lo.a(16, var6.field_g, param0, (byte) -128);

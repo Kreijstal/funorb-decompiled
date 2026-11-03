@@ -11,7 +11,7 @@ final class uk extends gn {
     static boolean field_N;
 
     final static void a(byte param0, vl param1, int param2) {
-        ga var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           if (param0 != 127) {
             field_M = (ka[]) null;
@@ -25,7 +25,7 @@ final class uk extends gn {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var18 = null;
         Sprite var12 = null;
@@ -35,7 +35,7 @@ final class uk extends gn {
         int var11 = ZombieDawnMulti.field_E ? 1 : 0;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, param3);
+        super.renderWidget(param0, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
@@ -132,10 +132,10 @@ final class uk extends gn {
         return null;
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_Q = this.field_Q + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "uk.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -157,7 +157,7 @@ final class uk extends gn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.a(-69, -75, 99, -52);
+            this.renderWidget(-69, -75, 99, -52);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

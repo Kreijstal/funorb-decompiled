@@ -12,7 +12,7 @@ final class dj extends gf implements fi, qg {
     public dj() {
     }
 
-    public final void a(pm param0, boolean param1) {
+    public final void a(TextInputWidget param0, boolean param1) {
         try {
           if (!param1) {
             this.field_n = (wk) null;
@@ -77,7 +77,7 @@ final class dj extends gf implements fi, qg {
         return db.field_b;
     }
 
-    public final void a(pm param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         if (param1 != 0) {
           return;
         }

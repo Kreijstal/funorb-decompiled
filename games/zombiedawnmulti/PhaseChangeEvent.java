@@ -40,7 +40,7 @@ final class PhaseChangeEvent extends GameEvent {
         }
     }
 
-    final static boolean a(int param0, ga param1) {
+    final static boolean a(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
@@ -50,7 +50,7 @@ final class PhaseChangeEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -79 / ((-36 - param0) / 36);
-          stackIn_3_0 = (param1.h(1, 14862) == 1);
+          stackIn_3_0 = (param1.readBits(1, 14862) == 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

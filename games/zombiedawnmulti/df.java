@@ -130,21 +130,21 @@ abstract class df extends WidgetContainer {
 
     final void b(int param0, int param1, int param2) {
         if (param2 >= 48) {
-          this.b(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
+          this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
           return;
         }
         df.g((byte) -100);
-        this.b(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
+        this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         if (this.field_K == 0) {
           return;
         }
         if (this.field_K >= 256) {
           if (param2 == 0) {
             this.a(true, param3 + this.field_y, param1 + this.field_i);
-            super.a(param0 ^ 0, param1, param2, param3);
+            super.renderWidget(param0 ^ 0, param1, param2, param3);
             return;
           }
           return;
@@ -154,7 +154,7 @@ abstract class df extends WidgetContainer {
           r.a(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
           this.a(true, 0, 0);
-          super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
+          super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
           BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
@@ -168,7 +168,7 @@ abstract class df extends WidgetContainer {
           r.a(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
           this.a(true, 0, 0);
-          super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
+          super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
           BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
@@ -182,7 +182,7 @@ abstract class df extends WidgetContainer {
           r.a(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
           this.a(true, 0, 0);
-          super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
+          super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
           BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
@@ -194,7 +194,7 @@ abstract class df extends WidgetContainer {
         r.a(0, BufferedSocket.field_g);
         SoftwareRasterizer.clear();
         this.a(true, 0, 0);
-        super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
+        super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
         ql.a(true);
         BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
         if (param0 == -2) {

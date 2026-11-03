@@ -92,7 +92,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     final void e(int param0) {
-        this.b(this.field_y, this.field_i, 28972, this.field_n, this.field_w);
+        this.setWidgetBounds(this.field_y, this.field_i, 28972, this.field_n, this.field_w);
         if (param0 != -1) {
           field_m = (String) null;
           return;
@@ -189,7 +189,7 @@ class UiWidget extends IntrusiveNode {
         ua var13;
         regionExit1: {
           var7 = ZombieDawnMulti.field_E ? 1 : 0;
-          this.a(-5407, this, param0, param2);
+          this.updatePointerState(-5407, this, param0, param2);
           var5 = this.c(127) ? 1 : 0;
           if (param3) {
             if (t.field_d == 0) {
@@ -209,7 +209,7 @@ class UiWidget extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != kd.field_b) {
-                    this.c((byte) 32);
+                    this.clearKeyboardFocus((byte) 32);
                   }
                 }
                 aj.field_j = pq.field_f;
@@ -219,7 +219,7 @@ class UiWidget extends IntrusiveNode {
                 }
                 return param3;
               }
-              if (!this.a(ka.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
+              if (!this.handlePointerPress(ka.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
                 if (var5 == 0) {
                   if (0 == pq.field_f &&
                     aj.field_j != 0) {
@@ -236,7 +236,7 @@ class UiWidget extends IntrusiveNode {
                     if (var7 != 0 &&
                       var5 != 0 &&
                       0 != kd.field_b) {
-                      this.c((byte) 32);
+                      this.clearKeyboardFocus((byte) 32);
                     }
                   }
                   aj.field_j = pq.field_f;
@@ -246,7 +246,7 @@ class UiWidget extends IntrusiveNode {
                   }
                   return param3;
                 }
-                this.c((byte) 32);
+                this.clearKeyboardFocus((byte) 32);
                 if (var7 != 0) {
                   param3 = false;
                 }
@@ -263,7 +263,7 @@ class UiWidget extends IntrusiveNode {
                     if (var7 != 0 &&
                       var5 != 0 &&
                       0 != kd.field_b) {
-                      this.c((byte) 32);
+                      this.clearKeyboardFocus((byte) 32);
                     }
                     aj.field_j = pq.field_f;
                     ii.a(-16898, this.d((byte) -51));
@@ -277,7 +277,7 @@ class UiWidget extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != kd.field_b) {
-                    this.c((byte) 32);
+                    this.clearKeyboardFocus((byte) 32);
                   }
                   aj.field_j = pq.field_f;
                   ii.a(-16898, this.d((byte) -51));
@@ -289,7 +289,7 @@ class UiWidget extends IntrusiveNode {
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != kd.field_b) {
-                  this.c((byte) 32);
+                  this.clearKeyboardFocus((byte) 32);
                   aj.field_j = pq.field_f;
                   ii.a(-16898, this.d((byte) -51));
                   if (param1 != -27) {
@@ -326,7 +326,7 @@ class UiWidget extends IntrusiveNode {
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != kd.field_b) {
-                  this.c((byte) 32);
+                  this.clearKeyboardFocus((byte) 32);
                 }
               }
               aj.field_j = pq.field_f;
@@ -336,7 +336,7 @@ class UiWidget extends IntrusiveNode {
               }
               return param3;
             }
-            if (!this.a(ka.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
+            if (!this.handlePointerPress(ka.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
               if (var5 == 0) {
                 if (0 == pq.field_f &&
                   aj.field_j != 0) {
@@ -353,12 +353,12 @@ class UiWidget extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != kd.field_b) {
-                    this.c((byte) 32);
+                    this.clearKeyboardFocus((byte) 32);
                   }
                 }
                 break regionExit1;
               }
-              this.c((byte) 32);
+              this.clearKeyboardFocus((byte) 32);
               if (var7 != 0) {
                 param3 = false;
               }
@@ -375,7 +375,7 @@ class UiWidget extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != kd.field_b) {
-                    this.c((byte) 32);
+                    this.clearKeyboardFocus((byte) 32);
                     break regionExit1;
                   }
                 } else {
@@ -384,7 +384,7 @@ class UiWidget extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != kd.field_b) {
-                    this.c((byte) 32);
+                    this.clearKeyboardFocus((byte) 32);
                     break regionExit1;
                   }
                 }
@@ -392,13 +392,13 @@ class UiWidget extends IntrusiveNode {
               }
               if ((var7 != 0) && (var5 != 0 &&
                 0 != kd.field_b)) {
-                this.c((byte) 32);
+                this.clearKeyboardFocus((byte) 32);
               }
             }
           } else {
             if (var5 != 0 &&
               0 != kd.field_b) {
-              this.c((byte) 32);
+              this.clearKeyboardFocus((byte) 32);
             }
           }
         }
@@ -504,7 +504,7 @@ class UiWidget extends IntrusiveNode {
         var4 = this.f((byte) 44);
         var5_int = 0;
         while (var5_int <= var4) {
-          this.a(-2, param1, var5_int, param2);
+          this.renderWidget(-2, param1, var5_int, param2);
           var5_int++;
           if (var7 == 0) {
             continue;
@@ -544,7 +544,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderWidget(int param0, int param1, int param2, int param3) {
         if (param0 != -2) {
           this.field_n = -82;
           if (param2 == 0) {
@@ -568,11 +568,11 @@ class UiWidget extends IntrusiveNode {
           return 0;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a(-73, 92, -41, (UiWidget) null, 104, -40, -53);
+        this.handlePointerPress(-73, 92, -41, (UiWidget) null, 104, -40, -53);
         return 0;
     }
 
-    boolean a(int param0, char param1, UiWidget param2, int param3) {
+    boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -627,7 +627,7 @@ class UiWidget extends IntrusiveNode {
         return false;
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -702,14 +702,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void c(byte param0) {
+    void clearKeyboardFocus(byte param0) {
         if (param0 == 32) {
           return;
         }
         this.field_q = 74;
     }
 
-    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -799,7 +799,7 @@ class UiWidget extends IntrusiveNode {
           this.f((byte) 66);
           return false;
         }
-        if (this.a(param2, param1, this, param0 - 6208)) {
+        if (this.handleKeyInput(param2, param1, this, param0 - 6208)) {
           return true;
         }
         var4Lifetime1 = param2;
@@ -813,7 +813,7 @@ class UiWidget extends IntrusiveNode {
         return false;
     }
 
-    void b(int param0, int param1, int param2, int param3, int param4) {
+    void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_n = param3;
         if (param2 == 28972) {
           this.field_i = param1;
@@ -851,7 +851,7 @@ class UiWidget extends IntrusiveNode {
           this.field_A = param2;
           if (this.listener instanceof rk) {
             var4 = (rk) ((Object) this.listener);
-            this.field_n = var4.b(this, -126);
+            this.field_n = var4.contentHeight(this, -126);
             this.field_w = var4.a((byte) 39, this);
           }
           return;

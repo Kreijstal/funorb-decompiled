@@ -111,7 +111,7 @@ final class wa implements WidgetActionListener {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                mk.field_d = (int)(var3.longValue() / 1048576L) + 1;
+                WidgetStyleLayer.field_d = (int)(var3.longValue() / 1048576L) + 1;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;

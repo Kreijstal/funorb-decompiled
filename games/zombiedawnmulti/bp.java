@@ -57,8 +57,8 @@ final class bp extends un {
     }
 
     final static void a(kj param0, boolean param1, int param2) {
-        ga var7 = null;
-        ga var8 = null;
+        CipherPacketBuffer var7 = null;
+        CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -90,7 +90,7 @@ final class bp extends un {
         }
     }
 
-    bp(pm param0) {
+    bp(TextInputWidget param0) {
         super(param0);
     }
 
@@ -256,7 +256,7 @@ final class bp extends un {
         }
     }
 
-    final String a(String param0, int param1) {
+    final String validationMessageForText(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

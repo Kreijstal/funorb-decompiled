@@ -67,10 +67,10 @@ final class mg extends SceneObject {
             ma.field_a.position = 0;
             dd.field_d = null;
             if (param4 == null) {
-              pm.field_R.position = 0;
-              pm.field_R.writeInt(125, TertiaryLinkDeque.field_c.nextInt());
-              pm.field_R.writeInt(-114, TertiaryLinkDeque.field_c.nextInt());
-              stackIn_15_0 = pm.field_R;
+              TextInputWidget.field_R.position = 0;
+              TextInputWidget.field_R.writeInt(125, TertiaryLinkDeque.field_c.nextInt());
+              TextInputWidget.field_R.writeInt(-114, TertiaryLinkDeque.field_c.nextInt());
+              stackIn_15_0 = TextInputWidget.field_R;
               stackIn_15_1 = -16171;
               if (param1.a((byte) 105)) {
                 stackIn_16_2 = var14;
@@ -78,7 +78,7 @@ final class mg extends SceneObject {
                 stackIn_16_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_15_0).b(stackIn_15_1, stackIn_16_2);
-              stackIn_18_0 = pm.field_R;
+              stackIn_18_0 = TextInputWidget.field_R;
               stackIn_18_1 = -16171;
               if (param3.a((byte) 57)) {
                 stackIn_19_2 = var8;
@@ -89,23 +89,23 @@ final class mg extends SceneObject {
               ma.field_a.a(-99, 16);
               ma.field_a.position = ma.field_a.position + 1;
               var9 = ma.field_a.position;
-              hd.a(gn.field_L, (byte) 110, tp.field_v, pm.field_R, ma.field_a);
+              hd.a(gn.field_L, (byte) 110, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.e(param6 + 173, -var9 + ma.field_a.position);
             } else {
               var9 = 0;
-              pm.field_R.position = 0;
+              TextInputWidget.field_R.position = 0;
               if (param0) {
                 var9 = var9 | 1;
               }
-              pm.field_R.writeInt(-11, TertiaryLinkDeque.field_c.nextInt());
-              pm.field_R.writeInt(90, TertiaryLinkDeque.field_c.nextInt());
-              pm.field_R.b(-16171, var14);
-              pm.field_R.b(-16171, var8);
+              TextInputWidget.field_R.writeInt(-11, TertiaryLinkDeque.field_c.nextInt());
+              TextInputWidget.field_R.writeInt(90, TertiaryLinkDeque.field_c.nextInt());
+              TextInputWidget.field_R.b(-16171, var14);
+              TextInputWidget.field_R.b(-16171, var8);
               var15 = (CharSequence) ((Object) param4);
-              pm.field_R.b(-16171, SpriteState.a(-50, var15));
-              pm.field_R.a(param5, (byte) -91);
-              pm.field_R.a(param6 ^ 37, param2);
-              pm.field_R.a(param6 ^ 19, var9);
+              TextInputWidget.field_R.b(-16171, SpriteState.a(-50, var15));
+              TextInputWidget.field_R.a(param5, (byte) -91);
+              TextInputWidget.field_R.a(param6 ^ 37, param2);
+              TextInputWidget.field_R.a(param6 ^ 19, var9);
               ma.field_a.a(120, 18);
               ma.field_a.position = ma.field_a.position + 2;
               var10 = ma.field_a.position;
@@ -114,7 +114,7 @@ final class mg extends SceneObject {
                 var11_ref_StringLifetime4 = "";
               }
               ma.field_a.writeString(var11_ref_StringLifetime4, (byte) 105);
-              hd.a(gn.field_L, (byte) -123, tp.field_v, pm.field_R, ma.field_a);
+              hd.a(gn.field_L, (byte) -123, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.b(false, ma.field_a.position - var10);
             }
             cb.a(-1, false);
@@ -133,7 +133,7 @@ final class mg extends SceneObject {
                 og.a(param6 ^ -92, jl.b(0));
                 ol.field_q = SimUnit.field_Y;
                 ak.a((byte) -115);
-                sk.field_j = false;
+                UiTheme.field_j = false;
                 stackIn_31_0 = var9Lifetime1;
                 return stackIn_31_0;
               }
@@ -159,7 +159,7 @@ final class mg extends SceneObject {
                   hb.field_b[var12] = s.field_e.c(0);
                 }
                 ak.a((byte) -123);
-                sk.field_j = false;
+                UiTheme.field_j = false;
                 stackIn_41_0 = var11 + 100;
                 return stackIn_41_0;
               }
@@ -176,7 +176,7 @@ final class mg extends SceneObject {
               ol.field_q = s.field_e.readString((byte) -71);
             }
             ak.a((byte) -118);
-            sk.field_j = false;
+            UiTheme.field_j = false;
             stackIn_50_0 = PortalEntryEvent.field_i;
             return stackIn_50_0;
           }
@@ -184,19 +184,19 @@ final class mg extends SceneObject {
             field_F = 21;
           }
           if (ki.field_h == null) {
-            if (sk.field_j) {
+            if (UiTheme.field_j) {
               if (he.b((byte) -22) > 30000L) {
                 ol.field_q = aj.field_l;
               } else {
-                ol.field_q = ga.field_w;
+                ol.field_q = CipherPacketBuffer.field_w;
               }
-              sk.field_j = false;
+              UiTheme.field_j = false;
               stackIn_60_0 = 249;
               return stackIn_60_0;
             }
             var9Lifetime3 = jo.field_b;
             jo.field_b = TertiaryLinkNode.field_s;
-            sk.field_j = true;
+            UiTheme.field_j = true;
             TertiaryLinkNode.field_s = var9Lifetime3;
           }
           stackIn_62_0 = -1;

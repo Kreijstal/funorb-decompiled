@@ -18,7 +18,7 @@ final class lp extends IntrusiveNode {
     static int field_j;
 
     final static void a(byte param0) {
-        wi.a((byte) 4, tl.field_t);
+        wi.a((byte) 4, QuickChatPhraseDefinition.field_t);
         if (param0 < 35) {
           field_p = false;
         }
@@ -196,7 +196,7 @@ final class lp extends IntrusiveNode {
             return;
           }
         }
-        rn.field_f = u.a(10386, pl.field_J, 480, 0, 0, 640);
+        rn.field_f = u.a(10386, ArrayWidgetGroup.field_J, 480, 0, 0, 640);
         if (null == rn.field_f) {
           var2Lifetime1 = 3;
         } else {

@@ -244,7 +244,7 @@ final class IsaacRandom {
     }
 
     final static void a(u param0, int param1, int param2) {
-        ga var3 = ma.field_a;
+        CipherPacketBuffer var3 = ma.field_a;
         var3.b((byte) -35, param1);
         var3.a(-54, 2);
         if (param2 >= -69) {

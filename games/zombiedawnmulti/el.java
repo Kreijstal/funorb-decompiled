@@ -360,12 +360,12 @@ final class el extends rg {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var5 = param3 + this.field_y;
         int var6 = param1 + this.field_i;
         int var7Lifetime1;
-        super.a(param0 ^ 0, param1, param2, param3);
+        super.renderWidget(param0 ^ 0, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
@@ -407,7 +407,7 @@ final class el extends rg {
           var12_int = -this.field_I + this.field_L;
           var13 = this.field_G.a(param10, var12_int, this.field_G.field_C) + 2 * this.field_I;
           if (param3 < var13) {
-            this.b(param0, param1, 28972, param2, var13);
+            this.setWidgetBounds(param0, param1, 28972, param2, var13);
           } else {
             var13 = param3;
           }
@@ -417,7 +417,7 @@ final class el extends rg {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_B.b(var14, (-param3 + var13 >> 1) + this.field_I, 28972, param2 - this.field_L - this.field_I * 3, -(this.field_I * 2) + param3);
+          this.field_B.setWidgetBounds(var14, (-param3 + var13 >> 1) + this.field_I, 28972, param2 - this.field_L - this.field_I * 3, -(this.field_I * 2) + param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

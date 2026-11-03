@@ -34,7 +34,7 @@ final class ck {
         dm stackIn_83_0 = null;
         boolean stackIn_84_1 = false;
         RuntimeException decompiledCaughtException = null;
-        ga var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         dm var3_ref_dm = null;
@@ -115,7 +115,7 @@ final class ck {
                 }
               } else {
                 var8_ref_dm = new dm(var20, var21, var3_long);
-                hq.field_c.a(param0 + 2060, var8_ref_dm, var3_long);
+                TextWidgetPainter.field_c.a(param0 + 2060, var8_ref_dm, var3_long);
               }
               var8_ref_dm.field_Kb = bl.a((byte) 98) - (long)((PacketBuffer) ((Object) var1)).readInt(-1478490344);
               var8_ref_dm.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
@@ -340,7 +340,7 @@ final class ck {
             var3_ref_dmLifetime1.a(-4564);
             var3_ref_dmLifetime1 = (dm) (nh.field_g.b(6));
           }
-          var3_ref_dmLifetime2 = (dm) (hq.field_c.a((byte) 7));
+          var3_ref_dmLifetime2 = (dm) (TextWidgetPainter.field_c.a((byte) 7));
           while (var3_ref_dmLifetime2 != null) {
             if (var3_ref_dmLifetime2.field_Pb ||
               var3_ref_dmLifetime2.field_Ob) {
@@ -351,7 +351,7 @@ final class ck {
               var3_ref_dmLifetime2.field_Pb = false;
               lf.a(var3_ref_dmLifetime2, true);
             }
-            var3_ref_dmLifetime2 = (dm) (hq.field_c.c((byte) 123));
+            var3_ref_dmLifetime2 = (dm) (TextWidgetPainter.field_c.c((byte) 123));
           }
           if (var2 == 1 &&
             null != JaggrabDownloader.field_c) {

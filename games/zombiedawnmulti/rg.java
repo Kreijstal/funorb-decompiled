@@ -231,32 +231,32 @@ abstract class rg extends UiWidget implements dh {
         field_C = null;
     }
 
-    final void c(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         if (param0 != 32) {
           return;
         }
         if (null != this.field_B) {
-          this.field_B.c((byte) 32);
+          this.field_B.clearKeyboardFocus((byte) 32);
         }
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           if (this.field_B != null) {
-            this.field_B.a(-5407, param1, this.field_y + param2, this.field_i + param3);
+            this.field_B.updatePointerState(-5407, param1, this.field_y + param2, this.field_i + param3);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "rg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setWidgetBounds(param0, param1, param2, param3, param4);
         this.a(param2 ^ -14052);
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
@@ -270,7 +270,7 @@ abstract class rg extends UiWidget implements dh {
           }
           if (this.field_B != null &&
             this.field_B.c(127) &&
-            this.field_B.a(param0, param1, param2, -6208)) {
+            this.field_B.handleKeyInput(param0, param1, param2, -6208)) {
             return true;
           }
           var5_int = param0;
@@ -324,7 +324,7 @@ abstract class rg extends UiWidget implements dh {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderWidget(int param0, int param1, int param2, int param3) {
         if (param0 != -2) {
           this.f((byte) 0);
         }
@@ -333,11 +333,11 @@ abstract class rg extends UiWidget implements dh {
           this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (null != this.field_B) {
-          this.field_B.a(param0 ^ 0, this.field_i + param1, param2, this.field_y + param3);
+          this.field_B.renderWidget(param0 ^ 0, this.field_i + param1, param2, this.field_y + param3);
         }
     }
 
-    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -348,7 +348,7 @@ abstract class rg extends UiWidget implements dh {
           if (param4 != -24) {
             return false;
           }
-          stackIn_7_0 = (null != this.field_B) && (this.field_B.a(param0, param1, param2, param3, -24, param5 + this.field_y, this.field_i + param6));
+          stackIn_7_0 = (null != this.field_B) && (this.field_B.handlePointerPress(param0, param1, param2, param3, -24, param5 + this.field_y, this.field_i + param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -371,13 +371,13 @@ abstract class rg extends UiWidget implements dh {
         return null != this.f(-1963) ? true : false;
     }
 
-    final static sk g(int param0) {
+    final static UiTheme g(int param0) {
         if (param0 != -18799) {
-          return (sk) null;
+          return (UiTheme) null;
         }
         if (null == lh.field_g) {
-          lh.field_g = new sk();
-          lh.field_g.a(125269879, ke.field_h);
+          lh.field_g = new UiTheme();
+          lh.field_g.initializePainters(125269879, ke.field_h);
           lh.field_g.field_d = 2763306;
           lh.field_g.field_p = 14;
           lh.field_g.field_e = 0;

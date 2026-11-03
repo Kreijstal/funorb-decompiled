@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends IntrusiveNode {
+final class RasterSnapshot extends IntrusiveNode {
     int field_f;
     int field_m;
     int field_i;
@@ -14,7 +14,7 @@ final class il extends IntrusiveNode {
     int field_h;
     static String field_l;
 
-    final void a(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6, int param7) {
+    final void capture(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6, int param7) {
         this.field_i = param6;
         this.field_g = param1;
         this.field_f = param7;
@@ -42,7 +42,7 @@ final class il extends IntrusiveNode {
         field_l = null;
     }
 
-    il() {
+    RasterSnapshot() {
     }
 
     static {

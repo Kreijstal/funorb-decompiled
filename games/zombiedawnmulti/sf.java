@@ -73,7 +73,7 @@ final class sf {
     final static String a(int param0, int param1, String param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        ga var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;

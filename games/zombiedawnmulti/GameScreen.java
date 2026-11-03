@@ -1382,19 +1382,19 @@ final class GameScreen {
                 sc.field_a = stackIn_182_0;
               }
               if (param1 == 41) {
-                tl.a(2, (byte) -11, ma.field_a, 0, this.localTeam, 0);
+                QuickChatPhraseDefinition.a(2, (byte) -11, ma.field_a, 0, this.localTeam, 0);
                 if (!gf.field_h) {
                   this.field_I.b(113);
                 }
               }
               if (2 == param1) {
-                tl.a(0, (byte) -11, ma.field_a, this.camera.screenToWorldY(true, bo.field_d), 0, this.camera.screenToWorldX(MouseInputHandler.field_g, 2));
+                QuickChatPhraseDefinition.a(0, (byte) -11, ma.field_a, this.camera.screenToWorldY(true, bo.field_d), 0, this.camera.screenToWorldX(MouseInputHandler.field_g, 2));
               }
               if (param1 == 4) {
-                tl.a(1, (byte) -11, ma.field_a, 0, this.localTeam, 0);
+                QuickChatPhraseDefinition.a(1, (byte) -11, ma.field_a, 0, this.localTeam, 0);
               }
               if (5 == param1) {
-                tl.a(1, (byte) -11, ma.field_a, 0, (this.localTeam + 1) % PortalEntryEvent.field_m.teamCount, 0);
+                QuickChatPhraseDefinition.a(1, (byte) -11, ma.field_a, 0, (this.localTeam + 1) % PortalEntryEvent.field_m.teamCount, 0);
               }
               if (6 == param1) {
                 nk.a(120, la.field_n, 120, 0, si.field_C);
@@ -1403,7 +1403,7 @@ final class GameScreen {
                 nk.a(1500, la.field_n, 1500, 0, si.field_C);
               }
               if (param1 == 8) {
-                tl.a(3, (byte) -11, ma.field_a, 0, 0, 2);
+                QuickChatPhraseDefinition.a(3, (byte) -11, ma.field_a, 0, 0, 2);
               }
             }
             var3_int = -34 % ((param0 - 63) / 56);
@@ -1414,10 +1414,10 @@ final class GameScreen {
             if (~eg.field_C == ~param1) {
               this.field_I.a(0, -1);
             }
-            if (~param1 == ~tl.field_v) {
+            if (~param1 == ~QuickChatPhraseDefinition.field_v) {
               this.field_I.a(1, -1);
             }
-            if (tp.field_s == param1) {
+            if (UsernameAvailabilityValidator.field_s == param1) {
               this.field_I.a(2, -1);
             }
             if (~param1 == ~pd.field_c) {
@@ -4234,7 +4234,7 @@ final class GameScreen {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           this.field_z = false;
-          stackIn_5_0 = (pl.field_I != 10) ? 0 : 1;
+          stackIn_5_0 = (ArrayWidgetGroup.field_I != 10) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (!df.field_I) {
             boolean decompiledFrameRemainder0 = true;

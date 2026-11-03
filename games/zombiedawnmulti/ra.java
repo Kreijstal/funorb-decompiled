@@ -11,7 +11,7 @@ final class ra extends IntrusiveNode {
     static oj field_f;
     static cj field_j;
     boolean field_k;
-    static sk field_o;
+    static UiTheme field_o;
 
     final static void a(java.awt.Canvas param0, int param1) {
         if (param1 > -82) {
@@ -40,7 +40,7 @@ final class ra extends IntrusiveNode {
           try {
             un.field_p = param2;
             if (param1 > -29) {
-              field_o = (sk) null;
+              field_o = (UiTheme) null;
             }
             try {
               var3 = param0.getParameter("cookieprefix");

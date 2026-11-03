@@ -5,7 +5,7 @@ final class dn {
     static String field_b;
     static int[] field_a;
 
-    final static byte[] a(ga param0, byte[] param1, byte param2, int param3) {
+    final static byte[] a(CipherPacketBuffer param0, byte[] param1, byte param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -21,7 +21,7 @@ final class dn {
         RuntimeException var4 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4_int = param0.h(param3, 14862);
+          var4_int = param0.readBits(param3, 14862);
           if (var4_int == 0) {
             return null;
           }
@@ -32,15 +32,15 @@ final class dn {
           if (param2 >= -4) {
             dn.a(-49);
           }
-          var5 = param0.h(3, 14862);
-          var6 = (byte)param0.h(8, 14862);
+          var5 = param0.readBits(3, 14862);
+          var6 = (byte)param0.readBits(8, 14862);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param1[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (byte)(var6 + param0.h(var5, 14862));
+              param1[var7] = (byte)(var6 + param0.readBits(var5, 14862));
             }
           }
           stackIn_18_0 = (byte[]) (param1);

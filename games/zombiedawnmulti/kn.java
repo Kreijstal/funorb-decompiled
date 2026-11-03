@@ -41,7 +41,7 @@ final class kn {
         }
     }
 
-    final static UnitStateEvent a(byte param0, ga param1) {
+    final static UnitStateEvent a(byte param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

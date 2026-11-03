@@ -111,8 +111,8 @@ final class lf {
             if (param1 != -5989) {
               return;
             }
-            s.field_e = new ga(param11);
-            ma.field_a = new ga(param10);
+            s.field_e = new CipherPacketBuffer(param11);
+            ma.field_a = new CipherPacketBuffer(param10);
             tm.field_c = param12;
             cm.field_e = param8;
             ok.field_m = param6;

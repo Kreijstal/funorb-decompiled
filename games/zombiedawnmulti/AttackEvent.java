@@ -19,7 +19,7 @@ final class AttackEvent extends GameEvent {
 
     final static void b(boolean param0, int param1) {
         int var3 = 0;
-        ga var2 = ma.field_a;
+        CipherPacketBuffer var2 = ma.field_a;
         int var3Lifetime1;
         var2.b((byte) -35, param1);
         var2.position = var2.position + 1;

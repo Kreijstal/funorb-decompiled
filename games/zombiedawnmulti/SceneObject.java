@@ -86,7 +86,7 @@ abstract class SceneObject extends TertiaryLinkNode {
         char[] var7 = null;
         ld[] var8 = null;
         int var9 = 0;
-        tl var11 = null;
+        QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;

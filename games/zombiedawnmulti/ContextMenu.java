@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn extends cj {
+final class ContextMenu extends cj {
     private int field_Qb;
     static String field_Yb;
     static String field_Zb;
@@ -24,7 +24,7 @@ final class sn extends cj {
     private int field_Vb;
     private mo[] field_Tb;
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutAtAnchor(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var6;
         int var7;
@@ -84,14 +84,14 @@ final class sn extends cj {
         return this.field_Ob;
     }
 
-    sn(sn param0) {
+    ContextMenu(ContextMenu param0) {
         this(param0, param0.field_Ub, param0.field_Fb, param0.field_Rb, param0.field_Jb, param0.field_Pb, param0.field_Kb, param0.field_Qb, param0.field_Wb);
     }
 
     final boolean d(byte param0) {
         if (param0 < 71) {
           PacketBuffer var3 = (PacketBuffer) null;
-          sn.a(3, (PacketBuffer) null);
+          ContextMenu.a(3, (PacketBuffer) null);
         }
         if (this.field_Ob != -2) {
           return false;
@@ -103,7 +103,7 @@ final class sn extends cj {
         return true;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Zb = null;
         field_Sb = null;
         field_Gb = null;
@@ -130,7 +130,7 @@ final class sn extends cj {
           ao.field_c = ao.field_c + (var2_intLifetime1 >> 6);
           jq.field_a = var2_intLifetime1 << 15 & 2064384;
           if (param0 != 4050) {
-            sn.c((byte) 16);
+            ContextMenu.releaseStatics((byte) 16);
           }
           jq.field_a = jq.field_a + (param1.readUnsignedByte(31365) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(31365);
@@ -142,7 +142,7 @@ final class sn extends cj {
         }
     }
 
-    sn(cj param0, Sprite[] param1, cj param2, cj param3, int param4, int param5, int param6, int param7, int param8) {
+    ContextMenu(cj param0, Sprite[] param1, cj param2, cj param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Ob = -2;
         this.field_Xb = new int[256];

@@ -399,7 +399,7 @@ final class md {
           InflaterDecompressor.field_h = new cj(0L, al.field_fb, PortalEntryEvent.field_k);
           bp.field_w = new cj(0L, pn.field_g, fd.field_N);
           SimEntity.field_H = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
-          ia.field_t = new cj(0L, he.field_i, sn.field_Gb.toUpperCase());
+          ia.field_t = new cj(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
           ia.field_t.field_Z = tb.field_u;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
@@ -414,7 +414,7 @@ final class md {
             stackIn_6_1 = null;
             stackIn_6_4 = TertiaryLinkNode.field_t;
           }
-          pl.field_L = new cj(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
+          ArrayWidgetGroup.field_L = new cj(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
           cm.field_a = new cj(0L, (cj) null);
           cm.field_a.a((byte) 50, ro.field_O);
           if (!param10) {
@@ -434,7 +434,7 @@ final class md {
           if (tb.field_u) {
             cm.field_a.a((byte) 50, ia.field_t);
           }
-          cm.field_a.a((byte) 50, pl.field_L);
+          cm.field_a.a((byte) 50, ArrayWidgetGroup.field_L);
           sc.field_j = new cj(0L, vo.field_m);
           sc.field_j.field_lb = 0;
           sc.field_j.field_R = 1;
@@ -442,23 +442,23 @@ final class md {
           SimHuman.field_gb = new cj(0L, wa.field_a);
           SimHuman.field_gb.a((byte) 50, sc.field_j);
           SimHuman.field_gb.a((byte) 50, kn.field_a);
-          sk.field_i = new cj(0L, nc.field_e);
-          sk.field_i.b((byte) -32, vo.field_m);
-          var16 = sk.field_i;
-          sk.field_i.field_lb = 1;
+          UiTheme.field_i = new cj(0L, nc.field_e);
+          UiTheme.field_i.b((byte) -32, vo.field_m);
+          var16 = UiTheme.field_i;
+          UiTheme.field_i.field_lb = 1;
           var16.field_R = 1;
-          ga.field_r = new cj(0L, (cj) null);
+          CipherPacketBuffer.field_r = new cj(0L, (cj) null);
           ClientException.field_h = new cj(0L, vo.field_m);
           ClientException.field_h.field_R = 1;
           ie.field_jb = new cj(0L, vd.field_a, GameScreen.field_r);
           bf.field_h = new cj(0L, pn.field_g, cg.field_j);
           bf.field_n = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
-          ga.field_r.a((byte) 50, ClientException.field_h);
-          ga.field_r.a((byte) 50, ie.field_jb);
+          CipherPacketBuffer.field_r.a((byte) 50, ClientException.field_h);
+          CipherPacketBuffer.field_r.a((byte) 50, ie.field_jb);
           if (tb.field_u) {
-            ga.field_r.a((byte) 50, bf.field_h);
+            CipherPacketBuffer.field_r.a((byte) 50, bf.field_h);
           }
-          ga.field_r.a((byte) 50, bf.field_n);
+          CipherPacketBuffer.field_r.a((byte) 50, bf.field_n);
           jp.field_b = new cj(0L, ai.field_c, pi.field_b.toUpperCase());
           gg.field_m = new cj(0L, LevelFileCatalog.field_d);
           SocketConnector.field_a = new cj(0L, cg.field_f);

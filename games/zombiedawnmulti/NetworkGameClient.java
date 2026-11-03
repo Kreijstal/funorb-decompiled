@@ -84,13 +84,13 @@ abstract class NetworkGameClient extends GameApplet {
         this.setBackground(java.awt.Color.black);
         p.field_e = this.field_C;
         HumanView.f(-7733, p.field_e);
-        lf.a(param1, -5989, this.field_D, this.field_A, this.field_p, p.field_e, pl.field_J, param5, this.field_m, this.field_o, 5000, 5000, this.field_v, this.field_y);
-        jj.a(this.field_p, this.field_y, this.field_v, p.field_e, this.field_A, pl.field_J, param5, this.field_o, (byte) -106);
+        lf.a(param1, -5989, this.field_D, this.field_A, this.field_p, p.field_e, ArrayWidgetGroup.field_J, param5, this.field_m, this.field_o, 5000, 5000, this.field_v, this.field_y);
+        jj.a(this.field_p, this.field_y, this.field_v, p.field_e, this.field_A, ArrayWidgetGroup.field_J, param5, this.field_o, (byte) -106);
         vc.a((byte) 116);
         FullscreenFocusCanvas.field_a = el.b(false);
         qi.a(100, dk.field_Ib);
         m.field_z = param3;
-        sn.field_Lb = param2;
+        ContextMenu.field_Lb = param2;
         PortalView.field_G = param0;
         if (param7 > -35) {
           this.e((byte) 2);
@@ -232,7 +232,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var5 = 84 % ((param0 - 53) / 42);
         int var4 = -1 + hd.field_q;
         byte[] var6 = new byte[var4];
-        s.field_e.b(var4, 0, 0, var6);
+        s.field_e.readCipheredBytes(var4, 0, 0, var6);
         f.a(jl.b(0), var3 != 0, (byte) -45, qe.a(-2739, var6));
     }
 
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameApplet {
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      ga.i((byte) 104);
+                      CipherPacketBuffer.i((byte) 104);
                     } else {
                       if (var2 != 7) {
                         if (var2 != 8) {
@@ -329,7 +329,7 @@ abstract class NetworkGameClient extends GameApplet {
                             bf.a(var3, -53);
                           }
                         } else {
-                          bp.a(hd.field_q, s.field_e, pl.field_J, -4);
+                          bp.a(hd.field_q, s.field_e, ArrayWidgetGroup.field_J, -4);
                         }
                       } else {
                         this.c(false);
@@ -457,7 +457,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (13 == var4) {
             try {
               if (null == wk.field_I) {
-                wk.field_I = new JaggrabDownloader(pl.field_J, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                wk.field_I = new JaggrabDownloader(ArrayWidgetGroup.field_J, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (wk.field_I.b(-90)) {
                 var12 = wk.field_I.a((byte) 21);
@@ -635,7 +635,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (ClientException.field_i == 1) {
           if (p.field_e != 0) {
-            cp.field_P = u.a(5, sn.field_Lb);
+            cp.field_P = u.a(5, ContextMenu.field_Lb);
           }
           ra.field_l = oj.a(false, PortalView.field_G, 1, -24285, true);
           fe.field_L = oj.a(false, m.field_y, 1, -24285, true);

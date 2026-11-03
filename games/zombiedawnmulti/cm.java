@@ -18,7 +18,7 @@ final class cm {
     }
 
     final static void a(int param0, int param1, int param2, byte[] param3, boolean param4, int param5) {
-        ga var6 = null;
+        CipherPacketBuffer var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
@@ -154,7 +154,7 @@ final class cm {
           var6 = param2.field_qb;
           var7 = param2.field_zb;
           var8 = param2.field_z;
-          var40.field_j.b(4542, var5, var8, var6, var7);
+          var40.field_j.layoutAtAnchor(4542, var5, var8, var6, var7);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "cm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

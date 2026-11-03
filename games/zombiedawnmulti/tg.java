@@ -478,7 +478,7 @@ final class tg implements Runnable {
                 SoftwareRasterizer.resetClip();
                 tm.a(vk.i((byte) -39), false);
                 IntrusiveNode.a(vk.i((byte) -39), 2);
-                pm.a(false, vk.i((byte) -39));
+                TextInputWidget.a(false, vk.i((byte) -39));
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -487,7 +487,7 @@ final class tg implements Runnable {
                   SoftwareRasterizer.resetClip();
                   tm.a(vk.i((byte) -39), false);
                   IntrusiveNode.a(vk.i((byte) -39), 2);
-                  pm.a(false, vk.i((byte) -39));
+                  TextInputWidget.a(false, vk.i((byte) -39));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -498,7 +498,7 @@ final class tg implements Runnable {
             if (decompiledFrameRemainder0) {
               tm.a(vk.i((byte) -39), false);
               IntrusiveNode.a(vk.i((byte) -39), 2);
-              pm.a(false, vk.i((byte) -39));
+              TextInputWidget.a(false, vk.i((byte) -39));
             }
           } else {
             gk.a(2, param2).b(0);
@@ -707,7 +707,7 @@ final class tg implements Runnable {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = tp.field_t[tq.b(255, (int) var21[var6])];
+              var10[var6] = UsernameAvailabilityValidator.field_t[tq.b(255, (int) var21[var6])];
             }
             var1[var2] = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
           } else {
@@ -719,7 +719,7 @@ final class tg implements Runnable {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = cr.b(tp.field_t[tq.b((int) var21[var7], 255)], tq.b(255, (int) var16[var7]) << 24);
+              var6_ref_int__[var7] = cr.b(UsernameAvailabilityValidator.field_t[tq.b((int) var21[var7], 255)], tq.b(255, (int) var16[var7]) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
           }

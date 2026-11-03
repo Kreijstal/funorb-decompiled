@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class pl extends UiWidget implements dh {
+abstract class ArrayWidgetGroup extends UiWidget implements dh {
     UiWidget[] field_E;
     static pi field_G;
     static PlatformTaskDispatcher field_J;
@@ -14,7 +14,7 @@ abstract class pl extends UiWidget implements dh {
     static int field_I;
     static String field_K;
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         UiWidget var7 = null;
@@ -27,7 +27,7 @@ abstract class pl extends UiWidget implements dh {
         RuntimeException var5_ref = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           if (this.field_E == null) {
             return;
           }
@@ -36,7 +36,7 @@ abstract class pl extends UiWidget implements dh {
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(-5407, param1, this.field_y + param2, param3 + this.field_i);
+              var7.updatePointerState(-5407, param1, this.field_y + param2, param3 + this.field_i);
             }
           }
           return;
@@ -124,7 +124,7 @@ abstract class pl extends UiWidget implements dh {
         if (param0 < 123) {
           field_L = (cj) null;
         }
-        return null != this.a(8464) ? true : false;
+        return null != this.findFocusTarget(8464) ? true : false;
     }
 
     final boolean a(UiWidget param0, int param1) {
@@ -164,7 +164,7 @@ abstract class pl extends UiWidget implements dh {
         }
     }
 
-    private final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    private final void appendChildrenDiagnostics(Hashtable param0, int param1, int param2, StringBuilder param3) {
         int var6 = 0;
         StringBuilder discarded$4 = null;
         int var8 = 0;
@@ -249,7 +249,7 @@ abstract class pl extends UiWidget implements dh {
         return null;
     }
 
-    private final UiWidget a(int param0) {
+    private final UiWidget findFocusTarget(int param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -318,7 +318,7 @@ abstract class pl extends UiWidget implements dh {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        ga var3 = ma.field_a;
+        CipherPacketBuffer var3 = ma.field_a;
         var3.b((byte) -35, param0);
         var3.a(112, 3);
         var3.a(117, 8);
@@ -328,7 +328,7 @@ abstract class pl extends UiWidget implements dh {
         var3.a(param2, (byte) -69);
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -352,7 +352,7 @@ abstract class pl extends UiWidget implements dh {
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.a(param0, param1, param2, param3, param4 + 0, param5 + this.field_y, this.field_i + param6)) {
+              var10.handlePointerPress(param0, param1, param2, param3, param4 + 0, param5 + this.field_y, this.field_i + param6)) {
               return true;
             }
           }
@@ -380,7 +380,7 @@ abstract class pl extends UiWidget implements dh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -20) {
-            stackIn_4_0 = this.a(param1, false, 1);
+            stackIn_4_0 = this.focusForwardFromFocused(param1, false, 1);
             return stackIn_4_0;
           }
           return false;
@@ -398,8 +398,8 @@ abstract class pl extends UiWidget implements dh {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setWidgetBounds(param0, param1, param2, param3, param4);
         this.g(140);
     }
 
@@ -415,11 +415,11 @@ abstract class pl extends UiWidget implements dh {
         field_D = null;
     }
 
-    pl(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
+    ArrayWidgetGroup(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
         super(param0, param1, param2, param3, param4, (bj) null);
     }
 
-    private final boolean a(UiWidget param0, boolean param1, int param2) {
+    private final boolean focusForwardFromFocused(UiWidget param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiWidget var5 = null;
@@ -486,11 +486,11 @@ abstract class pl extends UiWidget implements dh {
         try {
           if (this.a(param1, -116, param3, param2)) {
             this.a(param2, param3, (byte) 26, param1);
-            this.a(param1, param2, 1, param3);
+            this.appendChildrenDiagnostics(param1, param2, 1, param3);
           }
           if (param0 != 7) {
             var6 = (UiWidget) null;
-            this.a(-120, 113, 5, (UiWidget) null, -93, 86, 64);
+            this.handlePointerPress(-120, 113, 5, (UiWidget) null, -93, 86, 64);
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -523,9 +523,9 @@ abstract class pl extends UiWidget implements dh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -74) {
-            pl.a(-78, (byte) 4, -120);
+            ArrayWidgetGroup.a(-78, (byte) 4, -120);
           }
-          stackIn_3_0 = this.a(param0, 32, 1);
+          stackIn_3_0 = this.focusBackwardFromFocused(param0, 32, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -541,7 +541,7 @@ abstract class pl extends UiWidget implements dh {
         }
     }
 
-    final void c(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -554,7 +554,7 @@ abstract class pl extends UiWidget implements dh {
         for (var3 = 0; var7.length > var3; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var4.c((byte) 32);
+            var4.clearKeyboardFocus((byte) 32);
           }
         }
         if (param0 != 32) {
@@ -563,7 +563,7 @@ abstract class pl extends UiWidget implements dh {
         }
     }
 
-    private final boolean a(UiWidget param0, int param1, int param2) {
+    private final boolean focusBackwardFromFocused(UiWidget param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiWidget var5 = null;
@@ -611,7 +611,7 @@ abstract class pl extends UiWidget implements dh {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderWidget(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         UiWidget var6;
         int var7;
@@ -627,13 +627,13 @@ abstract class pl extends UiWidget implements dh {
           for (var5 = -1 + this.field_E.length; var5 >= 0; var5--) {
             var6 = this.field_E[var5];
             if (var6 != null) {
-              var6.a(-2, param1 + this.field_i, param2, this.field_y + param3);
+              var6.renderWidget(-2, param1 + this.field_i, param2, this.field_y + param3);
             }
           }
         }
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         int var5_int = 0;
@@ -658,7 +658,7 @@ abstract class pl extends UiWidget implements dh {
             var7 = var10[var6];
             if (var7 != null &&
               var7.c(125) &&
-              var7.a(param0, param1, param2, -6208)) {
+              var7.handleKeyInput(param0, param1, param2, -6208)) {
               return true;
             }
           }

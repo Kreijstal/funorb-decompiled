@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends pm implements kh {
+final class on extends TextInputWidget implements kh {
     static MouseInputHandler field_Z;
     private j field_ab;
     static ki[] field_bb;
     private int field_Y;
     static String field_cb;
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0 + 0, param1, param2, param3);
+          super.updatePointerState(param0 + 0, param1, param2, param3);
           if (param0 != -5407) {
             field_cb = (String) null;
           }

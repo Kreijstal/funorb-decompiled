@@ -246,7 +246,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-123, "achievementsthisgame");
                 if (null != var2) {
-                  sn.field_Mb = qe.a(-2739, var2);
+                  ContextMenu.field_Mb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "gameoptlabels,0");
                 if (var2 != null) {
@@ -1152,11 +1152,11 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-125, "keycode_powerup2");
                 if (null != var2) {
-                  tl.field_v = var2[0] & 255;
+                  QuickChatPhraseDefinition.field_v = var2[0] & 255;
                 }
                 var2 = qe.a(-125, "keycode_powerup3");
                 if (var2 != null) {
-                  tp.field_s = 255 & var2[0];
+                  UsernameAvailabilityValidator.field_s = 255 & var2[0];
                 }
                 var2 = qe.a(-122, "keycode_powerup4");
                 if (var2 != null) {
@@ -1431,7 +1431,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-125, "teaser_TRAIT_FAST_CASTER");
                 if (var2 != null) {
-                  hq.field_k = qe.a(-2739, var2);
+                  TextWidgetPainter.field_k = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "teaser_TRAIT_EXPERT");
                 if (var2 != null) {
@@ -1471,7 +1471,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-125, "teaser_TRAIT_DETERMINED");
                 if (null != var2) {
-                  sn.field_Sb = qe.a(-2739, var2);
+                  ContextMenu.field_Sb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "teaser_TRAIT_WISE");
                 if (null != var2) {
@@ -1587,7 +1587,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-125, "tip_POWERUP_CHARM");
                 if (null != var2) {
-                  pl.field_D = qe.a(-2739, var2);
+                  ArrayWidgetGroup.field_D = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "tip_POWERUP_COUNTER");
                 if (null != var2) {
@@ -1615,7 +1615,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-123, "tip_TRAIT_SPELL_MASTER");
                 if (null != var2) {
-                  tp.field_u = qe.a(-2739, var2);
+                  UsernameAvailabilityValidator.field_u = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "tip_TRAIT_QUICK_THINKER");
                 if (var2 != null) {
@@ -1695,7 +1695,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "tip_MODIFIER_REALISTIC");
                 if (var2 != null) {
-                  sk.field_q = qe.a(-2739, var2);
+                  UiTheme.field_q = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "nextlevel");
                 if (var2 != null) {

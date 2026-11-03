@@ -19,7 +19,7 @@ final class qi {
         int[] var6 = null;
         int var8 = 0;
         PacketBuffer var9 = null;
-        ga var11 = null;
+        CipherPacketBuffer var11 = null;
         int[] var12 = null;
         int[] var13 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;

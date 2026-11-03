@@ -23,9 +23,9 @@ class gn extends UiWidget {
         this.field_H = false;
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             this.field_u != pq.field_f) {
             if (this.a(92, param2, MouseInputHandler.field_g, bo.field_d, param3) &&
@@ -48,7 +48,7 @@ class gn extends UiWidget {
         try {
           if (this.field_F &&
             this.field_J) {
-            param0.c((byte) 32);
+            param0.clearKeyboardFocus((byte) 32);
             this.field_H = true;
             if (null != this.field_A &&
               this.field_A instanceof om) {
@@ -112,7 +112,7 @@ class gn extends UiWidget {
         }
     }
 
-    boolean a(int param0, char param1, UiWidget param2, int param3) {
+    boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -177,7 +177,7 @@ class gn extends UiWidget {
         return true;
     }
 
-    final static GameEvent a(int param0, ga param1) {
+    final static GameEvent a(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -225,7 +225,7 @@ class gn extends UiWidget {
         }
     }
 
-    final void c(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         if (param0 != 32) {
           StringBuilder var3 = (StringBuilder) null;
           this.a(114, (Hashtable) null, 36, (StringBuilder) null);
@@ -259,7 +259,7 @@ class gn extends UiWidget {
         this(param0, ra.field_o.field_n, param1);
     }
 
-    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         String var9 = null;
         RuntimeException stackIn_15_0 = null;
@@ -313,7 +313,7 @@ class gn extends UiWidget {
         int var6 = 0;
         ml var7 = null;
         ml var8 = null;
-        ga var9 = null;
+        CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {

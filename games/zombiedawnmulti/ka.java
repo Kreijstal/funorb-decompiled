@@ -118,7 +118,7 @@ final class ka {
     ka(boolean param0) {
         this.field_l = wc.field_N;
         this.field_h = BufferedFile.field_g;
-        this.field_g = sn.field_Ib;
+        this.field_g = ContextMenu.field_Ib;
         this.field_k = fe.field_R;
         this.field_a = SimEntity.field_K;
         this.field_n = kk.field_s;

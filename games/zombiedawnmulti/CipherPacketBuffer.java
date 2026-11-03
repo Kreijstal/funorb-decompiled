@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends PacketBuffer {
+final class CipherPacketBuffer extends PacketBuffer {
     static cj field_r;
     static String field_t;
     static PcmPlayerService field_u;
@@ -45,9 +45,9 @@ final class ga extends PacketBuffer {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ga var13 = null;
+        CipherPacketBuffer var13 = null;
         int var14 = 0;
-        ga var15 = null;
+        CipherPacketBuffer var15 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -55,7 +55,7 @@ final class ga extends PacketBuffer {
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 < 31) {
-            ga.j(81);
+            CipherPacketBuffer.j(81);
           }
           var13 = s.field_e;
           var15 = var13;
@@ -81,7 +81,7 @@ final class ga extends PacketBuffer {
             }
             s.a(var4, (byte) 111, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              sn.a(4050, var15);
+              ContextMenu.a(4050, var15);
               if (var6_intLifetime1 != 0) {
                 PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
               } else {
@@ -155,7 +155,7 @@ final class ga extends PacketBuffer {
         this.payload[fieldTemp$0] = (byte)(param1 + this.field_p.a(-48));
     }
 
-    final void b(int param0, int param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, int param1, int param2, byte[] param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -223,7 +223,7 @@ final class ga extends PacketBuffer {
         }
     }
 
-    final int h(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param1 != 14862) {
@@ -265,7 +265,7 @@ final class ga extends PacketBuffer {
         return var2;
     }
 
-    final int m(int param0) {
+    final int readCipheredOpcode(int param0) {
         int var2 = 114 % ((param0 + 34) / 50);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
@@ -288,15 +288,15 @@ final class ga extends PacketBuffer {
         field_w = null;
         field_v = null;
         if (param0 > -34) {
-          ga.a(-13, true);
+          CipherPacketBuffer.a(-13, true);
         }
     }
 
-    ga(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    ga(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 

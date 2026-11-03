@@ -128,7 +128,7 @@ final class mi extends cj {
     }
 
     final static void b(int param0, int param1) {
-        ga var2 = ma.field_a;
+        CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param1);
         var2.a(109, param0);
         var2.a(-116, 0);

@@ -154,7 +154,7 @@ abstract class ng {
 
     final static String a(String param0, String param1, int param2, int param3) {
         RuntimeException var4 = null;
-        ga var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         ml var7 = null;
         CharSequence var8 = null;

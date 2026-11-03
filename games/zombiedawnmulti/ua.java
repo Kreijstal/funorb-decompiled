@@ -83,7 +83,7 @@ final class ua extends rg {
 
     final void a(int param0) {
         super.a(param0);
-        this.field_B.b(0, 0, 28972, this.field_n, this.field_w);
+        this.field_B.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w);
         this.field_G = this.field_y;
         this.field_M = this.field_i;
     }
@@ -170,7 +170,7 @@ final class ua extends rg {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_6_0 = 0;
@@ -179,7 +179,7 @@ final class ua extends rg {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8_int = super.a(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
+          var8_int = super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_O) {
             return true;
@@ -251,13 +251,13 @@ final class ua extends rg {
             field_N = 91;
           }
           lb.field_d = param0;
-          pl.field_C = param1;
+          ArrayWidgetGroup.field_C = param1;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ua.IA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         int stackIn_11_1 = 0;
         int stackIn_14_2 = 0;
         int stackIn_20_1 = 0;
@@ -313,7 +313,7 @@ final class ua extends rg {
               this.field_i = stackIn_20_1 + stackIn_21_2;
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -77,12 +77,12 @@ final class gl extends WidgetContainer implements in {
               this.field_I[var5] = new gn(this.field_G[var5], (bj) (this));
               this.field_I[var5].listener = (WidgetActionListener) ((Object) var4);
               this.field_I[var5].field_x = wd.field_I;
-              this.field_I[var5].b(0, 20 + var5 * 16, 28972, 80, 15);
+              this.field_I[var5].setWidgetBounds(0, 20 + var5 * 16, 28972, 80, 15);
               this.b((byte) 94, this.field_I[var5]);
             }
             this.field_I[var3_int] = new gn(al.field_ab, (bj) (this));
             this.field_I[var3_int].listener = (WidgetActionListener) ((Object) var4);
-            this.field_I[var3_int].b(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
+            this.field_I[var3_int].setWidgetBounds(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
             this.b((byte) 55, this.field_I[var3_int]);
             return;
           }
@@ -102,8 +102,8 @@ final class gl extends WidgetContainer implements in {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0 ^ 0, param1, param2, param3);
+    final void renderWidget(int param0, int param1, int param2, int param3) {
+        super.renderWidget(param0 ^ 0, param1, param2, param3);
         if (0 != param2) {
           return;
         }
@@ -126,7 +126,7 @@ final class gl extends WidgetContainer implements in {
           field_K = (String) null;
         }
         while (var1 > var4_int) {
-          var3[var4_int] = tp.field_t[tq.b(255, (int) var2[var4_int])];
+          var3[var4_int] = UsernameAvailabilityValidator.field_t[tq.b(255, (int) var2[var4_int])];
           var4_int++;
         }
         Sprite var4 = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], var3);
@@ -143,7 +143,7 @@ final class gl extends WidgetContainer implements in {
         field_K = null;
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -152,7 +152,7 @@ final class gl extends WidgetContainer implements in {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -191,7 +191,7 @@ final class gl extends WidgetContainer implements in {
         try {
           if (param3 > -83) {
             var8 = (UiWidget) null;
-            this.a(-106, '￘', (UiWidget) null, 49);
+            this.handleKeyInput(-106, '￘', (UiWidget) null, 49);
           }
           for (var6_int = 0; this.field_G.length > var6_int; var6_int++) {
             if (param2 == this.field_I[var6_int]) {

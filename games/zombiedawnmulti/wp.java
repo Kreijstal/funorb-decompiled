@@ -16,7 +16,7 @@ final class wp {
     final static void a(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ga var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -87,7 +87,7 @@ final class wp {
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           rm.field_b.a();
-          ga.field_u.a();
+          CipherPacketBuffer.field_u.a();
           mn.field_p = mn.field_p - 1;
           if (mn.field_p == 0) {
             mn.field_p = 200;

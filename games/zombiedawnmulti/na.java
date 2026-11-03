@@ -13,7 +13,7 @@ final class na extends rg {
     na(UiWidget param0) {
         super(param0.field_y, param0.field_i, param0.field_n, param0.field_w, (WidgetActionListener) null, (bj) null);
         try {
-          param0.b(0, 0, 28972, this.field_n, this.field_w);
+          param0.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w);
           this.field_E = 256;
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {
@@ -33,7 +33,7 @@ final class na extends rg {
         field_J = (int[][]) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderWidget(int param0, int param1, int param2, int param3) {
         if (param2 != 0) {
           return;
         }
@@ -44,7 +44,7 @@ final class na extends rg {
           return;
         }
         if (this.field_E == 256) {
-          this.field_B.a(-2, param1 + this.field_i, param2, param3 + this.field_y);
+          this.field_B.renderWidget(-2, param1 + this.field_i, param2, param3 + this.field_y);
           return;
         }
         Sprite var6 = new Sprite(this.field_B.field_n, this.field_B.field_w);
@@ -52,7 +52,7 @@ final class na extends rg {
         if (param0 != -2) {
           field_G = (Sprite[]) null;
         }
-        this.field_B.a(param0 + 0, 0, param2, 0);
+        this.field_B.renderWidget(param0 + 0, 0, param2, 0);
         ql.a(true);
         var6.c(param3 + this.field_y, param1 + this.field_i, this.field_E);
     }

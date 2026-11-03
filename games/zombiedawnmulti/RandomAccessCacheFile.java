@@ -109,7 +109,7 @@ final class RandomAccessCacheFile {
           while (param0 != 0L) {
             var7 = param0;
             param0 = param0 / 37L;
-            var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
+            var9 = TextWidgetPainter.field_o[(int)(-(param0 * 37L) + var7)];
             if (var9 == 95) {
               var10 = -1 + var12.length();
               var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
@@ -127,7 +127,7 @@ final class RandomAccessCacheFile {
         while (param0 != 0L) {
           var7Lifetime1 = param0;
           param0 = param0 / 37L;
-          var9Lifetime1 = hq.field_o[(int)(-(param0 * 37L) + var7Lifetime1)];
+          var9Lifetime1 = TextWidgetPainter.field_o[(int)(-(param0 * 37L) + var7Lifetime1)];
           if (var9Lifetime1 == 95) {
             var10Lifetime1 = -1 + var13.length();
             var13.setCharAt(var10Lifetime1, Character.toUpperCase(var13.charAt(var10Lifetime1)));

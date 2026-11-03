@@ -146,7 +146,7 @@ final class fd extends SceneObject {
         if (param0 <= 124) {
           field_G = (BinaryBitmapFont) null;
         }
-        tp.field_t = null;
+        UsernameAvailabilityValidator.field_t = null;
     }
 
     final static int a(int param0, boolean param1, boolean param2, String param3, String param4, int param5) {
@@ -241,7 +241,7 @@ final class fd extends SceneObject {
                 }
                 else {
                   ak.a((byte) -111);
-                  sk.field_j = false;
+                  UiTheme.field_j = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
@@ -305,13 +305,13 @@ final class fd extends SceneObject {
               qq.field_a = s.field_e.readUnsignedByte(31365);
               vo.field_l = pi.field_a;
               if (ki.field_a.b(7) != uq.field_b) {
-                if (ki.field_a.b(7) == pl.field_G) {
+                if (ki.field_a.b(7) == ArrayWidgetGroup.field_G) {
                   RasterBuffer.field_c.a(-100, jl.b(0));
                 }
               } else {
                 wp.field_b.a(-108, jl.b(0));
               }
-              sk.field_j = false;
+              UiTheme.field_j = false;
               if (var11 != null) {
                 jh.a(jl.b(0), param0 ^ -15, var11);
               }
@@ -346,8 +346,8 @@ final class fd extends SceneObject {
               dd.a(0)) {
               ak.a((byte) -124);
               if (PortalEntryEvent.field_i == 7 &&
-                !sk.field_j) {
-                sk.field_j = true;
+                !UiTheme.field_j) {
+                UiTheme.field_j = true;
                 stackIn_104_0 = -1;
                 return stackIn_104_0;
               }
@@ -355,24 +355,24 @@ final class fd extends SceneObject {
                 PortalEntryEvent.field_i = 3;
               }
               ol.field_q = s.field_e.readString((byte) -31);
-              sk.field_j = false;
+              UiTheme.field_j = false;
               stackIn_102_0 = PortalEntryEvent.field_i;
               return stackIn_102_0;
             }
             if (ki.field_h == null) {
-              if (sk.field_j) {
+              if (UiTheme.field_j) {
                 if (he.b((byte) -22) > 30000L) {
                   ol.field_q = aj.field_l;
                 } else {
-                  ol.field_q = ga.field_w;
+                  ol.field_q = CipherPacketBuffer.field_w;
                 }
-                sk.field_j = false;
+                UiTheme.field_j = false;
                 stackIn_113_0 = 3;
                 return stackIn_113_0;
               }
               var6_intLifetime2 = jo.field_b;
               jo.field_b = TertiaryLinkNode.field_s;
-              sk.field_j = true;
+              UiTheme.field_j = true;
               TertiaryLinkNode.field_s = var6_intLifetime2;
             }
             stackIn_115_0 = -1;

@@ -59,7 +59,7 @@ final class pj extends WidgetContainer implements co, in {
         super(0, 0, 288, 0, (WidgetActionListener) null);
         String var7 = null;
         int var3 = 0;
-        hq var4 = null;
+        TextWidgetPainter var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -68,7 +68,7 @@ final class pj extends WidgetContainer implements co, in {
           this.field_G.listener = (WidgetActionListener) ((Object) new oq());
           var7 = vl.a(ng.field_a, new String[]{this.h(-1), this.a(111)}, 2);
           var3 = 20;
-          var4 = new hq(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
+          var4 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
           this.field_L = new sq(var7, var4);
           this.field_L.field_x = "";
           this.field_L.a(0, (byte) -107, mp.field_d);
@@ -80,10 +80,10 @@ final class pj extends WidgetContainer implements co, in {
           this.b((byte) 108, this.field_L);
           var5 = 4;
           var6 = 200;
-          this.field_G.b(300 - var6 >> 1, var3, 28972, var6, 40);
+          this.field_G.setWidgetBounds(300 - var6 >> 1, var3, 28972, var6, 40);
           this.field_G.field_A = (bj) (this);
           this.b((byte) 59, this.field_G);
-          this.b(0, 0, 28972, 300, var5 + (var3 + 55));
+          this.setWidgetBounds(0, 0, 28972, 300, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -103,7 +103,7 @@ final class pj extends WidgetContainer implements co, in {
     private final String h(int param0) {
         if (param0 != -1) {
           UiWidget var3 = (UiWidget) null;
-          this.a(-29, '.', (UiWidget) null, 60);
+          this.handleKeyInput(-29, '.', (UiWidget) null, 60);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -164,7 +164,7 @@ final class pj extends WidgetContainer implements co, in {
         }
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -173,7 +173,7 @@ final class pj extends WidgetContainer implements co, in {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {

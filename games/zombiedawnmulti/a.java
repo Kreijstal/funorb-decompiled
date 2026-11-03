@@ -24,7 +24,7 @@ final class a {
         String var3;
         String var3Lifetime1;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
-        pm.field_P = null;
+        TextInputWidget.field_P = null;
         nj.field_f = false;
         if (IntrusiveDequeCursor.field_e) {
           PortalView.field_L.c(false);
@@ -38,11 +38,11 @@ final class a {
         var1 = qq.field_a;
         if (0 < var1) {
           if (1 == var1) {
-            pm.field_P = rp.field_e;
+            TextInputWidget.field_P = rp.field_e;
           } else {
-            pm.field_P = vl.a(al.field_cb, new String[]{Integer.toString(var1)}, 2);
+            TextInputWidget.field_P = vl.a(al.field_cb, new String[]{Integer.toString(var1)}, 2);
           }
-          pm.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) pm.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
+          TextInputWidget.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) TextInputWidget.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
         }
         PortalView.field_L.m(-7435);
         sp.c(param0 + 1);

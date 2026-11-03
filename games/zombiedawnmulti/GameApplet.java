@@ -95,9 +95,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (pl.field_J != null) {
+          if (ArrayWidgetGroup.field_J != null) {
             try {
-              pl.field_J.b(124);
+              ArrayWidgetGroup.field_J.b(124);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -248,7 +248,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     final static void a(int param0, byte param1) {
-        ga var2 = ma.field_a;
+        CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
         var2.a(-28, 1);
         if (param1 != 98) {
@@ -470,7 +470,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(ic.field_a > var3)) {
                       this.a(false);
-                      de.a(pl.field_J, (byte) 99, dk.field_Ib);
+                      de.a(ArrayWidgetGroup.field_J, (byte) 99, dk.field_Ib);
                       break;
                     }
                     this.a((byte) 114);
@@ -557,9 +557,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               NetworkGameClient.field_w = jl.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param5, param6, true);
-              pl.field_J = dupTemp$0;
+              ArrayWidgetGroup.field_J = dupTemp$0;
               kk.field_y = dupTemp$0;
-              var8 = pl.field_J.a(param3 ^ 32125, (Runnable) (this), 1);
+              var8 = ArrayWidgetGroup.field_J.a(param3 ^ 32125, (Runnable) (this), 1);
               while (true) {
                 if (var8.field_f == 0) {
                   vd.a(false, 10L);
@@ -712,7 +712,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     final static void a(byte param0, nh param1, int param2) {
         RuntimeException runtimeException = null;
-        ga var3 = null;
+        CipherPacketBuffer var3 = null;
         int var4 = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

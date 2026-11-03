@@ -25,7 +25,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return param0 == this.field_n;
     }
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+    final void drawTo(int param0, java.awt.Graphics param1, int param2, int param3) {
         try {
           this.c((byte) -127);
           param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) (this));
@@ -55,7 +55,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, int param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
         try {
           this.field_b = new int[1 + param3 * param2];
           this.field_f = param2;

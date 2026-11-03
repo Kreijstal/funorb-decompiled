@@ -48,7 +48,7 @@ abstract class t {
         try {
           try {
             var4 = param2.getGraphics();
-            SocketConnector.field_h.a(param1, var4, 2, param3);
+            SocketConnector.field_h.drawTo(param1, var4, 2, param3);
             var4.dispose();
             if (!param0) {
               return;

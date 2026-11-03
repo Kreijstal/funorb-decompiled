@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jb {
-    sn field_j;
+    ContextMenu field_j;
     String field_f;
     static String field_a;
     private long field_i;
@@ -159,7 +159,7 @@ final class jb {
           return true;
         }
         if (2 == param2) {
-          pl.a(param0, (byte) 111, this.field_b);
+          ArrayWidgetGroup.a(param0, (byte) 111, this.field_b);
           return true;
         }
         if (param2 == 3) {
@@ -495,7 +495,7 @@ final class jb {
 
     jb(cj param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_j = new sn(ql.field_d);
+          this.field_j = new ContextMenu(ql.field_d);
           this.field_f = param2;
           this.field_d = param3;
           this.field_g = param6;

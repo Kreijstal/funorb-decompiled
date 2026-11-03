@@ -359,7 +359,7 @@ class nc {
                                       switch (var6) {
                                         case 49:
                                           if (this.field_g.c(-85)) {
-                                            mj.field_Hb[pl.field_I].field_j[param2] = 48;
+                                            mj.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 48;
                                             sd.field_F = 1;
                                           }
                                           break;
@@ -437,7 +437,7 @@ class nc {
                                           break;
                                         case 48:
                                           if (this.field_g.c(-85)) {
-                                            mj.field_Hb[pl.field_I].field_j[param2] = 49;
+                                            mj.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 49;
                                             sd.field_F = 0;
                                           }
                                           break;
@@ -941,7 +941,7 @@ class nc {
           var10 = stackIn_17_0;
           if (4 == var6 &&
             rn.field_f == null && (!(0 < vl.field_h) ||
-            !pn.a(-9, pl.field_J))) {
+            !pn.a(-9, ArrayWidgetGroup.field_J))) {
             stackIn_25_0 = (param1) ? 7 : 6;
             var10 = stackIn_25_0;
           }

@@ -113,7 +113,7 @@ final class jk {
     }
 
     final static void a(int param0, int param1) {
-        ga var2 = ma.field_a;
+        CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
         var2.a(-120, param1);
         var2.a(121, 1);

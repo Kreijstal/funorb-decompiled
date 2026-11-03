@@ -11332,17 +11332,17 @@
       "inputTreeSha256": "854791338433f981516fd30d1a51754afb38d4c6601cefbf0b63c6c391ee05db",
       "sources": {
         "files": 417,
-        "sha256": "f941ce88d7be87bb5879556805ce384db2413e39948888cb7f52de7a0e2aa8ed"
+        "sha256": "704e64a2502f97aa2e76e9d8fb57fa3e6738840101e527a9ae451d53a0269e12"
       },
       "dictionary": {
         "path": "decompilation/zombiedawnmulti-naming.json",
-        "sha256": "d4344dc4d57a485f2f671b46883e4a6dee9176e8e7999b6a9325d79e11aa51a9"
+        "sha256": "77af8aa96685bbc4b5ffdb2d81d825ebfd8c8c109e6afe0c6bed3a0c14572790"
       },
       "readingGuide": {
         "path": "games/zombiedawnmulti/README.md",
-        "sha256": "d89fbbcacd572f67464639808b5e011ca158a1af4cbd2d072f0148ba184c5c72"
+        "sha256": "40f35aebbb18849a0d235a338c9439d5f1bcb8428570a0033cbc21319e0894c1"
       },
-      "rulesSha256": "c34a50e41c3ef1a83a3483cc3affafb83ce44ab7cc5e5462cda0c3789d7555cc",
+      "rulesSha256": "7dfb071f45b90988a1f2458a92d6799117f035fb27c51482541461102e2bc01a",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -13847,7 +13847,7 @@
         },
         "publishedSources": {
           "files": 417,
-          "sha256": "f941ce88d7be87bb5879556805ce384db2413e39948888cb7f52de7a0e2aa8ed"
+          "sha256": "704e64a2502f97aa2e76e9d8fb57fa3e6738840101e527a9ae451d53a0269e12"
         }
       }
     }

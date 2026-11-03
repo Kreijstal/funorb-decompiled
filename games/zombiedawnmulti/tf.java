@@ -97,7 +97,7 @@ final class tf extends ne implements in {
           if (!param2.field_d) {
             if (!this.field_Ib) {
               if (param2.field_c != 5) {
-                var5.a(sn.field_Zb, -1, true);
+                var5.a(ContextMenu.field_Zb, -1, true);
               } else {
                 var5.a(lc.field_g, 11, true);
                 var5.a(oe.field_b, 17, true);

@@ -21,7 +21,7 @@ final class fe extends WidgetContainer implements co, in, jn {
     static String field_X;
 
     public final void a(int param0) {
-        ((tp) (this.field_V.a((byte) -43))).i(param0 ^ -22725);
+        ((UsernameAvailabilityValidator) (this.field_V.a((byte) -43))).i(param0 ^ -22725);
         if (param0 == 496) {
           return;
         }
@@ -132,7 +132,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         }
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -141,7 +141,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3 ^ 0)) {
+          if (super.handleKeyInput(param0, param1, param2, param3 ^ 0)) {
             return true;
           }
           if (param0 == 98) {
@@ -171,9 +171,9 @@ final class fe extends WidgetContainer implements co, in, jn {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_S.field_F = this.h(-38);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fe.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -324,7 +324,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           this.b((byte) 45, var9);
           var7 = new uk(((kh) ((Object) param0)).a((byte) -109));
           this.b((byte) 57, var7);
-          var7.b(3 + (var9.field_y + var9.field_n), (var9.field_w - 15 >> 1) + var9.field_i, 28972, 15, 15);
+          var7.setWidgetBounds(3 + (var9.field_y + var9.field_n), (var9.field_w - 15 >> 1) + var9.field_i, 28972, 15, 15);
           var8 = -40 / ((param1 - 34) / 43);
           stackIn_1_0 = var9.field_w;
           return stackIn_1_0;
@@ -384,7 +384,7 @@ final class fe extends WidgetContainer implements co, in, jn {
             this.field_V = (on) null;
           }
           var4 = param0;
-          ((pm) ((Object) var3)).a(false, var4, (byte) 103);
+          ((TextInputWidget) ((Object) var3)).setInputText(false, var4, (byte) 103);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fe.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -499,7 +499,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         this.field_I.field_x = bh.field_e;
         this.field_N.field_x = SocketConnector.field_g;
         this.field_H.field_x = ip.field_b;
-        this.field_V.a((byte) -27, new tp(this.field_V));
+        this.field_V.a((byte) -27, new UsernameAvailabilityValidator(this.field_V));
         this.field_M.a((byte) -27, new hm(this.field_M));
         this.field_T.a((byte) -27, new hd(this.field_T, this.field_M));
         this.field_P.a((byte) -27, new ia(this.field_P, this.field_V, this.field_M));
@@ -528,7 +528,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         el var4 = new el(46, var3, -90 + this.field_n, 25, this.field_H, true, -120 + this.field_n, 5, cp.field_H, 11579568, uq.field_e);
         this.b((byte) 115, var4);
         var3 = var3 + var4.field_w;
-        hq var5 = new hq(ke.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ke.field_h.field_C, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ke.field_h.field_C, -1, 2147483647, true);
         this.field_G = new sq(var2, var5);
         this.field_G.field_x = "";
         this.field_G.a(0, (byte) -104, mp.field_d);
@@ -539,16 +539,16 @@ final class fe extends WidgetContainer implements co, in, jn {
         this.b((byte) 61, this.field_G);
         int var6 = 4;
         int var7 = 200;
-        this.field_S.b(496 - var7 >> 1, var3, 28972, var7, 40);
-        this.field_O.b(3 + var6, var3 + 15, 28972, 60, 40);
+        this.field_S.setWidgetBounds(496 - var7 >> 1, var3, 28972, var7, 40);
+        this.field_O.setWidgetBounds(3 + var6, var3 + 15, 28972, 60, 40);
         this.field_O.field_A = (bj) (this);
         this.field_S.field_A = (bj) (this);
         this.b((byte) 78, this.field_S);
         this.b((byte) 75, this.field_O);
         this.field_J = new gl((jn) (this));
-        this.field_J.b(60 + this.field_V.field_n + this.field_V.field_y, 20 + this.field_V.field_i, 28972, -60 + (-this.field_V.field_n + (this.field_n - this.field_V.field_y)), 150);
+        this.field_J.setWidgetBounds(60 + this.field_V.field_n + this.field_V.field_y, 20 + this.field_V.field_i, 28972, -60 + (-this.field_V.field_n + (this.field_n - this.field_V.field_y)), 150);
         this.b((byte) 97, this.field_J);
-        this.b(0, 0, 28972, 496, var3 + 55 + var6);
+        this.setWidgetBounds(0, 0, 28972, 496, var3 + 55 + var6);
     }
 
     static {

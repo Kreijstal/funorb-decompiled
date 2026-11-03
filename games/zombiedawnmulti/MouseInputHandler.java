@@ -843,14 +843,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             stackIn_14_3 = null;
             stackIn_14_4 = NetworkGameClient.field_w.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(pn.field_b).append("&u=");
-            if (il.field_j == null) {
+            if (RasterSnapshot.field_j == null) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
               stackIn_15_6 = "" + cm.field_d;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = il.field_j;
+              stackIn_15_6 = RasterSnapshot.field_j;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
             while (var4.field_f == 0) {

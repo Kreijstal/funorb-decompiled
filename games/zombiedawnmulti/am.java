@@ -61,7 +61,7 @@ final class am {
           return true;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (pl.field_I != 10 && (-7 != pl.field_I ||
+        if (ArrayWidgetGroup.field_I != 10 && (-7 != ArrayWidgetGroup.field_I ||
           df.field_I)) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;

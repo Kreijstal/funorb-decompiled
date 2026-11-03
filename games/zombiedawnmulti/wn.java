@@ -91,7 +91,7 @@ final class wn extends pp {
           if (!tb.field_u) {
             var3 = 0;
           }
-          pl.field_L.a(40, -40 + cm.field_a.field_z, -var3 + cm.field_a.field_zb, var3, -3344);
+          ArrayWidgetGroup.field_L.a(40, -40 + cm.field_a.field_z, -var3 + cm.field_a.field_zb, var3, -3344);
           return;
         }
         ro.field_O.a(30, 0, cm.field_a.field_zb, 0, -3344);
@@ -109,7 +109,7 @@ final class wn extends pp {
         if (!tb.field_u) {
           var3Lifetime1 = 0;
         }
-        pl.field_L.a(40, -40 + cm.field_a.field_z, -var3Lifetime1 + cm.field_a.field_zb, var3Lifetime1, -3344);
+        ArrayWidgetGroup.field_L.a(40, -40 + cm.field_a.field_z, -var3Lifetime1 + cm.field_a.field_zb, var3Lifetime1, -3344);
     }
 
     final pi b(int param0) {

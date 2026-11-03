@@ -57,7 +57,7 @@ final class mq extends nc {
         var6 = ah.field_e;
         var7 = pb.field_e;
         if (this.field_d == 6) {
-          var7.b(sn.field_Mb, 320, 300, 16777215, 0);
+          var7.b(ContextMenu.field_Mb, 320, 300, 16777215, 0);
         }
         var8 = ng.field_e;
         for (var9 = 0; sf.field_b > var9; var9++) {

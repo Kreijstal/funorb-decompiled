@@ -13,7 +13,7 @@ final class nn {
         int var4 = -111 % ((param0 + 71) / 49);
     }
 
-    final static void a(ga param0, int param1, int param2, byte param3) {
+    final static void a(CipherPacketBuffer param0, int param1, int param2, byte param3) {
         try {
           ok.a(-105, -1, param0, param1, -1, param2);
           if (param3 != 102) {

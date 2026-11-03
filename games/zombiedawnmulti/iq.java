@@ -273,12 +273,12 @@ final class iq {
           }
           var3_int = 0;
           var4 = ce.field_k;
-          while (var3_int < hq.field_m.length) {
+          while (var3_int < TextWidgetPainter.field_m.length) {
             var5 = wd.field_Q[var3_int];
             if (var5 < 0) {
               var4 = var4 + WidgetContainer.field_C;
             } else {
-              var6 = hn.a(0, hq.field_m[var3_int], true);
+              var6 = hn.a(0, TextWidgetPainter.field_m[var3_int], true);
               var7 = am.field_c - (var6 >> 1);
               var4 = var4 + al.field_bb;
               if (IntrusiveDeque.a(param0, var7 - no.field_Gb, param2, var6 + (no.field_Gb << 1), var4, (wk.field_G << 1) + me.field_h, -18)) {

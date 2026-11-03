@@ -8,7 +8,7 @@ final class Waypoint extends IntrusiveNode {
     static String field_i;
     int x;
 
-    final static GameEvent a(ga param0, byte param1) {
+    final static GameEvent a(CipherPacketBuffer param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

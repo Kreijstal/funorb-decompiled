@@ -42,7 +42,7 @@ final class FightEvent extends GameEvent {
     final static void a(int param0, int param1, int param2) {
         jh var6 = null;
         jh var7 = null;
-        ga var4 = null;
+        CipherPacketBuffer var4 = null;
         if (ao.field_e != param0) {
           var6 = (jh) (af.field_h.a((long)ao.field_e, -22877));
           var7 = var6;

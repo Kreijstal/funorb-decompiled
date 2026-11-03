@@ -31,7 +31,7 @@ final class dd implements dr {
         if (param1 != 0) {
           return;
         }
-        pm.a(false, param0);
+        TextInputWidget.a(false, param0);
     }
 
     final static void a(byte param0) {
@@ -130,7 +130,7 @@ final class dd implements dr {
               if (!fa.b(10, 1)) {
                 return false;
               }
-              fd.field_F = s.field_e.m(101);
+              fd.field_F = s.field_e.readCipheredOpcode(101);
               s.field_e.position = 0;
               hd.field_q = param0[fd.field_F];
             }

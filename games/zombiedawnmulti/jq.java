@@ -130,7 +130,7 @@ final class jq {
     }
 
     final static void a(boolean param0, byte param1) {
-        em.field_U = !param0 ? new qh(RasterBuffer.field_d, ga.field_r) : new qh(mk.field_n, sk.field_i);
+        em.field_U = !param0 ? new qh(RasterBuffer.field_d, CipherPacketBuffer.field_r) : new qh(WidgetStyleLayer.field_n, UiTheme.field_i);
         JaggrabDownloader.field_i = new cj(0L, (cj) null);
         JaggrabDownloader.field_i.a((byte) 50, em.field_U.field_c);
         int var2 = 81 % ((65 - param1) / 60);

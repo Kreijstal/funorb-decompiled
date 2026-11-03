@@ -3,7 +3,7 @@
  */
 final class ql {
     static int field_c;
-    static sn field_d;
+    static ContextMenu field_d;
     static String field_a;
     static String field_e;
     static cj field_b;
@@ -60,7 +60,7 @@ final class ql {
     }
 
     final static void a(boolean param0) {
-        il var1 = (il) (mo.field_Fb.a(param0));
+        RasterSnapshot var1 = (RasterSnapshot) (mo.field_Fb.a(param0));
         if (var1 == null) {
           throw new IllegalStateException();
         }

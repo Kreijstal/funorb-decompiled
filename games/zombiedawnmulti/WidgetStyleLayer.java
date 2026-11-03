@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mk {
+final class WidgetStyleLayer {
     private boolean field_i;
     private int field_h;
     static ao field_g;
@@ -17,7 +17,7 @@ final class mk {
     static ResourceArchive field_b;
     static String field_l;
 
-    final mk a(int param0, int param1) {
+    final WidgetStyleLayer a(int param0, int param1) {
         this.field_f = param0;
         if (param1 != 2147483647) {
           this.field_a = 30;
@@ -26,10 +26,10 @@ final class mk {
         return this;
     }
 
-    final mk a(boolean param0, int param1) {
+    final WidgetStyleLayer a(boolean param0, int param1) {
         this.field_i = param0 ? true : false;
         if (param1 != 2521) {
-          return (mk) null;
+          return (WidgetStyleLayer) null;
         }
         return this;
     }
@@ -43,9 +43,9 @@ final class mk {
         int var1 = 9 % ((param0 + 74) / 48);
     }
 
-    final mk a(Sprite[] param0, int param1) {
+    final WidgetStyleLayer a(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
-        mk stackIn_2_0 = null;
+        WidgetStyleLayer stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -55,7 +55,7 @@ final class mk {
           if (param1 == 2147483647) {
             return this;
           }
-          stackIn_2_0 = (mk) null;
+          stackIn_2_0 = (WidgetStyleLayer) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,7 +134,7 @@ final class mk {
           return;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a(14, true, (jl) null, (UiWidget) null, -114);
+        this.draw(14, true, (jl) null, (UiWidget) null, -114);
         this.field_f = 0;
         this.field_j = 0;
         this.field_m = 0;
@@ -144,13 +144,13 @@ final class mk {
         this.field_h = -1;
     }
 
-    final mk a(byte param0, int param1) {
+    final WidgetStyleLayer a(byte param0, int param1) {
         this.field_h = param1;
         int var3 = 73 / ((param0 + 40) / 34);
         return this;
     }
 
-    final void a(int param0, boolean param1, jl param2, UiWidget param3, int param4) {
+    final void draw(int param0, boolean param1, jl param2, UiWidget param3, int param4) {
         BitmapFont stackIn_22_0;
         String stackIn_22_1;
         int stackIn_22_2;
@@ -250,7 +250,7 @@ final class mk {
         }
     }
 
-    final void a(int param0, int param1, int param2, jl param3, UiWidget param4, mk param5) {
+    final void applyTo(int param0, int param1, int param2, jl param3, UiWidget param4, WidgetStyleLayer param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -262,7 +262,7 @@ final class mk {
         RuntimeException var7 = null;
         try {
           if (this.field_i) {
-            param5.a(param1, false, param3, param4, param2);
+            param5.draw(param1, false, param3, param4, param2);
             param5.a((byte) 11);
           }
           if (this.field_h >= -1) {
@@ -317,7 +317,7 @@ final class mk {
         }
     }
 
-    final void a(int param0, mk param1) {
+    final void copyTo(int param0, WidgetStyleLayer param1) {
         param1.field_m = this.field_m;
         param1.field_h = this.field_h;
         param1.field_i = this.field_i;
@@ -335,7 +335,7 @@ final class mk {
         }
     }
 
-    final mk b(int param0, int param1) {
+    final WidgetStyleLayer b(int param0, int param1) {
         if (param1 != 0) {
           this.b(92, -13);
           this.field_m = param0;
@@ -345,15 +345,15 @@ final class mk {
         return this;
     }
 
-    final mk a(int param0, byte param1) {
+    final WidgetStyleLayer a(int param0, byte param1) {
         this.field_j = param0;
         if (param1 != 47) {
-          return (mk) null;
+          return (WidgetStyleLayer) null;
         }
         return this;
     }
 
-    mk() {
+    WidgetStyleLayer() {
         this.field_h = -2;
         this.field_a = -2147483648;
         this.field_i = false;

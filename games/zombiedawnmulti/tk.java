@@ -674,7 +674,7 @@ final class tk extends nc {
     }
 
     final static void a(hp param0, int param1, int param2) {
-        ga var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           if (param1 < 13) {

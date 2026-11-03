@@ -60,7 +60,7 @@ final class bg implements WidgetActionListener {
             var4Lifetime2 = pk.field_b;
             var5 = vb.field_f;
             var6 = ka.field_t;
-            var4Lifetime2.field_j.b(4542, var5, 0, var6, 0);
+            var4Lifetime2.field_j.layoutAtAnchor(4542, var5, 0, var6, 0);
           }
           uf.a(param0, param2, (byte) 39);
           return;
@@ -75,7 +75,7 @@ final class bg implements WidgetActionListener {
           var4Lifetime1Lifetime1 = pk.field_b;
           var5Lifetime1 = vb.field_f;
           var6Lifetime1 = ka.field_t;
-          var4Lifetime1Lifetime1.field_j.b(4542, var5Lifetime1, 0, var6Lifetime1, 0);
+          var4Lifetime1Lifetime1.field_j.layoutAtAnchor(4542, var5Lifetime1, 0, var6Lifetime1, 0);
         }
         uf.a(param0, param2, (byte) 39);
     }

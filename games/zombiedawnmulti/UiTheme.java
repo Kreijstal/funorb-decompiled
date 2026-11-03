@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk {
+final class UiTheme {
     static boolean field_j;
     int field_p;
     WidgetActionListener field_o;
@@ -38,7 +38,7 @@ final class sk {
         field_r = null;
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void drawSingleLineTooltip(int param0, String param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -67,8 +67,8 @@ final class sk {
         SoftwareRasterizer.fillRectAlpha(param0, param6, param2, param1, param4, param5);
     }
 
-    final void a(int param0, BitmapFont param1) {
-        hq var18 = null;
+    final void initializePainters(int param0, BitmapFont param1) {
+        TextWidgetPainter var18 = null;
         jl var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -91,11 +91,11 @@ final class sk {
         jl var14Lifetime1;
         jl var14Lifetime2;
         try {
-          var18 = new hq(param1, 2, 2, 2236962, 1, 1, 1, param1.field_r + (param1.field_C + 2));
+          var18 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.field_r + (param1.field_C + 2));
           this.field_s = (WidgetActionListener) ((Object) var18);
           var18.field_q = 16777215;
           var4 = new jl();
-          var18.a(param0 - 125269882, var4);
+          var18.copyStyleTo(param0 - 125269882, var4);
           this.field_d = 5592405;
           this.field_h = param1;
           var4.field_i = 11711154;
@@ -130,7 +130,7 @@ final class sk {
           discarded$0 = new bg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new wa(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new jl();
-          var18.a(-3, var8);
+          var18.copyStyleTo(-3, var8);
           var8.a(0, (byte) -36).a(vn.a(120, 10066329, 7829367, 15658734), 2147483647).b(1118481, 0).a((byte) 44, -1);
           var8.a(4, (byte) -36).a(true, 2521).a(var5, 2147483647);
           this.field_o = (WidgetActionListener) ((Object) var8);
@@ -181,7 +181,7 @@ final class sk {
         if (!param0) {
           return;
         }
-        sk.a((byte) -33);
+        UiTheme.a((byte) -33);
     }
 
     final void a(int param0, String param1, int param2, byte param3) {
@@ -195,10 +195,10 @@ final class sk {
             this.field_h = (BitmapFont) null;
           }
           if (!this.field_g) {
-            this.a(6, param1, param0, param2);
+            this.drawSingleLineTooltip(6, param1, param0, param2);
             return;
           }
-          this.a(param2, 2, param1, param0);
+          this.drawWrappedTooltip(param2, 2, param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,7 +223,7 @@ final class sk {
         SoftwareRasterizer.drawLine(param1, param2, param5, param0, param3);
     }
 
-    private final void a(int param0, int param1, String param2, int param3) {
+    private final void drawWrappedTooltip(int param0, int param1, String param2, int param3) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -305,7 +305,7 @@ final class sk {
         }
     }
 
-    public sk() {
+    public UiTheme() {
         this.field_g = true;
     }
 

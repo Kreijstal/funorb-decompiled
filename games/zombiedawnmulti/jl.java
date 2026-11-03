@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl extends hq {
+final class jl extends TextWidgetPainter {
     static IndexedSprite field_u;
-    private mk field_w;
-    private mk[] field_s;
+    private WidgetStyleLayer field_w;
+    private WidgetStyleLayer[] field_s;
     static String field_v;
     static String field_t;
 
     private final void a(jl param0, boolean param1, byte param2) {
         int var4_int = 0;
-        mk dupTemp$0 = null;
-        mk stackIn_8_0 = null;
+        WidgetStyleLayer dupTemp$0 = null;
+        WidgetStyleLayer stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        mk stackIn_9_2 = null;
+        WidgetStyleLayer stackIn_9_2 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        mk var5 = null;
-        mk var6 = null;
+        WidgetStyleLayer var5 = null;
+        WidgetStyleLayer var6 = null;
         int var7 = 0;
         Sprite var8 = null;
-        mk var6Lifetime1;
-        mk var6Lifetime2;
+        WidgetStyleLayer var6Lifetime1;
+        WidgetStyleLayer var6Lifetime2;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          super.a(-3, param0);
+          super.copyStyleTo(-3, param0);
           if (param1) {
             for (var4_int = 0; 6 > var4_int; var4_int++) {
               var5 = this.field_s[var4_int];
@@ -40,11 +40,11 @@ final class jl extends hq {
                 if (var6Lifetime2 != null) {
                   stackIn_9_2 = var6Lifetime2;
                 } else {
-                  dupTemp$0 = new mk();
+                  dupTemp$0 = new WidgetStyleLayer();
                   param0.field_s[var4_int] = dupTemp$0;
                   stackIn_9_2 = dupTemp$0;
                 }
-                ((mk) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
+                ((WidgetStyleLayer) (Object) stackIn_8_0).copyTo(stackIn_8_1, stackIn_9_2);
               } else {
                 param0.field_s[var4_int] = null;
               }
@@ -135,16 +135,16 @@ final class jl extends hq {
         }
     }
 
-    final mk a(int param0, byte param1) {
-        mk dupTemp$0 = null;
+    final WidgetStyleLayer a(int param0, byte param1) {
+        WidgetStyleLayer dupTemp$0 = null;
         if (param1 == -36) {
-          dupTemp$0 = new mk();
+          dupTemp$0 = new WidgetStyleLayer();
           this.field_s[param0] = dupTemp$0;
           return dupTemp$0;
         }
         jl var4 = (jl) null;
         this.a((jl) null, false, (byte) -31);
-        mk dupTemp$1 = new mk();
+        WidgetStyleLayer dupTemp$1 = new WidgetStyleLayer();
         this.field_s[param0] = dupTemp$1;
         return dupTemp$1;
     }
@@ -157,7 +157,7 @@ final class jl extends hq {
         try {
           var4_int = param1;
           if (null == this.field_s[var4_int]) {
-            this.field_s[var4_int] = new mk();
+            this.field_s[var4_int] = new WidgetStyleLayer();
           }
           this.field_s[param1].field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -192,14 +192,14 @@ final class jl extends hq {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        mk var7 = null;
-        mk var9 = null;
+        WidgetStyleLayer var7 = null;
+        WidgetStyleLayer var9 = null;
         jl var10 = null;
         gn var11 = null;
-        mk var12 = null;
-        mk var13 = null;
-        mk var14 = null;
-        mk var15 = null;
+        WidgetStyleLayer var12 = null;
+        WidgetStyleLayer var13 = null;
+        WidgetStyleLayer var14 = null;
+        WidgetStyleLayer var15 = null;
         try {
           if (param4 instanceof gn) {
             stackIn_3_0 = (UiWidget) (param4);
@@ -213,23 +213,23 @@ final class jl extends hq {
           }
           var7 = this.field_s[0];
           this.field_w.a((byte) 11);
-          var7.a(-11108, param3, param1, this, param4, this.field_w);
+          var7.applyTo(-11108, param3, param1, this, param4, this.field_w);
           if (var11 != null) {
             if (var11.field_G) {
               var12 = this.field_s[1];
               if (var12 != null) {
-                var12.a(param2 + 4004, param3, param1, this, param4, this.field_w);
+                var12.applyTo(param2 + 4004, param3, param1, this, param4, this.field_w);
               }
             }
             if (var11.field_l) {
               var13 = this.field_s[3];
               if (var11.field_u != 0 &&
                 var13 != null) {
-                var13.a(param2 ^ 4196, param3, param1, this, param4, this.field_w);
+                var13.applyTo(param2 ^ 4196, param3, param1, this, param4, this.field_w);
               } else {
                 var9 = this.field_s[2];
                 if (var9 != null) {
-                  var9.a(param2 + 4004, param3, param1, this, param4, this.field_w);
+                  var9.applyTo(param2 + 4004, param3, param1, this, param4, this.field_w);
                 }
               }
             }
@@ -237,16 +237,16 @@ final class jl extends hq {
           if (param4.c(126)) {
             var14 = this.field_s[5];
             if (var14 != null) {
-              var14.a(-11108, param3, param1, this, param4, this.field_w);
+              var14.applyTo(-11108, param3, param1, this, param4, this.field_w);
             }
           }
           if (!param0) {
             var15 = this.field_s[4];
             if (var15 != null) {
-              var15.a(-11108, param3, param1, this, param4, this.field_w);
+              var15.applyTo(-11108, param3, param1, this, param4, this.field_w);
             }
           }
-          this.field_w.a(param3, false, this, param4, param1);
+          this.field_w.draw(param3, false, this, param4, param1);
           ql.a(true);
           if (param2 == -15112) {
             return;
@@ -270,10 +270,10 @@ final class jl extends hq {
 
     final void a(Sprite param0, byte param1) {
         int var4 = 0;
-        mk[] var3 = null;
-        mk var5_ref_mk = null;
+        WidgetStyleLayer[] var3 = null;
+        WidgetStyleLayer var5_ref_mk = null;
         int var6 = 0;
-        mk[] var7 = null;
+        WidgetStyleLayer[] var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -323,10 +323,10 @@ final class jl extends hq {
 
     final void a(Sprite[] param0, boolean param1) {
         int var4 = 0;
-        mk[] var3 = null;
-        mk var5 = null;
+        WidgetStyleLayer[] var3 = null;
+        WidgetStyleLayer var5 = null;
         int var6 = 0;
-        mk[] var7 = null;
+        WidgetStyleLayer[] var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -345,7 +345,7 @@ final class jl extends hq {
           if (!param1) {
             return;
           }
-          this.field_w = (mk) null;
+          this.field_w = (WidgetStyleLayer) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -362,11 +362,11 @@ final class jl extends hq {
     }
 
     public jl() {
-        this.field_s = new mk[6];
-        this.field_w = new mk();
-        mk dupTemp$0 = new mk();
+        this.field_s = new WidgetStyleLayer[6];
+        this.field_w = new WidgetStyleLayer();
+        WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_s[0] = dupTemp$0;
-        mk var1 = dupTemp$0;
+        WidgetStyleLayer var1 = dupTemp$0;
         var1.a((byte) 11);
     }
 

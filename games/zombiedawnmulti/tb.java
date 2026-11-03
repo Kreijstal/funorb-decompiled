@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tb extends hq {
+class tb extends TextWidgetPainter {
     static boolean field_u;
     static Sprite field_v;
     static int[] field_t;

@@ -94,7 +94,7 @@ abstract class ii {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        ga var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
@@ -245,7 +245,7 @@ abstract class ii {
 
     final static int b(byte param0) {
         int var1 = 96 / ((param0 + 12) / 33);
-        return pl.field_F;
+        return ArrayWidgetGroup.field_F;
     }
 
     final int b(long param0, boolean param1) {
@@ -266,7 +266,7 @@ abstract class ii {
     }
 
     final static void a(int param0, int param1) {
-        ga var2 = ma.field_a;
+        CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
         var2.a(126, 1);
         var2.a(-24, 0);

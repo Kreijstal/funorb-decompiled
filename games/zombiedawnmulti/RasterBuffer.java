@@ -11,7 +11,7 @@ abstract class RasterBuffer {
     static PacketBuffer field_e;
     static String field_d;
 
-    abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
+    abstract void drawTo(int param0, java.awt.Graphics param1, int param2, int param3);
 
     final void b(byte param0) {
         if (param0 < 94) {
@@ -52,7 +52,7 @@ abstract class RasterBuffer {
     }
 
     final static void a(int param0, byte param1) {
-        ga var2 = ma.field_a;
+        CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
         var2.a(-65, 2);
         if (param1 < -43) {
@@ -62,7 +62,7 @@ abstract class RasterBuffer {
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1, int param2, int param3);
+    abstract void initialize(int param0, java.awt.Component param1, int param2, int param3);
 
     static {
         field_c = new bo("usename");

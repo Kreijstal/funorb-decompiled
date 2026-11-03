@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class em extends wk {
-    private pm field_R;
+    private TextInputWidget field_R;
     static int[] field_W;
     static int[][] field_ab;
     static boolean field_P;
-    private pm field_T;
+    private TextInputWidget field_T;
     static int[] field_O;
     private boolean field_Z;
     static long field_N;
@@ -16,7 +16,7 @@ final class em extends wk {
     static int[][][] field_Y;
     static int field_bb;
     static volatile int field_cb;
-    private pm field_Q;
+    private TextInputWidget field_Q;
 
     final String d(byte param0) {
         String var2 = this.field_T.d((byte) -113);
@@ -75,17 +75,17 @@ final class em extends wk {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, 28972, param3, param4);
+    final void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setWidgetBounds(param0, param1, 28972, param3, param4);
         int var6 = -130 + param3 >> 1;
         if (this.field_Z) {
-          this.field_T.b(var6, 0, 28972, 25, param4);
-          this.field_R.b(45 + var6, 0, param2 ^ 0, 25, param4);
+          this.field_T.setWidgetBounds(var6, 0, 28972, 25, param4);
+          this.field_R.setWidgetBounds(45 + var6, 0, param2 ^ 0, 25, param4);
         } else {
-          this.field_R.b(var6, 0, param2 ^ 0, 25, param4);
-          this.field_T.b(var6 + 45, 0, 28972, 25, param4);
+          this.field_R.setWidgetBounds(var6, 0, param2 ^ 0, 25, param4);
+          this.field_T.setWidgetBounds(var6 + 45, 0, 28972, 25, param4);
         }
-        this.field_Q.b(var6 + 90, 0, param2, 40, param4);
+        this.field_Q.setWidgetBounds(var6 + 90, 0, param2, 40, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, BitmapFont param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
@@ -241,8 +241,8 @@ final class em extends wk {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0 ^ 0, param1, param2, param3);
+    final void renderWidget(int param0, int param1, int param2, int param3) {
+        super.renderWidget(param0 ^ 0, param1, param2, param3);
         if (0 != param2) {
           return;
         }
@@ -259,9 +259,9 @@ final class em extends wk {
     private em(WidgetActionListener param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetActionListener) null);
         try {
-          this.field_R = (pm) ((Object) new on("", (bj) null, 2));
-          this.field_T = (pm) ((Object) new on("", (bj) null, 2));
-          this.field_Q = (pm) ((Object) new on("", (bj) null, 4));
+          this.field_R = (TextInputWidget) ((Object) new on("", (bj) null, 2));
+          this.field_T = (TextInputWidget) ((Object) new on("", (bj) null, 2));
+          this.field_Q = (TextInputWidget) ((Object) new on("", (bj) null, 4));
           this.field_Q.listener = param0;
           this.field_T.listener = param0;
           this.field_R.listener = param0;
@@ -282,7 +282,7 @@ final class em extends wk {
     em(WidgetActionListener param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.b(param2, param3, 28972, param4, param5);
+          this.setWidgetBounds(param2, param3, 28972, param4, param5);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -23,7 +23,7 @@ class WidgetContainer extends UiWidget implements dh {
         try {
           var3 = new IntrusiveDequeCursor(this.field_B);
           if (param1 != 0) {
-            this.c((byte) -102);
+            this.clearKeyboardFocus((byte) -102);
           }
           var4 = (UiWidget) (var3.c(-3));
           while (true) {
@@ -58,7 +58,7 @@ class WidgetContainer extends UiWidget implements dh {
         return this.g(121) != null ? true : false;
     }
 
-    boolean a(int param0, char param1, UiWidget param2, int param3) {
+    boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -77,7 +77,7 @@ class WidgetContainer extends UiWidget implements dh {
           while (var9 != null) {
             if (var9.b(4)) {
               if (var9.c(127) &&
-                var9.a(param0, param1, param2, -6208)) {
+                var9.handleKeyInput(param0, param1, param2, -6208)) {
                 return true;
               }
               var9 = (UiWidget) (var10.a((byte) -126));
@@ -127,7 +127,7 @@ class WidgetContainer extends UiWidget implements dh {
         try {
           if (!param4) {
             var10 = (UiWidget) null;
-            this.a(64, (UiWidget) null, 84, 126);
+            this.updatePointerState(64, (UiWidget) null, 84, 126);
           }
           var7 = new IntrusiveDequeCursor(this.field_B);
           var8 = (UiWidget) (var7.c(-3));
@@ -224,7 +224,7 @@ class WidgetContainer extends UiWidget implements dh {
         return null;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderWidget(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param2 == 0 &&
           this.listener != null) {
@@ -236,7 +236,7 @@ class WidgetContainer extends UiWidget implements dh {
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_B);
         UiWidget var6 = (UiWidget) (var5.a(32397));
         while (var6 != null) {
-          var6.a(-2, param1 + this.field_i, param2, this.field_y + param3);
+          var6.renderWidget(-2, param1 + this.field_i, param2, this.field_y + param3);
           var6 = (UiWidget) (var5.e(param0 ^ 3));
         }
     }
@@ -394,7 +394,7 @@ class WidgetContainer extends UiWidget implements dh {
         }
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
@@ -405,12 +405,12 @@ class WidgetContainer extends UiWidget implements dh {
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.field_B);
           var6 = (UiWidget) (var5.c(-3));
           while (var6 != null) {
             if (var6.b(4)) {
-              var6.a(-5407, param1, param2 + this.field_y, param3 + this.field_i);
+              var6.updatePointerState(-5407, param1, param2 + this.field_y, param3 + this.field_i);
               var6 = (UiWidget) (var5.a((byte) -59));
               continue;
             }
@@ -516,7 +516,7 @@ class WidgetContainer extends UiWidget implements dh {
         return var2;
     }
 
-    final void c(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != 32) {
           this.field_B = (IntrusiveDeque) null;
@@ -524,7 +524,7 @@ class WidgetContainer extends UiWidget implements dh {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
         UiWidget var3 = (UiWidget) (var2.c(-3));
         while (var3 != null) {
-          var3.c((byte) 32);
+          var3.clearKeyboardFocus((byte) 32);
           var3 = (UiWidget) (var2.a((byte) -50));
         }
     }
@@ -553,7 +553,7 @@ class WidgetContainer extends UiWidget implements dh {
         return null;
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -571,7 +571,7 @@ class WidgetContainer extends UiWidget implements dh {
           var9 = (UiWidget) (var8.c(-3));
           while (var9 != null) {
             if (var9.b(4)) {
-              if (!var9.a(param0, param1, param2, param3, -24, param5 + this.field_y, param6 + this.field_i)) {
+              if (!var9.handlePointerPress(param0, param1, param2, param3, -24, param5 + this.field_y, param6 + this.field_i)) {
                 var9 = (UiWidget) (var8.a((byte) -81));
                 continue;
               }
@@ -594,8 +594,8 @@ class WidgetContainer extends UiWidget implements dh {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4);
+    void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setWidgetBounds(param0, param1, param2, param3, param4);
         this.f(param2 - 29048);
     }
 

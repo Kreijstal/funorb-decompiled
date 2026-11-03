@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class qn extends RasterBuffer {
+final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_i;
 
-    public qn() {
+    public BufferedImageRasterBuffer() {
     }
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+    final void drawTo(int param0, java.awt.Graphics param1, int param2, int param3) {
         if (param2 == 2) {
           param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         }
         java.awt.Component var6 = (java.awt.Component) null;
-        this.a(87, (java.awt.Component) null, -87, -91);
+        this.initialize(87, (java.awt.Component) null, -87, -91);
         param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, int param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
         java.awt.image.DataBufferInt var5 = null;
         java.awt.image.DirectColorModel var6 = null;
         java.awt.image.WritableRaster var7 = null;

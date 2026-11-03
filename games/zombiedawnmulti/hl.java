@@ -158,7 +158,7 @@ final class hl {
           }
           cg.field_i = param2.field_Cb;
           cg.field_i.e(-30986);
-          hq.field_c = new sc(param8);
+          TextWidgetPainter.field_c = new sc(param8);
           ao.field_e = 0;
           if (param1 != 75) {
             return;

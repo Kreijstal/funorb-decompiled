@@ -17,8 +17,8 @@ final class li extends qc {
         if (param0 == 0) {
           return this.field_D;
         }
-        ga var3 = (ga) null;
-        li.a((byte) 125, (ga) null);
+        CipherPacketBuffer var3 = (CipherPacketBuffer) null;
+        li.a((byte) 125, (CipherPacketBuffer) null);
         return this.field_D;
     }
 
@@ -26,8 +26,8 @@ final class li extends qc {
         field_E = null;
         field_z = null;
         if (param0 <= 60) {
-          ga var2 = (ga) null;
-          li.a((byte) 126, (ga) null);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          li.a((byte) 126, (CipherPacketBuffer) null);
         }
     }
 
@@ -42,7 +42,7 @@ final class li extends qc {
         return 100;
     }
 
-    final static np a(byte param0, ga param1) {
+    final static np a(byte param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

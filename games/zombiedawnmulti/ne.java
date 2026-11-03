@@ -41,7 +41,7 @@ class ne extends ie implements in {
             } else {
               stackIn_11_0 = var7;
               if (!this.field_wb) {
-                stackIn_12_1 = sn.field_Zb;
+                stackIn_12_1 = ContextMenu.field_Zb;
               } else {
                 stackIn_12_1 = ci.field_g;
               }
@@ -61,7 +61,7 @@ class ne extends ie implements in {
                   var5 = -3 % ((-15 - param1) / 46);
                   return;
                 }
-                var7.a(il.field_l, -74, (bj) (this));
+                var7.a(RasterSnapshot.field_l, -74, (bj) (this));
               } else {
                 var7.a(wm.field_S, 9, true);
               }
@@ -185,7 +185,7 @@ class ne extends ie implements in {
         }
     }
 
-    final boolean a(int param0, char param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         gn var6 = null;
         boolean stackIn_7_0 = false;
@@ -202,7 +202,7 @@ class ne extends ie implements in {
             var6 = (gn) null;
             this.a(110, 74, (gn) null, -12, 106);
           }
-          stackIn_7_0 = super.a(param0, param1, param2, -6208);
+          stackIn_7_0 = super.handleKeyInput(param0, param1, param2, -6208);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class un extends gf implements fi {
-    private pm field_m;
+    private TextInputWidget field_m;
     static String field_n;
     static String field_p;
     static int field_k;
     static String field_o;
     static String field_l;
 
-    un(pm param0) {
+    un(TextInputWidget param0) {
         try {
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
@@ -63,17 +63,17 @@ abstract class un extends gf implements fi {
 
     abstract re a(boolean param0, String param1);
 
-    public final void a(pm param0, boolean param1) {
+    public final void a(TextInputWidget param0, boolean param1) {
         try {
           if (!param1) {
-            this.field_m = (pm) null;
+            this.field_m = (TextInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "un.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract String a(String param0, int param1);
+    abstract String validationMessageForText(String param0, int param1);
 
     public static void g(int param0) {
         field_n = null;
@@ -86,11 +86,11 @@ abstract class un extends gf implements fi {
     }
 
     public final boolean b(int param0) {
-        pm var3;
+        TextInputWidget var3;
         boolean stackIn_7_0 = false;
         if (param0 != -3) {
-          var3 = (pm) null;
-          this.a((pm) null, true);
+          var3 = (TextInputWidget) null;
+          this.a((TextInputWidget) null, true);
         }
         stackIn_7_0 = (this.field_m.field_j == null) || (this.field_m.field_j.length() == 0);
         return stackIn_7_0;
@@ -430,7 +430,7 @@ abstract class un extends gf implements fi {
         }
     }
 
-    public final void a(pm param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         try {
           this.a(-1306);
           if (param1 != 0) {
@@ -452,7 +452,7 @@ abstract class un extends gf implements fi {
         if (param0 != -3) {
           un.a((int[]) null, -99, -31, 9, -3, 10, 88, -54, -105, 27, -84, -122, -1, -93, -21, -86, 107);
         }
-        return this.a(this.field_m.field_j, -1276425040);
+        return this.validationMessageForText(this.field_m.field_j, -1276425040);
     }
 
     static {

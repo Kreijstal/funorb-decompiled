@@ -39,9 +39,9 @@ final class wm extends gn {
     final static ao[] b(boolean param0) {
         if (!param0) {
           wm.b(false);
-          return new ao[]{hd.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
+          return new ao[]{hd.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
         }
-        return new ao[]{hd.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
+        return new ao[]{hd.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
     }
 
     final int g(byte param0) {
@@ -135,7 +135,7 @@ final class wm extends gn {
         return this.field_R.a((byte) 105, param0);
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -150,7 +150,7 @@ final class wm extends gn {
         int var14 = 0;
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -param5 + param1 - this.field_M;

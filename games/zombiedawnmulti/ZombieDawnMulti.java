@@ -62,11 +62,11 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               return;
             }
           }
-          if (pl.field_I != sp.field_g) {
+          if (ArrayWidgetGroup.field_I != sp.field_g) {
             if (sp.field_g >= 0) {
               stackIn_32_0 = sp.field_g;
             } else {
-              stackIn_32_0 = pl.field_I;
+              stackIn_32_0 = ArrayWidgetGroup.field_I;
             }
             var3_int = stackIn_32_0;
             if (var3_int < 0) {
@@ -78,23 +78,23 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               if (var4_ref_nc != null) {
                 var4_ref_nc.a(-128, 512 - (gk.field_b << 4), true);
                 if (var7 != 0) {
-                  tg.a((byte) -11, false, pl.field_I);
+                  tg.a((byte) -11, false, ArrayWidgetGroup.field_I);
                   if (null != var4_ref_nc) {
                     var4_ref_nc.a(-109, gk.field_b << 4, false);
                   }
                 }
               }
             } else {
-              tg.a((byte) -11, false, pl.field_I);
+              tg.a((byte) -11, false, ArrayWidgetGroup.field_I);
               if (null != var4_ref_nc) {
                 var4_ref_nc.a(-109, gk.field_b << 4, false);
               }
             }
             if (var7 != 0) {
-              tg.a((byte) -16, true, pl.field_I);
+              tg.a((byte) -16, true, ArrayWidgetGroup.field_I);
             }
           } else {
-            tg.a((byte) -16, true, pl.field_I);
+            tg.a((byte) -16, true, ArrayWidgetGroup.field_I);
           }
           if (param0 != -30169) {
             field_L = (Sprite[][]) null;
@@ -208,7 +208,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           df.field_H = true;
           var2 = new MidiPcmStream();
           var2.f(128, 15, 9);
-          db.a(pl.field_J, 22050, (java.awt.Component) ((Object) dk.field_Ib), var2, 1024, true);
+          db.a(ArrayWidgetGroup.field_J, 22050, (java.awt.Component) ((Object) dk.field_Ib), var2, 1024, true);
           this.a(true, (byte) -27, false, true, true, false, true);
           sq.field_U[64] = 1;
           sq.field_U[79] = 14;
@@ -261,7 +261,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             var3_int = 0;
             var4 = 0;
             if (!param1) {
-              if (~sp.field_g != ~pl.field_I) {
+              if (~sp.field_g != ~ArrayWidgetGroup.field_I) {
                 gk.field_b = gk.field_b + 1;
                 decompiledFrameRemainder1 = (gk.field_b == 32);
                 if (decompiledFrameRemainder1) {
@@ -270,10 +270,10 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                 }
               }
               if (decompiledFrameRemainder1) {
-                if (pl.field_I != -7) {
-                  if ((pl.field_I != -2) &&
-                    (decompiledFrameRemainder1 = !(!lb.a((byte) 53, pl.field_I)))) {
-                    gk.a(2, pl.field_I).a(0);
+                if (ArrayWidgetGroup.field_I != -7) {
+                  if ((ArrayWidgetGroup.field_I != -2) &&
+                    (decompiledFrameRemainder1 = !(!lb.a((byte) 53, ArrayWidgetGroup.field_I)))) {
+                    gk.a(2, ArrayWidgetGroup.field_I).a(0);
                     decompiledFrameRemainder1 = (var8 != 0);
                   }
                   if (decompiledFrameRemainder1) {
@@ -419,7 +419,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             var5 = b.field_d * b.field_d;
             var6 = -(dg.field_M * dg.field_M) + var5;
             var7 = var6 * 120 / var5 + kg.field_g;
-            sk.a(false, var7);
+            UiTheme.a(false, var7);
             decompiledFrameRemainder2 = (var8 != 0);
           }
           if (decompiledFrameRemainder2) {
@@ -466,7 +466,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           if (sp.field_g == -4) {
             ma.field_a.b((byte) -35, 9);
             gh.field_g = true;
-            sp.field_g = pl.field_I;
+            sp.field_g = ArrayWidgetGroup.field_I;
             dg.field_M = b.field_d;
           }
           if (!param0) {
@@ -476,7 +476,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             if (JaggrabDownloader.field_c != null) {
               ml.a(JaggrabDownloader.field_c.i(6), 11, -76);
               vo.field_q = true;
-              sp.field_g = pl.field_I;
+              sp.field_g = ArrayWidgetGroup.field_I;
               if (var8 == 0) {
                 return;
               }
@@ -516,7 +516,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         int[] var3_ref_int__ = null;
         nc var3_ref_nc = null;
         int var4 = 0;
-        ga var4_ref_ga = null;
+        CipherPacketBuffer var4_ref_ga = null;
         int[] var4_ref_int__ = null;
         int var5 = 0;
         LevelData var6 = null;
@@ -961,7 +961,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                       LevelActorSpawner.a(false, 1, 125, 1);
                     }
                     bl.a(-9);
-                    var3_ref_nc = gk.a(2, pl.field_I);
+                    var3_ref_nc = gk.a(2, ArrayWidgetGroup.field_I);
                     if (var3_ref_nc != null) {
                       var3_ref_nc.a(0, false, 0);
                     }
@@ -1035,7 +1035,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           de.field_e = u.a(5, 6);
           df.field_M = u.a(5, 7);
           ha.field_g = u.a(5, 11);
-          il.field_n = u.a(5, 12);
+          RasterSnapshot.field_n = u.a(5, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1166,8 +1166,8 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                                     cg.field_n.a(0)) {
                                     if (ha.field_g.a((byte) -111) &&
                                       ha.field_g.a(0)) {
-                                      if (il.field_n.a((byte) -121) &&
-                                        il.field_n.a(0)) {
+                                      if (RasterSnapshot.field_n.a((byte) -121) &&
+                                        RasterSnapshot.field_n.a(0)) {
                                         qm.a(65.0f, 80, dn.field_b);
                                         if (!param0) {
                                           return false;
@@ -1218,7 +1218,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                                         IsaacRandom.d(26673);
                                         return false;
                                       }
-                                      qm.a(80.0f, 80, jj.a(s.field_h, (byte) 113, il.field_n, pd.field_a));
+                                      qm.a(80.0f, 80, jj.a(s.field_h, (byte) 113, RasterSnapshot.field_n, pd.field_a));
                                       return false;
                                     }
                                     qm.a(75.0f, 80, ki.a(pd.field_a, "", ha.field_g, (byte) 76, s.field_h));
@@ -1372,7 +1372,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               var4_ref_ja____ = new Sprite[1][];
               var4_ref_ja____[0] = pb.a("", ii.field_a, -256, "levelstyle_iconslarge");
               var5_array = tj.field_e;
-              ub.a(var5_array, he.field_f, true, (String[][]) null, field_K, al.field_eb, 4, InflaterDecompressor.field_b, il.field_n, 1, cb.field_j, eg.field_E, true, var3_array, var4_ref_ja____);
+              ub.a(var5_array, he.field_f, true, (String[][]) null, field_K, al.field_eb, 4, InflaterDecompressor.field_b, RasterSnapshot.field_n, 1, cb.field_j, eg.field_E, true, var3_array, var4_ref_ja____);
               bo.field_e = true;
               lp.a(200, -82);
               ua.a(he.field_f, al.field_eb, (byte) 23);
@@ -1481,7 +1481,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               rq.field_l = wq.a(35, "", ii.field_a, "plug_02");
               pq.field_o = wq.a(56, "", ii.field_a, "vert_tube");
               tm.field_f = wq.a(109, "", ii.field_a, "vert_tube_empty");
-              pm.field_N = wq.a(31, "", ii.field_a, "curve_tube_mask");
+              TextInputWidget.field_N = wq.a(31, "", ii.field_a, "curve_tube_mask");
               w.field_z = wq.a(116, "", ii.field_a, "vert_tube_mask");
               wq.a(27, "", ii.field_a, "stars");
               pp.field_q = InflaterDecompressor.a("engine_icons", ii.field_a, (byte) 19, "");
@@ -1596,14 +1596,14 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           }
           bc.a((byte) 76);
           bc.a((byte) 15);
-          pl.field_I = 11;
+          ArrayWidgetGroup.field_I = 11;
           sp.field_g = 12;
           ip.a(-127, 50);
           tj.a(3273, 224);
           TertiaryLinkNode.a(200, 123);
           cj.d(false, 0);
           IsaacRandom.d(26673);
-          pl.field_J.a(true, (java.awt.Component) ((Object) dk.field_Ib), -14697);
+          ArrayWidgetGroup.field_J.a(true, (java.awt.Component) ((Object) dk.field_Ib), -14697);
           tk.field_q = dk.field_Ib;
           GameWorld.a(16777215, 5, field_I, 15, lf.field_c, pb.field_e, 65280, 240, 16711680, 320, oi.field_h, (byte) -128, 15, 20, 20);
           kk.field_w = new PortalView(10, 10, true);
@@ -1708,9 +1708,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             GameScreen.field_bb) {
             ub.m(116);
             ii.a(103);
-            if (pl.field_I == 6 &&
+            if (ArrayWidgetGroup.field_I == 6 &&
               !oa.a(-9, LevelData.field_m)) {
-              pl.field_I = 3;
+              ArrayWidgetGroup.field_I = 3;
               LevelActorSpawner.a(false, 3, 127, sp.field_g);
             }
           }
@@ -1830,7 +1830,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           sc.a(true);
           dm.h(0);
           UnitStateEvent.a(-123);
-          ga.j(-125);
+          CipherPacketBuffer.j(-125);
           InfectionEvent.c(true);
           ScoreUpdateEvent.c(-125);
           AttackEvent.c((byte) 121);
@@ -1855,7 +1855,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           qm.a(64);
           cp.c(true);
           hf.b((byte) 45);
-          sk.a(-1020346174);
+          UiTheme.a(-1020346174);
           wp.a((byte) 26);
           SynthInstrument.releaseStatics();
           VorbisSample.releaseStatics();
@@ -1869,7 +1869,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           dn.a(16130);
           mi.d(false);
           hi.c((byte) -81);
-          sn.c((byte) 117);
+          ContextMenu.releaseStatics((byte) 117);
           cd.d(false);
           jb.a(-2);
           tq.h(0);
@@ -1951,7 +1951,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           ob.c((byte) -52);
           ik.b(49);
           vm.k((byte) -29);
-          hq.a((byte) 82);
+          TextWidgetPainter.a((byte) 82);
           af.a(-128);
           md.b((byte) 119);
           kc.a(-111);
@@ -1975,7 +1975,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           IntrusiveDequeCursor.d(-1);
           bh.a((byte) -8);
           ji.a(13377);
-          tl.f(32768);
+          QuickChatPhraseDefinition.f(32768);
           io.a((byte) 8);
           aa.f(0);
           ImageProducerRasterBuffer.b(-2);
@@ -1990,7 +1990,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           nk.a((byte) -26);
           dj.g(-3);
           em.k(4);
-          pl.f(114);
+          ArrayWidgetGroup.f(114);
           rn.a((byte) 88);
           ArmedHumanView.c(true);
           ho.e(30833);
@@ -2002,7 +2002,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           nj.a((byte) 78);
           el.h(3);
           on.l(29829);
-          pm.d(false);
+          TextInputWidget.d(false);
           ie.l(7181);
           le.a(0);
           gl.c(true);
@@ -2061,7 +2061,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           ak.a(-5937);
           gh.a((byte) 106);
           wd.a((byte) -84);
-          il.a(27467);
+          RasterSnapshot.a(27467);
           bo.a(6);
           pp.a(false);
           wn.b(true);
@@ -2070,12 +2070,12 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           db.a(26);
           u.a(-7406);
           hp.a(120);
-          mk.a(53);
+          WidgetStyleLayer.a(53);
           td.a((byte) 94);
           ha.a(21342);
           re.a(89);
           gf.a(true);
-          tp.h(66);
+          UsernameAvailabilityValidator.h(66);
           ia.h(0);
           hm.b(false);
           hd.h(11702);

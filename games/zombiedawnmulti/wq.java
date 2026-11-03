@@ -82,7 +82,7 @@ final class wq {
         field_e = null;
     }
 
-    final static PowerupEvent a(ga param0, int param1) {
+    final static PowerupEvent a(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

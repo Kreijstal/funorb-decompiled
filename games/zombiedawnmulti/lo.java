@@ -13,7 +13,7 @@ final class lo {
     static IndexedSprite[] field_a;
     static int field_d;
 
-    final static short[] a(int param0, short[] param1, ga param2, byte param3) {
+    final static short[] a(int param0, short[] param1, CipherPacketBuffer param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -30,7 +30,7 @@ final class lo {
         RuntimeException var4 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4_int = param2.h(param0, 14862);
+          var4_int = param2.readBits(param0, 14862);
           if (0 == var4_int) {
             return null;
           }
@@ -38,15 +38,15 @@ final class lo {
             var4_int != param1.length) {
             param1 = new short[var4_int];
           }
-          var5 = param2.h(4, 14862);
+          var5 = param2.readBits(4, 14862);
           if (param3 >= -96) {
             stackIn_10_0 = (short[]) null;
             return stackIn_10_0;
           }
-          var6 = (short)param2.h(16, 14862);
+          var6 = (short)param2.readBits(16, 14862);
           if (0 < var5) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (short)(var6 + param2.h(var5, 14862));
+              param1[var7] = (short)(var6 + param2.readBits(var5, 14862));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

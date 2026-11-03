@@ -32,14 +32,14 @@ final class nj {
         int stackIn_11_0 = 0;
         int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
-        ga var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        ga var8 = null;
-        tl var9 = null;
+        CipherPacketBuffer var8 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         var8 = s.field_e;
         var2 = var8;
@@ -69,14 +69,14 @@ final class nj {
         }
         if (wc.field_N == 1) {
           ce.field_r = var8.readUnsignedShort((byte) 69);
-          sn.field_Ib = var8.readString((byte) -62);
+          ContextMenu.field_Ib = var8.readString((byte) -62);
         } else {
           if (wc.field_N != 4) {
             ce.field_r = 0;
-            sn.field_Ib = null;
+            ContextMenu.field_Ib = null;
           } else {
             ce.field_r = var8.readUnsignedShort((byte) 69);
-            sn.field_Ib = var8.readString((byte) -62);
+            ContextMenu.field_Ib = var8.readString((byte) -62);
           }
         }
         if (!param0) {

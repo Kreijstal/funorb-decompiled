@@ -32,7 +32,7 @@ final class og extends SimEntity {
     }
 
     final static void b(int param0, int param1) {
-        ga var2 = ma.field_a;
+        CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
         int var3 = -1 / ((param1 - 57) / 55);
         var2.position = var2.position + 1;
@@ -599,7 +599,7 @@ final class og extends SimEntity {
               if (!var12.field_dc) {
                 stackIn_153_0 = hp.field_m;
               } else {
-                stackIn_153_0 = mk.field_l;
+                stackIn_153_0 = WidgetStyleLayer.field_l;
               }
               ui.field_j = stackIn_153_0;
             }
@@ -638,7 +638,7 @@ final class og extends SimEntity {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  pl.a(param3, (byte) 92, var12.i(6));
+                  ArrayWidgetGroup.a(param3, (byte) 92, var12.i(6));
                 }
               } else {
                 qm.a(var12, param0, var32, -123);

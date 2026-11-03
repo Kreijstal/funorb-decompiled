@@ -14,8 +14,8 @@ final class wd extends WidgetContainer implements in {
     static String field_I;
     private BitmapFont field_M;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void renderWidget(int param0, int param1, int param2, int param3) {
+        super.renderWidget(param0, param1, param2, param3);
         this.field_M.a(this.field_O, this.field_y + param3 + 14, param1 + (this.field_i + 10), -28 + this.field_n, this.field_w, 16777215, -1, 0, 0, this.field_M.field_C);
     }
 
@@ -26,12 +26,12 @@ final class wd extends WidgetContainer implements in {
         field_Q = null;
         field_G = null;
         if (param0 > -23) {
-          ga var2 = (ga) null;
-          wd.a(11, 88, 108, -22, (ga) null);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          wd.a(11, 88, 108, -22, (CipherPacketBuffer) null);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ga param4) {
+    final static void a(int param0, int param1, int param2, int param3, CipherPacketBuffer param4) {
         try {
           ok.a(param1 - 126, param1, param4, param3, param0, param2);
         } catch (RuntimeException runtimeException) {
@@ -60,7 +60,7 @@ final class wd extends WidgetContainer implements in {
         this.field_N = var4;
     }
 
-    final static void a(int param0, int param1, ga param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         if (PortalEntryEvent.field_m.field_c) {
           return;
         }
@@ -91,7 +91,7 @@ final class wd extends WidgetContainer implements in {
           this.field_O = param2;
           this.field_M = param1;
           var4_int = this.field_O != null ? this.field_M.a(this.field_O, 260, this.field_M.field_C) : 0;
-          this.b(0, 0, 28972, 288, 22 + var4_int);
+          this.setWidgetBounds(0, 0, 28972, 288, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -112,8 +112,8 @@ final class wd extends WidgetContainer implements in {
           var4 = new gn(param0, param2);
           var4.listener = (WidgetActionListener) ((Object) new oq());
           var5 = this.field_w - 2;
-          this.b(0, 0, 28972, this.field_n, this.field_w + 34);
-          var4.b(7, var5, 28972, -14 + this.field_n, 30);
+          this.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w + 34);
+          var4.setWidgetBounds(7, var5, 28972, -14 + this.field_n, 30);
           if (param1 >= -59) {
             wd.a((byte) -6);
           }
@@ -179,7 +179,7 @@ final class wd extends WidgetContainer implements in {
             break;
           }
           if (param3 >= -83) {
-            this.a(115, -39, -122, -67);
+            this.renderWidget(115, -39, -122, -67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

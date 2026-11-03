@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tl extends DualLinkNode {
+final class QuickChatPhraseDefinition extends DualLinkNode {
     static ld field_t;
     static int field_v;
     private int[][] field_s;
@@ -132,7 +132,7 @@ final class tl extends DualLinkNode {
               }
             }
           } else {
-            this.field_u = mk.a('<', false, param1.readString((byte) -62));
+            this.field_u = WidgetStyleLayer.a('<', false, param1.readString((byte) -62));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -149,7 +149,7 @@ final class tl extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, byte param1, ga param2, int param3, int param4, int param5) {
+    final static void a(int param0, byte param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         if (PortalEntryEvent.field_m.field_c) {
           return;
         }
@@ -162,8 +162,8 @@ final class tl extends DualLinkNode {
           param2.a(param1 ^ -102, param0);
           param2.a(param5, (byte) -45);
           if (param1 != -11) {
-            ga var7 = (ga) null;
-            tl.a(-103, (byte) 41, (ga) null, -22, 121, -61);
+            CipherPacketBuffer var7 = (CipherPacketBuffer) null;
+            QuickChatPhraseDefinition.a(-103, (byte) 41, (CipherPacketBuffer) null, -22, 121, -61);
           }
           param2.a(param3, (byte) -110);
           param2.a(param4, (byte) -64);
@@ -179,7 +179,7 @@ final class tl extends DualLinkNode {
         }
     }
 
-    tl() {
+    QuickChatPhraseDefinition() {
     }
 
     static {

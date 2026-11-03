@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hq implements WidgetActionListener, rk {
+class TextWidgetPainter implements WidgetActionListener, rk {
     int field_g;
     int field_d;
     int field_f;
@@ -30,7 +30,7 @@ class hq implements WidgetActionListener, rk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            hq.a((byte) -88);
+            TextWidgetPainter.a((byte) -88);
           }
           stackIn_3_0 = -this.field_r + param0.field_n - this.field_n;
           return stackIn_3_0;
@@ -52,8 +52,8 @@ class hq implements WidgetActionListener, rk {
         if (param0 == 0) {
           return this.field_j.field_r + this.field_j.field_C;
         }
-        hq var3 = (hq) null;
-        this.a(91, (hq) null);
+        TextWidgetPainter var3 = (TextWidgetPainter) null;
+        this.copyStyleTo(91, (TextWidgetPainter) null);
         return this.field_j.field_r + this.field_j.field_C;
     }
 
@@ -174,7 +174,7 @@ class hq implements WidgetActionListener, rk {
         }
     }
 
-    final void a(int param0, hq param1) {
+    final void copyStyleTo(int param0, TextWidgetPainter param1) {
         param1.field_h = this.field_h;
         param1.field_a = this.field_a;
         param1.field_r = this.field_r;
@@ -223,7 +223,7 @@ class hq implements WidgetActionListener, rk {
           if (param1 != 0) {
             this.field_q = -46;
           }
-          stackIn_3_0 = this.a(0, param2, 105, param0);
+          stackIn_3_0 = this.contentWidth(0, param2, 105, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ class hq implements WidgetActionListener, rk {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    public final void drawSelection(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var13 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
@@ -305,7 +305,7 @@ class hq implements WidgetActionListener, rk {
                 }
               }
               var16 = stackIn_17_0;
-              ra.field_o.a(this.a(var15, param5, 15921, param3), var14.field_h, var16 - var15, (byte) -111, this.field_i, this.field_i >>> 24, var14.field_d + (param5.field_q + (param5.field_i + param1) + this.field_g));
+              ra.field_o.a(this.textLeft(var15, param5, 15921, param3), var14.field_h, var16 - var15, (byte) -111, this.field_i, this.field_i >>> 24, var14.field_d + (param5.field_q + (param5.field_i + param1) + this.field_g));
             }
             ql.a(true);
             return;
@@ -325,7 +325,7 @@ class hq implements WidgetActionListener, rk {
         }
     }
 
-    private final int a(int param0, int param1, int param2, UiWidget param3) {
+    private final int contentWidth(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -354,7 +354,7 @@ class hq implements WidgetActionListener, rk {
         }
     }
 
-    hq(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -367,9 +367,9 @@ class hq implements WidgetActionListener, rk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            hq.b((byte) 54);
+            TextWidgetPainter.b((byte) 54);
           }
-          stackIn_3_0 = this.a(0, param2, 15921, param1);
+          stackIn_3_0 = this.textLeft(0, param2, 15921, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class hq implements WidgetActionListener, rk {
             var7 = var14.a((byte) -126, param3);
             var8 = var13.field_e[var7];
             var9 = var14.a(52224, param3);
-            var10 = this.a(var9, param0, 15921, param2);
+            var10 = this.textLeft(var9, param0, 15921, param2);
             var11 = this.a(param0, 0, param4) + Math.max(0, var8.field_d);
             var12 = this.a(param0, param1 - 2, param4) + Math.min(this.a(-109, param0), Math.min(var8.field_h, var14.field_e.length > 1 + var7 ? var13.field_e[1 + var7].field_d : var8.field_h));
             Camera.a(param2 + param0.field_y, param0.field_w + param4 + param0.field_i, (byte) 105, param0.field_n + (param2 + param0.field_y), param0.field_i + param4);
@@ -416,7 +416,7 @@ class hq implements WidgetActionListener, rk {
         }
     }
 
-    public final int b(UiWidget param0, int param1) {
+    public final int contentHeight(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         int stackIn_3_0 = 0;
@@ -458,7 +458,7 @@ class hq implements WidgetActionListener, rk {
         try {
           if (param1 != -9327) {
             var4 = (UiWidget) null;
-            discarded$1 = this.a(60, (UiWidget) null, -20, -86);
+            discarded$1 = this.textLeft(60, (UiWidget) null, -20, -86);
           }
           stackIn_3_0 = param0.field_j;
           return stackIn_3_0;
@@ -537,7 +537,7 @@ class hq implements WidgetActionListener, rk {
           boolean decompiledFrameRemainder0 = true;
           var10 = this.a(-95, param5);
           if (this.field_l) {
-            this.field_j.a(this.d(param5, -9327), this.a(param6, param5, 15921, param7), this.a(param4, param2, 105, param5), var9_int, var10, param1, param0, this.field_d, this.field_a, this.field_f);
+            this.field_j.a(this.d(param5, -9327), this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5), var9_int, var10, param1, param0, this.field_d, this.field_a, this.field_f);
           } else {
             var12 = this.field_a;
             if (var12 != 0) {
@@ -556,16 +556,16 @@ class hq implements WidgetActionListener, rk {
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_j.b(this.d(param5, -9327), (var9_int >> 1) + this.a(param6, param5, 15921, param7), this.a(param4, param2, 105, param5) + var11, param1, param0);
+                this.field_j.b(this.d(param5, -9327), (var9_int >> 1) + this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5) + var11, param1, param0);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_j.a(this.d(param5, -9327), var9_int + this.a(param6, param5, 15921, param7), this.a(param4, param2, 105, param5) + var11, param1, param0);
+                  this.field_j.a(this.d(param5, -9327), var9_int + this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5) + var11, param1, param0);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_j.c(this.d(param5, -9327), this.a(param6, param5, param3 ^ 15920, param7), var11 + this.a(param4, param2, 105, param5), param1, param0);
+              this.field_j.c(this.d(param5, -9327), this.textLeft(param6, param5, param3 ^ 15920, param7), var11 + this.contentWidth(param4, param2, 105, param5), param1, param0);
             }
           }
           ql.a(true);
@@ -650,7 +650,7 @@ class hq implements WidgetActionListener, rk {
         }
     }
 
-    private final int a(int param0, UiWidget param1, int param2, int param3) {
+    private final int textLeft(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         int stackIn_3_0 = 0;
@@ -679,7 +679,7 @@ class hq implements WidgetActionListener, rk {
         }
     }
 
-    protected hq() {
+    protected TextWidgetPainter() {
     }
 
     private final void a(int param0, byte param1, UiWidget param2, int param3) {
@@ -687,14 +687,14 @@ class hq implements WidgetActionListener, rk {
           this.a(this.field_b, this.field_q, param0, 1, 0, param2, 0, param3);
           if (param1 != -116) {
             String var6 = (String) null;
-            hq.a((String) null, (byte) 93, (String) null);
+            TextWidgetPainter.a((String) null, (byte) 93, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "hq.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    hq(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_d = param7;
           this.field_n = param2;

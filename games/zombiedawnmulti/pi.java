@@ -55,17 +55,17 @@ final class pi {
           mj.field_Fb[1] = TertiaryLinkDeque.field_c.nextInt();
           mj.field_Fb[2] = (int)(Camera.field_c >> 32);
           mj.field_Fb[3] = (int)Camera.field_c;
-          pm.field_R.position = 0;
-          pm.field_R.writeInt(33, mj.field_Fb[0]);
-          pm.field_R.writeInt(param0 ^ 84, mj.field_Fb[1]);
-          pm.field_R.writeInt(-111, mj.field_Fb[2]);
-          pm.field_R.writeInt(param0 ^ 88, mj.field_Fb[3]);
-          jq.a(pm.field_R, 13746);
-          pm.field_R.a(param4, (byte) -54);
+          TextInputWidget.field_R.position = 0;
+          TextInputWidget.field_R.writeInt(33, mj.field_Fb[0]);
+          TextInputWidget.field_R.writeInt(param0 ^ 84, mj.field_Fb[1]);
+          TextInputWidget.field_R.writeInt(-111, mj.field_Fb[2]);
+          TextInputWidget.field_R.writeInt(param0 ^ 88, mj.field_Fb[3]);
+          jq.a(TextInputWidget.field_R, 13746);
+          TextInputWidget.field_R.a(param4, (byte) -54);
           if (param0 != -59) {
             field_c = (String) null;
           }
-          param3.a(pm.field_R, -1);
+          param3.a(TextInputWidget.field_R, -1);
           ma.field_a.position = 0;
           if (!param2) {
             ma.field_a.a(param0 ^ -68, 16);
@@ -98,7 +98,7 @@ final class pi {
           if (null != oe.field_f) {
             ma.field_a.b(-16171, oe.field_f);
           }
-          hd.a(gn.field_L, (byte) -122, tp.field_v, pm.field_R, ma.field_a);
+          hd.a(gn.field_L, (byte) -122, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
           ma.field_a.b(false, -var5_int + ma.field_a.position);
           cb.a(-1, false);
           return;

@@ -18,12 +18,12 @@ final class an {
         }
     }
 
-    final tl a(int param0, int param1) {
+    final QuickChatPhraseDefinition a(int param0, int param1) {
         byte[] var4 = null;
         if (param1 != -11452) {
-          return (tl) null;
+          return (QuickChatPhraseDefinition) null;
         }
-        tl var3 = (tl) (this.field_a.a((byte) 127, (long)param0));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_a.a((byte) 127, (long)param0));
         if (var3 != null) {
           return var3;
         }
@@ -32,7 +32,7 @@ final class an {
         } else {
           var4 = this.field_b.a(1, true, param0 & 32767);
         }
-        tl var5 = new tl();
+        QuickChatPhraseDefinition var5 = new QuickChatPhraseDefinition();
         if (var4 != null) {
           var5.a(new PacketBuffer(var4), (byte) 118);
           if (param0 >= 32768) {

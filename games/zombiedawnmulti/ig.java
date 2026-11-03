@@ -123,7 +123,7 @@ final class ig {
               if (var5.field_T != 0) {
                 cm.a(-105, var4_int, var5);
               }
-              var6 = ga.a(var4_int, true);
+              var6 = CipherPacketBuffer.a(var4_int, true);
               pf.field_d[var4_int].field_rb = wp.field_j[var6];
               hh.field_l[var4_int].field_wb = vg.field_h[var6];
             }

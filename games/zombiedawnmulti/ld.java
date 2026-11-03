@@ -1113,7 +1113,7 @@ final class ld extends cj {
                 JaggrabDownloader.field_c != null) {
                 var6 = 1;
               }
-              if (ga.a(var6, true) == 2) {
+              if (CipherPacketBuffer.a(var6, true) == 2) {
                 kp.a(var6, param3, 1, true);
               }
               var8 = (String) null;
