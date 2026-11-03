@@ -29,7 +29,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         return stackIn_9_0;
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_A = null;
         field_z = null;
         if (param0 >= -107) {

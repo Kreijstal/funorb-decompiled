@@ -14,7 +14,7 @@ final class dh {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_a = null;
         if (param0 > -74) {
           return;

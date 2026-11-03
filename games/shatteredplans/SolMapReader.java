@@ -154,7 +154,7 @@ final class SolMapReader implements MapGenerator {
         ae.field_b = ~sa.field_a.readUnsignedByte(-99) == param0 ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != 87) {
           SolMapReader.a(false, 42, -4, 3);
         }

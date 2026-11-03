@@ -5,7 +5,7 @@ final class bo extends jl implements ButtonListener {
     private FocusableWidget field_X;
     static String field_Y;
 
-    public static void p(int param0) {
+    public static void clearStatics(int param0) {
         field_Y = null;
         if (param0 != 0) {
           field_Y = (String) null;
@@ -96,7 +96,7 @@ final class bo extends jl implements ButtonListener {
           var5 = -6 + this.field_n;
           this.field_n = this.field_n + 38;
           if (param2 != 0) {
-            bo.p(-92);
+            bo.clearStatics(-92);
           }
           var4.setBounds(var5, 30, (byte) 126, 15, this.field_x - 14 - 16);
           this.b((byte) -50, var4);

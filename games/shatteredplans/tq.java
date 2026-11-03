@@ -100,7 +100,7 @@ final class tq {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_k = null;
         field_f = null;
         if (param0 != -31203) {

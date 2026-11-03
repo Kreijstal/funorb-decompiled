@@ -131,7 +131,7 @@ final class GameRules {
         return var2.toString();
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_a = null;
         field_d = null;
         if (!param0) {

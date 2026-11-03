@@ -384,7 +384,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         int var1 = 67 % ((35 - param0) / 48);
         field_t = null;
         field_u = null;
@@ -412,7 +412,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             }
             ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, (byte) -97);
             if (param1 != 3) {
-              SocketArchiveNetworkClient.f(88);
+              SocketArchiveNetworkClient.clearStatics(88);
             }
             this.field_c.writeLong40(param1 + 1729379141, 0L);
             this.field_v.write(this.field_c.payload.length, 0, this.field_c.payload, param1 - 13979);

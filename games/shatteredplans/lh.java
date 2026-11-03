@@ -53,7 +53,7 @@ final class lh extends MenuComponent {
         this.field_i = param1;
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 == 5) {
           field_G = null;
           field_H = null;

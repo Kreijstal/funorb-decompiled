@@ -324,7 +324,7 @@ final class kd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 <= 74) {

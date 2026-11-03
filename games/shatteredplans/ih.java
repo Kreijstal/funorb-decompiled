@@ -65,7 +65,7 @@ final class ih {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         if (param0 != -1) {
           return;

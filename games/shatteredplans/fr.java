@@ -298,7 +298,7 @@ final class fr extends SingleChildWidget {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_H = null;
         if (param0 != -950540796) {
           return;

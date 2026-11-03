@@ -199,7 +199,7 @@ final class be extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_k = null;
         if (param0 < 67) {
           be.a((byte) -90, 116, 111, -79, -48, 35, -128, -23, -56);

@@ -11,12 +11,12 @@ abstract class SocketConnector {
     String host;
     static qr field_d;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         field_d = null;
         field_e = null;
         if (param0 != 23) {
-          SocketConnector.a((byte) 79);
+          SocketConnector.clearStatics((byte) 79);
           field_c = null;
           return;
         }

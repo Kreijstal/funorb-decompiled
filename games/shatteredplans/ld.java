@@ -13,7 +13,7 @@ final class ld extends IntrusiveNode {
     static Archive field_m;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_q = null;
         if (param0 == 16711680) {
           field_m = null;
@@ -53,7 +53,7 @@ final class ld extends IntrusiveNode {
         try {
           param5 = param5 - param7.field_t;
           if (param4 >= -20) {
-            ld.a(97);
+            ld.clearStatics(97);
           }
           param0 = param0 - param7.field_x;
           var8_int = param5 + param7.field_z * param0;

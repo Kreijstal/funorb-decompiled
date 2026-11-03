@@ -61,7 +61,7 @@ final class oa {
           int var3 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             if (param0 != 0) {
-              oa.b(-14);
+              oa.clearStatics(-14);
             }
             if (TertiaryLinkNode.field_o != null) {
               TertiaryLinkNode.field_o.e(param0 - 16363);
@@ -126,7 +126,7 @@ final class oa {
         return ao.a((byte) 97, param0, param2, 1, param3);
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         if (param0 <= 7) {
           return;

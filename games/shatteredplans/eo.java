@@ -382,7 +382,7 @@ final class eo extends jl {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearStatics(byte param0) {
         field_kb = null;
         int var1 = 16 / ((47 - param0) / 37);
         field_X = null;

@@ -148,12 +148,12 @@ final class js {
         param0 = param0 | param0 >>> 8;
         param0 = param0 | param0 >>> 16;
         if (param1 != 122) {
-          js.c((byte) -124);
+          js.clearStatics((byte) -124);
         }
         return param0 + 1;
     }
 
-    public static void c(byte param0) {
+    public static void clearStatics(byte param0) {
         field_a = null;
         field_h = null;
         field_c = null;

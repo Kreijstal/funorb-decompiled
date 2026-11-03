@@ -123,7 +123,7 @@ final class lo extends Territory {
         return (Star) (this.field_z.nextForward(32));
     }
 
-    public static void l(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 0) {
           return;
         }

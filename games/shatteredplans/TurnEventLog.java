@@ -124,7 +124,7 @@ final class TurnEventLog {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_e = null;
         field_j = null;

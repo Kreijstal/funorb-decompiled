@@ -1514,7 +1514,7 @@ final class sm {
           ri.field_I = null;
         }
         if (param0 <= 52) {
-          sm.f(1);
+          sm.clearStatics(1);
         }
     }
 
@@ -1713,10 +1713,10 @@ final class sm {
         jn.field_b = 1;
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         if (param0 != -25370) {
-          sm.f(36);
+          sm.clearStatics(36);
         }
     }
 

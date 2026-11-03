@@ -361,7 +361,7 @@ final class Archive {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -466) {
           return;
         }

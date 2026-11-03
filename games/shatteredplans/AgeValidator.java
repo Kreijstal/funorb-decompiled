@@ -177,7 +177,7 @@ final class AgeValidator extends TextFieldValidator {
         super(param0);
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_o = null;
         field_p = null;
         field_n = null;

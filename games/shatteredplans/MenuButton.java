@@ -19,7 +19,7 @@ final class MenuButton extends MenuComponent {
     static qr field_w;
     static int field_J;
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_w = null;
         field_v = null;
         field_C = null;
@@ -106,7 +106,7 @@ final class MenuButton extends MenuComponent {
           StrongCacheEntry.a((byte) -52, param17, param10, param15, param8);
           bq.a(27770, param8);
           if (param16 > -113) {
-            MenuButton.g(125);
+            MenuButton.clearStatics(125);
           }
           tb.a(param6, param4, param9, param14, param8, param18, param12, param11, param19, param13, param3, param5, param1, -7966, param2);
           DiskArchiveRequest.a(param7, (byte) -81, param0, param8);

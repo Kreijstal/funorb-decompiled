@@ -22,7 +22,7 @@ class DualLinkNode extends IntrusiveNode {
           js.a(0, 197126152);
         }
         if (!param0) {
-          DualLinkNode.d(101);
+          DualLinkNode.clearStatics(101);
         }
     }
 
@@ -144,7 +144,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_n = null;
         if (param0 != 9768448) {
           field_i = (String) null;

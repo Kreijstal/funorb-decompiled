@@ -20,11 +20,11 @@ final class jr extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_l = null;
         field_h = null;
         if (param0 != 1885) {
-          jr.a(97);
+          jr.clearStatics(97);
         }
     }
 

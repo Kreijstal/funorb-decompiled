@@ -61,7 +61,7 @@ final class us {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 2) {
-            us.a(-12);
+            us.clearStatics(-12);
           }
           var3_int = param0.readUnsignedByte(-85);
           if (param1.length <= var3_int) {
@@ -108,12 +108,12 @@ final class us {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_a = null;
         field_d = null;
         if (param0 != 0) {
-          us.a(-56);
+          us.clearStatics(-56);
         }
     }
 

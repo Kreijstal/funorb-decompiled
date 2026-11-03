@@ -87,7 +87,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_i = null;
         field_g = null;
         field_a = null;

@@ -13,7 +13,7 @@ final class pd extends hb {
 
     final IntrusiveNode a(byte param0) {
         if (param0 <= 99) {
-          pd.b(11);
+          pd.clearStatics(11);
           return (IntrusiveNode) ((Object) this.field_i.a(true));
         }
         return (IntrusiveNode) ((Object) this.field_i.a(true));
@@ -95,14 +95,14 @@ final class pd extends hb {
           eo.field_fb = null;
           return;
         }
-        pd.b(-53);
+        pd.clearStatics(-53);
         cf.field_H = null;
         WeightedCacheEntry.field_s = null;
         sj.field_a = null;
         eo.field_fb = null;
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_g = null;
         field_j = null;
         field_f = null;

@@ -29,7 +29,7 @@ final class bg {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_d = null;
         if (param0 == 16928) {

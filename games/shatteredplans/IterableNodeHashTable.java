@@ -15,7 +15,7 @@ final class IterableNodeHashTable implements Iterable {
     static String[] field_g;
     IntrusiveNode[] field_f;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         field_h = null;
         field_g = null;

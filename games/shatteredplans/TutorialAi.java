@@ -122,7 +122,7 @@ final class TutorialAi extends LegacyAi {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_w = null;
         field_t = null;
         field_u = null;
@@ -143,7 +143,7 @@ final class TutorialAi extends LegacyAi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 2) {
-            TutorialAi.c(true);
+            TutorialAi.clearStatics(true);
           }
           var3_int = param0.field_x + param0.field_D.length;
           stackIn_5_0 = (var3_int == 0) ? 1 : var3_int;

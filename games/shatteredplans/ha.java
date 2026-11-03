@@ -42,9 +42,9 @@ final class ha {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 4324) {
-          ha.a(-34);
+          ha.clearStatics(-34);
           field_a = null;
           field_d = null;
           return;

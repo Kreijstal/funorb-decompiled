@@ -54,7 +54,7 @@ final class CellVertex {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_j = null;
         field_a = null;

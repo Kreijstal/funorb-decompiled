@@ -88,7 +88,7 @@ final class pg extends SingleChildWidget {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -43) {
           return;
         }

@@ -296,7 +296,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
 
     final static void a(int param0) {
         if (param0 != 0) {
-          WidgetTheme.a((byte) 47);
+          WidgetTheme.clearStatics((byte) 47);
           qj.a((byte) -127, 17);
           return;
         }
@@ -438,7 +438,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           var9.h(param1, 255);
           var9.position = var9.position + 1;
           if (param0 > -71) {
-            WidgetTheme.a((byte) 60);
+            WidgetTheme.clearStatics((byte) 60);
           }
           var5 = var9.position;
           var9.writeByte(1, (byte) -91);
@@ -669,7 +669,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         return this.field_c.field_q + this.field_c.field_J;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_q = null;
         if (param0 >= -62) {
           return;

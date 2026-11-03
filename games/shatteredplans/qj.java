@@ -108,9 +108,9 @@ final class qj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -20) {
-          qj.a((byte) 115);
+          qj.clearStatics((byte) 115);
         }
         field_d = null;
         field_a = null;
@@ -200,7 +200,7 @@ final class qj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -63) {
-            qj.a((byte) 55);
+            qj.clearStatics((byte) 55);
           }
           var3 = FleetMove.a(param1, param2, 20);
           var4 = param2.readUnsignedShort(-20976);

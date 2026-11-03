@@ -29,7 +29,7 @@ final class AllianceExpiredEvent extends IntrusiveNode {
     AllianceExpiredEvent(Player param0, Player param1) {
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_m = null;
         field_l = null;
         if (!param0) {

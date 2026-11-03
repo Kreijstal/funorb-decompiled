@@ -26,7 +26,7 @@ final class pl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         if (param0 != 7526) {
           pl.a(false, (byte) -123);

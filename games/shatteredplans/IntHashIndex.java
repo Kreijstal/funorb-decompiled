@@ -58,7 +58,7 @@ final class IntHashIndex {
         int var5;
         var3 = (this.field_d.length >> 1) - 1;
         if (param0 != 24396) {
-          IntHashIndex.a((byte) -59);
+          IntHashIndex.clearStatics((byte) -59);
         }
         var4 = var3 & param1;
         while (true) {
@@ -73,12 +73,12 @@ final class IntHashIndex {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_c = null;
         field_e = null;
         field_b = null;
         if (param0 != -26) {
-          IntHashIndex.a((byte) 94);
+          IntHashIndex.clearStatics((byte) 94);
         }
         field_a = null;
         field_g = null;

@@ -36,7 +36,7 @@ final class an {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_a = null;
         if (!param0) {
           return;
@@ -81,7 +81,7 @@ final class an {
             var4Lifetime2 = var12 + " (" + param2.field_o.name + ")";
           }
           if (param0 != -76) {
-            an.b(true);
+            an.clearStatics(true);
           }
           var5 = new kb(0, 0, 209, param2.field_o.field_k, var4Lifetime2, 16777215, false);
           var13.addChild(var5, 8);

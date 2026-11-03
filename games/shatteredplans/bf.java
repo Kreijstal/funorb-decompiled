@@ -34,7 +34,7 @@ final class bf {
         if (param15 == 256) {
           return;
         }
-        bf.a((byte) 117);
+        bf.clearStatics((byte) 117);
     }
 
     final static void a(byte param0, int param1, String param2) {
@@ -90,7 +90,7 @@ final class bf {
         try {
           IntrusiveDequeCursor.field_b = true;
           if (param0 < 56) {
-            bf.a((byte) -76);
+            bf.clearStatics((byte) -76);
           }
           SoundCache.field_c.field_z = param1;
           var2_int = so.field_q.field_g;
@@ -106,7 +106,7 @@ final class bf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         if (param0 <= -40) {
           field_a = null;

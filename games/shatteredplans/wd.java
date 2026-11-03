@@ -214,7 +214,7 @@ final class wd extends ji {
         this.a(param3, false, this.field_R, FleetMove.field_D, param2);
     }
 
-    public static void e(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_L = null;
         if (!param0) {
           field_K = null;

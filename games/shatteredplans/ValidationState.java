@@ -7,7 +7,7 @@ final class ValidationState {
     static int[] field_c;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         if (param0 > -22) {
           return;
@@ -19,7 +19,7 @@ final class ValidationState {
     final static void a(boolean param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1) {
-          ValidationState.b(58);
+          ValidationState.clearStatics(58);
           if (GameRules.field_c == -3) {
             ts.a(6493);
           } else {

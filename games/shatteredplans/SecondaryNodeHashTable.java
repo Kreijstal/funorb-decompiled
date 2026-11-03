@@ -628,7 +628,7 @@ final class SecondaryNodeHashTable {
         return var5;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_i = null;
         field_e = null;
         if (!param0) {

@@ -147,7 +147,7 @@ final class MidiPcmStream extends PcmStream {
         }
         MusicPatch var4 = (MusicPatch) (this.field_Q.startTraversal(83));
         while (var4 != null) {
-          var4.e(26005);
+          var4.release(26005);
           var4 = (MusicPatch) (this.field_Q.nextInTraversal(false));
         }
     }
@@ -266,14 +266,14 @@ final class MidiPcmStream extends PcmStream {
               var13 = lo.a(param0, (byte) 125, var9);
               if (var13 != null) {
                 this.field_Q.put(var13, 87, (long)var9);
-                if (!var13.a(param4, var8.field_j, (int[]) (var7), 1)) {
+                if (!var13.loadSamples(param4, var8.field_j, (int[]) (var7), 1)) {
                   var6_int = 0;
                 }
               } else {
                 var6_int = 0;
               }
             } else {
-              if (!var12.a(param4, var8.field_j, (int[]) (var7), 1)) {
+              if (!var12.loadSamples(param4, var8.field_j, (int[]) (var7), 1)) {
                 var6_int = 0;
                 var8 = (be) (param1.field_i.nextInTraversal(false));
                 continue;
@@ -1744,7 +1744,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -17876) {
           field_o = (String) null;
         }

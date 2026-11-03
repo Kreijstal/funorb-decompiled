@@ -227,7 +227,7 @@ final class AttackTask extends AiTask {
         return stackIn_7_0;
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_s = null;
         field_q = null;
         if (param0 > -53) {

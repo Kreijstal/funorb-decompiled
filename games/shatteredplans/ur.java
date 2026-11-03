@@ -229,7 +229,7 @@ final class ur extends qr {
           return true;
         }
         if (param0) {
-          ur.f((byte) -12);
+          ur.clearStatics((byte) -12);
         }
         if (this.field_Cb.field_ub == 0) {
           return false;
@@ -252,7 +252,7 @@ final class ur extends qr {
         GzipInflater.field_c = param2;
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_Bb = null;
         field_Db = null;
         field_zb = null;

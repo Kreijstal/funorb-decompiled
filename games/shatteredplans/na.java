@@ -44,7 +44,7 @@ final class na {
     int field_d;
     static int field_F;
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 104 % ((-30 - param0) / 39);
         field_s = null;
         field_J = null;

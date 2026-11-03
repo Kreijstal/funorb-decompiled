@@ -17,7 +17,7 @@ final class nm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != 4) {
           field_c = (qr) null;
           field_b = null;

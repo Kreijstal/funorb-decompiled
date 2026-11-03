@@ -11,7 +11,7 @@ final class rk extends IntrusiveNode {
     int[] field_i;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_k = null;
         field_m = null;

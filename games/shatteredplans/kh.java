@@ -21,7 +21,7 @@ final class kh extends qr {
     private StringBuilder field_xb;
     private qr field_Jb;
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Nb = null;
         field_Kb = null;
         field_Ib = null;

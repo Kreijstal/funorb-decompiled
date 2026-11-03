@@ -612,7 +612,7 @@ abstract class MapViewState {
         this.field_f = (float)(this.field_O.field_k / 2);
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -11784) {
           return;
         }
@@ -773,7 +773,7 @@ abstract class MapViewState {
             }
           }
           if (param2) {
-            MapViewState.c(104);
+            MapViewState.clearStatics(104);
           }
           this.field_T = param0;
           this.field_t = 0;

@@ -28,7 +28,7 @@ abstract class VictoryChecker {
 
     abstract Player[] projectedWinners(int param0);
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_d = null;
         field_f = null;
         if (!param0) {

@@ -155,7 +155,7 @@ abstract class jl extends Dialog {
 
     void g(byte param0) {
         if (param0 > -100) {
-          jl.o(21);
+          jl.clearStatics(21);
         }
     }
 
@@ -315,7 +315,7 @@ abstract class jl extends Dialog {
         }
     }
 
-    public static void o(int param0) {
+    public static void clearStatics(int param0) {
         field_O = null;
         field_V = null;
         field_M = null;

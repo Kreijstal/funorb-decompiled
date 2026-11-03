@@ -142,7 +142,7 @@ class LegacyAi extends StandardAi {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         field_q = null;
         field_p = null;

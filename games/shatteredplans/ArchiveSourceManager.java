@@ -13,7 +13,7 @@ final class ArchiveSourceManager {
     private NetworkArchiveRequest field_c;
     static int field_h;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = null;
         int var1 = -35 / ((param0 - 66) / 45);
         field_b = null;

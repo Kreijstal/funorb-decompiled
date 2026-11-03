@@ -12,7 +12,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
 
     final int resultsPanelHeight(boolean param0) {
         if (param0) {
-          DerelictVictoryChecker.b((byte) -59);
+          DerelictVictoryChecker.clearStatics((byte) -59);
         }
         return rs.field_Cb.field_J + this.field_o.length * PasswordValidator.field_n;
     }
@@ -209,7 +209,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_m = null;
         field_k = null;
         field_n = null;

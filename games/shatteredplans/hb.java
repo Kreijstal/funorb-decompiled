@@ -107,7 +107,7 @@ abstract class hb {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;

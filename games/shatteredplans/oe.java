@@ -13,7 +13,7 @@ final class oe {
     static FrameTimer field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_g = (int[][]) null;
         field_h = null;
         field_b = null;

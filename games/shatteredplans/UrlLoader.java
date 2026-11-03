@@ -398,7 +398,7 @@ final class UrlLoader implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_j = null;
         field_f = null;
         if (param0 != 0) {

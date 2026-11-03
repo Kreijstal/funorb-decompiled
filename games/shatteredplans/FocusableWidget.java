@@ -266,7 +266,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_C = null;
         if (!param0) {
           FocusableWidget.f((byte) -56);

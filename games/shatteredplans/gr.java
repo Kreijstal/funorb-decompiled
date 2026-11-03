@@ -73,7 +73,7 @@ final class gr extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 >= -25) {
           gr.a((byte) -99, 47, -15);
           field_p = null;

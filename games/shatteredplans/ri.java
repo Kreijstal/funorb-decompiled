@@ -414,12 +414,12 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_M = null;
         field_I = null;
         field_N = null;
         if (param0 > -55) {
-          ri.a((byte) 58);
+          ri.clearStatics((byte) 58);
         }
         field_G = null;
     }

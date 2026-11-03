@@ -162,7 +162,7 @@ final class sg extends qr {
         this.a(param0, param4, param3);
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_zb = null;
         field_Ab = null;
         field_yb = null;

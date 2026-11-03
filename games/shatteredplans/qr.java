@@ -1023,7 +1023,7 @@ class qr extends hm {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_A = null;
         if (param0 != -14115) {
           return;

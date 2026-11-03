@@ -10,7 +10,7 @@ final class StatusContent implements MenuContent {
     static String field_g;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         field_c = null;
         field_a = null;

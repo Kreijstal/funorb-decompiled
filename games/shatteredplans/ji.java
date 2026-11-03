@@ -11,7 +11,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
 
     abstract int d(boolean param0);
 
-    public static void g(byte param0) {
+    public static void clearStatics(byte param0) {
         field_E = null;
         field_G = null;
         field_F = null;

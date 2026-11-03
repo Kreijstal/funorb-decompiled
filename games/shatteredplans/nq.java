@@ -120,7 +120,7 @@ abstract class nq extends DualLinkNode {
         return var13;
     }
 
-    public static void a() {
+    public static void clearStatics() {
         field_B = null;
         field_D = null;
     }

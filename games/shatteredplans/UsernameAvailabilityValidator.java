@@ -115,7 +115,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_u = null;
         field_s = null;
         if (!param0) {

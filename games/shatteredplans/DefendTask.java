@@ -117,7 +117,7 @@ final class DefendTask extends AiTask {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_t = null;
         field_s = null;
         field_r = null;

@@ -67,7 +67,7 @@ final class StarLinkPlanner {
         var20 = ShatteredPlansClient.field_F ? 1 : 0;
         var22 = this.field_d;
         if (param1 != 1) {
-          StarLinkPlanner.a((byte) 25);
+          StarLinkPlanner.clearStatics((byte) 25);
         }
         for (var4 = 0; var22.length > var4; var4++) {
           var5 = var22[var4];
@@ -206,13 +206,13 @@ final class StarLinkPlanner {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         field_c = null;
         field_e = null;
         field_a = null;
         if (param0 != -11) {
-          StarLinkPlanner.a((byte) 61);
+          StarLinkPlanner.clearStatics((byte) 61);
         }
     }
 

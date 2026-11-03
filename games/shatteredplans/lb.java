@@ -60,7 +60,7 @@ final class lb {
         }
     }
 
-    public static void a() {
+    public static void clearStatics() {
         field_a = null;
     }
 

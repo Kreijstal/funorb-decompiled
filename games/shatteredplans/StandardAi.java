@@ -1967,7 +1967,7 @@ class StandardAi implements Ai {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = null;
         int var1 = -25 / ((2 - param0) / 56);
         field_e = null;

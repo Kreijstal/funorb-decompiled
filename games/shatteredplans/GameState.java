@@ -522,7 +522,7 @@ final class GameState {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStatics(byte param0) {
         field_F = null;
         int var1 = -53 % ((70 - param0) / 38);
         field_l = null;
@@ -1198,7 +1198,7 @@ final class GameState {
         NetworkArchiveRequest.field_z = pr.a(14274);
         vj.field_C = 0;
         if (param0 != -5883) {
-          GameState.e((byte) 95);
+          GameState.clearStatics((byte) 95);
         }
     }
 

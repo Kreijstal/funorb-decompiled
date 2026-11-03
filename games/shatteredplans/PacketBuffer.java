@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.readString(-1);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != 78) {
           return;
         }

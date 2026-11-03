@@ -13,7 +13,7 @@ final class we {
         return param0 & param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         if (param0 >= -62) {
           field_d = (String) null;

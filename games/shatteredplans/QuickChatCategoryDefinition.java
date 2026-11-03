@@ -38,7 +38,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param2 != -26131) {
-            QuickChatCategoryDefinition.f((byte) 115);
+            QuickChatCategoryDefinition.clearStatics((byte) 115);
           }
           if (param3 > 0) {
             var8 = new byte[param1];
@@ -180,7 +180,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         field_x = null;
         field_s = null;

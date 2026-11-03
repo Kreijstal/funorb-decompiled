@@ -66,12 +66,12 @@ final class Star extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_E = null;
         field_H = null;
         field_P = null;
         if (param0 != 0) {
-          Star.e(-26);
+          Star.clearStatics(-26);
         }
         field_o = null;
         field_K = null;

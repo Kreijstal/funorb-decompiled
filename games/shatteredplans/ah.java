@@ -414,7 +414,7 @@ final class ah extends ts {
         return null;
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_S = null;
         field_Q = null;
         if (param0 != 4096) {

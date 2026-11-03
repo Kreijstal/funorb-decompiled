@@ -238,7 +238,7 @@ final class sq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_s = null;
         field_p = null;
         if (param0 < 126) {

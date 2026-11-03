@@ -10,7 +10,7 @@ final class Wormhole extends IntrusiveNode {
     int field_m;
     static Sprite field_h;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_l = null;
         field_j = null;
         int var1 = 115 / ((-10 - param0) / 45);
@@ -67,7 +67,7 @@ final class Wormhole extends IntrusiveNode {
           ae.field_f.b(an.field_b, -88);
           return;
         }
-        Wormhole.a(14);
+        Wormhole.clearStatics(14);
         ae.field_f.b(an.field_b, -88);
     }
 

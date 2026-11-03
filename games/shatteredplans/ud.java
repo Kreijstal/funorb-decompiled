@@ -7,7 +7,7 @@ final class ud {
     static String field_b;
     static boolean[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;

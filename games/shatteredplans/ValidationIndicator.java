@@ -32,7 +32,7 @@ final class ValidationIndicator extends FocusableWidget {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param1) {
-            ValidationIndicator.a((byte) -92);
+            ValidationIndicator.clearStatics((byte) -92);
           }
           var7 = new IntrusiveDeque();
           var3 = (CandidateLink) (param0.pollFirst(72));
@@ -92,7 +92,7 @@ final class ValidationIndicator extends FocusableWidget {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_I = null;
         field_D = null;
         field_E = null;
@@ -162,7 +162,7 @@ final class ValidationIndicator extends FocusableWidget {
         Sprite var3 = new Sprite(240, 120);
         int var4 = 0;
         if (param0 != 111) {
-          ValidationIndicator.a((byte) 53);
+          ValidationIndicator.clearStatics((byte) 53);
         }
         while (var4 < param1) {
           var3.bindAsRenderTarget();

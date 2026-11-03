@@ -9,7 +9,7 @@ final class hr {
     static String field_f;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 == 5) {
           field_d = null;
           field_e = null;

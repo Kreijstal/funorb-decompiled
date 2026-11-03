@@ -83,12 +83,12 @@ final class ai {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;
         if (param0 != 1) {
-          ai.a((byte) 116);
+          ai.clearStatics((byte) 116);
         }
     }
 
@@ -113,7 +113,7 @@ final class ai {
     final static void a(boolean param0, int param1, String param2, String param3) {
         try {
           if (param1 != -1) {
-            ai.a((byte) -80);
+            ai.clearStatics((byte) -80);
           }
           oj.field_Ib = param3;
           MenuWindow.field_B = param2;

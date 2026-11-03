@@ -167,7 +167,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 0) {
           field_a = (Sprite[]) null;
         }

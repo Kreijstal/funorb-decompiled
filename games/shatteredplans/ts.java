@@ -120,7 +120,7 @@ class ts extends FocusableWidget {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_F = null;
         field_E = null;
         int var1 = -63 / ((-15 - param0) / 60);

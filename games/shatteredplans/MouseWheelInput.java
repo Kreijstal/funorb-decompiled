@@ -72,7 +72,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         int var1 = 104 % ((-36 - param0) / 56);
         field_b = null;

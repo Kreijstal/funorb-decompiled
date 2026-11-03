@@ -176,7 +176,7 @@ final class kb extends MenuComponent {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (!param0) {
           kb.f(-97);
         }

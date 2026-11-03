@@ -43,7 +43,7 @@ final class uf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = -18 / ((-32 - param0) / 52);
         field_b = null;
     }

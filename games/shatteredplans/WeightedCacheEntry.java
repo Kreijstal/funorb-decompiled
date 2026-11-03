@@ -12,7 +12,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
 
     abstract boolean e(boolean param0);
 
-    public static void d(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_t = null;
         field_r = null;
         field_u = null;

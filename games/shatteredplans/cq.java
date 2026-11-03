@@ -178,7 +178,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 69 / ((23 - param0) / 59);
         field_I = null;
         field_F = null;

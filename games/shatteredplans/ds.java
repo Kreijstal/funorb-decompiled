@@ -8,7 +8,7 @@ final class ds {
     static String field_e;
     int field_d;
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_c = null;
         field_e = null;
         field_b = null;
@@ -33,7 +33,7 @@ final class ds {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            ds.a(false);
+            ds.clearStatics(false);
           }
           var4_int = param1.getGroupIdByName(127, param2);
           var5 = param1.getFileIdByName(var4_int, (byte) 106, param3);

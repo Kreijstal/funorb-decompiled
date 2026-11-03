@@ -8,7 +8,7 @@ final class v {
     static volatile int field_d;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         if (param0 != 3) {
           String var2 = (String) null;

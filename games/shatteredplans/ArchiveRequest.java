@@ -19,7 +19,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -18301) {
           return;
         }
@@ -83,9 +83,9 @@ abstract class ArchiveRequest extends DualLinkNode {
     final static void a(int param0, Archive param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.b(param1.getFileByName(true, "", "headers.packvorbis"));
-          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
-          var2.b();
+          VorbisSample.readSetup(param1.getFileByName(true, "", "headers.packvorbis"));
+          var2 = VorbisSample.load(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAll();
           int var3 = 38 / ((param0 - 28) / 50);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

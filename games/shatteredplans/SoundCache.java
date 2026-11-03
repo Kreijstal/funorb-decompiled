@@ -39,12 +39,12 @@ final class SoundCache {
             param1[0] <= 0) {
             return null;
           }
-          var9 = SynthesizedSoundEffect.a(this.field_b, param0, param3);
+          var9 = SynthesizedSoundEffect.load(this.field_b, param0, param3);
           if (var9 == null) {
             stackIn_12_0 = null;
             return (PcmSample) (stackIn_12_0);
           }
-          var10 = var9.b();
+          var10 = var9.toSample();
           var8Lifetime1 = var10;
           this.field_d.put(var8Lifetime1, 13, var6);
           if (param1 != null) {
@@ -226,7 +226,7 @@ final class SoundCache {
             }
             this.field_a.put(var9, 66, var6);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeSome(param3);
           if (var8Lifetime1 == null) {
             return null;
           }
@@ -252,9 +252,9 @@ final class SoundCache {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 < 104) {
-          SoundCache.a((byte) -77);
+          SoundCache.clearStatics((byte) -77);
           field_c = null;
           return;
         }

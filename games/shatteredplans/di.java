@@ -123,7 +123,7 @@ final class di extends IntrusiveNode {
           var6 = (CharSequence) ((Object) param0);
           var2 = ji.a(var6, true);
           if (param1 <= 115) {
-            di.c(false);
+            di.clearStatics(false);
           }
           if (var2 == null) {
             var2 = param0;
@@ -175,7 +175,7 @@ final class di extends IntrusiveNode {
           }
           ((PacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_3_1, (byte) -57);
           if (param1) {
-            di.c(true);
+            di.clearStatics(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class di extends IntrusiveNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_j = null;
         field_k = null;
         field_q = null;

@@ -226,7 +226,7 @@ final class ch implements wr {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 1 % ((-34 - param0) / 52);
         field_c = null;
         field_a = null;

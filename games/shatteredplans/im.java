@@ -6,7 +6,7 @@ final class im {
     static String field_a;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -27153) {
           return;
         }

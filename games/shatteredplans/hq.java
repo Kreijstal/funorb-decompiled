@@ -66,7 +66,7 @@ final class hq {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 <= 70) {
           return;
         }

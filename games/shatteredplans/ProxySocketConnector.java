@@ -191,7 +191,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_i = null;
         field_h = null;
         if (param0 != 1) {

@@ -197,7 +197,7 @@ final class MenuWindow extends MenuComponent {
         return var4;
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != 6) {
           return;
         }

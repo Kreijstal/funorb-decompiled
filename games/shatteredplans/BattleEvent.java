@@ -27,7 +27,7 @@ final class BattleEvent extends IntrusiveNode {
         return IsaacBackedRandom.field_b == null ? null : (fb) (IsaacBackedRandom.field_b.get(65280, (long)param0));
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_q = null;
         field_u = null;
         if (param0 <= 5) {

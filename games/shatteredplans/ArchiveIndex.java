@@ -25,7 +25,7 @@ final class ArchiveIndex {
     int field_a;
     int field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_d = null;
         if (!param0) {
           return;

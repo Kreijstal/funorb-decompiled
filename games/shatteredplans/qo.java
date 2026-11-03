@@ -13,7 +13,7 @@ abstract class qo {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = 0;
         if (param0 < 43) {
-          qo.a(55);
+          qo.clearStatics(55);
         }
         while (this.field_d.length > var3) {
           var4 = this.field_d[var3];
@@ -37,7 +37,7 @@ abstract class qo {
         IntrusiveDeque.field_g.a(438, -124 + gf.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_e = null;
         int var1 = -47 % ((param0 + 43) / 59);

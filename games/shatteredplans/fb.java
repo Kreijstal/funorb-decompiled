@@ -52,7 +52,7 @@ final class fb extends qr {
         this.field_dc = new byte[param0];
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         field_Vb = null;
         field_kc = null;
         field_bc = null;

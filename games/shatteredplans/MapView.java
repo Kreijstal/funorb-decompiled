@@ -392,7 +392,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Fb = null;
         field_Eb = null;
         field_zb = null;

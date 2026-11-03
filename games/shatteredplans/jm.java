@@ -22,7 +22,7 @@ final class jm extends kp {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         field_q = null;
         field_s = null;

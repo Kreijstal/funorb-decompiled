@@ -108,7 +108,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = (long[][]) null;
         field_h = null;
         field_k = null;
@@ -149,7 +149,7 @@ final class BufferedSocket implements Runnable {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         wh.a(false);
         if (param0 != -6187) {
-          BufferedSocket.b((byte) 13);
+          BufferedSocket.clearStatics((byte) 13);
         }
         gf.i(param4, param3, param1, param2);
     }

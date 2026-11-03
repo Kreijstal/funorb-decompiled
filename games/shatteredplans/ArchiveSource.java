@@ -129,7 +129,7 @@ abstract class ArchiveSource {
         js.field_j = js.field_j + 1;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_b = null;
         if (param0) {
           field_a = (String) null;

@@ -41,7 +41,7 @@ final class wa {
         jm.$cfr$intArgs$a$88c6728ee5b1((String) null, param2, -110, param1);
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 == 27094) {
           field_b = null;
           field_i = null;

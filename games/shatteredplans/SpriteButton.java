@@ -36,7 +36,7 @@ final class SpriteButton extends MenuComponent {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStatics(byte param0) {
         field_x = (int[][]) null;
         field_v = null;
         if (param0 >= -17) {

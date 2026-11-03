@@ -348,7 +348,7 @@ final class vf extends hb {
         js.field_f.patchLengthByte(-var4 + js.field_f.position, (byte) 118);
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 17593) {
           Territory var2 = (Territory) null;
           vf.a(-89, (Territory) null);

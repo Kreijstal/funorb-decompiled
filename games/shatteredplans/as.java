@@ -77,7 +77,7 @@ final class as extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_t = null;
         if (param0 == 20) {
           field_h = null;

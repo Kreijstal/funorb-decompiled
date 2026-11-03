@@ -56,11 +56,11 @@ final class oi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_b = null;
         if (param0 != -1) {
-          oi.a(52);
+          oi.clearStatics(52);
         }
         field_d = null;
         field_i = (Sprite[][]) null;
@@ -82,7 +82,7 @@ final class oi {
           cg.i(0);
         }
         if (param1 != 66) {
-          oi.a(-57);
+          oi.clearStatics(-57);
         }
         return var2;
     }

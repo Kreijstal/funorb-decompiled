@@ -45,7 +45,7 @@ final class MidiFileReader {
         return this.field_f + (long)param0 * (long)this.field_a;
     }
 
-    public static void b() {
+    public static void clearStatics() {
         field_g = null;
     }
 

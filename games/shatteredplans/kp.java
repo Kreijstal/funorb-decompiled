@@ -11,7 +11,7 @@ class kp extends ms {
     static int[] field_k;
     static Sprite field_m;
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_o = null;
         field_k = null;
         if (param0 > -44) {
@@ -106,7 +106,7 @@ class kp extends ms {
           param0.writeLong(-16426, this.field_p);
           param0.writePackedName((byte) -120, this.field_l);
           if (param1 <= 67) {
-            kp.b((byte) -120);
+            kp.clearStatics((byte) -120);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -6,7 +6,7 @@ final class dk {
     static String field_a;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 >= 117) {
           field_c = null;
           field_a = null;

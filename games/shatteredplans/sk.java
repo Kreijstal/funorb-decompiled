@@ -8,7 +8,7 @@ final class sk extends IntrusiveNode {
     byte[] field_h;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_i = null;
         field_k = null;
         if (param0 >= -6) {

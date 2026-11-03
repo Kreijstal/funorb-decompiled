@@ -122,7 +122,7 @@ final class DefensiveAi extends StandardAi {
         super(param0, param1, param2, 7);
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         field_q = null;
         field_s = (String[][]) null;

@@ -297,7 +297,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         if (param0 <= 57) {
           field_r = (String) null;

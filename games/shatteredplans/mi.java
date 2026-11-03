@@ -41,7 +41,7 @@ final class mi {
           }
           param1.field_Eb = param2.readUnsignedByte(-64);
           if (param0 != -89) {
-            mi.a((byte) -67);
+            mi.clearStatics((byte) -67);
           }
           param1.field_nc = param2.readUnsignedByte(-123);
           var4_int = param2.readUnsignedByte(-111);
@@ -112,7 +112,7 @@ final class mi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_a = null;
         if (param0 < 95) {
           field_a = (String) null;

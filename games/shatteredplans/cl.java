@@ -103,11 +103,11 @@ final class cl extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_p = null;
         field_q = null;
         if (param0 != 16777215) {
-          cl.a(-104);
+          cl.clearStatics(-104);
         }
         field_m = null;
     }

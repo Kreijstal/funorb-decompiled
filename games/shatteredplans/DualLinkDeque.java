@@ -21,7 +21,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 31992) {
           return;
         }

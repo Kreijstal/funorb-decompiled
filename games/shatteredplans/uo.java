@@ -68,7 +68,7 @@ final class uo {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_d = null;
         field_a = null;
         field_h = null;
@@ -97,7 +97,7 @@ final class uo {
         try {
           var3_int = 16711935 & param2;
           if (param0 <= 70) {
-            uo.a(true);
+            uo.clearStatics(true);
           }
           param2 = param2 & 65280;
           var4 = -1;

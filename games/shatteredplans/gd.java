@@ -6,7 +6,7 @@ final class gd {
     static String field_c;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         int var1 = 122 / ((param0 - 7) / 63);
         field_c = null;
@@ -29,7 +29,7 @@ final class gd {
         if (param0 <= -63) {
           return;
         }
-        gd.b(-96);
+        gd.clearStatics(-96);
     }
 
     final static void a(int param0, int param1) {
@@ -43,7 +43,7 @@ final class gd {
         try {
           rs.field_Bb.addLast((byte) -113, param0);
           if (param1 != 1500005281) {
-            gd.b(66);
+            gd.clearStatics(66);
           }
           wj.a(320, param2, param0);
         } catch (RuntimeException runtimeException) {

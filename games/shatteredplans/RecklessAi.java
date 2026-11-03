@@ -6,7 +6,7 @@ final class RecklessAi extends StandardAi {
     static String field_r;
     static qr field_p;
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         field_p = null;
         if (param0 != 388178881) {
@@ -45,7 +45,7 @@ final class RecklessAi extends StandardAi {
         if (param0 >= 1) {
           return param1 + var2;
         }
-        RecklessAi.i(28);
+        RecklessAi.clearStatics(28);
         return param1 + var2;
     }
 

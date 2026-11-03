@@ -11,7 +11,7 @@ final class QuaternaryNodeList {
 
     final QuaternaryLinkNode d(int param0) {
         if (param0 > -96) {
-          QuaternaryNodeList.a(79);
+          QuaternaryNodeList.clearStatics(79);
         }
         QuaternaryLinkNode var2 = this.field_e;
         if (var2 == this.field_c) {
@@ -146,7 +146,7 @@ final class QuaternaryNodeList {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         field_d = null;
         field_b = null;
@@ -165,7 +165,7 @@ final class QuaternaryNodeList {
     final static boolean b(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 79) {
-          QuaternaryNodeList.a(25);
+          QuaternaryNodeList.clearStatics(25);
         }
         stackIn_6_0 = (SoundPlayback.field_i >= 10) && (DefensiveAi.field_p >= 13);
         return stackIn_6_0;

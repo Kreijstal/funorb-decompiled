@@ -176,7 +176,7 @@ final class tb {
             ByteArrayNode.field_p[0][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
           }
           if (param13 != -7966) {
-            tb.a(-52);
+            tb.clearStatics(-52);
           }
           if (nl.field_a.length >= 2) {
             QuickChatCategoryRegistry.field_g[1] = new qr(0L, ObjectList.field_h, wl.field_b);
@@ -341,7 +341,7 @@ final class tb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

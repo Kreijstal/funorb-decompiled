@@ -66,7 +66,7 @@ final class aq extends IntrusiveNode {
         return !(param0 <= param2);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_j = null;
         field_i = null;
         field_o = null;

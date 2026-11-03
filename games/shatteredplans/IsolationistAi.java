@@ -120,7 +120,7 @@ final class IsolationistAi extends StandardAi {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (param0) {
           return;
         }

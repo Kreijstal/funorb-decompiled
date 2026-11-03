@@ -83,7 +83,7 @@ final class md extends UiWidget {
           var6 = new nf(param0, param3, param2, param4, param1);
           ei.a((byte) 37, var6);
           if (param5 != -16169) {
-            md.j(127);
+            md.clearStatics(127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -310,7 +310,7 @@ final class md extends UiWidget {
         this.a(-907398527);
     }
 
-    public static void j(int param0) {
+    public static void clearStatics(int param0) {
         field_D = null;
         field_K = null;
         int var1 = -58 / ((-52 - param0) / 49);

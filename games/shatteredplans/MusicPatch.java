@@ -16,7 +16,7 @@ final class MusicPatch extends IntrusiveNode {
     static int field_m;
     byte[] field_s;
 
-    final boolean a(SoundCache param0, byte[] param1, int[] param2, int param3) {
+    final boolean loadSamples(SoundCache param0, byte[] param1, int[] param2, int param3) {
         int var8 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -93,7 +93,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final void e(int param0) {
+    final void release(int param0) {
         this.field_n = null;
         if (param0 != 26005) {
           field_o = (int[]) null;
@@ -115,7 +115,7 @@ final class MusicPatch extends IntrusiveNode {
         return null;
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_l = null;
         if (param0 != 59114) {
           MusicPatch.a(7);

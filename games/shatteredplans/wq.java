@@ -52,7 +52,7 @@ final class wq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_c = null;
         int var1 = 68 / ((44 - param0) / 56);
     }

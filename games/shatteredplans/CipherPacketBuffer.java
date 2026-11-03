@@ -107,7 +107,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return new e(of.a((byte) 42), bo.q(-108));
     }
 
-    public static void l(int param0) {
+    public static void clearStatics(int param0) {
         field_q = null;
         if (param0 != 0) {
           field_m = (SecondaryNodeHashTable) null;

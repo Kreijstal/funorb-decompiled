@@ -225,7 +225,7 @@ final class PlayerStats {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_c = null;
         field_p = null;
         int var1 = 109 / ((param0 - 63) / 51);

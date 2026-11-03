@@ -5,10 +5,10 @@ final class wo {
     static int field_a;
     static Sprite field_b;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         if (param0 != -103) {
-          wo.a((byte) 30);
+          wo.clearStatics((byte) 30);
         }
     }
 

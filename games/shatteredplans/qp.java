@@ -377,7 +377,7 @@ final class qp extends WidgetTheme {
         return cr.a(param0, 1, -10, param2);
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_w = null;
         if (param0 >= -126) {
           return;

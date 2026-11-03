@@ -77,7 +77,7 @@ final class DerelictMapReader implements MapGenerator {
         return var3;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_g = null;
         field_d = null;
         if (param0) {
@@ -110,7 +110,7 @@ final class DerelictMapReader implements MapGenerator {
 
     final static int a(int param0) {
         if (param0 != 0) {
-          DerelictMapReader.a(false);
+          DerelictMapReader.clearStatics(false);
         }
         return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
     }

@@ -24,7 +24,7 @@ final class lm {
           ms.field_e[520] = 59;
           return;
         }
-        lm.a(false);
+        lm.clearStatics(false);
         ms.field_e[91] = 42;
         ms.field_e[92] = 74;
         ms.field_e[93] = 43;
@@ -34,11 +34,11 @@ final class lm {
         ms.field_e[520] = 59;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_a = null;
         field_d = null;
         if (!param0) {
-          lm.a(false);
+          lm.clearStatics(false);
           field_e = null;
           return;
         }

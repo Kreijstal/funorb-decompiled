@@ -47,7 +47,7 @@ final class he extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_q = null;
         field_m = null;
         field_p = null;

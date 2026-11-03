@@ -90,7 +90,7 @@ final class ql extends IntrusiveNode {
           aj.field_e.service();
           IsolationistAi.field_q.service();
           if (param0 != -26848) {
-            ql.a((byte) 108);
+            ql.clearStatics((byte) 108);
           }
           QuickChatCategoryDefinition.field_u = QuickChatCategoryDefinition.field_u - 1;
           if (QuickChatCategoryDefinition.field_u == 0) {
@@ -169,7 +169,7 @@ final class ql extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 > -46) {

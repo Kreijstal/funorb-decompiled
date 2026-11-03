@@ -71,7 +71,7 @@ final class oq {
         var2.writeByte(3, (byte) -73);
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_g = null;
         field_i = null;
         field_b = null;

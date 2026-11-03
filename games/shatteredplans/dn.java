@@ -82,7 +82,7 @@ final class dn extends hb {
         return (gq[]) null;
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = null;
         field_k = null;
         if (param0 == -107) {

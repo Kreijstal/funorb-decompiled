@@ -326,12 +326,12 @@ class UiWidget extends IntrusiveNode {
         return this.describeTree((byte) -103, new Hashtable(), 0, new StringBuilder()).toString();
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         field_t = null;
         field_w = null;
         if (param0 != 0) {
-          UiWidget.d(-30);
+          UiWidget.clearStatics(-30);
         }
     }
 

@@ -65,7 +65,7 @@ final class bb {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         if (param0 != 26) {
           return;

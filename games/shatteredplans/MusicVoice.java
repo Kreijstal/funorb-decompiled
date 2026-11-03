@@ -85,7 +85,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_w = null;
         field_N = null;
         field_I = null;

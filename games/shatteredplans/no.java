@@ -342,7 +342,7 @@ final class no {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;

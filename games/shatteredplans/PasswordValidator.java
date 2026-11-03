@@ -116,7 +116,7 @@ final class PasswordValidator extends TextFieldValidator {
             ks.a(var9, 0);
           }
           if (param0 >= -99) {
-            PasswordValidator.d(34);
+            PasswordValidator.clearStatics(34);
           }
           var8 = bk.b(-127);
           if (var8 == null) {
@@ -223,7 +223,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_p = null;
         if (param0 != 255) {
           field_p = (String) null;

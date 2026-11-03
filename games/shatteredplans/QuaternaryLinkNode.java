@@ -31,7 +31,7 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
           var7 = var8;
           var3 = var7;
           if (param1 != 53) {
-            QuaternaryLinkNode.e(false);
+            QuaternaryLinkNode.clearStatics(false);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var5 = param0.charAt(var4);
@@ -76,7 +76,7 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
         this.field_u = null;
     }
 
-    public static void e(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_v = null;
         if (!param0) {
           CharSequence var2 = (CharSequence) null;

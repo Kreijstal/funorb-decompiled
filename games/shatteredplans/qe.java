@@ -8,7 +8,7 @@ class qe extends IntrusiveNode {
     static fg field_k;
     static Sprite field_j;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = null;
         field_j = null;
         if (param0 != 93) {

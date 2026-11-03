@@ -14,7 +14,7 @@ final class va {
     int field_h;
     int field_a;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         int var1 = 46 / ((param0 - 30) / 48);
         field_e = null;
         field_g = null;

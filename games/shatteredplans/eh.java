@@ -47,7 +47,7 @@ final class eh extends ek implements ButtonListener {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStatics(int param0) {
         field_N = null;
         field_I = null;
         field_L = null;

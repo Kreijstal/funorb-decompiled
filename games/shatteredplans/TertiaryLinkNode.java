@@ -172,9 +172,9 @@ class TertiaryLinkNode extends DualLinkNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -21) {
-          TertiaryLinkNode.e((byte) -56);
+          TertiaryLinkNode.clearStatics((byte) -56);
         }
         field_o = null;
         field_s = null;

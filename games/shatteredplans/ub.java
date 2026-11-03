@@ -211,7 +211,7 @@ final class ub extends qr {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Bb = null;
         field_Db = (String[][]) null;
         field_yb = null;

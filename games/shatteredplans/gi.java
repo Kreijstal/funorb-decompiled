@@ -244,7 +244,7 @@ final class gi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 32) {
           String var2 = (String) null;
           gi.a((String) null, -107, (String) null);

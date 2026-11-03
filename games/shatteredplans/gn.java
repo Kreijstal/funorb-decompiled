@@ -134,7 +134,7 @@ final class gn extends WidgetTheme {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 != -12) {
-            gn.b(true);
+            gn.clearStatics(true);
           }
           var7 = this.field_C;
           var3 = var7;
@@ -184,7 +184,7 @@ final class gn extends WidgetTheme {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_u = null;
         field_v = null;
         field_w = null;

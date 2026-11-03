@@ -40,7 +40,7 @@ class Territory extends DualLinkNode {
         return (Star) (this.field_s.pollFirst(43));
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         field_y = null;
         if (param0 != -28714) {
           return;

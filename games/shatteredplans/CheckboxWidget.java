@@ -17,7 +17,7 @@ final class CheckboxWidget extends FocusableWidget {
         StandardMapReader.field_g = null;
         SolVictoryChecker.field_p = nm.field_a;
         if (param0 != -15365) {
-          CheckboxWidget.h(-36);
+          CheckboxWidget.clearStatics(-36);
         }
     }
 
@@ -44,7 +44,7 @@ final class CheckboxWidget extends FocusableWidget {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -22429) {
           field_D = (String) null;
           field_D = null;

@@ -13,7 +13,7 @@ final class am extends qr {
     static String field_zb;
     qr field_yb;
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Bb = null;
         field_zb = null;
         field_Ab = null;

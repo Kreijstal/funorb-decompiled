@@ -167,10 +167,10 @@ final class AggressiveAi extends StandardAi {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         if (param0 != 97) {
-          AggressiveAi.f((byte) -65);
+          AggressiveAi.clearStatics((byte) -65);
         }
     }
 

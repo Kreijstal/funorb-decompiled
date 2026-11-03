@@ -342,7 +342,7 @@ final class SolVictoryChecker extends VictoryChecker {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         field_k = null;
         field_q = null;
         if (param0 != -26088) {

@@ -53,13 +53,13 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_v = null;
         field_s = null;
         field_F = null;
         field_w = null;
         if (param0 != -1) {
-          MusicCrossfadeStream.d(22);
+          MusicCrossfadeStream.clearStatics(22);
         }
         field_x = null;
         field_t = null;
@@ -338,7 +338,7 @@ final class MusicCrossfadeStream extends PcmStream {
           param2.setChannelVolume((byte) -78, -1, param0);
           param2.setTempoScale(param1, false);
           if (param3 > -93) {
-            MusicCrossfadeStream.d(-81);
+            MusicCrossfadeStream.clearStatics(-81);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "h.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

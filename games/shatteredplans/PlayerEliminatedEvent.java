@@ -6,7 +6,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
     static a field_h;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_i = null;
         if (param0 != 2105376) {
           String var2 = (String) null;

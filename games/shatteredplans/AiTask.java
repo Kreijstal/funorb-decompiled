@@ -23,11 +23,11 @@ class AiTask extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_m = null;
         field_h = null;
         if (param0 != -122) {
-          AiTask.a((byte) 113);
+          AiTask.clearStatics((byte) 113);
           field_k = null;
           return;
         }

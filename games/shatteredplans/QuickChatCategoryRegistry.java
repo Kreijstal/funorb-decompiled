@@ -170,7 +170,7 @@ final class QuickChatCategoryRegistry {
         return var3;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_g = null;
         field_d = null;
         if (param0 <= 105) {
@@ -246,7 +246,7 @@ final class QuickChatCategoryRegistry {
             param0[var2_int].field_p = param0[var2_int].field_w;
           }
           if (param1 <= 32) {
-            QuickChatCategoryRegistry.a((byte) 21);
+            QuickChatCategoryRegistry.clearStatics((byte) 21);
           }
           stackIn_7_0 = (Sprite[]) (param0);
           return stackIn_7_0;

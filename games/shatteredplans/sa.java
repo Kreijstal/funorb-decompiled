@@ -80,7 +80,7 @@ final class sa {
         return ho.field_a - DualLinkDeque.field_f;
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_e = null;
         if (param0 != 2029303720) {

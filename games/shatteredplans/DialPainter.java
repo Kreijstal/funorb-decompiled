@@ -100,7 +100,7 @@ final class DialPainter implements WidgetPainter {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         field_a = null;
         field_g = null;

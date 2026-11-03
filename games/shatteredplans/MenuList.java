@@ -38,7 +38,7 @@ final class MenuList extends MenuComponent implements gj {
         this.field_x = param1;
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         field_v = null;
         field_A = null;
         field_w = null;

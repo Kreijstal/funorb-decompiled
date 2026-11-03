@@ -283,7 +283,7 @@ final class os extends MenuComponent {
         return super.findComponentAt((byte) 69, param1, param2);
     }
 
-    public static void d(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_u = null;
         if (!param0) {
           field_u = (Sprite[]) null;

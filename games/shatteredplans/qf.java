@@ -11,7 +11,7 @@ final class qf {
     static String field_b;
     static qr field_e;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 9952) {
           return;
         }

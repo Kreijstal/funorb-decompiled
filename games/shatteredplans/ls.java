@@ -7,7 +7,7 @@ final class ls {
     static ub field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 == -28527) {
           field_c = null;
           field_a = null;

@@ -12,7 +12,7 @@ final class PlacementOrder extends DualLinkNode {
     static String[] field_o;
     static Sprite[] field_p;
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_o = null;
         if (param0 == 21758) {
           field_q = null;

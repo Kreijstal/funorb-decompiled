@@ -338,7 +338,7 @@ final class HuffmanCodec {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_e = null;
         field_d = null;

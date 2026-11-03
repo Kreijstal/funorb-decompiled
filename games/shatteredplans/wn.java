@@ -31,7 +31,7 @@ final class wn {
         wn.a(gf.field_i, gf.field_a, gf.field_l, gf.field_f);
     }
 
-    public static void b() {
+    public static void clearStatics() {
         field_h = null;
         field_d = null;
         field_b = null;

@@ -17,7 +17,7 @@ final class IntrusiveNodeHashTable {
     static String field_j;
     static Archive field_g;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_h = null;
         field_d = null;
         field_i = null;

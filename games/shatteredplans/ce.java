@@ -99,7 +99,7 @@ final class ce extends rr {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_x = null;
         field_w = null;
         field_u = null;

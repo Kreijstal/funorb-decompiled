@@ -334,7 +334,7 @@ final class SoundPlayback extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_k = null;
         field_o = null;
         if (param0 >= -100) {

@@ -134,7 +134,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         var2Lifetime1.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = null;
         field_m = null;
         if (param0 != -65) {

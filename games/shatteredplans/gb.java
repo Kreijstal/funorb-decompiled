@@ -11,7 +11,7 @@ final class gb extends IntrusiveNode {
     int field_h;
     static int field_i;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_n = null;
         field_m = null;
         field_o = null;

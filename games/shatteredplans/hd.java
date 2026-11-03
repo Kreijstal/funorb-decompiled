@@ -71,7 +71,7 @@ final class hd extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         field_j = null;
         field_r = null;

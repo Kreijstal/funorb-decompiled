@@ -6,7 +6,7 @@ final class nn {
     static byte[][][] field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 50 / ((param0 - 1) / 38);
         field_c = (byte[][][]) null;
         field_a = null;

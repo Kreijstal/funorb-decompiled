@@ -9,7 +9,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static int[] field_a;
     volatile boolean field_c;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         if (param0 != -1314558012) {
           return;
@@ -214,7 +214,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var18 = var17 << 4;
           var19 = (var13 >> 4) - 36;
           if (param0 != 320) {
-            FullscreenFocusCanvas.b(62);
+            FullscreenFocusCanvas.clearStatics(62);
           }
           var20 = var19 << 4;
           var21 = 144;

@@ -83,7 +83,7 @@ final class lg extends IOException {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_f = null;
         int var1 = -34 / ((23 - param0) / 53);

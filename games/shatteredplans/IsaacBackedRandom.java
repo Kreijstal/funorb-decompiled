@@ -78,7 +78,7 @@ final class IsaacBackedRandom extends Random {
         return MusicVoice.field_o;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != -109) {

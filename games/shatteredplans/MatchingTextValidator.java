@@ -36,7 +36,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             var2Lifetime1 = var4;
           }
           if (param0) {
-            MatchingTextValidator.d(-29);
+            MatchingTextValidator.clearStatics(-29);
           }
           param1.field_mb = 0;
           param1.field_w = 0;
@@ -135,7 +135,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_t = null;
         field_s = null;
         field_r = null;

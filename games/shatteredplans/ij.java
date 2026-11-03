@@ -53,7 +53,7 @@ final class ij {
         return tm.field_k;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -29) {
           field_a = (kj) null;
           field_a = null;

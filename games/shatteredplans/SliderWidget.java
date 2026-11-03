@@ -116,7 +116,7 @@ final class SliderWidget extends FocusableWidget {
         return this.field_F;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_O = null;
         int var1 = 20 % ((param0 + 38) / 60);
         field_N = null;

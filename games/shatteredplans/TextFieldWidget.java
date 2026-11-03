@@ -622,7 +622,7 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStatics(int param0) {
         field_G = null;
         if (param0 <= 73) {
           return;

@@ -142,7 +142,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         this.updateHover(-10, 20, (UiWidget) null, (byte) 94);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_y = null;
         if (param0 < 6) {
           field_y = (ub) null;

@@ -154,7 +154,7 @@ final class StarAnnotation extends IntrusiveNode {
         return var2Lifetime2;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -1) {
           return;
         }

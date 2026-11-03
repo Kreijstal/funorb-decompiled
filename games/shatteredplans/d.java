@@ -63,7 +63,7 @@ final class d {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -117,7 +117,7 @@ final class d {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -12) {
-            d.a(-116);
+            d.clearStatics(-116);
           }
           stackIn_3_0 = param1 + TaskAi.a(1 - param1 + param2, param3, -11);
           return stackIn_3_0;

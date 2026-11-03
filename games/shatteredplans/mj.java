@@ -123,7 +123,7 @@ final class mj extends qr {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Rb = null;
         if (param0 == -4923) {
           field_yb = null;
@@ -186,7 +186,7 @@ final class mj extends qr {
         if (param0 < -58) {
           return !this.isSecondaryLinked((byte) 96) ? true : false;
         }
-        mj.g(-58);
+        mj.clearStatics(-58);
         return !this.isSecondaryLinked((byte) 96) ? true : false;
     }
 

@@ -92,7 +92,7 @@ final class gq {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 <= 30) {
-            gq.a(-49);
+            gq.clearStatics(-49);
           }
           var6 = MenuButton.field_C;
           nd[] var1 = var6;
@@ -275,7 +275,7 @@ final class gq {
         this.field_e = param3;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_b = null;
         field_g = null;
         field_f = null;

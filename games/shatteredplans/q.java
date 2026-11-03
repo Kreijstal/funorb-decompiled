@@ -21,7 +21,7 @@ final class q extends qr {
         this.a(-4783, param3, param6);
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 32 / ((param0 - 65) / 55);
         field_Cb = null;
         field_Ab = null;

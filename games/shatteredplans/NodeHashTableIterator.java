@@ -13,7 +13,7 @@ final class NodeHashTableIterator implements Iterator {
     private int field_d;
     static int field_h;
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_e = null;
         field_b = null;
         if (param0 != -1) {

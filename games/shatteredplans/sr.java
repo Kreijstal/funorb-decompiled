@@ -118,7 +118,7 @@ final class sr {
         this.a(107);
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         int var1 = 19 % ((24 - param0) / 60);
         field_N = null;
         field_F = null;

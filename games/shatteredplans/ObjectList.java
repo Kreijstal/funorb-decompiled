@@ -542,7 +542,7 @@ final class ObjectList {
             this.grow(-11470);
           }
           if (param0) {
-            ObjectList.a(((boolean[]) (((Object[]) (((Object[]) (this.field_b[7]))[2]))[1]))[4]);
+            ObjectList.clearStatics(((boolean[]) (((Object[]) (((Object[]) (this.field_b[7]))[2]))[1]))[4]);
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
@@ -558,7 +558,7 @@ final class ObjectList {
         this.field_b = new Object[10];
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_c = null;
         field_h = null;
         field_f = null;

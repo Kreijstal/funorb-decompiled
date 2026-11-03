@@ -25,10 +25,10 @@ final class GalaxyMap {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         if (param0 > -94) {
-          GalaxyMap.a((byte) -50);
+          GalaxyMap.clearStatics((byte) -50);
         }
         field_i = null;
         field_a = null;

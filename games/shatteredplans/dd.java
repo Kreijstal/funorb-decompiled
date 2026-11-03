@@ -52,7 +52,7 @@ final class dd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -14279) {
           return;
         }
@@ -104,7 +104,7 @@ final class dd {
           }
           var9 = stackIn_10_0;
           if (param1 != 1) {
-            dd.a(-10);
+            dd.clearStatics(-10);
           }
           if (gf.field_f > var6) {
             stackIn_15_0 = var6;

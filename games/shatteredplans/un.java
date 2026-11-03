@@ -53,7 +53,7 @@ final class un extends hb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_g = null;
         field_f = null;
         field_k = null;

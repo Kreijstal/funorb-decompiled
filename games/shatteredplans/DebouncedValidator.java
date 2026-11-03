@@ -87,7 +87,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_e = null;
         field_d = null;
         field_c = null;

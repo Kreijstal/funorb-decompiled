@@ -125,7 +125,7 @@ abstract class Dialog extends WidgetContainer {
 
     final void b(int param0, int param1, byte param2) {
         if (param2 >= -103) {
-          Dialog.m(11);
+          Dialog.clearStatics(11);
         }
         this.setBounds(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ep.field_a - param1 >> 1, param1);
     }
@@ -216,7 +216,7 @@ abstract class Dialog extends WidgetContainer {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != -1) {
           Dialog.a(56);
         }
@@ -250,7 +250,7 @@ abstract class Dialog extends WidgetContainer {
 
     final static boolean d(boolean param0) {
         if (!param0) {
-          Dialog.m(-66);
+          Dialog.clearStatics(-66);
         }
         return eh.field_P;
     }

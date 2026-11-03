@@ -119,7 +119,7 @@ final class DialogRoot extends SingleChildWidget {
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != -11857) {
-          DialogRoot.e(false);
+          DialogRoot.clearStatics(false);
         }
         if (null != this.field_p) {
           this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
@@ -478,14 +478,14 @@ final class DialogRoot extends SingleChildWidget {
         try {
           ql.a((byte) 50, MenuLabel.a(param1, 13));
           if (param0 <= 21) {
-            DialogRoot.e(false);
+            DialogRoot.clearStatics(false);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tc.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void e(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_E = null;
         field_F = null;
         field_D = null;

@@ -143,7 +143,7 @@ class MenuLabel extends MenuComponent {
         ByteArrayNode.a(we.field_b, -78, false);
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         field_y = null;
         field_z = null;
         field_v = null;

@@ -65,10 +65,10 @@ final class StandardMapReader implements MapGenerator {
         return var12;
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         if (param0 >= -63) {
-          StandardMapReader.a(-45);
+          StandardMapReader.clearStatics(-45);
         }
         field_g = null;
         field_h = null;

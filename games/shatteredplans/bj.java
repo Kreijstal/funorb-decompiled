@@ -13,9 +13,9 @@ final class bj extends WidgetContainer implements ButtonListener {
     static Sprite field_H;
     private String[] field_G;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 9075) {
-          bj.a(-83);
+          bj.clearStatics(-83);
         }
         field_E = null;
         field_D = null;

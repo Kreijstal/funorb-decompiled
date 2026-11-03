@@ -240,11 +240,11 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_G = null;
         field_N = null;
         if (param0 != 32) {
-          aa.a((byte) 69);
+          aa.clearStatics((byte) 69);
           field_P = null;
           return;
         }

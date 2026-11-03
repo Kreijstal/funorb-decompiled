@@ -15,7 +15,7 @@ final class dg extends qr {
         return var1;
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_yb = null;
         int var1 = -29 / ((12 - param0) / 44);
     }

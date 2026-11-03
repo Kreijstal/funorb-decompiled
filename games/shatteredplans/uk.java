@@ -5,7 +5,7 @@ final class uk {
     static int field_a;
     static Sprite[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         int var1 = 36 / ((-14 - param0) / 59);
     }

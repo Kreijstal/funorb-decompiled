@@ -266,7 +266,7 @@ abstract class ek extends UiWidget implements ni {
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         boolean stackIn_8_0 = false;
         if (param3 >= -66) {
-          ek.a(-78);
+          ek.clearStatics(-78);
         }
         stackIn_8_0 = (param2 <= param1) && (param2 + param5 > param1) && (param6 >= param4) && (param6 < param0 + param4);
         return stackIn_8_0;
@@ -291,7 +291,7 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_D = null;
         field_z = null;
         field_F = null;

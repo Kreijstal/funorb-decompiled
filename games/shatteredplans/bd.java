@@ -45,7 +45,7 @@ final class bd extends MenuLabel {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         field_E = null;
         if (param0 <= -104) {
           field_G = null;

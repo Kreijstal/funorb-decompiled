@@ -7,7 +7,7 @@ final class nl {
     static qr field_b;
     static qr field_d;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         if (param0 >= -50) {
           return;

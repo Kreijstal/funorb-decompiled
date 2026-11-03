@@ -238,7 +238,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStatics(byte param0) {
         field_w = null;
         field_o = null;
         if (param0 != -117) {

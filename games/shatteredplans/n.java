@@ -13,7 +13,7 @@ final class n extends IntrusiveNode {
     static String field_j;
     static qr[] field_n;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_n = null;
         field_k = null;
         field_m = null;

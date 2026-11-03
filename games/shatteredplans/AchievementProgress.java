@@ -42,7 +42,7 @@ final class AchievementProgress {
           var6 = param3.b((byte) -61);
           var7 = (ProjectUse) (param2.a((byte) 124));
           if (param1 != -256) {
-            AchievementProgress.a((byte) -9);
+            AchievementProgress.clearStatics((byte) -9);
           }
           while (var7 != null) {
             param4.writeByte(var7.field_o + 251, (byte) -125);
@@ -280,9 +280,9 @@ final class AchievementProgress {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 != -37) {
-          AchievementProgress.a((byte) 121);
+          AchievementProgress.clearStatics((byte) 121);
         }
         field_m = null;
         field_a = null;

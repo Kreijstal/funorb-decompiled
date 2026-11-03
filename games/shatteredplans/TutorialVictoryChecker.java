@@ -102,7 +102,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
             var28[var5] = var5;
           }
           if (param0 >= -9) {
-            TutorialVictoryChecker.c(-41);
+            TutorialVictoryChecker.clearStatics(-41);
           }
           var5Lifetime1 = 0;
           var29 = this.field_n;
@@ -260,7 +260,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         return new Player[]{};
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         field_k = null;
         if (param0 >= -93) {
           ub var2 = (ub) null;

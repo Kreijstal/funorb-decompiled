@@ -20,10 +20,10 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_i = null;
         if (param0 <= 123) {
-          ja.d((byte) 15);
+          ja.clearStatics((byte) 15);
         }
         field_l = null;
         field_n = null;

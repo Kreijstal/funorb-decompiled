@@ -13,7 +13,7 @@ final class uh {
     String field_c;
     static String[] field_g;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_g = null;
         field_d = null;
         field_e = null;

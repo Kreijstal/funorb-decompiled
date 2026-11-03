@@ -73,7 +73,7 @@ final class DialWidget extends FocusableWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_K = null;
         field_I = null;
         field_J = null;

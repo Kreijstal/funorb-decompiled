@@ -95,7 +95,7 @@ class hm extends DualLinkNode {
     hm() {
     }
 
-    public static void d(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_p = null;
         field_q = null;
         if (param0) {

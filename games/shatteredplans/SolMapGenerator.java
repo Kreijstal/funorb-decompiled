@@ -11,9 +11,9 @@ final class SolMapGenerator extends StandardMapGenerator {
     static String field_n;
     static String field_r;
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 >= -6) {
-          SolMapGenerator.b((byte) -19);
+          SolMapGenerator.clearStatics((byte) -19);
         }
         field_m = null;
         field_r = null;

@@ -52,7 +52,7 @@ abstract class FrameTimer {
 
     abstract void b(int param0);
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_b = null;
         if (param0 != 47) {
           return;

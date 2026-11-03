@@ -15,7 +15,7 @@ final class StarAbandonedEvent extends IntrusiveNode {
     static Sprite[] field_r;
     static PlatformTaskDispatcher field_l;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_r = null;
         field_o = null;
         field_l = null;

@@ -218,7 +218,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_H = null;
         field_I = null;
         if (param0 != 240) {

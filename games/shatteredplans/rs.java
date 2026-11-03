@@ -37,7 +37,7 @@ final class rs extends qr {
         int var4 = 8 / ((23 - param1) / 43);
     }
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         field_yb = null;
         field_zb = null;
         field_Eb = null;

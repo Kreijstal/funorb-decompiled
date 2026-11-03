@@ -381,7 +381,7 @@ class PcmPlayerService {
     void closeLine() {
     }
 
-    public static void f() {
+    public static void clearStatics() {
         field_f = null;
     }
 

@@ -15,7 +15,7 @@ final class hk extends il {
         }
     }
 
-    public static void p(int param0) {
+    public static void clearStatics(int param0) {
         field_nb = null;
         if (param0 != 20) {
           return;

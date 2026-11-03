@@ -270,7 +270,7 @@ final class ck {
           pr.field_a.addOutline(16777215);
           HuffmanCodec.field_b.addOutline(16777215);
           if (param6 != -8) {
-            ck.a(-23);
+            ck.clearStatics(-23);
           }
           ef.field_f.addOutline(16777215);
           mj.field_Kb.addOutline(16777215);
@@ -449,7 +449,7 @@ final class ck {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 <= 83) {

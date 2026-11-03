@@ -200,12 +200,12 @@ final class RandomAccessCacheFile {
     final void seek(long param0, byte param1) throws IOException {
         this.field_d.seek(param0);
         if (param1 <= 25) {
-          RandomAccessCacheFile.a(false);
+          RandomAccessCacheFile.clearStatics(false);
         }
         this.field_h = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (param0) {
           field_j = (String) null;
         }

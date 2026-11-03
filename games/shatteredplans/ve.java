@@ -63,11 +63,11 @@ final class ve extends qr {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_yb = null;
         field_Gb = null;
         if (param0 != 0) {
-          ve.g(15);
+          ve.clearStatics(15);
         }
     }
 

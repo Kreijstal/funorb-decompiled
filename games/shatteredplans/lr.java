@@ -132,7 +132,7 @@ final class lr {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         field_a = null;
         field_f = null;

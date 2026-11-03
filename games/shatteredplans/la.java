@@ -218,10 +218,10 @@ final class la extends qo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_h = null;
         if (param0 != 36) {
-          la.a((byte) 14);
+          la.clearStatics((byte) 14);
         }
         field_k = null;
         field_r = null;

@@ -37,7 +37,7 @@ final class wh {
         ta.field_b.addLast((byte) -113, var1Lifetime1);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (!param0) {
           return;
         }

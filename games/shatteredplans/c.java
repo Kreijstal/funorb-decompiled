@@ -151,7 +151,7 @@ final class c {
         field_g = 0;
     }
 
-    public static void b() {
+    public static void clearStatics() {
         field_f = null;
     }
 

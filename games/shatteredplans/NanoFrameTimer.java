@@ -48,7 +48,7 @@ final class NanoFrameTimer extends FrameTimer {
         return 0L;
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_m = null;
         field_j = null;
         if (param0 < 53) {

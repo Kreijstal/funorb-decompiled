@@ -13,12 +13,12 @@ final class QuickChatPhraseRegistry {
     static String field_c;
     static String[] field_g;
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_g = null;
         field_c = null;
         field_e = null;
         if (!param0) {
-          QuickChatPhraseRegistry.a(false);
+          QuickChatPhraseRegistry.clearStatics(false);
         }
         field_d = null;
         field_a = null;

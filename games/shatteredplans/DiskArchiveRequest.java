@@ -10,7 +10,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     SectorCacheStore field_B;
     static Sprite field_z;
 
-    public static void h(int param0) {
+    public static void clearStatics(int param0) {
         field_z = null;
         field_v = null;
         field_x = null;

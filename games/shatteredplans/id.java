@@ -8,7 +8,7 @@ final class id {
     static byte[] field_c;
     static Star field_d;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_d = null;
         field_a = null;
         field_c = null;

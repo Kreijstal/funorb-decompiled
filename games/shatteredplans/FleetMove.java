@@ -20,12 +20,12 @@ final class FleetMove extends QuaternaryLinkNode {
         return DerelictMapReader.field_a;
     }
 
-    public static void g(byte param0) {
+    public static void clearStatics(byte param0) {
         field_D = null;
         field_F = null;
         field_E = null;
         if (param0 != -106) {
-          FleetMove.g((byte) 34);
+          FleetMove.clearStatics((byte) 34);
         }
     }
 

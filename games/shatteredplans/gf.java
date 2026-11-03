@@ -1544,7 +1544,7 @@ final class gf {
         return;
     }
 
-    public static void c() {
+    public static void clearStatics() {
         field_h = null;
         field_c = null;
         field_d = null;

@@ -931,7 +931,7 @@ class StandardMapGenerator implements MapGenerator {
             }
           }
           if (param1 != 3) {
-            StandardMapGenerator.b(-112);
+            StandardMapGenerator.clearStatics(-112);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1186,7 +1186,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 0) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
           StandardMapGenerator.a((CipherPacketBuffer) null, (byte) 120);

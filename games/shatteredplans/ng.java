@@ -32,7 +32,7 @@ final class ng {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         int var1 = -9 / ((39 - param0) / 63);
         field_b = null;
         field_a = null;

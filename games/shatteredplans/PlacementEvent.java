@@ -10,7 +10,7 @@ final class PlacementEvent extends IntrusiveNode {
     static int field_k;
     static tm[] field_l;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_l = null;
         field_m = null;
         field_n = null;

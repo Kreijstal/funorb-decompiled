@@ -5,7 +5,7 @@ final class sn {
     static String field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_a = null;
         if (param0 < 6) {
           sn.a(-121, 89, 108, 123, 4, -128);
@@ -98,7 +98,7 @@ final class sn {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 != -76) {
-            sn.a(72);
+            sn.clearStatics(72);
           }
           var4 = param2.firstStar(18229);
           while (var4 != null) {

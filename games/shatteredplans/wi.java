@@ -96,12 +96,12 @@ final class wi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 < 84) {
-          wi.a((byte) -48);
+          wi.clearStatics((byte) -48);
         }
     }
 

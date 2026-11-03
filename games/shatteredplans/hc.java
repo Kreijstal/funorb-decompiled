@@ -63,7 +63,7 @@ final class hc {
         return var9;
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_c = null;
         if (param0 < 41) {
           hc.a(-92, -95, -94);

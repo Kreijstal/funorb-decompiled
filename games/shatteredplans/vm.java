@@ -78,7 +78,7 @@ final class vm extends qr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            vm.g(-38);
+            vm.clearStatics(-38);
           }
           if (!param2) {
             stackIn_6_0 = PlayerStats.field_c.stringWidth(param0);
@@ -126,7 +126,7 @@ final class vm extends qr {
           }
         }
         if (param2 > -101) {
-          vm.g(96);
+          vm.clearStatics(96);
         }
         if (this.field_Gb != -1) {
           var7 = this.field_yb[this.field_Gb];
@@ -377,11 +377,11 @@ final class vm extends qr {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStatics(int param0) {
         field_Jb = null;
         field_Fb = null;
         if (param0 != -22521) {
-          vm.g(-73);
+          vm.clearStatics(-73);
         }
         field_Cb = null;
         field_Ab = null;

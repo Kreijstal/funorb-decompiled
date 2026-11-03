@@ -57,7 +57,7 @@ abstract class bq {
         SocketArchiveNetworkClient.a(-24 + DerelictMapGenerator.field_m, 0, tg.field_a, 3, 640, 5, qo.field_b);
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         if (param0 != 1) {
           Archive var2 = (Archive) null;

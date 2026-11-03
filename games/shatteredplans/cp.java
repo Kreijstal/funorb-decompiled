@@ -180,7 +180,7 @@ final class cp {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (param0) {
           field_a = (qr) null;
           field_t = null;

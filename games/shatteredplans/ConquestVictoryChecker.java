@@ -39,7 +39,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 < 36) {
           return;
         }

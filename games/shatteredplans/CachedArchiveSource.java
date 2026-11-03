@@ -345,7 +345,7 @@ final class CachedArchiveSource extends ArchiveSource {
         return 0;
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_g = null;
         field_y = null;
         if (param0 != 114) {

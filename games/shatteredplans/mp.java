@@ -9,7 +9,7 @@ final class mp {
     static String[] field_c;
     static String field_f;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         field_f = null;
         if (param0 != -7909) {
           return;
@@ -23,7 +23,7 @@ final class mp {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          mp.a(104);
+          mp.clearStatics(104);
           return lg.field_c.b(107);
         }
         return lg.field_c.b(107);

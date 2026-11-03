@@ -6,7 +6,7 @@ final class bs {
     static int field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 <= 35) {
           return;
         }

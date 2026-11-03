@@ -70,7 +70,7 @@ final class oj extends ns implements ButtonListener {
         }
     }
 
-    public static void q(int param0) {
+    public static void clearStatics(int param0) {
         field_Cb = null;
         field_zb = null;
         field_Ib = null;
@@ -104,7 +104,7 @@ final class oj extends ns implements ButtonListener {
           DerelictVictoryChecker.a((byte) 28, param1, "");
           hr.a(param1, (byte) -127);
           if (param0 != 0) {
-            oj.q(13);
+            oj.clearStatics(13);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oj.KB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

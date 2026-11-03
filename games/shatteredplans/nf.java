@@ -166,7 +166,7 @@ final class nf {
           var2_int = param0.length;
           var3 = new int[var2_int];
           if (param1 != 3718) {
-            nf.b((byte) -75);
+            nf.clearStatics((byte) -75);
           }
           var4 = 1;
           while (true) {
@@ -254,7 +254,7 @@ final class nf {
         this.field_d = ArchiveRequest.field_s;
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_i = null;
         if (param0 != -25) {
           field_i = (String) null;

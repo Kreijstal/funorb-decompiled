@@ -290,7 +290,7 @@ abstract class tl extends GameApplet {
         q.g(-127);
     }
 
-    public static void k(int param0) {
+    public static void clearStatics(int param0) {
         field_p = null;
         field_z = null;
         field_o = null;
@@ -356,7 +356,7 @@ abstract class tl extends GameApplet {
         var2.readInt(16711680);
         var2.readInt(16711680);
         if (param0 != 24) {
-          tl.k(-44);
+          tl.clearStatics(-44);
         }
         var2.readInt(16711680);
         var2.readInt(param0 + 16711656);
