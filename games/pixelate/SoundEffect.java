@@ -64,7 +64,7 @@ final class SoundEffect {
         int var3;
         this.instruments = new SynthInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.f(255);
+          var3 = param0.readUnsignedByte(255);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.instruments[var2] = new SynthInstrument();

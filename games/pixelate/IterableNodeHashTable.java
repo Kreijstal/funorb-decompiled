@@ -59,7 +59,7 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var5 = null;
         try {
           if (param0.previous != null) {
-            param0.c(2779);
+            param0.unlink(2779);
           }
           var5 = this.field_e[(int)(param1 & (long)(param2 + this.field_a))];
           param0.previous = var5.previous;

@@ -176,7 +176,7 @@ final class BoardView {
         if (param0 <= 41) {
           return;
         }
-        this.field_c.c();
+        this.field_c.makeRasterTarget();
         SoftwareRasterizer.clear();
         this.a(-20, 0, 0);
         ClientException.field_f.a(19692);

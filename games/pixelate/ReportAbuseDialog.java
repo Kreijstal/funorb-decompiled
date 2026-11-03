@@ -107,23 +107,23 @@ final class ReportAbuseDialog extends SceneWidget {
           this.field_Ub = param12;
           this.field_Eb = new SceneWidget(0L, param6, MatchingTextValidator.field_m.toUpperCase());
           this.field_Eb.horizontalAlignment = 1;
-          this.a(this.field_Eb, (byte) 26);
+          this.addChild(this.field_Eb, (byte) 26);
           this.field_Ob = new SceneWidget(0L, param7);
-          this.field_Eb.a(this.field_Ob, (byte) 26);
+          this.field_Eb.addChild(this.field_Ob, (byte) 26);
           this.field_Qb = new SceneWidget(0L, (SceneWidget) null);
-          this.a(this.field_Qb, (byte) 26);
+          this.addChild(this.field_Qb, (byte) 26);
           if (param11 != null) {
             this.field_Tb = new SceneWidget(0L, param8, ge.field_d);
             this.field_Tb.field_N = 11184810;
             this.field_Tb.horizontalAlignment = 1;
-            this.field_Qb.a(this.field_Tb, (byte) 26);
+            this.field_Qb.addChild(this.field_Tb, (byte) 26);
             this.field_Fb = new SceneWidget(0L, param8, CachedTextLayout.field_j);
             this.field_Fb.field_N = 11184810;
             this.field_Fb.horizontalAlignment = 1;
-            this.field_Qb.a(this.field_Fb, (byte) 26);
+            this.field_Qb.addChild(this.field_Fb, (byte) 26);
             this.targetNameComponent = new SceneWidget(0L, param8);
             this.targetNameComponent.field_N = 16764006;
-            this.field_Qb.a(this.targetNameComponent, (byte) 26);
+            this.field_Qb.addChild(this.targetNameComponent, (byte) 26);
             this.targetNameComponent.field_qb = "|";
             if (!(Js5NetworkRequest.field_I < 5) ||
               !(wo.field_h < 2)) {
@@ -150,16 +150,16 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_8_5 = nh.field_d;
               }
               this.muteControl = new PairedTextColumns(stackIn_6_3, stackIn_6_4, stackIn_8_5);
-              this.field_Qb.a(this.muteControl, (byte) 26);
+              this.field_Qb.addChild(this.muteControl, (byte) 26);
             }
             var28 = new SceneWidget[3];
             var15 = var28;
             var28[0] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_Qb.a(var28[0], (byte) 26);
+            this.field_Qb.addChild(var28[0], (byte) 26);
             var28[1] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_Qb.a(var28[1], (byte) 26);
+            this.field_Qb.addChild(var28[1], (byte) 26);
             var28[2] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_Qb.a(var28[2], (byte) 26);
+            this.field_Qb.addChild(var28[2], (byte) 26);
             this.offenceButtons = new SceneWidget[d.field_b];
             for (var16 = 0; d.field_b > var16; var16++) {
               if (null != cd.field_e[var16]) {
@@ -168,7 +168,7 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_14_0 = this.offenceButtons[var16];
                 stackIn_15_1 = (param11 != null);
                 stackIn_14_0.field_rb = stackIn_15_1;
-                this.field_Qb.a(this.offenceButtons[var16], (byte) 26);
+                this.field_Qb.addChild(this.offenceButtons[var16], (byte) 26);
               }
             }
             this.field_Ib = new StringBuilder(12);
@@ -271,7 +271,7 @@ final class ReportAbuseDialog extends SceneWidget {
           this.field_Tb = new SceneWidget(0L, param8, SocialListEntry.field_Lb);
           this.field_Tb.horizontalAlignment = 1;
           this.field_Tb.field_N = 11184810;
-          this.field_Qb.a(this.field_Tb, (byte) 26);
+          this.field_Qb.addChild(this.field_Tb, (byte) 26);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Tb.font.wrappedLineCount(this.field_Tb.field_cb, var15_int);
@@ -353,7 +353,7 @@ final class ReportAbuseDialog extends SceneWidget {
             this.field_Ob = (SceneWidget) null;
           }
           param1 += 32;
-          param4.a(var7, (byte) 26);
+          param4.addChild(var7, (byte) 26);
           stackIn_3_0 = param1;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -770,7 +770,7 @@ final class ReportAbuseDialog extends SceneWidget {
             var7 = (SceneWidget) null;
             discarded$1 = this.a((SceneWidget) null, 19, (byte) -78, -14, (SceneWidget) null);
           }
-          param0.a(param4, (byte) 26);
+          param0.addChild(param4, (byte) 26);
           param1 = param1 + (var6_int - 0);
           stackIn_3_0 = param1;
           return stackIn_3_0;

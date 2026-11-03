@@ -79,7 +79,7 @@ final class WeightedLruCache {
         var5 = var7.a((byte) -55);
         if (param1 == 0) {
           if (var5 == null) {
-            var7.c(2779);
+            var7.unlink(2779);
             var7.e(17);
             this.remainingCapacity = this.remainingCapacity + var7.field_t;
             return null;
@@ -89,7 +89,7 @@ final class WeightedLruCache {
             this.field_e.a(var6, var7.field_e, -1);
             this.field_g.a((byte) 83, var6);
             ((ah) ((Object) var6)).field_q = 0L;
-            var7.c(2779);
+            var7.unlink(2779);
             var7.e(param1 ^ 17);
           } else {
             this.field_g.a((byte) 91, var7);
@@ -99,7 +99,7 @@ final class WeightedLruCache {
         }
         WeightedLruCache.releaseStatics(107);
         if (var5 == null) {
-          var7.c(2779);
+          var7.unlink(2779);
           var7.e(17);
           this.remainingCapacity = this.remainingCapacity + var7.field_t;
           return null;
@@ -109,7 +109,7 @@ final class WeightedLruCache {
           this.field_e.a(var6Lifetime1, var7.field_e, -1);
           this.field_g.a((byte) 83, var6Lifetime1);
           ((ah) ((Object) var6Lifetime1)).field_q = 0L;
-          var7.c(2779);
+          var7.unlink(2779);
           var7.e(param1 ^ 17);
         } else {
           this.field_g.a((byte) 91, var7);
@@ -131,7 +131,7 @@ final class WeightedLruCache {
           if (param0 == null) {
             return;
           }
-          param0.c(2779);
+          param0.unlink(2779);
           param0.e(17);
           this.remainingCapacity = this.remainingCapacity + param0.field_t;
           return;

@@ -123,7 +123,7 @@ final class td {
             }
           }
           li.field_d = new Sprite(48, 48);
-          li.field_d.c();
+          li.field_d.makeRasterTarget();
           if (param0 < 117) {
             var8 = (Sprite[]) null;
             td.a(-3, 104, 72, (Sprite[]) null, (byte) -122, -90);

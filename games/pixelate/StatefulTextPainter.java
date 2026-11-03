@@ -43,7 +43,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         RuntimeException var2_ref = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          param1.c(2779);
+          param1.unlink(2779);
           if (param0 != -48) {
             return;
           }
@@ -177,7 +177,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static String a(String param0, byte param1, String param2, String param3) {
+    final static String replaceCharacter(String param0, byte param1, String param2, String param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

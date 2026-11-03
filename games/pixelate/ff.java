@@ -55,7 +55,7 @@ final class ff {
         field_g = null;
     }
 
-    final static String a(int param0, String param1, byte param2) {
+    final static String requestRemoveFriend(int param0, String param1, byte param2) {
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_11_0 = null;
@@ -96,7 +96,7 @@ final class ff {
             }
             break;
           }
-          var8.c(2779);
+          var8.unlink(2779);
           var8.e(17);
           if (param2 != -106) {
             field_d = -123L;
@@ -107,7 +107,7 @@ final class ff {
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(160, 1);
-          var9.b((byte) -41, param1);
+          var9.writeString((byte) -41, param1);
           var9.f(-var5 + var9.position, -1);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);

@@ -35,7 +35,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             var3 = (String) null;
             ImageProducerRasterBuffer.a(54, (String) null);
           }
-          stackIn_5_0 = (DisplayNameForm.a(param1, -99) != null);
+          stackIn_5_0 = (DisplayNameForm.findFriend(param1, -99) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         }
     }
 
-    final void a(java.awt.Graphics param0, boolean param1, int param2, int param3) {
+    final void drawImage(java.awt.Graphics param0, boolean param1, int param2, int param3) {
         try {
           this.b(param1);
           param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) (this));
@@ -104,7 +104,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         }
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, byte param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, byte param3) {
         try {
           this.field_i = param2;
           this.field_a = param0;

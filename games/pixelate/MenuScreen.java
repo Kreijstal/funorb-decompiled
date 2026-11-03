@@ -76,7 +76,7 @@ abstract class MenuScreen {
             var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param3.c();
+            param3.makeRasterTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param3.field_F * param1 + param0;
             var14 = param3.field_F - param4;
@@ -526,7 +526,7 @@ abstract class MenuScreen {
           var4 = var5;
           var5 = var6;
         }
-        pe.field_b.c();
+        pe.field_b.makeRasterTarget();
         this.c(0);
         ClientException.field_f.a(19692);
         SpriteEffectHelpers.a(pe.field_b.pixels, var4, var5);

@@ -60,7 +60,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         int var1 = 16777215;
         gb.field_b = new Sprite(108, 100);
         int var2 = 65793;
-        gb.field_b.c();
+        gb.field_b.makeRasterTarget();
         SoftwareRasterizer.fillRectangle(4, 0, SoftwareRasterizer.field_j - 8, SoftwareRasterizer.field_d, var1);
         SoftwareRasterizer.fillCircle(4, 0, 4, var2);
         SoftwareRasterizer.fillCircle(-4 + SoftwareRasterizer.field_j - 1, 0, 4, var2);
@@ -74,12 +74,12 @@ final class Js5NetworkRequest extends ArchiveRequest {
           SoftwareRasterizer.drawHorizontalLine(4, 0, -8 + SoftwareRasterizer.field_j, var2);
           SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
           HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
-          HighscoresScreen.field_q.c();
+          HighscoresScreen.field_q.makeRasterTarget();
           SoftwareRasterizer.fillCircle(4, SoftwareRasterizer.field_d, 4, var2);
           SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
           SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
           of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
-          of.field_h.c();
+          of.field_h.makeRasterTarget();
           HighscoresScreen.field_q.drawVerticalFlip(0, 0);
           ClientException.field_f.a(19692);
           return;
@@ -90,12 +90,12 @@ final class Js5NetworkRequest extends ArchiveRequest {
         SoftwareRasterizer.drawHorizontalLine(4, 0, -8 + SoftwareRasterizer.field_j, var2);
         SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
         HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
-        HighscoresScreen.field_q.c();
+        HighscoresScreen.field_q.makeRasterTarget();
         SoftwareRasterizer.fillCircle(4, SoftwareRasterizer.field_d, 4, var2);
         SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
         SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
         of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
-        of.field_h.c();
+        of.field_h.makeRasterTarget();
         HighscoresScreen.field_q.drawVerticalFlip(0, 0);
         ClientException.field_f.a(19692);
     }

@@ -144,8 +144,8 @@ final class HighscoresScreen extends MenuScreen {
         try {
           var2 = 88 % ((31 - param0) / 43);
           var11 = MusicCrossfadeStream.field_o;
-          var3 = var11.f(255);
-          var4 = var11.f(255);
+          var3 = var11.readUnsignedByte(255);
+          var4 = var11.readUnsignedByte(255);
           if (var3 == 0) {
             var5_ref_sm = (sm) (MusicPatchNode.field_J.c(1504642273));
             if (var5_ref_sm == null) {
@@ -162,13 +162,13 @@ final class HighscoresScreen extends MenuScreen {
             var8 = 0;
             while (true) {
               if (var8 < var6_int) {
-                var7[var8 >> 2] = var7[var8 >> 2] + (var11.f(255) << (cm.a(var8, 3) << 8));
+                var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(255) << (cm.a(var8, 3) << 8));
                 var8++;
                 if (var9 == 0) {
                   continue;
                 }
               } else {
-                var5_ref_sm.c(2779);
+                var5_ref_sm.unlink(2779);
               }
               break;
             }
@@ -192,7 +192,7 @@ final class HighscoresScreen extends MenuScreen {
               }
               if (decompiledFrameRemainder0) {
                 if (var6 != null) {
-                  var6.c(2779);
+                  var6.unlink(2779);
                   if (var9 == 0) {
                     return;
                   }
@@ -204,7 +204,7 @@ final class HighscoresScreen extends MenuScreen {
               return;
             }
           }
-          CheckboxPainter.a(1, "LR1: " + jm.b(-35), (Throwable) null);
+          CheckboxPainter.reportClientError(1, "LR1: " + jm.b(-35), (Throwable) null);
           na.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

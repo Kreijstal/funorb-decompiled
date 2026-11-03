@@ -121,7 +121,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
                 var5.a(17, -1, FullscreenFocusCanvas.field_e);
               }
             } else {
-              var5.a(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
+              var5.appendButton(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
             }
             if (3 != param0.field_a) {
               if (param0.field_a == 6) {
@@ -135,7 +135,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               this.transitionToContent(new AccountTermsPanel(this), -113);
               return;
             }
-            var5.a(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
+            var5.appendButton(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
           }
           this.transitionToContent(var5, -115);
           return;

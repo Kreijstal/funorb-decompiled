@@ -142,9 +142,9 @@ final class vf {
             var7 = 0;
             if (null == var6.children) {
               var6.field_Pb = new SceneWidget(0L, SceneWidget.field_T);
-              var6.a(var6.field_Pb, (byte) 26);
+              var6.addChild(var6.field_Pb, (byte) 26);
               var6.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
-              var6.a(var6.field_Ob, (byte) 26);
+              var6.addChild(var6.field_Ob, (byte) 26);
               var6.h(-257);
               var7 = 1;
             }

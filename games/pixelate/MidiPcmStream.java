@@ -91,7 +91,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void b(int param0, boolean param1, int param2) {
+    final synchronized void setChannelGain(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
@@ -123,7 +123,7 @@ final class MidiPcmStream extends PcmStream {
           if (param0.field_v < 0) {
             return true;
           }
-          param0.c(param1 ^ 2704);
+          param0.unlink(param1 ^ 2704);
           if (param0.field_y > 0 &&
             param0 == this.field_P[param0.field_I][param0.field_y]) {
             this.field_P[param0.field_I][param0.field_y] = null;
@@ -181,7 +181,7 @@ final class MidiPcmStream extends PcmStream {
             if (!(var3.field_v >= 0)) {
               this.field_G[var3.field_I][var3.field_A] = null;
             }
-            var3.c(2779);
+            var3.unlink(2779);
           }
           var3 = (MusicPatchNode) (this.field_N.field_r.last(param1 + 1504642273));
         }
@@ -560,7 +560,7 @@ final class MidiPcmStream extends PcmStream {
           if (param1.field_v >= 0 && (null == param1.field_G ||
             param1.field_G.isSamplePositionOutOfRange())) {
             param1.a(param3);
-            param1.c(2779);
+            param1.unlink(2779);
             if (param1.field_y > 0 &&
               this.field_P[param1.field_I][param1.field_y] == param1) {
               this.field_P[param1.field_I][param1.field_y] = null;
@@ -645,7 +645,7 @@ final class MidiPcmStream extends PcmStream {
           }
           param1.a(param3);
           if (param1.field_v >= 0) {
-            param1.c(2779);
+            param1.unlink(2779);
             if (param1.field_y > 0 &&
               this.field_P[param1.field_I][param1.field_y] == param1) {
               this.field_P[param1.field_I][param1.field_y] = null;
@@ -1295,7 +1295,7 @@ final class MidiPcmStream extends PcmStream {
         this.midiReader = new MidiFileReader();
         this.field_N = new MusicPatchPcmStream(this);
         this.patches = new NodeHashTable(128);
-        this.b(256, false, -1);
+        this.setChannelGain(256, false, -1);
         this.a((byte) 126, true);
     }
 
@@ -1324,7 +1324,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_N = new MusicPatchPcmStream(this);
         try {
           this.patches = param0.patches;
-          this.b(256, false, -1);
+          this.setChannelGain(256, false, -1);
           this.a((byte) 106, true);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');

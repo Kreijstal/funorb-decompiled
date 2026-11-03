@@ -85,7 +85,7 @@ final class TabbedPanel extends SceneWidget {
           var14 = Pixelate.field_H ? 1 : 0;
           try {
             var17 = new aj();
-            var17.field_s = param1.f(255);
+            var17.field_s = param1.readUnsignedByte(255);
             var17.field_p = param1.readInt(param0 ^ param0);
             var17.field_r = new int[var17.field_s];
             var17.field_q = new int[var17.field_s];
@@ -95,18 +95,18 @@ final class TabbedPanel extends SceneWidget {
             var17.field_u = new int[var17.field_s];
             for (var5 = 0; var5 < var17.field_s; var5++) {
               try {
-                var6_int = param1.f(255);
+                var6_int = param1.readUnsignedByte(255);
                 if (var6_int != 0 &&
                   1 != var6_int &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var19 = param1.h(param0 + 10);
-                    var8 = param1.h(5);
-                    var9 = param1.f(255);
+                    var19 = param1.readString(param0 + 10);
+                    var8 = param1.readString(5);
+                    var9 = param1.readUnsignedByte(255);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param1.h(5);
+                      var10[var11_int] = param1.readString(5);
                     }
                     var20 = new byte[var9][];
                     var18 = var20;
@@ -116,7 +116,7 @@ final class TabbedPanel extends SceneWidget {
                         var13 = param1.readInt(param0 + 5);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(var20[var12_int], 0, -76, var13);
+                        param1.readBytes(var20[var12_int], 0, -76, var13);
                       }
                     }
                     var17.field_r[var5] = var6_int;
@@ -131,9 +131,9 @@ final class TabbedPanel extends SceneWidget {
                     var17.field_w[var5] = var20;
                   }
                 } else {
-                  var15 = param1.h(param0 ^ -2);
+                  var15 = param1.readString(param0 ^ -2);
                   var7 = var15;
-                  var8 = param1.h(param0 + 10);
+                  var8 = param1.readString(param0 + 10);
                   var9 = 0;
                   if (var6_int == 1) {
                     var9 = param1.readInt(param0 + 5);
@@ -227,13 +227,13 @@ final class TabbedPanel extends SceneWidget {
             var9 = new SceneWidget(0L, param1);
             var9.field_cb = param2[var8_int];
             this.field_Lb[var8_int] = var9;
-            this.a(var9, (byte) 26);
+            this.addChild(var9, (byte) 26);
           }
-          this.a(this.field_Kb, (byte) 26);
+          this.addChild(this.field_Kb, (byte) 26);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_Kb.a(param4[var11], (byte) 26);
+            this.field_Kb.addChild(param4[var11], (byte) 26);
             var11++;
           }
           this.field_Jb = param5;

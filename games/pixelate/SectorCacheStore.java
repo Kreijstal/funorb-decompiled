@@ -305,7 +305,7 @@ final class SectorCacheStore {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.f(255);
+          var2_int = param1.readUnsignedByte(255);
           if (param0 <= 32) {
             return false;
           }
@@ -327,7 +327,7 @@ final class SectorCacheStore {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int param0, int param1) {
         try {
           int var17 = 0;
           int incrementValue$2 = 0;

@@ -155,11 +155,11 @@ final class VorbisSample extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.f(255);
+            var6_int = var2.readUnsignedByte(255);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(var6, 0, -72, var5);
+          var2.readBytes(var6, 0, -72, var5);
           this.packets[var4] = var6;
         }
     }

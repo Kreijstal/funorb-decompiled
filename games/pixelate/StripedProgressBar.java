@@ -104,7 +104,7 @@ final class StripedProgressBar extends UiComponent {
           return;
         }
         try {
-          DraggableWidget.field_I.a(param0, (byte) 26);
+          DraggableWidget.field_I.addChild(param0, (byte) 26);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

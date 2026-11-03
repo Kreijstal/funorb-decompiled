@@ -16,7 +16,7 @@ final class ProxyAuthenticationException extends IOException {
         super(param0);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 == 73) {

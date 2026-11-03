@@ -93,7 +93,7 @@ final class Matrix3 {
           if (param1.length() == 0) {
             return true;
           }
-          if (DateInputWidget.a(param0, param1, (byte) -123)) {
+          if (DateInputWidget.containsTextOrReverse(param0, param1, (byte) -123)) {
             return false;
           }
           if (CipherPacketBuffer.a(param0, (byte) -47, param1)) {

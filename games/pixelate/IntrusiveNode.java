@@ -93,11 +93,11 @@ class IntrusiveNode {
           TextTableInitializer.field_g = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
           l.field_s = new SceneWidget(0L, ni.field_s, rh.field_m);
           jm.field_b = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
-          StripedProgressBar.field_O.a(TextTableInitializer.field_g, (byte) 26);
+          StripedProgressBar.field_O.addChild(TextTableInitializer.field_g, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            StripedProgressBar.field_O.a(l.field_s, (byte) 26);
+            StripedProgressBar.field_O.addChild(l.field_s, (byte) 26);
           }
-          StripedProgressBar.field_O.a(jm.field_b, (byte) 26);
+          StripedProgressBar.field_O.addChild(jm.field_b, (byte) 26);
           jm.field_b.field_Ib.applyStyle(-27813, TextFieldValidator.field_h);
           var23 = jm.field_b.field_Ib;
           var24 = var23;
@@ -135,28 +135,28 @@ class IntrusiveNode {
           }
           MusicPatchNode.field_p = new SceneWidget(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
           MidiPcmStream.field_E = new SceneWidget(0L, (SceneWidget) null);
-          MidiPcmStream.field_E.a(AlphaContainer.field_P, (byte) 26);
-          MidiPcmStream.field_E.a(DiskCacheWorker.field_a, (byte) 26);
-          DiskCacheWorker.field_a.a(BlastFromThePastBackground.field_n, (byte) 26);
-          DiskCacheWorker.field_a.a(IsaacRandom.field_b, (byte) 26);
-          DiskCacheWorker.field_a.a(LoginDialog.field_pb, (byte) 26);
+          MidiPcmStream.field_E.addChild(AlphaContainer.field_P, (byte) 26);
+          MidiPcmStream.field_E.addChild(DiskCacheWorker.field_a, (byte) 26);
+          DiskCacheWorker.field_a.addChild(BlastFromThePastBackground.field_n, (byte) 26);
+          DiskCacheWorker.field_a.addChild(IsaacRandom.field_b, (byte) 26);
+          DiskCacheWorker.field_a.addChild(LoginDialog.field_pb, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            DiskCacheWorker.field_a.a(be.field_P, (byte) 26);
+            DiskCacheWorker.field_a.addChild(be.field_P, (byte) 26);
           }
-          DiskCacheWorker.field_a.a(PasswordValidator.field_o, (byte) 26);
-          DiskCacheWorker.field_a.a(SocketJs5Transport.field_t, (byte) 26);
-          DiskCacheWorker.field_a.a(aj.field_k, (byte) 26);
+          DiskCacheWorker.field_a.addChild(PasswordValidator.field_o, (byte) 26);
+          DiskCacheWorker.field_a.addChild(SocketJs5Transport.field_t, (byte) 26);
+          DiskCacheWorker.field_a.addChild(aj.field_k, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            MidiPcmStream.field_E.a(lg.field_c, (byte) 26);
+            MidiPcmStream.field_E.addChild(lg.field_c, (byte) 26);
           }
-          MidiPcmStream.field_E.a(MusicPatchNode.field_p, (byte) 26);
+          MidiPcmStream.field_E.addChild(MusicPatchNode.field_p, (byte) 26);
           jm.field_h = new SceneWidget(0L, TextFieldValidator.field_h);
           jm.field_h.verticalAlignment = 0;
           jm.field_h.horizontalAlignment = 1;
           DelegatingCanvas.field_h = new SceneWidget(0L, nk.field_f, ig.field_c.toUpperCase());
           TickClock.field_e = new SceneWidget(0L, cm.field_o);
-          TickClock.field_e.a(jm.field_h, (byte) 26);
-          TickClock.field_e.a(DelegatingCanvas.field_h, (byte) 26);
+          TickClock.field_e.addChild(jm.field_h, (byte) 26);
+          TickClock.field_e.addChild(DelegatingCanvas.field_h, (byte) 26);
           an.field_a = new SceneWidget(0L, ff.field_g);
           an.field_a.applyStyle(-27813, TextFieldValidator.field_h);
           var16 = an.field_a;
@@ -168,12 +168,12 @@ class IntrusiveNode {
           WeightedLruCache.field_h = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
           wa.field_g = new SceneWidget(0L, ni.field_s, rh.field_m);
           Vector3.field_c = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
-          vd.field_a.a(MatchingTextValidator.field_q, (byte) 26);
-          vd.field_a.a(WeightedLruCache.field_h, (byte) 26);
+          vd.field_a.addChild(MatchingTextValidator.field_q, (byte) 26);
+          vd.field_a.addChild(WeightedLruCache.field_h, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            vd.field_a.a(wa.field_g, (byte) 26);
+            vd.field_a.addChild(wa.field_g, (byte) 26);
           }
-          vd.field_a.a(Vector3.field_c, (byte) 26);
+          vd.field_a.addChild(Vector3.field_c, (byte) 26);
           ValidatedTextWidget.field_kb = new SceneWidget(0L, be.field_R, ra.field_f.toUpperCase());
           VerticalScrollbar.field_Qb = new SceneWidget(0L, io.field_f);
           dc.field_a = new SceneWidget(0L, ff.field_a);
@@ -253,24 +253,24 @@ class IntrusiveNode {
           var17 = nk.field_e;
           var17.horizontalAlignment = 1;
           Bzip2State.field_A = new SceneWidget(0L, (SceneWidget) null);
-          Bzip2State.field_A.a(VerticalScrollbar.field_Qb, (byte) 26);
-          Bzip2State.field_A.a(dc.field_a, (byte) 26);
-          dc.field_a.a(sm.field_m, (byte) 26);
+          Bzip2State.field_A.addChild(VerticalScrollbar.field_Qb, (byte) 26);
+          Bzip2State.field_A.addChild(dc.field_a, (byte) 26);
+          dc.field_a.addChild(sm.field_m, (byte) 26);
           for (var18Lifetime2 = 0; param12 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(LinkButtonPainter.field_a.length < 2)) && (3 != var18Lifetime2 ||
               !(ff.field_i <= 1))) {
-              dc.field_a.a(dh.field_b[var18Lifetime2], (byte) 26);
+              dc.field_a.addChild(dh.field_b[var18Lifetime2], (byte) 26);
               for (var19 = 0; AccountTermsPanel.field_L[var18Lifetime2].length > var19; var19++) {
                 if (AccountTermsPanel.field_L[var18Lifetime2][var19] != null) {
-                  dc.field_a.a(AccountTermsPanel.field_L[var18Lifetime2][var19], (byte) 26);
+                  dc.field_a.addChild(AccountTermsPanel.field_L[var18Lifetime2][var19], (byte) 26);
                 }
               }
             }
           }
-          Bzip2State.field_A.a(wm.field_d, (byte) 26);
-          Bzip2State.field_A.a(ep.field_a, (byte) 26);
-          Bzip2State.field_A.a(nk.field_e, (byte) 26);
+          Bzip2State.field_A.addChild(wm.field_d, (byte) 26);
+          Bzip2State.field_A.addChild(ep.field_a, (byte) 26);
+          Bzip2State.field_A.addChild(nk.field_e, (byte) 26);
           ih.field_g = new SceneWidget(0L, pj.field_i, WhirlpoolHasher.field_k.toUpperCase());
           ContentTransitionDialog.field_eb = new SceneWidget(0L, nk.field_f, NameAvailabilityValidator.field_o.toUpperCase());
           return;
@@ -370,7 +370,7 @@ class IntrusiveNode {
         return true;
     }
 
-    final void c(int param0) {
+    final void unlink(int param0) {
         if (this.previous == null) {
           return;
         }

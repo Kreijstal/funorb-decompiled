@@ -37,12 +37,12 @@ final class aq {
           if (param3 != -20867) {
             aq.a((byte) 117);
           }
-          var7 = DisplayNameForm.a(param2, 114);
+          var7 = DisplayNameForm.findFriend(param2, 114);
           if (var7 == null) {
             stackIn_10_0 = AlphaContainer.a(ug.field_p, param3 + 20935, new String[]{param2});
             return stackIn_10_0;
           }
-          var7.c(param3 ^ -23386);
+          var7.unlink(param3 ^ -23386);
           var7.e(param3 + 20884);
           aj.field_t = aj.field_t - 1;
           var5 = aa.field_f;
@@ -50,7 +50,7 @@ final class aq {
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(160, 3);
-          var5.b((byte) -41, param0);
+          var5.writeString((byte) -41, param0);
           var5.f(var5.position - var6, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);

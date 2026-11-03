@@ -253,7 +253,7 @@ public final class Pixelate extends NetworkGameClient {
             IntrusiveDequeCursor.a(0);
             MidiPcmStream.field_t = 11;
             dj.field_c = false;
-            SingleChildContainer.field_F = MusicCrossfadeStream.field_o.h(5);
+            SingleChildContainer.field_F = MusicCrossfadeStream.field_o.readString(5);
             continue;
           }
           if (TextLayoutLine.field_e == 14) {
@@ -325,9 +325,9 @@ public final class Pixelate extends NetworkGameClient {
                 var4Lifetime1Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 41);
                 var5Lifetime2 = MusicCrossfadeStream.field_o.a((byte) 14);
                 var6 = MusicCrossfadeStream.field_o.a((byte) -117);
-                var7Lifetime2 = MusicCrossfadeStream.field_o.f(255);
-                var8 = MusicCrossfadeStream.field_o.f(255);
-                var9 = MusicCrossfadeStream.field_o.f(255);
+                var7Lifetime2 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+                var8 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+                var9 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 var19 = new byte[var9];
                 var17 = var19;
                 var13 = var17;
@@ -350,7 +350,7 @@ public final class Pixelate extends NetworkGameClient {
                 continue;
               }
               if (TextLayoutLine.field_e == 64) {
-                var4Lifetime1Lifetime3 = MusicCrossfadeStream.field_o.f(255);
+                var4Lifetime1Lifetime3 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 var5Lifetime4 = var4Lifetime1Lifetime3 & ~((MatchController) (var3_ref)).field_a.field_k;
                 ((MatchController) (var3_ref)).field_a.field_k = var4Lifetime1Lifetime3;
                 if (var5Lifetime4 != 1 &&
@@ -363,7 +363,7 @@ public final class Pixelate extends NetworkGameClient {
                 continue;
               }
               if (TextLayoutLine.field_e == 65) {
-                ((MatchController) (var3_ref)).field_a.field_p = MusicCrossfadeStream.field_o.f(255);
+                ((MatchController) (var3_ref)).field_a.field_p = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 if (null == ro.field_e) {
                   continue;
                 }
@@ -371,7 +371,7 @@ public final class Pixelate extends NetworkGameClient {
                 continue;
               }
               if (TextLayoutLine.field_e == 66) {
-                var4Lifetime1Lifetime4 = MusicCrossfadeStream.field_o.f(255);
+                var4Lifetime1Lifetime4 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 var5Lifetime5 = ~((MatchController) (var3_ref)).field_o & var4Lifetime1Lifetime4;
                 ((MatchController) (var3_ref)).field_o = var4Lifetime1Lifetime4;
                 if (ro.field_e == null) {
@@ -388,7 +388,7 @@ public final class Pixelate extends NetworkGameClient {
                 continue;
               }
               if (71 == TextLayoutLine.field_e) {
-                var4Lifetime1Lifetime5 = MusicCrossfadeStream.field_o.f(255);
+                var4Lifetime1Lifetime5 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 if (ro.field_e == null) {
                   continue;
                 }
@@ -406,9 +406,9 @@ public final class Pixelate extends NetworkGameClient {
             continue;
           }
           IntrusiveDequeCursor.a(0);
-          stackIn_91_0 = (MusicCrossfadeStream.field_o.f(255) == 0) ? 0 : 1;
+          stackIn_91_0 = (MusicCrossfadeStream.field_o.readUnsignedByte(255) == 0) ? 0 : 1;
           var3Lifetime1 = stackIn_91_0;
-          var4_ref_String__ = new String[MusicCrossfadeStream.field_o.f(255)];
+          var4_ref_String__ = new String[MusicCrossfadeStream.field_o.readUnsignedByte(255)];
           var5Lifetime1 = MusicCrossfadeStream.field_o.a(0);
           if (var5Lifetime1 < 0) {
             var5Lifetime1 = -2;
@@ -416,9 +416,9 @@ public final class Pixelate extends NetworkGameClient {
           for (var6 = 0; var6 < var4_ref_String__.length; var6++) {
             var4_ref_String__[var6] = MusicCrossfadeStream.field_o.e(118);
           }
-          var6 = MusicCrossfadeStream.field_o.f(255);
-          var7Lifetime1 = MusicCrossfadeStream.field_o.f(255);
-          var8Lifetime1 = MusicCrossfadeStream.field_o.f(255);
+          var6 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+          var7Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+          var8Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
           var9Lifetime1 = MusicCrossfadeStream.field_o.readInt(0);
           HighscoresScreen.field_p = null;
           stackIn_100_0 = (TextLayoutLine.field_e == 58);
@@ -426,7 +426,7 @@ public final class Pixelate extends NetworkGameClient {
           bg.a(2);
           var15 = new MatchController(var4_ref_String__, var5Lifetime1, var3Lifetime1 != 0, var9Lifetime1, var6, var7Lifetime1, var8Lifetime1);
           var15.a((byte) 20, MusicCrossfadeStream.field_o);
-          if (1 == MusicCrossfadeStream.field_o.f(255)) {
+          if (1 == MusicCrossfadeStream.field_o.readUnsignedByte(255)) {
             var15.f(-57);
           }
           if (TextLayoutLine.field_e != 57) {
@@ -527,10 +527,10 @@ public final class Pixelate extends NetworkGameClient {
         LobbyGame.b((byte) 87);
         SecondaryNodeHashTable.a(true);
         LobbyPlayer.d(true);
-        qj.a(false);
+        qj.releaseStaticReferences(false);
         ArchiveIndex.b(117);
         GzipDecoder.b(-8);
-        ArchiveProvider.b((byte) -63);
+        ArchiveProvider.releaseStatics((byte) -63);
         rm.a((byte) -116);
         cn.a(-59);
         ModalStack.m(param0 - 12614);
@@ -563,7 +563,7 @@ public final class Pixelate extends NetworkGameClient {
         pb.c(0);
         mj.a(param0 ^ 3805);
         kf.d(126);
-        PlayerBoard.a((byte) 125);
+        PlayerBoard.releaseStatics((byte) 125);
         GreenGrowTheRushesBackground.f(0);
         BlastFromThePastBackground.b((byte) 34);
         BouncedownBackground.b((byte) -13);
@@ -596,7 +596,7 @@ public final class Pixelate extends NetworkGameClient {
         bj.b((byte) 109);
         fc.a(32);
         GameResultsScreen.f((byte) -49);
-        l.e(param0 - 20899);
+        l.releaseStatics(param0 - 20899);
         mp.a(true);
         PlayerController.f(103);
         fe.a(param0 ^ -23078);
@@ -633,7 +633,7 @@ public final class Pixelate extends NetworkGameClient {
         TriangleMesh.c((byte) -79);
         cl.a(938035464);
         bq.a((byte) 124);
-        cd.a(false);
+        cd.releaseStatics(false);
         oi.releaseStatics(param0 ^ param0);
         DelegatingCanvas.a(param0 - 23207);
         ri.b(10);
@@ -650,7 +650,7 @@ public final class Pixelate extends NetworkGameClient {
         TextLayout.c(-127);
         UiComponent.f(param0 - 23118);
         TextButton.j(89);
-        SingleChildContainer.a(0);
+        SingleChildContainer.releaseStatics(0);
         ResizableModalPanel.l(127);
         ModalPanel.a(-43);
         UiContainer.d((byte) -105);
@@ -668,7 +668,7 @@ public final class Pixelate extends NetworkGameClient {
         QuickChatPhraseDefinition.d((byte) -58);
         WeightedLruCache.releaseStatics(1);
         SocketConnector.d(29731);
-        ProxyAuthenticationException.a((byte) 73);
+        ProxyAuthenticationException.releaseStatics((byte) 73);
         NanoTickClock.d(false);
         ImageProducerRasterBuffer.c(-56);
         vm.releaseStatics(116);
@@ -721,11 +721,11 @@ public final class Pixelate extends NetworkGameClient {
         NodeHashTableIterator.a(true);
         SecondaryNodeDequeIterator.a(param0 ^ -23078);
         ue.releaseStatics(30);
-        rh.a((byte) 64);
+        rh.releaseStatics((byte) 64);
         gi.a(-112);
         lc.a((byte) 90);
         cm.a(128);
-        m.b((byte) -10);
+        m.releaseStatics((byte) -10);
         ThreeSliceButtonPainter.c(param0 ^ -23054);
         LinkButtonPainter.a(param0 ^ -23069);
         GradientOutlineTextPainter.c(-102);
@@ -745,7 +745,7 @@ public final class Pixelate extends NetworkGameClient {
         io.releaseStatics(105);
         EmailCredentials.a((byte) 124);
         gq.e(100);
-        wk.c(-19101);
+        wk.releaseStatics(-19101);
         ge.a(param0 - 23119);
         id.c(-118);
         AccountMessagePanel.releaseStaticReferences(param0 ^ 23118);
@@ -771,7 +771,7 @@ public final class Pixelate extends NetworkGameClient {
         fp.a(param0 + 329385410);
         sm.a((byte) -115);
         df.a(3);
-        WidgetStyleLayer.a(0);
+        WidgetStyleLayer.releaseStatics(0);
         TextLayoutLine.b((byte) -26);
         bi.a(-8);
         QueuedInput.a(-5778);
@@ -943,18 +943,18 @@ public final class Pixelate extends NetworkGameClient {
             if (var12.children == null) {
               var14 = param4 | param6;
               var12.field_Nb = new SceneWidget(0L, of.field_i);
-              var12.a(var12.field_Nb, (byte) 26);
+              var12.addChild(var12.field_Nb, (byte) 26);
               var12.field_Nb.horizontalAlignment = 1;
               var12.field_qc = new SceneWidget(0L, SceneWidget.field_T);
-              var12.a(var12.field_qc, (byte) 26);
+              var12.addChild(var12.field_qc, (byte) 26);
               var12.field_Yb = new SceneWidget(0L, of.field_i);
-              var12.a(var12.field_Yb, (byte) 26);
+              var12.addChild(var12.field_Yb, (byte) 26);
               var12.field_Yb.field_C = 0;
               var12.field_Sb = new SceneWidget(0L, of.field_i);
-              var12.a(var12.field_Sb, (byte) 26);
+              var12.addChild(var12.field_Sb, (byte) 26);
               var12.field_Sb.field_C = 0;
               var12.field_gc = new SceneWidget(0L, SceneWidget.field_T);
-              var12.a(var12.field_gc, (byte) 26);
+              var12.addChild(var12.field_gc, (byte) 26);
               var12.field_gc.horizontalAlignment = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
@@ -970,23 +970,23 @@ public final class Pixelate extends NetworkGameClient {
                 stackIn_13_4 = SceneWidget.field_T;
               }
               stackIn_12_0.field_Zb = new SceneWidget(stackIn_12_3, stackIn_13_4);
-              var12.a(var12.field_Zb, (byte) 26);
+              var12.addChild(var12.field_Zb, (byte) 26);
               var12.field_ac = new SceneWidget[fj.field_b];
               var12.field_ic = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << ek.field_a) != 0) {
-                var12.field_Zb.a(var12.field_ic, (byte) 26);
+                var12.field_Zb.addChild(var12.field_ic, (byte) 26);
               }
               var12.field_Jb = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << ef.field_f) != 0) {
-                var12.field_Zb.a(var12.field_Jb, (byte) 26);
+                var12.field_Zb.addChild(var12.field_Jb, (byte) 26);
               }
               var12.field_Fb = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << PasswordValidator.field_m) != 0) {
-                var12.field_Zb.a(var12.field_Fb, (byte) 26);
+                var12.field_Zb.addChild(var12.field_Fb, (byte) 26);
               }
               var12.field_Vb = new SceneWidget(0L, (SceneWidget) null);
               if (0 != (1 << ClientException.field_e & var14)) {
-                var12.field_Zb.a(var12.field_Vb, (byte) 26);
+                var12.field_Zb.addChild(var12.field_Vb, (byte) 26);
               }
               var45 = var12.field_ic;
               var44 = var12.field_Vb;
@@ -998,7 +998,7 @@ public final class Pixelate extends NetworkGameClient {
               for (var18_int = 0; fj.field_b > var18_int; var18_int++) {
                 var12.field_ac[var18_int] = new SceneWidget(0L, (SceneWidget) null);
                 if (0 != (var14 & 1 << var18_int + cl.field_j)) {
-                  var12.field_Zb.a(var12.field_ac[var18_int], (byte) 26);
+                  var12.field_Zb.addChild(var12.field_ac[var18_int], (byte) 26);
                 }
                 var12.field_ac[var18_int].verticalAlignment = 1;
               }
@@ -1016,19 +1016,19 @@ public final class Pixelate extends NetworkGameClient {
                 stackIn_31_4 = SceneWidget.field_T;
               }
               stackIn_30_0.field_Gb = new SceneWidget(stackIn_30_3, stackIn_31_4);
-              var12.a(var12.field_Gb, (byte) 26);
+              var12.addChild(var12.field_Gb, (byte) 26);
               var12.field_Gb.horizontalAlignment = 2;
               var12.field_Kb = new SceneWidget(0L, SceneWidget.field_T);
-              var12.a(var12.field_Kb, (byte) 26);
+              var12.addChild(var12.field_Kb, (byte) 26);
               var12.field_Wb = new SceneWidget(0L, dn.field_c);
-              var12.a(var12.field_Wb, (byte) 26);
+              var12.addChild(var12.field_Wb, (byte) 26);
               var12.field_lc = new SceneWidget(0L, dn.field_c);
-              var12.a(var12.field_lc, (byte) 26);
+              var12.addChild(var12.field_lc, (byte) 26);
               var12.field_rc = new SceneWidget(0L, TextFieldValidator.field_h);
-              var12.a(var12.field_rc, (byte) 26);
+              var12.addChild(var12.field_rc, (byte) 26);
               var12.h(-257);
               var12.field_jc = new SceneWidget(0L, ul.field_p);
-              var12.a(var12.field_jc, (byte) 26);
+              var12.addChild(var12.field_jc, (byte) 26);
               var13 = 1;
             }
             var12.field_Nb.field_cb = null;
@@ -1721,13 +1721,13 @@ public final class Pixelate extends NetworkGameClient {
         KeyboardInputHandler.a((byte) -59, pj.field_a);
         KeyboardInputHandler.a((byte) -59, var6);
         vn.field_c = new Sprite(16, 16);
-        vn.field_c.c();
+        vn.field_c.makeRasterTarget();
         var6.drawScaledAveraged(0, 0, 16, 16);
         CanvasRasterBuffer.field_b = new Sprite(22, 48);
         MenuScreen.field_c = new Sprite(22, 48);
-        CanvasRasterBuffer.field_b.c();
+        CanvasRasterBuffer.field_b.makeRasterTarget();
         SoftwareRasterizer.fillRoundedRectangle(-22, 0, 42, 48, 20, 65793);
-        MenuScreen.field_c.c();
+        MenuScreen.field_c.makeRasterTarget();
         CanvasRasterBuffer.field_b.drawHorizontalFlip(0, 0);
         ClientException.field_f.a(19692);
         var7 = new Sprite[fo.field_u.length][];

@@ -83,8 +83,8 @@ final class PairedTextColumns extends SceneWidget {
           this.field_Fb = new SceneWidget(0L, param1);
           this.field_Ib = new SceneWidget(0L, param2);
           this.field_Ib.field_cb = param3;
-          this.a(this.field_Fb, (byte) 26);
-          this.a(this.field_Ib, (byte) 26);
+          this.addChild(this.field_Fb, (byte) 26);
+          this.addChild(this.field_Ib, (byte) 26);
           this.h(-257);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

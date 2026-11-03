@@ -146,11 +146,11 @@ final class CipherPacketBuffer extends PacketBuffer {
                 if (var19 == 0) {
                   if (stackIn_18_0.children == null) {
                     var7.field_Pb = new SceneWidget(0L, SceneWidget.field_T);
-                    var7.a(var7.field_Pb, (byte) 26);
+                    var7.addChild(var7.field_Pb, (byte) 26);
                     var7.field_Eb = new SceneWidget(0L, of.field_i);
-                    var7.a(var7.field_Eb, (byte) 26);
+                    var7.addChild(var7.field_Eb, (byte) 26);
                     var7.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
-                    var7.a(var7.field_Ob, (byte) 26);
+                    var7.addChild(var7.field_Ob, (byte) 26);
                     var7.field_Eb.horizontalAlignment = 2;
                     var7.h(-257);
                     var8 = 1;

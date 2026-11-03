@@ -23,7 +23,7 @@ final class SoundEnvelope {
     }
 
     final void decode(PacketBuffer param0) {
-        this.field_a = param0.f(255);
+        this.field_a = param0.readUnsignedByte(255);
         this.field_c = param0.readInt(0);
         this.field_g = param0.readInt(0);
         this.decodeSegments(param0);
@@ -50,7 +50,7 @@ final class SoundEnvelope {
 
     final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
-        this.segmentCount = param0.f(255);
+        this.segmentCount = param0.readUnsignedByte(255);
         this.segmentTimes = new int[this.segmentCount];
         this.field_j = new int[this.segmentCount];
         for (var2 = 0; var2 < this.segmentCount; var2++) {

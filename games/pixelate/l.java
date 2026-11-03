@@ -16,7 +16,7 @@ final class l extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_r = null;
         if (param0 == 2219) {
@@ -27,7 +27,7 @@ final class l extends MenuScreen {
           field_q = null;
           return;
         }
-        l.e(8);
+        l.releaseStatics(8);
         field_u = null;
         field_p = null;
         field_o = null;
@@ -83,7 +83,7 @@ final class l extends MenuScreen {
     final void c(byte param0) {
         la.a(TickClock.field_a, TickClock.field_a, false, -25528);
         if (param0 > -13) {
-          l.e(-78);
+          l.releaseStatics(-78);
         }
     }
 

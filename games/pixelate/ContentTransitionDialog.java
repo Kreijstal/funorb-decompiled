@@ -298,7 +298,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
 
     private final void d(UiComponent param0, int param1) {
         if (null != this.field_bb) {
-          this.field_bb.c(2779);
+          this.field_bb.unlink(2779);
         }
         if (param1 <= 101) {
           return;

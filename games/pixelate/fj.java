@@ -103,7 +103,7 @@ final class fj {
           try {
             var5 = -63 % ((param2 - 41) / 63);
             var4 = param3.getGraphics();
-            ClientException.field_f.a(var4, false, param0, param1);
+            ClientException.field_f.drawImage(var4, false, param0, param1);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -254,7 +254,7 @@ class UiComponent extends IntrusiveNode {
               return;
             }
           }
-          bd.field_a.c();
+          bd.field_a.makeRasterTarget();
           var1.drawHalfSize(0, 0);
           LinkButtonPainter.a((byte) 92);
           return;

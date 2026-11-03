@@ -49,7 +49,7 @@ final class DiskCacheWorker implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_D = var7.field_G.a(111, (int)var7.field_q);
+                  var7.field_D = var7.field_G.read(111, (int)var7.field_q);
                   var7.field_v = false;
                 }
               } else {
@@ -63,7 +63,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var2_ref));
+              CheckboxPainter.reportClientError(1, (String) null, (Throwable) ((Object) var2_ref));
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {
@@ -103,7 +103,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 < 63) {
             this.run();
           }
-          this.field_b.a(-115, param1);
+          this.field_b.addLast(-115, param1);
           this.field_c = this.field_c + 1;
           this.field_b.notifyAll();
         }
@@ -153,7 +153,7 @@ final class DiskCacheWorker implements Runnable {
           if (param2 < 53) {
             field_f = (el) null;
           }
-          var4.field_D = param1.a(126, param0);
+          var4.field_D = param1.read(126, param0);
           var4.field_t = true;
           var4.field_v = false;
           stackIn_17_0 = var4;

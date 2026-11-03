@@ -161,7 +161,7 @@ final class ArchiveIndex {
         var16 = Pixelate.field_H ? 1 : 0;
         try {
           var17 = new PacketBuffer(la.a(param1, 0));
-          var4 = var17.f(255);
+          var4 = var17.readUnsignedByte(255);
           if (5 <= var4 &&
             var4 <= 7) {
             if (var4 >= 6) {
@@ -169,7 +169,7 @@ final class ArchiveIndex {
             } else {
               this.revision = 0;
             }
-            var5 = var17.f(255);
+            var5 = var17.readUnsignedByte(255);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 >= 7) {
@@ -227,7 +227,7 @@ final class ArchiveIndex {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.groupCount > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(var21, 0, -128, 64);
+                var17.readBytes(var21, 0, -128, 64);
                 this.groupDigests[this.groupIds[var10Lifetime3]] = var21;
               }
             }

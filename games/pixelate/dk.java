@@ -123,7 +123,7 @@ final class dk {
         try {
           var9 = new CipherPacketBuffer(param1.a((byte) 24, "", "logo.fo3d"));
           var11 = var9;
-          var3 = var11.f(255);
+          var3 = var11.readUnsignedByte(255);
           var11.n(-110);
           qn.field_q = MenuInputState.a(var11, (byte) 77);
           ck.field_b = new TriangleMesh[var3];

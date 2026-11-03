@@ -273,10 +273,10 @@ final class FallingPieceView {
             var19_ref = var23;
             var24 = SocialListEntry.field_Hb[1];
             var20_ref = var24;
-            var23.c();
+            var23.makeRasterTarget();
             LoginCredentials.field_e.field_f[0].f(0, 0);
             fq.field_o.field_f[0].a(0, 0, var21);
-            var24.c();
+            var24.makeRasterTarget();
             LoginCredentials.field_e.field_f[1].f(0, 0);
             fq.field_o.field_f[1].a(0, 0, var21);
             ClientException.field_f.a(param2 ^ 19692);

@@ -467,7 +467,7 @@ final class PcmSampleStream extends PcmStream {
               this.field_u = 0;
               this.field_y = 0;
               this.field_o = 0;
-              this.c(2779);
+              this.unlink(2779);
               param0 = this.field_A;
             }
             this.field_A = 0;
@@ -485,7 +485,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 < 0) {
           if (this.field_B <= 0) {
             this.cancelRamp();
-            this.c(2779);
+            this.unlink(2779);
             return;
           }
           this.positionQ8 = 0;
@@ -493,7 +493,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 >= var5) {
           if (this.field_B >= 0) {
             this.cancelRamp();
-            this.c(2779);
+            this.unlink(2779);
             return;
           }
           this.positionQ8 = var5 - 1;
@@ -606,7 +606,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.positionQ8 >= var5) {
             this.positionQ8 = var5;
             this.cancelRamp();
-            this.c(2779);
+            this.unlink(2779);
           }
           return;
         }
@@ -615,7 +615,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.positionQ8 = -1;
         this.cancelRamp();
-        this.c(2779);
+        this.unlink(2779);
     }
 
     final static PcmSampleStream createAtRatePercent(PcmSample param0, int param1, int param2) {
@@ -985,7 +985,7 @@ final class PcmSampleStream extends PcmStream {
           this.field_u = 0;
           this.field_y = 0;
           this.field_o = 0;
-          this.c(2779);
+          this.unlink(2779);
           return true;
         }
         if (this.field_o >= var1) {
@@ -1110,7 +1110,7 @@ final class PcmSampleStream extends PcmStream {
         int var2Lifetime1;
         if (param0 == 0) {
           this.setVolumeQ6(0);
-          this.c(2779);
+          this.unlink(2779);
           return;
         }
         if (this.field_y != 0) {
@@ -1170,7 +1170,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_A = 0;
         this.field_x = 0;
         this.field_o = 0;
-        this.c(2779);
+        this.unlink(2779);
     }
 
     private final void refreshGains() {
@@ -1444,7 +1444,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 < 0) {
           if (this.field_B <= 0) {
             this.cancelRamp();
-            this.c(2779);
+            this.unlink(2779);
             return;
           }
           this.positionQ8 = 0;
@@ -1452,7 +1452,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 >= var7) {
           if (this.field_B >= 0) {
             this.cancelRamp();
-            this.c(2779);
+            this.unlink(2779);
             return;
           }
           this.positionQ8 = var7 - 1;
@@ -1579,7 +1579,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.positionQ8 >= var7) {
             this.positionQ8 = var7;
             this.cancelRamp();
-            this.c(2779);
+            this.unlink(2779);
           }
           return;
         }
@@ -1589,7 +1589,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.positionQ8 = -1;
         this.cancelRamp();
-        this.c(2779);
+        this.unlink(2779);
         return;
     }
 

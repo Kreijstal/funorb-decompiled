@@ -291,7 +291,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

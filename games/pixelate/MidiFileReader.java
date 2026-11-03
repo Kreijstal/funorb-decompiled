@@ -24,8 +24,8 @@ final class MidiFileReader {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.buffer.f(255);
-          var4 = this.buffer.j(127);
+          var3 = this.buffer.readUnsignedByte(255);
+          var4 = this.buffer.readVarInt(127);
           if (var3 == 47) {
             this.buffer.position = this.buffer.position + var4;
             return 1;
@@ -45,10 +45,10 @@ final class MidiFileReader {
         var3Lifetime1 = field_a[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.buffer.f(255) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.buffer.readUnsignedByte(255) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.buffer.f(255) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.buffer.readUnsignedByte(255) << 16;
         }
         return var4Lifetime1;
     }
@@ -122,7 +122,7 @@ final class MidiFileReader {
     }
 
     final void readDelta(int param0) {
-        int var2 = this.buffer.j(127);
+        int var2 = this.buffer.readVarInt(127);
         this.trackTicks[param0] = this.trackTicks[param0] + var2;
     }
 
@@ -155,7 +155,7 @@ final class MidiFileReader {
           var2 != 247) {
           return this.decodeMessagePayload(param0, var2);
         }
-        var3 = this.buffer.j(127);
+        var3 = this.buffer.readVarInt(127);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.buffer.payload[this.buffer.position] & 255;

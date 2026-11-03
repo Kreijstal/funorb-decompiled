@@ -109,7 +109,7 @@ final class DualLinkDeque {
         return null;
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int param0, DualLinkNode param1) {
         try {
           if (param1.secondaryPrevious != null) {
             param1.e(17);

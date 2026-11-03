@@ -76,7 +76,7 @@ final class ph extends IntrusiveNode {
             if (AchievementsScreen.field_q != 4) {
               return -1;
             }
-            Match.field_h.a(ConditionalTextValue.field_d, ModalStack.field_L, 8);
+            Match.field_h.attachTransport(ConditionalTextValue.field_d, ModalStack.field_L, 8);
             ConditionalTextValue.field_d = null;
             KiteBackground.field_o = null;
             AchievementsScreen.field_q = 0;
@@ -122,11 +122,11 @@ final class ph extends IntrusiveNode {
           EmailConfirmationValidator.field_u = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
           Vector3.field_e = new SceneWidget(0L, ni.field_s, ScrollContainer.field_Jb);
           sk.field_e = new SceneWidget(0L, dn.field_c);
-          wa.field_f.a(SceneWidget.field_E, (byte) 26);
-          wa.field_f.a(EmailConfirmationValidator.field_u, (byte) 26);
-          wa.field_f.a(Vector3.field_e, (byte) 26);
-          wa.field_f.a(ma.field_z, (byte) 26);
-          wa.field_f.a(sk.field_e, (byte) 26);
+          wa.field_f.addChild(SceneWidget.field_E, (byte) 26);
+          wa.field_f.addChild(EmailConfirmationValidator.field_u, (byte) 26);
+          wa.field_f.addChild(Vector3.field_e, (byte) 26);
+          wa.field_f.addChild(ma.field_z, (byte) 26);
+          wa.field_f.addChild(sk.field_e, (byte) 26);
           ma.field_z.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);
           ma.field_z.field_Gb.field_Ib.verticalAlignment = 1;
           var5 = ma.field_z.field_Gb.field_Ib;

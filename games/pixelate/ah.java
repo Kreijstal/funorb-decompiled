@@ -63,7 +63,7 @@ abstract class ah extends DualLinkNode {
               DialWidget.field_P) {
               if (var8_ref_aa.field_q != null) {
               }
-              var10 = TextWidgetPainter.a(var8_ref_aa, -77);
+              var10 = TextWidgetPainter.formatChatPrefix(var8_ref_aa, -77);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_aa.field_g);
               var12 = lc.a(var8_ref_aa, false);
               var8_ref_aa.field_q = new SceneWidget(0L, oi.field_e, var11);
@@ -81,7 +81,7 @@ abstract class ah extends DualLinkNode {
           for (var8 = 0; AlphaContainer.field_L > var8; var8++) {
             var14 = MenuScreen.field_e[var8];
             if (var14.field_q != null) {
-              l.field_p.field_Fb.a(var14.field_q, (byte) 26);
+              l.field_p.field_Fb.addChild(var14.field_q, (byte) 26);
               var14.field_q.a(var7Lifetime1, param1, param3, 256, var14.field_q.g(0));
               if (var14.field_q.field_P != 0) {
                 var4 = var14;
@@ -122,7 +122,7 @@ abstract class ah extends DualLinkNode {
         for (var8Lifetime1 = 0; AlphaContainer.field_L > var8Lifetime1; var8Lifetime1++) {
           var16 = MenuScreen.field_e[var8Lifetime1];
           if (var16.field_q != null) {
-            l.field_p.field_Fb.a(var16.field_q, (byte) 26);
+            l.field_p.field_Fb.addChild(var16.field_q, (byte) 26);
             var16.field_q.a(var7Lifetime1, param1, param3, 256, var16.field_q.g(0));
             if (var16.field_q.field_P != 0) {
               var4 = var16;

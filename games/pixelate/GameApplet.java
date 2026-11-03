@@ -168,7 +168,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              CheckboxPainter.a(1, (String) null, (Throwable) (var1));
+              CheckboxPainter.reportClientError(1, (String) null, (Throwable) (var1));
               this.redirectToErrorPage(-18310, "crash");
             }
             this.shutdownApplet(true, -238);
@@ -353,7 +353,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              CheckboxPainter.a(1, (String) null, var8_ref);
+              CheckboxPainter.reportClientError(1, (String) null, var8_ref);
               this.redirectToErrorPage(-18310, "crash");
             }
             return;
@@ -517,7 +517,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_c = true;
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.a("loggedout", (byte) -84, AudioService.a(13867));
+              JavaScriptBridge.callWindowFunction("loggedout", (byte) -84, AudioService.a(13867));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

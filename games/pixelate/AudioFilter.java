@@ -73,13 +73,13 @@ final class AudioFilter {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.f(255);
+        var3 = param0.readUnsignedByte(255);
         this.pairCounts[0] = var3 >> 4;
         this.pairCounts[1] = var3 & 15;
         if (var3 != 0) {
           this.gainEndpoints[0] = param0.a((byte) -124);
           this.gainEndpoints[1] = param0.a((byte) 111);
-          var4 = param0.f(255);
+          var4 = param0.readUnsignedByte(255);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.pairCounts[var5]; var6++) {
               this.frequencies[var5][0][var6] = param0.a((byte) -3);

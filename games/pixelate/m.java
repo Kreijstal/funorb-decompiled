@@ -6,7 +6,7 @@ final class m extends IntrusiveNode {
     static String field_l;
     int field_m;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         if (param0 != -10) {
           field_l = (String) null;

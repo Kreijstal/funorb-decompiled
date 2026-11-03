@@ -16,10 +16,10 @@ final class ScrollContainer extends SceneWidget {
         try {
           this.field_Ib = new SceneWidget(0L, param2);
           this.field_Gb = new VerticalScrollbar(0L, param3);
-          this.a(this.field_Ib, (byte) 26);
-          this.a(this.field_Gb, (byte) 26);
+          this.addChild(this.field_Ib, (byte) 26);
+          this.addChild(this.field_Gb, (byte) 26);
           this.field_Fb = param1;
-          this.field_Ib.a(param1, (byte) 26);
+          this.field_Ib.addChild(param1, (byte) 26);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

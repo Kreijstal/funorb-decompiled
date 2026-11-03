@@ -220,7 +220,7 @@ final class ProxySocketConnector extends SocketConnector {
           var2Lifetime1 = -48 / ((param0 - 31) / 39);
           for (var3 = 0; 50 > var3; var3++) {
             gd.field_f[var3] = new Sprite(63, 63);
-            gd.field_f[var3].c();
+            gd.field_f[var3].makeRasterTarget();
             var4 = (double)var3 * 6.283185307179586 / 50.0;
             var6 = (int)(16.0 * Math.sin(var4)) >> 1;
             SoftwareRasterizer.a(512, 512, 48 + var6 << 4, 255, var13);

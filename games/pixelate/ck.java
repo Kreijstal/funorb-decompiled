@@ -200,7 +200,7 @@ final class ck {
           DraggableWidget.field_I = new SceneWidget(0L, (SceneWidget) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            CheckboxPainter.a(1, "QC1", (Throwable) null);
+            CheckboxPainter.reportClientError(1, "QC1", (Throwable) null);
             return;
           }
           param2.discardPackedGroups = false;
@@ -210,7 +210,7 @@ final class ck {
           var4 = fl.c(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;
-            CheckboxPainter.a(1, "QC2", (Throwable) null);
+            CheckboxPainter.reportClientError(1, "QC2", (Throwable) null);
             return;
           }
           oo.a(-1, var4);
@@ -222,7 +222,7 @@ final class ck {
           var6 = SoftwareRasterizer.field_d;
           var16 = SoftwareRasterizer.field_k;
           fe.field_b = new Sprite(10, 14);
-          fe.field_b.c();
+          fe.field_b.makeRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
@@ -275,7 +275,7 @@ final class ck {
               if (!param0) {
                 return true;
               }
-              var3 = (String) (JavaScriptBridge.a("getcookies", (byte) -113, param1));
+              var3 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -113, param1));
               var4 = Puzzle.a(var3, (byte) -52, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

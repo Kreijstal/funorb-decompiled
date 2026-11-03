@@ -17,7 +17,7 @@ final class NodeHashTable {
         int var6 = Pixelate.field_H ? 1 : 0;
         if (param0 != -25484) {
           byte[] var7 = (byte[]) null;
-          NodeHashTable.a((CipherPacketBuffer) null, (byte[]) null, -80, 17);
+          NodeHashTable.readPackedByteArray((CipherPacketBuffer) null, (byte[]) null, -80, 17);
         }
         IntrusiveNode var4 = this.field_g[(int)(param1 & (long)(this.field_a - 1))];
         this.field_i = var4.field_a;
@@ -47,18 +47,18 @@ final class NodeHashTable {
         if (param1 >= -68) {
           NodeHashTable.b(-102);
         }
-        ff.field_h.a(nd.field_b.field_g, (byte) 26);
-        ff.field_h.a(ValidatedTextWidget.field_kb, (byte) 26);
+        ff.field_h.addChild(nd.field_b.field_g, (byte) 26);
+        ff.field_h.addChild(ValidatedTextWidget.field_kb, (byte) 26);
         ra.field_e = new SceneWidget(0L, cm.field_o);
         kh.field_a = new SceneWidget(0L, (SceneWidget) null);
-        ra.field_e.a(ih.field_g, (byte) 26);
-        ra.field_e.a(kh.field_a, (byte) 26);
-        kh.field_a.a(StripedProgressBar.field_O, (byte) 26);
-        kh.field_a.a(ContentTransitionDialog.field_eb, (byte) 26);
+        ra.field_e.addChild(ih.field_g, (byte) 26);
+        ra.field_e.addChild(kh.field_a, (byte) 26);
+        kh.field_a.addChild(StripedProgressBar.field_O, (byte) 26);
+        kh.field_a.addChild(ContentTransitionDialog.field_eb, (byte) 26);
         DebouncedValidator.a((byte) 32, param0);
     }
 
-    final static byte[] a(CipherPacketBuffer param0, byte[] param1, int param2, int param3) {
+    final static byte[] readPackedByteArray(CipherPacketBuffer param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -78,7 +78,7 @@ final class NodeHashTable {
         try {
           if (param3 < 59) {
             var9 = (byte[]) null;
-            NodeHashTable.a((CipherPacketBuffer) null, (byte[]) null, 62, -90);
+            NodeHashTable.readPackedByteArray((CipherPacketBuffer) null, (byte[]) null, 62, -90);
           }
           var4_int = param0.c(param2, (byte) -34);
           if (var4_int == 0) {
@@ -129,7 +129,7 @@ final class NodeHashTable {
             this.a(-40);
           }
           if (param2.previous != null) {
-            param2.c(2779);
+            param2.unlink(2779);
           }
           var5 = this.field_g[(int)(param0 & (long)(-1 + this.field_a))];
           param2.previous = var5.previous;

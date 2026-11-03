@@ -13,19 +13,19 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static void a(byte param0) {
         ui.field_f = new Sprite(7, 25);
-        ui.field_f.c();
+        ui.field_f.makeRasterTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, 28, 25, 7, 16711935);
         SoftwareRasterizer.drawRoundedRectangle(0, 0, 28, 25, 7, 65793);
         ClientException.field_f.a(19692);
         NameAvailabilityValidator.field_q = new Sprite(7, 25);
-        NameAvailabilityValidator.field_q.c();
+        NameAvailabilityValidator.field_q.makeRasterTarget();
         SoftwareRasterizer.drawRoundedRectangle(1, 3, 28, 21, 6, 16777215);
         SoftwareRasterizer.drawRoundedRectangle(1, 2, 28, 21, 6, 16777215);
         if (param0 > 91) {
           SoftwareRasterizer.drawRoundedRectangle(0, 2, 28, 21, 6, 65793);
           ClientException.field_f.a(19692);
           di.field_c = new Sprite(8, 25);
-          di.field_c.c();
+          di.field_c.makeRasterTarget();
           SoftwareRasterizer.drawRoundedRectangle(SoftwareRasterizer.field_j - 28, 3, 28, 21, 6, 16777215);
           SoftwareRasterizer.drawRoundedRectangle(-28 + SoftwareRasterizer.field_j, 2, 28, 21, 6, 16777215);
           SoftwareRasterizer.drawRoundedRectangle(-28 + (SoftwareRasterizer.field_j - 1), 2, 28, 21, 6, 65793);
@@ -36,7 +36,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         SoftwareRasterizer.drawRoundedRectangle(0, 2, 28, 21, 6, 65793);
         ClientException.field_f.a(19692);
         di.field_c = new Sprite(8, 25);
-        di.field_c.c();
+        di.field_c.makeRasterTarget();
         SoftwareRasterizer.drawRoundedRectangle(SoftwareRasterizer.field_j - 28, 3, 28, 21, 6, 16777215);
         SoftwareRasterizer.drawRoundedRectangle(-28 + SoftwareRasterizer.field_j, 2, 28, 21, 6, 16777215);
         SoftwareRasterizer.drawRoundedRectangle(-28 + (SoftwareRasterizer.field_j - 1), 2, 28, 21, 6, 65793);

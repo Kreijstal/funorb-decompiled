@@ -26,7 +26,7 @@ final class MatchHud {
         ma.field_o = new IntrusiveDeque();
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          MatchHud.a(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
+          MatchHud.loadCommonUiResources(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
@@ -162,7 +162,7 @@ final class MatchHud {
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
-              JavaScriptBridge.a(param0, (byte) -115, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluateScript(param0, (byte) -115, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;
@@ -218,7 +218,7 @@ final class MatchHud {
         field_b = null;
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadCommonUiResources(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -272,17 +272,17 @@ final class MatchHud {
           }
           var9Lifetime1 = var17.field_E;
           MidiPcmStream.a(false);
-          var17.c();
+          var17.makeRasterTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.c();
+          var18.makeRasterTarget();
           var17.f(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.c();
+          var11.makeRasterTarget();
           var17.f(var9Lifetime1 - var17.field_F, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_F, var9Lifetime1);
-          var12.c();
+          var12.makeRasterTarget();
           var17.f(-var9Lifetime1, 0);
           LinkButtonPainter.a((byte) 92);
           fc.field_d = new Sprite[]{var15, var12, var11};

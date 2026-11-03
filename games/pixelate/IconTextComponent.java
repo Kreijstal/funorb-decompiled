@@ -42,11 +42,11 @@ final class IconTextComponent extends SceneWidget {
           if (param4 != null) {
             this.field_Fb = new SceneWidget(0L, param2);
             this.field_Fb.field_H = param4;
-            this.a(this.field_Fb, (byte) 26);
+            this.addChild(this.field_Fb, (byte) 26);
           }
           if (param5 != null) {
             this.field_Eb = new SceneWidget(0L, param3, param5);
-            this.a(this.field_Eb, (byte) 26);
+            this.addChild(this.field_Eb, (byte) 26);
             this.h(-257);
           } else {
             this.h(-257);

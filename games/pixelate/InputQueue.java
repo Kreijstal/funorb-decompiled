@@ -23,7 +23,7 @@ final class InputQueue {
             stackIn_9_0 = -1;
             return stackIn_9_0;
           }
-          var2.c(2779);
+          var2.unlink(2779);
           stackIn_7_0 = var2.field_k;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,30 +61,30 @@ final class InputQueue {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var1 = MusicCrossfadeStream.field_o;
-          var2 = var1.f(255);
+          var2 = var1.readUnsignedByte(255);
           if (var2 == 0) {
             if (null == GameResultsScreen.field_q) {
               GameResultsScreen.field_q = new SecondaryNodeHashTable(128);
               aj.field_t = 0;
             }
-            stackIn_11_0 = (var1.f(255) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.h(5);
+            var4_ref_String = var1.readString(5);
             if (var3_int != 0) {
-              var5 = var1.h(5);
+              var5 = var1.readString(5);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = DisplayNameForm.a(var4_ref_String, -106);
-            var7 = var1.h(5);
+            var6 = DisplayNameForm.findFriend(var4_ref_String, -106);
+            var7 = var1.readString(5);
             var8 = dh.a((CharSequence) ((Object) var4_ref_String), (byte) 100);
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = DisplayNameForm.a(var7, 69);
+              var6 = DisplayNameForm.findFriend(var7, 69);
               if (null != var6) {
                 GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
               }
@@ -116,7 +116,7 @@ final class InputQueue {
               return;
             }
             if (4 != var2) {
-              CheckboxPainter.a(1, "F1: " + jm.b(-8), (Throwable) null);
+              CheckboxPainter.reportClientError(1, "F1: " + jm.b(-8), (Throwable) null);
               if (param0 >= -89) {
                 return;
               }
@@ -124,9 +124,9 @@ final class InputQueue {
               return;
             }
             ValidatedTextWidget.field_db = 1;
-            var3 = var1.h(5);
+            var3 = var1.readString(5);
             LabeledField.field_L = ((String) (var3)).intern();
-            var4 = var1.f(255);
+            var4 = var1.readUnsignedByte(255);
             vm.b(var4, (byte) -113);
             return;
           }
@@ -134,12 +134,12 @@ final class InputQueue {
             vm.field_b = new SecondaryNodeHashTable(128);
             DialWidgetPainter.field_q = 0;
           }
-          var3Lifetime1 = var1.h(5);
+          var3Lifetime1 = var1.readString(5);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h(5);
-          var5Lifetime1 = var1.h(5);
+          var4_ref_StringLifetime1 = var1.readString(5);
+          var5Lifetime1 = var1.readString(5);
           var6Lifetime1 = re.findFriend(var4_ref_StringLifetime1, -1);
           if (null == var6Lifetime1) {
             var6Lifetime1 = re.findFriend(var5Lifetime1, -1);
@@ -161,7 +161,7 @@ final class InputQueue {
           var6Lifetime1.field_Fb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Nb = (String) (var3Lifetime1);
           var6Lifetime1.field_Gb = var5Lifetime1;
-          var6Lifetime1.c(2779);
+          var6Lifetime1.unlink(2779);
           var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.c(1504642273));
           scanLoop1: while (true) {
             if (null != var7_ref) {
@@ -219,7 +219,7 @@ final class InputQueue {
           }
           if (var3 != null &&
             var3.field_m < param0) {
-            var3.c(2779);
+            var3.unlink(2779);
             stackIn_10_0 = var3.field_k;
             return stackIn_10_0;
           }

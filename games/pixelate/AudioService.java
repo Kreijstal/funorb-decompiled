@@ -137,7 +137,7 @@ final class AudioService implements Runnable {
                       param0.writeByte(160, 4);
                     } else {
                       param0.writeByte(160, 2);
-                      param0.b((byte) -41, (String) (var10));
+                      param0.writeString((byte) -41, (String) (var10));
                     }
                   } else {
                     if (4 == var6_int) {
@@ -201,7 +201,7 @@ final class AudioService implements Runnable {
               }
             }
             param0.b(var4, (byte) 111);
-            var16_ref.c(2779);
+            var16_ref.unlink(2779);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -272,7 +272,7 @@ final class AudioService implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          CheckboxPainter.a(1, (String) null, (Throwable) ((Object) exception));
+          CheckboxPainter.reportClientError(1, (String) null, (Throwable) ((Object) exception));
         } finally {
           this.field_f = false;
         }

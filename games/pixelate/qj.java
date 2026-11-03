@@ -36,7 +36,7 @@ final class qj {
           var3.writeShort(1276387944, param1);
           return;
         }
-        qj.a(false);
+        qj.releaseStaticReferences(false);
         var3Lifetime1 = aa.field_f;
         var3Lifetime1.g(param2, 15514);
         var3Lifetime1.writeByte(160, 3);
@@ -44,7 +44,7 @@ final class qj {
         var3Lifetime1.writeShort(1276387944, param1);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStaticReferences(boolean param0) {
         field_c = null;
         field_e = null;
         field_a = null;

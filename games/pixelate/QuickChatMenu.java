@@ -67,7 +67,7 @@ final class QuickChatMenu extends SceneWidget {
         }
         if (null != this.field_Pb) {
           this.field_Pb.l(17872);
-          this.field_Pb.c(2779);
+          this.field_Pb.unlink(2779);
         }
         this.field_Pb = null;
         this.field_Lb = -1;
@@ -264,7 +264,7 @@ final class QuickChatMenu extends SceneWidget {
               var14 = fe.field_b;
             }
             this.field_Sb[var13] = new IconTextComponent(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
-            this.a(this.field_Sb[var13], (byte) 26);
+            this.addChild(this.field_Sb[var13], (byte) 26);
             var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Rb) {
               this.field_Rb = var15;

@@ -275,7 +275,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           if (!param0) {
             AccountRegistrationPanel.m(96);
           }
-          var2 = ((PacketBuffer) ((Object) var1)).f(255);
+          var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           if (var2 != 0 &&
             var2 != 1 &&
             2 != var2 &&
@@ -283,9 +283,9 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             var2 != 4) {
             if (var2 == 5) {
               var3 = ((PacketBuffer) ((Object) var1)).a(false);
-              var21 = ((PacketBuffer) ((Object) var1)).h(5);
-              var20 = ((PacketBuffer) ((Object) var1)).h(5);
-              var22 = ((PacketBuffer) ((Object) var1)).h(5);
+              var21 = ((PacketBuffer) ((Object) var1)).readString(5);
+              var20 = ((PacketBuffer) ((Object) var1)).readString(5);
+              var22 = ((PacketBuffer) ((Object) var1)).readString(5);
               var8_ref_uj = ScrollContainer.a(2, var3);
               stackIn_46_0 = (var20.equals("")) ? 0 : 1;
               var9 = stackIn_46_0;
@@ -303,19 +303,19 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
               }
               var8_ref_uj.field_Pb = hm.a(64) - (long)((PacketBuffer) ((Object) var1)).readInt(0);
               var8_ref_uj.field_Rb = ((PacketBuffer) ((Object) var1)).a((byte) 105);
-              var10 = ((PacketBuffer) ((Object) var1)).j(127);
+              var10 = ((PacketBuffer) ((Object) var1)).readVarInt(127);
               var8_ref_uj.field_Yb = var10 >> 1;
               stackIn_55_0 = var8_ref_uj;
               stackIn_56_1 = ((var10 & 1) != 0);
               stackIn_55_0.field_Xb = stackIn_56_1;
-              var8_ref_uj.field_Qb = ((PacketBuffer) ((Object) var1)).f(255);
-              var8_ref_uj.field_Ib = ((PacketBuffer) ((Object) var1)).f(255);
+              var8_ref_uj.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+              var8_ref_uj.field_Ib = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               QuickChatCategoryCache.a(-28, var8_ref_uj);
               return;
             }
             if (6 == var2) {
               var3Lifetime1 = ((PacketBuffer) ((Object) var1)).a(false);
-              var5 = ((PacketBuffer) ((Object) var1)).f(255);
+              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               var30 = ScrollContainer.a(2, var3Lifetime1);
               if (var30 == null) {
                 return;
@@ -328,7 +328,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 var30.field_Tb = mh.field_b;
                 var30.field_Eb = var5;
               } else {
-                var30.c(2779);
+                var30.unlink(2779);
               }
               var30.e(17);
               return;
@@ -336,7 +336,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             if (var2 == 7) {
               var31 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.c(1504642273));
               while (var31 != null) {
-                var31.c(2779);
+                var31.unlink(2779);
                 var31.e(17);
                 var31 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.last(1504642273));
               }
@@ -356,7 +356,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             }
             if (var2 == 9) {
               var3_intLifetime4 = ((PacketBuffer) ((Object) var1)).a((byte) 124);
-              var4_int = ((PacketBuffer) ((Object) var1)).f(255);
+              var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               var33 = (LobbyGame) (dg.field_f.a(-11434, (long)var3_intLifetime4));
               if (var33 == null) {
                 return;
@@ -365,7 +365,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 var33.field_Rb = mh.field_b;
                 var33.field_Qb = var4_int;
               } else {
-                var33.c(2779);
+                var33.unlink(2779);
               }
               var33.e(17);
               return;
@@ -373,7 +373,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             if (10 == var2) {
               var32 = (LobbyGame) (nk.field_a.c(1504642273));
               while (var32 != null) {
-                var32.c(2779);
+                var32.unlink(2779);
                 var32.e(17);
                 var32 = (LobbyGame) (nk.field_a.last(1504642273));
               }
@@ -383,7 +383,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
               12 != var2) {
               if (var2 == 13) {
                 var3_intLifetime5 = ((PacketBuffer) ((Object) var1)).a((byte) 107);
-                var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).f(255);
+                var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 var17_ref = (LobbyGame) (dg.field_f.a(-11434, (long)var3_intLifetime5));
                 if (var17_ref == null) {
                   return;
@@ -406,7 +406,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                   if (var2 != 18) {
                     if (19 == var2) {
                       var3Lifetime2 = ((PacketBuffer) ((Object) var1)).a(false);
-                      var5Lifetime1 = ((PacketBuffer) ((Object) var1)).f(255);
+                      var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                       var23 = JaggrabDownloader.a(var3Lifetime2, 14428);
                       if (var23 == null) {
                         return;
@@ -415,7 +415,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                         var23.field_Eb = var5Lifetime1;
                         var23.field_Tb = mh.field_b;
                       } else {
-                        var23.c(2779);
+                        var23.unlink(2779);
                       }
                       var23.e(17);
                       io.field_c.field_mc = io.field_c.field_mc - 1;
@@ -436,22 +436,22 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                     }
                     if (var2 == 22) {
                       gi.field_a = ((PacketBuffer) ((Object) var1)).a((byte) 63);
-                      ui.field_e = ((PacketBuffer) ((Object) var1)).j(127);
+                      ui.field_e = ((PacketBuffer) ((Object) var1)).readVarInt(127);
                       return;
                     }
                     if (var2 == 23) {
                       DebouncedValidator.field_f = ((PacketBuffer) ((Object) var1)).a(false);
                       return;
                     }
-                    CheckboxPainter.a(1, "L1: " + jm.b(-74), (Throwable) null);
+                    CheckboxPainter.reportClientError(1, "L1: " + jm.b(-74), (Throwable) null);
                     na.a(true);
                     return;
                   }
                   stackIn_100_0 = var1;
                   stackIn_101_1 = !(param0);
                   var3Lifetime2 = ((PacketBuffer) (Object) stackIn_100_0).a(stackIn_101_1);
-                  var24 = ((PacketBuffer) ((Object) var1)).h(5);
-                  var25 = ((PacketBuffer) ((Object) var1)).h(5);
+                  var24 = ((PacketBuffer) ((Object) var1)).readString(5);
+                  var25 = ((PacketBuffer) ((Object) var1)).readString(5);
                   var7 = JaggrabDownloader.a(var3Lifetime2, 14428);
                   if (var7 == null) {
                     var7 = new LobbyPlayer(var24, var25, var3Lifetime2);
@@ -461,20 +461,20 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                     io.field_c.field_mc = io.field_c.field_mc + 1;
                   }
                   var7.field_Rb = ((PacketBuffer) ((Object) var1)).a((byte) 25);
-                  var8 = ((PacketBuffer) ((Object) var1)).j(127);
+                  var8 = ((PacketBuffer) ((Object) var1)).readVarInt(127);
                   stackIn_109_0 = var7;
                   stackIn_110_1 = (0 != (1 & var8));
                   stackIn_109_0.field_Xb = stackIn_110_1;
                   var7.field_Yb = var8 >> 1;
-                  var7.field_Qb = ((PacketBuffer) ((Object) var1)).f(255);
-                  var7.field_Ib = ((PacketBuffer) ((Object) var1)).f(255);
+                  var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+                  var7.field_Ib = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                   ClientContextMenu.field_a.addFirst(22125, var7);
                   return;
                 }
                 stackIn_113_0 = var1;
                 stackIn_114_1 = !(param0);
                 var3Lifetime2 = ((PacketBuffer) (Object) stackIn_113_0).a(stackIn_114_1);
-                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).f(255);
+                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 var14 = ScrollContainer.a(2, var3Lifetime2);
                 var26 = var14;
                 if (var14 != null) {
@@ -525,7 +525,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           }
           var3_ref_uj = (LobbyPlayer) (ClientContextMenu.field_a.c(1504642273));
           while (var3_ref_uj != null) {
-            var3_ref_uj.c(2779);
+            var3_ref_uj.unlink(2779);
             var3_ref_uj.e(17);
             var3_ref_uj = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));
           }
@@ -571,8 +571,8 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           for (var3_intLifetime2 = 0; var3_intLifetime2 < TextButton.field_J.length; var3_intLifetime2++) {
             TextButton.field_J[var3_intLifetime2] = ((PacketBuffer) ((Object) var1)).a(0);
           }
-          ib.field_a = ((PacketBuffer) ((Object) var1)).f(255);
-          TextFieldValidator.field_i = ((PacketBuffer) ((Object) var1)).f(255);
+          ib.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+          TextFieldValidator.field_i = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           for (var3_intLifetime3 = 0; NanoTickClock.field_k.length > var3_intLifetime3; var3_intLifetime3++) {
             NanoTickClock.field_k[var3_intLifetime3] = ((PacketBuffer) ((Object) var1)).a(0);
           }

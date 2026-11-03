@@ -158,7 +158,7 @@ final class AchievementIcon extends IntrusiveNode {
           this.a(param3, param1, (byte) 98);
         } else {
           SoftwareRasterizer.saveClip(NameSuggestionsPanel.field_N);
-          this.field_l.c();
+          this.field_l.makeRasterTarget();
           SoftwareRasterizer.clear();
           this.a(0, 0, (byte) 98);
           ClientException.field_f.a(19692);

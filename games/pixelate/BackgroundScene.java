@@ -147,10 +147,10 @@ class BackgroundScene {
         field_h = null;
     }
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertNodeBefore(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.previous != null) {
-            param2.c(2779);
+            param2.unlink(2779);
           }
           param2.field_a = param1;
           int var3_int = 28 / ((58 - param0) / 36);
@@ -213,15 +213,15 @@ class BackgroundScene {
           for (var5 = 0; var5 < this.field_f.length; var5++) {
             this.field_k[var5] = new Sprite(var3_int, var3_int);
             this.field_a[var5] = new Sprite(var4, var4);
-            this.field_k[var5].c();
+            this.field_k[var5].makeRasterTarget();
             this.field_f[var5].drawHalfSize(0, 0);
-            this.field_a[var5].c();
+            this.field_a[var5].makeRasterTarget();
             this.field_f[var5].drawQuarterSize(0, 0);
-            this.field_f[var5].c();
+            this.field_f[var5].makeRasterTarget();
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 128, 128, 0, 48);
           }
           this.field_i = new Sprite(640, 4 * ScrollPaneWithFooter.field_Jb + (DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent));
-          this.field_i.c();
+          this.field_i.makeRasterTarget();
           var5Lifetime1 = 320;
           var6 = this.field_i.field_E - ScrollPaneWithFooter.field_Jb * 2 - DateInputWidget.field_L.maxDescent;
           DateInputWidget.field_L.drawCentered(this.field_l, -1 + var5Lifetime1, var6 - 1, 0, -1);
@@ -318,7 +318,7 @@ class BackgroundScene {
     final static void $cfr$intArgs$a$2d0b7bdf67eb(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.previous != null) {
-            param2.c(2779);
+            param2.unlink(2779);
           }
           param2.field_a = param1;
           int var3_int = 28 / ((58 - param0) / 36);

@@ -59,7 +59,7 @@ final class QuickChatCategory extends DualLinkNode {
             this.a(113, 78, (PacketBuffer) null);
           }
           while (true) {
-            var3_int = param1.f(255);
+            var3_int = param1.readUnsignedByte(255);
             if (0 == var3_int) {
               return;
             }
@@ -135,7 +135,7 @@ final class QuickChatCategory extends DualLinkNode {
         try {
           if (param0 != 1) {
             if (2 == param0) {
-              var4_int = param2.f(param1 + 252);
+              var4_int = param2.readUnsignedByte(param1 + 252);
               this.field_x = new char[var4_int];
               this.subcategoryIds = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
@@ -152,7 +152,7 @@ final class QuickChatCategory extends DualLinkNode {
               }
             } else {
               if (3 == param0) {
-                var4_int = param2.f(255);
+                var4_int = param2.readUnsignedByte(255);
                 this.field_t = new char[var4_int];
                 this.phraseIds = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
@@ -174,7 +174,7 @@ final class QuickChatCategory extends DualLinkNode {
               }
             }
           } else {
-            this.field_C = param2.h(param1 ^ 6);
+            this.field_C = param2.readString(param1 ^ 6);
           }
           if (param1 != 3) {
             var8 = (PacketBuffer) null;

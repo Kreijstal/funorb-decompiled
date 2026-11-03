@@ -92,7 +92,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static java.awt.Frame openFullscreenFrame(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
@@ -185,7 +185,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static String a(aa param0, int param1) {
+    final static String formatChatPrefix(aa param0, int param1) {
         String stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -324,7 +324,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             param1.field_r = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (this.field_i) {
-            ((CachedTextLayout) (param1.field_r)).a(this.getAvailableTextHeight(true, param1), -1, this.getDisplayText(param1, -472248767), this.field_a, this.c(-114, param1), this.field_l, this.field_d, this.field_j);
+            ((CachedTextLayout) (param1.field_r)).layoutParagraph(this.getAvailableTextHeight(true, param1), -1, this.getDisplayText(param1, -472248767), this.field_a, this.c(-114, param1), this.field_l, this.field_d, this.field_j);
           } else {
             this.d(3, param1);
           }

@@ -26,11 +26,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             QuickChatPhraseDefinition.b((byte) -35);
           }
           while (true) {
-            var3_int = param1.f(255);
+            var3_int = param1.readUnsignedByte(255);
             if (var3_int == 0) {
               return;
             }
-            this.a(var3_int, 83, param1);
+            this.decodeOpcode(var3_int, 83, param1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2) {
+    private final void decodeOpcode(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -64,14 +64,14 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         try {
           if (1 != param0) {
             if (2 == param0) {
-              var4_int = param2.f(255);
+              var4_int = param2.readUnsignedByte(255);
               this.field_u = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_u[var5] = param2.a((byte) -115);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.f(255);
+                var4_int = param2.readUnsignedByte(255);
                 this.field_B = new int[var4_int][];
                 this.field_x = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
@@ -92,7 +92,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.fragments = Puzzle.a(param2.h(5), (byte) -117, '<');
+            this.fragments = Puzzle.a(param2.readString(5), (byte) -117, '<');
           }
           var4_intLifetime1 = -125 / ((param1 + 17) / 39);
           return;

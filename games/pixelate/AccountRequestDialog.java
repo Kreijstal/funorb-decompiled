@@ -179,7 +179,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               }
               ((AccountMessagePanel) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_15_3);
             } else {
-              var6.a(1707, (UiListener) (this), bo.field_k);
+              var6.appendButton(1707, (UiListener) (this), bo.field_k);
             }
           }
           if (param0 == 3) {
@@ -193,7 +193,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
                   this.transitionToContent(var6, -124);
                   return;
                 }
-                var6.a(1707, (UiListener) (this), ue.field_q);
+                var6.appendButton(1707, (UiListener) (this), ue.field_q);
               }
             } else {
               var6.a(8, -1, StripedProgressBar.field_X);
@@ -265,14 +265,14 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               var4 = Class.forName("BufferedImageRasterBuffer");
               var6 = 32 / ((param1 - 70) / 45);
               var5 = (CanvasRasterBuffer) (var4.newInstance());
-              var5.a(param3, param2, param0, (byte) -100);
+              var5.initialize(param3, param2, param0, (byte) -100);
               stackIn_1_0 = var5;
               return stackIn_1_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((CanvasRasterBuffer) ((Object) var5_ref)).a(param3, param2, param0, (byte) -78);
+              ((CanvasRasterBuffer) ((Object) var5_ref)).initialize(param3, param2, param0, (byte) -78);
               stackIn_3_0 = var5_ref;
               return (CanvasRasterBuffer) ((Object) stackIn_3_0);
             }

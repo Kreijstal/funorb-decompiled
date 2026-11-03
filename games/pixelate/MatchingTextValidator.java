@@ -21,9 +21,9 @@ final class MatchingTextValidator extends TextFieldValidator {
     final static String e(int param0) {
         if (param0 != 480) {
           MatchingTextValidator.b(false);
-          return MusicCrossfadeStream.field_o.h(5);
+          return MusicCrossfadeStream.field_o.readString(5);
         }
-        return MusicCrossfadeStream.field_o.h(5);
+        return MusicCrossfadeStream.field_o.readString(5);
     }
 
     final String describeText(int param0, String param1) {

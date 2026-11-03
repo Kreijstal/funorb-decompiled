@@ -170,7 +170,7 @@ final class Match {
           this.field_q = param0.readInt(0);
           this.scores[0] = param0.a((byte) -118);
           this.scores[1] = param0.a((byte) -111);
-          this.puzzle.pictureIndex = param0.f(255);
+          this.puzzle.pictureIndex = param0.readUnsignedByte(255);
           this.boards[0].seedPieces(-25, this.field_q);
           this.boards[1].seedPieces(-47, this.field_q);
           this.boards[0].readState(-2, param0);

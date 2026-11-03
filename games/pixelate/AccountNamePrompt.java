@@ -265,14 +265,14 @@ final class AccountNamePrompt extends SceneWidget {
         int var7 = SoftwareRasterizer.field_j;
         int var8 = SoftwareRasterizer.field_d;
         Sprite var9 = new Sprite(16, param3);
-        var9.c();
+        var9.makeRasterTarget();
         if (param4) {
           SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param5, param2);
           var10 = null;
           if (param0) {
             var19 = var9.a();
             var10 = var19;
-            var19.c();
+            var19.makeRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -283,7 +283,7 @@ final class AccountNamePrompt extends SceneWidget {
           if (param1) {
             var20 = var9.a();
             var11 = var20;
-            var20.c();
+            var20.makeRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
@@ -299,7 +299,7 @@ final class AccountNamePrompt extends SceneWidget {
         if (param0) {
           var17 = var9.a();
           var10 = var17;
-          var17.c();
+          var17.makeRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -310,7 +310,7 @@ final class AccountNamePrompt extends SceneWidget {
         if (param1) {
           var18 = var9.a();
           var11 = var18;
-          var18.c();
+          var18.makeRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
@@ -408,10 +408,10 @@ final class AccountNamePrompt extends SceneWidget {
         this.field_Hb = 0;
         try {
           this.field_Fb = new SceneWidget(0L, param6, param4);
-          this.a(this.field_Fb, (byte) 26);
+          this.addChild(this.field_Fb, (byte) 26);
           this.field_Lb = new SceneWidget(0L, param7);
           this.field_Lb.field_N = 16764006;
-          this.a(this.field_Lb, (byte) 26);
+          this.addChild(this.field_Lb, (byte) 26);
           this.field_Lb.field_qb = "|";
           this.field_Eb = new StringBuilder(12);
           var9_int = this.field_Fb.g(0);

@@ -45,19 +45,19 @@ final class PlayerBoard {
         int var3_intLifetime2;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          this.pieceColumn = param1.f(param0 + 257);
+          this.pieceColumn = param1.readUnsignedByte(param0 + 257);
           if (param0 != -2) {
             PlayerBoard.d(-62);
           }
-          this.pieceRow = param1.f(255);
+          this.pieceRow = param1.readUnsignedByte(255);
           this.field_u = param1.a((byte) 76);
           this.field_b = param1.a((byte) -117);
-          stackIn_6_1 = (1 == param1.f(255));
+          stackIn_6_1 = (1 == param1.readUnsignedByte(255));
           this.fastDrop = stackIn_6_1;
           for (var3_int = 0; var3_int < 4; var3_int++) {
             stackIn_10_0 = this.pieceTones;
             stackIn_10_1 = var3_int;
-            stackIn_11_2 = (param1.f(255) == 1);
+            stackIn_11_2 = (param1.readUnsignedByte(255) == 1);
             stackIn_10_0[stackIn_10_1] = stackIn_11_2;
           }
           for (var3_intLifetime1 = 0; this.cells.length > var3_intLifetime1; var3_intLifetime1++) {
@@ -218,7 +218,7 @@ final class PlayerBoard {
 
     final static void d(int param0) {
         if (param0 >= -72) {
-          PlayerBoard.a((byte) -16);
+          PlayerBoard.releaseStatics((byte) -16);
         }
         lg.field_a = lg.field_a + 100;
         if (255 < lg.field_a) {
@@ -279,7 +279,7 @@ final class PlayerBoard {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_o = null;
         field_c = null;

@@ -122,7 +122,7 @@ final class pj {
           if (var5_int > this.field_e.field_A) {
             this.field_e = new Sprite(10 + var5_int, this.field_e.field_B);
           }
-          this.field_e.c();
+          this.field_e.makeRasterTarget();
           SoftwareRasterizer.clear();
           rk.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
           ClientException.field_f.a(19692);

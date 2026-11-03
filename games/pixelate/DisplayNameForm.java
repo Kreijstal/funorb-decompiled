@@ -247,7 +247,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           return;
         }
         String var2 = (String) null;
-        DisplayNameForm.a((String) null, 57);
+        DisplayNameForm.findFriend((String) null, 57);
         field_I = null;
         field_Q = null;
         field_K = null;
@@ -287,7 +287,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         this.a(496, (byte) 89, 0, 0, var4 + 55 + var3);
     }
 
-    final static SocialListEntry a(String param0, int param1) {
+    final static SocialListEntry findFriend(String param0, int param1) {
         String var2 = null;
         int var3 = 0;
         SocialListEntry var4 = null;

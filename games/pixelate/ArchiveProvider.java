@@ -11,7 +11,7 @@ abstract class ArchiveProvider {
 
     abstract ArchiveIndex getIndex(byte param0);
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -42) {
           return;
         }
@@ -23,7 +23,7 @@ abstract class ArchiveProvider {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 <= 110) {
-          ArchiveProvider.b((byte) -3);
+          ArchiveProvider.releaseStatics((byte) -3);
           DraggableWidget.field_I.a(param5, param0, param4, 256, param2);
           if (null != bo.field_h) {
             bo.field_h.a(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);

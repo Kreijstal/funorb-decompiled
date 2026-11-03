@@ -23,7 +23,7 @@ final class CheckboxPainter implements WidgetPainter {
     private int checkboxHeight;
     private int field_f;
 
-    final static void a(int param0, String param1, Throwable param2) {
+    final static void reportClientError(int param0, String param1, Throwable param2) {
         try {
           PlatformTaskDispatcher stackIn_15_0;
           int stackIn_15_1;

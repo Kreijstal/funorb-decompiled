@@ -31,7 +31,7 @@ final class cl {
           return;
         }
         ln.field_q = false;
-        IsaacRandom.field_g = 0 == MusicCrossfadeStream.field_o.f(255) ? true : false;
+        IsaacRandom.field_g = 0 == MusicCrossfadeStream.field_o.readUnsignedByte(255) ? true : false;
     }
 
     final static int a(int param0, byte[] param1, int param2, CharSequence param3, int param4, int param5) {

@@ -14,7 +14,7 @@ abstract class CanvasRasterBuffer {
     static Sprite field_b;
     static String[] field_c;
 
-    abstract void a(java.awt.Graphics param0, boolean param1, int param2, int param3);
+    abstract void drawImage(java.awt.Graphics param0, boolean param1, int param2, int param3);
 
     final static boolean b(int param0) {
         if (param0 != 12742) {
@@ -79,7 +79,7 @@ abstract class CanvasRasterBuffer {
         field_b = null;
     }
 
-    abstract void a(int param0, java.awt.Component param1, int param2, byte param3);
+    abstract void initialize(int param0, java.awt.Component param1, int param2, byte param3);
 
     static {
         field_k = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";

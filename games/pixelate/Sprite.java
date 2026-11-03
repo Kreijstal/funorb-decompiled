@@ -2850,7 +2850,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void c() {
+    final void makeRasterTarget() {
         SoftwareRasterizer.a(this.pixels, this.field_F, this.field_E);
     }
 }

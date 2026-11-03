@@ -516,7 +516,7 @@ final class MatchController {
           }
           if (fq.field_o != null &&
             SpriteCheckboxPainter.field_d) {
-            pe.field_b.c();
+            pe.field_b.makeRasterTarget();
             SoftwareRasterizer.clear();
             fq.field_o.a(false);
             ClientException.field_f.a(19692);

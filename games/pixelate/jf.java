@@ -42,7 +42,7 @@ final class jf {
             var4_ref_ug = (ug) (id.field_d.c(1504642273));
             if (var4_ref_ug != null &&
               var2_long > var4_ref_ug.field_o) {
-              var4_ref_ug.c(2779);
+              var4_ref_ug.unlink(2779);
               BackgroundScene.field_b = var4_ref_ug.field_r.length;
               MusicCrossfadeStream.field_o.position = 0;
               for (var5_int = 0; BackgroundScene.field_b > var5_int; var5_int++) {
@@ -104,7 +104,7 @@ final class jf {
         }
     }
 
-    final static String a(String param0, int param1, byte param2) {
+    final static String requestAddFriend(String param0, int param1, byte param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -160,7 +160,7 @@ final class jf {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(160, 0);
-          var5.b((byte) -41, param0);
+          var5.writeString((byte) -41, param0);
           var5.f(-var4 + var5.position, -1);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
@@ -256,7 +256,7 @@ final class jf {
         try {
           if (param4 <= 96) {
             var6 = (String) null;
-            jf.a((String) null, -39, (byte) 9);
+            jf.requestAddFriend((String) null, -39, (byte) 9);
           }
           if (rk.a(param3, false, param2, param1)) {
             stackIn_6_0 = ed.a(param0.a(param1, param3, true), -28628);

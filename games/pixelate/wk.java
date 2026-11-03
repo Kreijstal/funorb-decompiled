@@ -11,13 +11,13 @@ final class wk extends LoginCredentials {
 
     final static Sprite[] a(int param0, int param1, int param2) {
         if (param2 != 1) {
-          wk.c(-57);
+          wk.releaseStatics(-57);
           return BoardParticle.a(1, param1, true, param0);
         }
         return BoardParticle.a(1, param1, true, param0);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -19101) {
           field_j = null;
           field_f = null;

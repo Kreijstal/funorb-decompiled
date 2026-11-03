@@ -66,7 +66,7 @@ final class TwistedLogicBackground extends BackgroundScene {
             stackIn_10_0.field_k = stackIn_11_1;
           }
           if (var2.field_r > 148480) {
-            var2.c(2779);
+            var2.unlink(2779);
           }
           var2 = (jn) (this.field_n.last(param0 + 1504642274));
         }

@@ -35,7 +35,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         try {
           Pixelate.field_E = param1;
           QuickChatPhraseCache.field_f = new Sprite(Pixelate.field_E.field_A, Pixelate.field_E.field_B);
-          QuickChatPhraseCache.field_f.c();
+          QuickChatPhraseCache.field_f.makeRasterTarget();
           Pixelate.field_E.f(0, 0);
           var3_int = 5395026;
           var4 = SoftwareRasterizer.field_d;
@@ -49,7 +49,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
           }
           ClientException.field_g = new Sprite(640, 480);
-          ClientException.field_g.c();
+          ClientException.field_g.makeRasterTarget();
           param0.c(0, 0, 255, 80);
           param0.c(320, 0, 255, 80);
           param0.c(0, 240, 80, 0);

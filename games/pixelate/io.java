@@ -60,7 +60,7 @@ final class io {
         var13 = Pixelate.field_H ? 1 : 0;
         try {
           var15 = MusicCrossfadeStream.field_o;
-          var2 = var15.f(255);
+          var2 = var15.readUnsignedByte(255);
           var3 = (lc) (LoginCredentials.field_c.c(1504642273));
           while (var3 != null) {
             if (~var2 != ~var3.field_k) {
@@ -74,12 +74,12 @@ final class io {
             return;
           }
           var5 = 106 / ((-61 - param0) / 53);
-          var4 = var15.f(255);
+          var4 = var15.readUnsignedByte(255);
           if (var4 != 0) {
             lg.field_b[0] = ModalStack.field_J;
             var6 = var3.field_s;
             for (var7_int = 1; var4 > var7_int; var7_int++) {
-              lg.field_b[var7_int] = var15.h(5);
+              lg.field_b[var7_int] = var15.readString(5);
             }
             IconTextComponent.a(2147483647, var6, var4);
             for (var7_intLifetime1 = 0; var4 > var7_intLifetime1; var7_intLifetime1++) {
@@ -139,7 +139,7 @@ final class io {
             }
           }
           var3.field_u = true;
-          var3.c(2779);
+          var3.unlink(2779);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -428,7 +428,7 @@ final class io {
           if (var7 == null) {
             var7 = "";
           }
-          aa.field_f.b((byte) -41, var7);
+          aa.field_f.writeString((byte) -41, var7);
           if (ConditionalTextValue.field_a != null) {
             aa.field_f.a((byte) -66, ConditionalTextValue.field_a);
           }

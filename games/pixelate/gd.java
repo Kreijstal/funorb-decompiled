@@ -18,16 +18,16 @@ final class gd {
     final static void a(byte param0) {
         vd.field_c = new SceneWidget(0L, (SceneWidget) null);
         if (DialWidgetPainter.field_n) {
-          vd.field_c.a(ValidatedTextWidget.field_lb, (byte) 26);
+          vd.field_c.addChild(ValidatedTextWidget.field_lb, (byte) 26);
         }
-        vd.field_c.a(StripedProgressBar.field_O, (byte) 26);
+        vd.field_c.addChild(StripedProgressBar.field_O, (byte) 26);
         cl.field_g = new wo(ul.field_m, vd.field_c);
         GreenGrowTheRushesBackground.field_n = new SceneWidget(0L, (SceneWidget) null);
         if (param0 != -7) {
           gd.a(-71);
         }
-        GreenGrowTheRushesBackground.field_n.a(cl.field_g.field_g, (byte) 26);
-        GreenGrowTheRushesBackground.field_n.a(ValidatedTextWidget.field_cb, (byte) 26);
+        GreenGrowTheRushesBackground.field_n.addChild(cl.field_g.field_g, (byte) 26);
+        GreenGrowTheRushesBackground.field_n.addChild(ValidatedTextWidget.field_cb, (byte) 26);
         PacketBuffer.b(false);
     }
 

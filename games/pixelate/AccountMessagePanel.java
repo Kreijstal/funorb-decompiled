@@ -111,14 +111,14 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         try {
           var4_int = this.field_P;
           this.a(param1 ^ 114, var4_int - param1);
-          this.field_S[var4_int] = this.a(1707, (UiListener) (this), param2);
+          this.field_S[var4_int] = this.appendButton(1707, (UiListener) (this), param2);
           this.field_I[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final TextButton a(int param0, UiListener param1, String param2) {
+    final TextButton appendButton(int param0, UiListener param1, String param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

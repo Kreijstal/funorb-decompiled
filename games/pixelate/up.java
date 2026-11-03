@@ -92,7 +92,7 @@ final class up {
         IndexedSprite var11 = var10;
         BackgroundScene var3 = Js5NetworkRequest.field_C[gd.field_e[this.field_m].field_a];
         this.field_l = new Sprite(160, 160);
-        this.field_l.c();
+        this.field_l.makeRasterTarget();
         int var4 = param0 * (5 - var11.field_f);
         int var5 = (-var11.field_a + 5) * 16;
         boolean[] var6 = ThreeSliceButtonPainter.a(var11, 21922);

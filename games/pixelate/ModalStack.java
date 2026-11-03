@@ -17,7 +17,7 @@ final class ModalStack extends SingleChildContainer {
         ModalPanel var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
           if (var3.c(false)) {
-            var3.c(2779);
+            var3.unlink(2779);
           }
           var3 = (ModalPanel) (var2.a((byte) -104));
         }
@@ -141,7 +141,7 @@ final class ModalStack extends SingleChildContainer {
         ModalPanel var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
           if (var3.a((byte) 123)) {
-            var3.c(2779);
+            var3.unlink(2779);
           }
           var3 = (ModalPanel) (var2.a((byte) -104));
         }

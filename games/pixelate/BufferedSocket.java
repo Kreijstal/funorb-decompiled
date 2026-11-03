@@ -105,7 +105,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var1_ref));
+            CheckboxPainter.reportClientError(1, (String) null, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -128,7 +128,7 @@ final class BufferedSocket implements Runnable {
         return this.input.read();
     }
 
-    final void b(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = Pixelate.field_H ? 1 : 0;
@@ -283,7 +283,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.b(-1);
+        this.close(-1);
     }
 
     private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {

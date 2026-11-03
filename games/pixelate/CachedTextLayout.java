@@ -333,7 +333,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, int param1, String param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
+    final void layoutParagraph(int param0, int param1, String param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
         TextLayoutLine stackIn_34_0;
         TextLayoutLine stackIn_34_1;
         int stackIn_34_2;

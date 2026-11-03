@@ -129,11 +129,11 @@ final class wo {
           var1 = new Sprite(50, 30);
           Match.field_l = new Sprite[param0];
           for (var2 = 3; var2 > 0; var2--) {
-            var1.c();
+            var1.makeRasterTarget();
             SoftwareRasterizer.clear();
             rk.field_e.drawCentered(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
             Match.field_l[-var2 + 3] = new Sprite(150, 90);
-            Match.field_l[3 - var2].c();
+            Match.field_l[3 - var2].makeRasterTarget();
             var1.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           }
           ClientException.field_f.a(param0 ^ 19695);
@@ -156,7 +156,7 @@ final class wo {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = TextWidgetPainter.a(param0, param5, param4, param2, param3, true);
+          var8 = TextWidgetPainter.openFullscreenFrame(param0, param5, param4, param2, param3, true);
           var6 = var8;
           if (param1 != 150) {
             stackIn_2_0 = (FullscreenFocusCanvas) null;

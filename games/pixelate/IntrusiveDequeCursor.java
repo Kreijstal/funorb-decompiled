@@ -65,7 +65,7 @@ final class IntrusiveDequeCursor {
               if (var1.field_Tb == 0) {
                 var1.field_Eb = 0;
                 if (var1.b((byte) 109)) {
-                  var1.c(param0 ^ -2780);
+                  var1.unlink(param0 ^ -2780);
                 }
               }
             }
@@ -78,7 +78,7 @@ final class IntrusiveDequeCursor {
               if (var1_ref.field_Rb == 0) {
                 var1_ref.field_Qb = 0;
                 if (var1_ref.j(433)) {
-                  var1_ref.c(2779);
+                  var1_ref.unlink(2779);
                 }
               }
             }
@@ -95,7 +95,7 @@ final class IntrusiveDequeCursor {
               }
               var1Lifetime1.field_Eb = 0;
               if (var1Lifetime1.b((byte) -116)) {
-                var1Lifetime1.c(2779);
+                var1Lifetime1.unlink(2779);
               }
             }
             var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));

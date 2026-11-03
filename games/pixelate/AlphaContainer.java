@@ -209,7 +209,7 @@ final class AlphaContainer extends SingleChildContainer {
         this.field_O = 256;
     }
 
-    final static void a(byte param0, byte[] param1) {
+    final static void decodeSpriteSheet(byte param0, byte[] param1) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_31_0 = 0;
@@ -262,7 +262,7 @@ final class AlphaContainer extends SingleChildContainer {
           var18.position = -7 + (param1.length - 8 * SocialListEntry.field_Qb);
           tj.field_y = var18.a((byte) 38);
           jb.field_a = var18.a((byte) 46);
-          var3 = 1 + (var18.f(255) & 255);
+          var3 = 1 + (var18.readUnsignedByte(255) & 255);
           for (var4 = 0; var4 < SocialListEntry.field_Qb; var4++) {
             IntrusiveNode.field_b[var4] = var17.a((byte) 88);
           }
@@ -301,7 +301,7 @@ final class AlphaContainer extends SingleChildContainer {
             var9 = var20;
             gd.field_k[var4Lifetime5] = var22;
             var10 = 0;
-            var11 = var18.f(255);
+            var11 = var18.readUnsignedByte(255);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
                 var8[var12] = var18.a(0);

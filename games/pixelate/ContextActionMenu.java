@@ -113,7 +113,7 @@ final class ContextActionMenu extends SceneWidget {
           this.items[this.itemCount].field_ab = this.field_Kb;
           this.items[this.itemCount].field_A = true;
           this.items[this.itemCount].verticalAlignment = 1;
-          this.a(this.items[this.itemCount], (byte) 26);
+          this.addChild(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = param2;
           if (param1 > -23) {
             this.field_Pb = (SceneWidget) null;
@@ -140,7 +140,7 @@ final class ContextActionMenu extends SceneWidget {
           this.items[this.itemCount].field_ab = this.field_Kb;
           this.items[this.itemCount].field_A = true;
           this.items[this.itemCount].verticalAlignment = 1;
-          this.a(this.items[this.itemCount], (byte) 26);
+          this.addChild(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = param1;
           this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
@@ -213,7 +213,7 @@ final class ContextActionMenu extends SceneWidget {
         if (this.itemCount == 0) {
           this.items[this.itemCount] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
           this.items[this.itemCount].verticalAlignment = 1;
-          this.a(this.items[this.itemCount], (byte) 26);
+          this.addChild(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = -1;
           this.itemCount = this.itemCount + 1;
         }

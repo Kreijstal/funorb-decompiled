@@ -664,7 +664,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                   }
                   if (var21 != null) {
                     var21 = "<col=A00000>" + (String) (var21);
-                    var21 = StatefulTextPainter.a((String) (var21), (byte) -67, "<br><col=A00000>", "<br>");
+                    var21 = StatefulTextPainter.replaceCharacter((String) (var21), (byte) -67, "<br><col=A00000>", "<br>");
                     if (null != var20) {
                       var20 = (String) (var20) + "<br>" + (String) (var21);
                     } else {

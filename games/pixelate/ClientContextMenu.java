@@ -358,7 +358,7 @@ final class ClientContextMenu {
         String var8;
         var4 = null;
         if (param2 == 4) {
-          var5 = jf.a(this.field_h, param0, (byte) 79);
+          var5 = jf.requestAddFriend(this.field_h, param0, (byte) 79);
           if (var5 != null) {
             MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var5);
           }
@@ -367,7 +367,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param2 == 5) {
-          var6 = ff.a(param0, this.field_h, (byte) -106);
+          var6 = ff.requestRemoveFriend(param0, this.field_h, (byte) -106);
           if (var6 != null) {
             MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var6);
           }

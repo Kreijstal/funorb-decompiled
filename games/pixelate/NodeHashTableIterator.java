@@ -40,7 +40,7 @@ final class NodeHashTableIterator implements Iterator {
         if (this.field_d == null) {
           throw new IllegalStateException();
         }
-        this.field_d.c(2779);
+        this.field_d.unlink(2779);
         this.field_d = null;
     }
 

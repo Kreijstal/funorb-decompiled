@@ -22,7 +22,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardInput(int param0, java.awt.Component param1) {
         try {
           if (param0 != -7749) {
             field_b = (int[]) null;
@@ -119,7 +119,7 @@ final class Js5ArchiveManager {
             var6_int = this.field_d.readInt(0);
             var7 = this.field_d.readInt(param1 - 6);
             var13 = new byte[64];
-            this.field_d.a(var13, 0, -86, 64);
+            this.field_d.readBytes(var13, 0, -86, 64);
             var9 = new CachedArchiveProvider(param2, param4, param3, this.field_j, this.field_a, var6_int, var13, var7, param0);
             this.field_h[param2] = var9;
             stackIn_12_0 = var9;
@@ -268,12 +268,12 @@ final class Js5ArchiveManager {
         }
         var10 = new PacketBuffer(this.field_g.h(0));
         var10.position = 5;
-        var3 = var10.f(255);
+        var3 = var10.readUnsignedByte(255);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(var4, 0, -79, var13.length);
+        var10.readBytes(var4, 0, -79, var13.length);
         if (null != this.field_f &&
           this.field_k != null) {
           var12 = new java.math.BigInteger(var13);

@@ -150,7 +150,7 @@ abstract class NetworkGameClient extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              CheckboxPainter.a(1, "S1", (Throwable) ((Object) var5));
+              CheckboxPainter.reportClientError(1, "S1", (Throwable) ((Object) var5));
               var10 = (String) null;
               ri.a((String) null, true);
               QuickChatCategory.field_w = null;
@@ -409,7 +409,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         MenuInputState.b(wo.field_d, -31383);
         l.a(false, wo.field_d, 5000, this.field_v, this.field_u, this.field_s, this.field_w, param0, 5000, param1, this.field_y, this.field_q, this.field_B, mc.field_k);
-        KeyboardInputHandler.a(this.field_u, param0, wo.field_d, this.field_y, mc.field_k, this.field_q, this.field_w, -21462, this.field_B);
+        KeyboardInputHandler.initializeArchiveServices(this.field_u, param0, wo.field_d, this.field_y, mc.field_k, this.field_q, this.field_w, -21462, this.field_B);
         qf.a(31171);
         ScrollContainer.field_Lb = bl.a(71);
         he.a(0, NameAvailabilityValidator.field_u);
@@ -468,7 +468,7 @@ abstract class NetworkGameClient extends GameApplet {
                                 cl.b(param0 ^ -8237);
                                 return;
                               }
-                              CheckboxPainter.a(1, "MGS1: " + jm.b(-106), (Throwable) null);
+                              CheckboxPainter.reportClientError(1, "MGS1: " + jm.b(-106), (Throwable) null);
                               na.a(true);
                               return;
                             }
@@ -496,7 +496,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           return;
         }
-        CheckboxPainter.a(1, "MGS2: " + jm.b(param0 - 55), (Throwable) null);
+        CheckboxPainter.reportClientError(1, "MGS2: " + jm.b(param0 - 55), (Throwable) null);
         na.a(true);
     }
 
@@ -576,7 +576,7 @@ abstract class NetworkGameClient extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var6_ref));
+            CheckboxPainter.reportClientError(1, (String) null, (Throwable) ((Object) var6_ref));
             this.redirectToErrorPage(-18310, "crash");
           }
           return;
@@ -753,7 +753,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void g(byte param0) {
-        int var2 = MusicCrossfadeStream.field_o.f(255);
+        int var2 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
         if (param0 != 59) {
           this.field_B = -116;
         }

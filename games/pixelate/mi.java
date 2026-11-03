@@ -163,7 +163,7 @@ final class mi extends MenuScreen {
             }
             if (GameModeSelectScreen.field_s == cn.field_a &&
               QueuedInput.a(1, false)) {
-              var6_int = MusicCrossfadeStream.field_o.f(255);
+              var6_int = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               MusicCrossfadeStream.field_o.position = 0;
               if (var6_int != 0) {
                 TextLayoutLine.field_e = var6_int;
@@ -183,7 +183,7 @@ final class mi extends MenuScreen {
             boolean decompiledFrameRemainder0 = true;
             if (BoardView.field_b == GameModeSelectScreen.field_s &&
               QueuedInput.a(1, false)) {
-              var6_intLifetime1 = MusicCrossfadeStream.field_o.f(255);
+              var6_intLifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               ConditionalTextValue.field_a = null;
               MusicCrossfadeStream.field_o.position = 0;
               TextLayoutLine.field_e = var6_intLifetime1;
@@ -210,11 +210,11 @@ final class mi extends MenuScreen {
               MusicPatchNode.e(-18481)) {
               vn.field_b = MusicCrossfadeStream.field_o.a(false);
               GameResultsScreen.field_t = param2;
-              wo.field_h = MusicCrossfadeStream.field_o.f(255);
-              Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.f(255);
+              wo.field_h = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+              Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               BufferedRandomAccessFile.field_j = MusicCrossfadeStream.field_o.a((byte) -116);
               var6 = MusicCrossfadeStream.field_o.e((byte) 79);
-              var7 = MusicCrossfadeStream.field_o.f(255);
+              var7 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 MarkerSlider.d((byte) -51);
               }
@@ -232,8 +232,8 @@ final class mi extends MenuScreen {
                 }
               }
               if (vm.field_d) {
-                MusicCrossfadeStream.field_o.f(255);
-                MusicCrossfadeStream.field_o.f(255);
+                MusicCrossfadeStream.field_o.readUnsignedByte(255);
+                MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 MusicCrossfadeStream.field_o.readInt(0);
                 BufferedSocket.field_k = MusicCrossfadeStream.field_o.a((byte) -115);
                 dc.field_b = new byte[BufferedSocket.field_k];
@@ -241,10 +241,10 @@ final class mi extends MenuScreen {
                   dc.field_b[var8] = MusicCrossfadeStream.field_o.a(0);
                 }
               }
-              ModalStack.field_J = MusicCrossfadeStream.field_o.h(5);
+              ModalStack.field_J = MusicCrossfadeStream.field_o.readString(5);
               var11 = (CharSequence) ((Object) ModalStack.field_J);
               LobbyGame.field_Hb = dh.a(var11, (byte) 54);
-              ra.field_g = MusicCrossfadeStream.field_o.f(255);
+              ra.field_g = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               GameModeSelectScreen.field_s = Pixelate.field_G;
               if (li.field_g.b(-27096) == l.field_r) {
                 ig.field_e.a(AudioService.a(13867), -80419032);
@@ -260,7 +260,7 @@ final class mi extends MenuScreen {
               if (BufferedRandomAccessFile.field_j <= 0 &&
                 !Matrix3.field_a) {
                 try {
-                  JavaScriptBridge.a("unzap", (byte) -56, AudioService.a(13867));
+                  JavaScriptBridge.callWindowFunction("unzap", (byte) -56, AudioService.a(13867));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -296,7 +296,7 @@ final class mi extends MenuScreen {
               if (TextLayoutLine.field_e == 7) {
                 TextLayoutLine.field_e = 3;
               }
-              gi.field_b = MusicCrossfadeStream.field_o.h(5);
+              gi.field_b = MusicCrossfadeStream.field_o.readString(5);
               qj.field_b = false;
               stackIn_90_0 = TextLayoutLine.field_e;
               return stackIn_90_0;

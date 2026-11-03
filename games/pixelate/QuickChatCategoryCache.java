@@ -114,7 +114,7 @@ final class QuickChatCategoryCache {
           if (param0 > -12) {
             return;
           }
-          param1.c(2779);
+          param1.unlink(2779);
           var2 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var2 != null) {
             if (var2.a(param1, (byte) -82)) {

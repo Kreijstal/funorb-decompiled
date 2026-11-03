@@ -37,7 +37,7 @@ abstract class Js5Transport {
 
     abstract void b(byte param0);
 
-    abstract void a(Object param0, boolean param1, int param2);
+    abstract void attachTransport(Object param0, boolean param1, int param2);
 
     final boolean a(int param0) {
         if (param0 != 20) {
@@ -74,10 +74,10 @@ abstract class Js5Transport {
           if (!(this.b(126) < 20)) {
             throw new RuntimeException();
           }
-          this.field_e.a(-89, var8);
+          this.field_e.addLast(-89, var8);
         } else {
           if (this.a((byte) 34) < 20) {
-            this.field_l.a(-45, var8);
+            this.field_l.addLast(-45, var8);
             return var8;
           }
           throw new RuntimeException();

@@ -24,7 +24,7 @@ final class BoardParticle extends IntrusiveNode {
           this.field_n = 31;
         }
         if (this.field_m <= 0.0) {
-          this.c(2779);
+          this.unlink(2779);
         }
         if (param0 != -123) {
           this.field_p = 0.4636507435645844;

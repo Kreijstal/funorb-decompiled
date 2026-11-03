@@ -98,23 +98,23 @@ final class nk {
           var16[4] = var12;
           ui.field_i = new SceneWidget(0L, param0);
           ki.field_k = new SceneWidget(0L, param3);
-          ui.field_i.a(ki.field_k, (byte) 26);
+          ui.field_i.addChild(ki.field_k, (byte) 26);
           var17 = new SceneWidget(0L, (SceneWidget) null);
           var17.children = new IntrusiveDeque();
           l.field_p = new ScrollContainer(0L, var17, param8, param2);
-          ki.field_k.a(l.field_p, (byte) 26);
+          ki.field_k.addChild(l.field_p, (byte) 26);
           StripedProgressBar.field_U = new SceneWidget(0L, param5);
-          ki.field_k.a(StripedProgressBar.field_U, (byte) 26);
+          ki.field_k.addChild(StripedProgressBar.field_U, (byte) 26);
           nf.field_d = new SceneWidget(0L, param10);
           nf.field_d.font = AccountMessagePanel.field_Q;
-          StripedProgressBar.field_U.a(nf.field_d, (byte) 26);
+          StripedProgressBar.field_U.addChild(nf.field_d, (byte) 26);
           StripedProgressBar.field_U.h(-257);
           rh.field_y = new SceneWidget(0L, (SceneWidget) null);
           rh.field_y.field_zb = var16;
           if (param4 <= 69) {
             nk.a(-96);
           }
-          StripedProgressBar.field_U.a(rh.field_y, (byte) 26);
+          StripedProgressBar.field_U.addChild(rh.field_y, (byte) 26);
           DelegatingCanvas.field_e = new SceneWidget[5];
           CheckboxPainter.field_n = new SceneWidget[5];
           ResourceArchive.field_f = new SceneWidget[5];
@@ -150,11 +150,11 @@ final class nk {
                 ResourceArchive.field_h[var18].verticalAlignment = 1;
                 DelegatingCanvas.field_e[var18] = new SceneWidget(0L, oi.field_e);
                 DelegatingCanvas.field_e[var18].verticalAlignment = 1;
-                ResourceArchive.field_f[var18].a(CheckboxPainter.field_n[var18], (byte) 26);
-                ResourceArchive.field_f[var18].a(ResourceArchive.field_h[var18], (byte) 26);
-                ResourceArchive.field_f[var18].a(DelegatingCanvas.field_e[var18], (byte) 26);
+                ResourceArchive.field_f[var18].addChild(CheckboxPainter.field_n[var18], (byte) 26);
+                ResourceArchive.field_f[var18].addChild(ResourceArchive.field_h[var18], (byte) 26);
+                ResourceArchive.field_f[var18].addChild(DelegatingCanvas.field_e[var18], (byte) 26);
                 ResourceArchive.field_f[var18].h(-257);
-                ui.field_i.a(ResourceArchive.field_f[var18], (byte) 26);
+                ui.field_i.addChild(ResourceArchive.field_f[var18], (byte) 26);
                 TextButton.field_F = TextButton.field_F + 1;
               }
               var18++;
@@ -165,7 +165,7 @@ final class nk {
           if (decompiledNaturalLoopExit0) {
             GradientOutlineTextPainter.field_u = new SceneWidget(0L, param7);
             GradientOutlineTextPainter.field_u.field_cb = nd.field_a;
-            ui.field_i.a(GradientOutlineTextPainter.field_u, (byte) 26);
+            ui.field_i.addChild(GradientOutlineTextPainter.field_u, (byte) 26);
             stackIn_34_0 = PauseMenuScreen.b(true) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
@@ -249,7 +249,7 @@ final class nk {
           if (param0 != 16711935) {
             nk.a(true);
           }
-          ModalStack.field_J = MusicCrossfadeStream.field_o.h(5);
+          ModalStack.field_J = MusicCrossfadeStream.field_o.readString(5);
           LobbyGame.field_Hb = dh.a((CharSequence) ((Object) ModalStack.field_J), (byte) 44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -320,7 +320,7 @@ final class nk {
             if (var3 != 0) {
               while (true) {
                 if (!stackIn_22_0) {
-                  var2.c(2779);
+                  var2.unlink(2779);
                 }
                 var2.field_n.setVolumeQ6(var2.field_p * LinkButtonPainter.field_h + 128 >> 8);
                 var2 = (cm) (LoginCredentials.field_b.last(1504642273));
@@ -328,7 +328,7 @@ final class nk {
               }
             }
             if (!stackIn_22_0) {
-              var2.c(2779);
+              var2.unlink(2779);
             }
             if (stackIn_22_0 ||
               var3 != 0) {
@@ -348,7 +348,7 @@ final class nk {
               }
               stackIn_22_0Lifetime1 = var2Lifetime1.field_k.b(0);
               if (!stackIn_22_0Lifetime1) {
-                var2Lifetime1.c(2779);
+                var2Lifetime1.unlink(2779);
               } else {
                 var2Lifetime1.field_n.setVolumeQ6(var2Lifetime1.field_p * LinkButtonPainter.field_h + 128 >> 8);
               }

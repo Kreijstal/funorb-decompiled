@@ -177,7 +177,7 @@ final class pk {
             var5.field_l = EmergentBehaviourBackground.a(var5.field_l, (byte) -128, param0, 16);
           }
           if (tj.a(param0, -32)) {
-            var5.field_n = NodeHashTable.a(param0, var5.field_n, 16, param1 ^ -122);
+            var5.field_n = NodeHashTable.readPackedByteArray(param0, var5.field_n, 16, param1 ^ -122);
             var6 = 0;
             var7 = 0;
             while (true) {

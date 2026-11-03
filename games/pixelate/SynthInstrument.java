@@ -37,7 +37,7 @@ final class SynthInstrument {
         this.pitchEnvelope.decode(param0);
         this.volumeEnvelope = new SoundEnvelope();
         this.volumeEnvelope.decode(param0);
-        int var2 = param0.f(255);
+        int var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.pitchModulation = new SoundEnvelope();
@@ -45,7 +45,7 @@ final class SynthInstrument {
           this.pitchModulationAmplitude = new SoundEnvelope();
           this.pitchModulationAmplitude.decode(param0);
         }
-        var2 = param0.f(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.volumeModulation = new SoundEnvelope();
@@ -53,7 +53,7 @@ final class SynthInstrument {
           this.volumeModulationAmplitude = new SoundEnvelope();
           this.volumeModulationAmplitude.decode(param0);
         }
-        var2 = param0.f(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_q = new SoundEnvelope();

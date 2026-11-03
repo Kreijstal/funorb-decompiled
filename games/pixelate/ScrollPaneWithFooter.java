@@ -59,9 +59,9 @@ final class ScrollPaneWithFooter extends SceneWidget {
           this.field_Hb = new SceneWidget(0L, param4);
           this.field_Ib.field_cb = param5;
           this.field_Hb.field_cb = param6;
-          this.a(this.field_Gb, (byte) 26);
-          this.a(this.field_Ib, (byte) 26);
-          this.a(this.field_Hb, (byte) 26);
+          this.addChild(this.field_Gb, (byte) 26);
+          this.addChild(this.field_Ib, (byte) 26);
+          this.addChild(this.field_Hb, (byte) 26);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

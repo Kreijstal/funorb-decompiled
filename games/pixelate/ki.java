@@ -50,10 +50,10 @@ final class ki {
             field_a = (String) null;
           }
           var10 = MusicCrossfadeStream.field_o;
-          var2 = var10.f(255);
+          var2 = var10.readUnsignedByte(255);
           if (var2 != 0) {
             if (1 != var2) {
-              CheckboxPainter.a(1, "A1: " + jm.b(-26), (Throwable) null);
+              CheckboxPainter.reportClientError(1, "A1: " + jm.b(-26), (Throwable) null);
               na.a(true);
               return;
             }
@@ -67,7 +67,7 @@ final class ki {
               break;
             }
             if (var4_ref_og != null) {
-              var4_ref_og.c(2779);
+              var4_ref_og.unlink(2779);
               return;
             }
             na.a(true);
@@ -78,13 +78,13 @@ final class ki {
             na.a(true);
             return;
           }
-          var4 = var10.f(255);
+          var4 = var10.readUnsignedByte(255);
           if (var4 != 0) {
             var12 = new byte[var4];
             var11 = var12;
             var8 = var11;
             var5 = var8;
-            var10.a(var12, 0, -89, var4);
+            var10.readBytes(var12, 0, -89, var4);
           } else {
             var5 = null;
           }
@@ -95,7 +95,7 @@ final class ki {
           }
           var9.field_p = true;
           var9.field_n = (byte[]) (var5);
-          var9.c(2779);
+          var9.unlink(2779);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

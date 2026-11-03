@@ -69,10 +69,10 @@ final class sm extends IntrusiveNode {
             }
             var5 = null;
             if (QuickChatCategoryCache.field_e == 0) {
-              var5 = jf.a((String) (var4), param0, (byte) 108);
+              var5 = jf.requestAddFriend((String) (var4), param0, (byte) 108);
             }
             if (QuickChatCategoryCache.field_e == 1) {
-              var5 = ff.a(param0, (String) (var4), (byte) -106);
+              var5 = ff.requestRemoveFriend(param0, (String) (var4), (byte) -106);
             }
             if (QuickChatCategoryCache.field_e == 2) {
               var5 = mj.a(-34, (String) (var4), param0);
@@ -121,10 +121,10 @@ final class sm extends IntrusiveNode {
         }
         var5Lifetime1 = null;
         if (QuickChatCategoryCache.field_e == 0) {
-          var5Lifetime1 = jf.a((String) (var4Lifetime1), param0, (byte) 108);
+          var5Lifetime1 = jf.requestAddFriend((String) (var4Lifetime1), param0, (byte) 108);
         }
         if (QuickChatCategoryCache.field_e == 1) {
-          var5Lifetime1 = ff.a(param0, (String) (var4Lifetime1), (byte) -106);
+          var5Lifetime1 = ff.requestRemoveFriend(param0, (String) (var4Lifetime1), (byte) -106);
         }
         if (QuickChatCategoryCache.field_e == 2) {
           var5Lifetime1 = mj.a(-34, (String) (var4Lifetime1), param0);

@@ -36,7 +36,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              CheckboxPainter.a(1, "MGR1: " + param1, (Throwable) null);
+              CheckboxPainter.reportClientError(1, "MGR1: " + param1, (Throwable) null);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

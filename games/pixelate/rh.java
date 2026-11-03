@@ -71,7 +71,7 @@ final class rh extends IntrusiveNode {
         QuickChatMenu.b(false, 93);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         field_u = null;
         if (param0 != 64) {

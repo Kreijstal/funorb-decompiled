@@ -63,7 +63,7 @@ class SceneWidget extends SceneWidgetNode {
     int height;
     static int field_ib;
 
-    final void a(SceneWidget param0, byte param1) {
+    final void addChild(SceneWidget param0, byte param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -191,7 +191,7 @@ class SceneWidget extends SceneWidgetNode {
         EmergentBehaviourBackground.field_q = !param1 ? true : false;
         if (param0 != -28476) {
           SceneWidget var4 = (SceneWidget) null;
-          this.a((SceneWidget) null, (byte) 61);
+          this.addChild((SceneWidget) null, (byte) 61);
         }
         this.updateInputTree(SoftwareRasterizer.field_j, 0, true, SoftwareRasterizer.field_d, 0, 59);
     }

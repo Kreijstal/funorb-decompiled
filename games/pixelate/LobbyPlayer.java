@@ -77,11 +77,11 @@ final class LobbyPlayer extends SceneWidget {
         }
         var8 = MusicCrossfadeStream.field_o;
         var2 = var8;
-        var3 = var8.f(255);
+        var3 = var8.readUnsignedByte(255);
         HowToPlayScreen.field_o = var3 & 127;
         stackIn_5_0 = (0 != (128 & var3));
         TextWidgetPainter.field_n = stackIn_5_0;
-        BoundedRandomAccessFile.field_d = var8.f(255);
+        BoundedRandomAccessFile.field_d = var8.readUnsignedByte(255);
         cd.field_g = var8.a(false);
         if (HowToPlayScreen.field_o == 2) {
           qf.field_b = var8.a((byte) 2);
@@ -90,21 +90,21 @@ final class LobbyPlayer extends SceneWidget {
           qf.field_b = 0;
           ModalStack.field_I = 0;
         }
-        stackIn_11_0 = (var8.f(255) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        Puzzle.field_a = var8.h(5);
+        Puzzle.field_a = var8.readString(5);
         if (var4 == 0) {
           OptionsScreen.field_t = Puzzle.field_a;
         } else {
-          OptionsScreen.field_t = var8.h(5);
+          OptionsScreen.field_t = var8.readString(5);
         }
         if (HowToPlayScreen.field_o == 1) {
           OptionsScreen.field_s = var8.a((byte) -4);
-          cl.field_h = var8.h(5);
+          cl.field_h = var8.readString(5);
         } else {
           if (HowToPlayScreen.field_o == 4) {
             OptionsScreen.field_s = var8.a((byte) -4);
-            cl.field_h = var8.h(5);
+            cl.field_h = var8.readString(5);
           } else {
             OptionsScreen.field_s = 0;
             cl.field_h = null;
@@ -128,7 +128,7 @@ final class LobbyPlayer extends SceneWidget {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          CheckboxPainter.a(1, "CC1", (Throwable) ((Object) var6));
+          CheckboxPainter.reportClientError(1, "CC1", (Throwable) ((Object) var6));
           HuffmanCodec.field_g = null;
           pb.field_j = null;
           return new aa(param0);

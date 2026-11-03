@@ -52,25 +52,25 @@ final class OptionsScreen extends MenuScreen {
         int var7 = SoftwareRasterizer.field_j;
         int var8 = SoftwareRasterizer.field_d;
         Sprite var9 = new Sprite(param5, -(2 * param5) + param3);
-        var9.c();
+        var9.makeRasterTarget();
         SoftwareRasterizer.fillVerticalGradient(0, 0, param5, -(2 * param5) + param3, param2, param0);
         Sprite var10 = new Sprite(param5, param5);
-        var10.c();
+        var10.makeRasterTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param5, param5, param2);
         Sprite var11 = new Sprite(param1, param5);
-        var11.c();
+        var11.makeRasterTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param5, param2);
         Sprite var12 = new Sprite(param5, param5);
-        var12.c();
+        var12.makeRasterTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param5, param5, param0);
         Sprite var13 = new Sprite(16, param5);
-        var13.c();
+        var13.makeRasterTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param5, param0);
         Object var14 = null;
         if (param4 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
-          var16.c();
+          var16.makeRasterTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param4);
         }
         SoftwareRasterizer.a(var18, var7, var8);

@@ -39,14 +39,14 @@ final class IntrusiveDeque {
           this.field_c = (IntrusiveNode) null;
           var2 = this.sentinel.field_a;
           if (var2 != this.sentinel) {
-            var2.c(param0 + 31697);
+            var2.unlink(param0 + 31697);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.sentinel.field_a;
         if (var2Lifetime1 != this.sentinel) {
-          var2Lifetime1.c(param0 + 31697);
+          var2Lifetime1.unlink(param0 + 31697);
           return var2Lifetime1;
         }
         return null;
@@ -101,7 +101,7 @@ final class IntrusiveDeque {
           if (var3 == this.sentinel) {
             break;
           }
-          var3.c(2779);
+          var3.unlink(2779);
         }
         this.field_c = null;
     }
@@ -162,7 +162,7 @@ final class IntrusiveDeque {
         int var2 = -96 % ((-6 - param0) / 48);
         IntrusiveNode var3 = this.sentinel.previous;
         if (var3 != this.sentinel) {
-          var3.c(2779);
+          var3.unlink(2779);
           return var3;
         }
         return null;
@@ -197,7 +197,7 @@ final class IntrusiveDeque {
     final void addLast(int param0, IntrusiveNode param1) {
         try {
           if (param1.previous != null) {
-            param1.c(2779);
+            param1.unlink(2779);
           }
           param1.field_a = this.sentinel.field_a;
           param1.previous = this.sentinel;
@@ -225,7 +225,7 @@ final class IntrusiveDeque {
     final void addFirst(int param0, IntrusiveNode param1) {
         try {
           if (param1.previous != null) {
-            param1.c(2779);
+            param1.unlink(2779);
           }
           if (param0 != 22125) {
             field_e = (String) null;

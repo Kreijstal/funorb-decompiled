@@ -82,7 +82,7 @@ final class cn {
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
-              aa.field_f.b((byte) -41, var11_ref_StringLifetime2);
+              aa.field_f.writeString((byte) -41, var11_ref_StringLifetime2);
               HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
               aa.field_f.c(7519, aa.field_f.position - var10);
             } else {
@@ -116,7 +116,7 @@ final class cn {
           }
           if (TextLayoutLine.field_c == GameModeSelectScreen.field_s &&
             QueuedInput.a(1, false)) {
-            var9Lifetime1 = MusicCrossfadeStream.field_o.f(255);
+            var9Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
             MusicCrossfadeStream.field_o.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -167,7 +167,7 @@ final class cn {
                 QueuedInput.a(var9_ref_String, 126, AudioService.a(13867));
               }
             } else {
-              gi.field_b = MusicCrossfadeStream.field_o.h(5);
+              gi.field_b = MusicCrossfadeStream.field_o.readString(5);
             }
             na.a(true);
             qj.field_b = false;

@@ -110,7 +110,7 @@ final class QueuedInput extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(10, hm.a(64) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              JavaScriptBridge.a(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluateScript(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -203,15 +203,15 @@ final class QueuedInput extends IntrusiveNode {
             QueuedInput.a(-27);
           }
           aj.field_n = param1.a((byte) -121) << 5;
-          var2_int = param1.f(255);
+          var2_int = param1.readUnsignedByte(255);
           bq.field_c = (7 & var2_int) << 18;
           aj.field_n = aj.field_n + (var2_int >> 3);
           bq.field_c = bq.field_c + (param1.a((byte) 47) << 2);
-          var2_intLifetime1 = param1.f(255);
+          var2_intLifetime1 = param1.readUnsignedByte(255);
           bq.field_c = bq.field_c + (var2_intLifetime1 >> 6);
           of.field_g = var2_intLifetime1 << 15 & 2064384;
-          of.field_g = of.field_g + (param1.f(255) << 7);
-          var2_intLifetime2 = param1.f(255);
+          of.field_g = of.field_g + (param1.readUnsignedByte(255) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(255);
           of.field_b = var2_intLifetime2 << 16 & 65536;
           of.field_g = of.field_g + (var2_intLifetime2 >> 1);
           of.field_b = of.field_b + param1.a((byte) 96);

@@ -56,7 +56,7 @@ abstract class ByteStorage {
           while (var1 instanceof ln) {
             var2 = var1.field_a;
             if (((ln) (var1)).field_o.isSamplePositionOutOfRange()) {
-              var1.c(2779);
+              var1.unlink(2779);
             }
             var1 = var2;
           }

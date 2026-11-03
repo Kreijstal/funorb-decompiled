@@ -40,7 +40,7 @@ final class la {
           if (param0 < 120) {
             field_a = (int[]) null;
           }
-          var2 = var13.f(255);
+          var2 = var13.readUnsignedByte(255);
           if (var2 == 0) {
             var11 = AchievementIcon.a(false);
             var17 = var11;
@@ -49,7 +49,7 @@ final class la {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).f(255);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
@@ -61,12 +61,12 @@ final class la {
             var15.field_p = true;
             var15.field_s = var17[0];
             var15.field_l = var3;
-            var15.c(2779);
+            var15.unlink(2779);
             return;
           }
           if (var2 != 1) {
             if (var2 != 2) {
-              CheckboxPainter.a(1, "A1: " + jm.b(-79), (Throwable) null);
+              CheckboxPainter.reportClientError(1, "A1: " + jm.b(-79), (Throwable) null);
               na.a(true);
             } else {
               var16_ref = (mc) (tj.field_z.c(1504642273));
@@ -77,7 +77,7 @@ final class la {
               var16_ref.field_l = AchievementIcon.a(false);
               var16_ref.field_p = true;
               var16_ref.field_s = var16_ref.field_l[0];
-              var16_ref.c(2779);
+              var16_ref.unlink(2779);
             }
           } else {
             var12 = (hf) (dh.field_a.c(1504642273));
@@ -85,7 +85,7 @@ final class la {
               na.a(true);
               return;
             }
-            var12.c(2779);
+            var12.unlink(2779);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -338,19 +338,19 @@ final class la {
             var13 = 0;
             if (var12.children == null) {
               var12.field_Hb = new SceneWidget(0L, SceneWidget.field_T);
-              var12.a(var12.field_Hb, (byte) 26);
+              var12.addChild(var12.field_Hb, (byte) 26);
               var12.field_Gb = new SceneWidget(0L, of.field_i);
               if (DialWidgetPainter.field_n) {
-                var12.a(var12.field_Gb, (byte) 26);
+                var12.addChild(var12.field_Gb, (byte) 26);
               }
               var12.field_Gb.horizontalAlignment = 2;
               var12.field_Sb = new SceneWidget(0L, TextFieldValidator.field_h);
-              var12.a(var12.field_Sb, (byte) 26);
+              var12.addChild(var12.field_Sb, (byte) 26);
               var12.h(-257);
               var12.field_Zb = new SceneWidget(0L, ul.field_p);
-              var12.a(var12.field_Zb, (byte) 26);
+              var12.addChild(var12.field_Zb, (byte) 26);
               var12.field_Mb = new SceneWidget(0L, ge.field_h);
-              var12.a(var12.field_Mb, (byte) 26);
+              var12.addChild(var12.field_Mb, (byte) 26);
               var13 = 1;
             }
             var12.field_Hb.field_cb = null;
@@ -741,7 +741,7 @@ final class la {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.f(param1 ^ 255);
+          var3 = var9.readUnsignedByte(param1 ^ 255);
           var4 = var9.readInt(0);
           if (var4 >= param1 && (up.field_j == 0 ||
             !(up.field_j < var4))) {
@@ -749,7 +749,7 @@ final class la {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var13, 0, -80, var4);
+              var9.readBytes(var13, 0, -80, var4);
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }

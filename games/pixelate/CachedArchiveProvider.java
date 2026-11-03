@@ -41,7 +41,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             return (byte[]) (stackIn_2_0);
           }
           var5 = var3.h(0);
-          var3.c(2779);
+          var3.unlink(2779);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (var3 >= 0) {
               if (var3 < this.index.groupCapacity) {
                 if (this.index.fileCounts[var3] == 0) {
-                  var2.c(2779);
+                  var2.unlink(2779);
                 } else {
                   if (this.field_s[var3] == 0) {
                     discarded$0 = this.a(var3, 1, true);
@@ -85,14 +85,14 @@ final class CachedArchiveProvider extends ArchiveProvider {
                     discarded$1 = this.a(var3, 2, true);
                   }
                   if (1 == this.field_s[var3]) {
-                    var2.c(2779);
+                    var2.unlink(2779);
                   }
                 }
               } else {
-                var2.c(2779);
+                var2.unlink(2779);
               }
             } else {
-              var2.c(2779);
+              var2.unlink(2779);
             }
             var2 = this.field_l.last(1504642273);
           }
@@ -139,7 +139,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             0 == param1 &&
             !var12.field_t &&
             var12.field_v) {
-            var12.c(2779);
+            var12.unlink(2779);
             var4 = null;
           }
           if (var4 == null) {
@@ -217,7 +217,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   this.field_s[param0] = (byte) 1;
                 }
                 if (!((ArchiveRequest) (var4)).field_t) {
-                  ((ArchiveRequest) (var4)).c(2779);
+                  ((ArchiveRequest) (var4)).unlink(2779);
                 }
                 stackIn_110_0 = var4;
                 return (ArchiveRequest) (stackIn_110_0);
@@ -227,7 +227,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               this.field_s[param0] = (byte)-1;
-              ((ArchiveRequest) (var4)).c(2779);
+              ((ArchiveRequest) (var4)).unlink(2779);
               if (((ArchiveRequest) (var4)).field_t) {
                 if (this.field_i.a(20)) {
                   return null;
@@ -267,7 +267,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             this.field_i.e((byte) 0);
-            ((ArchiveRequest) (var4)).c(2779);
+            ((ArchiveRequest) (var4)).unlink(2779);
             if (!((ArchiveRequest) (var4)).field_t) {
               return null;
             }
@@ -288,7 +288,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
           }
           if (!((ArchiveRequest) (var4)).field_t) {
-            ((ArchiveRequest) (var4)).c(2779);
+            ((ArchiveRequest) (var4)).unlink(2779);
           }
           stackIn_78_0 = var4;
           return (ArchiveRequest) (stackIn_78_0);
@@ -529,7 +529,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   discarded$3 = this.a(var4, 1, true);
                 }
                 if (this.field_s[var4] != 0) {
-                  var3.c(2779);
+                  var3.unlink(2779);
                 } else {
                   var2_int = 0;
                 }
@@ -574,7 +574,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   if (this.field_s[var4Lifetime1] != 1) {
                     var2_intLifetime1 = 0;
                   } else {
-                    var3Lifetime1.c(param0 ^ 2779);
+                    var3Lifetime1.unlink(param0 ^ 2779);
                   }
                   var3Lifetime1 = this.field_w.last(1504642273);
                 }
@@ -624,7 +624,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   if (!var2_ref.field_t) {
                     throw new RuntimeException();
                   }
-                  var2_ref.c(param0 + 2779);
+                  var2_ref.unlink(param0 + 2779);
                 }
               }
               var2_ref = (ArchiveRequest) (this.field_j.a(-123));

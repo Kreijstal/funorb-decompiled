@@ -345,21 +345,21 @@ final class VerticalScrollbar extends SceneWidget {
         try {
           this.field_Kb = new SceneWidget(0L, param1);
           this.field_Mb = new SceneWidget(0L, param2);
-          this.a(this.field_Kb, (byte) 26);
-          this.a(this.field_Mb, (byte) 26);
+          this.addChild(this.field_Kb, (byte) 26);
+          this.addChild(this.field_Mb, (byte) 26);
           this.field_Rb = new SceneWidget(0L, (SceneWidget) null);
-          this.a(this.field_Rb, (byte) 26);
+          this.addChild(this.field_Rb, (byte) 26);
           this.field_Eb = new SceneWidget(0L, param3);
           this.field_Jb = new SceneWidget(0L, param3);
           var9 = this.field_Eb;
           var10 = var9;
           this.field_Jb.field_A = true;
           var10.field_A = true;
-          this.field_Rb.a(this.field_Eb, (byte) 26);
-          this.field_Rb.a(this.field_Jb, (byte) 26);
+          this.field_Rb.addChild(this.field_Eb, (byte) 26);
+          this.field_Rb.addChild(this.field_Jb, (byte) 26);
           this.field_Pb = new SceneWidget(0L, param4);
           this.field_Pb.field_vb = true;
-          this.field_Rb.a(this.field_Pb, (byte) 26);
+          this.field_Rb.addChild(this.field_Pb, (byte) 26);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

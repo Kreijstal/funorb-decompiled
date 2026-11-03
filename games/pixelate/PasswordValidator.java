@@ -107,7 +107,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_20_0 = cd.field_a;
             return stackIn_20_0;
           }
-          if (DateInputWidget.a(var5, var6, (byte) 78)) {
+          if (DateInputWidget.containsTextOrReverse(var5, var6, (byte) 78)) {
             stackIn_23_0 = tj.field_w;
             return stackIn_23_0;
           }

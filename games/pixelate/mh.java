@@ -15,7 +15,7 @@ final class mh {
           if (param1 < 73) {
             field_b = 37;
           }
-          DraggableWidget.field_I.a(bo.field_h, (byte) 26);
+          DraggableWidget.field_I.addChild(bo.field_h, (byte) 26);
           un.field_l = true;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

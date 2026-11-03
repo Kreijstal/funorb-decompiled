@@ -84,9 +84,9 @@ final class hp extends SceneWidget {
               var11 = var15;
             }
             var14.a(var10, 15, 90, 256, 640);
-            var8.a(var13, (byte) 26);
+            var8.addChild(var13, (byte) 26);
             var10 += 30;
-            var8.a(var14, (byte) 26);
+            var8.addChild(var14, (byte) 26);
           }
           var17.a(0, 24, 0, 256, 20 + (var11 + 90));
           var10 += 15;
@@ -95,10 +95,10 @@ final class hp extends SceneWidget {
           var8.a(var17.height, this.height - var17.height, 0, 256, this.field_K);
           var9.a(20, 15, 0, 256, this.field_K);
           var8.field_zb = OptionsScreen.a(8421504, 16, 11579568, var8.height, 2105376, 3);
-          var17.a(this.field_Eb, (byte) 26);
-          var8.a(var9, (byte) 26);
-          this.a(var17, (byte) 26);
-          this.a(var8, (byte) 26);
+          var17.addChild(this.field_Eb, (byte) 26);
+          var8.addChild(var9, (byte) 26);
+          this.addChild(var17, (byte) 26);
+          this.addChild(var8, (byte) 26);
           var10Lifetime1 = -(this.height >> 1) + 240;
           this.field_D = 320 - (this.field_K >> 1);
           return;

@@ -171,7 +171,7 @@ final class MusicCrossfadeStream extends PcmStream {
             java.applet.Applet var6 = (java.applet.Applet) null;
             MusicCrossfadeStream.a((java.applet.Applet) null, -8);
           }
-          param3.b(param1, false, -1);
+          param3.setChannelGain(param1, false, -1);
           param3.c(param2, 274191016);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vi.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

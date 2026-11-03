@@ -138,7 +138,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void removeListener(PcmMixerListener param0) {
-        param0.c(2779);
+        param0.unlink(2779);
         param0.a();
         IntrusiveNode var2 = this.listeners.sentinel.field_a;
         if (var2 == this.listeners.sentinel) {

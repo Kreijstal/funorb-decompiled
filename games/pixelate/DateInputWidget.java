@@ -21,7 +21,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         }
     }
 
-    final static boolean a(String param0, String param1, byte param2) {
+    final static boolean containsTextOrReverse(String param0, String param1, byte param2) {
         String var3 = null;
         int var4 = 0;
         boolean stackIn_12_0 = false;
