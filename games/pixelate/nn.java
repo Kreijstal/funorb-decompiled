@@ -54,7 +54,7 @@ final class nn {
           if (this.field_n != 1 &&
             2 == this.field_n) {
             if (null != this.field_s) {
-              stackIn_14_0 = (!oa.field_i) ? 0 : 110;
+              stackIn_14_0 = (!DateOfBirthValidator.field_i) ? 0 : 110;
               var4 = stackIn_14_0;
               for (var5 = 0; 2 > var5; var5++) {
                 var9.drawCentered(sb.a(this.field_r[var5], 3), this.field_j[var5], -var4 + (this.field_q[var5] + 155), 0, -1);
@@ -67,7 +67,7 @@ final class nn {
               var10.drawRightAlignedText(this.field_s[var7], -var5Lifetime2 + 640, -var4 + 420, 0, -1);
             }
             if (0 < this.field_k) {
-              stackIn_25_0 = (!oa.field_i) ? 0 : 50;
+              stackIn_25_0 = (!DateOfBirthValidator.field_i) ? 0 : 50;
               var4Lifetime1 = stackIn_25_0;
               if (this.field_k > 256) {
                 stackIn_28_0 = 256;
@@ -89,7 +89,7 @@ final class nn {
             fi.a(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
             var9.drawLeftAlpha(sb.a(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
             if (null != this.field_f) {
-              fi.a(var10, IntrusiveDeque.field_e, this.field_f, jg.field_J, 30, 390, 0, -1, this.field_p);
+              fi.a(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
             }
           }
         }
@@ -122,7 +122,7 @@ final class nn {
         if (0 < this.field_k) {
           this.field_k = this.field_k - 5;
         }
-        if (oa.field_j == 0 &&
+        if (DateOfBirthValidator.field_j == 0 &&
           this.field_g.field_r > 0 && 256 > this.field_p) {
           this.field_p = this.field_p + 4;
         }
@@ -245,13 +245,13 @@ final class nn {
           ep.field_b = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo12", param3));
           he.field_d = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo14", param3));
           ba.field_d = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo14bold", param3));
-          var17 = new Sprite(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) ec.field_u));
+          var17 = new Sprite(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
           dq.a((byte) 31, "dropdown", "commonui", param2);
           var5 = lb.a(param2, param0 ^ 4767934, "commonui", "screen_options");
-          ng.field_A = new IndexedSprite[4];
-          ng.field_o = new IndexedSprite[4];
+          UiComponent.field_A = new IndexedSprite[4];
+          UiComponent.field_o = new IndexedSprite[4];
           qg.field_a = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{qg.field_a, ng.field_A, ng.field_o};
+          var6 = new IndexedSprite[][]{qg.field_a, UiComponent.field_A, UiComponent.field_o};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -284,7 +284,7 @@ final class nn {
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_F, var9Lifetime1);
           var12.c();
           var17.f(-var9Lifetime1, 0);
-          ia.a((byte) 92);
+          LinkButtonPainter.a((byte) 92);
           fc.field_d = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -326,7 +326,7 @@ final class nn {
           this.field_g = param0;
           this.field_j = param1;
           this.field_q = param2;
-          this.field_n = oa.field_j;
+          this.field_n = DateOfBirthValidator.field_j;
           this.field_o = param3 ? true : false;
           this.field_r = new int[this.field_g.field_v.length];
           this.field_p = 0;

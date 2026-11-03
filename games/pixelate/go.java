@@ -18,7 +18,7 @@ class go extends rg {
         if (param0 != -27096) {
           return (ea) null;
         }
-        return te.field_Nb;
+        return QuickChatMenu.field_Nb;
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -63,13 +63,13 @@ class go extends rg {
         var43 = null;
         var12 = Pixelate.field_H ? 1 : 0;
         var3 = 1;
-        if (!qo.field_z &&
-          ko.field_eb == null) {
+        if (!MatchingTextValidator.field_z &&
+          LoadingProgressDialog.field_eb == null) {
           var3 = 0;
         }
         var4 = 30 / ((param1 - 90) / 34);
         if (ce.field_d == 0 &&
-          bn.field_S != null) {
+          DraggableWidget.field_S != null) {
           var3 = 0;
         }
         if (ce.field_d == 2 &&
@@ -82,7 +82,7 @@ class go extends rg {
               var5_ref_String = mp.field_a.toString();
               var8 = var5_ref_String;
               var8Lifetime2 = var5_ref_String;
-              if (bc.a(var5_ref_String, 1)) {
+              if (EmailValidator.a(var5_ref_String, 1)) {
                 var14 = (String) null;
                 var13 = (String) null;
                 MidiPcmStream.a(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
@@ -100,7 +100,7 @@ class go extends rg {
               if (IterableNodeHashTable.a(var6, 0) == 2) {
                 am.a(1, -26931, var6, param2);
               }
-              dg.a(true, ce.field_d, -1, var5_ref_String, jo.field_k, param0);
+              dg.a(true, ce.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
               nd.a((byte) -23);
             } else {
               nd.a((byte) -23);
@@ -154,39 +154,39 @@ class go extends rg {
               }
               if (io.field_c == null) {
                 var34 = var8Lifetime1Lifetime6 + var33 + ": ";
-                var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var34);
+                var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var34);
                 break regionExit1;
               }
               if (!nc.field_b) {
                 var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
-                var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var38);
+                var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);
                 break regionExit1;
               }
               if (mn.field_f == null) {
                 var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
-                var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var36);
+                var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var36);
                 break regionExit1;
               }
               var8Lifetime1Lifetime6 = "[" + mn.field_f + "] ";
             }
             var39 = var8Lifetime1Lifetime6 + var33 + ": ";
-            var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var39);
+            var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var39);
             break regionExit1;
           }
-          var44 = (CharSequence) ((Object) jo.field_k);
-          var40 = sd.a(dg.field_b, 116, new String[]{ng.a(var44, -1)});
+          var44 = (CharSequence) ((Object) CheckboxPainter.field_k);
+          var40 = sd.a(dg.field_b, 116, new String[]{UiComponent.a(var44, -1)});
           var41 = sd.a(sk.field_c, 43, new String[]{var17});
-          var10 = vl.field_Q.textWidth(var40);
-          var11 = vl.field_Q.textWidth(var41);
+          var10 = AccountMessagePanel.field_Q.textWidth(var40);
+          var11 = AccountMessagePanel.field_Q.textWidth(var41);
           if (var11 >= var10) {
             var6Lifetime1 = var6Lifetime1 - var11;
           } else {
             var6Lifetime1 = var6Lifetime1 - var10;
           }
         }
-        if (vl.field_Q.textWidth(mp.field_a.toString()) <= var6Lifetime1) {
+        if (AccountMessagePanel.field_Q.textWidth(mp.field_a.toString()) <= var6Lifetime1) {
           return true;
         }
         nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);

@@ -35,7 +35,7 @@ abstract class IndexedSpriteState {
         field_i = null;
     }
 
-    final static ak a(int param0) {
+    final static SceneWidget a(int param0) {
         if (param0 != 1) {
           field_k = 60;
           return la.b((byte) -110);
@@ -80,7 +80,7 @@ abstract class IndexedSpriteState {
                 return stackIn_15_0;
               }
             } else {
-              if (-1 == oa.field_h.indexOf(var5)) {
+              if (-1 == DateOfBirthValidator.field_h.indexOf(var5)) {
                 stackIn_18_0 = DiskCacheWorker.field_f;
                 return stackIn_18_0;
               }

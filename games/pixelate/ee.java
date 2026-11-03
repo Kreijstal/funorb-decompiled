@@ -77,14 +77,14 @@ final class ee {
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = fh.a(var4_ref_String, -106);
+            var6 = DisplayNameForm.a(var4_ref_String, -106);
             var7 = var1.h(5);
             var8 = dh.a((CharSequence) ((Object) var4_ref_String), (byte) 100);
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = fh.a(var7, 69);
+              var6 = DisplayNameForm.a(var7, 69);
               if (null != var6) {
                 hq.field_q.a(false, var6, (long)var8.hashCode());
               }
@@ -104,35 +104,35 @@ final class ee {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (gk.field_db == 1) {
-                gk.field_db = 2;
+              if (ValidatedTextWidget.field_db == 1) {
+                ValidatedTextWidget.field_db = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (gk.field_db == 2) {
-                gk.field_db = 1;
+              if (ValidatedTextWidget.field_db == 2) {
+                ValidatedTextWidget.field_db = 1;
               }
               return;
             }
             if (4 != var2) {
-              jo.a(1, "F1: " + jm.b(-8), (Throwable) null);
+              CheckboxPainter.a(1, "F1: " + jm.b(-8), (Throwable) null);
               if (param0 >= -89) {
                 return;
               }
               na.a(true);
               return;
             }
-            gk.field_db = 1;
+            ValidatedTextWidget.field_db = 1;
             var3 = var1.h(5);
-            qp.field_L = ((String) (var3)).intern();
+            LabeledField.field_L = ((String) (var3)).intern();
             var4 = var1.f(255);
             vm.b(var4, (byte) -113);
             return;
           }
           if (null == vm.field_b) {
             vm.field_b = new vg(128);
-            f.field_q = 0;
+            DialWidgetPainter.field_q = 0;
           }
           var3Lifetime1 = var1.h(5);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -150,10 +150,10 @@ final class ee {
           if (null == var6Lifetime1) {
             var6Lifetime1 = new im();
             vm.field_b.a(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
-            fieldTemp$1 = f.field_q;
-            f.field_q = f.field_q + 1;
+            fieldTemp$1 = DialWidgetPainter.field_q;
+            DialWidgetPainter.field_q = DialWidgetPainter.field_q + 1;
             var6Lifetime1.field_Kb = fieldTemp$1;
-            vp.field_Hb.addFirst(22125, var6Lifetime1);
+            VerticalScrollbar.field_Hb.addFirst(22125, var6Lifetime1);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -162,22 +162,22 @@ final class ee {
           var6Lifetime1.field_Nb = (String) (var3Lifetime1);
           var6Lifetime1.field_Gb = var5Lifetime1;
           var6Lifetime1.c(2779);
-          var7_ref = (im) (vp.field_Hb.c(1504642273));
+          var7_ref = (im) (VerticalScrollbar.field_Hb.c(1504642273));
           scanLoop1: while (true) {
             if (null != var7_ref) {
-              stackOut_49_0 = hn.a((byte) 115, var6Lifetime1, var7_ref);
+              stackOut_49_0 = DebouncedValidator.a((byte) 115, var6Lifetime1, var7_ref);
               stackIn_60_0 = stackOut_49_0 ? 1 : 0;
               stackIn_50_0 = stackOut_49_0;
               if (var9 != 0) {
                 break scanLoop1;
               }
               if (stackIn_50_0) {
-                var7_ref = (im) (vp.field_Hb.last(1504642273));
+                var7_ref = (im) (VerticalScrollbar.field_Hb.last(1504642273));
                 continue;
               }
             }
             if (null == var7_ref) {
-              vp.field_Hb.addFirst(22125, var6Lifetime1);
+              VerticalScrollbar.field_Hb.addFirst(22125, var6Lifetime1);
               if (var9 == 0) {
                 return;
               }
@@ -313,10 +313,10 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var1_int = kb.field_N[param0];
+          var1_int = DateInputWidget.field_N[param0];
           var2 = 1;
-          while (var2 < kb.field_N.length) {
-            var3 = kb.field_N[var2];
+          while (var2 < DateInputWidget.field_N.length) {
+            var3 = DateInputWidget.field_N[var2];
             qb.a(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;

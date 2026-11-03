@@ -3,7 +3,7 @@
  */
 final class cn {
     static bd field_a;
-    static ko field_b;
+    static LoadingProgressDialog field_b;
 
     final static int a(String param0, int param1, int param2, boolean param3, sc param4, int param5, sc param6) {
         int var12 = 0;
@@ -83,7 +83,7 @@ final class cn {
                 var11_ref_StringLifetime2 = "";
               }
               aa.field_f.b((byte) -41, var11_ref_StringLifetime2);
-              wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
+              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
               aa.field_f.c(7519, aa.field_f.position - var10);
             } else {
               uk.field_v.position = 0;
@@ -108,7 +108,7 @@ final class cn {
               aa.field_f.writeByte(160, 16);
               aa.field_f.position = aa.field_f.position + 1;
               var9 = aa.field_f.position;
-              wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
+              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
               aa.field_f.f(aa.field_f.position - var9, -1);
             }
             vg.b(-1, 10000);
@@ -121,7 +121,7 @@ final class cn {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ii.field_y = new String[-100 + var9Lifetime1];
-              uk.field_s = c.field_Z;
+              uk.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
                 ql.a(AudioService.a(13867), -7624);
@@ -142,7 +142,7 @@ final class cn {
               }
             }
           }
-          if (uk.field_s == c.field_Z) {
+          if (uk.field_s == EditableTextWidget.field_Z) {
             var9Lifetime2 = 2;
             if (rd.a(var9Lifetime2, false)) {
               var10Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 82);
@@ -177,7 +177,7 @@ final class cn {
           if (NodeHashTableIterator.field_e == null) {
             if (qj.field_b) {
               if (no.d(8) > 30000L) {
-                gi.field_b = vc.field_N;
+                gi.field_b = ValidationIndicator.field_N;
               } else {
                 gi.field_b = ho.field_b;
               }

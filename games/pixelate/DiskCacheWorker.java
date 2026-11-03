@@ -4,7 +4,7 @@
 final class DiskCacheWorker implements Runnable {
     private nj field_b;
     static el field_f;
-    static ak field_a;
+    static SceneWidget field_a;
     private Thread field_d;
     private boolean field_e;
     int field_c;
@@ -63,7 +63,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              jo.a(1, (String) null, (Throwable) ((Object) var2_ref));
+              CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var2_ref));
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {

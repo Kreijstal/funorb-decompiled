@@ -27,10 +27,10 @@ final class ij extends de {
           if (param0 != -5516) {
             field_r = (String) null;
           }
-          if (fh.field_L == -1 &&
-            -1 == h.field_Q) {
-            fh.field_L = ProxyAuthenticationException.field_d;
-            h.field_Q = bg.field_k;
+          if (DisplayNameForm.field_L == -1 &&
+            -1 == Checkbox.field_Q) {
+            DisplayNameForm.field_L = ProxyAuthenticationException.field_d;
+            Checkbox.field_Q = bg.field_k;
           }
           boolean decompiledFrameRemainder0 = true;
           no.field_h = no.field_h + 1;
@@ -63,8 +63,8 @@ final class ij extends de {
                 }
               }
             }
-            oo.field_f = h.field_Q;
-            tm.field_V = fh.field_L;
+            oo.field_f = Checkbox.field_Q;
+            MarkerSlider.field_V = DisplayNameForm.field_L;
             if (param1 != null) {
               re.field_h = false;
             } else {
@@ -77,12 +77,12 @@ final class ij extends de {
           if (!re.field_h &&
             no.field_h < am.field_c &&
             im.field_Jb) {
-            tm.field_V = fh.field_L;
-            oo.field_f = h.field_Q;
+            MarkerSlider.field_V = DisplayNameForm.field_L;
+            oo.field_f = Checkbox.field_Q;
             no.field_h = 0;
           }
-          h.field_Q = -1;
-          fh.field_L = -1;
+          Checkbox.field_Q = -1;
+          DisplayNameForm.field_L = -1;
           if (re.field_h &&
             no.field_h == pi.field_Fb) {
             re.field_h = false;

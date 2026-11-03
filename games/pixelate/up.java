@@ -95,7 +95,7 @@ final class up {
         this.field_l.c();
         int var4 = param0 * (5 - var11.field_f);
         int var5 = (-var11.field_a + 5) * 16;
-        boolean[] var6 = ad.a(var11, 21922);
+        boolean[] var6 = ThreeSliceButtonPainter.a(var11, 21922);
         for (var7 = 0; var7 < var11.field_a; var7++) {
           for (var8 = 0; var8 < var11.field_f; var8++) {
             var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);

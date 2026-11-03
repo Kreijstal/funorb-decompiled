@@ -6,7 +6,7 @@ final class ki {
     private double field_l;
     static String field_a;
     private int field_n;
-    static ak field_k;
+    static SceneWidget field_k;
     int field_h;
     private int field_p;
     int field_g;
@@ -53,7 +53,7 @@ final class ki {
           var2 = var10.f(255);
           if (var2 != 0) {
             if (1 != var2) {
-              jo.a(1, "A1: " + jm.b(-26), (Throwable) null);
+              CheckboxPainter.a(1, "A1: " + jm.b(-26), (Throwable) null);
               na.a(true);
               return;
             }
@@ -150,12 +150,12 @@ final class ki {
         int var2Lifetime1;
         if (param0 == 3887) {
           var2 = (int)(this.field_l * 32768.0 / 3.141592653589793);
-          hb.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2, this.field_n);
+          ContentTransitionDialog.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2, this.field_n);
           return;
         }
         this.b(19);
         var2Lifetime1 = (int)(this.field_l * 32768.0 / 3.141592653589793);
-        hb.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2Lifetime1, this.field_n);
+        ContentTransitionDialog.field_hb.b(672, 160, this.field_g << 4, this.field_h << 4, var2Lifetime1, this.field_n);
     }
 
     final void a(boolean param0) {

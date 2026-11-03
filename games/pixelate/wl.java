@@ -95,7 +95,7 @@ final class wl {
         this.field_h[0] = this.field_h[0] + this.field_d;
         this.field_e[param0] = this.field_e[param0] + this.field_c;
         this.field_a = this.field_a - param1;
-        this.field_c = this.field_c + ng.field_s;
+        this.field_c = this.field_c + UiComponent.field_s;
     }
 
     wl(int param0, int param1, int param2, int[] param3) {
@@ -117,7 +117,7 @@ final class wl {
             var6[var7] = -1000.0;
           }
           var5_double = (double)(ok.a(ea.field_b, -124, 10) + 15) / 10.0;
-          this.field_d = var5_double * si.a(3.141592653589793 * (double)param2 / 512.0, false);
+          this.field_d = var5_double * DialWidget.a(3.141592653589793 * (double)param2 / 512.0, false);
           this.field_c = var5_double * jn.a((double)param2 * 3.141592653589793 / 512.0, 6802);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -59,10 +59,10 @@ final class MusicPatchPcmStream extends PcmStream {
         if (HuffmanCodec.field_b != qh.field_c) {
           var2 = qh.field_c * qh.field_c;
           var3 = -(HuffmanCodec.field_b * HuffmanCodec.field_b) + var2;
-          param0 = param0 + var3 * (qo.field_o - param0) / var2;
+          param0 = param0 + var3 * (MatchingTextValidator.field_o - param0) / var2;
         }
         ui.field_i.a(param0, 120, ho.field_c, 256, 640);
-        ArchiveProvider.a(qo.field_o - 24, (byte) 123, 640, hd.field_q, 5, 0, MouseWheelHandler.field_c);
+        ArchiveProvider.a(MatchingTextValidator.field_o - 24, (byte) 123, 640, hd.field_q, 5, 0, MouseWheelHandler.field_c);
         if (param1 != 112) {
           MusicPatchPcmStream.e(92);
           return;

@@ -36,14 +36,14 @@ final class fj {
           } else {
             stackIn_3_3 = param0.field_b;
           }
-          em.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (gp) null, (int[]) null, param0.field_j);
+          em.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (ScrollContainer) null, (int[]) null, param0.field_j);
           if (0 == param0.field_j &&
             !pk.b(121) &&
             io.field_c == null &&
-            bn.field_S == null) {
+            DraggableWidget.field_S == null) {
             if (!IsaacRandom.field_g) {
               var5 = ProxySocketConnector.field_n;
-              var6 = kc.field_s;
+              var6 = EmailConfirmationValidator.field_s;
               var5.field_b.a(var6, (byte) -33, 14);
             }
             var7 = ProxySocketConnector.field_n;
@@ -60,7 +60,7 @@ final class fj {
               var9.field_b.a(var10, (byte) -60, 14);
             }
             var11 = ProxySocketConnector.field_n;
-            var12 = od.field_Eb;
+            var12 = TabbedPanel.field_Eb;
             var11.field_b.a(var12, (byte) -73, 20);
           }
           ProxySocketConnector.field_n.c(-24);

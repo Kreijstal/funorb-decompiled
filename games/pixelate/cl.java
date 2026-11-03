@@ -208,8 +208,8 @@ final class cl {
           ProxySocketConnector.field_n.a(param1, (byte) 20);
         }
         de.a((byte) 28, param1);
-        if (hc.field_M != null) {
-          hc.field_M.a(param1, 0);
+        if (AccountTermsPanel.field_M != null) {
+          AccountTermsPanel.field_M.a(param1, 0);
         }
         kd.c(param1, -24721);
     }

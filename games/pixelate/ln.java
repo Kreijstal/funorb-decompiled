@@ -94,13 +94,13 @@ final class ln extends IntrusiveNode {
         if (null == ib.field_f) {
           return;
         }
-        pf.a(ib.field_f, 0);
+        MenuInputState.a(ib.field_f, 0);
         ib.field_f.a(6511, mc.field_k);
         ib.field_f = null;
         if (vh.field_c != null) {
           vh.field_c.b(-101);
         }
-        ec.field_u.requestFocus();
+        NameAvailabilityValidator.field_u.requestFocus();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

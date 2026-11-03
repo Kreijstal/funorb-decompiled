@@ -9,7 +9,7 @@ final class lc extends IntrusiveNode {
     int[][] field_r;
     int field_v;
     int field_m;
-    static ak field_q;
+    static SceneWidget field_q;
     int field_n;
     int field_k;
     String[][] field_o;
@@ -41,26 +41,26 @@ final class lc extends IntrusiveNode {
         int var2_intLifetime1;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var2_int = vp.field_Ib;
+          var2_int = VerticalScrollbar.field_Ib;
           if (2 == param0.field_j) {
             if (!param0.field_a) {
               if (0 == param0.field_d &&
                 0 == param0.field_e) {
                 var2_intLifetime1 = ib.field_i[param0.field_j];
               } else {
-                var2_intLifetime1 = qp.field_P[param0.field_j];
+                var2_intLifetime1 = LabeledField.field_P[param0.field_j];
               }
             } else {
-              var2_intLifetime1 = vp.field_Ib;
+              var2_intLifetime1 = VerticalScrollbar.field_Ib;
             }
           } else {
             if (param0.field_j == 4) {
-              var2_intLifetime1 = qp.field_P[param0.field_j];
+              var2_intLifetime1 = LabeledField.field_P[param0.field_j];
             } else {
-              if (~param0.field_k == ~hn.field_f) {
+              if (~param0.field_k == ~DebouncedValidator.field_f) {
                 var2_intLifetime1 = ib.field_i[param0.field_j];
               } else {
-                var2_intLifetime1 = qp.field_P[param0.field_j];
+                var2_intLifetime1 = LabeledField.field_P[param0.field_j];
               }
             }
           }

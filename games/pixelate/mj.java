@@ -8,7 +8,7 @@ final class mj {
     static String field_i;
     private ma field_f;
     static int field_b;
-    static pf field_c;
+    static MenuInputState field_c;
     static int field_j;
     private int field_d;
     static int field_k;
@@ -36,7 +36,7 @@ final class mj {
             return;
           }
           this.field_a[0] = 0;
-          this.field_a[1] = 300 + ok.a(ea.field_b, bn.a(param0, -327), 300);
+          this.field_a[1] = 300 + ok.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
             mj.c(43);
@@ -117,7 +117,7 @@ final class mj {
             stackIn_6_0 = wd.field_h;
             return stackIn_6_0;
           }
-          if (gk.field_db != 2) {
+          if (ValidatedTextWidget.field_db != 2) {
             stackIn_9_0 = le.field_d;
             return stackIn_9_0;
           }
@@ -166,7 +166,7 @@ final class mj {
     }
 
     final static void c(int param0) {
-        ph.field_l.c(new jh(), -115);
+        ph.field_l.transitionToContent(new AccountChoicePanel(), -115);
         if (param0 != 24496) {
           String var2 = (String) null;
           mj.a(-69, (String) null, 1);
@@ -193,7 +193,7 @@ final class mj {
         field_i = "Discard";
         field_h = "Create a free account to start using this feature";
         field_g = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
-        field_c = new pf(1);
+        field_c = new MenuInputState(1);
         field_e = "Music: ";
     }
 }

@@ -7,7 +7,7 @@ final class bf extends IntrusiveNode {
     private int field_n;
     static float field_o;
     private Sprite field_l;
-    static ak field_k;
+    static SceneWidget field_k;
     private boolean[] field_p;
     static long field_m;
     static int[] field_r;
@@ -100,7 +100,7 @@ final class bf extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = SocketConnector.a(param2, param1, (byte) 47, pf.field_d);
+          var4 = SocketConnector.a(param2, param1, (byte) 47, MenuInputState.field_d);
           var3 = var4;
           var4[1].field_A = var4[1].field_F;
           var4[3].field_B = var4[3].field_E;
@@ -157,12 +157,12 @@ final class bf extends IntrusiveNode {
           param2 >= 256) {
           this.a(param3, param1, (byte) 98);
         } else {
-          SoftwareRasterizer.a(a.field_N);
+          SoftwareRasterizer.a(NameSuggestionsPanel.field_N);
           this.field_l.c();
           SoftwareRasterizer.d();
           this.a(0, 0, (byte) 98);
           ClientException.field_f.a(19692);
-          SoftwareRasterizer.b(a.field_N);
+          SoftwareRasterizer.b(NameSuggestionsPanel.field_N);
           fi.a(this.field_l, param1, param3, param4, param2);
         }
     }
@@ -246,7 +246,7 @@ final class bf extends IntrusiveNode {
 
     bf(IndexedSprite param0) {
         try {
-          this.field_p = ad.a(param0, 21922);
+          this.field_p = ThreeSliceButtonPainter.a(param0, 21922);
           this.field_n = param0.field_f;
           this.field_s = param0.field_a;
           this.field_l = new Sprite(16 * this.field_n, 16 * this.field_s);

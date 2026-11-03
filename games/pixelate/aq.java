@@ -30,14 +30,14 @@ final class aq {
             stackIn_2_0 = qn.field_n;
             return stackIn_2_0;
           }
-          if (2 != gk.field_db) {
+          if (2 != ValidatedTextWidget.field_db) {
             stackIn_5_0 = ok.field_b;
             return stackIn_5_0;
           }
           if (param3 != -20867) {
             aq.a((byte) 117);
           }
-          var7 = fh.a(param2, 114);
+          var7 = DisplayNameForm.a(param2, 114);
           if (var7 == null) {
             stackIn_10_0 = sd.a(ug.field_p, param3 + 20935, new String[]{param2});
             return stackIn_10_0;
@@ -100,8 +100,8 @@ final class aq {
             jm.field_g[var3] = var4;
             var6++;
           }
-          ko.field_hb = 0;
-          aq.a(jm.field_g[ko.field_hb], !param0 ? true : false);
+          LoadingProgressDialog.field_hb = 0;
+          aq.a(jm.field_g[LoadingProgressDialog.field_hb], !param0 ? true : false);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
         }
@@ -152,7 +152,7 @@ final class aq {
         fq.field_o = null;
         if (!param1) {
           ci.field_o = param0;
-          hn.field_d = 0;
+          DebouncedValidator.field_d = 0;
           dg.a(param0 + 2, (byte) -100);
           return;
         }

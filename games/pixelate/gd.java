@@ -16,18 +16,18 @@ final class gd {
     static Sprite[] field_f;
 
     final static void a(byte param0) {
-        vd.field_c = new ak(0L, (ak) null);
-        if (f.field_n) {
-          vd.field_c.a(gk.field_lb, (byte) 26);
+        vd.field_c = new SceneWidget(0L, (SceneWidget) null);
+        if (DialWidgetPainter.field_n) {
+          vd.field_c.a(ValidatedTextWidget.field_lb, (byte) 26);
         }
-        vd.field_c.a(oc.field_O, (byte) 26);
+        vd.field_c.a(StripedProgressBar.field_O, (byte) 26);
         cl.field_g = new wo(ul.field_m, vd.field_c);
-        ql.field_n = new ak(0L, (ak) null);
+        ql.field_n = new SceneWidget(0L, (SceneWidget) null);
         if (param0 != -7) {
           gd.a(-71);
         }
         ql.field_n.a(cl.field_g.field_g, (byte) 26);
-        ql.field_n.a(gk.field_cb, (byte) 26);
+        ql.field_n.a(ValidatedTextWidget.field_cb, (byte) 26);
         PacketBuffer.b(false);
     }
 

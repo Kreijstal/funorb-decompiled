@@ -11,12 +11,12 @@ final class ba {
     private wl[] field_e;
     private int field_c;
 
-    final static ak a(int param0) {
+    final static SceneWidget a(int param0) {
         if (param0 != -26573) {
           ba.a(77);
-          return g.b(false);
+          return PasswordValidator.b(false);
         }
-        return g.b(false);
+        return PasswordValidator.b(false);
     }
 
     final void b(int param0) {

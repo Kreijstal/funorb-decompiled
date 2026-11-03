@@ -107,7 +107,7 @@ final class uh {
     final void d(int param0) {
         if (!this.field_f.c(param0 ^ -40)) {
           this.field_f.b(param0 - 32);
-          bc.a((byte) 96, 7);
+          EmailValidator.a((byte) 96, 7);
         }
         if (param0 != 93) {
           this.field_p = -49;
@@ -163,20 +163,20 @@ final class uh {
           if (ProxyAuthenticationException.field_g == 0) {
             var7 = qn.a(var11, 480, nc.field_c, -121, DualLinkNode.field_o);
             var8 = var7 + 3;
-            pl.field_J = new String[var8];
+            AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
               ProxyAuthenticationException.field_e[var9] = -1;
             }
             di.field_b = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              pl.field_J[var9] = nc.field_c[var9];
+              AccountRegistrationPanel.field_J[var9] = nc.field_c[var9];
             }
-            pl.field_J[-3 + var8] = "";
-            pl.field_J[var8 - 2] = var6;
+            AccountRegistrationPanel.field_J[-3 + var8] = "";
+            AccountRegistrationPanel.field_J[var8 - 2] = var6;
             ProxyAuthenticationException.field_e[-2 + var8] = 0;
             di.field_b[0] = 1;
-            pl.field_J[-1 + var8] = od.field_Hb;
+            AccountRegistrationPanel.field_J[-1 + var8] = TabbedPanel.field_Hb;
             ProxyAuthenticationException.field_e[var8 - 1] = 1;
             di.field_b[1] = 2;
           } else {
@@ -185,24 +185,24 @@ final class uh {
             }
             var7 = qn.a(var11, 480, nc.field_c, -109, DualLinkNode.field_o);
             var8 = var7 + 2;
-            pl.field_J = new String[var8];
+            AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
             for (var9 = 0; var8 > var9; var9++) {
               ProxyAuthenticationException.field_e[var9] = -1;
             }
             di.field_b = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
-              pl.field_J[var9] = nc.field_c[var9];
+              AccountRegistrationPanel.field_J[var9] = nc.field_c[var9];
             }
-            pl.field_J[-2 + var8] = "";
-            pl.field_J[var8 - 1] = od.field_Hb;
+            AccountRegistrationPanel.field_J[-2 + var8] = "";
+            AccountRegistrationPanel.field_J[var8 - 1] = TabbedPanel.field_Hb;
             ProxyAuthenticationException.field_e[var8 - 1] = 0;
             di.field_b[0] = 2;
           }
-          vp.field_Gb.field_h = di.field_b.length;
+          VerticalScrollbar.field_Gb.field_h = di.field_b.length;
           var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; var8Lifetime1 < pl.field_J.length; var8Lifetime1++) {
-            stackIn_25_0 = pl.field_J[var8Lifetime1];
+          for (var8Lifetime1 = 0; var8Lifetime1 < AccountRegistrationPanel.field_J.length; var8Lifetime1++) {
+            stackIn_25_0 = AccountRegistrationPanel.field_J[var8Lifetime1];
             stackIn_25_1 = 8192;
             stackIn_26_2 = !(ProxyAuthenticationException.field_e[var8Lifetime1] < 0);
             var9Lifetime1 = ArchiveProvider.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
@@ -214,9 +214,9 @@ final class uh {
             }
           }
           qn.field_o = -(var7Lifetime1 >> 1) + bq.field_d;
-          ia.field_e = -(var7Lifetime1 >> 1) + (bq.field_d + var7Lifetime1);
-          nf.field_c = (lf.field_b + ki.field_e << 1) * vp.field_Gb.field_h;
-          for (var8Lifetime2 = param3; pl.field_J.length > var8Lifetime2; var8Lifetime2++) {
+          LinkButtonPainter.field_e = -(var7Lifetime1 >> 1) + (bq.field_d + var7Lifetime1);
+          nf.field_c = (lf.field_b + ki.field_e << 1) * VerticalScrollbar.field_Gb.field_h;
+          for (var8Lifetime2 = param3; AccountRegistrationPanel.field_J.length > var8Lifetime2; var8Lifetime2++) {
             stackIn_36_0 = nf.field_c;
             if (ProxyAuthenticationException.field_e[var8Lifetime2] >= 0) {
               stackIn_37_1 = dk.field_d;
@@ -226,7 +226,7 @@ final class uh {
             nf.field_c = stackIn_36_0 + stackIn_37_1;
           }
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
-          vp.field_Gb.a(param0, ec.a(false, ProxyAuthenticationException.field_d, bg.field_k), param3 ^ 17068, 0);
+          VerticalScrollbar.field_Gb.a(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, bg.field_k), param3 ^ 17068, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -305,7 +305,7 @@ final class uh {
           }
         }
         if (this.field_h <= this.field_u) {
-          if (ag.field_p) {
+          if (AgeValidator.field_p) {
             ae.a(5, param0 ^ 18655, this.field_e);
           }
           this.a(0, 5);
@@ -341,10 +341,10 @@ final class uh {
           this.field_l = this.field_k.field_a[this.field_j].c(param0 + 26745);
           if (50 != this.field_k.field_a[this.field_j].field_f) {
             if (this.field_k.field_a[this.field_j].field_f > 0) {
-              bc.a((byte) 96, 5);
+              EmailValidator.a((byte) 96, 5);
             }
           } else {
-            bc.a((byte) 96, 6);
+            EmailValidator.a((byte) 96, 6);
           }
         } else {
           if (param1 == 4) {
@@ -352,7 +352,7 @@ final class uh {
               return false;
             }
             if (this.field_k.a(param1, this.field_j, 127, this.field_e)) {
-              bc.a((byte) 96, 4);
+              EmailValidator.a((byte) 96, 4);
               this.field_p = 1;
               return true;
             }
@@ -376,7 +376,7 @@ final class uh {
               stackIn_13_0 = (!this.field_k.a(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
               var3 = stackIn_13_0;
               if (var3 != 0) {
-                bc.a((byte) 96, ok.a(ea.field_b, -101, 4) + 0);
+                EmailValidator.a((byte) 96, ok.a(ea.field_b, -101, 4) + 0);
               }
             }
           }

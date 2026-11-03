@@ -3,7 +3,7 @@
  */
 final class dj {
     static boolean field_c;
-    static ak field_a;
+    static SceneWidget field_a;
     static int[] field_b;
 
     final static void a(byte param0, BitmapFont param1, BitmapFont param2, int param3) {
@@ -43,14 +43,14 @@ final class dj {
         int var1Lifetime1;
         int var2Lifetime1;
         if (param0 == -1501881951) {
-          var1 = ka.m(param0 + 1501881973);
+          var1 = ResizableModalPanel.m(param0 + 1501881973);
           var2 = go.c(107);
           NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1, -MouseWheelHandler.field_d + qn.field_o);
           vh.a(88);
           return;
         }
         dj.b(-112);
-        var1Lifetime1 = ka.m(param0 + 1501881973);
+        var1Lifetime1 = ResizableModalPanel.m(param0 + 1501881973);
         var2Lifetime1 = go.c(107);
         NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);
         vh.a(88);

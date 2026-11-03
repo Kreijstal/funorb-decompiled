@@ -4,7 +4,7 @@
 final class sc {
     private boolean field_b;
     static int[] field_i;
-    static ak field_g;
+    static SceneWidget field_g;
     private String field_f;
     static byte[][] field_e;
     static PaletteBitmapFont field_h;
@@ -32,8 +32,8 @@ final class sc {
         if (hf.field_q < 2) {
           return td.field_d;
         }
-        if (null != hn.field_e) {
-          if (!hn.field_e.b(param0 ^ -16421)) {
+        if (null != DebouncedValidator.field_e) {
+          if (!DebouncedValidator.field_e.b(param0 ^ -16421)) {
             return hm.field_a;
           }
           return wa.field_a;
@@ -42,7 +42,7 @@ final class sc {
           return im.field_Mb;
         }
         if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
-          return g.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
+          return PasswordValidator.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
         }
         if (!io.field_g.b(param0 ^ -16421)) {
           return CanvasRasterBuffer.field_f;
@@ -50,14 +50,14 @@ final class sc {
         if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
           return pc.field_x + " - " + io.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
         }
-        if (!qo.field_u.b(-3)) {
+        if (!MatchingTextValidator.field_u.b(-3)) {
           return jd.field_p;
         }
         if (param0 != 16422) {
           sc.b(34);
         }
-        if (!qo.field_u.a((byte) 92)) {
-          return em.field_a + " - " + qo.field_u.c(0) + "%";
+        if (!MatchingTextValidator.field_u.a((byte) 92)) {
+          return em.field_a + " - " + MatchingTextValidator.field_u.c(0) + "%";
         }
         return wd.field_b;
     }
@@ -115,7 +115,7 @@ final class sc {
           field_d = null;
           return;
         }
-        field_g = (ak) null;
+        field_g = (SceneWidget) null;
         field_e = (byte[][]) null;
         field_d = null;
     }

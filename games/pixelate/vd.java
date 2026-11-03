@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    static ak field_a;
+    static SceneWidget field_a;
     static String[] field_d;
     static String field_b;
-    static ak field_c;
+    static SceneWidget field_c;
 
     final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
@@ -55,23 +55,23 @@ final class vd {
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            tm.field_O[var2_int] = 0;
+            MarkerSlider.field_O[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < sd.field_L; var2_intLifetime1++) {
             if (param1.field_j == de.field_e[var2_intLifetime1].field_j) {
               dupTemp$3 = de.field_e[var2_intLifetime1].a((byte) 123);
-              tm.field_O[dupTemp$3] = tm.field_O[dupTemp$3] + 1;
+              MarkerSlider.field_O[dupTemp$3] = MarkerSlider.field_O[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.a((byte) -87);
-          tm.field_O[dupTemp$0] = tm.field_O[dupTemp$0] + 1;
+          MarkerSlider.field_O[dupTemp$0] = MarkerSlider.field_O[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < sd.field_L; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (de.field_e[var3].field_j == param1.field_j) {
               var4 = de.field_e[var3].a((byte) -27);
-              if (tm.field_O[var4] > ee.field_d) {
-                tm.field_O[var4] = tm.field_O[var4] - 1;
+              if (MarkerSlider.field_O[var4] > ee.field_d) {
+                MarkerSlider.field_O[var4] = MarkerSlider.field_O[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -112,7 +112,7 @@ final class vd {
     }
 
     final static void a(boolean param0, int param1, int param2, byte param3) {
-        a.a(param0, 99);
+        NameSuggestionsPanel.a(param0, 99);
         if (param3 != -86) {
           field_d = (String[]) null;
         }

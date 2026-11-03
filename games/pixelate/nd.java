@@ -40,7 +40,7 @@ final class nd {
         var3.field_r[17] = (byte) 1;
         var3.field_r[21] = (byte)2;
         SpriteState.field_C = new kk(var3, 460, 285);
-        te.field_Qb = new al(var10, var3, SpriteState.field_C);
+        QuickChatMenu.field_Qb = new al(var10, var3, SpriteState.field_C);
         ug.field_q = new pb(var2, 150, 280);
         SpriteState.field_C.a(0, 0, 0, (byte) -124, 0);
         ug.field_q.a(param0 - 18614);
@@ -75,12 +75,12 @@ final class nd {
           var6.field_r[17] = (byte)2;
           var7Lifetime1 = 140;
           var8 = 370;
-          g.field_r = new kk(var5, var7Lifetime1, var8);
+          PasswordValidator.field_r = new kk(var5, var7Lifetime1, var8);
           an.field_b = new kk(var6, 640 - var7Lifetime1, var8);
-          BoundedRandomAccessFile.field_g = new al(var4, var5, g.field_r);
-          f.field_a = new al(var4, var6, an.field_b);
+          BoundedRandomAccessFile.field_g = new al(var4, var5, PasswordValidator.field_r);
+          DialWidgetPainter.field_a = new al(var4, var6, an.field_b);
           DiskCacheRequest.field_H = new pb(var4, 320, var8);
-          g.field_r.a(0, 0, 0, (byte) -69, 0);
+          PasswordValidator.field_r.a(0, 0, 0, (byte) -69, 0);
           an.field_b.a(0, 0, 0, (byte) -98, 0);
           DiskCacheRequest.field_H.a(-18577);
         } catch (RuntimeException runtimeException) {
@@ -90,13 +90,13 @@ final class nd {
 
     final static void a(int param0) {
         sc.field_h = rk.field_e;
-        h.field_T = 10 + sc.field_h.textWidth(PacketBuffer.field_o[20]);
+        Checkbox.field_T = 10 + sc.field_h.textWidth(PacketBuffer.field_o[20]);
         if (param0 != 3) {
           field_c = (int[]) null;
         }
         int var1 = sc.field_h.textWidth(PacketBuffer.field_o[21]);
-        if (var1 > h.field_T) {
-          h.field_T = var1;
+        if (var1 > Checkbox.field_T) {
+          Checkbox.field_T = var1;
         }
         vd.a(true);
     }

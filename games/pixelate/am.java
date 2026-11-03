@@ -49,40 +49,40 @@ final class am {
 
     final static void a(byte param0, boolean param1) {
         int var2;
-        ak stackIn_8_0 = null;
+        SceneWidget stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        ak stackIn_12_0 = null;
+        SceneWidget stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
-        ak stackIn_23_0 = null;
+        SceneWidget stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
-        ak stackIn_27_0 = null;
+        SceneWidget stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
         hp.a(SoftwareRasterizer.field_j - 640 >> 1, SoftwareRasterizer.field_d, 640 + SoftwareRasterizer.field_j >> 1, (byte) -91, 0);
         if (oo.field_b > 0) {
-          if (jo.field_j != null) {
-            jo.field_j.f(ql.field_n.field_D, 0);
+          if (CheckboxPainter.field_j != null) {
+            CheckboxPainter.field_j.f(ql.field_n.field_D, 0);
           }
           stackIn_8_0 = ql.field_n;
-          stackIn_9_1 = (param1) && (!uj.field_Wb);
-          ((ak) (Object) stackIn_8_0).a(stackIn_9_1, 0);
+          stackIn_9_1 = (param1) && (!LobbyPlayer.field_Wb);
+          ((SceneWidget) (Object) stackIn_8_0).a(stackIn_9_1, 0);
           stackIn_12_0 = MidiPcmStream.field_E;
-          stackIn_13_1 = (param1) && (!uj.field_Wb);
-          ((ak) (Object) stackIn_12_0).a(stackIn_13_1, 0);
+          stackIn_13_1 = (param1) && (!LobbyPlayer.field_Wb);
+          ((SceneWidget) (Object) stackIn_12_0).a(stackIn_13_1, 0);
         }
         if (!(vn.field_g <= 0) ||
-          !(h.field_W <= 0)) {
-          if (jo.field_j != null) {
-            jo.field_j.f(ff.field_h.field_D, 0);
+          !(Checkbox.field_W <= 0)) {
+          if (CheckboxPainter.field_j != null) {
+            CheckboxPainter.field_j.f(ff.field_h.field_D, 0);
           }
           stackIn_23_0 = ff.field_h;
           stackIn_24_1 = (param1) && (!bm.field_o);
-          ((ak) (Object) stackIn_23_0).a(stackIn_24_1, 0);
+          ((SceneWidget) (Object) stackIn_23_0).a(stackIn_24_1, 0);
           stackIn_27_0 = ai.field_A;
           stackIn_28_1 = (param1) && (!bm.field_o);
-          ((ak) (Object) stackIn_27_0).a(stackIn_28_1, 0);
+          ((SceneWidget) (Object) stackIn_27_0).a(stackIn_28_1, 0);
         }
         var2 = 127 / ((param0 + 31) / 55);
-        ia.a((byte) 92);
+        LinkButtonPainter.a((byte) 92);
     }
 
     final static void b(int param0) {
@@ -147,7 +147,7 @@ final class am {
     }
 
     final static String a(int param0) {
-        if (Js5NetworkRequest.field_F == tm.field_X) {
+        if (Js5NetworkRequest.field_F == MarkerSlider.field_X) {
           return pm.field_s;
         }
         if (param0 != -13565) {
@@ -285,7 +285,7 @@ final class am {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = db.a(var10.payload, 5, 1761872464, -var13.length + var10.position - 5);
+        var15 = TextHotspotWidget.a(var10.payload, 5, 1761872464, -var13.length + var10.position - 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
@@ -303,18 +303,18 @@ final class am {
         if (param2 == 0 &&
           param0 != io.field_e) {
           io.field_e = param0;
-          si.field_P = true;
+          DialWidget.field_P = true;
           ro.a(param3, true);
         }
         if (param2 == 1 &&
-          gh.field_v != param0) {
-          si.field_P = true;
-          gh.field_v = param0;
+          GradientOutlineTextPainter.field_v != param0) {
+          DialWidget.field_P = true;
+          GradientOutlineTextPainter.field_v = param0;
           ro.a(param3, true);
         }
         if (2 == param2 &&
           param0 != ib.field_e) {
-          si.field_P = true;
+          DialWidget.field_P = true;
           ib.field_e = param0;
           ro.a(param3, true);
         }

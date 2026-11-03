@@ -11,13 +11,13 @@ public final class Pixelate extends lb {
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_x.a(true, 9, 128);
         var3.field_H.a(true, 9, 128);
-        kb.a(22050, mc.field_k, var3, true, (java.awt.Component) ((Object) ec.field_u), 127);
+        DateInputWidget.a(22050, mc.field_k, var3, true, (java.awt.Component) ((Object) NameAvailabilityValidator.field_u), 127);
         IndexedSpriteState.field_l = 16777215;
         mh.field_a = 2;
         ce.field_b = 13421772;
         mj.field_k = 0;
         hd.field_n = 0;
-        qo.field_s = 16777215;
+        MatchingTextValidator.field_s = 16777215;
         this.a(true, true, true, true, true, true, -80);
         wd.field_d[69] = -1;
         wd.field_d[64] = 1;
@@ -119,7 +119,7 @@ public final class Pixelate extends lb {
         if (param0) {
           return;
         }
-        if (h.field_R) {
+        if (Checkbox.field_R) {
           if (aj.b((byte) -70)) {
             if (!hf.b((byte) 100)) {
               if (pe.a(false)) {
@@ -144,7 +144,7 @@ public final class Pixelate extends lb {
                   if (ga.field_d == ga.field_a) {
                     var2 = lp.a(2);
                     if (var2 == 1) {
-                      gi.a(te.field_Ib, kf.field_q, (byte) 78);
+                      gi.a(QuickChatMenu.field_Ib, kf.field_q, (byte) 78);
                     }
                     this.a(true, true);
                   } else {
@@ -180,12 +180,12 @@ public final class Pixelate extends lb {
             so.c(4478);
           }
         } else {
-          a.a((byte) -108, lp.field_i);
+          NameSuggestionsPanel.a((byte) -108, lp.field_i);
           if (this.b(true, 4)) {
-            h.field_R = true;
+            Checkbox.field_R = true;
           }
         }
-        if (!jg.a((byte) 70)) {
+        if (!ArrayWidgetContainer.a((byte) 70)) {
           while (true) {
             var14 = (hf) (nj.field_h.d(-28918));
             if (var14 == null) {
@@ -194,12 +194,12 @@ public final class Pixelate extends lb {
             bh.a(109, var14, 4);
           }
         }
-        var16_ref = (hq) (oc.field_H[13]);
+        var16_ref = (hq) (StripedProgressBar.field_H[13]);
         while (true) {
           stackIn_70_0 = !param0;
           if (!jf.a(stackIn_70_0, wd.field_d)) {
             vg.b(0, 10000);
-            if (hb.field_kb) {
+            if (ContentTransitionDialog.field_kb) {
             }
             if (uh.a((byte) -59)) {
               var3 = this.j(1272);
@@ -207,11 +207,11 @@ public final class Pixelate extends lb {
                 var3 == 1) {
                 nn.a(true);
                 if (var3 != 1) {
-                  if (oc.field_G) {
+                  if (StripedProgressBar.field_G) {
                     og.field_l = true;
                     mi.field_o = true;
-                    if (md.field_Y) {
-                      ie.field_F = IntrusiveDeque.field_a;
+                    if (ValidationHelpWidget.field_Y) {
+                      SingleChildContainer.field_F = IntrusiveDeque.field_a;
                       stackIn_177_0 = (gq.d(115)) ? 12 : 0;
                       la.a(stackIn_177_0, 11, false, -25528);
                     } else {
@@ -220,14 +220,14 @@ public final class Pixelate extends lb {
                     }
                     IntrusiveDequeCursor.a(0);
                     wo.b(109, fc.field_e).a(2, 0, false);
-                    oc.field_G = false;
-                    md.field_Y = false;
-                    oa.field_i = false;
+                    StripedProgressBar.field_G = false;
+                    ValidationHelpWidget.field_Y = false;
+                    DateOfBirthValidator.field_i = false;
                   }
-                  ia.field_d = false;
+                  LinkButtonPainter.field_d = false;
                   dj.field_c = false;
                 } else {
-                  ia.field_d = true;
+                  LinkButtonPainter.field_d = true;
                   dj.field_c = true;
                 }
               }
@@ -235,9 +235,9 @@ public final class Pixelate extends lb {
               if (var3 == 2) {
                 var4 = 1;
               }
-              if (oc.field_G ||
+              if (StripedProgressBar.field_G ||
                 dj.field_c ||
-                ia.field_d) {
+                LinkButtonPainter.field_d) {
                 var4 = 1;
               }
               if (!uh.a((byte) -59)) {
@@ -253,63 +253,63 @@ public final class Pixelate extends lb {
             IntrusiveDequeCursor.a(0);
             MidiPcmStream.field_t = 11;
             dj.field_c = false;
-            ie.field_F = MusicCrossfadeStream.field_o.h(5);
+            SingleChildContainer.field_F = MusicCrossfadeStream.field_o.h(5);
             continue;
           }
           if (mn.field_e == 14) {
             IntrusiveDequeCursor.a(0);
-            ga.a(150, ne.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), rg.field_d, ne.a(-1879863704, 8), cl.field_f.length, IndexedSpriteState.a(1));
+            ga.a(150, DropTargetWidget.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), rg.field_d, DropTargetWidget.a(-1879863704, 8), cl.field_f.length, IndexedSpriteState.a(1));
             fc.a(ba.a(-26573), 64, nc.b(119));
             MidiPcmStream.field_t = -2;
-            oc.field_G = true;
+            StripedProgressBar.field_G = true;
             dj.field_c = false;
             continue;
           }
           if (mn.field_e == 15) {
-            if (oc.field_G) {
+            if (StripedProgressBar.field_G) {
               IntrusiveDequeCursor.a(0);
-              ak.i(0);
+              SceneWidget.i(0);
               ek.a(true);
               og.field_l = true;
               MidiPcmStream.field_t = 0;
-              oa.field_i = false;
+              DateOfBirthValidator.field_i = false;
               mi.field_o = true;
-              md.field_Y = false;
-              oc.field_G = false;
+              ValidationHelpWidget.field_Y = false;
+              StripedProgressBar.field_G = false;
             }
-            ia.field_d = false;
+            LinkButtonPainter.field_d = false;
             dj.field_c = false;
             continue;
           }
           if (10 == mn.field_e &&
-            oc.field_G) {
-            pl.c(true);
+            StripedProgressBar.field_G) {
+            AccountRegistrationPanel.c(true);
             continue;
           }
           if (mn.field_e != 57 &&
             mn.field_e != 58) {
             if (mn.field_e == 59) {
-              if (md.field_Y ||
-                oa.field_i) {
+              if (ValidationHelpWidget.field_Y ||
+                DateOfBirthValidator.field_i) {
                 IntrusiveDequeCursor.a(0);
-                if (md.field_Y) {
+                if (ValidationHelpWidget.field_Y) {
                   ro.field_e.a(false, 250, false);
                 }
                 og.field_l = true;
                 dg.a(0, (byte) -117);
-                md.field_Y = false;
-                oa.field_i = false;
+                ValidationHelpWidget.field_Y = false;
+                DateOfBirthValidator.field_i = false;
                 MidiPcmStream.field_t = -2;
               }
-              ia.field_d = false;
+              LinkButtonPainter.field_d = false;
               continue;
             }
             var3_ref = null;
-            if (md.field_Y) {
+            if (ValidationHelpWidget.field_Y) {
               var3_ref = ro.field_e;
             } else {
-              if (oa.field_i) {
-                var3_ref = qo.field_r;
+              if (DateOfBirthValidator.field_i) {
+                var3_ref = MatchingTextValidator.field_r;
               }
             }
             if (var3_ref != null) {
@@ -384,7 +384,7 @@ public final class Pixelate extends lb {
                 }
                 stackIn_150_0 = (var5Lifetime5 != 1) ? 1 : 0;
                 var6 = stackIn_150_0;
-                var16_ref.a(sd.a(jg.field_M, 75, new String[]{((ii) (var3_ref)).field_a.field_i[var6]}), (byte) -4);
+                var16_ref.a(sd.a(ArrayWidgetContainer.field_M, 75, new String[]{((ii) (var3_ref)).field_a.field_i[var6]}), (byte) -4);
                 continue;
               }
               if (71 == mn.field_e) {
@@ -422,7 +422,7 @@ public final class Pixelate extends lb {
           var9Lifetime1 = MusicCrossfadeStream.field_o.readInt(0);
           wh.field_p = null;
           stackIn_100_0 = (mn.field_e == 58);
-          oa.field_i = stackIn_100_0;
+          DateOfBirthValidator.field_i = stackIn_100_0;
           bg.a(2);
           var15 = new ii(var4_ref_String__, var5Lifetime1, var3Lifetime1 != 0, var9Lifetime1, var6, var7Lifetime1, var8Lifetime1);
           var15.a((byte) 20, MusicCrossfadeStream.field_o);
@@ -431,17 +431,17 @@ public final class Pixelate extends lb {
           }
           if (mn.field_e != 57) {
             ro.field_e = null;
-            qo.field_r = var15;
+            MatchingTextValidator.field_r = var15;
             var16_ref.f(-120);
             var16_ref.a((String) null, (byte) -4);
           } else {
-            qo.field_r = null;
+            MatchingTextValidator.field_r = null;
             ro.field_e = var15;
-            md.field_Y = true;
+            ValidationHelpWidget.field_Y = true;
             var16_ref.e(1);
             var16_ref.a((String) null, (byte) -4);
           }
-          ia.field_d = false;
+          LinkButtonPainter.field_d = false;
           MidiPcmStream.field_t = -1;
         }
     }
@@ -518,15 +518,15 @@ public final class Pixelate extends lb {
         SoundCache.a((byte) 91);
         AudioOutput.d();
         nh.b((byte) 108);
-        pf.b(65);
-        tp.b(true);
+        MenuInputState.b(65);
+        SceneWidgetNode.b(true);
         ed.a(75);
         e.a(200);
         sk.a((byte) 99);
-        ak.a((byte) 59);
-        eq.b((byte) 87);
+        SceneWidget.a((byte) 59);
+        LobbyGame.b((byte) 87);
         vg.a(true);
-        uj.d(true);
+        LobbyPlayer.d(true);
         qj.a(false);
         ArchiveIndex.b(117);
         vh.b(-8);
@@ -534,15 +534,15 @@ public final class Pixelate extends lb {
         rm.a((byte) -116);
         cn.a(-59);
         kn.m(param0 - 12614);
-        dm.r(-103);
-        ko.n(-100);
-        on.g((byte) 106);
-        vk.g((byte) 125);
-        pl.e((byte) 64);
-        jh.a((byte) -123);
+        RegistrationRequestDialog.r(-103);
+        LoadingProgressDialog.n(-100);
+        LoginDialog.g((byte) 106);
+        AccountRequestDialog.g((byte) 125);
+        AccountRegistrationPanel.e((byte) 64);
+        AccountChoicePanel.a((byte) -123);
         be.a(118);
-        fh.f((byte) 123);
-        tg.a(true);
+        DisplayNameForm.f((byte) 123);
+        UiTheme.a(true);
         d.a(false);
         fg.a(9882);
         VorbisSample.releaseStatics();
@@ -574,13 +574,13 @@ public final class Pixelate extends lb {
         di.a(false);
         ro.a(false);
         lo.j(58);
-        gp.j(0);
+        ScrollContainer.j(0);
         fb.j(118);
-        vp.c((byte) 89);
+        VerticalScrollbar.c((byte) 89);
         pi.b((byte) 122);
         pd.b((byte) -88);
         wi.c((byte) 121);
-        oe.m(1);
+        ReportAbuseDialog.m(1);
         wo.a(true);
         ci.d(-12424);
         ep.b(param0 - 23120);
@@ -626,8 +626,8 @@ public final class Pixelate extends lb {
         fj.a((byte) 119);
         ArchiveRequest.b((byte) -106);
         qf.a(false);
-        ic.e((byte) -63);
-        uc.b(-120);
+        AccountNoticeDialog.e((byte) -63);
+        TextWidgetPainter.b(-120);
         ja.c();
         jk.a(20);
         rl.c((byte) -79);
@@ -643,17 +643,17 @@ public final class Pixelate extends lb {
         ai.a((byte) -92);
         fd.b(-24465);
         ok.a((byte) -118);
-        jo.a((byte) -123);
-        w.c(param0 - 23174);
-        f.a(-26570);
-        hg.a(94);
+        CheckboxPainter.a((byte) -123);
+        StatefulTextPainter.c(param0 - 23174);
+        DialWidgetPainter.a(-26570);
+        MarkerSliderPainter.a(94);
         kd.c(-127);
-        ng.f(param0 - 23118);
-        qm.j(89);
-        ie.a(0);
-        ka.l(127);
-        ud.a(-43);
-        ch.d((byte) -105);
+        UiComponent.f(param0 - 23118);
+        TextButton.j(89);
+        SingleChildContainer.a(0);
+        ResizableModalPanel.l(127);
+        ModalPanel.a(-43);
+        UiContainer.d((byte) -105);
         IntrusiveDequeCursor.a(false);
         ce.a(true);
         VorbisFloor.releaseStatics();
@@ -661,11 +661,11 @@ public final class Pixelate extends lb {
         qg.a((byte) 124);
         dn.a((byte) -41);
         ui.a(23652);
-        te.j(1);
+        QuickChatMenu.j(1);
         il.b(param0 ^ -6504);
         u.a(param0 - 23002);
-        qe.g(69);
-        kp.d((byte) -58);
+        QuickChatCategory.g(69);
+        QuickChatPhraseDefinition.d((byte) -58);
         le.a(1);
         SocketConnector.d(29731);
         ProxyAuthenticationException.a((byte) 73);
@@ -683,32 +683,32 @@ public final class Pixelate extends lb {
         MusicPatch.a(param0 ^ 23118);
         un.b((byte) -6);
         SynthInstrument.releaseStatics();
-        qp.a((byte) -84);
-        gk.f(false);
-        c.o(12669);
-        hb.f((byte) 82);
-        oc.a((byte) -9);
-        a.a(16);
-        db.k(1861726552);
-        vc.a((byte) -87);
-        md.c(false);
-        h.a(98);
-        mg.d(101);
+        LabeledField.a((byte) -84);
+        ValidatedTextWidget.f(false);
+        EditableTextWidget.o(12669);
+        ContentTransitionDialog.f((byte) 82);
+        StripedProgressBar.a((byte) -9);
+        NameSuggestionsPanel.a(16);
+        TextHotspotWidget.k(1861726552);
+        ValidationIndicator.a((byte) -87);
+        ValidationHelpWidget.c(false);
+        Checkbox.a(98);
+        TextFieldValidator.d(101);
         ih.a(-1);
-        hc.a((byte) 103);
-        si.a((byte) 95);
-        tm.e((byte) -89);
-        od.j(15967);
-        ve.b((byte) -70);
+        AccountTermsPanel.a((byte) 103);
+        DialWidget.a((byte) 95);
+        MarkerSlider.e((byte) -89);
+        TabbedPanel.j(15967);
+        AccountNamePrompt.b((byte) -70);
         ke.a(-19064);
         oj.n(-8012);
-        oa.b(true);
-        gj.f((byte) -28);
-        jg.j(-87);
+        DateOfBirthValidator.b(true);
+        NumericDateInputWidget.f((byte) -28);
+        ArrayWidgetContainer.j(-87);
         no.f(0);
         bh.a((byte) 94);
         wd.a(1);
-        bn.m(param0 ^ -23082);
+        DraggableWidget.m(param0 ^ -23082);
         IterableNodeHashTable.b((byte) -105);
         SecondaryNodeDeque.a(true);
         ah.g(-520925311);
@@ -717,7 +717,7 @@ public final class Pixelate extends lb {
         ProxySocketConnector.g(-6835);
         AudioFilter.releaseStatics();
         na.a((byte) 4);
-        kb.a((byte) 125);
+        DateInputWidget.a((byte) 125);
         NodeHashTableIterator.a(true);
         SecondaryNodeDequeIterator.a(param0 ^ -23078);
         ue.a(30);
@@ -726,11 +726,11 @@ public final class Pixelate extends lb {
         lc.a((byte) 90);
         cm.a(128);
         m.b((byte) -10);
-        ad.c(param0 ^ -23054);
-        ia.a(param0 ^ -23069);
-        gh.c(-102);
-        ip.e(8192);
-        jc.a(14518);
+        ThreeSliceButtonPainter.c(param0 ^ -23054);
+        LinkButtonPainter.a(param0 ^ -23069);
+        GradientOutlineTextPainter.c(-102);
+        PasswordFieldPainter.e(8192);
+        SpriteCheckboxPainter.a(14518);
         sd.a((byte) -120);
         im.j(param0 ^ -16156);
         gd.a(0);
@@ -748,7 +748,7 @@ public final class Pixelate extends lb {
         wk.c(-19101);
         ge.a(param0 - 23119);
         id.c(-118);
-        vl.a(param0 ^ 23118);
+        AccountMessagePanel.a(param0 ^ 23118);
         ln.a((byte) -113);
         ib.a(2);
         rk.a(10934);
@@ -775,16 +775,16 @@ public final class Pixelate extends lb {
         mn.b((byte) -26);
         bi.a(-8);
         rd.a(-5778);
-        ec.e(0);
-        g.e(-30055);
-        bc.e(param0 ^ 23056);
-        kc.f(16);
-        ag.e(-1);
-        qo.b(true);
+        NameAvailabilityValidator.e(0);
+        PasswordValidator.e(-30055);
+        EmailValidator.e(param0 ^ 23056);
+        EmailConfirmationValidator.f(16);
+        AgeValidator.e(-1);
+        MatchingTextValidator.b(true);
         dq.a(-120);
         ni.a((byte) -13);
         dj.b(-125);
-        hn.c((byte) -125);
+        DebouncedValidator.c((byte) -125);
         el.a(param0 ^ -13666);
         this.field_w = null;
     }
@@ -815,7 +815,7 @@ public final class Pixelate extends lb {
     }
 
     final void b(int param0) {
-        kp.c((byte) -92);
+        QuickChatPhraseDefinition.c((byte) -92);
         int var2 = -13 % ((-23 - param0) / 61);
         if (ib.field_f != null) {
           ln.a(121);
@@ -826,28 +826,28 @@ public final class Pixelate extends lb {
     final static void a(boolean param0, byte param1, int param2, boolean param3, int param4, int param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
-        ak dupTemp$0 = null;
+        SceneWidget dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        gp stackIn_3_0 = null;
+        ScrollContainer stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         boolean stackIn_4_2 = false;
-        eq stackIn_12_0;
-        ak stackIn_12_1;
-        ak stackIn_12_2;
+        LobbyGame stackIn_12_0;
+        SceneWidget stackIn_12_1;
+        SceneWidget stackIn_12_2;
         long stackIn_12_3;
-        ak stackIn_13_1 = null;
-        ak stackIn_13_2 = null;
-        ak stackIn_13_4 = null;
-        eq stackIn_30_0;
-        ak stackIn_30_1;
-        ak stackIn_30_2;
+        SceneWidget stackIn_13_1 = null;
+        SceneWidget stackIn_13_2 = null;
+        SceneWidget stackIn_13_4 = null;
+        LobbyGame stackIn_30_0;
+        SceneWidget stackIn_30_1;
+        SceneWidget stackIn_30_2;
         long stackIn_30_3;
-        ak stackIn_31_1;
-        ak stackIn_31_2;
-        ak stackIn_31_4;
+        SceneWidget stackIn_31_1;
+        SceneWidget stackIn_31_2;
+        SceneWidget stackIn_31_4;
         int stackIn_35_0 = 0;
         int stackIn_69_0 = 0;
         int stackIn_78_0 = 0;
@@ -864,22 +864,22 @@ public final class Pixelate extends lb {
         IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
-        eq var12 = null;
+        LobbyGame var12 = null;
         int var13 = 0;
         int var14 = 0;
-        ak var18 = null;
-        ak var19 = null;
-        ak var20 = null;
-        ak var21 = null;
-        ak var22 = null;
-        ak var23 = null;
-        ak var24 = null;
-        ak var25 = null;
-        ak var26 = null;
-        ak var27 = null;
-        ak var28 = null;
-        ak var29 = null;
-        ak var30 = null;
+        SceneWidget var18 = null;
+        SceneWidget var19 = null;
+        SceneWidget var20 = null;
+        SceneWidget var21 = null;
+        SceneWidget var22 = null;
+        SceneWidget var23 = null;
+        SceneWidget var24 = null;
+        SceneWidget var25 = null;
+        SceneWidget var26 = null;
+        SceneWidget var27 = null;
+        SceneWidget var28 = null;
+        SceneWidget var29 = null;
+        SceneWidget var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -896,13 +896,13 @@ public final class Pixelate extends lb {
         int var40 = 0;
         int var41 = 0;
         Sprite var42 = null;
-        ak var43 = null;
-        ak var44 = null;
-        ak var45 = null;
-        ak var46 = null;
-        ak var47 = null;
-        ak var48 = null;
-        ak var49 = null;
+        SceneWidget var43 = null;
+        SceneWidget var44 = null;
+        SceneWidget var45 = null;
+        SceneWidget var46 = null;
+        SceneWidget var47 = null;
+        SceneWidget var48 = null;
+        SceneWidget var49 = null;
         Object var50 = null;
         Sprite var50_ref = null;
         Object var51 = null;
@@ -930,104 +930,104 @@ public final class Pixelate extends lb {
           stackIn_3_0 = aj.field_k;
           stackIn_3_1 = param0;
           stackIn_4_2 = (aj.field_k == bj.field_d);
-          var7_int = ((gp) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, param2 * (fq.field_q * 4 + 8), 0, 2 * fq.field_q + 4) ? 1 : 0;
+          var7_int = ((ScrollContainer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, param2 * (fq.field_q * 4 + 8), 0, 2 * fq.field_q + 4) ? 1 : 0;
           if (param1 != 69) {
             return;
           }
-          var8 = aj.field_k.field_Fb.field_L;
+          var8 = aj.field_k.field_Fb.children;
           var9 = hm.a(64);
           var11 = null;
-          var12 = (eq) (var8.c(1504642273));
+          var12 = (LobbyGame) (var8.c(1504642273));
           while (var12 != null) {
             var13 = 0;
-            if (var12.field_L == null) {
+            if (var12.children == null) {
               var14 = param4 | param6;
-              var12.field_Nb = new ak(0L, of.field_i);
+              var12.field_Nb = new SceneWidget(0L, of.field_i);
               var12.a(var12.field_Nb, (byte) 26);
-              var12.field_Nb.field_Bb = 1;
-              var12.field_qc = new ak(0L, ak.field_T);
+              var12.field_Nb.horizontalAlignment = 1;
+              var12.field_qc = new SceneWidget(0L, SceneWidget.field_T);
               var12.a(var12.field_qc, (byte) 26);
-              var12.field_Yb = new ak(0L, of.field_i);
+              var12.field_Yb = new SceneWidget(0L, of.field_i);
               var12.a(var12.field_Yb, (byte) 26);
               var12.field_Yb.field_C = 0;
-              var12.field_Sb = new ak(0L, of.field_i);
+              var12.field_Sb = new SceneWidget(0L, of.field_i);
               var12.a(var12.field_Sb, (byte) 26);
               var12.field_Sb.field_C = 0;
-              var12.field_gc = new ak(0L, ak.field_T);
+              var12.field_gc = new SceneWidget(0L, SceneWidget.field_T);
               var12.a(var12.field_gc, (byte) 26);
-              var12.field_gc.field_Bb = 2;
+              var12.field_gc.horizontalAlignment = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
               stackIn_12_2 = null;
               stackIn_12_3 = 0L;
-              if (f.field_n) {
+              if (DialWidgetPainter.field_n) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
                 stackIn_13_4 = of.field_i;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = ak.field_T;
+                stackIn_13_4 = SceneWidget.field_T;
               }
-              stackIn_12_0.field_Zb = new ak(stackIn_12_3, stackIn_13_4);
+              stackIn_12_0.field_Zb = new SceneWidget(stackIn_12_3, stackIn_13_4);
               var12.a(var12.field_Zb, (byte) 26);
-              var12.field_ac = new ak[fj.field_b];
-              var12.field_ic = new ak(0L, (ak) null);
+              var12.field_ac = new SceneWidget[fj.field_b];
+              var12.field_ic = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << ek.field_a) != 0) {
                 var12.field_Zb.a(var12.field_ic, (byte) 26);
               }
-              var12.field_Jb = new ak(0L, (ak) null);
+              var12.field_Jb = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << ef.field_f) != 0) {
                 var12.field_Zb.a(var12.field_Jb, (byte) 26);
               }
-              var12.field_Fb = new ak(0L, (ak) null);
-              if ((var14 & 1 << g.field_m) != 0) {
+              var12.field_Fb = new SceneWidget(0L, (SceneWidget) null);
+              if ((var14 & 1 << PasswordValidator.field_m) != 0) {
                 var12.field_Zb.a(var12.field_Fb, (byte) 26);
               }
-              var12.field_Vb = new ak(0L, (ak) null);
+              var12.field_Vb = new SceneWidget(0L, (SceneWidget) null);
               if (0 != (1 << ClientException.field_e & var14)) {
                 var12.field_Zb.a(var12.field_Vb, (byte) 26);
               }
               var45 = var12.field_ic;
               var44 = var12.field_Vb;
               var43 = var12.field_Jb;
-              var12.field_Fb.field_kb = 1;
-              var43.field_kb = 1;
-              var44.field_kb = 1;
-              var45.field_kb = 1;
+              var12.field_Fb.verticalAlignment = 1;
+              var43.verticalAlignment = 1;
+              var44.verticalAlignment = 1;
+              var45.verticalAlignment = 1;
               for (var18_int = 0; fj.field_b > var18_int; var18_int++) {
-                var12.field_ac[var18_int] = new ak(0L, (ak) null);
+                var12.field_ac[var18_int] = new SceneWidget(0L, (SceneWidget) null);
                 if (0 != (var14 & 1 << var18_int + cl.field_j)) {
                   var12.field_Zb.a(var12.field_ac[var18_int], (byte) 26);
                 }
-                var12.field_ac[var18_int].field_kb = 1;
+                var12.field_ac[var18_int].verticalAlignment = 1;
               }
               stackIn_30_0 = var12;
               stackIn_30_1 = null;
               stackIn_30_2 = null;
               stackIn_30_3 = 0L;
-              if (!f.field_n) {
+              if (!DialWidgetPainter.field_n) {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
                 stackIn_31_4 = of.field_i;
               } else {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
-                stackIn_31_4 = ak.field_T;
+                stackIn_31_4 = SceneWidget.field_T;
               }
-              stackIn_30_0.field_Gb = new ak(stackIn_30_3, stackIn_31_4);
+              stackIn_30_0.field_Gb = new SceneWidget(stackIn_30_3, stackIn_31_4);
               var12.a(var12.field_Gb, (byte) 26);
-              var12.field_Gb.field_Bb = 2;
-              var12.field_Kb = new ak(0L, ak.field_T);
+              var12.field_Gb.horizontalAlignment = 2;
+              var12.field_Kb = new SceneWidget(0L, SceneWidget.field_T);
               var12.a(var12.field_Kb, (byte) 26);
-              var12.field_Wb = new ak(0L, dn.field_c);
+              var12.field_Wb = new SceneWidget(0L, dn.field_c);
               var12.a(var12.field_Wb, (byte) 26);
-              var12.field_lc = new ak(0L, dn.field_c);
+              var12.field_lc = new SceneWidget(0L, dn.field_c);
               var12.a(var12.field_lc, (byte) 26);
-              var12.field_rc = new ak(0L, mg.field_h);
+              var12.field_rc = new SceneWidget(0L, TextFieldValidator.field_h);
               var12.a(var12.field_rc, (byte) 26);
               var12.h(-257);
-              var12.field_jc = new ak(0L, ul.field_p);
+              var12.field_jc = new SceneWidget(0L, ul.field_p);
               var12.a(var12.field_jc, (byte) 26);
               var13 = 1;
             }
@@ -1035,73 +1035,73 @@ public final class Pixelate extends lb {
             stackIn_35_0 = (!var12.field_dc) ? param6 : param4;
             var14Lifetime1 = stackIn_35_0;
             var46 = var12.field_Nb;
-            var12.field_Nb.field_nb = 0;
+            var12.field_Nb.height = 0;
             var46.field_K = 0;
             var12.field_jc.field_cb = null;
             var47 = var12.field_jc;
-            var12.field_jc.field_nb = 0;
+            var12.field_jc.height = 0;
             var47.field_K = 0;
             var12.field_qc.field_cb = null;
-            var12.field_qc.field_nb = 0;
+            var12.field_qc.height = 0;
             var48 = var12.field_qc;
             var12.field_Yb.field_cb = null;
             var48.field_K = 0;
-            var12.field_Yb.field_nb = 0;
+            var12.field_Yb.height = 0;
             var18 = var12.field_Yb;
             var18.field_K = 0;
             var12.field_Sb.field_cb = null;
             var19 = var12.field_Sb;
-            var12.field_Sb.field_nb = 0;
+            var12.field_Sb.height = 0;
             var12.field_gc.field_cb = null;
             var19.field_K = 0;
             var20 = var12.field_gc;
-            var12.field_gc.field_nb = 0;
+            var12.field_gc.height = 0;
             var12.field_Zb.field_cb = null;
             var20.field_K = 0;
             var21 = var12.field_Zb;
-            var12.field_Zb.field_nb = 0;
+            var12.field_Zb.height = 0;
             var21.field_K = 0;
             for (var22_int = 0; fj.field_b > var22_int; var22_int++) {
               var12.field_ac[var22_int].field_H = null;
               var23 = var12.field_ac[var22_int];
-              var12.field_ac[var22_int].field_nb = 0;
+              var12.field_ac[var22_int].height = 0;
               var23.field_K = 0;
             }
             var12.field_ic.field_H = null;
-            var12.field_ic.field_nb = 0;
+            var12.field_ic.height = 0;
             var22 = var12.field_ic;
             var22.field_K = 0;
             var12.field_Vb.field_H = null;
-            var12.field_Vb.field_nb = 0;
+            var12.field_Vb.height = 0;
             var49 = var12.field_Vb;
             var49.field_K = 0;
             var12.field_Jb.field_H = null;
-            var12.field_Jb.field_nb = 0;
+            var12.field_Jb.height = 0;
             var24 = var12.field_Jb;
             var12.field_Fb.field_H = null;
             var24.field_K = 0;
             var25 = var12.field_Fb;
-            var12.field_Fb.field_nb = 0;
+            var12.field_Fb.height = 0;
             var25.field_K = 0;
             var12.field_Gb.field_cb = null;
             var26 = var12.field_Gb;
-            var12.field_Gb.field_nb = 0;
+            var12.field_Gb.height = 0;
             var12.field_Kb.field_cb = null;
             var26.field_K = 0;
-            var12.field_Kb.field_nb = 0;
+            var12.field_Kb.height = 0;
             var27 = var12.field_Kb;
             var27.field_K = 0;
             var12.field_Wb.field_cb = null;
-            var12.field_Wb.field_nb = 0;
+            var12.field_Wb.height = 0;
             var28 = var12.field_Wb;
             var28.field_K = 0;
             var12.field_lc.field_cb = null;
-            var12.field_lc.field_nb = 0;
+            var12.field_lc.height = 0;
             var29 = var12.field_lc;
             var29.field_K = 0;
             var12.field_rc.field_cb = null;
             var30 = var12.field_rc;
-            var12.field_rc.field_nb = 0;
+            var12.field_rc.height = 0;
             var30.field_K = 0;
             var12.field_K = aj.field_k.field_Fb.field_K;
             var31 = 0;
@@ -1112,14 +1112,14 @@ public final class Pixelate extends lb {
                 if (0 > var12.field_nc) {
                   if (var12.field_Mb && (var12.field_hc ||
                     var12.field_cc)) {
-                    var12.field_jc.field_cb = h.field_S;
+                    var12.field_jc.field_cb = Checkbox.field_S;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var12.field_Tb == 2) {
                       var12.field_jc.field_cb = wd.field_g;
                     } else {
-                      var12.field_Nb.field_cb = f.field_j;
+                      var12.field_Nb.field_cb = DialWidgetPainter.field_j;
                     }
                   }
                 } else {
@@ -1136,7 +1136,7 @@ public final class Pixelate extends lb {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_jc.field_cb = h.field_S;
+                  var12.field_jc.field_cb = Checkbox.field_S;
                 }
               }
               if (null != var12.field_jc.field_cb) {
@@ -1144,7 +1144,7 @@ public final class Pixelate extends lb {
               } else {
                 var12.field_Nb.a(var31, fq.field_q, 0, 256, 68);
               }
-              var12.field_qc.field_cb = BitmapFont.a(var12.field_qc.field_Db, var32, 78);
+              var12.field_qc.field_cb = BitmapFont.a(var12.field_qc.font, var32, 78);
               var12.field_qc.a(var31, fq.field_q, 70, 256, 78);
               if (var12.field_qc.field_W &&
                 !var12.field_qc.field_cb.equals(var32)) {
@@ -1153,24 +1153,24 @@ public final class Pixelate extends lb {
               var12.field_Yb.field_cb = Integer.toString(var12.field_mc);
               if (var12.field_Mb) {
                 var12.field_Sb.field_cb = "/" + var12.field_ec;
-                var12.field_Yb.field_Bb = 2;
-                var33_int = (348 - var12.field_Sb.field_Db.textWidth("/")) / 2;
+                var12.field_Yb.horizontalAlignment = 2;
+                var33_int = (348 - var12.field_Sb.font.textWidth("/")) / 2;
                 var12.field_Yb.a(var31, fq.field_q, 150, 256, var33_int - 150);
                 var12.field_Sb.a(var31, fq.field_q, var33_int, 256, 198 - var33_int);
               } else {
-                var12.field_Yb.field_Bb = 1;
+                var12.field_Yb.horizontalAlignment = 1;
                 var12.field_Yb.a(var31, fq.field_q, 150, 256, 48);
               }
               var12.field_gc.field_cb = Integer.toString(var12.field_bc);
               var12.field_gc.a(var31, fq.field_q, 200, 256, 48);
-              stackIn_69_0 = (!f.field_n) ? 200 : 250;
+              stackIn_69_0 = (!DialWidgetPainter.field_n) ? 200 : 250;
               var33_intLifetime1 = stackIn_69_0;
               var12.field_Zb.a(var31, fq.field_q, var33_intLifetime1, param1 + 187, -2 + (-var33_intLifetime1 + 365));
               var34_int = hd.field_q;
               if ((1 << ek.field_a & var14Lifetime1) != 0) {
-                var50_ref = bn.field_P[var12.field_Ib];
+                var50_ref = DraggableWidget.field_P[var12.field_Ib];
                 var12.field_ic.field_H = var50_ref;
-                var12.field_ic.a(0, var12.field_Zb.field_nb, var34_int, 256, var50_ref.field_A);
+                var12.field_ic.a(0, var12.field_Zb.height, var34_int, 256, var50_ref.field_A);
                 var34_int = var34_int + (var50_ref.field_A + hd.field_q);
               }
               if ((var14Lifetime1 & 1 << ef.field_f) != 0) {
@@ -1188,13 +1188,13 @@ public final class Pixelate extends lb {
                 }
                 var51_ref = stackIn_80_0[stackIn_81_1];
                 var12.field_Jb.field_H = var51_ref;
-                var12.field_Jb.a(0, var12.field_Zb.field_nb, var34_int, 256, var51_ref.field_A);
+                var12.field_Jb.a(0, var12.field_Zb.height, var34_int, 256, var51_ref.field_A);
                 var34_int = var34_int + (hd.field_q + var51_ref.field_A);
               }
-              if ((1 << g.field_m & var14Lifetime1) != 0) {
+              if ((1 << PasswordValidator.field_m & var14Lifetime1) != 0) {
                 var52_ref = so.field_d[-1 + var12.field_Tb];
                 var12.field_Fb.field_H = var52_ref;
-                var12.field_Fb.a(0, var12.field_Zb.field_nb, var34_int, 256, var52_ref.field_A);
+                var12.field_Fb.a(0, var12.field_Zb.height, var34_int, 256, var52_ref.field_A);
                 var34_int = var34_int + (hd.field_q + var52_ref.field_A);
               }
               if ((var14Lifetime1 & 1 << ClientException.field_e) != 0) {
@@ -1206,7 +1206,7 @@ public final class Pixelate extends lb {
                 }
                 var53_ref = stackIn_88_0[stackIn_89_1];
                 var12.field_Vb.field_H = var53_ref;
-                var12.field_Vb.a(0, var12.field_Zb.field_nb, var34_int, 256, var53_ref.field_A);
+                var12.field_Vb.a(0, var12.field_Zb.height, var34_int, 256, var53_ref.field_A);
                 var34_int = var34_int + (hd.field_q + var53_ref.field_A);
               }
               if (ig.field_a != null) {
@@ -1216,7 +1216,7 @@ public final class Pixelate extends lb {
                     var42 = ig.field_a[var36Lifetime1][255 & var12.field_Eb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_ac[var36Lifetime1].field_H = var42;
-                    var12.field_ac[var36Lifetime1].a(0, var12.field_Zb.field_nb, var34_int, 256, var54.field_A);
+                    var12.field_ac[var36Lifetime1].a(0, var12.field_Zb.height, var34_int, 256, var54.field_A);
                     var34_int = var34_int + (hd.field_q + var54.field_A);
                   }
                 }
@@ -1253,7 +1253,7 @@ public final class Pixelate extends lb {
               if (var12.field_Ub != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(od.field_Fb);
+                discarded$1 = var37.append(TabbedPanel.field_Fb);
                 discarded$2 = var37.append(var12.field_Ub[0]);
                 for (var38_intLifetime1 = 1; var12.field_mc > var38_intLifetime1; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -1261,7 +1261,7 @@ public final class Pixelate extends lb {
                 }
                 var38 = var37.toString();
                 var12.field_Kb.field_cb = var38;
-                var39Lifetime1 = var12.field_Kb.field_Db.wrappedLineCount(var38, var12.field_K - 2 * var12.field_Kb.field_C);
+                var39Lifetime1 = var12.field_Kb.font.wrappedLineCount(var38, var12.field_K - 2 * var12.field_Kb.field_C);
                 var12.field_Kb.a(var31, fq.field_q * var39Lifetime1, 0, 256, var12.field_K);
                 var31 = var31 + fq.field_q * var39Lifetime1;
               }
@@ -1278,17 +1278,17 @@ public final class Pixelate extends lb {
             }
             var33 = lg.a((byte) 121, var32, var12.field_Qb);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_rc.field_Db.wrappedLineCount(var33, -MouseWheelHandler.field_c + var12.field_K - MouseWheelHandler.field_c);
+              var34_intLifetime1 = var12.field_rc.font.wrappedLineCount(var33, -MouseWheelHandler.field_c + var12.field_K - MouseWheelHandler.field_c);
               var12.field_rc.field_cb = var33;
-              var12.field_rc.field_yb = var12.field_Rb * 256 / mh.field_b;
+              var12.field_rc.textOpacity = var12.field_Rb * 256 / mh.field_b;
               var12.field_rc.a(var31, fq.field_q * var34_intLifetime1, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
               var31 = var31 + var34_intLifetime1 * fq.field_q;
             }
             if (var7_int == 0) {
-              var12.field_Z = -var12.field_nb + var31;
+              var12.pendingHeightDelta = -var12.height + var31;
             }
             if (var13 != 0) {
-              aj.field_k.field_Fb.a(var12, 2, param1 - 70, (ak) (var11));
+              aj.field_k.field_Fb.positionAfter(var12, 2, param1 - 70, (SceneWidget) (var11));
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < fj.field_b; var34_intLifetime2++) {
               if (var12.field_ac[var34_intLifetime2].field_W) {
@@ -1314,11 +1314,11 @@ public final class Pixelate extends lb {
               } else {
                 var34 = rb.field_p[var12.field_Ib];
               }
-              up.field_o = fh.field_R + " - " + var34;
+              up.field_o = DisplayNameForm.field_R + " - " + var34;
             }
             if (var12.field_Vb.field_W) {
               if (!var12.field_oc) {
-                stackIn_155_0 = w.field_t;
+                stackIn_155_0 = StatefulTextPainter.field_t;
               } else {
                 stackIn_155_0 = vn.field_d;
               }
@@ -1339,7 +1339,7 @@ public final class Pixelate extends lb {
             }
             if (var12.field_Fb.field_W) {
               if (var12.field_Tb != 2) {
-                stackIn_170_0 = f.field_i;
+                stackIn_170_0 = DialWidgetPainter.field_i;
               } else {
                 stackIn_170_0 = SecondaryNodeDequeIterator.field_a;
               }
@@ -1348,7 +1348,7 @@ public final class Pixelate extends lb {
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_P != 0) {
               if (var12.j(433)) {
-                var12 = (eq) (var8.last(1504642273));
+                var12 = (LobbyGame) (var8.last(1504642273));
                 continue;
               }
               if (0 == var12.field_jc.field_P) {
@@ -1365,7 +1365,7 @@ public final class Pixelate extends lb {
                 }
               }
             }
-            var12 = (eq) (var8.last(1504642273));
+            var12 = (LobbyGame) (var8.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1389,18 +1389,18 @@ public final class Pixelate extends lb {
         int var3Lifetime2;
         int var3Lifetime3;
         var5 = field_H ? 1 : 0;
-        var6 = oe.b((byte) -122);
+        var6 = ReportAbuseDialog.b((byte) -122);
         if (bd.a(true)) {
-          uc.a(wp.a(-8798), -107, var6);
+          TextWidgetPainter.a(wp.a(-8798), -107, var6);
           return;
         }
-        if (!h.field_R) {
-          si.a(-1913, var6);
+        if (!Checkbox.field_R) {
+          DialWidget.a(-1913, var6);
           return;
         }
         if (!aj.b((byte) -83)) {
           li.a(100.0f, -1, em.field_a);
-          si.a(-1913, var6);
+          DialWidget.a(-1913, var6);
           return;
         }
         SoftwareRasterizer.d();
@@ -1408,7 +1408,7 @@ public final class Pixelate extends lb {
           field_G = (bd) null;
         }
         if (MidiPcmStream.field_t == fc.field_e) {
-          ie.a(true, 108, fc.field_e);
+          SingleChildContainer.a(true, 108, fc.field_e);
         } else {
           if (0 > MidiPcmStream.field_t) {
             stackIn_12_0 = fc.field_e;
@@ -1420,12 +1420,12 @@ public final class Pixelate extends lb {
             var3 = 14;
           }
           var4 = wo.b(-51, var3);
-          if (ec.field_t >= 16) {
-            ie.a(false, -93, MidiPcmStream.field_t);
-            var4.a(-(ec.field_t << 4) + 512, true, true);
+          if (NameAvailabilityValidator.field_t >= 16) {
+            SingleChildContainer.a(false, -93, MidiPcmStream.field_t);
+            var4.a(-(NameAvailabilityValidator.field_t << 4) + 512, true, true);
           } else {
-            ie.a(false, 97, fc.field_e);
-            var4.a(ec.field_t << 4, true, false);
+            SingleChildContainer.a(false, 97, fc.field_e);
+            var4.a(NameAvailabilityValidator.field_t << 4, true, false);
           }
         }
         ho.a(ep.a(30022), 12402);
@@ -1433,7 +1433,7 @@ public final class Pixelate extends lb {
           MidiPcmStream.field_t == 4) {
           var3Lifetime1 = 192;
           if (MidiPcmStream.field_t != fc.field_e) {
-            var3Lifetime1 = ec.field_t << 3;
+            var3Lifetime1 = NameAvailabilityValidator.field_t << 3;
             if (var3Lifetime1 > 192) {
               var3Lifetime1 = 192;
             }
@@ -1445,14 +1445,14 @@ public final class Pixelate extends lb {
         }
         if (fc.field_e != MidiPcmStream.field_t &&
           -2 == MidiPcmStream.field_t) {
-          var3Lifetime2 = -(ec.field_t << 4) + 256;
+          var3Lifetime2 = -(NameAvailabilityValidator.field_t << 4) + 256;
           if (var3Lifetime2 < 0) {
             var3Lifetime2 = 0;
           }
           MusicPatchNode.field_B.a(0, 0, var3Lifetime2);
         } else if (MidiPcmStream.field_t != fc.field_e &&
           fc.field_e == -2) {
-          var3Lifetime2 = ec.field_t << 4;
+          var3Lifetime2 = NameAvailabilityValidator.field_t << 4;
           if (var3Lifetime2 > 256) {
             var3Lifetime2 = 256;
           }
@@ -1470,7 +1470,7 @@ public final class Pixelate extends lb {
             } else {
               stackIn_51_0 = true;
             }
-            ko.a(stackIn_51_0, true);
+            LoadingProgressDialog.a(stackIn_51_0, true);
           } else {
             if (fo.a((byte) 41)) {
               SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
@@ -1479,7 +1479,7 @@ public final class Pixelate extends lb {
           }
         } else {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
-          ad.a(ab.field_c, ab.field_c[0].field_E, -96, ab.field_c[0].field_F);
+          ThreeSliceButtonPainter.a(ab.field_c, ab.field_c[0].field_E, -96, ab.field_c[0].field_F);
         }
         if (ga.field_a != ga.field_d) {
           var3Lifetime3 = (hf.field_o << 8) / 16;
@@ -1518,8 +1518,8 @@ public final class Pixelate extends lb {
                           ab.field_f.a((byte) 92)) {
                           if (BoundedRandomAccessFile.field_c.b(-3) &&
                             BoundedRandomAccessFile.field_c.a((byte) 92)) {
-                            if (pf.field_d.b(-3) &&
-                              pf.field_d.ensureGroupAvailableByName("basic", -1)) {
+                            if (MenuInputState.field_d.b(-3) &&
+                              MenuInputState.field_d.ensureGroupAvailableByName("basic", -1)) {
                               if (hd.field_c.b(param1 ^ -7) &&
                                 hd.field_c.ensureGroupAvailableByName("basic", -1)) {
                                 if (SocketConnector.field_a.b(-3) &&
@@ -1546,13 +1546,13 @@ public final class Pixelate extends lb {
                               li.a(75.0f, -1, mn.a(53, hd.field_c, pc.field_x, "basic", CanvasRasterBuffer.field_f));
                               return false;
                             }
-                            li.a(75.0f, -1, mn.a(param1 + 113, pf.field_d, g.field_q, "basic", im.field_Mb));
+                            li.a(75.0f, -1, mn.a(param1 + 113, MenuInputState.field_d, PasswordValidator.field_q, "basic", im.field_Mb));
                             return false;
                           }
-                          li.a(60.0f, -1, mn.a(61, BoundedRandomAccessFile.field_c, jh.field_I, "", fq.field_p));
+                          li.a(60.0f, -1, mn.a(61, BoundedRandomAccessFile.field_c, AccountChoicePanel.field_I, "", fq.field_p));
                           return false;
                         }
-                        li.a(45.0f, -1, BoundedRandomAccessFile.a(ab.field_f, fq.field_p, jh.field_I, -22165, 0));
+                        li.a(45.0f, -1, BoundedRandomAccessFile.a(ab.field_f, fq.field_p, AccountChoicePanel.field_I, -22165, 0));
                         return false;
                       }
                       li.a(40.0f, -1, mn.a(83, PacketBuffer.field_p, bm.field_n, "", l.field_u));
@@ -1564,16 +1564,16 @@ public final class Pixelate extends lb {
                   li.a(17.0f, -1, mn.a(107, dg.field_d, pc.field_x, "lobby", CanvasRasterBuffer.field_f));
                   return false;
                 }
-                li.a(13.0f, -1, mn.a(56, qn.field_l, g.field_q, "lobby", im.field_Mb));
+                li.a(13.0f, -1, mn.a(56, qn.field_l, PasswordValidator.field_q, "lobby", im.field_Mb));
                 return false;
               }
               li.a(12.0f, -1, mn.a(57, dg.field_d, pc.field_x, "arial13", CanvasRasterBuffer.field_f));
               return false;
             }
-            li.a(11.0f, param1 ^ -5, mn.a(78, qn.field_l, g.field_q, "arial13", im.field_Mb));
+            li.a(11.0f, param1 ^ -5, mn.a(78, qn.field_l, PasswordValidator.field_q, "arial13", im.field_Mb));
             return false;
           }
-          li.a(10.0f, param1 - 5, mn.a(62, qn.field_l, g.field_q, "basic", im.field_Mb));
+          li.a(10.0f, param1 - 5, mn.a(62, qn.field_l, PasswordValidator.field_q, "basic", im.field_Mb));
           return false;
         }
         if (PacketBuffer.field_p != null) {
@@ -1625,97 +1625,97 @@ public final class Pixelate extends lb {
           MidiPcmStream.field_t = 0;
           fc.field_e = 14;
           wo.a(50, -37);
-          jg.a(256, -113);
+          ArrayWidgetContainer.a(256, -113);
           dg.a(0, (byte) -90);
           sf.a(0);
           return true;
         }
         li.a(96.0f, -1, no.field_g);
         this.d(param1 ^ 123);
-        rk.field_e = vn.a(pf.field_d, "basic", "font", hd.field_c, 22510);
+        rk.field_e = vn.a(MenuInputState.field_d, "basic", "font", hd.field_c, 22510);
         qj.field_e = bf.a(param1 ^ 4, dg.field_d, "", qn.field_l, "arial13");
         nh.a((byte) 117);
-        bm.field_u = bi.a("basic", "background", pf.field_d, (byte) -36);
-        pm.a(13728, 0, lb.a(pf.field_d, 23, "basic", "level1"));
-        pm.a(13728, 1, lb.a(pf.field_d, -128, "basic", "level2"));
-        pm.a(13728, 2, lb.a(pf.field_d, -4, "basic", "level3"));
-        pm.a(13728, 3, lb.a(pf.field_d, 41, "basic", "level4"));
-        pm.a(13728, 4, lb.a(pf.field_d, -114, "basic", "level5"));
-        pm.a(13728, 5, lb.a(pf.field_d, 66, "basic", "level6"));
-        pm.a(param1 + 13724, 6, lb.a(pf.field_d, param1 ^ 122, "basic", "level7"));
-        pm.a(13728, 7, lb.a(pf.field_d, 0, "basic", "level8"));
-        pm.a(13728, 8, lb.a(pf.field_d, 59, "basic", "level9"));
-        pm.a(13728, 9, lb.a(pf.field_d, -121, "basic", "level10"));
-        al.field_c[3][4] = lb.a(pf.field_d, -106, "basic", "set34");
-        al.field_c[4][3] = lb.a(pf.field_d, param1 + 28, "basic", "set43");
-        al.field_c[3][5] = lb.a(pf.field_d, 125, "basic", "set35");
-        al.field_c[5][3] = lb.a(pf.field_d, 80, "basic", "set53");
-        al.field_c[4][4] = lb.a(pf.field_d, 47, "basic", "set44");
-        al.field_c[5][4] = lb.a(pf.field_d, 77, "basic", "set54");
-        al.field_c[4][5] = lb.a(pf.field_d, -105, "basic", "set45");
-        al.field_c[5][5] = lb.a(pf.field_d, -111, "basic", "set55");
-        td.a(127, lb.a(pf.field_d, 44, "basic", "puzzle"));
-        lg.field_d[0] = bi.a("basic", "icon_singleplayer", pf.field_d, (byte) -45);
-        lg.field_d[1] = bi.a("basic", "icon_puzzle", pf.field_d, (byte) -73);
+        bm.field_u = bi.a("basic", "background", MenuInputState.field_d, (byte) -36);
+        pm.a(13728, 0, lb.a(MenuInputState.field_d, 23, "basic", "level1"));
+        pm.a(13728, 1, lb.a(MenuInputState.field_d, -128, "basic", "level2"));
+        pm.a(13728, 2, lb.a(MenuInputState.field_d, -4, "basic", "level3"));
+        pm.a(13728, 3, lb.a(MenuInputState.field_d, 41, "basic", "level4"));
+        pm.a(13728, 4, lb.a(MenuInputState.field_d, -114, "basic", "level5"));
+        pm.a(13728, 5, lb.a(MenuInputState.field_d, 66, "basic", "level6"));
+        pm.a(param1 + 13724, 6, lb.a(MenuInputState.field_d, param1 ^ 122, "basic", "level7"));
+        pm.a(13728, 7, lb.a(MenuInputState.field_d, 0, "basic", "level8"));
+        pm.a(13728, 8, lb.a(MenuInputState.field_d, 59, "basic", "level9"));
+        pm.a(13728, 9, lb.a(MenuInputState.field_d, -121, "basic", "level10"));
+        al.field_c[3][4] = lb.a(MenuInputState.field_d, -106, "basic", "set34");
+        al.field_c[4][3] = lb.a(MenuInputState.field_d, param1 + 28, "basic", "set43");
+        al.field_c[3][5] = lb.a(MenuInputState.field_d, 125, "basic", "set35");
+        al.field_c[5][3] = lb.a(MenuInputState.field_d, 80, "basic", "set53");
+        al.field_c[4][4] = lb.a(MenuInputState.field_d, 47, "basic", "set44");
+        al.field_c[5][4] = lb.a(MenuInputState.field_d, 77, "basic", "set54");
+        al.field_c[4][5] = lb.a(MenuInputState.field_d, -105, "basic", "set45");
+        al.field_c[5][5] = lb.a(MenuInputState.field_d, -111, "basic", "set55");
+        td.a(127, lb.a(MenuInputState.field_d, 44, "basic", "puzzle"));
+        lg.field_d[0] = bi.a("basic", "icon_singleplayer", MenuInputState.field_d, (byte) -45);
+        lg.field_d[1] = bi.a("basic", "icon_puzzle", MenuInputState.field_d, (byte) -73);
         var3 = bi.a("basic", "locked", qn.field_l, (byte) -124);
-        MusicPatch.field_m = bi.a("basic", "icon_menu", pf.field_d, (byte) -105);
-        gj.field_W = SocketConnector.a("titles", "basic", (byte) 47, pf.field_d);
-        ih.field_a = SocketConnector.a("tick", "basic", (byte) 47, pf.field_d);
-        hp.field_Gb = bi.a("basic", "timer", pf.field_d, (byte) -86);
-        JaggrabDownloader.field_m = SocketConnector.a("marker", "basic", (byte) 47, pf.field_d);
+        MusicPatch.field_m = bi.a("basic", "icon_menu", MenuInputState.field_d, (byte) -105);
+        NumericDateInputWidget.field_W = SocketConnector.a("titles", "basic", (byte) 47, MenuInputState.field_d);
+        ih.field_a = SocketConnector.a("tick", "basic", (byte) 47, MenuInputState.field_d);
+        hp.field_Gb = bi.a("basic", "timer", MenuInputState.field_d, (byte) -86);
+        JaggrabDownloader.field_m = SocketConnector.a("marker", "basic", (byte) 47, MenuInputState.field_d);
         bf.a(5, "basic", "frame");
         ab.field_c = bf.a(param1 + 1, "basic", "frame_filled");
         bi.field_g = bf.a(5, "basic", "frame_raised");
-        MusicPatchNode.field_B = bi.a("basic", "gameframe", pf.field_d, (byte) -25);
+        MusicPatchNode.field_B = bi.a("basic", "gameframe", MenuInputState.field_d, (byte) -25);
         hd.field_w = var3;
         gd.field_i = var3;
-        qo.field_v = bi.a("basic", "instructions6", pf.field_d, (byte) -121);
-        pk.field_c = SocketConnector.a("instructions_keys", "basic", (byte) 47, pf.field_d);
-        no.field_p = SocketConnector.a("instructions_keys2", "basic", (byte) 47, pf.field_d);
-        jk.field_a = bi.a("basic", "background_rushes", pf.field_d, (byte) -58);
-        ad.field_w = bi.a("basic", "background_retro", pf.field_d, (byte) -78);
-        vk.field_tb = SocketConnector.a("sprites_retro", "basic", (byte) 47, pf.field_d);
-        jg.field_H = bi.a("basic", "background_bouncedown", pf.field_d, (byte) -117);
-        hn.field_b = bi.a("basic", "sprites_bouncedown", pf.field_d, (byte) -125);
-        SocketConnector.field_c = SocketConnector.a("cloud", "basic", (byte) 47, pf.field_d);
-        IntrusiveDequeCursor.field_f = bi.a("basic", "kite", pf.field_d, (byte) -77);
-        hb.field_hb = bi.a("basic", "bow", pf.field_d, (byte) -30);
-        jo.field_j = bi.a("basic", "lobby_logo", pf.field_d, (byte) -62);
-        em.a(SocketConnector.a("scrollbutton", "basic", (byte) 47, pf.field_d), -77);
-        var4 = bi.a("basic", "background_fireworks", pf.field_d, (byte) -38);
-        var5 = bi.a("basic", "sprite_fireworks", pf.field_d, (byte) -95);
-        md.a(var4, var5, 80);
-        SecondaryNodeDequeIterator.a(0, SocketConnector.a("tiles0", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(1, SocketConnector.a("tiles1", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(2, SocketConnector.a("tiles2", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(3, SocketConnector.a("tiles3", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(4, SocketConnector.a("tiles4", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(5, SocketConnector.a("tiles5", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(6, SocketConnector.a("tiles6", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(7, SocketConnector.a("tiles7", "basic", (byte) 47, pf.field_d), (byte) -53);
+        MatchingTextValidator.field_v = bi.a("basic", "instructions6", MenuInputState.field_d, (byte) -121);
+        pk.field_c = SocketConnector.a("instructions_keys", "basic", (byte) 47, MenuInputState.field_d);
+        no.field_p = SocketConnector.a("instructions_keys2", "basic", (byte) 47, MenuInputState.field_d);
+        jk.field_a = bi.a("basic", "background_rushes", MenuInputState.field_d, (byte) -58);
+        ThreeSliceButtonPainter.field_w = bi.a("basic", "background_retro", MenuInputState.field_d, (byte) -78);
+        AccountRequestDialog.field_tb = SocketConnector.a("sprites_retro", "basic", (byte) 47, MenuInputState.field_d);
+        ArrayWidgetContainer.field_H = bi.a("basic", "background_bouncedown", MenuInputState.field_d, (byte) -117);
+        DebouncedValidator.field_b = bi.a("basic", "sprites_bouncedown", MenuInputState.field_d, (byte) -125);
+        SocketConnector.field_c = SocketConnector.a("cloud", "basic", (byte) 47, MenuInputState.field_d);
+        IntrusiveDequeCursor.field_f = bi.a("basic", "kite", MenuInputState.field_d, (byte) -77);
+        ContentTransitionDialog.field_hb = bi.a("basic", "bow", MenuInputState.field_d, (byte) -30);
+        CheckboxPainter.field_j = bi.a("basic", "lobby_logo", MenuInputState.field_d, (byte) -62);
+        em.a(SocketConnector.a("scrollbutton", "basic", (byte) 47, MenuInputState.field_d), -77);
+        var4 = bi.a("basic", "background_fireworks", MenuInputState.field_d, (byte) -38);
+        var5 = bi.a("basic", "sprite_fireworks", MenuInputState.field_d, (byte) -95);
+        ValidationHelpWidget.a(var4, var5, 80);
+        SecondaryNodeDequeIterator.a(0, SocketConnector.a("tiles0", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(1, SocketConnector.a("tiles1", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(2, SocketConnector.a("tiles2", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(3, SocketConnector.a("tiles3", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(4, SocketConnector.a("tiles4", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(5, SocketConnector.a("tiles5", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(6, SocketConnector.a("tiles6", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(7, SocketConnector.a("tiles7", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
         oo.field_c = new Sprite[22];
-        oo.field_c[0] = bi.a("basic", "achievement0", pf.field_d, (byte) -75);
-        oo.field_c[1] = bi.a("basic", "achievement1", pf.field_d, (byte) -57);
-        oo.field_c[2] = bi.a("basic", "achievement2", pf.field_d, (byte) -34);
-        oo.field_c[3] = bi.a("basic", "achievement3", pf.field_d, (byte) -125);
-        oo.field_c[4] = bi.a("basic", "achievement4", pf.field_d, (byte) -34);
-        oo.field_c[5] = bi.a("basic", "achievement5", pf.field_d, (byte) -37);
-        oo.field_c[6] = bi.a("basic", "achievement6", pf.field_d, (byte) -93);
-        oo.field_c[7] = bi.a("basic", "achievement7", pf.field_d, (byte) -88);
-        oo.field_c[8] = bi.a("basic", "achievement8", pf.field_d, (byte) -76);
-        oo.field_c[9] = bi.a("basic", "achievement9", pf.field_d, (byte) -105);
-        oo.field_c[10] = bi.a("basic", "achievement10", pf.field_d, (byte) -62);
-        oo.field_c[11] = bi.a("basic", "achievement11", pf.field_d, (byte) -82);
-        oo.field_c[12] = bi.a("basic", "achievement12", pf.field_d, (byte) -81);
-        oo.field_c[13] = bi.a("basic", "achievement13", pf.field_d, (byte) -100);
-        oo.field_c[14] = bi.a("basic", "achievement14", pf.field_d, (byte) -102);
-        oo.field_c[15] = bi.a("basic", "achievement15", pf.field_d, (byte) -81);
-        oo.field_c[16] = bi.a("basic", "achievement16", pf.field_d, (byte) -41);
-        oo.field_c[17] = bi.a("basic", "achievement17", pf.field_d, (byte) -89);
-        oo.field_c[18] = bi.a("basic", "achievement18", pf.field_d, (byte) -106);
-        oo.field_c[19] = bi.a("basic", "achievement19", pf.field_d, (byte) -40);
-        oo.field_c[20] = bi.a("basic", "achievement20", pf.field_d, (byte) -92);
-        oo.field_c[21] = bi.a("basic", "achievement21", pf.field_d, (byte) -39);
+        oo.field_c[0] = bi.a("basic", "achievement0", MenuInputState.field_d, (byte) -75);
+        oo.field_c[1] = bi.a("basic", "achievement1", MenuInputState.field_d, (byte) -57);
+        oo.field_c[2] = bi.a("basic", "achievement2", MenuInputState.field_d, (byte) -34);
+        oo.field_c[3] = bi.a("basic", "achievement3", MenuInputState.field_d, (byte) -125);
+        oo.field_c[4] = bi.a("basic", "achievement4", MenuInputState.field_d, (byte) -34);
+        oo.field_c[5] = bi.a("basic", "achievement5", MenuInputState.field_d, (byte) -37);
+        oo.field_c[6] = bi.a("basic", "achievement6", MenuInputState.field_d, (byte) -93);
+        oo.field_c[7] = bi.a("basic", "achievement7", MenuInputState.field_d, (byte) -88);
+        oo.field_c[8] = bi.a("basic", "achievement8", MenuInputState.field_d, (byte) -76);
+        oo.field_c[9] = bi.a("basic", "achievement9", MenuInputState.field_d, (byte) -105);
+        oo.field_c[10] = bi.a("basic", "achievement10", MenuInputState.field_d, (byte) -62);
+        oo.field_c[11] = bi.a("basic", "achievement11", MenuInputState.field_d, (byte) -82);
+        oo.field_c[12] = bi.a("basic", "achievement12", MenuInputState.field_d, (byte) -81);
+        oo.field_c[13] = bi.a("basic", "achievement13", MenuInputState.field_d, (byte) -100);
+        oo.field_c[14] = bi.a("basic", "achievement14", MenuInputState.field_d, (byte) -102);
+        oo.field_c[15] = bi.a("basic", "achievement15", MenuInputState.field_d, (byte) -81);
+        oo.field_c[16] = bi.a("basic", "achievement16", MenuInputState.field_d, (byte) -41);
+        oo.field_c[17] = bi.a("basic", "achievement17", MenuInputState.field_d, (byte) -89);
+        oo.field_c[18] = bi.a("basic", "achievement18", MenuInputState.field_d, (byte) -106);
+        oo.field_c[19] = bi.a("basic", "achievement19", MenuInputState.field_d, (byte) -40);
+        oo.field_c[20] = bi.a("basic", "achievement20", MenuInputState.field_d, (byte) -92);
+        oo.field_c[21] = bi.a("basic", "achievement21", MenuInputState.field_d, (byte) -39);
         pj.field_a = bi.a("basic", "unachieved", qn.field_l, (byte) -86);
         var6 = bi.a("basic", "orbcoin", qn.field_l, (byte) -32);
         KeyboardInputHandler.a((byte) -59, pj.field_a);
@@ -1733,14 +1733,14 @@ public final class Pixelate extends lb {
         var7 = new Sprite[fo.field_u.length][];
         for (var8 = 0; fo.field_u.length > var8; var8++) {
           if (null != fo.field_u[var8]) {
-            var7[var8] = SocketConnector.a(fo.field_u[var8], "basic", (byte) 47, pf.field_d);
+            var7[var8] = SocketConnector.a(fo.field_u[var8], "basic", (byte) 47, MenuInputState.field_d);
           }
         }
         CachedArchiveProvider.a(true, lp.field_c, rg.field_d, qn.field_l, hp.field_Hb, la.field_c, var7, 2, 2, var7, uk.field_u, param1 + 29, ap.field_d, dg.field_d, cl.field_f);
         fe.field_a = false;
         ri.a(200, (byte) -126);
         am.a(qn.field_l, true, dg.field_d);
-        ProxySocketConnector.a((byte) -94, 0, 0, 16777215, (java.applet.Applet) (this), ic.field_bb);
+        ProxySocketConnector.a((byte) -94, 0, 0, 16777215, (java.applet.Applet) (this), AccountNoticeDialog.field_bb);
         hd.field_c = null;
         dg.field_d = null;
         sf.a(0);
@@ -1761,7 +1761,7 @@ public final class Pixelate extends lb {
           Pixelate.a(false, (byte) -93, -109, true, 5, -125, 20);
         }
         SocketConnector.field_a = MouseInputHandler.a(3, (byte) 124);
-        pf.field_d = MouseInputHandler.a(5, (byte) 124);
+        MenuInputState.field_d = MouseInputHandler.a(5, (byte) 124);
         hd.field_c = MouseInputHandler.a(6, (byte) 124);
         ji.field_b = MouseInputHandler.a(7, (byte) 124);
         PacketBuffer.field_p = MouseInputHandler.a(8, (byte) 124);
@@ -1794,7 +1794,7 @@ public final class Pixelate extends lb {
               if (wl.field_b) {
                 d.a(-17540);
               } else {
-                tm.a(-20822);
+                MarkerSlider.a(-20822);
               }
               ga.field_a = kk.field_y;
             }
@@ -1805,9 +1805,9 @@ public final class Pixelate extends lb {
                 ga.field_a = ga.field_d;
               }
             } else {
-              if (!jg.a((byte) 121)) {
+              if (!ArrayWidgetContainer.a((byte) 121)) {
                 if (null != wh.field_p) {
-                  md.a(wh.field_p, true, 3);
+                  ValidationHelpWidget.a(wh.field_p, true, 3);
                 }
                 un.a(true);
                 var3 = kf.field_q;
@@ -1821,9 +1821,9 @@ public final class Pixelate extends lb {
                 if (tk.a((byte) -104, MidiPcmStream.field_t)) {
                   IntrusiveDequeCursor.a(0);
                 }
-                ga.field_a = qo.field_A;
+                ga.field_a = MatchingTextValidator.field_A;
               } else {
-                ga.field_a = qo.field_A;
+                ga.field_a = MatchingTextValidator.field_A;
               }
             }
           }
@@ -1834,9 +1834,9 @@ public final class Pixelate extends lb {
           if (!param0) {
             if (fc.field_e == MidiPcmStream.field_t) {
               if (fc.field_e == -1) {
-                if (!oc.field_G) {
+                if (!StripedProgressBar.field_G) {
                   while (bh.$cfr$intArgs$b$c4997cb15529(123)) {
-                    if (bc.field_m[82] &&
+                    if (EmailValidator.field_m[82] &&
                       ke.field_a == 11) {
                       stackIn_24_0 = !(pm.field_u);
                       pm.field_u = stackIn_24_0;
@@ -1852,87 +1852,87 @@ public final class Pixelate extends lb {
                 if (fc.field_e != -2) {
                   if (tk.a((byte) -104, fc.field_e)) {
                     wo.b(-79, fc.field_e).e((byte) -83);
-                    f.b(0);
+                    DialWidgetPainter.b(0);
                   }
                 } else {
                   var3 = 1;
-                  f.b(0);
+                  DialWidgetPainter.b(0);
                 }
               }
             } else {
-              ec.field_t = ec.field_t + 1;
-              if (ec.field_t == 32) {
+              NameAvailabilityValidator.field_t = NameAvailabilityValidator.field_t + 1;
+              if (NameAvailabilityValidator.field_t == 32) {
                 IntrusiveDequeCursor.a(0);
               }
-              f.b(0);
+              DialWidgetPainter.b(0);
               if ((MidiPcmStream.field_t == -1 ||
                 fc.field_e == -1) && null != rg.field_e) {
                 rg.field_e.c(-1);
               }
             }
           }
-          if (oc.field_G &&
+          if (StripedProgressBar.field_G &&
             !dj.field_c &&
-            !ia.field_d) {
+            !LinkButtonPainter.field_d) {
             bl.a(-55, var3 != 0);
             if (hd.field_g) {
               ii.a(true, 1, fc.field_e, (byte) -68, ee.field_a);
               hd.field_g = false;
             }
-            if (oa.field_i) {
-              qo.field_r.a(-110, var4 != 0);
+            if (DateOfBirthValidator.field_i) {
+              MatchingTextValidator.field_r.a(-110, var4 != 0);
             }
-            if (md.field_Y) {
+            if (ValidationHelpWidget.field_Y) {
               ro.field_e.a(-110, var4 != 0);
             }
             while (bh.$cfr$intArgs$b$c4997cb15529(122)) {
-              if (hb.field_kb &&
-                qp.a(true, 13, 15, 12)) {
+              if (ContentTransitionDialog.field_kb &&
+                LabeledField.a(true, 13, 15, 12)) {
                 continue;
               }
-              if (oa.field_i) {
-                qo.field_r.a(ke.field_a, (byte) -35);
+              if (DateOfBirthValidator.field_i) {
+                MatchingTextValidator.field_r.a(ke.field_a, (byte) -35);
               }
-              if (!md.field_Y) {
+              if (!ValidationHelpWidget.field_Y) {
                 continue;
               }
               ro.field_e.a(ke.field_a, (byte) 116);
             }
           }
-          if (!oc.field_G) {
-            ng.a(false);
+          if (!StripedProgressBar.field_G) {
+            UiComponent.a(false);
           }
           boolean decompiledFrameRemainder0 = true;
           if (MidiPcmStream.field_t != -2 &&
             MidiPcmStream.field_t != -5 &&
             MidiPcmStream.field_t != -4 && (MidiPcmStream.field_t != -1 ||
-            !oa.field_i) && 4 != MidiPcmStream.field_t) {
+            !DateOfBirthValidator.field_i) && 4 != MidiPcmStream.field_t) {
             stackIn_61_0 = false;
             decompiledFrameRemainder0 = false;
           }
           else {
             stackIn_61_0 = true;
           }
-          hb.field_kb = stackIn_61_0;
-          if (!hb.field_kb) {
-            if (0 >= ve.field_Kb) {
+          ContentTransitionDialog.field_kb = stackIn_61_0;
+          if (!ContentTransitionDialog.field_kb) {
+            if (0 >= AccountNamePrompt.field_Kb) {
               var5 = qh.field_c * qh.field_c;
-              var6 = -(ve.field_Kb * ve.field_Kb) + var5;
+              var6 = -(AccountNamePrompt.field_Kb * AccountNamePrompt.field_Kb) + var5;
               var7 = nf.field_f + var6 * 120 / var5;
               qf.a(21983, var7);
             } else {
-              ve.field_Kb = ve.field_Kb - 1;
+              AccountNamePrompt.field_Kb = AccountNamePrompt.field_Kb - 1;
               var5 = qh.field_c * qh.field_c;
-              var6 = -(ve.field_Kb * ve.field_Kb) + var5;
+              var6 = -(AccountNamePrompt.field_Kb * AccountNamePrompt.field_Kb) + var5;
               var7 = nf.field_f + var6 * 120 / var5;
               qf.a(21983, var7);
             }
           } else {
-            if (ve.field_Kb < qh.field_c) {
-              ve.field_Kb = ve.field_Kb + 1;
+            if (AccountNamePrompt.field_Kb < qh.field_c) {
+              AccountNamePrompt.field_Kb = AccountNamePrompt.field_Kb + 1;
             }
             var5 = qh.field_c * qh.field_c;
-            var6 = -(ve.field_Kb * ve.field_Kb) + var5;
+            var6 = -(AccountNamePrompt.field_Kb * AccountNamePrompt.field_Kb) + var5;
             var7 = nf.field_f + var6 * 120 / var5;
             qf.a(21983, var7);
           }
@@ -1949,14 +1949,14 @@ public final class Pixelate extends lb {
           aa.field_f.g(9, 15514);
           dj.field_c = true;
           MidiPcmStream.field_t = fc.field_e;
-          ve.field_Kb = qh.field_c;
+          AccountNamePrompt.field_Kb = qh.field_c;
         }
         if (!param1) {
           discarded$0 = this.b(false, 93);
         }
         if (MidiPcmStream.field_t == -5) {
           qg.a(io.field_c.c((byte) 8), 11, false);
-          ia.field_d = true;
+          LinkButtonPainter.field_d = true;
           MidiPcmStream.field_t = fc.field_e;
         }
     }

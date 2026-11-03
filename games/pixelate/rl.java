@@ -168,7 +168,7 @@ final class rl {
           var2 = 0;
           while (bh.$cfr$intArgs$b$c4997cb15529(123)) {
             mj.field_c.a((byte) -48);
-            if (mj.field_c.a(84)) {
+            if (mj.field_c.isActivated(84)) {
               var1_int = 1;
             }
             if (ke.field_a != 13) {
@@ -180,7 +180,7 @@ final class rl {
           if (param0 <= 74) {
             rl.b((byte) -77);
           }
-          if (mj.field_c.a(17)) {
+          if (mj.field_c.isActivated(17)) {
             var1_int = 1;
           }
           var3 = 0;

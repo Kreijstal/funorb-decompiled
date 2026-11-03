@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ui {
-    static ak field_i;
+    static SceneWidget field_i;
     static int field_e;
     static String field_c;
     static int field_k;
@@ -69,7 +69,7 @@ final class ui {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 160 > var7) {
-                var8 = jg.field_I[-128 + var7];
+                var8 = ArrayWidgetContainer.field_I[-128 + var7];
                 if (var8 == 0) {
                   var8 = 63;
                 }
@@ -107,7 +107,7 @@ final class ui {
         if (param0 > 79) {
           uk.field_v.writeByte(160, param3);
           uk.field_v.writeShort(1276387944, param2);
-          uk.field_v.a(tp.field_t, ag.field_m, 0);
+          uk.field_v.a(SceneWidgetNode.field_t, AgeValidator.field_m, 0);
           aa.field_f.g(18, 15514);
           fieldTemp$0 = aa.field_f.position + 1;
           aa.field_f.position = aa.field_f.position + 1;
@@ -125,15 +125,15 @@ final class ui {
         WhirlpoolHasher.field_a[SecondaryNodeDeque.field_e] = param4;
         ArchiveRequest.field_A[SecondaryNodeDeque.field_e] = SecondaryNodeDeque.field_e;
         ep.field_c[SecondaryNodeDeque.field_e] = param3;
-        if (w.field_s > param3) {
+        if (StatefulTextPainter.field_s > param3) {
           ro.field_a = param3;
         }
         if (param3 > aa.field_o) {
           qn.field_k = param3;
         }
-        uc.field_b[SecondaryNodeDeque.field_e] = param0;
-        vp.field_Fb[SecondaryNodeDeque.field_e] = param5;
-        gh.field_q[SecondaryNodeDeque.field_e] = param2;
+        TextWidgetPainter.field_b[SecondaryNodeDeque.field_e] = param0;
+        VerticalScrollbar.field_Fb[SecondaryNodeDeque.field_e] = param5;
+        GradientOutlineTextPainter.field_q[SecondaryNodeDeque.field_e] = param2;
         var6 = param2 + (param5 + param0);
         if (param1 != var6) {
           stackIn_9_0 = 1000 * param0 / var6;

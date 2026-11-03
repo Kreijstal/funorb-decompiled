@@ -75,7 +75,7 @@ final class nj {
             if (null != ib.field_f &&
               ib.field_f.field_g) {
               ln.a(49);
-              lb.field_x.b(param0 - 55844, new ic(lb.field_x, ia.field_c));
+              lb.field_x.b(param0 - 55844, new AccountNoticeDialog(lb.field_x, LinkButtonPainter.field_c));
             }
             return;
           }

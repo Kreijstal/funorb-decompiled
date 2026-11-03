@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicPatchNode extends IntrusiveNode {
-    static ak field_p;
+    static SceneWidget field_p;
     int field_l;
     int field_H;
     int field_y;
@@ -33,7 +33,7 @@ final class MusicPatchNode extends IntrusiveNode {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           if (param1 <= 34) {
-            field_p = (ak) null;
+            field_p = (SceneWidget) null;
           }
           param0.addKeyListener(mc.field_r);
           param0.addFocusListener(mc.field_r);
@@ -60,7 +60,7 @@ final class MusicPatchNode extends IntrusiveNode {
         if (param0 == -18481) {
           return rd.a(jj.field_b, false);
         }
-        field_p = (ak) null;
+        field_p = (SceneWidget) null;
         return rd.a(jj.field_b, false);
     }
 
@@ -72,7 +72,7 @@ final class MusicPatchNode extends IntrusiveNode {
           this.field_x = null;
           return;
         }
-        field_p = (ak) null;
+        field_p = (SceneWidget) null;
         this.field_x = null;
     }
 
@@ -81,7 +81,7 @@ final class MusicPatchNode extends IntrusiveNode {
         field_B = null;
         field_s = null;
         if (param0 >= -1) {
-          field_p = (ak) null;
+          field_p = (SceneWidget) null;
           field_p = null;
           return;
         }

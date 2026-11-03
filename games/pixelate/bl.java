@@ -5,7 +5,7 @@ final class bl {
     static int[] field_a;
     static String field_e;
     static String field_g;
-    static ak field_d;
+    static SceneWidget field_d;
     static String field_f;
     static int field_c;
     static int field_b;
@@ -30,7 +30,7 @@ final class bl {
         var2 = stackIn_8_0;
         stackIn_11_0 = 15;
         stackIn_11_1 = 14;
-        stackIn_13_2 = (md.field_Y) || (oa.field_i);
+        stackIn_13_2 = (ValidationHelpWidget.field_Y) || (DateOfBirthValidator.field_i);
         stackIn_15_3 = var2;
         stackIn_16_4 = (50 >= ce.field_g) ? false : true;
         wk.a(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, lp.field_i);

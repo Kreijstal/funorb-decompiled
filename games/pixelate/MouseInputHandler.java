@@ -59,7 +59,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           dupTemp$1 = hm.a(64);
           aj.field_m = dupTemp$1;
-          jc.field_c = dupTemp$1;
+          SpriteCheckboxPainter.field_c = dupTemp$1;
           if (ra.field_b.field_b != 1) {
             uk.field_s = jm.field_q;
           } else {
@@ -73,7 +73,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               stackIn_11_0 = (param1) ? -2 : -1;
               oj.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;
-              tm.field_U = stackIn_11_0;
+              MarkerSlider.field_U = stackIn_11_0;
               al.a(pc.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
               vg.b(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -167,7 +167,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != fj.field_c) {
             oi.field_c = 0;
-            c.field_X = param0.getX();
+            EditableTextWidget.field_X = param0.getX();
             IntrusiveNode.field_j = param0.getY();
             hm.a(64);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
@@ -340,13 +340,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (lb.field_D > 0) {
                 lb.field_D = lb.field_D - 1;
               } else {
-                if (pl.field_S > 0) {
-                  pl.field_S = pl.field_S - 1;
+                if (AccountRegistrationPanel.field_S > 0) {
+                  AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                 }
               }
             } else {
-              fieldTemp$6 = pl.field_S;
-              pl.field_S = pl.field_S + 1;
+              fieldTemp$6 = AccountRegistrationPanel.field_S;
+              AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
               if (fieldTemp$6 >= 15) {
                 of.field_d = ql.field_m;
                 stackIn_10_0 = (5 != ql.field_m) ? 15 : 75;
@@ -359,13 +359,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (lb.field_D > 0) {
                 lb.field_D = lb.field_D - 1;
               } else {
-                if (pl.field_S > 0) {
-                  pl.field_S = pl.field_S - 1;
+                if (AccountRegistrationPanel.field_S > 0) {
+                  AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                 }
               }
             } else {
-              fieldTemp$5 = pl.field_S;
-              pl.field_S = pl.field_S + 1;
+              fieldTemp$5 = AccountRegistrationPanel.field_S;
+              AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
               if (fieldTemp$5 >= 15) {
                 of.field_d = ql.field_m;
                 stackIn_23_0 = (5 != ql.field_m) ? 15 : 75;
@@ -374,19 +374,19 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
           }
         } else {
-          if (GameApplet.field_i == w.field_v.field_d.field_d) {
+          if (GameApplet.field_i == StatefulTextPainter.field_v.field_d.field_d) {
             if (param0 == 5) {
               if (of.field_d == ql.field_m) {
                 if (lb.field_D > 0) {
                   lb.field_D = lb.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$4 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$4 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$4 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_39_0 = (5 != ql.field_m) ? 15 : 75;
@@ -399,13 +399,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (lb.field_D > 0) {
                   lb.field_D = lb.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$3 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$3 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$3 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_52_0 = (5 != ql.field_m) ? 15 : 75;
@@ -414,15 +414,15 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               }
             }
           } else {
-            GameApplet.field_i = w.field_v.field_d.field_d;
-            if (w.field_v.field_r == 0) {
-              ql.field_m = w.field_v.field_d.field_d;
+            GameApplet.field_i = StatefulTextPainter.field_v.field_d.field_d;
+            if (StatefulTextPainter.field_v.field_r == 0) {
+              ql.field_m = StatefulTextPainter.field_v.field_d.field_d;
               if (param0 != 5) {
                 field_c = -69;
               }
               if (of.field_d != ql.field_m) {
-                fieldTemp$0 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$0 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$0 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_107_0 = (5 != ql.field_m) ? 15 : 75;
@@ -430,7 +430,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 }
                 if (-1 != of.field_d) {
                   var1 = jb.field_b[of.field_d];
-                  var1.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                  var1.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                 }
                 return;
               }
@@ -438,25 +438,25 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 lb.field_D = lb.field_D - 1;
                 if (-1 != of.field_d) {
                   var1Lifetime2 = jb.field_b[of.field_d];
-                  var1Lifetime2.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                  var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                 }
               } else {
-                if (pl.field_S <= 0) {
+                if (AccountRegistrationPanel.field_S <= 0) {
                   if (-1 != of.field_d) {
                     var1Lifetime2 = jb.field_b[of.field_d];
-                    var1Lifetime2.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                    var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                   }
                 } else {
-                  pl.field_S = pl.field_S - 1;
+                  AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   if (-1 != of.field_d) {
                     var1Lifetime2 = jb.field_b[of.field_d];
-                    var1Lifetime2.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+                    var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                   }
                 }
               }
               return;
             }
-            if (w.field_v.field_r != 1) {
+            if (StatefulTextPainter.field_v.field_r != 1) {
               ql.field_m = -1;
               if (param0 != 5) {
                 field_c = -69;
@@ -465,13 +465,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (lb.field_D > 0) {
                   lb.field_D = lb.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$2 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$2 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$2 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_70_0 = (5 != ql.field_m) ? 15 : 75;
@@ -479,7 +479,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 }
               }
             } else {
-              stackIn_81_0 = (0 != w.field_v.field_d.field_d) ? -1 : 5;
+              stackIn_81_0 = (0 != StatefulTextPainter.field_v.field_d.field_d) ? -1 : 5;
               ql.field_m = stackIn_81_0;
               if (param0 != 5) {
                 field_c = -69;
@@ -488,13 +488,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (lb.field_D > 0) {
                   lb.field_D = lb.field_D - 1;
                 } else {
-                  if (pl.field_S > 0) {
-                    pl.field_S = pl.field_S - 1;
+                  if (AccountRegistrationPanel.field_S > 0) {
+                    AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
                   }
                 }
               } else {
-                fieldTemp$1 = pl.field_S;
-                pl.field_S = pl.field_S + 1;
+                fieldTemp$1 = AccountRegistrationPanel.field_S;
+                AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$1 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_88_0 = (5 != ql.field_m) ? 15 : 75;
@@ -506,7 +506,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
         if (-1 != of.field_d) {
           var1Lifetime1 = jb.field_b[of.field_d];
-          var1Lifetime1.field_f = -(pl.field_S * (pl.field_S * 270) / 225) + 20;
+          var1Lifetime1.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
         }
     }
 

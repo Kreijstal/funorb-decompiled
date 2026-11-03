@@ -162,13 +162,13 @@ final class ck {
           if (var5 > 5) {
             var5 = 5;
           }
-          if (jc.field_d) {
+          if (SpriteCheckboxPainter.field_d) {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
           } else {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
           }
         } else {
-          if (!jc.field_d) {
+          if (!SpriteCheckboxPainter.field_d) {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
           } else {
             SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
@@ -186,7 +186,7 @@ final class ck {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        qe var4 = null;
+        QuickChatCategory var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -197,27 +197,27 @@ final class ck {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var3_int = wo.field_d;
-          bn.field_I = new ak(0L, (ak) null);
+          DraggableWidget.field_I = new SceneWidget(0L, (SceneWidget) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            jo.a(1, "QC1", (Throwable) null);
+            CheckboxPainter.a(1, "QC1", (Throwable) null);
             return;
           }
           param2.discardPackedGroups = false;
           param2.field_e = 0;
-          w.field_y = new il(var3_int, param2, param2);
+          StatefulTextPainter.field_y = new il(var3_int, param2, param2);
           jd.field_k = new u(var3_int, param2, param2, new dn());
           var4 = fl.c(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;
-            jo.a(1, "QC2", (Throwable) null);
+            CheckboxPainter.a(1, "QC2", (Throwable) null);
             return;
           }
           oo.a(-1, var4);
           var12 = (BitmapFont) null;
-          vl.field_L = ka.a(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
-          ue.field_t = ka.a(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
-          ve.field_Ib = ka.a(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
+          AccountMessagePanel.field_L = ResizableModalPanel.a(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
+          ue.field_t = ResizableModalPanel.a(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
+          AccountNamePrompt.field_Ib = ResizableModalPanel.a(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
           var5 = SoftwareRasterizer.field_j;
           var6 = SoftwareRasterizer.field_d;
           var16 = SoftwareRasterizer.field_k;
@@ -227,8 +227,8 @@ final class ck {
             SoftwareRasterizer.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          pi.field_Rb = BoundedRandomAccessFile.a(ue.field_t, ve.field_Ib, -55, vl.field_L, var4);
-          bn.field_I.field_L = new IntrusiveDeque();
+          pi.field_Rb = BoundedRandomAccessFile.a(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
+          DraggableWidget.field_I.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class ck {
           RuntimeException var2_ref2 = null;
           var7 = Pixelate.field_H ? 1 : 0;
           try {
-            if (c.field_T) {
+            if (EditableTextWidget.field_T) {
               return true;
             }
             try {

@@ -3,11 +3,11 @@
  */
 final class io {
     static ResourceArchive field_g;
-    static ak field_f;
+    static SceneWidget field_f;
     static long field_d;
     static int field_e;
     static String field_a;
-    static eq field_c;
+    static LobbyGame field_c;
     private String field_b;
 
     final static void a(int param0, int param1) {
@@ -20,10 +20,10 @@ final class io {
           if (param1 != -20304) {
             field_d = 56L;
           }
-          var4 = (m) (on.field_nb.c(1504642273));
+          var4 = (m) (LoginDialog.field_nb.c(1504642273));
           while (var4 != null) {
-            jc.a((byte) -31, param0, var4);
-            var4 = (m) (on.field_nb.last(1504642273));
+            SpriteCheckboxPainter.a((byte) -31, param0, var4);
+            var4 = (m) (LoginDialog.field_nb.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -94,7 +94,7 @@ final class io {
                 ui.a(aj.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
               }
             }
-            bc.a(var6, (byte) 31);
+            EmailValidator.a(var6, (byte) 31);
             dupTemp$0 = new String[2][var6];
             var3.field_o = dupTemp$0;
             var7 = dupTemp$0;
@@ -108,11 +108,11 @@ final class io {
               var12 = ArchiveRequest.field_A[var10];
               var7[0][var11] = lg.field_b[var12];
               var8[0][var11 * 4] = ep.field_c[var12];
-              var8[0][1 + var11 * 4] = uc.field_b[var12];
-              var8[0][4 * var11 + 2] = vp.field_Fb[var12];
-              var8[0][3 + var11 * 4] = gh.field_q[var12];
+              var8[0][1 + var11 * 4] = TextWidgetPainter.field_b[var12];
+              var8[0][4 * var11 + 2] = VerticalScrollbar.field_Fb[var12];
+              var8[0][3 + var11 * 4] = GradientOutlineTextPainter.field_q[var12];
               if (sm.a(lg.field_b[var12], -1) &&
-                gh.field_q[var12] + uc.field_b[var12] + vp.field_Fb[var12] == 0) {
+                GradientOutlineTextPainter.field_q[var12] + TextWidgetPainter.field_b[var12] + VerticalScrollbar.field_Fb[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
               }
@@ -126,11 +126,11 @@ final class io {
               var12Lifetime1 = ArchiveRequest.field_A[var10Lifetime1 + var6];
               var7[1][var14] = lg.field_b[var12Lifetime1];
               var8[1][4 * var14] = ep.field_c[var12Lifetime1];
-              var8[1][1 + 4 * var14] = uc.field_b[var12Lifetime1];
-              var8[1][4 * var14 + 2] = vp.field_Fb[var12Lifetime1];
-              var8[1][4 * var14 + 3] = gh.field_q[var12Lifetime1];
+              var8[1][1 + 4 * var14] = TextWidgetPainter.field_b[var12Lifetime1];
+              var8[1][4 * var14 + 2] = VerticalScrollbar.field_Fb[var12Lifetime1];
+              var8[1][4 * var14 + 3] = GradientOutlineTextPainter.field_q[var12Lifetime1];
               if (sm.a(lg.field_b[var12Lifetime1], -1) &&
-                uc.field_b[var12Lifetime1] + (vp.field_Fb[var12Lifetime1] + gh.field_q[var12Lifetime1]) == 0) {
+                TextWidgetPainter.field_b[var12Lifetime1] + (VerticalScrollbar.field_Fb[var12Lifetime1] + GradientOutlineTextPainter.field_q[var12Lifetime1]) == 0) {
                 var7[1][var14] = null;
                 var14--;
               }
@@ -177,14 +177,14 @@ final class io {
           if (ga.field_f > 200) {
             var5 = (250 - ga.field_f << 8) / 50;
           }
-          h.a(-113, re.field_b);
+          Checkbox.a(-113, re.field_b);
           ja.a();
           SoftwareRasterizer.d();
           ma.d((byte) 106);
           if (256 > var5) {
             SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           }
-          ia.a((byte) 92);
+          LinkButtonPainter.a((byte) 92);
           if (ga.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
           } else {
@@ -228,13 +228,13 @@ final class io {
         if (ga.field_f > 200) {
           var5 = (250 - ga.field_f << 8) / 50;
         }
-        h.a(-113, re.field_b);
+        Checkbox.a(-113, re.field_b);
         ja.a();
         SoftwareRasterizer.d();
         ma.d((byte) 106);
         if (256 > var5) {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
-          ia.a((byte) 92);
+          LinkButtonPainter.a((byte) 92);
           if (ga.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
           } else {
@@ -256,7 +256,7 @@ final class io {
             }
           }
         } else {
-          ia.a((byte) 92);
+          LinkButtonPainter.a((byte) 92);
           if (ga.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
             var6Lifetime1 = ga.field_f - 125;
@@ -388,15 +388,15 @@ final class io {
         String var7 = null;
         BinaryBitmapFont var8 = null;
         try {
-          ud.field_L[0] = ai.field_d.nextInt();
-          ud.field_L[1] = ai.field_d.nextInt();
+          ModalPanel.field_L[0] = ai.field_d.nextInt();
+          ModalPanel.field_L[1] = ai.field_d.nextInt();
           uk.field_v.position = 0;
-          ud.field_L[3] = (int)gj.field_P;
-          ud.field_L[2] = (int)(gj.field_P >> 32);
-          uk.field_v.d(ud.field_L[0], -55);
-          uk.field_v.d(ud.field_L[1], -71);
-          uk.field_v.d(ud.field_L[2], -68);
-          uk.field_v.d(ud.field_L[3], -48);
+          ModalPanel.field_L[3] = (int)NumericDateInputWidget.field_P;
+          ModalPanel.field_L[2] = (int)(NumericDateInputWidget.field_P >> 32);
+          uk.field_v.d(ModalPanel.field_L[0], -55);
+          uk.field_v.d(ModalPanel.field_L[1], -71);
+          uk.field_v.d(ModalPanel.field_L[2], -68);
+          uk.field_v.d(ModalPanel.field_L[3], -48);
           wf.a(1, uk.field_v);
           uk.field_v.writeShort(1276387944, param3);
           param2.a((byte) -12, uk.field_v);
@@ -411,7 +411,7 @@ final class io {
           aa.field_f.d(ra.field_c, -118);
           aa.field_f.writeLong(false, hf.field_t);
           var6 = 0;
-          if (uj.field_Lb) {
+          if (LobbyPlayer.field_Lb) {
             var6 = var6 | 1;
           }
           if (vm.field_d) {
@@ -436,7 +436,7 @@ final class io {
             var8 = (BinaryBitmapFont) null;
             io.a((BinaryBitmapFont) null, (byte) 105);
           }
-          wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
+          wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
           aa.field_f.c(7519, aa.field_f.position - var5_int);
           vg.b(-1, 10000);
           return;

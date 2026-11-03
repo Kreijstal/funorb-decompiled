@@ -246,12 +246,12 @@ final class hd {
         {
           var6 = Pixelate.field_H ? 1 : 0;
           var2 = 0;
-          if (oa.field_j != 1) {
+          if (DateOfBirthValidator.field_j != 1) {
             this.field_u = this.field_u + 1;
             var3 = ok.a(this.field_t, -119, 100);
             var4 = 0;
             for (var5 = 0; var5 < 6; var5++) {
-              var4 = var4 + ak.field_db[var5];
+              var4 = var4 + SceneWidget.field_db[var5];
               if (var3 < var4) {
                 var2 = var5;
                 break;
@@ -270,7 +270,7 @@ final class hd {
         for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
           this.field_s[var3Lifetime1] = vn.field_e[var2][var3Lifetime1];
         }
-        if (oa.field_j != 1) {
+        if (DateOfBirthValidator.field_j != 1) {
           this.field_u = this.field_u + 1;
           var3Lifetime2 = ok.a(this.field_t, -116, 4);
           for (var4Lifetime1 = 0; var3Lifetime2 > var4Lifetime1; var4Lifetime1++) {

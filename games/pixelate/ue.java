@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ue extends IntrusiveNode {
     int[][] field_l;
-    static ak field_t;
+    static SceneWidget field_t;
     static String field_q;
     String[][] field_r;
     int field_s;
@@ -44,7 +44,7 @@ final class ue extends IntrusiveNode {
             }
             var2_int = var2_int + var8[var4];
           }
-          var4Lifetime1 = ok.a(tg.field_f, param1 ^ -3, var2_int);
+          var4Lifetime1 = ok.a(UiTheme.field_f, param1 ^ -3, var2_int);
           for (var5 = 0; var5 < var8.length; var5++) {
             var4Lifetime1 = var4Lifetime1 - var8[var5];
             if (var4Lifetime1 <= 0) {
@@ -52,7 +52,7 @@ final class ue extends IntrusiveNode {
               return stackIn_13_0;
             }
           }
-          stackIn_16_0 = ok.a(tg.field_f, -125, la.field_a.length);
+          stackIn_16_0 = ok.a(UiTheme.field_f, -125, la.field_a.length);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class ue extends IntrusiveNode {
 
     final static boolean a(byte param0) {
         int var1 = -8 % ((18 - param0) / 51);
-        return ka.field_W != null ? true : false;
+        return ResizableModalPanel.field_W != null ? true : false;
     }
 
     public static void a(int param0) {

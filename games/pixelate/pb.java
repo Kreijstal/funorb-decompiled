@@ -22,7 +22,7 @@ final class pb {
         try {
           PacketBuffer.field_n = param3;
           he.field_a = param1;
-          gh.field_t = param0;
+          GradientOutlineTextPainter.field_t = param0;
           if (param2 != 16) {
             sb var5 = (sb) null;
             pb.a(-25, (sb) null, 81, -121);
@@ -163,7 +163,7 @@ final class pb {
         int var10;
         int var11;
         var11 = Pixelate.field_H ? 1 : 0;
-        var2 = jc.field_d ? 1 : 0;
+        var2 = SpriteCheckboxPainter.field_d ? 1 : 0;
         SoftwareRasterizer.a(ProxyAuthenticationException.field_b);
         if (var2 == 0) {
           SoftwareRasterizer.f(0, -100 + this.field_o, 640, this.field_o + 100);

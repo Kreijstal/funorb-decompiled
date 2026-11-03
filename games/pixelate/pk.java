@@ -30,8 +30,8 @@ final class pk {
         try {
           var5_int = 0;
           scanLoop1: while (true) {
-            if (kb.field_N.length > var5_int) {
-              param1 = kb.field_N[var5_int];
+            if (DateInputWidget.field_N.length > var5_int) {
+              param1 = DateInputWidget.field_N[var5_int];
               stackIn_13_0 = var5_int << 4;
               if (var7 != 0) {
                 break scanLoop1;
@@ -263,18 +263,18 @@ final class pk {
           var1 = null;
           var2 = null;
           if (ce.field_d == 0 &&
-            null != bn.field_S) {
-            var2 = jh.field_P;
+            null != DraggableWidget.field_S) {
+            var2 = AccountChoicePanel.field_P;
           }
           if (ce.field_d == 2 &&
             !ra.a((byte) -99)) {
             if (CanvasRasterBuffer.a(fp.field_d, (byte) 37)) {
-              var2 = sd.a(GameApplet.field_m, 34, new String[]{jo.field_k});
+              var2 = sd.a(GameApplet.field_m, 34, new String[]{CheckboxPainter.field_k});
               if (var10 != 0) {
-                var2 = sd.a(fg.field_d, 34, new String[]{jo.field_k});
+                var2 = sd.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
               }
             } else {
-              var2 = sd.a(fg.field_d, 34, new String[]{jo.field_k});
+              var2 = sd.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
             }
             if (un.field_l) {
               MidiPcmStream.a(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
@@ -286,12 +286,12 @@ final class pk {
             return stackIn_20_0;
           }
           if (null == var2 &&
-            !qo.field_z &&
-            ko.field_eb == null) {
-            var2 = a.field_M;
+            !MatchingTextValidator.field_z &&
+            LoadingProgressDialog.field_eb == null) {
+            var2 = NameSuggestionsPanel.field_M;
           }
           if (null != var2) {
-            ap.a((String) null, 0, vp.field_Ib, 24092, (String) (var2));
+            ap.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
           } else {
             var3 = kn.field_J;
             var3 = th.a(2, var3);
@@ -300,9 +300,9 @@ final class pk {
             var6 = ce.field_d;
             var7 = 0;
             if (2 == var6) {
-              var4 = sd.a(dg.field_b, 73, new String[]{jo.field_k});
+              var4 = sd.a(dg.field_b, 73, new String[]{CheckboxPainter.field_k});
               var8 = sd.a(sk.field_c, 69, new String[]{var3});
-              var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + vl.field_Q.textWidth(var8) - vl.field_Q.textWidth(var4));
+              var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + AccountMessagePanel.field_Q.textWidth(var8) - AccountMessagePanel.field_Q.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -345,7 +345,7 @@ final class pk {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + JaggrabDownloader.field_i + "</col>";
               }
-              var9 = vl.field_Q.textWidth(var4);
+              var9 = AccountMessagePanel.field_Q.textWidth(var4);
               if (!ue.a((byte) 124)) {
                 if (nf.field_d.field_W &&
                   (-nf.field_d.field_tb + ProxyAuthenticationException.field_d) < var9) {
@@ -358,7 +358,7 @@ final class pk {
                 if (nf.field_d.field_P != 0 &&
                   nf.field_d.field_ub < var9 &&
                   !ln.field_q) {
-                  ak.c(true);
+                  SceneWidget.c(true);
                 }
               }
             }
@@ -367,7 +367,7 @@ final class pk {
               rh.field_y.field_W = false;
             }
             if (rh.field_y.field_W) {
-              var1 = sd.a(nn.field_m, 78, new String[]{var3, jo.field_k});
+              var1 = sd.a(nn.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
             }
           }
           stackIn_96_0 = var1;

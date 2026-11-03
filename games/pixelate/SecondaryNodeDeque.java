@@ -46,14 +46,14 @@ final class SecondaryNodeDeque implements Iterable {
         var10 = Pixelate.field_H ? 1 : 0;
         try {
           var7_int = un.a(param3, 108);
-          if (qo.field_y == null) {
-            qo.field_y = new java.security.SecureRandom();
+          if (MatchingTextValidator.field_y == null) {
+            MatchingTextValidator.field_y = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = qo.field_y.nextInt();
+            var8[var9] = MatchingTextValidator.field_y.nextInt();
           }
           if (ed.field_b == null ||
             !(var7_int <= ed.field_b.payload.length)) {
@@ -194,9 +194,9 @@ final class SecondaryNodeDeque implements Iterable {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_b[0][var0] = tg.a(tg.a(tg.a(tg.a(var10 << 24, tg.a(tg.a(tg.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
+            field_b[0][var0] = UiTheme.a(UiTheme.a(UiTheme.a(UiTheme.a(var10 << 24, UiTheme.a(UiTheme.a(UiTheme.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_b[var14][var0] = tg.a(field_b[-1 + var14][var0] << 56, field_b[-1 + var14][var0] >>> 8);
+                field_b[var14][var0] = UiTheme.a(field_b[-1 + var14][var0] << 56, field_b[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

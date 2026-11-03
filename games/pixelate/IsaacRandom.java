@@ -3,7 +3,7 @@
  */
 final class IsaacRandom {
     private int[] field_c;
-    static ak field_b;
+    static SceneWidget field_b;
     private int field_d;
     private int[] field_h;
     private int field_i;
@@ -248,7 +248,7 @@ final class IsaacRandom {
           if (param2 != 48077700) {
             field_j = (String) null;
           }
-          stackIn_6_0 = on.a(param3.a(param1, param4, true), param2 ^ 48077726);
+          stackIn_6_0 = LoginDialog.a(param3.a(param1, param4, true), param2 ^ 48077726);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

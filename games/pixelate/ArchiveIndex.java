@@ -9,7 +9,7 @@ final class ArchiveIndex {
     static Boolean field_j;
     int revision;
     private int[][] fileNameHashes;
-    static ak field_l;
+    static SceneWidget field_l;
     private int[] groupNameHashes;
     int groupCapacity;
     int[] groupVersions;
@@ -31,12 +31,12 @@ final class ArchiveIndex {
     }
 
     final static void a(int param0) {
-        uj var3 = null;
+        LobbyPlayer var3 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
         try {
           rl.field_r = false;
           io.field_c = null;
-          bn.field_S = null;
+          DraggableWidget.field_S = null;
           if (null != ImageProducerRasterBuffer.field_n) {
             ImageProducerRasterBuffer.field_n.e(-123);
             ImageProducerRasterBuffer.field_n = null;
@@ -56,10 +56,10 @@ final class ArchiveIndex {
           }
           SocketConnector.field_f = null;
           if (il.field_d != null) {
-            var3 = (uj) (il.field_d.a(-109));
+            var3 = (LobbyPlayer) (il.field_d.a(-109));
             while (var3 != null) {
               var3.e(17);
-              var3 = (uj) (il.field_d.a((byte) 50));
+              var3 = (LobbyPlayer) (il.field_d.a((byte) 50));
             }
             il.field_d = null;
           }
@@ -88,7 +88,7 @@ final class ArchiveIndex {
             if (param0 == 0) {
               return false;
             }
-            var6 = jg.field_I;
+            var6 = ArrayWidgetContainer.field_I;
             var2 = var6;
             var3 = 0;
             while (true) {
@@ -328,7 +328,7 @@ final class ArchiveIndex {
     }
 
     final static void a(int param0, byte param1) {
-        oa.field_j = 1;
+        DateOfBirthValidator.field_j = 1;
         un.field_j = gd.field_e[param0];
         un.field_j.b(false);
         if (param1 < 124) {
@@ -460,7 +460,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_e = db.a(param0, 0, 1761872464, param0.length);
+            this.field_e = TextHotspotWidget.a(param0, 0, 1761872464, param0.length);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (param2[var4_int] != this.field_e[var4_int]) {
                 throw new RuntimeException();

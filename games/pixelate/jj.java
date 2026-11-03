@@ -26,25 +26,25 @@ class jj {
         IntrusiveNode var9;
         var8 = Pixelate.field_H ? 1 : 0;
         if (0 < this.field_d) {
-          var2 = -(kb.field_L.textWidth(this.field_l) / 2) + 320 - 20;
-          var3 = 20 + kb.field_L.textWidth(this.field_l) / 2 + 320;
+          var2 = -(DateInputWidget.field_L.textWidth(this.field_l) / 2) + 320 - 20;
+          var3 = 20 + DateInputWidget.field_L.textWidth(this.field_l) / 2 + 320;
           var4 = -1;
           var5 = 25;
           SoftwareRasterizer.a(nh.field_a);
-          if (this.field_d <= dm.field_Cb - var5) {
+          if (this.field_d <= RegistrationRequestDialog.field_Cb - var5) {
             if (var5 > this.field_d) {
               var4 = 640 - this.field_d * 640 / var5;
               SoftwareRasterizer.f(var4, 0, var3, 480);
             }
           } else {
-            var4 = 640 * (-this.field_d + dm.field_Cb) / var5;
+            var4 = 640 * (-this.field_d + RegistrationRequestDialog.field_Cb) / var5;
             SoftwareRasterizer.f(var2, 0, var4, 480);
           }
-          fi.a(this.field_i, 0, -kb.field_L.maxAscent + (140 - pd.field_Jb * 2));
-          kb.field_L.drawCentered(this.field_l, 320, 140, 0, 0);
+          fi.a(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - pd.field_Jb * 2));
+          DateInputWidget.field_L.drawCentered(this.field_l, 320, 140, 0, 0);
           SoftwareRasterizer.b(nh.field_a);
           if (var4 > 0) {
-            var6 = -((kb.field_L.maxAscent + kb.field_L.maxDescent) / 2) + 141;
+            var6 = -((DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent) / 2) + 141;
             for (var7 = 0; 10 > var7; var7++) {
               SoftwareRasterizer.a(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
             }
@@ -57,7 +57,7 @@ class jj {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
-        gk.field_fb = param4;
+        ValidatedTextWidget.field_fb = param4;
         hq.field_r = param0;
         if (param1) {
           return;
@@ -164,7 +164,7 @@ class jj {
 
     final static void a(int param0) {
         r.b(-93);
-        SocketConnector.a(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, h.field_V[param0].field_A, DelegatingCanvas.field_b);
+        SocketConnector.a(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, Checkbox.field_V[param0].field_A, DelegatingCanvas.field_b);
     }
 
     void a(boolean param0) {
@@ -220,16 +220,16 @@ class jj {
             this.field_f[var5].c();
             SoftwareRasterizer.a(0, 0, 128, 128, 0, 48);
           }
-          this.field_i = new Sprite(640, 4 * pd.field_Jb + (kb.field_L.maxAscent + kb.field_L.maxDescent));
+          this.field_i = new Sprite(640, 4 * pd.field_Jb + (DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent));
           this.field_i.c();
           var5Lifetime1 = 320;
-          var6 = this.field_i.field_E - pd.field_Jb * 2 - kb.field_L.maxDescent;
-          kb.field_L.drawCentered(this.field_l, -1 + var5Lifetime1, var6 - 1, 0, -1);
-          kb.field_L.drawCentered(this.field_l, var5Lifetime1 + 1, var6 - 1, 0, -1);
-          kb.field_L.drawCentered(this.field_l, var5Lifetime1 - 1, var6 + 1, 0, -1);
-          kb.field_L.drawCentered(this.field_l, 1 + var5Lifetime1, var6 + 1, 0, -1);
+          var6 = this.field_i.field_E - pd.field_Jb * 2 - DateInputWidget.field_L.maxDescent;
+          DateInputWidget.field_L.drawCentered(this.field_l, -1 + var5Lifetime1, var6 - 1, 0, -1);
+          DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1 + 1, var6 - 1, 0, -1);
+          DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1 - 1, var6 + 1, 0, -1);
+          DateInputWidget.field_L.drawCentered(this.field_l, 1 + var5Lifetime1, var6 + 1, 0, -1);
           SoftwareRasterizer.c(pd.field_Jb, pd.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
-          kb.field_L.drawCentered(this.field_l, var5Lifetime1, var6, 0, -1);
+          DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1, var6, 0, -1);
           ClientException.field_f.a(19692);
           this.field_g = new int[2][];
           for (var7 = 0; this.field_k.length > var7; var7++) {

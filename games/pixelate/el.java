@@ -15,14 +15,14 @@ final class el {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 >= 87) {
-          w.field_q = param1;
+          StatefulTextPainter.field_q = param1;
           da.field_m = param4;
           dk.field_d = param0;
           ab.field_b = param2;
           return;
         }
         field_b = -89;
-        w.field_q = param1;
+        StatefulTextPainter.field_q = param1;
         da.field_m = param4;
         dk.field_d = param0;
         ab.field_b = param2;
@@ -32,7 +32,7 @@ final class el {
         int var3;
         int var3Lifetime1;
         int var3Lifetime2;
-        if (null == jh.field_O) {
+        if (null == AccountChoicePanel.field_O) {
           return -1;
         }
         if (sd.field_K > param2) {
@@ -40,48 +40,48 @@ final class el {
           if (JaggrabDownloader.field_a > param2) {
             return -1;
           }
-          if (JaggrabDownloader.field_a + jh.field_O.field_F <= param2) {
+          if (JaggrabDownloader.field_a + AccountChoicePanel.field_O.field_F <= param2) {
             return -1;
           }
-          if (param0 < bn.field_Q) {
+          if (param0 < DraggableWidget.field_Q) {
             return -1;
           }
-          if (jh.field_O.field_E + bn.field_Q <= param0) {
+          if (AccountChoicePanel.field_O.field_E + DraggableWidget.field_Q <= param0) {
             return -1;
           }
           return 1;
         }
-        if (param2 >= sd.field_K + jh.field_O.field_F) {
+        if (param2 >= sd.field_K + AccountChoicePanel.field_O.field_F) {
           var3Lifetime1 = 98 / ((38 - param1) / 61);
           if (JaggrabDownloader.field_a > param2) {
             return -1;
           }
-          if (JaggrabDownloader.field_a + jh.field_O.field_F <= param2) {
+          if (JaggrabDownloader.field_a + AccountChoicePanel.field_O.field_F <= param2) {
             return -1;
           }
-          if (param0 < bn.field_Q) {
+          if (param0 < DraggableWidget.field_Q) {
             return -1;
           }
-          if (jh.field_O.field_E + bn.field_Q <= param0) {
+          if (AccountChoicePanel.field_O.field_E + DraggableWidget.field_Q <= param0) {
             return -1;
           }
           return 1;
         }
         if (ui.field_b <= param0 &&
-          ui.field_b + jh.field_O.field_E > param0) {
+          ui.field_b + AccountChoicePanel.field_O.field_E > param0) {
           return 0;
         }
         var3Lifetime2 = 98 / ((38 - param1) / 61);
         if (JaggrabDownloader.field_a > param2) {
           return -1;
         }
-        if (JaggrabDownloader.field_a + jh.field_O.field_F <= param2) {
+        if (JaggrabDownloader.field_a + AccountChoicePanel.field_O.field_F <= param2) {
           return -1;
         }
-        if (param0 < bn.field_Q) {
+        if (param0 < DraggableWidget.field_Q) {
           return -1;
         }
-        if (jh.field_O.field_E + bn.field_Q > param0) {
+        if (AccountChoicePanel.field_O.field_E + DraggableWidget.field_Q > param0) {
           return 1;
         }
         return -1;
@@ -183,19 +183,19 @@ final class el {
         int var2;
         var2 = 0;
         var2 = var2 | 1;
-        if (0 == ok.a(tg.field_f, -105, 2)) {
+        if (0 == ok.a(UiTheme.field_f, -105, 2)) {
           var2 = var2 | 2;
         }
-        if (ok.a(tg.field_f, -124, 2) == 0) {
+        if (ok.a(UiTheme.field_f, -124, 2) == 0) {
           var2 = var2 | 8;
         }
         if (param1 != -24) {
           el.a(-13);
         }
-        if (ok.a(tg.field_f, param1 ^ 110, 2) == 0) {
+        if (ok.a(UiTheme.field_f, param1 ^ 110, 2) == 0) {
           var2 = var2 | 4;
         }
-        if (ok.a(tg.field_f, -116, 2) == 0) {
+        if (ok.a(UiTheme.field_f, -116, 2) == 0) {
           var2 = var2 | 16;
         }
         return var2;

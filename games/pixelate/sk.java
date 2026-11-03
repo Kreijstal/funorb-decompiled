@@ -3,7 +3,7 @@
  */
 final class sk {
     static String field_d;
-    static ak field_e;
+    static SceneWidget field_e;
     static dj field_a;
     static String field_b;
     static String field_c;

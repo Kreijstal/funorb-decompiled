@@ -3,17 +3,17 @@
  */
 final class ih {
     static String field_e;
-    static ak field_g;
+    static SceneWidget field_g;
     static int[] field_c;
     static String field_d;
     static String field_b;
     static Sprite[] field_a;
     static int field_f;
 
-    final static uc a(byte param0) {
+    final static TextWidgetPainter a(byte param0) {
         int var1 = 116 % ((3 - param0) / 36);
         if (Js5Transport.field_d == null) {
-          Js5Transport.field_d = new uc(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.maxAscent, -1, 2147483647, true);
+          Js5Transport.field_d = new TextWidgetPainter(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.maxAscent, -1, 2147483647, true);
         }
         return Js5Transport.field_d;
     }
@@ -39,60 +39,60 @@ final class ih {
             return;
           }
           fq.field_o.c(-1);
-          fieldTemp$0 = hn.field_d + 1;
-          hn.field_d = hn.field_d + 1;
+          fieldTemp$0 = DebouncedValidator.field_d + 1;
+          DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
           if (fieldTemp$0 < ce.field_f) {
-            fo.field_t = hn.field_d - 128;
+            fo.field_t = DebouncedValidator.field_d - 128;
             fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
             fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
-            if (jc.field_d) {
+            if (SpriteCheckboxPainter.field_d) {
               return;
             }
-            if (hn.field_d >= ce.field_f - 2) {
+            if (DebouncedValidator.field_d >= ce.field_f - 2) {
               return;
             }
-            hn.field_d = -2 + ce.field_f;
+            DebouncedValidator.field_d = -2 + ce.field_f;
             return;
           }
           rg.field_e = fq.field_o;
-          hn.field_d = 0;
+          DebouncedValidator.field_d = 0;
           fq.field_o = null;
-          fo.field_t = hn.field_d - 128;
+          fo.field_t = DebouncedValidator.field_d - 128;
           fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
           fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
-          if (jc.field_d) {
+          if (SpriteCheckboxPainter.field_d) {
             return;
           }
-          if (hn.field_d >= ce.field_f - 2) {
+          if (DebouncedValidator.field_d >= ce.field_f - 2) {
             return;
           }
-          hn.field_d = -2 + ce.field_f;
+          DebouncedValidator.field_d = -2 + ce.field_f;
           return;
         }
         if (fq.field_o != null) {
           fq.field_o.c(-1);
-          fieldTemp$1 = hn.field_d + 1;
-          hn.field_d = hn.field_d + 1;
+          fieldTemp$1 = DebouncedValidator.field_d + 1;
+          DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
           if (fieldTemp$1 >= ce.field_f) {
             rg.field_e = fq.field_o;
-            hn.field_d = 0;
+            DebouncedValidator.field_d = 0;
             fq.field_o = null;
-            fo.field_t = hn.field_d - 128;
+            fo.field_t = DebouncedValidator.field_d - 128;
             fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
             fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
-            if (!jc.field_d &&
-              hn.field_d < ce.field_f - 2) {
-              hn.field_d = -2 + ce.field_f;
+            if (!SpriteCheckboxPainter.field_d &&
+              DebouncedValidator.field_d < ce.field_f - 2) {
+              DebouncedValidator.field_d = -2 + ce.field_f;
               return;
             }
             return;
           }
-          fo.field_t = hn.field_d - 128;
+          fo.field_t = DebouncedValidator.field_d - 128;
           fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
           fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
-          if (!jc.field_d &&
-            hn.field_d < ce.field_f - 2) {
-            hn.field_d = -2 + ce.field_f;
+          if (!SpriteCheckboxPainter.field_d &&
+            DebouncedValidator.field_d < ce.field_f - 2) {
+            DebouncedValidator.field_d = -2 + ce.field_f;
             return;
           }
         }

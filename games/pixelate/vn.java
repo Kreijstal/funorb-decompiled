@@ -27,10 +27,10 @@ final class vn {
     }
 
     final static void a(int param0, boolean param1, boolean param2, String param3) {
-        uj.j(param0 - 705633292);
+        LobbyPlayer.j(param0 - 705633292);
         wa.field_c.e((byte) 54);
-        nf.field_b = new be(h.field_U, (String) null, to.field_s, param1, param2);
-        ph.field_l = new on(wa.field_c, nf.field_b);
+        nf.field_b = new be(Checkbox.field_U, (String) null, to.field_s, param1, param2);
+        ph.field_l = new LoginDialog(wa.field_c, nf.field_b);
         if (param0 != -20) {
           return;
         }
@@ -114,7 +114,7 @@ final class vn {
     }
 
     final void a(byte param0) {
-        hn.field_b.b(this.field_f, (int)this.field_a);
+        DebouncedValidator.field_b.b(this.field_f, (int)this.field_a);
         if (param0 < 122) {
           field_g = -53;
         }

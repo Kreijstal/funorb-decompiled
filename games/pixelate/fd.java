@@ -7,9 +7,9 @@ final class fd {
     static Sprite field_a;
     static Sprite[] field_c;
 
-    final static ak a(int param0) {
+    final static SceneWidget a(int param0) {
         if (param0 != 0) {
-          return (ak) null;
+          return (SceneWidget) null;
         }
         return jm.field_b.field_Fb;
     }
@@ -46,8 +46,8 @@ final class fd {
             IntrusiveNode.field_c > 0) {
             fieldTemp$9 = IntrusiveNode.field_c - 1;
             IntrusiveNode.field_c = IntrusiveNode.field_c - 1;
-            var2_ref_byte__ = db.field_S[fieldTemp$9];
-            db.field_S[IntrusiveNode.field_c] = null;
+            var2_ref_byte__ = TextHotspotWidget.field_S[fieldTemp$9];
+            TextHotspotWidget.field_S[IntrusiveNode.field_c] = null;
             return var2_ref_byte__;
           }
           if (param1 != 30000) {
@@ -56,12 +56,12 @@ final class fd {
             }
             for (var2 = 0; an.field_c.length > var2; var2++) {
               if (param1 == an.field_c[var2] &&
-                f.field_p[var2] > 0) {
-                dupTemp$10 = f.field_p[var2] - 1;
+                DialWidgetPainter.field_p[var2] > 0) {
+                dupTemp$10 = DialWidgetPainter.field_p[var2] - 1;
                 arrayValue$11 = jd.field_o[var2];
-                f.field_p[var2] = dupTemp$10;
+                DialWidgetPainter.field_p[var2] = dupTemp$10;
                 var3 = arrayValue$11[dupTemp$10];
-                jd.field_o[var2][f.field_p[var2]] = null;
+                jd.field_o[var2][DialWidgetPainter.field_p[var2]] = null;
                 return var3;
               }
             }
@@ -79,12 +79,12 @@ final class fd {
           }
           for (var2Lifetime3 = 0; an.field_c.length > var2Lifetime3; var2Lifetime3++) {
             if (param1 == an.field_c[var2Lifetime3] &&
-              f.field_p[var2Lifetime3] > 0) {
-              dupTemp$12 = f.field_p[var2Lifetime3] - 1;
+              DialWidgetPainter.field_p[var2Lifetime3] > 0) {
+              dupTemp$12 = DialWidgetPainter.field_p[var2Lifetime3] - 1;
               arrayValue$13 = jd.field_o[var2Lifetime3];
-              f.field_p[var2Lifetime3] = dupTemp$12;
+              DialWidgetPainter.field_p[var2Lifetime3] = dupTemp$12;
               var3Lifetime3 = arrayValue$13[dupTemp$12];
-              jd.field_o[var2Lifetime3][f.field_p[var2Lifetime3]] = null;
+              jd.field_o[var2Lifetime3][DialWidgetPainter.field_p[var2Lifetime3]] = null;
               return var3Lifetime3;
             }
           }
@@ -101,8 +101,8 @@ final class fd {
           IntrusiveNode.field_c > 0) {
           fieldTemp$2 = IntrusiveNode.field_c - 1;
           IntrusiveNode.field_c = IntrusiveNode.field_c - 1;
-          var2_ref_byte__Lifetime2 = db.field_S[fieldTemp$2];
-          db.field_S[IntrusiveNode.field_c] = null;
+          var2_ref_byte__Lifetime2 = TextHotspotWidget.field_S[fieldTemp$2];
+          TextHotspotWidget.field_S[IntrusiveNode.field_c] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param1 != 30000) {
@@ -111,12 +111,12 @@ final class fd {
           }
           for (var2Lifetime1 = 0; an.field_c.length > var2Lifetime1; var2Lifetime1++) {
             if (param1 == an.field_c[var2Lifetime1] &&
-              f.field_p[var2Lifetime1] > 0) {
-              dupTemp$3 = f.field_p[var2Lifetime1] - 1;
+              DialWidgetPainter.field_p[var2Lifetime1] > 0) {
+              dupTemp$3 = DialWidgetPainter.field_p[var2Lifetime1] - 1;
               arrayValue$4 = jd.field_o[var2Lifetime1];
-              f.field_p[var2Lifetime1] = dupTemp$3;
+              DialWidgetPainter.field_p[var2Lifetime1] = dupTemp$3;
               var3Lifetime1 = arrayValue$4[dupTemp$3];
-              jd.field_o[var2Lifetime1][f.field_p[var2Lifetime1]] = null;
+              jd.field_o[var2Lifetime1][DialWidgetPainter.field_p[var2Lifetime1]] = null;
               return var3Lifetime1;
             }
           }
@@ -134,12 +134,12 @@ final class fd {
         }
         for (var2Lifetime2 = 0; an.field_c.length > var2Lifetime2; var2Lifetime2++) {
           if (param1 == an.field_c[var2Lifetime2] &&
-            f.field_p[var2Lifetime2] > 0) {
-            dupTemp$5 = f.field_p[var2Lifetime2] - 1;
+            DialWidgetPainter.field_p[var2Lifetime2] > 0) {
+            dupTemp$5 = DialWidgetPainter.field_p[var2Lifetime2] - 1;
             arrayValue$6 = jd.field_o[var2Lifetime2];
-            f.field_p[var2Lifetime2] = dupTemp$5;
+            DialWidgetPainter.field_p[var2Lifetime2] = dupTemp$5;
             var3Lifetime2 = arrayValue$6[dupTemp$5];
-            jd.field_o[var2Lifetime2][f.field_p[var2Lifetime2]] = null;
+            jd.field_o[var2Lifetime2][DialWidgetPainter.field_p[var2Lifetime2]] = null;
             return var3Lifetime2;
           }
         }

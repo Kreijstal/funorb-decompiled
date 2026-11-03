@@ -244,7 +244,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.glyphAdvances[pf.a((byte) -118, param0) & 255];
+        return this.glyphAdvances[MenuInputState.a((byte) -118, param0) & 255];
     }
 
     private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
@@ -582,7 +582,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(pf.a((byte) -118, (char) var7) & 255);
+              var7 = (char)(MenuInputState.a((byte) -118, (char) var7) & 255);
               var4 = var4 + this.glyphAdvances[var7];
               if (this.pairKerning != null &&
                 var3 != 0) {
@@ -772,7 +772,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_B.append((char) var14);
-                var14 = (char)(pf.a((byte) -118, (char) var14) & 255);
+                var14 = (char)(MenuInputState.a((byte) -118, (char) var14) & 255);
                 var4 = var4 + this.glyphAdvances[var14];
                 if (this.pairKerning != null &&
                   var10 != 0) {
@@ -918,7 +918,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(pf.a((byte) -118, (char) var8) & 255);
+              var8 = (char)(MenuInputState.a((byte) -118, (char) var8) & 255);
               if (this.pairKerning != null &&
                 var5 != 0) {
                 param1 = param1 + this.pairKerning[(var5 << 8) + var8];

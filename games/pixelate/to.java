@@ -4,7 +4,7 @@
 final class to extends de {
     static AudioOutput field_t;
     static boolean field_s;
-    static vk field_r;
+    static AccountRequestDialog field_r;
     static MidiPcmStream field_q;
     static String field_p;
     static String field_o;
@@ -27,7 +27,7 @@ final class to extends de {
     }
 
     final void a(int param0) {
-        gj.field_W[0].b(0, 45);
+        NumericDateInputWidget.field_W[0].b(0, 45);
         if (param0 != 11) {
           return;
         }

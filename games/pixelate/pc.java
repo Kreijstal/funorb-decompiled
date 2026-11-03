@@ -74,13 +74,13 @@ final class pc extends PacketBuffer {
     }
 
     final static im a(int param0, boolean param1, byte param2) {
-        gp stackIn_4_0 = null;
+        ScrollContainer stackIn_4_0 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_5_2 = false;
         im stackIn_18_0 = null;
-        ak stackIn_45_0 = null;
+        SceneWidget stackIn_45_0 = null;
         String stackIn_46_1 = null;
-        ak stackIn_49_0 = null;
+        SceneWidget stackIn_49_0 = null;
         String stackIn_50_1 = null;
         int stackIn_54_0 = 0;
         Object stackIn_95_0 = null;
@@ -114,13 +114,13 @@ final class pc extends PacketBuffer {
           stackIn_4_1 = param1;
           stackIn_5_2 = (bj.field_d == ma.field_z.field_Gb);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((gp) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
-          var4 = ma.field_z.field_Fb.field_L;
+          var3_int = ((ScrollContainer) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
+          var4 = ma.field_z.field_Fb.children;
           var5 = null;
-          if (gk.field_db != 2) {
+          if (ValidatedTextWidget.field_db != 2) {
             wa.field_f.field_rb = false;
-            ak.field_E.field_cb = wd.field_b;
-            if (gk.field_db != 1) {
+            SceneWidget.field_E.field_cb = wd.field_b;
+            if (ValidatedTextWidget.field_db != 1) {
               ma.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
               if (var19 != 0) {
                 ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
@@ -133,7 +133,7 @@ final class pc extends PacketBuffer {
           }
           if (decompiledFrameRemainder0) {
             wa.field_f.field_rb = true;
-            ak.field_E.field_cb = sd.a(ke.field_e, 78, new String[]{qp.field_L});
+            SceneWidget.field_E.field_cb = sd.a(ke.field_e, 78, new String[]{LabeledField.field_L});
             ma.field_z.field_Gb.field_Ib.field_cb = null;
             var6 = null;
             var7 = (im) (var4.c(1504642273));
@@ -144,21 +144,21 @@ final class pc extends PacketBuffer {
                 stackIn_95_0 = stackOut_17_0;
                 stackIn_18_0 = stackOut_17_0;
                 if (var19 == 0) {
-                  if (stackIn_18_0.field_L == null) {
-                    var7.field_Pb = new ak(0L, ak.field_T);
+                  if (stackIn_18_0.children == null) {
+                    var7.field_Pb = new SceneWidget(0L, SceneWidget.field_T);
                     var7.a(var7.field_Pb, (byte) 26);
-                    var7.field_Eb = new ak(0L, of.field_i);
+                    var7.field_Eb = new SceneWidget(0L, of.field_i);
                     var7.a(var7.field_Eb, (byte) 26);
-                    var7.field_Ob = new ak(0L, ak.field_T);
+                    var7.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
                     var7.a(var7.field_Ob, (byte) 26);
-                    var7.field_Eb.field_Bb = 2;
+                    var7.field_Eb.horizontalAlignment = 2;
                     var7.h(-257);
                     var8 = 1;
                   }
                   var7.field_K = ma.field_z.field_Fb.field_K;
                   var9 = 0;
                   if (null != var7.field_Nb) {
-                    if (var7.field_Nb == qp.field_L) {
+                    if (var7.field_Nb == LabeledField.field_L) {
                       var11 = 6750054;
                       var10 = 52224;
                     } else {
@@ -193,7 +193,7 @@ final class pc extends PacketBuffer {
                   }
                   stackIn_45_0 = var7.field_Pb;
                   if (var14 > 0) {
-                    stackIn_46_1 = BitmapFont.a(var7.field_Pb.field_Db, var7.field_Fb, var14);
+                    stackIn_46_1 = BitmapFont.a(var7.field_Pb.font, var7.field_Fb, var14);
                   } else {
                     stackIn_46_1 = var7.field_Fb;
                   }
@@ -211,10 +211,10 @@ final class pc extends PacketBuffer {
                   var15 = stackIn_54_0;
                   var9 = var9 + fq.field_q;
                   if (var3_int == 0) {
-                    var7.field_Z = -var7.field_nb + var9;
+                    var7.pendingHeightDelta = -var7.height + var9;
                   }
                   if (var8 != 0) {
-                    ma.field_z.field_Fb.a(var7, 2, -1, (ak) (var6));
+                    ma.field_z.field_Fb.positionAfter(var7, 2, -1, (SceneWidget) (var6));
                   }
                   var6 = var7;
                   if (var7.field_Ob != null &&
@@ -248,14 +248,14 @@ final class pc extends PacketBuffer {
               } else {
                 stackIn_95_0 = ma.field_z.field_Ib;
               }
-              if (((ak) (stackIn_95_0)).field_P != 0) {
-                he.field_f = new ve(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.field_gb, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.field_nb, jj.field_j, SoundCache.field_c, mg.field_h, mg.field_h);
+              if (((SceneWidget) (stackIn_95_0)).field_P != 0) {
+                he.field_f = new AccountNamePrompt(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.screenY, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.height, jj.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
                 il.field_e = 0;
               }
               if (ma.field_z.field_Hb.field_P == 0) {
                 break;
               }
-              he.field_f = new ve(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.field_gb, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.field_nb, hp.field_Fb, SoundCache.field_c, mg.field_h, mg.field_h);
+              he.field_f = new AccountNamePrompt(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.screenY, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.height, hp.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
               il.field_e = 1;
               break;
             }
@@ -326,7 +326,7 @@ final class pc extends PacketBuffer {
             field_q = -19;
           }
           param2 = ub.a(param2, param1 ^ -47, "", '_');
-          var3 = bc.b(0, param0);
+          var3 = EmailValidator.b(0, param0);
           stackIn_10_0 = (param2.indexOf(param0) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ae {
-    static gp field_c;
+    static ScrollContainer field_c;
     int field_h;
     static int field_a;
     int field_i;
-    static ak field_f;
+    static SceneWidget field_f;
     static String field_j;
     static int field_b;
     int field_g;
     static int field_d;
-    static ak field_e;
+    static SceneWidget field_e;
 
     final static void a(int param0, int param1, int param2) {
         aa.field_f.g(58, 15514);
@@ -277,7 +277,7 @@ final class ae {
                 ae.a((byte) -4, (java.applet.Applet) null, (String) null);
               }
               var3 = lg.a(false, param1, var3);
-              ia.a(true, var3.toString(), -72, param1);
+              LinkButtonPainter.a(true, var3.toString(), -72, param1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;

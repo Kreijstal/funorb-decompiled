@@ -3,7 +3,7 @@
  */
 final class an {
     static String field_d;
-    static ak field_a;
+    static SceneWidget field_a;
     static int[] field_c;
     static fl field_e;
     static kk field_b;

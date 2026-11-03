@@ -3,7 +3,7 @@
  */
 final class aj extends IntrusiveNode {
     int[] field_r;
-    static gp field_k;
+    static ScrollContainer field_k;
     static long field_m;
     static int field_t;
     int[] field_u;
@@ -70,11 +70,11 @@ final class aj extends IntrusiveNode {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          nk.a(ProxySocketConnector.field_k, c.field_Y, ug.field_s, sc.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, mg.field_h, l.field_q);
-          h.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
-          rg.field_a[1] = a.field_J;
+          nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, sc.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
+          Checkbox.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
+          rg.field_a[1] = NameSuggestionsPanel.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);
-          rg.field_a[0] = kc.field_m;
+          rg.field_a[0] = EmailConfirmationValidator.field_m;
           rg.field_a[2] = wd.field_e;
           ck.a(65793, ig.field_d, param0);
         } catch (RuntimeException runtimeException) {
@@ -87,20 +87,20 @@ final class aj extends IntrusiveNode {
           byte[] var2 = (byte[]) null;
           aj.a(false, (byte[]) null, -36);
           if (!ik.field_a) {
-            return jg.a((byte) 78) ? true : false;
+            return ArrayWidgetContainer.a((byte) 78) ? true : false;
           }
-          if (!db.field_U) {
-            return jg.a((byte) 78) ? true : false;
+          if (!TextHotspotWidget.field_U) {
+            return ArrayWidgetContainer.a((byte) 78) ? true : false;
           }
           return true;
         }
         if (ik.field_a) {
-          if (db.field_U) {
+          if (TextHotspotWidget.field_U) {
             return true;
           }
-          return jg.a((byte) 78) ? true : false;
+          return ArrayWidgetContainer.a((byte) 78) ? true : false;
         }
-        if (!jg.a((byte) 78)) {
+        if (!ArrayWidgetContainer.a((byte) 78)) {
           return false;
         }
         return true;

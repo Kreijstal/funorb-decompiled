@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends ie {
+final class sd extends SingleChildContainer {
     int field_O;
     static int[] field_Q;
     static String field_J;
-    static ak field_P;
+    static SceneWidget field_P;
     static int field_K;
     static boolean field_N;
     static String field_M;
@@ -20,12 +20,12 @@ final class sd extends ie {
         field_P = null;
     }
 
-    sd(ng param0) {
-        super(param0.field_z, param0.field_p, param0.field_E, param0.field_C, (eb) null, (fn) null);
+    sd(UiComponent param0) {
+        super(param0.field_z, param0.field_p, param0.field_E, param0.field_C, (WidgetPainter) null, (UiListener) null);
         try {
           param0.a(this.field_E, (byte) 89, 0, 0, this.field_C);
           this.field_O = 256;
-          this.field_H = param0;
+          this.child = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -35,21 +35,21 @@ final class sd extends ie {
         if (param1 != 0) {
           return;
         }
-        if (null == this.field_H) {
+        if (null == this.child) {
           return;
         }
         if (this.field_O == 0) {
           return;
         }
         if (256 == this.field_O) {
-          this.field_H.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 122);
+          this.child.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 122);
           return;
         }
-        Sprite var7 = new Sprite(this.field_H.field_E, this.field_H.field_C);
-        h.a(-111, var7);
+        Sprite var7 = new Sprite(this.child.field_E, this.child.field_C);
+        Checkbox.a(-111, var7);
         int var6 = -5 % ((70 - param3) / 49);
-        this.field_H.a(0, param1, 0, (byte) -79);
-        ia.a((byte) 92);
+        this.child.a(0, param1, 0, (byte) -79);
+        LinkButtonPainter.a((byte) 92);
         var7.a(this.field_z + param2, this.field_p + param0, this.field_O);
     }
 
@@ -205,7 +205,7 @@ final class sd extends ie {
     }
 
     public sd() {
-        super(0, 0, 0, 0, (eb) null, (fn) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (UiListener) null);
         this.field_O = 256;
     }
 
@@ -308,7 +308,7 @@ final class sd extends ie {
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var18.a(bn.a((int) param0, -95));
+                  dupTemp$1 = var18.a(DraggableWidget.a((int) param0, -95));
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;

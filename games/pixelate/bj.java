@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class bj {
-    static gp field_d;
+    static ScrollContainer field_d;
     static int field_a;
     static int[] field_b;
     static MusicTrack[] field_c;
@@ -12,7 +12,7 @@ final class bj {
     final static void a(byte param0) {
         if (un.field_l) {
           SoftwareRasterizer.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
-          bn.field_I.a(false, 0);
+          DraggableWidget.field_I.a(false, 0);
         }
         if (param0 == 1) {
           return;

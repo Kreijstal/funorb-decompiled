@@ -46,19 +46,19 @@ final class IntrusiveDequeCursor {
     final static void c(int param0) {
         int stackIn_23_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        uj var1 = null;
-        eq var1_ref = null;
+        LobbyPlayer var1 = null;
+        LobbyGame var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         String var3 = null;
-        uj var1Lifetime1;
+        LobbyPlayer var1Lifetime1;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0 != -1) {
             var3 = (String) null;
             IntrusiveDequeCursor.a((String) null, -43);
           }
-          var1 = (uj) (ImageProducerRasterBuffer.field_n.c(1504642273));
+          var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var1 != null) {
             if (var1.field_Tb > 0) {
               var1.field_Tb = var1.field_Tb - 1;
@@ -69,9 +69,9 @@ final class IntrusiveDequeCursor {
                 }
               }
             }
-            var1 = (uj) (ImageProducerRasterBuffer.field_n.last(param0 ^ -1504642274));
+            var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.last(param0 ^ -1504642274));
           }
-          var1_ref = (eq) (nk.field_a.c(param0 ^ -1504642274));
+          var1_ref = (LobbyGame) (nk.field_a.c(param0 ^ -1504642274));
           while (var1_ref != null) {
             if (var1_ref.field_Rb > 0) {
               var1_ref.field_Rb = var1_ref.field_Rb - 1;
@@ -82,15 +82,15 @@ final class IntrusiveDequeCursor {
                 }
               }
             }
-            var1_ref = (eq) (nk.field_a.last(1504642273));
+            var1_ref = (LobbyGame) (nk.field_a.last(1504642273));
           }
-          var1Lifetime1 = (uj) (wi.field_a.c(1504642273));
+          var1Lifetime1 = (LobbyPlayer) (wi.field_a.c(1504642273));
           while (var1Lifetime1 != null) {
             stackIn_23_0 = -1;
             if (stackIn_23_0 > ~var1Lifetime1.field_Tb) {
               var1Lifetime1.field_Tb = var1Lifetime1.field_Tb - 1;
               if (var1Lifetime1.field_Tb != 0) {
-                var1Lifetime1 = (uj) (wi.field_a.last(1504642273));
+                var1Lifetime1 = (LobbyPlayer) (wi.field_a.last(1504642273));
                 continue;
               }
               var1Lifetime1.field_Eb = 0;
@@ -98,7 +98,7 @@ final class IntrusiveDequeCursor {
                 var1Lifetime1.c(2779);
               }
             }
-            var1Lifetime1 = (uj) (wi.field_a.last(1504642273));
+            var1Lifetime1 = (LobbyPlayer) (wi.field_a.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -272,10 +272,10 @@ final class IntrusiveDequeCursor {
         fc.field_e = MidiPcmStream.field_t;
         if (og.field_l) {
           og.field_l = false;
-          qo.field_r = null;
+          MatchingTextValidator.field_r = null;
           ro.field_e = null;
         }
-        ec.field_t = param0;
+        NameAvailabilityValidator.field_t = param0;
         if (ce.field_a) {
           wh.field_p = null;
           nj.field_h = new IntrusiveDeque();
@@ -284,7 +284,7 @@ final class IntrusiveDequeCursor {
           de.field_n = 0;
         }
         if (mi.field_o) {
-          ak.i(param0 ^ 0);
+          SceneWidget.i(param0 ^ 0);
           ArchiveIndex.a(23949);
           bd.a((byte) -1);
           mi.field_o = false;

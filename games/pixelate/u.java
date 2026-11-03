@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class u {
-    static ak field_l;
+    static SceneWidget field_l;
     static wm field_d;
     static volatile boolean field_j;
     static Sprite field_k;
@@ -13,7 +13,7 @@ final class u {
     private le field_i;
     static String field_g;
     static int field_h;
-    static ak field_a;
+    static SceneWidget field_a;
     static Sprite field_f;
     static String field_n;
 
@@ -28,14 +28,14 @@ final class u {
         }
     }
 
-    final kp a(int param0, int param1) {
-        kp var3;
+    final QuickChatPhraseDefinition a(int param0, int param1) {
+        QuickChatPhraseDefinition var3;
         byte[] var4;
-        kp var3Lifetime1;
+        QuickChatPhraseDefinition var3Lifetime1;
         if (param0 != -21209) {
-          return (kp) null;
+          return (QuickChatPhraseDefinition) null;
         }
-        var3 = (kp) (this.field_i.a((long)param1, 0));
+        var3 = (QuickChatPhraseDefinition) (this.field_i.a((long)param1, 0));
         if (var3 != null) {
           return var3;
         }
@@ -44,9 +44,9 @@ final class u {
         } else {
           var4 = this.field_c.a(1, param1, true);
         }
-        var3Lifetime1 = new kp();
+        var3Lifetime1 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var3Lifetime1.a(param0 ^ 21212, new PacketBuffer(var4));
+          var3Lifetime1.decode(param0 ^ 21212, new PacketBuffer(var4));
         }
         if (32768 <= param1) {
           var3Lifetime1.g(126);

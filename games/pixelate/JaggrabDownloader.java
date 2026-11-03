@@ -7,7 +7,7 @@ final class JaggrabDownloader implements Runnable {
     private java.net.URL field_b;
     private int field_n;
     private PlatformTask field_j;
-    static tg field_c;
+    static UiTheme field_c;
     static String field_g;
     private PlatformTask field_e;
     static String field_k;
@@ -26,18 +26,18 @@ final class JaggrabDownloader implements Runnable {
         if (param0 > -112) {
           field_f = (String) null;
           IndexedSpriteState.field_l = param2;
-          qo.field_s = param3;
+          MatchingTextValidator.field_s = param3;
           return;
         }
         IndexedSpriteState.field_l = param2;
-        qo.field_s = param3;
+        MatchingTextValidator.field_s = param3;
     }
 
-    final static uj a(long param0, int param1) {
+    final static LobbyPlayer a(long param0, int param1) {
         if (param1 != 14428) {
-          return (uj) null;
+          return (LobbyPlayer) null;
         }
-        return (uj) (SocketConnector.field_f.a(-11434, param0));
+        return (LobbyPlayer) (SocketConnector.field_f.a(-11434, param0));
     }
 
     protected final void finalize() {
@@ -138,7 +138,7 @@ final class JaggrabDownloader implements Runnable {
                 var3 = var4.getOutputStream();
                 var3.write(17);
                 var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
-                var3.write(gk.b(var5, 353));
+                var3.write(ValidatedTextWidget.b(var5, 353));
                 this.field_o = new DataInputStream(var4.getInputStream());
               }
               this.field_l.position = 0;

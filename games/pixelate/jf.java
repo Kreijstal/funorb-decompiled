@@ -49,8 +49,8 @@ final class jf {
                 MusicCrossfadeStream.field_o.payload[var5_int] = var4_ref_ug.field_r[var5_int];
               }
               oj.field_G = gb.field_d;
-              gb.field_d = tm.field_U;
-              tm.field_U = mn.field_e;
+              gb.field_d = MarkerSlider.field_U;
+              MarkerSlider.field_U = mn.field_e;
               mn.field_e = var4_ref_ug.field_m;
               return true;
             }
@@ -70,8 +70,8 @@ final class jf {
             }
             if (0 == ij.field_s) {
               oj.field_G = gb.field_d;
-              gb.field_d = tm.field_U;
-              tm.field_U = mn.field_e;
+              gb.field_d = MarkerSlider.field_U;
+              MarkerSlider.field_U = mn.field_e;
               mn.field_e = AudioService.field_c;
               AudioService.field_c = -1;
               return true;
@@ -127,7 +127,7 @@ final class jf {
             stackIn_3_0 = qn.field_n;
             return stackIn_3_0;
           }
-          if (gk.field_db != 2) {
+          if (ValidatedTextWidget.field_db != 2) {
             stackIn_6_0 = ai.field_C;
             return stackIn_6_0;
           }
@@ -139,16 +139,16 @@ final class jf {
             stackIn_13_0 = sd.a(BufferedSocket.field_b, 34, new String[]{param0});
             return stackIn_13_0;
           }
-          if (f.field_q >= 100 &&
+          if (DialWidgetPainter.field_q >= 100 &&
             BufferedRandomAccessFile.field_j <= 0) {
-            stackIn_18_0 = tm.field_Q;
+            stackIn_18_0 = MarkerSlider.field_Q;
             return stackIn_18_0;
           }
           if (param2 < 57) {
             field_c = (mj) null;
           }
-          if (f.field_q >= 200) {
-            stackIn_24_0 = tm.field_Q;
+          if (DialWidgetPainter.field_q >= 200) {
+            stackIn_24_0 = MarkerSlider.field_Q;
             return stackIn_24_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param0)) {

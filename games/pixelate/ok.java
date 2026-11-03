@@ -36,7 +36,7 @@ final class ok {
           if (0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (oa.a(param2, 1890)) {
+          if (DateOfBirthValidator.a(param2, 1890)) {
             stackIn_6_0 = (int)((long)param2 * (4294967295L & (long)param0.nextInt()) >> 32);
             return stackIn_6_0;
           }

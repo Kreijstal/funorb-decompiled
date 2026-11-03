@@ -229,7 +229,7 @@ final class AudioService implements Runnable {
         if (param0 != 13867) {
           return (java.applet.Applet) null;
         }
-        return (java.applet.Applet) ((Object) ne.field_I);
+        return (java.applet.Applet) ((Object) DropTargetWidget.field_I);
     }
 
     final static void b(int param0) {
@@ -272,7 +272,7 @@ final class AudioService implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          jo.a(1, (String) null, (Throwable) ((Object) exception));
+          CheckboxPainter.a(1, (String) null, (Throwable) ((Object) exception));
         } finally {
           this.field_f = false;
         }

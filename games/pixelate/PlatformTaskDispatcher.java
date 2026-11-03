@@ -385,7 +385,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var8.field_e = qe.a((String) (var8.field_g), var8.field_a, (byte) 126).connect(116);
+                      var8.field_e = QuickChatCategory.a((String) (var8.field_g), var8.field_a, (byte) 126).connect(116);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_uf = (ProxyAuthenticationException) (Object) decompiledCaughtException;

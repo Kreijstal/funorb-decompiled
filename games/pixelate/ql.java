@@ -4,7 +4,7 @@
 final class ql extends jj {
     static int field_m;
     static int field_o;
-    static ak field_n;
+    static SceneWidget field_n;
 
     final static int g(int param0) {
         if (param0 != 13428) {
@@ -15,7 +15,7 @@ final class ql extends jj {
     }
 
     final static void b(boolean param0) {
-        h.field_X = bi.b(4);
+        Checkbox.field_X = bi.b(4);
         wa.field_c = new kn();
         rd.a(true, -17130, true);
         if (param0) {
@@ -25,7 +25,7 @@ final class ql extends jj {
 
     public static void f(int param0) {
         if (param0 != 0) {
-          field_n = (ak) null;
+          field_n = (SceneWidget) null;
           field_n = null;
           return;
         }
@@ -64,7 +64,7 @@ final class ql extends jj {
         String var3 = null;
         long var4 = 0L;
         try {
-          c.field_T = true;
+          EditableTextWidget.field_T = true;
           var2 = "tuhstatbut";
           if (param1 != -7624) {
             field_o = 58;

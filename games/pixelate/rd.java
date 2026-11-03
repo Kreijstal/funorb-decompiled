@@ -168,7 +168,7 @@ final class rd extends IntrusiveNode {
               var2_int = param0 - MusicCrossfadeStream.field_o.position;
             }
             NodeHashTableIterator.field_e.a(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
-            jc.field_c = hm.a(64);
+            SpriteCheckboxPainter.field_c = hm.a(64);
             MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + var2_int;
             if (param0 > MusicCrossfadeStream.field_o.position) {
               return false;

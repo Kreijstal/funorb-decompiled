@@ -3,7 +3,7 @@
  */
 final class dc {
     static byte[] field_b;
-    static ak field_a;
+    static SceneWidget field_a;
 
     final static void a(byte param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         PlatformTask var3 = null;
@@ -62,7 +62,7 @@ final class dc {
         if (param0 == -1) {
           return;
         }
-        field_a = (ak) null;
+        field_a = (SceneWidget) null;
     }
 
     static {

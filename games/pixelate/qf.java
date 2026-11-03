@@ -3,7 +3,7 @@
  */
 final class qf {
     static int field_b;
-    static bn field_a;
+    static DraggableWidget field_a;
     static Sprite field_c;
     static String field_d;
 

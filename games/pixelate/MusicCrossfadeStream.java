@@ -28,7 +28,7 @@ final class MusicCrossfadeStream extends PcmStream {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-          gj.a("", param0, true);
+          NumericDateInputWidget.a("", param0, true);
           if (param1 != 22770) {
             MusicCrossfadeStream.b((byte) -76);
           }

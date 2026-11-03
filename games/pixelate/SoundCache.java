@@ -5,7 +5,7 @@ import java.util.*;
 
 final class SoundCache {
     static String field_e;
-    static ak field_c;
+    static SceneWidget field_c;
     static String field_j;
     private NodeHashTable field_g;
     private ResourceArchive field_i;
@@ -243,7 +243,7 @@ final class SoundCache {
 
     final static void a(boolean param0) {
         if (!param0) {
-          field_c = (ak) null;
+          field_c = (SceneWidget) null;
           if (!un.field_l) {
             return;
           }

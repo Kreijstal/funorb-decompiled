@@ -105,7 +105,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            jo.a(1, (String) null, (Throwable) ((Object) var1_ref));
+            CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

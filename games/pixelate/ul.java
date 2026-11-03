@@ -4,7 +4,7 @@
 final class ul extends bg {
     static String field_n;
     private int field_o;
-    static ak field_p;
+    static SceneWidget field_p;
     static int field_q;
     static String field_m;
     private int field_r;
@@ -15,7 +15,7 @@ final class ul extends bg {
           this.field_s = this.field_s + (!param1 ? 50 : -50);
           return;
         }
-        field_p = (ak) null;
+        field_p = (SceneWidget) null;
         this.field_s = this.field_s + (!param1 ? 50 : -50);
     }
 
@@ -75,7 +75,7 @@ final class ul extends bg {
         var5 = Pixelate.field_H ? 1 : 0;
         super.a((byte) 21);
         stackIn_3_0 = param1;
-        stackIn_4_1 = (pf.field_e) && (gf.field_b);
+        stackIn_4_1 = (MenuInputState.field_e) && (gf.field_b);
         param1 = stackIn_3_0 | stackIn_4_1;
         if (this.field_s > this.field_r) {
           this.field_s = this.field_r;

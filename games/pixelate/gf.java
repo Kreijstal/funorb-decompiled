@@ -33,8 +33,8 @@ abstract class gf {
         }
         try {
           kd.field_a = param0;
-          h.field_U = param3;
-          ko.a(param1, rl.field_e, -26027);
+          Checkbox.field_U = param3;
+          LoadingProgressDialog.a(param1, rl.field_e, -26027);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

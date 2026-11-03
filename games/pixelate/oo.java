@@ -20,10 +20,10 @@ final class oo {
         field_e = (int[][]) null;
     }
 
-    final static void a(int param0, qe param1) {
+    final static void a(int param0, QuickChatCategory param1) {
         try {
           param1.field_t = new char[]{(char)63};
-          param1.field_D = new int[]{param0};
+          param1.phraseIds = new int[]{param0};
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "oo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

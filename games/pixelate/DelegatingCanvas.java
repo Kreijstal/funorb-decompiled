@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DelegatingCanvas extends java.awt.Canvas {
-    static ak[] field_e;
+    static SceneWidget[] field_e;
     private java.awt.Component field_c;
     static String field_f;
     static int field_b;
-    static ak field_h;
+    static SceneWidget field_h;
     static String field_g;
     static String field_a;
     static BinaryBitmapFont field_d;
@@ -41,10 +41,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     final static int a(byte param0) {
         if (param0 < -61) {
-          return ib.field_e + ((gh.field_v << 2) + (io.field_e << 4));
+          return ib.field_e + ((GradientOutlineTextPainter.field_v << 2) + (io.field_e << 4));
         }
         DelegatingCanvas.a(54);
-        return ib.field_e + ((gh.field_v << 2) + (io.field_e << 4));
+        return ib.field_e + ((GradientOutlineTextPainter.field_v << 2) + (io.field_e << 4));
     }
 
     DelegatingCanvas(java.awt.Component param0) {

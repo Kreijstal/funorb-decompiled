@@ -14,7 +14,7 @@ final class BoundedRandomAccessFile {
 
     final static String a(ResourceArchive param0, String param1, String param2, int param3, int param4) {
         RuntimeException var5 = null;
-        qe var6 = null;
+        QuickChatCategory var6 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -31,8 +31,8 @@ final class BoundedRandomAccessFile {
             return stackIn_3_0;
           }
           if (param3 != -22165) {
-            var6 = (qe) null;
-            BoundedRandomAccessFile.a((ak) null, (ak) null, 33, (ak) null, (qe) null);
+            var6 = (QuickChatCategory) null;
+            BoundedRandomAccessFile.a((SceneWidget) null, (SceneWidget) null, 33, (SceneWidget) null, (QuickChatCategory) null);
           }
           stackIn_7_0 = param2 + " - " + param0.a(param4, (byte) -78) + "%";
           return stackIn_7_0;
@@ -127,7 +127,7 @@ final class BoundedRandomAccessFile {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + kp.field_v.decompress(-1, var3_int, param2.payload, 0, param2.position, var4);
+            param2.position = param2.position + QuickChatPhraseDefinition.field_v.decompress(-1, var3_int, param2.payload, 0, param2.position, var4);
             var5 = ui.a(true, var4, 0, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;
@@ -237,11 +237,11 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static te a(ak param0, ak param1, int param2, ak param3, qe param4) {
+    final static QuickChatMenu a(SceneWidget param0, SceneWidget param1, int param2, SceneWidget param3, QuickChatCategory param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        te stackIn_29_0 = null;
+        QuickChatMenu stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -259,12 +259,12 @@ final class BoundedRandomAccessFile {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        te[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
-        qe var13_ref_qe = null;
+        QuickChatCategory var13_ref_qe = null;
         int var13 = 0;
         int var15 = 0;
-        kp var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;
@@ -276,14 +276,14 @@ final class BoundedRandomAccessFile {
           if (param4 == null) {
             return null;
           }
-          if (null == param4.field_z) {
+          if (null == param4.subcategoryIds) {
             stackIn_7_0 = 0;
           } else {
-            stackIn_7_0 = param4.field_z.length;
+            stackIn_7_0 = param4.subcategoryIds.length;
           }
           var5_int = stackIn_7_0;
-          if (param4.field_D != null) {
-            stackIn_10_0 = param4.field_D.length;
+          if (param4.phraseIds != null) {
+            stackIn_10_0 = param4.phraseIds.length;
           } else {
             stackIn_10_0 = 0;
           }
@@ -299,37 +299,37 @@ final class BoundedRandomAccessFile {
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
-          var11 = new te[var7];
-          if (param4.field_z != null) {
-            for (var12 = 0; param4.field_z.length > var12; var12++) {
-              var13_ref_qe = w.field_y.a(param4.field_z[var12], false);
+          var11 = new QuickChatMenu[var7];
+          if (param4.subcategoryIds != null) {
+            for (var12 = 0; param4.subcategoryIds.length > var12; var12++) {
+              var13_ref_qe = StatefulTextPainter.field_y.a(param4.subcategoryIds[var12], false);
               var8[var12] = var13_ref_qe.field_C;
               var9[var12] = param4.field_x[var12];
               var11[var12] = BoundedRandomAccessFile.a(param0, param1, -113, param3, var13_ref_qe);
             }
           }
-          if (null != param4.field_D) {
+          if (null != param4.phraseIds) {
             var12Lifetime1 = var5_int;
             var13 = 49;
-            for (var14 = 0; param4.field_D.length > var14; var14++) {
-              var15 = param4.field_D[var14];
+            for (var14 = 0; param4.phraseIds.length > var14; var14++) {
+              var15 = param4.phraseIds[var14];
               if (var15 == -1) {
                 var8[var12Lifetime1 + var14] = ui.field_g;
                 var9[var14 + var12Lifetime1] = param4.field_t[var14];
-                var10[var12Lifetime1 + var14] = param4.field_D[var14];
+                var10[var12Lifetime1 + var14] = param4.phraseIds[var14];
               } else {
                 var16 = jd.field_k.a(-21209, var15);
-                var8[var14 + var12Lifetime1] = var16.a((byte) -54);
+                var8[var14 + var12Lifetime1] = var16.getPreview((byte) -54);
                 var9[var12Lifetime1 + var14] = param4.field_t[var14];
                 if (0 >= var9[var14 + var12Lifetime1]) {
                   var13 = (char)(var13 + 1);
                   var9[var12Lifetime1 + var14] = (char)var13;
                 }
-                var10[var12Lifetime1 + var14] = param4.field_D[var14];
+                var10[var12Lifetime1 + var14] = param4.phraseIds[var14];
               }
             }
           }
-          stackIn_29_0 = new te(0L, param1, param3, param0, var11, var20, var8, var21);
+          stackIn_29_0 = new QuickChatMenu(0L, param1, param3, param0, var11, var20, var8, var21);
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

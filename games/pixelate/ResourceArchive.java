@@ -4,15 +4,15 @@
 final class ResourceArchive {
     private ArchiveIndex index;
     private Object[] packedGroups;
-    static pl field_b;
+    static AccountRegistrationPanel field_b;
     static char[] field_d;
-    static ak[] field_f;
+    static SceneWidget[] field_f;
     static String field_j;
     boolean discardPackedGroups;
     private ArchiveProvider field_a;
     int field_e;
     private Object[][] field_k;
-    static ak[] field_h;
+    static SceneWidget[] field_h;
 
     final int getGroupId(int param0, String param1) {
         int var3_int = 0;
@@ -232,7 +232,7 @@ final class ResourceArchive {
             return false;
           }
           if (param0 != 0) {
-            field_b = (pl) null;
+            field_b = (AccountRegistrationPanel) null;
           }
           param1 = param1.toLowerCase();
           param2 = param2.toLowerCase();
@@ -422,7 +422,7 @@ final class ResourceArchive {
                 param2[3] != 0);
             }
             if (decompiledFrameRemainder0) {
-              var35 = tg.a(false, true, this.packedGroups[param1]);
+              var35 = UiTheme.a(false, true, this.packedGroups[param1]);
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
@@ -431,7 +431,7 @@ final class ResourceArchive {
             }
           }
           if (decompiledFrameRemainder1) {
-            var9 = tg.a(false, false, this.packedGroups[param1]);
+            var9 = UiTheme.a(false, false, this.packedGroups[param1]);
           }
           try {
             var36 = la.a(var9, param3);
@@ -601,7 +601,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_k[param3][param2] != null) {
-            var7 = tg.a(false, false, this.field_k[param3][param2]);
+            var7 = UiTheme.a(false, false, this.field_k[param3][param2]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -648,7 +648,7 @@ final class ResourceArchive {
             var3 = (Object) null;
             ResourceArchive.a((PlatformTaskDispatcher) null, (Object) null, (byte) 25);
           }
-          stackIn_3_0 = f.a(param1, (byte) -70, false);
+          stackIn_3_0 = DialWidgetPainter.a(param1, (byte) -70, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

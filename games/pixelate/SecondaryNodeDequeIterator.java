@@ -71,8 +71,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (param2 != -53) {
             field_b = (String) null;
           }
-          if (null == kb.field_L) {
-            kb.field_L = rk.field_e;
+          if (null == DateInputWidget.field_L) {
+            DateInputWidget.field_L = rk.field_e;
           }
           var6 = new Sprite[]{param1[0], param1[1]};
           var7 = var6;

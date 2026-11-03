@@ -10,11 +10,11 @@ final class of {
     static int field_d;
     static int field_g;
     static wm field_e;
-    static ak field_i;
+    static SceneWidget field_i;
 
     final static int a(double param0, int param1) {
         if (param1 != 65536) {
-          field_i = (ak) null;
+          field_i = (SceneWidget) null;
           return (int)(65536.0 * param0);
         }
         return (int)(65536.0 * param0);

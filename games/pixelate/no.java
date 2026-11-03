@@ -16,7 +16,7 @@ final class no extends kd {
     private boolean field_o;
     private BitmapFont field_l;
 
-    final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, eq param6, int param7) {
+    final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, LobbyGame param6, int param7) {
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_25_0 = 0;
@@ -68,10 +68,10 @@ final class no extends kd {
                 var9 = 0;
                 while (true) {
                   stackIn_4_0 = var9;
-                  stackIn_4_1 = h.field_Z.length;
+                  stackIn_4_1 = Checkbox.field_Z.length;
                   boolean decompiledFrameRemainder0 = true;
                   if (stackIn_4_0 < stackIn_4_1) {
-                    var18 = h.field_Z[var9];
+                    var18 = Checkbox.field_Z[var9];
                     var17 = var18;
                     var10_ref_int__ = var17;
                     var11 = 0;
@@ -98,7 +98,7 @@ final class no extends kd {
                               }
                             }
                           } else {
-                            if (~var14 != ~ia.field_a[param4]) {
+                            if (~var14 != ~LinkButtonPainter.field_a[param4]) {
                               break scanLoop3;
                             }
                           }
@@ -149,7 +149,7 @@ final class no extends kd {
                 }
               }
               if (decompiledFrameCompleted1) {
-                stackIn_41_0 = hc.field_L;
+                stackIn_41_0 = AccountTermsPanel.field_L;
                 if (param7 != -1) {
                   stackIn_42_1 = param7 + 4;
                 } else {
@@ -174,7 +174,7 @@ final class no extends kd {
                           continue;
                         }
                       }
-                      stackIn_52_0 = param1 + (oe.field_Rb[param7] & 255);
+                      stackIn_52_0 = param1 + (ReportAbuseDialog.field_Rb[param7] & 255);
                       break;
                     }
                     param1 = stackIn_52_0;
@@ -182,9 +182,9 @@ final class no extends kd {
                   if (param7 == -1 ||
                     var15 != 0) {
                     var10Lifetime2 = 0;
-                    while (!(var10Lifetime2 >= ia.field_a.length)) {
+                    while (!(var10Lifetime2 >= LinkButtonPainter.field_a.length)) {
                       stackIn_110_0 = 0;
-                      stackIn_110_1 = qm.field_J[var10Lifetime2 / 8] & 1 << (7 & var10Lifetime2);
+                      stackIn_110_1 = TextButton.field_J[var10Lifetime2 / 8] & 1 << (7 & var10Lifetime2);
                       if (var15 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -204,7 +204,7 @@ final class no extends kd {
                     if (param7 != -1) {
                       stackIn_65_0 = -1;
                     } else {
-                      stackIn_65_0 = ia.field_a.length;
+                      stackIn_65_0 = LinkButtonPainter.field_a.length;
                       if (var15 == 0) {
                         stackIn_66_0 = stackIn_65_0;
                         decompiledFrameRemainder2 = false;
@@ -222,11 +222,11 @@ final class no extends kd {
                         kf.field_o[param7] = (byte)var11Lifetime1;
                       }
                       if (param7 != -1 ||
-                        ia.field_a.length != 1) {
+                        LinkButtonPainter.field_a.length != 1) {
                         var13 = var16[var11Lifetime1 + 1];
                         if (!param3) {
                           if (-1 == param7) {
-                            stackIn_81_0 = (~ia.field_a[var11Lifetime1] != ~io.field_c.field_ec) ? 0 : 1;
+                            stackIn_81_0 = (~LinkButtonPainter.field_a[var11Lifetime1] != ~io.field_c.field_ec) ? 0 : 1;
                           } else {
                             stackIn_81_0 = (var11Lifetime1 != (io.field_c.field_Eb[param7] & 255)) ? 0 : 1;
                           }
@@ -329,7 +329,7 @@ final class no extends kd {
         }
         oj var2 = td.field_b;
         if (var2 != null) {
-          var2.a(ui.field_i.field_gb, ui.field_i.field_tb, 104);
+          var2.a(ui.field_i.screenY, ui.field_i.field_tb, 104);
         }
     }
 
@@ -508,7 +508,7 @@ final class no extends kd {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4) {
-        ak stackIn_21_0 = null;
+        SceneWidget stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
@@ -521,13 +521,13 @@ final class no extends kd {
         boolean stackIn_139_0 = false;
         boolean stackIn_155_0 = false;
         int stackIn_162_0 = 0;
-        ak stackIn_181_0 = null;
+        SceneWidget stackIn_181_0 = null;
         int stackIn_181_1 = 0;
         boolean stackIn_182_2 = false;
-        ak stackIn_186_0 = null;
+        SceneWidget stackIn_186_0 = null;
         int stackIn_186_1 = 0;
         boolean stackIn_187_2 = false;
-        ak stackIn_191_0 = null;
+        SceneWidget stackIn_191_0 = null;
         int stackIn_191_1 = 0;
         boolean stackIn_192_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -535,9 +535,9 @@ final class no extends kd {
         boolean stackOut_138_0;
         boolean stackOut_154_0;
         RuntimeException var5 = null;
-        ak var6 = null;
-        ak var7 = null;
-        ak var8 = null;
+        SceneWidget var6 = null;
+        SceneWidget var7 = null;
+        SceneWidget var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -556,15 +556,15 @@ final class no extends kd {
         IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        uj var18_ref = null;
+        LobbyPlayer var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        ak var22 = null;
+        SceneWidget var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        ak var27 = null;
+        SceneWidget var27 = null;
         int stackIn_51_0Lifetime1;
         int stackIn_60_0Lifetime1;
         int var13_intLifetime1;
@@ -573,35 +573,35 @@ final class no extends kd {
         var18 = null;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          cm.b(h.field_W, 4740);
+          cm.b(Checkbox.field_W, 4740);
           if (param1 != 1) {
             return;
           }
           if (io.field_c != null) {
             boolean decompiledFrameRemainder3 = true;
-            gk.field_kb.field_rb = true;
-            wm.field_d.field_nb = 0;
+            ValidatedTextWidget.field_kb.field_rb = true;
+            wm.field_d.height = 0;
             var22 = wm.field_d;
             var27 = var22;
             var27.field_K = 0;
             var6 = ep.field_a;
-            ep.field_a.field_nb = 0;
+            ep.field_a.height = 0;
             var6.field_K = 0;
             var7 = nk.field_e;
-            nk.field_e.field_nb = 0;
+            nk.field_e.height = 0;
             var7.field_K = 0;
-            if (!pl.m(param1 + 98)) {
+            if (!AccountRegistrationPanel.m(param1 + 98)) {
               var9_ref_String = io.field_c.field_pc;
-              vp.field_Qb.field_cb = sd.a(fk.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
-              nk.field_e.a(ai.field_A.field_nb - 40, 40, 0, param1 + 255, ai.field_A.field_K);
+              VerticalScrollbar.field_Qb.field_cb = sd.a(fk.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
+              nk.field_e.a(ai.field_A.height - 40, 40, 0, param1 + 255, ai.field_A.field_K);
               nk.field_e.field_cb = sd.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
               var8 = nk.field_e;
               decompiledFrameRemainder3 = (var19 != 0);
             }
             if (decompiledFrameRemainder3) {
-              vp.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
+              VerticalScrollbar.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
               var9 = (ai.field_A.field_K + 2) / 2;
-              wm.field_d.a(ai.field_A.field_nb - 40, 40, 0, 256, var9 - 2);
+              wm.field_d.a(ai.field_A.height - 40, 40, 0, 256, var9 - 2);
               if (io.field_c.field_ec <= io.field_c.field_mc) {
                 wm.field_d.field_cb = fo.field_m.toUpperCase();
                 wm.field_d.field_rb = false;
@@ -614,14 +614,14 @@ final class no extends kd {
                 wm.field_d.field_rb = true;
               }
               wm.field_d.field_zb = bf.field_k.field_zb;
-              if (ka.field_X > 0) {
-                boolean decompiledSharedTail1 = (ka.field_X != 1);
+              if (ResizableModalPanel.field_X > 0) {
+                boolean decompiledSharedTail1 = (ResizableModalPanel.field_X != 1);
                 if (!decompiledSharedTail1) {
                   var10_ref_String = sm.field_k;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = sd.a(d.field_a, 99, new String[]{Integer.toString(ka.field_X)});
+                  var10_ref_String = sd.a(d.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
                 }
                 wm.field_d.field_cb = wm.field_d.field_cb + "<br>" + var10_ref_String;
                 if (0 == (16 & rb.field_o) &&
@@ -629,14 +629,14 @@ final class no extends kd {
                   wm.field_d.field_zb = bf.field_k.field_ab;
                 }
               }
-              ep.field_a.a(-40 + ai.field_A.field_nb, 40, var9, 256, -var9 + ai.field_A.field_K);
-              ep.field_a.field_cb = kb.field_J.toUpperCase();
+              ep.field_a.a(-40 + ai.field_A.height, 40, var9, 256, -var9 + ai.field_A.field_K);
+              ep.field_a.field_cb = DateInputWidget.field_J.toUpperCase();
               var8 = ep.field_a;
               stackIn_21_0 = ep.field_a;
               stackIn_22_1 = (param0) && (bo.field_e == 0L);
               stackIn_21_0.field_rb = stackIn_22_1;
               var10 = 2;
-              if (h.field_Z != null) {
+              if (Checkbox.field_Z != null) {
                 if (kf.field_o == null) {
                   kf.field_o = new byte[fj.field_b];
                   lc.field_t = new boolean[fj.field_b];
@@ -660,9 +660,9 @@ final class no extends kd {
                     var12 = stackIn_66_0;
                     while (true) {
                       stackIn_36_0 = ~var12;
-                      stackIn_36_1 = ~h.field_Z.length;
+                      stackIn_36_1 = ~Checkbox.field_Z.length;
                       if (stackIn_36_0 > stackIn_36_1) {
-                        var26 = h.field_Z[var12];
+                        var26 = Checkbox.field_Z[var12];
                         var23 = var26;
                         var20 = var23;
                         var13 = var20;
@@ -723,7 +723,7 @@ final class no extends kd {
                   break;
                 }
                 if (stackIn_66_0 <= -3 &&
-                  bc.field_m[12]) {
+                  EmailValidator.field_m[12]) {
                   var10 = 2;
                 }
               }
@@ -732,7 +732,7 @@ final class no extends kd {
               boolean decompiledFrameRemainder2 = true;
               if ((2 <= var10) &&
                 (decompiledFrameRemainder3 = (null != jm.field_r ||
-                w.field_z != null ||
+                StatefulTextPainter.field_z != null ||
                 null != pa.field_a ||
                 oo.field_e != null))) {
                 var11_int = 0;
@@ -750,9 +750,9 @@ final class no extends kd {
                       jm.field_r[var16][var17_int]) {
                       var11_int = 1;
                     }
-                    if (w.field_z != null &&
-                      null != w.field_z[var16]) {
-                      var18_int = w.field_z[var16][var17_int];
+                    if (StatefulTextPainter.field_z != null &&
+                      null != StatefulTextPainter.field_z[var16]) {
+                      var18_int = StatefulTextPainter.field_z[var16][var17_int];
                       if (var18_int > var13_int) {
                         var13_int = var18_int;
                       }
@@ -784,8 +784,8 @@ final class no extends kd {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = ae.field_c.field_Fb.field_L;
-                var18_ref = (uj) (var17.c(1504642273));
+                var17 = ae.field_c.field_Fb.children;
+                var18_ref = (LobbyPlayer) (var17.c(1504642273));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
@@ -827,7 +827,7 @@ final class no extends kd {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (uj) (var17.last(1504642273));
+                      var18_ref = (LobbyPlayer) (var17.last(1504642273));
                       continue;
                     }
                   }
@@ -835,7 +835,7 @@ final class no extends kd {
                   break;
                 }
                 if (stackIn_129_0 >= ~wo.field_h &&
-                  bc.field_m[12]) {
+                  EmailValidator.field_m[12]) {
                   var16 = 0;
                 }
                 if ((var16 == 0) &&
@@ -940,23 +940,23 @@ final class no extends kd {
               }
               var8.field_cb = sd.a(AudioService.field_i, 100, new String[]{Integer.toString(var9)});
             }
-            qo.field_q.field_cb = sd.a(oe.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
+            MatchingTextValidator.field_q.field_cb = sd.a(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
           }
           stackIn_181_0 = ff.field_h;
           stackIn_181_1 = -28476;
           stackIn_182_2 = (param4) && (!param3) && (!bm.field_o);
-          ((ak) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
+          ((SceneWidget) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
           stackIn_186_0 = ai.field_A;
           stackIn_186_1 = -28476;
           stackIn_187_2 = (param4) && (!param3) && (!bm.field_o);
-          ((ak) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
+          ((SceneWidget) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
           stackIn_191_0 = ra.field_e;
           stackIn_191_1 = -28476;
           stackIn_192_2 = (param4) && (!param3) && (bm.field_o);
-          ((ak) (Object) stackIn_191_0).a(stackIn_191_1, stackIn_192_2);
+          ((SceneWidget) (Object) stackIn_191_0).a(stackIn_191_1, stackIn_192_2);
           nd.field_b.field_g.b((byte) -122);
           if (null != io.field_c) {
-            if (0 != gk.field_kb.field_P) {
+            if (0 != ValidatedTextWidget.field_kb.field_P) {
               qg.a(io.field_c.c((byte) 8), param2, false);
             }
             if (0 != wm.field_d.field_P) {
@@ -965,7 +965,7 @@ final class no extends kd {
             if (ep.field_a.field_P != 0) {
               of.field_c = true;
             }
-            if (0 != hb.field_eb.field_P) {
+            if (0 != ContentTransitionDialog.field_eb.field_P) {
               bm.field_o = false;
             }
             be.a(false, io.field_c, param2, -1);
@@ -995,8 +995,8 @@ final class no extends kd {
           SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.d(244, 198, 367, 141, 0);
           if (wg.field_g == null) {
-            if (null != qe.field_A) {
-              qe.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != QuickChatCategory.field_A) {
+              QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -1010,11 +1010,11 @@ final class no extends kd {
             decompiledSharedTail1 = (var4 != 0);
           }
           if ((decompiledSharedTail1) &&
-            (qe.field_A != null)) {
-            qe.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            (QuickChatCategory.field_A != null)) {
+            QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
           }
           if (ui.field_k > jn.field_q) {
-            var6 = wg.field_g[jc.field_b];
+            var6 = wg.field_g[SpriteCheckboxPainter.field_b];
             if (var6 != null) {
               var2_int = jn.field_q * (var6.field_A + 60) / ui.field_k;
               var3 = var2_int - 30;
@@ -1028,7 +1028,7 @@ final class no extends kd {
               }
             }
           }
-          if (null != qe.field_A) {
+          if (null != QuickChatCategory.field_A) {
             var2 = null;
             var3Lifetime1 = 0;
             while (true) {
@@ -1055,7 +1055,7 @@ final class no extends kd {
             if (stackIn_33_0 == var2) {
               return;
             }
-            qe.field_A.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            QuickChatCategory.field_A.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1069,7 +1069,7 @@ final class no extends kd {
         if (param0 != 8) {
           field_j = (String) null;
         }
-        return -jc.field_c + hm.a(64);
+        return -SpriteCheckboxPainter.field_c + hm.a(64);
     }
 
     final void a(BitmapFont param0, int param1, int param2, boolean param3, String param4) {

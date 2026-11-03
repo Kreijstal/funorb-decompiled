@@ -15,10 +15,10 @@ final class il {
         if (param0 > -103) {
           return 88;
         }
-        return ia.field_i;
+        return LinkButtonPainter.field_i;
     }
 
-    final qe a(int param0, boolean param1) {
+    final QuickChatCategory a(int param0, boolean param1) {
         ResourceArchive stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
@@ -35,15 +35,15 @@ final class il {
         int stackIn_33_1 = 0;
         int stackIn_33_2 = 0;
         boolean stackIn_34_3;
-        qe var3;
+        QuickChatCategory var3;
         byte[] var4;
-        qe var5;
-        qe var6;
-        qe var3Lifetime1;
-        qe var3Lifetime2;
+        QuickChatCategory var5;
+        QuickChatCategory var6;
+        QuickChatCategory var3Lifetime1;
+        QuickChatCategory var3Lifetime2;
         byte[] var4Lifetime1;
         if (!param1) {
-          var3 = (qe) (this.field_h.a((long)param0, 0));
+          var3 = (QuickChatCategory) (this.field_h.a((long)param0, 0));
           if (var3 != null) {
             return var3;
           }
@@ -60,18 +60,18 @@ final class il {
             stackIn_30_3 = (param1) ? false : true;
             var4 = ((ResourceArchive) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3);
           }
-          var6 = new qe();
+          var6 = new QuickChatCategory();
           if (var4 != null) {
-            var6.a(false, new PacketBuffer(var4));
+            var6.decode(false, new PacketBuffer(var4));
           }
           if (param0 >= 32768) {
-            var6.a((byte) 92);
+            var6.applyGlobalIds((byte) 92);
           }
           this.field_h.a((long)param0, var6, (byte) 109);
           return var6;
         }
         field_e = 75;
-        var3Lifetime1 = (qe) (this.field_h.a((long)param0, 0));
+        var3Lifetime1 = (QuickChatCategory) (this.field_h.a((long)param0, 0));
         if (var3Lifetime1 != null) {
           return var3Lifetime1;
         }
@@ -88,20 +88,20 @@ final class il {
           stackIn_8_3 = (param1) ? false : true;
           var4Lifetime1 = ((ResourceArchive) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
         }
-        var5 = new qe();
+        var5 = new QuickChatCategory();
         var3Lifetime2 = var5;
         if (var4Lifetime1 != null) {
-          var5.a(false, new PacketBuffer(var4Lifetime1));
+          var5.decode(false, new PacketBuffer(var4Lifetime1));
         }
         if (param0 >= 32768) {
-          var5.a((byte) 92);
+          var5.applyGlobalIds((byte) 92);
         }
         this.field_h.a((long)param0, var5, (byte) 109);
         return var5;
     }
 
-    final static void a(int param0, uj param1) {
-        uj var2 = null;
+    final static void a(int param0, LobbyPlayer param1) {
+        LobbyPlayer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int stackIn_10_0 = 0;
@@ -115,10 +115,10 @@ final class il {
             return;
           }
           param1.c(2779);
-          var2 = (uj) (ImageProducerRasterBuffer.field_n.c(1504642273));
+          var2 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var2 != null) {
             if (var2.a(param1, (byte) -82)) {
-              var2 = (uj) (ImageProducerRasterBuffer.field_n.last(1504642273));
+              var2 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.last(1504642273));
               continue;
             }
             break;

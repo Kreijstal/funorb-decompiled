@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class SocketJs5Transport extends Js5Transport {
-    static ak field_t;
+    static SceneWidget field_t;
     static int field_u;
     static int field_r;
     private BufferedSocket transport;
@@ -29,7 +29,7 @@ final class SocketJs5Transport extends Js5Transport {
         if (param0 >= -11) {
           SocketJs5Transport.c(16);
         }
-        on.field_ob = 0;
+        LoginDialog.field_ob = 0;
     }
 
     final void a(Object param0, boolean param1, int param2) {
@@ -227,7 +227,7 @@ final class SocketJs5Transport extends Js5Transport {
                     var17 = 0;
                     var7 = var17;
                     while (var17 < var6) {
-                      this.field_c.field_D.payload[this.field_c.field_D.position + var17] = (byte)bn.a((int) this.field_c.field_D.payload[this.field_c.field_D.position + var17], (int) this.field_a);
+                      this.field_c.field_D.payload[this.field_c.field_D.position + var17] = (byte)DraggableWidget.a((int) this.field_c.field_D.payload[this.field_c.field_D.position + var17], (int) this.field_a);
                       var17++;
                     }
                   }
@@ -250,7 +250,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.transport.a(this.field_g.payload, this.field_g.position, (byte) 119, var5);
                   if (0 != this.field_a) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_g.payload[var6 + this.field_g.position] = (byte)bn.a((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_a);
+                      this.field_g.payload[var6 + this.field_g.position] = (byte)DraggableWidget.a((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_a);
                     }
                   }
                   this.field_g.position = this.field_g.position + var5;

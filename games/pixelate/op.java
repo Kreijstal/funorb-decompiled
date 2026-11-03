@@ -16,16 +16,16 @@ final class op extends de {
         if (!param0) {
           this.field_o = 93;
         }
-        return (jo.field_h & 1L << param1) > 0L ? true : false;
+        return (CheckboxPainter.field_h & 1L << param1) > 0L ? true : false;
     }
 
     final static boolean g(int param0) {
         int var1 = -97 / ((55 - param0) / 62);
-        return Js5NetworkRequest.field_F == qo.field_n ? true : false;
+        return Js5NetworkRequest.field_F == MatchingTextValidator.field_n ? true : false;
     }
 
     final static void b(int param0, int param1, boolean param2) {
-        qe.field_u = param1;
+        QuickChatCategory.field_u = param1;
         IntrusiveDeque.field_b = param0;
         if (!param2) {
           field_w = (String) null;
@@ -35,8 +35,8 @@ final class op extends de {
     final void a(int param0, int param1, boolean param2) {
         int var4 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
-        for (var4 = 0; ud.field_I.length > var4; var4++) {
-          ud.field_I[var4].c(-124);
+        for (var4 = 0; ModalPanel.field_I.length > var4; var4++) {
+          ModalPanel.field_I[var4].c(-124);
         }
         super.a(param0, 3, param2);
         this.field_v = 0;
@@ -84,7 +84,7 @@ final class op extends de {
         String var6;
         var7 = Pixelate.field_H ? 1 : 0;
         if (param0 == 0) {
-          if (this.field_g.a(79)) {
+          if (this.field_g.isActivated(79)) {
             var4 = param2 ? 1 : 0;
             la.a(MidiPcmStream.field_t, 16, var4 != 0, -25528);
           }
@@ -101,14 +101,14 @@ final class op extends de {
           } else {
             if (param0 != 2) {
               if (BufferedRandomAccessFile.field_j <= 0 &&
-                this.field_g.a(74) &&
+                this.field_g.isActivated(74) &&
                 param0 > 2 &&
                 32 == this.field_k[param0]) {
                 var4 = param0 - 3;
                 if (var4 >= 10) {
                   var5 = 0;
-                  var6 = te.field_Ib;
-                  if (!jg.a((byte) 105)) {
+                  var6 = QuickChatMenu.field_Ib;
+                  if (!ArrayWidgetContainer.a((byte) 105)) {
                     var5 = 1;
                     var6 = ee.field_a;
                   }
@@ -137,14 +137,14 @@ final class op extends de {
     final void a(int param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        gj.field_W[4].b(0, 45);
+        NumericDateInputWidget.field_W[4].b(0, 45);
         this.d((byte) 50);
         this.b((byte) -71);
         if (param0 != 11) {
           return;
         }
-        for (var2 = 0; ud.field_I.length > var2; var2++) {
-          ud.field_I[var2].a(-25330);
+        for (var2 = 0; ModalPanel.field_I.length > var2; var2++) {
+          ModalPanel.field_I[var2].a(-25330);
         }
     }
 
@@ -242,11 +242,11 @@ final class op extends de {
                 var2 == 0) &&
                 (var3 != 52 ||
                 var2 != 0)) {
-                var4 = (-ip.field_A + 532) / 2;
+                var4 = (-PasswordFieldPainter.field_A + 532) / 2;
                 if (var2 != 0) {
                   this.field_g.a(false, -1 + var3);
                   if (this.b(115, this.field_g.field_j) < var4) {
-                    this.field_o = this.field_o - ip.field_A;
+                    this.field_o = this.field_o - PasswordFieldPainter.field_A;
                   }
                   if (0 <= this.field_o) {
                     break regionExit1;
@@ -255,7 +255,7 @@ final class op extends de {
                 } else {
                   this.field_g.a(false, var3 + 1);
                   if (this.b(69, this.field_g.field_j) > var4) {
-                    this.field_o = this.field_o + ip.field_A;
+                    this.field_o = this.field_o + PasswordFieldPainter.field_A;
                   }
                   if (this.field_o > bh.field_k) {
                     this.field_o = bh.field_k;
@@ -279,7 +279,7 @@ final class op extends de {
             if (param1 <= 2) {
               return super.b(120, param1);
             }
-            return (-3 + param1) * ip.field_A + (-this.field_o + 184);
+            return (-3 + param1) * PasswordFieldPainter.field_A + (-this.field_o + 184);
           }
           return 355;
         }
@@ -317,7 +317,7 @@ final class op extends de {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         this.field_o = this.field_o + this.field_u;
-        this.field_o = this.field_o + ip.field_A * lp.field_i;
+        this.field_o = this.field_o + PasswordFieldPainter.field_A * lp.field_i;
         if (this.field_o < 0) {
           this.field_o = 0;
         }
@@ -337,8 +337,8 @@ final class op extends de {
         this.field_r = 0;
         super.e((byte) -100);
         int var2 = this.field_g.field_j < 3 ? -1 : -3 + this.field_g.field_j;
-        for (var3 = 0; ud.field_I.length > var3; var3++) {
-          ud.field_I[var3].a(var3 == var2 ? true : false, 20);
+        for (var3 = 0; ModalPanel.field_I.length > var3; var3++) {
+          ModalPanel.field_I[var3].a(var3 == var2 ? true : false, 20);
         }
     }
 
@@ -414,7 +414,7 @@ final class op extends de {
                 var9 = var7 + var8 >> 1;
                 var10 = this.b(58, param2);
                 if (param1) {
-                  fi.a(var9, -2 + var10, 35, oc.field_N);
+                  fi.a(var9, -2 + var10, 35, StripedProgressBar.field_N);
                 }
                 stackIn_16_0 = rk.field_e;
                 stackIn_16_1 = var6;
@@ -437,7 +437,7 @@ final class op extends de {
             }
           }
         } else {
-          this.a(h.field_O, oc.field_N, (byte) 122, param1);
+          this.a(Checkbox.field_O, StripedProgressBar.field_N, (byte) 122, param1);
         }
     }
 

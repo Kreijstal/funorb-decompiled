@@ -108,10 +108,10 @@ final class se extends jj {
             sd.a((byte) -76, var4, param1);
             var4 = (rh) (de.field_b.last(1504642273));
           }
-          var5 = (ue) (f.field_c.c(1504642273));
+          var5 = (ue) (DialWidgetPainter.field_c.c(1504642273));
           while (var5 != null) {
-            uj.a(param1, var5, 65536);
-            var5 = (ue) (f.field_c.last(1504642273));
+            LobbyPlayer.a(param1, var5, 65536);
+            var5 = (ue) (DialWidgetPainter.field_c.last(1504642273));
           }
           if (param0 <= 3) {
             se.b(true);
@@ -157,20 +157,20 @@ final class se extends jj {
     }
 
     final static boolean d(int param0) {
-        if (null != ip.field_y) {
+        if (null != PasswordFieldPainter.field_y) {
           return true;
         }
         if (param0 != 3782) {
           se.b(true);
         }
-        if (!pf.field_d.ensureGroupAvailableByName("benefits", -1)) {
+        if (!MenuInputState.field_d.ensureGroupAvailableByName("benefits", -1)) {
           return false;
         }
-        ip.field_y = bi.a("benefits", "members_benefits_borders", pf.field_d, (byte) -89);
-        MusicPatchPcmStream.field_p = bi.a("benefits", "members_benefits_price", pf.field_d, (byte) -70);
-        SpriteState.field_t = bi.a("benefits", "members_benefits_logo", pf.field_d, (byte) -118);
-        li.field_h = SocketConnector.a("members_benefits_screenshots", "benefits", (byte) 47, pf.field_d);
-        bl.a(11833, ip.field_y, SoundCache.field_e);
+        PasswordFieldPainter.field_y = bi.a("benefits", "members_benefits_borders", MenuInputState.field_d, (byte) -89);
+        MusicPatchPcmStream.field_p = bi.a("benefits", "members_benefits_price", MenuInputState.field_d, (byte) -70);
+        SpriteState.field_t = bi.a("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
+        li.field_h = SocketConnector.a("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
+        bl.a(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
         ni.a(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, rk.field_e, 80, 0);
         pb.a(-25960, li.field_h);
         sk.a(param0 ^ -3744, SpriteState.field_t);

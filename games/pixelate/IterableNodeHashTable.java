@@ -24,7 +24,7 @@ final class IterableNodeHashTable implements Iterable {
           var2 = io.field_e;
         }
         if (1 == param0) {
-          var2 = gh.field_v;
+          var2 = GradientOutlineTextPainter.field_v;
         }
         if (2 == param0) {
           var2 = ib.field_e;
@@ -106,12 +106,12 @@ final class IterableNodeHashTable implements Iterable {
         if (7500 > jd.field_r) {
           return;
         }
-        int fieldTemp$0 = ko.field_hb + 1;
-        ko.field_hb = ko.field_hb + 1;
+        int fieldTemp$0 = LoadingProgressDialog.field_hb + 1;
+        LoadingProgressDialog.field_hb = LoadingProgressDialog.field_hb + 1;
         if (fieldTemp$0 == jm.field_g.length) {
-          ko.field_hb = 0;
+          LoadingProgressDialog.field_hb = 0;
         }
-        wh.e(-89, jm.field_g[ko.field_hb]);
+        wh.e(-89, jm.field_g[LoadingProgressDialog.field_hb]);
         jd.field_r = 0;
         if (param0 <= -73) {
           return;

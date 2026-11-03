@@ -152,7 +152,7 @@ final class IntrusiveDeque {
         if (param0 < -13) {
           var1 = la.a((byte) -59);
           var2 = bl.a(true);
-          he.field_a.a(-PacketBuffer.field_n + de.field_h, (PacketBuffer.field_n << 1) + var2, -1, var1 + (gh.field_t << 1), ko.field_cb - gh.field_t);
+          he.field_a.a(-PacketBuffer.field_n + de.field_h, (PacketBuffer.field_n << 1) + var2, -1, var1 + (GradientOutlineTextPainter.field_t << 1), LoadingProgressDialog.field_cb - GradientOutlineTextPainter.field_t);
           pm.a(-14);
           return;
         }

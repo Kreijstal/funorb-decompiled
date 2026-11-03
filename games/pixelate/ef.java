@@ -11,7 +11,7 @@ final class ef {
     static int field_f;
 
     final static void a(int param0) {
-        m var1 = (m) (on.field_nb.c(1504642273));
+        m var1 = (m) (LoginDialog.field_nb.c(1504642273));
         if (var1 == null) {
           na.a(true);
           return;
@@ -72,10 +72,10 @@ final class ef {
           var2 = var28.f(255);
           if (var2 == 0) {
             var3 = var28.a((byte) 86);
-            var4 = (ue) (f.field_c.c(1504642273));
+            var4 = (ue) (DialWidgetPainter.field_c.c(1504642273));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (ue) (f.field_c.last(1504642273));
+                var4 = (ue) (DialWidgetPainter.field_c.last(1504642273));
                 continue;
               }
               break;
@@ -184,7 +184,7 @@ final class ef {
             var6_ref_rh.field_q = var4_long;
             var6_ref_rh.c(2779);
           } else {
-            jo.a(1, "HS1: " + jm.b(-63), (Throwable) null);
+            CheckboxPainter.a(1, "HS1: " + jm.b(-63), (Throwable) null);
             na.a(!param0);
           }
           if (param0) {

@@ -16,7 +16,7 @@ final class fq extends de {
 
     final int b(int param0, int param1) {
         int var3 = -58 % ((-13 - param0) / 37);
-        if (jg.a((byte) 88)) {
+        if (ArrayWidgetContainer.a((byte) 88)) {
           return (this.field_i >> 1) + this.field_d;
         }
         if (param1 < 2) {
@@ -33,7 +33,7 @@ final class fq extends de {
         if (param1 != 90) {
           return 74;
         }
-        if (jg.a((byte) 62)) {
+        if (ArrayWidgetContainer.a((byte) 62)) {
           return param0 != 0 ? 470 : 50;
         }
         int var3 = param0 > 1 ? -2 + param0 : param0;
@@ -45,7 +45,7 @@ final class fq extends de {
         int var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
-        if (jg.a((byte) 115)) {
+        if (ArrayWidgetContainer.a((byte) 115)) {
           this.field_g.a(53, 0);
           return;
         }
@@ -100,11 +100,11 @@ final class fq extends de {
           fq.g((byte) 97);
         }
         stackIn_5_1 = 35;
-        if (jg.a((byte) 101) &&
+        if (ArrayWidgetContainer.a((byte) 101) &&
           param2 == 0) {
-          stackIn_7_2 = oc.field_S;
+          stackIn_7_2 = StripedProgressBar.field_S;
         } else {
-          stackIn_7_2 = oc.field_N;
+          stackIn_7_2 = StripedProgressBar.field_N;
         }
         super.a((byte) stackIn_5_1, stackIn_7_2, param1, param2);
     }
@@ -164,7 +164,7 @@ final class fq extends de {
           field_q = -11;
         }
         int var3 = (-(2 * this.field_m) + 640) / 2;
-        if (!jg.a((byte) 116)) {
+        if (!ArrayWidgetContainer.a((byte) 116)) {
           return this.a(param0, (byte) 90) + var3;
         }
         if (0 == param0) {
@@ -210,14 +210,14 @@ final class fq extends de {
         String var2Lifetime1;
         regionExit1: {
           var16 = Pixelate.field_H ? 1 : 0;
-          gj.field_W[5].b(0, 45);
+          NumericDateInputWidget.field_W[5].b(0, 45);
           this.b((byte) -71);
           this.d((byte) -63);
-          if (jg.a((byte) 74)) {
+          if (ArrayWidgetContainer.a((byte) 74)) {
             var2 = wo.field_a;
           } else {
             if (aa.field_p == null) {
-              aa.field_p = g.a(3, (byte) 103, 1, 10, 0);
+              aa.field_p = PasswordValidator.a(3, (byte) 103, 1, 10, 0);
             }
             var3_ref_ob = rk.field_e;
             var4 = aa.field_p;
@@ -256,7 +256,7 @@ final class fq extends de {
                 }
                 break regionExit1;
               }
-              var2 = pf.field_l;
+              var2 = MenuInputState.field_l;
             } else {
               var2 = wd.field_b;
             }
@@ -267,10 +267,10 @@ final class fq extends de {
         }
         var3 = 225 + rk.field_e.maxAscent;
         rk.field_e.drawCentered(var2, 330, var3, 0, 0);
-        if (jg.a((byte) 96)) {
+        if (ArrayWidgetContainer.a((byte) 96)) {
           stackIn_28_0 = mj.field_h;
         } else {
-          stackIn_28_0 = pf.field_b;
+          stackIn_28_0 = MenuInputState.field_b;
         }
         var2Lifetime1 = stackIn_28_0;
         qj.field_e.drawCentered(var2Lifetime1, 320, 330 + (rk.field_e.maxAscent + 12), 14540253, 3355443);

@@ -71,19 +71,19 @@ abstract class kd {
         return 0;
     }
 
-    final static void a(boolean param0, eq param1, byte param2, PacketBuffer param3) {
+    final static void a(boolean param0, LobbyGame param1, byte param2, PacketBuffer param3) {
         int var8 = 0;
-        eq stackIn_8_0 = null;
+        LobbyGame stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        eq stackIn_12_0 = null;
+        LobbyGame stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
-        eq stackIn_15_0 = null;
+        LobbyGame stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        eq stackIn_18_0 = null;
+        LobbyGame stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        eq stackIn_21_0 = null;
+        LobbyGame stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
-        eq stackIn_24_0 = null;
+        LobbyGame stackIn_24_0 = null;
         int stackIn_25_1 = 0;
         int stackIn_28_0 = 0;
         int stackIn_31_0 = 0;
@@ -110,22 +110,22 @@ abstract class kd {
           }
           param1.field_Ib = param3.f(param2 + 135);
           var4_int = param3.f(param2 + 135);
-          stackIn_8_0 = (eq) (param1);
+          stackIn_8_0 = (LobbyGame) (param1);
           stackIn_9_1 = (0 != (128 & var4_int));
           stackIn_8_0.field_Pb = stackIn_9_1;
-          stackIn_12_0 = (eq) (param1);
+          stackIn_12_0 = (LobbyGame) (param1);
           stackIn_13_1 = (param1.field_Pb) && (param1.field_ec > param1.field_mc);
           stackIn_12_0.field_hc = stackIn_13_1;
-          stackIn_15_0 = (eq) (param1);
+          stackIn_15_0 = (LobbyGame) (param1);
           stackIn_16_1 = (0 != (var4_int & 64));
           stackIn_15_0.field_dc = stackIn_16_1;
-          stackIn_18_0 = (eq) (param1);
+          stackIn_18_0 = (LobbyGame) (param1);
           stackIn_19_1 = ((var4_int & 32) != 0);
           stackIn_18_0.field_oc = stackIn_19_1;
-          stackIn_21_0 = (eq) (param1);
+          stackIn_21_0 = (LobbyGame) (param1);
           stackIn_22_1 = (0 != (8 & var4_int));
           stackIn_21_0.field_Mb = stackIn_22_1;
-          stackIn_24_0 = (eq) (param1);
+          stackIn_24_0 = (LobbyGame) (param1);
           if ((16 & var4_int) != 0) {
             stackIn_25_1 = 2;
           } else {

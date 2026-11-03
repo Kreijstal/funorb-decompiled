@@ -5,13 +5,13 @@ final class ff {
     static String field_f;
     static int field_i;
     static long field_d;
-    static ak field_j;
-    static ak field_g;
-    static ak field_h;
+    static SceneWidget field_j;
+    static SceneWidget field_g;
+    static SceneWidget field_h;
     static String field_e;
     static String field_c;
     static String field_b;
-    static ak field_a;
+    static SceneWidget field_a;
 
     final static Sprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
@@ -78,18 +78,18 @@ final class ff {
             stackIn_4_0 = qn.field_n;
             return stackIn_4_0;
           }
-          if (gk.field_db != 2) {
+          if (ValidatedTextWidget.field_db != 2) {
             stackIn_8_0 = qg.field_c;
             return stackIn_8_0;
           }
           var8 = re.a(param1, -1);
           if (var8 == null) {
-            stackIn_11_0 = sd.a(vl.field_R, 41, new String[]{param1});
+            stackIn_11_0 = sd.a(AccountMessagePanel.field_R, 41, new String[]{param1});
             return stackIn_11_0;
           }
-          vp.field_Hb.traverseFrom(var8, param2 + 1504642379);
+          VerticalScrollbar.field_Hb.traverseFrom(var8, param2 + 1504642379);
           while (true) {
-            var7 = (im) (vp.field_Hb.last(param2 ^ -1504642185));
+            var7 = (im) (VerticalScrollbar.field_Hb.last(param2 ^ -1504642185));
             if (var7 != null) {
               var7.field_Kb = var7.field_Kb - 1;
               continue;
@@ -101,7 +101,7 @@ final class ff {
           if (param2 != -106) {
             field_d = -123L;
           }
-          f.field_q = f.field_q - 1;
+          DialWidgetPainter.field_q = DialWidgetPainter.field_q - 1;
           var9 = aa.field_f;
           var9.g(param0, 15514);
           var9.position = var9.position + 1;

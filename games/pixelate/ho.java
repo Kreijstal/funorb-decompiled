@@ -3,7 +3,7 @@
  */
 final class ho {
     static int field_e;
-    static ak field_g;
+    static SceneWidget field_g;
     static String[] field_a;
     static String field_f;
     static int field_c;
@@ -26,8 +26,8 @@ final class ho {
           PacketBuffer.field_o[9] = ih.field_e;
           PacketBuffer.field_o[6] = wk.field_f;
           PacketBuffer.field_o[0] = jm.field_s;
-          PacketBuffer.field_o[28] = od.field_Nb;
-          PacketBuffer.field_o[1] = jo.field_c;
+          PacketBuffer.field_o[28] = TabbedPanel.field_Nb;
+          PacketBuffer.field_o[1] = CheckboxPainter.field_c;
           PacketBuffer.field_o[11] = al.field_d;
           PacketBuffer.field_o[29] = ge.field_a;
           if (param0 != -29810) {
@@ -49,18 +49,18 @@ final class ho {
           PacketBuffer.field_o[23] = td.field_a;
           PacketBuffer.field_o[27] = IterableNodeHashTable.field_d;
           PacketBuffer.field_o[21] = mj.field_e;
-          PacketBuffer.field_o[25] = ip.field_z;
+          PacketBuffer.field_o[25] = PasswordFieldPainter.field_z;
           PacketBuffer.field_o[18] = dg.field_c[1];
           PacketBuffer.field_o[14] = re.field_k[0];
           wc.field_m[3] = vh.field_b;
-          wc.field_m[6] = oe.field_Vb;
+          wc.field_m[6] = ReportAbuseDialog.field_Vb;
           wc.field_m[2] = bo.field_a;
           wc.field_m[4] = ce.field_e;
           wc.field_m[1] = ro.field_f;
           wc.field_m[7] = qf.field_d;
-          dn.field_a = new String[][]{hm.field_f, qo.field_t, um.field_l, ol.field_p, ui.field_h, qg.field_d};
-          ln.field_m = new String[][]{up.field_a, gp.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, gj.field_R, uk.field_q, vd.field_d};
-          wc.field_m[0] = bn.field_L;
+          dn.field_a = new String[][]{hm.field_f, MatchingTextValidator.field_t, um.field_l, ol.field_p, ui.field_h, qg.field_d};
+          ln.field_m = new String[][]{up.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, uk.field_q, vd.field_d};
+          wc.field_m[0] = DraggableWidget.field_L;
           wc.field_m[5] = wa.field_e;
           for (var1_int = 0; var1_int < wc.field_m.length; var1_int++) {
             if (null == wc.field_m[var1_int]) {

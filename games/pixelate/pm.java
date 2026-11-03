@@ -83,7 +83,7 @@ final class pm {
                 var5 = ce.field_b;
               }
             } else {
-              var5 = qo.field_s;
+              var5 = MatchingTextValidator.field_s;
             }
             var6 = vm.field_e[var3];
             if (CanvasRasterBuffer.field_h == 2 &&
@@ -94,10 +94,10 @@ final class pm {
                 stackIn_19_0 = jk.field_d.length;
               }
               var7 = stackIn_19_0;
-              if (hb.field_jb.length <= uk.field_r.length) {
+              if (ContentTransitionDialog.field_jb.length <= uk.field_r.length) {
                 stackIn_22_0 = uk.field_r.length;
               } else {
-                stackIn_22_0 = hb.field_jb.length;
+                stackIn_22_0 = ContentTransitionDialog.field_jb.length;
               }
               var8 = stackIn_22_0;
               if (var3 >= 6 &&
@@ -126,17 +126,17 @@ final class pm {
             stackIn_38_1 = var6;
             stackIn_39_2 = !(var4 < 0);
             var7Lifetime1 = sb.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
-            var8Lifetime1 = qe.field_u - (var7Lifetime1 >> 1);
+            var8Lifetime1 = QuickChatCategory.field_u - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 == mj.field_c.field_j) {
-                stackIn_44_0 = tm.field_N;
+                stackIn_44_0 = MarkerSlider.field_N;
               } else {
                 stackIn_44_0 = AudioService.field_e;
               }
               var9 = stackIn_44_0;
-              var1_int = var1_int + ko.field_fb;
+              var1_int = var1_int + LoadingProgressDialog.field_fb;
               if (var9 != null) {
-                var9.a(var1_int, gk.field_fb + (bd.field_c << 1), -1, var7Lifetime1 + (hc.field_J << 1), -hc.field_J + var8Lifetime1);
+                var9.a(var1_int, ValidatedTextWidget.field_fb + (bd.field_c << 1), -1, var7Lifetime1 + (AccountTermsPanel.field_J << 1), -AccountTermsPanel.field_J + var8Lifetime1);
               }
               var1_int = var1_int + bd.field_c;
             }
@@ -145,7 +145,7 @@ final class pm {
               var1_int = var1_int + hq.field_r;
             } else {
               ma.field_y.drawText(var6, var8Lifetime1, var1_int + ul.field_q, var5, -1);
-              var1_int = var1_int + (gk.field_fb + (bd.field_c + ko.field_fb));
+              var1_int = var1_int + (ValidatedTextWidget.field_fb + (bd.field_c + LoadingProgressDialog.field_fb));
             }
           }
           return;
@@ -272,8 +272,8 @@ final class pm {
               stackIn_51_1 = 50;
             }
             stackIn_50_0.field_f = stackIn_51_1;
-            if (2 == oa.field_j ||
-              0 == oa.field_j &&
+            if (2 == DateOfBirthValidator.field_j ||
+              0 == DateOfBirthValidator.field_j &&
               0 < this.field_r) {
               this.field_v[param1] = this.field_v[param1] + var15.field_f;
             }
@@ -322,7 +322,7 @@ final class pm {
     final static void a(byte param0, String param1, long param2) {
         CharSequence var5 = null;
         try {
-          jo.field_k = param1;
+          CheckboxPainter.field_k = param1;
           ce.field_d = 2;
           var5 = (CharSequence) ((Object) param1);
           fp.field_d = dh.a(var5, (byte) 38);

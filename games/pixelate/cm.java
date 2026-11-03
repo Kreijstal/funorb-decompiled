@@ -6,7 +6,7 @@ final class cm extends IntrusiveNode {
     int field_p;
     static String field_l;
     IntrusiveNode field_k;
-    static ak field_o;
+    static SceneWidget field_o;
     PcmSampleStream field_n;
 
     final static boolean a(String param0, int param1) {
@@ -81,7 +81,7 @@ final class cm extends IntrusiveNode {
             return (char)var2;
           }
           if (160 > var2) {
-            var3 = jg.field_I[-128 + var2];
+            var3 = ArrayWidgetContainer.field_I[-128 + var2];
             if (0 == var3) {
               var3 = 63;
             }
@@ -98,7 +98,7 @@ final class cm extends IntrusiveNode {
         if (160 <= var2) {
           return (char)var2;
         }
-        var3Lifetime1 = jg.field_I[-128 + var2];
+        var3Lifetime1 = ArrayWidgetContainer.field_I[-128 + var2];
         if (0 == var3Lifetime1) {
           var3Lifetime1 = 63;
         }
@@ -156,7 +156,7 @@ final class cm extends IntrusiveNode {
           im.field_Jb = u.field_j;
           u.field_j = false;
           IntrusiveDequeCursor.field_c = tl.field_a;
-          BufferedRandomAccessFile.field_a = c.field_X;
+          BufferedRandomAccessFile.field_a = EditableTextWidget.field_X;
           ji.field_c = IntrusiveNode.field_j;
           tl.field_a = 0;
         }
@@ -167,7 +167,7 @@ final class cm extends IntrusiveNode {
           this.field_n = param0;
           this.field_p = param0.getTargetVolume();
           this.field_k = param1;
-          this.field_n.setVolumeQ6(128 + ia.field_h * this.field_p >> 8);
+          this.field_n.setVolumeQ6(128 + LinkButtonPainter.field_h * this.field_p >> 8);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

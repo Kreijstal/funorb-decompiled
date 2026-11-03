@@ -11,7 +11,7 @@ final class qi extends jj {
         if (param0 != 6388) {
           return -3;
         }
-        return jg.l(72);
+        return ArrayWidgetContainer.l(72);
     }
 
     public static void b(byte param0) {
@@ -75,8 +75,8 @@ final class qi extends jj {
         if (~fieldTemp$0 <= param0) {
           return;
         }
-        this.field_n.addFirst(22125, new jn(od.a((byte) 41, 189440, -25600), -25600));
-        this.field_m = od.a((byte) 41, 75, 25);
+        this.field_n.addFirst(22125, new jn(TabbedPanel.a((byte) 41, 189440, -25600), -25600));
+        this.field_m = TabbedPanel.a((byte) 41, 75, 25);
     }
 
     qi(String param0, Sprite[] param1) {
@@ -85,9 +85,9 @@ final class qi extends jj {
         try {
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; 5 > var3_int; var3_int++) {
-            this.field_n.addFirst(22125, new jn(od.a((byte) 41, 189440, -25600), od.a((byte) 41, 148480, -25600)));
+            this.field_n.addFirst(22125, new jn(TabbedPanel.a((byte) 41, 189440, -25600), TabbedPanel.a((byte) 41, 148480, -25600)));
           }
-          this.field_m = od.a((byte) 41, 75, 25);
+          this.field_m = TabbedPanel.a((byte) 41, 75, 25);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -32,7 +32,7 @@ final class mc extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          tg.field_f = param0;
+          UiTheme.field_f = param0;
           var12 = vg.a((byte) 96, param3);
           if (!param2) {
             stackIn_3_0 = ga.a(param3, 10);
@@ -49,7 +49,7 @@ final class mc extends IntrusiveNode {
           var9 = hq.a((byte) 124, param3);
           var10 = mi.a(var12.field_d, param1, var12.field_j, 20);
           var11 = new dd(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
-          var11.a((byte) 58, tg.field_f);
+          var11.a((byte) 58, UiTheme.field_f);
           stackIn_7_0 = var11;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,68 +126,68 @@ final class mc extends IntrusiveNode {
             kf.field_p.b(param0 - 15) &&
             kf.field_p.ensureGroupAvailableByName("benefits", -1)) {
             go.field_i = bi.a("benefits", "headline", pb.field_n, (byte) -79);
-            jc.field_a = bi.a("benefits", "blurbpane", pb.field_n, (byte) -97);
+            SpriteCheckboxPainter.field_a = bi.a("benefits", "blurbpane", pb.field_n, (byte) -97);
             wo.field_c = bi.a("benefits", "button", pb.field_n, (byte) -57);
             ro.field_b = bi.a("benefits", "signup_text", pb.field_n, (byte) -119);
-            ka.field_P = bi.a("benefits", "menu_text", pb.field_n, (byte) -20);
-            jh.field_O = bi.a("benefits", "button_frame", pb.field_n, (byte) -63);
-            gp.field_Kb = bi.a("benefits", "arrow", pb.field_n, (byte) -125);
-            kc.field_r = (BitmapFont) ((Object) bf.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
-            qe.field_A = (BitmapFont) ((Object) bf.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
+            ResizableModalPanel.field_P = bi.a("benefits", "menu_text", pb.field_n, (byte) -20);
+            AccountChoicePanel.field_O = bi.a("benefits", "button_frame", pb.field_n, (byte) -63);
+            ScrollContainer.field_Kb = bi.a("benefits", "arrow", pb.field_n, (byte) -125);
+            EmailConfirmationValidator.field_r = (BitmapFont) ((Object) bf.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
+            QuickChatCategory.field_A = (BitmapFont) ((Object) bf.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
             var28 = SoftwareRasterizer.field_k;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.a(wi.field_f);
-            var12 = new Sprite(4 + gp.field_Kb.field_F, gp.field_Kb.field_E + 4);
+            var12 = new Sprite(4 + ScrollContainer.field_Kb.field_F, ScrollContainer.field_Kb.field_E + 4);
             var12.c();
-            gp.field_Kb.c(2, 2, ug.field_k);
+            ScrollContainer.field_Kb.c(2, 2, ug.field_k);
             de.a(0, 0, 1, var12, var12.field_F, -1, 2, var12.field_E);
-            gp.field_Kb = var12;
-            hf.field_m = gp.field_Kb.e();
+            ScrollContainer.field_Kb = var12;
+            hf.field_m = ScrollContainer.field_Kb.e();
             var13 = new Sprite(195, 221);
             var6 = var13.field_F / 2;
             var13.c();
-            kc.field_r.drawCentered(sd.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{al.field_g}), var6, 40, 16777215, -1);
-            qe.field_A.drawCentered(sd.a(kf.field_n, 76, new String[]{al.field_g}), var6, 60, 16777215, -1);
-            kc.field_r.drawCentered(sd.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
-            qe.field_A.drawCentered(sd.a(kk.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
-            kc.field_r.drawCentered(ng.field_w, var6, 180, 16777215, -1);
-            qe.field_A.drawCentered(ri.field_d, var6, 200, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(sd.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{al.field_g}), var6, 40, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(sd.a(kf.field_n, 76, new String[]{al.field_g}), var6, 60, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(sd.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(sd.a(kk.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(UiComponent.field_w, var6, 180, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(ri.field_d, var6, 200, 16777215, -1);
             de.a(0, 0, 1, var13, var13.field_F, -1, 3, var13.field_E);
-            jc.field_a.c();
-            var13.b(-jc.field_a.field_D + 18, 241 - jc.field_a.field_y);
-            for (var7 = 0; tm.field_S.length > var7; var7++) {
+            SpriteCheckboxPainter.field_a.c();
+            var13.b(-SpriteCheckboxPainter.field_a.field_D + 18, 241 - SpriteCheckboxPainter.field_a.field_y);
+            for (var7 = 0; MarkerSlider.field_S.length > var7; var7++) {
               li.field_a[var7].c();
-              qe.field_A.drawParagraph(tm.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E - 6, ug.field_k, -1, 1, 1, qe.field_A.maxDescent + qe.field_A.maxAscent);
+              QuickChatCategory.field_A.drawParagraph(MarkerSlider.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E - 6, ug.field_k, -1, 1, 1, QuickChatCategory.field_A.maxDescent + QuickChatCategory.field_A.maxAscent);
               de.a(0, 0, 1, li.field_a[var7], li.field_a[var7].field_F, -1, 3, li.field_a[var7].field_E);
             }
-            tm.field_S = null;
+            MarkerSlider.field_S = null;
             ph.field_n = ro.field_b.a();
             ph.field_n.c();
             nh.a(SoftwareRasterizer.field_d * 2 / 3, 64, 0, 0, 126, SoftwareRasterizer.field_j);
             SoftwareRasterizer.a(var28, var2, var3);
             SoftwareRasterizer.b(wi.field_f);
             pb.field_n = null;
-            JaggrabDownloader.field_a = (wo.field_c.field_F - jh.field_O.field_F) / 2 + 434;
-            bn.field_Q = (wo.field_c.field_E - jh.field_O.field_E) / 2 + 390;
-            ui.field_b = (wo.field_c.field_E - jh.field_O.field_E) / 2 + 390;
-            sd.field_K = 231 + (wo.field_c.field_F - jh.field_O.field_F) / 2;
+            JaggrabDownloader.field_a = (wo.field_c.field_F - AccountChoicePanel.field_O.field_F) / 2 + 434;
+            DraggableWidget.field_Q = (wo.field_c.field_E - AccountChoicePanel.field_O.field_E) / 2 + 390;
+            ui.field_b = (wo.field_c.field_E - AccountChoicePanel.field_O.field_E) / 2 + 390;
+            sd.field_K = 231 + (wo.field_c.field_F - AccountChoicePanel.field_O.field_F) / 2;
           }
           if (qf.field_c == null) {
             return;
           }
           if (null != FullscreenFocusCanvas.field_d &&
-            null != kc.field_r) {
+            null != EmailConfirmationValidator.field_r) {
             var29 = SoftwareRasterizer.field_k;
             var2Lifetime1 = SoftwareRasterizer.field_j;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.a(wi.field_f);
             var15 = sd.a(jm.field_p, 93, new String[]{wp.field_b[gb.field_c]});
-            var5 = kc.field_r.getWrappedWidth(var15, mp.field_f);
-            var6Lifetime1 = kc.field_r.paragraphHeight(var15, mp.field_f, kc.field_r.maxAscent + kc.field_r.maxDescent);
+            var5 = EmailConfirmationValidator.field_r.getWrappedWidth(var15, mp.field_f);
+            var6Lifetime1 = EmailConfirmationValidator.field_r.paragraphHeight(var15, mp.field_f, EmailConfirmationValidator.field_r.maxAscent + EmailConfirmationValidator.field_r.maxDescent);
             var7Lifetime1 = (mp.field_f - var5) / 2 + bl.field_c;
             var5 += 6;
-            var8 = (vp.field_Lb - var6Lifetime1) / 2 + cl.field_d;
+            var8 = (VerticalScrollbar.field_Lb - var6Lifetime1) / 2 + cl.field_d;
             var7Lifetime1 -= 3;
             if (0 > var7Lifetime1) {
               var9_int = -var7Lifetime1;
@@ -230,7 +230,7 @@ final class mc extends IntrusiveNode {
             FullscreenFocusCanvas.field_d.d();
             var9 = new Sprite(FullscreenFocusCanvas.field_d.field_A, FullscreenFocusCanvas.field_d.field_B);
             var9.c();
-            kc.field_r.drawParagraph(var15, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.maxAscent + kc.field_r.maxDescent);
+            EmailConfirmationValidator.field_r.drawParagraph(var15, bl.field_c, cl.field_d, mp.field_f, VerticalScrollbar.field_Lb, 16777215, -1, 1, 1, EmailConfirmationValidator.field_r.maxAscent + EmailConfirmationValidator.field_r.maxDescent);
             de.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
             FullscreenFocusCanvas.field_d.c();
             var9.b(0, 0);
@@ -243,7 +243,7 @@ final class mc extends IntrusiveNode {
             SoftwareRasterizer.b(wi.field_f);
           }
           if (IntrusiveNode.field_i != null &&
-            qe.field_A != null) {
+            QuickChatCategory.field_A != null) {
             var30 = SoftwareRasterizer.field_k;
             var2Lifetime2 = SoftwareRasterizer.field_j;
             var3Lifetime2 = SoftwareRasterizer.field_d;
@@ -252,7 +252,7 @@ final class mc extends IntrusiveNode {
             var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
             IntrusiveNode.field_i = null;
             var17.c();
-            qe.field_A.drawParagraph(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.maxAscent + qe.field_A.maxDescent);
+            QuickChatCategory.field_A.drawParagraph(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, QuickChatCategory.field_A.maxAscent + QuickChatCategory.field_A.maxDescent);
             de.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
             qf.field_c.c();
             var17.b(199 - qf.field_c.field_D, -qf.field_c.field_y + 83);
@@ -260,19 +260,19 @@ final class mc extends IntrusiveNode {
             SoftwareRasterizer.b(wi.field_f);
           }
           if (null != jf.field_a &&
-            qe.field_A != null) {
+            QuickChatCategory.field_A != null) {
             var31 = SoftwareRasterizer.field_k;
             var2Lifetime3 = SoftwareRasterizer.field_j;
             var3Lifetime3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.a(wi.field_f);
-            var4 = 6 + qe.field_A.getWrappedWidth(ri.field_i, 640);
+            var4 = 6 + QuickChatCategory.field_A.getWrappedWidth(ri.field_i, 640);
             var5Lifetime1 = jf.field_a.field_A + var4 + 20;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = var6Lifetime2 - (-jf.field_a.field_A - 20);
             qf.field_c.c();
-            qe.field_A.drawText(ri.field_i, -qf.field_c.field_D + var7Lifetime2, 155 - qf.field_c.field_y + qe.field_A.maxAscent + qe.field_A.maxDescent, 16777215, -1);
+            QuickChatCategory.field_A.drawText(ri.field_i, -qf.field_c.field_D + var7Lifetime2, 155 - qf.field_c.field_y + QuickChatCategory.field_A.maxAscent + QuickChatCategory.field_A.maxDescent, 16777215, -1);
             de.a(-qf.field_c.field_D + (var7Lifetime2 - 4), 155 - qf.field_c.field_y, 1, qf.field_c, var4, -1, 3, 50);
-            var8Lifetime1 = 155 - qf.field_c.field_y - (-qe.field_A.maxDescent - qe.field_A.maxAscent + (-3 + jf.field_a.field_B)) / 2;
+            var8Lifetime1 = 155 - qf.field_c.field_y - (-QuickChatCategory.field_A.maxDescent - QuickChatCategory.field_A.maxAscent + (-3 + jf.field_a.field_B)) / 2;
             jf.field_a.b(var6Lifetime2 - qf.field_c.field_D, var8Lifetime1);
             SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.b(wi.field_f);
@@ -284,8 +284,8 @@ final class mc extends IntrusiveNode {
           if (go.field_i != null) {
             go.field_i.b(0, 0);
           }
-          if (jc.field_a != null) {
-            jc.field_a.b(0, 0);
+          if (SpriteCheckboxPainter.field_a != null) {
+            SpriteCheckboxPainter.field_a.b(0, 0);
           }
           if (param0 != 12) {
             var11 = (Random) null;
@@ -296,16 +296,16 @@ final class mc extends IntrusiveNode {
             ni.field_m.b(0, 0);
           }
           if (null != wo.field_c &&
-            jh.field_O != null) {
+            AccountChoicePanel.field_O != null) {
             wo.field_c.b(231, 390);
             var1 = ro.field_b;
-            if (a.field_I.field_j == 0) {
+            if (NameSuggestionsPanel.field_I.field_j == 0) {
               var1 = ph.field_n;
             }
             var1.b(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = qk.field_e;
-            if (a.field_I.field_j == 0) {
+            if (NameSuggestionsPanel.field_I.field_j == 0) {
               stackIn_52_2 = 4;
             } else {
               stackIn_52_2 = 3;
@@ -323,38 +323,38 @@ final class mc extends IntrusiveNode {
             }
             stackIn_57_0 = ui.field_b;
             stackIn_57_1 = sd.field_K;
-            stackIn_58_2 = (a.field_I.field_j == 0);
+            stackIn_58_2 = (NameSuggestionsPanel.field_I.field_j == 0);
             r.a(stackIn_57_0, stackIn_57_1, stackIn_58_2, param0 ^ -44);
           }
           if (wo.field_c != null &&
-            jh.field_O != null) {
+            AccountChoicePanel.field_O != null) {
             wo.field_c.b(434, 390);
-            ka.field_P.b(0, 0);
-            if (a.field_I.field_j == 1) {
+            ResizableModalPanel.field_P.b(0, 0);
+            if (NameSuggestionsPanel.field_I.field_j == 1) {
               nh.a(wo.field_c.field_E * 7 / 12, 64, 436, 392, 121, wo.field_c.field_F - 4);
             }
-            stackIn_66_0 = bn.field_Q;
+            stackIn_66_0 = DraggableWidget.field_Q;
             stackIn_66_1 = JaggrabDownloader.field_a;
-            stackIn_67_2 = (a.field_I.field_j == 1);
+            stackIn_67_2 = (NameSuggestionsPanel.field_I.field_j == 1);
             r.a(stackIn_66_0, stackIn_66_1, stackIn_67_2, -40);
           }
-          if (gp.field_Kb != null) {
-            var1_int = 357 - gp.field_Kb.field_B / 2;
-            gp.field_Kb.b(-gp.field_Kb.field_A + 269, var1_int);
+          if (ScrollContainer.field_Kb != null) {
+            var1_int = 357 - ScrollContainer.field_Kb.field_B / 2;
+            ScrollContainer.field_Kb.b(-ScrollContainer.field_Kb.field_A + 269, var1_int);
             hf.field_m.b(586, var1_int);
             if (bg.field_k > var1_int &&
-              gp.field_Kb.field_E + var1_int > bg.field_k) {
+              ScrollContainer.field_Kb.field_E + var1_int > bg.field_k) {
               var2Lifetime5 = (40 * wd.b(qk.field_e << 4, 0) >> 16) + 40;
               if (var2Lifetime5 > 0) {
-                if (ProxyAuthenticationException.field_d > -gp.field_Kb.field_F + 269 &&
+                if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&
                   ProxyAuthenticationException.field_d < 269) {
-                  gp.field_Kb.b(269 - (gp.field_Kb.field_A + 1), var1_int - 1, var2Lifetime5);
-                  gp.field_Kb.b(269 + (-gp.field_Kb.field_A + 1), var1_int - 1, var2Lifetime5);
-                  gp.field_Kb.b(268 - gp.field_Kb.field_A, var1_int + 1, var2Lifetime5);
-                  gp.field_Kb.b(1 + (-gp.field_Kb.field_A + 269), 1 + var1_int, var2Lifetime5);
+                  ScrollContainer.field_Kb.b(269 - (ScrollContainer.field_Kb.field_A + 1), var1_int - 1, var2Lifetime5);
+                  ScrollContainer.field_Kb.b(269 + (-ScrollContainer.field_Kb.field_A + 1), var1_int - 1, var2Lifetime5);
+                  ScrollContainer.field_Kb.b(268 - ScrollContainer.field_Kb.field_A, var1_int + 1, var2Lifetime5);
+                  ScrollContainer.field_Kb.b(1 + (-ScrollContainer.field_Kb.field_A + 269), 1 + var1_int, var2Lifetime5);
                 } else {
                   if (ProxyAuthenticationException.field_d > 586) {
-                    if (gp.field_Kb.field_F + 586 <= ProxyAuthenticationException.field_d) {
+                    if (ScrollContainer.field_Kb.field_F + 586 <= ProxyAuthenticationException.field_d) {
                       no.e(param0 - 19320);
                       li.field_a[ae.field_b].b(269, 340);
                       return;

@@ -98,16 +98,16 @@ final class bi {
         field_d = null;
     }
 
-    final static tg b(int param0) {
+    final static UiTheme b(int param0) {
         if (param0 != 4) {
           bi.a(-128);
           if (null == JaggrabDownloader.field_c) {
-            JaggrabDownloader.field_c = new tg();
+            JaggrabDownloader.field_c = new UiTheme();
             JaggrabDownloader.field_c.a(4, he.field_d);
             JaggrabDownloader.field_c.field_p = 5;
             JaggrabDownloader.field_c.field_d = 7697781;
             JaggrabDownloader.field_c.field_q = 14;
-            JaggrabDownloader.field_c.field_e = 2763306;
+            JaggrabDownloader.field_c.tooltipBackgroundColor = 2763306;
             JaggrabDownloader.field_c.field_o = 0;
             JaggrabDownloader.field_c.field_g = 4;
             JaggrabDownloader.field_c.field_n = 6;
@@ -116,12 +116,12 @@ final class bi {
           return JaggrabDownloader.field_c;
         }
         if (null == JaggrabDownloader.field_c) {
-          JaggrabDownloader.field_c = new tg();
+          JaggrabDownloader.field_c = new UiTheme();
           JaggrabDownloader.field_c.a(4, he.field_d);
           JaggrabDownloader.field_c.field_p = 5;
           JaggrabDownloader.field_c.field_d = 7697781;
           JaggrabDownloader.field_c.field_q = 14;
-          JaggrabDownloader.field_c.field_e = 2763306;
+          JaggrabDownloader.field_c.tooltipBackgroundColor = 2763306;
           JaggrabDownloader.field_c.field_o = 0;
           JaggrabDownloader.field_c.field_g = 4;
           JaggrabDownloader.field_c.field_n = 6;

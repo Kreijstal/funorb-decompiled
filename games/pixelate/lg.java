@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg {
-    static ak field_c;
+    static SceneWidget field_c;
     static Sprite[] field_d;
     static String[] field_b;
     static int field_a;
@@ -24,7 +24,7 @@ final class lg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (3 == param2) {
-            stackIn_3_0 = ko.field_ib;
+            stackIn_3_0 = LoadingProgressDialog.field_ib;
             return stackIn_3_0;
           }
           if (param2 == 6) {
@@ -44,11 +44,11 @@ final class lg {
             return stackIn_18_0;
           }
           if (10 == param2) {
-            stackIn_22_0 = c.field_O;
+            stackIn_22_0 = EditableTextWidget.field_O;
             return stackIn_22_0;
           }
           if (param2 == 11) {
-            stackIn_26_0 = ve.field_Gb;
+            stackIn_26_0 = AccountNamePrompt.field_Gb;
             return stackIn_26_0;
           }
           if (param2 == 14) {
@@ -180,7 +180,7 @@ final class lg {
             stackIn_6_0 = cd.field_c;
             return stackIn_6_0;
           }
-          var3 = h.a((byte) -8);
+          var3 = Checkbox.a((byte) -8);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5.a(var2, -66)) {
@@ -239,12 +239,12 @@ final class lg {
     final static void a(sb param0, int param1, int param2, sb param3, int param4, int param5) {
         try {
           bd.field_c = param5;
-          tm.field_N = param3;
+          MarkerSlider.field_N = param3;
           if (param2 >= -114) {
             lg.a((byte) 57);
           }
-          ko.field_fb = param4;
-          hc.field_J = param1;
+          LoadingProgressDialog.field_fb = param4;
+          AccountTermsPanel.field_J = param1;
           AudioService.field_e = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

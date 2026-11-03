@@ -31,7 +31,7 @@ final class al {
             to.field_r.p(-92);
           }
           nf.field_b = new be(param0, param2, false, true, true);
-          ph.field_l.c(nf.field_b, -120);
+          ph.field_l.transitionToContent(nf.field_b, -120);
           if (param1 > -30) {
             field_d = (String) null;
           }
@@ -102,7 +102,7 @@ final class al {
         var2 = 20 / ((param0 + 63) / 56);
         var3 = 32 * this.field_f.field_i;
         var4 = 32 * this.field_f.field_a;
-        if (oa.field_j == 0) {
+        if (DateOfBirthValidator.field_j == 0) {
           this.field_e = this.field_e + this.field_n;
           if (this.field_e > var4 + var3 ||
             0 > this.field_e) {
@@ -237,7 +237,7 @@ final class al {
         if (var5 != 0) {
           var16 += 5;
         }
-        if (jc.field_d) {
+        if (SpriteCheckboxPainter.field_d) {
           fieldTemp$0 = this.field_b + 1;
           this.field_b = this.field_b + 1;
           if (fieldTemp$0 >= 50) {

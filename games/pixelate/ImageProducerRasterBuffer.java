@@ -35,7 +35,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             var3 = (String) null;
             ImageProducerRasterBuffer.a(54, (String) null);
           }
-          stackIn_5_0 = (fh.a(param1, -99) != null);
+          stackIn_5_0 = (DisplayNameForm.a(param1, -99) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,23 +222,23 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               field_m = (String) null;
             }
             if (0 < oo.field_b) {
-              jh.a(2, param0, param7, param4);
+              AccountChoicePanel.a(2, param0, param7, param4);
             }
-            nk.field_e.field_Bb = 1;
+            nk.field_e.horizontalAlignment = 1;
             nk.field_e.field_C = ArchiveIndex.field_l.field_C;
             if (vn.field_g > 0) {
-              ic.a(param0, param7, 3, param4);
+              AccountNoticeDialog.a(param0, param7, 3, param4);
             }
-            if (h.field_W > 0) {
+            if (Checkbox.field_W > 0) {
               no.a(param1, param6 + 28363, param0, param4, param7);
             }
             if (bm.field_o &&
               io.field_c.field_ec <= io.field_c.field_mc) {
               jm.field_b.field_Ib.field_cb = fo.field_m;
-              oc.field_O.field_rb = false;
+              StripedProgressBar.field_O.field_rb = false;
               wd.a(jm.field_b.field_Fb, false);
             } else {
-              oc.field_O.field_rb = true;
+              StripedProgressBar.field_O.field_rb = true;
               jm.field_b.field_Ib.field_cb = null;
               la.a(70, param0, jm.field_b, param8, param3);
             }
@@ -248,80 +248,80 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             if (param6 != -28362) {
               field_m = (String) null;
               if (0 < oo.field_b) {
-                jh.a(2, param0, param7, param4);
+                AccountChoicePanel.a(2, param0, param7, param4);
               }
-              nk.field_e.field_Bb = 1;
+              nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (vn.field_g > 0) {
-                ic.a(param0, param7, 3, param4);
+                AccountNoticeDialog.a(param0, param7, 3, param4);
               }
-              if (h.field_W > 0) {
+              if (Checkbox.field_W > 0) {
                 no.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (bm.field_o &&
                 io.field_c.field_ec <= io.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
-                oc.field_O.field_rb = false;
+                StripedProgressBar.field_O.field_rb = false;
                 wd.a(jm.field_b.field_Fb, false);
               } else {
-                oc.field_O.field_rb = true;
+                StripedProgressBar.field_O.field_rb = true;
                 jm.field_b.field_Ib.field_cb = null;
                 la.a(70, param0, jm.field_b, param8, param3);
               }
             } else {
               if (0 < oo.field_b) {
-                jh.a(2, param0, param7, param4);
-                nk.field_e.field_Bb = 1;
+                AccountChoicePanel.a(2, param0, param7, param4);
+                nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
-                  ic.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.a(param0, param7, 3, param4);
                 }
-                if (h.field_W > 0) {
+                if (Checkbox.field_W > 0) {
                   no.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (bm.field_o &&
                   io.field_c.field_ec <= io.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
-                  oc.field_O.field_rb = false;
+                  StripedProgressBar.field_O.field_rb = false;
                   wd.a(jm.field_b.field_Fb, false);
                 } else {
-                  oc.field_O.field_rb = true;
+                  StripedProgressBar.field_O.field_rb = true;
                   jm.field_b.field_Ib.field_cb = null;
                   la.a(70, param0, jm.field_b, param8, param3);
                 }
               } else {
-                nk.field_e.field_Bb = 1;
+                nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
-                  ic.a(param0, param7, 3, param4);
-                  if (h.field_W > 0) {
+                  AccountNoticeDialog.a(param0, param7, 3, param4);
+                  if (Checkbox.field_W > 0) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (bm.field_o &&
                     io.field_c.field_ec <= io.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
-                    oc.field_O.field_rb = false;
+                    StripedProgressBar.field_O.field_rb = false;
                     wd.a(jm.field_b.field_Fb, false);
                   } else {
-                    oc.field_O.field_rb = true;
+                    StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
                   }
                 } else {
-                  if (h.field_W > 0) {
+                  if (Checkbox.field_W > 0) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (!bm.field_o) {
-                    oc.field_O.field_rb = true;
+                    StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
                   } else {
                     if (io.field_c.field_ec <= io.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
-                      oc.field_O.field_rb = false;
+                      StripedProgressBar.field_O.field_rb = false;
                       wd.a(jm.field_b.field_Fb, false);
                     } else {
-                      oc.field_O.field_rb = true;
+                      StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
                       la.a(70, param0, jm.field_b, param8, param3);
                     }
@@ -336,10 +336,10 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
               if (io.field_c != null) {
-                hn.a((byte) 32, false);
+                DebouncedValidator.a((byte) 32, false);
               } else {
-                if (bn.field_S != null) {
-                  hn.a((byte) 32, true);
+                if (DraggableWidget.field_S != null) {
+                  DebouncedValidator.a((byte) 32, true);
                 } else {
                   PacketBuffer.b(false);
                 }
@@ -352,23 +352,23 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 field_m = (String) null;
               }
               if (0 < oo.field_b) {
-                jh.a(2, param0, param7, param4);
+                AccountChoicePanel.a(2, param0, param7, param4);
               }
-              nk.field_e.field_Bb = 1;
+              nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (vn.field_g > 0) {
-                ic.a(param0, param7, 3, param4);
+                AccountNoticeDialog.a(param0, param7, 3, param4);
               }
-              if (h.field_W > 0) {
+              if (Checkbox.field_W > 0) {
                 no.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (bm.field_o &&
                 io.field_c.field_ec <= io.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
-                oc.field_O.field_rb = false;
+                StripedProgressBar.field_O.field_rb = false;
                 wd.a(jm.field_b.field_Fb, false);
               } else {
-                oc.field_O.field_rb = true;
+                StripedProgressBar.field_O.field_rb = true;
                 jm.field_b.field_Ib.field_cb = null;
                 la.a(70, param0, jm.field_b, param8, param3);
               }
@@ -378,62 +378,62 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               if (param6 != -28362) {
                 field_m = (String) null;
                 if (0 < oo.field_b) {
-                  jh.a(2, param0, param7, param4);
+                  AccountChoicePanel.a(2, param0, param7, param4);
                 }
-                nk.field_e.field_Bb = 1;
+                nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
-                  ic.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.a(param0, param7, 3, param4);
                 }
-                if (h.field_W > 0) {
+                if (Checkbox.field_W > 0) {
                   no.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (bm.field_o &&
                   io.field_c.field_ec <= io.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
-                  oc.field_O.field_rb = false;
+                  StripedProgressBar.field_O.field_rb = false;
                   wd.a(jm.field_b.field_Fb, false);
                 } else {
-                  oc.field_O.field_rb = true;
+                  StripedProgressBar.field_O.field_rb = true;
                   jm.field_b.field_Ib.field_cb = null;
                   la.a(70, param0, jm.field_b, param8, param3);
                 }
               } else {
                 if (0 < oo.field_b) {
-                  jh.a(2, param0, param7, param4);
+                  AccountChoicePanel.a(2, param0, param7, param4);
                 }
-                nk.field_e.field_Bb = 1;
+                nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
-                  ic.a(param0, param7, 3, param4);
-                  if (h.field_W > 0) {
+                  AccountNoticeDialog.a(param0, param7, 3, param4);
+                  if (Checkbox.field_W > 0) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (bm.field_o &&
                     io.field_c.field_ec <= io.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
-                    oc.field_O.field_rb = false;
+                    StripedProgressBar.field_O.field_rb = false;
                     wd.a(jm.field_b.field_Fb, false);
                   } else {
-                    oc.field_O.field_rb = true;
+                    StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
                   }
                 } else {
-                  if (h.field_W > 0) {
+                  if (Checkbox.field_W > 0) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (!bm.field_o) {
-                    oc.field_O.field_rb = true;
+                    StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
                   } else {
                     if (io.field_c.field_ec <= io.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
-                      oc.field_O.field_rb = false;
+                      StripedProgressBar.field_O.field_rb = false;
                       wd.a(jm.field_b.field_Fb, false);
                     } else {
-                      oc.field_O.field_rb = true;
+                      StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
                       la.a(70, param0, jm.field_b, param8, param3);
                     }
@@ -445,10 +445,10 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             if (ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
               if (io.field_c != null) {
-                hn.a((byte) 32, false);
+                DebouncedValidator.a((byte) 32, false);
               } else {
-                if (bn.field_S != null) {
-                  hn.a((byte) 32, true);
+                if (DraggableWidget.field_S != null) {
+                  DebouncedValidator.a((byte) 32, true);
                 } else {
                   PacketBuffer.b(false);
                 }
@@ -461,23 +461,23 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 field_m = (String) null;
               }
               if (0 < oo.field_b) {
-                jh.a(2, param0, param7, param4);
+                AccountChoicePanel.a(2, param0, param7, param4);
               }
-              nk.field_e.field_Bb = 1;
+              nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (vn.field_g > 0) {
-                ic.a(param0, param7, 3, param4);
+                AccountNoticeDialog.a(param0, param7, 3, param4);
               }
-              if (h.field_W > 0) {
+              if (Checkbox.field_W > 0) {
                 no.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (bm.field_o &&
                 io.field_c.field_ec <= io.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
-                oc.field_O.field_rb = false;
+                StripedProgressBar.field_O.field_rb = false;
                 wd.a(jm.field_b.field_Fb, false);
               } else {
-                oc.field_O.field_rb = true;
+                StripedProgressBar.field_O.field_rb = true;
                 jm.field_b.field_Ib.field_cb = null;
                 la.a(70, param0, jm.field_b, param8, param3);
               }
@@ -487,80 +487,80 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               if (param6 != -28362) {
                 field_m = (String) null;
                 if (0 < oo.field_b) {
-                  jh.a(2, param0, param7, param4);
+                  AccountChoicePanel.a(2, param0, param7, param4);
                 }
-                nk.field_e.field_Bb = 1;
+                nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
-                  ic.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.a(param0, param7, 3, param4);
                 }
-                if (h.field_W > 0) {
+                if (Checkbox.field_W > 0) {
                   no.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (bm.field_o &&
                   io.field_c.field_ec <= io.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
-                  oc.field_O.field_rb = false;
+                  StripedProgressBar.field_O.field_rb = false;
                   wd.a(jm.field_b.field_Fb, false);
                 } else {
-                  oc.field_O.field_rb = true;
+                  StripedProgressBar.field_O.field_rb = true;
                   jm.field_b.field_Ib.field_cb = null;
                   la.a(70, param0, jm.field_b, param8, param3);
                 }
               } else {
                 if (0 < oo.field_b) {
-                  jh.a(2, param0, param7, param4);
-                  nk.field_e.field_Bb = 1;
+                  AccountChoicePanel.a(2, param0, param7, param4);
+                  nk.field_e.horizontalAlignment = 1;
                   nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (vn.field_g > 0) {
-                    ic.a(param0, param7, 3, param4);
+                    AccountNoticeDialog.a(param0, param7, 3, param4);
                   }
-                  if (h.field_W > 0) {
+                  if (Checkbox.field_W > 0) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (bm.field_o &&
                     io.field_c.field_ec <= io.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
-                    oc.field_O.field_rb = false;
+                    StripedProgressBar.field_O.field_rb = false;
                     wd.a(jm.field_b.field_Fb, false);
                   } else {
-                    oc.field_O.field_rb = true;
+                    StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
                   }
                 } else {
-                  nk.field_e.field_Bb = 1;
+                  nk.field_e.horizontalAlignment = 1;
                   nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (vn.field_g > 0) {
-                    ic.a(param0, param7, 3, param4);
-                    if (h.field_W > 0) {
+                    AccountNoticeDialog.a(param0, param7, 3, param4);
+                    if (Checkbox.field_W > 0) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
                     }
                     if (bm.field_o &&
                       io.field_c.field_ec <= io.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
-                      oc.field_O.field_rb = false;
+                      StripedProgressBar.field_O.field_rb = false;
                       wd.a(jm.field_b.field_Fb, false);
                     } else {
-                      oc.field_O.field_rb = true;
+                      StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
                       la.a(70, param0, jm.field_b, param8, param3);
                     }
                   } else {
-                    if (h.field_W > 0) {
+                    if (Checkbox.field_W > 0) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
                     }
                     if (!bm.field_o) {
-                      oc.field_O.field_rb = true;
+                      StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
                       la.a(70, param0, jm.field_b, param8, param3);
                     } else {
                       if (io.field_c.field_ec <= io.field_c.field_mc) {
                         jm.field_b.field_Ib.field_cb = fo.field_m;
-                        oc.field_O.field_rb = false;
+                        StripedProgressBar.field_O.field_rb = false;
                         wd.a(jm.field_b.field_Fb, false);
                       } else {
-                        oc.field_O.field_rb = true;
+                        StripedProgressBar.field_O.field_rb = true;
                         jm.field_b.field_Ib.field_cb = null;
                         la.a(70, param0, jm.field_b, param8, param3);
                       }

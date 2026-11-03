@@ -4,7 +4,7 @@
 abstract class de {
     int field_d;
     int field_i;
-    pf field_g;
+    MenuInputState field_g;
     int field_a;
     static int field_j;
     int[] field_k;
@@ -19,7 +19,7 @@ abstract class de {
 
     int b(int param0, int param1) {
         if (this.field_l == 6 &&
-          !jg.a((byte) 88)) {
+          !ArrayWidgetContainer.a((byte) 88)) {
           if (param1 < 2) {
             return this.field_d;
           }
@@ -123,7 +123,7 @@ abstract class de {
     abstract void a(int param0);
 
     final void a(int param0, byte param1, int param2) {
-        fi.a(320, param0, param2 + 290, oc.field_S);
+        fi.a(320, param0, param2 + 290, StripedProgressBar.field_S);
         if (param1 >= -82) {
           field_e = (aa[]) null;
         }
@@ -203,7 +203,7 @@ abstract class de {
         if (param0 > -116) {
           this.b((byte) 11);
         }
-        this.a((byte) 35, oc.field_S, param1, param2);
+        this.a((byte) 35, StripedProgressBar.field_S, param1, param2);
     }
 
     void a(int param0, int param1, boolean param2) {
@@ -258,7 +258,7 @@ abstract class de {
         if (!param1) {
           this.field_m = -106;
         }
-        this.a(PacketBuffer.field_o[7], oc.field_W, (byte) 109, param0);
+        this.a(PacketBuffer.field_o[7], StripedProgressBar.field_W, (byte) 109, param0);
     }
 
     final void a(String param0, Sprite param1, byte param2, boolean param3) {
@@ -279,14 +279,14 @@ abstract class de {
 
     int a(int param0, boolean param1) {
         if (this.field_l == 5 &&
-          !jg.a((byte) 78)) {
+          !ArrayWidgetContainer.a((byte) 78)) {
           return 3 <= param0 ? 380 : 200 + 200 * param0;
         }
         if (param1) {
           return 50;
         }
         if (this.field_l == 6 &&
-          !jg.a((byte) 77)) {
+          !ArrayWidgetContainer.a((byte) 77)) {
           return 2 <= param0 ? 380 : param0 * 240 + 300;
         }
         return this.field_a;
@@ -306,7 +306,7 @@ abstract class de {
           return;
         }
         if (this.field_l == 6 &&
-          !jg.a((byte) 84)) {
+          !ArrayWidgetContainer.a((byte) 84)) {
           this.a((byte) 81);
         } else {
           this.field_g.a((byte) -48);
@@ -318,11 +318,11 @@ abstract class de {
           this.field_a = -74;
         }
         if (this.field_l == 5 &&
-          !jg.a((byte) 125)) {
+          !ArrayWidgetContainer.a((byte) 125)) {
           return param0 >= 3 ? 260 : 200 * param0 + 40;
         }
         if (6 == this.field_l &&
-          !jg.a((byte) 66)) {
+          !ArrayWidgetContainer.a((byte) 66)) {
           return 2 <= param0 ? 260 : 100 + 240 * param0;
         }
         return this.field_m;
@@ -357,7 +357,7 @@ abstract class de {
     void a(int[] param0, byte param1) {
         try {
           this.field_k = param0;
-          this.field_g = new pf(this.field_k.length);
+          this.field_g = new MenuInputState(this.field_k.length);
           if (param1 != -24) {
             this.field_d = 119;
           }
@@ -416,7 +416,7 @@ abstract class de {
                   MidiPcmStream.field_t == 2 ||
                   nc.field_a == 4 ||
                   MidiPcmStream.field_t == 4)) {
-                  param0 = mg.field_k;
+                  param0 = TextFieldValidator.field_k;
                 }
               } else {
                 param0 = FullscreenFocusCanvas.field_b;
@@ -433,7 +433,7 @@ abstract class de {
           var10 = this.b(-98, param2);
           if (var6_int == 20 ||
             21 == var6_int) {
-            var7 = 120 + h.field_T;
+            var7 = 120 + Checkbox.field_T;
           }
           var11 = -128 % ((param4 - 21) / 46);
           var12 = -var7 + var9 + var8 >> 1;
@@ -456,10 +456,10 @@ abstract class de {
             var6_int != 21) {
             return;
           }
-          var12 = var12 + h.field_T;
+          var12 = var12 + Checkbox.field_T;
           SoftwareRasterizer.a(var12, var10 + var13 / 2 - 1, 121, 2, var14);
           if (var6_int == 20) {
-            stackIn_45_0 = 120 * ia.field_h / 256;
+            stackIn_45_0 = 120 * LinkButtonPainter.field_h / 256;
           } else {
             stackIn_45_0 = SocketJs5Transport.field_u * 120 / 256;
           }
@@ -537,13 +537,13 @@ abstract class de {
         boolean stackIn_14_0 = false;
         var3 = Pixelate.field_H ? 1 : 0;
         if (!dj.field_c &&
-          !ia.field_d) {
+          !LinkButtonPainter.field_d) {
           while (bh.$cfr$intArgs$b$c4997cb15529(121)) {
             if (ke.field_a == 13) {
               this.c((byte) -16);
               continue;
             }
-            if (bc.field_m[82] &&
+            if (EmailValidator.field_m[82] &&
               ke.field_a == 11) {
               stackIn_14_0 = !(pm.field_u);
               pm.field_u = stackIn_14_0;
@@ -582,7 +582,7 @@ abstract class de {
         int var8;
         int var9;
         var9 = Pixelate.field_H ? 1 : 0;
-        if (this.field_g.a(51)) {
+        if (this.field_g.isActivated(51)) {
           mc.a(128, -120);
         }
         var4 = this.field_k[param0];
@@ -595,15 +595,15 @@ abstract class de {
             if (29 != var6) {
               if (var6 != 32) {
                 if (var6 == 28) {
-                  if (this.field_g.a(74)) {
+                  if (this.field_g.isActivated(74)) {
                     var6 = param2 ? 1 : 0;
                     la.a(MidiPcmStream.field_t, 16, var6 != 0, -25528);
                   }
                 } else {
                   if (1 == var6) {
-                    if (!(!this.field_g.a(38))) {
-                      if (jg.a((byte) 66)) {
-                        ii.a(param2, 0, -4, (byte) 91, te.field_Ib);
+                    if (!(!this.field_g.isActivated(38))) {
+                      if (ArrayWidgetContainer.a((byte) 66)) {
+                        ii.a(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
                       } else {
                         var6 = param2 ? 1 : 0;
                         la.a(MidiPcmStream.field_t, -4, var6 != 0, -25528);
@@ -612,7 +612,7 @@ abstract class de {
                     break regionExit1;
                   }
                   if (var6 == 2) {
-                    if (!(!this.field_g.a(86))) {
+                    if (!(!this.field_g.isActivated(86))) {
                       var6 = param2 ? 1 : 0;
                       stackIn_74_0 = (!gq.d(107)) ? 0 : 12;
                       la.a(stackIn_74_0, -1, var6 != 0, -25528);
@@ -620,14 +620,14 @@ abstract class de {
                     break regionExit1;
                   }
                   if (var6 == 7) {
-                    if (!(!this.field_g.a(91))) {
+                    if (!(!this.field_g.isActivated(91))) {
                       var6 = param2 ? 1 : 0;
                       la.a(MidiPcmStream.field_t, 0, var6 != 0, -25528);
                     }
                     break regionExit1;
                   }
                   if (24 == var6) {
-                    if (!(!this.field_g.a(84))) {
+                    if (!(!this.field_g.isActivated(84))) {
                       var6 = param2 ? 1 : 0;
                       la.a(MidiPcmStream.field_t, 12, var6 != 0, -25528);
                       ce.field_a = true;
@@ -635,26 +635,26 @@ abstract class de {
                     break regionExit1;
                   }
                   if (var6 == 25) {
-                    if (this.field_g.a(74) &&
+                    if (this.field_g.isActivated(74) &&
                       this.c(-119, param0)) {
-                      ((fk) (oc.field_H[7])).a(param2, 97);
+                      ((fk) (StripedProgressBar.field_H[7])).a(param2, 97);
                     }
                   } else {
                     if (var6 == 26) {
-                      if (this.field_g.a(20) &&
+                      if (this.field_g.isActivated(20) &&
                         this.c(-128, param0)) {
-                        ((fk) (oc.field_H[7])).b(false, param2);
+                        ((fk) (StripedProgressBar.field_H[7])).b(false, param2);
                       }
                     } else {
                       if (var6 == 22) {
-                        if (this.field_g.a(23)) {
+                        if (this.field_g.isActivated(23)) {
                           var6 = param2 ? 1 : 0;
                           la.a(MidiPcmStream.field_t, 8, var6 != 0, -25528);
                         }
                       } else {
                         if (var6 == 5) {
-                          if (!(!this.field_g.a(45))) {
-                            ((fk) (oc.field_H[7])).a(2, 1, param2);
+                          if (!(!this.field_g.isActivated(45))) {
+                            ((fk) (StripedProgressBar.field_H[7])).a(2, 1, param2);
                             var6 = param2 ? 1 : 0;
                             la.a(MidiPcmStream.field_t, 7, var6 != 0, -25528);
                           }
@@ -662,14 +662,14 @@ abstract class de {
                         }
                         if (8 != var6) {
                           if (var6 == 4) {
-                            if (!(!this.field_g.a(26))) {
+                            if (!(!this.field_g.isActivated(26))) {
                               var6 = param2 ? 1 : 0;
                               la.a(MidiPcmStream.field_t, 6, var6 != 0, -25528);
                             }
                             break regionExit1;
                           }
                           if (3 == var6) {
-                            if (!(!this.field_g.a(62))) {
+                            if (!(!this.field_g.isActivated(62))) {
                               if (this.field_l != 9) {
                                 var6 = param2 ? 1 : 0;
                                 la.a(MidiPcmStream.field_t, 5, var6 != 0, -25528);
@@ -684,17 +684,17 @@ abstract class de {
                           if (20 == var6) {
                             var5 = 0;
                             if (this.field_g.d((byte) -111) &&
-                              ia.field_h > 0) {
+                              LinkButtonPainter.field_h > 0) {
                               var5 = 1;
                               nk.a((byte) 93, 0);
                             }
                             if (this.field_g.d(-111) &&
-                              ia.field_h < 256) {
+                              LinkButtonPainter.field_h < 256) {
                               var5 = 1;
                               nk.a((byte) 93, 256);
                             }
                             if (this.field_g.c((byte) 35)) {
-                              var6 = this.a(param0, (byte) 90) + this.a(param0, false) + (h.field_T - 120) >> 1;
+                              var6 = this.a(param0, (byte) 90) + this.a(param0, false) + (Checkbox.field_T - 120) >> 1;
                               var7_int = -var6 + ProxyAuthenticationException.field_d;
                               var8 = 256 * var7_int / 120;
                               var5 = 1;
@@ -709,12 +709,12 @@ abstract class de {
                               }
                             }
                             if (this.field_g.e(-97) &&
-                              ia.field_h > 0) {
+                              LinkButtonPainter.field_h > 0) {
                               var5 = 1;
                               MusicPatch.e(99);
                             }
                             if (this.field_g.c(102) &&
-                              ia.field_h < 256) {
+                              LinkButtonPainter.field_h < 256) {
                               var5 = 1;
                               tj.i(32);
                             }
@@ -726,22 +726,22 @@ abstract class de {
                           } else {
                             if (var6 == 21) {
                               if (this.field_g.d((byte) -94)) {
-                                jg.a(0, -114);
+                                ArrayWidgetContainer.a(0, -114);
                               }
                               if (this.field_g.d(64)) {
-                                jg.a(256, -54);
+                                ArrayWidgetContainer.a(256, -54);
                               }
                               if (this.field_g.c((byte) 35)) {
-                                var6 = -120 + (this.a(param0, (byte) 90) + (this.a(param0, false) + h.field_T)) >> 1;
+                                var6 = -120 + (this.a(param0, (byte) 90) + (this.a(param0, false) + Checkbox.field_T)) >> 1;
                                 var7_int = ProxyAuthenticationException.field_d - var6;
                                 var8 = var7_int * 256 / 120;
                                 if (var8 <= 0) {
-                                  jg.a(0, -50);
+                                  ArrayWidgetContainer.a(0, -50);
                                 } else {
                                   if (256 <= var8) {
-                                    jg.a(256, -63);
+                                    ArrayWidgetContainer.a(256, -63);
                                   } else {
-                                    jg.a(var8, -109);
+                                    ArrayWidgetContainer.a(var8, -109);
                                   }
                                 }
                               }
@@ -754,7 +754,7 @@ abstract class de {
                               break regionExit1;
                             }
                             if (var6 == 6) {
-                              if (this.field_g.a(68)) {
+                              if (this.field_g.isActivated(68)) {
                                 if (ib.field_f != null) {
                                   ln.a(33);
                                 } else {
@@ -767,7 +767,7 @@ abstract class de {
                             } else {
                               if (var6 != 9) {
                                 if (var6 == 11) {
-                                  if (!(!this.field_g.a(95))) {
+                                  if (!(!this.field_g.isActivated(95))) {
                                     ro.field_e.e(6);
                                     var6 = param2 ? 1 : 0;
                                     stackIn_162_0 = (!gq.d(71)) ? 0 : 12;
@@ -776,12 +776,12 @@ abstract class de {
                                   break regionExit1;
                                 }
                                 if (var6 == 13) {
-                                  if (!(!this.field_g.a(117))) {
-                                    if (md.field_Y) {
+                                  if (!(!this.field_g.isActivated(117))) {
+                                    if (ValidationHelpWidget.field_Y) {
                                       var6 = param2 ? 1 : 0;
                                       la.a(MidiPcmStream.field_t, -5, var6 != 0, -25528);
                                     }
-                                    if (!(!oa.field_i)) {
+                                    if (!(!DateOfBirthValidator.field_i)) {
                                       qj.a(false, 0, 11);
                                     }
                                   }
@@ -789,36 +789,36 @@ abstract class de {
                                 }
                                 switch (var6) {
                                   case 14:
-                                    if (!this.field_g.a(68)) {
+                                    if (!this.field_g.isActivated(68)) {
                                       break;
                                     }
                                     of.field_a = 0;
                                     break;
                                   case 15:
-                                    if (!this.field_g.a(30)) {
+                                    if (!this.field_g.isActivated(30)) {
                                       break;
                                     }
                                     of.field_a = 1;
                                     break;
                                   case 16:
-                                    if (this.field_g.a(32)) {
+                                    if (this.field_g.isActivated(32)) {
                                       of.field_a = 2;
                                     }
                                     break;
                                   case 17:
-                                    if (!this.field_g.a(109)) {
+                                    if (!this.field_g.isActivated(109)) {
                                       break;
                                     }
                                     d.field_c = 0;
                                     break;
                                   case 18:
-                                    if (!this.field_g.a(32)) {
+                                    if (!this.field_g.isActivated(32)) {
                                       break;
                                     }
                                     d.field_c = 1;
                                     break;
                                   case 23:
-                                    if (!this.field_g.a(106)) {
+                                    if (!this.field_g.isActivated(106)) {
                                       break;
                                     }
                                     if (this.field_l != 10) {
@@ -827,7 +827,7 @@ abstract class de {
                                         this.field_l != 6) {
                                         break;
                                       }
-                                      gi.a(te.field_Ib, this.field_l, (byte) -126);
+                                      gi.a(QuickChatMenu.field_Ib, this.field_l, (byte) -126);
                                       break;
                                     }
                                     stackIn_190_0 = null;
@@ -839,44 +839,44 @@ abstract class de {
                                     gi.a((String) (stackIn_190_0), stackIn_191_1, (byte) 79);
                                     break;
                                   case 33:
-                                    if (this.field_g.a(40)) {
+                                    if (this.field_g.isActivated(40)) {
                                       ((hq) (this)).b((byte) 12, param2);
                                     }
                                     break;
                                   default:
                                     break;
                                   case 27:
-                                    if (!this.field_g.a(29)) {
+                                    if (!this.field_g.isActivated(29)) {
                                       break;
                                     }
-                                    stackIn_208_0 = !(jc.field_d);
-                                    jc.field_d = stackIn_208_0;
-                                    if (!jc.field_d) {
+                                    stackIn_208_0 = !(SpriteCheckboxPainter.field_d);
+                                    SpriteCheckboxPainter.field_d = stackIn_208_0;
+                                    if (!SpriteCheckboxPainter.field_d) {
                                       PacketBuffer.field_o[27] = ef.field_c;
                                       break;
                                     }
                                     PacketBuffer.field_o[27] = IterableNodeHashTable.field_d;
                                     break;
                                   case 19:
-                                    if (this.field_g.a(77)) {
+                                    if (this.field_g.isActivated(77)) {
                                       d.a(0, AudioService.a(13867));
                                     }
                                     break;
                                   case 34:
-                                    if (this.field_g.a(28)) {
+                                    if (this.field_g.isActivated(28)) {
                                       ((hq) (this)).a(param2, -116);
                                     }
                                     break;
                                 }
                               } else {
-                                if (this.field_g.a(96)) {
+                                if (this.field_g.isActivated(96)) {
                                   ro.field_e.a(false, 250, param2);
                                 }
                               }
                             }
                           }
                         } else {
-                          if (this.field_g.a(59)) {
+                          if (this.field_g.isActivated(59)) {
                             var6 = nc.field_a;
                             var7_int = param2 ? 1 : 0;
                             la.a(MidiPcmStream.field_t, var6, var7_int != 0, -25528);
@@ -887,7 +887,7 @@ abstract class de {
                   }
                 }
               } else {
-                if (this.field_g.a(109)) {
+                if (this.field_g.isActivated(109)) {
                   ArchiveIndex.a(-3 + param0, (byte) 127);
                   var6 = param2 ? 1 : 0;
                   stackIn_61_0 = (!gq.d(90)) ? 0 : 12;
@@ -895,14 +895,14 @@ abstract class de {
                 }
               }
             } else {
-              if (this.field_g.a(6)) {
-                ((op) (oc.field_H[17])).f(76);
+              if (this.field_g.isActivated(6)) {
+                ((op) (StripedProgressBar.field_H[17])).f(76);
                 var6 = param2 ? 1 : 0;
                 la.a(MidiPcmStream.field_t, 17, var6 != 0, -25528);
               }
             }
           } else {
-            if (this.field_g.a(44)) {
+            if (this.field_g.isActivated(44)) {
               em.a((byte) -101);
               var6 = param2 ? 1 : 0;
               stackIn_52_0 = (gq.d(117)) ? 12 : 0;

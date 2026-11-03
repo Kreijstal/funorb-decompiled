@@ -21,7 +21,7 @@ final class gb {
         RuntimeException var3_ref = null;
         try {
           param1 = ub.a(param1, 0, "", (char)param2);
-          var3 = bc.b(param2 ^ 95, param1);
+          var3 = EmailValidator.b(param2 ^ 95, param1);
           stackIn_5_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,14 +73,14 @@ final class gb {
         if (param0 < 107) {
           field_d = -55;
         }
-        if (null != hc.field_M) {
-          var3 = hc.field_M.a((byte) 126, param1);
+        if (null != AccountTermsPanel.field_M) {
+          var3 = AccountTermsPanel.field_M.pollOffence((byte) 126, param1);
           if (var3 != -2) {
             if (var3 != -1) {
-              var4 = hc.field_M.l(2) ? 1 : 0;
-              cm.a(89, var4 != 0, hc.field_M.field_Ub, hc.field_M.k(123), var3, param2);
+              var4 = AccountTermsPanel.field_M.l(2) ? 1 : 0;
+              cm.a(89, var4 != 0, AccountTermsPanel.field_M.field_Ub, AccountTermsPanel.field_M.k(123), var3, param2);
             }
-            hc.field_M = null;
+            AccountTermsPanel.field_M = null;
             ArchiveProvider.a(116);
           }
         }

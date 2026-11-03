@@ -82,14 +82,14 @@ final class tj extends ah {
     }
 
     final static void h(int param0) {
-        uj.j(-705633312);
-        gj.field_V = true;
+        LobbyPlayer.j(-705633312);
+        NumericDateInputWidget.field_V = true;
         to.field_s = true;
         if (param0 != 20) {
           field_w = (String) null;
         }
         wa.field_c.e((byte) 54);
-        ko.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
+        LoadingProgressDialog.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, BitmapFont param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, byte param11, int param12, int param13, int param14) {
@@ -99,7 +99,7 @@ final class tj extends ah {
             tj.a((byte) 102, (java.awt.Component) null);
           }
           Sprite[] var17 = (Sprite[]) null;
-          da.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, qo.field_s, param7);
+          da.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
           ai.a(param1, param11 ^ 124);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
@@ -226,8 +226,8 @@ final class tj extends ah {
             return false;
           }
         }
-        var4 = gh.field_q[param2] + vp.field_Fb[param2] + uc.field_b[param2];
-        var5 = uc.field_b[param3] - (-vp.field_Fb[param3] - gh.field_q[param3]);
+        var4 = GradientOutlineTextPainter.field_q[param2] + VerticalScrollbar.field_Fb[param2] + TextWidgetPainter.field_b[param2];
+        var5 = TextWidgetPainter.field_b[param3] - (-VerticalScrollbar.field_Fb[param3] - GradientOutlineTextPainter.field_q[param3]);
         if (var4 < var5) {
           return true;
         }
@@ -242,9 +242,9 @@ final class tj extends ah {
 
     final static void i(int param0) {
         int var1 = 0;
-        if (ia.field_h < 224) {
-          var1 = ia.field_h % 32;
-          nk.a((byte) 93, ia.field_h + 32 - var1);
+        if (LinkButtonPainter.field_h < 224) {
+          var1 = LinkButtonPainter.field_h % 32;
+          nk.a((byte) 93, LinkButtonPainter.field_h + 32 - var1);
         } else {
           nk.a((byte) 93, 256);
         }

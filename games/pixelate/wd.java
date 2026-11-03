@@ -157,29 +157,29 @@ final class wd {
         }
     }
 
-    final static void a(ak param0, boolean param1) {
-        ak var4 = null;
-        ak var2 = null;
+    final static void a(SceneWidget param0, boolean param1) {
+        SceneWidget var4 = null;
+        SceneWidget var2 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
-        ak var2Lifetime1;
+        SceneWidget var2Lifetime1;
         try {
-          var4 = (ak) (param0.field_L.c(1504642273));
+          var4 = (SceneWidget) (param0.children.c(1504642273));
           var2 = var4;
           while (var4 != null) {
-            var4.field_Z = 0;
-            var4.field_wb = 0;
-            var4.field_nb = 0;
+            var4.pendingHeightDelta = 0;
+            var4.pendingYDelta = 0;
+            var4.height = 0;
             var4.field_S = 0;
-            var4 = (ak) (param0.field_L.last(1504642273));
+            var4 = (SceneWidget) (param0.children.last(1504642273));
             var2Lifetime1 = var4;
           }
-          param0.field_wb = 0;
+          param0.pendingYDelta = 0;
           if (param1) {
             field_d = (int[]) null;
           }
-          param0.field_nb = 0;
+          param0.height = 0;
           param0.field_S = 0;
-          param0.field_Z = 0;
+          param0.pendingHeightDelta = 0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wd.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

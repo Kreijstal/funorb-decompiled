@@ -19,7 +19,7 @@ final class un {
     final static void a(byte param0) {
         int var1 = 0;
         if (-1 != ii.field_q) {
-          var1 = -gk.field_bb + 50;
+          var1 = -ValidatedTextWidget.field_bb + 50;
           SoftwareRasterizer.a(var1, 70, nn.field_a, 48, 65793, 160);
           CanvasRasterBuffer.field_b.a(nn.field_a + var1, 70, 160);
           de.field_c.a(var1 - 22, 70, 160);

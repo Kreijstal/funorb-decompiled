@@ -86,21 +86,21 @@ final class so {
             pk.field_f = null;
           }
         }
-        if (!db.field_U) {
+        if (!TextHotspotWidget.field_U) {
           if (null == up.field_g) {
             up.field_g = ni.a(6, -90);
           }
           if (up.field_g.field_p) {
-            db.a(false, up.field_g.field_n);
+            TextHotspotWidget.a(false, up.field_g.field_n);
             if (ef.field_a) {
-              kp.b((byte) 74);
+              QuickChatPhraseDefinition.b((byte) 74);
             }
             up.field_g = null;
-            db.field_U = true;
+            TextHotspotWidget.field_U = true;
           }
         }
         if (ik.field_a &&
-          db.field_U) {
+          TextHotspotWidget.field_U) {
           SocketConnector.c(5);
           ni.a(-31470);
           if (fc.field_e == 9 &&
@@ -113,13 +113,13 @@ final class so {
 
     final void e(int param0) {
         this.field_n = true;
-        long var2 = 1L << this.field_e | jo.field_h;
+        long var2 = 1L << this.field_e | CheckboxPainter.field_h;
         if (param0 != 20604) {
           return;
         }
-        if (var2 != jo.field_h) {
-          jo.field_h = var2;
-          kp.b((byte) 74);
+        if (var2 != CheckboxPainter.field_h) {
+          CheckboxPainter.field_h = var2;
+          QuickChatPhraseDefinition.b((byte) 74);
         }
     }
 

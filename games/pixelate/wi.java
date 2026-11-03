@@ -6,7 +6,7 @@ final class wi {
     static String field_n;
     static String field_g;
     private long field_l;
-    ak field_o;
+    SceneWidget field_o;
     pi field_b;
     String field_h;
     private String field_i;
@@ -59,11 +59,11 @@ final class wi {
             return;
           }
           if (this.field_h != null) {
-            if (hn.field_f == this.field_l &&
+            if (DebouncedValidator.field_f == this.field_l &&
               2 != param0) {
               return;
             }
-            if (2 != gk.field_db) {
+            if (2 != ValidatedTextWidget.field_db) {
               return;
             }
             var7 = this.a((byte) 114);
@@ -218,10 +218,10 @@ final class wi {
         boolean discarded$4 = false;
         boolean discarded$6 = false;
         boolean discarded$5 = false;
-        uj var4;
+        LobbyPlayer var4;
         String var5;
         int var6;
-        uj var7;
+        LobbyPlayer var7;
         var6 = Pixelate.field_H ? 1 : 0;
         if (this.field_h == null) {
           if (param1 == -98) {
@@ -230,7 +230,7 @@ final class wi {
           discarded$13 = this.a(48, 58, -125);
           return;
         }
-        if (this.field_l == hn.field_f) {
+        if (this.field_l == DebouncedValidator.field_f) {
           if (param1 == -98) {
             return;
           }
@@ -244,14 +244,14 @@ final class wi {
           discarded$11 = this.a(48, 58, -125);
           return;
         }
-        if (!pl.m(param1 + 197)) {
+        if (!AccountRegistrationPanel.m(param1 + 197)) {
           if (param1 == -98) {
             return;
           }
           discarded$10 = this.a(48, 58, -125);
           return;
         }
-        var7 = gp.a(param1 + 100, this.field_l);
+        var7 = ScrollContainer.a(param1 + 100, this.field_l);
         var4 = JaggrabDownloader.a(this.field_l, param1 + 14526);
         var5 = this.a((byte) 27);
         if (var4 != null) {
@@ -322,7 +322,7 @@ final class wi {
           discarded$6 = this.a(48, 58, -125);
           return;
         }
-        this.field_b.a(sd.a(md.field_V, 59, new String[]{var5}), (byte) -70, 0);
+        this.field_b.a(sd.a(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
         this.field_b.a(sd.a(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
         if (param1 == -98) {
           return;
@@ -428,10 +428,10 @@ final class wi {
             this.field_b.a(BufferedRandomAccessFile.field_d, (byte) -127, 13);
           }
           if (1 == param1.field_j) {
-            if (0 == gh.field_v) {
+            if (0 == GradientOutlineTextPainter.field_v) {
               this.field_b.a(m.field_l, (byte) -97, 12);
             }
-            this.field_b.a(ec.field_n, (byte) -106, 13);
+            this.field_b.a(NameAvailabilityValidator.field_n, (byte) -106, 13);
           }
           if (2 == param1.field_j) {
             if (0 == ib.field_e) {
@@ -481,12 +481,12 @@ final class wi {
                     IterableNodeHashTable.a(7500);
                   } else {
                     if (20 == param0) {
-                      ak.c(true);
+                      SceneWidget.c(true);
                     } else {
                       if (param0 != 19) {
                         return false;
                       }
-                      tg.a(this.field_h, this.field_l, this.field_k, -2, this.field_j);
+                      UiTheme.a(this.field_h, this.field_l, this.field_k, -2, this.field_j);
                     }
                   }
                 }
@@ -503,7 +503,7 @@ final class wi {
 
     private final boolean a(int param0, boolean param1, int param2) {
         if (param0 == 17) {
-          hc.field_M = new oe(this.field_o.field_tb, this.field_o.field_gb, this.field_o.field_K, this.field_o.field_nb, param2, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
+          AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, cm.field_o, pj.field_i, ae.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
           return true;
         }
         if (!param1) {
@@ -515,7 +515,7 @@ final class wi {
 
     final void c(int param0) {
         int var2;
-        eq var3;
+        LobbyGame var3;
         String var4;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
@@ -550,12 +550,12 @@ final class wi {
         if (!var3.field_Ob) {
           return;
         }
-        this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
+        this.field_b.a(sd.a(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
     }
 
-    wi(ak param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    wi(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_b = new pi(a.field_O);
+          this.field_b = new pi(NameSuggestionsPanel.field_O);
           param0.field_U = true;
           this.field_o = param0;
           this.field_k = param5;
@@ -573,7 +573,7 @@ final class wi {
         boolean discarded$0 = false;
         String var3 = null;
         if (null != this.field_h) {
-          if (~this.field_l == ~hn.field_f) {
+          if (~this.field_l == ~DebouncedValidator.field_f) {
             if (param0 != 8893) {
               discarded$0 = this.a(-105, 67, -5);
               return;

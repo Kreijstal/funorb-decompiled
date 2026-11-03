@@ -93,7 +93,7 @@ final class wg {
           if (param1.length() == 0) {
             return true;
           }
-          if (kb.a(param0, param1, (byte) -123)) {
+          if (DateInputWidget.a(param0, param1, (byte) -123)) {
             return false;
           }
           if (pc.a(param0, (byte) -47, param1)) {

@@ -3,7 +3,7 @@
  */
 final class he {
     static IntrusiveDeque field_b;
-    static ve field_f;
+    static AccountNamePrompt field_f;
     static String field_c;
     static String field_e;
     static sb field_a;
@@ -72,10 +72,10 @@ final class he {
           }
           MusicPatchNode.a((java.awt.Component) ((Object) param1), 57);
           tj.a((byte) -128, (java.awt.Component) ((Object) param1));
-          if (gp.field_Lb == null) {
+          if (ScrollContainer.field_Lb == null) {
             return;
           }
-          gp.field_Lb.a((java.awt.Component) ((Object) param1), -97);
+          ScrollContainer.field_Lb.a((java.awt.Component) ((Object) param1), -97);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

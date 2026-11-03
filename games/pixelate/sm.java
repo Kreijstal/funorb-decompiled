@@ -6,7 +6,7 @@ final class sm extends IntrusiveNode {
     static String field_n;
     static boolean field_l;
     int field_p;
-    static ak field_m;
+    static SceneWidget field_m;
     static String field_k;
 
     final static boolean a(String param0, int param1) {
@@ -22,7 +22,7 @@ final class sm extends IntrusiveNode {
             return true;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_4_0 = eq.field_Hb.equals(dh.a(var3, (byte) 72));
+          stackIn_4_0 = LobbyGame.field_Hb.equals(dh.a(var3, (byte) 72));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

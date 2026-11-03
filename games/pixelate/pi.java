@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends ak {
+final class pi extends SceneWidget {
     private int field_Qb;
-    static te field_Rb;
+    static QuickChatMenu field_Rb;
     private int field_Nb;
     private int field_Eb;
     private int field_Lb;
     private int[] field_Mb;
-    private ak field_Pb;
+    private SceneWidget field_Pb;
     static int field_Fb;
     private int field_Gb;
     private int field_Ob;
     private lo[] field_Ib;
-    private ak field_Jb;
+    private SceneWidget field_Jb;
     private Sprite[] field_Kb;
     private int field_Hb;
 
@@ -109,14 +109,14 @@ final class pi extends ak {
 
     final void a(String param0, byte param1, int param2) {
         try {
-          this.field_Ib[this.field_Hb] = new lo(0L, (ak) null, (ak) null, this.field_Jb, (Sprite) null, param0);
+          this.field_Ib[this.field_Hb] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Jb, (Sprite) null, param0);
           this.field_Ib[this.field_Hb].field_ab = this.field_Kb;
           this.field_Ib[this.field_Hb].field_A = true;
-          this.field_Ib[this.field_Hb].field_kb = 1;
+          this.field_Ib[this.field_Hb].verticalAlignment = 1;
           this.a(this.field_Ib[this.field_Hb], (byte) 26);
           this.field_Mb[this.field_Hb] = param2;
           if (param1 > -23) {
-            this.field_Pb = (ak) null;
+            this.field_Pb = (SceneWidget) null;
           }
           this.field_Hb = this.field_Hb + 1;
         } catch (RuntimeException runtimeException) {
@@ -136,10 +136,10 @@ final class pi extends ak {
 
     final void a(int param0, int param1, Sprite param2, String param3) {
         try {
-          this.field_Ib[this.field_Hb] = new lo((long)param0, (ak) null, (ak) null, this.field_Jb, param2, param3);
+          this.field_Ib[this.field_Hb] = new lo((long)param0, (SceneWidget) null, (SceneWidget) null, this.field_Jb, param2, param3);
           this.field_Ib[this.field_Hb].field_ab = this.field_Kb;
           this.field_Ib[this.field_Hb].field_A = true;
-          this.field_Ib[this.field_Hb].field_kb = 1;
+          this.field_Ib[this.field_Hb].verticalAlignment = 1;
           this.a(this.field_Ib[this.field_Hb], (byte) 26);
           this.field_Mb[this.field_Hb] = param1;
           this.field_Hb = this.field_Hb + 1;
@@ -181,7 +181,7 @@ final class pi extends ak {
         return true;
     }
 
-    pi(ak param0, Sprite[] param1, ak param2, ak param3, int param4, int param5, int param6, int param7, int param8) {
+    pi(SceneWidget param0, Sprite[] param1, SceneWidget param2, SceneWidget param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Mb = new int[256];
         this.field_Gb = -2;
@@ -211,8 +211,8 @@ final class pi extends ak {
         int var8Lifetime1;
         var11 = Pixelate.field_H ? 1 : 0;
         if (this.field_Hb == 0) {
-          this.field_Ib[this.field_Hb] = new lo(0L, (ak) null, (ak) null, this.field_Pb, (Sprite) null, ln.field_l);
-          this.field_Ib[this.field_Hb].field_kb = 1;
+          this.field_Ib[this.field_Hb] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
+          this.field_Ib[this.field_Hb].verticalAlignment = 1;
           this.a(this.field_Ib[this.field_Hb], (byte) 26);
           this.field_Mb[this.field_Hb] = -1;
           this.field_Hb = this.field_Hb + 1;

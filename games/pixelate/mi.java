@@ -16,7 +16,7 @@ final class mi extends de {
         this.b((byte) -71);
         int var2 = go.field_k != 0 ? 1 : 0;
         int var3 = null != wh.field_p ? 1 : 0;
-        String var7 = bc.field_p;
+        String var7 = EmailValidator.field_p;
         if (param0 != 11) {
           mi.b(false);
         }
@@ -35,22 +35,22 @@ final class mi extends de {
           if (ii.field_q != -1) {
             ii.field_q = -1;
           }
-          var3 = (ph) (pl.field_Y.d(-28918));
+          var3 = (ph) (AccountRegistrationPanel.field_Y.d(-28918));
           if (var3 != null) {
             ii.field_q = var3.field_k;
             ki.field_f = 300;
             nn.field_a = qj.field_e.textWidth(GameApplet.field_n[ii.field_q]) + 56;
-            gk.field_bb = 50 + nn.field_a;
+            ValidatedTextWidget.field_bb = 50 + nn.field_a;
           }
         } else {
           ki.field_f = ki.field_f - 1;
           if (ki.field_f < 16) {
             var1 = 16 - ki.field_f;
-            gk.field_bb = var1 * (var1 * (50 + nn.field_a)) >> 8;
+            ValidatedTextWidget.field_bb = var1 * (var1 * (50 + nn.field_a)) >> 8;
           } else {
             if (284 < ki.field_f) {
               var1 = ki.field_f - 284;
-              gk.field_bb = var1 * (nn.field_a + 50) * var1 >> 8;
+              ValidatedTextWidget.field_bb = var1 * (nn.field_a + 50) * var1 >> 8;
             }
           }
         }
@@ -78,7 +78,7 @@ final class mi extends de {
         var6 = new boolean[var5];
         var7 = new IndexedSprite[param1];
         for (var8 = 0; var7.length > var8; var8++) {
-          var9 = ok.a(tg.field_f, param3 ^ -118, var5);
+          var9 = ok.a(UiTheme.field_f, param3 ^ -118, var5);
           while (var6[var9]) {
             var9++;
             if (var5 > var9) {
@@ -175,7 +175,7 @@ final class mi extends de {
             }
             if (uk.field_s == ke.field_b &&
               rd.a(8, false)) {
-              gj.field_P = MusicCrossfadeStream.field_o.a(false);
+              NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.a(false);
               MusicCrossfadeStream.field_o.position = 0;
               io.a(param4, -67, li.field_g, param3, param0);
               uk.field_s = kk.field_b;
@@ -216,10 +216,10 @@ final class mi extends de {
               var6 = MusicCrossfadeStream.field_o.e((byte) 79);
               var7 = MusicCrossfadeStream.field_o.f(255);
               if ((var7 & 1) != 0) {
-                tm.d((byte) -51);
+                MarkerSlider.d((byte) -51);
               }
               stackIn_40_0 = ((16 & var7) != 0);
-              mg.field_l = stackIn_40_0;
+              TextFieldValidator.field_l = stackIn_40_0;
               if (!param4) {
                 stackIn_44_0 = (0 != (var7 & 2));
                 IsaacRandom.field_g = stackIn_44_0;
@@ -243,13 +243,13 @@ final class mi extends de {
               }
               kn.field_J = MusicCrossfadeStream.field_o.h(5);
               var11 = (CharSequence) ((Object) kn.field_J);
-              eq.field_Hb = dh.a(var11, (byte) 54);
+              LobbyGame.field_Hb = dh.a(var11, (byte) 54);
               ra.field_g = MusicCrossfadeStream.field_o.f(255);
               uk.field_s = Pixelate.field_G;
               if (li.field_g.b(-27096) == l.field_r) {
                 ig.field_e.a(AudioService.a(13867), -80419032);
               } else {
-                if (li.field_g.b(-27096) == te.field_Nb) {
+                if (li.field_g.b(-27096) == QuickChatMenu.field_Nb) {
                   vm.field_a.a(AudioService.a(13867), -80419032);
                 }
               }
@@ -274,13 +274,13 @@ final class mi extends de {
                 }
               }
               if (BufferedRandomAccessFile.field_j > 0) {
-                uj.field_Lb = true;
+                LobbyPlayer.field_Lb = true;
               }
-              aa.field_f.a(0, ud.field_L);
+              aa.field_f.a(0, ModalPanel.field_L);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                ud.field_L[var8Lifetime1] = ud.field_L[var8Lifetime1] + 50;
+                ModalPanel.field_L[var8Lifetime1] = ModalPanel.field_L[var8Lifetime1] + 50;
               }
-              MusicCrossfadeStream.field_o.a(0, ud.field_L);
+              MusicCrossfadeStream.field_o.a(0, ModalPanel.field_L);
               stackIn_79_0 = mn.field_e;
               return stackIn_79_0;
             }
@@ -307,7 +307,7 @@ final class mi extends de {
                 if (no.d(8) <= 30000L) {
                   gi.field_b = ho.field_b;
                 } else {
-                  gi.field_b = vc.field_N;
+                  gi.field_b = ValidationIndicator.field_N;
                 }
                 qj.field_b = false;
                 stackIn_100_0 = 3;
@@ -348,7 +348,7 @@ final class mi extends de {
     final static void a(boolean param0, float param1, int param2, String param3) {
         try {
           if (cn.field_b == null) {
-            cn.field_b = new ko(wa.field_c, wp.field_a);
+            cn.field_b = new LoadingProgressDialog(wa.field_c, wp.field_a);
             wa.field_c.b(-6183, cn.field_b);
           }
           if (param2 != -1) {
@@ -384,13 +384,13 @@ final class mi extends de {
             var5 = fo.field_a[var3_int];
             if (var5 >= 0) {
               var6 = sb.a(3, vm.field_e[var3_int], true);
-              var4 = var4 + ko.field_fb;
-              var7 = -(var6 >> 1) + qe.field_u;
-              if (mn.a(param0, var4, 9, gk.field_fb + (bd.field_c << 1), var7 - hc.field_J, param1, (hc.field_J << 1) + var6)) {
+              var4 = var4 + LoadingProgressDialog.field_fb;
+              var7 = -(var6 >> 1) + QuickChatCategory.field_u;
+              if (mn.a(param0, var4, 9, ValidatedTextWidget.field_fb + (bd.field_c << 1), var7 - AccountTermsPanel.field_J, param1, (AccountTermsPanel.field_J << 1) + var6)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var4 = var4 + (gk.field_fb + ko.field_fb + (bd.field_c << 1));
+              var4 = var4 + (ValidatedTextWidget.field_fb + LoadingProgressDialog.field_fb + (bd.field_c << 1));
             } else {
               var4 = var4 + hq.field_r;
             }
@@ -406,12 +406,12 @@ final class mi extends de {
     }
 
     final static void b(boolean param0) {
-        ho.field_g.a(0, 18, 0, 256, -(!f.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + oc.field_O.field_K);
+        ho.field_g.a(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
         if (param0) {
           field_o = false;
         }
-        l.field_s.a(0, 18, -40 + (-DelegatingCanvas.field_b + (oc.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
-        jm.field_b.a(0, 2, (byte) 102, oc.field_O.field_K, 20, oc.field_O.field_nb - 20, DelegatingCanvas.field_b);
+        l.field_s.a(0, 18, -40 + (-DelegatingCanvas.field_b + (StripedProgressBar.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
+        jm.field_b.a(0, 2, (byte) 102, StripedProgressBar.field_O.field_K, 20, StripedProgressBar.field_O.height - 20, DelegatingCanvas.field_b);
     }
 
     static {

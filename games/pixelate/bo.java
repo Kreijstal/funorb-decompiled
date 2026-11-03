@@ -4,7 +4,7 @@
 final class bo {
     int field_l;
     static String field_a;
-    static te field_h;
+    static QuickChatMenu field_h;
     int field_i;
     static String field_f;
     static String field_k;
@@ -60,14 +60,14 @@ final class bo {
     final static byte[] a(int param0) {
         byte[] var2 = new byte[8];
         byte[] var1 = var2;
-        var2[6] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 48);
-        var2[2] = (byte)(int)FullscreenFocusCanvas.a((long)param0, jo.field_h >> 16);
-        var2[3] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 24, 255L);
-        var2[5] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 40, 255L);
-        var2[1] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 8);
-        var2[0] = (byte)(int)FullscreenFocusCanvas.a(jo.field_h >> 0, 255L);
-        var2[4] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 32);
-        var2[7] = (byte)(int)FullscreenFocusCanvas.a(255L, jo.field_h >> 56);
+        var2[6] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 48);
+        var2[2] = (byte)(int)FullscreenFocusCanvas.a((long)param0, CheckboxPainter.field_h >> 16);
+        var2[3] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 24, 255L);
+        var2[5] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 40, 255L);
+        var2[1] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 8);
+        var2[0] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 0, 255L);
+        var2[4] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 32);
+        var2[7] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 56);
         return var2;
     }
 

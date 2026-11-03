@@ -3,7 +3,7 @@
  */
 final class ab {
     static Sprite[] field_c;
-    static ak field_a;
+    static SceneWidget field_a;
     static int field_b;
     static ResourceArchive field_f;
     static String field_e;

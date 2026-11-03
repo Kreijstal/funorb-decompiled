@@ -10,7 +10,7 @@ final class qj {
 
     final static void a(String param0, long param1, byte param2) {
         CharSequence var5 = null;
-        jo.field_k = param0;
+        CheckboxPainter.field_k = param0;
         if (param2 != 8) {
           return;
         }

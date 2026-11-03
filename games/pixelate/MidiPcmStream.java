@@ -9,7 +9,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_L;
     private MusicPatchNode[][] field_P;
     private int[] field_q;
-    static ak field_E;
+    static SceneWidget field_E;
     private int[] field_M;
     private int[] field_Q;
     private int[] field_r;
@@ -219,7 +219,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.field_e;
             var12 = (MusicPatch) (this.patches.a(-25484, (long)var9));
             if (var12 == null) {
-              var13 = od.a(param2, var9, -30805);
+              var13 = TabbedPanel.a(param2, var9, -30805);
               if (var13 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;
@@ -530,7 +530,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final static void a(boolean param0) {
-        jd var1 = (jd) (vc.field_O.b(-88));
+        jd var1 = (jd) (ValidationIndicator.field_O.b(-88));
         if (var1 == null) {
           var1 = new jd();
         }

@@ -7,8 +7,8 @@ final class wa {
     static kn field_c;
     static long field_h;
     static int field_i;
-    static ak field_g;
-    static ak field_f;
+    static SceneWidget field_g;
+    static SceneWidget field_f;
     static String field_a;
     static String field_e;
     static long field_b;
@@ -66,21 +66,21 @@ final class wa {
         if (param5 >= param1) {
           if (param0 <= param5) {
             if (param0 <= param1) {
-              hc.a(param9, param5, param8, param15, -94333456, param13, param7, param14, param6, param12, param0, SoftwareRasterizer.field_k, param10, param1, param2, param3, param4);
+              AccountTermsPanel.a(param9, param5, param8, param15, -94333456, param13, param7, param14, param6, param12, param0, SoftwareRasterizer.field_k, param10, param1, param2, param3, param4);
             } else {
-              hc.a(param9, param5, param2, param3, -94333456, param7, param13, param14, param12, param6, param1, SoftwareRasterizer.field_k, param10, param0, param8, param15, param4);
+              AccountTermsPanel.a(param9, param5, param2, param3, -94333456, param7, param13, param14, param12, param6, param1, SoftwareRasterizer.field_k, param10, param0, param8, param15, param4);
             }
           } else {
-            hc.a(param12, param0, param2, param4, -94333456, param7, param14, param13, param9, param6, param1, SoftwareRasterizer.field_k, param8, param5, param10, param15, param3);
+            AccountTermsPanel.a(param12, param0, param2, param4, -94333456, param7, param14, param13, param9, param6, param1, SoftwareRasterizer.field_k, param8, param5, param10, param15, param3);
           }
         } else {
           if (param1 < param0) {
-            hc.a(param12, param0, param10, param15, -94333456, param14, param7, param13, param6, param9, param5, SoftwareRasterizer.field_k, param8, param1, param2, param4, param3);
+            AccountTermsPanel.a(param12, param0, param10, param15, -94333456, param14, param7, param13, param6, param9, param5, SoftwareRasterizer.field_k, param8, param1, param2, param4, param3);
           } else {
             if (param0 > param5) {
-              hc.a(param6, param1, param10, param3, -94333456, param14, param13, param7, param12, param9, param5, SoftwareRasterizer.field_k, param2, param0, param8, param4, param15);
+              AccountTermsPanel.a(param6, param1, param10, param3, -94333456, param14, param13, param7, param12, param9, param5, SoftwareRasterizer.field_k, param2, param0, param8, param4, param15);
             } else {
-              hc.a(param6, param1, param8, param4, -94333456, param13, param14, param7, param9, param12, param0, SoftwareRasterizer.field_k, param2, param5, param10, param3, param15);
+              AccountTermsPanel.a(param6, param1, param8, param4, -94333456, param13, param14, param7, param9, param12, param0, SoftwareRasterizer.field_k, param2, param5, param10, param3, param15);
             }
           }
         }

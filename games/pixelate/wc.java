@@ -3,7 +3,7 @@
  */
 final class wc extends jj {
     static int[][] field_p;
-    static ak field_n;
+    static SceneWidget field_n;
     static String[] field_m;
     private qk[] field_o;
 
@@ -22,7 +22,7 @@ final class wc extends jj {
 
     public static void b(byte param0) {
         if (param0 <= 17) {
-          field_n = (ak) null;
+          field_n = (SceneWidget) null;
         }
         field_n = null;
         field_m = null;
@@ -42,7 +42,7 @@ final class wc extends jj {
         int var3 = 0;
         qk var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        ad.field_w.f(0, 0);
+        ThreeSliceButtonPainter.field_w.f(0, 0);
         qk[] var6 = this.field_o;
         qk[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
@@ -56,18 +56,18 @@ final class wc extends jj {
 
     final static String d(int param0) {
         if (param0 != 0) {
-          field_n = (ak) null;
+          field_n = (SceneWidget) null;
         }
-        if (Js5NetworkRequest.field_F == tm.field_X) {
+        if (Js5NetworkRequest.field_F == MarkerSlider.field_X) {
           return nk.field_b;
         }
         if (!an.field_e.d(param0 ^ 46)) {
           return an.field_e.b((byte) 114);
         }
-        if (Js5NetworkRequest.field_F == qo.field_n) {
+        if (Js5NetworkRequest.field_F == MatchingTextValidator.field_n) {
           return an.field_e.b((byte) 116);
         }
-        return h.field_U;
+        return Checkbox.field_U;
     }
 
     private final void c(byte param0) {

@@ -87,9 +87,9 @@ final class hq extends de {
         pm var9;
         var8 = Pixelate.field_H ? 1 : 0;
         if (this.field_G != 1) {
-          gj.field_W[7].b(0, 45);
+          NumericDateInputWidget.field_W[7].b(0, 45);
         } else {
-          gj.field_W[4].b(0, 45);
+          NumericDateInputWidget.field_W[4].b(0, 45);
         }
         this.d((byte) -81);
         this.b((byte) -71);
@@ -110,7 +110,7 @@ final class hq extends de {
         var6 = 190;
         var7 = var5.maxAscent + var5.maxDescent + 3;
         if (this.field_G == 0) {
-          var5.drawText(tg.field_b, 120, var6, 0, -1);
+          var5.drawText(UiTheme.field_b, 120, var6, 0, -1);
           var5.drawRightAlignedText(this.field_v, 540, var6, 1, -1);
           var6 = var6 + var7;
           var5.drawText(ep.field_d, 120, var6, 0, -1);
@@ -146,7 +146,7 @@ final class hq extends de {
             }
           } else {
             var6 = var6 + var7;
-            var5.drawText(tg.field_b, 120, var6, 0, -1);
+            var5.drawText(UiTheme.field_b, 120, var6, 0, -1);
             var5.drawRightAlignedText(this.field_v, 540, var6, 1, -1);
             var6 = var6 + var7;
             var5.drawText(ep.field_d, 120, var6, 0, -1);
@@ -280,13 +280,13 @@ final class hq extends de {
         if (param1 >= -106) {
           discarded$0 = this.d(-3, 100);
         }
-        if (oa.field_j == 1) {
+        if (DateOfBirthValidator.field_j == 1) {
           ArchiveIndex.a(this.field_x, (byte) 126);
           fc.field_e = 14;
           var3 = param0 ? 1 : 0;
           la.a(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
         } else {
-          if (oa.field_j == 2) {
+          if (DateOfBirthValidator.field_j == 2) {
             ro.field_e.g(46);
           }
         }
@@ -307,7 +307,7 @@ final class hq extends de {
         try {
           this.field_G = 2;
           if (param0 != null) {
-            this.field_w = sd.a(qm.field_G, param1 ^ -47, new String[]{param0});
+            this.field_w = sd.a(TextButton.field_G, param1 ^ -47, new String[]{param0});
           } else {
             this.field_w = td.field_c;
           }
@@ -324,7 +324,7 @@ final class hq extends de {
           }
           this.field_z = stackIn_10_1;
           this.field_I = -5;
-          this.field_A = ko.field_jb;
+          this.field_A = LoadingProgressDialog.field_jb;
           if (param1 != -10) {
             this.field_G = -27;
           }
@@ -379,16 +379,16 @@ final class hq extends de {
           var4 = var5;
           var5 = var6_int;
         }
-        if (c.field_R == null) {
-          c.field_R = vk.a(480, 123, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
+        if (EditableTextWidget.field_R == null) {
+          EditableTextWidget.field_R = AccountRequestDialog.a(480, 123, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
         CanvasRasterBuffer var6 = ClientException.field_f;
-        ClientException.field_f = c.field_R;
+        ClientException.field_f = EditableTextWidget.field_R;
         ClientException.field_f.a(19692);
         this.c(0);
         ClientException.field_f = var6;
         ClientException.field_f.a(19692);
-        fi.a(c.field_R.field_e, var4, var5);
+        fi.a(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
     final void e(int param0) {
@@ -429,9 +429,9 @@ final class hq extends de {
 
     final void a(byte param0, boolean param1, int param2) {
         if (param2 == 0) {
-          this.a(param1, this.field_A, oc.field_N, -6, this.a(0, (byte) 90) + this.a(0, false) >> 1);
+          this.a(param1, this.field_A, StripedProgressBar.field_N, -6, this.a(0, (byte) 90) + this.a(0, false) >> 1);
         } else {
-          super.a(this.field_s, param1, param2, oc.field_N, (byte) 99);
+          super.a(this.field_s, param1, param2, StripedProgressBar.field_N, (byte) 99);
         }
         if (param0 > -116) {
           this.field_E = 4;
@@ -442,17 +442,17 @@ final class hq extends de {
         int var3;
         int var4;
         int stackIn_8_0 = 0;
-        if (oa.field_j != 2) {
+        if (DateOfBirthValidator.field_j != 2) {
           var3 = this.field_I;
           var4 = param1 ? 1 : 0;
           stackIn_8_0 = (!gq.d(104)) ? 0 : 12;
           la.a(stackIn_8_0, var3, var4 != 0, -25528);
         } else {
-          if (md.field_Y) {
+          if (ValidationHelpWidget.field_Y) {
             var3 = param1 ? 1 : 0;
             la.a(MidiPcmStream.field_t, -5, var3 != 0, -25528);
           }
-          if (oa.field_i) {
+          if (DateOfBirthValidator.field_i) {
             qj.a(false, 0, 11);
           }
         }
@@ -473,7 +473,7 @@ final class hq extends de {
     final void b(int param0) {
         int var2;
         int var3;
-        pf stackIn_16_0 = null;
+        MenuInputState stackIn_16_0 = null;
         boolean stackIn_16_1 = false;
         int stackIn_17_2 = 0;
         boolean decompiledFrameRemainder0 = true;
@@ -489,7 +489,7 @@ final class hq extends de {
             } else {
               stackIn_17_2 = 1;
             }
-            ((pf) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+            ((MenuInputState) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
             decompiledFrameRemainder0 = false;
           }
           else {

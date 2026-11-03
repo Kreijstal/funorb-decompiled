@@ -114,7 +114,7 @@ final class fk extends de {
 
     final void a(byte param0, boolean param1, int param2) {
         if (1 != param2) {
-          super.a((byte) 35, oc.field_W, param1, param2);
+          super.a((byte) 35, StripedProgressBar.field_W, param1, param2);
         } else {
           this.a(param1, true);
         }
@@ -186,10 +186,10 @@ final class fk extends de {
           return;
         }
         var2 = rg.field_e;
-        var3 = hn.field_d;
+        var3 = DebouncedValidator.field_d;
         rg.field_e = Js5NetworkRequest.field_C[0];
-        hn.field_d = 0;
-        gj.field_W[1].b(0, 45);
+        DebouncedValidator.field_d = 0;
+        NumericDateInputWidget.field_W[1].b(0, 45);
         this.d((byte) 59);
         this.b((byte) -71);
         var4 = rk.field_e;
@@ -241,7 +241,7 @@ final class fk extends de {
                 } else {
                   if (this.field_r == 5) {
                     var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
-                    qo.field_v.b(470, 160);
+                    MatchingTextValidator.field_v.b(470, 160);
                   } else {
                     if (6 != this.field_r) {
                       if (this.field_r == 7) {
@@ -262,11 +262,11 @@ final class fk extends de {
                     } else {
                       var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                       SoftwareRasterizer.f(0, 0, 640, 389);
-                      g.field_r.a(false);
+                      PasswordValidator.field_r.a(false);
                       an.field_b.a(false);
                       DiskCacheRequest.field_H.c((byte) 119);
                       BoundedRandomAccessFile.field_g.a(55, 0, 0);
-                      f.field_a.a(60, 0, 0);
+                      DialWidgetPainter.field_a.a(60, 0, 0);
                       SoftwareRasterizer.c();
                     }
                   }
@@ -303,11 +303,11 @@ final class fk extends de {
           var7 += 10;
           var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
           SpriteState.field_C.a(false);
-          te.field_Qb.a(50, 0, 0);
+          QuickChatMenu.field_Qb.a(50, 0, 0);
         }
         var4.drawCentered(pk.field_d[this.field_r], 320, 180, 0, -1);
         var5.drawRightAlignedText(mj.a(4067, this.field_r), 590, 375, 16777215, 0);
-        hn.field_d = var3;
+        DebouncedValidator.field_d = var3;
         rg.field_e = var2;
     }
 

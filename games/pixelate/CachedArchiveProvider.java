@@ -197,7 +197,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 if (this.index.groupDigests != null &&
                   null != this.index.groupDigests[param0]) {
                   var30 = this.index.groupDigests[param0];
-                  var29 = db.a(var5, 0, 1761872464, -2 + var18.length);
+                  var29 = TextHotspotWidget.a(var5, 0, 1761872464, -2 + var18.length);
                   var11 = 0;
                   var9 = var11;
                   while (64 > var11) {
@@ -251,7 +251,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (null != this.index.groupDigests &&
                 null != this.index.groupDigests[param0]) {
                 var28 = this.index.groupDigests[param0];
-                var27 = db.a(var5, 0, 1761872464, -2 + var18.length);
+                var27 = TextHotspotWidget.a(var5, 0, 1761872464, -2 + var18.length);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (var27[var9] != var28[var9]) {
                     throw new RuntimeException();
@@ -753,17 +753,17 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (tm.field_X == wm.field_a) {
+          if (MarkerSlider.field_X == wm.field_a) {
             throw new IllegalStateException();
           }
           if (param0 != 52) {
             CachedArchiveProvider.e((byte) -37);
           }
-          if (tm.field_X != h.field_N) {
+          if (MarkerSlider.field_X != Checkbox.field_N) {
             stackIn_12_0 = null;
             return (id) (stackIn_12_0);
           }
-          tm.field_X = wm.field_a;
+          MarkerSlider.field_X = wm.field_a;
           stackIn_10_0 = MouseWheelHandler.field_b;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -774,12 +774,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final static void c(byte param0) {
-        jg.field_K = null;
+        ArrayWidgetContainer.field_K = null;
         if (param0 != 24) {
           return;
         }
         try {
-          a.field_L = null;
+          NameSuggestionsPanel.field_L = null;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gg.M(" + param0 + ')');
         }

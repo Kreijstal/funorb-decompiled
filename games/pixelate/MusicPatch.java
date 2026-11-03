@@ -25,12 +25,12 @@ final class MusicPatch extends IntrusiveNode {
     final static void e(int param0) {
         int var2 = 0;
         int var1 = -63 / ((60 - param0) / 39);
-        if (ia.field_h > 32) {
-          var2 = ia.field_h % 32;
+        if (LinkButtonPainter.field_h > 32) {
+          var2 = LinkButtonPainter.field_h % 32;
           if (var2 == 0) {
             var2 = 32;
           }
-          nk.a((byte) 93, -var2 + ia.field_h);
+          nk.a((byte) 93, -var2 + LinkButtonPainter.field_h);
         } else {
           nk.a((byte) 93, 0);
         }
@@ -69,7 +69,7 @@ final class MusicPatch extends IntrusiveNode {
         wg var24 = null;
         var21 = Pixelate.field_H ? 1 : 0;
         try {
-          var22 = uj.a(param0.field_o, param0.field_l, 0);
+          var22 = LobbyPlayer.a(param0.field_o, param0.field_l, 0);
           var3 = 4;
           var4 = 14;
           if (param0.field_n != 0) {
@@ -106,7 +106,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_20_1 = -var7;
           }
-          var23 = uj.a(stackIn_19_0, stackIn_20_1, param1 - 1183261192);
+          var23 = LobbyPlayer.a(stackIn_19_0, stackIn_20_1, param1 - 1183261192);
           var24 = var22.a(param1 - 1183261184, var23);
           var9 = 0;
           var10 = 2;
@@ -182,7 +182,7 @@ final class MusicPatch extends IntrusiveNode {
           if (param1 != 0) {
             MusicPatch.b((byte) 30);
           }
-          stackIn_3_0 = ne.a(param1 ^ 98, false, param0);
+          stackIn_3_0 = DropTargetWidget.a(param1 ^ 98, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,14 +216,14 @@ final class MusicPatch extends IntrusiveNode {
 
     final static void a(byte param0) {
         ln.a(param0 + 165);
-        if (null != ec.field_u) {
-          pf.a(ec.field_u, 0);
+        if (null != NameAvailabilityValidator.field_u) {
+          MenuInputState.a(NameAvailabilityValidator.field_u, 0);
         }
         if (param0 != -91) {
           return;
         }
         MusicCrossfadeStream.a((byte) -109);
-        db.a((byte) -94);
+        TextHotspotWidget.a((byte) -94);
         ep.c(-26721);
         if (se.b(true)) {
           aa.field_f.g(1, 15514);

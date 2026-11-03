@@ -22,7 +22,7 @@ final class da extends jj {
         int var21_int = 0;
         RuntimeException var21 = null;
         try {
-          vc.a(param17, param12, param9, new sb(param2), param14, new sb(param16), param8, param11, param13, param7, param5, param18, param3, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
+          ValidationIndicator.a(param17, param12, param9, new sb(param2), param14, new sb(param16), param8, param11, param13, param7, param5, param18, param3, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
           var21_int = -40 / ((-41 - param10) / 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class da extends jj {
         RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var5 = kb.field_N;
+          var5 = DateInputWidget.field_N;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -123,7 +123,7 @@ final class da extends jj {
         int var5;
         vn[] var6;
         var5 = Pixelate.field_H ? 1 : 0;
-        jg.field_H.f(0, 0);
+        ArrayWidgetContainer.field_H.f(0, 0);
         var6 = this.field_n;
         var2 = var6;
         if (!param0) {
@@ -196,7 +196,7 @@ final class da extends jj {
             return stackIn_3_0;
           }
           while (param3 > var5) {
-            var4_int = var4_int >>> 8 ^ dm.field_zb[255 & (var4_int ^ param0[var5])];
+            var4_int = var4_int >>> 8 ^ RegistrationRequestDialog.field_zb[255 & (var4_int ^ param0[var5])];
             var5++;
           }
           var4_int = ~var4_int;

@@ -17,16 +17,16 @@ final class fc {
         field_c = null;
     }
 
-    final static void a(ak param0, int param1, ak param2) {
-        if (param0.field_L == null) {
-          param0.field_L = new IntrusiveDeque();
+    final static void a(SceneWidget param0, int param1, SceneWidget param2) {
+        if (param0.children == null) {
+          param0.children = new IntrusiveDeque();
         }
         if (param1 != 64) {
           return;
         }
         try {
-          if (param2.field_L == null) {
-            param2.field_L = new IntrusiveDeque();
+          if (param2.children == null) {
+            param2.children = new IntrusiveDeque();
           }
           if (null == vm.field_b) {
             vm.field_b = new vg(64);
@@ -34,8 +34,8 @@ final class fc {
           if (null == hq.field_q) {
             hq.field_q = new vg(64);
           }
-          bq.field_b = param2.field_L;
-          vp.field_Hb = param0.field_L;
+          bq.field_b = param2.children;
+          VerticalScrollbar.field_Hb = param0.children;
           bd.a((byte) -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -92,25 +92,25 @@ final class fc {
         if (param0 >= -30) {
           field_c = (String) null;
           if (32 >= SocketJs5Transport.field_u) {
-            jg.a(0, 119);
+            ArrayWidgetContainer.a(0, 119);
             return;
           }
           var1 = SocketJs5Transport.field_u % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          jg.a(SocketJs5Transport.field_u - var1, -8);
+          ArrayWidgetContainer.a(SocketJs5Transport.field_u - var1, -8);
           return;
         }
         if (32 >= SocketJs5Transport.field_u) {
-          jg.a(0, 119);
+          ArrayWidgetContainer.a(0, 119);
           return;
         }
         var1Lifetime1 = SocketJs5Transport.field_u % 32;
         if (var1Lifetime1 == 0) {
           var1Lifetime1 = 32;
         }
-        jg.a(SocketJs5Transport.field_u - var1Lifetime1, -8);
+        ArrayWidgetContainer.a(SocketJs5Transport.field_u - var1Lifetime1, -8);
     }
 
     static {

@@ -26,14 +26,14 @@ abstract class lb extends GameApplet {
     }
 
     private final void m(int param0) {
-        h.field_P[param0] = true;
+        Checkbox.field_P[param0] = true;
     }
 
     private final void o(int param0) {
         if (param0 < 125) {
           this.i(-53);
         }
-        h.field_P[6] = true;
+        Checkbox.field_P[6] = true;
     }
 
     private final int a(int param0, boolean param1, boolean param2) {
@@ -56,9 +56,9 @@ abstract class lb extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = uj.a((byte) -127, BoundedRandomAccessFile.a((byte) 108), MusicPatchPcmStream.e(100));
+            var5_int = LobbyPlayer.a((byte) -127, BoundedRandomAccessFile.a((byte) 108), MusicPatchPcmStream.e(100));
             if (var5_int != -1) {
-              hn.a((byte) -97, ii.field_y, var5_int, gi.field_b);
+              DebouncedValidator.a((byte) -97, ii.field_y, var5_int, gi.field_b);
               gi.field_b = null;
               ii.field_y = null;
             }
@@ -92,14 +92,14 @@ abstract class lb extends GameApplet {
                   el.field_b = 10;
                   lo.field_Nb = false;
                 } else {
-                  gp.a(true, gi.field_b, var5_intLifetime2);
+                  ScrollContainer.a(true, gi.field_b, var5_intLifetime2);
                   gi.field_b = null;
                 }
               }
             }
           }
           if (var4 == 4) {
-            if (uj.field_Lb) {
+            if (LobbyPlayer.field_Lb) {
               MusicCrossfadeStream.a(AudioService.a(param0 ^ 13867), 22770);
             } else {
               el.field_b = 10;
@@ -114,7 +114,7 @@ abstract class lb extends GameApplet {
             el.field_b = 10;
           }
           if (var4 == 7) {
-            ip.a((byte) 93, AudioService.a(param0 + 13867));
+            PasswordFieldPainter.a((byte) 93, AudioService.a(param0 + 13867));
           }
           if (var4 == 8) {
             MusicCrossfadeStream.a(AudioService.a(13867), 22770);
@@ -133,11 +133,11 @@ abstract class lb extends GameApplet {
           }
           if (13 == var4) {
             try {
-              if (null == qe.field_w) {
-                qe.field_w = new JaggrabDownloader(mc.field_k, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (null == QuickChatCategory.field_w) {
+                QuickChatCategory.field_w = new JaggrabDownloader(mc.field_k, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (qe.field_w.b((byte) -87)) {
-                var12 = qe.field_w.a(3);
+              if (QuickChatCategory.field_w.b((byte) -87)) {
+                var12 = QuickChatCategory.field_w.a(3);
                 if (var12 == null) {
                   var9 = (String) null;
                   ri.a((String) null, true);
@@ -145,15 +145,15 @@ abstract class lb extends GameApplet {
                   var7 = ui.a(true, var12.payload, 0, var12.position);
                   ri.a(var7, true);
                 }
-                qe.field_w = null;
+                QuickChatCategory.field_w = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              jo.a(1, "S1", (Throwable) ((Object) var5));
+              CheckboxPainter.a(1, "S1", (Throwable) ((Object) var5));
               var10 = (String) null;
               ri.a((String) null, true);
-              qe.field_w = null;
+              QuickChatCategory.field_w = null;
             }
           }
           if (var4 == 15) {
@@ -200,18 +200,18 @@ abstract class lb extends GameApplet {
           el.field_b != 11) {
           nj.d(param0 ^ 49661);
         }
-        if (null != gp.field_Lb) {
-          lp.field_i = gp.field_Lb.b(true);
+        if (null != ScrollContainer.field_Lb) {
+          lp.field_i = ScrollContainer.field_Lb.b(true);
         }
         if (ol.b(true)) {
-          var3 = pf.a(true) * 1200;
+          var3 = MenuInputState.a(true) * 1200;
           if (this.field_F ||
             !(il.a(-115) <= var3) &&
             !(var3 >= ql.g(13428))) {
             this.field_F = false;
             na.a(true);
             to.g((byte) 81);
-            gp.a(true, hm.field_c, 2);
+            ScrollContainer.a(true, hm.field_c, 2);
             fe.a(false);
             ol.field_o = true;
             mc.field_q = 15000L + hm.a(64);
@@ -257,19 +257,19 @@ abstract class lb extends GameApplet {
             if (el.field_b >= 10) {
               to.g((byte) 106);
               if (mj.field_b == 3) {
-                gp.a(true, wo.field_e, 256);
+                ScrollContainer.a(true, wo.field_e, 256);
               } else {
                 if (mj.field_b == 4) {
-                  gp.a(true, od.field_Ib, 256);
+                  ScrollContainer.a(true, TabbedPanel.field_Ib, 256);
                 } else {
                   if (mj.field_b != 2) {
                     if (mj.field_b == 5) {
-                      gp.a(true, aq.field_b, 5);
+                      ScrollContainer.a(true, aq.field_b, 5);
                     } else {
-                      gp.a(true, JaggrabDownloader.field_k, 256);
+                      ScrollContainer.a(true, JaggrabDownloader.field_k, 256);
                     }
                   } else {
-                    gp.a(true, SectorCacheStore.field_g, 256);
+                    ScrollContainer.a(true, SectorCacheStore.field_g, 256);
                   }
                 }
               }
@@ -298,57 +298,57 @@ abstract class lb extends GameApplet {
         }
         if (hf.field_q == 1) {
           if (0 != wo.field_d) {
-            hn.field_e = MouseInputHandler.a(il.field_f, (byte) 124);
+            DebouncedValidator.field_e = MouseInputHandler.a(il.field_f, (byte) 124);
           }
           wk.field_j = vm.a(true, (byte) 22, false, wg.field_e, 1);
           io.field_g = vm.a(true, (byte) 22, false, lo.field_Hb, 1);
-          qo.field_u = vm.a(true, (byte) 22, false, SocketJs5Transport.field_r, 1);
+          MatchingTextValidator.field_u = vm.a(true, (byte) 22, false, SocketJs5Transport.field_r, 1);
           qn.field_l = wk.field_j;
           dg.field_d = io.field_g;
           hf.field_q = 2;
         }
         if (hf.field_q == 2) {
-          if (hn.field_e != null &&
-            hn.field_e.b(-3)) {
-            if (!hn.field_e.hasGroupName(param0 + 125, "")) {
-              hn.field_e = null;
+          if (DebouncedValidator.field_e != null &&
+            DebouncedValidator.field_e.b(-3)) {
+            if (!DebouncedValidator.field_e.hasGroupName(param0 + 125, "")) {
+              DebouncedValidator.field_e = null;
             } else {
-              if (hn.field_e.ensureGroupAvailableByName("", ~param0)) {
-                uk.a(param0 + 31873, hn.field_e);
-                hn.field_e = null;
+              if (DebouncedValidator.field_e.ensureGroupAvailableByName("", ~param0)) {
+                uk.a(param0 + 31873, DebouncedValidator.field_e);
+                DebouncedValidator.field_e = null;
                 sf.a(param0 + 0);
               }
             }
           }
-          if (null == hn.field_e) {
+          if (null == DebouncedValidator.field_e) {
             hf.field_q = 3;
           }
         }
         if (hf.field_q == 3 &&
-          gf.a(io.field_g, -123, wk.field_j, qo.field_u) &&
-          pe.a(qo.field_u, (byte) -91)) {
+          gf.a(io.field_g, -123, wk.field_j, MatchingTextValidator.field_u) &&
+          pe.a(MatchingTextValidator.field_u, (byte) -91)) {
           CachedArchiveProvider.c((byte) 24);
           SectorCacheStore.a((byte) 119);
-          ad.field_r = FullscreenFocusCanvas.field_c;
+          ThreeSliceButtonPainter.field_r = FullscreenFocusCanvas.field_c;
           sd.field_I = false;
-          hn.a(io.field_g, param0 + 27848, wk.field_j, qo.field_u, uj.field_Lb);
+          DebouncedValidator.a(io.field_g, param0 + 27848, wk.field_j, MatchingTextValidator.field_u, LobbyPlayer.field_Lb);
           if (ri.field_b ||
-            null != eq.field_fc) {
+            null != LobbyGame.field_fc) {
             stackIn_100_0 = param0 - 20;
             stackIn_101_1 = !(ri.field_b);
             stackIn_104_2 = !(ri.field_b);
-            vn.a(stackIn_100_0, stackIn_101_1, stackIn_104_2, eq.field_fc);
+            vn.a(stackIn_100_0, stackIn_101_1, stackIn_104_2, LobbyGame.field_fc);
           }
           if (ci.field_n) {
-            jo.a(-22218);
+            CheckboxPainter.a(-22218);
           }
-          if (null == kp.field_t) {
-            kp.field_t = vp.d((byte) -58);
-            hn.field_a = te.n(0);
+          if (null == QuickChatPhraseDefinition.field_t) {
+            QuickChatPhraseDefinition.field_t = VerticalScrollbar.d((byte) -58);
+            DebouncedValidator.field_a = QuickChatMenu.n(0);
           }
-          em.a(kp.field_t, 74, hn.field_a, qo.field_u);
+          em.a(QuickChatPhraseDefinition.field_t, 74, DebouncedValidator.field_a, MatchingTextValidator.field_u);
           io.field_g = null;
-          qo.field_u = null;
+          MatchingTextValidator.field_u = null;
           wk.field_j = null;
           bg.a(param0 + 125, (java.applet.Applet) (this));
           sf.a(0);
@@ -389,12 +389,12 @@ abstract class lb extends GameApplet {
         }
         if (!param1 &&
           wl.field_i) {
-          pf.a(ec.field_u, param0 ^ 0);
+          MenuInputState.a(NameAvailabilityValidator.field_u, param0 ^ 0);
           this.a(-27106);
-          he.a(0, ec.field_u);
+          he.a(0, NameAvailabilityValidator.field_u);
         }
-        if (h.field_P[8]) {
-          gh.d(8);
+        if (Checkbox.field_P[8]) {
+          GradientOutlineTextPainter.d(8);
         }
     }
 
@@ -407,12 +407,12 @@ abstract class lb extends GameApplet {
         if (!param4) {
           return;
         }
-        pf.b(wo.field_d, -31383);
+        MenuInputState.b(wo.field_d, -31383);
         l.a(false, wo.field_d, 5000, this.field_v, this.field_u, this.field_s, this.field_w, param0, 5000, param1, this.field_y, this.field_q, this.field_B, mc.field_k);
         KeyboardInputHandler.a(this.field_u, param0, wo.field_d, this.field_y, mc.field_k, this.field_q, this.field_w, -21462, this.field_B);
         qf.a(31171);
-        gp.field_Lb = bl.a(71);
-        he.a(0, ec.field_u);
+        ScrollContainer.field_Lb = bl.a(71);
+        he.a(0, NameAvailabilityValidator.field_u);
         wg.field_e = param6;
         SocketJs5Transport.field_r = param5;
         il.field_f = param7;
@@ -430,7 +430,7 @@ abstract class lb extends GameApplet {
         var4 = Pixelate.field_H ? 1 : 0;
         var2 = mn.field_e;
         if (64 > var2 &&
-          h.field_P[var2]) {
+          Checkbox.field_P[var2]) {
           if (param0 != -12) {
             return;
           }
@@ -468,18 +468,18 @@ abstract class lb extends GameApplet {
                                 cl.b(param0 ^ -8237);
                                 return;
                               }
-                              jo.a(1, "MGS1: " + jm.b(-106), (Throwable) null);
+                              CheckboxPainter.a(1, "MGS1: " + jm.b(-106), (Throwable) null);
                               na.a(true);
                               return;
                             }
                             stackIn_33_0 = (var2 == 12);
-                            var3 = uj.a(stackIn_33_0, (byte) 122);
+                            var3 = LobbyPlayer.a(stackIn_33_0, (byte) 122);
                             fq.a(var3, (byte) 64);
                           } else {
                             nk.a(16711935);
                           }
                         } else {
-                          od.a(-5, MusicCrossfadeStream.field_o, jj.field_b, mc.field_k);
+                          TabbedPanel.a(-5, MusicCrossfadeStream.field_o, jj.field_b, mc.field_k);
                         }
                       }
                     }
@@ -496,7 +496,7 @@ abstract class lb extends GameApplet {
           }
           return;
         }
-        jo.a(1, "MGS2: " + jm.b(param0 - 55), (Throwable) null);
+        CheckboxPainter.a(1, "MGS2: " + jm.b(param0 - 55), (Throwable) null);
         na.a(true);
     }
 
@@ -512,11 +512,11 @@ abstract class lb extends GameApplet {
         } else {
           if (hf.field_q < 10) {
           } else {
-            if (!dm.q(22452)) {
+            if (!RegistrationRequestDialog.q(22452)) {
               pb.b(124);
             } else {
               if (el.field_b != 0) {
-                a.a((byte) -104, lp.field_i);
+                NameSuggestionsPanel.a((byte) -104, lp.field_i);
               } else {
                 discarded$2 = this.a(0, false, false);
               }
@@ -576,7 +576,7 @@ abstract class lb extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            jo.a(1, (String) null, (Throwable) ((Object) var6_ref));
+            CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var6_ref));
             this.a(-18310, "crash");
           }
           return;
@@ -631,11 +631,11 @@ abstract class lb extends GameApplet {
     }
 
     private final void i(int param0) {
-        String var2 = qo.e(480);
+        String var2 = MatchingTextValidator.e(480);
         if (param0 != 21037) {
           this.a(false, false, true, true, true, false, -110);
         }
-        gj.a(var2, AudioService.a(param0 ^ 25606), true);
+        NumericDateInputWidget.a(var2, AudioService.a(param0 ^ 25606), true);
     }
 
     final int j(int param0) {
@@ -645,25 +645,25 @@ abstract class lb extends GameApplet {
         int var2 = this.l(-85);
         if (0 == var2 ||
           var2 == 1) {
-          if (h.field_P[1]) {
+          if (Checkbox.field_P[1]) {
             io.a(2, -20304);
           }
-          if (h.field_P[2]) {
+          if (Checkbox.field_P[2]) {
             se.a((byte) 32, 3);
           }
-          if (h.field_P[3]) {
+          if (Checkbox.field_P[3]) {
             ue.b(4, (byte) 42);
           }
-          if (h.field_P[4]) {
-            vp.a(0, 5);
+          if (Checkbox.field_P[4]) {
+            VerticalScrollbar.a(0, 5);
           }
-          if (h.field_P[5]) {
+          if (Checkbox.field_P[5]) {
             bo.a(6, 7);
           }
-          if (h.field_P[6]) {
-            ag.a((byte) -116, 7);
+          if (Checkbox.field_P[6]) {
+            AgeValidator.a((byte) -116, 7);
           }
-          if (h.field_P[8]) {
+          if (Checkbox.field_P[8]) {
             nn.a(true);
           }
         }
@@ -672,7 +672,7 @@ abstract class lb extends GameApplet {
 
     private final void e(byte param0) {
         int var2 = -121 / ((12 - param0) / 42);
-        h.field_P[5] = true;
+        Checkbox.field_P[5] = true;
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6) {
@@ -724,7 +724,7 @@ abstract class lb extends GameApplet {
             this.a(-18310, "reconnect");
           }
           to.g((byte) 47);
-          gp.a(true, gi.field_b, var2);
+          ScrollContainer.a(true, gi.field_b, var2);
           ol.field_o = true;
           mc.field_q = 15000L + hm.a(64);
           return var2;
@@ -737,16 +737,16 @@ abstract class lb extends GameApplet {
     }
 
     private final void f(byte param0) {
-        h.field_P[11] = true;
-        h.field_P[12] = true;
-        h.field_P[13] = true;
+        Checkbox.field_P[11] = true;
+        Checkbox.field_P[12] = true;
+        Checkbox.field_P[13] = true;
         if (param0 >= -61) {
           lb.a((byte) -22, 47);
         }
     }
 
     private final void k(int param0) {
-        h.field_P[4] = true;
+        Checkbox.field_P[4] = true;
         if (param0 < 24) {
           this.field_t = -8;
         }
@@ -761,7 +761,7 @@ abstract class lb extends GameApplet {
         int var4 = jj.field_b - 1;
         byte[] var5 = new byte[var4];
         MusicCrossfadeStream.field_o.b(var5, 0, 88, var4);
-        ia.a(var3 != 0, of.a(var5, 1), -33, AudioService.a(param0 ^ 13840));
+        LinkButtonPainter.a(var3 != 0, of.a(var5, 1), -33, AudioService.a(param0 ^ 13840));
     }
 
     final static IndexedSprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
@@ -859,7 +859,7 @@ abstract class lb extends GameApplet {
     }
 
     private final void g(int param0) {
-        h.field_P[2] = true;
+        Checkbox.field_P[2] = true;
         int var2 = 1 / ((-44 - param0) / 49);
     }
 
@@ -867,17 +867,17 @@ abstract class lb extends GameApplet {
     }
 
     private final void a(byte param0, boolean param1) {
-        h.field_P[7] = true;
-        h.field_P[16] = true;
-        h.field_P[17] = true;
-        h.field_P[18] = true;
+        Checkbox.field_P[7] = true;
+        Checkbox.field_P[16] = true;
+        Checkbox.field_P[17] = true;
+        Checkbox.field_P[18] = true;
         if (param0 >= -49) {
           String var4 = (String) null;
           this.a((String) null, 31, 95);
         }
-        h.field_P[3] = true;
-        h.field_P[0] = true;
-        h.field_P[8] = param1;
+        Checkbox.field_P[3] = true;
+        Checkbox.field_P[0] = true;
+        Checkbox.field_P[8] = param1;
     }
 
     static {

@@ -122,11 +122,11 @@ final class WhirlpoolHasher {
               }
               if (!stackIn_13_0 ||
                 !(var17 * var14 - var15 * var16 >= 0)) {
-                var12Lifetime1 = qe.field_v[var9];
+                var12Lifetime1 = QuickChatCategory.field_v[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = qe.field_v[var10];
+                  var13Lifetime1 = QuickChatCategory.field_v[var10];
                   if (-2147483648 != var13Lifetime1) {
-                    var14 = qe.field_v[var11];
+                    var14 = QuickChatCategory.field_v[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + var12Lifetime1 - (-var13Lifetime1 - var14);
                       if (var7 >= 0) {
@@ -134,8 +134,8 @@ final class WhirlpoolHasher {
                       } else {
                         stackIn_34_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_34_0 + (-1 + kb.field_N.length);
-                      var17 = kb.field_N[var16];
+                      var16 = -stackIn_34_0 + (-1 + DateInputWidget.field_N.length);
+                      var17 = DateInputWidget.field_N[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -145,14 +145,14 @@ final class WhirlpoolHasher {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = kb.field_N[var16];
+                          var17 = DateInputWidget.field_N[var16];
                           continue;
                         }
                         stackIn_45_0Lifetime1 = var17;
                         stackIn_45_1Lifetime1 = var16 << 4;
                         var18 = stackIn_45_0Lifetime1 + stackIn_45_1Lifetime1;
                         nd.field_c[var18] = var8;
-                        kb.field_N[var16] = var17 + 1;
+                        DateInputWidget.field_N[var16] = var17 + 1;
                         if (param1.field_B > 0 &&
                           null != param1.field_n) {
                           dupTemp$0 = param1.field_n[var8];

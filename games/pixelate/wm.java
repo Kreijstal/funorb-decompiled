@@ -4,7 +4,7 @@
 final class wm {
     int field_e;
     int field_b;
-    static ak field_d;
+    static SceneWidget field_d;
     static ge field_a;
     static int field_c;
 

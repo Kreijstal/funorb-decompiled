@@ -27,33 +27,33 @@ final class vh {
         int var10 = 0;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          var1_int = ia.field_e - qn.field_o;
+          var1_int = LinkButtonPainter.field_e - qn.field_o;
           qn.field_o = -(var1_int >> 1) + bq.field_d;
-          ia.field_e = var1_int + qn.field_o;
+          LinkButtonPainter.field_e = var1_int + qn.field_o;
           if (param0 < 16) {
             field_b = (String) null;
           }
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
           var2 = ce.field_c;
-          for (var3 = 0; var3 < pl.field_J.length; var3++) {
+          for (var3 = 0; var3 < AccountRegistrationPanel.field_J.length; var3++) {
             var4 = ProxyAuthenticationException.field_e[var3];
             if (var4 < 0) {
               var5 = hd.field_n;
             } else {
-              if (var4 == vp.field_Gb.field_j) {
+              if (var4 == VerticalScrollbar.field_Gb.field_j) {
                 var5 = mj.field_k;
               } else {
                 var5 = mh.field_a;
               }
             }
-            var6 = pl.field_J[var3];
+            var6 = AccountRegistrationPanel.field_J[var3];
             stackIn_12_0 = var6;
             stackIn_12_1 = 8192;
             stackIn_13_2 = !(var4 < 0);
             var7 = ArchiveProvider.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
             var8 = bq.field_d - (var7 >> 1);
             if (var4 >= 0) {
-              if (vp.field_Gb.field_j != var4) {
+              if (VerticalScrollbar.field_Gb.field_j != var4) {
                 stackIn_18_0 = BufferedRandomAccessFile.field_m;
               } else {
                 stackIn_18_0 = wg.field_d;
@@ -66,7 +66,7 @@ final class vh {
               var2 = var2 + lf.field_b;
             }
             if (var4 >= 0) {
-              ie.field_G.drawText(var6, var8, var2 + w.field_q, var5, -1);
+              SingleChildContainer.field_G.drawText(var6, var8, var2 + StatefulTextPainter.field_q, var5, -1);
               var2 = var2 + (dk.field_d + lf.field_b + ki.field_e);
             } else {
               DualLinkNode.field_o.drawText(var6, var8, ab.field_b + var2, var5, -1);

@@ -4,7 +4,7 @@
 final class le {
     static int field_j;
     private int field_f;
-    static ak field_h;
+    static SceneWidget field_h;
     private SecondaryNodeDeque field_g;
     static int[] field_b;
     static String field_d;
@@ -168,7 +168,7 @@ final class le {
           var4 = 0;
           var5 = -16 / ((-26 - param1) / 59);
           while (var2_int > var4) {
-            var3 = (var3 << 5) - var3 + pf.a((byte) -118, param0.charAt(var4));
+            var3 = (var3 << 5) - var3 + MenuInputState.a((byte) -118, param0.charAt(var4));
             var4++;
           }
           stackIn_5_0 = var3;

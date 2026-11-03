@@ -1,0 +1,102 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PasswordFieldPainter extends GradientOutlineTextPainter {
+    static int field_A;
+    static int[] field_x;
+    static String field_z;
+    static Sprite field_y;
+
+    final String getDisplayText(UiComponent param0, int param1) {
+        RuntimeException var3 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -472248767) {
+            field_y = (Sprite) null;
+          }
+          stackIn_3_0 = EmailValidator.a(false, '*', param0.field_q.length());
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ip.M(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void e(int param0) {
+        field_z = null;
+        field_y = null;
+        if (param0 != 8192) {
+          field_y = (Sprite) null;
+          field_x = null;
+          return;
+        }
+        field_x = null;
+    }
+
+    private PasswordFieldPainter(BitmapFont param0, int param1) {
+        super(param0, param1);
+    }
+
+    final static void a(byte param0, java.applet.Applet param1) {
+        try {
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            try {
+              var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+              if (param0 != 93) {
+                return;
+              }
+              param1.getAppletContext().showDocument(lg.a(false, param1, var2), "_top");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("ip.L(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    PasswordFieldPainter(int param0) {
+        this(he.field_d, param0);
+    }
+
+    static {
+        field_x = new int[8192];
+        field_z = "Previous";
+    }
+}

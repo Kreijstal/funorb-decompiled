@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ni extends IntrusiveNode {
-    static ak field_s;
+    static SceneWidget field_s;
     static Sprite field_m;
     int field_r;
     int field_t;
@@ -39,7 +39,7 @@ final class ni extends IntrusiveNode {
           FullscreenFocusCanvas.field_d = param0;
           ImageProducerRasterBuffer.field_l = param1;
           r.field_a = param7;
-          vp.field_Lb = param9;
+          VerticalScrollbar.field_Lb = param9;
           if (param5) {
             ni.a(88);
           }
@@ -51,13 +51,13 @@ final class ni extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        oc.field_H[5].a(ug.field_n, (byte) -24);
-        oc.field_H[6].a(DualLinkNode.field_s, (byte) -24);
-        oc.field_H[8].a(db.field_T, (byte) -24);
+        StripedProgressBar.field_H[5].a(ug.field_n, (byte) -24);
+        StripedProgressBar.field_H[6].a(DualLinkNode.field_s, (byte) -24);
+        StripedProgressBar.field_H[8].a(TextHotspotWidget.field_T, (byte) -24);
         if (!gq.d(121)) {
-          oc.field_H[1].a(oj.field_N, (byte) -24);
-          oc.field_H[2].a(vp.field_Sb, (byte) -24);
-          oc.field_H[4].a(ng.field_m, (byte) -24);
+          StripedProgressBar.field_H[1].a(oj.field_N, (byte) -24);
+          StripedProgressBar.field_H[2].a(VerticalScrollbar.field_Sb, (byte) -24);
+          StripedProgressBar.field_H[4].a(UiComponent.field_m, (byte) -24);
         }
         if (param0 == -31470) {
           return;

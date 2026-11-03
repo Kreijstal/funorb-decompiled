@@ -55,7 +55,7 @@ final class li {
 
     final static void a(float param0, int param1, String param2) {
         try {
-          ad.field_r = param2;
+          ThreeSliceButtonPainter.field_r = param2;
           bf.field_o = param0;
           if (param1 != -1) {
             li.a((byte) -73);

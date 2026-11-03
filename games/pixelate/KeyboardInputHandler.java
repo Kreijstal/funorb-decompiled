@@ -14,7 +14,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         RuntimeException var2 = null;
         try {
           if (null != mc.field_r) {
-            ia.field_i = 0;
+            LinkButtonPainter.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < GameApplet.field_j.length) {
@@ -24,7 +24,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             }
             if (ol.field_q >= 0 &&
               0 <= var2_int) {
-              qp.field_Q[ol.field_q] = ~var2_int;
+              LabeledField.field_Q[ol.field_q] = ~var2_int;
               ol.field_q = ol.field_q + 1 & 127;
               if (ol.field_q == wm.field_c) {
                 ol.field_q = -1;
@@ -56,14 +56,14 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
           fj.field_a = param0;
           bl.field_e = param6;
-          ak.field_ib = param2;
+          SceneWidget.field_ib = param2;
           ql.field_o = param8;
           pd.field_Eb = param5;
           lk.field_n = param1;
           ef.field_e = param4;
           pm.field_h = (Js5Transport) ((Object) new SocketJs5Transport());
-          fh.field_J = new DiskCacheWorker(param4);
-          ck.field_j = new am(pm.field_h, fh.field_J);
+          DisplayNameForm.field_J = new DiskCacheWorker(param4);
+          ck.field_j = new am(pm.field_h, DisplayNameForm.field_J);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
@@ -182,7 +182,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int var3Lifetime1;
         try {
           if (null != mc.field_r) {
-            ia.field_i = 0;
+            LinkButtonPainter.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               GameApplet.field_j.length > var2_int) {
@@ -195,7 +195,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             }
             if (0 <= ol.field_q &&
               var2_int >= 0) {
-              qp.field_Q[ol.field_q] = var2_int;
+              LabeledField.field_Q[ol.field_q] = var2_int;
               ol.field_q = 127 & 1 + ol.field_q;
               if (ol.field_q == wm.field_c) {
                 ol.field_q = -1;

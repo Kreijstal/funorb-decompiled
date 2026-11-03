@@ -4,8 +4,8 @@
 final class nk {
     static int[] field_d;
     static String field_c;
-    static ak field_f;
-    static ak field_e;
+    static SceneWidget field_f;
+    static SceneWidget field_e;
     static String field_b;
     static String field_g;
     static String field_h;
@@ -17,7 +17,7 @@ final class nk {
         RuntimeException var1 = null;
         try {
           if (!param0) {
-            nk.a((ak) null, (BitmapFont) null, (vp) null, (ak) null, (byte) 7, (ak) null, (ak) null, (ak) null, (ak) null, true, (ak) null, (ak) null);
+            nk.a((SceneWidget) null, (BitmapFont) null, (VerticalScrollbar) null, (SceneWidget) null, (byte) 7, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null, true, (SceneWidget) null, (SceneWidget) null);
           }
           field_d = null;
           field_g = null;
@@ -35,7 +35,7 @@ final class nk {
         }
     }
 
-    final static void a(ak param0, BitmapFont param1, vp param2, ak param3, byte param4, ak param5, ak param6, ak param7, ak param8, boolean param9, ak param10, ak param11) {
+    final static void a(SceneWidget param0, BitmapFont param1, VerticalScrollbar param2, SceneWidget param3, byte param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, boolean param9, SceneWidget param10, SceneWidget param11) {
         String stackIn_30_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -66,7 +66,7 @@ final class nk {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        ak var17 = null;
+        SceneWidget var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -78,14 +78,14 @@ final class nk {
           ib.field_i[3] = 16736511;
           ge.field_f = param9;
           oi.field_e = param6;
-          vl.field_Q = param1;
+          AccountMessagePanel.field_Q = param1;
           ib.field_i[0] = 16764000;
           ib.field_i[4] = 16711935;
-          qp.field_P[3] = 16736511;
-          qp.field_P[1] = 6356832;
-          qp.field_P[2] = 16736352;
-          vp.field_Ib = 8421504;
-          qp.field_P[0] = 16764000;
+          LabeledField.field_P[3] = 16736511;
+          LabeledField.field_P[1] = 6356832;
+          LabeledField.field_P[2] = 16736352;
+          VerticalScrollbar.field_Ib = 8421504;
+          LabeledField.field_P[0] = 16764000;
           var12 = new Sprite(4, 4);
           var13 = var12.field_G;
           var14 = var12.field_G;
@@ -96,29 +96,29 @@ final class nk {
           var15[8] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          ui.field_i = new ak(0L, param0);
-          ki.field_k = new ak(0L, param3);
+          ui.field_i = new SceneWidget(0L, param0);
+          ki.field_k = new SceneWidget(0L, param3);
           ui.field_i.a(ki.field_k, (byte) 26);
-          var17 = new ak(0L, (ak) null);
-          var17.field_L = new IntrusiveDeque();
-          l.field_p = new gp(0L, var17, param8, param2);
+          var17 = new SceneWidget(0L, (SceneWidget) null);
+          var17.children = new IntrusiveDeque();
+          l.field_p = new ScrollContainer(0L, var17, param8, param2);
           ki.field_k.a(l.field_p, (byte) 26);
-          oc.field_U = new ak(0L, param5);
-          ki.field_k.a(oc.field_U, (byte) 26);
-          nf.field_d = new ak(0L, param10);
-          nf.field_d.field_Db = vl.field_Q;
-          oc.field_U.a(nf.field_d, (byte) 26);
-          oc.field_U.h(-257);
-          rh.field_y = new ak(0L, (ak) null);
+          StripedProgressBar.field_U = new SceneWidget(0L, param5);
+          ki.field_k.a(StripedProgressBar.field_U, (byte) 26);
+          nf.field_d = new SceneWidget(0L, param10);
+          nf.field_d.font = AccountMessagePanel.field_Q;
+          StripedProgressBar.field_U.a(nf.field_d, (byte) 26);
+          StripedProgressBar.field_U.h(-257);
+          rh.field_y = new SceneWidget(0L, (SceneWidget) null);
           rh.field_y.field_zb = var16;
           if (param4 <= 69) {
             nk.a(-96);
           }
-          oc.field_U.a(rh.field_y, (byte) 26);
-          DelegatingCanvas.field_e = new ak[5];
-          jo.field_n = new ak[5];
-          ResourceArchive.field_f = new ak[5];
-          ResourceArchive.field_h = new ak[5];
+          StripedProgressBar.field_U.a(rh.field_y, (byte) 26);
+          DelegatingCanvas.field_e = new SceneWidget[5];
+          CheckboxPainter.field_n = new SceneWidget[5];
+          ResourceArchive.field_f = new SceneWidget[5];
+          ResourceArchive.field_h = new SceneWidget[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -144,18 +144,18 @@ final class nk {
                 var19 = stackIn_30_0;
               }
               if (decompiledFrameRemainder0) {
-                ResourceArchive.field_f[var18] = new ak(0L, param11);
-                jo.field_n[var18] = new ak(0L, oi.field_e, var19);
-                ResourceArchive.field_h[var18] = new ak(0L, (ak) null);
-                ResourceArchive.field_h[var18].field_kb = 1;
-                DelegatingCanvas.field_e[var18] = new ak(0L, oi.field_e);
-                DelegatingCanvas.field_e[var18].field_kb = 1;
-                ResourceArchive.field_f[var18].a(jo.field_n[var18], (byte) 26);
+                ResourceArchive.field_f[var18] = new SceneWidget(0L, param11);
+                CheckboxPainter.field_n[var18] = new SceneWidget(0L, oi.field_e, var19);
+                ResourceArchive.field_h[var18] = new SceneWidget(0L, (SceneWidget) null);
+                ResourceArchive.field_h[var18].verticalAlignment = 1;
+                DelegatingCanvas.field_e[var18] = new SceneWidget(0L, oi.field_e);
+                DelegatingCanvas.field_e[var18].verticalAlignment = 1;
+                ResourceArchive.field_f[var18].a(CheckboxPainter.field_n[var18], (byte) 26);
                 ResourceArchive.field_f[var18].a(ResourceArchive.field_h[var18], (byte) 26);
                 ResourceArchive.field_f[var18].a(DelegatingCanvas.field_e[var18], (byte) 26);
                 ResourceArchive.field_f[var18].h(-257);
                 ui.field_i.a(ResourceArchive.field_f[var18], (byte) 26);
-                qm.field_F = qm.field_F + 1;
+                TextButton.field_F = TextButton.field_F + 1;
               }
               var18++;
               continue;
@@ -163,9 +163,9 @@ final class nk {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            gh.field_u = new ak(0L, param7);
-            gh.field_u.field_cb = nd.field_a;
-            ui.field_i.a(gh.field_u, (byte) 26);
+            GradientOutlineTextPainter.field_u = new SceneWidget(0L, param7);
+            GradientOutlineTextPainter.field_u.field_cb = nd.field_a;
+            ui.field_i.a(GradientOutlineTextPainter.field_u, (byte) 26);
             stackIn_34_0 = ol.b(true) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
@@ -250,7 +250,7 @@ final class nk {
             nk.a(true);
           }
           kn.field_J = MusicCrossfadeStream.field_o.h(5);
-          eq.field_Hb = dh.a((CharSequence) ((Object) kn.field_J), (byte) 44);
+          LobbyGame.field_Hb = dh.a((CharSequence) ((Object) kn.field_J), (byte) 44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -313,7 +313,7 @@ final class nk {
           if (param0 != 93) {
             field_i = -74;
           }
-          ia.field_h = param1;
+          LinkButtonPainter.field_h = param1;
           var2 = (cm) (bo.field_d.c(param0 ^ 1504642236));
           while (null != var2) {
             stackIn_22_0 = var2.field_k.b(param0 - 93);
@@ -322,7 +322,7 @@ final class nk {
                 if (!stackIn_22_0) {
                   var2.c(2779);
                 }
-                var2.field_n.setVolumeQ6(var2.field_p * ia.field_h + 128 >> 8);
+                var2.field_n.setVolumeQ6(var2.field_p * LinkButtonPainter.field_h + 128 >> 8);
                 var2 = (cm) (rg.field_b.last(1504642273));
                 return;
               }
@@ -332,7 +332,7 @@ final class nk {
             }
             if (stackIn_22_0 ||
               var3 != 0) {
-              var2.field_n.setVolumeQ6(128 + var2.field_p * ia.field_h >> 8);
+              var2.field_n.setVolumeQ6(128 + var2.field_p * LinkButtonPainter.field_h >> 8);
             }
             var2 = (cm) (bo.field_d.last(param0 + 1504642180));
             if (var3 == 0) {
@@ -350,7 +350,7 @@ final class nk {
               if (!stackIn_22_0Lifetime1) {
                 var2Lifetime1.c(2779);
               } else {
-                var2Lifetime1.field_n.setVolumeQ6(var2Lifetime1.field_p * ia.field_h + 128 >> 8);
+                var2Lifetime1.field_n.setVolumeQ6(var2Lifetime1.field_p * LinkButtonPainter.field_h + 128 >> 8);
               }
               var2Lifetime1 = (cm) (rg.field_b.last(1504642273));
             }
@@ -373,8 +373,8 @@ final class nk {
 
     final static void a(int param0, int param1, int param2) {
         try {
-          h.field_Q = param0;
-          fh.field_L = param1;
+          Checkbox.field_Q = param0;
+          DisplayNameForm.field_L = param1;
           if (param2 != 5818) {
             field_a = (IntrusiveDeque) null;
           }

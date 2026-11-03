@@ -3,7 +3,7 @@
  */
 abstract class nc {
     static boolean field_b;
-    static ak field_e;
+    static SceneWidget field_e;
     static int field_d;
     static String[] field_c;
     static int field_a;
@@ -18,7 +18,7 @@ abstract class nc {
 
     abstract int a(boolean param0, long param1);
 
-    final static ak b(int param0) {
+    final static SceneWidget b(int param0) {
         if (param0 <= 101) {
           nc.b(47);
           return fb.c((byte) 123);

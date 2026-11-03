@@ -28,19 +28,19 @@ final class ig {
           if (param0 != 200) {
             field_b = (ResourceArchive) null;
           }
-          if (qo.field_n == Js5NetworkRequest.field_F) {
+          if (MatchingTextValidator.field_n == Js5NetworkRequest.field_F) {
             stackIn_4_0 = null;
             return (id) (stackIn_4_0);
           }
-          if (qo.field_n == h.field_N &&
+          if (MatchingTextValidator.field_n == Checkbox.field_N &&
             param1.equals(uh.field_m)) {
-            qo.field_n = wm.field_a;
-            stackIn_8_0 = jc.field_f;
+            MatchingTextValidator.field_n = wm.field_a;
+            stackIn_8_0 = SpriteCheckboxPainter.field_f;
             return stackIn_8_0;
           }
-          qo.field_n = Js5NetworkRequest.field_F;
+          MatchingTextValidator.field_n = Js5NetworkRequest.field_F;
           uh.field_m = param1;
-          jc.field_f = null;
+          SpriteCheckboxPainter.field_f = null;
           stackIn_10_0 = null;
           return (id) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

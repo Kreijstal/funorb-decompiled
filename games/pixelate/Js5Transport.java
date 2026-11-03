@@ -6,7 +6,7 @@ abstract class Js5Transport {
     nj field_e;
     nj field_f;
     nj field_l;
-    static uc field_d;
+    static TextWidgetPainter field_d;
     static String[] field_j;
     static int field_n;
     nj field_p;

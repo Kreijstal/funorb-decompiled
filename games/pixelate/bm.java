@@ -26,10 +26,10 @@ final class bm extends jj {
         if (0 == var5) {
           var5 = 1;
         }
-        uj.field_Ob = -param0;
+        LobbyPlayer.field_Ob = -param0;
         int var6 = this.a(255 / var4, 255 / var3, 255 / var5, param1 + 3);
-        od.field_Gb = var6 * uj.field_Ob + 16777215;
-        pl.field_O = 3 * uj.field_Ob + 16777215;
+        TabbedPanel.field_Gb = var6 * LobbyPlayer.field_Ob + 16777215;
+        AccountRegistrationPanel.field_O = 3 * LobbyPlayer.field_Ob + 16777215;
     }
 
     final void a(boolean param0) {
@@ -54,11 +54,11 @@ final class bm extends jj {
           var5.a();
         }
         for (var3 = 0; var3 < SoftwareRasterizer.field_k.length; var3++) {
-          if (pl.field_O < SoftwareRasterizer.field_k[var3]) {
+          if (AccountRegistrationPanel.field_O < SoftwareRasterizer.field_k[var3]) {
             SoftwareRasterizer.field_k[var3] = 16777215;
           } else {
-            if (od.field_Gb > SoftwareRasterizer.field_k[var3]) {
-              SoftwareRasterizer.field_k[var3] = od.field_Gb;
+            if (TabbedPanel.field_Gb > SoftwareRasterizer.field_k[var3]) {
+              SoftwareRasterizer.field_k[var3] = TabbedPanel.field_Gb;
             }
           }
         }

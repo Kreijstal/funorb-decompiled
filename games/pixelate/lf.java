@@ -14,7 +14,7 @@ final class lf {
     private int field_a;
     static ResourceArchive field_f;
 
-    final void a(lf param0, int param1, w param2, byte param3, int param4, ng param5) {
+    final void a(lf param0, int param1, StatefulTextPainter param2, byte param3, int param4, UiComponent param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -142,7 +142,7 @@ final class lf {
         }
     }
 
-    final void a(int param0, int param1, ng param2, byte param3, w param4) {
+    final void a(int param0, int param1, UiComponent param2, byte param3, StatefulTextPainter param4) {
         BitmapFont stackIn_18_0;
         String stackIn_18_1;
         int stackIn_18_2;
@@ -185,7 +185,7 @@ final class lf {
             }
             this.field_j.b(var6_int, var7);
           }
-          var6 = param4.b(param2, -472248767);
+          var6 = param4.getDisplayText(param2, -472248767);
           if (param3 < 115) {
             return;
           }

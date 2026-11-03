@@ -7,7 +7,7 @@ import java.util.*;
 final class ProxySocketConnector extends SocketConnector {
     static int[] field_h;
     static int[] field_l;
-    static ak field_k;
+    static SceneWidget field_k;
     static wi field_n;
     private java.net.ProxySelector proxySelector;
     static java.awt.Frame field_i;
@@ -158,7 +158,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param0 != -94) {
             field_h = (int[]) null;
           }
-          tm.field_S = param5;
+          MarkerSlider.field_S = param5;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -181,19 +181,19 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     final static String f(int param0) {
-        if (Js5NetworkRequest.field_F == tm.field_X) {
-          return vp.field_Nb;
+        if (Js5NetworkRequest.field_F == MarkerSlider.field_X) {
+          return VerticalScrollbar.field_Nb;
         }
         if (param0 != 8192) {
           field_n = (wi) null;
         }
-        if (qo.field_n == Js5NetworkRequest.field_F) {
+        if (MatchingTextValidator.field_n == Js5NetworkRequest.field_F) {
           return uh.field_m;
         }
         if (!an.field_e.d(79)) {
           return uh.field_m;
         }
-        return h.field_U;
+        return Checkbox.field_U;
     }
 
     final static void a(byte param0) {
@@ -346,10 +346,10 @@ final class ProxySocketConnector extends SocketConnector {
     final static void e(int param0) {
         int var1 = 0;
         if (SocketJs5Transport.field_u >= 224) {
-          jg.a(256, 114);
+          ArrayWidgetContainer.a(256, 114);
         } else {
           var1 = SocketJs5Transport.field_u % 32;
-          jg.a(SocketJs5Transport.field_u + (32 - var1), param0 ^ -4847);
+          ArrayWidgetContainer.a(SocketJs5Transport.field_u + (32 - var1), param0 ^ -4847);
         }
         if (param0 != -4767) {
           field_h = (int[]) null;

@@ -14,7 +14,7 @@ final class rh extends IntrusiveNode {
     int field_v;
     static long[] field_x;
     static String field_m;
-    static ak field_y;
+    static SceneWidget field_y;
     static String field_w;
     static String field_r;
 
@@ -30,7 +30,7 @@ final class rh extends IntrusiveNode {
         RuntimeException var4 = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          tm.field_X = h.field_N;
+          MarkerSlider.field_X = Checkbox.field_N;
           if (!param0) {
             return;
           }
@@ -68,7 +68,7 @@ final class rh extends IntrusiveNode {
 
     final static void b(byte param0) {
         int var1 = -5 % ((param0 - 16) / 63);
-        te.b(false, 93);
+        QuickChatMenu.b(false, 93);
     }
 
     public static void a(byte param0) {
@@ -86,8 +86,8 @@ final class rh extends IntrusiveNode {
     rh(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int fieldTemp$0 = 0;
         try {
-          fieldTemp$0 = dm.field_Bb;
-          dm.field_Bb = dm.field_Bb + 1;
+          fieldTemp$0 = RegistrationRequestDialog.field_Bb;
+          RegistrationRequestDialog.field_Bb = RegistrationRequestDialog.field_Bb + 1;
           this.field_o = fieldTemp$0 & 65535;
           this.field_v = param3;
           this.field_n = param5;

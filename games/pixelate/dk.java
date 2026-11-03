@@ -125,7 +125,7 @@ final class dk {
           var11 = var9;
           var3 = var11.f(255);
           var11.n(-110);
-          qn.field_q = pf.a(var11, (byte) 77);
+          qn.field_q = MenuInputState.a(var11, (byte) 77);
           ck.field_b = new rl[var3];
           wc.field_p = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {

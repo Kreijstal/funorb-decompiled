@@ -10,10 +10,10 @@ final class fl {
     static ResourceArchive field_b;
     private boolean field_a;
 
-    final static qe c(int param0) {
+    final static QuickChatCategory c(int param0) {
         int var1_int = 0;
-        qe var2 = null;
-        qe stackIn_6_0 = null;
+        QuickChatCategory var2 = null;
+        QuickChatCategory stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         try {
@@ -22,7 +22,7 @@ final class fl {
           }
           var1_int = 0;
           while (true) {
-            var2 = w.field_y.a(var1_int, false);
+            var2 = StatefulTextPainter.field_y.a(var1_int, false);
             if (var2.field_y) {
               stackIn_6_0 = var2;
               return stackIn_6_0;
@@ -41,9 +41,9 @@ final class fl {
           return td.field_b.a(nj.field_f, ke.field_a, false);
         }
         if (un.field_l) {
-          return vl.b(102, param2, param1);
+          return AccountMessagePanel.b(102, param2, param1);
         }
-        if (hn.a(param1, param2, param3)) {
+        if (DebouncedValidator.a(param1, param2, param3)) {
           return true;
         }
         if (IsaacRandom.field_g) {
@@ -67,7 +67,7 @@ final class fl {
           wa.field_c.b(-6183, cn.field_b);
           return;
         }
-        cn.field_b = new ko(wa.field_c, wp.field_a);
+        cn.field_b = new LoadingProgressDialog(wa.field_c, wp.field_a);
         wa.field_c.b(-6183, cn.field_b);
     }
 

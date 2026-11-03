@@ -11,18 +11,18 @@ final class lk extends jj {
         super.c(param0);
         this.field_m = this.field_m + 1;
         this.field_p = this.field_p + 2;
-        if (f.field_f.length <= this.field_m) {
-          this.field_m = this.field_m - f.field_f.length;
-          if (f.field_f.length <= this.field_p) {
-            this.field_p = this.field_p - f.field_f.length;
+        if (DialWidgetPainter.field_f.length <= this.field_m) {
+          this.field_m = this.field_m - DialWidgetPainter.field_f.length;
+          if (DialWidgetPainter.field_f.length <= this.field_p) {
+            this.field_p = this.field_p - DialWidgetPainter.field_f.length;
             return;
           }
           return;
         }
-        if (f.field_f.length > this.field_p) {
+        if (DialWidgetPainter.field_f.length > this.field_p) {
           return;
         }
-        this.field_p = this.field_p - f.field_f.length;
+        this.field_p = this.field_p - DialWidgetPainter.field_f.length;
     }
 
     public static void d(int param0) {
@@ -39,7 +39,7 @@ final class lk extends jj {
     }
 
     final void a(boolean param0) {
-        SoftwareRasterizer.g(0, 0, 640, 480, f.field_f[this.field_m], f.field_f[this.field_p]);
+        SoftwareRasterizer.g(0, 0, 640, 480, DialWidgetPainter.field_f[this.field_m], DialWidgetPainter.field_f[this.field_p]);
         if (param0) {
           return;
         }

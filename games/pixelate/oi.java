@@ -3,14 +3,14 @@
  */
 final class oi {
     static String field_b;
-    static ak field_e;
+    static SceneWidget field_e;
     static volatile int field_c;
     static String field_a;
     static String field_d;
 
-    final static boolean a(pl param0, int param1, boolean param2, String param3, byte param4, String param5, String param6) {
+    final static boolean a(AccountRegistrationPanel param0, int param1, boolean param2, String param3, byte param4, String param5, String param6) {
         RuntimeException var7 = null;
-        dm var8 = null;
+        RegistrationRequestDialog var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -22,19 +22,19 @@ final class oi {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wm.field_a != tm.field_X) {
+          if (wm.field_a != MarkerSlider.field_X) {
             return false;
           }
-          var8 = new dm(wa.field_c, param0);
+          var8 = new RegistrationRequestDialog(wa.field_c, param0);
           wa.field_c.b(-6183, var8);
           if (!og.a((byte) -96)) {
-            tm.field_X = Js5NetworkRequest.field_F;
+            MarkerSlider.field_X = Js5NetworkRequest.field_F;
             MouseWheelHandler.field_b = null;
-            oc.field_J = param2;
+            StripedProgressBar.field_J = param2;
             nk.field_b = param3;
             um.field_r = param1;
             pm.field_s = param5;
-            vp.field_Nb = param6;
+            VerticalScrollbar.field_Nb = param6;
           } else {
             var8.h((byte) -118);
           }
@@ -79,7 +79,7 @@ final class oi {
         try {
           if (param2 != -33) {
             String var4 = (String) null;
-            oi.a((pl) null, -20, true, (String) null, (byte) -44, (String) null, (String) null);
+            oi.a((AccountRegistrationPanel) null, -20, true, (String) null, (byte) -44, (String) null, (String) null);
           }
           gf.a(param1, false, 32, param0);
         } catch (RuntimeException runtimeException) {
@@ -97,7 +97,7 @@ final class oi {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, uj param4, int param5, gp param6) {
+    final static void a(int param0, int param1, int param2, byte param3, LobbyPlayer param4, int param5, ScrollContainer param6) {
         wi var8 = null;
         int var9 = 0;
         int var10 = 0;

@@ -41,9 +41,9 @@ final class ii {
         this.field_a.field_a[param0].a(this.field_a.field_d.field_l[this.field_a.field_d.field_d], -99);
         this.field_a.field_a[-param0 + 1].a(0, rd.field_l);
         this.field_a.field_a[-param0 + 1].field_e = bl.field_b;
-        this.field_a.field_a[1 - param0].field_h = ka.field_V;
+        this.field_a.field_a[1 - param0].field_h = ResizableModalPanel.field_V;
         int var4 = jk.field_c - this.field_a.field_v[param0];
-        int var5 = ng.field_u - this.field_a.field_v[-param0 + 1];
+        int var5 = UiComponent.field_u - this.field_a.field_v[-param0 + 1];
         if (0 < var4) {
           this.field_d[param0].a(-20791, var4, false);
         }
@@ -51,7 +51,7 @@ final class ii {
           this.field_d[-param0 + 1].a(-20791, var5, false);
         }
         this.field_a.field_v[param0] = jk.field_c;
-        this.field_a.field_v[-param0 + 1] = ng.field_u;
+        this.field_a.field_v[-param0 + 1] = UiComponent.field_u;
         uh[] var6 = this.field_d;
         for (var7 = 0; var6.length > var7; var7++) {
           var8 = var6[var7];
@@ -64,7 +64,7 @@ final class ii {
           this.field_r = true;
         }
         this.field_d[param0].field_c = false;
-        gq.a(0, 200, 320, sd.a(qm.field_G, 35, new String[]{this.field_a.field_i[param0]}));
+        gq.a(0, 200, 320, sd.a(TextButton.field_G, 35, new String[]{this.field_a.field_i[param0]}));
     }
 
     private final void h(int param0) {
@@ -96,7 +96,7 @@ final class ii {
         this.field_a.field_d.field_d = this.field_a.field_d.field_l.length;
         int fieldTemp$0 = this.field_a.field_r + 1;
         this.field_a.field_r = this.field_a.field_r + 1;
-        this.field_a.a(0, fieldTemp$0, oa.field_j);
+        this.field_a.a(0, fieldTemp$0, DateOfBirthValidator.field_j);
         this.field_f = true;
         var6 = this.field_d;
         var2 = var6;
@@ -107,7 +107,7 @@ final class ii {
         if (param0 <= 12) {
           this.field_w = 103;
         }
-        f.field_o = f.field_o + 1;
+        DialWidgetPainter.field_o = DialWidgetPainter.field_o + 1;
         if (this.field_a.field_r == 30) {
           this.a(4, (byte) 58, 251);
         }
@@ -141,9 +141,9 @@ final class ii {
         this.field_g = true;
         var7 = (hq) (wo.b(-119, 13));
         var8 = var7;
-        if (0 != oa.field_j) {
-          if (oa.field_j != 1) {
-            if (2 == oa.field_j) {
+        if (0 != DateOfBirthValidator.field_j) {
+          if (DateOfBirthValidator.field_j != 1) {
+            if (2 == DateOfBirthValidator.field_j) {
               var5 = null;
               if (this.field_a.field_j >= 0) {
                 var5 = this.field_a.field_i[this.field_a.field_j];
@@ -173,11 +173,11 @@ final class ii {
           stackIn_5_2 = gb.field_f[1];
           stackIn_6_3 = (wh.field_p == null) ? false : true;
           stackIn_8_4 = param0;
-          stackIn_8_5 = jg.a((byte) 85);
+          stackIn_8_5 = ArrayWidgetContainer.a((byte) 85);
           stackIn_9_6 = (go.field_k == 0) ? false : true;
           ((hq) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.field_v[0]);
         }
-        if (oa.field_j != 1) {
+        if (DateOfBirthValidator.field_j != 1) {
           dg.a(1, (byte) -97);
         }
         if (param1 != 250) {
@@ -198,9 +198,9 @@ final class ii {
         if (param1 != 58) {
           discarded$0 = this.a(-117, 64);
         }
-        pl.field_Y.addFirst(22125, new ph(param0));
+        AccountRegistrationPanel.field_Y.addFirst(22125, new ph(param0));
         if (!this.field_l) {
-          nj.field_h.addFirst(param1 ^ 22103, new hf(param0, param2, sb.field_a, f.field_o, ap.field_f, lo.field_Mb));
+          nj.field_h.addFirst(param1 ^ 22103, new hf(param0, param2, sb.field_a, DialWidgetPainter.field_o, ap.field_f, lo.field_Mb));
         }
     }
 
@@ -220,7 +220,7 @@ final class ii {
         var6 = stackIn_3_0;
         var2 = var6;
         ((ma) (this.field_j)).a(12804, false);
-        if (0 == ec.field_t &&
+        if (0 == NameAvailabilityValidator.field_t &&
           this.field_n > 0) {
           this.field_n = this.field_n - 1;
           this.field_e.a((byte) -87, this.field_n);
@@ -255,7 +255,7 @@ final class ii {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (2 != oa.field_j) {
+        if (2 != DateOfBirthValidator.field_j) {
           throw new IllegalStateException();
         }
         int var5 = -122 % ((param3 + 11) / 49);
@@ -281,7 +281,7 @@ final class ii {
         if (param0 != 6) {
           this.a((byte) 108);
         }
-        if (!ag.field_p) {
+        if (!AgeValidator.field_p) {
           throw new IllegalStateException();
         }
         aa.field_f.g(60, 15514);
@@ -316,7 +316,7 @@ final class ii {
     }
 
     final void g(int param0) {
-        if (!ag.field_p) {
+        if (!AgeValidator.field_p) {
           throw new IllegalStateException();
         }
         aa.field_f.g(61, 15514);
@@ -420,11 +420,11 @@ final class ii {
           this.i(114);
         }
         this.a((byte) 34, param1);
-        if (oa.field_j == 0) {
+        if (DateOfBirthValidator.field_j == 0) {
           this.a((byte) 41);
         } else {
-          if (oa.field_j != 1) {
-            if (oa.field_j == 2) {
+          if (DateOfBirthValidator.field_j != 1) {
+            if (DateOfBirthValidator.field_j == 2) {
               this.d(-1);
             }
           } else {
@@ -453,8 +453,8 @@ final class ii {
           var2 > 0 &&
           !this.field_l) {
           wh.field_p = new rh(0, 65535, ln.field_n, mj.field_j, ra.field_a, uh.field_r, new int[]{var2});
-          if (!jg.a((byte) 120)) {
-            md.a(wh.field_p, true, 3);
+          if (!ArrayWidgetContainer.a((byte) 120)) {
+            ValidationHelpWidget.a(wh.field_p, true, 3);
           }
         }
         if (param0 != 17945) {
@@ -469,8 +469,8 @@ final class ii {
           } else {
             this.field_d[param2].a(0, 8);
           }
-          ka.field_V = 15 & param0;
-          ng.field_u = param1;
+          ResizableModalPanel.field_V = 15 & param0;
+          UiComponent.field_u = param1;
           bl.field_b = param0 >> 4;
           if (param4 <= 23) {
             this.c(44);
@@ -515,12 +515,12 @@ final class ii {
             exception.printStackTrace();
           }
           if (fq.field_o != null &&
-            jc.field_d) {
+            SpriteCheckboxPainter.field_d) {
             pe.field_b.c();
             SoftwareRasterizer.d();
             fq.field_o.a(false);
             ClientException.field_f.a(19692);
-            pe.field_b.a(0, 0, hn.field_d);
+            pe.field_b.a(0, 0, DebouncedValidator.field_d);
           }
           if (pm.field_u) {
             return;
@@ -532,7 +532,7 @@ final class ii {
             var5_ref_uh = var16[var4];
             var5_ref_uh.b(-1);
           }
-          if (oa.field_j == 0) {
+          if (DateOfBirthValidator.field_j == 0) {
             MusicCrossfadeStream.f(91);
             this.field_j.c(param1 + 2);
             if (param0) {
@@ -543,8 +543,8 @@ final class ii {
               fq.field_o.a((byte) -108);
             }
           } else {
-            if (oa.field_j != 1) {
-              if (oa.field_j == 2) {
+            if (DateOfBirthValidator.field_j != 1) {
+              if (DateOfBirthValidator.field_j == 2) {
                 MusicCrossfadeStream.f(68);
               }
             } else {
@@ -554,14 +554,14 @@ final class ii {
           if (param0) {
             this.field_e.a((byte) 9);
           }
-          if (oa.field_j == 2) {
+          if (DateOfBirthValidator.field_j == 2) {
             this.field_j.c(2);
           }
-          if (pf.field_e &&
+          if (MenuInputState.field_e &&
             cm.field_m) {
             rk.field_e.drawText(Integer.toString(kk.field_k), 30, 100, 1, -1);
           }
-          if (ud.field_K) {
+          if (ModalPanel.field_K) {
             var3 = Runtime.getRuntime().totalMemory();
             var5_long = Runtime.getRuntime().freeMemory();
             rk.field_e.drawRightAlignedText((var3 - var5_long) / 1024L + " kB / " + var3 / 1024L + " kB", 610, 100, 0, 0);
@@ -621,7 +621,7 @@ final class ii {
         if (this.a(14098, this.field_z)) {
           if (!this.field_d[this.field_z].field_l) {
             if (param1) {
-              stackIn_11_0 = (bc.field_m[83]) ? 1 : 0;
+              stackIn_11_0 = (EmailValidator.field_m[83]) ? 1 : 0;
             } else {
               stackIn_11_0 = 0;
             }
@@ -638,12 +638,12 @@ final class ii {
           if ((stackIn_13_0 ? 1 : 0) == stackIn_14_1) {
             if (var3 != 0) {
               this.field_d[this.field_z].a(param0 ^ 34, 6);
-              if (ag.field_p) {
+              if (AgeValidator.field_p) {
                 ae.a(6, -18656, this.field_d[this.field_z].a(-119));
               }
             } else {
               this.field_d[this.field_z].a(param0 - 34, 7);
-              if (ag.field_p) {
+              if (AgeValidator.field_p) {
                 ae.a(7, -18656, this.field_d[this.field_z].a(-84));
               }
             }
@@ -695,7 +695,7 @@ final class ii {
         var3 = 100 / ((param1 - 25) / 58);
         if (param0 == 13) {
           var4 = 1;
-          if (ag.field_p) {
+          if (AgeValidator.field_p) {
             if (this.field_z >= 0) {
               if (this.field_a.field_t) {
                 return;
@@ -710,7 +710,7 @@ final class ii {
           la.a(stackIn_10_0, var5, false, -25528);
           return;
         }
-        if (pf.field_e) {
+        if (MenuInputState.field_e) {
           if (param0 != 85) {
             if (1 != param0) {
               if (param0 != 2) {
@@ -736,16 +736,16 @@ final class ii {
                             } else {
                               if (11 != param0) {
                                 if (12 == param0) {
-                                  stackIn_53_0 = !(jc.field_d);
-                                  jc.field_d = stackIn_53_0;
+                                  stackIn_53_0 = !(SpriteCheckboxPainter.field_d);
+                                  SpriteCheckboxPainter.field_d = stackIn_53_0;
                                 } else {
                                   if (param0 == 102) {
-                                    if (bc.field_m[81] &&
-                                      oa.field_j == 0) {
+                                    if (EmailValidator.field_m[81] &&
+                                      DateOfBirthValidator.field_j == 0) {
                                       this.h(125);
                                       this.a(-59);
                                     } else {
-                                      if (!bc.field_m[81]) {
+                                      if (!EmailValidator.field_m[81]) {
                                         var4_ref_uh__ = this.field_d;
                                         for (var5Lifetime1 = 0; var5Lifetime1 < var4_ref_uh__.length; var5Lifetime1++) {
                                           var6 = var4_ref_uh__[var5Lifetime1];
@@ -780,9 +780,9 @@ final class ii {
               wh.e(-42, 0);
             }
           } else {
-            if (bc.field_m[81]) {
-              stackIn_21_0 = !(ud.field_K);
-              ud.field_K = stackIn_21_0;
+            if (EmailValidator.field_m[81]) {
+              stackIn_21_0 = !(ModalPanel.field_K);
+              ModalPanel.field_K = stackIn_21_0;
             } else {
               stackIn_17_0 = !(cm.field_m);
               cm.field_m = stackIn_17_0;
@@ -808,12 +808,12 @@ final class ii {
             var4Lifetime1 = 2;
           }
           if (97 == param0 ||
-            hg.field_g == param0) {
+            MarkerSliderPainter.field_g == param0) {
             var4Lifetime1 = 3;
           }
           if (84 == param0) {
             if (this.field_a.field_r == 0 &&
-              0 == oa.field_j) {
+              0 == DateOfBirthValidator.field_j) {
               this.h(65);
               this.a(-40);
               this.field_a.field_f = 0;
@@ -826,7 +826,7 @@ final class ii {
             !this.field_d[this.field_z].field_l) {
             stackIn_96_0 = (!this.field_d[this.field_z].a(0, var4Lifetime1)) ? 0 : 1;
             var5Lifetime2 = stackIn_96_0;
-            if (ag.field_p &&
+            if (AgeValidator.field_p &&
               var5Lifetime2 != 0) {
               ae.a(var4Lifetime1, -18656, this.field_d[this.field_z].a(-110));
             }
@@ -863,10 +863,10 @@ final class ii {
           var3.d(93);
           this.field_a.field_a[this.field_z].a(-121);
           un.field_j.field_f = true;
-          if ((33554431L & jo.field_h) == 33554431L) {
+          if ((33554431L & CheckboxPainter.field_h) == 33554431L) {
             this.a(14, (byte) 58, 241);
           }
-          if ((jo.field_h & 1125899906842623L) == 1125899906842623L) {
+          if ((CheckboxPainter.field_h & 1125899906842623L) == 1125899906842623L) {
             this.a(15, (byte) 58, 240);
           }
         }
@@ -886,12 +886,12 @@ final class ii {
           this.c(-83);
         }
         if (this.field_j instanceof ul) {
-          if (pf.field_e &&
-            bc.field_m[88]) {
+          if (MenuInputState.field_e &&
+            EmailValidator.field_m[88]) {
             ((ul) (this.field_j)).b(-123, true);
           }
-          if (pf.field_e &&
-            bc.field_m[87]) {
+          if (MenuInputState.field_e &&
+            EmailValidator.field_m[87]) {
             ((ul) (this.field_j)).b(-108, false);
           }
         }
@@ -901,7 +901,7 @@ final class ii {
         try {
           kf.field_q = param2;
           int var5_int = 55 / ((2 - param3) / 55);
-          ch.a(param0, param4, 5, param1, ab.field_c, 320, rk.field_e.maxAscent, 10, bi.field_g, true, rk.field_e, rk.field_e.maxDescent + rk.field_e.maxAscent, (byte) 27, 15, 240);
+          UiContainer.a(param0, param4, 5, param1, ab.field_c, 320, rk.field_e.maxAscent, 10, bi.field_g, true, rk.field_e, rk.field_e.maxDescent + rk.field_e.maxAscent, (byte) 27, 15, 240);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -911,7 +911,7 @@ final class ii {
         if (param1 != -120) {
           field_b = (String) null;
         }
-        return ok.a(tp.field_v, -100, param0);
+        return ok.a(SceneWidgetNode.field_v, -100, param0);
     }
 
     ii() {
@@ -929,7 +929,7 @@ final class ii {
         uh[] var2Lifetime1;
         uh var4Lifetime1;
         var5 = Pixelate.field_H ? 1 : 0;
-        if (ag.field_p) {
+        if (AgeValidator.field_p) {
           var6 = this.field_d;
           var2 = var6;
           for (var3 = 0; var3 < var6.length; var3++) {
@@ -1005,13 +1005,13 @@ final class ii {
         if (param0 <= 110) {
           field_t = 63;
         }
-        if (ag.field_p) {
+        if (AgeValidator.field_p) {
           this.field_d = new uh[2];
           stackIn_7_0 = (this.field_z == 1) ? 500 : 140;
           var2 = stackIn_7_0;
           stackIn_10_0 = (this.field_z != 1) ? 500 : 140;
           var3 = stackIn_10_0;
-          stackIn_13_0 = (oa.field_i) ? 100 : 0;
+          stackIn_13_0 = (DateOfBirthValidator.field_i) ? 100 : 0;
           var4 = stackIn_13_0;
           stackIn_15_0 = this.field_d;
           stackIn_15_1 = 0;
@@ -1112,7 +1112,7 @@ final class ii {
         uh var8;
         int var5Lifetime1;
         sb.field_a = sb.field_a - 1;
-        f.field_o = f.field_o - lo.field_Mb;
+        DialWidgetPainter.field_o = DialWidgetPainter.field_o - lo.field_Mb;
         mj.field_j = mj.field_j + 1;
         uh.field_r = uh.field_r + this.field_a.field_v[0];
         var8 = this.field_d[this.field_z];
@@ -1165,7 +1165,7 @@ final class ii {
             IterableNodeHashTable.a((byte) -117);
           }
           var5 = var3.field_f;
-          f.field_o = f.field_o + (var5 << 7);
+          DialWidgetPainter.field_o = DialWidgetPainter.field_o + (var5 << 7);
           ln.field_n = ln.field_n + var5 * mj.field_j;
           if (this.field_a.field_v[0] >= 10000) {
             this.a(0, (byte) 58, 255);
@@ -1288,10 +1288,10 @@ final class ii {
         try {
           ap.field_f = 770566011;
           sb.field_a = 22178;
-          stackIn_4_0 = (oa.field_j == 2);
-          ag.field_p = stackIn_4_0;
+          stackIn_4_0 = (DateOfBirthValidator.field_j == 2);
+          AgeValidator.field_p = stackIn_4_0;
           go.field_k = 0;
-          f.field_o = 2359467;
+          DialWidgetPainter.field_o = 2359467;
           ln.field_n = 1426010794;
           ra.field_a = 1947508858;
           this.field_z = param1;
@@ -1302,7 +1302,7 @@ final class ii {
             stackIn_7_1 = array$0;
             stackIn_7_2 = 0;
             if (null == kn.field_J) {
-              stackIn_8_3 = ng.field_t;
+              stackIn_8_3 = UiComponent.field_t;
             } else {
               stackIn_8_3 = kn.field_J;
             }
@@ -1310,21 +1310,21 @@ final class ii {
             param0 = stackIn_7_0;
           }
           stackIn_12_0 = !(wo.field_h < 2);
-          pf.field_e = stackIn_12_0;
+          MenuInputState.field_e = stackIn_12_0;
           mj.field_j = 13483;
           uh.field_r = 16042;
-          ng.i(0);
+          UiComponent.i(0);
           gb.field_f = new int[4];
           le.a(true);
-          if (oa.field_j != 0) {
-            if (oa.field_j == 1) {
-              this.field_a = new pm(param0, 0, oa.field_j, param3, 0, un.field_j.field_a);
+          if (DateOfBirthValidator.field_j != 0) {
+            if (DateOfBirthValidator.field_j == 1) {
+              this.field_a = new pm(param0, 0, DateOfBirthValidator.field_j, param3, 0, un.field_j.field_a);
               aq.a(this.field_a.field_g, false);
               this.b(127);
               this.a(-100);
             } else {
-              if (oa.field_j == 2) {
-                this.field_a = new pm(param0, param4, oa.field_j, param3, param5, param6);
+              if (DateOfBirthValidator.field_j == 2) {
+                this.field_a = new pm(param0, param4, DateOfBirthValidator.field_j, param3, param5, param6);
                 aq.a(this.field_a.field_g, false);
                 stackIn_20_0 = this;
                 stackIn_20_1 = null;
@@ -1340,7 +1340,7 @@ final class ii {
                   stackIn_21_4 = true;
                 }
                 stackIn_23_0 = this;
-                if (!oa.field_i) {
+                if (!DateOfBirthValidator.field_i) {
                   stackIn_21_1Lifetime1 = null;
                   stackIn_21_2Lifetime1 = null;
                   stackIn_24_5 = 0;
@@ -1363,10 +1363,10 @@ final class ii {
           } else {
             aq.a(true);
             this.field_j = (bg) ((Object) new ul(90));
-            if (!jg.a((byte) 95)) {
-              aa.field_p = g.a(3, (byte) -97, 1, 10, 0);
+            if (!ArrayWidgetContainer.a((byte) 95)) {
+              aa.field_p = PasswordValidator.a(3, (byte) -97, 1, 10, 0);
             }
-            this.field_a = new pm(param0, 0, oa.field_j, param3, 0, 0);
+            this.field_a = new pm(param0, 0, DateOfBirthValidator.field_j, param3, 0, 0);
             kk.a(1, this.field_a);
             this.b(119);
             this.a(-70);

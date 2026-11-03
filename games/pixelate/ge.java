@@ -4,7 +4,7 @@
 final class ge {
     static int[] field_c;
     static String field_a;
-    static ak field_h;
+    static SceneWidget field_h;
     static String field_b;
     static boolean field_f;
     static Sprite field_g;
@@ -47,14 +47,14 @@ final class ge {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          oe.a(param19 - 84, param2, param11, param18, param13);
+          ReportAbuseDialog.a(param19 - 84, param2, param11, param18, param13);
           ph.a(param2, (byte) -106);
           IntrusiveNode.a(param14, param2, param15, (byte) 126, param10, param16, param8, param4, args, param12, param6, param9, param5, param1, param3);
           aj.a(param7, param2, param17, -94);
           if (param19 != -41) {
             field_g = (Sprite) null;
           }
-          ve.j(1565);
+          AccountNamePrompt.j(1565);
           gd.a((byte) -7);
           jj.a(0);
           return;

@@ -6,7 +6,7 @@ import java.io.*;
 final class ep {
     static String field_d;
     static int[] field_c;
-    static ak field_a;
+    static SceneWidget field_a;
     static BitmapFont field_b;
 
     final static int[] a(int[] param0, int param1) {
@@ -365,8 +365,8 @@ final class ep {
             if (param0 != -26721) {
               return;
             }
-            if (fh.field_J != null) {
-              fh.field_J.shutdown((byte) -92);
+            if (DisplayNameForm.field_J != null) {
+              DisplayNameForm.field_J.shutdown((byte) -92);
             }
             if (null != Js5NetworkRequest.field_G) {
               try {
@@ -416,7 +416,7 @@ final class ep {
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 30022) {
-          field_a = (ak) null;
+          field_a = (SceneWidget) null;
         }
         stackIn_6_0 = (wp.a(-8798)) && ((8 & pa.field_b) == 0);
         return stackIn_6_0;

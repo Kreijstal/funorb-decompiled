@@ -34,7 +34,7 @@ final class kk {
     final static void a(int param0, pm param1) {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        w.field_v = param1;
+        StatefulTextPainter.field_v = param1;
         io.a(qj.field_e, (byte) -108);
         jb.field_b = new bi[dn.field_a.length];
         if (param0 != 1) {
@@ -42,11 +42,11 @@ final class kk {
         }
         try {
           for (var2_int = 0; var2_int < dn.field_a.length; var2_int++) {
-            jb.field_b[var2_int] = new bi(gh.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
+            jb.field_b[var2_int] = new bi(GradientOutlineTextPainter.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
           }
           ql.field_m = -1;
           lb.field_D = 15;
-          pl.field_S = 0;
+          AccountRegistrationPanel.field_S = 0;
           of.field_d = -1;
           le.field_j = 45;
           GameApplet.field_i = -1;
@@ -399,13 +399,13 @@ final class kk {
           SoftwareRasterizer.h(var2 + 32 * var6Lifetime1, this.field_p * 32 - 16 + var3, var2 + var6Lifetime1 * 32, 32 * var5 + var3 + 16, 0, 100);
         }
         if (this.c(-108)) {
-          SoftwareRasterizer.a(f.field_d);
+          SoftwareRasterizer.a(DialWidgetPainter.field_d);
           if (this.field_i == 0 &&
             this.field_v > 0) {
             SoftwareRasterizer.f(-4 + (this.field_A + this.field_t), this.field_u + this.field_x - 4, 640, 480);
           }
           this.field_c.b(var2, var3);
-          SoftwareRasterizer.b(f.field_d);
+          SoftwareRasterizer.b(DialWidgetPainter.field_d);
         } else {
           this.a(-20, var3, var2);
         }
@@ -428,7 +428,7 @@ final class kk {
               }
               var9 = stackIn_35_0;
               if ((3 & var8) == 0) {
-                stackIn_41_0 = (jc.field_d) ? 1 : 0;
+                stackIn_41_0 = (SpriteCheckboxPainter.field_d) ? 1 : 0;
               } else {
                 stackIn_41_0 = 0;
               }
@@ -462,13 +462,13 @@ final class kk {
         if (0 < this.field_v &&
           this.field_i == 0 &&
           0 == this.field_r) {
-          SoftwareRasterizer.a(f.field_d);
+          SoftwareRasterizer.a(DialWidgetPainter.field_d);
           SoftwareRasterizer.f(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
           for (var6Lifetime3 = 0; 20 > var6Lifetime3; var6Lifetime3 += 3) {
             fi.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, sd.field_Q);
             fi.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, sd.field_Q);
           }
-          SoftwareRasterizer.b(f.field_d);
+          SoftwareRasterizer.b(DialWidgetPainter.field_d);
         }
     }
 

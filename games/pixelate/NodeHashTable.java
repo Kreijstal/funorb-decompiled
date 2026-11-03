@@ -42,20 +42,20 @@ final class NodeHashTable {
     }
 
     final static void a(boolean param0, int param1) {
-        nd.field_b = param0 ? new wo(ch.field_H, an.field_a) : new wo(fb.field_Gb, vd.field_a);
-        ff.field_h = new ak(0L, (ak) null);
+        nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(fb.field_Gb, vd.field_a);
+        ff.field_h = new SceneWidget(0L, (SceneWidget) null);
         if (param1 >= -68) {
           NodeHashTable.b(-102);
         }
         ff.field_h.a(nd.field_b.field_g, (byte) 26);
-        ff.field_h.a(gk.field_kb, (byte) 26);
-        ra.field_e = new ak(0L, cm.field_o);
-        kh.field_a = new ak(0L, (ak) null);
+        ff.field_h.a(ValidatedTextWidget.field_kb, (byte) 26);
+        ra.field_e = new SceneWidget(0L, cm.field_o);
+        kh.field_a = new SceneWidget(0L, (SceneWidget) null);
         ra.field_e.a(ih.field_g, (byte) 26);
         ra.field_e.a(kh.field_a, (byte) 26);
-        kh.field_a.a(oc.field_O, (byte) 26);
-        kh.field_a.a(hb.field_eb, (byte) 26);
-        hn.a((byte) 32, param0);
+        kh.field_a.a(StripedProgressBar.field_O, (byte) 26);
+        kh.field_a.a(ContentTransitionDialog.field_eb, (byte) 26);
+        DebouncedValidator.a((byte) 32, param0);
     }
 
     final static byte[] a(pc param0, byte[] param1, int param2, int param3) {
@@ -166,21 +166,21 @@ final class NodeHashTable {
           if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 60;
           }
-          if (!qo.field_u.b(-3)) {
+          if (!MatchingTextValidator.field_u.b(-3)) {
             return 70;
           }
-          if (!qo.field_u.a((byte) 92)) {
+          if (!MatchingTextValidator.field_u.a((byte) 92)) {
             return 80;
           }
         } else {
-          if (null != hn.field_e) {
-            if (!hn.field_e.b(-3)) {
+          if (null != DebouncedValidator.field_e) {
+            if (!DebouncedValidator.field_e.b(-3)) {
               return 14;
             }
-            if (!hn.field_e.hasGroupName(127, "")) {
+            if (!DebouncedValidator.field_e.hasGroupName(127, "")) {
               return 29;
             }
-            if (!hn.field_e.ensureGroupAvailableByName("", -1)) {
+            if (!DebouncedValidator.field_e.ensureGroupAvailableByName("", -1)) {
               return 29;
             }
           }
@@ -196,10 +196,10 @@ final class NodeHashTable {
           if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 80;
           }
-          if (!qo.field_u.b(-3)) {
+          if (!MatchingTextValidator.field_u.b(-3)) {
             return 82;
           }
-          if (!qo.field_u.a((byte) 92)) {
+          if (!MatchingTextValidator.field_u.a((byte) 92)) {
             return 86;
           }
         }

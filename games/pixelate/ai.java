@@ -38,7 +38,7 @@ final class ai {
     static String field_C;
     int field_c;
     int[] field_u;
-    static ak field_A;
+    static SceneWidget field_A;
     int[][] field_B;
     static int[] field_e;
 
@@ -86,7 +86,7 @@ final class ai {
         var3 = Pixelate.field_H ? 1 : 0;
         if (param1 == 6) {
           if (BufferedRandomAccessFile.field_j <= 0) {
-            if (!jg.a((byte) 58)) {
+            if (!ArrayWidgetContainer.a((byte) 58)) {
               var2 = 1;
               if (vh.field_c != null) {
                 return;
@@ -114,7 +114,7 @@ final class ai {
         } else {
           field_C = (String) null;
           if (BufferedRandomAccessFile.field_j <= 0) {
-            if (!jg.a((byte) 58)) {
+            if (!ArrayWidgetContainer.a((byte) 58)) {
               var2 = 1;
             } else {
               var2 = 0;

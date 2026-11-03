@@ -79,7 +79,7 @@ final class wh extends de {
 
     final int b(int param0, int param1) {
         int var3 = 51 % ((param0 + 13) / 37);
-        if (jg.a((byte) 64)) {
+        if (ArrayWidgetContainer.a((byte) 64)) {
           return this.field_d + param1 * this.field_i;
         }
         if (param1 < 2) {
@@ -93,7 +93,7 @@ final class wh extends de {
         if (param1 != 90) {
           this.a(-116, false);
           this.field_a = 640 - this.field_m;
-          if (jg.a((byte) 123)) {
+          if (ArrayWidgetContainer.a((byte) 123)) {
             return -(this.d(param0, 29) >> 1) + 320;
           }
           if (2 <= param0) {
@@ -105,7 +105,7 @@ final class wh extends de {
           return this.field_a - this.d(1, 28);
         }
         this.field_a = 640 - this.field_m;
-        if (jg.a((byte) 123)) {
+        if (ArrayWidgetContainer.a((byte) 123)) {
           return -(this.d(param0, 29) >> 1) + 320;
         }
         if (2 <= param0) {
@@ -204,7 +204,7 @@ final class wh extends de {
               return;
             }
           }
-          jo.a(1, "LR1: " + jm.b(-35), (Throwable) null);
+          CheckboxPainter.a(1, "LR1: " + jm.b(-35), (Throwable) null);
           na.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -264,7 +264,7 @@ final class wh extends de {
         int[] var11Lifetime2;
         PaletteBitmapFont var16Lifetime1;
         var15 = Pixelate.field_H ? 1 : 0;
-        gj.field_W[8].b(0, 45);
+        NumericDateInputWidget.field_W[8].b(0, 45);
         this.b((byte) -71);
         if (param0 != 11) {
           this.a((byte) -95, false, 89);
@@ -273,10 +273,10 @@ final class wh extends de {
           var16 = var17;
           var3 = var17.maxAscent + var17.maxDescent;
           if (WhirlpoolHasher.field_f == null &&
-            !jg.a((byte) 112)) {
+            !ArrayWidgetContainer.a((byte) 112)) {
             WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
           }
-          if (jg.a((byte) 83)) {
+          if (ArrayWidgetContainer.a((byte) 83)) {
             var4 = mj.field_h;
           } else {
             if (WhirlpoolHasher.field_f.field_u) {
@@ -286,8 +286,8 @@ final class wh extends de {
                 var7 = 150 + var6;
                 var8 = 16777215;
                 var9 = 0;
-                var21.drawCentered(hg.field_b, aj.field_o[0], var7, var8, var9);
-                var21.drawCentered(db.field_N, aj.field_o[1], var7, var8, var9);
+                var21.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7, var8, var9);
+                var21.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7, var8, var9);
                 var21.drawCentered(wa.field_d, aj.field_o[2], var7, var8, var9);
                 var21.drawCentered(ab.field_e, aj.field_o[3], var7, var8, var9);
                 var21.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
@@ -325,11 +325,11 @@ final class wh extends de {
                   break;
                 }
                 if (var15 != 0) {
-                  var4 = pf.field_l;
+                  var4 = MenuInputState.field_l;
                   var4 = mj.field_h;
                 }
               } else {
-                var4 = pf.field_l;
+                var4 = MenuInputState.field_l;
                 if (var15 != 0) {
                   var4 = mj.field_h;
                 }
@@ -346,8 +346,8 @@ final class wh extends de {
                 var7 = 150 + var6;
                 var8 = 16777215;
                 var9 = 0;
-                var21.drawCentered(hg.field_b, aj.field_o[0], var7, var8, var9);
-                var21.drawCentered(db.field_N, aj.field_o[1], var7, var8, var9);
+                var21.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7, var8, var9);
+                var21.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7, var8, var9);
                 var21.drawCentered(wa.field_d, aj.field_o[2], var7, var8, var9);
                 var21.drawCentered(ab.field_e, aj.field_o[3], var7, var8, var9);
                 var21.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
@@ -369,7 +369,7 @@ final class wh extends de {
                   break;
                 }
               }
-              var4 = pf.field_l;
+              var4 = MenuInputState.field_l;
               var4 = mj.field_h;
             }
           }
@@ -381,8 +381,8 @@ final class wh extends de {
         var16Lifetime1 = var24;
         var3Lifetime1 = var24.maxAscent + var24.maxDescent;
         if (WhirlpoolHasher.field_f == null) {
-          if (jg.a((byte) 112)) {
-            if (jg.a((byte) 83)) {
+          if (ArrayWidgetContainer.a((byte) 112)) {
+            if (ArrayWidgetContainer.a((byte) 83)) {
               var4Lifetime1 = mj.field_h;
             } else {
               if (WhirlpoolHasher.field_f.field_u) {
@@ -393,8 +393,8 @@ final class wh extends de {
                   var7Lifetime1 = 150 + var6Lifetime1;
                   var8Lifetime1 = 16777215;
                   var9Lifetime1 = 0;
-                  var25.drawCentered(hg.field_b, aj.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.drawCentered(db.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
@@ -433,11 +433,11 @@ final class wh extends de {
                     break;
                   }
                   if (var15 != 0) {
-                    var4Lifetime1 = pf.field_l;
+                    var4Lifetime1 = MenuInputState.field_l;
                     var4Lifetime1 = mj.field_h;
                   }
                 } else {
-                  var4Lifetime1 = pf.field_l;
+                  var4Lifetime1 = MenuInputState.field_l;
                   if (var15 != 0) {
                     var4Lifetime1 = mj.field_h;
                   }
@@ -455,8 +455,8 @@ final class wh extends de {
                   var7Lifetime1 = 150 + var6Lifetime1;
                   var8Lifetime1 = 16777215;
                   var9Lifetime1 = 0;
-                  var29.drawCentered(hg.field_b, aj.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.drawCentered(db.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
@@ -479,7 +479,7 @@ final class wh extends de {
                     break;
                   }
                 }
-                var4Lifetime1 = pf.field_l;
+                var4Lifetime1 = MenuInputState.field_l;
                 var4Lifetime1 = mj.field_h;
               }
             }
@@ -488,7 +488,7 @@ final class wh extends de {
           }
           WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
         }
-        if (jg.a((byte) 83)) {
+        if (ArrayWidgetContainer.a((byte) 83)) {
           var4Lifetime2 = mj.field_h;
         } else {
           if (WhirlpoolHasher.field_f.field_u) {
@@ -498,8 +498,8 @@ final class wh extends de {
               var7Lifetime2 = 150 + var6Lifetime2;
               var8Lifetime2 = 16777215;
               var9Lifetime2 = 0;
-              var37.drawCentered(hg.field_b, aj.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(db.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
@@ -537,11 +537,11 @@ final class wh extends de {
                 break;
               }
               if (var15 != 0) {
-                var4Lifetime2 = pf.field_l;
+                var4Lifetime2 = MenuInputState.field_l;
                 var4Lifetime2 = mj.field_h;
               }
             } else {
-              var4Lifetime2 = pf.field_l;
+              var4Lifetime2 = MenuInputState.field_l;
               if (var15 != 0) {
                 var4Lifetime2 = mj.field_h;
               }
@@ -558,8 +558,8 @@ final class wh extends de {
               var7Lifetime2 = 150 + var6Lifetime2;
               var8Lifetime2 = 16777215;
               var9Lifetime2 = 0;
-              var37.drawCentered(hg.field_b, aj.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(db.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
@@ -581,7 +581,7 @@ final class wh extends de {
                 break;
               }
             }
-            var4Lifetime2 = pf.field_l;
+            var4Lifetime2 = MenuInputState.field_l;
             var4Lifetime2 = mj.field_h;
           }
         }
@@ -607,9 +607,9 @@ final class wh extends de {
         }
         if (Js5NetworkRequest.field_C[param1] != rg.field_e) {
           fq.field_o = Js5NetworkRequest.field_C[param1];
-          fq.field_o.field_d = dm.field_Cb;
+          fq.field_o.field_d = RegistrationRequestDialog.field_Cb;
           ci.field_o = param1;
-          hn.field_d = 0;
+          DebouncedValidator.field_d = 0;
           u.a(false, 2 + param1);
           var2Lifetime1 = 20 / ((10 - param0) / 32);
           return;
@@ -620,7 +620,7 @@ final class wh extends de {
     final int a(int param0, boolean param1) {
         if (param1) {
           this.c((byte) -54);
-          if (jg.a((byte) 115)) {
+          if (ArrayWidgetContainer.a((byte) 115)) {
             return (this.d(param0, 53) >> 1) + 320;
           }
           if (param0 >= 2) {
@@ -631,7 +631,7 @@ final class wh extends de {
           }
           return this.field_a;
         }
-        if (jg.a((byte) 115)) {
+        if (ArrayWidgetContainer.a((byte) 115)) {
           return (this.d(param0, 53) >> 1) + 320;
         }
         if (param0 >= 2) {
@@ -674,21 +674,21 @@ final class wh extends de {
         Sprite var4Lifetime3;
         if (param0 > -116) {
           field_q = (Sprite) null;
-          var4 = oc.field_N;
-          if (!jg.a((byte) 117)) {
+          var4 = StripedProgressBar.field_N;
+          if (!ArrayWidgetContainer.a((byte) 117)) {
             if (param2 == 1) {
-              var4 = oc.field_S;
+              var4 = StripedProgressBar.field_S;
             }
             super.a((byte) 35, var4, param1, param2);
             return;
           }
-          var4Lifetime3 = oc.field_S;
+          var4Lifetime3 = StripedProgressBar.field_S;
           super.a((byte) 35, var4Lifetime3, param1, param2);
           return;
         }
-        var4Lifetime1 = oc.field_N;
-        if (jg.a((byte) 117)) {
-          var4Lifetime1 = oc.field_S;
+        var4Lifetime1 = StripedProgressBar.field_N;
+        if (ArrayWidgetContainer.a((byte) 117)) {
+          var4Lifetime1 = StripedProgressBar.field_S;
           super.a((byte) 35, var4Lifetime1, param1, param2);
           return;
         }
@@ -696,7 +696,7 @@ final class wh extends de {
           super.a((byte) 35, var4Lifetime1, param1, param2);
           return;
         }
-        var4Lifetime2 = oc.field_S;
+        var4Lifetime2 = StripedProgressBar.field_S;
         super.a((byte) 35, var4Lifetime2, param1, param2);
     }
 

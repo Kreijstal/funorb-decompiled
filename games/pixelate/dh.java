@@ -5,7 +5,7 @@ final class dh {
     static int[] field_d;
     static IntrusiveDeque field_a;
     static String[] field_c;
-    static ak[] field_b;
+    static SceneWidget[] field_b;
 
     final static void a(byte param0, boolean param1) {
         if (param0 != 58) {
@@ -13,82 +13,82 @@ final class dh {
           if (oo.field_b <= 0) {
             if (0 < vn.field_g) {
               if (bm.field_o) {
-                SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+                SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
                 ra.field_e.a(param1, 0);
                 return;
               }
               return;
             }
-            if (h.field_W <= 0) {
+            if (Checkbox.field_W <= 0) {
               return;
             }
             if (bm.field_o) {
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
             return;
           }
-          if (!uj.field_Wb) {
+          if (!LobbyPlayer.field_Wb) {
             if (0 < vn.field_g) {
               if (!bm.field_o) {
                 return;
               }
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
-            if (h.field_W > 0) {
+            if (Checkbox.field_W > 0) {
               if (!bm.field_o) {
                 return;
               }
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
             }
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           nc.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
-            h.field_W <= 0) {
+            Checkbox.field_W <= 0) {
             return;
           }
           if (!bm.field_o) {
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           ra.field_e.a(param1, 0);
           return;
         }
         if (oo.field_b > 0 &&
-          uj.field_Wb) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+          LobbyPlayer.field_Wb) {
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           nc.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
-            h.field_W <= 0) {
+            Checkbox.field_W <= 0) {
             return;
           }
           if (!bm.field_o) {
             return;
           }
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           ra.field_e.a(param1, 0);
           return;
         }
         if (0 >= vn.field_g &&
-          h.field_W <= 0) {
+          Checkbox.field_W <= 0) {
           return;
         }
         if (!bm.field_o) {
           return;
         }
-        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
+        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
         ra.field_e.a(param1, 0);
     }
 
     final static void a(int param0) {
-        hb.field_jb = null;
+        ContentTransitionDialog.field_jb = null;
         uk.field_r = null;
         df.field_r = null;
         if (param0 == 0) {

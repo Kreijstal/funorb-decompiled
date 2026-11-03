@@ -44,8 +44,8 @@ final class id {
         if (param0 < 40) {
           field_d = (IntrusiveDeque) null;
         }
-        ResourceArchive.field_b = new pl();
-        ph.field_l.c(ResourceArchive.field_b, -121);
+        ResourceArchive.field_b = new AccountRegistrationPanel();
+        ph.field_l.transitionToContent(ResourceArchive.field_b, -121);
     }
 
     final static void b(int param0) {
@@ -90,10 +90,10 @@ final class id {
         if (param1 <= 104) {
           return;
         }
-        oe.field_Sb = 0;
+        ReportAbuseDialog.field_Sb = 0;
         jn.field_q = ui.field_k;
-        a.field_I = new pf(2);
-        a.field_I.a(param0, el.a(bg.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
+        NameSuggestionsPanel.field_I = new MenuInputState(2);
+        NameSuggestionsPanel.field_I.a(param0, el.a(bg.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
     }
 
     id(boolean param0) {
