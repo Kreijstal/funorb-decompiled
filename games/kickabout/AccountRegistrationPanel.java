@@ -343,14 +343,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    public final void a(int param0) {
+    public final void onRefreshSuggestions(int param0) {
         if (param0 != -1) {
           return;
         }
         ((AccountNameAvailabilityValidator) (this.field_E.a((byte) -110))).c((byte) 92);
     }
 
-    public final void a(TextHotspotWidget param0, int param1, int param2, int param3) {
+    public final void onHotspotClicked(TextHotspotWidget param0, int param1, int param2, int param3) {
         boolean discarded$1 = false;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -668,7 +668,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onSuggestionChosen(String param0, int param1) {
         int discarded$1 = 0;
         ValidatedTextWidget var3 = null;
         String var4 = null;

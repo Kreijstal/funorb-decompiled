@@ -4676,6 +4676,14 @@
       "renamedSymbol": "M:AccountRegistrationPanel.handleKeyInput(CBLUiWidget;I)Z"
     },
     {
+      "symbol": "M:ae.a(I)V",
+      "originalName": "a",
+      "to": "onRefreshSuggestions",
+      "evidence": "Called when the user asks for a fresh set of name suggestions. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRegistrationPanel.onRefreshSuggestions(I)V"
+    },
+    {
       "symbol": "M:ae.a(ILwi;IBI)V",
       "originalName": "a",
       "to": "onAction",
@@ -4690,6 +4698,22 @@
       "evidence": "Reads the field's ValidationSource and reports whether its state is the valid constant.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AccountRegistrationPanel.isFieldValid(LValidationProvider;I)Z"
+    },
+    {
+      "symbol": "M:ae.a(Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "onSuggestionChosen",
+      "evidence": "Called with the suggested name the user picked. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:ae.a(Llb;III)V",
+      "originalName": "a",
+      "to": "onHotspotClicked",
+      "evidence": "Called with the clicked text hotspot, for example opening the conduct page. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V"
     },
     {
       "symbol": "M:ae.b(Z)Ljava/lang/String;",
@@ -4826,6 +4850,14 @@
       "evidence": "Matches escapevector/steelsentinels RegistrationRequestDialog.onAction by signature and body shape. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AccountTermsPanel.onAction(ILTextButton;IBI)V"
+    },
+    {
+      "symbol": "M:ai.a(Llb;III)V",
+      "originalName": "a",
+      "to": "onHotspotClicked",
+      "evidence": "Called with the clicked text hotspot, for example opening the conduct page. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V"
     },
     {
       "symbol": "M:aj.a(I)V",
@@ -6764,12 +6796,28 @@
       "renamedSymbol": "M:TrinketShopDialog.dialogHeight(B)I"
     },
     {
+      "symbol": "M:ek.a(BII)V",
+      "originalName": "a",
+      "to": "drawBody",
+      "evidence": "Draws the dialog content at the given offset: frame, title, text and optional icon. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrinketShopDialog.drawBody(BII)V"
+    },
+    {
       "symbol": "M:ek.a(II)V",
       "originalName": "a",
       "to": "handleResult",
       "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TrinketShopDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:ek.a(IZ)V",
+      "originalName": "a",
+      "to": "onUpdate",
+      "evidence": "Per-frame hook that dialog subclasses may override; the base does nothing. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrinketShopDialog.onUpdate(IZ)V"
     },
     {
       "symbol": "M:ek.b(I)I",
@@ -8716,6 +8764,22 @@
       "renamedSymbol": "M:hl.isInputEmpty(B)Z"
     },
     {
+      "symbol": "M:hl.a(BLga;)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called by the text input widget after its text or caret changed. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hl.onTextChanged(BLTextInputWidget;)V"
+    },
+    {
+      "symbol": "M:hl.a(ILga;)V",
+      "originalName": "a",
+      "to": "onEnterPressed",
+      "evidence": "Called by the text input widget when the Enter key code 84 is pressed. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hl.onEnterPressed(ILTextInputWidget;)V"
+    },
+    {
       "symbol": "M:hl.a(Z)Lrv;",
       "originalName": "a",
       "to": "evaluateValidationState",
@@ -9036,12 +9100,36 @@
       "renamedSymbol": "M:MessageDialog.dialogHeight(B)I"
     },
     {
+      "symbol": "M:i.a(BII)V",
+      "originalName": "a",
+      "to": "drawBody",
+      "evidence": "Draws the dialog content at the given offset: frame, title, text and optional icon. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MessageDialog.drawBody(BII)V"
+    },
+    {
       "symbol": "M:i.a(II)V",
       "originalName": "a",
       "to": "handleResult",
       "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MessageDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:i.a(IZ)V",
+      "originalName": "a",
+      "to": "onUpdate",
+      "evidence": "Per-frame hook that dialog subclasses may override; the base does nothing. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MessageDialog.onUpdate(IZ)V"
+    },
+    {
+      "symbol": "M:i.a(Z)I",
+      "originalName": "a",
+      "to": "getOpenSoundId",
+      "evidence": "Returns the sound id that plays when the dialog opens, 46 for most dialog types. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MessageDialog.getOpenSoundId(Z)I"
     },
     {
       "symbol": "M:i.b(I)I",
@@ -9154,6 +9242,22 @@
       "evidence": "Builds a URL against the code base and hands it to bv.a, which calls showDocument.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ListRow.openUrlInBrowser(Ljava/applet/Applet;ILjava/lang/String;)V"
+    },
+    {
+      "symbol": "M:im.b(II)V",
+      "originalName": "b",
+      "to": "drawRow",
+      "evidence": "Draws the list row at its current position.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ListRow.drawRow(II)V"
+    },
+    {
+      "symbol": "M:im.c(IZ)V",
+      "originalName": "c",
+      "to": "updateRow",
+      "evidence": "Handles the row's button presses for this frame.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ListRow.updateRow(IZ)V"
     },
     {
       "symbol": "M:in.a(I)V",
@@ -9615,9 +9719,17 @@
       "symbol": "M:jb.a(B)I",
       "originalName": "a",
       "to": "dialogHeight",
-      "evidence": "Computed from the text and icon heights in the base class; subclasses override it with constants such as 320, 346 or 400. Resolved override family. Resolved override family.",
+      "evidence": "Returns the dialog content height.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PopupDialog.dialogHeight(B)I"
+    },
+    {
+      "symbol": "M:jb.a(BII)V",
+      "originalName": "a",
+      "to": "drawBody",
+      "evidence": "Draws the dialog content at the given offset: frame, title, text and optional icon.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupDialog.drawBody(BII)V"
     },
     {
       "symbol": "M:jb.a(I)Z",
@@ -9639,9 +9751,17 @@
       "symbol": "M:jb.a(II)V",
       "originalName": "a",
       "to": "handleResult",
-      "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action. Resolved override family. Resolved override family.",
+      "evidence": "Called with the index of the dialog button that was pressed.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PopupDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:jb.a(IZ)V",
+      "originalName": "a",
+      "to": "onUpdate",
+      "evidence": "Per-frame hook that dialog subclasses may override; the base does nothing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupDialog.onUpdate(IZ)V"
     },
     {
       "symbol": "M:jb.a(I[Ljava/lang/String;I)V",
@@ -9650,6 +9770,14 @@
       "evidence": "Resets state and counters, measures the dialog from its option labels and centres it on the 480 pixel height.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PopupDialog.open(I[Ljava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:jb.a(Z)I",
+      "originalName": "a",
+      "to": "getOpenSoundId",
+      "evidence": "Returns the sound id that plays when the dialog opens, 46 for most dialog types.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupDialog.getOpenSoundId(Z)I"
     },
     {
       "symbol": "M:jb.a([Ljava/lang/String;B)V",
@@ -9663,7 +9791,7 @@
       "symbol": "M:jb.b(I)I",
       "originalName": "b",
       "to": "dialogWidth",
-      "evidence": "Base class width from the text and icon; subclasses return constants such as 400, 470 or 545. Resolved override family. Resolved override family.",
+      "evidence": "Returns the dialog content width.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PopupDialog.dialogWidth(I)I"
     },
@@ -9700,12 +9828,28 @@
       "renamedSymbol": "M:TextFieldValidator.isInputEmpty(B)Z"
     },
     {
+      "symbol": "M:jd.a(BLga;)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called by the text input widget after its text or caret changed. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldValidator.onTextChanged(BLTextInputWidget;)V"
+    },
+    {
       "symbol": "M:jd.a(BLjava/lang/String;)Ljava/lang/String;",
       "originalName": "a",
       "to": "describeText",
       "evidence": "Abstract message for a text; subclasses return a message or null depending on the validation state.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextFieldValidator.describeText(BLjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:jd.a(ILga;)V",
+      "originalName": "a",
+      "to": "onEnterPressed",
+      "evidence": "Called by the text input widget when the Enter key code 84 is pressed. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldValidator.onEnterPressed(ILTextInputWidget;)V"
     },
     {
       "symbol": "M:jd.a(Ljava/lang/String;I)Lrv;",
@@ -9962,6 +10106,22 @@
       "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
+      "symbol": "M:jr.b(II)V",
+      "originalName": "b",
+      "to": "drawRow",
+      "evidence": "Draws the list row at its current position. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReceivedAuctionItemRow.drawRow(II)V"
+    },
+    {
+      "symbol": "M:jr.c(IZ)V",
+      "originalName": "c",
+      "to": "updateRow",
+      "evidence": "Handles the row's button presses for this frame. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReceivedAuctionItemRow.updateRow(IZ)V"
     },
     {
       "symbol": "M:js.a(BZ)V",
@@ -10420,12 +10580,28 @@
       "renamedSymbol": "M:TrinketPickerDialog.dialogHeight(B)I"
     },
     {
+      "symbol": "M:kn.a(BII)V",
+      "originalName": "a",
+      "to": "drawBody",
+      "evidence": "Draws the dialog content at the given offset: frame, title, text and optional icon. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrinketPickerDialog.drawBody(BII)V"
+    },
+    {
       "symbol": "M:kn.a(II)V",
       "originalName": "a",
       "to": "handleResult",
       "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TrinketPickerDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:kn.a(IZ)V",
+      "originalName": "a",
+      "to": "onUpdate",
+      "evidence": "Per-frame hook that dialog subclasses may override; the base does nothing. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrinketPickerDialog.onUpdate(IZ)V"
     },
     {
       "symbol": "M:kn.b(I)I",
@@ -11204,6 +11380,14 @@
       "renamedSymbol": "M:DisplayNameForm.handleKeyInput(CBLUiWidget;I)Z"
     },
     {
+      "symbol": "M:mb.a(I)V",
+      "originalName": "a",
+      "to": "onRefreshSuggestions",
+      "evidence": "Called when the user asks for a fresh set of name suggestions. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayNameForm.onRefreshSuggestions(I)V"
+    },
+    {
       "symbol": "M:mb.a(ILcw;)Z",
       "originalName": "a",
       "to": "isFieldValid",
@@ -11218,6 +11402,14 @@
       "evidence": "Matches escapevector DisplayNameForm.onAction by signature and body shape.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DisplayNameForm.onAction(ILTextButton;IBI)V"
+    },
+    {
+      "symbol": "M:mb.a(Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "onSuggestionChosen",
+      "evidence": "Called with the suggested name the user picked. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayNameForm.onSuggestionChosen(Ljava/lang/String;I)V"
     },
     {
       "symbol": "M:mb.k(I)V",
@@ -12844,6 +13036,14 @@
       "renamedSymbol": "M:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
+      "symbol": "M:pd.a(BLga;)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called by the text input widget after its text or caret changed. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LoginForm.onTextChanged(BLTextInputWidget;)V"
+    },
+    {
       "symbol": "M:pd.a(CBLfd;I)Z",
       "originalName": "a",
       "to": "handleKeyInput",
@@ -12866,6 +13066,14 @@
       "evidence": "Matches escapevector/steelsentinels NameSuggestionsPanel.drawLayer by signature and body shape. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LoginForm.drawLayer(IIII)V"
+    },
+    {
+      "symbol": "M:pd.a(ILga;)V",
+      "originalName": "a",
+      "to": "onEnterPressed",
+      "evidence": "Called by the text input widget when the Enter key code 84 is pressed. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LoginForm.onEnterPressed(ILTextInputWidget;)V"
     },
     {
       "symbol": "M:pd.a(ILwi;IBI)V",
@@ -13068,12 +13276,28 @@
       "renamedSymbol": "M:SquadPickerDialog.dialogHeight(B)I"
     },
     {
+      "symbol": "M:pq.a(BII)V",
+      "originalName": "a",
+      "to": "drawBody",
+      "evidence": "Draws the dialog content at the given offset: frame, title, text and optional icon. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SquadPickerDialog.drawBody(BII)V"
+    },
+    {
       "symbol": "M:pq.a(II)V",
       "originalName": "a",
       "to": "handleResult",
       "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SquadPickerDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:pq.a(IZ)V",
+      "originalName": "a",
+      "to": "onUpdate",
+      "evidence": "Per-frame hook that dialog subclasses may override; the base does nothing. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SquadPickerDialog.onUpdate(IZ)V"
     },
     {
       "symbol": "M:pq.b(I)I",
@@ -13228,6 +13452,14 @@
       "renamedSymbol": "M:AuctionSettingsDialog.dialogHeight(B)I"
     },
     {
+      "symbol": "M:pw.a(BII)V",
+      "originalName": "a",
+      "to": "drawBody",
+      "evidence": "Draws the dialog content at the given offset: frame, title, text and optional icon. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AuctionSettingsDialog.drawBody(BII)V"
+    },
+    {
       "symbol": "M:pw.a(IBC)Z",
       "originalName": "a",
       "to": "handleKey",
@@ -13242,6 +13474,14 @@
       "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AuctionSettingsDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:pw.a(IZ)V",
+      "originalName": "a",
+      "to": "onUpdate",
+      "evidence": "Per-frame hook that dialog subclasses may override; the base does nothing. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AuctionSettingsDialog.onUpdate(IZ)V"
     },
     {
       "symbol": "M:pw.b(I)I",
@@ -13634,6 +13874,14 @@
       "evidence": "Returns true if any button has kind 7, the Back button handled by vj.a.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ButtonMenuScreen.hasBackButton(B)Z"
+    },
+    {
+      "symbol": "M:qu.a(Llb;III)V",
+      "originalName": "a",
+      "to": "onHotspotClicked",
+      "evidence": "Called with the clicked text hotspot, for example opening the conduct page.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotListener.onHotspotClicked(LTextHotspotWidget;III)V"
     },
     {
       "symbol": "M:qv.a(B)I",
@@ -14100,12 +14348,28 @@
       "renamedSymbol": "M:StatChoiceDialog.dialogHeight(B)I"
     },
     {
+      "symbol": "M:rt.a(BII)V",
+      "originalName": "a",
+      "to": "drawBody",
+      "evidence": "Draws the dialog content at the given offset: frame, title, text and optional icon. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StatChoiceDialog.drawBody(BII)V"
+    },
+    {
       "symbol": "M:rt.a(II)V",
       "originalName": "a",
       "to": "handleResult",
       "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:StatChoiceDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:rt.a(IZ)V",
+      "originalName": "a",
+      "to": "onUpdate",
+      "evidence": "Per-frame hook that dialog subclasses may override; the base does nothing. Resolved override family. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StatChoiceDialog.onUpdate(IZ)V"
     },
     {
       "symbol": "M:rt.b(I)I",
@@ -14564,6 +14828,22 @@
       "renamedSymbol": "M:so.releaseStatics(B)V"
     },
     {
+      "symbol": "M:sp.b(II)V",
+      "originalName": "b",
+      "to": "drawRow",
+      "evidence": "Draws the list row at its current position. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShopPlayerSlot.drawRow(II)V"
+    },
+    {
+      "symbol": "M:sp.c(IZ)V",
+      "originalName": "c",
+      "to": "updateRow",
+      "evidence": "Handles the row's button presses for this frame. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShopPlayerSlot.updateRow(IZ)V"
+    },
+    {
       "symbol": "M:sq.a(II)V",
       "originalName": "a",
       "to": "handleResult",
@@ -14634,6 +14914,22 @@
       "evidence": "Converts a base-37 long into a name, rejecting values at or above 6582952005840035281.",
       "confidence": "reviewed",
       "renamedSymbol": "M:su.decodeBase37Name(IJ)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:sv.a(BLga;)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called by the text input widget after its text or caret changed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputListener.onTextChanged(BLTextInputWidget;)V"
+    },
+    {
+      "symbol": "M:sv.a(ILga;)V",
+      "originalName": "a",
+      "to": "onEnterPressed",
+      "evidence": "Called by the text input widget when the Enter key code 84 is pressed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputListener.onEnterPressed(ILTextInputWidget;)V"
     },
     {
       "symbol": "M:t.a()V",
@@ -15602,6 +15898,22 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:uq.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:ur.a(I)V",
+      "originalName": "a",
+      "to": "onRefreshSuggestions",
+      "evidence": "Called when the user asks for a fresh set of name suggestions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NameSuggestionListener.onRefreshSuggestions(I)V"
+    },
+    {
+      "symbol": "M:ur.a(Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "onSuggestionChosen",
+      "evidence": "Called with the suggested name the user picked.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NameSuggestionListener.onSuggestionChosen(Ljava/lang/String;I)V"
     },
     {
       "symbol": "M:us.f(B)V",
@@ -80153,7 +80465,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -80164,7 +80476,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -80175,7 +80487,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -80186,7 +80498,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#3",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#3",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -80197,7 +80509,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#4",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#4",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -80208,7 +80520,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#5",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#5",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#5",
       "originalName": "stackIn_5_1",
       "renamedName": "stackIn_5_1",
       "declaration": {
@@ -80219,7 +80531,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#6",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#6",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#6",
       "originalName": "stackIn_6_2",
       "renamedName": "stackIn_6_2",
       "declaration": {
@@ -80230,7 +80542,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#7",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#7",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -80241,7 +80553,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#8",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#8",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#8",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -80252,7 +80564,7 @@
     },
     {
       "symbol": "L:ae.a(Ljava/lang/String;I)V#9",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(Ljava/lang/String;I)V#9",
+      "renamedSymbol": "L:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -80263,7 +80575,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#0",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#0",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -80274,7 +80586,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#1",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#1",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -80285,7 +80597,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#2",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#2",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -80296,7 +80608,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#3",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#3",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -80307,7 +80619,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#4",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#4",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#4",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -80318,7 +80630,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#5",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#5",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -80329,7 +80641,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#6",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#6",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -80340,7 +80652,7 @@
     },
     {
       "symbol": "L:ae.a(Llb;III)V#7",
-      "renamedSymbol": "L:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#7",
+      "renamedSymbol": "L:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -82793,7 +83105,7 @@
     },
     {
       "symbol": "L:ai.a(Llb;III)V#0",
-      "renamedSymbol": "L:AccountTermsPanel.a(LTextHotspotWidget;III)V#0",
+      "renamedSymbol": "L:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -82804,7 +83116,7 @@
     },
     {
       "symbol": "L:ai.a(Llb;III)V#1",
-      "renamedSymbol": "L:AccountTermsPanel.a(LTextHotspotWidget;III)V#1",
+      "renamedSymbol": "L:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -82815,7 +83127,7 @@
     },
     {
       "symbol": "L:ai.a(Llb;III)V#2",
-      "renamedSymbol": "L:AccountTermsPanel.a(LTextHotspotWidget;III)V#2",
+      "renamedSymbol": "L:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -82826,7 +83138,7 @@
     },
     {
       "symbol": "L:ai.a(Llb;III)V#3",
-      "renamedSymbol": "L:AccountTermsPanel.a(LTextHotspotWidget;III)V#3",
+      "renamedSymbol": "L:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -82837,7 +83149,7 @@
     },
     {
       "symbol": "L:ai.a(Llb;III)V#4",
-      "renamedSymbol": "L:AccountTermsPanel.a(LTextHotspotWidget;III)V#4",
+      "renamedSymbol": "L:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#4",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -82848,7 +83160,7 @@
     },
     {
       "symbol": "L:ai.a(Llb;III)V#5",
-      "renamedSymbol": "L:AccountTermsPanel.a(LTextHotspotWidget;III)V#5",
+      "renamedSymbol": "L:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -82859,7 +83171,7 @@
     },
     {
       "symbol": "L:ai.a(Llb;III)V#6",
-      "renamedSymbol": "L:AccountTermsPanel.a(LTextHotspotWidget;III)V#6",
+      "renamedSymbol": "L:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -121579,7 +121891,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#0",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#0",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -121590,7 +121902,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#1",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#1",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -121601,7 +121913,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#2",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#2",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -121612,7 +121924,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#3",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#3",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -121623,7 +121935,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#4",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#4",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -121634,7 +121946,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#5",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#5",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -121645,7 +121957,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#6",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#6",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -121656,7 +121968,7 @@
     },
     {
       "symbol": "L:ek.a(BII)V#7",
-      "renamedSymbol": "L:TrinketShopDialog.a(BII)V#7",
+      "renamedSymbol": "L:TrinketShopDialog.drawBody(BII)V#7",
       "originalName": "var6_ref_at",
       "renamedName": "var6_ref_at",
       "declaration": {
@@ -121678,7 +121990,7 @@
     },
     {
       "symbol": "L:ek.a(IZ)V#0",
-      "renamedSymbol": "L:TrinketShopDialog.a(IZ)V#0",
+      "renamedSymbol": "L:TrinketShopDialog.onUpdate(IZ)V#0",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -121689,7 +122001,7 @@
     },
     {
       "symbol": "L:ek.a(IZ)V#1",
-      "renamedSymbol": "L:TrinketShopDialog.a(IZ)V#1",
+      "renamedSymbol": "L:TrinketShopDialog.onUpdate(IZ)V#1",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -121700,7 +122012,7 @@
     },
     {
       "symbol": "L:ek.a(IZ)V#2",
-      "renamedSymbol": "L:TrinketShopDialog.a(IZ)V#2",
+      "renamedSymbol": "L:TrinketShopDialog.onUpdate(IZ)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -121711,7 +122023,7 @@
     },
     {
       "symbol": "L:ek.a(IZ)V#3",
-      "renamedSymbol": "L:TrinketShopDialog.a(IZ)V#3",
+      "renamedSymbol": "L:TrinketShopDialog.onUpdate(IZ)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -121722,7 +122034,7 @@
     },
     {
       "symbol": "L:ek.a(IZ)V#4",
-      "renamedSymbol": "L:TrinketShopDialog.a(IZ)V#4",
+      "renamedSymbol": "L:TrinketShopDialog.onUpdate(IZ)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -153105,7 +153417,7 @@
     },
     {
       "symbol": "L:hl.a(BLga;)V#0",
-      "renamedSymbol": "L:hl.a(BLTextInputWidget;)V#0",
+      "renamedSymbol": "L:hl.onTextChanged(BLTextInputWidget;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -153116,7 +153428,7 @@
     },
     {
       "symbol": "L:hl.a(ILga;)V#0",
-      "renamedSymbol": "L:hl.a(ILTextInputWidget;)V#0",
+      "renamedSymbol": "L:hl.onEnterPressed(ILTextInputWidget;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -153127,7 +153439,7 @@
     },
     {
       "symbol": "L:hl.a(ILga;)V#1",
-      "renamedSymbol": "L:hl.a(ILTextInputWidget;)V#1",
+      "renamedSymbol": "L:hl.onEnterPressed(ILTextInputWidget;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -159947,7 +160259,7 @@
     },
     {
       "symbol": "L:i.a(BII)V#0",
-      "renamedSymbol": "L:MessageDialog.a(BII)V#0",
+      "renamedSymbol": "L:MessageDialog.drawBody(BII)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -159958,7 +160270,7 @@
     },
     {
       "symbol": "L:i.a(BII)V#1",
-      "renamedSymbol": "L:MessageDialog.a(BII)V#1",
+      "renamedSymbol": "L:MessageDialog.drawBody(BII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -159969,7 +160281,7 @@
     },
     {
       "symbol": "L:i.a(BII)V#2",
-      "renamedSymbol": "L:MessageDialog.a(BII)V#2",
+      "renamedSymbol": "L:MessageDialog.drawBody(BII)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -159980,7 +160292,7 @@
     },
     {
       "symbol": "L:i.a(BII)V#3",
-      "renamedSymbol": "L:MessageDialog.a(BII)V#3",
+      "renamedSymbol": "L:MessageDialog.drawBody(BII)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -159991,7 +160303,7 @@
     },
     {
       "symbol": "L:i.a(BII)V#4",
-      "renamedSymbol": "L:MessageDialog.a(BII)V#4",
+      "renamedSymbol": "L:MessageDialog.drawBody(BII)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -170727,7 +171039,7 @@
     },
     {
       "symbol": "L:jd.a(BLga;)V#0",
-      "renamedSymbol": "L:TextFieldValidator.a(BLTextInputWidget;)V#0",
+      "renamedSymbol": "L:TextFieldValidator.onTextChanged(BLTextInputWidget;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -170881,7 +171193,7 @@
     },
     {
       "symbol": "L:jd.a(ILga;)V#0",
-      "renamedSymbol": "L:TextFieldValidator.a(ILTextInputWidget;)V#0",
+      "renamedSymbol": "L:TextFieldValidator.onEnterPressed(ILTextInputWidget;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -170892,7 +171204,7 @@
     },
     {
       "symbol": "L:jd.a(ILga;)V#1",
-      "renamedSymbol": "L:TextFieldValidator.a(ILTextInputWidget;)V#1",
+      "renamedSymbol": "L:TextFieldValidator.onEnterPressed(ILTextInputWidget;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -177041,7 +177353,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#0",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#0",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -177052,7 +177364,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#1",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#1",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#1",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -177063,7 +177375,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#10",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#10",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#10",
       "originalName": "stackIn_44_0",
       "renamedName": "stackIn_44_0",
       "declaration": {
@@ -177074,7 +177386,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#11",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#11",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#11",
       "originalName": "stackIn_44_1",
       "renamedName": "stackIn_44_1",
       "declaration": {
@@ -177085,7 +177397,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#12",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#12",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#12",
       "originalName": "stackIn_44_2",
       "renamedName": "stackIn_44_2",
       "declaration": {
@@ -177096,7 +177408,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#13",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#13",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#13",
       "originalName": "stackIn_44_3",
       "renamedName": "stackIn_44_3",
       "declaration": {
@@ -177107,7 +177419,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#14",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#14",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#14",
       "originalName": "stackIn_46_4",
       "renamedName": "stackIn_46_4",
       "declaration": {
@@ -177118,7 +177430,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#15",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#15",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#15",
       "originalName": "stackIn_58_0",
       "renamedName": "stackIn_58_0",
       "declaration": {
@@ -177129,7 +177441,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#16",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#16",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#16",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -177140,7 +177452,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#17",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#17",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#17",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -177151,7 +177463,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#18",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#18",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#18",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -177162,7 +177474,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#19",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#19",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#19",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -177173,7 +177485,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#2",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#2",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -177184,7 +177496,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#20",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#20",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#20",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -177195,7 +177507,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#21",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#21",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#21",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -177206,7 +177518,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#22",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#22",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#22",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -177217,7 +177529,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#23",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#23",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#23",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -177228,7 +177540,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#24",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#24",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#24",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -177239,7 +177551,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#25",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#25",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#25",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -177250,7 +177562,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#26",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#26",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#26",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -177261,7 +177573,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#27",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#27",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#27",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -177272,7 +177584,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#3",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#3",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#3",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -177283,7 +177595,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#4",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#4",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#4",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -177294,7 +177606,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#5",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#5",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#5",
       "originalName": "stackIn_14_3",
       "renamedName": "stackIn_14_3",
       "declaration": {
@@ -177305,7 +177617,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#6",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#6",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#6",
       "originalName": "stackIn_15_4",
       "renamedName": "stackIn_15_4",
       "declaration": {
@@ -177316,7 +177628,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#7",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#7",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#7",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -177327,7 +177639,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#8",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#8",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#8",
       "originalName": "stackIn_36_0",
       "renamedName": "stackIn_36_0",
       "declaration": {
@@ -177338,7 +177650,7 @@
     },
     {
       "symbol": "L:jr.b(II)V#9",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.b(II)V#9",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.drawRow(II)V#9",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -177349,7 +177661,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#0",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#0",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -177360,7 +177672,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#1",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#1",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -177371,7 +177683,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#2",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#2",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#2",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -177382,7 +177694,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#3",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#3",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#3",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -177393,7 +177705,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#4",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#4",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#4",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -177404,7 +177716,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#5",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#5",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#5",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -177415,7 +177727,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#6",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#6",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -177426,7 +177738,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#7",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#7",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -177437,7 +177749,7 @@
     },
     {
       "symbol": "L:jr.c(IZ)V#8",
-      "renamedSymbol": "L:ReceivedAuctionItemRow.c(IZ)V#8",
+      "renamedSymbol": "L:ReceivedAuctionItemRow.updateRow(IZ)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -187480,7 +187792,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#0",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#0",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -187491,7 +187803,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#1",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#1",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -187502,7 +187814,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#2",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#2",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -187513,7 +187825,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#3",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#3",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -187524,7 +187836,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#4",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#4",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -187535,7 +187847,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#5",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#5",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -187546,7 +187858,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#6",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#6",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -187557,7 +187869,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#7",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#7",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -187568,7 +187880,7 @@
     },
     {
       "symbol": "L:kn.a(BII)V#8",
-      "renamedSymbol": "L:TrinketPickerDialog.a(BII)V#8",
+      "renamedSymbol": "L:TrinketPickerDialog.drawBody(BII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -204739,7 +205051,7 @@
     },
     {
       "symbol": "L:mb.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:DisplayNameForm.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:DisplayNameForm.onSuggestionChosen(Ljava/lang/String;I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -204750,7 +205062,7 @@
     },
     {
       "symbol": "L:mb.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:DisplayNameForm.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:DisplayNameForm.onSuggestionChosen(Ljava/lang/String;I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -204761,7 +205073,7 @@
     },
     {
       "symbol": "L:mb.a(Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:DisplayNameForm.a(Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:DisplayNameForm.onSuggestionChosen(Ljava/lang/String;I)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -248739,7 +249051,7 @@
     },
     {
       "symbol": "L:pd.a(BLga;)V#0",
-      "renamedSymbol": "L:LoginForm.a(BLTextInputWidget;)V#0",
+      "renamedSymbol": "L:LoginForm.onTextChanged(BLTextInputWidget;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -248849,7 +249161,7 @@
     },
     {
       "symbol": "L:pd.a(ILga;)V#0",
-      "renamedSymbol": "L:LoginForm.a(ILTextInputWidget;)V#0",
+      "renamedSymbol": "L:LoginForm.onEnterPressed(ILTextInputWidget;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -248860,7 +249172,7 @@
     },
     {
       "symbol": "L:pd.a(ILga;)V#1",
-      "renamedSymbol": "L:LoginForm.a(ILTextInputWidget;)V#1",
+      "renamedSymbol": "L:LoginForm.onEnterPressed(ILTextInputWidget;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -252281,7 +252593,7 @@
     },
     {
       "symbol": "L:pq.a(BII)V#0",
-      "renamedSymbol": "L:SquadPickerDialog.a(BII)V#0",
+      "renamedSymbol": "L:SquadPickerDialog.drawBody(BII)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -254107,7 +254419,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#0",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#0",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -254118,7 +254430,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#1",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#1",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -254129,7 +254441,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#2",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#2",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -254140,7 +254452,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#3",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#3",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -254151,7 +254463,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#4",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#4",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -254162,7 +254474,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#5",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#5",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -254173,7 +254485,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#6",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#6",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -254184,7 +254496,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#7",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#7",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -254195,7 +254507,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#8",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#8",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -254206,7 +254518,7 @@
     },
     {
       "symbol": "L:pw.a(BII)V#9",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(BII)V#9",
+      "renamedSymbol": "L:AuctionSettingsDialog.drawBody(BII)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -254558,7 +254870,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#0",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#0",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#0",
       "originalName": "stackIn_43_0",
       "renamedName": "stackIn_43_0",
       "declaration": {
@@ -254569,7 +254881,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#1",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#1",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#1",
       "originalName": "stackIn_43_1",
       "renamedName": "stackIn_43_1",
       "declaration": {
@@ -254580,7 +254892,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#10",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#10",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#10",
       "originalName": "stackIn_60_0",
       "renamedName": "stackIn_60_0",
       "declaration": {
@@ -254591,7 +254903,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#11",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#11",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#11",
       "originalName": "stackIn_61_1",
       "renamedName": "stackIn_61_1",
       "declaration": {
@@ -254602,7 +254914,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#12",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#12",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#12",
       "originalName": "stackIn_66_0",
       "renamedName": "stackIn_66_0",
       "declaration": {
@@ -254613,7 +254925,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#13",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#13",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#13",
       "originalName": "stackIn_85_0",
       "renamedName": "stackIn_85_0",
       "declaration": {
@@ -254624,7 +254936,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#14",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#14",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#14",
       "originalName": "stackIn_89_0",
       "renamedName": "stackIn_89_0",
       "declaration": {
@@ -254635,7 +254947,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#15",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#15",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#15",
       "originalName": "stackIn_93_0",
       "renamedName": "stackIn_93_0",
       "declaration": {
@@ -254646,7 +254958,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#16",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#16",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#16",
       "originalName": "stackIn_135_0",
       "renamedName": "stackIn_135_0",
       "declaration": {
@@ -254657,7 +254969,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#17",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#17",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#17",
       "originalName": "stackIn_138_0",
       "renamedName": "stackIn_138_0",
       "declaration": {
@@ -254668,7 +254980,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#18",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#18",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#18",
       "originalName": "stackIn_139_1",
       "renamedName": "stackIn_139_1",
       "declaration": {
@@ -254679,7 +254991,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#19",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#19",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#19",
       "originalName": "stackIn_145_0",
       "renamedName": "stackIn_145_0",
       "declaration": {
@@ -254690,7 +255002,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#2",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#2",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#2",
       "originalName": "stackIn_44_2",
       "renamedName": "stackIn_44_2",
       "declaration": {
@@ -254701,7 +255013,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#20",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#20",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#20",
       "originalName": "stackIn_149_0",
       "renamedName": "stackIn_149_0",
       "declaration": {
@@ -254712,7 +255024,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#21",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#21",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#21",
       "originalName": "stackIn_150_1",
       "renamedName": "stackIn_150_1",
       "declaration": {
@@ -254723,7 +255035,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#22",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#22",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#22",
       "originalName": "stackIn_163_0",
       "renamedName": "stackIn_163_0",
       "declaration": {
@@ -254734,7 +255046,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#23",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#23",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#23",
       "originalName": "stackIn_176_0",
       "renamedName": "stackIn_176_0",
       "declaration": {
@@ -254745,7 +255057,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#24",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#24",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#24",
       "originalName": "stackIn_183_0",
       "renamedName": "stackIn_183_0",
       "declaration": {
@@ -254756,7 +255068,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#25",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#25",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#25",
       "originalName": "stackIn_184_1",
       "renamedName": "stackIn_184_1",
       "declaration": {
@@ -254767,7 +255079,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#26",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#26",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#26",
       "originalName": "stackIn_186_0",
       "renamedName": "stackIn_186_0",
       "declaration": {
@@ -254778,7 +255090,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#27",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#27",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#27",
       "originalName": "stackIn_187_1",
       "renamedName": "stackIn_187_1",
       "declaration": {
@@ -254789,7 +255101,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#28",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#28",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#28",
       "originalName": "stackIn_191_0",
       "renamedName": "stackIn_191_0",
       "declaration": {
@@ -254800,7 +255112,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#29",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#29",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#29",
       "originalName": "stackIn_192_1",
       "renamedName": "stackIn_192_1",
       "declaration": {
@@ -254811,7 +255123,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#3",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#3",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#3",
       "originalName": "stackIn_47_1",
       "renamedName": "stackIn_47_1",
       "declaration": {
@@ -254822,7 +255134,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#30",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#30",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#30",
       "originalName": "stackIn_194_0",
       "renamedName": "stackIn_194_0",
       "declaration": {
@@ -254833,7 +255145,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#31",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#31",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#31",
       "originalName": "stackIn_195_1",
       "renamedName": "stackIn_195_1",
       "declaration": {
@@ -254844,7 +255156,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#32",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#32",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#32",
       "originalName": "stackIn_197_0",
       "renamedName": "stackIn_197_0",
       "declaration": {
@@ -254855,7 +255167,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#33",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#33",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#33",
       "originalName": "stackIn_198_1",
       "renamedName": "stackIn_198_1",
       "declaration": {
@@ -254866,7 +255178,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#34",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#34",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#34",
       "originalName": "stackIn_200_0",
       "renamedName": "stackIn_200_0",
       "declaration": {
@@ -254877,7 +255189,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#35",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#35",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#35",
       "originalName": "stackIn_201_1",
       "renamedName": "stackIn_201_1",
       "declaration": {
@@ -254888,7 +255200,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#36",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#36",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#36",
       "originalName": "stackIn_204_0",
       "renamedName": "stackIn_204_0",
       "declaration": {
@@ -254899,7 +255211,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#37",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#37",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#37",
       "originalName": "stackIn_205_1",
       "renamedName": "stackIn_205_1",
       "declaration": {
@@ -254910,7 +255222,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#38",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#38",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#38",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -254921,7 +255233,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#39",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#39",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#39",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -254932,7 +255244,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#4",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#4",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#4",
       "originalName": "stackIn_49_0",
       "renamedName": "stackIn_49_0",
       "declaration": {
@@ -254943,7 +255255,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#40",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#40",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#40",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -254954,7 +255266,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#41",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#41",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#41",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -254965,7 +255277,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#42",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#42",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#42",
       "originalName": "var6_ref_String",
       "renamedName": "var6_ref_String",
       "declaration": {
@@ -254976,7 +255288,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#43",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#43",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#43",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -254987,7 +255299,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#44",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#44",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#44",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -254998,7 +255310,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#45",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#45",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#45",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -255009,7 +255321,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#46",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#46",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#46",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -255020,7 +255332,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#47",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#47",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#47",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -255031,7 +255343,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#48",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#48",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#48",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -255042,7 +255354,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#49",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#49",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#49",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -255053,7 +255365,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#5",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#5",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#5",
       "originalName": "stackIn_50_1",
       "renamedName": "stackIn_50_1",
       "declaration": {
@@ -255064,7 +255376,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#50",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#50",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#50",
       "originalName": "var7Lifetime3",
       "renamedName": "var7Lifetime3",
       "declaration": {
@@ -255075,7 +255387,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#51",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#51",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#51",
       "originalName": "var7Lifetime4",
       "renamedName": "var7Lifetime4",
       "declaration": {
@@ -255086,7 +255398,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#52",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#52",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#52",
       "originalName": "var7Lifetime5",
       "renamedName": "var7Lifetime5",
       "declaration": {
@@ -255097,7 +255409,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#53",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#53",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#53",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -255108,7 +255420,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#54",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#54",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#54",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -255119,7 +255431,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#6",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#6",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#6",
       "originalName": "stackIn_52_0",
       "renamedName": "stackIn_52_0",
       "declaration": {
@@ -255130,7 +255442,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#7",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#7",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#7",
       "originalName": "stackIn_53_1",
       "renamedName": "stackIn_53_1",
       "declaration": {
@@ -255141,7 +255453,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#8",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#8",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#8",
       "originalName": "stackIn_55_0",
       "renamedName": "stackIn_55_0",
       "declaration": {
@@ -255152,7 +255464,7 @@
     },
     {
       "symbol": "L:pw.a(IZ)V#9",
-      "renamedSymbol": "L:AuctionSettingsDialog.a(IZ)V#9",
+      "renamedSymbol": "L:AuctionSettingsDialog.onUpdate(IZ)V#9",
       "originalName": "stackIn_56_1",
       "renamedName": "stackIn_56_1",
       "declaration": {
@@ -274952,7 +275264,7 @@
     },
     {
       "symbol": "L:rt.a(BII)V#0",
-      "renamedSymbol": "L:StatChoiceDialog.a(BII)V#0",
+      "renamedSymbol": "L:StatChoiceDialog.drawBody(BII)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -274963,7 +275275,7 @@
     },
     {
       "symbol": "L:rt.a(BII)V#1",
-      "renamedSymbol": "L:StatChoiceDialog.a(BII)V#1",
+      "renamedSymbol": "L:StatChoiceDialog.drawBody(BII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -274974,7 +275286,7 @@
     },
     {
       "symbol": "L:rt.a(BII)V#2",
-      "renamedSymbol": "L:StatChoiceDialog.a(BII)V#2",
+      "renamedSymbol": "L:StatChoiceDialog.drawBody(BII)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -274985,7 +275297,7 @@
     },
     {
       "symbol": "L:rt.a(BII)V#3",
-      "renamedSymbol": "L:StatChoiceDialog.a(BII)V#3",
+      "renamedSymbol": "L:StatChoiceDialog.drawBody(BII)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -274996,7 +275308,7 @@
     },
     {
       "symbol": "L:rt.a(BII)V#4",
-      "renamedSymbol": "L:StatChoiceDialog.a(BII)V#4",
+      "renamedSymbol": "L:StatChoiceDialog.drawBody(BII)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -275007,7 +275319,7 @@
     },
     {
       "symbol": "L:rt.a(BII)V#5",
-      "renamedSymbol": "L:StatChoiceDialog.a(BII)V#5",
+      "renamedSymbol": "L:StatChoiceDialog.drawBody(BII)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -275018,7 +275330,7 @@
     },
     {
       "symbol": "L:rt.a(BII)V#6",
-      "renamedSymbol": "L:StatChoiceDialog.a(BII)V#6",
+      "renamedSymbol": "L:StatChoiceDialog.drawBody(BII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -275040,7 +275352,7 @@
     },
     {
       "symbol": "L:rt.a(IZ)V#0",
-      "renamedSymbol": "L:StatChoiceDialog.a(IZ)V#0",
+      "renamedSymbol": "L:StatChoiceDialog.onUpdate(IZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -275051,7 +275363,7 @@
     },
     {
       "symbol": "L:rt.a(IZ)V#1",
-      "renamedSymbol": "L:StatChoiceDialog.a(IZ)V#1",
+      "renamedSymbol": "L:StatChoiceDialog.onUpdate(IZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -275062,7 +275374,7 @@
     },
     {
       "symbol": "L:rt.a(IZ)V#2",
-      "renamedSymbol": "L:StatChoiceDialog.a(IZ)V#2",
+      "renamedSymbol": "L:StatChoiceDialog.onUpdate(IZ)V#2",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -275073,7 +275385,7 @@
     },
     {
       "symbol": "L:rt.a(IZ)V#3",
-      "renamedSymbol": "L:StatChoiceDialog.a(IZ)V#3",
+      "renamedSymbol": "L:StatChoiceDialog.onUpdate(IZ)V#3",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -275084,7 +275396,7 @@
     },
     {
       "symbol": "L:rt.a(IZ)V#4",
-      "renamedSymbol": "L:StatChoiceDialog.a(IZ)V#4",
+      "renamedSymbol": "L:StatChoiceDialog.onUpdate(IZ)V#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -275095,7 +275407,7 @@
     },
     {
       "symbol": "L:rt.a(IZ)V#5",
-      "renamedSymbol": "L:StatChoiceDialog.a(IZ)V#5",
+      "renamedSymbol": "L:StatChoiceDialog.onUpdate(IZ)V#5",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -283873,7 +284185,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#0",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#0",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#0",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -283884,7 +284196,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#1",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#1",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#1",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -283895,7 +284207,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#10",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#10",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -283906,7 +284218,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#11",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#11",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -283917,7 +284229,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#12",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#12",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -283928,7 +284240,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#13",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#13",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -283939,7 +284251,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#14",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#14",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -283950,7 +284262,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#15",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#15",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#15",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -283961,7 +284273,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#16",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#16",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#16",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -283972,7 +284284,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#2",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#2",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#2",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -283983,7 +284295,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#3",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#3",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#3",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -283994,7 +284306,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#4",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#4",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#4",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -284005,7 +284317,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#5",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#5",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#5",
       "originalName": "stackIn_24_3",
       "renamedName": "stackIn_24_3",
       "declaration": {
@@ -284016,7 +284328,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#6",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#6",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#6",
       "originalName": "stackIn_26_4",
       "renamedName": "stackIn_26_4",
       "declaration": {
@@ -284027,7 +284339,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#7",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#7",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -284038,7 +284350,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#8",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#8",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -284049,7 +284361,7 @@
     },
     {
       "symbol": "L:sp.b(II)V#9",
-      "renamedSymbol": "L:ShopPlayerSlot.b(II)V#9",
+      "renamedSymbol": "L:ShopPlayerSlot.drawRow(II)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -284071,7 +284383,7 @@
     },
     {
       "symbol": "L:sp.c(IZ)V#0",
-      "renamedSymbol": "L:ShopPlayerSlot.c(IZ)V#0",
+      "renamedSymbol": "L:ShopPlayerSlot.updateRow(IZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -284082,7 +284394,7 @@
     },
     {
       "symbol": "L:sp.c(IZ)V#1",
-      "renamedSymbol": "L:ShopPlayerSlot.c(IZ)V#1",
+      "renamedSymbol": "L:ShopPlayerSlot.updateRow(IZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -343779,9 +344091,9 @@
     },
     {
       "symbol": "M:ae.a(I)V",
-      "renamedSymbol": "M:AccountRegistrationPanel.a(I)V",
+      "renamedSymbol": "M:AccountRegistrationPanel.onRefreshSuggestions(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onRefreshSuggestions",
       "declaration": {
         "file": "ae.java",
         "start": 13436,
@@ -343856,9 +344168,9 @@
     },
     {
       "symbol": "M:ae.a(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:AccountRegistrationPanel.a(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onSuggestionChosen",
       "declaration": {
         "file": "ae.java",
         "start": 25242,
@@ -343867,9 +344179,9 @@
     },
     {
       "symbol": "M:ae.a(Llb;III)V",
-      "renamedSymbol": "M:AccountRegistrationPanel.a(LTextHotspotWidget;III)V",
+      "renamedSymbol": "M:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onHotspotClicked",
       "declaration": {
         "file": "ae.java",
         "start": 13596,
@@ -344461,9 +344773,9 @@
     },
     {
       "symbol": "M:ai.a(Llb;III)V",
-      "renamedSymbol": "M:AccountTermsPanel.a(LTextHotspotWidget;III)V",
+      "renamedSymbol": "M:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onHotspotClicked",
       "declaration": {
         "file": "ai.java",
         "start": 4138,
@@ -352051,9 +352363,9 @@
     },
     {
       "symbol": "M:ek.a(BII)V",
-      "renamedSymbol": "M:TrinketShopDialog.a(BII)V",
+      "renamedSymbol": "M:TrinketShopDialog.drawBody(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBody",
       "declaration": {
         "file": "ek.java",
         "start": 1698,
@@ -352073,9 +352385,9 @@
     },
     {
       "symbol": "M:ek.a(IZ)V",
-      "renamedSymbol": "M:TrinketShopDialog.a(IZ)V",
+      "renamedSymbol": "M:TrinketShopDialog.onUpdate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onUpdate",
       "declaration": {
         "file": "ek.java",
         "start": 4325,
@@ -358530,9 +358842,9 @@
     },
     {
       "symbol": "M:hl.a(BLga;)V",
-      "renamedSymbol": "M:hl.a(BLTextInputWidget;)V",
+      "renamedSymbol": "M:hl.onTextChanged(BLTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "hl.java",
         "start": 4163,
@@ -358541,9 +358853,9 @@
     },
     {
       "symbol": "M:hl.a(ILga;)V",
-      "renamedSymbol": "M:hl.a(ILTextInputWidget;)V",
+      "renamedSymbol": "M:hl.onEnterPressed(ILTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnterPressed",
       "declaration": {
         "file": "hl.java",
         "start": 1091,
@@ -359718,9 +360030,9 @@
     },
     {
       "symbol": "M:i.a(BII)V",
-      "renamedSymbol": "M:MessageDialog.a(BII)V",
+      "renamedSymbol": "M:MessageDialog.drawBody(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBody",
       "declaration": {
         "file": "i.java",
         "start": 8007,
@@ -359740,9 +360052,9 @@
     },
     {
       "symbol": "M:i.a(IZ)V",
-      "renamedSymbol": "M:MessageDialog.a(IZ)V",
+      "renamedSymbol": "M:MessageDialog.onUpdate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onUpdate",
       "declaration": {
         "file": "i.java",
         "start": 361,
@@ -359762,9 +360074,9 @@
     },
     {
       "symbol": "M:i.a(Z)I",
-      "renamedSymbol": "M:MessageDialog.a(Z)I",
+      "renamedSymbol": "M:MessageDialog.getOpenSoundId(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getOpenSoundId",
       "declaration": {
         "file": "i.java",
         "start": 5688,
@@ -360543,9 +360855,9 @@
     },
     {
       "symbol": "M:im.b(II)V",
-      "renamedSymbol": "M:ListRow.b(II)V",
+      "renamedSymbol": "M:ListRow.drawRow(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawRow",
       "declaration": {
         "file": "im.java",
         "start": 2298,
@@ -360554,9 +360866,9 @@
     },
     {
       "symbol": "M:im.c(IZ)V",
-      "renamedSymbol": "M:ListRow.c(IZ)V",
+      "renamedSymbol": "M:ListRow.updateRow(IZ)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "updateRow",
       "declaration": {
         "file": "im.java",
         "start": 535,
@@ -361797,9 +362109,9 @@
     },
     {
       "symbol": "M:jb.a(BII)V",
-      "renamedSymbol": "M:PopupDialog.a(BII)V",
+      "renamedSymbol": "M:PopupDialog.drawBody(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBody",
       "declaration": {
         "file": "jb.java",
         "start": 452,
@@ -361852,9 +362164,9 @@
     },
     {
       "symbol": "M:jb.a(IZ)V",
-      "renamedSymbol": "M:PopupDialog.a(IZ)V",
+      "renamedSymbol": "M:PopupDialog.onUpdate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onUpdate",
       "declaration": {
         "file": "jb.java",
         "start": 4521,
@@ -361874,9 +362186,9 @@
     },
     {
       "symbol": "M:jb.a(Z)I",
-      "renamedSymbol": "M:PopupDialog.a(Z)I",
+      "renamedSymbol": "M:PopupDialog.getOpenSoundId(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getOpenSoundId",
       "declaration": {
         "file": "jb.java",
         "start": 5747,
@@ -362072,9 +362384,9 @@
     },
     {
       "symbol": "M:jd.a(BLga;)V",
-      "renamedSymbol": "M:TextFieldValidator.a(BLTextInputWidget;)V",
+      "renamedSymbol": "M:TextFieldValidator.onTextChanged(BLTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "jd.java",
         "start": 3921,
@@ -362105,9 +362417,9 @@
     },
     {
       "symbol": "M:jd.a(ILga;)V",
-      "renamedSymbol": "M:TextFieldValidator.a(ILTextInputWidget;)V",
+      "renamedSymbol": "M:TextFieldValidator.onEnterPressed(ILTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnterPressed",
       "declaration": {
         "file": "jd.java",
         "start": 3604,
@@ -363117,9 +363429,9 @@
     },
     {
       "symbol": "M:jr.b(II)V",
-      "renamedSymbol": "M:ReceivedAuctionItemRow.b(II)V",
+      "renamedSymbol": "M:ReceivedAuctionItemRow.drawRow(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawRow",
       "declaration": {
         "file": "jr.java",
         "start": 4247,
@@ -363128,9 +363440,9 @@
     },
     {
       "symbol": "M:jr.c(IZ)V",
-      "renamedSymbol": "M:ReceivedAuctionItemRow.c(IZ)V",
+      "renamedSymbol": "M:ReceivedAuctionItemRow.updateRow(IZ)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "updateRow",
       "declaration": {
         "file": "jr.java",
         "start": 377,
@@ -364767,9 +365079,9 @@
     },
     {
       "symbol": "M:kn.a(BII)V",
-      "renamedSymbol": "M:TrinketPickerDialog.a(BII)V",
+      "renamedSymbol": "M:TrinketPickerDialog.drawBody(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBody",
       "declaration": {
         "file": "kn.java",
         "start": 1945,
@@ -364800,9 +365112,9 @@
     },
     {
       "symbol": "M:kn.a(IZ)V",
-      "renamedSymbol": "M:TrinketPickerDialog.a(IZ)V",
+      "renamedSymbol": "M:TrinketPickerDialog.onUpdate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onUpdate",
       "declaration": {
         "file": "kn.java",
         "start": 3506,
@@ -367957,9 +368269,9 @@
     },
     {
       "symbol": "M:mb.a(I)V",
-      "renamedSymbol": "M:DisplayNameForm.a(I)V",
+      "renamedSymbol": "M:DisplayNameForm.onRefreshSuggestions(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onRefreshSuggestions",
       "declaration": {
         "file": "mb.java",
         "start": 723,
@@ -368001,9 +368313,9 @@
     },
     {
       "symbol": "M:mb.a(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:DisplayNameForm.a(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:DisplayNameForm.onSuggestionChosen(Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onSuggestionChosen",
       "declaration": {
         "file": "mb.java",
         "start": 218,
@@ -374832,9 +375144,9 @@
     },
     {
       "symbol": "M:pd.a(BLga;)V",
-      "renamedSymbol": "M:LoginForm.a(BLTextInputWidget;)V",
+      "renamedSymbol": "M:LoginForm.onTextChanged(BLTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "pd.java",
         "start": 6826,
@@ -374876,9 +375188,9 @@
     },
     {
       "symbol": "M:pd.a(ILga;)V",
-      "renamedSymbol": "M:LoginForm.a(ILTextInputWidget;)V",
+      "renamedSymbol": "M:LoginForm.onEnterPressed(ILTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnterPressed",
       "declaration": {
         "file": "pd.java",
         "start": 1982,
@@ -375657,9 +375969,9 @@
     },
     {
       "symbol": "M:pq.a(BII)V",
-      "renamedSymbol": "M:SquadPickerDialog.a(BII)V",
+      "renamedSymbol": "M:SquadPickerDialog.drawBody(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBody",
       "declaration": {
         "file": "pq.java",
         "start": 2941,
@@ -375690,9 +376002,9 @@
     },
     {
       "symbol": "M:pq.a(IZ)V",
-      "renamedSymbol": "M:SquadPickerDialog.a(IZ)V",
+      "renamedSymbol": "M:SquadPickerDialog.onUpdate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onUpdate",
       "declaration": {
         "file": "pq.java",
         "start": 9516,
@@ -376207,9 +376519,9 @@
     },
     {
       "symbol": "M:pw.a(BII)V",
-      "renamedSymbol": "M:AuctionSettingsDialog.a(BII)V",
+      "renamedSymbol": "M:AuctionSettingsDialog.drawBody(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBody",
       "declaration": {
         "file": "pw.java",
         "start": 6165,
@@ -376240,9 +376552,9 @@
     },
     {
       "symbol": "M:pw.a(IZ)V",
-      "renamedSymbol": "M:AuctionSettingsDialog.a(IZ)V",
+      "renamedSymbol": "M:AuctionSettingsDialog.onUpdate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onUpdate",
       "declaration": {
         "file": "pw.java",
         "start": 14578,
@@ -378000,9 +378312,9 @@
     },
     {
       "symbol": "M:qu.a(Llb;III)V",
-      "renamedSymbol": "M:TextHotspotListener.a(LTextHotspotWidget;III)V",
+      "renamedSymbol": "M:TextHotspotListener.onHotspotClicked(LTextHotspotWidget;III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onHotspotClicked",
       "declaration": {
         "file": "qu.java",
         "start": 78,
@@ -379837,9 +380149,9 @@
     },
     {
       "symbol": "M:rt.a(BII)V",
-      "renamedSymbol": "M:StatChoiceDialog.a(BII)V",
+      "renamedSymbol": "M:StatChoiceDialog.drawBody(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBody",
       "declaration": {
         "file": "rt.java",
         "start": 11553,
@@ -379859,9 +380171,9 @@
     },
     {
       "symbol": "M:rt.a(IZ)V",
-      "renamedSymbol": "M:StatChoiceDialog.a(IZ)V",
+      "renamedSymbol": "M:StatChoiceDialog.onUpdate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onUpdate",
       "declaration": {
         "file": "rt.java",
         "start": 360,
@@ -381718,9 +382030,9 @@
     },
     {
       "symbol": "M:sp.b(II)V",
-      "renamedSymbol": "M:ShopPlayerSlot.b(II)V",
+      "renamedSymbol": "M:ShopPlayerSlot.drawRow(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawRow",
       "declaration": {
         "file": "sp.java",
         "start": 2292,
@@ -381740,9 +382052,9 @@
     },
     {
       "symbol": "M:sp.c(IZ)V",
-      "renamedSymbol": "M:ShopPlayerSlot.c(IZ)V",
+      "renamedSymbol": "M:ShopPlayerSlot.updateRow(IZ)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "updateRow",
       "declaration": {
         "file": "sp.java",
         "start": 5948,
@@ -382103,9 +382415,9 @@
     },
     {
       "symbol": "M:sv.a(BLga;)V",
-      "renamedSymbol": "M:TextInputListener.a(BLTextInputWidget;)V",
+      "renamedSymbol": "M:TextInputListener.onTextChanged(BLTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "sv.java",
         "start": 89,
@@ -382114,9 +382426,9 @@
     },
     {
       "symbol": "M:sv.a(ILga;)V",
-      "renamedSymbol": "M:TextInputListener.a(ILTextInputWidget;)V",
+      "renamedSymbol": "M:TextInputListener.onEnterPressed(ILTextInputWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnterPressed",
       "declaration": {
         "file": "sv.java",
         "start": 142,
@@ -385832,9 +386144,9 @@
     },
     {
       "symbol": "M:ur.a(I)V",
-      "renamedSymbol": "M:NameSuggestionListener.a(I)V",
+      "renamedSymbol": "M:NameSuggestionListener.onRefreshSuggestions(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onRefreshSuggestions",
       "declaration": {
         "file": "ur.java",
         "start": 78,
@@ -385843,9 +386155,9 @@
     },
     {
       "symbol": "M:ur.a(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:NameSuggestionListener.a(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:NameSuggestionListener.onSuggestionChosen(Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onSuggestionChosen",
       "declaration": {
         "file": "ur.java",
         "start": 119,
@@ -392300,7 +392612,7 @@
     },
     {
       "symbol": "P:ae.a(I)V#0",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(I)V#0",
+      "renamedSymbol": "P:AccountRegistrationPanel.onRefreshSuggestions(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392641,7 +392953,7 @@
     },
     {
       "symbol": "P:ae.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392652,7 +392964,7 @@
     },
     {
       "symbol": "P:ae.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:AccountRegistrationPanel.onSuggestionChosen(Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392663,7 +392975,7 @@
     },
     {
       "symbol": "P:ae.a(Llb;III)V#0",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#0",
+      "renamedSymbol": "P:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392674,7 +392986,7 @@
     },
     {
       "symbol": "P:ae.a(Llb;III)V#1",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#1",
+      "renamedSymbol": "P:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392685,7 +392997,7 @@
     },
     {
       "symbol": "P:ae.a(Llb;III)V#2",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#2",
+      "renamedSymbol": "P:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392696,7 +393008,7 @@
     },
     {
       "symbol": "P:ae.a(Llb;III)V#3",
-      "renamedSymbol": "P:AccountRegistrationPanel.a(LTextHotspotWidget;III)V#3",
+      "renamedSymbol": "P:AccountRegistrationPanel.onHotspotClicked(LTextHotspotWidget;III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -393466,7 +393778,7 @@
     },
     {
       "symbol": "P:ai.a(Llb;III)V#0",
-      "renamedSymbol": "P:AccountTermsPanel.a(LTextHotspotWidget;III)V#0",
+      "renamedSymbol": "P:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393477,7 +393789,7 @@
     },
     {
       "symbol": "P:ai.a(Llb;III)V#1",
-      "renamedSymbol": "P:AccountTermsPanel.a(LTextHotspotWidget;III)V#1",
+      "renamedSymbol": "P:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393488,7 +393800,7 @@
     },
     {
       "symbol": "P:ai.a(Llb;III)V#2",
-      "renamedSymbol": "P:AccountTermsPanel.a(LTextHotspotWidget;III)V#2",
+      "renamedSymbol": "P:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -393499,7 +393811,7 @@
     },
     {
       "symbol": "P:ai.a(Llb;III)V#3",
-      "renamedSymbol": "P:AccountTermsPanel.a(LTextHotspotWidget;III)V#3",
+      "renamedSymbol": "P:AccountTermsPanel.onHotspotClicked(LTextHotspotWidget;III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -410087,7 +410399,7 @@
     },
     {
       "symbol": "P:ek.a(BII)V#0",
-      "renamedSymbol": "P:TrinketShopDialog.a(BII)V#0",
+      "renamedSymbol": "P:TrinketShopDialog.drawBody(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410098,7 +410410,7 @@
     },
     {
       "symbol": "P:ek.a(BII)V#1",
-      "renamedSymbol": "P:TrinketShopDialog.a(BII)V#1",
+      "renamedSymbol": "P:TrinketShopDialog.drawBody(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -410109,7 +410421,7 @@
     },
     {
       "symbol": "P:ek.a(BII)V#2",
-      "renamedSymbol": "P:TrinketShopDialog.a(BII)V#2",
+      "renamedSymbol": "P:TrinketShopDialog.drawBody(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -410142,7 +410454,7 @@
     },
     {
       "symbol": "P:ek.a(IZ)V#0",
-      "renamedSymbol": "P:TrinketShopDialog.a(IZ)V#0",
+      "renamedSymbol": "P:TrinketShopDialog.onUpdate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410153,7 +410465,7 @@
     },
     {
       "symbol": "P:ek.a(IZ)V#1",
-      "renamedSymbol": "P:TrinketShopDialog.a(IZ)V#1",
+      "renamedSymbol": "P:TrinketShopDialog.onUpdate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425597,7 +425909,7 @@
     },
     {
       "symbol": "P:hl.a(BLga;)V#0",
-      "renamedSymbol": "P:hl.a(BLTextInputWidget;)V#0",
+      "renamedSymbol": "P:hl.onTextChanged(BLTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425608,7 +425920,7 @@
     },
     {
       "symbol": "P:hl.a(BLga;)V#1",
-      "renamedSymbol": "P:hl.a(BLTextInputWidget;)V#1",
+      "renamedSymbol": "P:hl.onTextChanged(BLTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425619,7 +425931,7 @@
     },
     {
       "symbol": "P:hl.a(ILga;)V#0",
-      "renamedSymbol": "P:hl.a(ILTextInputWidget;)V#0",
+      "renamedSymbol": "P:hl.onEnterPressed(ILTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425630,7 +425942,7 @@
     },
     {
       "symbol": "P:hl.a(ILga;)V#1",
-      "renamedSymbol": "P:hl.a(ILTextInputWidget;)V#1",
+      "renamedSymbol": "P:hl.onEnterPressed(ILTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -428666,7 +428978,7 @@
     },
     {
       "symbol": "P:i.a(BII)V#0",
-      "renamedSymbol": "P:MessageDialog.a(BII)V#0",
+      "renamedSymbol": "P:MessageDialog.drawBody(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -428677,7 +428989,7 @@
     },
     {
       "symbol": "P:i.a(BII)V#1",
-      "renamedSymbol": "P:MessageDialog.a(BII)V#1",
+      "renamedSymbol": "P:MessageDialog.drawBody(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -428688,7 +429000,7 @@
     },
     {
       "symbol": "P:i.a(BII)V#2",
-      "renamedSymbol": "P:MessageDialog.a(BII)V#2",
+      "renamedSymbol": "P:MessageDialog.drawBody(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -428721,7 +429033,7 @@
     },
     {
       "symbol": "P:i.a(IZ)V#0",
-      "renamedSymbol": "P:MessageDialog.a(IZ)V#0",
+      "renamedSymbol": "P:MessageDialog.onUpdate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -428732,7 +429044,7 @@
     },
     {
       "symbol": "P:i.a(IZ)V#1",
-      "renamedSymbol": "P:MessageDialog.a(IZ)V#1",
+      "renamedSymbol": "P:MessageDialog.onUpdate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -428798,7 +429110,7 @@
     },
     {
       "symbol": "P:i.a(Z)I#0",
-      "renamedSymbol": "P:MessageDialog.a(Z)I#0",
+      "renamedSymbol": "P:MessageDialog.getOpenSoundId(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430514,7 +430826,7 @@
     },
     {
       "symbol": "P:im.b(II)V#0",
-      "renamedSymbol": "P:ListRow.b(II)V#0",
+      "renamedSymbol": "P:ListRow.drawRow(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430525,7 +430837,7 @@
     },
     {
       "symbol": "P:im.b(II)V#1",
-      "renamedSymbol": "P:ListRow.b(II)V#1",
+      "renamedSymbol": "P:ListRow.drawRow(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430536,7 +430848,7 @@
     },
     {
       "symbol": "P:im.c(IZ)V#0",
-      "renamedSymbol": "P:ListRow.c(IZ)V#0",
+      "renamedSymbol": "P:ListRow.updateRow(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430547,7 +430859,7 @@
     },
     {
       "symbol": "P:im.c(IZ)V#1",
-      "renamedSymbol": "P:ListRow.c(IZ)V#1",
+      "renamedSymbol": "P:ListRow.updateRow(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -433044,7 +433356,7 @@
     },
     {
       "symbol": "P:jb.a(BII)V#0",
-      "renamedSymbol": "P:PopupDialog.a(BII)V#0",
+      "renamedSymbol": "P:PopupDialog.drawBody(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433055,7 +433367,7 @@
     },
     {
       "symbol": "P:jb.a(BII)V#1",
-      "renamedSymbol": "P:PopupDialog.a(BII)V#1",
+      "renamedSymbol": "P:PopupDialog.drawBody(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -433066,7 +433378,7 @@
     },
     {
       "symbol": "P:jb.a(BII)V#2",
-      "renamedSymbol": "P:PopupDialog.a(BII)V#2",
+      "renamedSymbol": "P:PopupDialog.drawBody(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -433176,7 +433488,7 @@
     },
     {
       "symbol": "P:jb.a(IZ)V#0",
-      "renamedSymbol": "P:PopupDialog.a(IZ)V#0",
+      "renamedSymbol": "P:PopupDialog.onUpdate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433187,7 +433499,7 @@
     },
     {
       "symbol": "P:jb.a(IZ)V#1",
-      "renamedSymbol": "P:PopupDialog.a(IZ)V#1",
+      "renamedSymbol": "P:PopupDialog.onUpdate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -433231,7 +433543,7 @@
     },
     {
       "symbol": "P:jb.a(Z)I#0",
-      "renamedSymbol": "P:PopupDialog.a(Z)I#0",
+      "renamedSymbol": "P:PopupDialog.getOpenSoundId(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433495,7 +433807,7 @@
     },
     {
       "symbol": "P:jd.a(BLga;)V#0",
-      "renamedSymbol": "P:TextFieldValidator.a(BLTextInputWidget;)V#0",
+      "renamedSymbol": "P:TextFieldValidator.onTextChanged(BLTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433506,7 +433818,7 @@
     },
     {
       "symbol": "P:jd.a(BLga;)V#1",
-      "renamedSymbol": "P:TextFieldValidator.a(BLTextInputWidget;)V#1",
+      "renamedSymbol": "P:TextFieldValidator.onTextChanged(BLTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -433561,7 +433873,7 @@
     },
     {
       "symbol": "P:jd.a(ILga;)V#0",
-      "renamedSymbol": "P:TextFieldValidator.a(ILTextInputWidget;)V#0",
+      "renamedSymbol": "P:TextFieldValidator.onEnterPressed(ILTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433572,7 +433884,7 @@
     },
     {
       "symbol": "P:jd.a(ILga;)V#1",
-      "renamedSymbol": "P:TextFieldValidator.a(ILTextInputWidget;)V#1",
+      "renamedSymbol": "P:TextFieldValidator.onEnterPressed(ILTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -436003,7 +436315,7 @@
     },
     {
       "symbol": "P:jr.b(II)V#0",
-      "renamedSymbol": "P:ReceivedAuctionItemRow.b(II)V#0",
+      "renamedSymbol": "P:ReceivedAuctionItemRow.drawRow(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -436014,7 +436326,7 @@
     },
     {
       "symbol": "P:jr.b(II)V#1",
-      "renamedSymbol": "P:ReceivedAuctionItemRow.b(II)V#1",
+      "renamedSymbol": "P:ReceivedAuctionItemRow.drawRow(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -436025,7 +436337,7 @@
     },
     {
       "symbol": "P:jr.c(IZ)V#0",
-      "renamedSymbol": "P:ReceivedAuctionItemRow.c(IZ)V#0",
+      "renamedSymbol": "P:ReceivedAuctionItemRow.updateRow(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -436036,7 +436348,7 @@
     },
     {
       "symbol": "P:jr.c(IZ)V#1",
-      "renamedSymbol": "P:ReceivedAuctionItemRow.c(IZ)V#1",
+      "renamedSymbol": "P:ReceivedAuctionItemRow.updateRow(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -440128,7 +440440,7 @@
     },
     {
       "symbol": "P:kn.a(BII)V#0",
-      "renamedSymbol": "P:TrinketPickerDialog.a(BII)V#0",
+      "renamedSymbol": "P:TrinketPickerDialog.drawBody(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -440139,7 +440451,7 @@
     },
     {
       "symbol": "P:kn.a(BII)V#1",
-      "renamedSymbol": "P:TrinketPickerDialog.a(BII)V#1",
+      "renamedSymbol": "P:TrinketPickerDialog.drawBody(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -440150,7 +440462,7 @@
     },
     {
       "symbol": "P:kn.a(BII)V#2",
-      "renamedSymbol": "P:TrinketPickerDialog.a(BII)V#2",
+      "renamedSymbol": "P:TrinketPickerDialog.drawBody(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -440227,7 +440539,7 @@
     },
     {
       "symbol": "P:kn.a(IZ)V#0",
-      "renamedSymbol": "P:TrinketPickerDialog.a(IZ)V#0",
+      "renamedSymbol": "P:TrinketPickerDialog.onUpdate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -440238,7 +440550,7 @@
     },
     {
       "symbol": "P:kn.a(IZ)V#1",
-      "renamedSymbol": "P:TrinketPickerDialog.a(IZ)V#1",
+      "renamedSymbol": "P:TrinketPickerDialog.onUpdate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -446442,7 +446754,7 @@
     },
     {
       "symbol": "P:mb.a(I)V#0",
-      "renamedSymbol": "P:DisplayNameForm.a(I)V#0",
+      "renamedSymbol": "P:DisplayNameForm.onRefreshSuggestions(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446596,7 +446908,7 @@
     },
     {
       "symbol": "P:mb.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:DisplayNameForm.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:DisplayNameForm.onSuggestionChosen(Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446607,7 +446919,7 @@
     },
     {
       "symbol": "P:mb.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:DisplayNameForm.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:DisplayNameForm.onSuggestionChosen(Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -463943,7 +464255,7 @@
     },
     {
       "symbol": "P:pd.a(BLga;)V#0",
-      "renamedSymbol": "P:LoginForm.a(BLTextInputWidget;)V#0",
+      "renamedSymbol": "P:LoginForm.onTextChanged(BLTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -463954,7 +464266,7 @@
     },
     {
       "symbol": "P:pd.a(BLga;)V#1",
-      "renamedSymbol": "P:LoginForm.a(BLTextInputWidget;)V#1",
+      "renamedSymbol": "P:LoginForm.onTextChanged(BLTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -464064,7 +464376,7 @@
     },
     {
       "symbol": "P:pd.a(ILga;)V#0",
-      "renamedSymbol": "P:LoginForm.a(ILTextInputWidget;)V#0",
+      "renamedSymbol": "P:LoginForm.onEnterPressed(ILTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -464075,7 +464387,7 @@
     },
     {
       "symbol": "P:pd.a(ILga;)V#1",
-      "renamedSymbol": "P:LoginForm.a(ILTextInputWidget;)V#1",
+      "renamedSymbol": "P:LoginForm.onEnterPressed(ILTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -465516,7 +465828,7 @@
     },
     {
       "symbol": "P:pq.a(BII)V#0",
-      "renamedSymbol": "P:SquadPickerDialog.a(BII)V#0",
+      "renamedSymbol": "P:SquadPickerDialog.drawBody(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -465527,7 +465839,7 @@
     },
     {
       "symbol": "P:pq.a(BII)V#1",
-      "renamedSymbol": "P:SquadPickerDialog.a(BII)V#1",
+      "renamedSymbol": "P:SquadPickerDialog.drawBody(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -465538,7 +465850,7 @@
     },
     {
       "symbol": "P:pq.a(BII)V#2",
-      "renamedSymbol": "P:SquadPickerDialog.a(BII)V#2",
+      "renamedSymbol": "P:SquadPickerDialog.drawBody(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -465604,7 +465916,7 @@
     },
     {
       "symbol": "P:pq.a(IZ)V#0",
-      "renamedSymbol": "P:SquadPickerDialog.a(IZ)V#0",
+      "renamedSymbol": "P:SquadPickerDialog.onUpdate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -465615,7 +465927,7 @@
     },
     {
       "symbol": "P:pq.a(IZ)V#1",
-      "renamedSymbol": "P:SquadPickerDialog.a(IZ)V#1",
+      "renamedSymbol": "P:SquadPickerDialog.onUpdate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -466462,7 +466774,7 @@
     },
     {
       "symbol": "P:pw.a(BII)V#0",
-      "renamedSymbol": "P:AuctionSettingsDialog.a(BII)V#0",
+      "renamedSymbol": "P:AuctionSettingsDialog.drawBody(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -466473,7 +466785,7 @@
     },
     {
       "symbol": "P:pw.a(BII)V#1",
-      "renamedSymbol": "P:AuctionSettingsDialog.a(BII)V#1",
+      "renamedSymbol": "P:AuctionSettingsDialog.drawBody(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -466484,7 +466796,7 @@
     },
     {
       "symbol": "P:pw.a(BII)V#2",
-      "renamedSymbol": "P:AuctionSettingsDialog.a(BII)V#2",
+      "renamedSymbol": "P:AuctionSettingsDialog.drawBody(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -466550,7 +466862,7 @@
     },
     {
       "symbol": "P:pw.a(IZ)V#0",
-      "renamedSymbol": "P:AuctionSettingsDialog.a(IZ)V#0",
+      "renamedSymbol": "P:AuctionSettingsDialog.onUpdate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -466561,7 +466873,7 @@
     },
     {
       "symbol": "P:pw.a(IZ)V#1",
-      "renamedSymbol": "P:AuctionSettingsDialog.a(IZ)V#1",
+      "renamedSymbol": "P:AuctionSettingsDialog.onUpdate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -470631,7 +470943,7 @@
     },
     {
       "symbol": "P:qu.a(Llb;III)V#0",
-      "renamedSymbol": "P:TextHotspotListener.a(LTextHotspotWidget;III)V#0",
+      "renamedSymbol": "P:TextHotspotListener.onHotspotClicked(LTextHotspotWidget;III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -470642,7 +470954,7 @@
     },
     {
       "symbol": "P:qu.a(Llb;III)V#1",
-      "renamedSymbol": "P:TextHotspotListener.a(LTextHotspotWidget;III)V#1",
+      "renamedSymbol": "P:TextHotspotListener.onHotspotClicked(LTextHotspotWidget;III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -470653,7 +470965,7 @@
     },
     {
       "symbol": "P:qu.a(Llb;III)V#2",
-      "renamedSymbol": "P:TextHotspotListener.a(LTextHotspotWidget;III)V#2",
+      "renamedSymbol": "P:TextHotspotListener.onHotspotClicked(LTextHotspotWidget;III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -470664,7 +470976,7 @@
     },
     {
       "symbol": "P:qu.a(Llb;III)V#3",
-      "renamedSymbol": "P:TextHotspotListener.a(LTextHotspotWidget;III)V#3",
+      "renamedSymbol": "P:TextHotspotListener.onHotspotClicked(LTextHotspotWidget;III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -475020,7 +475332,7 @@
     },
     {
       "symbol": "P:rt.a(BII)V#0",
-      "renamedSymbol": "P:StatChoiceDialog.a(BII)V#0",
+      "renamedSymbol": "P:StatChoiceDialog.drawBody(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -475031,7 +475343,7 @@
     },
     {
       "symbol": "P:rt.a(BII)V#1",
-      "renamedSymbol": "P:StatChoiceDialog.a(BII)V#1",
+      "renamedSymbol": "P:StatChoiceDialog.drawBody(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -475042,7 +475354,7 @@
     },
     {
       "symbol": "P:rt.a(BII)V#2",
-      "renamedSymbol": "P:StatChoiceDialog.a(BII)V#2",
+      "renamedSymbol": "P:StatChoiceDialog.drawBody(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -475075,7 +475387,7 @@
     },
     {
       "symbol": "P:rt.a(IZ)V#0",
-      "renamedSymbol": "P:StatChoiceDialog.a(IZ)V#0",
+      "renamedSymbol": "P:StatChoiceDialog.onUpdate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -475086,7 +475398,7 @@
     },
     {
       "symbol": "P:rt.a(IZ)V#1",
-      "renamedSymbol": "P:StatChoiceDialog.a(IZ)V#1",
+      "renamedSymbol": "P:StatChoiceDialog.onUpdate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -478980,7 +479292,7 @@
     },
     {
       "symbol": "P:sp.b(II)V#0",
-      "renamedSymbol": "P:ShopPlayerSlot.b(II)V#0",
+      "renamedSymbol": "P:ShopPlayerSlot.drawRow(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -478991,7 +479303,7 @@
     },
     {
       "symbol": "P:sp.b(II)V#1",
-      "renamedSymbol": "P:ShopPlayerSlot.b(II)V#1",
+      "renamedSymbol": "P:ShopPlayerSlot.drawRow(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -479024,7 +479336,7 @@
     },
     {
       "symbol": "P:sp.c(IZ)V#0",
-      "renamedSymbol": "P:ShopPlayerSlot.c(IZ)V#0",
+      "renamedSymbol": "P:ShopPlayerSlot.updateRow(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -479035,7 +479347,7 @@
     },
     {
       "symbol": "P:sp.c(IZ)V#1",
-      "renamedSymbol": "P:ShopPlayerSlot.c(IZ)V#1",
+      "renamedSymbol": "P:ShopPlayerSlot.updateRow(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -480102,7 +480414,7 @@
     },
     {
       "symbol": "P:sv.a(BLga;)V#0",
-      "renamedSymbol": "P:TextInputListener.a(BLTextInputWidget;)V#0",
+      "renamedSymbol": "P:TextInputListener.onTextChanged(BLTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -480113,7 +480425,7 @@
     },
     {
       "symbol": "P:sv.a(BLga;)V#1",
-      "renamedSymbol": "P:TextInputListener.a(BLTextInputWidget;)V#1",
+      "renamedSymbol": "P:TextInputListener.onTextChanged(BLTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -480124,7 +480436,7 @@
     },
     {
       "symbol": "P:sv.a(ILga;)V#0",
-      "renamedSymbol": "P:TextInputListener.a(ILTextInputWidget;)V#0",
+      "renamedSymbol": "P:TextInputListener.onEnterPressed(ILTextInputWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -480135,7 +480447,7 @@
     },
     {
       "symbol": "P:sv.a(ILga;)V#1",
-      "renamedSymbol": "P:TextInputListener.a(ILTextInputWidget;)V#1",
+      "renamedSymbol": "P:TextInputListener.onEnterPressed(ILTextInputWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -488748,7 +489060,7 @@
     },
     {
       "symbol": "P:ur.a(I)V#0",
-      "renamedSymbol": "P:NameSuggestionListener.a(I)V#0",
+      "renamedSymbol": "P:NameSuggestionListener.onRefreshSuggestions(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -488759,7 +489071,7 @@
     },
     {
       "symbol": "P:ur.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:NameSuggestionListener.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:NameSuggestionListener.onSuggestionChosen(Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -488770,7 +489082,7 @@
     },
     {
       "symbol": "P:ur.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:NameSuggestionListener.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:NameSuggestionListener.onSuggestionChosen(Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -532654,7 +532966,7 @@
       "original": "ae.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "a0a57c00befaa21290bbf46943fc50f37fe1a59ffc71e674fd0b9b36d672bf9d",
-      "outputSha256": "a3618636ed3a83c22b3ca3527bbed18f870a61acf722af09504a9bfa92b3b2c7",
+      "outputSha256": "592b5925b2847c48ba152948be8aa24b763ec5810d3f29858aa6ebc4f506ea93",
       "edits": [
         {
           "start": 50,
@@ -533812,11 +534124,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 13436,
+          "end": 13437,
+          "symbol": "M:ae.a(I)V",
+          "original": "a",
+          "renamed": "onRefreshSuggestions"
+        },
+        {
           "start": 13518,
           "end": 13520,
           "symbol": "C:bv",
           "original": "bv",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 13596,
+          "end": 13597,
+          "symbol": "M:ae.a(Llb;III)V",
+          "original": "a",
+          "renamed": "onHotspotClicked"
         },
         {
           "start": 13598,
@@ -534265,6 +534591,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 25242,
+          "end": 25243,
+          "symbol": "M:ae.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "onSuggestionChosen"
         },
         {
           "start": 25310,
@@ -535759,7 +536092,7 @@
       "original": "ai.java",
       "renamed": "AccountTermsPanel.java",
       "inputSha256": "07300a888d584d8364e6bfc123ca5c22b9e5dabe74fb9bc8485290d42ff488a3",
-      "outputSha256": "9df09caba50aa9301431594800fdb116f55ecaf4a5e4f699fd784b1027dfb017",
+      "outputSha256": "260fd1aae71af595e5c818ed221715f083377b74b7e7ce072a811fda1ec71fbf",
       "edits": [
         {
           "start": 50,
@@ -536021,6 +536354,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 4138,
+          "end": 4139,
+          "symbol": "M:ai.a(Llb;III)V",
+          "original": "a",
+          "renamed": "onHotspotClicked"
+        },
+        {
           "start": 4140,
           "end": 4142,
           "symbol": "C:lb",
@@ -536117,6 +536457,13 @@
           "symbol": "C:lb",
           "original": "lb",
           "renamed": "TextHotspotWidget"
+        },
+        {
+          "start": 6852,
+          "end": 6853,
+          "symbol": "M:ai.a(Llb;III)V",
+          "original": "a",
+          "renamed": "onHotspotClicked"
         },
         {
           "start": 6855,
@@ -551908,7 +552255,7 @@
       "original": "bp.java",
       "renamed": "ColumnTableWidget.java",
       "inputSha256": "8ef6f26b8eb0108ee4ac4e3f1e23f8dd238f060b9a5bfbcd26bcee2e21e17b7e",
-      "outputSha256": "eafafd830aa6e01ca475a161c8ad751c1175647417484a661213b2375d6dc4b6",
+      "outputSha256": "a7d781426525a952b03b607374d4881e3deb1f1ceca1e487216db448ea337ccb",
       "edits": [
         {
           "start": 44,
@@ -552000,6 +552347,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "ShopPlayerSlot"
+        },
+        {
+          "start": 913,
+          "end": 914,
+          "symbol": "M:im.c(IZ)V",
+          "original": "c",
+          "renamed": "updateRow"
         },
         {
           "start": 982,
@@ -552490,6 +552844,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 14482,
+          "end": 14483,
+          "symbol": "M:im.b(II)V",
+          "original": "b",
+          "renamed": "drawRow"
         },
         {
           "start": 14521,
@@ -578515,7 +578876,7 @@
       "original": "ek.java",
       "renamed": "TrinketShopDialog.java",
       "inputSha256": "6838375e63b9b37cf3ac50f9323833681f3f0e7ae78a9b7ab391c7d07e8b6db3",
-      "outputSha256": "f94c2fdc17cca392292a8e4d1b3bc4637d8590cff40217238bb8b4d17fa3e392",
+      "outputSha256": "d5650162fc2d974a8a3714d729ade5a268d2c18a588f3cc86b7d7db42a8f6d6f",
       "edits": [
         {
           "start": 50,
@@ -578635,6 +578996,20 @@
           "symbol": "M:ek.b(I)I",
           "original": "b",
           "renamed": "dialogWidth"
+        },
+        {
+          "start": 1698,
+          "end": 1699,
+          "symbol": "M:ek.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
+        },
+        {
+          "start": 1880,
+          "end": 1881,
+          "symbol": "M:i.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 1919,
@@ -578854,6 +579229,13 @@
           "renamed": "TrinketShopDialog"
         },
         {
+          "start": 4325,
+          "end": 4326,
+          "symbol": "M:ek.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
+        },
+        {
           "start": 4365,
           "end": 4367,
           "symbol": "C:hd",
@@ -578901,6 +579283,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "ShopPlayerSlot"
+        },
+        {
+          "start": 5079,
+          "end": 5080,
+          "symbol": "M:ek.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 5126,
@@ -592414,7 +592803,7 @@
       "original": "fr.java",
       "renamed": "NameSuggestionsPanel.java",
       "inputSha256": "edf78a27a699cd5609b2e3377b4f7169968933b3e2aef473f27c3c4c957941d8",
-      "outputSha256": "a0649acbae422cdda1accd46b94f99e53bc8edbba454e61daf92591435a90148",
+      "outputSha256": "2d78ab339d1025c54bc1e4dc4b4de1a626f993c1d894c93fa1374b6e8e9bda1f",
       "edits": [
         {
           "start": 50,
@@ -592772,6 +593161,20 @@
           "symbol": "C:wi",
           "original": "wi",
           "renamed": "TextButton"
+        },
+        {
+          "start": 7964,
+          "end": 7965,
+          "symbol": "M:ur.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "onSuggestionChosen"
+        },
+        {
+          "start": 8107,
+          "end": 8108,
+          "symbol": "M:ur.a(I)V",
+          "original": "a",
+          "renamed": "onRefreshSuggestions"
         },
         {
           "start": 8598,
@@ -595171,7 +595574,7 @@
       "original": "ga.java",
       "renamed": "TextInputWidget.java",
       "inputSha256": "af993b73ee884b5cbf840f8ae51390c14bc57ff370a71d0ec1f4500bf170ff98",
-      "outputSha256": "2d9af412102158bd40a7abec077875a4a6dc87a7bc406a50eee8b994f16f6948",
+      "outputSha256": "f788ecffec4ff45d6a8fa1ed9c3f3adb4b98cc0b37540ba7e5367c7cf5a463c8",
       "edits": [
         {
           "start": 44,
@@ -595272,6 +595675,13 @@
           "renamed": "TextInputListener"
         },
         {
+          "start": 2160,
+          "end": 2161,
+          "symbol": "M:sv.a(ILga;)V",
+          "original": "a",
+          "renamed": "onEnterPressed"
+        },
+        {
           "start": 2534,
           "end": 2535,
           "symbol": "M:ga.k(I)Ljava/lang/String;",
@@ -595347,6 +595757,13 @@
           "symbol": "C:sv",
           "original": "sv",
           "renamed": "TextInputListener"
+        },
+        {
+          "start": 4639,
+          "end": 4640,
+          "symbol": "M:sv.a(BLga;)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 4692,
@@ -611053,7 +611470,7 @@
       "original": "hl.java",
       "renamed": "hl.java",
       "inputSha256": "d01286d24380c9754b751be3d6a9ac785fa4d8bf09649a79c64caa240d7672f4",
-      "outputSha256": "8e72d4b326e405f8db5373a22c7fd393160c5781eb89bac5005de3d71a639bd4",
+      "outputSha256": "14ca4d6e1f8225545907a36c9cfee482cbcd0f408f0f0ad8d22d44030b95bf2d",
       "edits": [
         {
           "start": 61,
@@ -611152,6 +611569,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1091,
+          "end": 1092,
+          "symbol": "M:hl.a(ILga;)V",
+          "original": "a",
+          "renamed": "onEnterPressed"
         },
         {
           "start": 1105,
@@ -611334,6 +611758,13 @@
           "symbol": "M:hl.a(B)Z",
           "original": "a",
           "renamed": "isInputEmpty"
+        },
+        {
+          "start": 4163,
+          "end": 4164,
+          "symbol": "M:hl.a(BLga;)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 4178,
@@ -617610,7 +618041,7 @@
       "original": "i.java",
       "renamed": "MessageDialog.java",
       "inputSha256": "79eba5381e93464970d4ed893e03c158f86faed70bd64d2635ac134805b29739",
-      "outputSha256": "91e0f55c83355ed4629555d5fc46afe440f55f712adb04810eaa0fb9c94c661c",
+      "outputSha256": "3a6caa7212485305911a322a5e4dbfe62572d823c29980fdb2afeb017e09e004",
       "edits": [
         {
           "start": 44,
@@ -617653,6 +618084,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 361,
+          "end": 362,
+          "symbol": "M:i.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 430,
@@ -617893,6 +618331,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 5688,
+          "end": 5689,
+          "symbol": "M:i.a(Z)I",
+          "original": "a",
+          "renamed": "getOpenSoundId"
+        },
+        {
           "start": 7295,
           "end": 7296,
           "symbol": "M:i.b(I)I",
@@ -617926,6 +618371,13 @@
           "symbol": "C:lv",
           "original": "lv",
           "renamed": "PopupCard"
+        },
+        {
+          "start": 8007,
+          "end": 8008,
+          "symbol": "M:i.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 8142,
@@ -622529,7 +622981,7 @@
       "original": "im.java",
       "renamed": "ListRow.java",
       "inputSha256": "b689fc92820dcea6fd484d443323880d559d859c8aa59d792bb60dcad37ec5a1",
-      "outputSha256": "947d4136c919b68d307b7577513d7804f00ba5fefa559efc644418ebb748cfa0",
+      "outputSha256": "88d3e1ef0eaf26dad86d8a48f281c0e291e58af81a79d8c18f27753130dae125",
       "edits": [
         {
           "start": 53,
@@ -622551,6 +623003,13 @@
           "symbol": "M:im.<init>()V",
           "original": "im",
           "renamed": "ListRow"
+        },
+        {
+          "start": 535,
+          "end": 536,
+          "symbol": "M:im.c(IZ)V",
+          "original": "c",
+          "renamed": "updateRow"
         },
         {
           "start": 715,
@@ -622614,6 +623073,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2298,
+          "end": 2299,
+          "symbol": "M:im.b(II)V",
+          "original": "b",
+          "renamed": "drawRow"
         },
         {
           "start": 2348,
@@ -630636,7 +631102,7 @@
       "original": "jb.java",
       "renamed": "PopupDialog.java",
       "inputSha256": "3f1da29fbace33df43f140b26c2931ab8e51a67af2e7d23a1637e5913cdfdd27",
-      "outputSha256": "b38bdaa037ed5a6368154b9a89614e7dd3a8bb6018d68ea2426b8053cde4f2bb",
+      "outputSha256": "ed7ace26fb889ec6b7e548e56cb0877ef0b9f009bf8d30c5520537f406fa2541",
       "edits": [
         {
           "start": 53,
@@ -630674,11 +631140,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 452,
+          "end": 453,
+          "symbol": "M:jb.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
+        },
+        {
           "start": 629,
           "end": 631,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 834,
+          "end": 835,
+          "symbol": "M:jb.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 911,
@@ -630707,6 +631187,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "ShopPlayerSlot"
+        },
+        {
+          "start": 1049,
+          "end": 1050,
+          "symbol": "M:jb.a(Z)I",
+          "original": "a",
+          "renamed": "getOpenSoundId"
         },
         {
           "start": 1260,
@@ -630812,6 +631299,13 @@
           "symbol": "C:ta",
           "original": "ta",
           "renamed": "TeamManagementScreen"
+        },
+        {
+          "start": 4521,
+          "end": 4522,
+          "symbol": "M:jb.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 4570,
@@ -630926,6 +631420,13 @@
           "renamed": "beginClose"
         },
         {
+          "start": 5747,
+          "end": 5748,
+          "symbol": "M:jb.a(Z)I",
+          "original": "a",
+          "renamed": "getOpenSoundId"
+        },
+        {
           "start": 6516,
           "end": 6517,
           "symbol": "M:jb.b(I)I",
@@ -630952,6 +631453,13 @@
           "symbol": "M:jb.a(I[Ljava/lang/String;I)V",
           "original": "a",
           "renamed": "open"
+        },
+        {
+          "start": 7197,
+          "end": 7198,
+          "symbol": "M:jb.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 7280,
@@ -631043,6 +631551,13 @@
           "symbol": "C:cq",
           "original": "cq",
           "renamed": "AuctionLogEntry"
+        },
+        {
+          "start": 8853,
+          "end": 8854,
+          "symbol": "M:jb.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 8892,
@@ -631394,7 +631909,7 @@
       "original": "jd.java",
       "renamed": "TextFieldValidator.java",
       "inputSha256": "d0152b85ef555e6f3e33ee7be603de8b971dbc55d2e2512a9bd42d4b5464ae7e",
-      "outputSha256": "e701115e31d90f99f25a1394d3e161f9f26e7e066aa8effb792b7c743bfde9b7",
+      "outputSha256": "34c88ed69e4560f5838b4f58d394a675b784e3d0ac74dfe4f76ff6e80abf6a39",
       "edits": [
         {
           "start": 53,
@@ -631796,6 +632311,13 @@
           "renamed": "validateText"
         },
         {
+          "start": 3604,
+          "end": 3605,
+          "symbol": "M:jd.a(ILga;)V",
+          "original": "a",
+          "renamed": "onEnterPressed"
+        },
+        {
           "start": 3618,
           "end": 3620,
           "symbol": "C:ga",
@@ -631815,6 +632337,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3921,
+          "end": 3922,
+          "symbol": "M:jd.a(BLga;)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 3936,
@@ -636837,7 +637366,7 @@
       "original": "jn.java",
       "renamed": "RegistrationRequestDialog.java",
       "inputSha256": "a11564441c7205b92319fb16c0b7c0167fe2b01651b2d122fcc869cc1b5d605a",
-      "outputSha256": "8864304fc5bfe46202316dd98146aad3fffe8cd73473fe73a7aa6f6ca9a037fd",
+      "outputSha256": "57fe934cf6743e788b97aadb00350ca2a1f735ed5ac180d379e125a27bbdcf0c",
       "edits": [
         {
           "start": 50,
@@ -637132,6 +637661,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "ModalStack"
+        },
+        {
+          "start": 5621,
+          "end": 5622,
+          "symbol": "M:ae.a(I)V",
+          "original": "a",
+          "renamed": "onRefreshSuggestions"
         },
         {
           "start": 5800,
@@ -637666,7 +638202,7 @@
       "original": "jr.java",
       "renamed": "ReceivedAuctionItemRow.java",
       "inputSha256": "7d5e58738c606da4bbfa96fe897ffb2fd83d7458426cb74a0c6c1146a979c0f2",
-      "outputSha256": "3e3a6b22b6fb7238d9da2616db140eb97c873e92b02550215f7e58eb27c4be84",
+      "outputSha256": "bbe4533dd5f53daf930a1f80c400ae95ebe5182e570022f093f8e3d59c95152f",
       "edits": [
         {
           "start": 50,
@@ -637709,6 +638245,13 @@
           "symbol": "C:pu",
           "original": "pu",
           "renamed": "TrinketSlot"
+        },
+        {
+          "start": 377,
+          "end": 378,
+          "symbol": "M:jr.c(IZ)V",
+          "original": "c",
+          "renamed": "updateRow"
         },
         {
           "start": 468,
@@ -638017,6 +638560,13 @@
           "symbol": "C:sj",
           "original": "sj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 4247,
+          "end": 4248,
+          "symbol": "M:jr.b(II)V",
+          "original": "b",
+          "renamed": "drawRow"
         },
         {
           "start": 4283,
@@ -646893,7 +647443,7 @@
       "original": "kn.java",
       "renamed": "TrinketPickerDialog.java",
       "inputSha256": "0f3dfb2f8e7a0ff7cb5938d8b7db08a3b22be37f688a9d54a85379ee759718a3",
-      "outputSha256": "9338b7dc62455bff6b6ebc6bd9139a9f809513b8594d7d0eafeec4e0b222059d",
+      "outputSha256": "769ad0c0088144f135f1047794df209cb95a7a6fd24d15141d2a6cb583c5fdb2",
       "edits": [
         {
           "start": 50,
@@ -647043,6 +647593,13 @@
           "renamed": "TrinketPickerDialog"
         },
         {
+          "start": 1945,
+          "end": 1946,
+          "symbol": "M:kn.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
+        },
+        {
           "start": 2039,
           "end": 2041,
           "symbol": "C:dn",
@@ -647055,6 +647612,13 @@
           "symbol": "C:dn",
           "original": "dn",
           "renamed": "TrinketIcon"
+        },
+        {
+          "start": 2214,
+          "end": 2215,
+          "symbol": "M:i.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 2430,
@@ -647118,6 +647682,13 @@
           "symbol": "M:hd.a(IZ)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 3506,
+          "end": 3507,
+          "symbol": "M:kn.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 3631,
@@ -652387,7 +652958,7 @@
       "original": "lb.java",
       "renamed": "TextHotspotWidget.java",
       "inputSha256": "b9d567de4d14ad9ad0ec1eabf0178b5fbf798a1dae65b1fc715141502f0012a7",
-      "outputSha256": "43317e19d27e1146cf9cdeab3361045c72981768c8fae46558b0e0491ef28a45",
+      "outputSha256": "bbe900794b7401a1e3f33f9eff41f8389eef7db6c4aeec1ff2ea847cb4ff427a",
       "edits": [
         {
           "start": 44,
@@ -652451,6 +653022,13 @@
           "symbol": "C:qu",
           "original": "qu",
           "renamed": "TextHotspotListener"
+        },
+        {
+          "start": 1755,
+          "end": 1756,
+          "symbol": "M:qu.a(Llb;III)V",
+          "original": "a",
+          "renamed": "onHotspotClicked"
         },
         {
           "start": 2096,
@@ -663975,7 +664553,7 @@
       "original": "mb.java",
       "renamed": "DisplayNameForm.java",
       "inputSha256": "d21088b995895465cbeb9dc3889ed9e46390d039b93fbadc5ab28136cc04a570",
-      "outputSha256": "1c615b021c39167f296b554b17d55087398afa5d3bb91cb3b9e764661bd6b812",
+      "outputSha256": "8af2842724ea9887ae2244e82706dd7880c20a315d2395906cbf6961f7132ab5",
       "edits": [
         {
           "start": 50,
@@ -664041,11 +664619,25 @@
           "renamed": "ValidatedTextWidget"
         },
         {
+          "start": 218,
+          "end": 219,
+          "symbol": "M:mb.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "onSuggestionChosen"
+        },
+        {
           "start": 257,
           "end": 259,
           "symbol": "C:mr",
           "original": "mr",
           "renamed": "ValidatedTextWidget"
+        },
+        {
+          "start": 362,
+          "end": 363,
+          "symbol": "M:mb.a(I)V",
+          "original": "a",
+          "renamed": "onRefreshSuggestions"
         },
         {
           "start": 450,
@@ -664074,6 +664666,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 723,
+          "end": 724,
+          "symbol": "M:mb.a(I)V",
+          "original": "a",
+          "renamed": "onRefreshSuggestions"
         },
         {
           "start": 805,
@@ -664144,6 +664743,13 @@
           "symbol": "C:wi",
           "original": "wi",
           "renamed": "TextButton"
+        },
+        {
+          "start": 3493,
+          "end": 3494,
+          "symbol": "M:mb.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "onSuggestionChosen"
         },
         {
           "start": 3580,
@@ -664634,6 +665240,13 @@
           "symbol": "C:fn",
           "original": "fn",
           "renamed": "Trinket"
+        },
+        {
+          "start": 11657,
+          "end": 11658,
+          "symbol": "M:mb.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "onSuggestionChosen"
         },
         {
           "start": 11689,
@@ -707957,7 +708570,7 @@
       "original": "pd.java",
       "renamed": "LoginForm.java",
       "inputSha256": "0fcc92e3b4c7b37ee6ed663c12dfae946f9b6b7774b09265d43d8523ae142f55",
-      "outputSha256": "7b00314063aac75d3ea20f32d405ec6a55a068bf3e9c987d08670ea76e0dae92",
+      "outputSha256": "54b83bfc7f57b78abcec697d99d62ed77adf4b6f033989203ec18b78bfa746f3",
       "edits": [
         {
           "start": 71,
@@ -708112,6 +708725,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1982,
+          "end": 1983,
+          "symbol": "M:pd.a(ILga;)V",
+          "original": "a",
+          "renamed": "onEnterPressed"
         },
         {
           "start": 1996,
@@ -708322,6 +708942,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 6826,
+          "end": 6827,
+          "symbol": "M:pd.a(BLga;)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 6841,
@@ -712582,7 +713209,7 @@
       "original": "pq.java",
       "renamed": "SquadPickerDialog.java",
       "inputSha256": "00ed813eaa624713022d0911a8adc3bebb71e15641ddf591559dd75fa8093a1c",
-      "outputSha256": "51993e977031081f27f8b6e9f197d485f3764e16b9d8c2ee7d8868cdf7a4fd39",
+      "outputSha256": "76ffa02fc55cd0231b605c685ba05b22f5cb319631de861ecee6c910bc87d013",
       "edits": [
         {
           "start": 50,
@@ -712835,6 +713462,20 @@
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "SquadPickerDialog"
+        },
+        {
+          "start": 2941,
+          "end": 2942,
+          "symbol": "M:pq.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
+        },
+        {
+          "start": 3078,
+          "end": 3079,
+          "symbol": "M:i.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 3230,
@@ -713122,6 +713763,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "LeaguesHelpScreen"
+        },
+        {
+          "start": 5572,
+          "end": 5573,
+          "symbol": "M:i.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 5718,
@@ -713549,6 +714197,13 @@
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "SquadPickerDialog"
+        },
+        {
+          "start": 9516,
+          "end": 9517,
+          "symbol": "M:pq.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 9630,
@@ -722500,7 +723155,7 @@
       "original": "pw.java",
       "renamed": "AuctionSettingsDialog.java",
       "inputSha256": "8c17d99bc01f287e875a7c293bbe5cef28256fdb8bead1ca2c6d18f3b760028c",
-      "outputSha256": "bcc5b2d3093f349812a1c6c871089ca26acf48610df6e2a63b0cca33413f0fcf",
+      "outputSha256": "d8a205d7930ddb20a1846b3e6ad731dbb29c640436cf8fa7582b1f31b43565f3",
       "edits": [
         {
           "start": 50,
@@ -722956,6 +723611,27 @@
           "symbol": "M:pw.a(B)I",
           "original": "a",
           "renamed": "dialogHeight"
+        },
+        {
+          "start": 6090,
+          "end": 6091,
+          "symbol": "M:pw.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
+        },
+        {
+          "start": 6165,
+          "end": 6166,
+          "symbol": "M:pw.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
+        },
+        {
+          "start": 6453,
+          "end": 6454,
+          "symbol": "M:i.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 6504,
@@ -723950,6 +724626,13 @@
           "symbol": "C:ut",
           "original": "ut",
           "renamed": "Sprite"
+        },
+        {
+          "start": 14578,
+          "end": 14579,
+          "symbol": "M:pw.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 14618,
@@ -733822,7 +734505,7 @@
       "original": "qu.java",
       "renamed": "TextHotspotListener.java",
       "inputSha256": "fea6a1b687cd2f75125b4813531e401420f6f0cd59eb544e10cffb2b4112dcae",
-      "outputSha256": "a7970f4a77571d00486126a1933e3e3950d64aedc84a4d7f0adaf935fe4eedbc",
+      "outputSha256": "1fc2ea9c5679ac2bedad339cb51c5413ad2f0e0f2f483515bfcc61944a492a6d",
       "edits": [
         {
           "start": 48,
@@ -733830,6 +734513,13 @@
           "symbol": "C:qu",
           "original": "qu",
           "renamed": "TextHotspotListener"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "symbol": "M:qu.a(Llb;III)V",
+          "original": "a",
+          "renamed": "onHotspotClicked"
         },
         {
           "start": 80,
@@ -746760,7 +747450,7 @@
       "original": "rt.java",
       "renamed": "StatChoiceDialog.java",
       "inputSha256": "22ad86a792bd400bd809f50f091c9e93667fda4b35d7af18ab5e9278017c0c6b",
-      "outputSha256": "93dcac15e1d11b0e4fe68e48f214a056a8b9a5faf381ccc3687231e3ce9091a4",
+      "outputSha256": "caddcdc214a74352a7b35e3ce5044b7ad226c33f0a4e5aba2325352bd43ad8da",
       "edits": [
         {
           "start": 50,
@@ -746810,6 +747500,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 360,
+          "end": 361,
+          "symbol": "M:rt.a(IZ)V",
+          "original": "a",
+          "renamed": "onUpdate"
         },
         {
           "start": 465,
@@ -747092,6 +747789,20 @@
           "symbol": "C:rt",
           "original": "rt",
           "renamed": "StatChoiceDialog"
+        },
+        {
+          "start": 11553,
+          "end": 11554,
+          "symbol": "M:rt.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
+        },
+        {
+          "start": 11774,
+          "end": 11775,
+          "symbol": "M:i.a(BII)V",
+          "original": "a",
+          "renamed": "drawBody"
         },
         {
           "start": 11915,
@@ -754819,7 +755530,7 @@
       "original": "sp.java",
       "renamed": "ShopPlayerSlot.java",
       "inputSha256": "f4f31e8926743339f70de58056533ca1290104de23840eeb8ea2074986415989",
-      "outputSha256": "788a8f3b67459e7c0dc9f9a00801d4f7099e7a0119684259f5a587a01b3ba35f",
+      "outputSha256": "013a6a465b9097f8971695059f8f42ebeb4d11e4582dbec924afc094ff3369d5",
       "edits": [
         {
           "start": 50,
@@ -754946,6 +755657,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2292,
+          "end": 2293,
+          "symbol": "M:sp.b(II)V",
+          "original": "b",
+          "renamed": "drawRow"
         },
         {
           "start": 2540,
@@ -755170,6 +755888,20 @@
           "symbol": "C:lh",
           "original": "lh",
           "renamed": "BroadcastServerCommand"
+        },
+        {
+          "start": 5948,
+          "end": 5949,
+          "symbol": "M:sp.c(IZ)V",
+          "original": "c",
+          "renamed": "updateRow"
+        },
+        {
+          "start": 6236,
+          "end": 6237,
+          "symbol": "M:sp.c(IZ)V",
+          "original": "c",
+          "renamed": "updateRow"
         },
         {
           "start": 6317,
@@ -757109,7 +757841,7 @@
       "original": "sv.java",
       "renamed": "TextInputListener.java",
       "inputSha256": "aa74f2002ab903b7a71d9d11b003f9ba02f58227f98e57114d07e6d6ad274a02",
-      "outputSha256": "951b658278be9bde70e1d7c8d0cc1f280af9179d2fe75832c4ae51214a7bf66b",
+      "outputSha256": "198da106db64208c9c65f287250f6d65dd67ae522874663ebfff2c2d35250fca",
       "edits": [
         {
           "start": 48,
@@ -757126,11 +757858,25 @@
           "renamed": "UiListener"
         },
         {
+          "start": 89,
+          "end": 90,
+          "symbol": "M:sv.a(BLga;)V",
+          "original": "a",
+          "renamed": "onTextChanged"
+        },
+        {
           "start": 104,
           "end": 106,
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 142,
+          "end": 143,
+          "symbol": "M:sv.a(ILga;)V",
+          "original": "a",
+          "renamed": "onEnterPressed"
         },
         {
           "start": 156,
@@ -781784,7 +782530,7 @@
       "original": "ur.java",
       "renamed": "NameSuggestionListener.java",
       "inputSha256": "f4a3f16638c3f28f2445e910a0cfac8c85e3298881a192057ef7b0dadfe5af9a",
-      "outputSha256": "efbee6f00bfaabd4d7d5fbc911e25eca6f170f1a3cbf2c49a56f572f236d9ce2",
+      "outputSha256": "31dd997b1b51f500449b697bd53a3fbaa924484f23964a6cf86176adc9198cbb",
       "edits": [
         {
           "start": 48,
@@ -781792,6 +782538,20 @@
           "symbol": "C:ur",
           "original": "ur",
           "renamed": "NameSuggestionListener"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "symbol": "M:ur.a(I)V",
+          "original": "a",
+          "renamed": "onRefreshSuggestions"
+        },
+        {
+          "start": 119,
+          "end": 120,
+          "symbol": "M:ur.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "onSuggestionChosen"
         }
       ]
     },
@@ -812561,10 +813321,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "9d3746c599fcb06b263038ab4a3e466a329c5971ac039681a3bf758d6b33b886",
+    "rulesSha256": "70506b59695a511b1e21c2306348581922bec2a538737e187e8d64b4025ae5c6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "0a8c604ba6751475024859ee1b1cd86682165de71e0e31a9d3c23045c7ca25cf",
+    "outputTreeSha256": "f0cad662b096af514b2c29e9cfa8d2c63d8a3d573a165c58803054d94128ff57",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

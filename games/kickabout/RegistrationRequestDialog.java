@@ -163,7 +163,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             if (param1.field_f != null) {
               var4 = ModalStack.field_B;
               if (null != this.field_mb) {
-                this.field_mb.a(-1);
+                this.field_mb.onRefreshSuggestions(-1);
               }
             } else {
               var4 = param1.field_d;

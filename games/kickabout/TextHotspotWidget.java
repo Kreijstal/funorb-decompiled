@@ -56,7 +56,7 @@ class TextHotspotWidget extends TextButton {
         er var7 = this.b(var5, 2, var6);
         if (var7 != null &&
           null != this.field_k) {
-          ((TextHotspotListener) ((Object) this.field_k)).a(this, param0, var7.field_i, 40);
+          ((TextHotspotListener) ((Object) this.field_k)).onHotspotClicked(this, param0, var7.field_i, 40);
         }
     }
 

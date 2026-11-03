@@ -80,7 +80,7 @@ final class TrinketPickerDialog extends MessageDialog {
         return 6;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawBody(byte param0, int param1, int param2) {
         int var5 = 0;
         int var11 = 0;
         TrinketIcon var6;
@@ -91,7 +91,7 @@ final class TrinketPickerDialog extends MessageDialog {
         int var9;
         int var10;
         var12 = Kickabout.field_G;
-        super.a((byte) -68, param1, param2);
+        super.drawBody((byte) -68, param1, param2);
         var13 = this.field_I;
         for (var5 = 0; var13.length > var5; var5++) {
           var6 = var13[var5];
@@ -119,7 +119,7 @@ final class TrinketPickerDialog extends MessageDialog {
         this.field_K.draw(79, false);
     }
 
-    final void a(int param0, boolean param1) {
+    final void onUpdate(int param0, boolean param1) {
         if (param0 != 3) {
           field_H = (String) null;
         }

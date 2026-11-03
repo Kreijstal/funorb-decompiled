@@ -17,7 +17,7 @@ abstract class PopupDialog extends IntrusiveNode {
     private String[] field_o;
     private int field_m;
 
-    abstract void a(byte param0, int param1, int param2);
+    abstract void drawBody(byte param0, int param1, int param2);
 
     final void b(int param0, boolean param1) {
         int var3 = 0;
@@ -31,11 +31,11 @@ abstract class PopupDialog extends IntrusiveNode {
         if (param0 != -16536) {
           return;
         }
-        this.a(3, param1);
+        this.onUpdate(3, param1);
         this.field_j.a(param0 ^ 4642, this.a(true, us.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
-          ShopPlayerSlot.c(this.a(false), -104);
+          ShopPlayerSlot.c(this.getOpenSoundId(false), -104);
         }
         if (this.field_n != 0) {
           if (this.field_n == 1) {
@@ -146,7 +146,7 @@ abstract class PopupDialog extends IntrusiveNode {
         }
     }
 
-    abstract void a(int param0, boolean param1);
+    abstract void onUpdate(int param0, boolean param1);
 
     abstract int dialogHeight(byte param0);
 
@@ -188,7 +188,7 @@ abstract class PopupDialog extends IntrusiveNode {
         return true;
     }
 
-    abstract int a(boolean param0);
+    abstract int getOpenSoundId(boolean param0);
 
     private final int a(boolean param0, int param1, int param2) {
         int var4;
@@ -245,7 +245,7 @@ abstract class PopupDialog extends IntrusiveNode {
         try {
           this.field_n = 0;
           if (param2 != 1054928844) {
-            this.a(46, true);
+            this.onUpdate(46, true);
           }
           this.field_q = 0;
           this.field_e = this.dialogWidth(-1379118556);
@@ -278,7 +278,7 @@ abstract class PopupDialog extends IntrusiveNode {
           mk.field_a.d(var4 + param1, param2 + this.field_r - 480);
         }
         AuctionLogEntry.field_j.e(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
-        this.a((byte) -29, param1, param2);
+        this.drawBody((byte) -29, param1, param2);
         SoftwareRasterizer.c(param1, param2, this.field_e, this.field_r, 2, 65793);
         TeamManagementScreen.e(124);
     }

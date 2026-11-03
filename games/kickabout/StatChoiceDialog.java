@@ -14,7 +14,7 @@ final class StatChoiceDialog extends MessageDialog {
     static String field_K;
     private UiLayoutNode[] field_O;
 
-    final void a(int param0, boolean param1) {
+    final void onUpdate(int param0, boolean param1) {
         int var3;
         int var4;
         int stackIn_8_1 = 0;
@@ -314,7 +314,7 @@ final class StatChoiceDialog extends MessageDialog {
         field_K = null;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawBody(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         int var6;
@@ -323,7 +323,7 @@ final class StatChoiceDialog extends MessageDialog {
         int var9;
         int var10;
         var10 = Kickabout.field_G;
-        super.a((byte) -70, param1, param2);
+        super.drawBody((byte) -70, param1, param2);
         this.field_L.field_J = 95 + param2;
         this.field_L.field_s = param1 + 180;
         this.field_L.updateInput(0, true);

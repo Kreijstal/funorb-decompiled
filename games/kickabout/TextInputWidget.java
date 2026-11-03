@@ -66,7 +66,7 @@ class TextInputWidget extends TextButton {
 
     private final void m(int param0) {
         if (this.field_k instanceof TextInputListener) {
-          ((TextInputListener) (this.field_k)).a(-86, this);
+          ((TextInputListener) (this.field_k)).onEnterPressed(-86, this);
         }
         if (param0 <= 66) {
           this.field_Q = 66;
@@ -138,7 +138,7 @@ class TextInputWidget extends TextButton {
           this.m(49);
         }
         if (this.field_k instanceof TextInputListener) {
-          ((TextInputListener) (this.field_k)).a((byte) 113, this);
+          ((TextInputListener) (this.field_k)).onTextChanged((byte) 113, this);
         }
     }
 

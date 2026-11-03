@@ -26,7 +26,7 @@ abstract class ListRow extends UiLayoutNode {
         return false;
     }
 
-    abstract void c(int param0, boolean param1);
+    abstract void updateRow(int param0, boolean param1);
 
     final static void h(int param0) {
         java.awt.Canvas var1 = null;
@@ -71,7 +71,7 @@ abstract class ListRow extends UiLayoutNode {
         }
     }
 
-    abstract void b(int param0, int param1);
+    abstract void drawRow(int param0, int param1);
 
     final static void openUrlInBrowser(java.applet.Applet param0, int param1, String param2) {
         try {

@@ -8,12 +8,12 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
     private TextButton field_B;
     private ValidatedTextWidget field_C;
 
-    public final void a(String param0, int param1) {
+    public final void onSuggestionChosen(String param0, int param1) {
         ValidatedTextWidget var3 = null;
         String var4 = null;
         try {
           if (param1 != 15) {
-            this.a(-18);
+            this.onRefreshSuggestions(-18);
           }
           var3 = this.field_C;
           var4 = param0;
@@ -23,7 +23,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
     }
 
-    public final void a(int param0) {
+    public final void onRefreshSuggestions(int param0) {
         if (param0 != -1) {
           return;
         }
@@ -89,7 +89,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         try {
           if (param3 <= 64) {
             var7 = (String) null;
-            this.a((String) null, -65);
+            this.onSuggestionChosen((String) null, -65);
           }
           if (this.field_E == param1) {
             AccountChoicePanel.a(-25085);
@@ -300,7 +300,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           return;
         }
         String var3 = (String) null;
-        this.a((String) null, -109);
+        this.onSuggestionChosen((String) null, -109);
         Trinket.a((byte) 19, this.field_C.field_q);
     }
 

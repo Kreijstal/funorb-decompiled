@@ -202,11 +202,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           }
           for (var6_int = 0; this.field_H.length > var6_int; var6_int++) {
             if (param1 == this.field_F[var6_int]) {
-              this.field_C.a(this.field_H[var6_int], 15);
+              this.field_C.onSuggestionChosen(this.field_H[var6_int], 15);
             }
           }
           if (param1 == this.field_F[this.field_H.length]) {
-            this.field_C.a(-1);
+            this.field_C.onRefreshSuggestions(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

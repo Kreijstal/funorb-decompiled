@@ -16,7 +16,7 @@ class MessageDialog extends PopupDialog {
     static long field_z;
     Sprite field_D;
 
-    void a(int param0, boolean param1) {
+    void onUpdate(int param0, boolean param1) {
         if (param0 != 3) {
           MessageDialog.f(-13);
         }
@@ -174,7 +174,7 @@ class MessageDialog extends PopupDialog {
         }
     }
 
-    final int a(boolean param0) {
+    final int getOpenSoundId(boolean param0) {
         if (this.field_y == 1) {
           return 46;
         }
@@ -282,7 +282,7 @@ class MessageDialog extends PopupDialog {
         this(param0, (PopupCard) null);
     }
 
-    void a(byte param0, int param1, int param2) {
+    void drawBody(byte param0, int param1, int param2) {
         int var4 = 10 + param1;
         int var5 = 45 + param2;
         int var6 = -20 + this.dialogWidth(-1379118556);

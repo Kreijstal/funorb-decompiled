@@ -123,7 +123,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         return this.validateText(this.field_f.field_q, -5);
     }
 
-    public final void a(int param0, TextInputWidget param1) {
+    public final void onEnterPressed(int param0, TextInputWidget param1) {
         try {
           int var3_int = -82 % ((param0 - 8) / 47);
         } catch (RuntimeException runtimeException) {
@@ -131,7 +131,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         }
     }
 
-    public final void a(byte param0, TextInputWidget param1) {
+    public final void onTextChanged(byte param0, TextInputWidget param1) {
         if (param0 < 65) {
           return;
         }

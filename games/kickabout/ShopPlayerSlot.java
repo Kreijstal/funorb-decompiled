@@ -67,7 +67,7 @@ final class ShopPlayerSlot extends ListRow {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawRow(int param0, int param1) {
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0;
@@ -160,7 +160,7 @@ final class ShopPlayerSlot extends ListRow {
         return var2;
     }
 
-    final void c(int param0, boolean param1) {
+    final void updateRow(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
         if (param1) {
@@ -169,7 +169,7 @@ final class ShopPlayerSlot extends ListRow {
           }
         }
         if (param0 != 0) {
-          this.c(-44, true);
+          this.updateRow(-44, true);
         }
     }
 

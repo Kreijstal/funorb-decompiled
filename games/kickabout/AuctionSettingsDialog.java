@@ -198,12 +198,12 @@ final class AuctionSettingsDialog extends MessageDialog {
 
     final int dialogHeight(byte param0) {
         if (param0 <= 75) {
-          this.a((byte) 120, 52, 33);
+          this.drawBody((byte) 120, 52, 33);
         }
         return 400;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawBody(byte param0, int param1, int param2) {
         int var11 = 0;
         int stackIn_8_0 = 0;
         int var4;
@@ -215,7 +215,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         int var10;
         int var12;
         var12 = Kickabout.field_G;
-        super.a((byte) -124, param1, param2);
+        super.drawBody((byte) -124, param1, param2);
         wk.field_c.drawCentered(150 + param2, 23, param1 + 98);
         IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
         if (param0 > -11) {
@@ -407,7 +407,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         field_H = null;
     }
 
-    final void a(int param0, boolean param1) {
+    final void onUpdate(int param0, boolean param1) {
         UiLayoutNode stackIn_43_0 = null;
         int stackIn_43_1 = 0;
         int stackIn_44_2 = 0;

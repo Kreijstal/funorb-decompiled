@@ -64,13 +64,13 @@ final class TrinketShopDialog extends MessageDialog {
         return 500;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawBody(byte param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = Kickabout.field_G;
-        super.a((byte) -25, param1, param2);
+        super.drawBody((byte) -25, param1, param2);
         ScrollContainer var11 = this.field_L;
         this.field_L.setBounds(true, 210, param1 + 250, param2 + 55, 240);
         this.field_L.updateInput(0, true);
@@ -123,7 +123,7 @@ final class TrinketShopDialog extends MessageDialog {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void onUpdate(int param0, boolean param1) {
         UiLayoutNode stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var3;
@@ -147,7 +147,7 @@ final class TrinketShopDialog extends MessageDialog {
           this.field_K = 10;
         }
         if (param0 != 3) {
-          this.a((byte) 5, 15, 25);
+          this.drawBody((byte) 5, 15, 25);
         }
         var4 = (TrinketTile) (this.field_L.field_Db.field_jb.g(param0 + 24006));
         while (var4 != null) {

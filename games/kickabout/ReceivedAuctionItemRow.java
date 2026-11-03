@@ -14,7 +14,7 @@ final class ReceivedAuctionItemRow extends ListRow {
     private UiLayoutNode field_Jb;
     private TrinketSlot[] field_Eb;
 
-    final void c(int param0, boolean param1) {
+    final void updateRow(int param0, boolean param1) {
         int var4 = 0;
         int stackIn_8_0 = 0;
         UiLayoutNode stackIn_18_0 = null;
@@ -119,7 +119,7 @@ final class ReceivedAuctionItemRow extends ListRow {
         return stackIn_6_0;
     }
 
-    final void b(int param0, int param1) {
+    final void drawRow(int param0, int param1) {
         PlayerStats stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         PlayerStats stackIn_14_0;

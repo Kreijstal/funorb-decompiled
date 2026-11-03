@@ -31,7 +31,7 @@ class ColumnTableWidget extends UiLayoutNode {
         var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          var5.c(0, param0);
+          var5.updateRow(0, param0);
         }
     }
 
@@ -381,7 +381,7 @@ class ColumnTableWidget extends UiLayoutNode {
               }
             }
           }
-          var5.b(0, var6Lifetime1);
+          var5.drawRow(0, var6Lifetime1);
         }
         TeamManagementScreen.e(127);
     }

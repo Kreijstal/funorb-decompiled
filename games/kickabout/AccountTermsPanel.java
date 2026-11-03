@@ -122,7 +122,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         }
     }
 
-    public final void a(TextHotspotWidget param0, int param1, int param2, int param3) {
+    public final void onHotspotClicked(TextHotspotWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -194,7 +194,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
     private final String k(int param0) {
         if (param0 < 63) {
           TextHotspotWidget var3 = (TextHotspotWidget) null;
-          this.a((TextHotspotWidget) null, -77, -73, -3);
+          this.onHotspotClicked((TextHotspotWidget) null, -77, -73, -3);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";

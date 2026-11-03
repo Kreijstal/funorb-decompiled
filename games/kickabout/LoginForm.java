@@ -66,7 +66,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    public final void a(int param0, TextInputWidget param1) {
+    public final void onEnterPressed(int param0, TextInputWidget param1) {
         try {
           if (this.field_N == param1) {
             this.field_J.requestKeyboardFocus((UiWidget) (this), 0);
@@ -198,7 +198,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         field_M = null;
     }
 
-    public final void a(byte param0, TextInputWidget param1) {
+    public final void onTextChanged(byte param0, TextInputWidget param1) {
         try {
           if (param0 < 65) {
             this.focusFields((byte) -105);
