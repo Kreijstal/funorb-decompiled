@@ -4,7 +4,7 @@
 abstract class al extends df {
     static String field_U;
     static String field_ab;
-    static cj field_fb;
+    static UiComponent field_fb;
     private int field_S;
     private int field_Y;
     static String field_cb;
@@ -82,7 +82,7 @@ abstract class al extends df {
     final static void j(int param0) {
         IntrusiveDequeCursor.field_e = false;
         nj.field_f = false;
-        fb.a(param0, 99);
+        PowerupButton.a(param0, 99);
         SceneObject.field_B = mp.field_b;
         ta.field_hb = mp.field_b;
     }

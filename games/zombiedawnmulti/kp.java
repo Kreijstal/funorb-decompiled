@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kp extends nc {
+final class kp extends MenuScreen {
     private int field_p;
     static sc field_o;
     private int field_m;

@@ -6,7 +6,7 @@ final class rb {
     static String field_a;
     static int[] field_c;
     static String field_b;
-    static cj field_d;
+    static UiComponent field_d;
 
     final static BinaryBitmapFont a(int param0, byte[] param1) {
         BinaryBitmapFont var2 = null;

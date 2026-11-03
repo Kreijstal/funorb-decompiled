@@ -16,7 +16,7 @@ final class ma {
         }
     }
 
-    final static void a(cj param0, cj param1, boolean param2) {
+    final static void a(UiComponent param0, UiComponent param1, boolean param2) {
         if (param0.field_Cb == null) {
           param0.field_Cb = new IntrusiveDeque();
         }

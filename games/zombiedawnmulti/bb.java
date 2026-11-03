@@ -4,7 +4,7 @@
 final class bb extends IntrusiveNode {
     long field_j;
     static String field_h;
-    static cj field_k;
+    static UiComponent field_k;
     static String field_o;
     static Sprite field_n;
     int field_l;

@@ -6,7 +6,7 @@ final class pj extends WidgetContainer implements co, in {
     static long[] field_K;
     private sq field_L;
     static ta field_I;
-    private gn field_G;
+    private ButtonWidget field_G;
     static String field_J;
 
     private final String a(int param0) {
@@ -64,7 +64,7 @@ final class pj extends WidgetContainer implements co, in {
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_G = new gn(ub.field_xb, (bj) null);
+          this.field_G = new ButtonWidget(ub.field_xb, (bj) null);
           this.field_G.listener = (WidgetActionListener) ((Object) new oq());
           var7 = vl.a(ng.field_a, new String[]{this.h(-1), this.a(111)}, 2);
           var3 = 20;
@@ -199,9 +199,9 @@ final class pj extends WidgetContainer implements co, in {
         }
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
-        gn var7 = null;
+        ButtonWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -214,8 +214,8 @@ final class pj extends WidgetContainer implements co, in {
           if (param3 < -83) {
             return;
           }
-          var7 = (gn) null;
-          this.a(82, -128, (gn) null, -108, 33);
+          var7 = (ButtonWidget) null;
+          this.a(82, -128, (ButtonWidget) null, -108, 33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -175,7 +175,7 @@ final class iq {
             w.field_m = 0;
             df.a(-17306, 1);
           }
-          if (fb.field_e.selection.size((byte) 98) == 0) {
+          if (PowerupButton.field_e.selection.size((byte) 98) == 0) {
             w.field_m = w.field_m & -9;
           }
           if (-12 == param0) {
@@ -203,7 +203,7 @@ final class iq {
           }
           if (5 == ArmedHumanView.field_rb &&
             gh.a(-4, 11653)) {
-            if (fb.field_e.selection.size((byte) 98) > 0) {
+            if (PowerupButton.field_e.selection.size((byte) 98) > 0) {
               df.a(param1 ^ -17403, 6);
             } else {
               df.a(param1 - 17405, 7);
@@ -244,7 +244,7 @@ final class iq {
               ArmedHumanView.field_rb != 0) {
               return;
             }
-            fb.field_e.c(true, ArmedHumanView.field_rb);
+            PowerupButton.field_e.c(true, ArmedHumanView.field_rb);
             return;
           }
           return;

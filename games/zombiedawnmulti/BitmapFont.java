@@ -11,7 +11,7 @@ abstract class BitmapFont extends DualLinkNode {
     private int[] field_B;
     private int[] field_E;
     int field_r;
-    private sb[] field_I;
+    private IndexedSpriteState[] field_I;
     private static StringBuilder field_q;
     private static int field_D;
     private byte[] field_K;
@@ -53,7 +53,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        sb var11_ref_sb = null;
+        IndexedSpriteState var11_ref_sb = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -934,7 +934,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var13;
     }
 
-    final void a(sb[] param0, int[] param1) {
+    final void a(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();

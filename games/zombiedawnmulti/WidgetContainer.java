@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements dh {
+class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     IntrusiveDeque field_B;
     static re field_F;
     static int field_E;
     static String field_D;
     static int field_C;
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -30,7 +30,7 @@ class WidgetContainer extends UiWidget implements dh {
             if (var4 == null) {
               return false;
             }
-            if (!var4.a(param0, param1 ^ 0)) {
+            if (!var4.requestKeyboardFocus(param0, param1 ^ 0)) {
               var4 = (UiWidget) (var3.a((byte) -89));
               continue;
             }
@@ -181,7 +181,7 @@ class WidgetContainer extends UiWidget implements dh {
               var5.a(2680, var4);
               var6 = (UiWidget) (var5.a((byte) -36));
               while (var6 != null) {
-                if (var6.a(param1, 0)) {
+                if (var6.requestKeyboardFocus(param1, 0)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.a((byte) -58));
@@ -272,7 +272,7 @@ class WidgetContainer extends UiWidget implements dh {
           var9 = new IntrusiveDequeCursor(this.field_B);
           if (param0 != -1) {
             var8 = (UiWidget) null;
-            this.a((UiWidget) null, 48);
+            this.requestKeyboardFocus((UiWidget) null, 48);
           }
           var4 = (UiWidget) (var9.a(32397));
           while (var4 != null) {
@@ -281,7 +281,7 @@ class WidgetContainer extends UiWidget implements dh {
               var5.b(-4, var4);
               var6 = (UiWidget) (var5.e(-3));
               while (var6 != null) {
-                if (!var6.a(param1, 0)) {
+                if (!var6.requestKeyboardFocus(param1, 0)) {
                   var6 = (UiWidget) (var5.e(param0 ^ 2));
                   continue;
                 }
@@ -305,7 +305,7 @@ class WidgetContainer extends UiWidget implements dh {
         }
     }
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendWidgetDiagnostics(int param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -367,7 +367,7 @@ class WidgetContainer extends UiWidget implements dh {
             for (var7 = 0; param1 >= var7; var7++) {
               discarded$3 = param3.append(' ');
             }
-            var6.a(7, param0, 1 + param1, param3);
+            var6.appendWidgetDiagnostics(7, param0, 1 + param1, param3);
             var6 = (UiWidget) (var5.a((byte) -94));
           }
           if (param2 >= -79) {

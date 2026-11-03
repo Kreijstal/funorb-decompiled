@@ -63,7 +63,7 @@ final class ap extends qb {
         int var9 = 0;
         int var10 = ZombieDawnMulti.field_E ? 1 : 0;
         int var3_int = p.field_e;
-        rp.field_l = new cj(0L, (cj) null);
+        rp.field_l = new UiComponent(0L, (UiComponent) null);
         int var4 = 97 / ((param1 - 46) / 63);
         if (param0 == null) {
           Throwable var11 = (Throwable) null;
@@ -81,7 +81,7 @@ final class ap extends qb {
           return;
         }
         try {
-          fb.a(var5, (byte) -19);
+          PowerupButton.a(var5, (byte) -19);
           BitmapFont var13 = (BitmapFont) null;
           tg.field_d = GameScreen.a(1127256, (BitmapFont) null, 65793, 1513239, 8947848, 4020342, 65793, (byte) 123, 0, 2245737, 65793, 1513239, 5138823);
           bb.field_k = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 127, 16764006, 0, 0, 0, 0);

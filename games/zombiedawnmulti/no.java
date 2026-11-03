@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no extends cj {
+final class no extends UiComponent {
     static String field_Fb;
     static int field_Gb;
     static Sprite[][] field_Hb;
-    private cj field_Ib;
+    private UiComponent field_Ib;
     static String field_Kb;
     static IndexedSprite field_Jb;
 
     final static void c(byte param0) {
         String var2 = null;
         int var1 = -7 % ((-1 - param0) / 63);
-        if (null != sb.field_k) {
-          var2 = sb.field_k;
+        if (null != IndexedSpriteState.field_k) {
+          var2 = IndexedSpriteState.field_k;
           UiWidget.a((byte) -61, vl.a(lp.field_h, new String[]{var2}, 2));
-          sb.field_k = null;
+          IndexedSpriteState.field_k = null;
         }
     }
 
@@ -246,7 +246,7 @@ final class no extends cj {
         return stackIn_9_0;
     }
 
-    no(cj param0, cj param1, cj param2, cj param3, cj param4, cj param5) {
+    no(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -263,43 +263,43 @@ final class no extends cj {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        cj var8 = null;
-        cj var9 = null;
+        UiComponent var8 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         int var11 = 0;
-        cj var13 = null;
-        cj var14 = null;
+        UiComponent var13 = null;
+        UiComponent var14 = null;
         int var15 = 0;
-        cj var17 = null;
+        UiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new cj(0L, param1, le.field_I.toUpperCase());
+          var17 = new UiComponent(0L, param1, le.field_I.toUpperCase());
           var17.field_R = 1;
-          this.field_Ib = new cj(0L, param2);
-          var8 = new cj(0L, param3);
-          var9 = new cj(0L, param3, DualLinkNode.field_j);
+          this.field_Ib = new UiComponent(0L, param2);
+          var8 = new UiComponent(0L, param3);
+          var9 = new UiComponent(0L, param3, DualLinkNode.field_j);
           var9.field_R = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; lj.field_h.length > var12; var12++) {
-            var13 = new cj(0L, param3, cm.field_c[var12]);
-            var14 = new cj(0L, param3, lj.field_h[var12]);
+            var13 = new UiComponent(0L, param3, cm.field_c[var12]);
+            var14 = new UiComponent(0L, param3, lj.field_h[var12]);
             var15 = param3.field_yb.a(lj.field_h[var12]);
-            var13.a(15, var10, 65, 20, -3344);
+            var13.setBounds(15, var10, 65, 20, -3344);
             if (var11 < var15) {
               var11 = var15;
             }
-            var14.a(15, var10, 640, 90, -3344);
+            var14.setBounds(15, var10, 640, 90, -3344);
             var8.a((byte) 50, var13);
             var8.a((byte) 50, var14);
             var10 += 30;
           }
           var10 += 15;
-          var17.a(24, 0, 20 + var11 + 90, 0, -3344);
-          this.a(var10 + var17.field_z, 100, var17.field_zb, 100, -3344);
-          this.field_Ib.a(15, 5, 15, -20 + var17.field_zb, -3344);
-          var8.a(this.field_z - var17.field_z, var17.field_z, this.field_zb, 0, -3344);
-          var9.a(15, 20, this.field_zb, 0, -3344);
+          var17.setBounds(24, 0, 20 + var11 + 90, 0, -3344);
+          this.setBounds(var10 + var17.field_z, 100, var17.field_zb, 100, -3344);
+          this.field_Ib.setBounds(15, 5, 15, -20 + var17.field_zb, -3344);
+          var8.setBounds(this.field_z - var17.field_z, var17.field_z, this.field_zb, 0, -3344);
+          var9.setBounds(15, 20, this.field_zb, 0, -3344);
           var8.field_ab = tg.a(2105376, var8.field_z, 8421504, 3, 11579568, 102);
           var17.a((byte) 50, this.field_Ib);
           var8.a((byte) 50, var9);

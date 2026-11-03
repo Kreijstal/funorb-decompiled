@@ -4,7 +4,7 @@
 final class tg implements Runnable {
     PlatformTaskDispatcher field_b;
     static byte[] field_a;
-    static cj field_d;
+    static UiComponent field_d;
     volatile boolean field_h;
     volatile boolean field_c;
     volatile PcmPlayerService[] field_f;
@@ -165,7 +165,7 @@ final class tg implements Runnable {
         SoftwareRasterizer.fillRectGradient(0, 0, param3, -(param3 * 2) + param1, param4, param2);
         Sprite var10 = new Sprite(param3, param3);
         if (param5 <= 25) {
-          field_d = (cj) null;
+          field_d = (UiComponent) null;
         }
         var10.a();
         SoftwareRasterizer.fillRect(0, 0, param3, param3, param4);
@@ -372,7 +372,7 @@ final class tg implements Runnable {
         int var15;
         int var16;
         Object var17;
-        cj var18;
+        UiComponent var18;
         Sprite var19;
         Sprite var20;
         Sprite stackIn_7_0 = null;

@@ -3,7 +3,7 @@
  */
 final class wa implements WidgetActionListener {
     private int field_m;
-    static cj field_a;
+    static UiComponent field_a;
     static boolean field_k;
     private BitmapFont field_h;
     private int field_e;

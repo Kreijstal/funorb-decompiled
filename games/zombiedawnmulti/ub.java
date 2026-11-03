@@ -33,7 +33,7 @@ final class ub extends ie {
             var4 = PortalEntryEvent.field_m.field_a[var3];
             if (var4 > 0) {
               stackIn_12_0 = var2;
-              if (fb.field_e.localTeam != var3) {
+              if (PowerupButton.field_e.localTeam != var3) {
                 stackIn_13_1 = var4 / 5;
               } else {
                 stackIn_13_1 = var4 / 25;

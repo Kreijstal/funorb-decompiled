@@ -14,7 +14,7 @@ final class km extends sq {
         String var5;
         re var6;
         int var13;
-        rk var8;
+        WidgetPainter var8;
         int var9;
         int var10;
         int var11;
@@ -43,7 +43,7 @@ final class km extends sq {
         }
         super.renderWidget(param0, param1, param2, param3);
         var6Lifetime1 = this.field_Y.d(97);
-        var8 = (rk) ((Object) this.listener);
+        var8 = (WidgetPainter) ((Object) this.listener);
         var9 = this.field_y + param3;
         var10 = var8.a((UiWidget) (this), 0, param1) + (var8.a((UiWidget) (this), param0 - 99).a((byte) -111) >> 1);
         if (PortalView.field_H == var6Lifetime1) {
@@ -159,19 +159,19 @@ final class km extends sq {
     }
 
     final static void a(ResourceArchive param0, byte param1) {
-        cj var5 = null;
-        cj var6 = null;
-        cj var3 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
+        UiComponent var3 = null;
         try {
           SimUnit.field_T = fl.a("basic", "display_name_changed", param0, 11091);
           eg.field_B = new cd(0L, oj.field_Q, iq.field_a, dg.field_I);
           gl.field_L = new cd(0L, oj.field_Q, kg.field_i, qh.field_d);
-          SimUnit.field_O = new cj(0L, (cj) null);
-          dp.field_b = new cj(0L, vo.field_m);
+          SimUnit.field_O = new UiComponent(0L, (UiComponent) null);
+          dp.field_b = new UiComponent(0L, vo.field_m);
           dp.field_b.field_R = 1;
-          bi.field_f = new cj(0L, vd.field_a, GameScreen.field_r);
-          jb.field_c = new cj(0L, pn.field_g, ko.field_h);
-          lk.field_J = new cj(0L, cm.field_b);
+          bi.field_f = new UiComponent(0L, vd.field_a, GameScreen.field_r);
+          jb.field_c = new UiComponent(0L, pn.field_g, PowerupBar.field_h);
+          lk.field_J = new UiComponent(0L, cm.field_b);
           if (param1 > -106) {
             km.h(-103);
           }
@@ -180,12 +180,12 @@ final class km extends sq {
           SimUnit.field_O.a((byte) 50, jb.field_c);
           SimUnit.field_O.a((byte) 50, eg.field_B);
           SimUnit.field_O.a((byte) 50, lk.field_J);
-          eg.field_B.field_Jb.field_Jb.b((byte) -32, vo.field_m);
+          eg.field_B.field_Jb.field_Jb.copyStyle((byte) -32, vo.field_m);
           eg.field_B.field_Jb.field_Jb.field_lb = 1;
           var5 = eg.field_B.field_Jb.field_Jb;
           var6 = var5;
           var6.field_R = 1;
-          gl.field_L.field_Jb.field_Jb.b((byte) -32, vo.field_m);
+          gl.field_L.field_Jb.field_Jb.copyStyle((byte) -32, vo.field_m);
           gl.field_L.field_Jb.field_Jb.field_lb = 1;
           var3 = gl.field_L.field_Jb.field_Jb;
           var3.field_R = 1;
@@ -199,7 +199,7 @@ final class km extends sq {
         return null;
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -285,8 +285,8 @@ final class km extends sq {
               }
               var10_ref_String = bh.a(-126, var8_ref_ka);
               var11 = var10_ref_String + BitmapFont.c(var8_ref_ka.field_d);
-              var12 = cj.a(var8_ref_ka, (byte) -63);
-              var8_ref_ka.field_q = new cj(0L, qq.field_f, var11);
+              var12 = UiComponent.a(var8_ref_ka, (byte) -63);
+              var8_ref_ka.field_q = new UiComponent(0L, qq.field_f, var11);
               var6 = var6 + param2;
               var8_ref_ka.field_q.field_xb = (8355711 & qq.field_f.field_xb >> 1) + var12 - ((var12 & 16711422) >> 1);
               var8_ref_ka.field_q.field_ob = (8355711 & qq.field_f.field_ob >> 1) + (var12 - ((var12 & 16711422) >> 1));
@@ -303,7 +303,7 @@ final class km extends sq {
           var9_ref_ka = uk.field_M[var8];
           if (var9_ref_ka.field_q != null) {
             tn.field_A.field_Gb.a((byte) 50, var9_ref_ka.field_q);
-            var9_ref_ka.field_q.a(param2, var7Lifetime1, var9_ref_ka.field_q.e(0), param3, -3344);
+            var9_ref_ka.field_q.setBounds(param2, var7Lifetime1, var9_ref_ka.field_q.e(0), param3, -3344);
             var7Lifetime1 = var7Lifetime1 + param2;
             if (0 != var9_ref_ka.field_q.field_T) {
               var4 = var9_ref_ka;

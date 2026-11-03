@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends cj {
+final class dc extends UiComponent {
     static long[] field_Ib;
     static int field_Hb;
     int field_Kb;
-    private cj field_Mb;
-    private cj[] field_Nb;
-    private cj[] field_Jb;
+    private UiComponent field_Mb;
+    private UiComponent[] field_Nb;
+    private UiComponent[] field_Jb;
     static int field_Fb;
     static IntrusiveDeque field_Gb;
     static BitmapFont field_Lb;
@@ -30,8 +30,8 @@ final class dc extends cj {
         field_Gb = null;
     }
 
-    dc(long param0, cj param1, String[] param2, cj param3, cj[] param4, int param5) {
-        super(param0, (cj) null);
+    dc(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -44,15 +44,15 @@ final class dc extends cj {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        cj var9 = null;
+        UiComponent var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Nb = new cj[param2.length];
-          this.field_Mb = new cj(0L, param3);
+          this.field_Nb = new UiComponent[param2.length];
+          this.field_Mb = new UiComponent(0L, param3);
           this.field_Jb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new cj(0L, param1);
+            var9 = new UiComponent(0L, param1);
             var9.field_wb = param2[var8_int];
             this.field_Nb[var8_int] = var9;
             this.a((byte) 50, var9);
@@ -100,7 +100,7 @@ final class dc extends cj {
     }
 
     private final void a(int param0, int param1, byte param2) {
-        cj dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -119,11 +119,11 @@ final class dc extends cj {
         if (param2 < 72) {
           this.a(-74, 39, -109, 35, 100, -8, 71);
         }
-        this.field_Mb.a(this.field_z - param1, param1, this.field_zb, 0, -3344);
+        this.field_Mb.setBounds(this.field_z - param1, param1, this.field_zb, 0, -3344);
         var8 = 0;
         var4Lifetime1 = var8;
         while (this.field_Jb.length > var8) {
-          this.field_Jb[var8].a(-(param0 * 2) + this.field_Mb.field_z, param0, this.field_Mb.field_zb - 2 * param0, param0, -3344);
+          this.field_Jb[var8].setBounds(-(param0 * 2) + this.field_Mb.field_z, param0, this.field_Mb.field_zb - 2 * param0, param0, -3344);
           if (this.field_Kb != var8) {
             dupTemp$0 = this.field_Jb[var8];
             dupTemp$0.field_x = dupTemp$0.field_x + 10000;
@@ -206,8 +206,8 @@ final class dc extends cj {
 
     final void h(int param0) {
         int var2 = 0;
-        cj dupTemp$0 = null;
-        cj dupTemp$1 = null;
+        UiComponent dupTemp$0 = null;
+        UiComponent dupTemp$1 = null;
         int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 >= -26) {

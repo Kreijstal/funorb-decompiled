@@ -4,7 +4,7 @@
 final class cg extends IntrusiveNode {
     static IntrusiveDeque field_i;
     static java.awt.Frame field_m;
-    static cj field_f;
+    static UiComponent field_f;
     private IntrusiveDeque field_k;
     private int field_g;
     static ResourceArchive field_n;
@@ -14,7 +14,7 @@ final class cg extends IntrusiveNode {
 
     final void a(int param0) {
         if (param0 != -1) {
-          field_f = (cj) null;
+          field_f = (UiComponent) null;
         }
         this.unlink(true);
     }

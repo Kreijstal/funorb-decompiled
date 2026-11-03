@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vo extends nc {
+final class vo extends MenuScreen {
     static Sprite field_r;
     static String field_n;
     private int field_t;
-    static cj field_m;
+    static UiComponent field_m;
     static String field_s;
     static boolean field_q;
     static Sprite field_p;
@@ -158,7 +158,7 @@ final class vo extends nc {
         int var5;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (!param0) {
-          field_m = (cj) null;
+          field_m = (UiComponent) null;
         }
         boolean decompiledFrameRemainder0 = true;
         SoftwareRasterizer.clear();

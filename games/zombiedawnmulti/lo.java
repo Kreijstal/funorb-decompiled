@@ -6,7 +6,7 @@ final class lo {
     static int field_b;
     static String field_c;
     static String field_h;
-    static cj field_g;
+    static UiComponent field_g;
     static int[] field_j;
     static String field_e;
     static String field_i;
@@ -111,7 +111,7 @@ final class lo {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (gn.a(param1, 16413)) {
+          if (ButtonWidget.a(param1, 16413)) {
             return true;
           }
           var11 = af.field_d;

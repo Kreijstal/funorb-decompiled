@@ -7,7 +7,7 @@ final class jp {
     static int field_d;
     static int field_e;
     static int field_f;
-    static cj field_b;
+    static UiComponent field_b;
 
     final static String a(byte param0) {
         String stackIn_67_0 = null;

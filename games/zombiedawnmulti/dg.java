@@ -3,10 +3,10 @@
  */
 final class dg extends WidgetContainer implements in {
     static IntrusiveDeque field_K;
-    private gn field_N;
-    private gn field_H;
+    private ButtonWidget field_N;
+    private ButtonWidget field_H;
     static int field_M;
-    private gn field_P;
+    private ButtonWidget field_P;
     static boolean field_J;
     static String field_L;
     static String[] field_G;
@@ -32,7 +32,7 @@ final class dg extends WidgetContainer implements in {
         return bh.field_a;
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -113,9 +113,9 @@ final class dg extends WidgetContainer implements in {
 
     public dg() {
         super(0, 0, 476, 225, (WidgetActionListener) null);
-        this.field_P = new gn(en.field_a, (bj) null);
-        this.field_N = new gn(oq.field_v, (bj) null);
-        this.field_H = new gn(gf.field_a, (bj) null);
+        this.field_P = new ButtonWidget(en.field_a, (bj) null);
+        this.field_N = new ButtonWidget(oq.field_v, (bj) null);
+        this.field_H = new ButtonWidget(gf.field_a, (bj) null);
         oq var1 = new oq();
         this.field_P.listener = (WidgetActionListener) ((Object) var1);
         this.field_N.listener = (WidgetActionListener) ((Object) var1);

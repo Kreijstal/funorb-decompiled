@@ -141,7 +141,7 @@ final class bo {
 
     final static void b(int param0) {
         sp.c(param0 - 4);
-        fb.a(param0, 65);
+        PowerupButton.a(param0, 65);
     }
 
     public final String toString() {

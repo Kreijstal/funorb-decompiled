@@ -4,7 +4,7 @@
 final class fe extends WidgetContainer implements co, in, jn {
     private on field_I;
     static Sprite field_U;
-    private gn field_O;
+    private ButtonWidget field_O;
     private on field_P;
     static ResourceArchive field_L;
     private on field_T;
@@ -13,7 +13,7 @@ final class fe extends WidgetContainer implements co, in, jn {
     private on field_N;
     private sq field_G;
     static Sprite[] field_W;
-    private gn field_S;
+    private ButtonWidget field_S;
     private on field_M;
     static boolean field_R;
     static String field_Q;
@@ -98,7 +98,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         }
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
@@ -155,7 +155,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           if (param3 == -6208) {
             return false;
           }
-          this.field_O = (gn) null;
+          this.field_O = (ButtonWidget) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -490,8 +490,8 @@ final class fe extends WidgetContainer implements co, in, jn {
         this.field_N = new on("", (bj) null, 3);
         int var1 = 1;
         this.field_H = new fj("", (bj) null, var1 != 0);
-        this.field_S = new gn(ip.field_a, (bj) null);
-        this.field_O = new gn(oq.field_v, (bj) null);
+        this.field_S = new ButtonWidget(ip.field_a, (bj) null);
+        this.field_O = new ButtonWidget(oq.field_v, (bj) null);
         this.field_V.field_x = bi.field_d;
         this.field_M.field_x = mo.field_Nb;
         this.field_T.field_x = IsaacRandom.field_d;
@@ -521,7 +521,7 @@ final class fe extends WidgetContainer implements co, in, jn {
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_M, var3, 73, InflaterDecompressor.field_i);
         var3 = var3 + (5 + this.a(20, true, this.field_T, cq.field_d, "", var3, 170));
-        var3 = var3 + this.a(170, this.field_P, var3, 47, gn.field_D);
+        var3 = var3 + this.a(170, this.field_P, var3, 47, ButtonWidget.field_D);
         var3 = var3 + (5 + this.a(oi.field_f, MouseInputHandler.field_b, var3, 170, this.field_I, 35));
         var3 = var3 + (this.a(r.field_e, ia.field_w, var3, 170, this.field_V, 35) + 5);
         var3 = var3 + this.a(this.field_N, -99, 170, gj.field_a, var3);

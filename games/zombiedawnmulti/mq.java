@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mq extends nc {
-    static cj field_l;
+final class mq extends MenuScreen {
+    static UiComponent field_l;
     static String field_q;
     static String field_p;
     static int field_r;
@@ -107,7 +107,7 @@ final class mq extends nc {
         }
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void onEnter(int param0, boolean param1, int param2) {
         int var8 = 0;
         int var4;
         int var5;
@@ -119,7 +119,7 @@ final class mq extends nc {
         int[] var15;
         int var5Lifetime1;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(0, param1, param2);
+        super.onEnter(0, param1, param2);
         this.field_m = new int[sf.field_b];
         this.field_s = new int[sf.field_b];
         this.field_t = -1;
@@ -256,7 +256,7 @@ final class mq extends nc {
 
     private final boolean h(int param0, int param1) {
         if (param1 <= 10) {
-          field_l = (cj) null;
+          field_l = (UiComponent) null;
         }
         int[] var4 = this.field_d != 6 ? PacketBuffer.field_n : LevelData.field_m;
         int[] var3 = var4;

@@ -42,8 +42,8 @@ final class ib implements WidgetActionListener {
             return;
           }
           var8 = rj.field_I[1];
-          if (param4 instanceof gn &&
-            ((gn) (param4)).field_G) {
+          if (param4 instanceof ButtonWidget &&
+            ((ButtonWidget) (param4)).field_G) {
             var8.e(var6_int + 1 + (-var8.fullWidth + param4.field_n >> 1), (param4.field_w - var8.field_u >> 1) + var7 + 1, 256);
           }
           if (!param4.c(124)) {

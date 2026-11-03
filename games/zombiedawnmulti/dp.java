@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dp {
-    static cj field_b;
+    static UiComponent field_b;
     static String field_a;
-    static cj field_c;
+    static UiComponent field_c;
 
     final static boolean a(int param0, boolean param1, CharSequence param2) {
         int var3_int = 0;

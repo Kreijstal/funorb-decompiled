@@ -8,7 +8,7 @@ final class qf {
     static pd field_c;
     static String field_g;
     static String field_d;
-    static cj field_b;
+    static UiComponent field_b;
     static int field_f;
     static String field_e;
 
@@ -22,7 +22,7 @@ final class qf {
           field_g = null;
           return;
         }
-        field_b = (cj) null;
+        field_b = (UiComponent) null;
         field_b = null;
         field_e = null;
         field_g = null;

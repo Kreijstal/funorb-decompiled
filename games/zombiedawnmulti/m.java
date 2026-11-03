@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class m extends tb {
-    static cj field_B;
-    static cj field_x;
+    static UiComponent field_B;
+    static UiComponent field_x;
     static String field_A;
     static BitmapFont field_C;
     static int field_z;
@@ -60,7 +60,7 @@ final class m extends tb {
             var5Lifetime2 = ii.a((String) (var4), (byte) 116, param2);
           }
           if (1 == ic.field_e) {
-            var5Lifetime2 = gn.a((String) (var4), 103, param2);
+            var5Lifetime2 = ButtonWidget.a((String) (var4), 103, param2);
           }
           if (ic.field_e == 2) {
             var5Lifetime2 = sf.a(param1 - 86, param2, (String) (var4));
@@ -105,7 +105,7 @@ final class m extends tb {
             var5Lifetime1Lifetime1 = ii.a((String) (var4Lifetime1), (byte) 116, param2);
           }
           if (1 == ic.field_e) {
-            var5Lifetime1Lifetime1 = gn.a((String) (var4Lifetime1), 103, param2);
+            var5Lifetime1Lifetime1 = ButtonWidget.a((String) (var4Lifetime1), 103, param2);
           }
           if (ic.field_e == 2) {
             var5Lifetime1Lifetime1 = sf.a(param1 - 86, param2, (String) (var4Lifetime1));
@@ -234,7 +234,7 @@ final class m extends tb {
             vd.a(false, 10L);
           }
           if (param5 <= 85) {
-            field_x = (cj) null;
+            field_x = (UiComponent) null;
           }
           var7 = (java.awt.Frame) (var11.field_d);
           if (var7 == null) {

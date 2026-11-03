@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nn {
-    static cj field_b;
+    static UiComponent field_b;
     static int[] field_c;
     static String field_a;
 

@@ -5,7 +5,7 @@ final class ik {
     static String field_e;
     static int field_c;
     static String field_b;
-    static cj field_d;
+    static UiComponent field_d;
     static String[] field_a;
 
     final static void a(int param0) {

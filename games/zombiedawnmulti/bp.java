@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bp extends un {
-    static cj field_u;
+final class bp extends TextInputValidator {
+    static UiComponent field_u;
     static int field_r;
     static Sprite field_s;
     static String[] field_v;
-    static cj field_w;
+    static UiComponent field_w;
     static String field_t;
     static boolean field_q;
 
@@ -81,7 +81,7 @@ final class bp extends un {
             var7.writeInt(52, param0.field_y[var5]);
           }
           if (!param1) {
-            field_u = (cj) null;
+            field_u = (UiComponent) null;
           }
           var8.f(var4, 118);
           var8.e(77, var8.position - var4);
@@ -290,6 +290,6 @@ final class bp extends un {
 
     static {
         field_v = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
-        field_u = new cj();
+        field_u = new UiComponent();
     }
 }

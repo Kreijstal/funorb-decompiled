@@ -13,7 +13,7 @@ abstract class ie extends al {
     static int[] field_ob;
     private lf field_pb;
     private int field_qb;
-    static cj field_jb;
+    static UiComponent field_jb;
     private na field_hb;
 
     public static void l(int param0) {
@@ -97,10 +97,10 @@ abstract class ie extends al {
             return false;
           }
           if (98 == param0) {
-            this.field_hb.a(param2, param3 + 6208);
+            this.field_hb.requestKeyboardFocus(param2, param3 + 6208);
           }
           if (param0 == 99) {
-            this.field_hb.a(param2, 0);
+            this.field_hb.requestKeyboardFocus(param2, 0);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

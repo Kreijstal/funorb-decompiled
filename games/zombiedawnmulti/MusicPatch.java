@@ -9,7 +9,7 @@ final class MusicPatch extends IntrusiveNode {
     static int field_n;
     static String field_i;
     static pd field_l;
-    static cj field_k;
+    static UiComponent field_k;
     short[] field_g;
     byte[] field_j;
     static String field_f;

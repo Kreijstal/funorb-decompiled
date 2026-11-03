@@ -53,10 +53,10 @@ final class nj {
         BufferedFile.field_g = var8.readUnsignedByte(31365);
         SimEntity.field_K = var8.readLong((byte) -30);
         if (2 == wc.field_N) {
-          tk.field_m = var8.readUnsignedShort((byte) 69);
+          LaboratoryScreen.field_m = var8.readUnsignedShort((byte) 69);
           UnitView.field_W = var8.readUnsignedMedium(128);
         } else {
-          tk.field_m = 0;
+          LaboratoryScreen.field_m = 0;
           UnitView.field_W = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(31365) != 1) ? 0 : 1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends gn {
+final class uk extends ButtonWidget {
     static ka[] field_M;
     private int field_Q;
     static String field_R;
@@ -149,7 +149,7 @@ final class uk extends gn {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

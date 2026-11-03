@@ -5,12 +5,12 @@ final class qm extends WidgetContainer implements fi, in {
     static String field_I;
     private TextInputWidget field_M;
     private boolean field_L;
-    private gn field_P;
-    private gn field_J;
+    private ButtonWidget field_P;
+    private ButtonWidget field_J;
     private boolean field_K;
     static String field_N;
     private TextInputWidget field_H;
-    private gn field_G;
+    private ButtonWidget field_G;
     private boolean field_Q;
     private String field_O;
 
@@ -93,7 +93,7 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -175,10 +175,10 @@ final class qm extends WidgetContainer implements fi, in {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        gn stackIn_18_1 = null;
-        gn stackIn_18_2 = null;
-        gn stackIn_19_1 = null;
-        gn stackIn_19_2 = null;
+        ButtonWidget stackIn_18_1 = null;
+        ButtonWidget stackIn_18_2 = null;
+        ButtonWidget stackIn_19_1 = null;
+        ButtonWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -208,7 +208,7 @@ final class qm extends WidgetContainer implements fi, in {
           this.field_H = (TextInputWidget) ((Object) new on(param0, (bj) (this), 100));
           this.field_M = (TextInputWidget) ((Object) new on("", (bj) (this), 20));
           if (!this.field_K) {
-            this.field_G = new gn(qo.field_s, (bj) null);
+            this.field_G = new ButtonWidget(qo.field_s, (bj) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_L) {
@@ -220,13 +220,13 @@ final class qm extends WidgetContainer implements fi, in {
               stackIn_19_2 = null;
               stackIn_19_3 = gf.field_a;
             }
-            this.field_J = new gn(stackIn_19_3, (bj) null);
+            this.field_J = new ButtonWidget(stackIn_19_3, (bj) null);
             if (this.field_Q) {
-              this.field_P = new gn(en.field_a, (bj) (this));
+              this.field_P = new ButtonWidget(en.field_a, (bj) (this));
             }
           } else {
-            this.field_G = new gn(ci.field_g, (bj) null);
-            this.field_J = new gn(oe.field_b, (bj) null);
+            this.field_G = new ButtonWidget(ci.field_g, (bj) null);
+            this.field_J = new ButtonWidget(oe.field_b, (bj) null);
             this.field_H.field_F = false;
           }
           this.field_H.listener = (WidgetActionListener) ((Object) new tb(10000536));
@@ -271,7 +271,7 @@ final class qm extends WidgetContainer implements fi, in {
           var12 = dupTemp$0;
           this.b((byte) 112, dupTemp$0);
           this.field_i = this.field_i + (((UiWidget) ((Object) var12)).field_w + 5);
-          dupTemp$1 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_M, false, 80, 3, var7, 16777215, gn.field_D);
+          dupTemp$1 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_M, false, 80, 3, var7, 16777215, ButtonWidget.field_D);
           var13 = dupTemp$1;
           this.b((byte) 108, dupTemp$1);
           this.field_i = this.field_i + (5 + ((UiWidget) ((Object) var13)).field_w);
@@ -429,13 +429,13 @@ final class qm extends WidgetContainer implements fi, in {
         RuntimeException var3 = null;
         try {
           if (this.field_H == param0) {
-            this.field_M.a((UiWidget) (this), 0);
+            this.field_M.requestKeyboardFocus((UiWidget) (this), 0);
           }
           if (this.field_M == param0) {
             this.a((byte) -99);
           }
           if (!param1) {
-            this.field_G = (gn) null;
+            this.field_G = (ButtonWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

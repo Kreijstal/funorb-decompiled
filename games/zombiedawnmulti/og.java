@@ -100,7 +100,7 @@ final class og extends SimEntity {
     final static void a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
-        cj dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -111,19 +111,19 @@ final class og extends SimEntity {
         int stackIn_3_3;
         boolean stackIn_4_4;
         jh stackIn_9_0;
-        cj stackIn_9_1;
-        cj stackIn_9_2;
+        UiComponent stackIn_9_1;
+        UiComponent stackIn_9_2;
         long stackIn_9_3;
-        cj stackIn_10_1 = null;
-        cj stackIn_10_2 = null;
-        cj stackIn_10_4 = null;
+        UiComponent stackIn_10_1 = null;
+        UiComponent stackIn_10_2 = null;
+        UiComponent stackIn_10_4 = null;
         jh stackIn_29_0;
-        cj stackIn_29_1;
-        cj stackIn_29_2;
+        UiComponent stackIn_29_1;
+        UiComponent stackIn_29_2;
         long stackIn_29_3;
-        cj stackIn_30_1;
-        cj stackIn_30_2;
-        cj stackIn_30_4;
+        UiComponent stackIn_30_1;
+        UiComponent stackIn_30_2;
+        UiComponent stackIn_30_4;
         int stackIn_34_0 = 0;
         int stackIn_69_0 = 0;
         int stackIn_78_0 = 0;
@@ -143,19 +143,19 @@ final class og extends SimEntity {
         jh var12 = null;
         int var13 = 0;
         int var14 = 0;
-        cj var18 = null;
-        cj var19 = null;
-        cj var20 = null;
-        cj var21 = null;
-        cj var22 = null;
-        cj var23 = null;
-        cj var24 = null;
-        cj var25 = null;
-        cj var26 = null;
-        cj var27 = null;
-        cj var28 = null;
-        cj var29 = null;
-        cj var30 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
+        UiComponent var20 = null;
+        UiComponent var21 = null;
+        UiComponent var22 = null;
+        UiComponent var23 = null;
+        UiComponent var24 = null;
+        UiComponent var25 = null;
+        UiComponent var26 = null;
+        UiComponent var27 = null;
+        UiComponent var28 = null;
+        UiComponent var29 = null;
+        UiComponent var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -172,13 +172,13 @@ final class og extends SimEntity {
         int var40 = 0;
         int var41 = 0;
         Sprite var42 = null;
-        cj var43 = null;
-        cj var44 = null;
-        cj var45 = null;
-        cj var46 = null;
-        cj var47 = null;
-        cj var48 = null;
-        cj var49 = null;
+        UiComponent var43 = null;
+        UiComponent var44 = null;
+        UiComponent var45 = null;
+        UiComponent var46 = null;
+        UiComponent var47 = null;
+        UiComponent var48 = null;
+        UiComponent var49 = null;
         Object var50 = null;
         Sprite var50_ref = null;
         Object var51 = null;
@@ -219,18 +219,18 @@ final class og extends SimEntity {
             var13 = 0;
             if (null == var12.field_Cb) {
               var14 = param4 | param2;
-              var12.field_Kb = new cj(0L, wc.field_H);
+              var12.field_Kb = new UiComponent(0L, wc.field_H);
               var12.a((byte) 50, var12.field_Kb);
               var12.field_Kb.field_R = 1;
-              var12.field_Gb = new cj(0L, m.field_x);
+              var12.field_Gb = new UiComponent(0L, m.field_x);
               var12.a((byte) 50, var12.field_Gb);
-              var12.field_Ib = new cj(0L, wc.field_H);
+              var12.field_Ib = new UiComponent(0L, wc.field_H);
               var12.a((byte) 50, var12.field_Ib);
               var12.field_Ib.field_V = 0;
-              var12.field_gc = new cj(0L, wc.field_H);
+              var12.field_gc = new UiComponent(0L, wc.field_H);
               var12.a((byte) 50, var12.field_gc);
               var12.field_gc.field_V = 0;
-              var12.field_Lb = new cj(0L, m.field_x);
+              var12.field_Lb = new UiComponent(0L, m.field_x);
               var12.a((byte) 50, var12.field_Lb);
               var12.field_Lb.field_R = 2;
               stackIn_9_0 = var12;
@@ -246,22 +246,22 @@ final class og extends SimEntity {
                 stackIn_10_2 = null;
                 stackIn_10_4 = m.field_x;
               }
-              stackIn_9_0.field_jc = new cj(stackIn_9_3, stackIn_10_4);
+              stackIn_9_0.field_jc = new UiComponent(stackIn_9_3, stackIn_10_4);
               var12.a((byte) 50, var12.field_jc);
-              var12.field_Qb = new cj[kj.field_h];
-              var12.field_Xb = new cj(0L, (cj) null);
+              var12.field_Qb = new UiComponent[kj.field_h];
+              var12.field_Xb = new UiComponent(0L, (UiComponent) null);
               if ((var14 & 1 << jq.field_f) != 0) {
                 var12.field_jc.a((byte) 50, var12.field_Xb);
               }
-              var12.field_kc = new cj(0L, (cj) null);
+              var12.field_kc = new UiComponent(0L, (UiComponent) null);
               if (0 != (1 << ho.field_l & var14)) {
                 var12.field_jc.a((byte) 50, var12.field_kc);
               }
-              var12.field_Tb = new cj(0L, (cj) null);
+              var12.field_Tb = new UiComponent(0L, (UiComponent) null);
               if ((1 << el.field_M & var14) != 0) {
                 var12.field_jc.a((byte) 50, var12.field_Tb);
               }
-              var12.field_ec = new cj(0L, (cj) null);
+              var12.field_ec = new UiComponent(0L, (UiComponent) null);
               if ((1 << UnitView.field_J & var14) != 0) {
                 var12.field_jc.a((byte) 50, var12.field_ec);
               }
@@ -273,7 +273,7 @@ final class og extends SimEntity {
               var44.field_lb = 1;
               var45.field_lb = 1;
               for (var18_int = 0; kj.field_h > var18_int; var18_int++) {
-                var12.field_Qb[var18_int] = new cj(0L, (cj) null);
+                var12.field_Qb[var18_int] = new UiComponent(0L, (UiComponent) null);
                 if (0 != (1 << var18_int + vm.field_ib & var14)) {
                   var12.field_jc.a((byte) 50, var12.field_Qb[var18_int]);
                 }
@@ -292,19 +292,19 @@ final class og extends SimEntity {
                 stackIn_30_2 = null;
                 stackIn_30_4 = wc.field_H;
               }
-              stackIn_29_0.field_Yb = new cj(stackIn_29_3, stackIn_30_4);
+              stackIn_29_0.field_Yb = new UiComponent(stackIn_29_3, stackIn_30_4);
               var12.a((byte) 50, var12.field_Yb);
               var12.field_Yb.field_R = 2;
-              var12.field_ac = new cj(0L, m.field_x);
+              var12.field_ac = new UiComponent(0L, m.field_x);
               var12.a((byte) 50, var12.field_ac);
-              var12.field_hc = new cj(0L, cm.field_b);
+              var12.field_hc = new UiComponent(0L, cm.field_b);
               var12.a((byte) 50, var12.field_hc);
-              var12.field_pc = new cj(0L, cm.field_b);
+              var12.field_pc = new UiComponent(0L, cm.field_b);
               var12.a((byte) 50, var12.field_pc);
-              var12.field_Rb = new cj(0L, vo.field_m);
+              var12.field_Rb = new UiComponent(0L, vo.field_m);
               var12.a((byte) 50, var12.field_Rb);
-              var12.f(-128);
-              var12.field_oc = new cj(0L, fd.field_O);
+              var12.markDescendantsToInheritVisualState(-128);
+              var12.field_oc = new UiComponent(0L, fd.field_O);
               var12.a((byte) 50, var12.field_oc);
               var13 = 1;
             }
@@ -417,12 +417,12 @@ final class og extends SimEntity {
                 }
               }
               if (var12.field_oc.field_wb != null) {
-                var12.field_oc.a(jk.field_f, var31, 68, 0, -3344);
+                var12.field_oc.setBounds(jk.field_f, var31, 68, 0, -3344);
               } else {
-                var12.field_Kb.a(jk.field_f, var31, 68, 0, -3344);
+                var12.field_Kb.setBounds(jk.field_f, var31, 68, 0, -3344);
               }
               var12.field_Gb.field_wb = BitmapFont.a(var12.field_Gb.field_yb, var32, 78);
-              var12.field_Gb.a(jk.field_f, var31, 78, 70, -3344);
+              var12.field_Gb.setBounds(jk.field_f, var31, 78, 70, -3344);
               if (var12.field_Gb.field_L &&
                 !var12.field_Gb.field_wb.equals(var32)) {
                 ui.field_j = var32;
@@ -432,22 +432,22 @@ final class og extends SimEntity {
                 var12.field_Ib.field_R = 2;
                 var12.field_gc.field_wb = "/" + var12.field_mc;
                 var33_int = (348 - var12.field_gc.field_yb.a("/")) / 2;
-                var12.field_Ib.a(jk.field_f, var31, -150 + var33_int, 150, -3344);
-                var12.field_gc.a(jk.field_f, var31, 198 - var33_int, var33_int, -3344);
+                var12.field_Ib.setBounds(jk.field_f, var31, -150 + var33_int, 150, -3344);
+                var12.field_gc.setBounds(jk.field_f, var31, 198 - var33_int, var33_int, -3344);
               } else {
                 var12.field_Ib.field_R = 1;
-                var12.field_Ib.a(jk.field_f, var31, 48, 150, -3344);
+                var12.field_Ib.setBounds(jk.field_f, var31, 48, 150, -3344);
               }
               var12.field_Lb.field_wb = Integer.toString(var12.field_Ub);
-              var12.field_Lb.a(jk.field_f, var31, 48, 200, -3344);
+              var12.field_Lb.setBounds(jk.field_f, var31, 48, 200, -3344);
               stackIn_69_0 = (tb.field_u) ? 250 : 200;
               var33_intLifetime1 = stackIn_69_0;
-              var12.field_jc.a(jk.field_f, var31, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, -3344);
+              var12.field_jc.setBounds(jk.field_f, var31, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, -3344);
               var34_int = LevelFileCatalog.field_c;
               if ((var14Lifetime1 & 1 << jq.field_f) != 0) {
                 var50_ref = qp.field_u[var12.field_Pb];
                 var12.field_Xb.field_rb = var50_ref;
-                var12.field_Xb.a(var12.field_jc.field_z, 0, var50_ref.fullWidth, var34_int, -3344);
+                var12.field_Xb.setBounds(var12.field_jc.field_z, 0, var50_ref.fullWidth, var34_int, -3344);
                 var34_int = var34_int + (LevelFileCatalog.field_c + var50_ref.fullWidth);
               }
               if (0 != (var14Lifetime1 & 1 << ho.field_l)) {
@@ -465,13 +465,13 @@ final class og extends SimEntity {
                 }
                 var51_ref = stackIn_80_0[stackIn_81_1];
                 var12.field_kc.field_rb = var51_ref;
-                var12.field_kc.a(var12.field_jc.field_z, 0, var51_ref.fullWidth, var34_int, -3344);
+                var12.field_kc.setBounds(var12.field_jc.field_z, 0, var51_ref.fullWidth, var34_int, -3344);
                 var34_int = var34_int + (LevelFileCatalog.field_c + var51_ref.fullWidth);
               }
               if (0 != (1 << el.field_M & var14Lifetime1)) {
                 var52_ref = we.field_j[var12.field_fc - 1];
                 var12.field_Tb.field_rb = var52_ref;
-                var12.field_Tb.a(var12.field_jc.field_z, 0, var52_ref.fullWidth, var34_int, -3344);
+                var12.field_Tb.setBounds(var12.field_jc.field_z, 0, var52_ref.fullWidth, var34_int, -3344);
                 var34_int = var34_int + (LevelFileCatalog.field_c + var52_ref.fullWidth);
               }
               if ((1 << UnitView.field_J & var14Lifetime1) != 0) {
@@ -483,7 +483,7 @@ final class og extends SimEntity {
                 }
                 var53_ref = stackIn_89_0[stackIn_90_1];
                 var12.field_ec.field_rb = var53_ref;
-                var12.field_ec.a(var12.field_jc.field_z, 0, var53_ref.fullWidth, var34_int, -3344);
+                var12.field_ec.setBounds(var12.field_jc.field_z, 0, var53_ref.fullWidth, var34_int, -3344);
                 var34_int = var34_int + (var53_ref.fullWidth + LevelFileCatalog.field_c);
               }
               if (null != um.field_g) {
@@ -493,7 +493,7 @@ final class og extends SimEntity {
                     var42 = um.field_g[var36Lifetime1][255 & var12.field_Zb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_Qb[var36Lifetime1].field_rb = var42;
-                    var12.field_Qb[var36Lifetime1].a(var12.field_jc.field_z, 0, var54.fullWidth, var34_int, -3344);
+                    var12.field_Qb[var36Lifetime1].setBounds(var12.field_jc.field_z, 0, var54.fullWidth, var34_int, -3344);
                     var34_int = var34_int + (LevelFileCatalog.field_c + var54.fullWidth);
                   }
                 }
@@ -525,12 +525,12 @@ final class og extends SimEntity {
                   var12.field_Yb.field_wb = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Yb.a(jk.field_f, var31, var12.field_zb - 365, 365, -3344);
+              var12.field_Yb.setBounds(jk.field_f, var31, var12.field_zb - 365, 365, -3344);
               var31 = var31 + jk.field_f;
               if (null != var12.field_bc) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(ko.field_k);
+                discarded$1 = var37.append(PowerupBar.field_k);
                 discarded$2 = var37.append(var12.field_bc[0]);
                 for (var38_intLifetime1 = 1; var12.field_cc > var38_intLifetime1; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -539,17 +539,17 @@ final class og extends SimEntity {
                 var38 = var37.toString();
                 var12.field_ac.field_wb = var38;
                 var39Lifetime1 = var12.field_ac.field_yb.b(var38, -(2 * var12.field_ac.field_V) + var12.field_zb);
-                var12.field_ac.a(var39Lifetime1 * jk.field_f, var31, var12.field_zb, 0, -3344);
+                var12.field_ac.setBounds(var39Lifetime1 * jk.field_f, var31, var12.field_zb, 0, -3344);
                 var31 = var31 + jk.field_f * var39Lifetime1;
               }
               if (var12.field_lc) {
                 var12.field_hc.field_wb = vl.a(hj.field_b, new String[]{var32}, 2);
-                var12.field_hc.a(jk.field_f, var31, var12.field_zb - 2 * nj.field_h, nj.field_h, -3344);
+                var12.field_hc.setBounds(jk.field_f, var31, var12.field_zb - 2 * nj.field_h, nj.field_h, -3344);
                 var31 = var31 + jk.field_f;
               }
               if (var12.field_rc) {
                 var12.field_pc.field_wb = vl.a(ArchiveIndex.field_k, new String[]{var32}, 2);
-                var12.field_pc.a(jk.field_f, var31, var12.field_zb - nj.field_h * 2, nj.field_h, -3344);
+                var12.field_pc.setBounds(jk.field_f, var31, var12.field_zb - nj.field_h * 2, nj.field_h, -3344);
                 var31 = var31 + jk.field_f;
               }
             }
@@ -560,14 +560,14 @@ final class og extends SimEntity {
               var34_intLifetime1 = var12.field_Rb.field_yb.b(var33, -nj.field_h + (var12.field_zb - nj.field_h));
               var12.field_Rb.field_Y = var12.field_Jb * 256 / UnitStateEvent.field_r;
               var12.field_Rb.field_wb = var33;
-              var12.field_Rb.a(var34_intLifetime1 * jk.field_f, var31, var12.field_zb - nj.field_h * 2, nj.field_h, -3344);
+              var12.field_Rb.setBounds(var34_intLifetime1 * jk.field_f, var31, var12.field_zb - nj.field_h * 2, nj.field_h, -3344);
               var31 = var31 + var34_intLifetime1 * jk.field_f;
             }
             if (var7_int == 0) {
               var12.field_I = var31 - var12.field_z;
             }
             if (var13 != 0) {
-              SimEntity.field_H.field_Gb.a(2, var12, 1300, (cj) (var11));
+              SimEntity.field_H.field_Gb.placeBelow(2, var12, 1300, (UiComponent) (var11));
             }
             for (var34_intLifetime2 = 0; kj.field_h > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Qb[var34_intLifetime2].field_L) {

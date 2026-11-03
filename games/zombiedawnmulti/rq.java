@@ -136,11 +136,11 @@ final class rq extends IntrusiveNode {
         }
         if (null != wd.field_G) {
           var1 = wn.a(-125, PowerupEvent.field_m << 7) * 4 >> 16;
-          stackIn_7_0 = fb.field_e.camera;
+          stackIn_7_0 = PowerupButton.field_e.camera;
           stackIn_7_1 = 9 + wd.field_G.getX(119);
           stackIn_8_2 = (wd.field_G instanceof PortalView) ? 30 : 0;
-          var2 = (int)((float)((Camera) (Object) stackIn_7_0).worldToScreenX(stackIn_7_1 + stackIn_8_2, -20126) / fb.field_e.camera.zoom);
-          var3 = (int)((float)fb.field_e.camera.worldToScreenY(-72 + (wd.field_G.getY(param0 ^ -80) + 6), 112) / fb.field_e.camera.zoom);
+          var2 = (int)((float)((Camera) (Object) stackIn_7_0).worldToScreenX(stackIn_7_1 + stackIn_8_2, -20126) / PowerupButton.field_e.camera.zoom);
+          var3 = (int)((float)PowerupButton.field_e.camera.worldToScreenY(-72 + (wd.field_G.getY(param0 ^ -80) + 6), 112) / PowerupButton.field_e.camera.zoom);
           var4_int = 2 + (var2 + var1);
           var5_int = -var1 + var3 - 2;
           if (0 == var1) {

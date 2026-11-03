@@ -143,7 +143,7 @@ final class ee {
         }
         if (wp.field_g.field_f != 1) {
         }
-        vo.field_l = sb.field_i;
+        vo.field_l = IndexedSpriteState.field_i;
         wp.field_g = null;
         return true;
     }

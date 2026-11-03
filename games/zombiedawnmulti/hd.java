@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class hd extends un {
+final class hd extends TextInputValidator {
     private qp field_z;
     private String field_v;
     static ao field_r;
     private boolean field_y;
     static ao field_w;
     static String field_t;
-    static cj field_x;
+    static UiComponent field_x;
     static fe field_s;
     static int field_q;
     static int field_u;

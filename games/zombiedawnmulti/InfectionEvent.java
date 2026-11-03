@@ -166,7 +166,7 @@ final class InfectionEvent extends GameEvent {
             for (var8Lifetime1 = param5; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = la.field_c[var8Lifetime1];
               var10Lifetime1 = la.field_c[1 + var8Lifetime1];
-              if (un.a(101, param3, var9Lifetime1, var10Lifetime1)) {
+              if (TextInputValidator.a(101, param3, var9Lifetime1, var10Lifetime1)) {
                 la.field_c[var8Lifetime1] = var10Lifetime1;
                 la.field_c[1 + var8Lifetime1] = var9Lifetime1;
               }

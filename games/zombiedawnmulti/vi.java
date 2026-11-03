@@ -22,7 +22,7 @@ final class vi {
         boolean stackIn_49_4 = false;
         int stackIn_52_0 = 0;
         int stackIn_66_0 = 0;
-        cj stackIn_103_0;
+        UiComponent stackIn_103_0;
         int stackIn_103_1;
         int stackIn_103_2;
         int stackIn_103_3;
@@ -44,11 +44,11 @@ final class vi {
         Object var11 = null;
         dm var12 = null;
         int var13 = 0;
-        cj var14 = null;
-        cj var15 = null;
-        cj var16 = null;
-        cj var17 = null;
-        cj var18 = null;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -150,19 +150,19 @@ final class vi {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_Cb == null) {
-              var12.field_Ub = new cj(0L, m.field_x);
+              var12.field_Ub = new UiComponent(0L, m.field_x);
               var12.a((byte) 50, var12.field_Ub);
-              var12.field_Gb = new cj(0L, wc.field_H);
+              var12.field_Gb = new UiComponent(0L, wc.field_H);
               if (tb.field_u) {
                 var12.a((byte) 50, var12.field_Gb);
               }
               var12.field_Gb.field_R = 2;
-              var12.field_Hb = new cj(0L, vo.field_m);
+              var12.field_Hb = new UiComponent(0L, vo.field_m);
               var12.a((byte) 50, var12.field_Hb);
-              var12.f(-128);
-              var12.field_Tb = new cj(0L, fd.field_O);
+              var12.markDescendantsToInheritVisualState(-128);
+              var12.field_Tb = new UiComponent(0L, fd.field_O);
               var12.a((byte) 50, var12.field_Tb);
-              var12.field_cc = new cj(0L, de.field_f);
+              var12.field_cc = new UiComponent(0L, de.field_f);
               var12.a((byte) 50, var12.field_cc);
               var13 = 1;
             }
@@ -256,7 +256,7 @@ final class vi {
                 ~ie.field_sb != ~var12.field_ec) {
                 if (null != var12.field_Tb.field_wb) {
                   var26 = var12.field_Tb.e(param2 - 45) + 2 * nj.field_h;
-                  var12.field_Tb.a(jk.field_f, var19, var26, var25_int, -3344);
+                  var12.field_Tb.setBounds(jk.field_f, var19, var26, var25_int, -3344);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_cc.field_wb) {
@@ -265,7 +265,7 @@ final class vi {
                   } else {
                     var26Lifetime2 = var12.field_cc.e(0) + 2 * nj.field_h;
                   }
-                  var12.field_cc.a(jk.field_f, var19, var26Lifetime2, var25_int, -3344);
+                  var12.field_cc.setBounds(jk.field_f, var19, var26Lifetime2, var25_int, -3344);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -279,9 +279,9 @@ final class vi {
               } else {
                 stackIn_104_5 = 42;
               }
-              ((cj) (Object) stackIn_103_0).a(stackIn_103_1, stackIn_103_2, stackIn_103_3 + (stackIn_103_4 - stackIn_104_5), var25_int, -3344);
+              ((UiComponent) (Object) stackIn_103_0).setBounds(stackIn_103_1, stackIn_103_2, stackIn_103_3 + (stackIn_103_4 - stackIn_104_5), var25_int, -3344);
               var12.field_Gb.field_wb = Integer.toString(var12.field_Mb);
-              var12.field_Gb.a(jk.field_f, var19, 40, var12.field_zb - 40, -3344);
+              var12.field_Gb.setBounds(jk.field_f, var19, 40, var12.field_zb - 40, -3344);
               if (var12.field_Ub.field_L &&
                 var22 != 0) {
                 ui.field_j = var12.field_Lb;
@@ -307,14 +307,14 @@ final class vi {
               var24_intLifetime1 = var12.field_Hb.field_yb.b(var23, -nj.field_h + (var12.field_zb - nj.field_h));
               var12.field_Hb.field_wb = var23;
               var12.field_Hb.field_Y = 256 * var12.field_bc / UnitStateEvent.field_r;
-              var12.field_Hb.a(jk.field_f * var24_intLifetime1, var19, -(2 * nj.field_h) + var12.field_zb, nj.field_h, -3344);
+              var12.field_Hb.setBounds(jk.field_f * var24_intLifetime1, var19, -(2 * nj.field_h) + var12.field_zb, nj.field_h, -3344);
               var19 = var19 + jk.field_f * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.field_I = -var12.field_z + var19;
             }
             if (var13 != 0) {
-              param3.field_Gb.a(2, var12, 1300, (cj) (var11));
+              param3.field_Gb.placeBelow(2, var12, 1300, (UiComponent) (var11));
             }
             if (var12.field_T != 0 &&
               !var12.c((byte) 15)) {

@@ -282,8 +282,8 @@ final class GameCharacter extends UnitView {
           }
           if (this.field_xb &&
             this.field_nb &&
-            ~this.team == ~fb.field_e.localTeam) {
-            MidiPcmStream.field_B = fb.field_d[PowerupEvent.field_m % fb.field_d.length];
+            ~this.team == ~PowerupButton.field_e.localTeam) {
+            MidiPcmStream.field_B = PowerupButton.field_d[PowerupEvent.field_m % PowerupButton.field_d.length];
             mo.field_Ib = BufferedSocket.field_p[PowerupEvent.field_m % BufferedSocket.field_p.length];
           }
           return;
@@ -669,11 +669,11 @@ final class GameCharacter extends UnitView {
                 }
               }
               regionExit1: {
-                if (null != fb.field_e) {
+                if (null != PowerupButton.field_e) {
                   var16 = this.team;
                   if (this.field_xb &&
                     this.field_nb) {
-                    var16 = fb.field_e.localTeam;
+                    var16 = PowerupButton.field_e.localTeam;
                     if (var16 < 0) {
                       var16 = (this.team + 1) % PortalEntryEvent.field_m.teamCount;
                     }
@@ -981,11 +981,11 @@ final class GameCharacter extends UnitView {
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fb.field_e == null) {
+          if (PowerupButton.field_e == null) {
             return false;
           }
           var2_int = 97 % ((58 - param0) / 58);
-          stackIn_7_0 = (~this.team == ~fb.field_e.localTeam);
+          stackIn_7_0 = (~this.team == ~PowerupButton.field_e.localTeam);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1165,7 +1165,7 @@ final class GameCharacter extends UnitView {
             this.field_Jb = param3;
             this.field_Ib = param1;
             this.field_tb = param2;
-            this.field_gb = fb.field_e.navigation.findPath(this.getX(126), this.field_Jb, this.getY(-73), this.field_tb, 8760);
+            this.field_gb = PowerupButton.field_e.navigation.findPath(this.getX(126), this.field_Jb, this.getY(-73), this.field_tb, 8760);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1388,7 +1388,7 @@ final class GameCharacter extends UnitView {
                     if (this.field_lb != 30) {
                       break regionExit1;
                     }
-                    fb.field_e.a(1, this.field_Eb.getX(76), this.field_Eb.getY(117));
+                    PowerupButton.field_e.a(1, this.field_Eb.getX(76), this.field_Eb.getY(117));
                     if (var3 == 0) {
                       break regionExit1;
                     }
@@ -1401,8 +1401,8 @@ final class GameCharacter extends UnitView {
                       if (this.animationFrame != 5) {
                         break regionExit1;
                       }
-                      fb.field_e.a(1, this.getX(124), this.getY(-105));
-                      fb.field_e.deselectCharacter(true, this);
+                      PowerupButton.field_e.a(1, this.getX(124), this.getY(-105));
+                      PowerupButton.field_e.deselectCharacter(true, this);
                       if (this.field_jb == null) {
                         break regionExit1;
                       }
@@ -1422,7 +1422,7 @@ final class GameCharacter extends UnitView {
                           if (4 != this.animationFrame) {
                             break regionExit1;
                           }
-                          stackIn_158_0 = fb.field_e.sceneObjects;
+                          stackIn_158_0 = PowerupButton.field_e.sceneObjects;
                           stackIn_158_1 = null;
                           stackIn_158_2 = null;
                           stackIn_158_3 = this.getX(113);
@@ -1481,12 +1481,12 @@ final class GameCharacter extends UnitView {
                           if (this.state == 17) {
                             if (this.animationFrame == 3 &&
                               this.animationTicks == 0) {
-                              fb.field_e.a((byte) 126, this.getX(-113), this.getY(-82), this.team);
+                              PowerupButton.field_e.a((byte) 126, this.getX(-113), this.getY(-82), this.team);
                             }
                             if (this.animationFrame < 5) {
                               break regionExit1;
                             }
-                            fb.field_e.deselectCharacter(true, this);
+                            PowerupButton.field_e.deselectCharacter(true, this);
                             PortalEntryEvent.field_m.addEntity(-119, (TertiaryLinkNode) (this));
                             if (var3 == 0) {
                               break regionExit1;
@@ -1563,7 +1563,7 @@ final class GameCharacter extends UnitView {
                       }
                       this.animationFrame = 0;
                       this.field_xb = false;
-                      fb.field_e.b(this.field_Hb, 0, this.getY(-71), this.getX(-88));
+                      PowerupButton.field_e.b(this.field_Hb, 0, this.getY(-71), this.getX(-88));
                       this.b(false);
                       if (var3 == 0) {
                         break regionExit1;

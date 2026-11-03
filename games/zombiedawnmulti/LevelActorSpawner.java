@@ -585,14 +585,14 @@ final class LevelActorSpawner extends LevelData {
             sp.field_g == -5 ||
             1 == sp.field_g ||
             8 == sp.field_g) {
-            cj.d(false, 0);
+            UiComponent.d(false, 0);
             if ((var5 != 0) &&
               (sp.field_g == 15)) {
-              cj.d(false, 10);
+              UiComponent.d(false, 10);
             }
           } else {
             if (sp.field_g == 15) {
-              cj.d(false, 10);
+              UiComponent.d(false, 10);
             }
           }
           if (-4 == sp.field_g) {
@@ -615,7 +615,7 @@ final class LevelActorSpawner extends LevelData {
               MouseInputHandler.a("no target_menu ", (Throwable) null, false);
               return;
             }
-            gk.a(2, sp.field_g).a(0, param0, var4_int);
+            gk.a(2, sp.field_g).onEnter(0, param0, var4_int);
             if (8 == sp.field_g) {
               LevelData.a((byte) 127, param0);
             }

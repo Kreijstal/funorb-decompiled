@@ -124,11 +124,11 @@ final class wg {
 
     final static void b(byte param0) {
         if (param0 > 36) {
-          io.a(8355711, nc.field_e, kc.field_c, wa.field_a, vo.field_m);
+          io.a(8355711, MenuScreen.field_e, kc.field_c, wa.field_a, vo.field_m);
           return;
         }
         field_a = (String) null;
-        io.a(8355711, nc.field_e, kc.field_c, wa.field_a, vo.field_m);
+        io.a(8355711, MenuScreen.field_e, kc.field_c, wa.field_a, vo.field_m);
     }
 
     static {

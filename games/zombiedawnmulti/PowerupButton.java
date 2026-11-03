@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb {
+final class PowerupButton {
     static GameScreen field_e;
     int field_m;
     private int field_n;
@@ -80,7 +80,7 @@ final class fb {
     final static void a(int param0, int param1) {
         jk.field_j = param0;
         if (param1 < 43) {
-          fb.d(-36);
+          PowerupButton.d(-36);
         }
     }
 
@@ -125,15 +125,15 @@ final class fb {
         this.field_c = 0;
     }
 
-    final int a(byte param0) {
+    final int getPowerupType(byte param0) {
         if (param0 < 37) {
-          this.a((byte) -62);
+          this.getPowerupType((byte) -62);
           return this.field_n;
         }
         return this.field_n;
     }
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean containsPoint(int param0, int param1, byte param2) {
         boolean stackIn_18_0 = false;
         if (param2 >= -32) {
           this.a(83, (byte) -68);
@@ -283,7 +283,7 @@ final class fb {
                     this.field_h = 65;
                   }
                   if (param2 != 255) {
-                    fb.d(30);
+                    PowerupButton.d(30);
                   }
                   if (!this.field_b &&
                     this.field_h < 55) {
@@ -314,7 +314,7 @@ final class fb {
               this.field_h = 65;
             }
             if (param2 != 255) {
-              fb.d(30);
+              PowerupButton.d(30);
             }
             if (!this.field_b &&
               this.field_h < 55) {
@@ -330,7 +330,7 @@ final class fb {
             if (!this.field_k) {
               if (this.field_h <= 65) {
                 if (param2 != 255) {
-                  fb.d(30);
+                  PowerupButton.d(30);
                 }
                 if (!this.field_b &&
                   this.field_h < 55) {
@@ -341,7 +341,7 @@ final class fb {
               this.field_h = 65;
             }
             if (param2 != 255) {
-              fb.d(30);
+              PowerupButton.d(30);
             }
             if (this.field_b) {
               return;
@@ -373,7 +373,7 @@ final class fb {
                 this.field_h = 65;
               }
               if (param2 != 255) {
-                fb.d(30);
+                PowerupButton.d(30);
               }
               if (!this.field_b &&
                 this.field_h < 55) {
@@ -395,7 +395,7 @@ final class fb {
               this.field_h = 65;
             }
             if (param2 != 255) {
-              fb.d(30);
+              PowerupButton.d(30);
             }
             if (!this.field_b &&
               this.field_h < 55) {
@@ -424,7 +424,7 @@ final class fb {
           this.field_h = 65;
         }
         if (param2 != 255) {
-          fb.d(30);
+          PowerupButton.d(30);
         }
         if (this.field_b) {
           return;
@@ -435,7 +435,7 @@ final class fb {
         this.field_h = 55;
     }
 
-    fb(int param0, int param1, int param2) {
+    PowerupButton(int param0, int param1, int param2) {
         this.field_k = false;
         this.field_b = false;
         this.field_m = param0;

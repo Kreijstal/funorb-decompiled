@@ -6,7 +6,7 @@ final class gk {
     static String field_a;
     static int field_b;
 
-    final static nc a(int param0, int param1) {
+    final static MenuScreen a(int param0, int param1) {
         if (param0 != 2) {
           field_c = 127;
         }

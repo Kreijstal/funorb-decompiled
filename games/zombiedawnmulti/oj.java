@@ -6,11 +6,11 @@ final class oj extends ArrayWidgetGroup implements in {
     static Sprite[] field_M;
     static String field_H;
     static cd field_Q;
-    private gn field_B;
+    private ButtonWidget field_B;
     static byte[][] field_N;
     static String field_O;
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         if (this.field_P.a((byte) 78).d(117) != db.field_b) {
           return;
         }
@@ -39,7 +39,7 @@ final class oj extends ArrayWidgetGroup implements in {
         super(param0, param1, param2, param3, (WidgetActionListener) null);
         this.field_P = new em(new tb(10000536), tm.field_b, 0, 0, 140, 25);
         this.field_P.a(3, new dj());
-        this.field_B = new gn(ub.field_xb, (bj) (this));
+        this.field_B = new ButtonWidget(ub.field_xb, (bj) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_P), (UiWidget) ((Object) this.field_B)};
         this.field_B.listener = (WidgetActionListener) ((Object) new oq());
         this.e(-1);

@@ -9,7 +9,7 @@ final class ra extends IntrusiveNode {
     static w field_m;
     static String field_g;
     static oj field_f;
-    static cj field_j;
+    static UiComponent field_j;
     boolean field_k;
     static UiTheme field_o;
 
@@ -38,7 +38,7 @@ final class ra extends IntrusiveNode {
           String var5Lifetime3;
           String var5Lifetime4;
           try {
-            un.field_p = param2;
+            TextInputValidator.field_p = param2;
             if (param1 > -29) {
               field_o = (UiTheme) null;
             }

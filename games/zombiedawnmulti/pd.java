@@ -6,7 +6,7 @@ import java.util.*;
 final class pd {
     private Sprite[] field_d;
     static String field_f;
-    static cj field_b;
+    static UiComponent field_b;
     static String field_a;
     static String field_e;
     static int field_c;

@@ -19,7 +19,7 @@ final class GameScreen {
     private int field_Z;
     private int field_R;
     NavigationGrid navigation;
-    ko field_I;
+    PowerupBar field_I;
     private qe field_G;
     int field_j;
     private uf field_J;
@@ -270,7 +270,7 @@ final class GameScreen {
                   if (this.isInProgress((byte) 106) &&
                     this.field_w &&
                     !gf.field_h) {
-                    this.field_I.h(1);
+                    this.field_I.deselectActive(1);
                     if (!lc.field_m[81] &&
                       !lc.field_m[82]) {
                       this.clearSelection(-57);
@@ -2519,7 +2519,7 @@ final class GameScreen {
               }
             } else {
               if (!gf.field_h) {
-                this.field_I = new ko();
+                this.field_I = new PowerupBar();
                 if (!pp.field_n) {
                   var8_ref3 = FullscreenFocusCanvas.field_k;
                   var9_int = var8_ref3.g((byte) -116);
@@ -2768,7 +2768,7 @@ final class GameScreen {
               if ((PortalEntryEvent.field_m.field_C - 1550) > PortalEntryEvent.field_m.currentTick) {
                 return;
               }
-              cj.d(!param0, 12);
+              UiComponent.d(!param0, 12);
               if (var3 == 0) {
                 return;
               }
@@ -2891,14 +2891,14 @@ final class GameScreen {
             var5 == 0 || var4_int == 1) {
             if (var4_int == 0 &&
               var5 == 0 || var5 != 0) {
-              if (this.field_I.h(1)) {
+              if (this.field_I.deselectActive(1)) {
                 return;
               }
               this.clearSelection(-93);
             }
             if ((var4_int != 0 ||
               var5 != 0) && var5 == 0 || var5 != 0) {
-              if (this.field_I.h(1)) {
+              if (this.field_I.deselectActive(1)) {
                 return;
               }
               if (0 < this.selection.size((byte) 98) &&
@@ -2976,17 +2976,17 @@ final class GameScreen {
         }
     }
 
-    final static cj a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8, int param9, int param10, int param11, int param12) {
-        cj var13 = null;
+    final static UiComponent a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8, int param9, int param10, int param11, int param12) {
+        UiComponent var13 = null;
         RuntimeException var13_ref = null;
         int var14 = 0;
-        cj stackIn_1_0 = null;
+        UiComponent stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new cj(0L, (cj) null);
+          var13 = new UiComponent(0L, (UiComponent) null);
           var14 = -121 % ((param7 - 81) / 36);
           var13.field_ab = bk.a(param3, param6, (byte) 28);
           var13.field_X = bk.a(param4, param11, (byte) 28);
@@ -3221,7 +3221,7 @@ final class GameScreen {
             }
             if (decompiledFrameRemainder1) {
               if (param1 > -97) {
-                this.field_I = (ko) null;
+                this.field_I = (PowerupBar) null;
               }
               return;
             }
@@ -3510,7 +3510,7 @@ final class GameScreen {
             var7 = this.field_I.b(false);
             if (var7 > 0 &&
               6 != PowerupEvent.field_t) {
-              stackIn_89_0 = (this.field_I.e(-1) != 9) ? 0 : 1;
+              stackIn_89_0 = (this.field_I.getSelectedPowerupType(-1) != 9) ? 0 : 1;
               var8_int = stackIn_89_0;
               var9_int = this.camera.screenToWorldX(-(int)((float)(24 * var7) / this.camera.zoom) + MouseInputHandler.field_g, 2);
               var10 = this.camera.screenToWorldY(true, bo.field_d - (int)((float)(var7 * 24) / this.camera.zoom));
@@ -3569,7 +3569,7 @@ final class GameScreen {
             if (decompiledFrameCompleted1) {
               stackIn_117_0 = 15;
             }
-            stackIn_121_0 = (stackIn_117_0 != this.field_I.e(-1)) ? 0 : 1;
+            stackIn_121_0 = (stackIn_117_0 != this.field_I.getSelectedPowerupType(-1)) ? 0 : 1;
             var8_int = stackIn_121_0;
             if (var8_int != 0) {
               var9_int = this.camera.screenToWorldX(MouseInputHandler.field_g - (int)((float)(var7 * 24) / this.camera.zoom), 2);
@@ -3854,7 +3854,7 @@ final class GameScreen {
                 var9_int = PortalEntryEvent.field_m.field_C - PortalEntryEvent.field_m.currentTick;
                 if (var9_int < 1550) {
                   if (gf.field_h) {
-                    var8.b(gn.field_E, 320, 120, 0, -1);
+                    var8.b(ButtonWidget.field_E, 320, 120, 0, -1);
                     if (var20 != 0) {
                       var8.b(sm.field_f, 320, 120, 0, -1);
                       if (var9_int > 2750 &&
@@ -4762,7 +4762,7 @@ final class GameScreen {
         this.field_i = new int[256];
         this.field_g = 1;
         try {
-          fb.field_e = this;
+          PowerupButton.field_e = this;
           mj.field_Hb[2].field_g.field_d = 0;
           gf.field_h = !(param2 >= 0);
           tg.field_e = param1;
@@ -4803,7 +4803,7 @@ final class GameScreen {
               var4[var8] = param0.field_D[var7][0];
               var6[var8] = 25;
               if (var9 == 0) {
-                if (~var7 == ~fb.field_e.localTeam) {
+                if (~var7 == ~PowerupButton.field_e.localTeam) {
                   var8++;
                   var5[var8] = param0.field_D[var7][1];
                   var4[var8] = param0.field_D[var7][0];
@@ -4824,7 +4824,7 @@ final class GameScreen {
               var4[var5.length - 1] = var4[0];
               BufferedSocket.field_p = ao.a(var5, -837539512, var6);
             }
-            fb.field_d = ao.a(var4, -837539512, var6);
+            PowerupButton.field_d = ao.a(var4, -837539512, var6);
             return;
           }
           return;

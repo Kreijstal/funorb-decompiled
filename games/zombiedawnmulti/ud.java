@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends gn {
+final class ud extends ButtonWidget {
     int field_X;
     static ip field_cb;
     static boolean field_S;
@@ -15,7 +15,7 @@ final class ud extends gn {
     static Sprite field_P;
     static String field_Y;
     static IndexedSprite field_Q;
-    static cj field_M;
+    static UiComponent field_M;
     static int[] field_V;
     static String field_Z;
     static String[] field_O;

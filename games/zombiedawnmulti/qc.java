@@ -6,7 +6,7 @@ abstract class qc extends DualLinkNode {
     boolean field_x;
     boolean field_r;
     static int field_q;
-    static cj field_u;
+    static UiComponent field_u;
     static int field_v;
     static String field_w;
     volatile boolean field_t;
@@ -158,7 +158,7 @@ abstract class qc extends DualLinkNode {
           var2_int = param1.length();
           var3 = new char[var2_int];
           if (param0 != -32) {
-            field_u = (cj) null;
+            field_u = (UiComponent) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             var3[-var4 - 1 + var2_int] = param1.charAt(var4);

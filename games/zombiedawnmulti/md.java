@@ -301,12 +301,12 @@ final class md {
         mo[] array$1 = null;
         mo[] array$2 = null;
         int var19 = 0;
-        cj stackIn_5_0;
-        cj stackIn_5_1;
+        UiComponent stackIn_5_0;
+        UiComponent stackIn_5_1;
         long stackIn_5_2;
-        cj stackIn_5_3;
-        cj stackIn_6_0 = null;
-        cj stackIn_6_1 = null;
+        UiComponent stackIn_5_3;
+        UiComponent stackIn_6_0 = null;
+        UiComponent stackIn_6_1 = null;
         String stackIn_6_4 = null;
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
@@ -333,16 +333,16 @@ final class md {
         String stackIn_108_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        cj var16 = null;
+        UiComponent var16 = null;
         int var17_int = 0;
-        cj var17 = null;
+        UiComponent var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
         CharSequence var22 = null;
-        cj var24 = null;
-        cj var25 = null;
+        UiComponent var24 = null;
+        UiComponent var25 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
@@ -373,33 +373,33 @@ final class md {
           t.field_c[4] = vo.field_s;
           t.field_c[0] = vb.field_g;
           t.field_c[1] = ka.field_m;
-          pd.field_b = new cj(0L, (cj) null);
-          dm.field_ac = new cj(0L, vd.field_a, GameScreen.field_r);
-          mo.field_Hb = new cj(0L, pn.field_g, cg.field_j);
-          hf.field_e = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
+          pd.field_b = new UiComponent(0L, (UiComponent) null);
+          dm.field_ac = new UiComponent(0L, vd.field_a, GameScreen.field_r);
+          mo.field_Hb = new UiComponent(0L, pn.field_g, cg.field_j);
+          hf.field_e = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           pd.field_b.a((byte) 50, dm.field_ac);
           if (tb.field_u) {
             pd.field_b.a((byte) 50, mo.field_Hb);
           }
           pd.field_b.a((byte) 50, hf.field_e);
-          hf.field_e.field_Jb.b((byte) -32, vo.field_m);
+          hf.field_e.field_Jb.copyStyle((byte) -32, vo.field_m);
           hf.field_e.field_Jb.field_lb = 1;
           var24 = hf.field_e.field_Jb;
           var25 = var24;
           var25.field_R = 1;
-          ql.field_b = new cj(0L, vo.field_m);
+          ql.field_b = new UiComponent(0L, vo.field_m);
           ql.field_b.field_R = 1;
-          kj.field_u = new cj(0L, ai.field_c, SecondaryNodeDeque.field_b.toUpperCase());
-          ro.field_O = new cj(0L, LevelFileCatalog.field_d, AttackEvent.field_j.toUpperCase());
-          ml.field_Lb = new cj(0L, cg.field_f);
-          PacketBuffer.field_g = new cj(0L, vd.field_a, vh.field_Nb);
-          ud.field_M = new cj(0L, al.field_fb, GameWorld.field_p);
-          tk.field_l = new cj(0L, al.field_fb, ck.field_b);
-          sc.field_d = new cj(0L, al.field_fb, jl.field_t);
-          InflaterDecompressor.field_h = new cj(0L, al.field_fb, PortalEntryEvent.field_k);
-          bp.field_w = new cj(0L, pn.field_g, fd.field_N);
-          SimEntity.field_H = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
-          ia.field_t = new cj(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
+          kj.field_u = new UiComponent(0L, ai.field_c, SecondaryNodeDeque.field_b.toUpperCase());
+          ro.field_O = new UiComponent(0L, LevelFileCatalog.field_d, AttackEvent.field_j.toUpperCase());
+          ml.field_Lb = new UiComponent(0L, cg.field_f);
+          PacketBuffer.field_g = new UiComponent(0L, vd.field_a, vh.field_Nb);
+          ud.field_M = new UiComponent(0L, al.field_fb, GameWorld.field_p);
+          LaboratoryScreen.field_l = new UiComponent(0L, al.field_fb, ck.field_b);
+          sc.field_d = new UiComponent(0L, al.field_fb, jl.field_t);
+          InflaterDecompressor.field_h = new UiComponent(0L, al.field_fb, PortalEntryEvent.field_k);
+          bp.field_w = new UiComponent(0L, pn.field_g, fd.field_N);
+          SimEntity.field_H = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
+          ia.field_t = new UiComponent(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
           ia.field_t.field_Z = tb.field_u;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
@@ -414,8 +414,8 @@ final class md {
             stackIn_6_1 = null;
             stackIn_6_4 = TertiaryLinkNode.field_t;
           }
-          ArrayWidgetGroup.field_L = new cj(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          cm.field_a = new cj(0L, (cj) null);
+          ArrayWidgetGroup.field_L = new UiComponent(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
+          cm.field_a = new UiComponent(0L, (UiComponent) null);
           cm.field_a.a((byte) 50, ro.field_O);
           if (!param10) {
             var22 = (CharSequence) null;
@@ -424,7 +424,7 @@ final class md {
           cm.field_a.a((byte) 50, ml.field_Lb);
           ml.field_Lb.a((byte) 50, PacketBuffer.field_g);
           ml.field_Lb.a((byte) 50, ud.field_M);
-          ml.field_Lb.a((byte) 50, tk.field_l);
+          ml.field_Lb.a((byte) 50, LaboratoryScreen.field_l);
           if (tb.field_u) {
             ml.field_Lb.a((byte) 50, sc.field_d);
           }
@@ -435,66 +435,66 @@ final class md {
             cm.field_a.a((byte) 50, ia.field_t);
           }
           cm.field_a.a((byte) 50, ArrayWidgetGroup.field_L);
-          sc.field_j = new cj(0L, vo.field_m);
+          sc.field_j = new UiComponent(0L, vo.field_m);
           sc.field_j.field_lb = 0;
           sc.field_j.field_R = 1;
-          kn.field_a = new cj(0L, GameWorld.field_n, ji.field_e.toUpperCase());
-          SimHuman.field_gb = new cj(0L, wa.field_a);
+          kn.field_a = new UiComponent(0L, GameWorld.field_n, ji.field_e.toUpperCase());
+          SimHuman.field_gb = new UiComponent(0L, wa.field_a);
           SimHuman.field_gb.a((byte) 50, sc.field_j);
           SimHuman.field_gb.a((byte) 50, kn.field_a);
-          UiTheme.field_i = new cj(0L, nc.field_e);
-          UiTheme.field_i.b((byte) -32, vo.field_m);
+          UiTheme.field_i = new UiComponent(0L, MenuScreen.field_e);
+          UiTheme.field_i.copyStyle((byte) -32, vo.field_m);
           var16 = UiTheme.field_i;
           UiTheme.field_i.field_lb = 1;
           var16.field_R = 1;
-          CipherPacketBuffer.field_r = new cj(0L, (cj) null);
-          ClientException.field_h = new cj(0L, vo.field_m);
+          CipherPacketBuffer.field_r = new UiComponent(0L, (UiComponent) null);
+          ClientException.field_h = new UiComponent(0L, vo.field_m);
           ClientException.field_h.field_R = 1;
-          ie.field_jb = new cj(0L, vd.field_a, GameScreen.field_r);
-          bf.field_h = new cj(0L, pn.field_g, cg.field_j);
-          bf.field_n = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
+          ie.field_jb = new UiComponent(0L, vd.field_a, GameScreen.field_r);
+          bf.field_h = new UiComponent(0L, pn.field_g, cg.field_j);
+          bf.field_n = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
           CipherPacketBuffer.field_r.a((byte) 50, ClientException.field_h);
           CipherPacketBuffer.field_r.a((byte) 50, ie.field_jb);
           if (tb.field_u) {
             CipherPacketBuffer.field_r.a((byte) 50, bf.field_h);
           }
           CipherPacketBuffer.field_r.a((byte) 50, bf.field_n);
-          jp.field_b = new cj(0L, ai.field_c, pi.field_b.toUpperCase());
-          gg.field_m = new cj(0L, LevelFileCatalog.field_d);
-          SocketConnector.field_a = new cj(0L, cg.field_f);
-          ik.field_d = new cj(0L, hd.field_x, vb.field_d.toUpperCase());
-          mi.field_Ib = new cj[4 + param9];
+          jp.field_b = new UiComponent(0L, ai.field_c, pi.field_b.toUpperCase());
+          gg.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
+          SocketConnector.field_a = new UiComponent(0L, cg.field_f);
+          ik.field_d = new UiComponent(0L, hd.field_x, vb.field_d.toUpperCase());
+          mi.field_Ib = new UiComponent[4 + param9];
           ma.field_b = new mo[param9 + 4][];
-          mi.field_Ib[0] = new cj(0L, m.field_B, kg.field_f);
+          mi.field_Ib[0] = new UiComponent(0L, m.field_B, kg.field_f);
           ma.field_b[0] = new mo[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            ma.field_b[0][1 + var17_int] = new mo(0L, uq.field_d, (cj) null, cm.field_b, qp.field_u[var17_int], t.field_c[var17_int]);
+            ma.field_b[0][1 + var17_int] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, qp.field_u[var17_int], t.field_c[var17_int]);
           }
           if (qo.field_r.length >= 2) {
-            mi.field_Ib[1] = new cj(0L, m.field_B, gi.field_n);
+            mi.field_Ib[1] = new UiComponent(0L, m.field_B, gi.field_n);
             array$0 = new mo[1 + qo.field_r.length];
             ma.field_b[1] = array$0;
-            ma.field_b[1][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb);
+            ma.field_b[1][0] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < qo.field_r.length; var17_intLifetime1++) {
-              ma.field_b[1][1 + var17_intLifetime1] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, Integer.toString(qo.field_r[var17_intLifetime1]));
+              ma.field_b[1][1 + var17_intLifetime1] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, Integer.toString(qo.field_r[var17_intLifetime1]));
             }
           }
-          mi.field_Ib[2] = new cj(0L, m.field_B, qj.field_j);
-          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[1], PowerupEvent.field_k)};
+          mi.field_Ib[2] = new UiComponent(0L, m.field_B, qj.field_j);
+          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[1], PowerupEvent.field_k)};
           if (r.field_f > 1) {
-            mi.field_Ib[3] = new cj(0L, m.field_B, gj.field_d);
+            mi.field_Ib[3] = new UiComponent(0L, m.field_B, gj.field_d);
             array$1 = new mo[r.field_f + 1];
             ma.field_b[3] = array$1;
-            ma.field_b[3][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb);
+            ma.field_b[3][0] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < r.field_f; var17_intLifetime2++) {
-              ma.field_b[3][1 + var17_intLifetime2] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, um.field_b[var17_intLifetime2]);
+              ma.field_b[3][1 + var17_intLifetime2] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, um.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
-            mi.field_Ib[4 + var17_intLifetime3] = new cj(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
+            mi.field_Ib[4 + var17_intLifetime3] = new UiComponent(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
             array$2 = new mo[1 + tq.b(255, (int) ng.field_b[var17_intLifetime3])];
             ma.field_b[var17_intLifetime3 + 4] = array$2;
-            ma.field_b[var17_intLifetime3 + 4][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb);
+            ma.field_b[var17_intLifetime3 + 4][0] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb);
             for (var18 = 0; var18 < (255 & ng.field_b[var17_intLifetime3]); var18++) {
               if (ZombieDawnMulti.field_L != null) {
                 if (null == ZombieDawnMulti.field_L[var17_intLifetime3]) {
@@ -514,7 +514,7 @@ final class md {
                   var20 = ResourceArchive.field_m[var17_intLifetime3][var18];
                 }
               }
-              ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) (var19_ref), (String) (var20));
+              ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param9 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -530,14 +530,14 @@ final class md {
               }
             }
           }
-          en.field_b = new cj(0L, he.field_i);
-          GameKeyHandler.field_a = new cj(0L, he.field_i);
-          eb.field_B = new cj(0L, qc.field_u);
-          eb.field_B.b((byte) -32, vo.field_m);
+          en.field_b = new UiComponent(0L, he.field_i);
+          GameKeyHandler.field_a = new UiComponent(0L, he.field_i);
+          eb.field_B = new UiComponent(0L, qc.field_u);
+          eb.field_B.copyStyle((byte) -32, vo.field_m);
           eb.field_B.field_lb = 1;
           var17 = eb.field_B;
           var17.field_R = 1;
-          LevelData.field_a = new cj(0L, (cj) null);
+          LevelData.field_a = new UiComponent(0L, (UiComponent) null);
           LevelData.field_a.a((byte) 50, gg.field_m);
           LevelData.field_a.a((byte) 50, SocketConnector.field_a);
           SocketConnector.field_a.a((byte) 50, ik.field_d);
@@ -556,8 +556,8 @@ final class md {
           LevelData.field_a.a((byte) 50, en.field_b);
           LevelData.field_a.a((byte) 50, GameKeyHandler.field_a);
           LevelData.field_a.a((byte) 50, eb.field_B);
-          mq.field_l = new cj(0L, kc.field_c, p.field_c.toUpperCase());
-          pg.field_a = new cj(0L, GameWorld.field_n, qq.field_d.toUpperCase());
+          mq.field_l = new UiComponent(0L, kc.field_c, p.field_c.toUpperCase());
+          pg.field_a = new UiComponent(0L, GameWorld.field_n, qq.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

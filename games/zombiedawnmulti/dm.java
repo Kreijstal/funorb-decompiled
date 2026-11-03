@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends cj {
+final class dm extends UiComponent {
     boolean field_Pb;
     int field_bc;
-    cj field_Ub;
+    UiComponent field_Ub;
     boolean field_Ob;
     long field_Kb;
     static String field_Xb;
     static int[] field_Ib;
     static int field_Qb;
-    cj field_Hb;
+    UiComponent field_Hb;
     String field_Lb;
     int field_Mb;
     int field_Vb;
@@ -19,13 +19,13 @@ final class dm extends cj {
     static IndexedSprite field_Wb;
     int field_Fb;
     String field_Jb;
-    static cj field_ac;
+    static UiComponent field_ac;
     long field_ec;
     int field_Yb;
-    cj field_cc;
+    UiComponent field_cc;
     static int[] field_dc;
-    cj field_Gb;
-    cj field_Tb;
+    UiComponent field_Gb;
+    UiComponent field_Tb;
     static int field_Zb;
     static String field_Rb;
 
@@ -48,7 +48,7 @@ final class dm extends cj {
             return stackIn_6_0;
           }
           if (param0 >= -53) {
-            this.field_Hb = (cj) null;
+            this.field_Hb = (UiComponent) null;
           }
           stackIn_12_0 = (this.field_Pb) ? 0 : 1;
           if (param1.field_Pb) {
@@ -78,7 +78,7 @@ final class dm extends cj {
 
     final boolean c(byte param0) {
         if (param0 != 15) {
-          this.field_Gb = (cj) null;
+          this.field_Gb = (UiComponent) null;
         }
         return !this.c(0) ? true : false;
     }
@@ -139,7 +139,7 @@ final class dm extends cj {
     }
 
     dm(String param0, String param1, long param2) {
-        super(0L, (cj) null);
+        super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {
           this.field_Jb = param0;

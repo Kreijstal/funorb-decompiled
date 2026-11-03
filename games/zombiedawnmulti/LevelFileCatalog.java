@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LevelFileCatalog {
-    static cj field_d;
+    static UiComponent field_d;
     static int field_b;
     static int[] field_a;
     static int field_c;

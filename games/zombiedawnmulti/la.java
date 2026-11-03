@@ -4,7 +4,7 @@
 final class la {
     static String field_e;
     private boolean field_i;
-    static cj[] field_h;
+    static UiComponent[] field_h;
     static boolean field_k;
     private int field_a;
     private int[] field_o;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends cj {
+final class ld extends UiComponent {
     private char[] field_Pb;
     private int[] field_Qb;
     private int field_Hb;
@@ -629,7 +629,7 @@ final class ld extends cj {
         }
     }
 
-    ld(long param0, cj param1, cj param2, cj param3, ld[] param4, int[] param5, String[] param6, char[] param7) {
+    ld(long param0, UiComponent param1, UiComponent param2, UiComponent param3, ld[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -678,7 +678,7 @@ final class ld extends cj {
               -1 == this.field_Qb[var13]) {
               var14 = tb.field_v;
             }
-            this.field_Gb[var13] = new mo(0L, param2, (cj) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Gb[var13] = new mo(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) 50, this.field_Gb[var13]);
             var15 = var17.a(param6[var13]);
             if (this.field_Vb < var15) {
@@ -812,7 +812,7 @@ final class ld extends cj {
         int var7Lifetime1;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_Sb = param4 * 2 + this.field_Vb;
-        this.a(this.field_Nb, param1 - this.field_Nb, this.field_Sb, param0, -3344);
+        this.setBounds(this.field_Nb, param1 - this.field_Nb, this.field_Sb, param0, -3344);
         if (param2 >= -16) {
           field_Kb = -29L;
         }

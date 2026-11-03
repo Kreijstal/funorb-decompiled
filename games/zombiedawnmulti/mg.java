@@ -89,7 +89,7 @@ final class mg extends SceneObject {
               ma.field_a.a(-99, 16);
               ma.field_a.position = ma.field_a.position + 1;
               var9 = ma.field_a.position;
-              hd.a(gn.field_L, (byte) 110, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+              hd.a(ButtonWidget.field_L, (byte) 110, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.e(param6 + 173, -var9 + ma.field_a.position);
             } else {
               var9 = 0;
@@ -114,7 +114,7 @@ final class mg extends SceneObject {
                 var11_ref_StringLifetime4 = "";
               }
               ma.field_a.writeString(var11_ref_StringLifetime4, (byte) 105);
-              hd.a(gn.field_L, (byte) -123, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+              hd.a(ButtonWidget.field_L, (byte) -123, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.b(false, ma.field_a.position - var10);
             }
             cb.a(-1, false);
@@ -253,14 +253,14 @@ final class mg extends SceneObject {
         this.field_I = this.field_I + 1;
         if (fieldTemp$0 > 5) {
           this.field_I = 0;
-          var2_ref_br = fb.field_e.sceneObjects.c(109);
+          var2_ref_br = PowerupButton.field_e.sceneObjects.c(109);
           while (var2_ref_br instanceof SceneObject) {
             if (var2_ref_br instanceof GameCharacter) {
               var3 = (GameCharacter) (var2_ref_br);
               var4 = var3.getX(-116) - this.getX(-34) - 12;
               var5 = var3.getY(122) - this.getY(-70);
               if (var4 * var4 + var5 * var5 < 576 &&
-                fb.field_e.field_I.a(69, this.field_C, 255)) {
+                PowerupButton.field_e.field_I.a(69, this.field_C, 255)) {
                 Camera.b(-127, 9);
                 iq.a(this.field_C, (byte) 99);
                 this.unlink(true);

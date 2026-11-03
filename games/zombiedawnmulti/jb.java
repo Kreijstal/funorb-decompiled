@@ -9,8 +9,8 @@ final class jb {
     private int field_h;
     int field_b;
     private String field_d;
-    static cj field_c;
-    cj field_e;
+    static UiComponent field_c;
+    UiComponent field_e;
     private int[] field_g;
     static String field_k;
 
@@ -349,7 +349,7 @@ final class jb {
           return true;
         }
         if (5 == param1) {
-          var8 = gn.a(this.field_f, 113, param0);
+          var8 = ButtonWidget.a(this.field_f, 113, param0);
           if (var8 != null) {
             var6Lifetime1 = (String) null;
             vm.a(this.field_f, 0, (String) null, var8, 2, 0);
@@ -419,7 +419,7 @@ final class jb {
           }
           return;
         }
-        field_c = (cj) null;
+        field_c = (UiComponent) null;
         if (null != this.field_f &&
           ~ie.field_sb != ~this.field_i) {
           var3 = this.b(-20516);
@@ -448,7 +448,7 @@ final class jb {
             if (var5 == null &&
               var6 == 0) {
               this.field_j.a((byte) -118, vl.a(IntrusiveDeque.field_e, new String[]{var7}, param2 - 11), 4);
-              this.field_j.a((byte) -118, vl.a(sb.field_g, new String[]{var7}, 2), 6);
+              this.field_j.a((byte) -118, vl.a(IndexedSpriteState.field_g, new String[]{var7}, 2), 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !nh.field_m) {
@@ -493,7 +493,7 @@ final class jb {
         }
     }
 
-    jb(cj param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    jb(UiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new ContextMenu(ql.field_d);
           this.field_f = param2;

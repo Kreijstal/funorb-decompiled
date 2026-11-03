@@ -12,7 +12,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
     static Sprite[] field_I;
     public static boolean field_E;
 
-    final void g(int param0) {
+    final void drawFrame(int param0) {
         Object stackIn_5_0 = null;
         boolean stackIn_15_0 = false;
         int stackIn_32_0 = 0;
@@ -24,7 +24,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         int var3_int = 0;
         int[][] var3 = null;
         Runtime var3_ref = null;
-        nc var4_ref_nc = null;
+        MenuScreen var4_ref_nc = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -198,7 +198,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         }
     }
 
-    final void a(int param0) {
+    final void initializeGame(int param0) {
         MidiPcmStream var2 = null;
         try {
           this.a(0, false, 9, 13, 1, 72, 10, (byte) -99);
@@ -237,7 +237,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         }
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void updateScreens(boolean param0, boolean param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_98_0 = false;
         boolean stackIn_120_0 = false;
@@ -281,7 +281,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     var3_int = 1;
                     if (var8 != 0) {
                       if (UiWidget.field_s != null) {
-                        this.s(-50);
+                        this.syncClientWithSimulation(-50);
                       }
                       if (ji.field_c) {
                         var4 = 1;
@@ -294,7 +294,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                   }
                 } else {
                   if (UiWidget.field_s != null) {
-                    this.s(-50);
+                    this.syncClientWithSimulation(-50);
                   }
                   if (ji.field_c) {
                     var4 = 1;
@@ -423,7 +423,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             decompiledFrameRemainder2 = (var8 != 0);
           }
           if (decompiledFrameRemainder2) {
-            if (~un.field_k != ~er.field_i) {
+            if (~TextInputValidator.field_k != ~er.field_i) {
               if (cq.field_f != er.field_i) {
                 ub.field_yb = ub.field_yb - 1;
                 decompiledFrameRemainder2 = (ub.field_yb == 0);
@@ -514,7 +514,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         RuntimeException var2_ref5 = null;
         int var3 = 0;
         int[] var3_ref_int__ = null;
-        nc var3_ref_nc = null;
+        MenuScreen var3_ref_nc = null;
         int var4 = 0;
         CipherPacketBuffer var4_ref_ga = null;
         int[] var4_ref_int__ = null;
@@ -532,17 +532,17 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             if (vk.l((byte) -122)) {
               if (!IsaacRandom.field_i) {
                 IsaacRandom.field_i = true;
-                if ((var10 != 0) && (tk.field_q != dk.field_Ib ||
+                if ((var10 != 0) && (LaboratoryScreen.field_q != dk.field_Ib ||
                   IsaacRandom.field_i)) {
                   IsaacRandom.field_i = false;
-                  tk.field_q = dk.field_Ib;
+                  LaboratoryScreen.field_q = dk.field_Ib;
                 }
               }
             } else {
-              if (tk.field_q != dk.field_Ib ||
+              if (LaboratoryScreen.field_q != dk.field_Ib ||
                 IsaacRandom.field_i) {
                 IsaacRandom.field_i = false;
-                tk.field_q = dk.field_Ib;
+                LaboratoryScreen.field_q = dk.field_Ib;
               }
             }
           }
@@ -567,7 +567,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             this.p(50);
             if (vk.l((byte) -126)) {
               if (SimZombie.p(-88)) {
-                discarded$0 = this.c(false, 123);
+                discarded$0 = this.advanceLoading(false, 123);
               }
               return;
             }
@@ -575,7 +575,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           boolean decompiledFrameRemainder0 = true;
           if (!uk.field_O) {
             ud.a(t.field_d, 1000);
-            decompiledFrameRemainder0 = !(!this.c(true, 121));
+            decompiledFrameRemainder0 = !(!this.advanceLoading(true, 121));
             if (decompiledFrameRemainder0) {
               uk.field_O = true;
               decompiledFrameRemainder0 = (var10 != 0);
@@ -600,13 +600,13 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                       cq.a((java.applet.Applet) (this), false);
                     }
                   }
-                  this.a(true, true);
+                  this.updateScreens(true, true);
                   decompiledFrameRemainder0 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   if (GameCharacter.k((byte) 115)) {
                     if (~er.field_i != ~er.field_h) {
-                      this.a(true, false);
+                      this.updateScreens(true, false);
                       decompiledFrameRemainder0 = (var10 != 0);
                     }
                     if (decompiledFrameRemainder0) {
@@ -614,12 +614,12 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                       if (var2_int == 1) {
                         rj.a(b.field_b, (byte) -72, mb.field_g);
                       }
-                      this.a(true, true);
+                      this.updateScreens(true, true);
                       decompiledFrameRemainder0 = (var10 != 0);
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    this.a(true, false);
+                    this.updateScreens(true, false);
                     decompiledFrameRemainder0 = (var10 != 0);
                   }
                 }
@@ -642,12 +642,12 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     default:
                       break;
                   }
-                  this.a(true, true);
+                  this.updateScreens(true, true);
                   if (var10 != 0) {
-                    this.a(true, false);
+                    this.updateScreens(true, false);
                   }
                 } else {
-                  this.a(true, false);
+                  this.updateScreens(true, false);
                 }
               }
             }
@@ -892,7 +892,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     continue;
                   }
                   if (PortalEntryEvent.field_i == 76) {
-                    wp.field_h.receiveEvent(false, gn.a(-1, s.field_e));
+                    wp.field_h.receiveEvent(false, ButtonWidget.a(-1, s.field_e));
                     continue;
                   }
                   if (PortalEntryEvent.field_i == 80) {
@@ -963,7 +963,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     bl.a(-9);
                     var3_ref_nc = gk.a(2, ArrayWidgetGroup.field_I);
                     if (var3_ref_nc != null) {
-                      var3_ref_nc.a(0, false, 0);
+                      var3_ref_nc.onEnter(0, false, 0);
                     }
                     cp.field_K = false;
                     hh.field_b = false;
@@ -1044,7 +1044,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         }
     }
 
-    private final void s(int param0) {
+    private final void syncClientWithSimulation(int param0) {
         RuntimeException runtimeException = null;
         GameEvent var2 = null;
         GameEvent var3 = null;
@@ -1118,7 +1118,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         }
     }
 
-    private final boolean c(boolean param0, int param1) {
+    private final boolean advanceLoading(boolean param0, int param1) {
         int var3_int = 0;
         IndexedSprite[] var3 = null;
         RuntimeException var3_ref = null;
@@ -1173,7 +1173,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                                           return false;
                                         }
                                         ub.m(-121);
-                                        this.g(-30169);
+                                        this.drawFrame(-30169);
                                         MidiPcmStream.field_Q = new me(pf.field_b, rn.field_e);
                                         ei.field_a[68] = SoundEffect.a(pf.field_b, "", "zombie_dawn_menu_button").toPcmSample();
                                         ei.field_a[69] = SoundEffect.a(pf.field_b, "", "zombie_dawn_menu_screen_mouseover").toPcmSample();
@@ -1236,13 +1236,13 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                             qm.a(30.0f, 80, mo.a(bk.field_k, 0, -3, bb.field_o, de.field_e));
                             return false;
                           }
-                          qm.a(20.0f, 80, ki.a(ko.field_i, "", rn.field_e, (byte) 76, ArmedHumanView.field_tb));
+                          qm.a(20.0f, 80, ki.a(PowerupBar.field_i, "", rn.field_e, (byte) 76, ArmedHumanView.field_tb));
                           return false;
                         }
                         qm.a(15.0f, 80, ki.a(sf.field_f, "", ki.field_m, (byte) 76, vf.field_c));
                         return false;
                       }
-                      qm.a(10.0f, 80, ki.a(ko.field_i, "", pf.field_b, (byte) 76, ArmedHumanView.field_tb));
+                      qm.a(10.0f, 80, ki.a(PowerupBar.field_i, "", pf.field_b, (byte) 76, ArmedHumanView.field_tb));
                       return false;
                     }
                     qm.a(5.0f, 80, ki.a(bc.field_a, "arialish12", he.field_f, (byte) 76, ei.field_e));
@@ -1262,7 +1262,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           }
           if (rn.field_e != null) {
             qm.a(70.0f, 80, dn.field_b);
-            this.g(-30169);
+            this.drawFrame(-30169);
             ei.field_a[37] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_female_ow").decodeAllToPcm();
             ei.field_a[38] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_female_eek").decodeAllToPcm();
             ei.field_a[39] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_female_oof").decodeAllToPcm();
@@ -1302,7 +1302,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           }
           if (null != df.field_M) {
             qm.a(75.0f, 80, me.field_e);
-            this.g(-30169);
+            this.drawFrame(-30169);
             hl.field_d[0] = MusicTrack.a(df.field_M, "", "ZD_multi_TITLESCREEn");
             hl.field_d[10] = MusicTrack.a(df.field_M, "", "ZD_multi_laboratory");
             hl.field_d[12] = MusicTrack.a(df.field_M, "", "ZD_multi_PANIC_LOOP");
@@ -1323,7 +1323,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           }
           if (null != de.field_e) {
             qm.a(77.0f, 80, me.field_e);
-            this.g(-30169);
+            this.drawFrame(-30169);
             var3_int = 0;
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (var3_int >= 15))) {
@@ -1348,7 +1348,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           }
           if (null != ki.field_m) {
             qm.a(80.0f, 80, bl.field_b);
-            this.g(-30169);
+            this.drawFrame(-30169);
             bn.field_d = LevelFileCatalog.a(ki.field_m, -2852);
             BufferedFile.field_e[0] = new Sprite(ki.field_m.a("", "background1.jpg", false), (java.awt.Component) ((Object) dk.field_Ib));
             jo.field_d = new Sprite(ki.field_m.a("", "panorama.jpg", false), (java.awt.Component) ((Object) dk.field_Ib));
@@ -1359,7 +1359,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           if (null != al.field_eb &&
             null != ii.field_a) {
             qm.a(85.0f, 80, bn.field_c);
-            this.g(-30169);
+            this.drawFrame(-30169);
             qp.field_w = pj.a(al.field_eb, 4, he.field_f, "", "arialish12");
             if (!he.field_a) {
               InflaterDecompressor.a("locked", al.field_eb, (byte) 19, "basic");
@@ -1382,7 +1382,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             al.field_eb = null;
             IsaacRandom.d(26673);
             qm.a(90.0f, 80, bn.field_c);
-            this.g(-30169);
+            this.drawFrame(-30169);
             ah.field_e = ap.a(ii.field_a, cg.field_n, "", 4, "font");
             TertiaryLinkNode.field_r = vo.a((byte) -46, "", "font_title", cg.field_n, ii.field_a);
             pb.field_e = pj.a(ii.field_a, 4, cg.field_n, "font_medium", "");
@@ -1601,10 +1601,10 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           ip.a(-127, 50);
           tj.a(3273, 224);
           TertiaryLinkNode.a(200, 123);
-          cj.d(false, 0);
+          UiComponent.d(false, 0);
           IsaacRandom.d(26673);
           ArrayWidgetGroup.field_J.a(true, (java.awt.Component) ((Object) dk.field_Ib), -14697);
-          tk.field_q = dk.field_Ib;
+          LaboratoryScreen.field_q = dk.field_Ib;
           GameWorld.a(16777215, 5, field_I, 15, lf.field_c, pb.field_e, 65280, 240, 16711680, 320, oi.field_h, (byte) -128, 15, 20, 20);
           kk.field_w = new PortalView(10, 10, true);
           SecondaryNodeDeque.field_e = new Camera(100, 100);
@@ -1616,7 +1616,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         }
     }
 
-    final void d(int param0) {
+    final void shutdownGame(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1684,7 +1684,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             }
           }
           if (param0 > -117) {
-            discarded$0 = this.c(true, 49);
+            discarded$0 = this.advanceLoading(true, 49);
           }
           if (!GameScreen.field_bb) {
             if (null == ub.field_vb) {
@@ -1722,7 +1722,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         }
     }
 
-    final void c(int param0) {
+    final void clearAllStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1741,7 +1741,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           cm.a((byte) 127);
           oa.b(3732);
           kn.a(false);
-          cj.c(false);
+          UiComponent.c(false);
           UnitView.g((byte) 119);
           pb.a((byte) -116);
           qb.c((byte) -7);
@@ -1801,14 +1801,14 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           jj.i(1);
           GameEvent.b(false);
           PhaseChangeEvent.c(true);
-          nc.b(false);
-          tk.c((byte) -88);
+          MenuScreen.b(false);
+          LaboratoryScreen.c((byte) -88);
           si.d(true);
           PlayerLoadout.a((byte) 39);
           GameWorld.b(-6);
           NavigationGrid.a(true);
           qe.a((byte) 7);
-          ko.d(-66);
+          PowerupBar.d(-66);
           uf.b(16737894);
           DualLinkDeque.c(110);
           if (param0 >= -43) {
@@ -1883,7 +1883,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           bn.a(23376);
           mo.h(2);
           qh.a(-22);
-          sb.a(76);
+          IndexedSpriteState.a(76);
           g.a();
           TertiaryLinkNode.e(-1130232991);
           rj.j(8784);
@@ -1967,7 +1967,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           wa.a(2);
           mp.a(12);
           UiWidget.e((byte) -90);
-          gn.a(-118);
+          ButtonWidget.a(-118);
           rg.a((byte) -39);
           al.i((byte) -92);
           df.g((byte) 84);
@@ -2009,7 +2009,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           sq.f(2);
           uk.f(-1562977759);
           km.i(0);
-          un.g(-1317848592);
+          TextInputValidator.releaseStatics(-1317848592);
           q.a((byte) -109);
           pj.c(true);
           ud.f(38);
@@ -2056,7 +2056,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           um.a(-98);
           rq.b(false);
           ki.b(-23636);
-          fb.d(-90);
+          PowerupButton.d(-90);
           wj.a(-6298);
           ak.a(-5937);
           gh.a((byte) 106);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends nc {
+final class ol extends MenuScreen {
     static Sprite field_n;
     static sc field_o;
     private int field_m;

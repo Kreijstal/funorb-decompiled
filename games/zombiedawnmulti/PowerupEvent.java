@@ -24,13 +24,13 @@ final class PowerupEvent extends GameEvent {
 
     final static void a(int param0) {
         if (param0 == 6835) {
-          lo.field_g = new cj(0L, (cj) null);
+          lo.field_g = new UiComponent(0L, (UiComponent) null);
           if (tb.field_u) {
             lo.field_g.a((byte) 50, ql.field_b);
           }
           lo.field_g.a((byte) 50, pd.field_b);
           de.field_b = new qh(ne.field_vb, lo.field_g);
-          qe.field_k = new cj(0L, (cj) null);
+          qe.field_k = new UiComponent(0L, (UiComponent) null);
           qe.field_k.a((byte) 50, de.field_b.field_c);
           qe.field_k.a((byte) 50, kj.field_u);
           wn.a((byte) 3);

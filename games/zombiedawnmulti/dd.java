@@ -27,7 +27,7 @@ final class dd implements dr {
     }
 
     final static void a(boolean param0, int param1) {
-        nc.a(param1 ^ -122, param0);
+        MenuScreen.a(param1 ^ -122, param0);
         if (param1 != 0) {
           return;
         }

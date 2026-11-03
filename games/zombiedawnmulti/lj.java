@@ -9,7 +9,7 @@ final class lj extends IntrusiveNode {
     static String field_m;
     private PcmSampleStream field_g;
     private PcmSampleStream field_i;
-    static cj field_v;
+    static UiComponent field_v;
     static String field_k;
     private int field_j;
     static String field_p;
@@ -41,8 +41,8 @@ final class lj extends IntrusiveNode {
         this.field_r = this.field_r + 6;
         if (this.field_j < this.field_r) {
           if (this.field_o) {
-            fb.field_e.navigation.level.a((byte) 127);
-            fb.field_e.navigation.a(48);
+            PowerupButton.field_e.navigation.level.a((byte) 127);
+            PowerupButton.field_e.navigation.a(48);
           }
           this.unlink(true);
         }
@@ -163,7 +163,7 @@ final class lj extends IntrusiveNode {
         this.field_g = null;
         this.field_o = false;
         this.field_i = null;
-        if (!fb.field_e.navigation.isPositionWalkable(-113, param1, param0)) {
+        if (!PowerupButton.field_e.navigation.isPositionWalkable(-113, param1, param0)) {
           param1 = param1 - (param1 % 24 - 4);
         }
         this.field_w = param1;

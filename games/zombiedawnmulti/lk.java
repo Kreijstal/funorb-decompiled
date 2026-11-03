@@ -12,7 +12,7 @@ final class lk extends SceneObject {
     static String field_I;
     boolean field_O;
     static int[][] field_G;
-    static cj field_J;
+    static UiComponent field_J;
     private int field_F;
     private int field_H;
     private int field_N;
@@ -90,7 +90,7 @@ final class lk extends SceneObject {
                 return;
               }
               if (!he.field_a &&
-                fb.field_e.navigation.field_k[this.getY(82) / 24][this.getX(-95) / 24]) {
+                PowerupButton.field_e.navigation.field_k[this.getY(82) / 24][this.getX(-95) / 24]) {
                 return;
               }
               SimArmedHuman.field_Fb[this.field_M].c(var3_int, var4, this.field_F);
@@ -150,7 +150,7 @@ final class lk extends SceneObject {
           }
           if (-1 != jk.field_j) {
             var1_int = jk.field_j;
-            fb.a(-1, 107);
+            PowerupButton.a(-1, 107);
             stackIn_8_0 = var1_int;
             return stackIn_8_0;
           }
@@ -190,7 +190,7 @@ final class lk extends SceneObject {
           var1 = b.field_d * b.field_d;
           var2 = -(t.field_e * t.field_e) + var1;
           var3 = vj.field_t + var2 * (-vj.field_t + km.field_cb) / var1;
-          ImageProducerRasterBuffer.field_k.a(120, var3, 640, ck.field_a, -3344);
+          ImageProducerRasterBuffer.field_k.setBounds(120, var3, 640, ck.field_a, -3344);
           eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, km.field_cb - 24);
           return;
         }
@@ -198,7 +198,7 @@ final class lk extends SceneObject {
         var1Lifetime1 = b.field_d * b.field_d;
         var2Lifetime1 = -(t.field_e * t.field_e) + var1Lifetime1;
         var3Lifetime1 = vj.field_t + var2Lifetime1 * (-vj.field_t + km.field_cb) / var1Lifetime1;
-        ImageProducerRasterBuffer.field_k.a(120, var3Lifetime1, 640, ck.field_a, -3344);
+        ImageProducerRasterBuffer.field_k.setBounds(120, var3Lifetime1, 640, ck.field_a, -3344);
         eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, km.field_cb - 24);
     }
 

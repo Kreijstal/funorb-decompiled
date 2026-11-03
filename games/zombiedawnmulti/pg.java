@@ -3,7 +3,7 @@
  */
 final class pg {
     static String field_b;
-    static cj field_a;
+    static UiComponent field_a;
     static String[] field_d;
     static int field_c;
 

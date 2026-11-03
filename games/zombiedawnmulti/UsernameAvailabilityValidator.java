@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class UsernameAvailabilityValidator extends un {
+final class UsernameAvailabilityValidator extends TextInputValidator {
     static String field_u;
     static java.math.BigInteger field_v;
     private boolean field_q;

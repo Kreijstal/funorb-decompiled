@@ -5,7 +5,7 @@ import java.util.*;
 
 final class NodeHashTableIterator implements Iterator {
     private int field_a;
-    static cj field_g;
+    static UiComponent field_g;
     private IntrusiveNode field_b;
     static Sprite field_f;
     static int field_d;
@@ -52,7 +52,7 @@ final class NodeHashTableIterator implements Iterator {
               if (var4 == mo.field_Jb.field_d) {
                 var5 = ua.field_N;
               } else {
-                var5 = sb.field_c;
+                var5 = IndexedSpriteState.field_c;
               }
             }
             var6 = eo.field_e[var3];
@@ -76,7 +76,7 @@ final class NodeHashTableIterator implements Iterator {
               SecondaryNodeDeque.field_c.c(var6, var8, mg.field_H + var2, var5, -1);
               var2 = var2 + ImageProducerRasterBuffer.field_l;
             } else {
-              wn.field_u.c(var6, var8, var2 + tk.field_n, var5, -1);
+              wn.field_u.c(var6, var8, var2 + LaboratoryScreen.field_n, var5, -1);
               var2 = var2 + (MusicPatch.field_n + (pb.field_b + ne.field_tb));
             }
           }
@@ -116,10 +116,10 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static void a(boolean param0) {
-        dm.field_ac.a(18, 0, -(tb.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
-        mo.field_Hb.a(18, 0, 42 + DualLinkNode.field_o, -2 + (pd.field_b.field_zb + (-DualLinkNode.field_o - 40)), -3344);
+        dm.field_ac.setBounds(18, 0, -(tb.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
+        mo.field_Hb.setBounds(18, 0, 42 + DualLinkNode.field_o, -2 + (pd.field_b.field_zb + (-DualLinkNode.field_o - 40)), -3344);
         if (param0) {
-          field_g = (cj) null;
+          field_g = (UiComponent) null;
         }
         hf.field_e.a(DualLinkNode.field_o, 2, pd.field_b.field_zb, 0, pd.field_b.field_z - 20, -31465, 20);
     }

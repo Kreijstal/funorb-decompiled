@@ -8,7 +8,7 @@ final class aa extends ii {
     private long field_k;
     private int field_f;
     static int field_o;
-    static cj field_l;
+    static UiComponent field_l;
     static String field_p;
     static IndexedSprite[] field_h;
     private int field_q;
@@ -41,7 +41,7 @@ final class aa extends ii {
           ki.field_e = null;
         }
         if (param0 <= 113) {
-          field_l = (cj) null;
+          field_l = (UiComponent) null;
         }
     }
 
@@ -126,7 +126,7 @@ final class aa extends ii {
         }
         this.field_m = 0L;
         if (param0 >= -93) {
-          field_l = (cj) null;
+          field_l = (UiComponent) null;
         }
     }
 

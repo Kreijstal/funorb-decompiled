@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class cj extends qo {
+class UiComponent extends qo {
     Sprite field_O;
     int field_Y;
     private int field_hb;
@@ -65,7 +65,7 @@ class cj extends qo {
     int field_I;
     int field_xb;
 
-    final void a(byte param0, cj param1) {
+    final void a(byte param0, UiComponent param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -96,7 +96,7 @@ class cj extends qo {
 
     final void c(boolean param0, int param1) {
         if (param1 == -1) {
-          this.a(SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_l, false, false, false, param0, false, 0, param1 ^ -80, 0);
+          this.drawTree(SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_l, false, false, false, param0, false, 0, param1 ^ -80, 0);
           return;
         }
     }
@@ -105,30 +105,30 @@ class cj extends qo {
         if (param0 == -11838) {
           me.field_g = !param1 ? true : false;
           bp.field_q = !param1 ? true : false;
-          this.a(-100, true, SoftwareRasterizer.field_l, 0, 0, SoftwareRasterizer.field_b);
+          this.updateTree(-100, true, SoftwareRasterizer.field_l, 0, 0, SoftwareRasterizer.field_b);
           return;
         }
     }
 
-    final void a(byte param0, int param1, int param2, boolean param3) {
-        cj var10_ref_cj = null;
+    final void layoutVerticalContent(byte param0, int param1, int param2, boolean param3) {
+        UiComponent var10_ref_cj = null;
         int var9 = 0;
         int var11 = ZombieDawnMulti.field_E ? 1 : 0;
         int var5 = -this.field_Q;
         int var9Lifetime1;
         if (param0 <= 35) {
-          this.f(-65);
+          this.markDescendantsToInheritVisualState(-65);
         }
         int var6 = -this.field_mb + var5;
         int var7 = this.field_z;
         int var8 = var7 + this.field_I;
         if (!param3) {
           var9 = 0;
-          var10_ref_cj = (cj) (this.field_Cb.c(84));
+          var10_ref_cj = (UiComponent) (this.field_Cb.c(84));
           while (var10_ref_cj != null) {
             var10_ref_cj.field_mb = var9 - var10_ref_cj.field_Q;
             var9 = var9 + (param2 + (var10_ref_cj.field_z + var10_ref_cj.field_I));
-            var10_ref_cj = (cj) (this.field_Cb.b(6));
+            var10_ref_cj = (UiComponent) (this.field_Cb.b(6));
           }
           var8 = -param2 + var9;
         }
@@ -152,7 +152,7 @@ class cj extends qo {
         this.field_Q = -var5;
     }
 
-    final void b(byte param0, cj param1) {
+    final void copyStyle(byte param0, UiComponent param1) {
         boolean stackIn_92_1 = false;
         RuntimeException stackIn_102_0 = null;
         StringBuilder stackIn_102_1 = null;
@@ -161,7 +161,7 @@ class cj extends qo {
         RuntimeException var3 = null;
         try {
           if (param0 != -32) {
-            this.f(-125);
+            this.markDescendantsToInheritVisualState(-125);
           }
           if (param1 != null) {
             if (null != param1.field_O) {
@@ -294,7 +294,7 @@ class cj extends qo {
         }
     }
 
-    final void a(int param0, cj param1, int param2, cj param3) {
+    final void placeBelow(int param0, UiComponent param1, int param2, UiComponent param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -334,7 +334,7 @@ class cj extends qo {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, int param9, int param10) {
+    private final void drawTree(int param0, boolean param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, int param9, int param10) {
         boolean stackIn_6_0 = false;
         int var12;
         int var13;
@@ -349,7 +349,7 @@ class cj extends qo {
         int var22;
         int var23_int;
         String var23;
-        cj var23_ref;
+        UiComponent var23_ref;
         int var24;
         int var25;
         String var26;
@@ -363,7 +363,7 @@ class cj extends qo {
         var14 = SoftwareRasterizer.field_g;
         var15 = SoftwareRasterizer.field_d;
         if (param9 < 73) {
-          this.a(73, true, 27, false, true, false, false, false, -51, 107, 60);
+          this.drawTree(73, true, 27, false, true, false, false, false, -51, 107, 60);
         }
         SoftwareRasterizer.intersectClip(this.field_w, this.field_qb, this.field_zb + this.field_w, this.field_qb + this.field_z);
         if (!this.field_W) {
@@ -508,10 +508,10 @@ class cj extends qo {
           }
         }
         if (null != this.field_Cb) {
-          var23_ref = (cj) (this.field_Cb.c(39));
+          var23_ref = (UiComponent) (this.field_Cb.c(39));
           while (var23_ref != null) {
-            var23_ref.a(this.field_zb, param1, this.field_z, this.field_bb, param4, param5, param6, param7, var20 + this.field_qb, 80, var19 + this.field_w);
-            var23_ref = (cj) (this.field_Cb.b(6));
+            var23_ref.drawTree(this.field_zb, param1, this.field_z, this.field_bb, param4, param5, param6, param7, var20 + this.field_qb, 80, var19 + this.field_w);
+            var23_ref = (UiComponent) (this.field_Cb.b(6));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
@@ -521,22 +521,22 @@ class cj extends qo {
         field_C = null;
         field_db = null;
         if (param0) {
-          cj.g(-31);
+          UiComponent.g(-31);
         }
         field_Eb = null;
         field_B = null;
         field_F = null;
     }
 
-    cj(long param0, cj param1, String param2) {
+    UiComponent(long param0, UiComponent param1, String param2) {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    cj(long param0, cj param1) {
+    UiComponent(long param0, UiComponent param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_Q = param1;
         this.field_mb = 0;
         this.field_I = 0;
@@ -550,23 +550,23 @@ class cj extends qo {
         }
     }
 
-    final void f(int param0) {
-        cj var4 = null;
+    final void markDescendantsToInheritVisualState(int param0) {
+        UiComponent var4 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 > -127) {
           this.field_z = -78;
         }
         if (null != this.field_Cb) {
-          var4 = (cj) (this.field_Cb.a((byte) -81));
+          var4 = (UiComponent) (this.field_Cb.a((byte) -81));
           while (var4 != null) {
             var4.field_W = true;
-            var4.f(-128);
-            var4 = (cj) (this.field_Cb.c((byte) 123));
+            var4.markDescendantsToInheritVisualState(-128);
+            var4 = (UiComponent) (this.field_Cb.c((byte) 123));
           }
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    private final void updateTree(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         boolean stackIn_34_1 = false;
         boolean stackIn_39_1 = false;
         int var7;
@@ -575,7 +575,7 @@ class cj extends qo {
         int var10;
         int var11;
         int var12;
-        cj var13;
+        UiComponent var13;
         int var14;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -644,10 +644,10 @@ class cj extends qo {
         stackIn_39_1 = (this.field_pb) && (this.field_jb == pq.field_f) && (param1);
         this.field_L = stackIn_39_1;
         if (this.field_Cb != null) {
-          var13 = (cj) (this.field_Cb.a((byte) -44));
+          var13 = (UiComponent) (this.field_Cb.a((byte) -44));
           while (var13 != null) {
-            var13.a(-120, param1, this.field_z, this.field_w, this.field_qb, this.field_zb);
-            var13 = (cj) (this.field_Cb.c((byte) 109));
+            var13.updateTree(-120, param1, this.field_z, this.field_w, this.field_qb, this.field_zb);
+            var13 = (UiComponent) (this.field_Cb.c((byte) 109));
           }
         }
         if (this.field_pb) {
@@ -739,7 +739,7 @@ class cj extends qo {
         try {
           var2_int = wj.field_g;
           if (param1 >= -45) {
-            cj.c(false);
+            UiComponent.c(false);
           }
           if (param0.field_l == 2) {
             if (!param0.field_k) {
@@ -783,11 +783,11 @@ class cj extends qo {
         if (param0 != 0) {
           this.field_U = 72;
         }
-        return this.a(param0 - 1, 2147483647);
+        return this.measureContentWidth(param0 - 1, 2147483647);
     }
 
-    final int a(int param0, int param1) {
-        cj var4 = null;
+    final int measureContentWidth(int param0, int param1) {
+        UiComponent var4 = null;
         int var5 = 0;
         int var4_int = 0;
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -807,23 +807,23 @@ class cj extends qo {
           }
         }
         if (this.field_Cb != null) {
-          var4 = (cj) (this.field_Cb.c(param0 + 112));
+          var4 = (UiComponent) (this.field_Cb.c(param0 + 112));
           while (var4 != null) {
             var5 = var4.field_zb + var4.field_x;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (cj) (this.field_Cb.b(6));
+            var4 = (UiComponent) (this.field_Cb.b(6));
           }
         }
         if (param0 != -1) {
-          cj var7 = (cj) null;
-          this.a(-56, (cj) null, 17, (cj) null);
+          UiComponent var7 = (UiComponent) null;
+          this.placeBelow(-56, (UiComponent) null, 17, (UiComponent) null);
         }
         return var3;
     }
 
-    public cj() {
+    public UiComponent() {
         this.field_hb = 256;
         this.field_bb = false;
         this.field_N = -2147483648;
@@ -841,7 +841,7 @@ class cj extends qo {
         this.field_xb = -1;
     }
 
-    cj(long param0, cj param1, int param2, int param3, int param4, int param5, String param6) {
+    UiComponent(long param0, UiComponent param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -870,7 +870,7 @@ class cj extends qo {
           this.field_z = param5;
           this.field_Q = param3;
           this.field_x = param2;
-          this.b((byte) -32, param1);
+          this.copyStyle((byte) -32, param1);
           if (param6 != null) {
             this.field_wb = param6;
           }

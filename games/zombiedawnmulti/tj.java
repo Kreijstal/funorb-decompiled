@@ -5,7 +5,7 @@ final class tj {
     static String field_d;
     static int field_c;
     static eq field_a;
-    static cj field_b;
+    static UiComponent field_b;
     static boolean field_f;
     static String[][] field_e;
 

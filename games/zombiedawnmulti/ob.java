@@ -272,11 +272,11 @@ final class ob extends DualLinkNode {
         field_v = null;
     }
 
-    final static void a(cj param0, int param1) {
-        cj var4 = null;
+    final static void a(UiComponent param0, int param1) {
+        UiComponent var4 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = (cj) (param0.field_Cb.c(87));
+          var4 = (UiComponent) (param0.field_Cb.c(87));
           if (param1 < 30) {
             ob.e(34);
           }
@@ -285,7 +285,7 @@ final class ob extends DualLinkNode {
             var4.field_z = 0;
             var4.field_I = 0;
             var4.field_Q = 0;
-            var4 = (cj) (param0.field_Cb.b(6));
+            var4 = (UiComponent) (param0.field_Cb.b(6));
           }
           param0.field_I = 0;
           param0.field_Q = 0;

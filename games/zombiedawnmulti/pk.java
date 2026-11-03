@@ -6,7 +6,7 @@ final class pk {
     static jb field_b;
     static Sprite field_c;
 
-    final static cj b(int param0) {
+    final static UiComponent b(int param0) {
         if (param0 != -11834) {
           pk.a(85);
           return bf.field_n.field_Gb;

@@ -6,7 +6,7 @@ final class rp {
     static Sprite[] field_r;
     static String field_b;
     private int field_a;
-    static cj field_l;
+    static UiComponent field_l;
     int field_i;
     private int field_v;
     int[] field_t;
@@ -78,7 +78,7 @@ final class rp {
           if (param1 >= 0 &&
             param1 < this.field_t.length) {
             if (param0 != -6821) {
-              field_l = (cj) null;
+              field_l = (UiComponent) null;
             }
             this.field_f = this.field_f | 1L << param1;
             this.field_t[param1] = cr.a(param1, -107);
@@ -739,8 +739,8 @@ final class rp {
           if (param0 >= -102) {
             return;
           }
-          if (fb.field_e != null) {
-            fb.field_e.b((byte) 37);
+          if (PowerupButton.field_e != null) {
+            PowerupButton.field_e.b((byte) 37);
           }
           we.field_g[47] = vn.field_d[FullscreenFocusCanvas.field_k.b((byte) -1)];
           return;
@@ -835,7 +835,7 @@ final class rp {
             stackIn_33_0 = param0;
           }
           if (stackIn_33_0 != -16613) {
-            field_l = (cj) null;
+            field_l = (UiComponent) null;
           }
           this.field_o[var2_int] = (byte)((this.field_u - var2_int) / 3);
           this.a(this.field_f, param0 ^ 14273);

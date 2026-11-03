@@ -8,7 +8,7 @@ final class ai implements Runnable {
     static int field_a;
     private Thread field_i;
     private boolean field_f;
-    static cj field_c;
+    static UiComponent field_c;
     static int field_b;
     int field_h;
 

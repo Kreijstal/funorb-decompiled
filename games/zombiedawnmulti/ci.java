@@ -100,7 +100,7 @@ final class ci {
         int var6 = 0;
         int var11 = 0;
         int stackIn_4_0 = 0;
-        cj stackIn_6_0 = null;
+        UiComponent stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_6_2 = 0;
         int stackIn_7_3 = 0;
@@ -115,15 +115,15 @@ final class ci {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        cj var8_ref_cj = null;
+        UiComponent var8_ref_cj = null;
         mo var9 = null;
         int var9_int = 0;
         int var10 = 0;
         mo var10_ref_mo = null;
         int var12 = 0;
         int var13 = 0;
-        cj var14 = null;
-        cj var15 = null;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           dm.field_Qb = SoftwareRasterizer.field_l;
@@ -135,7 +135,7 @@ final class ci {
           }
           MouseWheelInput.a(stackIn_4_0, false);
           em.field_U.a(0, JaggrabDownloader.field_i.field_zb, 0, (byte) -74, -2 + (-40 + JaggrabDownloader.field_i.field_z));
-          ClientException.field_h.a(jk.field_f, 0, CipherPacketBuffer.field_r.field_zb, 0, -3344);
+          ClientException.field_h.setBounds(jk.field_f, 0, CipherPacketBuffer.field_r.field_zb, 0, -3344);
           stackIn_6_0 = ie.field_jb;
           stackIn_6_1 = 18;
           stackIn_6_2 = 2 + jk.field_f;
@@ -144,12 +144,12 @@ final class ci {
           } else {
             stackIn_7_3 = 0;
           }
-          ((cj) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, -stackIn_7_3 + CipherPacketBuffer.field_r.field_zb, 0, -3344);
-          bf.field_h.a(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + CipherPacketBuffer.field_r.field_zb, -3344);
+          ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, -stackIn_7_3 + CipherPacketBuffer.field_r.field_zb, 0, -3344);
+          bf.field_h.setBounds(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + CipherPacketBuffer.field_r.field_zb, -3344);
           bf.field_n.a(DualLinkNode.field_o, 2, CipherPacketBuffer.field_r.field_zb, 0, -2 - jk.field_f + (CipherPacketBuffer.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
-          jp.field_b.a(40, JaggrabDownloader.field_i.field_z - 40, JaggrabDownloader.field_i.field_zb, 0, -3344);
-          gg.field_m.a(30, 0, LevelData.field_a.field_zb, 0, -3344);
-          SocketConnector.field_a.a(-2 + LevelData.field_a.field_z - 70, 30, LevelData.field_a.field_zb, 0, -3344);
+          jp.field_b.setBounds(40, JaggrabDownloader.field_i.field_z - 40, JaggrabDownloader.field_i.field_zb, 0, -3344);
+          gg.field_m.setBounds(30, 0, LevelData.field_a.field_zb, 0, -3344);
+          SocketConnector.field_a.setBounds(-2 + LevelData.field_a.field_z - 70, 30, LevelData.field_a.field_zb, 0, -3344);
           var2_int = 3 + kj.field_h;
           if (2 > qo.field_r.length) {
             var2_int--;
@@ -165,7 +165,7 @@ final class ci {
           if (var4 > 40) {
             var4 = 40;
           }
-          ik.field_d.a(var4, 5, -5 + (SocketConnector.field_a.field_zb - 5), 5, -3344);
+          ik.field_d.setBounds(var4, 5, -5 + (SocketConnector.field_a.field_zb - 5), 5, -3344);
           var5 = var4 + 7;
           for (var6 = 0; 4 + kj.field_h > var6; var6++) {
             if ((var6 != 1 ||
@@ -224,7 +224,7 @@ final class ci {
                     }
                   }
                 } else {
-                  mi.field_Ib[var6].a(var3, var5, 103, 5, -3344);
+                  mi.field_Ib[var6].setBounds(var3, var5, 103, 5, -3344);
                   var8 = 110;
                   if (!param0) {
                     if (ma.field_b[var6][0] != null) {
@@ -247,12 +247,12 @@ final class ci {
               }
             }
           }
-          qf.field_b.a(-10 + (-4 + SoftwareRasterizer.field_l - 130), 10, 360, SoftwareRasterizer.field_b - 360 >> 1, -3344);
-          mq.field_l.a(24, 0, qf.field_b.field_zb, 0, -3344);
-          vb.field_c.a(-24 + qf.field_b.field_z, 24, qf.field_b.field_zb, 0, -3344);
+          qf.field_b.setBounds(-10 + (-4 + SoftwareRasterizer.field_l - 130), 10, 360, SoftwareRasterizer.field_b - 360 >> 1, -3344);
+          mq.field_l.setBounds(24, 0, qf.field_b.field_zb, 0, -3344);
+          vb.field_c.setBounds(-24 + qf.field_b.field_z, 24, qf.field_b.field_zb, 0, -3344);
           vb.field_c.field_ab = tg.a(1, vb.field_c.field_z, 8421504, 3, 11579568, 35);
-          pd.field_b.a(-26 + (-10 + vb.field_c.field_z), 5, -10 + vb.field_c.field_zb, 5, -3344);
-          pg.field_a.a(24, -24 + vb.field_c.field_z - 5, 80, (-80 + vb.field_c.field_zb) / 2, -3344);
+          pd.field_b.setBounds(-26 + (-10 + vb.field_c.field_z), 5, -10 + vb.field_c.field_zb, 5, -3344);
+          pg.field_a.setBounds(24, -24 + vb.field_c.field_z - 5, 80, (-80 + vb.field_c.field_zb) / 2, -3344);
           if (param1 > -6) {
             return;
           }

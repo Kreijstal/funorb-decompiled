@@ -37,7 +37,7 @@ final class eb {
     byte field_j;
     int field_u;
     int field_s;
-    static cj field_B;
+    static UiComponent field_B;
     byte[] field_k;
     int field_f;
     int[] field_m;

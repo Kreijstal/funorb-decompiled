@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class sq extends gn {
+class sq extends ButtonWidget {
     static int field_R;
     private String[] field_M;
     private IntrusiveDeque field_T;
@@ -191,7 +191,7 @@ class sq extends gn {
         if (param2 != -4) {
           field_S = 74;
         }
-        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.listener)).a((byte) 39, (UiWidget) (this)));
+        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((WidgetPainter) ((Object) this.listener)).a((byte) 39, (UiWidget) (this)));
     }
 
     final void a(byte param0) {
@@ -199,7 +199,7 @@ class sq extends gn {
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
         int var2;
-        rk var3;
+        WidgetPainter var3;
         mp var4;
         int var5;
         String var6;
@@ -219,7 +219,7 @@ class sq extends gn {
         if (param0 != 94) {
           this.a((byte) -110);
         }
-        var3 = (rk) ((Object) this.listener);
+        var3 = (WidgetPainter) ((Object) this.listener);
         var4 = var3.a((UiWidget) (this), -102);
         while (true) {
           var5 = this.field_j.indexOf("<hotspot=", var2);
@@ -283,7 +283,7 @@ class sq extends gn {
         return this.field_M[this.field_V.field_l];
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -325,7 +325,7 @@ class sq extends gn {
         if (0 != param2) {
           return;
         }
-        rk var5 = (rk) ((Object) this.listener);
+        WidgetPainter var5 = (WidgetPainter) ((Object) this.listener);
         wi var6 = this.field_V;
         if (var6 != null) {
           var7 = var5.a(false, param3, (UiWidget) (this));
@@ -472,7 +472,7 @@ class sq extends gn {
               var1_int = var1_int + wk.field_G;
             }
             if (var4 >= 0) {
-              m.field_C.c(var6, var8Lifetime1, var1_int + nc.field_h, var5, -1);
+              m.field_C.c(var6, var8Lifetime1, var1_int + MenuScreen.field_h, var5, -1);
               var1_int = var1_int + (al.field_bb + (wk.field_G + me.field_h));
             } else {
               uq.field_f.c(var6, var8Lifetime1, var1_int + bf.field_g, var5, -1);

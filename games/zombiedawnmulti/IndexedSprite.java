@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class IndexedSprite extends sb {
+final class IndexedSprite extends IndexedSpriteState {
     byte[] field_m;
     int[] field_l;
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kc {
-    static cj field_c;
+    static UiComponent field_c;
     static int field_a;
     static String field_b;
     private static String field_z;

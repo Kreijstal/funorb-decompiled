@@ -4,7 +4,7 @@
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_d;
     static db field_c;
-    static cj field_a;
+    static UiComponent field_a;
     static IntrusiveDeque field_e;
     static byte[][][] field_b;
 

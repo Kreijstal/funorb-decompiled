@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nc {
-    static cj field_e;
+class MenuScreen {
+    static UiComponent field_e;
     int[] field_j;
     hh field_g;
     int field_i;
@@ -33,7 +33,7 @@ class nc {
           }
         }
         if (param0 != 1) {
-          nc.a((byte) -25);
+          MenuScreen.a((byte) -25);
         }
     }
 
@@ -78,7 +78,7 @@ class nc {
           return false;
         }
         if (this.field_j[param0] == 21 &&
-          fb.field_e.g(param1 - 16777149) == 0) {
+          PowerupButton.field_e.g(param1 - 16777149) == 0) {
           return false;
         }
         if (param1 != 16777215) {
@@ -183,7 +183,7 @@ class nc {
         }
     }
 
-    void b(int param0, boolean param1, int param2) {
+    void handleMenuAction(int param0, boolean param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -457,7 +457,7 @@ class nc {
                           }
                         } else {
                           if (this.field_g.c(-85)) {
-                            mj.field_Hb[15].a(0, param1, 0);
+                            mj.field_Hb[15].onEnter(0, param1, 0);
                             var6 = param1 ? 1 : 0;
                             LevelActorSpawner.a(var6 != 0, 15, 126, sp.field_g);
                             vd.field_d = this.field_d;
@@ -531,7 +531,7 @@ class nc {
     int d(int param0, int param1) {
         if (param0 > -65) {
           MusicTrack var4 = (MusicTrack) null;
-          nc.a(true, -108, -32, (MusicTrack) null);
+          MenuScreen.a(true, -108, -32, (MusicTrack) null);
         }
         if (!this.field_f) {
           return this.a((byte) -118, param1) + this.field_k;
@@ -687,7 +687,7 @@ class nc {
     int a(int param0, int param1) {
         if (param1 != 23697) {
           MusicTrack var4 = (MusicTrack) null;
-          nc.a(true, 65, 23, (MusicTrack) null);
+          MenuScreen.a(true, 65, 23, (MusicTrack) null);
         }
         if (this.field_f) {
           return this.field_b + param0 * this.field_k;
@@ -695,7 +695,7 @@ class nc {
         return this.field_b;
     }
 
-    void a(int param0, boolean param1, int param2) {
+    void onEnter(int param0, boolean param1, int param2) {
         if (~this.field_g.field_d != param0) {
           param2 = this.field_g.field_d;
         }
@@ -832,7 +832,7 @@ class nc {
               continue;
             }
             this.b(param0 + 12, this.field_g.field_d);
-            this.b(-96, false, this.field_g.field_d);
+            this.handleMenuAction(-96, false, this.field_g.field_d);
             continue;
           }
           if (this.field_d == 2) {
@@ -858,9 +858,9 @@ class nc {
         }
         var3Lifetime2 = 1;
         if (am.a(param0 ^ -112) &&
-          fb.field_e != null &&
+          PowerupButton.field_e != null &&
           !df.field_I) {
-          stackIn_65_0 = (fb.field_e.a(true, 15978)) ? 0 : 1;
+          stackIn_65_0 = (PowerupButton.field_e.a(true, 15978)) ? 0 : 1;
           var3Lifetime2 = stackIn_65_0;
           if (re.field_b) {
             w.a(320, 180, true, 81);
@@ -875,7 +875,7 @@ class nc {
           this.field_g.a(this.a(-6003, bo.field_d, MouseInputHandler.field_g), 42, this.a(-6003, ka.field_t, vb.field_f));
           if (this.field_g.field_d != -1) {
             this.b(12, this.field_g.field_d);
-            this.b(-74, true, this.field_g.field_d);
+            this.handleMenuAction(-74, true, this.field_g.field_d);
           }
           if (this.field_g.field_d != var2 &&
             this.field_g.field_d != -1) {
@@ -950,8 +950,8 @@ class nc {
             stackIn_31_0 = (!param1) ? 6 : 7;
             var10 = stackIn_31_0;
           }
-          if (null != fb.field_e) {
-            stackIn_35_0 = fb.field_e.g(-127);
+          if (null != PowerupButton.field_e) {
+            stackIn_35_0 = PowerupButton.field_e.g(-127);
           } else {
             stackIn_35_0 = 0;
           }
@@ -1012,7 +1012,7 @@ class nc {
         }
     }
 
-    nc(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
+    MenuScreen(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
         try {
           this.field_k = param5;
           this.field_d = param0;

@@ -7,7 +7,7 @@ final class gg {
     static int[][] field_i;
     static int[] field_l;
     String field_a;
-    static cj field_m;
+    static UiComponent field_m;
     static boolean field_k;
     int field_g;
     String field_f;
@@ -19,24 +19,24 @@ final class gg {
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3) {
         int stackIn_10_0 = 0;
-        cj stackIn_24_0 = null;
+        UiComponent stackIn_24_0 = null;
         String stackIn_25_1 = null;
-        cj stackIn_27_0 = null;
+        UiComponent stackIn_27_0 = null;
         String stackIn_28_1 = null;
         String stackIn_57_0 = null;
-        cj stackIn_68_0 = null;
+        UiComponent stackIn_68_0 = null;
         int stackIn_68_1 = 0;
         boolean stackIn_69_2 = false;
-        cj stackIn_73_0 = null;
+        UiComponent stackIn_73_0 = null;
         int stackIn_73_1 = 0;
         boolean stackIn_74_2 = false;
-        cj stackIn_78_0 = null;
+        UiComponent stackIn_78_0 = null;
         int stackIn_78_1 = 0;
         boolean stackIn_79_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        cj var5 = null;
-        cj var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -47,9 +47,9 @@ final class gg {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        cj var15 = null;
+        UiComponent var15 = null;
         String var16 = null;
-        cj var17 = null;
+        UiComponent var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -69,8 +69,8 @@ final class gg {
             var6.field_zb = 0;
             field_m.field_wb = WidgetStyleLayer.field_l.toUpperCase();
             var7 = (2 + LevelData.field_a.field_zb) / 2;
-            eb.field_B.a(40, -40 + LevelData.field_a.field_z, -2 + var7, 0, -3344);
-            GameKeyHandler.field_a.a(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb - var7, var7, -3344);
+            eb.field_B.setBounds(40, -40 + LevelData.field_a.field_z, -2 + var7, 0, -3344);
+            GameKeyHandler.field_a.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb - var7, var7, -3344);
             if (qo.field_r.length == 1 &&
               qo.field_r[0] == 2) {
               var8 = 0;
@@ -195,15 +195,15 @@ final class gg {
           stackIn_68_0 = JaggrabDownloader.field_i;
           stackIn_68_1 = -11838;
           stackIn_69_2 = (param1) && (!param2) && (!io.field_b);
-          ((cj) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
+          ((UiComponent) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
           stackIn_73_0 = LevelData.field_a;
           stackIn_73_1 = -11838;
           stackIn_74_2 = (param1) && (!param2) && (!io.field_b);
-          ((cj) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
+          ((UiComponent) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
           stackIn_78_0 = qf.field_b;
           stackIn_78_1 = -11838;
           stackIn_79_2 = (param1) && (!param2) && (io.field_b);
-          ((cj) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
+          ((UiComponent) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
           if (!param3) {
             return;
           }

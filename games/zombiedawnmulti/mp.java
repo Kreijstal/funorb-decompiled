@@ -63,7 +63,7 @@ abstract class mp {
           TextInputWidget.field_R.a(123, param2);
           TextInputWidget.field_R.a(-67, param1);
           TextInputWidget.field_R.a(param3, (byte) -128);
-          TextInputWidget.field_R.a(UsernameAvailabilityValidator.field_v, -2628, gn.field_L);
+          TextInputWidget.field_R.a(UsernameAvailabilityValidator.field_v, -2628, ButtonWidget.field_L);
           ma.field_a.b((byte) -35, 18);
           fieldTemp$0 = ma.field_a.position + 1;
           ma.field_a.position = ma.field_a.position + 1;
@@ -103,9 +103,9 @@ abstract class mp {
         boolean stackIn_4_2;
         int stackIn_4_3;
         boolean stackIn_5_4 = false;
-        cj stackIn_34_0 = null;
+        UiComponent stackIn_34_0 = null;
         String stackIn_35_1 = null;
-        cj stackIn_38_0 = null;
+        UiComponent stackIn_38_0 = null;
         String stackIn_39_1 = null;
         int stackIn_43_0 = 0;
         Object stackIn_101_0 = null;
@@ -152,14 +152,14 @@ abstract class mp {
               var8 = 0;
               if (var19 == 0) {
                 if (null == var7.field_Cb) {
-                  var7.field_Ib = new cj(0L, m.field_x);
+                  var7.field_Ib = new UiComponent(0L, m.field_x);
                   var7.a((byte) 50, var7.field_Ib);
-                  var7.field_Fb = new cj(0L, wc.field_H);
+                  var7.field_Fb = new UiComponent(0L, wc.field_H);
                   var7.a((byte) 50, var7.field_Fb);
-                  var7.field_Gb = new cj(0L, m.field_x);
+                  var7.field_Gb = new UiComponent(0L, m.field_x);
                   var7.a((byte) 50, var7.field_Gb);
                   var7.field_Fb.field_R = 2;
-                  var7.f(-128);
+                  var7.markDescendantsToInheritVisualState(-128);
                   var8 = 1;
                 }
                 var7.field_zb = eg.field_B.field_Ib.field_zb;
@@ -179,7 +179,7 @@ abstract class mp {
                   !var7.field_Kb.equals("")) {
                   var7.field_Gb.field_rb = SimUnit.field_T;
                   var7.field_Gb.field_ob = var11;
-                  var7.field_Gb.a(jk.field_f, var9, 3 + SimUnit.field_T.fullWidth, 0, -3344);
+                  var7.field_Gb.setBounds(jk.field_f, var9, 3 + SimUnit.field_T.fullWidth, 0, -3344);
                   var12 = 1;
                 }
                 var7.field_Fb.field_ob = var11;
@@ -203,7 +203,7 @@ abstract class mp {
                   stackIn_35_1 = BitmapFont.a(var7.field_Ib.field_yb, var7.field_Hb, var14);
                 }
                 stackIn_34_0.field_wb = stackIn_35_1;
-                var7.field_Ib.a(jk.field_f, var9, var14, var13, -3344);
+                var7.field_Ib.setBounds(jk.field_f, var9, var14, var13, -3344);
                 stackIn_38_0 = var7.field_Fb;
                 if (var7.field_Nb != null) {
                   stackIn_39_1 = var7.field_Nb;
@@ -211,7 +211,7 @@ abstract class mp {
                   stackIn_39_1 = pi.field_c;
                 }
                 stackIn_38_0.field_wb = stackIn_39_1;
-                var7.field_Fb.a(jk.field_f, var9, 80, -80 + var7.field_zb, -3344);
+                var7.field_Fb.setBounds(jk.field_f, var9, 80, -80 + var7.field_zb, -3344);
                 stackIn_43_0 = (var7.field_Ib.field_wb.equals(var7.field_Hb)) ? 0 : 1;
                 var15 = stackIn_43_0;
                 var9 = var9 + jk.field_f;
@@ -219,7 +219,7 @@ abstract class mp {
                   var7.field_I = var9 - var7.field_z;
                 }
                 if (var8 != 0) {
-                  eg.field_B.field_Ib.a(2, var7, 1300, (cj) (var6));
+                  eg.field_B.field_Ib.placeBelow(2, var7, 1300, (UiComponent) (var6));
                 }
                 if (var7.field_Gb == null ||
                   !var7.field_Gb.field_L) {

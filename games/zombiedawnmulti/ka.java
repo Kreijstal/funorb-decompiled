@@ -10,7 +10,7 @@ final class ka {
     int[] field_r;
     int field_l;
     String field_g;
-    cj field_q;
+    UiComponent field_q;
     int field_j;
     long field_a;
     static ao field_b;
@@ -124,7 +124,7 @@ final class ka {
         this.field_n = kk.field_s;
         this.field_o = UnitView.field_W;
         this.field_d = pg.field_b;
-        this.field_i = tk.field_m;
+        this.field_i = LaboratoryScreen.field_m;
         this.field_e = IntrusiveDequeCursor.field_h;
         this.field_j = ce.field_r;
         if (!param0) {

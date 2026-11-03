@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ec {
-    static cj field_b;
+    static UiComponent field_b;
     static String field_a;
     static boolean field_c;
 
@@ -10,7 +10,7 @@ final class ec {
         field_b = null;
         field_a = null;
         if (param0 != -12) {
-          field_b = (cj) null;
+          field_b = (UiComponent) null;
         }
     }
 

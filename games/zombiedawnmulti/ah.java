@@ -71,7 +71,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("error_js5crc", (byte) 83);
                 if (var2 != null) {
-                  sb.field_d = qe.a(-2739, var2);
+                  IndexedSpriteState.field_d = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("error_js5io", (byte) 83);
                 if (null != var2) {
@@ -83,7 +83,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("error_js5connect", (byte) 83);
                 if (var2 != null) {
-                  ko.field_j = qe.a(-2739, var2);
+                  PowerupBar.field_j = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("login_gameupdated", (byte) 83);
                 if (var2 != null) {
@@ -187,7 +187,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_x_lost_con", (byte) 83);
                 if (var2 != null) {
-                  un.field_l = qe.a(-2739, var2);
+                  TextInputValidator.field_l = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_x_cannot_join_full", (byte) 83);
                 if (var2 != null) {
@@ -274,7 +274,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_lobby_location", (byte) 83);
                 if (null != var2) {
-                  ko.field_h = qe.a(-2739, var2);
+                  PowerupBar.field_h = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_gamelist_all_games", (byte) 83);
                 if (null != var2) {
@@ -358,7 +358,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("add_x_to_ignore", (byte) 83);
                 if (null != var2) {
-                  sb.field_g = qe.a(-2739, var2);
+                  IndexedSpriteState.field_g = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("rm_x_from_friends", (byte) 83);
                 if (var2 != null) {
@@ -378,7 +378,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("send_pm", (byte) 83);
                 if (null != var2) {
-                  nc.field_c = qe.a(-2739, var2);
+                  MenuScreen.field_c = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("invite_accept_xs_game", (byte) 83);
                 if (var2 != null) {
@@ -442,7 +442,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_chat_lobby_friends", (byte) 83);
                 if (null != var2) {
-                  tk.field_o = qe.a(-2739, var2);
+                  LaboratoryScreen.field_o = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_chat_lobby_hide", (byte) 83);
                 if (null != var2) {
@@ -634,7 +634,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("players_in_game", (byte) 83);
                 if (null != var2) {
-                  ko.field_k = qe.a(-2739, var2);
+                  PowerupBar.field_k = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("you_are_invited_to_xs_game", (byte) 83);
                 if (null != var2) {
@@ -1132,7 +1132,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("connectionlost_withreason", (byte) 83);
                 if (var2 != null) {
-                  cj.field_Eb = qe.a(-2739, var2);
+                  UiComponent.field_Eb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("passwordverificationrequired", (byte) 83);
                 if (null != var2) {
@@ -1420,7 +1420,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_password", (byte) 83);
                 if (null != var2) {
-                  gn.field_D = qe.a(-2739, var2);
+                  ButtonWidget.field_D = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_password_confirm", (byte) 83);
                 if (var2 != null) {
@@ -1788,7 +1788,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("waitingfor_soundeffects", (byte) 83);
                 if (var2 != null) {
-                  ko.field_i = qe.a(-2739, var2);
+                  PowerupBar.field_i = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("waitingfor_music", (byte) 83);
                 if (var2 != null) {
@@ -2774,15 +2774,15 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("hs_mode_name,0", (byte) 83);
                 if (var2 != null) {
-                  cj.field_C[0] = qe.a(-2739, var2);
+                  UiComponent.field_C[0] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("hs_mode_name,1", (byte) 83);
                 if (var2 != null) {
-                  cj.field_C[1] = qe.a(-2739, var2);
+                  UiComponent.field_C[1] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("hs_mode_name,2", (byte) 83);
                 if (var2 != null) {
-                  cj.field_C[2] = qe.a(-2739, var2);
+                  UiComponent.field_C[2] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("rating_mode_name,0", (byte) 83);
                 if (var2 != null) {
@@ -3095,7 +3095,7 @@ final class ah {
           ai.field_b = param1;
           fieldTemp$0 = SimHuman.field_pb;
           SimHuman.field_pb = SimHuman.field_pb + 1;
-          gn.field_I[fieldTemp$0] = 0;
+          ButtonWidget.field_I[fieldTemp$0] = 0;
           if (!(ai.field_b >= 0) ||
             !(19 > ai.field_b)) {
             if (ai.field_b == -1) {
@@ -3106,7 +3106,7 @@ final class ah {
             SimHuman.field_pb = stackIn_14_0;
             var2_int = 0;
             while (var2_int < SimHuman.field_pb) {
-              gn.field_I[var2_int] = var2_int;
+              ButtonWidget.field_I[var2_int] = var2_int;
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -3132,7 +3132,7 @@ final class ah {
                     if (FullscreenFocusCanvas.field_k.c(param0 + 213, var3)) {
                       fieldTemp$1 = SimHuman.field_pb;
                       SimHuman.field_pb = SimHuman.field_pb + 1;
-                      gn.field_I[fieldTemp$1] = var2_intLifetime1;
+                      ButtonWidget.field_I[fieldTemp$1] = var2_intLifetime1;
                     }
                   }
                   var3++;

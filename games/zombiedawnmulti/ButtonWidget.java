@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class gn extends UiWidget {
+class ButtonWidget extends UiWidget {
     private boolean field_H;
     static java.util.zip.CRC32 field_B;
     boolean field_G;
@@ -16,7 +16,7 @@ class gn extends UiWidget {
     static String field_C;
     static String field_E;
 
-    gn(String param0, WidgetActionListener param1, bj param2) {
+    ButtonWidget(String param0, WidgetActionListener param1, bj param2) {
         super(param0, param1, param2);
         this.field_J = true;
         this.field_F = true;
@@ -39,7 +39,7 @@ class gn extends UiWidget {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -228,7 +228,7 @@ class gn extends UiWidget {
     final void clearKeyboardFocus(byte param0) {
         if (param0 != 32) {
           StringBuilder var3 = (StringBuilder) null;
-          this.a(114, (Hashtable) null, 36, (StringBuilder) null);
+          this.appendWidgetDiagnostics(114, (Hashtable) null, 36, (StringBuilder) null);
           if (!this.field_H) {
             return;
           }
@@ -255,7 +255,7 @@ class gn extends UiWidget {
         }
     }
 
-    gn(String param0, bj param1) {
+    ButtonWidget(String param0, bj param1) {
         this(param0, ra.field_o.field_n, param1);
     }
 
@@ -269,7 +269,7 @@ class gn extends UiWidget {
         try {
           if (param4 != -24) {
             var9 = (String) null;
-            gn.b((byte) -31, (String) null);
+            ButtonWidget.b((byte) -31, (String) null);
           }
           if (!this.field_F) {
             return false;
@@ -277,7 +277,7 @@ class gn extends UiWidget {
           if (!this.a(89, param5, param1, param0, param6)) {
             return false;
           }
-          this.a(param3, param4 ^ -24);
+          this.requestKeyboardFocus(param3, param4 ^ -24);
           this.field_u = param2;
           if (null != this.field_A &&
             this.field_A instanceof ph) {
@@ -404,7 +404,7 @@ class gn extends UiWidget {
         }
     }
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendWidgetDiagnostics(int param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -426,7 +426,7 @@ class gn extends UiWidget {
             }
           }
           if (param0 != 7) {
-            gn.a(',', -13);
+            ButtonWidget.a(',', -13);
           }
           stackIn_8_0 = (StringBuilder) (param3);
           return stackIn_8_0;
@@ -450,7 +450,7 @@ class gn extends UiWidget {
         }
     }
 
-    protected gn() {
+    protected ButtonWidget() {
         this.field_J = true;
         this.field_F = true;
         this.field_H = false;

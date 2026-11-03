@@ -9,7 +9,7 @@ final class wd extends WidgetContainer implements in {
     static MidiPcmStream field_L;
     private ne field_R;
     private int[] field_N;
-    private gn[] field_H;
+    private ButtonWidget[] field_H;
     private int field_J;
     static String field_I;
     private BitmapFont field_M;
@@ -48,8 +48,8 @@ final class wd extends WidgetContainer implements in {
         if (param0 != -3481) {
           return;
         }
-        gn[] var7 = new gn[param1];
-        gn[] var3 = var7;
+        ButtonWidget[] var7 = new ButtonWidget[param1];
+        ButtonWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_J; var5++) {
           var7[var5] = this.field_H[var5];
@@ -97,11 +97,11 @@ final class wd extends WidgetContainer implements in {
         }
     }
 
-    final gn a(String param0, int param1, bj param2) {
-        gn var4 = null;
+    final ButtonWidget a(String param0, int param1, bj param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        gn stackIn_3_0 = null;
+        ButtonWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -109,7 +109,7 @@ final class wd extends WidgetContainer implements in {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new gn(param0, param2);
+          var4 = new ButtonWidget(param0, param2);
           var4.listener = (WidgetActionListener) ((Object) new oq());
           var5 = this.field_w - 2;
           this.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w + 34);
@@ -155,7 +155,7 @@ final class wd extends WidgetContainer implements in {
         }
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -174,7 +174,7 @@ final class wd extends WidgetContainer implements in {
             if (var7 == -1) {
               this.field_R.m(-7435);
             } else {
-              fb.a(this.field_N[var6_int], 111);
+              PowerupButton.a(this.field_N[var6_int], 111);
             }
             break;
           }

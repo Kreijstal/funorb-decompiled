@@ -35,8 +35,8 @@ final class oq extends TextWidgetPainter {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param4 instanceof gn) {
-            param0 = param0 & ((gn) (param4)).field_F;
+          if (param4 instanceof ButtonWidget) {
+            param0 = param0 & ((ButtonWidget) (param4)).field_F;
           }
           if (param0) {
             if (var6_int == 0) {

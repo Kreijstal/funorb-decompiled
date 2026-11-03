@@ -6,7 +6,7 @@ import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
     static java.security.SecureRandom field_j;
-    static cj field_i;
+    static UiComponent field_i;
     private java.net.ProxySelector field_l;
     static String field_k;
 
@@ -165,11 +165,11 @@ final class ProxySocketConnector extends SocketConnector {
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var6_int = param3 + 485 + (8 + param2) + 10;
-          qe.field_q.a(-6 + ImageProducerRasterBuffer.field_k.field_z, 3, var6_int - 6, 3, -3344);
+          qe.field_q.setBounds(-6 + ImageProducerRasterBuffer.field_k.field_z, 3, var6_int - 6, 3, -3344);
           var7 = qe.field_q.field_z - 5;
-          SimEntity.field_z.a(param5, var7 - param5, param2 + 487 + param3, 5, param0 ^ -3342);
-          ec.field_b.a(param5, 0, -ua.field_E.field_zb + (SimEntity.field_z.field_zb - param2), param2, -3344);
-          ua.field_E.a(param5, 0, ua.field_E.field_zb, param2 + ec.field_b.field_zb, param0 - 3346);
+          SimEntity.field_z.setBounds(param5, var7 - param5, param2 + 487 + param3, 5, param0 ^ -3342);
+          ec.field_b.setBounds(param5, 0, -ua.field_E.field_zb + (SimEntity.field_z.field_zb - param2), param2, -3344);
+          ua.field_E.setBounds(param5, 0, ua.field_E.field_zb, param2 + ec.field_b.field_zb, param0 - 3346);
           var7 = var7 - (2 + param5);
           tn.field_A.a(param3, 2, param3 + (param0 + param2) + 485, 5, var7 - 5, param0 ^ -31467, 5);
           if (ra.field_f != null) {
@@ -186,12 +186,12 @@ final class ProxySocketConnector extends SocketConnector {
               var11++;
               var7Lifetime1 = var11 * (ImageProducerRasterBuffer.field_k.field_z - 4) / (1 + gi.field_l) + (1 - var13);
               if (5 > var12) {
-                la.field_h[var12].a(var7Lifetime1, var13, var8, var6_int, param0 ^ -3342);
-                ij.field_k[var12].a(var7Lifetime1, 0, var9 - param2, param2, param0 ^ -3342);
-                pf.field_d[var12].a(-param4 + var7Lifetime1 - param4, param4, param1, var9, -3344);
-                hh.field_l[var12].a(-param4 + var7Lifetime1 - param4, param4, var8 - (param2 + var10), var10, -3344);
+                la.field_h[var12].setBounds(var7Lifetime1, var13, var8, var6_int, param0 ^ -3342);
+                ij.field_k[var12].setBounds(var7Lifetime1, 0, var9 - param2, param2, param0 ^ -3342);
+                pf.field_d[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, param1, var9, -3344);
+                hh.field_l[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, var8 - (param2 + var10), var10, -3344);
               } else {
-                nn.field_b.a(var7Lifetime1, var13, var8, var6_int, -3344);
+                nn.field_b.setBounds(var7Lifetime1, var13, var8, var6_int, -3344);
               }
             }
           }

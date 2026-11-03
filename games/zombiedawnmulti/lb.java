@@ -23,7 +23,7 @@ final class lb {
           if (DualLinkNode.a((byte) 29, param1)) {
             return false;
           }
-          if (gn.b((byte) 62, param1)) {
+          if (ButtonWidget.b((byte) 62, param1)) {
             return false;
           }
           if (param0.length() == 0) {

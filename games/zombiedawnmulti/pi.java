@@ -98,7 +98,7 @@ final class pi {
           if (null != oe.field_f) {
             ma.field_a.b(-16171, oe.field_f);
           }
-          hd.a(gn.field_L, (byte) -122, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+          hd.a(ButtonWidget.field_L, (byte) -122, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
           ma.field_a.b(false, -var5_int + ma.field_a.position);
           cb.a(-1, false);
           return;

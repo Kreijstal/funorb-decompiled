@@ -6,7 +6,7 @@ import java.util.*;
 final class ke {
     static int field_b;
     static pi field_f;
-    static cj field_j;
+    static UiComponent field_j;
     static BitmapFont field_h;
     static String field_k;
     static String field_d;

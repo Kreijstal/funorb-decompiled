@@ -262,7 +262,7 @@ final class gi extends IntrusiveNode {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = sb.a(32351, var3);
+            var5 = IndexedSpriteState.a(32351, var3);
             if (var5 == null) {
               stackIn_15_0 = nf.a((byte) 125, var4);
               return stackIn_15_0;

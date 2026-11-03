@@ -110,7 +110,7 @@ final class uf {
         boolean stackIn_5_2;
         int stackIn_5_3;
         boolean stackIn_6_4 = false;
-        cj stackIn_22_0 = null;
+        UiComponent stackIn_22_0 = null;
         String stackIn_23_1 = null;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -156,21 +156,21 @@ final class uf {
           while (var6 != null) {
             var7 = 0;
             if (var6.field_Cb == null) {
-              var6.field_Ib = new cj(0L, m.field_x);
+              var6.field_Ib = new UiComponent(0L, m.field_x);
               var6.a((byte) 50, var6.field_Ib);
-              var6.field_Gb = new cj(0L, m.field_x);
+              var6.field_Gb = new UiComponent(0L, m.field_x);
               var6.a((byte) 50, var6.field_Gb);
               var7 = 1;
-              var6.f(-128);
+              var6.markDescendantsToInheritVisualState(-128);
             }
             var6.field_zb = gl.field_L.field_Ib.field_zb;
-            var6.field_Ib.a(jk.field_f, 0, var6.field_zb, 0, -3344);
+            var6.field_Ib.setBounds(jk.field_f, 0, var6.field_zb, 0, -3344);
             var8 = 0;
             if (var6.field_Kb != null &&
               !var6.field_Kb.equals("")) {
               var6.field_Gb.field_ob = 16737894;
               var6.field_Gb.field_rb = SimUnit.field_T;
-              var6.field_Gb.a(jk.field_f, 0, 3 + SimUnit.field_T.fullWidth, 0, -3344);
+              var6.field_Gb.setBounds(jk.field_f, 0, 3 + SimUnit.field_T.fullWidth, 0, -3344);
               var8 = 1;
             }
             var9 = 0;
@@ -188,12 +188,12 @@ final class uf {
             stackIn_22_0.field_wb = stackIn_23_1;
             stackIn_26_0 = (var6.field_Ib.field_wb.equals(var6.field_Hb)) ? 0 : 1;
             var11 = stackIn_26_0;
-            var6.field_Ib.a(jk.field_f, 0, var10, var9, param2 - 3383);
+            var6.field_Ib.setBounds(jk.field_f, 0, var10, var9, param2 - 3383);
             if (var3_int == 0) {
               var6.field_I = -var6.field_z + jk.field_f;
             }
             if (var7 != 0) {
-              gl.field_L.field_Ib.a(2, var6, 1300, (cj) (var5));
+              gl.field_L.field_Ib.placeBelow(2, var6, 1300, (UiComponent) (var5));
             }
             if (null != var6.field_Gb &&
               var6.field_Gb.field_L) {

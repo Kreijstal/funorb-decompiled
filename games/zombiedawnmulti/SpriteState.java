@@ -8,9 +8,9 @@ abstract class SpriteState extends DualLinkNode {
     int field_y;
     static String field_A;
     int fullWidth;
-    static cj field_v;
+    static UiComponent field_v;
     int height;
-    static cj field_t;
+    static UiComponent field_t;
     int offsetX;
     static int[] field_q;
 
@@ -73,7 +73,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 22272) {
-            field_t = (cj) null;
+            field_t = (UiComponent) null;
           }
           var2_int = param1.readUnsignedShort((byte) 69);
           var3 = param1.readUnsignedShort((byte) 69);

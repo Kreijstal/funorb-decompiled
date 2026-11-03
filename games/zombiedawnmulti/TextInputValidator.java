@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class un extends gf implements fi {
+abstract class TextInputValidator extends gf implements fi {
     private TextInputWidget field_m;
     static String field_n;
     static String field_p;
@@ -9,7 +9,7 @@ abstract class un extends gf implements fi {
     static String field_o;
     static String field_l;
 
-    un(TextInputWidget param0) {
+    TextInputValidator(TextInputWidget param0) {
         try {
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
@@ -21,7 +21,7 @@ abstract class un extends gf implements fi {
         int var4;
         int var5;
         if (param0 < 74) {
-          un.a((int[]) null, 70, 11, -98, -57, -82, -73, -16, 0, -9, 113, -26, 31, 38, 49, 83, -9);
+          TextInputValidator.a((int[]) null, 70, 11, -98, -57, -82, -73, -16, 0, -9, 113, -26, 31, 38, 49, 83, -9);
         }
         if (param1) {
           if (lb.field_c[param2] < lb.field_c[param3]) {
@@ -75,13 +75,13 @@ abstract class un extends gf implements fi {
 
     abstract String validationMessageForText(String param0, int param1);
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_l = null;
         field_o = null;
         field_p = null;
         if (param0 != -1317848592) {
-          un.g(-41);
+          TextInputValidator.releaseStatics(-41);
         }
     }
 
@@ -434,7 +434,7 @@ abstract class un extends gf implements fi {
         try {
           this.a(-1306);
           if (param1 != 0) {
-            un.g(78);
+            TextInputValidator.releaseStatics(78);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "un.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -443,14 +443,14 @@ abstract class un extends gf implements fi {
 
     final re f(int param0) {
         if (param0 != -3) {
-          un.g(38);
+          TextInputValidator.releaseStatics(38);
         }
         return this.a(false, this.field_m.field_j);
     }
 
     final String e(int param0) {
         if (param0 != -3) {
-          un.a((int[]) null, -99, -31, 9, -3, 10, 88, -54, -105, 27, -84, -122, -1, -93, -21, -86, 107);
+          TextInputValidator.a((int[]) null, -99, -31, 9, -3, 10, 88, -54, -105, 27, -84, -122, -1, -93, -21, -86, 107);
         }
         return this.validationMessageForText(this.field_m.field_j, -1276425040);
     }

@@ -15,7 +15,7 @@ final class NavigationGrid {
     private Waypoint[] field_q;
     private int[][] field_l;
     static int field_n;
-    static cj field_m;
+    static UiComponent field_m;
     static String field_d;
     private int field_b;
     static int field_j;

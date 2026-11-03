@@ -124,7 +124,7 @@ final class oa {
                 var4 = var3;
               }
               stackIn_15_0 = var1_int;
-              if (fb.field_e.localTeam != var2) {
+              if (PowerupButton.field_e.localTeam != var2) {
                 stackIn_16_1 = var4 / 20;
               } else {
                 stackIn_16_1 = var4 / 40;

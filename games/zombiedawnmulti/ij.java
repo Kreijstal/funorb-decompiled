@@ -16,7 +16,7 @@ final class ij implements WidgetActionListener {
     private int field_m;
     private BitmapFont field_n;
     private int field_g;
-    static cj[] field_k;
+    static UiComponent[] field_k;
     private int field_b;
 
     public static void a(boolean param0) {

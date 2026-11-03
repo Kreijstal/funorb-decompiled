@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends cj {
+final class mi extends UiComponent {
     static String field_Jb;
-    private cj field_Lb;
+    private UiComponent field_Lb;
     static Sprite field_Mb;
-    private cj field_Fb;
+    private UiComponent field_Fb;
     static IntrusiveDeque field_Kb;
     static int field_Gb;
     static String field_Nb;
-    static cj[] field_Ib;
+    static UiComponent[] field_Ib;
     static int field_Hb;
 
-    mi(long param0, Sprite param1, Sprite param2, int param3, cj param4, String param5) {
-        this(param0, (cj) null, param4, param5);
+    mi(long param0, Sprite param1, Sprite param2, int param3, UiComponent param4, String param5) {
+        this(param0, (UiComponent) null, param4, param5);
         try {
           this.field_Lb.field_lb = param3;
           this.field_Lb.field_rb = param2;
@@ -28,7 +28,7 @@ final class mi extends cj {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        this.a(param5, param0, param3, param4, -3344);
+        this.setBounds(param5, param0, param3, param4, -3344);
         int var7 = 121 / ((param1 + 34) / 45);
         this.e(true, param2);
     }
@@ -46,14 +46,14 @@ final class mi extends cj {
         int var3Lifetime1;
         if (!param0) {
           mi.b(-119, -84);
-          this.field_Lb.a(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
+          this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
           var3 = param1 + this.field_Lb.field_zb;
-          this.field_Fb.a(this.field_z, 0, this.field_zb - var3, var3, -3344);
+          this.field_Fb.setBounds(this.field_z, 0, this.field_zb - var3, var3, -3344);
           return;
         }
-        this.field_Lb.a(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
+        this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
         var3Lifetime1 = param1 + this.field_Lb.field_zb;
-        this.field_Fb.a(this.field_z, 0, this.field_zb - var3Lifetime1, var3Lifetime1, -3344);
+        this.field_Fb.setBounds(this.field_z, 0, this.field_zb - var3Lifetime1, var3Lifetime1, -3344);
     }
 
     public static void d(boolean param0) {
@@ -113,15 +113,15 @@ final class mi extends cj {
         }
     }
 
-    private mi(long param0, cj param1, cj param2, String param3) {
-        super(param0, (cj) null);
+    private mi(long param0, UiComponent param1, UiComponent param2, String param3) {
+        super(param0, (UiComponent) null);
         try {
-          this.field_Lb = new cj(0L, param1);
-          this.field_Fb = new cj(0L, param2);
+          this.field_Lb = new UiComponent(0L, param1);
+          this.field_Fb = new UiComponent(0L, param2);
           this.field_Fb.field_wb = param3;
           this.a((byte) 50, this.field_Lb);
           this.a((byte) 50, this.field_Fb);
-          this.f(-128);
+          this.markDescendantsToInheritVisualState(-128);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

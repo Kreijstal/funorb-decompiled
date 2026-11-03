@@ -4,7 +4,7 @@
 final class vd {
     static int field_d;
     static String field_b;
-    static cj field_a;
+    static UiComponent field_a;
     static int field_c;
 
     final static boolean a(boolean param0, CharSequence param1, byte param2) {

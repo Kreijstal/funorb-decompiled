@@ -41,7 +41,7 @@ final class p {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        sb.field_c = param0;
+        IndexedSpriteState.field_c = param0;
         if (param2) {
           p.a(35);
         }

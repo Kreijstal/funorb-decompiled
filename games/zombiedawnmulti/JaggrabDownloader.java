@@ -13,7 +13,7 @@ final class JaggrabDownloader implements Runnable {
     static IntrusiveDeque field_l;
     private PlatformTask field_d;
     static jh field_c;
-    static cj field_i;
+    static UiComponent field_i;
     private java.net.URL field_a;
     static int field_h;
 
@@ -221,7 +221,7 @@ final class JaggrabDownloader implements Runnable {
 
     final PacketBuffer a(byte param0) {
         if (param0 != 21) {
-          field_i = (cj) null;
+          field_i = (UiComponent) null;
           if (3 == this.field_k) {
             return this.field_g;
           }

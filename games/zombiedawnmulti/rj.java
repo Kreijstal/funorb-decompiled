@@ -33,7 +33,7 @@ final class rj extends SceneObject {
 
     final static void a(int param0, byte param1, String param2) {
         try {
-          er.field_i = un.field_k;
+          er.field_i = TextInputValidator.field_k;
           int var3_int = 75 % ((43 - param1) / 55);
           b.field_b = param0;
         } catch (RuntimeException runtimeException) {

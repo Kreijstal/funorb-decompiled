@@ -6,7 +6,7 @@ final class de {
     static ip field_h;
     static int[] field_c;
     static qh field_b;
-    static cj field_f;
+    static UiComponent field_f;
     static String field_a;
     static String field_d;
     static volatile int field_g;

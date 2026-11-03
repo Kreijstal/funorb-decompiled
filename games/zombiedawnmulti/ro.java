@@ -3,7 +3,7 @@
  */
 final class ro extends GameWorld {
     static IntrusiveDeque field_M;
-    static cj field_O;
+    static UiComponent field_O;
     static boolean field_L;
     static String field_N;
 

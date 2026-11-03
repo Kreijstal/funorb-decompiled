@@ -8,7 +8,7 @@ abstract class SocketConnector {
     static Sprite field_c;
     String host;
     static RasterBuffer field_h;
-    static cj field_a;
+    static UiComponent field_a;
     static long field_e;
     static String field_g;
     static String field_d;

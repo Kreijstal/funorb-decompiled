@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ko {
+final class PowerupBar {
     private boolean field_c;
     static String field_i;
     static String field_j;
@@ -13,7 +13,7 @@ final class ko {
     private int field_m;
     private boolean field_g;
     static String field_h;
-    private fb[] field_b;
+    private PowerupButton[] field_b;
     private int field_l;
 
     public static void d(int param0) {
@@ -86,7 +86,7 @@ final class ko {
             if (this.field_m == 8) {
               return false;
             }
-            this.field_b[-1 + this.field_m] = new fb(190 + (this.field_m * 40 - 40), param1, this.field_m - 1);
+            this.field_b[-1 + this.field_m] = new PowerupButton(190 + (this.field_m * 40 - 40), param1, this.field_m - 1);
             this.field_b[-1 + this.field_m].field_l = -PortalEntryEvent.field_m.currentTick + tg.field_e.powerupReadyTick[this.field_m - 1];
             this.field_b[this.field_m - 1].a(0);
             return true;
@@ -136,13 +136,13 @@ final class ko {
     final void a(int param0, int param1, byte param2) {
         int var5_int = 0;
         int var4_int = 0;
-        fb[] var4 = null;
-        fb var6_ref_fb = null;
+        PowerupButton[] var4 = null;
+        PowerupButton var6_ref_fb = null;
         int var7 = 0;
-        fb[] var8 = null;
+        PowerupButton[] var8 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        fb var5 = null;
+        PowerupButton var5 = null;
         int var6 = 0;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -177,13 +177,13 @@ final class ko {
     }
 
     final static void a(boolean param0, int param1, boolean param2, boolean param3) {
-        cj stackIn_14_0 = null;
+        UiComponent stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
-        cj stackIn_22_0 = null;
+        UiComponent stackIn_22_0 = null;
         int stackIn_22_1 = 0;
         boolean stackIn_23_2 = false;
-        cj stackIn_28_0 = null;
+        UiComponent stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         boolean stackIn_29_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -193,7 +193,7 @@ final class ko {
         try {
           v.a(199);
           if (param2) {
-            ko.d(-60);
+            PowerupBar.d(-60);
           }
           if (0 > bc.field_e) {
             ql.field_b.field_wb = null;
@@ -203,15 +203,15 @@ final class ko {
           stackIn_14_0 = qe.field_k;
           stackIn_14_1 = -11838;
           stackIn_15_2 = (param0) && (!param3) && (!ee.field_a) && (null == JaggrabDownloader.field_c) && (BufferedSocket.field_n == null);
-          ((cj) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+          ((UiComponent) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
           stackIn_22_0 = cm.field_a;
           stackIn_22_1 = -11838;
           stackIn_23_2 = (param0) && (!param3) && (!ee.field_a) && (JaggrabDownloader.field_c == null) && (BufferedSocket.field_n == null);
-          ((cj) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_23_2);
+          ((UiComponent) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_23_2);
           stackIn_28_0 = SimHuman.field_gb;
           stackIn_28_1 = -11838;
           stackIn_29_2 = (param0) && (!param3) && (ee.field_a);
-          ((cj) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
+          ((UiComponent) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
           de.field_b.field_c.h(-37);
           if (0 != kj.field_u.field_T) {
             uk.field_N = true;
@@ -265,14 +265,14 @@ final class ko {
 
     final void c(int param0) {
         RuntimeException decompiledCaughtException = null;
-        fb[] var2 = null;
+        PowerupButton[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        fb var4_ref_fb = null;
+        PowerupButton var4_ref_fb = null;
         int var5 = 0;
-        fb[] var6 = null;
+        PowerupButton[] var6 = null;
         int var2_intLifetime1;
         int var3Lifetime1;
         int var3Lifetime2;
@@ -333,7 +333,7 @@ final class ko {
               }
             }
           }
-          var2_intLifetime1 = this.e(-1);
+          var2_intLifetime1 = this.getSelectedPowerupType(-1);
           if (255 != var2_intLifetime1 &&
             0 < MouseInputHandler.field_g) {
             if (bo.field_d <= 0) {
@@ -355,7 +355,7 @@ final class ko {
         }
     }
 
-    final int e(int param0) {
+    final int getSelectedPowerupType(int param0) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
@@ -363,7 +363,7 @@ final class ko {
         try {
           if (this.field_l != param0 &&
             this.field_b[this.field_l] != null) {
-            stackIn_3_0 = this.field_b[this.field_l].a((byte) 97);
+            stackIn_3_0 = this.field_b[this.field_l].getPowerupType((byte) 97);
             return stackIn_3_0;
           }
           stackIn_5_0 = 255;
@@ -422,7 +422,7 @@ final class ko {
           if (param0) {
             this.field_a = 77;
           }
-          var2_int = this.e(-1);
+          var2_int = this.getSelectedPowerupType(-1);
           if (var2_int != 9 &&
             var2_int != 10) {
             return 0;
@@ -443,14 +443,14 @@ final class ko {
         boolean stackIn_69_1 = false;
         boolean stackIn_76_2 = false;
         RuntimeException decompiledCaughtException = null;
-        fb[] var3 = null;
+        PowerupButton[] var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        fb var5_ref_fb = null;
+        PowerupButton var5_ref_fb = null;
         int var6 = 0;
-        fb[] var7 = null;
+        PowerupButton[] var7 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (this.field_b[param1] == null) {
@@ -472,7 +472,7 @@ final class ko {
             regionExit1: {
               this.field_l = param1;
               this.field_b[param1].b(2);
-              var3_int = this.field_b[param1].a((byte) 114);
+              var3_int = this.field_b[param1].getPowerupType((byte) 114);
               this.field_e = false;
               this.field_g = false;
               this.field_c = false;
@@ -545,7 +545,7 @@ final class ko {
             ah.a((byte) -86, var3_int);
             iq.a(var3_int, (byte) 99);
           } else {
-            this.h(1);
+            this.deselectActive(1);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -565,7 +565,7 @@ final class ko {
           if (param1 <= var4_int &&
             var4_int < this.field_m &&
             null != this.field_b[var4_int]) {
-            if (!this.field_b[var4_int].a(param0, param2, (byte) -46)) {
+            if (!this.field_b[var4_int].containsPoint(param0, param2, (byte) -46)) {
               return false;
             }
             stackIn_9_0 = this.b(17, var4_int);
@@ -579,7 +579,7 @@ final class ko {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean deselectActive(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -622,7 +622,7 @@ final class ko {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           regionExit1: {
-            var5_int = this.e(-1);
+            var5_int = this.getSelectedPowerupType(-1);
             if (!(param1 instanceof jj)) {
               var6_ref = (UnitView) (param1);
               if (var6_ref instanceof GameCharacter) {
@@ -686,7 +686,7 @@ final class ko {
               wd.a(param1.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
             }
           }
-          tg.field_e.powerupReadyTick[this.field_l] = PortalEntryEvent.field_m.currentTick + PortalEntryEvent.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, fb.field_e.localTeam, false);
+          tg.field_e.powerupReadyTick[this.field_l] = PortalEntryEvent.field_m.currentTick + PortalEntryEvent.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, PowerupButton.field_e.localTeam, false);
           this.field_b[this.field_l].a(0);
           this.field_c = false;
           this.field_g = false;
@@ -732,8 +732,8 @@ final class ko {
     final void b(int param0) {
         int var4 = 0;
         int var2_int = 0;
-        fb[] var3 = null;
-        fb var5 = null;
+        PowerupButton[] var3 = null;
+        PowerupButton var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -757,7 +757,7 @@ final class ko {
         }
     }
 
-    ko() {
+    PowerupBar() {
         this.field_d = false;
         this.field_f = 0;
         this.field_e = false;
@@ -765,7 +765,7 @@ final class ko {
         this.field_c = false;
         this.field_a = -1;
         try {
-          this.field_b = new fb[8];
+          this.field_b = new PowerupButton[8];
           this.field_m = 0;
           this.field_l = -1;
         } catch (RuntimeException runtimeException) {

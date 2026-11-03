@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf {
-    static cj field_a;
+    static UiComponent field_a;
     static String field_b;
     static String field_c;
     static IntrusiveDeque field_d;

@@ -509,7 +509,7 @@ final class SimZombie extends SimUnit {
         }
         try {
           rb.field_a = param0;
-          fb.a(12, 74);
+          PowerupButton.a(12, 74);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ge.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

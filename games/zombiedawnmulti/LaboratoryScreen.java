@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class tk extends nc {
+final class LaboratoryScreen extends MenuScreen {
     static int field_m;
-    static cj field_l;
+    static UiComponent field_l;
     static int field_n;
     static String field_o;
     static java.awt.Canvas field_q;
@@ -491,8 +491,8 @@ final class tk extends nc {
         }
     }
 
-    final void a(int param0, boolean param1, int param2) {
-        super.a(param0, param1, param2);
+    final void onEnter(int param0, boolean param1, int param2) {
+        super.onEnter(param0, param1, param2);
         this.e(-107);
         this.field_p = 0;
     }
@@ -502,7 +502,7 @@ final class tk extends nc {
         super.b(param0);
     }
 
-    tk(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
+    LaboratoryScreen(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
         Sprite var12 = null;
         Sprite var9 = null;
@@ -679,7 +679,7 @@ final class tk extends nc {
         try {
           if (param1 < 13) {
             hp var5 = (hp) null;
-            tk.a((hp) null, -88, 107);
+            LaboratoryScreen.a((hp) null, -88, 107);
           }
           var6 = ma.field_a;
           var6.b((byte) -35, param2);
@@ -815,7 +815,7 @@ final class tk extends nc {
         field_q = null;
         if (param0 >= -62) {
           hp var2 = (hp) null;
-          tk.a((hp) null, -91, 7);
+          LaboratoryScreen.a((hp) null, -91, 7);
         }
     }
 

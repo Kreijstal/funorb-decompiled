@@ -104,7 +104,7 @@ abstract class HumanView extends UnitView {
           return;
         }
         this.setState(18, -27655);
-        fb.field_e.f(127);
+        PowerupButton.field_e.f(127);
         if (param0) {
           this.field_kb = -115;
         }

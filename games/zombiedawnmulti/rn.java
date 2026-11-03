@@ -48,9 +48,9 @@ final class rn {
         dk.field_Ib.requestFocus();
     }
 
-    final static cj b(int param0) {
+    final static UiComponent b(int param0) {
         if (param0 != 28579) {
-          return (cj) null;
+          return (UiComponent) null;
         }
         return gl.field_L.field_Ib;
     }

@@ -23,11 +23,11 @@ final class tn extends qc {
           var3_int = 62 % ((43 - param1) / 53);
           if (ClientException.field_i < 10) {
             var4 = 0;
-            if (cj.field_ub) {
-              cj.field_ub = false;
+            if (UiComponent.field_ub) {
+              UiComponent.field_ub = false;
               var4 = 1;
             }
-            ip.a(tg.b(8218), af.field_b, var4 != 0, cj.g(18006), 34);
+            ip.a(tg.b(8218), af.field_b, var4 != 0, UiComponent.g(18006), 34);
             return;
           }
           if (!GameKeyHandler.a(250)) {

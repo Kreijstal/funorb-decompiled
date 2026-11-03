@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pf {
-    static cj[] field_d;
+    static UiComponent[] field_d;
     static int field_c;
     static Sprite[][] field_e;
     static IndexedSprite field_a;

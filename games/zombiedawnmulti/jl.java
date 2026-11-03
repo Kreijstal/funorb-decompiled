@@ -195,18 +195,18 @@ final class jl extends TextWidgetPainter {
         WidgetStyleLayer var7 = null;
         WidgetStyleLayer var9 = null;
         jl var10 = null;
-        gn var11 = null;
+        ButtonWidget var11 = null;
         WidgetStyleLayer var12 = null;
         WidgetStyleLayer var13 = null;
         WidgetStyleLayer var14 = null;
         WidgetStyleLayer var15 = null;
         try {
-          if (param4 instanceof gn) {
+          if (param4 instanceof ButtonWidget) {
             stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (gn) (stackIn_3_0);
+          var11 = (ButtonWidget) (stackIn_3_0);
           Camera.a(param3 + param4.field_y, param4.field_w + (param4.field_i + param1), (byte) 105, param3 + param4.field_y + param4.field_n, param1 + param4.field_i);
           if (var11 != null) {
             param0 = param0 & var11.field_F;
@@ -311,7 +311,7 @@ final class jl extends TextWidgetPainter {
         if (va.field_a != 2) {
           var7 = pi.field_e;
         } else {
-          var7 = nc.field_c;
+          var7 = MenuScreen.field_c;
         }
         gf.a(127, param2, param4, param5, var7, param6, param0, param3);
         if (param1 == -97) {

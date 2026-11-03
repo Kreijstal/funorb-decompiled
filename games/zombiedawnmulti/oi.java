@@ -16,7 +16,7 @@ final class oi {
 
     final static void a(int param0) {
         int var1 = 21 % ((27 - param0) / 47);
-        fb.a(17, 115);
+        PowerupButton.a(17, 115);
     }
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {

@@ -18,7 +18,7 @@ final class kj extends IntrusiveNode {
     int field_l;
     int field_v;
     int[] field_y;
-    static cj field_u;
+    static UiComponent field_u;
     int field_i;
     static int[] field_p;
     static ii field_r;
@@ -75,7 +75,7 @@ final class kj extends IntrusiveNode {
         String stackIn_2_2;
         Object stackIn_2_3;
         String stackIn_2_4;
-        cj stackIn_2_5;
+        UiComponent stackIn_2_5;
         int stackIn_2_6;
         Object stackIn_2_7;
         int stackIn_3_8 = 0;

@@ -362,7 +362,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-125, "RANKINGS_PAGE_PLAYER_TITLE");
                 if (var2 != null) {
-                  gn.field_C = qe.a(-2739, var2);
+                  ButtonWidget.field_C = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "TEXT_WISE_SAGE_TIP");
                 if (var2 != null) {
@@ -1200,7 +1200,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-127, "name_POWERUP_HAMMER");
                 if (var2 != null) {
-                  cj.field_B = qe.a(-2739, var2);
+                  UiComponent.field_B = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "name_POWERUP_BARRIER");
                 if (var2 != null) {
@@ -1255,7 +1255,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-124, "name_TRAIT_FAST_CASTER");
                 if (null != var2) {
-                  un.field_o = qe.a(-2739, var2);
+                  TextInputValidator.field_o = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "name_TRAIT_EXPERT");
                 if (var2 != null) {
@@ -1403,7 +1403,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-124, "teaser_POWERUP_FEAR");
                 if (null != var2) {
-                  un.field_n = qe.a(-2739, var2);
+                  TextInputValidator.field_n = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "teaser_POWERUP_SHACKLES");
                 if (null != var2) {
@@ -1523,7 +1523,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-122, "tip_POWERUP_SPEED");
                 if (var2 != null) {
-                  cj.field_db = qe.a(-2739, var2);
+                  UiComponent.field_db = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "tip_POWERUP_MELTDOWN");
                 if (null != var2) {
@@ -1647,7 +1647,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-127, "tip_TRAIT_DETERMINED");
                 if (var2 != null) {
-                  fb.field_g = qe.a(-2739, var2);
+                  PowerupButton.field_g = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "tip_TRAIT_WISE");
                 if (var2 != null) {
@@ -2337,7 +2337,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-125, "timetorun_spectator");
                 if (null != var2) {
-                  gn.field_E = qe.a(-2739, var2);
+                  ButtonWidget.field_E = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "achievementsonlyinrated");
                 if (null != var2) {
@@ -2415,7 +2415,7 @@ final class PortalView extends SceneObject {
             return;
           }
           boolean decompiledFrameRemainder3 = true;
-          if (fb.field_e != null) {
+          if (PowerupButton.field_e != null) {
             var5 = PortalEntryEvent.field_m.field_D[this.field_I][1];
             decompiledFrameRemainder3 = (var7 != 0);
           }
@@ -2539,7 +2539,7 @@ final class PortalView extends SceneObject {
           }
           boolean decompiledFrameRemainder2 = true;
           var5 = this.field_R;
-          boolean decompiledSharedTail1 = (null != fb.field_e);
+          boolean decompiledSharedTail1 = (null != PowerupButton.field_e);
           if (!decompiledSharedTail1) {
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameRemainder0 = true;

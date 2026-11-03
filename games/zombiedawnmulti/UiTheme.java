@@ -17,7 +17,7 @@ final class UiTheme {
     WidgetActionListener field_s;
     BitmapFont field_h;
     WidgetActionListener field_n;
-    static cj field_i;
+    static UiComponent field_i;
     private int field_f;
     int field_l;
     private boolean field_g;
@@ -31,7 +31,7 @@ final class UiTheme {
         field_i = null;
         field_q = null;
         if (param0 != -1020346174) {
-          field_i = (cj) null;
+          field_i = (UiComponent) null;
           field_r = null;
           return;
         }
@@ -176,7 +176,7 @@ final class UiTheme {
           var3 = -(t.field_e * t.field_e) + var2;
           param1 = param1 + var3 * (-param1 + km.field_cb) / var2;
         }
-        ImageProducerRasterBuffer.field_k.a(120, param1, 640, ck.field_a, -3344);
+        ImageProducerRasterBuffer.field_k.setBounds(120, param1, 640, ck.field_a, -3344);
         eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, km.field_cb - 24);
         if (!param0) {
           return;

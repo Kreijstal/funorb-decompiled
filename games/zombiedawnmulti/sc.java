@@ -5,18 +5,18 @@ final class sc {
     private long field_h;
     private int field_i;
     private DualLinkNode field_e;
-    static cj field_j;
+    static UiComponent field_j;
     static String field_c;
     private int field_g;
     static boolean field_a;
     static int field_f;
     private DualLinkNode[] field_k;
-    static cj field_d;
+    static UiComponent field_d;
     private DualLinkNode field_b;
 
     final static void a(int param0, Sprite[] param1, String param2, boolean param3, int param4, int param5, int param6, BitmapFont param7, int param8, byte param9, int param10, int param11, int param12, boolean param13, Sprite[] param14) {
         try {
-          aj.a(qf.field_c, param8, param4, param0, param5, param10, kk.field_x, param7, param0, param6, SecondaryNodeDeque.field_a, param12, new pd(param14), param12, new pd(param1), param7, ua.field_N, ic.field_g, sb.field_c, (byte) 70);
+          aj.a(qf.field_c, param8, param4, param0, param5, param10, kk.field_x, param7, param0, param6, SecondaryNodeDeque.field_a, param12, new pd(param14), param12, new pd(param1), param7, ua.field_N, ic.field_g, IndexedSpriteState.field_c, (byte) 70);
           gk.a(param13, 2, param2, param11, param3);
           if (param9 != -103) {
             field_a = true;
@@ -168,7 +168,7 @@ final class sc {
           this.field_b = this.field_b.secondaryPrevious;
           return var5;
         }
-        field_j = (cj) null;
+        field_j = (UiComponent) null;
         this.field_h = param0;
         var4Lifetime1 = this.field_k[(int)((long)(-1 + this.field_i) & param0)];
         this.field_b = var4Lifetime1.secondaryPrevious;
@@ -228,7 +228,7 @@ final class sc {
         int var1Lifetime1;
         int var2Lifetime1;
         if (param0 != 0) {
-          field_d = (cj) null;
+          field_d = (UiComponent) null;
           var1 = fa.d(false);
           var2 = UiTheme.a((byte) -99);
           MusicPatch.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1 + (um.field_a << 1), (la.field_m << 1) + var2, 12018);
@@ -244,7 +244,7 @@ final class sc {
     final static void b(int param0) {
         PhaseChangeEvent.field_i = null;
         if (param0 != 1) {
-          field_j = (cj) null;
+          field_j = (UiComponent) null;
           GameCharacter.field_hb = null;
           return;
         }

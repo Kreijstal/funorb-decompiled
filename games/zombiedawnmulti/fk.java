@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends nc {
+final class fk extends MenuScreen {
     static String field_l;
     static int[] field_m;
     static String field_o;
@@ -166,7 +166,7 @@ final class fk extends nc {
                   SoftwareRasterizer.fillRectAlpha(30, -35 + var7, 186, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7, 111, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7 - 35, 65, 225, 0, 64);
-                  ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7, var10, 1);
+                  ah.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7, var10, 1);
                   ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7, var10, 1);
                   ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7, var10, 1);
                   ah.field_e.b("%W", SpriteState.field_q[3], var7, var10, 1);
@@ -226,7 +226,7 @@ final class fk extends nc {
                   SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime1, 186, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime1, 111, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime1 - 35, 65, 225, 0, 64);
-                  ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
+                  ah.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
                   ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime1, var10Lifetime1, 1);
                   ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime1, var10Lifetime1, 1);
                   ah.field_e.b("%W", SpriteState.field_q[3], var7Lifetime1, var10Lifetime1, 1);
@@ -294,7 +294,7 @@ final class fk extends nc {
         SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime2, 186, 225, 0, 64);
         SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime2, 111, 225, 0, 64);
         SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime2 - 35, 65, 225, 0, 64);
-        ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
+        ah.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
         ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime2, var10Lifetime2, 1);
         ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime2, var10Lifetime2, 1);
         ah.field_e.b("%W", SpriteState.field_q[3], var7Lifetime2, var10Lifetime2, 1);

@@ -108,14 +108,14 @@ class ne extends ie implements in {
         if (param1 == 20341) {
           mg.field_H = param0;
           ImageProducerRasterBuffer.field_l = param2;
-          tk.field_n = param4;
+          LaboratoryScreen.field_n = param4;
           MusicPatch.field_n = param3;
           return;
         }
         field_Ab = (Sprite[]) null;
         mg.field_H = param0;
         ImageProducerRasterBuffer.field_l = param2;
-        tk.field_n = param4;
+        LaboratoryScreen.field_n = param4;
         MusicPatch.field_n = param3;
     }
 
@@ -137,7 +137,7 @@ class ne extends ie implements in {
         }
     }
 
-    public void a(int param0, int param1, gn param2, int param3, int param4) {
+    public void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -145,7 +145,7 @@ class ne extends ie implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_yb) {
-            fb.a(3, 118);
+            PowerupButton.a(3, 118);
             this.m(-7435);
           } else {
             ic.a(jl.b(0), "tochangedisplayname.ws", 114);
@@ -187,7 +187,7 @@ class ne extends ie implements in {
 
     final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
-        gn var6 = null;
+        ButtonWidget var6 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -199,8 +199,8 @@ class ne extends ie implements in {
             return true;
           }
           if (param3 != -6208) {
-            var6 = (gn) null;
-            this.a(110, 74, (gn) null, -12, 106);
+            var6 = (ButtonWidget) null;
+            this.a(110, 74, (ButtonWidget) null, -12, 106);
           }
           stackIn_7_0 = super.handleKeyInput(param0, param1, param2, -6208);
           return stackIn_7_0;

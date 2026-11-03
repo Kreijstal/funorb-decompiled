@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class en extends IOException {
-    static cj field_b;
+    static UiComponent field_b;
     static String field_a;
     static String field_e;
     static String field_f;
@@ -62,9 +62,9 @@ final class en extends IOException {
         super(param0);
     }
 
-    final static cj a(byte param0) {
+    final static UiComponent a(byte param0) {
         RuntimeException var1 = null;
-        cj stackIn_4_0 = null;
+        UiComponent stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -86) {
@@ -98,7 +98,7 @@ final class en extends IOException {
         }
     }
 
-    final static void a(cj param0, cj param1, BitmapFont param2, cj param3, cj param4, cj param5, boolean param6, hi param7, int param8, cj param9, cj param10, cj param11) {
+    final static void a(UiComponent param0, UiComponent param1, BitmapFont param2, UiComponent param3, UiComponent param4, UiComponent param5, boolean param6, hi param7, int param8, UiComponent param9, UiComponent param10, UiComponent param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
@@ -130,7 +130,7 @@ final class en extends IOException {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        cj var17 = null;
+        UiComponent var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -160,26 +160,26 @@ final class en extends IOException {
           var15[8] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          ImageProducerRasterBuffer.field_k = new cj(0L, param10);
-          qe.field_q = new cj(0L, param9);
+          ImageProducerRasterBuffer.field_k = new UiComponent(0L, param10);
+          qe.field_q = new UiComponent(0L, param9);
           ImageProducerRasterBuffer.field_k.a((byte) 50, qe.field_q);
-          var17 = new cj(0L, (cj) null);
+          var17 = new UiComponent(0L, (UiComponent) null);
           var17.field_Cb = new IntrusiveDeque();
           tn.field_A = new tq(0L, var17, param1, param7);
           qe.field_q.a((byte) 50, tn.field_A);
-          SimEntity.field_z = new cj(0L, param3);
+          SimEntity.field_z = new UiComponent(0L, param3);
           qe.field_q.a((byte) 50, SimEntity.field_z);
-          ec.field_b = new cj(0L, param4);
+          ec.field_b = new UiComponent(0L, param4);
           ec.field_b.field_yb = w.field_A;
           SimEntity.field_z.a((byte) 50, ec.field_b);
-          SimEntity.field_z.f(-128);
-          ua.field_E = new cj(0L, (cj) null);
+          SimEntity.field_z.markDescendantsToInheritVisualState(-128);
+          ua.field_E = new UiComponent(0L, (UiComponent) null);
           ua.field_E.field_ab = var16;
           SimEntity.field_z.a((byte) 50, ua.field_E);
-          la.field_h = new cj[5];
-          pf.field_d = new cj[5];
-          ij.field_k = new cj[5];
-          hh.field_l = new cj[5];
+          la.field_h = new UiComponent[5];
+          pf.field_d = new UiComponent[5];
+          ij.field_k = new UiComponent[5];
+          hh.field_l = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -206,16 +206,16 @@ final class en extends IOException {
                 var19 = stackIn_24_0;
               }
               if (decompiledFrameRemainder0) {
-                la.field_h[var18] = new cj(0L, param11);
-                ij.field_k[var18] = new cj(0L, qq.field_f, var19);
-                pf.field_d[var18] = new cj(0L, (cj) null);
+                la.field_h[var18] = new UiComponent(0L, param11);
+                ij.field_k[var18] = new UiComponent(0L, qq.field_f, var19);
+                pf.field_d[var18] = new UiComponent(0L, (UiComponent) null);
                 pf.field_d[var18].field_lb = 1;
-                hh.field_l[var18] = new cj(0L, qq.field_f);
+                hh.field_l[var18] = new UiComponent(0L, qq.field_f);
                 hh.field_l[var18].field_lb = 1;
                 la.field_h[var18].a((byte) 50, ij.field_k[var18]);
                 la.field_h[var18].a((byte) 50, pf.field_d[var18]);
                 la.field_h[var18].a((byte) 50, hh.field_l[var18]);
-                la.field_h[var18].f(-128);
+                la.field_h[var18].markDescendantsToInheritVisualState(-128);
                 ImageProducerRasterBuffer.field_k.a((byte) 50, la.field_h[var18]);
                 gi.field_l = gi.field_l + 1;
               }
@@ -225,7 +225,7 @@ final class en extends IOException {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            nn.field_b = new cj(0L, param5);
+            nn.field_b = new UiComponent(0L, param5);
             nn.field_b.field_wb = SecondaryNodeDequeIterator.field_c;
             ImageProducerRasterBuffer.field_k.a((byte) 50, nn.field_b);
             stackIn_28_0 = param8;

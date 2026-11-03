@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ContextMenu extends cj {
+final class ContextMenu extends UiComponent {
     private int field_Qb;
     static String field_Yb;
     static String field_Zb;
@@ -10,13 +10,13 @@ final class ContextMenu extends cj {
     static String field_Mb;
     private int field_Wb;
     private int field_Ob;
-    private cj field_Rb;
+    private UiComponent field_Rb;
     static boolean field_Hb;
     static String field_Sb;
     private Sprite[] field_Ub;
     static int field_Lb;
     private int field_Kb;
-    private cj field_Fb;
+    private UiComponent field_Fb;
     private int[] field_Xb;
     private int field_Jb;
     static Sprite[] field_Nb;
@@ -35,7 +35,7 @@ final class ContextMenu extends cj {
         int var8Lifetime1;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         if (0 == this.field_Vb) {
-          this.field_Tb[this.field_Vb] = new mo(0L, (cj) null, (cj) null, this.field_Fb, (Sprite) null, bg.field_a);
+          this.field_Tb[this.field_Vb] = new mo(0L, (UiComponent) null, (UiComponent) null, this.field_Fb, (Sprite) null, bg.field_a);
           this.field_Tb[this.field_Vb].field_lb = 1;
           this.a((byte) 50, this.field_Tb[this.field_Vb]);
           this.field_Xb[this.field_Vb] = -1;
@@ -55,7 +55,7 @@ final class ContextMenu extends cj {
         }
         var8Lifetime1 = qp.a(param1, (byte) 30, var6, param4);
         var9 = IntrusiveNode.a(true, param3, param2, var7Lifetime1);
-        this.a(var7Lifetime1, var9, var6, var8Lifetime1, -3344);
+        this.setBounds(var7Lifetime1, var9, var6, var8Lifetime1, -3344);
         for (var10 = 0; this.field_Vb > var10; var10++) {
           this.field_Tb[var10].a(this.field_Kb, param0 - 4540, this.field_Wb, var6 - this.field_Jb * 2, this.field_Jb, this.field_Wb * var10 + this.field_Qb, this.field_Pb);
         }
@@ -142,7 +142,7 @@ final class ContextMenu extends cj {
         }
     }
 
-    ContextMenu(cj param0, Sprite[] param1, cj param2, cj param3, int param4, int param5, int param6, int param7, int param8) {
+    ContextMenu(UiComponent param0, Sprite[] param1, UiComponent param2, UiComponent param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Ob = -2;
         this.field_Xb = new int[256];
@@ -163,7 +163,7 @@ final class ContextMenu extends cj {
 
     final void a(byte param0, String param1, int param2) {
         try {
-          this.field_Tb[this.field_Vb] = new mo(0L, (cj) null, (cj) null, this.field_Rb, (Sprite) null, param1);
+          this.field_Tb[this.field_Vb] = new mo(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, (Sprite) null, param1);
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;
           this.field_Tb[this.field_Vb].field_ib = true;
           this.field_Tb[this.field_Vb].field_lb = 1;
@@ -180,7 +180,7 @@ final class ContextMenu extends cj {
 
     final void a(Sprite param0, int param1, String param2, boolean param3) {
         try {
-          this.field_Tb[this.field_Vb] = new mo(0L, (cj) null, (cj) null, this.field_Rb, param0, param2);
+          this.field_Tb[this.field_Vb] = new mo(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, param0, param2);
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;
           this.field_Tb[this.field_Vb].field_ib = param3 ? true : false;
           this.field_Tb[this.field_Vb].field_lb = 1;

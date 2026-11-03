@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-abstract class ArrayWidgetGroup extends UiWidget implements dh {
+abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
     UiWidget[] field_E;
     static pi field_G;
     static PlatformTaskDispatcher field_J;
     static int field_F;
     static String field_D;
     static ResourceArchive field_C;
-    static cj field_L;
+    static UiComponent field_L;
     static int field_I;
     static String field_K;
 
@@ -122,12 +122,12 @@ abstract class ArrayWidgetGroup extends UiWidget implements dh {
 
     final boolean c(int param0) {
         if (param0 < 123) {
-          field_L = (cj) null;
+          field_L = (UiComponent) null;
         }
         return null != this.findFocusTarget(8464) ? true : false;
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         int var4 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -145,7 +145,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements dh {
           for (var4 = param1; var7.length > var4; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(param0, 0)) {
+              var5.requestKeyboardFocus(param0, 0)) {
               return true;
             }
           }
@@ -198,7 +198,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements dh {
             if (var7 == null) {
               discarded$5 = param3.append("null");
             } else {
-              var7.a(7, param0, param1 + 1, param3);
+              var7.appendWidgetDiagnostics(7, param0, param1 + 1, param3);
             }
           }
           return;
@@ -447,7 +447,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements dh {
               for (var4_int = var4_int + param2; var4_int < this.field_E.length; var4_int = var4_int + param2) {
                 var6Lifetime2 = this.field_E[var4_int];
                 if (var6Lifetime2 != null &&
-                  var6Lifetime2.a(param0, 0)) {
+                  var6Lifetime2.requestKeyboardFocus(param0, 0)) {
                   return true;
                 }
               }
@@ -473,7 +473,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements dh {
         }
     }
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendWidgetDiagnostics(int param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         StringBuilder stackIn_5_0 = null;
@@ -589,7 +589,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements dh {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
                 var6 = this.field_E[var4_int];
                 if (var6 != null &&
-                  var6.a(param0, param1 ^ 32)) {
+                  var6.requestKeyboardFocus(param0, param1 ^ 32)) {
                   return true;
                 }
               }
@@ -664,7 +664,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements dh {
           }
           if (param3 != -6208) {
             var9 = (UiWidget) null;
-            this.a((UiWidget) null, -34);
+            this.requestKeyboardFocus((UiWidget) null, -34);
           }
           var5_int = param0;
           if (var5_int != 80) {

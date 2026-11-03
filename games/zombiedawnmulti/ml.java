@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml extends cj {
+final class ml extends UiComponent {
     String field_Kb;
     String field_Nb;
     static String field_Ob;
-    cj field_Gb;
+    UiComponent field_Gb;
     int field_Mb;
     static int field_Jb;
-    cj field_Ib;
-    static cj field_Lb;
-    cj field_Fb;
+    UiComponent field_Ib;
+    static UiComponent field_Lb;
+    UiComponent field_Fb;
     String field_Hb;
     String field_Pb;
 
@@ -39,7 +39,7 @@ final class ml extends cj {
     }
 
     ml() {
-        super(0L, (cj) null);
+        super(0L, (UiComponent) null);
     }
 
     static {

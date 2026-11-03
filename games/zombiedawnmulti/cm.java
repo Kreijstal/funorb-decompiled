@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cm {
-    static cj field_b;
+    static UiComponent field_b;
     static String[] field_c;
     static boolean field_e;
     static long field_d;
-    static cj field_a;
+    static UiComponent field_a;
 
     public static void a(byte param0) {
         field_b = null;
@@ -59,7 +59,7 @@ final class cm {
         }
     }
 
-    final static void a(int param0, int param1, cj param2) {
+    final static void a(int param0, int param1, UiComponent param2) {
         jb var13 = null;
         Sprite var14 = null;
         String var15 = null;
@@ -111,7 +111,7 @@ final class cm {
             var17 = wp.field_j[1];
             var32Lifetime3 = var17;
             var32Lifetime4 = var17;
-            var18 = tk.field_o;
+            var18 = LaboratoryScreen.field_o;
             var16.field_j.a(var17, 12, var18, true);
             var19 = pk.field_b;
             var20 = wp.field_j[2];

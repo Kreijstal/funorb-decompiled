@@ -4,7 +4,7 @@
 final class fd extends SceneObject {
     static int field_F;
     boolean field_K;
-    static cj field_O;
+    static UiComponent field_O;
     static BinaryBitmapFont field_G;
     boolean field_H;
     static IntrusiveDeque field_M;
@@ -85,10 +85,10 @@ final class fd extends SceneObject {
           var6 = this.getY(-51) / 24;
           if (!he.field_a &&
             var5 >= 0 &&
-            var5 < fb.field_e.navigation.field_k[0].length &&
+            var5 < PowerupButton.field_e.navigation.field_k[0].length &&
             var6 >= 0 &&
-            var6 < fb.field_e.navigation.field_k.length &&
-            fb.field_e.navigation.field_k[var6][var5]) {
+            var6 < PowerupButton.field_e.navigation.field_k.length &&
+            PowerupButton.field_e.navigation.field_k[var6][var5]) {
             return;
           }
           if (this.field_H &&
@@ -214,7 +214,7 @@ final class fd extends SceneObject {
                 vo.field_l = ResourceArchive.field_n;
               } else {
                 hd.field_q = -1;
-                vo.field_l = gn.field_K;
+                vo.field_l = ButtonWidget.field_K;
                 PortalEntryEvent.field_i = var6_int;
               }
             }
@@ -236,7 +236,7 @@ final class fd extends SceneObject {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   hd.field_q = -1;
-                  vo.field_l = gn.field_K;
+                  vo.field_l = ButtonWidget.field_K;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -342,7 +342,7 @@ final class fd extends SceneObject {
               stackIn_90_0 = PortalEntryEvent.field_i;
               return stackIn_90_0;
             }
-            if (vo.field_l == gn.field_K &&
+            if (vo.field_l == ButtonWidget.field_K &&
               dd.a(0)) {
               ak.a((byte) -124);
               if (PortalEntryEvent.field_i == 7 &&

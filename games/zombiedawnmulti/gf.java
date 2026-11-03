@@ -118,9 +118,9 @@ abstract class gf implements j {
             var4 = var3;
             var4 = var3;
           }
-          if (null != un.field_p &&
-            !un.field_p.equals(param0.getParameter("session"))) {
-            var4 = un.field_p;
+          if (null != TextInputValidator.field_p &&
+            !TextInputValidator.field_p.equals(param0.getParameter("session"))) {
+            var4 = TextInputValidator.field_p;
           }
           stackIn_9_0 = ProxySocketConnector.a((String) (var4), -1, (byte) 126, (String) (var3), param2);
           return stackIn_9_0;

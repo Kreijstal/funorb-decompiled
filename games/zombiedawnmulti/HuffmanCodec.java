@@ -75,7 +75,7 @@ final class HuffmanCodec {
         return;
     }
 
-    final static ld a(boolean param0, cj param1, cj param2, cj param3, ob param4) {
+    final static ld a(boolean param0, UiComponent param1, UiComponent param2, UiComponent param3, ob param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -130,7 +130,7 @@ final class HuffmanCodec {
           var7 = var5_int + var6;
           if (param0) {
             var18 = (ob) null;
-            HuffmanCodec.a(false, (cj) null, (cj) null, (cj) null, (ob) null);
+            HuffmanCodec.a(false, (UiComponent) null, (UiComponent) null, (UiComponent) null, (ob) null);
           }
           var8 = new String[var7];
           var22 = new char[var7];
@@ -237,7 +237,7 @@ final class HuffmanCodec {
         field_f = null;
         if (param0 <= 26) {
           ob var2 = (ob) null;
-          HuffmanCodec.a(false, (cj) null, (cj) null, (cj) null, (ob) null);
+          HuffmanCodec.a(false, (UiComponent) null, (UiComponent) null, (UiComponent) null, (ob) null);
         }
         field_c = null;
     }

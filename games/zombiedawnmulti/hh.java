@@ -14,7 +14,7 @@ final class hh {
     static volatile int field_e;
     int field_c;
     int field_d;
-    static cj[] field_l;
+    static UiComponent[] field_l;
 
     final boolean b(boolean param0) {
         if (!param0) {

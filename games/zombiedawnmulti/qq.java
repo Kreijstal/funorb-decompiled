@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qq {
-    static cj field_b;
-    static cj field_c;
+    static UiComponent field_b;
+    static UiComponent field_c;
     static boolean field_h;
     private int[] field_e;
     static String field_g;
     static String field_d;
     static int field_a;
-    static cj field_f;
+    static UiComponent field_f;
 
     qq(int[] param0) {
         int var2_int = 0;

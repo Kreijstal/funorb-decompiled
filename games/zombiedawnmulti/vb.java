@@ -6,11 +6,11 @@ final class vb {
     static String field_e;
     static int field_f;
     static String field_g;
-    static cj field_c;
+    static UiComponent field_c;
     static byte[][] field_a;
     static String field_d;
 
-    final static cj a(int param0) {
+    final static UiComponent a(int param0) {
         if (InflaterDecompressor.field_a > 0) {
           return SocketConnector.field_a;
         }

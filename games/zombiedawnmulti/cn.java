@@ -483,9 +483,9 @@ final class cn extends ng {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              gn.field_B.reset();
-              gn.field_B.update(var5, 0, -2 + var18.length);
-              var6_int = (int)gn.field_B.getValue();
+              ButtonWidget.field_B.reset();
+              ButtonWidget.field_B.update(var5, 0, -2 + var18.length);
+              var6_int = (int)ButtonWidget.field_B.getValue();
               if (this.field_s.field_r[param2] != var6_int) {
                 throw new RuntimeException();
               }
@@ -534,9 +534,9 @@ final class cn extends ng {
         try {
           if (var5 != null &&
             var18.length > 2) {
-            gn.field_B.reset();
-            gn.field_B.update(var5, 0, -2 + var18.length);
-            var6_int = (int)gn.field_B.getValue();
+            ButtonWidget.field_B.reset();
+            ButtonWidget.field_B.update(var5, 0, -2 + var18.length);
+            var6_int = (int)ButtonWidget.field_B.getValue();
             if (this.field_s.field_r[param2] != var6_int) {
               throw new RuntimeException();
             }

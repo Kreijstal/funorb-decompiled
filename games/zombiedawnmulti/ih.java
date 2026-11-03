@@ -3,7 +3,7 @@
  */
 final class ih {
     static String[] field_e;
-    static cj field_d;
+    static UiComponent field_d;
     static String field_b;
     static String field_c;
     static String field_a;
@@ -30,7 +30,7 @@ final class ih {
 
     final static void a(boolean param0, int param1, MusicTrack param2) {
         try {
-          nc.a(param0, param1, 92, param2);
+          MenuScreen.a(param0, param1, 92, param2);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ih.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -130,7 +130,7 @@ final class ih {
 
     static {
         field_e = new String[]{"Win a Rated game", "Win 10 Rated games", "Win 50 Rated games", "Win 100 Rated games", "Win a game using only one kind of powerup, having a Rating of at least 1500", "Win without equipping any powerups, having a Rating of at least 2000", "Win a game having captured more humans than zombies (at least 10)", "Master the entire Zombie research tree", "Master the entire Overlord research tree", "Master the entire Planetary research tree", "Curse back a cursed zombie", "Have an enemy overlord target one of your phantoms with a powerup", "Win a game with no traits equipped, having a Rating of at least 2500", "Spread the zombie virus by defeating someone who has this Achievement, while having a Rating of at least 1337", "Lose 30 of your zombies, but still win", "Win a four-player match, having a Rating of at least 2000", "Win a game having captured a live pumpkin-head", "Kill 80 enemy zombies in one match", "Kill the enemy's last zombie", "Capture a human that was near an enemy's portal", "Zombify 10 humans using a single super-sped zombie", "Master half of all research items", "Breach an enemy's Miasma", "Win a battle on every map"};
-        field_d = new cj();
+        field_d = new UiComponent();
         field_b = "Your science will advance more from any humans you capture alive.";
         field_c = "Rematch!";
     }

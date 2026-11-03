@@ -6,7 +6,7 @@ class IntrusiveNode {
     IntrusiveNode previous;
     static int field_a;
     long key;
-    static cj field_c;
+    static UiComponent field_c;
 
     final void unlink(boolean clearLinks) {
         if (this.next == null) {

@@ -3,7 +3,7 @@
  */
 final class cr extends IntrusiveNode {
     byte[] field_f;
-    static cj field_i;
+    static UiComponent field_i;
     boolean field_h;
     static int field_j;
     static String field_g;
@@ -82,14 +82,14 @@ final class cr extends IntrusiveNode {
         if (null != bk.field_i) {
           return true;
         }
-        if (!nc.a((byte) 68)) {
+        if (!MenuScreen.a((byte) 68)) {
           return false;
         }
         return true;
     }
 
     static {
-        field_i = new cj();
+        field_i = new UiComponent();
         field_g = "Zombies are your thing if you have this trait equipped. You'll gain more Research Points from any zombies that return through your portal.";
     }
 }

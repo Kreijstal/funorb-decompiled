@@ -6,7 +6,7 @@ final class he implements WidgetActionListener {
     private int field_j;
     static String field_c;
     private int field_h;
-    static cj field_i;
+    static UiComponent field_i;
     static boolean field_a;
     static IntrusiveDeque field_k;
     private BitmapFont field_g;

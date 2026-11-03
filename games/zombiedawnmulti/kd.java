@@ -3,7 +3,7 @@
  */
 final class kd {
     static String[] field_c;
-    static cj field_a;
+    static UiComponent field_a;
     static int field_b;
 
     public static void a(int param0) {

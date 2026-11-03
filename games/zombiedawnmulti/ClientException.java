@@ -4,7 +4,7 @@
 final class ClientException extends RuntimeException {
     static boolean field_b;
     String field_k;
-    static cj field_h;
+    static UiComponent field_h;
     static Sprite field_e;
     Throwable field_f;
     static String field_l;

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends un {
-    static cj field_t;
+final class ia extends TextInputValidator {
+    static UiComponent field_t;
     static Sprite field_y;
     private TextInputWidget field_q;
     static String field_u;
@@ -46,7 +46,7 @@ final class ia extends un {
             return null;
           }
           var5 = var4;
-          if (gn.b((byte) 62, var5)) {
+          if (ButtonWidget.b((byte) 62, var5)) {
             stackIn_5_0 = jb.field_k;
             return stackIn_5_0;
           }

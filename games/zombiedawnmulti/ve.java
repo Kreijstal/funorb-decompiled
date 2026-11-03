@@ -17,7 +17,7 @@ final class ve {
     private double field_j;
     static Sprite field_b;
 
-    final static void a(long param0, int param1, String param2, tq param3, String param4, cj param5, int param6, int[] param7, int param8) {
+    final static void a(long param0, int param1, String param2, tq param3, String param4, UiComponent param5, int param6, int[] param7, int param8) {
         try {
           vc.field_d = param3;
           if (param1 != 196) {
@@ -67,7 +67,7 @@ final class ve {
     private final double a(boolean param0) {
         if (!param0) {
           int[] var3 = (int[]) null;
-          ve.a(-109L, -96, (String) null, (tq) null, (String) null, (cj) null, 73, (int[]) null, 6);
+          ve.a(-109L, -96, (String) null, (tq) null, (String) null, (UiComponent) null, 73, (int[]) null, 6);
         }
         return (double)hp.a((byte) 115, this.field_l, 1000) / 1000.0;
     }

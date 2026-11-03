@@ -12,7 +12,7 @@ final class bf extends IntrusiveNode {
     static String field_q;
     int field_i;
     int field_o;
-    static cj field_h;
+    static UiComponent field_h;
     static int field_g;
 
     final boolean a(SimHuman param0, int param1) {
@@ -175,7 +175,7 @@ final class bf extends IntrusiveNode {
             }
             if (var3_int != 0) {
               if (ud.field_ab) {
-                param2 = vl.a(cj.field_Eb, new String[]{param2}, 2);
+                param2 = vl.a(UiComponent.field_Eb, new String[]{param2}, 2);
               }
               if (bl.field_h) {
                 param2 = wg.field_c;

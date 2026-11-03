@@ -122,7 +122,7 @@ final class hl {
         }
     }
 
-    final static void a(byte[] param0, byte param1, cj param2, int param3, cj param4, int param5, int param6, cj param7, int param8, int param9) {
+    final static void a(byte[] param0, byte param1, UiComponent param2, int param3, UiComponent param4, int param5, int param6, UiComponent param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

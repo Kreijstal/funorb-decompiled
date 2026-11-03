@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CipherPacketBuffer extends PacketBuffer {
-    static cj field_r;
+    static UiComponent field_r;
     static String field_t;
     static PcmPlayerService field_u;
     static String field_w;
@@ -257,7 +257,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           var2 = qe.field_g;
         }
         if (!param1) {
-          field_r = (cj) null;
+          field_r = (UiComponent) null;
         }
         if (param0 == 2) {
           var2 = ba.field_q;

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo extends cj {
+final class mo extends UiComponent {
     static long field_Gb;
-    private cj field_Pb;
+    private UiComponent field_Pb;
     static ao field_Lb;
-    cj field_Mb;
+    UiComponent field_Mb;
     static IntrusiveDeque field_Fb;
-    static cj field_Hb;
+    static UiComponent field_Hb;
     static IndexedSprite[] field_Ob;
     static int field_Kb;
     static String field_Nb;
@@ -15,7 +15,7 @@ final class mo extends cj {
     static hh field_Jb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param2, param5, param3, param4, -3344);
+        this.setBounds(param2, param5, param3, param4, -3344);
         if (param1 != 2) {
           return;
         }
@@ -32,7 +32,7 @@ final class mo extends cj {
           field_Fb = null;
           return;
         }
-        field_Hb = (cj) null;
+        field_Hb = (UiComponent) null;
         field_Ob = null;
         field_Jb = null;
         field_Fb = null;
@@ -148,7 +148,7 @@ final class mo extends cj {
         }
         if (param1 == -17369) {
           if (null != this.field_Mb) {
-            var5 = this.field_Mb.a(-1, -param2 - param0 + (-var4 + this.field_zb - param2));
+            var5 = this.field_Mb.measureContentWidth(-1, -param2 - param0 + (-var4 + this.field_zb - param2));
           }
           var6 = var5 + (var4 + (param2 + param0 + param2));
           if (this.field_zb < var6) {
@@ -162,13 +162,13 @@ final class mo extends cj {
             param2 = param2 + (-var6 + this.field_zb);
           }
           if (this.field_Pb != null) {
-            this.field_Pb.a(this.field_z, 0, var4, param2, param1 ^ 20183);
+            this.field_Pb.setBounds(this.field_z, 0, var4, param2, param1 ^ 20183);
             this.field_Pb.field_lb = this.field_lb;
           }
           if (this.field_Mb == null) {
             return;
           }
-          this.field_Mb.a(this.field_z, 0, var5, param2 - (-var4 - param0), -3344);
+          this.field_Mb.setBounds(this.field_z, 0, var5, param2 - (-var4 - param0), -3344);
           if (null != this.field_Pb) {
             this.field_Mb.field_R = 0;
           } else {
@@ -179,7 +179,7 @@ final class mo extends cj {
         }
         field_Gb = -30L;
         if (null != this.field_Mb) {
-          var5 = this.field_Mb.a(-1, -param2 - param0 + (-var4 + this.field_zb - param2));
+          var5 = this.field_Mb.measureContentWidth(-1, -param2 - param0 + (-var4 + this.field_zb - param2));
         }
         var6Lifetime1 = var5 + (var4 + (param2 + param0 + param2));
         if (this.field_zb < var6Lifetime1) {
@@ -193,13 +193,13 @@ final class mo extends cj {
           param2 = param2 + (-var6Lifetime1 + this.field_zb);
         }
         if (this.field_Pb != null) {
-          this.field_Pb.a(this.field_z, 0, var4, param2, param1 ^ 20183);
+          this.field_Pb.setBounds(this.field_z, 0, var4, param2, param1 ^ 20183);
           this.field_Pb.field_lb = this.field_lb;
         }
         if (this.field_Mb == null) {
           return;
         }
-        this.field_Mb.a(this.field_z, 0, var5, param2 - (-var4 - param0), -3344);
+        this.field_Mb.setBounds(this.field_z, 0, var5, param2 - (-var4 - param0), -3344);
         if (null != this.field_Pb) {
           this.field_Mb.field_R = 0;
         } else {
@@ -238,7 +238,7 @@ final class mo extends cj {
         mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
     }
 
-    mo(long param0, cj param1, cj param2, cj param3, Sprite param4, String param5) {
+    mo(long param0, UiComponent param1, UiComponent param2, UiComponent param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -255,16 +255,16 @@ final class mo extends cj {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Pb = new cj(0L, param2);
+            this.field_Pb = new UiComponent(0L, param2);
             this.field_Pb.field_rb = param4;
             this.a((byte) 50, this.field_Pb);
           }
           if (param5 != null) {
-            this.field_Mb = new cj(0L, param3, param5);
+            this.field_Mb = new UiComponent(0L, param3, param5);
             this.a((byte) 50, this.field_Mb);
-            this.f(-128);
+            this.markDescendantsToInheritVisualState(-128);
           } else {
-            this.f(-128);
+            this.markDescendantsToInheritVisualState(-128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

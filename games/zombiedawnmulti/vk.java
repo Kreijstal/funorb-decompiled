@@ -23,7 +23,7 @@ final class vk extends rg {
           var3 = (df) (param1);
           this.field_H.a(-25612, var3);
           var3.field_R = true;
-          var3.a((UiWidget) (this), 0);
+          var3.requestKeyboardFocus((UiWidget) (this), 0);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "vk.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -292,30 +292,30 @@ final class vk extends rg {
           boolean decompiledFrameRemainder0 = true;
           var9_int = 13 / ((param4 - 48) / 58);
           if (param2 == 1) {
-            mj.field_Hb[param2] = (nc) ((Object) new ho(param2, param1, param3, param6, param8, param7, param5));
+            mj.field_Hb[param2] = (MenuScreen) ((Object) new ho(param2, param1, param3, param6, param8, param7, param5));
           } else {
             if (3 != param2) {
               if (param2 == 4) {
-                mj.field_Hb[param2] = (nc) ((Object) new ol(param2, param1, param3, param6, param8, param7, param5));
+                mj.field_Hb[param2] = (MenuScreen) ((Object) new ol(param2, param1, param3, param6, param8, param7, param5));
               } else {
                 if (5 != param2 &&
                   param2 != 6) {
                   if (10 == param2) {
-                    mj.field_Hb[param2] = (nc) ((Object) new si(param2, param1, param3, param6, param8, param7, param5));
+                    mj.field_Hb[param2] = (MenuScreen) ((Object) new si(param2, param1, param3, param6, param8, param7, param5));
                   } else {
                     if (param2 == 12) {
-                      mj.field_Hb[param2] = (nc) ((Object) new vo(param2, param1, param3, param6, param8, param7, param5));
+                      mj.field_Hb[param2] = (MenuScreen) ((Object) new vo(param2, param1, param3, param6, param8, param7, param5));
                     } else {
                       if (param2 == 14) {
-                        mj.field_Hb[param2] = (nc) ((Object) new vj(param2, param1, param3, param6, param8, param7, param5));
+                        mj.field_Hb[param2] = (MenuScreen) ((Object) new vj(param2, param1, param3, param6, param8, param7, param5));
                       } else {
                         if (param2 == 15) {
-                          mj.field_Hb[param2] = (nc) ((Object) new tk(param2, param1, param3, param6, param8, param7, param5));
+                          mj.field_Hb[param2] = (MenuScreen) ((Object) new LaboratoryScreen(param2, param1, param3, param6, param8, param7, param5));
                         } else {
                           if (13 == param2) {
-                            mj.field_Hb[param2] = (nc) ((Object) new kp(param2, param1, param3, param6, param8, param7, param5));
+                            mj.field_Hb[param2] = (MenuScreen) ((Object) new kp(param2, param1, param3, param6, param8, param7, param5));
                           } else {
-                            mj.field_Hb[param2] = new nc(param2, param1, param3, param6, param8, param7, param5);
+                            mj.field_Hb[param2] = new MenuScreen(param2, param1, param3, param6, param8, param7, param5);
                           }
                         }
                       }
@@ -324,11 +324,11 @@ final class vk extends rg {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  mj.field_Hb[param2] = (nc) ((Object) new mq(param2, param1, param3, param6, param8, param7, param5));
+                  mj.field_Hb[param2] = (MenuScreen) ((Object) new mq(param2, param1, param3, param6, param8, param7, param5));
                 }
               }
             } else {
-              mj.field_Hb[param2] = (nc) ((Object) new fk(param2, param1, param3, param6, param8, param7, param5));
+              mj.field_Hb[param2] = (MenuScreen) ((Object) new fk(param2, param1, param3, param6, param8, param7, param5));
             }
           }
           ab.field_h = (si) (mj.field_Hb[10]);

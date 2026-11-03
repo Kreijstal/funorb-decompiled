@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class TextInputWidget extends gn {
+class TextInputWidget extends ButtonWidget {
     private long field_T;
     static String field_P;
     static PacketBuffer field_R;
@@ -185,8 +185,8 @@ class TextInputWidget extends gn {
         RuntimeException var8 = null;
         try {
           if (super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) &&
-            this.listener instanceof rk) {
-            var8_int = ((rk) ((Object) this.listener)).b(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
+            this.listener instanceof WidgetPainter) {
+            var8_int = ((WidgetPainter) ((Object) this.listener)).b(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
             stackIn_4_1 = false;
             if (-1 == var8_int) {
               stackIn_5_2 = 0;
@@ -256,7 +256,7 @@ class TextInputWidget extends gn {
     }
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
-        rk var8 = null;
+        WidgetPainter var8 = null;
         long var6 = 0L;
         if (param0 != -2) {
           this.field_O = -67;
@@ -264,8 +264,8 @@ class TextInputWidget extends gn {
         if (null != this.listener &&
           0 == param2) {
           this.listener.a(this.field_F, param1, -15112, param3, (UiWidget) (this));
-          if (this.listener instanceof rk) {
-            var8 = (rk) ((Object) this.listener);
+          if (this.listener instanceof WidgetPainter) {
+            var8 = (WidgetPainter) ((Object) this.listener);
             if (this.field_S != this.field_O) {
               var8.drawSelection(this.field_S, param1, this.field_O, param3, param0 ^ -93, (UiWidget) (this));
             }
@@ -300,17 +300,17 @@ class TextInputWidget extends gn {
         int var6;
         int var7;
         int var8;
-        rk var9;
+        WidgetPainter var9;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         if (!this.field_U) {
           this.field_z = 0;
           this.field_q = 0;
           return;
         }
-        if (!(this.listener instanceof rk)) {
+        if (!(this.listener instanceof WidgetPainter)) {
           return;
         }
-        var9 = (rk) ((Object) this.listener);
+        var9 = (WidgetPainter) ((Object) this.listener);
         var3 = var9.a((UiWidget) (this), -112);
         if (param0 >= -60) {
           this.field_W = -107;
@@ -391,14 +391,14 @@ class TextInputWidget extends gn {
     }
 
     void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
-        rk var5 = null;
+        WidgetPainter var5 = null;
         int var6 = 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
           this.g((byte) -84);
           if (1 == this.field_u) {
-            if (this.listener instanceof rk) {
-              var5 = (rk) ((Object) this.listener);
+            if (this.listener instanceof WidgetPainter) {
+              var5 = (WidgetPainter) ((Object) this.listener);
               var6 = var5.b(param2, param3, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_M &&

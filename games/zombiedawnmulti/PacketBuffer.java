@@ -9,7 +9,7 @@ class PacketBuffer extends IntrusiveNode {
     static boolean field_f;
     static String field_h;
     static PcmStreamMixer field_l;
-    static cj field_g;
+    static UiComponent field_g;
     static int[] field_i;
 
     final int e(byte param0) {
@@ -127,7 +127,7 @@ class PacketBuffer extends IntrusiveNode {
         return var3;
     }
 
-    final static cj f(int param0) {
+    final static UiComponent f(int param0) {
         if (param0 != 23000) {
           PacketBuffer.f(-7);
         }
@@ -741,7 +741,7 @@ class PacketBuffer extends IntrusiveNode {
     final int readUnsignedSmart(byte obfuscationGuard) {
         int var2 = 255 & this.payload[this.position];
         if (obfuscationGuard > -102) {
-          field_g = (cj) null;
+          field_g = (UiComponent) null;
         }
         if (var2 >= 128) {
           return -32768 + this.readUnsignedShort((byte) 69);

@@ -12,10 +12,10 @@ final class ua extends rg {
     private int field_L;
     private int field_F;
     static String field_K;
-    static cj field_E;
+    static UiComponent field_E;
     static int field_N;
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendWidgetDiagnostics(int param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$62 = null;
         StringBuilder discarded$63 = null;
         RuntimeException var5 = null;
@@ -128,7 +128,7 @@ final class ua extends rg {
             return stackIn_14_0;
           }
           if (param1 == 5) {
-            stackIn_17_0 = vl.a(un.field_l, new String[]{param2}, 2);
+            stackIn_17_0 = vl.a(TextInputValidator.field_l, new String[]{param2}, 2);
             return stackIn_17_0;
           }
           if (param1 == 6) {
@@ -270,8 +270,8 @@ final class ua extends rg {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_B instanceof gn) ||
-            ((gn) (this.field_B)).field_F) &&
+          if ((!(this.field_B instanceof ButtonWidget) ||
+            ((ButtonWidget) (this.field_B)).field_F) &&
             this.field_u == 1) {
             var5_int = -this.field_L + (MouseInputHandler.field_g - param2);
             var6 = -param3 + (-this.field_F + bo.field_d);

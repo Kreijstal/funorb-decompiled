@@ -7,7 +7,7 @@ abstract class SimUnit extends SimEntity {
     int targetX;
     int velocityY;
     int velocityX;
-    static cj field_O;
+    static UiComponent field_O;
     int baseSpeed;
     static String field_bb;
     int state;

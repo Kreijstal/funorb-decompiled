@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd extends cj {
-    cj field_Hb;
+final class cd extends UiComponent {
+    UiComponent field_Hb;
     static String field_Kb;
     tq field_Jb;
-    cj field_Gb;
+    UiComponent field_Gb;
     static String field_Lb;
     static String field_Fb;
     static String field_Mb;
-    cj field_Ib;
+    UiComponent field_Ib;
 
     cd(long param0, cd param1, String param2, String param3) {
         this(param0, param1, param1.field_Jb.field_Jb, param1.field_Jb.field_Ib, param1.field_Gb, param2, param3);
@@ -26,13 +26,13 @@ final class cd extends cj {
         this.a(param4, (byte) -67, param1, param7);
     }
 
-    cd(long param0, cj param1, cj param2, hi param3, cj param4, String param5, String param6) {
+    cd(long param0, UiComponent param1, UiComponent param2, hi param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Ib = new cj(0L, (cj) null);
+          this.field_Ib = new UiComponent(0L, (UiComponent) null);
           this.field_Jb = new tq(0L, this.field_Ib, param2, param3);
-          this.field_Gb = new cj(0L, param4);
-          this.field_Hb = new cj(0L, param4);
+          this.field_Gb = new UiComponent(0L, param4);
+          this.field_Hb = new UiComponent(0L, param4);
           this.field_Gb.field_wb = param5;
           this.field_Hb.field_wb = param6;
           this.a((byte) 50, this.field_Jb);

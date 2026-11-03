@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends cj {
+final class vh extends UiComponent {
     static String field_Nb;
     static boolean field_Mb;
     int field_Ob;
@@ -65,7 +65,7 @@ final class vh extends cj {
         }
     }
 
-    vh(long param0, cj param1, int param2, int param3, int param4, int param5) {
+    vh(long param0, UiComponent param1, int param2, int param3, int param4, int param5) {
         super(param0, param1, param2, param3, param4, param5, (String) null);
         this.field_Jb = 190;
         try {

@@ -45,10 +45,10 @@ abstract class ii {
 
     final static void a(int param0) {
         int var2 = 0;
-        nc[] var1 = null;
-        nc var3 = null;
+        MenuScreen[] var1 = null;
+        MenuScreen var3 = null;
         int var4 = 0;
-        nc[] var6 = null;
+        MenuScreen[] var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         String var5 = null;

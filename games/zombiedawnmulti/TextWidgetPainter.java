@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class TextWidgetPainter implements WidgetActionListener, rk {
+class TextWidgetPainter implements WidgetActionListener, WidgetPainter {
     int field_g;
     int field_d;
     int field_f;

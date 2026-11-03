@@ -7,7 +7,7 @@ abstract class SimEntity extends TertiaryLinkNode {
     static String field_y;
     int positionY;
     static Sprite field_J;
-    static cj field_z;
+    static UiComponent field_z;
     int objectId;
     int positionX;
     static String field_I;
@@ -108,13 +108,13 @@ abstract class SimEntity extends TertiaryLinkNode {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         me.field_h = param4;
         if (param2 == 1829947600) {
-          nc.field_h = param0;
+          MenuScreen.field_h = param0;
           WidgetContainer.field_C = param1;
           bf.field_g = param3;
           return;
         }
-        field_z = (cj) null;
-        nc.field_h = param0;
+        field_z = (UiComponent) null;
+        MenuScreen.field_h = param0;
         WidgetContainer.field_C = param1;
         bf.field_g = param3;
     }

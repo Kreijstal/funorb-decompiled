@@ -10,7 +10,7 @@ final class tf extends ne implements in {
     private fe field_Gb;
     private boolean field_Fb;
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         if (param3 >= -83) {
           return;
         }

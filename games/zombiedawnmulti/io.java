@@ -41,7 +41,7 @@ final class io {
         this(param0, param0);
     }
 
-    final static void a(int param0, cj param1, cj param2, cj param3, cj param4) {
+    final static void a(int param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -78,17 +78,17 @@ final class io {
           ec.field_b.field_xb = (8355711 & qq.field_f.field_xb >> 1) + wj.field_g - (8355711 & wj.field_g >> 1);
           ec.field_b.field_Db = (8355711 & qq.field_f.field_Db >> 1) + (wj.field_g - (8355711 & wj.field_g >> 1));
           ec.field_b.field_ob = wj.field_g - (8355711 & wj.field_g >> 1) + (qq.field_f.field_ob >> 1 & param0);
-          lj.field_v = new cj(0L, param3);
-          SpriteState.field_t = new cj(0L, param2);
-          re.field_a = new cj(0L, (cj) null);
-          IntrusiveNode.field_c = new cj(0L, param1);
-          ec.field_b = new cj(0L, param4);
+          lj.field_v = new UiComponent(0L, param3);
+          SpriteState.field_t = new UiComponent(0L, param2);
+          re.field_a = new UiComponent(0L, (UiComponent) null);
+          IntrusiveNode.field_c = new UiComponent(0L, param1);
+          ec.field_b = new UiComponent(0L, param4);
           ec.field_b.field_yb = w.field_A;
           IntrusiveNode.field_c.a((byte) 50, ec.field_b);
-          ua.field_E = new cj(0L, ke.field_j);
+          ua.field_E = new UiComponent(0L, ke.field_j);
           IntrusiveNode.field_c.a((byte) 50, ua.field_E);
-          dp.field_c = new cj(0L, qq.field_f, bg.field_o);
-          jk.field_d = new cj(0L, qq.field_f);
+          dp.field_c = new UiComponent(0L, qq.field_f, bg.field_o);
+          jk.field_d = new UiComponent(0L, qq.field_f);
           lj.field_v.a((byte) 50, SpriteState.field_t);
           lj.field_v.a((byte) 50, re.field_a);
           re.field_a.a((byte) 50, IntrusiveNode.field_c);
@@ -131,8 +131,8 @@ final class io {
         String var5 = (String) null;
         oi.$cfr$intArgs$a$88c6728ee5b1((String) null, param2, -67, param1);
         if (param0 != -21113) {
-          cj var4 = (cj) null;
-          io.a(3, (cj) null, (cj) null, (cj) null, (cj) null);
+          UiComponent var4 = (UiComponent) null;
+          io.a(3, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null);
         }
     }
 
@@ -185,8 +185,8 @@ final class io {
         if (!param1) {
           return;
         }
-        cj var5 = (cj) null;
-        io.a(-49, (cj) null, (cj) null, (cj) null, (cj) null);
+        UiComponent var5 = (UiComponent) null;
+        io.a(-49, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null);
     }
 
     private final void a(int param0, kk param1) {

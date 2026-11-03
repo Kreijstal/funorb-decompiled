@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends cj {
+final class dk extends UiComponent {
     static java.awt.Canvas field_Ib;
     private StringBuilder field_Hb;
     private int field_Fb;
-    private cj field_Lb;
+    private UiComponent field_Lb;
     static String field_Jb;
-    private cj field_Gb;
+    private UiComponent field_Gb;
     static String field_Kb;
 
     final static void f(boolean param0, int param1) {
@@ -18,45 +18,45 @@ final class dk extends cj {
     }
 
     final static void e(boolean param0, int param1) {
-        cj stackIn_6_0 = null;
+        UiComponent stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        cj stackIn_10_0 = null;
+        UiComponent stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
-        cj stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
-        cj stackIn_24_0 = null;
+        UiComponent stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
-        cj stackIn_30_0 = null;
+        UiComponent stackIn_30_0 = null;
         boolean stackIn_31_1 = false;
-        cj stackIn_34_0 = null;
+        UiComponent stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
-        cj stackIn_44_0 = null;
+        UiComponent stackIn_44_0 = null;
         boolean stackIn_45_1 = false;
-        cj stackIn_48_0 = null;
+        UiComponent stackIn_48_0 = null;
         boolean stackIn_49_1 = false;
-        cj stackIn_57_0 = null;
+        UiComponent stackIn_57_0 = null;
         boolean stackIn_58_1 = false;
-        cj stackIn_61_0 = null;
+        UiComponent stackIn_61_0 = null;
         boolean stackIn_62_1 = false;
-        cj stackIn_70_0 = null;
+        UiComponent stackIn_70_0 = null;
         boolean stackIn_71_1 = false;
-        cj stackIn_74_0 = null;
+        UiComponent stackIn_74_0 = null;
         boolean stackIn_75_1 = false;
-        cj stackIn_82_0 = null;
+        UiComponent stackIn_82_0 = null;
         boolean stackIn_83_1 = false;
-        cj stackIn_86_0 = null;
+        UiComponent stackIn_86_0 = null;
         boolean stackIn_87_1 = false;
-        cj stackIn_96_0 = null;
+        UiComponent stackIn_96_0 = null;
         boolean stackIn_97_1 = false;
-        cj stackIn_100_0 = null;
+        UiComponent stackIn_100_0 = null;
         boolean stackIn_101_1 = false;
-        cj stackIn_110_0 = null;
+        UiComponent stackIn_110_0 = null;
         boolean stackIn_111_1 = false;
-        cj stackIn_114_0 = null;
+        UiComponent stackIn_114_0 = null;
         boolean stackIn_115_1 = false;
-        cj stackIn_124_0 = null;
+        UiComponent stackIn_124_0 = null;
         boolean stackIn_125_1 = false;
-        cj stackIn_128_0 = null;
+        UiComponent stackIn_128_0 = null;
         boolean stackIn_129_1 = false;
         Camera.a(SoftwareRasterizer.field_b - 640 >> 1, SoftwareRasterizer.field_l, (byte) 105, 640 + SoftwareRasterizer.field_b >> 1, 0);
         if (param1 != -7579) {
@@ -65,10 +65,10 @@ final class dk extends cj {
             if (null == vm.field_lb) {
               stackIn_6_0 = qe.field_k;
               stackIn_7_1 = (param0) && (!ee.field_a);
-              ((cj) (Object) stackIn_6_0).c(stackIn_7_1, param1 ^ 7578);
+              ((UiComponent) (Object) stackIn_6_0).c(stackIn_7_1, param1 ^ 7578);
               stackIn_10_0 = cm.field_a;
               stackIn_11_1 = (param0) && (!ee.field_a);
-              ((cj) (Object) stackIn_10_0).c(stackIn_11_1, -1);
+              ((UiComponent) (Object) stackIn_10_0).c(stackIn_11_1, -1);
               if (!(sq.field_Q <= 0) ||
                 !(InflaterDecompressor.field_a <= 0)) {
                 if (vm.field_lb != null) {
@@ -76,10 +76,10 @@ final class dk extends cj {
                 }
                 stackIn_20_0 = JaggrabDownloader.field_i;
                 stackIn_21_1 = (param0) && (!io.field_b);
-                ((cj) (Object) stackIn_20_0).c(stackIn_21_1, -1);
+                ((UiComponent) (Object) stackIn_20_0).c(stackIn_21_1, -1);
                 stackIn_24_0 = LevelData.field_a;
                 stackIn_25_1 = (param0) && (!io.field_b);
-                ((cj) (Object) stackIn_24_0).c(stackIn_25_1, param1 + 7578);
+                ((UiComponent) (Object) stackIn_24_0).c(stackIn_25_1, param1 + 7578);
               }
               ql.a(true);
               return;
@@ -87,10 +87,10 @@ final class dk extends cj {
             vm.field_lb.c(qe.field_k.field_x, 0);
             stackIn_30_0 = qe.field_k;
             stackIn_31_1 = (param0) && (!ee.field_a);
-            ((cj) (Object) stackIn_30_0).c(stackIn_31_1, param1 ^ 7578);
+            ((UiComponent) (Object) stackIn_30_0).c(stackIn_31_1, param1 ^ 7578);
             stackIn_34_0 = cm.field_a;
             stackIn_35_1 = (param0) && (!ee.field_a);
-            ((cj) (Object) stackIn_34_0).c(stackIn_35_1, -1);
+            ((UiComponent) (Object) stackIn_34_0).c(stackIn_35_1, -1);
           }
           if (sq.field_Q > 0) {
             if (vm.field_lb != null) {
@@ -98,10 +98,10 @@ final class dk extends cj {
             }
             stackIn_57_0 = JaggrabDownloader.field_i;
             stackIn_58_1 = (param0) && (!io.field_b);
-            ((cj) (Object) stackIn_57_0).c(stackIn_58_1, -1);
+            ((UiComponent) (Object) stackIn_57_0).c(stackIn_58_1, -1);
             stackIn_61_0 = LevelData.field_a;
             stackIn_62_1 = (param0) && (!io.field_b);
-            ((cj) (Object) stackIn_61_0).c(stackIn_62_1, param1 + 7578);
+            ((UiComponent) (Object) stackIn_61_0).c(stackIn_62_1, param1 + 7578);
           } else {
             if (InflaterDecompressor.field_a > 0) {
               if (vm.field_lb != null) {
@@ -109,10 +109,10 @@ final class dk extends cj {
               }
               stackIn_44_0 = JaggrabDownloader.field_i;
               stackIn_45_1 = (param0) && (!io.field_b);
-              ((cj) (Object) stackIn_44_0).c(stackIn_45_1, -1);
+              ((UiComponent) (Object) stackIn_44_0).c(stackIn_45_1, -1);
               stackIn_48_0 = LevelData.field_a;
               stackIn_49_1 = (param0) && (!io.field_b);
-              ((cj) (Object) stackIn_48_0).c(stackIn_49_1, param1 + 7578);
+              ((UiComponent) (Object) stackIn_48_0).c(stackIn_49_1, param1 + 7578);
             }
           }
         } else {
@@ -123,10 +123,10 @@ final class dk extends cj {
               }
               stackIn_110_0 = JaggrabDownloader.field_i;
               stackIn_111_1 = (param0) && (!io.field_b);
-              ((cj) (Object) stackIn_110_0).c(stackIn_111_1, -1);
+              ((UiComponent) (Object) stackIn_110_0).c(stackIn_111_1, -1);
               stackIn_114_0 = LevelData.field_a;
               stackIn_115_1 = (param0) && (!io.field_b);
-              ((cj) (Object) stackIn_114_0).c(stackIn_115_1, param1 + 7578);
+              ((UiComponent) (Object) stackIn_114_0).c(stackIn_115_1, param1 + 7578);
             } else {
               if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
@@ -134,10 +134,10 @@ final class dk extends cj {
                 }
                 stackIn_124_0 = JaggrabDownloader.field_i;
                 stackIn_125_1 = (param0) && (!io.field_b);
-                ((cj) (Object) stackIn_124_0).c(stackIn_125_1, -1);
+                ((UiComponent) (Object) stackIn_124_0).c(stackIn_125_1, -1);
                 stackIn_128_0 = LevelData.field_a;
                 stackIn_129_1 = (param0) && (!io.field_b);
-                ((cj) (Object) stackIn_128_0).c(stackIn_129_1, param1 + 7578);
+                ((UiComponent) (Object) stackIn_128_0).c(stackIn_129_1, param1 + 7578);
               }
             }
           } else {
@@ -146,20 +146,20 @@ final class dk extends cj {
             }
             stackIn_70_0 = qe.field_k;
             stackIn_71_1 = (param0) && (!ee.field_a);
-            ((cj) (Object) stackIn_70_0).c(stackIn_71_1, param1 ^ 7578);
+            ((UiComponent) (Object) stackIn_70_0).c(stackIn_71_1, param1 ^ 7578);
             stackIn_74_0 = cm.field_a;
             stackIn_75_1 = (param0) && (!ee.field_a);
-            ((cj) (Object) stackIn_74_0).c(stackIn_75_1, -1);
+            ((UiComponent) (Object) stackIn_74_0).c(stackIn_75_1, -1);
             if (sq.field_Q > 0) {
               if (vm.field_lb != null) {
                 vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
               }
               stackIn_82_0 = JaggrabDownloader.field_i;
               stackIn_83_1 = (param0) && (!io.field_b);
-              ((cj) (Object) stackIn_82_0).c(stackIn_83_1, -1);
+              ((UiComponent) (Object) stackIn_82_0).c(stackIn_83_1, -1);
               stackIn_86_0 = LevelData.field_a;
               stackIn_87_1 = (param0) && (!io.field_b);
-              ((cj) (Object) stackIn_86_0).c(stackIn_87_1, param1 + 7578);
+              ((UiComponent) (Object) stackIn_86_0).c(stackIn_87_1, param1 + 7578);
             } else {
               if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
@@ -167,10 +167,10 @@ final class dk extends cj {
                 }
                 stackIn_96_0 = JaggrabDownloader.field_i;
                 stackIn_97_1 = (param0) && (!io.field_b);
-                ((cj) (Object) stackIn_96_0).c(stackIn_97_1, -1);
+                ((UiComponent) (Object) stackIn_96_0).c(stackIn_97_1, -1);
                 stackIn_100_0 = LevelData.field_a;
                 stackIn_101_1 = (param0) && (!io.field_b);
-                ((cj) (Object) stackIn_100_0).c(stackIn_101_1, param1 + 7578);
+                ((UiComponent) (Object) stackIn_100_0).c(stackIn_101_1, param1 + 7578);
               }
             }
           }
@@ -516,7 +516,7 @@ final class dk extends cj {
         return 2;
     }
 
-    dk(int param0, int param1, int param2, int param3, String param4, cj param5, cj param6, cj param7) {
+    dk(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -536,21 +536,21 @@ final class dk extends cj {
         int var13 = 0;
         this.field_Fb = 0;
         try {
-          this.field_Lb = new cj(0L, param6, param4);
+          this.field_Lb = new UiComponent(0L, param6, param4);
           this.a((byte) 50, this.field_Lb);
-          this.field_Gb = new cj(0L, param7);
+          this.field_Gb = new UiComponent(0L, param7);
           this.field_Gb.field_M = 16764006;
           this.a((byte) 50, this.field_Gb);
           this.field_Gb.field_vb = "|";
           this.field_Hb = new StringBuilder(12);
           var9_int = this.field_Lb.e(0);
-          this.field_Lb.a(jk.field_f, 3, var9_int, 5, -3344);
-          this.field_Gb.a(jk.field_f, 3 + jk.field_f, var9_int, 5, -3344);
+          this.field_Lb.setBounds(jk.field_f, 3, var9_int, 5, -3344);
+          this.field_Gb.setBounds(jk.field_f, 3 + jk.field_f, var9_int, 5, -3344);
           var10 = var9_int + 5 + 5;
           var11 = 3 + jk.field_f * 2 + 3;
           var12 = qp.a(param0, (byte) 116, var10, param2);
           var13 = IntrusiveNode.a(true, param1, param3, var11);
-          this.a(var11, var13, var10, var12, -3344);
+          this.setBounds(var11, var13, var10, var12, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

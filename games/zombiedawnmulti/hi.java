@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends cj {
+final class hi extends UiComponent {
     static String field_Nb;
-    private cj field_Lb;
-    private cj field_Gb;
-    private cj field_Hb;
-    private cj field_Jb;
-    private cj field_Ib;
+    private UiComponent field_Lb;
+    private UiComponent field_Gb;
+    private UiComponent field_Hb;
+    private UiComponent field_Jb;
+    private UiComponent field_Ib;
     static String field_Mb;
-    private cj field_Kb;
+    private UiComponent field_Kb;
     private int field_Fb;
 
     final boolean d(boolean param0) {
@@ -21,7 +21,7 @@ final class hi extends cj {
           if (!param0) {
             return false;
           }
-          this.field_Lb = (cj) null;
+          this.field_Lb = (UiComponent) null;
           return false;
         }
         if (this.field_Fb > 0) {
@@ -34,7 +34,7 @@ final class hi extends cj {
         if (!param0) {
           return false;
         }
-        this.field_Lb = (cj) null;
+        this.field_Lb = (UiComponent) null;
         return false;
     }
 
@@ -64,8 +64,8 @@ final class hi extends cj {
         return false;
     }
 
-    hi(long param0, cj param1, cj param2, cj param3, cj param4) {
-        super(param0, (cj) null);
+    hi(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -77,24 +77,24 @@ final class hi extends cj {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        cj var9 = null;
-        cj var10 = null;
+        UiComponent var9 = null;
+        UiComponent var10 = null;
         try {
-          this.field_Jb = new cj(0L, param1);
-          this.field_Ib = new cj(0L, param2);
+          this.field_Jb = new UiComponent(0L, param1);
+          this.field_Ib = new UiComponent(0L, param2);
           this.a((byte) 50, this.field_Jb);
           this.a((byte) 50, this.field_Ib);
-          this.field_Gb = new cj(0L, (cj) null);
+          this.field_Gb = new UiComponent(0L, (UiComponent) null);
           this.a((byte) 50, this.field_Gb);
-          this.field_Hb = new cj(0L, param3);
-          this.field_Lb = new cj(0L, param3);
+          this.field_Hb = new UiComponent(0L, param3);
+          this.field_Lb = new UiComponent(0L, param3);
           var9 = this.field_Hb;
           var10 = var9;
           this.field_Lb.field_ib = true;
           var10.field_ib = true;
           this.field_Gb.a((byte) 50, this.field_Hb);
           this.field_Gb.a((byte) 50, this.field_Lb);
-          this.field_Kb = new cj(0L, param4);
+          this.field_Kb = new UiComponent(0L, param4);
           this.field_Kb.field_fb = true;
           this.field_Gb.a((byte) 50, this.field_Kb);
           return;
@@ -200,7 +200,7 @@ final class hi extends cj {
 
     final boolean d(byte param0) {
         if (param0 != 37) {
-          this.field_Hb = (cj) null;
+          this.field_Hb = (UiComponent) null;
         }
         if (this.field_Hb.field_T != 0) {
           this.field_Fb = 20;
@@ -229,30 +229,30 @@ final class hi extends cj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        cj var14 = null;
-        cj var15 = null;
-        cj var16 = null;
-        cj var17 = null;
-        cj var18 = null;
-        cj var19 = null;
-        cj var14Lifetime1;
-        cj var14Lifetime2;
-        cj var15Lifetime1;
-        cj var15Lifetime2;
-        cj var16Lifetime1;
-        cj var16Lifetime2;
-        cj var17Lifetime1;
-        cj var17Lifetime2;
-        cj var18Lifetime1;
-        cj var18Lifetime2;
-        cj var18Lifetime3;
-        cj var19Lifetime1;
-        cj var19Lifetime2;
-        cj var19Lifetime3;
-        cj var18Lifetime4;
-        cj var19Lifetime4;
-        cj var18Lifetime1Lifetime1;
-        cj var19Lifetime1Lifetime1;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
+        UiComponent var14Lifetime1;
+        UiComponent var14Lifetime2;
+        UiComponent var15Lifetime1;
+        UiComponent var15Lifetime2;
+        UiComponent var16Lifetime1;
+        UiComponent var16Lifetime2;
+        UiComponent var17Lifetime1;
+        UiComponent var17Lifetime2;
+        UiComponent var18Lifetime1;
+        UiComponent var18Lifetime2;
+        UiComponent var18Lifetime3;
+        UiComponent var19Lifetime1;
+        UiComponent var19Lifetime2;
+        UiComponent var19Lifetime3;
+        UiComponent var18Lifetime4;
+        UiComponent var19Lifetime4;
+        UiComponent var18Lifetime1Lifetime1;
+        UiComponent var19Lifetime1Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tq extends cj {
+final class tq extends UiComponent {
     hi field_Ib;
     static String field_Fb;
-    cj field_Gb;
+    UiComponent field_Gb;
     static String field_Hb;
-    cj field_Jb;
+    UiComponent field_Jb;
 
     static long a(long param0, long param1) {
         return param0 ^ param1;
@@ -45,7 +45,7 @@ final class tq extends cj {
         if (!param0) {
           if (!this.field_L) {
             var8 = 0;
-            this.field_Gb.a((byte) 109, this.field_Jb.field_z, param1, var8 != 0);
+            this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8 != 0);
             this.a(param3, param4 + 4719, param2, false, param6);
             if (param4 == -4719) {
               return var8 != 0;
@@ -54,7 +54,7 @@ final class tq extends cj {
           }
           if (param5) {
             var8Lifetime2 = 0;
-            this.field_Gb.a((byte) 109, this.field_Jb.field_z, param1, var8Lifetime2 != 0);
+            this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8Lifetime2 != 0);
             this.a(param3, param4 + 4719, param2, false, param6);
             if (param4 == -4719) {
               return var8Lifetime2 != 0;
@@ -62,7 +62,7 @@ final class tq extends cj {
             return true;
           }
           var8Lifetime3 = 1;
-          this.field_Gb.a((byte) 109, this.field_Jb.field_z, param1, var8Lifetime3 != 0);
+          this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8Lifetime3 != 0);
           this.a(param3, param4 + 4719, param2, false, param6);
           if (param4 == -4719) {
             return var8Lifetime3 != 0;
@@ -70,7 +70,7 @@ final class tq extends cj {
           return true;
         }
         var8Lifetime1 = 1;
-        this.field_Gb.a((byte) 109, this.field_Jb.field_z, param1, var8Lifetime1 != 0);
+        this.field_Gb.layoutVerticalContent((byte) 109, this.field_Jb.field_z, param1, var8Lifetime1 != 0);
         this.a(param3, param4 + 4719, param2, false, param6);
         if (param4 == -4719) {
           return var8Lifetime1 != 0;
@@ -170,10 +170,10 @@ final class tq extends cj {
         return param0 & param1;
     }
 
-    tq(long param0, cj param1, cj param2, hi param3) {
-        super(param0, (cj) null);
+    tq(long param0, UiComponent param1, UiComponent param2, hi param3) {
+        super(param0, (UiComponent) null);
         try {
-          this.field_Jb = new cj(0L, param2);
+          this.field_Jb = new UiComponent(0L, param2);
           this.field_Ib = new hi(0L, param3);
           this.a((byte) 50, this.field_Jb);
           this.a((byte) 50, this.field_Ib);

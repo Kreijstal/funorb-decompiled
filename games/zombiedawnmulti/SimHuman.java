@@ -15,7 +15,7 @@ abstract class SimHuman extends SimUnit {
     private boolean field_vb;
     SimZombie field_nb;
     private boolean field_wb;
-    static cj field_gb;
+    static UiComponent field_gb;
     private int field_rb;
     boolean field_hb;
     static Sprite field_eb;

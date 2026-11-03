@@ -5,7 +5,7 @@ final class vm extends al implements in {
     static int field_hb;
     static String[] field_gb;
     static Sprite field_lb;
-    private gn field_kb;
+    private ButtonWidget field_kb;
     static int field_ib;
     static String field_jb;
 
@@ -101,11 +101,11 @@ final class vm extends al implements in {
         field_gb = null;
     }
 
-    private final gn a(byte param0, bj param1, String param2) {
-        gn var4 = null;
+    private final ButtonWidget a(byte param0, bj param1, String param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        gn stackIn_3_0 = null;
+        ButtonWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -113,7 +113,7 @@ final class vm extends al implements in {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new gn(param2, param1);
+          var4 = new ButtonWidget(param2, param1);
           var4.listener = (WidgetActionListener) ((Object) new oq());
           var5 = -6 + this.field_w;
           this.field_w = this.field_w + 38;
@@ -145,7 +145,7 @@ final class vm extends al implements in {
         }
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         if (param3 > -83) {
           return;
         }

@@ -58,7 +58,7 @@ final class el extends rg {
             ck.field_a = ho.field_m;
             ui.a((byte) -109, param9);
             if (JaggrabDownloader.field_h > 0) {
-              ko.a(param4, param7, false, param9);
+              PowerupBar.a(param4, param7, false, param9);
             }
             eb.field_B.field_R = 1;
             eb.field_B.field_V = qc.field_u.field_V;
@@ -82,7 +82,7 @@ final class el extends rg {
             ck.field_a = (-640 + kp.field_l) / 2;
             ui.a((byte) -109, param9);
             if (JaggrabDownloader.field_h > 0) {
-              ko.a(param4, param7, false, param9);
+              PowerupBar.a(param4, param7, false, param9);
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (sq.field_Q > 0) {
@@ -160,7 +160,7 @@ final class el extends rg {
               ck.field_a = ho.field_m;
               ui.a((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
-                ko.a(param4, param7, false, param9);
+                PowerupBar.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
@@ -184,7 +184,7 @@ final class el extends rg {
               ck.field_a = (-640 + kp.field_l) / 2;
               ui.a((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
-                ko.a(param4, param7, false, param9);
+                PowerupBar.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
@@ -227,7 +227,7 @@ final class el extends rg {
               ck.field_a = ho.field_m;
               ui.a((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
-                ko.a(param4, param7, false, param9);
+                PowerupBar.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
@@ -251,7 +251,7 @@ final class el extends rg {
               ck.field_a = (-640 + kp.field_l) / 2;
               ui.a((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
-                ko.a(param4, param7, false, param9);
+                PowerupBar.a(param4, param7, false, param9);
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
                 if (sq.field_Q > 0) {

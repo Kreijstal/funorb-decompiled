@@ -5,7 +5,7 @@ final class bi {
     static String field_d;
     static boolean field_e;
     static String field_b;
-    static cj field_f;
+    static UiComponent field_f;
     static boolean field_a;
     static String field_c;
     private static String field_z;

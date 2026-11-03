@@ -59,7 +59,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (var2 != 0 &&
           var2 != 1) {
           if (!q.field_e) {
-            this.a(param0 + 13654, "reconnect");
+            this.reportError(param0 + 13654, "reconnect");
           }
           ib.a(-114);
           bf.a(true, var2, ol.field_q);
@@ -110,9 +110,9 @@ abstract class NetworkGameClient extends GameApplet {
         wj.field_l[11] = true;
     }
 
-    final static cj k(int param0) {
+    final static UiComponent k(int param0) {
         if (param0 >= -45) {
-          return (cj) null;
+          return (UiComponent) null;
         }
         return eg.field_B.field_Ib;
     }
@@ -194,7 +194,7 @@ abstract class NetworkGameClient extends GameApplet {
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             MouseInputHandler.a((String) null, (Throwable) ((Object) var6_ref), false);
-            this.a(27200, "crash");
+            this.reportError(27200, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -571,19 +571,19 @@ abstract class NetworkGameClient extends GameApplet {
           gh.field_a != 0) {
           if (10 > ClientException.field_i) {
             if (gh.field_a == 3) {
-              this.a(27200, "js5crc");
+              this.reportError(27200, "js5crc");
             } else {
               if (gh.field_a == 4) {
-                this.a(27200, "js5io");
+                this.reportError(27200, "js5io");
               } else {
                 if (gh.field_a != 2) {
                   if (5 == gh.field_a) {
-                    this.a(27200, "outofdate");
+                    this.reportError(27200, "outofdate");
                   } else {
-                    this.a(param0 + 27105, "js5connect");
+                    this.reportError(param0 + 27105, "js5connect");
                   }
                 } else {
-                  this.a(27200, "js5connect_full");
+                  this.reportError(27200, "js5connect_full");
                 }
               }
             }
@@ -591,7 +591,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (a.field_b >= 10) {
               ib.a(-69);
               if (gh.field_a == 3) {
-                bf.a(true, 256, sb.field_d);
+                bf.a(true, 256, IndexedSpriteState.field_d);
               } else {
                 if (gh.field_a == 4) {
                   bf.a(true, 256, wq.field_b);
@@ -600,7 +600,7 @@ abstract class NetworkGameClient extends GameApplet {
                     if (5 == gh.field_a) {
                       bf.a(true, 5, MouseInputHandler.field_a);
                     } else {
-                      bf.a(true, 256, ko.field_j);
+                      bf.a(true, 256, PowerupBar.field_j);
                     }
                   } else {
                     bf.a(true, 256, qq.field_g);

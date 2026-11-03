@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vj extends nc {
+final class vj extends MenuScreen {
     static int[] field_p;
     private int field_l;
     static int field_t;
@@ -15,7 +15,7 @@ final class vj extends nc {
     vj(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
         try {
-          this.field_r = new vh(0L, (cj) null, 140, 60, 256, 120);
+          this.field_r = new vh(0L, (UiComponent) null, 140, 60, 256, 120);
           this.field_q = 0;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "vj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
@@ -610,8 +610,8 @@ final class vj extends nc {
         this.field_r.i(-31);
     }
 
-    final void a(int param0, boolean param1, int param2) {
-        super.a(0, param1, param2);
+    final void onEnter(int param0, boolean param1, int param2) {
+        super.onEnter(0, param1, param2);
         rp var5 = FullscreenFocusCanvas.field_k;
         rp var4 = var5;
         this.field_n = var5.field_p[param0];

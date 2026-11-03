@@ -13,7 +13,7 @@ final class wc extends SceneObject {
     static IntrusiveDeque field_K;
     static char field_I;
     private PcmSampleStream field_L;
-    static cj field_H;
+    static UiComponent field_H;
 
     final static PcmSampleStream b(int param0, int param1) {
         wj var2 = new wj(param1);
@@ -276,7 +276,7 @@ final class wc extends SceneObject {
             }
           }
           if (param0 != -10136) {
-            field_H = (cj) null;
+            field_H = (UiComponent) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

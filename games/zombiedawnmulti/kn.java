@@ -6,7 +6,7 @@ final class kn {
     static String field_e;
     static boolean field_f;
     static String field_d;
-    static cj field_a;
+    static UiComponent field_a;
     static int field_b;
 
     final static gh a(String[] args, int param1) {

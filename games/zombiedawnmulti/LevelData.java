@@ -14,11 +14,11 @@ class LevelData {
     private int field_b;
     int[] field_l;
     static boolean[] field_c;
-    static cj field_a;
+    static UiComponent field_a;
 
     public static void b(int param0) {
         if (param0 != -1) {
-          field_a = (cj) null;
+          field_a = (UiComponent) null;
         }
         field_m = null;
         field_c = null;
@@ -498,7 +498,7 @@ class LevelData {
           -vm.field_hb + 250 != f.field_a) {
         }
         if (param0 != -9) {
-          field_a = (cj) null;
+          field_a = (UiComponent) null;
         }
         f.field_a = f.field_a + 1;
     }

@@ -4,7 +4,7 @@
 import java.util.*;
 
 class GameWorld {
-    static cj field_n;
+    static UiComponent field_n;
     IntrusiveDeque characters;
     static String field_w;
     LevelData field_h;
@@ -38,7 +38,7 @@ class GameWorld {
     int field_I;
     static String field_E;
     IntrusiveDeque field_u;
-    static cj field_x;
+    static UiComponent field_x;
     int[] field_y;
     static String field_B;
 
@@ -127,7 +127,7 @@ class GameWorld {
     final static void a(int param0, String param1) {
         System.out.println("Error: " + we.a((byte) -73, "%0a", param1, "\n"));
         if (param0 != 2) {
-          field_n = (cj) null;
+          field_n = (UiComponent) null;
         }
     }
 

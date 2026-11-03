@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gl extends WidgetContainer implements in {
-    private gn[] field_I;
+    private ButtonWidget[] field_I;
     static String field_K;
     static hh field_H;
     private String[] field_G;
@@ -19,7 +19,7 @@ final class gl extends WidgetContainer implements in {
         try {
           var4 = (hp) (JaggrabDownloader.field_l.c(108));
           while (var4 != null) {
-            tk.a(var4, 58, param1);
+            LaboratoryScreen.a(var4, 58, param1);
             var4 = (hp) (JaggrabDownloader.field_l.b(6));
           }
           if (!param0) {
@@ -72,15 +72,15 @@ final class gl extends WidgetContainer implements in {
               this.field_G[var4_int] = ld.a((byte) 0, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new he(ke.field_h, 0, 1);
-            this.field_I = new gn[var3_int + 1];
+            this.field_I = new ButtonWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_I[var5] = new gn(this.field_G[var5], (bj) (this));
+              this.field_I[var5] = new ButtonWidget(this.field_G[var5], (bj) (this));
               this.field_I[var5].listener = (WidgetActionListener) ((Object) var4);
               this.field_I[var5].field_x = wd.field_I;
               this.field_I[var5].setWidgetBounds(0, 20 + var5 * 16, 28972, 80, 15);
               this.b((byte) 94, this.field_I[var5]);
             }
-            this.field_I[var3_int] = new gn(al.field_ab, (bj) (this));
+            this.field_I[var3_int] = new ButtonWidget(al.field_ab, (bj) (this));
             this.field_I[var3_int].listener = (WidgetActionListener) ((Object) var4);
             this.field_I[var3_int].setWidgetBounds(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
             this.b((byte) 55, this.field_I[var3_int]);
@@ -178,7 +178,7 @@ final class gl extends WidgetContainer implements in {
         }
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         UiWidget var8 = null;

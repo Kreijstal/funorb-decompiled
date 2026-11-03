@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ho extends nc {
+final class ho extends MenuScreen {
     private int field_o;
     private int field_r;
     static String field_p;

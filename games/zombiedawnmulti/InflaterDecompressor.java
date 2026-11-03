@@ -9,7 +9,7 @@ final class InflaterDecompressor {
     static String field_i;
     private java.util.zip.Inflater field_d;
     static String field_f;
-    static cj field_h;
+    static UiComponent field_h;
     static int field_a;
     static volatile int field_e;
     static byte[] field_b;

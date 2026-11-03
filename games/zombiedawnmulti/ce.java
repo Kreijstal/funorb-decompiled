@@ -87,7 +87,7 @@ final class ce extends IntrusiveNode {
                 SoftwareRasterizer.clear();
               }
               this.field_i.a(1, false, var6_ref_nm, -1);
-              var7 = fb.field_e.sceneObjects;
+              var7 = PowerupButton.field_e.sceneObjects;
               var8 = var7.c(46);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var8))) {
@@ -194,19 +194,19 @@ final class ce extends IntrusiveNode {
           }
           var9_int = 495;
           var10 = 5;
-          IntrusiveNode.field_c.a(param0, var10, var9_int - 10, 5, -3344);
-          ec.field_b.a(param0, 0, IntrusiveNode.field_c.field_zb - ua.field_E.field_zb, 0, -3344);
+          IntrusiveNode.field_c.setBounds(param0, var10, var9_int - 10, 5, -3344);
+          ec.field_b.setBounds(param0, 0, IntrusiveNode.field_c.field_zb - ua.field_E.field_zb, 0, -3344);
           var10 = var10 + (param6 + param0);
-          ua.field_E.a(param0, 0, ua.field_E.field_zb, ec.field_b.field_zb, -3344);
-          dp.field_c.a(param7, var10, dp.field_c.e(0), 5, -3344);
+          ua.field_E.setBounds(param0, 0, ua.field_E.field_zb, ec.field_b.field_zb, -3344);
+          dp.field_c.setBounds(param7, var10, dp.field_c.e(0), 5, -3344);
           var11 = jk.field_d.e(0);
-          jk.field_d.a(param7, var10, var11, -5 + var9_int - var11, -3344);
-          SpriteState.field_t.a(param3, 0, var9_int, 0, -3344);
+          jk.field_d.setBounds(param7, var10, var11, -5 + var9_int - var11, -3344);
+          SpriteState.field_t.setBounds(param3, 0, var9_int, 0, -3344);
           var12 = 5 + var10 + param7;
-          re.field_a.a(var12, param3, var9_int, 0, -3344);
+          re.field_a.setBounds(var12, param3, var9_int, 0, -3344);
           var12 = var12 + param3;
           re.field_a.field_ab = tg.a(2105376, re.field_a.field_z, 8421504, 3, 11579568, 49);
-          lj.field_v.a(var12, -(var12 / 2) + param5, var9_int, param2 - var9_int / 2, -3344);
+          lj.field_v.setBounds(var12, -(var12 / 2) + param5, var9_int, param2 - var9_int / 2, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

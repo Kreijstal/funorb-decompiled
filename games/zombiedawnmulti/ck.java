@@ -355,7 +355,7 @@ final class ck {
           }
           if (var2 == 1 &&
             null != JaggrabDownloader.field_c) {
-            sb.field_k = JaggrabDownloader.field_c.field_Nb;
+            IndexedSpriteState.field_k = JaggrabDownloader.field_c.field_Nb;
           }
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);

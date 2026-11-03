@@ -110,7 +110,7 @@ final class qi {
     }
 
     final static void a(boolean param0) {
-        fb.a(4, 102);
+        PowerupButton.a(4, 102);
         if (param0) {
           qi.b((byte) -45);
         }

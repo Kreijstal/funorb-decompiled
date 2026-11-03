@@ -7,7 +7,7 @@ final class ta extends al {
     static int[] field_ib;
     static String field_lb;
     private boolean field_kb;
-    static cj field_gb;
+    static UiComponent field_gb;
     private String field_rb;
     private boolean field_nb;
     static char[] field_pb;
@@ -83,7 +83,7 @@ final class ta extends al {
           if (param2 >= 24) {
             return;
           }
-          field_gb = (cj) null;
+          field_gb = (UiComponent) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

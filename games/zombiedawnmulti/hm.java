@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends un {
+final class hm extends TextInputValidator {
     static String[] field_q;
 
     final static String a(int param0, char param1) {

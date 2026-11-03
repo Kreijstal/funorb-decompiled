@@ -144,7 +144,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[51] = eb.field_e;
         gh.field_f[34] = ic.field_i;
         gh.field_f[18] = ob.field_u;
-        gh.field_f[59] = un.field_o;
+        gh.field_f[59] = TextInputValidator.field_o;
         gh.field_f[7] = cd.field_Mb;
         gh.field_f[60] = uc.field_c;
         gh.field_f[49] = dg.field_O;
@@ -153,7 +153,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[9] = IterableNodeHashTable.field_b;
         gh.field_f[32] = ZombieDawnMulti.field_M;
         gh.field_f[58] = me.field_j;
-        gh.field_f[8] = cj.field_B;
+        gh.field_f[8] = UiComponent.field_B;
         gh.field_f[35] = gj.field_c;
         gh.field_f[56] = rn.field_c;
         gh.field_f[10] = SimArmedHuman.field_Eb;
@@ -181,7 +181,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[11][0] = wp.field_a;
         wq.field_g[12][0] = no.field_Kb;
         wq.field_g[13][0] = SecondaryNodeDeque.field_f;
-        wq.field_g[14][0] = un.field_n;
+        wq.field_g[14][0] = TextInputValidator.field_n;
         wq.field_g[15][0] = he.field_c;
         wq.field_g[16][0] = ha.field_h;
         wq.field_g[17][0] = bb.field_i;
@@ -211,7 +211,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[36][0] = mn.field_s;
         wq.field_g[37][0] = uf.field_c;
         wq.field_g[38][0] = InflaterDecompressor.field_g;
-        wq.field_g[0][1] = cj.field_db;
+        wq.field_g[0][1] = UiComponent.field_db;
         wq.field_g[1][1] = PortalEntryEvent.field_j;
         wq.field_g[2][1] = UiWidget.field_t;
         wq.field_g[3][1] = hi.field_Nb;
@@ -245,7 +245,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[52][1] = wj.field_j;
         wq.field_g[51][1] = qj.field_l;
         wq.field_g[50][1] = dd.field_b;
-        wq.field_g[49][1] = fb.field_g;
+        wq.field_g[49][1] = PowerupButton.field_g;
         wq.field_g[48][1] = oj.field_O;
         wq.field_g[47][1] = ResourceArchive.field_i;
         wq.field_g[46][1] = fe.field_X;
@@ -322,7 +322,7 @@ final class UnitStateEvent extends GameEvent {
     }
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
-        cj stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -335,13 +335,13 @@ final class UnitStateEvent extends GameEvent {
         int stackIn_88_0 = 0;
         boolean stackIn_135_0 = false;
         int stackIn_151_0 = 0;
-        cj stackIn_176_0 = null;
+        UiComponent stackIn_176_0 = null;
         int stackIn_176_1 = 0;
         boolean stackIn_177_2 = false;
-        cj stackIn_181_0 = null;
+        UiComponent stackIn_181_0 = null;
         int stackIn_181_1 = 0;
         boolean stackIn_182_2 = false;
-        cj stackIn_186_0 = null;
+        UiComponent stackIn_186_0 = null;
         int stackIn_186_1 = 0;
         boolean stackIn_187_2 = false;
         Object stackIn_188_0 = null;
@@ -349,9 +349,9 @@ final class UnitStateEvent extends GameEvent {
         boolean stackOut_80_0;
         boolean stackOut_134_0;
         RuntimeException var5 = null;
-        cj var6 = null;
-        cj var7 = null;
-        cj var8 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
+        UiComponent var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -373,11 +373,11 @@ final class UnitStateEvent extends GameEvent {
         dm var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        cj var22 = null;
+        UiComponent var22 = null;
         int[] var23 = null;
         String var24 = null;
         int[] var25 = null;
-        cj var26 = null;
+        UiComponent var26 = null;
         int stackIn_56_0Lifetime1;
         int stackIn_56_1Lifetime1;
         int stackIn_65_0Lifetime1;
@@ -403,7 +403,7 @@ final class UnitStateEvent extends GameEvent {
             if (hl.b(0)) {
               gg.field_m.field_wb = ClientException.field_l.toUpperCase();
               var9 = (2 + LevelData.field_a.field_zb) / 2;
-              en.field_b.a(40, LevelData.field_a.field_z - 40, var9 - 2, 0, -3344);
+              en.field_b.setBounds(40, LevelData.field_a.field_z - 40, var9 - 2, 0, -3344);
               if (JaggrabDownloader.field_c.field_mc > JaggrabDownloader.field_c.field_cc) {
                 en.field_b.field_wb = p.field_c.toUpperCase();
                 en.field_b.field_Z = true;
@@ -431,7 +431,7 @@ final class UnitStateEvent extends GameEvent {
                   en.field_b.field_ab = he.field_i.field_X;
                 }
               }
-              GameKeyHandler.field_a.a(40, -40 + LevelData.field_a.field_z, LevelData.field_a.field_zb - var9, var9, -3344);
+              GameKeyHandler.field_a.setBounds(40, -40 + LevelData.field_a.field_z, LevelData.field_a.field_zb - var9, var9, -3344);
               GameKeyHandler.field_a.field_wb = Waypoint.field_f.toUpperCase();
               var8 = GameKeyHandler.field_a;
               stackIn_20_0 = GameKeyHandler.field_a;
@@ -720,14 +720,14 @@ final class UnitStateEvent extends GameEvent {
                 (var19 != 0)) {
                 var9_ref_String = JaggrabDownloader.field_c.field_Nb;
                 gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
-                eb.field_B.a(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
+                eb.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
                 eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
                 var8 = eb.field_B;
               }
             } else {
               var9_ref_String = JaggrabDownloader.field_c.field_Nb;
               gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
-              eb.field_B.a(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
+              eb.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
               eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
               var8 = eb.field_B;
             }
@@ -750,15 +750,15 @@ final class UnitStateEvent extends GameEvent {
             stackIn_176_0 = JaggrabDownloader.field_i;
             stackIn_176_1 = -11838;
             stackIn_177_2 = (param1) && (!param2) && (!io.field_b);
-            ((cj) (Object) stackIn_176_0).a(stackIn_176_1, stackIn_177_2);
+            ((UiComponent) (Object) stackIn_176_0).a(stackIn_176_1, stackIn_177_2);
             stackIn_181_0 = LevelData.field_a;
             stackIn_181_1 = -11838;
             stackIn_182_2 = (param1) && (!param2) && (!io.field_b);
-            ((cj) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
+            ((UiComponent) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
             stackIn_186_0 = qf.field_b;
             stackIn_186_1 = -11838;
             stackIn_187_2 = (param1) && (!param2) && (io.field_b);
-            ((cj) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
+            ((UiComponent) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
             em.field_U.field_c.h(-40);
             stackIn_188_0 = null;
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si extends nc {
+final class si extends MenuScreen {
     private int[] field_y;
     private int field_x;
     private int field_v;
@@ -93,9 +93,9 @@ final class si extends nc {
           this.field_q = param2;
           we.field_g[43] = ec.field_a;
           this.field_n = 0;
-          stackIn_4_1 = !(fb.field_e.localTeam >= 0);
+          stackIn_4_1 = !(PowerupButton.field_e.localTeam >= 0);
           this.field_o = stackIn_4_1;
-          if (fb.field_e.localTeam != this.field_q) {
+          if (PowerupButton.field_e.localTeam != this.field_q) {
             if (!this.field_o) {
               this.field_l = gf.field_c;
             } else {
@@ -230,7 +230,7 @@ final class si extends nc {
         return 430;
     }
 
-    final void b(int param0, boolean param1, int param2) {
+    final void handleMenuAction(int param0, boolean param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -261,7 +261,7 @@ final class si extends nc {
               ma.field_a.b((byte) -35, 61);
             }
           } else {
-            super.b(-110, param1, param2);
+            super.handleMenuAction(-110, param1, param2);
           }
         }
     }
@@ -873,7 +873,7 @@ final class si extends nc {
 
     final void f(int param0) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (0 != (PortalEntryEvent.field_m.field_j & 1 << fb.field_e.localTeam)) {
+        if (0 != (PortalEntryEvent.field_m.field_j & 1 << PowerupButton.field_e.localTeam)) {
           we.field_g[42] = ih.field_c;
         } else {
           if (cm.a(PortalEntryEvent.field_m.field_j, true) > 0) {

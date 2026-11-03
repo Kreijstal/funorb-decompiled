@@ -1,45 +1,45 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends cj {
+final class jh extends UiComponent {
     static Sprite[] field_Hb;
-    cj field_Rb;
+    UiComponent field_Rb;
     byte[] field_Zb;
     boolean field_Wb;
     int field_Ub;
     boolean field_Fb;
     long field_qc;
-    cj field_Ib;
-    cj field_gc;
+    UiComponent field_Ib;
+    UiComponent field_gc;
     boolean field_dc;
-    cj field_jc;
+    UiComponent field_jc;
     int field_Pb;
     int field_Vb;
-    cj field_Xb;
-    cj field_Lb;
+    UiComponent field_Xb;
+    UiComponent field_Lb;
     boolean field_Mb;
     boolean field_lc;
     String field_Nb;
-    cj field_ec;
+    UiComponent field_ec;
     boolean field_rc;
-    cj field_hc;
+    UiComponent field_hc;
     int field_cc;
-    cj field_Kb;
-    cj field_kc;
+    UiComponent field_Kb;
+    UiComponent field_kc;
     int field_Sb;
-    cj field_Tb;
-    cj field_Yb;
-    cj field_oc;
-    cj field_ac;
+    UiComponent field_Tb;
+    UiComponent field_Yb;
+    UiComponent field_oc;
+    UiComponent field_ac;
     String[] field_bc;
     static int field_ic;
-    cj field_pc;
+    UiComponent field_pc;
     int field_Jb;
     boolean field_Ob;
     int field_mc;
     long field_nc;
-    cj field_Gb;
-    cj[] field_Qb;
+    UiComponent field_Gb;
+    UiComponent[] field_Qb;
     int field_fc;
 
     final boolean a(jh param0, byte param1) {
@@ -155,12 +155,12 @@ final class jh extends cj {
         if (param0 == 2) {
           return !this.c(0) ? true : false;
         }
-        this.field_pc = (cj) null;
+        this.field_pc = (UiComponent) null;
         return !this.c(0) ? true : false;
     }
 
     jh(int param0) {
-        super(0L, (cj) null);
+        super(0L, (UiComponent) null);
         this.field_Zb = new byte[param0];
     }
 

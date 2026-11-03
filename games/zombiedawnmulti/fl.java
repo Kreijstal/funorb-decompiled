@@ -121,7 +121,7 @@ final class fl {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (gn.a(param1, 16413)) {
+        if (ButtonWidget.a(param1, 16413)) {
           return true;
         }
         if (param1 != 45 &&

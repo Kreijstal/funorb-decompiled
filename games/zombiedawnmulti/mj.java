@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends cj {
-    private cj field_Gb;
+final class mj extends UiComponent {
+    private UiComponent field_Gb;
     static boolean field_Rb;
     private int field_Kb;
     static String field_Ob;
     static String field_Sb;
-    private cj field_Pb;
-    private cj field_Tb;
+    private UiComponent field_Pb;
+    private UiComponent field_Tb;
     static int[] field_Fb;
-    static nc[] field_Hb;
+    static MenuScreen[] field_Hb;
     static ld field_Ib;
-    private cj field_Nb;
-    private cj field_Qb;
+    private UiComponent field_Nb;
+    private UiComponent field_Qb;
     static int field_Ub;
     private boolean field_Jb;
-    static cj field_Mb;
-    private cj field_Lb;
+    static UiComponent field_Mb;
+    private UiComponent field_Lb;
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 23 % ((-22 - param0) / 57);
@@ -105,7 +105,7 @@ final class mj extends cj {
         field_Ib = null;
         field_Sb = null;
         if (param0 != 22767) {
-          field_Hb = (nc[]) null;
+          field_Hb = (MenuScreen[]) null;
         }
     }
 
@@ -183,31 +183,31 @@ final class mj extends cj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        cj var15 = null;
-        cj var16 = null;
-        cj var17 = null;
-        cj var18 = null;
-        cj var19 = null;
-        cj var20 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
+        UiComponent var20 = null;
         int var14 = ZombieDawnMulti.field_E ? 1 : 0;
-        cj var15Lifetime1;
-        cj var15Lifetime2;
-        cj var16Lifetime1;
-        cj var16Lifetime2;
-        cj var17Lifetime1;
-        cj var17Lifetime2;
-        cj var18Lifetime1;
-        cj var18Lifetime2;
-        cj var19Lifetime1;
-        cj var19Lifetime2;
-        cj var19Lifetime3;
-        cj var20Lifetime1;
-        cj var20Lifetime2;
-        cj var20Lifetime3;
-        cj var19Lifetime4;
-        cj var20Lifetime4;
-        cj var19Lifetime1Lifetime1;
-        cj var20Lifetime1Lifetime1;
+        UiComponent var15Lifetime1;
+        UiComponent var15Lifetime2;
+        UiComponent var16Lifetime1;
+        UiComponent var16Lifetime2;
+        UiComponent var17Lifetime1;
+        UiComponent var17Lifetime2;
+        UiComponent var18Lifetime1;
+        UiComponent var18Lifetime2;
+        UiComponent var19Lifetime1;
+        UiComponent var19Lifetime2;
+        UiComponent var19Lifetime3;
+        UiComponent var20Lifetime1;
+        UiComponent var20Lifetime2;
+        UiComponent var20Lifetime3;
+        UiComponent var19Lifetime4;
+        UiComponent var20Lifetime4;
+        UiComponent var19Lifetime1Lifetime1;
+        UiComponent var20Lifetime1Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -417,19 +417,19 @@ final class mj extends cj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        cj var15 = null;
-        cj var16 = null;
-        cj var17 = null;
-        cj var18 = null;
-        cj var19 = null;
-        cj var20 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
+        UiComponent var20 = null;
         int var14 = ZombieDawnMulti.field_E ? 1 : 0;
-        cj var15Lifetime1;
-        cj var16Lifetime1;
-        cj var17Lifetime1;
-        cj var18Lifetime1;
-        cj var19Lifetime1;
-        cj var20Lifetime1;
+        UiComponent var15Lifetime1;
+        UiComponent var16Lifetime1;
+        UiComponent var17Lifetime1;
+        UiComponent var18Lifetime1;
+        UiComponent var19Lifetime1;
+        UiComponent var20Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -566,7 +566,7 @@ final class mj extends cj {
         return var5;
     }
 
-    mj(long param0, cj param1, Sprite param2, Sprite param3, cj param4, cj param5, boolean param6) {
+    mj(long param0, UiComponent param1, Sprite param2, Sprite param3, UiComponent param4, UiComponent param5, boolean param6) {
         this(param0, param1, param1, param4, param5, param6);
         try {
           this.field_Tb.field_rb = param2;
@@ -600,8 +600,8 @@ final class mj extends cj {
         return true;
     }
 
-    private mj(long param0, cj param1, cj param2, cj param3, cj param4, boolean param5) {
-        super(param0, (cj) null);
+    private mj(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, boolean param5) {
+        super(param0, (UiComponent) null);
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -614,26 +614,26 @@ final class mj extends cj {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        cj var10 = null;
-        cj var11 = null;
+        UiComponent var10 = null;
+        UiComponent var11 = null;
         try {
           stackIn_4_1 = (param5);
           this.field_Jb = stackIn_4_1;
-          this.field_Tb = new cj(0L, param1);
-          this.field_Nb = new cj(0L, param2);
+          this.field_Tb = new UiComponent(0L, param1);
+          this.field_Nb = new UiComponent(0L, param2);
           this.a((byte) 50, this.field_Tb);
           this.a((byte) 50, this.field_Nb);
-          this.field_Gb = new cj(0L, (cj) null);
+          this.field_Gb = new UiComponent(0L, (UiComponent) null);
           this.a((byte) 50, this.field_Gb);
-          this.field_Pb = new cj(0L, param3);
-          this.field_Qb = new cj(0L, param3);
+          this.field_Pb = new UiComponent(0L, param3);
+          this.field_Qb = new UiComponent(0L, param3);
           var10 = this.field_Pb;
           var11 = var10;
           this.field_Qb.field_ib = true;
           var11.field_ib = true;
           this.field_Gb.a((byte) 50, this.field_Pb);
           this.field_Gb.a((byte) 50, this.field_Qb);
-          this.field_Lb = new cj(0L, param4);
+          this.field_Lb = new UiComponent(0L, param4);
           this.field_Lb.field_fb = true;
           this.field_Gb.a((byte) 50, this.field_Lb);
           return;
@@ -672,7 +672,7 @@ final class mj extends cj {
     static {
         field_Ob = "<%0> might change the options - wait and see.";
         field_Rb = false;
-        field_Hb = new nc[16];
+        field_Hb = new MenuScreen[16];
         field_Fb = new int[4];
         field_Sb = "Select an enemy zombie!";
     }

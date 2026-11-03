@@ -6,7 +6,7 @@ import java.util.*;
 final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_m;
     static String field_i;
-    static cj field_k;
+    static UiComponent field_k;
     static int[][] field_j;
     private java.awt.image.ImageConsumer field_n;
     static int field_l;

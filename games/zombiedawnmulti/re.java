@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class re {
-    static cj field_a;
+    static UiComponent field_a;
     static boolean field_b;
 
     final static void a(boolean param0) {
@@ -13,7 +13,7 @@ final class re {
           ProxySocketConnector.field_k = tg.a(var3, param0);
           return;
         }
-        field_a = (cj) null;
+        field_a = (UiComponent) null;
         CharSequence var2 = (CharSequence) ((Object) ta.field_lb);
         ProxySocketConnector.field_k = tg.a(var2, param0);
     }

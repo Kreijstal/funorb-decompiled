@@ -3,24 +3,24 @@
  */
 import java.io.*;
 
-final class fa extends cj {
+final class fa extends UiComponent {
     private mi field_Hb;
     static String field_Ib;
-    private cj[] field_Jb;
+    private UiComponent[] field_Jb;
     static Sprite[][] field_Qb;
-    private cj field_Rb;
+    private UiComponent field_Rb;
     static String field_Ob;
-    private cj field_Pb;
+    private UiComponent field_Pb;
     static Sprite field_Tb;
-    private cj field_Sb;
-    private cj field_Kb;
+    private UiComponent field_Sb;
+    private UiComponent field_Kb;
     long field_Fb;
     private int field_Lb;
     private StringBuilder field_Nb;
     static String field_Gb;
-    private cj field_Vb;
+    private UiComponent field_Vb;
     static String field_Ub;
-    private cj field_Mb;
+    private UiComponent field_Mb;
 
     final boolean k(int param0) {
         if (param0 < 99) {
@@ -40,12 +40,12 @@ final class fa extends cj {
         int var3 = 0;
         mi stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        cj stackIn_17_0 = null;
+        UiComponent stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -58) {
-          this.field_Mb = (cj) null;
+          this.field_Mb = (UiComponent) null;
         }
         this.a(-11838, param1);
         if (null != this.field_Sb) {
@@ -104,8 +104,8 @@ final class fa extends cj {
         return stackIn_6_0;
     }
 
-    private final int a(String param0, int param1, int param2, cj param3, cj param4, int param5) {
-        cj var7 = null;
+    private final int a(String param0, int param1, int param2, UiComponent param3, UiComponent param4, int param5) {
+        UiComponent var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -122,7 +122,7 @@ final class fa extends cj {
             stackIn_2_0 = 20;
             return stackIn_2_0;
           }
-          var7 = new cj(0L, param4, 0, param1, param2, 24, param0);
+          var7 = new UiComponent(0L, param4, 0, param1, param2, 24, param0);
           param1 += 32;
           param3.a((byte) 50, var7);
           stackIn_4_0 = param1;
@@ -222,7 +222,7 @@ final class fa extends cj {
         return param2 + "/" + param1;
     }
 
-    fa(int param0, int param1, int param2, int param3, int param4, cj param5, cj param6, cj param7, cj param8, mi param9, cj param10, String param11, long param12) {
+    fa(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, mi param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         int var15_int = 0;
@@ -242,7 +242,7 @@ final class fa extends cj {
         mi stackIn_9_1;
         mi stackIn_9_2;
         String stackIn_9_5;
-        cj stackIn_15_0 = null;
+        UiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -260,14 +260,14 @@ final class fa extends cj {
         StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cj[] var15 = null;
+        UiComponent[] var15 = null;
         RuntimeException var15_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        cj[] var28 = null;
+        UiComponent[] var28 = null;
         Object stackIn_7_0Lifetime1;
         Object stackIn_9_0Lifetime1;
         mi stackIn_9_1Lifetime1;
@@ -292,23 +292,23 @@ final class fa extends cj {
         this.field_Lb = -2;
         try {
           this.field_Fb = param12;
-          this.field_Kb = new cj(0L, param6, vc.field_g.toUpperCase());
+          this.field_Kb = new UiComponent(0L, param6, vc.field_g.toUpperCase());
           this.field_Kb.field_R = 1;
           this.a((byte) 50, this.field_Kb);
-          this.field_Mb = new cj(0L, param7);
+          this.field_Mb = new UiComponent(0L, param7);
           this.field_Kb.a((byte) 50, this.field_Mb);
-          this.field_Rb = new cj(0L, (cj) null);
+          this.field_Rb = new UiComponent(0L, (UiComponent) null);
           this.a((byte) 50, this.field_Rb);
           if (param11 != null) {
-            this.field_Vb = new cj(0L, param8, wg.field_a);
+            this.field_Vb = new UiComponent(0L, param8, wg.field_a);
             this.field_Vb.field_M = 11184810;
             this.field_Vb.field_R = 1;
             this.field_Rb.a((byte) 50, this.field_Vb);
-            this.field_Pb = new cj(0L, param8, bf.field_q);
+            this.field_Pb = new UiComponent(0L, param8, bf.field_q);
             this.field_Pb.field_M = 11184810;
             this.field_Pb.field_R = 1;
             this.field_Rb.a((byte) 50, this.field_Pb);
-            this.field_Sb = new cj(0L, param8);
+            this.field_Sb = new UiComponent(0L, param8);
             this.field_Sb.field_M = 16764006;
             this.field_Rb.a((byte) 50, this.field_Sb);
             this.field_Sb.field_vb = "|";
@@ -339,18 +339,18 @@ final class fa extends cj {
               this.field_Hb = new mi(stackIn_7_3, stackIn_7_4, stackIn_9_5);
               this.field_Rb.a((byte) 50, this.field_Hb);
             }
-            var28 = new cj[3];
+            var28 = new UiComponent[3];
             var15 = var28;
-            var28[0] = new cj(0L, (cj) null);
+            var28[0] = new UiComponent(0L, (UiComponent) null);
             this.field_Rb.a((byte) 50, var28[0]);
-            var28[1] = new cj(0L, (cj) null);
+            var28[1] = new UiComponent(0L, (UiComponent) null);
             this.field_Rb.a((byte) 50, var28[1]);
-            var28[2] = new cj(0L, (cj) null);
+            var28[2] = new UiComponent(0L, (UiComponent) null);
             this.field_Rb.a((byte) 50, var28[2]);
-            this.field_Jb = new cj[mo.field_Kb];
+            this.field_Jb = new UiComponent[mo.field_Kb];
             for (var16 = 0; mo.field_Kb > var16; var16++) {
               if (nk.field_n[var16] != null) {
-                this.field_Jb[var16] = new cj(0L, param10, nk.field_n[var16]);
+                this.field_Jb[var16] = new UiComponent(0L, param10, nk.field_n[var16]);
                 this.field_Jb[var16].field_R = 0;
                 stackIn_15_0 = this.field_Jb[var16];
                 stackIn_16_1 = (param11 != null);
@@ -428,49 +428,49 @@ final class fa extends cj {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Kb.a(24, 0, 13 + var19 + 13, 0, -3344);
-            this.field_Mb.a(15, 5, 15, this.field_Kb.field_zb - 20, -3344);
+            this.field_Kb.setBounds(24, 0, 13 + var19 + 13, 0, -3344);
+            this.field_Mb.setBounds(15, 5, 15, this.field_Kb.field_zb - 20, -3344);
             var21 = 10;
-            this.field_Vb.a(jk.field_f * 2, var21, var19, 13, -3344);
+            this.field_Vb.setBounds(jk.field_f * 2, var21, var19, 13, -3344);
             var21 = var21 + 2 * jk.field_f;
-            this.field_Pb.a(jk.field_f * 2, var21, var19, 13, -3344);
+            this.field_Pb.setBounds(jk.field_f * 2, var21, var19, 13, -3344);
             var21 = var21 + (10 + 2 * jk.field_f);
-            this.field_Sb.a(jk.field_f, var21, 0, 0, -3344);
+            this.field_Sb.setBounds(jk.field_f, var21, 0, 0, -3344);
             var21 = var21 + (10 + jk.field_f);
             if (null != this.field_Hb) {
               var20Lifetime3 = this.field_Hb.a((byte) 102, 4);
               this.field_Hb.a(var21, (byte) -96, 4, var20Lifetime3, 13 + (-var20Lifetime3 + var19) / 2, jk.field_f);
               var21 = var21 + (10 + jk.field_f);
             }
-            var28[0].a(var17Lifetime5, var21, var16Lifetime2, 13, -3344);
-            var28[1].a(var17Lifetime5, var21, var16Lifetime2, 13 + (13 + var16Lifetime2), -3344);
-            var28[2].a(var17Lifetime5, var21, var16Lifetime2, 2 * var16Lifetime2 + 13 + 26, -3344);
+            var28[0].setBounds(var17Lifetime5, var21, var16Lifetime2, 13, -3344);
+            var28[1].setBounds(var17Lifetime5, var21, var16Lifetime2, 13 + (13 + var16Lifetime2), -3344);
+            var28[2].setBounds(var17Lifetime5, var21, var16Lifetime2, 2 * var16Lifetime2 + 13 + 26, -3344);
             var22 = var21;
-            this.field_Rb.a(var22 + var17Lifetime5 + 10, 24, 13 + (var19 + 13), 0, -3344);
+            this.field_Rb.setBounds(var22 + var17Lifetime5 + 10, 24, 13 + (var19 + 13), 0, -3344);
             this.field_Rb.field_ab = tg.a(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 30);
             var23 = 13 + (13 + var19);
             var24 = var22 + 24 + var17Lifetime5 + 10;
             var25 = qp.a(param0, (byte) 109, var23, param2);
             var26 = IntrusiveNode.a(true, param1, param3, var24);
-            this.a(var24, var26, var23, var25, -3344);
+            this.setBounds(var24, var26, var23, var25, -3344);
             return;
           }
-          this.field_Vb = new cj(0L, param8, ng.field_f);
+          this.field_Vb = new UiComponent(0L, param8, ng.field_f);
           this.field_Vb.field_R = 1;
           this.field_Vb.field_M = 11184810;
           this.field_Rb.a((byte) 50, this.field_Vb);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Vb.field_yb.b(this.field_Vb.field_wb, var15_int);
-          this.field_Vb.a(var17Lifetime1 * jk.field_f, var16Lifetime1, var15_int, 13, -3344);
+          this.field_Vb.setBounds(var17Lifetime1 * jk.field_f, var16Lifetime1, var15_int, 13, -3344);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * jk.field_f;
-          this.field_Rb.a(10 + var16Lifetime1, 24, 13 + (var15_int + 13), 0, -3344);
+          this.field_Rb.setBounds(10 + var16Lifetime1, 24, 13 + (var15_int + 13), 0, -3344);
           this.field_Rb.field_ab = tg.a(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 92);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = qp.a(param0, (byte) 25, var18Lifetime1, param2);
           var21Lifetime1 = IntrusiveNode.a(true, param1, param3, var19Lifetime1);
-          this.a(var19Lifetime1, var21Lifetime1, var18Lifetime1, var20Lifetime1, -3344);
+          this.setBounds(var19Lifetime1, var21Lifetime1, var18Lifetime1, var20Lifetime1, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -522,11 +522,11 @@ final class fa extends cj {
         }
     }
 
-    private final int a(cj param0, int param1, cj param2, int param3, byte param4) {
+    private final int a(UiComponent param0, int param1, UiComponent param2, int param3, byte param4) {
         int discarded$1 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
-        cj var7 = null;
+        UiComponent var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -537,11 +537,11 @@ final class fa extends cj {
         try {
           param3 += 8;
           var6_int = param2.field_yb.a(param2.field_wb, -(2 * param2.field_V) + param1, param2.field_J);
-          param2.a(var6_int, param3, param1, 0, -3344);
+          param2.setBounds(var6_int, param3, param1, 0, -3344);
           param3 = param3 + (0 + var6_int);
           if (param4 != -55) {
-            var7 = (cj) null;
-            discarded$1 = this.a((cj) null, 103, (cj) null, -43, (byte) -6);
+            var7 = (UiComponent) null;
+            discarded$1 = this.a((UiComponent) null, 103, (UiComponent) null, -43, (byte) -6);
           }
           param0.a((byte) 50, param2);
           stackIn_3_0 = param3;

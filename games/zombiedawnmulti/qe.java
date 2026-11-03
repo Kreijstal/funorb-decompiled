@@ -8,10 +8,10 @@ final class qe {
     static cp field_e;
     static int[] field_o;
     private boolean field_p;
-    static cj field_q;
+    static UiComponent field_q;
     static int field_f;
     private int field_a;
-    static cj field_k;
+    static UiComponent field_k;
     private int field_d;
     private PaletteBitmapFont field_i;
     private int field_l;
@@ -243,7 +243,7 @@ final class qe {
         var4 = stackIn_3_0;
         var5 = var18.teamScores[param1];
         var25 = PortalEntryEvent.field_m.field_D[param1];
-        stackIn_6_0 = (param1 != fb.field_e.localTeam) ? 0 : 1;
+        stackIn_6_0 = (param1 != PowerupButton.field_e.localTeam) ? 0 : 1;
         var7 = stackIn_6_0;
         var8 = var25[0];
         var9 = qp.field_w;
@@ -340,7 +340,7 @@ final class qe {
 
     final boolean b(byte param0) {
         int var2 = -83 % ((-11 - param0) / 40);
-        return fb.field_e.field_j <= fb.field_e.field_Y ? true : false;
+        return PowerupButton.field_e.field_j <= PowerupButton.field_e.field_Y ? true : false;
     }
 
     private final void f(int param0) {
@@ -394,7 +394,7 @@ final class qe {
         if (param0 != 2) {
           this.field_j = false;
         }
-        IntrusiveNode var2 = fb.field_e.sceneObjects.c(83);
+        IntrusiveNode var2 = PowerupButton.field_e.sceneObjects.c(83);
         while (var2 instanceof SceneObject) {
           if (var2 instanceof GameCharacter) {
             this.field_h = this.field_h + 1;
@@ -454,21 +454,21 @@ final class qe {
         if (param8 < param12) {
           if (param12 >= param5) {
             if (param8 >= param5) {
-              un.a(SoftwareRasterizer.field_i, param13, param1, -10423, param12, param0, param9, param8, param2, param5, param6, param7, param14, param4, param3, param11, param10);
+              TextInputValidator.a(SoftwareRasterizer.field_i, param13, param1, -10423, param12, param0, param9, param8, param2, param5, param6, param7, param14, param4, param3, param11, param10);
             } else {
-              un.a(SoftwareRasterizer.field_i, param13, param4, -10423, param12, param2, param3, param5, param0, param8, param6, param14, param7, param1, param9, param11, param10);
+              TextInputValidator.a(SoftwareRasterizer.field_i, param13, param4, -10423, param12, param2, param3, param5, param0, param8, param6, param14, param7, param1, param9, param11, param10);
             }
           } else {
-            un.a(SoftwareRasterizer.field_i, param7, param6, -10423, param5, param2, param3, param12, param11, param8, param4, param14, param13, param1, param10, param0, param9);
+            TextInputValidator.a(SoftwareRasterizer.field_i, param7, param6, -10423, param5, param2, param3, param12, param11, param8, param4, param14, param13, param1, param10, param0, param9);
           }
         } else {
           if (param8 < param5) {
-            un.a(SoftwareRasterizer.field_i, param7, param1, -10423, param5, param11, param10, param8, param2, param12, param4, param13, param14, param6, param3, param0, param9);
+            TextInputValidator.a(SoftwareRasterizer.field_i, param7, param1, -10423, param5, param11, param10, param8, param2, param12, param4, param13, param14, param6, param3, param0, param9);
           } else {
             if (param12 >= param5) {
-              un.a(SoftwareRasterizer.field_i, param14, param6, -10423, param8, param0, param9, param12, param11, param5, param1, param7, param13, param4, param10, param2, param3);
+              TextInputValidator.a(SoftwareRasterizer.field_i, param14, param6, -10423, param8, param0, param9, param12, param11, param5, param1, param7, param13, param4, param10, param2, param3);
             } else {
-              un.a(SoftwareRasterizer.field_i, param14, param4, -10423, param8, param11, param10, param5, param0, param12, param1, param13, param7, param6, param9, param2, param3);
+              TextInputValidator.a(SoftwareRasterizer.field_i, param14, param4, -10423, param8, param11, param10, param5, param0, param12, param1, param13, param7, param6, param9, param2, param3);
             }
           }
         }

@@ -6,7 +6,7 @@ final class ql {
     static ContextMenu field_d;
     static String field_a;
     static String field_e;
-    static cj field_b;
+    static UiComponent field_b;
     static String field_f;
 
     final static int a(boolean param0, int param1, byte[] param2) {

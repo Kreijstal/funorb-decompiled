@@ -6,11 +6,11 @@ import java.util.*;
 final class cp extends WidgetContainer implements jn, in {
     static String field_L;
     static BitmapFont field_H;
-    private gn field_M;
+    private ButtonWidget field_M;
     gl field_V;
     static ResourceArchive field_P;
     static Calendar field_U;
-    private gn field_W;
+    private ButtonWidget field_W;
     private on field_G;
     static Sprite[] field_X;
     static IntrusiveDeque field_T;
@@ -76,7 +76,7 @@ final class cp extends WidgetContainer implements jn, in {
         ((UsernameAvailabilityValidator) (this.field_G.a((byte) -67))).i(-22837);
     }
 
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+    public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -147,8 +147,8 @@ final class cp extends WidgetContainer implements jn, in {
         this.field_G = new on("", (bj) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(la.field_e, var1, (bj) null);
-        this.field_M = new gn(ji.field_e, (bj) null);
-        this.field_W = new gn(gk.field_a, (bj) null);
+        this.field_M = new ButtonWidget(ji.field_e, (bj) null);
+        this.field_W = new ButtonWidget(gk.field_a, (bj) null);
         this.field_G.field_x = bi.field_d;
         this.field_G.a((byte) -27, new UsernameAvailabilityValidator(this.field_G));
         this.field_M.field_F = false;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class rg extends UiWidget implements dh {
+abstract class rg extends UiWidget implements ChildWidgetOwner {
     UiWidget field_B;
     static IndexedSprite field_C;
     static String field_D;
@@ -33,7 +33,7 @@ abstract class rg extends UiWidget implements dh {
           if (null == this.field_B) {
             discarded$5 = param2.append("null");
           } else {
-            this.field_B.a(7, param0, 1 + param3, param2);
+            this.field_B.appendWidgetDiagnostics(7, param0, 1 + param3, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ abstract class rg extends UiWidget implements dh {
         }
     }
 
-    StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    StringBuilder appendWidgetDiagnostics(int param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -163,7 +163,7 @@ abstract class rg extends UiWidget implements dh {
           if (param1 > -124) {
             this.field_B = (UiWidget) null;
           }
-          stackIn_7_0 = (this.field_B != null) && (!this.field_B.c(125)) && (this.field_B.a(param0, 0));
+          stackIn_7_0 = (this.field_B != null) && (!this.field_B.c(125)) && (this.field_B.requestKeyboardFocus(param0, 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -308,7 +308,7 @@ abstract class rg extends UiWidget implements dh {
           if (param0 != -81) {
             this.c(-108);
           }
-          stackIn_7_0 = (null != this.field_B) && (!this.field_B.c(127)) && (this.field_B.a(param1, 0));
+          stackIn_7_0 = (null != this.field_B) && (!this.field_B.c(127)) && (this.field_B.requestKeyboardFocus(param1, 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -390,7 +390,7 @@ abstract class rg extends UiWidget implements dh {
         return lh.field_g;
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -401,7 +401,7 @@ abstract class rg extends UiWidget implements dh {
           if (param1 != 0) {
             return true;
           }
-          stackIn_7_0 = (null != this.field_B) && (this.field_B.a(param0, 0));
+          stackIn_7_0 = (null != this.field_B) && (this.field_B.requestKeyboardFocus(param0, 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

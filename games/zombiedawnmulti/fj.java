@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends gn {
+final class fj extends ButtonWidget {
     static boolean field_M;
 
     private fj(String param0, bj param1) {

@@ -78,7 +78,7 @@ abstract class SceneObject extends TertiaryLinkNode {
         return this.positionY >> 16;
     }
 
-    final static ld a(cj param0, cj param1, byte param2, int[] param3, cj param4) {
+    final static ld a(UiComponent param0, UiComponent param1, byte param2, int[] param3, UiComponent param4) {
         int var10_int = 0;
         int var5_int = 0;
         RuntimeException var5 = null;

@@ -17,9 +17,9 @@ final class qh {
         if (param3 == -74) {
           var7 = 5;
           this.field_c.a(9736, param0, param1, var7, var6, param4, param2);
-          dp.field_b.a(jk.field_f, 0, SimUnit.field_O.field_zb, 0, -3344);
-          bi.field_f.a(18, 2 + jk.field_f, -80 + SimUnit.field_O.field_zb - DualLinkNode.field_o - 4, 0, -3344);
-          jb.field_c.a(18, jk.field_f + 2, DualLinkNode.field_o + 82, -80 + (SimUnit.field_O.field_zb - (DualLinkNode.field_o + 2)), param3 ^ 3398);
+          dp.field_b.setBounds(jk.field_f, 0, SimUnit.field_O.field_zb, 0, -3344);
+          bi.field_f.setBounds(18, 2 + jk.field_f, -80 + SimUnit.field_O.field_zb - DualLinkNode.field_o - 4, 0, -3344);
+          jb.field_c.setBounds(18, jk.field_f + 2, DualLinkNode.field_o + 82, -80 + (SimUnit.field_O.field_zb - (DualLinkNode.field_o + 2)), param3 ^ 3398);
           eg.field_B.a(param3 + 74, DualLinkNode.field_o, SimUnit.field_O.field_z + (-jk.field_f - 22), SimUnit.field_O.field_zb, 2, 0, 2 + (jk.field_f + 20), 20);
           gl.field_L.a(2, (byte) 123, DualLinkNode.field_o, 20);
           return;
@@ -96,12 +96,12 @@ final class qh {
         }
     }
 
-    qh(String param0, cj param1) {
+    qh(String param0, UiComponent param1) {
         String[] var3 = null;
-        cj[] var4 = null;
+        UiComponent[] var4 = null;
         try {
           var3 = new String[]{param0, BufferedFile.field_p, tm.field_e};
-          var4 = new cj[]{param1, SimUnit.field_O, (cj) ((Object) gl.field_L)};
+          var4 = new UiComponent[]{param1, SimUnit.field_O, (UiComponent) ((Object) gl.field_L)};
           this.field_c = new dc(0L, ProxySocketConnector.field_i, var3, aa.field_l, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

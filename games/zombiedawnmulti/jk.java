@@ -12,7 +12,7 @@ final class jk {
     static String field_e;
     static int field_g;
     static int field_f;
-    static cj field_d;
+    static UiComponent field_d;
     static int[] field_k;
 
     public static void a(int param0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qp extends un {
+final class qp extends TextInputValidator {
     private TextInputWidget field_q;
     static byte[][] field_t;
     static Sprite field_v;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sb {
+abstract class IndexedSpriteState {
     int field_j;
     int field_h;
     int field_a;

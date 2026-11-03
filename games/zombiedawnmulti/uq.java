@@ -3,7 +3,7 @@
  */
 final class uq {
     static pi field_b;
-    static cj field_d;
+    static UiComponent field_d;
     static String field_c;
     static String field_e;
     static int field_g;

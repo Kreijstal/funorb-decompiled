@@ -7,7 +7,7 @@ final class pn {
     static int field_h;
     static IntrusiveDeque field_f;
     static IndexedSprite[] field_c;
-    static cj field_g;
+    static UiComponent field_g;
     static int field_b;
     static char field_d;
     static String field_i;
@@ -60,7 +60,7 @@ final class pn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -9) {
-            field_g = (cj) null;
+            field_g = (UiComponent) null;
           }
           stackIn_3_0 = param1.a(-53);
           return stackIn_3_0;

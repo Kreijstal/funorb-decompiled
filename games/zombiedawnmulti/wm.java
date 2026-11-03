@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wm extends gn {
+final class wm extends ButtonWidget {
     private la field_R;
     static ResourceArchive field_V;
     static String field_U;
