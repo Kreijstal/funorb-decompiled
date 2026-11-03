@@ -156,7 +156,7 @@ final class di extends IntrusiveNode {
         }
     }
 
-    final static void a(Star param0, boolean param1, PacketBuffer param2) {
+    final static void writeStar(Star param0, boolean param1, PacketBuffer param2) {
         PacketBuffer stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_8_0 = null;

@@ -3246,7 +3246,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("keychar_the_character_under_questionmark", 511);
                 if (null != var2) {
-                  IsolationistAi.field_p = oa.a(-12541, var2[0]);
+                  IsolationistAi.field_p = oa.cp1252ToChar(-12541, var2[0]);
                 }
                 var2 = TertiaryLinkNode.a("rating_noratings", 511);
                 if (var2 != null) {

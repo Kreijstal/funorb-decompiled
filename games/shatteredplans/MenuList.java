@@ -108,7 +108,7 @@ final class MenuList extends MenuComponent implements gj {
           var5 = param1.field_q;
           if (param0 != 1546006977) {
             var12 = (PacketBuffer) null;
-            MenuList.a((FleetMove) null, (byte) -74, (PacketBuffer) null);
+            MenuList.writeFleetMove((FleetMove) null, (byte) -74, (PacketBuffer) null);
           }
           if (param1.field_q == -1) {
             var6 = uq.field_m.a(5607, param1.field_c);
@@ -171,10 +171,10 @@ final class MenuList extends MenuComponent implements gj {
         }
     }
 
-    final static void a(FleetMove param0, byte param1, PacketBuffer param2) {
+    final static void writeFleetMove(FleetMove param0, byte param1, PacketBuffer param2) {
         try {
-          di.a(param0.field_y, false, param2);
-          di.a(param0.field_B, false, param2);
+          di.writeStar(param0.field_y, false, param2);
+          di.writeStar(param0.field_B, false, param2);
           param2.writeShort(param0.field_z, 255);
           if (param1 > -67) {
             field_A = (String) null;

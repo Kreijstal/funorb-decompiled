@@ -35,7 +35,7 @@ final class MusicVoice extends IntrusiveNode {
     static String field_t;
     static Sprite field_n;
 
-    final static FleetMove a(GameState param0, int param1, PacketBuffer param2) {
+    final static FleetMove readFleetMove(GameState param0, int param1, PacketBuffer param2) {
         Star var3 = null;
         RuntimeException var3_ref = null;
         Star var4 = null;
@@ -49,9 +49,9 @@ final class MusicVoice extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = FleetMove.a(param0, param2, 20);
+          var3 = FleetMove.readStar(param0, param2, 20);
           var5 = 21 / ((param1 + 64) / 43);
-          var4 = FleetMove.a(param0, param2, 20);
+          var4 = FleetMove.readStar(param0, param2, 20);
           var6 = param2.readUnsignedShort(-20976);
           stackIn_1_0 = new FleetMove(var3, var4, var6);
           return stackIn_1_0;

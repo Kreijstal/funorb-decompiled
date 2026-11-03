@@ -189,7 +189,7 @@ final class uk {
             var18_ref_ln = var16_ref_ln__[var17_int];
             var22_ref_ln = var18_ref_ln;
             var22_ref_lnLifetime2 = var18_ref_ln;
-            var18_ref_ln.field_t = us.a(param2, param4, 2);
+            var18_ref_ln.field_t = us.readPlayer(param2, param4, 2);
           }
           var16 = param2.readUnsignedByte(-71);
           var17 = new Territory[var16];

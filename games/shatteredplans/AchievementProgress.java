@@ -46,10 +46,10 @@ final class AchievementProgress {
           }
           while (var7 != null) {
             param4.writeByte(var7.field_o + 251, (byte) -125);
-            im.a(var7.field_p, param4, 9555);
-            di.a(var7.field_q, false, param4);
+            im.writePlayer(var7.field_p, param4, 9555);
+            di.writeStar(var7.field_q, false, param4);
             if (var7.field_o == 3) {
-              di.a(var7.field_r, false, param4);
+              di.writeStar(var7.field_r, false, param4);
             }
             var7 = (ProjectUse) (param2.a(false));
           }
@@ -57,7 +57,7 @@ final class AchievementProgress {
           while (var5_int >= 59) {
             param4.writeByte(250, (byte) -61);
             for (var9 = 0; var9 < 59; var9++) {
-              PanelNode.a(var8, param4, true);
+              PanelNode.writePlacementOrder(var8, param4, true);
               var8 = (PlacementOrder) (param0.a(false));
             }
             var5_int -= 59;
@@ -65,7 +65,7 @@ final class AchievementProgress {
           if (var5_int > 0) {
             param4.writeByte(192 + var5_int - 1, (byte) -86);
             while (var8 != null) {
-              PanelNode.a(var8, param4, true);
+              PanelNode.writePlacementOrder(var8, param4, true);
               var8 = (PlacementOrder) (param0.a(false));
             }
           }
@@ -73,7 +73,7 @@ final class AchievementProgress {
           while (var6 >= 192) {
             param4.writeByte(191, (byte) -104);
             for (var10 = 0; var10 < 192; var10++) {
-              MenuList.a(var12, (byte) -106, param4);
+              MenuList.writeFleetMove(var12, (byte) -106, param4);
               var12 = (FleetMove) (param3.a(false));
             }
             var6 -= 192;
@@ -81,7 +81,7 @@ final class AchievementProgress {
           if (var6 > 0) {
             param4.writeByte(var6 - 1, (byte) -103);
             while (var12 != null) {
-              MenuList.a(var12, (byte) -88, param4);
+              MenuList.writeFleetMove(var12, (byte) -88, param4);
               var12 = (FleetMove) (param3.a(false));
             }
             return;

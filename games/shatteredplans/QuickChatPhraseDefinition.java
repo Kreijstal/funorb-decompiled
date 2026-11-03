@@ -296,7 +296,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 stackIn_17_0 = this.field_p;
                 stackIn_17_1 = var5;
                 if (var6 != 0) {
-                  stackIn_18_2 = oa.a(-12541, (byte) var6);
+                  stackIn_18_2 = oa.cp1252ToChar(-12541, (byte) var6);
                 } else {
                   stackIn_18_2 = 0;
                 }
@@ -313,7 +313,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                   stackIn_8_0 = this.field_s;
                   stackIn_8_1 = var5;
                   if (var6 != 0) {
-                    stackIn_9_2 = oa.a(-12541, (byte) var6);
+                    stackIn_9_2 = oa.cp1252ToChar(-12541, (byte) var6);
                   } else {
                     stackIn_9_2 = 0;
                   }

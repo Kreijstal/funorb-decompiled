@@ -100,14 +100,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           for (var11Lifetime1 = 0; param1.length > var11Lifetime1; var11Lifetime1++) {
             var12_ref = (Territory) (param1[var11Lifetime1].field_i.startForward(0));
             while (var12_ref != null) {
-              im.a(var12_ref.field_o, param2, 9555);
-              di.a(var12_ref.field_q, false, param2);
+              im.writePlayer(var12_ref.field_o, param2, 9555);
+              di.writeStar(var12_ref.field_q, false, param2);
               var13 = var12_ref.starCount(89);
               param2.writeByte(var13, (byte) -112);
               var14_ref_ln = var12_ref.firstStar(18229);
               while (var14_ref_ln != null) {
                 if (var14_ref_ln != var12_ref.field_q) {
-                  di.a(var14_ref_ln, false, param2);
+                  di.writeStar(var14_ref_ln, false, param2);
                 }
                 var14_ref_ln = var12_ref.nextStar(-23410);
               }
@@ -126,14 +126,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             var13_ref_lo = param1[var12_intLifetime1].field_m;
             if (var13_ref_lo != null &&
               var13_ref_lo.starCount(122) > 0) {
-              im.a(param1[var12_intLifetime1], param2, 9555);
-              di.a(var13_ref_lo.field_q, false, param2);
+              im.writePlayer(param1[var12_intLifetime1], param2, 9555);
+              di.writeStar(var13_ref_lo.field_q, false, param2);
               var14 = var13_ref_lo.starCount(-127);
               param2.writeByte(var14, (byte) -69);
               var15 = var13_ref_lo.firstStar(18229);
               while (var15 != null) {
                 if (var15 != var13_ref_lo.field_q) {
-                  di.a(var15, false, param2);
+                  di.writeStar(var15, false, param2);
                 }
                 var15 = var13_ref_lo.nextStar(-23410);
               }
@@ -159,8 +159,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           param2.writeByte(param4.size(0), (byte) -67);
           var12 = (Wormhole) (param4.startForward(0));
           while (var12 != null) {
-            di.a(var12.field_n, false, param2);
-            di.a(var12.field_k, false, param2);
+            di.writeStar(var12.field_n, false, param2);
+            di.writeStar(var12.field_k, false, param2);
             param2.writeByte(var12.field_m, (byte) -82);
             var12 = (Wormhole) (param4.nextForward((byte) -71));
           }

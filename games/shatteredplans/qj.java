@@ -187,7 +187,7 @@ final class qj {
         cr.field_b = param1;
     }
 
-    final static PlacementOrder a(byte param0, GameState param1, PacketBuffer param2) {
+    final static PlacementOrder readPlacementOrder(byte param0, GameState param1, PacketBuffer param2) {
         Star var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -202,7 +202,7 @@ final class qj {
           if (param0 >= -63) {
             qj.clearStatics((byte) 55);
           }
-          var3 = FleetMove.a(param1, param2, 20);
+          var3 = FleetMove.readStar(param1, param2, 20);
           var4 = param2.readUnsignedShort(-20976);
           stackIn_3_0 = new PlacementOrder(var3, var4);
           return stackIn_3_0;

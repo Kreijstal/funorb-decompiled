@@ -4240,16 +4240,16 @@ final class GameSession implements AiHost {
               PacketBuffer.a(-126, this);
               if (var13 != 0) {
                 this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
-                this.field_P = uq.a(param4, param2, -27579, param5, param3);
+                this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
               }
             } else {
               this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
               if (var13 != 0) {
-                this.field_P = uq.a(param4, param2, -27579, param5, param3);
+                this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
               }
             }
           } else {
-            this.field_P = uq.a(param4, param2, -27579, param5, param3);
+            this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameRemainder0 = true;

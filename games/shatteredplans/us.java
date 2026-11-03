@@ -49,7 +49,7 @@ final class us {
         us.a(false, true);
     }
 
-    final static Player a(PacketBuffer param0, Player[] param1, int param2) {
+    final static Player readPlayer(PacketBuffer param0, Player[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Player stackIn_7_0 = null;

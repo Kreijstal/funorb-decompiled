@@ -64,7 +64,7 @@ final class FleetMove extends QuaternaryLinkNode {
         }
     }
 
-    final static Star a(GameState param0, PacketBuffer param1, int param2) {
+    final static Star readStar(GameState param0, PacketBuffer param1, int param2) {
         RuntimeException var3 = null;
         Star stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

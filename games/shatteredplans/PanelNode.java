@@ -80,9 +80,9 @@ class PanelNode extends DualLinkNode {
         }
     }
 
-    final static void a(PlacementOrder param0, PacketBuffer param1, boolean param2) {
+    final static void writePlacementOrder(PlacementOrder param0, PacketBuffer param1, boolean param2) {
         try {
-          di.a(param0.field_u, false, param1);
+          di.writeStar(param0.field_u, false, param1);
           if (!param2) {
             field_q = (sq) null;
           }

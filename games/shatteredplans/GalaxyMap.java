@@ -124,7 +124,7 @@ final class GalaxyMap {
             for (var10Lifetime1 = 0; var10Lifetime1 < var9_ref_ln__Lifetime1.length; var10Lifetime1++) {
               var15Lifetime3 = var9_ref_ln__Lifetime1[var10Lifetime1];
               if (var7.field_p < var15Lifetime3.field_p) {
-                di.a(var15Lifetime3, false, param0);
+                di.writeStar(var15Lifetime3, false, param0);
               }
             }
             var9 = 0;
@@ -270,7 +270,7 @@ final class GalaxyMap {
             var8 = var7.field_D.length;
             param2.writeByte(var8, (byte) -122);
             for (var9 = 0; var9 < var8; var9++) {
-              di.a(var7.field_D[var9], false, param2);
+              di.writeStar(var7.field_D[var9], false, param2);
             }
             var9Lifetime1 = 0;
             while (4 > var9Lifetime1) {
@@ -339,7 +339,7 @@ final class GalaxyMap {
           var4 = var8;
           for (var5 = 0; var5 < var8.length; var5++) {
             var6 = var8[var5];
-            im.a(var6.field_t, param1, 9555);
+            im.writePlayer(var6.field_t, param1, 9555);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1515,14 +1515,14 @@ final class GameState {
             }
             if (var4_int >= 251) {
               var5 = var4_int - 251;
-              var6_ref_fs = ScrollBar.a(this, 78, param2);
-              var10 = FleetMove.a(this, param2, 20);
+              var6_ref_fs = ScrollBar.readGamePlayer(this, 78, param2);
+              var10 = FleetMove.readStar(this, param2, 20);
               if (var5 != 3) {
                 param0 -= 2;
                 this.field_i.addLast((byte) -113, new ProjectUse(var5, var6_ref_fs, var10));
                 continue;
               }
-              var8 = FleetMove.a(this, param2, 20);
+              var8 = FleetMove.readStar(this, param2, 20);
               this.field_i.addLast((byte) -113, new ProjectUse(var5, var6_ref_fs, var10, var8));
               param0 -= 3;
               continue;
@@ -1531,13 +1531,13 @@ final class GameState {
               var5Lifetime1 = -191 + var4_int;
               param0 = param0 - 3 * var5Lifetime1;
               for (var6 = 0; var5Lifetime1 > var6; var6++) {
-                this.field_q.addLast((byte) -113, qj.a((byte) -85, this, param2));
+                this.field_q.addLast((byte) -113, qj.readPlacementOrder((byte) -85, this, param2));
               }
               continue;
             }
             var5Lifetime2 = 1 + var4_int;
             for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime2; var6Lifetime1++) {
-              var11 = MusicVoice.a(this, 65, param2);
+              var11 = MusicVoice.readFleetMove(this, 65, param2);
               this.field_p.a((byte) 48, var11);
               var11.field_y.field_T.addLast((byte) -113, var11);
               var11.field_B.field_s.addLast(var11, 32);

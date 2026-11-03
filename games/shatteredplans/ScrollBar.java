@@ -398,7 +398,7 @@ final class ScrollBar extends AnimatedPanel {
         this(param0, param1.field_Fb, param1.field_Cb, param1.field_xb, param1.field_Ab);
     }
 
-    final static Player a(GameState param0, int param1, PacketBuffer param2) {
+    final static Player readGamePlayer(GameState param0, int param1, PacketBuffer param2) {
         RuntimeException var3 = null;
         Player stackIn_2_0 = null;
         Player stackIn_4_0 = null;
@@ -410,7 +410,7 @@ final class ScrollBar extends AnimatedPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 53) {
-            stackIn_4_0 = us.a(param2, param0.field_v, 2);
+            stackIn_4_0 = us.readPlayer(param2, param0.field_v, 2);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Player) null;

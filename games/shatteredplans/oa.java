@@ -99,7 +99,7 @@ final class oa {
         throw new IllegalStateException();
     }
 
-    final static char a(int param0, byte param1) {
+    final static char cp1252ToChar(int param0, byte param1) {
         int var3 = 0;
         int var2 = 255 & param1;
         if (var2 == 0) {
