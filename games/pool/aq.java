@@ -25,7 +25,7 @@ final class aq {
         field_a = null;
     }
 
-    final static String joinTextParts(int param0, CharSequence[] param1) {
+    final static String joinCharSequences(int param0, CharSequence[] param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

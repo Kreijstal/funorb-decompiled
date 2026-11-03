@@ -251,7 +251,7 @@ final class SpaceTableScene extends ModelTableScene {
     final void b(boolean param0) {
         super.b(param0);
         int var2 = -220 - gd.field_g;
-        TextInputValidator.field_h.a(0, (byte) -97, var2, 0);
+        TextInputValidator.field_h.translate(0, (byte) -97, var2, 0);
         gd.field_g = gd.field_g + var2;
     }
 
@@ -270,7 +270,7 @@ final class SpaceTableScene extends ModelTableScene {
             ra.field_f[var3_int].a(2115785453);
           }
           if (gd.field_g < 0) {
-            TextInputValidator.field_h.a(0, (byte) -96, 1, 0);
+            TextInputValidator.field_h.translate(0, (byte) -96, 1, 0);
             gd.field_g = gd.field_g + 1;
           }
           return;
@@ -412,17 +412,17 @@ final class SpaceTableScene extends ModelTableScene {
         int[] var23 = null;
         int[] var24 = null;
         Ball[] var25 = null;
-        so var26 = null;
-        so var28 = null;
-        so var30 = null;
-        so var32 = null;
-        so var35 = null;
-        so var38 = null;
-        so var40 = null;
-        so var42 = null;
-        so var44 = null;
-        so var47 = null;
-        so var49 = null;
+        SceneNode var26 = null;
+        SceneNode var28 = null;
+        SceneNode var30 = null;
+        SceneNode var32 = null;
+        SceneNode var35 = null;
+        SceneNode var38 = null;
+        SceneNode var40 = null;
+        SceneNode var42 = null;
+        SceneNode var44 = null;
+        SceneNode var47 = null;
+        SceneNode var49 = null;
         int[] var52 = null;
         int[] var53 = null;
         int[] var54 = null;
@@ -536,16 +536,16 @@ final class SpaceTableScene extends ModelTableScene {
           if (param0 != -55) {
             waitingforFonts = (String) null;
           }
-          var26.b((byte) -108, 0, var26.field_j.length, var88);
+          var26.sortModelsByDepth((byte) -108, 0, var26.field_j.length, var88);
           var28 = ff.field_d;
           var89 = GzipDecoder.field_d;
-          var28.b((byte) 18, 0, var28.field_j.length, var89);
+          var28.sortModelsByDepth((byte) 18, 0, var28.field_j.length, var89);
           var30 = wb.field_c;
           var90 = GzipDecoder.field_d;
-          var30.b((byte) 120, 0, var30.field_j.length, var90);
+          var30.sortModelsByDepth((byte) 120, 0, var30.field_j.length, var90);
           var32 = tq.field_o;
           var91 = GzipDecoder.field_d;
-          var32.b((byte) 48, 0, var32.field_j.length, var91);
+          var32.sortModelsByDepth((byte) 48, 0, var32.field_j.length, var91);
           for (var5Lifetime1 = 0; var5Lifetime1 < LobbyGame.field_rc.length; var5Lifetime1++) {
             var92 = tq.field_o.field_c[var5Lifetime1];
             var7 = 576;
@@ -577,7 +577,7 @@ final class SpaceTableScene extends ModelTableScene {
           }
           var35 = ij.field_o;
           var93 = GzipDecoder.field_d;
-          var35.b((byte) -116, 0, var35.field_j.length, var93);
+          var35.sortModelsByDepth((byte) -116, 0, var35.field_j.length, var93);
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 51);
           this.a(param1, param0 ^ -61);
           for (var5Lifetime2 = 0; var5Lifetime2 < CacheEntry.field_C[0].length; var5Lifetime2++) {
@@ -599,23 +599,23 @@ final class SpaceTableScene extends ModelTableScene {
           }
           var38 = TextInputValidator.field_h;
           var95 = GzipDecoder.field_d;
-          var38.a((byte) -105, 0, var38.field_j.length, var95);
+          var38.drawModelRange((byte) -105, 0, var38.field_j.length, var95);
           var40 = ij.field_o;
           var96 = GzipDecoder.field_d;
-          var40.a((byte) -97, 0, var40.field_j.length, var96);
+          var40.drawModelRange((byte) -97, 0, var40.field_j.length, var96);
           var42 = wb.field_c;
           var97 = GzipDecoder.field_d;
-          var42.a((byte) -81, 0, var42.field_j.length, var97);
+          var42.drawModelRange((byte) -81, 0, var42.field_j.length, var97);
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             this.a(var57, (byte) 126, false, var25, false);
           }
           var44 = tq.field_o;
           var98 = GzipDecoder.field_d;
           var99 = LobbyGame.field_rc;
-          var44.a(false, 0, var44.field_j.length, (byte) -24, var98, var99);
+          var44.drawSortedModels(false, 0, var44.field_j.length, (byte) -24, var98, var99);
           var47 = ff.field_d;
           var100 = GzipDecoder.field_d;
-          var47.a((byte) -114, 0, var47.field_j.length, var100);
+          var47.drawModelRange((byte) -114, 0, var47.field_j.length, var100);
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             stackIn_47_0 = this;
             stackIn_47_1 = var4;
@@ -634,9 +634,9 @@ final class SpaceTableScene extends ModelTableScene {
           var49 = tq.field_o;
           var101 = GzipDecoder.field_d;
           var102 = LobbyGame.field_rc;
-          var49.a(true, 0, var49.field_j.length, (byte) -83, var101, var102);
+          var49.drawSortedModels(true, 0, var49.field_j.length, (byte) -83, var101, var102);
           if ((256L & LinkButtonPainter.field_i) != 0L) {
-            TextInputValidator.field_h.a(GzipDecoder.field_d, 0);
+            TextInputValidator.field_h.drawAllModels(GzipDecoder.field_d, 0);
           }
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             param1.updateCueStick(-1);
@@ -875,12 +875,12 @@ final class SpaceTableScene extends ModelTableScene {
     }
 
     final void initializeScene(boolean param0) {
-        so[] var12 = null;
+        SceneNode[] var12 = null;
         int[] var25 = null;
-        so[] var14 = null;
-        so[] var15 = null;
+        SceneNode[] var14 = null;
+        SceneNode[] var15 = null;
         int[] var26 = null;
-        so[] var17 = null;
+        SceneNode[] var17 = null;
         int[] var27 = null;
         int var9 = 0;
         int var10 = 0;
@@ -892,20 +892,20 @@ final class SpaceTableScene extends ModelTableScene {
         int var8 = 0;
         int var11 = Pool.field_O;
         int var3 = 0;
-        so dupTemp$0 = new so((TimeTrialRules.field_f - AccountWelcomePanel.field_eb) * 4 + 2 * (-ShotRecord.field_J + CachedArchiveSource.field_l));
+        SceneNode dupTemp$0 = new SceneNode((TimeTrialRules.field_f - AccountWelcomePanel.field_eb) * 4 + 2 * (-ShotRecord.field_J + CachedArchiveSource.field_l));
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
         int var3Lifetime1;
         int var3Lifetime2;
         wb.field_c = dupTemp$0;
-        so dupTemp$1 = new so(4 * (-HuffmanCodec.field_d + pc.field_b));
+        SceneNode dupTemp$1 = new SceneNode(4 * (-HuffmanCodec.field_d + pc.field_b));
         ff.field_d = dupTemp$1;
-        so dupTemp$2 = new so(4 * (-vn.field_f + PolarBallSkin.field_o));
+        SceneNode dupTemp$2 = new SceneNode(4 * (-vn.field_f + PolarBallSkin.field_o));
         tq.field_o = dupTemp$2;
-        so dupTemp$3 = hc.a(this.field_O[ph.field_e], this.field_M[ph.field_e], (byte) 101);
+        SceneNode dupTemp$3 = hc.a(this.field_O[ph.field_e], this.field_M[ph.field_e], (byte) 101);
         ij.field_o = dupTemp$3;
-        DialogLayer.field_R = new so(new so[]{dupTemp$0, dupTemp$1, dupTemp$2, dupTemp$3});
+        DialogLayer.field_R = new SceneNode(new SceneNode[]{dupTemp$0, dupTemp$1, dupTemp$2, dupTemp$3});
         var3 = 0;
         for (var2 = AccountWelcomePanel.field_eb; var2 < TimeTrialRules.field_f; var2++) {
           var4 = var2;
@@ -943,18 +943,18 @@ final class SpaceTableScene extends ModelTableScene {
           bh.a(var17, false, var27[1], var27[2], this.field_O[var4], var27[0], var6);
           var3Lifetime2 += 4;
         }
-        TextInputValidator.field_h = new so(new so[]{hc.a(this.field_O[SectorCacheStore.field_d], this.field_M[SectorCacheStore.field_d], (byte) 101), hc.a(this.field_O[da.field_b], this.field_M[da.field_b], (byte) 101), hc.a(this.field_O[StatefulTextPainter.field_x], this.field_M[StatefulTextPainter.field_x], (byte) 101)});
-        TextInputValidator.field_h.a(false);
-        TextInputValidator.field_h.a(0);
-        TextInputValidator.field_h.a(this.field_q, this.field_e, this.field_F, (byte) -101, this.field_u, this.field_C);
-        TextInputValidator.field_h.d(118);
-        DialogLayer.field_R.a(false);
-        DialogLayer.field_R.a(0);
-        DialogLayer.field_R.a(this.field_q, this.field_e, this.field_F, (byte) -124, this.field_u, this.field_C);
-        ij.field_o.d(109);
-        ff.field_d.d(97);
-        wb.field_c.d(118);
-        tq.field_o.d(90);
+        TextInputValidator.field_h = new SceneNode(new SceneNode[]{hc.a(this.field_O[SectorCacheStore.field_d], this.field_M[SectorCacheStore.field_d], (byte) 101), hc.a(this.field_O[da.field_b], this.field_M[da.field_b], (byte) 101), hc.a(this.field_O[StatefulTextPainter.field_x], this.field_M[StatefulTextPainter.field_x], (byte) 101)});
+        TextInputValidator.field_h.mergeChildMeshes(false);
+        TextInputValidator.field_h.normalizeOffsets(0);
+        TextInputValidator.field_h.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -101, this.field_u, this.field_C);
+        TextInputValidator.field_h.allocateModelArrays(118);
+        DialogLayer.field_R.mergeChildMeshes(false);
+        DialogLayer.field_R.normalizeOffsets(0);
+        DialogLayer.field_R.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -124, this.field_u, this.field_C);
+        ij.field_o.allocateModelArrays(109);
+        ff.field_d.allocateModelArrays(97);
+        wb.field_c.allocateModelArrays(118);
+        tq.field_o.allocateModelArrays(90);
         LobbyGame.field_rc = new boolean[tq.field_o.field_j.length];
         CacheEntry.field_C = new int[3][4096];
         s.field_b = new int[3][CacheEntry.field_C[0].length];

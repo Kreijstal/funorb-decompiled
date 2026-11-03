@@ -315,7 +315,7 @@ class ButtonWidget extends UiWidget {
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != Pocket.field_j ||
                 null != DebugTuningSlider.field_d ||
                 w.field_j != null ||
-                null != op.field_a)) {
+                null != TextLayout.field_a)) {
                 var11 = 0;
                 var12 = 0;
                 var13Lifetime1 = 0;
@@ -342,9 +342,9 @@ class ButtonWidget extends UiWidget {
                         var11 = 1;
                       }
                     }
-                    if (op.field_a != null &&
-                      op.field_a[var16] != null) {
-                      var15 = var15 | op.field_a[var16][var17_int];
+                    if (TextLayout.field_a != null &&
+                      TextLayout.field_a[var16] != null) {
+                      var15 = var15 | TextLayout.field_a[var16][var17_int];
                     }
                     if (null != w.field_j &&
                       w.field_j[var16] != null) {
@@ -458,7 +458,7 @@ class ButtonWidget extends UiWidget {
             }
             MarkerSliderPainter.field_c.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(HighscoresScreen.field_L.field_mc), Integer.toString(HighscoresScreen.field_L.field_Nb)}, -1, qa.playersXOfY);
           }
-          stackIn_173_0 = so.field_k;
+          stackIn_173_0 = SceneNode.field_k;
           stackIn_174_1 = (param2) && (!param1) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_173_0).updateRoot(stackIn_174_1, false);
           stackIn_178_0 = Bzip2DecoderState.field_f;

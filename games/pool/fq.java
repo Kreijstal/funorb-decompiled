@@ -283,7 +283,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
             }
           }
         } else {
-          id.a(-83, param3);
+          MouseWheelInput.a(-83, param3);
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);

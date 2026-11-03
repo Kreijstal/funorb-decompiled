@@ -118,7 +118,7 @@ final class e {
             if (var4 >= 0) {
               var1_int = var1_int + IterableDualLinkDeque.field_e;
               if (var4 != LabeledChildWidget.field_W.selectedIndex) {
-                stackIn_44_0 = bk.field_m;
+                stackIn_44_0 = TutorialStep.field_m;
               } else {
                 stackIn_44_0 = td.field_e;
               }
@@ -145,7 +145,7 @@ final class e {
         }
     }
 
-    final static boolean a(int param0, PoolMatchController param1) {
+    final static boolean handleChoiceButtons(int param0, PoolMatchController param1) {
         ShotRecord var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_13_0 = null;

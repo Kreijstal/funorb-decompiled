@@ -17,7 +17,7 @@ final class vm {
     private float field_c;
     private int field_l;
     static Sprite[] field_d;
-    private so field_h;
+    private SceneNode field_h;
     static String field_g;
 
     final void a(PolarTableScene param0, int param1) {
@@ -91,7 +91,7 @@ final class vm {
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_h.a(param0.field_q, param0.field_e, param0.field_F, (byte) -88, param0.field_u, param0.field_C);
+              this.field_h.bakeModels(param0.field_q, param0.field_e, param0.field_F, (byte) -88, param0.field_u, param0.field_C);
               this.field_i = (float)((double)this.field_i * 0.99);
               this.field_a = (float)((double)this.field_a * 0.99);
               this.field_c = (float)((double)this.field_c * 0.99);
@@ -213,7 +213,7 @@ final class vm {
         createWelcome = null;
     }
 
-    vm(so param0) {
+    vm(SceneNode param0) {
         int var2_int = 0;
         try {
           this.field_h = param0;

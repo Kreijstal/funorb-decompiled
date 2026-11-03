@@ -9,7 +9,7 @@ final class dr {
     static Sprite field_d;
     static String tutorialEightBallBreak;
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadFinalFrame(byte param0, ResourceArchive param1) {
         Sprite var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -50,7 +50,7 @@ final class dr {
         }
     }
 
-    final static void a(String param0, int param1, long param2, int param3, ScrollPane param4, String param5, int param6, UiComponent param7, int[] param8) {
+    final static void openPlayerContextMenu(String param0, int param1, long param2, int param3, ScrollPane param4, String param5, int param6, UiComponent param7, int[] param8) {
         try {
           WidgetStyleLayer.field_c = param4;
           if (param6 != 32540) {

@@ -74,7 +74,7 @@ final class dn extends IntrusiveNode {
         cl.field_c = null;
     }
 
-    final static int a(int param0, int param1, int param2, BallEvent param3) {
+    final static int drawBallEventDebug(int param0, int param1, int param2, BallEvent param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -90,11 +90,11 @@ final class dn extends IntrusiveNode {
           sa.field_h.d(param3.ballIndex + ": " + param3.describe((byte) 115), var4_int, var5, 16777215, 3355443);
           if (param3.field_i != null) {
             param2++;
-            param2 = dn.a(1 + param0, 30409, param2, param3.field_i);
+            param2 = dn.drawBallEventDebug(1 + param0, 30409, param2, param3.field_i);
           }
           if (param3.field_d != null) {
             param2++;
-            param2 = dn.a(param0 + 1, 30409, param2, param3.field_d);
+            param2 = dn.drawBallEventDebug(param0 + 1, 30409, param2, param3.field_d);
           }
           if (param1 == 30409) {
             stackIn_10_0 = param2;

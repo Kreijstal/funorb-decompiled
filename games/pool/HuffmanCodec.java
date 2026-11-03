@@ -184,7 +184,7 @@ final class HuffmanCodec {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          de.a(-100);
+          de.createDebugSliders(-100);
           var1_int = 4 + sa.field_h.maxDescent + sa.field_h.maxAscent;
           SoftwareRasterizer.fillRectangleAlpha(0, -var1_int + 376, 32 + aq.field_a.length * 32, var1_int + 112, 8421504, 127);
           var2 = 0;
@@ -277,7 +277,7 @@ final class HuffmanCodec {
           if (null != HighscoresScreen.field_L && (null != Pocket.field_j ||
             null != DebugTuningSlider.field_d ||
             w.field_j != null ||
-            null != op.field_a)) {
+            null != TextLayout.field_a)) {
             for (var9 = 0; dr.field_c > var9; var9++) {
               var10_int = 255 & HighscoresScreen.field_L.settings[var9];
               if (null != Pocket.field_j &&
@@ -296,9 +296,9 @@ final class HuffmanCodec {
                   var5_int = 1;
                 }
               }
-              if (op.field_a != null &&
-                op.field_a[var9] != null) {
-                var8 = var8 | op.field_a[var9][var10_int];
+              if (TextLayout.field_a != null &&
+                TextLayout.field_a[var9] != null) {
+                var8 = var8 | TextLayout.field_a[var9][var10_int];
               }
               if (null != w.field_j &&
                 null != w.field_j[var9]) {
@@ -612,9 +612,9 @@ final class HuffmanCodec {
                       var29 = 1;
                     }
                   }
-                  if (op.field_a != null &&
-                    op.field_a[var27_int] != null &&
-                    (op.field_a[var27_int][var28] & ~var12.field_Nb) != 0) {
+                  if (TextLayout.field_a != null &&
+                    TextLayout.field_a[var27_int] != null &&
+                    (TextLayout.field_a[var27_int][var28] & ~var12.field_Nb) != 0) {
                     var29 = 1;
                   }
                   if (var29 != 0) {

@@ -12,7 +12,7 @@ interface io {
 
     public abstract int textLeft(int param0, UiWidget param1, int param2);
 
-    public abstract op ensureTextLayout(int param0, UiWidget param1);
+    public abstract TextLayout ensureTextLayout(int param0, UiWidget param1);
 
     public abstract int preferredWidth(UiWidget param0, int param1);
 

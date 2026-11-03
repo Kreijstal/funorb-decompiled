@@ -148,7 +148,7 @@ final class NodeHashTableIterator implements Iterator {
         Sprite var30Lifetime1Lifetime4;
         Sprite var30Lifetime1Lifetime5;
         try {
-          dr.a((String) null, param2, 0L, -1, (ScrollPane) null, (String) null, 32540, param1, (int[]) null);
+          dr.openPlayerContextMenu((String) null, param2, 0L, -1, (ScrollPane) null, (String) null, 32540, param1, (int[]) null);
           if (0 == param2) {
             var11 = PlasmaBallSkin.field_m;
             var12 = ThemeSelectScreen.field_M[0];
@@ -186,7 +186,7 @@ final class NodeHashTableIterator implements Iterator {
             var27 = ThemeSelectScreen.field_M[2];
             var30Lifetime1Lifetime4 = var27;
             var30Lifetime1Lifetime5 = var27;
-            var28 = op.muChatGameHide;
+            var28 = TextLayout.muChatGameHide;
             var26.field_n.addIconAction(13, (byte) 82, var27, var28);
           }
           if (param2 == 2) {

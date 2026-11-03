@@ -12,7 +12,7 @@ final class tq extends IntrusiveNode {
     static int field_t;
     static UiComponent field_m;
     static String ratedMembersonly;
-    static so field_o;
+    static SceneNode field_o;
     int[] field_l;
     static int field_q;
 

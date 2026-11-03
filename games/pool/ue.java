@@ -66,7 +66,7 @@ final class ue {
             } else {
               nn.field_d = false;
             }
-            id.field_b = DebugTuningSlider.field_i;
+            MouseWheelInput.field_b = DebugTuningSlider.field_i;
             MatchingTextValidator.field_n = DebouncedValidationProvider.field_g;
           }
           MessageScreen.field_I = param1;
@@ -74,7 +74,7 @@ final class ue {
             PauseMenuScreen.field_J < wp.field_c &&
             LoginPayload.field_c) {
             MatchingTextValidator.field_n = DebouncedValidationProvider.field_g;
-            id.field_b = DebugTuningSlider.field_i;
+            MouseWheelInput.field_b = DebugTuningSlider.field_i;
             PauseMenuScreen.field_J = 0;
           }
           if (nn.field_d &&

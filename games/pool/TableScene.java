@@ -253,7 +253,7 @@ abstract class TableScene {
         if (param0 != 0) {
           this.floorColor(-49);
         }
-        id.field_c.field_g = true;
+        MouseWheelInput.field_c.field_g = true;
         if (null != AccountContentDialog.field_ub) {
           AccountContentDialog.field_ub.markBallTransformsDirty(0);
         }
@@ -1144,7 +1144,7 @@ abstract class TableScene {
             var7 = LinkButtonPainter.field_f[var6_int];
             if (var7 >= param3.length) {
               if (param4) {
-                w.field_a[var7].a(param0, -32215);
+                w.field_a[var7].draw(param0, -32215);
               }
             } else {
               var8 = param3[var7];
@@ -1156,7 +1156,7 @@ abstract class TableScene {
               }
               if (stackIn_9_0 != (param2 ? 1 : 0) &&
                 !var8.field_o) {
-                w.field_a[var7].a(param0, -32215);
+                w.field_a[var7].draw(param0, -32215);
               }
             }
           }
@@ -1204,12 +1204,12 @@ abstract class TableScene {
             }
             w.field_a[var4_int] = (eb) ((Object) DropTargetWidget.field_O[var4_int]);
             LinkButtonPainter.field_f[var4_int] = var4_int;
-            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].b(param1, -111);
+            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].viewDepth(param1, -111);
           }
           for (var5 = 0; var5 < QuickChatPhraseRegistry.field_g; var5++) {
             w.field_a[var4_int] = (eb) ((Object) ArchiveLoadSequence.field_e[var5]);
             LinkButtonPainter.field_f[var4_int] = var4_int;
-            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].b(param1, -114);
+            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].viewDepth(param1, -114);
             var4_int++;
           }
           th.a(0, -30916, GrowableIntList.field_d, LinkButtonPainter.field_f, param2.length - (-QuickChatPhraseRegistry.field_g + 1));

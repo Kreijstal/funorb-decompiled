@@ -12,11 +12,11 @@ final class a {
         youCannotJoinInProgress = null;
         if (param0 != 0) {
           MeshBuilder var2 = (MeshBuilder) null;
-          a.a(true, (MeshBuilder) null);
+          a.mirrorVertically(true, (MeshBuilder) null);
         }
     }
 
-    final static MeshBuilder a(boolean param0, MeshBuilder param1) {
+    final static MeshBuilder mirrorVertically(boolean param0, MeshBuilder param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -33,7 +33,7 @@ final class a {
           }
           if (!param0) {
             var4 = (String) null;
-            a.a((String) null, false, false, -0.28095385432243347f);
+            a.showLoadingProgress((String) null, false, false, -0.28095385432243347f);
           }
           ImageProducerRasterBuffer.a(param1, (byte) 38);
           param1.clearCaches();
@@ -53,7 +53,7 @@ final class a {
         }
     }
 
-    final static String a(byte[] param0, int param1) {
+    final static String decodeBytesToString(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
@@ -79,7 +79,7 @@ final class a {
         }
     }
 
-    final static void a(String param0, boolean param1, boolean param2, float param3) {
+    final static void showLoadingProgress(String param0, boolean param1, boolean param2, float param3) {
         try {
           if (ScrollPane.field_Nb == null) {
             ScrollPane.field_Nb = new ProgressDialog(TabbedPane.field_Ub, ClientException.field_d);

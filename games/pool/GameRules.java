@@ -198,7 +198,7 @@ abstract class GameRules {
             if (param2 >= 100 &&
               param2 <= 105) {
               var4 = args;
-              gf.a(92, var4);
+              gf.setNameSuggestions(92, var4);
               PoolMatchController.field_gb = PauseMenuScreen.a(args, 57);
               return;
             }
@@ -207,7 +207,7 @@ abstract class GameRules {
             stackIn_6_0 = !(ButtonPainter.field_b >= 13);
             PoolMatchController.field_gb = ta.a(stackIn_6_0, -30914);
             var5 = (String[]) null;
-            gf.a(108, (String[]) null);
+            gf.setNameSuggestions(108, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

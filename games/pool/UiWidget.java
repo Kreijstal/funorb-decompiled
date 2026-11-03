@@ -16,7 +16,7 @@ class UiWidget extends IntrusiveNode {
     static int field_o;
     String widgetText;
     String hoverText;
-    op field_x;
+    TextLayout field_x;
     static java.math.BigInteger field_q;
     int pressedPointerButton;
     int widgetX;
@@ -761,7 +761,7 @@ class UiWidget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        VerticalScrollbar.field_Sb.drawTooltip((byte) -52, MatchingTextValidator.field_n, id.field_b, var5);
+        VerticalScrollbar.field_Sb.drawTooltip((byte) -52, MatchingTextValidator.field_n, MouseWheelInput.field_b, var5);
     }
 
     void renderWidget(int param0, byte param1, int param2, int param3) {

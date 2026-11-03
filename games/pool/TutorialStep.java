@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends IntrusiveNode {
+final class TutorialStep extends IntrusiveNode {
     int field_s;
     private int field_n;
     private Sprite field_z;
@@ -18,7 +18,7 @@ final class bk extends IntrusiveNode {
     private int field_y;
     static int field_v;
 
-    final int c(byte param0) {
+    final int getHeight(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -37,16 +37,16 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
+    final void buildOutline(int param0) {
         try {
-          this.field_q = ag.a(-PoolGameModel.field_k.localY + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.localX, 15395);
+          this.field_q = ag.findHotspotRegion(-PoolGameModel.field_k.localY + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.localX, 15395);
           int var2_int = 25 % ((param0 - 39) / 62);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bk.A(" + param0 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawOutline(int param0, int param1, int param2) {
         try {
           this.field_q.drawOutline(param0, PoolGameModel.field_k.localX, param1, -1, true, PoolGameModel.field_k.localY);
           if (param2 != 9750) {
@@ -57,7 +57,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final void a(boolean param0) {
+    final void draw(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -73,7 +73,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final void a(TutorialController param0, int param1) {
+    final void attachToTutorial(TutorialController param0, int param1) {
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         String stackIn_55_2 = null;
@@ -85,7 +85,7 @@ final class bk extends IntrusiveNode {
           if (param1 <= 36) {
             this.field_l = 75;
           }
-          this.field_y = op.field_f;
+          this.field_y = TextLayout.field_f;
           if (this.field_p.indexOf("<img=") == -1) {
             this.field_y = sa.field_h.baselineHeight;
           }
@@ -145,7 +145,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean advanceProgress(int param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_11_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -165,7 +165,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final static boolean a(Ball[] param0, byte param1) {
+    final static boolean areAllBallsStopped(Ball[] param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_15_0 = 0;
@@ -215,7 +215,7 @@ final class bk extends IntrusiveNode {
         RuntimeException var1 = null;
         try {
           if (param0 != -5917) {
-            bk.releaseStatics(-18);
+            TutorialStep.releaseStatics(-18);
           }
           field_w = null;
           field_m = null;
@@ -228,7 +228,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    bk(String param0, int param1, int param2) {
+    TutorialStep(String param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -259,7 +259,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    bk(String param0, int param1, int param2, int param3) {
+    TutorialStep(String param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -290,10 +290,10 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    bk(String param0, int param1, int param2, IntrusiveDeque param3) {
+    TutorialStep(String param0, int param1, int param2, IntrusiveDeque param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
-        bk var6 = null;
+        TutorialStep var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -313,10 +313,10 @@ final class bk extends IntrusiveNode {
           this.field_p = param0;
           this.field_o = ~this.field_s;
           var5 = new IntrusiveDequeCursor(param3);
-          var6 = (bk) (var5.last((byte) -92));
+          var6 = (TutorialStep) (var5.last((byte) -92));
           while (null != var6) {
             this.field_o = this.field_o & ~var6.field_s;
-            var6 = (bk) (var5.previous(-114));
+            var6 = (TutorialStep) (var5.previous(-114));
             if (var7 != 0) {
               return;
             }

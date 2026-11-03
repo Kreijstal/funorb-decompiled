@@ -8,7 +8,7 @@ final class ff {
     static Sprite[][] field_f;
     static int[] field_h;
     static Sprite[] field_e;
-    static so field_d;
+    static SceneNode field_d;
     static nl field_b;
     static String escCancelthisline;
     static boolean field_c;

@@ -293,7 +293,7 @@ final class SoundCache {
           WidgetStyleLayer.loadSprite("", (byte) 35, "flash_foul", param1);
           WidgetStyleLayer.loadSprite("", (byte) 91, "hud_hbar_inner", param1);
           DebouncedValidationProvider.field_b = gn.a(NameEntryPopup.a(0, "", param1, "hud_hbar_frame"), (byte) -29);
-          id.field_a = gn.a(NameEntryPopup.a(0, "", param1, "hud_vbar_frame"), (byte) -29);
+          MouseWheelInput.field_a = gn.a(NameEntryPopup.a(0, "", param1, "hud_vbar_frame"), (byte) -29);
           DateInputWidget.field_Q = NameEntryPopup.a(0, "", param1, "top_bar_frame");
           RasterBuffer.field_d = WidgetStyleLayer.loadSprite("", (byte) 73, "icon_break", param1);
           il.field_a = WidgetStyleLayer.loadSprite("", (byte) 73, "icon_ball_in_hand", param1);
@@ -312,7 +312,7 @@ final class SoundCache {
           qg.field_b = WidgetStyleLayer.loadSprite("", (byte) 52, "tutorial_box_progress", param1);
           AccountCreationForm.field_Z = ArchiveRequest.a(param1, "", -24155, "controls");
           bi.field_d = new int[AccountCreationForm.field_Z.length];
-          op.field_f = 0;
+          TextLayout.field_f = 0;
           for (var4 = 0; AccountCreationForm.field_Z.length > var4; var4++) {
             var21 = AccountCreationForm.field_Z[var4];
             var21.trimX = 0;
@@ -320,8 +320,8 @@ final class SoundCache {
             var21.fullWidth = var21.width;
             var21.trimY = 0;
             bi.field_d[var4] = var21.fullHeight + sa.field_h.maxAscent - sa.field_h.maxDescent >> 1;
-            if (op.field_f < var21.height) {
-              op.field_f = var21.height;
+            if (TextLayout.field_f < var21.height) {
+              TextLayout.field_f = var21.height;
             }
           }
           bc.b((byte) 17);

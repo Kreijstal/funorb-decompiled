@@ -311,7 +311,7 @@ final class AchievementsScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 30377) {
-            stackIn_4_0 = ScrollPaneWithFooter.a(param0, true, true, param1);
+            stackIn_4_0 = ScrollPaneWithFooter.parseIntWithRadix(param0, true, true, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -106;
@@ -345,7 +345,7 @@ final class AchievementsScreen extends MenuScreen {
         if (ScrollPaneWithFooter.field_Lb != null &&
           null != vm.field_g &&
           -1 != AlignedIconLabel.field_Qb) {
-          this.field_G = ag.a(-(70 - IterableDualLinkDeque.field_b >> 1) + DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, param0 ^ -15396);
+          this.field_G = ag.findHotspotRegion(-(70 - IterableDualLinkDeque.field_b >> 1) + DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, param0 ^ -15396);
           LongAndTextLoginPayload.field_l = 12;
           SocialListEntry.field_Vb = 12;
           stackIn_12_0 = 0;

@@ -43,7 +43,7 @@ final class na {
           } else {
             stackIn_3_3 = 0;
           }
-          dr.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, (ScrollPane) null, param0.field_q, param1 ^ 32614, param0.field_u, (int[]) null);
+          dr.openPlayerContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, (ScrollPane) null, param0.field_q, param1 ^ 32614, param0.field_u, (int[]) null);
           if (param0.field_p == 0 &&
             !tq.c((byte) -75) &&
             HighscoresScreen.field_L == null &&

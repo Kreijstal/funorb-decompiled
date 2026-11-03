@@ -10,7 +10,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     static int field_o;
     static int field_s;
     static Sprite field_p;
-    static so field_y;
+    static SceneNode field_y;
     static String gameoptInviteplayersOrTrychanging1;
     static int field_x;
     private MatchingTextValidator emailMatchValidator;

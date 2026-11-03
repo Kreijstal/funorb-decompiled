@@ -537,7 +537,7 @@ final class JaggrabDownloader implements Runnable {
           var5_int = TextHotspotRegion.a(3 * (-param2 + param1), 0);
           var6 = param2 * 3;
           var8 = -10 + var5_int;
-          ar.a((byte) 48);
+          GlowSprite.a((byte) 48);
           if (0 < param4.field_I &&
             param4.field_K != null) {
             AgeValidator.h(0);

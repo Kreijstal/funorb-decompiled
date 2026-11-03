@@ -43,7 +43,7 @@ final class co extends DateInputWidget {
         }
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean containsForwardOrReversed(String param0, byte param1, String param2) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -248,12 +248,12 @@ final class co extends DateInputWidget {
         param3 = param3 + this.widgetY;
         param2 = param2 + this.widgetX;
         int var5 = 30 % ((-42 - param1) / 53);
-        this.a(param2, param3, 75, this.field_Z, TextureCache.day);
-        this.a(param2, param3, 114, this.field_bb, pc.month);
-        this.a(param2, param3, 91, this.field_eb, IndexedSpriteState.year);
+        this.drawCenteredLabel(param2, param3, 75, this.field_Z, TextureCache.day);
+        this.drawCenteredLabel(param2, param3, 114, this.field_bb, pc.month);
+        this.drawCenteredLabel(param2, param3, 91, this.field_eb, IndexedSpriteState.year);
     }
 
-    private final void a(int param0, int param1, int param2, UiWidget param3, String param4) {
+    private final void drawCenteredLabel(int param0, int param1, int param2, UiWidget param3, String param4) {
         if (param2 <= 65) {
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BitmapTextLayout extends op {
+final class BitmapTextLayout extends TextLayout {
     private String field_t;
     private int field_n;
     static long field_m;
@@ -26,7 +26,7 @@ final class BitmapTextLayout extends op {
         RuntimeException decompiledCaughtException = null;
         try {
           Pool.field_I = param3;
-          bk.field_v = param2;
+          TutorialStep.field_v = param2;
           if (param0 < 106) {
             return;
           }

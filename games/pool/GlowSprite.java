@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ar implements eb {
+final class GlowSprite implements eb {
     int field_c;
     int field_e;
     int field_a;
@@ -11,7 +11,7 @@ final class ar implements eb {
     int field_d;
     int field_h;
 
-    public final void a(int[] param0, int param1) {
+    public final void draw(int[] param0, int param1) {
         if (param1 != -32215) {
           return;
         }
@@ -22,7 +22,7 @@ final class ar implements eb {
         }
     }
 
-    public final int b(int[] param0, int param1) {
+    public final int viewDepth(int[] param0, int param1) {
         RuntimeException var3 = null;
         int[] var4 = null;
         int stackIn_3_0 = 0;
@@ -33,7 +33,7 @@ final class ar implements eb {
         try {
           if (param1 >= -27) {
             var4 = (int[]) null;
-            this.b((int[]) null, 59);
+            this.viewDepth((int[]) null, 59);
           }
           stackIn_3_0 = param0[9] * this.field_c + (this.field_e * param0[10] + this.field_a * param0[11]);
           return stackIn_3_0;
@@ -60,12 +60,12 @@ final class ar implements eb {
         field_g = null;
     }
 
-    final static void a(int param0, UiComponent param1) {
+    final static void applyButtonStyle(int param0, UiComponent param1) {
         try {
           param1.capturedFrameSprites = ln.field_s;
           param1.textColor = 16777215;
           if (param0 != 29022) {
-            ar.a((byte) 26);
+            GlowSprite.a((byte) 26);
           }
           param1.activeFrameSprites = ln.field_s;
           param1.horizontalAlignment = 1;

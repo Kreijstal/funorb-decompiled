@@ -651,18 +651,18 @@ final class PlasmaTableScene extends TableScene {
             this.floorTexture(2);
           }
           if (param2.canControlCue(-38)) {
-            if (id.field_c.field_g) {
-              param2.gameModel.fillCueTransform(id.field_c.field_l, param2.cueAim.polarAngle, (byte) 47, param2.cueAim.azimuth, param2.cueAim.field_e, param2.cueAim.field_d);
-              id.field_c.field_g = false;
+            if (MouseWheelInput.field_c.field_g) {
+              param2.gameModel.fillCueTransform(MouseWheelInput.field_c.field_l, param2.cueAim.polarAngle, (byte) 47, param2.cueAim.azimuth, param2.cueAim.field_e, param2.cueAim.field_d);
+              MouseWheelInput.field_c.field_g = false;
             }
             var4_int = param2.cuePullbackDistance;
-            this.field_R[0] = (id.field_c.field_l[0] >> 13) + (var4_int * id.field_c.field_l[9] >> 13);
-            this.field_X[0] = (id.field_c.field_l[10] * var4_int >> 13) + (id.field_c.field_l[1] >> 13);
-            this.field_L[0] = (id.field_c.field_l[11] * var4_int >> 13) + (id.field_c.field_l[2] >> 13);
+            this.field_R[0] = (MouseWheelInput.field_c.field_l[0] >> 13) + (var4_int * MouseWheelInput.field_c.field_l[9] >> 13);
+            this.field_X[0] = (MouseWheelInput.field_c.field_l[10] * var4_int >> 13) + (MouseWheelInput.field_c.field_l[1] >> 13);
+            this.field_L[0] = (MouseWheelInput.field_c.field_l[11] * var4_int >> 13) + (MouseWheelInput.field_c.field_l[2] >> 13);
             this.field_M[0] = 1;
-            this.field_R[1] = ((var4_int + 456) * id.field_c.field_l[9] >> 13) + (id.field_c.field_l[0] >> 13);
-            this.field_X[1] = ((456 + var4_int) * id.field_c.field_l[10] >> 13) + (id.field_c.field_l[1] >> 13);
-            this.field_L[1] = (id.field_c.field_l[11] * (456 + var4_int) >> 13) + (id.field_c.field_l[2] >> 13);
+            this.field_R[1] = ((var4_int + 456) * MouseWheelInput.field_c.field_l[9] >> 13) + (MouseWheelInput.field_c.field_l[0] >> 13);
+            this.field_X[1] = ((456 + var4_int) * MouseWheelInput.field_c.field_l[10] >> 13) + (MouseWheelInput.field_c.field_l[1] >> 13);
+            this.field_L[1] = (MouseWheelInput.field_c.field_l[11] * (456 + var4_int) >> 13) + (MouseWheelInput.field_c.field_l[2] >> 13);
             this.field_M[1] = 3;
             for (var5_int = 0; this.field_R.length > var5_int; var5_int++) {
               var6 = this.field_R[var5_int] - param1[0];

@@ -132,7 +132,7 @@ final class da {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeMenuLabels(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
         int var2Lifetime1;
@@ -191,7 +191,7 @@ final class da {
           TranslatedUiText.field_f[37] = s.gameoptlabels[2];
           TranslatedUiText.field_f[57] = cb.themeNames[3];
           TranslatedUiText.field_f[58] = cb.themeNames[4];
-          TranslatedUiText.field_f[62] = id.menuOptionReturnToTutorial;
+          TranslatedUiText.field_f[62] = MouseWheelInput.menuOptionReturnToTutorial;
           TranslatedUiText.field_f[61] = bc.menuOptionEndTutorial;
           for (var2 = 0; cb.themeNames.length > var2; var2++) {
             TranslatedUiText.field_f[29 + var2] = cb.themeNames[var2];
@@ -228,7 +228,7 @@ final class da {
     public static void b(byte param0) {
         muXEnteredOtherGame = null;
         if (param0 != 108) {
-          da.a(72);
+          da.initializeMenuLabels(72);
         }
     }
 

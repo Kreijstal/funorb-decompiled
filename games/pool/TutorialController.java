@@ -6,8 +6,8 @@ import java.util.*;
 final class TutorialController {
     static String field_m;
     static String findOpponentsPlural;
-    bk currentStep;
-    private bk previousStep;
+    TutorialStep currentStep;
+    private TutorialStep previousStep;
     IntrusiveDeque field_d;
     static int field_i;
     int field_n;
@@ -31,7 +31,7 @@ final class TutorialController {
         SoftwareRasterizer.clear();
         this.drawStepProgress((byte) -109);
         PoolGameModel.field_k.drawRoot((byte) -79, false);
-        this.currentStep.a(false);
+        this.currentStep.draw(false);
         PoolGameModel.field_k.localX = var3;
         PoolGameModel.field_k.localY = var4;
         OpacityWidget.field_P.bindAsRenderTarget(15100);
@@ -156,8 +156,8 @@ final class TutorialController {
           qa.field_v.updateRoot(true, false);
         }
         if (ThreeSliceButtonPainter.field_s >= 0) {
-          var2 = this.previousStep.c((byte) -111);
-          var3 = this.currentStep.c((byte) -122);
+          var2 = this.previousStep.getHeight((byte) -111);
+          var3 = this.currentStep.getHeight((byte) -122);
           PoolGameModel.field_k.height = (var2 * (25 - ThreeSliceButtonPainter.field_s) + ThreeSliceButtonPainter.field_s * var3) / 25;
           PoolGameModel.field_k.localY = -PoolGameModel.field_k.height + SoftwareRasterizer.height - 5;
           this.layoutButtons(1);
@@ -178,7 +178,7 @@ final class TutorialController {
         if (!(oj.field_q < 0) ||
           TranslatedUiText.field_e) {
           oj.field_q = oj.field_q + 1;
-          nj.field_c = hc.a(2047, oj.field_q * 2048 / 25) + 163840 >> 10;
+          nj.field_c = hc.cosine(2047, oj.field_q * 2048 / 25) + 163840 >> 10;
           if (oj.field_q >= 25) {
             if (TranslatedUiText.field_e) {
               TranslatedUiText.field_e = false;
@@ -223,11 +223,11 @@ final class TutorialController {
             PoolGameModel.field_k.localY = PoolGameModel.field_k.localY - 240;
             NetworkGameClient.field_s.bindAsRenderTarget();
             SoftwareRasterizer.clear();
-            this.previousStep.a(false);
+            this.previousStep.draw(false);
             NanoTickClock.field_r.bindAsRenderTarget();
             SoftwareRasterizer.clear();
             this.drawStepProgress((byte) -109);
-            this.currentStep.a(false);
+            this.currentStep.draw(false);
             var4 = -5 + (-qa.field_v.height + (PoolGameModel.field_k.height + PoolGameModel.field_k.localY));
             var5 = PoolGameModel.field_k.localY;
             var6 = PoolGameModel.field_k.localX + 5;
@@ -269,7 +269,7 @@ final class TutorialController {
               this.drawStepProgress((byte) -109);
               PoolGameModel.field_k.drawRoot((byte) -79, false);
               qa.field_v.drawRoot((byte) -79, false);
-              this.currentStep.a(false);
+              this.currentStep.draw(false);
             } else {
               this.renderPanel(10, 255 * TextPairLoginPayload.field_i / 25);
               qa.field_v.drawRoot((byte) -79, false);
@@ -297,7 +297,7 @@ final class TutorialController {
             ThreeSliceButtonPainter.field_s = 0;
             this.previousStep = this.currentStep;
           }
-          this.setCurrentStep((bk) (this.currentStep.previous), param0 ^ 254);
+          this.setCurrentStep((TutorialStep) (this.currentStep.previous), param0 ^ 254);
           this.g(-120);
         } else {
           if (null != this.field_j) {
@@ -316,7 +316,7 @@ final class TutorialController {
         return var1;
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean containsForwardOrReversed(String param0, String param1, int param2) {
         String var3 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
@@ -562,7 +562,7 @@ final class TutorialController {
         int var4;
         int var5;
         int var6;
-        bk var7;
+        TutorialStep var7;
         int var8;
         int var9;
         int var10;
@@ -586,7 +586,7 @@ final class TutorialController {
         var4 = PoolGameModel.field_k.localX + qg.field_b.field_G;
         var5 = PoolGameModel.field_k.height + (PoolGameModel.field_k.localY + (-PoolGameModel.field_k.frameSprites[7].field_A - PoolGameModel.field_k.frameSprites[4].field_A) + (-PoolGameModel.field_k.frameSprites[1].field_A + qg.field_b.field_B));
         var6 = var5 + qg.field_b.field_A;
-        var7 = (bk) (var23.last((byte) -92));
+        var7 = (TutorialStep) (var23.last((byte) -92));
         while (this.field_d.field_e != var7.previous) {
           var8 = (var3 + 1) * (-qg.field_b.field_G + qg.field_b.field_w) / (this.field_k - 1) + qg.field_b.field_G + PoolGameModel.field_k.localX;
           var9 = var4;
@@ -658,7 +658,7 @@ final class TutorialController {
           }
           var3++;
           var4 = var8;
-          var7 = (bk) (var23.previous(param0 ^ 61));
+          var7 = (TutorialStep) (var23.previous(param0 ^ 61));
         }
         if (param0 != -109) {
           this.d(-29);
@@ -686,7 +686,7 @@ final class TutorialController {
 
     final static int a(int param0, int param1, int param2) {
         if (param2 == param0 &&
-          bo.a(param1, (byte) 43)) {
+          bo.isLeapYear(param1, (byte) 43)) {
           return 29;
         }
         return TickClock.field_d[param0];
@@ -694,14 +694,14 @@ final class TutorialController {
 
     final void restart(int param0) {
         IntrusiveDequeCursor var4 = new IntrusiveDequeCursor(this.field_d);
-        bk var3 = (bk) (var4.last((byte) -92));
+        TutorialStep var3 = (TutorialStep) (var4.last((byte) -92));
         while (var3 != null) {
           var3.field_u = 0;
-          var3 = (bk) (var4.previous(param0 - 98));
+          var3 = (TutorialStep) (var4.previous(param0 - 98));
         }
-        this.setCurrentStep((bk) (this.field_d.last((byte) 109)), 1);
+        this.setCurrentStep((TutorialStep) (this.field_d.last((byte) 109)), 1);
         this.g(-94);
-        PoolGameModel.field_k.height = null == this.currentStep ? 10 : this.currentStep.c((byte) -112);
+        PoolGameModel.field_k.height = null == this.currentStep ? 10 : this.currentStep.getHeight((byte) -112);
         PoolGameModel.field_k.localY = -5 - PoolGameModel.field_k.height + SoftwareRasterizer.height;
         this.layoutButtons(1);
         this.field_a.rerackBalls(0);
@@ -720,7 +720,7 @@ final class TutorialController {
         }
         int var1 = ee.b((byte) -62);
         int var2 = CheckboxPainter.a(23467);
-        Pool.field_I.draw(var1 + (bk.field_v << 1), -WhirlpoolHasher.field_b + PasswordValidator.field_n, -6316, -bk.field_v + PlasmaTableScene.field_Z, (WhirlpoolHasher.field_b << 1) + var2);
+        Pool.field_I.draw(var1 + (TutorialStep.field_v << 1), -WhirlpoolHasher.field_b + PasswordValidator.field_n, -6316, -TutorialStep.field_v + PlasmaTableScene.field_Z, (WhirlpoolHasher.field_b << 1) + var2);
         e.a(param0 ^ 29411);
     }
 
@@ -886,7 +886,7 @@ final class TutorialController {
           this.layoutButtons(20);
         }
         if (1 << param1 == this.currentStep.field_s) {
-          if (!this.currentStep.a(param0, (byte) 127)) {
+          if (!this.currentStep.advanceProgress(param0, (byte) 127)) {
             TranslatedUiText.field_e = true;
             this.g(20);
           } else {
@@ -915,7 +915,7 @@ final class TutorialController {
         if (!this.field_b) {
           this.field_b = true;
           if (null != this.currentStep) {
-            this.currentStep.a(this, 74);
+            this.currentStep.attachToTutorial(this, 74);
           }
           qa.field_v.capturedSprite = vm.field_d[14];
           qa.field_v.sprite = vm.field_d[6];
@@ -930,7 +930,7 @@ final class TutorialController {
         int var2 = -81 % ((-32 - param0) / 38);
     }
 
-    private final void setCurrentStep(bk param0, int param1) {
+    private final void setCurrentStep(TutorialStep param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -942,7 +942,7 @@ final class TutorialController {
           }
           this.currentStep = param0;
           if (this.currentStep != null) {
-            this.currentStep.a(this, 94);
+            this.currentStep.attachToTutorial(this, 94);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -969,7 +969,7 @@ final class TutorialController {
             this.previousStep = this.currentStep;
             ThreeSliceButtonPainter.field_s = 0;
           }
-          this.setCurrentStep((bk) (this.currentStep.next), 1);
+          this.setCurrentStep((TutorialStep) (this.currentStep.next), 1);
           this.g(-109);
         }
     }

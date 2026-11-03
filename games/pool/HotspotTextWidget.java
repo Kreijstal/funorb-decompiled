@@ -111,7 +111,7 @@ class HotspotTextWidget extends ButtonWidget {
         int var2;
         int var3;
         io var4;
-        op var5;
+        TextLayout var5;
         int var6;
         String var7;
         int var8;
@@ -137,15 +137,15 @@ class HotspotTextWidget extends ButtonWidget {
           var7 = this.widgetText.substring(var6 + 9, var8);
           var8Lifetime1 = Integer.parseInt(var7);
           var3 = this.widgetText.indexOf("</hotspot>", var6);
-          var9 = var5.a(var6, 0);
-          var10 = var5.a(var3, 0);
+          var9 = var5.lineOfCaret(var6, 0);
+          var10 = var5.lineOfCaret(var3, 0);
           var11 = null;
           for (var12 = var9; var12 <= var10; var12++) {
             var13 = var5.field_b[var12];
             if (var9 != var12) {
               stackIn_7_0 = var13.caretXs[0];
             } else {
-              stackIn_7_0 = var5.a(var6, (byte) -73);
+              stackIn_7_0 = var5.caretX(var6, (byte) -73);
             }
             var14 = stackIn_7_0;
             if (var10 != var12) {
@@ -155,7 +155,7 @@ class HotspotTextWidget extends ButtonWidget {
                 stackIn_12_0 = 0;
               }
             } else {
-              stackIn_12_0 = var5.a(var3, (byte) -104);
+              stackIn_12_0 = var5.caretX(var3, (byte) -104);
             }
             var15 = stackIn_12_0;
             var16 = new qa(var8Lifetime1, var14, var13.top, var15 - var14, Math.max(var4.lineHeight(-10492), var13.bottom - var13.top));

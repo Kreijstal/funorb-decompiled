@@ -213,7 +213,7 @@ final class ol {
           if (param1 != 1) {
             field_a = 96;
           }
-          stackIn_3_0 = op.a(16, param0, 97);
+          stackIn_3_0 = TextLayout.a(16, param0, 97);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

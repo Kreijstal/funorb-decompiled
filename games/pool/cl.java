@@ -17,7 +17,7 @@ final class cl {
     static String pleasewaitDotdotdot;
     static String memberslevelName;
 
-    final static boolean a(int param0, UiComponent param1) {
+    final static boolean isPointerInside(int param0, UiComponent param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -36,7 +36,7 @@ final class PlayerContextMenu {
             if (ol.field_e == 0) {
               this.field_n.addAction(IntKeyLookup.muChatGameFriendsOnly, 17130, 12);
             }
-            this.field_n.addAction(op.muChatGameHide, 17130, 13);
+            this.field_n.addAction(TextLayout.muChatGameHide, 17130, 13);
           }
           if (param0.field_p == 2) {
             if (ResourceArchive.field_e == 0) {

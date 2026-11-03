@@ -128,7 +128,7 @@ final class dk {
           this.field_i = param2;
           this.field_e = param0;
           if (param1 != 78) {
-            dk.a((byte) -28, (String) null, (ResourceArchive) null, (String) null, (String) null);
+            dk.formatProgressLabel((byte) -28, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.G(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -152,7 +152,7 @@ final class dk {
         var10 = Pool.field_O;
         try {
           if (param0 != 1) {
-            dk.a((byte) -62, (String) null, (ResourceArchive) null, (String) null, (String) null);
+            dk.formatProgressLabel((byte) -62, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
           var1 = null;
           var2 = null;
@@ -293,7 +293,7 @@ final class dk {
         }
     }
 
-    final static String a(byte param0, String param1, ResourceArchive param2, String param3, String param4) {
+    final static String formatProgressLabel(byte param0, String param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
@@ -358,7 +358,7 @@ final class dk {
         Sprite var2Lifetime1;
         try {
           if (param1 != 93) {
-            dk.a((byte) 91, (String) null, (ResourceArchive) null, (String) null, (String) null);
+            dk.formatProgressLabel((byte) 91, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
           var2 = param0.sprite;
           var2.field_B = -var2.field_A + param0.height >> 1;

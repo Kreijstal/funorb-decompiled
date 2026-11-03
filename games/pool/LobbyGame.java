@@ -127,7 +127,7 @@ final class LobbyGame extends UiComponent {
             } else {
               ClientException.field_d = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var2)}, -1, sa.ticketingXunread);
             }
-            ClientException.field_d = aq.joinTextParts(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) CacheEntry.ticketingGotowebsite)});
+            ClientException.field_d = aq.joinCharSequences(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) CacheEntry.ticketingGotowebsite)});
           }
           d.field_d.dismissDialog(17);
           DebugTuningSlider.d((byte) -126);

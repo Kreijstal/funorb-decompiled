@@ -53,7 +53,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (op.field_e != null) {
+          if (TextLayout.field_e != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -140,21 +140,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (null == op.field_e) {
+            if (null == TextLayout.field_e) {
               if (null == TriangleMesh.field_t) {
                 var2 = ModernTableScene.field_ib;
                 if (var4 != 0) {
                   var2 = TriangleMesh.field_t;
-                  var2 = op.field_e;
+                  var2 = TextLayout.field_e;
                 }
               } else {
                 var2 = TriangleMesh.field_t;
                 if (var4 != 0) {
-                  var2 = op.field_e;
+                  var2 = TextLayout.field_e;
                 }
               }
             } else {
-              var2 = op.field_e;
+              var2 = TextLayout.field_e;
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
@@ -162,8 +162,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
           TimeTrialSelectScreen.field_K.setSize(ml.field_d, ArchiveIndex.field_c);
           TimeTrialSelectScreen.field_K.setVisible(true);
-          if (op.field_e == var2) {
-            var3 = op.field_e.getInsets();
+          if (TextLayout.field_e == var2) {
+            var3 = TextLayout.field_e.getInsets();
             TimeTrialSelectScreen.field_K.setLocation(var3.left + cl.field_e, UsernameAvailabilityValidator.field_v + var3.top);
             if (var4 != 0) {
               TimeTrialSelectScreen.field_K.setLocation(cl.field_e, UsernameAvailabilityValidator.field_v);
@@ -225,7 +225,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (op.field_e != null) {
+          if (TextLayout.field_e != null) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -360,9 +360,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             UiWidget.field_o = UiWidget.field_o - 50;
             TimeTrialSelectScreen.field_K.setSize(ml.field_d, ArchiveIndex.field_c);
             TimeTrialSelectScreen.field_K.setVisible(true);
-            if (null != op.field_e &&
+            if (null != TextLayout.field_e &&
               RasterBuffer.field_l == null) {
-              var6 = op.field_e.getInsets();
+              var6 = TextLayout.field_e.getInsets();
               TimeTrialSelectScreen.field_K.setLocation(var6.left + cl.field_e, var6.top + UsernameAvailabilityValidator.field_v);
               if (Pool.field_O != 0) {
                 TimeTrialSelectScreen.field_K.setLocation(cl.field_e, UsernameAvailabilityValidator.field_v);
@@ -567,7 +567,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 lo.detectMaxMemoryMb(-19);
                 this.recreateCanvas((byte) 55);
-                OpacityWidget.field_P = id.createRasterBuffer(ml.field_d, ArchiveIndex.field_c, -44, (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
+                OpacityWidget.field_P = MouseWheelInput.createRasterBuffer(ml.field_d, ArchiveIndex.field_c, -44, (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
                 this.initializeGame((byte) -46);
                 MessageScreen.field_J = SocketArchiveNetworkClient.createTickClock(0);
                 do {
@@ -680,7 +680,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.releaseAllStatics((byte) -28);
-          if (null != op.field_e) {
+          if (null != TextLayout.field_e) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -708,7 +708,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 <= 56) {
             field_c = 38;
           }
-          stackIn_4_0 = ScrollPaneWithFooter.a(10, true, true, param1);
+          stackIn_4_0 = ScrollPaneWithFooter.parseIntWithRadix(10, true, true, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -858,7 +858,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (op.field_e != null) {
+        if (TextLayout.field_e != null) {
           return null;
         }
         if (null != TriangleMesh.field_t &&
@@ -910,7 +910,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (op.field_e != null) {
+          if (TextLayout.field_e != null) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }

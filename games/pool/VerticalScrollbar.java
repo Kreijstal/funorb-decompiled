@@ -407,9 +407,9 @@ final class VerticalScrollbar extends UiComponent {
     final static void a(int param0, boolean param1) {
         if (param0 == 27194) {
           na.field_e = !param1 ? new vn(Camera.muChatGame, cl.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
-          so.field_k = new UiComponent(0L, (UiComponent) null);
-          so.field_k.addChild(64, na.field_e.field_i);
-          so.field_k.addChild(-96, ContentTransitionDialog.field_ob);
+          SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
+          SceneNode.field_k.addChild(64, na.field_e.field_i);
+          SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
           de.field_b = new UiComponent(0L, tq.field_m);
           IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
           de.field_b.addChild(param0 ^ -27208, Pool.field_P);
@@ -421,9 +421,9 @@ final class VerticalScrollbar extends UiComponent {
         }
         VerticalScrollbar.f((byte) 19);
         na.field_e = !param1 ? new vn(Camera.muChatGame, cl.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
-        so.field_k = new UiComponent(0L, (UiComponent) null);
-        so.field_k.addChild(64, na.field_e.field_i);
-        so.field_k.addChild(-96, ContentTransitionDialog.field_ob);
+        SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
+        SceneNode.field_k.addChild(64, na.field_e.field_i);
+        SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
         de.field_b = new UiComponent(0L, tq.field_m);
         IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
         de.field_b.addChild(param0 ^ -27208, Pool.field_P);

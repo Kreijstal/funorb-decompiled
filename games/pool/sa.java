@@ -21,7 +21,7 @@ final class sa {
     static int field_p;
     static String tutorial;
     static String muChatLobbyFriends;
-    static so field_s;
+    static SceneNode field_s;
     static QuickChatHelpDialog field_f;
     static int field_t;
     static int[] field_r;

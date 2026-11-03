@@ -56,7 +56,7 @@ final class WidgetStyleLayer {
           if (param0 <= 125) {
             WidgetStyleLayer.b(3, -70);
           }
-          stackIn_3_0 = de.a(-1, 16, param1);
+          stackIn_3_0 = de.scaleByPowerOfTwo(-1, 16, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

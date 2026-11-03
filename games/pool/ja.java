@@ -89,7 +89,7 @@ final class ja {
           return;
         }
         nn.field_d = false;
-        id.field_b = -1;
+        MouseWheelInput.field_b = -1;
         MessageScreen.field_I = null;
     }
 

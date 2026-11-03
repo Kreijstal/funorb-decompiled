@@ -164,7 +164,7 @@ final class bo {
         bo.$cfr$intArgs$a$29f688675a86(94, 67, 67, -120, -99, 36, -121, 15, 19, (int[]) null, 9);
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isLeapYear(int param0, byte param1) {
         boolean stackIn_5_0 = false;
         boolean stackIn_11_0 = false;
         boolean stackIn_24_0 = false;
@@ -218,7 +218,7 @@ final class bo {
         try {
           var1_int = DialogLayer.field_T[0];
           if (param0 >= -85) {
-            bo.a(53, (byte) 68);
+            bo.isLeapYear(53, (byte) 68);
           }
           for (var2 = 1; DialogLayer.field_T.length > var2; var2++) {
             var3 = DialogLayer.field_T[var2];

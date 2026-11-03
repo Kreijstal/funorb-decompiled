@@ -784,11 +784,11 @@ final class RankingsScreen extends MenuScreen {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (op.field_a != null &&
-                  op.field_a[var7] != null &&
-                  (~DateInputWidget.field_S & op.field_a[var7][var9]) > 0) {
+                if (TextLayout.field_a != null &&
+                  TextLayout.field_a[var7] != null &&
+                  (~DateInputWidget.field_S & TextLayout.field_a[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = s.highestOneBit(op.field_a[var7][var9] & ~DateInputWidget.field_S, (byte) 87);
+                  var15 = s.highestOneBit(TextLayout.field_a[var7][var9] & ~DateInputWidget.field_S, (byte) 87);
                 }
                 if (Pocket.field_j != null &&
                   null != Pocket.field_j[var7] &&

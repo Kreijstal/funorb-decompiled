@@ -471,7 +471,7 @@ final class SectorCacheStore {
                 hn.field_c = TickClock.a(false, param1, -5790, param5);
               } else {
                 var11 = (String) null;
-                hn.field_c = bi.a(Quaternion.field_a, -16595, param5, false, (String) null);
+                hn.field_c = bi.createLoginPayload(Quaternion.field_a, -16595, param5, false, (String) null);
               }
               JaggrabDownloader.field_j.position = 0;
               JaggrabDownloader.field_j.writeByte(14, false);

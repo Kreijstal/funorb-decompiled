@@ -269,7 +269,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
               if (var8 != 0) {
                 stackIn_40_3 = LabeledChildWidget.ratedGameTipsSetupPlural;
               } else {
-                stackIn_40_3 = bk.ratedGameTipsSetupSingular;
+                stackIn_40_3 = TutorialStep.ratedGameTipsSetupSingular;
               }
               stackIn_39_0.text = AccountWelcomePanel.substituteTemplateArguments(stackIn_39_1, stackIn_39_2, stackIn_40_3);
               TextHotspotRegion.field_o.text = la.waitingToStartHint;
@@ -348,7 +348,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
               d.field_c.text = OptionsScreen.cancel.toUpperCase();
             }
           }
-          stackIn_68_0 = so.field_k;
+          stackIn_68_0 = SceneNode.field_k;
           stackIn_69_1 = (param2) && (!param0) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_68_0).updateRoot(stackIn_69_1, false);
           stackIn_73_0 = Bzip2DecoderState.field_f;

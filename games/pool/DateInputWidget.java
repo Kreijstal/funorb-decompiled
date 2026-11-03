@@ -146,10 +146,10 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (ar.field_g == null) {
+            if (GlowSprite.field_g == null) {
               return param0.getParameter("settings");
             }
-            stackIn_14_0 = ar.field_g;
+            stackIn_14_0 = GlowSprite.field_g;
             return stackIn_14_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

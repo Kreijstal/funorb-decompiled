@@ -142,10 +142,10 @@ final class jd {
           if (0 == param1.length()) {
             return true;
           }
-          if (TutorialController.a(param2, param1, 17924)) {
+          if (TutorialController.containsForwardOrReversed(param2, param1, 17924)) {
             return false;
           }
-          if (co.a(param1, (byte) -111, param2)) {
+          if (co.containsForwardOrReversed(param1, (byte) -111, param2)) {
             return false;
           }
           if (!StateIconLabel.a(23138, param1, param2)) {

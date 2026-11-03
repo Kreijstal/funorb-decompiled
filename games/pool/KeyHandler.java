@@ -39,11 +39,11 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               }
             }
             if (0 <= var2_int) {
-              var3 = op.field_h + 1 & 127;
+              var3 = TextLayout.field_h + 1 & 127;
               if (var3 != WireframeQuad.field_s) {
-                ee.field_b[op.field_h] = var2_int;
-                ek.field_c[op.field_h] = (char)0;
-                op.field_h = var3;
+                ee.field_b[TextLayout.field_h] = var2_int;
+                ek.field_c[TextLayout.field_h] = (char)0;
+                TextLayout.field_h = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -140,11 +140,11 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
               PlayerContextMenu.isValidNameCharacter((byte) 112, (char) var2_int)) {
-              var3 = 1 + op.field_h & 127;
+              var3 = 1 + TextLayout.field_h & 127;
               if (WireframeQuad.field_s != var3) {
-                ee.field_b[op.field_h] = -1;
-                ek.field_c[op.field_h] = (char)var2_int;
-                op.field_h = var3;
+                ee.field_b[TextLayout.field_h] = -1;
+                ek.field_c[TextLayout.field_h] = (char)var2_int;
+                TextLayout.field_h = var3;
               }
             }
           }

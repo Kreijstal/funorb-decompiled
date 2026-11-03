@@ -107,7 +107,7 @@ final class OptionsScreen extends MenuScreen {
         return this.buttonSpacing * param1 + (this.buttonTop + (param1 != -1 + this.itemIds.length ? 0 : 20));
     }
 
-    final static void a(int param0, int param1, int param2, int param3, so[] param4, int param5, MeshBuilder param6) {
+    final static void a(int param0, int param1, int param2, int param3, SceneNode[] param4, int param5, MeshBuilder param6) {
         int[] var8 = null;
         int[] var7 = null;
         int[] var9 = null;

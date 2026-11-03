@@ -25,7 +25,7 @@ final class ij extends IntrusiveNode {
     UiComponent field_l;
     static String loginNoDisplayname;
     static MusicTrack field_u;
-    static so field_o;
+    static SceneNode field_o;
     int field_v;
     static String ballsetPolarGroup0;
     int field_J;

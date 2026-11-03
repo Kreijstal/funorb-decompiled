@@ -7,7 +7,7 @@ final class bh {
     static PcmSample field_a;
     static String youAreOnYourLastLife;
 
-    final static void a(so[] param0, boolean param1, int param2, int param3, MeshBuilder param4, int param5, int param6) {
+    final static void a(SceneNode[] param0, boolean param1, int param2, int param3, MeshBuilder param4, int param5, int param6) {
         MeshBuilder var8 = null;
         int[] var19 = null;
         int[] var14 = null;
@@ -18,7 +18,7 @@ final class bh {
         int[] var12 = null;
         int[] var7Lifetime1;
         try {
-          var8 = a.a(true, new MeshBuilder(param4, false, false, false, false));
+          var8 = a.mirrorVertically(true, new MeshBuilder(param4, false, false, false, false));
           var19 = mj.identityTransform(-31121);
           var19[0] = param5;
           var19[1] = param2;

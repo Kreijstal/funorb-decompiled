@@ -73,7 +73,7 @@ class TextWidgetPainter implements WidgetPainter, io {
             discarded$1 = this.a((UiWidget) null, -35, -25, (byte) -43);
           }
           this.ensureTextLayout(0, param1);
-          stackIn_3_0 = param1.field_x.a((byte) 66) + this.field_f + this.field_j;
+          stackIn_3_0 = param1.field_x.totalHeight((byte) 66) + this.field_f + this.field_j;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,8 +112,8 @@ class TextWidgetPainter implements WidgetPainter, io {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        op var17 = null;
-        op var18 = null;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
         var16 = Pool.field_O;
         try {
           if (param4 != 154888568) {
@@ -132,15 +132,15 @@ class TextWidgetPainter implements WidgetPainter, io {
               var9 = param0;
               var8 = param1;
             }
-            var10 = var18.a(var8, param4 ^ 154888568);
-            var11 = var18.a(var9, 0);
+            var10 = var18.lineOfCaret(var8, param4 ^ 154888568);
+            var11 = var18.lineOfCaret(var9, 0);
             QuickChatPhraseRegistry.a(param2 + param5.widgetX, param5.widgetY + param3, param5.widgetX + (param2 + param5.widgetWidth), (byte) -118, param5.widgetY + (param3 + param5.widgetHeight));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_b[var12];
               if (var10 != var12) {
                 stackIn_14_0 = var13.caretXs[0];
               } else {
-                stackIn_14_0 = var18.a(var8, (byte) -72);
+                stackIn_14_0 = var18.caretX(var8, (byte) -72);
               }
               var14 = stackIn_14_0;
               if (var11 != var12) {
@@ -150,7 +150,7 @@ class TextWidgetPainter implements WidgetPainter, io {
                   stackIn_19_0 = 0;
                 }
               } else {
-                stackIn_19_0 = var18.a(var9, (byte) -102);
+                stackIn_19_0 = var18.caretX(var9, (byte) -102);
               }
               var15 = stackIn_19_0;
               VerticalScrollbar.field_Sb.fillRectangleAlpha(var15 - var14, this.selectionColor >>> 24, var13.bottom, var13.top + this.field_f + (param5.widgetY + (param3 + param5.textOffsetY)), this.selectionColor, (byte) 124, this.a(var14, (byte) 11, param2, param5));
@@ -233,17 +233,17 @@ class TextWidgetPainter implements WidgetPainter, io {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final op ensureTextLayout(int param0, UiWidget param1) {
+    public final TextLayout ensureTextLayout(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        op stackIn_8_0 = null;
-        op stackIn_10_0 = null;
+        TextLayout stackIn_8_0 = null;
+        TextLayout stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (null == param1.field_x) {
-            param1.field_x = (op) ((Object) new BitmapTextLayout());
+            param1.field_x = (TextLayout) ((Object) new BitmapTextLayout());
           }
           if (!this.wrapText) {
             this.a(param1, false);
@@ -254,7 +254,7 @@ class TextWidgetPainter implements WidgetPainter, io {
             stackIn_10_0 = param1.field_x;
             return stackIn_10_0;
           }
-          stackIn_8_0 = (op) null;
+          stackIn_8_0 = (TextLayout) null;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,7 +293,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         try {
           this.ensureTextLayout(0, param0);
           if (param1 == -1848150943) {
-            stackIn_4_0 = param0.field_x.a(-1) - (-this.field_i - this.field_g);
+            stackIn_4_0 = param0.field_x.maxRightEdge(-1) - (-this.field_i - this.field_g);
             return stackIn_4_0;
           }
           stackIn_2_0 = -29;
@@ -324,7 +324,7 @@ class TextWidgetPainter implements WidgetPainter, io {
             this.wrapText = false;
           }
           this.ensureTextLayout(0, param3);
-          stackIn_3_0 = param3.field_x.a(-this.textTop(param0, param3, (byte) -7) + param2, -this.textLeft(5286, param3, param5) + param1, -1);
+          stackIn_3_0 = param3.field_x.caretIndexAtPoint(-this.textTop(param0, param3, (byte) -7) + param2, -this.textLeft(5286, param3, param5) + param1, -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -356,7 +356,7 @@ class TextWidgetPainter implements WidgetPainter, io {
         var7 = Pool.field_O;
         try {
           if (param0.field_x == null) {
-            param0.field_x = (op) ((Object) new BitmapTextLayout());
+            param0.field_x = (TextLayout) ((Object) new BitmapTextLayout());
           }
           var3_int = this.contentWidth((byte) 26, param0);
           var4 = this.contentHeight(param0, -3);
@@ -586,8 +586,8 @@ class TextWidgetPainter implements WidgetPainter, io {
         int var11 = 0;
         int var12 = 0;
         UiWidget var13 = null;
-        op var14 = null;
-        op var15 = null;
+        TextLayout var14 = null;
+        TextLayout var15 = null;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
@@ -601,9 +601,9 @@ class TextWidgetPainter implements WidgetPainter, io {
           if (param4.hasKeyboardFocus(66)) {
             var14 = this.ensureTextLayout(param0 - 1, param4);
             var15 = var14;
-            var7 = var15.a(param2, 0);
+            var7 = var15.lineOfCaret(param2, 0);
             var8 = var14.field_b[var7];
-            var9 = var15.a(param2, (byte) -94);
+            var9 = var15.caretX(param2, (byte) -94);
             var10 = this.a(var9, (byte) 11, param3, param4);
             var11 = this.textTop(param1, param4, (byte) -7) + Math.max(0, var8.top);
             stackIn_3_0 = this.textTop(param1, param4, (byte) -7);

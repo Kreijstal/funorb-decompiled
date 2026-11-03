@@ -195,7 +195,7 @@ final class wp implements si {
               } else {
                 if (0 != var7.pressedButton) {
                   var16 = var7.name;
-                  dr.a((String) null, -1, 0L, -1, NameEntryPopup.field_Mb.scrollPane, var16, 32540, var7, (int[]) null);
+                  dr.openPlayerContextMenu((String) null, -1, 0L, -1, NameEntryPopup.field_Mb.scrollPane, var16, 32540, var7, (int[]) null);
                   var5 = var7;
                   if (var7.serverName != null &&
                     !NineBallRules.a(PlasmaBallSkin.field_m.field_m, (byte) -101) &&

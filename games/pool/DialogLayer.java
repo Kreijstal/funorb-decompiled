@@ -6,7 +6,7 @@ import java.io.*;
 final class DialogLayer extends SingleChildWidget {
     private IntrusiveDeque dialogs;
     static String multiconstFriends;
-    static so field_R;
+    static SceneNode field_R;
     static int[] field_T;
     static String timerMinutesSeconds;
     static Sprite field_Q;

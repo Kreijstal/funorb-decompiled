@@ -74,7 +74,7 @@ final class BallDebugOverlay implements eb {
         }
     }
 
-    public final void a(int[] param0, int param1) {
+    public final void draw(int[] param0, int param1) {
         BallSkin stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
@@ -136,7 +136,7 @@ final class BallDebugOverlay implements eb {
         return param2 * param2 * (param2 * param3) / param1 / param1 / param1;
     }
 
-    public final int b(int[] param0, int param1) {
+    public final int viewDepth(int[] param0, int param1) {
         RuntimeException var3 = null;
         int[] var4 = null;
         int stackIn_3_0 = 0;
@@ -147,7 +147,7 @@ final class BallDebugOverlay implements eb {
         try {
           if (param1 > -27) {
             var4 = (int[]) null;
-            this.b((int[]) null, -80);
+            this.viewDepth((int[]) null, -80);
           }
           stackIn_3_0 = param0[11] * (-param0[2] + this.field_a.renderTransform[2]) + (this.field_a.renderTransform[1] - param0[1]) * param0[10] + (this.field_a.renderTransform[0] - param0[0]) * param0[9];
           return stackIn_3_0;

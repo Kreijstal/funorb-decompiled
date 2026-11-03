@@ -35,7 +35,7 @@ final class cp {
         }
     }
 
-    final static long a(byte[] param0, byte param1, int param2) {
+    final static long crc64(byte[] param0, byte param1, int param2) {
         RuntimeException var3 = null;
         byte[] var4 = null;
         long stackIn_3_0 = 0L;
@@ -46,7 +46,7 @@ final class cp {
         try {
           if (param1 != -83) {
             var4 = (byte[]) null;
-            cp.a((byte[]) null, (byte) 105, 91);
+            cp.crc64((byte[]) null, (byte) 105, 91);
           }
           stackIn_3_0 = ii.crc64(param0, param2, 0, 154302664);
           return stackIn_3_0;

@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hc {
-    final static int a(int param0, int param1) {
+    final static int cosine(int param0, int param1) {
         if (param0 != 2047) {
           return -81;
         }
         return TriangleRasterizer.cosineTable[2047 & param1];
     }
 
-    final static so a(MeshBuilder param0, int[] param1, byte param2) {
+    final static SceneNode a(MeshBuilder param0, int[] param1, byte param2) {
         int incrementValue$0 = 0;
-        so stackIn_3_0 = null;
-        so stackIn_23_0 = null;
+        SceneNode stackIn_3_0 = null;
+        SceneNode stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -25,17 +25,17 @@ final class hc {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        so var9 = null;
-        so var10 = null;
+        SceneNode var9 = null;
+        SceneNode var10 = null;
         int var7Lifetime1;
         int var6Lifetime1;
         var8 = Pool.field_O;
         try {
-          var9 = new so();
+          var9 = new SceneNode();
           var10 = var9;
           var9.field_d = param1;
           if (param2 != 101) {
-            stackIn_3_0 = (so) null;
+            stackIn_3_0 = (SceneNode) null;
             return stackIn_3_0;
           }
           var4 = new int[]{1, 1, 1};
@@ -53,7 +53,7 @@ final class hc {
                 var6--;
               }
             }
-            var10.field_b = new so[var6];
+            var10.field_b = new SceneNode[var6];
             var6Lifetime1 = 0;
             for (var7Lifetime1 = 0; var5.length > var7Lifetime1; var7Lifetime1++) {
               MarkerSliderPainter.a(var5[var7Lifetime1], (byte) -37);

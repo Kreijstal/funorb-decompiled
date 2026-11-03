@@ -25,7 +25,7 @@ final class dg extends ArchiveRequest {
           return;
         }
         String var2 = (String) null;
-        dg.a(83, (String) null, (String) null, (String) null);
+        dg.replaceAll(83, (String) null, (String) null, (String) null);
         field_J = null;
         statusPlaying = null;
     }
@@ -60,7 +60,7 @@ final class dg extends ArchiveRequest {
     dg() {
     }
 
-    final static String a(int param0, String param1, String param2, String param3) {
+    final static String replaceAll(int param0, String param1, String param2, String param3) {
         int var4 = param2.indexOf(param3);
         while (-1 != var4) {
           param2 = param2.substring(0, var4) + param1 + param2.substring(param3.length() + var4);

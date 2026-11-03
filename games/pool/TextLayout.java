@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class op {
+abstract class TextLayout {
     static int field_h;
     static int[][] field_a;
     static String askingToJoinXsGame;
@@ -11,7 +11,7 @@ abstract class op {
     static String muChatGameHide;
     static int field_f;
 
-    final int a(int param0) {
+    final int maxRightEdge(int param0) {
         int var4 = 0;
         int var2;
         TextLineLayout[] var3;
@@ -35,7 +35,7 @@ abstract class op {
         return var2;
     }
 
-    final int a(int param0, byte param1) {
+    final int caretX(int param0, byte param1) {
         int var4 = 0;
         TextLineLayout var5 = null;
         TextLineLayout[] var6 = this.field_b;
@@ -53,10 +53,10 @@ abstract class op {
         return 0;
     }
 
-    final int a(byte param0) {
+    final int totalHeight(byte param0) {
         int stackIn_6_0 = 0;
         if (param0 != 66) {
-          this.a((byte) 123);
+          this.totalHeight((byte) 123);
         }
         if (null != this.field_b &&
           this.field_b.length > 0) {
@@ -67,7 +67,7 @@ abstract class op {
         return stackIn_6_0;
     }
 
-    final int a(int param0, int param1) {
+    final int lineOfCaret(int param0, int param1) {
         int var3 = 0;
         TextLineLayout var4 = null;
         for (var3 = param1; this.field_b.length > var3; var3++) {
@@ -153,10 +153,10 @@ abstract class op {
           var3 = var6;
           if (param2 < 61) {
             var5 = (int[]) null;
-            op.a((int[]) null, -54, (int[]) null, -45, (int[]) null, (byte) 22, 22, (int[]) null, (int[]) null, (byte) 2, (int[]) null);
+            TextLayout.a((int[]) null, -54, (int[]) null, -45, (int[]) null, (byte) 22, 22, (int[]) null, (int[]) null, (byte) 2, (int[]) null);
           }
           for (var4 = 0; param1.length > var4; var4++) {
-            var6[var4] = de.a(-1, param0, param1[var4]);
+            var6[var4] = de.scaleByPowerOfTwo(-1, param0, param1[var4]);
           }
           stackIn_6_0 = var6;
           return stackIn_6_0;
@@ -333,7 +333,7 @@ abstract class op {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int caretIndexAtPoint(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
         TextLineLayout var6;

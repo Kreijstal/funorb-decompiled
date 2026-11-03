@@ -319,7 +319,7 @@ final class gn {
         ArchiveRequest.field_z = 2147483647;
     }
 
-    final static MeshBuilder a(MeshBuilder param0, int param1) {
+    final static MeshBuilder mirrorAlongZ(MeshBuilder param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

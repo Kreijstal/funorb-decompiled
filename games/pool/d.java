@@ -196,7 +196,7 @@ final class d {
                 }
               }
               if (0 != var6.pressedButton) {
-                dr.a(var6.name, -1, 0L, -1, cp.field_c.scrollPane, var6.actionName, 32540, var6, (int[]) null);
+                dr.openPlayerContextMenu(var6.name, -1, 0L, -1, cp.field_c.scrollPane, var6.actionName, 32540, var6, (int[]) null);
                 var16 = PlasmaBallSkin.field_m;
                 var13_ref_String = tp.muLobbyNameRm;
                 var16.field_n.addAction(var13_ref_String, 17130, 7);

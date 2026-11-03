@@ -462,7 +462,7 @@ final class mk {
                 var31 = var31 + ArchiveIndex.field_x;
               }
               if (var12.field_fc) {
-                var12.field_zc.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var32}, ~param1, op.askingToJoinXsGame);
+                var12.field_zc.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var32}, ~param1, TextLayout.askingToJoinXsGame);
                 var12.field_zc.setBounds(var31, param1 + 2147483647, CueAim.field_j, -(CueAim.field_j * 2) + var12.width, ArchiveIndex.field_x);
                 var31 = var31 + ArchiveIndex.field_x;
               }

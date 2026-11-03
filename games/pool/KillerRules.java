@@ -271,7 +271,7 @@ final class KillerRules extends GameRules {
         if (param1 != 3) {
           return -1.207617998123169f;
         }
-        return de.a(-1, 3, param0);
+        return de.scaleByPowerOfTwo(-1, 3, param0);
     }
 
     private final int countActivePlayers(byte param0) {

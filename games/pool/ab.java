@@ -12,7 +12,7 @@ final class ab {
     static String muOptionsPlayers;
     static String rule01;
 
-    final static boolean a(ResourceArchive param0, boolean param1) {
+    final static boolean isArchiveFullyAvailable(ResourceArchive param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -58,7 +58,7 @@ final class ab {
         multiconstInviteOnly = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void notifyBrowserResize(int param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
@@ -87,7 +87,7 @@ final class ab {
         PlasmaTableScene.field_ab = 0;
     }
 
-    final static String a(int param0, byte param1) {
+    final static String describeResolutionFlags(int param0, byte param1) {
         StringBuilder stackIn_4_0 = null;
         String stackIn_5_1 = null;
         StringBuilder stackIn_7_0 = null;
@@ -113,7 +113,7 @@ final class ab {
         StringBuilder stackIn_37_0 = null;
         String stackIn_38_1 = null;
         if (param1 != 10) {
-          ab.a(-112, (byte) -4);
+          ab.describeResolutionFlags(-112, (byte) -4);
         }
         stackIn_4_0 = new StringBuilder();
         if ((param0 & MarkerSliderPainter.field_j) != 0) {

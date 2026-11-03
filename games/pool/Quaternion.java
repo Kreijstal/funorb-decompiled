@@ -222,8 +222,8 @@ final class Quaternion {
 
     final void setFromAxisAngle(int param0, int param1, int param2, int param3, int param4) {
         param4 = param4 >> 1;
-        int var6 = ScrollPaneWithFooter.a(param4, true);
-        int var7 = hc.a(2047, param4);
+        int var6 = ScrollPaneWithFooter.sine(param4, true);
+        int var7 = hc.cosine(2047, param4);
         this.w = var7;
         this.x = NameEntryPopup.a(var6, false, param1);
         this.y = NameEntryPopup.a(var6, false, param2);

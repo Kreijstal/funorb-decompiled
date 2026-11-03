@@ -54,7 +54,7 @@ final class CueStick {
         var9 = Pool.field_O;
         try {
           nn.a(param0, true);
-          gn.a(param0, 5);
+          gn.mirrorAlongZ(param0, 5);
           param0.computeBounds();
           while (1500 > -param0.field_V + param0.field_x) {
             for (var3_int = 0; param0.vertexCount > var3_int; var3_int++) {
@@ -242,9 +242,9 @@ final class CueStick {
         if (!(PoolMatchController.field_z <= 0) ||
           !(nj.field_b <= 0)) {
           if (null != KillerBallSkin.field_n) {
-            KillerBallSkin.field_n.a(so.field_k.localX, 0);
+            KillerBallSkin.field_n.a(SceneNode.field_k.localX, 0);
           }
-          stackIn_24_0 = so.field_k;
+          stackIn_24_0 = SceneNode.field_k;
           stackIn_24_1 = -79;
           stackIn_25_2 = (param0) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_24_0).drawRoot((byte) stackIn_24_1, stackIn_25_2);

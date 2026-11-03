@@ -15,7 +15,7 @@ final class bi {
         }
     }
 
-    final static LoginPayload a(long param0, int param1, String param2, boolean param3, String param4) {
+    final static LoginPayload createLoginPayload(long param0, int param1, String param2, boolean param3, String param4) {
         RuntimeException var6 = null;
         String var7 = null;
         AlternateLongAndTextLoginPayload stackIn_5_0 = null;
@@ -39,7 +39,7 @@ final class bi {
           }
           if (param1 != -16595) {
             var7 = (String) null;
-            bi.a(92L, -15, (String) null, true, (String) null);
+            bi.createLoginPayload(92L, -15, (String) null, true, (String) null);
           }
           stackIn_11_0 = new LongAndTextLoginPayload(param0, param2);
           return (LoginPayload) ((Object) stackIn_11_0);
@@ -73,7 +73,7 @@ final class bi {
           if (0L == (LinkButtonPainter.field_i & 1L)) {
             return false;
           }
-          de.a(-106);
+          de.createDebugSliders(-106);
           if (param0 > -66) {
             bi.releaseStatics(23);
           }

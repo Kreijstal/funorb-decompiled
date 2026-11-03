@@ -61,13 +61,13 @@ final class hg {
         if (param0) {
           String var2 = (String) null;
           hg.a((String) null, true);
-          if (null != op.field_e) {
-            return (java.awt.Container) ((Object) op.field_e);
+          if (null != TextLayout.field_e) {
+            return (java.awt.Container) ((Object) TextLayout.field_e);
           }
           return (java.awt.Container) ((Object) NanoTickClock.getApplet(95));
         }
-        if (null != op.field_e) {
-          return (java.awt.Container) ((Object) op.field_e);
+        if (null != TextLayout.field_e) {
+          return (java.awt.Container) ((Object) TextLayout.field_e);
         }
         return (java.awt.Container) ((Object) NanoTickClock.getApplet(95));
     }

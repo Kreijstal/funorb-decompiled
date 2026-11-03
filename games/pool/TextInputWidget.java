@@ -329,8 +329,8 @@ class TextInputWidget extends ButtonWidget {
           return;
         }
         io var9 = (io) ((Object) this.renderer);
-        op var3 = var9.ensureTextLayout(0, (UiWidget) (this));
-        int var4 = var3.a(-1);
+        TextLayout var3 = var9.ensureTextLayout(0, (UiWidget) (this));
+        int var4 = var3.maxRightEdge(-1);
         int var5 = var9.contentWidth((byte) 26, (UiWidget) (this));
         int var6 = var9.lineHeight(-10492) >> 1;
         if (-var6 + var5 > var4) {
@@ -338,7 +338,7 @@ class TextInputWidget extends ButtonWidget {
           this.textOffsetY = 0;
           return;
         }
-        int var7 = this.textOffsetX + var3.a(this.caretIndex, (byte) -88);
+        int var7 = this.textOffsetX + var3.caretX(this.caretIndex, (byte) -88);
         if (-var6 + var5 < var7) {
           this.textOffsetX = -var7 + (-var6 + (var5 + this.textOffsetX));
         } else {

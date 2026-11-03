@@ -325,7 +325,7 @@ final class InstructionsScreen extends MenuScreen {
           return;
         }
         if (bq.field_p != -1) {
-          this.field_G = ag.a(DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, 15395);
+          this.field_G = ag.findHotspotRegion(DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, 15395);
           LongAndTextLoginPayload.field_l = 12;
           SocialListEntry.field_Vb = 12;
           PauseMenuScreen.g(0, null == this.field_G ? -1 : this.field_G.field_p);

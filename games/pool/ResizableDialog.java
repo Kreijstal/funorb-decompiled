@@ -280,8 +280,8 @@ abstract class ResizableDialog extends FadingDialog {
           var8Lifetime1++;
         }
         EmailAvailabilityValidator.field_p.draw(this.widgetWidth + param0 - 90, 10 + param1);
-        id.a(param1 + 35, this.widgetWidth - 10, ArchiveRequest.field_I, param0 + 5, (byte) 23);
-        id.a(-22 + (param1 + this.widgetHeight), this.widgetWidth, ArchiveLoadSequence.field_d, param0, (byte) 23);
+        MouseWheelInput.a(param1 + 35, this.widgetWidth - 10, ArchiveRequest.field_I, param0 + 5, (byte) 23);
+        MouseWheelInput.a(-22 + (param1 + this.widgetHeight), this.widgetWidth, ArchiveLoadSequence.field_d, param0, (byte) 23);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.widgetHeight;

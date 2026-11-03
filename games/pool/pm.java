@@ -4,7 +4,7 @@
 final class pm extends IntrusiveNode {
     static String tickerHintRotate;
     static int field_p;
-    so field_n;
+    SceneNode field_n;
     static UiComponent field_m;
     static int field_l;
 
@@ -42,7 +42,7 @@ final class pm extends IntrusiveNode {
           if (param16 != -6103) {
             field_m = (UiComponent) null;
           }
-          so.a(param2, param9, param11, param8, param15, param16 ^ 6094, 1, param4, param10, param0, param5, param7, param14, (String[]) null, param1, param13, param3, param12, param6);
+          SceneNode.a(param2, param9, param11, param8, param15, param16 ^ 6094, 1, param4, param10, param0, param5, param7, param14, (String[]) null, param1, param13, param3, param12, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,13 +133,13 @@ final class pm extends IntrusiveNode {
     final static int a(int param0) {
         if (param0 != -27011) {
           pm.a((byte[]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (Sprite[][]) null, 100, (IndexedSprite[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (ResourceArchive) null, false, (int[]) null, (ResourceArchive) null, (String[][]) null, 112);
-          if (cl.a(1, pl.field_b)) {
+          if (cl.isPointerInside(1, pl.field_b)) {
             return 0;
           }
-          if (cl.a(1, jq.field_d)) {
+          if (cl.isPointerInside(1, jq.field_d)) {
             return 1;
           }
-          if (!cl.a(1, qa.field_v)) {
+          if (!cl.isPointerInside(1, qa.field_v)) {
             return -1;
           }
           if (vm.field_d[5] == qa.field_v.sprite) {
@@ -147,13 +147,13 @@ final class pm extends IntrusiveNode {
           }
           return 2;
         }
-        if (cl.a(1, pl.field_b)) {
+        if (cl.isPointerInside(1, pl.field_b)) {
           return 0;
         }
-        if (cl.a(1, jq.field_d)) {
+        if (cl.isPointerInside(1, jq.field_d)) {
           return 1;
         }
-        if (!cl.a(1, qa.field_v)) {
+        if (!cl.isPointerInside(1, qa.field_v)) {
           return -1;
         }
         if (vm.field_d[5] == qa.field_v.sprite) {
@@ -202,7 +202,7 @@ final class pm extends IntrusiveNode {
         field_m = null;
     }
 
-    pm(so param0) {
+    pm(SceneNode param0) {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {

@@ -306,7 +306,7 @@ abstract class NetworkGameClient extends GameApplet {
                 LocalGameSetupScreen.f(80);
                 break;
               case 2:
-                id.c(param0 - 14873);
+                MouseWheelInput.c(param0 - 14873);
                 break;
               case 4:
                 IntKeyLookup.a(199);
@@ -462,7 +462,7 @@ abstract class NetworkGameClient extends GameApplet {
                 var2.field_w = 256;
               }
               if ((4 & var2.field_v) != 0) {
-                var2.field_E = ck.a((byte) -127, 4000, var2.field_y, kg.field_m) + 96;
+                var2.field_E = ck.easeOutQuadratic((byte) -127, 4000, var2.field_y, kg.field_m) + 96;
               } else {
                 if (0 != (var2.field_v & 2)) {
                   var2.field_E = 4096 + bc.cubicEaseOut(2048, kg.field_m, var2.field_H, 13776);
@@ -493,7 +493,7 @@ abstract class NetworkGameClient extends GameApplet {
                       var2.field_E = bc.cubicEaseOut(2048, var3, var2.field_y, param0 + 13849) + 4096;
                     }
                   } else {
-                    var2.field_E = 96 + ck.a((byte) -126, 4000, var2.field_y, -var3 + var2.field_y);
+                    var2.field_E = 96 + ck.easeOutQuadratic((byte) -126, 4000, var2.field_y, -var3 + var2.field_y);
                   }
                 }
               } else {
@@ -584,7 +584,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var5 = -1 + ScrollPane.field_Pb;
         byte[] var6 = new byte[var5];
         PlayerContextMenu.field_e.readCipheredBytes(0, -109, var6, var5);
-        jc.openUrl(-10553, NanoTickClock.getApplet(70), a.a(var6, -99), var3 != 0);
+        jc.openUrl(-10553, NanoTickClock.getApplet(70), a.decodeBytesToString(var6, -99), var3 != 0);
     }
 
     private final int pollReconnect(int param0) {
@@ -654,14 +654,14 @@ abstract class NetworkGameClient extends GameApplet {
           }
           PlasmaTableScene.field_gb.a(true);
         }
-        id.a(127);
+        MouseWheelInput.a(127);
         bo.a((byte) 123);
         if (!ue.a((byte) -124) &&
           PlasmaTableScene.field_ab != 11) {
           t.b(-11);
         }
         if (null != ClientException.field_a) {
-          wp.field_d = ClientException.field_a.b(2);
+          wp.field_d = ClientException.field_a.takeRotation(2);
         }
         if (mg.a(-66)) {
           var3 = CachedArchiveSource.a(-21282) * 1200;
@@ -789,7 +789,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (QuickChatCategoryDefinition.field_y == 3 &&
           DropTargetWidget.a(uj.field_d, PolarTableScene.field_nb, DualLinkNode.field_r, true) &&
-          ab.a(DualLinkNode.field_r, true)) {
+          ab.isArchiveFullyAvailable(DualLinkNode.field_r, true)) {
           dn.d(8192);
           MenuSelection.a((byte) 98);
           TextWidgetPainter.field_n = UiComponentNode.loading;

@@ -28,7 +28,7 @@ final class kc {
           if (null == ClientException.field_a) {
             return;
           }
-          ClientException.field_a.a((byte) 104, (java.awt.Component) ((Object) param0));
+          ClientException.field_a.attach((byte) 104, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

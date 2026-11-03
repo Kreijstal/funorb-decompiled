@@ -15,7 +15,7 @@ final class ag {
         field_b = null;
         if (param0 != 0) {
           IntrusiveDeque var2 = (IntrusiveDeque) null;
-          ag.a(105, (IntrusiveDeque) null, -112, 90);
+          ag.findHotspotRegion(105, (IntrusiveDeque) null, -112, 90);
         }
         connectionrestored = null;
         muLobbyNameAdd = null;
@@ -41,7 +41,7 @@ final class ag {
         }
     }
 
-    final static TextHotspotRegion a(int param0, IntrusiveDeque param1, int param2, int param3) {
+    final static TextHotspotRegion findHotspotRegion(int param0, IntrusiveDeque param1, int param2, int param3) {
         RuntimeException var4 = null;
         TextHotspotRegion var5 = null;
         TextHotspotRegion var6 = null;
@@ -76,7 +76,7 @@ final class ag {
             return null;
           }
           var8 = (IntrusiveDeque) null;
-          ag.a(15, (IntrusiveDeque) null, 110, 38);
+          ag.findHotspotRegion(15, (IntrusiveDeque) null, 110, 38);
           stackIn_18_0 = null;
           return (TextHotspotRegion) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

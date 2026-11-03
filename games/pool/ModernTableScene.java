@@ -3,15 +3,15 @@
  */
 final class ModernTableScene extends ModelTableScene {
     private PcmSample field_W;
-    private so field_bb;
+    private SceneNode field_bb;
     private PcmSampleStream field_ab;
     private PcmSample field_Q;
     static he field_eb;
     private PcmSample field_fb;
     private PcmSample field_Y;
-    private so field_gb;
-    private so field_jb;
-    private so field_R;
+    private SceneNode field_gb;
+    private SceneNode field_jb;
+    private SceneNode field_R;
     private boolean[] field_kb;
     static BinaryBitmapFont field_Z;
     private PcmSample field_cb;
@@ -19,7 +19,7 @@ final class ModernTableScene extends ModelTableScene {
     private PcmSample field_X;
     private PcmSampleStream field_hb;
     static String noHighscores;
-    private so field_U;
+    private SceneNode field_U;
     private PcmSample field_db;
     private PcmSample field_V;
 
@@ -173,12 +173,12 @@ final class ModernTableScene extends ModelTableScene {
         int[] var18 = null;
         int[] var19 = null;
         Ball[] var20 = null;
-        so var21 = null;
+        SceneNode var21 = null;
         int[] var23 = null;
-        so var24 = null;
-        so var27 = null;
-        so var29 = null;
-        so var32 = null;
+        SceneNode var24 = null;
+        SceneNode var27 = null;
+        SceneNode var29 = null;
+        SceneNode var32 = null;
         int[] var35 = null;
         int[] var36 = null;
         int[] var38 = null;
@@ -236,7 +236,7 @@ final class ModernTableScene extends ModelTableScene {
           kf.a(CushionSegment.field_k, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, NodeHashTableIterator.field_l);
           var21 = this.field_bb;
           var54 = GzipDecoder.field_d;
-          var21.b((byte) -123, 0, var21.field_j.length, var54);
+          var21.sortModelsByDepth((byte) -123, 0, var21.field_j.length, var54);
           for (var5 = 0; var5 < this.field_kb.length; var5++) {
             var38 = this.field_bb.field_c[var5];
             var23 = var38;
@@ -272,7 +272,7 @@ final class ModernTableScene extends ModelTableScene {
           }
           var24 = this.field_R;
           var55 = GzipDecoder.field_d;
-          var24.b((byte) -113, 0, var24.field_j.length, var55);
+          var24.sortModelsByDepth((byte) -113, 0, var24.field_j.length, var55);
           en.b(param0 + 55);
           this.a(false, param1);
           var56 = new int[3];
@@ -432,7 +432,7 @@ final class ModernTableScene extends ModelTableScene {
             this.loadSceneSprites(92, (ResourceArchive) null);
           }
           var57 = GzipDecoder.field_d;
-          var27.a((byte) -112, 0, var27.field_j.length, var57);
+          var27.drawModelRange((byte) -112, 0, var27.field_j.length, var57);
           var11Lifetime1 = w.field_h;
           var12Lifetime1 = ol.field_a;
           for (var13Lifetime1 = -1 + var12Lifetime1; var11Lifetime1 <= var13Lifetime1; var13Lifetime1--) {
@@ -459,7 +459,7 @@ final class ModernTableScene extends ModelTableScene {
           var29 = this.field_bb;
           var58 = GzipDecoder.field_d;
           var59 = this.field_kb;
-          var29.a(false, 0, var29.field_j.length, (byte) -65, var58, var59);
+          var29.drawSortedModels(false, 0, var29.field_j.length, (byte) -65, var58, var59);
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             stackIn_136_0 = this;
             stackIn_136_1 = var4;
@@ -478,14 +478,14 @@ final class ModernTableScene extends ModelTableScene {
           var32 = this.field_bb;
           var60 = GzipDecoder.field_d;
           var61 = this.field_kb;
-          var32.a(true, 0, var32.field_j.length, (byte) 111, var60, var61);
+          var32.drawSortedModels(true, 0, var32.field_j.length, (byte) 111, var60, var61);
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             param1.updateCueStick(-1);
             param1.buildAimPreviewTrail(-126);
           }
           if ((LinkButtonPainter.field_i & 256L) != 0L) {
-            this.field_R.a(GzipDecoder.field_d, 0);
-            this.field_bb.a(GzipDecoder.field_d, 0);
+            this.field_R.drawAllModels(GzipDecoder.field_d, 0);
+            this.field_bb.drawAllModels(GzipDecoder.field_d, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -546,11 +546,11 @@ final class ModernTableScene extends ModelTableScene {
     final void initializeScene(boolean param0) {
         int incrementValue$10 = 0;
         int incrementValue$9 = 0;
-        so dupTemp$0 = null;
-        so dupTemp$1 = null;
-        so dupTemp$2 = null;
-        so dupTemp$3 = null;
-        so dupTemp$4 = null;
+        SceneNode dupTemp$0 = null;
+        SceneNode dupTemp$1 = null;
+        SceneNode dupTemp$2 = null;
+        SceneNode dupTemp$3 = null;
+        SceneNode dupTemp$4 = null;
         MeshBuilder[] dupTemp$5 = null;
         MeshBuilder dupTemp$6 = null;
         MeshBuilder[] dupTemp$7 = null;
@@ -561,7 +561,7 @@ final class ModernTableScene extends ModelTableScene {
         int stackIn_34_3;
         Object stackIn_35_0;
         boolean stackIn_35_4;
-        so stackIn_53_0 = null;
+        SceneNode stackIn_53_0 = null;
         boolean stackIn_54_1 = false;
         int var2;
         int var3;
@@ -573,9 +573,9 @@ final class ModernTableScene extends ModelTableScene {
         int[][][] var9;
         int var10;
         int var11;
-        so var12;
+        SceneNode var12;
         int var12_int;
-        so var13;
+        SceneNode var13;
         ModelInstance[] var13_array;
         MeshBuilder[][] var14;
         int var14_int;
@@ -593,12 +593,12 @@ final class ModernTableScene extends ModelTableScene {
         int[][] var26;
         ModelInstance[] var27;
         MeshBuilder var28;
-        so[] var29;
+        SceneNode[] var29;
         MeshBuilder var31;
-        so[] var32;
+        SceneNode[] var32;
         MeshBuilder var34;
-        so[] var35;
-        so[] var37;
+        SceneNode[] var35;
+        SceneNode[] var37;
         int[][][] var38;
         int[][][] var39;
         int[] var46;
@@ -706,18 +706,18 @@ final class ModernTableScene extends ModelTableScene {
           var11Lifetime2 += 4;
         }
         CushionSegment.field_k = var11Lifetime2;
-        dupTemp$0 = new so(4 * (EightBallRules.field_e - WidgetContainer.field_G));
+        dupTemp$0 = new SceneNode(4 * (EightBallRules.field_e - WidgetContainer.field_G));
         this.field_jb = dupTemp$0;
-        dupTemp$1 = new so(new so[]{dupTemp$0});
+        dupTemp$1 = new SceneNode(new SceneNode[]{dupTemp$0});
         this.field_bb = dupTemp$1;
-        dupTemp$2 = new so(4 * (EightBallRules.field_e - WidgetContainer.field_G));
+        dupTemp$2 = new SceneNode(4 * (EightBallRules.field_e - WidgetContainer.field_G));
         this.field_U = dupTemp$2;
-        dupTemp$3 = new so(4 * (-fc.field_c + WidgetStyleLayer.field_k) + (DualLinkNode.field_u - ArchiveLoadSequence.field_a) * 2);
+        dupTemp$3 = new SceneNode(4 * (-fc.field_c + WidgetStyleLayer.field_k) + (DualLinkNode.field_u - ArchiveLoadSequence.field_a) * 2);
         this.field_gb = dupTemp$3;
-        dupTemp$4 = new so(new so[]{dupTemp$2, dupTemp$3});
+        dupTemp$4 = new SceneNode(new SceneNode[]{dupTemp$2, dupTemp$3});
         this.field_R = dupTemp$4;
-        var12 = new so(new so[]{dupTemp$1, dupTemp$4});
-        var13 = new so(new so[]{this.field_jb, this.field_U});
+        var12 = new SceneNode(new SceneNode[]{dupTemp$1, dupTemp$4});
+        var13 = new SceneNode(new SceneNode[]{this.field_jb, this.field_U});
         var14 = new MeshBuilder[EightBallRules.field_e - WidgetContainer.field_G][2];
         for (var2Lifetime4 = WidgetContainer.field_G; var2Lifetime4 < EightBallRules.field_e; var2Lifetime4++) {
           dupTemp$5 = var14[var2Lifetime4 - WidgetContainer.field_G];
@@ -764,14 +764,14 @@ final class ModernTableScene extends ModelTableScene {
           OptionsScreen.a(var18Lifetime1, this.field_M[var16Lifetime1][1], this.field_M[var16Lifetime1][2], 1, var37, this.field_M[var16Lifetime1][0], this.field_O[var16Lifetime1]);
           var15 += 2;
         }
-        var12.a(0);
+        var12.normalizeOffsets(0);
         stackIn_53_0 = var13;
         stackIn_54_1 = (param0) ? false : true;
-        ((so) (Object) stackIn_53_0).a(stackIn_54_1);
-        var12.a(this.field_q, this.field_e, this.field_F, (byte) -122, this.field_u, this.field_C);
-        this.field_bb.d(104);
+        ((SceneNode) (Object) stackIn_53_0).mergeChildMeshes(stackIn_54_1);
+        var12.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -122, this.field_u, this.field_C);
+        this.field_bb.allocateModelArrays(104);
         this.field_kb = new boolean[this.field_bb.field_j.length];
-        this.field_R.d(116);
+        this.field_R.allocateModelArrays(116);
         w.field_h = var11Lifetime2;
         ol.field_a = var11Lifetime2;
         return;
@@ -785,7 +785,7 @@ final class ModernTableScene extends ModelTableScene {
     final void loadSceneSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
-            this.field_U = (so) null;
+            this.field_U = (SceneNode) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ni.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1050,7 +1050,7 @@ final class ModernTableScene extends ModelTableScene {
             var53 = this.field_M[var15];
             var25 = var16;
             var19 = var25;
-            var27 = a.a(true, new MeshBuilder(var23, false, false, false, false));
+            var27 = a.mirrorVertically(true, new MeshBuilder(var23, false, false, false, false));
             var42 = mj.identityTransform(-31121);
             var26 = var42;
             var20 = var26;
@@ -1096,7 +1096,7 @@ final class ModernTableScene extends ModelTableScene {
             var54 = this.field_M[var15Lifetime1];
             var34 = var16Lifetime1;
             var19Lifetime1 = var34;
-            var36 = a.a(true, new MeshBuilder(var32, false, false, false, false));
+            var36 = a.mirrorVertically(true, new MeshBuilder(var32, false, false, false, false));
             var47 = mj.identityTransform(-31121);
             var35 = var47;
             var20Lifetime1 = var35;

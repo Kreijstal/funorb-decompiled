@@ -19,11 +19,11 @@ final class MarkerSliderPainter implements WidgetPainter {
     private BitmapFont font;
     static UiComponent field_c;
 
-    final static so a(int param0, MeshBuilder param1, int[] param2) {
-        so var3 = null;
+    final static SceneNode a(int param0, MeshBuilder param1, int[] param2) {
+        SceneNode var3 = null;
         RuntimeException var3_ref = null;
-        so stackIn_2_0 = null;
-        so stackIn_4_0 = null;
+        SceneNode stackIn_2_0 = null;
+        SceneNode stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -32,10 +32,10 @@ final class MarkerSliderPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 2) {
-            stackIn_2_0 = (so) null;
+            stackIn_2_0 = (SceneNode) null;
             return stackIn_2_0;
           }
-          var3 = new so();
+          var3 = new SceneNode();
           var3.field_d = il.a((byte) 112, param2);
           var3.field_i = param1;
           IntrusiveNodeHashTable.a(var3.field_d, -123, var3.field_i);

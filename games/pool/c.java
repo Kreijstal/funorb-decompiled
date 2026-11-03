@@ -51,9 +51,9 @@ final class c {
           }
           gp.a((byte) 58, var4);
           var12 = (BitmapFont) null;
-          tp.field_i = id.a(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
-          CushionSegment.field_c = id.a(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
-          LoginRequiredScreen.field_J = id.a(0, 0, 16777215, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
+          tp.field_i = MouseWheelInput.createFramedLabel(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
+          CushionSegment.field_c = MouseWheelInput.createFramedLabel(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
+          LoginRequiredScreen.field_J = MouseWheelInput.createFramedLabel(0, 0, 16777215, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           var16 = SoftwareRasterizer.pixels;

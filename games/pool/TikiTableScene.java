@@ -367,7 +367,7 @@ final class TikiTableScene extends ModelTableScene {
             var17 = this.field_O[var15];
             var34 = this.field_M[var15];
             var19 = var16;
-            var21 = a.a(true, new MeshBuilder(var17, false, false, false, false));
+            var21 = a.mirrorVertically(true, new MeshBuilder(var17, false, false, false, false));
             var29 = mj.identityTransform(-31121);
             var24 = var29;
             var20 = var24;
@@ -768,10 +768,10 @@ final class TikiTableScene extends ModelTableScene {
         int var8 = 0;
         try {
           param3 = new MeshBuilder(param3, false, false, false, false);
-          var7_int = param5 * hc.a(2047, param1) >> 16;
-          var8 = param5 * ScrollPaneWithFooter.a(param1, true) >> 16;
+          var7_int = param5 * hc.cosine(2047, param1) >> 16;
+          var8 = param5 * ScrollPaneWithFooter.sine(param1, true) >> 16;
           param1 = param1 + param4;
-          param3.transform(new int[]{0, 0, 0, hc.a(2047, 1536 + param1), ScrollPaneWithFooter.a(1536 + param1, true), 0, -ScrollPaneWithFooter.a(param1 + 1536, true), hc.a(2047, param1 + 1536), 0, 0, 0, 65536});
+          param3.transform(new int[]{0, 0, 0, hc.cosine(2047, 1536 + param1), ScrollPaneWithFooter.sine(1536 + param1, true), 0, -ScrollPaneWithFooter.sine(param1 + 1536, true), hc.cosine(2047, param1 + 1536), 0, 0, 0, 65536});
           param3.computeBounds();
           if (param2 < 68) {
             this.releaseModels(false);
@@ -822,11 +822,11 @@ final class TikiTableScene extends ModelTableScene {
         int[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        so var19 = null;
+        SceneNode var19 = null;
         Ball[] var21 = null;
-        so var22 = null;
-        so var24 = null;
-        so var26 = null;
+        SceneNode var22 = null;
+        SceneNode var24 = null;
+        SceneNode var26 = null;
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
@@ -896,7 +896,7 @@ final class TikiTableScene extends ModelTableScene {
           for (var5 = 0; ln.field_u.length > var5; var5++) {
             var19 = ln.field_u[var5];
             var39 = ArchiveRequest.field_w;
-            var19.b((byte) 112, 0, var19.field_j.length, var39);
+            var19.sortModelsByDepth((byte) 112, 0, var19.field_j.length, var39);
           }
           this.a(false, var30, var21);
           kf.a(ta.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, cq.field_c);
@@ -912,9 +912,9 @@ final class TikiTableScene extends ModelTableScene {
             TriangleRasterizer.colorPalette = dn.field_m[-1 + var5Lifetime1];
             var22 = ln.field_u[var5Lifetime1];
             var40 = ArchiveRequest.field_w;
-            var22.a((byte) -122, 0, var22.field_j.length, var40);
+            var22.drawModelRange((byte) -122, 0, var22.field_j.length, var40);
             if (0L != (256L & LinkButtonPainter.field_i)) {
-              ln.field_u[var5Lifetime1].a(ArchiveRequest.field_w, 0);
+              ln.field_u[var5Lifetime1].drawAllModels(ArchiveRequest.field_w, 0);
             }
           }
           TriangleRasterizer.colorPalette = dn.field_m[0];
@@ -924,16 +924,16 @@ final class TikiTableScene extends ModelTableScene {
           }
           var24 = ln.field_u[1];
           var41 = ArchiveRequest.field_w;
-          var24.a((byte) -115, 0, var24.field_j.length, var41);
+          var24.drawModelRange((byte) -115, 0, var24.field_j.length, var41);
           if ((LinkButtonPainter.field_i & 256L) != 0L) {
-            ln.field_u[1].a(ArchiveRequest.field_w, 0);
+            ln.field_u[1].drawAllModels(ArchiveRequest.field_w, 0);
           }
           TriangleRasterizer.colorPalette = var6;
           var26 = ln.field_u[0];
           var42 = ArchiveRequest.field_w;
-          var26.a((byte) -98, 0, var26.field_j.length, var42);
+          var26.drawModelRange((byte) -98, 0, var26.field_j.length, var42);
           if ((256L & LinkButtonPainter.field_i) != 0L) {
-            ln.field_u[0].a(ArchiveRequest.field_w, 0);
+            ln.field_u[0].drawAllModels(ArchiveRequest.field_w, 0);
           }
           if ((4194304L & LinkButtonPainter.field_i) != 0L) {
             return;
@@ -1129,20 +1129,20 @@ final class TikiTableScene extends ModelTableScene {
           var9++;
         }
         dn.field_m = new int[ThemeSelectScreen.field_K][];
-        ln.field_u = new so[ThemeSelectScreen.field_K];
-        ah.field_e = new so[ThemeSelectScreen.field_K];
+        ln.field_u = new SceneNode[ThemeSelectScreen.field_K];
+        ah.field_e = new SceneNode[ThemeSelectScreen.field_K];
         for (var5 = 0; ThemeSelectScreen.field_K > var5; var5++) {
           var6 = 63 + var5 * 192 / ThemeSelectScreen.field_K;
           var7 = 128;
           dn.field_m[var5] = tq.a(md.a(var7, md.a(var7 << 16, var7 << 8)), var6, false);
-          ah.field_e[var5] = new so();
-          ah.field_e[var5].a((byte) -112, var3[var5]);
+          ah.field_e[var5] = new SceneNode();
+          ah.field_e[var5].setChildren((byte) -112, var3[var5]);
           ck.field_Y[var5].addFirst((byte) -52, new pm(ah.field_e[var5]));
-          ln.field_u[var5] = new so();
-          ln.field_u[var5].a((byte) -121, ck.field_Y[var5]);
-          ln.field_u[var5].a(0);
-          ln.field_u[var5].a(this.field_q, this.field_e, this.field_F, (byte) -35, this.field_u, this.field_C);
-          ln.field_u[var5].d(105);
+          ln.field_u[var5] = new SceneNode();
+          ln.field_u[var5].setChildren((byte) -121, ck.field_Y[var5]);
+          ln.field_u[var5].normalizeOffsets(0);
+          ln.field_u[var5].bakeModels(this.field_q, this.field_e, this.field_F, (byte) -35, this.field_u, this.field_C);
+          ln.field_u[var5].allocateModelArrays(105);
         }
         return;
     }

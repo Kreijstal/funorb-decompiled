@@ -12,7 +12,7 @@ final class cq {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -90) {
-          cq.a(-5);
+          cq.createTutorials(-5);
         }
         field_g = null;
         field_d = null;
@@ -107,42 +107,42 @@ final class cq {
         return -43;
     }
 
-    final static void a(int param0) {
+    final static void createTutorials(int param0) {
         PoolGameModel.i(-27397);
-        so.field_g = new TutorialController[3];
-        so.field_g[0] = new TutorialController(jj.tutorialTitleBasics, -1, 3);
-        so.field_g[0].field_d.addFirst((byte) 110, new bk(QuickChatHelpDialog.tutorialCameraRotate, 100, 0));
-        so.field_g[0].field_d.addFirst((byte) -114, new bk(ResizableDialog.tutorialCameraZoom, 50, 1, so.field_g[0].field_d));
-        so.field_g[0].field_d.addFirst((byte) -80, new bk(ie.tutorialCameraRecentre, 3, 2, so.field_g[0].field_d));
-        so.field_g[0].field_d.addFirst((byte) -50, new bk(je.tutorialShotModeEnter, 1, 3, so.field_g[0].field_d));
-        so.field_g[0].field_d.addFirst((byte) 91, new bk(en.tutorialShotModeRotate, 300, 4, so.field_g[0].field_d));
-        so.field_g[0].field_d.addFirst((byte) 88, new bk(na.tutorialShotModePower, 150, 5, so.field_g[0].field_d));
-        so.field_g[0].field_d.addFirst((byte) -78, new bk(AchievementsScreen.tutorialShotModeTake, 1, 7, so.field_g[0].field_d));
-        so.field_g[0].field_d.addFirst((byte) -110, new bk(om.tutorialShotModeLeave, 1, 6, so.field_g[0].field_d));
-        so.field_g[0].field_d.addFirst((byte) -74, new bk(TextLineLayout.tutorialBasicComplete, 1, -1, so.field_g[0].field_d));
-        so.field_g[0].updateStepCount(false);
+        SceneNode.field_g = new TutorialController[3];
+        SceneNode.field_g[0] = new TutorialController(jj.tutorialTitleBasics, -1, 3);
+        SceneNode.field_g[0].field_d.addFirst((byte) 110, new TutorialStep(QuickChatHelpDialog.tutorialCameraRotate, 100, 0));
+        SceneNode.field_g[0].field_d.addFirst((byte) -114, new TutorialStep(ResizableDialog.tutorialCameraZoom, 50, 1, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -80, new TutorialStep(ie.tutorialCameraRecentre, 3, 2, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -50, new TutorialStep(je.tutorialShotModeEnter, 1, 3, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) 91, new TutorialStep(en.tutorialShotModeRotate, 300, 4, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) 88, new TutorialStep(na.tutorialShotModePower, 150, 5, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -78, new TutorialStep(AchievementsScreen.tutorialShotModeTake, 1, 7, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -110, new TutorialStep(om.tutorialShotModeLeave, 1, 6, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -74, new TutorialStep(TextLineLayout.tutorialBasicComplete, 1, -1, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].updateStepCount(false);
         TutorialController dupTemp$0 = new TutorialController(fc.tutorialTitleEightBall, 2, 0);
-        TutorialController arrayValue$1 = so.field_g[0];
-        so.field_g[1] = dupTemp$0;
+        TutorialController arrayValue$1 = SceneNode.field_g[0];
+        SceneNode.field_g[1] = dupTemp$0;
         arrayValue$1.field_j = dupTemp$0;
         if (param0 != 4313) {
           return;
         }
-        so.field_g[1].field_d.addFirst((byte) -59, new bk(MessageDialog.tutorialEightBallStartPlaceCueball, 40, 13, 128));
-        so.field_g[1].field_d.addFirst((byte) -43, new bk(dr.tutorialEightBallBreak, 1, 8, 0));
-        so.field_g[1].field_d.addFirst((byte) 99, new bk(ea.tutorialEightBallAfterbreak, 1, 9, 0));
-        so.field_g[1].field_d.addFirst((byte) 87, new bk(gn.tutorialEightBallAfterfirstpot, 7, 11, 0));
-        so.field_g[1].field_d.addFirst((byte) 99, new bk(ChatMessageLine.tutorialEightBallAftergrouppot, 1, 12, 0));
-        so.field_g[1].field_d.addFirst((byte) -6, new bk(MusicPatch.tutorialEightBallComplete, 1, -1, 0));
-        so.field_g[1].updateStepCount(false);
-        so.field_g[2] = new TutorialController(NetworkGameClient.tutorialTitleNineBall, 2, 1);
-        so.field_g[2].field_d.addFirst((byte) -90, new bk(TextPairLoginPayload.tutorialNineBallStartPlaceCueball, 40, 13, 128));
-        so.field_g[2].field_d.addFirst((byte) -99, new bk(SoundCache.tutorialNineBallBreak, 1, 8, 0));
-        so.field_g[2].field_d.addFirst((byte) -21, new bk(DateInputWidget.tutorialNineBallAfterbreak, 1, 14, 0));
-        so.field_g[2].field_d.addFirst((byte) -9, new bk(pl.tutorialNineBallPottingABall, 1, 15, 0));
-        so.field_g[2].field_d.addFirst((byte) -62, new bk(LoginForm.tutorialNineBallPottingNine, 1, 16, 0));
-        so.field_g[2].field_d.addFirst((byte) 92, new bk(rc.tutorialNineBallFinal, 1, -1, 0));
-        so.field_g[2].updateStepCount(false);
+        SceneNode.field_g[1].field_d.addFirst((byte) -59, new TutorialStep(MessageDialog.tutorialEightBallStartPlaceCueball, 40, 13, 128));
+        SceneNode.field_g[1].field_d.addFirst((byte) -43, new TutorialStep(dr.tutorialEightBallBreak, 1, 8, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) 99, new TutorialStep(ea.tutorialEightBallAfterbreak, 1, 9, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) 87, new TutorialStep(gn.tutorialEightBallAfterfirstpot, 7, 11, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) 99, new TutorialStep(ChatMessageLine.tutorialEightBallAftergrouppot, 1, 12, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) -6, new TutorialStep(MusicPatch.tutorialEightBallComplete, 1, -1, 0));
+        SceneNode.field_g[1].updateStepCount(false);
+        SceneNode.field_g[2] = new TutorialController(NetworkGameClient.tutorialTitleNineBall, 2, 1);
+        SceneNode.field_g[2].field_d.addFirst((byte) -90, new TutorialStep(TextPairLoginPayload.tutorialNineBallStartPlaceCueball, 40, 13, 128));
+        SceneNode.field_g[2].field_d.addFirst((byte) -99, new TutorialStep(SoundCache.tutorialNineBallBreak, 1, 8, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) -21, new TutorialStep(DateInputWidget.tutorialNineBallAfterbreak, 1, 14, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) -9, new TutorialStep(pl.tutorialNineBallPottingABall, 1, 15, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) -62, new TutorialStep(LoginForm.tutorialNineBallPottingNine, 1, 16, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) 92, new TutorialStep(rc.tutorialNineBallFinal, 1, -1, 0));
+        SceneNode.field_g[2].updateStepCount(false);
     }
 
     final static MeshBuilder a(int param0, int param1, int param2, MeshBuilder param3, int param4) {

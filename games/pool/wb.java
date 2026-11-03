@@ -6,7 +6,7 @@ final class wb {
     static String muGameHasStarted;
     static String privatechatBlankareaExplanation;
     static pn[] field_e;
-    static so field_c;
+    static SceneNode field_c;
     static String sendPm;
 
     final static void a(boolean param0, java.applet.Applet param1) {

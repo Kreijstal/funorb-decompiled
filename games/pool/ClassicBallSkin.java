@@ -110,7 +110,7 @@ final class ClassicBallSkin extends BallSkin {
         }
         try {
           rm.field_b = param4;
-          bk.field_m = param3;
+          TutorialStep.field_m = param3;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mf.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

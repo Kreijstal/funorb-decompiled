@@ -525,7 +525,7 @@ public final class Pool extends NetworkGameClient {
         GameApplet.releaseStatics((byte) -77);
         JaggrabDownloader.releaseStatics(true);
         MouseHandler.releaseStatics((byte) -109);
-        id.a((byte) 35);
+        MouseWheelInput.a((byte) 35);
         SoftwareRasterizer.releaseStatics();
         ResourceArchive.releaseStatics(0);
         PacketBuffer.e(4109);
@@ -625,7 +625,7 @@ public final class Pool extends NetworkGameClient {
         mk.a(0);
         Quaternion.releaseStatics(param0 + 144);
         ModelTableScene.releaseStatics((byte) 117);
-        so.releaseStatics(param0 ^ -9943);
+        SceneNode.releaseStatics(param0 ^ -9943);
         SpriteState.releaseStatics((byte) 11);
         DualLinkNode.c(-3604);
         jc.releaseStatics(param0 ^ -28);
@@ -730,7 +730,7 @@ public final class Pool extends NetworkGameClient {
         if (param0 != -28) {
           field_P = (UiComponent) null;
         }
-        op.releaseStatics(0);
+        TextLayout.releaseStatics(0);
         UiWidget.releaseStatics((byte) 80);
         ButtonWidget.releaseStatics((byte) 72);
         SingleChildWidget.releaseStatics(param0 ^ -80);
@@ -826,12 +826,12 @@ public final class Pool extends NetworkGameClient {
         PotEvent.releaseStatics((byte) 90);
         dn.releaseStatics(param0 - 2020);
         ro.releaseStatics(240);
-        bk.releaseStatics(-5917);
+        TutorialStep.releaseStatics(-5917);
         AimTarget.b((byte) 115);
         ph.releaseStatics(false);
         wc.releaseStatics(72);
         MessageDialogContent.releaseStatics(-124);
-        ar.releaseStatics(10);
+        GlowSprite.releaseStatics(10);
         pm.releaseStatics(0);
         RasterSnapshot.releaseStatics((byte) 5);
         ml.a(-26458);
@@ -1550,7 +1550,7 @@ public final class Pool extends NetworkGameClient {
         int var3Lifetime2;
         var65 = null;
         var6 = field_O;
-        da.a(-99);
+        da.initializeMenuLabels(-99);
         if (WeightedLruCache.field_d == null) {
           if (he.field_b != null) {
             var66 = cq.unpackingSoundeffects;
@@ -1595,8 +1595,8 @@ public final class Pool extends NetworkGameClient {
             FreePlayRules.field_e = sk.loadPaletteFont(Ball.field_z, 32362, "", "font", ViewportController.field_q);
             sa.field_h = he.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialish12");
             ModernTableScene.field_Z = he.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialbold14");
-            id.field_c = new CueStick();
-            id.field_c.buildSegments(2);
+            MouseWheelInput.field_c = new CueStick();
+            MouseWheelInput.field_c.buildSegments(2);
             SoundCache.a(0, ViewportController.field_q);
             ScrollPane.a((byte) 27, rl.field_h);
             Camera.field_j = WidgetStyleLayer.loadSprite("basic", (byte) 83, "locked", Under13NoticePanel.field_R);
@@ -1643,7 +1643,7 @@ public final class Pool extends NetworkGameClient {
           DateInputWidget.i((byte) 124);
           MatchingTextValidator.field_w = 0;
           GameRules.field_b = 0;
-          cq.a(4313);
+          cq.createTutorials(4313);
           ee.setFrameRate(50, -74);
           RankingsScreen.field_N.setChannelVolumeScale((byte) -125, -1, 256);
           ij.field_u = HalloweenBallSkin.field_m;
@@ -1748,19 +1748,19 @@ public final class Pool extends NetworkGameClient {
                                   var46 = Ball.field_z;
                                   var48 = SpaceTableScene.waitingforFonts;
                                   var47 = TickClock.loadingFonts;
-                                  KeyHandler.a(dk.a((byte) -21, "", var46, var47, var48), (float)(w.field_i[14] + (w.field_i[15] - w.field_i[14]) * var46.getGroupProgressByName(100, "") / 100), false);
+                                  KeyHandler.a(dk.formatProgressLabel((byte) -21, "", var46, var47, var48), (float)(w.field_i[14] + (w.field_i[15] - w.field_i[14]) * var46.getGroupProgressByName(100, "") / 100), false);
                                   return false;
                                 }
                                 var43 = rl.field_h;
                                 var45 = rp.waitingforGraphics;
                                 var44 = oj.loadingGraphics;
-                                KeyHandler.a(dk.a((byte) -1, "", var43, var44, var45), (float)(w.field_i[13] + (w.field_i[14] - w.field_i[13]) * var43.getGroupProgressByName(100, "") / 100), false);
+                                KeyHandler.a(dk.formatProgressLabel((byte) -1, "", var43, var44, var45), (float)(w.field_i[13] + (w.field_i[14] - w.field_i[13]) * var43.getGroupProgressByName(100, "") / 100), false);
                                 return false;
                               }
                               var40 = ViewportController.field_q;
                               var42 = rp.waitingforGraphics;
                               var41 = oj.loadingGraphics;
-                              KeyHandler.a(dk.a((byte) 119, "", var40, var41, var42), (float)(w.field_i[12] + (w.field_i[13] - w.field_i[12]) * var40.getGroupProgressByName(100, "") / 100), false);
+                              KeyHandler.a(dk.formatProgressLabel((byte) 119, "", var40, var41, var42), (float)(w.field_i[12] + (w.field_i[13] - w.field_i[12]) * var40.getGroupProgressByName(100, "") / 100), false);
                               return false;
                             }
                             var37 = jc.field_a;
@@ -1790,43 +1790,43 @@ public final class Pool extends NetworkGameClient {
                     var25 = QuickChatMenu.field_Zb;
                     var27 = SpaceTableScene.waitingforFonts;
                     var26 = TickClock.loadingFonts;
-                    KeyHandler.a(dk.a((byte) 118, "lobby", var25, var26, var27), (float)(w.field_i[7] + (-w.field_i[7] + w.field_i[8]) * var25.getGroupProgressByName(100, "lobby") / 100), false);
+                    KeyHandler.a(dk.formatProgressLabel((byte) 118, "lobby", var25, var26, var27), (float)(w.field_i[7] + (-w.field_i[7] + w.field_i[8]) * var25.getGroupProgressByName(100, "lobby") / 100), false);
                     return false;
                   }
                   var22 = Under13NoticePanel.field_R;
                   var24 = rp.waitingforGraphics;
                   var23 = oj.loadingGraphics;
-                  KeyHandler.a(dk.a((byte) 122, "lobby", var22, var23, var24), (float)(w.field_i[6] + (-w.field_i[6] + w.field_i[7]) * var22.getGroupProgressByName(100, "lobby") / 100), false);
+                  KeyHandler.a(dk.formatProgressLabel((byte) 122, "lobby", var22, var23, var24), (float)(w.field_i[6] + (-w.field_i[6] + w.field_i[7]) * var22.getGroupProgressByName(100, "lobby") / 100), false);
                   return false;
                 }
                 var19 = Under13NoticePanel.field_R;
                 var21 = rp.waitingforGraphics;
                 var20 = oj.loadingGraphics;
-                KeyHandler.a(dk.a((byte) 101, "basic", var19, var20, var21), (float)(w.field_i[5] + (w.field_i[6] - w.field_i[5]) * var19.getGroupProgressByName(100, "basic") / 100), false);
+                KeyHandler.a(dk.formatProgressLabel((byte) 101, "basic", var19, var20, var21), (float)(w.field_i[5] + (w.field_i[6] - w.field_i[5]) * var19.getGroupProgressByName(100, "basic") / 100), false);
                 return false;
               }
               var16 = QuickChatMenu.field_Zb;
               var18 = SpaceTableScene.waitingforFonts;
               var17 = TickClock.loadingFonts;
-              KeyHandler.a(dk.a((byte) -116, "arialish12", var16, var17, var18), (float)(w.field_i[4] + (-w.field_i[4] + w.field_i[5]) * var16.getGroupProgressByName(100, "arialish12") / 100), false);
+              KeyHandler.a(dk.formatProgressLabel((byte) -116, "arialish12", var16, var17, var18), (float)(w.field_i[4] + (-w.field_i[4] + w.field_i[5]) * var16.getGroupProgressByName(100, "arialish12") / 100), false);
               return false;
             }
             var13 = QuickChatMenu.field_Zb;
             var15 = SpaceTableScene.waitingforFonts;
             var14 = TickClock.loadingFonts;
-            KeyHandler.a(dk.a((byte) -61, "arialbold14", var13, var14, var15), (float)(w.field_i[3] + (-w.field_i[3] + w.field_i[4]) * var13.getGroupProgressByName(100, "arialbold14") / 100), false);
+            KeyHandler.a(dk.formatProgressLabel((byte) -61, "arialbold14", var13, var14, var15), (float)(w.field_i[3] + (-w.field_i[3] + w.field_i[4]) * var13.getGroupProgressByName(100, "arialbold14") / 100), false);
             return false;
           }
           var10 = Under13NoticePanel.field_R;
           var12 = rp.waitingforGraphics;
           var11 = oj.loadingGraphics;
-          KeyHandler.a(dk.a((byte) -17, "arialish12", var10, var11, var12), (float)(w.field_i[2] + (-w.field_i[2] + w.field_i[3]) * var10.getGroupProgressByName(100, "arialish12") / 100), false);
+          KeyHandler.a(dk.formatProgressLabel((byte) -17, "arialish12", var10, var11, var12), (float)(w.field_i[2] + (-w.field_i[2] + w.field_i[3]) * var10.getGroupProgressByName(100, "arialish12") / 100), false);
           return false;
         }
         var7 = Under13NoticePanel.field_R;
         var9 = rp.waitingforGraphics;
         var8 = oj.loadingGraphics;
-        KeyHandler.a(dk.a((byte) -22, "arialbold14", var7, var8, var9), (float)(w.field_i[1] + (w.field_i[2] - w.field_i[1]) * var7.getGroupProgressByName(100, "arialbold14") / 100), false);
+        KeyHandler.a(dk.formatProgressLabel((byte) -22, "arialbold14", var7, var8, var9), (float)(w.field_i[1] + (w.field_i[2] - w.field_i[1]) * var7.getGroupProgressByName(100, "arialbold14") / 100), false);
         return false;
     }
 

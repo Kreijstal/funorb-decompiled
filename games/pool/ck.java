@@ -117,7 +117,7 @@ final class ck extends HotspotTextWidget {
           var35 = (io) ((Object) this.renderer);
           var10 = -91 % ((-42 - param1) / 53);
           var9 = this.widgetX + param2;
-          var11 = var35.textTop(param3, (UiWidget) (this), (byte) -7) + (var35.ensureTextLayout(0, (UiWidget) (this)).a((byte) 66) >> 1);
+          var11 = var35.textTop(param3, (UiWidget) (this), (byte) -7) + (var35.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
           if (ji.field_h == var6) {
             var21 = bo.field_a[0];
             var12 = var21.field_w << 1;
@@ -185,7 +185,7 @@ final class ck extends HotspotTextWidget {
           var36 = (io) ((Object) this.renderer);
           var10Lifetime1 = -91 % ((-42 - param1) / 53);
           var9Lifetime1 = this.widgetX + param2;
-          var11Lifetime1 = var36.textTop(param3, (UiWidget) (this), (byte) -7) + (var36.ensureTextLayout(0, (UiWidget) (this)).a((byte) 66) >> 1);
+          var11Lifetime1 = var36.textTop(param3, (UiWidget) (this), (byte) -7) + (var36.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
           if (ji.field_h == var6) {
             var27 = bo.field_a[0];
             var12Lifetime1 = var27.field_w << 1;
@@ -255,7 +255,7 @@ final class ck extends HotspotTextWidget {
         var37 = (io) ((Object) this.renderer);
         var10Lifetime2 = -91 % ((-42 - param1) / 53);
         var9Lifetime2 = this.widgetX + param2;
-        var11Lifetime2 = var37.textTop(param3, (UiWidget) (this), (byte) -7) + (var37.ensureTextLayout(0, (UiWidget) (this)).a((byte) 66) >> 1);
+        var11Lifetime2 = var37.textTop(param3, (UiWidget) (this), (byte) -7) + (var37.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
         if (ji.field_h == var6Lifetime1) {
           var32 = bo.field_a[0];
           var12Lifetime2 = var32.field_w << 1;
@@ -322,7 +322,7 @@ final class ck extends HotspotTextWidget {
         field_W = null;
     }
 
-    final static int a(byte param0, int param1, int param2, int param3) {
+    final static int easeOutQuadratic(byte param0, int param1, int param2, int param3) {
         if (param0 < -123) {
           param3 = -param3 + param2;
           return -(param3 * param3 * param1 / param2 / param2) + param1;

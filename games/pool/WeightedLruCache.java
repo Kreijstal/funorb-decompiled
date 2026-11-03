@@ -162,7 +162,7 @@ final class WeightedLruCache {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            ar.field_g = param2;
+            GlowSprite.field_g = param2;
             try {
               if (param1 > -103) {
                 cont = (String) null;

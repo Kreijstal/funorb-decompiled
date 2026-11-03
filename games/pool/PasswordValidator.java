@@ -266,11 +266,11 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_21_0 = NodeHashTableIterator.createPasswordvalid;
             return stackIn_21_0;
           }
-          if (TutorialController.a(var5, var7, 17924)) {
+          if (TutorialController.containsForwardOrReversed(var5, var7, 17924)) {
             stackIn_24_0 = TranslatedUiText.field_o;
             return stackIn_24_0;
           }
-          if (co.a(var7, (byte) -112, var5)) {
+          if (co.containsForwardOrReversed(var7, (byte) -112, var5)) {
             stackIn_28_0 = AgeValidator.createAlertPasscontainsnamePartial;
             return stackIn_28_0;
           }

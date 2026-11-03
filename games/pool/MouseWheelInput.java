@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class id {
+abstract class MouseWheelInput {
     static CueStick field_c;
     static int field_b;
     static String menuOptionReturnToTutorial;
     static Sprite[] field_a;
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
-    final static UiComponent a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12) {
+    final static UiComponent createFramedLabel(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12) {
         UiComponent var13 = null;
         RuntimeException var13_ref = null;
         UiComponent stackIn_1_0 = null;
@@ -147,7 +147,7 @@ abstract class id {
         var26 = Pool.field_O;
         try {
           if (param0 < 95) {
-            id.a(33, true);
+            MouseWheelInput.a(33, true);
           }
           var27 = PlayerContextMenu.field_e;
           var2 = var27.readUnsignedByte(-107);
@@ -289,7 +289,7 @@ abstract class id {
         try {
           if (param0 != 127) {
             var5 = (BitmapFont) null;
-            id.a(61, -54, 2, 71, 91, -21, -24, 76, 60, (BitmapFont) null, -98, -116, 30);
+            MouseWheelInput.createFramedLabel(61, -54, 2, 71, 91, -21, -24, 76, 60, (BitmapFont) null, -98, -116, 30);
           }
           var1 = wn.field_a;
           synchronized (var1) {
@@ -311,7 +311,7 @@ abstract class id {
                 TextLineLayout.field_c[var2] = true;
               }
             }
-            ja.field_c = op.field_h;
+            ja.field_c = TextLayout.field_h;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -321,7 +321,7 @@ abstract class id {
         }
     }
 
-    abstract int b(int param0);
+    abstract int takeRotation(int param0);
 
     final static void a(int param0, int param1, Sprite[] param2, int param3, byte param4) {
         RuntimeException stackIn_13_0 = null;
@@ -343,7 +343,7 @@ abstract class id {
             var6 = param2[2].field_w;
             var7 = param2[1].field_w;
             if (param4 != 23) {
-              id.c(-44);
+              MouseWheelInput.c(-44);
             }
             param2[0].draw(param3, param0);
             param2[2].draw(-var6 + (param1 + param3), param0);
@@ -372,13 +372,13 @@ abstract class id {
         }
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void attach(byte param0, java.awt.Component param1);
 
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 != 35) {
-          id.c(109);
+          MouseWheelInput.c(109);
         }
         menuOptionReturnToTutorial = null;
     }

@@ -107,7 +107,7 @@ final class wf {
         String var14 = null;
         PlayerContextMenu var15 = null;
         try {
-          dr.a((String) null, -1, 0L, param2.getGameId(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
+          dr.openPlayerContextMenu((String) null, -1, 0L, param2.getGameId(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
           if (param2.field_ec && (param2.field_Yb == 2 ||
             !(TutorialController.field_i < 2))) {
             var9 = PlasmaBallSkin.field_m;

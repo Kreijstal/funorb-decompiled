@@ -457,7 +457,7 @@ class MenuScreen extends jh {
                                   } else {
                                     if (var6 == 40) {
                                       if (!(!this.selection.isPressActivated((byte) 99))) {
-                                        UiComponent.field_Ab = so.field_g[0];
+                                        UiComponent.field_Ab = SceneNode.field_g[0];
                                         DialWidget.field_W = 3;
                                         GameRules.field_b = -6;
                                       }
@@ -465,7 +465,7 @@ class MenuScreen extends jh {
                                       if (var6 == 41) {
                                         if (!(!this.selection.isPressActivated((byte) 101))) {
                                           DialWidget.field_W = 3;
-                                          UiComponent.field_Ab = so.field_g[1];
+                                          UiComponent.field_Ab = SceneNode.field_g[1];
                                           GameRules.field_b = -6;
                                         }
                                       } else {
@@ -474,7 +474,7 @@ class MenuScreen extends jh {
                                             break regionExit2;
                                           }
                                           GameRules.field_b = -6;
-                                          UiComponent.field_Ab = so.field_g[2];
+                                          UiComponent.field_Ab = SceneNode.field_g[2];
                                           DialWidget.field_W = 3;
                                         } else {
                                           if (43 == var6) {
@@ -1059,7 +1059,7 @@ class MenuScreen extends jh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          dr.a(param6.displayName, -1, param6.playerId, -1, param1, param6.accountName, 32540, param6, (int[]) null);
+          dr.openPlayerContextMenu(param6.displayName, -1, param6.playerId, -1, param1, param6.accountName, 32540, param6, (int[]) null);
           PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, true);
           PlasmaBallSkin.field_m.buildPlayerMenu(0, (int[]) null, (byte) 75);
           PlasmaBallSkin.field_m.addReportAbuseAction((byte) 65);

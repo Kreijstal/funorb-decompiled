@@ -15,7 +15,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         this(param0, param1, param1.scrollPane.viewport, param1.scrollPane.scrollbar, param1.leftFooter, param2, param3);
     }
 
-    final static int a(int param0, boolean param1, boolean param2, CharSequence param3) {
+    final static int parseIntWithRadix(int param0, boolean param1, boolean param2, CharSequence param3) {
         int stackIn_36_0 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
@@ -40,7 +40,7 @@ final class ScrollPaneWithFooter extends UiComponent {
             var8 = 0;
             if (!param1) {
               var11 = (CharSequence) null;
-              ScrollPaneWithFooter.a(-24, false, false, (CharSequence) null);
+              ScrollPaneWithFooter.parseIntWithRadix(-24, false, false, (CharSequence) null);
             }
             while (var8 < var7) {
               boolean decompiledFrameRemainder0 = true;
@@ -109,7 +109,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         this.layoutPaneFooter(param5, param4, 0, param3);
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int sine(int param0, boolean param1) {
         if (!param1) {
           return -9;
         }
@@ -179,7 +179,7 @@ final class ScrollPaneWithFooter extends UiComponent {
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + dg.a(param0 ^ 76, "\n", param1, "%0a"));
+        System.out.println("Error: " + dg.replaceAll(param0 ^ 76, "\n", param1, "%0a"));
         if (param0 != 55) {
           field_Pb = (Sprite) null;
         }

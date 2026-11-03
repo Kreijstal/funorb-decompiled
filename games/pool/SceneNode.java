@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so {
+final class SceneNode {
     private int[] field_f;
     static UiComponent field_k;
     private ModelMesh field_a;
     int[] field_j;
-    so[] field_b;
+    SceneNode[] field_b;
     static TutorialController[] field_g;
     static BitmapFont field_h;
     MeshBuilder field_i;
@@ -53,7 +53,7 @@ final class so {
           HighscoresScreen.a((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
           if (param5 != -25) {
             var20 = (IndexedSprite[]) null;
-            so.a((String[][]) null, -73, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (int[]) null, (ResourceArchive) null, false, (IndexedSprite[]) null);
+            SceneNode.a((String[][]) null, -73, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (int[]) null, (ResourceArchive) null, false, (IndexedSprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -148,16 +148,16 @@ final class so {
         }
     }
 
-    so(IntrusiveDeque param0) {
+    SceneNode(IntrusiveDeque param0) {
         this();
         try {
-          this.a((byte) -107, param0);
+          this.setChildren((byte) -107, param0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    so(so[] param0) {
+    SceneNode(SceneNode[] param0) {
         this();
         try {
           this.field_b = param0;
@@ -166,7 +166,7 @@ final class so {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, byte param3, int[] param4, boolean[] param5) {
+    final void drawSortedModels(boolean param0, int param1, int param2, byte param3, int[] param4, boolean[] param5) {
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -196,8 +196,8 @@ final class so {
             if (stackIn_6_0 == stackIn_9_1) {
               var10 = this.field_e[var9];
               if (var10.getBoundingRadius() << 1 > ModelMesh.field_Y.length) {
-                this.a(param4, var10, this.field_c[var9], -78);
-                this.a(1, "Model too big - radixsize:" + (var10.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var10.field_P, var10, param4, this.field_c[var9]);
+                this.drawBoundingBox(param4, var10, this.field_c[var9], -78);
+                this.drawModelLabel(1, "Model too big - radixsize:" + (var10.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var10.field_P, var10, param4, this.field_c[var9]);
               } else {
                 var10.a(param4, this.field_c[var9]);
               }
@@ -225,7 +225,7 @@ final class so {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int[] param3) {
+    final void drawModelRange(byte param0, int param1, int param2, int[] param3) {
         int discarded$1 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -241,7 +241,7 @@ final class so {
         try {
           if (param0 > -57) {
             var9 = (ModelMesh[]) null;
-            discarded$1 = this.a((int[][]) null, -64, 116, (ModelMesh[]) null);
+            discarded$1 = this.collectModels((int[][]) null, -64, 116, (ModelMesh[]) null);
           }
           for (var5_int = -1 + param2; param1 <= var5_int; var5_int--) {
             var6 = this.field_j[var5_int];
@@ -249,8 +249,8 @@ final class so {
             if (var7.getBoundingRadius() << 1 <= ModelMesh.field_Y.length) {
               var7.a(param3, this.field_c[var6]);
             } else {
-              this.a(param3, var7, this.field_c[var6], -122);
-              this.a(1, "Model too big - radixsize:" + (var7.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var7.field_P, var7, param3, this.field_c[var6]);
+              this.drawBoundingBox(param3, var7, this.field_c[var6], -122);
+              this.drawModelLabel(1, "Model too big - radixsize:" + (var7.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var7.field_P, var7, param3, this.field_c[var6]);
             }
           }
           return;
@@ -268,7 +268,7 @@ final class so {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void translate(int param0, byte param1, int param2, int param3) {
         int var5 = 0;
         int var6 = Pool.field_O;
         if (null != this.field_d) {
@@ -278,15 +278,15 @@ final class so {
         }
         if (null != this.field_b) {
           for (var5 = 0; this.field_b.length > var5; var5++) {
-            this.field_b[var5].a(param0, (byte) -111, param2, param3);
+            this.field_b[var5].translate(param0, (byte) -111, param2, param3);
           }
         }
         if (param1 > -82) {
-          this.field_b = (so[]) null;
+          this.field_b = (SceneNode[]) null;
         }
     }
 
-    private final void a(int[] param0, ModelMesh param1, int[] param2, int param3) {
+    private final void drawBoundingBox(int[] param0, ModelMesh param1, int[] param2, int param3) {
         int var15 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -317,7 +317,7 @@ final class so {
           var7 = param1.getMinY();
           if (param3 >= -62) {
             var17 = (int[]) null;
-            this.b((byte) 83, -74, 7, (int[]) null);
+            this.sortModelsByDepth((byte) 83, -74, 7, (int[]) null);
           }
           var8 = param1.getMaxY();
           var9 = param1.getMinZ();
@@ -374,7 +374,7 @@ final class so {
         }
     }
 
-    final void a(boolean param0) {
+    final void mergeChildMeshes(boolean param0) {
         int var5 = 0;
         MeshBuilder var6 = null;
         int[] var23 = null;
@@ -382,7 +382,7 @@ final class so {
         MeshBuilder var9 = null;
         int[] var24 = null;
         int var11 = Pool.field_O;
-        int var2 = this.b(120);
+        int var2 = this.countModelParts(120);
         if (var2 == 0) {
           return;
         }
@@ -390,9 +390,9 @@ final class so {
         int[][] var22 = new int[var2][];
         if (param0) {
           boolean[] var12 = (boolean[]) null;
-          this.a(true, 12, -41, (byte) -7, (int[]) null, (boolean[]) null);
+          this.drawSortedModels(true, 12, -41, (byte) -7, (int[]) null, (boolean[]) null);
         }
-        int discarded$0 = this.a(123, var22, 0, var3);
+        int discarded$0 = this.collectMeshBuilders(123, var22, 0, var3);
         for (var5 = 0; var2 > var5; var5++) {
           var6 = var3[var5];
           var23 = var22[var5];
@@ -405,10 +405,10 @@ final class so {
         }
     }
 
-    final void d(int param0) {
+    final void allocateModelArrays(int param0) {
         int var3 = 0;
         int var4 = Pool.field_O;
-        int var2 = this.b(91);
+        int var2 = this.countModelParts(91);
         this.field_c = new int[var2][];
         this.field_e = new ModelMesh[var2];
         this.field_j = new int[var2];
@@ -419,10 +419,10 @@ final class so {
         for (var3 = 0; var3 < var2; var3++) {
           this.field_j[var3] = var3;
         }
-        int discarded$0 = this.a(this.field_c, 0, 6710886, this.field_e);
+        int discarded$0 = this.collectModels(this.field_c, 0, 6710886, this.field_e);
     }
 
-    final void b(byte param0, int param1, int param2, int[] param3) {
+    final void sortModelsByDepth(byte param0, int param1, int param2, int[] param3) {
         int var6 = 0;
         int[] var7 = null;
         int var8 = Pool.field_O;
@@ -438,7 +438,7 @@ final class so {
         }
     }
 
-    private final int a(int[][] param0, int param1, int param2, ModelMesh[] param3) {
+    private final int collectModels(int[][] param0, int param1, int param2, ModelMesh[] param3) {
         int incrementValue$1 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -465,7 +465,7 @@ final class so {
           }
           if (null != this.field_b) {
             for (var5_int = 0; var5_int < this.field_b.length; var5_int++) {
-              param1 = this.field_b[var5_int].a(param0, param1, 6710886, param3);
+              param1 = this.field_b[var5_int].collectModels(param0, param1, 6710886, param3);
             }
           }
           stackIn_13_0 = param1;
@@ -490,7 +490,7 @@ final class so {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+    final void bakeModels(int param0, int param1, int param2, byte param3, int param4, int param5) {
         int var7 = 0;
         int var8 = Pool.field_O;
         if (param3 > -33) {
@@ -501,12 +501,12 @@ final class so {
         }
         if (null != this.field_b) {
           for (var7 = 0; this.field_b.length > var7; var7++) {
-            this.field_b[var7].a(param0, param1, param2, (byte) -59, param4, param5);
+            this.field_b[var7].bakeModels(param0, param1, param2, (byte) -59, param4, param5);
           }
         }
     }
 
-    private final int a(int param0, int[][] param1, int param2, MeshBuilder[] param3) {
+    private final int collectMeshBuilders(int param0, int[][] param1, int param2, MeshBuilder[] param3) {
         int incrementValue$1 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -529,7 +529,7 @@ final class so {
           }
           if (this.field_b != null) {
             for (var5_int = 0; var5_int < this.field_b.length; var5_int++) {
-              param2 = this.field_b[var5_int].a(124, param1, param2, param3);
+              param2 = this.field_b[var5_int].collectMeshBuilders(124, param1, param2, param3);
             }
           }
           var5_intLifetime1 = -64 / ((56 - param0) / 63);
@@ -555,7 +555,7 @@ final class so {
         }
     }
 
-    final void a(int[] param0, int param1) {
+    final void drawAllModels(int[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -566,7 +566,7 @@ final class so {
         var4 = Pool.field_O;
         try {
           for (var3_int = param1; var3_int < this.field_e.length; var3_int++) {
-            this.a(param0, this.field_e[var3_int], this.field_c[var3_int], -104);
+            this.drawBoundingBox(param0, this.field_e[var3_int], this.field_c[var3_int], -104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -583,7 +583,7 @@ final class so {
         }
     }
 
-    private final int b(int param0) {
+    private final int countModelParts(int param0) {
         int var3 = 0;
         int var4 = Pool.field_O;
         if (param0 <= 35) {
@@ -592,28 +592,28 @@ final class so {
         int var2 = null != this.field_i ? 1 : 0;
         if (null != this.field_b) {
           for (var3 = 0; this.field_b.length > var3; var3++) {
-            var2 = var2 + this.field_b[var3].b(41);
+            var2 = var2 + this.field_b[var3].countModelParts(41);
           }
         }
         return var2;
     }
 
-    final void a(int param0) {
+    final void normalizeOffsets(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
         this.field_d = il.a((byte) 123, this.field_d);
         if (null != this.field_b) {
           for (var2 = 0; var2 < this.field_b.length; var2++) {
-            this.field_b[var2].a(0);
+            this.field_b[var2].normalizeOffsets(0);
           }
         }
         if (param0 != 0) {
           int[] var4 = (int[]) null;
-          this.b((byte) 26, 84, -103, (int[]) null);
+          this.sortModelsByDepth((byte) 26, 84, -103, (int[]) null);
         }
     }
 
-    private final void a(int param0, String param1, ModelMesh param2, int[] param3, int[] param4) {
+    private final void drawModelLabel(int param0, String param1, ModelMesh param2, int[] param3, int[] param4) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -678,7 +678,7 @@ final class so {
         }
     }
 
-    final void a(byte param0, IntrusiveDeque param1) {
+    final void setChildren(byte param0, IntrusiveDeque param1) {
         int incrementValue$2 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -691,7 +691,7 @@ final class so {
         RuntimeException var3 = null;
         var6 = Pool.field_O;
         try {
-          this.field_b = new so[param1.size(114)];
+          this.field_b = new SceneNode[param1.size(114)];
           var3_int = 30 / ((-64 - param0) / 40);
           var4 = 0;
           var5 = (pm) (param1.last((byte) -94));
@@ -725,7 +725,7 @@ final class so {
         }
     }
 
-    so() {
+    SceneNode() {
         this.field_a = null;
         this.field_b = null;
         this.field_j = null;
@@ -736,7 +736,7 @@ final class so {
         this.field_d = hp.copyIntArray(ln.field_m, (byte) 88);
     }
 
-    so(int param0) {
+    SceneNode(int param0) {
         this.field_a = null;
         this.field_b = null;
         this.field_j = null;
@@ -745,7 +745,7 @@ final class so {
         this.field_e = null;
         this.field_i = null;
         this.field_d = hp.copyIntArray(ln.field_m, (byte) 94);
-        this.field_b = new so[param0];
+        this.field_b = new SceneNode[param0];
     }
 
     static {

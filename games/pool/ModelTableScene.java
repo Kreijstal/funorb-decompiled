@@ -77,7 +77,7 @@ abstract class ModelTableScene extends TableScene {
           var5 = 0;
           var2 = var5;
           while (ph.field_g.length > var5) {
-            TimeTrialSelectScreen.field_L[var5] = th.field_l[ph.field_g[var5]].b(GzipDecoder.field_d, -31);
+            TimeTrialSelectScreen.field_L[var5] = th.field_l[ph.field_g[var5]].viewDepth(GzipDecoder.field_d, -31);
             OpacityWidget.field_Q[var5] = th.field_l[var5].a(true, GzipDecoder.field_d);
             var5++;
           }
@@ -147,7 +147,7 @@ abstract class ModelTableScene extends TableScene {
           if (PlasmaTableScene.field_ab == 11) {
             bi.b(-125);
           }
-          a.a(TextWidgetPainter.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
+          a.showLoadingProgress(TextWidgetPainter.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
           if (!param0) {
             optionsmenuNotpaused = (String) null;
           }
@@ -172,7 +172,7 @@ abstract class ModelTableScene extends TableScene {
         int[] var9Lifetime2;
         int[] var9Lifetime3;
         try {
-          var10 = a.a(!param3 ? true : false, new MeshBuilder(param4, false, param3, false, false));
+          var10 = a.mirrorVertically(!param3 ? true : false, new MeshBuilder(param4, false, param3, false, false));
           var15 = mj.identityTransform(-31121);
           var11 = var15;
           var9 = var11;

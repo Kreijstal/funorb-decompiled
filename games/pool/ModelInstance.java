@@ -19,7 +19,7 @@ final class ModelInstance implements eb {
     static String invalidName;
     private byte field_d;
 
-    public final int b(int[] param0, int param1) {
+    public final int viewDepth(int[] param0, int param1) {
         RuntimeException var3 = null;
         int[] var4 = null;
         int stackIn_3_0 = 0;
@@ -172,7 +172,7 @@ final class ModelInstance implements eb {
         return new String(var9);
     }
 
-    public final void a(int[] param0, int param1) {
+    public final void draw(int[] param0, int param1) {
         try {
           this.mesh.b(param0, this.transform);
           if (param1 != -32215) {
@@ -267,9 +267,9 @@ final class ModelInstance implements eb {
           var5 = 50 / ((param0 - 20) / 37);
           var3 = null;
           var4 = null;
-          if (null != ar.field_g &&
-            !ar.field_g.equals(param2.getParameter("settings"))) {
-            var3 = ar.field_g;
+          if (null != GlowSprite.field_g &&
+            !GlowSprite.field_g.equals(param2.getParameter("settings"))) {
+            var3 = GlowSprite.field_g;
             var4 = var3;
             var4 = var3;
           }
@@ -434,7 +434,7 @@ final class ModelInstance implements eb {
         try {
           if (!param0) {
             var4 = (int[]) null;
-            this.a((int[]) null, 86);
+            this.draw((int[]) null, 86);
           }
           stackIn_5_0 = !(0 >= this.field_e * (this.transform[0] - param1[0]) + this.field_d * (-param1[1] + this.transform[1]));
           return stackIn_5_0;

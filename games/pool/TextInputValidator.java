@@ -5,7 +5,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
     private TextInputWidget validatedInput;
     static String unableToDeleteIgnore;
     static Sprite field_i;
-    static so field_h;
+    static SceneNode field_h;
     static qr field_j;
 
     public final void onTextInputChanged(TextInputWidget param0, int param1) {

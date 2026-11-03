@@ -12,7 +12,7 @@ final class de {
     static boolean field_g;
     static int field_a;
 
-    final static float a(int param0, int param1, int param2) {
+    final static float scaleByPowerOfTwo(int param0, int param1, int param2) {
         if (param0 != -1) {
           return -0.7121016979217529f;
         }
@@ -41,12 +41,12 @@ final class de {
           }
         }
         if (param0 != 11) {
-          de.a(48, 16, -49);
+          de.scaleByPowerOfTwo(48, 16, -49);
         }
         PasswordValidator.field_o = true;
     }
 
-    final static void a(int param0) {
+    final static void createDebugSliders(int param0) {
         if (aq.field_a != null) {
           if (!TextLineLayout.field_c[59]) {
             return;
@@ -145,7 +145,7 @@ final class de {
         }
     }
 
-    final static boolean a(byte param0, PacketBuffer param1) {
+    final static boolean readBoolean(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

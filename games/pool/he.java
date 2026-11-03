@@ -22,7 +22,7 @@ final class he {
           if (ClientException.field_a == null) {
             return;
           }
-          ClientException.field_a.a((java.awt.Component) ((Object) param0), 84);
+          ClientException.field_a.detach((java.awt.Component) ((Object) param0), 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

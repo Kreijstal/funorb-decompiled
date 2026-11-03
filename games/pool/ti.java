@@ -32,7 +32,7 @@ final class ti {
           if (0L == (LinkButtonPainter.field_i & 1L)) {
             return false;
           }
-          de.a(-105);
+          de.createDebugSliders(-105);
           var1_int = 0;
           var2 = -112 / ((-54 - param0) / 32);
           while (true) {

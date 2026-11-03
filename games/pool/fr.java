@@ -105,14 +105,14 @@ final class fr extends IntrusiveNode {
         if (param0 <= -21) {
           var3 = BufferedFile.field_h * BufferedFile.field_h;
           var4 = var3 - param1 * param1;
-          so.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+          SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
           Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
         var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
         var4Lifetime1 = var3Lifetime1 - param1 * param1;
-        so.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+        SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
         Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
     }
 
@@ -151,14 +151,14 @@ final class fr extends IntrusiveNode {
         if (param0 <= -21) {
           var3 = BufferedFile.field_h * BufferedFile.field_h;
           var4 = var3 - param1 * param1;
-          so.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+          SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
           Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
         var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
         var4Lifetime1 = var3Lifetime1 - param1 * param1;
-        so.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+        SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
         Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
     }
 }

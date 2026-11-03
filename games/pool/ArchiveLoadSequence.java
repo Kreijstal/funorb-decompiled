@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArchiveLoadSequence {
-    static ar[] field_e;
+    static GlowSprite[] field_e;
     private int stepCount;
     static int field_a;
     private int currentStepIndex;

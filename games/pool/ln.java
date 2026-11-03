@@ -12,7 +12,7 @@ final class ln extends IntrusiveNode {
     static int field_t;
     static boolean field_p;
     static int[] field_m;
-    static so[] field_u;
+    static SceneNode[] field_u;
 
     private ln() throws Throwable {
         throw new Error();

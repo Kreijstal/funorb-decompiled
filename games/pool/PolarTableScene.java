@@ -82,16 +82,16 @@ final class PolarTableScene extends ModelTableScene {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
-        so var15 = null;
-        so var17 = null;
+        SceneNode var15 = null;
+        SceneNode var17 = null;
         int[] var19 = null;
-        so var20 = null;
-        so var22 = null;
-        so var24 = null;
-        so var26 = null;
-        so var28 = null;
-        so var30 = null;
-        so var33 = null;
+        SceneNode var20 = null;
+        SceneNode var22 = null;
+        SceneNode var24 = null;
+        SceneNode var26 = null;
+        SceneNode var28 = null;
+        SceneNode var30 = null;
+        SceneNode var33 = null;
         int[] var36 = null;
         int[] var37 = null;
         int[] var40 = null;
@@ -148,10 +148,10 @@ final class PolarTableScene extends ModelTableScene {
           }
           var15 = EmailAvailabilityValidator.field_y;
           var61 = GzipDecoder.field_d;
-          var15.b((byte) 111, 0, var15.field_j.length, var61);
+          var15.sortModelsByDepth((byte) 111, 0, var15.field_j.length, var61);
           var17 = gf.field_e;
           var62 = GzipDecoder.field_d;
-          var17.b((byte) -122, 0, var17.field_j.length, var62);
+          var17.sortModelsByDepth((byte) -122, 0, var17.field_j.length, var62);
           for (var3_int = 0; bc.field_j.length > var3_int; var3_int++) {
             var40 = gf.field_e.field_c[var3_int];
             var19 = var40;
@@ -187,19 +187,19 @@ final class PolarTableScene extends ModelTableScene {
           }
           var20 = sa.field_s;
           var63 = GzipDecoder.field_d;
-          var20.b((byte) 104, 0, var20.field_j.length, var63);
+          var20.sortModelsByDepth((byte) 104, 0, var20.field_j.length, var63);
           var22 = FadingDialog.field_U;
           var64 = GzipDecoder.field_d;
-          var22.b((byte) 119, 0, var22.field_j.length, var64);
+          var22.sortModelsByDepth((byte) 119, 0, var22.field_j.length, var64);
           var24 = EmailAvailabilityValidator.field_y;
           var65 = GzipDecoder.field_d;
-          var24.a((byte) -65, 0, var24.field_j.length, var65);
+          var24.drawModelRange((byte) -65, 0, var24.field_j.length, var65);
           var26 = FadingDialog.field_U;
           var66 = GzipDecoder.field_d;
-          var26.a((byte) -96, 0, var26.field_j.length, var66);
+          var26.drawModelRange((byte) -96, 0, var26.field_j.length, var66);
           var28 = sa.field_s;
           var67 = GzipDecoder.field_d;
-          var28.a((byte) -113, 0, var28.field_j.length, var67);
+          var28.drawModelRange((byte) -113, 0, var28.field_j.length, var67);
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             for (var6 = 0; var6 < var4.length; var6++) {
               if (var4[var6].inPlay) {
@@ -210,7 +210,7 @@ final class PolarTableScene extends ModelTableScene {
           var30 = gf.field_e;
           var68 = GzipDecoder.field_d;
           var69 = bc.field_j;
-          var30.a(false, 0, var30.field_j.length, (byte) 100, var68, var69);
+          var30.drawSortedModels(false, 0, var30.field_j.length, (byte) 100, var68, var69);
           if (0L == (1073741824L & LinkButtonPainter.field_i)) {
             stackIn_37_0 = this;
             stackIn_37_1 = var5;
@@ -229,10 +229,10 @@ final class PolarTableScene extends ModelTableScene {
           var33 = gf.field_e;
           var70 = GzipDecoder.field_d;
           var71 = bc.field_j;
-          var33.a(true, 0, var33.field_j.length, (byte) 117, var70, var71);
+          var33.drawSortedModels(true, 0, var33.field_j.length, (byte) 117, var70, var71);
           if ((LinkButtonPainter.field_i & 256L) != 0L) {
-            FadingDialog.field_U.a(GzipDecoder.field_d, 0);
-            gf.field_e.a(GzipDecoder.field_d, 0);
+            FadingDialog.field_U.drawAllModels(GzipDecoder.field_d, 0);
+            gf.field_e.drawAllModels(GzipDecoder.field_d, 0);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             param1.updateCueStick(-1);
@@ -261,54 +261,54 @@ final class PolarTableScene extends ModelTableScene {
     }
 
     final void initializeScene(boolean param0) {
-        so dupTemp$497 = null;
-        so dupTemp$498 = null;
-        so dupTemp$499 = null;
-        so dupTemp$500 = null;
-        so dupTemp$501 = null;
+        SceneNode dupTemp$497 = null;
+        SceneNode dupTemp$498 = null;
+        SceneNode dupTemp$499 = null;
+        SceneNode dupTemp$500 = null;
+        SceneNode dupTemp$501 = null;
         int var2;
         IntrusiveDeque var3;
         IntrusiveDeque var4;
         IntrusiveDeque var5;
-        so var6;
-        so var7;
-        so var8;
-        so var9;
-        so var10;
-        so var11;
-        so var12;
-        so var13;
-        so var14;
+        SceneNode var6;
+        SceneNode var7;
+        SceneNode var8;
+        SceneNode var9;
+        SceneNode var10;
+        SceneNode var11;
+        SceneNode var12;
+        SceneNode var13;
+        SceneNode var14;
         int var20;
         MeshBuilder var22;
         MeshBuilder var23;
         MeshBuilder var24;
-        so var25;
+        SceneNode var25;
         MeshBuilder var26;
-        so var27;
+        SceneNode var27;
         MeshBuilder var28;
-        so var29;
+        SceneNode var29;
         IntrusiveDeque var33;
         int stackIn_15_0 = 0;
         MeshBuilder stackIn_15_1 = null;
         int stackIn_15_2 = 0;
         boolean stackIn_16_3;
-        so[] stackIn_34_0 = null;
+        SceneNode[] stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
         int var15;
         MeshBuilder var15_ref_eg;
         int var16;
-        so[] var17;
+        SceneNode[] var17;
         int var18;
         int var19;
         PoolMatchController var21;
-        so var30;
+        SceneNode var30;
         MeshBuilder var31;
-        so var32;
-        so[] var34;
+        SceneNode var32;
+        SceneNode[] var34;
         MeshBuilder var36;
-        so[] var37;
-        so[] var39;
+        SceneNode[] var37;
+        SceneNode[] var39;
         int[] var47;
         int[] var48;
         int[] var49;
@@ -331,27 +331,27 @@ final class PolarTableScene extends ModelTableScene {
         var3 = new IntrusiveDeque();
         var4 = new IntrusiveDeque();
         var5 = new IntrusiveDeque();
-        var6 = new so();
-        var7 = new so();
-        var8 = new so();
-        var9 = new so(hj.field_a - ContextMenu.field_Ob);
-        so dupTemp$489 = new so(co.field_db - kg.field_n);
+        var6 = new SceneNode();
+        var7 = new SceneNode();
+        var8 = new SceneNode();
+        var9 = new SceneNode(hj.field_a - ContextMenu.field_Ob);
+        SceneNode dupTemp$489 = new SceneNode(co.field_db - kg.field_n);
         var10 = dupTemp$489;
-        so dupTemp$490 = new so((ol.field_d - DialWidget.field_S) * 4);
+        SceneNode dupTemp$490 = new SceneNode((ol.field_d - DialWidget.field_S) * 4);
         var11 = dupTemp$490;
-        so dupTemp$491 = new so(new so[]{dupTemp$489, var6, dupTemp$490});
+        SceneNode dupTemp$491 = new SceneNode(new SceneNode[]{dupTemp$489, var6, dupTemp$490});
         gf.field_e = dupTemp$491;
-        so dupTemp$492 = new so(co.field_db - kg.field_n);
+        SceneNode dupTemp$492 = new SceneNode(co.field_db - kg.field_n);
         var12 = dupTemp$492;
-        so dupTemp$493 = new so(4 * (ByteStorage.field_e - tg.field_g) + (hf.field_c - rl.field_f) * 2);
+        SceneNode dupTemp$493 = new SceneNode(4 * (ByteStorage.field_e - tg.field_g) + (hf.field_c - rl.field_f) * 2);
         var13 = dupTemp$493;
-        so dupTemp$494 = new so(new so[]{dupTemp$492, var7, dupTemp$493});
+        SceneNode dupTemp$494 = new SceneNode(new SceneNode[]{dupTemp$492, var7, dupTemp$493});
         FadingDialog.field_U = dupTemp$494;
-        so dupTemp$495 = new so(4 * (DraggableWidget.field_V - fr.field_t));
+        SceneNode dupTemp$495 = new SceneNode(4 * (DraggableWidget.field_V - fr.field_t));
         sa.field_s = dupTemp$495;
-        so dupTemp$496 = new so(new so[]{var8, var9});
+        SceneNode dupTemp$496 = new SceneNode(new SceneNode[]{var8, var9});
         EmailAvailabilityValidator.field_y = dupTemp$496;
-        var14 = new so(new so[]{dupTemp$491, dupTemp$494, dupTemp$495, dupTemp$496});
+        var14 = new SceneNode(new SceneNode[]{dupTemp$491, dupTemp$494, dupTemp$495, dupTemp$496});
         for (var2Lifetime1 = kg.field_n; co.field_db > var2Lifetime1; var2Lifetime1++) {
           if (BallDebugOverlay.field_f < this.field_O[var2Lifetime1].field_x + this.field_M[var2Lifetime1][2]) {
             BallDebugOverlay.field_f = this.field_M[var2Lifetime1][2] + this.field_O[var2Lifetime1].field_x;
@@ -405,15 +405,15 @@ final class PolarTableScene extends ModelTableScene {
           var32 = dupTemp$501;
           var5.addFirst((byte) 108, new pm(dupTemp$501));
           var33.addFirst((byte) 84, new pm(var32));
-          this.field_U[-FullscreenErrorDialog.field_hb + var2Lifetime3] = new vm(new so(var33));
+          this.field_U[-FullscreenErrorDialog.field_hb + var2Lifetime3] = new vm(new SceneNode(var33));
         }
-        var6.a((byte) -120, var3);
-        var7.a((byte) 38, var4);
+        var6.setChildren((byte) -120, var3);
+        var7.setChildren((byte) 38, var4);
         if (!param0) {
           var21 = (PoolMatchController) null;
           this.drawScene((byte) 16, (PoolMatchController) null);
         }
-        var8.a((byte) 72, var5);
+        var8.setChildren((byte) 72, var5);
         var15 = 0;
         for (var2Lifetime4 = DialWidget.field_S; var2Lifetime4 < ol.field_d; var2Lifetime4++) {
           var36 = this.field_O[var2Lifetime4];
@@ -450,15 +450,15 @@ final class PolarTableScene extends ModelTableScene {
           bh.a(stackIn_34_0, stackIn_35_1, var49[1], var49[2], this.field_O[var16Lifetime2], var49[0], var18Lifetime2);
           var15Lifetime2 += 4;
         }
-        var14.a(0);
-        new so(new so[]{var11, var10, var12}).a(false);
-        new so(new so[]{var6, var7}).a(false);
-        var14.a(this.field_q, this.field_e, this.field_F, (byte) -79, this.field_u, this.field_C);
-        gf.field_e.d(115);
+        var14.normalizeOffsets(0);
+        new SceneNode(new SceneNode[]{var11, var10, var12}).mergeChildMeshes(false);
+        new SceneNode(new SceneNode[]{var6, var7}).mergeChildMeshes(false);
+        var14.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -79, this.field_u, this.field_C);
+        gf.field_e.allocateModelArrays(115);
         bc.field_j = new boolean[gf.field_e.field_j.length];
-        FadingDialog.field_U.d(101);
-        sa.field_s.d(97);
-        EmailAvailabilityValidator.field_y.d(92);
+        FadingDialog.field_U.allocateModelArrays(101);
+        sa.field_s.allocateModelArrays(97);
+        EmailAvailabilityValidator.field_y.allocateModelArrays(92);
     }
 
     private final void a(int[] param0, int param1) {

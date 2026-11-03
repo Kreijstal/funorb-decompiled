@@ -10,7 +10,7 @@ final class ah {
     int field_f;
     static String tickerHintEnterShotMode;
     int field_a;
-    static so[] field_e;
+    static SceneNode[] field_e;
     int field_j;
 
     public static void releaseStatics(boolean param0) {

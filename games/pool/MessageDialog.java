@@ -18,15 +18,15 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         NanoTickClock.field_t = new UiComponent("decision button a", (UiComponent) null);
         rl.field_b = new UiComponent("decision button b", (UiComponent) null);
         if (param0 < -103) {
-          ar.a(29022, NanoTickClock.field_t);
-          ar.a(29022, rl.field_b);
+          GlowSprite.applyButtonStyle(29022, NanoTickClock.field_t);
+          GlowSprite.applyButtonStyle(29022, rl.field_b);
           LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
           LobbyGame.field_Vb.addChild(-104, rl.field_b);
           return;
         }
         MessageDialog.o((byte) -98);
-        ar.a(29022, NanoTickClock.field_t);
-        ar.a(29022, rl.field_b);
+        GlowSprite.applyButtonStyle(29022, NanoTickClock.field_t);
+        GlowSprite.applyButtonStyle(29022, rl.field_b);
         LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
         LobbyGame.field_Vb.addChild(-104, rl.field_b);
     }

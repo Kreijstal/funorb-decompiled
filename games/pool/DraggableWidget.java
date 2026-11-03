@@ -144,7 +144,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           q.a(param0, 102);
           oj.a(param0, (byte) -106);
-          dr.a((byte) -65, param0);
+          dr.loadFinalFrame((byte) -65, param0);
           MessageDialogContent.a(-257);
           SpaceBallSkin.i(23);
           LobbyPlayer.field_fc = 0 - cl.field_h;

@@ -6,11 +6,11 @@ final class gf {
     static String removefriendfirst;
     static int field_a;
     static String muGameoptAcceptXIntoGame;
-    static so field_e;
+    static SceneNode field_e;
     static ResourceArchive field_g;
     static boolean[] field_b;
 
-    final static void a(int param0, String[] param1) {
+    final static void setNameSuggestions(int param0, String[] param1) {
         try {
           if (ArchiveProvider.field_c != null) {
             ArchiveProvider.field_c.suggestionsPanel.setSuggestions(false, param1);

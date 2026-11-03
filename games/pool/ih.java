@@ -140,7 +140,7 @@ final class ih {
               }
               if (99 == var9Lifetime1) {
                 DialogLayer.b((byte) 63, WhirlpoolHasher.a(0));
-                bq.field_q = new Boolean(de.a((byte) 104, PlayerContextMenu.field_e));
+                bq.field_q = new Boolean(de.readBoolean((byte) 104, PlayerContextMenu.field_e));
                 PlayerContextMenu.field_e.position = 0;
               } else {
                 RankingsScreen.field_J = eh.field_l;

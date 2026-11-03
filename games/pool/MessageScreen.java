@@ -165,8 +165,8 @@ final class MessageScreen extends MenuScreen {
           SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (AccountCreationForm.field_V == null) {
-            if (null != so.field_h) {
-              so.field_h.drawParagraph(UiComponentNode.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != SceneNode.field_h) {
+              SceneNode.field_h.drawParagraph(UiComponentNode.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -177,8 +177,8 @@ final class MessageScreen extends MenuScreen {
           if (var6 != null) {
             var6.draw(245, 199);
           } else {
-            if (so.field_h != null) {
-              so.field_h.drawParagraph(UiComponentNode.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (SceneNode.field_h != null) {
+              SceneNode.field_h.drawParagraph(UiComponentNode.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (SocketArchiveNetworkClient.field_u < hj.field_l) {
@@ -193,7 +193,7 @@ final class MessageScreen extends MenuScreen {
               }
             }
           }
-          if (so.field_h != null) {
+          if (SceneNode.field_h != null) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -210,7 +210,7 @@ final class MessageScreen extends MenuScreen {
               var5++;
             }
             if (var2 != null) {
-              so.field_h.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+              SceneNode.field_h.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
               return;
             }
           }

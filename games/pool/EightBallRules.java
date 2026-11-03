@@ -969,7 +969,7 @@ final class EightBallRules extends GameRules {
               var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, -1, en.playerListFirst);
             }
           }
-          stackIn_14_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{aq.joinTextParts(-107, (CharSequence[]) ((Object) var4[0])), aq.joinTextParts(-86, (CharSequence[]) ((Object) var4[1]))}, -1, AlternateLongAndTextLoginPayload.playerListVsPlayerList);
+          stackIn_14_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{aq.joinCharSequences(-107, (CharSequence[]) ((Object) var4[0])), aq.joinCharSequences(-86, (CharSequence[]) ((Object) var4[1]))}, -1, AlternateLongAndTextLoginPayload.playerListVsPlayerList);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

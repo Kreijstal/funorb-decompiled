@@ -4,7 +4,7 @@
 final class ClientException extends RuntimeException {
     private static int field_k;
     static int field_b;
-    static id field_a;
+    static MouseWheelInput field_a;
     static int field_e;
     static String field_d;
     static int field_h;

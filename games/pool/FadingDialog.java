@@ -7,7 +7,7 @@ abstract class FadingDialog extends WidgetContainer {
     boolean dialogOpen;
     static int field_V;
     static int field_Q;
-    static so field_U;
+    static SceneNode field_U;
     private DialogLayer dialogLayer;
     static String mustloginNotloggedin;
     static String createUnable;

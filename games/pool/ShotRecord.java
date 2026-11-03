@@ -617,10 +617,10 @@ final class ShotRecord extends IntrusiveNode {
 
     final String describeOutcome(int param0) {
         if (param0 == 26859) {
-          return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
+          return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.describeResolutionFlags(this.endResolution, (byte) 10);
         }
         menu = (String) null;
-        return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
+        return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.describeResolutionFlags(this.endResolution, (byte) 10);
     }
 
     final boolean isGroupChoicePending(boolean param0) {
@@ -861,7 +861,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           this.setEndResolution(2, var3_int);
           if ((LinkButtonPainter.field_i & 2097152L) != 0L) {
-            System.out.println("->S2C_END_SHOT: " + ab.a(this.endResolution, (byte) 10));
+            System.out.println("->S2C_END_SHOT: " + ab.describeResolutionFlags(this.endResolution, (byte) 10));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

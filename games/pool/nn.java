@@ -131,16 +131,16 @@ final class nn {
         }
     }
 
-    final static id b(int param0) {
+    final static MouseWheelInput b(int param0) {
         try {
           Throwable var1 = null;
-          id stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 != 96) {
-            return (id) null;
+            return (MouseWheelInput) null;
           }
           try {
-            stackIn_3_0 = (id) (Class.forName("MouseWheelHandler").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

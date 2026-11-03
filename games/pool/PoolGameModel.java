@@ -1180,10 +1180,10 @@ final class PoolGameModel {
           throw new IllegalStateException("Strike point out of range! " + var3.field_D + "," + var3.field_H);
         }
         int var6 = -rf.inverseSquareRoot(-(var5 << 2) + 65536, -121) >> 9;
-        int var7 = ScrollPaneWithFooter.a((int) var3.elevation, true);
-        int var8 = hc.a(2047, (int) var3.elevation);
-        int var9 = ScrollPaneWithFooter.a((int) var3.aimAngle, true);
-        int var10 = hc.a(2047, (int) var3.aimAngle);
+        int var7 = ScrollPaneWithFooter.sine((int) var3.elevation, true);
+        int var8 = hc.cosine(2047, (int) var3.elevation);
+        int var9 = ScrollPaneWithFooter.sine((int) var3.aimAngle, true);
+        int var10 = hc.cosine(2047, (int) var3.aimAngle);
         int var11 = var9;
         int var12 = -var10;
         int var13 = NameEntryPopup.a(var7, false, -var12);
@@ -1367,7 +1367,7 @@ final class PoolGameModel {
         var7 = 1;
         var8 = 1;
         var9 = 1;
-        var10 = hc.a(2047, 170) * 16;
+        var10 = hc.cosine(2047, 170) * 16;
         do {
           var11 = 0;
           scanLoop1: while (true) {
@@ -1541,7 +1541,7 @@ final class PoolGameModel {
             stackIn_4_1 = nj.field_b;
           }
           fr.$cfr$intArgs$a$e9dea5688aa5(stackIn_3_0, stackIn_4_1);
-          na.field_e.a(-40 + so.field_k.height - 2, so.field_k.width, 0, 0, (byte) -114);
+          na.field_e.a(-40 + SceneNode.field_k.height - 2, SceneNode.field_k.width, 0, 0, (byte) -114);
           MarkerSliderPainter.field_c.setBounds(0, 2147483647, 0, cl.field_d.width, ArchiveIndex.field_x);
           stackIn_6_0 = LoginRequiredScreen.field_M;
           stackIn_6_1 = 2 + ArchiveIndex.field_x;
@@ -1556,7 +1556,7 @@ final class PoolGameModel {
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, 18);
           jh.field_a.setBounds(ArchiveIndex.field_x + 2, 2147483647, -2 + (-TranslatedUiText.field_n + cl.field_d.width - 40), TranslatedUiText.field_n + 42, 18);
           DualLinkDeque.field_f.setScrollPaneBounds(TranslatedUiText.field_n, -22 + (cl.field_d.height - ArchiveIndex.field_x), (byte) -112, 2, cl.field_d.width, 0, ArchiveIndex.field_x + 22);
-          ContentTransitionDialog.field_ob.setBounds(so.field_k.height - 40, 2147483647, 0, so.field_k.width, 40);
+          ContentTransitionDialog.field_ob.setBounds(SceneNode.field_k.height - 40, 2147483647, 0, SceneNode.field_k.width, 40);
           ii.field_e.setBounds(0, param1 ^ 2147483647, 0, Bzip2DecoderState.field_f.width, 30);
           MusicCrossfadeStream.field_x.setBounds(30, 2147483647, 0, Bzip2DecoderState.field_f.width, -30 + (-2 + Bzip2DecoderState.field_f.height) - 40);
           var2_int = dr.field_c + 3;
@@ -1894,10 +1894,10 @@ final class PoolGameModel {
 
     final void fillCueTransform(int[] param0, int param1, byte param2, int param3, int param4, int param5) {
         int var14_int = 0;
-        int var7_int = ScrollPaneWithFooter.a(param1, true);
-        int var8 = hc.a(2047, param1);
-        int var9 = ScrollPaneWithFooter.a(param3, true);
-        int var10 = hc.a(2047, param3);
+        int var7_int = ScrollPaneWithFooter.sine(param1, true);
+        int var8 = hc.cosine(2047, param1);
+        int var9 = ScrollPaneWithFooter.sine(param3, true);
+        int var10 = hc.cosine(2047, param3);
         param0[9] = NameEntryPopup.a(var10, false, var7_int);
         param0[10] = NameEntryPopup.a(var9, false, var7_int);
         param0[3] = var9;
