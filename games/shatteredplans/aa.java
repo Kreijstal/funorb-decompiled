@@ -66,7 +66,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         }
     }
 
-    private final String k(int param0) {
+    private final String linkEndTag(int param0) {
         if (param0 != 15) {
           ts var3 = (ts) null;
           this.a(102, -126, 94, (ts) null);
@@ -128,7 +128,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         }
     }
 
-    private final boolean a(boolean param0, ValidatableWidget param1) {
+    private final boolean validateField(boolean param0, ValidatableWidget param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -288,7 +288,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         ce dupTemp$1 = new ce(10000536);
         this.field_H.field_p = (WidgetPainter) ((Object) dupTemp$1);
         this.field_J.field_p = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = QuickChatCategoryRegistry.a(bo.field_Y, 4371, new String[]{this.l(-63), this.k(15)});
+        String var2 = QuickChatCategoryRegistry.a(bo.field_Y, 4371, new String[]{this.linkStartTag(-63), this.linkEndTag(15)});
         int var3 = 20;
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
@@ -367,8 +367,8 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         }
     }
 
-    private final boolean d(boolean param0) {
-        if (!this.m(72)) {
+    private final boolean validateAge(boolean param0) {
+        if (!this.validateAll(72)) {
           return false;
         }
         int var2 = -1;
@@ -392,7 +392,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
     final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.updateHover(param0, param1, param2, param3);
-          this.field_E.field_y = this.m(param3 - 46);
+          this.field_E.field_y = this.validateAll(param3 - 46);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -644,29 +644,29 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         }
     }
 
-    private final String l(int param0) {
+    private final String linkStartTag(int param0) {
         int var2 = -86 / ((param0 - 5) / 48);
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final boolean m(int param0) {
+    private final boolean validateAll(int param0) {
         int var2 = -75 / ((-28 - param0) / 57);
-        if (!this.a(false, this.field_Q)) {
+        if (!this.validateField(false, this.field_Q)) {
           return false;
         }
-        if (!this.a(false, this.field_F)) {
+        if (!this.validateField(false, this.field_F)) {
           return false;
         }
-        if (!this.a(false, this.field_M)) {
+        if (!this.validateField(false, this.field_M)) {
           return false;
         }
-        if (!this.a(false, this.field_J)) {
+        if (!this.validateField(false, this.field_J)) {
           return false;
         }
-        if (!this.a(false, this.field_H)) {
+        if (!this.validateField(false, this.field_H)) {
           return false;
         }
-        if (this.a(false, this.field_L)) {
+        if (this.validateField(false, this.field_L)) {
           return true;
         }
         return false;
@@ -684,7 +684,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
             WeightedLruCache.b((byte) -120);
           } else {
             if (param0 == this.field_E) {
-              discarded$1 = this.d(false);
+              discarded$1 = this.validateAge(false);
             }
           }
           if (param1 != 6) {

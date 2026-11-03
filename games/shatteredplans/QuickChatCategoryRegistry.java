@@ -25,7 +25,7 @@ final class QuickChatCategoryRegistry {
           return;
         }
         try {
-          wk.a((byte) -58, (java.awt.Component) ((Object) param0));
+          wk.attachMouseListeners((byte) -58, (java.awt.Component) ((Object) param0));
           if (aj.field_b != null) {
             aj.field_b.attachTo((java.awt.Component) ((Object) param0), !param1 ? true : false);
           }

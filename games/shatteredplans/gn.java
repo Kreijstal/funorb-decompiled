@@ -97,7 +97,7 @@ final class gn extends WidgetTheme {
                 } else {
                   stackIn_12_2 = var6;
                 }
-                ((wk) (Object) stackIn_11_0).a((byte) stackIn_11_1, stackIn_12_2);
+                ((wk) (Object) stackIn_11_0).copyTo((byte) stackIn_11_1, stackIn_12_2);
               } else {
                 param0.field_C[var4_int] = null;
               }
@@ -172,7 +172,7 @@ final class gn extends WidgetTheme {
         wk dupTemp$0 = new wk();
         this.field_C[0] = dupTemp$0;
         wk var1 = dupTemp$0;
-        var1.a(false);
+        var1.reset(false);
     }
 
     gn(gn param0, boolean param1) {
@@ -409,7 +409,7 @@ final class gn extends WidgetTheme {
             param2 = param2 & var11.field_y;
           }
           var7 = this.field_C[0];
-          this.field_z.a(false);
+          this.field_z.reset(false);
           var7.a(param0, this.field_z, this, param1, 0, param3);
           if (var11 != null) {
             if (var11.field_z) {

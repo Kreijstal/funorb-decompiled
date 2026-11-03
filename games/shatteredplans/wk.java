@@ -13,7 +13,7 @@ final class wk {
     Sprite[] field_h;
     private int field_e;
 
-    final wk a(Sprite[] param0, int param1) {
+    final wk setSprites(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         wk stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -59,7 +59,7 @@ final class wk {
         return this;
     }
 
-    final static boolean a(int param0, CharSequence param1, int param2, boolean param3) {
+    final static boolean parseInt(int param0, CharSequence param1, int param2, boolean param3) {
         int var9 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -229,7 +229,7 @@ final class wk {
         try {
           if (this.field_f) {
             param1.a(param3, true, param0, param5, param2);
-            param1.a(false);
+            param1.reset(false);
           }
           if (null != this.field_g) {
             param1.field_g = this.field_g;
@@ -279,7 +279,7 @@ final class wk {
         }
     }
 
-    final void a(boolean param0) {
+    final void reset(boolean param0) {
         this.field_h = null;
         if (param0) {
           this.a(15, true);
@@ -292,7 +292,7 @@ final class wk {
         this.field_d = 256;
     }
 
-    final void a(byte param0, wk param1) {
+    final void copyTo(byte param0, wk param1) {
         try {
           param1.field_j = this.field_j;
           param1.field_h = this.field_h;
@@ -310,7 +310,7 @@ final class wk {
         }
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseListeners(byte param0, java.awt.Component param1) {
         param1.addMouseListener(TertiaryListSequence.field_j);
         if (param0 != -58) {
           return;

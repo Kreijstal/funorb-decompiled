@@ -511,7 +511,7 @@ class TextFieldWidget extends FocusableWidget {
           if (param0 != 0) {
             field_E = (os) null;
           }
-          stackIn_3_0 = wk.a(10, param1, param0 ^ 126, true);
+          stackIn_3_0 = wk.parseInt(10, param1, param0 ^ 126, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
