@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class lo extends IOException {
+final class ProxyAuthenticationRequiredException extends IOException {
     static String[] field_c;
     static String joinRequestsOne;
     static String createEmailConfirm;
@@ -53,13 +53,13 @@ final class lo extends IOException {
         return ResourceArchive.a(param0, 16, false, -112, 6, 10);
     }
 
-    lo(String param0) {
+    ProxyAuthenticationRequiredException(String param0) {
         super(param0);
     }
 
     final static int divideFixed12(int param0, int param1, byte param2) {
         if (param2 < 53) {
-          lo.detectMaxMemoryMb(85);
+          ProxyAuthenticationRequiredException.detectMaxMemoryMb(85);
           return (param0 << 12) / param1;
         }
         return (param0 << 12) / param1;

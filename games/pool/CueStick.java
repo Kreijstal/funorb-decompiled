@@ -26,7 +26,7 @@ final class CueStick {
           ThemeSelectScreen.field_M = NameEntryPopup.a(0, "lobby", param2, "chatfilter");
           TranslatedUiText.field_i[1] = cl.muChatFriends;
           TranslatedUiText.field_i[2] = KillerRules.muChatOff;
-          TranslatedUiText.field_i[0] = fq.muChatOn;
+          TranslatedUiText.field_i[0] = AccountCreationDialog.muChatOn;
           c.createQuickChatMenu(ae.field_a, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -348,7 +348,7 @@ final class CueStick {
         int var2 = 0;
         int var3 = Pool.field_O;
         for (var2 = 0; this.segments.length > var2; var2++) {
-          this.field_m[var2] = (ModelMesh) (LobbyGame.field_gc.a(this.field_l, this.segments[var2], -72));
+          this.field_m[var2] = (ModelMesh) (LobbyGame.field_gc.createModelMeshWithBallTransform(this.field_l, this.segments[var2], -72));
         }
         if (param0 <= 84) {
           this.field_l = (int[]) null;

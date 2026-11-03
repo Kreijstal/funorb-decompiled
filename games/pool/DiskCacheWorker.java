@@ -13,16 +13,16 @@ final class DiskCacheWorker implements Runnable {
     int pendingRequestCount;
     static String mpXWantstodraw;
 
-    final dg queueRead(byte param0, SectorCacheStore param1, int param2) {
-        dg var4 = null;
+    final DiskArchiveRequest queueRead(byte param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
-        dg stackIn_3_0 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new dg();
+          var4 = new DiskArchiveRequest();
           var4.field_x = false;
           var4.field_N = 3;
           var4.field_m = (long)param2;
@@ -47,27 +47,27 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final dg readNow(int param0, SectorCacheStore param1, int param2) {
-        dg var4 = null;
+    final DiskArchiveRequest readNow(int param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         Object var6 = null;
-        dg var7 = null;
+        DiskArchiveRequest var7 = null;
         int var9 = 0;
-        dg stackIn_9_0 = null;
-        dg stackIn_16_0 = null;
+        DiskArchiveRequest stackIn_9_0 = null;
+        DiskArchiveRequest stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         Throwable decompiledCaughtException = null;
         var9 = Pool.field_O;
         try {
-          var4 = new dg();
+          var4 = new DiskArchiveRequest();
           var4.field_N = 1;
           var5 = 2 / ((10 - param0) / 52);
           var6 = this.requestQueue;
           synchronized (var6) {
-            var7 = (dg) (this.requestQueue.a((byte) 110));
+            var7 = (DiskArchiveRequest) (this.requestQueue.a((byte) 110));
             while (var7 != null) {
               if (var7.field_m == (long)param2 &&
                 param1 == var7.field_R &&
@@ -77,7 +77,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var7 = (dg) (this.requestQueue.next((byte) -97));
+              var7 = (DiskArchiveRequest) (this.requestQueue.next((byte) -97));
             }
           }
           var4.field_Q = param1.read((byte) -110, param2);
@@ -99,7 +99,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    private final void enqueueRequest(dg param0, int param1) {
+    private final void enqueueRequest(DiskArchiveRequest param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -136,7 +136,7 @@ final class DiskCacheWorker implements Runnable {
           InterruptedException interruptedException = null;
           Object var2 = null;
           int var5 = 0;
-          dg var7 = null;
+          DiskArchiveRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           int decompiledRegionSelector1 = 0;
           Throwable decompiledCaughtException = null;
@@ -146,7 +146,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.stopRequested) {
             var2 = this.requestQueue;
             synchronized (var2) {
-              var7 = (dg) (this.requestQueue.a(0));
+              var7 = (DiskArchiveRequest) (this.requestQueue.a(0));
               if (var7 == null) {
                 try {
                   this.requestQueue.wait();
@@ -267,8 +267,8 @@ final class DiskCacheWorker implements Runnable {
           ln.field_r = param1;
           BufferedFile.field_p = param12;
           tq.field_u = param13;
-          dg.field_T = param11;
-          ck.field_R = param10;
+          DiskArchiveRequest.field_T = param11;
+          ValidationMessageWidget.field_R = param10;
           mj.field_c = param0;
           wp.field_f = param2;
           ta.field_d = param7;
@@ -382,13 +382,13 @@ final class DiskCacheWorker implements Runnable {
           for (var17_int = 0; var17_int < 5; var17_int++) {
             FreePlayRules.field_f[0][1 + var17_int] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, IntrusiveNodeHashTable.field_i[var17_int], pn.field_i[var17_int]);
           }
-          if (dg.field_T.length >= 2) {
+          if (DiskArchiveRequest.field_T.length >= 2) {
             oi.field_v[1] = new UiComponent(0L, GameApplet.field_a, ab.muOptionsPlayers);
-            array$0 = new AlignedIconLabel[dg.field_T.length + 1];
+            array$0 = new AlignedIconLabel[DiskArchiveRequest.field_T.length + 1];
             FreePlayRules.field_f[1] = array$0;
             FreePlayRules.field_f[1][0] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
-            for (var17_intLifetime1 = 0; dg.field_T.length > var17_intLifetime1; var17_intLifetime1++) {
-              FreePlayRules.field_f[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, Integer.toString(dg.field_T[var17_intLifetime1]));
+            for (var17_intLifetime1 = 0; DiskArchiveRequest.field_T.length > var17_intLifetime1; var17_intLifetime1++) {
+              FreePlayRules.field_f[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, Integer.toString(DiskArchiveRequest.field_T[var17_intLifetime1]));
             }
           }
           oi.field_v[2] = new UiComponent(0L, GameApplet.field_a, BitmapTextLayout.muOptionsAllowSpectate);
@@ -403,7 +403,7 @@ final class DiskCacheWorker implements Runnable {
             }
           }
           for (var17_intLifetime3 = 0; param3 > var17_intLifetime3; var17_intLifetime3++) {
-            oi.field_v[var17_intLifetime3 + 4] = new UiComponent(0L, GameApplet.field_a, ck.field_R[var17_intLifetime3]);
+            oi.field_v[var17_intLifetime3 + 4] = new UiComponent(0L, GameApplet.field_a, ValidationMessageWidget.field_R[var17_intLifetime3]);
             array$2 = new AlignedIconLabel[ArchiveLoadSequence.b(255, (int) ArchiveRequest.field_E[var17_intLifetime3]) + 1];
             FreePlayRules.field_f[4 + var17_intLifetime3] = array$2;
             FreePlayRules.field_f[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
@@ -455,7 +455,7 @@ final class DiskCacheWorker implements Runnable {
           MusicCrossfadeStream.field_x.addChild(12, oi.field_q);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param3; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
-              !(dg.field_T.length < 2)) && (3 != var18Lifetime2 ||
+              !(DiskArchiveRequest.field_T.length < 2)) && (3 != var18Lifetime2 ||
               !(1 >= ji.field_g))) {
               MusicCrossfadeStream.field_x.addChild(92, oi.field_v[var18Lifetime2]);
               for (var19 = 0; FreePlayRules.field_f[var18Lifetime2].length > var19; var19++) {
@@ -468,7 +468,7 @@ final class DiskCacheWorker implements Runnable {
           Bzip2DecoderState.field_f.addChild(-120, kc.field_b);
           Bzip2DecoderState.field_f.addChild(-117, d.field_c);
           Bzip2DecoderState.field_f.addChild(-121, TextHotspotRegion.field_o);
-          Pool.field_P = new UiComponent(0L, dg.field_J, LimitedRandomAccessFile.muInvitePlayers.toUpperCase());
+          Pool.field_P = new UiComponent(0L, DiskArchiveRequest.field_J, LimitedRandomAccessFile.muInvitePlayers.toUpperCase());
           AccountContentDialog.field_vb = new UiComponent(0L, rp.field_d, th.close.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -572,11 +572,11 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final dg queueWrite(byte[] param0, SectorCacheStore param1, byte param2, int param3) {
-        dg var5 = null;
+    final DiskArchiveRequest queueWrite(byte[] param0, SectorCacheStore param1, byte param2, int param3) {
+        DiskArchiveRequest var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
-        dg stackIn_1_0 = null;
+        DiskArchiveRequest stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -584,7 +584,7 @@ final class DiskCacheWorker implements Runnable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new dg();
+          var5 = new DiskArchiveRequest();
           var5.field_N = 2;
           var5.field_Q = param0;
           var5.field_R = param1;

@@ -21,11 +21,11 @@ class PauseMenuScreen extends MenuScreen {
 
     final void navigateBack(byte param0) {
         if (param0 < -11) {
-          fq.a(-3405, -1, mg.a(true) ? 21 : 0, false);
+          AccountCreationDialog.a(-3405, -1, mg.a(true) ? 21 : 0, false);
           return;
         }
         this.field_K = (Sprite) null;
-        fq.a(-3405, -1, mg.a(true) ? 21 : 0, false);
+        AccountCreationDialog.a(-3405, -1, mg.a(true) ? 21 : 0, false);
     }
 
     final static wc a(String[] args, int param1) {

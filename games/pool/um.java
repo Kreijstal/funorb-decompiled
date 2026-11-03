@@ -26,7 +26,7 @@ abstract class um {
           }
           var2 = LoginTextValue.field_f.last((byte) -34);
           while (var2 != null) {
-            hi.a(1, param1);
+            DirectByteStorage.a(1, param1);
             var2 = LoginTextValue.field_f.previous((byte) -5);
           }
           return;

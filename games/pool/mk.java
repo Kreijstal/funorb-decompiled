@@ -323,7 +323,7 @@ final class mk {
                     if (var12.field_Yb == 2) {
                       var12.field_Tb.text = KillerRules.statusSpectate;
                     } else {
-                      var12.field_xc.text = dg.statusPlaying;
+                      var12.field_xc.text = DiskArchiveRequest.statusPlaying;
                     }
                   }
                 } else {
@@ -495,9 +495,9 @@ final class mk {
                   }
                 }
                 if (var35 != null) {
-                  CacheEntry.field_B = ck.field_R[var34_intLifetime2] + " - " + (String) (var35);
+                  CacheEntry.field_B = ValidationMessageWidget.field_R[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  CacheEntry.field_B = ck.field_R[var34_intLifetime2];
+                  CacheEntry.field_B = ValidationMessageWidget.field_R[var34_intLifetime2];
                 }
               }
             }
@@ -585,7 +585,7 @@ final class mk {
         int var12 = 0;
         var12 = Pool.field_O;
         try {
-          qf.field_j = param4;
+          SpaceObject.field_j = param4;
           BitmapTextLayout.field_m = -1L;
           PoolMatchController.field_hb = param8;
           dr.field_c = param4.length;
@@ -594,8 +594,8 @@ final class mk {
           md.field_c = new byte[(PoolMatchController.field_hb + 7) / 8];
           LobbyGame.field_Ac = false;
           var10_int = 0;
-          for (var11 = 0; qf.field_j.length > var11; var11++) {
-            var10_int = var10_int + (qf.field_j[var11] & 255);
+          for (var11 = 0; SpaceObject.field_j.length > var11; var11++) {
+            var10_int = var10_int + (SpaceObject.field_j[var11] & 255);
           }
           if (param9 != 13162) {
             field_c = -6;
@@ -621,8 +621,8 @@ final class mk {
           if (null == param2.children) {
             param2.children = new IntrusiveDeque();
           }
-          ck.field_W = param2.children;
-          ck.field_W.clear((byte) 36);
+          ValidationMessageWidget.field_W = param2.children;
+          ValidationMessageWidget.field_W.clear((byte) 36);
           LobbyPlayer.field_Qb = new DualLinkNodeHashTable(param5);
           AudioService.field_f = param3;
           StrongCacheEntry.field_K = 0L;

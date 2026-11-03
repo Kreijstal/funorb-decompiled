@@ -635,7 +635,7 @@ final class RankingsScreen extends MenuScreen {
               }
             }
           }
-          if (dg.field_T.length >= 2) {
+          if (DiskArchiveRequest.field_T.length >= 2) {
             if (param3) {
               stackIn_43_0 = (FullscreenFocusCanvas.field_d != -1) ? 1 : 0;
             } else {
@@ -650,7 +650,7 @@ final class RankingsScreen extends MenuScreen {
               md.field_c[var7 / 8] = (byte)md.bitwiseOr((int) md.field_c[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (param3) ? -1 : 0;
-            for (var7 = stackIn_51_0; dg.field_T.length > var7; var7++) {
+            for (var7 = stackIn_51_0; DiskArchiveRequest.field_T.length > var7; var7++) {
               if (var6Lifetime1 != 0) {
                 stackIn_59_0 = (var7 != FullscreenFocusCanvas.field_d) ? 1 : 0;
               } else {
@@ -660,7 +660,7 @@ final class RankingsScreen extends MenuScreen {
               if (var4_int != 0 &&
                 FreePlayRules.field_f[1][var7 + 1].pressedButton != 0) {
                 if (!param3) {
-                  var9 = dg.field_T[var7];
+                  var9 = DiskArchiveRequest.field_T[var7];
                   if (var9 != param1.field_Nb) {
                     param1.field_Nb = var9;
                     var5 = 1;
@@ -680,7 +680,7 @@ final class RankingsScreen extends MenuScreen {
               if (param3) {
                 if (var7 == -1) {
                   FreePlayRules.field_f[1][var7 + 1].selected = true;
-                  for (var9 = 0; var9 < dg.field_T.length; var9++) {
+                  for (var9 = 0; var9 < DiskArchiveRequest.field_T.length; var9++) {
                     dupTemp$0 = FreePlayRules.field_f[1][1 + var7];
                     stackIn_87_0 = dupTemp$0;
                     stackIn_87_1 = dupTemp$0.selected;
@@ -695,7 +695,7 @@ final class RankingsScreen extends MenuScreen {
                   stackIn_79_0.selected = stackIn_82_1;
                 }
               } else {
-                var9 = dg.field_T[var7];
+                var9 = DiskArchiveRequest.field_T[var7];
                 stackIn_74_0 = FreePlayRules.field_f[1][var7 + 1];
                 stackIn_75_1 = (var9 == param1.field_Nb);
                 stackIn_74_0.selected = stackIn_75_1;
@@ -998,7 +998,7 @@ final class RankingsScreen extends MenuScreen {
                   var23 = 0;
                   for (var24 = 0; var7 > var24; var24++) {
                     if (gf.field_b[var24]) {
-                      var25_refLifetime1 = "</col>" + ck.field_R[var24] + "<col=A00000>";
+                      var25_refLifetime1 = "</col>" + ValidationMessageWidget.field_R[var24] + "<col=A00000>";
                       var22 = var25_refLifetime1;
                       var21 = var22;
                       var22 = var25_refLifetime1;
@@ -1069,7 +1069,7 @@ final class RankingsScreen extends MenuScreen {
               stackIn_336_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_335_0.enabled = stackIn_336_1;
             }
-            var6Lifetime4 = var6Lifetime4 + (qf.field_j[var7] & 255);
+            var6Lifetime4 = var6Lifetime4 + (SpaceObject.field_j[var7] & 255);
           }
           if (var5 != 0 &&
             !param3) {

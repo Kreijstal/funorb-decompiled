@@ -104,7 +104,7 @@ final class TikiTableScene extends ModelTableScene {
           }
           if (500 > ln.field_t) {
             this.updateRollingSounds(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-            if (ga.nextRandomInt(400, true, ea.field_r) == 0) {
+            if (MaxLengthTextInputWidget.nextRandomInt(400, true, ea.field_r) == 0) {
               this.playAmbientSounds(-4577, 32);
             }
           } else {
@@ -112,7 +112,7 @@ final class TikiTableScene extends ModelTableScene {
               if (ln.field_t < 2000) {
                 var3_int = (128 * ln.field_t - 64000) / 1500;
                 this.updateRollingSounds(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-                if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
+                if (MaxLengthTextInputWidget.nextRandomInt(800, true, ea.field_r) == 0) {
                   this.playAmbientSounds(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
                 RankingsScreen.field_N.setChannelVolumeScale((byte) 77, -1, var3_int);
@@ -129,7 +129,7 @@ final class TikiTableScene extends ModelTableScene {
                   } else {
                     var3_int = 128 * (12200 - ln.field_t) / 1000;
                     this.updateRollingSounds(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-                    if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
+                    if (MaxLengthTextInputWidget.nextRandomInt(800, true, ea.field_r) == 0) {
                       this.playAmbientSounds(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
                     RankingsScreen.field_N.setChannelVolumeScale((byte) 32, -1, var3_int);
@@ -256,7 +256,7 @@ final class TikiTableScene extends ModelTableScene {
           incrementValue$29 = var3_int;
           var3_int++;
           this.field_O[incrementValue$29] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_leg_b");
-          qf.field_i = var3_int;
+          SpaceObject.field_i = var3_int;
           LobbyPlayer.field_Wb = var3_int;
           incrementValue$30 = var3_int;
           var3_int++;
@@ -575,7 +575,7 @@ final class TikiTableScene extends ModelTableScene {
             kp.a(100, this.field_bb, param3, param1);
           }
         } else {
-          var6 = ga.nextRandomInt(3, true, ea.field_r);
+          var6 = MaxLengthTextInputWidget.nextRandomInt(3, true, ea.field_r);
           if (var6 != 0) {
             if (var6 != 1) {
               if (var6 == 2) {
@@ -592,7 +592,7 @@ final class TikiTableScene extends ModelTableScene {
 
     final void releaseModels(boolean param0) {
         super.releaseModels(param0);
-        pr.c((byte) 90);
+        MusicVoice.c((byte) 90);
     }
 
     final void loadSceneSprites(int param0, ResourceArchive param1) {
@@ -635,9 +635,9 @@ final class TikiTableScene extends ModelTableScene {
           var2 = 500;
           jd.field_h = new int[]{var2, var2 + 50, 100 + var2, 200 + var2};
           ThemeSelectScreen.field_K = 1 + jd.field_h.length;
-          ck.field_Y = new IntrusiveDeque[ThemeSelectScreen.field_K];
+          ValidationMessageWidget.field_Y = new IntrusiveDeque[ThemeSelectScreen.field_K];
           for (var3 = 0; ThemeSelectScreen.field_K > var3; var3++) {
-            ck.field_Y[var3] = new IntrusiveDeque();
+            ValidationMessageWidget.field_Y[var3] = new IntrusiveDeque();
           }
           CueAim.field_m = 80;
           hf.field_a = 4000;
@@ -652,12 +652,12 @@ final class TikiTableScene extends ModelTableScene {
           if (var9 == 2) {
             fieldTemp$0 = CueAim.field_m - 150;
             CueAim.field_m = CueAim.field_m - 150;
-            this.a(ck.field_Y, fieldTemp$0, (byte) 103, this.field_O[var4], 0, hf.field_a);
+            this.a(ValidationMessageWidget.field_Y, fieldTemp$0, (byte) 103, this.field_O[var4], 0, hf.field_a);
           } else {
             if (3 == var9) {
               fieldTemp$1 = CueAim.field_m - 170;
               CueAim.field_m = CueAim.field_m - 170;
-              this.a(ck.field_Y, fieldTemp$1, (byte) 124, this.field_O[var2], 0, hf.field_a);
+              this.a(ValidationMessageWidget.field_Y, fieldTemp$1, (byte) 124, this.field_O[var2], 0, hf.field_a);
             } else {
               if (4 != var9) {
                 if (var9 != 5) {
@@ -666,34 +666,34 @@ final class TikiTableScene extends ModelTableScene {
                       if (8 == var9) {
                         fieldTemp$2 = CueAim.field_m - 45;
                         CueAim.field_m = CueAim.field_m - 45;
-                        this.a(ck.field_Y, fieldTemp$2, (byte) 111, this.field_O[var4], 800, hf.field_a + 600);
+                        this.a(ValidationMessageWidget.field_Y, fieldTemp$2, (byte) 111, this.field_O[var4], 800, hf.field_a + 600);
                       } else {
                         if (var9 == 9) {
                           fieldTemp$3 = CueAim.field_m - 130;
                           CueAim.field_m = CueAim.field_m - 130;
-                          this.a(ck.field_Y, fieldTemp$3, (byte) 110, this.field_O[var3Lifetime1], 968, -700 + hf.field_a);
+                          this.a(ValidationMessageWidget.field_Y, fieldTemp$3, (byte) 110, this.field_O[var3Lifetime1], 968, -700 + hf.field_a);
                         } else {
                           if (var9 != 10) {
                             if (var9 == 11) {
                               fieldTemp$4 = CueAim.field_m - 80;
                               CueAim.field_m = CueAim.field_m - 80;
-                              this.a(ck.field_Y, fieldTemp$4, (byte) 109, this.field_O[var2], 0, hf.field_a);
+                              this.a(ValidationMessageWidget.field_Y, fieldTemp$4, (byte) 109, this.field_O[var2], 0, hf.field_a);
                             } else {
                               if (12 == var9) {
                                 var8 = this.field_O[var5];
-                                var7 = ck.field_Y;
+                                var7 = ValidationMessageWidget.field_Y;
                                 CueAim.field_m = -1536;
                                 this.a(var7, -1536, (byte) 82, var8, 0, -400 + hf.field_a);
                               } else {
                                 if (var9 == 13) {
                                   fieldTemp$5 = CueAim.field_m - 200;
                                   CueAim.field_m = CueAim.field_m - 200;
-                                  this.a(ck.field_Y, fieldTemp$5, (byte) 125, this.field_O[var4], 0, hf.field_a - 200);
+                                  this.a(ValidationMessageWidget.field_Y, fieldTemp$5, (byte) 125, this.field_O[var4], 0, hf.field_a - 200);
                                 } else {
                                   if (var9 == 14) {
                                     fieldTemp$6 = CueAim.field_m - 125;
                                     CueAim.field_m = CueAim.field_m - 125;
-                                    this.a(ck.field_Y, fieldTemp$6, (byte) 98, this.field_O[var6], 0, hf.field_a);
+                                    this.a(ValidationMessageWidget.field_Y, fieldTemp$6, (byte) 98, this.field_O[var6], 0, hf.field_a);
                                     this.field_l = DualLinkDequeIterator.progressJungleFinishing;
                                   } else {
                                     if (15 == var9) {
@@ -710,34 +710,34 @@ final class TikiTableScene extends ModelTableScene {
                           } else {
                             fieldTemp$7 = CueAim.field_m - 170;
                             CueAim.field_m = CueAim.field_m - 170;
-                            this.a(ck.field_Y, fieldTemp$7, (byte) 71, this.field_O[var6], 0, hf.field_a - 700);
+                            this.a(ValidationMessageWidget.field_Y, fieldTemp$7, (byte) 71, this.field_O[var6], 0, hf.field_a - 700);
                           }
                         }
                       }
                     } else {
                       fieldTemp$8 = CueAim.field_m - 170;
                       CueAim.field_m = CueAim.field_m - 170;
-                      this.a(ck.field_Y, fieldTemp$8, (byte) 80, this.field_O[var6], 0, hf.field_a);
+                      this.a(ValidationMessageWidget.field_Y, fieldTemp$8, (byte) 80, this.field_O[var6], 0, hf.field_a);
                     }
                   } else {
                     fieldTemp$9 = CueAim.field_m - 170;
                     CueAim.field_m = CueAim.field_m - 170;
-                    this.a(ck.field_Y, fieldTemp$9, (byte) 107, this.field_O[var5], 0, hf.field_a);
+                    this.a(ValidationMessageWidget.field_Y, fieldTemp$9, (byte) 107, this.field_O[var5], 0, hf.field_a);
                   }
                 } else {
                   fieldTemp$10 = CueAim.field_m - 50;
                   CueAim.field_m = CueAim.field_m - 50;
-                  this.a(ck.field_Y, fieldTemp$10, (byte) 108, this.field_O[var3Lifetime1], 0, hf.field_a - 50);
+                  this.a(ValidationMessageWidget.field_Y, fieldTemp$10, (byte) 108, this.field_O[var3Lifetime1], 0, hf.field_a - 50);
                 }
               } else {
                 fieldTemp$11 = CueAim.field_m - 100;
                 CueAim.field_m = CueAim.field_m - 100;
-                this.a(ck.field_Y, fieldTemp$11, (byte) 109, this.field_O[var6], 0, hf.field_a + 500);
+                this.a(ValidationMessageWidget.field_Y, fieldTemp$11, (byte) 109, this.field_O[var6], 0, hf.field_a + 500);
               }
             }
           }
         } else {
-          this.a(ck.field_Y, 80, (byte) 80, this.field_O[var3Lifetime1], 0, hf.field_a - 500);
+          this.a(ValidationMessageWidget.field_Y, 80, (byte) 80, this.field_O[var3Lifetime1], 0, hf.field_a - 500);
         }
         if (param0 != 2) {
           var11 = (StringBuilder) null;
@@ -898,14 +898,14 @@ final class TikiTableScene extends ModelTableScene {
             var39 = ArchiveRequest.field_w;
             var19.sortModelsByDepth((byte) 112, 0, var19.field_j.length, var39);
           }
-          this.a(false, var30, var21);
+          this.prepareBallDrawOrder(false, var30, var21);
           PlayingSound.sortParallelArrays(ta.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, cq.field_c);
           PlayingSound.sortParallelArrays(TextWidgetPainter.field_h, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, c.field_b);
           PlayingSound.sortParallelArrays(gf.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, CheckboxPainter.field_n);
           PlayingSound.sortParallelArrays(DelegatingCanvas.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ClientException.field_e);
           PlayingSound.sortParallelArrays(wn.field_j, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ue.field_a);
           this.drawSky(param1, 9291);
-          pr.a(ArchiveRequest.field_w, false);
+          MusicVoice.a(ArchiveRequest.field_w, false);
           this.a(256, 3, 256, (byte) -86);
           var6 = TriangleRasterizer.colorPalette;
           for (var5Lifetime1 = ln.field_u.length - 1; 1 < var5Lifetime1; var5Lifetime1--) {
@@ -948,7 +948,7 @@ final class TikiTableScene extends ModelTableScene {
             th.field_l[ph.field_g[var5Lifetime4]].c(6710886, GzipDecoder.field_d);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
-            this.a(var30, (byte) 106, false, var21, false);
+            this.drawBallsInOrder(var30, (byte) 106, false, var21, false);
           }
           for (var5Lifetime5 = wn.field_j - 1; var5Lifetime5 >= ue.field_a; var5Lifetime5--) {
             th.field_l[ph.field_g[var5Lifetime5]].c(6710886, GzipDecoder.field_d);
@@ -956,7 +956,7 @@ final class TikiTableScene extends ModelTableScene {
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             for (var5Lifetime6 = 0; var21.length > var5Lifetime6; var5Lifetime6++) {
               if (var21[var5Lifetime6].inPlay) {
-                this.a(var30, var21[var5Lifetime6]);
+                this.drawBall(var30, var21[var5Lifetime6]);
               }
             }
           }
@@ -981,7 +981,7 @@ final class TikiTableScene extends ModelTableScene {
               stackIn_54_0 = this;
               stackIn_54_5 = true;
             }
-            this.a(stackIn_53_1, (byte) stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_54_5);
+            this.drawBallsInOrder(stackIn_53_1, (byte) stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_54_5);
           }
           var7Lifetime1 = ClientException.field_e;
           var8Lifetime1 = DelegatingCanvas.field_d;
@@ -1137,9 +1137,9 @@ final class TikiTableScene extends ModelTableScene {
           dn.field_m[var5] = tq.a(md.bitwiseOr(var7, md.bitwiseOr(var7 << 16, var7 << 8)), var6, false);
           ah.field_e[var5] = new SceneNode();
           ah.field_e[var5].setChildren((byte) -112, var3[var5]);
-          ck.field_Y[var5].addFirst((byte) -52, new pm(ah.field_e[var5]));
+          ValidationMessageWidget.field_Y[var5].addFirst((byte) -52, new pm(ah.field_e[var5]));
           ln.field_u[var5] = new SceneNode();
-          ln.field_u[var5].setChildren((byte) -121, ck.field_Y[var5]);
+          ln.field_u[var5].setChildren((byte) -121, ValidationMessageWidget.field_Y[var5]);
           ln.field_u[var5].normalizeOffsets(0);
           ln.field_u[var5].bakeModels(this.field_q, this.field_e, this.field_F, (byte) -35, this.field_u, this.field_C);
           ln.field_u[var5].allocateModelArrays(105);
@@ -1224,59 +1224,59 @@ final class TikiTableScene extends ModelTableScene {
             FreePlayRules.field_j[var3].field_o.isSamplePositionOutOfRange() ||
             !FreePlayRules.field_j[var3].field_o.b(param0 ^ 4492)) {
             stackIn_11_0 = (FreePlayRules.field_j[var3] == null) ? 11 : 22;
-            var4 = ga.nextRandomInt(stackIn_11_0, true, ea.field_r);
+            var4 = MaxLengthTextInputWidget.nextRandomInt(stackIn_11_0, true, ea.field_r);
             var6 = var4;
             if (var6 == 0) {
-              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_kb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_kb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_Z, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_Z, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_gb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_gb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                                 } else {
                                   var5 = (PcmSample) (FreePlayRules.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                                   } else {
-                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                                   }
                                 }
                               } else {
-                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                               }
                             } else {
-                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.createAtRatePercentQ6(this.field_cb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.createAtRatePercentQ6(this.field_cb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                             }
                           } else {
-                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                           }
                         } else {
-                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                         }
                       }
                     } else {
-                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_T, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_T, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                     }
                   } else {
-                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(cq.a(param0, 20231), PcmSampleStream.createAtRatePercentQ6(this.field_pb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(cq.a(param0, 20231), PcmSampleStream.createAtRatePercentQ6(this.field_pb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
                   }
                 }
               } else {
-                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_nb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_nb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
               }
             }
           }
@@ -1377,7 +1377,7 @@ final class TikiTableScene extends ModelTableScene {
         int var6Lifetime4;
         int var6Lifetime5;
         var7 = Pool.field_O;
-        th.field_l = new ModelInstance[-ThemeSelectScreen.field_S + MarkerSliderPainter.field_l + (DualLinkDequeIterator.field_a - FullscreenErrorDialog.field_ib + (-ViewportController.field_t + AccountCreationForm.field_T) + (this.field_O.length - kp.field_f + (ml.field_j - BallDebugOverlay.field_c))) - (-LobbyPlayer.field_Wb - UiComponent.field_L + (qf.field_i - 3 * (-AgeValidator.field_q + om.field_x)) + (-((-BallEvent.field_h + Camera.field_i) * 3) - 3 * (TextPairLoginPayload.field_h - NineSliceFrame.field_e)))];
+        th.field_l = new ModelInstance[-ThemeSelectScreen.field_S + MarkerSliderPainter.field_l + (DualLinkDequeIterator.field_a - FullscreenErrorDialog.field_ib + (-ViewportController.field_t + AccountCreationForm.field_T) + (this.field_O.length - kp.field_f + (ml.field_j - BallDebugOverlay.field_c))) - (-LobbyPlayer.field_Wb - UiComponent.field_L + (SpaceObject.field_i - 3 * (-AgeValidator.field_q + om.field_x)) + (-((-BallEvent.field_h + Camera.field_i) * 3) - 3 * (TextPairLoginPayload.field_h - NineSliceFrame.field_e)))];
         var3 = 0;
         cq.field_c = var3;
         var2 = BallDebugOverlay.field_c;
@@ -1395,7 +1395,7 @@ final class TikiTableScene extends ModelTableScene {
         }
         c.field_b = var3;
         ta.field_c = var3;
-        for (var2Lifetime1 = qf.field_i; UiComponent.field_L > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = SpaceObject.field_i; UiComponent.field_L > var2Lifetime1; var2Lifetime1++) {
           var4Lifetime1 = var2Lifetime1;
           var10 = th.field_l;
           var6Lifetime1 = var3;

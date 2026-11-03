@@ -250,9 +250,9 @@ final class ie {
           }
         }
         if (uc.field_b.pressedButton != 0) {
-          if (dg.field_T.length == 1 &&
-            PotEvent.field_l != dg.field_T[0]) {
-            PotEvent.field_l = dg.field_T[0];
+          if (DiskArchiveRequest.field_T.length == 1 &&
+            PotEvent.field_l != DiskArchiveRequest.field_T[0]) {
+            PotEvent.field_l = DiskArchiveRequest.field_T[0];
           }
           je.a(param3, PotEvent.field_l, true, tq.field_u, 0, false);
         }

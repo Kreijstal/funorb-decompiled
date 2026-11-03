@@ -201,7 +201,7 @@ final class BufferedSocket implements Runnable {
     final static boolean a(boolean param0, String param1, byte param2, AccountCreationForm param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
-        fq var9 = null;
+        AccountCreationDialog var9 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -216,7 +216,7 @@ final class BufferedSocket implements Runnable {
           if (TabbedPane.field_Lb != IntrusiveDequeCursor.field_c) {
             return false;
           }
-          var9 = new fq(TabbedPane.field_Ub, param3);
+          var9 = new AccountCreationDialog(TabbedPane.field_Ub, param3);
           var8 = 91 / ((48 - param2) / 53);
           TabbedPane.field_Ub.showDialog(var9, 30000);
           if (GameRules.k(0)) {
@@ -276,7 +276,7 @@ final class BufferedSocket implements Runnable {
 
     final static PcmStreamMixer b(int param0) {
         int var1 = 52 / ((param0 - 41) / 41);
-        return qf.field_d;
+        return SpaceObject.field_d;
     }
 
     final void c(int param0) {

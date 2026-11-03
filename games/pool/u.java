@@ -212,10 +212,10 @@ final class u {
             QuickChatMenu.field_Yb = new int[param22 + 100];
             ro.field_d = new int[100 + param22];
           }
-          if (null == hi.field_k ||
-            !(param12 <= hi.field_k.length)) {
+          if (null == DirectByteStorage.field_k ||
+            !(param12 <= DirectByteStorage.field_k.length)) {
             AccountWelcomePanel.field_P = new int[100 + param12];
-            hi.field_k = new int[100 + param12];
+            DirectByteStorage.field_k = new int[100 + param12];
             vn.field_h = new int[param12 + 100];
           }
           if (param5 != null && (null == gp.field_e ||
@@ -516,10 +516,10 @@ final class u {
                   var29 = var29 + (var55 - TranslatedUiText.field_a);
                   var33Lifetime2 = PoolMatchController.field_W;
                   TranslatedUiText.field_a = var55;
-                  if (hi.field_k.length < (-2 + (var30 + param12 + var57))) {
+                  if (DirectByteStorage.field_k.length < (-2 + (var30 + param12 + var57))) {
                     var54Lifetime2 = new int[98 + param12 - (-var30 - var57)];
-                    ArrayOperations.copy(hi.field_k, 0, var54Lifetime2, 0, var33Lifetime2);
-                    hi.field_k = var54Lifetime2;
+                    ArrayOperations.copy(DirectByteStorage.field_k, 0, var54Lifetime2, 0, var33Lifetime2);
+                    DirectByteStorage.field_k = var54Lifetime2;
                     var54Lifetime2Lifetime1 = new int[var57 + (var30 + param12 + 98)];
                     ArrayOperations.copy(vn.field_h, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
                     vn.field_h = var54Lifetime2Lifetime1;
@@ -538,7 +538,7 @@ final class u {
                       hf.field_d = var54Lifetime2Lifetime3;
                     }
                   }
-                  hi.field_k[var33Lifetime2] = var26[0];
+                  DirectByteStorage.field_k[var33Lifetime2] = var26[0];
                   vn.field_h[var33Lifetime2] = var26[1];
                   AccountWelcomePanel.field_P[var33Lifetime2] = var26[2];
                   if (null != param5) {
@@ -553,7 +553,7 @@ final class u {
                   }
                   var27[var33Lifetime2++] = var38;
                   if (4 == var57) {
-                    hi.field_k[var33Lifetime2] = var26[2];
+                    DirectByteStorage.field_k[var33Lifetime2] = var26[2];
                     vn.field_h[var33Lifetime2] = var26[3];
                     AccountWelcomePanel.field_P[var33Lifetime2] = var26[0];
                     if (null != param5) {
@@ -685,7 +685,7 @@ final class u {
                   sa.field_r[var34] = var43;
                   ro.field_d[var34] = var44;
                 }
-                hi.field_k[var33Lifetime2] = var34;
+                DirectByteStorage.field_k[var33Lifetime2] = var34;
                 var34 = var24[var40];
                 if (var34 < 0) {
                   fieldTemp$22 = TranslatedUiText.field_a;

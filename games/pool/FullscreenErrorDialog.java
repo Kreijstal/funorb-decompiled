@@ -82,7 +82,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
           var4.widgetWidth = this.widgetWidth;
           var4.renderer = (WidgetPainter) ((Object) new TextWidgetPainter(PoolUiText.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(true, var4);
-          this.closeButton = this.appendFullscreenDialogButton(2391, hi.fsButtonClose, (WidgetListener) (this));
+          this.closeButton = this.appendFullscreenDialogButton(2391, DirectByteStorage.fsButtonClose, (WidgetListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -209,7 +209,7 @@ final class d {
               var6 = (SocialListEntry) (var4.previous((byte) -5));
             }
             if (0 != cp.field_c.leftFooter.pressedButton) {
-              sm.field_C = new NameEntryPopup(cp.field_c.leftFooter.screenX, cp.field_c.leftFooter.screenY, cp.field_c.leftFooter.width, cp.field_c.leftFooter.height, qf.enterignoreAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
+              sm.field_C = new NameEntryPopup(cp.field_c.leftFooter.screenX, cp.field_c.leftFooter.screenY, cp.field_c.leftFooter.width, cp.field_c.leftFooter.height, SpaceObject.enterignoreAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
               MatchingTextValidator.field_m = 2;
             }
             if (cp.field_c.rightFooter.pressedButton != 0) {

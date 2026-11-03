@@ -103,7 +103,7 @@ final class PlasmaTableScene extends TableScene {
         super.playTableSound(param0, param1, (byte) -104, param3);
         var6 = param0;
         if (var6 == 5) {
-          var6 = ga.nextRandomInt(4, true, ea.field_r);
+          var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, ea.field_r);
           if (0 == var6) {
             kp.a(100, this.field_hb, param3, param1);
           } else {
@@ -497,7 +497,7 @@ final class PlasmaTableScene extends TableScene {
                 var5_int = 0;
               }
               dupTemp$0 = ArrayWidgetGroup.field_K[var5_int][var4_int];
-              dupTemp$0.field_g = dupTemp$0.field_g + (1024 + ga.nextRandomInt(256, true, ea.field_r));
+              dupTemp$0.field_g = dupTemp$0.field_g + (1024 + MaxLengthTextInputWidget.nextRandomInt(256, true, ea.field_r));
             }
           }
           var3 = ArrayWidgetGroup.field_K[0];
@@ -796,14 +796,14 @@ final class PlasmaTableScene extends TableScene {
                 } else {
                   var7_ref_bl.field_E = var7_ref_bl.field_E + 2;
                   if (var7_ref_bl.field_E >= 256) {
-                    if (0 == ga.nextRandomInt(10, true, ea.field_r)) {
+                    if (0 == MaxLengthTextInputWidget.nextRandomInt(10, true, ea.field_r)) {
                       var7_ref_bl.field_y = var7_ref_bl.field_y + 1;
                     }
                     var7_ref_bl.field_c = false;
                   }
                 }
               } else {
-                if (ga.nextRandomInt(2500, true, ea.field_r) == 0) {
+                if (MaxLengthTextInputWidget.nextRandomInt(2500, true, ea.field_r) == 0) {
                   var7_ref_bl.field_E = 1;
                   var7_ref_bl.field_c = true;
                 } else {
@@ -842,20 +842,20 @@ final class PlasmaTableScene extends TableScene {
               if (128 < var12.field_E) {
                 boolean decompiledFrameRemainder1 = true;
                 if (var11.field_E == 0) {
-                  if (ga.nextRandomInt(250, true, ea.field_r) == 0) {
+                  if (MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0) {
                     var11.field_E = var11.field_E + 1;
                   }
                   if (var13.field_E != 0) {
                     if (((var9.field_E == 0)) &&
-                      ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
+                      ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
                       var9.field_E = var9.field_E + 1;
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (ga.nextRandomInt(250, true, ea.field_r) != 0) {
+                    if (MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) != 0) {
                       if (((var9.field_E == 0)) &&
-                        ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
+                        ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
                         var9.field_E = var9.field_E + 1;
                       }
                       decompiledFrameRemainder1 = false;
@@ -867,15 +867,15 @@ final class PlasmaTableScene extends TableScene {
                 } else {
                   if (var13.field_E != 0) {
                     if (((var9.field_E == 0)) &&
-                      ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
+                      ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
                       var9.field_E = var9.field_E + 1;
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (ga.nextRandomInt(250, true, ea.field_r) != 0) {
+                    if (MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) != 0) {
                       if (((var9.field_E == 0)) &&
-                        ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
+                        ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
                         var9.field_E = var9.field_E + 1;
                       }
                       decompiledFrameRemainder1 = false;
@@ -886,11 +886,11 @@ final class PlasmaTableScene extends TableScene {
                   }
                 }
                 if ((decompiledFrameRemainder1) && (var9.field_E == 0 &&
-                  ga.nextRandomInt(250, true, ea.field_r) == 0)) {
+                  MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0)) {
                   var9.field_E = var9.field_E + 1;
                 }
                 if (var15.field_E == 0 &&
-                  0 == ga.nextRandomInt(250, true, ea.field_r)) {
+                  0 == MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r)) {
                   var15.field_E = var15.field_E + 1;
                 }
               }
@@ -991,7 +991,7 @@ final class PlasmaTableScene extends TableScene {
           var16 = param1.viewMatrix;
           var13 = var16;
           var4 = var13;
-          this.a(false, var16, var14);
+          this.prepareBallDrawOrder(false, var16, var14);
           en.b(0);
           PlasmaTableScene.a(var16);
           var17 = f.a((byte) 77, var16);
@@ -1045,7 +1045,7 @@ final class PlasmaTableScene extends TableScene {
             wn.$cfr$intArgs$a$2435eea43ef1(stackIn_18_0, stackIn_21_1, var6, this.field_X, 127, 0, this.field_R, this.field_M);
           }
           this.drawWireframeGrid((byte) 44, var16);
-          this.a(var16, (byte) 79, false, var14, false);
+          this.drawBallsInOrder(var16, (byte) 79, false, var14, false);
           this.a(77, var16);
           this.c((byte) -25, var16);
           for (var5 = 0; this.field_K.length > var5; var5++) {
@@ -1064,7 +1064,7 @@ final class PlasmaTableScene extends TableScene {
               stackIn_29_0 = this;
               stackIn_29_5 = true;
             }
-            this.a(stackIn_28_1, (byte) stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_29_5);
+            this.drawBallsInOrder(stackIn_28_1, (byte) stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_29_5);
           }
           if (param0 != -55) {
             var11 = (int[]) null;

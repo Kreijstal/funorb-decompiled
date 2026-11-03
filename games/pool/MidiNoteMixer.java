@@ -12,9 +12,9 @@ final class MidiNoteMixer extends PcmStream {
     PcmStreamMixer field_p;
 
     final PcmStream nextChildStream() {
-        pr var1;
+        MusicVoice var1;
         while (true) {
-          var1 = (pr) (this.field_t.previous((byte) -5));
+          var1 = (MusicVoice) (this.field_t.previous((byte) -5));
           if (var1 == null) {
             return null;
           }
@@ -33,10 +33,10 @@ final class MidiNoteMixer extends PcmStream {
         lf.a(17, (byte) 77);
     }
 
-    private final void a(int param0, pr param1, int param2) {
+    private final void a(int param0, MusicVoice param1, int param2) {
         MidiPcmStream stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        pr stackIn_9_2 = null;
+        MusicVoice stackIn_9_2 = null;
         boolean stackIn_10_3;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -64,7 +64,7 @@ final class MidiNoteMixer extends PcmStream {
                 param1.field_o = PcmSampleStream.createAtStepQ8(param1.field_C, param1.field_o.getSampleStepMagnitude(), 0, param1.field_o.getPan());
                 stackIn_9_0 = this.field_w;
                 stackIn_9_1 = param2 - 1048698;
-                stackIn_9_2 = (pr) (param1);
+                stackIn_9_2 = (MusicVoice) (param1);
                 stackIn_10_3 = !(param1.field_u.field_s[param1.field_A] >= 0);
                 ((MidiPcmStream) (Object) stackIn_9_0).applyNoteSampleOffset(stackIn_9_1, stackIn_9_2, stackIn_10_3);
               }
@@ -90,10 +90,10 @@ final class MidiNoteMixer extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, pr param2, int param3, int param4, int[] param5) {
+    private final void a(int param0, int param1, MusicVoice param2, int param3, int param4, int[] param5) {
         MidiPcmStream stackIn_14_0 = null;
         int stackIn_14_1 = 0;
-        pr stackIn_14_2 = null;
+        MusicVoice stackIn_14_2 = null;
         boolean stackIn_15_3;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -133,7 +133,7 @@ final class MidiNoteMixer extends PcmStream {
                 param2.field_o = PcmSampleStream.createAtStepQ8(param2.field_C, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_14_0 = this.field_w;
                 stackIn_14_1 = -125;
-                stackIn_14_2 = (pr) (param2);
+                stackIn_14_2 = (MusicVoice) (param2);
                 stackIn_15_3 = !(param2.field_u.field_s[param2.field_A] >= 0);
                 ((MidiPcmStream) (Object) stackIn_14_0).applyNoteSampleOffset(stackIn_14_1, stackIn_14_2, stackIn_15_3);
                 param2.field_o.rampVolume(var9, var11.getVolume());
@@ -181,7 +181,7 @@ final class MidiNoteMixer extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        pr var1 = (pr) (this.field_t.last((byte) 76));
+        MusicVoice var1 = (MusicVoice) (this.field_t.last((byte) 76));
         if (var1 == null) {
           return null;
         }
@@ -199,12 +199,12 @@ final class MidiNoteMixer extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        pr var6 = null;
+        MusicVoice var6 = null;
         int var7 = 0;
         var7 = Pool.field_O;
         try {
           this.field_p.mixInto(param0, param1, param2);
-          var6 = (pr) (this.field_t.last((byte) -67));
+          var6 = (MusicVoice) (this.field_t.last((byte) -67));
           while (var6 != null) {
             if (!this.field_w.a(-16257, var6)) {
               var5 = param2;
@@ -220,7 +220,7 @@ final class MidiNoteMixer extends PcmStream {
                 var4_int = var4_int + var6.field_D;
               } while (!this.field_w.advanceNoteAndHandleCompletion(var5, param0, var4_int, 1, var6));
             }
-            var6 = (pr) (this.field_t.previous((byte) -5));
+            var6 = (MusicVoice) (this.field_t.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -278,12 +278,12 @@ final class MidiNoteMixer extends PcmStream {
 
     final void skip(int length) {
         int var2;
-        pr var3;
+        MusicVoice var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = Pool.field_O;
         this.field_p.skip(length);
-        var3 = (pr) (this.field_t.last((byte) -20));
+        var3 = (MusicVoice) (this.field_t.last((byte) -20));
         while (var3 != null) {
           stackIn_4_0 = this.field_w.a(-16257, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -302,7 +302,7 @@ final class MidiNoteMixer extends PcmStream {
               var3.field_D = var3.field_D - var2;
             }
           }
-          var3 = (pr) (this.field_t.previous((byte) -5));
+          var3 = (MusicVoice) (this.field_t.previous((byte) -5));
         }
     }
 

@@ -111,7 +111,7 @@ final class ModernTableScene extends ModelTableScene {
                 } else {
                   stackIn_40_2 = 0;
                 }
-                fq.a(stackIn_39_0, stackIn_39_1, stackIn_40_2, false);
+                AccountCreationDialog.a(stackIn_39_0, stackIn_39_1, stackIn_40_2, false);
                 StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -113)));
               }
             }
@@ -230,7 +230,7 @@ final class ModernTableScene extends ModelTableScene {
           var4[2] = ArchiveLoadSequence.b(var36[2], -4);
           var4[0] = ArchiveLoadSequence.b(var36[0], -4);
           this.e(true);
-          this.a(false, var36, var20);
+          this.prepareBallDrawOrder(false, var36, var20);
           PlayingSound.sortParallelArrays(ag.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ChatMessageLine.field_m);
           PlayingSound.sortParallelArrays(ol.field_a, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, w.field_h);
           PlayingSound.sortParallelArrays(CushionSegment.field_k, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, NodeHashTableIterator.field_l);
@@ -439,7 +439,7 @@ final class ModernTableScene extends ModelTableScene {
             th.field_l[ph.field_g[var13Lifetime1]].c(param0 + 6710941, GzipDecoder.field_d);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
-            this.a(var36, (byte) 65, false, var20, false);
+            this.drawBallsInOrder(var36, (byte) 65, false, var20, false);
           }
           var11Lifetime2 = NodeHashTableIterator.field_l;
           var12Lifetime2 = CushionSegment.field_k;
@@ -452,7 +452,7 @@ final class ModernTableScene extends ModelTableScene {
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             for (var11Lifetime3 = 0; var20.length > var11Lifetime3; var11Lifetime3++) {
               if (var20[var11Lifetime3].inPlay) {
-                this.a(var36, var20[var11Lifetime3]);
+                this.drawBall(var36, var20[var11Lifetime3]);
               }
             }
           }
@@ -473,7 +473,7 @@ final class ModernTableScene extends ModelTableScene {
               stackIn_137_0 = this;
               stackIn_137_5 = true;
             }
-            this.a(stackIn_136_1, (byte) stackIn_136_2, stackIn_136_3, stackIn_136_4, stackIn_137_5);
+            this.drawBallsInOrder(stackIn_136_1, (byte) stackIn_136_2, stackIn_136_3, stackIn_136_4, stackIn_137_5);
           }
           var32 = this.field_bb;
           var60 = GzipDecoder.field_d;
@@ -656,7 +656,7 @@ final class ModernTableScene extends ModelTableScene {
           for (var15 = 0; var15 < var23.length; var15++) {
             incrementValue$10 = var12_intLifetime2;
             var12_intLifetime2++;
-            th.field_l[incrementValue$10] = new ModelInstance((ModelMesh) (this.a(108, var23[var15])), new int[]{var24[var15][0], var24[var15][1], var24[var15][2]});
+            th.field_l[incrementValue$10] = new ModelInstance((ModelMesh) (this.createModelMeshUntransformed(108, var23[var15])), new int[]{var24[var15][0], var24[var15][1], var24[var15][2]});
           }
           var11Lifetime2 = var11Lifetime2 + var4[-CueAim.field_b + var2].length;
         }
@@ -669,7 +669,7 @@ final class ModernTableScene extends ModelTableScene {
           for (var15 = 0; var15 < var25.length; var15++) {
             incrementValue$9 = var12_intLifetime3;
             var12_intLifetime3++;
-            th.field_l[incrementValue$9] = new ModelInstance((ModelMesh) (this.a(0, var25[var15])), new int[]{var26[var15][0], var26[var15][1], var26[var15][2]});
+            th.field_l[incrementValue$9] = new ModelInstance((ModelMesh) (this.createModelMeshUntransformed(0, var25[var15])), new int[]{var26[var15][0], var26[var15][1], var26[var15][2]});
           }
           var11Lifetime2 = var11Lifetime2 + var8[-ResizableDialog.field_fb + var2Lifetime1].length;
         }
@@ -1176,7 +1176,7 @@ final class ModernTableScene extends ModelTableScene {
             TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.unrated ? NodeHashTableIterator.mpAcceptrematchUnrated : DialWidget.mpAcceptrematch;
           } else {
             if (-1 + (1 << AccountContentDialog.field_ub.gameModel.playerCount) == (AccountContentDialog.field_ub.field_cb | 1 << AccountContentDialog.field_ub.localPlayerIndex)) {
-              TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.unrated ? e.mpRematchnewgameUnrated : fq.mpRematchnewgame;
+              TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.unrated ? e.mpRematchnewgameUnrated : AccountCreationDialog.mpRematchnewgame;
             } else {
               TranslatedUiText.field_f[12] = !AccountContentDialog.field_ub.unrated ? MenuSelection.mpOfferrematch : TutorialSelectScreen.mpOfferrematchUnrated;
             }

@@ -145,7 +145,7 @@ final class jd {
           if (TutorialController.containsForwardOrReversed(param2, param1, 17924)) {
             return false;
           }
-          if (co.containsForwardOrReversed(param1, (byte) -111, param2)) {
+          if (BirthDateInputWidget.containsForwardOrReversed(param1, (byte) -111, param2)) {
             return false;
           }
           if (!StateIconLabel.a(23138, param1, param2)) {

@@ -308,7 +308,7 @@ final class SoundCache {
           var20 = NameEntryPopup.a(0, "", param1, "tutorial_text_box");
           ff.field_e = new Sprite[]{new Sprite(0, var20[0].field_y), var20[0], new Sprite(0, var20[0].field_y), new Sprite(0, var20[1].field_y), var20[1], new Sprite(0, var20[1].field_y), new Sprite(0, var20[2].field_y), var20[2], new Sprite(0, var20[2].field_y)};
           dq.field_e = NameEntryPopup.a(0, "", param1, "playerlist_button");
-          vm.field_d = NameEntryPopup.a(0, "", param1, "tutorial_controls");
+          PolarObject.field_d = NameEntryPopup.a(0, "", param1, "tutorial_controls");
           qg.field_b = WidgetStyleLayer.loadSprite("", (byte) 52, "tutorial_box_progress", param1);
           AccountCreationForm.field_Z = ArchiveRequest.a(param1, "", -24155, "controls");
           bi.field_d = new int[AccountCreationForm.field_Z.length];

@@ -32,11 +32,11 @@ final class de {
 
     final static void c(int param0) {
         if (PlasmaTableScene.field_ab == 10) {
-          ga.b(false);
+          MaxLengthTextInputWidget.b(false);
           PlasmaTableScene.field_ab = 11;
         } else {
           if (!uc.a(-114)) {
-            ga.b(false);
+            MaxLengthTextInputWidget.b(false);
             PlasmaTableScene.field_ab = 11;
           }
         }

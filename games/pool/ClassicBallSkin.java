@@ -84,10 +84,10 @@ final class ClassicBallSkin extends BallSkin {
         if (param0 != 1) {
           NineSliceFrame var2 = (NineSliceFrame) null;
           ClassicBallSkin.a((byte) -32, 29, (NineSliceFrame) null, (NineSliceFrame) null, -126, -60);
-          sa.field_f = new QuickChatHelpDialog(tq.field_m, dg.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
+          sa.field_f = new QuickChatHelpDialog(tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
           return;
         }
-        sa.field_f = new QuickChatHelpDialog(tq.field_m, dg.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
+        sa.field_f = new QuickChatHelpDialog(tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
     }
 
     ClassicBallSkin() {

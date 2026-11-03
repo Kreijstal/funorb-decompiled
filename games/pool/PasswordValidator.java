@@ -270,7 +270,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_24_0 = TranslatedUiText.field_o;
             return stackIn_24_0;
           }
-          if (co.containsForwardOrReversed(var7, (byte) -112, var5)) {
+          if (BirthDateInputWidget.containsForwardOrReversed(var7, (byte) -112, var5)) {
             stackIn_28_0 = AgeValidator.createAlertPasscontainsnamePartial;
             return stackIn_28_0;
           }

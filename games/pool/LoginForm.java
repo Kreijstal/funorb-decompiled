@@ -112,8 +112,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_O)) {
             throw new IllegalStateException();
           }
-          this.usernameInput = (TextInputWidget) ((Object) new ga(param0, (WidgetListener) (this), 100));
-          this.passwordInput = (TextInputWidget) ((Object) new ga("", (WidgetListener) (this), 20));
+          this.usernameInput = (TextInputWidget) ((Object) new MaxLengthTextInputWidget(param0, (WidgetListener) (this), 100));
+          this.passwordInput = (TextInputWidget) ((Object) new MaxLengthTextInputWidget("", (WidgetListener) (this), 20));
           if (!this.field_P) {
             this.loginButton = new ButtonWidget(sa.login, (WidgetListener) null);
             stackIn_18_1 = null;

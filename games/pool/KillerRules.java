@@ -427,7 +427,7 @@ final class KillerRules extends GameRules {
         int var2 = 0;
         if (IntrusiveDeque.a(param0, (byte) 99) &&
           this.field_d.field_s == 2) {
-          var2 = ga.nextRandomInt(14, true, ea.field_r);
+          var2 = MaxLengthTextInputWidget.nextRandomInt(14, true, ea.field_r);
           return var2 - (-1 - var2 / 7);
         }
         return -1;

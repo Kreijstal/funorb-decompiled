@@ -125,7 +125,7 @@ final class DebugTuningSlider {
           if (var3 != 10) {
             return;
           }
-          pr.field_l = param1;
+          MusicVoice.field_l = param1;
           return;
         }
         this.field_e = 58;
@@ -178,7 +178,7 @@ final class DebugTuningSlider {
         if (var3Lifetime1 != 10) {
           return;
         }
-        pr.field_l = param1;
+        MusicVoice.field_l = param1;
     }
 
     final static void d(byte param0) {
@@ -317,7 +317,7 @@ final class DebugTuningSlider {
           return CueAim.field_f;
         }
         if (var2 == 10) {
-          return pr.field_l;
+          return MusicVoice.field_l;
         }
         return -1;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pr extends IntrusiveNode {
+final class MusicVoice extends IntrusiveNode {
     int field_w;
     int field_A;
     int field_E;
@@ -27,7 +27,7 @@ final class pr extends IntrusiveNode {
 
     final static void c(byte param0) {
         if (null != ta.field_h) {
-          qf.field_d.a(ta.field_h);
+          SpaceObject.field_d.a(ta.field_h);
         }
         ta.field_h = null;
         UsernameSuggestionsPanel.field_R = null;
@@ -99,7 +99,7 @@ final class pr extends IntrusiveNode {
           }
           if (param1) {
             var7 = (java.applet.Applet) null;
-            pr.readUsernameParameter(-15, (java.applet.Applet) null);
+            MusicVoice.readUsernameParameter(-15, (java.applet.Applet) null);
           }
           var2_int = var2_int >> 3;
           var3 = var3 >> 3;
@@ -121,11 +121,11 @@ final class pr extends IntrusiveNode {
             KeyHandler.field_c[var8][4][0] = -var2_int;
             KeyHandler.field_c[var8][4][1] = -var3;
             KeyHandler.field_c[var8][4][2] = jd.field_h[var8];
-            ga.a(param0, KeyHandler.field_c[var8][0], false);
-            ga.a(param0, KeyHandler.field_c[var8][1], param1);
-            ga.a(param0, KeyHandler.field_c[var8][2], false);
-            ga.a(param0, KeyHandler.field_c[var8][3], false);
-            ga.a(param0, KeyHandler.field_c[var8][4], false);
+            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][0], false);
+            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][1], param1);
+            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][2], false);
+            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][3], false);
+            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][4], false);
             if (KeyHandler.field_c[var8][0][2] < 0) {
               KeyHandler.field_c[var8][0][1] = SoftwareRasterizer.height;
             }
@@ -305,7 +305,7 @@ final class pr extends IntrusiveNode {
         }
     }
 
-    pr() {
+    MusicVoice() {
     }
 
     static {

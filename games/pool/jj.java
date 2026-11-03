@@ -3,7 +3,7 @@
  */
 final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
     private ButtonWidget field_O;
-    private co field_N;
+    private BirthDateInputWidget field_N;
     static String hidePlayersInXsGame;
     static Sprite[] field_S;
     static String enterignoreDel;
@@ -79,7 +79,7 @@ final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
 
     jj(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
-        this.field_N = new co(new om(10000536), NineSliceFrame.field_b, 0, 0, 140, 25);
+        this.field_N = new BirthDateInputWidget(new om(10000536), NineSliceFrame.field_b, 0, 0, 140, 25);
         this.field_N.setBirthDateValidator(-15309, new BirthDateValidator());
         this.field_O = new ButtonWidget(WeightedLruCache.cont, (WidgetListener) (this));
         this.children = new UiWidget[]{(UiWidget) ((Object) this.field_N), (UiWidget) ((Object) this.field_O)};

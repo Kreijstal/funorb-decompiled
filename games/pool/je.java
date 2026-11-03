@@ -11,7 +11,7 @@ final class je {
           na.field_a = param6;
           AccountWelcomePanel.field_X = param4;
           UiWidget.field_B = param8;
-          qf.field_f = param2;
+          SpaceObject.field_f = param2;
           DebugTuningSlider.field_k = param1;
           om.field_v = param7;
           ButtonWidget.field_M = param0;

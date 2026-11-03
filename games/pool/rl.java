@@ -225,7 +225,7 @@ final class rl {
                     var8.field_Xb = var9 >> 1;
                     var8.field_bc = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-96);
                     var8.field_Nb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-92);
-                    ck.field_W.addFirst((byte) 89, var8);
+                    ValidationMessageWidget.field_W.addFirst((byte) 89, var8);
                     return;
                   }
                   if (var2 == 19) {
@@ -322,11 +322,11 @@ final class rl {
             }
             return;
           }
-          var4_ref_im = (LobbyPlayer) (ck.field_W.last((byte) -33));
+          var4_ref_im = (LobbyPlayer) (ValidationMessageWidget.field_W.last((byte) -33));
           while (var4_ref_im != null) {
             var4_ref_im.unlink((byte) -117);
             var4_ref_im.unlinkNode(false);
-            var4_ref_im = (LobbyPlayer) (ck.field_W.previous((byte) -5));
+            var4_ref_im = (LobbyPlayer) (ValidationMessageWidget.field_W.previous((byte) -5));
           }
           var4_ref_imLifetime1 = (LobbyPlayer) (ln.field_n.firstForIteration((byte) -126));
           while (var4_ref_imLifetime1 != null) {

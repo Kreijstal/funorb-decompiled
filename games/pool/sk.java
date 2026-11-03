@@ -47,7 +47,7 @@ final class sk {
           }
           var5_int = param4.getGroupId(param2, -1);
           var6 = param4.getFileId(var5_int, 0, param3);
-          stackIn_3_0 = hi.loadPaletteFont(107, var5_int, var6, param0, param4);
+          stackIn_3_0 = DirectByteStorage.loadPaletteFont(107, var5_int, var6, param0, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

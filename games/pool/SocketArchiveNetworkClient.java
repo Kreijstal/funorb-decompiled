@@ -716,7 +716,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               var2 = new PacketBuffer(13);
               ArrayWidgetGroup.a(var2, true, DebugTuningSlider.field_k, om.field_v, UiWidget.field_B);
               var2.writeByte(15, false);
-              var2.writeInt(true, qf.field_f);
+              var2.writeInt(true, SpaceObject.field_f);
               dq.field_h.a(var2.payload, (byte) 72, 13, 0);
               rl.field_e = rl.field_e + 1;
               ae.field_d = rl.monotonicTimeMillis((byte) -105) + 30000L;

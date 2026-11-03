@@ -179,7 +179,7 @@ final class ScrollPaneWithFooter extends UiComponent {
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + dg.replaceAll(param0 ^ 76, "\n", param1, "%0a"));
+        System.out.println("Error: " + DiskArchiveRequest.replaceAll(param0 ^ 76, "\n", param1, "%0a"));
         if (param0 != 55) {
           field_Pb = (Sprite) null;
         }

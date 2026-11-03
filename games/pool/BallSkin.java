@@ -323,9 +323,9 @@ abstract class BallSkin {
             this.field_a = (MeshBuilder[]) null;
           }
           if (!this.field_g) {
-            this.field_j[param2] = (ModelMesh) (LobbyGame.field_gc.b(param1, this.field_a[param2], -25431));
+            this.field_j[param2] = (ModelMesh) (LobbyGame.field_gc.createModelMeshWithTransform(param1, this.field_a[param2], -25431));
           } else {
-            this.field_j[param2] = (ModelMesh) (LobbyGame.field_gc.a(param1, (byte) 103, this.field_a[param2]));
+            this.field_j[param2] = (ModelMesh) (LobbyGame.field_gc.createModelMeshAtPosition(param1, (byte) 103, this.field_a[param2]));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

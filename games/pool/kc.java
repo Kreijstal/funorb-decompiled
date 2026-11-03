@@ -24,7 +24,7 @@ final class kc {
             var3 = (java.awt.Canvas) null;
             kc.attachInputListeners((java.awt.Canvas) null, -76);
           }
-          hi.attachMouseListeners((java.awt.Component) ((Object) param0), param1 ^ -14764);
+          DirectByteStorage.attachMouseListeners((java.awt.Component) ((Object) param0), param1 ^ -14764);
           if (null == ClientException.field_a) {
             return;
           }

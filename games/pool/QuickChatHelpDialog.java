@@ -262,7 +262,7 @@ final class QuickChatHelpDialog extends UiComponent {
           var10 = 50;
           var11 = 0;
           for (var12 = 0; bj.quickchatShortcutHelp.length > var12; var12++) {
-            var13 = new UiComponent(0L, param3, ck.quickchatShortcutKeys[var12]);
+            var13 = new UiComponent(0L, param3, ValidationMessageWidget.quickchatShortcutKeys[var12]);
             var14 = new UiComponent(0L, param3, bj.quickchatShortcutHelp[var12]);
             var15 = param3.font.b(bj.quickchatShortcutHelp[var12]);
             var13.setBounds(var10, 2147483647, 20, 65, 15);

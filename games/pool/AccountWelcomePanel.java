@@ -136,7 +136,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         int var6 = 83 / ((param1 + 42) / 53);
         int var5 = this.widgetX + param2;
         int var7 = this.widgetY + param3;
-        ValidationIconWidget.field_O.drawParagraph(vm.createWelcome, 20 + var5, 20 + var7, this.widgetWidth - 40, this.widgetHeight - 50, 16777215, -1, 1, 0, ValidationIconWidget.field_O.maxAscent);
+        ValidationIconWidget.field_O.drawParagraph(PolarObject.createWelcome, 20 + var5, 20 + var7, this.widgetWidth - 40, this.widgetHeight - 50, 16777215, -1, 1, 0, ValidationIconWidget.field_O.maxAscent);
         super.renderWidget(param0, (byte) 92, param2, param3);
     }
 

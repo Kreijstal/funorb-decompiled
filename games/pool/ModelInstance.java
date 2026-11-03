@@ -277,7 +277,7 @@ final class ModelInstance implements eb {
             !om.field_y.equals(param2.getParameter("session"))) {
             var4 = om.field_y;
           }
-          stackIn_7_0 = pr.rewriteUrlPathParameters(-1, param1, (String) (var3), (byte) 63, (String) (var4));
+          stackIn_7_0 = MusicVoice.rewriteUrlPathParameters(-1, param1, (String) (var3), (byte) 63, (String) (var4));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

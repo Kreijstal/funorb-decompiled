@@ -252,7 +252,7 @@ final class TutorialController {
             var8 = -var6 + (var7 + (var4 - var5));
             for (var9 = var5; var4 > var9; var9++) {
               for (var10 = var6; var7 > var10; var10++) {
-                if (ThreeSliceButtonPainter.field_s + ga.nextRandomInt(5, true, ea.field_r) - 3 >= 25 * (-var6 + (var10 - var5) + var9) / var8) {
+                if (ThreeSliceButtonPainter.field_s + MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r) - 3 >= 25 * (-var6 + (var10 - var5) + var9) / var8) {
                   stackIn_21_0 = NanoTickClock.field_r;
                 } else {
                   stackIn_21_0 = NetworkGameClient.field_s;
@@ -425,9 +425,9 @@ final class TutorialController {
           }
         } else {
           if (this.field_a.gameModel.rules.initialGroup(-1) == -1) {
-            var4_int = ga.nextRandomInt(2, true, ea.field_r);
-            var5_int = ga.nextRandomInt(7, true, ea.field_r) - (-(var4_int << 3) - 1);
-            var6 = ga.nextRandomInt(this.field_a.gameModel.pockets.length, true, ea.field_r);
+            var4_int = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
+            var5_int = MaxLengthTextInputWidget.nextRandomInt(7, true, ea.field_r) - (-(var4_int << 3) - 1);
+            var6 = MaxLengthTextInputWidget.nextRandomInt(this.field_a.gameModel.pockets.length, true, ea.field_r);
             var16 = this.field_a.gameModel.pockets[var6];
             var18 = var16;
             var18 = var16;
@@ -668,11 +668,11 @@ final class TutorialController {
     private final void d(int param0) {
         if (!this.field_b) {
         } else {
-          qa.field_v.capturedSprite = vm.field_d[13];
+          qa.field_v.capturedSprite = PolarObject.field_d[13];
           this.field_b = false;
-          qa.field_v.disabledSprite = vm.field_d[1];
-          qa.field_v.activeSprite = vm.field_d[9];
-          qa.field_v.sprite = vm.field_d[5];
+          qa.field_v.disabledSprite = PolarObject.field_d[1];
+          qa.field_v.activeSprite = PolarObject.field_d[9];
+          qa.field_v.sprite = PolarObject.field_d[5];
           if (TextPairLoginPayload.field_i == -1) {
             TextPairLoginPayload.field_i = 0;
           } else {
@@ -917,15 +917,15 @@ final class TutorialController {
           if (null != this.currentStep) {
             this.currentStep.attachToTutorial(this, 74);
           }
-          qa.field_v.capturedSprite = vm.field_d[14];
-          qa.field_v.sprite = vm.field_d[6];
+          qa.field_v.capturedSprite = PolarObject.field_d[14];
+          qa.field_v.sprite = PolarObject.field_d[6];
           if (TextPairLoginPayload.field_i == -1) {
             TextPairLoginPayload.field_i = 0;
           } else {
             TextPairLoginPayload.field_i = 25 - TextPairLoginPayload.field_i;
           }
-          qa.field_v.activeSprite = vm.field_d[10];
-          qa.field_v.disabledSprite = vm.field_d[2];
+          qa.field_v.activeSprite = PolarObject.field_d[10];
+          qa.field_v.disabledSprite = PolarObject.field_d[2];
         }
         int var2 = -81 % ((-32 - param0) / 38);
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends ArchiveRequest {
+final class DiskArchiveRequest extends ArchiveRequest {
     int field_N;
     static int[] field_K;
     SectorCacheStore field_R;
@@ -25,7 +25,7 @@ final class dg extends ArchiveRequest {
           return;
         }
         String var2 = (String) null;
-        dg.replaceAll(83, (String) null, (String) null, (String) null);
+        DiskArchiveRequest.replaceAll(83, (String) null, (String) null, (String) null);
         field_J = null;
         statusPlaying = null;
     }
@@ -37,7 +37,7 @@ final class dg extends ArchiveRequest {
         if (!param0) {
           return this.field_Q;
         }
-        dg.a((byte) -47, -118, 74);
+        DiskArchiveRequest.a((byte) -47, -118, 74);
         return this.field_Q;
     }
 
@@ -57,7 +57,7 @@ final class dg extends ArchiveRequest {
         return -var3 + (param2 + var3) / param1;
     }
 
-    dg() {
+    DiskArchiveRequest() {
     }
 
     final static String replaceAll(int param0, String param1, String param2, String param3) {

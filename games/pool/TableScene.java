@@ -58,7 +58,7 @@ abstract class TableScene {
         }
     }
 
-    final fa b(int[] param0, MeshBuilder param1, int param2) {
+    final fa createModelMeshWithTransform(int[] param0, MeshBuilder param1, int param2) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
         fa stackIn_3_0 = null;
@@ -248,7 +248,7 @@ abstract class TableScene {
         this.field_o[param5] = var13;
     }
 
-    private final void k(int param0) {
+    private final void markViewDirty(int param0) {
         hh.field_c = true;
         if (param0 != 0) {
           this.floorColor(-49);
@@ -262,7 +262,7 @@ abstract class TableScene {
         }
     }
 
-    final void a(int[] param0, Ball param1) {
+    final void drawBall(int[] param0, Ball param1) {
         int var52 = 0;
         int var3;
         int var4;
@@ -665,7 +665,7 @@ abstract class TableScene {
         return;
     }
 
-    final fa a(int[] param0, byte param1, MeshBuilder param2) {
+    final fa createModelMeshAtPosition(int[] param0, byte param1, MeshBuilder param2) {
         RuntimeException var4 = null;
         fa stackIn_2_0 = null;
         fa stackIn_4_0 = null;
@@ -774,7 +774,7 @@ abstract class TableScene {
         return "lighting amb=" + this.field_d + ", cont=" + this.field_m;
     }
 
-    final fa a(int[] param0, MeshBuilder param1, int param2) {
+    final fa createModelMeshWithBallTransform(int[] param0, MeshBuilder param1, int param2) {
         RuntimeException var4 = null;
         Ball[] var5 = null;
         fa stackIn_3_0 = null;
@@ -787,7 +787,7 @@ abstract class TableScene {
         try {
           if (param2 > -52) {
             var5 = (Ball[]) null;
-            this.a(true, (int[]) null, (Ball[]) null);
+            this.prepareBallDrawOrder(true, (int[]) null, (Ball[]) null);
           }
           stackIn_3_0 = param1.createModelMeshTransformed(this.field_C, this.field_F, this.field_q, this.field_e, this.field_u, param0);
           return stackIn_3_0;
@@ -854,7 +854,7 @@ abstract class TableScene {
             var10 = Math.cos(3.141592653589793 * (double)(var3_int + 1) * 2.0 / 16.0);
             d.field_b.addFace(d.field_b.addVertex(0, 0, 0), d.field_b.addVertex(PotEvent.a(4885, 18.0 * var10), PotEvent.a(4885, var8 * 18.0), 0), d.field_b.addVertex(PotEvent.a(4885, 18.0 * var6), PotEvent.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
           }
-          var12 = (ModelMesh) (this.a(-113, d.field_b));
+          var12 = (ModelMesh) (this.createModelMeshUntransformed(-113, d.field_b));
           var3 = var12;
           LimitedRandomAccessFile.field_g = new ModelInstance[param0.length];
           if (param1 >= -16) {
@@ -982,10 +982,10 @@ abstract class TableScene {
               if (var8 > var6_int) {
                 var9 = var6_int - var8;
               }
-              param4[var7].setPanAndRampVolume(var9 + ga.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
+              param4[var7].setPanAndRampVolume(var9 + MaxLengthTextInputWidget.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
-              param4[var7].field_o.isSamplePositionOutOfRange()) && ga.nextRandomInt(param1, true, ea.field_r) == 0) {
-              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentPan(param3[ga.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7].field_o.isSamplePositionOutOfRange()) && MaxLengthTextInputWidget.nextRandomInt(param1, true, ea.field_r) == 0) {
+              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentPan(param3[MaxLengthTextInputWidget.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);
@@ -1022,7 +1022,7 @@ abstract class TableScene {
           this.buildPocketMarkers(param0.pockets, -33);
           this.buildCushionMeshes((byte) -92, param0.cushionSegments);
           this.a(param0.cushionSegments, 16);
-          this.k(0);
+          this.markViewDirty(0);
           if (param1 != 21894) {
             var4 = (CushionSegment[]) null;
             this.buildCushionMeshes((byte) 111, (CushionSegment[]) null);
@@ -1045,7 +1045,7 @@ abstract class TableScene {
         }
     }
 
-    final fa a(int param0, MeshBuilder param1) {
+    final fa createModelMeshUntransformed(int param0, MeshBuilder param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         fa stackIn_1_0 = null;
@@ -1124,7 +1124,7 @@ abstract class TableScene {
         }
     }
 
-    final void a(int[] param0, byte param1, boolean param2, Ball[] param3, boolean param4) {
+    final void drawBallsInOrder(int[] param0, byte param1, boolean param2, Ball[] param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
         Ball var8 = null;
@@ -1181,7 +1181,7 @@ abstract class TableScene {
         }
     }
 
-    final void a(boolean param0, int[] param1, Ball[] param2) {
+    final void prepareBallDrawOrder(boolean param0, int[] param1, Ball[] param2) {
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -1463,7 +1463,7 @@ abstract class TableScene {
           }
           if (param0) {
             var5 = (Ball[]) null;
-            this.a((int[]) null, (byte) -29, true, (Ball[]) null, false);
+            this.drawBallsInOrder((int[]) null, (byte) -29, true, (Ball[]) null, false);
           }
           var3_double = param1.getDistance(8);
           if (var3_double > 768.0) {
@@ -1506,7 +1506,7 @@ abstract class TableScene {
         int var14 = this.field_s.addVertex(var9, var10, 0);
         this.field_s.addFace(var11, var13, var12, (byte) 1, hh.rgbToPackedHsl((byte) -105, this.floorColor(684)), this.floorTexture(-56));
         this.field_s.addFace(var14, var12, var13, (byte) 1, hh.rgbToPackedHsl((byte) -127, this.floorColor(684)), this.floorTexture(91));
-        ModelMesh var15 = (ModelMesh) (this.a(103, this.field_s));
+        ModelMesh var15 = (ModelMesh) (this.createModelMeshUntransformed(103, this.field_s));
         for (var16 = 0; var16 < var4; var16++) {
           var17 = var7 * (double)(1 + 2 * var16) / 2.0;
           for (var19 = 0; var3 > var19; var19++) {

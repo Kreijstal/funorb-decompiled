@@ -4,7 +4,7 @@
 final class DisplayNamePanel extends WidgetContainer implements UsernameSuggestionListener, ButtonActivationListener {
     static String fsAcceptAfteraccept;
     private ButtonWidget okButton;
-    private ga displayNameInput;
+    private MaxLengthTextInputWidget displayNameInput;
     static int field_V;
     static ee field_N;
     static Sprite field_T;
@@ -90,7 +90,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     }
 
     public final void onSuggestionSelected(String param0, int param1) {
-        ga var3 = null;
+        MaxLengthTextInputWidget var3 = null;
         String var4 = null;
         try {
           if (param1 != 35) {
@@ -210,7 +210,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
 
     public DisplayNamePanel() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.displayNameInput = new ga("", (WidgetListener) null, 12);
+        this.displayNameInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(PoolUiText.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(ij.loginNoDisplayname, var1, (WidgetListener) null);
         this.okButton = new ButtonWidget(wn.ok, (WidgetListener) null);
@@ -296,7 +296,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
 
     private final int a(int param0, String param1, UiWidget param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
-        ck var9 = null;
+        ValidationMessageWidget var9 = null;
         LabeledChildWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -310,7 +310,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         try {
           var10 = new LabeledChildWidget(20, param0, param6 + 120, 25, param2, false, 120, 3, ValidationIconWidget.field_O, 16777215, param4);
           this.addChild(true, var10);
-          var9 = new ck(((ValidationProviderSource) ((Object) param2)).getValidationProvider(-75), param1, 126, param0 + var10.widgetHeight, 25 + param6, param3);
+          var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param2)).getValidationProvider(-75), param1, 126, param0 + var10.widgetHeight, 25 + param6, param3);
           var9.listener = (WidgetListener) (this);
           this.addChild(true, var9);
           if (param5 <= 67) {

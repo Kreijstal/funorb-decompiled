@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ga extends TextInputWidget implements ValidationProviderSource {
+final class MaxLengthTextInputWidget extends TextInputWidget implements ValidationProviderSource {
     private ValidationProvider field_ab;
     private int field_bb;
 
@@ -34,7 +34,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         try {
           this.field_ab = param1;
           if (param0 != -111) {
-            ga.n(-52);
+            MaxLengthTextInputWidget.n(-52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,7 +163,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
               return;
             }
             if (param0 != 29769) {
-              ga.a((int[]) null, (int[]) null, true);
+              MaxLengthTextInputWidget.a((int[]) null, (int[]) null, true);
             }
             if (var2 != 4) {
               GrowableIntList.reportClientError((Throwable) null, "F1: " + t.formatPacketDump(93), param0 ^ -21796);
@@ -289,7 +289,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         }
     }
 
-    ga(String param0, WidgetListener param1, int param2) {
+    MaxLengthTextInputWidget(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -316,7 +316,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           param1[0] = TriangleRasterizer.projectionCenterX + var3_int / param1[2];
           param1[1] = var4 / param1[2] + TriangleRasterizer.projectionCenterY;
           if (param2) {
-            ga.m(-17);
+            MaxLengthTextInputWidget.m(-17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -367,13 +367,13 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
     }
 
     final static void m(int param0) {
-        jc.field_e = new Quaternion(ga.nextRandomInt(262144, true, ea.field_r) - 131072, -131072 + ga.nextRandomInt(262144, true, ea.field_r), -131072 + ga.nextRandomInt(262144, true, ea.field_r), -131072 + ga.nextRandomInt(262144, true, ea.field_r));
+        jc.field_e = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r) - 131072, -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r));
         jc.field_e.normalise(true);
         LoginPayloadKind.field_a = dq.field_a;
         if (LoginPayloadKind.field_a == null) {
           LoginPayloadKind.field_a = PoolGameModel.field_B[0];
         }
-        vn.field_e = ga.nextRandomInt(LoginPayloadKind.field_a.meshCount(param0 + 23883), true, ea.field_r);
+        vn.field_e = MaxLengthTextInputWidget.nextRandomInt(LoginPayloadKind.field_a.meshCount(param0 + 23883), true, ea.field_r);
         tp.field_h[1] = 0;
         tp.field_h[0] = -140;
         CushionSegment.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};

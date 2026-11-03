@@ -131,21 +131,21 @@ final class AchievementsScreen extends MenuScreen {
           }
           var9 = stackIn_56_0;
           if (var9 == 0) {
-            vm.field_g = null;
+            PolarObject.field_g = null;
             ScrollPaneWithFooter.field_Lb = null;
             AlignedIconLabel.field_Qb = -1;
           } else {
-            if (null == vm.field_g ||
+            if (null == PolarObject.field_g ||
               var6Lifetime1 != AlignedIconLabel.field_Qb) {
-              vm.field_g = ef.a("</col>", kc.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
+              PolarObject.field_g = ef.a("</col>", kc.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
               ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(new int[]{var8}, 260, kc.achievementCriteria[var6Lifetime1], 260, sa.field_h, true, 225);
               AlignedIconLabel.field_Qb = var6Lifetime1;
-              IterableDualLinkDeque.field_b = sa.field_h.measureWrappedHeight(vm.field_g, 260, var8);
+              IterableDualLinkDeque.field_b = sa.field_h.measureWrappedHeight(PolarObject.field_g, 260, var8);
             }
           }
           stackIn_64_0 = sa.field_h;
           if (var9 != 0) {
-            stackIn_65_1 = vm.field_g;
+            stackIn_65_1 = PolarObject.field_g;
           } else {
             stackIn_65_1 = TickClock.secretachievement;
           }
@@ -343,7 +343,7 @@ final class AchievementsScreen extends MenuScreen {
           this.a(false, (byte) -98);
         }
         if (ScrollPaneWithFooter.field_Lb != null &&
-          null != vm.field_g &&
+          null != PolarObject.field_g &&
           -1 != AlignedIconLabel.field_Qb) {
           this.field_G = ag.findHotspotRegion(-(70 - IterableDualLinkDeque.field_b >> 1) + DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, param0 ^ -15396);
           LongAndTextLoginPayload.field_l = 12;
@@ -380,7 +380,7 @@ final class AchievementsScreen extends MenuScreen {
             stackIn_8_0 = -3405;
             stackIn_8_1 = 16;
             stackIn_9_2 = (!mg.a(true)) ? 0 : 21;
-            fq.a(stackIn_8_0, stackIn_8_1, stackIn_9_2, var4 != 0);
+            AccountCreationDialog.a(stackIn_8_0, stackIn_8_1, stackIn_9_2, var4 != 0);
           }
         }
         if (param0 != -16470) {

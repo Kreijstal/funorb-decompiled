@@ -6,7 +6,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
     static boolean field_T;
     static String rule13;
     static UiComponent field_Q;
-    private fq owner;
+    private AccountCreationDialog owner;
     static String playerIsGroupName;
     static String orbpointsColon;
     static ResourceArchive field_R;
@@ -99,7 +99,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         muXRemoved = null;
     }
 
-    Under13NoticePanel(fq param0) {
+    Under13NoticePanel(AccountCreationDialog param0) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;

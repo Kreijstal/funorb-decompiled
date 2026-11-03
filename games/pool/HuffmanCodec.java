@@ -458,15 +458,15 @@ final class HuffmanCodec {
               if (var12.field_ac.activeInside &&
                 var22 != 0) {
                 CacheEntry.field_B = var12.displayName;
-                if (null != lo.field_c &&
-                  null != lo.field_c[var12.field_bc]) {
-                  CacheEntry.field_B = CacheEntry.field_B + " - " + lo.field_c[var12.field_bc];
+                if (null != ProxyAuthenticationRequiredException.field_c &&
+                  null != ProxyAuthenticationRequiredException.field_c[var12.field_bc]) {
+                  CacheEntry.field_B = CacheEntry.field_B + " - " + ProxyAuthenticationRequiredException.field_c[var12.field_bc];
                 }
               } else {
                 if (var12.field_ac.activeInside &&
-                  null != lo.field_c &&
-                  lo.field_c[var12.field_bc] != null) {
-                  CacheEntry.field_B = lo.field_c[var12.field_bc];
+                  null != ProxyAuthenticationRequiredException.field_c &&
+                  ProxyAuthenticationRequiredException.field_c[var12.field_bc] != null) {
+                  CacheEntry.field_B = ProxyAuthenticationRequiredException.field_c[var12.field_bc];
                 }
               }
               var19 = var19 + ArchiveIndex.field_x;
@@ -523,7 +523,7 @@ final class HuffmanCodec {
                     if (var25_int == 1) {
                       var24Lifetime2 = rf.gameoptYouneed1ratedgame;
                     }
-                    var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{null, Integer.toString(var25_int)}, -1, vm.gameoptYouneedratedgames);
+                    var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{null, Integer.toString(var25_int)}, -1, PolarObject.gameoptYouneedratedgames);
                   } else {
                     if (var12.field_Rb < var6) {
                       var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{null, Integer.toString(var6)}, -1, WhirlpoolHasher.gameoptYouneedrating);
@@ -618,7 +618,7 @@ final class HuffmanCodec {
                     var29 = 1;
                   }
                   if (var29 != 0) {
-                    var30_refLifetime2 = "<col=A00000>" + ck.field_R[var27_int] + "</col>";
+                    var30_refLifetime2 = "<col=A00000>" + ValidationMessageWidget.field_R[var27_int] + "</col>";
                     var25 = var30_refLifetime2;
                     var24Lifetime2 = var25;
                     var25 = var30_refLifetime2;

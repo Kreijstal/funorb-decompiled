@@ -142,7 +142,7 @@ final class pm extends IntrusiveNode {
           if (!cl.isPointerInside(1, qa.field_v)) {
             return -1;
           }
-          if (vm.field_d[5] == qa.field_v.sprite) {
+          if (PolarObject.field_d[5] == qa.field_v.sprite) {
             return 3;
           }
           return 2;
@@ -156,7 +156,7 @@ final class pm extends IntrusiveNode {
         if (!cl.isPointerInside(1, qa.field_v)) {
           return -1;
         }
-        if (vm.field_d[5] == qa.field_v.sprite) {
+        if (PolarObject.field_d[5] == qa.field_v.sprite) {
           return 3;
         }
         return 2;

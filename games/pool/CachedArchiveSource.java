@@ -249,7 +249,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         var6 = var7;
         var5 = var6;
         var2 = var5;
-        if (!(this.indexRequest instanceof dg)) {
+        if (!(this.indexRequest instanceof DiskArchiveRequest)) {
           try {
             if (var5 == null) {
               throw new RuntimeException();
@@ -388,7 +388,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         var18 = ((ArchiveRequest) (var4)).getBytes(false);
         var13 = var18;
         var5 = var13;
-        if (var4 instanceof dg) {
+        if (var4 instanceof DiskArchiveRequest) {
           try {
             if (var5 != null &&
               var18.length > 2) {

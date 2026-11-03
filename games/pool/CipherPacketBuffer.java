@@ -103,14 +103,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((co.field_ab[var4] & this.payload[incrementValue$0]) << -var4 + param0);
+          var5 = var5 + ((BirthDateInputWidget.field_ab[var4] & this.payload[incrementValue$0]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 == var4) {
-          var5 = var5 + (co.field_ab[var4] & this.payload[var3]);
+          var5 = var5 + (BirthDateInputWidget.field_ab[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.payload[var3] >> -param0 + var4 & co.field_ab[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & BirthDateInputWidget.field_ab[param0]);
         }
         if (param1 <= 15) {
           targetBlackBall = (String) null;

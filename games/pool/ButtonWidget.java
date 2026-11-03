@@ -148,7 +148,7 @@ class ButtonWidget extends UiWidget {
               if (PoolMatchController.field_jb > 0) {
                 boolean decompiledSharedTail1 = (PoolMatchController.field_jb != 1);
                 if (!decompiledSharedTail1) {
-                  var10_ref_String = lo.joinRequestsOne;
+                  var10_ref_String = ProxyAuthenticationRequiredException.joinRequestsOne;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
@@ -272,7 +272,7 @@ class ButtonWidget extends UiWidget {
                       stackIn_76_0 = stackOut_75_0;
                       if (var19 == 0) {
                         if (stackIn_76_0) {
-                          var22 = "<col=A00000>" + ck.field_R[var13] + "</col>";
+                          var22 = "<col=A00000>" + ValidationMessageWidget.field_R[var13] + "</col>";
                           if (var11_ref == null) {
                             var11_ref = var22;
                           } else {

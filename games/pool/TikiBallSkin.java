@@ -214,13 +214,13 @@ final class TikiBallSkin extends BallSkin {
           if (param0 != -8) {
             return;
           }
-          var1Lifetime1 = (LobbyPlayer) (ck.field_W.last((byte) 65));
+          var1Lifetime1 = (LobbyPlayer) (ValidationMessageWidget.field_W.last((byte) 65));
           while (var1Lifetime1 != null) {
             stackIn_24_0 = ~var1Lifetime1.field_gc;
             if (stackIn_24_0 < -1) {
               var1Lifetime1.field_gc = var1Lifetime1.field_gc - 1;
               if (0 != var1Lifetime1.field_gc) {
-                var1Lifetime1 = (LobbyPlayer) (ck.field_W.previous((byte) -5));
+                var1Lifetime1 = (LobbyPlayer) (ValidationMessageWidget.field_W.previous((byte) -5));
                 continue;
               }
               var1Lifetime1.field_hc = 0;
@@ -228,7 +228,7 @@ final class TikiBallSkin extends BallSkin {
                 var1Lifetime1.unlink((byte) -117);
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (ck.field_W.previous((byte) -5));
+            var1Lifetime1 = (LobbyPlayer) (ValidationMessageWidget.field_W.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -283,7 +283,7 @@ final class CueAim {
     }
 
     final static void a(byte param0) {
-        PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, dg.field_J, tq.field_m);
+        PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, DiskArchiveRequest.field_J, tq.field_m);
         if (param0 > -97) {
           TriangleMesh var2 = (TriangleMesh) null;
           CueAim.a(-66, 60, (TriangleMesh) null, -82, -71, 60, 97, 51);

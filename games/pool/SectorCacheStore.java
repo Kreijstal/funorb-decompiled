@@ -66,9 +66,9 @@ final class SectorCacheStore {
                 stackIn_7_0 = (byte[]) null;
                 return stackIn_7_0;
               }
-              this.field_f.readFully((byte) -111, 6, 0, dg.field_S);
-              var4_int = (dg.field_S[2] & 255) + (16711680 & dg.field_S[0] << 16) + (dg.field_S[1] << 8 & 65280);
-              var5 = (255 & dg.field_S[5]) + (dg.field_S[3] << 16 & 16711680) + (dg.field_S[4] << 8 & 65280);
+              this.field_f.readFully((byte) -111, 6, 0, DiskArchiveRequest.field_S);
+              var4_int = (DiskArchiveRequest.field_S[2] & 255) + (16711680 & DiskArchiveRequest.field_S[0] << 16) + (DiskArchiveRequest.field_S[1] << 8 & 65280);
+              var5 = (255 & DiskArchiveRequest.field_S[5]) + (DiskArchiveRequest.field_S[3] << 16 & 16711680) + (DiskArchiveRequest.field_S[4] << 8 & 65280);
               if (var4_int < 0) {
                 return null;
               }
@@ -96,21 +96,21 @@ final class SectorCacheStore {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_i.readFully((byte) -115, var14 + var9, 0, dg.field_S);
-                  var12 = (dg.field_S[5] << 8 & 65280) + (dg.field_S[4] << 16 & 16711680) + (dg.field_S[6] & 255);
-                  var11 = ((dg.field_S[2] & 255) << 8) + (dg.field_S[3] & 255);
-                  var13 = dg.field_S[7] & 255;
-                  var10 = (dg.field_S[1] & 255) + (65280 & dg.field_S[0] << 8);
+                  this.field_i.readFully((byte) -115, var14 + var9, 0, DiskArchiveRequest.field_S);
+                  var12 = (DiskArchiveRequest.field_S[5] << 8 & 65280) + (DiskArchiveRequest.field_S[4] << 16 & 16711680) + (DiskArchiveRequest.field_S[6] & 255);
+                  var11 = ((DiskArchiveRequest.field_S[2] & 255) << 8) + (DiskArchiveRequest.field_S[3] & 255);
+                  var13 = DiskArchiveRequest.field_S[7] & 255;
+                  var10 = (DiskArchiveRequest.field_S[1] & 255) + (65280 & DiskArchiveRequest.field_S[0] << 8);
                 } else {
                   if (var9 > 510) {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_i.readFully((byte) -126, var9 + var14, 0, dg.field_S);
-                  var12 = (dg.field_S[7] << 8 & 65280) + (16711680 & dg.field_S[6] << 16) + (255 & dg.field_S[8]);
-                  var13 = dg.field_S[9] & 255;
-                  var11 = (255 & dg.field_S[5]) + (dg.field_S[4] << 8 & 65280);
-                  var10 = (dg.field_S[3] & 255) + (-16777216 & dg.field_S[0] << 24) + ((dg.field_S[1] & 255) << 16) + ((dg.field_S[2] & 255) << 8);
+                  this.field_i.readFully((byte) -126, var9 + var14, 0, DiskArchiveRequest.field_S);
+                  var12 = (DiskArchiveRequest.field_S[7] << 8 & 65280) + (16711680 & DiskArchiveRequest.field_S[6] << 16) + (255 & DiskArchiveRequest.field_S[8]);
+                  var13 = DiskArchiveRequest.field_S[9] & 255;
+                  var11 = (255 & DiskArchiveRequest.field_S[5]) + (DiskArchiveRequest.field_S[4] << 8 & 65280);
+                  var10 = (DiskArchiveRequest.field_S[3] & 255) + (-16777216 & DiskArchiveRequest.field_S[0] << 24) + ((DiskArchiveRequest.field_S[1] & 255) << 16) + ((DiskArchiveRequest.field_S[2] & 255) << 8);
                 }
                 if (var10 != param1) {
                   return null;
@@ -132,7 +132,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = dg.field_S[var16];
+                  var6[incrementValue$2] = DiskArchiveRequest.field_S[var16];
                 }
                 var8++;
                 var5 = var12;
@@ -267,8 +267,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_f.seek(0, (long)(param0 * 6));
-                  this.field_f.readFully((byte) -110, 6, 0, dg.field_S);
-                  var7_int = (dg.field_S[5] & 255) + (16711680 & dg.field_S[3] << 16) + (dg.field_S[4] << 8 & 65280);
+                  this.field_f.readFully((byte) -110, 6, 0, DiskArchiveRequest.field_S);
+                  var7_int = (DiskArchiveRequest.field_S[5] & 255) + (16711680 & DiskArchiveRequest.field_S[3] << 16) + (DiskArchiveRequest.field_S[4] << 8 & 65280);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.field_i.length((byte) 17) / 520L)) {
                     return false;
@@ -279,14 +279,14 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                dg.field_S[3] = (byte)(var7_int >> 16);
-                dg.field_S[2] = (byte)param1;
-                dg.field_S[0] = (byte)(param1 >> 16);
-                dg.field_S[1] = (byte)(param1 >> 8);
-                dg.field_S[4] = (byte)(var7_int >> 8);
-                dg.field_S[5] = (byte)var7_int;
+                DiskArchiveRequest.field_S[3] = (byte)(var7_int >> 16);
+                DiskArchiveRequest.field_S[2] = (byte)param1;
+                DiskArchiveRequest.field_S[0] = (byte)(param1 >> 16);
+                DiskArchiveRequest.field_S[1] = (byte)(param1 >> 8);
+                DiskArchiveRequest.field_S[4] = (byte)(var7_int >> 8);
+                DiskArchiveRequest.field_S[5] = (byte)var7_int;
                 this.field_f.seek(0, (long)(param0 * 6));
-                this.field_f.write(6, dg.field_S, 0, -1);
+                this.field_f.write(6, DiskArchiveRequest.field_S, 0, -1);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -297,7 +297,7 @@ final class SectorCacheStore {
                       this.field_i.seek(param4 ^ 93, (long)(520 * var7_int));
                       if (65535 >= param0) {
                         try {
-                          this.field_i.readFully((byte) -110, 8, 0, dg.field_S);
+                          this.field_i.readFully((byte) -110, 8, 0, DiskArchiveRequest.field_S);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -307,13 +307,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var12 = (dg.field_S[3] & 255) + (65280 & dg.field_S[2] << 8);
-                        var10 = ((255 & dg.field_S[5]) << 8) + ((16711680 & dg.field_S[4] << 16) + (255 & dg.field_S[6]));
-                        var11 = (dg.field_S[0] << 8 & 65280) + (255 & dg.field_S[1]);
-                        var13 = dg.field_S[7] & 255;
+                        var12 = (DiskArchiveRequest.field_S[3] & 255) + (65280 & DiskArchiveRequest.field_S[2] << 8);
+                        var10 = ((255 & DiskArchiveRequest.field_S[5]) << 8) + ((16711680 & DiskArchiveRequest.field_S[4] << 16) + (255 & DiskArchiveRequest.field_S[6]));
+                        var11 = (DiskArchiveRequest.field_S[0] << 8 & 65280) + (255 & DiskArchiveRequest.field_S[1]);
+                        var13 = DiskArchiveRequest.field_S[7] & 255;
                       } else {
                         try {
-                          this.field_i.readFully((byte) -118, 10, 0, dg.field_S);
+                          this.field_i.readFully((byte) -118, 10, 0, DiskArchiveRequest.field_S);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -323,10 +323,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (dg.field_S[3] & 255) + ((65280 & dg.field_S[2] << 8) + ((dg.field_S[0] << 24 & -16777216) + (16711680 & dg.field_S[1] << 16)));
-                        var12 = (65280 & dg.field_S[4] << 8) + (dg.field_S[5] & 255);
-                        var10 = (16711680 & dg.field_S[6] << 16) - (-(65280 & dg.field_S[7] << 8) - (dg.field_S[8] & 255));
-                        var13 = 255 & dg.field_S[9];
+                        var11 = (DiskArchiveRequest.field_S[3] & 255) + ((65280 & DiskArchiveRequest.field_S[2] << 8) + ((DiskArchiveRequest.field_S[0] << 24 & -16777216) + (16711680 & DiskArchiveRequest.field_S[1] << 16)));
+                        var12 = (65280 & DiskArchiveRequest.field_S[4] << 8) + (DiskArchiveRequest.field_S[5] & 255);
+                        var10 = (16711680 & DiskArchiveRequest.field_S[6] << 16) - (-(65280 & DiskArchiveRequest.field_S[7] << 8) - (DiskArchiveRequest.field_S[8] & 255));
+                        var13 = 255 & DiskArchiveRequest.field_S[9];
                       }
                       if ((var11 == param0 &&
                         var12 == var9 &&
@@ -353,16 +353,16 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param0 <= 65535) {
-                      dg.field_S[0] = (byte)(param0 >> 8);
-                      dg.field_S[1] = (byte)param0;
-                      dg.field_S[5] = (byte)(var10 >> 8);
-                      dg.field_S[6] = (byte)var10;
-                      dg.field_S[2] = (byte)(var9 >> 8);
-                      dg.field_S[3] = (byte)var9;
-                      dg.field_S[7] = (byte)this.field_h;
-                      dg.field_S[4] = (byte)(var10 >> 16);
+                      DiskArchiveRequest.field_S[0] = (byte)(param0 >> 8);
+                      DiskArchiveRequest.field_S[1] = (byte)param0;
+                      DiskArchiveRequest.field_S[5] = (byte)(var10 >> 8);
+                      DiskArchiveRequest.field_S[6] = (byte)var10;
+                      DiskArchiveRequest.field_S[2] = (byte)(var9 >> 8);
+                      DiskArchiveRequest.field_S[3] = (byte)var9;
+                      DiskArchiveRequest.field_S[7] = (byte)this.field_h;
+                      DiskArchiveRequest.field_S[4] = (byte)(var10 >> 16);
                       this.field_i.seek(0, (long)(520 * var7_int));
-                      this.field_i.write(8, dg.field_S, 0, -1);
+                      this.field_i.write(8, DiskArchiveRequest.field_S, 0, -1);
                       var11 = -var8 + param1;
                       if (var11 > 512) {
                         var11 = 512;
@@ -370,18 +370,18 @@ final class SectorCacheStore {
                       this.field_i.write(var11, param3, var8, -1);
                       var8 = var8 + var11;
                     } else {
-                      dg.field_S[7] = (byte)(var10 >> 8);
-                      dg.field_S[9] = (byte)this.field_h;
-                      dg.field_S[3] = (byte)param0;
-                      dg.field_S[8] = (byte)var10;
-                      dg.field_S[2] = (byte)(param0 >> 8);
-                      dg.field_S[4] = (byte)(var9 >> 8);
-                      dg.field_S[0] = (byte)(param0 >> 24);
-                      dg.field_S[1] = (byte)(param0 >> 16);
-                      dg.field_S[6] = (byte)(var10 >> 16);
-                      dg.field_S[5] = (byte)var9;
+                      DiskArchiveRequest.field_S[7] = (byte)(var10 >> 8);
+                      DiskArchiveRequest.field_S[9] = (byte)this.field_h;
+                      DiskArchiveRequest.field_S[3] = (byte)param0;
+                      DiskArchiveRequest.field_S[8] = (byte)var10;
+                      DiskArchiveRequest.field_S[2] = (byte)(param0 >> 8);
+                      DiskArchiveRequest.field_S[4] = (byte)(var9 >> 8);
+                      DiskArchiveRequest.field_S[0] = (byte)(param0 >> 24);
+                      DiskArchiveRequest.field_S[1] = (byte)(param0 >> 16);
+                      DiskArchiveRequest.field_S[6] = (byte)(var10 >> 16);
+                      DiskArchiveRequest.field_S[5] = (byte)var9;
                       this.field_i.seek(0, (long)(520 * var7_int));
-                      this.field_i.write(10, dg.field_S, 0, param4 - 94);
+                      this.field_i.write(10, DiskArchiveRequest.field_S, 0, param4 - 94);
                       var11 = -var8 + param1;
                       if (var11 > 510) {
                         var11 = 510;
@@ -542,7 +542,7 @@ final class SectorCacheStore {
                 stackIn_48_0 = ((8 & var7) != 0);
                 ea.field_z = stackIn_48_0;
                 stackIn_51_0 = ((4 & var7) != 0);
-                fq.field_Gb = stackIn_51_0;
+                AccountCreationDialog.field_Gb = stackIn_51_0;
                 stackIn_54_0 = ((2 & var7) != 0);
                 ViewportController.field_y = stackIn_54_0;
                 if (ea.field_z) {
@@ -564,7 +564,7 @@ final class SectorCacheStore {
               oj.field_y = TutorialController.normalizeDisplayName(101, var13);
               Js5Transport.field_l = PlayerContextMenu.field_e.readUnsignedByte(-126);
               RankingsScreen.field_J = ta.field_a;
-              if (hn.field_c.payloadKind((byte) -110) == dg.field_L) {
+              if (hn.field_c.payloadKind((byte) -110) == DiskArchiveRequest.field_L) {
                 stackIn_67_0 = SocialListEntry.field_Xb;
                 stackIn_67_1 = NanoTickClock.getApplet(78);
                 stackIn_68_2 = !(param0);
@@ -579,7 +579,7 @@ final class SectorCacheStore {
                 WeightedLruCache.writeSettingsCookie(NanoTickClock.getApplet(100), -124, var12);
               }
               if (UsernameSuggestionsPanel.field_V <= 0 &&
-                !fq.field_Gb) {
+                !AccountCreationDialog.field_Gb) {
                 try {
                   JavaScriptBridge.callWindowFunction((byte) 126, "unzap", NanoTickClock.getApplet(125));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

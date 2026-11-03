@@ -107,7 +107,7 @@ final class OpacityWidget extends SingleChildWidget {
                     }
                   }
                 } else {
-                  if (dg.field_T[param6] != var14) {
+                  if (DiskArchiveRequest.field_T[param6] != var14) {
                     break scanLoop1;
                   }
                 }
@@ -134,7 +134,7 @@ final class OpacityWidget extends SingleChildWidget {
             var9 = 1;
             if (param7) {
               if (param5 == -1) {
-                for (var10_int = 0; var10_int < dg.field_T.length; var10_int++) {
+                for (var10_int = 0; var10_int < DiskArchiveRequest.field_T.length; var10_int++) {
                   if ((md.field_c[var10_int / 8] & 1 << (7 & var10_int)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
@@ -152,14 +152,14 @@ final class OpacityWidget extends SingleChildWidget {
                   var9 = 0;
                   break;
                 }
-                param0 = param0 + (255 & qf.field_j[param5]);
+                param0 = param0 + (255 & SpaceObject.field_j[param5]);
               }
             }
             var10_intLifetime1 = 0;
             var11 = 0;
             while (true) {
               if (param5 == -1) {
-                stackIn_25_0 = dg.field_T.length;
+                stackIn_25_0 = DiskArchiveRequest.field_T.length;
               } else {
                 stackIn_25_0 = -1 + var17.length;
               }
@@ -186,7 +186,7 @@ final class OpacityWidget extends SingleChildWidget {
                 dk.field_j[param5] = (byte)var11;
               }
               if (param5 == -1 &&
-                dg.field_T.length == 1) {
+                DiskArchiveRequest.field_T.length == 1) {
                 var12 = 1;
               } else {
                 var13_ref_uo = var8[var11 + 1];
@@ -203,7 +203,7 @@ final class OpacityWidget extends SingleChildWidget {
                   var12 = stackIn_49_0;
                 } else {
                   if (param5 == -1) {
-                    stackIn_40_0 = (HighscoresScreen.field_L.field_Nb != dg.field_T[var11]) ? 0 : 1;
+                    stackIn_40_0 = (HighscoresScreen.field_L.field_Nb != DiskArchiveRequest.field_T[var11]) ? 0 : 1;
                   } else {
                     stackIn_40_0 = ((HighscoresScreen.field_L.settings[param5] & 255) != var11) ? 0 : 1;
                   }

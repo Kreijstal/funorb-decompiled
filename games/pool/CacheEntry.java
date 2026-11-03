@@ -84,7 +84,7 @@ abstract class CacheEntry extends DualLinkNode {
         if (!mg.a(true)) {
           s.field_c[3].setItems(OpacityWidget.field_O, true);
           s.field_c[10].setItems(kc.field_h, true);
-          s.field_c[11].setItems(fq.field_Hb, true);
+          s.field_c[11].setItems(AccountCreationDialog.field_Hb, true);
           s.field_c[12].setItems(ScrollPaneWithFooter.field_Nb, true);
           s.field_c[8].setItems(KillerBallSkin.field_r, true);
           s.field_c[24].setItems(SingleChildWidget.field_G, true);
@@ -156,7 +156,7 @@ abstract class CacheEntry extends DualLinkNode {
             dq.field_j[var4 - 2] = wp.fsButtonMembers;
             IterableNodeHashTable.field_c[-2 + var4] = 0;
             ByteStorage.field_c[0] = 4;
-            dq.field_j[-1 + var4] = hi.fsButtonClose;
+            dq.field_j[-1 + var4] = DirectByteStorage.fsButtonClose;
             IterableNodeHashTable.field_c[var4 - 1] = 1;
             ByteStorage.field_c[1] = 5;
           } else if (ClientException.field_h == 1) {
@@ -172,7 +172,7 @@ abstract class CacheEntry extends DualLinkNode {
               dq.field_j[var5] = ih.field_c[var5];
             }
             dq.field_j[-2 + var4] = "";
-            dq.field_j[var4 - 1] = hi.fsButtonClose;
+            dq.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
             IterableNodeHashTable.field_c[var4 - 1] = 0;
             ByteStorage.field_c[0] = 5;
           } else if (ClientException.field_h != 2) {
@@ -193,7 +193,7 @@ abstract class CacheEntry extends DualLinkNode {
                 dq.field_j[var5] = ih.field_c[var5];
               }
               dq.field_j[-2 + var4] = "";
-              dq.field_j[-1 + var4] = hi.fsButtonClose;
+              dq.field_j[-1 + var4] = DirectByteStorage.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               ByteStorage.field_c[0] = 5;
             } else if (4 == ClientException.field_h) {
@@ -209,7 +209,7 @@ abstract class CacheEntry extends DualLinkNode {
                 dq.field_j[var5] = ih.field_c[var5];
               }
               dq.field_j[-2 + var4] = "";
-              dq.field_j[var4 - 1] = hi.fsButtonClose;
+              dq.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               ByteStorage.field_c[0] = 5;
             } else {
@@ -231,7 +231,7 @@ abstract class CacheEntry extends DualLinkNode {
               dq.field_j[var4 - 2] = hg.fsButtonTryagain;
               IterableNodeHashTable.field_c[var4 - 2] = 0;
               ByteStorage.field_c[0] = 3;
-              dq.field_j[var4 - 1] = hi.fsButtonClose;
+              dq.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 1;
               ByteStorage.field_c[1] = 5;
             }

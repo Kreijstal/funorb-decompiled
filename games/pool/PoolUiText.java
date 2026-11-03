@@ -359,7 +359,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("timer_secs", (byte) 107);
                 if (null != var2) {
-                  vm.timerSecs = a.decodeBytesToString(var2, 124);
+                  PolarObject.timerSecs = a.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("gameopt_tooltipnames,0,0", (byte) 112);
                 if (null != var2) {
@@ -667,7 +667,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("ballset_plasma_group_1", (byte) 98);
                 if (null != var2) {
-                  hi.ballsetPlasmaGroup1 = a.decodeBytesToString(var2, -71);
+                  DirectByteStorage.ballsetPlasmaGroup1 = a.decodeBytesToString(var2, -71);
                 }
                 var2 = LocalGameSetupScreen.a("ballset_usa8_group_0", (byte) 113);
                 if (null != var2) {
@@ -1222,7 +1222,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("menu_restart_game", (byte) 33);
                 if (null != var2) {
-                  dg.menuRestartGame = a.decodeBytesToString(var2, 126);
+                  DiskArchiveRequest.menuRestartGame = a.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("menu_rematch_game", (byte) 103);
                 if (var2 != null) {

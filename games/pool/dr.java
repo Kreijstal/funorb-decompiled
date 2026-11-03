@@ -23,13 +23,13 @@ final class dr {
           var3 = var2.field_z;
           var4 = var2.field_A;
           uc.pushRasterSnapshot((byte) -6);
-          qf.field_k = new Sprite(var3, 3 * var4 / 4);
-          qf.field_k.bindAsRenderTarget();
+          SpaceObject.field_k = new Sprite(var3, 3 * var4 / 4);
+          SpaceObject.field_k.bindAsRenderTarget();
           var2.a(0, 0);
-          ArchiveLoadStep.field_k = new Sprite(var3, -qf.field_k.field_A + var4);
+          ArchiveLoadStep.field_k = new Sprite(var3, -SpaceObject.field_k.field_A + var4);
           ArchiveLoadStep.field_k.bindAsRenderTarget();
-          var2.a(0, -qf.field_k.field_A);
-          ArchiveLoadStep.field_k.field_B = qf.field_k.field_A;
+          var2.a(0, -SpaceObject.field_k.field_A);
+          ArchiveLoadStep.field_k.field_B = SpaceObject.field_k.field_A;
           TriangleMesh.a(125);
           if (param0 <= -48) {
             return;

@@ -61,9 +61,9 @@ final class mj {
             NetworkGameClient.field_A = null;
           }
           lf.field_a = null;
-          if (ck.field_W != null) {
-            ck.field_W.clear((byte) 78);
-            ck.field_W = null;
+          if (ValidationMessageWidget.field_W != null) {
+            ValidationMessageWidget.field_W.clear((byte) 78);
+            ValidationMessageWidget.field_W = null;
           }
           LobbyPlayer.field_Qb = null;
           if (ln.field_n == null) {

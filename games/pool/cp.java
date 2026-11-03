@@ -10,7 +10,7 @@ final class cp {
     final static boolean a(byte param0) {
         if (param0 <= 72) {
           mbExclusive2 = (String) null;
-          if (!fq.m(0)) {
+          if (!AccountCreationDialog.m(0)) {
             return false;
           }
           if ((SocialListEntry.field_Tb & 8) == 0) {
@@ -18,7 +18,7 @@ final class cp {
           }
           return false;
         }
-        if (!fq.m(0)) {
+        if (!AccountCreationDialog.m(0)) {
           return false;
         }
         if ((SocialListEntry.field_Tb & 8) == 0) {

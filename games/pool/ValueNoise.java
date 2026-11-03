@@ -43,7 +43,7 @@ final class ValueNoise {
         field_b = new int[var0];
         Random var1 = new Random();
         for (var2 = var0 - 1; var2 >= 0; var2--) {
-          field_b[var2] = ga.nextRandomInt(131072, true, var1) - 65536;
+          field_b[var2] = MaxLengthTextInputWidget.nextRandomInt(131072, true, var1) - 65536;
         }
     }
 

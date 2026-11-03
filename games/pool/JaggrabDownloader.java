@@ -65,7 +65,7 @@ final class JaggrabDownloader implements Runnable {
                 var3.setSoTimeout(10000);
                 var4 = var3.getOutputStream();
                 var4.write(17);
-                var4.write(hi.encodeWindows1252(-98, (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"))));
+                var4.write(DirectByteStorage.encodeWindows1252(-98, (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"))));
                 this.field_h = new DataInputStream(var3.getInputStream());
               }
               this.field_d.position = 0;
@@ -114,7 +114,7 @@ final class JaggrabDownloader implements Runnable {
         try {
           boolean decompiledFrameCompleted4 = true;
           mj.field_a = param1.vertexY;
-          hi.field_k = param8.faceVertexA;
+          DirectByteStorage.field_k = param8.faceVertexA;
           vn.field_h = param8.faceVertexB;
           kp.field_h = param1;
           AccountWelcomePanel.field_P = param8.faceVertexC;
@@ -143,7 +143,7 @@ final class JaggrabDownloader implements Runnable {
           param8.faceCount = PoolMatchController.field_W;
           var11.field_Z = null;
           param8.faceVertexB = vn.field_h;
-          param8.faceVertexA = hi.field_k;
+          param8.faceVertexA = DirectByteStorage.field_k;
           param1.faceVertexA = wn.field_d;
           param1.vertexZ = sa.field_w;
           param1.faceVertexB = f.field_b;

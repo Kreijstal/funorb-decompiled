@@ -245,8 +245,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var12 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "popup_mouseover"), 12519);
           var13 = NameEntryPopup.a(0, "lobby", param4, "button");
           var14 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "tab_active"), 12519);
-          dg.field_J = new UiComponent(0L, var8);
-          dg.field_J.frameSprites = var14;
+          DiskArchiveRequest.field_J = new UiComponent(0L, var8);
+          DiskArchiveRequest.field_J.frameSprites = var14;
           qg.field_f = new UiComponent(0L, (UiComponent) null);
           qg.field_f.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 115, "closebutton", param4);
           qg.field_f.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 101, "closebutton_mouseover", param4);

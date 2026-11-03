@@ -140,7 +140,7 @@ final class ro {
                 s.field_c[18].onEnter(0, 0, false);
               } else {
                 MatchingTextValidator.field_w = 16;
-                fq.a(-3405, 16, GameRules.field_b, false);
+                AccountCreationDialog.a(-3405, 16, GameRules.field_b, false);
               }
             }
           }
@@ -168,7 +168,7 @@ final class ro {
             this.field_a != 1) {
             this.field_b = IndexedSpriteState.a(this.field_a, this.field_n, (byte) 99);
             this.field_o = DialRenderer.a(this.field_a, (byte) 103, this.field_u);
-            this.field_t = lo.divideFixed12(this.field_l, this.field_a, (byte) 123);
+            this.field_t = ProxyAuthenticationRequiredException.divideFixed12(this.field_l, this.field_a, (byte) 123);
           }
           this.field_k = 0;
           this.field_i = 0;
@@ -278,7 +278,7 @@ final class ro {
           } else {
             this.field_q[0] = IndexedSpriteState.a(this.field_c[0], this.field_q[0], (byte) 99);
             this.field_j[0] = DialRenderer.a(this.field_c[0], (byte) 69, this.field_j[0]);
-            this.field_h[0] = lo.divideFixed12(this.field_h[0], this.field_c[0], (byte) 84);
+            this.field_h[0] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[0], this.field_c[0], (byte) 84);
           }
           if ((this.field_r & 240) == 0) {
             this.field_q[1] = param1.field_b;
@@ -287,7 +287,7 @@ final class ro {
           } else {
             this.field_q[1] = IndexedSpriteState.a(this.field_c[1], this.field_q[1], (byte) 99);
             this.field_j[1] = DialRenderer.a(this.field_c[1], (byte) 68, this.field_j[1]);
-            this.field_h[1] = lo.divideFixed12(this.field_h[1], this.field_c[1], (byte) 83);
+            this.field_h[1] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[1], this.field_c[1], (byte) 83);
           }
           this.field_m = this.field_j[1] - this.field_j[0];
           if (param0 != 60) {

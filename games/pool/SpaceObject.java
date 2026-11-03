@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qf {
+final class SpaceObject {
     static byte[] field_j;
     private int field_m;
     static int field_i;
@@ -22,7 +22,7 @@ final class qf {
     private int field_h;
     static PcmStreamMixer field_d;
 
-    final void a(int param0) {
+    final void move(int param0) {
         this.field_a = this.field_a + this.field_h;
         this.field_q = this.field_q + this.field_b;
         this.field_m = this.field_m + this.field_c;
@@ -60,7 +60,7 @@ final class qf {
         }
     }
 
-    final void a(int[] param0, SpaceTableScene param1, int param2) {
+    final void prepareModel(int[] param0, SpaceTableScene param1, int param2) {
         int var5 = 0;
         Sprite[] var6 = null;
         RuntimeException stackIn_14_0 = null;
@@ -74,17 +74,17 @@ final class qf {
         try {
           if (param2 <= 79) {
             var6 = (Sprite[]) null;
-            qf.a(48, -85, 56, (byte) 112, -17, (Sprite[]) null);
+            SpaceObject.a(48, -85, 56, (byte) 112, -17, (Sprite[]) null);
           }
           if (null == this.field_o) {
             this.field_p.toRotationMatrix(this.field_g, -125);
             if (this.field_q > 134217728) {
-              this.field_n.field_f = hi.field_h[this.field_q - 134217728 >> 20];
+              this.field_n.field_f = DirectByteStorage.field_h[this.field_q - 134217728 >> 20];
             } else {
               if (this.field_q >= -134217728) {
                 this.field_n.field_f = null;
               } else {
-                this.field_n.field_f = hi.field_h[-134217728 - this.field_q >> 20];
+                this.field_n.field_f = DirectByteStorage.field_h[-134217728 - this.field_q >> 20];
               }
             }
             this.field_o = (ModelMesh) (this.field_n.createModelMeshTransformed(param1.field_C, param1.field_F, param1.field_q, param1.field_e, param1.field_u, this.field_g));
@@ -125,7 +125,7 @@ final class qf {
         enterignoreAdd = null;
     }
 
-    final int a(int[] param0, byte param1) {
+    final int viewDepth(int[] param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -179,7 +179,7 @@ final class qf {
             var10 = param2 + param4 - var7;
             if (param3 != 18) {
               var12 = (Sprite[]) null;
-              qf.a(-32, 78, -31, (byte) 16, 88, (Sprite[]) null);
+              SpaceObject.a(-32, 78, -31, (byte) 16, 88, (Sprite[]) null);
             }
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param5[1].drawAlpha(param2, param0, param1);
@@ -202,7 +202,7 @@ final class qf {
         }
     }
 
-    qf(MeshBuilder param0) {
+    SpaceObject(MeshBuilder param0) {
         int var2_int = 0;
         int var3 = 0;
         int dupTemp$0 = 0;
@@ -212,22 +212,22 @@ final class qf {
         this.field_o = null;
         try {
           this.field_n = param0;
-          var2_int = ga.nextRandomInt(8192, true, ea.field_r);
+          var2_int = MaxLengthTextInputWidget.nextRandomInt(8192, true, ea.field_r);
           var3 = 1024;
-          dupTemp$0 = -134217728 + ga.nextRandomInt(268435456, true, ea.field_r);
+          dupTemp$0 = -134217728 + MaxLengthTextInputWidget.nextRandomInt(268435456, true, ea.field_r);
           this.field_q = dupTemp$0;
           dupTemp$1 = EightBallRules.sineLookup((byte) -128, var2_int) * var3;
           this.field_m = dupTemp$1;
           dupTemp$2 = UiComponentNode.sineFixed(var2_int, (byte) 77) * var3;
           this.field_a = dupTemp$2;
           this.field_g = new int[]{dupTemp$0 >> 13, dupTemp$1 >> 13, dupTemp$2 >> 13, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-          this.field_b = -(65536 + ga.nextRandomInt(131072, true, ea.field_r));
-          this.field_c = ga.nextRandomInt(9, true, ea.field_r) - 5;
-          this.field_h = -5 + ga.nextRandomInt(9, true, ea.field_r);
-          this.field_p = new Quaternion(ga.nextRandomInt(32768, true, ea.field_r) - 16384, ga.nextRandomInt(32768, true, ea.field_r) - 16384, ga.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + ga.nextRandomInt(32768, true, ea.field_r));
+          this.field_b = -(65536 + MaxLengthTextInputWidget.nextRandomInt(131072, true, ea.field_r));
+          this.field_c = MaxLengthTextInputWidget.nextRandomInt(9, true, ea.field_r) - 5;
+          this.field_h = -5 + MaxLengthTextInputWidget.nextRandomInt(9, true, ea.field_r);
+          this.field_p = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r));
           this.field_p.normalise(true);
           this.field_e = new Quaternion();
-          this.field_e.setFromAxisAngle(60, ga.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + ga.nextRandomInt(32768, true, ea.field_r), -16384 + ga.nextRandomInt(32768, true, ea.field_r), 1 + ga.nextRandomInt(8, true, ea.field_r));
+          this.field_e.setFromAxisAngle(60, MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r), -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r), 1 + MaxLengthTextInputWidget.nextRandomInt(8, true, ea.field_r));
           this.field_e.normalise(true);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ')');

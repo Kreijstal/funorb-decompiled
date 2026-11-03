@@ -185,7 +185,7 @@ final class da {
           TranslatedUiText.field_f[20] = CachedArchiveSource.soundColon;
           TranslatedUiText.field_f[50] = ShotRecord.menuTimeTrialWithGuides;
           TranslatedUiText.field_f[18] = Camera.ratingModeName[1];
-          TranslatedUiText.field_f[3] = dg.menuRestartGame;
+          TranslatedUiText.field_f[3] = DiskArchiveRequest.menuRestartGame;
           TranslatedUiText.field_f[12] = CachedArchiveSource.menuRematchGame;
           TranslatedUiText.field_f[16] = ih.hsModeName[2];
           TranslatedUiText.field_f[37] = s.gameoptlabels[2];

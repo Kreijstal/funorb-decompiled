@@ -3,7 +3,7 @@
  */
 final class ra {
     static String tabHidechattemporarily;
-    static qf[] field_f;
+    static SpaceObject[] field_f;
     static String muChatGameShowAll;
     static String createtouse;
     static ph field_e;

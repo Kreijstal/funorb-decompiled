@@ -565,7 +565,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                lo.detectMaxMemoryMb(-19);
+                ProxyAuthenticationRequiredException.detectMaxMemoryMb(-19);
                 this.recreateCanvas((byte) 55);
                 OpacityWidget.field_P = MouseWheelInput.createRasterBuffer(ml.field_d, ArchiveIndex.field_c, -44, (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
                 this.initializeGame((byte) -46);

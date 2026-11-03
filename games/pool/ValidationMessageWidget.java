@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends HotspotTextWidget {
+final class ValidationMessageWidget extends HotspotTextWidget {
     static IntrusiveDeque field_W;
     private Sprite field_U;
     private String field_X;
@@ -44,7 +44,7 @@ final class ck extends HotspotTextWidget {
         }
     }
 
-    ck(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
+    ValidationMessageWidget(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, AlternateLongAndTextLoginPayload.c(4));
         try {
           this.field_S = param0;

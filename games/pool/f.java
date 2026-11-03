@@ -94,7 +94,7 @@ final class f {
     }
 
     static {
-        hi.g(-128);
+        DirectByteStorage.g(-128);
         muLobbyLocation = "Location";
         field_f = 8;
         field_g = 12;

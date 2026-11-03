@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class co extends DateInputWidget {
+final class BirthDateInputWidget extends DateInputWidget {
     private TextInputWidget field_bb;
     private TextInputWidget field_eb;
     private TextInputWidget field_Z;
@@ -147,7 +147,7 @@ final class co extends DateInputWidget {
         return null;
     }
 
-    co(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
+    BirthDateInputWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.setWidgetBounds(param4, param2, param5, false, param3);
@@ -198,12 +198,12 @@ final class co extends DateInputWidget {
         }
     }
 
-    private co(WidgetPainter param0, boolean param1) {
+    private BirthDateInputWidget(WidgetPainter param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_Z = (TextInputWidget) ((Object) new ga("", (WidgetListener) null, 2));
-          this.field_bb = (TextInputWidget) ((Object) new ga("", (WidgetListener) null, 2));
-          this.field_eb = (TextInputWidget) ((Object) new ga("", (WidgetListener) null, 4));
+          this.field_Z = (TextInputWidget) ((Object) new MaxLengthTextInputWidget("", (WidgetListener) null, 2));
+          this.field_bb = (TextInputWidget) ((Object) new MaxLengthTextInputWidget("", (WidgetListener) null, 2));
+          this.field_eb = (TextInputWidget) ((Object) new MaxLengthTextInputWidget("", (WidgetListener) null, 4));
           this.field_cb = param1 ? true : false;
           this.field_eb.renderer = param0;
           this.field_bb.renderer = param0;

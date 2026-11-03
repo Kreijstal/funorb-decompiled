@@ -225,22 +225,22 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             var7 = (Bzip2DecoderState.field_f.width + 2) / 2;
             TextHotspotRegion.field_o.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, 0, var7 - 2, 40);
             d.field_c.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, var7, -var7 + Bzip2DecoderState.field_f.width, 40);
-            if (dg.field_T.length == 1 &&
-              dg.field_T[0] == 2) {
+            if (DiskArchiveRequest.field_T.length == 1 &&
+              DiskArchiveRequest.field_T[0] == 2) {
               var8 = 0;
             } else {
               var8 = 0;
               var9_int = 0;
               var10 = 0;
               while (true) {
-                if (dg.field_T.length > var10) {
+                if (DiskArchiveRequest.field_T.length > var10) {
                   stackIn_11_0 = (0 == (md.field_c[var10 / 8] & 1 << (var10 & 7))) ? 0 : 1;
                   var11_int = stackIn_11_0;
                   if (var11_int != 0) {
                     var9_int++;
                   }
                   if (var11_int != 0 &&
-                    2 != dg.field_T[var10]) {
+                    2 != DiskArchiveRequest.field_T[var10]) {
                     var8 = 1;
                   } else {
                     var10++;
@@ -307,7 +307,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < dr.field_c; var10Lifetime1++) {
                     if (gf.field_b[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + ck.field_R[var10Lifetime1] + "</col>";
+                      var11_ref = "<col=A00000>" + ValidationMessageWidget.field_R[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 == null) {

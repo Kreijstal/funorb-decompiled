@@ -110,7 +110,7 @@ public final class Pool extends NetworkGameClient {
                   qr.a(-28038, false);
                 }
                 if (WireframeQuad.field_x) {
-                  fq.a(-3405, -4, GameRules.field_b, false);
+                  AccountCreationDialog.a(-3405, -4, GameRules.field_b, false);
                   WireframeQuad.field_x = false;
                 }
                 if (dn.a(true, GameRules.field_b)) {
@@ -245,7 +245,7 @@ public final class Pool extends NetworkGameClient {
           } else {
             stackIn_98_2 = 0;
           }
-          fq.a(stackIn_97_0, stackIn_97_1, stackIn_98_2, var4Lifetime1Lifetime1 != 0);
+          AccountCreationDialog.a(stackIn_97_0, stackIn_97_1, stackIn_98_2, var4Lifetime1Lifetime1 != 0);
           jc.field_c = true;
         }
         if (GameRules.field_b == -7) {
@@ -272,7 +272,7 @@ public final class Pool extends NetworkGameClient {
             stackIn_106_7 = true;
           }
           var4_ref_uf = new PoolMatchController(stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_105_5, stackIn_105_6, stackIn_106_7, var10, 0, false);
-          var4_ref_uf.gameModel.addOrUpdateShot(ga.nextRandomInt(512, true, ea.field_r), -1, 0, (AccountContentDialog.field_ub.gameModel.field_A + 1) % fr.field_n, param1 ^ 19063);
+          var4_ref_uf.gameModel.addOrUpdateShot(MaxLengthTextInputWidget.nextRandomInt(512, true, ea.field_r), -1, 0, (AccountContentDialog.field_ub.gameModel.field_A + 1) % fr.field_n, param1 ^ 19063);
           AccountContentDialog.field_ub = var4_ref_uf;
           var5 = jd.field_a ? 1 : 0;
           stackIn_108_0 = -3405;
@@ -282,7 +282,7 @@ public final class Pool extends NetworkGameClient {
           } else {
             stackIn_109_2 = 0;
           }
-          fq.a(stackIn_108_0, stackIn_108_1, stackIn_109_2, var5 != 0);
+          AccountCreationDialog.a(stackIn_108_0, stackIn_108_1, stackIn_109_2, var5 != 0);
           jc.field_c = true;
         }
         if (GameRules.field_b == -6) {
@@ -297,7 +297,7 @@ public final class Pool extends NetworkGameClient {
           stackIn_119_0 = param1 - 3405;
           stackIn_119_1 = -1;
           stackIn_120_2 = (mg.a(true)) ? 21 : 0;
-          fq.a(stackIn_119_0, stackIn_119_1, stackIn_120_2, var4Lifetime3 != 0);
+          AccountCreationDialog.a(stackIn_119_0, stackIn_119_1, stackIn_120_2, var4Lifetime3 != 0);
           jc.field_c = true;
         }
         if (GameRules.field_b == -8) {
@@ -328,7 +328,7 @@ public final class Pool extends NetworkGameClient {
           stackIn_133_0 = -3405;
           stackIn_133_1 = -1;
           stackIn_134_2 = (!mg.a(true)) ? 0 : 21;
-          fq.a(stackIn_133_0, stackIn_133_1, stackIn_134_2, var4Lifetime4 != 0);
+          AccountCreationDialog.a(stackIn_133_0, stackIn_133_1, stackIn_134_2, var4Lifetime4 != 0);
           jc.field_c = true;
         }
         if (GameRules.field_b == -4) {
@@ -379,7 +379,7 @@ public final class Pool extends NetworkGameClient {
         var10 = field_O;
         var11 = TextLineLayout.a((byte) -126);
         if (ue.a((byte) -123)) {
-          KeyHandler.a((byte) -55, fq.m(0), var11);
+          KeyHandler.a((byte) -55, AccountCreationDialog.m(0), var11);
           return;
         }
         if (!rm.field_d) {
@@ -608,7 +608,7 @@ public final class Pool extends NetworkGameClient {
         ArchiveProvider.a((byte) -41);
         je.a((byte) -125);
         DialogLayer.releaseStatics((byte) -47);
-        fq.releaseStatics(param0 + 33);
+        AccountCreationDialog.releaseStatics(param0 + 33);
         ProgressDialog.releaseStatics(7585);
         AccountContentDialog.releaseStatics(-124);
         MessageDialog.clearSharedReferences((byte) -86);
@@ -701,7 +701,7 @@ public final class Pool extends NetworkGameClient {
         SocketArchiveNetworkClient.releaseStatics(param0 ^ 80);
         DualLinkDeque.a(true);
         SectorCacheStore.releaseStatics(true);
-        dg.releaseStatics((byte) -80);
+        DiskArchiveRequest.releaseStatics((byte) -80);
         CachedArchiveSource.a(true);
         pp.releaseStatics((byte) -25);
         ArchiveRequest.releaseStatics(-121);
@@ -750,7 +750,7 @@ public final class Pool extends NetworkGameClient {
         QuickChatPhraseDefinition.releaseStatics((byte) -111);
         WeightedLruCache.releaseStatics((byte) 0);
         SocketConnector.releaseStatics(param0 + 16885);
-        lo.releaseStatics(param0 + 149);
+        ProxyAuthenticationRequiredException.releaseStatics(param0 + 149);
         NanoTickClock.releaseStatics((byte) 122);
         ImageProducerRasterBuffer.releaseStatics(2);
         pc.releaseStatics(-24420);
@@ -769,7 +769,7 @@ public final class Pool extends NetworkGameClient {
         FreePlayRules.releaseStatics((byte) -105);
         TimeTrialRules.p(-9);
         BirthDateValidator.releaseStatics((byte) -119);
-        co.releaseStatics(true);
+        BirthDateInputWidget.releaseStatics(true);
         ArrayWidgetGroup.releaseStatics(16);
         rf.releaseStatics(false);
         LabeledChildWidget.g((byte) -85);
@@ -778,7 +778,7 @@ public final class Pool extends NetworkGameClient {
         ProgressBarWidget.releaseStatics(true);
         UsernameSuggestionsPanel.releaseStatics(160);
         ValidationIconWidget.releaseStatics((byte) -69);
-        ck.releaseStatics(-110);
+        ValidationMessageWidget.releaseStatics(-110);
         CheckboxWidget.releaseStatics(param0 + 117);
         TextInputValidator.releaseStatics((byte) 122);
         rm.releaseStatics((byte) -20);
@@ -789,7 +789,7 @@ public final class Pool extends NetworkGameClient {
         DateInputWidget.releaseStatics(-12253);
         ih.releaseStatics(param0 + 133);
         BitmapTextLayout.releaseStatics(-13268);
-        hi.releaseStatics(125);
+        DirectByteStorage.releaseStatics(125);
         DraggableWidget.h(-34);
         DropTargetWidget.releaseStatics(120);
         IntrusiveNodeHashTable.releaseStatics(param0 - 69);
@@ -807,7 +807,7 @@ public final class Pool extends NetworkGameClient {
         tg.releaseStatics(-10562);
         ea.releaseStatics((byte) 124);
         PlayingSound.releaseStatics(-1);
-        vm.a(false);
+        PolarObject.a(false);
         bj.a(param0 - 4275);
         ThreeSliceButtonPainter.releaseStatics(-1);
         LinkButtonPainter.releaseStatics(true);
@@ -842,7 +842,7 @@ public final class Pool extends NetworkGameClient {
         ji.releaseStatics(false);
         jd.a((byte) 79);
         WireframeQuad.a(127);
-        qf.releaseStatics(true);
+        SpaceObject.releaseStatics(true);
         he.a(param0 ^ 23);
         fl.clearSharedReferences(59);
         oi.releaseStatics((byte) -124);
@@ -1142,7 +1142,7 @@ public final class Pool extends NetworkGameClient {
                 } else {
                   stackIn_102_2 = 0;
                 }
-                fq.a(stackIn_101_0, stackIn_101_1, stackIn_102_2, false);
+                AccountCreationDialog.a(stackIn_101_0, stackIn_101_1, stackIn_102_2, false);
                 ((PoolMatchController) (var20)).resetView(-23095);
                 if ((f.field_f & ((PoolMatchController) (var20)).modeFlags) == 0) {
                   continue;
@@ -1418,7 +1418,7 @@ public final class Pool extends NetworkGameClient {
                   } else {
                     stackIn_76_2 = 21;
                   }
-                  fq.a(stackIn_75_0, stackIn_75_1, stackIn_76_2, false);
+                  AccountCreationDialog.a(stackIn_75_0, stackIn_75_1, stackIn_76_2, false);
                 } else {
                   ThreeSliceButtonPainter.field_B = LoginForm.textRemovedFromGame;
                   stackIn_71_0 = -3405;
@@ -1428,7 +1428,7 @@ public final class Pool extends NetworkGameClient {
                   } else {
                     stackIn_72_2 = 21;
                   }
-                  fq.a(stackIn_71_0, stackIn_71_1, stackIn_72_2, false);
+                  AccountCreationDialog.a(stackIn_71_0, stackIn_71_1, stackIn_72_2, false);
                 }
                 PoolGameModel.l(-127);
                 s.field_c[MatchingTextValidator.field_w].onEnter(0, 0, false);

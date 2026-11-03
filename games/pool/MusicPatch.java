@@ -504,7 +504,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + (var30 - var27Lifetime6Lifetime1) * var28;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = dg.a((byte) 44, -var27Lifetime6Lifetime1 + var30, var32);
+                var34 = DiskArchiveRequest.a((byte) 44, -var27Lifetime6Lifetime1 + var30, var32);
                 var32 = var32 + (var31 - var28);
                 this.field_n[var33] = (byte)(32 + this.field_n[var33] * var34 >> 6);
               }
@@ -548,7 +548,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = dg.a((byte) 44, -var27Lifetime7 + var30Lifetime1Lifetime1, var32Lifetime1);
+                var34Lifetime1 = DiskArchiveRequest.a((byte) 44, -var27Lifetime7 + var30Lifetime1Lifetime1, var32Lifetime1);
                 var35 = (255 & this.field_v[var37]) + var34Lifetime1;
                 if (var35 < 0) {
                   var35 = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends ByteStorage {
+final class DirectByteStorage extends ByteStorage {
     static byte[][] field_h;
     static int[] field_k;
     static String ballsetPlasmaGroup1;
@@ -33,7 +33,7 @@ final class hi extends ByteStorage {
         try {
           if (param0 > -34) {
             var6 = (java.awt.Component) null;
-            hi.attachMouseListeners((java.awt.Component) null, -120);
+            DirectByteStorage.attachMouseListeners((java.awt.Component) null, -120);
           }
           var2_int = param1.length();
           var3 = new byte[var2_int];
@@ -178,13 +178,13 @@ final class hi extends ByteStorage {
         }
     }
 
-    hi() {
+    DirectByteStorage() {
     }
 
     final void setBytes(byte[] param0, byte param1) {
         try {
           if (param1 != 2) {
-            hi.e(-82);
+            DirectByteStorage.e(-82);
           }
           this.field_l = java.nio.ByteBuffer.allocateDirect(param0.length);
           this.field_l.position(0);

@@ -8,9 +8,9 @@ final class MessageScreen extends MenuScreen {
     static String field_I;
 
     final static Object a(boolean param0, int param1, byte[] param2) {
-        hi var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        hi stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -25,7 +25,7 @@ final class MessageScreen extends MenuScreen {
             return null;
           }
           if (param2.length > 136) {
-            var3 = new hi();
+            var3 = new DirectByteStorage();
             ((ByteStorage) ((Object) var3)).setBytes(param2, (byte) 2);
             stackIn_8_0 = var3;
             return stackIn_8_0;

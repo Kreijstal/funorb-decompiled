@@ -462,7 +462,7 @@ final class PlasmaBallSkin extends BallSkin {
           var4 = hj.field_d[0].length;
           for (var5 = 0; hj.field_d.length > var5; var5++) {
             dupTemp$2 = ie.field_a[var5];
-            dupTemp$2[1] = dupTemp$2[1] + (-3 + ga.nextRandomInt(5, true, ea.field_r));
+            dupTemp$2[1] = dupTemp$2[1] + (-3 + MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r));
             ie.field_a[var5][hj.field_d[var5].length - 1] = 0;
             if (48 >= ie.field_a[var5][1]) {
               if (ie.field_a[var5][1] < 16) {
@@ -483,9 +483,9 @@ final class PlasmaBallSkin extends BallSkin {
                 hj.field_d[var7][var5Lifetime1] = hj.field_d[var7][var5Lifetime1] + hj.field_d[var7][-1 + var5Lifetime1] >> 1;
                 ResizableDialog.field_ab[var7][var5Lifetime1] = ResizableDialog.field_ab[var7][var5Lifetime1] + ResizableDialog.field_ab[var7][var5Lifetime1 - 1] >> 1;
                 dupTemp$0 = hj.field_d[var7];
-                dupTemp$0[var5Lifetime1] = dupTemp$0[var5Lifetime1] + (ga.nextRandomInt(5, true, ea.field_r) - 2);
+                dupTemp$0[var5Lifetime1] = dupTemp$0[var5Lifetime1] + (MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r) - 2);
                 dupTemp$1 = ResizableDialog.field_ab[var7];
-                dupTemp$1[var5Lifetime1] = dupTemp$1[var5Lifetime1] + (ga.nextRandomInt(5, true, ea.field_r) - 2);
+                dupTemp$1[var5Lifetime1] = dupTemp$1[var5Lifetime1] + (MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r) - 2);
                 if (var6Lifetime1 >= hj.field_d[var7][var5Lifetime1]) {
                   if (-var6Lifetime1 > hj.field_d[var7][var5Lifetime1]) {
                     hj.field_d[var7][var5Lifetime1] = -var6Lifetime1;
@@ -639,7 +639,7 @@ final class PlasmaBallSkin extends BallSkin {
           var17 = (var17 << 13) / var13 + (long)(SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4);
           SoftwareRasterizer.fillCircleBlended((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - param0) >> 8), 0, 224);
           if (2147483647L > 127L * (34359738368L / var13) * (34359738368L / var13)) {
-            SoftwareRasterizer.fillRadialGlow((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, dg.a(-9, param2));
+            SoftwareRasterizer.fillRadialGlow((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, DiskArchiveRequest.a(-9, param2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1027,7 +1027,7 @@ final class PlasmaBallSkin extends BallSkin {
           if (1 != param1) {
             throw new IllegalStateException("Invalid group number");
           }
-          stackIn_12_0 = hi.ballsetPlasmaGroup1;
+          stackIn_12_0 = DirectByteStorage.ballsetPlasmaGroup1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fq extends MessageDialog implements ButtonActivationListener {
+final class AccountCreationDialog extends MessageDialog implements ButtonActivationListener {
     static boolean field_Gb;
     static String muChatOn;
     static String mpRematchnewgame;
@@ -14,7 +14,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
         if (param0 == 0) {
           return null == MatchingTextValidator.field_u ? um.field_e : true;
         }
-        fq.m(71);
+        AccountCreationDialog.m(71);
         return null == MatchingTextValidator.field_u ? um.field_e : true;
     }
 
@@ -132,7 +132,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
           if (this.field_Fb) {
             return super.advanceDialogAnimation((byte) -20);
           }
-          var2 = hi.a(true);
+          var2 = DirectByteStorage.a(true);
           if (var2 != null) {
             this.a(var2, param0 + 25, false);
             return super.advanceDialogAnimation((byte) -20);
@@ -145,7 +145,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
         if (this.field_Fb) {
           return super.advanceDialogAnimation((byte) -20);
         }
-        var2Lifetime1 = hi.a(true);
+        var2Lifetime1 = DirectByteStorage.a(true);
         if (var2Lifetime1 != null) {
           this.a(var2Lifetime1, param0 + 25, false);
           return super.advanceDialogAnimation((byte) -20);
@@ -153,7 +153,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
         return super.advanceDialogAnimation((byte) -20);
     }
 
-    fq(DialogLayer param0, AccountCreationForm param1) {
+    AccountCreationDialog(DialogLayer param0, AccountCreationForm param1) {
         super(param0, bi.field_e, DualLinkNodeHashTable.creatingyouraccount, false, false);
         try {
           this.field_Cb = param1;
@@ -177,7 +177,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
         if (param0 != -3405) {
           return;
         }
-        ga.m(param0 ^ 22150);
+        MaxLengthTextInputWidget.m(param0 ^ 22150);
         if (!dn.a(true, GameRules.field_b)) {
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {

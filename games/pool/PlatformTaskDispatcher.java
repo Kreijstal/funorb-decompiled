@@ -101,7 +101,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          lo var3_ref = null;
+          ProxyAuthenticationRequiredException var3_ref = null;
           LimitedRandomAccessFile var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
@@ -153,11 +153,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (lo) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var9.field_e = ii.createProxyConnector(114, (String) (var9.field_g), var9.field_a).a((byte) -108);
-                    } catch (lo decompiledCaughtParameter1) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      var3_ref = (lo) (Object) decompiledCaughtException;
+                      var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var9.field_e = var3_ref.getMessage();
                       throw var3_ref;
                     }

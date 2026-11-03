@@ -26,7 +26,7 @@ final class DualLinkDequeIterator implements Iterator {
           if (param0 != -24296) {
             DualLinkDequeIterator.releaseStatics(-16);
           }
-          qf.field_d.b(param1);
+          SpaceObject.field_d.b(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

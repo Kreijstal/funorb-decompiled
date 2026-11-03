@@ -226,11 +226,11 @@ final class SpaceTableScene extends ModelTableScene {
         var4 = Pool.field_O;
         try {
           super.buildTableGeometry(param0, param1);
-          ra.field_f = new qf[32];
+          ra.field_f = new SpaceObject[32];
           ReportAbuseDialog.field_Ub = new int[ra.field_f.length];
           MultiHandleSliderWidget.field_N = new int[ra.field_f.length];
           for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
-            ra.field_f[var3_int] = new qf(this.field_O[om.field_w]);
+            ra.field_f[var3_int] = new SpaceObject(this.field_O[om.field_w]);
             ReportAbuseDialog.field_Ub[var3_int] = var3_int;
           }
           return;
@@ -267,7 +267,7 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           super.updatePottedBalls(param0, param1);
           for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
-            ra.field_f[var3_int].a(2115785453);
+            ra.field_f[var3_int].move(2115785453);
           }
           if (gd.field_g < 0) {
             TextInputValidator.field_h.translate(0, (byte) -96, 1, 0);
@@ -313,7 +313,7 @@ final class SpaceTableScene extends ModelTableScene {
         var6 = param0;
         if (var6 != 5) {
           if (2 == var6) {
-            var6 = ga.nextRandomInt(2, true, ea.field_r);
+            var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
             if (var6 == 0) {
               kp.a(100, ie.field_f, param3, param1);
             } else {
@@ -323,7 +323,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
           } else {
             if (var6 == 3) {
-              var6 = ga.nextRandomInt(2, true, ea.field_r);
+              var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
               if (var6 != 0) {
                 if (var6 == 1) {
                   kp.a(100, hj.field_j, param3, param1);
@@ -350,7 +350,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
           }
         } else {
-          var6 = ga.nextRandomInt(4, true, ea.field_r);
+          var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, ea.field_r);
           if (var6 == 0) {
             kp.a(100, wn.field_b, param3, param1);
           } else {
@@ -525,9 +525,9 @@ final class SpaceTableScene extends ModelTableScene {
           var4[1] = ArchiveLoadSequence.b(var57[1], -4);
           var4[0] = ArchiveLoadSequence.b(var57[0], -4);
           var4[2] = ArchiveLoadSequence.b(var57[2], -4);
-          this.a(false, var57, var25);
+          this.prepareBallDrawOrder(false, var57, var25);
           for (var5 = 0; var5 < ra.field_f.length; var5++) {
-            MultiHandleSliderWidget.field_N[var5] = ra.field_f[ReportAbuseDialog.field_Ub[var5]].a(var57, (byte) 91);
+            MultiHandleSliderWidget.field_N[var5] = ra.field_f[ReportAbuseDialog.field_Ub[var5]].viewDepth(var57, (byte) 91);
           }
           DropTargetWidget.a(ReportAbuseDialog.field_Ub, (byte) -121, MultiHandleSliderWidget.field_N);
           PacketBuffer.field_l = var57[11] * -var57[2] + -var57[1] * var57[10] + -var57[0] * var57[9];
@@ -582,7 +582,7 @@ final class SpaceTableScene extends ModelTableScene {
           this.a(param1, param0 ^ -61);
           for (var5Lifetime2 = 0; var5Lifetime2 < CacheEntry.field_C[0].length; var5Lifetime2++) {
             if (s.field_b[2][var5Lifetime2] >= 0) {
-              SoftwareRasterizer.fillRadialGlow(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, dg.field_K);
+              SoftwareRasterizer.fillRadialGlow(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, DiskArchiveRequest.field_K);
             }
           }
           NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
@@ -592,7 +592,7 @@ final class SpaceTableScene extends ModelTableScene {
           var16[1] = var16[1] - 1152;
           for (var6 = ra.field_f.length - 1; 0 <= var6; var6--) {
             if (PacketBuffer.field_l <= MultiHandleSliderWidget.field_N[var6]) {
-              ra.field_f[ReportAbuseDialog.field_Ub[var6]].a(var94, this, 126);
+              ra.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 126);
               continue;
             }
             break;
@@ -607,7 +607,7 @@ final class SpaceTableScene extends ModelTableScene {
           var97 = GzipDecoder.field_d;
           var42.drawModelRange((byte) -81, 0, var42.field_j.length, var97);
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
-            this.a(var57, (byte) 126, false, var25, false);
+            this.drawBallsInOrder(var57, (byte) 126, false, var25, false);
           }
           var44 = tq.field_o;
           var98 = GzipDecoder.field_d;
@@ -629,7 +629,7 @@ final class SpaceTableScene extends ModelTableScene {
               stackIn_48_0 = this;
               stackIn_48_5 = true;
             }
-            this.a(stackIn_47_1, (byte) stackIn_47_2, stackIn_47_3, stackIn_47_4, stackIn_48_5);
+            this.drawBallsInOrder(stackIn_47_1, (byte) stackIn_47_2, stackIn_47_3, stackIn_47_4, stackIn_48_5);
           }
           var49 = tq.field_o;
           var101 = GzipDecoder.field_d;
@@ -643,7 +643,7 @@ final class SpaceTableScene extends ModelTableScene {
             param1.buildAimPreviewTrail(param0 - 70);
           }
           while (var6 >= 0) {
-            ra.field_f[ReportAbuseDialog.field_Ub[var6]].a(var94, this, 99);
+            ra.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 99);
             var6--;
           }
           return;
@@ -847,10 +847,10 @@ final class SpaceTableScene extends ModelTableScene {
             this.initializeScene(false);
           }
           pp.a(this.field_O[StatefulTextPainter.field_x], (short) -8246, true, this.field_M[StatefulTextPainter.field_x], ContextMenu.field_Ub);
-          hi.field_h = new byte[32][this.field_O[om.field_w].faceCount];
-          for (var4Lifetime4 = 0; hi.field_h.length > var4Lifetime4; var4Lifetime4++) {
-            for (var14 = 0; var14 < hi.field_h[var4Lifetime4].length; var14++) {
-              hi.field_h[var4Lifetime4][var14] = (byte)(var4Lifetime4 * 255 / hi.field_h.length);
+          DirectByteStorage.field_h = new byte[32][this.field_O[om.field_w].faceCount];
+          for (var4Lifetime4 = 0; DirectByteStorage.field_h.length > var4Lifetime4; var4Lifetime4++) {
+            for (var14 = 0; var14 < DirectByteStorage.field_h[var4Lifetime4].length; var14++) {
+              DirectByteStorage.field_h[var4Lifetime4][var14] = (byte)(var4Lifetime4 * 255 / DirectByteStorage.field_h.length);
             }
           }
           return;
@@ -960,9 +960,9 @@ final class SpaceTableScene extends ModelTableScene {
         s.field_b = new int[3][CacheEntry.field_C[0].length];
         for (var9 = 0; var9 < CacheEntry.field_C[0].length; var9++) {
           do {
-            var4 = ga.nextRandomInt(255, param0, ea.field_r) - 127;
-            var5 = ga.nextRandomInt(255, param0, ea.field_r) - 127;
-            var6 = ga.nextRandomInt(255, param0, ea.field_r) - 127;
+            var4 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
+            var5 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
+            var6 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
             var7 = 256;
             var10 = var4 * var4 + (var5 * var5 + var6 * var6);
             var8 = rf.inverseSquareRoot(var10, -121);
@@ -991,7 +991,7 @@ final class SpaceTableScene extends ModelTableScene {
         super.buildPalettes(param0);
         int[] var3 = ta.buildGradientPalette(new int[]{0, 0, 9, 13426175}, 47);
         int[] var2 = var3;
-        dg.field_K = ta.buildGradientPalette(new int[]{0, var3[0], 128, var3[1], 192, var3[2], 224, var3[4], 256, var3[8]}, -122);
+        DiskArchiveRequest.field_K = ta.buildGradientPalette(new int[]{0, var3[0], 128, var3[1], 192, var3[2], 224, var3[4], 256, var3[8]}, -122);
     }
 
     final void a(byte param0, boolean param1, int param2) {

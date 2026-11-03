@@ -72,7 +72,7 @@ abstract class TickClock {
     final static void a(byte param0, PcmSampleStream param1) {
         try {
           int var2_int = 59 % ((param0 + 75) / 33);
-          qf.field_d.a(param1);
+          SpaceObject.field_d.a(param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -160,7 +160,7 @@ final class PoolGameModel {
           this.field_z = 0;
         }
         if ((MenuScreen.field_F & var8.endResolution) != 0) {
-          this.setBreakSeed(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
+          this.setBreakSeed(MaxLengthTextInputWidget.nextRandomInt(512, true, ea.field_r) + 1, 456);
         }
         if (param0 < 30) {
           this.field_z = -45;
@@ -704,7 +704,7 @@ final class PoolGameModel {
           var11_long = IterableNodeHashTable.a(param3 ^ -314, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
           if (-2147483648L > var11_long ||
             var11_long > 2147483647L) {
-            System.out.println("Wall normal overflow " + lo.toHexString(var11_long, 7697781));
+            System.out.println("Wall normal overflow " + ProxyAuthenticationRequiredException.toHexString(var11_long, 7697781));
           }
           boolean decompiledFrameRemainder0 = true;
           var9 = ArchiveProvider.divideFixed16((int)var11_long, (byte) -128, (long)var9);
@@ -1221,12 +1221,12 @@ final class PoolGameModel {
         ThemeSelectScreen.field_P = 0;
         TranslatedUiText.field_d = jc.field_c;
         int var1 = -44 % ((-83 - param0) / 40);
-        if (lo.field_a) {
+        if (ProxyAuthenticationRequiredException.field_a) {
           ti.field_d = null;
           ArchiveIndex.field_l = new IntrusiveDeque();
           ClientException.field_g = ek.a(124);
           hp.field_c = ek.a(-110);
-          lo.field_a = false;
+          ProxyAuthenticationRequiredException.field_a = false;
         }
         if (l.field_a) {
           DialogLayer.a(true);
@@ -1361,7 +1361,7 @@ final class PoolGameModel {
         }
         var21 = this.rules.rackOrder(var4.breakSeed, (byte) -32);
         if (var4.breakSeed < 0) {
-          var4.breakSeed = ga.nextRandomInt(512, true, ea.field_r);
+          var4.breakSeed = MaxLengthTextInputWidget.nextRandomInt(512, true, ea.field_r);
         }
         var6 = new IsaacCipher(new int[]{var4.breakSeed});
         var7 = 1;
@@ -1560,7 +1560,7 @@ final class PoolGameModel {
           ii.field_e.setBounds(0, param1 ^ 2147483647, 0, Bzip2DecoderState.field_f.width, 30);
           MusicCrossfadeStream.field_x.setBounds(30, 2147483647, 0, Bzip2DecoderState.field_f.width, -30 + (-2 + Bzip2DecoderState.field_f.height) - 40);
           var2_int = dr.field_c + 3;
-          if (dg.field_T.length < 2) {
+          if (DiskArchiveRequest.field_T.length < 2) {
             var2_int--;
           }
           if (param0) {
@@ -1578,7 +1578,7 @@ final class PoolGameModel {
           var5 = 5 + var4 + 2;
           for (var6 = param1; var6 < 4 + dr.field_c; var6++) {
             if ((var6 != 1 ||
-              !(dg.field_T.length < 2)) && (var6 != 3 ||
+              !(DiskArchiveRequest.field_T.length < 2)) && (var6 != 3 ||
               !(ji.field_g <= 1))) {
               if (!param0 &&
                 var6 == 3) {
@@ -1875,21 +1875,21 @@ final class PoolGameModel {
         pl.field_b.setBounds(72, 2147483647, 277, 15, 15);
         qa.field_v.setBounds(72, 2147483647, 297, 15, 15);
         jq.field_d.setBounds(72, 2147483647, 317, 15, 15);
-        pl.field_b.activeSprite = vm.field_d[8];
-        pl.field_b.capturedSprite = vm.field_d[12];
-        pl.field_b.sprite = vm.field_d[4];
-        pl.field_b.disabledSprite = vm.field_d[0];
-        qa.field_v.disabledSprite = vm.field_d[2];
-        qa.field_v.capturedSprite = vm.field_d[14];
+        pl.field_b.activeSprite = PolarObject.field_d[8];
+        pl.field_b.capturedSprite = PolarObject.field_d[12];
+        pl.field_b.sprite = PolarObject.field_d[4];
+        pl.field_b.disabledSprite = PolarObject.field_d[0];
+        qa.field_v.disabledSprite = PolarObject.field_d[2];
+        qa.field_v.capturedSprite = PolarObject.field_d[14];
         if (param0 != -27397) {
           return;
         }
-        qa.field_v.sprite = vm.field_d[6];
-        qa.field_v.activeSprite = vm.field_d[10];
-        jq.field_d.activeSprite = vm.field_d[11];
-        jq.field_d.sprite = vm.field_d[7];
-        jq.field_d.capturedSprite = vm.field_d[15];
-        jq.field_d.disabledSprite = vm.field_d[3];
+        qa.field_v.sprite = PolarObject.field_d[6];
+        qa.field_v.activeSprite = PolarObject.field_d[10];
+        jq.field_d.activeSprite = PolarObject.field_d[11];
+        jq.field_d.sprite = PolarObject.field_d[7];
+        jq.field_d.capturedSprite = PolarObject.field_d[15];
+        jq.field_d.disabledSprite = PolarObject.field_d[3];
     }
 
     final void fillCueTransform(int[] param0, int param1, byte param2, int param3, int param4, int param5) {
@@ -1949,7 +1949,7 @@ final class PoolGameModel {
           var5 = new ShotRecord();
           this.shots.addFirst((byte) -60, var5);
           var5.playerIndex = this.field_A;
-          this.setBreakSeed(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
+          this.setBreakSeed(MaxLengthTextInputWidget.nextRandomInt(512, true, ea.field_r) + 1, 456);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

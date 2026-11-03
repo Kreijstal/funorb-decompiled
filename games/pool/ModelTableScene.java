@@ -129,12 +129,12 @@ abstract class ModelTableScene extends TableScene {
           var9[param0] = param4 + this.field_M[param5][0];
           var9[1] = param2 + this.field_M[param5][1];
           var9[2] = param3 + this.field_M[param5][2];
-          param6[param1 - 0] = new ModelInstance((ModelMesh) (this.a(var13, this.field_O[param5], -97)), var13);
+          param6[param1 - 0] = new ModelInstance((ModelMesh) (this.createModelMeshWithBallTransform(var13, this.field_O[param5], -97)), var13);
           var14 = dq.a((byte) 78, f.a((byte) 69, var13));
           var12 = var14;
           var10 = var12;
           var8Lifetime1 = var10;
-          param6[1 + param1] = new ModelInstance((ModelMesh) (this.a(var14, this.field_O[param5], -82)), var14);
+          param6[1 + param1] = new ModelInstance((ModelMesh) (this.createModelMeshWithBallTransform(var14, this.field_O[param5], -82)), var14);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -179,14 +179,14 @@ abstract class ModelTableScene extends TableScene {
           var9[2] = param6[2] + param1;
           var9[1] = param2 + param6[1];
           var9[0] = param6[0] + param7;
-          param0[0 + param5] = new ModelInstance((ModelMesh) (this.a(var15, param4, -115)), var15);
+          param0[0 + param5] = new ModelInstance((ModelMesh) (this.createModelMeshWithBallTransform(var15, param4, -115)), var15);
           var16 = mj.identityTransform(-31121);
           var12 = var16;
           var9Lifetime1 = var12;
           var9Lifetime1[2] = param6[2] + param1;
           var9Lifetime1[1] = -param6[1] - param2;
           var9Lifetime1[0] = param6[0] + param7;
-          param0[param5 + 1] = new ModelInstance((ModelMesh) (this.a(var16, var10, -56)), var16);
+          param0[param5 + 1] = new ModelInstance((ModelMesh) (this.createModelMeshWithBallTransform(var16, var10, -56)), var16);
           var17 = mj.identityTransform(-31121);
           var13 = var17;
           var9Lifetime2 = var13;
@@ -194,7 +194,7 @@ abstract class ModelTableScene extends TableScene {
           var9Lifetime2[2] = param6[2] + param1;
           var9Lifetime2[0] = param7 + param6[0];
           dq.a((byte) 114, var17);
-          param0[param5 + 2] = new ModelInstance((ModelMesh) (this.a(var17, param4, -85)), var17);
+          param0[param5 + 2] = new ModelInstance((ModelMesh) (this.createModelMeshWithBallTransform(var17, param4, -85)), var17);
           var18 = mj.identityTransform(-31121);
           var14 = var18;
           var9Lifetime3 = var14;
@@ -202,7 +202,7 @@ abstract class ModelTableScene extends TableScene {
           var9Lifetime3[0] = param6[0] + param7;
           var9Lifetime3[1] = -param2 - param6[1];
           dq.a((byte) -116, var18);
-          param0[param5 + 3] = new ModelInstance((ModelMesh) (this.a(var18, var10, -76)), var18);
+          param0[param5 + 3] = new ModelInstance((ModelMesh) (this.createModelMeshWithBallTransform(var18, var10, -76)), var18);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

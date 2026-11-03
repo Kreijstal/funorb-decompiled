@@ -322,7 +322,7 @@ abstract class NetworkGameClient extends GameApplet {
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      ga.n(29769);
+                      MaxLengthTextInputWidget.n(29769);
                       break regionExit1;
                     case 17:
                       this.readBrowserUrlResponse(70);
@@ -462,7 +462,7 @@ abstract class NetworkGameClient extends GameApplet {
                 var2.field_w = 256;
               }
               if ((4 & var2.field_v) != 0) {
-                var2.field_E = ck.easeOutQuadratic((byte) -127, 4000, var2.field_y, kg.field_m) + 96;
+                var2.field_E = ValidationMessageWidget.easeOutQuadratic((byte) -127, 4000, var2.field_y, kg.field_m) + 96;
               } else {
                 if (0 != (var2.field_v & 2)) {
                   var2.field_E = 4096 + bc.cubicEaseOut(2048, kg.field_m, var2.field_H, 13776);
@@ -493,7 +493,7 @@ abstract class NetworkGameClient extends GameApplet {
                       var2.field_E = bc.cubicEaseOut(2048, var3, var2.field_y, param0 + 13849) + 4096;
                     }
                   } else {
-                    var2.field_E = 96 + ck.easeOutQuadratic((byte) -126, 4000, var2.field_y, -var3 + var2.field_y);
+                    var2.field_E = 96 + ValidationMessageWidget.easeOutQuadratic((byte) -126, 4000, var2.field_y, -var3 + var2.field_y);
                   }
                 }
               } else {
@@ -756,7 +756,7 @@ abstract class NetworkGameClient extends GameApplet {
           PasswordValidator.field_o = false;
         }
         if (QuickChatCategoryDefinition.field_y == 0 &&
-          hi.e(-11071)) {
+          DirectByteStorage.e(-11071)) {
           QuickChatCategoryDefinition.field_y = 1;
         }
         if (1 == QuickChatCategoryDefinition.field_y) {
@@ -813,7 +813,7 @@ abstract class NetworkGameClient extends GameApplet {
           DualLinkNode.field_r = null;
           PolarTableScene.field_nb = null;
           uj.field_d = null;
-          pr.readUsernameParameter(-23989, (java.applet.Applet) (this));
+          MusicVoice.readUsernameParameter(-23989, (java.applet.Applet) (this));
           ArrayWidgetGroup.a(0);
           QuickChatCategoryDefinition.field_y = 10;
         }

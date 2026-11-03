@@ -221,7 +221,7 @@ final class PlayerContextMenu {
         if (17 != param2) {
           return false;
         }
-        fc.field_b = new ReportAbuseDialog(this.field_i.screenX, this.field_i.screenY, this.field_i.width, this.field_i.height, param1, tq.field_m, dg.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, this.field_m, this.field_l);
+        fc.field_b = new ReportAbuseDialog(this.field_i.screenX, this.field_i.screenY, this.field_i.width, this.field_i.height, param1, tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, this.field_m, this.field_l);
         return true;
     }
 
@@ -250,7 +250,7 @@ final class PlayerContextMenu {
     }
 
     final static void updatePageControls(int param0) {
-        VerticalScrollbar.field_Nb.sprite = dq.createTextLabelSprite(1, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, vm.timerSecs));
+        VerticalScrollbar.field_Nb.sprite = dq.createTextLabelSprite(1, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, PolarObject.timerSecs));
         if (param0 != 13) {
           PlayerContextMenu.updatePageControls(-82);
         }

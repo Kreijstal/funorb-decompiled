@@ -122,7 +122,7 @@ final class MarkerSliderPainter implements WidgetPainter {
     }
 
     final static void b(byte param0) {
-        VerticalScrollbar.field_Sb = lo.createUiTheme(14);
+        VerticalScrollbar.field_Sb = ProxyAuthenticationRequiredException.createUiTheme(14);
         TabbedPane.field_Ub = new DialogLayer();
         if (param0 > -82) {
           field_i = (IntrusiveDeque) null;

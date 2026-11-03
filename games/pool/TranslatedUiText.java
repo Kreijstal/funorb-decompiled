@@ -200,7 +200,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -79, "mu_chat_on");
                 if (var2 != null) {
-                  fq.muChatOn = a.decodeBytesToString(var2, 125);
+                  AccountCreationDialog.muChatOn = a.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -87, "mu_chat_friends");
                 if (var2 != null) {
@@ -604,7 +604,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -33, "join_requests_one");
                 if (null != var2) {
-                  lo.joinRequestsOne = a.decodeBytesToString(var2, -56);
+                  ProxyAuthenticationRequiredException.joinRequestsOne = a.decodeBytesToString(var2, -56);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "join_requests_many");
                 if (var2 != null) {
@@ -680,7 +680,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "status_playing");
                 if (null != var2) {
-                  dg.statusPlaying = a.decodeBytesToString(var2, -4);
+                  DiskArchiveRequest.statusPlaying = a.decodeBytesToString(var2, -4);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "status_join");
                 if (null != var2) {
@@ -908,7 +908,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -29, "gameopt_youneedratedgames");
                 if (null != var2) {
-                  vm.gameoptYouneedratedgames = a.decodeBytesToString(var2, 125);
+                  PolarObject.gameoptYouneedratedgames = a.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -87, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
@@ -1465,7 +1465,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -61, "create_welcome");
                 if (var2 != null) {
-                  vm.createWelcome = a.decodeBytesToString(var2, param1 + 21137);
+                  PolarObject.createWelcome = a.decodeBytesToString(var2, param1 + 21137);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -127, "create_u13_welcome");
                 if (var2 != null) {
@@ -1497,7 +1497,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -42, "create_email_confirm");
                 if (null != var2) {
-                  lo.createEmailConfirm = a.decodeBytesToString(var2, 15);
+                  ProxyAuthenticationRequiredException.createEmailConfirm = a.decodeBytesToString(var2, 15);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "create_age");
                 if (null != var2) {
@@ -1813,7 +1813,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -79, "enterignore_add");
                 if (null != var2) {
-                  qf.enterignoreAdd = a.decodeBytesToString(var2, 124);
+                  SpaceObject.enterignoreAdd = a.decodeBytesToString(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "enterignore_del");
                 if (var2 != null) {
@@ -2439,7 +2439,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 120, "mp_rematchnewgame");
                 if (var2 != null) {
-                  fq.mpRematchnewgame = a.decodeBytesToString(var2, -22);
+                  AccountCreationDialog.mpRematchnewgame = a.decodeBytesToString(var2, -22);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 124, "mp_rematchnewgame_unrated");
                 if (null != var2) {
@@ -2579,27 +2579,27 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -53, "quickchat_shortcut_keys,0");
                 if (null != var2) {
-                  ck.quickchatShortcutKeys[0] = a.decodeBytesToString(var2, -35);
+                  ValidationMessageWidget.quickchatShortcutKeys[0] = a.decodeBytesToString(var2, -35);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -51, "quickchat_shortcut_keys,1");
                 if (null != var2) {
-                  ck.quickchatShortcutKeys[1] = a.decodeBytesToString(var2, -5);
+                  ValidationMessageWidget.quickchatShortcutKeys[1] = a.decodeBytesToString(var2, -5);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 119, "quickchat_shortcut_keys,2");
                 if (null != var2) {
-                  ck.quickchatShortcutKeys[2] = a.decodeBytesToString(var2, -45);
+                  ValidationMessageWidget.quickchatShortcutKeys[2] = a.decodeBytesToString(var2, -45);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -33, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
-                  ck.quickchatShortcutKeys[3] = a.decodeBytesToString(var2, 127);
+                  ValidationMessageWidget.quickchatShortcutKeys[3] = a.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  ck.quickchatShortcutKeys[4] = a.decodeBytesToString(var2, -113);
+                  ValidationMessageWidget.quickchatShortcutKeys[4] = a.decodeBytesToString(var2, -113);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -101, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  ck.quickchatShortcutKeys[5] = a.decodeBytesToString(var2, -57);
+                  ValidationMessageWidget.quickchatShortcutKeys[5] = a.decodeBytesToString(var2, -57);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "keychar_the_character_under_questionmark");
                 if (null != var2) {
@@ -2759,7 +2759,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 118, "fs_button_close");
                 if (var2 != null) {
-                  hi.fsButtonClose = a.decodeBytesToString(var2, -5);
+                  DirectByteStorage.fsButtonClose = a.decodeBytesToString(var2, -5);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "fs_button_members");
                 if (null != var2) {

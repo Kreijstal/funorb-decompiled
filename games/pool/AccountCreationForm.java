@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationForm extends WidgetContainer implements HotspotActivationListener, ButtonActivationListener, UsernameSuggestionListener {
-    private ga displayNameInput;
-    private ga emailInput;
+    private MaxLengthTextInputWidget displayNameInput;
+    private MaxLengthTextInputWidget emailInput;
     private HotspotTextWidget termsText;
     UsernameSuggestionsPanel suggestionsPanel;
     private ButtonWidget backButton;
     private ButtonWidget createButton;
-    private ga passwordConfirmInput;
+    private MaxLengthTextInputWidget passwordConfirmInput;
     static IntrusiveDeque field_S;
-    private ga emailConfirmInput;
+    private MaxLengthTextInputWidget emailConfirmInput;
     private CheckboxWidget newsOptInCheckbox;
-    private ga ageInput;
-    private ga passwordInput;
+    private MaxLengthTextInputWidget ageInput;
+    private MaxLengthTextInputWidget passwordInput;
     static IndexedSprite[] field_Z;
     static int field_T;
     static long field_Q;
@@ -22,7 +22,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
 
     private final int a(String param0, UiWidget param1, int param2, int param3, String param4, int param5, byte param6) {
         RuntimeException var8 = null;
-        ck var9 = null;
+        ValidationMessageWidget var9 = null;
         LabeledChildWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -39,7 +39,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           }
           var10 = new LabeledChildWidget(20, param5, param3 + 120, 25, param1, false, 120, 3, ValidationIconWidget.field_O, 16777215, param0);
           this.addChild(true, var10);
-          var9 = new ck(((ValidationProviderSource) ((Object) param1)).getValidationProvider(70), param4, 126, param5 + var10.widgetHeight, param3 + 50, param2);
+          var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param1)).getValidationProvider(70), param4, 126, param5 + var10.widgetHeight, param3 + 50, param2);
           var9.listener = (WidgetListener) (this);
           this.addChild(true, var9);
           stackIn_3_0 = var9.widgetHeight + var10.widgetHeight;
@@ -427,12 +427,12 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
 
     public AccountCreationForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.displayNameInput = new ga("", (WidgetListener) null, 12);
-        this.emailInput = new ga("", (WidgetListener) null, 100);
-        this.emailConfirmInput = new ga("", (WidgetListener) null, 100);
-        this.passwordInput = new ga("", (WidgetListener) null, 20);
-        this.passwordConfirmInput = new ga("", (WidgetListener) null, 20);
-        this.ageInput = new ga("", (WidgetListener) null, 3);
+        this.displayNameInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 12);
+        this.emailInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 100);
+        this.emailConfirmInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 100);
+        this.passwordInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 20);
+        this.passwordConfirmInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 20);
+        this.ageInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.newsOptInCheckbox = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.createButton = new ButtonWidget(SpriteState.create, (WidgetListener) null);
@@ -465,7 +465,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.j(0), this.i(11579568)}, -1, ArchiveProvider.createAgreeterms);
         int var3 = 20;
         var3 = var3 + this.a((byte) 44, this.emailInput, var3, 170, ThreeSliceButtonPainter.createEmail);
-        var3 = var3 + (5 + this.a(lo.createEmailConfirm, this.emailConfirmInput, 20, 170, "", var3, (byte) -76));
+        var3 = var3 + (5 + this.a(ProxyAuthenticationRequiredException.createEmailConfirm, this.emailConfirmInput, 20, 170, "", var3, (byte) -76));
         var3 = var3 + this.a((byte) 44, this.passwordInput, var3, 170, PolarBallSkin.createPassword);
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, e.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, KillerBallSkin.createDisplayname, this.displayNameInput, LongAndTextLoginPayload.createDisplaynameHint, 170, var3));
@@ -563,7 +563,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     }
 
     public final void onSuggestionSelected(String param0, int param1) {
-        ga var3 = null;
+        MaxLengthTextInputWidget var3 = null;
         String var4 = null;
         if (param1 != 35) {
           return;

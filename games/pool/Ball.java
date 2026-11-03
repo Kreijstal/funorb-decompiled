@@ -261,7 +261,7 @@ final class Ball {
           null == UsernameSuggestionsPanel.field_R) {
           ReportAbuseDialog.field_Xb = new PcmStreamMixer();
           ta.field_h = new ReverbPcmStream(ReportAbuseDialog.field_Xb);
-          qf.field_d.b(ta.field_h);
+          SpaceObject.field_d.b(ta.field_h);
           UsernameSuggestionsPanel.field_R = new IntrusiveDeque();
         }
         ta.field_h.a(param1);
@@ -398,8 +398,8 @@ final class Ball {
                       this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -87, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, dr.field_f) / 50));
                       this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -122, (long)(vn.a(8 * this.field_l, 0, PasswordValidator.field_q, dr.field_f) / 50));
                       this.field_d = NameEntryPopup.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
-                      this.velocityX = this.velocityX + vn.a(this.angularVelocityZ, 0, -this.velocityY, pr.field_l);
-                      this.velocityY = this.velocityY + vn.a(this.angularVelocityZ, 0, this.velocityX, pr.field_l);
+                      this.velocityX = this.velocityX + vn.a(this.angularVelocityZ, 0, -this.velocityY, MusicVoice.field_l);
+                      this.velocityY = this.velocityY + vn.a(this.angularVelocityZ, 0, this.velocityX, MusicVoice.field_l);
                       this.angularVelocityY = this.angularVelocityY + this.field_y;
                       this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                       this.angularVelocityX = this.angularVelocityX + this.field_a;
@@ -458,9 +458,9 @@ final class Ball {
         }
         if (this.inPlay) {
           System.out.print("{");
-          System.out.print(lo.toHexString((long)this.positionX, 7697781));
+          System.out.print(ProxyAuthenticationRequiredException.toHexString((long)this.positionX, 7697781));
           System.out.print(",");
-          System.out.print(lo.toHexString((long)this.positionY, 7697781));
+          System.out.print(ProxyAuthenticationRequiredException.toHexString((long)this.positionY, 7697781));
           System.out.print(" ");
           this.orientation.print(param0 ^ -79);
           System.out.print("}");

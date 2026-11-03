@@ -126,7 +126,7 @@ final class DialogLayer extends SingleChildWidget {
             }
           }
           if (param2 != d.field_e.pressedButton) {
-            fc.field_b = new ReportAbuseDialog(d.field_e.screenX, d.field_e.screenY, d.field_e.width, d.field_e.height, param3, tq.field_m, dg.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, (String) null, 0L);
+            fc.field_b = new ReportAbuseDialog(d.field_e.screenX, d.field_e.screenY, d.field_e.width, d.field_e.height, param3, tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, (String) null, 0L);
           }
           var9 = IntrusiveNodeHashTable.a(param0, (byte) -126, ArchiveIndex.field_x, CueAim.field_j);
           if (var9 != null) {

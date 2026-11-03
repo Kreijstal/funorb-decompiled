@@ -132,7 +132,7 @@ final class DialWidget extends ButtonWidget {
           }
           return;
         }
-        qf.field_k.drawShadedGrayscale(var3 + 15, 10 + var4, var5);
+        SpaceObject.field_k.drawShadedGrayscale(var3 + 15, 10 + var4, var5);
         var6Lifetime1 = -125 + LobbyPlayer.field_fc;
         if (var6Lifetime1 <= 0) {
           var6Lifetime1 = LobbyPlayer.field_fc - 140;

@@ -26,7 +26,7 @@ final class TextPairLoginPayload extends LoginPayload {
 
     final LoginPayloadKind payloadKind(byte param0) {
         int var2 = -73 % ((param0 + 54) / 43);
-        return dg.field_L;
+        return DiskArchiveRequest.field_L;
     }
 
     final void writePayload(byte param0, PacketBuffer param1) {
