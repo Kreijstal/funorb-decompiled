@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends TextInputValidator {
+final class EmailValidator extends TextInputValidator {
     static String[] field_q;
 
     final static String a(int param0, char param1) {
@@ -19,7 +19,7 @@ final class hm extends TextInputValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(false, param0) == jq.field_b) {
+          if (this.validationStateForText(false, param0) == jq.field_b) {
             stackIn_2_0 = dd.field_a;
             return stackIn_2_0;
           }
@@ -46,27 +46,27 @@ final class hm extends TextInputValidator {
     public static void b(boolean param0) {
         field_q = null;
         if (param0) {
-          hm.a(-45, '\035');
+          EmailValidator.a(-45, '\035');
         }
     }
 
-    hm(TextInputWidget param0) {
+    EmailValidator(TextInputWidget param0) {
         super(param0);
     }
 
-    final re a(boolean param0, String param1) {
+    final ValidationState validationStateForText(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
-        re stackIn_7_0 = null;
-        re stackIn_9_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            hm.b(true);
+            EmailValidator.b(true);
           }
           stackIn_5_0 = (null != gi.a(4, param1)) ? 0 : 1;
           var3_int = stackIn_5_0;

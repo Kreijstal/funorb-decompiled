@@ -178,7 +178,7 @@ final class m extends tb {
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
-        var1.capture(SoftwareRasterizer.field_e, SoftwareRasterizer.field_d, SoftwareRasterizer.field_g, (byte) -120, SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+        var1.capture(SoftwareRasterizer.clipTop, SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipRight, (byte) -120, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.width, SoftwareRasterizer.height);
         if (param0 == 540) {
           mo.field_Fb.a(var1, false);
           return;

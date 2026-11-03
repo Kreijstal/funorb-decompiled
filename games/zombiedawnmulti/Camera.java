@@ -158,7 +158,7 @@ final class Camera {
     final void a(byte param0) {
         if (param0 <= 41) {
           this.worldToScreenX(-95, 100);
-          if (gf.field_h) {
+          if (DebouncedValidationProvider.field_h) {
             return;
           }
           this.centerY = this.field_l;
@@ -168,7 +168,7 @@ final class Camera {
           this.field_i = 0.004999999888241291f;
           return;
         }
-        if (gf.field_h) {
+        if (DebouncedValidationProvider.field_h) {
           return;
         }
         this.centerY = this.field_l;

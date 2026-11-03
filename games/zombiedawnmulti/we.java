@@ -38,7 +38,7 @@ final class we extends IntrusiveNode {
     we(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_f = param0;
-          this.field_m = param0.h();
+          this.field_m = param0.getVolume();
           this.field_h = param1;
           this.field_f.d(this.field_m * db.field_c + 128 >> 8);
         } catch (RuntimeException runtimeException) {

@@ -31,14 +31,14 @@ final class cm {
           var6.b((byte) -35, param5);
           var6.position = var6.position + 1;
           var7 = var6.position;
-          var6.a(-55, 4);
-          var6.a(123, param2);
+          var6.writeByte(-55, 4);
+          var6.writeByte(123, param2);
           var8 = param1;
           if (param4) {
             var8 += 128;
           }
-          var6.a(109, var8);
-          var6.a(param3, param3.length, 0, 115);
+          var6.writeByte(109, var8);
+          var6.writeBytes(param3, param3.length, 0, 115);
           var6.e(33, -var7 + var6.position);
           if (param0 > 28) {
             return;

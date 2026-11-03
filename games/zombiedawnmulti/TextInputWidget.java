@@ -185,8 +185,8 @@ class TextInputWidget extends ButtonWidget {
         RuntimeException var8 = null;
         try {
           if (super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) &&
-            this.listener instanceof WidgetPainter) {
-            var8_int = ((WidgetPainter) ((Object) this.listener)).b(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
+            this.painter instanceof rk) {
+            var8_int = ((rk) ((Object) this.painter)).b(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
             stackIn_4_1 = false;
             if (-1 == var8_int) {
               stackIn_5_2 = 0;
@@ -256,16 +256,16 @@ class TextInputWidget extends ButtonWidget {
     }
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
-        WidgetPainter var8 = null;
+        rk var8 = null;
         long var6 = 0L;
         if (param0 != -2) {
           this.field_O = -67;
         }
-        if (null != this.listener &&
+        if (null != this.painter &&
           0 == param2) {
-          this.listener.a(this.field_F, param1, -15112, param3, (UiWidget) (this));
-          if (this.listener instanceof WidgetPainter) {
-            var8 = (WidgetPainter) ((Object) this.listener);
+          this.painter.paintWidget(this.field_F, param1, -15112, param3, (UiWidget) (this));
+          if (this.painter instanceof rk) {
+            var8 = (rk) ((Object) this.painter);
             if (this.field_S != this.field_O) {
               var8.drawSelection(this.field_S, param1, this.field_O, param3, param0 ^ -93, (UiWidget) (this));
             }
@@ -300,17 +300,17 @@ class TextInputWidget extends ButtonWidget {
         int var6;
         int var7;
         int var8;
-        WidgetPainter var9;
+        rk var9;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         if (!this.field_U) {
           this.field_z = 0;
           this.field_q = 0;
           return;
         }
-        if (!(this.listener instanceof WidgetPainter)) {
+        if (!(this.painter instanceof rk)) {
           return;
         }
-        var9 = (WidgetPainter) ((Object) this.listener);
+        var9 = (rk) ((Object) this.painter);
         var3 = var9.a((UiWidget) (this), -112);
         if (param0 >= -60) {
           this.field_W = -107;
@@ -341,14 +341,14 @@ class TextInputWidget extends ButtonWidget {
         return;
     }
 
-    TextInputWidget(String param0, bj param1, int param2) {
+    TextInputWidget(String param0, WidgetListener param1, int param2) {
         super(param0, param1);
         this.field_M = false;
         this.field_V = -1;
         this.field_X = 0L;
         try {
           this.field_W = param2;
-          this.listener = ra.field_o.field_o;
+          this.painter = ra.field_o.field_o;
           this.setInputText(true, param0, (byte) 108);
           this.field_U = true;
           this.field_T = bl.a((byte) 106);
@@ -391,14 +391,14 @@ class TextInputWidget extends ButtonWidget {
     }
 
     void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
-        WidgetPainter var5 = null;
+        rk var5 = null;
         int var6 = 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
           this.g((byte) -84);
           if (1 == this.field_u) {
-            if (this.listener instanceof WidgetPainter) {
-              var5 = (WidgetPainter) ((Object) this.listener);
+            if (this.painter instanceof rk) {
+              var5 = (rk) ((Object) this.painter);
               var6 = var5.b(param2, param3, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_M &&
@@ -417,8 +417,8 @@ class TextInputWidget extends ButtonWidget {
     }
 
     void j(int param0) {
-        if (this.field_A instanceof fi) {
-          ((fi) (this.field_A)).a(this, 0);
+        if (this.field_A instanceof TextInputListener) {
+          ((TextInputListener) (this.field_A)).onTextInputChanged(this, 0);
         }
         if (param0 != 8192) {
           this.field_T = 67L;
@@ -500,7 +500,7 @@ class TextInputWidget extends ButtonWidget {
         if (null != pk.field_b) {
           pk.field_b.b(param1, (byte) 47);
         }
-        hd.a(param1, -19);
+        EmailAvailabilityValidator.a(param1, -19);
         if (null != bk.field_i) {
           bk.field_i.c(param1, -1);
         }
@@ -546,8 +546,8 @@ class TextInputWidget extends ButtonWidget {
     }
 
     private final void h(int param0) {
-        if (this.field_A instanceof fi) {
-          ((fi) (this.field_A)).a(this, true);
+        if (this.field_A instanceof TextInputListener) {
+          ((TextInputListener) (this.field_A)).onTextInputSubmitted(this, true);
         }
         if (param0 != 97) {
           this.field_S = -78;

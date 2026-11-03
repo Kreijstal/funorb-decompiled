@@ -207,8 +207,8 @@ final class ki {
             } else {
               var10 = gh.field_f[param0];
             }
-            qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            qp.field_w.b(var8, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawParagraph(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.b(var8, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -241,8 +241,8 @@ final class ki {
               var10Lifetime4 = gh.field_f[param0];
               var8Lifetime3 = var10Lifetime4;
             }
-            qp.field_w.a(var10Lifetime4, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            qp.field_w.b(var8Lifetime3, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawParagraph(var10Lifetime4, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.b(var8Lifetime3, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -268,8 +268,8 @@ final class ki {
             var8Lifetime3 = var10Lifetime6;
             var8Lifetime3 = var10Lifetime6;
           }
-          qp.field_w.a(var10Lifetime6, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-          qp.field_w.b(var8Lifetime3, 68, 45, 16777215, -1);
+          MatchingTextValidator.field_w.drawParagraph(var10Lifetime6, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+          MatchingTextValidator.field_w.b(var8Lifetime3, 68, 45, 16777215, -1);
           g.d();
           return;
         }
@@ -307,8 +307,8 @@ final class ki {
             } else {
               var10Lifetime1 = gh.field_f[param0];
             }
-            qp.field_w.a(var10Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            qp.field_w.b(var8Lifetime1, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawParagraph(var10Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.b(var8Lifetime1, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -342,8 +342,8 @@ final class ki {
               var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
               var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
             }
-            qp.field_w.a(var10Lifetime1Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            qp.field_w.b(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawParagraph(var10Lifetime1Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.b(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -365,8 +365,8 @@ final class ki {
           } else {
             var10Lifetime1Lifetime2 = gh.field_f[param0];
           }
-          qp.field_w.a(var10Lifetime1Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-          qp.field_w.b(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
+          MatchingTextValidator.field_w.drawParagraph(var10Lifetime1Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+          MatchingTextValidator.field_w.b(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
           g.d();
           return;
         }
@@ -396,8 +396,8 @@ final class ki {
           } else {
             var10Lifetime2 = gh.field_f[param0];
           }
-          qp.field_w.a(var10Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-          qp.field_w.b(var8Lifetime2, 68, 45, 16777215, -1);
+          MatchingTextValidator.field_w.drawParagraph(var10Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+          MatchingTextValidator.field_w.b(var8Lifetime2, 68, 45, 16777215, -1);
           g.d();
           return;
         }
@@ -419,8 +419,8 @@ final class ki {
         } else {
           var10Lifetime3 = gh.field_f[param0];
         }
-        qp.field_w.a(var10Lifetime3, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-        qp.field_w.b(var8Lifetime2, 68, 45, 16777215, -1);
+        MatchingTextValidator.field_w.drawParagraph(var10Lifetime3, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+        MatchingTextValidator.field_w.b(var8Lifetime2, 68, 45, 16777215, -1);
         g.d();
     }
 

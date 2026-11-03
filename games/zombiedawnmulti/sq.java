@@ -35,32 +35,32 @@ class sq extends ButtonWidget {
         int[] var30 = null;
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (param6 < SoftwareRasterizer.field_f) {
-            param1 = param1 - (SoftwareRasterizer.field_f - param6);
-            param6 = SoftwareRasterizer.field_f;
+          if (param6 < SoftwareRasterizer.clipLeft) {
+            param1 = param1 - (SoftwareRasterizer.clipLeft - param6);
+            param6 = SoftwareRasterizer.clipLeft;
           }
-          if (param7 < SoftwareRasterizer.field_e) {
-            param3 = param3 - (SoftwareRasterizer.field_e - param7);
-            param7 = SoftwareRasterizer.field_e;
+          if (param7 < SoftwareRasterizer.clipTop) {
+            param3 = param3 - (SoftwareRasterizer.clipTop - param7);
+            param7 = SoftwareRasterizer.clipTop;
           }
-          if (SoftwareRasterizer.field_g < param6 + param1) {
-            param1 = SoftwareRasterizer.field_g - param6;
+          if (SoftwareRasterizer.clipRight < param6 + param1) {
+            param1 = SoftwareRasterizer.clipRight - param6;
           }
-          if (SoftwareRasterizer.field_d < param7 + param3) {
-            param3 = -param7 + SoftwareRasterizer.field_d;
+          if (SoftwareRasterizer.clipBottom < param7 + param3) {
+            param3 = -param7 + SoftwareRasterizer.clipBottom;
           }
           if (param1 > 0 &&
             param3 > 0) {
-            var21 = param4.c();
-            var30 = SoftwareRasterizer.field_i;
+            var21 = param4.copy();
+            var30 = SoftwareRasterizer.pixels;
             if (param0 != 5) {
               sq.g(-57);
             }
-            var10 = SoftwareRasterizer.field_b;
-            var11 = SoftwareRasterizer.field_l;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param4.a();
+            param4.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6 + param7 * param4.width;
             var14 = param4.width - param1;
@@ -191,7 +191,7 @@ class sq extends ButtonWidget {
         if (param2 != -4) {
           field_S = 74;
         }
-        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((WidgetPainter) ((Object) this.listener)).a((byte) 39, (UiWidget) (this)));
+        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.painter)).a((byte) 39, (UiWidget) (this)));
     }
 
     final void a(byte param0) {
@@ -199,7 +199,7 @@ class sq extends ButtonWidget {
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
         int var2;
-        WidgetPainter var3;
+        rk var3;
         mp var4;
         int var5;
         String var6;
@@ -219,7 +219,7 @@ class sq extends ButtonWidget {
         if (param0 != 94) {
           this.a((byte) -110);
         }
-        var3 = (WidgetPainter) ((Object) this.listener);
+        var3 = (rk) ((Object) this.painter);
         var4 = var3.a((UiWidget) (this), -102);
         while (true) {
           var5 = this.field_j.indexOf("<hotspot=", var2);
@@ -308,11 +308,11 @@ class sq extends ButtonWidget {
         }
     }
 
-    sq(String param0, WidgetActionListener param1) {
-        super(param0, (bj) null);
+    sq(String param0, WidgetPainter param1) {
+        super(param0, (WidgetListener) null);
         this.field_V = null;
         try {
-          this.listener = param1;
+          this.painter = param1;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -325,7 +325,7 @@ class sq extends ButtonWidget {
         if (0 != param2) {
           return;
         }
-        WidgetPainter var5 = (WidgetPainter) ((Object) this.listener);
+        rk var5 = (rk) ((Object) this.painter);
         wi var6 = this.field_V;
         if (var6 != null) {
           var7 = var5.a(false, param3, (UiWidget) (this));
@@ -502,7 +502,7 @@ class sq extends ButtonWidget {
             sq.f(-7);
           }
           if (0 == param0) {
-            param1[6].a();
+            param1[6].bindAsRenderTarget();
             SoftwareRasterizer.fillRect(0, 0, 24, 24, 0);
             qc.a(2, (byte) -126, param1, 79, 3);
             qc.a(2, (byte) -126, param1, 78, 4);

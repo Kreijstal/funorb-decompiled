@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends WidgetContainer implements fi, in {
+final class qm extends WidgetContainer implements TextInputListener, in {
     static String field_I;
     private TextInputWidget field_M;
     private boolean field_L;
@@ -141,7 +141,7 @@ final class qm extends WidgetContainer implements fi, in {
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         if (null != this.field_O) {
-          ke.field_h.a(this.field_O, param3 - (-this.field_y - 20), 15 + (this.field_i + param1), this.field_n - 40, this.field_w, 16777215, -1, 1, 0, ke.field_h.field_C);
+          ke.field_h.drawParagraph(this.field_O, param3 - (-this.field_y - 20), 15 + (this.field_i + param1), this.field_n - 40, this.field_w, 16777215, -1, 1, 0, ke.field_h.maxAscent);
         }
         if (null != this.field_P) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, param1 + 134, -20 + this.field_n, 4210752);
@@ -169,7 +169,7 @@ final class qm extends WidgetContainer implements fi, in {
     }
 
     qm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (WidgetActionListener) null);
+        super(0, 0, 310, 190, (WidgetPainter) null);
         el dupTemp$0 = null;
         el dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -205,10 +205,10 @@ final class qm extends WidgetContainer implements fi, in {
             this.field_L)) {
             throw new IllegalStateException();
           }
-          this.field_H = (TextInputWidget) ((Object) new on(param0, (bj) (this), 100));
-          this.field_M = (TextInputWidget) ((Object) new on("", (bj) (this), 20));
+          this.field_H = (TextInputWidget) ((Object) new on(param0, (WidgetListener) (this), 100));
+          this.field_M = (TextInputWidget) ((Object) new on("", (WidgetListener) (this), 20));
           if (!this.field_K) {
-            this.field_G = new ButtonWidget(qo.field_s, (bj) null);
+            this.field_G = new ButtonWidget(qo.field_s, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_L) {
@@ -218,26 +218,26 @@ final class qm extends WidgetContainer implements fi, in {
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = gf.field_a;
+              stackIn_19_3 = DebouncedValidationProvider.field_a;
             }
-            this.field_J = new ButtonWidget(stackIn_19_3, (bj) null);
+            this.field_J = new ButtonWidget(stackIn_19_3, (WidgetListener) null);
             if (this.field_Q) {
-              this.field_P = new ButtonWidget(en.field_a, (bj) (this));
+              this.field_P = new ButtonWidget(en.field_a, (WidgetListener) (this));
             }
           } else {
-            this.field_G = new ButtonWidget(ci.field_g, (bj) null);
-            this.field_J = new ButtonWidget(oe.field_b, (bj) null);
+            this.field_G = new ButtonWidget(ci.field_g, (WidgetListener) null);
+            this.field_J = new ButtonWidget(oe.field_b, (WidgetListener) null);
             this.field_H.field_F = false;
           }
-          this.field_H.listener = (WidgetActionListener) ((Object) new tb(10000536));
-          this.field_M.listener = (WidgetActionListener) ((Object) new m(10000536));
+          this.field_H.painter = (WidgetPainter) ((Object) new tb(10000536));
+          this.field_M.painter = (WidgetPainter) ((Object) new m(10000536));
           var6 = new oq();
-          this.field_G.listener = (WidgetActionListener) ((Object) var6);
+          this.field_G.painter = (WidgetPainter) ((Object) var6);
           if (this.field_J != null) {
-            this.field_J.listener = (WidgetActionListener) ((Object) var6);
+            this.field_J.painter = (WidgetPainter) ((Object) var6);
           }
           if (null != this.field_P) {
-            this.field_P.listener = (WidgetActionListener) ((Object) var6);
+            this.field_P.painter = (WidgetPainter) ((Object) var6);
           }
           this.field_H.field_x = lh.field_e;
           if (null != this.field_P) {
@@ -248,15 +248,15 @@ final class qm extends WidgetContainer implements fi, in {
           } else {
             if (this.field_L) {
               this.field_J.field_x = de.field_a;
-              this.field_J.listener = (WidgetActionListener) ((Object) new he());
+              this.field_J.painter = (WidgetPainter) ((Object) new he());
             } else {
-              this.field_J.listener = (WidgetActionListener) ((Object) new he());
+              this.field_J.painter = (WidgetPainter) ((Object) new he());
             }
           }
           this.field_i = 15;
           var7 = ke.field_h;
           if (null != this.field_O) {
-            this.field_i = this.field_i + (var7.a(this.field_O, this.field_n - 40, var7.field_C) + 5);
+            this.field_i = this.field_i + (var7.measureWrappedHeight(this.field_O, this.field_n - 40, var7.maxAscent) + 5);
           }
           var8 = SimPortal.field_M;
           var9 = me.a(-57, jl.b(0));
@@ -275,12 +275,12 @@ final class qm extends WidgetContainer implements fi, in {
           var13 = dupTemp$1;
           this.b((byte) 108, dupTemp$1);
           this.field_i = this.field_i + (5 + ((UiWidget) ((Object) var13)).field_w);
-          this.field_G.field_A = (bj) (this);
+          this.field_G.field_A = (WidgetListener) (this);
           if (null != this.field_P) {
-            this.field_P.field_A = (bj) (this);
+            this.field_P.field_A = (WidgetListener) (this);
           }
           if (null != this.field_J) {
-            this.field_J.field_A = (bj) (this);
+            this.field_J.field_A = (WidgetListener) (this);
           }
           if (this.field_P == null) {
             this.field_G.setWidgetBounds(8, this.field_i, 28972, this.field_n - 6 - 10, 30);
@@ -410,7 +410,7 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    public final void a(TextInputWidget param0, int param1) {
+    public final void onTextInputChanged(TextInputWidget param0, int param1) {
         try {
           if (param1 != 0) {
             String var4 = (String) null;
@@ -421,7 +421,7 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    public final void a(TextInputWidget param0, boolean param1) {
+    public final void onTextInputSubmitted(TextInputWidget param0, boolean param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

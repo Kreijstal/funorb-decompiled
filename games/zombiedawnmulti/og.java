@@ -37,11 +37,11 @@ final class og extends SimEntity {
         int var3 = -1 / ((param1 - 57) / 55);
         var2.position = var2.position + 1;
         int var4 = var2.position;
-        var2.a(122, 5);
-        var2.a(122, JaggrabDownloader.field_c.field_mc);
+        var2.writeByte(122, 5);
+        var2.writeByte(122, JaggrabDownloader.field_c.field_mc);
         int var5 = JaggrabDownloader.field_c.field_Pb + (JaggrabDownloader.field_c.field_fc << 6);
-        var2.a(-101, var5);
-        var2.a(JaggrabDownloader.field_c.field_Zb, JaggrabDownloader.field_c.field_Zb.length, 0, 114);
+        var2.writeByte(-101, var5);
+        var2.writeBytes(JaggrabDownloader.field_c.field_Zb, JaggrabDownloader.field_c.field_Zb.length, 0, 114);
         var2.e(91, -var4 + var2.position);
     }
 
@@ -421,7 +421,7 @@ final class og extends SimEntity {
               } else {
                 var12.field_Kb.setBounds(jk.field_f, var31, 68, 0, -3344);
               }
-              var12.field_Gb.field_wb = BitmapFont.a(var12.field_Gb.field_yb, var32, 78);
+              var12.field_Gb.field_wb = BitmapFont.truncateText(var12.field_Gb.field_yb, var32, 78);
               var12.field_Gb.setBounds(jk.field_f, var31, 78, 70, -3344);
               if (var12.field_Gb.field_L &&
                 !var12.field_Gb.field_wb.equals(var32)) {
@@ -431,7 +431,7 @@ final class og extends SimEntity {
               if (var12.field_Wb) {
                 var12.field_Ib.field_R = 2;
                 var12.field_gc.field_wb = "/" + var12.field_mc;
-                var33_int = (348 - var12.field_gc.field_yb.a("/")) / 2;
+                var33_int = (348 - var12.field_gc.field_yb.textWidth("/")) / 2;
                 var12.field_Ib.setBounds(jk.field_f, var31, -150 + var33_int, 150, -3344);
                 var12.field_gc.setBounds(jk.field_f, var31, 198 - var33_int, var33_int, -3344);
               } else {
@@ -445,7 +445,7 @@ final class og extends SimEntity {
               var12.field_jc.setBounds(jk.field_f, var31, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, -3344);
               var34_int = LevelFileCatalog.field_c;
               if ((var14Lifetime1 & 1 << jq.field_f) != 0) {
-                var50_ref = qp.field_u[var12.field_Pb];
+                var50_ref = MatchingTextValidator.field_u[var12.field_Pb];
                 var12.field_Xb.field_rb = var50_ref;
                 var12.field_Xb.setBounds(var12.field_jc.field_z, 0, var50_ref.fullWidth, var34_int, -3344);
                 var34_int = var34_int + (LevelFileCatalog.field_c + var50_ref.fullWidth);
@@ -538,7 +538,7 @@ final class og extends SimEntity {
                 }
                 var38 = var37.toString();
                 var12.field_ac.field_wb = var38;
-                var39Lifetime1 = var12.field_ac.field_yb.b(var38, -(2 * var12.field_ac.field_V) + var12.field_zb);
+                var39Lifetime1 = var12.field_ac.field_yb.countWrappedLines(var38, -(2 * var12.field_ac.field_V) + var12.field_zb);
                 var12.field_ac.setBounds(var39Lifetime1 * jk.field_f, var31, var12.field_zb, 0, -3344);
                 var31 = var31 + jk.field_f * var39Lifetime1;
               }
@@ -553,11 +553,11 @@ final class og extends SimEntity {
                 var31 = var31 + jk.field_f;
               }
             }
-            var33 = hd.a(var12.field_Vb, var32, -9);
+            var33 = EmailAvailabilityValidator.a(var12.field_Vb, var32, -9);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Rb.field_yb.b(var33, -nj.field_h + (var12.field_zb - nj.field_h));
+              var34_intLifetime1 = var12.field_Rb.field_yb.countWrappedLines(var33, -nj.field_h + (var12.field_zb - nj.field_h));
               var12.field_Rb.field_Y = var12.field_Jb * 256 / UnitStateEvent.field_r;
               var12.field_Rb.field_wb = var33;
               var12.field_Rb.setBounds(var34_intLifetime1 * jk.field_f, var31, var12.field_zb - nj.field_h * 2, nj.field_h, -3344);

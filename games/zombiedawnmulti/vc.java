@@ -109,7 +109,7 @@ final class vc {
           wm.field_Q[7] = ah.field_e.findNearestBasePaletteIndex(119);
           wm.field_Q[8] = ah.field_e.findNearestBasePaletteIndex(255);
           wm.field_Q[9] = ah.field_e.findNearestBasePaletteIndex(16745473);
-          ia.field_s = ah.field_e.findNearestBasePaletteIndex(16777215);
+          PasswordValidator.field_s = ah.field_e.findNearestBasePaletteIndex(16777215);
           rj.field_F = ah.field_e.findNearestBasePaletteIndex(6710886);
           var6 = ah.field_e.colorPalettes[0];
           var5 = var6;

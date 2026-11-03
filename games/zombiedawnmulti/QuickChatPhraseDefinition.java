@@ -159,7 +159,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
         try {
           param2.b((byte) -35, 65);
-          param2.a(param1 ^ -102, param0);
+          param2.writeByte(param1 ^ -102, param0);
           param2.a(param5, (byte) -45);
           if (param1 != -11) {
             CipherPacketBuffer var7 = (CipherPacketBuffer) null;

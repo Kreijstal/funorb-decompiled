@@ -29,9 +29,9 @@ final class fe extends WidgetContainer implements co, in, jn {
     }
 
     private final boolean a(kh param0, int param1) {
-        j var3 = null;
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        re var4 = null;
+        ValidationState var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -44,7 +44,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           if (var3 == null) {
             return true;
           }
-          var4 = var3.d(80);
+          var4 = var3.getDebouncedValidationState(80);
           if (jq.field_b == var4) {
             return false;
           }
@@ -410,7 +410,7 @@ final class fe extends WidgetContainer implements co, in, jn {
           }
           this.b((byte) 86, var10);
           var9 = new km(((kh) ((Object) param2)).a((byte) -109), param4, 126, param5 + var10.field_w, 50 + param6, param0);
-          var9.field_A = (bj) (this);
+          var9.field_A = (WidgetListener) (this);
           this.b((byte) 49, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;
           return stackIn_3_0;
@@ -481,17 +481,17 @@ final class fe extends WidgetContainer implements co, in, jn {
     }
 
     public fe() {
-        super(0, 0, 496, 0, (WidgetActionListener) null);
-        this.field_V = new on("", (bj) null, 12);
-        this.field_M = new on("", (bj) null, 100);
-        this.field_T = new on("", (bj) null, 100);
-        this.field_P = new on("", (bj) null, 20);
-        this.field_I = new on("", (bj) null, 20);
-        this.field_N = new on("", (bj) null, 3);
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_V = new on("", (WidgetListener) null, 12);
+        this.field_M = new on("", (WidgetListener) null, 100);
+        this.field_T = new on("", (WidgetListener) null, 100);
+        this.field_P = new on("", (WidgetListener) null, 20);
+        this.field_I = new on("", (WidgetListener) null, 20);
+        this.field_N = new on("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_H = new fj("", (bj) null, var1 != 0);
-        this.field_S = new ButtonWidget(ip.field_a, (bj) null);
-        this.field_O = new ButtonWidget(oq.field_v, (bj) null);
+        this.field_H = new fj("", (WidgetListener) null, var1 != 0);
+        this.field_S = new ButtonWidget(ip.field_a, (WidgetListener) null);
+        this.field_O = new ButtonWidget(oq.field_v, (WidgetListener) null);
         this.field_V.field_x = bi.field_d;
         this.field_M.field_x = mo.field_Nb;
         this.field_T.field_x = IsaacRandom.field_d;
@@ -500,40 +500,40 @@ final class fe extends WidgetContainer implements co, in, jn {
         this.field_N.field_x = SocketConnector.field_g;
         this.field_H.field_x = ip.field_b;
         this.field_V.a((byte) -27, new UsernameAvailabilityValidator(this.field_V));
-        this.field_M.a((byte) -27, new hm(this.field_M));
-        this.field_T.a((byte) -27, new hd(this.field_T, this.field_M));
-        this.field_P.a((byte) -27, new ia(this.field_P, this.field_V, this.field_M));
-        this.field_I.a((byte) -27, new qp(this.field_I, this.field_P));
-        this.field_N.a((byte) -27, new bp(this.field_N));
+        this.field_M.a((byte) -27, new EmailValidator(this.field_M));
+        this.field_T.a((byte) -27, new EmailAvailabilityValidator(this.field_T, this.field_M));
+        this.field_P.a((byte) -27, new PasswordValidator(this.field_P, this.field_V, this.field_M));
+        this.field_I.a((byte) -27, new MatchingTextValidator(this.field_I, this.field_P));
+        this.field_N.a((byte) -27, new AgeValidator(this.field_N));
         this.field_S.field_F = false;
-        this.field_S.listener = (WidgetActionListener) ((Object) new oq());
-        this.field_O.listener = (WidgetActionListener) ((Object) new he());
-        this.field_V.listener = (WidgetActionListener) ((Object) new tb(10000536));
+        this.field_S.painter = (WidgetPainter) ((Object) new oq());
+        this.field_O.painter = (WidgetPainter) ((Object) new he());
+        this.field_V.painter = (WidgetPainter) ((Object) new tb(10000536));
         tb dupTemp$0 = new tb(10000536);
-        this.field_T.listener = (WidgetActionListener) ((Object) dupTemp$0);
-        this.field_M.listener = (WidgetActionListener) ((Object) dupTemp$0);
-        this.field_N.listener = (WidgetActionListener) ((Object) new tb(10000536));
-        this.field_H.listener = (WidgetActionListener) ((Object) new ib());
+        this.field_T.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_M.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_N.painter = (WidgetPainter) ((Object) new tb(10000536));
+        this.field_H.painter = (WidgetPainter) ((Object) new ib());
         m dupTemp$1 = new m(10000536);
-        this.field_I.listener = (WidgetActionListener) ((Object) dupTemp$1);
-        this.field_P.listener = (WidgetActionListener) ((Object) dupTemp$1);
+        this.field_I.painter = (WidgetPainter) ((Object) dupTemp$1);
+        this.field_P.painter = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = vl.a(wa.field_d, new String[]{this.h((byte) 3), this.g((byte) -109)}, 2);
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_M, var3, 73, InflaterDecompressor.field_i);
         var3 = var3 + (5 + this.a(20, true, this.field_T, cq.field_d, "", var3, 170));
         var3 = var3 + this.a(170, this.field_P, var3, 47, ButtonWidget.field_D);
         var3 = var3 + (5 + this.a(oi.field_f, MouseInputHandler.field_b, var3, 170, this.field_I, 35));
-        var3 = var3 + (this.a(r.field_e, ia.field_w, var3, 170, this.field_V, 35) + 5);
+        var3 = var3 + (this.a(r.field_e, PasswordValidator.field_w, var3, 170, this.field_V, 35) + 5);
         var3 = var3 + this.a(this.field_N, -99, 170, gj.field_a, var3);
         el var4 = new el(46, var3, -90 + this.field_n, 25, this.field_H, true, -120 + this.field_n, 5, cp.field_H, 11579568, uq.field_e);
         this.b((byte) 115, var4);
         var3 = var3 + var4.field_w;
-        TextWidgetPainter var5 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ke.field_h.field_C, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ke.field_h.maxAscent, -1, 2147483647, true);
         this.field_G = new sq(var2, var5);
         this.field_G.field_x = "";
         this.field_G.a(0, (byte) -104, mp.field_d);
         this.field_G.a(1, (byte) -127, mp.field_d);
-        this.field_G.field_A = (bj) (this);
+        this.field_G.field_A = (WidgetListener) (this);
         this.field_G.a(this.field_n - 90, var3, (byte) -4, 46);
         var3 = var3 + (this.field_G.field_w + 15);
         this.b((byte) 61, this.field_G);
@@ -541,8 +541,8 @@ final class fe extends WidgetContainer implements co, in, jn {
         int var7 = 200;
         this.field_S.setWidgetBounds(496 - var7 >> 1, var3, 28972, var7, 40);
         this.field_O.setWidgetBounds(3 + var6, var3 + 15, 28972, 60, 40);
-        this.field_O.field_A = (bj) (this);
-        this.field_S.field_A = (bj) (this);
+        this.field_O.field_A = (WidgetListener) (this);
+        this.field_S.field_A = (WidgetListener) (this);
         this.b((byte) 78, this.field_S);
         this.b((byte) 75, this.field_O);
         this.field_J = new gl((jn) (this));

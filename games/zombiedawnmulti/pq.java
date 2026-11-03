@@ -38,7 +38,7 @@ final class pq extends IntrusiveNode {
         try {
           var3_int = param1.worldToScreenX(this.field_g, -20126);
           var4 = param1.worldToScreenY(this.field_l, param0 ^ 130);
-          this.field_q.h(sd.b(12, var4, var3_int));
+          this.field_q.setVolume(sd.b(12, var4, var3_int));
           if (param0 >= ~var3_int &&
             var4 >= -256 &&
             var3_int <= 896 &&
@@ -93,7 +93,7 @@ final class pq extends IntrusiveNode {
     }
 
     final static void b(boolean param0) {
-        ia.field_x = new hn[]{};
+        PasswordValidator.field_x = new hn[]{};
         if (param0) {
           field_f = -55;
         }

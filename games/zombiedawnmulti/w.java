@@ -144,7 +144,7 @@ final class w extends PcmStream {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4 = 94 % ((param3 + 10) / 35);
-        ia.a(param0, param1, param2, 0);
+        PasswordValidator.a(param0, param1, param2, 0);
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -477,14 +477,14 @@ final class w extends PcmStream {
 
     final synchronized void a(int param0, int param1) {
         if (param1 != 18813) {
-          this.a();
+          this.getSchedulingCost();
           this.field_k = param0;
           return;
         }
         this.field_k = param0;
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
@@ -514,7 +514,7 @@ final class w extends PcmStream {
         field_A = null;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -595,7 +595,7 @@ final class w extends PcmStream {
           if (this.field_u < 256 && (null != this.field_p ||
             this.field_o != null)) {
             if (var4_int == 256) {
-              this.field_j.b(param0, param1, param2);
+              this.field_j.mixInto(param0, param1, param2);
             } else {
               if (256 != var5) {
                 if (this.field_w != null &&
@@ -606,8 +606,8 @@ final class w extends PcmStream {
                   this.field_w = new int[var6];
                   this.field_r = new int[var6];
                 }
-                this.field_j.b(this.field_w, 0, param2);
-                this.field_v.b(this.field_r, 0, param2);
+                this.field_j.mixInto(this.field_w, 0, param2);
+                this.field_v.mixInto(this.field_r, 0, param2);
                 if (!PcmPlayerService.field_j) {
                   stackIn_46_0 = param1;
                 } else {
@@ -620,7 +620,7 @@ final class w extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_r[var8] * var5 + var4_int * this.field_w[var8] >> 8);
                 }
               } else {
-                this.field_v.b(param0, param1, param2);
+                this.field_v.mixInto(param0, param1, param2);
               }
             }
           }
@@ -635,7 +635,7 @@ final class w extends PcmStream {
               this.field_r = new int[var6];
               this.field_w = new int[var6];
             }
-            this.field_t.b(this.field_w, 0, param2);
+            this.field_t.mixInto(this.field_w, 0, param2);
             if (!PcmPlayerService.field_j) {
               stackIn_62_0 = param1;
             } else {

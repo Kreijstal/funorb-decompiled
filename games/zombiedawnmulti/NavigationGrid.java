@@ -462,7 +462,7 @@ final class NavigationGrid {
                   SoftwareRasterizer.fillRect(var3_int, var4, 24, 24, 7631988);
                 }
                 if (qq.field_h) {
-                  qp.field_w.c(Integer.toString(this.level.field_k[var6][var5]), 12 + var3_int, 12 + var4, 16777215, 1);
+                  MatchingTextValidator.field_w.c(Integer.toString(this.level.field_k[var6][var5]), 12 + var3_int, 12 + var4, 16777215, 1);
                 }
                 var3_int += 24;
                 this.field_l[var13][var12] = var14Lifetime1;
@@ -506,7 +506,7 @@ final class NavigationGrid {
               var17Lifetime1 = 320 + this.field_q[var23].x - param1.centerX;
               var18Lifetime1 = -param1.centerY + (this.field_q[var23].y + 240);
               SoftwareRasterizer.fillCircleAlpha(var17Lifetime1, var18Lifetime1, 2, 16711680, 256);
-              qp.field_w.b(Integer.toString(var23), var17Lifetime1, var18Lifetime1, 16777215, 0, 64);
+              MatchingTextValidator.field_w.drawLeftAlpha(Integer.toString(var23), var17Lifetime1, var18Lifetime1, 16777215, 0, 64);
               var23++;
             }
             return;
@@ -854,10 +854,10 @@ final class NavigationGrid {
                         var11 < SimArmedHuman.field_Ab.length) {
                         var16 = SimArmedHuman.field_Ab[var11];
                         if ((268435456 & var10) > 0) {
-                          var16.b(var5_int, var6);
+                          var16.drawHorizontalFlip(var5_int, var6);
                         } else {
                           if ((var10 & 134217728) > 0) {
-                            var16.a(var5_int, var6);
+                            var16.drawVerticalFlip(var5_int, var6);
                           } else {
                             var16.g(var5_int, var6);
                           }
@@ -928,12 +928,12 @@ final class NavigationGrid {
                         } else {
                           if (0 >= (var10 & 1073741824)) {
                             if ((var10 & 536870912) > 0) {
-                              var15.a(var5_int, var6);
+                              var15.drawVerticalFlip(var5_int, var6);
                             } else {
                               var15.g(var5_int, var6);
                             }
                           } else {
-                            var15.b(var5_int, var6);
+                            var15.drawHorizontalFlip(var5_int, var6);
                           }
                         }
                       } else {

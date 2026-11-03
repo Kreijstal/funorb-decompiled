@@ -28,7 +28,7 @@ final class sp extends mp {
           if (param3 != 1) {
             this.field_j = -34;
           }
-          var6 = new td(param2 - param0.field_C, param2 + param0.field_r, param1.length());
+          var6 = new td(param2 - param0.maxAscent, param2 + param0.maxDescent, param1.length());
           var5 = var6;
           this.field_e = new td[]{var6};
           stackIn_3_0 = var5;
@@ -71,7 +71,7 @@ final class sp extends mp {
           this.field_f = param4;
           var8 = this.a(param4, param3, param1, 1);
           var9 = var8;
-          var9.field_e[0] = -param4.a(param3) + param0;
+          var9.field_e[0] = -param4.textWidth(param3) + param0;
           var9.field_e[param3.length()] = param0;
           GameScreen.a(param4, 0, param3, 109, var9);
         } catch (RuntimeException runtimeException) {
@@ -99,7 +99,7 @@ final class sp extends mp {
           var8 = this.a(param2, param3, param4, 1);
           var9 = var8;
           var8.field_e[0] = param0;
-          var9.field_e[param3.length()] = param0 + param2.a(param3);
+          var9.field_e[param3.length()] = param0 + param2.textWidth(param3);
           GameScreen.a(param2, 0, param3, 116, var9);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sp.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -150,7 +150,7 @@ final class sp extends mp {
             return;
           }
           if (param3 == 0) {
-            param3 = param7.field_w;
+            param3 = param7.baselineHeight;
           }
           if (param0 == null) {
             this.field_e = null;
@@ -175,16 +175,16 @@ final class sp extends mp {
           this.field_n = param3;
           this.field_o = false;
           this.field_m = param1;
-          var16 = new String[param7.b(param0, param6) + 1];
+          var16 = new String[param7.countWrappedLines(param0, param6) + 1];
           var17 = var16;
-          var10 = Math.max(1, param7.a(param0, new int[]{param6}, var17));
+          var10 = Math.max(1, param7.wrapText(param0, new int[]{param6}, var17));
           if (this.field_j == 3 &&
             var10 == 1) {
             this.field_j = 1;
           }
           this.field_e = new td[var10];
           if (this.field_j == 0) {
-            var11 = param7.field_C;
+            var11 = param7.maxAscent;
           } else {
             if (this.field_j != 1) {
               if (2 != this.field_j) {
@@ -193,20 +193,20 @@ final class sp extends mp {
                   var12 = 0;
                 }
                 this.field_n = this.field_n + var12;
-                var11 = param7.field_C + var12;
+                var11 = param7.maxAscent + var12;
               } else {
-                var11 = -(this.field_n * var10) - param7.field_r + this.field_l;
+                var11 = -(this.field_n * var10) - param7.maxDescent + this.field_l;
               }
             } else {
-              var11 = param7.field_C + (this.field_l - var10 * this.field_n >> 1);
+              var11 = param7.maxAscent + (this.field_l - var10 * this.field_n >> 1);
             }
           }
           for (var12Lifetime1 = 0; var12Lifetime1 < var10; var12Lifetime1++) {
             var13 = var16[var12Lifetime1];
             stackIn_37_0 = null;
             stackIn_37_1 = null;
-            stackIn_37_2 = -param7.field_C + var11;
-            stackIn_37_3 = var11 + param7.field_r;
+            stackIn_37_2 = -param7.maxAscent + var11;
+            stackIn_37_3 = var11 + param7.maxDescent;
             if (var13 != null) {
               stackIn_38_0 = null;
               stackIn_38_1 = null;
@@ -219,12 +219,12 @@ final class sp extends mp {
             var14 = new td(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_e[0] = 0;
             if (var13 != null) {
-              var14.field_e[var13.length()] = param7.a(var13);
+              var14.field_e[var13.length()] = param7.textWidth(var13);
               stackIn_42_0 = (BitmapFont) (param7);
               if (param1 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(var13, 0, param7.a(var13), param6);
+                stackIn_43_1 = this.a(var13, 0, param7.textWidth(var13), param6);
               }
               GameScreen.a(stackIn_42_0, stackIn_43_1, var13, 120, var14);
             }
@@ -271,7 +271,7 @@ final class sp extends mp {
             this.field_o = false;
           }
           var8 = this.a(param0, param1, param2, 1);
-          var7 = param0.a(param1);
+          var7 = param0.textWidth(param1);
           var8.field_e[0] = param4 - (var7 >> 1);
           var8.field_e[param1.length()] = param4 + (var7 >> 1);
           GameScreen.a(param0, 0, param1, param3 ^ 61, var8);

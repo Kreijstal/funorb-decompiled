@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class TextInputValidator extends gf implements fi {
+abstract class TextInputValidator extends DebouncedValidationProvider implements TextInputListener {
     private TextInputWidget field_m;
     static String field_n;
     static String field_p;
@@ -61,9 +61,9 @@ abstract class TextInputValidator extends gf implements fi {
         return !(param2 >= param3);
     }
 
-    abstract re a(boolean param0, String param1);
+    abstract ValidationState validationStateForText(boolean param0, String param1);
 
-    public final void a(TextInputWidget param0, boolean param1) {
+    public final void onTextInputSubmitted(TextInputWidget param0, boolean param1) {
         try {
           if (!param1) {
             this.field_m = (TextInputWidget) null;
@@ -85,12 +85,12 @@ abstract class TextInputValidator extends gf implements fi {
         }
     }
 
-    public final boolean b(int param0) {
+    public final boolean isInputEmpty(int param0) {
         TextInputWidget var3;
         boolean stackIn_7_0 = false;
         if (param0 != -3) {
           var3 = (TextInputWidget) null;
-          this.a((TextInputWidget) null, true);
+          this.onTextInputSubmitted((TextInputWidget) null, true);
         }
         stackIn_7_0 = (this.field_m.field_j == null) || (this.field_m.field_j.length() == 0);
         return stackIn_7_0;
@@ -249,7 +249,7 @@ abstract class TextInputValidator extends gf implements fi {
                   }
                   var25 = var25 + var27;
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_b;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.width;
                   var21 = var21 + var23;
                   var29 = var29 + var31;
                   var26 = var26 + var28;
@@ -403,7 +403,7 @@ abstract class TextInputValidator extends gf implements fi {
               if (param9 >= TriangleRasterizer.field_h) {
                 return;
               }
-              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_b;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
               var22 = var22 + var24;
               var26 = var26 + var28;
               var18 = var18 + var20;
@@ -430,9 +430,9 @@ abstract class TextInputValidator extends gf implements fi {
         }
     }
 
-    public final void a(TextInputWidget param0, int param1) {
+    public final void onTextInputChanged(TextInputWidget param0, int param1) {
         try {
-          this.a(-1306);
+          this.resetValidationDelay(-1306);
           if (param1 != 0) {
             TextInputValidator.releaseStatics(78);
           }
@@ -441,14 +441,14 @@ abstract class TextInputValidator extends gf implements fi {
         }
     }
 
-    final re f(int param0) {
+    final ValidationState currentValidationState(int param0) {
         if (param0 != -3) {
           TextInputValidator.releaseStatics(38);
         }
-        return this.a(false, this.field_m.field_j);
+        return this.validationStateForText(false, this.field_m.field_j);
     }
 
-    final String e(int param0) {
+    final String currentValidationMessage(int param0) {
         if (param0 != -3) {
           TextInputValidator.a((int[]) null, -99, -31, 9, -3, 10, 88, -54, -105, 27, -84, -122, -1, -93, -21, -86, 107);
         }

@@ -39,7 +39,7 @@ final class vk extends rg {
         boolean decompiledFrameRemainder0 = true;
         if (ClientException.field_i >= 20 &&
           SimZombie.p(-86) && (!(qq.field_a > 0) ||
-          re.b(-118))) {
+          ValidationState.b(-118))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -214,8 +214,8 @@ final class vk extends rg {
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (this.listener != null) {
-          this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
+        if (this.painter != null) {
+          this.painter.paintWidget(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (param0 != -2) {
           return;
@@ -354,7 +354,7 @@ final class vk extends rg {
     }
 
     public vk() {
-        super(0, 0, ub.field_wb, kc.field_a, (WidgetActionListener) null, (bj) null);
+        super(0, 0, ub.field_wb, kc.field_a, (WidgetPainter) null, (WidgetListener) null);
         this.field_H = new IntrusiveDeque();
     }
 

@@ -3,7 +3,7 @@
  */
 final class on extends TextInputWidget implements kh {
     static MouseInputHandler field_Z;
-    private j field_ab;
+    private ValidationProvider field_ab;
     static ki[] field_bb;
     private int field_Y;
     static String field_cb;
@@ -56,16 +56,16 @@ final class on extends TextInputWidget implements kh {
         return we.field_n[var4];
     }
 
-    public final j a(byte param0) {
+    public final ValidationProvider a(byte param0) {
         int var2 = -13 / ((0 - param0) / 43);
         return this.field_ab;
     }
 
-    on(String param0, bj param1, int param2) {
+    on(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void a(byte param0, j param1) {
+    final void a(byte param0, ValidationProvider param1) {
         try {
           this.field_ab = param1;
           if (param0 != -27) {
@@ -119,7 +119,7 @@ final class on extends TextInputWidget implements kh {
     final void j(int param0) {
         super.j(param0);
         if (null != this.field_ab) {
-          this.field_ab.a(-1306);
+          this.field_ab.resetValidationDelay(-1306);
         }
     }
 

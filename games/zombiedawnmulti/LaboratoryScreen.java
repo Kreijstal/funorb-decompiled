@@ -169,8 +169,8 @@ final class LaboratoryScreen extends MenuScreen {
         SoftwareRasterizer.fillRectGradient(10, 340, 72, 74, 6575425, 3354915);
         SoftwareRasterizer.drawRect(339, 339, 74, 76, 0);
         SoftwareRasterizer.fillRectGradient(340, 340, 72, 74, 1989419, 597262);
-        qp.field_w.a(ve.field_a, 10, 340, 72, 74, 16777215, -1, 1, 1, 0);
-        qp.field_w.a(en.field_f, 339, 339, 72, 74, 16777215, -1, 1, 1, 0);
+        MatchingTextValidator.field_w.drawParagraph(ve.field_a, 10, 340, 72, 74, 16777215, -1, 1, 1, 0);
+        MatchingTextValidator.field_w.drawParagraph(en.field_f, 339, 339, 72, 74, 16777215, -1, 1, 1, 0);
         this.a(var5Lifetime1 != 0, (byte) -120, 14680064, 53248);
         this.b(14680064, 53248, -2939);
         this.d((byte) -104);
@@ -407,7 +407,7 @@ final class LaboratoryScreen extends MenuScreen {
           if (var5 > var6) {
             if (param0 &&
               pb.a(FullscreenFocusCanvas.field_k.field_m[var6], -20, lh.field_l)) {
-              pf.field_a.a(var7 + 84, 340, 128, 8388608);
+              pf.field_a.drawFadedToColour(var7 + 84, 340, 128, 8388608);
             } else {
               pf.field_a.a(var7 + 84, 340);
             }
@@ -511,14 +511,14 @@ final class LaboratoryScreen extends MenuScreen {
           on.field_bb = new ki[63];
           lh.field_l = 255;
           var12 = PhaseChangeEvent.field_k;
-          var9 = PhaseChangeEvent.field_k.f();
+          var9 = PhaseChangeEvent.field_k.copyFlippedHorizontal();
           rq.field_u = new int[255];
           for (var10 = 0; var10 < 255; var10++) {
             rq.field_u[var10] = var10 * 65793;
           }
-          bp.field_u.field_ab = wc.field_M;
+          AgeValidator.field_u.field_ab = wc.field_M;
           cr.field_i.field_ab = df.field_Q;
-          b.field_a = new mj(0L, ih.field_d, var12, var9, bp.field_u, cr.field_i, false);
+          b.field_a = new mj(0L, ih.field_d, var12, var9, AgeValidator.field_u, cr.field_i, false);
           b.field_a.field_Q = 315;
           b.field_a.field_zb = 631;
           this.field_p = 0;
@@ -538,7 +538,7 @@ final class LaboratoryScreen extends MenuScreen {
         int var9 = q.$cfr$intArgs$a$f0c91481eb80(-126, (var7 << 10) / 29) >> 9;
         int var10 = (var7 * param0 + param5 * var8 << 4) / 29;
         int var11 = (param3 * var7 + var8 * param4 << 4) / 29;
-        SoftwareRasterizer.a(var10, var11, 64, var9, rq.field_u);
+        SoftwareRasterizer.fillRadialGlow(var10, var11, 64, var9, rq.field_u);
     }
 
     private final void e(byte param0) {
@@ -602,16 +602,16 @@ final class LaboratoryScreen extends MenuScreen {
           var8 = -1;
         }
         if (-1 == var7) {
-          gf.field_f = 0;
+          DebouncedValidationProvider.field_f = 0;
         } else {
-          if (gf.field_f == 0 &&
+          if (DebouncedValidationProvider.field_f == 0 &&
             10 < b.a(true)) {
-            gf.field_f = gf.field_f + 1;
+            DebouncedValidationProvider.field_f = DebouncedValidationProvider.field_f + 1;
           }
-          if (gf.field_f > 0) {
-            gf.field_f = gf.field_f + 2;
-            if (255 < gf.field_f) {
-              gf.field_f = 255;
+          if (DebouncedValidationProvider.field_f > 0) {
+            DebouncedValidationProvider.field_f = DebouncedValidationProvider.field_f + 2;
+            if (255 < DebouncedValidationProvider.field_f) {
+              DebouncedValidationProvider.field_f = 255;
             }
             stackIn_37_0 = (!var6.c(127, var7)) ? 0 : 1;
             var9 = stackIn_37_0;
@@ -628,10 +628,10 @@ final class LaboratoryScreen extends MenuScreen {
                 }
               }
             }
-            var11 = qp.field_w;
-            var12 = var11.a(var10);
-            var13 = 8 * gf.field_f;
-            var4 = qp.field_w.field_w * (1 + ro.a(-124, '<', (CharSequence) ((Object) var10)));
+            var11 = MatchingTextValidator.field_w;
+            var12 = var11.textWidth(var10);
+            var13 = 8 * DebouncedValidationProvider.field_f;
+            var4 = MatchingTextValidator.field_w.baselineHeight * (1 + ro.a(-124, '<', (CharSequence) ((Object) var10)));
             if (var13 > 255) {
               var13 = 255;
             }
@@ -639,21 +639,21 @@ final class LaboratoryScreen extends MenuScreen {
               var12 = var12 / 2;
               var4 = var4 * 2;
             }
-            var14 = new String[var11.b(var10, var12)];
+            var14 = new String[var11.countWrappedLines(var10, var12)];
             var24 = new int[var14.length];
             for (var16 = 0; var16 < var14.length; var16++) {
               var24[var16] = var12;
             }
-            var11.a(var10, var24, var14);
+            var11.wrapText(var10, var24, var14);
             var16Lifetime1 = 0;
             for (var17 = 0; var14.length > var17; var17++) {
-              var18 = var11.a(var14[var17]);
+              var18 = var11.textWidth(var14[var17]);
               if (var16Lifetime1 < var18) {
                 var16Lifetime1 = var18;
               }
             }
             var5 = var16Lifetime1;
-            var4Lifetime1 = var14.length * qp.field_w.field_w;
+            var4Lifetime1 = var14.length * MatchingTextValidator.field_w.baselineHeight;
             var2 = MouseInputHandler.field_g;
             var3 = 32 + bo.field_d;
             if (var2 >= 0) {
@@ -668,7 +668,7 @@ final class LaboratoryScreen extends MenuScreen {
             }
             SoftwareRasterizer.fillRoundedRectAlpha(var2 - 2, -2 + var3, var5 + 8, var4Lifetime1 + 8, 4, 0, var13 / 2);
             SoftwareRasterizer.fillRoundedRectAlpha(-4 + var2, var3 - 4, 8 + var5, var4Lifetime1 + 8, 4, 5005603, var13);
-            var11.a(var10, var2, var3, var5, var4Lifetime1, 16777215, 0, var13, 1, 1, 0);
+            var11.drawParagraphAlpha(var10, var2, var3, var5, var4Lifetime1, 16777215, 0, var13, 1, 1, 0);
           }
         }
     }
@@ -685,8 +685,8 @@ final class LaboratoryScreen extends MenuScreen {
           var6.b((byte) -35, param2);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.a(121, 1);
-          var6.a(127, param0.field_v);
+          var6.writeByte(121, 1);
+          var6.writeByte(127, param0.field_v);
           var6.c(param0.field_f, 0);
           var6.writeInt(-118, param0.field_q);
           var6.writeInt(92, param0.field_u);
@@ -760,7 +760,7 @@ final class LaboratoryScreen extends MenuScreen {
                   lh.field_l == 255 &&
                   !ud.field_S) {
                   cp.field_O = var13;
-                  on.field_bb[var13].field_b.e(on.field_bb[var13].field_q, on.field_bb[var13].field_g, (q.$cfr$intArgs$a$f0c91481eb80(-60, PowerupEvent.field_m << 4) >> 9) + 128);
+                  on.field_bb[var13].field_b.drawAdditive(on.field_bb[var13].field_q, on.field_bb[var13].field_g, (q.$cfr$intArgs$a$f0c91481eb80(-60, PowerupEvent.field_m << 4) >> 9) + 128);
                 }
                 var14Lifetime1 = on.field_bb[var13].field_c;
                 if (FullscreenFocusCanvas.field_k.g(var14Lifetime1, 4)) {
@@ -1124,17 +1124,17 @@ final class LaboratoryScreen extends MenuScreen {
           var2 = 445;
           var3 = 2;
           var4 = 120;
-          var5 = pb.field_e.a(cc.field_a, var4, 0);
+          var5 = pb.field_e.measureWrappedHeight(cc.field_a, var4, 0);
           this.a(var5, var6, var3, -79, var4, var2);
-          pb.field_e.a(cc.field_a, var2 + var6, var6 + var3, var4, var5, 16777215, -1, 0, 0, 0);
+          pb.field_e.drawParagraph(cc.field_a, var2 + var6, var6 + var3, var4, var5, 16777215, -1, 0, 0, 0);
           lh.field_m.a(-3 + ((var6 << 1) + (var2 + var4)), 8 + var3);
           if (this.field_p > 0) {
             var2Lifetime1 = 200;
             var4Lifetime1 = 390;
             var3Lifetime1 = 100;
-            var5Lifetime1 = pb.field_e.a(uc.field_g, var4Lifetime1, 0);
+            var5Lifetime1 = pb.field_e.measureWrappedHeight(uc.field_g, var4Lifetime1, 0);
             this.a(var5Lifetime1, var6, var3Lifetime1, -105, var4Lifetime1, var2Lifetime1);
-            pb.field_e.a(uc.field_g, var2Lifetime1 + var6, var3Lifetime1 + var6, var4Lifetime1, var5Lifetime1, 16777215, -1, 0, 0, 0);
+            pb.field_e.drawParagraph(uc.field_g, var2Lifetime1 + var6, var3Lifetime1 + var6, var4Lifetime1, var5Lifetime1, 16777215, -1, 0, 0, 0);
             ip.field_e.a(var2Lifetime1 + 50, var3Lifetime1 + 3 - ip.field_e.field_b);
             oi.field_k.a(var2Lifetime1 + 50, var5Lifetime1 + var3Lifetime1 - 3 + (var6 << 1));
             lh.field_m.a(var2Lifetime1 - (-var4Lifetime1 - (var6 << 1) + 3), var3Lifetime1 + (var5Lifetime1 >> 1));
@@ -1145,9 +1145,9 @@ final class LaboratoryScreen extends MenuScreen {
             var5Lifetime2 = 80;
             var4Lifetime2 = 250;
             var3Lifetime2 = 280;
-            var5Lifetime2Lifetime1 = pb.field_e.a(wq.field_d, var4Lifetime2, 0);
+            var5Lifetime2Lifetime1 = pb.field_e.measureWrappedHeight(wq.field_d, var4Lifetime2, 0);
             this.a(var5Lifetime2Lifetime1, var6, var3Lifetime2, -126, var4Lifetime2, var2Lifetime2);
-            pb.field_e.a(wq.field_d, var6 + var2Lifetime2, var3Lifetime2 + var6, var4Lifetime2, var5Lifetime2Lifetime1, 16777215, -1, 0, 0, 0);
+            pb.field_e.drawParagraph(wq.field_d, var6 + var2Lifetime2, var3Lifetime2 + var6, var4Lifetime2, var5Lifetime2Lifetime1, 16777215, -1, 0, 0, 0);
             oi.field_k.a(var2Lifetime2 + 50, var5Lifetime2Lifetime1 + var3Lifetime2 + (-3 + (var6 << 1)));
           }
           if (this.field_p > 300) {
@@ -1159,9 +1159,9 @@ final class LaboratoryScreen extends MenuScreen {
               p.field_e == 2) {
               var3Lifetime3 -= 10;
             }
-            var5Lifetime3Lifetime1 = pb.field_e.a(jf.field_c, var4Lifetime3, 0);
+            var5Lifetime3Lifetime1 = pb.field_e.measureWrappedHeight(jf.field_c, var4Lifetime3, 0);
             this.a(var5Lifetime3Lifetime1, var6, var3Lifetime3, -71, var4Lifetime3, var2Lifetime3);
-            pb.field_e.a(jf.field_c, var6 + var2Lifetime3, var3Lifetime3 + var6, var4Lifetime3, var5Lifetime3Lifetime1, 16777215, -1, 0, 0, 0);
+            pb.field_e.drawParagraph(jf.field_c, var6 + var2Lifetime3, var3Lifetime3 + var6, var4Lifetime3, var5Lifetime3Lifetime1, 16777215, -1, 0, 0, 0);
             ip.field_e.a(50 + var2Lifetime3, -ip.field_e.field_b + (var3Lifetime3 + 3));
           }
           if (this.field_p > 200) {
@@ -1169,9 +1169,9 @@ final class LaboratoryScreen extends MenuScreen {
             var4Lifetime4 = 250;
             var5Lifetime4 = 80;
             var2Lifetime4 = 350;
-            var5Lifetime4Lifetime1 = pb.field_e.a(pi.field_h, var4Lifetime4, 0);
+            var5Lifetime4Lifetime1 = pb.field_e.measureWrappedHeight(pi.field_h, var4Lifetime4, 0);
             this.a(var5Lifetime4Lifetime1, var6, var3Lifetime4, -118, var4Lifetime4, var2Lifetime4);
-            pb.field_e.a(pi.field_h, var2Lifetime4 + var6, var6 + var3Lifetime4, var4Lifetime4, var5Lifetime4Lifetime1, 16777215, -1, 0, 0, 0);
+            pb.field_e.drawParagraph(pi.field_h, var2Lifetime4 + var6, var6 + var3Lifetime4, var4Lifetime4, var5Lifetime4Lifetime1, 16777215, -1, 0, 0, 0);
             oi.field_k.a(80 + var2Lifetime4, var5Lifetime4Lifetime1 - 3 + (var3Lifetime4 + (var6 << 1)));
           }
         }

@@ -16,9 +16,9 @@ class UiWidget extends IntrusiveNode {
     static String field_t;
     int field_w;
     int field_z;
-    bj field_A;
+    WidgetListener field_A;
     int field_y;
-    WidgetActionListener listener;
+    WidgetPainter painter;
     mp field_k;
     static long field_g;
     String field_j;
@@ -76,7 +76,7 @@ class UiWidget extends IntrusiveNode {
         ee.field_a = true;
         int var2_int = SocketConnector.field_h.field_h;
         int var3 = SocketConnector.field_h.field_f;
-        int var4 = sc.field_j.field_yb.a(param1, 272, sc.field_j.field_J);
+        int var4 = sc.field_j.field_yb.measureWrappedHeight(param1, 272, sc.field_j.field_J);
         int var5 = -(var4 / 2) + 7 + (-110 + var3 / 2);
         SimHuman.field_gb.setBounds(-(2 * var5) + var3 - 120, var5, 320, (-320 + var2_int) / 2, -3344);
         SimHuman.field_gb.field_ab = tg.a(2105376, SimHuman.field_gb.field_z, 8421504, 3, 11579568, 114);
@@ -99,7 +99,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(String param0, bj param1) {
+    UiWidget(String param0, WidgetListener param1) {
         this(param0, ra.field_o.field_s, param1);
     }
 
@@ -448,10 +448,10 @@ class UiWidget extends IntrusiveNode {
           if (this.c(param2 + 98)) {
             discarded$3 = param1.append(" focused");
           }
-          if (this.listener != null) {
+          if (this.painter != null) {
             discarded$4 = param1.append(" renderer=");
-            if (!(this.listener instanceof UiWidget)) {
-              discarded$5 = param1.append(this.listener);
+            if (!(this.painter instanceof UiWidget)) {
+              discarded$5 = param1.append(this.painter);
               if (var6 != 0) {
                 param1 = this.appendWidgetDiagnostics(7, param3, 1 + param0, param1);
               }
@@ -548,16 +548,16 @@ class UiWidget extends IntrusiveNode {
         if (param0 != -2) {
           this.field_n = -82;
           if (param2 == 0) {
-            if (this.listener != null) {
-              this.listener.a(true, param1, -15112, param3, this);
+            if (this.painter != null) {
+              this.painter.paintWidget(true, param1, -15112, param3, this);
             }
             return;
           }
           return;
         }
         if (param2 == 0) {
-          if (this.listener != null) {
-            this.listener.a(true, param1, -15112, param3, this);
+          if (this.painter != null) {
+            this.painter.paintWidget(true, param1, -15112, param3, this);
           }
           return;
         }
@@ -832,9 +832,9 @@ class UiWidget extends IntrusiveNode {
         this.field_q = 0;
     }
 
-    UiWidget(String param0, WidgetActionListener param1, bj param2) {
+    UiWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
-        WidgetPainter var4 = null;
+        rk var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -847,10 +847,10 @@ class UiWidget extends IntrusiveNode {
         this.field_q = 0;
         try {
           this.field_j = param0;
-          this.listener = param1;
+          this.painter = param1;
           this.field_A = param2;
-          if (this.listener instanceof WidgetPainter) {
-            var4 = (WidgetPainter) ((Object) this.listener);
+          if (this.painter instanceof rk) {
+            var4 = (rk) ((Object) this.painter);
             this.field_n = var4.contentHeight(this, -126);
             this.field_w = var4.a((byte) 39, this);
           }
@@ -881,11 +881,11 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, WidgetActionListener param4, bj param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         this.field_z = 0;
         this.field_q = 0;
         try {
-          this.listener = param4;
+          this.painter = param4;
           this.field_A = param5;
           this.field_n = param2;
           this.field_y = param0;

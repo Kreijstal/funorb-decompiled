@@ -110,10 +110,10 @@ final class cp extends WidgetContainer implements jn, in {
     }
 
     private final boolean a(kh param0, int param1) {
-        j var3 = null;
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        re var5 = null;
+        ValidationState var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -125,7 +125,7 @@ final class cp extends WidgetContainer implements jn, in {
           if (var3 == null) {
             return true;
           }
-          var5 = var3.d(55);
+          var5 = var3.getDebouncedValidationState(55);
           stackIn_6_0 = (var5 == db.field_b);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,29 +143,29 @@ final class cp extends WidgetContainer implements jn, in {
     }
 
     public cp() {
-        super(0, 0, 496, 0, (WidgetActionListener) null);
-        this.field_G = new on("", (bj) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(la.field_e, var1, (bj) null);
-        this.field_M = new ButtonWidget(ji.field_e, (bj) null);
-        this.field_W = new ButtonWidget(gk.field_a, (bj) null);
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_G = new on("", (WidgetListener) null, 12);
+        TextWidgetPainter var1 = new TextWidgetPainter(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.maxAscent, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(la.field_e, var1, (WidgetListener) null);
+        this.field_M = new ButtonWidget(ji.field_e, (WidgetListener) null);
+        this.field_W = new ButtonWidget(gk.field_a, (WidgetListener) null);
         this.field_G.field_x = bi.field_d;
         this.field_G.a((byte) -27, new UsernameAvailabilityValidator(this.field_G));
         this.field_M.field_F = false;
-        this.field_M.listener = (WidgetActionListener) ((Object) new oq());
-        this.field_W.listener = (WidgetActionListener) ((Object) new he());
-        this.field_G.listener = (WidgetActionListener) ((Object) new tb(10000536));
+        this.field_M.painter = (WidgetPainter) ((Object) new oq());
+        this.field_W.painter = (WidgetPainter) ((Object) new he());
+        this.field_G.painter = (WidgetPainter) ((Object) new tb(10000536));
         int var3 = 20;
         int var4 = 4;
         var2.setWidgetBounds(20, var3, 28972, 270, 50);
         int var5 = 200;
         var3 += 50;
         this.b((byte) 101, var2);
-        var3 = var3 + (this.a(var3, ia.field_w, 170, this.field_G, -43, r.field_e) + 5);
+        var3 = var3 + (this.a(var3, PasswordValidator.field_w, 170, this.field_G, -43, r.field_e) + 5);
         this.field_M.setWidgetBounds(-var5 + 496 >> 1, var3, 28972, var5, 40);
         this.field_W.setWidgetBounds(3 + var4, var3 + 15, 28972, 60, 40);
-        this.field_W.field_A = (bj) (this);
-        this.field_M.field_A = (bj) (this);
+        this.field_W.field_A = (WidgetListener) (this);
+        this.field_M.field_A = (WidgetListener) (this);
         this.b((byte) 61, this.field_M);
         this.b((byte) 81, this.field_W);
         this.field_V = new gl((jn) (this));
@@ -298,7 +298,7 @@ final class cp extends WidgetContainer implements jn, in {
           var10 = new el(20, param0, 120 + param6, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
           this.b((byte) 115, var10);
           var9 = new km(((kh) ((Object) param1)).a((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
-          var9.field_A = (bj) (this);
+          var9.field_A = (WidgetListener) (this);
           this.b((byte) 91, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;
           return stackIn_3_0;

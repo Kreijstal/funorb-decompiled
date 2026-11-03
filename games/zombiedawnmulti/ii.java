@@ -134,7 +134,7 @@ abstract class ii {
           var5.b((byte) -35, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.a(124, 0);
+          var5.writeByte(124, 0);
           var5.writeString(param0, (byte) 105);
           var5.e(21, -var4 + var5.position);
           stackIn_28_0 = null;
@@ -268,8 +268,8 @@ abstract class ii {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
-        var2.a(126, 1);
-        var2.a(-24, 0);
+        var2.writeByte(126, 1);
+        var2.writeByte(-24, 0);
         if (param1 == -1) {
           return;
         }

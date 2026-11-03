@@ -60,14 +60,14 @@ final class vm extends al implements in {
           } else {
             var3 = aa.field_j;
           }
-          var4 = new UiWidget((String) (var3), (bj) null);
+          var4 = new UiWidget((String) (var3), (WidgetListener) null);
           var4.field_n = this.field_n;
           var4.field_i = 50;
           var4.field_w = 80;
           var4.field_y = 0;
-          var4.listener = (WidgetActionListener) ((Object) new TextWidgetPainter(cp.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(cp.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 70, var4);
-          this.field_kb = this.a((byte) -103, (bj) (this), ic.field_f);
+          this.field_kb = this.a((byte) -103, (WidgetListener) (this), ic.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class vm extends al implements in {
         field_gb = null;
     }
 
-    private final ButtonWidget a(byte param0, bj param1, String param2) {
+    private final ButtonWidget a(byte param0, WidgetListener param1, String param2) {
         ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -114,7 +114,7 @@ final class vm extends al implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param2, param1);
-          var4.listener = (WidgetActionListener) ((Object) new oq());
+          var4.painter = (WidgetPainter) ((Object) new oq());
           var5 = -6 + this.field_w;
           this.field_w = this.field_w + 38;
           var4.setWidgetBounds(15, var5, 28972, -16 + (-14 + this.field_n), 30);

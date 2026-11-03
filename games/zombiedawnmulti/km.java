@@ -3,7 +3,7 @@
  */
 final class km extends sq {
     static ao field_W;
-    private j field_Y;
+    private ValidationProvider field_Y;
     static boolean[] field_ab;
     private String field_bb;
     private Sprite field_Z;
@@ -12,9 +12,9 @@ final class km extends sq {
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         String var5;
-        re var6;
+        ValidationState var6;
         int var13;
-        WidgetPainter var8;
+        rk var8;
         int var9;
         int var10;
         int var11;
@@ -25,12 +25,12 @@ final class km extends sq {
         Sprite var18;
         int var11Lifetime1;
         int var12Lifetime1;
-        re var6Lifetime1;
+        ValidationState var6Lifetime1;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
-        var6 = this.field_Y.d(102);
+        var6 = this.field_Y.getDebouncedValidationState(102);
         if (var6 != PortalView.field_H &&
           var6 != ua.field_I) {
-          var5 = this.field_Y.c(-120);
+          var5 = this.field_Y.getDebouncedValidationMessage(-120);
           if (var5 == null) {
             var5 = this.field_bb;
           }
@@ -42,8 +42,8 @@ final class km extends sq {
           this.a((byte) 94);
         }
         super.renderWidget(param0, param1, param2, param3);
-        var6Lifetime1 = this.field_Y.d(97);
-        var8 = (WidgetPainter) ((Object) this.listener);
+        var6Lifetime1 = this.field_Y.getDebouncedValidationState(97);
+        var8 = (rk) ((Object) this.painter);
         var9 = this.field_y + param3;
         var10 = var8.a((UiWidget) (this), 0, param1) + (var8.a((UiWidget) (this), param0 - 99).a((byte) -111) >> 1);
         if (PortalView.field_H == var6Lifetime1) {
@@ -67,20 +67,20 @@ final class km extends sq {
               }
             }
           }
-          var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_X << 10, 4096);
+          var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_X << 10, 4096);
           ql.a(true);
-          this.field_Z.e(var9 - (var18.fullWidth >> 1), var10 - var18.field_u, 256);
+          this.field_Z.drawAdditive(var9 - (var18.fullWidth >> 1), var10 - var18.field_u, 256);
           return;
         }
         if (ua.field_I != var6Lifetime1) {
           if (jq.field_b == var6Lifetime1) {
             var15 = rj.field_I[2];
-            var15.e(var9, var10 - (var15.height >> 1), 256);
+            var15.drawAdditive(var9, var10 - (var15.height >> 1), 256);
             return;
           }
           if (var6Lifetime1 == db.field_b) {
             var16 = rj.field_I[1];
-            var16.e(var9, -(var16.height >> 1) + var10, 256);
+            var16.drawAdditive(var9, -(var16.height >> 1) + var10, 256);
           }
           return;
         }
@@ -104,9 +104,9 @@ final class km extends sq {
             }
           }
         }
-        var17.a(112, 144, var17.fullWidth << 4, var17.field_u << 4, -this.field_X << 10, 4096);
+        var17.drawRotatedAboutPivot(112, 144, var17.fullWidth << 4, var17.field_u << 4, -this.field_X << 10, 4096);
         ql.a(true);
-        this.field_Z.e(var9 - (var17.fullWidth >> 1), var10 - var17.field_u, 256);
+        this.field_Z.drawAdditive(var9 - (var17.fullWidth >> 1), var10 - var17.field_u, 256);
         return;
     }
 
@@ -284,7 +284,7 @@ final class km extends sq {
                 SceneObject.field_D = SceneObject.field_D + 1;
               }
               var10_ref_String = bh.a(-126, var8_ref_ka);
-              var11 = var10_ref_String + BitmapFont.c(var8_ref_ka.field_d);
+              var11 = var10_ref_String + BitmapFont.escapeMarkup(var8_ref_ka.field_d);
               var12 = UiComponent.a(var8_ref_ka, (byte) -63);
               var8_ref_ka.field_q = new UiComponent(0L, qq.field_f, var11);
               var6 = var6 + param2;
@@ -384,7 +384,7 @@ final class km extends sq {
         return (ka) (var4);
     }
 
-    km(j param0, String param1, int param2, int param3, int param4, int param5) {
+    km(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, SimUnit.g((byte) 120));
         try {
           this.field_bb = param1;

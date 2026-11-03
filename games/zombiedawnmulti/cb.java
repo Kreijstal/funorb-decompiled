@@ -93,37 +93,37 @@ final class cb extends IntrusiveNode {
           param3 = param3 + param4.offsetX;
           var7 = var6_int * param4.offsetX + (param5 << 8);
           param0 = param0 + param4.field_y;
-          var8 = param3 + param0 * SoftwareRasterizer.field_b;
+          var8 = param3 + param0 * SoftwareRasterizer.width;
           var9 = 0;
           if (param1) {
             field_o = false;
           }
           var10 = param4.height;
           var11 = param4.width;
-          var12 = SoftwareRasterizer.field_b - var11;
-          if (SoftwareRasterizer.field_e > param0) {
-            var14 = SoftwareRasterizer.field_e - param0;
+          var12 = SoftwareRasterizer.width - var11;
+          if (SoftwareRasterizer.clipTop > param0) {
+            var14 = SoftwareRasterizer.clipTop - param0;
             var9 = var9 + var14 * var11;
-            var8 = var8 + var14 * SoftwareRasterizer.field_b;
+            var8 = var8 + var14 * SoftwareRasterizer.width;
             var10 = var10 - var14;
-            param0 = SoftwareRasterizer.field_e;
+            param0 = SoftwareRasterizer.clipTop;
           }
           var13 = 0;
-          if (param3 < SoftwareRasterizer.field_f) {
-            var14Lifetime1 = SoftwareRasterizer.field_f - param3;
+          if (param3 < SoftwareRasterizer.clipLeft) {
+            var14Lifetime1 = SoftwareRasterizer.clipLeft - param3;
             var13 = var13 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
-            param3 = SoftwareRasterizer.field_f;
+            param3 = SoftwareRasterizer.clipLeft;
             var7 = var7 + var6_int * var14Lifetime1;
             var8 = var8 + var14Lifetime1;
           }
-          if (var10 + param0 > SoftwareRasterizer.field_d) {
-            var10 = var10 - (-SoftwareRasterizer.field_d + (var10 + param0));
+          if (var10 + param0 > SoftwareRasterizer.clipBottom) {
+            var10 = var10 - (-SoftwareRasterizer.clipBottom + (var10 + param0));
           }
-          if (SoftwareRasterizer.field_g < param3 + var11) {
-            var14Lifetime2 = -SoftwareRasterizer.field_g + (var11 + param3);
+          if (SoftwareRasterizer.clipRight < param3 + var11) {
+            var14Lifetime2 = -SoftwareRasterizer.clipRight + (var11 + param3);
             var12 = var12 + var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
@@ -145,11 +145,11 @@ final class cb extends IntrusiveNode {
                   var17 = param4.pixels[incrementValue$0];
                   if (var17 != 0) {
                     if (255 >= var15) {
-                      var18 = SoftwareRasterizer.field_i[var8];
+                      var18 = SoftwareRasterizer.pixels[var8];
                       var19 = (var18 & 16711935) * var16 + var15 * (var17 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.field_i[var8] = (tq.b(var15 * tq.b(var17, 65280) + var16 * tq.b(var18, 65280), 16711705) >> 8) + var19;
+                      SoftwareRasterizer.pixels[var8] = (tq.b(var15 * tq.b(var17, 65280) + var16 * tq.b(var18, 65280), 16711705) >> 8) + var19;
                     } else {
-                      SoftwareRasterizer.field_i[var8] = var17;
+                      SoftwareRasterizer.pixels[var8] = var17;
                     }
                     var8++;
                   } else {

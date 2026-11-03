@@ -36,7 +36,7 @@ abstract class ic {
                 field_a = -65;
               }
               var3 = new java.net.URL(param0.getCodeBase(), param1);
-              var3 = gf.a(param0, true, var3);
+              var3 = DebouncedValidationProvider.a(param0, true, var3);
               f.a(param0, true, (byte) 125, var3.toString());
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

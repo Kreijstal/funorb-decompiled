@@ -303,8 +303,8 @@ final class ld extends UiComponent {
               }
               if (var29.field_pb &&
                 0 < var6Lifetime3) {
-                if (null != qp.field_s) {
-                  stackIn_139_0 = qp.field_s[-1 + var6Lifetime3];
+                if (null != MatchingTextValidator.field_s) {
+                  stackIn_139_0 = MatchingTextValidator.field_s[-1 + var6Lifetime3];
                 } else {
                   stackIn_139_0 = null;
                 }
@@ -663,7 +663,7 @@ final class ld extends UiComponent {
           this.field_Ob = this.field_Qb.length;
           var17 = param3.field_yb;
           var18 = var17;
-          this.field_Jb = var18.field_r + (var18.field_C + 2);
+          this.field_Jb = var18.maxDescent + (var18.maxAscent + 2);
           this.field_Nb = this.field_Ob * this.field_Jb;
           this.field_Vb = 0;
           this.field_Gb = new mo[this.field_Ob];
@@ -671,7 +671,7 @@ final class ld extends UiComponent {
           var12 = "</col>";
           for (var13 = 0; this.field_Ob > var13; var13++) {
             if (this.field_Pb[var13] > 0) {
-              param6[var13] = var11 + hm.a(-81, this.field_Pb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + EmailValidator.a(-81, this.field_Pb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_Fb[var13] ||
@@ -680,7 +680,7 @@ final class ld extends UiComponent {
             }
             this.field_Gb[var13] = new mo(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) 50, this.field_Gb[var13]);
-            var15 = var17.a(param6[var13]);
+            var15 = var17.textWidth(param6[var13]);
             if (this.field_Vb < var15) {
               this.field_Vb = var15;
             }
@@ -980,7 +980,7 @@ final class ld extends UiComponent {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_b;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
                   var10 = var10 + var12;
                 }
               }
@@ -1031,7 +1031,7 @@ final class ld extends UiComponent {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_b;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.width;
               var10 = var10 + var12;
             }
             return;

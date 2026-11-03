@@ -96,7 +96,7 @@ class UiComponent extends qo {
 
     final void c(boolean param0, int param1) {
         if (param1 == -1) {
-          this.drawTree(SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_l, false, false, false, param0, false, 0, param1 ^ -80, 0);
+          this.drawTree(SoftwareRasterizer.width, true, SoftwareRasterizer.height, false, false, false, param0, false, 0, param1 ^ -80, 0);
           return;
         }
     }
@@ -104,8 +104,8 @@ class UiComponent extends qo {
     final void a(int param0, boolean param1) {
         if (param0 == -11838) {
           me.field_g = !param1 ? true : false;
-          bp.field_q = !param1 ? true : false;
-          this.updateTree(-100, true, SoftwareRasterizer.field_l, 0, 0, SoftwareRasterizer.field_b);
+          AgeValidator.field_q = !param1 ? true : false;
+          this.updateTree(-100, true, SoftwareRasterizer.height, 0, 0, SoftwareRasterizer.width);
           return;
         }
     }
@@ -358,10 +358,10 @@ class UiComponent extends qo {
         var25 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_w = this.field_x + param10;
         this.field_qb = this.field_Q + param8;
-        var12 = SoftwareRasterizer.field_f;
-        var13 = SoftwareRasterizer.field_e;
-        var14 = SoftwareRasterizer.field_g;
-        var15 = SoftwareRasterizer.field_d;
+        var12 = SoftwareRasterizer.clipLeft;
+        var13 = SoftwareRasterizer.clipTop;
+        var14 = SoftwareRasterizer.clipRight;
+        var15 = SoftwareRasterizer.clipBottom;
         if (param9 < 73) {
           this.drawTree(73, true, 27, false, true, false, false, false, -51, 107, 60);
         }
@@ -479,32 +479,32 @@ class UiComponent extends qo {
             null != this.field_vb) {
             var23Lifetime2 = var26 + this.field_vb;
           }
-          if (this.field_yb.a(var23Lifetime2) <= -(2 * this.field_V) + this.field_zb &&
+          if (this.field_yb.textWidth(var23Lifetime2) <= -(2 * this.field_V) + this.field_zb &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_lb != 1) {
               if (this.field_lb == 2) {
-                var22 = var22 + (-this.field_yb.field_r + (this.field_z - this.field_yb.field_C));
+                var22 = var22 + (-this.field_yb.maxDescent + (this.field_z - this.field_yb.maxAscent));
               }
             } else {
-              var22 = var22 + (-this.field_yb.field_r + (this.field_z - this.field_yb.field_C)) / 2;
+              var22 = var22 + (-this.field_yb.maxDescent + (this.field_z - this.field_yb.maxAscent)) / 2;
             }
             if (this.field_R == 0) {
-              this.field_yb.b(var23Lifetime2, var21 + (this.field_w + this.field_V), this.field_qb + (var22 + this.field_yb.field_C), var18, -1, this.field_Y);
+              this.field_yb.drawLeftAlpha(var23Lifetime2, var21 + (this.field_w + this.field_V), this.field_qb + (var22 + this.field_yb.maxAscent), var18, -1, this.field_Y);
             } else {
               if (1 == this.field_R) {
-                this.field_yb.a(var23Lifetime2, (this.field_zb - 2 * this.field_V) / 2 + (this.field_V + (this.field_w + var21)), this.field_yb.field_C + (this.field_qb + var22), var18, -1, this.field_Y);
+                this.field_yb.a(var23Lifetime2, (this.field_zb - 2 * this.field_V) / 2 + (this.field_V + (this.field_w + var21)), this.field_yb.maxAscent + (this.field_qb + var22), var18, -1, this.field_Y);
               } else {
                 if (this.field_R != 2) {
-                  this.field_yb.a(var23Lifetime2, var21 + this.field_V + this.field_w, this.field_qb + var22, this.field_zb - 2 * this.field_V, this.field_z, var18, -1, this.field_Y, this.field_R, this.field_lb, this.field_J);
+                  this.field_yb.drawParagraphAlpha(var23Lifetime2, var21 + this.field_V + this.field_w, this.field_qb + var22, this.field_zb - 2 * this.field_V, this.field_z, var18, -1, this.field_Y, this.field_R, this.field_lb, this.field_J);
                 } else {
-                  this.field_yb.c(var23Lifetime2, -(this.field_V * 2) + (this.field_zb + this.field_V + (this.field_w + var21)), this.field_yb.field_C + (this.field_qb + var22), var18, -1, this.field_Y);
+                  this.field_yb.drawRightAlpha(var23Lifetime2, -(this.field_V * 2) + (this.field_zb + this.field_V + (this.field_w + var21)), this.field_yb.maxAscent + (this.field_qb + var22), var18, -1, this.field_Y);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_yb.a(var23Lifetime2, this.field_w + (this.field_V + var21), var22 + this.field_qb, this.field_zb - this.field_V * 2, this.field_z, var18, -1, this.field_Y, this.field_R, this.field_lb, this.field_J);
+            this.field_yb.drawParagraphAlpha(var23Lifetime2, this.field_w + (this.field_V + var21), var22 + this.field_qb, this.field_zb - this.field_V * 2, this.field_z, var18, -1, this.field_Y, this.field_R, this.field_lb, this.field_J);
           }
         }
         if (null != this.field_Cb) {
@@ -612,19 +612,19 @@ class UiComponent extends qo {
         this.field_z = this.field_z + var7Lifetime3;
         param1 = param1 & this.field_Z;
         this.field_I = this.field_I - var7Lifetime3;
-        var8 = SoftwareRasterizer.field_f;
-        var9 = SoftwareRasterizer.field_e;
-        var10 = SoftwareRasterizer.field_g;
-        var11 = SoftwareRasterizer.field_d;
+        var8 = SoftwareRasterizer.clipLeft;
+        var9 = SoftwareRasterizer.clipTop;
+        var10 = SoftwareRasterizer.clipRight;
+        var11 = SoftwareRasterizer.clipBottom;
         SoftwareRasterizer.intersectClip(this.field_w, this.field_qb, this.field_zb + this.field_w, this.field_z + this.field_qb);
         var12 = 0;
-        if (!bp.field_q &&
+        if (!AgeValidator.field_q &&
           param1 &&
           kd.field_b != 0 &&
-          SoftwareRasterizer.field_f <= vb.field_f &&
-          vb.field_f < SoftwareRasterizer.field_g &&
-          ka.field_t >= SoftwareRasterizer.field_e &&
-          ka.field_t < SoftwareRasterizer.field_d) {
+          SoftwareRasterizer.clipLeft <= vb.field_f &&
+          vb.field_f < SoftwareRasterizer.clipRight &&
+          ka.field_t >= SoftwareRasterizer.clipTop &&
+          ka.field_t < SoftwareRasterizer.clipBottom) {
           this.field_T = kd.field_b;
           this.field_G = -this.field_qb + ka.field_t;
           this.field_jb = kd.field_b;
@@ -639,7 +639,7 @@ class UiComponent extends qo {
         if (pq.field_f == 0) {
           this.field_jb = 0;
         }
-        stackIn_34_1 = (!me.field_g) && (SoftwareRasterizer.field_f <= MouseInputHandler.field_g) && (MouseInputHandler.field_g < SoftwareRasterizer.field_g) && (SoftwareRasterizer.field_e <= bo.field_d) && (SoftwareRasterizer.field_d > bo.field_d);
+        stackIn_34_1 = (!me.field_g) && (SoftwareRasterizer.clipLeft <= MouseInputHandler.field_g) && (MouseInputHandler.field_g < SoftwareRasterizer.clipRight) && (SoftwareRasterizer.clipTop <= bo.field_d) && (SoftwareRasterizer.clipBottom > bo.field_d);
         this.field_pb = stackIn_34_1;
         stackIn_39_1 = (this.field_pb) && (this.field_jb == pq.field_f) && (param1);
         this.field_L = stackIn_39_1;
@@ -657,7 +657,7 @@ class UiComponent extends qo {
           this.field_wb = (String) null;
         }
         if (var12 != 0) {
-          bp.field_q = true;
+          AgeValidator.field_q = true;
         }
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (0 != this.field_jb &&

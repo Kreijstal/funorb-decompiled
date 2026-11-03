@@ -162,7 +162,7 @@ final class ol extends MenuScreen {
         int var16;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         super.a(param0);
-        var2 = 3 + (pb.field_e.field_C + pb.field_e.field_r);
+        var2 = 3 + (pb.field_e.maxAscent + pb.field_e.maxDescent);
         var3 = 600;
         var6 = 200;
         stackIn_3_0 = (p.field_e != 1) ? 0 : 1;
@@ -189,13 +189,13 @@ final class ol extends MenuScreen {
                 } else {
                   stackIn_19_4 = var3 - 70;
                 }
-                var4 = ((BinaryBitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4, 440, 16777215, 0, 0, 0, var2);
+                var4 = ((BinaryBitmapFont) (Object) stackIn_18_0).drawParagraph(stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4, 440, 16777215, 0, 0, 0, var2);
                 var5 = var2 * var4;
                 if (var7 != 0) {
                   var5 -= 20;
                 }
                 ah.field_e.c(cp.field_J[0][1], 20, 210 + var5, 2, 0);
-                pb.field_e.a(cp.field_S[0][1], 20, 230 + var5, var3, 440, 16777215, 0, 0, 0, var2);
+                pb.field_e.drawParagraph(cp.field_S[0][1], 20, 230 + var5, var3, 440, 16777215, 0, 0, 0, var2);
                 if (var7 != 0) {
                   pb.field_e.a(fa.a(120, 1 + cp.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
                   break regionExit1;
@@ -213,17 +213,17 @@ final class ol extends MenuScreen {
                 stackIn_27_0 = (var7 == 0) ? 340 : 400;
                 var8 = stackIn_27_0;
                 md.field_N[1].g(-50 + var6, -8 + var9);
-                var9 = var9 + (var10 + var2 * pb.field_e.a(cp.field_S[1][0], var6, var9, var8, 50, 16777215, 0, 0, 0, var2));
+                var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(cp.field_S[1][0], var6, var9, var8, 50, 16777215, 0, 0, 0, var2));
                 var11 = var6 - 95;
                 var12 = -20 + var9;
-                var9 = var9 + (pb.field_e.a(cp.field_S[1][1], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) * var2 + var10);
+                var9 = var9 + (pb.field_e.drawParagraph(cp.field_S[1][1], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) * var2 + var10);
                 pp.field_q[3].a(-31 + var6, 3 + var9);
                 md.field_N[3].g(var6 - 20, var9 + 15);
-                var9 = var9 + (var2 * pb.field_e.a(cp.field_S[1][2], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
+                var9 = var9 + (var2 * pb.field_e.drawParagraph(cp.field_S[1][2], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
                 md.field_N[5].g(-46 + var6, 2 + var9);
-                var9 = var9 + (var2 * pb.field_e.a(cp.field_S[1][3], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
+                var9 = var9 + (var2 * pb.field_e.drawParagraph(cp.field_S[1][3], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
                 md.field_N[6].g(-60 + var6, var9 - 20);
-                var9 = var9 + (var2 * pb.field_e.a(cp.field_S[1][4], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
+                var9 = var9 + (var2 * pb.field_e.drawParagraph(cp.field_S[1][4], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
                 md.field_N[0].g(var11, var12);
                 ig.field_d[0].c(var11 - 8, var12 - 4, 128);
                 ig.field_d[0].c(var11 + 13, var12 + 14, 128);
@@ -241,15 +241,15 @@ final class ol extends MenuScreen {
                 ah.field_e.c(cp.field_J[2][0], 20, 135, 2, 0);
                 pp.field_q[8].a(var6 - 36, var9 + 4);
                 md.field_N[3].g(-25 + var6, var9 + 15);
-                var9 = var9 + (var10 + var2 * pb.field_e.a(cp.field_S[2][0], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
+                var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(cp.field_S[2][0], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
                 md.field_N[4].g(var6 - 110, -10 + var9);
                 ig.field_d[0].c(-54 + var6, -3 + var9, 128);
                 md.field_N[3].g(var6 - 25, 30 + var9);
-                var9 = var9 + (var10 + var2 * pb.field_e.a(cp.field_S[2][1], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
+                var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(cp.field_S[2][1], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
                 md.field_N[7].g(var6 - 63, 10 + var9);
-                var9 = var9 + (var2 * pb.field_e.a(cp.field_S[2][2], var6, var9, 340, 50, 16777215, 0, 0, 0, var2) + var10);
+                var9 = var9 + (var2 * pb.field_e.drawParagraph(cp.field_S[2][2], var6, var9, 340, 50, 16777215, 0, 0, 0, var2) + var10);
                 md.field_N[9].g(var6 - 94, var9 + 10);
-                var9 = var9 + (var10 + var2 * pb.field_e.a(cp.field_S[2][3], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
+                var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(cp.field_S[2][3], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
                 if (var16 == 0) {
                   break;
                 }
@@ -259,14 +259,14 @@ final class ol extends MenuScreen {
                 rb.field_e[1].g(8, 235);
                 ah.field_e.c("1/5", 100, 202, 2, -1);
                 ah.field_e.c("2:15", 85, 365, 0, -1);
-                var4 = pb.field_e.a(cp.field_S[3][0], 165, 170, var3 - 150, 440, 16777215, 0, 0, 0, -2 + var2);
+                var4 = pb.field_e.drawParagraph(cp.field_S[3][0], 165, 170, var3 - 150, 440, 16777215, 0, 0, 0, -2 + var2);
                 if (var16 == 0) {
                   break;
                 }
               case 4:
                 ah.field_e.c(cp.field_J[4][0], 20, 135, 2, 0);
                 var13 = var2 - 4;
-                var4 = pb.field_e.a(cp.field_S[4][0], 20, 155, var3, 440, 16777215, 0, 0, 0, var13);
+                var4 = pb.field_e.drawParagraph(cp.field_S[4][0], 20, 155, var3, 440, 16777215, 0, 0, 0, var13);
                 var5 = 135 + (var13 * var4 + 39);
                 var14 = 0;
                 while (5 > var14) {
@@ -292,7 +292,7 @@ final class ol extends MenuScreen {
                   if (-1 != var15) {
                     wa.field_b[var15].g(20, var5 + 2);
                   }
-                  var5 = var5 + (pb.field_e.a(cp.field_I[var14], 60, var5, -40 + var3, 400, 16777215, 0, 0, 0, var13) * var13 + 15);
+                  var5 = var5 + (pb.field_e.drawParagraph(cp.field_I[var14], 60, var5, -40 + var3, 400, 16777215, 0, 0, 0, var13) * var13 + 15);
                   var14++;
                 }
                 if (var16 == 0) {
@@ -336,7 +336,7 @@ final class ol extends MenuScreen {
                   } else {
                     stackIn_72_5 = var3;
                   }
-                  var5 = stackIn_68_0 + (((BinaryBitmapFont) (Object) stackIn_68_1).a(stackIn_68_2, stackIn_69_3, stackIn_71_4, stackIn_72_5, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
+                  var5 = stackIn_68_0 + (((BinaryBitmapFont) (Object) stackIn_68_1).drawParagraph(stackIn_68_2, stackIn_69_3, stackIn_71_4, stackIn_72_5, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
                   var14++;
                 }
                 if (var16 == 0) {
@@ -344,7 +344,7 @@ final class ol extends MenuScreen {
                 }
               case 6:
                 ah.field_e.c(cp.field_J[6][0], 20, 135, 2, 0);
-                pb.field_e.a(cp.field_S[5][0], 20, 155, 600, 440, 16777215, 0, 0, 0, var2);
+                pb.field_e.drawParagraph(cp.field_S[5][0], 20, 155, 600, 440, 16777215, 0, 0, 0, var2);
                 if (var16 == 0) {
                   break;
                 }
@@ -363,7 +363,7 @@ final class ol extends MenuScreen {
                     stackIn_82_1 = 3;
                   }
                   ((Sprite) (Object) stackIn_81_0[stackIn_82_1]).g(28, -8 + var5);
-                  var5 = var5 + (var2 * pb.field_e.a(bh.field_b[var14], 100, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
+                  var5 = var5 + (var2 * pb.field_e.drawParagraph(bh.field_b[var14], 100, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
                   var14++;
                 }
               default:
@@ -410,7 +410,7 @@ final class ol extends MenuScreen {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var2_int < param0.length())))) {
             var3 = param0.charAt(var2_int);
-            stackOut_5_0 = hd.a(-24315, (char) var3);
+            stackOut_5_0 = EmailAvailabilityValidator.a(-24315, (char) var3);
             stackIn_13_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;
             if (var4 == 0) {

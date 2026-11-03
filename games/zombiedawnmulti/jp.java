@@ -70,7 +70,7 @@ final class jp {
             if (var6 == 2) {
               var4 = vl.a(v.field_c, new String[]{qf.field_g}, 2);
               var8 = vl.a(lc.field_n, new String[]{var3}, param0 + 106);
-              var7 = -485 + ua.field_E.field_zb + (ec.field_b.field_zb - (-w.field_A.a(var8) + w.field_A.a(var4)));
+              var7 = -485 + ua.field_E.field_zb + (ec.field_b.field_zb - (-w.field_A.textWidth(var8) + w.field_A.textWidth(var4)));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -85,9 +85,9 @@ final class jp {
                 if (null != JaggrabDownloader.field_c) {
                   var6 = 1;
                   boolean decompiledSharedTail1 = (!(wa.field_k) ||
-                    null == bp.field_t);
+                    null == AgeValidator.field_t);
                   if (!decompiledSharedTail1) {
-                    var4 = "[" + bp.field_t + "] ";
+                    var4 = "[" + AgeValidator.field_t + "] ";
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
@@ -113,7 +113,7 @@ final class jp {
                 var4 = "<col=999999>" + var4 + UiWidget.field_v + "</col>";
                 var5 = "";
               }
-              var9 = w.field_A.a(var4);
+              var9 = w.field_A.textWidth(var4);
               if (!DualLinkDeque.b(0)) {
                 if (ec.field_b.field_L &&
                   var9 > (-ec.field_b.field_w + MouseInputHandler.field_g)) {
@@ -130,7 +130,7 @@ final class jp {
                 }
               }
             }
-            IterableNodeHashTable.a(6, pq.field_m[var6], var7, var4 + BitmapFont.c(rm.field_a.toString()), var5);
+            IterableNodeHashTable.a(6, pq.field_m[var6], var7, var4 + BitmapFont.escapeMarkup(rm.field_a.toString()), var5);
             if (!sq.field_N) {
               ua.field_E.field_L = false;
             }

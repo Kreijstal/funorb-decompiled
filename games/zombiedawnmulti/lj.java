@@ -35,7 +35,7 @@ final class lj extends IntrusiveNode {
           var4.a(this.field_w, this.field_l, (byte) -125);
         }
         if (this.field_i != null &&
-          this.field_i.k()) {
+          this.field_i.isSamplePositionOutOfRange()) {
           this.field_i = null;
         }
         this.field_r = this.field_r + 6;
@@ -80,17 +80,17 @@ final class lj extends IntrusiveNode {
           }
           var5 = stackIn_5_0;
           if (this.field_g != null) {
-            if (this.field_g.k()) {
+            if (this.field_g.isSamplePositionOutOfRange()) {
               this.field_g = null;
             } else {
-              this.field_g.h(var5);
+              this.field_g.setVolume(var5);
             }
           }
           if (this.field_i != null) {
-            if (this.field_i.k()) {
+            if (this.field_i.isSamplePositionOutOfRange()) {
               this.field_i = null;
             } else {
-              this.field_i.h(var5);
+              this.field_i.setVolume(var5);
             }
           }
           var6 = (int)(15.0f * (float)this.field_r / (float)this.field_j);
@@ -149,8 +149,8 @@ final class lj extends IntrusiveNode {
           int var4_int = 43 / ((12 - param3) / 47);
           ib.field_b = param1;
           uq.field_f = param2;
-          AttackEvent.a(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_b / 2, 1633);
-          SimEntity.a(param0.field_J, param2.field_r + param2.field_J, 1829947600, param2.field_J, param0.field_r + param0.field_J);
+          AttackEvent.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 1633);
+          SimEntity.a(param0.field_J, param2.maxDescent + param2.field_J, 1829947600, param2.field_J, param0.maxDescent + param0.field_J);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

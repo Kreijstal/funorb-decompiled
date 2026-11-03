@@ -73,7 +73,7 @@ final class mq extends MenuScreen {
               SoftwareRasterizer.drawRoundedRect(var10_int - 3, var11 - 3, 38, 38, 6, 16777215);
             }
             var12_ref_ri = this.g(0, var9);
-            var12_ref_ri.b(var10_int, var11);
+            var12_ref_ri.drawQuarterSize(var10_int, var11);
           }
         }
         var7.b(GameWorld.field_E, 320, var8 + 72, 16777215, 0);
@@ -89,18 +89,18 @@ final class mq extends MenuScreen {
         if (var9Lifetime1 != -1) {
           var10 = this.g(0, var9Lifetime1);
           var10.a(110, 140);
-          var6.a(var19[var9Lifetime1], 260, 105, 300, 85, 0, 0, 1, 2, 35);
+          var6.drawParagraph(var19[var9Lifetime1], 260, 105, 300, 85, 0, 0, 1, 2, 35);
           var11Lifetime1 = 280;
           var12 = 200;
           var13 = 280;
           var14 = 100;
-          var15 = var7.field_C + var7.field_r;
-          var16 = var15 * var7.a(var3[var9Lifetime1], var11Lifetime1, var12, var13, var14, 16777215, 0, 0, 0, var15);
+          var15 = var7.maxAscent + var7.maxDescent;
+          var16 = var15 * var7.drawParagraph(var3[var9Lifetime1], var11Lifetime1, var12, var13, var14, 16777215, 0, 0, 0, var15);
           var12 = var12 + (var16 - (-var15 - 6));
           var7.c(var5 + 100 * ra.field_n[var9Lifetime1], var11Lifetime1, var12, 16777215, 0);
           var12 = var12 + (6 + var15);
           var7.c(var4, var11Lifetime1, var12, 16777215, 0);
-          var11Lifetime1 = var11Lifetime1 + var7.a(var4);
+          var11Lifetime1 = var11Lifetime1 + var7.textWidth(var4);
           for (var17 = 0; ra.field_n[var9Lifetime1] > var17; var17++) {
             BufferedFile.field_k.g(var17 * (BufferedFile.field_k.fullWidth >> 1) + var11Lifetime1, 2 - BufferedFile.field_k.field_u + var12);
           }

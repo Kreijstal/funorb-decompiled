@@ -5,7 +5,7 @@ import java.util.*;
 
 class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     IntrusiveDeque field_B;
-    static re field_F;
+    static ValidationState field_F;
     static int field_E;
     static String field_D;
     static int field_C;
@@ -227,8 +227,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     void renderWidget(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param2 == 0 &&
-          this.listener != null) {
-          this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
+          this.painter != null) {
+          this.painter.paintWidget(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (param0 != -2) {
           field_D = (String) null;
@@ -529,8 +529,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    WidgetContainer(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
-        super(param0, param1, param2, param3, param4, (bj) null);
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
         this.field_B = new IntrusiveDeque();
     }
 
@@ -540,7 +540,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 < 88) {
-          field_F = (re) null;
+          field_F = (ValidationState) null;
         }
         var2 = new IntrusiveDequeCursor(this.field_B);
         var3 = (UiWidget) (var2.c(-3));
@@ -600,7 +600,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     }
 
     static {
-        field_F = new re();
+        field_F = new ValidationState();
         field_D = "Return to the Laboratory";
         field_E = 0;
     }

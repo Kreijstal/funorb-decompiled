@@ -4,19 +4,19 @@
 final class fj extends ButtonWidget {
     static boolean field_M;
 
-    private fj(String param0, bj param1) {
+    private fj(String param0, WidgetListener param1) {
         this(param0, ra.field_o.field_n, param1);
         try {
-          this.listener = ra.field_o.field_k;
+          this.painter = ra.field_o.field_k;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private fj(String param0, WidgetActionListener param1, bj param2) {
+    private fj(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.listener = ra.field_o.field_k;
+          this.painter = ra.field_o.field_k;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -85,7 +85,7 @@ final class fj extends ButtonWidget {
         }
     }
 
-    fj(String param0, bj param1, boolean param2) {
+    fj(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_G = param2 ? true : false;

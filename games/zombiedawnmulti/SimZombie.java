@@ -420,7 +420,7 @@ final class SimZombie extends SimUnit {
         RuntimeException var1_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5 = ia.field_x;
+          var5 = PasswordValidator.field_x;
           var1 = var5;
           for (var2 = 0; var5.length > var2; var2++) {
             var3 = var5[var2];

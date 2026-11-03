@@ -82,7 +82,7 @@ final class ec {
         String var4 = null;
         String var4Lifetime1;
         if (param0) {
-          SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, 0, 192);
+          SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           if (param2 >= -98) {
             var4 = (String) null;
             ec.a((java.applet.Applet) null, (byte) -12, (String) null);

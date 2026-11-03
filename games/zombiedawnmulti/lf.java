@@ -171,10 +171,10 @@ final class lf {
           return;
         }
         try {
-          var2_int = param0.field_C + param0.field_r;
+          var2_int = param0.maxAscent + param0.maxDescent;
           var3 = new Sprite(var2_int, var2_int);
-          var3.a();
-          BufferedFile.field_k.c(0, param1, var2_int, var2_int);
+          var3.bindAsRenderTarget();
+          BufferedFile.field_k.drawScaledAveraged(0, param1, var2_int, var2_int);
           SocketConnector.field_h.b((byte) 119);
           BufferedFile.field_k = var3;
         } catch (RuntimeException runtimeException) {

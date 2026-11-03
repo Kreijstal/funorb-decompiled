@@ -246,13 +246,13 @@ final class IsaacRandom {
     final static void a(u param0, int param1, int param2) {
         CipherPacketBuffer var3 = ma.field_a;
         var3.b((byte) -35, param1);
-        var3.a(-54, 2);
+        var3.writeByte(-54, 2);
         if (param2 >= -69) {
           return;
         }
         try {
-          var3.a(125, 0);
-          var3.a(-55, param0.field_g);
+          var3.writeByte(125, 0);
+          var3.writeByte(-55, param0.field_g);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "o.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

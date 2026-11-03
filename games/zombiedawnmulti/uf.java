@@ -181,7 +181,7 @@ final class uf {
             }
             stackIn_22_0 = var6.field_Ib;
             if (var10 > 0) {
-              stackIn_23_1 = BitmapFont.a(var6.field_Ib.field_yb, var6.field_Hb, var10);
+              stackIn_23_1 = BitmapFont.truncateText(var6.field_Ib.field_yb, var6.field_Hb, var10);
             } else {
               stackIn_23_1 = var6.field_Hb;
             }
@@ -224,7 +224,7 @@ final class uf {
           if (gl.field_L.field_Hb.field_T == 0) {
             return;
           }
-          gi.field_i = new dk(gl.field_L.field_Hb.field_w, gl.field_L.field_Hb.field_qb, gl.field_L.field_Hb.field_zb, gl.field_L.field_Hb.field_z, gf.field_d, kd.field_a, vo.field_m, vo.field_m);
+          gi.field_i = new dk(gl.field_L.field_Hb.field_w, gl.field_L.field_Hb.field_qb, gl.field_L.field_Hb.field_zb, gl.field_L.field_Hb.field_z, DebouncedValidationProvider.field_d, kd.field_a, vo.field_m, vo.field_m);
           ic.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

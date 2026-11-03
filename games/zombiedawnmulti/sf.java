@@ -37,7 +37,7 @@ final class sf {
             stackIn_2_0 = (LevelData) null;
             return stackIn_2_0;
           }
-          var2_int = re.a(param1, 0, (byte) 77);
+          var2_int = ValidationState.a(param1, 0, (byte) 77);
           if (var2_int == 3) {
             stackIn_16_0 = MidiPcmStream.a(param1, (byte) 46);
             return (LevelData) ((Object) stackIn_16_0);
@@ -119,7 +119,7 @@ final class sf {
           var5.b((byte) -35, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.a(125, 2);
+          var5.writeByte(125, 2);
           var5.writeString(param2, (byte) 105);
           var5.e(100, -var4 + var5.position);
           stackIn_22_0 = null;

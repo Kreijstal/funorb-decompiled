@@ -68,9 +68,9 @@ final class pi {
           param3.a(TextInputWidget.field_R, -1);
           ma.field_a.position = 0;
           if (!param2) {
-            ma.field_a.a(param0 ^ -68, 16);
+            ma.field_a.writeByte(param0 ^ -68, 16);
           } else {
-            ma.field_a.a(-102, 18);
+            ma.field_a.writeByte(-102, 18);
           }
           ma.field_a.position = ma.field_a.position + 2;
           var5_int = ma.field_a.position;
@@ -89,7 +89,7 @@ final class pi {
           if (null != oe.field_f) {
             var6 = var6 | 16;
           }
-          ma.field_a.a(-81, var6);
+          ma.field_a.writeByte(-81, var6);
           var7 = wg.a(0, jl.b(0));
           if (var7 == null) {
             var7 = "";
@@ -98,7 +98,7 @@ final class pi {
           if (null != oe.field_f) {
             ma.field_a.b(-16171, oe.field_f);
           }
-          hd.a(ButtonWidget.field_L, (byte) -122, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+          EmailAvailabilityValidator.a(ButtonWidget.field_L, (byte) -122, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
           ma.field_a.b(false, -var5_int + ma.field_a.position);
           cb.a(-1, false);
           return;
@@ -132,30 +132,30 @@ final class pi {
         int var12 = 0;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (param1 < SoftwareRasterizer.field_f) {
-            param3 = param3 - (SoftwareRasterizer.field_f - param1);
-            param1 = SoftwareRasterizer.field_f;
+          if (param1 < SoftwareRasterizer.clipLeft) {
+            param3 = param3 - (SoftwareRasterizer.clipLeft - param1);
+            param1 = SoftwareRasterizer.clipLeft;
           }
-          if (SoftwareRasterizer.field_e > param5) {
-            param4 = param4 - (-param5 + SoftwareRasterizer.field_e);
-            param5 = SoftwareRasterizer.field_e;
+          if (SoftwareRasterizer.clipTop > param5) {
+            param4 = param4 - (-param5 + SoftwareRasterizer.clipTop);
+            param5 = SoftwareRasterizer.clipTop;
           }
-          if (SoftwareRasterizer.field_g < param1 + param3) {
-            param3 = SoftwareRasterizer.field_g - param1;
+          if (SoftwareRasterizer.clipRight < param1 + param3) {
+            param3 = SoftwareRasterizer.clipRight - param1;
           }
           if (param0 > -88) {
             return;
           }
-          if (SoftwareRasterizer.field_d < param4 + param5) {
-            param4 = SoftwareRasterizer.field_d - param5;
+          if (SoftwareRasterizer.clipBottom < param4 + param5) {
+            param4 = SoftwareRasterizer.clipBottom - param5;
           }
           if (param3 > 0 &&
             param4 > 0) {
-            var6_int = SoftwareRasterizer.field_b * param5 + param1;
-            var7 = SoftwareRasterizer.field_b - param3;
+            var6_int = SoftwareRasterizer.width * param5 + param1;
+            var7 = SoftwareRasterizer.width - param3;
             for (param5 = -param4; param5 < 0; param5++) {
               for (param1 = -param3; param1 < 0; param1++) {
-                var8 = SoftwareRasterizer.field_i[var6_int];
+                var8 = SoftwareRasterizer.pixels[var6_int];
                 if ((255 & var8 >> 8) > param2 &&
                   (255 & var8 >> 16) <= (var8 & 65280) >> 8) {
                   var9 = ((16711680 & var8) >> 15) - 60;
@@ -165,7 +165,7 @@ final class pi {
                   var10 = 65280 & var8;
                   var10 = -(var10 >> 5) + (var10 >> 1) & 65280;
                   var11 = 31 & var8 >> 3;
-                  SoftwareRasterizer.field_i[var6_int] = cr.b(cr.b(var9 << 16, var10), var11);
+                  SoftwareRasterizer.pixels[var6_int] = cr.b(cr.b(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }

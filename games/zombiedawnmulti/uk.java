@@ -6,7 +6,7 @@ final class uk extends ButtonWidget {
     private int field_Q;
     static String field_R;
     static int field_S;
-    private j field_P;
+    private ValidationProvider field_P;
     static boolean field_O;
     static boolean field_N;
 
@@ -18,7 +18,7 @@ final class uk extends ButtonWidget {
           }
           var3 = ma.field_a;
           var3.b((byte) -35, param2);
-          var3.a(param0 ^ -41, param1.field_g);
+          var3.writeByte(param0 ^ -41, param1.field_g);
           var3.a(param1.field_i, (byte) -92);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "uk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -41,92 +41,92 @@ final class uk extends ButtonWidget {
         }
         int var5 = (this.field_n >> 1) + param3 + this.field_y;
         int var6 = param1 - (-this.field_i - (this.field_w >> 1));
-        re var8 = this.field_P.d(80);
+        ValidationState var8 = this.field_P.getDebouncedValidationState(80);
         if (var8 == PortalView.field_H) {
           var15 = rj.field_I[0];
           var9 = var15.fullWidth << 1;
           var10 = var15.field_u << 1;
-          if (null == bp.field_s) {
-            bp.field_s = new Sprite(var9, var10);
-            r.a(0, bp.field_s);
-            var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+          if (null == AgeValidator.field_s) {
+            AgeValidator.field_s = new Sprite(var9, var10);
+            r.a(0, AgeValidator.field_s);
+            var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
+            AgeValidator.field_s.drawAdditive(var5 - var15.fullWidth, var6 - var15.field_u, 256);
             return;
           }
-          if (var9 > bp.field_s.width) {
-            bp.field_s = new Sprite(var9, var10);
-            r.a(0, bp.field_s);
-            var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+          if (var9 > AgeValidator.field_s.width) {
+            AgeValidator.field_s = new Sprite(var9, var10);
+            r.a(0, AgeValidator.field_s);
+            var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
+            AgeValidator.field_s.drawAdditive(var5 - var15.fullWidth, var6 - var15.field_u, 256);
             return;
           }
-          if (bp.field_s.height < var10) {
-            bp.field_s = new Sprite(var9, var10);
-            r.a(0, bp.field_s);
-            var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+          if (AgeValidator.field_s.height < var10) {
+            AgeValidator.field_s = new Sprite(var9, var10);
+            r.a(0, AgeValidator.field_s);
+            var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
+            AgeValidator.field_s.drawAdditive(var5 - var15.fullWidth, var6 - var15.field_u, 256);
             return;
           }
-          r.a(0, bp.field_s);
+          r.a(0, AgeValidator.field_s);
           SoftwareRasterizer.clear();
-          var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+          var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
           ql.a(true);
-          bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
+          AgeValidator.field_s.drawAdditive(var5 - var15.fullWidth, var6 - var15.field_u, 256);
           return;
         }
         if (ua.field_I == var8) {
           var18 = rj.field_I[0];
           var9Lifetime1 = var18.fullWidth << 1;
           var10Lifetime1 = var18.field_u << 1;
-          if (null == bp.field_s) {
-            bp.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
-            r.a(0, bp.field_s);
-            var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+          if (null == AgeValidator.field_s) {
+            AgeValidator.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
+            r.a(0, AgeValidator.field_s);
+            var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
+            AgeValidator.field_s.drawAdditive(var5 - var18.fullWidth, var6 - var18.field_u, 256);
             return;
           }
-          if (var9Lifetime1 > bp.field_s.width) {
-            bp.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
-            r.a(0, bp.field_s);
-            var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+          if (var9Lifetime1 > AgeValidator.field_s.width) {
+            AgeValidator.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
+            r.a(0, AgeValidator.field_s);
+            var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
+            AgeValidator.field_s.drawAdditive(var5 - var18.fullWidth, var6 - var18.field_u, 256);
             return;
           }
-          if (bp.field_s.height < var10Lifetime1) {
-            bp.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
-            r.a(0, bp.field_s);
-            var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+          if (AgeValidator.field_s.height < var10Lifetime1) {
+            AgeValidator.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
+            r.a(0, AgeValidator.field_s);
+            var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
+            AgeValidator.field_s.drawAdditive(var5 - var18.fullWidth, var6 - var18.field_u, 256);
             return;
           }
-          r.a(0, bp.field_s);
+          r.a(0, AgeValidator.field_s);
           SoftwareRasterizer.clear();
-          var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+          var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
           ql.a(true);
-          bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
+          AgeValidator.field_s.drawAdditive(var5 - var18.fullWidth, var6 - var18.field_u, 256);
           return;
         }
         if (var8 == jq.field_b) {
           var12 = rj.field_I[2];
-          var12.e(var5 - (var12.width >> 1), -(var12.height >> 1) + var6, 256);
+          var12.drawAdditive(var5 - (var12.width >> 1), -(var12.height >> 1) + var6, 256);
           return;
         }
         if (db.field_b == var8) {
           var21 = rj.field_I[1];
-          var21.e(var5 - (var21.width >> 1), -(var21.height >> 1) + var6, 256);
+          var21.drawAdditive(var5 - (var21.width >> 1), -(var21.height >> 1) + var6, 256);
           return;
         }
     }
 
     final String d(byte param0) {
         if (this.field_l) {
-          return this.field_P.c(-117);
+          return this.field_P.getDebouncedValidationMessage(-117);
         }
         int var2 = -107 % ((param0 - 53) / 57);
         return null;
@@ -141,7 +141,7 @@ final class uk extends ButtonWidget {
         }
     }
 
-    uk(j param0) {
+    uk(ValidationProvider param0) {
         try {
           this.field_P = param0;
         } catch (RuntimeException runtimeException) {

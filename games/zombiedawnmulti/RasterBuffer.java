@@ -54,10 +54,10 @@ abstract class RasterBuffer {
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
-        var2.a(-65, 2);
+        var2.writeByte(-65, 2);
         if (param1 < -43) {
-          var2.a(109, 4);
-          var2.a(-119, ro.c((byte) 126));
+          var2.writeByte(109, 4);
+          var2.writeByte(-119, ro.c((byte) 126));
           return;
         }
     }

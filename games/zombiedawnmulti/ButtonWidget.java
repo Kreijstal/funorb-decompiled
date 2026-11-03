@@ -16,7 +16,7 @@ class ButtonWidget extends UiWidget {
     static String field_C;
     static String field_E;
 
-    ButtonWidget(String param0, WidgetActionListener param1, bj param2) {
+    ButtonWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         this.field_J = true;
         this.field_F = true;
@@ -255,7 +255,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    ButtonWidget(String param0, bj param1) {
+    ButtonWidget(String param0, WidgetListener param1) {
         this(param0, ra.field_o.field_n, param1);
     }
 
@@ -351,7 +351,7 @@ class ButtonWidget extends UiWidget {
           var9.b((byte) -35, param2);
           var9.position = var9.position + 1;
           var5 = var9.position;
-          var9.a(-93, 1);
+          var9.writeByte(-93, 1);
           var9.writeString(param0, (byte) 105);
           var9.e(73, -var5 + var9.position);
           stackIn_18_0 = null;
@@ -454,7 +454,7 @@ class ButtonWidget extends UiWidget {
         this.field_J = true;
         this.field_F = true;
         this.field_H = false;
-        this.listener = ra.field_o.field_a;
+        this.painter = ra.field_o.field_a;
     }
 
     static {

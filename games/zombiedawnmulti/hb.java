@@ -92,8 +92,8 @@ final class hb {
     }
 
     final static void a(int param0) {
-        hd.field_s = new fe();
-        wj.field_i.a((UiWidget) (hd.field_s), (byte) 121);
+        EmailAvailabilityValidator.field_s = new fe();
+        wj.field_i.a((UiWidget) (EmailAvailabilityValidator.field_s), (byte) 121);
         if (param0 != 0) {
           field_a = (String) null;
         }

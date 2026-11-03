@@ -108,7 +108,7 @@ final class qf {
         try {
           int var5_int = -7 / ((param3 - 23) / 48);
           b.field_b = param1;
-          sc.a(ah.field_e.field_C + ah.field_e.field_r, NavigationGrid.field_h, param4, true, 320, 240, 15, ah.field_e, 10, (byte) -103, 5, param0, ah.field_e.field_C, param2, GameSimulation.field_a);
+          sc.a(ah.field_e.maxAscent + ah.field_e.maxDescent, NavigationGrid.field_h, param4, true, 320, 240, 15, ah.field_e, 10, (byte) -103, 5, param0, ah.field_e.maxAscent, param2, GameSimulation.field_a);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

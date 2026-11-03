@@ -11,7 +11,7 @@ final class na extends rg {
     static IndexedSprite[][] field_H;
 
     na(UiWidget param0) {
-        super(param0.field_y, param0.field_i, param0.field_n, param0.field_w, (WidgetActionListener) null, (bj) null);
+        super(param0.field_y, param0.field_i, param0.field_n, param0.field_w, (WidgetPainter) null, (WidgetListener) null);
         try {
           param0.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w);
           this.field_E = 256;
@@ -58,7 +58,7 @@ final class na extends rg {
     }
 
     public na() {
-        super(0, 0, 0, 0, (WidgetActionListener) null, (bj) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
         this.field_E = 256;
     }
 

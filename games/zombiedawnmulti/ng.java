@@ -118,18 +118,18 @@ abstract class ng {
           SoftwareRasterizer.drawHorizontalLine(param1, param3, param2 + param0, 10000536);
           SoftwareRasterizer.drawHorizontalLine(param1, param4 + param3, 1 + param2, 12105912);
           var5_int = 1;
-          if (var5_int + param3 < SoftwareRasterizer.field_e) {
-            var5_int = SoftwareRasterizer.field_e - param3;
+          if (var5_int + param3 < SoftwareRasterizer.clipTop) {
+            var5_int = SoftwareRasterizer.clipTop - param3;
           }
           var6 = param4;
-          if (SoftwareRasterizer.field_d < param3 + var6) {
-            var6 = -param3 + SoftwareRasterizer.field_d;
+          if (SoftwareRasterizer.clipBottom < param3 + var6) {
+            var6 = -param3 + SoftwareRasterizer.clipBottom;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = var7 * 48 / param4 + 152;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            SoftwareRasterizer.field_i[SoftwareRasterizer.field_b * (param3 + var7) + param1] = var9;
-            SoftwareRasterizer.field_i[(param3 + var7) * SoftwareRasterizer.field_b - (-param1 - param2)] = var9;
+            SoftwareRasterizer.pixels[SoftwareRasterizer.width * (param3 + var7) + param1] = var9;
+            SoftwareRasterizer.pixels[(param3 + var7) * SoftwareRasterizer.width - (-param1 - param2)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +193,7 @@ abstract class ng {
           var5.b((byte) -35, param3);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.a(113, 3);
+          var5.writeByte(113, 3);
           var5.writeString(param0, (byte) 105);
           var5.e(89, -var6 + var5.position);
           stackIn_15_0 = null;

@@ -797,7 +797,7 @@ abstract class SimUnit extends SimEntity {
           var1 = -122 % ((53 - param0) / 62);
           return hj.field_d;
         }
-        hj.field_d = new TextWidgetPainter(cp.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, cp.field_H.field_C, -1, 2147483647, true);
+        hj.field_d = new TextWidgetPainter(cp.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, cp.field_H.maxAscent, -1, 2147483647, true);
         var1Lifetime1 = -122 % ((53 - param0) / 62);
         return hj.field_d;
     }

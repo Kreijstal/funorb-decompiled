@@ -98,9 +98,9 @@ final class dd implements dr {
             if (var4_ref_bb != null &&
               var4_ref_bb.field_j < var2_long) {
               var4_ref_bb.unlink(true);
-              hd.field_q = var4_ref_bb.field_f.length;
+              EmailAvailabilityValidator.field_q = var4_ref_bb.field_f.length;
               s.field_e.position = 0;
-              for (var5_int = 0; hd.field_q > var5_int; var5_int++) {
+              for (var5_int = 0; EmailAvailabilityValidator.field_q > var5_int; var5_int++) {
                 s.field_e.payload[var5_int] = var4_ref_bb.field_f[var5_int];
               }
               PacketBuffer.field_k = jp.field_e;
@@ -132,7 +132,7 @@ final class dd implements dr {
               }
               fd.field_F = s.field_e.readCipheredOpcode(101);
               s.field_e.position = 0;
-              hd.field_q = param0[fd.field_F];
+              EmailAvailabilityValidator.field_q = param0[fd.field_F];
             }
             if (!dd.a(0)) {
               return false;
@@ -152,8 +152,8 @@ final class dd implements dr {
                 var4 = 0;
               }
             }
-            var5 = new bb(var2_long + (long)var4, fd.field_F, new byte[hd.field_q]);
-            for (var6 = 0; hd.field_q > var6; var6++) {
+            var5 = new bb(var2_long + (long)var4, fd.field_F, new byte[EmailAvailabilityValidator.field_q]);
+            for (var6 = 0; EmailAvailabilityValidator.field_q > var6; var6++) {
               var5.field_f[var6] = s.field_e.payload[var6];
             }
             he.field_k.a(var5, false);
@@ -175,21 +175,21 @@ final class dd implements dr {
     }
 
     final static boolean a(int param0) {
-        if (param0 == ~hd.field_q) {
+        if (param0 == ~EmailAvailabilityValidator.field_q) {
           if (!fa.b(10, 1)) {
             return false;
           }
-          hd.field_q = s.field_e.readUnsignedByte(param0 + 31365);
+          EmailAvailabilityValidator.field_q = s.field_e.readUnsignedByte(param0 + 31365);
           s.field_e.position = 0;
         }
-        if (hd.field_q == -2) {
+        if (EmailAvailabilityValidator.field_q == -2) {
           if (!fa.b(param0 + 10, 2)) {
             return false;
           }
-          hd.field_q = s.field_e.readUnsignedShort((byte) 69);
+          EmailAvailabilityValidator.field_q = s.field_e.readUnsignedShort((byte) 69);
           s.field_e.position = 0;
         }
-        return fa.b(10, hd.field_q);
+        return fa.b(10, EmailAvailabilityValidator.field_q);
     }
 
     final static void a(int param0, String[] param1, String param2, int param3) {

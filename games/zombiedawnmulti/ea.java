@@ -43,7 +43,7 @@ final class ea {
         int[] var38;
         int[] var39;
         var29 = 0;
-        var39 = SoftwareRasterizer.field_i;
+        var39 = SoftwareRasterizer.pixels;
         var38 = var39;
         var30 = var38;
         for (var31 = 0; var31 < this.field_b; var31++) {
@@ -114,18 +114,18 @@ final class ea {
         int var2;
         int var3;
         int var3Lifetime1;
-        this.field_j = SoftwareRasterizer.field_b;
-        this.field_b = SoftwareRasterizer.field_l;
-        this.field_g = SoftwareRasterizer.field_b / 2;
-        this.field_c = SoftwareRasterizer.field_l / 2;
+        this.field_j = SoftwareRasterizer.width;
+        this.field_b = SoftwareRasterizer.height;
+        this.field_g = SoftwareRasterizer.width / 2;
+        this.field_c = SoftwareRasterizer.height / 2;
         this.field_f = (int)Math.sqrt((double)(this.field_c * this.field_c + this.field_g * this.field_g));
         this.field_a = 3.141592653589793 / (double)(2 * this.field_f);
         this.field_i = 40.74366543152521;
-        this.field_d = new double[SoftwareRasterizer.field_b][SoftwareRasterizer.field_l];
-        this.field_h = new double[SoftwareRasterizer.field_b][SoftwareRasterizer.field_l];
-        for (var3 = 0; var3 < SoftwareRasterizer.field_b; var3++) {
+        this.field_d = new double[SoftwareRasterizer.width][SoftwareRasterizer.height];
+        this.field_h = new double[SoftwareRasterizer.width][SoftwareRasterizer.height];
+        for (var3 = 0; var3 < SoftwareRasterizer.width; var3++) {
           var1 = var3 - this.field_g;
-          for (var4 = 0; var4 < SoftwareRasterizer.field_l; var4++) {
+          for (var4 = 0; var4 < SoftwareRasterizer.height; var4++) {
             var2 = var4 - this.field_c;
             this.field_d[var3][var4] = Math.tan(this.field_a * ((double)this.field_f - Math.sqrt((double)(var1 * var1 + var2 * var2))));
             this.field_h[var3][var4] = 128.0 + this.field_i * Math.atan((double)var2 / ((double)var1 + 0.5));

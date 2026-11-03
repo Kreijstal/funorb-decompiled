@@ -30,7 +30,7 @@ final class ap extends qb {
             } else {
               stackIn_6_2 = 3;
             }
-            ((PacketBuffer) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_5_1, stackIn_6_2);
             this.field_b.b(0L, param1);
             this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
             if (!param1) {
@@ -86,11 +86,11 @@ final class ap extends qb {
           tg.field_d = GameScreen.a(1127256, (BitmapFont) null, 65793, 1513239, 8947848, 4020342, 65793, (byte) 123, 0, 2245737, 65793, 1513239, 5138823);
           bb.field_k = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 127, 16764006, 0, 0, 0, 0);
           GameWorld.field_x = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 122, 16777215, 0, 0, 0, 0);
-          var6 = SoftwareRasterizer.field_b;
-          var7 = SoftwareRasterizer.field_l;
-          var17 = SoftwareRasterizer.field_i;
+          var6 = SoftwareRasterizer.width;
+          var7 = SoftwareRasterizer.height;
+          var17 = SoftwareRasterizer.pixels;
           tb.field_v = new Sprite(10, 14);
-          tb.field_v.a();
+          tb.field_v.bindAsRenderTarget();
           for (var9 = 2; 7 > var9; var9++) {
             SoftwareRasterizer.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
@@ -158,11 +158,11 @@ final class ap extends qb {
             return false;
           }
           try {
-            this.field_q.b(-26844);
+            this.field_q.checkWriteError(-26844);
             var2 = (tn) (this.field_g.first((byte) 111));
             while (var2 != null) {
               this.field_b.position = 0;
-              this.field_b.a(-112, 1);
+              this.field_b.writeByte(-112, 1);
               this.field_b.b(var2.secondaryKey, true);
               this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
               this.field_j.add(29664, var2);
@@ -171,7 +171,7 @@ final class ap extends qb {
             var2Lifetime1 = (tn) (this.field_c.first((byte) 124));
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
-              this.field_b.a(-20, 0);
+              this.field_b.writeByte(-20, 0);
               this.field_b.b(var2Lifetime1.secondaryKey, true);
               this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
               this.field_l.add(29664, var2Lifetime1);
@@ -282,7 +282,7 @@ final class ap extends qb {
                       var15 = stackIn_67_0;
                       this.field_m = var14_ref;
                       this.field_m.field_y = new PacketBuffer(var15 + (var9 + this.field_m.field_B));
-                      this.field_m.field_y.a(125, var10);
+                      this.field_m.field_y.writeByte(125, var10);
                       this.field_m.field_y.writeInt(42, var9);
                       this.field_m.field_D = 10;
                       this.field_k.position = 0;
@@ -389,8 +389,8 @@ final class ap extends qb {
           }
           try {
             this.field_b.position = param0;
-            this.field_b.a(124, 6);
-            this.field_b.d(3, -8593);
+            this.field_b.writeByte(124, 6);
+            this.field_b.writeMedium(3, -8593);
             this.field_b.a(0, (byte) -55);
             this.field_q.a(0, param0 - 100, this.field_b.payload.length, this.field_b.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -486,8 +486,8 @@ final class ap extends qb {
             if (0 != this.field_i) {
               try {
                 this.field_b.position = 0;
-                this.field_b.a(126, 4);
-                this.field_b.a(125, (int) this.field_i);
+                this.field_b.writeByte(126, 4);
+                this.field_b.writeByte(125, (int) this.field_i);
                 this.field_b.writeInt(-103, 0);
                 this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {

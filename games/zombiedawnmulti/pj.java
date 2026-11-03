@@ -56,7 +56,7 @@ final class pj extends WidgetContainer implements co, in {
     }
 
     pj(tf param0) {
-        super(0, 0, 288, 0, (WidgetActionListener) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
         TextWidgetPainter var4 = null;
@@ -64,16 +64,16 @@ final class pj extends WidgetContainer implements co, in {
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_G = new ButtonWidget(ub.field_xb, (bj) null);
-          this.field_G.listener = (WidgetActionListener) ((Object) new oq());
+          this.field_G = new ButtonWidget(ub.field_xb, (WidgetListener) null);
+          this.field_G.painter = (WidgetPainter) ((Object) new oq());
           var7 = vl.a(ng.field_a, new String[]{this.h(-1), this.a(111)}, 2);
           var3 = 20;
-          var4 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
+          var4 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.maxAscent, -1, 2147483647, true);
           this.field_L = new sq(var7, var4);
           this.field_L.field_x = "";
           this.field_L.a(0, (byte) -107, mp.field_d);
           this.field_L.a(1, (byte) -115, mp.field_d);
-          this.field_L.field_A = (bj) (this);
+          this.field_L.field_A = (WidgetListener) (this);
           this.field_L.field_n = -40 + this.field_n;
           this.field_L.a(this.field_n - 40, var3, (byte) -4, 26);
           var3 = var3 + (this.field_L.field_w + 15);
@@ -81,7 +81,7 @@ final class pj extends WidgetContainer implements co, in {
           var5 = 4;
           var6 = 200;
           this.field_G.setWidgetBounds(300 - var6 >> 1, var3, 28972, var6, 40);
-          this.field_G.field_A = (bj) (this);
+          this.field_G.field_A = (WidgetListener) (this);
           this.b((byte) 59, this.field_G);
           this.setWidgetBounds(0, 0, 28972, 300, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
@@ -237,14 +237,14 @@ final class pj extends WidgetContainer implements co, in {
         int var8 = 0;
         int var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var11 = new hn[ia.field_x.length + 1];
+          var11 = new hn[PasswordValidator.field_x.length + 1];
           var7 = var11;
           int var9 = 83 / ((50 - param5) / 57);
-          for (var8 = 0; ia.field_x.length > var8; var8++) {
-            var11[var8] = ia.field_x[var8];
+          for (var8 = 0; PasswordValidator.field_x.length > var8; var8++) {
+            var11[var8] = PasswordValidator.field_x[var8];
           }
           var7[-1 + var7.length] = new hn(param3, param4, param1, param6, param0, param2);
-          ia.field_x = var7;
+          PasswordValidator.field_x = var7;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "pj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

@@ -175,7 +175,7 @@ final class me {
           if (param0 == null) {
             return null;
           }
-          var2 = new PaletteBitmapFont(param0, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, UsernameAvailabilityValidator.field_t, qp.field_t);
+          var2 = new PaletteBitmapFont(param0, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, UsernameAvailabilityValidator.field_t, MatchingTextValidator.field_t);
           if (!param1) {
             field_h = -18;
           }

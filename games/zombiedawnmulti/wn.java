@@ -65,8 +65,8 @@ final class wn extends pp {
         int var3 = 0;
         int var2Lifetime1;
         int var3Lifetime1;
-        dm.field_Qb = SoftwareRasterizer.field_l;
-        kp.field_l = SoftwareRasterizer.field_b;
+        dm.field_Qb = SoftwareRasterizer.height;
+        kp.field_l = SoftwareRasterizer.width;
         v.a(param0 ^ 196);
         de.field_b.a(0, qe.field_k.field_zb, 0, (byte) -74, -40 + (qe.field_k.field_z - 2));
         ql.field_b.setBounds(jk.field_f, 0, lo.field_g.field_zb, 0, param0 - 3347);
@@ -84,10 +84,10 @@ final class wn extends pp {
           sc.field_d.setBounds(30, 5, 48, 205, -3344);
           var2 = !tb.field_u ? 200 : 250;
           InflaterDecompressor.field_h.setBounds(30, 5, -var2 + 363, var2 + 5, -3344);
-          bp.field_w.setBounds(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
+          AgeValidator.field_w.setBounds(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
           SimEntity.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
           var3 = (2 + cm.field_a.field_zb) / 2;
-          ia.field_t.setBounds(40, -40 + cm.field_a.field_z, var3 - 2, 0, param0 - 3347);
+          PasswordValidator.field_t.setBounds(40, -40 + cm.field_a.field_z, var3 - 2, 0, param0 - 3347);
           if (!tb.field_u) {
             var3 = 0;
           }
@@ -102,10 +102,10 @@ final class wn extends pp {
         sc.field_d.setBounds(30, 5, 48, 205, -3344);
         var2Lifetime1 = !tb.field_u ? 200 : 250;
         InflaterDecompressor.field_h.setBounds(30, 5, -var2Lifetime1 + 363, var2Lifetime1 + 5, -3344);
-        bp.field_w.setBounds(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
+        AgeValidator.field_w.setBounds(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
         SimEntity.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
         var3Lifetime1 = (2 + cm.field_a.field_zb) / 2;
-        ia.field_t.setBounds(40, -40 + cm.field_a.field_z, var3Lifetime1 - 2, 0, param0 - 3347);
+        PasswordValidator.field_t.setBounds(40, -40 + cm.field_a.field_z, var3Lifetime1 - 2, 0, param0 - 3347);
         if (!tb.field_u) {
           var3Lifetime1 = 0;
         }

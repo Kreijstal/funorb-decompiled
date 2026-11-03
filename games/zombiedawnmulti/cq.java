@@ -45,7 +45,7 @@ final class cq {
               stackIn_4_0 = param0.getAppletContext();
               stackIn_4_1 = (java.applet.AppletContext) ((Object) param0);
               stackIn_5_2 = !(param1);
-              ((java.applet.AppletContext) (Object) stackIn_4_0).showDocument(gf.a((java.applet.Applet) ((Object) stackIn_4_1), stackIn_5_2, var2), "_top");
+              ((java.applet.AppletContext) (Object) stackIn_4_0).showDocument(DebouncedValidationProvider.a((java.applet.Applet) ((Object) stackIn_4_1), stackIn_5_2, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

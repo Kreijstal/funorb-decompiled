@@ -1076,7 +1076,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("justplay", (byte) 83);
                 if (null != var2) {
-                  gf.field_a = qe.a(-2739, var2);
+                  DebouncedValidationProvider.field_a = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("justplay_excl", (byte) 83);
                 if (var2 != null) {
@@ -1416,7 +1416,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_displayname", (byte) 83);
                 if (null != var2) {
-                  ia.field_w = qe.a(-2739, var2);
+                  PasswordValidator.field_w = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_password", (byte) 83);
                 if (null != var2) {
@@ -1664,7 +1664,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_alert_yearrange", (byte) 83);
                 if (var2 != null) {
-                  ia.field_v = qe.a(-2739, var2);
+                  PasswordValidator.field_v = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_alert_mismatch", (byte) 83);
                 if (var2 != null) {
@@ -1752,7 +1752,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("enterignore_del", (byte) 83);
                 if (var2 != null) {
-                  gf.field_d = qe.a(-2739, var2);
+                  DebouncedValidationProvider.field_d = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("text_removed_from_game", (byte) 83);
                 if (var2 != null) {

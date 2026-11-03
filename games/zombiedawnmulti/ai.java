@@ -208,28 +208,28 @@ final class ai implements Runnable {
             if (lb.field_a < nf.field_c) {
               lb.field_a = lb.field_a + 1;
               if (lb.field_a > nf.field_a && (null == ld.field_Ub ||
-                null == ld.field_Ub[gf.field_g])) {
+                null == ld.field_Ub[DebouncedValidationProvider.field_g])) {
                 lb.field_a = lb.field_a - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (lb.field_a >= nf.field_c &&
-                  ld.field_Ub[(gf.field_g + 1) % var2_int] == null) {
+                  ld.field_Ub[(DebouncedValidationProvider.field_g + 1) % var2_int] == null) {
                   lb.field_a = lb.field_a - 1;
                 }
               }
             }
             if (nf.field_c <= lb.field_a) {
-              gf.field_j = gf.field_g;
+              DebouncedValidationProvider.field_j = DebouncedValidationProvider.field_g;
               if (qh.field_a) {
-                gf.field_g = gf.field_g + 1;
-                if (gf.field_g >= var2_int) {
-                  gf.field_g = gf.field_g - var2_int;
+                DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_g + 1;
+                if (DebouncedValidationProvider.field_g >= var2_int) {
+                  DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_g - var2_int;
                 }
               } else {
-                gf.field_g = gf.field_g - 1;
-                if (gf.field_g < 0) {
-                  gf.field_g = gf.field_g + var2_int;
+                DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_g - 1;
+                if (DebouncedValidationProvider.field_g < 0) {
+                  DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_g + var2_int;
                 }
               }
               lb.field_a = lb.field_a - nf.field_c;
@@ -403,7 +403,7 @@ final class ai implements Runnable {
             return stackIn_5_0;
           }
           if (param1) {
-            stackIn_10_0 = re.a(255, param2);
+            stackIn_10_0 = ValidationState.a(255, param2);
             return stackIn_10_0;
           }
           stackIn_8_0 = (byte[]) (param2);

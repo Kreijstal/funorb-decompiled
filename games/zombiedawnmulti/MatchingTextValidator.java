@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qp extends TextInputValidator {
+final class MatchingTextValidator extends TextInputValidator {
     private TextInputWidget field_q;
     static byte[][] field_t;
     static Sprite field_v;
@@ -10,7 +10,7 @@ final class qp extends TextInputValidator {
     static Sprite[] field_u;
     static BinaryBitmapFont field_w;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_r = null;
         field_u = null;
@@ -23,14 +23,14 @@ final class qp extends TextInputValidator {
     }
 
     final static int a(int param0, byte param1, int param2, int param3) {
-        if (!(SoftwareRasterizer.field_b < param0 + param2)) {
+        if (!(SoftwareRasterizer.width < param0 + param2)) {
           return param0;
         }
         int var4 = -6 % ((-7 - param1) / 32);
         if (-param2 + (param3 + param0) >= 0) {
           return -param2 + param0 + param3;
         }
-        return SoftwareRasterizer.field_b - param2;
+        return SoftwareRasterizer.width - param2;
     }
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
@@ -63,11 +63,11 @@ final class qp extends TextInputValidator {
         ec.a(param0, param1, -105);
     }
 
-    final re a(boolean param0, String param1) {
-        j var3 = null;
+    final ValidationState validationStateForText(boolean param0, String param1) {
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        re stackIn_6_0 = null;
-        re stackIn_10_0 = null;
+        ValidationState stackIn_6_0 = null;
+        ValidationState stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -79,7 +79,7 @@ final class qp extends TextInputValidator {
           if (this.field_q instanceof kh) {
             var3 = ((kh) ((Object) this.field_q)).a((byte) 101);
             if (var3 != null &&
-              var3.d(49) != db.field_b) {
+              var3.getDebouncedValidationState(49) != db.field_b) {
               stackIn_6_0 = jq.field_b;
               return stackIn_6_0;
             }
@@ -104,7 +104,7 @@ final class qp extends TextInputValidator {
         }
     }
 
-    qp(TextInputWidget param0, TextInputWidget param1) {
+    MatchingTextValidator(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         try {
           this.field_q = param1;
@@ -114,7 +114,7 @@ final class qp extends TextInputValidator {
     }
 
     final String validationMessageForText(String param0, int param1) {
-        j var3 = null;
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -128,12 +128,12 @@ final class qp extends TextInputValidator {
           if (this.field_q instanceof kh) {
             var3 = ((kh) ((Object) this.field_q)).a((byte) 85);
             if (var3 != null) {
-              if (var3.d(125) == db.field_b &&
+              if (var3.getDebouncedValidationState(125) == db.field_b &&
                 !param0.equals(this.field_q.field_j)) {
                 stackIn_5_0 = de.field_d;
                 return stackIn_5_0;
               }
-              stackIn_7_0 = var3.c(-122);
+              stackIn_7_0 = var3.getDebouncedValidationMessage(-122);
               return stackIn_7_0;
             }
           }
@@ -144,7 +144,7 @@ final class qp extends TextInputValidator {
           if (param1 == -1276425040) {
             return null;
           }
-          qp.a(-118, 127, -62, 52, -38);
+          MatchingTextValidator.a(-118, 127, -62, 52, -38);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

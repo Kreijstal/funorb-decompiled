@@ -7,7 +7,7 @@ class tb extends TextWidgetPainter {
     static int[] field_t;
     static Sprite field_s;
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         RuntimeException var6 = null;
         UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -18,12 +18,12 @@ class tb extends TextWidgetPainter {
           if (param0) {
             ng.a(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
           }
-          super.a(param0, param1, param2 ^ 0, param3, param4);
+          super.paintWidget(param0, param1, param2 ^ 0, param3, param4);
           if (param2 == -15112) {
             return;
           }
           var7 = (UiWidget) null;
-          this.a(true, 39, -62, 86, (UiWidget) null);
+          this.paintWidget(true, 39, -62, 86, (UiWidget) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ class tb extends TextWidgetPainter {
     }
 
     tb(BitmapFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
     final static void b(int param0) {

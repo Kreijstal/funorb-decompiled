@@ -96,12 +96,12 @@ final class fd extends SceneObject {
             SimArmedHuman.field_Ab[this.field_P].d(var3_int, var4);
           } else {
             if (this.field_H) {
-              SimArmedHuman.field_Ab[this.field_P].b(var3_int, var4);
+              SimArmedHuman.field_Ab[this.field_P].drawHorizontalFlip(var3_int, var4);
             } else {
               if (!this.field_K) {
                 SimArmedHuman.field_Ab[this.field_P].g(var3_int, var4);
               } else {
-                SimArmedHuman.field_Ab[this.field_P].a(var3_int, var4);
+                SimArmedHuman.field_Ab[this.field_P].drawVerticalFlip(var3_int, var4);
               }
             }
           }
@@ -110,10 +110,10 @@ final class fd extends SceneObject {
               if (!this.field_K) {
                 SimArmedHuman.field_Ab[-8 + this.field_P].g(var3_int, -24 + var4);
               } else {
-                SimArmedHuman.field_Ab[-8 + this.field_P].a(var3_int, -24 + var4);
+                SimArmedHuman.field_Ab[-8 + this.field_P].drawVerticalFlip(var3_int, -24 + var4);
               }
             } else {
-              SimArmedHuman.field_Ab[-8 + this.field_P].b(var3_int, var4 - 24);
+              SimArmedHuman.field_Ab[-8 + this.field_P].drawHorizontalFlip(var3_int, var4 - 24);
             }
           }
           return;
@@ -139,7 +139,7 @@ final class fd extends SceneObject {
 
     final static void h(byte param0) {
         oq.field_w = null;
-        qp.field_t = (byte[][]) null;
+        MatchingTextValidator.field_t = (byte[][]) null;
         qj.field_o = null;
         vj.field_p = null;
         PacketBuffer.field_i = null;
@@ -197,8 +197,8 @@ final class fd extends SceneObject {
                 ki.field_a = eg.a(64, ii.field_d, (String) null, false, param3);
               }
               ma.field_a.position = 0;
-              ma.field_a.a(-94, 14);
-              ma.field_a.a(126, ki.field_a.b(param0 - 7).field_d);
+              ma.field_a.writeByte(-94, 14);
+              ma.field_a.writeByte(126, ki.field_a.b(param0 - 7).field_d);
               cb.a(-1, false);
               vo.field_l = de.field_h;
             }
@@ -213,7 +213,7 @@ final class fd extends SceneObject {
               if (var6_int == 0) {
                 vo.field_l = ResourceArchive.field_n;
               } else {
-                hd.field_q = -1;
+                EmailAvailabilityValidator.field_q = -1;
                 vo.field_l = ButtonWidget.field_K;
                 PortalEntryEvent.field_i = var6_int;
               }
@@ -235,7 +235,7 @@ final class fd extends SceneObject {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  hd.field_q = -1;
+                  EmailAvailabilityValidator.field_q = -1;
                   vo.field_l = ButtonWidget.field_K;
                   decompiledFrameRemainder0 = false;
                 }
@@ -247,7 +247,7 @@ final class fd extends SceneObject {
                 }
               }
               if (decompiledFrameRemainder0) {
-                hd.field_q = -1;
+                EmailAvailabilityValidator.field_q = -1;
                 vo.field_l = qb.field_e;
               }
             }

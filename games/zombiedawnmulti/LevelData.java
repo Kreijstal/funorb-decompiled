@@ -26,7 +26,7 @@ class LevelData {
     }
 
     final static void a(byte param0, boolean param1) {
-        gf.field_g = 0;
+        DebouncedValidationProvider.field_g = 0;
         DualLinkDeque.field_b = 0;
         ClientException.field_c = 0;
         lb.field_a = nf.field_a;

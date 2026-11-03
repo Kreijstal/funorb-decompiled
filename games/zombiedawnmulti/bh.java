@@ -61,8 +61,8 @@ final class bh {
               var3 = "[" + vl.a(GameEvent.field_g, new String[]{param1.field_g}, 2) + "] ";
             }
             if (param1.field_l == 4 &&
-              null != bp.field_t) {
-              var3 = "[" + bp.field_t + "] ";
+              null != AgeValidator.field_t) {
+              var3 = "[" + AgeValidator.field_t + "] ";
             }
             if (param1.field_l == 3) {
               var3 = "[#" + param1.field_g + "] ";

@@ -34,10 +34,10 @@ final class vn {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param0 > 29) {
-          return qp.a(param3, 1, -102, param2, param1);
+          return MatchingTextValidator.a(param3, 1, -102, param2, param1);
         }
         field_f = -44;
-        return qp.a(param3, 1, -102, param2, param1);
+        return MatchingTextValidator.a(param3, 1, -102, param2, param1);
     }
 
     static {

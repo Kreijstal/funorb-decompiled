@@ -352,7 +352,7 @@ final class md {
         var21 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           UiWidget.field_f = args;
-          qp.field_s = param4;
+          MatchingTextValidator.field_s = param4;
           ZombieDawnMulti.field_L = param5;
           qo.field_r = param2;
           um.field_b = param12;
@@ -363,7 +363,7 @@ final class md {
           um.field_g = param6;
           kp.field_n = param7;
           r.field_f = param13;
-          qp.field_u = pb.a("lobby", param3, -256, "gameprivacy");
+          MatchingTextValidator.field_u = pb.a("lobby", param3, -256, "gameprivacy");
           ke.field_i = pb.a("lobby", param3, -256, "ratedgame");
           na.field_G = pb.a("lobby", param3, -256, "opentome");
           we.field_j = pb.a("lobby", param3, -256, "allowspectators");
@@ -397,10 +397,10 @@ final class md {
           LaboratoryScreen.field_l = new UiComponent(0L, al.field_fb, ck.field_b);
           sc.field_d = new UiComponent(0L, al.field_fb, jl.field_t);
           InflaterDecompressor.field_h = new UiComponent(0L, al.field_fb, PortalEntryEvent.field_k);
-          bp.field_w = new UiComponent(0L, pn.field_g, fd.field_N);
+          AgeValidator.field_w = new UiComponent(0L, pn.field_g, fd.field_N);
           SimEntity.field_H = new tq(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
-          ia.field_t = new UiComponent(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
-          ia.field_t.field_Z = tb.field_u;
+          PasswordValidator.field_t = new UiComponent(0L, he.field_i, ContextMenu.field_Gb.toUpperCase());
+          PasswordValidator.field_t.field_Z = tb.field_u;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
@@ -429,10 +429,10 @@ final class md {
             ml.field_Lb.a((byte) 50, sc.field_d);
           }
           ml.field_Lb.a((byte) 50, InflaterDecompressor.field_h);
-          ml.field_Lb.a((byte) 50, bp.field_w);
+          ml.field_Lb.a((byte) 50, AgeValidator.field_w);
           ml.field_Lb.a((byte) 50, SimEntity.field_H);
           if (tb.field_u) {
-            cm.field_a.a((byte) 50, ia.field_t);
+            cm.field_a.a((byte) 50, PasswordValidator.field_t);
           }
           cm.field_a.a((byte) 50, ArrayWidgetGroup.field_L);
           sc.field_j = new UiComponent(0L, vo.field_m);
@@ -462,13 +462,13 @@ final class md {
           jp.field_b = new UiComponent(0L, ai.field_c, pi.field_b.toUpperCase());
           gg.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
           SocketConnector.field_a = new UiComponent(0L, cg.field_f);
-          ik.field_d = new UiComponent(0L, hd.field_x, vb.field_d.toUpperCase());
+          ik.field_d = new UiComponent(0L, EmailAvailabilityValidator.field_x, vb.field_d.toUpperCase());
           mi.field_Ib = new UiComponent[4 + param9];
           ma.field_b = new mo[param9 + 4][];
           mi.field_Ib[0] = new UiComponent(0L, m.field_B, kg.field_f);
           ma.field_b[0] = new mo[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            ma.field_b[0][1 + var17_int] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, qp.field_u[var17_int], t.field_c[var17_int]);
+            ma.field_b[0][1 + var17_int] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, MatchingTextValidator.field_u[var17_int], t.field_c[var17_int]);
           }
           if (qo.field_r.length >= 2) {
             mi.field_Ib[1] = new UiComponent(0L, m.field_B, gi.field_n);

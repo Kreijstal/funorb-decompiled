@@ -130,8 +130,8 @@ final class mi extends UiComponent {
     final static void b(int param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param1);
-        var2.a(109, param0);
-        var2.a(-116, 0);
+        var2.writeByte(109, param0);
+        var2.writeByte(-116, 0);
     }
 
     static {

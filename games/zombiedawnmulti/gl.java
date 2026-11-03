@@ -39,7 +39,7 @@ final class gl extends WidgetContainer implements in {
     }
 
     gl(jn param0) {
-        super(0, 0, 0, 0, (WidgetActionListener) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
@@ -74,14 +74,14 @@ final class gl extends WidgetContainer implements in {
             var4 = new he(ke.field_h, 0, 1);
             this.field_I = new ButtonWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_I[var5] = new ButtonWidget(this.field_G[var5], (bj) (this));
-              this.field_I[var5].listener = (WidgetActionListener) ((Object) var4);
+              this.field_I[var5] = new ButtonWidget(this.field_G[var5], (WidgetListener) (this));
+              this.field_I[var5].painter = (WidgetPainter) ((Object) var4);
               this.field_I[var5].field_x = wd.field_I;
               this.field_I[var5].setWidgetBounds(0, 20 + var5 * 16, 28972, 80, 15);
               this.b((byte) 94, this.field_I[var5]);
             }
-            this.field_I[var3_int] = new ButtonWidget(al.field_ab, (bj) (this));
-            this.field_I[var3_int].listener = (WidgetActionListener) ((Object) var4);
+            this.field_I[var3_int] = new ButtonWidget(al.field_ab, (WidgetListener) (this));
+            this.field_I[var3_int].painter = (WidgetPainter) ((Object) var4);
             this.field_I[var3_int].setWidgetBounds(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
             this.b((byte) 55, this.field_I[var3_int]);
             return;
@@ -112,14 +112,14 @@ final class gl extends WidgetContainer implements in {
         }
         BitmapFont var5 = ke.field_h;
         if (null != this.field_G) {
-          var5.a(pi.field_g, param3 + this.field_y, param1 + this.field_i, this.field_n, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_C);
+          var5.drawParagraph(pi.field_g, param3 + this.field_y, param1 + this.field_i, this.field_n, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 
     final static Sprite a(int param0) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var1 = oq.field_w[0] * vj.field_p[0];
-        byte[] var2 = qp.field_t[0];
+        byte[] var2 = MatchingTextValidator.field_t[0];
         int[] var3 = new int[var1];
         int var4_int = 0;
         if (param0 != 15) {

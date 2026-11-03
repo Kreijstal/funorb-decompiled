@@ -23,7 +23,7 @@ final class uq {
           }
           var4 = (kj) (md.field_u.c(121));
           while (var4 != null) {
-            bp.a(var4, true, param0);
+            AgeValidator.a(var4, true, param0);
             var4 = (kj) (md.field_u.b(6));
           }
           var5 = (nh) (pn.field_f.c(83));
@@ -54,7 +54,7 @@ final class uq {
               if (param0 != 3) {
                 return;
               }
-              param1.getAppletContext().showDocument(gf.a(param1, true, var2), "_top");
+              param1.getAppletContext().showDocument(DebouncedValidationProvider.a(param1, true, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,7 +109,7 @@ final class uq {
                 return;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-              param0.getAppletContext().showDocument(gf.a(param0, true, var2), "_top");
+              param0.getAppletContext().showDocument(DebouncedValidationProvider.a(param0, true, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

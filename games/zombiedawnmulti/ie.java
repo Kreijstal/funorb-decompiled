@@ -119,7 +119,7 @@ abstract class ie extends al {
 
     final static void a(boolean param0, boolean param1) {
         if (null != ki.field_e) {
-          SoftwareRasterizer.clearRect(SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, -SoftwareRasterizer.field_f + SoftwareRasterizer.field_g, SoftwareRasterizer.field_d - SoftwareRasterizer.field_e);
+          SoftwareRasterizer.clearRect(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, -SoftwareRasterizer.clipLeft + SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
           ki.field_e.c(param0, -1);
           if (param1) {
             field_ob = (int[]) null;

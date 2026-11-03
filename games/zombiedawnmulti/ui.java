@@ -140,12 +140,12 @@ final class ui extends IntrusiveNode {
             }
             var5 = stackIn_30_0;
             var6 = var5[0].width + nf.field_d + var5[2].width;
-            var7 = qp.field_w.field_C + var5[6].height + var5[0].height;
+            var7 = MatchingTextValidator.field_w.maxAscent + var5[6].height + var5[0].height;
             s.a(-var7 + ImageProducerRasterBuffer.field_k.field_qb - 5, 0, var5, -5 - var6 + 640, var7, var6);
             var13 = new int[4];
             SoftwareRasterizer.saveClip(var13);
             SoftwareRasterizer.intersectClip(-5 - nf.field_d + 640 - var5[0].width, ImageProducerRasterBuffer.field_k.field_qb - var7 + var5[0].height - 5, 635 - var5[2].width, ImageProducerRasterBuffer.field_k.field_qb - var5[6].height);
-            stackIn_33_0 = qp.field_w;
+            stackIn_33_0 = MatchingTextValidator.field_w;
             stackIn_33_1 = pb.field_i;
             stackIn_33_2 = -var5[2].width + 635;
             stackIn_33_3 = ImageProducerRasterBuffer.field_k.field_qb - (var5[6].height + 5);
@@ -166,7 +166,7 @@ final class ui extends IntrusiveNode {
             var9 = stackIn_40_0;
             stackIn_46_0 = (param0) && (vk.i((byte) -39)) && (var9 == 0);
             dd.a(stackIn_46_0, 0);
-            if (re.field_b) {
+            if (ValidationState.field_b) {
               if (var9 == 0) {
                 return;
               }

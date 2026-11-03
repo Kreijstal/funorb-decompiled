@@ -185,14 +185,14 @@ final class bo {
           var7 = var8;
           var3 = var7;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
-            IntrusiveNode.a(var2_intLifetime1, var3, -85, re.a(param0, var2_intLifetime1, (byte) 112));
+            IntrusiveNode.a(var2_intLifetime1, var3, -85, ValidationState.a(param0, var2_intLifetime1, (byte) 112));
           }
           incrementValue$0 = var2_intLifetime1;
           var2_intLifetime1++;
-          var4 = re.a(param0, incrementValue$0, (byte) 97);
+          var4 = ValidationState.a(param0, incrementValue$0, (byte) 97);
           incrementValue$1 = var2_intLifetime1;
           var2_intLifetime1++;
-          var5 = re.a(param0, incrementValue$1, (byte) 78);
+          var5 = ValidationState.a(param0, incrementValue$1, (byte) 78);
           IntrusiveNode.a(4, var8, -116, var4);
           IntrusiveNode.a(5, var8, -88, var5);
           IntrusiveNode.a(6, var8, -74, var4);
@@ -202,7 +202,7 @@ final class bo {
           IntrusiveNode.a(10, var8, -111, var4);
           IntrusiveNode.a(11, var8, -85, var5);
           for (var2_intLifetime2 = 6; param0.length / 4 > var2_intLifetime2; var2_intLifetime2++) {
-            IntrusiveNode.a(6 + var2_intLifetime2, var3, -111, re.a(param0, var2_intLifetime2, (byte) 112));
+            IntrusiveNode.a(6 + var2_intLifetime2, var3, -111, ValidationState.a(param0, var2_intLifetime2, (byte) 112));
           }
           stackIn_10_0 = no.a((byte) 104, var8);
           return stackIn_10_0;

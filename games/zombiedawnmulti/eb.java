@@ -63,7 +63,7 @@ final class eb {
         Sprite[] var1 = new Sprite[qc.field_v];
         for (var2 = 0; var2 < qc.field_v; var2++) {
           var3 = vj.field_p[var2] * oq.field_w[var2];
-          var4 = qp.field_t[var2];
+          var4 = MatchingTextValidator.field_t[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = UsernameAvailabilityValidator.field_t[tq.b((int) var4[var6], 255)];
@@ -362,7 +362,7 @@ final class eb {
             }
             Waypoint.field_j = stackIn_111_0 + stackIn_112_1;
           }
-          ce.field_k = bp.field_r - (Waypoint.field_j >> 1);
+          ce.field_k = AgeValidator.field_r - (Waypoint.field_j >> 1);
           uf.field_b = new int[TextWidgetPainter.field_m.length][];
           if (param0) {
             field_M = -108;

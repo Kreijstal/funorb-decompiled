@@ -22,15 +22,15 @@ final class TriangleRasterizer {
         if (field_a.length < field_h) {
           field_a = new int[cb.b(-74, field_h)];
         }
-        int var4 = param1 * SoftwareRasterizer.field_b + param0;
+        int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_h; var5++) {
           field_a[var5] = var4;
-          var4 = var4 + SoftwareRasterizer.field_b;
+          var4 = var4 + SoftwareRasterizer.width;
         }
     }
 
     final static int a() {
-        return field_a[0] % SoftwareRasterizer.field_b;
+        return field_a[0] % SoftwareRasterizer.width;
     }
 
     public static void c() {
@@ -160,11 +160,11 @@ final class TriangleRasterizer {
     }
 
     final static int d() {
-        return field_a[0] / SoftwareRasterizer.field_b;
+        return field_a[0] / SoftwareRasterizer.width;
     }
 
     final static void e() {
-        TriangleRasterizer.a(SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, SoftwareRasterizer.field_g, SoftwareRasterizer.field_d);
+        TriangleRasterizer.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -224,20 +224,20 @@ final class TriangleRasterizer {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
-                  param0 = param0 + SoftwareRasterizer.field_b;
+                  param0 = param0 + SoftwareRasterizer.width;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
-                param0 = param0 + SoftwareRasterizer.field_b;
+                param0 = param0 + SoftwareRasterizer.width;
                 param1--;
               }
               return;
@@ -248,20 +248,20 @@ final class TriangleRasterizer {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param4 >> 16, param3 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + SoftwareRasterizer.field_b;
+                param0 = param0 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
-              param0 = param0 + SoftwareRasterizer.field_b;
+              param0 = param0 + SoftwareRasterizer.width;
               param1--;
             }
             return;
@@ -289,20 +289,20 @@ final class TriangleRasterizer {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + SoftwareRasterizer.field_b;
+                param0 = param0 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
-              param0 = param0 + SoftwareRasterizer.field_b;
+              param0 = param0 + SoftwareRasterizer.width;
               param2--;
             }
             return;
@@ -313,20 +313,20 @@ final class TriangleRasterizer {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
-              param0 = param0 + SoftwareRasterizer.field_b;
+              param0 = param0 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.field_i, param0, param6, 0, param5 >> 16, param4 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
-            param0 = param0 + SoftwareRasterizer.field_b;
+            param0 = param0 + SoftwareRasterizer.width;
             param2--;
           }
           return;
@@ -362,20 +362,20 @@ final class TriangleRasterizer {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
-                  param2 = param2 + SoftwareRasterizer.field_b;
+                  param2 = param2 + SoftwareRasterizer.width;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
-                param2 = param2 + SoftwareRasterizer.field_b;
+                param2 = param2 + SoftwareRasterizer.width;
                 param0--;
               }
               return;
@@ -386,20 +386,20 @@ final class TriangleRasterizer {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + SoftwareRasterizer.field_b;
+                param2 = param2 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
-              param2 = param2 + SoftwareRasterizer.field_b;
+              param2 = param2 + SoftwareRasterizer.width;
               param0--;
             }
             return;
@@ -424,20 +424,20 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + SoftwareRasterizer.field_b;
+                param2 = param2 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param3 >> 16, param4 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
-              param2 = param2 + SoftwareRasterizer.field_b;
+              param2 = param2 + SoftwareRasterizer.width;
               param1--;
             }
             return;
@@ -448,20 +448,20 @@ final class TriangleRasterizer {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
-              param2 = param2 + SoftwareRasterizer.field_b;
+              param2 = param2 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.field_i, param2, param6, 0, param4 >> 16, param3 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
-            param2 = param2 + SoftwareRasterizer.field_b;
+            param2 = param2 + SoftwareRasterizer.width;
             param1--;
           }
           return;
@@ -496,20 +496,20 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param4 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
-                param1 = param1 + SoftwareRasterizer.field_b;
+                param1 = param1 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
-              param1 = param1 + SoftwareRasterizer.field_b;
+              param1 = param1 + SoftwareRasterizer.width;
               param2--;
             }
             return;
@@ -520,20 +520,20 @@ final class TriangleRasterizer {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param5 >> 16, param4 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
-              param1 = param1 + SoftwareRasterizer.field_b;
+              param1 = param1 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
-            param1 = param1 + SoftwareRasterizer.field_b;
+            param1 = param1 + SoftwareRasterizer.width;
             param2--;
           }
           return;
@@ -561,20 +561,20 @@ final class TriangleRasterizer {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
-              param1 = param1 + SoftwareRasterizer.field_b;
+              param1 = param1 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param5 >> 16, param3 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
-            param1 = param1 + SoftwareRasterizer.field_b;
+            param1 = param1 + SoftwareRasterizer.width;
             param0--;
           }
           return;
@@ -585,20 +585,20 @@ final class TriangleRasterizer {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
-            param1 = param1 + SoftwareRasterizer.field_b;
+            param1 = param1 + SoftwareRasterizer.width;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          TriangleRasterizer.a(SoftwareRasterizer.field_i, param1, param6, 0, param3 >> 16, param5 >> 16);
+          TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
-          param1 = param1 + SoftwareRasterizer.field_b;
+          param1 = param1 + SoftwareRasterizer.width;
           param0--;
         }
         return;

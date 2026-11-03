@@ -88,8 +88,8 @@ final class jk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (hd.field_s != null) {
-            hd.field_s.field_J.a((byte) -112, param1);
+          if (EmailAvailabilityValidator.field_s != null) {
+            EmailAvailabilityValidator.field_s.field_J.a((byte) -112, param1);
           }
           if (qe.field_e != null) {
             qe.field_e.field_V.a((byte) -112, param1);
@@ -115,8 +115,8 @@ final class jk {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
-        var2.a(-120, param1);
-        var2.a(121, 1);
+        var2.writeByte(-120, param1);
+        var2.writeByte(121, 1);
     }
 
     static {

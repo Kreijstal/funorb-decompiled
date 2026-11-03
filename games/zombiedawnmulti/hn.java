@@ -115,10 +115,10 @@ final class hn {
             hn.a(-104, (String) null, false);
           }
           if (param2) {
-            stackIn_6_0 = m.field_C.a(param1);
+            stackIn_6_0 = m.field_C.textWidth(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = uq.field_f.a(param1);
+          stackIn_4_0 = uq.field_f.textWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

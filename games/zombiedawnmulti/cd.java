@@ -78,21 +78,21 @@ final class cd extends UiComponent {
             return;
           }
           if (ld.field_Ub == null) {
-            if (null != gf.field_e) {
-              gf.field_e.a(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != DebouncedValidationProvider.field_e) {
+              DebouncedValidationProvider.field_e.drawParagraph(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = ld.field_Ub[gf.field_g];
+          var6 = ld.field_Ub[DebouncedValidationProvider.field_g];
           if (var6 == null) {
-            if (null != gf.field_e) {
-              gf.field_e.a(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != DebouncedValidationProvider.field_e) {
+              DebouncedValidationProvider.field_e.drawParagraph(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.g(245, 199);
           }
           if (nf.field_a > lb.field_a) {
-            var7 = ld.field_Ub[gf.field_j];
+            var7 = ld.field_Ub[DebouncedValidationProvider.field_j];
             if (var7 != null) {
               var2_int = lb.field_a * (var7.fullWidth + 60) / nf.field_a;
               var3 = var2_int - 30;
@@ -103,7 +103,7 @@ final class cd extends UiComponent {
               }
             }
           }
-          if (gf.field_e != null) {
+          if (DebouncedValidationProvider.field_e != null) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -122,7 +122,7 @@ final class cd extends UiComponent {
             if (var2 == null) {
               return;
             }
-            gf.field_e.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            DebouncedValidationProvider.field_e.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

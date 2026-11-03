@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he implements WidgetActionListener {
+final class he implements WidgetPainter {
     static String[] field_b;
     private int field_j;
     static String field_c;
@@ -14,7 +14,7 @@ final class he implements WidgetActionListener {
     static long field_e;
     static String[][] field_d;
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -39,10 +39,10 @@ final class he implements WidgetActionListener {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_j + "</u>", param3 + param4.field_y, param4.field_i + param1, param4.field_n, param4.field_w, var6_int, -1, this.field_j, this.field_h, this.field_g.field_r + this.field_g.field_C);
+          this.field_g.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_j + "</u>", param3 + param4.field_y, param4.field_i + param1, param4.field_n, param4.field_w, var6_int, -1, this.field_j, this.field_h, this.field_g.maxDescent + this.field_g.maxAscent);
           if (param4.c(127)) {
-            var7 = this.field_g.a(param4.field_j);
-            var8 = this.field_g.field_r + this.field_g.field_C;
+            var7 = this.field_g.textWidth(param4.field_j);
+            var8 = this.field_g.maxDescent + this.field_g.maxAscent;
             var9 = param4.field_y + param3;
             if (this.field_j != 2) {
               if (1 == this.field_j) {

@@ -16,7 +16,7 @@ final class wd extends WidgetContainer implements in {
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         super.renderWidget(param0, param1, param2, param3);
-        this.field_M.a(this.field_O, this.field_y + param3 + 14, param1 + (this.field_i + 10), -28 + this.field_n, this.field_w, 16777215, -1, 0, 0, this.field_M.field_C);
+        this.field_M.drawParagraph(this.field_O, this.field_y + param3 + 14, param1 + (this.field_i + 10), -28 + this.field_n, this.field_w, 16777215, -1, 0, 0, this.field_M.maxAscent);
     }
 
     public static void a(byte param0) {
@@ -83,21 +83,21 @@ final class wd extends WidgetContainer implements in {
     }
 
     wd(ne param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (WidgetActionListener) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_J = 0;
         try {
           this.field_R = param0;
           this.field_O = param2;
           this.field_M = param1;
-          var4_int = this.field_O != null ? this.field_M.a(this.field_O, 260, this.field_M.field_C) : 0;
+          var4_int = this.field_O != null ? this.field_M.measureWrappedHeight(this.field_O, 260, this.field_M.maxAscent) : 0;
           this.setWidgetBounds(0, 0, 28972, 288, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ButtonWidget a(String param0, int param1, bj param2) {
+    final ButtonWidget a(String param0, int param1, WidgetListener param2) {
         ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -110,7 +110,7 @@ final class wd extends WidgetContainer implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param0, param2);
-          var4.listener = (WidgetActionListener) ((Object) new oq());
+          var4.painter = (WidgetPainter) ((Object) new oq());
           var5 = this.field_w - 2;
           this.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w + 34);
           var4.setWidgetBounds(7, var5, 28972, -14 + this.field_n, 30);
@@ -148,7 +148,7 @@ final class wd extends WidgetContainer implements in {
             this.field_N = (int[]) null;
           }
           this.a(-3481, 1 + var4_int);
-          this.field_H[var4_int] = this.a(param0, -108, (bj) (this));
+          this.field_H[var4_int] = this.a(param0, -108, (WidgetListener) (this));
           this.field_N[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

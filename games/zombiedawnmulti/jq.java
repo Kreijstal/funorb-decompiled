@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class jq {
-    static re field_b;
+    static ValidationState field_b;
     static IndexedSprite field_c;
     static int field_a;
     static int field_f;
@@ -94,7 +94,7 @@ final class jq {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param0.a(var2, 24, 0, 120);
+                param0.writeBytes(var2, 24, 0, 120);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ final class jq {
                 return;
               }
             }
-            param0.a(var2, 24, 0, 120);
+            param0.writeBytes(var2, 24, 0, 120);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -145,7 +145,7 @@ final class jq {
     }
 
     static {
-        field_b = new re();
+        field_b = new ValidationState();
         field_f = 0;
         field_d = null;
     }

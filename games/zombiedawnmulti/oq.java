@@ -13,7 +13,7 @@ final class oq extends TextWidgetPainter {
     private int field_C;
     private int field_y;
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -51,7 +51,7 @@ final class oq extends TextWidgetPainter {
           stackIn_18_0 = (!param0) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
           FightEvent.a(var7, true, param3 + param4.field_y, this.field_A, (-this.field_A[0].field_u + param4.field_w >> 1) + (param4.field_i + param1), param4.field_n);
-          this.field_j.a(param4.field_j, param3 + param4.field_y, param4.field_i + (param1 - 2), param4.field_n, param4.field_w, var8, -1, 1, 1, this.field_j.field_C);
+          this.field_j.drawParagraph(param4.field_j, param3 + param4.field_y, param4.field_i + (param1 - 2), param4.field_n, param4.field_w, var8, -1, 1, 1, this.field_j.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -128,7 +128,7 @@ final class pd {
           }
           vf.field_b = new byte[qc.field_v][];
           oq.field_w = new int[qc.field_v];
-          qp.field_t = new byte[qc.field_v][];
+          MatchingTextValidator.field_t = new byte[qc.field_v][];
           vj.field_p = new int[qc.field_v];
           var17.position = param1.length - 7 - 8 * qc.field_v;
           ie.field_nb = var17.readUnsignedShort((byte) 69);
@@ -162,7 +162,7 @@ final class pd {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            qp.field_t[var4Lifetime5] = var20;
+            MatchingTextValidator.field_t[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

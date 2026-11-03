@@ -132,11 +132,11 @@ final class qe {
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
-          var7[0] = var5[0].field_l;
+          var7[0] = var5[0].palette;
           for (var8 = 1; var19.length > var8; var8++) {
             var7[var8] = (int[]) ((Object) var19[0].clone());
           }
-          var8Lifetime1 = var5[0].field_m[0];
+          var8Lifetime1 = var5[0].pixelIndices[0];
           if (param1 != -8995) {
             qe.d(69);
           }
@@ -152,17 +152,17 @@ final class qe {
           }
           var9Lifetime1 = var17.height;
           m.c(540);
-          var17.a();
-          SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+          var17.bindAsRenderTarget();
+          SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.a();
+          var18.bindAsRenderTarget();
           var17.c(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.a();
+          var11.bindAsRenderTarget();
           var17.c(var9Lifetime1 - var17.width, 0);
           var12 = new Sprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
-          var12.a();
+          var12.bindAsRenderTarget();
           var17.c(-var9Lifetime1, 0);
           ql.a(true);
           ui.field_k = new Sprite[]{var15, var12, var11};
@@ -203,7 +203,7 @@ final class qe {
         rb.field_e[2].g(70, 400);
         GameWorld var5 = PortalEntryEvent.field_m;
         if (2 <= kj.field_q) {
-          qp.field_w.c("L" + var5.field_r, 12, 468, 16777215, 1);
+          MatchingTextValidator.field_w.c("L" + var5.field_r, 12, 468, 16777215, 1);
         }
         g.c();
         SoftwareRasterizer.setClip(0, 0, 640, 40);
@@ -246,7 +246,7 @@ final class qe {
         stackIn_6_0 = (param1 != PowerupButton.field_e.localTeam) ? 0 : 1;
         var7 = stackIn_6_0;
         var8 = var25[0];
-        var9 = qp.field_w;
+        var9 = MatchingTextValidator.field_w;
         var10 = 160;
         var11 = param1 * var10;
         var12 = 20;
@@ -256,7 +256,7 @@ final class qe {
         var14 = am.a(0, var18.field_D[param1][1], 0, 1, var18.field_D[param1][0]);
         var14.g(var11, -1 + (-24 + var12));
         var21 = var18.field_b[param1];
-        var22 = BitmapFont.a(var9, var21, -2 + var10 - 48);
+        var22 = BitmapFont.truncateText(var9, var21, -2 + var10 - 48);
         ((BitmapFont) ((Object) var9)).c(var22, 48 + var11, var12, var8, 0);
         if (var4 == 0) {
           if (var19.phase != 1 &&
@@ -268,14 +268,14 @@ final class qe {
             var16 = vl.a(ob.field_q, new String[]{Integer.toString(var18.teamCharacterCounts[param1])}, 2);
             var17 = vl.a(bi.field_b, new String[]{Integer.toString(var5)}, param0 ^ -128);
           }
-          ((BitmapFont) ((Object) var9)).c(var16, var11 + 48, 3 + (((BitmapFont) ((Object) var9)).field_w + var12), var8, 0);
-          ((BitmapFont) ((Object) var9)).a(var17, var13, var12 + ((BitmapFont) ((Object) var9)).field_w + 3, 16777215, 0);
+          ((BitmapFont) ((Object) var9)).c(var16, var11 + 48, 3 + (((BitmapFont) ((Object) var9)).baselineHeight + var12), var8, 0);
+          ((BitmapFont) ((Object) var9)).a(var17, var13, var12 + ((BitmapFont) ((Object) var9)).baselineHeight + 3, 16777215, 0);
         }
         SoftwareRasterizer.drawHorizontalLine(var11, 38, 1 + var13, 2763045);
         SoftwareRasterizer.drawHorizontalLine(var11, 39, var13 + 1, 2763045);
         if (var4 != 0) {
           SoftwareRasterizer.fillRectAlpha(var11, 0, var13 - var11, 38, 65793, 196);
-          ((BitmapFont) ((Object) var9)).a(vl.a(uf.field_i, new String[]{var18.field_b[param1]}, 2), var11, 0, var13 - var11, 40, 16777215, 1, 1, 1, 0);
+          ((BitmapFont) ((Object) var9)).drawParagraph(vl.a(uf.field_i, new String[]{var18.field_b[param1]}, 2), var11, 0, var13 - var11, 40, 16777215, 1, 1, 1, 0);
         }
         if (param0 != -126) {
           this.field_c = -89;
@@ -284,13 +284,13 @@ final class qe {
 
     private final void a(boolean param0) {
         g.c();
-        rb.field_e[3].a();
+        rb.field_e[3].bindAsRenderTarget();
         if (param0) {
           return;
         }
         SoftwareRasterizer.clear();
-        this.field_i.a(Integer.toString(this.field_h), -5 + SoftwareRasterizer.field_b, 5 + this.field_i.field_C, 1, 65793);
-        jj.field_F[3].a();
+        this.field_i.a(Integer.toString(this.field_h), -5 + SoftwareRasterizer.width, 5 + this.field_i.maxAscent, 1, 65793);
+        jj.field_F[3].bindAsRenderTarget();
         SoftwareRasterizer.clear();
         rb.field_e[3].f(0, 0, 16777215);
         FightEvent.d((byte) -18);
@@ -300,13 +300,13 @@ final class qe {
 
     private final void b(int param0, int param1) {
         g.c();
-        rb.field_e[4].a();
+        rb.field_e[4].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        this.field_i.a(this.a(param0, 98), SoftwareRasterizer.field_b - 5, 5 + this.field_i.field_C, 3, -1);
+        this.field_i.a(this.a(param0, 98), SoftwareRasterizer.width - 5, 5 + this.field_i.maxAscent, 3, -1);
         if (param1 != 2394342) {
           return;
         }
-        jj.field_F[4].a();
+        jj.field_F[4].bindAsRenderTarget();
         SoftwareRasterizer.clear();
         rb.field_e[4].f(0, 0, 16777215);
         FightEvent.d((byte) -18);
@@ -324,10 +324,10 @@ final class qe {
 
     private final void e(byte param0) {
         g.c();
-        rb.field_e[6].a();
+        rb.field_e[6].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        this.field_i.b(vl.a(ra.field_g, new String[]{Integer.toString(this.field_m), Integer.toString(this.field_m + this.field_h)}, 2), SoftwareRasterizer.field_b / 2, 5 + this.field_i.field_C, 2, 65793);
-        jj.field_F[6].a();
+        this.field_i.b(vl.a(ra.field_g, new String[]{Integer.toString(this.field_m), Integer.toString(this.field_m + this.field_h)}, 2), SoftwareRasterizer.width / 2, 5 + this.field_i.maxAscent, 2, 65793);
+        jj.field_F[6].bindAsRenderTarget();
         SoftwareRasterizer.clear();
         if (param0 != 30) {
           this.c(-19);
@@ -352,20 +352,20 @@ final class qe {
         }
         int var2 = -1;
         if (this.field_n != 1.0f) {
-          eg.field_D.a();
+          eg.field_D.bindAsRenderTarget();
           SoftwareRasterizer.clear();
-          this.field_i.a(this.d((byte) 51), -5 + SoftwareRasterizer.field_b, this.field_i.field_C + 5, 2, var2);
-          var3 = (int)((float)SoftwareRasterizer.field_b * this.field_n);
-          var4 = (int)((float)SoftwareRasterizer.field_l * this.field_n);
-          rb.field_e[5].a();
+          this.field_i.a(this.d((byte) 51), -5 + SoftwareRasterizer.width, this.field_i.maxAscent + 5, 2, var2);
+          var3 = (int)((float)SoftwareRasterizer.width * this.field_n);
+          var4 = (int)((float)SoftwareRasterizer.height * this.field_n);
+          rb.field_e[5].bindAsRenderTarget();
           SoftwareRasterizer.clear();
-          eg.field_D.f(SoftwareRasterizer.field_b - var3, 0, var3, var4);
+          eg.field_D.f(SoftwareRasterizer.width - var3, 0, var3, var4);
         } else {
-          rb.field_e[5].a();
+          rb.field_e[5].bindAsRenderTarget();
           SoftwareRasterizer.clear();
-          this.field_i.a(this.d((byte) -51), SoftwareRasterizer.field_b - 5, this.field_i.field_C + 5, 0, var2);
+          this.field_i.a(this.d((byte) -51), SoftwareRasterizer.width - 5, this.field_i.maxAscent + 5, 0, var2);
         }
-        jj.field_F[5].a();
+        jj.field_F[5].bindAsRenderTarget();
         SoftwareRasterizer.clear();
         rb.field_e[5].f(0, 0, 16777215);
         FightEvent.d((byte) -18);
@@ -454,21 +454,21 @@ final class qe {
         if (param8 < param12) {
           if (param12 >= param5) {
             if (param8 >= param5) {
-              TextInputValidator.a(SoftwareRasterizer.field_i, param13, param1, -10423, param12, param0, param9, param8, param2, param5, param6, param7, param14, param4, param3, param11, param10);
+              TextInputValidator.a(SoftwareRasterizer.pixels, param13, param1, -10423, param12, param0, param9, param8, param2, param5, param6, param7, param14, param4, param3, param11, param10);
             } else {
-              TextInputValidator.a(SoftwareRasterizer.field_i, param13, param4, -10423, param12, param2, param3, param5, param0, param8, param6, param14, param7, param1, param9, param11, param10);
+              TextInputValidator.a(SoftwareRasterizer.pixels, param13, param4, -10423, param12, param2, param3, param5, param0, param8, param6, param14, param7, param1, param9, param11, param10);
             }
           } else {
-            TextInputValidator.a(SoftwareRasterizer.field_i, param7, param6, -10423, param5, param2, param3, param12, param11, param8, param4, param14, param13, param1, param10, param0, param9);
+            TextInputValidator.a(SoftwareRasterizer.pixels, param7, param6, -10423, param5, param2, param3, param12, param11, param8, param4, param14, param13, param1, param10, param0, param9);
           }
         } else {
           if (param8 < param5) {
-            TextInputValidator.a(SoftwareRasterizer.field_i, param7, param1, -10423, param5, param11, param10, param8, param2, param12, param4, param13, param14, param6, param3, param0, param9);
+            TextInputValidator.a(SoftwareRasterizer.pixels, param7, param1, -10423, param5, param11, param10, param8, param2, param12, param4, param13, param14, param6, param3, param0, param9);
           } else {
             if (param12 >= param5) {
-              TextInputValidator.a(SoftwareRasterizer.field_i, param14, param6, -10423, param8, param0, param9, param12, param11, param5, param1, param7, param13, param4, param10, param2, param3);
+              TextInputValidator.a(SoftwareRasterizer.pixels, param14, param6, -10423, param8, param0, param9, param12, param11, param5, param1, param7, param13, param4, param10, param2, param3);
             } else {
-              TextInputValidator.a(SoftwareRasterizer.field_i, param14, param4, -10423, param8, param11, param10, param5, param0, param12, param1, param13, param7, param6, param9, param2, param3);
+              TextInputValidator.a(SoftwareRasterizer.pixels, param14, param4, -10423, param8, param11, param10, param5, param0, param12, param1, param13, param7, param6, param9, param2, param3);
             }
           }
         }
@@ -482,7 +482,7 @@ final class qe {
 
     private final void e(int param0) {
         g.c();
-        rb.field_e[2].a();
+        rb.field_e[2].bindAsRenderTarget();
         if (param0 != 430) {
           this.b(-1, -30);
         }
@@ -490,12 +490,12 @@ final class qe {
         int var2 = PortalEntryEvent.field_m.field_I;
         int var3 = PortalEntryEvent.field_m.field_g;
         if (99 < var2) {
-          this.field_i.c("/" + var2, 22, 2 * this.field_i.field_C + 6, 2, 65793);
-          this.field_i.c(Integer.toString(var3), 15, this.field_i.field_C + 6, 2, 65793);
+          this.field_i.c("/" + var2, 22, 2 * this.field_i.maxAscent + 6, 2, 65793);
+          this.field_i.c(Integer.toString(var3), 15, this.field_i.maxAscent + 6, 2, 65793);
         } else {
-          this.field_i.c(var3 + "/" + var2, 20, -3 + 2 * this.field_i.field_C, 2, 65793);
+          this.field_i.c(var3 + "/" + var2, 20, -3 + 2 * this.field_i.maxAscent, 2, 65793);
         }
-        jj.field_F[2].a();
+        jj.field_F[2].bindAsRenderTarget();
         SoftwareRasterizer.clear();
         rb.field_e[2].f(0, 0, 16777215);
         FightEvent.d((byte) -18);

@@ -18,7 +18,7 @@ class MenuScreen {
         int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_d == 2) {
-          this.field_b = this.field_b - ah.field_e.field_C / 2;
+          this.field_b = this.field_b - ah.field_e.maxAscent / 2;
           this.field_j = new int[]{1, 12, 13, 34, 47, 4, 50, 3, 7};
           this.field_g = new hh(this.field_j.length);
         } else {
@@ -297,7 +297,7 @@ class MenuScreen {
                                     }
                                   }
                                   if (var5 != db.field_c && (jq.field_d == null ||
-                                    jq.field_d.k())) {
+                                    jq.field_d.isSamplePositionOutOfRange())) {
                                     jq.field_d = Camera.b(-128, 47);
                                   }
                                 } else {
@@ -604,8 +604,8 @@ class MenuScreen {
           }
         } else {
           nn.a(false);
-          var2 = 100 + ah.field_e.field_C;
-          var3 = 4 + ah.field_e.field_r + ah.field_e.field_J;
+          var2 = 100 + ah.field_e.maxAscent;
+          var3 = 4 + ah.field_e.maxDescent + ah.field_e.field_J;
           var4 = 16777215;
           pb.field_e.b(af.field_a, 320, var2, var4, -1);
           pb.field_e.b(FightEvent.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
@@ -663,7 +663,7 @@ class MenuScreen {
         if (-2 == var6Lifetime1) {
           var6Lifetime1 = 2;
         }
-        ClientException.field_e.a();
+        ClientException.field_e.bindAsRenderTarget();
         if (11 == var6Lifetime1) {
           var6Lifetime1 = 1;
         }
@@ -675,7 +675,7 @@ class MenuScreen {
           ClientException.field_e.h();
         }
         SocketConnector.field_h.b((byte) 99);
-        ClientException.field_e.a(0, 0, var4, var5);
+        ClientException.field_e.drawWithVerticalAlphaGradient(0, 0, var4, var5);
     }
 
     void b(byte param0) {
@@ -726,7 +726,7 @@ class MenuScreen {
                 return;
               }
               wd.field_L.g(2);
-              rm.field_b.e();
+              rm.field_b.flush();
               bb.field_g = param3;
               if (bb.field_g != null) {
                 wd.field_L.a(bb.field_g, param0, 8361407);
@@ -804,7 +804,7 @@ class MenuScreen {
         while (ba.c(-1)) {
           if (am.a(param0 ^ -118)) {
             if (iq.field_f) {
-              if (re.field_b &&
+              if (ValidationState.field_b &&
                 hh.field_b) {
                 if (va.a((byte) -59, 13, 15, 12)) {
                   continue;
@@ -862,7 +862,7 @@ class MenuScreen {
           !df.field_I) {
           stackIn_65_0 = (PowerupButton.field_e.a(true, 15978)) ? 0 : 1;
           var3Lifetime2 = stackIn_65_0;
-          if (re.field_b) {
+          if (ValidationState.field_b) {
             w.a(320, 180, true, 81);
           }
         }
@@ -987,17 +987,17 @@ class MenuScreen {
           if (param2 > -32) {
             this.field_f = false;
           }
-          var12 = -ah.field_e.field_r + (-ZombieDawnMulti.field_I[0].field_u + var9) + (-ZombieDawnMulti.field_I[6].field_u - ah.field_e.field_C);
+          var12 = -ah.field_e.maxDescent + (-ZombieDawnMulti.field_I[0].field_u + var9) + (-ZombieDawnMulti.field_I[6].field_u - ah.field_e.maxAscent);
           if (var6 != 12 &&
             13 != var6) {
-            ah.field_e.b(var7Lifetime2, var5 + (var8 >> 1), ZombieDawnMulti.field_I[0].field_u + var4 + ah.field_e.field_C + (var12 >> 1), var10, 0);
+            ah.field_e.b(var7Lifetime2, var5 + (var8 >> 1), ZombieDawnMulti.field_I[0].field_u + var4 + ah.field_e.maxAscent + (var12 >> 1), var10, 0);
             return;
           }
           stackIn_59_0 = (var6 != 12) ? 200 : 224;
           var13 = stackIn_59_0;
           var14 = 137 + ok.field_l;
           var15 = var5 + (-var14 + var8 >> 1);
-          ah.field_e.c(var7Lifetime2, var15, (var12 >> 1) + ah.field_e.field_C + var4 + ZombieDawnMulti.field_I[0].field_u, var10, 0);
+          ah.field_e.c(var7Lifetime2, var15, (var12 >> 1) + ah.field_e.maxAscent + var4 + ZombieDawnMulti.field_I[0].field_u, var10, 0);
           var15 = var15 + (8 + ok.field_l);
           SoftwareRasterizer.drawRect(var15, var9 / 2 + var4 - 1, 129, 2, var10);
           if (12 != var6) {

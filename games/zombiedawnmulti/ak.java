@@ -64,7 +64,7 @@ final class ak {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = gf.a(param1, true, var4).getFile();
+              var3 = DebouncedValidationProvider.a(param1, true, var4).getFile();
               JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
               JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
               if (param0 != 14158) {

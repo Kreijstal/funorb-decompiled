@@ -4,19 +4,19 @@
 final class UiTheme {
     static boolean field_j;
     int field_p;
-    WidgetActionListener field_o;
+    WidgetPainter field_o;
     int field_e;
     int field_c;
-    WidgetActionListener field_k;
+    WidgetPainter field_k;
     static String field_r;
     int field_m;
     static String field_q;
-    WidgetActionListener field_a;
+    WidgetPainter field_a;
     int field_b;
     int field_d;
-    WidgetActionListener field_s;
+    WidgetPainter field_s;
     BitmapFont field_h;
-    WidgetActionListener field_n;
+    WidgetPainter field_n;
     static UiComponent field_i;
     private int field_f;
     int field_l;
@@ -44,15 +44,15 @@ final class UiTheme {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_h.a(param1);
-          var6 = this.field_h.field_J + this.field_h.field_r;
+          var5_int = this.field_h.textWidth(param1);
+          var6 = this.field_h.field_J + this.field_h.maxDescent;
           var7 = param2;
-          if (var7 + var5_int + 6 > SoftwareRasterizer.field_b) {
-            var7 = -var5_int + (SoftwareRasterizer.field_b - 6);
+          if (var7 + var5_int + 6 > SoftwareRasterizer.width) {
+            var7 = -var5_int + (SoftwareRasterizer.width - 6);
           }
           var8 = 32 + (-this.field_h.field_J + param3);
-          if (!(var6 + var8 + param0 <= SoftwareRasterizer.field_l)) {
-            var8 = -var6 + SoftwareRasterizer.field_l - 6;
+          if (!(var6 + var8 + param0 <= SoftwareRasterizer.height)) {
+            var8 = -var6 + SoftwareRasterizer.height - 6;
           }
           SoftwareRasterizer.drawRect(var7, var8, 6 + var5_int, 6 + var6, this.field_f);
           SoftwareRasterizer.fillRect(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_d);
@@ -91,8 +91,8 @@ final class UiTheme {
         jl var14Lifetime1;
         jl var14Lifetime2;
         try {
-          var18 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.field_r + (param1.field_C + 2));
-          this.field_s = (WidgetActionListener) ((Object) var18);
+          var18 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.maxDescent + (param1.maxAscent + 2));
+          this.field_s = (WidgetPainter) ((Object) var18);
           var18.field_q = 16777215;
           var4 = new jl();
           var18.copyStyleTo(param0 - 125269882, var4);
@@ -119,21 +119,21 @@ final class UiTheme {
           var5[4] = (Sprite) ((Object) var19);
           var4.a(4, (byte) -36).a(true, 2521).a(var5, 2147483647);
           var4.a(5, (byte) -36).a(u.a(21242, 0, 65793, 0, 0), 2147483647).a(true, 2521).b(-1, 0);
-          this.field_n = (WidgetActionListener) ((Object) var4);
+          this.field_n = (WidgetPainter) ((Object) var4);
           var6 = new jl(var4, true);
           var6.field_d = 0;
           var7 = new jl(var4, true);
           var7.field_d = 0;
           var7.a(nk.a(8947848, (byte) -98), false);
           var7.a(1, (byte) -36).a(nk.a(11184810, (byte) 108), 2147483647).b(2236962, 0);
-          this.field_k = (WidgetActionListener) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_k = (WidgetPainter) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new bg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new wa(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new jl();
           var18.copyStyleTo(-3, var8);
           var8.a(0, (byte) -36).a(vn.a(120, 10066329, 7829367, 15658734), 2147483647).b(1118481, 0).a((byte) 44, -1);
           var8.a(4, (byte) -36).a(true, 2521).a(var5, 2147483647);
-          this.field_o = (WidgetActionListener) ((Object) var8);
+          this.field_o = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -152,14 +152,14 @@ final class UiTheme {
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new jl(var4, true);
-          var14.a(var13.c(), (byte) -102);
-          var13.b();
+          var14.a(var13.copy(), (byte) -102);
+          var13.rotateClockwise();
           var14Lifetime1 = new jl(var4, true);
-          var14Lifetime1.a(var13.c(), (byte) 79);
-          var13.b();
+          var14Lifetime1.a(var13.copy(), (byte) 79);
+          var13.rotateClockwise();
           var14Lifetime2 = new jl(var4, true);
-          var14Lifetime2.a(var13.c(), (byte) -53);
-          var13.b();
+          var14Lifetime2.a(var13.copy(), (byte) -53);
+          var13.rotateClockwise();
           var20 = new jl(var4, true);
           var20.a(var13, (byte) -107);
         } catch (RuntimeException runtimeException) {
@@ -249,14 +249,14 @@ final class UiTheme {
           var6 = this.field_m + this.field_e;
           var7 = this.field_p;
           if (-1 == var7) {
-            var7 = this.field_h.field_C + this.field_h.field_r;
+            var7 = this.field_h.maxAscent + this.field_h.maxDescent;
           }
           if (param1 != 2) {
             return;
           }
-          var8 = SoftwareRasterizer.field_b >> 2;
-          var9 = this.field_h.a(param2);
-          var10 = this.field_h.field_r + this.field_h.field_C;
+          var8 = SoftwareRasterizer.width >> 2;
+          var9 = this.field_h.textWidth(param2);
+          var10 = this.field_h.maxDescent + this.field_h.maxAscent;
           var11 = 1;
           if (var9 > var8 ||
             -1 != param2.indexOf("<br>")) {
@@ -269,27 +269,27 @@ final class UiTheme {
               var13 = var9 / var8;
               var12 = 2 * ((-1 + var13 + var9 % var8) / var13) + var8;
             }
-            var11Lifetime1 = this.field_h.a(param2, new int[]{var12}, vm.field_gb);
+            var11Lifetime1 = this.field_h.wrapText(param2, new int[]{var12}, vm.field_gb);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_h.a(vm.field_gb[var13Lifetime2]);
+              var14 = this.field_h.textWidth(vm.field_gb[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
             }
           }
           var12 = param3;
-          if (var9 + var12 + var5_int > SoftwareRasterizer.field_b) {
-            var12 = SoftwareRasterizer.field_b - (var9 + var5_int);
+          if (var9 + var12 + var5_int > SoftwareRasterizer.width) {
+            var12 = SoftwareRasterizer.width - (var9 + var5_int);
           }
           var13Lifetime1 = -this.field_h.field_J + (param0 + 32);
-          if (var13Lifetime1 - (-var10 - var6) > SoftwareRasterizer.field_l) {
+          if (var13Lifetime1 - (-var10 - var6) > SoftwareRasterizer.height) {
             var13Lifetime1 = -var10 + param0 - var6;
           }
           SoftwareRasterizer.drawRect(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_b);
           SoftwareRasterizer.fillRect(1 + var12, var13Lifetime1 + 1, -2 + (var5_int + var9), var6 + var10 - 2, this.field_d);
-          this.field_h.a(param2, var12 + this.field_l, var13Lifetime1 + this.field_e, var9, var10, this.field_f, -1, 0, 0, var7);
+          this.field_h.drawParagraph(param2, var12 + this.field_l, var13Lifetime1 + this.field_e, var9, var10, this.field_f, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -20,14 +20,14 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         field_v = null;
     }
 
-    final re a(boolean param0, String param1) {
+    final ValidationState validationStateForText(boolean param0, String param1) {
         gh var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         CharSequence var5 = null;
-        re stackIn_2_0 = null;
-        re stackIn_9_0 = null;
-        re stackIn_16_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_9_0 = null;
+        ValidationState stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -94,7 +94,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           }
           if (param1 != -1276425040) {
             var5 = (String) null;
-            this.a(true, (String) null);
+            this.validationStateForText(true, (String) null);
           }
           if (!param0.equals(this.field_r)) {
             var4 = LevelFileCatalog.a((byte) 127, param0);

@@ -38,7 +38,7 @@ final class lb {
           if (a.a(param1, param0, (byte) -74)) {
             return false;
           }
-          if (!ia.a(127, param0, param1)) {
+          if (!PasswordValidator.a(127, param0, param1)) {
             return true;
           }
           return false;

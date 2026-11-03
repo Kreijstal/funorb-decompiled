@@ -140,42 +140,42 @@ final class ok {
             pn.field_a = fl.a("benefits", "blurbpane", ArrayWidgetGroup.field_C, 11091);
             ha.field_l = fl.a("benefits", "button", ArrayWidgetGroup.field_C, 11091);
             ig.field_e = fl.a("benefits", "signup_text", ArrayWidgetGroup.field_C, 11091);
-            ia.field_y = fl.a("benefits", "menu_text", ArrayWidgetGroup.field_C, 11091);
+            PasswordValidator.field_y = fl.a("benefits", "menu_text", ArrayWidgetGroup.field_C, 11091);
             er.field_j = fl.a("benefits", "button_frame", ArrayWidgetGroup.field_C, 11091);
             fa.field_Tb = fl.a("benefits", "arrow", ArrayWidgetGroup.field_C, 11091);
             dc.field_Lb = (BitmapFont) ((Object) pj.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "large_font", "benefits"));
-            gf.field_e = (BitmapFont) ((Object) pj.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "small_font", "benefits"));
-            var27 = SoftwareRasterizer.field_i;
-            var2 = SoftwareRasterizer.field_b;
-            var3 = SoftwareRasterizer.field_l;
+            DebouncedValidationProvider.field_e = (BitmapFont) ((Object) pj.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "small_font", "benefits"));
+            var27 = SoftwareRasterizer.pixels;
+            var2 = SoftwareRasterizer.width;
+            var3 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(b.field_f);
             var11 = new Sprite(fa.field_Tb.width + 4, 4 + fa.field_Tb.height);
-            var11.a();
+            var11.bindAsRenderTarget();
             fa.field_Tb.i(2, 2, PlayerLoadout.field_e);
             sq.a(5, var11.width, 2, var11.height, var11, 1, 0, 0);
             fa.field_Tb = var11;
-            mb.field_j = fa.field_Tb.f();
+            mb.field_j = fa.field_Tb.copyFlippedHorizontal();
             var12 = new Sprite(195, 221);
             var6 = var12.width / 2;
-            var12.a();
+            var12.bindAsRenderTarget();
             dc.field_Lb.b(vl.a(t.field_b, new String[]{ql.field_e}, 2), var6, 40, 16777215, -1);
-            gf.field_e.b(vl.a(ob.field_w, new String[]{ql.field_e}, 2), var6, 60, 16777215, -1);
+            DebouncedValidationProvider.field_e.b(vl.a(ob.field_w, new String[]{ql.field_e}, 2), var6, 60, 16777215, -1);
             dc.field_Lb.b(vl.a(ck.field_c, new String[]{eo.field_b}, 2), var6, 110, 16777215, -1);
-            gf.field_e.b(vl.a(wc.field_G, new String[]{eo.field_b}, 2), var6, 130, 16777215, -1);
+            DebouncedValidationProvider.field_e.b(vl.a(wc.field_G, new String[]{eo.field_b}, 2), var6, 130, 16777215, -1);
             dc.field_Lb.b(ContextMenu.field_Yb, var6, 180, 16777215, -1);
-            gf.field_e.b(um.field_f, var6, 200, 16777215, -1);
+            DebouncedValidationProvider.field_e.b(um.field_f, var6, 200, 16777215, -1);
             sq.a(5, var12.width, 3, var12.height, var12, 1, 0, 0);
-            pn.field_a.a();
+            pn.field_a.bindAsRenderTarget();
             var12.g(-pn.field_a.offsetX + 18, 241 - pn.field_a.field_y);
             for (var7 = 0; nj.field_a.length > var7; var7++) {
-              ao.field_h[var7].a();
-              gf.field_e.a(nj.field_a[var7], 3, 3, ao.field_h[var7].width - 6, -6 + ao.field_h[var7].height, PlayerLoadout.field_e, -1, 1, 1, gf.field_e.field_C + gf.field_e.field_r);
+              ao.field_h[var7].bindAsRenderTarget();
+              DebouncedValidationProvider.field_e.drawParagraph(nj.field_a[var7], 3, 3, ao.field_h[var7].width - 6, -6 + ao.field_h[var7].height, PlayerLoadout.field_e, -1, 1, 1, DebouncedValidationProvider.field_e.maxAscent + DebouncedValidationProvider.field_e.maxDescent);
               sq.a(5, ao.field_h[var7].width, 3, ao.field_h[var7].height, ao.field_h[var7], 1, 0, 0);
             }
             nj.field_a = null;
-            kg.field_j = ig.field_e.c();
-            kg.field_j.a();
-            pi.a((byte) -115, 0, 64, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l * 2 / 3, 0);
+            kg.field_j = ig.field_e.copy();
+            kg.field_j.bindAsRenderTarget();
+            pi.a((byte) -115, 0, 64, SoftwareRasterizer.width, SoftwareRasterizer.height * 2 / 3, 0);
             SoftwareRasterizer.setTarget(var27, var2, var3);
             SoftwareRasterizer.restoreClip(b.field_f);
             jp.field_d = (ha.field_l.width - er.field_j.width) / 2 + 231;
@@ -189,13 +189,13 @@ final class ok {
           }
           if (q.field_c != null &&
             dc.field_Lb != null) {
-            var28 = SoftwareRasterizer.field_i;
-            var2Lifetime1 = SoftwareRasterizer.field_b;
-            var3Lifetime1 = SoftwareRasterizer.field_l;
+            var28 = SoftwareRasterizer.pixels;
+            var2Lifetime1 = SoftwareRasterizer.width;
+            var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(b.field_f);
             var14 = vl.a(HuffmanCodec.field_h, new String[]{vk.field_L[hj.field_f]}, 2);
             var5 = dc.field_Lb.c(var14, ol.field_p);
-            var6Lifetime1 = dc.field_Lb.a(var14, ol.field_p, dc.field_Lb.field_C + dc.field_Lb.field_r);
+            var6Lifetime1 = dc.field_Lb.measureWrappedHeight(var14, ol.field_p, dc.field_Lb.maxAscent + dc.field_Lb.maxDescent);
             var7Lifetime1 = (-var5 + ol.field_p) / 2 + pg.field_c;
             var8 = (ai.field_a - var6Lifetime1) / 2 + em.field_bb;
             var7Lifetime1 -= 3;
@@ -238,52 +238,52 @@ final class ok {
               pn.field_e = pn.field_e - var9_intLifetime3;
               em.field_bb = em.field_bb + var9_intLifetime3;
             }
-            q.field_c.j();
+            q.field_c.normalizeCanvas();
             var9 = new Sprite(q.field_c.fullWidth, q.field_c.field_u);
-            var9.a();
-            dc.field_Lb.a(var14, pg.field_c, em.field_bb, ol.field_p, ai.field_a, 16777215, -1, 1, 1, dc.field_Lb.field_r + dc.field_Lb.field_C);
+            var9.bindAsRenderTarget();
+            dc.field_Lb.drawParagraph(var14, pg.field_c, em.field_bb, ol.field_p, ai.field_a, 16777215, -1, 1, 1, dc.field_Lb.maxDescent + dc.field_Lb.maxAscent);
             sq.a(5, var9.fullWidth, 3, var9.field_u, var9, 1, 0, 0);
-            q.field_c.a();
+            q.field_c.bindAsRenderTarget();
             var9.g(0, 0);
             BufferedSocket.field_j = new Sprite(640, 480);
-            BufferedSocket.field_j.a();
-            q.field_c.d(LevelFileCatalog.field_b + (q.field_c.fullWidth >> 1), pn.field_e + (q.field_c.field_u >> 1), GameScreen.field_N, 4096);
+            BufferedSocket.field_j.bindAsRenderTarget();
+            q.field_c.drawRotated(LevelFileCatalog.field_b + (q.field_c.fullWidth >> 1), pn.field_e + (q.field_c.field_u >> 1), GameScreen.field_N, 4096);
             q.field_c = null;
-            BufferedSocket.field_j.d();
+            BufferedSocket.field_j.trimTransparentBorders();
             SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(b.field_f);
           }
           if (null != ie.field_ib &&
-            null != gf.field_e) {
-            var29 = SoftwareRasterizer.field_i;
-            var2Lifetime2 = SoftwareRasterizer.field_b;
-            var3Lifetime2 = SoftwareRasterizer.field_l;
+            null != DebouncedValidationProvider.field_e) {
+            var29 = SoftwareRasterizer.pixels;
+            var2Lifetime2 = SoftwareRasterizer.width;
+            var3Lifetime2 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(b.field_f);
             var16 = new Sprite(412, 43);
             var5_ref_String = vl.a(vk.field_F, new String[]{ie.field_ib}, 2);
             ie.field_ib = null;
-            var16.a();
-            gf.field_e.a(var5_ref_String, 3, 3, var16.width - 6, -6 + var16.height, 16777215, -1, 0, 1, gf.field_e.field_C + gf.field_e.field_r);
+            var16.bindAsRenderTarget();
+            DebouncedValidationProvider.field_e.drawParagraph(var5_ref_String, 3, 3, var16.width - 6, -6 + var16.height, 16777215, -1, 0, 1, DebouncedValidationProvider.field_e.maxAscent + DebouncedValidationProvider.field_e.maxDescent);
             sq.a(5, var16.width, 3, var16.height, var16, 1, 0, 0);
-            rq.field_v.a();
+            rq.field_v.bindAsRenderTarget();
             var16.g(-rq.field_v.offsetX + 199, -rq.field_v.field_y + 83);
             SoftwareRasterizer.setTarget(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(b.field_f);
           }
           if (null != MouseInputHandler.field_e &&
-            null != gf.field_e) {
-            var30 = SoftwareRasterizer.field_i;
-            var2Lifetime3 = SoftwareRasterizer.field_b;
-            var3Lifetime3 = SoftwareRasterizer.field_l;
+            null != DebouncedValidationProvider.field_e) {
+            var30 = SoftwareRasterizer.pixels;
+            var2Lifetime3 = SoftwareRasterizer.width;
+            var3Lifetime3 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(b.field_f);
-            var4 = 6 + gf.field_e.c(tf.field_Cb, 640);
+            var4 = 6 + DebouncedValidationProvider.field_e.c(tf.field_Cb, 640);
             var5Lifetime1 = 20 + (var4 + MouseInputHandler.field_e.fullWidth);
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = var6Lifetime2 - (-MouseInputHandler.field_e.fullWidth - 20);
-            rq.field_v.a();
-            gf.field_e.c(tf.field_Cb, var7Lifetime2 - rq.field_v.offsetX, gf.field_e.field_r + (gf.field_e.field_C - rq.field_v.field_y + 155), 16777215, -1);
+            rq.field_v.bindAsRenderTarget();
+            DebouncedValidationProvider.field_e.c(tf.field_Cb, var7Lifetime2 - rq.field_v.offsetX, DebouncedValidationProvider.field_e.maxDescent + (DebouncedValidationProvider.field_e.maxAscent - rq.field_v.field_y + 155), 16777215, -1);
             sq.a(5, var4, 3, 50, rq.field_v, 1, -4 + var7Lifetime2 - rq.field_v.offsetX, -rq.field_v.field_y + 155);
-            var8Lifetime1 = -rq.field_v.field_y + (155 - (-gf.field_e.field_r + (-gf.field_e.field_C + (-3 + MouseInputHandler.field_e.field_u))) / 2);
+            var8Lifetime1 = -rq.field_v.field_y + (155 - (-DebouncedValidationProvider.field_e.maxDescent + (-DebouncedValidationProvider.field_e.maxAscent + (-3 + MouseInputHandler.field_e.field_u))) / 2);
             MouseInputHandler.field_e.g(var6Lifetime2 - rq.field_v.offsetX, var8Lifetime1);
             SoftwareRasterizer.setTarget(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(b.field_f);
@@ -319,14 +319,14 @@ final class ok {
             }
             var2Lifetime4 = (q.$cfr$intArgs$a$f0c91481eb80(stackIn_49_0, stackIn_49_1 << stackIn_50_2) * 40 >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              ha.field_l.e(230, 389, var2Lifetime4);
-              ha.field_l.e(232, 389, var2Lifetime4);
-              ha.field_l.e(232, 391, var2Lifetime4);
-              ha.field_l.e(230, 391, var2Lifetime4);
-              var1.e(1, 1, var2Lifetime4);
-              var1.e(-1, 1, var2Lifetime4);
-              var1.e(1, -1, var2Lifetime4);
-              var1.e(-1, -1, var2Lifetime4);
+              ha.field_l.drawAdditive(230, 389, var2Lifetime4);
+              ha.field_l.drawAdditive(232, 389, var2Lifetime4);
+              ha.field_l.drawAdditive(232, 391, var2Lifetime4);
+              ha.field_l.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_55_0 = jp.field_d;
             stackIn_55_1 = cr.field_j;
@@ -337,7 +337,7 @@ final class ok {
           if (null != ha.field_l &&
             er.field_j != null) {
             ha.field_l.g(434, 390);
-            ia.field_y.g(0, 0);
+            PasswordValidator.field_y.g(0, 0);
             if (1 == gl.field_H.field_d) {
               pi.a((byte) -122, 436, 64, -4 + ha.field_l.width, ha.field_l.height * 7 / 12, 392);
             }
@@ -357,17 +357,17 @@ final class ok {
               if (var2Lifetime5 > 0) {
                 if (269 - fa.field_Tb.width < MouseInputHandler.field_g &&
                   269 > MouseInputHandler.field_g) {
-                  fa.field_Tb.e(-fa.field_Tb.fullWidth + 268, var1_int - 1, var2Lifetime5);
-                  fa.field_Tb.e(1 + (-fa.field_Tb.fullWidth + 269), var1_int - 1, var2Lifetime5);
-                  fa.field_Tb.e(-fa.field_Tb.fullWidth + 268, 1 + var1_int, var2Lifetime5);
-                  fa.field_Tb.e(269 - fa.field_Tb.fullWidth + 1, var1_int + 1, var2Lifetime5);
+                  fa.field_Tb.drawAdditive(-fa.field_Tb.fullWidth + 268, var1_int - 1, var2Lifetime5);
+                  fa.field_Tb.drawAdditive(1 + (-fa.field_Tb.fullWidth + 269), var1_int - 1, var2Lifetime5);
+                  fa.field_Tb.drawAdditive(-fa.field_Tb.fullWidth + 268, 1 + var1_int, var2Lifetime5);
+                  fa.field_Tb.drawAdditive(269 - fa.field_Tb.fullWidth + 1, var1_int + 1, var2Lifetime5);
                 } else {
                   if (MouseInputHandler.field_g > 586 &&
                     586 + fa.field_Tb.width > MouseInputHandler.field_g) {
-                    mb.field_j.e(585, -1 + var1_int, var2Lifetime5);
-                    mb.field_j.e(587, var1_int - 1, var2Lifetime5);
-                    mb.field_j.e(585, var1_int + 1, var2Lifetime5);
-                    mb.field_j.e(587, 1 + var1_int, var2Lifetime5);
+                    mb.field_j.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                    mb.field_j.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                    mb.field_j.drawAdditive(585, var1_int + 1, var2Lifetime5);
+                    mb.field_j.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }
@@ -377,7 +377,7 @@ final class ok {
           if (!param0) {
             return;
           }
-          ao.field_h[gf.field_g].g(269, 340);
+          ao.field_h[DebouncedValidationProvider.field_g].g(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -474,7 +474,7 @@ final class ok {
           }
           param2.b((byte) -35, 59);
           param2.a(param3, (byte) -87);
-          param2.a(123, param5);
+          param2.writeByte(123, param5);
           param2.a(param4, (byte) -112);
           param2.a(param1, (byte) -50);
         } catch (RuntimeException runtimeException) {

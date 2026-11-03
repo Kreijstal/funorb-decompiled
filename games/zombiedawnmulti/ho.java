@@ -423,14 +423,14 @@ final class ho extends MenuScreen {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(this.field_g.field_c > var2_int)))) {
             var3 = we.field_g[this.field_j[var2_int]];
-            var4 = ah.field_e.a(var3);
+            var4 = ah.field_e.textWidth(var3);
             stackIn_29_0 = this.field_j[var2_int];
             stackIn_29_1 = 50;
             if (var9 == 0) {
               if (stackIn_29_0 == stackIn_29_1) {
-                var5 = ah.field_e.a(InflaterDecompressor.field_f);
-                var6 = ah.field_e.a(FightEvent.field_l);
-                var7 = ah.field_e.a(jp.field_a);
+                var5 = ah.field_e.textWidth(InflaterDecompressor.field_f);
+                var6 = ah.field_e.textWidth(FightEvent.field_l);
+                var7 = ah.field_e.textWidth(jp.field_a);
                 stackIn_12_0 = (var5 > var6) ? var5 : var6;
                 var8 = stackIn_12_0;
                 stackIn_16_0 = (var8 > var7) ? var8 : var7;

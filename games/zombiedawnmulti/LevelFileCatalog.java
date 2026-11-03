@@ -67,7 +67,7 @@ final class LevelFileCatalog {
           var7_int = ma.field_a.position;
           ma.field_a.a(param1, true);
           ma.field_a.writeString(param0, (byte) 105);
-          ma.field_a.a(-31, param3);
+          ma.field_a.writeByte(-31, param3);
           stackIn_2_0 = ma.field_a;
           stackIn_2_1 = 107;
           if (!param4) {
@@ -75,7 +75,7 @@ final class LevelFileCatalog {
           } else {
             stackIn_3_2 = 1;
           }
-          ((CipherPacketBuffer) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2);
+          ((CipherPacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_2_1, stackIn_3_2);
           ma.field_a.e(76, -var7_int + ma.field_a.position);
           if (param5 != 21965) {
             var8 = (ResourceArchive) null;

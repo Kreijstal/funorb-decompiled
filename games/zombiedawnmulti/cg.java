@@ -54,7 +54,7 @@ final class cg extends IntrusiveNode {
         }
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.a(-59, 7);
+        var4.writeByte(-59, 7);
         var4.a(param2, true);
         var4.e(29, -var5 + var4.position);
     }

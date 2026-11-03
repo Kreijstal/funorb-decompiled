@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends TextInputValidator {
+final class PasswordValidator extends TextInputValidator {
     static UiComponent field_t;
     static Sprite field_y;
     private TextInputWidget field_q;
@@ -17,7 +17,7 @@ final class ia extends TextInputValidator {
         jl.a(jk.field_f, (byte) -97, jo.field_f, param2, param1, param0, nj.field_h);
         if (param3 != 0) {
           String var5 = (String) null;
-          ia.a(-113, (String) null, (String) null);
+          PasswordValidator.a(-113, (String) null, (String) null);
         }
     }
 
@@ -62,7 +62,7 @@ final class ia extends TextInputValidator {
             stackIn_15_0 = (String) null;
             return stackIn_15_0;
           }
-          if (this.b(param0, -1)) {
+          if (this.passwordContainsEmailPart(param0, -1)) {
             stackIn_18_0 = oq.field_z;
             return stackIn_18_0;
           }
@@ -78,7 +78,7 @@ final class ia extends TextInputValidator {
             stackIn_26_0 = tq.field_Hb;
             return stackIn_26_0;
           }
-          if (!ia.a(101, var6, var5)) {
+          if (!PasswordValidator.a(101, var6, var5)) {
             return jb.field_k;
           }
           stackIn_30_0 = kc.field_b;
@@ -97,7 +97,7 @@ final class ia extends TextInputValidator {
         }
     }
 
-    ia(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
+    PasswordValidator(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
         super(param0);
         try {
           this.field_q = param2;
@@ -145,7 +145,7 @@ final class ia extends TextInputValidator {
         }
     }
 
-    private final boolean b(String param0, int param1) {
+    private final boolean passwordContainsEmailPart(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -191,7 +191,7 @@ final class ia extends TextInputValidator {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         field_v = null;
         field_y = null;
@@ -207,13 +207,13 @@ final class ia extends TextInputValidator {
         field_t = null;
     }
 
-    final re a(boolean param0, String param1) {
+    final ValidationState validationStateForText(boolean param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        re stackIn_5_0 = null;
-        re stackIn_9_0 = null;
-        re stackIn_13_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_9_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -232,7 +232,7 @@ final class ia extends TextInputValidator {
             stackIn_9_0 = jq.field_b;
             return stackIn_9_0;
           }
-          if (!this.b(param1, -1)) {
+          if (!this.passwordContainsEmailPart(param1, -1)) {
             return db.field_b;
           }
           stackIn_13_0 = jq.field_b;

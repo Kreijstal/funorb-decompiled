@@ -11,7 +11,7 @@ final class ba extends PcmStream {
     static int field_m;
     PcmStreamMixer field_o;
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -24,7 +24,7 @@ final class ba extends PcmStream {
         int var7 = 0;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          this.field_o.b(param0, param1, param2);
+          this.field_o.mixInto(param0, param1, param2);
           var6 = (mb) (this.field_k.c(76));
           while (var6 != null) {
             stackIn_4_0 = this.field_n.a(-1, var6);
@@ -86,44 +86,44 @@ final class ba extends PcmStream {
           }
           if ((4 & this.field_n.field_H[param3.field_o]) != 0 &&
             param3.field_l < 0) {
-            var7_int = this.field_n.field_n[param3.field_o] / PcmPlayerService.field_p;
+            var7_int = this.field_n.field_n[param3.field_o] / PcmPlayerService.sampleRate;
             while (true) {
               var8 = (var7_int + 1048575 - param3.field_w) / var7_int;
               if (param2 < var8) {
                 param3.field_w = param3.field_w + var7_int * param2;
                 break;
               }
-              param3.field_C.b(param4, param0, var8);
+              param3.field_C.mixInto(param4, param0, var8);
               param3.field_w = param3.field_w + (-1048576 + var7_int * var8);
               param0 = param0 + var8;
               param2 = param2 - var8;
-              var9 = PcmPlayerService.field_p / 100;
+              var9 = PcmPlayerService.sampleRate / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
               }
               var11 = param3.field_C;
               if (this.field_n.field_y[param3.field_o] == 0) {
-                param3.field_C = PcmSampleStream.a(param3.field_f, var11.l(), var11.h(), var11.g());
+                param3.field_C = PcmSampleStream.createAtStepQ8(param3.field_f, var11.getSampleStepMagnitude(), var11.getVolume(), var11.getPan());
               } else {
-                param3.field_C = PcmSampleStream.a(param3.field_f, var11.l(), 0, var11.g());
+                param3.field_C = PcmSampleStream.createAtStepQ8(param3.field_f, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_13_0 = this.field_n;
                 stackIn_14_1 = !(param3.field_x.field_g[param3.field_p] >= 0);
                 ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_14_1, (byte) -76, param3);
-                param3.field_C.a(var9, var11.h());
+                param3.field_C.rampVolume(var9, var11.getVolume());
               }
               if (param3.field_x.field_g[param3.field_p] < 0) {
                 param3.field_C.g(-1);
               }
-              var11.e(var9);
-              var11.b(param4, param0, param5 - param0);
-              if (!var11.j()) {
+              var11.fadeOutAndUnlink(var9);
+              var11.mixInto(param4, param0, param5 - param0);
+              if (!var11.isRamping()) {
                 continue;
               }
               this.field_o.b(var11);
             }
           }
-          param3.field_C.b(param4, param0, param2);
+          param3.field_C.mixInto(param4, param0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,17 +169,17 @@ final class ba extends PcmStream {
         try {
           if ((4 & this.field_n.field_H[param0.field_o]) != 0 &&
             param0.field_l < 0) {
-            var4_int = this.field_n.field_n[param0.field_o] / PcmPlayerService.field_p;
+            var4_int = this.field_n.field_n[param0.field_o] / PcmPlayerService.sampleRate;
             var5 = (-param0.field_w + (1048575 + var4_int)) / var4_int;
             param0.field_w = param0.field_w + var4_int * param1 & 1048575;
             if (param1 >= var5) {
               if (0 != this.field_n.field_y[param0.field_o]) {
-                param0.field_C = PcmSampleStream.a(param0.field_f, param0.field_C.l(), 0, param0.field_C.g());
+                param0.field_C = PcmSampleStream.createAtStepQ8(param0.field_f, param0.field_C.getSampleStepMagnitude(), 0, param0.field_C.getPan());
                 stackIn_7_0 = this.field_n;
                 stackIn_8_1 = !(0 <= param0.field_x.field_g[param0.field_p]);
                 ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_8_1, (byte) -80, param0);
               } else {
-                param0.field_C = PcmSampleStream.a(param0.field_f, param0.field_C.l(), param0.field_C.h(), param0.field_C.g());
+                param0.field_C = PcmSampleStream.createAtStepQ8(param0.field_f, param0.field_C.getSampleStepMagnitude(), param0.field_C.getVolume(), param0.field_C.getPan());
               }
               if (param0.field_x.field_g[param0.field_p] < 0) {
                 param0.field_C.g(-1);
@@ -242,7 +242,7 @@ final class ba extends PcmStream {
         }
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 

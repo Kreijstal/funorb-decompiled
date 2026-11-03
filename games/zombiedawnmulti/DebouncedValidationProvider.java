@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gf implements j {
+abstract class DebouncedValidationProvider implements ValidationProvider {
     static int field_f;
     static int field_g;
     static String field_c;
@@ -24,20 +24,20 @@ abstract class gf implements j {
         field_a = null;
     }
 
-    public final String c(int param0) {
-        if (this.b(-3)) {
+    public final String getDebouncedValidationMessage(int param0) {
+        if (this.isInputEmpty(-3)) {
           return null;
         }
         if (this.field_i + 350L > bl.a((byte) 64)) {
           return null;
         }
         if (param0 <= -102) {
-          return this.e(-3);
+          return this.currentValidationMessage(-3);
         }
         return (String) null;
     }
 
-    public final void a(int param0) {
+    public final void resetValidationDelay(int param0) {
         if (param0 != -1306) {
           return;
         }
@@ -55,7 +55,7 @@ abstract class gf implements j {
             }
           }
           if (param0 <= 92) {
-            gf.a(true);
+            DebouncedValidationProvider.a(true);
           }
           if (sq.field_N) {
             ce.a(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
@@ -77,22 +77,22 @@ abstract class gf implements j {
         }
     }
 
-    public final re d(int param0) {
+    public final ValidationState getDebouncedValidationState(int param0) {
         if (param0 < 38) {
-          return (re) null;
+          return (ValidationState) null;
         }
-        if (this.b(-3)) {
+        if (this.isInputEmpty(-3)) {
           return WidgetContainer.field_F;
         }
         if (bl.a((byte) 40) >= 350L + this.field_i) {
-          return this.f(-3);
+          return this.currentValidationState(-3);
         }
         return PortalView.field_H;
     }
 
-    abstract re f(int param0);
+    abstract ValidationState currentValidationState(int param0);
 
-    abstract String e(int param0);
+    abstract String currentValidationMessage(int param0);
 
     final static java.net.URL a(java.applet.Applet param0, boolean param1, java.net.URL param2) {
         Object var3 = null;
@@ -110,7 +110,7 @@ abstract class gf implements j {
           var4 = null;
           if (!param1) {
             var5 = (String) null;
-            gf.a(-46, 36, -74, -104, (String) null, 64, 13, true);
+            DebouncedValidationProvider.a(-46, 36, -74, -104, (String) null, 64, 13, true);
           }
           if (oe.field_c != null &&
             !oe.field_c.equals(param0.getParameter("settings"))) {

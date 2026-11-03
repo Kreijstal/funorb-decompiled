@@ -244,7 +244,7 @@ final class le extends UiWidget {
             param1.g(var6, param3);
           }
           ql.a(true);
-          if (SoftwareRasterizer.field_f <= this.field_M.width + param2) {
+          if (SoftwareRasterizer.clipLeft <= this.field_M.width + param2) {
             r.a(0, this.field_C);
             param1.g(-this.field_J, 0);
             param1.g(this.field_D * 2 - this.field_J, 0);
@@ -252,7 +252,7 @@ final class le extends UiWidget {
             ql.a(true);
             this.field_C.g(param2, param3);
           }
-          if (SoftwareRasterizer.field_g >= -this.field_M.width + var5_int) {
+          if (SoftwareRasterizer.clipRight >= -this.field_M.width + var5_int) {
             r.a(0, this.field_C);
             for (var7 = -this.field_M.width + this.field_n + this.field_J; this.field_D * 2 < var7; var7 = var7 - 2 * this.field_D) {
             }
@@ -290,7 +290,7 @@ final class le extends UiWidget {
     private final void f(int param0) {
         this.field_F = new Sprite[]{this.b(param0 + 489486719, this.field_N, this.field_E), this.b(-16711936, this.field_K, this.field_H)};
         this.field_M = this.g(param0 ^ -506198544);
-        this.field_O = this.field_M.f();
+        this.field_O = this.field_M.copyFlippedHorizontal();
         this.field_C = new Sprite(this.field_w >> 1, this.field_w);
         if (param0 != -506198655) {
           this.setWidgetBounds(-93, 112, 105, 48, -63);

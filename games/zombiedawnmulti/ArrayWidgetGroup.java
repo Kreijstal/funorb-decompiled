@@ -320,8 +320,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
     final static void a(int param0, byte param1, int param2) {
         CipherPacketBuffer var3 = ma.field_a;
         var3.b((byte) -35, param0);
-        var3.a(112, 3);
-        var3.a(117, 8);
+        var3.writeByte(112, 3);
+        var3.writeByte(117, 8);
         if (param1 <= 89) {
           return;
         }
@@ -415,8 +415,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         field_D = null;
     }
 
-    ArrayWidgetGroup(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
-        super(param0, param1, param2, param3, param4, (bj) null);
+    ArrayWidgetGroup(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 
     private final boolean focusForwardFromFocused(UiWidget param0, boolean param1, int param2) {
@@ -617,8 +617,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         int var7;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (0 == param2 &&
-          this.listener != null) {
-          this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
+          this.painter != null) {
+          this.painter.paintWidget(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (param0 != -2) {
           this.c(31);

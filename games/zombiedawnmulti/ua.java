@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ua extends rg {
     private boolean field_O;
-    static re field_I;
+    static ValidationState field_I;
     private boolean field_H;
     private int field_G;
     private int field_M;
@@ -232,7 +232,7 @@ final class ua extends rg {
         }
     }
 
-    private ua(int param0, int param1, int param2, int param3, WidgetActionListener param4, bj param5, UiWidget param6, boolean param7, boolean param8) {
+    private ua(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_M = 2147483647;
         this.field_G = 2147483647;
@@ -331,6 +331,6 @@ final class ua extends rg {
 
     static {
         field_K = "Resume Game";
-        field_I = new re();
+        field_I = new ValidationState();
     }
 }

@@ -103,7 +103,7 @@ final class tf extends ne implements in {
                 var5.a(oe.field_b, 17, true);
               }
             } else {
-              var5.a(ub.field_xb, param0 ^ 58, (bj) (this));
+              var5.a(ub.field_xb, param0 ^ 58, (WidgetListener) (this));
             }
             if (param2.field_c == 3) {
               var5.a(SimArmedHuman.field_zb, 7, true);
@@ -117,7 +117,7 @@ final class tf extends ne implements in {
               this.a((UiWidget) (new pj(this)), (byte) 122);
               return;
             }
-            var5.a(ub.field_xb, -112, (bj) (this));
+            var5.a(ub.field_xb, -112, (WidgetListener) (this));
           }
           this.a((UiWidget) (var5), (byte) 125);
           return;

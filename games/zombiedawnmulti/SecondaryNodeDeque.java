@@ -186,7 +186,7 @@ final class SecondaryNodeDeque implements Iterable {
               var6++;
               incrementValue$1 = var5;
               var5++;
-              var4[incrementValue$0] = param1.field_m[incrementValue$1];
+              var4[incrementValue$0] = param1.pixelIndices[incrementValue$1];
             }
             var6 = var6 + (-param1.field_e + var2_int);
           }
@@ -194,7 +194,7 @@ final class SecondaryNodeDeque implements Iterable {
           param1.field_j = param1.field_j & -4;
           param1.field_h = param1.field_h & -4;
           param1.field_b = var3;
-          param1.field_m = var4;
+          param1.pixelIndices = var4;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "e.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

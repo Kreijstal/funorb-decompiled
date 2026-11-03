@@ -20,7 +20,7 @@ final class lc extends IntrusiveNode {
           ResourceArchive var2 = (ResourceArchive) null;
           lc.a(-40, (ResourceArchive) null, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null);
         }
-        IndexedSprite var1 = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], UsernameAvailabilityValidator.field_t);
+        IndexedSprite var1 = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], MatchingTextValidator.field_t[0], UsernameAvailabilityValidator.field_t);
         fd.h((byte) 126);
         return var1;
     }
@@ -93,7 +93,7 @@ final class lc extends IntrusiveNode {
             var6[var7] = var7 * 196864;
           }
           var7Lifetime1 = 3 * var3_int / 4;
-          SoftwareRasterizer.a(var4 << 4, var5 << 4, var3_int << 4, 33, var10);
+          SoftwareRasterizer.fillRadialGlow(var4 << 4, var5 << 4, var3_int << 4, 33, var10);
           wa.field_b[this.field_h].a(-var7Lifetime1 + var4, var5 - var7Lifetime1, var7Lifetime1 * 2, var7Lifetime1 * 2, 40 + var3_int);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,9 +226,9 @@ final class lc extends IntrusiveNode {
           var7 = pj.a(param1, 4, param4, "largefont", "lobby");
           fd.field_G = pj.a(param1, param0 + 12039, param4, "generalfont", "lobby");
           jj.field_L = pj.a(param1, 4, param4, "chatfont", "lobby");
-          var7.a(var5, var24);
-          fd.field_G.a(var5, var24);
-          jj.field_L.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          fd.field_G.setInlineSprites(var5, var24);
+          jj.field_L.setInlineSprites(var5, var24);
           var8 = new UiComponent(0L, (UiComponent) null);
           var8.field_M = 16777215;
           var8.field_J = jk.field_f;
@@ -259,8 +259,8 @@ final class lc extends IntrusiveNode {
           jf.field_a = new UiComponent(0L, (UiComponent) null);
           jf.field_a.field_rb = fl.a("lobby", "closebutton", param1, param0 ^ -1106);
           jf.field_a.field_K = fl.a("lobby", "closebutton_mouseover", param1, param0 + 23126);
-          hd.field_x = new UiComponent(0L, var8);
-          hd.field_x.field_ab = el.a(40, 3815994, 0, 2039583, true, true);
+          EmailAvailabilityValidator.field_x = new UiComponent(0L, var8);
+          EmailAvailabilityValidator.field_x.field_ab = el.a(40, 3815994, 0, 2039583, true, true);
           vd.field_a = new UiComponent(0L, var10);
           vd.field_a.field_V = 2;
           vd.field_a.field_ab = el.a(30, 3815994, param0 + 12035, 2039583, false, true);

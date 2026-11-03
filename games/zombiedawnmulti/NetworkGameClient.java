@@ -230,7 +230,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var2 = s.field_e.readUnsignedByte(31365);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var5 = 84 % ((param0 - 53) / 42);
-        int var4 = -1 + hd.field_q;
+        int var4 = -1 + EmailAvailabilityValidator.field_q;
         byte[] var6 = new byte[var4];
         s.field_e.readCipheredBytes(var4, 0, 0, var6);
         f.a(jl.b(0), var3 != 0, (byte) -45, qe.a(-2739, var6));
@@ -304,7 +304,7 @@ abstract class NetworkGameClient extends GameApplet {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            re.a(false);
+                            ValidationState.a(false);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -329,7 +329,7 @@ abstract class NetworkGameClient extends GameApplet {
                             bf.a(var3, -53);
                           }
                         } else {
-                          bp.a(hd.field_q, s.field_e, ArrayWidgetGroup.field_J, -4);
+                          AgeValidator.a(EmailAvailabilityValidator.field_q, s.field_e, ArrayWidgetGroup.field_J, -4);
                         }
                       } else {
                         this.c(false);

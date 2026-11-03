@@ -165,9 +165,9 @@ final class rq extends IntrusiveNode {
           SoftwareRasterizer.fillRectAlpha(var1Lifetime1, var3Lifetime1, var2Lifetime1, hj.field_g, 2560, 160);
           g.a(IsaacRandom.field_h, 10, var3Lifetime1, 192);
           InfectionEvent.field_j.g(10, var3Lifetime1);
-          InfectionEvent.field_j.a(10, -5 + (hj.field_g + var3Lifetime1));
+          InfectionEvent.field_j.drawVerticalFlip(10, -5 + (hj.field_g + var3Lifetime1));
           SimHuman.field_fb.g(var1Lifetime1, var3Lifetime1);
-          SimHuman.field_fb.b(-5 + (var2Lifetime1 + var1Lifetime1), var3Lifetime1);
+          SimHuman.field_fb.drawHorizontalFlip(-5 + (var2Lifetime1 + var1Lifetime1), var3Lifetime1);
           rp.field_r[0].g(var1Lifetime1, var3Lifetime1);
           rp.field_r[1].g(var2Lifetime1 + (var1Lifetime1 - 5), var3Lifetime1);
           rp.field_r[2].g(var1Lifetime1, var3Lifetime1 + hj.field_g - 5);
@@ -179,10 +179,10 @@ final class rq extends IntrusiveNode {
             null != ci.field_c[ml.field_Jb]) {
             var4 = ci.field_c[ml.field_Jb];
           }
-          pb.field_e.a(var4, 30, -10 + (var3Lifetime1 + 20), 400, -4 + hj.field_g - 20, 16777215, 0, 0, 0, 0);
+          pb.field_e.drawParagraph(var4, 30, -10 + (var3Lifetime1 + 20), 400, -4 + hj.field_g - 20, 16777215, 0, 0, 0, 0);
           if (!pp.field_n) {
             if (dg.field_J) {
-              stackIn_28_0 = gf.field_b;
+              stackIn_28_0 = DebouncedValidationProvider.field_b;
             } else {
               stackIn_28_0 = ob.field_A;
             }
@@ -216,17 +216,17 @@ final class rq extends IntrusiveNode {
           g.c();
           el.field_H = param0;
           ve.field_b = new Sprite(55, 130);
-          ve.field_b.a();
+          ve.field_b.bindAsRenderTarget();
           el.field_H[2].f(5, -5, param1);
           el.field_H[3].f(5, -5, 16777215);
-          SoftwareRasterizer.i(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           el.field_H[2].f(5, -5, 0);
           el.field_H[3].f(5, -5, 0);
           oj.field_M = new Sprite[39];
           fe.field_W = new Sprite[oj.field_M.length];
           for (var2_int = 0; var2_int < oj.field_M.length; var2_int++) {
             oj.field_M[var2_int] = new Sprite(200, 25);
-            oj.field_M[var2_int].a();
+            oj.field_M[var2_int].bindAsRenderTarget();
             var3 = lh.a((byte) -12, var2_int);
             pb.field_e.b(var3, 100, 17, 16777215, -1);
             fe.field_W[var2_int] = g.b(oj.field_M[var2_int]);

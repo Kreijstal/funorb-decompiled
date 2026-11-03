@@ -4,7 +4,7 @@
 final class db {
     static IntrusiveDeque field_a;
     static int field_e;
-    static re field_b;
+    static ValidationState field_b;
     static int field_c;
     static String field_d;
 
@@ -34,7 +34,7 @@ final class db {
 
     static {
         field_a = new IntrusiveDeque();
-        field_b = new re();
+        field_b = new ValidationState();
         field_d = "Sceptic";
         field_c = 256;
     }

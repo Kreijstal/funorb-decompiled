@@ -42,7 +42,7 @@ final class ta extends al {
         try {
           this.field_mb = param1;
           if (null != this.field_mb) {
-            var3_int = ci.field_d.a(this.field_mb, 260, ci.field_d.field_C);
+            var3_int = ci.field_d.measureWrappedHeight(this.field_mb, 260, ci.field_d.maxAscent);
             this.b(300, var3_int + 150, 78);
           }
           this.field_qb = new le(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -113,7 +113,7 @@ final class ta extends al {
           ci.field_d.b(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
           if (null != this.field_mb) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);
-            ci.field_d.a(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
+            ci.field_d.drawParagraph(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.maxAscent);
           }
           return;
         }
@@ -122,7 +122,7 @@ final class ta extends al {
         ci.field_d.b(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
         if (null != this.field_mb) {
           SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);
-          ci.field_d.a(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
+          ci.field_d.drawParagraph(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.maxAscent);
         }
     }
 

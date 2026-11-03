@@ -414,13 +414,13 @@ final class LevelActorSpawner extends LevelData {
           if (param0 != 30651) {
             return;
           }
-          qp.field_v = new Sprite(var3, var4 * 3 / 4);
-          qp.field_v.a();
+          MatchingTextValidator.field_v = new Sprite(var3, var4 * 3 / 4);
+          MatchingTextValidator.field_v.bindAsRenderTarget();
           var2.c(0, 0);
-          GameScreen.field_s = new Sprite(var3, -qp.field_v.height + var4);
-          GameScreen.field_s.a();
-          var2.c(0, -qp.field_v.height);
-          GameScreen.field_s.field_y = qp.field_v.height;
+          GameScreen.field_s = new Sprite(var3, -MatchingTextValidator.field_v.height + var4);
+          GameScreen.field_s.bindAsRenderTarget();
+          var2.c(0, -MatchingTextValidator.field_v.height);
+          GameScreen.field_s.field_y = MatchingTextValidator.field_v.height;
           ql.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

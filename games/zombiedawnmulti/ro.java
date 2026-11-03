@@ -85,7 +85,7 @@ final class ro extends GameWorld {
         int var3_intLifetime1;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          param0.a(-110, this.field_r);
+          param0.writeByte(-110, this.field_r);
           param0.a(this.currentTick, (byte) -96);
           stackIn_3_0 = (PacketBuffer) (param0);
           stackIn_3_1 = 109;
@@ -94,17 +94,17 @@ final class ro extends GameWorld {
           } else {
             stackIn_4_2 = 0;
           }
-          ((PacketBuffer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+          ((PacketBuffer) (Object) stackIn_3_0).writeByte(stackIn_3_1, stackIn_4_2);
           param0.a(this.field_C, (byte) -121);
           param0.a(this.field_I, (byte) -55);
           param0.a(this.field_g, (byte) -54);
-          param0.a(-73, this.phase);
+          param0.writeByte(-73, this.phase);
           for (var3_int = 0; this.teamCount > var3_int; var3_int++) {
-            param0.a(110, this.field_y[var3_int]);
-            param0.d(this.field_D[var3_int][0], -8593);
-            param0.d(this.field_D[var3_int][1], -8593);
+            param0.writeByte(110, this.field_y[var3_int]);
+            param0.writeMedium(this.field_D[var3_int][0], -8593);
+            param0.writeMedium(this.field_D[var3_int][1], -8593);
             param0.a(this.teamScores[var3_int], (byte) -84);
-            param0.d((int)(this.teamUpgradeMask[var3_int] >>> 40), -8593);
+            param0.writeMedium((int)(this.teamUpgradeMask[var3_int] >>> 40), -8593);
             param0.a(this.field_a[var3_int], (byte) -85);
             param0.a(this.field_z[var3_int], (byte) -78);
           }
@@ -119,8 +119,8 @@ final class ro extends GameWorld {
               }
             }
             if (decompiledFrameRemainder0) {
-              param0.a(108, this.a(var3, (byte) -105));
-              param0.a(110, var3.objectId);
+              param0.writeByte(108, this.a(var3, (byte) -105));
+              param0.writeByte(110, var3.objectId);
               param0.a(var3.getX((byte) -112), (byte) -67);
               param0.a(var3.getY(1829947600), (byte) -95);
               var4_int = var3.field_D;
@@ -142,8 +142,8 @@ final class ro extends GameWorld {
           }
           var3_ref = (ce) (this.field_s.c(102));
           while (var3_ref != null) {
-            param0.a(-64, 5);
-            param0.a(112, var3_ref.field_q);
+            param0.writeByte(-64, 5);
+            param0.writeByte(112, var3_ref.field_q);
             param0.a((var3_ref.field_m + ip.field_f) * 24, (byte) -69);
             param0.a((ip.field_f + var3_ref.field_t) * 24, (byte) -54);
             param0.a(var3_ref.field_s, (byte) -103);
@@ -151,7 +151,7 @@ final class ro extends GameWorld {
           }
           var3_intLifetime1 = 11 + 16 * this.teamCount + (this.characters.a(0) + this.field_s.a(0) + this.field_A.a(0)) * 8;
           if (57 + var3_intLifetime1 > 2000) {
-            param0.a(117, 0);
+            param0.writeByte(117, 0);
             return;
           }
           var4 = (bf) (this.field_A.c(59));
@@ -159,8 +159,8 @@ final class ro extends GameWorld {
             return;
           }
           while (var4 != null) {
-            param0.a(-94, 4);
-            param0.a(-36, 0);
+            param0.writeByte(-94, 4);
+            param0.writeByte(-36, 0);
             param0.a(var4.field_i, (byte) -104);
             param0.a(var4.field_l, (byte) -107);
             var5 = 0;
@@ -168,7 +168,7 @@ final class ro extends GameWorld {
             param0.a(var5, (byte) -105);
             var4 = (bf) (this.field_A.b(6));
           }
-          param0.a(-106, 0);
+          param0.writeByte(-106, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

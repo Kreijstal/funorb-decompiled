@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class hd extends TextInputValidator {
-    private qp field_z;
+final class EmailAvailabilityValidator extends TextInputValidator {
+    private MatchingTextValidator field_z;
     private String field_v;
     static ao field_r;
     private boolean field_y;
@@ -15,29 +15,29 @@ final class hd extends TextInputValidator {
     static int field_q;
     static int field_u;
 
-    hd(TextInputWidget param0, TextInputWidget param1) {
+    EmailAvailabilityValidator(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         this.field_v = "";
         this.field_y = false;
         try {
-          this.field_z = new qp(param0, param1);
+          this.field_z = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final re a(boolean param0, String param1) {
+    final ValidationState validationStateForText(boolean param0, String param1) {
         uc var3 = null;
         RuntimeException var3_ref = null;
-        re stackIn_2_0 = null;
-        re stackIn_7_0 = null;
-        re stackIn_12_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_z.a(param0, param1) == jq.field_b) {
+          if (this.field_z.validationStateForText(param0, param1) == jq.field_b) {
             stackIn_2_0 = jq.field_b;
             return stackIn_2_0;
           }
@@ -81,7 +81,7 @@ final class hd extends TextInputValidator {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_z.a(false, param0) == jq.field_b) {
+          if (this.field_z.validationStateForText(false, param0) == jq.field_b) {
             stackIn_3_0 = this.field_z.validationMessageForText(param0, -1276425040);
             return stackIn_3_0;
           }
@@ -89,7 +89,7 @@ final class hd extends TextInputValidator {
             stackIn_6_0 = (String) null;
             return stackIn_6_0;
           }
-          if (this.a(false, param0) != jq.field_b) {
+          if (this.validationStateForText(false, param0) != jq.field_b) {
             stackIn_11_0 = gi.field_h;
             return stackIn_11_0;
           }
@@ -136,7 +136,7 @@ final class hd extends TextInputValidator {
         field_t = null;
         if (param0 != 11702) {
           String var2 = (String) null;
-          hd.a(-23, (String) null, 34);
+          EmailAvailabilityValidator.a(-23, (String) null, 34);
         }
         field_x = null;
         field_s = null;
@@ -222,7 +222,7 @@ final class hd extends TextInputValidator {
             param0.writeInt(param1 ^ 34, var17.field_r);
             for (var5 = param1; var5 < var17.field_n; var5++) {
               if (var17.field_g[var5] != 0) {
-                param0.a(-99, var17.field_g[var5]);
+                param0.writeByte(-99, var17.field_g[var5]);
               } else {
                 try {
                   var6_int = var17.field_i[var5];
@@ -231,19 +231,19 @@ final class hd extends TextInputValidator {
                       if (var6_int == 2) {
                         var15 = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
                         var8 = var15.getModifiers();
-                        param0.a(118, 0);
+                        param0.writeByte(118, 0);
                         param0.writeInt(-126, var8);
                       }
                     } else {
                       var16_ref = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_q[var5]);
-                      param0.a(-32, 0);
+                      param0.writeByte(-32, 0);
                     }
                   } else {
                     var26 = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
                     var8 = var26.getInt((Object) null);
-                    param0.a(-95, 0);
+                    param0.writeByte(-95, 0);
                     param0.writeInt(-123, var8);
                   }
                   if (var6_int == 3) {
@@ -256,72 +256,72 @@ final class hd extends TextInputValidator {
                     }
                     var10 = var27.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param0.a(param1 + 123, 0);
+                      param0.writeByte(param1 + 123, 0);
                     } else if (var10 instanceof Number) {
-                      param0.a(116, 1);
+                      param0.writeByte(116, 1);
                       param0.a(((Number) (var10)).longValue(), true);
                     } else if (!(var10 instanceof String)) {
-                      param0.a(-45, 4);
+                      param0.writeByte(-45, 4);
                     } else {
-                      param0.a(113, 2);
+                      param0.writeByte(113, 2);
                       param0.writeString((String) (var10), (byte) 105);
                     }
                   } else {
                     if (var6_int == 4) {
                       var28 = (java.lang.reflect.Method) (var17.field_l[var5].field_d);
                       var8Lifetime1 = var28.getModifiers();
-                      param0.a(125, 0);
+                      param0.writeByte(125, 0);
                       param0.writeInt(-102, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.a(111, -10);
+                  param0.writeByte(111, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.a(118, -11);
+                  param0.writeByte(118, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.a(126, -12);
+                  param0.writeByte(126, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.a(param1 ^ 125, -13);
+                  param0.writeByte(param1 ^ 125, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.a(-109, -14);
+                  param0.writeByte(-109, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.a(125, -15);
+                  param0.writeByte(125, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.a(-27, -16);
+                  param0.writeByte(-27, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.a(param1 + 127, -17);
+                  param0.writeByte(param1 + 127, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.a(-38, -18);
+                  param0.writeByte(-38, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.a(param1 ^ 115, -19);
+                  param0.writeByte(param1 ^ 115, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.a(124, -20);
+                  param0.writeByte(124, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param0.a(-97, -21);
+                  param0.writeByte(-97, -21);
                 }
               }
             }
@@ -353,7 +353,7 @@ final class hd extends TextInputValidator {
         }
         if (param1 != -19) {
           PacketBuffer var3 = (PacketBuffer) null;
-          hd.a((java.math.BigInteger) null, (byte) -46, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
+          EmailAvailabilityValidator.a((java.math.BigInteger) null, (byte) -46, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
         }
     }
 

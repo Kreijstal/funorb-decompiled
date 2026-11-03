@@ -66,17 +66,17 @@ final class Waypoint extends IntrusiveNode {
         try {
           var2_int = MouseInputHandler.field_g;
           var3 = bo.field_d;
-          var4 = vo.field_m.field_yb.b(param0, 500);
+          var4 = vo.field_m.field_yb.countWrappedLines(param0, 500);
           var5 = vo.field_m.field_yb.c(param0, 500) + 6;
           var6 = 2 + var4 * jk.field_f;
-          var7 = qp.a(var2_int, (byte) 126, var5, 12);
+          var7 = MatchingTextValidator.a(var2_int, (byte) 126, var5, 12);
           var8 = IntrusiveNode.a(true, var3, 20, var6);
           SoftwareRasterizer.drawRect(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRect(var7 + 1, var8 + 1, -2 + var5, var6 - 2, 16777088);
           if (param1 > -109) {
             field_j = 23;
           }
-          vo.field_m.field_yb.a(param0, var7 + 3, -vo.field_m.field_yb.field_C + 1 + (var8 + jp.field_f), 500, 1000, 0, -1, 0, 0, jk.field_f);
+          vo.field_m.field_yb.drawParagraph(param0, var7 + 3, -vo.field_m.field_yb.maxAscent + 1 + (var8 + jp.field_f), 500, 1000, 0, -1, 0, 0, jk.field_f);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

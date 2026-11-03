@@ -109,7 +109,7 @@ final class nk extends IntrusiveNode {
           var3 = new IndexedSprite(0, 0, 0);
           var3.field_b = param2.field_b;
           var3.field_f = param2.field_f;
-          var3.field_m = param2.field_m;
+          var3.pixelIndices = param2.pixelIndices;
           var3.field_h = param2.field_h;
           if (param0 < 84) {
             stackIn_2_0 = (IndexedSprite) null;
@@ -118,7 +118,7 @@ final class nk extends IntrusiveNode {
           var3.field_j = param2.field_j;
           var3.field_a = param2.field_a;
           var3.field_e = param2.field_e;
-          var3.field_l = param1;
+          var3.palette = param1;
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class nk extends IntrusiveNode {
           g.c(vb.field_b);
           SoftwareRasterizer.clear();
           param0.g(3, 3);
-          var10 = SoftwareRasterizer.field_i;
+          var10 = SoftwareRasterizer.pixels;
           var9 = var10;
           var4 = var9;
           for (var5 = 0; var5 < var10.length; var5++) {

@@ -163,7 +163,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         SoftwareRasterizer.fillRectAlpha(param1, param0, param3, param2, 0, 96);
         int var5 = 3;
-        SoftwareRasterizer.i(var5, var5, param1, param0, param3, param2);
+        SoftwareRasterizer.blurRectangle(var5, var5, param1, param0, param3, param2);
         if (param4 == 122) {
           return;
         }

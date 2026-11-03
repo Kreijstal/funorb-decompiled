@@ -38,8 +38,8 @@ final class er extends IntrusiveNode {
             dg.field_J = stackIn_51_0;
             if (0 <= ai.field_b &&
               ml.field_Jb >= 0) {
-              var1 = pb.field_e.b(ei.field_g[ma.field_d][ml.field_Jb], 400);
-              hj.field_g = 4 + (20 + var1 * (pb.field_e.field_C + pb.field_e.field_r));
+              var1 = pb.field_e.countWrappedLines(ei.field_g[ma.field_d][ml.field_Jb], 400);
+              hj.field_g = 4 + (20 + var1 * (pb.field_e.maxAscent + pb.field_e.maxDescent));
               if (!pp.field_n) {
                 hj.field_g = hj.field_g + 20;
               }
@@ -79,8 +79,8 @@ final class er extends IntrusiveNode {
               return false;
             }
             if (ml.field_Jb >= 0) {
-              var1Lifetime1 = pb.field_e.b(ei.field_g[ma.field_d][ml.field_Jb], 400);
-              hj.field_g = 4 + (20 + var1Lifetime1 * (pb.field_e.field_C + pb.field_e.field_r));
+              var1Lifetime1 = pb.field_e.countWrappedLines(ei.field_g[ma.field_d][ml.field_Jb], 400);
+              hj.field_g = 4 + (20 + var1Lifetime1 * (pb.field_e.maxAscent + pb.field_e.maxDescent));
               if (!pp.field_n) {
                 hj.field_g = hj.field_g + 20;
               }

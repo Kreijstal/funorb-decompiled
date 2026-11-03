@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bp extends TextInputValidator {
+final class AgeValidator extends TextInputValidator {
     static UiComponent field_u;
     static int field_r;
     static Sprite field_s;
@@ -10,15 +10,15 @@ final class bp extends TextInputValidator {
     static String field_t;
     static boolean field_q;
 
-    final re a(boolean param0, String param1) {
+    final ValidationState validationStateForText(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
         CharSequence var5 = null;
-        re stackIn_2_0 = null;
-        re stackIn_7_0 = null;
-        re stackIn_10_0 = null;
-        re stackIn_12_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_10_0 = null;
+        ValidationState stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -37,7 +37,7 @@ final class bp extends TextInputValidator {
               stackIn_12_0 = db.field_b;
               return stackIn_12_0;
             }
-            stackIn_10_0 = (re) null;
+            stackIn_10_0 = (ValidationState) null;
             return stackIn_10_0;
           }
           stackIn_7_0 = jq.field_b;
@@ -68,7 +68,7 @@ final class bp extends TextInputValidator {
           var8.b((byte) -35, param2);
           var8.position = var8.position + 1;
           var4 = var8.position;
-          var8.a(108, 1);
+          var8.writeByte(108, 1);
           var8.a(param0.field_i, (byte) -95);
           var8.a(param0.field_v, (byte) -76);
           var8.a(param0.field_t, (byte) -66);
@@ -76,7 +76,7 @@ final class bp extends TextInputValidator {
           var8.writeInt(-99, param0.field_x);
           var8.writeInt(122, param0.field_l);
           var8.writeInt(-128, param0.field_k);
-          var8.a(-83, param0.field_y.length);
+          var8.writeByte(-83, param0.field_y.length);
           for (var5 = 0; var5 < param0.field_y.length; var5++) {
             var7.writeInt(52, param0.field_y[var5]);
           }
@@ -90,11 +90,11 @@ final class bp extends TextInputValidator {
         }
     }
 
-    bp(TextInputWidget param0) {
+    AgeValidator(TextInputWidget param0) {
         super(param0);
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 != -3) {
           field_q = true;
@@ -228,7 +228,7 @@ final class bp extends TextInputValidator {
             we.field_k.a(var19, false);
             if (param3 != -4) {
               var15 = (PlatformTaskDispatcher) null;
-              bp.a(-51, (PacketBuffer) null, (PlatformTaskDispatcher) null, 59);
+              AgeValidator.a(-51, (PacketBuffer) null, (PlatformTaskDispatcher) null, 59);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
@@ -265,7 +265,7 @@ final class bp extends TextInputValidator {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(false, param0) == jq.field_b) {
+          if (this.validationStateForText(false, param0) == jq.field_b) {
             stackIn_3_0 = ob.field_z;
             return stackIn_3_0;
           }

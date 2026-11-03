@@ -139,22 +139,22 @@ final class IterableNodeHashTable implements Iterable {
     final static Sprite a(int param0, double param1, int param2) {
         int var8 = 0;
         Sprite var9 = new Sprite(640, 75);
-        var9.a();
+        var9.bindAsRenderTarget();
         SoftwareRasterizer.fillRectGradient(0, 5, 640, 55, 16777215, 1);
         Sprite var5 = new Sprite(640, 75);
-        var5.a();
+        var5.bindAsRenderTarget();
         TertiaryLinkNode.field_r.b(sm.field_g[param2], 320, 65, 53248, 1);
         Sprite var6 = new Sprite(640, 75);
-        var6.a();
+        var6.bindAsRenderTarget();
         int var7 = (int)(param1 * 640.0);
         if (param0 >= 26) {
           var8 = (int)(75.0 * param1);
-          var5.c((-var7 + 640) / 2, 0, var7, var8);
+          var5.drawScaledAveraged((-var7 + 640) / 2, 0, var7, var8);
           var9.e(0, 0);
-          var6.g(16777215);
-          var6.g(16777215);
-          var6.g(1);
-          var6.g(1);
+          var6.addOutline(16777215);
+          var6.addOutline(16777215);
+          var6.addOutline(1);
+          var6.addOutline(1);
           SocketConnector.field_h.b((byte) 96);
           return var6;
         }

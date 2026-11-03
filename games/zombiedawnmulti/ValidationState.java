@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re {
+final class ValidationState {
     static UiComponent field_a;
     static boolean field_b;
 
@@ -21,7 +21,7 @@ final class re {
     final static boolean b(int param0) {
         if (param0 > -110) {
           byte[] var2 = (byte[]) null;
-          re.a((byte[]) null, 41, (byte) -96);
+          ValidationState.a((byte[]) null, 41, (byte) -96);
           return true;
         }
         return true;
@@ -39,7 +39,7 @@ final class re {
         try {
           var2_int = param1.length;
           if (param0 != 255) {
-            re.a(80);
+            ValidationState.a(80);
           }
           var3 = new byte[var2_int];
           ArrayOperations.a(param1, 0, var3, 0, var2_int);

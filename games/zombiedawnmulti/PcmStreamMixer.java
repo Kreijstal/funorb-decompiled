@@ -77,7 +77,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final int a() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -93,7 +93,7 @@ final class PcmStreamMixer extends PcmStream {
         param0.unlink(true);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         PcmMixerListener var5 = null;
         int var7 = 0;
@@ -155,7 +155,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void c(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_l.c(97));
         while (var4 != null) {
-          var4.a(param0, param1, param2);
+          var4.process(param0, param1, param2);
           var4 = (PcmStream) (this.field_l.b(6));
         }
     }

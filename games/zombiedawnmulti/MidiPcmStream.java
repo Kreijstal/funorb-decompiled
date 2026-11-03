@@ -51,7 +51,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var3 = null;
         try {
           dd.field_f[param1] = param2;
-          dd.field_f[param1][dd.field_f[param1].length - 2].a();
+          dd.field_f[param1][dd.field_f[param1].length - 2].bindAsRenderTarget();
           if (!he.field_a) {
             SoftwareRasterizer.clear();
           }
@@ -100,12 +100,12 @@ final class MidiPcmStream extends PcmStream {
             stackIn_3_0 = (LevelActorSpawner) null;
             return stackIn_3_0;
           }
-          IntrusiveNode.a(0, var5, param1 - 173, re.a(param0, 0, (byte) 71));
+          IntrusiveNode.a(0, var5, param1 - 173, ValidationState.a(param0, 0, (byte) 71));
           IntrusiveNode.a(1, var5, -80, var4);
           IntrusiveNode.a(2, var5, -118, var2_int);
           IntrusiveNode.a(3, var5, -91, var3);
           for (var6 = 1; var6 < param0.length / 4; var6++) {
-            IntrusiveNode.a(3 + var6, var5, -127, re.a(param0, var6, (byte) 53));
+            IntrusiveNode.a(3 + var6, var5, -127, ValidationState.a(param0, var6, (byte) 53));
           }
           stackIn_8_0 = ij.a(var5, 7);
           return stackIn_8_0;
@@ -160,7 +160,7 @@ final class MidiPcmStream extends PcmStream {
         var3 = -45 % ((param1 + 10) / 54);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -173,7 +173,7 @@ final class MidiPcmStream extends PcmStream {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (this.field_p.isReady()) {
-            var4_int = this.field_r * this.field_p.field_g / PcmPlayerService.field_p;
+            var4_int = this.field_r * this.field_p.field_g / PcmPlayerService.sampleRate;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_A;
               if (this.field_l - var5 >= 0L) {
@@ -182,18 +182,18 @@ final class MidiPcmStream extends PcmStream {
               }
               var7 = (int)((-1L + (long)var4_int - this.field_A + this.field_l) / (long)var4_int);
               this.field_A = this.field_A + (long)var7 * (long)var4_int;
-              this.field_P.b(param0, param1, var7);
+              this.field_P.mixInto(param0, param1, var7);
               this.f(113);
               param1 = param1 + var7;
               param2 = param2 - var7;
               if (this.field_p.isReady()) {
                 continue;
               }
-              this.field_P.b(param0, param1, param2);
+              this.field_P.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_P.b(param0, param1, param2);
+          this.field_P.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,7 +211,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void d(int param0, int param1, int param2) {
         if (param0 != -1) {
-          this.a();
+          this.getSchedulingCost();
         }
     }
 
@@ -233,7 +233,7 @@ final class MidiPcmStream extends PcmStream {
             var4_int = var4_int << 8;
             if (var5 >= var4_int) {
               var5 = -1 + (var4_int + (var4_int - var5));
-              param2.field_C.b(true);
+              param2.field_C.setReversePlayback(true);
             }
           } else {
             var5 = (int)((long)this.field_y[param2.field_o] * (long)var4_int >> 6);
@@ -405,9 +405,9 @@ final class MidiPcmStream extends PcmStream {
         var7.field_l = -1;
         var7.field_q = 0;
         if (this.field_y[param3] == 0) {
-          var7.field_C = PcmSampleStream.a(var6, this.b(var7, -916428895), this.a((byte) 92, var7), this.a(var7, 81682502));
+          var7.field_C = PcmSampleStream.createAtStepQ8(var6, this.b(var7, -916428895), this.a((byte) 92, var7), this.a(var7, 81682502));
         } else {
-          var7.field_C = PcmSampleStream.a(var6, this.b(var7, -916428895), 0, this.a(var7, 81682502));
+          var7.field_C = PcmSampleStream.createAtStepQ8(var6, this.b(var7, -916428895), 0, this.a(var7, 81682502));
           stackIn_18_1 = !(var11.field_g[param0] >= 0);
           this.a(stackIn_18_1, (byte) -107, var7);
         }
@@ -536,7 +536,7 @@ final class MidiPcmStream extends PcmStream {
             var7 = Math.sin(0.01227184630308513 * (double)(511 & param0.field_s));
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param0.field_f.field_g * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)PcmPlayerService.field_p);
+          var5Lifetime1 = (int)(0.5 + (double)(param0.field_f.field_g * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)PcmPlayerService.sampleRate);
           stackIn_13_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -786,7 +786,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -802,8 +802,8 @@ final class MidiPcmStream extends PcmStream {
           if (param0 < 0 ||
             var3.field_o == param0) {
             if (var3.field_C != null) {
-              var3.field_C.e(PcmPlayerService.field_p / 100);
-              if (var3.field_C.j()) {
+              var3.field_C.fadeOutAndUnlink(PcmPlayerService.sampleRate / 100);
+              if (var3.field_C.isRamping()) {
                 this.field_P.field_o.b(var3.field_C);
               }
               var3.a((byte) 71);
@@ -1082,7 +1082,7 @@ final class MidiPcmStream extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_p.isReady()) {
-          var2 = this.field_p.field_g * this.field_r / PcmPlayerService.field_p;
+          var2 = this.field_p.field_g * this.field_r / PcmPlayerService.sampleRate;
           while (true) {
             var3 = this.field_A + (long)param0 * (long)var2;
             if (-var3 + this.field_l >= 0L) {
@@ -1176,9 +1176,9 @@ final class MidiPcmStream extends PcmStream {
         int var12 = 0;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          param0.field_D = PcmPlayerService.field_p / 100;
+          param0.field_D = PcmPlayerService.sampleRate / 100;
           if (param0.field_l >= 0 && (param0.field_C == null ||
-            param0.field_C.k())) {
+            param0.field_C.isSamplePositionOutOfRange())) {
             param0.a((byte) 71);
             param0.unlink(true);
             if (param0.field_m > 0) {
@@ -1197,7 +1197,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param0.field_t = var6_int;
           }
-          param0.field_C.i(this.b(param0, -916428895));
+          param0.field_C.setSampleStepMagnitude(this.b(param0, -916428895));
           var7 = param0.field_h;
           var11 = 98 % ((param4 + 44) / 58);
           param0.field_s = param0.field_s + var7.field_k;
@@ -1253,16 +1253,16 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param0.field_C.a(param0.field_D, this.a((byte) 92, param0), this.a(param0, 81682502));
+            param0.field_C.rampVolumeAndPan(param0.field_D, this.a((byte) 92, param0), this.a(param0, 81682502));
             return false;
           }
-          param0.field_C.e(param0.field_D);
+          param0.field_C.fadeOutAndUnlink(param0.field_D);
           if (param3 != null) {
-            param0.field_C.b(param3, param2, param1);
+            param0.field_C.mixInto(param3, param2, param1);
           } else {
             param0.field_C.skip(param1);
           }
-          if (param0.field_C.j()) {
+          if (param0.field_C.isRamping()) {
             this.field_P.field_o.b(param0.field_C);
           }
           param0.a((byte) 71);

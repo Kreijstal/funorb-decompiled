@@ -30,7 +30,7 @@ final class n extends IntrusiveNode {
     final static boolean c(byte param0) {
         if (param0 != 107) {
           field_g = true;
-          if (!ia.field_r) {
+          if (!PasswordValidator.field_r) {
             return wc.j(98) ? true : false;
           }
           if (!GameScreen.field_bb) {
@@ -38,7 +38,7 @@ final class n extends IntrusiveNode {
           }
           return true;
         }
-        if (ia.field_r) {
+        if (PasswordValidator.field_r) {
           if (GameScreen.field_bb) {
             return true;
           }

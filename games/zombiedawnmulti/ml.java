@@ -18,15 +18,15 @@ final class ml extends UiComponent {
         CipherPacketBuffer var3 = ma.field_a;
         if (param2 == -76) {
           var3.b((byte) -35, param1);
-          var3.a(-120, 3);
-          var3.a(110, 9);
+          var3.writeByte(-120, 3);
+          var3.writeByte(110, 9);
           var3.a(param0, (byte) -44);
           return;
         }
         ml.c((byte) 99);
         var3.b((byte) -35, param1);
-        var3.a(-120, 3);
-        var3.a(110, 9);
+        var3.writeByte(-120, 3);
+        var3.writeByte(110, 9);
         var3.a(param0, (byte) -44);
     }
 

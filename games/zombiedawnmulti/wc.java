@@ -264,14 +264,14 @@ final class wc extends SceneObject {
           var4 = param1.worldToScreenY(this.getY(-109), 116);
           ah.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
           if (null != this.field_R) {
-            if (this.field_R.k()) {
+            if (this.field_R.isSamplePositionOutOfRange()) {
               this.field_R = null;
               this.field_L = null;
             } else {
               var5 = sd.b(125, var4, var3_int);
-              this.field_R.h(var5);
+              this.field_R.setVolume(var5);
               if (this.field_L != null) {
-                this.field_L.h(var5);
+                this.field_L.setVolume(var5);
               }
             }
           }

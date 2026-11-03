@@ -386,15 +386,15 @@ final class WhirlpoolHasher {
               }
               if (JaggrabDownloader.field_c != null) {
                 if (wa.field_k &&
-                  bp.field_t != null) {
-                  var7Lifetime6 = "[" + bp.field_t + "] ";
+                  AgeValidator.field_t != null) {
+                  var7Lifetime6 = "[" + AgeValidator.field_t + "] ";
                 } else {
                   var7Lifetime6 = "[" + vl.a(GameEvent.field_g, new String[]{JaggrabDownloader.field_c.field_Nb}, 2) + "] ";
                 }
               }
             }
             var20 = var7Lifetime6 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - w.field_A.a(var20);
+            var5Lifetime1 = var5Lifetime1 - w.field_A.textWidth(var20);
           } else {
             var22 = (CharSequence) ((Object) qf.field_g);
             var18 = vl.a(v.field_c, new String[]{ld.a((byte) 0, var22)}, 2);
@@ -403,15 +403,15 @@ final class WhirlpoolHasher {
             var8 = vl.a(lc.field_n, new String[]{var16}, 2);
             var7Lifetime6 = var8;
             var7Lifetime6 = var8;
-            var9 = w.field_A.a(var18);
-            var10 = w.field_A.a(var8);
+            var9 = w.field_A.textWidth(var18);
+            var10 = w.field_A.textWidth(var8);
             if (var10 < var9) {
               var5Lifetime1 = var5Lifetime1 - var9;
             } else {
               var5Lifetime1 = var5Lifetime1 - var10;
             }
           }
-          if (w.field_A.a(rm.field_a.toString()) > var5Lifetime1) {
+          if (w.field_A.textWidth(rm.field_a.toString()) > var5Lifetime1) {
             lf.a(' ', -1 + rm.field_a.length(), 0, rm.field_a);
           }
         }

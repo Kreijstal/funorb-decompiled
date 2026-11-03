@@ -22,7 +22,7 @@ abstract class HumanView extends UnitView {
 
     final static void f(int param0, int param1) {
         lo.field_f = NetworkGameClient.field_l[param1];
-        ud.field_Y = bp.field_v[param1];
+        ud.field_Y = AgeValidator.field_v[param1];
         if (param0 != -7733) {
           field_ob = (String) null;
         }
@@ -140,10 +140,10 @@ abstract class HumanView extends UnitView {
           var3_int = -24 + param1.worldToScreenX(this.getX(109), -20126);
           var4 = param1.worldToScreenY(this.getY(param0 ^ -10222), 127) - 48;
           if (null != this.field_U) {
-            if (this.field_U.k()) {
+            if (this.field_U.isSamplePositionOutOfRange()) {
               this.field_U = null;
             } else {
-              this.field_U.h(sd.b(124, var4, var3_int));
+              this.field_U.setVolume(sd.b(124, var4, var3_int));
               this.field_U.f(pb.a(var4, var3_int, false));
             }
           }
@@ -217,7 +217,7 @@ abstract class HumanView extends UnitView {
                   }
                 } else {
                   if (var11 != 0) {
-                    var7[var6].b(var3_int, var4);
+                    var7[var6].drawHorizontalFlip(var3_int, var4);
                   } else {
                     var7[var6].g(var3_int, var4);
                   }
@@ -239,7 +239,7 @@ abstract class HumanView extends UnitView {
               } else {
                 if (this.facing != 3) {
                   if (1 == this.facing) {
-                    var7[var6].b(var3_int, var4);
+                    var7[var6].drawHorizontalFlip(var3_int, var4);
                   }
                 } else {
                   var7[var6].g(var3_int, var4);

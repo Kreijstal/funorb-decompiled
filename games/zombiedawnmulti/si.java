@@ -97,7 +97,7 @@ final class si extends MenuScreen {
           this.field_o = stackIn_4_1;
           if (PowerupButton.field_e.localTeam != this.field_q) {
             if (!this.field_o) {
-              this.field_l = gf.field_c;
+              this.field_l = DebouncedValidationProvider.field_c;
             } else {
               this.field_l = "";
             }
@@ -148,7 +148,7 @@ final class si extends MenuScreen {
             this.field_A[var8 + 1] = var6_intLifetime1;
           }
           this.field_v = 0;
-          if (!gf.field_h) {
+          if (!DebouncedValidationProvider.field_h) {
             var13 = FullscreenFocusCanvas.field_k;
             var7Lifetime2 = var13.g((byte) -32);
             for (var8Lifetime1 = 0; var7Lifetime2 > var8Lifetime1; var8Lifetime1++) {
@@ -464,7 +464,7 @@ final class si extends MenuScreen {
         super.a(param0);
         var2 = 378;
         var3 = 0;
-        var4 = ah.field_e.field_C + ah.field_e.field_r;
+        var4 = ah.field_e.maxAscent + ah.field_e.maxDescent;
         this.field_E = 255;
         if (this.field_n == 0) {
           stackIn_3_0 = 255;
@@ -484,14 +484,14 @@ final class si extends MenuScreen {
           if (null == this.field_l) {
             return;
           }
-          qp.field_w.a(dj.field_o, 90, 134, 16777215, 1, var6);
-          qp.field_w.a(qm.field_N, 478, 134, 16777215, 1, var6);
+          MatchingTextValidator.field_w.a(dj.field_o, 90, 134, 16777215, 1, var6);
+          MatchingTextValidator.field_w.a(qm.field_N, 478, 134, 16777215, 1, var6);
           var8_int = 555;
           if (this.field_z.field_i) {
-            qp.field_w.a(IntrusiveDeque.field_d, var8_int, 122, 16777215, 1, var6);
+            MatchingTextValidator.field_w.a(IntrusiveDeque.field_d, var8_int, 122, 16777215, 1, var6);
           }
-          qp.field_w.a(bo.field_c, var8_int, 134, 16777215, 1, var6);
-          var7 = var7 + (-5 + (1 + pb.field_e.a(this.field_l, 0, 90, 640, 240, 65280, var3, var6, 1, 0, 30)) * var4);
+          MatchingTextValidator.field_w.a(bo.field_c, var8_int, 134, 16777215, 1, var6);
+          var7 = var7 + (-5 + (1 + pb.field_e.drawParagraphAlpha(this.field_l, 0, 90, 640, 240, 65280, var3, var6, 1, 0, 30)) * var4);
           if (205 > var7) {
             var7 = 205;
           }
@@ -520,12 +520,12 @@ final class si extends MenuScreen {
             }
             ((PaletteBitmapFont) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, var3, var6);
             if (var17 != 0) {
-              SoftwareRasterizer.fillRoundedRect(33, var10 - 14, qp.field_w.a(ak.field_d) + 14, 15, 7, 16777215);
-              SoftwareRasterizer.drawRoundedRect(33, -15 + var10, qp.field_w.a(ak.field_d) + 16, 17, 7, 65793);
-              qp.field_w.b(ak.field_d, 40, var10 - 2, 65793, -1, var6);
+              SoftwareRasterizer.fillRoundedRect(33, var10 - 14, MatchingTextValidator.field_w.textWidth(ak.field_d) + 14, 15, 7, 16777215);
+              SoftwareRasterizer.drawRoundedRect(33, -15 + var10, MatchingTextValidator.field_w.textWidth(ak.field_d) + 16, 17, 7, 65793);
+              MatchingTextValidator.field_w.drawLeftAlpha(ak.field_d, 40, var10 - 2, 65793, -1, var6);
             }
             if (var16 != 0) {
-              qp.field_w.a(io.field_d, 90, var10 + 24, 11184810, 1, var6);
+              MatchingTextValidator.field_w.a(io.field_d, 90, var10 + 24, 11184810, 1, var6);
             } else {
               stackIn_40_0 = ah.field_e;
               stackIn_40_1 = Integer.toString(this.field_y[var13]);
@@ -567,8 +567,8 @@ final class si extends MenuScreen {
             var19Lifetime1 = PortalEntryEvent.field_m.field_o[var13];
             var20Lifetime1 = PortalEntryEvent.field_m.field_v[var13];
             if (this.field_z.field_i) {
-              qp.field_w.a(Integer.toString(var20Lifetime1), var8_int, 15 + var10, 16777215, 1, var6);
-              stackIn_65_0 = qp.field_w;
+              MatchingTextValidator.field_w.a(Integer.toString(var20Lifetime1), var8_int, 15 + var10, 16777215, 1, var6);
+              stackIn_65_0 = MatchingTextValidator.field_w;
               stackIn_65_1 = eb.a(var20Lifetime1 - var19Lifetime1, true, param0);
               stackIn_65_2 = var8_int - 2;
               stackIn_65_3 = 30 + var10;
@@ -579,7 +579,7 @@ final class si extends MenuScreen {
               }
               ((BinaryBitmapFont) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, 1, var6);
             } else {
-              qp.field_w.a(Integer.toString(var20Lifetime1), var8_int, var10 + 22, 16777215, 1, var6);
+              MatchingTextValidator.field_w.a(Integer.toString(var20Lifetime1), var8_int, var10 + 22, 16777215, 1, var6);
             }
             var21 = PortalEntryEvent.field_m.field_D[var13][0];
             var22 = PortalEntryEvent.field_m.field_D[var13][1];
@@ -589,7 +589,7 @@ final class si extends MenuScreen {
             var24 = var24 + gg.field_l[var23];
             am.a(var24, var22, var11, 1, var21).c(8, var10 - 11, var6);
             var25 = am.a(var24, var22, -var11 + 1, 1, var21);
-            var25.e();
+            var25.flipHorizontal();
             var11 = -var11 + 1;
             var25.c(575, -11 + var10, var6);
             if (var17 != 0) {
@@ -650,7 +650,7 @@ final class si extends MenuScreen {
           }
           SoftwareRasterizer.setClip(0, 0, var7Lifetime1, 480);
           for (var9Lifetime1Lifetime2 = 0; var9Lifetime1Lifetime2 < 64; var9Lifetime1Lifetime2++) {
-            SoftwareRasterizer.a(-176 + ((var9Lifetime1Lifetime2 / 11 + 25) * PowerupEvent.field_m + 1000 * var9Lifetime1Lifetime2) % 10560, 3952, 176, var6Lifetime1 * 125 >> 8, wp.field_f);
+            SoftwareRasterizer.fillRadialGlow(-176 + ((var9Lifetime1Lifetime2 / 11 + 25) * PowerupEvent.field_m + 1000 * var9Lifetime1Lifetime2) % 10560, 3952, 176, var6Lifetime1 * 125 >> 8, wp.field_f);
           }
           SoftwareRasterizer.resetClip();
           rq.field_l.a(30, 231, var6Lifetime1);
@@ -666,7 +666,7 @@ final class si extends MenuScreen {
               63 > var12Lifetime1) {
               pq.field_o.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
               for (var14Lifetime1 = 0; var14Lifetime1 < 8; var14Lifetime1++) {
-                SoftwareRasterizer.a(10 + CipherPacketBuffer.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * PowerupEvent.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
+                SoftwareRasterizer.fillRadialGlow(10 + CipherPacketBuffer.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * PowerupEvent.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               w.field_z.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
               mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + CipherPacketBuffer.field_v[var11Lifetime1]);
@@ -674,7 +674,7 @@ final class si extends MenuScreen {
               var15Lifetime1 = cr.a(var12Lifetime1, -107);
               incrementValue$1 = var9Lifetime1Lifetime3;
               var9Lifetime1Lifetime3++;
-              stackIn_116_0 = qp.field_w;
+              stackIn_116_0 = MatchingTextValidator.field_w;
               stackIn_116_1 = eb.a(this.field_r[incrementValue$1], true, true);
               stackIn_116_2 = CipherPacketBuffer.field_v[var11Lifetime1] - 50;
               stackIn_116_3 = 123;
@@ -683,14 +683,14 @@ final class si extends MenuScreen {
               } else {
                 stackIn_117_4 = 16711680;
               }
-              ((BinaryBitmapFont) (Object) stackIn_116_0).b(stackIn_116_1, stackIn_116_2, stackIn_116_3, stackIn_117_4, 1, var6Lifetime1);
+              ((BinaryBitmapFont) (Object) stackIn_116_0).drawLeftAlpha(stackIn_116_1, stackIn_116_2, stackIn_116_3, stackIn_117_4, 1, var6Lifetime1);
               if (255 != var13Lifetime1 &&
                 var13Lifetime1 < 63) {
                 var14Lifetime1Lifetime3 = FullscreenFocusCanvas.field_k.field_t[var13Lifetime1];
                 var15Lifetime1Lifetime1 = cr.a(var13Lifetime1, -101);
                 incrementValue$2 = var9Lifetime1Lifetime3;
                 var9Lifetime1Lifetime3++;
-                stackIn_125_0 = qp.field_w;
+                stackIn_125_0 = MatchingTextValidator.field_w;
                 stackIn_125_1 = eb.a(this.field_r[incrementValue$2], true, true);
                 stackIn_125_2 = -73 + CipherPacketBuffer.field_v[var11Lifetime1];
                 stackIn_125_3 = 111;
@@ -699,7 +699,7 @@ final class si extends MenuScreen {
                 } else {
                   stackIn_126_4 = 16777215;
                 }
-                ((BinaryBitmapFont) (Object) stackIn_125_0).b(stackIn_125_1, stackIn_125_2, stackIn_125_3, stackIn_126_4, 1, var6Lifetime1);
+                ((BinaryBitmapFont) (Object) stackIn_125_0).drawLeftAlpha(stackIn_125_1, stackIn_125_2, stackIn_125_3, stackIn_126_4, 1, var6Lifetime1);
               }
             } else {
               tm.field_f.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
@@ -711,10 +711,10 @@ final class si extends MenuScreen {
               qj.field_m.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               SoftwareRasterizer.setClip(0, 0, 640, 366);
               for (var13Lifetime1Lifetime1 = 0; 16 > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
-                SoftwareRasterizer.a((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (PowerupEvent.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);
+                SoftwareRasterizer.fillRadialGlow((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (PowerupEvent.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               for (var13Lifetime1Lifetime1Lifetime1 = 0; var13Lifetime1Lifetime1Lifetime1 < 8; var13Lifetime1Lifetime1Lifetime1++) {
-                SoftwareRasterizer.a(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * PowerupEvent.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
+                SoftwareRasterizer.fillRadialGlow(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * PowerupEvent.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
               }
               TextInputWidget.field_N.a(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
               SoftwareRasterizer.resetClip();
@@ -723,7 +723,7 @@ final class si extends MenuScreen {
               var14Lifetime1Lifetime1 = cr.a(var12Lifetime1Lifetime1, -95);
               incrementValue$0 = var9Lifetime1Lifetime3;
               var9Lifetime1Lifetime3++;
-              stackIn_144_0 = qp.field_w;
+              stackIn_144_0 = MatchingTextValidator.field_w;
               stackIn_144_1 = eb.a(this.field_r[incrementValue$0], true, true);
               stackIn_144_2 = 209 * var11Lifetime1Lifetime1 + 166;
               stackIn_144_3 = 295;
@@ -732,7 +732,7 @@ final class si extends MenuScreen {
               } else {
                 stackIn_145_4 = 16711680;
               }
-              ((BinaryBitmapFont) (Object) stackIn_144_0).b(stackIn_144_1, stackIn_144_2, stackIn_144_3, stackIn_145_4, 1, var6Lifetime1);
+              ((BinaryBitmapFont) (Object) stackIn_144_0).drawLeftAlpha(stackIn_144_1, stackIn_144_2, stackIn_144_3, stackIn_145_4, 1, var6Lifetime1);
             } else {
               wk.field_J.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               hn.field_i.a(var11Lifetime1Lifetime1 * 209 + 91, 280, var6Lifetime1);
@@ -776,14 +776,14 @@ final class si extends MenuScreen {
               this.field_m = 255;
             }
             var7 = gh.field_f[this.field_E];
-            var8 = qp.field_w.a(var7);
+            var8 = MatchingTextValidator.field_w.textWidth(var7);
             var9 = param0 * (this.field_m * 8) >> 8;
-            var5 = qp.field_w.field_w;
+            var5 = MatchingTextValidator.field_w.baselineHeight;
             if (255 < var9) {
               var9 = 255;
             }
             while (var8 > 300) {
-              var5 = var5 + qp.field_w.field_w;
+              var5 = var5 + MatchingTextValidator.field_w.baselineHeight;
               var8 = var8 / 2;
             }
             var6 = var8 + 16;
@@ -801,7 +801,7 @@ final class si extends MenuScreen {
               SoftwareRasterizer.fillRoundedRectAlpha(var3 + 2, var4 + 2, var6, var5, 4, 0, var9 / 2);
             }
             SoftwareRasterizer.fillRoundedRectAlpha(var3, var4, var6, var5, 4, 10061892, var9);
-            qp.field_w.a(var7, var3, var4, var6, var5, 16777215, 0, var9, 1, 1, 0);
+            MatchingTextValidator.field_w.drawParagraphAlpha(var7, var3, var4, var6, var5, 16777215, 0, var9, 1, 1, 0);
           }
         } else {
           this.field_m = 0;

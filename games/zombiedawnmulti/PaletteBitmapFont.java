@@ -156,31 +156,31 @@ final class PaletteBitmapFont extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * SoftwareRasterizer.field_b;
-        var9 = SoftwareRasterizer.field_b - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.width;
+        var9 = SoftwareRasterizer.width - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < SoftwareRasterizer.field_e) {
-          var12 = SoftwareRasterizer.field_e - param2;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var12 = SoftwareRasterizer.clipTop - param2;
           param4 = param4 - var12;
-          param2 = SoftwareRasterizer.field_e;
+          param2 = SoftwareRasterizer.clipTop;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * SoftwareRasterizer.field_b;
+          var8 = var8 + var12 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > SoftwareRasterizer.field_d) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_d);
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.field_f) {
-          var12Lifetime1 = SoftwareRasterizer.field_f - param1;
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var12Lifetime1 = SoftwareRasterizer.clipLeft - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = SoftwareRasterizer.field_f;
+          param1 = SoftwareRasterizer.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > SoftwareRasterizer.field_g) {
-          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.clipRight;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -188,9 +188,9 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            PaletteBitmapFont.a(0, SoftwareRasterizer.field_i, this.field_O[param0], this.colorPalettes[param5], var11, var8, param3, param4, var9, var10);
+            PaletteBitmapFont.a(0, SoftwareRasterizer.pixels, this.field_O[param0], this.colorPalettes[param5], var11, var8, param3, param4, var9, var10);
           } else {
-            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.pixels, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
@@ -212,31 +212,31 @@ final class PaletteBitmapFont extends BitmapFont {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * SoftwareRasterizer.field_b;
-        var10 = SoftwareRasterizer.field_b - param3;
+        var9 = param1 + param2 * SoftwareRasterizer.width;
+        var10 = SoftwareRasterizer.width - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < SoftwareRasterizer.field_e) {
-          var13 = SoftwareRasterizer.field_e - param2;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var13 = SoftwareRasterizer.clipTop - param2;
           param4 = param4 - var13;
-          param2 = SoftwareRasterizer.field_e;
+          param2 = SoftwareRasterizer.clipTop;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * SoftwareRasterizer.field_b;
+          var9 = var9 + var13 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > SoftwareRasterizer.field_d) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_d);
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.field_f) {
-          var13Lifetime1 = SoftwareRasterizer.field_f - param1;
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var13Lifetime1 = SoftwareRasterizer.clipLeft - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = SoftwareRasterizer.field_f;
+          param1 = SoftwareRasterizer.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > SoftwareRasterizer.field_g) {
-          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.clipRight;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -244,9 +244,9 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            PaletteBitmapFont.a(0, SoftwareRasterizer.field_i, this.field_O[param0], this.colorPalettes[param5], var12, var9, param3, param4, var10, var11, param6);
+            PaletteBitmapFont.a(0, SoftwareRasterizer.pixels, this.field_O[param0], this.colorPalettes[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
-            BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }

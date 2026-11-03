@@ -53,7 +53,7 @@ final class ContextMenu extends UiComponent {
         if (param0 != 4542) {
           return;
         }
-        var8Lifetime1 = qp.a(param1, (byte) 30, var6, param4);
+        var8Lifetime1 = MatchingTextValidator.a(param1, (byte) 30, var6, param4);
         var9 = IntrusiveNode.a(true, param3, param2, var7Lifetime1);
         this.setBounds(var7Lifetime1, var9, var6, var8Lifetime1, -3344);
         for (var10 = 0; this.field_Vb > var10; var10++) {

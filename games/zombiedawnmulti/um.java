@@ -19,7 +19,7 @@ final class um {
           return;
         }
         try {
-          param2.e(-16 + (int)this.field_d + param5, -16 + (int)this.field_e + param0, param4);
+          param2.drawAdditive(-16 + (int)this.field_d + param5, -16 + (int)this.field_e + param0, param4);
           param2.c(param5 + (int)this.field_d - 16, (int)this.field_e + (param0 - 16), param3);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "um.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

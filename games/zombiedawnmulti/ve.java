@@ -50,14 +50,14 @@ final class ve {
           this.field_c[var10] = cr.b(cr.b(var11 * var8 >> 8 << 8, var11 * var7 >> 8 << 16), var9 * var11 >> 8);
         }
         if (param2) {
-          SoftwareRasterizer.a(param1 << 4, param3 << 4, this.field_i * 2 << 4, 254, this.field_c);
+          SoftwareRasterizer.fillRadialGlow(param1 << 4, param3 << 4, this.field_i * 2 << 4, 254, this.field_c);
         }
         for (var10Lifetime1 = 0; var10Lifetime1 < this.field_d; var10Lifetime1++) {
           if (param2) {
-            SoftwareRasterizer.a(param1 << 4, param3 << 4, this.field_i * var10Lifetime1 << 4, 254 / (var10Lifetime1 + 1), this.field_c);
+            SoftwareRasterizer.fillRadialGlow(param1 << 4, param3 << 4, this.field_i * var10Lifetime1 << 4, 254 / (var10Lifetime1 + 1), this.field_c);
           }
           if (param2) {
-            SoftwareRasterizer.a(param1 << 4, param3 << 4, this.field_i * var10Lifetime1 << 4, 196 / (1 + var10Lifetime1), this.field_c);
+            SoftwareRasterizer.fillRadialGlow(param1 << 4, param3 << 4, this.field_i * var10Lifetime1 << 4, 196 / (1 + var10Lifetime1), this.field_c);
           }
           this.a(param2, param0, this.field_i, this.field_j + (-0.5 + this.a(true)) * this.field_h, param3, param4, param1, (byte) -69, 0);
         }
@@ -87,8 +87,8 @@ final class ve {
           var13 = hp.a((byte) -86, this.field_l, (int)(2.0 * this.field_g));
           var14 = param2 * 126 / this.field_i + 60;
           if (param0) {
-            SoftwareRasterizer.a(var11 << 4, var12 << 4, param2 << 4, var14, this.field_c);
-            SoftwareRasterizer.a(var11 << 4, var12 << 4, param2 << 3, var14 / 2, this.field_c);
+            SoftwareRasterizer.fillRadialGlow(var11 << 4, var12 << 4, param2 << 4, var14, this.field_c);
+            SoftwareRasterizer.fillRadialGlow(var11 << 4, var12 << 4, param2 << 3, var14 / 2, this.field_c);
           }
           if (param7 != -69) {
             this.field_g = 0.8709670644428569;

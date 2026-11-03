@@ -46,10 +46,10 @@ final class vh extends UiComponent {
             field_Hb = false;
           }
           if (!param0) {
-            stackIn_6_0 = SecondaryNodeDeque.field_c.a(param2);
+            stackIn_6_0 = SecondaryNodeDeque.field_c.textWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = wn.field_u.a(param2);
+          stackIn_4_0 = wn.field_u.textWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

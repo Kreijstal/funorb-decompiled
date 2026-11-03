@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class TextWidgetPainter implements WidgetActionListener, WidgetPainter {
+class TextWidgetPainter implements WidgetPainter, rk {
     int field_g;
     int field_d;
     int field_f;
@@ -50,11 +50,11 @@ class TextWidgetPainter implements WidgetActionListener, WidgetPainter {
 
     public final int a(int param0) {
         if (param0 == 0) {
-          return this.field_j.field_r + this.field_j.field_C;
+          return this.field_j.maxDescent + this.field_j.maxAscent;
         }
         TextWidgetPainter var3 = (TextWidgetPainter) null;
         this.copyStyleTo(91, (TextWidgetPainter) null);
-        return this.field_j.field_r + this.field_j.field_C;
+        return this.field_j.maxDescent + this.field_j.maxAscent;
     }
 
     public final int a(byte param0, UiWidget param1) {
@@ -89,7 +89,7 @@ class TextWidgetPainter implements WidgetActionListener, WidgetPainter {
 
     final static void b(byte param0) {
         if (ee.field_b) {
-          SoftwareRasterizer.clearRect(SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, -SoftwareRasterizer.field_f + SoftwareRasterizer.field_g, SoftwareRasterizer.field_d - SoftwareRasterizer.field_e);
+          SoftwareRasterizer.clearRect(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, -SoftwareRasterizer.clipLeft + SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
           rp.field_l.c(false, -1);
           if (param0 < 12) {
             field_o = (char[]) null;
@@ -131,12 +131,12 @@ class TextWidgetPainter implements WidgetActionListener, WidgetPainter {
               if (3 != var6 &&
                 1 == var6) {
               }
-              var5 = this.field_j.field_C + (var4 - this.field_j.field_C - this.field_j.field_r >> 1);
+              var5 = this.field_j.maxAscent + (var4 - this.field_j.maxAscent - this.field_j.maxDescent >> 1);
             } else {
-              var5 = -this.field_j.field_r + var4;
+              var5 = -this.field_j.maxDescent + var4;
             }
           } else {
-            var5 = this.field_j.field_C;
+            var5 = this.field_j.maxAscent;
           }
           var6Lifetime1 = this.field_d;
           if (var6Lifetime1 != 0 &&
@@ -197,7 +197,7 @@ class TextWidgetPainter implements WidgetActionListener, WidgetPainter {
         }
     }
 
-    public void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         if (null == this.field_j) {
           return;
         }
@@ -537,20 +537,20 @@ class TextWidgetPainter implements WidgetActionListener, WidgetPainter {
           boolean decompiledFrameRemainder0 = true;
           var10 = this.a(-95, param5);
           if (this.field_l) {
-            this.field_j.a(this.d(param5, -9327), this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5), var9_int, var10, param1, param0, this.field_d, this.field_a, this.field_f);
+            this.field_j.drawParagraph(this.d(param5, -9327), this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5), var9_int, var10, param1, param0, this.field_d, this.field_a, this.field_f);
           } else {
             var12 = this.field_a;
             if (var12 != 0) {
               if (var12 == 2) {
-                var11 = -this.field_j.field_r + var10;
+                var11 = -this.field_j.maxDescent + var10;
               } else {
                 if (var12 != 3 &&
                   var12 == 1) {
                 }
-                var11 = this.field_j.field_C + (-this.field_j.field_r + (-this.field_j.field_C + var10) >> 1);
+                var11 = this.field_j.maxAscent + (-this.field_j.maxDescent + (-this.field_j.maxAscent + var10) >> 1);
               }
             } else {
-              var11 = this.field_j.field_C;
+              var11 = this.field_j.maxAscent;
             }
             var12Lifetime1 = this.field_d;
             if (0 != var12Lifetime1 &&

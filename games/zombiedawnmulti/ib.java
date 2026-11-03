@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib implements WidgetActionListener {
+final class ib implements WidgetPainter {
     static int field_b;
     static int field_a;
 
@@ -25,7 +25,7 @@ final class ib implements WidgetActionListener {
         return false;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -44,7 +44,7 @@ final class ib implements WidgetActionListener {
           var8 = rj.field_I[1];
           if (param4 instanceof ButtonWidget &&
             ((ButtonWidget) (param4)).field_G) {
-            var8.e(var6_int + 1 + (-var8.fullWidth + param4.field_n >> 1), (param4.field_w - var8.field_u >> 1) + var7 + 1, 256);
+            var8.drawAdditive(var6_int + 1 + (-var8.fullWidth + param4.field_n >> 1), (param4.field_w - var8.field_u >> 1) + var7 + 1, 256);
           }
           if (!param4.c(124)) {
             return;
@@ -80,7 +80,7 @@ final class ib implements WidgetActionListener {
           ji.b(117);
           a.field_b = 11;
         } else {
-          if (!re.b(-113)) {
+          if (!ValidationState.b(-113)) {
             ji.b(117);
             a.field_b = 11;
           }
@@ -101,7 +101,7 @@ final class ib implements WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 112) {
-            stackIn_4_0 = tf.a(PcmSampleStream.a(param1, 100, 96), (byte) -98);
+            stackIn_4_0 = tf.a(PcmSampleStream.createAtRatePercent(param1, 100, 96), (byte) -98);
             return stackIn_4_0;
           }
           stackIn_2_0 = (we) null;

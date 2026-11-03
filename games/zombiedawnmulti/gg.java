@@ -113,7 +113,7 @@ final class gg {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = eb.field_B.field_yb.a(var16) + 3 * eb.field_B.field_yb.a('.');
+              var10Lifetime1 = eb.field_B.field_yb.textWidth(var16) + 3 * eb.field_B.field_yb.charWidth('.');
               eb.field_B.field_R = 0;
               eb.field_B.field_V = (-var10Lifetime1 + eb.field_B.field_zb) / 2;
               if ((48 & qj.field_i) == 16) {
@@ -265,12 +265,12 @@ final class gg {
     final static void a(int param0, boolean param1) {
         if (JaggrabDownloader.field_h > 0 &&
           ee.field_a) {
-          SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, ImageProducerRasterBuffer.field_k.field_qb);
+          SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.width, ImageProducerRasterBuffer.field_k.field_qb);
           SimHuman.field_gb.c(param1, -1);
         }
         if ((sq.field_Q > 0 || InflaterDecompressor.field_a > 0) &&
           io.field_b) {
-          SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, ImageProducerRasterBuffer.field_k.field_qb);
+          SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.width, ImageProducerRasterBuffer.field_k.field_qb);
           qf.field_b.c(param1, -1);
         }
         int var2 = 2 / ((param0 + 11) / 49);

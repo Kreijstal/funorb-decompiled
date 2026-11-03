@@ -37,7 +37,7 @@ final class qi {
               ak.a((byte) -119);
               return;
             }
-            var5_int = -var11.position + hd.field_q;
+            var5_int = -var11.position + EmailAvailabilityValidator.field_q;
             var13 = var4_ref_u.field_h;
             var12 = var13;
             var6 = var12;
@@ -161,7 +161,7 @@ final class qi {
             UnitStateEvent.field_k = new PacketBuffer(var7_int);
           }
           UnitStateEvent.field_k.position = 0;
-          UnitStateEvent.field_k.a(param5, param3, param0, 114);
+          UnitStateEvent.field_k.writeBytes(param5, param3, param0, 114);
           UnitStateEvent.field_k.b(var7_int, (byte) 119);
           UnitStateEvent.field_k.a(0, var13);
           if (null == RasterBuffer.field_e ||
@@ -169,7 +169,7 @@ final class qi {
             RasterBuffer.field_e = new PacketBuffer(100);
           }
           RasterBuffer.field_e.position = 0;
-          RasterBuffer.field_e.a(-30, 10);
+          RasterBuffer.field_e.writeByte(-30, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
@@ -178,8 +178,8 @@ final class qi {
           }
           RasterBuffer.field_e.a(param3, (byte) -82);
           RasterBuffer.field_e.a(param4, -2628, param2);
-          param6.a(RasterBuffer.field_e.payload, RasterBuffer.field_e.position, 0, 127);
-          param6.a(UnitStateEvent.field_k.payload, UnitStateEvent.field_k.position, 0, 122);
+          param6.writeBytes(RasterBuffer.field_e.payload, RasterBuffer.field_e.position, 0, 127);
+          param6.writeBytes(UnitStateEvent.field_k.payload, UnitStateEvent.field_k.position, 0, 122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -32,7 +32,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) {
+    final void writeBytes(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -198,7 +198,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$1] = (byte)param0;
     }
 
-    final void d(int param0, int param1) {
+    final void writeMedium(int param0, int param1) {
         if (param1 != -8593) {
           field_n = (int[]) null;
         }
@@ -239,15 +239,15 @@ class PacketBuffer extends IntrusiveNode {
           if (0 != (param1 & -16384)) {
             if ((param1 & -2097152) != 0) {
               if ((param1 & -268435456) != 0) {
-                this.a(110, param1 >>> 28 | 128);
+                this.writeByte(110, param1 >>> 28 | 128);
               }
-              this.a(-59, param1 >>> 21 | 128);
+              this.writeByte(-59, param1 >>> 21 | 128);
             }
-            this.a(113, 128 | param1 >>> 14);
+            this.writeByte(113, 128 | param1 >>> 14);
           }
-          this.a(-31, (16405 | param1) >>> 7);
+          this.writeByte(-31, (16405 | param1) >>> 7);
         }
-        this.a(111, 127 & param1);
+        this.writeByte(111, 127 & param1);
     }
 
     final void a(int param0, String param1) {
@@ -296,8 +296,8 @@ class PacketBuffer extends IntrusiveNode {
           if (param0 != 13066) {
             this.readLong((byte) -11);
           }
-          this.a(var3_long, param0 ^ -13160);
-          this.a(var5, -112);
+          this.writeLong56(var3_long, param0 ^ -13160);
+          this.writeLong56(var5, -112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -365,7 +365,7 @@ class PacketBuffer extends IntrusiveNode {
           var8 = var7.toByteArray();
           this.position = 0;
           this.a(var8.length, (byte) -101);
-          this.a(var8, var8.length, 0, param1 ^ -2617);
+          this.writeBytes(var8, var8.length, 0, param1 ^ -2617);
           if (param1 != -2628) {
             field_l = (PcmStreamMixer) null;
           }
@@ -480,7 +480,7 @@ class PacketBuffer extends IntrusiveNode {
     final void c(int param0, int param1) {
         if (64 > param0 &&
           param0 >= -64) {
-          this.a(121, 64 + param0);
+          this.writeByte(121, 64 + param0);
           return;
         }
         if (param0 < 16384 &&
@@ -535,7 +535,7 @@ class PacketBuffer extends IntrusiveNode {
         return (255 & this.payload[this.position - 1]) + ((255 & this.payload[-2 + this.position]) << 8) + ((255 & this.payload[this.position - 3]) << 16);
     }
 
-    final void a(int param0, int param1) {
+    final void writeByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)param1;
@@ -551,7 +551,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.payload[fieldTemp$0];
     }
 
-    private final void a(long param0, int param1) {
+    private final void writeLong56(long param0, int param1) {
         int var4 = -44 % ((-13 - param1) / 42);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
@@ -602,7 +602,7 @@ class PacketBuffer extends IntrusiveNode {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param1 < 92) {
           var5 = (byte[]) null;
-          this.a((byte[]) null, -125, -32, 77);
+          this.writeBytes((byte[]) null, -125, -32, 77);
         }
         while (this.position < param0) {
           fieldTemp$0 = this.position;
@@ -692,7 +692,7 @@ class PacketBuffer extends IntrusiveNode {
     final void c(int param0, byte param1) {
         if (0 <= param0 &&
           128 > param0) {
-          this.a(-53, param0);
+          this.writeByte(-53, param0);
           return;
         }
         if (param0 >= 0 &&

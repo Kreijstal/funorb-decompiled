@@ -250,12 +250,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param0);
-        var2.a(-28, 1);
+        var2.writeByte(-28, 1);
         if (param1 != 98) {
           return;
         }
         try {
-          var2.a(param1 + 13, 3);
+          var2.writeByte(param1 + 13, 3);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ag.UA(" + param0 + ',' + param1 + ')');
         }
@@ -722,11 +722,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var4 = 8 / ((-46 - param0) / 37);
           var3 = ma.field_a;
           var3.b((byte) -35, param2);
-          var3.a(-128, 5);
-          var3.a(123, 0);
+          var3.writeByte(-128, 5);
+          var3.writeByte(123, 0);
           var3.a(param1.field_l, (byte) -44);
-          var3.a(126, param1.field_k);
-          var3.a(111, param1.field_f);
+          var3.writeByte(126, param1.field_k);
+          var3.writeByte(111, param1.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

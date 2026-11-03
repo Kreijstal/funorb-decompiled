@@ -38,7 +38,7 @@ final class qh {
         int var14 = 0;
         int var15 = 0;
         try {
-          var6 = qp.field_w;
+          var6 = MatchingTextValidator.field_w;
           var7 = param2.field_t[param0];
           var8 = cr.a(param0, param1 ^ 30026);
           ol.field_n.c(param4, param3, param5);
@@ -46,7 +46,7 @@ final class qh {
           if (param5 < 255) {
             em.field_X.a(22 + param4, param3 + 77, param5);
           } else {
-            em.field_X.a(param4 + 22, param3 + 77, 150 + (on.a(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
+            em.field_X.drawFadedToColour(param4 + 22, param3 + 77, 150 + (on.a(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
           }
           if (hh.field_h == null) {
             hh.field_h = new Sprite(12, 32);
@@ -62,7 +62,7 @@ final class qh {
           var9 = var7 * 31 / var8;
           SoftwareRasterizer.fillRectAlpha(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
           wa.field_b[-44 + param0 + 26].c(18 + param4, param3 + 44, param5);
-          ((BitmapFont) ((Object) var6)).a(gh.field_f[param0], param4 + 4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((BitmapFont) ((Object) var6)).field_C + ((BitmapFont) ((Object) var6)).field_r);
+          ((BitmapFont) ((Object) var6)).drawParagraphAlpha(gh.field_f[param0], param4 + 4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((BitmapFont) ((Object) var6)).maxAscent + ((BitmapFont) ((Object) var6)).maxDescent);
           var10 = new Random();
           if (var7 >= var8) {
             if (hp.a((byte) -98, var10, 7) != 0) {

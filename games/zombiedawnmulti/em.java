@@ -63,13 +63,13 @@ final class em extends wk {
     final void a(int param0, dj param1) {
         try {
           super.a(param0 ^ 0, param1);
-          this.field_R.field_A = (bj) ((Object) param1);
-          this.field_T.field_A = (bj) ((Object) param1);
+          this.field_R.field_A = (WidgetListener) ((Object) param1);
+          this.field_T.field_A = (WidgetListener) ((Object) param1);
           if (param0 != 3) {
             dj var4 = (dj) null;
             this.a(-101, (dj) null);
           }
-          this.field_Q.field_A = (bj) ((Object) param1);
+          this.field_Q.field_A = (WidgetListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "em.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -256,15 +256,15 @@ final class em extends wk {
         }
     }
 
-    private em(WidgetActionListener param0, boolean param1) {
-        super(0, 0, 0, 0, (WidgetActionListener) null);
+    private em(WidgetPainter param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_R = (TextInputWidget) ((Object) new on("", (bj) null, 2));
-          this.field_T = (TextInputWidget) ((Object) new on("", (bj) null, 2));
-          this.field_Q = (TextInputWidget) ((Object) new on("", (bj) null, 4));
-          this.field_Q.listener = param0;
-          this.field_T.listener = param0;
-          this.field_R.listener = param0;
+          this.field_R = (TextInputWidget) ((Object) new on("", (WidgetListener) null, 2));
+          this.field_T = (TextInputWidget) ((Object) new on("", (WidgetListener) null, 2));
+          this.field_Q = (TextInputWidget) ((Object) new on("", (WidgetListener) null, 4));
+          this.field_Q.painter = param0;
+          this.field_T.painter = param0;
+          this.field_R.painter = param0;
           this.field_Z = param1 ? true : false;
           if (!this.field_Z) {
             this.b((byte) 111, this.field_R);
@@ -279,7 +279,7 @@ final class em extends wk {
         }
     }
 
-    em(WidgetActionListener param0, boolean param1, int param2, int param3, int param4, int param5) {
+    em(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.setWidgetBounds(param2, param3, 28972, param4, param5);
@@ -326,7 +326,7 @@ final class em extends wk {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(gf.a(param1, true, var5), "_self");
+              param1.getAppletContext().showDocument(DebouncedValidationProvider.a(param1, true, var5), "_self");
               if (param0) {
                 field_bb = 102;
               }

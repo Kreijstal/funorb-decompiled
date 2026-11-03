@@ -50,7 +50,7 @@ final class fa extends UiComponent {
         this.a(-11838, param1);
         if (null != this.field_Sb) {
           this.field_Sb.field_wb = this.field_Nb.toString();
-          this.field_Sb.field_x = (this.field_zb - this.field_Sb.field_yb.a(this.field_Sb.field_wb)) / 2;
+          this.field_Sb.field_x = (this.field_zb - this.field_Sb.field_yb.textWidth(this.field_Sb.field_wb)) / 2;
           this.field_Sb.field_zb = this.field_zb - this.field_Sb.field_x;
           if (this.field_Hb != null &&
             this.field_Hb.field_T != 0) {
@@ -363,15 +363,15 @@ final class fa extends UiComponent {
               discarded$0 = this.field_Nb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_yb.a(mn.field_q);
+            var17 = param6.field_yb.textWidth(mn.field_q);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_yb.a(ho.field_p);
+            var17Lifetime2 = param6.field_yb.textWidth(ho.field_p);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_yb.a(ki.field_p);
+            var17Lifetime3 = param6.field_yb.textWidth(ki.field_p);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -450,7 +450,7 @@ final class fa extends UiComponent {
             this.field_Rb.field_ab = tg.a(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 30);
             var23 = 13 + (13 + var19);
             var24 = var22 + 24 + var17Lifetime5 + 10;
-            var25 = qp.a(param0, (byte) 109, var23, param2);
+            var25 = MatchingTextValidator.a(param0, (byte) 109, var23, param2);
             var26 = IntrusiveNode.a(true, param1, param3, var24);
             this.setBounds(var24, var26, var23, var25, -3344);
             return;
@@ -461,14 +461,14 @@ final class fa extends UiComponent {
           this.field_Rb.a((byte) 50, this.field_Vb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Vb.field_yb.b(this.field_Vb.field_wb, var15_int);
+          var17Lifetime1 = this.field_Vb.field_yb.countWrappedLines(this.field_Vb.field_wb, var15_int);
           this.field_Vb.setBounds(var17Lifetime1 * jk.field_f, var16Lifetime1, var15_int, 13, -3344);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * jk.field_f;
           this.field_Rb.setBounds(10 + var16Lifetime1, 24, 13 + (var15_int + 13), 0, -3344);
           this.field_Rb.field_ab = tg.a(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 92);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = qp.a(param0, (byte) 25, var18Lifetime1, param2);
+          var20Lifetime1 = MatchingTextValidator.a(param0, (byte) 25, var18Lifetime1, param2);
           var21Lifetime1 = IntrusiveNode.a(true, param1, param3, var19Lifetime1);
           this.setBounds(var19Lifetime1, var21Lifetime1, var18Lifetime1, var20Lifetime1, -3344);
           return;
@@ -536,7 +536,7 @@ final class fa extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           param3 += 8;
-          var6_int = param2.field_yb.a(param2.field_wb, -(2 * param2.field_V) + param1, param2.field_J);
+          var6_int = param2.field_yb.measureWrappedHeight(param2.field_wb, -(2 * param2.field_V) + param1, param2.field_J);
           param2.setBounds(var6_int, param3, param1, 0, -3344);
           param3 = param3 + (0 + var6_int);
           if (param4 != -55) {

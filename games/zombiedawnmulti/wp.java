@@ -31,7 +31,7 @@ final class wp {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            hd.a(var1, param0 + 10995);
+            EmailAvailabilityValidator.a(var1, param0 + 10995);
             ma.field_a.e(param0 + 11021, var1.position - var2);
           }
           return;
@@ -86,8 +86,8 @@ final class wp {
         we var1Lifetime1;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          rm.field_b.a();
-          CipherPacketBuffer.field_u.a();
+          rm.field_b.service();
+          CipherPacketBuffer.field_u.service();
           mn.field_p = mn.field_p - 1;
           if (mn.field_p == 0) {
             mn.field_p = 200;

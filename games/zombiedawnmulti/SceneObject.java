@@ -28,7 +28,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           var1 = fd.field_M.c(49);
           while (var1 instanceof wj) {
             var2 = var1.previous;
-            if (((wj) (var1)).field_m.k()) {
+            if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
               var1.unlink(true);
             }
             var1 = var2;
@@ -36,7 +36,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           var1 = qo.field_q.c(param0 ^ 68);
           while (var1 instanceof wj) {
             var2Lifetime1 = var1.previous;
-            if (((wj) (var1)).field_m.k()) {
+            if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
               var1.unlink(true);
             }
             var1 = var2Lifetime1;
@@ -44,7 +44,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           var1 = jp.field_c.c(80);
           while (var1 instanceof wj) {
             var2Lifetime2 = var1.previous;
-            if (((wj) (var1)).field_m.k()) {
+            if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
               var1.unlink(true);
             }
             var1 = var2Lifetime2;

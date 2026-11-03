@@ -116,14 +116,14 @@ final class mo extends UiComponent {
 
     final static void a(int param0, PacketBuffer param1, int param2, int param3, byte param4) {
         try {
-          param1.a(-120, 12);
+          param1.writeByte(-120, 12);
           param1.a(17, (byte) -56);
           if (param4 != -124) {
             field_Gb = 73L;
           }
           param1.a(param0, (byte) -70);
           param1.a(param3, (byte) -42);
-          param1.a(-118, param2);
+          param1.writeByte(-118, param2);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "mo.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -213,22 +213,22 @@ final class mo extends UiComponent {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param4 <= param2) {
           if (param2 < param6) {
-            ld.a(-12628, param6, param2, param5, param3, param4, param0, SoftwareRasterizer.field_i, param1);
+            ld.a(-12628, param6, param2, param5, param3, param4, param0, SoftwareRasterizer.pixels, param1);
           } else {
             if (param4 < param6) {
-              ld.a(-12628, param2, param6, param0, param3, param4, param5, SoftwareRasterizer.field_i, param1);
+              ld.a(-12628, param2, param6, param0, param3, param4, param5, SoftwareRasterizer.pixels, param1);
             } else {
-              ld.a(-12628, param2, param4, param0, param5, param6, param3, SoftwareRasterizer.field_i, param1);
+              ld.a(-12628, param2, param4, param0, param5, param6, param3, SoftwareRasterizer.pixels, param1);
             }
           }
         } else {
           if (param4 < param6) {
-            ld.a(-12628, param6, param4, param5, param0, param2, param3, SoftwareRasterizer.field_i, param1);
+            ld.a(-12628, param6, param4, param5, param0, param2, param3, SoftwareRasterizer.pixels, param1);
           } else {
             if (param6 > param2) {
-              ld.a(-12628, param4, param6, param3, param0, param2, param5, SoftwareRasterizer.field_i, param1);
+              ld.a(-12628, param4, param6, param3, param0, param2, param5, SoftwareRasterizer.pixels, param1);
             } else {
-              ld.a(-12628, param4, param2, param3, param5, param6, param0, SoftwareRasterizer.field_i, param1);
+              ld.a(-12628, param4, param2, param3, param5, param6, param0, SoftwareRasterizer.pixels, param1);
             }
           }
         }

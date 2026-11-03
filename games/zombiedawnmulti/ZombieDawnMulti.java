@@ -100,7 +100,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             field_L = (Sprite[][]) null;
           }
           if (n.a((byte) -50)) {
-            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             sc.a(0);
             var3 = iq.a(45);
             var4 = 0;
@@ -133,7 +133,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           if (0 != er.field_i) {
             var3_intLifetime1 = gk.field_b * 256 / 32;
             if (0 < var3_intLifetime1) {
-              SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, 0, var3_intLifetime1);
+              SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var3_intLifetime1);
             }
           }
           boolean decompiledSharedTail0 = (!(cq.a(15000)) ||
@@ -145,12 +145,12 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             } else {
               stackIn_95_1 = ro.field_L;
             }
-            qp.a(stackIn_94_0, stackIn_95_1);
+            MatchingTextValidator.a(stackIn_94_0, stackIn_95_1);
             decompiledSharedTail0 = (var7 != 0);
           }
           if ((decompiledSharedTail0) && (GameCharacter.k((byte) 113) &&
             !n.a((byte) -39))) {
-            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             oe.a(oi.field_h[0].width, oi.field_h[0].height, oi.field_h, (byte) -21);
           }
           if (kj.field_q >= 2 &&
@@ -185,9 +185,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               }
             }
             if (decompiledFrameCompleted0) {
-              qp.field_w.c(this.field_J.toString(), 5, 20, 16777215, 1);
+              MatchingTextValidator.field_w.c(this.field_J.toString(), 5, 20, 16777215, 1);
             }
-            qp.field_w.c(this.field_G.toString(), 5, 35, 16777215, 1);
+            MatchingTextValidator.field_w.c(this.field_G.toString(), 5, 35, 16777215, 1);
           }
           t.a(false, 0, (java.awt.Canvas) (var2), 0);
           return;
@@ -320,7 +320,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             if (ji.field_c &&
               !gh.field_g &&
               !vo.field_q) {
-              if (re.field_b &&
+              if (ValidationState.field_b &&
                 hh.field_b &&
                 sq.field_N) {
                 var3_int = 0;
@@ -333,14 +333,14 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                 af.field_e.update((byte) 125, var4 != 0);
               }
               if (hh.field_b) {
-                if (re.field_b) {
-                  ia.a(320, 180, var4 != 0, 0);
+                if (ValidationState.field_b) {
+                  PasswordValidator.a(320, 180, var4 != 0, 0);
                 }
                 np.field_m.update((byte) 119, var4 != 0);
               }
               while (ba.c(-1)) {
                 if (iq.field_f) {
-                  if (re.field_b &&
+                  if (ValidationState.field_b &&
                     hh.field_b) {
                     if (FightEvent.a(13, -23936, 15, 12)) {
                       continue;
@@ -686,7 +686,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     bi.field_e = true;
                     sp.field_g = 1;
                     IntrusiveDequeCursor.field_k = true;
-                    if (re.field_b) {
+                    if (ValidationState.field_b) {
                       gk.a((byte) 16);
                     }
                   }
@@ -766,7 +766,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     wp.field_h = var9;
                     np.field_m = var9;
                     wg.b((byte) 68);
-                    re.field_b = true;
+                    ValidationState.field_b = true;
                   }
                   sp.field_g = -7;
                   vo.field_q = false;
@@ -787,7 +787,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     hh.field_b = false;
                     cp.field_K = false;
                     sp.field_g = -2;
-                    if (re.field_b) {
+                    if (ValidationState.field_b) {
                       gk.a((byte) 16);
                     }
                     GameScreen.field_bb = false;
@@ -849,9 +849,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                       var4++;
                     }
                     var4 = s.field_e.readUnsignedShort((byte) 69);
-                    if (re.field_b) {
+                    if (ValidationState.field_b) {
                       gk.a((byte) 16);
-                      re.field_b = false;
+                      ValidationState.field_b = false;
                     }
                     wp.field_h.a(var2_int, var4, (byte) 121, var3_ref_int__);
                     continue;
@@ -968,9 +968,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
                     cp.field_K = false;
                     hh.field_b = false;
                     ji.field_c = false;
-                    if (re.field_b) {
+                    if (ValidationState.field_b) {
                       gk.a((byte) 16);
-                      re.field_b = false;
+                      ValidationState.field_b = false;
                     }
                   }
                   gh.field_g = false;
@@ -1360,7 +1360,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             null != ii.field_a) {
             qm.a(85.0f, 80, bn.field_c);
             this.drawFrame(-30169);
-            qp.field_w = pj.a(al.field_eb, 4, he.field_f, "", "arialish12");
+            MatchingTextValidator.field_w = pj.a(al.field_eb, 4, he.field_f, "", "arialish12");
             if (!he.field_a) {
               InflaterDecompressor.a("locked", al.field_eb, (byte) 19, "basic");
               WhirlpoolHasher.field_l = InflaterDecompressor.a("unachieved", al.field_eb, (byte) 19, "basic")[0];
@@ -1466,7 +1466,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               wq.a(-127, "", ii.field_a, "scrollbar_bar_h");
               wq.a(79, "", ii.field_a, "scrollbar_bar_v");
               vl.field_f = nj.field_d.d();
-              SimEntity.field_J = PhaseChangeEvent.field_k.c();
+              SimEntity.field_J = PhaseChangeEvent.field_k.copy();
               hp.field_t = kj.field_m.d();
               vl.field_f.b();
               SimEntity.field_J.g();
@@ -1551,9 +1551,9 @@ public final class ZombieDawnMulti extends NetworkGameClient {
             InfectionEvent.field_j = fl.a("", "frameh", ii.field_a, 11091);
             SimHuman.field_fb = fl.a("", "framev", ii.field_a, 11091);
             rp.field_r = pb.a("", ii.field_a, -256, "framecorners");
-            tb.field_s = SimHuman.field_fb.f();
-            vo.field_p = InfectionEvent.field_j.c();
-            vo.field_p.i();
+            tb.field_s = SimHuman.field_fb.copyFlippedHorizontal();
+            vo.field_p = InfectionEvent.field_j.copy();
+            vo.field_p.flipVertical();
             md.field_N = pb.a("", ii.field_a, -256, "instructions_controls");
             IntrusiveDequeCursor.field_b = pb.a("", ii.field_a, -256, "instructions_survivors");
             tf.field_Hb = pb.a("", ii.field_a, -256, "instructions_zombies");
@@ -1654,7 +1654,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         int var5 = 0;
         var5 = field_E ? 1 : 0;
         try {
-          if (!ia.field_r) {
+          if (!PasswordValidator.field_r) {
             if (ke.field_g == null) {
               ke.field_g = aa.b(-19300, 4);
             }
@@ -1674,7 +1674,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               var4 = 0;
               do {
                 if (var4 >= 8) {
-                  ia.field_r = true;
+                  PasswordValidator.field_r = true;
                   break;
                 }
                 var2[var4] = tq.b(var2[var4], ~var3[var4]);
@@ -1704,7 +1704,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               GameScreen.field_bb = true;
             }
           }
-          if (ia.field_r &&
+          if (PasswordValidator.field_r &&
             GameScreen.field_bb) {
             ub.m(116);
             ii.a(103);
@@ -2073,14 +2073,14 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           WidgetStyleLayer.a(53);
           td.a((byte) 94);
           ha.a(21342);
-          re.a(89);
-          gf.a(true);
+          ValidationState.a(89);
+          DebouncedValidationProvider.a(true);
           UsernameAvailabilityValidator.h(66);
-          ia.h(0);
-          hm.b(false);
-          hd.h(11702);
-          bp.h(-3);
-          qp.h(1);
+          PasswordValidator.releaseStatics(0);
+          EmailValidator.b(false);
+          EmailAvailabilityValidator.h(11702);
+          AgeValidator.releaseStatics(-3);
+          MatchingTextValidator.releaseStatics(1);
           lf.a(0);
           wi.a(0);
           ma.a(64);

@@ -37,7 +37,7 @@ class ne extends ie implements in {
           var7 = new wd(this, this.field_zb, param0);
           if (5 != param2) {
             if (param2 == 256) {
-              var7.a(ci.field_g, -76, (bj) (this));
+              var7.a(ci.field_g, -76, (WidgetListener) (this));
             } else {
               stackIn_11_0 = var7;
               if (!this.field_wb) {
@@ -61,7 +61,7 @@ class ne extends ie implements in {
                   var5 = -3 % ((-15 - param1) / 46);
                   return;
                 }
-                var7.a(RasterSnapshot.field_l, -74, (bj) (this));
+                var7.a(RasterSnapshot.field_l, -74, (WidgetListener) (this));
               } else {
                 var7.a(wm.field_S, 9, true);
               }

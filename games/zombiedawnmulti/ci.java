@@ -51,10 +51,10 @@ final class ci {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         String var6 = "(" + PacketBuffer.field_k + " " + jp.field_e + " " + ij.field_d + ") " + PortalEntryEvent.field_i;
         String var1 = var6;
-        if (param0 >= hd.field_q) {
+        if (param0 >= EmailAvailabilityValidator.field_q) {
         } else {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < hd.field_q; var2++) {
+          for (var2 = 0; var2 < EmailAvailabilityValidator.field_q; var2++) {
             var7 = var1 + ' ';
             var3 = 255 & s.field_e.payload[var2];
             var4 = var3 >> 4;
@@ -126,8 +126,8 @@ final class ci {
         UiComponent var15 = null;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          dm.field_Qb = SoftwareRasterizer.field_l;
-          kp.field_l = SoftwareRasterizer.field_b;
+          dm.field_Qb = SoftwareRasterizer.height;
+          kp.field_l = SoftwareRasterizer.width;
           if (param0) {
             stackIn_4_0 = sq.field_Q;
           } else {
@@ -247,7 +247,7 @@ final class ci {
               }
             }
           }
-          qf.field_b.setBounds(-10 + (-4 + SoftwareRasterizer.field_l - 130), 10, 360, SoftwareRasterizer.field_b - 360 >> 1, -3344);
+          qf.field_b.setBounds(-10 + (-4 + SoftwareRasterizer.height - 130), 10, 360, SoftwareRasterizer.width - 360 >> 1, -3344);
           mq.field_l.setBounds(24, 0, qf.field_b.field_zb, 0, -3344);
           vb.field_c.setBounds(-24 + qf.field_b.field_z, 24, qf.field_b.field_zb, 0, -3344);
           vb.field_c.field_ab = tg.a(1, vb.field_c.field_z, 8421504, 3, 11579568, 35);

@@ -146,13 +146,13 @@ final class no extends UiComponent {
           var2_int = 1;
           incrementValue$0 = var2_int;
           var2_int++;
-          var3 = re.a(param1, incrementValue$0, (byte) 86);
+          var3 = ValidationState.a(param1, incrementValue$0, (byte) 86);
           incrementValue$1 = var2_int;
           var2_int++;
-          var4 = re.a(param1, incrementValue$1, (byte) 99);
+          var4 = ValidationState.a(param1, incrementValue$1, (byte) 99);
           incrementValue$2 = var2_int;
           var2_int++;
-          var5 = re.a(param1, incrementValue$2, (byte) 113);
+          var5 = ValidationState.a(param1, incrementValue$2, (byte) 113);
           var23 = new int[4];
           var19 = var23;
           var6 = var19;
@@ -162,41 +162,41 @@ final class no extends UiComponent {
           for (var8 = 0; var8 < 4; var8++) {
             incrementValue$10 = var2_int;
             var2_int++;
-            var6[var8] = re.a(param1, incrementValue$10, (byte) 56);
+            var6[var8] = ValidationState.a(param1, incrementValue$10, (byte) 56);
             incrementValue$11 = var2_int;
             var2_int++;
-            var7[var8] = re.a(param1, incrementValue$11, (byte) 88);
+            var7[var8] = ValidationState.a(param1, incrementValue$11, (byte) 88);
           }
           incrementValue$3 = var2_int;
           var2_int++;
-          var8Lifetime1 = re.a(param1, incrementValue$3, (byte) 75);
+          var8Lifetime1 = ValidationState.a(param1, incrementValue$3, (byte) 75);
           incrementValue$4 = var2_int;
           var2_int++;
-          var9 = re.a(param1, incrementValue$4, (byte) 112);
+          var9 = ValidationState.a(param1, incrementValue$4, (byte) 112);
           incrementValue$5 = var2_int;
           var2_int++;
-          var10 = re.a(param1, incrementValue$5, (byte) 113);
+          var10 = ValidationState.a(param1, incrementValue$5, (byte) 113);
           incrementValue$6 = var2_int;
           var2_int++;
-          var11 = re.a(param1, incrementValue$6, (byte) 67);
+          var11 = ValidationState.a(param1, incrementValue$6, (byte) 67);
           var26 = new int[var11][var10];
           for (var13 = 0; var13 < var11; var13++) {
             for (var14_int = 0; var14_int < var10; var14_int++) {
               incrementValue$9 = var2_int;
               var2_int++;
-              var26[var13][var14_int] = re.a(param1, incrementValue$9, (byte) 71);
+              var26[var13][var14_int] = ValidationState.a(param1, incrementValue$9, (byte) 71);
             }
           }
           incrementValue$7 = var2_int;
           var2_int++;
-          var13Lifetime1 = re.a(param1, incrementValue$7, (byte) 59);
+          var13Lifetime1 = ValidationState.a(param1, incrementValue$7, (byte) 59);
           var22 = new int[var13Lifetime1 * 4];
           var18 = var22;
           var14 = var18;
           for (var15 = 0; var15 < 4 * var13Lifetime1; var15++) {
             incrementValue$8 = var2_int;
             var2_int++;
-            var14[var15] = re.a(param1, incrementValue$8, (byte) 62);
+            var14[var15] = ValidationState.a(param1, incrementValue$8, (byte) 62);
           }
           if (param0 != 104) {
             field_Hb = (Sprite[][]) null;
@@ -284,7 +284,7 @@ final class no extends UiComponent {
           for (var12 = 0; lj.field_h.length > var12; var12++) {
             var13 = new UiComponent(0L, param3, cm.field_c[var12]);
             var14 = new UiComponent(0L, param3, lj.field_h[var12]);
-            var15 = param3.field_yb.a(lj.field_h[var12]);
+            var15 = param3.field_yb.textWidth(lj.field_h[var12]);
             var13.setBounds(15, var10, 65, 20, -3344);
             if (var11 < var15) {
               var11 = var15;

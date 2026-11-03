@@ -587,8 +587,8 @@ final class GameCharacter extends UnitView {
               if (!ei.field_f) {
               }
               if (null != this.field_U) {
-                if (!this.field_U.k()) {
-                  this.field_U.h(sd.b(-49, var8, var7));
+                if (!this.field_U.isSamplePositionOutOfRange()) {
+                  this.field_U.setVolume(sd.b(-49, var8, var7));
                   this.field_U.f(pb.a(var8, var7, false));
                 } else {
                   this.field_U = null;
@@ -620,7 +620,7 @@ final class GameCharacter extends UnitView {
                 }
                 g.c(bb.field_n);
                 SoftwareRasterizer.clear();
-                SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_l / 2, 1);
+                SoftwareRasterizer.fillCircle(SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, 1);
                 if (0 >= this.field_yb) {
                   var14_ref_int__ = nk.a(1052800, 455739624, 8454143);
                   var15 = 1073741824 + this.objectId - PowerupEvent.field_m;
@@ -770,7 +770,7 @@ final class GameCharacter extends UnitView {
                 SoftwareRasterizer.clear();
                 var20_ref_ja.g(3, 3);
                 no.field_Hb[var16][var19].g(var21, var22);
-                var23 = SoftwareRasterizer.field_i;
+                var23 = SoftwareRasterizer.pixels;
                 var24 = 0;
                 while (var24 < var23.length) {
                   var25 = var23[var24];
@@ -868,8 +868,8 @@ final class GameCharacter extends UnitView {
                   if (!(param1.zoom > 1.25f)) {
                     ig.field_d[0].g(var7, var8 + 3);
                     if ((0 != this.field_Kb)) {
-                      qp.field_w.a((char)(48 + this.field_Kb), 1 + (var7 - (-ig.field_d[0].width - 9)), var8 + 7 + ig.field_d[0].height + 1, 0);
-                      qp.field_w.a((char)(48 + this.field_Kb), 9 + var7 + ig.field_d[0].width, 7 + (var8 + ig.field_d[0].height), 16777215);
+                      MatchingTextValidator.field_w.a((char)(48 + this.field_Kb), 1 + (var7 - (-ig.field_d[0].width - 9)), var8 + 7 + ig.field_d[0].height + 1, 0);
+                      MatchingTextValidator.field_w.a((char)(48 + this.field_Kb), 9 + var7 + ig.field_d[0].width, 7 + (var8 + ig.field_d[0].height), 16777215);
                     }
                     decompiledFrameRemainder5 = false;
                   }
@@ -1232,11 +1232,11 @@ final class GameCharacter extends UnitView {
               if (this.facing != 1) {
                 wq.field_c[var8][var9].g(param0, param1);
                 if (var10 != 0) {
-                  wq.field_c[var8][var9].b(param0, param1);
+                  wq.field_c[var8][var9].drawHorizontalFlip(param0, param1);
                   wq.field_c[var8][var9].c(param0, param1, param2);
                 }
               } else {
-                wq.field_c[var8][var9].b(param0, param1);
+                wq.field_c[var8][var9].drawHorizontalFlip(param0, param1);
                 if (var10 != 0) {
                   wq.field_c[var8][var9].c(param0, param1, param2);
                 }

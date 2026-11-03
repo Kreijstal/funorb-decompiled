@@ -57,7 +57,7 @@ final class mb extends IntrusiveNode {
         int var6Lifetime1;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5_int = param0.a(param2);
+          var5_int = param0.textWidth(param2);
           if (var5_int <= param4 &&
             param2.indexOf("<br>") == -1) {
             param3[0] = param2;
@@ -78,7 +78,7 @@ final class mb extends IntrusiveNode {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param2.substring(var7, 1 + var9).trim();
-              var12 = param0.a(var11);
+              var12 = param0.textWidth(var11);
               if (var12 >= param4) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

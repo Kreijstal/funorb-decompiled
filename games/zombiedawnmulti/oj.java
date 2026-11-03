@@ -11,7 +11,7 @@ final class oj extends ArrayWidgetGroup implements in {
     static String field_O;
 
     public final void a(int param0, int param1, ButtonWidget param2, int param3, int param4) {
-        if (this.field_P.a((byte) 78).d(117) != db.field_b) {
+        if (this.field_P.a((byte) 78).getDebouncedValidationState(117) != db.field_b) {
           return;
         }
         try {
@@ -32,16 +32,16 @@ final class oj extends ArrayWidgetGroup implements in {
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         super.renderWidget(param0, param1, param2, param3);
-        cp.field_H.c(DualLinkNode.field_m, 4 + param3 + this.field_y, 4 + param1 - (-this.field_i - cp.field_H.field_C), 16777215, -1);
+        cp.field_H.c(DualLinkNode.field_m, 4 + param3 + this.field_y, 4 + param1 - (-this.field_i - cp.field_H.maxAscent), 16777215, -1);
     }
 
     oj(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (WidgetActionListener) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_P = new em(new tb(10000536), tm.field_b, 0, 0, 140, 25);
         this.field_P.a(3, new dj());
-        this.field_B = new ButtonWidget(ub.field_xb, (bj) (this));
+        this.field_B = new ButtonWidget(ub.field_xb, (WidgetListener) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_P), (UiWidget) ((Object) this.field_B)};
-        this.field_B.listener = (WidgetActionListener) ((Object) new oq());
+        this.field_B.painter = (WidgetPainter) ((Object) new oq());
         this.e(-1);
     }
 
@@ -67,7 +67,7 @@ final class oj extends ArrayWidgetGroup implements in {
     final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_B.field_F = this.field_P.a((byte) 126).d(53) == db.field_b ? true : false;
+          this.field_B.field_F = this.field_P.a((byte) 126).getDebouncedValidationState(53) == db.field_b ? true : false;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "oj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -38,13 +38,13 @@ final class HuffmanCodec {
         SoftwareRasterizer.clear();
         GameSimulation.a((byte) 125);
         if (var5 < 256) {
-          SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
         ql.a(true);
         if (f.field_a < 150) {
-          m.field_w.f(var3, var4);
+          m.field_w.drawHalfSize(var3, var4);
         } else {
-          qp.field_v.c(15 + var3, var4 + 10, var5);
+          MatchingTextValidator.field_v.c(15 + var3, var4 + 10, var5);
         }
         if (param2 < 70) {
           return;
@@ -55,13 +55,13 @@ final class HuffmanCodec {
           if (var6 >= 20) {
             if (30 <= var6) {
               var7 = 256 * (50 - var6) / 20;
-              kk.field_r.e(var3, var4, var7);
+              kk.field_r.drawAdditive(var3, var4, var7);
             } else {
-              kk.field_r.e(var3, var4, 256);
+              kk.field_r.drawAdditive(var3, var4, 256);
             }
           } else {
             var7 = 256 * var6 / 20;
-            kk.field_r.e(var3, var4, var7);
+            kk.field_r.drawAdditive(var3, var4, var7);
           }
         }
         var6Lifetime1 = f.field_a - 140;
@@ -215,13 +215,13 @@ final class HuffmanCodec {
           SoftwareRasterizer.clear();
           f.field_a = 0;
           GameSimulation.a((byte) 120);
-          var2 = var1.c();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.f(-2, -2, 16777215);
-            SoftwareRasterizer.i(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          kk.field_r.a();
-          var1.f(0, 0);
+          kk.field_r.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           if (param0 != -1741) {
             field_f = (String) null;
           }

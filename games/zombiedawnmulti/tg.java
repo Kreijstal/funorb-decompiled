@@ -154,35 +154,35 @@ final class tg implements Runnable {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var16 = null;
-        int[] var18 = SoftwareRasterizer.field_i;
+        int[] var18 = SoftwareRasterizer.pixels;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = SoftwareRasterizer.field_b;
-        int var8 = SoftwareRasterizer.field_l;
+        int var7 = SoftwareRasterizer.width;
+        int var8 = SoftwareRasterizer.height;
         Sprite var9 = new Sprite(param3, -(param3 * 2) + param1);
-        var9.a();
+        var9.bindAsRenderTarget();
         SoftwareRasterizer.fillRectGradient(0, 0, param3, -(param3 * 2) + param1, param4, param2);
         Sprite var10 = new Sprite(param3, param3);
         if (param5 <= 25) {
           field_d = (UiComponent) null;
         }
-        var10.a();
+        var10.bindAsRenderTarget();
         SoftwareRasterizer.fillRect(0, 0, param3, param3, param4);
         Sprite var11 = new Sprite(16, param3);
-        var11.a();
+        var11.bindAsRenderTarget();
         SoftwareRasterizer.fillRect(0, 0, 16, param3, param4);
         Sprite var12 = new Sprite(param3, param3);
-        var12.a();
+        var12.bindAsRenderTarget();
         SoftwareRasterizer.fillRect(0, 0, param3, param3, param2);
         Sprite var13 = new Sprite(16, param3);
-        var13.a();
+        var13.bindAsRenderTarget();
         SoftwareRasterizer.fillRect(0, 0, 16, param3, param2);
         Object var14 = null;
         if (param0 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
-          var16.a();
+          var16.bindAsRenderTarget();
           SoftwareRasterizer.fillRect(0, 0, 16, 16, param0);
         }
         SoftwareRasterizer.setTarget(var18, var7, var8);
@@ -439,7 +439,7 @@ final class tg implements Runnable {
               var10Lifetime1 = (PowerupEvent.field_m + 3) / var7Lifetime2 % var9 + var8;
               var20 = nk.a(no.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
               og.h((byte) 119);
-              var20.b(var18.field_zb / 4 + var4, var5);
+              var20.drawHorizontalFlip(var18.field_zb / 4 + var4, var5);
               SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
               var12 = 1;
               var6Lifetime3 = (int)(1.1 * (double)PowerupEvent.field_m) / 64 % 10;
@@ -474,7 +474,7 @@ final class tg implements Runnable {
               }
               ((Sprite) (Object) stackIn_10_0).c(stackIn_10_1, stackIn_10_2, stackIn_11_3);
               if (400 > PowerupEvent.field_m % 1000) {
-                qp.field_w.a(SpriteState.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
+                MatchingTextValidator.field_w.drawParagraph(SpriteState.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
                 SoftwareRasterizer.resetClip();
                 tm.a(vk.i((byte) -39), false);
                 IntrusiveNode.a(vk.i((byte) -39), 2);
@@ -483,7 +483,7 @@ final class tg implements Runnable {
               }
               else {
                 if ((500 + PowerupEvent.field_m) % 1000 < 400) {
-                  qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
+                  MatchingTextValidator.field_w.drawParagraph(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
                   SoftwareRasterizer.resetClip();
                   tm.a(vk.i((byte) -39), false);
                   IntrusiveNode.a(vk.i((byte) -39), 2);
@@ -518,7 +518,7 @@ final class tg implements Runnable {
           var4Lifetime1 = 10;
           var5Lifetime1 = 10;
           var6Lifetime1 = var17_ref.field_g;
-          var7Lifetime1 = pb.field_e.a(dg.field_G[var6Lifetime1]) + 70;
+          var7Lifetime1 = pb.field_e.textWidth(dg.field_G[var6Lifetime1]) + 70;
           var8Lifetime1 = er.field_k;
           if (var8Lifetime1 < 32 ||
             var8Lifetime1 > 303) {
@@ -529,7 +529,7 @@ final class tg implements Runnable {
           }
           SoftwareRasterizer.fillRoundedRectAlpha(var4Lifetime1, var5Lifetime1, var7Lifetime1, 40, 6, 0, 160);
           SoftwareRasterizer.drawRoundedRect(var4Lifetime1, var5Lifetime1, var7Lifetime1, 40, 6, 7829367);
-          la.field_l[var6Lifetime1].b(var4Lifetime1 + 9, var5Lifetime1 + 5);
+          la.field_l[var6Lifetime1].drawQuarterSize(var4Lifetime1 + 9, var5Lifetime1 + 5);
           pb.field_e.c(dg.field_G[var6Lifetime1], var4Lifetime1 + 50, 25 + var5Lifetime1, 16777215, 3355443);
         }
     }
@@ -544,7 +544,7 @@ final class tg implements Runnable {
             for (var1_int = 0; var1_int < 2; var1_int++) {
               var2 = this.field_f[var1_int];
               if (var2 != null) {
-                var2.a();
+                var2.service();
               }
             }
             vd.a(false, 10L);
@@ -702,7 +702,7 @@ final class tg implements Runnable {
         var1 = new Sprite[qc.field_v];
         for (var2 = param0; qc.field_v > var2; var2++) {
           var3 = vj.field_p[var2] * oq.field_w[var2];
-          var21 = qp.field_t[var2];
+          var21 = MatchingTextValidator.field_t[var2];
           if (!FullscreenFocusCanvas.field_h[var2]) {
             var10 = new int[var3];
             var22 = var10;

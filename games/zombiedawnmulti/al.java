@@ -139,8 +139,8 @@ abstract class al extends df {
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (SoftwareRasterizer.field_e <= var8 &&
-            SoftwareRasterizer.field_d > var8) {
+          if (SoftwareRasterizer.clipTop <= var8 &&
+            SoftwareRasterizer.clipBottom > var8) {
             var9 = (-var5 + var6) * var7 / var4 + var5;
             var10 = 0;
             var11 = this.field_n;
@@ -153,7 +153,7 @@ abstract class al extends df {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  SoftwareRasterizer.field_i[param1 + SoftwareRasterizer.field_b * var8 + var10] = var13;
+                  SoftwareRasterizer.pixels[param1 + SoftwareRasterizer.width * var8 + var10] = var13;
                 }
                 var10++;
               }
@@ -169,7 +169,7 @@ abstract class al extends df {
                   } else {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    SoftwareRasterizer.field_i[var11 + (param1 + var8 * SoftwareRasterizer.field_b)] = var15;
+                    SoftwareRasterizer.pixels[var11 + (param1 + var8 * SoftwareRasterizer.width)] = var15;
                   }
                   var11++;
                   continue;

@@ -49,8 +49,8 @@ final class bc {
 
     final static void a(byte param0) {
         iq.a((byte) -78);
-        ok.field_l = ah.field_e.a(we.field_g[12]);
-        int var1 = ah.field_e.a(we.field_g[13]);
+        ok.field_l = ah.field_e.textWidth(we.field_g[12]);
+        int var1 = ah.field_e.textWidth(we.field_g[13]);
         if (!(var1 <= ok.field_l)) {
           ok.field_l = var1;
         }
@@ -68,7 +68,7 @@ final class bc {
           return (IndexedSprite[]) null;
         }
         while (var2 < qc.field_v) {
-          var1[var2] = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], UsernameAvailabilityValidator.field_t);
+          var1[var2] = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], MatchingTextValidator.field_t[var2], UsernameAvailabilityValidator.field_t);
           var2++;
         }
         fd.h((byte) 125);

@@ -17,7 +17,7 @@ final class FightEvent extends GameEvent {
         if (param0 != -18) {
           return;
         }
-        SoftwareRasterizer.i(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+        SoftwareRasterizer.blurRectangle(4, 4, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
     }
 
     final void a(byte param0) {
@@ -52,8 +52,8 @@ final class FightEvent extends GameEvent {
           ao.field_e = param0;
           var4 = ma.field_a;
           var4.b((byte) -35, param1);
-          var4.a(-39, 3);
-          var4.a(125, 11);
+          var4.writeByte(-39, 3);
+          var4.writeByte(125, 11);
           var4.a(param0, (byte) -43);
         }
         if (param2 >= -20) {

@@ -18,7 +18,7 @@ final class ih {
           if (null == ud.field_P) {
             ud.field_P = new Sprite(512, 512);
           }
-          ud.field_P.a();
+          ud.field_P.bindAsRenderTarget();
           for (var1_int = param0; 0 < var1_int; var1_int--) {
             SoftwareRasterizer.fillCircle(256, 256, var1_int, -var1_int + 256);
           }
@@ -89,12 +89,12 @@ final class ih {
           var5.b((byte) -35, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.a(param1 ^ 112, param1);
+          var5.writeByte(param1 ^ 112, param1);
           if (null == param0.field_f) {
-            var5.a(-92, 0);
+            var5.writeByte(-92, 0);
           } else {
-            var5.a(-33, param0.field_f.length);
-            var5.a(param0.field_f, param0.field_f.length, 0, 115);
+            var5.writeByte(-33, param0.field_f.length);
+            var5.writeBytes(param0.field_f, param0.field_f.length, 0, 115);
           }
           var5.f(var4, 121);
           var5.position = var5.position - 4;
@@ -114,9 +114,9 @@ final class ih {
           int var5 = -62 / ((20 - param0) / 57);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.a(118, 1);
-          var6.a(-128, param1.field_i);
-          var6.a(-109, param1.field_f);
+          var6.writeByte(118, 1);
+          var6.writeByte(-128, param1.field_i);
+          var6.writeByte(-109, param1.field_f);
           var6.writeInt(-104, param1.field_m);
           var6.writeInt(91, param1.field_l);
           var6.writeInt(43, param1.field_g);

@@ -784,7 +784,7 @@ final class rp {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           this.field_a = 5;
-          this.field_o = new byte[hd.field_u];
+          this.field_o = new byte[EmailAvailabilityValidator.field_u];
           this.field_u = 0;
           this.b(this.field_a, -1);
           this.field_i = this.field_i & -13;

@@ -62,10 +62,10 @@ final class rj extends SceneObject {
               if (!this.field_H) {
                 cp.field_X[this.field_C].g(var3_int, var4);
               } else {
-                cp.field_X[this.field_C].a(var3_int, var4);
+                cp.field_X[this.field_C].drawVerticalFlip(var3_int, var4);
               }
             } else {
-              cp.field_X[this.field_C].b(var3_int, var4);
+              cp.field_X[this.field_C].drawHorizontalFlip(var3_int, var4);
             }
             if (param0 != -10136) {
               rj.i(-46);

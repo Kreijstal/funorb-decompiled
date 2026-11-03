@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IndexedSprite extends IndexedSpriteState {
-    byte[] field_m;
-    int[] field_l;
+    byte[] pixelIndices;
+    int[] palette;
 
     final void a() {
         int var3 = 0;
@@ -15,10 +15,10 @@ final class IndexedSprite extends IndexedSpriteState {
           for (var4 = 0; var4 < this.field_e; var4++) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_m[var4 + var3 * this.field_e];
+            var1[incrementValue$0] = this.pixelIndices[var4 + var3 * this.field_e];
           }
         }
-        this.field_m = var1;
+        this.pixelIndices = var1;
         this.field_h = this.field_a - this.field_b - this.field_h;
     }
 
@@ -28,33 +28,33 @@ final class IndexedSprite extends IndexedSpriteState {
         int var10Lifetime2;
         param0 = param0 + this.field_j;
         param1 = param1 + this.field_h;
-        int var4 = param0 + param1 * SoftwareRasterizer.field_b;
+        int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.field_b;
         int var7 = this.field_e;
-        int var8 = SoftwareRasterizer.field_b - var7;
+        int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.field_e) {
-          var10 = SoftwareRasterizer.field_e - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.field_e;
+          param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRasterizer.field_b;
+          var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > SoftwareRasterizer.field_d) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_d);
+        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.field_f) {
-          var10Lifetime1 = SoftwareRasterizer.field_f - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.field_f;
+          param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.field_g) {
-          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_g;
+        if (param0 + var7 > SoftwareRasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -63,7 +63,7 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var6 <= 0) {
             return;
           }
-          IndexedSprite.blendPaletteRowsWithAlpha(SoftwareRasterizer.field_i, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+          IndexedSprite.blendPaletteRowsWithAlpha(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -81,10 +81,10 @@ final class IndexedSprite extends IndexedSpriteState {
           for (var4 = this.field_b - 1; var4 >= 0; var4--) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_m[var3 + var4 * this.field_e];
+            var1[incrementValue$0] = this.pixelIndices[var3 + var4 * this.field_e];
           }
         }
-        this.field_m = var1;
+        this.pixelIndices = var1;
         var3Lifetime1 = this.field_h;
         this.field_h = this.field_j;
         this.field_j = this.field_a - this.field_b - var3Lifetime1;
@@ -102,33 +102,33 @@ final class IndexedSprite extends IndexedSpriteState {
         int var9Lifetime2;
         param0 = param0 + this.field_j;
         param1 = param1 + this.field_h;
-        int var3 = param0 + param1 * SoftwareRasterizer.field_b;
+        int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_b;
         int var6 = this.field_e;
-        int var7 = SoftwareRasterizer.field_b - var6;
+        int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.field_e) {
-          var9 = SoftwareRasterizer.field_e - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.field_e;
+          param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRasterizer.field_b;
+          var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.field_d) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_d);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.field_f) {
-          var9Lifetime1 = SoftwareRasterizer.field_f - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.field_f;
+          param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.field_g) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_g;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -137,7 +137,7 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var5 <= 0) {
             return;
           }
-          IndexedSprite.copyNonzeroPaletteRows(SoftwareRasterizer.field_i, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+          IndexedSprite.copyNonzeroPaletteRows(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -228,7 +228,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawQuarterSize(int param0, int param1) {
         int var9 = 0;
         int var10 = 0;
         int var16 = 0;
@@ -253,48 +253,48 @@ final class IndexedSprite extends IndexedSpriteState {
         var4 = this.field_b >> 2;
         param0 = param0 + this.field_j / 4;
         param1 = param1 + this.field_h / 4;
-        if (param0 >= SoftwareRasterizer.field_f) {
+        if (param0 >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.field_f - param0 << 2;
+          stackIn_3_0 = SoftwareRasterizer.clipLeft - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRasterizer.field_g) {
+        if (param0 + var3 <= SoftwareRasterizer.clipRight) {
           stackIn_6_0 = this.field_e - 4;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.field_g - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRasterizer.field_e) {
+        if (param1 >= SoftwareRasterizer.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.field_e - param1 << 2;
+          stackIn_9_0 = SoftwareRasterizer.clipTop - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRasterizer.field_d) {
+        if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
           stackIn_12_0 = this.field_b - 4;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.field_d - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 4) {
           for (var10 = var5; var10 <= var6; var10 += 4) {
             var11 = var9 * this.field_e + var10;
-            var12 = (param1 + (var9 >> 2)) * SoftwareRasterizer.field_b + (param0 + (var10 >> 2));
+            var12 = (param1 + (var9 >> 2)) * SoftwareRasterizer.width + (param0 + (var10 >> 2));
             var13 = 0;
             var14 = 0;
             var15 = 0;
             for (var16 = 0; var16 < 4; var16++) {
               for (var17 = 0; var17 < 4; var17++) {
-                var13Lifetime1 = this.field_l[this.field_m[var11 + var16 * this.field_e + var17] & 255];
+                var13Lifetime1 = this.palette[this.pixelIndices[var11 + var16 * this.field_e + var17] & 255];
                 if (var13Lifetime1 == 0) {
-                  var13Lifetime1 = SoftwareRasterizer.field_i[var12];
+                  var13Lifetime1 = SoftwareRasterizer.pixels[var12];
                 }
                 var14 = var14 + (var13Lifetime1 & 16711935);
                 var15 = var15 + (var13Lifetime1 & 65280);
               }
             }
-            SoftwareRasterizer.field_i[var12] = (var14 & 267390960 | var15 & 1044480) >> 4;
+            SoftwareRasterizer.pixels[var12] = (var14 & 267390960 | var15 & 1044480) >> 4;
           }
         }
     }
@@ -311,7 +311,7 @@ final class IndexedSprite extends IndexedSpriteState {
         param3 = param3 - (param1 + this.field_h);
         if (param3 >= 0 &&
           param3 < this.field_b) {
-          stackIn_11_0 = (this.field_m[param3 * this.field_e + param2] != 0);
+          stackIn_11_0 = (this.pixelIndices[param3 * this.field_e + param2] != 0);
           return stackIn_11_0;
         }
         return false;
@@ -323,33 +323,33 @@ final class IndexedSprite extends IndexedSpriteState {
         int var9Lifetime2;
         param0 = param0 + this.field_j;
         param1 = param1 + this.field_h;
-        int var3 = param0 + param1 * SoftwareRasterizer.field_b;
+        int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_b;
         int var6 = this.field_e;
-        int var7 = SoftwareRasterizer.field_b - var6;
+        int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.field_e) {
-          var9 = SoftwareRasterizer.field_e - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.field_e;
+          param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRasterizer.field_b;
+          var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.field_d) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_d);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.field_f) {
-          var9Lifetime1 = SoftwareRasterizer.field_f - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.field_f;
+          param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.field_g) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_g;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -358,7 +358,7 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var5 <= 0) {
             return;
           }
-          IndexedSprite.copyPaletteRows(SoftwareRasterizer.field_i, this.field_m, this.field_l, var4, var3, var6, var5, var7, var8);
+          IndexedSprite.copyPaletteRows(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -394,30 +394,30 @@ final class IndexedSprite extends IndexedSpriteState {
         if (var6 < var10) {
           param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
-        var13Lifetime2 = param0 + param1 * SoftwareRasterizer.field_b;
-        int var14 = SoftwareRasterizer.field_b - param2;
-        if (param1 + param3 > SoftwareRasterizer.field_d) {
-          param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_d);
+        var13Lifetime2 = param0 + param1 * SoftwareRasterizer.width;
+        int var14 = SoftwareRasterizer.width - param2;
+        if (param1 + param3 > SoftwareRasterizer.clipBottom) {
+          param3 = param3 - (param1 + param3 - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.field_e) {
-          var15 = SoftwareRasterizer.field_e - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var15 = SoftwareRasterizer.clipTop - param1;
           param3 = param3 - var15;
-          var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.field_b;
+          var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.width;
           var8 = var8 + var12 * var15;
         }
-        if (param0 + param2 > SoftwareRasterizer.field_g) {
-          var15Lifetime1 = param0 + param2 - SoftwareRasterizer.field_g;
+        if (param0 + param2 > SoftwareRasterizer.clipRight) {
+          var15Lifetime1 = param0 + param2 - SoftwareRasterizer.clipRight;
           param2 = param2 - var15Lifetime1;
           var14 = var14 + var15Lifetime1;
         }
-        if (param0 < SoftwareRasterizer.field_f) {
-          var15Lifetime2 = SoftwareRasterizer.field_f - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var15Lifetime2 = SoftwareRasterizer.clipLeft - param0;
           param2 = param2 - var15Lifetime2;
           var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        IndexedSprite.b(SoftwareRasterizer.field_i, this.field_m, this.field_l, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        IndexedSprite.b(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void b() {
@@ -433,10 +433,10 @@ final class IndexedSprite extends IndexedSpriteState {
           for (var4 = 0; var4 < this.field_b; var4++) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_m[var3 + var4 * this.field_e];
+            var1[incrementValue$0] = this.pixelIndices[var3 + var4 * this.field_e];
           }
         }
-        this.field_m = var1;
+        this.pixelIndices = var1;
         var3Lifetime1 = this.field_j;
         this.field_j = this.field_h;
         this.field_h = this.field_f - this.field_e - var3Lifetime1;
@@ -450,27 +450,27 @@ final class IndexedSprite extends IndexedSpriteState {
 
     final IndexedSprite d() {
         int var3 = 0;
-        IndexedSprite var1 = new IndexedSprite(this.field_e, this.field_b, this.field_l.length);
+        IndexedSprite var1 = new IndexedSprite(this.field_e, this.field_b, this.palette.length);
         int var3Lifetime1;
         var1.field_f = this.field_f;
         var1.field_a = this.field_a;
         var1.field_j = this.field_j;
         var1.field_h = this.field_h;
-        int var2 = this.field_m.length;
+        int var2 = this.pixelIndices.length;
         for (var3 = 0; var3 < var2; var3++) {
-          var1.field_m[var3] = this.field_m[var3];
+          var1.pixelIndices[var3] = this.pixelIndices[var3];
         }
-        var2 = this.field_l.length;
+        var2 = this.palette.length;
         int var4 = 0;
         var3Lifetime1 = var4;
         while (var4 < var2) {
-          var1.field_l[var4] = this.field_l[var4];
+          var1.palette[var4] = this.palette[var4];
           var4++;
         }
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawFadedToColour(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -480,33 +480,33 @@ final class IndexedSprite extends IndexedSpriteState {
         }
         param0 = param0 + this.field_j;
         param1 = param1 + this.field_h;
-        int var5 = param0 + param1 * SoftwareRasterizer.field_b;
+        int var5 = param0 + param1 * SoftwareRasterizer.width;
         int var6 = 0;
         int var7 = this.field_b;
         int var8 = this.field_e;
-        int var9 = SoftwareRasterizer.field_b - var8;
+        int var9 = SoftwareRasterizer.width - var8;
         int var10 = 0;
-        if (param1 < SoftwareRasterizer.field_e) {
-          var11 = SoftwareRasterizer.field_e - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var11 = SoftwareRasterizer.clipTop - param1;
           var7 = var7 - var11;
-          param1 = SoftwareRasterizer.field_e;
+          param1 = SoftwareRasterizer.clipTop;
           var6 = var6 + var11 * var8;
-          var5 = var5 + var11 * SoftwareRasterizer.field_b;
+          var5 = var5 + var11 * SoftwareRasterizer.width;
         }
-        if (param1 + var7 > SoftwareRasterizer.field_d) {
-          var7 = var7 - (param1 + var7 - SoftwareRasterizer.field_d);
+        if (param1 + var7 > SoftwareRasterizer.clipBottom) {
+          var7 = var7 - (param1 + var7 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.field_f) {
-          var11Lifetime1 = SoftwareRasterizer.field_f - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var11Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var8 = var8 - var11Lifetime1;
-          param0 = SoftwareRasterizer.field_f;
+          param0 = SoftwareRasterizer.clipLeft;
           var6 = var6 + var11Lifetime1;
           var5 = var5 + var11Lifetime1;
           var10 = var10 + var11Lifetime1;
           var9 = var9 + var11Lifetime1;
         }
-        if (param0 + var8 > SoftwareRasterizer.field_g) {
-          var11Lifetime2 = param0 + var8 - SoftwareRasterizer.field_g;
+        if (param0 + var8 > SoftwareRasterizer.clipRight) {
+          var11Lifetime2 = param0 + var8 - SoftwareRasterizer.clipRight;
           var8 = var8 - var11Lifetime2;
           var10 = var10 + var11Lifetime2;
           var9 = var9 + var11Lifetime2;
@@ -515,7 +515,7 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var7 <= 0) {
             return;
           }
-          IndexedSprite.a(SoftwareRasterizer.field_i, this.field_m, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+          IndexedSprite.a(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, 0, var6, var5, var8, var7, var9, var10, param2, param3);
           return;
         }
     }
@@ -526,33 +526,33 @@ final class IndexedSprite extends IndexedSpriteState {
         int var9Lifetime2;
         param0 = param0 + this.field_j;
         param1 = param1 + this.field_h;
-        int var3 = param0 + param1 * SoftwareRasterizer.field_b;
+        int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_b;
         int var6 = this.field_e;
-        int var7 = SoftwareRasterizer.field_b - var6;
+        int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.field_e) {
-          var9 = SoftwareRasterizer.field_e - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.field_e;
+          param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRasterizer.field_b;
+          var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.field_d) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_d);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.field_f) {
-          var9Lifetime1 = SoftwareRasterizer.field_f - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.field_f;
+          param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.field_g) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_g;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -561,7 +561,7 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var5 <= 0) {
             return;
           }
-          IndexedSprite.a(0, this.field_m, var4, var3, 0, SoftwareRasterizer.field_i, this.field_l, var6, var7, var8, 0, var5);
+          IndexedSprite.a(0, this.pixelIndices, var4, var3, 0, SoftwareRasterizer.pixels, this.palette, var6, var7, var8, 0, var5);
           return;
         }
     }
@@ -622,14 +622,14 @@ final class IndexedSprite extends IndexedSpriteState {
         int var1;
         int var3;
         int var5;
-        if (this.field_l.length > 255) {
+        if (this.palette.length > 255) {
           throw new IllegalStateException();
         }
         var1 = this.field_e * this.field_b - 1;
         for (var2 = this.field_b - 1; var2 >= 0; var2--) {
           var3 = 0;
           for (var4 = this.field_e - 1; var4 >= 0; var4--) {
-            var5 = this.field_m[var1];
+            var5 = this.pixelIndices[var1];
             if (var5 != 0) {
               var3 = 0;
             } else {
@@ -638,8 +638,8 @@ final class IndexedSprite extends IndexedSpriteState {
                 var3 = 510;
               }
               if ((var3 & 1) == 0) {
-                this.field_m[var1] = (byte)-1;
-                this.field_m[var1 + 1] = (byte)(var3 - 2 >> 1);
+                this.pixelIndices[var1] = (byte)-1;
+                this.pixelIndices[var1 + 1] = (byte)(var3 - 2 >> 1);
               }
             }
             var1--;
@@ -654,8 +654,8 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_h = param3;
         this.field_e = param4;
         this.field_b = param5;
-        this.field_m = param6;
-        this.field_l = param7;
+        this.pixelIndices = param6;
+        this.palette = param7;
     }
 
     private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -746,28 +746,28 @@ final class IndexedSprite extends IndexedSpriteState {
         var4 = this.field_b >> 1;
         param0 = param0 + this.field_j / 2;
         param1 = param1 + this.field_h / 2;
-        if (param0 >= SoftwareRasterizer.field_f) {
+        if (param0 >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.field_f - param0 << 1;
+          stackIn_3_0 = SoftwareRasterizer.clipLeft - param0 << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRasterizer.field_g) {
+        if (param0 + var3 <= SoftwareRasterizer.clipRight) {
           stackIn_6_0 = this.field_e - 2;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.field_g - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRasterizer.field_e) {
+        if (param1 >= SoftwareRasterizer.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.field_e - param1 << 1;
+          stackIn_9_0 = SoftwareRasterizer.clipTop - param1 << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRasterizer.field_d) {
+        if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
           stackIn_12_0 = this.field_b - 2;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.field_d - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         var19 = new int[4];
@@ -776,23 +776,23 @@ final class IndexedSprite extends IndexedSpriteState {
         for (var10 = var7; var10 <= var8; var10 += 2) {
           for (var11 = var5; var11 <= var6; var11 += 2) {
             var12 = var10 * this.field_e + var11;
-            var13 = (param1 + (var10 >> 1)) * SoftwareRasterizer.field_b + (param0 + (var11 >> 1));
-            var9[0] = this.field_l[this.field_m[var12] & 255];
-            var9[1] = this.field_l[this.field_m[var12 + 1] & 255];
-            var9[2] = this.field_l[this.field_m[var12 + this.field_e] & 255];
-            var9[3] = this.field_l[this.field_m[var12 + 1] & 255];
+            var13 = (param1 + (var10 >> 1)) * SoftwareRasterizer.width + (param0 + (var11 >> 1));
+            var9[0] = this.palette[this.pixelIndices[var12] & 255];
+            var9[1] = this.palette[this.pixelIndices[var12 + 1] & 255];
+            var9[2] = this.palette[this.pixelIndices[var12 + this.field_e] & 255];
+            var9[3] = this.palette[this.pixelIndices[var12 + 1] & 255];
             var14 = 0;
             var15 = 0;
             var16 = 0;
             for (var17 = 0; var17 < 4; var17++) {
               if (var19[var17] == 0) {
-                var9[var17] = SoftwareRasterizer.field_i[var13];
+                var9[var17] = SoftwareRasterizer.pixels[var13];
               }
               var14 = var14 + (var19[var17] >> 16 & 255);
               var15 = var15 + (var19[var17] >> 8 & 255);
               var16 = var16 + (var19[var17] & 255);
             }
-            SoftwareRasterizer.field_i[var13] = var14 >> 2 << 16 | var15 >> 2 << 8 | var16 >> 2;
+            SoftwareRasterizer.pixels[var13] = var14 >> 2 << 16 | var15 >> 2 << 8 | var16 >> 2;
           }
         }
     }
@@ -804,8 +804,8 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_a = param1;
         this.field_h = 0;
         this.field_j = 0;
-        this.field_m = new byte[param0 * param1];
-        this.field_l = new int[param2];
+        this.pixelIndices = new byte[param0 * param1];
+        this.palette = new int[param2];
     }
 
     private final static void copyPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {

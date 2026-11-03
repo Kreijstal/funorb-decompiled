@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij implements WidgetActionListener {
+final class ij implements WidgetPainter {
     private int field_p;
     static String field_f;
     private int field_i;
@@ -48,12 +48,12 @@ final class ij implements WidgetActionListener {
           var3 = 100;
           var4 = new byte[param0.length + 8];
           for (var5 = 0; var5 < 6; var5++) {
-            IntrusiveNode.a(var5, var4, -117, re.a(param0, var5, (byte) 110));
+            IntrusiveNode.a(var5, var4, -117, ValidationState.a(param0, var5, (byte) 110));
           }
           IntrusiveNode.a(6, var4, -93, var2_int);
           IntrusiveNode.a(param1, var4, -123, var3);
           for (var5Lifetime1 = 6; param0.length / 4 > var5Lifetime1; var5Lifetime1++) {
-            IntrusiveNode.a(2 + var5Lifetime1, var4, -72, re.a(param0, var5Lifetime1, (byte) 51));
+            IntrusiveNode.a(2 + var5Lifetime1, var4, -72, ValidationState.a(param0, var5Lifetime1, (byte) 51));
           }
           stackIn_8_0 = bo.a(var4, param1 + 17);
           return stackIn_8_0;
@@ -82,22 +82,22 @@ final class ij implements WidgetActionListener {
           var10 = param1 + (param5 + (param3 + param7.offsetX));
           var11 = (param7.height >> 1) + (param7.field_y + param0);
           SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param6);
-          param7.e(param3 - 1, -1 + param0, param8);
-          param7.e(-1 + param3, 1 + param0, param8);
+          param7.drawAdditive(param3 - 1, -1 + param0, param8);
+          param7.drawAdditive(-1 + param3, 1 + param0, param8);
           SoftwareRasterizer.restoreClip(b.field_f);
           SoftwareRasterizer.intersectClip(1 + var9_int, 0, 1 + var10, param6 + var11);
-          param7.e(1 + param3, param0 - 1, param8);
-          param7.e(1 + param3, param0 + 1, param8);
+          param7.drawAdditive(1 + param3, param0 - 1, param8);
+          param7.drawAdditive(1 + param3, param0 + 1, param8);
           SoftwareRasterizer.restoreClip(b.field_f);
           var10Lifetime1 = param7.width + (param7.offsetX + (param3 - param5)) - param2;
           var9_intLifetime1 = param7.offsetX + param7.width - (-param3 - (-param5 - param1));
           SoftwareRasterizer.intersectClip(var9_intLifetime1, -param6 + var11, var10Lifetime1, 480);
-          param7.e(-1 + param3, param0 - 1, param8);
-          param7.e(param3 - 1, 1 + param0, param8);
+          param7.drawAdditive(-1 + param3, param0 - 1, param8);
+          param7.drawAdditive(param3 - 1, 1 + param0, param8);
           SoftwareRasterizer.restoreClip(b.field_f);
           SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, -param6 + var11, 1 + var10Lifetime1, 480);
-          param7.e(1 + param3, param0 - 1, param8);
-          param7.e(1 + param3, param0 + 1, param8);
+          param7.drawAdditive(1 + param3, param0 - 1, param8);
+          param7.drawAdditive(1 + param3, param0 + 1, param8);
           if (param4) {
             field_a = (String) null;
           }
@@ -117,7 +117,7 @@ final class ij implements WidgetActionListener {
         return var2;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -159,7 +159,7 @@ final class ij implements WidgetActionListener {
           }
           if (this.field_n != null) {
             var10 = this.field_b + this.field_g + this.field_l;
-            this.field_n.a(param4.field_j, param3 + param4.field_y + var10, this.field_p + param1 + param4.field_i, param4.field_n - this.field_b - var10, -(this.field_b << 1) + param4.field_w, this.field_j, this.field_m, this.field_c, this.field_h, 0);
+            this.field_n.drawParagraph(param4.field_j, param3 + param4.field_y + var10, this.field_p + param1 + param4.field_i, param4.field_n - this.field_b - var10, -(this.field_b << 1) + param4.field_w, this.field_j, this.field_m, this.field_c, this.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

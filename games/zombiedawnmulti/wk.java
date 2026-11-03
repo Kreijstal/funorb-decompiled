@@ -9,12 +9,12 @@ abstract class wk extends WidgetContainer implements kh {
     static int[] field_L;
     static int field_G;
 
-    public final j a(byte param0) {
+    public final ValidationProvider a(byte param0) {
         int var2 = 108 / ((param0 - 0) / 43);
-        return (j) ((Object) this.field_H);
+        return (ValidationProvider) ((Object) this.field_H);
     }
 
-    wk(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
+    wk(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 

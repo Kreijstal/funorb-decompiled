@@ -29,7 +29,7 @@ final class ji {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(gf.a(param1, true, var2), "_top");
+              param1.getAppletContext().showDocument(DebouncedValidationProvider.a(param1, true, var2), "_top");
               if (param0 == 8355711) {
                 return;
               }

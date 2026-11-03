@@ -235,8 +235,8 @@ final class InflaterDecompressor {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = pb.field_e;
-          var3 = new Sprite(var2.a(param1), 27);
-          var3.a();
+          var3 = new Sprite(var2.textWidth(param1), 27);
+          var3.bindAsRenderTarget();
           var2.b(param1, var3.width / 2, 17, 16777215, -1);
           var4 = -13 % ((param0 + 44) / 43);
           stackIn_1_0 = var3;

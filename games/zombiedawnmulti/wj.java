@@ -72,7 +72,7 @@ final class wj extends IntrusiveNode {
 
     wj(int param0) {
         if (df.field_H) {
-          this.field_m = PcmSampleStream.a(ei.field_a[param0], 100, 256);
+          this.field_m = PcmSampleStream.createAtRatePercent(ei.field_a[param0], 100, 256);
           tf.a(this.field_m, (byte) -93);
         }
         if (93 == param0) {

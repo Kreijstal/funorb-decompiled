@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa implements WidgetActionListener {
+final class wa implements WidgetPainter {
     private int field_m;
     static UiComponent field_a;
     static boolean field_k;
@@ -16,7 +16,7 @@ final class wa implements WidgetActionListener {
     static int field_g;
     static Sprite[] field_b;
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -53,7 +53,7 @@ final class wa implements WidgetActionListener {
           if (null == this.field_h) {
             return;
           }
-          this.field_h.b(var12.field_j, var8 + var7 / 2, var9 - (-this.field_h.field_w - var12.field_N), this.field_e, this.field_m);
+          this.field_h.b(var12.field_j, var8 + var7 / 2, var9 - (-this.field_h.baselineHeight - var12.field_N), this.field_e, this.field_m);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

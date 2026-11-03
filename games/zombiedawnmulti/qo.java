@@ -143,8 +143,8 @@ class qo extends DualLinkNode {
     final static void b(boolean param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
         var2.b((byte) -35, param1);
-        var2.a(-50, 1);
-        var2.a(123, 2);
+        var2.writeByte(-50, 1);
+        var2.writeByte(123, 2);
         if (param0) {
           return;
         }

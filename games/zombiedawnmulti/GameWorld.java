@@ -44,7 +44,7 @@ class GameWorld {
 
     final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, BitmapFont param5, int param6, int param7, int param8, int param9, Sprite[] param10, byte param11, int param12, int param13, int param14) {
         int var16 = 0;
-        int var15_int = param5.field_J + param5.field_r;
+        int var15_int = param5.field_J + param5.maxDescent;
         if (param11 >= -114) {
           return;
         }
@@ -329,7 +329,7 @@ class GameWorld {
           }
           var8.position = var8.position + 1;
           var7 = var8.position;
-          var8.a(114, param4);
+          var8.writeByte(114, param4);
           if (param4 == 2) {
             var8.writeString(param1, (byte) 105);
           }

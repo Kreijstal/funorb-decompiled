@@ -58,7 +58,7 @@ final class dk extends UiComponent {
         boolean stackIn_125_1 = false;
         UiComponent stackIn_128_0 = null;
         boolean stackIn_129_1 = false;
-        Camera.a(SoftwareRasterizer.field_b - 640 >> 1, SoftwareRasterizer.field_l, (byte) 105, 640 + SoftwareRasterizer.field_b >> 1, 0);
+        Camera.a(SoftwareRasterizer.width - 640 >> 1, SoftwareRasterizer.height, (byte) 105, 640 + SoftwareRasterizer.width >> 1, 0);
         if (param1 != -7579) {
           dk.c((byte) -88);
           if (0 < JaggrabDownloader.field_h) {
@@ -203,7 +203,7 @@ final class dk extends UiComponent {
             if (var2 == 95 &&
               this.field_Hb.length() > 0) {
               discarded$5 = this.field_Hb.append((char) var2);
-              if (hd.a(-24315, (char) var2)) {
+              if (EmailAvailabilityValidator.a(-24315, (char) var2)) {
                 discarded$6 = this.field_Hb.append((char) var2);
               } else {
                 if (vh.a((char) var2, (byte) 85)) {
@@ -227,7 +227,7 @@ final class dk extends UiComponent {
               this.field_Fb = 1;
               return true;
             }
-            if (hd.a(-24315, (char) var2)) {
+            if (EmailAvailabilityValidator.a(-24315, (char) var2)) {
               discarded$8 = this.field_Hb.append((char) var2);
               if (InfectionEvent.field_p == 84) {
                 if (0 >= this.field_Hb.length()) {
@@ -323,7 +323,7 @@ final class dk extends UiComponent {
         if (var2Lifetime1 == 95 &&
           this.field_Hb.length() > 0) {
           discarded$0 = this.field_Hb.append((char) var2Lifetime1);
-          if (hd.a(-24315, (char) var2Lifetime1)) {
+          if (EmailAvailabilityValidator.a(-24315, (char) var2Lifetime1)) {
             discarded$1 = this.field_Hb.append((char) var2Lifetime1);
           } else {
             if (vh.a((char) var2Lifetime1, (byte) 85)) {
@@ -346,7 +346,7 @@ final class dk extends UiComponent {
           }
           return true;
         }
-        if (hd.a(-24315, (char) var2Lifetime1)) {
+        if (EmailAvailabilityValidator.a(-24315, (char) var2Lifetime1)) {
           discarded$3 = this.field_Hb.append((char) var2Lifetime1);
           if (InfectionEvent.field_p == 84) {
             if (0 >= this.field_Hb.length()) {
@@ -548,7 +548,7 @@ final class dk extends UiComponent {
           this.field_Gb.setBounds(jk.field_f, 3 + jk.field_f, var9_int, 5, -3344);
           var10 = var9_int + 5 + 5;
           var11 = 3 + jk.field_f * 2 + 3;
-          var12 = qp.a(param0, (byte) 116, var10, param2);
+          var12 = MatchingTextValidator.a(param0, (byte) 116, var10, param2);
           var13 = IntrusiveNode.a(true, param1, param3, var11);
           this.setBounds(var11, var13, var10, var12, -3344);
           return;

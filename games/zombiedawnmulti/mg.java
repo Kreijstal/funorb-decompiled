@@ -86,10 +86,10 @@ final class mg extends SceneObject {
                 stackIn_19_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2);
-              ma.field_a.a(-99, 16);
+              ma.field_a.writeByte(-99, 16);
               ma.field_a.position = ma.field_a.position + 1;
               var9 = ma.field_a.position;
-              hd.a(ButtonWidget.field_L, (byte) 110, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+              EmailAvailabilityValidator.a(ButtonWidget.field_L, (byte) 110, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.e(param6 + 173, -var9 + ma.field_a.position);
             } else {
               var9 = 0;
@@ -104,9 +104,9 @@ final class mg extends SceneObject {
               var15 = (CharSequence) ((Object) param4);
               TextInputWidget.field_R.b(-16171, SpriteState.a(-50, var15));
               TextInputWidget.field_R.a(param5, (byte) -91);
-              TextInputWidget.field_R.a(param6 ^ 37, param2);
-              TextInputWidget.field_R.a(param6 ^ 19, var9);
-              ma.field_a.a(120, 18);
+              TextInputWidget.field_R.writeByte(param6 ^ 37, param2);
+              TextInputWidget.field_R.writeByte(param6 ^ 19, var9);
+              ma.field_a.writeByte(120, 18);
               ma.field_a.position = ma.field_a.position + 2;
               var10 = ma.field_a.position;
               var11_ref_StringLifetime4 = wg.a(0, jl.b(param6 + 92));
@@ -114,7 +114,7 @@ final class mg extends SceneObject {
                 var11_ref_StringLifetime4 = "";
               }
               ma.field_a.writeString(var11_ref_StringLifetime4, (byte) 105);
-              hd.a(ButtonWidget.field_L, (byte) -123, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+              EmailAvailabilityValidator.a(ButtonWidget.field_L, (byte) -123, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.b(false, ma.field_a.position - var10);
             }
             cb.a(-1, false);
@@ -144,7 +144,7 @@ final class mg extends SceneObject {
               } else {
                 vo.field_l = pq.field_p;
                 PortalEntryEvent.field_i = var9Lifetime1;
-                hd.field_q = -1;
+                EmailAvailabilityValidator.field_q = -1;
               }
             }
           }
@@ -299,7 +299,7 @@ final class mg extends SceneObject {
         BinaryBitmapFont var8 = null;
         try {
           int var7_int = 73 % ((param2 + 45) / 36);
-          var8 = qp.field_w;
+          var8 = MatchingTextValidator.field_w;
           Camera.field_w.c(param6, param3, param5);
           wa.field_b[param0].c(param6 + 17, param3 + 21, param5);
           jq.a(cr.a(param0, -83), 33 + param3, (byte) 2, param4.field_t[param0], param5, -16 + param6);
@@ -369,10 +369,10 @@ final class mg extends SceneObject {
             for (var11 = 0; var11 < 6; var11++) {
               var8 = (6 * var11 + this.field_G) % 120;
               SoftwareRasterizer.fillCircleAlpha(hp.field_l[var8] + var6, var7 + hp.field_g[var8], 6, 0, var11 * var9);
-              SoftwareRasterizer.a(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var11 * var10, hp.field_j[this.field_C]);
+              SoftwareRasterizer.fillRadialGlow(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var11 * var10, hp.field_j[this.field_C]);
               var8 = (60 + var8) % 120;
               SoftwareRasterizer.fillCircleAlpha(hp.field_l[var8] + var6, hp.field_g[var8] + var7, 6, 0, var11 * var9);
-              SoftwareRasterizer.a(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var10 * var11, hp.field_j[this.field_C]);
+              SoftwareRasterizer.fillRadialGlow(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var10 * var11, hp.field_j[this.field_C]);
             }
             wa.field_b[this.field_C].g(var4, var5);
             return;

@@ -25,7 +25,7 @@ final class rb {
           if (param1 == null) {
             return null;
           }
-          var2 = new BinaryBitmapFont(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, qp.field_t);
+          var2 = new BinaryBitmapFont(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, MatchingTextValidator.field_t);
           fd.h((byte) 126);
           stackIn_6_0 = var2;
           return stackIn_6_0;

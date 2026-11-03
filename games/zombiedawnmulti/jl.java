@@ -185,7 +185,7 @@ final class jl extends TextWidgetPainter {
         return (java.applet.Applet) ((Object) tg.field_i);
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -313,7 +313,7 @@ final class jl extends TextWidgetPainter {
         } else {
           var7 = MenuScreen.field_c;
         }
-        gf.a(127, param2, param4, param5, var7, param6, param0, param3);
+        DebouncedValidationProvider.a(127, param2, param4, param5, var7, param6, param0, param3);
         if (param1 == -97) {
           return;
         }

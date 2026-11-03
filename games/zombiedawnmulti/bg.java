@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg implements WidgetActionListener {
+final class bg implements WidgetPainter {
     static lh field_k;
     private int field_i;
     private int field_c;
@@ -80,7 +80,7 @@ final class bg implements WidgetActionListener {
         uf.a(param0, param2, (byte) 39);
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         ud var15 = null;
         int var7 = 0;
         int var8 = 0;
@@ -101,7 +101,7 @@ final class bg implements WidgetActionListener {
           SoftwareRasterizer.fillCircle(var7, var8, var15.field_X, this.field_f);
           if (param2 != -15112) {
             UiWidget var14 = (UiWidget) null;
-            this.a(true, 88, 109, -117, (UiWidget) null);
+            this.paintWidget(true, 88, 109, -117, (UiWidget) null);
           }
           if (-1 != var15.field_W) {
             var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
@@ -116,7 +116,7 @@ final class bg implements WidgetActionListener {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = this.field_h + (var15.field_X + var15.field_R);
-            this.field_g.a(param4.field_j, var13 + (param4.field_y + param3), this.field_l + (param1 + param4.field_i), param4.field_n - this.field_h - var13, -(this.field_h << 1) + param4.field_w, this.field_c, this.field_i, 1, 1, 0);
+            this.field_g.drawParagraph(param4.field_j, var13 + (param4.field_y + param3), this.field_l + (param1 + param4.field_i), param4.field_n - this.field_h - var13, -(this.field_h << 1) + param4.field_w, this.field_c, this.field_i, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

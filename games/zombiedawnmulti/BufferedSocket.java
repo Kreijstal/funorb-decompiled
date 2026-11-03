@@ -36,7 +36,7 @@ final class BufferedSocket implements Runnable {
         field_p = null;
     }
 
-    final void b(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (this.field_r) {
           return;
         }
@@ -181,11 +181,11 @@ final class BufferedSocket implements Runnable {
         try {
           jj.field_F[6] = new Sprite(200, 50);
           g.c();
-          jj.field_F[0].a();
+          jj.field_F[0].bindAsRenderTarget();
           rb.field_e[0].f(5, 5, 16777215);
           FightEvent.d((byte) -18);
           rb.field_e[0].f(5, 5, 0);
-          jj.field_F[1].a();
+          jj.field_F[1].bindAsRenderTarget();
           rb.field_e[1].f(-35, 5, 16777215);
           g.a(16777215);
           FightEvent.d((byte) -18);

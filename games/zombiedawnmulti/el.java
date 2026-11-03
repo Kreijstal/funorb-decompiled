@@ -15,21 +15,21 @@ final class el extends rg {
     final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         Sprite var13 = null;
         Sprite var14 = null;
-        int[] var16 = SoftwareRasterizer.field_i;
+        int[] var16 = SoftwareRasterizer.pixels;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = SoftwareRasterizer.field_b;
-        int var8 = SoftwareRasterizer.field_l;
+        int var7 = SoftwareRasterizer.width;
+        int var8 = SoftwareRasterizer.height;
         Sprite var9 = new Sprite(16, param0);
-        var9.a();
+        var9.bindAsRenderTarget();
         SoftwareRasterizer.fillRectGradient(param2, 0, 16, param0, param1, param3);
         Object var10 = null;
         Object var11 = null;
         if (param5) {
-          var13 = var9.c();
+          var13 = var9.copy();
           var10 = var13;
-          var13.a();
+          var13.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -37,9 +37,9 @@ final class el extends rg {
           SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param4) {
-          var14 = var9.c();
+          var14 = var9.copy();
           var11 = var14;
-          var14.a();
+          var14.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
@@ -142,10 +142,10 @@ final class el extends rg {
             }
           }
         } else {
-          if (kp.field_l == SoftwareRasterizer.field_b) {
-            if (SoftwareRasterizer.field_l != dm.field_Qb &&
-              SoftwareRasterizer.field_l == SocketConnector.field_h.field_f &&
-              SocketConnector.field_h.field_h == SoftwareRasterizer.field_b) {
+          if (kp.field_l == SoftwareRasterizer.width) {
+            if (SoftwareRasterizer.height != dm.field_Qb &&
+              SoftwareRasterizer.height == SocketConnector.field_h.field_f &&
+              SocketConnector.field_h.field_h == SoftwareRasterizer.width) {
               if (null != JaggrabDownloader.field_c) {
                 ci.a(false, -83);
               } else {
@@ -211,8 +211,8 @@ final class el extends rg {
               }
             }
           } else {
-            if (SoftwareRasterizer.field_l == SocketConnector.field_h.field_f &&
-              SocketConnector.field_h.field_h == SoftwareRasterizer.field_b) {
+            if (SoftwareRasterizer.height == SocketConnector.field_h.field_f &&
+              SocketConnector.field_h.field_h == SoftwareRasterizer.width) {
               if (null != JaggrabDownloader.field_c) {
                 ci.a(false, -83);
               } else {
@@ -371,16 +371,16 @@ final class el extends rg {
         }
         if (param0 == -2) {
           var7 = this.field_K ? -this.field_L + this.field_n - this.field_I * 2 : 0;
-          this.field_G.a(this.field_J, this.field_I + (var7 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.field_C);
+          this.field_G.drawParagraph(this.field_J, this.field_I + (var7 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.maxAscent);
           return;
         }
         this.d((byte) 56);
         var7Lifetime1 = this.field_K ? -this.field_L + this.field_n - this.field_I * 2 : 0;
-        this.field_G.a(this.field_J, this.field_I + (var7Lifetime1 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.field_C);
+        this.field_G.drawParagraph(this.field_J, this.field_I + (var7Lifetime1 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.maxAscent);
     }
 
     el(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (WidgetActionListener) null, (bj) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null, (WidgetListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -405,7 +405,7 @@ final class el extends rg {
           this.field_K = stackIn_4_1;
           this.field_F = param9;
           var12_int = -this.field_I + this.field_L;
-          var13 = this.field_G.a(param10, var12_int, this.field_G.field_C) + 2 * this.field_I;
+          var13 = this.field_G.measureWrappedHeight(param10, var12_int, this.field_G.maxAscent) + 2 * this.field_I;
           if (param3 < var13) {
             this.setWidgetBounds(param0, param1, 28972, param2, var13);
           } else {

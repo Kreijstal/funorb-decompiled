@@ -195,7 +195,7 @@ final class vi {
             if (param3 == hf.field_e) {
               var21 += 42;
             }
-            var34 = BitmapFont.a(var12.field_Ub.field_yb, var33, var21);
+            var34 = BitmapFont.truncateText(var12.field_Ub.field_yb, var33, var21);
             var20 = var34;
             var20 = var34;
             var20 = var34;
@@ -304,7 +304,7 @@ final class vi {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Hb.field_yb.b(var23, -nj.field_h + (var12.field_zb - nj.field_h));
+              var24_intLifetime1 = var12.field_Hb.field_yb.countWrappedLines(var23, -nj.field_h + (var12.field_zb - nj.field_h));
               var12.field_Hb.field_wb = var23;
               var12.field_Hb.field_Y = 256 * var12.field_bc / UnitStateEvent.field_r;
               var12.field_Hb.setBounds(jk.field_f * var24_intLifetime1, var19, -(2 * nj.field_h) + var12.field_zb, nj.field_h, -3344);
@@ -506,8 +506,8 @@ final class vi {
         }
         try {
           var3.b((byte) -35, param0);
-          var3.a(119, param1.field_i);
-          var3.a(-21, param1.field_p);
+          var3.writeByte(119, param1.field_i);
+          var3.writeByte(-21, param1.field_p);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

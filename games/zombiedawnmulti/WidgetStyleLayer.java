@@ -227,7 +227,7 @@ final class WidgetStyleLayer {
             } else {
               stackIn_29_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_25_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_29_8, param2.field_d, param2.field_a, param2.field_f);
+            ((BitmapFont) (Object) stackIn_22_0).drawParagraphAlpha(stackIn_22_1, stackIn_25_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_29_8, param2.field_d, param2.field_a, param2.field_f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

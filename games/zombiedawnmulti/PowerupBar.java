@@ -217,7 +217,7 @@ final class PowerupBar {
             uk.field_N = true;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (ia.field_t.field_T != 0) {
+          if (PasswordValidator.field_t.field_T != 0) {
             if (!bo.field_e &&
               vl.field_h <= 0 && (!(kj.field_q >= 2) ||
               !lc.field_m[12])) {

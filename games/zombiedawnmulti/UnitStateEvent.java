@@ -148,7 +148,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[7] = cd.field_Mb;
         gh.field_f[60] = uc.field_c;
         gh.field_f[49] = dg.field_O;
-        gh.field_f[2] = hd.field_t;
+        gh.field_f[2] = EmailAvailabilityValidator.field_t;
         gh.field_f[4] = ResourceArchive.field_d;
         gh.field_f[9] = IterableNodeHashTable.field_b;
         gh.field_f[32] = ZombieDawnMulti.field_M;
@@ -163,7 +163,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[36] = fk.field_l;
         gh.field_f[13] = hf.field_a;
         gh.field_f[44] = kn.field_e;
-        gh.field_f[57] = qp.field_r;
+        gh.field_f[57] = MatchingTextValidator.field_r;
         gh.field_f[1] = rp.field_b;
         gh.field_f[6] = hc.field_a;
         gh.field_f[33] = cq.field_b;
@@ -194,7 +194,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[56][0] = em.field_V;
         wq.field_g[55][0] = PortalView.field_F;
         wq.field_g[54][0] = df.field_O;
-        wq.field_g[53][0] = ia.field_u;
+        wq.field_g[53][0] = PasswordValidator.field_u;
         wq.field_g[52][0] = bb.field_m;
         wq.field_g[51][0] = nk.field_f;
         wq.field_g[50][0] = SocketConnector.field_d;
@@ -316,7 +316,7 @@ final class UnitStateEvent extends GameEvent {
         if (param0 != -21148) {
           return;
         }
-        var4.a(param0 + 21034, 6);
+        var4.writeByte(param0 + 21034, 6);
         var4.a(param1, true);
         var4.e(44, var4.position - var5);
     }
