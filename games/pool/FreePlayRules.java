@@ -168,7 +168,7 @@ final class FreePlayRules extends GameRules {
         field_e = null;
     }
 
-    final int a(boolean param0) {
+    final int initialBallInHandMode(boolean param0) {
         if (param0) {
           return 62;
         }
@@ -193,7 +193,7 @@ final class FreePlayRules extends GameRules {
         return ll.field_f;
     }
 
-    final int a(int param0) {
+    final int initialGroup(int param0) {
         if (param0 != -1) {
           return 98;
         }
@@ -235,7 +235,7 @@ final class FreePlayRules extends GameRules {
         }
     }
 
-    final int i(int param0) {
+    final int ballCount(int param0) {
         if (param0 != 26840) {
           this.a((byte) 16);
           return 16;

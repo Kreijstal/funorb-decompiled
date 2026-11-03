@@ -137,7 +137,7 @@ final class SoundCache {
             var10.c(-23569, param1);
           }
           for (var2_intLifetime1 = 0; PoolGameModel.field_B.length > var2_intLifetime1; var2_intLifetime1++) {
-            PoolGameModel.field_B[var2_intLifetime1].a(198123656, param1);
+            PoolGameModel.field_B[var2_intLifetime1].loadTopBarSprites(198123656, param1);
           }
           IntrusiveNodeHashTable.field_b = new Sprite[]{WidgetStyleLayer.loadSprite("", (byte) 46, "menu_background_modern", param1), WidgetStyleLayer.loadSprite("", (byte) 42, "menu_background_plasma", param1), WidgetStyleLayer.loadSprite("", (byte) 62, "menu_background_jungle", param1), WidgetStyleLayer.loadSprite("", (byte) 40, "menu_background_polar", param1), WidgetStyleLayer.loadSprite("", (byte) 76, "menu_background_shuttle", param1)};
           uj.field_c = WidgetStyleLayer.loadSprite("", (byte) 124, "select_table_thumbnail_modern", param1);

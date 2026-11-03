@@ -7,9 +7,9 @@ abstract class GameRules {
     PoolGameModel field_d;
     static Js5Transport field_c;
 
-    abstract int a(boolean param0);
+    abstract int initialBallInHandMode(boolean param0);
 
-    int e(int param0) {
+    int playerCount(int param0) {
         if (param0 <= 64) {
           this.field_d = (PoolGameModel) null;
         }
@@ -24,7 +24,7 @@ abstract class GameRules {
         return ie.a((byte) 28, NanoTickClock.getApplet(71));
     }
 
-    void a(ShotRecord param0, boolean param1) {
+    void initializeShot(ShotRecord param0, boolean param1) {
         RuntimeException runtimeException = null;
         ShotRecord stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
@@ -33,7 +33,7 @@ abstract class GameRules {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.groupBefore = this.a(-1);
+          param0.groupBefore = this.initialGroup(-1);
           stackIn_3_0 = (ShotRecord) (param0);
           stackIn_4_1 = (0 == param0.ballInHandMode) && (this.a(param0.playerIndex, -35));
           stackIn_3_0.field_E = stackIn_4_1;
@@ -56,17 +56,17 @@ abstract class GameRules {
         }
     }
 
-    abstract int a(int param0);
+    abstract int initialGroup(int param0);
 
     abstract int[] a(int param0, byte param1);
 
     abstract boolean a(int param0, byte param1, ShotRecord param2);
 
-    abstract int i(int param0);
+    abstract int ballCount(int param0);
 
     abstract int b(int param0);
 
-    void n(int param0) {
+    void onShotStart(int param0) {
         if (param0 != 11828) {
           this.field_d = (PoolGameModel) null;
         }
@@ -79,7 +79,7 @@ abstract class GameRules {
         var2.ballInHandMode = this.b(-120);
         int var3 = -67 % ((param0 + 14) / 58);
         if (!(0 > var2.playerIndex)) {
-          this.a(var2, false);
+          this.initializeShot(var2, false);
         }
     }
 
@@ -129,7 +129,7 @@ abstract class GameRules {
         PoolGameModel.field_B[6] = (BallSkin) ((Object) new HalloweenBallSkin());
     }
 
-    int a(ShotRecord param0, byte param1) {
+    int nextPlayerIndex(ShotRecord param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -248,7 +248,7 @@ abstract class GameRules {
     void a(PacketBuffer param0, boolean param1) {
         try {
           if (!param1) {
-            this.a(-101);
+            this.initialGroup(-101);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sq.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

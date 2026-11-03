@@ -1707,7 +1707,7 @@ public final class Pool extends NetworkGameClient {
                                             il.field_c[2] = qg.field_g.a("interface_SFX_level_change_chalk", true, "");
                                             il.field_c[3] = qg.field_g.a("interface_select_ballroll_transition", true, "");
                                             for (var3Lifetime1 = 0; var3Lifetime1 < nn.field_b.length; var3Lifetime1++) {
-                                              nn.field_b[var3Lifetime1].a(qg.field_g, 124);
+                                              nn.field_b[var3Lifetime1].loadSounds(qg.field_g, 124);
                                             }
                                             if (2 < nn.field_b.length) {
                                               var65_ref = (TikiTableScene) (nn.field_b[2]);

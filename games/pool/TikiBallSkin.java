@@ -7,7 +7,7 @@ final class TikiBallSkin extends BallSkin {
     static int field_n;
     static Sprite[] field_m;
 
-    final void a(ResourceArchive param0, byte param1) {
+    final void loadBallMeshes(ResourceArchive param0, byte param1) {
         MeshBuilder dupTemp$1 = null;
         if (null != this.field_a) {
           return;
@@ -65,7 +65,7 @@ final class TikiBallSkin extends BallSkin {
         return false;
     }
 
-    final int a(int param0, boolean param1) {
+    final int ballColor(int param0, boolean param1) {
         int var3;
         int var4;
         var4 = Pool.field_O;
@@ -151,14 +151,14 @@ final class TikiBallSkin extends BallSkin {
         }
     }
 
-    final String a(byte param0, int param1) {
+    final String groupName(byte param0, int param1) {
         if (param0 < 9) {
           this.c(-109);
         }
         return 0 == param1 ? BirthDateValidator.ballsetSpaceGroup0 : dq.field_g;
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadTopBarSprites(int param0, ResourceArchive param1) {
         try {
           this.field_e = NameEntryPopup.a(param0 ^ param0, "", param1, "top_bar_balls_jungle");
         } catch (RuntimeException runtimeException) {

@@ -205,9 +205,9 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final void a(ShotRecord param0, boolean param1) {
+    final void initializeShot(ShotRecord param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.initializeShot(param0, param1);
           param0.field_N = this.field_e[param0.playerIndex];
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -336,7 +336,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final int a(int param0) {
+    final int initialGroup(int param0) {
         if (param0 != -1) {
           this.field_e = (int[]) null;
           return 0;
@@ -451,7 +451,7 @@ final class KillerRules extends GameRules {
         return false;
     }
 
-    final int a(boolean param0) {
+    final int initialBallInHandMode(boolean param0) {
         if (param0) {
           return 96;
         }
@@ -512,7 +512,7 @@ final class KillerRules extends GameRules {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 9) {
-            this.a(97);
+            this.initialGroup(97);
           }
           return !(param0 <= 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -556,7 +556,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final int i(int param0) {
+    final int ballCount(int param0) {
         if (param0 != 26840) {
           this.a(-19, (byte) -27);
         }

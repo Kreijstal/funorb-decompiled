@@ -114,7 +114,7 @@ final class TimeTrialRules extends GameRules {
         return this.a(param0, param2, (byte) -111);
     }
 
-    final int a(int param0) {
+    final int initialGroup(int param0) {
         if (param0 != -1) {
           field_f = -63;
         }
@@ -153,7 +153,7 @@ final class TimeTrialRules extends GameRules {
         }
     }
 
-    final int i(int param0) {
+    final int ballCount(int param0) {
         if (param0 != 26840) {
           ShotRecord var3 = (ShotRecord) null;
           this.a((ShotRecord) null, 33);
@@ -168,7 +168,7 @@ final class TimeTrialRules extends GameRules {
         return 0;
     }
 
-    final int a(boolean param0) {
+    final int initialBallInHandMode(boolean param0) {
         if (param0) {
           field_f = -51;
           return 1;

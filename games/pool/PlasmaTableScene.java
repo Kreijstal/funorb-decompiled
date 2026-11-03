@@ -30,7 +30,7 @@ final class PlasmaTableScene extends TableScene {
     private PcmSample field_U;
     private PcmSample field_P;
 
-    final void a(PoolGameModel param0, int param1) {
+    final void buildTableGeometry(PoolGameModel param0, int param1) {
         int var5_int = 0;
         int var3_int = 0;
         int var4_int = 0;
@@ -49,7 +49,7 @@ final class PlasmaTableScene extends TableScene {
         int var4_intLifetime1;
         var8 = Pool.field_O;
         try {
-          super.a(param0, param1);
+          super.buildTableGeometry(param0, param1);
           t.field_a = new int[3][17][33];
           ro.field_v = new int[3][17][33];
           ArrayWidgetGroup.field_K = new jd[16][32];
@@ -315,8 +315,8 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final void d(boolean param0) {
-        super.d(param0);
+    final void releaseModels(boolean param0) {
+        super.releaseModels(param0);
         LimitedRandomAccessFile.field_i = null;
         t.field_a = (int[][][]) null;
         ArrayWidgetGroup.field_K = (jd[][]) null;
@@ -424,7 +424,7 @@ final class PlasmaTableScene extends TableScene {
         return 0;
     }
 
-    final void a(SoundCache param0, int param1) {
+    final void loadSounds(SoundCache param0, int param1) {
         try {
           this.field_P = param0.a("", "plasma_ball_hard", (byte) 121);
           this.field_Y = param0.a("", "plasma_ball_soft", (byte) 126);
@@ -689,7 +689,7 @@ final class PlasmaTableScene extends TableScene {
               }
               var5 = bc.field_c;
               if (param2.gameModel.rules instanceof EightBallRules) {
-                var6Lifetime1 = ((EightBallRules) (param2.gameModel.rules)).a(-1);
+                var6Lifetime1 = ((EightBallRules) (param2.gameModel.rules)).initialGroup(-1);
                 if (-1 != var6Lifetime1) {
                   var5 = hf.a(var6Lifetime1, (byte) 73);
                 }
@@ -726,11 +726,11 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final void a(int param0, PoolMatchController param1) {
+    final void updatePottedBalls(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = Pool.field_O;
         try {
-          super.a(param0, param1);
+          super.updatePottedBalls(param0, param1);
           for (var3_int = 0; var3_int < this.field_K.length; var3_int++) {
             this.field_K[var3_int].a((byte) -43);
           }
@@ -1031,7 +1031,7 @@ final class PlasmaTableScene extends TableScene {
             }
             var6 = bc.field_c;
             if (param1.gameModel.rules instanceof EightBallRules) {
-              var7Lifetime1 = ((EightBallRules) (param1.gameModel.rules)).a(-1);
+              var7Lifetime1 = ((EightBallRules) (param1.gameModel.rules)).initialGroup(-1);
               if (var7Lifetime1 != -1) {
                 var6 = hf.a(var7Lifetime1, (byte) 96);
               }

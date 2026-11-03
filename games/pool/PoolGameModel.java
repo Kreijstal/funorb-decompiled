@@ -149,7 +149,7 @@ final class PoolGameModel {
         var4_ref.shotNumber = var8.shotNumber + 1;
         var4_ref.phase = 0;
         if (var3 != 0) {
-          var4_ref.playerIndex = this.rules.a(var8, (byte) 117);
+          var4_ref.playerIndex = this.rules.nextPlayerIndex(var8, (byte) 117);
         } else {
           var4_ref.playerIndex = var8.playerIndex;
         }
@@ -220,7 +220,7 @@ final class PoolGameModel {
             this.rules.a(0, -1, var8.playerIndex);
           }
         }
-        this.rules.a(var4_ref, false);
+        this.rules.initializeShot(var4_ref, false);
         return false;
     }
 
@@ -574,7 +574,7 @@ final class PoolGameModel {
           return true;
         }
         if (0 != (var2.endResolution & Quaternion.field_e)) {
-          this.field_A = this.rules.a(var2, (byte) 94);
+          this.field_A = this.rules.nextPlayerIndex(var2, (byte) 94);
           return true;
         }
         if ((ag.field_e & var2.endResolution) != 0) {
@@ -922,7 +922,7 @@ final class PoolGameModel {
           var8 = dupTemp$4;
           var6 = var8;
           this.shots.b((byte) -58, dupTemp$4);
-          this.rules.a(var8, false);
+          this.rules.initializeShot(var8, false);
         }
         this.field_A = param3;
         var6.breakSeed = param0;
@@ -1171,7 +1171,7 @@ final class PoolGameModel {
         if (param0 != -51) {
           PoolGameModel.a(true, 13);
         }
-        this.rules.n(param0 ^ -11783);
+        this.rules.onShotStart(param0 ^ -11783);
         this.a(var24.cueBallY, var24.cueBallX, 72, 0, false);
         ShotRecord var3 = var24;
         Ball var4 = this.balls[0];
@@ -1837,7 +1837,7 @@ final class PoolGameModel {
         try {
           this.a(9437184, 28311552, param1, -30896, 0, 4096);
           var3 = this.currentShot(97);
-          var3.ballInHandMode = this.rules.a(false);
+          var3.ballInHandMode = this.rules.initialBallInHandMode(false);
           var4 = var3;
           var5 = this;
           var6 = ((PoolGameModel) (var5)).balls[0];
@@ -1943,7 +1943,7 @@ final class PoolGameModel {
           this.field_A = param3;
           this.field_h = param2;
           this.setGameType(param1, (byte) -128);
-          this.allocateBalls(-14894, this.rules.i(26840));
+          this.allocateBalls(-14894, this.rules.ballCount(26840));
           this.h((byte) -58);
           this.createPockets(10571);
           var5 = new ShotRecord();

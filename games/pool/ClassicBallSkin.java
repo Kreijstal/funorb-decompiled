@@ -15,7 +15,7 @@ final class ClassicBallSkin extends BallSkin {
         return true;
     }
 
-    final int a(int param0, boolean param1) {
+    final int ballColor(int param0, boolean param1) {
         if (!param1) {
           return 118;
         }
@@ -29,7 +29,7 @@ final class ClassicBallSkin extends BallSkin {
         return SingleChildWidget.a(param1, 16, 1);
     }
 
-    final void a(ResourceArchive param0, byte param1) {
+    final void loadBallMeshes(ResourceArchive param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -39,7 +39,7 @@ final class ClassicBallSkin extends BallSkin {
         RuntimeException var3 = null;
         var4 = Pool.field_O;
         try {
-          this.field_a = new MeshBuilder[]{this.g(-930305852), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball1"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball2"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball3"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball4"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball5"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball6"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball7"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball8"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball9"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball10"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball11"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball12"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball13"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball14"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball15")};
+          this.field_a = new MeshBuilder[]{this.createSphereMesh(-930305852), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball1"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball2"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball3"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball4"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball5"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball6"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball7"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball8"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball9"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball10"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball11"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball12"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball13"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball14"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball15")};
           if (param1 != 117) {
             return;
           }
@@ -62,7 +62,7 @@ final class ClassicBallSkin extends BallSkin {
         }
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadTopBarSprites(int param0, ResourceArchive param1) {
         Sprite[] dupTemp$0 = null;
         try {
           dupTemp$0 = NameEntryPopup.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
@@ -94,7 +94,7 @@ final class ClassicBallSkin extends BallSkin {
         this.field_g = false;
     }
 
-    final String a(byte param0, int param1) {
+    final String groupName(byte param0, int param1) {
         if (param0 <= 9) {
           return (String) null;
         }

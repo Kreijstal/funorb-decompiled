@@ -110,7 +110,7 @@ final class Camera {
     }
 
     final void c(byte param0) {
-        LobbyGame.field_gc.a(false, this);
+        LobbyGame.field_gc.clampCamera(false, this);
         if (param0 != -40) {
           Camera.releaseStatics(26);
         }

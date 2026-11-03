@@ -125,7 +125,7 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    final int a(ShotRecord param0, byte param1) {
+    final int nextPlayerIndex(ShotRecord param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -188,8 +188,8 @@ final class EightBallRules extends GameRules {
         if (param0 > -25) {
           return;
         }
-        DraggableWidget.field_S[10] = dq.field_a.a((byte) 96, 0);
-        DraggableWidget.field_S[11] = dq.field_a.a((byte) 40, 1);
+        DraggableWidget.field_S[10] = dq.field_a.groupName((byte) 96, 0);
+        DraggableWidget.field_S[11] = dq.field_a.groupName((byte) 40, 1);
     }
 
     final int b(int param0) {
@@ -602,7 +602,7 @@ final class EightBallRules extends GameRules {
     private final int u(int param0) {
         if (param0 != 4) {
           ShotRecord var3 = (ShotRecord) null;
-          this.a((ShotRecord) null, (byte) 56);
+          this.nextPlayerIndex((ShotRecord) null, (byte) 56);
         }
         return ThemeSelectScreen.field_O | ll.field_f;
     }
@@ -660,10 +660,10 @@ final class EightBallRules extends GameRules {
         return (byte)((param0 & 9) >> 3);
     }
 
-    final void a(ShotRecord param0, boolean param1) {
+    final void initializeShot(ShotRecord param0, boolean param1) {
         int var3_int = 0;
         try {
-          super.a(param0, param1);
+          super.initializeShot(param0, param1);
           if (null != this.field_f) {
             var3_int = this.field_d.playerCount / 2;
             this.field_f[this.c(-125, param0.playerIndex)] = param0.playerIndex % var3_int;
@@ -812,7 +812,7 @@ final class EightBallRules extends GameRules {
         return this.field_d.currentShot(106).breakSeed < 0 ? 0 : 1;
     }
 
-    final int e(int param0) {
+    final int playerCount(int param0) {
         if (param0 <= 64) {
           this.field_g = (int[]) null;
         }
@@ -874,14 +874,14 @@ final class EightBallRules extends GameRules {
         this.field_g[1 - var4] = 1 - param0;
     }
 
-    final int i(int param0) {
+    final int ballCount(int param0) {
         if (param0 != 26840) {
           return -37;
         }
         return 16;
     }
 
-    final int a(boolean param0) {
+    final int initialBallInHandMode(boolean param0) {
         if (param0) {
           return 0;
         }
@@ -926,7 +926,7 @@ final class EightBallRules extends GameRules {
 
     private final int f(byte param0) {
         if (param0 != -30) {
-          this.a(-100);
+          this.initialGroup(-100);
         }
         return ThemeSelectScreen.field_O | ll.field_f | AccountWelcomePanel.field_R | BitmapTextLayout.field_j;
     }
@@ -1123,7 +1123,7 @@ final class EightBallRules extends GameRules {
         return 1 != this.field_d.playerCount ? param1 / (this.field_d.playerCount >> 1) : 0;
     }
 
-    final int a(int param0) {
+    final int initialGroup(int param0) {
         int var2 = this.f(22533, this.field_d.field_A);
         if (param0 != -1) {
           muYouDeclinedInvite = (String) null;

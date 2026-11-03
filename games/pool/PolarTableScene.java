@@ -32,11 +32,11 @@ final class PolarTableScene extends ModelTableScene {
         super.i(param0);
     }
 
-    final void a(int param0, PoolMatchController param1) {
+    final void updatePottedBalls(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = Pool.field_O;
         try {
-          super.a(param0, param1);
+          super.updatePottedBalls(param0, param1);
           DebugTuningSlider.field_f = DebugTuningSlider.field_f + 1;
           for (var3_int = 0; var3_int < this.field_U.length; var3_int++) {
             this.field_U[var3_int].a(this, 10);
@@ -119,7 +119,7 @@ final class PolarTableScene extends ModelTableScene {
           var6_ref_int__ = var11;
           if (param0 != -55) {
             var10 = (PoolGameModel) null;
-            this.a((PoolGameModel) null, 25);
+            this.buildTableGeometry((PoolGameModel) null, 25);
           }
           GzipDecoder.field_d[0] = var36[0] - sb.a(288.0f, true) >> 2;
           GzipDecoder.field_d[1] = var36[1] - sb.a(144.0f, true) >> 2;
@@ -559,7 +559,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void a(ResourceArchive param0, int param1) {
+    final void loadModels(ResourceArchive param0, int param1) {
         int incrementValue$61 = 0;
         int incrementValue$62 = 0;
         int incrementValue$63 = 0;
@@ -905,7 +905,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void d(boolean param0) {
+    final void releaseModels(boolean param0) {
         ValueNoise.a();
         TableScene.field_w = null;
         BufferedSocket.field_p = null;
@@ -917,11 +917,11 @@ final class PolarTableScene extends ModelTableScene {
         this.a((byte) 119);
     }
 
-    final void a(PoolGameModel param0, int param1) {
+    final void buildTableGeometry(PoolGameModel param0, int param1) {
         int[] var6 = null;
         int[] var5 = null;
         int[] var4 = null;
-        super.a(param0, param1 + 0);
+        super.buildTableGeometry(param0, param1 + 0);
         if (param1 != 21894) {
           return;
         }
@@ -947,7 +947,7 @@ final class PolarTableScene extends ModelTableScene {
           this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_polar_win_jingle");
           this.field_n = MusicTrack.loadFromArchive(param1, "", "pool_polar_lose_jingle");
           if (param0 != 1) {
-            this.d(true);
+            this.releaseModels(true);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1091,7 +1091,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void a(SoundCache param0, int param1) {
+    final void loadSounds(SoundCache param0, int param1) {
         try {
           this.field_mb = param0.a("", "polar_blackball_collision1", (byte) 127);
           this.field_jb = param0.a("polar_pot_ball_pocket2", true, "");
@@ -1126,7 +1126,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void b(int param0, ResourceArchive param1) {
+    final void loadBackdrop(int param0, ResourceArchive param1) {
         try {
           if (param0 != 5) {
             this.field_fb = (PcmSample) null;

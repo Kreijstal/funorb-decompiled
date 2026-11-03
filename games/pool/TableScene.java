@@ -40,7 +40,7 @@ abstract class TableScene {
     private int field_t;
     private MeshBuilder field_s;
 
-    void d(boolean param0) {
+    void releaseModels(boolean param0) {
         if (!param0) {
           TableScene.releaseStatics(-87);
         }
@@ -766,7 +766,7 @@ abstract class TableScene {
         return this.g(-112);
     }
 
-    final String c(byte param0) {
+    final String describeAmbientLight(byte param0) {
         if (param0 != 32) {
           int[] var3 = (int[]) null;
           this.a(-106, (int[]) null, 4, (int[]) null, 62);
@@ -909,7 +909,7 @@ abstract class TableScene {
         }
     }
 
-    void a(ResourceArchive param0, int param1) {
+    void loadModels(ResourceArchive param0, int param1) {
         try {
           if (param1 >= -43) {
             this.field_e = 4;
@@ -919,7 +919,7 @@ abstract class TableScene {
         }
     }
 
-    void a(SoundCache param0, int param1) {
+    void loadSounds(SoundCache param0, int param1) {
         try {
           int var3_int = 55 % ((39 - param1) / 38);
         } catch (RuntimeException runtimeException) {
@@ -1010,7 +1010,7 @@ abstract class TableScene {
         }
     }
 
-    void a(PoolGameModel param0, int param1) {
+    void buildTableGeometry(PoolGameModel param0, int param1) {
         CushionSegment[] var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -1234,7 +1234,7 @@ abstract class TableScene {
         }
     }
 
-    final String b(byte param0) {
+    final String describeLighting(byte param0) {
         if (param0 != 123) {
           return (String) null;
         }
@@ -1438,7 +1438,7 @@ abstract class TableScene {
         }
     }
 
-    void a(boolean param0, Camera param1) {
+    void clampCamera(boolean param0, Camera param1) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -1516,7 +1516,7 @@ abstract class TableScene {
         }
     }
 
-    void b(int param0, ResourceArchive param1) {
+    void loadBackdrop(int param0, ResourceArchive param1) {
         try {
           if (param0 != 5) {
             this.field_b = (MusicTrack) null;
@@ -1557,7 +1557,7 @@ abstract class TableScene {
         this.b(115);
     }
 
-    void a(int param0, PoolMatchController param1) {
+    void updatePottedBalls(int param0, PoolMatchController param1) {
         int var4 = 0;
         int var6 = 0;
         Pocket[] var3 = null;

@@ -30,7 +30,7 @@ final class SpaceBallSkin extends BallSkin {
         }
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadTopBarSprites(int param0, ResourceArchive param1) {
         if (param0 != 198123656) {
           return;
         }
@@ -54,7 +54,7 @@ final class SpaceBallSkin extends BallSkin {
         var2.b(-var3 + var2.position, true);
     }
 
-    final void a(ResourceArchive param0, byte param1) {
+    final void loadBallMeshes(ResourceArchive param0, byte param1) {
         MeshBuilder dupTemp$0 = null;
         MeshBuilder dupTemp$1 = null;
         if (null != this.field_a) {
@@ -92,7 +92,7 @@ final class SpaceBallSkin extends BallSkin {
         }
     }
 
-    final String a(byte param0, int param1) {
+    final String groupName(byte param0, int param1) {
         if (param0 >= 9) {
           return param1 == 0 ? BirthDateValidator.ballsetSpaceGroup0 : dq.field_g;
         }
@@ -143,7 +143,7 @@ final class SpaceBallSkin extends BallSkin {
         return (hj[]) null;
     }
 
-    final int a(int param0, boolean param1) {
+    final int ballColor(int param0, boolean param1) {
         int var3;
         int var4;
         ResourceArchive var5;
@@ -202,7 +202,7 @@ final class SpaceBallSkin extends BallSkin {
           return this.b(1, (byte) -108);
         }
         var5 = (ResourceArchive) null;
-        this.a((ResourceArchive) null, (byte) -106);
+        this.loadBallMeshes((ResourceArchive) null, (byte) -106);
         var3Lifetime1 = param0;
         if (var3Lifetime1 == 0) {
           return 13421772;

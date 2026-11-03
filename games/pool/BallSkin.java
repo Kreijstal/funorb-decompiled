@@ -18,7 +18,7 @@ abstract class BallSkin {
         try {
           this.field_j[param2].b(param1, param0);
           if (param3 != -3637) {
-            this.a(-49, false);
+            this.ballColor(-49, false);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.DA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -29,10 +29,10 @@ abstract class BallSkin {
         if (param1 <= 108) {
           return (String) null;
         }
-        return this.a((byte) 102, param0);
+        return this.groupName((byte) 102, param0);
     }
 
-    abstract int a(int param0, boolean param1);
+    abstract int ballColor(int param0, boolean param1);
 
     void a(int param0, int param1, int[] param2, int[] param3, boolean param4) {
         if (param0 != -1912602369) {
@@ -54,7 +54,7 @@ abstract class BallSkin {
           this.field_j = (ModelMesh[]) null;
         }
         for (var2 = 0; var2 < this.field_k.length; var2++) {
-          this.field_k[var2] = ta.buildGradientPalette(new int[]{0, 0, 128, this.a(var2, true)}, -119);
+          this.field_k[var2] = ta.buildGradientPalette(new int[]{0, 0, 128, this.ballColor(var2, true)}, -119);
         }
     }
 
@@ -153,7 +153,7 @@ abstract class BallSkin {
         }
     }
 
-    final MeshBuilder g(int param0) {
+    final MeshBuilder createSphereMesh(int param0) {
         int var6 = 0;
         int var15 = 0;
         int var3;
@@ -236,7 +236,7 @@ abstract class BallSkin {
         return this.field_j.length;
     }
 
-    void a(int param0, ResourceArchive param1) {
+    void loadTopBarSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != 198123656) {
             this.h(32);
@@ -253,7 +253,7 @@ abstract class BallSkin {
         return this.field_k[param0];
     }
 
-    void a(ResourceArchive param0, byte param1) {
+    void loadBallMeshes(ResourceArchive param0, byte param1) {
         try {
           if (param1 != 117) {
             this.b(-29, 80);
@@ -287,7 +287,7 @@ abstract class BallSkin {
           }
           if (0 != param0 &&
             param0 != 8) {
-            stackIn_14_0 = this.a((byte) 33, param0 >> 3 & 1);
+            stackIn_14_0 = this.groupName((byte) 33, param0 >> 3 & 1);
             return stackIn_14_0;
           }
           stackIn_12_0 = ho.eightBallNumbers[param0];
@@ -310,7 +310,7 @@ abstract class BallSkin {
         int var2 = -55 % ((29 - param0) / 44);
     }
 
-    abstract String a(byte param0, int param1);
+    abstract String groupName(byte param0, int param1);
 
     void a(boolean param0, int[] param1, int param2) {
         RuntimeException stackIn_8_0 = null;

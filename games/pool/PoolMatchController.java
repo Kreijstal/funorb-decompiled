@@ -1448,7 +1448,7 @@ final class PoolMatchController {
           ea.field_p = ea.field_p + 1;
           ea.field_p = ea.field_p & 31;
           this.updateRackBalls((byte) 127);
-          LobbyGame.field_gc.a(10, this);
+          LobbyGame.field_gc.updatePottedBalls(10, this);
           dq.field_a.h(-56);
           NetworkGameClient.a((byte) -73, this);
           this.updateStatusBarSlide(87);
@@ -3306,7 +3306,7 @@ final class PoolMatchController {
             }
             if (decompiledFrameRemainder0) {
               var3 = dq.field_a.a(var2_int, this.gameModel.rules, (byte) -111);
-              DialWidget.a(DebouncedValidationProvider.field_f, var3, wn.field_i, 3355443, sa.field_h, true, dq.field_a.a(var2_int, true));
+              DialWidget.a(DebouncedValidationProvider.field_f, var3, wn.field_i, 3355443, sa.field_h, true, dq.field_a.ballColor(var2_int, true));
             }
           }
           if (param0 != -9449) {
@@ -3674,7 +3674,7 @@ final class PoolMatchController {
         RuntimeException var2 = null;
         try {
           var3 = 50 / ((18 - param0) / 54);
-          var2_int = this.gameModel.rules.a(-1);
+          var2_int = this.gameModel.rules.initialGroup(-1);
           if (var2_int == -1) {
             return;
           }
@@ -4561,8 +4561,8 @@ final class PoolMatchController {
             }
           }
           if (0L != (32768L & LinkButtonPainter.field_i)) {
-            sa.field_h.d(LobbyGame.field_gc.b((byte) 123), 10, 50, 16772795, 1);
-            sa.field_h.d(LobbyGame.field_gc.c((byte) 32), 10, 70, 16772795, 1);
+            sa.field_h.d(LobbyGame.field_gc.describeLighting((byte) 123), 10, 50, 16772795, 1);
+            sa.field_h.d(LobbyGame.field_gc.describeAmbientLight((byte) 32), 10, 70, 16772795, 1);
             cl.drawProjectedLine(16772795, 1, this.viewMatrix, new float[]{KillerRules.e(2304, 3), KillerRules.e(1152, param0 - 297), 0.0f}, new float[]{KillerRules.e(LobbyGame.field_gc.field_q + 2304, 3), KillerRules.e(1152 + LobbyGame.field_gc.field_e, 3), KillerRules.e(0 + LobbyGame.field_gc.field_u, 3)});
           }
           if ((LinkButtonPainter.field_i & 4194304L) != 0L) {
@@ -5015,10 +5015,10 @@ final class PoolMatchController {
           AlternateLongAndTextLoginPayload.field_q.sprite = TableScene.field_D;
           if (LobbyGame.field_gc != nn.field_b[param1]) {
             if (null != LobbyGame.field_gc) {
-              LobbyGame.field_gc.d(true);
+              LobbyGame.field_gc.releaseModels(true);
             }
             LobbyGame.field_gc = nn.field_b[param1];
-            LobbyGame.field_gc.a(this.gameModel, 21894);
+            LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
           }
           LobbyGame.field_gc.b(this.gameModel, 0);
           LobbyGame.field_gc.b(false);
@@ -5241,13 +5241,13 @@ final class PoolMatchController {
           if (param1 < nn.field_b.length &&
             LobbyGame.field_gc != nn.field_b[param1]) {
             dq.field_a.e(param0 - 26831);
-            LobbyGame.field_gc.d(true);
+            LobbyGame.field_gc.releaseModels(true);
             LobbyGame.field_gc = nn.field_b[param1];
             id.field_c = LobbyGame.field_gc.field_A;
             id.field_c.field_g = true;
             dq.field_a = PoolGameModel.field_B[param1];
             dq.field_a.a(2147483647, this.gameModel);
-            LobbyGame.field_gc.a(this.gameModel, 21894);
+            LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
             LobbyGame.field_gc.a((byte) 115, this.viewMatrix);
             this.gameModel.rules.c(-42);
           }
@@ -5475,11 +5475,11 @@ final class PoolMatchController {
           if (!param0) {
             this.updateShotCamera(-32);
           }
-          stackIn_7_0 = (~this.gameModel.rules.e(111) == ~this.gameModel.playerCount) ? 0 : 1;
+          stackIn_7_0 = (~this.gameModel.rules.playerCount(111) == ~this.gameModel.playerCount) ? 0 : 1;
           var2_int = stackIn_7_0;
           stackIn_10_0 = this.gameModel.playerCount;
           if (var2_int != 0) {
-            stackIn_11_1 = this.gameModel.rules.e(119) - 1;
+            stackIn_11_1 = this.gameModel.rules.playerCount(119) - 1;
           } else {
             stackIn_11_1 = 0;
           }
@@ -6962,7 +6962,7 @@ final class PoolMatchController {
               dq.field_a.a(7096);
               dq.field_a.a(2147483647, this.gameModel);
               LobbyGame.field_gc.i(25879);
-              LobbyGame.field_gc.a(this.gameModel, 21894);
+              LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
               LobbyGame.field_gc.a((byte) -128, this.viewMatrix);
               if (var8 == 0) {
                 return;
@@ -7770,7 +7770,7 @@ final class PoolMatchController {
         try {
           dq.field_a.a(7096);
           dq.field_a.a(2147483647, this.gameModel);
-          LobbyGame.field_gc.a(this.gameModel, 21894);
+          LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
           LobbyGame.field_gc.a((byte) 0, this.viewMatrix);
           int var2_int = 90 % ((-12 - param0) / 58);
           this.markBallTransformsDirty(0);
@@ -7941,7 +7941,7 @@ final class PoolMatchController {
                 LobbyGame.field_gc.a(17, 256, (byte) -100, 128);
               } else {
                 if ((Quaternion.field_e & param0.endResolution) != 0) {
-                  this.gameModel.c(-14286, this.gameModel.rules.a(param0, (byte) 114));
+                  this.gameModel.c(-14286, this.gameModel.rules.nextPlayerIndex(param0, (byte) 114));
                   if (0 != (this.modeFlags & f.field_f)) {
                     this.gameModel.field_m = false;
                   }

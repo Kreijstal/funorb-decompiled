@@ -49,7 +49,7 @@ final class RasterSnapshot extends IntrusiveNode {
           var5 = stackIn_14_0;
           if (var4 != 0 &&
             var7.c(true)) {
-            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[var6.playerIndex]}, -1, AgeValidator.whichGroupDoYouWant), dq.field_a.a((byte) 99, 1), dq.field_a.a((byte) 120, 0), 40, 2, 1);
+            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[var6.playerIndex]}, -1, AgeValidator.whichGroupDoYouWant), dq.field_a.groupName((byte) 99, 1), dq.field_a.groupName((byte) 120, 0), 40, 2, 1);
             return;
           }
           if (var4 != 0 &&

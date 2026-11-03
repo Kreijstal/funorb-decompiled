@@ -23,7 +23,7 @@ final class ModernTableScene extends ModelTableScene {
     private PcmSample field_db;
     private PcmSample field_V;
 
-    final void a(int param0, PoolMatchController param1) {
+    final void updatePottedBalls(int param0, PoolMatchController param1) {
         PcmSampleStream dupTemp$0 = null;
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
@@ -45,7 +45,7 @@ final class ModernTableScene extends ModelTableScene {
         int var7Lifetime1Lifetime1;
         var8 = Pool.field_O;
         try {
-          super.a(param0, param1);
+          super.updatePottedBalls(param0, param1);
           if (this.field_hb != null &&
             this.field_hb.isSamplePositionOutOfRange()) {
             this.field_hb = null;
@@ -814,7 +814,7 @@ final class ModernTableScene extends ModelTableScene {
         }
     }
 
-    final void b(int param0, ResourceArchive param1) {
+    final void loadBackdrop(int param0, ResourceArchive param1) {
         try {
           this.field_B = new Sprite(param1.getFileByName(false, "modern-sky.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
           if (param0 != 5) {
@@ -867,7 +867,7 @@ final class ModernTableScene extends ModelTableScene {
         }
     }
 
-    final void a(ResourceArchive param0, int param1) {
+    final void loadModels(ResourceArchive param0, int param1) {
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
@@ -1148,7 +1148,7 @@ final class ModernTableScene extends ModelTableScene {
         }
     }
 
-    final void a(SoundCache param0, int param1) {
+    final void loadSounds(SoundCache param0, int param1) {
         try {
           this.field_X = param0.a("ball_hard", true, "");
           this.field_Q = param0.a("ball_soft", true, "");

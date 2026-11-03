@@ -77,7 +77,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void b(int param0, ResourceArchive param1) {
+    final void loadBackdrop(int param0, ResourceArchive param1) {
         try {
           if (param0 != 5) {
             this.field_gb = (PcmSample) null;
@@ -88,7 +88,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, PoolMatchController param1) {
+    final void updatePottedBalls(int param0, PoolMatchController param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -98,7 +98,7 @@ final class TikiTableScene extends ModelTableScene {
         int var4 = 0;
         var4 = Pool.field_O;
         try {
-          super.a(param0, param1);
+          super.updatePottedBalls(param0, param1);
           if (ln.field_t == 0) {
             RankingsScreen.field_N.unloadScoreAndResetSynthesis(true, -1);
           }
@@ -158,7 +158,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(ResourceArchive param0, int param1) {
+    final void loadModels(ResourceArchive param0, int param1) {
         int incrementValue$22 = 0;
         int incrementValue$23 = 0;
         int incrementValue$24 = 0;
@@ -590,8 +590,8 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void d(boolean param0) {
-        super.d(param0);
+    final void releaseModels(boolean param0) {
+        super.releaseModels(param0);
         pr.c((byte) 90);
     }
 
@@ -774,7 +774,7 @@ final class TikiTableScene extends ModelTableScene {
           param3.a(new int[]{0, 0, 0, hc.a(2047, 1536 + param1), ScrollPaneWithFooter.a(1536 + param1, true), 0, -ScrollPaneWithFooter.a(param1 + 1536, true), hc.a(2047, param1 + 1536), 0, 0, 0, 65536});
           param3.e();
           if (param2 < 68) {
-            this.d(false);
+            this.releaseModels(false);
           }
           this.a(new int[]{var7_int, var8, LobbyGame.field_vc}, param0, param3, -123);
         } catch (RuntimeException runtimeException) {
@@ -1047,7 +1047,7 @@ final class TikiTableScene extends ModelTableScene {
         try {
           if (param0 != 1) {
             PoolGameModel var4 = (PoolGameModel) null;
-            this.a((PoolGameModel) null, 126);
+            this.buildTableGeometry((PoolGameModel) null, 126);
           }
           this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_jungle");
           this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_jungle_win_jingle");
@@ -1056,7 +1056,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(SoundCache param0, int param1) {
+    final void loadSounds(SoundCache param0, int param1) {
         try {
           int var3_int = 86 / ((param1 - 39) / 38);
           this.field_bb = param0.a("jungle_ball_hard", true, "");
@@ -1283,7 +1283,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(boolean param0, Camera param1) {
+    final void clampCamera(boolean param0, Camera param1) {
         double stackIn_14_0 = 0.0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -1312,7 +1312,7 @@ final class TikiTableScene extends ModelTableScene {
           }
           if (param0) {
             var8 = (PoolGameModel) null;
-            this.a((PoolGameModel) null, 35);
+            this.buildTableGeometry((PoolGameModel) null, 35);
           }
           var3_double = param1.getDistance(8);
           stackIn_14_0 = ((4194304L & LinkButtonPainter.field_i) != 0L) ? 12000.0 : 2048.0;
@@ -1337,9 +1337,9 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(PoolGameModel param0, int param1) {
+    final void buildTableGeometry(PoolGameModel param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.buildTableGeometry(param0, param1);
           PauseMenuScreen.a(0.8999999761581421f, 1.0f, 0.8999999761581421f, 0.0833333358168602f, -31792);
           ln.field_t = 0;
         } catch (RuntimeException runtimeException) {

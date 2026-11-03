@@ -387,7 +387,7 @@ final class TutorialController {
             ProgressBarWidget.a(true, 0, CueAim.pottingTheRestOfYourGroup, (String) null);
             var13 = this.field_a.gameModel.balls;
             var2 = var13;
-            var3 = this.field_a.gameModel.rules.a(-1);
+            var3 = this.field_a.gameModel.rules.initialGroup(-1);
             if (0 == var3 ||
               var3 == 1) {
               var4 = this.field_a.gameModel.currentShot(105);
@@ -424,7 +424,7 @@ final class TutorialController {
             }
           }
         } else {
-          if (this.field_a.gameModel.rules.a(-1) == -1) {
+          if (this.field_a.gameModel.rules.initialGroup(-1) == -1) {
             var4_int = ga.nextRandomInt(2, true, ea.field_r);
             var5_int = ga.nextRandomInt(7, true, ea.field_r) - (-(var4_int << 3) - 1);
             var6 = ga.nextRandomInt(this.field_a.gameModel.pockets.length, true, ea.field_r);
@@ -433,7 +433,7 @@ final class TutorialController {
             var18 = var16;
             var8_ref_pq = this.field_a.gameModel.balls[var5_int];
             var15 = this.field_a.gameModel.currentShot(75);
-            ProgressBarWidget.a(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{dq.field_a.a((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
+            ProgressBarWidget.a(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{dq.field_a.groupName((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
             this.field_a.gameModel.stopAllBalls(-95);
             this.field_a.gameModel.rules.a(var4_int, -1, 0);
             var15.endResolution = i.field_m | MarkerSliderPainter.field_j;

@@ -9,7 +9,7 @@ final class PolarBallSkin extends BallSkin {
     static int field_o;
     static boolean[][] field_m;
 
-    final void a(ResourceArchive param0, byte param1) {
+    final void loadBallMeshes(ResourceArchive param0, byte param1) {
         MeshBuilder dupTemp$0 = null;
         MeshBuilder dupTemp$1 = null;
         if (this.field_a != null) {
@@ -72,7 +72,7 @@ final class PolarBallSkin extends BallSkin {
 
     final boolean c(int param0) {
         if (param0 != 2) {
-          this.a((byte) -23, 90);
+          this.groupName((byte) -23, 90);
           return false;
         }
         return false;
@@ -89,7 +89,7 @@ final class PolarBallSkin extends BallSkin {
         field_m = (boolean[][]) null;
     }
 
-    final int a(int param0, boolean param1) {
+    final int ballColor(int param0, boolean param1) {
         int var3;
         int var4;
         var4 = Pool.field_O;
@@ -149,7 +149,7 @@ final class PolarBallSkin extends BallSkin {
         return 16711935;
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadTopBarSprites(int param0, ResourceArchive param1) {
         if (param0 != 198123656) {
           return;
         }
@@ -165,7 +165,7 @@ final class PolarBallSkin extends BallSkin {
         int var2 = -32 % ((37 - param0) / 60);
     }
 
-    final String a(byte param0, int param1) {
+    final String groupName(byte param0, int param1) {
         if (param0 >= 9) {
           return param1 == 0 ? ij.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
         }

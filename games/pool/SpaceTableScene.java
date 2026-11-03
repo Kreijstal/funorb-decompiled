@@ -89,7 +89,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void a(SoundCache param0, int param1) {
+    final void loadSounds(SoundCache param0, int param1) {
         try {
           ie.field_f = param0.a("space_ball_1", true, "");
           Bzip2DecoderState.field_i = param0.a("space_ball_2", true, "");
@@ -110,7 +110,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void a(boolean param0, Camera param1) {
+    final void clampCamera(boolean param0, Camera param1) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -195,8 +195,8 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void d(boolean param0) {
-        super.d(param0);
+    final void releaseModels(boolean param0) {
+        super.releaseModels(param0);
         ra.field_f = null;
         TextInputValidator.field_h = null;
         DialogLayer.field_R = null;
@@ -204,7 +204,7 @@ final class SpaceTableScene extends ModelTableScene {
         CacheEntry.field_C = (int[][]) null;
     }
 
-    final void b(int param0, ResourceArchive param1) {
+    final void loadBackdrop(int param0, ResourceArchive param1) {
         try {
           this.field_B = new Sprite(param1.getFileByName(false, "nebula.jpg", ""), (java.awt.Component) ((Object) TextLineLayout.a((byte) -73)));
           if (param0 != 5) {
@@ -215,7 +215,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void a(PoolGameModel param0, int param1) {
+    final void buildTableGeometry(PoolGameModel param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -225,7 +225,7 @@ final class SpaceTableScene extends ModelTableScene {
         RuntimeException var3 = null;
         var4 = Pool.field_O;
         try {
-          super.a(param0, param1);
+          super.buildTableGeometry(param0, param1);
           ra.field_f = new qf[32];
           ReportAbuseDialog.field_Ub = new int[ra.field_f.length];
           MultiHandleSliderWidget.field_N = new int[ra.field_f.length];
@@ -255,7 +255,7 @@ final class SpaceTableScene extends ModelTableScene {
         gd.field_g = gd.field_g + var2;
     }
 
-    final void a(int param0, PoolMatchController param1) {
+    final void updatePottedBalls(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -265,7 +265,7 @@ final class SpaceTableScene extends ModelTableScene {
         RuntimeException var3 = null;
         var4 = Pool.field_O;
         try {
-          super.a(param0, param1);
+          super.updatePottedBalls(param0, param1);
           for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
             ra.field_f[var3_int].a(2115785453);
           }
@@ -706,7 +706,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void a(ResourceArchive param0, int param1) {
+    final void loadModels(ResourceArchive param0, int param1) {
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         int incrementValue$15 = 0;

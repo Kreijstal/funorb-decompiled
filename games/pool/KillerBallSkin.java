@@ -44,7 +44,7 @@ final class KillerBallSkin extends BallSkin {
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int ballColor(int param0, boolean param1) {
         int var3;
         int var4;
         ResourceArchive var5;
@@ -103,7 +103,7 @@ final class KillerBallSkin extends BallSkin {
           return this.c(101, 1);
         }
         var5 = (ResourceArchive) null;
-        this.a(-117, (ResourceArchive) null);
+        this.loadTopBarSprites(-117, (ResourceArchive) null);
         var3Lifetime1 = param0;
         if (var3Lifetime1 == 0) {
           return 13421772;
@@ -156,7 +156,7 @@ final class KillerBallSkin extends BallSkin {
         return 16711935;
     }
 
-    final String a(byte param0, int param1) {
+    final String groupName(byte param0, int param1) {
         if (param0 < 9) {
           return (String) null;
         }
@@ -213,7 +213,7 @@ final class KillerBallSkin extends BallSkin {
         return 16777215;
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadTopBarSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != 198123656) {
             this.c(45);
@@ -229,14 +229,14 @@ final class KillerBallSkin extends BallSkin {
         tq.field_q = (Js5Transport.field_q.field_y + sa.field_h.maxAscent >> 1) + ArrayWidgetGroup.field_M;
     }
 
-    final void a(ResourceArchive param0, byte param1) {
+    final void loadBallMeshes(ResourceArchive param0, byte param1) {
         MeshBuilder dupTemp$0 = null;
         if (this.field_a != null) {
           return;
         }
         try {
           this.field_a = new MeshBuilder[16];
-          this.field_a[0] = this.g(-930305852);
+          this.field_a[0] = this.createSphereMesh(-930305852);
           dupTemp$0 = MeshBuilder.loadFromArchive(param0, "", "balls/ball_killer_red");
           this.field_a[15] = dupTemp$0;
           this.field_a[14] = dupTemp$0;

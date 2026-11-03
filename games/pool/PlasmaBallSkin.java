@@ -67,7 +67,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadTopBarSprites(int param0, ResourceArchive param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -693,7 +693,7 @@ final class PlasmaBallSkin extends BallSkin {
     PlasmaBallSkin() {
     }
 
-    final int a(int param0, boolean param1) {
+    final int ballColor(int param0, boolean param1) {
         int stackIn_84_0 = 0;
         int stackIn_86_0 = 0;
         int stackIn_88_0 = 0;
@@ -893,7 +893,7 @@ final class PlasmaBallSkin extends BallSkin {
         var7 = Pool.field_O;
         try {
           if (param0 != -1912602369) {
-            this.a((byte) -54, -91);
+            this.groupName((byte) -54, -91);
           }
           this.a(param4, param2, param1, param3, -20263);
           if (param2[2] > 16384) {
@@ -1009,7 +1009,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final String a(byte param0, int param1) {
+    final String groupName(byte param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;

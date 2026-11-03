@@ -21,7 +21,7 @@ final class HalloweenBallSkin extends BallSkin {
         ViewportController.field_y = 0 == PlayerContextMenu.field_e.readUnsignedByte(-83) ? true : false;
     }
 
-    final int a(int param0, boolean param1) {
+    final int ballColor(int param0, boolean param1) {
         if (0 == param0) {
           return 16777215;
         }
@@ -29,7 +29,7 @@ final class HalloweenBallSkin extends BallSkin {
           return 3355443;
         }
         if (!param1) {
-          this.a((byte) -72, -37);
+          this.groupName((byte) -72, -37);
         }
         return 7824981;
     }
@@ -87,7 +87,7 @@ final class HalloweenBallSkin extends BallSkin {
         }
     }
 
-    final String a(byte param0, int param1) {
+    final String groupName(byte param0, int param1) {
         if (param0 < 9) {
           return (String) null;
         }
@@ -210,7 +210,7 @@ final class HalloweenBallSkin extends BallSkin {
         return false;
     }
 
-    final void a(int param0, ResourceArchive param1) {
+    final void loadTopBarSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != 198123656) {
             mbFullAccess1 = (String) null;
@@ -220,7 +220,7 @@ final class HalloweenBallSkin extends BallSkin {
         }
     }
 
-    final void a(ResourceArchive param0, byte param1) {
+    final void loadBallMeshes(ResourceArchive param0, byte param1) {
         if (param1 != 117) {
           Ball[] var4 = (Ball[]) null;
           this.a(-110, (byte) 38, (Ball[]) null);

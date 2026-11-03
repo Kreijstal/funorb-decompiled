@@ -309,9 +309,9 @@ abstract class ModelTableScene extends TableScene {
     ModelTableScene() {
     }
 
-    void a(PoolGameModel param0, int param1) {
+    void buildTableGeometry(PoolGameModel param0, int param1) {
         try {
-          super.a(param0, param1 ^ 0);
+          super.buildTableGeometry(param0, param1 ^ 0);
           this.c(true);
           this.d(16);
           if (param1 != 21894) {

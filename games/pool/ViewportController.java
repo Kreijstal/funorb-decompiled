@@ -45,7 +45,7 @@ final class ViewportController {
           var2 = null;
           for (var3 = 0; nn.field_b.length > var3; var3++) {
             var4 = nn.field_b[var3];
-            var4.a(param0, param1 ^ -98);
+            var4.loadModels(param0, param1 ^ -98);
             if (null != var4.field_A &&
               var2 == null) {
               var2 = var4.field_A;
@@ -57,7 +57,7 @@ final class ViewportController {
             }
           }
           for (var3Lifetime2 = 0; PoolGameModel.field_B.length > var3Lifetime2; var3Lifetime2++) {
-            PoolGameModel.field_B[var3Lifetime2].a(param0, (byte) 117);
+            PoolGameModel.field_B[var3Lifetime2].loadBallMeshes(param0, (byte) 117);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

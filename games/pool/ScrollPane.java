@@ -101,7 +101,7 @@ final class ScrollPane extends UiComponent {
             field_Tb = (hj) null;
           }
           for (var2_int = 0; nn.field_b.length > var2_int; var2_int++) {
-            nn.field_b[var2_int].b(5, param1);
+            nn.field_b[var2_int].loadBackdrop(5, param1);
           }
           pn.field_l = new Sprite(param1.getFileByName(false, "menu-framed-background.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
         } catch (RuntimeException runtimeException) {

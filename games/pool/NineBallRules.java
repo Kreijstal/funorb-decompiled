@@ -72,7 +72,7 @@ final class NineBallRules extends GameRules {
         }
     }
 
-    final int a(boolean param0) {
+    final int initialBallInHandMode(boolean param0) {
         if (param0) {
           this.field_f = 76;
           return 1;
@@ -240,7 +240,7 @@ final class NineBallRules extends GameRules {
         }
     }
 
-    final int a(int param0) {
+    final int initialGroup(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
         if (param0 != -1) {
@@ -255,10 +255,10 @@ final class NineBallRules extends GameRules {
         return 9;
     }
 
-    final void n(int param0) {
-        this.field_f = this.a(-1);
+    final void onShotStart(int param0) {
+        this.field_f = this.initialGroup(-1);
         if (param0 != 11828) {
-          this.n(-102);
+          this.onShotStart(-102);
         }
     }
 
@@ -398,7 +398,7 @@ final class NineBallRules extends GameRules {
         return this.q(param0 + 10);
     }
 
-    final int i(int param0) {
+    final int ballCount(int param0) {
         if (param0 != 26840) {
           field_j = (UiComponent) null;
         }
@@ -468,7 +468,7 @@ final class NineBallRules extends GameRules {
           return true;
         }
         this.field_d.e(12226, 0);
-        return !this.field_d.field_r[this.a(-1)].field_j ? true : false;
+        return !this.field_d.field_r[this.initialGroup(-1)].field_j ? true : false;
     }
 
     static {
