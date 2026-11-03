@@ -29,11 +29,11 @@ final class PlatformTaskDispatcher implements Runnable {
     private MicrosoftDisplayController field_f;
     LimitedRandomAccessFile[] field_n;
 
-    final AsyncRequest a(boolean param0, byte param1, java.awt.Component param2) {
+    final AsyncRequest setCursorVisible(boolean param0, byte param1, java.awt.Component param2) {
         if (param1 != 106) {
           return (AsyncRequest) null;
         }
-        return this.a(15, !param0 ? 0 : 1, false, param2, 0);
+        return this.queueRequest(15, !param0 ? 0 : 1, false, param2, 0);
     }
 
     private final static LimitedRandomAccessFile a(String param0, int param1, boolean param2, String param3) {
@@ -84,11 +84,11 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final AsyncRequest a(int param0, int param1, Runnable param2) {
+    final AsyncRequest startThread(int param0, int param1, Runnable param2) {
         if (param0 < 27) {
           field_h = -9L;
         }
-        return this.a(2, param1, false, param2, 0);
+        return this.queueRequest(2, param1, false, param2, 0);
     }
 
     public final void run() {
@@ -341,14 +341,14 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final AsyncRequest a(Class param0, String param1, byte param2) {
+    final AsyncRequest getDeclaredField(Class param0, String param1, byte param2) {
         if (param2 != -88) {
           return (AsyncRequest) null;
         }
-        return this.a(9, 0, false, new Object[]{param0, param1}, 0);
+        return this.queueRequest(9, 0, false, new Object[]{param0, param1}, 0);
     }
 
-    private final AsyncRequest a(int param0, int param1, boolean param2, Object param3, int param4) {
+    private final AsyncRequest queueRequest(int param0, int param1, boolean param2, Object param3, int param4) {
         AsyncRequest var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
@@ -368,31 +368,31 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           this.notify();
           if (param2) {
-            this.a(-56, -20, -46, 113, (byte) -46);
+            this.enterFullscreen(-56, -20, -46, 113, (byte) -46);
           }
         }
         return var6;
     }
 
-    final AsyncRequest a(java.awt.Frame param0, boolean param1) {
+    final AsyncRequest exitFullscreen(java.awt.Frame param0, boolean param1) {
         if (param1) {
           this.field_l = (AsyncRequest) null;
         }
-        return this.a(7, 0, false, param0, 0);
+        return this.queueRequest(7, 0, false, param0, 0);
     }
 
-    final AsyncRequest a(int param0) {
+    final AsyncRequest listDisplayModes(int param0) {
         if (param0 < 83) {
           return (AsyncRequest) null;
         }
-        return this.a(5, 0, false, (Object) null, 0);
+        return this.queueRequest(5, 0, false, (Object) null, 0);
     }
 
-    final AsyncRequest a(int param0, int param1, int param2, int param3, byte param4) {
+    final AsyncRequest enterFullscreen(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != 85) {
           this.a(false);
         }
-        return this.a(6, (param1 << 16) + param0, false, (Object) null, (param3 << 16) + param2);
+        return this.queueRequest(6, (param1 << 16) + param0, false, (Object) null, (param3 << 16) + param2);
     }
 
     final boolean a(byte param0) {
@@ -408,26 +408,26 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.field_f != null ? true : false;
     }
 
-    final AsyncRequest a(byte param0, Class param1, Class[] param2, String param3) {
+    final AsyncRequest getDeclaredMethod(byte param0, Class param1, Class[] param2, String param3) {
         if (param0 < 12) {
           this.field_b = (LimitedRandomAccessFile) null;
         }
-        return this.a(8, 0, false, new Object[]{param1, param3, param2}, 0);
+        return this.queueRequest(8, 0, false, new Object[]{param1, param3, param2}, 0);
     }
 
-    final AsyncRequest a(String param0, int param1, int param2) {
+    final AsyncRequest openSocket(String param0, int param1, int param2) {
         if (param2 != 0) {
           java.awt.Component var5 = (java.awt.Component) null;
-          this.a(true, (byte) -21, (java.awt.Component) null);
+          this.setCursorVisible(true, (byte) -21, (java.awt.Component) null);
         }
-        return this.a(param1, param0, false, (byte) -123);
+        return this.queueSocketRequest(param1, param0, false, (byte) -123);
     }
 
-    private final AsyncRequest a(int param0, String param1, boolean param2, byte param3) {
+    private final AsyncRequest queueSocketRequest(int param0, String param1, boolean param2, byte param3) {
         if (param3 > -104) {
           this.field_k = false;
         }
-        return this.a(param2 ? 22 : 1, param0, false, param1, 0);
+        return this.queueRequest(param2 ? 22 : 1, param0, false, param1, 0);
     }
 
     final void a(boolean param0) {
@@ -498,7 +498,7 @@ final class PlatformTaskDispatcher implements Runnable {
         if (param1 != 1) {
           field_h = -125L;
         }
-        return this.a(4, 0, false, param0, 0);
+        return this.queueRequest(4, 0, false, param0, 0);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
@@ -630,12 +630,12 @@ final class PlatformTaskDispatcher implements Runnable {
         this.field_s.start();
     }
 
-    final AsyncRequest a(java.awt.Component param0, int param1, int param2, int param3) {
+    final AsyncRequest setCursorPosition(java.awt.Component param0, int param1, int param2, int param3) {
         if (param2 >= -54) {
           return (AsyncRequest) null;
         }
         java.awt.Point var5 = param0.getLocationOnScreen();
-        return this.a(14, param1 + var5.x, false, (Object) null, param3 + var5.y);
+        return this.queueRequest(14, param1 + var5.x, false, (Object) null, param3 + var5.y);
     }
 
     static {

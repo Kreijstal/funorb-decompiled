@@ -14,7 +14,7 @@ final class MidiNoteMixer extends PcmStream {
     final PcmStream nextChildStream() {
         pr var1;
         while (true) {
-          var1 = (pr) (this.field_t.f((byte) -5));
+          var1 = (pr) (this.field_t.previous((byte) -5));
           if (var1 == null) {
             return null;
           }
@@ -181,7 +181,7 @@ final class MidiNoteMixer extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        pr var1 = (pr) (this.field_t.c((byte) 76));
+        pr var1 = (pr) (this.field_t.last((byte) 76));
         if (var1 == null) {
           return null;
         }
@@ -204,7 +204,7 @@ final class MidiNoteMixer extends PcmStream {
         var7 = Pool.field_O;
         try {
           this.field_p.mixInto(param0, param1, param2);
-          var6 = (pr) (this.field_t.c((byte) -67));
+          var6 = (pr) (this.field_t.last((byte) -67));
           while (var6 != null) {
             if (!this.field_w.a(-16257, var6)) {
               var5 = param2;
@@ -220,7 +220,7 @@ final class MidiNoteMixer extends PcmStream {
                 var4_int = var4_int + var6.field_D;
               } while (!this.field_w.advanceNoteAndHandleCompletion(var5, param0, var4_int, 1, var6));
             }
-            var6 = (pr) (this.field_t.f((byte) -5));
+            var6 = (pr) (this.field_t.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -283,7 +283,7 @@ final class MidiNoteMixer extends PcmStream {
         boolean stackIn_4_0 = false;
         var4 = Pool.field_O;
         this.field_p.skip(length);
-        var3 = (pr) (this.field_t.c((byte) -20));
+        var3 = (pr) (this.field_t.last((byte) -20));
         while (var3 != null) {
           stackIn_4_0 = this.field_w.a(-16257, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -302,7 +302,7 @@ final class MidiNoteMixer extends PcmStream {
               var3.field_D = var3.field_D - var2;
             }
           }
-          var3 = (pr) (this.field_t.f((byte) -5));
+          var3 = (pr) (this.field_t.previous((byte) -5));
         }
     }
 

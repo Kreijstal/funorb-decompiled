@@ -203,12 +203,12 @@ public final class Pool extends NetworkGameClient {
             }
           }
           QuickChatHelpDialog.b(5938, DateInputWidget.field_U);
-          if (null != LoginForm.field_U.c((byte) 99)) {
+          if (null != LoginForm.field_U.last((byte) 99)) {
             fieldTemp$0 = IntrusiveDequeCursor.field_h + 1;
             IntrusiveDequeCursor.field_h = IntrusiveDequeCursor.field_h + 1;
             if (fieldTemp$0 == 335) {
               IntrusiveDequeCursor.field_h = 0;
-              LoginForm.field_U.removeFirst((byte) -41);
+              LoginForm.field_U.removeLast((byte) -41);
             }
           }
         }
@@ -272,7 +272,7 @@ public final class Pool extends NetworkGameClient {
             stackIn_106_7 = true;
           }
           var4_ref_uf = new PoolMatchController(stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_105_5, stackIn_105_6, stackIn_106_7, var10, 0, false);
-          var4_ref_uf.gameModel.a(ga.nextRandomInt(512, true, ea.field_r), -1, 0, (AccountContentDialog.field_ub.gameModel.field_A + 1) % fr.field_n, param1 ^ 19063);
+          var4_ref_uf.gameModel.addOrUpdateShot(ga.nextRandomInt(512, true, ea.field_r), -1, 0, (AccountContentDialog.field_ub.gameModel.field_A + 1) % fr.field_n, param1 ^ 19063);
           AccountContentDialog.field_ub = var4_ref_uf;
           var5 = jd.field_a ? 1 : 0;
           stackIn_108_0 = -3405;
@@ -360,7 +360,7 @@ public final class Pool extends NetworkGameClient {
         potBallsInAnyOrderFinishOnBlack = null;
     }
 
-    final void a(byte param0) {
+    final void paintFrame(byte param0) {
         int stackIn_49_0 = 0;
         boolean stackIn_50_1 = false;
         int var3_int;
@@ -442,7 +442,7 @@ public final class Pool extends NetworkGameClient {
           SoftwareRasterizer.fillRectangle(20 + var3_intLifetime1, -20 + (140 + (var4_int - 20)), 360, 20, 0);
           SoftwareRasterizer.fillRectangle(20 + (var3_intLifetime1 + 2), -20 + (140 + var4_int) - 18, LobbyGame.field_gc.field_H * 356 / (LobbyGame.field_gc.field_G - 1), 16, 16615680);
         }
-        var3 = (bq) (LoginForm.field_U.c((byte) -102));
+        var3 = (bq) (LoginForm.field_U.last((byte) -102));
         if (var3 != null) {
           var5 = IntrusiveDequeCursor.field_h;
           if (var5 < 80) {
@@ -496,7 +496,7 @@ public final class Pool extends NetworkGameClient {
         return;
     }
 
-    final void h(byte param0) {
+    final void releaseAllStatics(byte param0) {
         Pool.c(false);
         TriangleRasterizer.releaseStatics();
         TextureCache.releaseStatics(param0 ^ -3723);
@@ -865,7 +865,7 @@ public final class Pool extends NetworkGameClient {
         this.field_t = null;
     }
 
-    final void d(byte param0) {
+    final void initializeGame(byte param0) {
         this.initializeFramework(5, 19, 0, 2, 1, false, 61, 1);
         MidiPcmStream var3 = new MidiPcmStream();
         ThemeSelectScreen.a((java.awt.Component) ((Object) TimeTrialSelectScreen.field_K), var3, 22050, StatefulTextPainter.field_s, 10282, true);
@@ -906,7 +906,7 @@ public final class Pool extends NetworkGameClient {
           ArrayWidgetGroup.a(0);
         }
         if (param0 > -103) {
-          this.d((byte) -93);
+          this.initializeGame((byte) -93);
         }
         fh.field_b = fh.a(3, (byte) 103);
         cp.field_a = fh.a(4, (byte) 103);
@@ -1046,7 +1046,7 @@ public final class Pool extends NetworkGameClient {
             if (HighscoresScreen.field_K) {
               for (var3 = 0; var3 < md.achievementNames.length; var3++) {
                 if (ButtonWidget.a(var22, param0 ^ -13670, var3)) {
-                  LoginForm.field_U.b((byte) -3, new bq(var3));
+                  LoginForm.field_U.addFirst((byte) -3, new bq(var3));
                 }
               }
             }
@@ -1128,7 +1128,7 @@ public final class Pool extends NetworkGameClient {
               }
               if (Bzip2DecoderState.field_c == 69) {
                 var3Lifetime1 = PlayerContextMenu.field_e.readByte((byte) 105);
-                ((PoolMatchController) (var2Lifetime1)).gameModel.c(param0 - 14289, var3Lifetime1);
+                ((PoolMatchController) (var2Lifetime1)).gameModel.finishGame(param0 - 14289, var3Lifetime1);
                 if (((PoolMatchController) (var2Lifetime1)).localPlayerIndex == var3Lifetime1) {
                   LobbyGame.field_gc.a(17, 256, (byte) -121, 128);
                 } else {
@@ -1265,7 +1265,7 @@ public final class Pool extends NetworkGameClient {
         return th.handleChatKey(param1, param3 + 174, param0);
     }
 
-    final void e(byte param0) {
+    final void updateGame(byte param0) {
         boolean discarded$0 = false;
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;
@@ -1389,7 +1389,7 @@ public final class Pool extends NetworkGameClient {
         }
         if (!NanoTickClock.b(-119)) {
           while (true) {
-            var6 = (i) (ArchiveIndex.field_l.removeFirst((byte) -41));
+            var6 = (i) (ArchiveIndex.field_l.removeLast((byte) -41));
             if (var6 == null) {
               break;
             }
@@ -1466,10 +1466,10 @@ public final class Pool extends NetworkGameClient {
         this.startApplet(640, "pool", 480, 0, 20);
     }
 
-    final void c(byte param0) {
+    final void shutdownServices(byte param0) {
         DateInputWidget.j((byte) -78);
         if (param0 != -39) {
-          this.a((byte) -29);
+          this.paintFrame((byte) -29);
         }
         if (null != MatchingTextValidator.field_u) {
           tq.d((byte) -116);
@@ -1555,7 +1555,7 @@ public final class Pool extends NetworkGameClient {
           if (he.field_b != null) {
             var66 = cq.unpackingSoundeffects;
             KeyHandler.a(var66, (float)w.field_i[20], false);
-            this.a((byte) 120);
+            this.paintFrame((byte) 120);
             he.field_b = null;
             ArrayWidgetGroup.a(0);
             return false;
@@ -1563,7 +1563,7 @@ public final class Pool extends NetworkGameClient {
           if (jc.field_a != null) {
             var67 = KillerBallSkin.unpackingMusic;
             KeyHandler.a(var67, (float)w.field_i[21], false);
-            this.a((byte) 120);
+            this.paintFrame((byte) 120);
             HalloweenBallSkin.field_m = MusicTrack.loadFromArchive(jc.field_a, "", "title");
             jh.field_d = MusicTrack.loadFromArchive(jc.field_a, "", "title_next_door");
             for (var3 = 0; var3 < nn.field_b.length; var3++) {
@@ -1576,7 +1576,7 @@ public final class Pool extends NetworkGameClient {
           if (null != gf.field_g) {
             var68 = KillerBallSkin.unpackingMusic;
             KeyHandler.a(var68, (float)w.field_i[22], false);
-            this.a((byte) 120);
+            this.paintFrame((byte) 120);
             RankingsScreen.field_N.prepareScoreInstruments(qg.field_g, gf.field_g, HalloweenBallSkin.field_m, 75, 0);
             RankingsScreen.field_N.prepareScoreInstruments(qg.field_g, gf.field_g, jh.field_d, 95, 0);
             for (var3Lifetime2 = 0; var3Lifetime2 < nn.field_b.length; var3Lifetime2++) {
@@ -1591,7 +1591,7 @@ public final class Pool extends NetworkGameClient {
           if (QuickChatMenu.field_Zb != null) {
             var69 = NineBallRules.unpackingGraphics;
             KeyHandler.a(var69, (float)w.field_i[23], false);
-            this.a((byte) 120);
+            this.paintFrame((byte) 120);
             FreePlayRules.field_e = sk.loadPaletteFont(Ball.field_z, 32362, "", "font", ViewportController.field_q);
             sa.field_h = he.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialish12");
             ModernTableScene.field_Z = he.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialbold14");
@@ -1622,7 +1622,7 @@ public final class Pool extends NetworkGameClient {
             return false;
           }
           if (param0 < 56) {
-            this.h((byte) 13);
+            this.releaseAllStatics((byte) 13);
           }
           if (fh.field_b != null) {
             kp.a(new HuffmanCodec(fh.field_b.getFileByName(false, "huffman", "")), (byte) -92);
@@ -1633,7 +1633,7 @@ public final class Pool extends NetworkGameClient {
           if (null != s.field_a) {
             var70 = ValidationIconWidget.unpackingModels;
             KeyHandler.a(var70, (float)w.field_i[24], false);
-            this.a((byte) 120);
+            this.paintFrame((byte) 120);
             ViewportController.a(s.field_a, 0);
             s.field_a = null;
             ArrayWidgetGroup.a(0);
@@ -1699,7 +1699,7 @@ public final class Pool extends NetworkGameClient {
                                             ue.a(true);
                                             var64 = cq.unpackingSoundeffects;
                                             KeyHandler.a(var64, (float)w.field_i[19], false);
-                                            this.a((byte) 120);
+                                            this.paintFrame((byte) 120);
                                             IntKeyLookup.a(true);
                                             qg.field_g = new SoundCache(WeightedLruCache.field_d, he.field_b);
                                             il.field_c[0] = qg.field_g.a("interface_mouseover_menuitems", true, "");

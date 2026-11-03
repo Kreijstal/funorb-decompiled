@@ -32,7 +32,7 @@ final class ie {
           var3_int = param0 ? 1 : 0;
           var4 = 0;
           var5 = 0;
-          var6 = ((ChatMessageLine) (MatchingTextValidator.field_r.c((byte) 63))).renderedSprite;
+          var6 = ((ChatMessageLine) (MatchingTextValidator.field_r.last((byte) 63))).renderedSprite;
           if (var6 != null) {
             param1 = param1 - (var6.field_A >> 1);
             if (DebouncedValidationProvider.field_f >= param1 &&

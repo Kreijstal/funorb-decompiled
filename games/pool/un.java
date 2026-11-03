@@ -82,10 +82,10 @@ final class un {
     final static void a(int param0) {
         if (param0 != 676) {
           field_b = true;
-          MatchingTextValidator.field_r.d((byte) 47);
+          MatchingTextValidator.field_r.clear((byte) 47);
           return;
         }
-        MatchingTextValidator.field_r.d((byte) 47);
+        MatchingTextValidator.field_r.clear((byte) 47);
     }
 
     final static void a(int param0, bj param1, byte param2) {

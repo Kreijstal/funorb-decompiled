@@ -43,7 +43,7 @@ final class bo {
         tq var2 = null;
         if (param1 >= 9) {
           var2 = new tq();
-          NodeHashTableIterator.field_j.b((byte) 127, var2);
+          NodeHashTableIterator.field_j.addFirst((byte) 127, var2);
           kp.a(1, param0);
           return var2;
         }

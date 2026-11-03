@@ -324,7 +324,7 @@ final class HuffmanCodec {
             var32 = (ScrollPane) null;
             HuffmanCodec.a(true, -46, (ScrollPane) null, -111, (byte) 66);
           }
-          var12 = (LobbyPlayer) (var10.c((byte) 115));
+          var12 = (LobbyPlayer) (var10.last((byte) 115));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.children) {
@@ -504,7 +504,7 @@ final class HuffmanCodec {
             if (var12.hovered) {
               if (var12.isUnindexed(true)) {
                 var11 = var12;
-                var12 = (LobbyPlayer) (var10.f((byte) -5));
+                var12 = (LobbyPlayer) (var10.previous((byte) -5));
                 continue;
               }
               var24Lifetime2 = null;
@@ -655,7 +655,7 @@ final class HuffmanCodec {
               }
             }
             var11 = var12;
-            var12 = (LobbyPlayer) (var10.f((byte) -5));
+            var12 = (LobbyPlayer) (var10.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -991,7 +991,7 @@ final class HuffmanCodec {
           var2_long = rl.monotonicTimeMillis((byte) -103);
           if (param0 != ii.field_d &&
             wq.field_b < 0) {
-            var4_ref_fr = (fr) (vn.field_g.c((byte) -112));
+            var4_ref_fr = (fr) (vn.field_g.last((byte) -112));
             if (var4_ref_fr != null &&
               var4_ref_fr.field_p < var2_long) {
               var4_ref_fr.unlink((byte) -117);
@@ -1053,7 +1053,7 @@ final class HuffmanCodec {
             for (var6 = 0; var6 < ScrollPane.field_Pb; var6++) {
               var5.field_l[var6] = PlayerContextMenu.field_e.payload[var6];
             }
-            vn.field_g.b((byte) -64, var5);
+            vn.field_g.addFirst((byte) -64, var5);
             wq.field_b = -1;
             stackIn_17_0 = wq.field_b;
           }

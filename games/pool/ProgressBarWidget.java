@@ -276,7 +276,7 @@ final class ProgressBarWidget extends UiWidget {
             return stackIn_2_0;
           }
           var4.a(param2, (byte) 87, param3);
-          MarkerSliderPainter.field_i.b((byte) 92, var4);
+          MarkerSliderPainter.field_i.addFirst((byte) 92, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -175,7 +175,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                         }
                         break;
                       }
-                      var26.b((byte) 116, var19);
+                      var26.addFirst((byte) 116, var19);
                     }
                     var16 = var10.indexOf(var14, var16 + 1);
                   }
@@ -699,7 +699,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           }
           try {
             if (rl.field_e == 0) {
-              AudioService.field_c = ButtonWidget.field_M.a(AccountWelcomePanel.field_X, na.field_a, 0);
+              AudioService.field_c = ButtonWidget.field_M.openSocket(AccountWelcomePanel.field_X, na.field_a, 0);
               rl.field_e = rl.field_e + 1;
             }
             if (rl.field_e == 1) {

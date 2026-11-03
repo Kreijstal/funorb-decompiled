@@ -40,18 +40,18 @@ final class eh extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = Pool.field_O;
         try {
-          var4 = (oj) (ta.field_i.c((byte) 81));
+          var4 = (oj) (ta.field_i.last((byte) 81));
           while (var4 != null) {
             WidgetContainer.a(!param1, var4, param0);
-            var4 = (oj) (ta.field_i.f((byte) -5));
+            var4 = (oj) (ta.field_i.previous((byte) -5));
           }
           if (!param1) {
             eh.releaseStatics(104);
           }
-          var5 = (eh) (StateIconLabel.field_Lb.c((byte) -49));
+          var5 = (eh) (StateIconLabel.field_Lb.last((byte) -49));
           while (var5 != null) {
             AlternateLongAndTextLoginPayload.a(var5, param0, (byte) -126);
-            var5 = (eh) (StateIconLabel.field_Lb.f((byte) -5));
+            var5 = (eh) (StateIconLabel.field_Lb.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

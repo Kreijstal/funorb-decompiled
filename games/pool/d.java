@@ -143,7 +143,7 @@ final class d {
             cp.field_c.enabled = true;
             cp.field_c.scrollPane.viewport.text = null;
             var5_ref = null;
-            var6 = (SocialListEntry) (var4.c((byte) -127));
+            var6 = (SocialListEntry) (var4.last((byte) -127));
             while (var6 != null) {
               var7 = 0;
               if (var6.children == null) {
@@ -206,7 +206,7 @@ final class d {
                 var17.field_n.layoutAtAnchor(0, 0, var13, 0, var14);
               }
               var5_ref = var6;
-              var6 = (SocialListEntry) (var4.f((byte) -5));
+              var6 = (SocialListEntry) (var4.previous((byte) -5));
             }
             if (0 != cp.field_c.leftFooter.pressedButton) {
               sm.field_C = new NameEntryPopup(cp.field_c.leftFooter.screenX, cp.field_c.leftFooter.screenY, cp.field_c.leftFooter.width, cp.field_c.leftFooter.height, qf.enterignoreAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);

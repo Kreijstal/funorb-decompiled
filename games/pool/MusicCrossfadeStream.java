@@ -196,7 +196,7 @@ final class MusicCrossfadeStream extends PcmStream {
             stackIn_2_0 = (kf) null;
             return stackIn_2_0;
           }
-          UsernameSuggestionsPanel.field_R.b((byte) -108, var2);
+          UsernameSuggestionsPanel.field_R.addFirst((byte) -108, var2);
           ReportAbuseDialog.field_Xb.b(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -505,10 +505,10 @@ final class MusicCrossfadeStream extends PcmStream {
                 var8[var6] = JaggrabDownloader.field_j.payload[var6];
               }
               var6_ref_fr = new fr((long)var4 + var2_long, JaggrabDownloader.field_j.position, var17);
-              field_q.b((byte) 90, var6_ref_fr);
+              field_q.addFirst((byte) 90, var6_ref_fr);
               JaggrabDownloader.field_j.position = 0;
             }
-            var9 = (fr) (field_q.c((byte) -73));
+            var9 = (fr) (field_q.last((byte) -73));
             var13 = var9;
             if (var13 != null &&
               var13.field_p < var2_long) {

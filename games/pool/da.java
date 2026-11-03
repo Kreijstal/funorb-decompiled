@@ -46,10 +46,10 @@ final class da {
           if (param0 < 93) {
             return;
           }
-          var3 = (ea) (rc.field_c.c((byte) 100));
+          var3 = (ea) (rc.field_c.last((byte) 100));
           while (var3 != null) {
             if (var2 != var3.field_s) {
-              var3 = (ea) (rc.field_c.f((byte) -5));
+              var3 = (ea) (rc.field_c.previous((byte) -5));
               continue;
             }
             break;

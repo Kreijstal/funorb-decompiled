@@ -691,15 +691,15 @@ final class so {
         RuntimeException var3 = null;
         var6 = Pool.field_O;
         try {
-          this.field_b = new so[param1.a(114)];
+          this.field_b = new so[param1.size(114)];
           var3_int = 30 / ((-64 - param0) / 40);
           var4 = 0;
-          var5 = (pm) (param1.c((byte) -94));
+          var5 = (pm) (param1.last((byte) -94));
           while (var5 != null) {
             incrementValue$2 = var4;
             var4++;
             this.field_b[incrementValue$2] = var5.field_n;
-            var5 = (pm) (param1.f((byte) -5));
+            var5 = (pm) (param1.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

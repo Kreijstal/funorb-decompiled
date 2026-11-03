@@ -301,7 +301,7 @@ final class nj {
               return null;
             }
           }
-          var12 = param1.a(param0, param2, param4, param5, (byte) 85);
+          var12 = param1.enterFullscreen(param0, param2, param4, param5, (byte) 85);
           while (var12.field_f == 0) {
             SoundCache.a(-89, 10L);
           }

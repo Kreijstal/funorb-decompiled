@@ -34,7 +34,7 @@ final class NineBallRules extends GameRules {
         return this.q(10);
     }
 
-    final void c(int param0) {
+    final void updateGroupLabels(int param0) {
         int discarded$0 = 0;
         if (param0 > -25) {
           discarded$0 = this.p(60);
@@ -104,7 +104,7 @@ final class NineBallRules extends GameRules {
         return AccountWelcomePanel.field_Q | ll.field_f;
     }
 
-    final boolean a(int param0, byte param1, ShotRecord param2) {
+    final boolean isPotLegal(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -179,7 +179,7 @@ final class NineBallRules extends GameRules {
         return 1;
     }
 
-    final boolean c(ShotRecord param0, int param1) {
+    final boolean isFirstContactLegal(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -206,7 +206,7 @@ final class NineBallRules extends GameRules {
         }
     }
 
-    final Sprite b(ShotRecord param0, int param1) {
+    final Sprite targetBallSprite(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;
@@ -262,7 +262,7 @@ final class NineBallRules extends GameRules {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean showsTargetBall(int param0) {
         if (param0 < 113) {
           NineBallRules.releaseStatics(false);
         }
@@ -287,7 +287,7 @@ final class NineBallRules extends GameRules {
           throw new IllegalStateException("Couldn't get the last shot to examine!");
         }
         var3 = 0;
-        if (this.field_d.d((byte) 118)) {
+        if (this.field_d.isCueBallPotted((byte) 118)) {
           var9.a(3, -14, new int[]{this.field_d.field_A});
           var3 = var3 | (this.d((byte) -47) | um.field_c);
           var9.field_t = true;
@@ -335,7 +335,7 @@ final class NineBallRules extends GameRules {
               var6_ref = (PotEvent) (var10.previous(-126));
             }
           }
-          if (this.field_d.a(false, (byte) 81, var9)) {
+          if (this.field_d.shouldChangePlayer(false, (byte) 81, var9)) {
             if (this.a((var9.playerIndex + 1) % this.field_d.playerCount, -102)) {
               var9.field_w = (byte)(var9.field_w + 1);
             }
@@ -437,7 +437,7 @@ final class NineBallRules extends GameRules {
         return Js5Transport.field_s;
     }
 
-    final byte b(int param0, int param1) {
+    final byte ballGroup(int param0, int param1) {
         if (param1 != 30554) {
           this.a(93, (byte) 18);
         }
@@ -449,7 +449,7 @@ final class NineBallRules extends GameRules {
         return this.q(10);
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean isBallInGroup(int param0, byte param1, int param2) {
         if (param1 <= 122) {
           return false;
         }
@@ -467,7 +467,7 @@ final class NineBallRules extends GameRules {
         if (param1 >= -28) {
           return true;
         }
-        this.field_d.e(12226, 0);
+        this.field_d.computeAimTargets(12226, 0);
         return !this.field_d.field_r[this.initialGroup(-1)].field_j ? true : false;
     }
 

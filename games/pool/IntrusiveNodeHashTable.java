@@ -221,7 +221,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = Pool.field_O;
-        Js5ArchiveManager.field_b.content.children.d((byte) 90);
+        Js5ArchiveManager.field_b.content.children.clear((byte) 90);
         var4 = null;
         var5 = 0;
         var6 = 0;

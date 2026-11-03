@@ -142,7 +142,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
               fieldTemp$0 = TextHotspotRegion.field_t;
               TextHotspotRegion.field_t = TextHotspotRegion.field_t + 1;
               var6.insertionIndex = fieldTemp$0;
-              jq.field_c.b((byte) -31, var6);
+              jq.field_c.addFirst((byte) -31, var6);
             }
             var6.actionName = var5;
             var6.previousName = var7;
@@ -200,7 +200,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
             fieldTemp$1 = AccountWelcomePanel.field_S;
             AccountWelcomePanel.field_S = AccountWelcomePanel.field_S + 1;
             var6Lifetime1.insertionIndex = fieldTemp$1;
-            SoundCache.field_k.b((byte) -24, var6Lifetime1);
+            SoundCache.field_k.addFirst((byte) -24, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -209,16 +209,16 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           var6Lifetime1.name = var4_ref_StringLifetime1;
           var6Lifetime1.previousName = var5Lifetime1;
           var6Lifetime1.unlink((byte) -117);
-          var7_ref = (SocialListEntry) (SoundCache.field_k.c((byte) -125));
+          var7_ref = (SocialListEntry) (SoundCache.field_k.last((byte) -125));
           while (var7_ref != null) {
             if (MessageDialogContent.a(var6Lifetime1, var7_ref, 83)) {
-              var7_ref = (SocialListEntry) (SoundCache.field_k.f((byte) -5));
+              var7_ref = (SocialListEntry) (SoundCache.field_k.previous((byte) -5));
               continue;
             }
             break;
           }
           if (var7_ref == null) {
-            SoundCache.field_k.b((byte) 85, var6Lifetime1);
+            SoundCache.field_k.addFirst((byte) 85, var6Lifetime1);
           } else {
             TextLineLayout.insertAfter(var6Lifetime1, (byte) -119, var7_ref);
           }

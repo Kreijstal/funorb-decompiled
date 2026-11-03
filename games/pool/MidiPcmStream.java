@@ -78,11 +78,11 @@ final class MidiPcmStream extends PcmStream {
           if (param4 > 0) {
             var7 = new int[]{param4};
           }
-          var8 = (te) (param2.field_m.a(0));
+          var8 = (te) (param2.field_m.first(0));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var9 = (int)var8.key;
-            var10 = (MusicPatch) (this.instrumentPatches.a(false, (long)var9));
+            var10 = (MusicPatch) (this.instrumentPatches.get(false, (long)var9));
             if (var10 == null) {
               var10 = NanoTickClock.a(param1, (byte) 127, var9);
               if (var10 == null) {
@@ -90,14 +90,14 @@ final class MidiPcmStream extends PcmStream {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.instrumentPatches.a((byte) -120, var10, (long)var9);
+                this.instrumentPatches.put((byte) -120, var10, (long)var9);
               }
             }
             if ((decompiledFrameRemainder0) &&
               (!var10.prepareSamples(23605, var8.field_l, (int[]) (var7), param0))) {
               var6_int = 0;
             }
-            var8 = (te) (param2.field_m.b(-1));
+            var8 = (te) (param2.field_m.next(-1));
           }
           if (var6_int != 0) {
             param2.a();
@@ -544,7 +544,7 @@ final class MidiPcmStream extends PcmStream {
         if (param1 != 0) {
           return;
         }
-        var3 = (pr) (this.noteMixer.field_t.c((byte) 124));
+        var3 = (pr) (this.noteMixer.field_t.last((byte) 124));
         while (var3 != null) {
           if ((param0 < 0 ||
             param0 == var3.field_t) &&
@@ -552,7 +552,7 @@ final class MidiPcmStream extends PcmStream {
             this.heldNotesByKey[var3.field_t][var3.field_A] = null;
             var3.field_G = 0;
           }
-          var3 = (pr) (this.noteMixer.field_t.f((byte) -5));
+          var3 = (pr) (this.noteMixer.field_t.previous((byte) -5));
         }
     }
 
@@ -582,13 +582,13 @@ final class MidiPcmStream extends PcmStream {
     private final void d(int param0, int param1) {
         pr var3 = null;
         if (param1 != (this.field_F[param0] & 2)) {
-          var3 = (pr) (this.noteMixer.field_t.c((byte) -92));
+          var3 = (pr) (this.noteMixer.field_t.last((byte) -92));
           while (var3 != null) {
             if (var3.field_t == param0 && null == this.heldNotesByKey[param0][var3.field_A] &&
               !(var3.field_G >= 0)) {
               var3.field_G = 0;
             }
-            var3 = (pr) (this.noteMixer.field_t.f((byte) -5));
+            var3 = (pr) (this.noteMixer.field_t.previous((byte) -5));
           }
         }
     }
@@ -602,12 +602,12 @@ final class MidiPcmStream extends PcmStream {
     private final void resetChannelRetriggerPhases(int param0, boolean param1) {
         pr var3 = null;
         if ((4 & this.field_F[param0]) != 0) {
-          var3 = (pr) (this.noteMixer.field_t.c((byte) 88));
+          var3 = (pr) (this.noteMixer.field_t.last((byte) 88));
           while (var3 != null) {
             if (var3.field_t == param0) {
               var3.field_y = 0;
             }
-            var3 = (pr) (this.noteMixer.field_t.f((byte) -5));
+            var3 = (pr) (this.noteMixer.field_t.previous((byte) -5));
           }
         }
         if (param1) {
@@ -709,14 +709,14 @@ final class MidiPcmStream extends PcmStream {
         if ((2 & this.field_F[param0]) == 0) {
           var8.field_G = 0;
         } else {
-          var6 = (pr) (this.noteMixer.field_t.c((byte) 124));
+          var6 = (pr) (this.noteMixer.field_t.last((byte) 124));
           while (var6 != null) {
             if (var8.field_t == var6.field_t && var6.field_G < 0 &&
               var6 != var8) {
               var8.field_G = 0;
               break;
             }
-            var6 = (pr) (this.noteMixer.field_t.f((byte) -5));
+            var6 = (pr) (this.noteMixer.field_t.previous((byte) -5));
           }
         }
     }
@@ -751,10 +751,10 @@ final class MidiPcmStream extends PcmStream {
         if (!param0) {
           field_H = -40;
         }
-        MusicPatch var4 = (MusicPatch) (this.instrumentPatches.a(0));
+        MusicPatch var4 = (MusicPatch) (this.instrumentPatches.first(0));
         while (var4 != null) {
           var4.releaseSampleIds(23478);
-          var4 = (MusicPatch) (this.instrumentPatches.b(-1));
+          var4 = (MusicPatch) (this.instrumentPatches.next(-1));
         }
     }
 
@@ -773,7 +773,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void fadeOutChannelNotes(int param0, int param1) {
         pr var3;
-        var3 = (pr) (this.noteMixer.field_t.c((byte) 62));
+        var3 = (pr) (this.noteMixer.field_t.last((byte) 62));
         if (param0 >= -17) {
           this.setChannelRetriggerControl(-123, -25, 81);
         }
@@ -792,7 +792,7 @@ final class MidiPcmStream extends PcmStream {
             }
             var3.unlink((byte) -117);
           }
-          var3 = (pr) (this.noteMixer.field_t.f((byte) -5));
+          var3 = (pr) (this.noteMixer.field_t.previous((byte) -5));
         }
     }
 
@@ -812,7 +812,7 @@ final class MidiPcmStream extends PcmStream {
         var9 = Pool.field_O;
         this.releaseNote(param3, param1, 104, 64);
         if (0 != (this.field_F[param3] & 2)) {
-          var5 = (pr) (this.noteMixer.field_t.a((byte) -127));
+          var5 = (pr) (this.noteMixer.field_t.first((byte) -127));
           while (var5 != null) {
             if (param3 == var5.field_t &&
               var5.field_G < 0) {
@@ -825,10 +825,10 @@ final class MidiPcmStream extends PcmStream {
               var5.field_A = param1;
               return;
             }
-            var5 = (pr) (this.noteMixer.field_t.b((byte) -46));
+            var5 = (pr) (this.noteMixer.field_t.next((byte) -46));
           }
         }
-        var10 = (MusicPatch) (this.instrumentPatches.a(false, (long)this.channelInstrumentIds[param3]));
+        var10 = (MusicPatch) (this.instrumentPatches.get(false, (long)this.channelInstrumentIds[param3]));
         var11 = var10;
         if (var11 == null) {
           return;
@@ -879,7 +879,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.notesByKeyGroup[param3][var7.field_n] = var7;
         }
-        this.noteMixer.field_t.b((byte) -93, var7);
+        this.noteMixer.field_t.addFirst((byte) -93, var7);
         this.heldNotesByKey[param3][param1] = var7;
         return;
     }

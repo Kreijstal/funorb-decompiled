@@ -74,7 +74,7 @@ final class TriangleMesh {
     }
 
     final static void a(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (AccountCreationForm.field_S.removeLast(-1));
+        RasterSnapshot var1 = (RasterSnapshot) (AccountCreationForm.field_S.removeFirst(-1));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -84,7 +84,7 @@ final class TriangleMesh {
           field_t = (java.applet.Applet) null;
         }
         var1.pixels = null;
-        cb.field_e.b((byte) -23, var1);
+        cb.field_e.addFirst((byte) -23, var1);
     }
 
     public static void releaseStatics(int param0) {

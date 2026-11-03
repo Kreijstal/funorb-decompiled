@@ -47,7 +47,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_r = this.field_r + var4;
           this.e();
-          var5 = (rd) (this.field_q.c((byte) 74));
+          var5 = (rd) (this.field_q.last((byte) 74));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -77,10 +77,10 @@ final class PcmStreamMixer extends PcmStream {
     private final void e() {
         rd var1 = null;
         if (this.field_r > 0) {
-          var1 = (rd) (this.field_q.c((byte) -83));
+          var1 = (rd) (this.field_q.last((byte) -83));
           while (var1 != null) {
             var1.field_l = var1.field_l - this.field_r;
-            var1 = (rd) (this.field_q.f((byte) -5));
+            var1 = (rd) (this.field_q.previous((byte) -5));
           }
           this.field_p = this.field_p - this.field_r;
           this.field_r = 0;
@@ -88,11 +88,11 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        return (PcmStream) (this.field_s.c((byte) 102));
+        return (PcmStream) (this.field_s.last((byte) 102));
     }
 
     final PcmStream nextChildStream() {
-        return (PcmStream) (this.field_s.f((byte) -5));
+        return (PcmStream) (this.field_s.previous((byte) -5));
     }
 
     final synchronized void a(PcmStream param0) {
@@ -100,10 +100,10 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void mixSubstreams(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_s.c((byte) -90));
+        PcmStream var4 = (PcmStream) (this.field_s.last((byte) -90));
         while (var4 != null) {
           var4.process(param0, param1, param2);
-          var4 = (PcmStream) (this.field_s.f((byte) -5));
+          var4 = (PcmStream) (this.field_s.previous((byte) -5));
         }
     }
 
@@ -128,7 +128,7 @@ final class PcmStreamMixer extends PcmStream {
           length = length - var2;
           this.field_r = this.field_r + var2;
           this.e();
-          var3 = (rd) (this.field_q.c((byte) -51));
+          var3 = (rd) (this.field_q.last((byte) -51));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -145,7 +145,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final synchronized void b(PcmStream param0) {
-        this.field_s.a((byte) -84, param0);
+        this.field_s.addLast((byte) -84, param0);
     }
 
     final int getSchedulingCost() {
@@ -153,10 +153,10 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void skipSubstreams(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_s.c((byte) -30));
+        PcmStream var2 = (PcmStream) (this.field_s.last((byte) -30));
         while (var2 != null) {
           var2.skip(param0);
-          var2 = (PcmStream) (this.field_s.f((byte) -5));
+          var2 = (PcmStream) (this.field_s.previous((byte) -5));
         }
     }
 

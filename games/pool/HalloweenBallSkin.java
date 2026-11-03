@@ -169,7 +169,7 @@ final class HalloweenBallSkin extends BallSkin {
           }
           SoundCache.field_k.a(var8, 0);
           while (true) {
-            var7 = (SocialListEntry) (SoundCache.field_k.f((byte) -5));
+            var7 = (SocialListEntry) (SoundCache.field_k.previous((byte) -5));
             if (var7 != null) {
               var7.insertionIndex = var7.insertionIndex - 1;
               continue;

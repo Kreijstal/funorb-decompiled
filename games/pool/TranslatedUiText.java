@@ -3191,7 +3191,7 @@ final class TranslatedUiText {
               }
             }
             var3_int = var1.readInt(true);
-            var4_ref_kg = (kg) (ArchiveLoadStep.field_c.c((byte) 86));
+            var4_ref_kg = (kg) (ArchiveLoadStep.field_c.last((byte) 86));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (null != var4_ref_kg) {
@@ -3199,7 +3199,7 @@ final class TranslatedUiText {
                 decompiledFrameRemainder0 = (var6 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (stackIn_21_0 != var4_ref_kg.field_o)) {
-                  var4_ref_kg = (kg) (ArchiveLoadStep.field_c.f((byte) -5));
+                  var4_ref_kg = (kg) (ArchiveLoadStep.field_c.previous((byte) -5));
                   continue;
                 }
               }
@@ -3217,7 +3217,7 @@ final class TranslatedUiText {
               return;
             }
           }
-          var3 = (ln) (LoginTextValue.field_f.c((byte) -101));
+          var3 = (ln) (LoginTextValue.field_f.last((byte) -101));
           if (var3 == null) {
             dn.c(116);
             return;
@@ -3252,10 +3252,10 @@ final class TranslatedUiText {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var2 = (ea) (rc.field_c.c((byte) 120));
+          var2 = (ea) (rc.field_c.last((byte) 120));
           while (null != var2) {
             wb.a(var2, param0, (byte) -96);
-            var2 = (ea) (rc.field_c.f((byte) -5));
+            var2 = (ea) (rc.field_c.previous((byte) -5));
             if (var3 != 0) {
               return;
             }

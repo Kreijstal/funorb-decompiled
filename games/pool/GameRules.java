@@ -60,7 +60,7 @@ abstract class GameRules {
 
     abstract int[] a(int param0, byte param1);
 
-    abstract boolean a(int param0, byte param1, ShotRecord param2);
+    abstract boolean isPotLegal(int param0, byte param1, ShotRecord param2);
 
     abstract int ballCount(int param0);
 
@@ -83,18 +83,18 @@ abstract class GameRules {
         }
     }
 
-    abstract boolean c(ShotRecord param0, int param1);
+    abstract boolean isFirstContactLegal(ShotRecord param0, int param1);
 
-    int c(int param0, int param1) {
+    int teamIndex(int param0, int param1) {
         if (param0 >= -36) {
           GameRules.k(73);
         }
         return param1;
     }
 
-    abstract boolean f(int param0);
+    abstract boolean showsTargetBall(int param0);
 
-    abstract byte b(int param0, int param1);
+    abstract byte ballGroup(int param0, int param1);
 
     public static void releaseStatics(int param0) {
         field_a = null;
@@ -105,7 +105,7 @@ abstract class GameRules {
         field_c = null;
     }
 
-    abstract Sprite b(ShotRecord param0, int param1);
+    abstract Sprite targetBallSprite(ShotRecord param0, int param1);
 
     int m(int param0) {
         if (param0 != 0) {
@@ -143,7 +143,7 @@ abstract class GameRules {
           var4 = 1;
           while (var4 <= this.field_d.playerCount) {
             var3_int = (var4 + param0.playerIndex) % this.field_d.playerCount;
-            if (!this.a((byte) -112, var3_int) ||
+            if (!this.isPlayerActive((byte) -112, var3_int) ||
               (this.field_d.field_p & 1 << var3_int) != 0) {
               var4++;
               continue;
@@ -230,7 +230,7 @@ abstract class GameRules {
         }
     }
 
-    abstract void c(int param0);
+    abstract void updateGroupLabels(int param0);
 
     GameRules(PoolGameModel param0) {
         try {
@@ -240,7 +240,7 @@ abstract class GameRules {
         }
     }
 
-    boolean a(byte param0, int param1) {
+    boolean isPlayerActive(byte param0, int param1) {
         int var3 = 35 % ((-16 - param0) / 46);
         return true;
     }
@@ -255,7 +255,7 @@ abstract class GameRules {
         }
     }
 
-    String a(int param0, String[] param1) {
+    String joinPlayerNames(int param0, String[] param1) {
         int var4_int = 0;
         int var5 = 0;
         StringBuilder discarded$2 = null;
@@ -331,7 +331,7 @@ abstract class GameRules {
         }
     }
 
-    abstract boolean a(int param0, byte param1, int param2);
+    abstract boolean isBallInGroup(int param0, byte param1, int param2);
 
     abstract int a(ShotRecord param0, int param1);
 

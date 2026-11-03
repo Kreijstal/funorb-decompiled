@@ -43,7 +43,7 @@ final class JaggrabDownloader implements Runnable {
           }
           if (this.field_e == 1) {
             if (null == this.field_k) {
-              this.field_k = this.field_b.a(this.field_i.getHost(), 443, 0);
+              this.field_k = this.field_b.openSocket(this.field_i.getHost(), 443, 0);
             }
             if (this.field_k.field_f == 0) {
               return false;
@@ -77,7 +77,7 @@ final class JaggrabDownloader implements Runnable {
             }
           }
           if (null == this.field_f) {
-            this.field_f = this.field_b.a(45, 5, (Runnable) (this));
+            this.field_f = this.field_b.startThread(45, 5, (Runnable) (this));
           }
           if (0 == this.field_f.field_f) {
             return false;

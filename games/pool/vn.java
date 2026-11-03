@@ -96,7 +96,7 @@ final class vn {
                       var13[var18] = ArrayWidgetGroup.a(true, var11[var18]);
                       var18++;
                     }
-                    var19.field_p[var6] = param2.a((byte) 16, ArrayWidgetGroup.a(true, var21), var13, var22);
+                    var19.field_p[var6] = param2.getDeclaredMethod((byte) 16, ArrayWidgetGroup.a(true, var21), var13, var22);
                     var19.field_w[var6] = var23;
                   }
                 } else {
@@ -110,7 +110,7 @@ final class vn {
                   }
                   var19.field_m[var6] = var7_int;
                   var19.field_r[var6] = var10;
-                  var19.field_n[var6] = param2.a(ArrayWidgetGroup.a(true, var16), var17, (byte) -88);
+                  var19.field_n[var6] = param2.getDeclaredField(ArrayWidgetGroup.a(true, var16), var17, (byte) -88);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,7 +134,7 @@ final class vn {
                 var19.field_q[var6] = -5;
               }
             }
-            MessageScreen.field_H.b((byte) 82, var19);
+            MessageScreen.field_H.addFirst((byte) 82, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

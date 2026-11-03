@@ -44,7 +44,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         if (this.getIndex((byte) -21) == null) {
           return;
         }
-        IntrusiveNode var2 = this.requestedGroups.c((byte) 111);
+        IntrusiveNode var2 = this.requestedGroups.last((byte) 111);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (0 > var3) {
@@ -68,7 +68,7 @@ final class CachedArchiveSource extends ArchiveProvider {
               }
             }
           }
-          var2 = this.requestedGroups.f((byte) -5);
+          var2 = this.requestedGroups.previous((byte) -5);
         }
         if (param0 <= 82) {
           CharSequence var5 = (CharSequence) null;
@@ -93,7 +93,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         if (param0 != -18600) {
           this.getPackedGroup(100, (byte) -43);
         }
-        ArchiveRequest var3 = (ArchiveRequest) (this.groupRequests.a(false, (long)param1));
+        ArchiveRequest var3 = (ArchiveRequest) (this.groupRequests.get(false, (long)param1));
         if (var3 == null) {
           return 0;
         }
@@ -335,7 +335,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = Pool.field_O;
-        var12 = (ArchiveRequest) (this.groupRequests.a(false, (long)param0));
+        var12 = (ArchiveRequest) (this.groupRequests.get(false, (long)param0));
         var4 = var12;
         if (param2 != 25) {
           return (ArchiveRequest) null;
@@ -380,7 +380,7 @@ final class CachedArchiveSource extends ArchiveProvider {
               var4 = this.networkClient.requestGroup(param0, this.archiveId, (byte) 2, false, -154018400);
             }
           }
-          this.groupRequests.a((byte) -114, (IntrusiveNode) (var4), (long)param0);
+          this.groupRequests.put((byte) -114, (IntrusiveNode) (var4), (long)param0);
         }
         if (((ArchiveRequest) (var4)).pending) {
           return null;
@@ -437,7 +437,7 @@ final class CachedArchiveSource extends ArchiveProvider {
             }
             if (!this.networkClient.isUrgentCapacityReached((byte) -125)) {
               var4 = this.networkClient.requestGroup(param0, this.archiveId, (byte) 2, true, param2 ^ -154018375);
-              this.groupRequests.a((byte) -127, (IntrusiveNode) (var4), (long)param0);
+              this.groupRequests.put((byte) -127, (IntrusiveNode) (var4), (long)param0);
             }
             return null;
           }
@@ -478,7 +478,7 @@ final class CachedArchiveSource extends ArchiveProvider {
             return null;
           }
           var4 = this.networkClient.requestGroup(param0, this.archiveId, (byte) 2, true, -154018400);
-          this.groupRequests.a((byte) -124, (IntrusiveNode) (var4), (long)param0);
+          this.groupRequests.put((byte) -124, (IntrusiveNode) (var4), (long)param0);
           return null;
         }
         var5[var18.length - 2] = (byte)(this.index.groupRevisions[param0] >>> 8);
@@ -521,7 +521,7 @@ final class CachedArchiveSource extends ArchiveProvider {
           }
           if (this.field_C) {
             var2_int = 1;
-            var3 = this.backgroundGroups.c((byte) 78);
+            var3 = this.backgroundGroups.last((byte) 78);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (0 == this.field_E[var4]) {
@@ -532,7 +532,7 @@ final class CachedArchiveSource extends ArchiveProvider {
               } else {
                 var2_int = 0;
               }
-              var3 = this.backgroundGroups.f((byte) -5);
+              var3 = this.backgroundGroups.previous((byte) -5);
             }
             while (this.field_x < this.index.groupFileCounts.length) {
               if (this.index.groupFileCounts[this.field_x] == 0) {
@@ -546,7 +546,7 @@ final class CachedArchiveSource extends ArchiveProvider {
                 if (this.field_E[this.field_x] == 0) {
                   var7 = new IntrusiveNode();
                   var7.key = (long)this.field_x;
-                  this.backgroundGroups.b((byte) -64, var7);
+                  this.backgroundGroups.addFirst((byte) -64, var7);
                   var2_int = 0;
                 }
                 this.field_x = this.field_x + 1;
@@ -564,7 +564,7 @@ final class CachedArchiveSource extends ArchiveProvider {
           else {
             if (this.field_B) {
               var2_intLifetime4 = 1;
-              var3Lifetime1 = this.backgroundGroups.c((byte) -58);
+              var3Lifetime1 = this.backgroundGroups.last((byte) -58);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_E[var4Lifetime1] != 1) {
@@ -575,7 +575,7 @@ final class CachedArchiveSource extends ArchiveProvider {
                 } else {
                   var2_intLifetime4 = 0;
                 }
-                var3Lifetime1 = this.backgroundGroups.f((byte) -5);
+                var3Lifetime1 = this.backgroundGroups.previous((byte) -5);
               }
               scanLoop1: while (true) {
                 if (this.field_x < this.index.groupFileCounts.length) {
@@ -591,7 +591,7 @@ final class CachedArchiveSource extends ArchiveProvider {
                       var6 = new IntrusiveNode();
                       var6.key = (long)this.field_x;
                       var2_intLifetime4 = 0;
-                      this.backgroundGroups.b((byte) 96, var6);
+                      this.backgroundGroups.addFirst((byte) 96, var6);
                     }
                   }
                   this.field_x = this.field_x + 1;
@@ -618,7 +618,7 @@ final class CachedArchiveSource extends ArchiveProvider {
           var2_intLifetime2 = 86 % ((param0 - 82) / 40);
           return;
         }
-        var2 = (ArchiveRequest) (this.groupRequests.a(0));
+        var2 = (ArchiveRequest) (this.groupRequests.first(0));
         while (var2 != null) {
           if (!var2.pending) {
             if (!var2.field_C) {
@@ -630,7 +630,7 @@ final class CachedArchiveSource extends ArchiveProvider {
               var2.unlink((byte) -117);
             }
           }
-          var2 = (ArchiveRequest) (this.groupRequests.b(-1));
+          var2 = (ArchiveRequest) (this.groupRequests.next(-1));
         }
         this.field_F = rl.monotonicTimeMillis((byte) -107) + 1000L;
         var2_intLifetime3 = 86 % ((param0 - 82) / 40);

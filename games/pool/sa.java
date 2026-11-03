@@ -62,7 +62,7 @@ final class sa {
           int stackIn_8_0 = 0;
           Throwable decompiledCaughtException = null;
           if (PacketBuffer.field_u == null) {
-            PacketBuffer.field_u = MarkerSliderPainter.field_a.a(UsernameSuggestionsPanel.field_S, TextLineLayout.field_d, 0);
+            PacketBuffer.field_u = MarkerSliderPainter.field_a.openSocket(UsernameSuggestionsPanel.field_S, TextLineLayout.field_d, 0);
           }
           if (PacketBuffer.field_u.field_f == 0) {
             return false;

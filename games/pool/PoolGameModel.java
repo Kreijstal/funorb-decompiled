@@ -62,7 +62,7 @@ final class PoolGameModel {
           this.field_e = new int[param1.length / 3][2];
           this.field_d = new int[param1.length / 3];
           if (!param0) {
-            this.g((byte) -43);
+            this.updateShotState((byte) -43);
           }
           var10 = 0;
           var3_intLifetime1 = var10;
@@ -101,7 +101,7 @@ final class PoolGameModel {
         var3 = -1;
         var4 = 0L;
         if (param0 != 17897) {
-          discarded$1 = this.f(-119);
+          discarded$1 = this.stateByteLength(-119);
         }
         var6 = this.balls[param1];
         for (var7 = 0; var7 < this.pockets.length; var7++) {
@@ -127,7 +127,7 @@ final class PoolGameModel {
         field_B = null;
     }
 
-    final boolean f(byte param0) {
+    final boolean beginNextShot(byte param0) {
         int var3;
         Object var4;
         ShotRecord var4_ref;
@@ -139,10 +139,10 @@ final class PoolGameModel {
         int var5Lifetime1;
         var4 = null;
         var8 = this.currentShot(22);
-        var3 = this.a(true, (byte) 76, var8) ? 1 : 0;
+        var3 = this.shouldChangePlayer(true, (byte) 76, var8) ? 1 : 0;
         if (this.field_i != null &&
           !this.field_i.isEmpty(0)) {
-          var4_ref = (ShotRecord) (this.field_i.removeFirst((byte) -41));
+          var4_ref = (ShotRecord) (this.field_i.removeLast((byte) -41));
         } else {
           var4_ref = new ShotRecord();
         }
@@ -153,14 +153,14 @@ final class PoolGameModel {
         } else {
           var4_ref.playerIndex = var8.playerIndex;
         }
-        this.shots.b((byte) -14, var4_ref);
+        this.shots.addFirst((byte) -14, var4_ref);
         this.field_A = var4_ref.playerIndex;
         if (var3 != 0) {
           this.field_y = 0;
           this.field_z = 0;
         }
         if ((MenuScreen.field_F & var8.endResolution) != 0) {
-          this.b(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
+          this.setBreakSeed(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
         }
         if (param0 < 30) {
           this.field_z = -45;
@@ -168,7 +168,7 @@ final class PoolGameModel {
         if ((um.field_c & var8.endResolution) != 0) {
           if (var4_ref.cueBallX != -1) {
             if (var4_ref.cueBallY != -1) {
-              this.a(var4_ref.cueBallY, (IsaacCipher) null, (byte) -118, var4_ref.cueBallX, 0);
+              this.placeCueBall(var4_ref.cueBallY, (IsaacCipher) null, (byte) -118, var4_ref.cueBallX, 0);
             } else {
               this.n(-16739);
             }
@@ -184,7 +184,7 @@ final class PoolGameModel {
           var5_ref_qe.cueBallX = var7.positionX;
           var5_ref_qe.cueBallY = var7.positionY;
         } else {
-          this.a(var4_ref.cueBallY, var4_ref.cueBallX, -91, 0, false);
+          this.tryPlaceBall(var4_ref.cueBallY, var4_ref.cueBallX, -91, 0, false);
         }
         for (var5 = 0; var5 < this.pockets.length; var5++) {
           this.pockets[var5].keepOnlyPottedBalls(this.balls, -80);
@@ -224,16 +224,16 @@ final class PoolGameModel {
         return false;
     }
 
-    final void a(int param0, IsaacCipher param1, byte param2, int param3, int param4) {
+    final void placeCueBall(int param0, IsaacCipher param1, byte param2, int param3, int param4) {
         try {
-          this.a(param0, param3, param1, -30896, param4, 8192);
+          this.placeBallAvoidingOverlap(param0, param3, param1, -30896, param4, 8192);
           int var6_int = 99 / ((param2 + 26) / 53);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "al.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void e(byte param0) {
+    final void snapshotFinishedShot(byte param0) {
         int var3 = 110 % ((-57 - param0) / 53);
         ShotRecord var2 = this.currentShot(20);
         var2.stateBefore = this.writeStateSnapshot((byte) 91);
@@ -247,7 +247,7 @@ final class PoolGameModel {
         if (param0 <= 79) {
           this.n(117);
         }
-        PacketBuffer var2 = new PacketBuffer(this.f(0));
+        PacketBuffer var2 = new PacketBuffer(this.stateByteLength(0));
         PacketBuffer var3 = var2;
         var3.writeByte(this.balls.length, false);
         for (var4 = 0; this.balls.length > var4; var4++) {
@@ -266,7 +266,7 @@ final class PoolGameModel {
         if (param0 < 18) {
           return (ShotRecord) null;
         }
-        return (ShotRecord) (this.shots.a((byte) -127));
+        return (ShotRecord) (this.shots.first((byte) -127));
     }
 
     final void potBallsInPockets(int param0, Ball[] param1, ShotRecord param2) {
@@ -293,7 +293,7 @@ final class PoolGameModel {
                   if (param1[var4_int].field_q != null) {
                     param1[var4_int].field_q.a(23655, param1[var4_int], var5);
                   }
-                  param2.pottedBalls.b((byte) -23, new PotEvent(var4_int, var5));
+                  param2.pottedBalls.addFirst((byte) -23, new PotEvent(var4_int, var5));
                 }
               }
             }
@@ -322,7 +322,7 @@ final class PoolGameModel {
         }
     }
 
-    final boolean a(boolean param0, byte param1, ShotRecord param2) {
+    final boolean shouldChangePlayer(boolean param0, byte param1, ShotRecord param2) {
         int stackIn_28_0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -393,7 +393,7 @@ final class PoolGameModel {
     }
 
     private final void n(int param0) {
-        this.a(50, (IsaacCipher) null);
+        this.setUpBreak(50, (IsaacCipher) null);
         if (param0 != -16739) {
           this.field_p = 125;
         }
@@ -425,7 +425,7 @@ final class PoolGameModel {
         }
         if (param0 != 77) {
           var8 = (ShotRecord) null;
-          this.a(true, (byte) -9, (ShotRecord) null);
+          this.shouldChangePlayer(true, (byte) -9, (ShotRecord) null);
         }
     }
 
@@ -442,7 +442,7 @@ final class PoolGameModel {
         this.pockets[5] = new Pocket(this.cushionSegments[22]);
     }
 
-    private final void b(int param0, PacketBuffer param1) {
+    private final void readShotHistory(int param0, PacketBuffer param1) {
         int var4_int = 0;
         int var11 = 0;
         ShotRecord stackIn_5_0 = null;
@@ -503,13 +503,13 @@ final class PoolGameModel {
               var5.field_H = (byte)param1.readUnsignedByte(param0 ^ -101);
             }
             if (var5.phase >= 2) {
-              var6Lifetime2 = var5.pottedBalls.a(68);
+              var6Lifetime2 = var5.pottedBalls.size(68);
               var6Lifetime2Lifetime1 = param1.readUnsignedByte(-97);
               if (var6Lifetime2Lifetime1 > 0) {
                 var5.pottedBalls = new IntrusiveDeque();
                 for (var7 = 0; var7 < var6Lifetime2Lifetime1; var7++) {
                   var8 = param1.readUnsignedByte(param0 ^ -125);
-                  var5.pottedBalls.b((byte) 97, new PotEvent(31 & var8, var8 >> 5));
+                  var5.pottedBalls.addFirst((byte) 97, new PotEvent(31 & var8, var8 >> 5));
                 }
               }
               var7Lifetime1 = param1.readUnsignedByte(-123);
@@ -523,7 +523,7 @@ final class PoolGameModel {
                   for (var11 = 0; var11 < var14.length; var11++) {
                     var10[var11] = param1.readUnsignedByte(cq.a(param0, -124));
                   }
-                  var5.field_R.b((byte) -70, new dn(var9, var14));
+                  var5.field_R.addFirst((byte) -70, new dn(var9, var14));
                 }
               }
               var5.endResolution = param1.readUnsignedMedium(81);
@@ -531,12 +531,12 @@ final class PoolGameModel {
             if (var5.phase >= 3) {
               var5.field_l = (byte)param1.readUnsignedByte(param0 - 130);
             }
-            this.shots.b((byte) 94, var5);
+            this.shots.addFirst((byte) 94, var5);
           }
           var4 = this.currentShot(81);
           this.field_A = var4.playerIndex;
           if (param0 <= var4.phase) {
-            this.h(22042);
+            this.finishShot(22042);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -564,7 +564,7 @@ final class PoolGameModel {
         return true;
     }
 
-    final boolean h(int param0) {
+    final boolean finishShot(int param0) {
         ShotRecord var2;
         var2 = this.currentShot(param0 ^ 22081);
         if (var2.phase < 2) {
@@ -583,10 +583,10 @@ final class PoolGameModel {
         if (var2.d(116)) {
           return false;
         }
-        return this.f((byte) 116);
+        return this.beginNextShot((byte) 116);
     }
 
-    private final void a(int param0, int param1, IsaacCipher param2, int param3, int param4, int param5) {
+    private final void placeBallAvoidingOverlap(int param0, int param1, IsaacCipher param2, int param3, int param4, int param5) {
         int var13 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -662,7 +662,7 @@ final class PoolGameModel {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final boolean isCuePathClear(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -693,10 +693,10 @@ final class PoolGameModel {
         if (param5 * param5 + param0 * param0 > 9216) {
           return false;
         }
-        this.a(s.field_e, param2, (byte) 86, param1, param0, param5);
+        this.fillCueTransform(s.field_e, param2, (byte) 86, param1, param0, param5);
         var7 = 228 * param4 / 4096 + 456;
         if (param3 != 359) {
-          this.b(100, 52);
+          this.setBreakSeed(100, 52);
         }
         for (var8 = 0; this.cushionSegments.length > var8; var8++) {
           var9 = this.cushionSegments[var8].startY - this.cushionSegments[var8].endY;
@@ -830,7 +830,7 @@ final class PoolGameModel {
         return true;
     }
 
-    private final void b(int param0, byte param1) {
+    private final void clampCueBallPosition(int param0, byte param1) {
         int var4;
         int var5;
         int var6;
@@ -899,7 +899,7 @@ final class PoolGameModel {
         return;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void addOrUpdateShot(int param0, int param1, int param2, int param3, int param4) {
         ShotRecord dupTemp$3 = null;
         ShotRecord dupTemp$4 = null;
         ShotRecord var6;
@@ -921,7 +921,7 @@ final class PoolGameModel {
           dupTemp$4 = new ShotRecord(param2, param3);
           var8 = dupTemp$4;
           var6 = var8;
-          this.shots.b((byte) -58, dupTemp$4);
+          this.shots.addFirst((byte) -58, dupTemp$4);
           this.rules.initializeShot(var8, false);
         }
         this.field_A = param3;
@@ -933,7 +933,7 @@ final class PoolGameModel {
         var6.stateBefore = this.writeStateSnapshot((byte) 98);
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void readShotFromPacket(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -946,13 +946,13 @@ final class PoolGameModel {
             this.field_i = (IntrusiveDeque) null;
           }
           var6 = -1 + param1.readUnsignedByte(-119);
-          this.a(var5, var6, var3_int, var4, 19063);
+          this.addOrUpdateShot(var5, var6, var3_int, var4, 19063);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "al.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setBreakSeed(int param0, int param1) {
         this.currentShot(30).breakSeed = param0;
         this.c(-116);
         if (param1 != 456) {
@@ -998,7 +998,7 @@ final class PoolGameModel {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void computeAimTargets(int param0, int param1) {
         int var3;
         Ball var4;
         AimTarget var5;
@@ -1019,7 +1019,7 @@ final class PoolGameModel {
         }
         var3Lifetime1 = 0;
         if (param0 != 12226) {
-          this.g((byte) 17);
+          this.updateShotState((byte) 17);
         }
         while (this.field_e.length > var3Lifetime1) {
           this.field_r[this.balls.length + var3Lifetime1] = new AimTarget();
@@ -1145,7 +1145,7 @@ final class PoolGameModel {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void finishGame(int param0, int param1) {
         this.field_o = true;
         this.field_A = param1;
         if (param0 != -14286) {
@@ -1153,7 +1153,7 @@ final class PoolGameModel {
         }
     }
 
-    final void i(byte param0) {
+    final void startShot(byte param0) {
         int var3_int = 0;
         int var23 = Pool.field_O;
         ShotRecord var24 = this.currentShot(102);
@@ -1161,7 +1161,7 @@ final class PoolGameModel {
           throw new IllegalStateException("Starting new shot, but not animating?");
         }
         if (null != var24.field_R) {
-          var24.field_R.d((byte) 106);
+          var24.field_R.clear((byte) 106);
         }
         var24.stateBefore = this.writeStateSnapshot((byte) 115);
         for (var3_int = 0; var3_int < this.balls.length; var3_int++) {
@@ -1172,7 +1172,7 @@ final class PoolGameModel {
           PoolGameModel.a(true, 13);
         }
         this.rules.onShotStart(param0 ^ -11783);
-        this.a(var24.cueBallY, var24.cueBallX, 72, 0, false);
+        this.tryPlaceBall(var24.cueBallY, var24.cueBallX, 72, 0, false);
         ShotRecord var3 = var24;
         Ball var4 = this.balls[0];
         int var5 = var3.field_D * var3.field_D + var3.field_H * var3.field_H;
@@ -1236,7 +1236,7 @@ final class PoolGameModel {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void readState(PacketBuffer param0, byte param1) {
         int var6 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1253,7 +1253,7 @@ final class PoolGameModel {
         int var4Lifetime1;
         var8 = Pool.field_O;
         try {
-          this.b(2, param0);
+          this.readShotHistory(2, param0);
           this.rules.a(param0, true);
           var3_int = param0.readUnsignedByte(-67);
           if (0 != var3_int) {
@@ -1277,7 +1277,7 @@ final class PoolGameModel {
               }
             }
           } else {
-            this.b(param0.readUnsignedShort(-1034), 456);
+            this.setBreakSeed(param0.readUnsignedShort(-1034), 456);
           }
           if (param1 <= 98) {
             var9 = (int[]) null;
@@ -1298,7 +1298,7 @@ final class PoolGameModel {
         }
     }
 
-    private final int f(int param0) {
+    private final int stateByteLength(int param0) {
         int var3 = 0;
         int var2 = 1;
         int var3Lifetime1;
@@ -1314,7 +1314,7 @@ final class PoolGameModel {
         return var2;
     }
 
-    final void k(int param0) {
+    final void printState(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         System.out.println(this.balls.length + " balls");
@@ -1413,13 +1413,13 @@ final class PoolGameModel {
         }
         if (-1 == var4.cueBallX ||
           var4.cueBallY == -1) {
-          this.a(63, var6);
+          this.setUpBreak(63, var6);
         }
         this.rules.l(-127);
         return;
     }
 
-    private final int o(int param0) {
+    private final int historyByteLength(int param0) {
         IntrusiveNode stackIn_10_0 = null;
         int var2;
         int var3;
@@ -1428,7 +1428,7 @@ final class PoolGameModel {
         IntrusiveDequeCursor var6;
         dn var7;
         ShotRecord var5Lifetime1;
-        var2 = this.shots.a(32);
+        var2 = this.shots.size(32);
         var3 = 4;
         if (param0 != 12850) {
           this.allocateBalls(127, -64);
@@ -1458,7 +1458,7 @@ final class PoolGameModel {
             }
             if (var5Lifetime1.phase >= 2) {
               var3++;
-              var3 = var3 + var5Lifetime1.pottedBalls.a(param0 ^ 12801);
+              var3 = var3 + var5Lifetime1.pottedBalls.size(param0 ^ 12801);
               var3++;
               if (var5Lifetime1.field_R != null &&
                 !var5Lifetime1.field_R.isEmpty(0)) {
@@ -1488,13 +1488,13 @@ final class PoolGameModel {
         if (param0 != -1) {
           field_B = (BallSkin[]) null;
         }
-        stackIn_5_0 = this.o(param0 + 12851);
+        stackIn_5_0 = this.historyByteLength(param0 + 12851);
         stackIn_5_1 = this.rules.m(param0 + 1) + 1;
         if (this.currentShot(81).breakSeed >= 0 &&
           this.currentShot(65).phase == 0) {
           stackIn_7_2 = 2;
         } else {
-          stackIn_7_2 = this.f(param0 + 1);
+          stackIn_7_2 = this.stateByteLength(param0 + 1);
         }
         return stackIn_5_0 + (stackIn_5_1 + stackIn_7_2);
     }
@@ -1674,14 +1674,14 @@ final class PoolGameModel {
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean isCueBallPotted(byte param0) {
         if (param0 <= 68) {
           this.field_x = 56;
         }
         return !this.balls[0].inPlay ? true : false;
     }
 
-    final void c(byte param0) {
+    final void undoLastShot(byte param0) {
         int var6 = 0;
         int var8 = 0;
         ShotRecord var2;
@@ -1696,11 +1696,11 @@ final class PoolGameModel {
         if (this.currentShot(41).phase != 0) {
           return;
         }
-        if (this.shots.c((byte) 113) == this.shots.a((byte) -127)) {
+        if (this.shots.last((byte) 113) == this.shots.first((byte) -127)) {
           return;
         }
-        var2 = (ShotRecord) (this.shots.removeLast(-1));
-        var3 = (ShotRecord) (this.shots.a((byte) -127));
+        var2 = (ShotRecord) (this.shots.removeFirst(-1));
+        var3 = (ShotRecord) (this.shots.first((byte) -127));
         var3.stateBefore.position = 0;
         var4 = var3.stateBefore;
         this.allocateBalls(-14894, var4.readUnsignedByte(-65));
@@ -1721,16 +1721,16 @@ final class PoolGameModel {
           }
         }
         var3.phase = 0;
-        var3.pottedBalls.d((byte) 83);
+        var3.pottedBalls.clear((byte) 83);
         var3.endResolution = IntrusiveNodeHashTable.field_a;
         if (null == this.field_i) {
           this.field_i = new IntrusiveDeque();
         }
-        this.field_i.a((byte) -84, var2);
+        this.field_i.addLast((byte) -84, var2);
         return;
     }
 
-    final void g(byte param0) {
+    final void updateShotState(byte param0) {
         ShotRecord stackIn_7_0 = null;
         int stackIn_8_1 = 0;
         ShotRecord var3;
@@ -1782,7 +1782,7 @@ final class PoolGameModel {
         lf.a(param0, (byte) 93);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, boolean param4) {
+    final boolean tryPlaceBall(int param0, int param1, int param2, int param3, boolean param4) {
         int var6;
         Ball var7;
         int var8;
@@ -1801,7 +1801,7 @@ final class PoolGameModel {
         var7.stop((byte) -58);
         var7.transformDirty = true;
         if (param4) {
-          this.b(param3, (byte) -123);
+          this.clampCueBallPosition(param3, (byte) -123);
         }
         var6Lifetime1 = 0;
         this.findOverlappingBalls((byte) 77);
@@ -1824,7 +1824,7 @@ final class PoolGameModel {
         return false;
     }
 
-    private final void a(int param0, IsaacCipher param1) {
+    private final void setUpBreak(int param0, IsaacCipher param1) {
         ShotRecord var3 = null;
         ShotRecord var4 = null;
         Object var5 = null;
@@ -1835,7 +1835,7 @@ final class PoolGameModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          this.a(9437184, 28311552, param1, -30896, 0, 4096);
+          this.placeBallAvoidingOverlap(9437184, 28311552, param1, -30896, 0, 4096);
           var3 = this.currentShot(97);
           var3.ballInHandMode = this.rules.initialBallInHandMode(false);
           var4 = var3;
@@ -1844,7 +1844,7 @@ final class PoolGameModel {
           var4.cueBallX = var6.positionX;
           var4.cueBallY = var6.positionY;
           if (param0 < 34) {
-            this.k(50);
+            this.printState(50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1892,7 +1892,7 @@ final class PoolGameModel {
         jq.field_d.disabledSprite = vm.field_d[3];
     }
 
-    final void a(int[] param0, int param1, byte param2, int param3, int param4, int param5) {
+    final void fillCueTransform(int[] param0, int param1, byte param2, int param3, int param4, int param5) {
         int var14_int = 0;
         int var7_int = ScrollPaneWithFooter.a(param1, true);
         int var8 = hc.a(2047, param1);
@@ -1921,7 +1921,7 @@ final class PoolGameModel {
         }
     }
 
-    private final void h(byte param0) {
+    private final void loadDefaultTable(byte param0) {
         this.loadTableOutline(true, new int[]{2, 18, 0, 2, 260, 0, 1, 272, -15, 1, 304, -15, 2, 316, 0, 2, 558, 0, 1, 584, -22, 1, 598, -8, 2, 576, 18, 2, 576, 270, 1, 598, 296, 1, 584, 310, 2, 558, 288, 2, 316, 288, 1, 304, 303, 1, 272, 303, 2, 260, 288, 2, 18, 288, 1, -8, 310, 1, -22, 296, 2, 0, 270, 2, 0, 18, 1, -22, -8, 1, -8, -22});
         if (param0 != -58) {
           this.a(95);
@@ -1944,12 +1944,12 @@ final class PoolGameModel {
           this.field_h = param2;
           this.setGameType(param1, (byte) -128);
           this.allocateBalls(-14894, this.rules.ballCount(26840));
-          this.h((byte) -58);
+          this.loadDefaultTable((byte) -58);
           this.createPockets(10571);
           var5 = new ShotRecord();
-          this.shots.b((byte) -60, var5);
+          this.shots.addFirst((byte) -60, var5);
           var5.playerIndex = this.field_A;
-          this.b(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
+          this.setBreakSeed(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

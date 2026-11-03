@@ -40,10 +40,10 @@ final class tp {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var4 = (bj) (BallSkin.field_i.c((byte) 73));
+          var4 = (bj) (BallSkin.field_i.last((byte) 73));
           while (var4 != null) {
             un.a(param1, var4, (byte) -51);
-            var4 = (bj) (BallSkin.field_i.f((byte) -5));
+            var4 = (bj) (BallSkin.field_i.previous((byte) -5));
           }
           if (param0) {
             return;

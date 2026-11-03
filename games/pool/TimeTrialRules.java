@@ -7,14 +7,14 @@ final class TimeTrialRules extends GameRules {
     static int field_f;
     static String playerNameYouHaveAnExtraShot;
 
-    final boolean f(int param0) {
+    final boolean showsTargetBall(int param0) {
         if (param0 <= 113) {
           return true;
         }
         return false;
     }
 
-    final boolean a(int param0, byte param1, ShotRecord param2) {
+    final boolean isPotLegal(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -25,7 +25,7 @@ final class TimeTrialRules extends GameRules {
           if (param1 != 9) {
             field_f = 88;
           }
-          stackIn_5_0 = (param2.groupBefore == this.b(param0, 30554));
+          stackIn_5_0 = (param2.groupBefore == this.ballGroup(param0, 30554));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class TimeTrialRules extends GameRules {
         return true;
     }
 
-    final boolean c(ShotRecord param0, int param1) {
+    final boolean isFirstContactLegal(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -91,7 +91,7 @@ final class TimeTrialRules extends GameRules {
           if (param1 > -33) {
             field_f = -113;
           }
-          stackIn_5_0 = (param0.groupBefore == this.b(param0.field_n, 30554));
+          stackIn_5_0 = (param0.groupBefore == this.ballGroup(param0.field_n, 30554));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class TimeTrialRules extends GameRules {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean isBallInGroup(int param0, byte param1, int param2) {
         if (param1 < 122) {
           return true;
         }
@@ -147,7 +147,7 @@ final class TimeTrialRules extends GameRules {
         }
     }
 
-    final void c(int param0) {
+    final void updateGroupLabels(int param0) {
         if (param0 >= -25) {
           field_f = -12;
         }
@@ -163,7 +163,7 @@ final class TimeTrialRules extends GameRules {
 
     final int h(int param0) {
         if (param0 != -1) {
-          this.c(-66);
+          this.updateGroupLabels(-66);
         }
         return 0;
     }
@@ -245,7 +245,7 @@ final class TimeTrialRules extends GameRules {
         }
     }
 
-    final Sprite b(ShotRecord param0, int param1) {
+    final Sprite targetBallSprite(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_6_0 = null;
@@ -282,10 +282,10 @@ final class TimeTrialRules extends GameRules {
         if (param2 != -111) {
           field_f = 46;
         }
-        return param0 == this.b(param1, 30554) ? true : false;
+        return param0 == this.ballGroup(param1, 30554) ? true : false;
     }
 
-    final byte b(int param0, int param1) {
+    final byte ballGroup(int param0, int param1) {
         if (param0 == 0) {
           return (byte) -1;
         }
@@ -321,7 +321,7 @@ final class TimeTrialRules extends GameRules {
         }
         var4 = var11.groupBefore;
         var5 = 0;
-        if (this.field_d.d((byte) 74)) {
+        if (this.field_d.isCueBallPotted((byte) 74)) {
           var11.a(3, -14, new int[]{var10.playerIndex});
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
@@ -341,10 +341,10 @@ final class TimeTrialRules extends GameRules {
             var5 = var5 | OptionsScreen.field_I;
           }
         }
-        var6 = var11.pottedBalls.a(30);
+        var6 = var11.pottedBalls.size(30);
         if (var5 == 0 &&
           var6 == 1 &&
-          ((PotEvent) (var11.pottedBalls.c((byte) 62))).ballIndex == 8 &&
+          ((PotEvent) (var11.pottedBalls.last((byte) 62))).ballIndex == 8 &&
           var4 == 2) {
           return ag.field_e;
         }

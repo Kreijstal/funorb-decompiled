@@ -183,7 +183,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           if (EmailAvailabilityValidator.a(-2, param1) == null) {
             var4 = new ij(param1);
             var4.a(param2, (byte) 120, param3);
-            MarkerSliderPainter.field_i.b((byte) -20, var4);
+            MarkerSliderPainter.field_i.addFirst((byte) -20, var4);
             stackIn_3_0 = var4;
             return stackIn_3_0;
           }

@@ -170,7 +170,7 @@ final class ShotRecord extends IntrusiveNode {
           if (null == this.field_R) {
             this.field_R = new IntrusiveDeque();
           }
-          this.field_R.b((byte) 124, new dn(param0, param2));
+          this.field_R.addFirst((byte) 124, new dn(param0, param2));
           if (param1 != -14) {
             field_S = (TriangleMesh[]) null;
           }
@@ -617,10 +617,10 @@ final class ShotRecord extends IntrusiveNode {
 
     final String c(int param0) {
         if (param0 == 26859) {
-          return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
+          return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
         }
         menu = (String) null;
-        return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
+        return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
     }
 
     final boolean c(boolean param0) {

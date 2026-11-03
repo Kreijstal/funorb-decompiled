@@ -153,10 +153,10 @@ abstract class id {
           var2 = var27.readUnsignedByte(-107);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(-1034);
-            var4 = (eh) (StateIconLabel.field_Lb.c((byte) -36));
+            var4 = (eh) (StateIconLabel.field_Lb.last((byte) -36));
             while (var4 != null) {
               if (var3 != var4.field_A) {
-                var4 = (eh) (StateIconLabel.field_Lb.f((byte) -5));
+                var4 = (eh) (StateIconLabel.field_Lb.previous((byte) -5));
                 continue;
               }
               break;
@@ -252,10 +252,10 @@ abstract class id {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(-1034);
             var4_long = var27.readLong(-412303328);
-            var6_ref_oj = (oj) (ta.field_i.c((byte) 71));
+            var6_ref_oj = (oj) (ta.field_i.last((byte) 71));
             while (var6_ref_oj != null) {
               if (var6_ref_oj.field_B != var3Lifetime1) {
-                var6_ref_oj = (oj) (ta.field_i.f((byte) -5));
+                var6_ref_oj = (oj) (ta.field_i.previous((byte) -5));
                 continue;
               }
               break;

@@ -9,7 +9,7 @@ final class IntrusiveDeque {
     static String menuSettings;
     static String muChatLobbyShowAll;
 
-    final IntrusiveNode removeLast(int param0) {
+    final IntrusiveNode removeFirst(int param0) {
         IntrusiveNode var2 = this.field_e.next;
         if (var2 == this.field_e) {
           return null;
@@ -23,12 +23,12 @@ final class IntrusiveDeque {
 
     final boolean isEmpty(int param0) {
         if (param0 != 0) {
-          this.a(-24);
+          this.size(-24);
         }
         return this.field_e == this.field_e.previous ? true : false;
     }
 
-    final void d(byte param0) {
+    final void clear(byte param0) {
         IntrusiveNode var2;
         if (param0 <= 20) {
           return;
@@ -45,7 +45,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    final IntrusiveNode removeFirst(byte param0) {
+    final IntrusiveNode removeLast(byte param0) {
         IntrusiveNode var2 = this.field_e.previous;
         if (this.field_e == var2) {
           return null;
@@ -57,7 +57,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 != -127) {
           this.field_e = (IntrusiveNode) null;
         }
@@ -80,7 +80,7 @@ final class IntrusiveDeque {
         field_c = null;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode next(byte param0) {
         IntrusiveNode var2 = this.field_f;
         if (this.field_e == var2) {
           this.field_f = null;
@@ -93,7 +93,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode last(byte param0) {
         IntrusiveNode var2 = this.field_e.previous;
         if (this.field_e == var2) {
           this.field_f = null;
@@ -130,7 +130,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(byte param0, IntrusiveNode param1) {
+    final void addLast(byte param0, IntrusiveNode param1) {
         try {
           if (null != param1.next) {
             param1.unlink((byte) -117);
@@ -147,7 +147,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final int a(int param0) {
+    final int size(int param0) {
         int var2 = 0;
         IntrusiveNode var3 = this.field_e.previous;
         if (param0 < 15) {
@@ -160,10 +160,10 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode f(byte param0) {
+    final IntrusiveNode previous(byte param0) {
         IntrusiveNode var2 = this.field_f;
         if (param0 != -5) {
-          this.removeLast(63);
+          this.removeFirst(63);
         }
         if (var2 == this.field_e) {
           this.field_f = null;
@@ -215,7 +215,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void b(byte param0, IntrusiveNode param1) {
+    final void addFirst(byte param0, IntrusiveNode param1) {
         try {
           if (param1.next != null) {
             param1.unlink((byte) -117);

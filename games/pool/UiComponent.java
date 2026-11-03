@@ -76,13 +76,13 @@ class UiComponent extends UiComponentNode {
         if (this.children == null) {
           return null;
         }
-        var7 = (UiComponent) (this.children.c((byte) 111));
+        var7 = (UiComponent) (this.children.last((byte) 111));
         while (var7 != null) {
           var5 = var7.findById(param0, (byte) 31);
           if (var5 != null) {
             return var5;
           }
-          var7 = (UiComponent) (this.children.f((byte) -5));
+          var7 = (UiComponent) (this.children.previous((byte) -5));
         }
         return null;
     }
@@ -110,13 +110,13 @@ class UiComponent extends UiComponentNode {
           }
         }
         if (this.children != null) {
-          var4 = (UiComponent) (this.children.c((byte) 69));
+          var4 = (UiComponent) (this.children.last((byte) 69));
           while (var4 != null) {
             var5 = var4.localX + var4.width;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (UiComponent) (this.children.f((byte) -5));
+            var4 = (UiComponent) (this.children.previous((byte) -5));
           }
         }
         return var3;
@@ -266,11 +266,11 @@ class UiComponent extends UiComponentNode {
     final void markDescendantsToInheritVisualState(byte param0) {
         UiComponent var3 = null;
         if (null != this.children) {
-          var3 = (UiComponent) (this.children.a((byte) -127));
+          var3 = (UiComponent) (this.children.first((byte) -127));
           while (var3 != null) {
             var3.inheritVisualState = true;
             var3.markDescendantsToInheritVisualState((byte) -128);
-            var3 = (UiComponent) (this.children.b((byte) -46));
+            var3 = (UiComponent) (this.children.next((byte) -46));
           }
         }
         if (param0 >= -123) {
@@ -457,10 +457,10 @@ class UiComponent extends UiComponentNode {
           }
         }
         if (null != this.children) {
-          var23_ref = (UiComponent) (this.children.c((byte) -87));
+          var23_ref = (UiComponent) (this.children.last((byte) -87));
           while (var23_ref != null) {
             var23_ref.drawTree(param0, this.screenX + var19, (byte) 85, param3, param4, this.height, this.screenY + var20, this.width, param8, this.field_fb, param10);
-            var23_ref = (UiComponent) (this.children.f((byte) -5));
+            var23_ref = (UiComponent) (this.children.previous((byte) -5));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
@@ -530,11 +530,11 @@ class UiComponent extends UiComponentNode {
           var8 = this.remainingHeight + var7;
           if (!param2) {
             var9 = 0;
-            var10_ref_vh = (UiComponent) (this.children.c((byte) -82));
+            var10_ref_vh = (UiComponent) (this.children.last((byte) -82));
             while (var10_ref_vh != null) {
               var10_ref_vh.remainingY = var9 - var10_ref_vh.localY;
               var9 = var9 + (param0 + var10_ref_vh.remainingHeight + var10_ref_vh.height);
-              var10_ref_vh = (UiComponent) (this.children.f((byte) -5));
+              var10_ref_vh = (UiComponent) (this.children.previous((byte) -5));
             }
             var8 = -param0 + var9;
           }
@@ -661,10 +661,10 @@ class UiComponent extends UiComponentNode {
         stackIn_38_1 = (this.hovered) && (this.capturedButton == cd.field_b) && (param1);
         this.activeInside = stackIn_38_1;
         if (this.children != null) {
-          var14 = (UiComponent) (this.children.a((byte) -127));
+          var14 = (UiComponent) (this.children.first((byte) -127));
           while (var14 != null) {
             var14.updateTree(this.screenY, param1, this.width, this.height, (byte) 63, this.screenX);
-            var14 = (UiComponent) (this.children.b((byte) -46));
+            var14 = (UiComponent) (this.children.next((byte) -46));
           }
         }
         if (var13 != 0) {
@@ -719,7 +719,7 @@ class UiComponent extends UiComponentNode {
           if (this.children == null) {
             this.children = new IntrusiveDeque();
           }
-          this.children.b((byte) -83, param1);
+          this.children.addFirst((byte) -83, param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vh.MA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -16,18 +16,18 @@ abstract class um {
         RuntimeException var2_ref = null;
         var3 = Pool.field_O;
         try {
-          var4 = (kg) (ArchiveLoadStep.field_c.c((byte) 65));
+          var4 = (kg) (ArchiveLoadStep.field_c.last((byte) 65));
           while (var4 != null) {
             fr.a(98, var4, param1);
-            var4 = (kg) (ArchiveLoadStep.field_c.f((byte) -5));
+            var4 = (kg) (ArchiveLoadStep.field_c.previous((byte) -5));
           }
           if (param0 != 10) {
             field_e = false;
           }
-          var2 = LoginTextValue.field_f.c((byte) -34);
+          var2 = LoginTextValue.field_f.last((byte) -34);
           while (var2 != null) {
             hi.a(1, param1);
-            var2 = LoginTextValue.field_f.f((byte) -5);
+            var2 = LoginTextValue.field_f.previous((byte) -5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

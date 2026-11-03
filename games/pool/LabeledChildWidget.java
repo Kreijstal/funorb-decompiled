@@ -28,7 +28,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           var5.field_v = param3 ? true : false;
           var5.text = param1;
           var5.field_l = param4;
-          MatchingTextValidator.field_r.b((byte) 116, var5);
+          MatchingTextValidator.field_r.addFirst((byte) 116, var5);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "n.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

@@ -47,7 +47,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         RuntimeException var3 = null;
         LinkButtonPainter var4 = null;
         try {
-          this.children.d((byte) 87);
+          this.children.clear((byte) 87);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

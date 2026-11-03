@@ -28,7 +28,7 @@ final class TextureCache implements in {
         }
         if (null != var7.pixels) {
           if (param2 == var7.field_p) {
-            this.field_a.a((byte) -84, var7);
+            this.field_a.addLast((byte) -84, var7);
             return var7.pixels;
           }
           var7.unlink((byte) -117);
@@ -37,13 +37,13 @@ final class TextureCache implements in {
         }
         if (var7.buildPixels(param2, this.field_b, this.field_i)) {
           if (0 == this.field_j) {
-            var8 = (Texture) (this.field_a.removeLast(-1));
+            var8 = (Texture) (this.field_a.removeFirst(-1));
             var8.releasePixels();
-            this.field_a.a((byte) -84, var7);
+            this.field_a.addLast((byte) -84, var7);
             return var7.pixels;
           }
           this.field_j = this.field_j - 1;
-          this.field_a.a((byte) -84, var7);
+          this.field_a.addLast((byte) -84, var7);
           return var7.pixels;
         }
         return null;
@@ -157,10 +157,10 @@ final class TextureCache implements in {
         RuntimeException var2_ref = null;
         try {
           param1.unlink((byte) -117);
-          var2 = (LobbyGame) (NetworkGameClient.field_A.c((byte) -72));
+          var2 = (LobbyGame) (NetworkGameClient.field_A.last((byte) -72));
           while (var2 != null) {
             if (var2.comesBeforeGame(param1, false)) {
-              var2 = (LobbyGame) (NetworkGameClient.field_A.f((byte) -5));
+              var2 = (LobbyGame) (NetworkGameClient.field_A.previous((byte) -5));
               continue;
             }
             break;
@@ -168,7 +168,7 @@ final class TextureCache implements in {
           if (var2 != null) {
             TextLineLayout.insertAfter(param1, (byte) -119, var2);
           } else {
-            NetworkGameClient.field_A.b((byte) -108, param1);
+            NetworkGameClient.field_A.addFirst((byte) -108, param1);
           }
           if (param0 > -73) {
             field_c = (UiComponent) null;

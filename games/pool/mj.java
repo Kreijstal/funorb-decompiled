@@ -52,17 +52,17 @@ final class mj {
             mj.a(99, 12);
           }
           if (null != IntrusiveNode.field_i) {
-            IntrusiveNode.field_i.d((byte) 49);
+            IntrusiveNode.field_i.clear((byte) 49);
             IntrusiveNode.field_i = null;
           }
           ln.field_n = null;
           if (NetworkGameClient.field_A != null) {
-            NetworkGameClient.field_A.d((byte) 117);
+            NetworkGameClient.field_A.clear((byte) 117);
             NetworkGameClient.field_A = null;
           }
           lf.field_a = null;
           if (ck.field_W != null) {
-            ck.field_W.d((byte) 78);
+            ck.field_W.clear((byte) 78);
             ck.field_W = null;
           }
           LobbyPlayer.field_Qb = null;

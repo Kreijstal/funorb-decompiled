@@ -372,8 +372,8 @@ final class PolarTableScene extends ModelTableScene {
           if (var24.field_V > -this.field_M[var2Lifetime3][2]) {
             dupTemp$497 = hc.a(var24, this.field_M[var2Lifetime3], (byte) 101);
             var30 = dupTemp$497;
-            var4.b((byte) -121, new pm(dupTemp$497));
-            var33.b((byte) -39, new pm(var30));
+            var4.addFirst((byte) -121, new pm(dupTemp$497));
+            var33.addFirst((byte) -39, new pm(var30));
           } else {
             if (-this.field_M[var2Lifetime3][2] <= var24.field_x) {
               var28 = TutorialController.b((byte) 121);
@@ -385,17 +385,17 @@ final class PolarTableScene extends ModelTableScene {
               JaggrabDownloader.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, -this.field_M[var2Lifetime3][2], 0, 0, 1, var26, var24);
               dupTemp$498 = hc.a(var26, this.field_M[var2Lifetime3], (byte) 101);
               var27 = dupTemp$498;
-              var4.b((byte) -51, new pm(dupTemp$498));
-              var33.b((byte) 125, new pm(var27));
+              var4.addFirst((byte) -51, new pm(dupTemp$498));
+              var33.addFirst((byte) 125, new pm(var27));
               dupTemp$499 = hc.a(var28, this.field_M[var2Lifetime3], (byte) 101);
               var29 = dupTemp$499;
-              var3.b((byte) -47, new pm(dupTemp$499));
-              var33.b((byte) 122, new pm(var29));
+              var3.addFirst((byte) -47, new pm(dupTemp$499));
+              var33.addFirst((byte) 122, new pm(var29));
             } else {
               dupTemp$500 = hc.a(var24, this.field_M[var2Lifetime3], (byte) 101);
               var25 = dupTemp$500;
-              var3.b((byte) 97, new pm(dupTemp$500));
-              var33.b((byte) 90, new pm(var25));
+              var3.addFirst((byte) 97, new pm(dupTemp$500));
+              var33.addFirst((byte) 90, new pm(var25));
             }
           }
           var31 = this.field_O[UsernameSuggestionsPanel.field_W + (var2Lifetime3 - FullscreenErrorDialog.field_hb)];
@@ -403,8 +403,8 @@ final class PolarTableScene extends ModelTableScene {
           var31.e();
           dupTemp$501 = hc.a(var15_ref_eg, this.field_M[UsernameSuggestionsPanel.field_W - FullscreenErrorDialog.field_hb + var2Lifetime3], (byte) 101);
           var32 = dupTemp$501;
-          var5.b((byte) 108, new pm(dupTemp$501));
-          var33.b((byte) 84, new pm(var32));
+          var5.addFirst((byte) 108, new pm(dupTemp$501));
+          var33.addFirst((byte) 84, new pm(var32));
           this.field_U[-FullscreenErrorDialog.field_hb + var2Lifetime3] = new vm(new so(var33));
         }
         var6.a((byte) -120, var3);

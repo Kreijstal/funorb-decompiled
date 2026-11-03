@@ -349,7 +349,7 @@ final class SoundCache {
           var5_int = (param2 >>> 12 | (param2 & -1610608641) << 4) ^ param3;
           var5_int = var5_int | param2 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (PcmSample) (this.field_f.a(false, var6));
+          var8 = (PcmSample) (this.field_f.get(false, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -359,13 +359,13 @@ final class SoundCache {
             return null;
           }
           var10 = -125 % ((param1 - 64) / 36);
-          var9 = (VorbisSample) (this.field_e.a(false, var6));
+          var9 = (VorbisSample) (this.field_e.get(false, var6));
           if (var9 == null) {
             var9 = VorbisSample.load(this.field_d, param2, param3);
             if (var9 == null) {
               return null;
             }
-            this.field_e.a((byte) -128, var9, var6);
+            this.field_e.put((byte) -128, var9, var6);
           }
           var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
@@ -373,7 +373,7 @@ final class SoundCache {
             return (PcmSample) (stackIn_14_0);
           }
           var9.unlink((byte) -117);
-          this.field_f.a((byte) -128, var8Lifetime1, var6);
+          this.field_f.put((byte) -128, var8Lifetime1, var6);
           stackIn_16_0 = var8Lifetime1;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -410,7 +410,7 @@ final class SoundCache {
           var5_int = param2 ^ (param1 >>> 12 | (param1 & 1879052287) << 4);
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_f.a(false, var6));
+          var8 = (PcmSample) (this.field_f.get(false, var6));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -430,7 +430,7 @@ final class SoundCache {
           }
           var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
-          this.field_f.a((byte) -126, var8Lifetime1, var6);
+          this.field_f.put((byte) -126, var8Lifetime1, var6);
           if (param3 != null) {
             param3[0] = param3[0] - var10.field_n.length;
           }

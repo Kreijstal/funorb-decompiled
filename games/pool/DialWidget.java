@@ -212,16 +212,16 @@ final class DialWidget extends ButtonWidget {
           if (param1 >= -89) {
             return;
           }
-          var2 = (LobbyPlayer) (IntrusiveNode.field_i.c((byte) 124));
+          var2 = (LobbyPlayer) (IntrusiveNode.field_i.last((byte) 124));
           while (var2 != null) {
             if (var2.comesBeforePlayer(param0, (byte) -97)) {
-              var2 = (LobbyPlayer) (IntrusiveNode.field_i.f((byte) -5));
+              var2 = (LobbyPlayer) (IntrusiveNode.field_i.previous((byte) -5));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            IntrusiveNode.field_i.b((byte) -11, param0);
+            IntrusiveNode.field_i.addFirst((byte) -11, param0);
           } else {
             TextLineLayout.insertAfter(param0, (byte) -119, var2);
           }

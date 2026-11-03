@@ -20,14 +20,14 @@ final class AudioService implements Runnable {
           if (param1 != 109) {
             field_f = 43;
           }
-          var3 = (UiComponent) (param0.children.c((byte) -74));
+          var3 = (UiComponent) (param0.children.last((byte) -74));
           var2 = var3;
           while (var3 != null) {
             var3.height = 0;
             var3.remainingHeight = 0;
             var3.localY = 0;
             var3.remainingY = 0;
-            var3 = (UiComponent) (param0.children.f((byte) -5));
+            var3 = (UiComponent) (param0.children.previous((byte) -5));
             var2Lifetime1 = var3;
           }
           param0.height = 0;

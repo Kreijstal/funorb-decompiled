@@ -12,7 +12,7 @@ final class vi {
         if (param0 != -7414) {
           return;
         }
-        MarkerSliderPainter.field_i.d((byte) 66);
+        MarkerSliderPainter.field_i.clear((byte) 66);
     }
 
     final static byte encodeCp1252Char(char param0, boolean param1) {

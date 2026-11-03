@@ -126,7 +126,7 @@ final class mk {
           var8 = BufferedSocket.field_m.content.children;
           var9 = rl.monotonicTimeMillis((byte) -120);
           var11 = null;
-          var12 = (LobbyGame) (var8.c((byte) -127));
+          var12 = (LobbyGame) (var8.last((byte) -127));
           while (var12 != null) {
             var13 = 0;
             if (var12.children == null) {
@@ -541,7 +541,7 @@ final class mk {
             boolean decompiledFrameRemainder0 = true;
             if (var12.pressedButton != 0) {
               if (var12.isUnindexed(-14144)) {
-                var12 = (LobbyGame) (var8.f((byte) -5));
+                var12 = (LobbyGame) (var8.previous((byte) -5));
                 continue;
               }
               if (var12.field_Tb.pressedButton == 0) {
@@ -558,7 +558,7 @@ final class mk {
                 }
               }
             }
-            var12 = (LobbyGame) (var8.f((byte) -5));
+            var12 = (LobbyGame) (var8.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -606,7 +606,7 @@ final class mk {
             param7.children = new IntrusiveDeque();
           }
           IntrusiveNode.field_i = param7.children;
-          IntrusiveNode.field_i.d((byte) 106);
+          IntrusiveNode.field_i.clear((byte) 106);
           ln.field_n = new DualLinkNodeHashTable(param6);
           PoolMatchController.field_jb = 0;
           TutorialSelectScreen.field_I = -1;
@@ -616,13 +616,13 @@ final class mk {
             param0.children = new IntrusiveDeque();
           }
           NetworkGameClient.field_A = param0.children;
-          NetworkGameClient.field_A.d((byte) 123);
+          NetworkGameClient.field_A.clear((byte) 123);
           lf.field_a = new DualLinkNodeHashTable(param1);
           if (null == param2.children) {
             param2.children = new IntrusiveDeque();
           }
           ck.field_W = param2.children;
-          ck.field_W.d((byte) 36);
+          ck.field_W.clear((byte) 36);
           LobbyPlayer.field_Qb = new DualLinkNodeHashTable(param5);
           AudioService.field_f = param3;
           StrongCacheEntry.field_K = 0L;

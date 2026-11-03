@@ -80,7 +80,7 @@ abstract class NetworkGameClient extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             GrowableIntList.reportClientError((Throwable) ((Object) var6), (String) null, param3 - 8555);
-            this.a((byte) 100, "crash");
+            this.redirectToErrorPage((byte) 100, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -415,14 +415,14 @@ abstract class NetworkGameClient extends GameApplet {
             if (null != nl.field_b) {
               nl.field_b.a(false, 50, kg.field_m);
             }
-            var6 = (ij) (MarkerSliderPainter.field_i.c((byte) 80));
+            var6 = (ij) (MarkerSliderPainter.field_i.last((byte) 80));
             var2 = var6;
             if (var6.field_H + var6.field_B + var6.field_y <= kg.field_m) {
-              dupTemp$0 = (ij) (MarkerSliderPainter.field_i.removeFirst((byte) -41));
+              dupTemp$0 = (ij) (MarkerSliderPainter.field_i.removeLast((byte) -41));
               var2 = dupTemp$0;
               stackIn_14_0 = (dupTemp$0 != null) ? 0 : -1;
               kg.field_m = stackIn_14_0;
-              var2 = (ij) (MarkerSliderPainter.field_i.c((byte) -27));
+              var2 = (ij) (MarkerSliderPainter.field_i.last((byte) -27));
             }
             if (var2 == null) {
               return;
@@ -615,7 +615,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           } else {
             if (!bi.field_f) {
-              this.a((byte) 22, "reconnect");
+              this.redirectToErrorPage((byte) 22, "reconnect");
             }
             de.c(param0 + 11);
             LoginPayload.a(true, LoginTextValue.field_g, var2);
@@ -725,18 +725,18 @@ abstract class NetworkGameClient extends GameApplet {
               if (sk.field_a != 4) {
                 if (sk.field_a != 2) {
                   if (5 != sk.field_a) {
-                    this.a((byte) -93, "js5connect");
+                    this.redirectToErrorPage((byte) -93, "js5connect");
                   } else {
-                    this.a((byte) 103, "outofdate");
+                    this.redirectToErrorPage((byte) 103, "outofdate");
                   }
                 } else {
-                  this.a((byte) -30, "js5connect_full");
+                  this.redirectToErrorPage((byte) -30, "js5connect_full");
                 }
               } else {
-                this.a((byte) -2, "js5io");
+                this.redirectToErrorPage((byte) -2, "js5io");
               }
             } else {
-              this.a((byte) -117, "js5crc");
+              this.redirectToErrorPage((byte) -117, "js5crc");
             }
           }
         }
@@ -853,7 +853,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (!param1 &&
           TabbedPane.field_Sb) {
           he.detachInputListeners(TimeTrialSelectScreen.field_K, 0);
-          this.f((byte) 86);
+          this.recreateCanvas((byte) 86);
           kc.attachInputListeners(TimeTrialSelectScreen.field_K, 2);
         }
         if (ButtonWidget.field_H[8]) {

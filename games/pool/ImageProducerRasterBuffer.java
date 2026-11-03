@@ -163,12 +163,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static eh a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = Pool.field_O;
-        eh var5 = (eh) (StateIconLabel.field_Lb.c((byte) 118));
+        eh var5 = (eh) (StateIconLabel.field_Lb.last((byte) 118));
         while (var5 != null) {
           if (~var5.field_A == ~param2) {
             return var5;
           }
-          var5 = (eh) (StateIconLabel.field_Lb.f((byte) -5));
+          var5 = (eh) (StateIconLabel.field_Lb.previous((byte) -5));
         }
         eh var8 = new eh();
         var5 = var8;
@@ -176,7 +176,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var6 = -73 / ((param0 - 60) / 49);
         var5.field_r = param4;
         var5.field_v = param1;
-        StateIconLabel.field_Lb.b((byte) -24, var5);
+        StateIconLabel.field_Lb.addFirst((byte) -24, var5);
         AlternateLongAndTextLoginPayload.a(var5, param3, (byte) -117);
         return var5;
     }

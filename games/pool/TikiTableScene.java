@@ -485,7 +485,7 @@ final class TikiTableScene extends ModelTableScene {
                   if (var9.faceCount > 0) {
                     var9.a();
                     var9.e();
-                    param1[var7].b((byte) 106, new pm(hc.a(var9, param0, (byte) 101)));
+                    param1[var7].addFirst((byte) 106, new pm(hc.a(var9, param0, (byte) 101)));
                   }
                   var8.a();
                   var11 = var8;
@@ -500,7 +500,7 @@ final class TikiTableScene extends ModelTableScene {
                 continue;
               }
               System.out.println("Model before the cloudline " + jd.field_h[var7]);
-              param1[var7].b((byte) -100, new pm(hc.a(var11, param0, (byte) 101)));
+              param1[var7].addFirst((byte) -100, new pm(hc.a(var11, param0, (byte) 101)));
               param2 = null;
             }
             break;
@@ -509,7 +509,7 @@ final class TikiTableScene extends ModelTableScene {
             if (param2.faceCount <= 0) {
               return;
             }
-            param1[param1.length - 1].b((byte) -95, new pm(hc.a(param2, param0, (byte) 101)));
+            param1[param1.length - 1].addFirst((byte) -95, new pm(hc.a(param2, param0, (byte) 101)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -1137,7 +1137,7 @@ final class TikiTableScene extends ModelTableScene {
           dn.field_m[var5] = tq.a(md.a(var7, md.a(var7 << 16, var7 << 8)), var6, false);
           ah.field_e[var5] = new so();
           ah.field_e[var5].a((byte) -112, var3[var5]);
-          ck.field_Y[var5].b((byte) -52, new pm(ah.field_e[var5]));
+          ck.field_Y[var5].addFirst((byte) -52, new pm(ah.field_e[var5]));
           ln.field_u[var5] = new so();
           ln.field_u[var5].a((byte) -121, ck.field_Y[var5]);
           ln.field_u[var5].a(0);

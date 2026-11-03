@@ -42,13 +42,13 @@ final class uc {
     }
 
     final static void pushRasterSnapshot(byte param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (cb.field_e.removeLast(-1));
+        RasterSnapshot var1 = (RasterSnapshot) (cb.field_e.removeFirst(-1));
         int var2 = 34 % ((-56 - param0) / 50);
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
         var1.setRasterState(SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, -95, SoftwareRasterizer.clipRight, SoftwareRasterizer.pixels, SoftwareRasterizer.clipTop);
-        AccountCreationForm.field_S.b((byte) 83, var1);
+        AccountCreationForm.field_S.addFirst((byte) 83, var1);
     }
 
     final static double[][] a(boolean param0, double[][][] param1) {

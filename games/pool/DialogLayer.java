@@ -295,8 +295,8 @@ final class DialogLayer extends SingleChildWidget {
           int var1_int = 83 % ((17 - param0) / 34);
           LocalGameSetupScreen.field_J = null;
           AccountWelcomePanel.field_S = 0;
-          SoundCache.field_k.d((byte) 69);
-          jq.field_c.d((byte) 48);
+          SoundCache.field_k.clear((byte) 69);
+          jq.field_c.clear((byte) 48);
           var2 = AimTarget.field_b.firstForIteration((byte) -125);
           while (var2 != null) {
             var2.a(false);
@@ -323,7 +323,7 @@ final class DialogLayer extends SingleChildWidget {
           if (param1 != 30000) {
             field_W = 61;
           }
-          this.dialogs.a((byte) -84, var3);
+          this.dialogs.addLast((byte) -84, var3);
           var3.dialogOpen = true;
           var3.requestKeyboardFocus((UiWidget) (this), (byte) 66);
         } catch (RuntimeException runtimeException) {

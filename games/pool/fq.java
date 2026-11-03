@@ -171,7 +171,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         int var4;
-        StatefulTextPainter.field_s.a(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -37)));
+        StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -37)));
         ThemeSelectScreen.field_P = 0;
         GameRules.field_b = param1;
         if (param0 != -3405) {

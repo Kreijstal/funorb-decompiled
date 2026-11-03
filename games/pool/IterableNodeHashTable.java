@@ -16,7 +16,7 @@ final class IterableNodeHashTable {
     private int field_b;
     static int[] field_c;
 
-    final void a(byte param0, IntrusiveNode param1, long param2) {
+    final void put(byte param0, IntrusiveNode param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param1.next != null) {
@@ -101,7 +101,7 @@ final class IterableNodeHashTable {
         }
     }
 
-    final IntrusiveNode a(boolean param0, long param1) {
+    final IntrusiveNode get(boolean param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = Pool.field_O;
         IntrusiveNode var4 = this.field_g[(int)(param1 & (long)(this.field_b - 1))];
@@ -121,12 +121,12 @@ final class IterableNodeHashTable {
         return null;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode first(int param0) {
         this.field_m = param0;
-        return this.b(-1);
+        return this.next(-1);
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;

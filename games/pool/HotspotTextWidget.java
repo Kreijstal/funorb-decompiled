@@ -162,7 +162,7 @@ class HotspotTextWidget extends ButtonWidget {
             if (var11 != null) {
               ((qa) (var11)).field_l = var16;
             }
-            this.hotspotBounds.b((byte) 82, var16);
+            this.hotspotBounds.addFirst((byte) 82, var16);
             var11 = var16;
           }
         }
@@ -208,7 +208,7 @@ class HotspotTextWidget extends ButtonWidget {
     private final qa findHotspot(int param0, int param1, int param2) {
         qa var5 = null;
         int var6 = Pool.field_O;
-        qa var4 = (qa) (this.hotspotBounds.c((byte) -21));
+        qa var4 = (qa) (this.hotspotBounds.last((byte) -21));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -218,7 +218,7 @@ class HotspotTextWidget extends ButtonWidget {
             }
             var5 = var5.field_l;
           }
-          var4 = (qa) (this.hotspotBounds.f((byte) -5));
+          var4 = (qa) (this.hotspotBounds.previous((byte) -5));
         }
         if (param2 == -31244) {
           return null;

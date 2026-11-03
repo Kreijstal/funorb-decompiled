@@ -652,7 +652,7 @@ final class PlasmaTableScene extends TableScene {
           }
           if (param2.canControlCue(-38)) {
             if (id.field_c.field_g) {
-              param2.gameModel.a(id.field_c.field_l, param2.cueAim.polarAngle, (byte) 47, param2.cueAim.azimuth, param2.cueAim.field_e, param2.cueAim.field_d);
+              param2.gameModel.fillCueTransform(id.field_c.field_l, param2.cueAim.polarAngle, (byte) 47, param2.cueAim.azimuth, param2.cueAim.field_e, param2.cueAim.field_d);
               id.field_c.field_g = false;
             }
             var4_int = param2.cuePullbackDistance;

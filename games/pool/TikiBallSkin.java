@@ -185,7 +185,7 @@ final class TikiBallSkin extends BallSkin {
         LobbyPlayer var1Lifetime1;
         var2 = Pool.field_O;
         try {
-          var1 = (LobbyPlayer) (IntrusiveNode.field_i.c((byte) -48));
+          var1 = (LobbyPlayer) (IntrusiveNode.field_i.last((byte) -48));
           while (var1 != null) {
             if (var1.field_gc > 0) {
               var1.field_gc = var1.field_gc - 1;
@@ -196,9 +196,9 @@ final class TikiBallSkin extends BallSkin {
                 }
               }
             }
-            var1 = (LobbyPlayer) (IntrusiveNode.field_i.f((byte) -5));
+            var1 = (LobbyPlayer) (IntrusiveNode.field_i.previous((byte) -5));
           }
-          var1_ref = (LobbyGame) (NetworkGameClient.field_A.c((byte) 123));
+          var1_ref = (LobbyGame) (NetworkGameClient.field_A.last((byte) 123));
           while (var1_ref != null) {
             if (var1_ref.field_Mb > 0) {
               var1_ref.field_Mb = var1_ref.field_Mb - 1;
@@ -209,18 +209,18 @@ final class TikiBallSkin extends BallSkin {
                 }
               }
             }
-            var1_ref = (LobbyGame) (NetworkGameClient.field_A.f((byte) -5));
+            var1_ref = (LobbyGame) (NetworkGameClient.field_A.previous((byte) -5));
           }
           if (param0 != -8) {
             return;
           }
-          var1Lifetime1 = (LobbyPlayer) (ck.field_W.c((byte) 65));
+          var1Lifetime1 = (LobbyPlayer) (ck.field_W.last((byte) 65));
           while (var1Lifetime1 != null) {
             stackIn_24_0 = ~var1Lifetime1.field_gc;
             if (stackIn_24_0 < -1) {
               var1Lifetime1.field_gc = var1Lifetime1.field_gc - 1;
               if (0 != var1Lifetime1.field_gc) {
-                var1Lifetime1 = (LobbyPlayer) (ck.field_W.f((byte) -5));
+                var1Lifetime1 = (LobbyPlayer) (ck.field_W.previous((byte) -5));
                 continue;
               }
               var1Lifetime1.field_hc = 0;
@@ -228,7 +228,7 @@ final class TikiBallSkin extends BallSkin {
                 var1Lifetime1.unlink((byte) -117);
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (ck.field_W.f((byte) -5));
+            var1Lifetime1 = (LobbyPlayer) (ck.field_W.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

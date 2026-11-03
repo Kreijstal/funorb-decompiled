@@ -630,7 +630,7 @@ final class DiskCacheWorker implements Runnable {
         this.stopRequested = false;
         this.pendingRequestCount = 0;
         try {
-          var2 = param0.a(90, 5, (Runnable) (this));
+          var2 = param0.startThread(90, 5, (Runnable) (this));
           while (0 == var2.field_f) {
             SoundCache.a(-78, 10L);
           }

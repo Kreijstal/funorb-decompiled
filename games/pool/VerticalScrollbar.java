@@ -456,15 +456,15 @@ final class VerticalScrollbar extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var4 = (i) (ue.field_b.c((byte) 96));
+          var4 = (i) (ue.field_b.last((byte) 96));
           while (var4 != null) {
             gp.a(param1, var4, -6725);
-            var4 = (i) (ue.field_b.f((byte) -5));
+            var4 = (i) (ue.field_b.previous((byte) -5));
           }
-          var2 = NodeHashTableIterator.field_j.c((byte) 87);
+          var2 = NodeHashTableIterator.field_j.last((byte) 87);
           while (var2 != null) {
             kp.a(param0 ^ 59, param1);
-            var2 = NodeHashTableIterator.field_j.f((byte) -5);
+            var2 = NodeHashTableIterator.field_j.previous((byte) -5);
           }
           if (param0 == 58) {
             return;

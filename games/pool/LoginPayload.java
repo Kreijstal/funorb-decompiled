@@ -132,7 +132,7 @@ abstract class LoginPayload {
           }
           if (!MarkerSliderPainter.field_i.isEmpty(0) &&
             kg.field_m >= 0) {
-            var5 = (ij) (MarkerSliderPainter.field_i.c((byte) 108));
+            var5 = (ij) (MarkerSliderPainter.field_i.last((byte) 108));
             if (var5.field_E == 0) {
               if (var5.field_w != 256) {
                 var5.field_K.drawShadedGrayscale(-(var5.field_K.field_z / 2) + var5.field_J, var5.field_C - var5.field_K.field_A / 2, var5.field_w);

@@ -138,11 +138,11 @@ final class rl {
               return;
             }
             if (var2 == 7) {
-              var34 = (LobbyPlayer) (IntrusiveNode.field_i.c((byte) -72));
+              var34 = (LobbyPlayer) (IntrusiveNode.field_i.last((byte) -72));
               while (var34 != null) {
                 var34.unlink((byte) -117);
                 var34.a(false);
-                var34 = (LobbyPlayer) (IntrusiveNode.field_i.f((byte) -5));
+                var34 = (LobbyPlayer) (IntrusiveNode.field_i.previous((byte) -5));
               }
               PoolMatchController.field_jb = 0;
               return;
@@ -176,11 +176,11 @@ final class rl {
               return;
             }
             if (var2 == 10) {
-              var35 = (LobbyGame) (NetworkGameClient.field_A.c((byte) 83));
+              var35 = (LobbyGame) (NetworkGameClient.field_A.last((byte) 83));
               while (var35 != null) {
                 var35.unlink((byte) -117);
                 var35.a(false);
-                var35 = (LobbyGame) (NetworkGameClient.field_A.f((byte) -5));
+                var35 = (LobbyGame) (NetworkGameClient.field_A.previous((byte) -5));
               }
               return;
             }
@@ -225,7 +225,7 @@ final class rl {
                     var8.field_Xb = var9 >> 1;
                     var8.field_bc = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-96);
                     var8.field_Nb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-92);
-                    ck.field_W.b((byte) 89, var8);
+                    ck.field_W.addFirst((byte) 89, var8);
                     return;
                   }
                   if (var2 == 19) {
@@ -322,11 +322,11 @@ final class rl {
             }
             return;
           }
-          var4_ref_im = (LobbyPlayer) (ck.field_W.c((byte) -33));
+          var4_ref_im = (LobbyPlayer) (ck.field_W.last((byte) -33));
           while (var4_ref_im != null) {
             var4_ref_im.unlink((byte) -117);
             var4_ref_im.a(false);
-            var4_ref_im = (LobbyPlayer) (ck.field_W.f((byte) -5));
+            var4_ref_im = (LobbyPlayer) (ck.field_W.previous((byte) -5));
           }
           var4_ref_imLifetime1 = (LobbyPlayer) (ln.field_n.firstForIteration((byte) -126));
           while (var4_ref_imLifetime1 != null) {

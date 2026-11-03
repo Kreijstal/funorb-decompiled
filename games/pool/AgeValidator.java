@@ -101,24 +101,24 @@ final class AgeValidator extends TextInputValidator {
           if (!param0) {
             field_q = -113;
           }
-          var2 = (kf) (oj.field_o.c((byte) -36));
+          var2 = (kf) (oj.field_o.last((byte) -36));
           while (var2 != null) {
             if (var2.field_m.b(-108)) {
               var2.field_o.d(BallDebugOverlay.field_b * var2.field_n + 128 >> 8);
             } else {
               var2.unlink((byte) -117);
             }
-            var2 = (kf) (oj.field_o.f((byte) -5));
+            var2 = (kf) (oj.field_o.previous((byte) -5));
           }
           if (null != UsernameSuggestionsPanel.field_R) {
-            var2Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.c((byte) 113));
+            var2Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.last((byte) 113));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_m.b(-113)) {
                 var2Lifetime1.unlink((byte) -117);
               } else {
                 var2Lifetime1.field_o.d(128 + var2Lifetime1.field_n * BallDebugOverlay.field_b >> 8);
               }
-              var2Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.f((byte) -5));
+              var2Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.previous((byte) -5));
             }
           }
         } catch (RuntimeException runtimeException) {

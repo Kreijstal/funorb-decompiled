@@ -278,7 +278,7 @@ final class CueStick {
         }
         try {
           LobbyPlayer.field_Ub = param1;
-          e.field_a.children.d((byte) 53);
+          e.field_a.children.clear((byte) 53);
           e.field_a.addChild(-112, LobbyPlayer.field_Ub);
           ArrayWidgetGroup.field_H = true;
         } catch (RuntimeException runtimeException) {
@@ -319,7 +319,7 @@ final class CueStick {
           var5 = Math.cos(3.141592653589793 * (double)param0.cueAim.polarAngle / 1024.0);
           var7 = Math.sin((double)param0.cueAim.azimuth * 3.141592653589793 / 1024.0);
           var9 = Math.cos(3.141592653589793 * (double)param0.cueAim.azimuth / 1024.0);
-          param0.gameModel.a(this.field_l, param0.cueAim.polarAngle, (byte) 49, param0.cueAim.azimuth, param0.cueAim.field_e, param0.cueAim.field_d);
+          param0.gameModel.fillCueTransform(this.field_l, param0.cueAim.polarAngle, (byte) 49, param0.cueAim.azimuth, param0.cueAim.field_e, param0.cueAim.field_d);
           for (var11 = 0; var11 < this.segmentOffsets.length; var11++) {
             var12 = this.segmentOffsets[var11] + (double)param0.cuePullbackDistance;
             this.field_d[var11][0] = (this.field_l[0] >> 13) + PotEvent.a(4885, var9 * (var3_double * var12));

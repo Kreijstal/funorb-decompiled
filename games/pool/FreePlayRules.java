@@ -36,7 +36,7 @@ final class FreePlayRules extends GameRules {
         }
     }
 
-    final boolean a(int param0, byte param1, ShotRecord param2) {
+    final boolean isPotLegal(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -65,17 +65,17 @@ final class FreePlayRules extends GameRules {
         super(param0);
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean isBallInGroup(int param0, byte param1, int param2) {
         if (param1 < 122) {
-          this.a(-87, (byte) -91, -37);
+          this.isBallInGroup(-87, (byte) -91, -37);
           return true;
         }
         return true;
     }
 
-    final boolean f(int param0) {
+    final boolean showsTargetBall(int param0) {
         if (param0 < 113) {
-          this.c(55);
+          this.updateGroupLabels(55);
           return false;
         }
         return false;
@@ -115,13 +115,13 @@ final class FreePlayRules extends GameRules {
     final int[] a(int param0, byte param1) {
         if (param1 != -32) {
           ShotRecord var4 = (ShotRecord) null;
-          this.a(-52, (byte) -33, (ShotRecord) null);
+          this.isPotLegal(-52, (byte) -33, (ShotRecord) null);
           return TextureCache.field_k;
         }
         return TextureCache.field_k;
     }
 
-    final boolean c(ShotRecord param0, int param1) {
+    final boolean isFirstContactLegal(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -150,7 +150,7 @@ final class FreePlayRules extends GameRules {
     final int a(byte param0) {
         int var2 = -96 / ((param0 + 37) / 60);
         int var3 = ll.field_f;
-        if (this.field_d.d((byte) 85)) {
+        if (this.field_d.isCueBallPotted((byte) 85)) {
           var3 = var3 | um.field_c;
         }
         return var3;
@@ -175,7 +175,7 @@ final class FreePlayRules extends GameRules {
         return 1;
     }
 
-    final byte b(int param0, int param1) {
+    final byte ballGroup(int param0, int param1) {
         if ((param0 & 7) == 0) {
           return (byte) -1;
         }
@@ -200,13 +200,13 @@ final class FreePlayRules extends GameRules {
         return -1;
     }
 
-    final void c(int param0) {
+    final void updateGroupLabels(int param0) {
         if (param0 > -25) {
           this.a(41, 107);
         }
     }
 
-    final Sprite b(ShotRecord param0, int param1) {
+    final Sprite targetBallSprite(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_4_0 = null;
@@ -245,7 +245,7 @@ final class FreePlayRules extends GameRules {
 
     final boolean a(int param0, int param1) {
         if (param1 >= -28) {
-          this.f(-106);
+          this.showsTargetBall(-106);
           return false;
         }
         return false;

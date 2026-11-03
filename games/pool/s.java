@@ -136,7 +136,7 @@ final class s {
             stackIn_3_0 = new dj[]{};
             return stackIn_3_0;
           }
-          var8 = param1.a(84);
+          var8 = param1.listDisplayModes(84);
           while (var8.field_f == 0) {
             SoundCache.a(-123, 10L);
           }

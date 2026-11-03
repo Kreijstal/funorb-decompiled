@@ -98,7 +98,7 @@ class AudioOutput {
                 field_u == null) {
                 field_u = new AudioService();
                 field_u.tasks = param0;
-                param0.a(102, serviceThreadPriority, (Runnable) ((Object) field_u));
+                param0.startThread(102, serviceThreadPriority, (Runnable) ((Object) field_u));
               }
               if (field_u != null) {
                 if (field_u.outputs[param2] != null) {

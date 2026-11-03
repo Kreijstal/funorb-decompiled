@@ -86,7 +86,7 @@ final class TextLineLayout {
             stackIn_12_0 = TextHotspotRegion.a(true, param3, param2, param0);
             return stackIn_12_0;
           }
-          var4 = (ij) (MarkerSliderPainter.field_i.c((byte) -88));
+          var4 = (ij) (MarkerSliderPainter.field_i.last((byte) -88));
           if (param3 == var4.field_m &&
             var4.field_H <= kg.field_m &&
             var4.field_H + var4.field_B > kg.field_m) {

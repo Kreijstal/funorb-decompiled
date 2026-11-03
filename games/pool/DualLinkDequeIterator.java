@@ -22,7 +22,7 @@ final class DualLinkDequeIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new kf(param1, param1);
-          oj.field_o.b((byte) -74, var2);
+          oj.field_o.addFirst((byte) -74, var2);
           if (param0 != -24296) {
             DualLinkDequeIterator.releaseStatics(-16);
           }

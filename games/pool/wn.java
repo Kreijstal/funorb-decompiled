@@ -67,7 +67,7 @@ final class wn {
           var22 = null;
           var12 = Pool.field_O;
           try {
-            var16_ref = (ho) (MessageScreen.field_H.c((byte) -89));
+            var16_ref = (ho) (MessageScreen.field_H.last((byte) -89));
             if (var16_ref == null) {
               return;
             }

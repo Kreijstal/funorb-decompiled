@@ -360,7 +360,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
 
     final void addChild(boolean param0, UiWidget param1) {
         try {
-          this.children.b((byte) -123, param1);
+          this.children.addFirst((byte) -123, param1);
           if (!param0) {
             field_I = -128;
           }

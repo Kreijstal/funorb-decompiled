@@ -464,7 +464,7 @@ final class LocalGameSetupScreen extends MenuScreen {
     }
 
     final static void f(int param0) {
-        bj var1 = (bj) (BallSkin.field_i.c((byte) -105));
+        bj var1 = (bj) (BallSkin.field_i.last((byte) -105));
         int var2 = -46 / ((-18 - param0) / 38);
         if (var1 == null) {
           dn.c(-127);

@@ -112,7 +112,7 @@ final class ModernTableScene extends ModelTableScene {
                   stackIn_40_2 = 0;
                 }
                 fq.a(stackIn_39_0, stackIn_39_1, stackIn_40_2, false);
-                StatefulTextPainter.field_s.a(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -113)));
+                StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -113)));
               }
             }
           }

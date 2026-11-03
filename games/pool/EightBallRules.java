@@ -7,7 +7,7 @@ final class EightBallRules extends GameRules {
     static int field_e;
     private int[] field_f;
 
-    final boolean a(int param0, byte param1, ShotRecord param2) {
+    final boolean isPotLegal(int param0, byte param1, ShotRecord param2) {
         int var4_int = 0;
         boolean stackIn_13_0 = false;
         boolean stackIn_17_0 = false;
@@ -27,7 +27,7 @@ final class EightBallRules extends GameRules {
             stackIn_17_0 = (param2.groupBefore == 2);
             return stackIn_17_0;
           }
-          var4_int = this.b(param0, 30554);
+          var4_int = this.ballGroup(param0, 30554);
           if (param2.groupBefore == -1) {
             stackIn_13_0 = (var4_int == 0 ||
               var4_int == 1);
@@ -184,7 +184,7 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    final void c(int param0) {
+    final void updateGroupLabels(int param0) {
         if (param0 > -25) {
           return;
         }
@@ -273,7 +273,7 @@ final class EightBallRules extends GameRules {
         }
         var3 = var14.groupBefore;
         var4 = 0;
-        if (this.field_d.d((byte) 123)) {
+        if (this.field_d.isCueBallPotted((byte) 123)) {
           var14.a(3, -14, new int[]{this.field_d.field_A});
           var14.field_t = true;
           var4 = var4 | (this.q(1) | um.field_c);
@@ -287,7 +287,7 @@ final class EightBallRules extends GameRules {
             var14.field_w = (byte)(var14.field_w - 1);
           } else {
             if (var3 != -1 &&
-              this.b(var14.field_n, 30554) != var3) {
+              this.ballGroup(var14.field_n, 30554) != var3) {
               var14.a(1, -14, new int[]{var13.playerIndex});
               var14.field_t = true;
               var4 = var4 | this.b(true);
@@ -305,10 +305,10 @@ final class EightBallRules extends GameRules {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameCompleted0 = true;
         if (!var14.pottedBalls.isEmpty(0)) {
-          var5 = var14.pottedBalls.a(45);
+          var5 = var14.pottedBalls.size(45);
           if (0 == var4 &&
             var5 == 1 &&
-            8 == ((PotEvent) (var14.pottedBalls.c((byte) -25))).ballIndex &&
+            8 == ((PotEvent) (var14.pottedBalls.last((byte) -25))).ballIndex &&
             var3 == 2) {
             return ag.field_e;
           }
@@ -337,7 +337,7 @@ final class EightBallRules extends GameRules {
           for (var8 = 0; var8 < this.field_d.balls.length; var8++) {
             if (0 < this.field_d.balls[var8].field_c) {
               var5Lifetime2++;
-              var9_int = this.b(var8, 30554);
+              var9_int = this.ballGroup(var8, 30554);
               if (var9_int == var3) {
                 var6++;
               }
@@ -397,13 +397,13 @@ final class EightBallRules extends GameRules {
         if (!var14.pottedBalls.isEmpty(0)) {
           var6Lifetime1 = 0;
           var7Lifetime1 = 0;
-          var8Lifetime1 = ((PotEvent) (var14.pottedBalls.c((byte) 109))).ballIndex;
+          var8Lifetime1 = ((PotEvent) (var14.pottedBalls.last((byte) 109))).ballIndex;
           var9 = new IntrusiveDequeCursor(var14.pottedBalls);
           var10_ref_cr = (PotEvent) (var9.last((byte) -92));
           while (var10_ref_cr != null) {
             if (0 != (var10_ref_cr.ballIndex & 7)) {
               if (var3 != -1) {
-                if (this.b(var10_ref_cr.ballIndex, 30554) == var3) {
+                if (this.ballGroup(var10_ref_cr.ballIndex, 30554) == var3) {
                   var14.field_w = (byte)(var14.field_w + 1);
                   var6Lifetime1++;
                 } else {
@@ -425,7 +425,7 @@ final class EightBallRules extends GameRules {
           if (var4 == 0 &&
             var3 == -1) {
             if (var7Lifetime1 <= 0) {
-              this.a((int) this.b(var8Lifetime1, 30554), -1, var14.playerIndex);
+              this.a((int) this.ballGroup(var8Lifetime1, 30554), -1, var14.playerIndex);
               stackIn_98_0 = var4;
               if (this.r(9)) {
                 stackIn_99_1 = MarkerSliderPainter.field_j;
@@ -445,7 +445,7 @@ final class EightBallRules extends GameRules {
                 }
               } else {
                 var4 = var4 | i.field_m;
-                this.a((int) this.b(var8Lifetime1, 30554), -1, var14.playerIndex);
+                this.a((int) this.ballGroup(var8Lifetime1, 30554), -1, var14.playerIndex);
               }
               if ((8 & var10) == 8) {
                 var4 = var4 | MarkerSliderPainter.field_j;
@@ -466,7 +466,7 @@ final class EightBallRules extends GameRules {
             }
           }
         }
-        if (!this.field_d.a(false, (byte) 69, var14)) {
+        if (!this.field_d.shouldChangePlayer(false, (byte) 69, var14)) {
           if (this.a(var14.playerIndex % this.field_d.playerCount, -57)) {
             var14.field_w = (byte)(var14.field_w - 1);
           }
@@ -492,7 +492,7 @@ final class EightBallRules extends GameRules {
         }
         if ((param0 & 7) != 0 &&
           (param1 & 7) != 0) {
-          stackIn_9_0 = (this.b(param0, 30554) == this.b(param1, 30554));
+          stackIn_9_0 = (this.ballGroup(param0, 30554) == this.ballGroup(param1, 30554));
           return stackIn_9_0;
         }
         return false;
@@ -513,7 +513,7 @@ final class EightBallRules extends GameRules {
         var4 = 0;
         for (var5 = 0; var3 > var5; var5++) {
           var6 = var5 + var3 * param1;
-          if (this.a((byte) 36, var6) &&
+          if (this.isPlayerActive((byte) 36, var6) &&
             (1 << var6 & this.field_d.field_p) == 0) {
             var4 = var4 | 1 << var6;
           }
@@ -534,7 +534,7 @@ final class EightBallRules extends GameRules {
         int var10;
         int var6Lifetime1;
         var9 = Pool.field_O;
-        this.field_d.e(12226, 0);
+        this.field_d.computeAimTargets(12226, 0);
         var3 = 1;
         var4 = 1;
         stackIn_2_0 = this.field_g;
@@ -610,7 +610,7 @@ final class EightBallRules extends GameRules {
     private final int p(int param0) {
         if (param0 <= 46) {
           ShotRecord var3 = (ShotRecord) null;
-          this.b((ShotRecord) null, -66);
+          this.targetBallSprite((ShotRecord) null, -66);
           return 0;
         }
         return 0;
@@ -622,18 +622,18 @@ final class EightBallRules extends GameRules {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var3 = (oi) (qr.field_a.c((byte) 69));
+          var3 = (oi) (qr.field_a.last((byte) 69));
           while (var3 != null) {
             ra.a(param0, var3, -102);
-            var3 = (oi) (qr.field_a.f((byte) -5));
+            var3 = (oi) (qr.field_a.previous((byte) -5));
           }
           if (!param1) {
             return;
           }
-          var4 = (fl) (cq.field_g.c((byte) 83));
+          var4 = (fl) (cq.field_g.last((byte) 83));
           while (var4 != null) {
             pm.a(var4, param0, true);
-            var4 = (fl) (cq.field_g.f((byte) -5));
+            var4 = (fl) (cq.field_g.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -643,7 +643,7 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    final byte b(int param0, int param1) {
+    final byte ballGroup(int param0, int param1) {
         if (param1 != 30554) {
           field_e = -70;
         }
@@ -666,7 +666,7 @@ final class EightBallRules extends GameRules {
           super.initializeShot(param0, param1);
           if (null != this.field_f) {
             var3_int = this.field_d.playerCount / 2;
-            this.field_f[this.c(-125, param0.playerIndex)] = param0.playerIndex % var3_int;
+            this.field_f[this.teamIndex(-125, param0.playerIndex)] = param0.playerIndex % var3_int;
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -733,7 +733,7 @@ final class EightBallRules extends GameRules {
         return this.u(4);
     }
 
-    final Sprite b(ShotRecord param0, int param1) {
+    final Sprite targetBallSprite(ShotRecord param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         Sprite stackIn_6_0 = null;
@@ -786,7 +786,7 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean showsTargetBall(int param0) {
         if (param0 <= 113) {
           return true;
         }
@@ -800,7 +800,7 @@ final class EightBallRules extends GameRules {
         return 9;
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean isBallInGroup(int param0, byte param1, int param2) {
         if (param1 <= 122) {
           this.b(-73);
         }
@@ -888,7 +888,7 @@ final class EightBallRules extends GameRules {
         return 1;
     }
 
-    final boolean c(ShotRecord param0, int param1) {
+    final boolean isFirstContactLegal(ShotRecord param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         boolean stackIn_12_0 = false;
@@ -898,7 +898,7 @@ final class EightBallRules extends GameRules {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = this.b(param0.field_n, 30554);
+          var3_int = this.ballGroup(param0.field_n, 30554);
           if (param1 > -33) {
             return true;
           }
@@ -931,7 +931,7 @@ final class EightBallRules extends GameRules {
         return ThemeSelectScreen.field_O | ll.field_f | AccountWelcomePanel.field_R | BitmapTextLayout.field_j;
     }
 
-    final String a(int param0, String[] param1) {
+    final String joinPlayerNames(int param0, String[] param1) {
         int var5 = 0;
         Object stackIn_3_0 = null;
         String stackIn_14_0 = null;
@@ -1116,7 +1116,7 @@ final class EightBallRules extends GameRules {
         return var3Lifetime1;
     }
 
-    final int c(int param0, int param1) {
+    final int teamIndex(int param0, int param1) {
         if (param0 > -36) {
           this.field_f = (int[]) null;
         }

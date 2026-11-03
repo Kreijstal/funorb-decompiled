@@ -188,7 +188,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          var5 = (ho) (MessageScreen.field_H.c((byte) -88));
+          var5 = (ho) (MessageScreen.field_H.last((byte) -88));
           var1 = var5;
           if (var1 == null) {
             return false;

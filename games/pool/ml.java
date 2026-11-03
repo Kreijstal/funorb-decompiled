@@ -198,7 +198,7 @@ final class ml {
     }
 
     final static void a(int param0, oj param1, int param2) {
-        ta.field_i.b((byte) -31, param1);
+        ta.field_i.addFirst((byte) -31, param1);
         if (param0 != 25756) {
           return;
         }

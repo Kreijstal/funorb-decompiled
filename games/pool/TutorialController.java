@@ -137,7 +137,7 @@ final class TutorialController {
     }
 
     final void a(boolean param0) {
-        this.field_k = this.field_d.a(116);
+        this.field_k = this.field_d.size(116);
         if (param0) {
           this.field_b = false;
         }
@@ -397,7 +397,7 @@ final class TutorialController {
               while (var13.length > var14) {
                 var17 = var13[var14];
                 if (var17.inPlay &&
-                  var3 == this.field_a.gameModel.rules.b(var14, 30554)) {
+                  var3 == this.field_a.gameModel.rules.ballGroup(var14, 30554)) {
                   var8 = this.field_a.gameModel.nearestPocketIndex(17897, var14);
                   var18 = this.field_a.gameModel.pockets[var8];
                   var17.positionX = var18.centerX;
@@ -408,17 +408,17 @@ final class TutorialController {
                   if (var5 == null) {
                     var5 = new IntrusiveDeque();
                   }
-                  ((IntrusiveDeque) (var5)).b((byte) -43, new PotEvent(var14, var8));
+                  ((IntrusiveDeque) (var5)).addFirst((byte) -43, new PotEvent(var14, var8));
                 }
                 var14++;
               }
               if (var5 != null) {
                 this.field_a.gameModel.stopAllBalls(-54);
                 var4.endResolution = MarkerSliderPainter.field_j;
-                var4.field_n = ((PotEvent) (((IntrusiveDeque) (var5)).c((byte) -64))).ballIndex;
+                var4.field_n = ((PotEvent) (((IntrusiveDeque) (var5)).last((byte) -64))).ballIndex;
                 var4.pottedBalls = (IntrusiveDeque) (var5);
                 var4.phase = 2;
-                stackIn_27_0 = this.field_a.gameModel.f((byte) 117);
+                stackIn_27_0 = this.field_a.gameModel.beginNextShot((byte) 117);
                 this.field_a.beginTurn((byte) -62);
               }
             }
@@ -439,9 +439,9 @@ final class TutorialController {
             var15.endResolution = i.field_m | MarkerSliderPainter.field_j;
             var15.phase = 2;
             var15.pottedBalls = new IntrusiveDeque();
-            var15.pottedBalls.b((byte) 105, new PotEvent(var5_int, var6));
+            var15.pottedBalls.addFirst((byte) 105, new PotEvent(var5_int, var6));
             var15.field_n = var5_int;
-            this.field_a.gameModel.f((byte) 53);
+            this.field_a.gameModel.beginNextShot((byte) 53);
             this.field_a.beginTurn((byte) -36);
             var16.addBall(var5_int, 69);
             var8_ref_pq.inPlay = false;
@@ -534,7 +534,7 @@ final class TutorialController {
             }
           }
           if (this.currentStep.field_s == 16384 &&
-            param1.groupBefore == this.field_a.gameModel.rules.b(param1.field_n, 30554)) {
+            param1.groupBefore == this.field_a.gameModel.rules.ballGroup(param1.field_n, 30554)) {
             this.b(1, 14, -28186);
             return;
           }
@@ -699,7 +699,7 @@ final class TutorialController {
           var3.field_u = 0;
           var3 = (bk) (var4.previous(param0 - 98));
         }
-        this.a((bk) (this.field_d.c((byte) 109)), 1);
+        this.a((bk) (this.field_d.last((byte) 109)), 1);
         this.g(-94);
         PoolGameModel.field_k.height = null == this.currentStep ? 10 : this.currentStep.c((byte) -112);
         PoolGameModel.field_k.localY = -5 - PoolGameModel.field_k.height + SoftwareRasterizer.height;

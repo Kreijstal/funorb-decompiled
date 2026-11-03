@@ -216,7 +216,7 @@ final class IntKeyLookup {
           var2 = var9.readUnsignedByte(-125);
           var3 = var9.readUnsignedByte(param0 ^ -151);
           if (var2 == 0) {
-            var4_ref_fl = (fl) (cq.field_g.c((byte) -124));
+            var4_ref_fl = (fl) (cq.field_g.last((byte) -124));
             if (var4_ref_fl == null) {
               dn.c(param0 - 79);
               return;
@@ -236,11 +236,11 @@ final class IntKeyLookup {
           }
           if (var2 == 1) {
             var4 = var9.readSignedSmart(param0 - 272);
-            var5 = (oi) (qr.field_a.c((byte) 68));
+            var5 = (oi) (qr.field_a.last((byte) 68));
             while (var5 != null) {
               if (var3 != var5.field_t ||
                 var4 != var5.field_l) {
-                var5 = (oi) (qr.field_a.f((byte) -5));
+                var5 = (oi) (qr.field_a.previous((byte) -5));
                 continue;
               }
               break;

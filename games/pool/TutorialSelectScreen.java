@@ -43,7 +43,7 @@ final class TutorialSelectScreen extends MenuScreen {
             TutorialSelectScreen.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, 107);
           }
           while (true) {
-            var3 = param1.a(param0, false);
+            var3 = param1.exitFullscreen(param0, false);
             while (var3.field_f == 0) {
               SoundCache.a(-108, 10L);
             }

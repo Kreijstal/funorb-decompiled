@@ -113,7 +113,7 @@ final class wp implements si {
             AccountContentDialog.field_sb.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{LocalGameSetupScreen.field_J}, -1, UiWidget.youAreOnXServer);
             NameEntryPopup.field_Mb.scrollPane.viewport.text = null;
             var6_ref = null;
-            var7 = (SocialListEntry) (var4.c((byte) 60));
+            var7 = (SocialListEntry) (var4.last((byte) 60));
             while (null != var7) {
               var8 = 0;
               if (var7.children == null) {
@@ -216,7 +216,7 @@ final class wp implements si {
                   }
                 }
               }
-              var7 = (SocialListEntry) (var4.f((byte) -5));
+              var7 = (SocialListEntry) (var4.previous((byte) -5));
             }
             if (0 != NameEntryPopup.field_Mb.leftFooter.pressedButton) {
               sm.field_C = new NameEntryPopup(NameEntryPopup.field_Mb.leftFooter.screenX, NameEntryPopup.field_Mb.leftFooter.screenY, NameEntryPopup.field_Mb.leftFooter.width, NameEntryPopup.field_Mb.leftFooter.height, cq.enterfriendAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
@@ -255,7 +255,7 @@ final class wp implements si {
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          var4 = (ea) (rc.field_c.c((byte) -82));
+          var4 = (ea) (rc.field_c.last((byte) -82));
           if (param2 <= 27) {
             field_g = (MouseHandler) null;
           }
@@ -266,7 +266,7 @@ final class wp implements si {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
-              var4 = (ea) (rc.field_c.f((byte) -5));
+              var4 = (ea) (rc.field_c.previous((byte) -5));
               continue;
             }
             break;
@@ -275,7 +275,7 @@ final class wp implements si {
             var4 = new ea();
             var4.field_o = param1;
             var4.field_s = param0;
-            rc.field_c.b((byte) -114, var4);
+            rc.field_c.addFirst((byte) -114, var4);
             wb.a(var4, param3, (byte) -96);
           }
           stackIn_16_0 = var4;

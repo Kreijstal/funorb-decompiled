@@ -175,7 +175,7 @@ final class IntrusiveDequeCursor {
 
     final static void a(boolean param0, i param1, int param2) {
         try {
-          ue.field_b.b((byte) 85, param1);
+          ue.field_b.addFirst((byte) 85, param1);
           if (param0) {
             field_h = -20;
           }

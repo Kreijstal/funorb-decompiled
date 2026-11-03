@@ -62,7 +62,7 @@ final class KillerRules extends GameRules {
         }
         if (param1 != 8640) {
           ShotRecord var4 = (ShotRecord) null;
-          this.b((ShotRecord) null, -71);
+          this.targetBallSprite((ShotRecord) null, -71);
         }
     }
 
@@ -88,7 +88,7 @@ final class KillerRules extends GameRules {
           throw new IllegalStateException("Shot not finished yet, foo!");
         }
         var4 = ll.field_f;
-        if (this.field_d.d((byte) 125)) {
+        if (this.field_d.isCueBallPotted((byte) 125)) {
           var4 = var4 | (AccountWelcomePanel.field_R | um.field_c);
           var10.field_t = true;
           var10.field_w = (byte)(var10.field_w - 1);
@@ -150,7 +150,7 @@ final class KillerRules extends GameRules {
             var4 = var4 | (MenuScreen.field_F | AccountWelcomePanel.field_R);
           }
         } else {
-          if (this.a((byte) 36, var10.playerIndex)) {
+          if (this.isPlayerActive((byte) 36, var10.playerIndex)) {
             var4 = var4 | ag.field_e;
           } else {
             var4 = var4 | Quaternion.field_e;
@@ -285,7 +285,7 @@ final class KillerRules extends GameRules {
           return -24;
         }
         while (var3 < this.field_e.length) {
-          if (this.a((byte) 115, var3)) {
+          if (this.isPlayerActive((byte) 115, var3)) {
             var2++;
           }
           var3++;
@@ -293,7 +293,7 @@ final class KillerRules extends GameRules {
         return var2;
     }
 
-    final boolean f(int param0) {
+    final boolean showsTargetBall(int param0) {
         if (param0 <= 113) {
           this.h(-114);
           return false;
@@ -306,7 +306,7 @@ final class KillerRules extends GameRules {
         return 1;
     }
 
-    final Sprite b(ShotRecord param0, int param1) {
+    final Sprite targetBallSprite(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         ShotRecord var4 = null;
         Object stackIn_3_0 = null;
@@ -319,7 +319,7 @@ final class KillerRules extends GameRules {
             return null;
           }
           var4 = (ShotRecord) null;
-          this.a(40, (byte) -54, (ShotRecord) null);
+          this.isPotLegal(40, (byte) -54, (ShotRecord) null);
           stackIn_3_0 = null;
           return (Sprite) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -387,7 +387,7 @@ final class KillerRules extends GameRules {
         }
         this.f(var6.playerIndex, 8640);
         if (this.e((byte) -125) <= 1) {
-          if (this.a((byte) -99, var6.playerIndex)) {
+          if (this.isPlayerActive((byte) -99, var6.playerIndex)) {
             var3Lifetime1 = var3Lifetime1 | ag.field_e;
           } else {
             var3Lifetime1 = var3Lifetime1 | Quaternion.field_e;
@@ -396,19 +396,19 @@ final class KillerRules extends GameRules {
         return var3Lifetime1;
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean isBallInGroup(int param0, byte param1, int param2) {
         if (param1 < 122) {
           field_f = -9;
         }
         return 0 != param2 ? true : false;
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean isPlayerActive(byte param0, int param1) {
         int var3 = -125 % ((-16 - param0) / 46);
         return this.field_e[param1] > 0 ? true : false;
     }
 
-    final void c(int param0) {
+    final void updateGroupLabels(int param0) {
         if (param0 >= -25) {
           field_h = 78;
         }
@@ -458,7 +458,7 @@ final class KillerRules extends GameRules {
         return 1;
     }
 
-    final byte b(int param0, int param1) {
+    final byte ballGroup(int param0, int param1) {
         if (param1 != 30554) {
           ShotRecord var4 = (ShotRecord) null;
           this.a((ShotRecord) null, 32);
@@ -504,7 +504,7 @@ final class KillerRules extends GameRules {
         statusSpectate = null;
     }
 
-    final boolean a(int param0, byte param1, ShotRecord param2) {
+    final boolean isPotLegal(int param0, byte param1, ShotRecord param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -529,7 +529,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final boolean c(ShotRecord param0, int param1) {
+    final boolean isFirstContactLegal(ShotRecord param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

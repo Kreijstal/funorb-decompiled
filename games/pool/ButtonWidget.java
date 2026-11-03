@@ -366,7 +366,7 @@ class ButtonWidget extends UiWidget {
                   var16 = 0;
                 }
                 var17 = DualLinkDeque.field_f.content.children;
-                var18_ref = (LobbyPlayer) (var17.c((byte) 96));
+                var18_ref = (LobbyPlayer) (var17.last((byte) 96));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
@@ -409,7 +409,7 @@ class ButtonWidget extends UiWidget {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var18_ref = (LobbyPlayer) (var17.f((byte) -5));
+                      var18_ref = (LobbyPlayer) (var17.previous((byte) -5));
                       continue;
                     }
                   }
