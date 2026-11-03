@@ -121,10 +121,10 @@ final class ModalStack extends SingleChildContainer {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        ChatLine var17 = null;
+        PlayerContextMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        ChatLine var17Lifetime1;
+        PlayerContextMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = Kickabout.field_G;
         try {

@@ -796,7 +796,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.action == 12) &&
           (this.field_s ||
           !this.stats.a((byte) 44, this.member))) {
-          return (ChatLine.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
+          return (PlayerContextMenu.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
         }
         var2 = -68 / ((param0 + 17) / 51);
         if (this.directionX < 0) {

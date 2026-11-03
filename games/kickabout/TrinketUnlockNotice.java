@@ -13,7 +13,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
 
     public final boolean a(byte param0) {
         if (param0 < 63) {
-          TrinketUnlockNotice.b((byte) 14);
+          TrinketUnlockNotice.releaseStatics((byte) 14);
           return false;
         }
         return false;
@@ -42,7 +42,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
         return false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 == 16) {
           field_d = null;
@@ -50,7 +50,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
           field_b = null;
           return;
         }
-        TrinketUnlockNotice.b((byte) -17);
+        TrinketUnlockNotice.releaseStatics((byte) -17);
         field_d = null;
         field_a = (byte[][]) null;
         field_b = null;

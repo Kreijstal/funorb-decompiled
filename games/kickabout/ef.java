@@ -9,7 +9,7 @@ final class ef extends DualLinkNode {
     static String field_s;
     AnimationFrame[] field_q;
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 35 % ((-83 - param0) / 36);
         field_p = null;
         field_s = null;

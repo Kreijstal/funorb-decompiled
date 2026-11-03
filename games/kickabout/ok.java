@@ -36,7 +36,7 @@ final class ok {
           var13 = var15;
           var4 = var13;
           if (param0 >= -8) {
-            ok.a(-88);
+            ok.releaseStatics(-88);
           }
           var5 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 16777200, param2) + 1;
           var5 = 8355711 & var5 >> 1;
@@ -197,7 +197,7 @@ final class ok {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         if (param0 < 125) {

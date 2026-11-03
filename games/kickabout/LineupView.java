@@ -270,7 +270,7 @@ final class LineupView extends MatchPhaseView {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_s = (IndexedSprite[][]) null;
         field_n = null;
@@ -297,15 +297,15 @@ final class LineupView extends MatchPhaseView {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        ChatLine var5 = null;
+        PlayerContextMenu var5 = null;
         String var6 = null;
-        ChatLine var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        ChatLine var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        ChatLine var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        ChatLine var13 = null;
+        PlayerContextMenu var13 = null;
         try {
           stackIn_2_0 = param0.field_s;
           stackIn_2_1 = false;
@@ -323,7 +323,7 @@ final class LineupView extends MatchPhaseView {
           BytePlusOneCommand.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_c == 0 &&
             !CachedArchiveSource.c((byte) -121) &&
-            null == ChatLine.field_i &&
+            null == PlayerContextMenu.field_i &&
             ArchiveSource.field_b == null) {
             if (!WriteIntegersCommand.field_C) {
               var5 = TextButton.field_v;
@@ -336,8 +336,8 @@ final class LineupView extends MatchPhaseView {
           }
           if (param0.field_c == 1 &&
             !CachedArchiveSource.c((byte) -121) &&
-            ChatLine.field_i != null &&
-            param0.field_n == ChatLine.field_i.h((byte) -105)) {
+            PlayerContextMenu.field_i != null &&
+            param0.field_n == PlayerContextMenu.field_i.h((byte) -105)) {
             if (!WriteIntegersCommand.field_C) {
               var9 = TextButton.field_v;
               var10 = LoginDialog.field_db;
@@ -347,10 +347,10 @@ final class LineupView extends MatchPhaseView {
             var12 = CachedTextLayout.field_f;
             var11.field_j.addItem(0, 20, var12);
           }
-          TextButton.field_v.d(1);
+          TextButton.field_v.buildMenuItems(1);
           TextButton.field_v.a(false, 0);
           TextButton.field_v.a(param0.field_c, -118, param0.field_r);
-          TextButton.field_v.b(-120);
+          TextButton.field_v.showMenu(-120);
           TextButton.field_v.a(param0, (byte) 11);
           var13 = TextButton.field_v;
           if (param1 != -60) {

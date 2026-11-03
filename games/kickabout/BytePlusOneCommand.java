@@ -29,7 +29,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
             BytePlusOneCommand.a(65, -77, 21);
           }
           ig.field_f = param2;
-          TextButton.field_v = new ChatLine(param0, param6, param4, param7, param8, param3, param5);
+          TextButton.field_v = new PlayerContextMenu(param0, param6, param4, param7, param8, param3, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,7 +7,7 @@ final class aj {
     static int field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -9097) {
           return;

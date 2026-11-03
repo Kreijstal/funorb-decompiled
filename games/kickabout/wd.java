@@ -15,7 +15,7 @@ final class wd extends IntrusiveNode {
     int field_h;
     boolean field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_l = null;
         field_n = null;

@@ -42,7 +42,7 @@ final class IntKeyLookup {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != 94) {
           IntKeyLookup.a((byte) -22, 76);

@@ -10,7 +10,7 @@ final class ca {
     static String field_e;
     static ArgbSprite[] field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -19,7 +19,7 @@ final class ca {
         field_a = null;
         field_f = null;
         if (param0 != -72) {
-          ca.a((byte) -95);
+          ca.releaseStatics((byte) -95);
           return;
         }
     }

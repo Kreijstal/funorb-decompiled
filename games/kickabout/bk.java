@@ -11,7 +11,7 @@ final class bk {
     static int field_e;
     static String field_h;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_g = null;
         field_c = null;

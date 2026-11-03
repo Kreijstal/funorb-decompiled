@@ -186,14 +186,14 @@ final class wq {
         return RegistrationRequestDialog.a(17, so.a(71));
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         field_a = null;
         field_f = null;
         field_b = null;
         if (param0 >= -102) {
-          wq.a(-76);
+          wq.releaseStatics(-76);
         }
     }
 

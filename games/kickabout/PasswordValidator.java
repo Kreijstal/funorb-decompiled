@@ -171,7 +171,7 @@ final class PasswordValidator extends TextFieldValidator {
           TeamManagementScreen.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
           SoftwareRasterizer.b();
-          var8Lifetime1 = ChatLine.b(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
+          var8Lifetime1 = PlayerContextMenu.b(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
           }

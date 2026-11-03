@@ -109,7 +109,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                     PacketBuffer.g(4);
                   }
                 } else {
-                  ChatLine.a(false);
+                  PlayerContextMenu.a(false);
                 }
               }
             } else {

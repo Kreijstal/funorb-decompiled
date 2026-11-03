@@ -165,7 +165,7 @@ final class CheatCodeListener implements OverlayLayer {
         return;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_g = null;
         field_j = null;

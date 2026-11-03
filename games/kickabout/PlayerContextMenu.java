@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ChatLine {
+final class PlayerContextMenu {
     int field_c;
     ContextMenu field_j;
     private int[] field_h;
@@ -18,7 +18,7 @@ final class ChatLine {
     private String field_a;
     static Sprite field_m;
 
-    private final boolean c(int param0, int param1, int param2) {
+    private final boolean openFriendPrompt(int param0, int param1, int param2) {
         if (param2 == 17) {
           ck.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
           return true;
@@ -63,13 +63,13 @@ final class ChatLine {
 
     final static int a(boolean param0, int param1, int param2) {
         if (param0) {
-          return en.b(ChatLine.b(param1, param2, (byte) 2), -25147);
+          return en.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
         }
         field_e = -64;
-        return en.b(ChatLine.b(param1, param2, (byte) 2), -25147);
+        return en.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
     }
 
-    private final String a(int param0) {
+    private final String getDisplayName(int param0) {
         String var2 = null;
         if (param0 != -26719) {
           return (String) null;
@@ -82,10 +82,10 @@ final class ChatLine {
         return var2;
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void hideMenu(boolean param0, boolean param1) {
         this.field_j.a(47, param0);
         if (param1) {
-          this.b(97);
+          this.showMenu(97);
         }
     }
 
@@ -125,7 +125,7 @@ final class ChatLine {
         }
         var7 = PasswordValidator.a(this.field_b, false);
         var4 = nk.a(param1 ^ 31253, this.field_b);
-        var5 = this.a(-26719);
+        var5 = this.getDisplayName(-26719);
         if (var4 != null) {
           if (!field_i.field_Cb) {
             this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_e, new String[]{var5}));
@@ -166,7 +166,7 @@ final class ChatLine {
         c.a(31, param0, param2, 0);
     }
 
-    final void b(int param0) {
+    final void showMenu(int param0) {
         String var3 = null;
         if (null != this.field_k) {
           if (~AnimationPlayer.field_c == ~this.field_b) {
@@ -176,7 +176,7 @@ final class ChatLine {
             }
             return;
           }
-          var3 = this.a(-26719);
+          var3 = this.getDisplayName(-26719);
           String var2 = var3;
           this.field_j.addItem(0, 17, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, vp.field_m, new String[]{var3}));
         }
@@ -186,7 +186,7 @@ final class ChatLine {
         this.field_l = -59;
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean handlePrimaryAction(int param0, int param1, int param2) {
         int var4;
         int var5;
         var5 = Kickabout.field_G;
@@ -246,7 +246,7 @@ final class ChatLine {
             ResizableModalPanel.field_J = param4;
             if (param0 <= 119) {
               var16 = (String) null;
-              ChatLine.a(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
+              PlayerContextMenu.a(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
             }
             it.field_n = param5;
             il.field_g = param6;
@@ -304,7 +304,7 @@ final class ChatLine {
         return false;
     }
 
-    private final boolean a(int param0, int param1, byte param2) {
+    private final boolean handleSocialAction(int param0, int param1, byte param2) {
         Object var4;
         String var4_ref;
         String var5;
@@ -362,7 +362,7 @@ final class ChatLine {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 <= 103) {
           return;
@@ -371,7 +371,7 @@ final class ChatLine {
         field_i = null;
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean handleSecondaryAction(int param0, int param1, int param2) {
         int var5;
         var5 = Kickabout.field_G;
         if (0 != param0) {
@@ -409,7 +409,7 @@ final class ChatLine {
         return true;
     }
 
-    final void d(int param0) {
+    final void buildMenuItems(int param0) {
         String discarded$14 = null;
         String discarded$13 = null;
         String discarded$0 = null;
@@ -433,7 +433,7 @@ final class ChatLine {
           if (param0 == 1) {
             return;
           }
-          discarded$14 = this.a(126);
+          discarded$14 = this.getDisplayName(126);
           return;
         }
         var5 = RankingsScreen.b(this.field_c, (byte) -52);
@@ -441,7 +441,7 @@ final class ChatLine {
           if (param0 == 1) {
             return;
           }
-          discarded$13 = this.a(126);
+          discarded$13 = this.getDisplayName(126);
           return;
         }
         var3 = var5.field_ec;
@@ -451,7 +451,7 @@ final class ChatLine {
           if (param0 == 1) {
             return;
           }
-          discarded$0 = this.a(126);
+          discarded$0 = this.getDisplayName(126);
           return;
         }
         if (var5.field_Xb) {
@@ -460,14 +460,14 @@ final class ChatLine {
             if (param0 == 1) {
               return;
             }
-            discarded$11 = this.a(126);
+            discarded$11 = this.getDisplayName(126);
             return;
           }
           this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
-          discarded$12 = this.a(126);
+          discarded$12 = this.getDisplayName(126);
           return;
         }
         if (var5.field_Tb) {
@@ -475,14 +475,14 @@ final class ChatLine {
             if (param0 == 1) {
               return;
             }
-            discarded$9 = this.a(126);
+            discarded$9 = this.getDisplayName(126);
             return;
           }
           this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
-          discarded$10 = this.a(126);
+          discarded$10 = this.getDisplayName(126);
           return;
         }
         if (!var5.field_ic) {
@@ -490,14 +490,14 @@ final class ChatLine {
             if (param0 == 1) {
               return;
             }
-            discarded$7 = this.a(126);
+            discarded$7 = this.getDisplayName(126);
             return;
           }
           this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
-          discarded$8 = this.a(126);
+          discarded$8 = this.getDisplayName(126);
           return;
         }
         if (!var5.field_Cb) {
@@ -506,14 +506,14 @@ final class ChatLine {
             if (param0 == 1) {
               return;
             }
-            discarded$1 = this.a(126);
+            discarded$1 = this.getDisplayName(126);
             return;
           }
           this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
-          discarded$2 = this.a(126);
+          discarded$2 = this.getDisplayName(126);
           return;
         }
         if (!var5.field_Xb) {
@@ -521,14 +521,14 @@ final class ChatLine {
             if (param0 == 1) {
               return;
             }
-            discarded$5 = this.a(126);
+            discarded$5 = this.getDisplayName(126);
             return;
           }
           this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
-          discarded$6 = this.a(126);
+          discarded$6 = this.getDisplayName(126);
           return;
         }
         this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
@@ -536,21 +536,21 @@ final class ChatLine {
           if (param0 == 1) {
             return;
           }
-          discarded$3 = this.a(126);
+          discarded$3 = this.getDisplayName(126);
           return;
         }
         this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
         if (param0 == 1) {
           return;
         }
-        discarded$4 = this.a(126);
+        discarded$4 = this.getDisplayName(126);
         return;
     }
 
     final static void a(boolean param0) {
         IndexedSpriteState.b(38, 17);
         if (param0) {
-          ChatLine.c(-102);
+          PlayerContextMenu.releaseStatics(-102);
         }
     }
 
@@ -572,7 +572,7 @@ final class ChatLine {
               return;
             }
             if (ts.field_d == 2) {
-              var5 = this.a(-26719);
+              var5 = this.getDisplayName(-26719);
               var6 = tr.a(this.field_k, (byte) 40);
               var7 = DiskCacheRequest.a(0, this.field_k) ? 1 : 0;
               if (var6 == null &&
@@ -655,7 +655,7 @@ final class ChatLine {
             return;
           }
           var4 = (String) null;
-          ChatLine.a(-113, 85, false, 126, -61, false, -59, 112, (PlatformTaskDispatcher) null, -96, 71L, 73, -56, (String) null);
+          PlayerContextMenu.a(-113, 85, false, 126, -61, false, -59, 112, (PlatformTaskDispatcher) null, -96, 71L, 73, -56, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -676,14 +676,14 @@ final class ChatLine {
         if (param1 == var6) {
           return false;
         }
-        boolean discarded$0 = this.b(var6, param3, 2);
-        boolean discarded$1 = this.a(var6, param4, (byte) -100);
-        boolean discarded$2 = this.a(var6, param1 + 113, param4);
-        boolean discarded$3 = this.c(param1 - 8983, param2, var6);
+        boolean discarded$0 = this.handleSecondaryAction(var6, param3, 2);
+        boolean discarded$1 = this.handleSocialAction(var6, param4, (byte) -100);
+        boolean discarded$2 = this.handlePrimaryAction(var6, param1 + 113, param4);
+        boolean discarded$3 = this.openFriendPrompt(param1 - 8983, param2, var6);
         return true;
     }
 
-    ChatLine(UiLayoutNode param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    PlayerContextMenu(UiLayoutNode param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new ContextMenu(su.field_b);
           this.field_k = param2;

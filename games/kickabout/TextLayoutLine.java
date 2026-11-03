@@ -29,7 +29,7 @@ final class TextLayoutLine {
         if (param0 == -6779) {
           return var2;
         }
-        TextLayoutLine.b((byte) -5);
+        TextLayoutLine.releaseStatics((byte) -5);
         return var2;
     }
 
@@ -71,7 +71,7 @@ final class TextLayoutLine {
         return param0 & param1;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 >= -25) {

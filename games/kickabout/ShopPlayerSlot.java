@@ -89,7 +89,7 @@ final class ShopPlayerSlot extends im {
         if (SoftwareRasterizer.field_h >= this.field_T &&
           SoftwareRasterizer.field_e <= this.field_T + this.field_mb) {
           if (this.field_Lb) {
-            ChatLine.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
+            PlayerContextMenu.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
             var3 = ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b);
             ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
             c.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);

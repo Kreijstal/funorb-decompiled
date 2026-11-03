@@ -244,7 +244,7 @@ final class fv implements OverlayLayer {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 < 66) {

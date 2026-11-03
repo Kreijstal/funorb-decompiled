@@ -121,7 +121,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         vv.field_r = this.field_p;
         TextFieldNode.b(vv.field_r, 31900);
-        ChatLine.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, oo.field_c, vv.field_r, this.field_v, this.field_u, 5000, this.field_z);
+        PlayerContextMenu.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, oo.field_c, vv.field_r, this.field_v, this.field_u, 5000, this.field_z);
         AppScreen.setServerConnectionParameters(this.field_z, param1, oo.field_c, vv.field_r, this.field_u, this.field_x, this.field_B, this.field_s, false);
         CipherPacketBuffer.o(255);
         ag.field_f = TutorialChoiceDialog.g((byte) 3);
@@ -499,7 +499,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           so.a(bw.field_b, true, gs.field_c, PlayerStats.field_k) &&
           LoggedGoal.a(-2, PlayerStats.field_k)) {
           IntValueNode.a(115);
-          CachedArchiveSource.c(param0 + 1);
+          CachedArchiveSource.releaseStatics(param0 + 1);
           ts.field_b = CheckboxLabelWidget.field_yb;
           TutorialChoiceDialog.field_H = false;
           MusicPatchNode.a(PlayerStats.field_k, GrowableIntList.field_c, bw.field_b, gs.field_c, -120);
@@ -741,7 +741,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
             if (rf.field_c[0][2].field_Q) {
               if (!ScrollPane.a(77)) {
-                UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubState.field_v, new String[]{ChatLine.field_i.field_ec});
+                UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubState.field_v, new String[]{PlayerContextMenu.field_i.field_ec});
               } else {
                 UrlRequest.field_e = DateOfBirthPanel.field_B;
               }

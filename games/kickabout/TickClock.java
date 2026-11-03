@@ -15,7 +15,7 @@ abstract class TickClock {
     static String field_i;
     static String field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_b = null;
         int var1 = -9 % ((-32 - param0) / 58);
@@ -36,7 +36,7 @@ abstract class TickClock {
         ContentTransitionDialog.field_Y = null;
         h.field_e = null;
         if (param0 >= -82) {
-          TickClock.a((byte) 24);
+          TickClock.releaseStatics((byte) 24);
           if (null != jl.field_f) {
             ei.field_b = jl.field_f;
             WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
@@ -96,7 +96,7 @@ abstract class TickClock {
 
     final static double a(double param0, double param1, boolean param2) {
         if (param2) {
-          TickClock.a((byte) -58);
+          TickClock.releaseStatics((byte) -58);
           return Math.sqrt(param0 * (1.7 * param1));
         }
         return Math.sqrt(param0 * (1.7 * param1));

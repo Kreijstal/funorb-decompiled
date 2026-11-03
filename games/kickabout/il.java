@@ -154,7 +154,7 @@ final class il {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = null;
         int var1 = 89 / ((param0 - 12) / 60);

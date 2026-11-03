@@ -101,7 +101,7 @@ final class DualLinkDequeIterator implements Iterator {
         return this.field_a != this.field_c.field_d;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 >= -19) {
           field_b = (String) null;

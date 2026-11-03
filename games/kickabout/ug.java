@@ -9,7 +9,7 @@ final class ug {
     static wd field_e;
     static boolean[] field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_f = null;
         field_d = null;
@@ -71,8 +71,8 @@ final class ug {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ChatLine var16 = null;
-        ChatLine var17 = null;
+        PlayerContextMenu var16 = null;
+        PlayerContextMenu var17 = null;
         var15 = Kickabout.field_G;
         try {
           stackIn_3_0 = TournamentChampionDialog.field_F.field_Cb;

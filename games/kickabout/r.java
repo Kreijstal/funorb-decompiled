@@ -44,7 +44,7 @@ final class r {
         FormationView.b((byte) -116);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;

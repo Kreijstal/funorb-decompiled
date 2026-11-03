@@ -57,12 +57,12 @@ final class MySquadScreen extends TeamManagementScreen {
     }
 
     final void refreshSelectedPlayer(byte param0) {
-        this.field_L.a(param0 - 36);
+        this.field_L.update(param0 - 36);
         if (param0 != 84) {
           this.field_R = (UiLayoutNode) null;
         }
         if (this.field_L.field_Fb != -1 &&
-          this.field_L.j((byte) 21).field_Eb.isEmpty(-2)) {
+          this.field_L.getSelectedSlot((byte) 21).field_Eb.isEmpty(-2)) {
           this.field_L.field_Fb = -1;
         }
         this.rebuildPlayerPanel(-111);
@@ -75,7 +75,7 @@ final class MySquadScreen extends TeamManagementScreen {
         return ((int)((double)InstrumentNoteMask.field_i * (-UiLayoutNode.field_K + (double)param1)) >> 8) + 320;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_O = null;
         field_F = null;
         field_M = null;
@@ -101,15 +101,15 @@ final class MySquadScreen extends TeamManagementScreen {
         var8 = Kickabout.field_G;
         super.updateScreen((byte) -55, param1);
         this.field_R.field_s = this.slideOffsetX;
-        this.field_L.a(48);
+        this.field_L.update(48);
         this.field_R.b(0, param1);
         if (this.field_S != this.field_L.field_Fb) {
           this.field_S = this.field_L.field_Fb;
           this.rebuildPlayerPanel(-49);
         }
-        var3 = this.field_L.j((byte) 21);
+        var3 = this.field_L.getSelectedSlot((byte) 21);
         if (var3 != null) {
-          var4_ref_up = this.field_L.j((byte) 21).field_Eb;
+          var4_ref_up = this.field_L.getSelectedSlot((byte) 21).field_Eb;
           var5_ref_pu__ = this.field_T;
           for (var6_int = 0; var6_int < var5_ref_pu__.length; var6_int++) {
             var7 = var5_ref_pu__[var6_int];
@@ -190,12 +190,12 @@ final class MySquadScreen extends TeamManagementScreen {
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
         un.field_d.a(oc.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
         this.field_L.k((byte) -109);
-        var4 = this.field_L.j((byte) 21);
+        var4 = this.field_L.getSelectedSlot((byte) 21);
         var5 = IsSixCommand.field_C;
         if (var4 == null) {
           var5.a(ContextMenu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
         } else {
-          var26 = this.field_L.j((byte) 21).field_Eb;
+          var26 = this.field_L.getSelectedSlot((byte) 21).field_Eb;
           stackIn_6_0 = var26;
           stackIn_6_1 = 0;
           stackIn_6_2 = var26;
@@ -235,7 +235,7 @@ final class MySquadScreen extends TeamManagementScreen {
             var16 = 36 + this.field_P.field_T;
             eo.a(var15_int, var16, var26.experience, 3, true, 0);
             if (!this.field_Q.isLinked((byte) -113)) {
-              if (!this.field_L.j((byte) 21).field_Gb) {
+              if (!this.field_L.getSelectedSlot((byte) 21).field_Gb) {
                 stackIn_22_0 = qr.field_a;
               } else {
                 stackIn_22_0 = TournamentChampionDialog.field_H;
@@ -313,7 +313,7 @@ final class MySquadScreen extends TeamManagementScreen {
         if (var4 != null) {
           if (TextFieldValidator.f(-1)) {
             stackIn_61_0 = -1;
-            stackIn_61_1 = ~this.field_L.j((byte) 21).field_Eb.trinketIds.length;
+            stackIn_61_1 = ~this.field_L.getSelectedSlot((byte) 21).field_Eb.trinketIds.length;
             if (stackIn_61_0 > stackIn_61_1) {
               eo.darkenRectangle(this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb);
             }
@@ -344,7 +344,7 @@ final class MySquadScreen extends TeamManagementScreen {
         int var12;
         SquadSlotWidget var13;
         var12 = Kickabout.field_G;
-        var13 = this.field_L.j((byte) 21);
+        var13 = this.field_L.getSelectedSlot((byte) 21);
         this.field_Q.c((byte) -109);
         this.field_X.field_jb = new IntrusiveDeque();
         var3 = -36 / ((param0 - 11) / 33);

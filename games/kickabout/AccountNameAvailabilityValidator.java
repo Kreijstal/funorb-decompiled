@@ -172,7 +172,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, LobbyPlayerRow param5, ScrollPane param6) {
-        ChatLine var12 = null;
+        PlayerContextMenu var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -184,7 +184,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           BytePlusOneCommand.a(param5, false, param6, -1, param5.field_Rb, (int[]) null, param5.field_Ab, param5.field_Nb, -1);
           TextButton.field_v.a(true, 0);
           TextButton.field_v.a(0, -116, (int[]) null);
-          TextButton.field_v.b(-80);
+          TextButton.field_v.showMenu(-80);
           var12 = TextButton.field_v;
           var8 = param1;
           var9 = param0;

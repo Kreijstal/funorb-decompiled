@@ -85,7 +85,7 @@ final class er extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         if (param0 != -94) {
           er.a((byte) -85, false);

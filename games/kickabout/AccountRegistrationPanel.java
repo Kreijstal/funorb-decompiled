@@ -77,7 +77,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             if (param0) {
               stackIn_6_2 = ContextMenu.field_zb;
             } else {
-              stackIn_6_2 = ChatLine.field_m;
+              stackIn_6_2 = PlayerContextMenu.field_m;
             }
             var14 = AnimationClip.a(stackIn_5_0, stackIn_5_1, stackIn_6_2);
             stackIn_8_0 = param4;

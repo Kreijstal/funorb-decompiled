@@ -16,7 +16,7 @@ final class LoggedPossession {
         var2 = Kickabout.field_G;
         et.field_d.field_B = NanoTickClock.field_t;
         if (param0) {
-          LoggedPossession.a(-10);
+          LoggedPossession.releaseStatics(-10);
         }
         boolean decompiledFrameRemainder0 = true;
         et.field_d.field_x = wk.field_g;
@@ -173,7 +173,7 @@ final class LoggedPossession {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 320) {
           LoggedPossession.a(false);
         }

@@ -423,7 +423,7 @@ final class NamedValueContainer {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < -12) {
           field_b = null;
           field_c = null;

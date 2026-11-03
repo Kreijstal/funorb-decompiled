@@ -11,7 +11,7 @@ final class GzipDecoder {
     static String field_c;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         if (param0 <= 112) {
@@ -45,7 +45,7 @@ final class GzipDecoder {
               try {
                 this.field_a.setInput(param1.field_f, 10 + param1.field_n, param1.field_f.length + (-10 + (-param1.field_n - 8)));
                 if (param0 != -4019) {
-                  GzipDecoder.a(51);
+                  GzipDecoder.releaseStatics(51);
                 }
                 this.field_a.inflate(param2);
               } catch (java.lang.Exception decompiledCaughtParameter0) {

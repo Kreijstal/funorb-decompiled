@@ -123,7 +123,7 @@ final class LoginMethod {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 < 111) {
           LoginMethod.a(-36, -71, -68, 100, 65);
@@ -156,7 +156,7 @@ final class LoginMethod {
           var2_int = param0.field_V.pixelX(true);
           var3 = param0.field_V.pixelY(879306160);
           if (param1 >= -39) {
-            LoginMethod.a(127);
+            LoginMethod.releaseStatics(127);
           }
           var4 = var2_int - 448;
           var5 = -672 + var3;
@@ -181,7 +181,7 @@ final class LoginMethod {
         SoftwareRasterizer.d(param1, param1, param1 - param0, 0);
         TeamManagementScreen.e(120);
         if (!param2) {
-          LoginMethod.a(8);
+          LoginMethod.releaseStatics(8);
         }
         return var5;
     }

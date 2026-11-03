@@ -42,7 +42,7 @@ final class ih {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 66049) {
           return;

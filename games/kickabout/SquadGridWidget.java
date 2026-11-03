@@ -33,7 +33,7 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    final void a(int param0) {
+    final void update(int param0) {
         int stackIn_48_0 = 0;
         int stackIn_57_0 = 0;
         SquadSlotWidget stackIn_77_0 = null;
@@ -62,7 +62,7 @@ final class SquadGridWidget extends UiLayoutNode {
           this.field_zb = this.field_zb - 1;
         }
         if (param0 != 48) {
-          this.a(-10);
+          this.update(-10);
         }
         for (var2 = 0; var2 < 9; var2++) {
           var3_ref_kq = this.field_Eb[var2];
@@ -112,8 +112,8 @@ final class SquadGridWidget extends UiLayoutNode {
               }
             }
           } else {
-            var5 = this.a((byte) -53, var2);
-            var6 = this.b(var2, -96);
+            var5 = this.slotX((byte) -53, var2);
+            var6 = this.slotY(var2, -96);
             if (var3_ref_kq.field_s != var5) {
               var7 = -var3_ref_kq.field_s + (3 * var3_ref_kq.field_s + var5 >> 2);
               if (var7 == 0) {
@@ -167,7 +167,7 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    final static void a(byte param0, CipherPacketBuffer param1, boolean param2) {
+    final static void readListingRows(byte param0, CipherPacketBuffer param1, boolean param2) {
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -202,7 +202,7 @@ final class SquadGridWidget extends UiLayoutNode {
           LineupView.field_y.addAll(param0 ^ -107, var7, nj.monotonicMillis(param0 + 186));
           if (!param2 &&
             var6 != 0) {
-            ChatLine.field_f = false;
+            PlayerContextMenu.field_f = false;
             return;
           }
           AnimationSkeleton.field_k = var5;
@@ -263,7 +263,7 @@ final class SquadGridWidget extends UiLayoutNode {
             }
           }
           SectorCacheStore.a(94);
-          ChatLine.field_f = false;
+          PlayerContextMenu.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -279,14 +279,14 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    private final int a(byte param0, int param1) {
+    private final int slotX(byte param0, int param1) {
         if (param0 != -53) {
           return 81;
         }
         return 52 * (param1 % 3);
     }
 
-    final void c(boolean param0) {
+    final void sendSquadOrder(boolean param0) {
         int var2;
         if (!PlayArea.a(100) &&
           null != this.field_Bb) {
@@ -303,14 +303,14 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    final SquadSlotWidget j(byte param0) {
+    final SquadSlotWidget getSelectedSlot(byte param0) {
         if (param0 != 21) {
           return (SquadSlotWidget) null;
         }
         return this.field_Fb == -1 ? null : this.field_Eb[this.field_Fb];
     }
 
-    private final int b(int param0, int param1) {
+    private final int slotY(int param0, int param1) {
         int var3 = -49 / ((-53 - param1) / 38);
         return 75 * (param0 / 3);
     }
@@ -388,7 +388,7 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Db = null;
         field_Ab = null;
         field_Cb = null;
@@ -442,7 +442,7 @@ final class SquadGridWidget extends UiLayoutNode {
           this.field_mb = 225;
           for (var2_int = 0; var2_int < 9; var2_int++) {
             this.field_Eb[var2_int] = new SquadSlotWidget();
-            this.field_Eb[var2_int].a(true, 52, this.a((byte) -53, var2_int), this.b(var2_int, -96), 75);
+            this.field_Eb[var2_int].a(true, 52, this.slotX((byte) -53, var2_int), this.slotY(var2_int, -96), 75);
             this.addChild((byte) -117, (UiLayoutNode) (this.field_Eb[var2_int]));
           }
           return;
@@ -737,7 +737,7 @@ final class SquadGridWidget extends UiLayoutNode {
 
     final static PlayerInputEvent a(int param0, int param1, byte param2) {
         if (param2 != 0) {
-          SquadGridWidget.i((byte) 81);
+          SquadGridWidget.releaseStatics((byte) 81);
         }
         return new PlayerInputEvent(3, param1, param0, (byte) 0, (byte) 0);
     }
@@ -785,7 +785,7 @@ final class SquadGridWidget extends UiLayoutNode {
           LineupView.field_y.addAll(param0 ^ -107, var7, nj.monotonicMillis(param0 + 186));
           if (!param2 &&
             var6 != 0) {
-            ChatLine.field_f = false;
+            PlayerContextMenu.field_f = false;
             return;
           }
           AnimationSkeleton.field_k = var5;
@@ -846,7 +846,7 @@ final class SquadGridWidget extends UiLayoutNode {
             }
           }
           SectorCacheStore.a(94);
-          ChatLine.field_f = false;
+          PlayerContextMenu.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

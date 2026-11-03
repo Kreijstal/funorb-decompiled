@@ -796,7 +796,7 @@ final class GameOverView extends MatchPhaseView {
             stackIn_10_0 = 1;
           }
           var5 = stackIn_10_0;
-          if (!var4[ChatLine.field_e] &&
+          if (!var4[PlayerContextMenu.field_e] &&
             !var4[96] &&
             param2 != 96) {
             stackIn_20_0 = 0;
@@ -1153,7 +1153,7 @@ final class GameOverView extends MatchPhaseView {
             AuctionListing.a(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
             SoftwareRasterizer.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(param0 + 116);
-            ChatLine.a(var3 - 19, (byte) -82, -22 + var4);
+            PlayerContextMenu.a(var3 - 19, (byte) -82, -22 + var4);
             IsSixCommand.field_C.a(WeightedLruCache.field_b, -6 + var3, -16 + var4, 16777215, -1);
           }
           var2_int = 245;
@@ -1166,7 +1166,7 @@ final class GameOverView extends MatchPhaseView {
             AuctionListing.a(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
             SoftwareRasterizer.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(126);
-            ChatLine.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
+            PlayerContextMenu.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
             IsSixCommand.field_C.a(WeightedLruCache.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
           }
           if (this.field_S != 2) {
@@ -1499,7 +1499,7 @@ final class GameOverView extends MatchPhaseView {
                   stackIn_40_0 = stackOut_16_0 ? 1 : 0;
                   stackIn_17_0 = stackOut_16_0;
                   if (stackIn_17_0) {
-                    ChatLine.a(var7 + 10, (byte) -119, var8 - 6);
+                    PlayerContextMenu.a(var7 + 10, (byte) -119, var8 - 6);
                   }
                   MySquadScreen.field_U[this.field_a.field_g[this.field_O[var5][var9]].field_f].c(var7, var8 - 16);
                   stackIn_26_0 = (var11 == 0) ? 16777215 : 11184810;

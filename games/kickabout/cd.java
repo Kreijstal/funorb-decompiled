@@ -8,11 +8,11 @@ final class cd {
     final static void a(byte param0, int param1, int param2) {
         MouseInputHandler.a(16777215, al.a(false, (byte) 66), param2, -1, param1, 0);
         if (param0 >= -126) {
-          cd.a((byte) 70);
+          cd.releaseStatics((byte) 70);
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -98) {
@@ -22,7 +22,7 @@ final class cd {
 
     final static boolean a(int param0) {
         if (param0 != 3) {
-          cd.a((byte) -84);
+          cd.releaseStatics((byte) -84);
           return AuctionBidDialog.field_G;
         }
         return AuctionBidDialog.field_G;

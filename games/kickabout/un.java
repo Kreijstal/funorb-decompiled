@@ -8,7 +8,7 @@ final class un {
     static int[] field_a;
     static CipherPacketBuffer field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_d = null;
         field_c = null;

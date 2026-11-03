@@ -8,7 +8,7 @@ final class sd {
     static r field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_e = null;
           field_d = null;

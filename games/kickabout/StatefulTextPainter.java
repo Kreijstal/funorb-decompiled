@@ -358,7 +358,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         var1.a(-13136);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_s = null;
         field_y = null;

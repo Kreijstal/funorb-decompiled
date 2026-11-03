@@ -56,7 +56,7 @@ final class ts {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -93 % ((param0 - 75) / 35);
         field_c = null;
         field_a = null;

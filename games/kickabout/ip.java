@@ -7,7 +7,7 @@ final class ip {
     static RenderedFootballer[] field_b;
     static UiLayoutNode field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -60) {
           return;
         }

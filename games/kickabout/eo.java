@@ -168,7 +168,7 @@ final class eo {
         return;
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_q = null;
         field_p = null;
         field_j = null;
@@ -1447,7 +1447,7 @@ final class eo {
           for (var10 = -36; var10 < 36; var10++) {
             var11 = var6.field_y[var8];
             if (var11 != 0) {
-              var12 = ChatLine.b(var9, var10, (byte) 2) + 8192 + 2048 & 8191;
+              var12 = PlayerContextMenu.b(var9, var10, (byte) 2) + 8192 + 2048 & 8191;
               if (eo.isAngleInRange(var12, var4, var5) ||
                 eo.isAngleInRange(var12, var4 + 4096, var5)) {
                 var13 = Math.min(255, Math.min(Math.min(Math.abs((var4 + 4096 & 8191) - var12), Math.abs((var4 + var5 + 4096 & 8191) - var12)), Math.min(Math.abs((var4 & 8191) - var12), Math.abs((var4 + var5 & 8191) - var12))));

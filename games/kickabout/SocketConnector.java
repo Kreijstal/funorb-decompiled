@@ -53,7 +53,7 @@ abstract class SocketConnector {
 
     abstract java.net.Socket a(int param0) throws IOException;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 <= 68) {
           return;

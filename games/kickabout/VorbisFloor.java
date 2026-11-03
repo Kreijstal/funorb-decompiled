@@ -97,7 +97,7 @@ final class VorbisFloor {
         return var3;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_h = null;
         field_j = null;
         field_e = null;

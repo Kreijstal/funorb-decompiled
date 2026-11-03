@@ -241,7 +241,7 @@ final class NanoTickClock extends TickClock {
         return var6 / (long)this.field_r;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 4) {
           return;
         }

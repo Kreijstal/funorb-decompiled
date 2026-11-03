@@ -17,7 +17,7 @@ final class op extends TextWidgetPainter {
         IconLabel.field_Bb = 120;
         hq.field_d = -IconLabel.field_Bb + 480 - 21;
         if (param0 != -363021503) {
-          op.b(110);
+          op.releaseStatics(110);
         }
         int var1 = 24;
         int var2 = 96;
@@ -103,7 +103,7 @@ final class op extends TextWidgetPainter {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_u = null;
         field_y = null;

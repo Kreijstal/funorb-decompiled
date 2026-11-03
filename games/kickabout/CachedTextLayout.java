@@ -32,7 +32,7 @@ final class CachedTextLayout extends TextLayout {
 
     final static int[] c(int param0) {
         if (param0 != -23091) {
-          CachedTextLayout.b((byte) -38);
+          CachedTextLayout.releaseStatics((byte) -38);
           return new int[8];
         }
         return new int[8];
@@ -275,7 +275,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_f = null;
         if (param0 != -103) {

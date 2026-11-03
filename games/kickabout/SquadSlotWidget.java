@@ -62,7 +62,7 @@ final class SquadSlotWidget extends UiLayoutNode {
             return;
           }
           SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-          ChatLine.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+          PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
           ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
           if (param0 < -114) {
             if (this.field_Fb == null) {
@@ -99,7 +99,7 @@ final class SquadSlotWidget extends UiLayoutNode {
             dc.field_b.drawHalfSize(this.field_F, this.field_T);
             if (this.field_Hb) {
               SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-              ChatLine.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+              PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
               ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
             }
             if (param0 >= -114) {
@@ -114,7 +114,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         dc.field_b.drawHalfSize(this.field_F, this.field_T);
         if (this.field_Hb) {
           SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-          ChatLine.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+          PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
           ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
         }
         if (param0 >= -114) {
@@ -127,7 +127,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         return;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -123) {
           return;
         }

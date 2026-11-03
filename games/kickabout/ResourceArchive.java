@@ -93,7 +93,7 @@ final class ResourceArchive {
         return false;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -83) {
           ResourceArchive.a(0.31954155933475825, (byte) 102, 1.241292563355284, 0.9239833289377695);
         }
@@ -214,7 +214,7 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 2) {
-            ResourceArchive.c(((int[]) (this.field_e[10]))[0]);
+            ResourceArchive.releaseStatics(((int[]) (this.field_e[10]))[0]);
           }
           if (!this.ensureIndex(-118)) {
             return null;

@@ -20,7 +20,7 @@ final class Bzip2Decoder {
         return var2;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 

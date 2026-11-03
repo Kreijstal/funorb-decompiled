@@ -31,7 +31,7 @@ final class UrlRequest {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 == -1316) {
           field_a = null;

@@ -22,7 +22,7 @@ final class SoundFilter {
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_f = (float[][]) null;
         field_b = (int[][]) null;
     }

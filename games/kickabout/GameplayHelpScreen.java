@@ -123,7 +123,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             dupTemp$0 = bk.field_a[0];
             dupTemp$0.directionMask = dupTemp$0.directionMask | 4;
           }
-          if (field_G[ChatLine.field_e]) {
+          if (field_G[PlayerContextMenu.field_e]) {
             dupTemp$1 = bk.field_a[0];
             dupTemp$1.directionMask = dupTemp$1.directionMask | 2;
           }

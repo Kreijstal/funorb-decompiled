@@ -211,7 +211,7 @@ final class GameResourceLoader implements LoadingSequence {
           sk.a(122, 23, 4);
           AccountChoicePanel.field_K = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_1.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           re.field_o = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          ChatLine.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          PlayerContextMenu.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           SetLagCommand.field_B = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-114, 23, 6);
           SquadGridWidget.field_Cb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
@@ -486,7 +486,7 @@ final class GameResourceLoader implements LoadingSequence {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = (int[][]) null;
         field_b = null;
         if (param0 != 1) {

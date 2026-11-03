@@ -169,7 +169,7 @@ final class BlackFadeScreen extends AppScreen {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 123) {
           byte[] var2 = (byte[]) null;
           BlackFadeScreen.a((byte[]) null, false);

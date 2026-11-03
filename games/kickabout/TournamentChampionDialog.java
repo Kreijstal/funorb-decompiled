@@ -32,7 +32,7 @@ final class TournamentChampionDialog extends MessageDialog {
             var4.field_zb != null) {
             return true;
           }
-          stackIn_11_0 = (null != ChatLine.field_i) && (nk.a(31253, param2) != null);
+          stackIn_11_0 = (null != PlayerContextMenu.field_i) && (nk.a(31253, param2) != null);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,13 +186,13 @@ final class TournamentChampionDialog extends MessageDialog {
         if (PlayArea.a(100)) {
           return;
         }
-        if (ChatLine.field_f) {
+        if (PlayerContextMenu.field_f) {
           return;
         }
         or.field_d.b(77, (byte) 85);
         or.field_d.writeByte(105, param0);
         ri.field_t = param1;
-        ChatLine.field_f = true;
+        PlayerContextMenu.field_f = true;
     }
 
     final static void b(int param0, int param1, int param2) {

@@ -29,14 +29,14 @@ final class LeaguesScreen extends ButtonMenuScreen {
         super.enterScreen(param0, param1, param2);
         SquadGridWidget.field_Gb = -1;
         AnimationSkeleton.field_k = GameLoopApplet.field_E.field_t;
-        ChatLine.field_f = false;
+        PlayerContextMenu.field_f = false;
         LineupView.field_y.clear(72);
         TournamentChampionDialog.b(AnimationSkeleton.field_k, 500);
     }
 
     final static String a(char param0, byte param1) {
         if (param1 != -83) {
-          LeaguesScreen.e(77);
+          LeaguesScreen.releaseStatics(77);
         }
         return String.valueOf(param0);
     }
@@ -110,7 +110,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           kj.a((byte) -105);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (ChatLine.field_f) {
+        if (PlayerContextMenu.field_f) {
           fieldTemp$0 = ri.field_t - 1;
           ri.field_t = ri.field_t - 1;
           if (fieldTemp$0 > 0) {
@@ -121,7 +121,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         if (decompiledFrameRemainder0) {
           stackIn_29_0 = false;
         }
-        ChatLine.field_f = stackIn_29_0;
+        PlayerContextMenu.field_f = stackIn_29_0;
         AuctionTableWidget.field_Hb.b(0, param1);
         AuctionTableWidget.field_Hb.a(32 * StatefulTextPainter.field_v, false, (byte) -111, 32);
         if (var6 == 0) {
@@ -209,7 +209,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_G = null;
         if (param0 > -31) {
@@ -308,7 +308,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         if (AuctionTableWidget.field_Hb.field_Db.field_jb == null ||
           AuctionTableWidget.field_Hb.field_Db.field_jb.a(false) == 0) {
           if (!PlayArea.a(100)) {
-            if (!ChatLine.field_f) {
+            if (!PlayerContextMenu.field_f) {
               un.field_d.d(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
             } else {
               jr.a(this.slideOffsetX + 194, -65, 290);

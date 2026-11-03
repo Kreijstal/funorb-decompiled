@@ -10,7 +10,7 @@ final class dr {
     static UiLayoutNode field_d;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -127) {
           return;
         }
@@ -41,7 +41,7 @@ final class dr {
             return false;
           }
           if (param0 >= -1) {
-            dr.a((byte) 127);
+            dr.releaseStatics((byte) 127);
           }
           var2_long = nj.monotonicMillis(-90);
           if (cu.field_c != 0 &&

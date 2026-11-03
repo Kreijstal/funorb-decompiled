@@ -8,7 +8,7 @@ final class kr {
     static CheckboxLabelWidget field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 > -62) {
           field_d = (String) null;
@@ -19,30 +19,30 @@ final class kr {
     }
 
     final static void a(UiLayoutNode param0, boolean param1, int param2) {
-        ChatLine var9 = null;
+        PlayerContextMenu var9 = null;
         Sprite var11 = null;
         String var10 = null;
-        ChatLine var12 = null;
+        PlayerContextMenu var12 = null;
         Sprite var14 = null;
         String var13 = null;
-        ChatLine var15 = null;
+        PlayerContextMenu var15 = null;
         Sprite var17 = null;
         String var16 = null;
-        ChatLine var18 = null;
+        PlayerContextMenu var18 = null;
         Sprite var20 = null;
         String var19 = null;
-        ChatLine var21 = null;
+        PlayerContextMenu var21 = null;
         Sprite var23 = null;
         String var22 = null;
-        ChatLine var24 = null;
+        PlayerContextMenu var24 = null;
         Sprite var26 = null;
         String var25 = null;
-        ChatLine var27 = null;
+        PlayerContextMenu var27 = null;
         String var28 = null;
-        ChatLine var30 = null;
+        PlayerContextMenu var30 = null;
         Sprite var32 = null;
         String var31 = null;
-        ChatLine var33 = null;
+        PlayerContextMenu var33 = null;
         Sprite var35 = null;
         String var34 = null;
         int var5 = 0;
@@ -116,7 +116,7 @@ final class kr {
           var34 = TextWidgetPainter.field_g;
           var33.field_j.addItemWithIcon(var34, true, 13, var35);
         }
-        ChatLine var36 = TextButton.field_v;
+        PlayerContextMenu var36 = TextButton.field_v;
         int var4 = param0.field_F;
         if (!param1) {
           return;

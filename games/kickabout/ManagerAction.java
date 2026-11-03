@@ -254,7 +254,7 @@ final class ManagerAction extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_f = null;
         field_h = null;

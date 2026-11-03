@@ -90,7 +90,7 @@ final class wk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_e = null;
         int var1 = 14 / ((-6 - param0) / 57);

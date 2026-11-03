@@ -54,7 +54,7 @@ final class ar {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;

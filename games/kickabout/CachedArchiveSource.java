@@ -127,7 +127,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    final static void c(int param0) {
+    final static void releaseStatics(int param0) {
         try {
           if (param0 != 1) {
             field_u = (AccountRegistrationPanel) null;
@@ -429,7 +429,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         if (param0 > -114) {
           return;

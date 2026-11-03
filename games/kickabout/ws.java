@@ -47,7 +47,7 @@ final class ws {
           var6 = var7;
           var2 = var6;
           if (param1 != 121) {
-            ws.a(54);
+            ws.releaseStatics(54);
           }
           for (var3 = 0; var8.length > var3; var3++) {
             var4 = var8[var3];
@@ -70,7 +70,7 @@ final class ws {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -25514) {
           field_d = (int[][]) null;
         }

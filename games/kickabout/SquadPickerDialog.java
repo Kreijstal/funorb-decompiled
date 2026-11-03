@@ -20,7 +20,7 @@ final class SquadPickerDialog extends MessageDialog {
         if (PlayArea.a(100)) {
           return;
         }
-        if (ChatLine.field_f) {
+        if (PlayerContextMenu.field_f) {
           return;
         }
         try {
@@ -33,7 +33,7 @@ final class SquadPickerDialog extends MessageDialog {
           or.field_d.writeByte(102, param0);
           or.field_d.backpatchByteLength(62, -var3_int + or.field_d.field_n);
           ri.field_t = 500;
-          ChatLine.field_f = param2 ? true : false;
+          PlayerContextMenu.field_f = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -44,35 +44,35 @@ final class SquadPickerDialog extends MessageDialog {
         if (param0 < 60) {
           field_M = (String) null;
           if (param1 != 0) {
-            this.field_H.c(true);
+            this.field_H.sendSquadOrder(true);
             return;
           }
           if (this.field_H.field_Fb == -1) {
-            this.field_H.c(true);
+            this.field_H.sendSquadOrder(true);
             return;
           }
           if (GameLoopApplet.field_E.a((byte) 95, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
-            this.field_H.c(true);
+            this.field_H.sendSquadOrder(true);
             return;
           }
           LoadingProgressDialog.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
-          this.field_H.c(true);
+          this.field_H.sendSquadOrder(true);
           return;
         }
         if (param1 != 0) {
-          this.field_H.c(true);
+          this.field_H.sendSquadOrder(true);
           return;
         }
         if (this.field_H.field_Fb == -1) {
-          this.field_H.c(true);
+          this.field_H.sendSquadOrder(true);
           return;
         }
         if (GameLoopApplet.field_E.a((byte) 95, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
-          this.field_H.c(true);
+          this.field_H.sendSquadOrder(true);
           return;
         }
         LoadingProgressDialog.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
-        this.field_H.c(true);
+        this.field_H.sendSquadOrder(true);
     }
 
     final int dialogHeight(byte param0) {
@@ -251,7 +251,7 @@ final class SquadPickerDialog extends MessageDialog {
           return;
         }
         this.field_H.b(param0 ^ param0, param1);
-        this.field_H.a(param0 + 45);
+        this.field_H.update(param0 + 45);
         if (this.field_H.field_Fb == -1) {
           this.field_i[0].field_lb = false;
         } else {

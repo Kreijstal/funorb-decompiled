@@ -210,7 +210,7 @@ final class ContextMenuItem extends UiLayoutNode {
         }
         if (param0) {
           if (TextButton.field_v != null) {
-            TextButton.field_v.a(param1, false);
+            TextButton.field_v.hideMenu(param1, false);
           }
           nj.a(param1, -128);
           if (null != ck.field_b) {
@@ -221,7 +221,7 @@ final class ContextMenuItem extends UiLayoutNode {
         }
         field_Db = true;
         if (TextButton.field_v != null) {
-          TextButton.field_v.a(param1, false);
+          TextButton.field_v.hideMenu(param1, false);
         }
         nj.a(param1, -128);
         if (null != ck.field_b) {

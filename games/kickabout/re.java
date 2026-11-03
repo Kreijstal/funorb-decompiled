@@ -136,7 +136,7 @@ final class re implements WidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_o = null;
         if (param0 != 109) {
@@ -300,7 +300,7 @@ final class re implements WidgetPainter {
           if (PlayArea.a(100)) {
             return;
           }
-          if (ChatLine.field_f) {
+          if (PlayerContextMenu.field_f) {
             return;
           }
           if (param1 >= 0) {
@@ -358,7 +358,7 @@ final class re implements WidgetPainter {
               var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.b((byte) 127));
             }
             or.field_d.writeByte(105, param3);
-            ChatLine.field_f = true;
+            PlayerContextMenu.field_f = true;
             ri.field_t = 500;
             return;
           }

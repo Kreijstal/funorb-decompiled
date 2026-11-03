@@ -9,7 +9,7 @@ final class IntrusiveDequeCursor {
     private IntrusiveNode field_f;
     static CommonGame field_b;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 119 / ((34 - param0) / 56);
         field_c = null;
         field_a = null;

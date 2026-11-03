@@ -14,7 +14,7 @@ final class ig {
     static int field_d;
     static String field_j;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_k = null;
         field_i = null;

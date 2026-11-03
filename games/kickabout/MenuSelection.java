@@ -14,7 +14,7 @@ final class MenuSelection {
     static String field_k;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -22) {
           MenuSelection.a(-29, -114, 127L);
         }

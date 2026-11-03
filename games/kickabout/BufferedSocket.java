@@ -45,7 +45,7 @@ final class BufferedSocket implements Runnable {
           return 0;
         }
         if (param0 != 1) {
-          BufferedSocket.c(-10);
+          BufferedSocket.releaseStatics(-10);
         }
         return this.field_a.read();
     }
@@ -192,7 +192,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -41) {
           field_i = (String[]) null;
         }

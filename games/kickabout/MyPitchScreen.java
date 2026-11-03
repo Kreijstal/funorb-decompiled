@@ -95,7 +95,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         RankingRowNode.field_Gb.b(0, false);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         int var1 = -127 % ((param0 - 61) / 56);
     }

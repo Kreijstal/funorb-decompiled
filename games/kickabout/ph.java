@@ -61,7 +61,7 @@ final class ph {
         field_a = -35;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = (IndexedSprite[][]) null;
         field_f = null;
         field_b = null;
@@ -70,7 +70,7 @@ final class ph {
           field_d = null;
           return;
         }
-        ph.b(-52);
+        ph.releaseStatics(-52);
         field_d = null;
     }
 

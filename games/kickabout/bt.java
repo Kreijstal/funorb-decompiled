@@ -17,7 +17,7 @@ final class bt {
         var2 = Kickabout.field_G;
         if (SortCriterion.field_l != null) {
           if (SortCriterion.field_l.c(0)) {
-            ContextMenu.a(ChatLine.field_i.h((byte) -77), (byte) -88, 11);
+            ContextMenu.a(PlayerContextMenu.field_i.h((byte) -77), (byte) -88, 11);
           } else {
             GameLoopApplet.b(15848, 11, 0);
           }
@@ -26,7 +26,7 @@ final class bt {
             !um.field_e.b(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
-            ContextMenu.a(ChatLine.field_i.h((byte) 74), (byte) -114, 11);
+            ContextMenu.a(PlayerContextMenu.field_i.h((byte) 74), (byte) -114, 11);
             QuickChatPhraseCache.field_d = true;
           }
         }

@@ -113,7 +113,7 @@ class ri extends TextWidgetPainter {
           if (var16.directionMask == 0 &&
             0 == var16.action &&
             var5 % 10 == 0) {
-            var16.setDirectionFromMask(ChatLine.a(true, -var7 + var9, -var6 + var8), 26214);
+            var16.setDirectionFromMask(PlayerContextMenu.a(true, -var7 + var9, -var6 + var8), 26214);
             return;
           }
           return;

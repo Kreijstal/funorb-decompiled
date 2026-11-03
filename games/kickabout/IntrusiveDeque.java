@@ -193,7 +193,7 @@ final class IntrusiveDeque {
         IntrusiveNode var4Lifetime1;
         int var3Lifetime1;
         if (param0 != 606511077) {
-          IntrusiveDeque.a(113);
+          IntrusiveDeque.releaseStatics(113);
         } else {
           var6 = new IntrusiveNode[this.a(false)];
           var2 = var6;
@@ -346,7 +346,7 @@ final class IntrusiveDeque {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         field_g = (int[][][]) null;

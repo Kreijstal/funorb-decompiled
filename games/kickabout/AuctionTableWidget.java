@@ -47,7 +47,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
         super(param0, param1, param2, param3);
     }
 
-    public static void k(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 68) {
           return;
         }

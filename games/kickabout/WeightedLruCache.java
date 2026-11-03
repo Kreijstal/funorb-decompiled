@@ -14,7 +14,7 @@ final class WeightedLruCache {
     static ArgbSprite field_h;
     private IterableDualLinkDeque field_i;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         if (param0 != -32) {
           return;

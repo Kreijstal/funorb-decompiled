@@ -28,10 +28,10 @@ final class cl {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -1) {
-          cl.a(89);
+          cl.releaseStatics(89);
         }
         field_c = null;
         field_h = null;

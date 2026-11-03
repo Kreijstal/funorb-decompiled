@@ -7,7 +7,7 @@ final class fh {
     static int field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 69 / ((-21 - param0) / 57);
         field_a = (Sprite[][]) null;
         field_c = null;

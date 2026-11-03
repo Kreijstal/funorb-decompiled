@@ -177,7 +177,7 @@ final class gl {
         return ConsoleTokenCursor.a(1, 1, param2, 1, 3, -1481, param4, param0, param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;

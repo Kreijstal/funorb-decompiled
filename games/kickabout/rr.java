@@ -105,7 +105,7 @@ final class rr {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_g = null;
         field_e = null;

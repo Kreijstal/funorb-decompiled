@@ -194,7 +194,7 @@ final class wc {
           TextHotspotWidget.field_F = true;
           var2 = "tuhstatbut";
           if (param0 > -37) {
-            wc.a(48);
+            wc.releaseStatics(48);
           }
           var3 = "rvnadlm";
           var4 = -1L;
@@ -204,7 +204,7 @@ final class wc {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_e = null;
         field_q = null;

@@ -108,7 +108,7 @@ final class rn {
         return TriangleRasterizer.field_f[param0 & 2047];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -98 / ((12 - param0) / 59);
         field_e = null;
         field_d = null;

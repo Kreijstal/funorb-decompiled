@@ -665,7 +665,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     if (var7 == null) {
                       var7 = new LobbyPlayerRow(var20, var21, var3Lifetime2);
                       TrinketSlot.field_Eb.a(var7, (byte) -4, var3Lifetime2);
-                      ChatLine.field_i.field_gc = ChatLine.field_i.field_gc + 1;
+                      PlayerContextMenu.field_i.field_gc = PlayerContextMenu.field_i.field_gc + 1;
                     }
                     var7.field_Qb = ((PacketBuffer) ((Object) var1)).a((byte) 81);
                     var8_int = ((PacketBuffer) ((Object) var1)).l(param0 ^ 120);
@@ -692,11 +692,11 @@ final class VerticalScrollbar extends UiLayoutNode {
                       var22.c((byte) -109);
                     }
                     var22.unlinkSecondary(-111);
-                    ChatLine.field_i.field_gc = ChatLine.field_i.field_gc - 1;
+                    PlayerContextMenu.field_i.field_gc = PlayerContextMenu.field_i.field_gc - 1;
                     return;
                   }
                   if (var2 == 20) {
-                    GameModesHelpScreen.a(false, param0 ^ 116, var1, ChatLine.field_i);
+                    GameModesHelpScreen.a(false, param0 ^ 116, var1, PlayerContextMenu.field_i);
                     return;
                   }
                   if (21 == var2) {
@@ -791,16 +791,16 @@ final class VerticalScrollbar extends UiLayoutNode {
             var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.a(param0 - 14));
           }
           if (var2 == 1 &&
-            null != ChatLine.field_i) {
-            h.field_f = ChatLine.field_i.field_ec;
+            null != PlayerContextMenu.field_i) {
+            h.field_f = PlayerContextMenu.field_i.field_ec;
           }
           if (var2 != 4) {
-            ChatLine.field_i = null;
+            PlayerContextMenu.field_i = null;
           } else {
             var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).a((byte) 81);
-            ChatLine.field_i = new GameSetupPanel(ss.field_j);
-            ChatLine.field_i.a((long)var3_intLifetime1, (byte) -113);
-            GameModesHelpScreen.a(false, 114, var1, ChatLine.field_i);
+            PlayerContextMenu.field_i = new GameSetupPanel(ss.field_j);
+            PlayerContextMenu.field_i.a((long)var3_intLifetime1, (byte) -113);
+            GameModesHelpScreen.a(false, 114, var1, PlayerContextMenu.field_i);
             TextFieldNode.field_Ib = 0L;
           }
           if (var2 != 2 &&

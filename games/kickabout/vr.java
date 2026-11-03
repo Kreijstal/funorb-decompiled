@@ -29,7 +29,7 @@ final class vr {
         return param1 < var3Lifetime1.length ? var3Lifetime1[param1] : 100;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -117) {
           field_b = (String) null;
           field_b = null;
@@ -91,7 +91,7 @@ final class vr {
         var2 = Kickabout.field_G;
         try {
           InstrumentNoteMask.field_k = false;
-          ChatLine.field_i = null;
+          PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
           if (rp.field_B != null) {
             rp.field_B.b(param0 + 22999);
@@ -131,7 +131,7 @@ final class vr {
     final static void b(byte param0) {
         ScrollPane.field_Jb.a(new TutorialChoiceDialog(), 3);
         if (param0 > -114) {
-          vr.a((byte) -74);
+          vr.releaseStatics((byte) -74);
         }
     }
 

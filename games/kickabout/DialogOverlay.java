@@ -672,7 +672,7 @@ final class DialogOverlay implements OverlayLayer {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         field_e = null;

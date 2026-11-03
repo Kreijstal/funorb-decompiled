@@ -108,7 +108,7 @@ final class kw {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         field_g = null;
@@ -157,7 +157,7 @@ final class kw {
             ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             us.field_j = ArchiveManager.field_m;
             if (param1 >= -99) {
-              kw.d((byte) -40);
+              kw.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
             TrinketIcon.field_yb = sm.field_q;
@@ -174,7 +174,7 @@ final class kw {
             if (320 == BytePlusOneCommand.field_A &&
               ArchiveManager.field_m == 240) {
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -200,7 +200,7 @@ final class kw {
               var2_ref = stackIn_20_0;
               oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -239,7 +239,7 @@ final class kw {
               }
             }
             if (param1 >= -99) {
-              kw.d((byte) -40);
+              kw.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
             TrinketIcon.field_yb = sm.field_q;
@@ -267,7 +267,7 @@ final class kw {
               ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
               us.field_j = ArchiveManager.field_m;
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -284,7 +284,7 @@ final class kw {
               if (320 == BytePlusOneCommand.field_A &&
                 ArchiveManager.field_m == 240) {
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -310,7 +310,7 @@ final class kw {
                 var2_ref = stackIn_69_0;
                 oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -348,7 +348,7 @@ final class kw {
                 }
               }
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -366,7 +366,7 @@ final class kw {
                 ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
                 us.field_j = ArchiveManager.field_m;
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -403,7 +403,7 @@ final class kw {
                 var2_ref = stackIn_146_0;
                 oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -419,7 +419,7 @@ final class kw {
               } else {
                 if (ArchiveManager.field_m == 240) {
                   if (param1 >= -99) {
-                    kw.d((byte) -40);
+                    kw.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
                   TrinketIcon.field_yb = sm.field_q;
@@ -445,7 +445,7 @@ final class kw {
                   var2_ref = stackIn_163_0;
                   oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                   if (param1 >= -99) {
-                    kw.d((byte) -40);
+                    kw.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
                   TrinketIcon.field_yb = sm.field_q;

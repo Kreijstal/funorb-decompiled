@@ -15,10 +15,10 @@ final class ClientException extends RuntimeException {
         LineupView.field_u.a(2, param0 ^ 118, TickClock.field_d.field_mb - 20, 20, 0, TickClock.field_d.field_q, TeamSelectionAgent.field_f);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -50) {
-          ClientException.a((byte) 40);
+          ClientException.releaseStatics((byte) 40);
           field_c = null;
           field_a = null;
           return;

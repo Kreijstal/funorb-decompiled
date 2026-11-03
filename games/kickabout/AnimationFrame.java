@@ -17,7 +17,7 @@ final class AnimationFrame {
     private static short[] field_b;
     private static short[] field_h;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_b = null;
         field_l = null;
         field_g = null;

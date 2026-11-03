@@ -25,7 +25,7 @@ final class or {
         try {
           var1_int = ArchivePreloader.field_b[0];
           if (param0) {
-            or.a((byte) -13);
+            or.releaseStatics((byte) -13);
           }
           for (var2 = 1; var2 < ArchivePreloader.field_b.length; var2++) {
             var3 = ArchivePreloader.field_b[var2];
@@ -47,7 +47,7 @@ final class or {
         System.out.println("Error: " + aj.replaceAll(-1, "%0a", "\n", param0));
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_b = (String[][]) null;
         field_a = null;

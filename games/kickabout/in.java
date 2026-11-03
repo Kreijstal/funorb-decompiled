@@ -6,7 +6,7 @@ final class in {
     static int[][][][][] field_c;
     static long field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = (int[][][][][]) null;
         field_a = null;
         if (param0 != 31349) {

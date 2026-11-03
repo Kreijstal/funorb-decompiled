@@ -108,13 +108,13 @@ final class ClubState {
         return 5 > var2 ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_c = null;
         field_v = null;
         field_Q = null;
         if (param0 != 0) {
-          ClubState.b((byte) 10);
+          ClubState.releaseStatics((byte) 10);
         }
     }
 

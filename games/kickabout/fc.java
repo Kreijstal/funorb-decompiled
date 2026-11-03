@@ -11,7 +11,7 @@ final class fc {
     static boolean field_d;
     static int[] field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_e = null;
         field_g = null;

@@ -112,7 +112,7 @@ final class MenuButton {
                                                               if (this.kind != 5) {
                                                                 if (this.kind != 8) {
                                                                   if (this.kind == 9) {
-                                                                    um.field_e.f(-94);
+                                                                    um.field_e.offerDraw(-94);
                                                                     DelayedServerPacket.a(-1, param1, param0 - 1);
                                                                   } else {
                                                                     if (10 != this.kind) {
@@ -162,7 +162,7 @@ final class MenuButton {
                                                                         }
                                                                       }
                                                                     } else {
-                                                                      um.field_e.c(-76);
+                                                                      um.field_e.resign(-76);
                                                                       DelayedServerPacket.a(-1, param1, -2);
                                                                     }
                                                                   }
@@ -265,7 +265,7 @@ final class MenuButton {
         int var7 = 0;
         this.field_g = param0 ? true : false;
         if (param3 != 16) {
-          MenuButton.a((byte) 108);
+          MenuButton.releaseStatics((byte) 108);
         }
         if (param1 &&
           !this.field_r) {
@@ -317,7 +317,7 @@ final class MenuButton {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_o = null;
         if (param0 != -6) {

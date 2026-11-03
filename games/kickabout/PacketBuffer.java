@@ -469,7 +469,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_j = null;
         field_e = null;

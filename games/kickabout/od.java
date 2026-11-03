@@ -56,7 +56,7 @@ final class od extends SortCriterion {
         return 2;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 != 0) {
           return;

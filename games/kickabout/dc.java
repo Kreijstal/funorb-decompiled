@@ -25,7 +25,7 @@ final class dc {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 119 / ((param0 - 14) / 60);
         field_a = null;
         field_b = null;

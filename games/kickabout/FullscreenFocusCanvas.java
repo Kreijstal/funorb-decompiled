@@ -70,7 +70,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_i = null;
         field_f = null;
@@ -97,7 +97,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           cb.field_d = PcmPlayerService.a(param0, param2, 0, 22050);
           pg.field_d = PcmPlayerService.a(param0, param2, 1, 1024);
           if (param1 != 23) {
-            FullscreenFocusCanvas.a((byte) 30);
+            FullscreenFocusCanvas.releaseStatics((byte) 30);
           }
           sk.field_d = new MusicTrackMixer(3);
           sk.field_d.a(param1 - 23, 128, 9);

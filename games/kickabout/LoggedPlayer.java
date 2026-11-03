@@ -136,7 +136,7 @@ final class LoggedPlayer {
         return TournamentChampionDialog.a(false, qi.field_o, IntDoubleCommand.field_A);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 48) {
           return;
         }

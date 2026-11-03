@@ -11,7 +11,7 @@ final class StringCursor {
     private String field_f;
     private int field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         int var1 = -36 / ((24 - param0) / 54);
         field_b = null;
@@ -20,12 +20,12 @@ final class StringCursor {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        ChatLine var4 = null;
+        PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         gg var3 = ModalStack.a(param0, 2, param2);
-        ChatLine var4Lifetime1;
+        PlayerContextMenu var4Lifetime1;
         if (!param1) {
           if (var3 != null) {
             TextButton.field_v.a(false, 0);

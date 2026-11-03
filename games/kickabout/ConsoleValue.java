@@ -13,7 +13,7 @@ final class ConsoleValue {
 
     final static void a(int param0, byte param1) {
         if (param1 < 8) {
-          ConsoleValue.a((byte) -49);
+          ConsoleValue.releaseStatics((byte) -49);
           ms.a(0, param0);
           return;
         }
@@ -106,7 +106,7 @@ final class ConsoleValue {
         return (byte)(int)this.a(true);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_f = null;
         if (param0 <= -101) {

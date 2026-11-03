@@ -18,7 +18,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         return 120;
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -17) {
           return;
         }

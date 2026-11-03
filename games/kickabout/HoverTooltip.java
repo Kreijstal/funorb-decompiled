@@ -167,14 +167,14 @@ final class HoverTooltip extends UiLayoutNode {
         return 2;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Bb = null;
         field_zb = null;
         field_Ab = null;
         if (param0 == 39) {
           return;
         }
-        HoverTooltip.i((byte) 36);
+        HoverTooltip.releaseStatics((byte) 36);
     }
 
     final boolean h(byte param0) {

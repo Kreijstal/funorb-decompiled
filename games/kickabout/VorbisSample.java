@@ -173,7 +173,7 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_G = null;
         field_F = null;
         field_y = null;

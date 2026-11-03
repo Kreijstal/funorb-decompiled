@@ -56,7 +56,7 @@ final class TrinketTile extends UiLayoutNode {
           ReceivedAuctionItem.field_x = new bt(var3_int, param1, param1);
           TournamentLobbyScreen.field_j = new QuickChatPhraseCache(var3_int, param1, param1, new ka());
           if (param2 != -32) {
-            TrinketTile.h((byte) -19);
+            TrinketTile.releaseStatics((byte) -19);
           }
           var4 = al.h((byte) 124);
           if (var4 == null) {
@@ -101,7 +101,7 @@ final class TrinketTile extends UiLayoutNode {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Fb = null;
         field_Kb = null;
         field_Bb = null;

@@ -8,7 +8,7 @@ final class lt {
     static Sprite[] field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < -114) {
           field_a = null;
           field_c = null;
@@ -17,7 +17,7 @@ final class lt {
           field_b = null;
           return;
         }
-        lt.a(107);
+        lt.releaseStatics(107);
         field_a = null;
         field_c = null;
         field_d = null;

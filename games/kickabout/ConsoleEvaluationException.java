@@ -9,7 +9,7 @@ final class ConsoleEvaluationException extends Exception {
     String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_e = null;
           field_a = null;
@@ -75,7 +75,7 @@ final class ConsoleEvaluationException extends Exception {
             var2 = 3;
           }
         } else {
-          ConsoleEvaluationException.a(-109);
+          ConsoleEvaluationException.releaseStatics(-109);
           if (WeightedLruCache.field_d <= 0) {
             if (!PlayArea.a(100)) {
               var2 = 1;

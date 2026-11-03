@@ -115,7 +115,7 @@ final class oh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -43) {
           return;
         }

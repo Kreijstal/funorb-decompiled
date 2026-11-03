@@ -10,7 +10,7 @@ final class ConsoleParseException extends Exception {
     static String field_a;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_a = null;
         field_c = null;
@@ -20,7 +20,7 @@ final class ConsoleParseException extends Exception {
           field_b = null;
           return;
         }
-        ConsoleParseException.a((byte) -20);
+        ConsoleParseException.releaseStatics((byte) -20);
         field_d = null;
         field_b = null;
     }

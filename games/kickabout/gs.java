@@ -82,7 +82,7 @@ final class gs {
         ui.a(1, TrinketPickerDialog.a(ih.field_c, param0 ^ 77, NanoTickClock.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 > -80) {
           return;

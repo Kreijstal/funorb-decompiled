@@ -17,7 +17,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
         this.field_o = param0;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_q = null;
         field_r = null;
@@ -26,7 +26,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
           field_s = null;
           return;
         }
-        WeightedCacheEntry.g((byte) -108);
+        WeightedCacheEntry.releaseStatics((byte) -108);
         field_p = null;
         field_s = null;
     }

@@ -45,7 +45,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         if (param2 <= 20) {
           this.drawOverlay(false, -54);
         }
-        this.field_T.j((byte) 21).field_Hb = true;
+        this.field_T.getSelectedSlot((byte) 21).field_Hb = true;
         this.refreshSellButton(false);
     }
 
@@ -106,9 +106,9 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_J.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.b(0, param1);
-        this.field_T.a(48);
+        this.field_T.update(48);
         if (this.field_T.field_Fb != -1 &&
-          this.field_T.j((byte) 21).field_Eb.isEmpty(-2)) {
+          this.field_T.getSelectedSlot((byte) 21).field_Eb.isEmpty(-2)) {
           this.field_T.field_Fb = -1;
         }
         if (this.field_T.field_Fb != this.field_N) {
@@ -150,7 +150,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
 
     private final void refreshSellButton(boolean param0) {
         this.field_U.c((byte) -109);
-        SquadSlotWidget var2 = this.field_T.j((byte) 21);
+        SquadSlotWidget var2 = this.field_T.getSelectedSlot((byte) 21);
         if (var2 != null &&
           !var2.field_Gb) {
           this.field_G.addChild((byte) -127, this.field_U);
@@ -286,7 +286,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_T.k((byte) 55);
         SoftwareRasterizer.a(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         un.field_d.a(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
-        RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.j((byte) 21));
+        RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
         this.field_J.a(-120);
         this.field_L.a(75, false);
     }

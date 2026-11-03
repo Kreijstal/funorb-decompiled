@@ -284,7 +284,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         return stackIn_148_0;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = null;
         field_B = null;
         if (param0 != 14513) {
@@ -310,7 +310,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             SpriteState.a(param7, param6, -2, param9, param4);
           }
           if (TrinketCatalog.field_b &&
-            ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+            PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
             TickClock.field_d.field_lb = false;
             LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
             hl.a(true, LineupView.field_u.field_Ab);
@@ -323,7 +323,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (ea.field_a != SoftwareRasterizer.field_g) {
             if (ea.field_f.field_e == SoftwareRasterizer.field_f &&
               ea.field_f.field_a == SoftwareRasterizer.field_g) {
-              if (null == ChatLine.field_i) {
+              if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
@@ -344,7 +344,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
                   if (TrinketCatalog.field_b &&
-                    ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+                    PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                     TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
@@ -378,7 +378,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
-                ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+                PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                 TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
@@ -402,7 +402,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
-                ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+                PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                 TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
@@ -416,7 +416,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (SoftwareRasterizer.field_f != BufferedSocket.field_s &&
               ea.field_f.field_e == SoftwareRasterizer.field_f &&
               ea.field_f.field_a == SoftwareRasterizer.field_g) {
-              if (null == ChatLine.field_i) {
+              if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
@@ -437,7 +437,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
                   if (TrinketCatalog.field_b &&
-                    ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+                    PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                     TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
@@ -471,7 +471,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
-                ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+                PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                 TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
@@ -494,7 +494,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
                 if (TrinketCatalog.field_b &&
-                  ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+                  PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                   TickClock.field_d.field_lb = false;
                   LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                   hl.a(true, LineupView.field_u.field_Ab);
@@ -512,7 +512,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   TickClock.field_d.field_lb = true;
                   SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 } else {
-                  if (ChatLine.field_i.field_gc >= ChatLine.field_i.field_bc) {
+                  if (PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                     TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);

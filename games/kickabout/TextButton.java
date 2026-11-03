@@ -8,7 +8,7 @@ class TextButton extends UiWidget {
     private boolean field_D;
     static boolean field_B;
     private boolean field_w;
-    static ChatLine field_v;
+    static PlayerContextMenu field_v;
     boolean field_y;
     static boolean[] field_z;
     static int field_C;

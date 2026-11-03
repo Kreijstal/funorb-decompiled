@@ -91,7 +91,7 @@ final class hv {
           }
           var14 = stackIn_16_0;
           if (3 == var19.action) {
-            var19.directionMask = ChatLine.a(true, var9 - var7, -var6 + var8);
+            var19.directionMask = PlayerContextMenu.a(true, var9 - var7, -var6 + var8);
             if (-1 == param1.field_V.possessorTeam) {
               var19.setAction((byte) -31, 0);
               return;
@@ -136,7 +136,7 @@ final class hv {
               RowRangeRequest.tryKeeperTackle(-120, var19, param2, param1.getBallCarrier((byte) -96), param1.field_V);
             }
             if (var19.action == 14) {
-              var19.setDirectionFromMask(ChatLine.a(param0, -var19.pixelY(true) + var9, var8 - var19.pixelX(-98)), 26214);
+              var19.setDirectionFromMask(PlayerContextMenu.a(param0, -var19.pixelY(true) + var9, var8 - var19.pixelX(-98)), 26214);
               return;
             }
           }
@@ -155,7 +155,7 @@ final class hv {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;

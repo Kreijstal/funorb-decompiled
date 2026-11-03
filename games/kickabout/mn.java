@@ -9,7 +9,7 @@ final class mn implements WidgetPainter {
     static ff field_e;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 10 % ((param0 + 5) / 42);
         field_c = null;
         field_d = null;

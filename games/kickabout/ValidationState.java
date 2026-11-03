@@ -8,7 +8,7 @@ final class ValidationState {
     static String[] field_d;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = (float[][][]) null;
         field_d = null;

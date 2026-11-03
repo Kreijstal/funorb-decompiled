@@ -52,7 +52,7 @@ final class cb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = (byte[][][]) null;
         field_e = null;
         field_a = null;

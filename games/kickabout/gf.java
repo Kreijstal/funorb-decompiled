@@ -169,7 +169,7 @@ final class gf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_e = null;
         field_i = null;

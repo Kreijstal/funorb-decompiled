@@ -85,7 +85,7 @@ final class gw {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         int var1 = -113 / ((-15 - param0) / 44);
         field_f = null;

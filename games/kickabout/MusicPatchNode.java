@@ -119,7 +119,7 @@ final class MusicPatchNode extends IntrusiveNode {
         ig.field_f = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         field_h = null;
         field_m = null;

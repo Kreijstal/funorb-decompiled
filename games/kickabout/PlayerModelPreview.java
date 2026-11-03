@@ -167,7 +167,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         this.field_h.a(hq.field_b[var6], (byte) -107);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_m = null;
         field_f = null;

@@ -256,7 +256,7 @@ final class LobbyGameRecord {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 101) {
           field_m = (Sprite) null;
         }

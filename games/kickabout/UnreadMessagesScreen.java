@@ -8,7 +8,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
     static String field_B;
     static TextFieldNode field_A;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         if (param0 >= -25) {
           return;

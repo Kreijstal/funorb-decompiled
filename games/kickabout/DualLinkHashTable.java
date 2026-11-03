@@ -12,7 +12,7 @@ final class DualLinkHashTable {
     static UiLayoutNode field_d;
     private int field_g;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 != 36) {
           field_d = (UiLayoutNode) null;

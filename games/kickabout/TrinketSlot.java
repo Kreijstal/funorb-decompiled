@@ -242,7 +242,7 @@ final class TrinketSlot extends UiLayoutNode implements lv {
         return var2;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Ab = null;
         field_Fb = null;
         field_Db = null;

@@ -291,7 +291,7 @@ final class MusicTrackMixer extends PcmStream {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         if (param0 > -77) {
           field_m = (String) null;

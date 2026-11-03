@@ -22,7 +22,7 @@ final class ChatMessage {
     static Sprite[] field_b;
     static int[][] field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_k = null;
         field_e = null;

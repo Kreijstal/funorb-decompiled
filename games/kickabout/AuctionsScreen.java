@@ -234,7 +234,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         int[] var16 = null;
         var15 = Kickabout.field_G;
         try {
-          var16 = new int[]{ChatLine.field_e, IsSixCommand.field_A, TextPromptDialog.field_Kb, oc.field_e};
+          var16 = new int[]{PlayerContextMenu.field_e, IsSixCommand.field_A, TextPromptDialog.field_Kb, oc.field_e};
           var3 = new Sprite(32, 32);
           PacketBuffer.a(-111, var3);
           for (var4_int = 15; var4_int < 19; var4_int++) {

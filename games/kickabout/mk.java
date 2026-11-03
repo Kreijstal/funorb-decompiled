@@ -6,7 +6,7 @@ final class mk {
     static int field_c;
     static Sprite field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 17437) {
           field_b = (String[]) null;
         }

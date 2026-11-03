@@ -6,7 +6,7 @@ final class d {
     static String[] field_c;
     static Sprite field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 0) {

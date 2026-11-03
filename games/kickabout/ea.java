@@ -15,7 +15,7 @@ final class ea {
     int field_h;
     static int[] field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         field_b = null;

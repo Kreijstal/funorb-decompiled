@@ -54,7 +54,7 @@ final class CachedListingRow extends IntrusiveNode {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -123) {
           byte[] var2 = (byte[]) null;
           CachedListingRow.encodeCp1252(92, (CharSequence) null, 36, (byte[]) null, 126, 18);

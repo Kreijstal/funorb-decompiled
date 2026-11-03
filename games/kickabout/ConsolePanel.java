@@ -38,7 +38,7 @@ abstract class ConsolePanel implements OverlayLayer {
         try {
           var4_int = -15 + (-10 + this.field_g.field_q);
           if (param2 != -122) {
-            ConsolePanel.d((byte) 97);
+            ConsolePanel.releaseStatics((byte) 97);
           }
           var5 = FormationAgent.a(param1, 2, '\n');
           var6 = var5;
@@ -391,7 +391,7 @@ abstract class ConsolePanel implements OverlayLayer {
 
     abstract void b(int param0);
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         if (param0 >= -9) {
           return;

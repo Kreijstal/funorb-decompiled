@@ -87,7 +87,7 @@ final class kj {
         this.field_a = param0;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = (byte[][]) null;
         if (param0 >= -35) {
           field_c = (String) null;

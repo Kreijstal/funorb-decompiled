@@ -240,7 +240,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         return 190 + var3;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         field_C = null;
         if (param0 == 90) {

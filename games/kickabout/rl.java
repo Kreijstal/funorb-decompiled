@@ -67,12 +67,12 @@ final class rl extends SortCriterion {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_p = null;
         field_u = null;
         if (param0 != 20) {
-          rl.b(85);
+          rl.releaseStatics(85);
           field_t = null;
           return;
         }

@@ -595,14 +595,14 @@ final class Trinket {
             if (var6 != 2 ||
               var10 != 0) {
               if (var6 == 0) {
-                if (null == ChatLine.field_i &&
+                if (null == PlayerContextMenu.field_i &&
                   uk.field_d) {
                   var4 = "[" + ButtonMenuScreen.field_z + "] ";
                 }
-                if (ChatLine.field_i != null) {
+                if (PlayerContextMenu.field_i != null) {
                   if (!GameOverView.field_R ||
                     SingleChildContainer.field_x == null) {
-                    var4 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
+                    var4 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{PlayerContextMenu.field_i.field_ec}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + SingleChildContainer.field_x + "] ";
                     }

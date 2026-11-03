@@ -227,7 +227,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_m = null;
         field_i = null;

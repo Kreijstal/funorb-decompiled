@@ -26,7 +26,7 @@ final class RandomAccessCacheFile {
         this.field_e = param1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_i = (int[][][]) null;
         field_b = null;
@@ -73,7 +73,7 @@ final class RandomAccessCacheFile {
         try {
           var5_int = this.field_j.read(param2, param3, param1);
           if (param0 != 33) {
-            RandomAccessCacheFile.b(58);
+            RandomAccessCacheFile.releaseStatics(58);
           }
           if (0 < var5_int) {
             this.field_e = this.field_e + (long)var5_int;

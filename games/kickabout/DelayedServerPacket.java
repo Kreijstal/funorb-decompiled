@@ -101,8 +101,8 @@ final class DelayedServerPacket extends IntrusiveNode {
           }
           if (AuctionLogEntry.field_h instanceof MatchScreen &&
             null != um.field_e &&
-            um.field_e.d((byte) 95)) {
-            var8 = um.field_e.e((byte) -123);
+            um.field_e.isGameOverViewShown((byte) 95)) {
+            var8 = um.field_e.getGameOverEntries((byte) -123);
             if (var8 != null &&
               var8.a(false) > 0) {
               or.field_d.b(81, (byte) 127);

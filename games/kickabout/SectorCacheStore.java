@@ -14,7 +14,7 @@ final class SectorCacheStore {
     static String field_a;
     private BufferedCacheFile field_i;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_g = (String) null;
         }

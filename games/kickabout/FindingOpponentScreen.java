@@ -79,7 +79,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
           eo.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
           return;
         }
-        FindingOpponentScreen.e(70);
+        FindingOpponentScreen.releaseStatics(70);
         eo.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
     }
 
@@ -94,7 +94,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         this.field_C = 0;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         if (param0 != 130) {
           return;

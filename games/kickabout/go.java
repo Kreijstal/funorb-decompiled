@@ -50,7 +50,7 @@ final class go {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -108 / ((-5 - param0) / 34);
         field_a = null;
     }
@@ -121,7 +121,7 @@ final class go {
           }
           var9 = var11.pixelX(param2 ^ -119);
           if (param2 != 0) {
-            go.a(-38);
+            go.releaseStatics(-38);
           }
           var10 = var11.pixelY(true);
           stackIn_28_0 = var11;

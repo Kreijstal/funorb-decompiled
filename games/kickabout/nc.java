@@ -135,7 +135,7 @@ final class nc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         int var1 = 48 % ((-12 - param0) / 49);

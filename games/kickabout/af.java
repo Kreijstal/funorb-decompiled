@@ -36,7 +36,7 @@ final class af {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;

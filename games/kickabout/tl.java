@@ -6,7 +6,7 @@ final class tl {
     static r field_c;
     static String[] field_a;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

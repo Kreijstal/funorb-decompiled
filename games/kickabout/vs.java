@@ -23,7 +23,7 @@ final class vs {
         var3 = Kickabout.field_G;
         try {
           if (param0 <= 70) {
-            vs.a(50);
+            vs.releaseStatics(50);
           }
           var2 = StrongCacheEntry.field_z.g(24009);
           while (var2 instanceof FadingSoundPlayer) {
@@ -58,7 +58,7 @@ final class vs {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 == 0) {
           field_l = null;
@@ -66,7 +66,7 @@ final class vs {
           field_k = null;
           return;
         }
-        vs.a(-50);
+        vs.releaseStatics(-50);
         field_l = null;
         field_c = null;
         field_k = null;

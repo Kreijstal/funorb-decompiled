@@ -17,11 +17,11 @@ final class ag extends IntrusiveNode {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_l = null;
         if (param0 < 66) {
-          ag.a((byte) 34);
+          ag.releaseStatics((byte) 34);
         }
     }
 

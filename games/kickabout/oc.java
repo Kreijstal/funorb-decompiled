@@ -61,7 +61,7 @@ final class oc {
         StrongCacheEntry.field_D = null;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -48) {
           oc.c((byte) 119);
           field_b = null;

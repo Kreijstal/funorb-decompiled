@@ -365,7 +365,7 @@ class PcmPlayerService {
     void writeMixBlock() throws Exception {
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_d = null;
     }
 

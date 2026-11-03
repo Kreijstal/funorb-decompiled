@@ -479,7 +479,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_r = null;
         field_w = null;

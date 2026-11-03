@@ -175,7 +175,7 @@ final class ScrollPane extends UiLayoutNode {
         if (param0 < 11) {
           return true;
         }
-        return AnimationPlayer.field_c == ChatLine.field_i.field_Nb ? true : false;
+        return AnimationPlayer.field_c == PlayerContextMenu.field_i.field_Nb ? true : false;
     }
 
     final static void b(int param0) {
@@ -188,7 +188,7 @@ final class ScrollPane extends UiLayoutNode {
         ParticipantStatus.field_t.field_l = 0;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -19) {
           field_Eb = null;
           field_Hb = null;

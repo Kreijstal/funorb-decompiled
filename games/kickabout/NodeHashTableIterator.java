@@ -75,7 +75,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           NodeHashTableIterator.a(-70, -86, -1);
           field_a = null;

@@ -136,7 +136,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
           return TextLayout.field_a;
         }
         if (20 == this.screenId) {
-          return ChatLine.field_d;
+          return PlayerContextMenu.field_d;
         }
         if (!param0) {
           return (String[]) null;

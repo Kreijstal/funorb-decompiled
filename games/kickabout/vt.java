@@ -7,7 +7,7 @@ final class vt {
     static String field_b;
     static CommonGame field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 11 % ((36 - param0) / 52);
         field_c = null;
         field_d = (byte[][]) null;

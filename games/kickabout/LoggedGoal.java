@@ -99,7 +99,7 @@ final class LoggedGoal extends IntrusiveNode {
         return "LoggedGoal{" + var3 + "}";
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         int var1 = -25 / ((28 - param0) / 44);
     }

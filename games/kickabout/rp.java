@@ -227,7 +227,7 @@ final class rp extends ri {
         this(gf.field_a, param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_z = (String[][]) null;
         field_y = null;

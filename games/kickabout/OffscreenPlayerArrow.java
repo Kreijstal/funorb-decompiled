@@ -34,7 +34,7 @@ final class OffscreenPlayerArrow {
           if (TextHotspotWidget.a(var5, var6, 480)) {
             return;
           }
-          this.field_a = -ChatLine.b(-param1 + var6, -param0 + var5, (byte) 2);
+          this.field_a = -PlayerContextMenu.b(-param1 + var6, -param0 + var5, (byte) 2);
           var7 = var5 - param0;
           var8 = -param1 + var6;
           this.field_g = GameKeyHandler.a(var8 * var8 + var7 * var7, (byte) -88) * 100 >> 10;
@@ -92,7 +92,7 @@ final class OffscreenPlayerArrow {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         int var1 = 74 % ((-20 - param0) / 60);
         field_j = null;
@@ -108,7 +108,7 @@ final class OffscreenPlayerArrow {
           return Math.max(0, Math.min(256, 768 - var2 * 3));
         }
         if (param0 != -75) {
-          OffscreenPlayerArrow.a(101);
+          OffscreenPlayerArrow.releaseStatics(101);
         }
         return 0;
     }

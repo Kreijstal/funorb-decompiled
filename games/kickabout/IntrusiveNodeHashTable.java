@@ -86,7 +86,7 @@ final class IntrusiveNodeHashTable {
         this.field_e = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_g = null;
         if (param0 != -111) {

@@ -9,7 +9,7 @@ final class mi {
 
     final static int a(boolean param0) {
         if (!param0) {
-          mi.a(-77);
+          mi.releaseStatics(-77);
           return 3;
         }
         return 3;
@@ -60,7 +60,7 @@ final class mi {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
           field_c = (String) null;

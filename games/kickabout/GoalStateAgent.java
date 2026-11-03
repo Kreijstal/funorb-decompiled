@@ -75,7 +75,7 @@ final class GoalStateAgent extends MatchAgent {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_i = null;
         if (param0 == -30) {
@@ -83,7 +83,7 @@ final class GoalStateAgent extends MatchAgent {
           field_f = null;
           return;
         }
-        GoalStateAgent.a((byte) 106);
+        GoalStateAgent.releaseStatics((byte) 106);
         field_k = null;
         field_f = null;
     }

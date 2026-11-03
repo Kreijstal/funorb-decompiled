@@ -124,7 +124,7 @@ final class BufferedCacheFile {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 68) {
           field_d = (String) null;
         }

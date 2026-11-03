@@ -296,8 +296,8 @@ final class tr implements OverlayLayer {
           PlayerStats.a(var4, (byte) -124);
           this.field_h = this.field_h + 1;
           LobbyGameRecord.a(-121);
-          if (null != ChatLine.field_i) {
-            if (ShopPlayerSlot.a(ChatLine.field_i.field_Eb, -3, ChatLine.field_i.field_bc, ChatLine.field_i.field_gc)) {
+          if (null != PlayerContextMenu.field_i) {
+            if (ShopPlayerSlot.a(PlayerContextMenu.field_i.field_Eb, -3, PlayerContextMenu.field_i.field_bc, PlayerContextMenu.field_i.field_gc)) {
               stackIn_19_0 = (GameLoopApplet.field_E.d((byte) 46)) ? 1 : 0;
             } else {
               stackIn_19_0 = 0;

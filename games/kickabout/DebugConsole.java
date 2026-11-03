@@ -256,7 +256,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_z = null;
           field_w = null;
@@ -565,13 +565,13 @@ final class DebugConsole extends ConsolePanel {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ChatLine var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        ChatLine var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        ChatLine var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        ChatLine var13 = null;
+        PlayerContextMenu var13 = null;
         try {
           BytePlusOneCommand.a(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
           if (param1.field_Cb && (param1.field_Mb == 2 ||
@@ -580,7 +580,7 @@ final class DebugConsole extends ConsolePanel {
             var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SelectableTrinketIcon.field_Ab, new String[]{param3});
             var7.field_j.addItem(0, 10, var8);
           }
-          TextButton.field_v.d(param0 - 14);
+          TextButton.field_v.buildMenuItems(param0 - 14);
           if (param2) {
             if (TextButton.field_v.field_c != DelayedServerPacket.field_h) {
               var11 = TextButton.field_v;

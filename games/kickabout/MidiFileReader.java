@@ -193,7 +193,7 @@ final class MidiFileReader {
         return 0;
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_i = null;
     }
 

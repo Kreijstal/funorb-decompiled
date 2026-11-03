@@ -6,7 +6,7 @@ final class fs {
     static String field_c;
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -80) {
           fs.a((byte) 122);
           field_a = null;

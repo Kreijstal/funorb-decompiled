@@ -7,9 +7,9 @@ final class ff {
     int field_d;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 100) {
-          ff.a((byte) 118);
+          ff.releaseStatics((byte) 118);
           field_c = null;
           field_b = null;
           return;

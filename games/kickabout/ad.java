@@ -167,7 +167,7 @@ final class ad {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_b = null;
           field_d = null;
@@ -1125,7 +1125,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("keycode_left", -97);
                 if (null != var2) {
-                  ChatLine.field_e = 255 & var2[0];
+                  PlayerContextMenu.field_e = 255 & var2[0];
                 }
                 var2 = DateOfBirthPanel.a("keycode_right", -96);
                 if (var2 != null) {
@@ -1938,19 +1938,19 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("instructions_headings_gamemode,0", -100);
                 if (null != var2) {
-                  ChatLine.field_d[0] = BlackFadeScreen.a(var2, true);
+                  PlayerContextMenu.field_d[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_headings_gamemode,1", param1 - 87);
                 if (null != var2) {
-                  ChatLine.field_d[1] = BlackFadeScreen.a(var2, true);
+                  PlayerContextMenu.field_d[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_headings_gamemode,2", -90);
                 if (var2 != null) {
-                  ChatLine.field_d[2] = BlackFadeScreen.a(var2, true);
+                  PlayerContextMenu.field_d[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_headings_gamemode,3", -88);
                 if (var2 != null) {
-                  ChatLine.field_d[3] = BlackFadeScreen.a(var2, true);
+                  PlayerContextMenu.field_d[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_headings_auctions,0", -105);
                 if (null != var2) {

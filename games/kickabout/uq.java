@@ -12,14 +12,14 @@ final class uq {
     final static void a(byte param0) {
         TextFieldNode.field_Wb = true;
         if (param0 != -122) {
-          uq.a(-68);
+          uq.releaseStatics(-68);
           NodeHashTableIterator.field_b = 0;
           return;
         }
         NodeHashTableIterator.field_b = 0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_b = null;
         field_d = null;

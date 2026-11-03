@@ -12,7 +12,7 @@ final class wp {
     String field_b;
     boolean field_g;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_h = (String) null;
         }

@@ -98,12 +98,12 @@ final class SplashScreen extends AppScreen {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != ChatLine.field_i && (null != ds.field_h ||
+          if (null != PlayerContextMenu.field_i && (null != ds.field_h ||
             BroadcastServerCommand.field_E != null ||
             null != so.field_f ||
             SumIntegersCommand.field_D != null)) {
             for (var9 = 0; var9 < ss.field_j; var9++) {
-              var10_int = ChatLine.field_i.field_Eb[var9] & 255;
+              var10_int = PlayerContextMenu.field_i.field_Eb[var9] & 255;
               if (ds.field_h != null &&
                 null != ds.field_h[var9] &&
                 ds.field_h[var9][var10_int]) {
@@ -231,7 +231,7 @@ final class SplashScreen extends AppScreen {
               var12.field_Tb.field_ab = var24_int;
               var12.field_Tb.field_ub = var24_int;
               if (param0 == ClientException.field_c) {
-                if (!ChatLine.field_i.field_Cb) {
+                if (!PlayerContextMenu.field_i.field_Cb) {
                   var12.field_Hb.field_E = wk.field_a;
                 }
               } else {
@@ -249,7 +249,7 @@ final class SplashScreen extends AppScreen {
                 }
               }
               var25_int = 0;
-              if (null != ChatLine.field_i &&
+              if (null != PlayerContextMenu.field_i &&
                 ScrollPane.a(38) &&
                 ~var12.field_Ab != ~AnimationPlayer.field_c) {
                 if (null != var12.field_Tb.field_E) {
@@ -405,7 +405,7 @@ final class SplashScreen extends AppScreen {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < ss.field_j; var27_int++) {
-                  var28 = ChatLine.field_i.field_Eb[var27_int] & 255;
+                  var28 = PlayerContextMenu.field_i.field_Eb[var27_int] & 255;
                   var29 = 0;
                   if (ds.field_h != null &&
                     null != ds.field_h[var27_int] &&
@@ -473,7 +473,7 @@ final class SplashScreen extends AppScreen {
                 }
                 if (ClientException.field_c == param0 &&
                   !ScrollPane.a(111)) {
-                  var27 = ChatLine.field_i.field_ec;
+                  var27 = PlayerContextMenu.field_i.field_ec;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoginRequiredDialog.field_F, new String[]{var27});
                 }
                 UrlRequest.field_e = (String) (var24Lifetime2);

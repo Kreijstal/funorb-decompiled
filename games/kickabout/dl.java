@@ -6,7 +6,7 @@ final class dl extends IntrusiveNode {
     int[] field_f;
     int field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         int var1 = -50 % ((param0 - 23) / 48);
     }

@@ -388,7 +388,7 @@ class UiLayoutNode extends iv {
               } else {
                 var5 = NodeHashTableIterator.field_b;
                 if (var5 == 0 &&
-                  ChatLine.field_i != null) {
+                  PlayerContextMenu.field_i != null) {
                   var5 = 1;
                 }
                 if (r.a(0, var5) == 2) {
@@ -428,16 +428,16 @@ class UiLayoutNode extends iv {
           if (2 != NodeHashTableIterator.field_b) {
             var7Lifetime6 = "";
             if (NodeHashTableIterator.field_b == 0) {
-              if (ChatLine.field_i == null &&
+              if (PlayerContextMenu.field_i == null &&
                 uk.field_d) {
                 var7Lifetime6 = "[" + ButtonMenuScreen.field_z + "] ";
               }
-              if (ChatLine.field_i != null) {
+              if (PlayerContextMenu.field_i != null) {
                 if (GameOverView.field_R &&
                   null != SingleChildContainer.field_x) {
                   var7Lifetime6 = "[" + SingleChildContainer.field_x + "] ";
                 } else {
-                  var7Lifetime6 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{ChatLine.field_i.field_ec}) + "] ";
+                  var7Lifetime6 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{PlayerContextMenu.field_i.field_ec}) + "] ";
                 }
               }
             }

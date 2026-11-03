@@ -34,7 +34,7 @@ final class ConsoleTokenCursor {
           ss.field_j = param5.length;
           InstrumentNoteMask.field_k = false;
           er.field_h = new byte[(7 + qi.field_p) / 8];
-          ChatLine.field_i = null;
+          PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
           var10_int = 0;
           for (var11 = 0; var11 < rp.field_x.length; var11++) {
@@ -111,7 +111,7 @@ final class ConsoleTokenCursor {
         return this.field_g[fieldTemp$0];
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_h = null;
         field_c = null;

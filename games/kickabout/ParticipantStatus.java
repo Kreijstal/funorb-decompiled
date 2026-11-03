@@ -237,7 +237,7 @@ final class ParticipantStatus extends MatchAgent {
             return;
           }
           if (param0 ||
-            null == ChatLine.field_i) {
+            null == PlayerContextMenu.field_i) {
             TrinketCatalog.field_b = false;
           }
           if (param0) {
@@ -254,7 +254,7 @@ final class ParticipantStatus extends MatchAgent {
               return;
             }
           } else {
-            if (ChatLine.field_i == null) {
+            if (PlayerContextMenu.field_i == null) {
               if (null == ArchiveSource.field_b) {
                 TrinketCatalog.field_b = false;
                 if (fj.field_a > 0) {

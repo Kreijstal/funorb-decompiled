@@ -66,7 +66,7 @@ final class sk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -5514) {
           field_d = null;
           field_b = null;

@@ -276,7 +276,7 @@ abstract class cv {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_f = null;
         field_c = null;

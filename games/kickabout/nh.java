@@ -50,7 +50,7 @@ final class nh {
         return (4096 + 1024 * (var1 - var2) / var4Lifetime3) % 6144 << 19 | var4Lifetime3 * 524032 / var3 & 524032 | var3;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_b = null;
     }
 

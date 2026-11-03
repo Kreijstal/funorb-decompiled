@@ -147,11 +147,11 @@ final class TriangleMesh {
         this.a(param2 - 68);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_R = null;
         if (param0 < 66) {
-          TriangleMesh.a((byte) -61);
+          TriangleMesh.releaseStatics((byte) -61);
         }
         field_L = null;
         field_A = null;

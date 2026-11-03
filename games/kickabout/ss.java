@@ -13,7 +13,7 @@ final class ss {
     static String field_e;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_i = null;
         field_f = null;

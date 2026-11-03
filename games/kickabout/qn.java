@@ -64,7 +64,7 @@ final class qn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 30 / ((-84 - param0) / 38);
         field_b = null;
         field_a = null;

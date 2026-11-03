@@ -31,7 +31,7 @@ final class hh {
         byte[] var13 = null;
         try {
           if (param1 != -3) {
-            hh.a((byte) 111);
+            hh.releaseStatics((byte) 111);
           }
           var9 = new PacketBuffer(param0);
           var3 = var9.readUnsignedByte((byte) -107);
@@ -80,7 +80,7 @@ final class hh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 53) {
           field_g = null;
           field_e = null;

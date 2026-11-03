@@ -290,7 +290,7 @@ final class CascadingMenu extends UiLayoutNode {
               var5 = this.field_Jb[param0] | 32768;
               var6 = NodeHashTableIterator.field_b;
               if (var6 == 0 &&
-                ChatLine.field_i != null) {
+                PlayerContextMenu.field_i != null) {
                 var6 = 1;
               }
               if (r.a(0, var6) == 2) {

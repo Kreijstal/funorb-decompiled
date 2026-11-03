@@ -32,7 +32,7 @@ final class ArchiveIndex {
         return stackIn_9_0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_a = null;
         if (param0 != 0) {

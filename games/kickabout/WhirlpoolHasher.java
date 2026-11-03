@@ -89,7 +89,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_f = null;
         if (param0 != 0) {

@@ -197,7 +197,7 @@ final class ld {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = (int[][]) null;
         field_b = null;
         field_e = null;

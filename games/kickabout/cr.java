@@ -12,7 +12,7 @@ final class cr implements WidgetPainter {
     static String field_f;
     static dg field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_g = null;
@@ -21,7 +21,7 @@ final class cr implements WidgetPainter {
           field_f = null;
           return;
         }
-        cr.a(-74);
+        cr.releaseStatics(-74);
         field_f = null;
     }
 

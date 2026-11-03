@@ -356,7 +356,7 @@ final class PlayerStats implements lv {
           wd.field_l.l(param0 ^ -5172);
         }
         if (param0 != -1456) {
-          PlayerStats.g(3);
+          PlayerStats.releaseStatics(3);
         }
         if (null != AnimationClip.field_d) {
           AnimationClip.field_d.p(param0 ^ 1496);
@@ -1063,7 +1063,7 @@ final class PlayerStats implements lv {
         return var3;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         int var1 = 8 % ((53 - param0) / 56);

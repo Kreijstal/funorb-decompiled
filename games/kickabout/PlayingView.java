@@ -434,7 +434,7 @@ final class PlayingView extends MatchPhaseView {
           stackIn_6_0 = 1;
         }
         var3 = stackIn_6_0;
-        if (!var12[ChatLine.field_e]) {
+        if (!var12[PlayerContextMenu.field_e]) {
           stackIn_12_0 = (var12[96]) ? 1 : 0;
         } else {
           stackIn_12_0 = 1;
@@ -460,7 +460,7 @@ final class PlayingView extends MatchPhaseView {
           MyKitScreen.field_O) {
           if (!var12[TextPromptDialog.field_Kb] &&
             !var12[oc.field_e] &&
-            !var12[ChatLine.field_e] &&
+            !var12[PlayerContextMenu.field_e] &&
             !var12[IsSixCommand.field_A]) {
             if ((var12[98] ||
               var12[99] ||
@@ -1331,12 +1331,12 @@ final class PlayingView extends MatchPhaseView {
         return;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         field_F = null;
         field_K = null;
         if (param0 != -40) {
-          PlayingView.c((byte) -12);
+          PlayingView.releaseStatics((byte) -12);
         }
         field_y = (String[][]) null;
     }

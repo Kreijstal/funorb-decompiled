@@ -66,9 +66,9 @@ final class SoundCache {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -112) {
-          SoundCache.a((byte) -31);
+          SoundCache.releaseStatics((byte) -31);
           field_a = null;
           field_b = null;
           return;
@@ -244,7 +244,7 @@ final class SoundCache {
         if (param1 <= -69) {
           return cu.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
-        SoundCache.a((byte) -2);
+        SoundCache.releaseStatics((byte) -2);
         return cu.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 

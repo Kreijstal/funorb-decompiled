@@ -142,7 +142,7 @@ final class JaggrabDownloader implements Runnable {
 
     final static String a(boolean param0) {
         if (!param0) {
-          JaggrabDownloader.a(28);
+          JaggrabDownloader.releaseStatics(28);
           if (nc.field_a) {
             return null;
           }
@@ -210,7 +210,7 @@ final class JaggrabDownloader implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_j = null;
         if (param0 == -2) {

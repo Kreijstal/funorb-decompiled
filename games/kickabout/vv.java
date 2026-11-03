@@ -12,11 +12,11 @@ abstract class vv extends DualLinkNode {
 
     abstract byte[] getBytes(int param0);
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_s = null;
         field_o = null;
         if (param0 != 18) {
-          vv.g((byte) 127);
+          vv.releaseStatics((byte) 127);
         }
     }
 

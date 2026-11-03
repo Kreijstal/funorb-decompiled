@@ -208,7 +208,7 @@ final class TeamSelectionAgent extends MatchAgent {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_l = null;
         field_m = null;

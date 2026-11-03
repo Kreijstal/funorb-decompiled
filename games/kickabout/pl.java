@@ -184,9 +184,9 @@ final class pl {
                   var12 = stackIn_46_0;
                 } else {
                   if (param6 != -1) {
-                    stackIn_37_0 = ((ChatLine.field_i.field_Eb[param6] & 255) != var11) ? 0 : 1;
+                    stackIn_37_0 = ((PlayerContextMenu.field_i.field_Eb[param6] & 255) != var11) ? 0 : 1;
                   } else {
-                    stackIn_37_0 = (rn.field_d[var11] != ChatLine.field_i.field_bc) ? 0 : 1;
+                    stackIn_37_0 = (rn.field_d[var11] != PlayerContextMenu.field_i.field_bc) ? 0 : 1;
                   }
                   var12 = stackIn_37_0;
                 }
@@ -219,7 +219,7 @@ final class pl {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

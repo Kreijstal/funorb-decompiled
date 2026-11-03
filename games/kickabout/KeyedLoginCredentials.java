@@ -67,7 +67,7 @@ class KeyedLoginCredentials extends LoginCredentials {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -101) {
           field_f = (Sprite) null;
           field_h = null;

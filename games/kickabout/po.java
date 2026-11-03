@@ -11,7 +11,7 @@ final class po {
     static String field_g;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_g = null;
           field_b = null;
@@ -22,7 +22,7 @@ final class po {
           field_d = null;
           return;
         }
-        po.a(23);
+        po.releaseStatics(23);
         field_g = null;
         field_b = null;
         field_a = null;

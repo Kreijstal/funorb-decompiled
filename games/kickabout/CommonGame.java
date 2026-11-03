@@ -825,7 +825,7 @@ final class CommonGame {
                         var6Lifetime1 = this.field_V.pixelY(879306160) - var4_ref_nlLifetime2.pixelY(true);
                         var7Lifetime2 = var6Lifetime1 * var6Lifetime1 + var5_intLifetime2Lifetime1 * var5_intLifetime2Lifetime1;
                         if (var7Lifetime2 < 784) {
-                          var8_intLifetime1 = ChatLine.b(var6Lifetime1, var5_intLifetime2Lifetime1, (byte) 2);
+                          var8_intLifetime1 = PlayerContextMenu.b(var6Lifetime1, var5_intLifetime2Lifetime1, (byte) 2);
                           var9Lifetime2 = 511 & 693 * var4_ref_nlLifetime2.pixelX(-99);
                           if (256 > var9Lifetime2) {
                             var9Lifetime2 -= 512;
@@ -1889,7 +1889,7 @@ final class CommonGame {
             if (this.field_l) {
               return;
             }
-            var8 = ChatLine.b(var7, var6, (byte) 2);
+            var8 = PlayerContextMenu.b(var7, var6, (byte) 2);
             var5.startTackle(var8, param0 - 61);
             if (-1 == this.field_V.possessorTeam) {
               this.a(var5, (byte) 115);
@@ -1905,7 +1905,7 @@ final class CommonGame {
           var5.field_x = var6;
           var5.field_z = param1.value;
           var8Lifetime1 = var5.directionMask(5339);
-          var9 = ChatLine.a(true, var7, var6);
+          var9 = PlayerContextMenu.a(true, var7, var6);
           stackIn_41_0 = (SquadPickerDialog.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
           var10 = stackIn_41_0;
           var5.field_h = var9;

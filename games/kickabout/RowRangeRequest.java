@@ -25,7 +25,7 @@ final class RowRangeRequest extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_e = (byte[][]) null;
         if (param0 != -49) {
