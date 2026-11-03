@@ -123,7 +123,7 @@ final class Archive {
         return true;
     }
 
-    final int a(String param0, byte param1) {
+    final int getGroupProgressByName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -194,7 +194,7 @@ final class Archive {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != -1) {
           var6 = (String) null;
-          this.a((String) null, (byte) -122);
+          this.getGroupProgressByName((String) null, (byte) -122);
         }
         if (!this.isIndexLoaded((byte) -43)) {
           return false;
@@ -254,7 +254,7 @@ final class Archive {
         }
     }
 
-    final boolean a(String param0, byte param1, String param2) {
+    final boolean isFileReadyByName(String param0, byte param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -285,7 +285,7 @@ final class Archive {
           }
           var7 = (CharSequence) ((Object) param2);
           var5 = this.field_f.field_i[var4_int].get(param1 ^ 24393, DerelictMapGenerator.a(false, var7));
-          stackIn_11_0 = this.a((byte) 125, var5, var4_int);
+          stackIn_11_0 = this.isFileReady((byte) 125, var5, var4_int);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -327,7 +327,7 @@ final class Archive {
         return true;
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean ensureGroupLoadedByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -345,7 +345,7 @@ final class Archive {
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
           var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var5));
-          stackIn_4_0 = this.b(87, var3_int);
+          stackIn_4_0 = this.ensureGroupLoaded(87, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -462,7 +462,7 @@ final class Archive {
         }
     }
 
-    final boolean b(String param0, byte param1) {
+    final boolean hasGroupByName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -513,7 +513,7 @@ final class Archive {
           return false;
         }
         if (param0 != -63) {
-          this.a((byte) 34, -45, 63);
+          this.isFileReady((byte) 34, -45, 63);
           return true;
         }
         return true;
@@ -601,7 +601,7 @@ final class Archive {
         }
     }
 
-    final synchronized boolean a(byte param0, int param1, int param2) {
+    final synchronized boolean isFileReady(byte param0, int param1, int param2) {
         if (param0 != 125) {
           field_c = (int[][]) null;
         }
@@ -647,7 +647,7 @@ final class Archive {
         return var4Lifetime1;
     }
 
-    final synchronized byte[] a(boolean param0, int param1) {
+    final synchronized byte[] getSingleFileBytes(boolean param0, int param1) {
         if (!this.isIndexLoaded((byte) -106)) {
           return null;
         }
@@ -659,7 +659,7 @@ final class Archive {
         }
         if (param0) {
           String var4 = (String) null;
-          this.a((String) null, (byte) -7);
+          this.getGroupProgressByName((String) null, (byte) -7);
         }
         if (this.field_f.field_m[param1] == 1) {
           return this.getFile(param1, -1, 0);
@@ -954,7 +954,7 @@ final class Archive {
         }
     }
 
-    final synchronized boolean b(int param0, int param1) {
+    final synchronized boolean ensureGroupLoaded(int param0, int param1) {
         if (!this.isValidGroup((byte) -63, param1)) {
           return false;
         }

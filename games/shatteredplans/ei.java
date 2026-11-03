@@ -235,13 +235,13 @@ final class ei {
           if (!LinkPainter.field_g.isIndexLoaded((byte) 122)) {
             return 20;
           }
-          if (!LinkPainter.field_g.a("commonui", 60)) {
+          if (!LinkPainter.field_g.ensureGroupLoadedByName("commonui", 60)) {
             return 40;
           }
           if (!tq.field_f.isIndexLoaded((byte) -109)) {
             return 50;
           }
-          if (!tq.field_f.a("commonui", -112)) {
+          if (!tq.field_f.ensureGroupLoadedByName("commonui", -112)) {
             return 60;
           }
           if (!GalaxyMap.field_g.isIndexLoaded((byte) -85)) {
@@ -255,23 +255,23 @@ final class ei {
             if (!StarAnnotation.field_j.isIndexLoaded((byte) -122)) {
               return 14;
             }
-            if (!StarAnnotation.field_j.b("", (byte) -122)) {
+            if (!StarAnnotation.field_j.hasGroupByName("", (byte) -122)) {
               return 29;
             }
-            if (!StarAnnotation.field_j.a("", -70)) {
+            if (!StarAnnotation.field_j.ensureGroupLoadedByName("", -70)) {
               return 29;
             }
           }
           if (!LinkPainter.field_g.isIndexLoaded((byte) 125)) {
             return 43;
           }
-          if (!LinkPainter.field_g.a("commonui", 127)) {
+          if (!LinkPainter.field_g.ensureGroupLoadedByName("commonui", 127)) {
             return 57;
           }
           if (!tq.field_f.isIndexLoaded((byte) -90)) {
             return 71;
           }
-          if (!tq.field_f.a("commonui", -105)) {
+          if (!tq.field_f.ensureGroupLoadedByName("commonui", -105)) {
             return 80;
           }
           if (!GalaxyMap.field_g.isIndexLoaded((byte) -95)) {

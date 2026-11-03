@@ -33,13 +33,13 @@ final class ig {
           if (!param0.isIndexLoaded((byte) 114)) {
             return false;
           }
-          if (!param0.a("commonui", -51)) {
+          if (!param0.ensureGroupLoadedByName("commonui", -51)) {
             return false;
           }
           if (param2.isIndexLoaded((byte) 113) &&
-            param2.a("commonui", -116)) {
+            param2.ensureGroupLoadedByName("commonui", -116)) {
             if (param3.isIndexLoaded((byte) 107) &&
-              param3.a("button.gif", param1 + 7620)) {
+              param3.ensureGroupLoadedByName("button.gif", param1 + 7620)) {
               return true;
             }
             return false;

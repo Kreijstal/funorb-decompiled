@@ -504,8 +504,8 @@ abstract class tl extends GameApplet {
         if (DefensiveAi.field_p == 2) {
           if (null != StarAnnotation.field_j &&
             StarAnnotation.field_j.isIndexLoaded((byte) 122)) {
-            if (StarAnnotation.field_j.b("", (byte) -116)) {
-              if (StarAnnotation.field_j.a("", 51)) {
+            if (StarAnnotation.field_j.hasGroupByName("", (byte) -116)) {
+              if (StarAnnotation.field_j.ensureGroupLoadedByName("", 51)) {
                 TutorialMapGenerator.a(StarAnnotation.field_j, true);
                 StarAnnotation.field_j = null;
                 ValidationState.c(126);

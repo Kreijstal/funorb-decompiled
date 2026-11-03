@@ -67,7 +67,7 @@ final class oa {
               TertiaryLinkNode.field_o.e(param0 - 16363);
             }
             if (BattleSnapshot.field_w != null) {
-              BattleSnapshot.field_w.a((byte) -122);
+              BattleSnapshot.field_w.shutdown((byte) -122);
             }
             if (null != oq.field_g) {
               try {

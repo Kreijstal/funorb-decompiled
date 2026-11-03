@@ -3348,6 +3348,14 @@
       "renamedSymbol": "M:Archive.loadGroup(BI)V"
     },
     {
+      "symbol": "M:bc.a(BII)Z",
+      "originalName": "a",
+      "to": "isFileReady",
+      "evidence": "Checks that a file of a group has been decoded or its group is loaded.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Archive.isFileReady(BII)Z"
+    },
+    {
       "symbol": "M:bc.a(BLjava/lang/String;Ljava/lang/String;)Z",
       "originalName": "a",
       "to": "containsFile",
@@ -3396,6 +3404,38 @@
       "renamedSymbol": "M:Archive.getGroupIdByName(ILjava/lang/String;)I"
     },
     {
+      "symbol": "M:bc.a(Ljava/lang/String;B)I",
+      "originalName": "a",
+      "to": "getGroupProgressByName",
+      "evidence": "Looks up a group by lower-cased name and returns its load progress.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Archive.getGroupProgressByName(Ljava/lang/String;B)I"
+    },
+    {
+      "symbol": "M:bc.a(Ljava/lang/String;BLjava/lang/String;)Z",
+      "originalName": "a",
+      "to": "isFileReadyByName",
+      "evidence": "Looks up a group and a file by lower-cased name and checks that the file is loaded.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z"
+    },
+    {
+      "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+      "originalName": "a",
+      "to": "ensureGroupLoadedByName",
+      "evidence": "Looks up a group by lower-cased name and loads it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z"
+    },
+    {
+      "symbol": "M:bc.a(ZI)[B",
+      "originalName": "a",
+      "to": "getSingleFileBytes",
+      "evidence": "Returns the data of a group that holds exactly one file.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Archive.getSingleFileBytes(ZI)[B"
+    },
+    {
       "symbol": "M:bc.a(ZLjava/lang/String;Ljava/lang/String;)[B",
       "originalName": "a",
       "to": "getFileByName",
@@ -3434,6 +3474,22 @@
       "evidence": "Assigns null to 7 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Archive.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:bc.b(II)Z",
+      "originalName": "b",
+      "to": "ensureGroupLoaded",
+      "evidence": "Loads the group if it is not loaded and reports whether it is.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Archive.ensureGroupLoaded(II)Z"
+    },
+    {
+      "symbol": "M:bc.b(Ljava/lang/String;B)Z",
+      "originalName": "b",
+      "to": "hasGroupByName",
+      "evidence": "Returns whether a group with the lower-cased name exists.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Archive.hasGroupByName(Ljava/lang/String;B)Z"
     },
     {
       "symbol": "M:bc.c(BI)I",
@@ -12284,6 +12340,38 @@
       "renamedSymbol": "M:IterableNodeHashTable.put(LIntrusiveNode;ZJ)V"
     },
     {
+      "symbol": "M:rn.a(B)V",
+      "originalName": "a",
+      "to": "shutdown",
+      "evidence": "Flags the worker to stop, wakes it and joins the thread.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.shutdown(B)V"
+    },
+    {
+      "symbol": "M:rn.a(ILua;I)Lak;",
+      "originalName": "a",
+      "to": "read",
+      "evidence": "Returns a read request, reusing the data of a pending write with the same key when there is one.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;"
+    },
+    {
+      "symbol": "M:rn.a(ILua;I[B)Lak;",
+      "originalName": "a",
+      "to": "queueWrite",
+      "evidence": "Creates a write request with the data and adds it to the queue.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;"
+    },
+    {
+      "symbol": "M:rn.a(Lak;I)V",
+      "originalName": "a",
+      "to": "enqueue",
+      "evidence": "Adds a request to the synchronized queue and counts it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V"
+    },
+    {
       "symbol": "M:rn.a(Z)V",
       "originalName": "a",
       "to": "clearStatics",
@@ -12831,7 +12919,7 @@
       "symbol": "M:th.a(IIIIIIIZ)V",
       "originalName": "a",
       "to": "drawGlyphTransposedAlpha",
-      "evidence": "Clips and draws one transposed glyph mask in a colour with an alpha. Resolved override family. Resolved override family.",
+      "evidence": "Clips and draws one transposed glyph mask in a colour with an alpha.",
       "confidence": "reviewed",
       "renamedSymbol": "M:th.drawGlyphTransposedAlpha(IIIIIIIZ)V"
     },
@@ -12839,15 +12927,47 @@
       "symbol": "M:th.a(IIIIIIZ)V",
       "originalName": "a",
       "to": "drawGlyphTransposed",
-      "evidence": "Clips and draws one glyph mask transposed in a colour. Resolved override family. Resolved override family.",
+      "evidence": "Clips and draws one transposed glyph mask in a colour.",
       "confidence": "reviewed",
       "renamedSymbol": "M:th.drawGlyphTransposed(IIIIIIZ)V"
+    },
+    {
+      "symbol": "M:th.a([I[BIIIIIII)V",
+      "originalName": "a",
+      "to": "blitGlyphRows",
+      "evidence": "Row kernel that blends a colour over the target by the glyph coverage.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.blitGlyphRows([I[BIIIIIII)V"
+    },
+    {
+      "symbol": "M:th.a([I[BIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitGlyphTransposedRows",
+      "evidence": "Row kernel that blends a colour by the transposed glyph coverage.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.blitGlyphTransposedRows([I[BIIIIIIII)V"
+    },
+    {
+      "symbol": "M:th.a([I[BIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitGlyphTransposedAlphaRows",
+      "evidence": "Row kernel that blends a colour by the transposed glyph coverage times an alpha.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:th.a([I[[B)[[B",
+      "originalName": "a",
+      "to": "remapMasks",
+      "evidence": "Replaces each non-zero mask value by the grey level of its palette entry.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.remapMasks([I[[B)[[B"
     },
     {
       "symbol": "M:th.b(IIIIIIIZ)V",
       "originalName": "b",
       "to": "drawGlyphAlpha",
-      "evidence": "Clips and draws one glyph mask in a colour with an alpha. Resolved override family. Resolved override family.",
+      "evidence": "Clips and draws one anti-aliased glyph mask in a colour with an alpha.",
       "confidence": "reviewed",
       "renamedSymbol": "M:th.drawGlyphAlpha(IIIIIIIZ)V"
     },
@@ -12855,9 +12975,17 @@
       "symbol": "M:th.b(IIIIIIZ)V",
       "originalName": "b",
       "to": "drawGlyph",
-      "evidence": "Clips and draws one glyph mask in a colour. Resolved override family. Resolved override family.",
+      "evidence": "Clips and draws one anti-aliased glyph mask in a colour.",
       "confidence": "reviewed",
       "renamedSymbol": "M:th.drawGlyph(IIIIIIZ)V"
+    },
+    {
+      "symbol": "M:th.b([I[BIIIIIIII)V",
+      "originalName": "b",
+      "to": "blitGlyphAlphaRows",
+      "evidence": "Row kernel that blends a colour over the target by the glyph coverage times an alpha.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.blitGlyphAlphaRows([I[BIIIIIIII)V"
     },
     {
       "symbol": "M:ti.a(JI)Loh;",
@@ -74278,7 +74406,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#0",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#0",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -74289,7 +74417,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#1",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#1",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -74300,7 +74428,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#10",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#10",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -74311,7 +74439,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#2",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#2",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -74322,7 +74450,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#3",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#3",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -74333,7 +74461,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#4",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#4",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -74344,7 +74472,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#5",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#5",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -74355,7 +74483,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#6",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#6",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#6",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -74366,7 +74494,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#7",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#7",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#7",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -74377,7 +74505,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#8",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#8",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#8",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -74388,7 +74516,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;B)I#9",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;B)I#9",
+      "renamedSymbol": "L:Archive.getGroupProgressByName(Ljava/lang/String;B)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -74399,7 +74527,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -74410,7 +74538,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -74421,7 +74549,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#10",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#10",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#10",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -74432,7 +74560,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#11",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#11",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#11",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -74443,7 +74571,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#12",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#12",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -74454,7 +74582,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#13",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#13",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -74465,7 +74593,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -74476,7 +74604,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -74487,7 +74615,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -74498,7 +74626,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#5",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -74509,7 +74637,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#6",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -74520,7 +74648,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#7",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -74531,7 +74659,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#8",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -74542,7 +74670,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
+      "renamedSymbol": "L:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#9",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -74553,7 +74681,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -74564,7 +74692,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -74575,7 +74703,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#2",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#2",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -74586,7 +74714,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#3",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#3",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -74597,7 +74725,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#4",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#4",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#4",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -74608,7 +74736,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#5",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#5",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -74619,7 +74747,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#6",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#6",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#6",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -74630,7 +74758,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#7",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#7",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#7",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -74641,7 +74769,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#8",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#8",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -74652,7 +74780,7 @@
     },
     {
       "symbol": "L:bc.a(Ljava/lang/String;I)Z#9",
-      "renamedSymbol": "L:Archive.a(Ljava/lang/String;I)Z#9",
+      "renamedSymbol": "L:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -74663,7 +74791,7 @@
     },
     {
       "symbol": "L:bc.a(ZI)[B#0",
-      "renamedSymbol": "L:Archive.a(ZI)[B#0",
+      "renamedSymbol": "L:Archive.getSingleFileBytes(ZI)[B#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -75015,7 +75143,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -75026,7 +75154,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -75037,7 +75165,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#2",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#2",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -75048,7 +75176,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#3",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#3",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -75059,7 +75187,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#4",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#4",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -75070,7 +75198,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#5",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#5",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#5",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -75081,7 +75209,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#6",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#6",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#6",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -75092,7 +75220,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#7",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#7",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -75103,7 +75231,7 @@
     },
     {
       "symbol": "L:bc.b(Ljava/lang/String;B)Z#8",
-      "renamedSymbol": "L:Archive.b(Ljava/lang/String;B)Z#8",
+      "renamedSymbol": "L:Archive.hasGroupByName(Ljava/lang/String;B)Z#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -256108,7 +256236,7 @@
     },
     {
       "symbol": "L:rn.a(B)V#0",
-      "renamedSymbol": "L:DiskCacheWorker.a(B)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -256119,7 +256247,7 @@
     },
     {
       "symbol": "L:rn.a(B)V#1",
-      "renamedSymbol": "L:DiskCacheWorker.a(B)V#1",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(B)V#1",
       "originalName": "interruptedException",
       "renamedName": "interruptedException",
       "declaration": {
@@ -256130,7 +256258,7 @@
     },
     {
       "symbol": "L:rn.a(B)V#2",
-      "renamedSymbol": "L:DiskCacheWorker.a(B)V#2",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(B)V#2",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -256141,7 +256269,7 @@
     },
     {
       "symbol": "L:rn.a(B)V#3",
-      "renamedSymbol": "L:DiskCacheWorker.a(B)V#3",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(B)V#3",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -256163,7 +256291,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#0",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#0",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -256174,7 +256302,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#1",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#1",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -256185,7 +256313,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#10",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#10",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -256196,7 +256324,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#11",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#11",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -256207,7 +256335,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#2",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#2",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -256218,7 +256346,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#3",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#3",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -256229,7 +256357,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#4",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#4",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -256240,7 +256368,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#5",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#5",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#5",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -256251,7 +256379,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#6",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#6",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#6",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -256262,7 +256390,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#7",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#7",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#7",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -256273,7 +256401,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#8",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#8",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#8",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -256284,7 +256412,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I)Lak;#9",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#9",
+      "renamedSymbol": "L:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#9",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -256295,7 +256423,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#0",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#0",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -256306,7 +256434,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#1",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#1",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#1",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -256317,7 +256445,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#10",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#10",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -256328,7 +256456,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#2",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#2",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -256339,7 +256467,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#3",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#3",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -256350,7 +256478,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#4",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#4",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -256361,7 +256489,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#5",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#5",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -256372,7 +256500,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#6",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#6",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -256383,7 +256511,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#7",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#7",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#7",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -256394,7 +256522,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#8",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#8",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#8",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -256405,7 +256533,7 @@
     },
     {
       "symbol": "L:rn.a(ILua;I[B)Lak;#9",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#9",
+      "renamedSymbol": "L:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -256416,7 +256544,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#0",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -256427,7 +256555,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#1",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#1",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -256438,7 +256566,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#2",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#2",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#2",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -256449,7 +256577,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#3",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#3",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#3",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -256460,7 +256588,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#4",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#4",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -256471,7 +256599,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#5",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#5",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -256482,7 +256610,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#6",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#6",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#6",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -256493,7 +256621,7 @@
     },
     {
       "symbol": "L:rn.a(Lak;I)V#7",
-      "renamedSymbol": "L:DiskCacheWorker.a(LDiskArchiveRequest;I)V#7",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -276986,7 +277114,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIII)V#0",
-      "renamedSymbol": "L:th.a([I[BIIIIIII)V#0",
+      "renamedSymbol": "L:th.blitGlyphRows([I[BIIIIIII)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -276997,7 +277125,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIII)V#1",
-      "renamedSymbol": "L:th.a([I[BIIIIIII)V#1",
+      "renamedSymbol": "L:th.blitGlyphRows([I[BIIIIIII)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -277008,7 +277136,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIII)V#2",
-      "renamedSymbol": "L:th.a([I[BIIIIIII)V#2",
+      "renamedSymbol": "L:th.blitGlyphRows([I[BIIIIIII)V#2",
       "originalName": "incrementValue$11",
       "renamedName": "incrementValue$11",
       "declaration": {
@@ -277019,7 +277147,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIII)V#3",
-      "renamedSymbol": "L:th.a([I[BIIIIIII)V#3",
+      "renamedSymbol": "L:th.blitGlyphRows([I[BIIIIIII)V#3",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -277030,7 +277158,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIII)V#4",
-      "renamedSymbol": "L:th.a([I[BIIIIIII)V#4",
+      "renamedSymbol": "L:th.blitGlyphRows([I[BIIIIIII)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -277041,7 +277169,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIII)V#5",
-      "renamedSymbol": "L:th.a([I[BIIIIIII)V#5",
+      "renamedSymbol": "L:th.blitGlyphRows([I[BIIIIIII)V#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -277052,7 +277180,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIII)V#6",
-      "renamedSymbol": "L:th.a([I[BIIIIIII)V#6",
+      "renamedSymbol": "L:th.blitGlyphRows([I[BIIIIIII)V#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -277063,7 +277191,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIII)V#0",
-      "renamedSymbol": "L:th.a([I[BIIIIIIII)V#0",
+      "renamedSymbol": "L:th.blitGlyphTransposedRows([I[BIIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -277074,7 +277202,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIII)V#1",
-      "renamedSymbol": "L:th.a([I[BIIIIIIII)V#1",
+      "renamedSymbol": "L:th.blitGlyphTransposedRows([I[BIIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -277085,7 +277213,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIII)V#2",
-      "renamedSymbol": "L:th.a([I[BIIIIIIII)V#2",
+      "renamedSymbol": "L:th.blitGlyphTransposedRows([I[BIIIIIIII)V#2",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -277096,7 +277224,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIII)V#3",
-      "renamedSymbol": "L:th.a([I[BIIIIIIII)V#3",
+      "renamedSymbol": "L:th.blitGlyphTransposedRows([I[BIIIIIIII)V#3",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -277107,7 +277235,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIII)V#4",
-      "renamedSymbol": "L:th.a([I[BIIIIIIII)V#4",
+      "renamedSymbol": "L:th.blitGlyphTransposedRows([I[BIIIIIIII)V#4",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -277118,7 +277246,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIII)V#5",
-      "renamedSymbol": "L:th.a([I[BIIIIIIII)V#5",
+      "renamedSymbol": "L:th.blitGlyphTransposedRows([I[BIIIIIIII)V#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -277129,7 +277257,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIIII)V#0",
-      "renamedSymbol": "L:th.a([I[BIIIIIIIII)V#0",
+      "renamedSymbol": "L:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -277140,7 +277268,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIIII)V#1",
-      "renamedSymbol": "L:th.a([I[BIIIIIIIII)V#1",
+      "renamedSymbol": "L:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -277151,7 +277279,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIIII)V#2",
-      "renamedSymbol": "L:th.a([I[BIIIIIIIII)V#2",
+      "renamedSymbol": "L:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#2",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -277162,7 +277290,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIIII)V#3",
-      "renamedSymbol": "L:th.a([I[BIIIIIIIII)V#3",
+      "renamedSymbol": "L:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#3",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -277173,7 +277301,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIIII)V#4",
-      "renamedSymbol": "L:th.a([I[BIIIIIIIII)V#4",
+      "renamedSymbol": "L:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#4",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -277184,7 +277312,7 @@
     },
     {
       "symbol": "L:th.a([I[BIIIIIIIII)V#5",
-      "renamedSymbol": "L:th.a([I[BIIIIIIIII)V#5",
+      "renamedSymbol": "L:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -277195,7 +277323,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#0",
-      "renamedSymbol": "L:th.a([I[[B)[[B#0",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -277206,7 +277334,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#1",
-      "renamedSymbol": "L:th.a([I[[B)[[B#1",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -277217,7 +277345,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#2",
-      "renamedSymbol": "L:th.a([I[[B)[[B#2",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -277228,7 +277356,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#3",
-      "renamedSymbol": "L:th.a([I[[B)[[B#3",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -277239,7 +277367,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#4",
-      "renamedSymbol": "L:th.a([I[[B)[[B#4",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#4",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -277250,7 +277378,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#5",
-      "renamedSymbol": "L:th.a([I[[B)[[B#5",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -277261,7 +277389,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#6",
-      "renamedSymbol": "L:th.a([I[[B)[[B#6",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -277272,7 +277400,7 @@
     },
     {
       "symbol": "L:th.a([I[[B)[[B#7",
-      "renamedSymbol": "L:th.a([I[[B)[[B#7",
+      "renamedSymbol": "L:th.remapMasks([I[[B)[[B#7",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -277437,7 +277565,7 @@
     },
     {
       "symbol": "L:th.b([I[BIIIIIIII)V#0",
-      "renamedSymbol": "L:th.b([I[BIIIIIIII)V#0",
+      "renamedSymbol": "L:th.blitGlyphAlphaRows([I[BIIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -277448,7 +277576,7 @@
     },
     {
       "symbol": "L:th.b([I[BIIIIIIII)V#1",
-      "renamedSymbol": "L:th.b([I[BIIIIIIII)V#1",
+      "renamedSymbol": "L:th.blitGlyphAlphaRows([I[BIIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -277459,7 +277587,7 @@
     },
     {
       "symbol": "L:th.b([I[BIIIIIIII)V#2",
-      "renamedSymbol": "L:th.b([I[BIIIIIIII)V#2",
+      "renamedSymbol": "L:th.blitGlyphAlphaRows([I[BIIIIIIII)V#2",
       "originalName": "incrementValue$11",
       "renamedName": "incrementValue$11",
       "declaration": {
@@ -277470,7 +277598,7 @@
     },
     {
       "symbol": "L:th.b([I[BIIIIIIII)V#3",
-      "renamedSymbol": "L:th.b([I[BIIIIIIII)V#3",
+      "renamedSymbol": "L:th.blitGlyphAlphaRows([I[BIIIIIIII)V#3",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -277481,7 +277609,7 @@
     },
     {
       "symbol": "L:th.b([I[BIIIIIIII)V#4",
-      "renamedSymbol": "L:th.b([I[BIIIIIIII)V#4",
+      "renamedSymbol": "L:th.blitGlyphAlphaRows([I[BIIIIIIII)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -277492,7 +277620,7 @@
     },
     {
       "symbol": "L:th.b([I[BIIIIIIII)V#5",
-      "renamedSymbol": "L:th.b([I[BIIIIIIII)V#5",
+      "renamedSymbol": "L:th.blitGlyphAlphaRows([I[BIIIIIIII)V#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -277503,7 +277631,7 @@
     },
     {
       "symbol": "L:th.b([I[BIIIIIIII)V#6",
-      "renamedSymbol": "L:th.b([I[BIIIIIIII)V#6",
+      "renamedSymbol": "L:th.blitGlyphAlphaRows([I[BIIIIIIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -312824,9 +312952,9 @@
     },
     {
       "symbol": "M:bc.a(BII)Z",
-      "renamedSymbol": "M:Archive.a(BII)Z",
+      "renamedSymbol": "M:Archive.isFileReady(BII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isFileReady",
       "declaration": {
         "file": "bc.java",
         "start": 21407,
@@ -312923,9 +313051,9 @@
     },
     {
       "symbol": "M:bc.a(Ljava/lang/String;B)I",
-      "renamedSymbol": "M:Archive.a(Ljava/lang/String;B)I",
+      "renamedSymbol": "M:Archive.getGroupProgressByName(Ljava/lang/String;B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupProgressByName",
       "declaration": {
         "file": "bc.java",
         "start": 4440,
@@ -312934,9 +313062,9 @@
     },
     {
       "symbol": "M:bc.a(Ljava/lang/String;BLjava/lang/String;)Z",
-      "renamedSymbol": "M:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z",
+      "renamedSymbol": "M:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isFileReadyByName",
       "declaration": {
         "file": "bc.java",
         "start": 8819,
@@ -312945,9 +313073,9 @@
     },
     {
       "symbol": "M:bc.a(Ljava/lang/String;I)Z",
-      "renamedSymbol": "M:Archive.a(Ljava/lang/String;I)Z",
+      "renamedSymbol": "M:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "ensureGroupLoadedByName",
       "declaration": {
         "file": "bc.java",
         "start": 11542,
@@ -312956,9 +313084,9 @@
     },
     {
       "symbol": "M:bc.a(ZI)[B",
-      "renamedSymbol": "M:Archive.a(ZI)[B",
+      "renamedSymbol": "M:Archive.getSingleFileBytes(ZI)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSingleFileBytes",
       "declaration": {
         "file": "bc.java",
         "start": 22627,
@@ -313033,9 +313161,9 @@
     },
     {
       "symbol": "M:bc.b(II)Z",
-      "renamedSymbol": "M:Archive.b(II)Z",
+      "renamedSymbol": "M:Archive.ensureGroupLoaded(II)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "ensureGroupLoaded",
       "declaration": {
         "file": "bc.java",
         "start": 34023,
@@ -313044,9 +313172,9 @@
     },
     {
       "symbol": "M:bc.b(Ljava/lang/String;B)Z",
-      "renamedSymbol": "M:Archive.b(Ljava/lang/String;B)Z",
+      "renamedSymbol": "M:Archive.hasGroupByName(Ljava/lang/String;B)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "hasGroupByName",
       "declaration": {
         "file": "bc.java",
         "start": 16369,
@@ -341391,9 +341519,9 @@
     },
     {
       "symbol": "M:rn.a(B)V",
-      "renamedSymbol": "M:DiskCacheWorker.a(B)V",
+      "renamedSymbol": "M:DiskCacheWorker.shutdown(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "rn.java",
         "start": 15814,
@@ -341424,9 +341552,9 @@
     },
     {
       "symbol": "M:rn.a(ILua;I)Lak;",
-      "renamedSymbol": "M:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;",
+      "renamedSymbol": "M:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "read",
       "declaration": {
         "file": "rn.java",
         "start": 4873,
@@ -341435,9 +341563,9 @@
     },
     {
       "symbol": "M:rn.a(ILua;I[B)Lak;",
-      "renamedSymbol": "M:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;",
+      "renamedSymbol": "M:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "queueWrite",
       "declaration": {
         "file": "rn.java",
         "start": 12010,
@@ -341446,9 +341574,9 @@
     },
     {
       "symbol": "M:rn.a(Lak;I)V",
-      "renamedSymbol": "M:DiskCacheWorker.a(LDiskArchiveRequest;I)V",
+      "renamedSymbol": "M:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueue",
       "declaration": {
         "file": "rn.java",
         "start": 9290,
@@ -344317,9 +344445,9 @@
     },
     {
       "symbol": "M:th.a([I[BIIIIIII)V",
-      "renamedSymbol": "M:th.a([I[BIIIIIII)V",
+      "renamedSymbol": "M:th.blitGlyphRows([I[BIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitGlyphRows",
       "declaration": {
         "file": "th.java",
         "start": 10127,
@@ -344328,9 +344456,9 @@
     },
     {
       "symbol": "M:th.a([I[BIIIIIIII)V",
-      "renamedSymbol": "M:th.a([I[BIIIIIIII)V",
+      "renamedSymbol": "M:th.blitGlyphTransposedRows([I[BIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitGlyphTransposedRows",
       "declaration": {
         "file": "th.java",
         "start": 9058,
@@ -344339,9 +344467,9 @@
     },
     {
       "symbol": "M:th.a([I[BIIIIIIIII)V",
-      "renamedSymbol": "M:th.a([I[BIIIIIIIII)V",
+      "renamedSymbol": "M:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitGlyphTransposedAlphaRows",
       "declaration": {
         "file": "th.java",
         "start": 11241,
@@ -344350,9 +344478,9 @@
     },
     {
       "symbol": "M:th.a([I[[B)[[B",
-      "renamedSymbol": "M:th.a([I[[B)[[B",
+      "renamedSymbol": "M:th.remapMasks([I[[B)[[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "remapMasks",
       "declaration": {
         "file": "th.java",
         "start": 1770,
@@ -344383,9 +344511,9 @@
     },
     {
       "symbol": "M:th.b([I[BIIIIIIII)V",
-      "renamedSymbol": "M:th.b([I[BIIIIIIII)V",
+      "renamedSymbol": "M:th.blitGlyphAlphaRows([I[BIIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitGlyphAlphaRows",
       "declaration": {
         "file": "th.java",
         "start": 7912,
@@ -356758,7 +356886,7 @@
     },
     {
       "symbol": "P:bc.a(BII)Z#0",
-      "renamedSymbol": "P:Archive.a(BII)Z#0",
+      "renamedSymbol": "P:Archive.isFileReady(BII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -356769,7 +356897,7 @@
     },
     {
       "symbol": "P:bc.a(BII)Z#1",
-      "renamedSymbol": "P:Archive.a(BII)Z#1",
+      "renamedSymbol": "P:Archive.isFileReady(BII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -356780,7 +356908,7 @@
     },
     {
       "symbol": "P:bc.a(BII)Z#2",
-      "renamedSymbol": "P:Archive.a(BII)Z#2",
+      "renamedSymbol": "P:Archive.isFileReady(BII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -357022,7 +357150,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/lang/String;B)I#0",
-      "renamedSymbol": "P:Archive.a(Ljava/lang/String;B)I#0",
+      "renamedSymbol": "P:Archive.getGroupProgressByName(Ljava/lang/String;B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -357033,7 +357161,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/lang/String;B)I#1",
-      "renamedSymbol": "P:Archive.a(Ljava/lang/String;B)I#1",
+      "renamedSymbol": "P:Archive.getGroupProgressByName(Ljava/lang/String;B)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -357044,7 +357172,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
-      "renamedSymbol": "P:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "renamedSymbol": "P:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -357055,7 +357183,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
-      "renamedSymbol": "P:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "renamedSymbol": "P:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -357066,7 +357194,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
-      "renamedSymbol": "P:Archive.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "renamedSymbol": "P:Archive.isFileReadyByName(Ljava/lang/String;BLjava/lang/String;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -357077,7 +357205,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "P:Archive.a(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "P:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -357088,7 +357216,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "P:Archive.a(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "P:Archive.ensureGroupLoadedByName(Ljava/lang/String;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -357099,7 +357227,7 @@
     },
     {
       "symbol": "P:bc.a(ZI)[B#0",
-      "renamedSymbol": "P:Archive.a(ZI)[B#0",
+      "renamedSymbol": "P:Archive.getSingleFileBytes(ZI)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -357110,7 +357238,7 @@
     },
     {
       "symbol": "P:bc.a(ZI)[B#1",
-      "renamedSymbol": "P:Archive.a(ZI)[B#1",
+      "renamedSymbol": "P:Archive.getSingleFileBytes(ZI)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -357275,7 +357403,7 @@
     },
     {
       "symbol": "P:bc.b(II)Z#0",
-      "renamedSymbol": "P:Archive.b(II)Z#0",
+      "renamedSymbol": "P:Archive.ensureGroupLoaded(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -357286,7 +357414,7 @@
     },
     {
       "symbol": "P:bc.b(II)Z#1",
-      "renamedSymbol": "P:Archive.b(II)Z#1",
+      "renamedSymbol": "P:Archive.ensureGroupLoaded(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -357297,7 +357425,7 @@
     },
     {
       "symbol": "P:bc.b(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "P:Archive.b(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "P:Archive.hasGroupByName(Ljava/lang/String;B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -357308,7 +357436,7 @@
     },
     {
       "symbol": "P:bc.b(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "P:Archive.b(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "P:Archive.hasGroupByName(Ljava/lang/String;B)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -426553,7 +426681,7 @@
     },
     {
       "symbol": "P:rn.a(B)V#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(B)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.shutdown(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426630,7 +426758,7 @@
     },
     {
       "symbol": "P:rn.a(ILua;I)Lak;#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#0",
+      "renamedSymbol": "P:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426641,7 +426769,7 @@
     },
     {
       "symbol": "P:rn.a(ILua;I)Lak;#1",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#1",
+      "renamedSymbol": "P:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -426652,7 +426780,7 @@
     },
     {
       "symbol": "P:rn.a(ILua;I)Lak;#2",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILSectorCacheStore;I)LDiskArchiveRequest;#2",
+      "renamedSymbol": "P:DiskCacheWorker.read(ILSectorCacheStore;I)LDiskArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -426663,7 +426791,7 @@
     },
     {
       "symbol": "P:rn.a(ILua;I[B)Lak;#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#0",
+      "renamedSymbol": "P:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426674,7 +426802,7 @@
     },
     {
       "symbol": "P:rn.a(ILua;I[B)Lak;#1",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#1",
+      "renamedSymbol": "P:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -426685,7 +426813,7 @@
     },
     {
       "symbol": "P:rn.a(ILua;I[B)Lak;#2",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#2",
+      "renamedSymbol": "P:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -426696,7 +426824,7 @@
     },
     {
       "symbol": "P:rn.a(ILua;I[B)Lak;#3",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILSectorCacheStore;I[B)LDiskArchiveRequest;#3",
+      "renamedSymbol": "P:DiskCacheWorker.queueWrite(ILSectorCacheStore;I[B)LDiskArchiveRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -426707,7 +426835,7 @@
     },
     {
       "symbol": "P:rn.a(Lak;I)V#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(LDiskArchiveRequest;I)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426718,7 +426846,7 @@
     },
     {
       "symbol": "P:rn.a(Lak;I)V#1",
-      "renamedSymbol": "P:DiskCacheWorker.a(LDiskArchiveRequest;I)V#1",
+      "renamedSymbol": "P:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434033,7 +434161,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#0",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#0",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434044,7 +434172,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#1",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#1",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434055,7 +434183,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#2",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#2",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -434066,7 +434194,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#3",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#3",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -434077,7 +434205,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#4",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#4",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -434088,7 +434216,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#5",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#5",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -434099,7 +434227,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#6",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#6",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -434110,7 +434238,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#7",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#7",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -434121,7 +434249,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIII)V#8",
-      "renamedSymbol": "P:th.a([I[BIIIIIII)V#8",
+      "renamedSymbol": "P:th.blitGlyphRows([I[BIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -434132,7 +434260,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#0",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#0",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434143,7 +434271,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#1",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#1",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434154,7 +434282,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#2",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#2",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -434165,7 +434293,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#3",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#3",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -434176,7 +434304,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#4",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#4",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -434187,7 +434315,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#5",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#5",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -434198,7 +434326,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#6",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#6",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -434209,7 +434337,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#7",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#7",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -434220,7 +434348,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#8",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#8",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -434231,7 +434359,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIII)V#9",
-      "renamedSymbol": "P:th.a([I[BIIIIIIII)V#9",
+      "renamedSymbol": "P:th.blitGlyphTransposedRows([I[BIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -434242,7 +434370,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#0",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#0",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434253,7 +434381,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#1",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#1",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434264,7 +434392,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#10",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#10",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -434275,7 +434403,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#2",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#2",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -434286,7 +434414,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#3",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#3",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -434297,7 +434425,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#4",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#4",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -434308,7 +434436,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#5",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#5",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -434319,7 +434447,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#6",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#6",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -434330,7 +434458,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#7",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#7",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -434341,7 +434469,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#8",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#8",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -434352,7 +434480,7 @@
     },
     {
       "symbol": "P:th.a([I[BIIIIIIIII)V#9",
-      "renamedSymbol": "P:th.a([I[BIIIIIIIII)V#9",
+      "renamedSymbol": "P:th.blitGlyphTransposedAlphaRows([I[BIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -434363,7 +434491,7 @@
     },
     {
       "symbol": "P:th.a([I[[B)[[B#0",
-      "renamedSymbol": "P:th.a([I[[B)[[B#0",
+      "renamedSymbol": "P:th.remapMasks([I[[B)[[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434374,7 +434502,7 @@
     },
     {
       "symbol": "P:th.a([I[[B)[[B#1",
-      "renamedSymbol": "P:th.a([I[[B)[[B#1",
+      "renamedSymbol": "P:th.remapMasks([I[[B)[[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434550,7 +434678,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#0",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#0",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434561,7 +434689,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#1",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#1",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434572,7 +434700,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#2",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#2",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -434583,7 +434711,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#3",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#3",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -434594,7 +434722,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#4",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#4",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -434605,7 +434733,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#5",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#5",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -434616,7 +434744,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#6",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#6",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -434627,7 +434755,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#7",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#7",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -434638,7 +434766,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#8",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#8",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -434649,7 +434777,7 @@
     },
     {
       "symbol": "P:th.b([I[BIIIIIIII)V#9",
-      "renamedSymbol": "P:th.b([I[BIIIIIIII)V#9",
+      "renamedSymbol": "P:th.blitGlyphAlphaRows([I[BIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -448128,7 +448256,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "47301b77ed2fdcd919131a27b64d5504b969b531b3207ac81fa551b28d0f6325",
+      "outputSha256": "64a666b4c7f7ef1f760f4e09e6b345bca97c5bcb345952af91601ea405200128",
       "edits": [
         {
           "start": 128,
@@ -449750,6 +449878,13 @@
           "renamed": "AttackTask"
         },
         {
+          "start": 23854,
+          "end": 23855,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 23887,
           "end": 23889,
           "symbol": "C:kl",
@@ -449771,11 +449906,25 @@
           "renamed": "AttackTask"
         },
         {
+          "start": 23938,
+          "end": 23939,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 23992,
           "end": 23993,
           "symbol": "M:bc.b(B)Z",
           "original": "b",
           "renamed": "isIndexLoaded"
+        },
+        {
+          "start": 24034,
+          "end": 24035,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 24080,
@@ -449895,6 +450044,13 @@
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 24529,
+          "end": 24530,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 24571,
@@ -464298,7 +464454,7 @@
       "original": "bc.java",
       "renamed": "Archive.java",
       "inputSha256": "0251dde79a293019ee424a736ad340cd2fc69eff2c0fcd6b301f6a7cd2cc9dde",
-      "outputSha256": "9b35e4c481d2dcbe9a59084a92a35d6a468ab02da9161c83c9a12621e7390c07",
+      "outputSha256": "4709a0f110ad7d7376a767465012c7350ca1ae7a811e0e0cd3f9a84a8cbda2b2",
       "edits": [
         {
           "start": 50,
@@ -464441,6 +464597,13 @@
           "renamed": "isIndexLoaded"
         },
         {
+          "start": 4440,
+          "end": 4441,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
+        },
+        {
           "start": 4980,
           "end": 4981,
           "symbol": "M:bc.b(B)Z",
@@ -464518,6 +464681,13 @@
           "renamed": "preloadAll"
         },
         {
+          "start": 6773,
+          "end": 6774,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
+        },
+        {
           "start": 6832,
           "end": 6833,
           "symbol": "M:bc.b(B)Z",
@@ -464581,6 +464751,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 8819,
+          "end": 8820,
+          "symbol": "M:bc.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFileReadyByName"
+        },
+        {
           "start": 9392,
           "end": 9393,
           "symbol": "M:bc.b(B)Z",
@@ -464623,6 +464800,13 @@
           "renamed": "DerelictMapGenerator"
         },
         {
+          "start": 10049,
+          "end": 10050,
+          "symbol": "M:bc.a(BII)Z",
+          "original": "a",
+          "renamed": "isFileReady"
+        },
+        {
           "start": 10798,
           "end": 10799,
           "symbol": "C:r",
@@ -464658,6 +464842,13 @@
           "renamed": "Territory"
         },
         {
+          "start": 11542,
+          "end": 11543,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 11945,
           "end": 11946,
           "symbol": "M:bc.b(B)Z",
@@ -464677,6 +464868,13 @@
           "symbol": "C:pc",
           "original": "pc",
           "renamed": "DerelictMapGenerator"
+        },
+        {
+          "start": 12234,
+          "end": 12235,
+          "symbol": "M:bc.b(II)Z",
+          "original": "b",
+          "renamed": "ensureGroupLoaded"
         },
         {
           "start": 12704,
@@ -464798,6 +464996,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 16369,
+          "end": 16370,
+          "symbol": "M:bc.b(Ljava/lang/String;B)Z",
+          "original": "b",
+          "renamed": "hasGroupByName"
+        },
+        {
           "start": 16754,
           "end": 16755,
           "symbol": "M:bc.b(B)Z",
@@ -464852,6 +465057,13 @@
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "Territory"
+        },
+        {
+          "start": 18248,
+          "end": 18249,
+          "symbol": "M:bc.a(BII)Z",
+          "original": "a",
+          "renamed": "isFileReady"
         },
         {
           "start": 18349,
@@ -464980,6 +465192,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 21407,
+          "end": 21408,
+          "symbol": "M:bc.a(BII)Z",
+          "original": "a",
+          "renamed": "isFileReady"
+        },
+        {
           "start": 21541,
           "end": 21542,
           "symbol": "M:bc.b(BII)Z",
@@ -465015,6 +465234,13 @@
           "renamed": "getGroupProgress"
         },
         {
+          "start": 22627,
+          "end": 22628,
+          "symbol": "M:bc.a(ZI)[B",
+          "original": "a",
+          "renamed": "getSingleFileBytes"
+        },
+        {
           "start": 22677,
           "end": 22678,
           "symbol": "M:bc.b(B)Z",
@@ -465034,6 +465260,13 @@
           "symbol": "M:bc.b(BI)Z",
           "original": "b",
           "renamed": "isValidGroup"
+        },
+        {
+          "start": 22978,
+          "end": 22979,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
         },
         {
           "start": 23088,
@@ -465328,6 +465561,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 34023,
+          "end": 34024,
+          "symbol": "M:bc.b(II)Z",
+          "original": "b",
+          "renamed": "ensureGroupLoaded"
         },
         {
           "start": 34069,
@@ -466326,7 +466566,7 @@
       "original": "bh.java",
       "renamed": "BoundsRect.java",
       "inputSha256": "df3e7d4e5e23988ec4b6a8f7780f47cea6c7a13db9532320aa3d8fbaad25459b",
-      "outputSha256": "5f506628c6c8810e4ab5d7ad325cd5bb4618ac1ba0712a2aca494f9ab5cb3bd5",
+      "outputSha256": "927cd00d15a31f290abaa272c1dde3ee45a4559d2ee50ae1f629b5015e0d0b05",
       "edits": [
         {
           "start": 50,
@@ -466411,6 +466651,13 @@
           "symbol": "M:bc.b(B)Z",
           "original": "b",
           "renamed": "isIndexLoaded"
+        },
+        {
+          "start": 2491,
+          "end": 2492,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
         },
         {
           "start": 3702,
@@ -497625,7 +497872,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "179bd9af3092e8e49d527198f9c9208c5bd3f3cd0e4b8c22755aecc215ffc569",
-      "outputSha256": "ba30f790cd4b65888eb08cd4bc2644f7c95af54dad87547c85b36dff26d3fc2f",
+      "outputSha256": "cd1b8aba4c62687037054ccd4fdc2b5461758c0001d9972d03d9db6781fab06d",
       "edits": [
         {
           "start": 239,
@@ -498181,11 +498428,25 @@
           "renamed": "LinkPainter"
         },
         {
+          "start": 8982,
+          "end": 8983,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 9064,
           "end": 9065,
           "symbol": "M:bc.b(B)Z",
           "original": "b",
           "renamed": "isIndexLoaded"
+        },
+        {
+          "start": 9143,
+          "end": 9144,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 9216,
@@ -498244,11 +498505,25 @@
           "renamed": "StarAnnotation"
         },
         {
+          "start": 9522,
+          "end": 9523,
+          "symbol": "M:bc.b(Ljava/lang/String;B)Z",
+          "original": "b",
+          "renamed": "hasGroupByName"
+        },
+        {
           "start": 9600,
           "end": 9602,
           "symbol": "C:es",
           "original": "es",
           "renamed": "StarAnnotation"
+        },
+        {
+          "start": 9611,
+          "end": 9612,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 9691,
@@ -498272,11 +498547,25 @@
           "renamed": "LinkPainter"
         },
         {
+          "start": 9780,
+          "end": 9781,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 9863,
           "end": 9864,
           "symbol": "M:bc.b(B)Z",
           "original": "b",
           "renamed": "isIndexLoaded"
+        },
+        {
+          "start": 9941,
+          "end": 9942,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 10014,
@@ -505746,7 +506035,7 @@
       "original": "fd.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "88e0ac6479a7b3b469c8ba4ffd941a1e9bf1539018e65a692b376fa661f04648",
-      "outputSha256": "55ca55bec43c446f3003a3bbc8803b70b51b4c3010b91814c4425001b514c9c8",
+      "outputSha256": "6496d46462dfe4697be9bccec56ef92be46f3f7ca48c2c07604924b54a32656f",
       "edits": [
         {
           "start": 69,
@@ -506232,6 +506521,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 24144,
+          "end": 24145,
+          "symbol": "M:bc.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFileReadyByName"
+        },
+        {
           "start": 24241,
           "end": 24242,
           "symbol": "M:bc.a(ZLjava/lang/String;Ljava/lang/String;)[B",
@@ -506398,6 +506694,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 28039,
+          "end": 28040,
+          "symbol": "M:bc.a(BII)Z",
+          "original": "a",
+          "renamed": "isFileReady"
         },
         {
           "start": 28138,
@@ -512856,7 +513159,7 @@
       "original": "gd.java",
       "renamed": "gd.java",
       "inputSha256": "218988e0d019053c1cc9727ef02460a32e3d19ee6218ded410c07eb398b9fa2d",
-      "outputSha256": "0c66394a01c57f249de943bea6d95274f9f9a9c4ad03122728b7f702f4f634fe",
+      "outputSha256": "df32737454ed7b9fdd12b0213e2fb98538321009b2a838d4498f5cdc120fcbc2",
       "edits": [
         {
           "start": 159,
@@ -512913,6 +513216,13 @@
           "symbol": "C:hp",
           "original": "hp",
           "renamed": "DerelictVictoryChecker"
+        },
+        {
+          "start": 813,
+          "end": 814,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
         },
         {
           "start": 846,
@@ -532250,7 +532560,7 @@
       "original": "ig.java",
       "renamed": "ig.java",
       "inputSha256": "bcbaece9d30dfc17497c3aaebfa0d91998ca3f0756d77fd81912fd1c6b4ae51e",
-      "outputSha256": "dab4a365e3fb638449c8ede8569252fa0118b0e51953803593e6aeb0eeffad08",
+      "outputSha256": "4a92080be3512f2ad8abb287de2354a392efc74ed89edb1d460a60b248b0543b",
       "edits": [
         {
           "start": 93,
@@ -532295,6 +532605,13 @@
           "renamed": "isIndexLoaded"
         },
         {
+          "start": 974,
+          "end": 975,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 1055,
           "end": 1056,
           "symbol": "M:bc.b(B)Z",
@@ -532302,11 +532619,25 @@
           "renamed": "isIndexLoaded"
         },
         {
+          "start": 1091,
+          "end": 1092,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 1137,
           "end": 1138,
           "symbol": "M:bc.b(B)Z",
           "original": "b",
           "renamed": "isIndexLoaded"
+        },
+        {
+          "start": 1175,
+          "end": 1176,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 2232,
@@ -572901,7 +573232,7 @@
       "original": "lo.java",
       "renamed": "lo.java",
       "inputSha256": "5fb7e018a3328608828e7abc011c603494dacbf933347ce857ccf21acfe2f33a",
-      "outputSha256": "86a272a13ebdd6aede58c1546b9a2674a598253485543327ce2a4ca7f959c129",
+      "outputSha256": "b77e9bbf60ef24d5d60525dfbd2af5a9b4feef37fcc99a9085a8b51efa5c5593",
       "edits": [
         {
           "start": 61,
@@ -572937,6 +573268,13 @@
           "symbol": "C:br",
           "original": "br",
           "renamed": "MusicPatch"
+        },
+        {
+          "start": 845,
+          "end": 846,
+          "symbol": "M:bc.a(ZI)[B",
+          "original": "a",
+          "renamed": "getSingleFileBytes"
         },
         {
           "start": 946,
@@ -588978,7 +589316,7 @@
       "original": "oa.java",
       "renamed": "oa.java",
       "inputSha256": "8e10e3fb6861fe1f06db51edf703fb3e82eaf1e693eb0574b6a74d61cf11b1f9",
-      "outputSha256": "3a4d63c76541c539f069396d7076bd2577b80afe4590edac27646abeb5306c25",
+      "outputSha256": "70dcbb97967decf9069fb644489dc6298ad6b943681fa506e1ea7630ab0e1910",
       "edits": [
         {
           "start": 751,
@@ -589077,6 +589415,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "BattleSnapshot"
+        },
+        {
+          "start": 2155,
+          "end": 2156,
+          "symbol": "M:rn.a(B)V",
+          "original": "a",
+          "renamed": "shutdown"
         },
         {
           "start": 2270,
@@ -597262,7 +597607,7 @@
       "original": "p.java",
       "renamed": "CachedArchiveSource.java",
       "inputSha256": "0bd645edaf7535411bdb64f924bff8a02da1b048411cb440b6fef342f236e4ad",
-      "outputSha256": "d168d0d1e6cf06eb08599aa50508557b2044faf6d9a595ebf58f0123291e7cde",
+      "outputSha256": "8e8af4b1bafb085b585e9f6ff9b484e4330b50237c82a9c3e047fdfb90470b0d",
       "edits": [
         {
           "start": 50,
@@ -597813,6 +598158,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 10849,
+          "end": 10850,
+          "symbol": "M:rn.a(ILua;I[B)Lak;",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 11204,
           "end": 11206,
           "symbol": "C:jc",
@@ -597895,6 +598247,13 @@
           "symbol": "M:oh.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 13820,
+          "end": 13821,
+          "symbol": "M:rn.a(ILua;I)Lak;",
+          "original": "a",
+          "renamed": "read"
         },
         {
           "start": 14103,
@@ -598086,6 +598445,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 18151,
+          "end": 18152,
+          "symbol": "M:rn.a(ILua;I[B)Lak;",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 18393,
           "end": 18395,
           "symbol": "C:jc",
@@ -598175,6 +598541,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 19933,
+          "end": 19934,
+          "symbol": "M:rn.a(ILua;I)Lak;",
+          "original": "a",
+          "renamed": "read"
         },
         {
           "start": 21417,
@@ -617048,7 +617421,7 @@
       "original": "rn.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "5ca8332d6cdb32529a2614e2768c0d7b4029d75b1014a3b7dc2b23b195988bb8",
-      "outputSha256": "28f0d5b339509d237cfb0fbd70efc900935a6676c869247ce4a5de9a4b15539e",
+      "outputSha256": "53a4e7d2afc6633456e192a8ed51979d11d4c5ea311256b369d6e317adb4bf1e",
       "edits": [
         {
           "start": 50,
@@ -617625,6 +617998,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 4873,
+          "end": 4874,
+          "symbol": "M:rn.a(ILua;I)Lak;",
+          "original": "a",
+          "renamed": "read"
+        },
+        {
           "start": 4887,
           "end": 4889,
           "symbol": "C:ua",
@@ -617744,6 +618124,13 @@
           "renamed": "GameKeyHandler"
         },
         {
+          "start": 9290,
+          "end": 9291,
+          "symbol": "M:rn.a(Lak;I)V",
+          "original": "a",
+          "renamed": "enqueue"
+        },
+        {
           "start": 9292,
           "end": 9294,
           "symbol": "C:ak",
@@ -617770,6 +618157,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 9838,
+          "end": 9839,
+          "symbol": "M:rn.a(Lak;I)V",
+          "original": "a",
+          "renamed": "enqueue"
         },
         {
           "start": 9841,
@@ -617954,6 +618348,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 12010,
+          "end": 12011,
+          "symbol": "M:rn.a(ILua;I[B)Lak;",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 12024,
           "end": 12026,
           "symbol": "C:ua",
@@ -617982,11 +618383,25 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 12571,
+          "end": 12572,
+          "symbol": "M:rn.a(ILua;I[B)Lak;",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 12577,
           "end": 12579,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 12801,
+          "end": 12802,
+          "symbol": "M:rn.a(Lak;I)V",
+          "original": "a",
+          "renamed": "enqueue"
         },
         {
           "start": 13594,
@@ -618129,6 +618544,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 15095,
+          "end": 15096,
+          "symbol": "M:rn.a(Lak;I)V",
+          "original": "a",
+          "renamed": "enqueue"
+        },
+        {
           "start": 15604,
           "end": 15605,
           "symbol": "C:r",
@@ -618141,6 +618563,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 15814,
+          "end": 15815,
+          "symbol": "M:rn.a(B)V",
+          "original": "a",
+          "renamed": "shutdown"
         },
         {
           "start": 16455,
@@ -638000,7 +638429,7 @@
       "original": "th.java",
       "renamed": "th.java",
       "inputSha256": "73354c302ad2cd786dd55a423de0e6548b94ecb00ff3d0f71e73eab706b6a4b0",
-      "outputSha256": "9b5ee7a5942017db95f74f86329ede0707ea350e161ac9ef01d57ff444be548c",
+      "outputSha256": "db4915292881bd09185c80452b548013d49692c044c8a90feaa08b78add961ef",
       "edits": [
         {
           "start": 112,
@@ -638101,6 +638530,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1481,
+          "end": 1482,
+          "symbol": "M:th.a([I[BIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGlyphRows"
+        },
+        {
           "start": 1483,
           "end": 1485,
           "symbol": "C:gf",
@@ -638120,6 +638556,13 @@
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1770,
+          "end": 1771,
+          "symbol": "M:th.a([I[[B)[[B",
+          "original": "a",
+          "renamed": "remapMasks"
         },
         {
           "start": 2602,
@@ -638218,6 +638661,13 @@
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 3989,
+          "end": 3990,
+          "symbol": "M:th.b([I[BIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitGlyphAlphaRows"
         },
         {
           "start": 3991,
@@ -638339,6 +638789,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 5674,
+          "end": 5675,
+          "symbol": "M:th.a([I[BIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGlyphTransposedAlphaRows"
+        },
+        {
           "start": 5676,
           "end": 5678,
           "symbol": "C:gf",
@@ -638458,6 +638915,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7355,
+          "end": 7356,
+          "symbol": "M:th.a([I[BIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGlyphTransposedRows"
+        },
+        {
           "start": 7357,
           "end": 7359,
           "symbol": "C:gf",
@@ -638477,6 +638941,41 @@
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7856,
+          "end": 7857,
+          "symbol": "M:th.a([I[[B)[[B",
+          "original": "a",
+          "renamed": "remapMasks"
+        },
+        {
+          "start": 7912,
+          "end": 7913,
+          "symbol": "M:th.b([I[BIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitGlyphAlphaRows"
+        },
+        {
+          "start": 9058,
+          "end": 9059,
+          "symbol": "M:th.a([I[BIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGlyphTransposedRows"
+        },
+        {
+          "start": 10127,
+          "end": 10128,
+          "symbol": "M:th.a([I[BIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGlyphRows"
+        },
+        {
+          "start": 11241,
+          "end": 11242,
+          "symbol": "M:th.a([I[BIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGlyphTransposedAlphaRows"
         }
       ]
     },
@@ -640223,7 +640722,7 @@
       "original": "tl.java",
       "renamed": "tl.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "f969af51db294b13541af7beea5302c9990f5ac8f682cf614dab5ec2c134c6c0",
+      "outputSha256": "4f925680458fce1b2f64fdc96ff5cd0d9e36d0ec831f2850c1a32a790fafafd9",
       "edits": [
         {
           "start": 64,
@@ -641199,11 +641698,25 @@
           "renamed": "StarAnnotation"
         },
         {
+          "start": 15620,
+          "end": 15621,
+          "symbol": "M:bc.b(Ljava/lang/String;B)Z",
+          "original": "b",
+          "renamed": "hasGroupByName"
+        },
+        {
           "start": 15660,
           "end": 15662,
           "symbol": "C:es",
           "original": "es",
           "renamed": "StarAnnotation"
+        },
+        {
+          "start": 15671,
+          "end": 15672,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 15700,
@@ -649797,7 +650310,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "bfce18d1823f2122c7beece6763b8d475c5fb632ef616ef10cb34223e22d07d5",
+      "outputSha256": "448d14b6bb6b273138b7866fe7a3da301c6628997a36924960b90322b5fd89c7",
       "edits": [
         {
           "start": 50,
@@ -649994,6 +650507,13 @@
           "symbol": "C:hp",
           "original": "hp",
           "renamed": "DerelictVictoryChecker"
+        },
+        {
+          "start": 9419,
+          "end": 9420,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
         },
         {
           "start": 9460,
@@ -650866,7 +651386,7 @@
       "original": "uh.java",
       "renamed": "uh.java",
       "inputSha256": "7ab6697c29c54247fb70c9a51c0050bf7e76a96c248e2c42f3ca6f418fe6f644",
-      "outputSha256": "28549f42ebd9267f6a5a0e41ffb4b4fd74c062293f0c1d4fccd5b5d060ea432a",
+      "outputSha256": "77a61083e9249ba2ce60575b5eb8dcbee9f23aa9eaa0c442b44a4a7e90b676f5",
       "edits": [
         {
           "start": 330,
@@ -650883,11 +651403,32 @@
           "renamed": "isIndexLoaded"
         },
         {
+          "start": 932,
+          "end": 933,
+          "symbol": "M:bc.b(II)Z",
+          "original": "b",
+          "renamed": "ensureGroupLoaded"
+        },
+        {
           "start": 994,
           "end": 995,
           "symbol": "M:bc.c(BI)I",
           "original": "c",
           "renamed": "getGroupProgress"
+        },
+        {
+          "start": 1131,
+          "end": 1132,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
+          "start": 1194,
+          "end": 1195,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
         },
         {
           "start": 1399,
@@ -673103,7 +673644,7 @@
       "original": "vj.java",
       "renamed": "vj.java",
       "inputSha256": "f3e00bc8b0c9e26f8d597b2e115c1b56f15ee67f1b1f2cb9b4133e408f69644e",
-      "outputSha256": "6b1a82f1bbf6840c4edc31927fd3378a0228287647961e4f7f28cdb62f6f1b17",
+      "outputSha256": "048ad9946c648dcab81ed146ce9d96905f918601b738818bccea91bb1b14c21d",
       "edits": [
         {
           "start": 61,
@@ -673414,6 +673955,13 @@
           "renamed": "LinkPainter"
         },
         {
+          "start": 3697,
+          "end": 3698,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 3735,
           "end": 3737,
           "symbol": "C:ii",
@@ -673426,6 +673974,13 @@
           "symbol": "C:rq",
           "original": "rq",
           "renamed": "LinkPainter"
+        },
+        {
+          "start": 3767,
+          "end": 3768,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
         },
         {
           "start": 3833,
@@ -673442,11 +673997,25 @@
           "renamed": "LinkPainter"
         },
         {
+          "start": 3913,
+          "end": 3914,
+          "symbol": "M:bc.a(Ljava/lang/String;I)Z",
+          "original": "a",
+          "renamed": "ensureGroupLoadedByName"
+        },
+        {
           "start": 3952,
           "end": 3954,
           "symbol": "C:on",
           "original": "on",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 3984,
+          "end": 3985,
+          "symbol": "M:bc.a(Ljava/lang/String;B)I",
+          "original": "a",
+          "renamed": "getGroupProgressByName"
         },
         {
           "start": 4085,
@@ -680052,10 +680621,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "7ae1574bdd18bd9726dfc4c38d712fe29043adf2a293b456d92c577dec00462e",
+    "rulesSha256": "e1779084ce52c709109db12615ad645c4a4c1f0995c632012daf3eb5d27bbb17",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "2b14b679a6eef6f0855eaf008f36ca296fd590648e0cc9204acf8902305d9d31",
+    "outputTreeSha256": "399e2f5cb022e5d2a9912309eaf5a1fddd607616ff4639cdb4b5920cdddcbe80",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

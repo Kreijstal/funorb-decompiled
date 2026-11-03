@@ -323,7 +323,7 @@ final class CachedArchiveSource extends ArchiveSource {
             return null;
           }
           if (null != this.field_o) {
-            this.field_k.a(this.field_j, this.field_o, -51, var8);
+            this.field_k.queueWrite(this.field_j, this.field_o, -51, var8);
           }
         }
         if (param0 != 6) {
@@ -424,7 +424,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             if (this.field_r != null &&
               this.field_u[param2] != -1) {
-              var4 = this.field_k.a(param2, this.field_r, 1);
+              var4 = this.field_k.read(param2, this.field_r, 1);
             } else {
               if (this.field_w.c(param1 ^ 27356)) {
                 return null;
@@ -533,7 +533,7 @@ final class CachedArchiveSource extends ArchiveSource {
         var5[var18.length - 2] = (byte)(this.field_p.field_v[param2] >>> 8);
         var5[-1 + var18.length] = (byte)this.field_p.field_v[param2];
         if (this.field_r != null) {
-          this.field_k.a(param2, this.field_r, -61, var18);
+          this.field_k.queueWrite(param2, this.field_r, -61, var18);
           stackIn_59_0 = -2;
           stackIn_59_1 = ~this.field_u[param2];
           if (stackIn_59_0 != stackIn_59_1) {
@@ -583,7 +583,7 @@ final class CachedArchiveSource extends ArchiveSource {
           this.field_w = param3;
           this.field_o = param2;
           if (null != this.field_o) {
-            this.field_l = (ArchiveRequest) ((Object) this.field_k.a(this.field_j, this.field_o, 1));
+            this.field_l = (ArchiveRequest) ((Object) this.field_k.read(this.field_j, this.field_o, 1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

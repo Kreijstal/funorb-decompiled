@@ -601,7 +601,7 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
-            param0.a(param1, (byte) 5, param2);
+            param0.isFileReadyByName(param1, (byte) 5, param2);
             return null;
           }
           byte[] var3 = param0.getFileByName(true, param2, param1);
@@ -733,7 +733,7 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
-            param0.a((byte) 125, param2, param1);
+            param0.isFileReady((byte) 125, param2, param1);
             return null;
           }
           byte[] var3 = param0.getFile(param1, -1, param2);

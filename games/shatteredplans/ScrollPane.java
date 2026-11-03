@@ -234,7 +234,7 @@ final class ScrollPane extends AnimatedPanel {
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!EmailValidator.field_r) {
-            if (DerelictVictoryChecker.field_n.a("intro", param0 ^ 52)) {
+            if (DerelictVictoryChecker.field_n.ensureGroupLoadedByName("intro", param0 ^ 52)) {
               EmailValidator.field_r = true;
             }
           } else {
