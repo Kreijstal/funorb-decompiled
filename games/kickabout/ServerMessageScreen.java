@@ -63,10 +63,10 @@ final class ServerMessageScreen extends ButtonMenuScreen {
             ServerMessageScreen.a((byte) -36, 37L);
           }
           for (var21 = param7; param1 > var21; var21++) {
-            var9_int = var13 + ll.a(GameModesHelpScreen.field_F, param2 ^ -4, param0, param4, var21);
-            var10 = ll.a(IntrusiveDeque.field_g, 111, param0, param4, var21) + var14;
-            var11 = var15 + ll.a(RenderedFootballer.field_fb, 121, param0, param4, var21);
-            var12 = var16 + ll.a(RandomAccessCacheFile.field_i, 110, param0, param4, var21);
+            var9_int = var13 + DirectByteStorage.a(GameModesHelpScreen.field_F, param2 ^ -4, param0, param4, var21);
+            var10 = DirectByteStorage.a(IntrusiveDeque.field_g, 111, param0, param4, var21) + var14;
+            var11 = var15 + DirectByteStorage.a(RenderedFootballer.field_fb, 121, param0, param4, var21);
+            var12 = var16 + DirectByteStorage.a(RandomAccessCacheFile.field_i, 110, param0, param4, var21);
             if (var12 != 0) {
               var17 = ((double)var10 * (double)var10 + (double)var9_int * (double)var9_int + (double)var11 * (double)var11) / (double)var12;
               var12 = -var12 + param6;
@@ -94,7 +94,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

@@ -54,13 +54,13 @@ class iv extends DualLinkNode {
           ConsolePanel.field_q.field_p = 1;
           ConsolePanel.field_q.field_A = 1;
           ConsolePanel.field_q.field_X = (BitmapFont) ((Object) un.field_d);
-          rr.field_b = new ji("scrollbar", var6, var7, var5, var4, true);
-          it.field_m = new ji("scrollbar", ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, true);
+          rr.field_b = new ScrollBar("scrollbar", var6, var7, var5, var4, true);
+          it.field_m = new ScrollBar("scrollbar", ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, true);
           ug.field_b = new Sprite[2][2];
-          ug.field_b[0][0] = nm.a(16679959, -87, ButtonMenuScreen.field_u);
-          ug.field_b[0][1] = nm.a(16679959, -104, mg.field_g);
-          ug.field_b[1][0] = nm.a(7126504, -119, ButtonMenuScreen.field_u);
-          ug.field_b[1][1] = nm.a(7126504, -76, mg.field_g);
+          ug.field_b[0][0] = AnimationClip.a(16679959, -87, ButtonMenuScreen.field_u);
+          ug.field_b[0][1] = AnimationClip.a(16679959, -104, mg.field_g);
+          ug.field_b[1][0] = AnimationClip.a(7126504, -119, ButtonMenuScreen.field_u);
+          ug.field_b[1][1] = AnimationClip.a(7126504, -76, mg.field_g);
           var8 = new MenuButton[57];
           var8[0] = new MenuButton(-2, 7465472, 0);
           var8[1] = new MenuButton(-2, 15147554, 1);
@@ -247,24 +247,24 @@ class iv extends DualLinkNode {
           var15[10] = true;
           var16 = new String[27];
           var16[22] = uq.field_e;
-          var16[25] = he.field_Bb;
+          var16[25] = LobbyPlayerRow.field_Bb;
           var16[19] = uq.field_e;
           var16[9] = GameAppletShell.field_b;
           var16[7] = GameAppletShell.field_b;
           var18 = 101 % ((param1 + 68) / 52);
           var16[20] = uq.field_e;
-          var16[24] = he.field_Bb;
-          var16[16] = he.field_Bb;
+          var16[24] = LobbyPlayerRow.field_Bb;
+          var16[16] = LobbyPlayerRow.field_Bb;
           var16[15] = GameAppletShell.field_b;
-          var16[14] = he.field_Bb;
-          var16[23] = he.field_Bb;
+          var16[14] = LobbyPlayerRow.field_Bb;
+          var16[23] = LobbyPlayerRow.field_Bb;
           var16[21] = uq.field_e;
           var17 = new String[27];
           var17[23] = us.field_g.toLowerCase();
           var17[24] = ii.field_h.toLowerCase();
           var17[25] = oc.field_b.toLowerCase();
           var17[14] = pr.field_b.toLowerCase();
-          var17[20] = np.field_Gb;
+          var17[20] = ScrollPane.field_Gb;
           var17[9] = NotCommand.field_C;
           var17[22] = ar.field_e;
           var17[16] = ar.field_e;
@@ -301,7 +301,7 @@ class iv extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ class iv extends DualLinkNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

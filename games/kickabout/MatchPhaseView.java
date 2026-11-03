@@ -3,7 +3,7 @@
  */
 abstract class MatchPhaseView {
     static String field_b;
-    static om field_d;
+    static IconLabel field_d;
     int field_g;
     CommonGame field_a;
     static int field_e;
@@ -119,7 +119,7 @@ abstract class MatchPhaseView {
         var26 = Kickabout.field_G;
         try {
           if (param0) {
-            stackIn_4_0 = pu.a(param9, param2, param4, (byte) -103, param6, param3, param10);
+            stackIn_4_0 = TrinketSlot.a(param9, param2, param4, (byte) -103, param6, param3, param10);
             return stackIn_4_0;
           }
           var27 = new vn(new vn[]{WidgetContainer.field_v[param2][param8]}, 1);
@@ -188,7 +188,7 @@ abstract class MatchPhaseView {
                 var24 = var23;
                 stackIn_57_0 = (!param4[-var21Lifetime1 + 12][var24]) ? var13Lifetime1 : var14;
                 var17 = stackIn_57_0;
-                var16Lifetime1 = ks.a(var22Lifetime1, var20Lifetime1, 114, 7);
+                var16Lifetime1 = HuffmanCodec.a(var22Lifetime1, var20Lifetime1, 114, 7);
                 for (var25 = 0; var25 < var33.length; var25++) {
                   if (~var16Lifetime1 == ~var33[var25]) {
                     var19[var25] = (short)var17;
@@ -207,7 +207,7 @@ abstract class MatchPhaseView {
                 var24Lifetime1 = 9 - var23Lifetime1;
                 stackIn_72_0 = (!param6[-var21Lifetime2 + 12][var24Lifetime1]) ? var13Lifetime1 : var14;
                 var17Lifetime1 = stackIn_72_0;
-                var16Lifetime2 = ks.a(var22Lifetime2, var20Lifetime2, 110, 6);
+                var16Lifetime2 = HuffmanCodec.a(var22Lifetime2, var20Lifetime2, 110, 6);
                 var28 = 0;
                 var25Lifetime1 = var28;
                 while (var33.length > var28) {
@@ -239,7 +239,7 @@ abstract class MatchPhaseView {
           } else {
             stackIn_87_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_86_1).append(stackIn_87_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_86_1).append(stackIn_87_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ abstract class MatchPhaseView {
           return;
         }
         if (param1) {
-          this.field_i.a(-21174, this.a(wt.field_x, us.field_j, -74), this.a(dn.field_yb, kf.field_Eb, -106));
+          this.field_i.a(-21174, this.a(ArrayWidgetContainer.field_x, us.field_j, -74), this.a(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
           if (this.field_i.selectedIndex >= 0 &&
             this.field_i.c(-1)) {
             this.onButtonClick(111, this.field_c[this.field_i.selectedIndex].kind);
@@ -287,7 +287,7 @@ abstract class MatchPhaseView {
             stackIn_30_0 = 0;
           }
           var6 = stackIn_30_0;
-          var7 = wt.field_x - this.buttonX(124, var3);
+          var7 = ArrayWidgetContainer.field_x - this.buttonX(124, var3);
           this.field_c[var3].a(var4 != 0, var5 != 0, var6 != 0, 16, var7);
         }
         if (param0 >= -92) {
@@ -298,10 +298,10 @@ abstract class MatchPhaseView {
 
     final void a(int param0) {
         if (param0 != -26254) {
-          field_d = (om) null;
+          field_d = (IconLabel) null;
         }
         this.field_i = new MenuSelection(this.field_c.length);
-        this.field_i.a(true, this.a(wt.field_x, us.field_j, -93), (byte) -127);
+        this.field_i.a(true, this.a(ArrayWidgetContainer.field_x, us.field_j, -93), (byte) -127);
     }
 
     public static void b(int param0) {
@@ -355,7 +355,7 @@ abstract class MatchPhaseView {
         return true;
     }
 
-    void a(boolean param0) {
+    void updateCamera(boolean param0) {
         mj.a(140.0, 60, 448.0, 672.0);
         if (!param0) {
           this.positionButtons(69);
@@ -377,12 +377,12 @@ abstract class MatchPhaseView {
         var3 = 47;
         var4 = 83;
         var5 = Integer.toString(param1 / 50);
-        PacketBuffer.a(-45, hg.field_G);
+        PacketBuffer.a(-45, PromotionDialog.field_G);
         SoftwareRasterizer.b();
         var6 = SoftwareRasterizer.field_g >> 1;
         var7 = SoftwareRasterizer.field_f >> 1;
         un.field_d.d(var5, var6, var7, 16777215, -1);
-        pw.field_H.c(-16 + var6, var7 - 31);
+        AuctionSettingsDialog.field_H.c(-16 + var6, var7 - 31);
         TeamManagementScreen.e(124);
         var8 = 256;
         if (param0 != -2351) {
@@ -394,14 +394,14 @@ abstract class MatchPhaseView {
             var8 = 256;
           }
         }
-        var9 = hg.field_G.field_o;
-        var10 = hg.field_G.field_v;
+        var9 = PromotionDialog.field_G.field_o;
+        var10 = PromotionDialog.field_G.field_v;
         if (256 == var8) {
-          hg.field_G.c(var3 - (var9 >> 1), -(var10 >> 1) + var4);
+          PromotionDialog.field_G.c(var3 - (var9 >> 1), -(var10 >> 1) + var4);
         } else {
           var10 = var10 * var8 >> 8;
           var9 = var8 * var9 >> 8;
-          hg.field_G.e(var3 + (-(var9 >> 1) - 1), -1 + (var4 - (var10 >> 1)), var9, var10, 256);
+          PromotionDialog.field_G.e(var3 + (-(var9 >> 1) - 1), -1 + (var4 - (var10 >> 1)), var9, var10, 256);
         }
         return;
     }
@@ -444,7 +444,7 @@ abstract class MatchPhaseView {
         if (param0 != 0) {
           stackIn_14_2 = CommonGame.field_a;
         } else {
-          stackIn_14_2 = he.field_Ub;
+          stackIn_14_2 = LobbyPlayerRow.field_Ub;
         }
         WidgetContainer.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, param3, param1, 114);
         param1 += 39;
@@ -482,7 +482,7 @@ abstract class MatchPhaseView {
           }
           un.field_d.d(param1.toUpperCase(), 320, 83, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hs.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hs.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -508,7 +508,7 @@ abstract class MatchPhaseView {
             this.a(-26254);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

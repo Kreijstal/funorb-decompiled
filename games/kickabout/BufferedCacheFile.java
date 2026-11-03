@@ -31,18 +31,18 @@ final class BufferedCacheFile {
     final static void a(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = lw.field_e;
+        var1 = ProxyAuthenticationRequiredException.field_e;
         synchronized (var1) {
           FootballerAgent.field_p = RandomAccessCacheFile.field_d;
           TextHotspotWidget.field_M = TextHotspotWidget.field_M + 1;
-          BytePlusOneCommand.field_A = vf.field_G;
-          n.field_m = gf.field_b;
+          BytePlusOneCommand.field_A = BuyPitchDialog.field_G;
+          ArchiveManager.field_m = gf.field_b;
           BytePlusOneCommand.field_C = rp.field_A;
           rp.field_A = false;
-          WidgetContainer.field_A = vu.field_Fb;
+          WidgetContainer.field_A = ContextMenuItem.field_Fb;
           sm.field_q = AuctionItem.field_w;
           ReceivedAuctionItem.field_y = UiWidget.field_l;
-          vu.field_Fb = 0;
+          ContextMenuItem.field_Fb = 0;
         }
         if (param0 != 58) {
           field_d = (String) null;
@@ -59,7 +59,7 @@ final class BufferedCacheFile {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -11 / ((67 - param0) / 50);
-          if (!vg.field_Wb) {
+          if (!TextFieldNode.field_Wb) {
             return false;
           }
           if (NodeHashTableIterator.field_b == 2 &&
@@ -81,7 +81,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -92,9 +92,9 @@ final class BufferedCacheFile {
           cv.field_f = param2;
           int var4_int = 82 / ((60 - param0) / 61);
           ClientException.a(SoftwareRasterizer.field_f / 2, 0, SoftwareRasterizer.field_g / 2);
-          sb.a(param3.field_L, param3.field_p + param3.field_L, param2.field_L, param2.field_p + param2.field_L, (byte) 5);
+          StringCursor.a(param3.field_L, param3.field_p + param3.field_L, param2.field_L, param2.field_p + param2.field_L, (byte) 5);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ew.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ew.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class BufferedCacheFile {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 68) {
           field_d = (String) null;
         }
@@ -138,7 +138,7 @@ final class BufferedCacheFile {
           }
           this.a(param1.length, 0, (byte) 115, param1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ew.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ew.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -158,14 +158,14 @@ final class BufferedCacheFile {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
-          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, kr.field_b, kn.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
+          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, kr.field_b, TrinketPickerDialog.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
           il.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = pa.field_j;
           IntrusiveDeque.field_h[param3] = ClubState.field_Q;
           IntrusiveDeque.field_h[1] = ConsoleExpression.field_n;
-          at.a(ServerMessageScreen.field_E, param2, (byte) -32);
+          TrinketTile.a(ServerMessageScreen.field_E, param2, (byte) -32);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ew.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ew.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -371,7 +371,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
         }
     }
 
@@ -481,7 +481,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
@@ -548,7 +548,7 @@ final class BufferedCacheFile {
           this.field_h = new byte[param1];
           this.field_m = 0L;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ew.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ew.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

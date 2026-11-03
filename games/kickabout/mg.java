@@ -12,7 +12,7 @@ final class mg {
     static String field_e;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -25,7 +25,7 @@ final class mg {
     }
 
     final static void a(byte param0) {
-        FadingSoundPlayer var1 = wt.a(72, false, em.field_e, 43, 128, 34);
+        FadingSoundPlayer var1 = ArrayWidgetContainer.a(72, false, DualLinkHashTable.field_e, 43, 128, 34);
         if (var1 != null) {
           var1.startFadeOut(150, (byte) -4);
           if (param0 != -25) {
@@ -56,7 +56,7 @@ final class mg {
             var8 = (PlayerStats) null;
             mg.a((PlayerStats) null, 111, 43, false, 111, (byte) 15);
           }
-          var7 = new RenderedFootballer(var6, param0.playerType, true);
+          var7 = new RenderedFootballer(var6, param0.archetype, true);
           var7.setAction((byte) -31, 0);
           var7.field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
           stackIn_3_0 = var7;
@@ -71,11 +71,11 @@ final class mg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static PlayerInputEvent a(int param0, byte param1, int param2) {
+    final static PlayerInputEvent createTeamEvent(int param0, byte param1, int param2) {
         if (param1 != 0) {
           return (PlayerInputEvent) null;
         }
@@ -86,7 +86,7 @@ final class mg {
         return param0 & param1;
     }
 
-    final static PlayerInputEvent a(boolean param0, int param1, int param2) {
+    final static PlayerInputEvent createKeyheldEvent(boolean param0, int param1, int param2) {
         if (param0) {
           return (PlayerInputEvent) null;
         }

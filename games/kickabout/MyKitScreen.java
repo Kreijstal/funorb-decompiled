@@ -10,7 +10,7 @@ final class MyKitScreen extends TeamManagementScreen {
     private UiLayoutNode field_ab;
     private int field_U;
     private UiLayoutNode field_X;
-    private dd field_cb;
+    private AnimationPlayer field_cb;
     private int field_Q;
     private UiLayoutNode field_G;
     private UiLayoutNode field_Y;
@@ -84,10 +84,10 @@ final class MyKitScreen extends TeamManagementScreen {
           var4Lifetime1++;
           kj.a((byte) -116);
         }
-        if (FormationAgent.field_f < wt.field_x &&
-          id.field_v != 0) {
+        if (FormationAgent.field_f < ArrayWidgetContainer.field_x &&
+          StatefulTextPainter.field_v != 0) {
           stackIn_28_0 = var4Lifetime1;
-          stackIn_29_1 = (id.field_v >= 0) ? 1 : -1;
+          stackIn_29_1 = (StatefulTextPainter.field_v >= 0) ? 1 : -1;
           var4Lifetime1 = stackIn_28_0 + stackIn_29_1;
         }
         if (var4Lifetime1 != 0) {
@@ -103,11 +103,11 @@ final class MyKitScreen extends TeamManagementScreen {
     final void enterScreen(int param0, int param1, boolean param2) {
         int var6_int = 0;
         int var7 = 0;
-        rd[] var5_ref_rd__;
+        GameModeDefinition[] var5_ref_rd__;
         int var5;
         UiLayoutNode var6;
         PlayerStats[] var6_array;
-        rd var7_ref_rd;
+        GameModeDefinition var7_ref_rd;
         PlayerStats var8;
         int var9;
         PlayerStats[] var10;
@@ -122,7 +122,7 @@ final class MyKitScreen extends TeamManagementScreen {
         var5_ref_rd__ = AnimationSkeleton.field_f;
         for (var6_int = 0; var5_ref_rd__.length > var6_int; var6_int++) {
           var7_ref_rd = var5_ref_rd__[var6_int];
-          if (var7_ref_rd.a(ic.field_h.field_e, param0 + 109, tk.field_Ib)) {
+          if (var7_ref_rd.a(ic.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
             var11.a(new KitStyleTile(ic.field_h, var7_ref_rd), 3);
           }
         }
@@ -189,7 +189,7 @@ final class MyKitScreen extends TeamManagementScreen {
           }
           this.field_R = this.field_R + 1;
         }
-        var3 = id.field_v;
+        var3 = StatefulTextPainter.field_v;
         if (0 != var3 &&
           this.field_X.field_gb) {
           this.field_F.field_fb = this.field_F.field_fb - 16 * var3;
@@ -355,7 +355,7 @@ final class MyKitScreen extends TeamManagementScreen {
         if (param0 != -38) {
           this.field_R = -25;
         }
-        this.field_cb = new dd(1);
+        this.field_cb = new AnimationPlayer(1);
     }
 
     private final void refreshPlayerPreview(int param0) {
@@ -427,9 +427,9 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_N = ic.field_h.field_k;
           this.field_bb = ic.field_h.field_w;
           this.field_Q = ic.field_h.field_R;
-          this.field_cb.a(pv.field_I[((PlayerStats) (var3)).playerType][3], (byte) -107);
+          this.field_cb.a(HelpTipDialog.field_I[((PlayerStats) (var3)).archetype][3], (byte) -107);
           this.field_cb.a(30, -81);
-          if (((PlayerStats) (var3)).playerType == 2) {
+          if (((PlayerStats) (var3)).archetype == 2) {
             this.field_cb.a(10, param0 - 36);
           }
         }
@@ -447,10 +447,10 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_U = -111;
         }
         if (this.field_db != null) {
-          var3 = ((int)(nj.a(75) % 5000L) << 11) / 5000;
+          var3 = ((int)(nj.monotonicMillis(75) % 5000L) << 11) / 5000;
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(532 + this.slideOffsetX, 410);
-          var12 = dt.field_f;
+          var12 = OffscreenPlayerArrow.field_f;
           var5 = TriangleRasterizer.field_o[var3] * var12[0] >> 16;
           var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
           var7 = (ModelMesh) (this.field_cb.a(this.field_db.b(var12[2], var12[3], var5, var12[1], var6), false, true, true));
@@ -462,7 +462,7 @@ final class MyKitScreen extends TeamManagementScreen {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8) {
           field_S = (Sprite) null;
         }
@@ -475,17 +475,17 @@ final class MyKitScreen extends TeamManagementScreen {
     }
 
     final static boolean ensureSoundLoaded(int param0, int param1) {
-        if (rj.field_a[param1]) {
+        if (SoundCache.field_a[param1]) {
           return true;
         }
         if (param0 <= 100) {
           MyKitScreen.ensureSoundLoaded(98, 120);
         }
         if (!sk.field_d.field_k[0].a(1, 176400, vp.field_j, bq.field_a, ad.field_d[param1])) {
-          dd.a((byte) 113);
+          AnimationPlayer.a((byte) 113);
           return false;
         }
-        rj.field_a[param1] = true;
+        SoundCache.field_a[param1] = true;
         return true;
     }
 

@@ -18,7 +18,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         return 120;
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -17) {
           return;
         }
@@ -39,12 +39,12 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         var4.field_k = param2;
         ak.field_i.a(var4, 3);
         if (param1 == 100) {
-          vg.a(true, var4, param3);
+          TextFieldNode.a(true, var4, param3);
           return var4;
         }
         CommonGame var6 = (CommonGame) null;
         PitchOptionTile.updateOutfielderAI((CommonGame) null, (byte) 12, -47, -89);
-        vg.a(true, var4, param3);
+        TextFieldNode.a(true, var4, param3);
         return var4;
     }
 
@@ -195,7 +195,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
                 stackIn_77_3 = -2 + this.field_F - var6;
                 stackIn_78_4 = (var2 != 0) ? false : true;
                 DraggableWidget.a(stackIn_77_0, stackIn_77_1, stackIn_77_2, stackIn_77_3, stackIn_78_4, var3 != 0, 4);
-                q.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+                ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
                 if (var2 == 0) {
                   IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
                 }
@@ -218,7 +218,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
               stackIn_90_3 = -2 + this.field_F - var6;
               stackIn_91_4 = (var2 != 0) ? false : true;
               DraggableWidget.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3, stackIn_91_4, var3 != 0, 4);
-              q.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+              ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
               if (var2 == 0) {
                 IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
               }
@@ -245,7 +245,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
             }
           }
         }
-        q.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+        ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
         if (var2 == 0) {
           IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
         }
@@ -263,7 +263,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
           this.field_q = 80;
           this.field_Eb = ad.formatCurrencyAmount(ResizableModalPanel.field_M[this.field_zb], 26300);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -559,7 +559,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
                 stackIn_49_3 = var5;
                 stackIn_50_4 = (this.i(-29050)) ? false : true;
                 DraggableWidget.a(stackIn_49_0, stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4, false, param1 ^ 19);
-                q.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
+                ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
                 return;
               }
               var5 += 4;
@@ -620,7 +620,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
             }
           }
         }
-        q.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
+        ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
     }
 
     final static boolean updateOutfielderAI(CommonGame param0, byte param1, int param2, int param3) {
@@ -657,7 +657,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
             if (param0.disableOpponent) {
               var7 = 0;
             }
-            go.moveToTarget(cp.a((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
+            go.moveToTarget(AudioService.a((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -670,7 +670,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -710,9 +710,9 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0) {
@@ -727,7 +727,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
           } else {
             if (var3 == 0 &&
               var5 == 0) {
-              this.field_Ab = eo.b();
+              this.field_Ab = eo.createDefaultButtonNode();
               this.addChild((byte) -123, this.field_Ab);
               this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
               this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;
@@ -749,9 +749,9 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0 ||
@@ -762,7 +762,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
           } else {
             if (var3 == 0 &&
               var5 == 0) {
-              this.field_Ab = eo.b();
+              this.field_Ab = eo.createDefaultButtonNode();
               this.addChild((byte) -123, this.field_Ab);
               this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
               this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;
@@ -785,7 +785,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_78_0, stackIn_79_1);
           } else {
             if (var5 != 0) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{h.field_b[this.field_Db][this.field_zb], h.field_b[this.field_Db][this.field_zb - 1]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{h.field_b[this.field_Db][this.field_zb], h.field_b[this.field_Db][this.field_zb - 1]}));
               if (null != this.field_Ab) {
                 var6Lifetime2 = ResizableModalPanel.field_M[this.field_zb];
                 stackIn_59_0 = this.field_Ab;
@@ -795,9 +795,9 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
                   this.field_Ab.field_Q &&
                   this.field_lb) {
                   if (!this.field_Ab.field_lb) {
-                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
                   } else {
-                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
                   }
                 }
                 this.field_Ab.c((byte) -109);
@@ -827,14 +827,14 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
               }
             } else {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tt.field_d, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.c((byte) -109);
                   this.field_Ab = null;
                 }
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, pe.field_a, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.c((byte) -109);
@@ -852,7 +852,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         } else {
           if (var3 == 0 &&
             var5 == 0) {
-            this.field_Ab = eo.b();
+            this.field_Ab = eo.createDefaultButtonNode();
             this.addChild((byte) -123, this.field_Ab);
             this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
             this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;

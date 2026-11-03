@@ -19,13 +19,13 @@ final class DraggableWidget extends SingleChildContainer {
     final static void a(int param0, CoverageBitmapFont param1, byte param2) {
         try {
           wo.field_m = 150;
-          ll.field_o = param1;
+          DirectByteStorage.field_o = param1;
           if (param2 != -46) {
             DraggableWidget.a(-114, (byte) -103, false, 80);
           }
-          aw.field_J = wo.field_m + 20 + param0 >> 1;
+          TutorialChoiceDialog.field_J = wo.field_m + 20 + param0 >> 1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -63,16 +63,16 @@ final class DraggableWidget extends SingleChildContainer {
             return;
           }
           if (DualLinkNode.field_k != param0) {
-            if (kp.field_m == null) {
-              kp.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
+            if (LobbyGameRecord.field_m == null) {
+              LobbyGameRecord.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
             }
-            PacketBuffer.a(-56, kp.field_m);
+            PacketBuffer.a(-56, LobbyGameRecord.field_m);
             SoftwareRasterizer.b();
             var7.c(4, 4);
-            nh.a(kp.field_m, 0.0, 1.3, 1.2);
-            eo.a(kp.field_m, 65793);
-            eo.a(kp.field_m, 16777215);
-            eo.a(kp.field_m, 7829367);
+            nh.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
+            eo.a(LobbyGameRecord.field_m, 65793);
+            eo.a(LobbyGameRecord.field_m, 16777215);
+            eo.a(LobbyGameRecord.field_m, 7829367);
             AuctionListing.a(95, -22914, 14, 88, 22);
             var12 = new int[255];
             var11 = var12;
@@ -85,12 +85,12 @@ final class DraggableWidget extends SingleChildContainer {
             TeamManagementScreen.e(param6 + 123);
             DualLinkNode.field_k = param0;
           }
-          kp.field_m.c(param3 - 4, -4 + param2);
+          LobbyGameRecord.field_m.c(param3 - 4, -4 + param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var7_ref), "jg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var7_ref), "jg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class DraggableWidget extends SingleChildContainer {
             ((TextButton) (this.field_z)).field_y) &&
             this.field_p == 1) {
             var5_int = BytePlusOneCommand.field_A - (this.field_E + param2);
-            var6 = -this.field_D + n.field_m - param3;
+            var6 = -this.field_D + ArchiveManager.field_m - param3;
             if (var5_int != this.field_t ||
               this.field_g != var6) {
               this.field_t = var5_int;
@@ -219,7 +219,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class DraggableWidget extends SingleChildContainer {
             this.field_L = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jg.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jg.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class DraggableWidget extends SingleChildContainer {
           this.field_B = param8 ? true : false;
           this.field_L = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

@@ -12,18 +12,18 @@ final class g {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          m.field_d = new int[16];
+          WhirlpoolHasher.field_d = new int[16];
           if (param0) {
             return;
           }
-          for (var1_int = 0; var1_int < m.field_d.length; var1_int++) {
-            m.field_d[var1_int] = (var1_int << 2) * 65793;
+          for (var1_int = 0; var1_int < WhirlpoolHasher.field_d.length; var1_int++) {
+            WhirlpoolHasher.field_d[var1_int] = (var1_int << 2) * 65793;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "g.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "g.A(" + param0 + ')');
         }
     }
 

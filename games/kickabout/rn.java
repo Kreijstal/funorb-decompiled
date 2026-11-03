@@ -19,11 +19,11 @@ final class rn {
             rn.a((String) null, 123, -38, (String) null);
           }
           pr.field_d = param3;
-          eb.field_d = param4;
+          DiskCacheWorker.field_d = param4;
           aj.field_a = param1;
           qn.field_a = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -64,12 +64,12 @@ final class rn {
           }
           var7 = AchievementsScreen.a(param0, 145);
           if (var7 == null) {
-            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
+            stackIn_10_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
             return stackIn_10_0;
           }
           var7.c((byte) -109);
           var7.unlinkSecondary(66);
-          ou.field_y = ou.field_y - 1;
+          StripedProgressBar.field_y = StripedProgressBar.field_y - 1;
           var5 = or.field_d;
           var5.b(param2, (byte) 110);
           var5.field_n = var5.field_n + 1;
@@ -95,7 +95,7 @@ final class rn {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class rn {
         return TriangleRasterizer.field_f[param0 & 2047];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -98 / ((12 - param0) / 59);
         field_e = null;
         field_d = null;

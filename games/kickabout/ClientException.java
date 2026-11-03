@@ -3,22 +3,22 @@
  */
 final class ClientException extends RuntimeException {
     Throwable field_e;
-    static np field_c;
-    static sr field_a;
+    static ScrollPane field_c;
+    static SortCriterion field_a;
     String field_d;
     static int field_f;
     static String field_b;
 
     final static void a(int param0) {
-        id.field_s.a(true, -(ui.field_t ? 40 + (2 + (TeamSelectionAgent.field_f + 2)) : 0) + mc.field_d.field_q, param0, 0, 18);
-        ck.field_c.a(true, TeamSelectionAgent.field_f + 42, -40 + (-2 - TeamSelectionAgent.field_f + mc.field_d.field_q), 0, 18);
-        LineupView.field_u.a(2, param0 ^ 118, mc.field_d.field_mb - 20, 20, 0, mc.field_d.field_q, TeamSelectionAgent.field_f);
+        StatefulTextPainter.field_s.a(true, -(ui.field_t ? 40 + (2 + (TeamSelectionAgent.field_f + 2)) : 0) + TickClock.field_d.field_q, param0, 0, 18);
+        ck.field_c.a(true, TeamSelectionAgent.field_f + 42, -40 + (-2 - TeamSelectionAgent.field_f + TickClock.field_d.field_q), 0, 18);
+        LineupView.field_u.a(2, param0 ^ 118, TickClock.field_d.field_mb - 20, 20, 0, TickClock.field_d.field_q, TeamSelectionAgent.field_f);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -50) {
-          ClientException.a((byte) 40);
+          ClientException.releaseStatics((byte) 40);
           field_c = null;
           field_a = null;
           return;
@@ -60,7 +60,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -83,6 +83,6 @@ final class ClientException extends RuntimeException {
 
     static {
         field_b = "This is your auction.";
-        field_a = (sr) ((Object) new qi());
+        field_a = (SortCriterion) ((Object) new qi());
     }
 }

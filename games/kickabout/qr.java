@@ -25,7 +25,7 @@ final class qr {
           if (param0 <= 31) {
             field_a = (String) null;
           }
-          var5 = vu.field_zb;
+          var5 = ContextMenuItem.field_zb;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -43,7 +43,7 @@ final class qr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "qr.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "qr.A(" + param0 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class qr {
             !SpriteState.field_t.equals(param0.getParameter("session"))) {
             var4 = SpriteState.field_t;
           }
-          stackIn_11_0 = rt.a(param1, (String) (var4), -1, (String) (var3), false);
+          stackIn_11_0 = StatChoiceDialog.a(param1, (String) (var4), -1, (String) (var3), false);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class qr {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class qr {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

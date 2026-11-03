@@ -4,7 +4,7 @@
 final class PlayerStats implements lv {
     static String field_d;
     static ResourceArchive field_m;
-    int playerType;
+    int archetype;
     int initialIndex;
     int appearance;
     static char[] field_a;
@@ -31,7 +31,7 @@ final class PlayerStats implements lv {
           int[] var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
-            if (pa.field_g[var5].p(-32076)) {
+            if (pa.field_g[var5].isRangerClone(-32076)) {
               return true;
             }
           }
@@ -39,7 +39,7 @@ final class PlayerStats implements lv {
         if (param1 > -59) {
           return false;
         }
-        return 3 == this.playerType ? true : false;
+        return 3 == this.archetype ? true : false;
     }
 
     final boolean b(boolean param0, int param1) {
@@ -56,7 +56,7 @@ final class PlayerStats implements lv {
         int[] var3 = var7;
         for (var4 = 0; var4 < var7.length; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].a(false)) {
+          if (pa.field_g[var5].isSlalom(false)) {
             return true;
           }
         }
@@ -79,7 +79,7 @@ final class PlayerStats implements lv {
             return;
           }
           this.experience = param1.experience;
-          this.playerType = param1.playerType;
+          this.archetype = param1.archetype;
           this.speed = param1.speed;
           this.tackle = param1.tackle;
           this.power = param1.power;
@@ -114,7 +114,7 @@ final class PlayerStats implements lv {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -133,16 +133,16 @@ final class PlayerStats implements lv {
           PacketBuffer var3 = (PacketBuffer) null;
           this.readFromPacket(-56, (PacketBuffer) null);
         }
-        if (this.playerType != -1) {
+        if (this.archetype != -1) {
           return false;
         }
         return true;
     }
 
-    final int a(boolean param0, int param1) {
+    final int effectiveTackle(boolean param0, int param1) {
         int var3 = param1;
         var3 = var3 + this.tackle;
-        var3 = var3 + this.b((byte) 64, param0);
+        var3 = var3 + this.trinketTackleBonus((byte) 64, param0);
         return var3;
     }
 
@@ -177,7 +177,7 @@ final class PlayerStats implements lv {
         var6 = Kickabout.field_G;
         try {
           param1.readUnsignedByte((byte) -126);
-          this.playerType = (7 & param1.readUnsignedByte((byte) -127)) - 1;
+          this.archetype = (7 & param1.readUnsignedByte((byte) -127)) - 1;
           this.appearance = param1.a((byte) 81);
           this.initialIndex = param1.readUnsignedByte((byte) -112);
           this.surnameIndex = param1.readUnsignedByte((byte) -118);
@@ -217,11 +217,11 @@ final class PlayerStats implements lv {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final int b(byte param0, boolean param1) {
+    final int trinketTackleBonus(byte param0, boolean param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = Kickabout.field_G;
@@ -233,7 +233,7 @@ final class PlayerStats implements lv {
         int[] var4 = this.trinketIds;
         for (var5 = 0; var5 < var4.length; var5++) {
           var6 = var4[var5];
-          var3 = var3 + pa.field_g[var6].o(126);
+          var3 = var3 + pa.field_g[var6].tackleBonus(126);
         }
         var6Lifetime1 = 19 % ((10 - param0) / 50);
         return var3;
@@ -253,7 +253,7 @@ final class PlayerStats implements lv {
         int[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].k(-21636)) {
+          if (pa.field_g[var5].isShinPads(-21636)) {
             return true;
           }
         }
@@ -264,7 +264,7 @@ final class PlayerStats implements lv {
         int var5 = 0;
         int[] var4;
         int var6;
-        fn var7;
+        Trinket var7;
         int var8;
         int[] var9;
         int[] var10;
@@ -284,43 +284,43 @@ final class PlayerStats implements lv {
           var6 = var11[var5];
           var7 = pa.field_g[var6];
           if (param1 == 0 &&
-            var7.e(true)) {
+            var7.isWhereAmI(true)) {
             return true;
           }
           if (1 == param1 &&
-            var7.n(2688)) {
+            var7.isMushroom(2688)) {
             return true;
           }
           if (2 == param1 &&
-            var7.g(65)) {
+            var7.isMoonwalk(65)) {
             return true;
           }
           if (param1 == 3 &&
-            var7.e((byte) 58)) {
+            var7.isAirplane((byte) 58)) {
             return true;
           }
           if (param1 == 4 &&
-            var7.m(70)) {
+            var7.isAtomBall(70)) {
             return true;
           }
           if (param1 == 5 &&
-            var7.c((byte) 113)) {
+            var7.isTramline((byte) 113)) {
             return true;
           }
           if (param1 == 6 &&
-            var7.f(false)) {
+            var7.isTorquing(false)) {
             return true;
           }
           if (param1 == 7 &&
-            var7.e(70)) {
+            var7.isMoonball(70)) {
             return true;
           }
           if (param1 == 8 &&
-            var7.c(true)) {
+            var7.isAsteroid(true)) {
             return true;
           }
           if (param1 == 9 &&
-            var7.l(114)) {
+            var7.isPumpkins(114)) {
             return true;
           }
         }
@@ -356,10 +356,10 @@ final class PlayerStats implements lv {
           wd.field_l.l(param0 ^ -5172);
         }
         if (param0 != -1456) {
-          PlayerStats.g(3);
+          PlayerStats.releaseStatics(3);
         }
-        if (null != nm.field_d) {
-          nm.field_d.p(param0 ^ 1496);
+        if (null != AnimationClip.field_d) {
+          AnimationClip.field_d.p(param0 ^ 1496);
         }
         d.a((byte) 127);
     }
@@ -378,7 +378,7 @@ final class PlayerStats implements lv {
           if (param0 != 40) {
             this.a((byte) 59, -29, true, 95, 97, 106, -90, true);
           }
-          param1.writeByte(param0 + 71, 1 + this.playerType);
+          param1.writeByte(param0 + 71, 1 + this.archetype);
           param1.writeShort(-1207444472, this.appearance);
           param1.writeByte(125, this.initialIndex);
           param1.writeByte(115, this.surnameIndex);
@@ -404,17 +404,17 @@ final class PlayerStats implements lv {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final int d(boolean param0, byte param1) {
+    final int effectiveSpeed(boolean param0, byte param1) {
         int var3 = 0;
         if (param1 > -81) {
           this.tackle = 81;
         }
         var3 = var3 + this.speed;
-        var3 = var3 + this.a(5205, param0);
+        var3 = var3 + this.trinketSpeedBonus(5205, param0);
         return var3;
     }
 
@@ -422,19 +422,19 @@ final class PlayerStats implements lv {
         int var2 = 0;
         int var3 = 0;
         c.field_c = param0;
-        if (rb.field_Bb != pg.field_b) {
-          var2 = rb.field_Bb * rb.field_Bb;
+        if (TextPromptDialog.field_Bb != pg.field_b) {
+          var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
           var3 = -(pg.field_b * pg.field_b) + var2;
-          param0 = param0 + var3 * (-param0 + na.field_Ab) / var2;
+          param0 = param0 + var3 * (-param0 + VerticalScrollbar.field_Ab) / var2;
         }
         if (param1 >= -65) {
           PlayerStats.a(-79, -94);
         }
         g.field_a.a(true, 640, AuctionsHelpScreen.field_H, param0, 120);
-        cf.a(119, mj.field_b, 640, 5, eb.field_b, na.field_Ab - 24, 0);
+        RankingRowNode.a(119, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
     }
 
-    final int a(int param0, boolean param1) {
+    final int trinketSpeedBonus(int param0, boolean param1) {
         int var6 = 0;
         int var7 = Kickabout.field_G;
         if (!param1) {
@@ -448,7 +448,7 @@ final class PlayerStats implements lv {
         }
         while (var5 < var4.length) {
           var6 = var4[var5];
-          var3 = var3 + pa.field_g[var6].b(param0 - 5102);
+          var3 = var3 + pa.field_g[var6].speedBonus(param0 - 5102);
           var5++;
         }
         return var3;
@@ -470,12 +470,12 @@ final class PlayerStats implements lv {
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if (pa.field_g[var5].d(59)) {
+            if (pa.field_g[var5].isTankClone(59)) {
               return true;
             }
           }
         }
-        stackIn_14_0 = (this.playerType == 0) || (this.playerType == 4);
+        stackIn_14_0 = (this.archetype == 0) || (this.archetype == 4);
         return stackIn_14_0;
     }
 
@@ -520,10 +520,10 @@ final class PlayerStats implements lv {
         var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].c(115)) {
+          if (pa.field_g[var5].hasTackleProtection(115)) {
             return true;
           }
-          if (pa.field_g[var5].k(-21636)) {
+          if (pa.field_g[var5].isShinPads(-21636)) {
             return true;
           }
         }
@@ -537,18 +537,18 @@ final class PlayerStats implements lv {
         if (param0 != 100) {
           this.field_c = false;
         }
-        if (this.playerType < 0 ||
-          ce.field_G.length <= this.playerType ||
+        if (this.archetype < 0 ||
+          BuyPlayerDialog.field_G.length <= this.archetype ||
           this.surnameIndex < 0 ||
-          ce.field_G[this.playerType].length <= this.surnameIndex) {
+          BuyPlayerDialog.field_G[this.archetype].length <= this.surnameIndex) {
           return "Error";
         }
         String var3 = "";
         String var2 = var3;
-        String var6 = var3 + Character.toUpperCase(td.field_a[this.initialIndex]);
+        String var6 = var3 + Character.toUpperCase(TrinketCatalog.field_a[this.initialIndex]);
         String var5 = var6 + ". ";
         String var7 = var5;
-        var2 = var7 + ce.field_G[this.playerType][this.surnameIndex];
+        var2 = var7 + BuyPlayerDialog.field_G[this.archetype][this.surnameIndex];
         return var2;
     }
 
@@ -566,7 +566,7 @@ final class PlayerStats implements lv {
             param1.isEmpty(-2)) {
             return true;
           }
-          if (this.playerType != param1.playerType) {
+          if (this.archetype != param1.archetype) {
             return false;
           }
           if (this.surnameIndex != param1.surnameIndex) {
@@ -615,7 +615,7 @@ final class PlayerStats implements lv {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -641,7 +641,7 @@ final class PlayerStats implements lv {
 
     final void clear(byte param0) {
         this.initialIndex = 0;
-        this.playerType = -1;
+        this.archetype = -1;
         this.experience = 0;
         this.appearance = 0;
         this.trinketIds = new int[]{};
@@ -667,7 +667,7 @@ final class PlayerStats implements lv {
         }
         while (var3.length > var4) {
           var5 = var3[var4];
-          if (pa.field_g[var5].a(param0 - 9707)) {
+          if (pa.field_g[var5].isActiveHorrorCostume(param0 - 9707)) {
             return true;
           }
           var4++;
@@ -680,7 +680,7 @@ final class PlayerStats implements lv {
         if (param0 != -3) {
           return true;
         }
-        GoalStateAgent.field_g = 15000L + nj.a(param0 - 109);
+        GoalStateAgent.field_g = 15000L + nj.monotonicMillis(param0 - 109);
         return vj.field_c == 11 ? true : false;
     }
 
@@ -694,7 +694,7 @@ final class PlayerStats implements lv {
           int[] var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if (pa.field_g[var5].h(param1 + 161)) {
+            if (pa.field_g[var5].isHotshotClone(param1 + 161)) {
               return true;
             }
           }
@@ -702,7 +702,7 @@ final class PlayerStats implements lv {
         if (param1 != -62) {
           return false;
         }
-        return this.playerType == 1 ? true : false;
+        return this.archetype == 1 ? true : false;
     }
 
     final boolean b(boolean param0, boolean param1) {
@@ -722,10 +722,10 @@ final class PlayerStats implements lv {
         var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].b(param0)) {
+          if (pa.field_g[var5].isSafeTacklerOrShinPads(param0)) {
             return false;
           }
-          if (pa.field_g[var5].k(-21636)) {
+          if (pa.field_g[var5].isShinPads(-21636)) {
             return false;
           }
         }
@@ -736,7 +736,7 @@ final class PlayerStats implements lv {
         int var3 = 0;
         int var4 = Kickabout.field_G;
         int var2 = param0;
-        var2 = ia.a(56082116, var2 ^ this.playerType);
+        var2 = ia.a(56082116, var2 ^ this.archetype);
         var2 = ia.a(56082116, this.power ^ var2);
         var2 = ia.a(56082116, var2 ^ this.tackle);
         var2 = ia.a(56082116, this.speed ^ var2);
@@ -767,7 +767,7 @@ final class PlayerStats implements lv {
         return var4;
     }
 
-    final int c(boolean param0, boolean param1) {
+    final int trinketPowerBonus(boolean param0, boolean param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = Kickabout.field_G;
@@ -781,7 +781,7 @@ final class PlayerStats implements lv {
         int[] var4 = this.trinketIds;
         for (var5 = 0; var4.length > var5; var5++) {
           var6 = var4[var5];
-          var3 = var3 + pa.field_g[var6].b((byte) 62);
+          var3 = var3 + pa.field_g[var6].powerBonus((byte) 62);
         }
         return var3;
     }
@@ -819,14 +819,14 @@ final class PlayerStats implements lv {
         String var1Lifetime18;
         String var1Lifetime19;
         if (!this.isEmpty(-2)) {
-          var4 = "Type: " + uf.field_e[this.playerType] + "\n";
+          var4 = "Type: " + uf.field_e[this.archetype] + "\n";
           var1 = var4;
           var1Lifetime1 = var4;
           var5 = var4;
           var1Lifetime2 = var5;
           var1Lifetime3 = var5;
-          if (this.playerType != -1) {
-            var1Lifetime4 = var4 + "Name: " + td.field_a[this.initialIndex] + ". " + ce.field_G[this.playerType][this.surnameIndex] + "\n";
+          if (this.archetype != -1) {
+            var1Lifetime4 = var4 + "Name: " + TrinketCatalog.field_a[this.initialIndex] + ". " + BuyPlayerDialog.field_G[this.archetype][this.surnameIndex] + "\n";
           } else {
             var1Lifetime4 = var5 + "Name: N/A\n";
           }
@@ -898,7 +898,7 @@ final class PlayerStats implements lv {
         String var17;
         int var18;
         int var19;
-        fn var20;
+        Trinket var20;
         ArgbSprite var21;
         int var22;
         int var23;
@@ -985,8 +985,8 @@ final class PlayerStats implements lv {
         } else {
           var16.c(7 + param1, 50 + param6 - (var16.field_v + 1));
         }
-        q.field_d.c(this.getDisplayName(100), -10 + var13 + param1, 22 + param6, 16777215, 65793);
-        q.field_d.c(uf.field_e[this.playerType], -10 + param1 + var13, 36 + param6, 16777215, 65793);
+        ConsoleTokenCursor.field_d.c(this.getDisplayName(100), -10 + var13 + param1, 22 + param6, 16777215, 65793);
+        ConsoleTokenCursor.field_d.c(uf.field_e[this.archetype], -10 + param1 + var13, 36 + param6, 16777215, 65793);
         param6 = param6 + var26[0];
         var17_int = 0;
         while (true) {
@@ -1002,20 +1002,20 @@ final class PlayerStats implements lv {
                 var20 = pa.field_g[this.trinketIds[var23]];
                 var21 = var20.d(false);
                 ((Sprite) ((Object) var21)).drawHalfSize(var17_int - (((Sprite) ((Object) var21)).field_o >> 2), -(((Sprite) ((Object) var21)).field_v >> 2) + var18);
-                q.field_d.a(var20.f((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);
+                ConsoleTokenCursor.field_d.a(var20.getName((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);
                 var18 += 18;
                 var23++;
               }
             }
             if (this.f(13467)) {
-              eo.d(1 + param1, 1 + param6, var13, var26[2] - 1);
+              eo.darkenRectangle(1 + param1, 1 + param6, var13, var26[2] - 1);
               SoftwareRasterizer.drawVerticalLine(-1 + var13 + param1, param6, var26[2] + 1, 65793);
-              q.field_d.d(oo.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
+              ConsoleTokenCursor.field_d.d(oo.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
             }
             param6 = param6 + var26[2];
             if (param2) {
-              var17 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ti.field_g, new String[]{ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(this, true), 26300)});
-              q.field_d.a(var17, param1 + 10, param6 + 15, 16777215, 65793);
+              var17 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NamedValueContainer.field_g, new String[]{ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(this, true), 26300)});
+              ConsoleTokenCursor.field_d.a(var17, param1 + 10, param6 + 15, 16777215, 65793);
             }
             return;
           }
@@ -1034,13 +1034,13 @@ final class PlayerStats implements lv {
           }
           var18Lifetime1 = stackIn_51_0;
           if (0 == var17_int) {
-            stackIn_58_0 = this.c(true, oi.b(-89));
+            stackIn_58_0 = this.trinketPowerBonus(true, IntValueNode.b(-89));
           } else {
             if (var17_int == 1) {
-              stackIn_58_0 = this.a(5205, oi.b(-120));
+              stackIn_58_0 = this.trinketSpeedBonus(5205, IntValueNode.b(-120));
             } else {
               if (var17_int == 2) {
-                stackIn_58_0 = this.b((byte) -118, oi.b(-110));
+                stackIn_58_0 = this.trinketTackleBonus((byte) -118, IntValueNode.b(-110));
               } else {
                 stackIn_58_0 = 0;
               }
@@ -1052,10 +1052,10 @@ final class PlayerStats implements lv {
         }
     }
 
-    final int d(boolean param0, int param1) {
+    final int effectivePower(boolean param0, int param1) {
         int var3 = param1;
         var3 = var3 + this.power;
-        var3 = var3 + this.c(true, param0);
+        var3 = var3 + this.trinketPowerBonus(true, param0);
         if (this.c(param0, param1 ^ -105) &&
           !this.c(param0, (byte) -62)) {
           var3 = 8 * var3 / 10;
@@ -1063,7 +1063,7 @@ final class PlayerStats implements lv {
         return var3;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         int var1 = 8 % ((53 - param0) / 56);

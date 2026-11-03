@@ -85,7 +85,7 @@ final class tc extends DualLinkNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -126,8 +126,8 @@ final class tc extends DualLinkNode {
               GoalStateAgent.field_l = stackIn_19_0 + stackIn_20_1;
             }
           }
-          if (cf.field_Db + dc.field_d != param0) {
-            dc.field_d = -cf.field_Db + param0;
+          if (RankingRowNode.field_Db + dc.field_d != param0) {
+            dc.field_d = -RankingRowNode.field_Db + param0;
           }
           if (dc.field_d == 0) {
             if (CachedArchiveSource.field_s > 1) {
@@ -138,11 +138,11 @@ final class tc extends DualLinkNode {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
-          if (wt.field_x > qj.field_e &&
-            vo.field_cb.field_q + qj.field_e > wt.field_x &&
+          if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+            LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
-            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
-            ka.a(dc.field_d, cf.field_Db, (byte) -113);
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
           }
           return;
         }
@@ -156,8 +156,8 @@ final class tc extends DualLinkNode {
               stackIn_55_1 = var2Lifetime1;
             }
             GoalStateAgent.field_l = stackIn_54_0 + stackIn_55_1;
-            if (cf.field_Db + dc.field_d != param0) {
-              dc.field_d = -cf.field_Db + param0;
+            if (RankingRowNode.field_Db + dc.field_d != param0) {
+              dc.field_d = -RankingRowNode.field_Db + param0;
             }
             if (dc.field_d == 0) {
               if (CachedArchiveSource.field_s > 1) {
@@ -168,11 +168,11 @@ final class tc extends DualLinkNode {
                 CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
               }
             }
-            if (wt.field_x > qj.field_e &&
-              vo.field_cb.field_q + qj.field_e > wt.field_x &&
+            if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+              LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
-              ka.a(dc.field_d, cf.field_Db, (byte) -113);
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
@@ -185,7 +185,7 @@ final class tc extends DualLinkNode {
           }
           GoalStateAgent.field_l = stackIn_71_0 + stackIn_72_1;
         }
-        if (cf.field_Db + dc.field_d == param0) {
+        if (RankingRowNode.field_Db + dc.field_d == param0) {
           if (dc.field_d == 0) {
             if (CachedArchiveSource.field_s > 1) {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
@@ -195,48 +195,48 @@ final class tc extends DualLinkNode {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
-          if (wt.field_x > qj.field_e &&
-            vo.field_cb.field_q + qj.field_e > wt.field_x &&
+          if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+            LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
-            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
-            ka.a(dc.field_d, cf.field_Db, (byte) -113);
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             return;
           }
           return;
         }
-        dc.field_d = -cf.field_Db + param0;
+        dc.field_d = -RankingRowNode.field_Db + param0;
         if (dc.field_d == 0) {
           if (CachedArchiveSource.field_s > 1) {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
-            if (wt.field_x > qj.field_e &&
-              vo.field_cb.field_q + qj.field_e > wt.field_x &&
+            if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+              LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
-              ka.a(dc.field_d, cf.field_Db, (byte) -113);
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
         } else {
           if (CachedArchiveSource.field_s < 18) {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
-            if (wt.field_x > qj.field_e &&
-              vo.field_cb.field_q + qj.field_e > wt.field_x &&
+            if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
+              LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
-              ka.a(dc.field_d, cf.field_Db, (byte) -113);
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
         }
-        if (wt.field_x <= qj.field_e) {
+        if (ArrayWidgetContainer.field_x <= TextLayoutLine.field_e) {
           return;
         }
-        if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+        if (LoginDialog.field_cb.field_q + TextLayoutLine.field_e <= ArrayWidgetContainer.field_x) {
           return;
         }
         if (ArchiveNetworkClient.field_i < us.field_j &&
-          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
-          ka.a(dc.field_d, cf.field_Db, (byte) -113);
+          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+          ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
           return;
         }
     }
@@ -313,7 +313,7 @@ final class tc extends DualLinkNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -348,13 +348,13 @@ final class tc extends DualLinkNode {
           var4 = 0;
           var2 = var4;
           while (var4 < this.field_o.length) {
-            this.field_o[var4] = hf.a(this.field_o[var4], 32768);
+            this.field_o[var4] = PainterStyle.a(this.field_o[var4], 32768);
             var4++;
           }
           return;
         }
         for (var2Lifetime1 = 0; this.field_n.length > var2Lifetime1; var2Lifetime1++) {
-          this.field_n[var2Lifetime1] = hf.a(this.field_n[var2Lifetime1], 32768);
+          this.field_n[var2Lifetime1] = PainterStyle.a(this.field_n[var2Lifetime1], 32768);
         }
         if (param0 >= -81) {
           return;
@@ -365,7 +365,7 @@ final class tc extends DualLinkNode {
         var4Lifetime1 = 0;
         var2Lifetime2 = var4Lifetime1;
         while (var4Lifetime1 < this.field_o.length) {
-          this.field_o[var4Lifetime1] = hf.a(this.field_o[var4Lifetime1], 32768);
+          this.field_o[var4Lifetime1] = PainterStyle.a(this.field_o[var4Lifetime1], 32768);
           var4Lifetime1++;
         }
         return;
@@ -403,7 +403,7 @@ final class tc extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

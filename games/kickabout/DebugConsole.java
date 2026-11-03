@@ -19,7 +19,7 @@ final class DebugConsole extends ConsolePanel {
         try {
           ConsoleExpression var5 = null;
           IntrusiveDeque var6 = null;
-          q var7 = null;
+          ConsoleTokenCursor var7 = null;
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;
           String stackIn_15_2 = null;
@@ -34,10 +34,10 @@ final class DebugConsole extends ConsolePanel {
               if (!param1) {
                 this.b(5);
               }
-              var7 = new q(var6);
+              var7 = new ConsoleTokenCursor(var6);
               var5 = AuctionTableWidget.a(var7, 1422);
-              if (!var7.a(6)) {
-                throw new ConsoleParseException(var7.a((byte) 114).field_f);
+              if (!var7.isAtEnd(6)) {
+                throw new ConsoleParseException(var7.readToken((byte) 114).field_f);
               }
               this.a(-98, var5.a(param1, this.field_t));
               return true;
@@ -64,7 +64,7 @@ final class DebugConsole extends ConsolePanel {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -107,7 +107,7 @@ final class DebugConsole extends ConsolePanel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "kd.BA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "kd.BA(" + param0 + ',' + param1 + ')');
         }
 
     }
@@ -136,18 +136,18 @@ final class DebugConsole extends ConsolePanel {
         int var10Lifetime1;
         var12 = Kickabout.field_G;
         try {
-          var13 = this.field_k.j((byte) -16);
+          var13 = this.field_k.getText((byte) -16);
           var6 = var13;
           var6Lifetime1 = var13;
-          var3 = this.field_k.j(-1);
-          var4 = w.a(var13, (byte) -81);
+          var3 = this.field_k.getCaretPosition(-1);
+          var4 = DialogOverlay.a(var13, (byte) -81);
           var5 = mi.a(var3, var4, 1);
           this.field_j.field_s = 0;
           var6Lifetime2 = "";
           if (var5 >= 0) {
             var14 = var4[var5];
             var8_int = -var14.field_f + var3;
-            if (var14.field_k == vu.field_Ab &&
+            if (var14.field_k == ContextMenuItem.field_Ab &&
               var8_int > 0) {
               var6Lifetime2 = var14.field_h.substring(0, Math.min(var14.field_h.length(), var8_int));
               this.field_j.field_s = this.field_d.a(var13.substring(0, var14.field_f));
@@ -168,7 +168,7 @@ final class DebugConsole extends ConsolePanel {
                 break;
               }
               if (var9 > 0 &&
-                var4[var9 - 1].field_k == vu.field_Ab) {
+                var4[var9 - 1].field_k == ContextMenuItem.field_Ab) {
                 var6Lifetime2 = var4[var9 - 1].field_h;
                 this.field_j.field_s = this.field_d.a(var13.substring(0, var4[var9 - 1].field_f));
               }
@@ -190,7 +190,7 @@ final class DebugConsole extends ConsolePanel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "kd.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "kd.D(" + param0 + ')');
         }
     }
 
@@ -252,11 +252,11 @@ final class DebugConsole extends ConsolePanel {
             stackIn_19_0 = stackIn_15_0;
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_z = null;
           field_w = null;
@@ -270,7 +270,7 @@ final class DebugConsole extends ConsolePanel {
           field_y = (Sprite[][]) null;
           field_x = null;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kd.V(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kd.V(" + param0 + ')');
         }
     }
 
@@ -303,8 +303,8 @@ final class DebugConsole extends ConsolePanel {
             stackIn_3_0 = super.a(11516, param1, param2);
             return stackIn_3_0;
           }
-          var12 = this.field_k.j((byte) -16);
-          var5 = this.field_k.j(-1);
+          var12 = this.field_k.getText((byte) -16);
+          var5 = this.field_k.getCaretPosition(-1);
           var6 = 0;
           var7 = 0;
           var8 = 0;
@@ -374,40 +374,40 @@ final class DebugConsole extends ConsolePanel {
               var7 != 0 &&
               var9Lifetime1 == 39 &&
               var10Lifetime1 == 39)) {
-              this.field_k.a(101, '￿', 875);
+              this.field_k.handleKey(101, '￿', 875);
             }
             discarded$0 = super.a(11516, param1, param2);
-            var4 = this.field_k.j((byte) -16);
-            var5 = this.field_k.j(-1);
+            var4 = this.field_k.getText((byte) -16);
+            var5 = this.field_k.getCaretPosition(-1);
             if (var6 == 0 &&
               var7 == 0 &&
               param2 == 40) {
-              this.field_k.a(-1, ')', param0 ^ 12183);
-              this.field_k.a(var5, (byte) -96, var5);
+              this.field_k.handleKey(-1, ')', param0 ^ 12183);
+              this.field_k.setSelection(var5, (byte) -96, var5);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param2 == 34) {
-              this.field_k.a(-1, '"', 875);
-              this.field_k.a(var5, (byte) -97, var5);
+              this.field_k.handleKey(-1, '"', 875);
+              this.field_k.setSelection(var5, (byte) -97, var5);
             }
             if (((var6 == 0)) &&
               ((var7 == 0)) &&
               ((param2 == 39))) {
-              this.field_k.a(-1, '\'', 875);
-              this.field_k.a(var5, (byte) -94, var5);
+              this.field_k.handleKey(-1, '\'', 875);
+              this.field_k.setSelection(var5, (byte) -94, var5);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_k.f(-85, 1 + var5);
+            this.field_k.setCaret(-85, 1 + var5);
           }
-          cv.field_c = IsaacRandom.a(this.field_k.j((byte) -16), 120);
+          cv.field_c = IsaacRandom.a(this.field_k.getText((byte) -16), 120);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4_ref), "kd.T(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4_ref), "kd.T(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -446,7 +446,7 @@ final class DebugConsole extends ConsolePanel {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -479,17 +479,17 @@ final class DebugConsole extends ConsolePanel {
         int var13Lifetime1;
         var15 = Kickabout.field_G;
         try {
-          var16 = this.field_k.j((byte) -16);
+          var16 = this.field_k.getText((byte) -16);
           var6 = var16;
           var6Lifetime1 = var16;
-          var3 = this.field_k.j(-1);
-          var4 = w.a(var16, (byte) -33);
+          var3 = this.field_k.getCaretPosition(-1);
+          var4 = DialogOverlay.a(var16, (byte) -33);
           var5 = mi.a(var3, var4, 1);
           var6Lifetime2 = "";
           if (var5 >= 0) {
             var17 = var4[var5];
             var8_int = var3 - var17.field_f;
-            if (var17.field_k == vu.field_Ab &&
+            if (var17.field_k == ContextMenuItem.field_Ab &&
               0 < var8_int &&
               var8_int <= var17.field_h.length()) {
               var6Lifetime2 = var17.field_h.substring(0, var8_int);
@@ -543,17 +543,17 @@ final class DebugConsole extends ConsolePanel {
               var13Lifetime1++;
             }
           }
-          this.field_k.b(var16.substring(0, var3) + var8.toString() + var16.substring(var3), -23174);
-          this.field_k.f(-56, var13Lifetime1);
+          this.field_k.setText(var16.substring(0, var3) + var8.toString() + var16.substring(var3), -23174);
+          this.field_k.setCaret(-56, var13Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "kd.R(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "kd.R(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, qb param1, boolean param2, String param3) {
+    final static void a(int param0, GameSetupPanel param1, boolean param2, String param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -565,31 +565,31 @@ final class DebugConsole extends ConsolePanel {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        uv var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        uv var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        uv var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        uv var13 = null;
+        PlayerContextMenu var13 = null;
         try {
           BytePlusOneCommand.a(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
           if (param1.field_Cb && (param1.field_Mb == 2 ||
-            !(2 > tk.field_Ib))) {
+            !(2 > ScrollContainer.field_Ib))) {
             var7 = TextButton.field_v;
-            var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ej.field_Ab, new String[]{param3});
-            var7.field_j.a(0, 10, var8);
+            var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SelectableTrinketIcon.field_Ab, new String[]{param3});
+            var7.field_j.addItem(0, 10, var8);
           }
-          TextButton.field_v.d(param0 - 14);
+          TextButton.field_v.buildMenuItems(param0 - 14);
           if (param2) {
             if (TextButton.field_v.field_c != DelayedServerPacket.field_h) {
               var11 = TextButton.field_v;
-              var12 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, br.field_a, new String[]{param3});
-              var11.field_j.a(param0 - 15, 15, var12);
+              var12 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, br.field_a, new String[]{param3});
+              var11.field_j.addItem(param0 - 15, 15, var12);
             } else {
               var9 = TextButton.field_v;
-              var10 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, cl.field_h, new String[]{param3});
-              var9.field_j.a(0, 16, var10);
+              var10 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, cl.field_h, new String[]{param3});
+              var9.field_j.addItem(0, 16, var10);
             }
           }
           var13 = TextButton.field_v;
@@ -619,7 +619,7 @@ final class DebugConsole extends ConsolePanel {
             stackIn_22_0 = stackIn_17_0;
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -633,7 +633,7 @@ final class DebugConsole extends ConsolePanel {
           super.a(-76);
           this.field_k.field_Lb.field_E = var4;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kd.L(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kd.L(" + param0 + ')');
         }
     }
 
@@ -661,7 +661,7 @@ final class DebugConsole extends ConsolePanel {
         try {
           var16 = new IndexedSprite[6];
           var6 = var16;
-          if (!vi.field_n) {
+          if (!NanoTickClock.field_n) {
             var7_ref_kg = AlphaContainer.a(param2, -87, new IntrusiveDeque(), 0);
             for (var8 = 0; var16.length > var8; var8++) {
               var16[var8] = var7_ref_kg;
@@ -698,7 +698,7 @@ final class DebugConsole extends ConsolePanel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var6_ref), "kd.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var6_ref), "kd.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -108,13 +108,13 @@ final class ClubState {
         return 5 > var2 ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_c = null;
         field_v = null;
         field_Q = null;
         if (param0 != 0) {
-          ClubState.b((byte) 10);
+          ClubState.releaseStatics((byte) 10);
         }
     }
 
@@ -219,7 +219,7 @@ final class ClubState {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class ClubState {
         String var27Lifetime2;
         String var27Lifetime3;
         var5 = Kickabout.field_G;
-        var6 = "=====PROFILE[" + su.a(0, this.field_e) + "]=====\n";
+        var6 = "=====PROFILE[" + su.decodeBase37Name(0, this.field_e) + "]=====\n";
         var1 = var6;
         var1Lifetime1 = var6;
         if (this.field_M) {
@@ -365,7 +365,7 @@ final class ClubState {
         var11 = var10 + "Diamond Pts - " + this.field_r + "\n";
         var1Lifetime11 = var11;
         var1Lifetime12 = var11;
-        var12 = var11 + "League - " + q.field_h[this.field_t] + "\n";
+        var12 = var11 + "League - " + ConsoleTokenCursor.field_h[this.field_t] + "\n";
         var1Lifetime13 = var12;
         var1Lifetime14 = var12;
         var13 = var12 + "Trophies - " + this.field_s + "\n";
@@ -514,7 +514,7 @@ final class ClubState {
         var36 = var35 + "Total Halloween Goals - " + this.field_j + "\n";
         var37 = var36 + "Total 8+ Tournament Wins - " + this.field_u + "\n";
         var38 = var37 + "Total 8+ Tournament Knockouts - " + this.field_D + "\n";
-        var39 = var38 + "Nemesis - " + su.a(0, this.field_H) + "\n";
+        var39 = var38 + "Nemesis - " + su.decodeBase37Name(0, this.field_H) + "\n";
         var40 = var39 + "\n";
         var41 = var40 + "Misc Unlockables - " + Integer.toBinaryString(this.field_n) + "\n";
         stackIn_49_0 = new StringBuilder().append(var41).append("Refunded Trinkets? - ");
@@ -599,27 +599,27 @@ final class ClubState {
           var13 = new PlayerStats();
           var15 = var13;
           if (var4 == 0) {
-            var13.playerType = 0;
+            var13.archetype = 0;
           }
           if (1 == var4) {
             if (0 != var3) {
-              var15.playerType = 3;
+              var15.archetype = 3;
             } else {
-              var13.playerType = 0;
+              var13.archetype = 0;
             }
           }
           if (var4 == 2) {
             if (var3 != 2) {
-              var15.playerType = 3;
+              var15.archetype = 3;
             } else {
-              var15.playerType = 1;
+              var15.archetype = 1;
             }
           }
           if (var4 == 3) {
-            var15.playerType = 1;
+            var15.archetype = 1;
           }
-          var15.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, td.field_a.length, var14);
-          var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + ce.field_G[var15.playerType].length, var14);
+          var15.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, TrinketCatalog.field_a.length, var14);
+          var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + BuyPlayerDialog.field_G[var15.archetype].length, var14);
           var15.power = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
           var15.tackle = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
           var15.speed = 6 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-111, 10, var14);
@@ -668,7 +668,7 @@ final class ClubState {
           if (param0 != 15) {
             field_l = (String[]) null;
           }
-          stackIn_3_0 = vl.a(10, true, true, param1);
+          stackIn_3_0 = LoginMethod.a(10, true, true, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -680,7 +680,7 @@ final class ClubState {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -775,9 +775,9 @@ final class ClubState {
         int var7 = 0;
         PlayerStats var7_ref_up = null;
         int var8 = 0;
-        fn var9 = null;
+        Trinket var9 = null;
         int var9_int = 0;
-        fn var10 = null;
+        Trinket var10 = null;
         int var10_int = 0;
         int var11 = 0;
         PlayerStats var12 = null;
@@ -821,7 +821,7 @@ final class ClubState {
                   boolean decompiledFrameRemainder0 = true;
                   boolean decompiledFrameCompleted0 = true;
                   if (-1 != var5) {
-                    var13 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var13 = WelcomeDialog.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
                     var7_ref_up = var13;
                     var8 = 0;
                     if (-1 != var5) {
@@ -859,7 +859,7 @@ final class ClubState {
                     if (!param1) {
                       throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
                     }
-                    var12 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var12 = WelcomeDialog.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
                     var7_ref_upLifetime1 = var12;
                     var8 = 0;
                     if (-1 != var5) {
@@ -1105,7 +1105,7 @@ final class ClubState {
           } else {
             stackIn_176_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_175_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_175_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1249,8 +1249,8 @@ final class ClubState {
           }
           for (var13Lifetime1 = 0; 40 > var13Lifetime1; var13Lifetime1++) {
             var14 = param1.readUnsignedByte((byte) -109);
-            this.field_N[2 * var13Lifetime1] = qj.b(15, var14);
-            this.field_N[1 + var13Lifetime1 * 2] = qj.b(241, var14) >> 4;
+            this.field_N[2 * var13Lifetime1] = TextLayoutLine.b(15, var14);
+            this.field_N[1 + var13Lifetime1 * 2] = TextLayoutLine.b(241, var14) >> 4;
           }
           this.field_C = param1.a((byte) 81);
           this.field_b = param1.a((byte) 81);
@@ -1292,7 +1292,7 @@ final class ClubState {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param2).append(')').toString());
         }
     }
 

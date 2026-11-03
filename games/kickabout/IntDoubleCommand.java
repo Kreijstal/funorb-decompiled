@@ -31,7 +31,7 @@ final class IntDoubleCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class IntDoubleCommand extends ConsoleCommand {
               stackIn_44_1 = var10;
               stackIn_44_2 = var8;
               stackIn_45_3 = (param6 == 1) ? 8 : 2;
-              nq.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_45_3, (byte) 69, var9);
+              TournamentChampionDialog.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_45_3, (byte) 69, var9);
               return;
             }
             if (0 != et.field_d.field_V.possessorTeam) {
@@ -139,18 +139,18 @@ final class IntDoubleCommand extends ConsoleCommand {
               var12Lifetime1 = stackIn_56_0;
               var13Lifetime1 = 0 / ((-30 - param0) / 52);
               if (et.field_d.field_V.possessorTeam == -1) {
-                nq.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
               if (et.field_d.field_V.possessorTeam == 0) {
                 if (var12Lifetime1 != 0) {
-                  nq.a(30, param3, var14, 0, (byte) 42, param1);
+                  TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 } else {
                   stackIn_62_0 = 10;
                   stackIn_62_1 = var10;
                   stackIn_62_2 = var8;
                   stackIn_63_3 = (param6 == 1) ? 8 : 2;
-                  nq.a(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_63_3, (byte) 69, var9);
+                  TournamentChampionDialog.a(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_63_3, (byte) 69, var9);
                 }
                 return;
               }
@@ -158,7 +158,7 @@ final class IntDoubleCommand extends ConsoleCommand {
               stackIn_66_1 = var10;
               stackIn_66_2 = var8;
               stackIn_67_3 = (param6 == 1) ? 8 : 2;
-              nq.a(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3, (byte) 69, var9);
+              TournamentChampionDialog.a(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3, (byte) 69, var9);
               return;
             }
             var12Lifetime2 = -var14.pixelY(true) + param3;
@@ -177,19 +177,19 @@ final class IntDoubleCommand extends ConsoleCommand {
               var12Lifetime2 = stackIn_78_0;
               var13Lifetime2 = 0 / ((-30 - param0) / 52);
               if (et.field_d.field_V.possessorTeam == -1) {
-                nq.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
               if (et.field_d.field_V.possessorTeam == 0 &&
                 var12Lifetime2 != 0) {
-                nq.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
               stackIn_85_0 = 10;
               stackIn_85_1 = var10;
               stackIn_85_2 = var8;
               stackIn_86_3 = (param6 == 1) ? 8 : 2;
-              nq.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_86_3, (byte) 69, var9);
+              TournamentChampionDialog.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_86_3, (byte) 69, var9);
               return;
             }
             if (ld.field_f.action != 9 &&
@@ -204,18 +204,18 @@ final class IntDoubleCommand extends ConsoleCommand {
             var12Lifetime3 = stackIn_96_0;
             var13Lifetime3 = 0 / ((-30 - param0) / 52);
             if (et.field_d.field_V.possessorTeam == -1) {
-              nq.a(30, param3, var14, 0, (byte) 42, param1);
+              TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
               return;
             }
             if (et.field_d.field_V.possessorTeam == 0) {
               if (var12Lifetime3 != 0) {
-                nq.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
               } else {
                 stackIn_102_0 = 10;
                 stackIn_102_1 = var10;
                 stackIn_102_2 = var8;
                 stackIn_103_3 = (param6 == 1) ? 8 : 2;
-                nq.a(stackIn_102_0, stackIn_102_1, stackIn_102_2, stackIn_103_3, (byte) 69, var9);
+                TournamentChampionDialog.a(stackIn_102_0, stackIn_102_1, stackIn_102_2, stackIn_103_3, (byte) 69, var9);
               }
               return;
             }
@@ -223,14 +223,14 @@ final class IntDoubleCommand extends ConsoleCommand {
             stackIn_106_1 = var10;
             stackIn_106_2 = var8;
             stackIn_107_3 = (param6 == 1) ? 8 : 2;
-            nq.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_107_3, (byte) 69, var9);
+            TournamentChampionDialog.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_107_3, (byte) 69, var9);
             return;
           }
           if (0 == et.field_d.field_V.possessorTeam) {
             if (var11 == 0) {
               return;
             }
-            nq.a(30, param3, var14, 0, (byte) 112, param1);
+            TournamentChampionDialog.a(30, param3, var14, 0, (byte) 112, param1);
           }
           return;
         }
@@ -253,18 +253,18 @@ final class IntDoubleCommand extends ConsoleCommand {
 
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
-          if (nm.field_d == null) {
-            nm.field_d = new LoadingProgressDialog(wd.field_l, st.field_m);
-            wd.field_l.a(nm.field_d, false);
+          if (AnimationClip.field_d == null) {
+            AnimationClip.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
+            wd.field_l.a(AnimationClip.field_d, false);
           }
           if (param3 < 71) {
             IntDoubleCommand.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);
           }
-          nm.field_d.a(param1, param0, 9255, param2);
+          AnimationClip.field_d.a(param1, param0, 9255, param2);
           SoftwareRasterizer.b();
           oa.a((byte) -106, true);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

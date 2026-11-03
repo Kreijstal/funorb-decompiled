@@ -9,7 +9,7 @@ abstract class MouseWheelInput {
     static long[] field_c;
     static boolean field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_d = null;
         if (param0 == 66) {
@@ -23,10 +23,10 @@ abstract class MouseWheelInput {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (eq.a(false)) {
+        if (WeightedLruCache.a(false)) {
           param1 = false;
         }
-        ji.a((byte) 123, param1);
+        ScrollBar.a((byte) 123, param1);
         NetworkGameClient.k(1);
         if (param0 < -115) {
           return;
@@ -254,10 +254,10 @@ abstract class MouseWheelInput {
         or.field_d.b(9, (byte) -52);
         if (param0 != -1822) {
           MouseWheelInput.a(-16, -37);
-          ec.field_e = true;
+          LoginText.field_e = true;
           return;
         }
-        ec.field_e = true;
+        LoginText.field_e = true;
     }
 
     abstract void a(byte param0, java.awt.Component param1);

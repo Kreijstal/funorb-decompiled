@@ -25,7 +25,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
             MainMenuScreen.isScreenShown(20, -118);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         return 190 + var3;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         field_C = null;
         if (param0 == 90) {
@@ -341,7 +341,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "sf.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "sf.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -369,7 +369,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
           }
           this.field_B.field_P = this.field_E;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sf.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sf.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

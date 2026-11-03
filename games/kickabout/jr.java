@@ -12,7 +12,7 @@ final class jr extends im {
     private ReceivedAuctionItem field_Hb;
     static double field_Gb;
     private UiLayoutNode field_Jb;
-    private pu[] field_Eb;
+    private TrinketSlot[] field_Eb;
 
     final void c(int param0, boolean param1) {
         int var4 = 0;
@@ -27,7 +27,7 @@ final class jr extends im {
         var5 = Kickabout.field_G;
         if (!this.field_Lb) {
           if (AuctionLogEntry.e(15137)) {
-            stackIn_8_0 = (!np.h((byte) 19)) ? 1 : 0;
+            stackIn_8_0 = (!ScrollPane.h((byte) 19)) ? 1 : 0;
           } else {
             stackIn_8_0 = 0;
           }
@@ -169,7 +169,7 @@ final class jr extends im {
             stackIn_14_3 = -107;
             stackIn_15_4 = !(TextFieldValidator.f(-1));
             stackIn_19_2 = (((PlayerStats) (Object) stackIn_14_2).c((byte) stackIn_14_3, stackIn_15_4)) && (wn.a((byte) 1));
-            var5 = kk.a(stackIn_14_0, stackIn_14_1, stackIn_19_2);
+            var5 = TriangleMesh.a(stackIn_14_0, stackIn_14_1, stackIn_19_2);
             if (var5 != null) {
               var5.c(1 + var4, this.field_T + 4);
             } else {
@@ -178,17 +178,17 @@ final class jr extends im {
             this.field_X.a(var12.getDisplayName(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[0];
             if (GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79)) {
-              q.field_d.c(IntrusiveDeque.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
+              ConsoleTokenCursor.field_d.c(IntrusiveDeque.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
             } else {
               if (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) {
                 if (GameLoopApplet.field_E.hasOutbidEntry(30524, this.field_Hb.field_a)) {
-                  q.field_d.c(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
+                  ConsoleTokenCursor.field_d.c(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
                 }
               } else {
-                q.field_d.c(bk.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
+                ConsoleTokenCursor.field_d.c(bk.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
               }
             }
-            this.field_X.a(uf.field_e[var12.playerType], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+            this.field_X.a(uf.field_e[var12.archetype], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[1];
             var6 = 7 + var4;
             for (var7 = 0; 3 > var7; var7++) {
@@ -205,12 +205,12 @@ final class jr extends im {
               var9_int = stackIn_36_0;
               if (var7 != 0) {
                 if (var7 == 1) {
-                  stackIn_41_0 = var12.a(5205, oi.b(87));
+                  stackIn_41_0 = var12.trinketSpeedBonus(5205, IntValueNode.b(87));
                 } else {
-                  stackIn_41_0 = var12.b((byte) -51, oi.b(-112));
+                  stackIn_41_0 = var12.trinketTackleBonus((byte) -51, IntValueNode.b(-112));
                 }
               } else {
-                stackIn_41_0 = var12.c(true, oi.b(-113));
+                stackIn_41_0 = var12.trinketPowerBonus(true, IntValueNode.b(-113));
               }
               var10 = stackIn_41_0;
               stackIn_44_0 = var6;
@@ -222,7 +222,7 @@ final class jr extends im {
             }
             var4 = var4 + this.field_Db[2];
             if (this.field_Hb.playerStats.trinketIds.length == 0) {
-              IsSixCommand.field_C.d(hi.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
+              IsSixCommand.field_C.d(DiskCacheRequest.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
             }
             var4 = var4 + this.field_Db[3];
             var7Lifetime1 = this.field_y;
@@ -265,9 +265,9 @@ final class jr extends im {
         if (param1 > -16) {
           field_Mb = -60;
         }
-        int var3 = (int)(nj.a(75) % 600L);
+        int var3 = (int)(nj.monotonicMillis(75) % 600L);
         var3 = var3 * 6 / 600;
-        w.field_f[var3].c(param0 - 19, param2 - 23);
+        DialogOverlay.field_f[var3].c(param0 - 19, param2 - 23);
     }
 
     final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
@@ -304,7 +304,7 @@ final class jr extends im {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class jr extends im {
           this.field_Ib = param0;
           this.field_Lb = true;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -333,7 +333,7 @@ final class jr extends im {
           this.field_Lb = true;
           this.field_Db = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -353,8 +353,8 @@ final class jr extends im {
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
-        fn var9 = null;
-        pu var10 = null;
+        Trinket var9 = null;
+        TrinketSlot var10 = null;
         int var11 = 0;
         int var12 = 0;
         try {
@@ -376,13 +376,13 @@ final class jr extends im {
           }
           var4 = stackIn_11_0;
           if (var4 != 0) {
-            stackIn_14_0 = q.field_d;
+            stackIn_14_0 = ConsoleTokenCursor.field_d;
           } else {
             stackIn_14_0 = un.field_d;
           }
           var5 = stackIn_14_0;
-          this.field_Jb = eo.a(he.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
-          this.field_Cb = eo.a(mc.field_f, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Jb = eo.a(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Cb = eo.a(TickClock.field_f, 7126504, (BitmapFont) (var5), 50, true);
           this.addChild((byte) -117, this.field_Jb);
           this.addChild((byte) -120, this.field_Cb);
           this.field_Jb.field_J = this.field_T + 20;
@@ -392,10 +392,10 @@ final class jr extends im {
           this.field_Cb.field_J = 20;
           var6 = (this.field_Db[3] >> 1) + this.field_Db[2] + (this.field_Db[1] + this.field_Db[0]);
           var7 = this.field_mb >> 1;
-          this.field_Eb = new pu[this.field_Hb.playerStats.trinketIds.length];
+          this.field_Eb = new TrinketSlot[this.field_Hb.playerStats.trinketIds.length];
           for (var8 = 0; this.field_Eb.length > var8; var8++) {
             var9 = pa.field_g[this.field_Hb.playerStats.trinketIds[var8]];
-            var10 = new pu(var9, true);
+            var10 = new TrinketSlot(var9, true);
             var11 = var6;
             var12 = var7;
             if (this.field_Hb.playerStats.trinketIds.length == 2) {
@@ -432,7 +432,7 @@ final class jr extends im {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

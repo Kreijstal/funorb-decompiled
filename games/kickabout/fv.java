@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fv implements hc {
+final class fv implements OverlayLayer {
     static Sprite field_b;
     static String field_a;
     static boolean field_d;
@@ -15,7 +15,7 @@ final class fv implements hc {
         return false;
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean openUrlWithShell(byte param0, String param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -67,7 +67,7 @@ final class fv implements hc {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -90,8 +90,8 @@ final class fv implements hc {
             return stackIn_3_0;
           }
           var2_int = 0;
-          for (var3 = 0; vg.field_Db.length > var3; var3++) {
-            if (vg.field_Db[var3].field_c == param0) {
+          for (var3 = 0; TextFieldNode.field_Db.length > var3; var3++) {
+            if (TextFieldNode.field_Db[var3].field_c == param0) {
               var2_int++;
             }
           }
@@ -99,12 +99,12 @@ final class fv implements hc {
           var4 = 0;
           if (param1 != 19) {
             var6 = (String) null;
-            fv.a((byte) 41, (String) null);
+            fv.openUrlWithShell((byte) 41, (String) null);
           }
-          while (var4 < vg.field_Db.length) {
-            if (param0 == vg.field_Db[var4].field_c) {
-              if (!vg.field_Db[var4].field_d &&
-                !vg.field_Db[var4].b(32)) {
+          while (var4 < TextFieldNode.field_Db.length) {
+            if (param0 == TextFieldNode.field_Db[var4].field_c) {
+              if (!TextFieldNode.field_Db[var4].field_d &&
+                !TextFieldNode.field_Db[var4].loadSound(32)) {
                 stackIn_19_0 = (int)(100.0 * (double)var3Lifetime1 / (double)var2_int);
                 return stackIn_19_0;
               }
@@ -118,7 +118,7 @@ final class fv implements hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "fv.A(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "fv.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -147,25 +147,25 @@ final class fv implements hc {
         if (AuctionItem.field_e == -1) {
           return;
         }
-        var2 = wt.field_x;
+        var2 = ArrayWidgetContainer.field_x;
         var3 = us.field_j + 18;
         var5 = 44 / ((param0 - 50) / 45);
-        var4 = q.field_d;
+        var4 = ConsoleTokenCursor.field_d;
         if (AuctionItem.field_e == 2) {
           var6 = new String[3];
-          var6[0] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
+          var6[0] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
           if (ag.field_h != 0) {
             stackIn_20_0 = var6;
             stackIn_20_1 = 1;
             if (0 >= ag.field_h) {
-              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
             } else {
-              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }
           if (ag.field_h != 0) {
-            var6[2] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hg.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
+            var6[2] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
           }
           var7 = 0;
           var8 = 0;
@@ -201,7 +201,7 @@ final class fv implements hc {
             var3 = var24[1];
             var2 = var24[0];
             SoftwareRasterizer.a(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
-            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, na.field_Ib, i.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
+            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
             if (AuctionItem.field_e == 6) {
               var6_int = pc.field_a.b(0) + 6;
@@ -244,7 +244,7 @@ final class fv implements hc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 < 66) {

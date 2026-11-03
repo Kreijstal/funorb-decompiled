@@ -17,7 +17,7 @@ final class tt {
             tt.a(60, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "tt.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tt.B(" + param0 + ')');
         }
     }
 
@@ -52,8 +52,8 @@ final class tt {
           var2 = var1.readUnsignedByte((byte) -115);
           if (var2 == 0) {
             if (ni.field_m == null) {
-              ni.field_m = new em(128);
-              ou.field_y = 0;
+              ni.field_m = new DualLinkHashTable(128);
+              StripedProgressBar.field_y = 0;
             }
             stackIn_12_0 = (var1.readUnsignedByte((byte) -110) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
@@ -80,8 +80,8 @@ final class tt {
             if (var6 == null) {
               var6 = new gg();
               ni.field_m.a(var6, (byte) -4, (long)var8.hashCode());
-              fieldTemp$0 = ou.field_y;
-              ou.field_y = ou.field_y + 1;
+              fieldTemp$0 = StripedProgressBar.field_y;
+              StripedProgressBar.field_y = StripedProgressBar.field_y + 1;
               var6.field_Cb = fieldTemp$0;
               qn.field_b.a(var6, 3);
             }
@@ -119,7 +119,7 @@ final class tt {
             return;
           }
           if (kw.field_b == null) {
-            kw.field_b = new em(128);
+            kw.field_b = new DualLinkHashTable(128);
             ListingRow.field_d = 0;
           }
           var3Lifetime1 = var1.readString(-126);
@@ -183,7 +183,7 @@ final class tt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "tt.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "tt.A(" + param0 + ')');
         }
     }
 
@@ -204,8 +204,8 @@ final class tt {
             stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          var2 = new BinaryBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, pq.field_O);
-          tk.h((byte) -82);
+          var2 = new BinaryBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, SquadPickerDialog.field_O);
+          ScrollContainer.h((byte) -82);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -218,7 +218,7 @@ final class tt {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

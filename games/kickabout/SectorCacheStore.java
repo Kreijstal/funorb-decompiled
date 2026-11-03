@@ -14,7 +14,7 @@ final class SectorCacheStore {
     static String field_a;
     private BufferedCacheFile field_i;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_g = (String) null;
         }
@@ -61,7 +61,7 @@ final class SectorCacheStore {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -99,9 +99,9 @@ final class SectorCacheStore {
                 return null;
               }
               this.field_f.a((byte) 4, (long)(param0 * 6));
-              this.field_f.a(6, 0, (byte) 93, id.field_u);
-              var4_int = (param1 & id.field_u[1] << 8) + ((255 & id.field_u[0]) << 16) + (id.field_u[2] & 255);
-              var5 = (255 & id.field_u[5]) + (((255 & id.field_u[3]) << 16) + (id.field_u[4] << 8 & 65280));
+              this.field_f.a(6, 0, (byte) 93, StatefulTextPainter.field_u);
+              var4_int = (param1 & StatefulTextPainter.field_u[1] << 8) + ((255 & StatefulTextPainter.field_u[0]) << 16) + (StatefulTextPainter.field_u[2] & 255);
+              var5 = (255 & StatefulTextPainter.field_u[5]) + (((255 & StatefulTextPainter.field_u[3]) << 16) + (StatefulTextPainter.field_u[4] << 8 & 65280));
               if (0 > var4_int) {
                 return null;
               }
@@ -130,21 +130,21 @@ final class SectorCacheStore {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_i.a(var14 + var9, 0, (byte) 113, id.field_u);
-                  var13 = 255 & id.field_u[9];
-                  var12 = (id.field_u[8] & 255) + ((id.field_u[7] & 255) << 8) + ((255 & id.field_u[6]) << 16);
-                  var10 = (16711680 & id.field_u[1] << 16) + (((id.field_u[0] & 255) << 24) - (-(id.field_u[2] << 8 & 65280) - (id.field_u[3] & 255)));
-                  var11 = (id.field_u[4] << 8 & 65280) + (255 & id.field_u[5]);
+                  this.field_i.a(var14 + var9, 0, (byte) 113, StatefulTextPainter.field_u);
+                  var13 = 255 & StatefulTextPainter.field_u[9];
+                  var12 = (StatefulTextPainter.field_u[8] & 255) + ((StatefulTextPainter.field_u[7] & 255) << 8) + ((255 & StatefulTextPainter.field_u[6]) << 16);
+                  var10 = (16711680 & StatefulTextPainter.field_u[1] << 16) + (((StatefulTextPainter.field_u[0] & 255) << 24) - (-(StatefulTextPainter.field_u[2] << 8 & 65280) - (StatefulTextPainter.field_u[3] & 255)));
+                  var11 = (StatefulTextPainter.field_u[4] << 8 & 65280) + (255 & StatefulTextPainter.field_u[5]);
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_i.a(var14 + var9, 0, (byte) 116, id.field_u);
-                  var11 = (id.field_u[2] << 8 & 65280) + (255 & id.field_u[3]);
-                  var10 = (id.field_u[0] << 8 & 65280) + (255 & id.field_u[1]);
-                  var13 = 255 & id.field_u[7];
-                  var12 = (id.field_u[4] << 16 & 16711680) - (-(65280 & id.field_u[5] << 8) - (255 & id.field_u[6]));
+                  this.field_i.a(var14 + var9, 0, (byte) 116, StatefulTextPainter.field_u);
+                  var11 = (StatefulTextPainter.field_u[2] << 8 & 65280) + (255 & StatefulTextPainter.field_u[3]);
+                  var10 = (StatefulTextPainter.field_u[0] << 8 & 65280) + (255 & StatefulTextPainter.field_u[1]);
+                  var13 = 255 & StatefulTextPainter.field_u[7];
+                  var12 = (StatefulTextPainter.field_u[4] << 16 & 16711680) - (-(65280 & StatefulTextPainter.field_u[5] << 8) - (255 & StatefulTextPainter.field_u[6]));
                 }
                 if (var10 != param0) {
                   return null;
@@ -168,7 +168,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = id.field_u[var16];
+                  var6[incrementValue$2] = StatefulTextPainter.field_u[var16];
                 }
               }
               stackIn_50_0 = var6;
@@ -187,9 +187,9 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(byte param0, tv param1) {
+    final static void a(byte param0, ChatMessage param1) {
         int var2_int = 0;
-        tv var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -205,7 +205,7 @@ final class SectorCacheStore {
           if (0 != param1.field_j ||
             param1.field_p != 0) {
             for (var2_int = 0; vb.field_j > var2_int; var2_int++) {
-              var3 = fu.field_b[var2_int];
+              var3 = GrowableIntList.field_b[var2_int];
               if (var3.field_c == 2 &&
                 var3.field_j == param1.field_j &&
                 var3.field_p == param1.field_p) {
@@ -220,7 +220,7 @@ final class SectorCacheStore {
             PlayerShopScreen.field_S = param1.field_r;
           }
           var2_intLifetime1 = 50 % ((-10 - param0) / 54);
-          ec.a(true, param1);
+          LoginText.a(true, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,7 +232,7 @@ final class SectorCacheStore {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -266,8 +266,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_f.a((byte) 4, (long)(6 * param2));
-                  this.field_f.a(6, 0, (byte) 103, id.field_u);
-                  var7_int = (255 & id.field_u[5]) + ((id.field_u[3] & 255) << 16) + ((id.field_u[4] & 255) << 8);
+                  this.field_f.a(6, 0, (byte) 103, StatefulTextPainter.field_u);
+                  var7_int = (255 & StatefulTextPainter.field_u[5]) + ((StatefulTextPainter.field_u[3] & 255) << 16) + ((StatefulTextPainter.field_u[4] & 255) << 8);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_i.a(107) / 520L))) {
                     return false;
@@ -278,17 +278,17 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                id.field_u[0] = (byte)(param4 >> 16);
-                id.field_u[3] = (byte)(var7_int >> 16);
-                id.field_u[4] = (byte)(var7_int >> 8);
-                id.field_u[5] = (byte)var7_int;
-                id.field_u[1] = (byte)(param4 >> 8);
+                StatefulTextPainter.field_u[0] = (byte)(param4 >> 16);
+                StatefulTextPainter.field_u[3] = (byte)(var7_int >> 16);
+                StatefulTextPainter.field_u[4] = (byte)(var7_int >> 8);
+                StatefulTextPainter.field_u[5] = (byte)var7_int;
+                StatefulTextPainter.field_u[1] = (byte)(param4 >> 8);
                 if (param1 != 16) {
                   SectorCacheStore.a(-25);
                 }
-                id.field_u[2] = (byte)param4;
+                StatefulTextPainter.field_u[2] = (byte)param4;
                 this.field_f.a((byte) 4, (long)(6 * param2));
-                this.field_f.a(0, 56, 6, id.field_u);
+                this.field_f.a(0, 56, 6, StatefulTextPainter.field_u);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -299,7 +299,7 @@ final class SectorCacheStore {
                       this.field_i.a((byte) 4, (long)(520 * var7_int));
                       if (param2 <= 65535) {
                         try {
-                          this.field_i.a(8, 0, (byte) 118, id.field_u);
+                          this.field_i.a(8, 0, (byte) 118, StatefulTextPainter.field_u);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,13 +309,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (id.field_u[1] & 255) + (65280 & id.field_u[0] << 8);
-                        var10 = (id.field_u[6] & 255) + (((id.field_u[5] & 255) << 8) + (16711680 & id.field_u[4] << 16));
-                        var13 = id.field_u[7] & 255;
-                        var12 = ((id.field_u[2] & 255) << 8) + (id.field_u[3] & 255);
+                        var11 = (StatefulTextPainter.field_u[1] & 255) + (65280 & StatefulTextPainter.field_u[0] << 8);
+                        var10 = (StatefulTextPainter.field_u[6] & 255) + (((StatefulTextPainter.field_u[5] & 255) << 8) + (16711680 & StatefulTextPainter.field_u[4] << 16));
+                        var13 = StatefulTextPainter.field_u[7] & 255;
+                        var12 = ((StatefulTextPainter.field_u[2] & 255) << 8) + (StatefulTextPainter.field_u[3] & 255);
                       } else {
                         try {
-                          this.field_i.a(10, 0, (byte) 104, id.field_u);
+                          this.field_i.a(10, 0, (byte) 104, StatefulTextPainter.field_u);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -325,10 +325,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var12 = ((id.field_u[4] & 255) << 8) + (255 & id.field_u[5]);
-                        var13 = id.field_u[9] & 255;
-                        var11 = (65280 & id.field_u[2] << 8) + ((255 & id.field_u[1]) << 16) + (-16777216 & id.field_u[0] << 24) + (id.field_u[3] & 255);
-                        var10 = ((255 & id.field_u[6]) << 16) + ((id.field_u[7] & 255) << 8) + (id.field_u[8] & 255);
+                        var12 = ((StatefulTextPainter.field_u[4] & 255) << 8) + (255 & StatefulTextPainter.field_u[5]);
+                        var13 = StatefulTextPainter.field_u[9] & 255;
+                        var11 = (65280 & StatefulTextPainter.field_u[2] << 8) + ((255 & StatefulTextPainter.field_u[1]) << 16) + (-16777216 & StatefulTextPainter.field_u[0] << 24) + (StatefulTextPainter.field_u[3] & 255);
+                        var10 = ((255 & StatefulTextPainter.field_u[6]) << 16) + ((StatefulTextPainter.field_u[7] & 255) << 8) + (StatefulTextPainter.field_u[8] & 255);
                       }
                       if ((var11 == param2 &&
                         var12 == var9 &&
@@ -355,18 +355,18 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param2 > 65535) {
-                      id.field_u[3] = (byte)param2;
-                      id.field_u[2] = (byte)(param2 >> 8);
-                      id.field_u[1] = (byte)(param2 >> 16);
-                      id.field_u[5] = (byte)var9;
-                      id.field_u[6] = (byte)(var10 >> 16);
-                      id.field_u[4] = (byte)(var9 >> 8);
-                      id.field_u[8] = (byte)var10;
-                      id.field_u[0] = (byte)(param2 >> 24);
-                      id.field_u[7] = (byte)(var10 >> 8);
-                      id.field_u[9] = (byte)this.field_h;
+                      StatefulTextPainter.field_u[3] = (byte)param2;
+                      StatefulTextPainter.field_u[2] = (byte)(param2 >> 8);
+                      StatefulTextPainter.field_u[1] = (byte)(param2 >> 16);
+                      StatefulTextPainter.field_u[5] = (byte)var9;
+                      StatefulTextPainter.field_u[6] = (byte)(var10 >> 16);
+                      StatefulTextPainter.field_u[4] = (byte)(var9 >> 8);
+                      StatefulTextPainter.field_u[8] = (byte)var10;
+                      StatefulTextPainter.field_u[0] = (byte)(param2 >> 24);
+                      StatefulTextPainter.field_u[7] = (byte)(var10 >> 8);
+                      StatefulTextPainter.field_u[9] = (byte)this.field_h;
                       this.field_i.a((byte) 4, (long)(520 * var7_int));
-                      this.field_i.a(0, 125, 10, id.field_u);
+                      this.field_i.a(0, 125, 10, StatefulTextPainter.field_u);
                       var11 = param4 - var8;
                       if (510 < var11) {
                         var11 = 510;
@@ -374,16 +374,16 @@ final class SectorCacheStore {
                       this.field_i.a(var8, param1 + 84, var11, param3);
                       var8 = var8 + var11;
                     } else {
-                      id.field_u[4] = (byte)(var10 >> 16);
-                      id.field_u[3] = (byte)var9;
-                      id.field_u[2] = (byte)(var9 >> 8);
-                      id.field_u[1] = (byte)param2;
-                      id.field_u[0] = (byte)(param2 >> 8);
-                      id.field_u[7] = (byte)this.field_h;
-                      id.field_u[6] = (byte)var10;
-                      id.field_u[5] = (byte)(var10 >> 8);
+                      StatefulTextPainter.field_u[4] = (byte)(var10 >> 16);
+                      StatefulTextPainter.field_u[3] = (byte)var9;
+                      StatefulTextPainter.field_u[2] = (byte)(var9 >> 8);
+                      StatefulTextPainter.field_u[1] = (byte)param2;
+                      StatefulTextPainter.field_u[0] = (byte)(param2 >> 8);
+                      StatefulTextPainter.field_u[7] = (byte)this.field_h;
+                      StatefulTextPainter.field_u[6] = (byte)var10;
+                      StatefulTextPainter.field_u[5] = (byte)(var10 >> 8);
                       this.field_i.a((byte) 4, (long)(520 * var7_int));
-                      this.field_i.a(0, 76, 8, id.field_u);
+                      this.field_i.a(0, 76, 8, StatefulTextPainter.field_u);
                       var11 = -var8 + param4;
                       if (var11 > 512) {
                         var11 = 512;
@@ -414,7 +414,7 @@ final class SectorCacheStore {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -433,12 +433,12 @@ final class SectorCacheStore {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        cf var5 = null;
+        RankingRowNode var5 = null;
         ListingRow var6 = null;
         int var7 = 0;
         IntrusiveDeque var8 = null;
-        cf var9 = null;
-        cf var5Lifetime1;
+        RankingRowNode var9 = null;
+        RankingRowNode var5Lifetime1;
         var7 = Kickabout.field_G;
         try {
           var8 = new IntrusiveDeque();
@@ -452,12 +452,12 @@ final class SectorCacheStore {
           var3 = AnimationSkeleton.field_k;
           var4 = 5 + var2 * 18;
           scanLoop1: while (AuctionTableWidget.field_Hb.field_Gb.field_mb - (-15 + AuctionTableWidget.field_Hb.field_Db.field_J) > var4) {
-            if (pu.field_Db[var3] > var2) {
-              var5 = (cf) (var8.g(24009));
+            if (TrinketSlot.field_Db[var3] > var2) {
+              var5 = (RankingRowNode) (var8.g(24009));
               while (var5 != null) {
                 if (var5.field_yb != var2 ||
                   var5.field_Ab != var3) {
-                  var5 = (cf) (var8.c(33));
+                  var5 = (RankingRowNode) (var8.c(33));
                   continue;
                 }
                 break;
@@ -468,7 +468,7 @@ final class SectorCacheStore {
                 var9.a(true, 327, 5, var4, 16);
               }
               AuctionTableWidget.field_Hb.field_Db.addChild((byte) -109, (UiLayoutNode) (var5));
-              var6 = LineupView.field_y.a(var2, (byte) 116, var3);
+              var6 = LineupView.field_y.get(var2, (byte) 116, var3);
               var4 += 18;
               var2++;
               if (var6 == null) {
@@ -480,19 +480,19 @@ final class SectorCacheStore {
             }
             break;
           }
-          var5Lifetime1 = (cf) (var8.b((byte) 127));
+          var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
           if (param0 < 82) {
             return;
           }
           while (var5Lifetime1 != null) {
             var5Lifetime1.c(true);
-            var5Lifetime1 = (cf) (var8.b((byte) 127));
+            var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "qh.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "qh.A(" + param0 + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class SectorCacheStore {
           this.field_f = param2;
           this.field_d = param3;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

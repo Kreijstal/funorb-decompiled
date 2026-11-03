@@ -81,11 +81,11 @@ final class InstrumentNoteMask extends IntrusiveNode {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static PlayerInputEvent a(int param0, int param1, int param2, byte param3, byte param4) {
+    final static PlayerInputEvent createMouseEvent(int param0, int param1, int param2, byte param3, byte param4) {
         int var5 = -103 / ((-46 - param2) / 36);
         return new PlayerInputEvent(2, param0, param1, param4, param3);
     }
@@ -94,7 +94,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,11 +105,11 @@ final class InstrumentNoteMask extends IntrusiveNode {
         field_i = (int)field_f >> 3;
         field_h = new int[255];
         for (var0 = 0; 255 > var0; var0++) {
-          field_h[var0] = hf.a(var0 << 16, var0 << 8);
+          field_h[var0] = PainterStyle.a(var0 << 16, var0 << 8);
         }
         field_e = new int[255];
         for (var0Lifetime1 = 0; var0Lifetime1 < 255; var0Lifetime1++) {
-          field_e[var0Lifetime1] = hf.a(var0Lifetime1 << 16, var0Lifetime1);
+          field_e[var0Lifetime1] = PainterStyle.a(var0Lifetime1 << 16, var0Lifetime1);
         }
     }
 }

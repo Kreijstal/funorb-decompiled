@@ -18,7 +18,7 @@ final class BlankScreen extends AppScreen {
 
     final boolean handleKey(int param0, int param1, char param2) {
         if (param1 > -5) {
-          BlankScreen.a(114);
+          BlankScreen.releaseStatics(114);
           return false;
         }
         return false;
@@ -27,14 +27,14 @@ final class BlankScreen extends AppScreen {
     final void setTransitionProgress(int param0, boolean param1, int param2, AppScreen param3) {
         try {
           if (param2 > -28) {
-            BlankScreen.a(-50);
+            BlankScreen.releaseStatics(-50);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 <= 32) {
           return;

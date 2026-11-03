@@ -13,7 +13,7 @@ final class ConsoleValue {
 
     final static void a(int param0, byte param1) {
         if (param1 < 8) {
-          ConsoleValue.a((byte) -49);
+          ConsoleValue.releaseStatics((byte) -49);
           ms.a(0, param0);
           return;
         }
@@ -32,13 +32,13 @@ final class ConsoleValue {
 
     final static void a(int param0, String param1) {
         try {
-          np.field_Jb.a(new nq(param1), 3);
+          ScrollPane.field_Jb.a(new TournamentChampionDialog(param1), 3);
           if (param0 != 2009) {
             String var3 = (String) null;
             ConsoleValue.a(79, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "li.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "li.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class ConsoleValue {
         return (byte)(int)this.a(true);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_f = null;
         if (param0 <= -101) {
@@ -162,7 +162,7 @@ final class ConsoleValue {
           this.field_b = false;
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

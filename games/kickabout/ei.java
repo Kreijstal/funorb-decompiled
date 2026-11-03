@@ -85,11 +85,11 @@ final class ei implements WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, kk param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, TriangleMesh param6, int param7) {
         int stackIn_16_0 = 0;
         int[] stackIn_18_0 = null;
         int stackIn_19_1 = 0;
@@ -134,7 +134,7 @@ final class ei implements WidgetPainter {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        kk var44 = null;
+        TriangleMesh var44 = null;
         int[] var49 = null;
         int[] var54 = null;
         byte[] var60 = null;
@@ -153,7 +153,7 @@ final class ei implements WidgetPainter {
           if (null != var44.field_G &&
             1 < var44.field_u) {
             var60 = var44.field_G;
-            th.a(param5 ^ -125, 0, var60, vu.field_zb, 0);
+            th.a(param5 ^ -125, 0, var60, ContextMenuItem.field_zb, 0);
           } else {
             or.b(false);
           }
@@ -162,7 +162,7 @@ final class ei implements WidgetPainter {
           var41 = var49;
           var8 = var41;
           var64 = new int[param6.field_k];
-          var62 = pv.field_F;
+          var62 = HelpTipDialog.field_F;
           if (param5 != -125) {
             ei.a(0);
           }
@@ -196,34 +196,34 @@ final class ei implements WidgetPainter {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < ShopPlayerSlot.field_Ob; var13Lifetime1++) {
-            var14Lifetime1 = nb.field_e[var13Lifetime1];
+            var14Lifetime1 = GameSoundEffect.field_e[var13Lifetime1];
             var15Lifetime1 = param6.field_n[var14Lifetime1];
             var16 = param6.field_z[var14Lifetime1];
             var17 = param6.field_T[var14Lifetime1];
-            if (pv.field_F.length <= param6.field_M[var14Lifetime1]) {
+            if (HelpTipDialog.field_F.length <= param6.field_M[var14Lifetime1]) {
               stackIn_25_0 = -1;
             } else {
               stackIn_25_0 = param6.field_M[var14Lifetime1];
             }
             var18 = stackIn_25_0;
-            if (param6.field_U[var14Lifetime1] >= pv.field_F.length) {
+            if (param6.field_U[var14Lifetime1] >= HelpTipDialog.field_F.length) {
               stackIn_28_0 = -1;
             } else {
               stackIn_28_0 = param6.field_U[var14Lifetime1];
             }
             var19 = stackIn_28_0;
-            if (param6.field_l[var14Lifetime1] >= pv.field_F.length) {
+            if (param6.field_l[var14Lifetime1] >= HelpTipDialog.field_F.length) {
               stackIn_31_0 = -1;
             } else {
               stackIn_31_0 = param6.field_l[var14Lifetime1];
             }
             var20 = stackIn_31_0;
-            if (sq.field_H != null &&
+            if (SaveChangesDialog.field_H != null &&
               null != param6.field_o &&
               param6.field_o.length > var14Lifetime1 &&
               -1 != param6.field_o[var14Lifetime1] &&
-              param6.field_o[var14Lifetime1] < sq.field_H.length) {
-              stackIn_39_0 = sq.field_H[param6.field_o[var14Lifetime1]];
+              param6.field_o[var14Lifetime1] < SaveChangesDialog.field_H.length) {
+              stackIn_39_0 = SaveChangesDialog.field_H[param6.field_o[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }
@@ -248,7 +248,7 @@ final class ei implements WidgetPainter {
               var32 = var30 & 65280;
               var33 = var28 * var31 >>> 8 & -671153921 | -1090453760 & var28 * var32 >>> 8;
               var33 = var33 + var29 * 65793;
-              lw.a(var23, var27, var25, (byte) -56, var22, var24, var26, (var33 & 16711422) >> 1);
+              ProxyAuthenticationRequiredException.a(var23, var27, var25, (byte) -56, var22, var24, var26, (var33 & 16711422) >> 1);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -270,7 +270,7 @@ final class ei implements WidgetPainter {
               var38 = var38 + 65793 * var32;
               var37 = var37 + 65793 * var31;
               var39 = var39 + 65793 * var33;
-              os.a(var26, (var38 & 65313) >> 8, var25, (65336 & var37) >> 8, var37 & 255, 255 & var39, (var39 & 65385) >> 8, var37 >> 16, var38 >> 16, var38 & 255, var24, var39 >> 16, var23, -15343, var27, var22);
+              Bzip2State.a(var26, (var38 & 65313) >> 8, var25, (65336 & var37) >> 8, var37 & 255, 255 & var39, (var39 & 65385) >> 8, var37 >> 16, var38 >> 16, var38 & 255, var24, var39 >> 16, var23, -15343, var27, var22);
             }
           }
           return;
@@ -284,11 +284,11 @@ final class ei implements WidgetPainter {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param7).append(')').toString());
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int sine(int param0, byte param1) {
         if (param1 != -23) {
           field_f = (String) null;
         }
@@ -310,14 +310,14 @@ final class ei implements WidgetPainter {
           this.field_i = param5;
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static void a(boolean param0, boolean param1) {
         er.a((byte) 71, param0);
-        if (null != sn.field_e) {
-          ar.a(15707, sn.field_e);
+        if (null != UrlRequest.field_e) {
+          ar.a(15707, UrlRequest.field_e);
         }
         if (param1) {
           field_n = true;

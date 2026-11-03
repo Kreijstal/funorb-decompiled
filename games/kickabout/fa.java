@@ -17,7 +17,7 @@ final class fa extends IntrusiveNode {
         }
         int var1 = -60 % ((-56 - param0) / 56);
         if (0 != NodeHashTableIterator.field_b) {
-          td.a(29);
+          TrinketCatalog.a(29);
         }
         NumericDateInputWidget.field_I = 0;
     }
@@ -64,7 +64,7 @@ final class fa extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

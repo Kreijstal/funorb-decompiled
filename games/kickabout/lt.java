@@ -8,7 +8,7 @@ final class lt {
     static Sprite[] field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < -114) {
           field_a = null;
           field_c = null;
@@ -17,7 +17,7 @@ final class lt {
           field_b = null;
           return;
         }
-        lt.a(107);
+        lt.releaseStatics(107);
         field_a = null;
         field_c = null;
         field_d = null;
@@ -83,7 +83,7 @@ final class lt {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

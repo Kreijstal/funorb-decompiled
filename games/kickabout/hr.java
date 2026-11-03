@@ -14,7 +14,7 @@ final class hr extends IntrusiveNode {
     int field_n;
 
     final static void b(int param0) {
-        du.field_n = param0 + Math.max(q.field_d.a(ag.field_l), q.field_d.a(h.field_a));
+        du.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.a(ag.field_l), ConsoleTokenCursor.field_d.a(h.field_a));
     }
 
     public static void a(int param0) {
@@ -93,14 +93,14 @@ final class hr extends IntrusiveNode {
             var3 = var15.field_v;
             var4_int = -1 + AccountTermsPanel.a(0, 6784) / var2_int;
             var5 = 1 + AccountTermsPanel.a(640, 6784) / var2_int;
-            var6 = qj.a(-6779, 0) / var3 - 1;
-            var7 = qj.a(-6779, 640) / var3 + 1;
+            var6 = TextLayoutLine.a(-6779, 0) / var3 - 1;
+            var7 = TextLayoutLine.a(-6779, 640) / var3 + 1;
             for (var8 = var4_int; var8 < var5; var8++) {
               for (var9 = var6; var7 > var9; var9++) {
                 var10 = ug.a(param0 ^ -48, var8 * var2_int);
-                var11 = lf.a((byte) -85, var9 * var3);
+                var11 = IntKeyLookup.a((byte) -85, var9 * var3);
                 var12 = ug.a(param0 + 48, var8 * var2_int + var2_int);
-                var13 = lf.a((byte) -97, var3 * var9 + var3);
+                var13 = IntKeyLookup.a((byte) -97, var3 * var9 + var3);
                 SoftwareRasterizer.e(var10, var11, var12 - var10, var13 - var11, 65793);
                 IsSixCommand.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
               }
@@ -110,10 +110,10 @@ final class hr extends IntrusiveNode {
             if (LeaguesScreen.field_G != var15) {
               MyKitScreen.field_S = var15.copy();
               LeaguesScreen.field_G = var15;
-              ou.field_B = -1;
+              StripedProgressBar.field_B = -1;
             }
-            if (InstrumentNoteMask.field_i != ou.field_B) {
-              ou.field_B = InstrumentNoteMask.field_i;
+            if (InstrumentNoteMask.field_i != StripedProgressBar.field_B) {
+              StripedProgressBar.field_B = InstrumentNoteMask.field_i;
               var2_intLifetime1 = var15.field_o * InstrumentNoteMask.field_i >> 8;
               var3Lifetime1 = InstrumentNoteMask.field_i * var15.field_v >> 8;
               PacketBuffer.a(param0 ^ 10, MyKitScreen.field_S);
@@ -224,8 +224,8 @@ final class hr extends IntrusiveNode {
                 }
               }
             }
-            if (null != oi.field_e) {
-              var2 = oi.field_e;
+            if (null != IntValueNode.field_e) {
+              var2 = IntValueNode.field_e;
               for (var3Lifetime3Lifetime1 = 0; var2.length > var3Lifetime3Lifetime1; var3Lifetime3Lifetime1++) {
                 var4 = var2[var3Lifetime3Lifetime1];
                 var4.a((byte) 125);
@@ -239,7 +239,7 @@ final class hr extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "hr.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "hr.B(" + param0 + ')');
         }
     }
 

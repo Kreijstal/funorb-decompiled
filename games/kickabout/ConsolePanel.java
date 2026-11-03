@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ConsolePanel implements hc {
+abstract class ConsolePanel implements OverlayLayer {
     private IntrusiveDeque field_m;
-    vg field_k;
+    TextFieldNode field_k;
     static UiLayoutNode field_q;
     BitmapFont field_d;
     private UiLayoutNode field_l;
     UiLayoutNode field_j;
     private int field_f;
-    np field_g;
+    ScrollPane field_g;
     String field_a;
     static IntrusiveDeque field_i;
     private String[] field_c;
@@ -38,7 +38,7 @@ abstract class ConsolePanel implements hc {
         try {
           var4_int = -15 + (-10 + this.field_g.field_q);
           if (param2 != -122) {
-            ConsolePanel.d((byte) 97);
+            ConsolePanel.releaseStatics((byte) 97);
           }
           var5 = FormationAgent.a(param1, 2, '\n');
           var6 = var5;
@@ -66,7 +66,7 @@ abstract class ConsolePanel implements hc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ abstract class ConsolePanel implements hc {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ abstract class ConsolePanel implements hc {
           this.field_g.field_Ab.field_mb = var4_int;
           this.field_g.field_Ab.field_J = -var4_int + this.field_g.field_mb;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "be.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "be.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -263,13 +263,13 @@ abstract class ConsolePanel implements hc {
               }
               this.field_o = (TextLine) (stackIn_26_1);
               if (this.field_o != null) {
-                this.field_k.b(this.field_o.text, param0 ^ -30330);
+                this.field_k.setText(this.field_o.text, param0 ^ -30330);
               }
             }
           } else {
             if (param1 != 99) {
               if (param1 != 80) {
-                this.field_k.a(param1, param2, param0 ^ 12183);
+                this.field_k.handleKey(param1, param2, param0 ^ 12183);
               } else {
                 this.b(72);
               }
@@ -277,12 +277,12 @@ abstract class ConsolePanel implements hc {
               if (this.field_o != null &&
                 this.field_m.field_c != this.field_o.field_b) {
                 this.field_o = (TextLine) (this.field_o.field_b);
-                this.field_k.b(this.field_o.text, -23174);
+                this.field_k.setText(this.field_o.text, -23174);
               }
             }
           }
         } else {
-          var7 = this.field_k.j((byte) -16);
+          var7 = this.field_k.getText((byte) -16);
           if (var7.length() <= 0) {
             return true;
           }
@@ -291,7 +291,7 @@ abstract class ConsolePanel implements hc {
           if (!this.a(var7, true)) {
             var5.field_y = 16733525;
           }
-          this.field_k.k(param0 ^ -26138);
+          this.field_k.clear(param0 ^ -26138);
           this.a(var7, 30);
           this.field_o = null;
         }
@@ -325,7 +325,7 @@ abstract class ConsolePanel implements hc {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ abstract class ConsolePanel implements hc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -370,7 +370,7 @@ abstract class ConsolePanel implements hc {
             this.field_e = 33;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "be.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "be.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ abstract class ConsolePanel implements hc {
 
     abstract void b(int param0);
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         if (param0 >= -9) {
           return;
@@ -406,7 +406,7 @@ abstract class ConsolePanel implements hc {
           }
           this.a(param1 == null ? "null" : param1.toString(), (byte) 94);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "be.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "be.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -464,10 +464,10 @@ abstract class ConsolePanel implements hc {
             this.field_l.field_J = this.field_l.field_J - 28;
           }
         }
-        if (!this.field_k.j((byte) -16).equals(this.field_p) ||
-          this.field_k.j(-1) != this.field_b) {
-          this.field_p = this.field_k.j((byte) -16);
-          this.field_b = this.field_k.j(-1);
+        if (!this.field_k.getText((byte) -16).equals(this.field_p) ||
+          this.field_k.getCaretPosition(-1) != this.field_b) {
+          this.field_p = this.field_k.getText((byte) -16);
+          this.field_b = this.field_k.getCaretPosition(-1);
           this.field_c = this.b((byte) -86);
           if (null != this.field_c &&
             0 == this.field_c.length) {
@@ -487,8 +487,8 @@ abstract class ConsolePanel implements hc {
         }
         this.field_n = this.field_n + 1;
         this.field_l.b(0, param1);
-        this.field_g.a(this.field_f, id.field_v * (this.field_f * 2), true, 0);
-        this.field_k.b(11570);
+        this.field_g.a(this.field_f, StatefulTextPainter.field_v * (this.field_f * 2), true, 0);
+        this.field_k.updatePointer(11570);
     }
 
     ConsolePanel(BitmapFont param0, PlatformTaskDispatcher param1) {
@@ -502,7 +502,7 @@ abstract class ConsolePanel implements hc {
         UiLayoutNode var10 = null;
         UiLayoutNode var11 = null;
         UiLayoutNode var12 = null;
-        na var13 = null;
+        VerticalScrollbar var13 = null;
         UiLayoutNode var14 = null;
         UiLayoutNode var15 = null;
         this.field_a = "# ";
@@ -526,10 +526,10 @@ abstract class ConsolePanel implements hc {
           var12 = this.a(65793, 200, 2236962);
           this.field_l = new UiLayoutNode(0L, var5);
           this.field_l.a(true, f.field_d, 0, -200, 200);
-          var13 = new na(0L, var8, var8, var9, var10);
+          var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new UiLayoutNode();
           var14.field_jb = new IntrusiveDeque();
-          this.field_g = new np(0L, var14, var6, var13);
+          this.field_g = new ScrollPane(0L, var14, var6, var13);
           this.field_g.field_Ab.field_jb = new IntrusiveDeque();
           this.field_g.a(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
           this.field_l.addChild((byte) -118, (UiLayoutNode) (this.field_g));
@@ -538,14 +538,14 @@ abstract class ConsolePanel implements hc {
           var15.field_D = 5;
           var15.field_B = 2;
           var15.field_X = this.field_d;
-          this.field_k = new vg(0L, var7, var11, var15);
+          this.field_k = new TextFieldNode(0L, var7, var11, var15);
           this.field_k.a(-630, this.field_g.field_s, 5 + (this.field_g.field_J + this.field_g.field_mb), var3_int, this.field_g.field_q);
-          this.field_k.a(param1, -17421);
+          this.field_k.setPlatformDispatcher(param1, -17421);
           this.field_l.addChild((byte) -119, (UiLayoutNode) (this.field_k));
           this.field_j = new UiLayoutNode(0L, var12);
           this.field_j.field_s = 0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

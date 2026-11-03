@@ -21,12 +21,12 @@ final class ColourSwatchTile extends UiLayoutNode {
           if (param0 != 140) {
             ColourSwatchTile.b(108);
           }
-          var4 = (AuctionListing) (ce.field_K.g(param0 ^ 23877));
+          var4 = (AuctionListing) (BuyPlayerDialog.field_K.g(param0 ^ 23877));
           while (var4 != null) {
             if (var4.isSameListing(param1, 5250)) {
               return false;
             }
-            var4 = (AuctionListing) (ce.field_K.c(param0 ^ 173));
+            var4 = (AuctionListing) (BuyPlayerDialog.field_K.c(param0 ^ 173));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -39,7 +39,7 @@ final class ColourSwatchTile extends UiLayoutNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -73,9 +73,9 @@ final class ColourSwatchTile extends UiLayoutNode {
         SoftwareRasterizer.fillRect(2 + var5, var6 + 2, -4 + var7, -4 + var7, this.field_Cb);
         if (var2 != 0) {
           if (!this.field_gb) {
-            wt.field_z[0].d(var5 + 2, var6 + 2, -4 + var7, var7 - 4, 140);
-            wt.field_z[1].d(var5 + 2, var6 + 2, -4 + var7, -4 + var7, 128);
-            wt.field_z[3].e(2 + var5, var6 + 2, -4 + var7, -4 + var7, 256);
+            ArrayWidgetContainer.field_z[0].d(var5 + 2, var6 + 2, -4 + var7, var7 - 4, 140);
+            ArrayWidgetContainer.field_z[1].d(var5 + 2, var6 + 2, -4 + var7, -4 + var7, 128);
+            ArrayWidgetContainer.field_z[3].e(2 + var5, var6 + 2, -4 + var7, -4 + var7, 256);
           }
           su.field_a.c((-su.field_a.field_o + var7 >> 1) + var5, (var7 - su.field_a.field_v >> 1) + var6);
           SoftwareRasterizer.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
@@ -89,9 +89,9 @@ final class ColourSwatchTile extends UiLayoutNode {
           SoftwareRasterizer.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
           return;
         }
-        wt.field_z[0].b(var5 + 2, var6 + 2, 140);
-        wt.field_z[1].b(var5 + 2, var6 + 2, 128);
-        wt.field_z[3].drawAdditive(2 + var5, 2 + var6, 128);
+        ArrayWidgetContainer.field_z[0].b(var5 + 2, var6 + 2, 140);
+        ArrayWidgetContainer.field_z[1].b(var5 + 2, var6 + 2, 128);
+        ArrayWidgetContainer.field_z[3].drawAdditive(2 + var5, 2 + var6, 128);
         SoftwareRasterizer.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
         SoftwareRasterizer.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
         SoftwareRasterizer.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
@@ -111,7 +111,7 @@ final class ColourSwatchTile extends UiLayoutNode {
           this.field_zb = param0;
           this.field_Cb = TriangleRasterizer.field_l[LongPlusOneCommand.field_B[this.field_yb]];
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -123,10 +123,10 @@ final class ColourSwatchTile extends UiLayoutNode {
         var2 = Kickabout.field_G;
         try {
           PasswordLoginCredentials.b((byte) -28);
-          var3 = (FadingSoundPlayer) (pn.field_z.g(24009));
+          var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.g(24009));
           while (var3 != null) {
             var3.update((byte) -127);
-            var3 = (FadingSoundPlayer) (pn.field_z.c(33));
+            var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.c(33));
           }
           if (param0 == 17702) {
             return;
@@ -136,7 +136,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "gi.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "gi.B(" + param0 + ')');
         }
     }
 

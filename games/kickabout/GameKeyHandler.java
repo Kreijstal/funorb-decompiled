@@ -12,9 +12,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
         try {
           gs.field_d = param0;
-          gd.field_c = param1;
+          ListingRowCache.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "de.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "de.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var2 = null;
         try {
           if (PlayerModelPreview.field_q != null) {
-            rc.field_d = -1;
+            GzipDecoder.field_d = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +53,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "de.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "de.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               AuctionsScreen.a(-840618968, var12 * var22 + var14, DualLinkNode.field_h[var1_int], -var18 + var15);
             }
             if (var9 != 0) {
-              im.a(-12376, var12 * var22 + var14, var17, qj.field_a);
+              im.a(-12376, var12 * var22 + var14, var17, TextLayoutLine.field_a);
               AuctionsScreen.a(-840618968, var14 + var22 * var12, ModalPanel.field_G[var1_int], var17 + var5);
             }
           }
@@ -181,7 +181,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (var8 != 0 &&
             var9 != 0) {
-            im.a(-12376, var16, var17, pf.field_b);
+            im.a(-12376, var16, var17, ByteStorage.field_b);
             im.a(-12376, var16, var17, c.field_f[3]);
           }
           var22Lifetime2 = MySquadScreen.c(-82, -130);
@@ -195,7 +195,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "de.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "de.A(" + param0 + ')');
         }
     }
 
@@ -221,12 +221,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (rc.field_d >= 0 &&
+            if (GzipDecoder.field_d >= 0 &&
               var2_int >= 0) {
-              mp.field_j[rc.field_d] = var2_int;
-              rc.field_d = 127 & 1 + rc.field_d;
-              if (rc.field_d == tv.field_i) {
-                rc.field_d = -1;
+              mp.field_j[GzipDecoder.field_d] = var2_int;
+              GzipDecoder.field_d = 127 & 1 + GzipDecoder.field_d;
+              if (GzipDecoder.field_d == ChatMessage.field_i) {
+                GzipDecoder.field_d = -1;
               }
             }
             if (var2_int >= 0) {
@@ -256,7 +256,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -277,12 +277,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (rc.field_d >= 0 &&
+            if (GzipDecoder.field_d >= 0 &&
               var2_int >= 0) {
-              mp.field_j[rc.field_d] = ~var2_int;
-              rc.field_d = rc.field_d + 1 & 127;
-              if (rc.field_d == tv.field_i) {
-                rc.field_d = -1;
+              mp.field_j[GzipDecoder.field_d] = ~var2_int;
+              GzipDecoder.field_d = GzipDecoder.field_d + 1 & 127;
+              if (GzipDecoder.field_d == ChatMessage.field_i) {
+                GzipDecoder.field_d = -1;
               }
             }
           }
@@ -298,7 +298,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -311,17 +311,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (param0 != 40) {
           field_c = -21;
         }
-        int var1 = pq.field_Q.field_o + 5;
-        if (vl.field_d &&
-          -1 + pq.field_L.length > bm.field_I) {
-          bm.field_I = bm.field_I + 1;
-          PasswordLoginCredentials.field_i = pq.field_L[bm.field_I] * var1 >> 12;
+        int var1 = SquadPickerDialog.field_Q.field_o + 5;
+        if (LoginMethod.field_d &&
+          -1 + SquadPickerDialog.field_L.length > AuctionListingDialog.field_I) {
+          AuctionListingDialog.field_I = AuctionListingDialog.field_I + 1;
+          PasswordLoginCredentials.field_i = SquadPickerDialog.field_L[AuctionListingDialog.field_I] * var1 >> 12;
         }
-        if (!vl.field_d &&
-          !(bm.field_I <= 0)) {
-          bm.field_I = bm.field_I - 1;
-          var2 = -1 + pq.field_L.length;
-          PasswordLoginCredentials.field_i = var1 - (-bm.field_I + var2) * ((var2 - bm.field_I) * var1) / (var2 * var2);
+        if (!LoginMethod.field_d &&
+          !(AuctionListingDialog.field_I <= 0)) {
+          AuctionListingDialog.field_I = AuctionListingDialog.field_I - 1;
+          var2 = -1 + SquadPickerDialog.field_L.length;
+          PasswordLoginCredentials.field_i = var1 - (-AuctionListingDialog.field_I + var2) * ((var2 - AuctionListingDialog.field_I) * var1) / (var2 * var2);
         }
     }
 

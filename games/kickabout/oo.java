@@ -12,7 +12,7 @@ final class oo {
     static volatile boolean field_f;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_g = null;
         field_c = null;

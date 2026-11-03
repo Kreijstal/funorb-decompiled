@@ -19,7 +19,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, String param1, byte param2) {
+    final boolean ensureFileAvailableByName(String param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -34,7 +34,7 @@ final class ResourceArchive {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.d(-80)) {
+          if (!this.ensureIndex(-80)) {
             return false;
           }
           param0 = param0.toLowerCase();
@@ -43,14 +43,14 @@ final class ResourceArchive {
           var4_int = this.field_d.field_q.a(IntrusiveDeque.a(true, var7), param2 - 33);
           if (param2 != -10) {
             var6 = (String) null;
-            this.a(((byte[]) (this.field_e[3]))[2], (String) null, -100);
+            this.getFileId(((byte[]) (this.field_e[3]))[2], (String) null, -100);
           }
-          if (!this.a((byte) -58, var4_int)) {
+          if (!this.isValidGroup((byte) -58, var4_int)) {
             return false;
           }
           var8 = (CharSequence) ((Object) param1);
           var5 = this.field_d.field_s[var4_int].a(IntrusiveDeque.a(true, var8), -67);
-          stackIn_9_0 = this.a(var5, 125, var4_int);
+          stackIn_9_0 = this.ensureFileAvailable(var5, 125, var4_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,11 +68,11 @@ final class ResourceArchive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final synchronized boolean a(int param0, int param1, int param2) {
+    final synchronized boolean ensureFileAvailable(int param0, int param1, int param2) {
         if (!this.a(param2, param0, true)) {
           return false;
         }
@@ -86,27 +86,27 @@ final class ResourceArchive {
         if (param1 < 36) {
           this.a(false, (String) (this.field_e[4]));
         }
-        this.a(param2, (byte) 41);
+        this.loadPackedGroup(param2, (byte) 41);
         if (this.field_e[param2] != null) {
           return true;
         }
         return false;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -83) {
           ResourceArchive.a(0.31954155933475825, (byte) 102, 1.241292563355284, 0.9239833289377695);
         }
         field_f = null;
     }
 
-    final synchronized boolean a(boolean param0) {
+    final synchronized boolean ensureAllGroupsAvailable(boolean param0) {
         int var3 = 0;
         int var2;
         int var4;
         int var5;
         var5 = Kickabout.field_G;
-        if (!this.d(-64)) {
+        if (!this.ensureIndex(-64)) {
           return false;
         }
         var2 = 1;
@@ -116,7 +116,7 @@ final class ResourceArchive {
         for (var3 = 0; this.field_d.field_b.length > var3; var3++) {
           var4 = this.field_d.field_b[var3];
           if (this.field_e[var4] == null) {
-            this.a(var4, (byte) 38);
+            this.loadPackedGroup(var4, (byte) 38);
             if (null == this.field_e[var4]) {
               var2 = 0;
             }
@@ -125,7 +125,7 @@ final class ResourceArchive {
         return var2 != 0;
     }
 
-    private final synchronized byte[] a(int param0, int[] param1, boolean param2, int param3) {
+    private final synchronized byte[] takeFile(int param0, int[] param1, boolean param2, int param3) {
         Object stackIn_11_0 = null;
         Object stackIn_25_0 = null;
         Object stackIn_28_0 = null;
@@ -143,9 +143,9 @@ final class ResourceArchive {
           }
           var5 = null;
           if ((this.field_a[param0] == null ||
-            null == this.field_a[param0][param3]) && !this.a(param0, param1, param3, 2)) {
-            this.a(param0, (byte) 86);
-            if (!this.a(param0, param1, param3, 2)) {
+            null == this.field_a[param0][param3]) && !this.unpackGroup(param0, param1, param3, 2)) {
+            this.loadPackedGroup(param0, (byte) 86);
+            if (!this.unpackGroup(param0, param1, param3, 2)) {
               stackIn_11_0 = null;
               return (byte[]) (stackIn_11_0);
             }
@@ -184,11 +184,11 @@ final class ResourceArchive {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) (stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) (stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final synchronized void a(int param0, byte param1) {
+    private final synchronized void loadPackedGroup(int param0, byte param1) {
         if (this.field_b) {
           this.field_e[param0] = this.field_i.b(param0, 4);
         } else {
@@ -199,7 +199,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] a(String param0, String param1, int param2) {
+    final synchronized byte[] takeFileByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -214,16 +214,16 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 2) {
-            ResourceArchive.c(((int[]) (this.field_e[10]))[0]);
+            ResourceArchive.releaseStatics(((int[]) (this.field_e[10]))[0]);
           }
-          if (!this.d(-118)) {
+          if (!this.ensureIndex(-118)) {
             return null;
           }
           param1 = param1.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
           var4_int = this.field_d.field_q.a(IntrusiveDeque.a(true, var6), -73);
-          if (!this.a((byte) -70, var4_int)) {
+          if (!this.isValidGroup((byte) -70, var4_int)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
@@ -246,15 +246,15 @@ final class ResourceArchive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
     private final synchronized boolean a(int param0, int param1, boolean param2) {
         if (!param2) {
-          this.a((String) (((Object[]) (this.field_e[6]))[2]), (String) (((Object[]) (this.field_e[5]))[6]), ((int[]) (((Object[]) (this.field_e[0]))[8]))[7]);
+          this.takeFileByName((String) (((Object[]) (this.field_e[6]))[2]), (String) (((Object[]) (this.field_e[5]))[6]), ((int[]) (((Object[]) (this.field_e[0]))[8]))[7]);
         }
-        if (!this.d(-88)) {
+        if (!this.ensureIndex(-88)) {
           return false;
         }
         if (0 <= param0 &&
@@ -278,7 +278,7 @@ final class ResourceArchive {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.d(-121)) {
+          if (!this.ensureIndex(-121)) {
             return false;
           }
           if (param1 > -46) {
@@ -301,7 +301,7 @@ final class ResourceArchive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class ResourceArchive {
         int[] var6 = null;
         int var4 = 0;
         int var5 = Kickabout.field_G;
-        if (!this.a((byte) -40, param0)) {
+        if (!this.isValidGroup((byte) -40, param0)) {
           return null;
         }
         if (param1 != 4) {
@@ -326,8 +326,8 @@ final class ResourceArchive {
         return var3;
     }
 
-    private final synchronized boolean a(byte param0, int param1) {
-        if (!this.d(-78)) {
+    private final synchronized boolean isValidGroup(byte param0, int param1) {
+        if (!this.ensureIndex(-78)) {
           return false;
         }
         int var3 = 38 % ((22 - param0) / 62);
@@ -343,13 +343,13 @@ final class ResourceArchive {
     }
 
     final synchronized byte[] a(int param0, int param1) {
-        if (!this.d(param0 - 56)) {
+        if (!this.ensureIndex(param0 - 56)) {
           return null;
         }
         if (this.field_d.field_e.length == 1) {
           return this.b(0, -32669, param1);
         }
-        if (!this.a((byte) 112, param1)) {
+        if (!this.isValidGroup((byte) 112, param1)) {
           return null;
         }
         if (param0 != 0) {
@@ -365,20 +365,20 @@ final class ResourceArchive {
         if (param1 != -32669) {
           this.a(((boolean[]) (this.field_e[17]))[4], -120);
         }
-        return this.a(param0, (int[]) null, true, param2);
+        return this.takeFile(param0, (int[]) null, true, param2);
     }
 
-    final int a(int param0) {
+    final int getGroupCapacity(int param0) {
         if (param0 <= 79) {
           ((Object[]) (this.field_e[5]))[0] = (Object) null;
         }
-        if (!this.d(-111)) {
+        if (!this.ensureIndex(-111)) {
           return -1;
         }
         return this.field_d.field_e.length;
     }
 
-    final synchronized boolean d(int param0) {
+    final synchronized boolean ensureIndex(int param0) {
         if (param0 >= -29) {
           return ((boolean[]) (this.field_e[1]))[1];
         }
@@ -395,26 +395,26 @@ final class ResourceArchive {
     }
 
     final synchronized boolean b(int param0, int param1) {
-        if (!this.d(-107)) {
+        if (!this.ensureIndex(-107)) {
           return false;
         }
         if (this.field_d.field_e.length == 1) {
-          return this.a(param0, 44, 0);
+          return this.ensureFileAvailable(param0, 44, 0);
         }
-        if (!this.a((byte) 107, param0)) {
+        if (!this.isValidGroup((byte) 107, param0)) {
           return false;
         }
         if (1 == this.field_d.field_e[param0]) {
-          return this.a(0, 66, param0);
+          return this.ensureFileAvailable(0, 66, param0);
         }
         if (param1 < 108) {
-          this.a((String) null, ((int[]) (this.field_e[0]))[5]);
+          this.getGroupProgressByName((String) null, ((int[]) (this.field_e[0]))[5]);
         }
         throw new RuntimeException();
     }
 
-    final synchronized int b(int param0, byte param1) {
-        if (!this.a((byte) -104, param0)) {
+    final synchronized int getGroupProgress(int param0, byte param1) {
+        if (!this.isValidGroup((byte) -104, param0)) {
           return 0;
         }
         if (this.field_e[param0] != null) {
@@ -426,7 +426,7 @@ final class ResourceArchive {
         return this.field_i.a(6999, param0);
     }
 
-    final int a(byte param0, String param1, int param2) {
+    final int getFileId(byte param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         CharSequence var5 = null;
@@ -438,7 +438,7 @@ final class ResourceArchive {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) -108, param2)) {
+          if (!this.isValidGroup((byte) -108, param2)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -464,7 +464,7 @@ final class ResourceArchive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -478,7 +478,7 @@ final class ResourceArchive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.d(-56)) {
+          if (!this.ensureIndex(-56)) {
             return false;
           }
           param1 = param1.toLowerCase();
@@ -499,11 +499,11 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final int b(String param0, int param1) {
+    final int getGroupId(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -516,14 +516,14 @@ final class ResourceArchive {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.d(-100)) {
+          if (!this.ensureIndex(-100)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_d.field_q.a(IntrusiveDeque.a(true, var4), -66);
-          if (!this.a((byte) 115, var3_int)) {
+          if (!this.isValidGroup((byte) 115, var3_int)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
@@ -543,7 +543,7 @@ final class ResourceArchive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -557,14 +557,14 @@ final class ResourceArchive {
         if (param0 != -8185) {
           this.b(-94, -79);
         }
-        if (!this.d(param0 + 8092)) {
+        if (!this.ensureIndex(param0 + 8092)) {
           return 0;
         }
         var2 = 0;
         var3 = 0;
         for (var4 = 0; this.field_e.length > var4; var4++) {
           if (this.field_d.field_i[var4] > 0) {
-            var3 = var3 + this.b(var4, (byte) 56);
+            var3 = var3 + this.getGroupProgress(var4, (byte) 56);
             var2 += 100;
           }
         }
@@ -627,13 +627,13 @@ final class ResourceArchive {
           }
           var3_int = 0;
           var4 = uq.field_c;
-          while (eq.field_c.length > var3_int) {
+          while (WeightedLruCache.field_c.length > var3_int) {
             var5 = dk.field_g[var3_int];
             if (var5 >= 0) {
-              var6 = MatchTransitionScreen.a(10, eq.field_c[var3_int], true);
+              var6 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var3_int], true);
               var7 = -(var6 >> 1) + TeamManagementScreen.field_A;
               var4 = var4 + aj.field_a;
-              if (ec.a(-eb.field_d + var7, param1, param0, (byte) -124, var4, var6 + (eb.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
+              if (LoginText.rectangleContains(-DiskCacheWorker.field_d + var7, param1, param0, (byte) -124, var4, var6 + (DiskCacheWorker.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
@@ -648,21 +648,21 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "sj.U(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "sj.U(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final int a(boolean param0, int param1) {
-        if (!this.a((byte) 87, param1)) {
+        if (!this.isValidGroup((byte) 87, param1)) {
           return 0;
         }
         if (!param0) {
-          this.a(-87, ((int[]) (this.field_e[5]))[0], -96);
+          this.ensureFileAvailable(-87, ((int[]) (this.field_e[5]))[0], -96);
         }
         return this.field_d.field_e[param1];
     }
 
-    private final synchronized boolean a(int param0, int[] param1, int param2, int param3) {
+    private final synchronized boolean unpackGroup(int param0, int[] param1, int param2, int param3) {
         Object[] array$0 = null;
         int var9_int = 0;
         int var20 = 0;
@@ -713,7 +713,7 @@ final class ResourceArchive {
         int var14_intLifetime1;
         var22 = Kickabout.field_G;
         try {
-          if (!this.a((byte) 91, param0)) {
+          if (!this.isValidGroup((byte) 91, param0)) {
             return false;
           }
           if (null == this.field_e[param0]) {
@@ -773,7 +773,7 @@ final class ResourceArchive {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param1 != null);
-            throw nb.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(er.a(false, var9.length, var9)).append(" ").append(er.a(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(er.a(false, var9.length, var9)).append(" ").append(er.a(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
           }
           if (this.field_b) {
             this.field_e[param0] = null;
@@ -872,7 +872,7 @@ final class ResourceArchive {
                 if (this.field_c != 0) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = AuctionLogEntry.a(var40[var17], false, ek.b(param3, 138));
+                  var7[var18] = AuctionLogEntry.a(var40[var17], false, TrinketShopDialog.b(param3, 138));
                 }
               }
             }
@@ -899,29 +899,29 @@ final class ResourceArchive {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final synchronized boolean b(byte param0, int param1) {
-        if (!this.a((byte) 97, param1)) {
+        if (!this.isValidGroup((byte) 97, param1)) {
           return false;
         }
         if (param0 != 20) {
           String var4 = (String) null;
-          this.a((String) null, (String) null, (byte) 110);
+          this.ensureFileAvailableByName((String) null, (String) null, (byte) 110);
         }
         if (this.field_e[param1] != null) {
           return true;
         }
-        this.a(param1, (byte) 35);
+        this.loadPackedGroup(param1, (byte) 35);
         if (this.field_e[param1] != null) {
           return true;
         }
         return false;
     }
 
-    final int a(String param0, int param1) {
+    final int getGroupProgressByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -932,7 +932,7 @@ final class ResourceArchive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.d(-124)) {
+          if (!this.ensureIndex(-124)) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
@@ -942,7 +942,7 @@ final class ResourceArchive {
           }
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_d.field_q.a(IntrusiveDeque.a(true, var4), -105);
-          stackIn_7_0 = this.b(var3_int, (byte) 56);
+          stackIn_7_0 = this.getGroupProgress(var3_int, (byte) 56);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -954,7 +954,7 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -969,7 +969,7 @@ final class ResourceArchive {
           this.field_i = param0;
           this.field_b = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

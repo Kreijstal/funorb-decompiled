@@ -10,7 +10,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
     static int[] field_E;
     static boolean field_C;
 
-    final static void a(UiLayoutNode param0, boolean param1, np param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
+    final static void a(UiLayoutNode param0, boolean param1, ScrollPane param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -29,7 +29,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
             BytePlusOneCommand.a(65, -77, 21);
           }
           ig.field_f = param2;
-          TextButton.field_v = new uv(param0, param6, param4, param7, param8, param3, param5);
+          TextButton.field_v = new PlayerContextMenu(param0, param6, param4, param7, param8, param3, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,11 +65,11 @@ final class BytePlusOneCommand extends ConsoleCommand {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param8).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param8).append(')').toString());
         }
     }
 
-    final static void a(BitmapFont param0, UiLayoutNode param1, UiLayoutNode param2, na param3, UiLayoutNode param4, boolean param5, UiLayoutNode param6, UiLayoutNode param7, UiLayoutNode param8, UiLayoutNode param9, int param10, UiLayoutNode param11) {
+    final static void a(BitmapFont param0, UiLayoutNode param1, UiLayoutNode param2, VerticalScrollbar param3, UiLayoutNode param4, boolean param5, UiLayoutNode param6, UiLayoutNode param7, UiLayoutNode param8, UiLayoutNode param9, int param10, UiLayoutNode param11) {
         String stackIn_13_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_41_0 = null;
@@ -115,11 +115,11 @@ final class BytePlusOneCommand extends ConsoleCommand {
           sg.field_c[1] = 6356832;
           FootballerAgent.field_i = param0;
           ag.field_e = 8421504;
-          sb.field_h[3] = 16736511;
-          sb.field_h[2] = 16736352;
-          sb.field_h[0] = 16764000;
+          StringCursor.field_h[3] = 16736511;
+          StringCursor.field_h[2] = 16736352;
+          StringCursor.field_h[0] = 16764000;
           sg.field_c[4] = 16711935;
-          sb.field_h[1] = 6356832;
+          StringCursor.field_h[1] = 6356832;
           var12 = new Sprite(4, 4);
           var13 = var12.field_y;
           var14 = var12.field_y;
@@ -135,17 +135,17 @@ final class BytePlusOneCommand extends ConsoleCommand {
           g.field_a.addChild((byte) -121, uf.field_b);
           var17 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var17.field_jb = new IntrusiveDeque();
-          pw.field_G = new np(0L, var17, param1, param3);
-          uf.field_b.addChild((byte) -110, (UiLayoutNode) (pw.field_G));
+          AuctionSettingsDialog.field_G = new ScrollPane(0L, var17, param1, param3);
+          uf.field_b.addChild((byte) -110, (UiLayoutNode) (AuctionSettingsDialog.field_G));
           DebugConsole.field_z = new UiLayoutNode(0L, param11);
           uf.field_b.addChild((byte) -128, DebugConsole.field_z);
           ei.field_b = new UiLayoutNode(0L, param9);
           ei.field_b.field_X = FootballerAgent.field_i;
           DebugConsole.field_z.addChild((byte) -116, ei.field_b);
           DebugConsole.field_z.invalidateChildren(false);
-          ij.field_s = new UiLayoutNode(0L, (UiLayoutNode) null);
-          ij.field_s.field_R = var16;
-          DebugConsole.field_z.addChild((byte) -106, ij.field_s);
+          WeightedCacheEntry.field_s = new UiLayoutNode(0L, (UiLayoutNode) null);
+          WeightedCacheEntry.field_s.field_R = var16;
+          DebugConsole.field_z.addChild((byte) -106, WeightedCacheEntry.field_s);
           ds.field_a = new UiLayoutNode[5];
           ValidatedTextWidget.field_W = new UiLayoutNode[5];
           BlackFadeScreen.field_m = new UiLayoutNode[5];
@@ -201,7 +201,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
             !PacketBuffer.field_l) {
             return;
           }
-          PlayArea.field_a = new ib(0, 0, 0, 0);
+          PlayArea.field_a = new DateOfBirthPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         try {
           field_G = null;
           if (param0 != 52) {
-            BytePlusOneCommand.a((BitmapFont) null, (UiLayoutNode) null, (UiLayoutNode) null, (na) null, (UiLayoutNode) null, true, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, -39, (UiLayoutNode) null);
+            BytePlusOneCommand.a((BitmapFont) null, (UiLayoutNode) null, (UiLayoutNode) null, (VerticalScrollbar) null, (UiLayoutNode) null, true, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, (UiLayoutNode) null, -39, (UiLayoutNode) null);
           }
           field_D = null;
           field_E = null;
@@ -316,7 +316,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "el.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "el.B(" + param0 + ')');
         }
     }
 
@@ -335,17 +335,17 @@ final class BytePlusOneCommand extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "el.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "el.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void g(int param0) {
         try {
           MyKitScreen.field_O = false;
-          ks.field_e = param0;
+          HuffmanCodec.field_e = param0;
           et.field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "el.E(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "el.E(" + param0 + ')');
         }
     }
 

@@ -86,7 +86,7 @@ final class gl {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class gl {
                   var10 = param1.field_V.positionY;
                   param1.field_V.positionX = var7 << 16;
                   param1.field_V.positionY = var8 << 16;
-                  vl.computeCameraFocus(param1, (byte) -75);
+                  LoginMethod.computeCameraFocus(param1, (byte) -75);
                   param1.field_V.positionX = var9;
                   param1.field_V.positionY = var10;
                   ParticipantStatus.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);
@@ -168,16 +168,16 @@ final class gl {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
     final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = 34 % ((param1 - 38) / 37);
-        return q.a(1, 1, param2, 1, 3, -1481, param4, param0, param3);
+        return ConsoleTokenCursor.a(1, 1, param2, 1, 3, -1481, param4, param0, param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;

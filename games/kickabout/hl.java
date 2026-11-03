@@ -31,7 +31,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
           param1.field_L = 0;
           param1.field_v = 0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
         try {
           int var3_int = -20 % ((8 - param0) / 47);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hl.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hl.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,9 +52,9 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
         String stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_g.l(92);
-          var3 = this.field_g.h((byte) 48);
-          var4 = this.field_g.m(param0);
+          var2_int = this.field_g.getDay(92);
+          var3 = this.field_g.getMonthIndex((byte) 48);
+          var4 = this.field_g.getYear(param0);
           var5 = th.b((byte) 113);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
@@ -62,7 +62,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
               return null;
             }
           } else {
-            stackIn_4_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, sb.field_e, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StringCursor.field_e, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -95,9 +95,9 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
         ValidationState stackIn_13_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_g.l(94);
-          var3 = this.field_g.h((byte) 48);
-          var4 = this.field_g.m(-1);
+          var2_int = this.field_g.getDay(94);
+          var3 = this.field_g.getMonthIndex((byte) 48);
+          var4 = this.field_g.getYear(-1);
           var5 = th.b((byte) 108);
           if (var4 < 1890) {
             stackIn_3_0 = PitchOptionTile.field_Bb;
@@ -120,7 +120,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
           numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
           return PitchOptionTile.field_Bb;
         }
-        return he.field_yb;
+        return LobbyPlayerRow.field_yb;
     }
 
     public final boolean isInputEmpty(byte param0) {
@@ -138,7 +138,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
             field_d = 37;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "hl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class bl {
     private int field_a;
     private int field_k;
     static String[] field_d;
-    private kp field_e;
+    private LobbyGameRecord field_e;
     private boolean field_f;
     static String field_n;
     static int[] field_m;
@@ -22,7 +22,7 @@ final class bl {
         int var8 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
-        kp stackIn_29_0 = null;
+        LobbyGameRecord stackIn_29_0 = null;
         String[] stackIn_29_1 = null;
         int stackIn_30_2 = 0;
         String stackIn_32_1 = null;
@@ -46,24 +46,24 @@ final class bl {
           SoftwareRasterizer.a(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
           PacketBuffer.a(-47, k.field_j);
           SoftwareRasterizer.b();
-          un.field_d.a(pp.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
+          un.field_d.a(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           un.field_d.a(du.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           TeamManagementScreen.e(121);
           k.field_j.b(var2, var3, 96);
         }
         if (param0 < 63) {
-          this.field_e = (kp) null;
+          this.field_e = (LobbyGameRecord) null;
         }
-        pq.field_Q.b(var2, var3, al.a(false, (byte) 14));
+        SquadPickerDialog.field_Q.b(var2, var3, al.a(false, (byte) 14));
         if (this.field_e.field_f == 4) {
           PacketBuffer.a(-45, DraggableWidget.field_K);
           SoftwareRasterizer.b();
           ea.a(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
           TeamManagementScreen.e(119);
-          DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + om.field_Bb >> 1) + var3, 96);
+          DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
         }
         if (this.field_e.field_f == 4) {
-          AuctionListing.a(var2 + 1 + PitchOptionTile.field_yb, -22914, 1 + var2, om.field_Bb + var3 + 1, var3 + 1);
+          AuctionListing.a(var2 + 1 + PitchOptionTile.field_yb, -22914, 1 + var2, IconLabel.field_Bb + var3 + 1, var3 + 1);
           var4 = 0;
           var5 = 0;
           for (var6 = 0; var6 < 2; var6++) {
@@ -88,12 +88,12 @@ final class bl {
           TeamManagementScreen.e(119);
         } else {
           if (0 > this.field_e.field_f) {
-            un.field_d.a(w.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, om.field_Bb, 16777215, -1, 1, 1, 0);
+            un.field_d.a(DialogOverlay.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_e.field_f < 4) {
-              un.field_d.a(mc.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, om.field_Bb, 16777215, -1, 1, 1, 0);
+              un.field_d.a(TickClock.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             } else {
-              un.field_d.a(ci.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, om.field_Bb, 16777215, -1, 1, 1, 0);
+              un.field_d.a(IterableDualLinkDeque.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             }
           }
         }
@@ -108,13 +108,13 @@ final class bl {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         String var4 = (String) null;
-        kk.$cfr$intArgs$a$842e35442ba4(-101, param1, param0, (String) null);
+        TriangleMesh.$cfr$intArgs$a$842e35442ba4(-101, param1, param0, (String) null);
         if (param2 > -35) {
           field_n = (String) null;
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_d = null;
         if (param0 != -104) {
@@ -131,14 +131,14 @@ final class bl {
         if (param0 != -94) {
           return false;
         }
-        if (!bo.field_Cb.a("scenery", "bleachers", (byte) -10)) {
+        if (!bo.field_Cb.ensureFileAvailableByName("scenery", "bleachers", (byte) -10)) {
           return false;
         }
         TeamSelectionAgent.field_p = ng.a("bleachers", "scenery", 2, bo.field_Cb);
         return true;
     }
 
-    final void a(kp param0, boolean param1, int param2) {
+    final void a(LobbyGameRecord param0, boolean param1, int param2) {
         int var5 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -158,8 +158,8 @@ final class bl {
           }
           if (this.field_l <= BytePlusOneCommand.field_A &&
             BytePlusOneCommand.field_A <= this.field_a + this.field_l &&
-            this.field_b <= n.field_m &&
-            this.field_b + this.field_j >= n.field_m) {
+            this.field_b <= ArchiveManager.field_m &&
+            this.field_b + this.field_j >= ArchiveManager.field_m) {
             this.field_f = true;
           } else {
             this.field_f = false;
@@ -192,23 +192,23 @@ final class bl {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    bl(kp param0, String[] param1, int param2, int param3, int param4) {
+    bl(LobbyGameRecord param0, String[] param1, int param2, int param3, int param4) {
         try {
           this.field_e = param0;
           this.field_l = param2;
           this.field_a = PitchOptionTile.field_yb;
           this.field_g = param1;
           this.field_b = param3;
-          this.field_j = 32 + om.field_Bb;
+          this.field_j = 32 + IconLabel.field_Bb;
           this.field_k = param4;
           k.field_j = new Sprite(this.field_a, this.field_j - 32);
           DraggableWidget.field_K = new Sprite(50, 20);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class kr {
     static CheckboxLabelWidget field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 > -62) {
           field_d = (String) null;
@@ -19,30 +19,30 @@ final class kr {
     }
 
     final static void a(UiLayoutNode param0, boolean param1, int param2) {
-        uv var9 = null;
+        PlayerContextMenu var9 = null;
         Sprite var11 = null;
         String var10 = null;
-        uv var12 = null;
+        PlayerContextMenu var12 = null;
         Sprite var14 = null;
         String var13 = null;
-        uv var15 = null;
+        PlayerContextMenu var15 = null;
         Sprite var17 = null;
         String var16 = null;
-        uv var18 = null;
+        PlayerContextMenu var18 = null;
         Sprite var20 = null;
         String var19 = null;
-        uv var21 = null;
+        PlayerContextMenu var21 = null;
         Sprite var23 = null;
         String var22 = null;
-        uv var24 = null;
+        PlayerContextMenu var24 = null;
         Sprite var26 = null;
         String var25 = null;
-        uv var27 = null;
+        PlayerContextMenu var27 = null;
         String var28 = null;
-        uv var30 = null;
+        PlayerContextMenu var30 = null;
         Sprite var32 = null;
         String var31 = null;
-        uv var33 = null;
+        PlayerContextMenu var33 = null;
         Sprite var35 = null;
         String var34 = null;
         int var5 = 0;
@@ -61,26 +61,26 @@ final class kr {
         Sprite var29Lifetime1Lifetime3;
         Sprite var29Lifetime1Lifetime4;
         Sprite var29Lifetime1Lifetime5;
-        BytePlusOneCommand.a(param0, false, (np) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
+        BytePlusOneCommand.a(param0, false, (ScrollPane) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
         if (param2 == 0) {
           var9 = TextButton.field_v;
           var11 = il.field_d[0];
           var29 = var11;
           var29Lifetime3 = var11;
           var10 = ig.field_b;
-          var9.field_j.a(var10, param1, 11, var11);
+          var9.field_j.addItemWithIcon(var10, param1, 11, var11);
           var12 = TextButton.field_v;
           var14 = il.field_d[1];
           var29Lifetime4 = var14;
           var29Lifetime5 = var14;
-          var13 = oi.field_h;
-          var12.field_j.a(var13, param1, 12, var14);
+          var13 = IntValueNode.field_h;
+          var12.field_j.addItemWithIcon(var13, param1, 12, var14);
           var15 = TextButton.field_v;
           var17 = il.field_d[2];
           var29Lifetime6 = var17;
           var29Lifetime7 = var17;
           var16 = ConsoleParseException.field_a;
-          var15.field_j.a(var16, true, 13, var17);
+          var15.field_j.addItemWithIcon(var16, true, 13, var17);
         }
         if (param2 == 1) {
           var18 = TextButton.field_v;
@@ -88,35 +88,35 @@ final class kr {
           var29Lifetime1 = var20;
           var29Lifetime1Lifetime1 = var20;
           var19 = ef.field_p;
-          var18.field_j.a(var19, true, 11, var20);
+          var18.field_j.addItemWithIcon(var19, true, 11, var20);
           var21 = TextButton.field_v;
           var23 = il.field_d[1];
           var29Lifetime1Lifetime2 = var23;
           var29Lifetime1Lifetime3 = var23;
           var22 = bo.field_Bb;
-          var21.field_j.a(var22, true, 12, var23);
+          var21.field_j.addItemWithIcon(var22, true, 12, var23);
           var24 = TextButton.field_v;
           var26 = il.field_d[2];
           var29Lifetime1Lifetime4 = var26;
           var29Lifetime1Lifetime5 = var26;
-          var25 = rd.field_a;
-          var24.field_j.a(var25, param1, 13, var26);
+          var25 = GameModeDefinition.field_a;
+          var24.field_j.addItemWithIcon(var25, param1, 13, var26);
         }
         if (param2 == 2) {
           var27 = TextButton.field_v;
           var29Lifetime2 = il.field_d[0];
-          var28 = gb.field_I;
-          var27.field_j.a(var28, param1, 11, var29Lifetime2);
+          var28 = ValidationIndicator.field_I;
+          var27.field_j.addItemWithIcon(var28, param1, 11, var29Lifetime2);
           var30 = TextButton.field_v;
           var32 = il.field_d[1];
           var31 = fh.field_c;
-          var30.field_j.a(var31, param1, 12, var32);
+          var30.field_j.addItemWithIcon(var31, param1, 12, var32);
           var33 = TextButton.field_v;
           var35 = il.field_d[2];
           var34 = TextWidgetPainter.field_g;
-          var33.field_j.a(var34, true, 13, var35);
+          var33.field_j.addItemWithIcon(var34, true, 13, var35);
         }
-        uv var36 = TextButton.field_v;
+        PlayerContextMenu var36 = TextButton.field_v;
         int var4 = param0.field_F;
         if (!param1) {
           return;
@@ -127,7 +127,7 @@ final class kr {
           var7 = param0.field_mb;
           var36.field_j.a(0, var6, var4, var5, var7);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -151,43 +151,43 @@ final class kr {
         RuntimeException var3 = null;
         try {
           if (param1 == 1) {
-            stackIn_3_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ShopPlayerSlot.field_Kb, new String[]{param0});
+            stackIn_3_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ShopPlayerSlot.field_Kb, new String[]{param0});
             return stackIn_3_0;
           }
           if (param1 == 2) {
-            stackIn_6_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleCommand.field_r, new String[]{param0});
+            stackIn_6_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleCommand.field_r, new String[]{param0});
             return stackIn_6_0;
           }
           if (param1 == 3) {
-            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, pn.field_E, new String[]{param0});
+            stackIn_10_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StrongCacheEntry.field_E, new String[]{param0});
             return stackIn_10_0;
           }
           if (param1 == 4) {
-            stackIn_14_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, jj.field_m, new String[]{param0});
+            stackIn_14_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MusicTrackMixer.field_m, new String[]{param0});
             return stackIn_14_0;
           }
           if (param1 == 5) {
-            stackIn_18_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, qb.field_lc, new String[]{param0});
+            stackIn_18_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameSetupPanel.field_lc, new String[]{param0});
             return stackIn_18_0;
           }
           if (param1 == 6) {
-            stackIn_22_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, rc.field_c, new String[]{param0});
+            stackIn_22_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GzipDecoder.field_c, new String[]{param0});
             return stackIn_22_0;
           }
           if (param1 == 7) {
-            stackIn_25_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, m.field_b, new String[]{param0});
+            stackIn_25_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WhirlpoolHasher.field_b, new String[]{param0});
             return stackIn_25_0;
           }
           if (param1 == 8) {
-            stackIn_28_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, CachedListingRow.field_e, new String[]{param0});
+            stackIn_28_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, CachedListingRow.field_e, new String[]{param0});
             return stackIn_28_0;
           }
           if (param1 == 11) {
-            stackIn_32_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, cf.field_Cb, new String[]{param0});
+            stackIn_32_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RankingRowNode.field_Cb, new String[]{param0});
             return stackIn_32_0;
           }
           if (param1 == 12) {
-            stackIn_35_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, sr.field_e, new String[]{param0});
+            stackIn_35_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SortCriterion.field_e, new String[]{param0});
             return stackIn_35_0;
           }
           if (param2 != 73) {
@@ -197,7 +197,7 @@ final class kr {
           if (13 != param1) {
             return null;
           }
-          stackIn_42_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ep.field_g, new String[]{param0});
+          stackIn_42_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ep.field_g, new String[]{param0});
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,7 +209,7 @@ final class kr {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class kr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class kr {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

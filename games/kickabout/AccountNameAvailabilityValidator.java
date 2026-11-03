@@ -33,7 +33,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_k)) {
-            var3 = cp.a(param1 - 86, param0);
+            var3 = AudioService.a(param1 - 86, param0);
             if (var3 != null &&
               null == var3.field_d) {
               this.field_k = param0;
@@ -44,7 +44,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           if (this.field_j) {
-            stackIn_17_0 = he.field_yb;
+            stackIn_17_0 = LobbyPlayerRow.field_yb;
           } else {
             stackIn_17_0 = PitchOptionTile.field_Bb;
           }
@@ -59,7 +59,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,13 +88,13 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             field_o = (String) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = hk.a(var5, false);
+          var3 = AuctionBidDialog.a(var5, false);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
           if (!param1.equals(this.field_k)) {
-            var4 = cp.a(-37, param1);
+            var4 = AudioService.a(-37, param1);
             if (var4 == null) {
               return null;
             }
@@ -121,7 +121,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
             KitStyleTile.a(param0, (byte) 99);
           } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "bv.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bv.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -171,8 +171,8 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, he param5, np param6) {
-        uv var12 = null;
+    final static void a(int param0, int param1, int param2, int param3, int param4, LobbyPlayerRow param5, ScrollPane param6) {
+        PlayerContextMenu var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -184,7 +184,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           BytePlusOneCommand.a(param5, false, param6, -1, param5.field_Rb, (int[]) null, param5.field_Ab, param5.field_Nb, -1);
           TextButton.field_v.a(true, 0);
           TextButton.field_v.a(0, -116, (int[]) null);
-          TextButton.field_v.b(-80);
+          TextButton.field_v.showMenu(-80);
           var12 = TextButton.field_v;
           var8 = param1;
           var9 = param0;
@@ -192,7 +192,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var11 = param2;
           var12.field_j.a(0, var10, var8, var9, var11);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "bv.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bv.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               return;
             }
             if (PlatformTaskDispatcher.field_h.startsWith("win") &&
-              fv.a((byte) -92, param1)) {
+              fv.openUrlWithShell((byte) -92, param1)) {
               return;
             }
             try {
@@ -243,7 +243,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -260,7 +260,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           }
           ui.g(0).a(param2, (byte) 15, param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "bv.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bv.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var10 = 0;
           var11 = 0;
           var12 = 0;
-          bb.field_Mb = new int[FindingOpponentScreen.field_D];
+          CascadingMenu.field_Mb = new int[FindingOpponentScreen.field_D];
           var13 = 0;
           for (var11Lifetime1 = 0; var11Lifetime1 < 33; var11Lifetime1++) {
             for (var12Lifetime1 = 0; var12Lifetime1 < 33; var12Lifetime1++) {
@@ -432,7 +432,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           for (var8Lifetime2 = 0; FindingOpponentScreen.field_D > var8Lifetime2; var8Lifetime2++) {
-            param1[var8Lifetime2] = var18[qj.b(var24[bb.field_Mb[var8Lifetime2]], 255)];
+            param1[var8Lifetime2] = var18[TextLayoutLine.b(var24[CascadingMenu.field_Mb[var8Lifetime2]], 255)];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -445,7 +445,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -48,30 +48,30 @@ final class re implements WidgetPainter {
           var1_int = uq.field_c;
           var2 = param0;
           if (ck.field_a == 2) {
-            var3_long = -PlayingView.field_o + nj.a(-50);
+            var3_long = -PlayingView.field_o + nj.monotonicMillis(-50);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
             }
           }
-          for (var3 = 0; eq.field_c.length > var3; var3++) {
+          for (var3 = 0; WeightedLruCache.field_c.length > var3; var3++) {
             var4 = dk.field_g[var3];
             if (0 > var4) {
               var5 = du.field_k;
             } else {
-              if (var4 != ll.field_k.selectedIndex) {
-                var5 = wt.field_v;
+              if (var4 != DirectByteStorage.field_k.selectedIndex) {
+                var5 = ArrayWidgetContainer.field_v;
               } else {
                 var5 = NumericDateInputWidget.field_R;
               }
             }
-            var6 = eq.field_c[var3];
+            var6 = WeightedLruCache.field_c[var3];
             if (ck.field_a == 2 &&
               1 == var2) {
-              if (pn.field_D.length <= dn.field_Eb.length) {
-                stackIn_18_0 = dn.field_Eb.length;
+              if (StrongCacheEntry.field_D.length <= TrinketIcon.field_Eb.length) {
+                stackIn_18_0 = TrinketIcon.field_Eb.length;
               } else {
-                stackIn_18_0 = pn.field_D.length;
+                stackIn_18_0 = StrongCacheEntry.field_D.length;
               }
               var7 = stackIn_18_0;
               if (pg.field_a.length < cg.field_E.length) {
@@ -82,8 +82,8 @@ final class re implements WidgetPainter {
               var8 = stackIn_21_0;
               if (6 <= var3 &&
                 var3 < var7 + 6) {
-                if (-6 + var3 - (-dn.field_Eb.length + var7) >= 0) {
-                  stackIn_26_0 = dn.field_Eb[-var7 - 6 + (var3 + dn.field_Eb.length)];
+                if (-6 + var3 - (-TrinketIcon.field_Eb.length + var7) >= 0) {
+                  stackIn_26_0 = TrinketIcon.field_Eb[-var7 - 6 + (var3 + TrinketIcon.field_Eb.length)];
                 } else {
                   stackIn_26_0 = "";
                 }
@@ -108,7 +108,7 @@ final class re implements WidgetPainter {
             var7Lifetime1 = MatchTransitionScreen.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             var8Lifetime1 = TeamManagementScreen.field_A - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              if (ll.field_k.selectedIndex == var4) {
+              if (DirectByteStorage.field_k.selectedIndex == var4) {
                 stackIn_44_0 = qn.field_a;
               } else {
                 stackIn_44_0 = cr.field_e;
@@ -116,7 +116,7 @@ final class re implements WidgetPainter {
               var9 = stackIn_44_0;
               var1_int = var1_int + aj.field_a;
               if (var9 != null) {
-                var9.a(-eb.field_d + var8Lifetime1, PlayerModelPreview.field_j + (pr.field_d << 1), var1_int, var7Lifetime1 + (eb.field_d << 1), param0 ^ 3);
+                var9.a(-DiskCacheWorker.field_d + var8Lifetime1, PlayerModelPreview.field_j + (pr.field_d << 1), var1_int, var7Lifetime1 + (DiskCacheWorker.field_d << 1), param0 ^ 3);
               }
               var1_int = var1_int + pr.field_d;
             }
@@ -132,11 +132,11 @@ final class re implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "re.E(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "re.E(" + param0 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_o = null;
         if (param0 != 109) {
@@ -208,13 +208,13 @@ final class re implements WidgetPainter {
             }
           }
           vd.a(0, 3);
-          var1Lifetime3 = fu.a(5464, ih.field_c, RankingsScreen.field_C);
+          var1Lifetime3 = GrowableIntList.a(5464, ih.field_c, RankingsScreen.field_C);
           if (var1Lifetime3 != -1) {
             DelayedServerPacket.a(100, 9863, var1Lifetime3);
             return;
           }
           vd.a(0, 4);
-          if (!MyKitScreen.ensureSoundLoaded(120, kn.a(ih.field_c, 121, vi.field_n, RankingsScreen.field_C))) {
+          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(ih.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.a(4, 9863, 0);
             return;
           }
@@ -270,10 +270,10 @@ final class re implements WidgetPainter {
             vb.a(true);
             vd.a(0, 9);
             if (0 == ih.field_c) {
-              pp.b(1);
+              MusicPatchPcmStream.b(1);
             }
             if (ih.field_c == 1) {
-              eh.a((byte) -48);
+              GameResourceLoader.a((byte) -48);
             }
             if (ih.field_c == 2) {
               cv.a(11383);
@@ -300,12 +300,12 @@ final class re implements WidgetPainter {
           if (PlayArea.a(100)) {
             return;
           }
-          if (uv.field_f) {
+          if (PlayerContextMenu.field_f) {
             return;
           }
           if (param1 >= 0) {
-            if (param1 > pu.field_Db[param3]) {
-              param1 = pu.field_Db[param3];
+            if (param1 > TrinketSlot.field_Db[param3]) {
+              param1 = TrinketSlot.field_Db[param3];
             }
           } else {
             param1 = 0;
@@ -313,8 +313,8 @@ final class re implements WidgetPainter {
           if (param2 < 0) {
             param1 = 0;
           } else {
-            if (pu.field_Db[param3] < param2) {
-              param2 = pu.field_Db[param3];
+            if (TrinketSlot.field_Db[param3] < param2) {
+              param2 = TrinketSlot.field_Db[param3];
             }
           }
           if (param2 <= param1) {
@@ -331,7 +331,7 @@ final class re implements WidgetPainter {
           var5 = 0;
           var6 = param1;
           for (var7 = param1; var7 < param2; var7++) {
-            if (LineupView.field_y.a(var7, (byte) 116, param3) == null) {
+            if (LineupView.field_y.get(var7, (byte) 116, param3) == null) {
               if (var5 == 0) {
                 var6 = var7;
               }
@@ -358,7 +358,7 @@ final class re implements WidgetPainter {
               var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.b((byte) 127));
             }
             or.field_d.writeByte(105, param3);
-            uv.field_f = true;
+            PlayerContextMenu.field_f = true;
             ri.field_t = 500;
             return;
           }
@@ -366,7 +366,7 @@ final class re implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4), "re.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4), "re.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -409,7 +409,7 @@ final class re implements WidgetPainter {
             this.field_m.a(param3.field_q, var11 + param3.field_t + param4, this.field_p + param2 + param3.field_g, -this.field_i - var11 + param3.field_n, param3.field_i - (this.field_i << 1), this.field_e, this.field_l, this.field_d, this.field_j, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ final class re implements WidgetPainter {
           this.field_h = param8;
           this.field_n = param6;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

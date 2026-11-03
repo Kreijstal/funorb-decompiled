@@ -6,7 +6,7 @@ final class tl {
     static r field_c;
     static String[] field_a;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -67,10 +67,10 @@ final class tl {
           }
           if (var2 == 0) {
             var3 = var28.a((byte) 81);
-            var4 = (ni) (lw.field_g.g(24009));
+            var4 = (ni) (ProxyAuthenticationRequiredException.field_g.g(24009));
             while (var4 != null) {
               if (var3 != var4.field_o) {
-                var4 = (ni) (lw.field_g.c(33));
+                var4 = (ni) (ProxyAuthenticationRequiredException.field_g.c(33));
                 continue;
               }
               break;
@@ -184,11 +184,11 @@ final class tl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "tl.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "tl.D(" + param0 + ')');
         }
     }
 
-    final static ConsoleExpression a(sb param0, boolean param1) {
+    final static ConsoleExpression a(StringCursor param0, boolean param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -214,8 +214,8 @@ final class tl {
           param0.field_c = param0.field_c - 1;
           var2_int = fieldTemp$2;
           var3 = new StringBuilder();
-          while (!param0.a((byte) 71)) {
-            var4 = param0.b(-59);
+          while (!param0.isAtEnd((byte) 71)) {
+            var4 = param0.nextChar(-59);
             if (!Character.isWhitespace((char) var4) &&
               var4 != 44 &&
               var4 != 40 &&
@@ -231,9 +231,9 @@ final class tl {
             !var5.equals("false")) {
             if (var5.charAt(0) != 45 &&
               !Character.isDigit(var5.charAt(0))) {
-              var4Lifetime1 = vu.field_Ab;
+              var4Lifetime1 = ContextMenuItem.field_Ab;
             } else {
-              var4Lifetime1 = pv.field_H;
+              var4Lifetime1 = HelpTipDialog.field_H;
             }
           } else {
             var4Lifetime1 = GameModesHelpScreen.field_N;
@@ -250,7 +250,7 @@ final class tl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

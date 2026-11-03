@@ -6,9 +6,9 @@ import java.io.*;
 final class UnreadMessagesScreen extends ButtonMenuScreen {
     static boolean field_D;
     static String field_B;
-    static vg field_A;
+    static TextFieldNode field_A;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         if (param0 >= -25) {
           return;
@@ -68,22 +68,22 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
         int var1;
         int var2;
         var2 = Kickabout.field_G;
-        st.field_m = null;
+        CachedTextLayout.field_m = null;
         wq.field_g = false;
         if (param0 != -1) {
           return;
         }
-        if (hk.field_G) {
+        if (AuctionBidDialog.field_G) {
           rk.field_f.r(2121792);
         } else {
           var1 = rl.field_n;
           if (var1 > 0) {
             if (var1 != 1) {
-              st.field_m = vo.$cfr$intArgs$a$53ce4ab4c593(-18, tk.field_Lb, new String[]{Integer.toString(var1)});
+              CachedTextLayout.field_m = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollContainer.field_Lb, new String[]{Integer.toString(var1)});
             } else {
-              st.field_m = ProxySocketConnector.field_h;
+              CachedTextLayout.field_m = ProxySocketConnector.field_h;
             }
-            st.field_m = kr.a(new CharSequence[]{(CharSequence) ((Object) st.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) he.field_Kb)}, false);
+            CachedTextLayout.field_m = kr.a(new CharSequence[]{(CharSequence) ((Object) CachedTextLayout.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LobbyPlayerRow.field_Kb)}, false);
           }
           rk.field_f.q(-105);
           fj.a(param0 ^ 44);
@@ -122,11 +122,11 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
               }
               var3 = var3 + param0;
             }
-            or.a(var3, param2 ^ 0);
-            var7 = aj.a(-1, ":", "%3a", var3);
-            var8 = aj.a(param2 ^ -2, "@", "%40", var7);
-            var9 = aj.a(-1, "&", "%26", var8);
-            var10 = aj.a(-1, "#", "%23", var9);
+            or.printError(var3, param2 ^ 0);
+            var7 = aj.replaceAll(-1, ":", "%3a", var3);
+            var8 = aj.replaceAll(param2 ^ -2, "@", "%40", var7);
+            var9 = aj.replaceAll(-1, "&", "%26", var8);
+            var10 = aj.replaceAll(-1, "#", "%23", var9);
             if (null == ug.field_a) {
               return;
             }

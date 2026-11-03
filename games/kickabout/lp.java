@@ -3,7 +3,7 @@
  */
 final class lp {
     final static void a(java.awt.Canvas param0, byte param1) {
-        ej.a((java.awt.Component) ((Object) param0), -125);
+        SelectableTrinketIcon.a((java.awt.Component) ((Object) param0), -125);
         if (param1 != -64) {
           return;
         }
@@ -13,7 +13,7 @@ final class lp {
             ag.field_f.b((byte) -83, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

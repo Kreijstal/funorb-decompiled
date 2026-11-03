@@ -57,7 +57,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           }
           this.field_M[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qp.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qp.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,22 +171,22 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           var4_int = null == this.field_D ? 0 : this.field_B.paragraphHeight(this.field_D, 260, this.field_B.field_G);
           this.a(22 + var4_int, 1, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(int param0, boolean param1, int param2) {
         if (5 == param0) {
-          return vo.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleParseException.field_b, new String[]{ad.formatCurrencyAmount(param2, 26300)});
+          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleParseException.field_b, new String[]{ad.formatCurrencyAmount(param2, 26300)});
         }
         if (4 == param0) {
-          return vo.$cfr$intArgs$a$53ce4ab4c593(-18, UnreadMessagesScreen.field_B, new String[]{ad.formatCurrencyAmount(param2, 26300)});
+          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UnreadMessagesScreen.field_B, new String[]{ad.formatCurrencyAmount(param2, 26300)});
         }
         if (param0 == 3) {
           return ConsoleExpression.field_e;
         }
         if (1 == param0) {
-          return vo.$cfr$intArgs$a$53ce4ab4c593(-18, po.field_g, new String[]{ad.formatCurrencyAmount(param2, 26300), ad.formatCurrencyAmount((int)((double)param2 * 0.9), 26300)});
+          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, po.field_g, new String[]{ad.formatCurrencyAmount(param2, 26300), ad.formatCurrencyAmount((int)((double)param2 * 0.9), 26300)});
         }
         if (param0 == 2) {
           return rp.field_C;

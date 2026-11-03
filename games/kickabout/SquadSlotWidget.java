@@ -25,12 +25,12 @@ final class SquadSlotWidget extends UiLayoutNode {
             this.field_Fb = null;
             this.field_Gb = false;
           } else {
-            this.field_Fb = param1.hasOwnEntry(1, var4.auctionId) ? (Sprite) ((Object) eq.field_h) : (Sprite) ((Object) CipherPacketBuffer.field_q);
+            this.field_Fb = param1.hasOwnEntry(1, var4.auctionId) ? (Sprite) ((Object) WeightedLruCache.field_h) : (Sprite) ((Object) CipherPacketBuffer.field_q);
             this.field_Gb = true;
           }
           int var5 = -66 / ((-50 - param0) / 34);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -62,8 +62,8 @@ final class SquadSlotWidget extends UiLayoutNode {
             return;
           }
           SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-          uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-          q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+          PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+          ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
           if (param0 < -114) {
             if (this.field_Fb == null) {
               return;
@@ -87,7 +87,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         var5[3] = 1260;
         var5[2] = 1400;
         var5[1] = 1400;
-        this.field_Db.a(var3[this.field_Eb.playerType], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
+        this.field_Db.renderModel(var3[this.field_Eb.archetype], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
         TeamManagementScreen.e(117);
         if (this.field_zb) {
           eo.a(dc.field_b, 1);
@@ -99,8 +99,8 @@ final class SquadSlotWidget extends UiLayoutNode {
             dc.field_b.drawHalfSize(this.field_F, this.field_T);
             if (this.field_Hb) {
               SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-              uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-              q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+              PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+              ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
             }
             if (param0 >= -114) {
               this.h((byte) -68);
@@ -114,8 +114,8 @@ final class SquadSlotWidget extends UiLayoutNode {
         dc.field_b.drawHalfSize(this.field_F, this.field_T);
         if (this.field_Hb) {
           SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
-          uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-          q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+          PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
+          ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
         }
         if (param0 >= -114) {
           this.h((byte) -68);
@@ -127,7 +127,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         return;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -123) {
           return;
         }
@@ -164,7 +164,7 @@ final class SquadSlotWidget extends UiLayoutNode {
             }
           } else {
             this.field_Db.stepMovement(2, (PlayArea[]) null, false, false);
-            this.field_Db.g((byte) 127);
+            this.field_Db.resetPose((byte) 127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

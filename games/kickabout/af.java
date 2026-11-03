@@ -3,7 +3,7 @@
  */
 final class af {
     static int[] field_b;
-    static dt[] field_a;
+    static OffscreenPlayerArrow[] field_a;
     static String field_c;
     static UiLayoutNode field_d;
 
@@ -32,11 +32,11 @@ final class af {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;

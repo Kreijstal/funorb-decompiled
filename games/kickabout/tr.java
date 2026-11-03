@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tr implements hc {
+final class tr implements OverlayLayer {
     private int field_a;
     static String field_g;
     static int[] field_e;
@@ -12,7 +12,7 @@ final class tr implements hc {
     static String[] field_f;
 
     final static void d(int param0) {
-        RasterStateSnapshot var1 = (RasterStateSnapshot) (tk.field_Ab.h(-125));
+        RasterStateSnapshot var1 = (RasterStateSnapshot) (ScrollContainer.field_Ab.h(-125));
         if (var1 == null) {
           var1 = new RasterStateSnapshot();
         }
@@ -37,14 +37,14 @@ final class tr implements hc {
         int var3;
         int var4;
         int stackIn_6_0 = 0;
-        if (pn.g(2368)) {
+        if (StrongCacheEntry.g(2368)) {
           stackIn_6_0 = ((8 & this.field_h) == 0) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
         var2 = stackIn_6_0;
         var4 = 125 / ((param0 - 50) / 45);
-        sr.a(var2 != 0, (byte) -89);
+        SortCriterion.a(var2 != 0, (byte) -89);
         var3 = g.field_a.field_T;
         if (!this.a((byte) 103) &&
           480 > var3) {
@@ -181,7 +181,7 @@ final class tr implements hc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class tr implements hc {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -292,12 +292,12 @@ final class tr implements hc {
             this.field_a = this.field_a - 1;
           }
           var3 = -(this.field_a * this.field_a) + 400;
-          var4 = var3 * (-np.field_Bb + 480) / 400 + np.field_Bb;
+          var4 = var3 * (-ScrollPane.field_Bb + 480) / 400 + ScrollPane.field_Bb;
           PlayerStats.a(var4, (byte) -124);
           this.field_h = this.field_h + 1;
-          kp.a(-121);
-          if (null != uv.field_i) {
-            if (ShopPlayerSlot.a(uv.field_i.field_Eb, -3, uv.field_i.field_bc, uv.field_i.field_gc)) {
+          LobbyGameRecord.a(-121);
+          if (null != PlayerContextMenu.field_i) {
+            if (ShopPlayerSlot.a(PlayerContextMenu.field_i.field_Eb, -3, PlayerContextMenu.field_i.field_bc, PlayerContextMenu.field_i.field_gc)) {
               stackIn_19_0 = (GameLoopApplet.field_E.d((byte) 46)) ? 1 : 0;
             } else {
               stackIn_19_0 = 0;
@@ -309,10 +309,10 @@ final class tr implements hc {
           stackIn_21_0 = 0;
           stackIn_21_1 = -117;
           stackIn_21_2 = 15;
-          stackIn_22_3 = (nq.g(0) <= 50) ? false : true;
+          stackIn_22_3 = (TournamentChampionDialog.g(0) <= 50) ? false : true;
           stackIn_24_4 = 14;
           stackIn_24_5 = var5;
-          stackIn_24_6 = id.field_v;
+          stackIn_24_6 = StatefulTextPainter.field_v;
           stackIn_24_7 = param1;
           stackIn_24_8 = 11;
           stackIn_24_9 = true;
@@ -328,7 +328,7 @@ final class tr implements hc {
             mg.field_f = false;
           }
         } else {
-          ll.c((byte) 51);
+          DirectByteStorage.c((byte) 51);
           this.field_a = 0;
         }
     }
@@ -349,7 +349,7 @@ final class tr implements hc {
         if (param0 != 11516) {
           this.field_a = -5;
         }
-        if ((tk.field_Ib >= 2 || eq.field_d > 0) &&
+        if ((ScrollContainer.field_Ib >= 2 || WeightedLruCache.field_d > 0) &&
           GameplayHelpScreen.field_G[86]) {
           if (84 != param1) {
           } else {

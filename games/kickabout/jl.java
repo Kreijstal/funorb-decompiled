@@ -10,7 +10,7 @@ final class jl {
     static int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 8192) {
           return;

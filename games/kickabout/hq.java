@@ -3,7 +3,7 @@
  */
 final class hq {
     static UiLayoutNode field_c;
-    static nm[] field_b;
+    static AnimationClip[] field_b;
     static boolean field_a;
     static int field_d;
     static IndexedSprite[] field_e;
@@ -15,7 +15,7 @@ final class hq {
           if (vj.field_c < 10) {
             return false;
           }
-          if (!nb.field_f) {
+          if (!GameSoundEffect.field_f) {
             return !oh.b(-14954) ? true : false;
           }
           return false;
@@ -23,7 +23,7 @@ final class hq {
         if (vj.field_c < 10) {
           return false;
         }
-        if (!nb.field_f) {
+        if (!GameSoundEffect.field_f) {
           return !oh.b(-14954) ? true : false;
         }
         return false;
@@ -52,7 +52,7 @@ final class hq {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class hq {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         int var1 = 123 / ((param0 + 76) / 50);

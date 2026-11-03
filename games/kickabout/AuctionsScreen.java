@@ -29,8 +29,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
         int var2 = 0;
         int var3 = 0;
         int var4;
-        sr[] var5;
-        sr[] var6;
+        SortCriterion[] var5;
+        SortCriterion[] var6;
         var4 = Kickabout.field_G;
         this.field_L = new UiLayoutNode();
         this.field_L.a(true, 640, 0, 0, 480);
@@ -54,7 +54,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.field_E[var2].field_Gb = true;
           this.field_K.addChild((byte) -117, (UiLayoutNode) (this.field_E[var2]));
         }
-        var5 = new sr[ClubState.field_l.length];
+        var5 = new SortCriterion[ClubState.field_l.length];
         var6 = var5;
         for (var3 = 0; var3 < var5.length; var3++) {
           var5[var3] = GameModesHelpScreen.field_H;
@@ -98,7 +98,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.b(0, param1);
         if (param1) {
-          var4_long = nj.a(73);
+          var4_long = nj.monotonicMillis(73);
           if (var4_long >= (this.field_H + 10000L)) {
             this.requestAuctionPage(true, (byte) -127);
           }
@@ -234,7 +234,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         int[] var16 = null;
         var15 = Kickabout.field_G;
         try {
-          var16 = new int[]{uv.field_e, IsSixCommand.field_A, rb.field_Kb, oc.field_e};
+          var16 = new int[]{PlayerContextMenu.field_e, IsSixCommand.field_A, TextPromptDialog.field_Kb, oc.field_e};
           var3 = new Sprite(32, 32);
           PacketBuffer.a(-111, var3);
           for (var4_int = 15; var4_int < 19; var4_int++) {
@@ -277,7 +277,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             }
             TeamManagementScreen.e(120);
             sd.a(var13, (byte) -51);
-            var7[var8 >> 3][qj.b(3, var8 >> 1)][qj.b(var8, 1)] = var13;
+            var7[var8 >> 3][TextLayoutLine.b(3, var8 >> 1)][TextLayoutLine.b(var8, 1)] = var13;
           }
           stackIn_28_0 = var7;
           return stackIn_28_0;
@@ -291,7 +291,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -429,7 +429,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -580,7 +580,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             return;
           }
           or.field_d.b(84, (byte) 112);
-          var2 = nj.a(-79);
+          var2 = nj.monotonicMillis(-79);
           if (param0 != 30353) {
             this.field_J = -31L;
           }
@@ -619,14 +619,14 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (this.field_R.field_gb) {
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, QuickChatPhraseDefinition.field_v);
         }
-        if ((3000L + this.field_J) >= nj.a(23)) {
+        if ((3000L + this.field_J) >= nj.monotonicMillis(23)) {
           this.field_P.field_lb = false;
         } else {
           this.field_P.field_lb = true;
         }
         for (var3 = 0; var3 < this.field_E.length; var3++) {
           if (this.field_E[var3].field_gb) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
           }
         }
         if (this.field_R.field_sb == 1) {
@@ -659,7 +659,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.requestAuctionRefresh(48);
         }
         if (this.field_P.field_sb == 1) {
-          this.field_J = nj.a(-72);
+          this.field_J = nj.monotonicMillis(-72);
           this.requestAuctionPage(false, (byte) -126);
           kj.a((byte) 24);
         }
@@ -697,7 +697,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var10.field_w = 4;
             var10.field_R = 31;
           }
-          var6 = eq.field_d > 0 ? 3 : 2;
+          var6 = WeightedLruCache.field_d > 0 ? 3 : 2;
           um.field_e = new MatchScreen(false, (PlayerStats[]) null, var3, 0, false, false, 3, var6, false, false, false, false, false, -1, var4);
           for (var7 = 0; var7 < 2; var7++) {
             um.field_e.matchState.field_g[var7].field_p = var7;
@@ -726,9 +726,9 @@ final class AuctionsScreen extends ButtonMenuScreen {
             um.field_e.beginPhase(26415, 2);
             RenderedFootballer.a(GameKeyHandler.field_a, true, (byte) -117);
           }
-          sb.a(false, (byte) -122, um.field_e.matchState.tier, um.field_e.matchState.surface);
+          StringCursor.a(false, (byte) -122, um.field_e.matchState.tier, um.field_e.matchState.surface);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wf.IA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wf.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -760,7 +760,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -784,7 +784,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           or.field_d.a(3, 79, this.field_C);
           or.field_d.b(false);
           or.field_d.writeMedium(-5 + this.field_D, (byte) 109);
-          var3 = nj.a(-111);
+          var3 = nj.monotonicMillis(-111);
           this.field_P.field_lb = true;
           this.field_H = var3;
           return;

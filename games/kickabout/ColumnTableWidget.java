@@ -4,12 +4,12 @@
 class ColumnTableWidget extends UiLayoutNode {
     int field_Db;
     static int field_Gb;
-    sr[] field_zb;
+    SortCriterion[] field_zb;
     static String field_yb;
     private im[] field_Fb;
     private int field_Eb;
     private UiLayoutNode field_Ab;
-    private tk field_Cb;
+    private ScrollContainer field_Cb;
     private UiLayoutNode[] field_Bb;
 
     final void a(boolean param0, boolean param1) {
@@ -20,7 +20,7 @@ class ColumnTableWidget extends UiLayoutNode {
         im var5;
         im[] var7;
         var6 = Kickabout.field_G;
-        this.field_Cb.a(32 * id.field_v, param1, (byte) -108, 32);
+        this.field_Cb.a(32 * StatefulTextPainter.field_v, param1, (byte) -108, 32);
         for (var3_int = 0; var3_int < this.field_Bb.length; var3_int++) {
           if (this.field_Bb[var3_int].field_sb == 1) {
             ShopPlayerSlot.c(45, 81);
@@ -93,7 +93,7 @@ class ColumnTableWidget extends UiLayoutNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ class ColumnTableWidget extends UiLayoutNode {
         try {
           this.a(param1, (byte) -47, param0, param0.length);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "bp.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bp.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ class ColumnTableWidget extends UiLayoutNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ class ColumnTableWidget extends UiLayoutNode {
         return this.field_Db;
     }
 
-    final void a(sr param0, int param1) {
+    final void a(SortCriterion param0, int param1) {
         int var5 = 0;
         int var4 = 0;
         int var3_int = 0;
@@ -261,7 +261,7 @@ class ColumnTableWidget extends UiLayoutNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -269,9 +269,9 @@ class ColumnTableWidget extends UiLayoutNode {
         if (param1 < 97) {
           return;
         }
-        sr var3 = this.field_zb[param0];
+        SortCriterion var3 = this.field_zb[param0];
         if (var3 != null) {
-          var3.a(param0 == this.field_Db ? true : false, 93);
+          var3.cycleDirection(param0 == this.field_Db ? true : false, 93);
           this.a(var3, 57);
         }
     }
@@ -280,7 +280,7 @@ class ColumnTableWidget extends UiLayoutNode {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_35_0 = 0;
-        ji var2_ref_ji;
+        ScrollBar var2_ref_ji;
         int var2;
         int var4;
         im var5;
@@ -289,7 +289,7 @@ class ColumnTableWidget extends UiLayoutNode {
         int var7;
         int var8;
         int var9;
-        sr var10;
+        SortCriterion var10;
         Sprite var11;
         int var12;
         UiLayoutNode var13;
@@ -328,10 +328,10 @@ class ColumnTableWidget extends UiLayoutNode {
           var7 = -5 + (20 + var13.field_T);
           if (this.field_Db == var2) {
             var6 -= 4;
-            var8 = (q.field_d.a(var13.field_E) >> 1) + (4 + var6);
+            var8 = (ConsoleTokenCursor.field_d.a(var13.field_E) >> 1) + (4 + var6);
             var9 = -10 + var7;
             var10 = this.field_zb[this.field_Db];
-            if (var10.a(-113) == 2) {
+            if (var10.directionCount(-113) == 2) {
               if (1 == var10.field_i) {
                 eo.field_b.c(var8, var9 - 1);
               } else {
@@ -346,7 +346,7 @@ class ColumnTableWidget extends UiLayoutNode {
               }
             }
           }
-          q.field_d.d(var13.field_E, var6, var7, 16777215, var5_int);
+          ConsoleTokenCursor.field_d.d(var13.field_E, var6, var7, 16777215, var5_int);
         }
         AuctionListing.a(this.field_Cb.field_q + this.field_Cb.field_F, -22914, this.field_Cb.field_F, this.field_Cb.field_mb + this.field_Cb.field_T, this.field_Cb.field_T);
         var2Lifetime1 = 103 % ((param0 - 33) / 56);
@@ -407,7 +407,7 @@ class ColumnTableWidget extends UiLayoutNode {
         return Math.abs(this.field_Ab.field_J / (5 + this.field_Eb));
     }
 
-    ColumnTableWidget(int[] param0, String[] param1, sr[] param2, int param3) {
+    ColumnTableWidget(int[] param0, String[] param1, SortCriterion[] param2, int param3) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -440,7 +440,7 @@ class ColumnTableWidget extends UiLayoutNode {
             this.addChild((byte) -106, var8);
           }
           this.field_Ab = new UiLayoutNode();
-          this.field_Cb = new tk(0L, this.field_Ab, new UiLayoutNode(), rr.field_b);
+          this.field_Cb = new ScrollContainer(0L, this.field_Ab, new UiLayoutNode(), rr.field_b);
           this.addChild((byte) -110, (UiLayoutNode) (this.field_Cb));
           this.field_q = 15 + (var5_int + 10);
           return;
@@ -466,7 +466,7 @@ class ColumnTableWidget extends UiLayoutNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

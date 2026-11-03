@@ -8,7 +8,7 @@ final class ValidationState {
     static String[] field_d;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = (float[][][]) null;
         field_d = null;
@@ -57,7 +57,7 @@ final class ValidationState {
           if (PlayerStats.field_p > 200) {
             var5 = (-PlayerStats.field_p + 250 << 8) / 50;
           }
-          PacketBuffer.a(110, ti.field_f);
+          PacketBuffer.a(110, NamedValueContainer.field_f);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.b();
           AuctionItem.a((byte) 47);
@@ -68,7 +68,7 @@ final class ValidationState {
           if (PlayerStats.field_p >= 150) {
             AppScreen.field_a.b(var3 + 15, var4 + 10, var5);
           } else {
-            ti.field_f.drawHalfSize(var3, var4);
+            NamedValueContainer.field_f.drawHalfSize(var3, var4);
           }
           var6 = -125 + PlayerStats.field_p;
           if (0 < var6) {
@@ -114,7 +114,7 @@ final class ValidationState {
         if (PlayerStats.field_p > 200) {
           var5Lifetime1 = (-PlayerStats.field_p + 250 << 8) / 50;
         }
-        PacketBuffer.a(110, ti.field_f);
+        PacketBuffer.a(110, NamedValueContainer.field_f);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.b();
         AuctionItem.a((byte) 47);
@@ -184,7 +184,7 @@ final class ValidationState {
           }
           return;
         }
-        ti.field_f.drawHalfSize(var3Lifetime1, var4Lifetime1);
+        NamedValueContainer.field_f.drawHalfSize(var3Lifetime1, var4Lifetime1);
         var6Lifetime2 = -125 + PlayerStats.field_p;
         if (0 < var6Lifetime2 &&
           var6Lifetime2 < 50) {

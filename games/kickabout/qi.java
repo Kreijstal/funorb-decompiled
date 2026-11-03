@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends sr {
+final class qi extends SortCriterion {
     static String field_o;
     static int[] field_n;
     static int field_p;
 
-    final int a(int param0, Object param1, Object param2) {
+    final int compare(int param0, Object param1, Object param2) {
         PlayerStats var4 = null;
         PlayerStats var5 = null;
         int var6 = 0;
@@ -61,14 +61,14 @@ final class qi extends sr {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final int a(int param0) {
+    final int directionCount(int param0) {
         if (param0 >= -69) {
           Object var3 = (Object) null;
-          this.a(81, (Object) null, (Object) null);
+          this.compare(81, (Object) null, (Object) null);
         }
         return 6;
     }
@@ -84,7 +84,7 @@ final class qi extends sr {
     }
 
     final static int a(boolean param0) {
-        wk.a(nj.a(-100), 0);
+        wk.a(nj.monotonicMillis(-100), 0);
         if (param0) {
           qi.b((byte) -67);
         }
@@ -168,7 +168,7 @@ final class qi extends sr {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

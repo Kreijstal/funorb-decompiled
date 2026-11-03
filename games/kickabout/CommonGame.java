@@ -148,7 +148,7 @@ final class CommonGame {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class CommonGame {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "nu.Q(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "nu.Q(" + param0 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var7), "nu.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var7), "nu.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "nu.HA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "nu.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class CommonGame {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -525,7 +525,7 @@ final class CommonGame {
           if (param0 != 11660) {
             field_D = (String) null;
           }
-          vl.computeCameraFocus(this, (byte) -41);
+          LoginMethod.computeCameraFocus(this, (byte) -41);
           var2_int = 0;
           while (true) {
             stackIn_17_0 = -3;
@@ -825,7 +825,7 @@ final class CommonGame {
                         var6Lifetime1 = this.field_V.pixelY(879306160) - var4_ref_nlLifetime2.pixelY(true);
                         var7Lifetime2 = var6Lifetime1 * var6Lifetime1 + var5_intLifetime2Lifetime1 * var5_intLifetime2Lifetime1;
                         if (var7Lifetime2 < 784) {
-                          var8_intLifetime1 = uv.b(var6Lifetime1, var5_intLifetime2Lifetime1, (byte) 2);
+                          var8_intLifetime1 = PlayerContextMenu.b(var6Lifetime1, var5_intLifetime2Lifetime1, (byte) 2);
                           var9Lifetime2 = 511 & 693 * var4_ref_nlLifetime2.pixelX(-99);
                           if (256 > var9Lifetime2) {
                             var9Lifetime2 -= 512;
@@ -843,8 +843,8 @@ final class CommonGame {
                           }
                           this.field_V.a((MatchAgent) (var4_ref_nlLifetime2), (byte) 84);
                           var10Lifetime2 = pc.a(this.field_V.horizontalSpeedSquared(3), -524289) >> 8;
-                          this.field_V.velocityX = (we.a(var8_intLifetime1, false) >> 8) * var10Lifetime2;
-                          this.field_V.velocityY = var10Lifetime2 * (ei.a(var8_intLifetime1, (byte) -23) >> 8);
+                          this.field_V.velocityX = (we.cosine(var8_intLifetime1, false) >> 8) * var10Lifetime2;
+                          this.field_V.velocityY = var10Lifetime2 * (ei.sine(var8_intLifetime1, (byte) -23) >> 8);
                           this.field_V.stepPhysics((byte) -78, this.surface, this.field_B);
                           if (var4_ref_nlLifetime2.field_o < 15) {
                             var4_ref_nlLifetime2.field_o = var4_ref_nlLifetime2.field_o + 1;
@@ -900,7 +900,7 @@ final class CommonGame {
                           var8_intLifetime1Lifetime1 = var7Lifetime2Lifetime1 * var7Lifetime2Lifetime1 + var6Lifetime1Lifetime1 * var6Lifetime1Lifetime1;
                           if (var8_intLifetime1Lifetime1 < 1600) {
                             this.field_V.a((MatchAgent) (var5), (byte) 84);
-                            var9Lifetime1 = (4 * var5.stats.d(var5.member, 0) << 16) / 100 + 524288;
+                            var9Lifetime1 = (4 * var5.stats.effectivePower(var5.member, 0) << 16) / 100 + 524288;
                             var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, pc.a(this.field_V.horizontalSpeedSquared(-127), -524289)));
                             this.field_V.uncatchable = 5;
                             this.field_V.velocityY = (int)((long)var5.field_m * var10_long / (long)var5.field_q);
@@ -1059,7 +1059,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "nu.L(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "nu.L(" + param0 + ')');
         }
     }
 
@@ -1197,21 +1197,21 @@ final class CommonGame {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void b(boolean param0) {
         RuntimeException runtimeException = null;
-        dt[] var1 = null;
+        OffscreenPlayerArrow[] var1 = null;
         int var2 = 0;
-        dt var3 = null;
+        OffscreenPlayerArrow var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
+            IntrusiveDequeCursor.field_b.participantStatus[TrinketShopDialog.field_G].isActive(3511)) {
             var1 = af.field_a;
             var2 = 0;
             if (param0) {
@@ -1231,7 +1231,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "nu.BA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nu.BA(" + param0 + ')');
         }
     }
 
@@ -1322,7 +1322,7 @@ final class CommonGame {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1368,7 +1368,7 @@ final class CommonGame {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -1490,7 +1490,7 @@ final class CommonGame {
           } else {
             stackIn_89_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(')').toString());
         }
     }
 
@@ -1514,7 +1514,7 @@ final class CommonGame {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1594,7 +1594,7 @@ final class CommonGame {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1616,7 +1616,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "nu.H(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "nu.H(" + param0 + ')');
         }
     }
 
@@ -1633,7 +1633,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "nu.GA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "nu.GA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1732,7 +1732,7 @@ final class CommonGame {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
         }
     }
 
@@ -1782,7 +1782,7 @@ final class CommonGame {
                     !this.disableLocal) && (var5 == 0 ||
                     !this.disableOpponent)) {
                     var6.positionX = ts.a(var4_int, param0, var3_int, 448) << 16;
-                    var6.positionY = cp.a((byte) 21, var4_int, var3_int, param0) << 16;
+                    var6.positionY = AudioService.a((byte) 21, var4_int, var3_int, param0) << 16;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -1827,7 +1827,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "nu.R(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "nu.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1889,7 +1889,7 @@ final class CommonGame {
             if (this.field_l) {
               return;
             }
-            var8 = uv.b(var7, var6, (byte) 2);
+            var8 = PlayerContextMenu.b(var7, var6, (byte) 2);
             var5.startTackle(var8, param0 - 61);
             if (-1 == this.field_V.possessorTeam) {
               this.a(var5, (byte) 115);
@@ -1905,8 +1905,8 @@ final class CommonGame {
           var5.field_x = var6;
           var5.field_z = param1.value;
           var8Lifetime1 = var5.directionMask(5339);
-          var9 = uv.a(true, var7, var6);
-          stackIn_41_0 = (pq.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
+          var9 = PlayerContextMenu.a(true, var7, var6);
+          stackIn_41_0 = (SquadPickerDialog.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
           var10 = stackIn_41_0;
           var5.field_h = var9;
           var5.setAction((byte) -31, 2);
@@ -1928,7 +1928,7 @@ final class CommonGame {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
         }
     }
 
@@ -1974,7 +1974,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "nu.IA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "nu.IA(" + param0 + ')');
         }
     }
 
@@ -1992,7 +1992,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "nu.CA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "nu.CA(" + param0 + ')');
         }
     }
 
@@ -2008,7 +2008,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "nu.F(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "nu.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2053,7 +2053,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var4), "nu.W(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var4), "nu.W(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2080,7 +2080,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "nu.JA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "nu.JA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2143,7 +2143,7 @@ final class CommonGame {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2176,7 +2176,7 @@ final class CommonGame {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2235,7 +2235,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3_ref), "nu.U(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3_ref), "nu.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2255,8 +2255,8 @@ final class CommonGame {
           if (param4 > -6) {
             field_D = (String) null;
           }
-          var9 = (var7_int >> 8) * we.a(var8, false) >> 8;
-          var10 = (var7_int >> 8) * ei.a(var8, (byte) -23) >> 8;
+          var9 = (var7_int >> 8) * we.cosine(var8, false) >> 8;
+          var10 = (var7_int >> 8) * ei.sine(var8, (byte) -23) >> 8;
           if (param2 &&
             !param1 &&
             param0 > 32) {
@@ -2281,7 +2281,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var7), "nu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var7), "nu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -2366,7 +2366,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "nu.FA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "nu.FA(" + param0 + ')');
         }
     }
 
@@ -2410,7 +2410,7 @@ final class CommonGame {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -2495,7 +2495,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "nu.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "nu.A(" + param0 + ')');
         }
     }
 
@@ -2599,7 +2599,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "nu.M(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "nu.M(" + param0 + ')');
         }
     }
 
@@ -2711,7 +2711,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "nu.EA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "nu.EA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2746,7 +2746,7 @@ final class CommonGame {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -2772,7 +2772,7 @@ final class CommonGame {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2996,7 +2996,7 @@ final class CommonGame {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "nu.toString()");
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "nu.toString()");
         }
     }
 
@@ -3069,7 +3069,7 @@ final class CommonGame {
               }
               var5 = stackIn_38_0;
               while (4 > var5) {
-                this.field_i[var4_int][var5] = param0.l(3, ek.b(param2, 58));
+                this.field_i[var4_int][var5] = param0.l(3, TrinketShopDialog.b(param2, 58));
                 var5++;
               }
               var4_int++;
@@ -3242,7 +3242,7 @@ final class CommonGame {
           } else {
             stackIn_139_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_138_0), ((StringBuilder) (Object) stackIn_138_1).append(stackIn_139_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_138_0), ((StringBuilder) (Object) stackIn_138_1).append(stackIn_139_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3276,7 +3276,7 @@ final class CommonGame {
         this.disableOpponent = false;
         this.winner = -2;
         this.disableLocal = false;
-        this.field_B = vi.field_t;
+        this.field_B = NanoTickClock.field_t;
         this.field_y = false;
         this.field_Y = false;
         this.bigHeadMode = false;
@@ -3304,7 +3304,7 @@ final class CommonGame {
               stackIn_9_2 = null;
               stackIn_9_3 = null;
               stackIn_9_4 = var10_int;
-              if (1 != qj.b(this.field_c >> var10_int, 1)) {
+              if (1 != TextLayoutLine.b(this.field_c >> var10_int, 1)) {
                 stackIn_10_2 = null;
                 stackIn_10_3 = null;
                 stackIn_10_5 = false;
@@ -3371,7 +3371,7 @@ final class CommonGame {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

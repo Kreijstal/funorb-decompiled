@@ -30,7 +30,7 @@ final class MidiPcmStream extends PcmStream {
     static IntrusiveDeque field_M;
     static int field_C;
     private int field_H;
-    private pp field_m;
+    private MusicPatchPcmStream field_m;
     private long field_D;
     private int field_K;
     static String field_t;
@@ -47,7 +47,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           this.a(param2, true, (byte) 101, param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ru.HA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ru.HA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -219,67 +219,67 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = 127 & param1 >> 8;
         var6Lifetime3 = (8349360 & param1) >> 16;
         if (var5Lifetime4 == 0) {
-          this.field_q[var4Lifetime4] = qj.b(this.field_q[var4Lifetime4], -2080769) + (var6Lifetime3 << 14);
+          this.field_q[var4Lifetime4] = TextLayoutLine.b(this.field_q[var4Lifetime4], -2080769) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.field_q[var4Lifetime4] = qj.b(-16257, this.field_q[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_q[var4Lifetime4] = TextLayoutLine.b(-16257, this.field_q[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 1) {
-          this.field_G[var4Lifetime4] = qj.b(this.field_G[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_G[var4Lifetime4] = TextLayoutLine.b(this.field_G[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (33 == var5Lifetime4) {
-          this.field_G[var4Lifetime4] = var6Lifetime3 + qj.b(-128, this.field_G[var4Lifetime4]);
+          this.field_G[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.field_G[var4Lifetime4]);
         }
         if (var5Lifetime4 == 5) {
-          this.field_B[var4Lifetime4] = (var6Lifetime3 << 7) + qj.b(this.field_B[var4Lifetime4], -16257);
+          this.field_B[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(this.field_B[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 37) {
-          this.field_B[var4Lifetime4] = var6Lifetime3 + qj.b(this.field_B[var4Lifetime4], -128);
+          this.field_B[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(this.field_B[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 7) {
-          this.field_y[var4Lifetime4] = (var6Lifetime3 << 7) + qj.b(this.field_y[var4Lifetime4], -16257);
+          this.field_y[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(this.field_y[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 39) {
-          this.field_y[var4Lifetime4] = var6Lifetime3 + qj.b(-128, this.field_y[var4Lifetime4]);
+          this.field_y[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.field_y[var4Lifetime4]);
         }
         if (10 == var5Lifetime4) {
-          this.field_E[var4Lifetime4] = (var6Lifetime3 << 7) + qj.b(this.field_E[var4Lifetime4], -16257);
+          this.field_E[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(this.field_E[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 42) {
-          this.field_E[var4Lifetime4] = qj.b(this.field_E[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_E[var4Lifetime4] = TextLayoutLine.b(this.field_E[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.field_A[var4Lifetime4] = qj.b(this.field_A[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_A[var4Lifetime4] = TextLayoutLine.b(this.field_A[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 43) {
-          this.field_A[var4Lifetime4] = var6Lifetime3 + qj.b(-128, this.field_A[var4Lifetime4]);
+          this.field_A[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.field_A[var4Lifetime4]);
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
-            this.field_i[var4Lifetime4] = hf.a(this.field_i[var4Lifetime4], 1);
+            this.field_i[var4Lifetime4] = PainterStyle.a(this.field_i[var4Lifetime4], 1);
           } else {
-            this.field_i[var4Lifetime4] = qj.b(this.field_i[var4Lifetime4], -2);
+            this.field_i[var4Lifetime4] = TextLayoutLine.b(this.field_i[var4Lifetime4], -2);
           }
         }
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.a(-1, var4Lifetime4);
-            this.field_i[var4Lifetime4] = qj.b(this.field_i[var4Lifetime4], -3);
+            this.field_i[var4Lifetime4] = TextLayoutLine.b(this.field_i[var4Lifetime4], -3);
           } else {
-            this.field_i[var4Lifetime4] = hf.a(this.field_i[var4Lifetime4], 2);
+            this.field_i[var4Lifetime4] = PainterStyle.a(this.field_i[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_z[var4Lifetime4] = qj.b(this.field_z[var4Lifetime4], 127) + (var6Lifetime3 << 7);
+          this.field_z[var4Lifetime4] = TextLayoutLine.b(this.field_z[var4Lifetime4], 127) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 98) {
-          this.field_z[var4Lifetime4] = qj.b(16256, this.field_z[var4Lifetime4]) + var6Lifetime3;
+          this.field_z[var4Lifetime4] = TextLayoutLine.b(16256, this.field_z[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_z[var4Lifetime4] = 16384 - (-qj.b(this.field_z[var4Lifetime4], 127) - (var6Lifetime3 << 7));
+          this.field_z[var4Lifetime4] = 16384 - (-TextLayoutLine.b(this.field_z[var4Lifetime4], 127) - (var6Lifetime3 << 7));
         }
         if (var5Lifetime4 == 100) {
-          this.field_z[var4Lifetime4] = var6Lifetime3 + (16384 + qj.b(16256, this.field_z[var4Lifetime4]));
+          this.field_z[var4Lifetime4] = var6Lifetime3 + (16384 + TextLayoutLine.b(16256, this.field_z[var4Lifetime4]));
         }
         if (120 == var5Lifetime4) {
           this.f(var4Lifetime4, 100);
@@ -293,27 +293,27 @@ final class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.field_z[var4Lifetime4];
           if (var7 == 16384) {
-            this.field_j[var4Lifetime4] = (var6Lifetime3 << 7) + qj.b(-16257, this.field_j[var4Lifetime4]);
+            this.field_j[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(-16257, this.field_j[var4Lifetime4]);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.field_z[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.field_j[var4Lifetime4] = qj.b(-128, this.field_j[var4Lifetime4]) + var6Lifetime3;
+            this.field_j[var4Lifetime4] = TextLayoutLine.b(-128, this.field_j[var4Lifetime4]) + var6Lifetime3;
           }
         }
         if (var5Lifetime4 == 16) {
-          this.field_s[var4Lifetime4] = (var6Lifetime3 << 7) + qj.b(-16257, this.field_s[var4Lifetime4]);
+          this.field_s[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(-16257, this.field_s[var4Lifetime4]);
         }
         if (48 == var5Lifetime4) {
-          this.field_s[var4Lifetime4] = var6Lifetime3 + qj.b(-128, this.field_s[var4Lifetime4]);
+          this.field_s[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.field_s[var4Lifetime4]);
         }
         if (var5Lifetime4 == 81) {
           if (64 > var6Lifetime3) {
             this.e(-28723, var4Lifetime4);
-            this.field_i[var4Lifetime4] = qj.b(this.field_i[var4Lifetime4], -5);
+            this.field_i[var4Lifetime4] = TextLayoutLine.b(this.field_i[var4Lifetime4], -5);
           } else {
-            this.field_i[var4Lifetime4] = hf.a(this.field_i[var4Lifetime4], 4);
+            this.field_i[var4Lifetime4] = PainterStyle.a(this.field_i[var4Lifetime4], 4);
           }
         }
         if (17 == var5Lifetime4) {
@@ -348,7 +348,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_H = this.field_k.field_e[this.field_K];
           this.field_P = this.field_k.e(this.field_H);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ru.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ru.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -486,7 +486,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -528,11 +528,11 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final synchronized boolean a(int param0, int param1, ResourceArchive param2, rj param3, MusicTrack param4) {
+    final synchronized boolean a(int param0, int param1, ResourceArchive param2, SoundCache param3, MusicTrack param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -558,7 +558,7 @@ final class MidiPcmStream extends PcmStream {
             var7 = new int[]{param1};
           }
           if (param0 != 1) {
-            this.field_m = (pp) null;
+            this.field_m = (MusicPatchPcmStream) null;
           }
           var8 = (InstrumentNoteMask) (param4.field_f.b(param0 - 1));
           while (var8 != null) {
@@ -605,7 +605,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -620,7 +620,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.field_m = (pp) null;
+            this.field_m = (MusicPatchPcmStream) null;
           }
           var3_int = this.field_E[param1.field_q];
           if (var3_int >= 8192) {
@@ -639,7 +639,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -852,7 +852,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 
@@ -884,7 +884,7 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < 16) {
-          this.field_q[var5] = qj.b(-128, this.field_I[var5]);
+          this.field_q[var5] = TextLayoutLine.b(-128, this.field_I[var5]);
           var5++;
         }
     }
@@ -1140,7 +1140,7 @@ final class MidiPcmStream extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (var2), "ru.I(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) (var2), "ru.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1177,7 +1177,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void a(int param0, int param1, byte param2) {
         this.field_I[param0] = param1;
-        this.field_q[param0] = qj.b(param1, -128);
+        this.field_q[param0] = TextLayoutLine.b(param1, -128);
         this.a(param1, param2 ^ 164, param0);
         if (param2 != 36) {
           this.c();
@@ -1303,7 +1303,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -25102) {
-            this.field_m = (pp) null;
+            this.field_m = (MusicPatchPcmStream) null;
           }
           if (param1.field_F != null) {
             return false;
@@ -1327,7 +1327,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -1400,7 +1400,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1411,7 +1411,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -114 / ((34 - param0) / 59);
         field_t = null;
         field_l = null;
@@ -1440,7 +1440,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_j = new int[16];
         this.field_o = new int[16];
         this.field_k = new MidiFileReader();
-        this.field_m = new pp(this);
+        this.field_m = new MusicPatchPcmStream(this);
         this.field_w = new IntrusiveNodeHashTable(128);
         this.d(-1, -1, 256);
         this.a(true, false);
@@ -1468,13 +1468,13 @@ final class MidiPcmStream extends PcmStream {
         this.field_j = new int[16];
         this.field_o = new int[16];
         this.field_k = new MidiFileReader();
-        this.field_m = new pp(this);
+        this.field_m = new MusicPatchPcmStream(this);
         try {
           this.field_w = param0.field_w;
           this.d(-1, -1, 256);
           this.a(true, false);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ru.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ru.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

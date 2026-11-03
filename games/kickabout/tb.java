@@ -43,7 +43,7 @@ final class tb extends ArchiveNetworkClient {
           int var3_intLifetime1;
           var16 = Kickabout.field_G;
           if (null != this.field_x) {
-            var2_long = nj.a(-70);
+            var2_long = nj.monotonicMillis(-70);
             var4 = (int)(-this.field_p + var2_long);
             this.field_p = var2_long;
             if (var4 > 200) {
@@ -119,7 +119,7 @@ final class tb extends ArchiveNetworkClient {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17] = (byte)ek.b((int) this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17], (int) this.field_g);
+                      this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17] = (byte)TrinketShopDialog.b((int) this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17], (int) this.field_g);
                       var17++;
                     }
                   }
@@ -142,7 +142,7 @@ final class tb extends ArchiveNetworkClient {
                   this.field_x.a(this.field_n.field_f, var5, this.field_n.field_n, -4847);
                   if (this.field_g != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_n.field_f[this.field_n.field_n + var6] = (byte)ek.b((int) this.field_n.field_f[this.field_n.field_n + var6], (int) this.field_g);
+                      this.field_n.field_f[this.field_n.field_n + var6] = (byte)TrinketShopDialog.b((int) this.field_n.field_f[this.field_n.field_n + var6], (int) this.field_g);
                     }
                   }
                   this.field_n.field_n = this.field_n.field_n + var5;
@@ -236,7 +236,7 @@ final class tb extends ArchiveNetworkClient {
     }
 
     final static void a(byte param0, int param1) {
-        jb var5 = null;
+        PopupDialog var5 = null;
         int var3 = Kickabout.field_G;
         try {
           if (param0 != 126) {
@@ -245,17 +245,17 @@ final class tb extends ArchiveNetworkClient {
           }
           if (param1 == 28) {
             if (su.field_c != null) {
-              su.field_c.e(19910);
+              su.field_c.beginClose(19910);
             }
-            var5 = (jb) (np.field_Jb.g(24009));
+            var5 = (PopupDialog) (ScrollPane.field_Jb.g(24009));
             while (var5 != null) {
               var5.c((byte) -109);
-              var5 = (jb) (np.field_Jb.c(33));
+              var5 = (PopupDialog) (ScrollPane.field_Jb.c(33));
             }
           }
-          np.field_Jb.a(new i(param1), 3);
+          ScrollPane.field_Jb.a(new MessageDialog(param1), 3);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "tb.I(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tb.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -363,7 +363,7 @@ final class tb extends ArchiveNetworkClient {
               }
             }
             this.field_f = 0;
-            this.field_p = nj.a(-119);
+            this.field_p = nj.monotonicMillis(-119);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -375,7 +375,7 @@ final class tb extends ArchiveNetworkClient {
             } else {
               stackIn_26_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -401,20 +401,20 @@ final class tb extends ArchiveNetworkClient {
         UiLayoutNode var7 = null;
         UiLayoutNode var3 = null;
         try {
-          ll.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
+          DirectByteStorage.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
           ei.field_d = new al(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
-          nq.field_F = new al(0L, BroadcastServerCommand.field_D, md.field_j, IsSixCommand.field_D);
-          kk.field_R = new UiLayoutNode(0L, (UiLayoutNode) null);
+          TournamentChampionDialog.field_F = new al(0L, BroadcastServerCommand.field_D, CheatCodeListener.field_j, IsSixCommand.field_D);
+          TriangleMesh.field_R = new UiLayoutNode(0L, (UiLayoutNode) null);
           du.field_f = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           du.field_f.field_A = 1;
-          AlphaContainer.field_E = new UiLayoutNode(0L, dn.field_zb, oh.field_h);
-          ph.field_f = new UiLayoutNode(0L, pq.field_P, vg.field_Vb);
+          AlphaContainer.field_E = new UiLayoutNode(0L, TrinketIcon.field_zb, oh.field_h);
+          ph.field_f = new UiLayoutNode(0L, SquadPickerDialog.field_P, TextFieldNode.field_Vb);
           BlankScreen.field_h = new UiLayoutNode(0L, ul.field_c);
-          kk.field_R.addChild((byte) -109, du.field_f);
-          kk.field_R.addChild((byte) -122, AlphaContainer.field_E);
-          kk.field_R.addChild((byte) -108, ph.field_f);
-          kk.field_R.addChild((byte) -124, (UiLayoutNode) (ei.field_d));
-          kk.field_R.addChild((byte) -108, BlankScreen.field_h);
+          TriangleMesh.field_R.addChild((byte) -109, du.field_f);
+          TriangleMesh.field_R.addChild((byte) -122, AlphaContainer.field_E);
+          TriangleMesh.field_R.addChild((byte) -108, ph.field_f);
+          TriangleMesh.field_R.addChild((byte) -124, (UiLayoutNode) (ei.field_d));
+          TriangleMesh.field_R.addChild((byte) -108, BlankScreen.field_h);
           ei.field_d.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) 87);
           if (param0 >= -59) {
             ResourceArchive var4 = (ResourceArchive) null;
@@ -424,12 +424,12 @@ final class tb extends ArchiveNetworkClient {
           var6 = ei.field_d.field_Cb.field_zb;
           var7 = var6;
           var7.field_A = 1;
-          nq.field_F.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
-          var3 = nq.field_F.field_Cb.field_zb;
-          nq.field_F.field_Cb.field_zb.field_p = 1;
+          TournamentChampionDialog.field_F.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
+          var3 = TournamentChampionDialog.field_F.field_Cb.field_zb;
+          TournamentChampionDialog.field_F.field_Cb.field_zb.field_p = 1;
           var3.field_A = 1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "tb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -479,7 +479,7 @@ final class tb extends ArchiveNetworkClient {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_r = null;
         field_w = null;
@@ -501,10 +501,10 @@ final class tb extends ArchiveNetworkClient {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -16 % ((param1 + 16) / 36);
-          if (null == vl.field_e) {
+          if (null == LoginMethod.field_e) {
             return false;
           }
-          stackIn_7_0 = !(param0.toLowerCase().indexOf(vl.field_e.toLowerCase()) < 0);
+          stackIn_7_0 = !(param0.toLowerCase().indexOf(LoginMethod.field_e.toLowerCase()) < 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -516,7 +516,7 @@ final class tb extends ArchiveNetworkClient {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

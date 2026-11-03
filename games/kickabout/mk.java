@@ -6,7 +6,7 @@ final class mk {
     static int field_c;
     static Sprite field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 17437) {
           field_b = (String[]) null;
         }
@@ -344,7 +344,7 @@ final class mk {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -362,7 +362,7 @@ final class mk {
             if (param0 != -1622) {
               return;
             }
-            var2_int = ks.field_e;
+            var2_int = HuffmanCodec.field_e;
             if (1 != var2_int) {
               if (2 == var2_int) {
                 IndexedSpriteState.a(-78, var4, new java.awt.Point[]{new java.awt.Point(354, 226), new java.awt.Point(542, 226), new java.awt.Point(542, 784), new java.awt.Point(354, 784)});
@@ -381,9 +381,9 @@ final class mk {
                     var4.a(ss.field_b, param0 ^ -1623);
                   } else {
                     if (var2_int == 5) {
-                      if (!sl.field_Eb) {
+                      if (!HoverTooltip.field_Eb) {
                         for (var2_int = 720; var2_int < 826; var2_int += 24) {
-                          var4.a(ek.b(true, var2_int, 920), 3);
+                          var4.a(TrinketShopDialog.b(true, var2_int, 920), 3);
                         }
                         var4.a(ss.field_b, 3);
                         var2 = ParticipantStatus.c(0);
@@ -393,7 +393,7 @@ final class mk {
                     } else {
                       switch (var2_int) {
                         case 8:
-                          if (sl.field_Eb) {
+                          if (HoverTooltip.field_Eb) {
                             um.field_e.a((byte) -119, var4);
                             return;
                           }
@@ -413,24 +413,24 @@ final class mk {
                           if (var2_int != 10 &&
                             var2_int != 11) {
                             if (12 == var2_int) {
-                              if (sl.field_Eb) {
+                              if (HoverTooltip.field_Eb) {
                                 break;
                               }
-                              nm.a(916, 28, 544, 544, -20, var4, (byte) -65);
+                              AnimationClip.a(916, 28, 544, 544, -20, var4, (byte) -65);
                               var4.a(ss.field_b, param0 ^ -1623);
                               break;
                             }
                             if (var2_int != 13) {
                               break;
                             }
-                            nm.a(916, 28, 544, 544, -20, var4, (byte) -72);
-                            if (sl.field_Eb) {
+                            AnimationClip.a(916, 28, 544, 544, -20, var4, (byte) -72);
+                            if (HoverTooltip.field_Eb) {
                               break;
                             }
                             var4.a(ss.field_b, param0 ^ -1623);
                             break;
                           }
-                          if (!sl.field_Eb) {
+                          if (!HoverTooltip.field_Eb) {
                             IndexedSpriteState.a(-48, var4, new java.awt.Point[]{new java.awt.Point(286, 452), new java.awt.Point(864, 452), new java.awt.Point(864, 660), new java.awt.Point(286, 660)});
                           }
                           var4.a(ss.field_b, 3);
@@ -439,7 +439,7 @@ final class mk {
                           var4.a(ss.field_b, param0 + 1625);
                           break;
                         case 7:
-                          if (!sl.field_Eb) {
+                          if (!HoverTooltip.field_Eb) {
                             IndexedSpriteState.a(-109, var4, new java.awt.Point[]{new java.awt.Point(46, 236), new java.awt.Point(314, 236), new java.awt.Point(314, 714), new java.awt.Point(46, 714)});
                           }
                           var4.a(ss.field_b, 3);
@@ -464,7 +464,7 @@ final class mk {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = decompiledCaughtException;
-            throw nb.a((Throwable) ((Object) var1), "mk.B(" + param0 + ')');
+            throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "mk.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -514,7 +514,7 @@ final class mk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ class UiWidget extends IntrusiveNode {
     int field_t;
     String field_q;
     int field_n;
-    iq field_h;
+    TextLayout field_h;
     int field_s;
     static Sprite field_e;
     static String field_j;
@@ -94,7 +94,7 @@ class UiWidget extends IntrusiveNode {
             param4 = false;
           }
           if (param0) {
-            stackIn_44_0 = q.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-103, q.field_e.length, LoginForm.field_E)];
+            stackIn_44_0 = ConsoleTokenCursor.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-103, ConsoleTokenCursor.field_e.length, LoginForm.field_E)];
             return stackIn_44_0;
           }
           if (param1) {
@@ -109,12 +109,12 @@ class UiWidget extends IntrusiveNode {
             stackIn_40_0 = qr.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(120, qr.field_e.length, LoginForm.field_E)];
             return stackIn_40_0;
           }
-          stackIn_38_0 = q.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, q.field_e.length, LoginForm.field_E)];
+          stackIn_38_0 = ConsoleTokenCursor.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, ConsoleTokenCursor.field_e.length, LoginForm.field_E)];
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var5), "fd.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var5), "fd.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a((byte) -98, param2, param3, BytePlusOneCommand.field_A, n.field_m) ? 1 : 0;
+          var5_int = this.a((byte) -98, param2, param3, BytePlusOneCommand.field_A, ArchiveManager.field_m) ? 1 : 0;
           stackIn_3_0 = (this.field_m) ? 0 : 1;
           if (var5_int != 0) {
             stackIn_6_1 = 0;
@@ -237,7 +237,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, UiListener param1) {
-        this(param0, nb.field_i.field_c, param1);
+        this(param0, GameSoundEffect.field_i.field_c, param1);
     }
 
     boolean a(char param0, byte param1, UiWidget param2, int param3) {
@@ -301,7 +301,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -381,9 +381,9 @@ class UiWidget extends IntrusiveNode {
         this.a((byte) 12, this, param2, param0);
         var5 = this.b(73) ? 1 : 0;
         if (param3) {
-          if (id.field_v != 0 &&
+          if (StatefulTextPainter.field_v != 0 &&
             var5 != 0) {
-            this.a(n.field_m, this, param2, BytePlusOneCommand.field_A, param0, id.field_v, param1 ^ 31923);
+            this.a(ArchiveManager.field_m, this, param2, BytePlusOneCommand.field_A, param0, StatefulTextPainter.field_v, param1 ^ 31923);
           }
           if (WidgetContainer.field_A != 0) {
             if (this.handlePointerPress(true, param0, sm.field_q, this, ReceivedAuctionItem.field_y, param2, WidgetContainer.field_A)) {
@@ -395,8 +395,8 @@ class UiWidget extends IntrusiveNode {
             }
           }
           if (FootballerAgent.field_p == 0 &&
-            vg.field_Ob != 0) {
-            this.a(param0, n.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
+            TextFieldNode.field_Ob != 0) {
+            this.a(param0, ArchiveManager.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
             var6 = mp.field_g;
             if (var6 != null) {
               if (var6.field_k instanceof co) {
@@ -411,7 +411,7 @@ class UiWidget extends IntrusiveNode {
             this.g(84);
           }
         }
-        vg.field_Ob = FootballerAgent.field_p;
+        TextFieldNode.field_Ob = FootballerAgent.field_p;
         cg.a(this.f(-1), (byte) -98);
         if (param1 == 31947) {
           return param3;
@@ -461,7 +461,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -514,7 +514,7 @@ class UiWidget extends IntrusiveNode {
         }
         String var5 = JaggrabDownloader.a(true);
         if (var5 != null) {
-          nb.field_i.a(ws.field_e, (byte) 115, td.field_d, var5);
+          GameSoundEffect.field_i.a(ws.field_e, (byte) 115, TrinketCatalog.field_d, var5);
         }
     }
 
@@ -554,7 +554,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -584,7 +584,7 @@ class UiWidget extends IntrusiveNode {
             this.a((UiWidget) null, 108);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fd.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fd.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -645,7 +645,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -660,7 +660,7 @@ class UiWidget extends IntrusiveNode {
           this.field_g = param1;
           this.field_i = param3;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -21,26 +21,26 @@ final class nc {
         RuntimeException var4_ref = null;
         var8 = Kickabout.field_G;
         try {
-          vu.field_Cb = param2;
+          ContextMenuItem.field_Cb = param2;
           vt.field_c = param0;
           JaggrabDownloader.field_c = param3;
           var9 = un.field_d;
           var4 = var9;
-          kn.field_G = new String[vt.field_c.playerCount];
+          TrinketPickerDialog.field_G = new String[vt.field_c.playerCount];
           var5 = 0;
           for (var6 = 0; var6 < vt.field_c.playerCount; var6++) {
-            kn.field_G[var6] = vt.field_c.field_S[var6].toLowerCase();
-            var7 = ((BitmapFont) ((Object) var9)).a(kn.field_G[var6]);
+            TrinketPickerDialog.field_G[var6] = vt.field_c.field_S[var6].toLowerCase();
+            var7 = ((BitmapFont) ((Object) var9)).a(TrinketPickerDialog.field_G[var6]);
             if (var7 > var5) {
               var5 = var7;
             }
           }
-          rb.field_yb = -8 + ((BitmapFont) ((Object) var4)).field_G + ((BitmapFont) ((Object) var4)).field_p;
+          TextPromptDialog.field_yb = -8 + ((BitmapFont) ((Object) var4)).field_G + ((BitmapFont) ((Object) var4)).field_p;
           et.field_c = 18 + var5 + 20;
           if (param1 != -85) {
             return;
           }
-          rn.field_c = rb.field_yb + 6;
+          rn.field_c = TextPromptDialog.field_yb + 6;
           if (100 > et.field_c) {
             et.field_c = 100;
           }
@@ -56,7 +56,7 @@ final class nc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -70,15 +70,15 @@ final class nc {
         int var6 = 0;
         String var7 = null;
         try {
-          sn.field_f[0] = ac.field_d.nextInt();
-          sn.field_f[1] = ac.field_d.nextInt();
+          UrlRequest.field_f[0] = TrinketUnlockNotice.field_d.nextInt();
+          UrlRequest.field_f[1] = TrinketUnlockNotice.field_d.nextInt();
           gl.field_a.field_n = 0;
-          sn.field_f[3] = (int)ld.field_c;
-          sn.field_f[2] = (int)(ld.field_c >> 32);
-          gl.field_a.writeInt(-116, sn.field_f[0]);
-          gl.field_a.writeInt(-55, sn.field_f[1]);
-          gl.field_a.writeInt(-92, sn.field_f[2]);
-          gl.field_a.writeInt(-102, sn.field_f[3]);
+          UrlRequest.field_f[3] = (int)ld.field_c;
+          UrlRequest.field_f[2] = (int)(ld.field_c >> 32);
+          gl.field_a.writeInt(-116, UrlRequest.field_f[0]);
+          gl.field_a.writeInt(-55, UrlRequest.field_f[1]);
+          gl.field_a.writeInt(-92, UrlRequest.field_f[2]);
+          gl.field_a.writeInt(-102, UrlRequest.field_f[3]);
           qr.a(param3 ^ -16185, gl.field_a);
           gl.field_a.writeShort(param3 ^ 1207442647, param4);
           param2.writeCredentials(gl.field_a, param3 + 33214);
@@ -96,7 +96,7 @@ final class nc {
           or.field_d.writeInt(-116, ResizableModalPanel.field_J);
           or.field_d.writeLong(il.field_f, param3 ^ 1781875959);
           var6 = 0;
-          if (fu.field_c) {
+          if (GrowableIntList.field_c) {
             var6 = var6 | 1;
           }
           if (it.field_n) {
@@ -117,7 +117,7 @@ final class nc {
           if (BroadcastServerCommand.field_A != null) {
             or.field_d.writeCircumfixedString(BroadcastServerCommand.field_A, (byte) -127);
           }
-          om.a(ManagerAction.field_h, or.field_d, (byte) -116, gl.field_a, bb.field_Nb);
+          IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -116, gl.field_a, CascadingMenu.field_Nb);
           or.field_d.backpatchShortLength(or.field_d.field_n - var5_int, 62);
           c.a(-1, false);
           return;
@@ -131,11 +131,11 @@ final class nc {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         int var1 = 48 % ((-12 - param0) / 49);

@@ -43,7 +43,7 @@ final class v {
           PacketBuffer.a(74, this.field_f);
           SoftwareRasterizer.b();
           var4_int = 486400 / InstrumentNoteMask.field_i;
-          param0.a(var4_int, 300, this.field_g, this.field_h, (byte) -74);
+          param0.renderModel(var4_int, 300, this.field_g, this.field_h, (byte) -74);
           TeamManagementScreen.e(124);
           if (param2) {
             return;
@@ -60,7 +60,7 @@ final class v {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class v {
           return;
         }
         int var2 = ug.a(0, this.field_c) - this.field_g;
-        int var3 = lf.a((byte) -83, this.field_j) - this.field_h;
+        int var3 = IntKeyLookup.a((byte) -83, this.field_j) - this.field_h;
         this.field_f.b(var2, var3, this.field_e * this.field_a / 17);
         if (param0 < -1) {
           return;
@@ -85,7 +85,7 @@ final class v {
         return var1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -113,7 +113,7 @@ final class v {
           param2.a(300, this.field_g, this.field_h, var4_int, 300);
           TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

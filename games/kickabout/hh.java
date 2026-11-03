@@ -31,7 +31,7 @@ final class hh {
         byte[] var13 = null;
         try {
           if (param1 != -3) {
-            hh.a((byte) 111);
+            hh.releaseStatics((byte) 111);
           }
           var9 = new PacketBuffer(param0);
           var3 = var9.readUnsignedByte((byte) -107);
@@ -55,7 +55,7 @@ final class hh {
               if (1 != var3) {
                 var7 = TextLine.field_g;
                 synchronized (var7) {
-                  TextLine.field_g.a(-4019, var9, var13);
+                  TextLine.field_g.decompress(-4019, var9, var13);
                 }
               } else {
                 Bzip2Decoder.decompressInto(var13, var5, param0, var4, 9);
@@ -76,11 +76,11 @@ final class hh {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 53) {
           field_g = null;
           field_e = null;

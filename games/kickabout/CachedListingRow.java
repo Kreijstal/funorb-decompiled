@@ -47,14 +47,14 @@ final class CachedListingRow extends IntrusiveNode {
         if (IntrusiveNodeHashTable.field_g[var4] != null) {
           return true;
         }
-        if (!bo.field_Cb.a("scenery", var3, (byte) -10)) {
+        if (!bo.field_Cb.ensureFileAvailableByName("scenery", var3, (byte) -10)) {
           return false;
         }
         IntrusiveNodeHashTable.field_g[var4] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 76, var3);
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -123) {
           byte[] var2 = (byte[]) null;
           CachedListingRow.encodeCp1252(92, (CharSequence) null, 36, (byte[]) null, 126, 18);
@@ -201,12 +201,12 @@ final class CachedListingRow extends IntrusiveNode {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
-        hg.g(-88);
+        PromotionDialog.g(-88);
         int var2 = -23 / ((param0 + 81) / 34);
     }
 
@@ -215,7 +215,7 @@ final class CachedListingRow extends IntrusiveNode {
           this.field_f = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "iu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

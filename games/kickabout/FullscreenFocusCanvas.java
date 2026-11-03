@@ -22,7 +22,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -66,11 +66,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             this.focusGained((java.awt.event.FocusEvent) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_i = null;
         field_f = null;
@@ -97,9 +97,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           cb.field_d = PcmPlayerService.a(param0, param2, 0, 22050);
           pg.field_d = PcmPlayerService.a(param0, param2, 1, 1024);
           if (param1 != 23) {
-            FullscreenFocusCanvas.a((byte) 30);
+            FullscreenFocusCanvas.releaseStatics((byte) 30);
           }
-          sk.field_d = new jj(3);
+          sk.field_d = new MusicTrackMixer(3);
           sk.field_d.a(param1 - 23, 128, 9);
           var5 = 0;
           var3_intLifetime1 = var5;
@@ -111,7 +111,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           pi.field_b = new PcmStreamMixer();
           pg.field_d.a(pi.field_b);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

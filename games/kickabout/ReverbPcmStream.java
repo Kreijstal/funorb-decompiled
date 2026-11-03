@@ -6,11 +6,11 @@ final class ReverbPcmStream extends PcmStream {
     private float field_s;
     private float field_u;
     private int[] field_i;
-    private tp[] field_n;
-    private mq[] field_k;
+    private ReverbCombFilter[] field_n;
+    private ReverbAllPassFilter[] field_k;
     private float field_p;
-    private tp[] field_m;
-    private mq[] field_v;
+    private ReverbCombFilter[] field_m;
+    private ReverbAllPassFilter[] field_v;
     private float field_o;
     private float field_t;
     private float field_q;
@@ -52,12 +52,12 @@ final class ReverbPcmStream extends PcmStream {
         int var20;
         int var21;
         int var22;
-        tp var23;
-        mq var24;
-        tp var25;
-        mq var26;
-        tp var27;
-        mq var28;
+        ReverbCombFilter var23;
+        ReverbAllPassFilter var24;
+        ReverbCombFilter var25;
+        ReverbAllPassFilter var26;
+        ReverbCombFilter var27;
+        ReverbAllPassFilter var28;
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
@@ -278,20 +278,20 @@ final class ReverbPcmStream extends PcmStream {
             for (var1 = 0; var1 < 4; var1++) {
               this.field_k[var1].a();
             }
-            this.field_n = new tp[8];
-            this.field_n[0] = new tp(1139 * PcmPlayerService.field_i / 44100);
-            this.field_n[1] = new tp(1211 * PcmPlayerService.field_i / 44100);
-            this.field_n[2] = new tp(1300 * PcmPlayerService.field_i / 44100);
-            this.field_n[3] = new tp(1379 * PcmPlayerService.field_i / 44100);
-            this.field_n[4] = new tp(1445 * PcmPlayerService.field_i / 44100);
-            this.field_n[5] = new tp(1514 * PcmPlayerService.field_i / 44100);
-            this.field_n[6] = new tp(1580 * PcmPlayerService.field_i / 44100);
-            this.field_n[7] = new tp(1640 * PcmPlayerService.field_i / 44100);
-            this.field_v = new mq[4];
-            this.field_v[0] = new mq(579 * PcmPlayerService.field_i / 44100);
-            this.field_v[1] = new mq(464 * PcmPlayerService.field_i / 44100);
-            this.field_v[2] = new mq(364 * PcmPlayerService.field_i / 44100);
-            this.field_v[3] = new mq(248 * PcmPlayerService.field_i / 44100);
+            this.field_n = new ReverbCombFilter[8];
+            this.field_n[0] = new ReverbCombFilter(1139 * PcmPlayerService.field_i / 44100);
+            this.field_n[1] = new ReverbCombFilter(1211 * PcmPlayerService.field_i / 44100);
+            this.field_n[2] = new ReverbCombFilter(1300 * PcmPlayerService.field_i / 44100);
+            this.field_n[3] = new ReverbCombFilter(1379 * PcmPlayerService.field_i / 44100);
+            this.field_n[4] = new ReverbCombFilter(1445 * PcmPlayerService.field_i / 44100);
+            this.field_n[5] = new ReverbCombFilter(1514 * PcmPlayerService.field_i / 44100);
+            this.field_n[6] = new ReverbCombFilter(1580 * PcmPlayerService.field_i / 44100);
+            this.field_n[7] = new ReverbCombFilter(1640 * PcmPlayerService.field_i / 44100);
+            this.field_v = new ReverbAllPassFilter[4];
+            this.field_v[0] = new ReverbAllPassFilter(579 * PcmPlayerService.field_i / 44100);
+            this.field_v[1] = new ReverbAllPassFilter(464 * PcmPlayerService.field_i / 44100);
+            this.field_v[2] = new ReverbAllPassFilter(364 * PcmPlayerService.field_i / 44100);
+            this.field_v[3] = new ReverbAllPassFilter(248 * PcmPlayerService.field_i / 44100);
             this.field_i = new int[512];
           }
         }
@@ -357,20 +357,20 @@ final class ReverbPcmStream extends PcmStream {
     }
 
     ReverbPcmStream(PcmStream param0) {
-        this.field_m = new tp[8];
-        this.field_m[0] = new tp(1116 * PcmPlayerService.field_i / 44100);
-        this.field_m[1] = new tp(1188 * PcmPlayerService.field_i / 44100);
-        this.field_m[2] = new tp(1277 * PcmPlayerService.field_i / 44100);
-        this.field_m[3] = new tp(1356 * PcmPlayerService.field_i / 44100);
-        this.field_m[4] = new tp(1422 * PcmPlayerService.field_i / 44100);
-        this.field_m[5] = new tp(1491 * PcmPlayerService.field_i / 44100);
-        this.field_m[6] = new tp(1557 * PcmPlayerService.field_i / 44100);
-        this.field_m[7] = new tp(1617 * PcmPlayerService.field_i / 44100);
-        this.field_k = new mq[4];
-        this.field_k[0] = new mq(556 * PcmPlayerService.field_i / 44100);
-        this.field_k[1] = new mq(441 * PcmPlayerService.field_i / 44100);
-        this.field_k[2] = new mq(341 * PcmPlayerService.field_i / 44100);
-        this.field_k[3] = new mq(225 * PcmPlayerService.field_i / 44100);
+        this.field_m = new ReverbCombFilter[8];
+        this.field_m[0] = new ReverbCombFilter(1116 * PcmPlayerService.field_i / 44100);
+        this.field_m[1] = new ReverbCombFilter(1188 * PcmPlayerService.field_i / 44100);
+        this.field_m[2] = new ReverbCombFilter(1277 * PcmPlayerService.field_i / 44100);
+        this.field_m[3] = new ReverbCombFilter(1356 * PcmPlayerService.field_i / 44100);
+        this.field_m[4] = new ReverbCombFilter(1422 * PcmPlayerService.field_i / 44100);
+        this.field_m[5] = new ReverbCombFilter(1491 * PcmPlayerService.field_i / 44100);
+        this.field_m[6] = new ReverbCombFilter(1557 * PcmPlayerService.field_i / 44100);
+        this.field_m[7] = new ReverbCombFilter(1617 * PcmPlayerService.field_i / 44100);
+        this.field_k = new ReverbAllPassFilter[4];
+        this.field_k[0] = new ReverbAllPassFilter(556 * PcmPlayerService.field_i / 44100);
+        this.field_k[1] = new ReverbAllPassFilter(441 * PcmPlayerService.field_i / 44100);
+        this.field_k[2] = new ReverbAllPassFilter(341 * PcmPlayerService.field_i / 44100);
+        this.field_k[3] = new ReverbAllPassFilter(225 * PcmPlayerService.field_i / 44100);
         if (!PcmPlayerService.field_o) {
           this.field_i = new int[256];
         }

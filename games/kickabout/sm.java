@@ -63,7 +63,7 @@ final class sm extends IntrusiveNode {
               var6 = var12.length << 2;
             }
             for (var8 = 0; var6 > var8; var8++) {
-              var7[var8 >> 2] = var7[var8 >> 2] + (var2.readUnsignedByte((byte) -118) << (qj.b(3, var8) << 8));
+              var7[var8 >> 2] = var7[var8 >> 2] + (var2.readUnsignedByte((byte) -118) << (TextLayoutLine.b(3, var8) << 8));
             }
             var5.c((byte) -109);
             return;
@@ -74,11 +74,11 @@ final class sm extends IntrusiveNode {
             return;
           }
           var5_int = var2.readSignedSmart(85);
-          var6_ref_hr = (hr) (ti.field_c.g(24009));
+          var6_ref_hr = (hr) (NamedValueContainer.field_c.g(24009));
           while (var6_ref_hr != null) {
             if (var6_ref_hr.field_j != var4 ||
               var6_ref_hr.field_i != var5_int) {
-              var6_ref_hr = (hr) (ti.field_c.c(33));
+              var6_ref_hr = (hr) (NamedValueContainer.field_c.c(33));
               continue;
             }
             break;
@@ -92,7 +92,7 @@ final class sm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "sm.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "sm.B(" + param0 + ')');
         }
     }
 

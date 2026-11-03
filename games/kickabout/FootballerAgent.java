@@ -210,7 +210,7 @@ class FootballerAgent extends MatchAgent {
               }
             }
             if (this.action == 11) {
-              var8Lifetime1 = MenuButton.field_q[this.stats.playerType] * 3 >> 1;
+              var8Lifetime1 = MenuButton.field_q[this.stats.archetype] * 3 >> 1;
               if (this.isMovingDiagonally(false)) {
                 var8Lifetime1 = var8Lifetime1 * 181 >> 8;
               }
@@ -245,13 +245,13 @@ class FootballerAgent extends MatchAgent {
           } else {
             stackIn_92_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_91_1).append(stackIn_92_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_91_1).append(stackIn_92_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final int a(int param0, byte param1) {
         int var9 = 0;
-        int var3 = this.stats.d(this.member, param1 ^ -68);
+        int var3 = this.stats.effectivePower(this.member, param1 ^ -68);
         int var4 = var3 * 14 / 100;
         if (param1 != -68) {
           FootballerAgent.e((byte) 48);
@@ -350,7 +350,7 @@ class FootballerAgent extends MatchAgent {
           this.field_o = param1.l(12, 59);
           this.field_t = param1.l(26, 59);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -390,7 +390,7 @@ class FootballerAgent extends MatchAgent {
           this.field_m = var4.field_m;
           this.positionX = var4.positionX;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nl.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nl.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -456,7 +456,7 @@ class FootballerAgent extends MatchAgent {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -521,12 +521,12 @@ class FootballerAgent extends MatchAgent {
 
     final void startTackle(int param0, int param1) {
         this.setAction((byte) -31, 3);
-        this.field_k = (we.a(param0, false) >> 8) * (this.field_q >> 8);
-        this.field_m = (ei.a(param0, (byte) -23) >> 8) * (this.field_q >> 8);
+        this.field_k = (we.cosine(param0, false) >> 8) * (this.field_q >> 8);
+        this.field_m = (ei.sine(param0, (byte) -23) >> 8) * (this.field_q >> 8);
         if (this.directionMask == 0) {
           this.setDirectionFromMask(en.b(param0, -25147), 26214);
         }
-        this.actionTime = this.actionTime + this.stats.a(this.member, 0) / 5;
+        this.actionTime = this.actionTime + this.stats.effectiveTackle(this.member, 0) / 5;
         this.controllingParticipant = param1;
         this.field_s = false;
     }
@@ -536,7 +536,7 @@ class FootballerAgent extends MatchAgent {
         if (param0 != -99) {
           discarded$0 = this.archetypeName(-72);
         }
-        int var2 = -this.stats.d(this.member, 0) + 100;
+        int var2 = -this.stats.effectivePower(this.member, 0) + 100;
         return 80 + 120 * var2 / 100;
     }
 
@@ -544,7 +544,7 @@ class FootballerAgent extends MatchAgent {
         if (param0 != -99) {
           this.pixelX(-27);
         }
-        return 200 - (this.stats.d(this.member, (byte) -127) * 2 - 120) + vf.field_I[4];
+        return 200 - (this.stats.effectiveSpeed(this.member, (byte) -127) * 2 - 120) + BuyPitchDialog.field_I[4];
     }
 
     final void applyPlayerStats(boolean param0, PlayerStats param1, int param2) {
@@ -562,21 +562,21 @@ class FootballerAgent extends MatchAgent {
           this.stats = param1;
           stackIn_3_1 = (param0);
           this.member = stackIn_3_1;
-          this.archetype = this.stats.playerType;
+          this.archetype = this.stats.archetype;
           if (this.stats.c(this.member, param2 - 109)) {
             stackIn_6_0 = 3;
           } else {
             stackIn_6_0 = this.archetype;
           }
           var4_int = stackIn_6_0;
-          this.field_A = ea.field_j[var4_int] + (MenuButton.field_q[var4_int] - ea.field_j[var4_int]) * this.stats.d(this.member, (byte) -84) / 100;
+          this.field_A = ea.field_j[var4_int] + (MenuButton.field_q[var4_int] - ea.field_j[var4_int]) * this.stats.effectiveSpeed(this.member, (byte) -84) / 100;
           if (this.stats.a((byte) 44, this.member)) {
             stackIn_9_0 = 0;
           } else {
             stackIn_9_0 = this.archetype;
           }
           var5 = stackIn_9_0;
-          this.field_q = g.field_b[var5] + (-g.field_b[var5] + pv.field_J[var5]) * this.stats.a(this.member, param2 - 3) / 100;
+          this.field_q = g.field_b[var5] + (-g.field_b[var5] + HelpTipDialog.field_J[var5]) * this.stats.effectiveTackle(this.member, param2 - 3) / 100;
           if (param2 != 3) {
             this.field_m = 74;
           }
@@ -594,7 +594,7 @@ class FootballerAgent extends MatchAgent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -643,7 +643,7 @@ class FootballerAgent extends MatchAgent {
     final void setAction(byte param0, int param1) {
         String discarded$0 = null;
         this.action = param1;
-        this.actionTime = vf.field_I[this.action];
+        this.actionTime = BuyPitchDialog.field_I[this.action];
         if (this.megamode) {
           if (8 == this.action) {
             this.actionTime = this.actionTime + 60;
@@ -714,22 +714,22 @@ class FootballerAgent extends MatchAgent {
         StringBuilder discarded$130 = null;
         StringBuilder var2 = new StringBuilder("AgentFootballer[" + this.archetypeName(9) + "]");
         StringBuilder discarded$0 = var2.append("\n\t\tloc=\t[");
-        eh.a(this.positionX, 100, var2);
+        GameResourceLoader.a(this.positionX, 100, var2);
         StringBuilder discarded$1 = var2.append(", ");
-        eh.a(this.positionY, 100, var2);
+        GameResourceLoader.a(this.positionY, 100, var2);
         StringBuilder discarded$2 = var2.append(", ");
-        eh.a(this.height, 100, var2);
+        GameResourceLoader.a(this.height, 100, var2);
         StringBuilder discarded$3 = var2.append(", ");
-        eh.a(this.verticalVelocity, 100, var2);
+        GameResourceLoader.a(this.verticalVelocity, 100, var2);
         StringBuilder discarded$4 = var2.append(", " + this.dashCooldown + "]");
         StringBuilder discarded$5 = var2.append("\n\t\tspd=[");
-        eh.a(this.field_A, 100, var2);
+        GameResourceLoader.a(this.field_A, 100, var2);
         StringBuilder discarded$6 = var2.append(", ");
-        eh.a(this.field_g, 100, var2);
+        GameResourceLoader.a(this.field_g, 100, var2);
         StringBuilder discarded$7 = var2.append(", ");
-        eh.a(this.field_q, 100, var2);
+        GameResourceLoader.a(this.field_q, 100, var2);
         StringBuilder discarded$8 = var2.append(", ");
-        eh.a(this.field_D, 100, var2);
+        GameResourceLoader.a(this.field_D, 100, var2);
         StringBuilder discarded$9 = var2.append("]");
         StringBuilder discarded$10 = var2.append("\n\t\tstathash=" + this.stats.computeChecksum(0));
         StringBuilder discarded$33 = var2.append("\n\t\tact=\t[" + this.actionTime + ", " + this.actionName(true) + ", ai_wait=" + this.aiWait + "]");

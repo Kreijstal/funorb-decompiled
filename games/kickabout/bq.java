@@ -5,7 +5,7 @@ final class bq {
     static String field_b;
     static UiLayoutNode field_d;
     static int field_c;
-    static rj field_a;
+    static SoundCache field_a;
 
     final static void a(int param0, boolean param1) {
         int var6 = 0;
@@ -26,9 +26,9 @@ final class bq {
         int var7 = 0;
         int var8 = 0;
         UiLayoutNode var8_ref_hd = null;
-        vu var9 = null;
+        ContextMenuItem var9 = null;
         int var9_int = 0;
-        vu var10 = null;
+        ContextMenuItem var10 = null;
         int var10_int = 0;
         int var12 = 0;
         int var13 = 0;
@@ -46,7 +46,7 @@ final class bq {
             stackIn_4_1 = ee.field_b;
           }
           ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
-          ni.field_l.a(0, dn.field_Cb.field_q, 0, -2 + (-40 + dn.field_Cb.field_mb), (byte) -80);
+          ni.field_l.a(0, TrinketIcon.field_Cb.field_q, 0, -2 + (-40 + TrinketIcon.field_Cb.field_mb), (byte) -80);
           ka.field_c.a(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
           stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
@@ -59,8 +59,8 @@ final class bq {
           ((UiLayoutNode) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
           DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
           ClientException.field_c.a(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
-          ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);
-          ci.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
+          TrinketUnlockNotice.field_b.a(true, TrinketIcon.field_Cb.field_q, 0, -40 + TrinketIcon.field_Cb.field_mb, 40);
+          IterableDualLinkDeque.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
           sg.field_a.a(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
           var2_int = 3 + ss.field_j;
           if (rn.field_d.length < 2) {
@@ -167,18 +167,18 @@ final class bq {
           is.field_b.a(true, tn.field_f.field_q, 0, 0, 24);
           vj.field_g.a(true, tn.field_f.field_q, 0, 24, -24 + tn.field_f.field_mb);
           vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
-          mc.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
+          TickClock.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
           BlackFadeScreen.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
           ClientException.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "bq.B(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "bq.B(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -226,7 +226,7 @@ final class bq {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

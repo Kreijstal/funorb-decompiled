@@ -9,7 +9,7 @@ final class rr {
     static String field_d;
     static String field_h;
     static String field_c;
-    static ji field_b;
+    static ScrollBar field_b;
 
     final static MenuButton[] a(int[] param0, MenuButton[] param1, int param2) {
         int var4 = 0;
@@ -52,7 +52,7 @@ final class rr {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -101,11 +101,11 @@ final class rr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_g = null;
         field_e = null;
@@ -119,7 +119,7 @@ final class rr {
     final static void a(String param0, byte param1, long param2) {
         CharSequence var5 = null;
         try {
-          at.field_Kb = param0;
+          TrinketTile.field_Kb = param0;
           if (param1 != -70) {
             rr.a(36, '+');
           }
@@ -129,7 +129,7 @@ final class rr {
           IntDoubleCommand.field_A = param2;
           PlayArea.a(true);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

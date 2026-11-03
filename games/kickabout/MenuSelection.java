@@ -14,7 +14,7 @@ final class MenuSelection {
     static String field_k;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -22) {
           MenuSelection.a(-29, -114, 127L);
         }
@@ -102,7 +102,7 @@ final class MenuSelection {
         this.field_b = 0;
         this.field_h = 0;
         if (0 == this.field_i &&
-          cc.field_e == 96) {
+          FixedQuaternion.field_e == 96) {
           if (0 >= this.selectedIndex) {
             this.selectedIndex = this.itemCount;
           }
@@ -113,18 +113,18 @@ final class MenuSelection {
           this.b(-93);
         }
         if (0 == this.field_i) {
-          this.field_b = cc.field_e;
+          this.field_b = FixedQuaternion.field_e;
         }
         if (this.field_i == 0 &&
-          97 == cc.field_e) {
+          97 == FixedQuaternion.field_e) {
           this.selectedIndex = this.selectedIndex + 1;
           if (this.selectedIndex >= this.itemCount) {
             this.selectedIndex = 0;
           }
           this.field_g = false;
         }
-        if (this.field_i == 0 && (98 == cc.field_e ||
-          99 == cc.field_e)) {
+        if (this.field_i == 0 && (98 == FixedQuaternion.field_e ||
+          99 == FixedQuaternion.field_e)) {
           if (this.selectedIndex < 0) {
             this.selectedIndex = param0;
           }
@@ -155,10 +155,10 @@ final class MenuSelection {
         this.field_b = 0;
         this.field_h = 0;
         if (this.field_i == 0) {
-          this.field_b = cc.field_e;
+          this.field_b = FixedQuaternion.field_e;
         }
         if (0 == this.field_i &&
-          cc.field_e == 98) {
+          FixedQuaternion.field_e == 98) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -169,7 +169,7 @@ final class MenuSelection {
           return;
         }
         if (0 == this.field_i &&
-          cc.field_e == 99) {
+          FixedQuaternion.field_e == 99) {
           this.selectedIndex = this.selectedIndex + 1;
           this.field_g = false;
           if (this.itemCount <= this.selectedIndex) {
@@ -185,7 +185,7 @@ final class MenuSelection {
           this.field_h = 117;
         }
         if (0 == this.field_i) {
-          this.field_b = cc.field_e;
+          this.field_b = FixedQuaternion.field_e;
         }
     }
 

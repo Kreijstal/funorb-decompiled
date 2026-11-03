@@ -11,7 +11,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
     final static byte[] a(Object param0, boolean param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        pf var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_13_0 = null;
@@ -33,8 +33,8 @@ abstract class DebouncedValidationProvider implements ValidationSource {
             stackIn_7_0 = var3;
             return stackIn_7_0;
           }
-          if (param0 instanceof pf) {
-            var4 = (pf) (param0);
+          if (param0 instanceof ByteStorage) {
+            var4 = (ByteStorage) (param0);
             stackIn_13_0 = var4.a(2);
             return stackIn_13_0;
           }
@@ -53,7 +53,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -63,12 +63,12 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         }
         if (param0 > -23) {
           field_c = (String) null;
-          if (nj.a(37) >= (350L + this.field_b)) {
+          if (nj.monotonicMillis(37) >= (350L + this.field_b)) {
             return this.evaluateValidationMessage(-1);
           }
           return null;
         }
-        if (nj.a(37) >= (350L + this.field_b)) {
+        if (nj.monotonicMillis(37) >= (350L + this.field_b)) {
           return this.evaluateValidationMessage(-1);
         }
         return null;
@@ -76,9 +76,9 @@ abstract class DebouncedValidationProvider implements ValidationSource {
 
     public final ValidationState getValidationState(int param0) {
         if (this.isInputEmpty((byte) -28)) {
-          return os.field_l;
+          return Bzip2State.field_l;
         }
-        if (nj.a(-104) < 350L + this.field_b) {
+        if (nj.monotonicMillis(-104) < 350L + this.field_b) {
           return mn.field_c;
         }
         if (param0 == -24407) {
@@ -124,12 +124,12 @@ abstract class DebouncedValidationProvider implements ValidationSource {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final void validationChanged(int param0) {
-        this.field_b = nj.a(-122);
+        this.field_b = nj.monotonicMillis(-122);
         int var2 = 76 % ((42 - param0) / 58);
     }
 
@@ -138,7 +138,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
           return (AppScreen) ((Object) um.field_e);
         }
         if (param0 == -2) {
-          return (AppScreen) ((Object) sr.field_l);
+          return (AppScreen) ((Object) SortCriterion.field_l);
         }
         if (param1 != 24939) {
           return (AppScreen) null;

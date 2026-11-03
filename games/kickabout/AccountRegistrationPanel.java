@@ -8,13 +8,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     private TextButton field_Q;
     private TextButton field_F;
     private ValidatedTextWidget field_K;
-    static vl field_I;
+    static LoginMethod field_I;
     static String field_P;
     static int field_G;
     static String field_M;
     private TextHotspotWidget field_R;
     private ValidatedTextWidget field_N;
-    static tv field_D;
+    static ChatMessage field_D;
     private ValidatedTextWidget field_S;
     private ValidatedTextWidget field_T;
     private ValidatedTextWidget field_J;
@@ -24,9 +24,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_Q.field_y = this.k(-123);
+          this.field_Q.field_y = this.allFieldsValid(-123);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ae.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ae.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var11 = Kickabout.field_G;
         var6 = 0;
         if (param3 == -1) {
-          var17 = nm.a(param4, -74, ll.field_m);
+          var17 = AnimationClip.a(param4, -74, DirectByteStorage.field_m);
           var5 = var17;
           PacketBuffer.a(param1 + 13, var17);
         } else {
@@ -75,11 +75,11 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             stackIn_5_0 = param4;
             stackIn_5_1 = param1 - 62;
             if (param0) {
-              stackIn_6_2 = gu.field_zb;
+              stackIn_6_2 = ContextMenu.field_zb;
             } else {
-              stackIn_6_2 = uv.field_m;
+              stackIn_6_2 = PlayerContextMenu.field_m;
             }
-            var14 = nm.a(stackIn_5_0, stackIn_5_1, stackIn_6_2);
+            var14 = AnimationClip.a(stackIn_5_0, stackIn_5_1, stackIn_6_2);
             stackIn_8_0 = param4;
             stackIn_8_1 = -95;
             if (param0) {
@@ -87,7 +87,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_9_2 = SetLagCommand.field_B;
             }
-            var16 = nm.a(stackIn_8_0, stackIn_8_1, stackIn_9_2);
+            var16 = AnimationClip.a(stackIn_8_0, stackIn_8_1, stackIn_9_2);
             stackIn_11_0 = param4;
             stackIn_11_1 = -113;
             if (!param0) {
@@ -95,7 +95,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_12_2 = fv.field_b;
             }
-            var9_ref_ut = nm.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
+            var9_ref_ut = AnimationClip.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
             var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
             PacketBuffer.a(-116, var15);
@@ -106,7 +106,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var6 = 1;
             var14.d(0, 0);
           } else {
-            var13 = nm.a(param4, -85, TextHotspotWidget.field_L);
+            var13 = AnimationClip.a(param4, -85, TextHotspotWidget.field_L);
             var5 = var13;
             PacketBuffer.a(98, var13);
           }
@@ -154,7 +154,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           nh.a(4, 6, SoftwareRasterizer.field_g, 6, 8, -40 + var23.length, var23);
         } else {
           if (3 == param2) {
-            nh.a(var5, 0.0, 0.0, 0.7);
+            nh.adjustSpriteHsv(var5, 0.0, 0.0, 0.7);
           }
         }
         TeamManagementScreen.e(117);
@@ -176,7 +176,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           kh.field_r.drawAdditive(0, 0, 16);
         }
         if (param1 != -52) {
-          field_D = (tv) null;
+          field_D = (ChatMessage) null;
         }
         TeamManagementScreen.e(117);
         return var5;
@@ -216,7 +216,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -232,9 +232,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_O = new Checkbox("", (UiListener) null, var1 != 0);
         this.field_Q = new TextButton(ph.field_c, (UiListener) null);
         this.field_F = new TextButton(vb.field_e, (UiListener) null);
-        this.field_E.field_u = sr.field_b;
+        this.field_E.field_u = SortCriterion.field_b;
         this.field_S.field_u = ColourSwatchTile.field_Bb;
-        this.field_K.field_u = aw.field_G;
+        this.field_K.field_u = TutorialChoiceDialog.field_G;
         this.field_T.field_u = od.field_o;
         this.field_N.field_u = UiLayoutNode.field_Z;
         this.field_J.field_u = SpriteState.field_r;
@@ -257,15 +257,15 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         rp dupTemp$1 = new rp(10000536);
         this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_T.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.b(true), this.l(6)});
+        String var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.openLinkMarkup(true), this.closeLinkMarkup(6)});
         int var3 = 20;
         var3 = var3 + this.a(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
         var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
-        var3 = var3 + this.a(170, at.field_Ib, 21621, var3, this.field_T);
+        var3 = var3 + this.a(170, TrinketTile.field_Ib, 21621, var3, this.field_T);
         var3 = var3 + (this.a(this.field_N, fa.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
         var3 = var3 + (this.a(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
         var3 = var3 + this.a(var3, pl.field_a, 170, this.field_J, (byte) 117);
-        cg var4 = new cg(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, pn.field_v);
+        cg var4 = new cg(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, StrongCacheEntry.field_v);
         this.a(-35, var4);
         var3 = var3 + var4.field_i;
         TextWidgetPainter var5 = new TextWidgetPainter(gf.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, gf.field_a.field_G, -1, 2147483647, true);
@@ -293,7 +293,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
 
     private final int a(int param0, boolean param1, String param2, UiWidget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        ju var9 = null;
+        ValidationHelpWidget var9 = null;
         cg var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -312,7 +312,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             return stackIn_2_0;
           }
           this.a(-84, var10);
-          var9 = new ju(((ValidationProvider) ((Object) param3)).a((byte) -128), param5, 126, var10.field_i + param6, 50 + param4, param0);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -128), param5, 126, var10.field_i + param6, 50 + param4, param0);
           var9.field_k = (UiListener) (this);
           this.a(-42, var9);
           stackIn_4_0 = var10.field_i + var9.field_i;
@@ -339,7 +339,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -363,16 +363,16 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (param2 != 0) {
             if (1 != param2) {
               if (2 == param2) {
-                rb.a((byte) -51, "conduct.ws");
+                TextPromptDialog.a((byte) -51, "conduct.ws");
               }
             } else {
-              rb.a((byte) -51, "privacy.ws");
+              TextPromptDialog.a((byte) -51, "privacy.ws");
             }
           } else {
-            rb.a((byte) -51, "terms.ws");
+            TextPromptDialog.a((byte) -51, "terms.ws");
           }
           if (param3 < 7) {
-            discarded$1 = this.k(-42);
+            discarded$1 = this.allFieldsValid(-42);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -385,7 +385,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -399,13 +399,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int var1 = 0 / ((param0 + 32) / 50);
     }
 
-    private final boolean k(int param0) {
-        if (this.a((ValidationProvider) (this.field_E), 120) &&
-          this.a((ValidationProvider) (this.field_S), 120) &&
-          this.a((ValidationProvider) (this.field_K), 120) &&
-          this.a((ValidationProvider) (this.field_T), 120) &&
-          this.a((ValidationProvider) (this.field_N), 120) &&
-          this.a((ValidationProvider) (this.field_J), 120)) {
+    private final boolean allFieldsValid(int param0) {
+        if (this.isFieldValid((ValidationProvider) (this.field_E), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_S), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_K), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_T), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_N), 120) &&
+          this.isFieldValid((ValidationProvider) (this.field_J), 120)) {
           if (param0 >= -108) {
             AccountRegistrationPanel.a((byte) 127);
           }
@@ -428,7 +428,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           }
         }
         if (param0 != -19417) {
-          field_I = (vl) null;
+          field_I = (LoginMethod) null;
         }
         if (!(ns.field_a <= 0)) {
           pa.b((byte) 82);
@@ -441,13 +441,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final boolean h(byte param0) {
+    private final boolean submitRegistration(byte param0) {
         int discarded$0 = 0;
         if (param0 >= -82) {
           String var4 = (String) null;
           discarded$0 = this.a(-122, true, (String) null, (UiWidget) null, 3, (String) null, -84);
         }
-        if (!this.k(-112)) {
+        if (!this.allFieldsValid(-112)) {
           return false;
         }
         int var2 = -1;
@@ -497,7 +497,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -514,7 +514,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           }
           if (this.field_F != param1) {
             if (param1 == this.field_Q) {
-              discarded$1 = this.h((byte) -104);
+              discarded$1 = this.submitRegistration((byte) -104);
             }
           } else {
             MusicPatch.a((byte) -125);
@@ -530,18 +530,18 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final String l(int param0) {
+    private final String closeLinkMarkup(int param0) {
         if (param0 != 6) {
           this.field_J = (ValidatedTextWidget) null;
         }
         return "</col></u>";
     }
 
-    private final String b(boolean param0) {
+    private final String openLinkMarkup(boolean param0) {
         if (!param0) {
           field_M = (String) null;
         }
@@ -552,7 +552,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int var6_int = 0;
         RuntimeException var6 = null;
         cg var7 = null;
-        gb var8 = null;
+        ValidationIndicator var8 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -564,7 +564,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var6_int = 94 / ((10 - param4) / 49);
           var7 = new cg(20, param0, param2 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param1);
           this.a(-111, var7);
-          var8 = new gb(((ValidationProvider) ((Object) param3)).a((byte) -117));
+          var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).a((byte) -117));
           this.a(-48, var8);
           var8.a(15, 1, 3 + (var7.field_n + var7.field_t), 15, var7.field_g + (var7.field_i - 15 >> 1));
           stackIn_1_0 = var7.field_i;
@@ -585,7 +585,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -623,11 +623,11 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final boolean a(ValidationProvider param0, int param1) {
+    private final boolean isFieldValid(ValidationProvider param0, int param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -650,7 +650,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (mn.field_c == var4) {
             return false;
           }
-          if (var4 != os.field_l) {
+          if (var4 != Bzip2State.field_l) {
             return true;
           }
           return false;
@@ -664,7 +664,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -697,13 +697,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_P = "<%0> (og)";
         field_M = "This player's stats are maxed out.<br>He no longer earns experience";
-        field_I = new vl("usename");
+        field_I = new LoginMethod("usename");
     }
 }

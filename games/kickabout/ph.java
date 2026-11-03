@@ -21,13 +21,13 @@ final class ph {
         int var1 = IntTripleCommand.h((byte) -118);
         int var2 = EmailSyntaxValidator.e((byte) 18);
         if (param0) {
-          oi.field_g.a(nb.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
-          na.k(0);
+          IntValueNode.field_g.a(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
+          VerticalScrollbar.k(0);
           return;
         }
         field_c = (String) null;
-        oi.field_g.a(nb.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
-        na.k(0);
+        IntValueNode.field_g.a(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
+        VerticalScrollbar.k(0);
     }
 
     final static void a(int param0) {
@@ -61,7 +61,7 @@ final class ph {
         field_a = -35;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = (IndexedSprite[][]) null;
         field_f = null;
         field_b = null;
@@ -70,7 +70,7 @@ final class ph {
           field_d = null;
           return;
         }
-        ph.b(-52);
+        ph.releaseStatics(-52);
         field_d = null;
     }
 

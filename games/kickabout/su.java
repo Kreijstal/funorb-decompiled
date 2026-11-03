@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class su {
-    static jb field_c;
+    static PopupDialog field_c;
     static Sprite field_a;
-    static gu field_b;
+    static ContextMenu field_b;
 
     final static kw a(int param0, String param1) {
         RuntimeException var2 = null;
@@ -15,7 +15,7 @@ final class su {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -3505) {
-            field_c = (jb) null;
+            field_c = (PopupDialog) null;
           }
           stackIn_3_0 = new kw(param1);
           return stackIn_3_0;
@@ -29,7 +29,7 @@ final class su {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -66,11 +66,11 @@ final class su {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static String a(int param0, long param1) {
+    final static String decodeBase37Name(int param0, long param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -94,7 +94,7 @@ final class su {
           while (param1 != 0L) {
             var7 = param1;
             param1 = param1 / 37L;
-            discarded$0 = var6.append(gu.field_yb[(int)(var7 - param1 * 37L)]);
+            discarded$0 = var6.append(ContextMenu.field_yb[(int)(var7 - param1 * 37L)]);
           }
           return var6.reverse().toString();
         }
@@ -109,7 +109,7 @@ final class su {
         int var6;
         int var7;
         oo.field_e[AuctionsScreen.field_O] = param3;
-        pf.field_d[AuctionsScreen.field_O] = AuctionsScreen.field_O;
+        ByteStorage.field_d[AuctionsScreen.field_O] = AuctionsScreen.field_O;
         bl.field_m[AuctionsScreen.field_O] = param4;
         if (BlackFadeScreen.field_g >= param4) {
           if (er.field_k <= param4) {
@@ -123,10 +123,10 @@ final class su {
               stackIn_45_0 = param5 * 1000 / var6;
             }
             var7 = stackIn_45_0;
-            w.field_a[AuctionsScreen.field_O] = var7;
+            DialogOverlay.field_a[AuctionsScreen.field_O] = var7;
             AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
-            if (vi.field_s > var7) {
-              vi.field_s = var7;
+            if (NanoTickClock.field_s > var7) {
+              NanoTickClock.field_s = var7;
             }
             if (var7 > TournamentLobbyScreen.field_V) {
               TournamentLobbyScreen.field_V = var7;
@@ -134,10 +134,10 @@ final class su {
             if (param1 == -106) {
               return;
             }
-            field_b = (gu) null;
+            field_b = (ContextMenu) null;
             return;
           }
-          vi.field_s = param4;
+          NanoTickClock.field_s = param4;
           AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
           AgeValidator.field_j[AuctionsScreen.field_O] = param0;
           DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
@@ -162,7 +162,7 @@ final class su {
             }
             var7 = stackIn_5_0;
           } else {
-            vi.field_s = param4;
+            NanoTickClock.field_s = param4;
             AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
             AgeValidator.field_j[AuctionsScreen.field_O] = param0;
             DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
@@ -175,10 +175,10 @@ final class su {
             var7 = stackIn_18_0;
           }
         }
-        w.field_a[AuctionsScreen.field_O] = var7;
+        DialogOverlay.field_a[AuctionsScreen.field_O] = var7;
         AuctionsScreen.field_O = AuctionsScreen.field_O + 1;
-        if (vi.field_s > var7) {
-          vi.field_s = var7;
+        if (NanoTickClock.field_s > var7) {
+          NanoTickClock.field_s = var7;
         }
         if (var7 > TournamentLobbyScreen.field_V) {
           TournamentLobbyScreen.field_V = var7;
@@ -186,10 +186,10 @@ final class su {
         if (param1 == -106) {
           return;
         }
-        field_b = (gu) null;
+        field_b = (ContextMenu) null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -223,7 +223,7 @@ final class su {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class su {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param3) {
-            field_c = (jb) null;
+            field_c = (PopupDialog) null;
           }
           var13 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var13.field_R = ih.a(param4, 0, param11);
@@ -259,7 +259,7 @@ final class su {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 

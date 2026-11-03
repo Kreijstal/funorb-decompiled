@@ -44,7 +44,7 @@ final class bo extends UiLayoutNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class bo extends UiLayoutNode {
         }
     }
 
-    final static int a(ec param0, byte param1, ec param2) {
+    final static int a(LoginText param0, byte param1, LoginText param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -90,7 +90,7 @@ final class bo extends UiLayoutNode {
         try {
           var3_int = 52 % ((param1 + 39) / 59);
           var4 = (String) null;
-          stackIn_1_0 = m.a(0, param2, param0, 0, false, (String) null, false);
+          stackIn_1_0 = WhirlpoolHasher.a(0, param2, param0, 0, false, (String) null, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ final class bo extends UiLayoutNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class bo extends UiLayoutNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

@@ -36,8 +36,8 @@ final class PlayerShopScreen extends TeamManagementScreen {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_J.h((byte) -48);
-        sr var6 = this.field_J.field_zb[this.field_J.field_Db];
-        this.field_I.a(new oi(param0 | param3 << 16), 3);
+        SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
+        this.field_I.a(new IntValueNode(param0 | param3 << 16), 3);
         this.rebuildShopRows(true);
         this.field_J.a(var6, 94);
         this.field_J.a(true, var5);
@@ -45,7 +45,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         if (param2 <= 20) {
           this.drawOverlay(false, -54);
         }
-        this.field_T.j((byte) 21).field_Hb = true;
+        this.field_T.getSelectedSlot((byte) 21).field_Hb = true;
         this.refreshSellButton(false);
     }
 
@@ -106,9 +106,9 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_J.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.b(0, param1);
-        this.field_T.a(48);
+        this.field_T.update(48);
         if (this.field_T.field_Fb != -1 &&
-          this.field_T.j((byte) 21).field_Eb.isEmpty(-2)) {
+          this.field_T.getSelectedSlot((byte) 21).field_Eb.isEmpty(-2)) {
           this.field_T.field_Fb = -1;
         }
         if (this.field_T.field_Fb != this.field_N) {
@@ -150,7 +150,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
 
     private final void refreshSellButton(boolean param0) {
         this.field_U.c((byte) -109);
-        SquadSlotWidget var2 = this.field_T.j((byte) 21);
+        SquadSlotWidget var2 = this.field_T.getSelectedSlot((byte) 21);
         if (var2 != null &&
           !var2.field_Gb) {
           this.field_G.addChild((byte) -127, this.field_U);
@@ -188,7 +188,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "qs.I(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "qs.I(" + param0 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         ShopPlayerSlot var4;
         PlayerStats var5;
         int var6;
-        oi var7;
+        IntValueNode var7;
         int var8;
         int var9;
         IntrusiveDeque var10;
@@ -218,17 +218,17 @@ final class PlayerShopScreen extends TeamManagementScreen {
                 break scanLoop1;
               }
               for (var4_int = 0; var4_int < 8; var4_int++) {
-                var5 = ha.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
+                var5 = WelcomeDialog.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
                 stackIn_16_0 = (~BufferedSocket.field_k != ~var3) ? 0 : 1;
                 var6 = stackIn_16_0;
-                var7 = (oi) (this.field_I.g(24009));
+                var7 = (IntValueNode) (this.field_I.g(24009));
                 while (var7 != null) {
                   var8 = var7.field_j;
                   if (~(var8 >> 16) == ~var3 &&
                     (var8 & 65535) == var4_int) {
                     var6 = 1;
                   }
-                  var7 = (oi) (this.field_I.c(33));
+                  var7 = (IntValueNode) (this.field_I.c(33));
                 }
                 var10.a(new ShopPlayerSlot(var5, MusicPatchNode.field_x, var3, var4_int, var6 != 0), 3);
               }
@@ -255,12 +255,12 @@ final class PlayerShopScreen extends TeamManagementScreen {
     }
 
     final void buildWidgets(int param0) {
-        sr[] var3 = new sr[MainMenuScreen.field_D.length];
-        sr[] var4 = var3;
+        SortCriterion[] var3 = new SortCriterion[MainMenuScreen.field_D.length];
+        SortCriterion[] var4 = var3;
         var3[1] = vs.field_k;
         var3[2] = ClientException.field_a;
         var3[0] = GameModesHelpScreen.field_H;
-        var3[4] = sr.field_k;
+        var3[4] = SortCriterion.field_k;
         var3[3] = ri.field_u;
         this.field_J = new ColumnTableWidget(MusicPatchNode.field_x, MainMenuScreen.field_D, var4, 50);
         this.field_J.a(369, (byte) -111, 54, 175);
@@ -286,7 +286,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_T.k((byte) 55);
         SoftwareRasterizer.a(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         un.field_d.a(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
-        RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.j((byte) 21));
+        RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
         this.field_J.a(-120);
         this.field_L.a(75, false);
     }

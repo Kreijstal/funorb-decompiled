@@ -1,0 +1,337 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class SoundCache {
+    private ResourceArchive field_d;
+    private IntrusiveNodeHashTable field_f;
+    static boolean[] field_a;
+    private ResourceArchive field_e;
+    static UiLayoutNode field_b;
+    private IntrusiveNodeHashTable field_c;
+
+    private final PcmSample a(String param0, String param1, byte param2, int[] param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_10_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 > -27) {
+            stackIn_2_0 = (PcmSample) null;
+            return stackIn_2_0;
+          }
+          var5_int = this.field_e.getGroupId(param1, -1);
+          if (var5_int < 0) {
+            return null;
+          }
+          var6 = this.field_e.getFileId((byte) -98, param0, var5_int);
+          if (var6 < 0) {
+            return null;
+          }
+          stackIn_10_0 = this.a(var5_int, param3, var6, (byte) 125);
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("rj.G(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 >= -112) {
+          SoundCache.releaseStatics((byte) -31);
+          field_a = null;
+          field_b = null;
+          return;
+        }
+        field_a = null;
+        field_b = null;
+    }
+
+    private final PcmSample a(int param0, int[] param1, int param2, byte param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        long var6 = 0L;
+        PcmSample var8 = null;
+        SoundEffect var9 = null;
+        int var10 = 0;
+        PcmSample var11 = null;
+        PcmSample stackIn_3_0 = null;
+        Object stackIn_7_0 = null;
+        PcmSample stackIn_15_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        PcmSample var8Lifetime1;
+        try {
+          var5_int = param2 ^ (param0 >>> 12 | param0 << 4 & 65535);
+          var5_int = var5_int | param0 << 16;
+          var6 = (long)var5_int;
+          var8 = (PcmSample) (this.field_c.a(true, var6));
+          if (var8 != null) {
+            stackIn_3_0 = (PcmSample) (var8);
+            return stackIn_3_0;
+          }
+          if (param1 != null &&
+            param1[0] <= 0) {
+            stackIn_7_0 = null;
+            return (PcmSample) (stackIn_7_0);
+          }
+          var10 = 85 / ((72 - param3) / 45);
+          var9 = SoundEffect.a(this.field_e, param0, param2);
+          if (var9 == null) {
+            return null;
+          }
+          var11 = var9.a();
+          var8Lifetime1 = var11;
+          this.field_c.a(var8Lifetime1, -95, var6);
+          if (param1 != null) {
+            param1[0] = param1[0] - var11.field_i.length;
+          }
+          stackIn_15_0 = (PcmSample) (var8Lifetime1);
+          return stackIn_15_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_18_0 = var5;
+          stackIn_18_1 = new StringBuilder().append("rj.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
+        PcmSample stackIn_5_0 = null;
+        Object stackIn_9_0 = null;
+        Object stackIn_18_0 = null;
+        PcmSample stackIn_20_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        long var6 = 0L;
+        PcmSample var8 = null;
+        VorbisSample var9 = null;
+        PcmSample var8Lifetime1;
+        try {
+          var5_int = (65524 & param2 << 4 | param2 >>> 12) ^ param3;
+          var5_int = var5_int | param2 << 16;
+          var6 = (long)var5_int ^ 4294967296L;
+          var8 = (PcmSample) (this.field_c.a(true, var6));
+          if (param1 != 0) {
+            this.field_f = (IntrusiveNodeHashTable) null;
+          }
+          if (var8 != null) {
+            stackIn_5_0 = (PcmSample) (var8);
+            return stackIn_5_0;
+          }
+          if (param0 != null &&
+            param0[0] <= 0) {
+            stackIn_9_0 = null;
+            return (PcmSample) (stackIn_9_0);
+          }
+          var9 = (VorbisSample) (this.field_f.a(true, var6));
+          if (var9 == null) {
+            var9 = VorbisSample.loadNamed(this.field_d, param2, param3);
+            if (var9 == null) {
+              return null;
+            }
+            this.field_f.a(var9, 79, var6);
+          }
+          var8Lifetime1 = var9.decodeToPcm(param0);
+          if (var8Lifetime1 == null) {
+            stackIn_18_0 = null;
+            return (PcmSample) (stackIn_18_0);
+          }
+          var9.c((byte) -109);
+          this.field_c.a(var8Lifetime1, -82, var6);
+          stackIn_20_0 = (PcmSample) (var8Lifetime1);
+          return stackIn_20_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_23_0 = var5;
+          stackIn_23_1 = new StringBuilder().append("rj.F(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final PcmSample a(String param0, boolean param1, String param2) {
+        RuntimeException var4 = null;
+        PcmSample stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param1) {
+            this.field_f = (IntrusiveNodeHashTable) null;
+          }
+          stackIn_3_0 = this.a(param2, param0, (byte) -62, (int[]) null);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("rj.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final static String a(long param0, int param1) {
+        SingleChildContainer.field_y.setTime(new Date(param0));
+        int var3 = SingleChildContainer.field_y.get(7);
+        int var4 = SingleChildContainer.field_y.get(5);
+        int var5 = SingleChildContainer.field_y.get(2);
+        int var6 = SingleChildContainer.field_y.get(1);
+        int var7 = SingleChildContainer.field_y.get(11);
+        int var8 = SingleChildContainer.field_y.get(12);
+        int var9 = SingleChildContainer.field_y.get(13);
+        if (param1 <= -69) {
+          return cu.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        }
+        SoundCache.releaseStatics((byte) -2);
+        return cu.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+    }
+
+    final PcmSample b(int param0, int param1, int[] param2) {
+        RuntimeException var4 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_8_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (1 == this.field_e.getGroupCapacity(123)) {
+            stackIn_3_0 = this.a(0, param2, param1, (byte) 117);
+            return stackIn_3_0;
+          }
+          if (param0 != 10) {
+            this.field_d = (ResourceArchive) null;
+          }
+          if (1 != this.field_e.a(true, param1)) {
+            throw new RuntimeException();
+          }
+          stackIn_8_0 = this.a(param1, param2, 0, (byte) -35);
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_12_0 = var4;
+          stackIn_12_1 = new StringBuilder().append("rj.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    final PcmSample a(int param0, int param1, int[] param2) {
+        RuntimeException var4 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_8_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_d.getGroupCapacity(126) == 1) {
+            stackIn_2_0 = this.a(param2, 0, 0, param0);
+            return stackIn_2_0;
+          }
+          if (this.field_d.a(true, param0) == 1) {
+            stackIn_5_0 = this.a(param2, 0, param0, 0);
+            return stackIn_5_0;
+          }
+          if (param1 == 10) {
+            throw new RuntimeException();
+          }
+          stackIn_8_0 = (PcmSample) null;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_12_0 = var4;
+          stackIn_12_1 = new StringBuilder().append("rj.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    SoundCache(ResourceArchive param0, ResourceArchive param1) {
+        this.field_f = new IntrusiveNodeHashTable(256);
+        this.field_c = new IntrusiveNodeHashTable(256);
+        try {
+          this.field_d = param1;
+          this.field_e = param0;
+        } catch (RuntimeException runtimeException) {
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_a = new boolean[8];
+    }
+}

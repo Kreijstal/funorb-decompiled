@@ -9,7 +9,7 @@ final class mn implements WidgetPainter {
     static ff field_e;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 10 % ((param0 + 5) / 42);
         field_c = null;
         field_d = null;
@@ -53,7 +53,7 @@ final class mn implements WidgetPainter {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 

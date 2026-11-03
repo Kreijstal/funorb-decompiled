@@ -47,7 +47,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
             EmailSyntaxValidator.c((byte) -62);
           }
           if (var3_int != 0) {
-            stackIn_9_0 = he.field_yb;
+            stackIn_9_0 = LobbyPlayerRow.field_yb;
             return stackIn_9_0;
           }
           stackIn_7_0 = PitchOptionTile.field_Bb;
@@ -62,7 +62,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < var2.field_y.length) {
-          var2.field_y[var5] = hf.a(var2.field_y[var5] << 24, 16777215);
+          var2.field_y[var5] = PainterStyle.a(var2.field_y[var5] << 24, 16777215);
           var5++;
         }
         return var2;
@@ -112,7 +112,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.validateText(param1, param0 ^ -30) == PitchOptionTile.field_Bb) {
-            stackIn_2_0 = tk.field_Cb;
+            stackIn_2_0 = ScrollContainer.field_Cb;
             return stackIn_2_0;
           }
           if (param0 != 25) {
@@ -130,7 +130,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -146,20 +146,20 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     final static boolean a(boolean param0, byte param1) {
         try {
           CipherPacketBuffer var2_ref_ml = null;
-          if (wt.field_A == null) {
-            wt.field_A = vl.field_c.a(true, IntTripleCommand.field_E, rl.field_o);
+          if (ArrayWidgetContainer.field_A == null) {
+            ArrayWidgetContainer.field_A = LoginMethod.field_c.a(true, IntTripleCommand.field_E, rl.field_o);
           }
-          if (wt.field_A.field_a == 0) {
+          if (ArrayWidgetContainer.field_A.field_a == 0) {
             return false;
           }
-          long dupTemp$0 = nj.a(-100);
+          long dupTemp$0 = nj.monotonicMillis(-100);
           mp.field_i = dupTemp$0;
-          ci.field_c = dupTemp$0;
-          if (1 != wt.field_A.field_a) {
-            un.field_c = cp.field_h;
+          IterableDualLinkDeque.field_c = dupTemp$0;
+          if (1 != ArrayWidgetContainer.field_A.field_a) {
+            un.field_c = AudioService.field_h;
           } else {
             try {
-              op.field_y = new BufferedSocket((java.net.Socket) (wt.field_A.field_b), vl.field_c);
+              op.field_y = new BufferedSocket((java.net.Socket) (ArrayWidgetContainer.field_A.field_b), LoginMethod.field_c);
               or.field_d.field_n = 0;
               var2_ref_ml = un.field_e;
               un.field_c = sd.field_d;
@@ -170,10 +170,10 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               ImageProducerRasterBuffer.a(AuctionItem.field_g, il.field_g, or.field_d, -3210, s.field_E);
               c.a(-1, false);
             } catch (IOException iOException) {
-              un.field_c = cp.field_h;
+              un.field_c = AudioService.field_h;
             }
           }
-          wt.field_A = null;
+          ArrayWidgetContainer.field_A = null;
           int var2 = -53 / ((-57 - param1) / 43);
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {

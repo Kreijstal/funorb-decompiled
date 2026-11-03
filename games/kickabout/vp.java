@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vp implements hc {
+final class vp implements OverlayLayer {
     private int field_i;
     static String field_d;
     static ResourceArchive field_j;
@@ -27,11 +27,11 @@ final class vp implements hc {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        nm var6 = null;
-        nm var7 = null;
+        AnimationClip var6 = null;
+        AnimationClip var7 = null;
         int var8 = 0;
         int var11 = 0;
-        dd var12 = null;
+        AnimationPlayer var12 = null;
         int var4Lifetime1;
         int var8Lifetime1;
         var11 = Kickabout.field_G;
@@ -41,37 +41,37 @@ final class vp implements hc {
           }
           hq.field_a = false;
           FormationAgent.field_l = param1;
-          var12 = new dd();
+          var12 = new AnimationPlayer();
           Runtime.getRuntime().freeMemory();
           if (FormationAgent.field_l != 0 &&
             FormationAgent.field_l != 1) {
-            vf.field_K = new byte[5][][][];
+            BuyPitchDialog.field_K = new byte[5][][][];
             cb.field_b = new byte[5][][];
             var3 = 5;
             for (var4 = 0; var4 < 5; var4++) {
-              var3 = var3 + pv.field_I[var4][5].field_e.length / 3;
+              var3 = var3 + HelpTipDialog.field_I[var4][5].field_e.length / 3;
             }
             var4Lifetime1 = 0;
             if (param0 != -4121) {
               vp.c(9);
             }
             for (var5 = 0; var5 < 5; var5++) {
-              var6 = pv.field_I[var5][5];
-              var7 = pv.field_I[var5][3];
+              var6 = HelpTipDialog.field_I[var5][5];
+              var7 = HelpTipDialog.field_I[var5][3];
               var12.a(var7, (byte) -107);
               cb.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
                 kh.a(var5, var12, var8 << 8, false, 2150);
-                cb.field_b[var5][var8] = MatchingTextValidator.a(16, vf.field_F);
+                cb.field_b[var5][var8] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
               }
               var12.a(var6, (byte) -107);
               var8Lifetime1 = (2 + var6.field_e.length) / 3;
-              vf.field_K[var5] = new byte[var8Lifetime1][8][];
+              BuyPitchDialog.field_K[var5] = new byte[var8Lifetime1][8][];
               for (var9 = 0; var9 < var8Lifetime1; var9++) {
                 var12.a(var9 * 3, -39);
                 for (var10 = 0; var10 < 8; var10++) {
                   kh.a(var5, var12, var10 << 8, false, 2150);
-                  vf.field_K[var5][var9][var10] = MatchingTextValidator.a(16, vf.field_F);
+                  BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
                 }
                 var4Lifetime1++;
                 DelayedServerPacket.a(var3, param0 + 13984, var4Lifetime1);
@@ -81,13 +81,13 @@ final class vp implements hc {
             return;
           }
           hq.field_a = true;
-          vf.field_K = (byte[][][][]) null;
+          BuyPitchDialog.field_K = (byte[][][][]) null;
           cb.field_b = (byte[][][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "vp.A(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "vp.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -109,19 +109,19 @@ final class vp implements hc {
     }
 
     final static int a(int param0, int param1, byte param2) {
-        if (null == td.field_c) {
+        if (null == TrinketCatalog.field_c) {
           return -1;
         }
         if (param1 >= IntDoubleCommand.field_D &&
-          IntDoubleCommand.field_D + td.field_c.field_q > param1 &&
+          IntDoubleCommand.field_D + TrinketCatalog.field_c.field_q > param1 &&
           rp.field_w <= param0 &&
-          param0 < rp.field_w + td.field_c.field_w) {
+          param0 < rp.field_w + TrinketCatalog.field_c.field_w) {
           return 0;
         }
-        if (ha.field_G <= param1 &&
-          ha.field_G + td.field_c.field_q > param1 &&
+        if (WelcomeDialog.field_G <= param1 &&
+          WelcomeDialog.field_G + TrinketCatalog.field_c.field_q > param1 &&
           param0 >= FormationView.field_q &&
-          param0 < td.field_c.field_w + FormationView.field_q) {
+          param0 < TrinketCatalog.field_c.field_w + FormationView.field_q) {
           return 1;
         }
         if (param2 < 0) {
@@ -137,10 +137,10 @@ final class vp implements hc {
     final static void c(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (null != lw.field_e) {
-          var1 = lw.field_e;
+        if (null != ProxyAuthenticationRequiredException.field_e) {
+          var1 = ProxyAuthenticationRequiredException.field_e;
           synchronized (var1) {
-            lw.field_e = null;
+            ProxyAuthenticationRequiredException.field_e = null;
           }
         }
         if (param0 > -103) {
@@ -157,7 +157,7 @@ final class vp implements hc {
           field_a = -18;
         }
         if (this.b(8)) {
-          if (sr.field_l == null) {
+          if (SortCriterion.field_l == null) {
             if (um.field_e != null &&
               um.field_e.field_A && (!um.field_e.isSpectator(param0 ^ 25) ||
               um.field_e.b(-21660))) {
@@ -180,7 +180,7 @@ final class vp implements hc {
         if (param0 <= 63) {
           vp.b((byte) 99);
         }
-        stackIn_6_0 = (this.b(8)) && (vg.field_Wb);
+        stackIn_6_0 = (this.b(8)) && (TextFieldNode.field_Wb);
         return stackIn_6_0;
     }
 

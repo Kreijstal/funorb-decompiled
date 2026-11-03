@@ -96,7 +96,7 @@ final class PlatformTaskDispatcher implements Runnable {
           RandomAccessCacheFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          lw var3_ref3 = null;
+          ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -141,7 +141,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_c;
                 switch (var2_int) {
                   case 1:
-                    if (nj.a(-119) < field_w) {
+                    if (nj.monotonicMillis(-119) < field_w) {
                       throw new IOException();
                     }
                     var8.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_g)), var8.field_d);
@@ -161,7 +161,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (nj.a(-68) < field_w) {
+                        if (nj.monotonicMillis(-68) < field_w) {
                           throw new IOException();
                         }
                         var17 = (255 & var8.field_d >> 24) + "." + ((16767672 & var8.field_d) >> 16) + "." + ((65454 & var8.field_d) >> 8) + "." + (var8.field_d & 255);
@@ -258,7 +258,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (field_w > nj.a(-52)) {
+                        if (field_w > nj.monotonicMillis(-52)) {
                           throw new IOException();
                         }
                         var8.field_b = java.net.InetAddress.getByName((String) (var8.field_g)).getAddress();
@@ -283,7 +283,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_b = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (field_w > nj.a(43)) {
+                    if (field_w > nj.monotonicMillis(43)) {
                       throw new IOException();
                     }
                     var8.field_b = new DataInputStream(((java.net.URL) (var8.field_g)).openStream());
@@ -296,15 +296,15 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_b = var9;
                     break;
                   case 22:
-                    if (field_w > nj.a(35)) {
+                    if (field_w > nj.monotonicMillis(35)) {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (lw) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.field_b = ql.a((String) (var8.field_g), var8.field_d, -13067).a(1);
-                    } catch (lw decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (lw) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.field_b = var3_ref3.getMessage();
                       throw var3_ref3;
                     }

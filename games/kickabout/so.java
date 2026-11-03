@@ -21,7 +21,7 @@ final class so {
               return;
             }
             if (!param3) {
-              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+              ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
               ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             }
@@ -35,7 +35,7 @@ final class so {
             ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             return;
           }
-          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         } else {
           so.a(44, true, true, false);
           if (!param1) {
@@ -43,7 +43,7 @@ final class so {
           }
           if (2 == param0) {
             if (!param3) {
-              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+              ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
               ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             }
@@ -55,7 +55,7 @@ final class so {
         if (param3) {
           ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
         } else {
-          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         }
     }
 
@@ -71,15 +71,15 @@ final class so {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.d(-38) &&
+          if (param0.ensureIndex(-38) &&
             param0.a(false, "commonui")) {
-            if (!param2.d(-57)) {
+            if (!param2.ensureIndex(-57)) {
               return false;
             }
             if (!param2.a(false, "commonui")) {
               return false;
             }
-            if (param3.d(-124) &&
+            if (param3.ensureIndex(-124) &&
               param3.a(false, "button.gif")) {
               if (!param1) {
                 var5 = (ResourceArchive) null;
@@ -112,11 +112,11 @@ final class so {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -113) {
           field_a = null;
           field_c = null;

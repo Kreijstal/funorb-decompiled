@@ -35,7 +35,7 @@ final class ConsoleExpression extends IntrusiveNode {
           }
           stackIn_2_0.directionY = stackIn_3_1;
           param3.directionX = 0;
-          param3.field_z = -hf.findClosestOutfielder(param0, param1, 27);
+          param3.field_z = -PainterStyle.findClosestOutfielder(param0, param1, 27);
           var7 = param1.field_P[param0][-param3.field_z];
           var5 = var7.positionY;
           var6 = var7.positionX;
@@ -46,7 +46,7 @@ final class ConsoleExpression extends IntrusiveNode {
             var5 = 44040192;
             var6 = 29360128;
           }
-          param3.field_h = uv.a(true, var5 - param3.positionY, var6 - param3.positionX);
+          param3.field_h = PlayerContextMenu.a(true, var5 - param3.positionY, var6 - param3.positionX);
           param3.setAction((byte) -31, 2);
           param3.actionTime = param3.actionTime + 25;
           if (15 <= param3.field_o) {
@@ -70,7 +70,7 @@ final class ConsoleExpression extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ConsoleExpression extends IntrusiveNode {
         var6 = Kickabout.field_G;
         try {
           try {
-            if (this.field_k == vu.field_Ab) {
+            if (this.field_k == ContextMenuItem.field_Ab) {
               stackIn_5_0 = this.field_j;
               stackIn_6_1 = !(param0);
               var7 = new ConsoleValue[((IntrusiveDeque) (Object) stackIn_5_0).a(stackIn_6_1)];
@@ -129,7 +129,7 @@ final class ConsoleExpression extends IntrusiveNode {
               stackIn_10_0 = PasswordValidator.a(var8, false, param1, this.field_h);
               return stackIn_10_0;
             }
-            if (this.field_k == pv.field_H) {
+            if (this.field_k == HelpTipDialog.field_H) {
               var3_int = Character.toLowerCase(this.field_h.charAt(this.field_h.length() - 1));
               if (var3_int == 102) {
                 stackIn_15_0 = new ConsoleValue(Float.valueOf(this.field_h).floatValue());
@@ -162,7 +162,7 @@ final class ConsoleExpression extends IntrusiveNode {
               stackIn_36_0 = new ConsoleValue(var9.charAt(0));
               return stackIn_36_0;
             }
-            if (rb.field_Mb == this.field_k) {
+            if (TextPromptDialog.field_Mb == this.field_k) {
               stackIn_40_0 = new ConsoleValue(this.field_h.substring(1, -1 + this.field_h.length()));
               return stackIn_40_0;
             }
@@ -182,7 +182,7 @@ final class ConsoleExpression extends IntrusiveNode {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
@@ -191,10 +191,10 @@ final class ConsoleExpression extends IntrusiveNode {
     }
 
     public final String toString() {
-        if (vu.field_Ab == this.field_k) {
+        if (ContextMenuItem.field_Ab == this.field_k) {
           return "Method{" + this.field_h + "}";
         }
-        if (pv.field_H == this.field_k) {
+        if (HelpTipDialog.field_H == this.field_k) {
           return "Number{" + this.field_h + "}";
         }
         if (GameModesHelpScreen.field_N == this.field_k) {
@@ -203,7 +203,7 @@ final class ConsoleExpression extends IntrusiveNode {
         if (this.field_k == v.field_d) {
           return "Char{" + this.field_h + "}";
         }
-        if (this.field_k == rb.field_Mb) {
+        if (this.field_k == TextPromptDialog.field_Mb) {
           return "String{" + this.field_h + "}";
         }
         if (ReflectionCheck.field_g == this.field_k) {
@@ -224,7 +224,7 @@ final class ConsoleExpression extends IntrusiveNode {
           this.field_f = param1;
           this.field_h = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -35,7 +35,7 @@ final class gw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "gw.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "gw.B(" + param0 + ')');
         }
     }
 
@@ -61,8 +61,8 @@ final class gw {
               gw.c(-32);
             }
             var4 = new byte[var3_int];
-            param2.field_n = param2.field_n + os.field_I.a(param2.field_n, var4, var3_int, param2.field_f, 0, false);
-            var5 = hf.a((byte) -121, var3_int, 0, var4);
+            param2.field_n = param2.field_n + Bzip2State.field_I.a(param2.field_n, var4, var3_int, param2.field_f, 0, false);
+            var5 = PainterStyle.a((byte) -121, var3_int, 0, var4);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -81,11 +81,11 @@ final class gw {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         int var1 = -113 / ((-15 - param0) / 44);
         field_f = null;
@@ -97,10 +97,10 @@ final class gw {
     final static void c(int param0) {
         if (param0 != 0) {
           gw.b(-31);
-          np.field_Jb.a(new no(), 3);
+          ScrollPane.field_Jb.a(new LeagueWinnerDialog(), 3);
           return;
         }
-        np.field_Jb.a(new no(), 3);
+        ScrollPane.field_Jb.a(new LeagueWinnerDialog(), 3);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {
@@ -127,14 +127,14 @@ final class gw {
             var8 = param5[1].field_o;
             param5[0].d(param2, param0, param4);
             param5[2].d(-var7 + param2 + param3, param0, param4);
-            SoftwareRasterizer.saveClip(vi.field_q);
+            SoftwareRasterizer.saveClip(NanoTickClock.field_q);
             SoftwareRasterizer.intersectClip(param2 + var6_int, param0, param2 - (-param3 + var7), param5[1].field_v + param0);
             var9 = param2 + var6_int;
             var10 = param3 + (param2 - var7);
             for (param2 = var9; var10 > param2; param2 = param2 + var8) {
               param5[1].d(param2, param0, param4);
             }
-            SoftwareRasterizer.restoreClip(vi.field_q);
+            SoftwareRasterizer.restoreClip(NanoTickClock.field_q);
             return;
           }
           return;
@@ -148,12 +148,12 @@ final class gw {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        NumericDateInputWidget.field_J = new bo(tv.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c);
+        NumericDateInputWidget.field_J = new bo(ChatMessage.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c);
         if (param0 != 8) {
           field_a = (UiLayoutNode) null;
         }

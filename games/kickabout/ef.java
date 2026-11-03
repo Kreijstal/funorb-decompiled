@@ -7,9 +7,9 @@ final class ef extends DualLinkNode {
     static String field_n;
     private byte[][] field_r;
     static String field_s;
-    db[] field_q;
+    AnimationFrame[] field_q;
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 35 % ((-83 - param0) / 36);
         field_p = null;
         field_s = null;
@@ -54,7 +54,7 @@ final class ef extends DualLinkNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -87,16 +87,16 @@ final class ef extends DualLinkNode {
           return true;
         }
         if (null == this.field_r) {
-          if (!gd.field_c.b((byte) 20, this.field_o)) {
+          if (!ListingRowCache.field_c.b((byte) 20, this.field_o)) {
             return false;
           }
-          var21 = gd.field_c.c(this.field_o, 4);
+          var21 = ListingRowCache.field_c.c(this.field_o, 4);
           var17 = var21;
           var14 = var17;
           var2_ref_int__ = var14;
           this.field_r = new byte[var21.length][];
           for (var3_int = 0; var21.length > var3_int; var3_int++) {
-            this.field_r[var3_int] = gd.field_c.b(this.field_o, -32669, var21[var3_int]);
+            this.field_r[var3_int] = ListingRowCache.field_c.b(this.field_o, -32669, var21[var3_int]);
           }
         }
         var2 = 1;
@@ -115,9 +115,9 @@ final class ef extends DualLinkNode {
         }
         var5 = 57 % ((param0 - 36) / 42);
         var3 = new IntrusiveDeque();
-        var4 = gd.field_c.a(true, this.field_o);
-        this.field_q = new db[var4];
-        var29 = gd.field_c.c(this.field_o, 4);
+        var4 = ListingRowCache.field_c.a(true, this.field_o);
+        this.field_q = new AnimationFrame[var4];
+        var29 = ListingRowCache.field_c.c(this.field_o, 4);
         for (var7 = 0; var29.length > var7; var7++) {
           var30 = this.field_r[var7];
           var9 = new PacketBuffer(var30);
@@ -138,7 +138,7 @@ final class ef extends DualLinkNode {
             var11 = var15;
             var3.a(var15, 3);
           }
-          this.field_q[var29[var7]] = new db(var30, (AnimationSkeleton) (var11));
+          this.field_q[var29[var7]] = new AnimationFrame(var30, (AnimationSkeleton) (var11));
         }
         this.field_r = (byte[][]) null;
         return true;

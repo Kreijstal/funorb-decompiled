@@ -27,14 +27,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           return;
         }
         if (ih.field_c != gk.field_g) {
-          nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+          AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
         } else {
           if (hh.field_f != RankingsScreen.field_C) {
-            nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+            AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
           } else {
-            stackIn_9_0 = (vi.field_n) ? 0 : 1;
+            stackIn_9_0 = (NanoTickClock.field_n) ? 0 : 1;
             if (stackIn_9_0 == (TeamSelectionView.field_j ? 1 : 0)) {
-              nm.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+              AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
             }
           }
         }
@@ -47,7 +47,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         }
         gg.h((byte) -125);
         System.gc();
-        dd.a((byte) 98);
+        AnimationPlayer.a((byte) 98);
         DelayedServerPacket.a(-1, false, -2);
     }
 
@@ -81,7 +81,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -284,7 +284,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         return stackIn_148_0;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = null;
         field_B = null;
         if (param0 != 14513) {
@@ -309,21 +309,21 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           if (ee.field_b > 0) {
             SpriteState.a(param7, param6, -2, param9, param4);
           }
-          if (td.field_b &&
-            uv.field_i.field_gc >= uv.field_i.field_bc) {
-            mc.field_d.field_lb = false;
-            LineupView.field_u.field_zb.field_E = no.field_I;
+          if (TrinketCatalog.field_b &&
+            PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+            TickClock.field_d.field_lb = false;
+            LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
             hl.a(true, LineupView.field_u.field_Ab);
           } else {
             LineupView.field_u.field_zb.field_E = null;
-            mc.field_d.field_lb = true;
+            TickClock.field_d.field_lb = true;
             SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
           }
         } else {
           if (ea.field_a != SoftwareRasterizer.field_g) {
             if (ea.field_f.field_e == SoftwareRasterizer.field_f &&
               ea.field_f.field_a == SoftwareRasterizer.field_g) {
-              if (null == uv.field_i) {
+              if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
@@ -343,17 +343,17 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (ee.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
-                  if (td.field_b &&
-                    uv.field_i.field_gc >= uv.field_i.field_bc) {
-                    mc.field_d.field_lb = false;
-                    LineupView.field_u.field_zb.field_E = no.field_I;
+                  if (TrinketCatalog.field_b &&
+                    PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+                    TickClock.field_d.field_lb = false;
+                    LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
-                    mc.field_d.field_lb = true;
+                    TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
-                  w.a(param2, param0, param6, param8, param5, param3, param1);
+                  DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
@@ -377,14 +377,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
-              if (td.field_b &&
-                uv.field_i.field_gc >= uv.field_i.field_bc) {
-                mc.field_d.field_lb = false;
-                LineupView.field_u.field_zb.field_E = no.field_I;
+              if (TrinketCatalog.field_b &&
+                PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+                TickClock.field_d.field_lb = false;
+                LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
-                mc.field_d.field_lb = true;
+                TickClock.field_d.field_lb = true;
                 SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             } else {
@@ -401,14 +401,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
-              if (td.field_b &&
-                uv.field_i.field_gc >= uv.field_i.field_bc) {
-                mc.field_d.field_lb = false;
-                LineupView.field_u.field_zb.field_E = no.field_I;
+              if (TrinketCatalog.field_b &&
+                PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+                TickClock.field_d.field_lb = false;
+                LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
-                mc.field_d.field_lb = true;
+                TickClock.field_d.field_lb = true;
                 SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             }
@@ -416,7 +416,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (SoftwareRasterizer.field_f != BufferedSocket.field_s &&
               ea.field_f.field_e == SoftwareRasterizer.field_f &&
               ea.field_f.field_a == SoftwareRasterizer.field_g) {
-              if (null == uv.field_i) {
+              if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
@@ -436,17 +436,17 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (ee.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
-                  if (td.field_b &&
-                    uv.field_i.field_gc >= uv.field_i.field_bc) {
-                    mc.field_d.field_lb = false;
-                    LineupView.field_u.field_zb.field_E = no.field_I;
+                  if (TrinketCatalog.field_b &&
+                    PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+                    TickClock.field_d.field_lb = false;
+                    LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
-                    mc.field_d.field_lb = true;
+                    TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
-                  w.a(param2, param0, param6, param8, param5, param3, param1);
+                  DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
@@ -470,14 +470,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
-              if (td.field_b &&
-                uv.field_i.field_gc >= uv.field_i.field_bc) {
-                mc.field_d.field_lb = false;
-                LineupView.field_u.field_zb.field_E = no.field_I;
+              if (TrinketCatalog.field_b &&
+                PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+                TickClock.field_d.field_lb = false;
+                LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                 hl.a(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
-                mc.field_d.field_lb = true;
+                TickClock.field_d.field_lb = true;
                 SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
               }
             } else {
@@ -493,32 +493,32 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 if (ee.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
-                if (td.field_b &&
-                  uv.field_i.field_gc >= uv.field_i.field_bc) {
-                  mc.field_d.field_lb = false;
-                  LineupView.field_u.field_zb.field_E = no.field_I;
+                if (TrinketCatalog.field_b &&
+                  PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+                  TickClock.field_d.field_lb = false;
+                  LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                   hl.a(true, LineupView.field_u.field_Ab);
                 } else {
                   LineupView.field_u.field_zb.field_E = null;
-                  mc.field_d.field_lb = true;
+                  TickClock.field_d.field_lb = true;
                   SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 }
               } else {
                 if (ee.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
-                if (!td.field_b) {
+                if (!TrinketCatalog.field_b) {
                   LineupView.field_u.field_zb.field_E = null;
-                  mc.field_d.field_lb = true;
+                  TickClock.field_d.field_lb = true;
                   SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 } else {
-                  if (uv.field_i.field_gc >= uv.field_i.field_bc) {
-                    mc.field_d.field_lb = false;
-                    LineupView.field_u.field_zb.field_E = no.field_I;
+                  if (PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
+                    TickClock.field_d.field_lb = false;
+                    LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
                     hl.a(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
-                    mc.field_d.field_lb = true;
+                    TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
                 }
@@ -526,7 +526,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             }
           }
         }
-        w.a(param2, param0, param6, param8, param5, param3, param1);
+        DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
         SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
         GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
     }
@@ -550,26 +550,26 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           return false;
         }
         if (NumericDateInputWidget.field_J == null) {
-          if (!vg.field_Wb) {
+          if (!TextFieldNode.field_Wb) {
             if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (9 == cc.field_e) {
+            if (9 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e == 10) {
+            if (FixedQuaternion.field_e == 10) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (11 == cc.field_e) {
+            if (11 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e != 80) {
+            if (FixedQuaternion.field_e != 80) {
               return false;
             }
             if (!ph.a(true)) {
               return false;
             }
-            vg.field_Wb = true;
+            TextFieldNode.field_Wb = true;
             return true;
           }
           if (!ph.a(true)) {
@@ -577,36 +577,36 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
           stackIn_44_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_44_0;
-          if (80 == cc.field_e ||
-            84 == cc.field_e) {
-            vg.field_Wb = false;
+          if (80 == FixedQuaternion.field_e ||
+            84 == FixedQuaternion.field_e) {
+            TextFieldNode.field_Wb = false;
             var4 = 1;
           }
         } else {
-          if (cc.field_e == 13) {
+          if (FixedQuaternion.field_e == 13) {
             NumericDateInputWidget.field_J = null;
             return true;
           }
-          if (!vg.field_Wb) {
+          if (!TextFieldNode.field_Wb) {
             if (DebugConsole.field_s) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (9 == cc.field_e) {
+            if (9 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e == 10) {
+            if (FixedQuaternion.field_e == 10) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (11 == cc.field_e) {
+            if (11 == FixedQuaternion.field_e) {
               return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
-            if (cc.field_e != 80) {
+            if (FixedQuaternion.field_e != 80) {
               return false;
             }
             if (!ph.a(true)) {
               return false;
             }
-            vg.field_Wb = true;
+            TextFieldNode.field_Wb = true;
             return true;
           }
           if (!ph.a(true)) {
@@ -614,20 +614,20 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
           stackIn_11_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_11_0;
-          if (80 == cc.field_e) {
-            vg.field_Wb = false;
+          if (80 == FixedQuaternion.field_e) {
+            TextFieldNode.field_Wb = false;
             var4 = 1;
           } else {
-            if (84 == cc.field_e) {
-              vg.field_Wb = false;
+            if (84 == FixedQuaternion.field_e) {
+              TextFieldNode.field_Wb = false;
               var4 = 1;
             }
           }
         }
-        if (13 == cc.field_e) {
-          td.a(89);
+        if (13 == FixedQuaternion.field_e) {
+          TrinketCatalog.a(89);
           var4 = 1;
-          vg.field_Wb = false;
+          TextFieldNode.field_Wb = false;
         }
         return var4 != 0;
     }

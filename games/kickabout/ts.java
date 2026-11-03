@@ -8,7 +8,7 @@ final class ts {
     static char[] field_c;
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int var4 = lw.field_b[param0];
+        int var4 = ProxyAuthenticationRequiredException.field_b[param0];
         if (param3 != 448) {
           field_b = (String) null;
         }
@@ -43,8 +43,8 @@ final class ts {
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < 900; var6++) {
               var7 = param0 + (2048 * var5 + var6);
-              var8 = 54 * we.a(var7, false) >> 16;
-              var9 = ei.a(var7, (byte) -23) * -54 >> 16;
+              var8 = 54 * we.cosine(var7, false) >> 16;
+              var9 = ei.sine(var7, (byte) -23) * -54 >> 16;
               SoftwareRasterizer.b(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
             }
           }
@@ -52,11 +52,11 @@ final class ts {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ts.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ts.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -93 % ((param0 - 75) / 35);
         field_c = null;
         field_a = null;
@@ -88,14 +88,14 @@ final class ts {
             if (var5 < 0) {
               var4 = var4 + AccountMessagePanel.field_H;
             } else {
-              var6 = ec.a(true, j.field_a[var3_int], -23044);
+              var6 = LoginText.a(true, j.field_a[var3_int], -23044);
               var4 = var4 + of.field_a;
               var7 = -(var6 >> 1) + RasterStateSnapshot.field_k;
-              if (ec.a(-vg.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (vg.field_zb << 1), (IsSixCommand.field_H << 1) + tk.field_zb)) {
+              if (LoginText.rectangleContains(-TextFieldNode.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (TextFieldNode.field_zb << 1), (IsSixCommand.field_H << 1) + ScrollContainer.field_zb)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (tk.field_zb + (IsSixCommand.field_H << 1) + of.field_a);
+              var4 = var4 + (ScrollContainer.field_zb + (IsSixCommand.field_H << 1) + of.field_a);
             }
             var3_int++;
           }
@@ -104,7 +104,7 @@ final class ts {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ts.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "ts.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

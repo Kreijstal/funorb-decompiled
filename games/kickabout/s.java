@@ -58,7 +58,7 @@ final class s extends TextButton {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class s extends TextButton {
         field_F = null;
     }
 
-    final static ec j(int param0) {
+    final static LoginText j(int param0) {
         String var1 = null;
         if (param0 >= 33) {
           var1 = BigCommand.g(-26370);
@@ -81,9 +81,9 @@ final class s extends TextButton {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new ec(BigCommand.g(-26370), gu.b(-20010));
+          return new LoginText(BigCommand.g(-26370), ContextMenu.b(-20010));
         }
-        return (ec) null;
+        return (LoginText) null;
     }
 
     final static int a(int param0, int param1, byte[] param2, int param3) {
@@ -117,7 +117,7 @@ final class s extends TextButton {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class s extends TextButton {
         if (param0 != -1) {
           return;
         }
-        np.field_Jb.a(new ek(param3, param1, param2), 3);
+        ScrollPane.field_Jb.a(new TrinketShopDialog(param3, param1, param2), 3);
     }
 
     private s() throws Throwable {

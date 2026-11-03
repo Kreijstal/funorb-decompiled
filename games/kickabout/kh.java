@@ -31,7 +31,7 @@ final class kh {
           if (this.field_e > IntrusiveDequeCursor.field_d) {
             return false;
           }
-          if (0 < eq.field_d) {
+          if (0 < WeightedLruCache.field_d) {
             return true;
           }
           return false;
@@ -39,7 +39,7 @@ final class kh {
         if (this.field_e > IntrusiveDequeCursor.field_d) {
           return false;
         }
-        if (0 < eq.field_d) {
+        if (0 < WeightedLruCache.field_d) {
           return true;
         }
         return false;
@@ -75,12 +75,12 @@ final class kh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, dd param1, int param2, boolean param3, int param4) {
-        dd stackIn_2_0;
+    final static void a(int param0, AnimationPlayer param1, int param2, boolean param3, int param4) {
+        AnimationPlayer stackIn_2_0;
         ModelMesh stackIn_2_1;
         boolean stackIn_2_2;
         boolean stackIn_2_3;
@@ -93,13 +93,13 @@ final class kh {
         int var6 = 0;
         ModelMesh var7 = null;
         try {
-          stackIn_2_0 = (dd) (param1);
+          stackIn_2_0 = (AnimationPlayer) (param1);
           stackIn_2_1 = WriteIntegersCommand.field_B[param0];
           stackIn_2_2 = param3;
           stackIn_2_3 = true;
           stackIn_3_4 = !(param3);
-          var7 = (ModelMesh) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
-          PacketBuffer.a(102, vf.field_F);
+          var7 = (ModelMesh) (((AnimationPlayer) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
+          PacketBuffer.a(102, BuyPitchDialog.field_F);
           SoftwareRasterizer.b();
           TriangleRasterizer.useRasterClip();
           if (FormationAgent.field_l == 3) {
@@ -137,7 +137,7 @@ final class kh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class kh {
         return var2;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_g = null;
         field_t = null;
@@ -180,7 +180,7 @@ final class kh {
         if (SplashScreen.field_m != null) {
           return;
         }
-        if (eq.field_d <= param0) {
+        if (WeightedLruCache.field_d <= param0) {
           this.field_l = false;
         }
         if (this.field_l) {

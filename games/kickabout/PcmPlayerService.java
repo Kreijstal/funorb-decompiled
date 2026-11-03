@@ -8,7 +8,7 @@ class PcmPlayerService {
     static boolean field_o;
     int[] field_k;
     static int field_i;
-    private static cp field_d;
+    private static AudioService field_d;
     private PcmStream field_c;
     private static int field_h;
     private int field_m;
@@ -144,7 +144,7 @@ class PcmPlayerService {
         if (this.field_c != null) {
           this.field_c.mixInto(param0, 0, param1);
         }
-        this.field_t = nj.a(-96);
+        this.field_t = nj.monotonicMillis(-96);
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -211,7 +211,7 @@ class PcmPlayerService {
               ((PcmPlayerService) ((Object) var4)).openDevice(((PcmPlayerService) ((Object) var4)).field_r);
               if (field_h > 0 &&
                 field_d == null) {
-                field_d = new cp();
+                field_d = new AudioService();
                 field_d.field_f = param0;
                 param0.a(field_h, (byte) 125, (Runnable) ((Object) field_d));
               }
@@ -262,7 +262,7 @@ class PcmPlayerService {
           if (this.field_s) {
             return;
           }
-          var1 = nj.a(-92);
+          var1 = nj.monotonicMillis(-92);
           try {
             if (var1 > this.field_t + 6000L) {
               this.field_t = var1 - 6000L;
@@ -270,7 +270,7 @@ class PcmPlayerService {
             while (var1 > this.field_t + 5000L) {
               this.a(256);
               this.field_t = this.field_t + (long)(256000 / field_i);
-              var1 = nj.a(109);
+              var1 = nj.monotonicMillis(109);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -365,7 +365,7 @@ class PcmPlayerService {
     void writeMixBlock() throws Exception {
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_d = null;
     }
 
@@ -404,7 +404,7 @@ class PcmPlayerService {
     PcmPlayerService() {
         this.field_s = false;
         this.field_j = 32;
-        this.field_t = nj.a(24);
+        this.field_t = nj.monotonicMillis(24);
         this.field_u = 0;
         this.field_f = new PcmStream[8];
         this.field_g = 0L;

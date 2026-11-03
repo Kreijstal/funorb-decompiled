@@ -7,7 +7,7 @@ final class ip {
     static RenderedFootballer[] field_b;
     static UiLayoutNode field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -60) {
           return;
         }
@@ -48,7 +48,7 @@ final class ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "ip.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "ip.A(" + param0 + ')');
         }
     }
 

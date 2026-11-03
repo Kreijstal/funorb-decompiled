@@ -7,7 +7,7 @@ final class aj {
     static int field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -9097) {
           return;
@@ -36,7 +36,7 @@ final class aj {
         }
     }
 
-    final static String a(int param0, String param1, String param2, String param3) {
+    final static String replaceAll(int param0, String param1, String param2, String param3) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         if (param0 == -1) {

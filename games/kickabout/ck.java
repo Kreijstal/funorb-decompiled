@@ -5,7 +5,7 @@ final class ck {
     static UiLayoutNode field_c;
     static String field_e;
     static int field_d;
-    static rb field_b;
+    static TextPromptDialog field_b;
     static int field_a;
     private static String field_z;
 

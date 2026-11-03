@@ -18,7 +18,7 @@ final class nk extends dg {
           if (vb.field_b == LineupAgent.field_n) {
             return false;
           }
-          cc.field_e = bt.field_a[LineupAgent.field_n];
+          FixedQuaternion.field_e = bt.field_a[LineupAgent.field_n];
           il.field_c = PlayerStats.field_a[LineupAgent.field_n];
           LineupAgent.field_n = 127 & 1 + LineupAgent.field_n;
           stackIn_8_0 = true;
@@ -26,18 +26,18 @@ final class nk extends dg {
         return stackIn_8_0;
     }
 
-    final static he a(int param0, long param1) {
+    final static LobbyPlayerRow a(int param0, long param1) {
         if (param0 != 31253) {
-          return (he) null;
+          return (LobbyPlayerRow) null;
         }
-        return (he) (pu.field_Eb.a(param0 - 34864, param1));
+        return (LobbyPlayerRow) (TrinketSlot.field_Eb.a(param0 - 34864, param1));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = Kickabout.field_G;
         int var7Lifetime1;
-        eo.a(mk.field_a, param0, param2, param3, param1, 256, mk.field_a.field_v - param1);
+        eo.drawSpriteClipped(mk.field_a, param0, param2, param3, param1, 256, mk.field_a.field_v - param1);
         int[] var11 = new int[4];
         int[] var10 = var11;
         int[] var9 = var10;
@@ -96,7 +96,7 @@ final class nk extends dg {
           or.field_d.backpatchShortLength(or.field_d.field_n - var1_int, param0 + 118);
           MusicPatchNode.field_h.b(param0 + 23053);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nk.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nk.F(" + param0 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class nk extends dg {
           if (vb.field_b == LineupAgent.field_n) {
             return false;
           }
-          cc.field_e = bt.field_a[LineupAgent.field_n];
+          FixedQuaternion.field_e = bt.field_a[LineupAgent.field_n];
           il.field_c = PlayerStats.field_a[LineupAgent.field_n];
           LineupAgent.field_n = 127 & 1 + LineupAgent.field_n;
           stackIn_8_0 = true;

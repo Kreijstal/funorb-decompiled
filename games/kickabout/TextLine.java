@@ -5,7 +5,7 @@ final class TextLine extends IntrusiveNode {
     static String field_l;
     String text;
     static volatile long field_e;
-    static rc field_g;
+    static GzipDecoder field_g;
     static String field_j;
     static int field_f;
     static String field_m;
@@ -32,7 +32,7 @@ final class TextLine extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = n.a('_', "", (byte) -124, param1);
+          param1 = ArchiveManager.a('_', "", (byte) -124, param1);
           var3 = bo.a(-1, param1);
           var4 = 117 / ((-74 - param0) / 46);
           stackIn_5_0 = (-1 != param2.indexOf(param1)) || (param2.indexOf(var3) != -1);
@@ -53,7 +53,7 @@ final class TextLine extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class TextLine extends IntrusiveNode {
           field_k = null;
           return;
         }
-        field_g = (rc) null;
+        field_g = (GzipDecoder) null;
         field_l = null;
         field_k = null;
     }
@@ -83,7 +83,7 @@ final class TextLine extends IntrusiveNode {
         try {
           this.text = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class TextLine extends IntrusiveNode {
         field_e = 0L;
         field_f = 0;
         field_j = "Buying or selling an account";
-        field_g = new rc();
+        field_g = new GzipDecoder();
         field_k = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_h = -1;
     }

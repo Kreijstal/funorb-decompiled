@@ -12,7 +12,7 @@ final class cr implements WidgetPainter {
     static String field_f;
     static dg field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_g = null;
@@ -21,7 +21,7 @@ final class cr implements WidgetPainter {
           field_f = null;
           return;
         }
-        cr.a(-74);
+        cr.releaseStatics(-74);
         field_f = null;
     }
 
@@ -37,7 +37,7 @@ final class cr implements WidgetPainter {
           this.field_a = param1;
           this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class cr implements WidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 

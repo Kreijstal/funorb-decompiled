@@ -30,7 +30,7 @@ abstract class IndexedSpriteState {
             field_f = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,14 +55,14 @@ abstract class IndexedSpriteState {
           String var3 = (String) null;
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-25, (String) null);
         }
-        if (vl.a(false)) {
+        if (LoginMethod.a(false)) {
           return;
         }
         try {
           wp.field_h = param1;
           AuctionItem.field_e = 1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,14 +80,14 @@ abstract class IndexedSpriteState {
           String var3 = (String) null;
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-25, (String) null);
         }
-        if (vl.a(false)) {
+        if (LoginMethod.a(false)) {
           return;
         }
         try {
           wp.field_h = param1;
           AuctionItem.field_e = 1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 }

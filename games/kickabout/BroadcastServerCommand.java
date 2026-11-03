@@ -56,15 +56,15 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_6_0;
           }
           if (SumIntegersCommand.a((byte) 82, param2)) {
-            stackIn_10_0 = ec.field_g;
+            stackIn_10_0 = LoginText.field_g;
             return stackIn_10_0;
           }
-          if (lf.a(param2, -64)) {
-            stackIn_13_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
+          if (IntKeyLookup.a(param2, -64)) {
+            stackIn_13_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
             return stackIn_13_0;
           }
           if (param1 <= ListingRow.field_d &&
-            eq.field_d <= 0) {
+            WeightedLruCache.field_d <= 0) {
             stackIn_17_0 = DraggableWidget.field_A;
             return stackIn_17_0;
           }
@@ -72,8 +72,8 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_20_0 = DraggableWidget.field_A;
             return stackIn_20_0;
           }
-          if (hi.a(0, param2)) {
-            stackIn_24_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, at.field_Gb, new String[]{param2});
+          if (DiskCacheRequest.a(0, param2)) {
+            stackIn_24_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketTile.field_Gb, new String[]{param2});
             return stackIn_24_0;
           }
           var5 = or.field_d;
@@ -95,11 +95,11 @@ final class BroadcastServerCommand extends ConsoleCommand {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         field_C = null;
         if (param0 != 96) {
@@ -136,7 +136,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

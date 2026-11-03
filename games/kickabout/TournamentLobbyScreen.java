@@ -6,16 +6,16 @@ final class TournamentLobbyScreen extends AppScreen {
     private int[] field_J;
     private boolean field_K;
     private int[] field_H;
-    private kp[] field_S;
+    private LobbyGameRecord[] field_S;
     private int field_h;
     private int[][] field_Y;
     private int field_A;
     private int field_m;
     private int field_q;
     private String field_r;
-    private tv field_g;
+    private ChatMessage field_g;
     private int field_v;
-    private kp[] field_T;
+    private LobbyGameRecord[] field_T;
     private int[][] field_D;
     private MenuSelection field_Z;
     private int[] field_P;
@@ -66,16 +66,16 @@ final class TournamentLobbyScreen extends AppScreen {
         }
     }
 
-    final static vl a(java.applet.Applet param0, int param1) {
+    final static LoginMethod a(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        vl[] var3 = null;
-        vl var5 = null;
+        LoginMethod[] var3 = null;
+        LoginMethod var5 = null;
         int var6 = 0;
-        vl stackIn_5_0 = null;
-        vl stackIn_11_0 = null;
-        vl stackIn_14_0 = null;
+        LoginMethod stackIn_5_0 = null;
+        LoginMethod stackIn_11_0 = null;
+        LoginMethod stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -87,18 +87,18 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           var2 = nj.a(0, "jagex-last-login-method", param0);
           if (var2 == null) {
-            stackIn_5_0 = rd.field_h;
+            stackIn_5_0 = GameModeDefinition.field_h;
             return stackIn_5_0;
           }
           var3 = IsSixCommand.a(true);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5.a(var2, -97)) {
+            if (var5.matchesName(var2, -97)) {
               stackIn_11_0 = var5;
               return stackIn_11_0;
             }
           }
-          stackIn_14_0 = rd.field_h;
+          stackIn_14_0 = GameModeDefinition.field_h;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ final class TournamentLobbyScreen extends AppScreen {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           this.field_R = param0.readUnsignedByte((byte) -112);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -207,9 +207,9 @@ final class TournamentLobbyScreen extends AppScreen {
         var2 += 60;
         AuctionListing.a(var5, -22914, var3, var6, var4);
         SoftwareRasterizer.a(-(-60 + this.field_A >> 1) + 320, 10 + var2, -60 + this.field_A, 30, 8, 65793, 128);
-        un.field_d.d(lw.field_f.toUpperCase(), 320, var2 + 30, 16777215, -1);
+        un.field_d.d(ProxyAuthenticationRequiredException.field_f.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
-        eo.a(250, var2, qe.field_j, this.field_O, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
+        eo.a(250, var2, ArchivePreloader.field_j, this.field_O, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + 32 * this.field_O.length;
         var2 += 20;
         SoftwareRasterizer.a(320 - (this.field_A - 60 >> 1), var2 + 10, -60 + this.field_A, 30, 8, 65793, 128);
@@ -221,7 +221,7 @@ final class TournamentLobbyScreen extends AppScreen {
         SoftwareRasterizer.a(320 - (-60 + this.field_A >> 1), var2 + 10, this.field_A - 60, 30, 8, 65793, 128);
         un.field_d.d(TeamSelectionAgent.field_j.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
-        eo.a(250, var2, sr.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
+        eo.a(250, var2, SortCriterion.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_Y.length * 32;
         var2 += 20;
         TeamManagementScreen.e(117);
@@ -232,7 +232,7 @@ final class TournamentLobbyScreen extends AppScreen {
         }
         if (this.field_h != 0) {
           SoftwareRasterizer.a(this.field_G, this.field_q, 570, 12, 3, this.field_U ? 11184810 : this.field_s, 128);
-          un.field_d.d(gu.field_Ib, this.field_G + 285, 12 + (this.field_q - 1), !this.field_U ? 11184810 : 65793, -1);
+          un.field_d.d(ContextMenu.field_Ib, this.field_G + 285, 12 + (this.field_q - 1), !this.field_U ? 11184810 : 65793, -1);
         }
     }
 
@@ -257,7 +257,7 @@ final class TournamentLobbyScreen extends AppScreen {
         int var11;
         int var12;
         int var13;
-        tv var14;
+        ChatMessage var14;
         int var5_intLifetime1;
         int var5_intLifetime2;
         int var5_intLifetime3;
@@ -286,7 +286,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
         }
         if (0 != this.field_x) {
-          this.field_r = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ks.field_f, new String[]{"<col=FF0000>" + Integer.toString(this.field_x / 50 + 1) + "</col>"});
+          this.field_r = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HuffmanCodec.field_f, new String[]{"<col=FF0000>" + Integer.toString(this.field_x / 50 + 1) + "</col>"});
         }
         if (0 == ph.field_a) {
           this.field_L = 400;
@@ -334,7 +334,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
         }
         if (param1) {
-          this.field_Z.a(-21174, this.tabIndexAt(wt.field_x, 77, us.field_j), this.tabIndexAt(dn.field_yb, 88, kf.field_Eb));
+          this.field_Z.a(-21174, this.tabIndexAt(ArrayWidgetContainer.field_x, 77, us.field_j), this.tabIndexAt(TrinketIcon.field_yb, 88, TabStrip.field_Eb));
           if (this.field_Z.selectedIndex >= 0 &&
             this.field_Z.c(-1)) {
             this.selectStatTab(this.field_X[this.field_Z.selectedIndex].kind, false);
@@ -363,18 +363,18 @@ final class TournamentLobbyScreen extends AppScreen {
             stackIn_66_0 = 0;
           }
           var8 = stackIn_66_0;
-          var9_int = wt.field_x - this.tabCenterX(var5_intLifetime3, 96);
+          var9_int = ArrayWidgetContainer.field_x - this.tabCenterX(var5_intLifetime3, 96);
           this.field_X[var5_intLifetime3].a(var6 != 0, var7_int != 0, var8 != 0, 16, var9_int);
         }
         if (this.field_T == null) {
-          this.field_T = new kp[this.field_S.length];
+          this.field_T = new LobbyGameRecord[this.field_S.length];
         }
         for (var5_intLifetime4 = 0; var5_intLifetime4 < this.field_T.length; var5_intLifetime4++) {
           if (null == this.field_T[var5_intLifetime4]) {
-            this.field_T[var5_intLifetime4] = new kp();
+            this.field_T[var5_intLifetime4] = new LobbyGameRecord();
             this.field_T[var5_intLifetime4].b(false, this.field_S[var5_intLifetime4]);
           }
-          this.field_T[var5_intLifetime4].a(false, this.field_S[var5_intLifetime4]);
+          this.field_T[var5_intLifetime4].copyFrom(false, this.field_S[var5_intLifetime4]);
         }
         if (ph.field_a == 0) {
           if (null != this.field_y &&
@@ -409,7 +409,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
         } else {
           if (ph.field_a == 2) {
-            stackIn_84_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_m) && (570 + this.field_m >= BytePlusOneCommand.field_A) && (n.field_m >= this.field_u) && (12 + this.field_u >= n.field_m);
+            stackIn_84_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_m) && (570 + this.field_m >= BytePlusOneCommand.field_A) && (ArchiveManager.field_m >= this.field_u) && (12 + this.field_u >= ArchiveManager.field_m);
             this.field_i = stackIn_84_1;
             if (this.field_h != ii.field_l) {
               var5_intLifetime5 = this.field_h - ii.field_l >> 3;
@@ -423,7 +423,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 }
               }
             }
-            stackIn_97_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_G) && (570 + this.field_G >= BytePlusOneCommand.field_A) && (n.field_m >= this.field_q) && (this.field_q + 12 >= n.field_m);
+            stackIn_97_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_G) && (570 + this.field_G >= BytePlusOneCommand.field_A) && (ArchiveManager.field_m >= this.field_q) && (this.field_q + 12 >= ArchiveManager.field_m);
             this.field_U = stackIn_97_1;
             if (this.field_i) {
               if (FootballerAgent.field_p == 1) {
@@ -463,7 +463,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 this.field_h = this.field_h + 32;
               }
             }
-            this.field_h = this.field_h - id.field_v * 32;
+            this.field_h = this.field_h - StatefulTextPainter.field_v * 32;
             if (this.field_h > 0) {
               this.field_h = 0;
             }
@@ -518,7 +518,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (ph.field_a == 2) {
           var8 = GameplayHelpScreen.field_G;
           var4 = var8;
-          if (!var8[rb.field_Kb]) {
+          if (!var8[TextPromptDialog.field_Kb]) {
             if (!var8[98]) {
               stackIn_20_0 = (param0 == 98) ? 1 : 0;
             } else {
@@ -611,13 +611,13 @@ final class TournamentLobbyScreen extends AppScreen {
               this.field_X[var3] = new MenuButton(120, 7126504, var5[var3]);
             }
             this.field_Z = new MenuSelection(this.field_X.length);
-            this.field_Z.a(true, this.tabIndexAt(wt.field_x, 98, us.field_j), (byte) -127);
+            this.field_Z.a(true, this.tabIndexAt(ArrayWidgetContainer.field_x, 98, us.field_j), (byte) -127);
           }
           this.readPlayerNames(param0, false);
           this.a(-85, param0);
           this.a(param0, (byte) 116);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -676,10 +676,10 @@ final class TournamentLobbyScreen extends AppScreen {
         try {
           var3_int = param0.readUnsignedByte((byte) -119);
           var4 = 17 % ((50 - param1) / 55);
-          this.field_S = new kp[var3_int];
+          this.field_S = new LobbyGameRecord[var3_int];
           for (var5 = 0; this.field_S.length > var5; var5++) {
-            this.field_S[var5] = new kp();
-            this.field_S[var5].a((byte) -119, param0);
+            this.field_S[var5] = new LobbyGameRecord();
+            this.field_S[var5].readFromPacket((byte) -119, param0);
           }
           this.field_W = param0.readUnsignedByte((byte) -108);
           this.field_v = param0.a((byte) 81);
@@ -791,7 +791,7 @@ final class TournamentLobbyScreen extends AppScreen {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -835,7 +835,7 @@ final class TournamentLobbyScreen extends AppScreen {
         ((CoverageBitmapFont) (Object) stackIn_2_0).d(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
         AuctionListing.a(640, -22914, 0, 88, 60);
         SoftwareRasterizer.a(224, 66, 372, 50, 8, 65793, 196);
-        un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{kp.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
+        un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
         var2 = 46;
         SoftwareRasterizer.a(var2, 66, 175, 50, 8, 65793, 196);
         un.field_d.d(nk.field_g, var2 + 87, 82, 16777215, -1);
@@ -853,7 +853,7 @@ final class TournamentLobbyScreen extends AppScreen {
             var8 = stackIn_11_0;
             if (var8 != 0) {
               var14 = var7;
-              var7 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ig.field_e, new String[]{var14});
+              var7 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ig.field_e, new String[]{var14});
             }
             stackIn_17_0 = (var8 != 0) ? 5592405 : 16777215;
             var9 = stackIn_17_0;
@@ -891,7 +891,7 @@ final class TournamentLobbyScreen extends AppScreen {
             }
           }
         } else {
-          un.field_d.a(vo.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_a, new String[]{"<col=FF0000>" + Integer.toString(1 + this.field_x / 50) + "</col>"}), 224, 90, 372, 320, 16777215, -1, 1, 1, 0);
+          un.field_d.a(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_a, new String[]{"<col=FF0000>" + Integer.toString(1 + this.field_x / 50) + "</col>"}), 224, 90, 372, 320, 16777215, -1, 1, 1, 0);
         }
     }
 
@@ -914,9 +914,9 @@ final class TournamentLobbyScreen extends AppScreen {
         int stackIn_33_1 = 0;
         int stackIn_35_0 = 0;
         int stackIn_36_1 = 0;
-        kp[] stackIn_49_0 = null;
+        LobbyGameRecord[] stackIn_49_0 = null;
         int stackIn_50_1 = 0;
-        kp[] stackIn_53_0 = null;
+        LobbyGameRecord[] stackIn_53_0 = null;
         int stackIn_54_1 = 0;
         int stackIn_56_0 = 0;
         int[] stackIn_56_1 = null;
@@ -961,9 +961,9 @@ final class TournamentLobbyScreen extends AppScreen {
         int var11;
         int var12;
         int var13;
-        kp var14;
+        LobbyGameRecord var14;
         int var15;
-        kp var15_ref_kp;
+        LobbyGameRecord var15_ref_kp;
         int var16;
         String var16_ref_String;
         int var17;
@@ -1048,7 +1048,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (var2 <= 1) {
           var13--;
         }
-        un.field_d.d(kp.field_g[var13].toLowerCase(), var11, var12 + (-(var6 >> 1) - 4), 16777215, -1);
+        un.field_d.d(LobbyGameRecord.field_g[var13].toLowerCase(), var11, var12 + (-(var6 >> 1) - 4), 16777215, -1);
         for (var14_int = 0; var2 > var14_int; var14_int++) {
           if (null != this.field_T) {
             stackIn_49_0 = this.field_T;
@@ -1150,7 +1150,7 @@ final class TournamentLobbyScreen extends AppScreen {
             var12 = var10;
             var13--;
             if (var13 >= 0) {
-              un.field_d.d(kp.field_g[var13].toLowerCase(), var11, -4 + var12 - (var6 >> 1), 16777215, -1);
+              un.field_d.d(LobbyGameRecord.field_g[var13].toLowerCase(), var11, -4 + var12 - (var6 >> 1), 16777215, -1);
             }
           }
         }
@@ -1161,8 +1161,8 @@ final class TournamentLobbyScreen extends AppScreen {
           var15 = (var6 << 1) + (var6 >> 1);
           var12 = var12 + var15;
           AuctionListing.a(var11 + var5, -22914, var11 - var5, -(var6 >> 1) + var12, -var6 + var12);
-          SoftwareRasterizer.a(-(un.field_d.a(eq.field_g) >> 1) + var11 - 10, var12 - var6, 20 + un.field_d.a(eq.field_g), var6, 8, 65793, 128);
-          un.field_d.d(eq.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
+          SoftwareRasterizer.a(-(un.field_d.a(WeightedLruCache.field_g) >> 1) + var11 - 10, var12 - var6, 20 + un.field_d.a(WeightedLruCache.field_g), var6, 8, 65793, 128);
+          un.field_d.d(WeightedLruCache.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
           TeamManagementScreen.e(126);
           SoftwareRasterizer.a(-(var5 >> 1) + var11, -(var6 >> 1) + var12, var5, var6, 65793, 128);
           WriteIntegersCommand.field_E[6].c(var11 + (var5 >> 1) - (WriteIntegersCommand.field_E[6].field_o - 4), -(WriteIntegersCommand.field_E[6].field_v >> 1) + var12);
@@ -1181,7 +1181,7 @@ final class TournamentLobbyScreen extends AppScreen {
           if (var17 > -1) {
             stackIn_107_0 = this.field_Q[var17];
           } else {
-            stackIn_107_0 = hi.field_w;
+            stackIn_107_0 = DiskCacheRequest.field_w;
           }
           var18 = stackIn_107_0;
           un.field_d.d(var18, 10 - (WriteIntegersCommand.field_E[6].field_o >> 1) + var11, 4 + var12, 16777215, -1);
@@ -1195,7 +1195,7 @@ final class TournamentLobbyScreen extends AppScreen {
             discarded$0 = this.b(-108, -27);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1232,15 +1232,15 @@ final class TournamentLobbyScreen extends AppScreen {
           cd.a((byte) -127, var4, var3);
           TeamManagementScreen.e(123);
         } else {
-          var5 = Math.abs(255 - (int)(nj.a(96) / 5L % 512L));
+          var5 = Math.abs(255 - (int)(nj.monotonicMillis(96) / 5L % 512L));
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
           AuctionListing.a(40 + (du.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
           SoftwareRasterizer.a(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, al.a(false, (byte) -96));
-          np.a(var4, -123, 14 + var3);
-          np.a(var4, param0 + 113, du.field_n + (30 + var3));
-          var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, vi.field_o, new String[]{mk.field_b[il.field_h]});
-          q.field_d.a(var8, var3 + 20, var4, var7, -1);
+          ScrollPane.a(var4, -123, 14 + var3);
+          ScrollPane.a(var4, param0 + 113, du.field_n + (30 + var3));
+          var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{mk.field_b[il.field_h]});
+          ConsoleTokenCursor.field_d.a(var8, var3 + 20, var4, var7, -1);
           TeamManagementScreen.e(118);
         }
     }
@@ -1309,7 +1309,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           this.field_k = -(100 + 96 * this.field_M.length);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lm.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lm.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

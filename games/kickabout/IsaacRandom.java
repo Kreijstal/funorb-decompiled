@@ -46,13 +46,13 @@ final class IsaacRandom {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static String c(int param0) {
         int var1 = 55 / ((3 - param0) / 40);
-        return ek.field_M;
+        return TrinketShopDialog.field_M;
     }
 
     private final void initializeState(byte param0) {
@@ -212,7 +212,7 @@ final class IsaacRandom {
         ConsoleExpression[] var11 = null;
         var9 = Kickabout.field_G;
         try {
-          var11 = w.a(param0, (byte) -21);
+          var11 = DialogOverlay.a(param0, (byte) -21);
           var2 = var11;
           if (param1 < 103) {
             var10 = (String) null;
@@ -229,12 +229,12 @@ final class IsaacRandom {
             }
             var7 = stackIn_8_0;
             var8 = param0.substring(var6, var7);
-            if (rb.field_Mb == var5.field_k) {
+            if (TextPromptDialog.field_Mb == var5.field_k) {
               discarded$0 = var3.append("<col=66ffff>").append(var8).append("</col>");
             } else {
               if (var5.field_k != v.field_d) {
-                if (vu.field_Ab != var5.field_k) {
-                  if (pv.field_H == var5.field_k) {
+                if (ContextMenuItem.field_Ab != var5.field_k) {
+                  if (HelpTipDialog.field_H == var5.field_k) {
                     discarded$1 = var3.append("<col=ffaaff>").append(var8).append("</col>");
                   } else {
                     if (var5.field_k != GameModesHelpScreen.field_N) {
@@ -263,11 +263,11 @@ final class IsaacRandom {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 1) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
@@ -313,10 +313,10 @@ final class IsaacRandom {
             }
           }
           this.field_g = this.field_g + this.field_i[var2 + 128 & 255];
-          dupTemp$1 = this.field_d + this.field_g + this.field_i[qj.b(255, var3 >> 2)];
+          dupTemp$1 = this.field_d + this.field_g + this.field_i[TextLayoutLine.b(255, var3 >> 2)];
           var4 = dupTemp$1;
           this.field_i[var2] = dupTemp$1;
-          dupTemp$2 = this.field_i[qj.b(var4 >> 8 >> 2, 255)] + var3;
+          dupTemp$2 = this.field_i[TextLayoutLine.b(var4 >> 8 >> 2, 255)] + var3;
           this.field_d = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }
@@ -327,7 +327,7 @@ final class IsaacRandom {
         if (param0 > -91) {
           return;
         }
-        nm.field_k = null;
+        AnimationClip.field_k = null;
     }
 
     static long a(long param0, long param1) {
@@ -344,7 +344,7 @@ final class IsaacRandom {
           }
           this.initializeState((byte) -113);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

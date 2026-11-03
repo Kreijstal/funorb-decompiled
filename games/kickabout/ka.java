@@ -9,7 +9,7 @@ final class ka implements fg {
 
     final static void a(int param0, int param1, byte param2) {
         et.field_b = true;
-        if (vl.a(false)) {
+        if (LoginMethod.a(false)) {
           return;
         }
         ReflectionCheck.field_k = param1;
@@ -27,11 +27,11 @@ final class ka implements fg {
             ka.a(122, 101, (byte) 60);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 19044) {
           field_c = (UiLayoutNode) null;
           field_d = null;

@@ -18,7 +18,7 @@ final class ws {
           IntTripleCommand.g((byte) -54);
           vj.field_c = 11;
         }
-        m.field_h = true;
+        WhirlpoolHasher.field_h = true;
     }
 
     final static boolean a(char param0, byte param1) {
@@ -42,12 +42,12 @@ final class ws {
           if (vt.a(param0, true)) {
             return true;
           }
-          var8 = ij.field_p;
+          var8 = WeightedCacheEntry.field_p;
           var7 = var8;
           var6 = var7;
           var2 = var6;
           if (param1 != 121) {
-            ws.a(54);
+            ws.releaseStatics(54);
           }
           for (var3 = 0; var8.length > var3; var3++) {
             var4 = var8[var3];
@@ -66,11 +66,11 @@ final class ws {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "ws.C(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "ws.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -25514) {
           field_d = (int[][]) null;
         }

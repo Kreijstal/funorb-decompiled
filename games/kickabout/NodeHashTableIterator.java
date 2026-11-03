@@ -71,11 +71,11 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           NodeHashTableIterator.a(-70, -86, -1);
           field_a = null;
@@ -133,11 +133,11 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (~cc.field_e == param1) {
+        if (~FixedQuaternion.field_e == param1) {
           hq.b((byte) 124);
           return true;
         }
-        if (cc.field_e == 102) {
+        if (FixedQuaternion.field_e == 102) {
           dr.field_g.a(5075);
           return true;
         }
@@ -156,7 +156,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_d = param0;
           this.b(0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ov.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ov.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

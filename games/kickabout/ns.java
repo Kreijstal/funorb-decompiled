@@ -7,7 +7,7 @@ final class ns {
     static Sprite field_c;
     static String[] field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -18,7 +18,7 @@ final class ns {
         if (param0 != 3585) {
           return;
         }
-        hq.field_d = -21 + (480 - om.field_Bb);
+        hq.field_d = -21 + (480 - IconLabel.field_Bb);
     }
 
     static {

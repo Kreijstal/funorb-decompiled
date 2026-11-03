@@ -45,7 +45,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
             var4[2][1].b(19 + (14 + var1_int), 1 + (var3 + 49 - 20), 20, 20);
             var4[3][1].b(20 + (var1_int + 13), 49 + var3, 20, 20);
             IsSixCommand.field_C.d(BallAgent.field_g, 14 + (var1_int + 20) + 10, 20 + var3 + 65, 16777215, -1);
-            if (ks.field_e > 1) {
+            if (HuffmanCodec.field_e > 1) {
               IsSixCommand.field_C.d(PlayerModelPreview.field_k, 115 + var1_int, 20 + (var3 + 49 + 16), 16777215, -1);
               var5 = DebugConsole.field_y[var2][1];
               var6 = 180 * var5.field_o >> 8;
@@ -148,7 +148,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "kb.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "kb.A(" + param0 + ')');
         }
     }
 

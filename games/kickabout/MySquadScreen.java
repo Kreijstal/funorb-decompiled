@@ -5,7 +5,7 @@ final class MySquadScreen extends TeamManagementScreen {
     private SquadGridWidget field_L;
     private UiLayoutNode field_X;
     private UiLayoutNode field_W;
-    private pu[] field_T;
+    private TrinketSlot[] field_T;
     private UiLayoutNode field_R;
     static String field_F;
     private UiLayoutNode field_P;
@@ -34,13 +34,13 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_L.field_J = 36;
         this.field_L.field_s = 6;
         for (var4 = 0; var4 < 9; var4++) {
-          i.field_A[var4] = null;
+          MessageDialog.field_A[var4] = null;
         }
-        gb.field_F = false;
+        ValidationIndicator.field_F = false;
         if (PlayArea.a(100)) {
         } else {
           if (!ic.field_h.a(-4)) {
-            gb.field_F = true;
+            ValidationIndicator.field_F = true;
           } else {
             or.field_d.b(63, (byte) -86);
           }
@@ -57,12 +57,12 @@ final class MySquadScreen extends TeamManagementScreen {
     }
 
     final void refreshSelectedPlayer(byte param0) {
-        this.field_L.a(param0 - 36);
+        this.field_L.update(param0 - 36);
         if (param0 != 84) {
           this.field_R = (UiLayoutNode) null;
         }
         if (this.field_L.field_Fb != -1 &&
-          this.field_L.j((byte) 21).field_Eb.isEmpty(-2)) {
+          this.field_L.getSelectedSlot((byte) 21).field_Eb.isEmpty(-2)) {
           this.field_L.field_Fb = -1;
         }
         this.rebuildPlayerPanel(-111);
@@ -75,7 +75,7 @@ final class MySquadScreen extends TeamManagementScreen {
         return ((int)((double)InstrumentNoteMask.field_i * (-UiLayoutNode.field_K + (double)param1)) >> 8) + 320;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_O = null;
         field_F = null;
         field_M = null;
@@ -94,22 +94,22 @@ final class MySquadScreen extends TeamManagementScreen {
         SquadSlotWidget var3;
         PlayerStats var4_ref_up;
         int var4;
-        pu[] var5_ref_pu__;
-        fn var6;
-        pu var7;
+        TrinketSlot[] var5_ref_pu__;
+        Trinket var6;
+        TrinketSlot var7;
         int var8;
         var8 = Kickabout.field_G;
         super.updateScreen((byte) -55, param1);
         this.field_R.field_s = this.slideOffsetX;
-        this.field_L.a(48);
+        this.field_L.update(48);
         this.field_R.b(0, param1);
         if (this.field_S != this.field_L.field_Fb) {
           this.field_S = this.field_L.field_Fb;
           this.rebuildPlayerPanel(-49);
         }
-        var3 = this.field_L.j((byte) 21);
+        var3 = this.field_L.getSelectedSlot((byte) 21);
         if (var3 != null) {
-          var4_ref_up = this.field_L.j((byte) 21).field_Eb;
+          var4_ref_up = this.field_L.getSelectedSlot((byte) 21).field_Eb;
           var5_ref_pu__ = this.field_T;
           for (var6_int = 0; var6_int < var5_ref_pu__.length; var6_int++) {
             var7 = var5_ref_pu__[var6_int];
@@ -156,7 +156,7 @@ final class MySquadScreen extends TeamManagementScreen {
         int var13;
         int var14;
         int var15_int;
-        pu[] var15;
+        TrinketSlot[] var15;
         ReceivedAuctionItem var15_ref;
         int var16;
         String var17;
@@ -165,11 +165,11 @@ final class MySquadScreen extends TeamManagementScreen {
         String var20;
         int var21;
         int var22;
-        pu[] var23;
-        pu var24;
+        TrinketSlot[] var23;
+        TrinketSlot var24;
         UiLayoutNode var25;
         PlayerStats var26;
-        pu var27;
+        TrinketSlot var27;
         ReceivedAuctionItem var28;
         int var11Lifetime1;
         int var16Lifetime1;
@@ -190,19 +190,19 @@ final class MySquadScreen extends TeamManagementScreen {
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
         un.field_d.a(oc.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
         this.field_L.k((byte) -109);
-        var4 = this.field_L.j((byte) 21);
+        var4 = this.field_L.getSelectedSlot((byte) 21);
         var5 = IsSixCommand.field_C;
         if (var4 == null) {
-          var5.a(gu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
+          var5.a(ContextMenu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
         } else {
-          var26 = this.field_L.j((byte) 21).field_Eb;
+          var26 = this.field_L.getSelectedSlot((byte) 21).field_Eb;
           stackIn_6_0 = var26;
           stackIn_6_1 = 0;
           stackIn_6_2 = var26;
           stackIn_6_3 = -107;
           stackIn_7_4 = !(TextFieldValidator.f(param0 ^ 4));
           stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).c((byte) stackIn_6_3, stackIn_7_4)) && (wn.a((byte) 47));
-          var7 = kk.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
+          var7 = TriangleMesh.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
           var8 = -36 + this.field_I.field_F + this.field_I.field_q;
           var9 = this.field_I.field_T + 40;
           if (var7 != null) {
@@ -216,16 +216,16 @@ final class MySquadScreen extends TeamManagementScreen {
           var5.c(field_O, var10, var11, 268435455, -1);
           var5.a(var26.getDisplayName(100), var10 + var12, var11, 268435455, -1);
           var11 += 22;
-          var5.c(hg.field_H, var10, var11, 268435455, -1);
-          var5.a(uf.field_e[var26.playerType], var10 + var12, var11, 268435455, -1);
+          var5.c(PromotionDialog.field_H, var10, var11, 268435455, -1);
+          var5.a(uf.field_e[var26.archetype], var10 + var12, var11, 268435455, -1);
           var11Lifetime1 = -10 + (this.field_I.field_T + this.field_I.field_mb);
           var13 = this.field_W.field_F + (-100 + this.field_W.field_q >> 1);
           var14 = this.field_W.field_T + 32;
-          eo.a(var13, var14, var26.power, 0, true, var26.c(true, oi.b(param0 - 73)));
+          eo.a(var13, var14, var26.power, 0, true, var26.trinketPowerBonus(true, IntValueNode.b(param0 - 73)));
           var14 += 18;
-          eo.a(var13, var14, var26.speed, 1, true, var26.a(param0 + 5210, oi.b(-89)));
+          eo.a(var13, var14, var26.speed, 1, true, var26.trinketSpeedBonus(param0 + 5210, IntValueNode.b(-89)));
           var14 += 18;
-          eo.a(var13, var14, var26.tackle, 2, true, var26.b((byte) 108, oi.b(param0 ^ 95)));
+          eo.a(var13, var14, var26.tackle, 2, true, var26.trinketTackleBonus((byte) 108, IntValueNode.b(param0 ^ 95)));
           if (var26.power == 100 &&
             100 == var26.tackle &&
             var26.speed == 100) {
@@ -235,10 +235,10 @@ final class MySquadScreen extends TeamManagementScreen {
             var16 = 36 + this.field_P.field_T;
             eo.a(var15_int, var16, var26.experience, 3, true, 0);
             if (!this.field_Q.isLinked((byte) -113)) {
-              if (!this.field_L.j((byte) 21).field_Gb) {
+              if (!this.field_L.getSelectedSlot((byte) 21).field_Gb) {
                 stackIn_22_0 = qr.field_a;
               } else {
-                stackIn_22_0 = nq.field_H;
+                stackIn_22_0 = TournamentChampionDialog.field_H;
               }
               var17 = stackIn_22_0;
               var5.a(var17, this.field_P.field_F + 10, 51 + this.field_P.field_T, -20 + this.field_P.field_q, this.field_P.field_mb - 60, 11184810, -1, 0, 1, 16);
@@ -254,15 +254,15 @@ final class MySquadScreen extends TeamManagementScreen {
             for (var16Lifetime1 = 0; var23.length > var16Lifetime1; var16Lifetime1++) {
               var24 = var23[var16Lifetime1];
               var27 = var24;
-              q.field_d.d(ValidationState.field_b[var24.field_Bb.field_h], var27.field_F + (var27.field_q >> 1), var27.field_mb + var27.field_T + 14, 16777215, -1);
+              ConsoleTokenCursor.field_d.d(ValidationState.field_b[var24.field_Bb.field_h], var27.field_F + (var27.field_q >> 1), var27.field_mb + var27.field_T + 14, 16777215, -1);
             }
           }
-          var28 = i.field_A[ic.field_h.field_q[this.field_L.field_Fb]];
+          var28 = MessageDialog.field_A[ic.field_h.field_q[this.field_L.field_Fb]];
           var15_ref = var28;
           if (!ds.field_g) {
             if (var15_ref != null &&
               !PlayArea.a(param0 + 105)) {
-              if (!gb.field_F) {
+              if (!ValidationIndicator.field_F) {
                 jr.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
               } else {
                 var16Lifetime2 = var28.field_v;
@@ -272,7 +272,7 @@ final class MySquadScreen extends TeamManagementScreen {
                   var21 = 16777215;
                   if (var17_int == 0) {
                     if (var16Lifetime2 == -1) {
-                      var20 = gd.field_d;
+                      var20 = ListingRowCache.field_d;
                       var21 = 13421772;
                     } else {
                       var20 = ad.formatCurrencyAmount(var16Lifetime2, param0 ^ -26297);
@@ -303,7 +303,7 @@ final class MySquadScreen extends TeamManagementScreen {
               decompiledFrameRemainder0 = false;
             }
             else {
-              var5.a(na.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
+              var5.a(VerticalScrollbar.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
             }
           } else {
             var5.a(BufferedCacheFile.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
@@ -313,15 +313,15 @@ final class MySquadScreen extends TeamManagementScreen {
         if (var4 != null) {
           if (TextFieldValidator.f(-1)) {
             stackIn_61_0 = -1;
-            stackIn_61_1 = ~this.field_L.j((byte) 21).field_Eb.trinketIds.length;
+            stackIn_61_1 = ~this.field_L.getSelectedSlot((byte) 21).field_Eb.trinketIds.length;
             if (stackIn_61_0 > stackIn_61_1) {
-              eo.d(this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb);
+              eo.darkenRectangle(this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb);
             }
             var6 = AuctionsScreen.field_M;
             var5.c(var6, this.field_X.field_q + this.field_X.field_F - 20, 22 + this.field_X.field_T, 16777215, -1);
           } else {
             if (var4.field_Gb) {
-              var6 = dt.field_e;
+              var6 = OffscreenPlayerArrow.field_e;
               var5.d(var6, (this.field_X.field_q >> 1) + this.field_X.field_F, 109 + this.field_X.field_T, 11184810, -1);
             }
           }
@@ -337,14 +337,14 @@ final class MySquadScreen extends TeamManagementScreen {
         PlayerStats var4;
         PlayerStats var5;
         int var6;
-        fn var8;
-        pu var9;
+        Trinket var8;
+        TrinketSlot var9;
         String var10;
         int var11;
         int var12;
         SquadSlotWidget var13;
         var12 = Kickabout.field_G;
-        var13 = this.field_L.j((byte) 21);
+        var13 = this.field_L.getSelectedSlot((byte) 21);
         this.field_Q.c((byte) -109);
         this.field_X.field_jb = new IntrusiveDeque();
         var3 = -36 / ((param0 - 11) / 33);
@@ -360,13 +360,13 @@ final class MySquadScreen extends TeamManagementScreen {
           }
           var5 = var13.field_Eb;
           this.field_K = new UiLayoutNode[var5.trinketIds.length];
-          this.field_T = new pu[var5.trinketIds.length];
+          this.field_T = new TrinketSlot[var5.trinketIds.length];
           var6 = this.field_X.field_q - 150 * (-1 + var5.trinketIds.length) >> 1;
           for (var7 = 0; var7 < this.field_K.length; var7++) {
             var8 = pa.field_g[var5.trinketIds[var7]];
-            var9 = new pu(var8, false);
-            if (var8.j(256)) {
-              stackIn_15_0 = mc.field_f;
+            var9 = new TrinketSlot(var8, false);
+            if (var8.isEmpty(256)) {
+              stackIn_15_0 = TickClock.field_f;
             } else {
               stackIn_15_0 = DateInputWidget.field_E;
             }
@@ -407,13 +407,13 @@ final class MySquadScreen extends TeamManagementScreen {
           this.field_L = (SquadGridWidget) null;
         }
         this.field_I.field_E = tr.field_g.toLowerCase();
-        this.field_W.field_E = q.field_f.toLowerCase();
+        this.field_W.field_E = ConsoleTokenCursor.field_f.toLowerCase();
         this.field_P.field_E = ConsoleParseException.field_d.toLowerCase();
         this.field_G.field_E = ca.field_d.toLowerCase();
         this.field_X.field_E = mp.field_k.toLowerCase();
         this.field_Q = eo.a(NodeHashTableIterator.field_c, 7126504);
         this.field_K = new UiLayoutNode[]{};
-        this.field_T = new pu[]{};
+        this.field_T = new TrinketSlot[]{};
         this.field_Q.field_s = -this.field_Q.field_q + this.field_P.field_q >> 1;
         this.field_Q.field_J = 66;
         this.field_Y.addChild((byte) -115, this.field_X);

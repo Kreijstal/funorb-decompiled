@@ -18,7 +18,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     static int[] field_B;
     static String[] field_M;
 
-    final void h(byte param0) {
+    final void focusFields(byte param0) {
         this.field_N.i((byte) -55);
         this.field_J.i((byte) -70);
         if (param0 >= -65) {
@@ -26,7 +26,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    private final void l(int param0) {
+    private final void submitLogin(int param0) {
         if (cd.a(3) ||
           !(this.field_N.field_q.length() <= 0) &&
           !(this.field_J.field_q.length() <= 0)) {
@@ -48,9 +48,9 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           var3 = oh.field_a[ih.field_c];
           double[] var2 = var3;
-          nh.a(param0, var3[0], var3[1], var3[2]);
+          nh.adjustSpriteHsv(param0, var3[0], var3[1], var3[2]);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           ia.field_d.a(param2, param0 - 67);
           mp.a(125, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,11 +72,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_J.a((UiWidget) (this), 0);
           }
           if (this.field_J == param1) {
-            this.l(60);
+            this.submitLogin(60);
           }
           int var3_int = 35 / ((param0 - 8) / 47);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,14 +109,14 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                     PacketBuffer.g(4);
                   }
                 } else {
-                  uv.a(false);
+                  PlayerContextMenu.a(false);
                 }
               }
             } else {
               NameSuggestionsPanel.a((byte) -76);
             }
           } else {
-            this.l(60);
+            this.submitLogin(60);
           }
           if (param3 < 64) {
             field_B = (int[]) null;
@@ -132,7 +132,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -170,11 +170,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void setUsername(String param0, byte param1) {
         TextInputWidget var3 = null;
         String var4 = null;
         try {
@@ -184,7 +184,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var3.a(var4, (byte) -17, false);
           this.field_J.i((byte) -41);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -201,10 +201,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     public final void a(byte param0, TextInputWidget param1) {
         try {
           if (param0 < 65) {
-            this.h((byte) -105);
+            this.focusFields((byte) -105);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        vl var9 = null;
+        LoginMethod var9 = null;
         cg var12 = null;
         cg var13 = null;
         try {
@@ -248,7 +248,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           this.field_N = (TextInputWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
           this.field_J = (TextInputWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (!this.field_H) {
-            this.field_K = new TextButton(ju.field_P, (UiListener) null);
+            this.field_K = new TextButton(ValidationHelpWidget.field_P, (UiListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_C) {
@@ -287,7 +287,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             if (!this.field_C) {
               this.field_F.field_r = (WidgetPainter) ((Object) new cr());
             } else {
-              this.field_F.field_u = pv.field_G;
+              this.field_F.field_u = HelpTipDialog.field_G;
               this.field_F.field_r = (WidgetPainter) ((Object) new cr());
             }
           } else {
@@ -304,14 +304,14 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             var8 = SetLagCommand.field_A;
           } else {
             if (var9 == AccountRegistrationPanel.field_I) {
-              var8 = q.field_c;
+              var8 = ConsoleTokenCursor.field_c;
             }
           }
           dupTemp$0 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(-120, dupTemp$0);
           this.field_g = this.field_g + (((UiWidget) ((Object) var12)).field_i + 5);
-          dupTemp$1 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, at.field_Ib);
+          dupTemp$1 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, TrinketTile.field_Ib);
           var13 = dupTemp$1;
           this.a(-55, dupTemp$1);
           this.field_K.field_k = (UiListener) (this);
@@ -368,11 +368,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final String a(int param0) {
+    final String getUsername(int param0) {
         if (param0 <= 84) {
           UiWidget var3 = (UiWidget) null;
           this.a('f', (byte) 111, (UiWidget) null, -119);
@@ -432,7 +432,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "pd.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "pd.F(" + param0 + ')');
         }
     }
 

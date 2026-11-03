@@ -8,7 +8,7 @@ final class ni extends IntrusiveNode {
     static String field_e;
     static String field_q;
     static String field_p;
-    static em field_m;
+    static DualLinkHashTable field_m;
     int field_g;
     static String[] field_k;
     static ResourceArchive field_i;
@@ -29,7 +29,7 @@ final class ni extends IntrusiveNode {
             var3 = (String) null;
             ni.a((byte) 34, (String) null);
           }
-          stackIn_3_0 = DraggableWidget.field_J.a(param1, "", 4);
+          stackIn_3_0 = DraggableWidget.field_J.takeFileByName(param1, "", 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,7 +41,7 @@ final class ni extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -66,12 +66,12 @@ final class ni extends IntrusiveNode {
           return false;
         }
         if (PacketBuffer.field_l) {
-          return PlayArea.field_a.a(il.field_c, (byte) 127, cc.field_e);
+          return PlayArea.field_a.a(il.field_c, (byte) 127, FixedQuaternion.field_e);
         }
         if (DebugConsole.field_s) {
           return NodeHashTableIterator.a(param1, -14, param0);
         }
-        if (sq.b(param3 + 20963, param0, param1)) {
+        if (SaveChangesDialog.b(param3 + 20963, param0, param1)) {
           return true;
         }
         if (!WriteIntegersCommand.field_C) {

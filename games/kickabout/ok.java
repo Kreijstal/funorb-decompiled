@@ -36,7 +36,7 @@ final class ok {
           var13 = var15;
           var4 = var13;
           if (param0 >= -8) {
-            ok.a(-88);
+            ok.releaseStatics(-88);
           }
           var5 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 16777200, param2) + 1;
           var5 = 8355711 & var5 >> 1;
@@ -61,7 +61,7 @@ final class ok {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -193,11 +193,11 @@ final class ok {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         if (param0 < 125) {

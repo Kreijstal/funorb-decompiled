@@ -51,7 +51,7 @@ final class gf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class gf {
           var2 = 123 % ((param0 + 25) / 60);
           var3 = var15.readUnsignedByte((byte) -106);
           if (var3 == 0) {
-            var12 = st.c(-23091);
+            var12 = CachedTextLayout.c(-23091);
             var4 = var12;
             var11 = var12;
             var5 = var11;
@@ -118,14 +118,14 @@ final class gf {
             FormationView.b((byte) -116);
             return;
           }
-          var16_ref.field_e = st.c(-23091);
+          var16_ref.field_e = CachedTextLayout.c(-23091);
           var16_ref.field_f = true;
           var16_ref.c((byte) -109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "gf.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "gf.A(" + param0 + ')');
         }
     }
 
@@ -165,11 +165,11 @@ final class gf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_e = null;
         field_i = null;
@@ -208,7 +208,7 @@ final class gf {
             var4 = param1.substring(1 + var2_int);
             var5 = PasswordLoginCredentials.a((byte) -25, var3);
             if (var5 == null) {
-              stackIn_12_0 = ie.a(var4, param0 - 64);
+              stackIn_12_0 = SellPlayerDialog.a(var4, param0 - 64);
               return stackIn_12_0;
             }
             stackIn_10_0 = var5;
@@ -226,7 +226,7 @@ final class gf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

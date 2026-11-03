@@ -7,13 +7,13 @@ final class ShopPlayerSlot extends im {
     int field_Fb;
     int field_Qb;
     PlayerStats field_Sb;
-    private pu[] field_Ib;
+    private TrinketSlot[] field_Ib;
     static String field_Db;
     private boolean field_Lb;
     static int field_Ob;
     static String field_Kb;
     UiLayoutNode field_Mb;
-    static np field_Jb;
+    static ScrollPane field_Jb;
     static String field_Rb;
     int field_Gb;
     static String field_Eb;
@@ -46,7 +46,7 @@ final class ShopPlayerSlot extends im {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -57,13 +57,13 @@ final class ShopPlayerSlot extends im {
 
     final static void a(String param0, byte param1) {
         try {
-          pq.a(16, param0, true);
+          SquadPickerDialog.a(16, param0, true);
           if (param1 != 74) {
             fa var3 = (fa) null;
             ShopPlayerSlot.a(40, (fa) null, -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "sp.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sp.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -89,13 +89,13 @@ final class ShopPlayerSlot extends im {
         if (SoftwareRasterizer.field_h >= this.field_T &&
           SoftwareRasterizer.field_e <= this.field_T + this.field_mb) {
           if (this.field_Lb) {
-            uv.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
-            var3 = q.field_d.a(eq.field_b);
-            q.field_d.a(eq.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
+            PlayerContextMenu.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
+            var3 = ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b);
+            ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
             c.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
           }
           var3Lifetime1 = this.field_F;
-          var4 = kk.a(this.field_Sb, param0 + 0, false);
+          var4 = TriangleMesh.a(this.field_Sb, param0 + 0, false);
           if (var4 != null) {
             var4.c(1 + var3Lifetime1, 4 + this.field_T);
           } else {
@@ -103,7 +103,7 @@ final class ShopPlayerSlot extends im {
           }
           this.field_X.a(this.field_Sb.getDisplayName(100), var3Lifetime1 + 40, 4 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[param0];
-          this.field_X.a(uf.field_e[this.field_Sb.playerType], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+          this.field_X.a(uf.field_e[this.field_Sb.archetype], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[1];
           var5 = 6 + var3Lifetime1;
           for (var6 = 0; 3 > var6; var6++) {
@@ -119,12 +119,12 @@ final class ShopPlayerSlot extends im {
             }
             var8 = stackIn_16_0;
             if (0 == var6) {
-              stackIn_21_0 = this.field_Sb.c(true, oi.b(-91));
+              stackIn_21_0 = this.field_Sb.trinketPowerBonus(true, IntValueNode.b(-91));
             } else {
               if (var6 != 1) {
-                stackIn_21_0 = this.field_Sb.b((byte) 84, oi.b(99));
+                stackIn_21_0 = this.field_Sb.trinketTackleBonus((byte) 84, IntValueNode.b(99));
               } else {
-                stackIn_21_0 = this.field_Sb.a(5205, oi.b(param0 + 118));
+                stackIn_21_0 = this.field_Sb.trinketSpeedBonus(5205, IntValueNode.b(param0 + 118));
               }
             }
             var9 = stackIn_21_0;
@@ -137,7 +137,7 @@ final class ShopPlayerSlot extends im {
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[2];
           if (this.field_Sb.trinketIds.length == 0) {
-            IsSixCommand.field_C.d(hi.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
+            IsSixCommand.field_C.d(DiskCacheRequest.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[3];
           var3Lifetime1 = var3Lifetime1 + (this.field_Pb[4] + IsSixCommand.field_C.a(this.field_Nb) >> 1);
@@ -217,7 +217,7 @@ final class ShopPlayerSlot extends im {
           boolean decompiledFrameRemainder0 = true;
           if (param3 >= 2 &&
             param3 <= param2 &&
-            !vi.a(param3, 127, MusicPatchNode.field_k, param0) && (param0[3] == 0 ||
+            !NanoTickClock.a(param3, 127, MusicPatchNode.field_k, param0) && (param0[3] == 0 ||
             param0[3] == 1 &&
             param3 >= 4)) {
             stackIn_11_0 = true;
@@ -237,7 +237,7 @@ final class ShopPlayerSlot extends im {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -266,8 +266,8 @@ final class ShopPlayerSlot extends im {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        fn var9 = null;
-        pu var10 = null;
+        Trinket var9 = null;
+        TrinketSlot var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var6_intLifetime1;
@@ -281,7 +281,7 @@ final class ShopPlayerSlot extends im {
           this.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
           this.field_Pb = param1;
           this.field_Qb = param3;
-          this.field_Mb = eo.b();
+          this.field_Mb = eo.createDefaultButtonNode();
           this.addChild((byte) -121, this.field_Mb);
           this.field_Mb.field_s = this.field_Pb[-1 + this.field_Pb.length] - this.field_Mb.field_q >> 1;
           for (var6_int = 0; var6_int < this.field_Pb.length - 1; var6_int++) {
@@ -295,10 +295,10 @@ final class ShopPlayerSlot extends im {
           this.field_Nb = ad.formatCurrencyAmount(this.field_Gb, 26300);
           var6_intLifetime1 = this.field_Pb[0] + this.field_Pb[1] + (this.field_Pb[2] + (this.field_Pb[3] >> 1));
           var7 = this.field_mb >> 1;
-          this.field_Ib = new pu[this.field_Sb.trinketIds.length];
+          this.field_Ib = new TrinketSlot[this.field_Sb.trinketIds.length];
           for (var8 = 0; var8 < this.field_Ib.length; var8++) {
             var9 = pa.field_g[this.field_Sb.trinketIds[var8]];
-            var10 = new pu(var9, true);
+            var10 = new TrinketSlot(var9, true);
             var11 = var6_intLifetime1;
             var12 = var7;
             if (this.field_Sb.trinketIds.length != 2) {
@@ -335,7 +335,7 @@ final class ShopPlayerSlot extends im {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

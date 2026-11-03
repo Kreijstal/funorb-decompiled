@@ -19,17 +19,17 @@ final class vr {
         int[] var3Lifetime1;
         int[] var2Lifetime1;
         if (param0 == -2) {
-          var3 = na.field_zb[RankingsScreen.field_C];
+          var3 = VerticalScrollbar.field_zb[RankingsScreen.field_C];
           var2 = var3;
           return param1 < var3.length ? var3[param1] : 100;
         }
         field_b = (String) null;
-        var3Lifetime1 = na.field_zb[RankingsScreen.field_C];
+        var3Lifetime1 = VerticalScrollbar.field_zb[RankingsScreen.field_C];
         var2Lifetime1 = var3Lifetime1;
         return param1 < var3Lifetime1.length ? var3Lifetime1[param1] : 100;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -117) {
           field_b = (String) null;
           field_b = null;
@@ -74,7 +74,7 @@ final class vr {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -86,12 +86,12 @@ final class vr {
     final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        he var3 = null;
+        LobbyPlayerRow var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
           InstrumentNoteMask.field_k = false;
-          uv.field_i = null;
+          PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
           if (rp.field_B != null) {
             rp.field_B.b(param0 + 22999);
@@ -100,38 +100,38 @@ final class vr {
           if (param0 != -2) {
             return;
           }
-          pq.field_N = null;
+          SquadPickerDialog.field_N = null;
           if (SquadSlotWidget.field_yb != null) {
             SquadSlotWidget.field_yb.b(param0 ^ -22997);
             SquadSlotWidget.field_yb = null;
           }
-          sr.field_f = null;
-          if (null != lw.field_d) {
-            lw.field_d.b(param0 ^ -22997);
-            lw.field_d = null;
+          SortCriterion.field_f = null;
+          if (null != ProxyAuthenticationRequiredException.field_d) {
+            ProxyAuthenticationRequiredException.field_d.b(param0 ^ -22997);
+            ProxyAuthenticationRequiredException.field_d = null;
           }
-          pu.field_Eb = null;
-          if (null == pq.field_N) {
+          TrinketSlot.field_Eb = null;
+          if (null == SquadPickerDialog.field_N) {
             return;
           }
-          var3 = (he) (pq.field_N.b((byte) 72));
+          var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.b((byte) 72));
           while (var3 != null) {
             var3.unlinkSecondary(57);
-            var3 = (he) (pq.field_N.a(0));
+            var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.a(0));
           }
-          pq.field_N = null;
+          SquadPickerDialog.field_N = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "vr.B(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "vr.B(" + param0 + ')');
         }
     }
 
     final static void b(byte param0) {
-        np.field_Jb.a(new aw(), 3);
+        ScrollPane.field_Jb.a(new TutorialChoiceDialog(), 3);
         if (param0 > -114) {
-          vr.a((byte) -74);
+          vr.releaseStatics((byte) -74);
         }
     }
 
@@ -166,7 +166,7 @@ final class vr {
           vr.a(22);
         }
         if (!bo.field_Cb.a(false, var6)) {
-          return bo.field_Cb.a(var6, -16248);
+          return bo.field_Cb.getGroupProgressByName(var6, -16248);
         }
         cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
         if (param1 != 1) {
@@ -175,12 +175,12 @@ final class vr {
         if (param0 != 3) {
           return -1;
         }
-        nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
+        nh.adjustSpriteHsv(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
         return -1;
     }
 
     final static void b(int param0) {
-        mc.a(-106);
+        TickClock.a(-106);
         if (param0 != 1) {
           field_b = (String) null;
         }

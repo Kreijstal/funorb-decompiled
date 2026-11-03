@@ -29,7 +29,7 @@ final class wq {
         try {
           ul.a(param1, 1, param2, false, (byte) 117, param5, 16, param0, 1, param4);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wq.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wq.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -65,13 +65,13 @@ final class wq {
           if (hr.field_k) {
             var1_int++;
           }
-          if (gd.field_a) {
+          if (ListingRowCache.field_a) {
             var1_int++;
           }
           if (gk.field_e) {
             var1_int++;
           }
-          if (pq.field_K) {
+          if (SquadPickerDialog.field_K) {
             var1_int++;
           }
           if (wp.field_f) {
@@ -102,7 +102,7 @@ final class wq {
             return;
           }
           var2 = 30;
-          if (gd.field_a) {
+          if (ListingRowCache.field_a) {
             var3_long = Runtime.getRuntime().totalMemory();
             var5_long = Runtime.getRuntime().freeMemory();
             var7 = (-var5_long + var3_long) / 1024L + " kB / " + var3_long / 1024L + " kB";
@@ -124,7 +124,7 @@ final class wq {
               var2 += 20;
             }
           }
-          if (pq.field_K) {
+          if (SquadPickerDialog.field_K) {
             var11 = "Synchronisation disabled";
             IsSixCommand.field_C.c(var11, 620, var2, 16777215, 0);
             var2 += 20;
@@ -160,8 +160,8 @@ final class wq {
             var2 += 20;
           }
           if (LineupAgent.field_g) {
-            var3Lifetime1 = pq.field_J / 5;
-            var4Lifetime1 = pq.field_J % 5;
+            var3Lifetime1 = SquadPickerDialog.field_J / 5;
+            var4Lifetime1 = SquadPickerDialog.field_J % 5;
             if (var4Lifetime1 != 0) {
               stackIn_70_0 = Integer.toString(var4Lifetime1);
             } else {
@@ -177,7 +177,7 @@ final class wq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "wq.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "wq.F(" + param0 + ')');
         }
     }
 
@@ -186,14 +186,14 @@ final class wq {
         return RegistrationRequestDialog.a(17, so.a(71));
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         field_a = null;
         field_f = null;
         field_b = null;
         if (param0 >= -102) {
-          wq.a(-76);
+          wq.releaseStatics(-76);
         }
     }
 

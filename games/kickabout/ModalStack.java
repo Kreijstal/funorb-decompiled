@@ -42,7 +42,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "se.H(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "se.H(" + param0 + ')');
         }
     }
 
@@ -61,9 +61,9 @@ final class ModalStack extends SingleChildContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param2, -1);
+          var4_int = param0.getGroupId(param2, -1);
           var5 = -67 % ((-81 - param1) / 38);
-          var6 = param0.a((byte) -102, param3, var4_int);
+          var6 = param0.getFileId((byte) -102, param3, var4_int);
           stackIn_1_0 = fa.a(var4_int, (byte) -89, var6, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,12 +88,12 @@ final class ModalStack extends SingleChildContainer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static gg a(boolean param0, int param1, int param2) {
-        np stackIn_4_0 = null;
+        ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         gg stackIn_9_0 = null;
@@ -121,10 +121,10 @@ final class ModalStack extends SingleChildContainer {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        uv var17 = null;
+        PlayerContextMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        uv var17Lifetime1;
+        PlayerContextMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = Kickabout.field_G;
         try {
@@ -132,12 +132,12 @@ final class ModalStack extends SingleChildContainer {
           stackIn_4_1 = (sh.field_c * 3 + 6) * param2;
           stackIn_5_2 = (ei.field_d.field_Cb == ig.field_f);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((np) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + sh.field_c) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + sh.field_c) ? 1 : 0;
           var4 = ei.field_d.field_yb.field_jb;
           var5 = null;
           if (ts.field_d == 2) {
-            kk.field_R.field_lb = true;
-            du.field_f.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
+            TriangleMesh.field_R.field_lb = true;
+            du.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
             ei.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
             var7 = (gg) (var4.g(24009));
@@ -151,7 +151,7 @@ final class ModalStack extends SingleChildContainer {
                 if (stackIn_9_0.field_jb == null) {
                   var7.field_Bb = new UiLayoutNode(0L, mp.field_f);
                   var7.addChild((byte) -112, var7.field_Bb);
-                  var7.field_Ab = new UiLayoutNode(0L, pw.field_J);
+                  var7.field_Ab = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
                   var7.addChild((byte) -122, var7.field_Ab);
                   var7.field_Fb = new UiLayoutNode(0L, mp.field_f);
                   var7.addChild((byte) -117, var7.field_Fb);
@@ -177,9 +177,9 @@ final class ModalStack extends SingleChildContainer {
                 if (var7.field_Eb != null &&
                   !var7.field_Eb.equals("")) {
                   var7.field_Fb.field_ub = var11;
-                  var7.field_Fb.field_N = ll.field_n;
+                  var7.field_Fb.field_N = DirectByteStorage.field_n;
                   var12 = 1;
-                  var7.field_Fb.a(true, 3 + ll.field_n.field_o, 0, var9, sh.field_c);
+                  var7.field_Fb.a(true, 3 + DirectByteStorage.field_n.field_o, 0, var9, sh.field_c);
                 }
                 var7.field_Ab.field_H = var11;
                 var7.field_Bb.field_H = var11;
@@ -192,7 +192,7 @@ final class ModalStack extends SingleChildContainer {
                 var13 = 0;
                 var14 = var7.field_q - 82;
                 if (var12 != 0) {
-                  var13 = 3 + ll.field_n.field_o;
+                  var13 = 3 + DirectByteStorage.field_n.field_o;
                   var14 = var14 - var13;
                 }
                 stackIn_36_0 = var7.field_Bb;
@@ -223,7 +223,7 @@ final class ModalStack extends SingleChildContainer {
                 var6 = var7;
                 if (var7.field_Fb != null &&
                   var7.field_Fb.field_gb) {
-                  sn.field_e = var7.field_Eb;
+                  UrlRequest.field_e = var7.field_Eb;
                 } else if (var7.field_sb != 0) {
                   var16 = var7.field_Gb;
                   BytePlusOneCommand.a(var7, false, ei.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
@@ -233,17 +233,17 @@ final class ModalStack extends SingleChildContainer {
                     !PacketBuffer.field_l) {
                     if (!WriteIntegersCommand.field_C) {
                       var17 = TextButton.field_v;
-                      var18 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var16});
-                      var17.field_j.a(param1 ^ 2, 8, var18);
+                      var18 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var16});
+                      var17.field_j.addItem(param1 ^ 2, 8, var18);
                     }
                     var17Lifetime1 = TextButton.field_v;
-                    var18Lifetime1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var16});
-                    var17Lifetime1.field_j.a(0, 18, var18Lifetime1);
+                    var18Lifetime1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var16});
+                    var17Lifetime1.field_j.addItem(0, 18, var18Lifetime1);
                   }
                 } else {
                   if (var7.field_Bb.field_gb &&
                     var15 != 0) {
-                    sn.field_e = var7.field_Gb;
+                    UrlRequest.field_e = var7.field_Gb;
                   }
                 }
                 var7 = (gg) (var4.c(33));
@@ -255,20 +255,20 @@ final class ModalStack extends SingleChildContainer {
               stackIn_86_0 = ei.field_d.field_Eb;
             }
             if (((UiLayoutNode) (stackIn_86_0)).field_sb != 0) {
-              k.field_m = new sl(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              k.field_m = new HoverTooltip(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 0;
             }
             if (ei.field_d.field_zb.field_sb != 0) {
-              k.field_m = new sl(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, kf.field_yb, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              k.field_m = new HoverTooltip(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             du.field_f.field_E = uf.field_a;
-            kk.field_R.field_lb = false;
+            TriangleMesh.field_R.field_lb = false;
             if (ts.field_d == 1) {
-              ei.field_d.field_Cb.field_zb.field_E = aw.field_I;
+              ei.field_d.field_Cb.field_zb.field_E = TutorialChoiceDialog.field_I;
               if (var19 != 0) {
                 ei.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
               }
@@ -282,7 +282,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "se.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var3), "se.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -313,7 +313,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var5_ref), "se.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var5_ref), "se.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -350,7 +350,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "se.Q(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "se.Q(" + param0 + ')');
         }
     }
 
@@ -380,7 +380,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "se.L(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "se.L(" + param0 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ final class ModalStack extends SingleChildContainer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -424,12 +424,12 @@ final class ModalStack extends SingleChildContainer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          param1.addMouseListener(lw.field_e);
+          param1.addMouseListener(ProxyAuthenticationRequiredException.field_e);
           if (param0 != 15282) {
             ModalStack.m(110);
           }
-          param1.addMouseMotionListener(lw.field_e);
-          param1.addFocusListener(lw.field_e);
+          param1.addMouseMotionListener(ProxyAuthenticationRequiredException.field_e);
+          param1.addFocusListener(ProxyAuthenticationRequiredException.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -441,7 +441,7 @@ final class ModalStack extends SingleChildContainer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -470,7 +470,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "se.N(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "se.N(" + param0 + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "se.SA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "se.SA(" + param0 + ')');
         }
     }
 
@@ -507,7 +507,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "se.M(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "se.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -538,7 +538,7 @@ final class ModalStack extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "se.RA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "se.RA(" + param0 + ')');
         }
     }
 

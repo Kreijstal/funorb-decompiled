@@ -3,7 +3,7 @@
  */
 final class nv extends TextButton {
     static String field_G;
-    private fu field_K;
+    private GrowableIntList field_K;
     static int[] field_E;
     int field_H;
     static String[] field_I;
@@ -16,9 +16,9 @@ final class nv extends TextButton {
     final int a(byte param0) {
         if (param0 != 31) {
           nv.a(121, -34);
-          return this.field_K.a(1);
+          return this.field_K.size(1);
         }
-        return this.field_K.a(1);
+        return this.field_K.size(1);
     }
 
     final static CoverageBitmapFont a(int param0, byte[] param1) {
@@ -35,8 +35,8 @@ final class nv extends TextButton {
           if (param1 == null) {
             return null;
           }
-          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, lt.field_a, pq.field_O);
-          tk.h((byte) -92);
+          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, lt.field_a, SquadPickerDialog.field_O);
+          ScrollContainer.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class nv extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class nv extends TextButton {
             }
           }
         }
-        i.field_B = param2;
+        MessageDialog.field_B = param2;
         cu.field_c = param4;
         if (param3 != go.field_b) {
           if (0 == param0) {
@@ -84,7 +84,7 @@ final class nv extends TextButton {
             }
           }
         }
-        m.field_a = param1;
+        WhirlpoolHasher.field_a = param1;
         go.field_b = param0;
     }
 
@@ -95,8 +95,8 @@ final class nv extends TextButton {
         if (param1 < 0) {
           return -1;
         }
-        if (param1 < this.field_K.a(1)) {
-          return this.field_K.a(param1, (byte) -63);
+        if (param1 < this.field_K.size(1)) {
+          return this.field_K.get(param1, (byte) -63);
         }
         return -1;
     }
@@ -112,17 +112,17 @@ final class nv extends TextButton {
         try {
           ei.field_b.field_y = param1;
           ei.field_b.field_V = param3;
-          ei.field_b.field_q = ei.field_b.field_q + ij.field_s.field_q;
+          ei.field_b.field_q = ei.field_b.field_q + WeightedCacheEntry.field_s.field_q;
           if (param4 != 34) {
             nv.j(77);
           }
           ei.field_b.field_E = param2;
-          ij.field_s.field_s = ij.field_s.field_s + ij.field_s.field_q;
-          ij.field_s.field_q = param0;
-          ei.field_b.field_q = ei.field_b.field_q - ij.field_s.field_q;
-          ij.field_s.field_s = ij.field_s.field_s - ij.field_s.field_q;
+          WeightedCacheEntry.field_s.field_s = WeightedCacheEntry.field_s.field_s + WeightedCacheEntry.field_s.field_q;
+          WeightedCacheEntry.field_s.field_q = param0;
+          ei.field_b.field_q = ei.field_b.field_q - WeightedCacheEntry.field_s.field_q;
+          WeightedCacheEntry.field_s.field_s = WeightedCacheEntry.field_s.field_s - WeightedCacheEntry.field_s.field_q;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "nv.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nv.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -157,8 +157,8 @@ final class nv extends TextButton {
             if (param6 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_K.a(1) > var12; var12++) {
-                var13 = this.field_K.a(var12, (byte) -111) - var8_int;
+              for (var12 = 0; this.field_K.size(1) > var12; var12++) {
+                var13 = this.field_K.get(var12, (byte) -111) - var8_int;
                 var13 = var13 * var13;
                 if (var13 < var10) {
                   var10 = var13;
@@ -166,11 +166,11 @@ final class nv extends TextButton {
                 }
               }
               if (var11 >= 0) {
-                this.field_K.a(-1, var11);
+                this.field_K.removeAt(-1, var11);
               }
             }
           } else {
-            this.field_K.c(var8_int, 124);
+            this.field_K.add(var8_int, 124);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -183,7 +183,7 @@ final class nv extends TextButton {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -219,11 +219,11 @@ final class nv extends TextButton {
 
     final static boolean i(int param0) {
         if (param0 == 0) {
-          return eq.field_j != eq.field_a ? true : false;
+          return WeightedLruCache.field_j != WeightedLruCache.field_a ? true : false;
         }
         byte[] var2 = (byte[]) null;
         nv.a(-42, (byte[]) null);
-        return eq.field_j != eq.field_a ? true : false;
+        return WeightedLruCache.field_j != WeightedLruCache.field_a ? true : false;
     }
 
     private nv() throws Throwable {

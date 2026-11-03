@@ -60,7 +60,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           this.field_B = param0;
           this.field_I = new TextButton(RowRangeRequest.field_g, (UiListener) null);
           this.field_I.field_r = (WidgetPainter) ((Object) new op());
-          var7 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.k(107), this.m(-1522433695)});
+          var7 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.k(107), this.m(-1522433695)});
           var3 = 20;
           var4 = new TextWidgetPainter(gf.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
           this.field_D = new TextHotspotWidget(var7, var4);
@@ -79,7 +79,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           this.a(-43, this.field_I);
           this.a(55 + (var3 + var5), 1, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -135,17 +135,17 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
             return;
           }
           if (param2 == 0) {
-            rb.a((byte) -51, "terms.ws");
+            TextPromptDialog.a((byte) -51, "terms.ws");
             return;
           }
           if (1 == param2) {
-            rb.a((byte) -51, "privacy.ws");
+            TextPromptDialog.a((byte) -51, "privacy.ws");
             return;
           }
           if (2 != param2) {
             return;
           }
-          rb.a((byte) -51, "conduct.ws");
+          TextPromptDialog.a((byte) -51, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

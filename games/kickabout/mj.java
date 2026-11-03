@@ -14,15 +14,15 @@ final class mj {
         int var4 = Kickabout.field_G;
         hl.field_e = ng.a(0, param1, param0 - 7, 11, true, 30);
         hq.field_e = ng.a(30, param1, param0 ^ 111, 11, false, 60);
-        DualLinkNode.field_h = sr.a(60, param1, true, (byte) -67, 80, 11);
-        ModalPanel.field_G = sr.a(80, param1, false, (byte) -120, 95, 11);
+        DualLinkNode.field_h = SortCriterion.a(60, param1, true, (byte) -67, 80, 11);
+        ModalPanel.field_G = SortCriterion.a(80, param1, false, (byte) -120, 95, 11);
         c.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
         if (param0 != -39) {
           return;
         }
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
-            var3 = eb.field_i[var2_int];
+            var3 = DiskCacheWorker.field_i[var2_int];
             c.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.h());
             LoginForm.a(c.field_f[var2_int], 20684);
             DelayedServerPacket.a(100, 9863, var2_int + 96);
@@ -31,25 +31,25 @@ final class mj {
           var6 = var7;
           var5 = var6;
           double[] var2 = var5;
-          LineupView.field_x = fn.field_f.h();
-          LoggedGoal.field_o = kn.field_J.copy();
-          od.field_p = vl.field_g.copy();
-          nh.a(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
-          nh.a(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
-          nh.a(od.field_p.field_y, var7[0], var7[1], var7[2]);
+          LineupView.field_x = Trinket.field_f.h();
+          LoggedGoal.field_o = TrinketPickerDialog.field_J.copy();
+          od.field_p = LoginMethod.field_g.copy();
+          nh.adjustHsv(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
+          nh.adjustHsv(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
+          nh.adjustHsv(od.field_p.field_y, var7[0], var7[1], var7[2]);
           FadingSoundPlayer.field_p = eo.b(LineupView.field_x);
           ConsoleCommand.field_z = eo.a(FadingSoundPlayer.field_p);
-          pf.field_b = eo.b(ConsoleCommand.field_z);
+          ByteStorage.field_b = eo.b(ConsoleCommand.field_z);
           mt.field_d = new Sprite(ConsoleCommand.field_z.field_o, LoggedGoal.field_o.field_v);
-          qj.field_a = new Sprite(od.field_p.field_o, LineupView.field_x.field_v);
+          TextLayoutLine.field_a = new Sprite(od.field_p.field_o, LineupView.field_x.field_v);
           PacketBuffer.a(-70, mt.field_d);
           LoggedGoal.field_o.d(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
           TeamManagementScreen.e(param0 + 158);
-          PacketBuffer.a(-42, qj.field_a);
+          PacketBuffer.a(-42, TextLayoutLine.field_a);
           od.field_p.d(0, -od.field_p.field_v + SoftwareRasterizer.field_f);
           TeamManagementScreen.e(118);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class mj {
           }
           pi.field_b.removeSubstream(param1);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

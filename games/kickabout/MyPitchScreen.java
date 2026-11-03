@@ -28,9 +28,9 @@ final class MyPitchScreen extends TeamManagementScreen {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var4_int = param0.b(param1, -1);
-          var5 = param0.a((byte) -70, param3, var4_int);
-          stackIn_4_0 = aw.a(var5, var4_int, param0, 2);
+          var4_int = param0.getGroupId(param1, -1);
+          var5 = param0.getFileId((byte) -70, param3, var4_int);
+          stackIn_4_0 = TutorialChoiceDialog.a(var5, var4_int, param0, 2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -67,9 +67,9 @@ final class MyPitchScreen extends TeamManagementScreen {
         boolean stackIn_13_1 = false;
         var7 = Kickabout.field_G;
         super.enterScreen(0, param1, param2);
-        this.field_F = gf.a(KitStyleTile.field_yb, param0, tk.field_Ib, 3231);
-        this.field_I = gf.a(KitStyleTile.field_yb, 1, tk.field_Ib, 3231);
-        cf.field_Gb.field_jb = new IntrusiveDeque();
+        this.field_F = gf.a(KitStyleTile.field_yb, param0, ScrollContainer.field_Ib, 3231);
+        this.field_I = gf.a(KitStyleTile.field_yb, 1, ScrollContainer.field_Ib, 3231);
+        RankingRowNode.field_Gb.field_jb = new IntrusiveDeque();
         for (var4 = 0; 3 > var4; var4++) {
           for (var5 = 0; 4 > var5; var5++) {
             boolean decompiledFrameRemainder0 = true;
@@ -88,14 +88,14 @@ final class MyPitchScreen extends TeamManagementScreen {
               stackIn_13_1 = true;
             }
             stackIn_11_0.field_lb = stackIn_13_1;
-            cf.field_Gb.addChild((byte) -104, (UiLayoutNode) (var6));
+            RankingRowNode.field_Gb.addChild((byte) -104, (UiLayoutNode) (var6));
           }
         }
-        cf.field_Gb.field_s = 665;
-        cf.field_Gb.b(0, false);
+        RankingRowNode.field_Gb.field_s = 665;
+        RankingRowNode.field_Gb.b(0, false);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         int var1 = -127 % ((param0 - 61) / 56);
     }
@@ -113,10 +113,10 @@ final class MyPitchScreen extends TeamManagementScreen {
         SoftwareRasterizer.a(var3, 95, 348, 106, 10, 65793, 96);
         SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 96);
         SoftwareRasterizer.a(var3, 314, 348, 100, 10, 65793, 96);
-        for (var4 = 0; var4 < cf.field_Gb.field_jb.f(606511077).length; var4++) {
-          ((PitchOptionTile) (cf.field_Gb.field_jb.f(param0 ^ -606511074)[var4])).j(0);
+        for (var4 = 0; var4 < RankingRowNode.field_Gb.field_jb.f(606511077).length; var4++) {
+          ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.f(param0 ^ -606511074)[var4])).j(0);
         }
-        cf.field_Gb.a(96, false);
+        RankingRowNode.field_Gb.a(96, false);
         if (!this.field_F) {
           SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 228);
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
@@ -142,8 +142,8 @@ final class MyPitchScreen extends TeamManagementScreen {
         if (param0 != -38) {
           field_G = -0.01516130877366001;
         }
-        cf.field_Gb = new UiLayoutNode();
-        cf.field_Gb.a(true, 390, 25, 100, 440);
+        RankingRowNode.field_Gb = new UiLayoutNode();
+        RankingRowNode.field_Gb.a(true, 390, 25, 100, 440);
     }
 
     final void drawOverlay(boolean param0, int param1) {
@@ -159,9 +159,9 @@ final class MyPitchScreen extends TeamManagementScreen {
         int var3;
         var4 = Kickabout.field_G;
         super.updateScreen((byte) 101, param1);
-        cf.field_Gb.field_s = this.slideOffsetX + 25;
-        cf.field_Gb.b(0, param1);
-        var3_ref_jt = (PitchOptionTile) (cf.field_Gb.field_jb.g(24009));
+        RankingRowNode.field_Gb.field_s = this.slideOffsetX + 25;
+        RankingRowNode.field_Gb.b(0, param1);
+        var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.g(24009));
         while (var3_ref_jt != null) {
           var3_ref_jt.c(3784, param1);
           if (var3_ref_jt.field_Ab != null &&
@@ -171,13 +171,13 @@ final class MyPitchScreen extends TeamManagementScreen {
             if (var3_ref_jt.field_sb != 0 &&
               var3_ref_jt.i(-29050)) {
               if (var3_ref_jt.k(-9)) {
-                var3_ref_jt = (PitchOptionTile) (cf.field_Gb.field_jb.c(33));
+                var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.c(33));
                 continue;
               }
-              rt.b(var3_ref_jt.field_Db, 97, var3_ref_jt.field_zb);
+              StatChoiceDialog.b(var3_ref_jt.field_Db, 97, var3_ref_jt.field_zb);
             }
           }
-          var3_ref_jt = (PitchOptionTile) (cf.field_Gb.field_jb.c(33));
+          var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.c(33));
         }
         tc.a(ic.field_h.field_x, 5464);
         var3 = 4 % ((param0 - 38) / 60);
@@ -207,32 +207,32 @@ final class MyPitchScreen extends TeamManagementScreen {
             field_G = 1.4183330929861455;
           }
           try {
-            if (ci.field_a == 0) {
-              iv.field_o = hf.field_e.a(true, tk.field_yb, nb.field_b);
-              ci.field_a = ci.field_a + 1;
+            if (IterableDualLinkDeque.field_a == 0) {
+              iv.field_o = PainterStyle.field_e.a(true, ScrollContainer.field_yb, GameSoundEffect.field_b);
+              IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
             }
-            if (ci.field_a == 1) {
+            if (IterableDualLinkDeque.field_a == 1) {
               if (iv.field_o.field_a == 2) {
                 stackIn_16_0 = vk.a(-120, -1);
                 return stackIn_16_0;
               }
               if (1 == iv.field_o.field_a) {
-                ci.field_a = ci.field_a + 1;
+                IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
               }
             }
-            if (ci.field_a == 2) {
-              AnimationSkeleton.field_e = new BufferedSocket((java.net.Socket) (iv.field_o.field_b), hf.field_e);
+            if (IterableDualLinkDeque.field_a == 2) {
+              AnimationSkeleton.field_e = new BufferedSocket((java.net.Socket) (iv.field_o.field_b), PainterStyle.field_e);
               var2 = new PacketBuffer(13);
-              ImageProducerRasterBuffer.a(or.field_c, rc.field_f, var2, -3210, wo.field_k);
+              ImageProducerRasterBuffer.a(or.field_c, GzipDecoder.field_f, var2, -3210, wo.field_k);
               var2.writeByte(param0 + 52, 15);
               var2.writeInt(param0 ^ -44, gg.field_Db);
               AnimationSkeleton.field_e.a(13, (byte) -127, 0, var2.field_f);
-              ci.field_a = ci.field_a + 1;
-              qq.field_I = 30000L + nj.a(93);
+              IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
+              LoginRequiredDialog.field_I = 30000L + nj.monotonicMillis(93);
             }
-            if (ci.field_a == 3) {
+            if (IterableDualLinkDeque.field_a == 3) {
               if (AnimationSkeleton.field_e.a((byte) 63) <= 0) {
-                if (nj.a(param0 ^ 102) > qq.field_I) {
+                if (nj.monotonicMillis(param0 ^ 102) > LoginRequiredDialog.field_I) {
                   stackIn_32_0 = vk.a(-126, -2);
                   return stackIn_32_0;
                 }
@@ -242,16 +242,16 @@ final class MyPitchScreen extends TeamManagementScreen {
                   stackIn_27_0 = vk.a(param0 - 182, var1_int);
                   return stackIn_27_0;
                 }
-                ci.field_a = ci.field_a + 1;
+                IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
               }
             }
-            if (ci.field_a != 4) {
+            if (IterableDualLinkDeque.field_a != 4) {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            ParticipantStatus.field_t.a(AnimationSkeleton.field_e, 20, ac.field_f);
+            ParticipantStatus.field_t.a(AnimationSkeleton.field_e, 20, TrinketUnlockNotice.field_f);
             AnimationSkeleton.field_e = null;
-            ci.field_a = 0;
+            IterableDualLinkDeque.field_a = 0;
             iv.field_o = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;

@@ -36,8 +36,8 @@ final class ng {
         var14 = Kickabout.field_G;
         var15 = new IndexedSprite[6];
         var6 = var15;
-        if (!vi.field_n) {
-          var7_ref_kg = eo.a(bt.a(-126, param4, param3));
+        if (!NanoTickClock.field_n) {
+          var7_ref_kg = eo.toIndexedSprite(bt.a(-126, param4, param3));
           for (var8_int = 0; 6 > var8_int; var8_int++) {
             var15[var8_int] = var7_ref_kg;
           }
@@ -72,7 +72,7 @@ final class ng {
             var17 = (PlayerModelPreview) (var8.c(33));
           }
           TeamManagementScreen.e(121);
-          var6[var9Lifetime1] = eo.a(var10);
+          var6[var9Lifetime1] = eo.toIndexedSprite(var10);
         }
         return var6;
     }
@@ -114,7 +114,7 @@ final class ng {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -143,20 +143,20 @@ final class ng {
           if (this.field_g[var3] != 0) {
             if (this.field_g[var3] != 1) {
               if (2 == this.field_g[var3]) {
-                var2[var3] = eb.field_g[this.field_h[var3]];
+                var2[var3] = DiskCacheWorker.field_g[this.field_h[var3]];
               } else {
                 if (this.field_g[var3] == 3) {
-                  var2[var3] = kp.field_g[this.field_h[var3]];
+                  var2[var3] = LobbyGameRecord.field_g[this.field_h[var3]];
                 }
               }
             } else {
-              var2[var3] = qb.field_Qb[this.field_h[var3]];
+              var2[var3] = GameSetupPanel.field_Qb[this.field_h[var3]];
             }
           } else {
             var2[var3] = this.field_f[var3];
           }
         }
-        return vo.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
+        return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
     }
 
     final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
@@ -173,11 +173,11 @@ final class ng {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.b(param1, param2 - 3);
+          var4_int = param3.getGroupId(param1, param2 - 3);
           if (param2 != 2) {
             field_j = (Sprite[]) null;
           }
-          var5 = param3.a((byte) -104, param0, var4_int);
+          var5 = param3.getFileId((byte) -104, param0, var4_int);
           stackIn_3_0 = dk.a(var4_int, var5, (byte) -123, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class ng {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class ng {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_k = null;
         if (param0 <= 40) {

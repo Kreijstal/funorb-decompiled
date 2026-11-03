@@ -11,7 +11,7 @@ final class fc {
     static boolean field_d;
     static int[] field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_e = null;
         field_g = null;
@@ -37,12 +37,12 @@ final class fc {
             if (param1 != 8) {
             } else {
               param1 = 2;
-              if (!hk.field_G) {
+              if (!AuctionBidDialog.field_G) {
                 param0 = cb.field_f;
               } else {
-                param0 = dt.field_j;
+                param0 = OffscreenPlayerArrow.field_j;
               }
-              IsSixCommand.field_E.a(ep.field_b, (byte) 120);
+              IsSixCommand.field_E.setUsername(ep.field_b, (byte) 120);
             }
             if (param1 == 10) {
               pc.a((byte) -126);
@@ -50,7 +50,7 @@ final class fc {
             }
             if (var4 != 0) {
               if (po.field_f) {
-                param0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, EmailAvailabilityValidator.field_l, new String[]{param0});
+                param0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, EmailAvailabilityValidator.field_l, new String[]{param0});
               }
               if (is.field_a) {
                 param0 = AccountTermsPanel.field_L;
@@ -59,13 +59,13 @@ final class fc {
             }
             if (param1 != 256 &&
               param1 != 10 &&
-              !hk.field_G) {
-              IsSixCommand.field_E.h((byte) -76);
+              !AuctionBidDialog.field_G) {
+              IsSixCommand.field_E.focusFields((byte) -76);
               return;
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

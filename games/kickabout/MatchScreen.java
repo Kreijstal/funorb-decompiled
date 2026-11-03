@@ -27,18 +27,18 @@ final class MatchScreen extends AppScreen {
     static String field_x;
     static Sprite field_l;
 
-    final void f(int param0) {
+    final void offerDraw(int param0) {
         if (!this.isOnlineMatch) {
           throw new IllegalStateException();
         }
         if (!this.isSpectator(-2) &&
           !this.matchState.participantStatus[this.localSeat].resigned) {
-          this.a(-16046, 2);
+          this.sendMatchControl(-16046, 2);
         }
         int var2 = 63 / ((33 - param0) / 49);
     }
 
-    final boolean d(byte param0) {
+    final boolean isGameOverViewShown(byte param0) {
         int var2 = -114 % ((19 - param0) / 39);
         return this.phaseController instanceof GameOverView;
     }
@@ -118,7 +118,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -133,9 +133,9 @@ final class MatchScreen extends AppScreen {
         boolean decompiledFrameRemainder0 = true;
         if (!this.isSpectator(-2) &&
           this.matchState.participantStatus[this.localSeat].isActive(3511) &&
-          wt.field_x >= 0 &&
+          ArrayWidgetContainer.field_x >= 0 &&
           us.field_j >= 0 &&
-          wt.field_x < 640 &&
+          ArrayWidgetContainer.field_x < 640 &&
           us.field_j < 480 && (((PlayingView) (this.phaseController)).b((byte) -82) ||
           !ArchiveIndex.b(640))) {
           stackIn_16_0 = true;
@@ -206,12 +206,12 @@ final class MatchScreen extends AppScreen {
         if (this.isOnlineMatch) {
           this.field_i.tick(4);
         }
-        ie.g(-128);
+        SellPlayerDialog.g(-128);
         re.b(101);
-        this.phaseController.a(true);
+        this.phaseController.updateCamera(true);
         this.phaseController.update(-117, param1);
         if (this.isOnlineMatch &&
-          !pq.field_K) {
+          !SquadPickerDialog.field_K) {
           if (this.isSpectator(-2)) {
             stackIn_18_0 = 0;
           } else {
@@ -287,7 +287,7 @@ final class MatchScreen extends AppScreen {
           bt.field_e = false;
           stackIn_19_1 = (param4);
           this.field_s = stackIn_19_1;
-          var21 = ha.field_F;
+          var21 = WelcomeDialog.field_F;
           var20 = var21;
           var19 = var20;
           var16 = var19;
@@ -328,7 +328,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -347,9 +347,9 @@ final class MatchScreen extends AppScreen {
 
     final void leaveMatch(boolean param0, int param1) {
         if (param1 != 18) {
-          this.c(27);
+          this.resign(27);
         }
-        ji.k(0);
+        ScrollBar.k(0);
         if (this.isSpectator(param1 ^ -20)) {
           return;
         }
@@ -373,9 +373,9 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    final IntrusiveDeque e(byte param0) {
+    final IntrusiveDeque getGameOverEntries(byte param0) {
         int var2 = -22 % ((param0 + 66) / 57);
-        if (!this.d((byte) -59)) {
+        if (!this.isGameOverViewShown((byte) -59)) {
           return null;
         }
         return ((GameOverView) (this.phaseController)).h(-19510);
@@ -408,7 +408,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -443,7 +443,7 @@ final class MatchScreen extends AppScreen {
           }
         }
         if (var6 != null) {
-          RenderedFootballer.a(vo.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
+          RenderedFootballer.a(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
         }
     }
 
@@ -526,7 +526,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -536,7 +536,7 @@ final class MatchScreen extends AppScreen {
             this.c((byte) 62);
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ap.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ap.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -552,7 +552,7 @@ final class MatchScreen extends AppScreen {
     }
 
     final void a(int param0, ManagerAction param1, byte param2, int param3) {
-        if (!this.d((byte) -68)) {
+        if (!this.isGameOverViewShown((byte) -68)) {
           return;
         }
         try {
@@ -561,7 +561,7 @@ final class MatchScreen extends AppScreen {
             this.field_v = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ap.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ap.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -586,9 +586,9 @@ final class MatchScreen extends AppScreen {
         }
         if (!this.stateReceived) {
           var3_ref_uo = IsSixCommand.field_C;
-          var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).a(bm.field_K) >> 1;
+          var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).a(AuctionListingDialog.field_K) >> 1;
           SoftwareRasterizer.a(320 - var4, 223, var4 + var4, 34, 6, 65793, 128);
-          ((BitmapFont) ((Object) var3_ref_uo)).d(bm.field_K, 320, 246, 16777215, -1);
+          ((BitmapFont) ((Object) var3_ref_uo)).d(AuctionListingDialog.field_K, 320, 246, 16777215, -1);
           return;
         }
         this.phaseController.drawContent(1);
@@ -645,7 +645,7 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void sendMatchControl(int param0, int param1) {
         if (param0 != -16046) {
           field_x = (String) null;
         }
@@ -679,7 +679,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -696,7 +696,7 @@ final class MatchScreen extends AppScreen {
         this.createPhaseController(-2);
         this.matchState.phaseTime = -1;
         if (2 == this.matchState.phase) {
-          this.matchState.enqueueEvent(SquadGridWidget.a(2, 1, (byte) 0), -127);
+          this.matchState.enqueueEvent(SquadGridWidget.createFormationEvent(2, 1, (byte) 0), -127);
         }
         if (this.matchState.phase == 3) {
           for (var3 = 0; 4 > var3; var3++) {
@@ -738,7 +738,7 @@ final class MatchScreen extends AppScreen {
           return false;
         }
         if (param0 == tt.field_b) {
-          vl.field_d = !vl.field_d ? true : false;
+          LoginMethod.field_d = !LoginMethod.field_d ? true : false;
         }
         if (!this.stateReceived) {
           return false;
@@ -803,8 +803,8 @@ final class MatchScreen extends AppScreen {
           if (this.matchState.phase > 0 &&
             this.matchState.phase < 5 && (RankingsScreen.field_C != this.matchState.tier ||
             ih.field_c != this.matchState.surface ||
-            !vi.field_n)) {
-            sb.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
+            !NanoTickClock.field_n)) {
+            StringCursor.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
           }
           if (5 == this.matchState.phase &&
             param1.readUnsignedByte((byte) -113) == 1) {
@@ -854,7 +854,7 @@ final class MatchScreen extends AppScreen {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -865,7 +865,7 @@ final class MatchScreen extends AppScreen {
         return this.localSeat == -2 ? true : false;
     }
 
-    final void c(int param0) {
+    final void resign(int param0) {
         if (param0 > -10) {
           IntrusiveDeque var3 = (IntrusiveDeque) null;
           this.a((byte) -89, (IntrusiveDeque) null);
@@ -875,7 +875,7 @@ final class MatchScreen extends AppScreen {
         }
         if (!this.isSpectator(-2) &&
           !this.matchState.participantStatus[this.localSeat].resigned) {
-          this.a(-16046, 1);
+          this.sendMatchControl(-16046, 1);
         }
     }
 

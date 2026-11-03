@@ -33,7 +33,7 @@ final class wo extends KeyedLoginCredentials {
           var5 = param0.field_o;
           var6 = param0.field_v;
           var7 = ug.a(0, param1.field_kb >> 16) - (var5 >> 1);
-          var8 = -(var6 >> 1) + lf.a((byte) -101, param1.field_bb >> 16);
+          var8 = -(var6 >> 1) + IntKeyLookup.a((byte) -101, param1.field_bb >> 16);
           if (InstrumentNoteMask.field_i == 256) {
             if (1 == tb.field_v) {
               param0.b(var7, var8, param3);
@@ -65,7 +65,7 @@ final class wo extends KeyedLoginCredentials {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

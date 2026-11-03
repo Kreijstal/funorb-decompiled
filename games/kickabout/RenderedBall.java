@@ -5,7 +5,7 @@ final class RenderedBall extends BallAgent {
     private int[] field_G;
     static boolean[] field_T;
     private int[] field_D;
-    private cc field_Q;
+    private FixedQuaternion field_Q;
     static String field_H;
     private int field_J;
     static int field_C;
@@ -84,11 +84,11 @@ final class RenderedBall extends BallAgent {
             var4 != 0) &&
             (8388608 > Math.abs(var3_intLifetime1) &&
             Math.abs(var4) < 8388608)) {
-            var5 = GameLoopApplet.a(var3_intLifetime1, var4, -23146);
+            var5 = GameLoopApplet.fixedPointDistance(var3_intLifetime1, var4, -23146);
             if (var5 != 0) {
               var4 = (int)(((long)var4 << 16) / (long)var5);
               var3_intLifetime1 = (int)(((long)var3_intLifetime1 << 16) / (long)var5);
-              IntrusiveDeque.field_d.a(var3_intLifetime1, true, 0, var4, var5 >> 12);
+              IntrusiveDeque.field_d.setFromAxisAngle(var3_intLifetime1, true, 0, var4, var5 >> 12);
               this.field_Q.a(IntrusiveDeque.field_d, -49);
               this.field_L = true;
             }
@@ -97,9 +97,9 @@ final class RenderedBall extends BallAgent {
             if (!this.field_y &&
               this.field_x) {
               var5Lifetime1 = 41;
-              var6 = GameLoopApplet.a(var3_intLifetime1, var4, -23146);
+              var6 = GameLoopApplet.fixedPointDistance(var3_intLifetime1, var4, -23146);
               var7 = var6 >> 10;
-              he.a(128, false, 240, we.field_f + var7, var5Lifetime1);
+              LobbyPlayerRow.a(128, false, 240, we.field_f + var7, var5Lifetime1);
             }
           } else {
             if (ih.field_c != 0) {
@@ -122,7 +122,7 @@ final class RenderedBall extends BallAgent {
             if (ih.field_c == 2) {
               var6 -= 40;
             }
-            he.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
+            LobbyPlayerRow.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
           }
           if (this.highFriction > 0) {
             var5Lifetime2 = this.horizontalSpeedSquared(92) >> 16;
@@ -143,7 +143,7 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -185,11 +185,11 @@ final class RenderedBall extends BallAgent {
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(param1, param2);
         if (param4 != 300) {
-          tv var7 = (tv) null;
-          RenderedBall.a((byte) -13, (tv) null);
+          ChatMessage var7 = (ChatMessage) null;
+          RenderedBall.a((byte) -13, (ChatMessage) null);
         }
         if (this.field_L) {
-          this.field_Q.a(8, this.field_G);
+          this.field_Q.toRotationMatrix(8, this.field_G);
           this.field_L = false;
         }
         if (this.field_J != param3) {
@@ -198,7 +198,7 @@ final class RenderedBall extends BallAgent {
         EmailSyntaxValidator.field_l[this.modelId].a(this.field_D, this.field_G);
     }
 
-    private final int k(int param0) {
+    private final int getRenderedX(int param0) {
         if (param0 != 14963) {
           return -121;
         }
@@ -246,7 +246,7 @@ final class RenderedBall extends BallAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "ob.MA(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "ob.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -351,14 +351,14 @@ final class RenderedBall extends BallAgent {
           var6 = BufferedSocket.field_f;
           var7 = EmailAvailabilityValidator.field_q.field_e;
           for (var4 = 0; var4 < 8; var4++) {
-            var6[var4] = hf.a(var6[var4], var7[var4]);
+            var6[var4] = PainterStyle.a(var6[var4], var7[var4]);
           }
-          var8 = ha.field_F;
+          var8 = WelcomeDialog.field_F;
           var9 = EmailAvailabilityValidator.field_q.field_e;
           var10 = 0;
           var4Lifetime1 = var10;
           while (8 > var10) {
-            var8[var10] = qj.b(var8[var10], ~var9[var10]);
+            var8[var10] = TextLayoutLine.b(var8[var10], ~var9[var10]);
             var10++;
           }
           EmailAvailabilityValidator.field_q = null;
@@ -366,7 +366,7 @@ final class RenderedBall extends BallAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "ob.HA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "ob.HA(" + param0 + ')');
         }
     }
 
@@ -374,12 +374,12 @@ final class RenderedBall extends BallAgent {
         int var2 = 0;
         int var8 = Kickabout.field_G;
         int var2Lifetime1;
-        m.field_d = new int[32];
+        WhirlpoolHasher.field_d = new int[32];
         if (param0 >= -7) {
           return;
         }
-        for (var2 = 0; var2 < m.field_d.length; var2++) {
-          m.field_d[var2] = 65793 * (var2 << 3);
+        for (var2 = 0; var2 < WhirlpoolHasher.field_d.length; var2++) {
+          WhirlpoolHasher.field_d[var2] = 65793 * (var2 << 3);
         }
         var2Lifetime1 = this.field_M >> 16;
         if (var2Lifetime1 > 256) {
@@ -391,9 +391,9 @@ final class RenderedBall extends BallAgent {
         int var3 = InstrumentNoteMask.field_i * (14 - (var2Lifetime1 * 14 >> 10)) >> 8;
         int var4 = -5 * InstrumentNoteMask.field_i >> 8;
         int var5 = 4 * InstrumentNoteMask.field_i >> 8;
-        int var6 = -1 + m.field_d.length;
+        int var6 = -1 + WhirlpoolHasher.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
-        nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, lf.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, m.field_d);
+        nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
     }
 
     final void a(MatchAgent param0, int param1, int param2, int param3) {
@@ -440,13 +440,13 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void a(byte param0, int param1, int param2) {
-        int var4 = ei.a(param2, (byte) -23);
-        int var5 = we.a(param2, false);
+        int var4 = ei.sine(param2, (byte) -23);
+        int var5 = we.cosine(param2, false);
         this.field_J = param1;
         this.field_D[3] = 65536;
         this.field_D[1] = var4 * param1 >> 16;
@@ -458,7 +458,7 @@ final class RenderedBall extends BallAgent {
         this.field_D[7] = -var5;
     }
 
-    final static String a(byte param0, tv param1) {
+    final static String a(byte param0, ChatMessage param1) {
         String stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -493,7 +493,7 @@ final class RenderedBall extends BallAgent {
               var3 = "[" + ButtonMenuScreen.field_z + "] ";
             }
             if (1 == param1.field_c) {
-              var3 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{param1.field_l}) + "] ";
+              var3 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{param1.field_l}) + "] ";
             }
             if (param1.field_c == 4 &&
               null != SingleChildContainer.field_x) {
@@ -509,9 +509,9 @@ final class RenderedBall extends BallAgent {
             if (!param1.field_m) {
               if (param1.field_j == 0 &&
                 param1.field_p == 0) {
-                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
+                var3 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
               } else {
-                var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{(String) (var2)});
+                var3 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{(String) (var2)});
               }
             }
           }
@@ -527,7 +527,7 @@ final class RenderedBall extends BallAgent {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw nb.a((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -642,7 +642,7 @@ final class RenderedBall extends BallAgent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var5), "ob.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var5), "ob.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -651,8 +651,8 @@ final class RenderedBall extends BallAgent {
           return;
         }
         int var2 = this.j(-1);
-        int var3 = ug.a(0, this.k(param0 + 14899));
-        int var4 = lf.a((byte) -107, this.c(true));
+        int var3 = ug.a(0, this.getRenderedX(param0 + 14899));
+        int var4 = IntKeyLookup.a((byte) -107, this.c(true));
         if (tb.field_v != 1) {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;
           this.a(300, var3, var4, var2, 300);
@@ -671,15 +671,15 @@ final class RenderedBall extends BallAgent {
         try {
           this.a(param0, false);
           this.field_G = new int[12];
-          this.field_Q = new cc();
-          this.field_Q.a(8, this.field_G);
+          this.field_Q = new FixedQuaternion();
+          this.field_Q.toRotationMatrix(8, this.field_G);
           this.field_D = new int[12];
           this.a((byte) 127, 1200, 300);
           this.field_N = this.positionX;
           this.field_M = this.height;
           this.field_E = this.positionY;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

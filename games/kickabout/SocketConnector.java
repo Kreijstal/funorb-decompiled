@@ -47,13 +47,13 @@ abstract class SocketConnector {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     abstract java.net.Socket a(int param0) throws IOException;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 <= 68) {
           return;

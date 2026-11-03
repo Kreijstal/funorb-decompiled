@@ -9,7 +9,7 @@ final class ConsoleEvaluationException extends Exception {
     String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_e = null;
           field_a = null;
@@ -28,9 +28,9 @@ final class ConsoleEvaluationException extends Exception {
 
     final static void a(int param0, int param1) {
         int var2 = (-640 + ea.field_a) / 2;
-        int var3 = rb.field_Bb * rb.field_Bb;
+        int var3 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var4 = -(param1 * param1) + var3;
-        dn.field_Cb.a(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
+        TrinketIcon.field_Cb.a(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
         AuctionItem.field_p.a(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
         int var5 = 66 % ((73 - param0) / 52);
     }
@@ -40,7 +40,7 @@ final class ConsoleEvaluationException extends Exception {
         int var3;
         var3 = Kickabout.field_G;
         if (param1 == 0) {
-          if (eq.field_d <= 0) {
+          if (WeightedLruCache.field_d <= 0) {
             if (!PlayArea.a(100)) {
               var2 = 1;
             } else {
@@ -75,8 +75,8 @@ final class ConsoleEvaluationException extends Exception {
             var2 = 3;
           }
         } else {
-          ConsoleEvaluationException.a(-109);
-          if (eq.field_d <= 0) {
+          ConsoleEvaluationException.releaseStatics(-109);
+          if (WeightedLruCache.field_d <= 0) {
             if (!PlayArea.a(100)) {
               var2 = 1;
               if (ArchiveIndex.field_h == null &&
@@ -120,7 +120,7 @@ final class ConsoleEvaluationException extends Exception {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "dw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "dw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

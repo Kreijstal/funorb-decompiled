@@ -36,7 +36,7 @@ final class um {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_g = null;
         field_f = null;
@@ -46,7 +46,7 @@ final class um {
           field_c = null;
           return;
         }
-        um.a(75);
+        um.releaseStatics(75);
         field_c = null;
     }
 

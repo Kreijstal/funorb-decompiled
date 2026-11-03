@@ -39,10 +39,10 @@ final class fj {
 
     final static void a(int param0) {
         wd.field_l.k(119);
-        if (nm.field_d == null) {
-          nm.field_d = new LoadingProgressDialog(wd.field_l, st.field_m);
+        if (AnimationClip.field_d == null) {
+          AnimationClip.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
         }
-        wd.field_l.a(nm.field_d, false);
+        wd.field_l.a(AnimationClip.field_d, false);
         if (param0 == -45) {
           return;
         }
@@ -52,7 +52,7 @@ final class fj {
 
     final static IntrusiveDeque a(boolean param0, String param1) {
         IntrusiveDeque var2 = null;
-        sb var3 = null;
+        StringCursor var3 = null;
         int var4 = 0;
         int var5 = 0;
         IntrusiveDeque stackIn_3_0 = null;
@@ -69,9 +69,9 @@ final class fj {
             stackIn_3_0 = (IntrusiveDeque) null;
             return stackIn_3_0;
           }
-          var3 = new sb(param1);
-          while (!var3.a((byte) 62)) {
-            var4 = var3.b(-78);
+          var3 = new StringCursor(param1);
+          while (!var3.isAtEnd((byte) 62)) {
+            var4 = var3.nextChar(-78);
             if (Character.isWhitespace((char) var4)) {
               continue;
             }
@@ -92,7 +92,7 @@ final class fj {
               var2.a(tl.a(var3, false), 3);
               continue;
             }
-            var2.a(cf.a(-9323, var3), 3);
+            var2.a(RankingRowNode.a(-9323, var3), 3);
           }
           stackIn_20_0 = var2;
           return stackIn_20_0;
@@ -106,7 +106,7 @@ final class fj {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

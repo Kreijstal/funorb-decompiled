@@ -29,7 +29,7 @@ final class IntrusiveNodeHashTable {
           param0.field_d.field_b = param0;
           param0.field_a = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class IntrusiveNodeHashTable {
         if (param1 != 415422632) {
           return;
         }
-        cf.field_Db = param0;
+        RankingRowNode.field_Db = param0;
         dc.field_d = 0;
         CachedArchiveSource.field_s = 1;
     }
@@ -86,7 +86,7 @@ final class IntrusiveNodeHashTable {
         this.field_e = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_g = null;
         if (param0 != -111) {
@@ -168,7 +168,7 @@ final class IntrusiveNodeHashTable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

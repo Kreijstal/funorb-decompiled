@@ -11,52 +11,52 @@ final class pe {
           return 0;
         }
         if (vv.field_r == 0) {
-          if (!bw.field_b.d(-93)) {
+          if (!bw.field_b.ensureIndex(-93)) {
             return 20;
           }
           if (!bw.field_b.a(false, "commonui")) {
             return 40;
           }
-          if (!gs.field_c.d(-58)) {
+          if (!gs.field_c.ensureIndex(-58)) {
             return 50;
           }
           if (!gs.field_c.a(false, "commonui")) {
             return 60;
           }
-          if (!PlayerStats.field_k.d(param0 - 179)) {
+          if (!PlayerStats.field_k.ensureIndex(param0 - 179)) {
             return 70;
           }
-          if (!PlayerStats.field_k.a(false)) {
+          if (!PlayerStats.field_k.ensureAllGroupsAvailable(false)) {
             return 80;
           }
         } else {
-          if (null != qq.field_H) {
-            if (!qq.field_H.d(-94)) {
+          if (null != LoginRequiredDialog.field_H) {
+            if (!LoginRequiredDialog.field_H.ensureIndex(-94)) {
               return 14;
             }
-            if (!qq.field_H.a("", (byte) -120)) {
+            if (!LoginRequiredDialog.field_H.a("", (byte) -120)) {
               return 29;
             }
-            if (!qq.field_H.a(false, "")) {
+            if (!LoginRequiredDialog.field_H.a(false, "")) {
               return 29;
             }
           }
-          if (!bw.field_b.d(-107)) {
+          if (!bw.field_b.ensureIndex(-107)) {
             return 43;
           }
           if (!bw.field_b.a(false, "commonui")) {
             return 57;
           }
-          if (!gs.field_c.d(-66)) {
+          if (!gs.field_c.ensureIndex(-66)) {
             return 71;
           }
           if (!gs.field_c.a(false, "commonui")) {
             return 80;
           }
-          if (!PlayerStats.field_k.d(-106)) {
+          if (!PlayerStats.field_k.ensureIndex(-106)) {
             return 82;
           }
-          if (!PlayerStats.field_k.a(false)) {
+          if (!PlayerStats.field_k.ensureAllGroupsAvailable(false)) {
             return 86;
           }
         }
@@ -72,27 +72,27 @@ final class pe {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          if (!n.a(false)) {
+          if (!ArchiveManager.a(false)) {
             if (null != SplashScreen.field_m &&
               SplashScreen.field_m.field_b) {
               UiWidget.h(0);
-              ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, hf.field_a), false);
+              ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, PainterStyle.field_a), false);
             }
             return;
           }
-          ValidatedTextWidget.field_Z.a(gw.field_c, 31947, nq.field_J, true);
+          ValidatedTextWidget.field_Z.a(gw.field_c, 31947, TournamentChampionDialog.field_J, true);
           if (param0 <= 104) {
             pe.b(104);
           }
           ValidatedTextWidget.field_Z.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            ValidatedTextWidget.field_Z.a(il.field_c, (byte) -91, cc.field_e);
+            ValidatedTextWidget.field_Z.a(il.field_c, (byte) -91, FixedQuaternion.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "pe.H(" + param0 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class pe {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class pe {
           param0.a(0, 0, 0, 0, 0, 0, 0, 700);
           TeamManagementScreen.e(param3 + 77);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -183,19 +183,19 @@ final class pe {
         try {
           ModalStack.field_C = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, byte param1) {
-        fn.a(param0, (byte) -32);
+        Trinket.a(param0, (byte) -32);
         if (param1 >= -114) {
           Sprite var3 = (Sprite) null;
           pe.a((ModelMesh) null, (Sprite) null, -104, -61);
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

@@ -10,7 +10,7 @@ final class vj {
     static int field_b;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_g = null;
         field_a = null;
@@ -36,12 +36,12 @@ final class vj {
             int[] var5 = var9;
             var6 = param1;
             var7 = param3;
-            var9[var6] = var7 + (qj.b(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (TextLayoutLine.b(var9[var6], 16711422) >> 1);
             param1++;
           }
           int var5_int = -26 / ((42 - param4) / 56);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

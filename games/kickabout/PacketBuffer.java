@@ -43,7 +43,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return hf.a((byte) -123, var4, var3, this.field_f);
+        return PainterStyle.a((byte) -123, var4, var3, this.field_f);
     }
 
     final void writeMedium(int param0, byte param1) {
@@ -128,7 +128,7 @@ class PacketBuffer extends IntrusiveNode {
           this.field_n = this.field_n + 1;
           this.field_f[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "iw.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iw.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -393,7 +393,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return hf.a((byte) -123, var4, var2, this.field_f);
+        return PainterStyle.a((byte) -123, var4, var2, this.field_f);
     }
 
     final int a(byte param0) {
@@ -465,11 +465,11 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_j = null;
         field_e = null;
@@ -477,8 +477,8 @@ class PacketBuffer extends IntrusiveNode {
         field_k = null;
         field_m = null;
         if (param0 != 88) {
-          he var2 = (he) null;
-          PacketBuffer.a((byte) 23, (he) null);
+          LobbyPlayerRow var2 = (LobbyPlayerRow) null;
+          PacketBuffer.a((byte) 23, (LobbyPlayerRow) null);
         }
     }
 
@@ -516,7 +516,7 @@ class PacketBuffer extends IntrusiveNode {
           tr.d(-12974);
           SoftwareRasterizer.a(param1.field_y, param1.field_o, param1.field_v);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "iw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -620,7 +620,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -681,12 +681,12 @@ class PacketBuffer extends IntrusiveNode {
           this.field_n = this.field_n + 1;
           this.field_f[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "iw.MA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iw.MA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0, he param1) {
-        he var2 = null;
+    final static void a(byte param0, LobbyPlayerRow param1) {
+        LobbyPlayerRow var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -698,10 +698,10 @@ class PacketBuffer extends IntrusiveNode {
         try {
           param1.c((byte) -109);
           var3 = -54 / ((param0 + 29) / 55);
-          var2 = (he) (rp.field_B.g(24009));
+          var2 = (LobbyPlayerRow) (rp.field_B.g(24009));
           while (var2 != null) {
             if (var2.a(param1, (byte) -82)) {
-              var2 = (he) (rp.field_B.c(33));
+              var2 = (LobbyPlayerRow) (rp.field_B.c(33));
               continue;
             }
             break;
@@ -722,7 +722,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -747,7 +747,7 @@ class PacketBuffer extends IntrusiveNode {
           this.writeShort(-1207444472, var8.length);
           this.writeBytes(0, var8.length, 1991220144, var8);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "iw.IA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iw.IA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -809,7 +809,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -844,7 +844,7 @@ class PacketBuffer extends IntrusiveNode {
           this.field_f = param0;
           this.field_n = 0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "iw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

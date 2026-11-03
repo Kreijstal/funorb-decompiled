@@ -19,10 +19,10 @@ class IntrusiveNode {
           if (bl.field_m[param2] > bl.field_m[param3]) {
             return false;
           }
-          if (w.field_a[param3] > w.field_a[param2]) {
+          if (DialogOverlay.field_a[param3] > DialogOverlay.field_a[param2]) {
             return true;
           }
-          if (w.field_a[param2] > w.field_a[param3]) {
+          if (DialogOverlay.field_a[param2] > DialogOverlay.field_a[param3]) {
             return false;
           }
           var4 = AccountMessagePanel.field_G[param2] + (AgeValidator.field_j[param2] + DropTargetWidget.field_B[param2]);
@@ -38,10 +38,10 @@ class IntrusiveNode {
           }
           return !(param2 >= param3);
         }
-        if (w.field_a[param2] < w.field_a[param3]) {
+        if (DialogOverlay.field_a[param2] < DialogOverlay.field_a[param3]) {
           return true;
         }
-        if (w.field_a[param2] > w.field_a[param3]) {
+        if (DialogOverlay.field_a[param2] > DialogOverlay.field_a[param3]) {
           return false;
         }
         if (bl.field_m[param2] < bl.field_m[param3]) {
@@ -116,7 +116,7 @@ class IntrusiveNode {
           }
           discarded$1 = param3.append(var4);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gn.QB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gn.QB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

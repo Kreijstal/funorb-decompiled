@@ -11,7 +11,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
     private boolean field_X;
     private String field_S;
     static String field_R;
-    private ou field_Y;
+    private StripedProgressBar field_Y;
 
     final void a(String param0, float param1, int param2, boolean param3) {
         boolean stackIn_4_1 = false;
@@ -50,7 +50,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -84,10 +84,10 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final static void a(int param0, ReceivedAuctionItem param1) {
         try {
-          np.field_Jb.a(new hk(param1, 19), 3);
+          ScrollPane.field_Jb.a(new AuctionBidDialog(param1, 19), 3);
           int var2_int = -76 / ((49 - param0) / 61);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,19 +100,19 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             var3_int = fj.field_b.paragraphHeight(this.field_S, 260, fj.field_b.field_G);
             this.a((byte) 110, var3_int + 150, 300);
           }
-          this.field_Y = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_Y = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_X = false;
           this.field_W = false;
           this.field_Y.field_w = true;
           this.a(-120, this.field_Y);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, int param1) {
         int var2 = 51 / ((param0 + 28) / 58);
-        np.field_Jb.a(new pw(param1), 3);
+        ScrollPane.field_Jb.a(new AuctionSettingsDialog(param1), 3);
     }
 
     static {

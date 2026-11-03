@@ -1,0 +1,114 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class UrlRequest {
+    static Sprite field_k;
+    private JaggrabDownloader field_h;
+    static BitmapFont field_a;
+    static int[] field_f;
+    static String[] field_b;
+    static String field_e;
+    static BitmapFont field_i;
+    private PacketBuffer field_d;
+    static String field_j;
+    static Vector field_g;
+    static byte[] field_c;
+
+    final boolean isDone(byte param0) {
+        if (null == this.field_h) {
+          return true;
+        }
+        if (!this.field_h.a((byte) 70)) {
+          return false;
+        }
+        this.field_d = this.field_h.b(0);
+        if (param0 < -78) {
+          this.field_h = null;
+          return true;
+        }
+        return false;
+    }
+
+    public static void releaseStatics(int param0) {
+        field_j = null;
+        if (param0 == -1316) {
+          field_a = null;
+          field_g = null;
+          field_b = null;
+          field_c = null;
+          field_f = null;
+          field_i = null;
+          field_e = null;
+          field_k = null;
+          return;
+        }
+        field_f = (int[]) null;
+        field_a = null;
+        field_g = null;
+        field_b = null;
+        field_c = null;
+        field_f = null;
+        field_i = null;
+        field_e = null;
+        field_k = null;
+    }
+
+    UrlRequest(NetworkGameClient param0) {
+        try {
+          java.net.URL var2 = null;
+          java.net.MalformedURLException var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            try {
+              var2 = param0.getCodeBase();
+              if (var2 == null) {
+                return;
+              }
+              this.field_h = new JaggrabDownloader(oo.field_c, new java.net.URL(var2, "motd"), 100000);
+              return;
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+              this.field_h = null;
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("sn.<init>(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final PacketBuffer getResult(boolean param0) {
+        if (param0) {
+          field_a = (BitmapFont) null;
+          return this.field_d;
+        }
+        return this.field_d;
+    }
+
+    static {
+        field_f = new int[4];
+        field_b = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
+        field_j = "Owner";
+        field_c = new byte[]{(byte)3, (byte)2, (byte)2, (byte)2};
+    }
+}

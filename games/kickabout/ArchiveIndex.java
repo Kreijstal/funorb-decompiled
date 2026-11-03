@@ -4,7 +4,7 @@
 final class ArchiveIndex {
     int field_g;
     int[] field_i;
-    lf field_q;
+    IntKeyLookup field_q;
     static boolean field_t;
     byte[][] field_k;
     private byte[] field_o;
@@ -21,18 +21,18 @@ final class ArchiveIndex {
     int[] field_f;
     private int field_n;
     private int[][] field_j;
-    lf[] field_s;
+    IntKeyLookup[] field_s;
 
     final static boolean b(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != 640) {
           return false;
         }
-        stackIn_9_0 = !(wt.field_x >= 0) || !(640 > wt.field_x) || !(us.field_j >= 0) || !(g.field_a.field_T >= us.field_j);
+        stackIn_9_0 = !(ArrayWidgetContainer.field_x >= 0) || !(640 > ArrayWidgetContainer.field_x) || !(us.field_j >= 0) || !(g.field_a.field_T >= us.field_j);
         return stackIn_9_0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_a = null;
         if (param0 != 0) {
@@ -156,7 +156,7 @@ final class ArchiveIndex {
               for (var11Lifetime5 = 0; var11Lifetime5 < this.field_n; var11Lifetime5++) {
                 this.field_l[this.field_b[var11Lifetime5]] = var18.readInt(4);
               }
-              this.field_q = new lf(this.field_l);
+              this.field_q = new IntKeyLookup(this.field_l);
             }
             for (var11Lifetime1 = 0; var11Lifetime1 < this.field_n; var11Lifetime1++) {
               this.field_c[this.field_b[var11Lifetime1]] = var18.readInt(4);
@@ -229,7 +229,7 @@ final class ArchiveIndex {
               }
             }
             if (var6 != 0) {
-              this.field_s = new lf[var9 + 1];
+              this.field_s = new IntKeyLookup[var9 + 1];
               this.field_j = new int[1 + var9][];
               for (var11Lifetime4 = 0; this.field_n > var11Lifetime4; var11Lifetime4++) {
                 var12Lifetime1 = this.field_b[var11Lifetime4];
@@ -247,7 +247,7 @@ final class ArchiveIndex {
                   }
                   this.field_j[var12Lifetime1][var15Lifetime1] = var18.readInt(4);
                 }
-                this.field_s[var12Lifetime1] = new lf(this.field_j[var12Lifetime1]);
+                this.field_s[var12Lifetime1] = new IntKeyLookup(this.field_j[var12Lifetime1]);
               }
               return;
             }
@@ -264,7 +264,7 @@ final class ArchiveIndex {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_o = jj.a(param0.length, param0, (byte) 91, 0);
+            this.field_o = MusicTrackMixer.a(param0.length, param0, (byte) 91, 0);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (param2[var4_int] != this.field_o[var4_int]) {
                 throw new RuntimeException();
@@ -288,7 +288,7 @@ final class ArchiveIndex {
           }
           this.a(26, param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

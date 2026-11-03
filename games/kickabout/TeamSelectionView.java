@@ -35,7 +35,7 @@ final class TeamSelectionView extends MatchPhaseView {
         int var4Lifetime1;
         var10 = Kickabout.field_G;
         this.drawPanelBackground(108);
-        this.drawTitle(false, gb.field_H);
+        this.drawTitle(false, ValidationIndicator.field_H);
         this.drawCountdown(-2351, this.field_a.phaseTime);
         if (~this.field_g != param0) {
           stackIn_6_0 = (this.field_a.field_n.isReadyOrInactive(8658, this.field_g)) ? 1 : 0;
@@ -54,7 +54,7 @@ final class TeamSelectionView extends MatchPhaseView {
             var5_ref_String = FadingSoundPlayer.field_e;
           } else {
             if (var4 == 0) {
-              var5_ref_String = he.field_Ub;
+              var5_ref_String = LobbyPlayerRow.field_Ub;
             } else {
               var5_ref_String = CommonGame.field_a;
             }
@@ -63,9 +63,9 @@ final class TeamSelectionView extends MatchPhaseView {
         }
         if (this.isLocalParticipantActive((byte) 13)) {
           if (var2 != 0) {
-            stackIn_22_0 = kp.field_a;
+            stackIn_22_0 = LobbyGameRecord.field_a;
           } else {
-            stackIn_22_0 = kk.field_A;
+            stackIn_22_0 = TriangleMesh.field_A;
           }
           var4_ref_String = stackIn_22_0;
           TeamSelectionView.a(var4_ref_String, 302, 46, 316, 88, 0);
@@ -132,21 +132,21 @@ final class TeamSelectionView extends MatchPhaseView {
           if (DebugConsole.field_z.field_sb != 0 &&
             !PacketBuffer.field_l) {
             if (!WriteIntegersCommand.field_C) {
-              vg.field_Wb = true;
+              TextFieldNode.field_Wb = true;
             } else {
               hp.b(0);
             }
           }
-          if (vg.field_Wb) {
-            m.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
+          if (TextFieldNode.field_Wb) {
+            WhirlpoolHasher.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
             ContentTransitionDialog.field_Y.b(0, param2);
             if (param2) {
               if (0 != gl.field_c.field_sb) {
-                vg.field_Wb = false;
+                TextFieldNode.field_Wb = false;
               }
               if (0 != MySquadScreen.field_N.field_sb) {
-                td.a(76);
-                vg.field_Wb = false;
+                TrinketCatalog.a(76);
+                TextFieldNode.field_Wb = false;
               }
             }
           }
@@ -165,7 +165,7 @@ final class TeamSelectionView extends MatchPhaseView {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -173,11 +173,11 @@ final class TeamSelectionView extends MatchPhaseView {
         if (param0 > -35) {
           field_r = (int[]) null;
         }
-        return al.field_Ab.a((byte) -45);
+        return al.field_Ab.pollMasterIndex((byte) -45);
     }
 
     private final void a(byte param0, int param1) {
-        this.field_a.enqueueEvent(mg.a(this.field_g, (byte) 0, param1), -125);
+        this.field_a.enqueueEvent(mg.createTeamEvent(this.field_g, (byte) 0, param1), -125);
         if (param0 >= -95) {
           return;
         }
@@ -218,7 +218,7 @@ final class TeamSelectionView extends MatchPhaseView {
             this.field_t.addChild((byte) -126, this.field_k[var4_int]);
           }
           if (this.isLocalParticipantActive((byte) 13)) {
-            this.field_l = new CheckboxLabelWidget(sl.field_Ab, un.field_d, 120);
+            this.field_l = new CheckboxLabelWidget(HoverTooltip.field_Ab, un.field_d, 120);
             this.field_l.field_s = 442;
             this.field_l.field_J = 322;
             this.field_t.addChild((byte) -121, (UiLayoutNode) (this.field_l));
@@ -234,7 +234,7 @@ final class TeamSelectionView extends MatchPhaseView {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class TeamSelectionView extends MatchPhaseView {
           }
           ar.field_c = EmailSyntaxValidator.g(-22976);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wb.J(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.J(" + param0 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class TeamSelectionView extends MatchPhaseView {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class TeamSelectionView extends MatchPhaseView {
           this.field_o.a(true, 21, 2, 0, 21);
           this.field_s.a(true, 21, -21 + param0.field_q - 2, 0, 21);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class TeamSelectionView extends MatchPhaseView {
         try {
           ul.a(param2, 1, param3, true, (byte) -120, param1, 16, param4, 1, param0);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

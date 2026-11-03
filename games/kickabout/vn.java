@@ -70,7 +70,7 @@ final class vn extends cv {
     }
 
     final static vn a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, param1, 28);
+        byte[] var3 = param0.takeFileByName(param2, param1, 28);
         if (var3 == null) {
           return null;
         }

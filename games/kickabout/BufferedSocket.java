@@ -45,7 +45,7 @@ final class BufferedSocket implements Runnable {
           return 0;
         }
         if (param0 != 1) {
-          BufferedSocket.c(-10);
+          BufferedSocket.releaseStatics(-10);
         }
         return this.field_a.read();
     }
@@ -85,7 +85,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -41) {
           field_i = (String[]) null;
         }
@@ -253,7 +253,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -319,14 +319,14 @@ final class BufferedSocket implements Runnable {
           this.field_m = this.field_b.getOutputStream();
           this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
         field_q = "Loading graphics";
         field_t = "Your search returned no results.";
-        field_f = st.c(-23091);
+        field_f = CachedTextLayout.c(-23091);
         field_k = -2;
     }
 }

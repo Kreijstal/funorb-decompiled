@@ -38,11 +38,11 @@ final class ih {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 66049) {
           return;
@@ -88,22 +88,22 @@ final class ih {
             stackIn_6_2 = 1900;
           }
           stackIn_5_0[stackIn_5_1] = stackIn_6_2;
-          nb.field_j = new Sprite[2];
+          GameSoundEffect.field_j = new Sprite[2];
           var10[1] = -var12[0] + 2048;
           for (var4 = 0; var4 < 2; var4++) {
             var5 = DemoIntegersCommand.field_F.field_H[var4];
             var6 = DemoIntegersCommand.field_F.field_d[var4];
             var7 = DemoIntegersCommand.field_F.field_Q[var4];
             var8 = AuctionsHelpScreen.a(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).b(100, 4369, 20, -56, -20);
-            nb.field_j[var4] = new Sprite(200, 200);
-            PacketBuffer.a(param0 - 124, nb.field_j[var4]);
+            GameSoundEffect.field_j[var4] = new Sprite(200, 200);
+            PacketBuffer.a(param0 - 124, GameSoundEffect.field_j[var4]);
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 410);
             var8.a(0, var12[var4], 0, 0, 0, 0, 0, 350);
             TeamManagementScreen.e(127);
-            eo.a(nb.field_j[var4], 65793);
-            eo.a(nb.field_j[var4], 66049);
-            eo.a(nb.field_j[var4], 65793);
+            eo.a(GameSoundEffect.field_j[var4], 65793);
+            eo.a(GameSoundEffect.field_j[var4], 66049);
+            eo.a(GameSoundEffect.field_j[var4], 65793);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,7 +116,7 @@ final class ih {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class ih {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

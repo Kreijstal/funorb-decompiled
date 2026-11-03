@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bt {
-    private eq field_f;
+    private WeightedLruCache field_f;
     static java.awt.Image field_i;
     static String field_d;
     private ResourceArchive field_g;
@@ -15,9 +15,9 @@ final class bt {
     final static void a(int param0) {
         int var2;
         var2 = Kickabout.field_G;
-        if (sr.field_l != null) {
-          if (sr.field_l.c(0)) {
-            gu.a(uv.field_i.h((byte) -77), (byte) -88, 11);
+        if (SortCriterion.field_l != null) {
+          if (SortCriterion.field_l.c(0)) {
+            ContextMenu.a(PlayerContextMenu.field_i.h((byte) -77), (byte) -88, 11);
           } else {
             GameLoopApplet.b(15848, 11, 0);
           }
@@ -26,7 +26,7 @@ final class bt {
             !um.field_e.b(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
-            gu.a(uv.field_i.h((byte) 74), (byte) -114, 11);
+            ContextMenu.a(PlayerContextMenu.field_i.h((byte) 74), (byte) -114, 11);
             QuickChatPhraseCache.field_d = true;
           }
         }
@@ -117,45 +117,45 @@ final class bt {
         var5 = Kickabout.field_G;
         try {
           var1_int = 73 % ((param0 + 65) / 33);
-          if (ks.field_e == 1) {
+          if (HuffmanCodec.field_e == 1) {
             stackIn_72_0 = tc.advanceToPoint(4, (byte) 97, 29360128, EmailAvailabilityValidator.field_k, 74973184);
             return stackIn_72_0;
           }
-          if (ks.field_e == 2) {
+          if (HuffmanCodec.field_e == 2) {
             stackIn_4_0 = tc.advanceToPoint(4, (byte) 82, 29360128, EmailAvailabilityValidator.field_k, 44040192);
             return stackIn_4_0;
           }
-          if (ks.field_e == 3) {
+          if (HuffmanCodec.field_e == 3) {
             stackIn_7_0 = tc.advanceToPoint(8, (byte) 116, 29360128, EmailAvailabilityValidator.field_k, 18481152);
             return stackIn_7_0;
           }
-          if (ks.field_e == 4) {
+          if (HuffmanCodec.field_e == 4) {
             var2 = 1;
             var2 = var2 != 0 & tc.advanceToPoint(4, (byte) 121, 53084160, EmailAvailabilityValidator.field_k, 72744960) ? 1 : 0;
             var2 = var2 != 0 & tc.advanceToPoint(1, (byte) 93, 49152000, ld.field_f, 55050240) ? 1 : 0;
             stackIn_70_0 = var2;
             return stackIn_70_0 != 0;
           }
-          if (ks.field_e == 5) {
+          if (HuffmanCodec.field_e == 5) {
             var2Lifetime1 = 1;
             var2Lifetime1 = var2Lifetime1 != 0 & tc.advanceToPoint(1, (byte) 122, 53084160, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
             var2Lifetime1 = var2Lifetime1 != 0 & tc.advanceToPoint(4, (byte) 89, 49152000, ld.field_f, 72744960) ? 1 : 0;
             stackIn_11_0 = var2Lifetime1;
             return stackIn_11_0 != 0;
           }
-          if (6 == ks.field_e) {
+          if (6 == HuffmanCodec.field_e) {
             var2Lifetime2 = 1;
             var2Lifetime2 = var2Lifetime2 != 0 & tc.advanceToPoint(2, (byte) 116, 52428800, EmailAvailabilityValidator.field_k, 43909120) ? 1 : 0;
             var2Lifetime2 = var2Lifetime2 != 0 & tc.advanceToPoint(8, (byte) 84, 13107200, ld.field_f, 43909120) ? 1 : 0;
             stackIn_14_0 = var2Lifetime2;
             return stackIn_14_0 != 0;
           }
-          if (ks.field_e == 7) {
+          if (HuffmanCodec.field_e == 7) {
             var2_ref_nl = et.field_d.field_P[1][4];
             stackIn_68_0 = (var2_ref_nl.pixelX(-107) == 180) && (var2_ref_nl.pixelY(true) == 550);
             return stackIn_68_0;
           }
-          if (ks.field_e == 8) {
+          if (HuffmanCodec.field_e == 8) {
             var2Lifetime3 = 1;
             stackIn_50_0 = var2Lifetime3;
             if (ld.field_f.action == 0 &&
@@ -175,7 +175,7 @@ final class bt {
             if (var2Lifetime3Lifetime2 != 0) {
               for (var3 = 0; var3 < 4; var3++) {
                 var4 = (RenderedFootballer) (et.field_d.field_P[1][1 + var3]);
-                var4.a(th.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
+                var4.setPosition(th.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
                 var4.directionMask = 0;
                 stackIn_60_0 = var4;
                 if (var3 == 1) {
@@ -189,7 +189,7 @@ final class bt {
             stackIn_63_0 = var2Lifetime3Lifetime2;
             return stackIn_63_0 != 0;
           }
-          if (ks.field_e == 9) {
+          if (HuffmanCodec.field_e == 9) {
             var2Lifetime4 = 1;
             var2Lifetime4 = var2Lifetime4 != 0 & tc.advanceToPoint(2, (byte) 119, 49152000, ld.field_f, 55050240) ? 1 : 0;
             var2Lifetime4 = var2Lifetime4 != 0 & tc.advanceToPoint(8, (byte) 82, 20971520, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
@@ -198,15 +198,15 @@ final class bt {
             stackIn_46_0 = var2Lifetime4;
             return stackIn_46_0 != 0;
           }
-          if (ks.field_e != 10) {
-            if (11 == ks.field_e) {
+          if (HuffmanCodec.field_e != 10) {
+            if (11 == HuffmanCodec.field_e) {
               return true;
             }
-            if (ks.field_e == 12) {
+            if (HuffmanCodec.field_e == 12) {
               stackIn_44_0 = tc.advanceToPoint(4, (byte) 107, 29360128, fc.field_c, 19660800);
               return stackIn_44_0;
             }
-            if (ks.field_e != 13) {
+            if (HuffmanCodec.field_e != 13) {
               return true;
             }
             var2Lifetime5 = 1;
@@ -227,7 +227,7 @@ final class bt {
           if (var2Lifetime6 != 0 &&
             EmailAvailabilityValidator.field_k.action == 0 &&
             0 == et.field_d.field_V.possessorTeam) {
-            ej.b(200, -2, -100, 30);
+            SelectableTrinketIcon.b(200, -2, -100, 30);
           }
           var2Lifetime6 = var2Lifetime6 != 0 & tc.advanceToPoint(8, (byte) 86, 29360128, fc.field_c, 36438016) ? 1 : 0;
           stackIn_26_0 = var2Lifetime6;
@@ -249,13 +249,13 @@ final class bt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "bt.C(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "bt.C(" + param0 + ')');
         }
     }
 
     final tc a(int param0, int param1) {
         byte[] var4 = null;
-        tc var3 = (tc) (this.field_f.a((long)param1, (byte) 43));
+        tc var3 = (tc) (this.field_f.get((long)param1, (byte) 43));
         if (param0 != 200) {
           return (tc) null;
         }
@@ -274,7 +274,7 @@ final class bt {
         if (32768 <= param1) {
           var3.a(-104);
         }
-        this.field_f.a((long)param1, var3, (byte) -110);
+        this.field_f.put((long)param1, var3, (byte) -110);
         return var3;
     }
 
@@ -286,7 +286,7 @@ final class bt {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_f = new eq(64);
+        this.field_f = new WeightedLruCache(64);
         try {
           this.field_h = param1;
           this.field_g = param2;
@@ -313,7 +313,7 @@ final class bt {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

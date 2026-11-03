@@ -50,7 +50,7 @@ final class MenuButton {
                 if (null != um.field_e) {
                   DelayedServerPacket.a(-1, param1, param0 - 1);
                 } else {
-                  if (sr.field_l != null) {
+                  if (SortCriterion.field_l != null) {
                     DelayedServerPacket.a(-2, param1, param0 ^ 1);
                   }
                 }
@@ -63,7 +63,7 @@ final class MenuButton {
                   } else {
                     if (20 == this.kind) {
                       DelayedServerPacket.a(11, param1, -2);
-                      mc.field_j = true;
+                      TickClock.field_j = true;
                     } else {
                       if (18 != this.kind) {
                         if (this.kind != 23) {
@@ -112,7 +112,7 @@ final class MenuButton {
                                                               if (this.kind != 5) {
                                                                 if (this.kind != 8) {
                                                                   if (this.kind == 9) {
-                                                                    um.field_e.f(-94);
+                                                                    um.field_e.offerDraw(-94);
                                                                     DelayedServerPacket.a(-1, param1, param0 - 1);
                                                                   } else {
                                                                     if (10 != this.kind) {
@@ -121,7 +121,7 @@ final class MenuButton {
                                                                           bt.a(param0 + 1);
                                                                         } else {
                                                                           if (this.kind == 55) {
-                                                                            vi.c((byte) -59);
+                                                                            NanoTickClock.c((byte) -59);
                                                                           } else {
                                                                             if (this.kind == 13) {
                                                                               AccountRequestDialog.field_ib = 0;
@@ -133,8 +133,8 @@ final class MenuButton {
                                                                                       if (!EmailSyntaxValidator.c((byte) -42)) {
                                                                                         ea.a(39, (byte) 99);
                                                                                       } else {
-                                                                                        stackIn_81_0 = !(pf.field_c);
-                                                                                        pf.field_c = stackIn_81_0;
+                                                                                        stackIn_81_0 = !(ByteStorage.field_c);
+                                                                                        ByteStorage.field_c = stackIn_81_0;
                                                                                       }
                                                                                     } else {
                                                                                       if (30 == this.kind) {
@@ -162,7 +162,7 @@ final class MenuButton {
                                                                         }
                                                                       }
                                                                     } else {
-                                                                      um.field_e.c(-76);
+                                                                      um.field_e.resign(-76);
                                                                       DelayedServerPacket.a(-1, param1, -2);
                                                                     }
                                                                   }
@@ -265,7 +265,7 @@ final class MenuButton {
         int var7 = 0;
         this.field_g = param0 ? true : false;
         if (param3 != 16) {
-          MenuButton.a((byte) 108);
+          MenuButton.releaseStatics((byte) 108);
         }
         if (param1 &&
           !this.field_r) {
@@ -277,7 +277,7 @@ final class MenuButton {
         if (this.field_r &&
           param2 &&
           param4 != this.field_f) {
-          param4 = param4 + (wo.field_m - aw.field_J);
+          param4 = param4 + (wo.field_m - TutorialChoiceDialog.field_J);
           var6 = DateInputWidget.k(param3 + 240);
           var7 = param4 * var6 / wo.field_m;
           if (var7 < 0) {
@@ -298,26 +298,26 @@ final class MenuButton {
 
     final static void a(int param0, int param1, boolean param2, int param3, PlayerStats param4, boolean param5, int param6) {
         et.field_b = true;
-        if (vl.a(false)) {
+        if (LoginMethod.a(false)) {
           return;
         }
         ok.field_c = param5;
         CachedListingRow.field_j = param2 ? true : false;
-        na.field_Ib = param3;
+        VerticalScrollbar.field_Ib = param3;
         if (param1 != 0) {
           return;
         }
         try {
           AccountTermsPanel.field_G = param4;
           AuctionItem.field_e = 3;
-          i.field_x = param0;
+          MessageDialog.field_x = param0;
           cr.field_c = param6;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "io.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "io.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_o = null;
         if (param0 != -6) {
@@ -356,7 +356,7 @@ final class MenuButton {
             }
             IntrusiveNodeHashTable.a(true, var4);
           }
-          if (null == ll.field_g) {
+          if (null == DirectByteStorage.field_g) {
             if (!bo.field_Cb.a(false, "instructions")) {
               return;
             }
@@ -365,7 +365,7 @@ final class MenuButton {
             AccountRegistrationPanel.field_C = AuctionsScreen.a(3, var9);
             DebugConsole.field_y = new Sprite[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
             lt.field_d = new Sprite[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(param0 - 2, ip.field_d[1], var10, 50)[1]};
-            ll.field_g = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 78, "mouse");
+            DirectByteStorage.field_g = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 78, "mouse");
             RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 108, "mouse_left");
             PlayerInputEvent.field_q = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 103, "mouse_right");
             ak.field_f = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 106, "mouse_roller");
@@ -377,7 +377,7 @@ final class MenuButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "io.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "io.A(" + param0 + ')');
         }
     }
 
@@ -401,8 +401,8 @@ final class MenuButton {
           !GameLoopApplet.field_E.field_J[0]) {
           this.field_g = false;
         }
-        if (param1 - (this.width >> 1) < wt.field_x &&
-          wt.field_x < param1 + (this.width >> 1) &&
+        if (param1 - (this.width >> 1) < ArrayWidgetContainer.field_x &&
+          ArrayWidgetContainer.field_x < param1 + (this.width >> 1) &&
           param0 - (this.height >> 1) < us.field_j &&
           us.field_j < param0 + (this.height >> 1)) {
           if (49 == this.kind) {
@@ -426,7 +426,7 @@ final class MenuButton {
           if (this.kind == 49 &&
             EmailSyntaxValidator.c((byte) -42)) {
             stackIn_40_1 = AccountTermsPanel.field_K;
-            if (pf.field_c) {
+            if (ByteStorage.field_c) {
               stackIn_41_2 = 1;
             } else {
               stackIn_41_2 = 0;
@@ -457,7 +457,7 @@ final class MenuButton {
         }
         if (this.field_r) {
           var5 = this.field_k >> 1;
-          param1 = param1 + (-20 + (-wo.field_m + aw.field_J) - var5);
+          param1 = param1 + (-20 + (-wo.field_m + TutorialChoiceDialog.field_J) - var5);
           var6 = param1 - (-var5 - 20);
           SoftwareRasterizer.e(var6, param0 - 2, wo.field_m, 4, 65793);
           if (this.kind != 17) {
@@ -486,7 +486,7 @@ final class MenuButton {
         if (param2 != 13800) {
           return;
         }
-        ll.field_o.d(this.field_p, param1, 2 + param0, 16777215, -1);
+        DirectByteStorage.field_o.d(this.field_p, param1, 2 + param0, 16777215, -1);
         if (this.kind == 1 && (!GameLoopApplet.field_E.field_J[0] ||
           PlayArea.a(100))) {
           param0 -= 4;
@@ -576,13 +576,13 @@ final class MenuButton {
           stackIn_37_1 = this.field_p.toUpperCase();
         }
         this.field_p = stackIn_37_1;
-        this.field_k = ll.field_o.a(this.field_p);
+        this.field_k = DirectByteStorage.field_o.a(this.field_p);
         var5 = this.field_a;
         if (this.field_a == -4) {
           var5 = 40 + this.field_k;
         }
         if (this.field_a == -3) {
-          var5 = ll.field_m.field_o;
+          var5 = DirectByteStorage.field_m.field_o;
         }
         this.field_n = new Sprite[3];
         if (21 != this.kind) {

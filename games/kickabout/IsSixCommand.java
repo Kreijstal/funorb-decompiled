@@ -3,7 +3,7 @@
  */
 final class IsSixCommand extends ConsoleCommand {
     static String[] field_G;
-    static vl field_F;
+    static LoginMethod field_F;
     static boolean field_B;
     static int field_H;
     static BinaryBitmapFont field_C;
@@ -11,12 +11,12 @@ final class IsSixCommand extends ConsoleCommand {
     static int field_A;
     static LoginForm field_E;
 
-    final static vl[] a(boolean param0) {
+    final static LoginMethod[] a(boolean param0) {
         if (param0) {
-          return new vl[]{field_F, AccountRegistrationPanel.field_I, rd.field_h};
+          return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, GameModeDefinition.field_h};
         }
         IsSixCommand.g(56);
-        return new vl[]{field_F, AccountRegistrationPanel.field_I, rd.field_h};
+        return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, GameModeDefinition.field_h};
     }
 
     public static void g(int param0) {
@@ -50,7 +50,7 @@ final class IsSixCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(rb.a((byte) -46, param1[0].b(param0 ^ -30412)));
+            stackIn_4_0 = new ConsoleValue(TextPromptDialog.a((byte) -46, param1[0].b(param0 ^ -30412)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -65,14 +65,14 @@ final class IsSixCommand extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     static {
         field_G = new String[]{"No room", "Save changes", "Squad full", "Already bidded", "Not enough money", "Empty team", "Too many auctions", "Stats maxed", "Single-player tutorial", "Diamond Division", "Promotion", "Choose a player to auction", "Kit menu", "Player Shop", "Squad Menu", "Pitch menu", "Auction menu", "League menu", "Create auction", "Bid on Auction", "Spend exp", "Auction house", "Trinkets Expansion", "Just-play mode", "Choose a trinket", "Please log in", "Complete training", "Achievements", "Menu Reset", "Confirm", "Confirm", "Your Auction", "Buyout Auction", "No Team", "Sell Player", "Kit Locked", "Kit Locked", "Buyout Auction", "Game Ended", "Unsigned Applet", "Complete Tutorial", "Trinket Refund", "Tournament Champion"};
         field_B = false;
-        field_F = new vl("email");
+        field_F = new LoginMethod("email");
         field_D = "Remove name";
         field_A = 50;
     }

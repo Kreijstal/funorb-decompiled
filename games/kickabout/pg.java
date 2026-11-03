@@ -8,28 +8,28 @@ final class pg {
     static String[] field_a;
 
     final static void a(int param0, boolean param1) {
-        ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, w.field_e) : new rf(c.field_d, AchievementsScreen.field_C);
-        dn.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
+        ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, DialogOverlay.field_e) : new rf(c.field_d, AchievementsScreen.field_C);
+        TrinketIcon.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (param0 == -35) {
-          dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
-          dn.field_Cb.addChild((byte) -126, ac.field_b);
-          tn.field_f = new UiLayoutNode(0L, tv.field_e);
+          TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+          TrinketIcon.field_Cb.addChild((byte) -126, TrinketUnlockNotice.field_b);
+          tn.field_f = new UiLayoutNode(0L, ChatMessage.field_e);
           vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
           tn.field_f.addChild((byte) -125, is.field_b);
           tn.field_f.addChild((byte) -105, vj.field_g);
-          vj.field_g.addChild((byte) -124, mc.field_d);
+          vj.field_g.addChild((byte) -124, TickClock.field_d);
           vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
           bq.a(93, param1);
           return;
         }
         field_c = (String) null;
-        dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
-        dn.field_Cb.addChild((byte) -126, ac.field_b);
-        tn.field_f = new UiLayoutNode(0L, tv.field_e);
+        TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+        TrinketIcon.field_Cb.addChild((byte) -126, TrinketUnlockNotice.field_b);
+        tn.field_f = new UiLayoutNode(0L, ChatMessage.field_e);
         vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
         tn.field_f.addChild((byte) -125, is.field_b);
         tn.field_f.addChild((byte) -105, vj.field_g);
-        vj.field_g.addChild((byte) -124, mc.field_d);
+        vj.field_g.addChild((byte) -124, TickClock.field_d);
         vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
         bq.a(93, param1);
     }
@@ -50,17 +50,17 @@ final class pg {
           var1_int = 0;
           var2 = 0;
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            ll.field_k.d(param0 + 101);
-            if (ll.field_k.c(param0 + 2)) {
+            DirectByteStorage.field_k.d(param0 + 101);
+            if (DirectByteStorage.field_k.c(param0 + 2)) {
               var1_int = 1;
             }
-            if (cc.field_e != 13) {
+            if (FixedQuaternion.field_e != 13) {
               continue;
             }
             var2 = 1;
           }
-          ll.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, n.field_m, (byte) -96), ResourceArchive.a(sm.field_q, ReceivedAuctionItem.field_y, (byte) -101));
-          if (ll.field_k.c(-1)) {
+          DirectByteStorage.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -96), ResourceArchive.a(sm.field_q, ReceivedAuctionItem.field_y, (byte) -101));
+          if (DirectByteStorage.field_k.c(-1)) {
             var1_int = 1;
           }
           if (param0 != -3) {
@@ -69,8 +69,8 @@ final class pg {
           }
           var3 = 0;
           if (var1_int != 0 &&
-            ll.field_k.selectedIndex >= 0) {
-            var3 = sh.field_f[ll.field_k.selectedIndex];
+            DirectByteStorage.field_k.selectedIndex >= 0) {
+            var3 = sh.field_f[DirectByteStorage.field_k.selectedIndex];
             if (var3 == 2) {
               oc.a((byte) -43);
             } else if (var3 == 5) {
@@ -84,7 +84,7 @@ final class pg {
           }
           if (var3 == 0 &&
             ck.field_a == 2) {
-            var4 = -PlayingView.field_o + nj.a(param0 ^ -51);
+            var4 = -PlayingView.field_o + nj.monotonicMillis(param0 ^ -51);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               ba.a(true, 6, 5);
@@ -96,7 +96,7 @@ final class pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "pg.E(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "pg.E(" + param0 + ')');
         }
     }
 
@@ -105,10 +105,10 @@ final class pg {
           return AccountChoicePanel.field_I;
         }
         if (param1 == 9) {
-          return rd.field_e;
+          return GameModeDefinition.field_e;
         }
         if (10 == param1) {
-          return rd.field_e;
+          return GameModeDefinition.field_e;
         }
         if (param1 == 8) {
           return ArchiveSource.field_d;
@@ -158,7 +158,7 @@ final class pg {
         return AuctionItem.field_u;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 125) {
           return;
         }
@@ -189,7 +189,7 @@ final class pg {
             stackIn_2_0 = (RenderedFootballer) null;
             return stackIn_2_0;
           }
-          var5_long = nj.a(51);
+          var5_long = nj.monotonicMillis(51);
           if (80L > -tr.field_d + var5_long) {
             stackIn_5_0 = null;
             return (RenderedFootballer) (stackIn_5_0);
@@ -214,7 +214,7 @@ final class pg {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

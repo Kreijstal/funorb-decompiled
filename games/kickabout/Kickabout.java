@@ -30,7 +30,7 @@ public final class Kickabout extends GameLoopApplet {
         boolean decompiledFrameRemainder0 = true;
         this.field_L = stackIn_3_1;
         ColourSwatchTile.b(17702);
-        if (pf.field_c &&
+        if (ByteStorage.field_c &&
           this.field_L && ((null != SplashScreen.field_m ||
           vb.field_k) &&
           (GameModesHelpScreen.field_G != null &&
@@ -45,7 +45,7 @@ public final class Kickabout extends GameLoopApplet {
         }
         kw.b(stackIn_17_0, (byte) -116);
         re.b(param0 ^ -105);
-        ((eh) (NetworkGameClient.field_t)).e(0);
+        ((GameResourceLoader) (NetworkGameClient.field_t)).pollMessageOfTheDay(0);
         if (um.field_e == null &&
           !FadingSoundPlayer.field_q &&
           !od.field_n ||
@@ -65,24 +65,24 @@ public final class Kickabout extends GameLoopApplet {
             AuctionLogEntry.field_h != um.field_e) {
             um.field_e.updateScreen((byte) 119, false);
           } else {
-            if (null != sr.field_l &&
-              sr.field_l != AuctionLogEntry.field_h) {
-              sr.field_l.updateScreen((byte) -116, false);
+            if (null != SortCriterion.field_l &&
+              SortCriterion.field_l != AuctionLogEntry.field_h) {
+              SortCriterion.field_l.updateScreen((byte) -116, false);
             }
           }
         } else {
-          var3 = (ce.field_I << 8) / 24;
+          var3 = (BuyPlayerDialog.field_I << 8) / 24;
           AuctionLogEntry.field_h.setTransitionProgress(var3, false, -53, GameModesHelpScreen.field_G);
           GameModesHelpScreen.field_G.setTransitionProgress(var3, true, -100, AuctionLogEntry.field_h);
           GameModesHelpScreen.field_G.updateScreen((byte) -51, false);
           if (!ka.field_b) {
-            ce.field_I = ce.field_I + 1;
+            BuyPlayerDialog.field_I = BuyPlayerDialog.field_I + 1;
           }
-          var4 = -ce.field_I + 24;
+          var4 = -BuyPlayerDialog.field_I + 24;
           var5 = (var4 * var4 << 8) / 576;
           var6 = -var5 + 256;
           FormationAgent.field_f = var5 * po.a(AuctionLogEntry.field_h, -4) + po.a(GameModesHelpScreen.field_G, -4) * var6 >> 8;
-          if (ce.field_I == 24) {
+          if (BuyPlayerDialog.field_I == 24) {
             cv.a((byte) 105);
           }
         }
@@ -94,7 +94,7 @@ public final class Kickabout extends GameLoopApplet {
               var9.c((byte) -109);
               stackIn_59_0 = ColourSwatchTile.a(param0 ^ -149, var9);
               if (stackIn_59_0) {
-                gu.a((byte) -25, var9, true);
+                ContextMenu.a((byte) -25, var9, true);
               }
               var9 = (AuctionListing) (GameLoopApplet.field_E.auctionListings.c(33));
               continue;
@@ -106,7 +106,7 @@ public final class Kickabout extends GameLoopApplet {
             var8.c((byte) -109);
             stackIn_59_0Lifetime1 = ColourSwatchTile.a(140, var8);
             if (stackIn_59_0Lifetime1) {
-              gu.a((byte) -25, var8, false);
+              ContextMenu.a((byte) -25, var8, false);
             }
             var8 = (AuctionListing) (vd.field_a.c(33));
           }
@@ -128,8 +128,8 @@ public final class Kickabout extends GameLoopApplet {
         if (param0 != -23271) {
           return;
         }
-        if (lf.field_b == null ||
-          "" == lf.field_b) {
+        if (IntKeyLookup.field_b == null ||
+          "" == IntKeyLookup.field_b) {
           return;
         }
         if (ak.a(AuctionLogEntry.field_h, param0 + 23275) == 0) {
@@ -137,9 +137,9 @@ public final class Kickabout extends GameLoopApplet {
         }
         ArgbSprite var2 = DelayedServerPacket.field_g == null ? (ArgbSprite) (MainMenuScreen.field_C) : DelayedServerPacket.field_g;
         int var3 = -var2.field_o + 640 >> 1;
-        if (BytePlusOneCommand.field_A >= var3 && var2.field_o + var3 >= BytePlusOneCommand.field_A && 10 <= n.field_m &&
-          !(n.field_m > (10 + var2.field_v))) {
-          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, lf.field_b);
+        if (BytePlusOneCommand.field_A >= var3 && var2.field_o + var3 >= BytePlusOneCommand.field_A && 10 <= ArchiveManager.field_m &&
+          !(ArchiveManager.field_m > (10 + var2.field_v))) {
+          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, IntKeyLookup.field_b);
         }
     }
 
@@ -147,7 +147,7 @@ public final class Kickabout extends GameLoopApplet {
         int var3;
         int var4;
         var4 = field_G;
-        kp.a(4, -120);
+        LobbyGameRecord.a(4, -120);
         SquadGridWidget.a(7, (byte) -97);
         if (AuctionLogEntry.field_h instanceof FindingOpponentScreen) {
           DelayedServerPacket.a(0, false, -2);
@@ -155,7 +155,7 @@ public final class Kickabout extends GameLoopApplet {
         var3 = -37 % ((-39 - param1) / 32);
         if (param0 == 1) {
           QuickChatPhraseCache.field_d = true;
-          ec.field_e = true;
+          LoginText.field_e = true;
         } else {
           if (od.field_n) {
             TextButton.field_B = true;
@@ -170,7 +170,7 @@ public final class Kickabout extends GameLoopApplet {
               }
               DelayedServerPacket.a(18, false, -2);
             } else {
-              if (sr.field_l == null) {
+              if (SortCriterion.field_l == null) {
                 DelayedServerPacket.a(0, false, -2);
               } else {
                 ka.a(2, IntTripleCommand.field_B);
@@ -181,18 +181,18 @@ public final class Kickabout extends GameLoopApplet {
             od.field_n = false;
             vr.b(1);
           }
-          ec.field_e = false;
+          LoginText.field_e = false;
           QuickChatPhraseCache.field_d = false;
         }
     }
 
-    public static void o(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_H = null;
         field_I = null;
         field_F = null;
         field_J = null;
         if (param0 >= -35) {
-          Kickabout.o((byte) -40);
+          Kickabout.releaseStatics((byte) -40);
         }
     }
 
@@ -217,11 +217,11 @@ public final class Kickabout extends GameLoopApplet {
         if (GameModesHelpScreen.field_G != null) {
           var5 = ak.a(GameModesHelpScreen.field_G, 4);
           if (var4 > var5) {
-            var6 = Math.min(256, (ce.field_I << 9) / 24);
+            var6 = Math.min(256, (BuyPlayerDialog.field_I << 9) / 24);
             var4 = var4 + ((-var4 + var5) * var6 >> 8);
           } else {
             if (var5 > var4) {
-              var6 = Math.max(0, -256 + 2 * ((ce.field_I << 8) / 24));
+              var6 = Math.max(0, -256 + 2 * ((BuyPlayerDialog.field_I << 8) / 24));
               var4 = var4 + ((-var4 + var5) * var6 >> 8);
             }
           }
@@ -282,7 +282,7 @@ public final class Kickabout extends GameLoopApplet {
         var5 = GameplayHelpScreen.field_G[86] ? 1 : 0;
         if (ka.field_b &&
           83 == param1) {
-          ce.field_I = ce.field_I + 1;
+          BuyPlayerDialog.field_I = BuyPlayerDialog.field_I + 1;
           return true;
         }
         if (param1 == 103 &&
@@ -302,7 +302,7 @@ public final class Kickabout extends GameLoopApplet {
             var5 != 0) {
             if ((param1 != 51) &&
               (decompiledFrameRemainder0 = (param2 != 96))) {
-              gd.field_a = false;
+              ListingRowCache.field_a = false;
               return true;
             }
             if (decompiledFrameRemainder0) {
@@ -321,7 +321,7 @@ public final class Kickabout extends GameLoopApplet {
           if (decompiledFrameRemainder0) {
             if (param2 == 96) {
               r.field_d = new DebugConsole(EmailSyntaxValidator.d((byte) 26), IsSixCommand.field_C, oo.field_c);
-              oa.a(false, r.field_d);
+              oa.registerOverlay(false, r.field_d);
               return r.field_d.a(11516, param1, param2);
             }
             if (param1 == 89) {
@@ -332,18 +332,18 @@ public final class Kickabout extends GameLoopApplet {
             if ((decompiledFrameRemainder2) &&
               (var5 != 0)) {
               if (param1 == 1) {
-                nm.a(RankingsScreen.field_C, param0 - 11592, false, ih.field_c);
+                AnimationClip.a(RankingsScreen.field_C, param0 - 11592, false, ih.field_c);
                 gs.a(0);
                 return true;
               }
               if (2 == param1) {
-                nm.a(RankingsScreen.field_C, -76, true, ih.field_c);
+                AnimationClip.a(RankingsScreen.field_C, -76, true, ih.field_c);
                 gs.a(0);
                 return true;
               }
               if (16 == param1) {
-                stackIn_75_0 = !(gd.field_a);
-                gd.field_a = stackIn_75_0;
+                stackIn_75_0 = !(ListingRowCache.field_a);
+                ListingRowCache.field_a = stackIn_75_0;
                 return true;
               }
               if (param1 == 17) {
@@ -379,8 +379,8 @@ public final class Kickabout extends GameLoopApplet {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
             if (16 == param1) {
-              stackIn_38_0 = !(gd.field_a);
-              gd.field_a = stackIn_38_0;
+              stackIn_38_0 = !(ListingRowCache.field_a);
+              ListingRowCache.field_a = stackIn_38_0;
               return true;
             }
             if (param1 == 17) {
@@ -442,8 +442,8 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param1 == 24) {
-              stackIn_163_0 = !(pq.field_K);
-              pq.field_K = stackIn_163_0;
+              stackIn_163_0 = !(SquadPickerDialog.field_K);
+              SquadPickerDialog.field_K = stackIn_163_0;
               return true;
             }
             if (param1 == 25) {
@@ -497,49 +497,49 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param1 == 1) {
-              nm.a(0, param0 - 11592, vi.field_n, ih.field_c);
+              AnimationClip.a(0, param0 - 11592, NanoTickClock.field_n, ih.field_c);
               gs.a(0);
               return true;
             }
             if (param1 == 2) {
-              nm.a(1, -76, vi.field_n, ih.field_c);
+              AnimationClip.a(1, -76, NanoTickClock.field_n, ih.field_c);
               gs.a(param0 - 11516);
               return true;
             }
             if (param1 == 3) {
-              nm.a(2, -76, vi.field_n, ih.field_c);
+              AnimationClip.a(2, -76, NanoTickClock.field_n, ih.field_c);
               gs.a(0);
               return true;
             }
             if (param1 == 4) {
-              nm.a(3, param0 ^ -11448, vi.field_n, ih.field_c);
+              AnimationClip.a(3, param0 ^ -11448, NanoTickClock.field_n, ih.field_c);
               gs.a(0);
               return true;
             }
           }
           if (var5 != 0) {
             if (param1 == 1) {
-              nm.a(RankingsScreen.field_C, -76, vi.field_n, 0);
+              AnimationClip.a(RankingsScreen.field_C, -76, NanoTickClock.field_n, 0);
               gs.a(param0 ^ 11516);
               return true;
             }
             if (param1 == 2) {
-              nm.a(RankingsScreen.field_C, -76, vi.field_n, 1);
+              AnimationClip.a(RankingsScreen.field_C, -76, NanoTickClock.field_n, 1);
               gs.a(0);
               return true;
             }
             if (param1 == 3) {
-              nm.a(RankingsScreen.field_C, param0 ^ -11448, vi.field_n, 2);
+              AnimationClip.a(RankingsScreen.field_C, param0 ^ -11448, NanoTickClock.field_n, 2);
               gs.a(0);
               return true;
             }
           }
           if (87 == param1) {
-            pq.field_J = (pq.field_J + 1) % 10;
+            SquadPickerDialog.field_J = (SquadPickerDialog.field_J + 1) % 10;
             return true;
           }
           if (param1 == 88) {
-            pq.field_J = (9 + pq.field_J) % 10;
+            SquadPickerDialog.field_J = (9 + SquadPickerDialog.field_J) % 10;
             return true;
           }
         }
@@ -562,7 +562,7 @@ public final class Kickabout extends GameLoopApplet {
         SoftwareRasterizer.a(0, 300, 640, 87, 0, 190);
         int var2 = (int)(250.0f * TextInputWidget.field_R / 100.0f);
         int var3 = var2 + 196;
-        un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[ih.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
+        un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TickClock.field_e, new String[]{h.field_b[ih.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
         SoftwareRasterizer.f(193, 348, 254, 19, 8, 268435455);
         if (param0 != 81) {
           return;
@@ -578,17 +578,17 @@ public final class Kickabout extends GameLoopApplet {
           SoftwareRasterizer.i(195, 350, var2, 15, 6, 268435455);
         }
         AuctionListing.a(640, -22914, var3, 480, 0);
-        q.field_d.d(SquadGridWidget.field_Db, 320, 362, 16777215, -1);
+        ConsoleTokenCursor.field_d.d(SquadGridWidget.field_Db, 320, 362, 16777215, -1);
         TeamManagementScreen.e(126);
         AuctionListing.a(var3, -22914, 0, 480, 0);
-        q.field_d.d(SquadGridWidget.field_Db, 320, 362, 65793, -1);
+        ConsoleTokenCursor.field_d.d(SquadGridWidget.field_Db, 320, 362, 65793, -1);
         TeamManagementScreen.e(param0 ^ 39);
     }
 
     public Kickabout() {
         CharSequence var2 = (CharSequence) ((Object) gw.field_b);
         GameLoopApplet.field_E = new ClubState(LoggedPlayer.a(var2, false));
-        nm.field_g = this;
+        AnimationClip.field_g = this;
     }
 
     final static void t(int param0) {
@@ -618,14 +618,14 @@ public final class Kickabout extends GameLoopApplet {
         try {
           var11 = AccountChoicePanel.field_B;
           if (param0 != -826875391) {
-            Kickabout.o((byte) -117);
+            Kickabout.releaseStatics((byte) -117);
           }
           var2 = 0;
           for (var3_int = 0; var3_int < var11.field_v; var3_int++) {
             var4 = 70 * var3_int / var11.field_v;
             for (var5 = 0; var11.field_o > var5; var5++) {
-              var11.field_y[var2] = qj.b(var11.field_y[var2], -16777216);
-              var11.field_y[var2] = hf.a(var11.field_y[var2], hf.a(hf.a(var4 << 16, var4 << 8), var4));
+              var11.field_y[var2] = TextLayoutLine.b(var11.field_y[var2], -16777216);
+              var11.field_y[var2] = PainterStyle.a(var11.field_y[var2], PainterStyle.a(PainterStyle.a(var4 << 16, var4 << 8), var4));
               var2++;
             }
           }
@@ -668,7 +668,7 @@ public final class Kickabout extends GameLoopApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "Kickabout.HA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "Kickabout.HA(" + param0 + ')');
         }
     }
 
@@ -685,7 +685,7 @@ public final class Kickabout extends GameLoopApplet {
           this.onStartup((byte) 116);
         }
         this.initialiseClient(1, 69, 0, 2, 18, (byte) -4, 4, true);
-        this.a(107, new eh());
+        this.startWithLoader(107, new GameResourceLoader());
         FullscreenFocusCanvas.a(oo.field_c, (byte) 23, (java.awt.Component) ((Object) ic.field_d));
         ListingRow.a((byte) -8, IntTripleCommand.field_A);
     }
@@ -710,7 +710,7 @@ public final class Kickabout extends GameLoopApplet {
         if (param0 >= -70) {
           return true;
         }
-        stackIn_8_0 = (od.field_n) || (ec.field_e) || (QuickChatPhraseCache.field_d);
+        stackIn_8_0 = (od.field_n) || (LoginText.field_e) || (QuickChatPhraseCache.field_d);
         return stackIn_8_0;
     }
 
@@ -765,7 +765,7 @@ public final class Kickabout extends GameLoopApplet {
         ReceivedAuctionItem[] var7_ref_vc__ = null;
         int var7 = 0;
         int var8_int = 0;
-        tv var8 = null;
+        ChatMessage var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -851,7 +851,7 @@ public final class Kickabout extends GameLoopApplet {
             this.isConnectionBusy((byte) -8);
           }
           if (param0 == 90) {
-            ((eh) (NetworkGameClient.field_t)).b((byte) 115);
+            ((GameResourceLoader) (NetworkGameClient.field_t)).requestMessageOfTheDay((byte) 115);
             return true;
           }
           if (param0 == 86) {
@@ -918,7 +918,7 @@ public final class Kickabout extends GameLoopApplet {
               var31 = new ReceivedAuctionItem[var4_intLifetime2];
               var5_ref_vc__Lifetime1 = var31;
               for (var6Lifetime2 = 0; var6Lifetime2 < var4_intLifetime2; var6Lifetime2++) {
-                var5_ref_vc__Lifetime1[var6Lifetime2] = ReceivedAuctionItem.readAuctionItem(ek.b(param2, -21831), un.field_e);
+                var5_ref_vc__Lifetime1[var6Lifetime2] = ReceivedAuctionItem.readAuctionItem(TrinketShopDialog.b(param2, -21831), un.field_e);
               }
               ((AuctionsScreen) (rn.a(-53, 16))).setAuctionList(true, var31);
               return true;
@@ -940,7 +940,7 @@ public final class Kickabout extends GameLoopApplet {
               var32 = new String[param1.a((byte) 81)];
               var4 = var32;
               for (var5Lifetime1 = 0; var32.length > var5Lifetime1; var5Lifetime1++) {
-                var4[var5Lifetime1] = param1.readString(ek.b(param2, -112));
+                var4[var5Lifetime1] = param1.readString(TrinketShopDialog.b(param2, -112));
               }
               gg.a(var32, (byte) 88);
               return true;
@@ -948,7 +948,7 @@ public final class Kickabout extends GameLoopApplet {
             if (70 == param0) {
               ui.field_y = true;
               GameLoopApplet.field_E.readFromPacket(85, param1, 4);
-              pf.field_c = GameLoopApplet.field_E.field_d;
+              ByteStorage.field_c = GameLoopApplet.field_E.field_d;
               if (GameLoopApplet.field_E.field_L) {
                 tb.field_v = 1;
               } else {
@@ -986,16 +986,16 @@ public final class Kickabout extends GameLoopApplet {
             }
             if (param0 == 9) {
               cv.a((byte) 87);
-              ec.field_e = false;
+              LoginText.field_e = false;
               DelayedServerPacket.a(10, false, -2);
               ka.a(2, param1.readString(param2 - 98));
               return true;
             }
             if (param0 == 14) {
               cv.a((byte) 81);
-              q.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
-              DropTargetWidget.a(64, qq.h((byte) -64), ButtonMenuScreen.f((byte) -63));
-              ec.field_e = false;
+              ConsoleTokenCursor.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), AnimationPlayer.b(-116), UrlRequest.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
+              DropTargetWidget.a(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
+              LoginText.field_e = false;
               od.field_n = true;
               if (!QuickChatPhraseCache.field_d) {
                 DelayedServerPacket.a(-3, false, -2);
@@ -1005,7 +1005,7 @@ public final class Kickabout extends GameLoopApplet {
             if (param0 == 15) {
               if (od.field_n) {
                 ReceivedAuctionItem.f((byte) 119);
-                vu.b(122);
+                ContextMenuItem.b(122);
                 DelayedServerPacket.a(0, false, -2);
                 TextButton.field_B = true;
                 k.field_k = true;
@@ -1014,12 +1014,12 @@ public final class Kickabout extends GameLoopApplet {
                 vr.b(1);
               }
               QuickChatPhraseCache.field_d = false;
-              ec.field_e = false;
+              LoginText.field_e = false;
               return true;
             }
             if (10 == param0 &&
               od.field_n) {
-              na.i(14);
+              VerticalScrollbar.i(14);
               return true;
             }
             if (param0 == 67) {
@@ -1028,7 +1028,7 @@ public final class Kickabout extends GameLoopApplet {
               var35 = var48;
               var4_array = var35;
               for (var5Lifetime2 = 0; 2 >= var5Lifetime2; var5Lifetime2++) {
-                var23[var5Lifetime2] = param1.readInt(ek.b(param2, 5));
+                var23[var5Lifetime2] = param1.readInt(TrinketShopDialog.b(param2, 5));
               }
               var46 = var4_array;
               var33 = var46;
@@ -1039,12 +1039,12 @@ public final class Kickabout extends GameLoopApplet {
               var25 = var34;
               var6_ref_int__ = var25;
               for (var7 = 0; var7 < 8; var7++) {
-                var24[var7] = qj.b(var46[var7], ~var47[var7]);
+                var24[var7] = TextLayoutLine.b(var46[var7], ~var47[var7]);
               }
               for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < 73; var5Lifetime2Lifetime1++) {
                 if (c.a(var5Lifetime2Lifetime1, 0, var48)) {
-                  ec.field_f.a(new oi(var5Lifetime2Lifetime1), 3);
-                  ok.field_a.a(new oi(var5Lifetime2Lifetime1), 3);
+                  LoginText.field_f.a(new IntValueNode(var5Lifetime2Lifetime1), 3);
+                  ok.field_a.a(new IntValueNode(var5Lifetime2Lifetime1), 3);
                 }
               }
               var49 = BufferedSocket.field_f;
@@ -1056,9 +1056,9 @@ public final class Kickabout extends GameLoopApplet {
               var27 = var37;
               var6_ref_int__Lifetime1 = var27;
               for (var7Lifetime3 = 0; var7Lifetime3 < 8; var7Lifetime3++) {
-                var26[var7Lifetime3] = hf.a(var49[var7Lifetime3], var50[var7Lifetime3]);
+                var26[var7Lifetime3] = PainterStyle.a(var49[var7Lifetime3], var50[var7Lifetime3]);
               }
-              var51 = ha.field_F;
+              var51 = WelcomeDialog.field_F;
               var38 = var51;
               var28 = var38;
               var5_ref_int__Lifetime2 = var28;
@@ -1067,7 +1067,7 @@ public final class Kickabout extends GameLoopApplet {
               var29 = var39;
               var6_ref_int__Lifetime2 = var29;
               for (var7Lifetime4 = 0; var7Lifetime4 < 8; var7Lifetime4++) {
-                var28[var7Lifetime4] = hf.a(var51[var7Lifetime4], var52[var7Lifetime4]);
+                var28[var7Lifetime4] = PainterStyle.a(var51[var7Lifetime4], var52[var7Lifetime4]);
               }
               if (ResourceArchive.field_g) {
                 RasterBuffer.a(20164);
@@ -1085,7 +1085,7 @@ public final class Kickabout extends GameLoopApplet {
             if (param0 != 64 &&
               param0 != 65) {
               if (param0 == 66) {
-                if (null != sr.field_l) {
+                if (null != SortCriterion.field_l) {
                   TextButton.field_B = true;
                   DelayedServerPacket.a(-3, false, -2);
                   vr.b(1);
@@ -1154,12 +1154,12 @@ public final class Kickabout extends GameLoopApplet {
                 if (!stackIn_257_0) {
                   throw new RuntimeException("Tried to init a lobby without the full state being sent [" + (var4_intLifetime6Lifetime1 != 0) + "," + (var5Lifetime4Lifetime1 != 0) + "," + (var6Lifetime3Lifetime1 != 0) + "]");
                 }
-                sr.field_l = new TournamentLobbyScreen(param1);
+                SortCriterion.field_l = new TournamentLobbyScreen(param1);
                 MusicPatchNode.a(-88);
                 if (null == GameModesHelpScreen.field_G ||
                   GameModesHelpScreen.field_G.screenId != 18) {
                   if (AuctionLogEntry.field_h.screenId == -2) {
-                    AuctionLogEntry.field_h = (AppScreen) ((Object) sr.field_l);
+                    AuctionLogEntry.field_h = (AppScreen) ((Object) SortCriterion.field_l);
                   } else {
                     al.field_Db = true;
                     ng.a(-2, param2 ^ 71);
@@ -1169,7 +1169,7 @@ public final class Kickabout extends GameLoopApplet {
                 QuickChatPhraseCache.field_d = false;
                 return true;
               }
-              if (null != sr.field_l &&
+              if (null != SortCriterion.field_l &&
                 param0 == 88) {
                 param1.p(-112);
                 var6Lifetime3Lifetime2 = 0;
@@ -1183,13 +1183,13 @@ public final class Kickabout extends GameLoopApplet {
                 var6Lifetime3Lifetime2 = stackIn_278_0;
                 param1.l((byte) 103);
                 if (var4_intLifetime6Lifetime2 != 0) {
-                  sr.field_l.readPlayerNames(param1, false);
+                  SortCriterion.field_l.readPlayerNames(param1, false);
                 }
                 if (var5Lifetime4Lifetime2 != 0) {
-                  sr.field_l.a(param2 + 8, param1);
+                  SortCriterion.field_l.a(param2 + 8, param1);
                 }
                 if (var6Lifetime3Lifetime2 != 0) {
-                  sr.field_l.a(param1, (byte) 110);
+                  SortCriterion.field_l.a(param1, (byte) 110);
                 }
                 return true;
               }
@@ -1199,7 +1199,7 @@ public final class Kickabout extends GameLoopApplet {
                 var43 = var42.a((byte) 51);
                 var44 = RasterBuffer.a(var43, 80, (byte) 123);
                 for (var7Lifetime1 = 0; var7Lifetime1 < var44.length; var7Lifetime1++) {
-                  var8 = new tv(2, "", 0, "", var44[var7Lifetime1]);
+                  var8 = new ChatMessage(2, "", 0, "", var44[var7Lifetime1]);
                   SectorCacheStore.a((byte) 94, var8);
                 }
                 return true;
@@ -1210,13 +1210,13 @@ public final class Kickabout extends GameLoopApplet {
               var45 = param1.readString(param2 - 108);
               if (um.field_e != null &&
                 um.field_e.field_A ||
-                sr.field_l != null) {
+                SortCriterion.field_l != null) {
                 ConsoleValue.a(2009, var45);
               }
               return true;
             }
             ok.field_a.b(22997);
-            if (sr.field_l != null) {
+            if (SortCriterion.field_l != null) {
               TextButton.field_B = true;
             }
             var4_intLifetime7 = param1.field_n;
@@ -1296,7 +1296,7 @@ public final class Kickabout extends GameLoopApplet {
           } else {
             stackIn_307_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_306_0), ((StringBuilder) (Object) stackIn_306_1).append(stackIn_307_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_306_0), ((StringBuilder) (Object) stackIn_306_1).append(stackIn_307_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1346,11 +1346,11 @@ public final class Kickabout extends GameLoopApplet {
               }
               if (var4 == 0 &&
                 var5 != 0) {
-                var3 = var3 + (ce.field_I << 3);
+                var3 = var3 + (BuyPlayerDialog.field_I << 3);
               }
               if (var4 != 0 &&
                 var5 == 0) {
-                var3 = var3 + (24 - ce.field_I << 3);
+                var3 = var3 + (24 - BuyPlayerDialog.field_I << 3);
               }
               if (!(var3 <= 256)) {
                 var3 = 256;
@@ -1377,13 +1377,13 @@ public final class Kickabout extends GameLoopApplet {
           if (FormationAgent.field_f < 680) {
             hr.a((byte) -48);
           }
-          if (sr.field_l != null &&
+          if (SortCriterion.field_l != null &&
             AuctionLogEntry.field_h.screenId != 0 &&
             AuctionLogEntry.field_h.screenId != -1 &&
             6 != AuctionLogEntry.field_h.screenId) {
-            stackIn_44_0 = sr.field_l;
+            stackIn_44_0 = SortCriterion.field_l;
             stackIn_44_1 = -5;
-            stackIn_45_2 = (this.field_L) && (sr.field_l == AuctionLogEntry.field_h) && (GameModesHelpScreen.field_G == null);
+            stackIn_45_2 = (this.field_L) && (SortCriterion.field_l == AuctionLogEntry.field_h) && (GameModesHelpScreen.field_G == null);
             ((TournamentLobbyScreen) (Object) stackIn_44_0).drawScreen(stackIn_44_1, stackIn_45_2);
           }
           if (um.field_e != null &&
@@ -1399,7 +1399,7 @@ public final class Kickabout extends GameLoopApplet {
         var4Lifetime2 = -AccountChoicePanel.field_B.field_o + FormationAgent.field_f;
         if (var3 > 0) {
           eo.a(po.field_h, FullscreenFocusCanvas.field_d, var4Lifetime2);
-          eo.a(mk.field_a, 0, 0, FormationAgent.field_f, 480, var3, 0);
+          eo.drawSpriteClipped(mk.field_a, 0, 0, FormationAgent.field_f, 480, var3, 0);
           AuctionLogEntry.field_j.drawAdditive(-36, 50, 64);
         }
         if (AuctionLogEntry.field_h instanceof ButtonMenuScreen) {
@@ -1426,7 +1426,7 @@ public final class Kickabout extends GameLoopApplet {
         }
         if (!(AuctionLogEntry.field_h instanceof ButtonMenuScreen) &&
           AuctionLogEntry.field_h != um.field_e &&
-          AuctionLogEntry.field_h != sr.field_l) {
+          AuctionLogEntry.field_h != SortCriterion.field_l) {
           stackIn_85_0 = AuctionLogEntry.field_h;
           stackIn_85_1 = -5;
           stackIn_86_2 = (this.field_L) && (GameModesHelpScreen.field_G == null);
@@ -1435,7 +1435,7 @@ public final class Kickabout extends GameLoopApplet {
         if (GameModesHelpScreen.field_G != null &&
           !(GameModesHelpScreen.field_G instanceof ButtonMenuScreen) &&
           um.field_e != GameModesHelpScreen.field_G &&
-          sr.field_l != GameModesHelpScreen.field_G) {
+          SortCriterion.field_l != GameModesHelpScreen.field_G) {
           GameModesHelpScreen.field_G.drawScreen(-5, false);
         }
         this.drawLogoBanner(102);
@@ -1443,11 +1443,11 @@ public final class Kickabout extends GameLoopApplet {
           FindingOpponentScreen.g((byte) -119);
         }
         if (ka.field_b) {
-          var5Lifetime2 = -ce.field_I + 24 << 4;
-          if (ce.field_I < 12) {
-            var5Lifetime2 = ce.field_I << 4;
+          var5Lifetime2 = -BuyPlayerDialog.field_I + 24 << 4;
+          if (BuyPlayerDialog.field_I < 12) {
+            var5Lifetime2 = BuyPlayerDialog.field_I << 4;
           }
-          q.field_d.d("Transition: " + ce.field_I + " : " + var5Lifetime2, 320, 100, 16777215, 0);
+          ConsoleTokenCursor.field_d.d("Transition: " + BuyPlayerDialog.field_I + " : " + var5Lifetime2, 320, 100, 16777215, 0);
         }
         if (FadingSoundPlayer.field_q &&
           AuctionLogEntry.field_h.screenId != -4) {
@@ -1458,441 +1458,441 @@ public final class Kickabout extends GameLoopApplet {
     }
 
     final void releaseStatics(int param0) {
-        Kickabout.o((byte) -99);
+        Kickabout.releaseStatics((byte) -99);
         bw.a(false);
-        uq.a(-91);
-        ug.a(-1);
-        et.a(121);
-        w.b(23);
-        ng.b(param0 ^ 126);
-        PlayerStats.g(112);
-        ManagerAction.a((byte) 122);
-        AuctionListing.a((byte) 9);
-        su.a((byte) -115);
-        ClubState.b((byte) 0);
+        uq.releaseStatics(-91);
+        ug.releaseStatics(-1);
+        et.releaseStatics(121);
+        DialogOverlay.releaseStatics(23);
+        ng.releaseStatics(param0 ^ 126);
+        PlayerStats.releaseStatics(112);
+        ManagerAction.releaseStatics((byte) 122);
+        AuctionListing.releaseStatics((byte) 9);
+        su.releaseStatics((byte) -115);
+        ClubState.releaseStatics((byte) 0);
         AuctionItem.a(-23834);
-        wk.a((byte) -67);
+        wk.releaseStatics((byte) -67);
         pc.b(-13827);
-        nd.a((byte) 115);
-        oo.a(param0 ^ -18184);
-        pl.a(20177);
-        pr.a(0);
-        oi.a(false);
-        IntrusiveDeque.a(param0 - 133);
+        nd.releaseStatics((byte) 115);
+        oo.releaseStatics(param0 ^ -18184);
+        pl.releaseStatics(20177);
+        pr.releaseStatics(0);
+        IntValueNode.a(false);
+        IntrusiveDeque.releaseStatics(param0 - 133);
         SoftwareRasterizer.c();
-        jl.a(param0 ^ 8198);
+        jl.releaseStatics(param0 ^ 8198);
         CipherPacketBuffer.m(0);
-        gs.b((byte) -117);
-        mi.a(param0 - 6);
-        nc.a((byte) 72);
-        ss.a((byte) -90);
+        gs.releaseStatics((byte) -117);
+        mi.releaseStatics(param0 - 6);
+        nc.releaseStatics((byte) 72);
+        ss.releaseStatics((byte) -90);
         GameLoopApplet.q(30907);
         GameKeyHandler.a(param0 + 3896);
-        gw.d(param0 + 92);
+        gw.releaseStatics(param0 + 92);
         qr.a(false);
         NetworkGameClient.d(true);
-        ClientException.a((byte) -95);
+        ClientException.releaseStatics((byte) -95);
         GameAppletShell.c(1);
-        JaggrabDownloader.a(param0 - 8);
-        MouseInputHandler.a(param0 - 7);
-        MouseWheelInput.a((byte) 66);
-        ResourceArchive.c(param0 ^ -122);
-        fc.a(29136);
-        td.a(false);
-        PacketBuffer.g((byte) 88);
-        nj.a((byte) -64);
-        fh.a((byte) 122);
-        fs.a(-81);
-        ms.a((byte) 53);
+        JaggrabDownloader.releaseStatics(param0 - 8);
+        MouseInputHandler.releaseStatics(param0 - 7);
+        MouseWheelInput.releaseStatics((byte) 66);
+        ResourceArchive.releaseStatics(param0 ^ -122);
+        fc.releaseStatics(29136);
+        TrinketCatalog.a(false);
+        PacketBuffer.releaseStatics((byte) 88);
+        nj.releaseStatics((byte) -64);
+        fh.releaseStatics((byte) 122);
+        fs.releaseStatics(-81);
+        ms.releaseStatics((byte) 53);
         tn.a(false);
-        cu.a(param0 ^ 6);
-        oa.a(param0 - 6);
-        tv.a(2);
+        cu.releaseStatics(param0 ^ 6);
+        oa.releaseStatics(param0 - 6);
+        ChatMessage.releaseStatics(2);
         hp.a(0);
-        ns.a((byte) 60);
-        mc.a((byte) -116);
-        qe.a(true);
-        FullscreenFocusCanvas.a((byte) 25);
-        kh.d(param0 - 1712);
-        sd.a(-1);
+        ns.releaseStatics((byte) 60);
+        TickClock.releaseStatics((byte) -116);
+        ArchivePreloader.a(true);
+        FullscreenFocusCanvas.releaseStatics((byte) 25);
+        kh.releaseStatics(param0 - 1712);
+        sd.releaseStatics(-1);
         MatchScreen.a(true);
         TournamentLobbyScreen.a(true);
         AppScreen.a((byte) 125);
-        DebugConsole.c(-1);
-        SpriteState.g((byte) -28);
+        DebugConsole.releaseStatics(-1);
+        SpriteState.releaseStatics((byte) -28);
         DualLinkNode.e(13421568);
         IntrusiveNode.d(126);
-        BlankScreen.a(param0 + 50);
-        rd.a(true);
-        ds.a(-49);
+        BlankScreen.releaseStatics(param0 + 50);
+        GameModeDefinition.a(true);
+        ds.releaseStatics(-49);
         AuctionLogEntry.b(110);
-        eh.d(1);
-        ig.a((byte) -13);
+        GameResourceLoader.releaseStatics(1);
+        ig.releaseStatics((byte) -13);
         vb.a(0);
-        fn.q(140);
+        Trinket.q(140);
         MatchPhaseView.b(104);
-        il.a((byte) 101);
-        jb.c(false);
-        ar.a((byte) -73);
+        il.releaseStatics((byte) 101);
+        PopupDialog.c(false);
+        ar.releaseStatics((byte) -73);
         RenderedFootballer.i((byte) 14);
         ak.a(17);
-        vr.a((byte) -118);
-        ca.a((byte) -72);
-        ws.a(-25514);
+        vr.releaseStatics((byte) -118);
+        ca.releaseStatics((byte) -72);
+        ws.releaseStatics(-25514);
         fj.b(true);
-        c.a((byte) 114);
-        sn.a(-1316);
-        ti.a((byte) -126);
-        nh.a();
-        aj.a(-9097);
+        c.releaseStatics((byte) 114);
+        UrlRequest.releaseStatics(-1316);
+        NamedValueContainer.releaseStatics((byte) -126);
+        nh.releaseStatics();
+        aj.releaseStatics(-9097);
         le.a(false);
-        bq.a((byte) -127);
+        bq.releaseStatics((byte) -127);
         dg.a((byte) -90);
         TriangleRasterizer.releaseStatics();
-        ep.a(0);
+        ep.releaseStatics(0);
         ck.a(false);
-        rj.a((byte) -116);
-        ks.a(0);
-        PcmPlayerService.a();
-        jj.a((byte) -99);
+        SoundCache.releaseStatics((byte) -116);
+        HuffmanCodec.releaseStatics(0);
+        PcmPlayerService.releaseStatics();
+        MusicTrackMixer.releaseStatics((byte) -99);
         ButtonMenuScreen.c((byte) -107);
-        fv.b((byte) 108);
-        mt.a(param0 ^ 7);
-        ji.a(-123);
+        fv.releaseStatics((byte) 108);
+        mt.releaseStatics(param0 ^ 7);
+        ScrollBar.a(-123);
         UiLayoutNode.g(-14457);
-        MenuButton.a((byte) -6);
-        MenuSelection.a((byte) -22);
-        BufferedCacheFile.d(81);
+        MenuButton.releaseStatics((byte) -6);
+        MenuSelection.releaseStatics((byte) -22);
+        BufferedCacheFile.releaseStatics(81);
         te.a(true);
-        ec.a(0);
-        we.a((byte) -43);
-        kr.a(param0 ^ -121);
-        kj.b((byte) -118);
+        LoginText.releaseStatics(0);
+        we.releaseStatics((byte) -43);
+        kr.releaseStatics(param0 ^ -121);
+        kj.releaseStatics((byte) -118);
         LoginCredentials.b(-27680);
-        BufferedSocket.c(param0 ^ -109);
-        BlackFadeScreen.a(125);
+        BufferedSocket.releaseStatics(param0 ^ -109);
+        BlackFadeScreen.releaseStatics(125);
         SplashScreen.a(-1);
         TeamManagementScreen.g((byte) 91);
         ShopPlayerSlot.j(param0 - 246);
-        PitchOptionTile.h((byte) -17);
-        in.a(param0 ^ 31347);
-        MatchTransitionScreen.e(14513);
+        PitchOptionTile.releaseStatics((byte) -17);
+        in.releaseStatics(param0 ^ 31347);
+        MatchTransitionScreen.releaseStatics(14513);
         ParticipantStatus.a(true);
-        LoggedGoal.a((byte) 119);
-        qn.a((byte) -124);
-        BitmapFont.a();
+        LoggedGoal.releaseStatics((byte) 119);
+        qn.releaseStatics((byte) -124);
+        BitmapFont.releaseStatics();
         CommonGame.a(true);
-        IsaacRandom.b(1);
-        vj.a((byte) 111);
-        VorbisSample.a();
+        IsaacRandom.releaseStatics(1);
+        vj.releaseStatics((byte) 111);
+        VorbisSample.releaseStatics();
         FadingSoundPlayer.a(0);
-        UnreadMessagesScreen.f(param0 ^ -54);
-        gk.a((byte) -127);
+        UnreadMessagesScreen.releaseStatics(param0 ^ -54);
+        gk.releaseStatics((byte) -127);
         RankingsScreen.f(-71);
-        uf.b(param0 ^ 3547);
+        uf.releaseStatics(param0 ^ 3547);
         GameplayHelpScreen.g(29250);
-        cb.a((byte) -100);
+        cb.releaseStatics((byte) -100);
         RenderedBall.i(127);
-        PlayArea.a((byte) -124);
+        PlayArea.releaseStatics((byte) -124);
         BallAgent.f(0);
         FootballerAgent.e((byte) -108);
         is.b(116);
         mj.a(param0 ^ 6);
-        om.b(0);
-        na.a(param0 ^ 116);
+        IconLabel.b(0);
+        VerticalScrollbar.a(param0 ^ 116);
         iv.a(false);
-        gu.h((byte) 38);
+        ContextMenu.releaseStatics((byte) 38);
         al.a(1);
-        uv.c(123);
-        np.i((byte) -122);
-        rb.c(true);
-        he.b(240);
-        qb.a(-7);
-        em.c((byte) 36);
-        sk.a(-5514);
-        ph.b(1114366657);
-        ad.a(param0 - 6);
-        LeaguesScreen.e(-38);
-        so.a((byte) -113);
+        PlayerContextMenu.releaseStatics(123);
+        ScrollPane.releaseStatics((byte) -122);
+        TextPromptDialog.c(true);
+        LobbyPlayerRow.b(240);
+        GameSetupPanel.a(-7);
+        DualLinkHashTable.releaseStatics((byte) 36);
+        sk.releaseStatics(-5514);
+        ph.releaseStatics(1114366657);
+        ad.releaseStatics(param0 - 6);
+        LeaguesScreen.releaseStatics(-38);
+        so.releaseStatics((byte) -113);
         jq.a(true);
-        kp.a((byte) 101);
-        vk.a(50);
-        pi.a((byte) -116);
+        LobbyGameRecord.releaseStatics((byte) 101);
+        vk.releaseStatics(50);
+        pi.releaseStatics((byte) -116);
         h.a(false);
-        LoggedPlayer.a(48);
-        LoggedPossession.a(320);
+        LoggedPlayer.releaseStatics(48);
+        LoggedPossession.releaseStatics(320);
         it.c(92);
-        TeamSelectionAgent.a((byte) -90);
+        TeamSelectionAgent.releaseStatics((byte) -90);
         FormationAgent.a(true);
-        GoalStateAgent.a((byte) -30);
+        GoalStateAgent.releaseStatics((byte) -30);
         PlayerInputEvent.a(0);
         MatchAgent.a(-3);
-        po.a(0);
-        FindingOpponentScreen.e(130);
+        po.releaseStatics(0);
+        FindingOpponentScreen.releaseStatics(130);
         ServerMessageScreen.a(true);
-        dc.a(-89);
+        dc.releaseStatics(-89);
         bo.a(param0 ^ 78);
         tt.a(false);
         ModelMesh.releaseStatics();
-        sh.a(320);
-        ul.a(param0 ^ 125);
+        sh.releaseStatics(320);
+        ul.releaseStatics(param0 ^ 125);
         DualLinkDeque.d(1603);
-        ConsolePanel.d((byte) -53);
+        ConsolePanel.releaseStatics((byte) -53);
         TextLine.a(-64);
-        ts.a((byte) 123);
-        vg.m(param0 + 90);
+        ts.releaseStatics((byte) 123);
+        TextFieldNode.m(param0 + 90);
         IndexedSpriteState.a(-75);
-        rk.a(0);
-        PlayerModelPreview.a((byte) 126);
-        dr.a((byte) -127);
+        rk.releaseStatics(0);
+        PlayerModelPreview.releaseStatics((byte) 126);
+        dr.releaseStatics((byte) -127);
         AchievementsScreen.g((byte) 81);
-        eo.c();
-        tk.i((byte) -69);
+        eo.releaseStatics();
+        ScrollContainer.i((byte) -69);
         AuctionsScreen.h((byte) -53);
         CheckboxLabelWidget.a(0);
-        AuctionTableWidget.k((byte) 68);
+        AuctionTableWidget.releaseStatics((byte) 68);
         jr.i(-25734);
-        IntrusiveNodeHashTable.a((byte) -111);
-        MySquadScreen.f(-2010043359);
-        SquadGridWidget.i((byte) -127);
-        pu.i((byte) -108);
+        IntrusiveNodeHashTable.releaseStatics((byte) -111);
+        MySquadScreen.releaseStatics(-2010043359);
+        SquadGridWidget.releaseStatics((byte) -127);
+        TrinketSlot.releaseStatics((byte) -108);
         PlayerShopScreen.h((byte) -111);
         ColumnTableWidget.c(false);
-        SquadSlotWidget.i((byte) -123);
-        vu.a(-15410);
-        rf.a(-97);
-        kf.c(true);
-        sl.i((byte) 39);
-        ac.b((byte) 16);
-        wa.a((byte) 116);
-        rr.a(param0 - 121);
-        MidiPcmStream.a((byte) -32);
-        ArchiveIndex.a(param0 ^ 6);
-        rc.a(113);
+        SquadSlotWidget.releaseStatics((byte) -123);
+        ContextMenuItem.a(-15410);
+        rf.releaseStatics(-97);
+        TabStrip.c(true);
+        HoverTooltip.releaseStatics((byte) 39);
+        TrinketUnlockNotice.releaseStatics((byte) 16);
+        wa.releaseStatics((byte) 116);
+        rr.releaseStatics(param0 - 121);
+        MidiPcmStream.releaseStatics((byte) -32);
+        ArchiveIndex.releaseStatics(param0 ^ 6);
+        GzipDecoder.releaseStatics(113);
         ArchiveSource.a(false);
-        VorbisFloor.a();
-        cp.a((byte) 60);
-        MyPitchScreen.f(-107);
-        i.f((byte) 90);
-        pv.g((byte) -111);
-        sq.g(13);
-        qq.g(param0 + 2350);
-        aw.h((byte) -117);
-        ha.g(100);
-        hg.h(22100);
-        nq.h(0);
-        no.g((byte) -93);
-        pq.g(-14948);
-        pw.g(-8332);
+        VorbisFloor.releaseStatics();
+        AudioService.releaseStatics((byte) 60);
+        MyPitchScreen.releaseStatics(-107);
+        MessageDialog.f((byte) 90);
+        HelpTipDialog.g((byte) -111);
+        SaveChangesDialog.g(13);
+        LoginRequiredDialog.g(param0 + 2350);
+        TutorialChoiceDialog.h((byte) -117);
+        WelcomeDialog.g(100);
+        PromotionDialog.h(22100);
+        TournamentChampionDialog.h(0);
+        LeagueWinnerDialog.g((byte) -93);
+        SquadPickerDialog.g(-14948);
+        AuctionSettingsDialog.g(-8332);
         ColourSwatchTile.h(-31922);
-        hk.g(0);
-        rt.g(param0 ^ 25994);
-        ie.h(24342);
-        ek.d(false);
-        kn.g(2);
-        vf.g((byte) -45);
-        ce.g(30);
-        bm.d(false);
-        lt.a(-122);
+        AuctionBidDialog.g(0);
+        StatChoiceDialog.g(param0 ^ 25994);
+        SellPlayerDialog.h(24342);
+        TrinketShopDialog.d(false);
+        TrinketPickerDialog.g(2);
+        BuyPitchDialog.g((byte) -45);
+        BuyPlayerDialog.g(30);
+        AuctionListingDialog.d(false);
+        lt.releaseStatics(-122);
         of.a(false);
-        ih.a(66049);
-        d.a(0);
+        ih.releaseStatics(66049);
+        d.releaseStatics(0);
         ModalStack.m(-1);
         RegistrationRequestDialog.releaseStatics(248);
         LoadingProgressDialog.j((byte) 110);
-        vo.j((byte) 53);
+        LoginDialog.j((byte) 53);
         AccountRequestDialog.j((byte) -108);
         AccountRegistrationPanel.a((byte) -94);
         AccountChoicePanel.k(2);
         LoginForm.k(param0 ^ -11205);
         DisplayNameForm.a((byte) -94);
-        wc.a(10);
-        ee.a((byte) -100);
+        wc.releaseStatics(10);
+        ee.releaseStatics((byte) -100);
         th.a(false);
         ve.j((byte) 77);
-        cd.a((byte) -98);
+        cd.releaseStatics((byte) -98);
         ResizableModalPanel.o(1);
         TextWidgetPainter.a(true);
         TextButton.a(79);
         UiWidget.g((byte) 88);
         ModalPanel.a((byte) -103);
         WidgetContainer.i(param0 ^ -336184830);
-        IntrusiveDequeCursor.c((byte) -65);
-        iq.b(0);
+        IntrusiveDequeCursor.releaseStatics((byte) -65);
+        TextLayout.b(0);
         SingleChildContainer.j(31068);
-        pg.b(127);
-        ArchiveNetworkClient.f(param0 - 6);
-        eb.a(2);
-        n.b(-2147483648);
-        gf.a(64);
-        kk.a((byte) 94);
-        pe.b((byte) 7);
-        wq.a(-109);
+        pg.releaseStatics(127);
+        ArchiveNetworkClient.releaseStatics(param0 - 6);
+        DiskCacheWorker.a(2);
+        ArchiveManager.releaseStatics(-2147483648);
+        gf.releaseStatics(64);
+        TriangleMesh.releaseStatics((byte) 94);
+        pe.releaseStatics((byte) 7);
+        wq.releaseStatics(-109);
         f.a((byte) -88);
-        tl.c(0);
-        RandomAccessCacheFile.b(113);
-        DelegatingCanvas.a((byte) 125);
-        di.a(-10);
-        lf.a((byte) 94);
-        pf.a((byte) 98);
-        Bzip2Decoder.a();
-        os.b(3);
+        tl.releaseStatics(0);
+        RandomAccessCacheFile.releaseStatics(113);
+        DelegatingCanvas.releaseStatics((byte) 125);
+        di.releaseStatics(-10);
+        IntKeyLookup.releaseStatics((byte) 94);
+        ByteStorage.a((byte) 98);
+        Bzip2Decoder.releaseStatics();
+        Bzip2State.b(3);
         ReflectionCheck.a(0);
-        un.a((byte) 106);
-        re.a((byte) 109);
-        id.a(-116);
+        un.releaseStatics((byte) 106);
+        re.releaseStatics((byte) 109);
+        StatefulTextPainter.releaseStatics(-116);
         ei.a(-19485);
-        du.a(-24229);
-        ql.b(7);
+        du.releaseStatics(-24229);
+        ql.releaseStatics(7);
         mv.a(true);
-        ka.a(19044);
+        ka.releaseStatics(19044);
         sg.a(false);
-        bb.b(111);
+        CascadingMenu.b(111);
         bt.a(true);
         QuickChatPhraseCache.a(30297);
         QuickChatPhraseDefinition.a(71);
-        eq.a((byte) -32);
-        SocketConnector.b(99);
-        lw.a((byte) -125);
-        vi.d(125);
-        ImageProducerRasterBuffer.a((byte) -29);
-        hq.a(param0 + 55);
-        cl.a(-1);
+        WeightedLruCache.releaseStatics((byte) -32);
+        SocketConnector.releaseStatics(99);
+        ProxyAuthenticationRequiredException.releaseStatics((byte) -125);
+        NanoTickClock.releaseStatics(125);
+        ImageProducerRasterBuffer.releaseStatics((byte) -29);
+        hq.releaseStatics(param0 + 55);
+        cl.releaseStatics(-1);
         tr.a(false);
         GameOverView.g(-39);
-        PlayingView.c((byte) -40);
+        PlayingView.releaseStatics((byte) -40);
         TeamSelectionView.g(param0 - 119);
         WaitForPlayersView.f(1);
         FormationView.f(param0 - 15646);
-        LineupView.b((byte) -113);
-        ib.a(param0 + 905215451);
-        cv.b((byte) -39);
+        LineupView.releaseStatics((byte) -113);
+        DateOfBirthPanel.a(param0 + 905215451);
+        cv.releaseStatics((byte) -39);
         ia.a((byte) 107);
-        rn.a(-66);
+        rn.releaseStatics(-66);
         AnimationSkeleton.a(-1);
-        ok.a(param0 + 121);
-        ef.h((byte) -31);
-        db.a();
-        mk.a(17437);
-        uk.a((byte) -128);
-        nm.a(256);
+        ok.releaseStatics(param0 + 121);
+        ef.releaseStatics((byte) -31);
+        AnimationFrame.releaseStatics();
+        mk.releaseStatics(17437);
+        uk.releaseStatics((byte) -128);
+        AnimationClip.releaseStatics(256);
         g.a(true);
-        us.f((byte) 40);
-        ip.a(-123);
+        us.releaseStatics((byte) 40);
+        ip.releaseStatics(-123);
         vp.b((byte) 125);
-        MusicPatchNode.a((byte) -80);
-        MidiFileReader.b();
-        pp.a(false);
+        MusicPatchNode.releaseStatics((byte) -80);
+        MidiFileReader.releaseStatics();
+        MusicPatchPcmStream.a(false);
         PagedHelpScreen.e(param0 - 29110);
-        tb.c((byte) -115);
+        tb.releaseStatics((byte) -115);
         ui.a(true);
-        SectorCacheStore.b(-1);
-        hi.g(-26236);
-        CachedArchiveSource.a((byte) -119);
-        or.a((byte) 69);
-        vv.g((byte) 18);
-        af.a((byte) 105);
+        SectorCacheStore.releaseStatics(-1);
+        DiskCacheRequest.g(-26236);
+        CachedArchiveSource.releaseStatics((byte) -119);
+        or.releaseStatics((byte) 69);
+        vv.releaseStatics((byte) 18);
+        af.releaseStatics((byte) 105);
         cg.k(115);
         ValidatedTextWidget.n((byte) 74);
         TextInputWidget.l(param0 - 6);
         ContentTransitionDialog.p(12);
         NameSuggestionsPanel.a(param0 - 6);
         TextHotspotWidget.i(param0 + 9568);
-        gb.a((byte) 38);
-        ju.h((byte) -120);
+        ValidationIndicator.a((byte) 38);
+        ValidationHelpWidget.h((byte) -120);
         Checkbox.a((byte) 108);
         TextFieldValidator.b((byte) -124);
         br.a(true);
         AccountTermsPanel.l(0);
-        bk.b(-79);
+        bk.releaseStatics(-79);
         SynthesizedSoundInstrument.releaseSynthesisBuffers();
         InstrumentNoteMask.a(96);
-        MainMenuScreen.f(90);
+        MainMenuScreen.releaseStatics(90);
         GameModesHelpScreen.g(128);
         LeaguesHelpScreen.g(60);
         AuctionsHelpScreen.c(false);
-        MyKitScreen.h(8);
-        um.a(123);
-        RowRangeRequest.a((byte) -49);
+        MyKitScreen.releaseStatics(8);
+        um.releaseStatics(123);
+        RowRangeRequest.releaseStatics((byte) -49);
         hl.f(param0 ^ -5);
         NumericDateInputWidget.n(-23192);
-        wt.b(false);
-        go.a(99);
-        mg.a(param0 ^ 136);
-        hv.a(23);
-        MusicPatch.f((byte) -37);
-        gl.a(93);
-        m.a(0);
+        ArrayWidgetContainer.b(false);
+        go.releaseStatics(99);
+        mg.releaseStatics(param0 ^ 136);
+        hv.releaseStatics(23);
+        MusicPatch.releaseStatics((byte) -37);
+        gl.releaseStatics(93);
+        WhirlpoolHasher.releaseStatics(0);
         s.i(-1);
         nv.j(696);
-        st.b((byte) -103);
+        CachedTextLayout.releaseStatics((byte) -103);
         DraggableWidget.h((byte) -112);
         DropTargetWidget.k(31235);
-        ll.b((byte) -56);
-        fu.a(true);
+        DirectByteStorage.b((byte) -56);
+        GrowableIntList.a(true);
         IterableNodeHashTable.a(false);
-        ci.a(18);
-        ij.g((byte) -46);
-        ff.a((byte) 101);
-        pn.b(-1);
+        IterableDualLinkDeque.releaseStatics(18);
+        WeightedCacheEntry.releaseStatics((byte) -46);
+        ff.releaseStatics((byte) 101);
+        StrongCacheEntry.b(-1);
         ProxySocketConnector.a(false);
-        dt.a(43);
+        OffscreenPlayerArrow.releaseStatics(43);
         DateInputWidget.a(param0 ^ -104);
-        vt.a(-73);
-        SoundFilter.a();
+        vt.releaseStatics(-73);
+        SoundFilter.releaseStatics();
         KitStyleTile.i(4476);
-        NodeHashTableIterator.a(1);
-        DualLinkDequeIterator.a(-119);
-        nb.a(true);
-        ag.a((byte) 100);
-        ReceivedAuctionItem.g((byte) -126);
-        wd.a((byte) 122);
+        NodeHashTableIterator.releaseStatics(1);
+        DualLinkDequeIterator.releaseStatics(-119);
+        GameSoundEffect.a(true);
+        ag.releaseStatics((byte) 100);
+        ReceivedAuctionItem.releaseStatics((byte) -126);
+        wd.releaseStatics((byte) 122);
         ni.a(-1859);
         sm.a(0);
-        wp.b(param0 ^ 6);
-        op.b(-1842526431);
-        cr.a(param0 + 18080);
+        wp.releaseStatics(param0 ^ 6);
+        op.releaseStatics(-1842526431);
+        cr.releaseStatics(param0 + 18080);
         ri.b(true);
-        rp.a(102);
-        mn.a((byte) 106);
+        rp.releaseStatics(102);
+        mn.releaseStatics((byte) 106);
         AlphaContainer.h((byte) 115);
-        oc.b((byte) -116);
+        oc.releaseStatics((byte) -116);
         dk.a(7571);
         ii.a(84);
-        bl.b((byte) -104);
+        bl.releaseStatics((byte) -104);
         ConsoleExpression.a(param0 - 6);
-        ConsoleValue.a((byte) -126);
+        ConsoleValue.releaseStatics((byte) -126);
         ConsoleCommand.a(15);
-        ConsoleParseException.a((byte) 121);
-        ConsoleEvaluationException.a(param0 ^ 6);
-        sb.a(-127);
-        q.b(-84);
+        ConsoleParseException.releaseStatics((byte) 121);
+        ConsoleEvaluationException.releaseStatics(param0 ^ 6);
+        StringCursor.releaseStatics(-127);
+        ConsoleTokenCursor.releaseStatics(-84);
         en.b((byte) 38);
-        rl.b(20);
+        rl.releaseStatics(20);
         ba.c((byte) -35);
-        od.b(param0 - 6);
+        od.releaseStatics(param0 - 6);
         qi.b((byte) 85);
-        sr.a((byte) 121);
+        SortCriterion.a((byte) 121);
         nk.a(-15207);
         pa.c((byte) 125);
-        md.c(param0 ^ 32312);
+        CheatCodeListener.releaseStatics(param0 ^ 32312);
         fa.a(param0 - 121);
-        kw.d((byte) -122);
-        r.a(param0 ^ -94);
+        kw.releaseStatics((byte) -122);
+        r.releaseStatics(param0 ^ -94);
         DelayedServerPacket.a(104);
         vd.a(-5);
-        wn.a(param0 ^ param0);
-        ue.a(92);
+        wn.releaseStatics(param0 ^ param0);
+        NamedValueEntry.a(92);
         j.a(true);
-        vl.a(120);
-        KeyedLoginCredentials.b((byte) -104);
+        LoginMethod.releaseStatics(120);
+        KeyedLoginCredentials.releaseStatics((byte) -104);
         wo.a(false);
         PasswordLoginCredentials.c(85);
-        oh.b((byte) -47);
-        vs.a(0);
-        cf.a(-13);
-        CachedListingRow.a((byte) -123);
-        gd.a(22897);
+        oh.releaseStatics((byte) -47);
+        vs.releaseStatics(0);
+        RankingRowNode.a(-13);
+        CachedListingRow.releaseStatics((byte) -123);
+        ListingRowCache.releaseStatics(22897);
         SumIntegersCommand.g(10040319);
         WriteIntegersCommand.g(1);
         DemoIntegersCommand.g(param0 - 6);
@@ -1905,32 +1905,32 @@ public final class Kickabout extends GameLoopApplet {
         LongPlusOneCommand.g(1);
         BytePlusOneCommand.g((byte) 52);
         SetLagCommand.a(false);
-        BroadcastServerCommand.g((byte) 96);
-        ej.h((byte) 118);
+        BroadcastServerCommand.releaseStatics((byte) 96);
+        SelectableTrinketIcon.releaseStatics((byte) 118);
         im.a(-18523);
-        at.h((byte) -117);
-        dn.c(true);
+        TrinketTile.releaseStatics((byte) -117);
+        TrinketIcon.c(true);
         AccountMessagePanel.a(14);
-        hh.a((byte) 121);
-        qj.b((byte) -125);
-        dl.a((byte) -61);
+        hh.releaseStatics((byte) 121);
+        TextLayoutLine.releaseStatics((byte) -125);
+        dl.releaseStatics((byte) -61);
         hr.a(2);
         k.a(-77);
         mp.a(1);
-        hf.a(true);
-        v.b(0);
+        PainterStyle.a(true);
+        v.releaseStatics(0);
         AccountNameAvailabilityValidator.g(-70);
         PasswordValidator.c((byte) -96);
         EmailSyntaxValidator.f((byte) -126);
         EmailAvailabilityValidator.g(-29635);
         AgeValidator.c((byte) 92);
         MatchingTextValidator.c((byte) 76);
-        ic.a((byte) 68);
-        er.a((byte) -94);
-        ValidationState.a(-89);
+        ic.releaseStatics((byte) 68);
+        er.releaseStatics((byte) -94);
+        ValidationState.releaseStatics(-89);
         DebouncedValidationProvider.d(param0 ^ 344);
-        ea.a(param0 ^ -110);
-        ld.a((byte) 112);
+        ea.releaseStatics(param0 ^ -110);
+        ld.releaseStatics((byte) 112);
         this.field_z = null;
     }
 

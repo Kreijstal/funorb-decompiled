@@ -6,7 +6,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     private boolean field_db;
     private boolean field_cb;
     private boolean field_gb;
-    private ou field_jb;
+    private StripedProgressBar field_jb;
     private boolean field_hb;
     static r field_fb;
     private BitmapFont field_eb;
@@ -29,7 +29,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           for (var4_int = 0; var4_int < param3.length; var4_int++) {
             var5 = param3[var4_int];
             var6 = param3[(var4_int + 1) % param3.length];
-            nm.a(var6.x, param1, var6.y, var5.y, var5.x, param2, (byte) -109);
+            AnimationClip.a(var6.x, param1, var6.y, var5.y, var5.x, param2, (byte) -109);
           }
           if (param0 != -108) {
             field_bb = (String) null;
@@ -51,7 +51,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               }
             }
           } else {
-            var7.a((byte) 54, 7, ha.field_J);
+            var7.a((byte) 54, 7, WelcomeDialog.field_J);
           }
           if (param1 < 96) {
             var6 = (java.awt.Point[]) null;
@@ -224,7 +224,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -236,11 +236,11 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_hb = false;
           this.field_db = param4 ? true : false;
           this.field_gb = param3 ? true : false;
-          this.field_jb = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_jb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_jb.field_w = true;
           this.a(-42, this.field_jb);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

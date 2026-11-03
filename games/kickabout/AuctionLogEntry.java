@@ -61,7 +61,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         if (param0 != 1315216324) {
           AuctionLogEntry.a(0);
         }
-        return fc.field_a + (q.field_b << 2) + (ng.field_a << 4);
+        return fc.field_a + (ConsoleTokenCursor.field_b << 2) + (ng.field_a << 4);
     }
 
     final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
@@ -100,7 +100,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             return stackIn_9_0;
           }
           if (param0 == 8) {
-            stackIn_12_0 = rc.field_e;
+            stackIn_12_0 = GzipDecoder.field_e;
             return stackIn_12_0;
           }
           if (param0 == 9) {
@@ -172,7 +172,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           if (param0 != 14) {
             return null;
           }
-          stackIn_30_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, nm.field_a, new String[]{param1});
+          stackIn_30_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AnimationClip.field_a, new String[]{param1});
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,7 +184,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           this.slotIndex = (15 & var2_int >> 4) - 1;
           this.auctionId = param0.readLong((byte) -124);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "cq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "cq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -234,14 +234,14 @@ final class AuctionLogEntry extends IntrusiveNode {
         if (param0 != 15137) {
           return false;
         }
-        stackIn_6_0 = (!PlayArea.a(100)) && (2 <= tk.field_Ib);
+        stackIn_6_0 = (!PlayArea.a(100)) && (2 <= ScrollContainer.field_Ib);
         return stackIn_6_0;
     }
 
     final static Object a(byte[] param0, boolean param1, int param2) {
-        ll var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        ll stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -253,8 +253,8 @@ final class AuctionLogEntry extends IntrusiveNode {
             return null;
           }
           if (param2 < param0.length) {
-            var3 = new ll();
-            ((pf) ((Object) var3)).a(param0, 21820);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).a(param0, 21820);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }
@@ -274,7 +274,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -42,11 +42,11 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           gw.field_d = ng.a("stains", "park", 2, bo.field_Cb);
           return -1;
         }
-        return bo.field_Cb.a("park", -16248);
+        return bo.field_Cb.getGroupProgressByName("park", -16248);
     }
 
-    final static void a(qb param0, byte param1) {
-        qb var2 = null;
+    final static void a(GameSetupPanel param0, byte param1) {
+        GameSetupPanel var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -59,10 +59,10 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             return;
           }
           param0.c((byte) -109);
-          var2 = (qb) (SquadSlotWidget.field_yb.g(24009));
+          var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.g(24009));
           while (var2 != null) {
             if (var2.a(param1 + 20843, param0)) {
-              var2 = (qb) (SquadSlotWidget.field_yb.c(33));
+              var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
               continue;
             }
             break;
@@ -83,7 +83,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           if (tr.field_b == param1) {
             var3 = ValidatedTextWidget.field_bb;
           } else {
-            if (param1 == hf.field_a) {
+            if (param1 == PainterStyle.field_a) {
               this.field_i = this.field_i + 10;
               var3 = AnimationSkeleton.field_n;
               if (AccountTermsPanel.a(99)) {
@@ -194,22 +194,22 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     final static void q(int param0) {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        tv var1 = null;
+        ChatMessage var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         String[] var3 = null;
-        tv var4_ref_tv = null;
+        ChatMessage var4_ref_tv = null;
         int var5 = 0;
         int var6 = 0;
         FadingChatMessage var7 = null;
-        tv var8 = null;
+        ChatMessage var8 = null;
         int var2Lifetime1;
         var5 = Kickabout.field_G;
         try {
@@ -221,7 +221,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             var3 = new String[10];
             while (10 > var2) {
               if (-var2 - 1 + vb.field_j >= 0) {
-                var4_ref_tv = fu.field_b[-var2 + (vb.field_j - 1)];
+                var4_ref_tv = GrowableIntList.field_b[-var2 + (vb.field_j - 1)];
                 if (var4_ref_tv != AccountRegistrationPanel.field_D) {
                   if (null != var4_ref_tv.field_s) {
                     var3[var2] = var4_ref_tv.field_s.field_E;
@@ -265,7 +265,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "ve.H(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "ve.H(" + param0 + ')');
         }
     }
 
@@ -297,7 +297,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

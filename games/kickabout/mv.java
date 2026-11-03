@@ -14,7 +14,7 @@ final class mv {
           var1.power = 50;
           var1.speed = 50;
           var2.trinketIds = new int[]{110};
-          var1.playerType = 4;
+          var1.archetype = 4;
           var1.tackle = 50;
           return var1;
         }
@@ -30,15 +30,15 @@ final class mv {
 
     final static void a(byte param0) {
         if (param0 > 104) {
-          gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-          ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+          ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
-        gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-        gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-        ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+        ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+        ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+        ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 
     static {
@@ -48,14 +48,14 @@ final class mv {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$6121ff5511c4(int param0) {
         if (param0 > 104) {
-          gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-          ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+          ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
-        gu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-        gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-        ui.a(0, fn.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+        ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+        ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+        ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 }

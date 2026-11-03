@@ -20,7 +20,7 @@ final class SetLagCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = n.a('_', "", (byte) -125, param2);
+          param2 = ArchiveManager.a('_', "", (byte) -125, param2);
           if (param0 < 12) {
             return true;
           }
@@ -43,7 +43,7 @@ final class SetLagCommand extends ConsoleCommand {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -82,11 +82,11 @@ final class SetLagCommand extends ConsoleCommand {
           }
           for (var6 = 0; var6 < var4_int; var6++) {
             var7 = param2[var6];
-            var5[var6] = new Sprite(q.field_d.a(var7) + 4, 18);
+            var5[var6] = new Sprite(ConsoleTokenCursor.field_d.a(var7) + 4, 18);
             PacketBuffer.a(82, var5[var6]);
             stackIn_8_0 = (param1[var6].field_p == param3) ? 11184895 : 16755370;
             var8 = stackIn_8_0;
-            q.field_d.d(var7, SoftwareRasterizer.field_g >> 1, -4 + SoftwareRasterizer.field_f, var8, -1);
+            ConsoleTokenCursor.field_d.d(var7, SoftwareRasterizer.field_g >> 1, -4 + SoftwareRasterizer.field_f, var8, -1);
             TeamManagementScreen.e(117);
             var5[var6].a(65793);
           }
@@ -108,7 +108,7 @@ final class SetLagCommand extends ConsoleCommand {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class SetLagCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(vg.e(-63, param1[0].b(-30368)));
+            stackIn_4_0 = new ConsoleValue(TextFieldNode.e(-63, param1[0].b(-30368)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -141,7 +141,7 @@ final class SetLagCommand extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class SetLagCommand extends ConsoleCommand {
                 var2 = -un.field_e.field_n + param1;
               }
               op.field_y.a(un.field_e.field_f, var2, un.field_e.field_n, -4847);
-              ci.field_c = nj.a(-128);
+              IterableDualLinkDeque.field_c = nj.monotonicMillis(-128);
               un.field_e.field_n = un.field_e.field_n + var2;
               if (param1 > un.field_e.field_n) {
                 return false;
@@ -190,13 +190,13 @@ final class SetLagCommand extends ConsoleCommand {
     }
 
     final static void b(boolean param0) {
-        if (!hk.field_G) {
+        if (!AuctionBidDialog.field_G) {
           throw new IllegalStateException();
         }
         if (null != rk.field_f) {
           rk.field_f.q(-96);
         }
-        String var1 = vg.a(-110);
+        String var1 = TextFieldNode.a(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);
         wd.field_l.a(we.field_a, false);
         we.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));
@@ -215,19 +215,19 @@ final class SetLagCommand extends ConsoleCommand {
           try {
             var6_int = 60 % ((20 - param1) / 35);
             var7 = null;
-            if (hf.field_e.field_c != null) {
-              RandomAccessCacheFile.field_h = new BufferedCacheFile(hf.field_e.field_c, 5200, 0);
-              hf.field_e.field_c = null;
-              var7 = new SectorCacheStore(255, RandomAccessCacheFile.field_h, new BufferedCacheFile(hf.field_e.field_j, 12000, 0), 2097152);
+            if (PainterStyle.field_e.field_c != null) {
+              RandomAccessCacheFile.field_h = new BufferedCacheFile(PainterStyle.field_e.field_c, 5200, 0);
+              PainterStyle.field_e.field_c = null;
+              var7 = new SectorCacheStore(255, RandomAccessCacheFile.field_h, new BufferedCacheFile(PainterStyle.field_e.field_j, 12000, 0), 2097152);
             }
             var8 = null;
             if (null != RandomAccessCacheFile.field_h) {
               if (null == JaggrabDownloader.field_j) {
-                JaggrabDownloader.field_j = new BufferedCacheFile[hf.field_e.field_v.length];
+                JaggrabDownloader.field_j = new BufferedCacheFile[PainterStyle.field_e.field_v.length];
               }
               if (JaggrabDownloader.field_j[param0] == null) {
-                JaggrabDownloader.field_j[param0] = new BufferedCacheFile(hf.field_e.field_v[param0], 12000, 0);
-                hf.field_e.field_v[param0] = null;
+                JaggrabDownloader.field_j[param0] = new BufferedCacheFile(PainterStyle.field_e.field_v[param0], 12000, 0);
+                PainterStyle.field_e.field_v[param0] = null;
               }
               var8 = new SectorCacheStore(param0, RandomAccessCacheFile.field_h, JaggrabDownloader.field_j[param0], 2097152);
             }

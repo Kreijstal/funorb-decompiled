@@ -12,18 +12,18 @@ final class PlayArea {
     static int[][] field_k;
     static double field_d;
     static String field_f;
-    static ib field_a;
+    static DateOfBirthPanel field_a;
     static int field_c;
 
     final static boolean b(int param0) {
         if (param0 != 820907312) {
           field_k = (int[][]) null;
-          return n.field_c;
+          return ArchiveManager.field_c;
         }
-        return n.field_c;
+        return ArchiveManager.field_c;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_f = null;
         field_e = null;
@@ -35,9 +35,9 @@ final class PlayArea {
 
     final void a(int param0, int param1) {
         int var3 = ug.a(param0 ^ -2943, this.field_g >> 16);
-        int var4 = lf.a((byte) -123, this.field_b >> 16);
+        int var4 = IntKeyLookup.a((byte) -123, this.field_b >> 16);
         int var5 = -var3 + ug.a(param0 ^ param0, this.field_i >> 16);
-        int var6 = -var4 + lf.a((byte) -117, this.field_h >> 16);
+        int var6 = -var4 + IntKeyLookup.a((byte) -117, this.field_h >> 16);
         SoftwareRasterizer.a(var3, var4, var5, var6, param1, 50);
         SoftwareRasterizer.e(var3, var4, var5, var6, param1);
     }
@@ -51,12 +51,12 @@ final class PlayArea {
           }
           ld.field_f = (RenderedFootballer) (et.field_d.field_P[0][3]);
           fc.field_c = (RenderedFootballer) (et.field_d.field_P[0][4]);
-          mc.field_a = 0;
+          TickClock.field_a = 0;
           AuctionLogEntry.field_g = 640;
           EmailAvailabilityValidator.field_k = (RenderedFootballer) (et.field_d.field_P[param1][1]);
           CheckboxLabelWidget.c(1, false);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "la.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "la.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -119,9 +119,9 @@ final class PlayArea {
     final static boolean a(int param0) {
         if (param0 != 100) {
           PlayArea.b(78);
-          return nb.field_f;
+          return GameSoundEffect.field_f;
         }
-        return nb.field_f;
+        return GameSoundEffect.field_f;
     }
 
     PlayArea(int param0, int param1, int param2, int param3) {

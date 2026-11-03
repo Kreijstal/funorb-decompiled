@@ -42,7 +42,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "wj.Q(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "wj.Q(" + param0 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           field_w = null;
           field_x = null;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wj.RA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wj.RA(" + param0 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "wj.FA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wj.FA(" + param0 + ')');
         }
     }
 
@@ -333,7 +333,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "wj.NA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "wj.NA(" + param0 + ')');
         }
     }
 
@@ -402,7 +402,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -434,7 +434,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var5_ref), "wj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var5_ref), "wj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -483,11 +483,11 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static void a(int param0, kk param1, int param2, int param3, boolean param4) {
+    final static void a(int param0, TriangleMesh param1, int param2, int param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_12_0 = false;
         int stackIn_31_0 = 0;
@@ -564,14 +564,14 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                     if (-2147483648 != var14) {
                       var15 = var14 + var12Lifetime1 - (-var13Lifetime1 + var6);
                       stackIn_31_0 = -1;
-                      stackIn_31_1 = qe.field_b.length;
+                      stackIn_31_1 = ArchivePreloader.field_b.length;
                       if (var7 < 0) {
                         stackIn_32_2 = var15 << -var7;
                       } else {
                         stackIn_32_2 = var15 >> var7;
                       }
                       var16 = stackIn_31_0 + (stackIn_31_1 - stackIn_32_2);
-                      var17 = qe.field_b[var16];
+                      var17 = ArchivePreloader.field_b[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -580,17 +580,17 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = qe.field_b[var16];
+                          var17 = ArchivePreloader.field_b[var16];
                           continue;
                         }
                         stackIn_42_0Lifetime1 = (var16 << 4) + var17;
                         var18 = stackIn_42_0Lifetime1;
-                        nb.field_e[var18] = var8;
-                        qe.field_b[var16] = 1 + var17;
+                        GameSoundEffect.field_e[var18] = var8;
+                        ArchivePreloader.field_b[var16] = 1 + var17;
                         if (param1.field_u > 0 &&
                           param1.field_G != null) {
                           dupTemp$0 = param1.field_G[var8];
-                          vu.field_zb[dupTemp$0] = vu.field_zb[dupTemp$0] + 1;
+                          ContextMenuItem.field_zb[dupTemp$0] = ContextMenuItem.field_zb[dupTemp$0] + 1;
                         }
                         ShopPlayerSlot.field_Ob = ShopPlayerSlot.field_Ob + 1;
                         break;
@@ -611,9 +611,9 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             param1.field_G != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= vu.field_zb.length)) {
-              var10Lifetime1 = vu.field_zb[var9Lifetime1];
-              vu.field_zb[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= ContextMenuItem.field_zb.length)) {
+              var10Lifetime1 = ContextMenuItem.field_zb[var9Lifetime1];
+              ContextMenuItem.field_zb[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -632,7 +632,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -649,7 +649,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "wj.KA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "wj.KA(" + param0 + ')');
         }
     }
 
@@ -747,7 +747,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -763,7 +763,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         var9 = Kickabout.field_G;
         try {
           if (param4 != -1) {
-            WidgetContainer.a(104, (kk) null, 40, 112, false);
+            WidgetContainer.a(104, (TriangleMesh) null, 40, 112, false);
           }
           var7 = new IntrusiveDequeCursor(this.field_y);
           var8 = (UiWidget) (var7.a((byte) -93));
@@ -788,7 +788,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -843,7 +843,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -852,7 +852,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           super.a(param0, param1, param2, param3, param4);
           this.j(5);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "wj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -895,7 +895,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2_ref), "wj.MA(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2_ref), "wj.MA(" + param0 + ')');
         }
     }
 
@@ -934,7 +934,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -999,7 +999,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1038,7 +1038,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1066,7 +1066,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) runtimeException), "wj.R(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wj.R(" + param0 + ')');
         }
     }
 
@@ -1119,7 +1119,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

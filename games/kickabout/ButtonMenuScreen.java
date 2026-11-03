@@ -60,7 +60,7 @@ class ButtonMenuScreen extends AppScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ class ButtonMenuScreen extends AppScreen {
               ((ButtonMenuScreen) (var4_ref_js)).field_m) {
               AccountTermsPanel.field_E.d(0, 430);
             } else {
-              var5Lifetime1 = (ce.field_I << 9) / 24;
+              var5Lifetime1 = (BuyPlayerDialog.field_I << 9) / 24;
               if (256 < var5Lifetime1) {
                 var5Lifetime1 = 256;
               }
@@ -290,7 +290,7 @@ class ButtonMenuScreen extends AppScreen {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ class ButtonMenuScreen extends AppScreen {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -414,31 +414,31 @@ class ButtonMenuScreen extends AppScreen {
         int var3 = 0;
         var3 = Kickabout.field_G;
         try {
-          if (ks.field_e == 1) {
+          if (HuffmanCodec.field_e == 1) {
             stackIn_70_0 = (et.field_d.field_V.possessorTeam == 0);
             return stackIn_70_0;
           }
-          if (2 == ks.field_e) {
+          if (2 == HuffmanCodec.field_e) {
             stackIn_6_0 = !(EmailAvailabilityValidator.field_k.pixelY(true) >= 285);
             return stackIn_6_0;
           }
-          if (ks.field_e == 3) {
+          if (HuffmanCodec.field_e == 3) {
             stackIn_12_0 = (790 < EmailAvailabilityValidator.field_k.pixelX(param0 - 85)) && (1000 < EmailAvailabilityValidator.field_k.pixelY(true));
             return stackIn_12_0;
           }
-          if (ks.field_e == 4) {
+          if (HuffmanCodec.field_e == 4) {
             stackIn_66_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 3);
             return stackIn_66_0;
           }
-          if (5 == ks.field_e) {
+          if (5 == HuffmanCodec.field_e) {
             stackIn_19_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 1);
             return stackIn_19_0;
           }
-          if (ks.field_e == 6) {
+          if (HuffmanCodec.field_e == 6) {
             stackIn_61_0 = (et.field_d.field_V.possessorTeam == 0) && (3 == et.field_d.field_V.possessorSlot);
             return stackIn_61_0;
           }
-          if (ks.field_e == 7) {
+          if (HuffmanCodec.field_e == 7) {
             stackIn_49_0 = (et.field_d.field_V.possessorTeam != 0) ? 0 : 1;
             var1_int = stackIn_49_0;
             for (var2 = 1; 4 > var2; var2++) {
@@ -453,19 +453,19 @@ class ButtonMenuScreen extends AppScreen {
             stackIn_56_0 = var1_int;
             return stackIn_56_0 != 0;
           }
-          if (8 == ks.field_e) {
+          if (8 == HuffmanCodec.field_e) {
             stackIn_28_0 = (et.field_d.field_V.possessorTeam == 0) && (ld.field_f.pixelX(-115) > 760) && (ld.field_f.pixelY(true) > 1000);
             return stackIn_28_0;
           }
-          if (9 == ks.field_e) {
+          if (9 == HuffmanCodec.field_e) {
             stackIn_34_0 = (0 == et.field_d.field_V.possessorTeam) && (et.field_d.field_V.possessorSlot == 1);
             return stackIn_34_0;
           }
-          if (ks.field_e == 10) {
+          if (HuffmanCodec.field_e == 10) {
             stackIn_39_0 = (et.field_d.participantStatus[0].controlledSlot == 4);
             return stackIn_39_0;
           }
-          if (11 == ks.field_e) {
+          if (11 == HuffmanCodec.field_e) {
             stackIn_45_0 = (et.field_d.field_V.possessorTeam == 0);
             return stackIn_45_0;
           }
@@ -476,7 +476,7 @@ class ButtonMenuScreen extends AppScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "qt.V(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "qt.V(" + param0 + ')');
         }
     }
 
@@ -531,14 +531,14 @@ class ButtonMenuScreen extends AppScreen {
         int var4Lifetime2;
         var8 = Kickabout.field_G;
         stackIn_3_0 = param1;
-        stackIn_4_1 = (!ec.field_e) && (!QuickChatPhraseCache.field_d);
+        stackIn_4_1 = (!LoginText.field_e) && (!QuickChatPhraseCache.field_d);
         param1 = stackIn_3_0 & stackIn_4_1;
         if (!param1) {
           this.buttonSelection.selectedIndex = -1;
         }
         if (param1) {
-          var3 = this.buttonIndexAt(wt.field_x, us.field_j, (byte) 30);
-          this.buttonSelection.a(-21174, var3, this.buttonIndexAt(dn.field_yb, kf.field_Eb, (byte) 110));
+          var3 = this.buttonIndexAt(ArrayWidgetContainer.field_x, us.field_j, (byte) 30);
+          this.buttonSelection.a(-21174, var3, this.buttonIndexAt(TrinketIcon.field_yb, TabStrip.field_Eb, (byte) 110));
           if (var3 == -1) {
             stackIn_11_0 = -1;
           } else {
@@ -567,7 +567,7 @@ class ButtonMenuScreen extends AppScreen {
             stackIn_32_0 = 0;
           }
           var6 = stackIn_32_0;
-          var7 = wt.field_x - this.buttonCenterX(var9, -22667);
+          var7 = ArrayWidgetContainer.field_x - this.buttonCenterX(var9, -22667);
           this.buttons[var9].a(var4Lifetime1 != 0, var5 != 0, var6 != 0, 16, var7);
           var9++;
         }
@@ -575,7 +575,7 @@ class ButtonMenuScreen extends AppScreen {
     }
 
     final static void a(int param0) {
-        np.field_Jb.a(new qq(), 3);
+        ScrollPane.field_Jb.a(new LoginRequiredDialog(), 3);
         if (param0 != 16144) {
           ButtonMenuScreen.d(-47);
         }
@@ -661,7 +661,7 @@ class ButtonMenuScreen extends AppScreen {
         try {
           this.buttonSelection = new MenuSelection(this.buttons.length);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "qt.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qt.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -669,7 +669,7 @@ class ButtonMenuScreen extends AppScreen {
         if (param0 != -63) {
           return (UiLayoutNode) null;
         }
-        return nq.field_F.field_yb;
+        return TournamentChampionDialog.field_F.field_yb;
     }
 
     static {

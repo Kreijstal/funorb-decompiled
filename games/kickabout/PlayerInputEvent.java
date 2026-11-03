@@ -27,31 +27,31 @@ final class PlayerInputEvent extends DualLinkNode {
 
     final static String g(byte param0) {
         if (!(hl.field_d >= 2)) {
-          return sr.field_c;
+          return SortCriterion.field_c;
         }
-        if (null != qq.field_H) {
-          if (!qq.field_H.d(-42)) {
-            return ks.field_g;
+        if (null != LoginRequiredDialog.field_H) {
+          if (!LoginRequiredDialog.field_H.ensureIndex(-42)) {
+            return HuffmanCodec.field_g;
           }
           return ep.field_e;
         }
         int var1 = 27 % ((param0 + 48) / 56);
-        if (!bw.field_b.d(-78)) {
+        if (!bw.field_b.ensureIndex(-78)) {
           return CommonGame.field_M;
         }
         if (!bw.field_b.a(false, "commonui")) {
-          return BufferedSocket.field_q + " - " + bw.field_b.a("commonui", -16248) + "%";
+          return BufferedSocket.field_q + " - " + bw.field_b.getGroupProgressByName("commonui", -16248) + "%";
         }
-        if (!gs.field_c.d(-122)) {
+        if (!gs.field_c.ensureIndex(-122)) {
           return te.field_b;
         }
         if (!gs.field_c.a(false, "commonui")) {
-          return TextLine.field_l + " - " + gs.field_c.a("commonui", -16248) + "%";
+          return TextLine.field_l + " - " + gs.field_c.getGroupProgressByName("commonui", -16248) + "%";
         }
-        if (!PlayerStats.field_k.d(-96)) {
+        if (!PlayerStats.field_k.ensureIndex(-96)) {
           return TeamSelectionAgent.field_l;
         }
-        if (!PlayerStats.field_k.a(false)) {
+        if (!PlayerStats.field_k.ensureAllGroupsAvailable(false)) {
           return SumIntegersCommand.field_H + " - " + PlayerStats.field_k.e(-8185) + "%";
         }
         return uf.field_a;
@@ -113,9 +113,9 @@ final class PlayerInputEvent extends DualLinkNode {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               FindingOpponentScreen.field_B[var6_int] = var14.readString(124);
             }
-            n.a(-20669, var4, var5);
+            ArchiveManager.a(-20669, var4, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              pf.a(var14, 542439655);
+              ByteStorage.a(var14, 542439655);
               if (var6_intLifetime1 == 0) {
                 var3.field_f = FormationView.field_r;
                 var3.field_m = pl.field_d;
@@ -126,7 +126,7 @@ final class PlayerInputEvent extends DualLinkNode {
                 su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, pl.field_d);
               }
             }
-            kf.a(var5, (byte) 63);
+            TabStrip.a(var5, (byte) 63);
             dupTemp$0 = new String[2][var5];
             var3.field_i = dupTemp$0;
             var6 = dupTemp$0;
@@ -137,7 +137,7 @@ final class PlayerInputEvent extends DualLinkNode {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = pf.field_d[var9];
+              var11 = ByteStorage.field_d[var9];
               var6[0][var10] = FindingOpponentScreen.field_B[var11];
               var7[0][4 * var10] = bl.field_m[var11];
               var7[0][1 + var10 * 4] = AccountMessagePanel.field_G[var11];
@@ -155,7 +155,7 @@ final class PlayerInputEvent extends DualLinkNode {
             var13 = 0;
             var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = pf.field_d[var5 + var9Lifetime1];
+              var11Lifetime1 = ByteStorage.field_d[var5 + var9Lifetime1];
               var6[1][var13] = FindingOpponentScreen.field_B[var11Lifetime1];
               var7[1][4 * var13] = bl.field_m[var11Lifetime1];
               var7[1][1 + var13 * 4] = AccountMessagePanel.field_G[var11Lifetime1];
@@ -178,7 +178,7 @@ final class PlayerInputEvent extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "ki.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "ki.D(" + param0 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class PlayerInputEvent extends DualLinkNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -54,7 +54,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_n = param1;
           this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_9_0;
           }
           if (!this.b(param0, (byte) -77)) {
-            return he.field_yb;
+            return LobbyPlayerRow.field_yb;
           }
           stackIn_13_0 = PitchOptionTile.field_Bb;
           return stackIn_13_0;
@@ -120,7 +120,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -139,11 +139,11 @@ final class PasswordValidator extends TextFieldValidator {
           if (FadingChatMessage.field_h == param2 &&
             param1 == jr.field_Kb &&
             TextButton.field_C == param3 &&
-            param4 == gb.field_K &&
+            param4 == ValidationIndicator.field_K &&
             MouseWheelInput.field_f == param5) {
             return;
           }
-          gb.field_K = param4;
+          ValidationIndicator.field_K = param4;
           FadingChatMessage.field_h = param2;
           TextButton.field_C = param3;
           stackIn_11_0 = param5;
@@ -171,20 +171,20 @@ final class PasswordValidator extends TextFieldValidator {
           TeamManagementScreen.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
           SoftwareRasterizer.b();
-          var8Lifetime1 = uv.b(-gb.field_K, TextButton.field_C, (byte) 2);
+          var8Lifetime1 = PlayerContextMenu.b(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
           }
           var9 = wn.field_j.field_o;
-          DelegatingCanvas.field_e = -(var9 * we.a(var8Lifetime1, false)) >> 17;
-          FormationView.field_m = var9 * ei.a(var8Lifetime1, (byte) -23) >> 17;
+          DelegatingCanvas.field_e = -(var9 * we.cosine(var8Lifetime1, false)) >> 17;
+          FormationView.field_m = var9 * ei.sine(var8Lifetime1, (byte) -23) >> 17;
           wn.field_j.a(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           TeamManagementScreen.e(118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var6), "lo.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var6), "lo.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -218,22 +218,22 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static he a(long param0, boolean param1) {
+    final static LobbyPlayerRow a(long param0, boolean param1) {
         if (param1) {
           field_j = (int[]) null;
         }
-        return (he) (pq.field_N.a(-3611, param0));
+        return (LobbyPlayerRow) (SquadPickerDialog.field_N.a(-3611, param0));
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, byte param4) {
         if (param4 != -55) {
           PasswordValidator.a(124L, false);
         }
-        int var5 = (int)(nj.a(-62) % 2000L * 100L) / 2000;
+        int var5 = (int)(nj.monotonicMillis(-62) % 2000L * 100L) / 2000;
         var5 = (var5 + (param0 * 100 >> 16)) % 100;
         Sprite var6 = lt.field_c[var5];
         if (!param3) {
@@ -274,16 +274,16 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = MySquadScreen.field_M;
             return stackIn_8_0;
           }
-          if (hf.a(var5, -3)) {
+          if (PainterStyle.a(var5, -3)) {
             stackIn_11_0 = GoalStateAgent.field_h;
             return stackIn_11_0;
           }
-          if (qe.a(true, var5)) {
+          if (ArchivePreloader.a(true, var5)) {
             stackIn_15_0 = NotCommand.field_D;
             return stackIn_15_0;
           }
           if (this.b(param1, (byte) -67)) {
-            stackIn_18_0 = no.field_G;
+            stackIn_18_0 = LeagueWinnerDialog.field_G;
             return stackIn_18_0;
           }
           if (0 >= var6.length()) {
@@ -313,7 +313,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class PasswordValidator extends TextFieldValidator {
           ((BitmapFont) ((Object) var3)).d("-10", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d("0", -2 + (var4 + var7 - (-var5 - (var5 >> 1))), var9Lifetime1, 16777215, 65793);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lo.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lo.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -429,7 +429,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

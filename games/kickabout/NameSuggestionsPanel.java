@@ -43,7 +43,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         try {
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "fr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,10 +170,10 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         if (param0 != 66) {
           return (TextWidgetPainter) null;
         }
-        if (null == n.field_e) {
-          n.field_e = new TextWidgetPainter(EmailSyntaxValidator.field_k, 20, 0, 0, 0, 11579568, -1, 0, 0, EmailSyntaxValidator.field_k.field_G, -1, 2147483647, true);
+        if (null == ArchiveManager.field_e) {
+          ArchiveManager.field_e = new TextWidgetPainter(EmailSyntaxValidator.field_k, 20, 0, 0, 0, 11579568, -1, 0, 0, EmailSyntaxValidator.field_k.field_G, -1, 2147483647, true);
         }
-        return n.field_e;
+        return ArchiveManager.field_e;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -183,7 +183,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
         BitmapFont var5 = gf.field_a;
         if (null != this.field_H) {
-          var5.a(md.field_d, param2 + this.field_t, param3 + this.field_g, this.field_n, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_p);
+          var5.a(CheatCodeListener.field_d, param2 + this.field_t, param3 + this.field_g, this.field_n, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_p);
         }
     }
 
@@ -219,7 +219,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -114,7 +114,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -133,16 +133,16 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
 
     private final String[] getPageTitles(boolean param0) {
         if (this.screenId == 19) {
-          return iq.field_a;
+          return TextLayout.field_a;
         }
         if (20 == this.screenId) {
-          return uv.field_d;
+          return PlayerContextMenu.field_d;
         }
         if (!param0) {
           return (String[]) null;
         }
         if (this.screenId == 21) {
-          return ue.field_g;
+          return NamedValueEntry.field_g;
         }
         if (this.screenId == 22) {
           return AuctionListing.field_l;

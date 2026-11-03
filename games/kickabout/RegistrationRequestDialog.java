@@ -74,7 +74,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -84,16 +84,16 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     RegistrationRequestDialog(ModalStack param0, AccountRegistrationPanel param1) {
-        super(param0, fj.field_b, kk.field_L, false, false);
+        super(param0, fj.field_b, TriangleMesh.field_L, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void t(int param0) {
-        this.a(true, TeamSelectionView.a(param0 ^ -105, nb.field_g, 248), (byte) -71);
+        this.a(true, TeamSelectionView.a(param0 ^ -105, GameSoundEffect.field_g, 248), (byte) -71);
         if (param0 != 17) {
           field_qb = (Sprite) null;
         }
@@ -143,7 +143,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             field_rb = (r) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -169,11 +169,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               var4 = param1.field_d;
               if (param1.field_e == 248) {
                 if (param0) {
-                  var4 = nb.field_g;
+                  var4 = GameSoundEffect.field_g;
                   this.field_nb = true;
                 } else {
                   pc.a(536870912);
-                  var4 = nb.field_g;
+                  var4 = GameSoundEffect.field_g;
                   this.field_nb = true;
                 }
               }
@@ -209,7 +209,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               }
               var5.a((byte) 114, 9, AccountNameAvailabilityValidator.field_p);
             } else {
-              var5.a((byte) 94, 7, ha.field_J);
+              var5.a((byte) 94, 7, WelcomeDialog.field_J);
             }
           }
           this.a((byte) -122, (UiWidget) (var5));
@@ -224,7 +224,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(')').toString());
         }
     }
 

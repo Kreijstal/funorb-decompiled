@@ -68,52 +68,52 @@ final class CheckboxLabelWidget extends UiLayoutNode {
             }
           }
           et.field_d.participantStatus[0].controlledSlot = 0;
-          ks.field_e = param0;
+          HuffmanCodec.field_e = param0;
           ic.field_i = false;
           et.field_d.participantStatus[1].controlledSlot = 0;
-          if (ks.field_e == 1) {
-            EmailAvailabilityValidator.field_k.a(29360128, false, 0, 107085824);
+          if (HuffmanCodec.field_e == 1) {
+            EmailAvailabilityValidator.field_k.setPosition(29360128, false, 0, 107085824);
             EmailAvailabilityValidator.field_k.field_R = 1024;
             EmailAvailabilityValidator.field_k.setDirectionFromMask(4, 26214);
             et.field_d.field_V.a(29360128, 0, (byte) 26, 44040192);
             vb.field_d = 1;
           } else {
-            if (ks.field_e != 2) {
-              if (ks.field_e != 3) {
-                if (4 != ks.field_e) {
-                  if (ks.field_e != 5) {
-                    if (6 == ks.field_e) {
-                      ld.field_f.a(655360, param1, 0, 19005440);
+            if (HuffmanCodec.field_e != 2) {
+              if (HuffmanCodec.field_e != 3) {
+                if (4 != HuffmanCodec.field_e) {
+                  if (HuffmanCodec.field_e != 5) {
+                    if (6 == HuffmanCodec.field_e) {
+                      ld.field_f.setPosition(655360, param1, 0, 19005440);
                       vb.field_d = 1;
                       var5 = 0;
                       var2_intLifetime1 = var5;
                       while (3 > var5) {
                         KitStyleTile.field_zb[var5] = 740;
-                        ((RenderedFootballer) (et.field_d.field_P[1][1 + var5])).a(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
+                        ((RenderedFootballer) (et.field_d.field_P[1][1 + var5])).setPosition(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
                         var5++;
                       }
                     } else {
-                      if (ks.field_e == 7) {
+                      if (HuffmanCodec.field_e == 7) {
                         vb.field_d = 3;
                         var8 = (RenderedFootballer) (et.field_d.field_P[1][4]);
-                        var8.a(-13107200, false, 0, 22937600);
+                        var8.setPosition(-13107200, false, 0, 22937600);
                         et.field_d.participantStatus[1].controlledSlot = 4;
                         var8.directionMask = 8;
                         ld.field_f.directionMask = 4;
                       } else {
-                        if (ks.field_e == 8) {
+                        if (HuffmanCodec.field_e == 8) {
                           vb.field_d = 3;
                         } else {
-                          if (ks.field_e != 9) {
-                            if (ks.field_e != 10) {
-                              if (ks.field_e == 11) {
+                          if (HuffmanCodec.field_e != 9) {
+                            if (HuffmanCodec.field_e != 10) {
+                              if (HuffmanCodec.field_e == 11) {
                                 vb.field_d = 4;
                               } else {
-                                if (12 == ks.field_e) {
+                                if (12 == HuffmanCodec.field_e) {
                                   vb.field_d = 4;
                                 } else {
-                                  if (ks.field_e != 13) {
-                                    if (ks.field_e == 14) {
+                                  if (HuffmanCodec.field_e != 13) {
+                                    if (HuffmanCodec.field_e == 14) {
                                       um.field_e.beginPhase(26415, 2);
                                       et.field_d.disableLocal = false;
                                       AnimationSkeleton.field_m = 500;
@@ -121,7 +121,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                                   } else {
                                     vb.field_d = 4;
                                     var7 = (RenderedFootballer) (et.field_d.field_P[1][0]);
-                                    var7.a(29360128, false, 0, -19005440);
+                                    var7.setPosition(29360128, false, 0, -19005440);
                                     var7.field_o = 8;
                                     var7.directionMask = 0;
                                   }
@@ -129,11 +129,11 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                               }
                             } else {
                               vb.field_d = 1;
-                              fc.field_c.a(1310720, false, 0, 36438016);
+                              fc.field_c.setPosition(1310720, false, 0, 36438016);
                             }
                           } else {
                             vb.field_d = 3;
-                            EmailAvailabilityValidator.field_k.a(0, false, 0, 44040192);
+                            EmailAvailabilityValidator.field_k.setPosition(0, false, 0, 44040192);
                           }
                         }
                       }
@@ -142,7 +142,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                     vb.field_d = 3;
                   }
                 } else {
-                  ld.field_f.a(42270720, false, 0, 41287680);
+                  ld.field_f.setPosition(42270720, false, 0, 41287680);
                   vb.field_d = 1;
                 }
               } else {
@@ -152,7 +152,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
               vb.field_d = 1;
             }
           }
-          sl.field_Eb = true;
+          HoverTooltip.field_Eb = true;
           LoginCredentials.a(-25246, false, param1, false, false, false, false);
           mk.b(-1622);
           et.field_d.field_x = new PlayArea[]{new PlayArea(-800, -800, 1800, 1800)};
@@ -161,7 +161,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var2), "jw.C(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var2), "jw.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
               var5 = stackIn_5_0;
               if (param1 == 46) {
                 if (!this.field_lb) {
-                  stackIn_9_0 = sq.field_F;
+                  stackIn_9_0 = SaveChangesDialog.field_F;
                 } else {
                   stackIn_9_0 = gk.field_a;
                 }
@@ -242,7 +242,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
               }
               this.a(true, (byte) -8);
               if (!this.field_lb) {
-                stackIn_24_0 = sq.field_F;
+                stackIn_24_0 = SaveChangesDialog.field_F;
               } else {
                 stackIn_24_0 = gk.field_a;
               }
@@ -259,7 +259,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
             this.a(true, (byte) -8);
           }
           if (!this.field_lb) {
-            stackIn_48_0 = sq.field_F;
+            stackIn_48_0 = SaveChangesDialog.field_F;
           } else {
             stackIn_48_0 = gk.field_a;
           }
@@ -287,7 +287,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           this.field_mb = 30;
           this.field_q = -1 == param2 ? this.field_zb : param2;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class gk {
     static boolean field_e;
     static int[] field_f;
     static String field_d;
-    static bb field_h;
+    static CascadingMenu field_h;
     static int field_g;
 
     final static void a(String param0, int param1, long param2, int param3, byte param4) {
@@ -22,11 +22,11 @@ final class gk {
           SectorCacheStore.field_c = param2;
           PlayerShopScreen.field_K = param3;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_h = null;
         field_c = null;

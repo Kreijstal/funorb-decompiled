@@ -19,7 +19,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           var4 = param0;
           ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
 
     private final int a(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
-        ju var9 = null;
+        ValidationHelpWidget var9 = null;
         int var10 = 0;
         cg var11 = null;
         int stackIn_1_0 = 0;
@@ -47,7 +47,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         try {
           var11 = new cg(20, param5, param1 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param0);
           this.a(-55, var11);
-          var9 = new ju(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
           var9.field_k = (UiListener) (this);
           var10 = -123 % ((param4 - 24) / 41);
           this.a(-58, var9);
@@ -75,7 +75,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           if (param1 != this.field_B) {
             return;
           }
-          this.k(-81);
+          this.submit(-81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         UiWidget var2 = new UiWidget(vt.field_b, var1, (UiListener) null);
         this.field_B = new TextButton(MatchScreen.field_x, (UiListener) null);
         this.field_E = new TextButton(vt.field_a, (UiListener) null);
-        this.field_C.field_u = sr.field_b;
+        this.field_C.field_u = SortCriterion.field_b;
         this.field_C.a(6, new AccountNameAvailabilityValidator(this.field_C));
         this.field_B.field_y = false;
         this.field_B.field_r = (WidgetPainter) ((Object) new op());
@@ -184,8 +184,8 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         this.a(var4 + (var3 + 55), 1, 0, 496, 0);
     }
 
-    private final boolean l(int param0) {
-        if (!this.a(param0 ^ 484, (ValidationProvider) (this.field_C))) {
+    private final boolean isNameValid(int param0) {
+        if (!this.isFieldValid(param0 ^ 484, (ValidationProvider) (this.field_C))) {
           return false;
         }
         if (param0 == 20) {
@@ -235,7 +235,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         field_F = null;
     }
 
-    private final boolean a(int param0, ValidationProvider param1) {
+    private final boolean isFieldValid(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -264,7 +264,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           }
           var4 = var3.getValidationState(-24407);
           if (param0 == 496) {
-            stackIn_9_0 = (var4 == he.field_yb);
+            stackIn_9_0 = (var4 == LobbyPlayerRow.field_yb);
             return stackIn_9_0;
           }
           return true;
@@ -278,30 +278,30 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_B.field_y = this.l(20);
+          this.field_B.field_y = this.isNameValid(20);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void k(int param0) {
-        if (!this.l(20)) {
+    private final void submit(int param0) {
+        if (!this.isNameValid(20)) {
           return;
         }
         if (param0 < -58) {
-          fn.a((byte) 19, this.field_C.field_q);
+          Trinket.a((byte) 19, this.field_C.field_q);
           return;
         }
         String var3 = (String) null;
         this.a((String) null, -109);
-        fn.a((byte) 19, this.field_C.field_q);
+        Trinket.a((byte) 19, this.field_C.field_q);
     }
 
     static {

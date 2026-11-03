@@ -94,7 +94,7 @@ final class LoggedPlayer {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class LoggedPlayer {
         try {
           this.field_q = param1.field_q;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "jc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,10 +133,10 @@ final class LoggedPlayer {
         if (param0 != -3197) {
           field_k = (String) null;
         }
-        return nq.a(false, qi.field_o, IntDoubleCommand.field_A);
+        return TournamentChampionDialog.a(false, qi.field_o, IntDoubleCommand.field_A);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 48) {
           return;
         }

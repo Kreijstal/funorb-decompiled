@@ -9,19 +9,19 @@ final class br {
         String var2 = IsSixCommand.field_G[35];
         String var4 = var2;
         var4 = var2;
-        String var3 = lw.field_a[param1];
+        String var3 = ProxyAuthenticationRequiredException.field_a[param1];
         if (param0 == -98) {
           if (th.field_a[param1]) {
             var3 = NetworkGameClient.field_w;
             var4 = var3;
             var4 = var3;
           }
-          var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[35], new String[]{kw.field_c[param1], var3});
+          var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{kw.field_c[param1], var3});
           if (hv.field_a[param1] &&
             !c.a(param1, 0, BufferedSocket.field_f)) {
-            var4 = vu.field_Gb;
+            var4 = ContextMenuItem.field_Gb;
           }
-          np.field_Jb.a(new i(35, (lv) null, var2, var4), 3);
+          ScrollPane.field_Jb.a(new MessageDialog(35, (lv) null, var2, var4), 3);
           return;
         }
         field_b = (String) null;
@@ -30,12 +30,12 @@ final class br {
           var4 = var3;
           var4 = var3;
         }
-        var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[35], new String[]{kw.field_c[param1], var3});
+        var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{kw.field_c[param1], var3});
         if (hv.field_a[param1] &&
           !c.a(param1, 0, BufferedSocket.field_f)) {
-          var4 = vu.field_Gb;
+          var4 = ContextMenuItem.field_Gb;
         }
-        np.field_Jb.a(new i(35, (lv) null, var2, var4), 3);
+        ScrollPane.field_Jb.a(new MessageDialog(35, (lv) null, var2, var4), 3);
     }
 
     final static boolean a(int param0) {

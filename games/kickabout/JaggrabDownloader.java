@@ -142,14 +142,14 @@ final class JaggrabDownloader implements Runnable {
 
     final static String a(boolean param0) {
         if (!param0) {
-          JaggrabDownloader.a(28);
+          JaggrabDownloader.releaseStatics(28);
           if (nc.field_a) {
             return null;
           }
           if (us.field_e > k.field_i) {
             return null;
           }
-          if (k.field_i < rd.field_i + us.field_e) {
+          if (k.field_i < GameModeDefinition.field_i + us.field_e) {
             return EmailAvailabilityValidator.field_o;
           }
           return null;
@@ -160,7 +160,7 @@ final class JaggrabDownloader implements Runnable {
         if (us.field_e > k.field_i) {
           return null;
         }
-        if (k.field_i < rd.field_i + us.field_e) {
+        if (k.field_i < GameModeDefinition.field_i + us.field_e) {
           return EmailAvailabilityValidator.field_o;
         }
         return null;
@@ -210,7 +210,7 @@ final class JaggrabDownloader implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_j = null;
         if (param0 == -2) {
@@ -227,7 +227,7 @@ final class JaggrabDownloader implements Runnable {
           this.field_k = param1;
           this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "u.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "u.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

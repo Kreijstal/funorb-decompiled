@@ -14,10 +14,10 @@ final class op extends TextWidgetPainter {
 
     final static void a(int param0) {
         PitchOptionTile.field_yb = 80;
-        om.field_Bb = 120;
-        hq.field_d = -om.field_Bb + 480 - 21;
+        IconLabel.field_Bb = 120;
+        hq.field_d = -IconLabel.field_Bb + 480 - 21;
         if (param0 != -363021503) {
-          op.b(110);
+          op.releaseStatics(110);
         }
         int var1 = 24;
         int var2 = 96;
@@ -25,26 +25,26 @@ final class op extends TextWidgetPainter {
         int var4 = 48;
         int var5 = 48;
         int var6 = 21;
-        Sprite var7 = new Sprite(PitchOptionTile.field_yb << 1, om.field_Bb << 1);
+        Sprite var7 = new Sprite(PitchOptionTile.field_yb << 1, IconLabel.field_Bb << 1);
         PacketBuffer.a(97, var7);
         SoftwareRasterizer.b();
-        SoftwareRasterizer.c(0, 0, PitchOptionTile.field_yb << 1, om.field_Bb << 1, 2, 16777215);
-        SoftwareRasterizer.e(1, 1, -2 + (PitchOptionTile.field_yb << 1), (om.field_Bb << 1) - 2, 16777215);
-        SoftwareRasterizer.drawHorizontalLine(0, om.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
-        SoftwareRasterizer.drawHorizontalLine(0, 1 + om.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
-        vl.a(2, var1, true, 16777215).c(-var1 + PitchOptionTile.field_yb, om.field_Bb - var1);
+        SoftwareRasterizer.c(0, 0, PitchOptionTile.field_yb << 1, IconLabel.field_Bb << 1, 2, 16777215);
+        SoftwareRasterizer.e(1, 1, -2 + (PitchOptionTile.field_yb << 1), (IconLabel.field_Bb << 1) - 2, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, IconLabel.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, 1 + IconLabel.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
+        LoginMethod.a(2, var1, true, 16777215).c(-var1 + PitchOptionTile.field_yb, IconLabel.field_Bb - var1);
         SoftwareRasterizer.c(PitchOptionTile.field_yb - (var2 >> 1), 1, var2, var4, 2, 16777215);
         SoftwareRasterizer.c(PitchOptionTile.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
-        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var2 >> 1), -1 + (-var4 + om.field_Bb) + om.field_Bb, var2, var4, 2, 16777215);
-        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var5 >> 1), -var6 + (om.field_Bb + om.field_Bb), var5, var6, 2, 16777215);
-        AuctionListing.a(PitchOptionTile.field_yb + PitchOptionTile.field_yb, -22914, 0, -var4 + (om.field_Bb + om.field_Bb), var4);
-        Sprite var8 = vl.a(2, var3, true, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var2 >> 1), -1 + (-var4 + IconLabel.field_Bb) + IconLabel.field_Bb, var2, var4, 2, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var5 >> 1), -var6 + (IconLabel.field_Bb + IconLabel.field_Bb), var5, var6, 2, 16777215);
+        AuctionListing.a(PitchOptionTile.field_yb + PitchOptionTile.field_yb, -22914, 0, -var4 + (IconLabel.field_Bb + IconLabel.field_Bb), var4);
+        Sprite var8 = LoginMethod.a(2, var3, true, 16777215);
         var8.c(-var3 + PitchOptionTile.field_yb, -var3 + var6);
-        var8.c(PitchOptionTile.field_yb - var3, -var3 + (om.field_Bb + om.field_Bb) - var6);
+        var8.c(PitchOptionTile.field_yb - var3, -var3 + (IconLabel.field_Bb + IconLabel.field_Bb) - var6);
         TeamManagementScreen.e(param0 ^ -363021514);
         TeamManagementScreen.e(127);
-        pq.field_Q = new Sprite(2 + PitchOptionTile.field_yb, 2 + om.field_Bb);
-        PacketBuffer.a(param0 + 363021421, pq.field_Q);
+        SquadPickerDialog.field_Q = new Sprite(2 + PitchOptionTile.field_yb, 2 + IconLabel.field_Bb);
+        PacketBuffer.a(param0 + 363021421, SquadPickerDialog.field_Q);
         SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
         var7.drawHalfSize(1, 1);
         TeamManagementScreen.e(125);
@@ -99,11 +99,11 @@ final class op extends TextWidgetPainter {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_u = null;
         field_y = null;
@@ -157,7 +157,7 @@ final class op extends TextWidgetPainter {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

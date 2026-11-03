@@ -8,7 +8,7 @@ final class DualLinkDequeIterator implements Iterator {
     private DualLinkNode field_d;
     static String field_b;
     static kw field_e;
-    private ci field_c;
+    private IterableDualLinkDeque field_c;
 
     public final Object next() {
         Object var1 = this.field_a;
@@ -101,7 +101,7 @@ final class DualLinkDequeIterator implements Iterator {
         return this.field_a != this.field_c.field_d;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 >= -19) {
           field_b = (String) null;
@@ -111,14 +111,14 @@ final class DualLinkDequeIterator implements Iterator {
         field_e = null;
     }
 
-    DualLinkDequeIterator(ci param0) {
+    DualLinkDequeIterator(IterableDualLinkDeque param0) {
         this.field_d = null;
         try {
           this.field_c = param0;
           this.field_a = this.field_c.field_d.field_f;
           this.field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

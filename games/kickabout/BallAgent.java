@@ -66,17 +66,17 @@ class BallAgent extends MatchAgent {
 
     public final String toString() {
         StringBuilder var2 = new StringBuilder("AgentBall p=[");
-        eh.a(this.positionX, 100, var2);
+        GameResourceLoader.a(this.positionX, 100, var2);
         StringBuilder discarded$0 = var2.append(",");
-        eh.a(this.positionY, 100, var2);
+        GameResourceLoader.a(this.positionY, 100, var2);
         StringBuilder discarded$1 = var2.append(",");
-        eh.a(this.height, 100, var2);
+        GameResourceLoader.a(this.height, 100, var2);
         StringBuilder discarded$2 = var2.append("]\tv=[");
-        eh.a(this.velocityX, 100, var2);
+        GameResourceLoader.a(this.velocityX, 100, var2);
         StringBuilder discarded$3 = var2.append(",");
-        eh.a(this.velocityY, 100, var2);
+        GameResourceLoader.a(this.velocityY, 100, var2);
         StringBuilder discarded$4 = var2.append(",");
-        eh.a(this.verticalVelocity, 100, var2);
+        GameResourceLoader.a(this.verticalVelocity, 100, var2);
         StringBuilder discarded$5 = var2.append("]\tposessor=" + this.possessorTeam + "/" + this.possessorSlot);
         StringBuilder discarded$6 = var2.append("\tuncatchable=" + this.uncatchable);
         StringBuilder discarded$7 = var2.append("\thigh_friction=" + this.highFriction);
@@ -117,7 +117,7 @@ class BallAgent extends MatchAgent {
               if (param3 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + rj.a(nj.a(-121) + 1000L * param3, -102) + "; Max-Age=" + param3;
+                var7Lifetime4 = var9 + "; Expires=" + SoundCache.a(nj.monotonicMillis(-121) + 1000L * param3, -102) + "; Max-Age=" + param3;
               }
               AppletJavaScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 24);
               return;
@@ -148,7 +148,7 @@ class BallAgent extends MatchAgent {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw nb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -225,7 +225,7 @@ class BallAgent extends MatchAgent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ class BallAgent extends MatchAgent {
           }
           this.modelId = param0.l(4, 59);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "tj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ class BallAgent extends MatchAgent {
           this.field_i = var5.field_i;
           this.velocityY = var5.velocityY;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -391,7 +391,7 @@ class BallAgent extends MatchAgent {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 

@@ -3,12 +3,12 @@
  */
 final class al extends UiLayoutNode {
     static double[][] field_Bb;
-    np field_Cb;
+    ScrollPane field_Cb;
     static boolean field_Db;
     UiLayoutNode field_Eb;
     UiLayoutNode field_yb;
     UiLayoutNode field_zb;
-    static n field_Ab;
+    static ArchiveManager field_Ab;
 
     final static int a(boolean param0, byte param1) {
         int var2 = 0;
@@ -43,11 +43,11 @@ final class al extends UiLayoutNode {
         }
     }
 
-    al(long param0, UiLayoutNode param1, UiLayoutNode param2, na param3, UiLayoutNode param4, String param5, String param6) {
+    al(long param0, UiLayoutNode param1, UiLayoutNode param2, VerticalScrollbar param3, UiLayoutNode param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_yb = new UiLayoutNode(0L, (UiLayoutNode) null);
-          this.field_Cb = new np(0L, this.field_yb, param2, param3);
+          this.field_Cb = new ScrollPane(0L, this.field_yb, param2, param3);
           this.field_Eb = new UiLayoutNode(0L, param4);
           this.field_zb = new UiLayoutNode(0L, param4);
           this.field_Eb.field_E = param5;
@@ -56,7 +56,7 @@ final class al extends UiLayoutNode {
           this.addChild((byte) -113, this.field_Eb);
           this.addChild((byte) -109, this.field_zb);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

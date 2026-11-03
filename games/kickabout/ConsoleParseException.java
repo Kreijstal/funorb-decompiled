@@ -10,7 +10,7 @@ final class ConsoleParseException extends Exception {
     static String field_a;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_a = null;
         field_c = null;
@@ -20,7 +20,7 @@ final class ConsoleParseException extends Exception {
           field_b = null;
           return;
         }
-        ConsoleParseException.a((byte) -20);
+        ConsoleParseException.releaseStatics((byte) -20);
         field_d = null;
         field_b = null;
     }
@@ -45,9 +45,9 @@ final class ConsoleParseException extends Exception {
           if (null != jl.field_f) {
             return;
           }
-          vg.field_Wb = false;
+          TextFieldNode.field_Wb = false;
           if (PacketBuffer.field_l) {
-            var5 = ie.field_H;
+            var5 = SellPlayerDialog.field_H;
           } else {
             if (!WriteIntegersCommand.field_C) {
               var5 = LineupView.field_n;
@@ -60,7 +60,7 @@ final class ConsoleParseException extends Exception {
           ei.field_b.field_ab = ag.field_e + (-((ag.field_e & 16711422) >> 1) + ((vv.field_o.field_ab & 16711422) >> 1));
           ei.field_b.field_H = ag.field_e + (-((ag.field_e & 16711422) >> 1) + (8355711 & vv.field_o.field_H >> 1));
           ei.field_b.field_ub = -((16711423 & ag.field_e) >> 1) + ag.field_e + (vv.field_o.field_ub >> 1 & 8355711);
-          ButtonMenuScreen.field_n = ij.field_s;
+          ButtonMenuScreen.field_n = WeightedCacheEntry.field_s;
           jl.field_f = ei.field_b;
           ContentTransitionDialog.field_Y = new UiLayoutNode(0L, param0);
           h.field_e = new UiLayoutNode(0L, param1);
@@ -69,8 +69,8 @@ final class ConsoleParseException extends Exception {
           ei.field_b = new UiLayoutNode(0L, param3);
           ei.field_b.field_X = FootballerAgent.field_i;
           Kickabout.field_H.addChild((byte) -112, ei.field_b);
-          ij.field_s = new UiLayoutNode(0L, ButtonMenuScreen.field_n);
-          Kickabout.field_H.addChild((byte) -126, ij.field_s);
+          WeightedCacheEntry.field_s = new UiLayoutNode(0L, ButtonMenuScreen.field_n);
+          Kickabout.field_H.addChild((byte) -126, WeightedCacheEntry.field_s);
           if (param2 != 14594) {
             field_e = (ff) null;
           }
@@ -110,7 +110,7 @@ final class ConsoleParseException extends Exception {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

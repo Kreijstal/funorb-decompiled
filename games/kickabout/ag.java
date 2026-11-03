@@ -17,11 +17,11 @@ final class ag extends IntrusiveNode {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_l = null;
         if (param0 < 66) {
-          ag.a((byte) 34);
+          ag.releaseStatics((byte) 34);
         }
     }
 
@@ -32,7 +32,7 @@ final class ag extends IntrusiveNode {
           this.field_k = param1;
           this.field_i.b(128 + mn.field_a * this.field_j >> 8);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

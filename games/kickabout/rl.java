@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl extends sr {
+final class rl extends SortCriterion {
     static String field_s;
     static String field_t;
     static int field_n;
@@ -11,7 +11,7 @@ final class rl extends sr {
     static int field_r;
     static int field_o;
 
-    final int a(int param0) {
+    final int directionCount(int param0) {
         if (param0 >= -69) {
           field_n = -39;
           return 2;
@@ -22,7 +22,7 @@ final class rl extends sr {
     rl() {
     }
 
-    final int a(int param0, Object param1, Object param2) {
+    final int compare(int param0, Object param1, Object param2) {
         PlayerStats var4 = null;
         RuntimeException var4_ref = null;
         PlayerStats var5 = null;
@@ -40,11 +40,11 @@ final class rl extends sr {
           var8 = ((ShopPlayerSlot) (param1)).field_Sb;
           var4 = var8;
           var5 = ((ShopPlayerSlot) (param2)).field_Sb;
-          var6 = uf.field_e[var8.playerType];
+          var6 = uf.field_e[var8.archetype];
           if (param0 != 2) {
             field_q = 3;
           }
-          var7 = uf.field_e[var5.playerType];
+          var7 = uf.field_e[var5.archetype];
           stackIn_3_0 = var6.compareTo(var7) ^ this.field_i << 31;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,16 +63,16 @@ final class rl extends sr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_p = null;
         field_u = null;
         if (param0 != 20) {
-          rl.b(85);
+          rl.releaseStatics(85);
           field_t = null;
           return;
         }

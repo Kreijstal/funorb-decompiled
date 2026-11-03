@@ -3,31 +3,31 @@
  */
 import java.util.*;
 
-abstract class GameLoopApplet extends NetworkGameClient implements hc {
+abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer {
     static String field_D;
     static ClubState field_E;
     static String field_C;
 
-    final void a(int param0, pk param1) {
+    final void startWithLoader(int param0, LoadingSequence param1) {
         try {
           try {
             NetworkGameClient.field_t = param1;
             this.enableBaseResponses(true, -1);
-            this.h((byte) 105);
-            this.l(-1);
+            this.enableHandlerGroup1((byte) 105);
+            this.enableHandlerGroup2(-1);
             if (param0 < 97) {
               this.a(108, false);
             }
-            this.m(10);
-            this.g(13);
-            this.e(6);
+            this.enableHandlerGroup5(10);
+            this.enableHandlerGroup4(13);
+            this.enableHandlerGroup(6);
             this.i(13);
             IntTripleCommand.field_A[10] = -1;
             IntTripleCommand.field_A[9] = -1;
-            sn.field_g = new Vector();
-            oa.a(false, (hc) (this));
+            UrlRequest.field_g = new Vector();
+            oa.registerOverlay(false, (OverlayLayer) (this));
           } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "tu.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tu.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -79,7 +79,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         stackIn_7_2 = (SplashScreen.field_m != null);
         this.c(stackIn_6_1, stackIn_7_2);
         if (nd.field_c) {
-          NetworkGameClient.field_t.a(7312);
+          NetworkGameClient.field_t.bindArchives(7312);
           nd.field_c = false;
         }
         if (uf.c(608)) {
@@ -90,15 +90,15 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         }
         this.processIncomingPackets(-113);
         if (!CachedListingRow.field_h) {
-          CachedListingRow.a(17, id.field_v);
-          if (NetworkGameClient.field_t.a(true)) {
-            NetworkGameClient.field_t.b(12763);
+          CachedListingRow.a(17, StatefulTextPainter.field_v);
+          if (NetworkGameClient.field_t.pollArchives(true)) {
+            NetworkGameClient.field_t.buildAssets(12763);
             CachedListingRow.field_h = true;
           }
         } else {
           if (!MouseWheelInput.field_b) {
             if (!PlayArea.a(100)) {
-              if (NetworkGameClient.field_t.c(-27598)) {
+              if (NetworkGameClient.field_t.pollReady(-27598)) {
                 MouseWheelInput.field_b = true;
                 this.applyPendingNavigation(55);
                 KitStyleTile.c(false);
@@ -123,7 +123,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
           this.a(120);
         }
         gw.b(5);
-        vg.c(0, 0);
+        TextFieldNode.c(0, 0);
         if (hq.a((byte) 10)) {
           var2 = this.pollLoginResult((byte) -65);
           if (var2 == 0 ||
@@ -159,14 +159,14 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         int var3;
         int var4;
         int var5;
-        hc var6;
+        OverlayLayer var6;
         int var3Lifetime1;
         var5 = Kickabout.field_G;
         var2 = 0;
-        if (!n.a(false)) {
+        if (!ArchiveManager.a(false)) {
           if (ng.a(-4)) {
             if (nv.i(0)) {
-              np.h(-1);
+              ScrollPane.h(-1);
             } else {
               var3 = pg.a(-3);
               if (var3 != 2) {
@@ -203,7 +203,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
                 }
               }
             } else {
-              if (vi.c(2915)) {
+              if (NanoTickClock.c(2915)) {
                 if (!nv.i(0)) {
                   var3 = AuctionsHelpScreen.g(-61);
                   if (var3 == 1) {
@@ -211,35 +211,35 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
                   }
                   this.a(-25, false);
                 } else {
-                  np.h(-1);
+                  ScrollPane.h(-1);
                 }
               } else {
                 if (!nv.i(0)) {
                   var2 = 1;
                   var3 = -1;
                   while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-                    if (-1 == cc.field_e) {
-                      if (cc.field_e == -1 &&
+                    if (-1 == FixedQuaternion.field_e) {
+                      if (FixedQuaternion.field_e == -1 &&
                         -1 != var3) {
-                        cc.field_e = var3;
+                        FixedQuaternion.field_e = var3;
                         var3 = -1;
                       }
                     } else {
-                      if (MatchTransitionScreen.c(cc.field_e, param0 - 1831)) {
-                        var3 = cc.field_e;
+                      if (MatchTransitionScreen.c(FixedQuaternion.field_e, param0 - 1831)) {
+                        var3 = FixedQuaternion.field_e;
                         continue;
                       }
                     }
                     var4 = 0;
-                    while (sn.field_g.size() > var4) {
-                      if (((hc) (sn.field_g.elementAt(var4))).a(param0 - 7345, cc.field_e, il.field_c)) {
+                    while (UrlRequest.field_g.size() > var4) {
+                      if (((OverlayLayer) (UrlRequest.field_g.elementAt(var4))).a(param0 - 7345, FixedQuaternion.field_e, il.field_c)) {
                         break;
                       }
                       var4++;
                     }
                   }
                 } else {
-                  np.h(param0 - 18862);
+                  ScrollPane.h(param0 - 18862);
                 }
               }
             }
@@ -251,8 +251,8 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         if (param0 != 18861) {
           field_C = (String) null;
         }
-        while (var3Lifetime1 < sn.field_g.size()) {
-          var6 = (hc) (sn.field_g.elementAt(var3Lifetime1));
+        while (var3Lifetime1 < UrlRequest.field_g.size()) {
+          var6 = (OverlayLayer) (UrlRequest.field_g.elementAt(var3Lifetime1));
           var6.a(param0 - 18886, var2 != 0);
           stackIn_54_0 = var2;
           if (var6.a((byte) 81)) {
@@ -275,7 +275,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = DropTargetWidget.l(64);
         if (uf.c(608)) {
-          PlayingView.a(var2, pn.g(2368), 0);
+          PlayingView.a(var2, StrongCacheEntry.g(2368), 0);
           return;
         }
         if (!CachedListingRow.field_h) {
@@ -284,21 +284,21 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         }
         if (!MouseWheelInput.field_b &&
           !PlayArea.a(100)) {
-          ju.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
+          ValidationHelpWidget.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
           FormationAgent.a(var2, -14142);
           return;
         }
-        vg.field_Rb = true;
-        for (var3 = -1 + sn.field_g.size(); var3 >= 0; var3--) {
-          ((hc) (sn.field_g.elementAt(var3))).a(109);
+        TextFieldNode.field_Rb = true;
+        for (var3 = -1 + UrlRequest.field_g.size(); var3 >= 0; var3--) {
+          ((OverlayLayer) (UrlRequest.field_g.elementAt(var3))).a(109);
         }
         if (param0 < 50) {
           this.a(34, 72, 'ￆ');
         }
-        if (!vg.field_Rb) {
+        if (!TextFieldNode.field_Rb) {
           this.r(10);
         } else {
-          md.d(-27302);
+          CheatCodeListener.d(-27302);
           su.a(27744, 0, 0, var2);
         }
     }
@@ -313,25 +313,25 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
         var2 = Kickabout.field_G;
         try {
           wk.field_d = new Sprite[ig.field_a.length];
-          gb.field_G = new Sprite[ig.field_a.length];
+          ValidationIndicator.field_G = new Sprite[ig.field_a.length];
           if (param0 != -10) {
             return;
           }
           for (var1_int = 0; ig.field_a.length > var1_int; var1_int++) {
-            wk.field_d[var1_int] = nm.a(16729156, ek.b((int) param0, 85), ig.field_a[var1_int]);
-            gb.field_G[var1_int] = nm.a(4521796, -92, ig.field_a[var1_int]);
+            wk.field_d[var1_int] = AnimationClip.a(16729156, TrinketShopDialog.b((int) param0, 85), ig.field_a[var1_int]);
+            ValidationIndicator.field_G[var1_int] = AnimationClip.a(4521796, -92, ig.field_a[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "tu.D(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "tu.D(" + param0 + ')');
         }
     }
 
     public abstract boolean a(int param0, int param1, char param2);
 
-    final static int a(int param0, int param1, int param2) {
+    final static int fixedPointDistance(int param0, int param1, int param2) {
         if (param2 != -23146) {
           return 89;
         }

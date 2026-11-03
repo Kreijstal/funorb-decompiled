@@ -64,7 +64,7 @@ final class ReceivedAuctionItem extends AuctionItem {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class ReceivedAuctionItem extends AuctionItem {
           }
           SingleChildContainer.field_x = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "vc.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vc.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class ReceivedAuctionItem extends AuctionItem {
             var8 = (String) null;
             ReceivedAuctionItem.a((String) null, 94);
           }
-          if (sl.field_Eb) {
+          if (HoverTooltip.field_Eb) {
             return;
           }
           var9 = et.field_d.field_V;
@@ -172,11 +172,11 @@ final class ReceivedAuctionItem extends AuctionItem {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "vc.A(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "vc.A(" + param0 + ')');
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         field_D = null;
         field_F = null;
@@ -214,7 +214,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "vc.F(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "vc.F(" + param0 + ')');
         }
     }
 
@@ -223,18 +223,18 @@ final class ReceivedAuctionItem extends AuctionItem {
           return -1;
         }
         if (!bo.field_Cb.a(false, "beach")) {
-          return bo.field_Cb.a("beach", -16248);
+          return bo.field_Cb.getGroupProgressByName("beach", -16248);
         }
         tc.field_s = true;
         wn.field_a = ng.a("deckchairs", "beach", 2, bo.field_Cb);
-        st.field_q = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 45, "parasol");
+        CachedTextLayout.field_q = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 45, "parasol");
         ns.field_c = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 92, "ball");
         AnimationSkeleton.field_h = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 68, "bucket");
         c.field_e = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 76, "palmtree");
         FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 76, "starfish");
         BytePlusOneCommand.field_D = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);
-        tv.field_b = ng.a("stains", "beach", 2, bo.field_Cb);
+        ChatMessage.field_b = ng.a("stains", "beach", 2, bo.field_Cb);
         return -1;
     }
 

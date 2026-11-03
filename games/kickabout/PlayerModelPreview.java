@@ -8,7 +8,7 @@ final class PlayerModelPreview extends IntrusiveNode {
     private int field_i;
     private ModelMesh field_p;
     private int field_n;
-    private dd field_h;
+    private AnimationPlayer field_h;
     static String field_l;
     private int field_g;
     static int field_j;
@@ -36,7 +36,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         RuntimeException var21 = null;
         try {
           BufferedCacheFile.a(126, param5, param10, param11);
-          sb.a(param18, param0, param13, param7, (byte) 5);
+          StringCursor.a(param18, param0, param13, param7, (byte) 5);
           if (param2 <= 25) {
             field_q = (GameKeyHandler) null;
           }
@@ -79,7 +79,7 @@ final class PlayerModelPreview extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class PlayerModelPreview extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -162,12 +162,12 @@ final class PlayerModelPreview extends IntrusiveNode {
         var8 = var8;
         this.field_o = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 6, var8);
         this.field_p = ok.a(-49, this.field_s, var8);
-        this.field_h = new dd(1);
+        this.field_h = new AnimationPlayer(1);
         int var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var8);
         this.field_h.a(hq.field_b[var6], (byte) -107);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_m = null;
         field_f = null;

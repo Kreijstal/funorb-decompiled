@@ -43,7 +43,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 this.field_p = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param2.a((byte) 81);
-                  var7 = bb.a((byte) 127, var6);
+                  var7 = CascadingMenu.a((byte) 127, var6);
                   if (var7 != null) {
                     this.field_p[var5] = var6;
                     array$0 = new int[var7.field_d];
@@ -73,7 +73,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         while (0L != param1) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = gu.field_yb[(int)(var7 - 37L * param1)];
+          var9 = ContextMenu.field_yb[(int)(var7 - 37L * param1)];
           if (95 == var9) {
             var10 = var6.length() - 1;
             var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
@@ -137,8 +137,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          var4_int = param1.b(param0, -1);
-          var5 = param1.a((byte) -126, param3, var4_int);
+          var4_int = param1.getGroupId(param0, -1);
+          var5 = param1.getFileId((byte) -126, param3, var4_int);
           stackIn_4_0 = ArchiveSource.a(param1, var4_int, (byte) 89, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,7 +163,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var3 = Kickabout.field_G;
         if (this.field_n != null) {
           for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.field_n[var2] = hf.a(this.field_n[var2], 32768);
+            this.field_n[var2] = PainterStyle.a(this.field_n[var2], 32768);
           }
         }
         if (param0) {
@@ -247,7 +247,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

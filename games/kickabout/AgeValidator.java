@@ -17,18 +17,18 @@ final class AgeValidator extends TextFieldValidator {
           synchronized (var1) {
             LineupAgent.field_n = vb.field_b;
             fj.field_c = fj.field_c + 1;
-            if (param0 > rc.field_d) {
+            if (param0 > GzipDecoder.field_d) {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
                 GameplayHelpScreen.field_G[var5] = false;
                 var5++;
               }
-              rc.field_d = tv.field_i;
+              GzipDecoder.field_d = ChatMessage.field_i;
             } else {
-              while (rc.field_d != tv.field_i) {
-                var2 = mp.field_j[tv.field_i];
-                tv.field_i = 1 + tv.field_i & 127;
+              while (GzipDecoder.field_d != ChatMessage.field_i) {
+                var2 = mp.field_j[ChatMessage.field_i];
+                ChatMessage.field_i = 1 + ChatMessage.field_i & 127;
                 if (var2 >= 0) {
                   GameplayHelpScreen.field_G[var2] = true;
                   continue;
@@ -42,7 +42,7 @@ final class AgeValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1_ref), "fo.C(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1_ref), "fo.C(" + param0 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class AgeValidator extends TextFieldValidator {
           var3_int = rr.a(10, var5);
           if (var3_int > 0 &&
             130 >= var3_int) {
-            stackIn_12_0 = he.field_yb;
+            stackIn_12_0 = LobbyPlayerRow.field_yb;
             return stackIn_12_0;
           }
           stackIn_10_0 = PitchOptionTile.field_Bb;
@@ -188,7 +188,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

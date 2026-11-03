@@ -43,7 +43,7 @@ final class ui extends vv {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class ui extends vv {
         ContentTransitionDialog.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
     }
 
-    final int a(int param0) {
+    final int progress(int param0) {
         if (param0 != 0) {
           return 103;
         }
@@ -99,7 +99,7 @@ final class ui extends vv {
         return this.field_v.field_n * 100 / (-this.field_x + this.field_v.field_f.length);
     }
 
-    final byte[] b(int param0) {
+    final byte[] getBytes(int param0) {
         if (!this.field_p &&
           this.field_v.field_n >= -this.field_x + this.field_v.field_f.length) {
           if (param0 != 12802) {

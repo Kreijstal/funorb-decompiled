@@ -78,11 +78,11 @@ final class ic {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_h = null;
         field_c = null;
@@ -103,19 +103,19 @@ final class ic {
     }
 
     final static void a(float param0, float param1, float param2, float param3, float param4, byte param5, float param6) {
-        jj var7 = null;
+        MusicTrackMixer var7 = null;
         if (param5 == -113) {
-          if (nm.field_k == null) {
+          if (AnimationClip.field_k == null) {
             var7 = sk.field_d;
-            nm.field_k = new ReverbPcmStream(var7);
-            cb.field_d.a(nm.field_k);
+            AnimationClip.field_k = new ReverbPcmStream(var7);
+            cb.field_d.a(AnimationClip.field_k);
           }
-          nm.field_k.a(param3);
-          nm.field_k.f(param6);
-          nm.field_k.setDampingTimeMicros(param4);
-          nm.field_k.b(param2);
-          nm.field_k.e(param0);
-          nm.field_k.d(param1);
+          AnimationClip.field_k.a(param3);
+          AnimationClip.field_k.f(param6);
+          AnimationClip.field_k.setDampingTimeMicros(param4);
+          AnimationClip.field_k.b(param2);
+          AnimationClip.field_k.e(param0);
+          AnimationClip.field_k.d(param1);
           return;
         }
     }

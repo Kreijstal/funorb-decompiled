@@ -9,7 +9,7 @@ final class kw {
     static String field_a;
     static String field_g;
     static String[] field_c;
-    static em field_b;
+    static DualLinkHashTable field_b;
     private boolean field_j;
     private boolean field_e;
 
@@ -21,18 +21,18 @@ final class kw {
     }
 
     final static int c(byte param0) {
-        if (ju.field_T) {
+        if (ValidationHelpWidget.field_T) {
           return -1;
         }
         if (!bo.field_Cb.a(false, "stadium")) {
-          return bo.field_Cb.a("stadium", -16248);
+          return bo.field_Cb.getGroupProgressByName("stadium", -16248);
         }
-        eb.field_i = new ArgbSprite[4];
-        ju.field_T = true;
-        eb.field_i[0] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 74, "top_left_seats"));
-        eb.field_i[1] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
-        eb.field_i[2] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
-        eb.field_i[3] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 115, "bot_right_seats"));
+        DiskCacheWorker.field_i = new ArgbSprite[4];
+        ValidationHelpWidget.field_T = true;
+        DiskCacheWorker.field_i[0] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 74, "top_left_seats"));
+        DiskCacheWorker.field_i[1] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
+        DiskCacheWorker.field_i[2] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
+        DiskCacheWorker.field_i[3] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", bo.field_Cb, (byte) 115, "bot_right_seats"));
         ph.field_e = new IndexedSprite[4][3];
         ph.field_e[0][0] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "left_seats_1");
         ph.field_e[0][1] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "left_seats_2");
@@ -53,7 +53,7 @@ final class kw {
         ph.field_e[2][1] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "right_seats_2");
         ph.field_e[2][2] = MyPitchScreen.a(bo.field_Cb, "stadium", true, "right_seats_3");
         LineupView.field_s = new IndexedSprite[3][];
-        LineupView.field_s[0] = DemoIntegersCommand.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
+        LineupView.field_s[0] = DemoIntegersCommand.a(bo.field_Cb, TrinketShopDialog.b((int) param0, 17349), "stadium", "top_seats_1_mask");
         LineupView.field_s[1] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
         LineupView.field_s[2] = DemoIntegersCommand.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
         LoginCredentials.field_c = new IndexedSprite[3][];
@@ -70,10 +70,10 @@ final class kw {
     }
 
     final static void b(int param0) {
-        if (!nb.field_f) {
+        if (!GameSoundEffect.field_f) {
           throw new IllegalStateException();
         }
-        aw.field_H = true;
+        TutorialChoiceDialog.field_H = true;
         SumIntegersCommand.a(true, -91);
         vj.field_c = param0;
     }
@@ -104,11 +104,11 @@ final class kw {
           var2Lifetime1 = new ManagerAction(5, new int[]{param1});
           ii.a(var2Lifetime1, 118);
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kw.B(" + param0 + ',' + param1 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kw.B(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         field_g = null;
@@ -154,15 +154,15 @@ final class kw {
         var3 = Kickabout.field_G;
         if (!EmailSyntaxValidator.c((byte) -42)) {
           if (!dr.field_a) {
-            wt.field_x = BytePlusOneCommand.field_A;
-            us.field_j = n.field_m;
+            ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
+            us.field_j = ArchiveManager.field_m;
             if (param1 >= -99) {
-              kw.d((byte) -40);
+              kw.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
-            dn.field_yb = sm.field_q;
+            TrinketIcon.field_yb = sm.field_q;
             ip.field_a = WidgetContainer.field_A;
-            kf.field_Eb = ReceivedAuctionItem.field_y;
+            TabStrip.field_Eb = ReceivedAuctionItem.field_y;
             if (dr.field_a &&
               1 == vd.field_c) {
               stackIn_39_0 = 1;
@@ -172,14 +172,14 @@ final class kw {
             var2 = stackIn_39_0;
           } else {
             if (320 == BytePlusOneCommand.field_A &&
-              n.field_m == 240) {
+              ArchiveManager.field_m == 240) {
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_10_0 = 1;
@@ -188,9 +188,9 @@ final class kw {
               }
               var2 = stackIn_10_0;
             } else {
-              wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
-              us.field_j = us.field_j + (-240 + n.field_m);
-              wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+              ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
+              us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+              ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
               us.field_j = Math.max(0, Math.min(479, us.field_j));
               if (SplashScreen.field_m == null) {
                 stackIn_20_0 = ic.field_d;
@@ -200,12 +200,12 @@ final class kw {
               var2_ref = stackIn_20_0;
               oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_26_0 = 1;
@@ -220,14 +220,14 @@ final class kw {
             !dr.field_a) {
             RankingsScreen.a(false);
             if (!dr.field_a) {
-              wt.field_x = BytePlusOneCommand.field_A;
-              us.field_j = n.field_m;
+              ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
+              us.field_j = ArchiveManager.field_m;
             } else {
               if (320 != BytePlusOneCommand.field_A ||
-                n.field_m != 240) {
-                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
-                us.field_j = us.field_j + (-240 + n.field_m);
-                wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                ArchiveManager.field_m != 240) {
+                ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
+                us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
                 if (SplashScreen.field_m == null) {
                   stackIn_126_0 = ic.field_d;
@@ -239,12 +239,12 @@ final class kw {
               }
             }
             if (param1 >= -99) {
-              kw.d((byte) -40);
+              kw.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
-            dn.field_yb = sm.field_q;
+            TrinketIcon.field_yb = sm.field_q;
             ip.field_a = WidgetContainer.field_A;
-            kf.field_Eb = ReceivedAuctionItem.field_y;
+            TabStrip.field_Eb = ReceivedAuctionItem.field_y;
             if (dr.field_a &&
               1 == vd.field_c) {
               stackIn_134_0 = 1;
@@ -264,15 +264,15 @@ final class kw {
           }
           if (param0) {
             if (!dr.field_a) {
-              wt.field_x = BytePlusOneCommand.field_A;
-              us.field_j = n.field_m;
+              ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
+              us.field_j = ArchiveManager.field_m;
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_88_0 = 1;
@@ -282,14 +282,14 @@ final class kw {
               var2 = stackIn_88_0;
             } else {
               if (320 == BytePlusOneCommand.field_A &&
-                n.field_m == 240) {
+                ArchiveManager.field_m == 240) {
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_59_0 = 1;
@@ -298,9 +298,9 @@ final class kw {
                 }
                 var2 = stackIn_59_0;
               } else {
-                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
-                us.field_j = us.field_j + (-240 + n.field_m);
-                wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
+                us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
                 if (SplashScreen.field_m == null) {
                   stackIn_69_0 = ic.field_d;
@@ -310,12 +310,12 @@ final class kw {
                 var2_ref = stackIn_69_0;
                 oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_75_0 = 1;
@@ -329,14 +329,14 @@ final class kw {
             if (dr.field_a) {
               im.h(634588072);
               if (!dr.field_a) {
-                wt.field_x = BytePlusOneCommand.field_A;
-                us.field_j = n.field_m;
+                ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
+                us.field_j = ArchiveManager.field_m;
               } else {
                 if (320 != BytePlusOneCommand.field_A ||
-                  n.field_m != 240) {
-                  wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
-                  us.field_j = us.field_j + (-240 + n.field_m);
-                  wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                  ArchiveManager.field_m != 240) {
+                  ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
+                  us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                  ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                   us.field_j = Math.max(0, Math.min(479, us.field_j));
                   if (SplashScreen.field_m == null) {
                     stackIn_104_0 = ic.field_d;
@@ -348,12 +348,12 @@ final class kw {
                 }
               }
               if (param1 >= -99) {
-                kw.d((byte) -40);
+                kw.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              dn.field_yb = sm.field_q;
+              TrinketIcon.field_yb = sm.field_q;
               ip.field_a = WidgetContainer.field_A;
-              kf.field_Eb = ReceivedAuctionItem.field_y;
+              TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
                 stackIn_112_0 = 1;
@@ -363,15 +363,15 @@ final class kw {
               var2 = stackIn_112_0;
             } else {
               if (!dr.field_a) {
-                wt.field_x = BytePlusOneCommand.field_A;
-                us.field_j = n.field_m;
+                ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
+                us.field_j = ArchiveManager.field_m;
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_195_0 = 1;
@@ -391,9 +391,9 @@ final class kw {
                 return;
               }
               if (320 != BytePlusOneCommand.field_A) {
-                wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
-                us.field_j = us.field_j + (-240 + n.field_m);
-                wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
+                us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
                 if (SplashScreen.field_m == null) {
                   stackIn_146_0 = ic.field_d;
@@ -403,12 +403,12 @@ final class kw {
                 var2_ref = stackIn_146_0;
                 oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
-                  kw.d((byte) -40);
+                  kw.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                dn.field_yb = sm.field_q;
+                TrinketIcon.field_yb = sm.field_q;
                 ip.field_a = WidgetContainer.field_A;
-                kf.field_Eb = ReceivedAuctionItem.field_y;
+                TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
                   stackIn_152_0 = 1;
@@ -417,14 +417,14 @@ final class kw {
                 }
                 var2 = stackIn_152_0;
               } else {
-                if (n.field_m == 240) {
+                if (ArchiveManager.field_m == 240) {
                   if (param1 >= -99) {
-                    kw.d((byte) -40);
+                    kw.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
-                  dn.field_yb = sm.field_q;
+                  TrinketIcon.field_yb = sm.field_q;
                   ip.field_a = WidgetContainer.field_A;
-                  kf.field_Eb = ReceivedAuctionItem.field_y;
+                  TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                   if (dr.field_a &&
                     1 == vd.field_c) {
                     stackIn_182_0 = 1;
@@ -433,9 +433,9 @@ final class kw {
                   }
                   var2 = stackIn_182_0;
                 } else {
-                  wt.field_x = wt.field_x + (BytePlusOneCommand.field_A - 320);
-                  us.field_j = us.field_j + (-240 + n.field_m);
-                  wt.field_x = Math.max(0, Math.min(639, wt.field_x));
+                  ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
+                  us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                  ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
                   us.field_j = Math.max(0, Math.min(479, us.field_j));
                   if (SplashScreen.field_m == null) {
                     stackIn_163_0 = ic.field_d;
@@ -445,12 +445,12 @@ final class kw {
                   var2_ref = stackIn_163_0;
                   oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                   if (param1 >= -99) {
-                    kw.d((byte) -40);
+                    kw.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
-                  dn.field_yb = sm.field_q;
+                  TrinketIcon.field_yb = sm.field_q;
                   ip.field_a = WidgetContainer.field_A;
-                  kf.field_Eb = ReceivedAuctionItem.field_y;
+                  TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                   if (dr.field_a &&
                     1 == vd.field_c) {
                     stackIn_169_0 = 1;
@@ -479,7 +479,7 @@ final class kw {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

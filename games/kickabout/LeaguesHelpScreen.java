@@ -7,7 +7,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
     static String field_F;
     static String field_G;
 
-    final static int a(tv param0, int param1) {
+    final static int a(ChatMessage param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_17_0 = 0;
@@ -31,17 +31,17 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
                 param0.field_p == 0) {
                 var2_intLifetime1 = sg.field_c[param0.field_c];
               } else {
-                var2_intLifetime1 = sb.field_h[param0.field_c];
+                var2_intLifetime1 = StringCursor.field_h[param0.field_c];
               }
             }
           } else {
             if (4 == param0.field_c) {
-              var2_intLifetime1 = sb.field_h[param0.field_c];
+              var2_intLifetime1 = StringCursor.field_h[param0.field_c];
             } else {
-              if (param0.field_d == dd.field_c) {
+              if (param0.field_d == AnimationPlayer.field_c) {
                 var2_intLifetime1 = sg.field_c[param0.field_c];
               } else {
-                var2_intLifetime1 = sb.field_h[param0.field_c];
+                var2_intLifetime1 = StringCursor.field_h[param0.field_c];
               }
             }
           }
@@ -57,7 +57,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
           SoftwareRasterizer.a(var3, 186, 184, 174, 16777215, 30);
           SoftwareRasterizer.h(var3 - 1, 185, 186, 176, 16777215, 128);
           for (var4 = 0; var4 < 6; var4++) {
-            IsSixCommand.field_C.c(q.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
+            IsSixCommand.field_C.c(ConsoleTokenCursor.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
             IsSixCommand.field_C.a(Integer.toString(LoginCredentials.field_d[1 + var4]), 134 + var3, var4 * 28 + 28 + 180, 16777215, -1);
           }
           SoftwareRasterizer.f(var3 + 127, 186, 174, 16777215, 128);
@@ -186,12 +186,12 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             } else {
               if (mn.field_b[var1_int] > 0) {
                 var4 = qi.field_n[-1 + mn.field_b[var1_int]];
-                var3 = ac.field_a[mn.field_b[var1_int] - 1];
+                var3 = TrinketUnlockNotice.field_a[mn.field_b[var1_int] - 1];
               }
             }
             if (var3 != null) {
               var5Lifetime1 = ug.a(0, var2_ref_gm.field_kb >> 16);
-              var6 = lf.a((byte) -114, var2_ref_gm.field_bb >> 16);
+              var6 = IntKeyLookup.a((byte) -114, var2_ref_gm.field_bb >> 16);
               if (InstrumentNoteMask.field_i == 256) {
                 var7 = var4 >> 1;
                 eo.a((byte[]) (var3), -var7 + var5Lifetime1, -var7 + var6, var4);
@@ -207,7 +207,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "qa.K(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "qa.K(" + param0 + ')');
         }
     }
 

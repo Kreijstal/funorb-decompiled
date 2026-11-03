@@ -14,7 +14,7 @@ final class r {
           var2 = ng.field_a;
         }
         if (param1 == 1) {
-          var2 = q.field_b;
+          var2 = ConsoleTokenCursor.field_b;
         }
         if (2 == param1) {
           var2 = fc.field_a;
@@ -44,7 +44,7 @@ final class r {
         FormationView.b((byte) -116);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
@@ -63,7 +63,7 @@ final class r {
           if (this == ClubState.field_c) {
             return true;
           }
-          if (this != bm.field_H) {
+          if (this != AuctionListingDialog.field_H) {
             return RegistrationRequestDialog.field_rb == this ? true : false;
           }
           return true;
@@ -71,7 +71,7 @@ final class r {
         if (this == ClubState.field_c) {
           return true;
         }
-        if (this == bm.field_H) {
+        if (this == AuctionListingDialog.field_H) {
           return true;
         }
         if (RegistrationRequestDialog.field_rb != this) {

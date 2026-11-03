@@ -97,7 +97,7 @@ abstract class ResizableModalPanel extends ModalPanel {
     }
 
     final static void a(int param0, int param1) {
-        no.field_H = 1000000000L / (long)param1;
+        LeagueWinnerDialog.field_H = 1000000000L / (long)param1;
         if (param0 != 922104624) {
           field_M = (int[]) null;
         }
@@ -116,20 +116,20 @@ abstract class ResizableModalPanel extends ModalPanel {
         try {
           var1_int = -19 % ((param0 + 57) / 45);
           lt.field_c = new Sprite[100];
-          var2 = wt.field_y.field_o;
-          var3 = wt.field_y.field_v;
+          var2 = ArrayWidgetContainer.field_y.field_o;
+          var3 = ArrayWidgetContainer.field_y.field_v;
           for (var4 = 0; var4 < 100; var4++) {
             lt.field_c[var4] = new Sprite(var2, var3);
             PacketBuffer.a(123, lt.field_c[var4]);
             var5 = (var4 << 16) / 100;
-            wt.field_y.b(wt.field_y.field_o << 3, wt.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
+            ArrayWidgetContainer.field_y.b(ArrayWidgetContainer.field_y.field_o << 3, ArrayWidgetContainer.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
             TeamManagementScreen.e(127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "cm.FB(" + param0 + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "cm.FB(" + param0 + ')');
         }
     }
 
@@ -230,8 +230,8 @@ abstract class ResizableModalPanel extends ModalPanel {
           var8Lifetime1++;
         }
         KeyedLoginCredentials.field_f.c(-90 + this.field_n + param0, param2 + 10);
-        ju.a(5 + param0, -127, 35 + param2, sk.field_a, -10 + this.field_n);
-        ju.a(param0, -125, -22 + (this.field_i + param2), vb.field_a, this.field_n);
+        ValidationHelpWidget.a(5 + param0, -127, 35 + param2, sk.field_a, -10 + this.field_n);
+        ValidationHelpWidget.a(param0, -125, -22 + (this.field_i + param2), vb.field_a, this.field_n);
         var4Lifetime2 = this.field_i - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

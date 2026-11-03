@@ -51,7 +51,7 @@ final class AlphaContainer extends SingleChildContainer {
             field_D = (String) null;
           }
           TeamManagementScreen.e(120);
-          stackIn_13_0 = eo.a(var5);
+          stackIn_13_0 = eo.toIndexedSprite(var5);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class AlphaContainer extends SingleChildContainer {
           this.field_F = 256;
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {
-          throw nb.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

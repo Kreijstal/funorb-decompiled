@@ -22,9 +22,9 @@ final class vd {
           return -52;
         }
         if (param2 < param0) {
-          return 2048 - no.b((param2 << 16) / param0, 15832);
+          return 2048 - LeagueWinnerDialog.b((param2 << 16) / param0, 15832);
         }
-        return no.b((param0 << 16) / param2, param1 ^ 4565);
+        return LeagueWinnerDialog.b((param0 << 16) / param2, param1 ^ 4565);
     }
 
     public static void a(int param0) {
