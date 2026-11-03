@@ -42,7 +42,7 @@ abstract class PopupDialog extends IntrusiveNode {
             for (var3 = 0; this.field_i.length > var3; var3++) {
               stackIn_22_0 = (var3 != this.field_j.selectedIndex) ? 0 : 1;
               var4 = stackIn_22_0;
-              this.field_i[var3].b(0, param1);
+              this.field_i[var3].updateInput(0, param1);
               stackIn_25_0 = this.field_i[var3];
               stackIn_26_1 = (this.field_i[var3].field_lb) && (var4 != 0);
               stackIn_25_0.field_gb = stackIn_26_1;
@@ -116,7 +116,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var3 = var12;
           while (this.field_i.length > var12) {
             var4 = this.field_i[var12];
-            var4.a(100, false);
+            var4.draw(100, false);
             var12++;
           }
         } else {
@@ -132,8 +132,8 @@ abstract class PopupDialog extends IntrusiveNode {
             var8.field_s = var8.field_s - this.field_p;
             var10 = var8.field_J;
             var8.field_J = var8.field_J - this.field_k;
-            var8.b(0, false);
-            var8.a(74, false);
+            var8.updateInput(0, false);
+            var8.draw(74, false);
             var8.field_J = var10;
             var8.field_s = var9;
           }

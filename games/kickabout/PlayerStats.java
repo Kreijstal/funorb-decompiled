@@ -430,7 +430,7 @@ final class PlayerStats implements PopupCard {
         if (param1 >= -65) {
           PlayerStats.a(-79, -94);
         }
-        g.field_a.a(true, 640, AuctionsHelpScreen.field_H, param0, 120);
+        g.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, param0, 120);
         RankingRowNode.a(119, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
     }
 

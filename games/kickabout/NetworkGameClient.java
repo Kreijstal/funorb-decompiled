@@ -1400,7 +1400,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     final static void k(int param0) {
         if (DebugConsole.field_s) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_c - SoftwareRasterizer.field_b, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
-          LeaguesHelpScreen.field_E.a(46, false);
+          LeaguesHelpScreen.field_E.draw(46, false);
         }
         if (param0 != 1) {
           CharSequence var2 = (CharSequence) null;

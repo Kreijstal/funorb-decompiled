@@ -242,24 +242,24 @@ final class ScrollPane extends UiLayoutNode {
         }
         if (param6) {
           var8 = 1;
-          this.field_Ab.a(19, param2, this.field_zb.field_mb, var8 != 0);
+          this.field_Ab.layoutVerticalContent(19, param2, this.field_zb.field_mb, var8 != 0);
           this.advanceScroll(false, param5, param3, param4, false);
           return var8 != 0;
         }
         if (!this.field_gb) {
           var8Lifetime1 = 0;
-          this.field_Ab.a(19, param2, this.field_zb.field_mb, var8Lifetime1 != 0);
+          this.field_Ab.layoutVerticalContent(19, param2, this.field_zb.field_mb, var8Lifetime1 != 0);
           this.advanceScroll(false, param5, param3, param4, false);
           return var8Lifetime1 != 0;
         }
         if (!param0) {
           var8Lifetime2 = 1;
-          this.field_Ab.a(19, param2, this.field_zb.field_mb, var8Lifetime2 != 0);
+          this.field_Ab.layoutVerticalContent(19, param2, this.field_zb.field_mb, var8Lifetime2 != 0);
           this.advanceScroll(false, param5, param3, param4, false);
           return var8Lifetime2 != 0;
         }
         var8Lifetime3 = 0;
-        this.field_Ab.a(19, param2, this.field_zb.field_mb, var8Lifetime3 != 0);
+        this.field_Ab.layoutVerticalContent(19, param2, this.field_zb.field_mb, var8Lifetime3 != 0);
         this.advanceScroll(false, param5, param3, param4, false);
         return var8Lifetime3 != 0;
     }

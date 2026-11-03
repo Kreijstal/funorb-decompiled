@@ -8252,6 +8252,22 @@
       "renamedSymbol": "M:UiLayoutNode.computeContentWidth(II)I"
     },
     {
+      "symbol": "M:hd.a(IIIZ)V",
+      "originalName": "a",
+      "to": "layoutVerticalContent",
+      "evidence": "Stacks the child nodes using their pending heights and spacing and clamps the scroll offsets, matching Armies ClientUiComponent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.layoutVerticalContent(IIIZ)V"
+    },
+    {
+      "symbol": "M:hd.a(IIZIII)V",
+      "originalName": "a",
+      "to": "updateInputTree",
+      "evidence": "Eases the pending offsets then walks the child nodes handling clipped pointer presses and releases.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.updateInputTree(IIZIII)V"
+    },
+    {
       "symbol": "M:hd.a(ILhd;)V",
       "originalName": "a",
       "to": "setFocusedNode",
@@ -8260,12 +8276,68 @@
       "renamedSymbol": "M:UiLayoutNode.setFocusedNode(ILUiLayoutNode;)V"
     },
     {
+      "symbol": "M:hd.a(IZ)V",
+      "originalName": "a",
+      "to": "draw",
+      "evidence": "Draws the whole tree from the screen origin through drawTree with the blink flag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.draw(IZ)V"
+    },
+    {
+      "symbol": "M:hd.a(Lhd;B)V",
+      "originalName": "a",
+      "to": "applyStyle",
+      "evidence": "Copies the sprites, font, colours and flags set on the style node into this node.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.applyStyle(LUiLayoutNode;B)V"
+    },
+    {
+      "symbol": "M:hd.a(ZIIII)V",
+      "originalName": "a",
+      "to": "setBounds",
+      "evidence": "Clears the pending offsets and stores the x, y, width and height of the node.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.setBounds(ZIIII)V"
+    },
+    {
+      "symbol": "M:hd.a(ZILhd;Lhd;)V",
+      "originalName": "a",
+      "to": "positionAfter",
+      "evidence": "Places a child after the previous sibling plus the given spacing, or at the origin when there is none.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V"
+    },
+    {
+      "symbol": "M:hd.a(ZIZIZIZIZZI)V",
+      "originalName": "a",
+      "to": "drawTree",
+      "evidence": "Draws this node's background, sprites and text then its children, inheriting held and focus state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.drawTree(ZIZIZIZIZZI)V"
+    },
+    {
+      "symbol": "M:hd.b(IZ)V",
+      "originalName": "b",
+      "to": "updateInput",
+      "evidence": "Sets the capture flags from the argument and runs the input pass over the whole tree.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.updateInput(IZ)V"
+    },
+    {
       "symbol": "M:hd.b(Z)V",
       "originalName": "b",
       "to": "invalidateChildren",
       "evidence": "Marks every child dirty and recurses into its children.",
       "confidence": "reviewed",
       "renamedSymbol": "M:UiLayoutNode.invalidateChildren(Z)V"
+    },
+    {
+      "symbol": "M:hd.g(B)I",
+      "originalName": "g",
+      "to": "getPreferredWidth",
+      "evidence": "Returns computeContentWidth with an unlimited maximum text width.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiLayoutNode.getPreferredWidth(B)I"
     },
     {
       "symbol": "M:he.a(BLjava/lang/String;Ljava/lang/String;)V",
@@ -149008,7 +149080,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#0",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#0",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#0",
       "originalName": "var10_ref_hd",
       "renamedName": "var10_ref_hd",
       "declaration": {
@@ -149019,7 +149091,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#1",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#1",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -149030,7 +149102,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#2",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#2",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -149041,7 +149113,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#3",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#3",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -149052,7 +149124,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#4",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#4",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -149063,7 +149135,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#5",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#5",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -149074,7 +149146,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#6",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#6",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#6",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -149085,7 +149157,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#7",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#7",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -149096,7 +149168,7 @@
     },
     {
       "symbol": "L:hd.a(IIIZ)V#8",
-      "renamedSymbol": "L:UiLayoutNode.a(IIIZ)V#8",
+      "renamedSymbol": "L:UiLayoutNode.layoutVerticalContent(IIIZ)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -149107,7 +149179,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#0",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#0",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#0",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -149118,7 +149190,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#1",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#1",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#1",
       "originalName": "stackIn_39_1",
       "renamedName": "stackIn_39_1",
       "declaration": {
@@ -149129,7 +149201,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#10",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#10",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#10",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -149140,7 +149212,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#11",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#11",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#11",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -149151,7 +149223,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#12",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#12",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#12",
       "originalName": "var7Lifetime3",
       "renamedName": "var7Lifetime3",
       "declaration": {
@@ -149162,7 +149234,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#2",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#2",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -149173,7 +149245,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#3",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#3",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -149184,7 +149256,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#4",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#4",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -149195,7 +149267,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#5",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#5",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -149206,7 +149278,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#6",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#6",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -149217,7 +149289,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#7",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#7",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -149228,7 +149300,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#8",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#8",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#8",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -149239,7 +149311,7 @@
     },
     {
       "symbol": "L:hd.a(IIZIII)V#9",
-      "renamedSymbol": "L:UiLayoutNode.a(IIZIII)V#9",
+      "renamedSymbol": "L:UiLayoutNode.updateInputTree(IIZIII)V#9",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -149305,7 +149377,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#0",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#0",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#0",
       "originalName": "stackIn_87_1",
       "renamedName": "stackIn_87_1",
       "declaration": {
@@ -149316,7 +149388,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#1",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#1",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#1",
       "originalName": "stackIn_106_0",
       "renamedName": "stackIn_106_0",
       "declaration": {
@@ -149327,7 +149399,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#2",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#2",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#2",
       "originalName": "stackIn_106_1",
       "renamedName": "stackIn_106_1",
       "declaration": {
@@ -149338,7 +149410,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#3",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#3",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#3",
       "originalName": "stackIn_107_2",
       "renamedName": "stackIn_107_2",
       "declaration": {
@@ -149349,7 +149421,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#4",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#4",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -149360,7 +149432,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#5",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#5",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -149371,7 +149443,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#6",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#6",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -149382,7 +149454,7 @@
     },
     {
       "symbol": "L:hd.a(Lhd;B)V#7",
-      "renamedSymbol": "L:UiLayoutNode.a(LUiLayoutNode;B)V#7",
+      "renamedSymbol": "L:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -149657,7 +149729,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#0",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#0",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#0",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -149668,7 +149740,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#1",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#1",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#1",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -149679,7 +149751,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#2",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#2",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#2",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -149690,7 +149762,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#3",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#3",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#3",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -149701,7 +149773,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#4",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#4",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#4",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -149712,7 +149784,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#5",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#5",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -149723,7 +149795,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#6",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#6",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -149734,7 +149806,7 @@
     },
     {
       "symbol": "L:hd.a(ZILhd;Lhd;)V#7",
-      "renamedSymbol": "L:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#7",
+      "renamedSymbol": "L:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -149745,7 +149817,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#0",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#0",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -149756,7 +149828,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#1",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#1",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -149767,7 +149839,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#10",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#10",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#10",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -149778,7 +149850,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#11",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#11",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#11",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -149789,7 +149861,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#12",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#12",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#12",
       "originalName": "var23_int",
       "renamedName": "var23_int",
       "declaration": {
@@ -149800,7 +149872,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#13",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#13",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#13",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -149811,7 +149883,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#14",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#14",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#14",
       "originalName": "var23_ref",
       "renamedName": "var23_ref",
       "declaration": {
@@ -149822,7 +149894,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#15",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#15",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#15",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -149833,7 +149905,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#16",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#16",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#16",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -149844,7 +149916,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#17",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#17",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#17",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -149855,7 +149927,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#18",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#18",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#18",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -149866,7 +149938,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#19",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#19",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#19",
       "originalName": "var23Lifetime2",
       "renamedName": "var23Lifetime2",
       "declaration": {
@@ -149877,7 +149949,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#2",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#2",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#2",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -149888,7 +149960,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#20",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#20",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#20",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -149899,7 +149971,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#3",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#3",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#3",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -149910,7 +149982,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#4",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#4",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#4",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -149921,7 +149993,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#5",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#5",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#5",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -149932,7 +150004,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#6",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#6",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#6",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -149943,7 +150015,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#7",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#7",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#7",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -149954,7 +150026,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#8",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#8",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#8",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -149965,7 +150037,7 @@
     },
     {
       "symbol": "L:hd.a(ZIZIZIZIZZI)V#9",
-      "renamedSymbol": "L:UiLayoutNode.a(ZIZIZIZIZZI)V#9",
+      "renamedSymbol": "L:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#9",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -149998,7 +150070,7 @@
     },
     {
       "symbol": "L:hd.g(B)I#0",
-      "renamedSymbol": "L:UiLayoutNode.g(B)I#0",
+      "renamedSymbol": "L:UiLayoutNode.getPreferredWidth(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -357007,9 +357079,9 @@
     },
     {
       "symbol": "M:hd.a(IIIZ)V",
-      "renamedSymbol": "M:UiLayoutNode.a(IIIZ)V",
+      "renamedSymbol": "M:UiLayoutNode.layoutVerticalContent(IIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutVerticalContent",
       "declaration": {
         "file": "hd.java",
         "start": 2455,
@@ -357018,9 +357090,9 @@
     },
     {
       "symbol": "M:hd.a(IIZIII)V",
-      "renamedSymbol": "M:UiLayoutNode.a(IIZIII)V",
+      "renamedSymbol": "M:UiLayoutNode.updateInputTree(IIZIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateInputTree",
       "declaration": {
         "file": "hd.java",
         "start": 14797,
@@ -357040,9 +357112,9 @@
     },
     {
       "symbol": "M:hd.a(IZ)V",
-      "renamedSymbol": "M:UiLayoutNode.a(IZ)V",
+      "renamedSymbol": "M:UiLayoutNode.draw(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "draw",
       "declaration": {
         "file": "hd.java",
         "start": 4666,
@@ -357051,9 +357123,9 @@
     },
     {
       "symbol": "M:hd.a(Lhd;B)V",
-      "renamedSymbol": "M:UiLayoutNode.a(LUiLayoutNode;B)V",
+      "renamedSymbol": "M:UiLayoutNode.applyStyle(LUiLayoutNode;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyStyle",
       "declaration": {
         "file": "hd.java",
         "start": 4882,
@@ -357073,9 +357145,9 @@
     },
     {
       "symbol": "M:hd.a(ZIIII)V",
-      "renamedSymbol": "M:UiLayoutNode.a(ZIIII)V",
+      "renamedSymbol": "M:UiLayoutNode.setBounds(ZIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBounds",
       "declaration": {
         "file": "hd.java",
         "start": 21205,
@@ -357084,9 +357156,9 @@
     },
     {
       "symbol": "M:hd.a(ZILhd;Lhd;)V",
-      "renamedSymbol": "M:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V",
+      "renamedSymbol": "M:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "positionAfter",
       "declaration": {
         "file": "hd.java",
         "start": 18771,
@@ -357095,9 +357167,9 @@
     },
     {
       "symbol": "M:hd.a(ZIZIZIZIZZI)V",
-      "renamedSymbol": "M:UiLayoutNode.a(ZIZIZIZIZZI)V",
+      "renamedSymbol": "M:UiLayoutNode.drawTree(ZIZIZIZIZZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawTree",
       "declaration": {
         "file": "hd.java",
         "start": 21601,
@@ -357106,9 +357178,9 @@
     },
     {
       "symbol": "M:hd.b(IZ)V",
-      "renamedSymbol": "M:UiLayoutNode.b(IZ)V",
+      "renamedSymbol": "M:UiLayoutNode.updateInput(IZ)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "updateInput",
       "declaration": {
         "file": "hd.java",
         "start": 9837,
@@ -357128,9 +357200,9 @@
     },
     {
       "symbol": "M:hd.g(B)I",
-      "renamedSymbol": "M:UiLayoutNode.g(B)I",
+      "renamedSymbol": "M:UiLayoutNode.getPreferredWidth(B)I",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "getPreferredWidth",
       "declaration": {
         "file": "hd.java",
         "start": 14561,
@@ -423260,7 +423332,7 @@
     },
     {
       "symbol": "P:hd.a(IIIZ)V#0",
-      "renamedSymbol": "P:UiLayoutNode.a(IIIZ)V#0",
+      "renamedSymbol": "P:UiLayoutNode.layoutVerticalContent(IIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423271,7 +423343,7 @@
     },
     {
       "symbol": "P:hd.a(IIIZ)V#1",
-      "renamedSymbol": "P:UiLayoutNode.a(IIIZ)V#1",
+      "renamedSymbol": "P:UiLayoutNode.layoutVerticalContent(IIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423282,7 +423354,7 @@
     },
     {
       "symbol": "P:hd.a(IIIZ)V#2",
-      "renamedSymbol": "P:UiLayoutNode.a(IIIZ)V#2",
+      "renamedSymbol": "P:UiLayoutNode.layoutVerticalContent(IIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -423293,7 +423365,7 @@
     },
     {
       "symbol": "P:hd.a(IIIZ)V#3",
-      "renamedSymbol": "P:UiLayoutNode.a(IIIZ)V#3",
+      "renamedSymbol": "P:UiLayoutNode.layoutVerticalContent(IIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -423304,7 +423376,7 @@
     },
     {
       "symbol": "P:hd.a(IIZIII)V#0",
-      "renamedSymbol": "P:UiLayoutNode.a(IIZIII)V#0",
+      "renamedSymbol": "P:UiLayoutNode.updateInputTree(IIZIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423315,7 +423387,7 @@
     },
     {
       "symbol": "P:hd.a(IIZIII)V#1",
-      "renamedSymbol": "P:UiLayoutNode.a(IIZIII)V#1",
+      "renamedSymbol": "P:UiLayoutNode.updateInputTree(IIZIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423326,7 +423398,7 @@
     },
     {
       "symbol": "P:hd.a(IIZIII)V#2",
-      "renamedSymbol": "P:UiLayoutNode.a(IIZIII)V#2",
+      "renamedSymbol": "P:UiLayoutNode.updateInputTree(IIZIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -423337,7 +423409,7 @@
     },
     {
       "symbol": "P:hd.a(IIZIII)V#3",
-      "renamedSymbol": "P:UiLayoutNode.a(IIZIII)V#3",
+      "renamedSymbol": "P:UiLayoutNode.updateInputTree(IIZIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -423348,7 +423420,7 @@
     },
     {
       "symbol": "P:hd.a(IIZIII)V#4",
-      "renamedSymbol": "P:UiLayoutNode.a(IIZIII)V#4",
+      "renamedSymbol": "P:UiLayoutNode.updateInputTree(IIZIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -423359,7 +423431,7 @@
     },
     {
       "symbol": "P:hd.a(IIZIII)V#5",
-      "renamedSymbol": "P:UiLayoutNode.a(IIZIII)V#5",
+      "renamedSymbol": "P:UiLayoutNode.updateInputTree(IIZIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -423392,7 +423464,7 @@
     },
     {
       "symbol": "P:hd.a(IZ)V#0",
-      "renamedSymbol": "P:UiLayoutNode.a(IZ)V#0",
+      "renamedSymbol": "P:UiLayoutNode.draw(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423403,7 +423475,7 @@
     },
     {
       "symbol": "P:hd.a(IZ)V#1",
-      "renamedSymbol": "P:UiLayoutNode.a(IZ)V#1",
+      "renamedSymbol": "P:UiLayoutNode.draw(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423414,7 +423486,7 @@
     },
     {
       "symbol": "P:hd.a(Lhd;B)V#0",
-      "renamedSymbol": "P:UiLayoutNode.a(LUiLayoutNode;B)V#0",
+      "renamedSymbol": "P:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423425,7 +423497,7 @@
     },
     {
       "symbol": "P:hd.a(Lhd;B)V#1",
-      "renamedSymbol": "P:UiLayoutNode.a(LUiLayoutNode;B)V#1",
+      "renamedSymbol": "P:UiLayoutNode.applyStyle(LUiLayoutNode;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423469,7 +423541,7 @@
     },
     {
       "symbol": "P:hd.a(ZIIII)V#0",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIIII)V#0",
+      "renamedSymbol": "P:UiLayoutNode.setBounds(ZIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423480,7 +423552,7 @@
     },
     {
       "symbol": "P:hd.a(ZIIII)V#1",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIIII)V#1",
+      "renamedSymbol": "P:UiLayoutNode.setBounds(ZIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423491,7 +423563,7 @@
     },
     {
       "symbol": "P:hd.a(ZIIII)V#2",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIIII)V#2",
+      "renamedSymbol": "P:UiLayoutNode.setBounds(ZIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -423502,7 +423574,7 @@
     },
     {
       "symbol": "P:hd.a(ZIIII)V#3",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIIII)V#3",
+      "renamedSymbol": "P:UiLayoutNode.setBounds(ZIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -423513,7 +423585,7 @@
     },
     {
       "symbol": "P:hd.a(ZIIII)V#4",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIIII)V#4",
+      "renamedSymbol": "P:UiLayoutNode.setBounds(ZIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -423524,7 +423596,7 @@
     },
     {
       "symbol": "P:hd.a(ZILhd;Lhd;)V#0",
-      "renamedSymbol": "P:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#0",
+      "renamedSymbol": "P:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423535,7 +423607,7 @@
     },
     {
       "symbol": "P:hd.a(ZILhd;Lhd;)V#1",
-      "renamedSymbol": "P:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#1",
+      "renamedSymbol": "P:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423546,7 +423618,7 @@
     },
     {
       "symbol": "P:hd.a(ZILhd;Lhd;)V#2",
-      "renamedSymbol": "P:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#2",
+      "renamedSymbol": "P:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -423557,7 +423629,7 @@
     },
     {
       "symbol": "P:hd.a(ZILhd;Lhd;)V#3",
-      "renamedSymbol": "P:UiLayoutNode.a(ZILUiLayoutNode;LUiLayoutNode;)V#3",
+      "renamedSymbol": "P:UiLayoutNode.positionAfter(ZILUiLayoutNode;LUiLayoutNode;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -423568,7 +423640,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#0",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#0",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423579,7 +423651,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#1",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#1",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423590,7 +423662,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#10",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#10",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -423601,7 +423673,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#2",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#2",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -423612,7 +423684,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#3",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#3",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -423623,7 +423695,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#4",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#4",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -423634,7 +423706,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#5",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#5",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -423645,7 +423717,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#6",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#6",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -423656,7 +423728,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#7",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#7",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -423667,7 +423739,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#8",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#8",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -423678,7 +423750,7 @@
     },
     {
       "symbol": "P:hd.a(ZIZIZIZIZZI)V#9",
-      "renamedSymbol": "P:UiLayoutNode.a(ZIZIZIZIZZI)V#9",
+      "renamedSymbol": "P:UiLayoutNode.drawTree(ZIZIZIZIZZI)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -423689,7 +423761,7 @@
     },
     {
       "symbol": "P:hd.b(IZ)V#0",
-      "renamedSymbol": "P:UiLayoutNode.b(IZ)V#0",
+      "renamedSymbol": "P:UiLayoutNode.updateInput(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423700,7 +423772,7 @@
     },
     {
       "symbol": "P:hd.b(IZ)V#1",
-      "renamedSymbol": "P:UiLayoutNode.b(IZ)V#1",
+      "renamedSymbol": "P:UiLayoutNode.updateInput(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423722,7 +423794,7 @@
     },
     {
       "symbol": "P:hd.g(B)I#0",
-      "renamedSymbol": "P:UiLayoutNode.g(B)I#0",
+      "renamedSymbol": "P:UiLayoutNode.getPreferredWidth(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -541200,7 +541272,7 @@
       "original": "b.java",
       "renamed": "MySquadScreen.java",
       "inputSha256": "b21fa43f36ec733bc1f42e06f8b3c9d2250504abe2fc007c2789f95138484be6",
-      "outputSha256": "f72aa0afb5b316c25fb6ddd49538fe67d3dcae1c70c01c3220f461d190f30c7f",
+      "outputSha256": "9adc047b23a8d9c7d83ed448c1f1f24d8838a7c3f3755377a899c061810118d4",
       "edits": [
         {
           "start": 50,
@@ -541362,6 +541434,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 886,
+          "end": 887,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 1084,
@@ -541544,6 +541623,13 @@
           "symbol": "M:mf.a(I)V",
           "original": "a",
           "renamed": "update"
+        },
+        {
+          "start": 2775,
+          "end": 2776,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 2905,
@@ -542085,6 +542171,13 @@
           "renamed": "BufferedCacheFile"
         },
         {
+          "start": 11637,
+          "end": 11638,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 11703,
           "end": 11705,
           "symbol": "C:jd",
@@ -542337,6 +542430,13 @@
           "renamed": "addChild"
         },
         {
+          "start": 14553,
+          "end": 14554,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 14588,
           "end": 14589,
           "symbol": "M:b.b(I)V",
@@ -542358,11 +542458,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 14691,
+          "end": 14692,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 14746,
           "end": 14748,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 14773,
+          "end": 14774,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 14824,
@@ -542372,11 +542486,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 14851,
+          "end": 14852,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 14904,
           "end": 14906,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 14931,
+          "end": 14932,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 14985,
@@ -542386,11 +542514,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 15012,
+          "end": 15013,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 15068,
           "end": 15070,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 15095,
+          "end": 15096,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 15177,
@@ -542475,6 +542617,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 16027,
+          "end": 16028,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 16075,
@@ -543778,7 +543927,7 @@
       "original": "bb.java",
       "renamed": "CascadingMenu.java",
       "inputSha256": "96b15d1c980936197a2a6cae3f36ff1e7bc555f4dd014834b7b21674f9ac3774",
-      "outputSha256": "c8a8ec261248bf499b4e511e1c54be24bb8da9e89ac20051ba16ab9ff21ed56e",
+      "outputSha256": "8030ea8892be8f8ec434d4589411bf42a00a78b387740dd06f74a628bb1411f0",
       "edits": [
         {
           "start": 50,
@@ -544271,6 +544420,13 @@
           "renamed": "setLayout"
         },
         {
+          "start": 11585,
+          "end": 11586,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 11744,
           "end": 11745,
           "symbol": "M:bb.b(II)V",
@@ -544719,7 +544875,7 @@
       "original": "be.java",
       "renamed": "ConsolePanel.java",
       "inputSha256": "e93f54ea8a15dbba25ed430188a5361a10c57942fde1d2cc0edb7465bef096fa",
-      "outputSha256": "f6888935e29c99aeb63b62dddbdd0d49efc45e5445a84d22b2010d799ba34a96",
+      "outputSha256": "91eac94ef90f693cc065235f8828a1d79300777bba8fe20588e562309d7f326f",
       "edits": [
         {
           "start": 53,
@@ -544944,6 +545100,20 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 4125,
+          "end": 4126,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
+          "start": 4439,
+          "end": 4440,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 4843,
@@ -545310,6 +545480,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 12826,
+          "end": 12827,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 13525,
           "end": 13527,
           "symbol": "C:nb",
@@ -545485,6 +545662,13 @@
           "renamed": "getCaretPosition"
         },
         {
+          "start": 17467,
+          "end": 17468,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 17502,
           "end": 17503,
           "symbol": "M:np.a(IIZI)V",
@@ -545625,6 +545809,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 18675,
+          "end": 18676,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 18731,
           "end": 18733,
           "symbol": "C:na",
@@ -545742,7 +545933,7 @@
       "original": "bf.java",
       "renamed": "LineupView.java",
       "inputSha256": "50140a75f23ed37236da8d4890a8149e39cdc6edfd658b68d1d8426a89d8e1b3",
-      "outputSha256": "20426ecff6d4b3fabe4cb53ea97f1e382a0fc4651fdb6edb73405335de35a994",
+      "outputSha256": "e51febb72db8fd39733b0011aa4ef3c4aa87e2fa85667cbdf099d13c2232959f",
       "edits": [
         {
           "start": 50,
@@ -545981,6 +546172,13 @@
           "symbol": "C:up",
           "original": "up",
           "renamed": "PlayerStats"
+        },
+        {
+          "start": 5594,
+          "end": 5595,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 5625,
@@ -546431,6 +546629,13 @@
           "renamed": "positionButtons"
         },
         {
+          "start": 13767,
+          "end": 13768,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 14728,
           "end": 14729,
           "symbol": "M:hs.a(B)Z",
@@ -546774,6 +546979,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 22176,
+          "end": 22177,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 22223,
           "end": 22225,
           "symbol": "C:hd",
@@ -546786,6 +546998,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "TextLayoutLine"
+        },
+        {
+          "start": 22308,
+          "end": 22309,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 22396,
@@ -546823,6 +547042,13 @@
           "renamed": "SquadSlotWidget"
         },
         {
+          "start": 22816,
+          "end": 22817,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 22900,
           "end": 22901,
           "symbol": "M:hd.a(BLhd;)V",
@@ -546851,11 +547077,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 23413,
+          "end": 23414,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 23466,
           "end": 23467,
           "symbol": "M:hd.a(BLhd;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 23521,
+          "end": 23522,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 23564,
@@ -546898,6 +547138,13 @@
           "symbol": "C:kq",
           "original": "kq",
           "renamed": "SquadSlotWidget"
+        },
+        {
+          "start": 24042,
+          "end": 24043,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 24325,
@@ -548382,7 +548629,7 @@
       "original": "bn.java",
       "renamed": "LeaguesScreen.java",
       "inputSha256": "f4f24a5ffbb3afa4a110f68315545723dcf27763f9b8d03bcb9b123588d36179",
-      "outputSha256": "e5e10a7ee72b4138e268b04ef3ab18e7082da6d53fd9dbb9913f9a40ea660b5c",
+      "outputSha256": "ba45da359656b1b098882be7307d9f41d1aa3daec07bcaa3ec4baa0bd4776034",
       "edits": [
         {
           "start": 50,
@@ -548588,6 +548835,13 @@
           "renamed": "MenuButton"
         },
         {
+          "start": 1283,
+          "end": 1284,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1301,
           "end": 1308,
           "symbol": "F:qt.field_j:I",
@@ -548642,6 +548896,13 @@
           "symbol": "C:io",
           "original": "io",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 2429,
+          "end": 2430,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 2451,
@@ -548810,6 +549071,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "AuctionTableWidget"
+        },
+        {
+          "start": 3777,
+          "end": 3778,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 3799,
@@ -549057,6 +549325,13 @@
           "renamed": "MenuButton"
         },
         {
+          "start": 5272,
+          "end": 5273,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 5305,
           "end": 5307,
           "symbol": "C:hd",
@@ -549097,6 +549372,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 5501,
+          "end": 5502,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 5533,
@@ -549274,6 +549556,13 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 6321,
+          "end": 6322,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6329,
           "end": 6331,
           "symbol": "C:np",
@@ -549321,6 +549610,13 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "WelcomeDialog"
+        },
+        {
+          "start": 6524,
+          "end": 6525,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6571,
@@ -550051,6 +550347,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 10402,
+          "end": 10403,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 10445,
           "end": 10447,
           "symbol": "C:jh",
@@ -550448,7 +550751,7 @@
       "original": "bo.java",
       "renamed": "QuickChatKeysHelpPanel.java",
       "inputSha256": "16af592d1fbab8c35b6d94959ca59eaa156a8e92ba632607bc263ea18f922ecd",
-      "outputSha256": "5cd2e07b5f78818d6635675c518209a94378084a1a8a549355262defe90c33c8",
+      "outputSha256": "8d850cb03f632bdb121be060e14699eed756685571cece2197607087cabbc786",
       "edits": [
         {
           "start": 50,
@@ -550498,6 +550801,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1876,
+          "end": 1877,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 1943,
@@ -550689,6 +550999,20 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 5470,
+          "end": 5471,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5516,
+          "end": 5517,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 5562,
           "end": 5563,
           "symbol": "M:hd.a(BLhd;)V",
@@ -550701,6 +551025,41 @@
           "symbol": "M:hd.a(BLhd;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 5701,
+          "end": 5702,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5748,
+          "end": 5749,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5830,
+          "end": 5831,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5886,
+          "end": 5887,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5976,
+          "end": 5977,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6114,
@@ -550750,7 +551109,7 @@
       "original": "bp.java",
       "renamed": "ColumnTableWidget.java",
       "inputSha256": "8ef6f26b8eb0108ee4ac4e3f1e23f8dd238f060b9a5bfbcd26bcee2e21e17b7e",
-      "outputSha256": "9384f23e2a80fbe7ab0193d72189add4aa9d5c9151c8fc2415eeadfc52353c40",
+      "outputSha256": "eafafd830aa6e01ca475a161c8ad751c1175647417484a661213b2375d6dc4b6",
       "edits": [
         {
           "start": 44,
@@ -551026,6 +551385,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 6849,
+          "end": 6850,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6952,
           "end": 6954,
           "symbol": "C:im",
@@ -551033,11 +551399,25 @@
           "renamed": "ListRow"
         },
         {
+          "start": 6996,
+          "end": 6997,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 7076,
           "end": 7077,
           "symbol": "M:tk.a(IIIBIII)V",
           "original": "a",
           "renamed": "setLayout"
+        },
+        {
+          "start": 7179,
+          "end": 7180,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7284,
@@ -551369,6 +551749,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 15999,
+          "end": 16000,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 16306,
           "end": 16307,
           "symbol": "M:hd.a(BLhd;)V",
@@ -551430,7 +551817,7 @@
       "original": "bq.java",
       "renamed": "bq.java",
       "inputSha256": "58fd9b6b20c51ed7f6273a261bb5574224bf2e017ae157256c58831781214db0",
-      "outputSha256": "98c6a0809926285c170904d0129334ebfe607e468393f9ae28eac9171101e7f0",
+      "outputSha256": "9ab6c5cba56e3579244418fc7b14f4e0d05fe6f7df442de082bc09b0de3159db",
       "edits": [
         {
           "start": 93,
@@ -551531,6 +551918,13 @@
           "renamed": "TrinketIcon"
         },
         {
+          "start": 1391,
+          "end": 1392,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1399,
           "end": 1401,
           "symbol": "C:fm",
@@ -551566,11 +551960,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 1728,
+          "end": 1729,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1804,
           "end": 1806,
           "symbol": "C:jf",
           "original": "jf",
           "renamed": "DoSomethingCommand"
+        },
+        {
+          "start": 1815,
+          "end": 1816,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 1823,
@@ -551636,6 +552044,13 @@
           "renamed": "TrinketUnlockNotice"
         },
         {
+          "start": 2059,
+          "end": 2060,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2067,
           "end": 2069,
           "symbol": "C:dn",
@@ -551657,11 +552072,25 @@
           "renamed": "IterableDualLinkDeque"
         },
         {
+          "start": 2145,
+          "end": 2146,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2153,
           "end": 2155,
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "AuctionItem"
+        },
+        {
+          "start": 2205,
+          "end": 2206,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2213,
@@ -551685,6 +552114,13 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 2855,
+          "end": 2856,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 3094,
           "end": 3096,
           "symbol": "C:ku",
@@ -551706,11 +552142,25 @@
           "renamed": "TextButton"
         },
         {
+          "start": 5253,
+          "end": 5254,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 5769,
           "end": 5771,
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "AuctionItem"
+        },
+        {
+          "start": 6273,
+          "end": 6274,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6293,
@@ -551727,6 +552177,20 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6368,
+          "end": 6369,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6428,
+          "end": 6429,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6595,
           "end": 6597,
           "symbol": "C:mc",
@@ -551734,11 +552198,25 @@
           "renamed": "TickClock"
         },
         {
+          "start": 6606,
+          "end": 6607,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6694,
           "end": 6696,
           "symbol": "C:kt",
           "original": "kt",
           "renamed": "BlackFadeScreen"
+        },
+        {
+          "start": 6705,
+          "end": 6706,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6798,
@@ -551936,7 +552414,7 @@
       "original": "bs.java",
       "renamed": "ClientException.java",
       "inputSha256": "92debfec2d505970d524aec8b5d7c6a4022140ade4e2e7fc23fa5f349d9afcd2",
-      "outputSha256": "30bdc49c05405762274cbbfbc2bca7017c4c57d10bfdba238bef2f94c91313e2",
+      "outputSha256": "e31c274a238fc307ff731cc0503bc9837c10c020f7f036918c1bd5a1cd50251e",
       "edits": [
         {
           "start": 50,
@@ -551967,6 +552445,13 @@
           "renamed": "StatefulTextPainter"
         },
         {
+          "start": 278,
+          "end": 279,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 312,
           "end": 314,
           "symbol": "C:oe",
@@ -551979,6 +552464,13 @@
           "symbol": "C:mc",
           "original": "mc",
           "renamed": "TickClock"
+        },
+        {
+          "start": 391,
+          "end": 392,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 399,
@@ -555161,7 +555653,7 @@
       "original": "cf.java",
       "renamed": "RankingRowNode.java",
       "inputSha256": "60f9ccb7b77f91c9f67ca4b96108b8cbf2bcbebf18a0d3be415e9cf5164d3e4c",
-      "outputSha256": "93bdf55e3acf3df632643871959e7b545fdf724624fa12a5eebadafdb5986c25",
+      "outputSha256": "cbc51a8333394d20c5d9391cc56f31bd1064fc64d6e6e3d7e582220bef36cb7d",
       "edits": [
         {
           "start": 50,
@@ -555274,6 +555766,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "LeaguesHelpScreen"
+        },
+        {
+          "start": 3181,
+          "end": 3182,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 3347,
@@ -567534,7 +568033,7 @@
       "original": "dw.java",
       "renamed": "ConsoleEvaluationException.java",
       "inputSha256": "6407e0c5d4a441b80bc2b03b7eecf91927dd6cc42a42d3157627e21c34731286",
-      "outputSha256": "ef02b39657a338c8c01912e84d7db28b98371cc149be6611639b6ad58cb46b96",
+      "outputSha256": "a3316b09796e464a360de693e333b226ad361c9389c85cc74ada23535ab6c73b",
       "edits": [
         {
           "start": 50,
@@ -567586,6 +568085,13 @@
           "renamed": "TrinketIcon"
         },
         {
+          "start": 813,
+          "end": 814,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 864,
           "end": 866,
           "symbol": "C:on",
@@ -567598,6 +568104,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "AuctionItem"
+        },
+        {
+          "start": 901,
+          "end": 902,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 958,
@@ -567878,7 +568391,7 @@
       "original": "e.java",
       "renamed": "SplashScreen.java",
       "inputSha256": "61f168dd4a6054ab2a9f441fd29e5d3a4a68f40180c91105c285cbf432a01443",
-      "outputSha256": "59e72d40a5022d30784bbdba14b44d4a43552b7d19459a2aa14c43c444c9fda4",
+      "outputSha256": "bd66cd8124a36497a03afd7d92f4dac647bfe917d069b76a681c4492504dda04",
       "edits": [
         {
           "start": 50,
@@ -568294,11 +568807,25 @@
           "renamed": "AnimationPlayer"
         },
         {
+          "start": 9260,
+          "end": 9261,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
           "start": 9276,
           "end": 9278,
           "symbol": "C:eb",
           "original": "eb",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 9325,
+          "end": 9326,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 9524,
@@ -568308,6 +568835,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 9590,
+          "end": 9591,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
           "start": 9606,
           "end": 9608,
           "symbol": "C:eb",
@@ -568315,11 +568849,32 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 9743,
+          "end": 9744,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 10167,
           "end": 10169,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 10194,
+          "end": 10195,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 10388,
+          "end": 10389,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 10574,
@@ -568406,6 +568961,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 11614,
+          "end": 11615,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 11628,
           "end": 11630,
           "symbol": "C:eb",
@@ -568418,6 +568980,13 @@
           "symbol": "C:eb",
           "original": "eb",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 11953,
+          "end": 11954,
+          "symbol": "M:hd.a(ZILhd;Lhd;)V",
+          "original": "a",
+          "renamed": "positionAfter"
         },
         {
           "start": 11972,
@@ -577042,7 +577611,7 @@
       "original": "ek.java",
       "renamed": "TrinketShopDialog.java",
       "inputSha256": "6838375e63b9b37cf3ac50f9323833681f3f0e7ae78a9b7ab391c7d07e8b6db3",
-      "outputSha256": "61e12188290d19204c042c9a4b8a3b9a9bb84d0f40a84abeeb92b868c2d25c32",
+      "outputSha256": "f94c2fdc17cca392292a8e4d1b3bc4637d8590cff40217238bb8b4d17fa3e392",
       "edits": [
         {
           "start": 50,
@@ -577143,6 +577712,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 1163,
+          "end": 1164,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1469,
           "end": 1471,
           "symbol": "C:nn",
@@ -577162,6 +577738,20 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "ScrollContainer"
+        },
+        {
+          "start": 1965,
+          "end": 1966,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 2032,
+          "end": 2033,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 2052,
@@ -577304,6 +577894,13 @@
           "renamed": "IsSixCommand"
         },
         {
+          "start": 4032,
+          "end": 4033,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 4055,
           "end": 4057,
           "symbol": "C:pb",
@@ -577365,6 +577962,13 @@
           "symbol": "C:at",
           "original": "at",
           "renamed": "TrinketTile"
+        },
+        {
+          "start": 4666,
+          "end": 4667,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 4701,
@@ -581353,7 +581957,7 @@
       "original": "eq.java",
       "renamed": "WeightedLruCache.java",
       "inputSha256": "7d8070a7f49ce42e94462d91a926199bc9567e5bf6e909599b9bb4b7a77b8c19",
-      "outputSha256": "076374c3d800cd2a00d0996c77734dc737b4081214621d90ecced2b7abf390ec",
+      "outputSha256": "a5f76e2f22354996c93f33caa9484efefd3d532649f329e6c6c8332ac695eb04",
       "edits": [
         {
           "start": 50,
@@ -581417,6 +582021,13 @@
           "symbol": "C:na",
           "original": "na",
           "renamed": "VerticalScrollbar"
+        },
+        {
+          "start": 819,
+          "end": 820,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 832,
@@ -581921,7 +582532,7 @@
       "original": "er.java",
       "renamed": "er.java",
       "inputSha256": "5b26833a794f1c485f933c2bb416e976aeed1f530240ad0b1956b56dea468b82",
-      "outputSha256": "84adc44ba0bd1a8eb19c6e53d684b7a44bfcad3095cc2698eddb3f09499ac794",
+      "outputSha256": "a526c3fce7f1424816d34ab23cdca05cbb14064b5400ecc9b435e7b23b07f8ec",
       "edits": [
         {
           "start": 61,
@@ -581938,11 +582549,25 @@
           "renamed": "ContentTransitionDialog"
         },
         {
+          "start": 385,
+          "end": 386,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 436,
           "end": 438,
           "symbol": "C:mu",
           "original": "mu",
           "renamed": "ContentTransitionDialog"
+        },
+        {
+          "start": 447,
+          "end": 448,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 969,
@@ -584246,7 +584871,7 @@
       "original": "fb.java",
       "renamed": "NumericDateInputWidget.java",
       "inputSha256": "d302ea07e2ff6d1b396a9b3eb83953824cd92504f0262794190ed845c0354f48",
-      "outputSha256": "b99d000ed0e677f234b53e4ed2ab413a9aa342365273b26f7fef9de1d31e7c14",
+      "outputSha256": "fc2710e20be7d92f2ee9602c139a3909f6dcf24d6ac50a0e6f17097e35ae75af",
       "edits": [
         {
           "start": 50,
@@ -584345,6 +584970,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 617,
+          "end": 618,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 695,
@@ -586713,7 +587345,7 @@
       "original": "fm.java",
       "renamed": "AchievementsScreen.java",
       "inputSha256": "0c9b1aa687aab76301f463ee3a50f8cc09af7fd9eb3f512922aacc3e8f5f7ff7",
-      "outputSha256": "a735df86e6dd2241117e313028a4a72d84a2ccf017ee3e6a560dc87788f03949",
+      "outputSha256": "ae698607ed299b131ade3d575e203933e6332d93ff6e994881798a9a742bca47",
       "edits": [
         {
           "start": 50,
@@ -586821,6 +587453,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1499,
+          "end": 1500,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 1521,
           "end": 1523,
           "symbol": "C:ub",
@@ -586828,11 +587467,25 @@
           "renamed": "ModalPanel"
         },
         {
+          "start": 1532,
+          "end": 1533,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 1554,
           "end": 1556,
           "symbol": "C:vu",
           "original": "vu",
           "renamed": "ContextMenuItem"
+        },
+        {
+          "start": 1566,
+          "end": 1567,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 1597,
@@ -587437,6 +588090,13 @@
           "renamed": "updateScreen"
         },
         {
+          "start": 9164,
+          "end": 9165,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 9187,
           "end": 9194,
           "symbol": "F:qt.field_j:I",
@@ -587451,6 +588111,13 @@
           "renamed": "ModalPanel"
         },
         {
+          "start": 9271,
+          "end": 9272,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 9288,
           "end": 9295,
           "symbol": "F:qt.field_j:I",
@@ -587463,6 +588130,13 @@
           "symbol": "C:vu",
           "original": "vu",
           "renamed": "ContextMenuItem"
+        },
+        {
+          "start": 9333,
+          "end": 9334,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 9356,
@@ -587486,11 +588160,32 @@
           "renamed": "ContextMenuItem"
         },
         {
+          "start": 9519,
+          "end": 9520,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 9554,
+          "end": 9555,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 9578,
           "end": 9580,
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ModalPanel"
+        },
+        {
+          "start": 9589,
+          "end": 9590,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 9613,
@@ -587619,11 +588314,32 @@
           "renamed": "ContextMenuItem"
         },
         {
+          "start": 10860,
+          "end": 10861,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 10893,
+          "end": 10894,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 10915,
           "end": 10917,
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ModalPanel"
+        },
+        {
+          "start": 10926,
+          "end": 10927,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 10948,
@@ -588109,6 +588825,13 @@
           "renamed": "setTransitionProgress"
         },
         {
+          "start": 17200,
+          "end": 17201,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 17223,
           "end": 17230,
           "symbol": "F:qt.field_j:I",
@@ -588121,6 +588844,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ModalPanel"
+        },
+        {
+          "start": 17263,
+          "end": 17264,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 17286,
@@ -588137,11 +588867,25 @@
           "renamed": "ContextMenuItem"
         },
         {
+          "start": 17327,
+          "end": 17328,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 17345,
           "end": 17352,
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 17390,
+          "end": 17391,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 17413,
@@ -588151,11 +588895,25 @@
           "renamed": "ModalPanel"
         },
         {
+          "start": 17424,
+          "end": 17425,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 17447,
           "end": 17449,
           "symbol": "C:vu",
           "original": "vu",
           "renamed": "ContextMenuItem"
+        },
+        {
+          "start": 17459,
+          "end": 17460,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 17526,
@@ -592415,7 +593173,7 @@
       "original": "fw.java",
       "renamed": "MyPitchScreen.java",
       "inputSha256": "091b8f1cd8e55b350317489411a83360c34d5a30fc23d4a483bdab19b1bdf6f2",
-      "outputSha256": "871ea65d065d7be5605de441beb2f00d9db8f783fe0c378be0480b06ac877787",
+      "outputSha256": "cd0b614fa64067204bf7fa0378679def828d0b26ff29ae0665aef3056693103b",
       "edits": [
         {
           "start": 69,
@@ -592614,6 +593372,13 @@
           "renamed": "RankingRowNode"
         },
         {
+          "start": 3402,
+          "end": 3403,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 3445,
           "end": 3446,
           "symbol": "M:fw.f(I)V",
@@ -592733,6 +593498,13 @@
           "renamed": "RankingRowNode"
         },
         {
+          "start": 4283,
+          "end": 4284,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 4336,
           "end": 4338,
           "symbol": "C:on",
@@ -592838,6 +593610,13 @@
           "renamed": "RankingRowNode"
         },
         {
+          "start": 5490,
+          "end": 5491,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 5540,
           "end": 5541,
           "symbol": "M:fw.a(ZI)V",
@@ -592892,6 +593671,13 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "RankingRowNode"
+        },
+        {
+          "start": 5932,
+          "end": 5933,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 5969,
@@ -599361,7 +600147,7 @@
       "original": "gp.java",
       "renamed": "PasswordLoginCredentials.java",
       "inputSha256": "fd93539420234c8822591b74ab94ead04e587ccbef59df1aebd8a5b82d668452",
-      "outputSha256": "96f9917845e53b150856e17b7eb8551cb061ab9f68a0cd33855e33d24f39f5a4",
+      "outputSha256": "90d2b27dd2064e93ad5111a90a6fa22f8121ef7a7dd4e8dbd0ff7bd3c05a8d28",
       "edits": [
         {
           "start": 50,
@@ -599488,6 +600274,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2034,
+          "end": 2035,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 2057,
@@ -603391,7 +604184,7 @@
       "original": "gu.java",
       "renamed": "ContextMenu.java",
       "inputSha256": "49d22f637607175482e43a0b337cb50f3aca5de9483830be12ecda6d3018d627",
-      "outputSha256": "a2aad62439ed0d0a83ecb8d84f99d141e3e5f4599958593eee834bd52a27368f",
+      "outputSha256": "e04d7520d4401d1b7d7d68b56821a8e9b93dbd36292665e97a41a766b2b7e2f5",
       "edits": [
         {
           "start": 50,
@@ -603455,6 +604248,13 @@
           "symbol": "M:gu.a(BZ)I",
           "original": "a",
           "renamed": "getSelectedActionId"
+        },
+        {
+          "start": 1023,
+          "end": 1024,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 1319,
@@ -603525,6 +604325,13 @@
           "symbol": "C:ou",
           "original": "ou",
           "renamed": "StripedProgressBar"
+        },
+        {
+          "start": 2538,
+          "end": 2539,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2853,
@@ -605806,7 +606613,7 @@
       "original": "hd.java",
       "renamed": "UiLayoutNode.java",
       "inputSha256": "021e0d32a0bcda06cf510048574c72657aed75860d407bb25949f3e3a420625a",
-      "outputSha256": "21d626d784c0bcb00ef1570c070787273dc983c4720ece63cae644412243001a",
+      "outputSha256": "ca54fbc59157546e0a772a6f6991512b9a047513c96249931fb57ccd9f553c73",
       "edits": [
         {
           "start": 44,
@@ -605998,6 +606805,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 2455,
+          "end": 2456,
+          "symbol": "M:hd.a(IIIZ)V",
+          "original": "a",
+          "renamed": "layoutVerticalContent"
+        },
+        {
           "start": 2519,
           "end": 2521,
           "symbol": "C:hd",
@@ -606054,6 +606868,20 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 4666,
+          "end": 4667,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
+          "start": 4711,
+          "end": 4712,
+          "symbol": "M:hd.a(ZIZIZIZIZZI)V",
+          "original": "a",
+          "renamed": "drawTree"
+        },
+        {
           "start": 4753,
           "end": 4755,
           "symbol": "C:on",
@@ -606066,6 +606894,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 4882,
+          "end": 4883,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
         },
         {
           "start": 4884,
@@ -606089,11 +606924,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 9837,
+          "end": 9838,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 9922,
           "end": 9924,
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "UnreadMessagesScreen"
+        },
+        {
+          "start": 9972,
+          "end": 9973,
+          "symbol": "M:hd.a(IIZIII)V",
+          "original": "a",
+          "renamed": "updateInputTree"
         },
         {
           "start": 9992,
@@ -606481,6 +607330,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 14561,
+          "end": 14562,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
           "start": 14644,
           "end": 14645,
           "symbol": "M:hd.a(II)I",
@@ -606500,6 +607356,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 14797,
+          "end": 14798,
+          "symbol": "M:hd.a(IIZIII)V",
+          "original": "a",
+          "renamed": "updateInputTree"
         },
         {
           "start": 15072,
@@ -606719,6 +607582,13 @@
           "renamed": "last"
         },
         {
+          "start": 17686,
+          "end": 17687,
+          "symbol": "M:hd.a(IIZIII)V",
+          "original": "a",
+          "renamed": "updateInputTree"
+        },
+        {
           "start": 17787,
           "end": 17789,
           "symbol": "C:hd",
@@ -606761,6 +607631,13 @@
           "renamed": "BytePlusOneCommand"
         },
         {
+          "start": 18771,
+          "end": 18772,
+          "symbol": "M:hd.a(ZILhd;Lhd;)V",
+          "original": "a",
+          "renamed": "positionAfter"
+        },
+        {
           "start": 18801,
           "end": 18803,
           "symbol": "C:hd",
@@ -606773,6 +607650,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 19440,
+          "end": 19441,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 20206,
@@ -606873,6 +607757,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 21205,
+          "end": 21206,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 21364,
           "end": 21365,
           "symbol": "M:hd.a(ILhd;)V",
@@ -606885,6 +607776,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 21601,
+          "end": 21602,
+          "symbol": "M:hd.a(ZIZIZIZIZZI)V",
+          "original": "a",
+          "renamed": "drawTree"
         },
         {
           "start": 21883,
@@ -606955,6 +607853,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 27990,
+          "end": 27991,
+          "symbol": "M:hd.a(ZIZIZIZIZZI)V",
+          "original": "a",
+          "renamed": "drawTree"
         },
         {
           "start": 28152,
@@ -607067,6 +607972,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 30709,
+          "end": 30710,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
         },
         {
           "start": 31646,
@@ -622692,7 +623604,7 @@
       "original": "ir.java",
       "renamed": "ThreeCommand.java",
       "inputSha256": "e63074637a8ef9e4cd25d22270d120dcf81415c3f7c35905b790c6c6c9091ebe",
-      "outputSha256": "e307c6b7b64b2e4a77ccbc098b7e8795db698ba45c6f62280b438966dd68ee5c",
+      "outputSha256": "be1d9d1ecb37913dd486af530a564b0351b1ca2aad474c3d4fd4369eada32742",
       "edits": [
         {
           "start": 50,
@@ -622786,6 +623698,13 @@
           "renamed": "darkenRectangle"
         },
         {
+          "start": 1617,
+          "end": 1618,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 1645,
           "end": 1647,
           "symbol": "C:gp",
@@ -622826,6 +623745,13 @@
           "symbol": "M:on.g(IIII)V",
           "original": "g",
           "renamed": "darkenRectangle"
+        },
+        {
+          "start": 2038,
+          "end": 2039,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 2062,
@@ -627102,7 +628028,7 @@
       "original": "ja.java",
       "renamed": "MyKitScreen.java",
       "inputSha256": "e8966501766e2082520764f632b8116f5609800900e024741e5166f23c25ccdc",
-      "outputSha256": "90cf8fd6dc8086dc9d84041246804ddc5af21c192e5993ed8f3bd97b0eeb3f13",
+      "outputSha256": "556bca2e219fe5a8f46c04979582e7a2d39ea0a4bbfd4d706b79c2897159d3bb",
       "edits": [
         {
           "start": 50,
@@ -627252,11 +628178,25 @@
           "renamed": "slideOffsetX"
         },
         {
+          "start": 1118,
+          "end": 1119,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 1169,
           "end": 1176,
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 1200,
+          "end": 1201,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 1269,
@@ -627418,6 +628358,20 @@
           "symbol": "M:ta.a(IIZ)V",
           "original": "a",
           "renamed": "enterScreen"
+        },
+        {
+          "start": 3398,
+          "end": 3399,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 3470,
+          "end": 3471,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 3512,
@@ -627672,6 +628626,13 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 8799,
+          "end": 8800,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 8822,
           "end": 8824,
           "symbol": "C:pt",
@@ -627763,6 +628724,27 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 9957,
+          "end": 9958,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 10005,
+          "end": 10006,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 10043,
+          "end": 10044,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 10091,
           "end": 10092,
           "symbol": "M:hd.a(BLhd;)V",
@@ -627796,6 +628778,13 @@
           "symbol": "M:hd.a(BLhd;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 10662,
+          "end": 10663,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 10764,
@@ -627840,6 +628829,13 @@
           "renamed": "ColourSwatchTile"
         },
         {
+          "start": 11145,
+          "end": 11146,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 11235,
           "end": 11236,
           "symbol": "M:hd.a(BLhd;)V",
@@ -627852,6 +628848,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 11305,
+          "end": 11306,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 11345,
@@ -627894,6 +628897,13 @@
           "symbol": "M:hd.a(BLhd;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 11992,
+          "end": 11993,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 12114,
@@ -628150,6 +629160,13 @@
           "renamed": "slideOffsetX"
         },
         {
+          "start": 15545,
+          "end": 15546,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 15600,
           "end": 15601,
           "symbol": "M:ja.h(I)V",
@@ -628218,7 +629235,7 @@
       "original": "jb.java",
       "renamed": "PopupDialog.java",
       "inputSha256": "3f1da29fbace33df43f140b26c2931ab8e51a67af2e7d23a1637e5913cdfdd27",
-      "outputSha256": "a8c500c805b777527cf48632fa0c97f4c87700c19a344d124ae1300401439bbd",
+      "outputSha256": "b38bdaa037ed5a6368154b9a89614e7dd3a8bb6018d68ea2426b8053cde4f2bb",
       "edits": [
         {
           "start": 53,
@@ -628298,6 +629315,13 @@
           "renamed": "selectedIndex"
         },
         {
+          "start": 1346,
+          "end": 1347,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 1611,
           "end": 1612,
           "symbol": "M:jb.a(II)V",
@@ -628354,11 +629378,32 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 3516,
+          "end": 3517,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 3734,
           "end": 3736,
           "symbol": "C:iw",
           "original": "iw",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 4123,
+          "end": 4124,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 4153,
+          "end": 4154,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 4256,
@@ -630603,7 +631648,7 @@
       "original": "jg.java",
       "renamed": "DraggableWidget.java",
       "inputSha256": "3c2c8b6ac21d16bdc3d9ee2326b2305e8b97115520b6e4fbad7b099d389c1d0a",
-      "outputSha256": "7a4ac3ca90b82b1126ea1615cd57951d97b094d63127ba12c8e2a25a957f4bad",
+      "outputSha256": "cfbf2e055db56e77550acbf037e877fdb992a66986de27dd90e77af2aae4bc2b",
       "edits": [
         {
           "start": 71,
@@ -631054,6 +632099,13 @@
           "renamed": "LeaguesHelpScreen"
         },
         {
+          "start": 11832,
+          "end": 11833,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 11905,
           "end": 11907,
           "symbol": "C:wj",
@@ -631073,6 +632125,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "LeaguesHelpScreen"
+        },
+        {
+          "start": 12190,
+          "end": 12191,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 12244,
@@ -631480,7 +632539,7 @@
       "original": "ji.java",
       "renamed": "ScrollBar.java",
       "inputSha256": "fd180c93072c372c0bb8009b6a737b26a297dfd48e0860da6110bb334e6b2cfd",
-      "outputSha256": "79ec6d97cd988777d86a533f6bf9574dd812b2b0a2e168c29be4698be451bb6b",
+      "outputSha256": "48ad8569f38cf95f98868630ee22f19f6eb9f3423b2e252b7decbdb1e2eaa682",
       "edits": [
         {
           "start": 50,
@@ -631637,6 +632696,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 3270,
+          "end": 3271,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 3367,
           "end": 3369,
           "symbol": "C:td",
@@ -631665,6 +632731,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 3495,
+          "end": 3496,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 3622,
           "end": 3624,
           "symbol": "C:td",
@@ -631691,6 +632764,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 3714,
+          "end": 3715,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 3783,
@@ -631735,6 +632815,13 @@
           "renamed": "TriangleMesh"
         },
         {
+          "start": 4125,
+          "end": 4126,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 4269,
           "end": 4271,
           "symbol": "C:td",
@@ -631768,6 +632855,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 4568,
+          "end": 4569,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 4603,
@@ -634721,7 +635815,7 @@
       "original": "jo.java",
       "renamed": "DemoIntegersCommand.java",
       "inputSha256": "019292cf58bdc99320965b40bfdfa144195c95e09801681708b9719f6dec700c",
-      "outputSha256": "2204799b4a8fda9962ba74e2bb893097323a0f4ea621ad64b2a82ee3d03d803b",
+      "outputSha256": "f033d1d24323060802ac533b006661060c21f0603aafc737ceedcdd6572ab83c",
       "edits": [
         {
           "start": 50,
@@ -634862,6 +635956,13 @@
           "symbol": "C:eq",
           "original": "eq",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 2960,
+          "end": 2961,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 2996,
@@ -641282,7 +642383,7 @@
       "original": "kf.java",
       "renamed": "TabStrip.java",
       "inputSha256": "24c8d5e65f8beba14daebef1c95c64798a1a108a9109cce86e21de88adb51ca5",
-      "outputSha256": "4a5a15e14863a3d570776c8900d58e60c72e30ed7199497b001c112ac3ea66cf",
+      "outputSha256": "f55622bd54760f48be6f64a0332fb07d17ff7e9bb6d276fc2a9baf18b234b144",
       "edits": [
         {
           "start": 50,
@@ -641521,6 +642622,20 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 4985,
+          "end": 4986,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5167,
+          "end": 5168,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 5508,
@@ -644293,7 +645408,7 @@
       "original": "kn.java",
       "renamed": "TrinketPickerDialog.java",
       "inputSha256": "0f3dfb2f8e7a0ff7cb5938d8b7db08a3b22be37f688a9d54a85379ee759718a3",
-      "outputSha256": "056e1418ceaf01bd7aa46eb5e2a3698b0f58ae299a8707d8b39b5310a99ea4ce",
+      "outputSha256": "9338b7dc62455bff6b6ebc6bd9139a9f809513b8594d7d0eafeec4e0b222059d",
       "edits": [
         {
           "start": 50,
@@ -644408,6 +645523,13 @@
           "renamed": "IntValueNode"
         },
         {
+          "start": 1073,
+          "end": 1074,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1122,
           "end": 1123,
           "symbol": "M:kn.a(B)I",
@@ -644504,6 +645626,20 @@
           "symbol": "C:lw",
           "original": "lw",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 3470,
+          "end": 3471,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
+          "start": 3631,
+          "end": 3632,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 3667,
@@ -655081,7 +656217,7 @@
       "original": "lr.java",
       "renamed": "FormationView.java",
       "inputSha256": "3c1f0d9c9cf529eb3ab43e3f9dc1bdca4049b3337b2e5ad32298a7fd4445a245",
-      "outputSha256": "af909f8544d0bc86e0783a73392fb7f685c3e1af42cc641d9a9963d87b026a15",
+      "outputSha256": "e398746bbc7eae80c111b8c0a87e1c25280e3eda51ed3153e669850db04f3b27",
       "edits": [
         {
           "start": 50,
@@ -655294,6 +656430,20 @@
           "renamed": "isButtonEnabled"
         },
         {
+          "start": 3195,
+          "end": 3196,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
+          "start": 3233,
+          "end": 3234,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 3762,
           "end": 3764,
           "symbol": "M:lr.<init>(Lnu;IZ)V",
@@ -655467,6 +656617,20 @@
           "symbol": "M:lr.e(II)Z",
           "original": "e",
           "renamed": "isButtonEnabled"
+        },
+        {
+          "start": 6862,
+          "end": 6863,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 6899,
+          "end": 6900,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 7226,
@@ -655980,7 +657144,7 @@
       "original": "lu.java",
       "renamed": "SpriteState.java",
       "inputSha256": "d09757ea54697d5cde4c2738f48cfde0016d4135bc02896606168a598ec7f9c9",
-      "outputSha256": "c62e748c2be6b7aef532988c2a49d98e7fe8573e340578a94cdc62b10e065b2a",
+      "outputSha256": "0d690a4f42c110f55d6ab1bbd0f798e03677e54662ce10eed1c10e2bd6b554fd",
       "edits": [
         {
           "start": 53,
@@ -656242,6 +657406,13 @@
           "renamed": "AccountNameAvailabilityValidator"
         },
         {
+          "start": 3455,
+          "end": 3456,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 3463,
           "end": 3465,
           "symbol": "C:fp",
@@ -656289,6 +657460,13 @@
           "symbol": "C:em",
           "original": "em",
           "renamed": "DualLinkHashTable"
+        },
+        {
+          "start": 3824,
+          "end": 3825,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 3851,
@@ -656429,6 +657607,13 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "GoalStateAgent"
+        },
+        {
+          "start": 4831,
+          "end": 4832,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 4839,
@@ -657012,6 +658197,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 14838,
+          "end": 14839,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 14897,
           "end": 14899,
           "symbol": "C:fp",
@@ -657033,6 +658225,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 15044,
+          "end": 15045,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 15196,
           "end": 15198,
           "symbol": "C:td",
@@ -657045,6 +658244,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 15249,
+          "end": 15250,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 15347,
@@ -657376,7 +658582,7 @@
       "original": "m.java",
       "renamed": "WhirlpoolHasher.java",
       "inputSha256": "c992556d04cd4aa9e1ecf9ee53045840df9347e89b94653c2d302a8ef2adfd36",
-      "outputSha256": "1d9cefc15774bec5b605d0452202a58cf2c24b3c774e75e3bf2500dacd19680b",
+      "outputSha256": "8d24172e061a0f5d862ae2efb572de2c66d048518ca0f3218e248eff29a84af1",
       "edits": [
         {
           "start": 50,
@@ -657512,6 +658718,20 @@
           "renamed": "ListRow"
         },
         {
+          "start": 4817,
+          "end": 4818,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 4880,
+          "end": 4881,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 4916,
           "end": 4918,
           "symbol": "C:ij",
@@ -657526,11 +658746,32 @@
           "renamed": "WeightedCacheEntry"
         },
         {
+          "start": 4972,
+          "end": 4973,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 4980,
           "end": 4982,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "WeightedCacheEntry"
+        },
+        {
+          "start": 5098,
+          "end": 5099,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5117,
+          "end": 5118,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
         },
         {
           "start": 5169,
@@ -657540,6 +658781,13 @@
           "renamed": "MySquadScreen"
         },
         {
+          "start": 5179,
+          "end": 5180,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
           "start": 5204,
           "end": 5205,
           "symbol": "C:b",
@@ -657547,11 +658795,32 @@
           "renamed": "MySquadScreen"
         },
         {
+          "start": 5214,
+          "end": 5215,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5290,
+          "end": 5291,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 5373,
           "end": 5375,
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "PagedHelpScreen"
+        },
+        {
+          "start": 5384,
+          "end": 5385,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 5465,
@@ -657573,6 +658842,13 @@
           "symbol": "C:mu",
           "original": "mu",
           "renamed": "ContentTransitionDialog"
+        },
+        {
+          "start": 5577,
+          "end": 5578,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6225,
@@ -658336,7 +659612,7 @@
       "original": "ma.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "43e44039e2ddab484eaa8944704f7e84e52c9962117c03493868d73f67a2307e",
-      "outputSha256": "dc35c769a67ab57e67ae46d455253e91c7b925c6aa15245c07c86d9322b38074",
+      "outputSha256": "390a0d40a7717c4687f59bde4bd7e7e0d0e5cd688d6070460f03009d2a11b22a",
       "edits": [
         {
           "start": 53,
@@ -661020,6 +662296,13 @@
           "renamed": "LeaguesHelpScreen"
         },
         {
+          "start": 48368,
+          "end": 48369,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 48480,
           "end": 48482,
           "symbol": "C:ma",
@@ -662310,7 +663593,7 @@
       "original": "mf.java",
       "renamed": "SquadGridWidget.java",
       "inputSha256": "3e6c7471ee75dfd91fe741ab3ae4ac73acebe34cddb939de76d94c19d892a8af",
-      "outputSha256": "0e95ea07d360f9d5a2ad0f241259bccbec17478f3e694807add42f071120daee",
+      "outputSha256": "de0267ab9afc737c08c67d80ec714ebcf09dd8da94bd7b3c9e055df645dfca7d",
       "edits": [
         {
           "start": 50,
@@ -662698,6 +663981,13 @@
           "renamed": "AuctionTableWidget"
         },
         {
+          "start": 7596,
+          "end": 7597,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 7609,
           "end": 7611,
           "symbol": "C:jh",
@@ -662997,6 +664287,13 @@
           "symbol": "C:kq",
           "original": "kq",
           "renamed": "SquadSlotWidget"
+        },
+        {
+          "start": 15571,
+          "end": 15572,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 15588,
@@ -664565,6 +665862,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "AuctionTableWidget"
+        },
+        {
+          "start": 27504,
+          "end": 27505,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 27517,
@@ -666334,7 +667638,7 @@
       "original": "ml.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "58a50040d505d76e3de5daa783402d7710eea499e43a2527291f8c6212b2b50e",
-      "outputSha256": "de46a5bfb34feca8fb3485998c8a861e6131f54c1807f913f84158e1e8a32832",
+      "outputSha256": "a566aa1c20a9456221dd941413740b9d4e35d0a10343290b2aecd92222e9cd98",
       "edits": [
         {
           "start": 50,
@@ -666645,6 +667949,13 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 5514,
+          "end": 5515,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 5522,
           "end": 5523,
           "symbol": "C:m",
@@ -666701,6 +668012,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 6133,
+          "end": 6134,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6225,
           "end": 6227,
           "symbol": "C:bs",
@@ -666715,11 +668033,25 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 6253,
+          "end": 6254,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6323,
           "end": 6325,
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "AuctionItem"
+        },
+        {
+          "start": 6334,
+          "end": 6335,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6466,
@@ -666729,11 +668061,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 6493,
+          "end": 6494,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6586,
           "end": 6588,
           "symbol": "C:va",
           "original": "va",
           "renamed": "PlayingView"
+        },
+        {
+          "start": 6597,
+          "end": 6598,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6628,
@@ -666743,6 +668089,13 @@
           "renamed": "LoginRequiredDialog"
         },
         {
+          "start": 6639,
+          "end": 6640,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6671,
           "end": 6673,
           "symbol": "C:qv",
@@ -666750,11 +668103,25 @@
           "renamed": "TextWidgetPainter"
         },
         {
+          "start": 6682,
+          "end": 6683,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6715,
           "end": 6717,
           "symbol": "C:df",
           "original": "df",
           "renamed": "AuctionsHelpScreen"
+        },
+        {
+          "start": 6726,
+          "end": 6727,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6852,
@@ -666771,11 +668138,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 6949,
+          "end": 6950,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 7004,
           "end": 7006,
           "symbol": "C:jn",
           "original": "jn",
           "renamed": "RegistrationRequestDialog"
+        },
+        {
+          "start": 7016,
+          "end": 7017,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7079,
@@ -666799,11 +668180,25 @@
           "renamed": "TeamSelectionAgent"
         },
         {
+          "start": 7247,
+          "end": 7248,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 7365,
           "end": 7367,
           "symbol": "C:ps",
           "original": "ps",
           "renamed": "LoginCredentials"
+        },
+        {
+          "start": 7376,
+          "end": 7377,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7545,
@@ -669278,7 +670673,7 @@
       "original": "n.java",
       "renamed": "ArchiveManager.java",
       "inputSha256": "2de6489e2dc5b647757108d618c9b2975c6060612a2f81475219418a15f95722",
-      "outputSha256": "826f947341519c18c5ed418670a7a73f2c479f13ed671715b75a551188002130",
+      "outputSha256": "fbfeaa0c1adca620a434198b51bc0bd59d81ce9c155ae4d912e1d74de3c6188f",
       "edits": [
         {
           "start": 50,
@@ -669498,6 +670893,13 @@
           "renamed": "TriangleMesh"
         },
         {
+          "start": 6251,
+          "end": 6252,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6330,
           "end": 6332,
           "symbol": "C:kk",
@@ -669519,6 +670921,13 @@
           "renamed": "CheckboxLabelWidget"
         },
         {
+          "start": 6443,
+          "end": 6444,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6457,
           "end": 6459,
           "symbol": "C:kk",
@@ -669538,6 +670947,13 @@
           "symbol": "C:ao",
           "original": "ao",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 6547,
+          "end": 6548,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6570,
@@ -673259,7 +674675,7 @@
       "original": "ne.java",
       "renamed": "GameplayHelpScreen.java",
       "inputSha256": "ebe21bfb602be8a898d012a1bd68cfeed7a01a3ca7c6f45f8d7a9e9a4c424e64",
-      "outputSha256": "2c0eac109fc5f6a2ab331488e86343b8acaf2104af16721ab159d455f6c9a1d3",
+      "outputSha256": "d303151139f071bee3334c43e1122af54bae6e98675ecef07602abcc2af5bacd",
       "edits": [
         {
           "start": 71,
@@ -673381,6 +674797,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 1109,
+          "end": 1110,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1117,
           "end": 1119,
           "symbol": "C:fn",
@@ -673479,6 +674902,13 @@
           "renamed": "SelectableTrinketIcon"
         },
         {
+          "start": 2214,
+          "end": 2215,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2390,
           "end": 2391,
           "symbol": "M:hd.a(BLhd;)V",
@@ -673491,6 +674921,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 2513,
+          "end": 2514,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2599,
@@ -673864,11 +675301,25 @@
           "renamed": "pageIndex"
         },
         {
+          "start": 5924,
+          "end": 5925,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 6084,
           "end": 6091,
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 6122,
+          "end": 6123,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 6159,
@@ -674753,6 +676204,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 14295,
+          "end": 14296,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 14347,
           "end": 14349,
           "symbol": "C:tk",
@@ -675208,6 +676666,13 @@
           "renamed": "slideOffsetX"
         },
         {
+          "start": 22084,
+          "end": 22085,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 22169,
           "end": 22171,
           "symbol": "C:on",
@@ -675248,6 +676713,13 @@
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 22401,
+          "end": 22402,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 22423,
@@ -676428,7 +677900,7 @@
       "original": "nj.java",
       "renamed": "nj.java",
       "inputSha256": "dc346f6ed99fba9cdb062d42473da092c83313b48bbe63de18325cd4791fc032",
-      "outputSha256": "2dd3b0f2b4d5af4c15215f7b57350ebcb49471756a0ecf76a18ab0cdfbd30e41",
+      "outputSha256": "f8b533253af0d28aefb07c4caa94b02ac170b2e639796845495c3b278e720c75",
       "edits": [
         {
           "start": 120,
@@ -676438,11 +677910,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 300,
+          "end": 301,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 366,
           "end": 367,
           "symbol": "M:nj.a(I)J",
           "original": "a",
           "renamed": "monotonicMillis"
+        },
+        {
+          "start": 427,
+          "end": 428,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 1215,
@@ -680914,7 +682400,7 @@
       "original": "np.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "5d905b086d9b64e8b9ee7699bf1bd31e3e04d67c29a39bbb0f5158492fa1656b",
-      "outputSha256": "32a17c006aa8b1ec772701828a4ceeff172451663f753a626b6d01190f6f5717",
+      "outputSha256": "dedd68449f7e9d3893cda26e735e36b187d2551a65e90274d6db53aee32baaee",
       "edits": [
         {
           "start": 50,
@@ -681393,11 +682879,25 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 10346,
+          "end": 10347,
+          "symbol": "M:hd.a(IIIZ)V",
+          "original": "a",
+          "renamed": "layoutVerticalContent"
+        },
+        {
           "start": 10411,
           "end": 10412,
           "symbol": "M:np.a(ZIIIZ)V",
           "original": "a",
           "renamed": "advanceScroll"
+        },
+        {
+          "start": 10573,
+          "end": 10574,
+          "symbol": "M:hd.a(IIIZ)V",
+          "original": "a",
+          "renamed": "layoutVerticalContent"
         },
         {
           "start": 10647,
@@ -681407,11 +682907,25 @@
           "renamed": "advanceScroll"
         },
         {
+          "start": 10811,
+          "end": 10812,
+          "symbol": "M:hd.a(IIIZ)V",
+          "original": "a",
+          "renamed": "layoutVerticalContent"
+        },
+        {
           "start": 10885,
           "end": 10886,
           "symbol": "M:np.a(ZIIIZ)V",
           "original": "a",
           "renamed": "advanceScroll"
+        },
+        {
+          "start": 11022,
+          "end": 11023,
+          "symbol": "M:hd.a(IIIZ)V",
+          "original": "a",
+          "renamed": "layoutVerticalContent"
         },
         {
           "start": 11094,
@@ -682262,7 +683776,7 @@
       "original": "nt.java",
       "renamed": "KitStyleTile.java",
       "inputSha256": "67f7bbdbe68f0a69557fa93e0f9804978fa4f1964f3e12283e8cd54ea47d7456",
-      "outputSha256": "98bc4e43351336d4503abc3b004199a9fd7041b2bd7c541963e7d116694bce86",
+      "outputSha256": "09c47266640af8cef161c714e030c98f07229846e47d52ef9c7684eafdb79f13",
       "edits": [
         {
           "start": 50,
@@ -683593,6 +685107,13 @@
           "symbol": "M:hd.a(BLhd;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 15912,
+          "end": 15913,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 16004,
@@ -695315,7 +696836,7 @@
       "original": "ol.java",
       "renamed": "GameOverView.java",
       "inputSha256": "a9ce06c8445929dc798c0f12447343f087341ed92024590f1219fe3940b60612",
-      "outputSha256": "48cf57212ebb69666923aa720e8cf6843a38f924099cbd8371833e0987fb7337",
+      "outputSha256": "9fc5abc07b00fc1abd70689616e518d90fac4d5505aa649bc2788c0ce5bdb078",
       "edits": [
         {
           "start": 50,
@@ -696304,6 +697825,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 26629,
+          "end": 26630,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 26667,
           "end": 26674,
           "symbol": "F:up.field_n:I",
@@ -696808,11 +698336,25 @@
           "renamed": "SquadSlotWidget"
         },
         {
+          "start": 40811,
+          "end": 40812,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 40891,
           "end": 40892,
           "symbol": "M:eo.a(Ljava/lang/String;ILhu;IZ)Lhd;",
           "original": "a",
           "renamed": "createRenderedButton"
+        },
+        {
+          "start": 40997,
+          "end": 40998,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 41292,
@@ -698229,6 +699771,20 @@
           "renamed": "squad"
         },
         {
+          "start": 77844,
+          "end": 77845,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 78060,
+          "end": 78061,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 78106,
           "end": 78113,
           "symbol": "F:up.field_r:I",
@@ -698451,7 +700007,7 @@
       "original": "om.java",
       "renamed": "IconLabel.java",
       "inputSha256": "1a43fe7db7ba3eb7bd57413c0943a34593b43a615415248f66c4f7a3174d96c3",
-      "outputSha256": "2868024c9d16567f4fc11eb1924baecbbe996df69e0c389a6db186ee2f56f085",
+      "outputSha256": "aa59ce88d49d70c9e398cd9fa3c53ac014f3d049305e7da83ebabc747e8d76ff",
       "edits": [
         {
           "start": 50,
@@ -698482,6 +700038,48 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 403,
+          "end": 404,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 425,
+          "end": 426,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 534,
+          "end": 535,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 671,
+          "end": 672,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 693,
+          "end": 694,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 807,
+          "end": 808,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 890,
           "end": 892,
           "symbol": "M:om.<init>(JLom;Ljava/lang/String;)V",
@@ -698496,11 +700094,39 @@
           "renamed": "IconLabel"
         },
         {
+          "start": 1421,
+          "end": 1422,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 1462,
+          "end": 1463,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
           "start": 1513,
           "end": 1515,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 1552,
+          "end": 1553,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 1593,
+          "end": 1594,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
         },
         {
           "start": 1620,
@@ -698648,6 +700274,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4314,
+          "end": 4315,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 4460,
@@ -704024,7 +705657,7 @@
       "original": "pa.java",
       "renamed": "pa.java",
       "inputSha256": "b1e397b381e9aeb897556f266362bc679885ef4c1baab3a7916dd686243e24f3",
-      "outputSha256": "05106a66b7b708c79779af5ed88db91b8cdc079ea40daa65c7024739b902b661",
+      "outputSha256": "138fec07d8675f5bda3da4c0115093a827970eb9946f0827bd1b139d69fd8cfb",
       "edits": [
         {
           "start": 130,
@@ -704139,11 +705772,25 @@
           "renamed": "TextPromptDialog"
         },
         {
+          "start": 2165,
+          "end": 2166,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2215,
           "end": 2217,
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2256,
+          "end": 2257,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2317,
@@ -704153,11 +705800,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 2411,
+          "end": 2412,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2461,
           "end": 2463,
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2500,
+          "end": 2501,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2561,
@@ -709093,7 +710754,7 @@
       "original": "pq.java",
       "renamed": "SquadPickerDialog.java",
       "inputSha256": "00ed813eaa624713022d0911a8adc3bebb71e15641ddf591559dd75fa8093a1c",
-      "outputSha256": "980b8c4a865b8e5d4cda2a905fc974805c2a73c2e957b12466edb4a9c1263a6b",
+      "outputSha256": "51993e977031081f27f8b6e9f197d485f3764e16b9d8c2ee7d8868cdf7a4fd39",
       "edits": [
         {
           "start": 50,
@@ -709346,6 +711007,13 @@
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "SquadPickerDialog"
+        },
+        {
+          "start": 3230,
+          "end": 3231,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 3339,
@@ -709626,6 +711294,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "LeaguesHelpScreen"
+        },
+        {
+          "start": 5718,
+          "end": 5719,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 5821,
@@ -710046,6 +711721,13 @@
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "SquadPickerDialog"
+        },
+        {
+          "start": 9630,
+          "end": 9631,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 9679,
@@ -718990,7 +720672,7 @@
       "original": "pw.java",
       "renamed": "AuctionSettingsDialog.java",
       "inputSha256": "8c17d99bc01f287e875a7c293bbe5cef28256fdb8bead1ca2c6d18f3b760028c",
-      "outputSha256": "906ff7f04968549e38bd0b9eec75b63577ff5e5814445811afae7e40a6d20872",
+      "outputSha256": "bcc5b2d3093f349812a1c6c871089ca26acf48610df6e2a63b0cca33413f0fcf",
       "edits": [
         {
           "start": 50,
@@ -719609,6 +721291,13 @@
           "renamed": "IsSixCommand"
         },
         {
+          "start": 8147,
+          "end": 8148,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 8276,
           "end": 8278,
           "symbol": "C:on",
@@ -719635,6 +721324,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "IsSixCommand"
+        },
+        {
+          "start": 8540,
+          "end": 8541,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 8639,
@@ -719763,11 +721459,25 @@
           "renamed": "IsSixCommand"
         },
         {
+          "start": 9723,
+          "end": 9724,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 9880,
           "end": 9882,
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10183,
+          "end": 10184,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 10578,
@@ -719908,6 +721618,20 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 11418,
+          "end": 11419,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
+        },
+        {
+          "start": 11454,
+          "end": 11455,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 11608,
@@ -720447,6 +722171,27 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 16322,
+          "end": 16323,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 16365,
+          "end": 16366,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 16398,
+          "end": 16399,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 16420,
@@ -723541,7 +725286,7 @@
       "original": "qh.java",
       "renamed": "SectorCacheStore.java",
       "inputSha256": "7720d785536ef4b84ade4a0824cec84adfa208142ab533c56406a1a4a9737146",
-      "outputSha256": "e54d856e91015c69bfce99e7805877a7979942bdbad339e8ea7c203d5522ce80",
+      "outputSha256": "936acb84cc27141ce2fcc54e09a9e33eaddb014191f6f05333a8c23bcc3f5d3c",
       "edits": [
         {
           "start": 69,
@@ -724365,6 +726110,13 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "RankingRowNode"
+        },
+        {
+          "start": 19078,
+          "end": 19079,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 19135,
@@ -725793,7 +727545,7 @@
       "original": "qn.java",
       "renamed": "qn.java",
       "inputSha256": "8b459e940267b19559a3d24d9c1e0b2904ac50d766cadf14af2f2a53f8e0a4f1",
-      "outputSha256": "43953a008aae8d71ab25e6697eba7c9cfaeb5e932ea05f9c9d2bf5795310af16",
+      "outputSha256": "0bbb3bc13611447c90c654019315f5aa4a33ef43297fdfc3744e4a9363b4a426",
       "edits": [
         {
           "start": 143,
@@ -725803,11 +727555,32 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 711,
+          "end": 712,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 902,
           "end": 904,
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "DebugConsole"
+        },
+        {
+          "start": 913,
+          "end": 914,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 1000,
+          "end": 1001,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 1018,
@@ -725829,6 +727602,13 @@
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "WeightedCacheEntry"
+        },
+        {
+          "start": 1100,
+          "end": 1101,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 1108,
@@ -725922,11 +727702,25 @@
           "renamed": "MatchPhaseView"
         },
         {
+          "start": 2002,
+          "end": 2003,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2088,
           "end": 2090,
           "symbol": "C:mr",
           "original": "mr",
           "renamed": "ValidatedTextWidget"
+        },
+        {
+          "start": 2106,
+          "end": 2107,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2169,
@@ -725936,11 +727730,32 @@
           "renamed": "BlackFadeScreen"
         },
         {
+          "start": 2187,
+          "end": 2188,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2254,
           "end": 2256,
           "symbol": "C:av",
           "original": "av",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 2272,
+          "end": 2273,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 2373,
+          "end": 2374,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2715,
@@ -727254,7 +729069,7 @@
       "original": "qs.java",
       "renamed": "PlayerShopScreen.java",
       "inputSha256": "dddb720fa0352bc1c9a7777c224622ca9c09341d063b7af287102bf782ebc5db",
-      "outputSha256": "63349d5185a4eaf4fc6631280a477d28c225cce8425d6e23e83fda6b151b4bf9",
+      "outputSha256": "b2a288cc9e9caba8bbda43db11035d74bcf2bb828851239098d7e6df7b4df569",
       "edits": [
         {
           "start": 50,
@@ -727495,6 +729310,20 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 2182,
+          "end": 2183,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 2348,
+          "end": 2349,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2470,
           "end": 2471,
           "symbol": "M:qs.c(Z)V",
@@ -727535,6 +729364,13 @@
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 3192,
+          "end": 3193,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 3227,
@@ -727917,6 +729753,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 8281,
+          "end": 8282,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 8329,
           "end": 8330,
           "symbol": "M:hd.a(BLhd;)V",
@@ -728006,6 +729849,13 @@
           "symbol": "M:mf.j(B)Lkq;",
           "original": "j",
           "renamed": "getSelectedSlot"
+        },
+        {
+          "start": 9323,
+          "end": 9324,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         }
       ]
     },
@@ -731876,7 +733726,7 @@
       "original": "ra.java",
       "renamed": "GameModesHelpScreen.java",
       "inputSha256": "ce2ea81484c724b08a4cfda6872b6faa17c621318a0260aabaaa4a4ba82c62d4",
-      "outputSha256": "39228a58eca798e13a255890ca66b498f12206794051a2379c3e8da7660b497b",
+      "outputSha256": "1b5d1ca2cd35696e0f8173a2fc8059ed1d43224bdc7ddb893f9d3da01fd3691b",
       "edits": [
         {
           "start": 71,
@@ -732234,6 +734084,13 @@
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 8278,
+          "end": 8279,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 8370,
@@ -732656,6 +734513,13 @@
           "renamed": "pageIndex"
         },
         {
+          "start": 18195,
+          "end": 18196,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 18334,
           "end": 18341,
           "symbol": "F:dj.field_C:I",
@@ -732892,7 +734756,7 @@
       "original": "rb.java",
       "renamed": "TextPromptDialog.java",
       "inputSha256": "d62ec832370afef7382e5351545d832af3082a2cdef7d7f66d75c054cbf4ad57",
-      "outputSha256": "ffea197653f4ac2dbf2b5c67ac57700a23bb5fcfc1654c2d0ee9674d4e7af1ec",
+      "outputSha256": "e4382caddfe77f5d195891c18a60b63faed9165ca35fdb6b9b7c2ad98a203b39",
       "edits": [
         {
           "start": 50,
@@ -733096,6 +734960,20 @@
           "symbol": "M:hd.a(BLhd;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 2676,
+          "end": 2677,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 2704,
+          "end": 2705,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
         },
         {
           "start": 2973,
@@ -733348,6 +735226,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 5353,
+          "end": 5354,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 5911,
@@ -733849,6 +735734,13 @@
           "renamed": "RenderedBall"
         },
         {
+          "start": 14871,
+          "end": 14872,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
           "start": 15260,
           "end": 15262,
           "symbol": "C:ce",
@@ -733870,11 +735762,88 @@
           "renamed": "ScrollContainer"
         },
         {
+          "start": 17484,
+          "end": 17485,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 17810,
+          "end": 17811,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 17872,
+          "end": 17873,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 17971,
+          "end": 17972,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 18084,
+          "end": 18085,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 18204,
+          "end": 18205,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 18576,
+          "end": 18577,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 18649,
+          "end": 18650,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 18744,
+          "end": 18745,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 18877,
+          "end": 18878,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 19163,
           "end": 19165,
           "symbol": "C:ou",
           "original": "ou",
           "renamed": "StripedProgressBar"
+        },
+        {
+          "start": 19270,
+          "end": 19271,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 19369,
@@ -733898,11 +735867,32 @@
           "renamed": "addChild"
         },
         {
+          "start": 19702,
+          "end": 19703,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 19868,
+          "end": 19869,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 20155,
           "end": 20157,
           "symbol": "C:ou",
           "original": "ou",
           "renamed": "StripedProgressBar"
+        },
+        {
+          "start": 20285,
+          "end": 20286,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 22353,
@@ -733938,6 +735928,13 @@
           "symbol": "M:hu.c(Ljava/lang/String;II)I",
           "original": "c",
           "renamed": "paragraphHeight"
+        },
+        {
+          "start": 23216,
+          "end": 23217,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 23315,
@@ -735201,7 +737198,7 @@
       "original": "rf.java",
       "renamed": "rf.java",
       "inputSha256": "b2e94c54f6e2947cd66aa634655414e44964fdc23ce62c902e745a410a9a7006",
-      "outputSha256": "2aefc076d4eb4ecd39974ced6dbfcad234977b0745293ffb1493545d4cff6775",
+      "outputSha256": "2885138b3cac6c6a63cf806812eaa3736f3c4126aa180817ab34918d3a7e3848",
       "edits": [
         {
           "start": 114,
@@ -736016,6 +738013,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 7173,
+          "end": 7174,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 7181,
           "end": 7183,
           "symbol": "C:kk",
@@ -736030,6 +738034,13 @@
           "renamed": "AlphaContainer"
         },
         {
+          "start": 7286,
+          "end": 7287,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 7299,
           "end": 7301,
           "symbol": "C:oe",
@@ -736042,6 +738053,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "TriangleMesh"
+        },
+        {
+          "start": 7386,
+          "end": 7387,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 7399,
@@ -736513,7 +738531,7 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "c5bdcc1337965aea797997dc173116a84e83b2d68e8af2384221dcc1adeedf5f",
-      "outputSha256": "1ee614dddf24fd9d5afd1f6075c2c8b6878a10d3d1515eed7fee52689c342de4",
+      "outputSha256": "b1b0386a2b6d4caa09006f136ca6153ddf0269a2e257c5bb684be89ebcadd6af",
       "edits": [
         {
           "start": 55,
@@ -737706,11 +739724,25 @@
           "renamed": "AuctionSettingsDialog"
         },
         {
+          "start": 11508,
+          "end": 11509,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
+        },
+        {
           "start": 11563,
           "end": 11565,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 11604,
+          "end": 11605,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
         },
         {
           "start": 11649,
@@ -739225,6 +741257,13 @@
           "renamed": "AuctionItem"
         },
         {
+          "start": 25253,
+          "end": 25254,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 25281,
           "end": 25283,
           "symbol": "C:fp",
@@ -739237,6 +741276,13 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "GoalStateAgent"
+        },
+        {
+          "start": 25330,
+          "end": 25331,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 25346,
@@ -739491,6 +741537,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 30227,
+          "end": 30228,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 30283,
           "end": 30285,
           "symbol": "C:fp",
@@ -739512,6 +741565,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 30427,
+          "end": 30428,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 30574,
           "end": 30576,
           "symbol": "C:td",
@@ -739524,6 +741584,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 30626,
+          "end": 30627,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 30723,
@@ -742865,7 +744932,7 @@
       "original": "rt.java",
       "renamed": "StatChoiceDialog.java",
       "inputSha256": "22ad86a792bd400bd809f50f091c9e93667fda4b35d7af18ab5e9278017c0c6b",
-      "outputSha256": "780387f45e6ae6e1010cb912e11d41fcb7ad8b26f7cc4b11ba28e76552d06860",
+      "outputSha256": "93dcac15e1d11b0e4fe68e48f214a056a8b9a5faf381ccc3687231e3ce9091a4",
       "edits": [
         {
           "start": 50,
@@ -742929,6 +744996,13 @@
           "symbol": "M:gm.g(B)V",
           "original": "g",
           "renamed": "resetPose"
+        },
+        {
+          "start": 645,
+          "end": 646,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 1371,
@@ -743020,6 +745094,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 2696,
+          "end": 2697,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2915,
@@ -743183,6 +745264,13 @@
           "symbol": "C:rt",
           "original": "rt",
           "renamed": "StatChoiceDialog"
+        },
+        {
+          "start": 11915,
+          "end": 11916,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 11935,
@@ -746228,7 +748316,7 @@
       "original": "sc.java",
       "renamed": "FindingOpponentScreen.java",
       "inputSha256": "afa2c034a5ef15f83cc16fcaf1a52b6f948c6fd3b9daaf1ca52df7db86501c98",
-      "outputSha256": "757f92ff11fa6d1d52e8d8af388ddbae3944f00bc304047f6312082c1ddd9921",
+      "outputSha256": "d9b63fc93d906a96576bd127c9b229bb4e906646e2435ebca9168b16d3e81746",
       "edits": [
         {
           "start": 50,
@@ -746292,6 +748380,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 711,
+          "end": 712,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 748,
@@ -746399,6 +748494,13 @@
           "renamed": "AuctionLogEntry"
         },
         {
+          "start": 3209,
+          "end": 3210,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 3294,
           "end": 3296,
           "symbol": "C:vc",
@@ -746432,6 +748534,13 @@
           "symbol": "M:qt.a(BZ)V",
           "original": "a",
           "renamed": "updateScreen"
+        },
+        {
+          "start": 3672,
+          "end": 3673,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 3877,
@@ -746496,7 +748605,7 @@
       "original": "se.java",
       "renamed": "ModalStack.java",
       "inputSha256": "a2fc18f2c023a8c37ea80aa719899bd428c67a6031682a372276656f3d3067b7",
-      "outputSha256": "db87df5eb0bb3f01195234e21b6aaf7d474b9041a0e5e00f7614d162e5ed1b44",
+      "outputSha256": "a53715f47d835b84947ad42f21b845dc71182b1658f392e8683a9c97c6fcb211",
       "edits": [
         {
           "start": 50,
@@ -746828,6 +748937,13 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 6651,
+          "end": 6652,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 6663,
           "end": 6665,
           "symbol": "C:ll",
@@ -746849,11 +748965,32 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 7653,
+          "end": 7654,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 7818,
           "end": 7820,
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 8004,
+          "end": 8005,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 8402,
+          "end": 8403,
+          "symbol": "M:hd.a(ZILhd;Lhd;)V",
+          "original": "a",
+          "renamed": "positionAfter"
         },
         {
           "start": 8420,
@@ -747540,7 +749677,7 @@
       "original": "sf.java",
       "renamed": "MainMenuScreen.java",
       "inputSha256": "964458721e28aabc2225281213b9e885102f1bad980575a677fa36bb6783a2fd",
-      "outputSha256": "471f47eb095c0606dc2a8bea6bed8ab01c9e390e903849a841769cae93ce9cce",
+      "outputSha256": "eede7e3014797ac46b2ced11c432b15e63ecfe3194b442a5cf6e46b951200452",
       "edits": [
         {
           "start": 50,
@@ -747655,6 +749792,13 @@
           "renamed": "layoutQuickPlayWidget"
         },
         {
+          "start": 971,
+          "end": 972,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1025,
           "end": 1027,
           "symbol": "C:vc",
@@ -747690,6 +749834,13 @@
           "renamed": "AppScreen"
         },
         {
+          "start": 1187,
+          "end": 1188,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1241,
           "end": 1243,
           "symbol": "C:vc",
@@ -747723,6 +749874,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1610,
+          "end": 1611,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 1824,
@@ -747772,6 +749930,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2796,
+          "end": 2797,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 3006,
@@ -748094,6 +750259,13 @@
           "symbol": "M:qt.a(BZ)V",
           "original": "a",
           "renamed": "updateScreen"
+        },
+        {
+          "start": 8270,
+          "end": 8271,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 8297,
@@ -749877,7 +752049,7 @@
       "original": "sl.java",
       "renamed": "HoverTooltip.java",
       "inputSha256": "d45b00eb85afc90c89f73d63114f16bc6552daf690073b9e073560096cfc27b1",
-      "outputSha256": "814fc95aae2dafc5cde84b22ab5f42ffe62ffe66e325c8117512e72f56c28118",
+      "outputSha256": "14dbc278c9ca260c0042cf60367e3ea80a36c3d5c4228dc9fa37195fa9fde22d",
       "edits": [
         {
           "start": 50,
@@ -749964,11 +752136,39 @@
           "renamed": "addChild"
         },
         {
+          "start": 1396,
+          "end": 1397,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 1435,
+          "end": 1436,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 1496,
+          "end": 1497,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 1644,
           "end": 1646,
           "symbol": "C:ou",
           "original": "ou",
           "renamed": "StripedProgressBar"
+        },
+        {
+          "start": 1747,
+          "end": 1748,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 3030,
@@ -749983,6 +752183,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3454,
+          "end": 3455,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 3661,
@@ -755180,7 +757387,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "41faef796785c6238ba5b176df64286185700294688ca39761ae01edabe50fb7",
-      "outputSha256": "9f2b94a750d59493553b69f2bf8033881edf77e2da298f9ce7539e903d0bb4d0",
+      "outputSha256": "b1ed59d74a1d231fcf1f7bdb731153b6197c13b451ed491ef5e4017f2d94784a",
       "edits": [
         {
           "start": 80,
@@ -755876,6 +758083,13 @@
           "renamed": "BlankScreen"
         },
         {
+          "start": 16849,
+          "end": 16850,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
+        },
+        {
           "start": 16851,
           "end": 16853,
           "symbol": "C:dw",
@@ -755909,6 +758123,13 @@
           "symbol": "C:nq",
           "original": "nq",
           "renamed": "TournamentChampionDialog"
+        },
+        {
+          "start": 17174,
+          "end": 17175,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
         },
         {
           "start": 17176,
@@ -760647,7 +762868,7 @@
       "original": "ti.java",
       "renamed": "NamedValueContainer.java",
       "inputSha256": "21d40a31aa5ad708e99b7e8fb5194c2cda6972030d9fa2128906013d5f41e85b",
-      "outputSha256": "4c8d5df898b2c6a66e89dabf123d569a428c6bb6d1e7f37cfc67bbd0f0dfb04f",
+      "outputSha256": "566de1ba1891defdd56f8dd4fa0d81685fa496654cb89edc364139ef38b0fb68",
       "edits": [
         {
           "start": 50,
@@ -760965,6 +763186,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 4227,
+          "end": 4228,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 4366,
           "end": 4368,
           "symbol": "C:qv",
@@ -760977,6 +763205,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 4419,
+          "end": 4420,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 4587,
@@ -761021,6 +763256,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 4858,
+          "end": 4859,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 4920,
           "end": 4922,
           "symbol": "C:fp",
@@ -761040,6 +763282,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 5070,
+          "end": 5071,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 5131,
@@ -761098,6 +763347,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 5611,
+          "end": 5612,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 5671,
           "end": 5673,
           "symbol": "C:fp",
@@ -761117,6 +763373,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 5815,
+          "end": 5816,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 5931,
@@ -761147,6 +763410,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 6136,
+          "end": 6137,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 6200,
           "end": 6202,
           "symbol": "C:fp",
@@ -761166,6 +763436,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 6356,
+          "end": 6357,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 6430,
@@ -761203,6 +763480,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 6659,
+          "end": 6660,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 6723,
           "end": 6725,
           "symbol": "C:fp",
@@ -761222,6 +763506,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 6879,
+          "end": 6880,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 6970,
@@ -761245,6 +763536,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 7178,
+          "end": 7179,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 7315,
           "end": 7317,
           "symbol": "C:qv",
@@ -761257,6 +763555,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 7367,
+          "end": 7368,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 7492,
@@ -761287,6 +763592,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 7685,
+          "end": 7686,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 7748,
           "end": 7750,
           "symbol": "C:fp",
@@ -761306,6 +763618,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 7895,
+          "end": 7896,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 7963,
@@ -761343,6 +763662,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 8180,
+          "end": 8181,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 8243,
           "end": 8245,
           "symbol": "C:fp",
@@ -761362,6 +763688,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 8390,
+          "end": 8391,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 8516,
@@ -761392,6 +763725,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 8717,
+          "end": 8718,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 8782,
           "end": 8784,
           "symbol": "C:fp",
@@ -761411,6 +763751,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 8935,
+          "end": 8936,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 9007,
@@ -761448,6 +763795,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 9232,
+          "end": 9233,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 9297,
           "end": 9299,
           "symbol": "C:fp",
@@ -761467,6 +763821,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 9450,
+          "end": 9451,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 9593,
@@ -761504,6 +763865,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 9898,
+          "end": 9899,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 9959,
           "end": 9961,
           "symbol": "C:fp",
@@ -761523,6 +763891,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 10106,
+          "end": 10107,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 10174,
@@ -761560,6 +763935,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 10391,
+          "end": 10392,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 10454,
           "end": 10456,
           "symbol": "C:fp",
@@ -761579,6 +763961,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 10601,
+          "end": 10602,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 10727,
@@ -761609,6 +763998,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 10924,
+          "end": 10925,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 10986,
           "end": 10988,
           "symbol": "C:fp",
@@ -761628,6 +764024,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 11136,
+          "end": 11137,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 11206,
@@ -761665,6 +764068,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 11427,
+          "end": 11428,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 11489,
           "end": 11491,
           "symbol": "C:fp",
@@ -761684,6 +764094,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 11639,
+          "end": 11640,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 11730,
@@ -763505,7 +765922,7 @@
       "original": "tk.java",
       "renamed": "ScrollContainer.java",
       "inputSha256": "7d6db23466c722f0ba65cc30ccbd2eb1ed8cfaf46ecdb9eb64b2a5fd17251dde",
-      "outputSha256": "df6e52f31f7c91af70aab658edb496c7fecc0fbb88c63578dbf6cc167b3c5c98",
+      "outputSha256": "2603b763c6b6991f49bafa92ada135af10e4e31d1c357a3071039b3c8cb8cf42",
       "edits": [
         {
           "start": 50,
@@ -763655,11 +766072,25 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 2107,
+          "end": 2108,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2199,
           "end": 2200,
           "symbol": "M:ji.b(IIII)V",
           "original": "b",
           "renamed": "layoutThumb"
+        },
+        {
+          "start": 2310,
+          "end": 2311,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 2401,
@@ -763683,6 +766114,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 2719,
+          "end": 2720,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 2805,
           "end": 2806,
           "symbol": "M:ji.b(IIII)V",
@@ -763702,6 +766140,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 3079,
+          "end": 3080,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 3164,
@@ -771681,7 +774126,7 @@
       "original": "ug.java",
       "renamed": "ug.java",
       "inputSha256": "c1d4dfead514837b4880f670337e2ef66f33733d5a2bc77b64c5718da89496aa",
-      "outputSha256": "45f0fb509b33d1a7ab4be83974bc82da951545c9152dcc18ad2eb3ce8d679e80",
+      "outputSha256": "78dc12f2444484c4b6c70ca8f2431a1c8ce83d42c9c5df0f9c3aba076eb98070",
       "edits": [
         {
           "start": 66,
@@ -771922,11 +774367,25 @@
           "renamed": "TournamentChampionDialog"
         },
         {
+          "start": 3346,
+          "end": 3347,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 3580,
           "end": 3582,
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 3620,
+          "end": 3621,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 3632,
@@ -771950,11 +774409,25 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 4310,
+          "end": 4311,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 4495,
           "end": 4497,
           "symbol": "C:nq",
           "original": "nq",
           "renamed": "TournamentChampionDialog"
+        },
+        {
+          "start": 4515,
+          "end": 4516,
+          "symbol": "M:hd.a(ZILhd;Lhd;)V",
+          "original": "a",
+          "renamed": "positionAfter"
         },
         {
           "start": 4533,
@@ -775038,7 +777511,7 @@
       "original": "up.java",
       "renamed": "PlayerStats.java",
       "inputSha256": "cea81933de2b874419c0db78062be353e6e061df7f4ad76cf9c59dff737d7e8e",
-      "outputSha256": "827745def3903fe81d4b20145acfb469c956afd3825521421a1c70e0eab2069d",
+      "outputSha256": "0011ca90c0254a4aa176e1551adf86f05b369282c050601fbbd4cc60bd3d9124",
       "edits": [
         {
           "start": 50,
@@ -776138,6 +778611,13 @@
           "symbol": "C:up",
           "original": "up",
           "renamed": "PlayerStats"
+        },
+        {
+          "start": 12596,
+          "end": 12597,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 12609,
@@ -779454,7 +781934,7 @@
       "original": "uv.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "6e122f9eb2e8f11d136af29fe441272f2d3b90ac869ece0034411e90a887ab73",
-      "outputSha256": "383ffca678807d2a440ae480bf62d81993839453bff9c440db363543ed70b4c5",
+      "outputSha256": "e4c721f01b52ccc7342db3e4991f0c82ff2b07c5e3243d6f5fd21824351cff13",
       "edits": [
         {
           "start": 69,
@@ -779567,6 +782047,13 @@
           "symbol": "M:uv.a(ZZ)V",
           "original": "a",
           "renamed": "hideMenu"
+        },
+        {
+          "start": 2247,
+          "end": 2248,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 2299,
@@ -785792,7 +788279,7 @@
       "original": "vg.java",
       "renamed": "TextFieldNode.java",
       "inputSha256": "34c5a7c60c796baa70e51443eb9a639c7e9b5432c3712333648d503f2c76689d",
-      "outputSha256": "62fab5c35c7f17dbf0487e032c8da5706659a38c774b54795928a8a78eccec57",
+      "outputSha256": "dc7d3cd6b9b10bec7e6ae323727d57ffba99d438e0d8f581aa66bcc9c5f11857",
       "edits": [
         {
           "start": 50,
@@ -786719,6 +789206,20 @@
           "renamed": "FootballerAgent"
         },
         {
+          "start": 22511,
+          "end": 22512,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 22623,
+          "end": 22624,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 22988,
           "end": 22989,
           "symbol": "M:vg.l(I)V",
@@ -786738,6 +789239,27 @@
           "symbol": "C:nb",
           "original": "nb",
           "renamed": "GameSoundEffect"
+        },
+        {
+          "start": 23724,
+          "end": 23725,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 23787,
+          "end": 23788,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 23840,
+          "end": 23841,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 24053,
@@ -791751,7 +794273,7 @@
       "original": "vu.java",
       "renamed": "ContextMenuItem.java",
       "inputSha256": "c41fc5e02cc2807128b3b686a1a4a2673518e0b19332770f71f6a5074b02fb0e",
-      "outputSha256": "29a57745f75fbb60a94063154a0d52cc44ff45189a1ff235caa7e60a0ddf266f",
+      "outputSha256": "1e87a19748d7033c958c7a3fbe3e30d485532f547346cf346937611d0a2cf90d",
       "edits": [
         {
           "start": 50,
@@ -791794,6 +794316,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 466,
+          "end": 467,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 927,
@@ -791922,6 +794451,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 4461,
+          "end": 4462,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
           "start": 4524,
           "end": 4526,
           "symbol": "C:vu",
@@ -791934,6 +794470,55 @@
           "symbol": "M:hd.a(II)I",
           "original": "a",
           "renamed": "computeContentWidth"
+        },
+        {
+          "start": 5209,
+          "end": 5210,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5547,
+          "end": 5548,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 5721,
+          "end": 5722,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 6256,
+          "end": 6257,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 6381,
+          "end": 6382,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 6636,
+          "end": 6637,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 6771,
+          "end": 6772,
+          "symbol": "M:hd.g(B)I",
+          "original": "g",
+          "renamed": "getPreferredWidth"
         },
         {
           "start": 6956,
@@ -791971,6 +794556,13 @@
           "renamed": "hideMenu"
         },
         {
+          "start": 7215,
+          "end": 7216,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 7253,
           "end": 7255,
           "symbol": "C:fb",
@@ -791997,6 +794589,13 @@
           "symbol": "M:uv.a(ZZ)V",
           "original": "a",
           "renamed": "hideMenu"
+        },
+        {
+          "start": 7493,
+          "end": 7494,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 7527,
@@ -792061,7 +794660,7 @@
       "original": "w.java",
       "renamed": "DialogOverlay.java",
       "inputSha256": "45e47826b35e787364042afd4415752ce03234373fe797b173ea428490e9439c",
-      "outputSha256": "73fa2a60107a7d7340f30e88cb4e6034de071f1fc92cfca9e08a5cc42893cda4",
+      "outputSha256": "c287e48473e61d4f7dd4e69cc110795a9546e79f5fa220896376b81bbd6c74b2",
       "edits": [
         {
           "start": 50,
@@ -792925,6 +795524,20 @@
           "renamed": "TextPromptDialog"
         },
         {
+          "start": 13915,
+          "end": 13916,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 14004,
+          "end": 14005,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 14094,
           "end": 14096,
           "symbol": "C:hu",
@@ -792939,11 +795552,53 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 14263,
+          "end": 14264,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 14425,
           "end": 14427,
           "symbol": "C:sn",
           "original": "sn",
           "renamed": "UrlRequest"
+        },
+        {
+          "start": 14646,
+          "end": 14647,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 14916,
+          "end": 14917,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 14997,
+          "end": 14998,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 15172,
+          "end": 15173,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 15342,
+          "end": 15343,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 15500,
@@ -792960,6 +795615,13 @@
           "renamed": "TextFieldValidator"
         },
         {
+          "start": 15659,
+          "end": 15660,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 15840,
           "end": 15842,
           "symbol": "C:wr",
@@ -792972,6 +795634,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 16526,
+          "end": 16527,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 16715,
@@ -792988,6 +795657,13 @@
           "renamed": "MessageDialog"
         },
         {
+          "start": 16894,
+          "end": 16895,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 17143,
           "end": 17145,
           "symbol": "C:wm",
@@ -793002,6 +795678,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 17553,
+          "end": 17554,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 17952,
           "end": 17954,
           "symbol": "C:sj",
@@ -793009,11 +795692,32 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 18237,
+          "end": 18238,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 19881,
+          "end": 19882,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 20140,
           "end": 20142,
           "symbol": "C:np",
           "original": "np",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 20710,
+          "end": 20711,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 20927,
@@ -793028,6 +795732,13 @@
           "symbol": "C:wi",
           "original": "wi",
           "renamed": "TextButton"
+        },
+        {
+          "start": 21028,
+          "end": 21029,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 21042,
@@ -793056,6 +795767,13 @@
           "symbol": "C:uj",
           "original": "uj",
           "renamed": "SetLagCommand"
+        },
+        {
+          "start": 21341,
+          "end": 21342,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 21369,
@@ -793093,6 +795811,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 21904,
+          "end": 21905,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 21914,
           "end": 21916,
           "symbol": "C:eb",
@@ -793112,6 +795837,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "ShopPlayerSlot"
+        },
+        {
+          "start": 22243,
+          "end": 22244,
+          "symbol": "M:hd.a(ZILhd;Lhd;)V",
+          "original": "a",
+          "renamed": "positionAfter"
         },
         {
           "start": 22262,
@@ -793855,7 +796587,7 @@
       "original": "wb.java",
       "renamed": "TeamSelectionView.java",
       "inputSha256": "693229f6f120d6b6f69d406461cce73a702847de906c44347c365b893c145a58",
-      "outputSha256": "c5b622cf3e2c07086490871d782beb967cd748a028c2bead343f8a09ceb26db6",
+      "outputSha256": "beff273be916e647b4a06d92402ffe0d6a7fc7cbdeb0e10ad41b01ca40ab4987",
       "edits": [
         {
           "start": 50,
@@ -794047,6 +796779,13 @@
           "renamed": "CheckboxLabelWidget"
         },
         {
+          "start": 2137,
+          "end": 2138,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 2223,
           "end": 2230,
           "symbol": "F:nu.field_I:I",
@@ -794229,6 +796968,13 @@
           "renamed": "ContentTransitionDialog"
         },
         {
+          "start": 4392,
+          "end": 4393,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 4494,
           "end": 4496,
           "symbol": "C:vg",
@@ -794339,6 +797085,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 6495,
+          "end": 6496,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 6549,
@@ -794579,6 +797332,20 @@
           "renamed": "ShopPlayerSlot"
         },
         {
+          "start": 11034,
+          "end": 11035,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
+        },
+        {
+          "start": 11078,
+          "end": 11079,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
+        },
+        {
           "start": 11198,
           "end": 11199,
           "symbol": "M:hd.a(BLhd;)V",
@@ -794591,6 +797358,20 @@
           "symbol": "M:hd.a(BLhd;)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 11425,
+          "end": 11426,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
+          "start": 11471,
+          "end": 11472,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 11587,
@@ -794670,6 +797451,13 @@
           "renamed": "onButtonClick"
         },
         {
+          "start": 12541,
+          "end": 12542,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 12631,
           "end": 12638,
           "symbol": "F:nu.field_I:I",
@@ -794710,6 +797498,20 @@
           "symbol": "M:oe.b(BI)Z",
           "original": "b",
           "renamed": "canJoinTeamOne"
+        },
+        {
+          "start": 13624,
+          "end": 13625,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
+          "start": 13784,
+          "end": 13785,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 13969,
@@ -795706,7 +798508,7 @@
       "original": "we.java",
       "renamed": "we.java",
       "inputSha256": "9e6d5b5572f835ae40b14917ee4f61b6e4d0496951c767ec281edcccdfa72c24",
-      "outputSha256": "6bb92a4ac7848b116b143da0fb05f6fb1fac1db28fb1f862b07aaa4cbb51d6a1",
+      "outputSha256": "c1a13d20c024a27b16685f8833e8986bcf8f98c6fc098437f3688306da9daec5",
       "edits": [
         {
           "start": 66,
@@ -795835,6 +798637,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 2777,
+          "end": 2778,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 2853,
           "end": 2854,
           "symbol": "M:we.a(B)V",
@@ -795870,6 +798679,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 3097,
+          "end": 3098,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 3153,
           "end": 3155,
           "symbol": "C:kk",
@@ -795889,6 +798705,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 3296,
+          "end": 3297,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 3354,
@@ -795926,6 +798749,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 3594,
+          "end": 3595,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 3668,
           "end": 3669,
           "symbol": "M:we.a(B)V",
@@ -795961,6 +798791,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 3912,
+          "end": 3913,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
+        },
+        {
           "start": 3968,
           "end": 3970,
           "symbol": "C:kk",
@@ -795980,6 +798817,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 4111,
+          "end": 4112,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 4205,
@@ -796085,7 +798929,7 @@
       "original": "wf.java",
       "renamed": "AuctionsScreen.java",
       "inputSha256": "27325d67f9165c9ac74ef2bf64c41392fba856e57571748dc8161366741c0dba",
-      "outputSha256": "4355a0d8ae2bb4a576ef5ab697d7da8661690448095d809db9b0ce6046d11cb1",
+      "outputSha256": "eed997dbc82f91499756c5b88e20e61dcf8b5206af97cb4ef4cdad27b2035eec",
       "edits": [
         {
           "start": 50,
@@ -796186,6 +799030,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 831,
+          "end": 832,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
+        },
+        {
           "start": 911,
           "end": 913,
           "symbol": "C:jr",
@@ -796226,6 +799077,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "ArchiveNetworkClient"
+        },
+        {
+          "start": 1331,
+          "end": 1332,
+          "symbol": "M:hd.a(ZIIII)V",
+          "original": "a",
+          "renamed": "setBounds"
         },
         {
           "start": 1385,
@@ -796457,6 +799315,13 @@
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 4935,
+          "end": 4936,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 4996,
@@ -796984,6 +799849,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 13074,
+          "end": 13075,
+          "symbol": "M:hd.a(IZ)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 13177,
           "end": 13179,
           "symbol": "C:aa",
@@ -797423,6 +800295,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "AuctionTableWidget"
+        },
+        {
+          "start": 20021,
+          "end": 20022,
+          "symbol": "M:hd.b(IZ)V",
+          "original": "b",
+          "renamed": "updateInput"
         },
         {
           "start": 20506,
@@ -802634,7 +805513,7 @@
       "original": "wp.java",
       "renamed": "wp.java",
       "inputSha256": "09230fd4aea3593674d2de7d9fdd74e6dea0b17e5e3445633b8cfebfa4a0f625",
-      "outputSha256": "481d53915fb886736d2dacb7551d701653466f7e773840c2592aaa75c2a632c5",
+      "outputSha256": "8d6f11fff964b8ff1de2471ba6fb35d46c6a9f695a28e53286f0a3b9a5e18045",
       "edits": [
         {
           "start": 300,
@@ -803062,6 +805941,13 @@
           "symbol": "C:bf",
           "original": "bf",
           "renamed": "LineupView"
+        },
+        {
+          "start": 3872,
+          "end": 3873,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
         },
         {
           "start": 3874,
@@ -803678,6 +806564,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "DialogOverlay"
+        },
+        {
+          "start": 6519,
+          "end": 6520,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
         },
         {
           "start": 6521,
@@ -804420,6 +807313,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 11516,
+          "end": 11517,
+          "symbol": "M:hd.a(Lhd;B)V",
+          "original": "a",
+          "renamed": "applyStyle"
         },
         {
           "start": 11518,
@@ -807350,10 +810250,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "7c5a7fc3da5e0940a8305ded061bbb5c8b00ea1398779aea1e8fc76dbc02e1d4",
+    "rulesSha256": "c2bb979b5037ca4fadbe2a591cdc0802b2559ca648b8565febab7a9d3355fc05",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "38adfca1ff792bf4dab362f31a1189c21be35025b3a97e532847350d2e6de45e",
+    "outputTreeSha256": "442308236ad4428bf7f507fa1ae13a44f4492d7260742c3de5197bf0ae1e5fd8",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

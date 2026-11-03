@@ -14,15 +14,15 @@ final class IconLabel extends UiLayoutNode {
         int var3 = 0;
         int var3Lifetime1;
         if (param1 == 14) {
-          this.field_Cb.a(true, this.field_Cb.g((byte) -2), 0, 0, this.field_mb);
+          this.field_Cb.setBounds(true, this.field_Cb.getPreferredWidth((byte) -2), 0, 0, this.field_mb);
           var3 = param0 + this.field_Cb.field_q;
-          this.field_Db.a(true, this.field_q - var3, var3, 0, this.field_mb);
+          this.field_Db.setBounds(true, this.field_q - var3, var3, 0, this.field_mb);
           return;
         }
         this.a(-123, (byte) 90);
-        this.field_Cb.a(true, this.field_Cb.g((byte) -2), 0, 0, this.field_mb);
+        this.field_Cb.setBounds(true, this.field_Cb.getPreferredWidth((byte) -2), 0, 0, this.field_mb);
         var3Lifetime1 = param0 + this.field_Cb.field_q;
-        this.field_Db.a(true, this.field_q - var3Lifetime1, var3Lifetime1, 0, this.field_mb);
+        this.field_Db.setBounds(true, this.field_q - var3Lifetime1, var3Lifetime1, 0, this.field_mb);
     }
 
     IconLabel(long param0, IconLabel param1, String param2) {
@@ -45,10 +45,10 @@ final class IconLabel extends UiLayoutNode {
 
     final int b(int param0, int param1) {
         if (param0 == 0) {
-          return this.field_Cb.g((byte) -24) - (-param1 - this.field_Db.g((byte) 113));
+          return this.field_Cb.getPreferredWidth((byte) -24) - (-param1 - this.field_Db.getPreferredWidth((byte) 113));
         }
         this.field_Db = (UiLayoutNode) null;
-        return this.field_Cb.g((byte) -24) - (-param1 - this.field_Db.g((byte) 113));
+        return this.field_Cb.getPreferredWidth((byte) -24) - (-param1 - this.field_Db.getPreferredWidth((byte) 113));
     }
 
     IconLabel(long param0, Sprite param1, Sprite param2, int param3, UiLayoutNode param4, String param5) {
@@ -127,7 +127,7 @@ final class IconLabel extends UiLayoutNode {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.a(true, param3, param4, param1, param2);
+        this.setBounds(true, param3, param4, param1, param2);
         if (param5 == -10481) {
           this.a(param0, (byte) 14);
           return;

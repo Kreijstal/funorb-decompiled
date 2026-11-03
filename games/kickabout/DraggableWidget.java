@@ -305,7 +305,7 @@ final class DraggableWidget extends SingleChildContainer {
         if (!DebugConsole.field_s) {
           return;
         }
-        LeaguesHelpScreen.field_E.b(0, param2);
+        LeaguesHelpScreen.field_E.updateInput(0, param2);
         int var4 = dr.field_g.h(-113) ? 1 : 0;
         if (WidgetContainer.field_A != 0 &&
           var4 == 0) {
@@ -317,7 +317,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
         int var6 = -116 % ((param1 - 17) / 36);
         if (var4 != 0) {
-          LeaguesHelpScreen.field_E.b(0, param2);
+          LeaguesHelpScreen.field_E.updateInput(0, param2);
         }
         int var5 = dr.field_g.getTotalWidth((byte) 49) + dr.field_g.field_F;
         if (var5 > 640) {

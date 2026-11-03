@@ -415,7 +415,7 @@ final class tb extends ArchiveNetworkClient {
           TriangleMesh.field_R.addChild((byte) -108, ph.field_f);
           TriangleMesh.field_R.addChild((byte) -124, (UiLayoutNode) (ei.field_d));
           TriangleMesh.field_R.addChild((byte) -108, BlankScreen.field_h);
-          ei.field_d.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) 87);
+          ei.field_d.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) 87);
           if (param0 >= -59) {
             ResourceArchive var4 = (ResourceArchive) null;
             tb.a(-39, (ResourceArchive) null);
@@ -424,7 +424,7 @@ final class tb extends ArchiveNetworkClient {
           var6 = ei.field_d.field_Cb.field_zb;
           var7 = var6;
           var7.field_A = 1;
-          TournamentChampionDialog.field_F.field_Cb.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
+          TournamentChampionDialog.field_F.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) -128);
           var3 = TournamentChampionDialog.field_F.field_Cb.field_zb;
           TournamentChampionDialog.field_F.field_Cb.field_zb.field_p = 1;
           var3.field_A = 1;

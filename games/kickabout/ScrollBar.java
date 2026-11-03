@@ -125,7 +125,7 @@ final class ScrollBar extends UiLayoutNode {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-            tn.field_f.a(125, param1);
+            tn.field_f.draw(125, param1);
             return;
           }
           if (fj.field_a > 0) {
@@ -133,7 +133,7 @@ final class ScrollBar extends UiLayoutNode {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-            tn.field_f.a(125, param1);
+            tn.field_f.draw(125, param1);
             return;
           }
           if (ee.field_b <= 0) {
@@ -141,7 +141,7 @@ final class ScrollBar extends UiLayoutNode {
           }
           if (TrinketCatalog.field_b) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-            tn.field_f.a(125, param1);
+            tn.field_f.draw(125, param1);
           }
           return;
         }
@@ -158,7 +158,7 @@ final class ScrollBar extends UiLayoutNode {
           }
         } else {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-          TriangleMesh.field_j.a(77, param1);
+          TriangleMesh.field_j.draw(77, param1);
           if (param0 <= 10) {
             field_Eb = (String) null;
           }
@@ -176,7 +176,7 @@ final class ScrollBar extends UiLayoutNode {
           }
         }
         SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-        tn.field_f.a(125, param1);
+        tn.field_f.draw(125, param1);
     }
 
     private ScrollBar(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, boolean param5) {

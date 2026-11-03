@@ -65,7 +65,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
     }
 
     final static void a(boolean param0, byte param1) {
-        g.field_a.a(97, param0);
+        g.field_a.draw(97, param0);
         DateOfBirthPanel var2 = PlayArea.field_a;
         if (param1 >= -27) {
           PasswordLoginCredentials.b((byte) 111);

@@ -60,22 +60,22 @@ final class ScrollContainer extends UiLayoutNode {
           this.addChild((byte) -125, (UiLayoutNode) (this.field_Eb));
           this.field_Gb.field_mb = this.field_Gb.field_mb - (param0 + param1);
           this.field_Gb.field_q = this.field_Gb.field_q - (param1 + param0);
-          this.field_Kb.a(true, -param0 + this.field_q, 0, this.field_mb - param0, param0);
+          this.field_Kb.setBounds(true, -param0 + this.field_q, 0, this.field_mb - param0, param0);
           this.field_Kb.layoutThumb(-this.field_Db.field_s, this.field_Db.field_q, param2 + 112, this.field_Gb.field_q);
-          this.field_Eb.a(true, param0, this.field_q - param0, 0, this.field_mb - param0);
+          this.field_Eb.setBounds(true, param0, this.field_q - param0, 0, this.field_mb - param0);
           this.field_Eb.layoutThumb(-this.field_Db.field_J, this.field_Db.field_mb, 20, this.field_Gb.field_mb);
         } else {
           if (var4 == 0) {
             if (var5 != 0) {
               this.addChild((byte) -124, (UiLayoutNode) (this.field_Eb));
               this.field_Gb.field_q = this.field_Gb.field_q - (param1 + param0);
-              this.field_Eb.a(true, param0, this.field_q - param0, 0, this.field_mb);
+              this.field_Eb.setBounds(true, param0, this.field_q - param0, 0, this.field_mb);
               this.field_Eb.layoutThumb(-this.field_Db.field_J, this.field_Db.field_mb, 65, this.field_Gb.field_mb);
             }
           } else {
             this.addChild((byte) -120, (UiLayoutNode) (this.field_Kb));
             this.field_Gb.field_mb = this.field_Gb.field_mb - (param0 + param1);
-            this.field_Kb.a(true, this.field_q, 0, -param0 + this.field_mb, param0);
+            this.field_Kb.setBounds(true, this.field_q, 0, -param0 + this.field_mb, param0);
             this.field_Kb.layoutThumb(-this.field_Db.field_s, this.field_Db.field_q, 77, this.field_Gb.field_q);
           }
         }

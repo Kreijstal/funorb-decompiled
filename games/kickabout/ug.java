@@ -102,13 +102,13 @@ final class ug {
               var7 = 1;
             }
             var6.field_q = TournamentChampionDialog.field_F.field_yb.field_q;
-            var6.field_Bb.a(true, var6.field_q, 0, 0, sh.field_c);
+            var6.field_Bb.setBounds(true, var6.field_q, 0, 0, sh.field_c);
             var8 = 0;
             if (null != var6.field_Eb &&
               !var6.field_Eb.equals("")) {
               var6.field_Fb.field_ub = 16737894;
               var6.field_Fb.field_N = DirectByteStorage.field_n;
-              var6.field_Fb.a(true, 3 + DirectByteStorage.field_n.field_o, 0, 0, sh.field_c);
+              var6.field_Fb.setBounds(true, 3 + DirectByteStorage.field_n.field_o, 0, 0, sh.field_c);
               var8 = 1;
             }
             var9 = 0;
@@ -126,12 +126,12 @@ final class ug {
             stackIn_18_0.field_E = stackIn_19_1;
             stackIn_22_0 = (var6.field_Bb.field_E.equals(var6.field_Gb)) ? 0 : 1;
             var11 = stackIn_22_0;
-            var6.field_Bb.a(true, var10, var9, 0, sh.field_c);
+            var6.field_Bb.setBounds(true, var10, var9, 0, sh.field_c);
             if (var3_int == 0) {
               var6.field_L = -var6.field_mb + sh.field_c;
             }
             if (var7 != 0) {
-              TournamentChampionDialog.field_F.field_yb.a(true, 2, var6, (UiLayoutNode) (var5));
+              TournamentChampionDialog.field_F.field_yb.positionAfter(true, 2, var6, (UiLayoutNode) (var5));
             }
             if (var6.field_Fb != null &&
               var6.field_Fb.field_gb) {

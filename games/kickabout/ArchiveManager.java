@@ -174,10 +174,10 @@ final class ArchiveManager {
           int var4 = 59 % ((param0 + 57) / 43);
           var5 = CheckboxLabelWidget.field_Cb.field_X.paragraphHeight(param1, 272, CheckboxLabelWidget.field_Cb.field_xb);
           var6 = -103 + var3 / 2 - var5 / 2;
-          TriangleMesh.field_j.a(true, 320, (-320 + var2_int) / 2, var6, -120 + (var3 - 2 * var6));
+          TriangleMesh.field_j.setBounds(true, 320, (-320 + var2_int) / 2, var6, -120 + (var3 - 2 * var6));
           TriangleMesh.field_j.field_R = fs.a(TriangleMesh.field_j.field_mb, 3, 2105376, 11579568, 8421504, (byte) 126);
-          CheckboxLabelWidget.field_Cb.a(true, -24 + TriangleMesh.field_j.field_q - 24, 24, 16, -24 + (-20 + TriangleMesh.field_j.field_mb));
-          RandomAccessCacheFile.field_a.a(true, 80, 120, -20 + TriangleMesh.field_j.field_mb - 24, 24);
+          CheckboxLabelWidget.field_Cb.setBounds(true, -24 + TriangleMesh.field_j.field_q - 24, 24, 16, -24 + (-20 + TriangleMesh.field_j.field_mb));
+          RandomAccessCacheFile.field_a.setBounds(true, 80, 120, -20 + TriangleMesh.field_j.field_mb - 24, 24);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "n.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

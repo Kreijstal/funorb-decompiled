@@ -248,14 +248,14 @@ final class AuctionSettingsDialog extends MessageDialog {
         uq.field_b.field_J = 27 + var6;
         SoftwareRasterizer.a(uq.field_b.field_s + 85, uq.field_b.field_J + 6, UnreadMessagesScreen.field_A.field_q + 4, -4 + UnreadMessagesScreen.field_A.field_mb, 7829367, 128);
         IsSixCommand.field_C.a('£', 91 + uq.field_b.field_s, uq.field_b.field_J + 19, 16777215);
-        uq.field_b.a(110, var10 != 0 & this.field_F);
+        uq.field_b.draw(110, var10 != 0 & this.field_F);
         oa.field_b.field_J = 5 + (var8 - 13);
         oa.field_b.field_s = var4 + 10;
         SoftwareRasterizer.a(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, StatChoiceDialog.field_F.field_q + 4, -4 + StatChoiceDialog.field_F.field_mb, 7829367, 128);
         if (ng.field_e) {
           IsSixCommand.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
         }
-        oa.field_b.a(94, var10 != 0 & this.field_I);
+        oa.field_b.draw(94, var10 != 0 & this.field_I);
         kr.field_a.a(false, (byte) 46);
         if (ad.field_f < QuickChatPhraseCache.field_c) {
           IsSixCommand.field_C.d(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
@@ -285,14 +285,14 @@ final class AuctionSettingsDialog extends MessageDialog {
           IsSixCommand.field_C.d(um.field_f, var4 + 130, var8 + 67, 16711680, -1);
         }
         for (var11 = 0; var11 < 5; var11++) {
-          of.field_d[var11].a(true, of.field_d[var11].field_q, var4 + 10, 26 + (var9 + var11 * 18), of.field_d[var11].field_mb);
+          of.field_d[var11].setBounds(true, of.field_d[var11].field_q, var4 + 10, 26 + (var9 + var11 * 18), of.field_d[var11].field_mb);
           if (of.field_d[var11].field_gb) {
             SoftwareRasterizer.a(of.field_d[var11].field_F, of.field_d[var11].field_T, of.field_d[var11].field_q, of.field_d[var11].field_mb - 2, 6, 16777215, 140);
           }
           if (ee.field_d == var11) {
             su.field_a.c(10 + (var4 + 74), 26 + var9 - (-(var11 * 18) - 2));
           }
-          of.field_d[var11].a(112, false);
+          of.field_d[var11].draw(112, false);
         }
     }
 
@@ -334,8 +334,8 @@ final class AuctionSettingsDialog extends MessageDialog {
           of.field_d[var3_int] = new UiLayoutNode();
           var7 = of.field_d[var3_int];
           var8 = var7;
-          var8.a(var9, (byte) -77);
-          var7.b(0, true);
+          var8.applyStyle(var9, (byte) -77);
+          var7.updateInput(0, true);
           var7.field_E = ni.field_k[var3_int];
           var8.field_mb = 18;
           var8.field_q = 240;
@@ -463,10 +463,10 @@ final class AuctionSettingsDialog extends MessageDialog {
         int var7Lifetime5;
         var9 = Kickabout.field_G;
         for (var3 = 0; var3 < of.field_d.length; var3++) {
-          of.field_d[var3].b(0, param1);
+          of.field_d[var3].updateInput(0, param1);
         }
-        uq.field_b.b(0, param1);
-        oa.field_b.b(0, param1);
+        uq.field_b.updateInput(0, param1);
+        oa.field_b.updateInput(0, param1);
         UnreadMessagesScreen.field_A.updatePointer(param0 + 11567);
         StatChoiceDialog.field_F.updatePointer(11570);
         for (var3 = 0; var3 < 5; var3++) {

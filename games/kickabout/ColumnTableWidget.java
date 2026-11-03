@@ -197,13 +197,13 @@ class ColumnTableWidget extends UiLayoutNode {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.a(true, this.field_q, param3, param2, param0);
+        this.setBounds(true, this.field_q, param3, param2, param0);
         if (param1 > -108) {
           this.field_Fb = (ListRow[]) null;
         }
-        this.field_Ab.a(true, this.field_q - 25, 0, 0, this.field_Ab.field_mb);
+        this.field_Ab.setBounds(true, this.field_q - 25, 0, 0, this.field_Ab.field_mb);
         this.field_Cb.setLayout(15, 5, 0, (byte) -103, -20 + param0, 15 + this.field_Ab.field_q, 20);
-        this.field_Cb.field_Eb.a(true, 15, -15 + this.field_Cb.field_q, 5, this.field_Cb.field_mb - 10);
+        this.field_Cb.field_Eb.setBounds(true, 15, -15 + this.field_Cb.field_q, 5, this.field_Cb.field_mb - 10);
         this.field_Cb.field_Eb.layoutThumb(-this.field_Cb.field_Db.field_J, this.field_Cb.field_Db.field_mb, 100, this.field_Cb.field_Gb.field_mb);
     }
 
@@ -430,7 +430,7 @@ class ColumnTableWidget extends UiLayoutNode {
           var5_int = 5;
           for (var6_int = 0; var6_int < this.field_Bb.length; var6_int++) {
             this.field_Bb[var6_int] = new UiLayoutNode();
-            this.field_Bb[var6_int].a(true, param0[var6_int], var5_int, 0, 20);
+            this.field_Bb[var6_int].setBounds(true, param0[var6_int], var5_int, 0, 20);
             this.field_Bb[var6_int].field_E = param1[var6_int];
             var5_int = var5_int + param0[var6_int];
           }

@@ -465,7 +465,7 @@ final class SectorCacheStore {
               if (var5 == null) {
                 var9 = cu.a(false, 0, var3, var2, false, false);
                 var5 = var9;
-                var9.a(true, 327, 5, var4, 16);
+                var9.setBounds(true, 327, 5, var4, 16);
               }
               AuctionTableWidget.field_Hb.field_Db.addChild((byte) -109, (UiLayoutNode) (var5));
               var6 = LineupView.field_y.get(var2, (byte) 116, var3);

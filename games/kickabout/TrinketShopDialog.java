@@ -42,7 +42,7 @@ final class TrinketShopDialog extends MessageDialog {
             var8.addChild((byte) -114, (UiLayoutNode) (var6));
           }
         }
-        var8.a(true, 270, 0, 0, var3);
+        var8.setBounds(true, 270, 0, 0, var3);
         return var8;
     }
 
@@ -72,8 +72,8 @@ final class TrinketShopDialog extends MessageDialog {
         int var10 = Kickabout.field_G;
         super.a((byte) -25, param1, param2);
         ScrollContainer var11 = this.field_L;
-        this.field_L.a(true, 210, param1 + 250, param2 + 55, 240);
-        this.field_L.b(0, true);
+        this.field_L.setBounds(true, 210, param1 + 250, param2 + 55, 240);
+        this.field_L.updateInput(0, true);
         SoftwareRasterizer.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
         if (param0 >= -11) {
           return;
@@ -112,7 +112,7 @@ final class TrinketShopDialog extends MessageDialog {
             IsSixCommand.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }
         }
-        this.field_L.a(117, false);
+        this.field_L.draw(117, false);
         IsSixCommand.field_C.d(CheckboxLabelWidget.field_Bb, (this.dialogWidth(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
@@ -134,7 +134,7 @@ final class TrinketShopDialog extends MessageDialog {
           this.field_K = this.field_K - 1;
         }
         var3 = this.field_L.field_Db.field_J;
-        this.field_L.b(0, param1);
+        this.field_L.updateInput(0, param1);
         this.field_L.advanceScroll(StatefulTextPainter.field_v * 32, true, (byte) -78, 32);
         if (var3 < this.field_L.field_Db.field_J &&
           this.field_K == 0) {

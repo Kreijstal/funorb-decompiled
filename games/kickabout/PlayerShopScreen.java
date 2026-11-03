@@ -76,10 +76,10 @@ final class PlayerShopScreen extends TeamManagementScreen {
           var6.field_Lb = true;
         }
         this.field_Q.addChild((byte) -126, (UiLayoutNode) (this.field_T));
-        this.field_Q.a(true, 12 + this.field_T.field_q, 3, 54, 30 + this.field_T.field_mb + 12);
+        this.field_Q.setBounds(true, 12 + this.field_T.field_q, 3, 54, 30 + this.field_T.field_mb + 12);
         this.field_T.field_J = 36;
         this.field_T.field_s = 6;
-        this.field_G.a(true, this.field_Q.field_q, this.field_Q.field_s, 5 + (this.field_Q.field_mb + this.field_Q.field_J), 97);
+        this.field_G.setBounds(true, this.field_Q.field_q, this.field_Q.field_s, 5 + (this.field_Q.field_mb + this.field_Q.field_J), 97);
         this.rebuildShopRows(true);
         this.field_J.field_Db = -1;
         this.field_J.b(2, 104);
@@ -105,7 +105,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         tc.a(ic.field_h.field_x, 5464);
         this.field_J.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
-        this.field_L.b(0, param1);
+        this.field_L.updateInput(0, param1);
         this.field_T.update(48);
         if (this.field_T.field_Fb != -1 &&
           this.field_T.getSelectedSlot((byte) 21).field_Eb.isEmpty(-2)) {
@@ -270,7 +270,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_Q = new UiLayoutNode();
         this.field_G = new UiLayoutNode();
         this.field_L = new UiLayoutNode();
-        this.field_L.a(true, 640, 640, 0, 480);
+        this.field_L.setBounds(true, 640, 640, 0, 480);
         this.field_L.addChild((byte) -110, (UiLayoutNode) (this.field_J));
         this.field_L.addChild((byte) -111, this.field_Q);
         this.field_L.addChild((byte) -111, this.field_G);
@@ -288,7 +288,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         un.field_d.a(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
         RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
         this.field_J.a(-120);
-        this.field_L.a(75, false);
+        this.field_L.draw(75, false);
     }
 
     static {

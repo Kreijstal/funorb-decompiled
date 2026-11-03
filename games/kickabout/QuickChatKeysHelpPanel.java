@@ -52,7 +52,7 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
         int var3;
         boolean stackIn_7_0 = false;
         boolean decompiledFrameRemainder0 = true;
-        this.b(0, true);
+        this.updateInput(0, true);
         var3 = 118 % ((3 - param0) / 62);
         if ((WidgetContainer.field_A == 0 ||
           0 != this.field_sb) && this.field_yb.field_sb == 0) {
@@ -154,18 +154,18 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
             if (var15 > var11) {
               var11 = var15;
             }
-            var13.a(true, 65, 20, var10, 15);
-            var14.a(true, 640, 90, var10, 15);
+            var13.setBounds(true, 65, 20, var10, 15);
+            var14.setBounds(true, 640, 90, var10, 15);
             var8.addChild((byte) -115, var13);
             var8.addChild((byte) -104, var14);
             var10 += 30;
           }
           var10 += 15;
-          var17.a(true, 110 + var11, 0, 0, 24);
-          this.a(true, var17.field_q, 100, 100, var17.field_mb + var10);
-          this.field_yb.a(true, 15, -20 + var17.field_q, 5, 15);
-          var8.a(true, this.field_q, 0, var17.field_mb, -var17.field_mb + this.field_mb);
-          var9.a(true, this.field_q, 0, 20, 15);
+          var17.setBounds(true, 110 + var11, 0, 0, 24);
+          this.setBounds(true, var17.field_q, 100, 100, var17.field_mb + var10);
+          this.field_yb.setBounds(true, 15, -20 + var17.field_q, 5, 15);
+          var8.setBounds(true, this.field_q, 0, var17.field_mb, -var17.field_mb + this.field_mb);
+          var9.setBounds(true, this.field_q, 0, 20, 15);
           var8.field_R = fs.a(var8.field_mb, 3, 2105376, 11579568, 8421504, (byte) 83);
           var17.addChild((byte) -110, this.field_yb);
           var8.addChild((byte) -107, var9);

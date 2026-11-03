@@ -92,7 +92,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           }
         }
         RankingRowNode.field_Gb.field_s = 665;
-        RankingRowNode.field_Gb.b(0, false);
+        RankingRowNode.field_Gb.updateInput(0, false);
     }
 
     public static void releaseStatics(int param0) {
@@ -116,7 +116,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         for (var4 = 0; var4 < RankingRowNode.field_Gb.field_jb.f(606511077).length; var4++) {
           ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.f(param0 ^ -606511074)[var4])).j(0);
         }
-        RankingRowNode.field_Gb.a(96, false);
+        RankingRowNode.field_Gb.draw(96, false);
         if (!this.field_F) {
           SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 228);
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
@@ -143,7 +143,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           field_G = -0.01516130877366001;
         }
         RankingRowNode.field_Gb = new UiLayoutNode();
-        RankingRowNode.field_Gb.a(true, 390, 25, 100, 440);
+        RankingRowNode.field_Gb.setBounds(true, 390, 25, 100, 440);
     }
 
     final void drawOverlay(boolean param0, int param1) {
@@ -160,7 +160,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         var4 = Kickabout.field_G;
         super.updateScreen((byte) 101, param1);
         RankingRowNode.field_Gb.field_s = this.slideOffsetX + 25;
-        RankingRowNode.field_Gb.b(0, param1);
+        RankingRowNode.field_Gb.updateInput(0, param1);
         var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.g(24009));
         while (var3_ref_jt != null) {
           var3_ref_jt.c(3784, param1);

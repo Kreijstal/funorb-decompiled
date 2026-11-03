@@ -33,7 +33,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         SortCriterion[] var6;
         var4 = Kickabout.field_G;
         this.field_L = new UiLayoutNode();
-        this.field_L.a(true, 640, 0, 0, 480);
+        this.field_L.setBounds(true, 640, 0, 0, 480);
         if (param0 != -38) {
           this.field_B = (ReceivedAuctionItemRow[]) null;
         }
@@ -45,7 +45,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_P.field_s = 10;
         this.field_K = new UiLayoutNode();
         this.field_K.field_E = ArchiveNetworkClient.field_a.toLowerCase();
-        this.field_K.a(true, 420, 195, 51, 66);
+        this.field_K.setBounds(true, 420, 195, 51, 66);
         this.field_E = new CheckboxLabelWidget[4];
         for (var2 = 0; 4 > var2; var2++) {
           this.field_E[var2] = new CheckboxLabelWidget(uf.field_e[var2], IsSixCommand.field_C, 90);
@@ -144,7 +144,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         param1 = stackIn_5_0 & (stackIn_11_1 & stackIn_12_2) != 0;
         this.field_G.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
-        this.field_L.b(0, param1);
+        this.field_L.updateInput(0, param1);
         if (param1) {
           var4_long = nj.monotonicMillis(73);
           if (var4_long >= (this.field_H + 10000L)) {
@@ -379,7 +379,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.field_E[var3_int].a(false, (byte) 46);
         }
         this.field_G.a(-82);
-        this.field_L.a(63, false);
+        this.field_L.draw(63, false);
         if (this.field_N) {
           if (this.field_U == 0) {
             stackIn_8_0 = KeyedLoginCredentials.field_h;
@@ -568,7 +568,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           }
           ((AuctionTableWidget) (Object) stackIn_47_0).a(stackIn_48_1, (byte) -47, this.field_B, param2 + var14);
           this.field_G.a(param0, var12Lifetime2);
-          this.field_G.b(0, false);
+          this.field_G.updateInput(0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,14 +23,14 @@ final class qn {
         var14 = Kickabout.field_G;
         try {
           var6_int = 487 + (param3 + (8 + param5) + 8);
-          uf.field_b.a(true, -6 + var6_int, 3, 3, -6 + g.field_a.field_mb);
+          uf.field_b.setBounds(true, -6 + var6_int, 3, 3, -6 + g.field_a.field_mb);
           var7 = -5 + uf.field_b.field_mb;
           if (param0 != -24823) {
             field_c = (String) null;
           }
-          DebugConsole.field_z.a(true, param3 + 485 - (-2 - param5), 5, -param4 + var7, param4);
-          ei.field_b.a(true, -param3 + DebugConsole.field_z.field_q - WeightedCacheEntry.field_s.field_q, param3, 0, param4);
-          WeightedCacheEntry.field_s.a(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q + param3, 0, param4);
+          DebugConsole.field_z.setBounds(true, param3 + 485 - (-2 - param5), 5, -param4 + var7, param4);
+          ei.field_b.setBounds(true, -param3 + DebugConsole.field_z.field_q - WeightedCacheEntry.field_s.field_q, param3, 0, param4);
+          WeightedCacheEntry.field_s.setBounds(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q + param3, 0, param4);
           var7 = var7 - (param4 + 2);
           AuctionSettingsDialog.field_G.setLayout(2, 110, var7 - 5, 5, 5, 485 + (param3 - (-2 - param5)), param5);
           if (null != PlayArea.field_a) {
@@ -47,12 +47,12 @@ final class qn {
               var11++;
               var7Lifetime1 = -var13 + (var11 * (-4 + g.field_a.field_mb) / (MatchPhaseView.field_e + 1) + 3 - 2);
               if (var12 >= 5) {
-                uq.field_a.a(true, var8, var6_int, var13, var7Lifetime1);
+                uq.field_a.setBounds(true, var8, var6_int, var13, var7Lifetime1);
               } else {
-                ValidatedTextWidget.field_W[var12].a(true, var8, var6_int, var13, var7Lifetime1);
-                BlackFadeScreen.field_m[var12].a(true, -param3 + var9, param3, 0, var7Lifetime1);
-                SocketConnector.field_b[var12].a(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
-                ds.field_a[var12].a(true, -var10 - param3 + var8, var10, param2, -param2 - param2 + var7Lifetime1);
+                ValidatedTextWidget.field_W[var12].setBounds(true, var8, var6_int, var13, var7Lifetime1);
+                BlackFadeScreen.field_m[var12].setBounds(true, -param3 + var9, param3, 0, var7Lifetime1);
+                SocketConnector.field_b[var12].setBounds(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
+                ds.field_a[var12].setBounds(true, -var10 - param3 + var8, var10, param2, -param2 - param2 + var7Lifetime1);
               }
             }
           }

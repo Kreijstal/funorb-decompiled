@@ -37,7 +37,7 @@ final class TrinketPickerDialog extends MessageDialog {
           this.field_I[incrementValue$0] = var3;
           var2 = (IntValueNode) (ok.field_a.c(33));
         }
-        this.field_K.a(true, 300, 100, 80, 200);
+        this.field_K.setBounds(true, 300, 100, 80, 200);
     }
 
     final int dialogHeight(byte param0) {
@@ -116,14 +116,14 @@ final class TrinketPickerDialog extends MessageDialog {
         if (param0 >= -11) {
           field_H = (String) null;
         }
-        this.field_K.a(79, false);
+        this.field_K.draw(79, false);
     }
 
     final void a(int param0, boolean param1) {
         if (param0 != 3) {
           field_H = (String) null;
         }
-        this.field_K.b(0, param1);
+        this.field_K.updateInput(0, param1);
     }
 
     final void handleResult(int param0, int param1) {

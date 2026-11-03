@@ -120,19 +120,19 @@ final class WhirlpoolHasher {
           }
           var9_int = 495;
           var10 = 5;
-          Kickabout.field_H.a(true, var9_int - 10, 5, var10, param6);
-          ei.field_b.a(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
-          WeightedCacheEntry.field_s.a(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q, 0, param6);
+          Kickabout.field_H.setBounds(true, var9_int - 10, 5, var10, param6);
+          ei.field_b.setBounds(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
+          WeightedCacheEntry.field_s.setBounds(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q, 0, param6);
           var10 = var10 + (param7 + param6);
-          gl.field_c.a(true, gl.field_c.g((byte) -99), 5, var10, param3);
-          var11 = MySquadScreen.field_N.g((byte) -19);
-          MySquadScreen.field_N.a(true, var11, -5 + (var9_int - var11), var10, param3);
-          h.field_e.a(true, var9_int, 0, 0, param1);
+          gl.field_c.setBounds(true, gl.field_c.getPreferredWidth((byte) -99), 5, var10, param3);
+          var11 = MySquadScreen.field_N.getPreferredWidth((byte) -19);
+          MySquadScreen.field_N.setBounds(true, var11, -5 + (var9_int - var11), var10, param3);
+          h.field_e.setBounds(true, var9_int, 0, 0, param1);
           var12 = 5 + (var10 + param3);
-          PagedHelpScreen.field_D.a(true, var9_int, 0, param1, var12);
+          PagedHelpScreen.field_D.setBounds(true, var9_int, 0, param1, var12);
           var12 = var12 + param1;
           PagedHelpScreen.field_D.field_R = fs.a(PagedHelpScreen.field_D.field_mb, 3, 2105376, 11579568, 8421504, (byte) 118);
-          ContentTransitionDialog.field_Y.a(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
+          ContentTransitionDialog.field_Y.setBounds(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
           if (param0 != 49) {
             field_f = (boolean[]) null;
           }

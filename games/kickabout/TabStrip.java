@@ -133,11 +133,11 @@ final class TabStrip extends UiLayoutNode {
           this.field_Bb[var4].field_q = var6 - var5;
           this.field_Bb[var4].field_mb = param0;
         }
-        this.field_Cb.a(true, this.field_q, 0, param0, this.field_mb - param0);
+        this.field_Cb.setBounds(true, this.field_q, 0, param0, this.field_mb - param0);
         var8 = 0;
         var4Lifetime1 = var8;
         while (var8 < this.field_Ab.length) {
-          this.field_Ab[var8].a(true, this.field_Cb.field_q - 2 * param1, param1, param1, this.field_Cb.field_mb - param1 * 2);
+          this.field_Ab[var8].setBounds(true, this.field_Cb.field_q - 2 * param1, param1, param1, this.field_Cb.field_mb - param1 * 2);
           if (~var8 != ~this.field_Db) {
             dupTemp$0 = this.field_Ab[var8];
             dupTemp$0.field_s = dupTemp$0.field_s + 10000;

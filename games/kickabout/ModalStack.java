@@ -179,7 +179,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_Fb.field_ub = var11;
                   var7.field_Fb.field_N = DirectByteStorage.field_n;
                   var12 = 1;
-                  var7.field_Fb.a(true, 3 + DirectByteStorage.field_n.field_o, 0, var9, sh.field_c);
+                  var7.field_Fb.setBounds(true, 3 + DirectByteStorage.field_n.field_o, 0, var9, sh.field_c);
                 }
                 var7.field_Ab.field_H = var11;
                 var7.field_Bb.field_H = var11;
@@ -202,7 +202,7 @@ final class ModalStack extends SingleChildContainer {
                   stackIn_37_1 = var7.field_Gb;
                 }
                 stackIn_36_0.field_E = stackIn_37_1;
-                var7.field_Bb.a(true, var14, var13, var9, sh.field_c);
+                var7.field_Bb.setBounds(true, var14, var13, var9, sh.field_c);
                 stackIn_40_0 = var7.field_Ab;
                 if (var7.field_zb == null) {
                   stackIn_41_1 = TextInputWidget.field_K;
@@ -210,7 +210,7 @@ final class ModalStack extends SingleChildContainer {
                   stackIn_41_1 = var7.field_zb;
                 }
                 stackIn_40_0.field_E = stackIn_41_1;
-                var7.field_Ab.a(true, 80, var7.field_q - 80, var9, sh.field_c);
+                var7.field_Ab.setBounds(true, 80, var7.field_q - 80, var9, sh.field_c);
                 stackIn_45_0 = (var7.field_Bb.field_E.equals(var7.field_Gb)) ? 0 : 1;
                 var15 = stackIn_45_0;
                 var9 = var9 + sh.field_c;
@@ -218,7 +218,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_L = -var7.field_mb + var9;
                 }
                 if (var8 != 0) {
-                  ei.field_d.field_yb.a(true, 2, var7, (UiLayoutNode) (var6));
+                  ei.field_d.field_yb.positionAfter(true, 2, var7, (UiLayoutNode) (var6));
                 }
                 var6 = var7;
                 if (var7.field_Fb != null &&

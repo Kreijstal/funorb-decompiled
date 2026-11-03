@@ -703,7 +703,7 @@ final class GameOverView extends MatchPhaseView {
                 var7 = this.field_o[var6_int].field_Eb;
                 SoftwareRasterizer.a(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
                 this.field_o[var6_int].h((byte) -116);
-                this.field_s[var6_int].a(59, true);
+                this.field_s[var6_int].draw(59, true);
                 if (var7.power >= 100 &&
                   100 <= var7.speed &&
                   100 <= var7.tackle) {
@@ -1071,9 +1071,9 @@ final class GameOverView extends MatchPhaseView {
                     stackIn_74_2 = 0;
                   }
                   var9 = stackIn_76_0 + (stackIn_73_1 - stackIn_74_2);
-                  this.field_o[var8Lifetime1].a(true, 50, var9, 100, 100);
+                  this.field_o[var8Lifetime1].setBounds(true, 50, var9, 100, 100);
                   this.field_s[var8Lifetime1] = eo.createRenderedButton(so.field_a.toLowerCase(), 7126504, un.field_d, 80, true);
-                  this.field_s[var8Lifetime1].a(true, this.field_s[var8Lifetime1].field_q, var9 - 15, 230, this.field_s[var8Lifetime1].field_mb);
+                  this.field_s[var8Lifetime1].setBounds(true, this.field_s[var8Lifetime1].field_q, var9 - 15, 230, this.field_s[var8Lifetime1].field_mb);
                   var8Lifetime1++;
                 }
               }
@@ -2039,9 +2039,9 @@ final class GameOverView extends MatchPhaseView {
               }
               if (this.field_hb[var13] != -1) {
                 var14 = GameLoopApplet.field_E.squad[this.field_hb[var13]];
-                this.field_o[var13].b(0, param1);
+                this.field_o[var13].updateInput(0, param1);
                 this.field_o[var13].a(this.field_a.field_Q[this.field_h], this.field_a.field_H[this.field_h], (byte) 126, this.field_a.field_d[this.field_h], var14);
-                this.field_s[var13].b(0, param1);
+                this.field_s[var13].updateInput(0, param1);
                 if (100 > var14.experience) {
                   this.field_s[var13].field_lb = false;
                 } else {

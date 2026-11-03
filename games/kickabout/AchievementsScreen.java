@@ -51,9 +51,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
         super.drawScreen(param0, param1);
         SoftwareRasterizer.a(ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_q, ContextMenuItem.field_Ib.field_mb, 8, 0, 96);
         SoftwareRasterizer.a(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
-        bq.field_d.a(46, false);
-        ModalPanel.field_D.a(97, false);
-        ContextMenuItem.field_Ib.a(param0 + 84, false);
+        bq.field_d.draw(46, false);
+        ModalPanel.field_D.draw(97, false);
+        ContextMenuItem.field_Ib.draw(param0 + 84, false);
         AuctionListing.a(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
         var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
         while (var3 != null) {
@@ -232,16 +232,16 @@ final class AchievementsScreen extends ButtonMenuScreen {
         int var6 = Kickabout.field_G;
         int var4Lifetime1;
         super.updateScreen((byte) 101, param1);
-        bq.field_d.a(true, 32, 310 + this.slideOffsetX, 144, 32);
+        bq.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
         int var3 = 41 % ((param0 - 38) / 60);
-        ModalPanel.field_D.a(true, 32, this.slideOffsetX + 310, 176, 32);
-        ContextMenuItem.field_Ib.a(true, 300, 45 + this.slideOffsetX, 70, 200);
+        ModalPanel.field_D.setBounds(true, 32, this.slideOffsetX + 310, 176, 32);
+        ContextMenuItem.field_Ib.setBounds(true, 300, 45 + this.slideOffsetX, 70, 200);
         if (0 < this.field_B) {
           this.field_B = this.field_B - 1;
           var4 = ContextMenuItem.field_Ib.field_Db.field_J;
-          ContextMenuItem.field_Ib.b(0, param1);
-          bq.field_d.b(0, param1);
-          ModalPanel.field_D.b(0, param1);
+          ContextMenuItem.field_Ib.updateInput(0, param1);
+          bq.field_d.updateInput(0, param1);
+          ModalPanel.field_D.updateInput(0, param1);
           RenderedBall.field_C = -1;
           var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
           while (var5 != null) {
@@ -284,9 +284,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
           return;
         }
         var4Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_J;
-        ContextMenuItem.field_Ib.b(0, param1);
-        bq.field_d.b(0, param1);
-        ModalPanel.field_D.b(0, param1);
+        ContextMenuItem.field_Ib.updateInput(0, param1);
+        bq.field_d.updateInput(0, param1);
+        ModalPanel.field_D.updateInput(0, param1);
         RenderedBall.field_C = -1;
         var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
         while (var5 != null) {
@@ -476,12 +476,12 @@ final class AchievementsScreen extends ButtonMenuScreen {
     final void setTransitionProgress(int param0, boolean param1, int param2, AppScreen param3) {
         try {
           super.setTransitionProgress(param0, param1, -70, param3);
-          bq.field_d.a(true, 32, 310 + this.slideOffsetX, 144, 32);
-          ModalPanel.field_D.a(true, 32, 310 + this.slideOffsetX, 176, 32);
-          ContextMenuItem.field_Ib.a(true, 300, this.slideOffsetX + 45, 70, 200);
-          bq.field_d.b(0, false);
-          ModalPanel.field_D.b(0, false);
-          ContextMenuItem.field_Ib.b(0, false);
+          bq.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
+          ModalPanel.field_D.setBounds(true, 32, 310 + this.slideOffsetX, 176, 32);
+          ContextMenuItem.field_Ib.setBounds(true, 300, this.slideOffsetX + 45, 70, 200);
+          bq.field_d.updateInput(0, false);
+          ModalPanel.field_D.updateInput(0, false);
+          ContextMenuItem.field_Ib.updateInput(0, false);
           if (param2 >= -28) {
             field_C = (UiLayoutNode) null;
           }

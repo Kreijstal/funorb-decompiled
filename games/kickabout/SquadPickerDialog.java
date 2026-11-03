@@ -104,7 +104,7 @@ final class SquadPickerDialog extends MessageDialog {
           super.a((byte) -119, param1, param2);
           this.field_H.field_J = 35 + param2 + 20;
           this.field_H.field_s = 20 + param1;
-          this.field_H.a(101, false);
+          this.field_H.draw(101, false);
           this.field_H.k((byte) 84);
           if (-1 != this.field_H.field_Fb) {
             GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
@@ -152,7 +152,7 @@ final class SquadPickerDialog extends MessageDialog {
         super.a((byte) -119, param1, param2);
         this.field_H.field_J = 35 + param2 + 20;
         this.field_H.field_s = 20 + param1;
-        this.field_H.a(101, false);
+        this.field_H.draw(101, false);
         this.field_H.k((byte) 84);
         if (-1 != this.field_H.field_Fb) {
           GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
@@ -250,7 +250,7 @@ final class SquadPickerDialog extends MessageDialog {
         if (1 != this.field_n) {
           return;
         }
-        this.field_H.b(param0 ^ param0, param1);
+        this.field_H.updateInput(param0 ^ param0, param1);
         this.field_H.update(param0 + 45);
         if (this.field_H.field_Fb == -1) {
           this.field_i[0].field_lb = false;

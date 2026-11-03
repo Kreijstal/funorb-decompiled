@@ -43,7 +43,7 @@ final class ThreeCommand extends ConsoleCommand {
           NamedValueContainer.a(63, param0);
           if (gs.field_b) {
             SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
-            ni.field_l.field_b.a(122, param0);
+            ni.field_l.field_b.draw(122, param0);
             PasswordLoginCredentials.a(param0, (byte) -93);
             return;
           }
@@ -56,7 +56,7 @@ final class ThreeCommand extends ConsoleCommand {
           return;
         }
         SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
-        ni.field_l.field_b.a(122, param0);
+        ni.field_l.field_b.draw(122, param0);
         PasswordLoginCredentials.a(param0, (byte) -93);
     }
 

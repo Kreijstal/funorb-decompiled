@@ -302,9 +302,9 @@ class ri extends TextWidgetPainter {
           kr.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
           kr.field_b.field_kb = 2;
           AuctionSettingsDialog.field_J = new UiLayoutNode(0L, ip.field_c);
-          AuctionSettingsDialog.field_J.a(ul.field_c, (byte) -100);
+          AuctionSettingsDialog.field_J.applyStyle(ul.field_c, (byte) -100);
           mp.field_f = new UiLayoutNode(0L, kr.field_b);
-          mp.field_f.a(ul.field_c, (byte) -85);
+          mp.field_f.applyStyle(ul.field_c, (byte) -85);
           var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
           su.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
           MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
@@ -576,8 +576,8 @@ class ri extends TextWidgetPainter {
             var7.field_q = 0;
             IterableDualLinkDeque.field_h.field_E = qn.field_d.toUpperCase();
             var8 = (2 + AuctionItem.field_p.field_q) / 2;
-            nv.field_F.a(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
-            GoalStateAgent.field_k.a(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
+            nv.field_F.setBounds(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
+            GoalStateAgent.field_k.setBounds(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
             if (rn.field_d.length == 1 &&
               rn.field_d[0] == 2) {
               var9 = 0;
@@ -703,15 +703,15 @@ class ri extends TextWidgetPainter {
           stackIn_65_0 = TrinketIcon.field_Cb;
           stackIn_65_1 = 0;
           stackIn_66_2 = (param2) && (!param1) && (!TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
+          ((UiLayoutNode) (Object) stackIn_65_0).updateInput(stackIn_65_1, stackIn_66_2);
           stackIn_70_0 = AuctionItem.field_p;
           stackIn_70_1 = 0;
           stackIn_71_2 = (param2) && (!param1) && (!TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_70_0).b(stackIn_70_1, stackIn_71_2);
+          ((UiLayoutNode) (Object) stackIn_70_0).updateInput(stackIn_70_1, stackIn_71_2);
           stackIn_75_0 = tn.field_f;
           stackIn_75_1 = 0;
           stackIn_76_2 = (param2) && (!param1) && (TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_75_0).b(stackIn_75_1, stackIn_76_2);
+          ((UiLayoutNode) (Object) stackIn_75_0).updateInput(stackIn_75_1, stackIn_76_2);
           ni.field_l.field_b.h((byte) 118);
           if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;

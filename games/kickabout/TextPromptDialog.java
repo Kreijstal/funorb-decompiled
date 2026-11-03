@@ -79,7 +79,7 @@ final class TextPromptDialog extends UiLayoutNode {
           var9_ref_tv = GrowableIntList.field_b[var8];
           if (null != var9_ref_tv.field_s) {
             AuctionSettingsDialog.field_G.field_Ab.addChild((byte) -105, var9_ref_tv.field_s);
-            var9_ref_tv.field_s.a(true, var9_ref_tv.field_s.g((byte) -44), param3, var7Lifetime1, param1);
+            var9_ref_tv.field_s.setBounds(true, var9_ref_tv.field_s.getPreferredWidth((byte) -44), param3, var7Lifetime1, param1);
             var7Lifetime1 = var7Lifetime1 + param1;
             if (var9_ref_tv.field_s.field_sb != 0) {
               var4 = var9_ref_tv;
@@ -153,7 +153,7 @@ final class TextPromptDialog extends UiLayoutNode {
         boolean stackIn_16_1 = false;
         int var4;
         var4 = Kickabout.field_G;
-        this.b(param1, param0);
+        this.updateInput(param1, param0);
         if (null != this.field_Fb) {
           this.field_Fb.field_E = this.field_Db.toString();
           this.field_Fb.field_s = (this.field_q - this.field_Fb.field_X.a(this.field_Fb.field_E)) / 2;
@@ -403,7 +403,7 @@ final class TextPromptDialog extends UiLayoutNode {
             }
             for (var17Lifetime4 = 0; var17Lifetime4 < RenderedBall.field_B; var17Lifetime4++) {
               if (this.field_Jb[var17Lifetime4] != null) {
-                var18 = this.field_Jb[var17Lifetime4].g((byte) -40);
+                var18 = this.field_Jb[var17Lifetime4].getPreferredWidth((byte) -40);
                 if (var18 > var16Lifetime2) {
                   var16Lifetime2 = var18;
                 }
@@ -444,7 +444,7 @@ final class TextPromptDialog extends UiLayoutNode {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 26 + var16Lifetime2 * 3;
-            var20 = this.field_Gb.g((byte) 108);
+            var20 = this.field_Gb.getPreferredWidth((byte) 108);
             if (var19 < var20) {
               var19 = var20;
             }
@@ -454,31 +454,31 @@ final class TextPromptDialog extends UiLayoutNode {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Gb.a(true, var19 + 13 + 13, 0, 0, 24);
-            this.field_Ab.a(true, 15, -20 + this.field_Gb.field_q, 5, 15);
+            this.field_Gb.setBounds(true, var19 + 13 + 13, 0, 0, 24);
+            this.field_Ab.setBounds(true, 15, -20 + this.field_Gb.field_q, 5, 15);
             var21 = 10;
-            this.field_Cb.a(true, var19, 13, var21, 2 * sh.field_c);
+            this.field_Cb.setBounds(true, var19, 13, var21, 2 * sh.field_c);
             var21 = var21 + sh.field_c * 2;
-            this.field_Lb.a(true, var19, 13, var21, 2 * sh.field_c);
+            this.field_Lb.setBounds(true, var19, 13, var21, 2 * sh.field_c);
             var21 = var21 + (10 + 2 * sh.field_c);
-            this.field_Fb.a(true, 0, 0, var21, sh.field_c);
+            this.field_Fb.setBounds(true, 0, 0, var21, sh.field_c);
             var21 = var21 + (10 + sh.field_c);
             if (null != this.field_zb) {
               var20Lifetime3 = this.field_zb.b(0, 4);
               this.field_zb.a(4, var21, sh.field_c, var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -10481);
               var21 = var21 + (10 + sh.field_c);
             }
-            var28[0].a(true, var16Lifetime2, 13, var21, var17Lifetime5);
-            var28[1].a(true, var16Lifetime2, var16Lifetime2 + 13 + 13, var21, var17Lifetime5);
-            var28[2].a(true, var16Lifetime2, 26 + (13 + var16Lifetime2 * 2), var21, var17Lifetime5);
+            var28[0].setBounds(true, var16Lifetime2, 13, var21, var17Lifetime5);
+            var28[1].setBounds(true, var16Lifetime2, var16Lifetime2 + 13 + 13, var21, var17Lifetime5);
+            var28[2].setBounds(true, var16Lifetime2, 26 + (13 + var16Lifetime2 * 2), var21, var17Lifetime5);
             var22 = var21;
-            this.field_Nb.a(true, 13 + (13 + var19), 0, 24, 10 + var22 + var17Lifetime5);
+            this.field_Nb.setBounds(true, 13 + (13 + var19), 0, 24, 10 + var22 + var17Lifetime5);
             this.field_Nb.field_R = fs.a(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 127);
             var23 = var19 + 13 + 13;
             var24 = 10 + (var17Lifetime5 + 24) + var22;
             var25 = StripedProgressBar.b(var23, param0, param2, 127);
             var26 = nj.a(param1, param3, var24, 29079);
-            this.a(true, var23, var25, var26, var24);
+            this.setBounds(true, var23, var25, var26, var24);
             return;
           }
           this.field_Cb = new UiLayoutNode(0L, param8, HoverTooltip.field_Bb);
@@ -488,15 +488,15 @@ final class TextPromptDialog extends UiLayoutNode {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Cb.field_X.b(this.field_Cb.field_E, var15_int);
-          this.field_Cb.a(true, var15_int, 13, var16Lifetime1, var17Lifetime1 * sh.field_c);
+          this.field_Cb.setBounds(true, var15_int, 13, var16Lifetime1, var17Lifetime1 * sh.field_c);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * sh.field_c;
-          this.field_Nb.a(true, 13 + var15_int + 13, 0, 24, var16Lifetime1 + 10);
+          this.field_Nb.setBounds(true, 13 + var15_int + 13, 0, 24, var16Lifetime1 + 10);
           this.field_Nb.field_R = fs.a(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 96);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = StripedProgressBar.b(var18Lifetime1, param0, param2, 127);
           var21Lifetime1 = nj.a(param1, param3, var19Lifetime1, 29079);
-          this.a(true, var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1);
+          this.setBounds(true, var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -564,7 +564,7 @@ final class TextPromptDialog extends UiLayoutNode {
             this.field_Db = (StringBuilder) null;
           }
           var6_int = param1.field_X.paragraphHeight(param1.field_E, -(2 * param1.field_kb) + param2, param1.field_xb);
-          param1.a(true, param2, 0, param3, var6_int);
+          param1.setBounds(true, param2, 0, param3, var6_int);
           param3 = param3 + (0 + var6_int);
           param4.addChild((byte) -120, param1);
           stackIn_3_0 = param3;

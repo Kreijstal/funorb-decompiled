@@ -172,7 +172,7 @@ final class LineupView extends MatchPhaseView {
         int var3Lifetime2;
         int var9Lifetime1;
         var10 = Kickabout.field_G;
-        this.field_q.b(0, param1);
+        this.field_q.updateInput(0, param1);
         if (this.isLocalParticipantActive((byte) 13)) {
           this.field_l = -1;
           for (var3 = 0; 9 > var3; var3++) {
@@ -402,7 +402,7 @@ final class LineupView extends MatchPhaseView {
         this.drawTitle(false, k.field_h);
         this.drawCountdown(param0 ^ -2352, this.field_a.phaseTime);
         this.positionButtons(126);
-        this.field_q.a(120, false);
+        this.field_q.draw(120, false);
         var2 = -1;
         var3 = -1;
         for (var4 = 3; 0 <= var4; var4--) {
@@ -627,11 +627,11 @@ final class LineupView extends MatchPhaseView {
           this.field_B = param0.field_d[this.field_h];
           this.field_r = param0.field_Q[this.field_h];
           this.field_q = new UiLayoutNode();
-          this.field_q.a(true, 640, 0, 0, 480);
+          this.field_q.setBounds(true, 640, 0, 0, 480);
           var11 = new UiLayoutNode();
           var12 = var11;
           var12.field_N = TextLayoutLine.field_f;
-          var12.a(true, var12.field_N.field_o, 220, 100, var12.field_N.field_v);
+          var12.setBounds(true, var12.field_N.field_o, 220, 100, var12.field_N.field_v);
           this.field_q.addChild((byte) -114, var11);
           var6 = param0.field_r[this.field_h];
           this.field_z = new SquadSlotWidget[4];
@@ -641,7 +641,7 @@ final class LineupView extends MatchPhaseView {
             var11.addChild((byte) -111, this.field_t[var7]);
             this.field_z[var7] = new SquadSlotWidget();
             var8 = this.field_t[var7];
-            this.field_z[var7].a(true, var8.field_q, var8.field_s, var8.field_J, var8.field_mb);
+            this.field_z[var7].setBounds(true, var8.field_q, var8.field_s, var8.field_J, var8.field_mb);
             var11.addChild((byte) -104, (UiLayoutNode) (this.field_z[var7]));
             stackIn_6_0 = ((1 << param0.field_i[this.field_h][var7] & param0.field_c) == 0) ? 0 : 1;
             var9 = stackIn_6_0;
@@ -655,9 +655,9 @@ final class LineupView extends MatchPhaseView {
           }
           if (this.isLocalParticipantActive((byte) 13)) {
             this.field_A = new UiLayoutNode();
-            this.field_A.a(true, 156, 45, 112, 225);
+            this.field_A.setBounds(true, 156, 45, 112, 225);
             this.field_q.addChild((byte) -104, this.field_A);
-            this.field_q.b(0, true);
+            this.field_q.updateInput(0, true);
             this.field_o = new CheckboxLabelWidget(HoverTooltip.field_Ab, un.field_d, var12.field_q);
             this.field_o.field_lb = false;
             this.field_o.field_J = 7 + var12.field_mb + var12.field_T;
@@ -666,7 +666,7 @@ final class LineupView extends MatchPhaseView {
             this.field_j = new SquadSlotWidget[9];
             for (var7Lifetime1 = 0; var7Lifetime1 < 9; var7Lifetime1++) {
               this.field_j[var7Lifetime1] = new SquadSlotWidget();
-              this.field_j[var7Lifetime1].a(true, 52, this.h(var7Lifetime1, 3), this.a((byte) 113, var7Lifetime1), 75);
+              this.field_j[var7Lifetime1].setBounds(true, 52, this.h(var7Lifetime1, 3), this.a((byte) 113, var7Lifetime1), 75);
               this.field_j[var7Lifetime1].field_F = this.field_j[var7Lifetime1].field_s;
               this.field_j[var7Lifetime1].field_T = this.field_j[var7Lifetime1].field_J;
               this.field_q.addChild((byte) -125, (UiLayoutNode) (this.field_j[var7Lifetime1]));

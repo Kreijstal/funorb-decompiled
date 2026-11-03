@@ -32,7 +32,7 @@ final class WeightedLruCache {
         int var1 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var2 = -(pg.field_b * pg.field_b) + var1;
         int var3 = c.field_c + var2 * (-c.field_c + VerticalScrollbar.field_Ab) / var1;
-        g.field_a.a(true, 640, AuctionsHelpScreen.field_H, var3, 120);
+        g.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, var3, 120);
         RankingRowNode.a(124, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
     }
 

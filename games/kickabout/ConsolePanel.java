@@ -97,14 +97,14 @@ abstract class ConsolePanel implements OverlayLayer {
             SoftwareRasterizer.c(0, var3, f.field_d, 0, var4 << 5);
             var3--;
           }
-          this.field_l.a(127, 0 == (this.field_n & 8) ? true : false);
+          this.field_l.draw(127, 0 == (this.field_n & 8) ? true : false);
         }
         var2Lifetime1 = 20 / ((50 - param0) / 45);
         if (null != this.field_c &&
           this.field_h) {
           var3Lifetime1 = this.field_l.field_J + this.field_l.field_mb;
           this.field_j.field_J = var3Lifetime1;
-          this.field_j.a(78, false);
+          this.field_j.draw(78, false);
           var3Lifetime1 = var3Lifetime1 + (5 + this.field_f);
           var6 = 0;
           var4Lifetime1 = var6;
@@ -342,7 +342,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var4 = new UiLayoutNode(0L, (UiLayoutNode) null, param1);
           var4.field_X = this.field_d;
           var4.field_y = param0;
-          var4.a(true, this.field_d.a(var4.field_E), 5, 0, this.field_f);
+          var4.setBounds(true, this.field_d.a(var4.field_E), 5, 0, this.field_f);
           if (param2 > 0) {
             var5 = (String) null;
             this.a((String) null, (byte) -100);
@@ -486,7 +486,7 @@ abstract class ConsolePanel implements OverlayLayer {
           }
         }
         this.field_n = this.field_n + 1;
-        this.field_l.b(0, param1);
+        this.field_l.updateInput(0, param1);
         this.field_g.updateScroll(this.field_f, StatefulTextPainter.field_v * (this.field_f * 2), true, 0);
         this.field_k.updatePointer(11570);
     }
@@ -525,7 +525,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var11 = this.a(4, 2263074);
           var12 = this.a(65793, 200, 2236962);
           this.field_l = new UiLayoutNode(0L, var5);
-          this.field_l.a(true, f.field_d, 0, -200, 200);
+          this.field_l.setBounds(true, f.field_d, 0, -200, 200);
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new UiLayoutNode();
           var14.field_jb = new IntrusiveDeque();

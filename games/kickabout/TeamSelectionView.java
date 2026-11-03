@@ -73,7 +73,7 @@ final class TeamSelectionView extends MatchPhaseView {
           stackIn_25_1 = (var2 != 0) ? false : true;
           ((CheckboxLabelWidget) (Object) stackIn_24_0).a(stackIn_25_1, (byte) 46);
         }
-        this.field_t.a(96, false);
+        this.field_t.draw(96, false);
         var4Lifetime1 = 128;
         for (var5 = 0; var5 < this.field_a.playerCount; var5++) {
           var6 = this.field_k[var5];
@@ -139,7 +139,7 @@ final class TeamSelectionView extends MatchPhaseView {
           }
           if (TextFieldNode.field_Wb) {
             WhirlpoolHasher.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
-            ContentTransitionDialog.field_Y.b(0, param2);
+            ContentTransitionDialog.field_Y.updateInput(0, param2);
             if (param2) {
               if (0 != gl.field_c.field_sb) {
                 TextFieldNode.field_Wb = false;
@@ -198,7 +198,7 @@ final class TeamSelectionView extends MatchPhaseView {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_t = new UiLayoutNode();
-          this.field_t.a(true, 640, 0, 0, 480);
+          this.field_t.setBounds(true, 640, 0, 0, 480);
           this.field_k = new UiLayoutNode[param0.playerCount];
           for (var4_int = 0; param0.playerCount > var4_int; var4_int++) {
             var5 = new UiLayoutNode();
@@ -319,8 +319,8 @@ final class TeamSelectionView extends MatchPhaseView {
           var5.field_hb = 5592405;
           var5.field_ub = 65793;
           var5.field_y = 16777215;
-          this.field_o.a(var5, (byte) -80);
-          this.field_s.a(var5, (byte) 107);
+          this.field_o.applyStyle(var5, (byte) -80);
+          this.field_s.applyStyle(var5, (byte) 107);
           this.field_o.field_E = "<lt>";
           this.field_s.field_E = "<gt>";
           param0.addChild((byte) -106, this.field_o);
@@ -328,8 +328,8 @@ final class TeamSelectionView extends MatchPhaseView {
           this.field_o.field_R = null;
           this.field_s.field_R = null;
           int var4 = 100 / ((87 - param1) / 37);
-          this.field_o.a(true, 21, 2, 0, 21);
-          this.field_s.a(true, 21, -21 + param0.field_q - 2, 0, 21);
+          this.field_o.setBounds(true, 21, 2, 0, 21);
+          this.field_s.setBounds(true, 21, -21 + param0.field_q - 2, 0, 21);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -359,7 +359,7 @@ final class TeamSelectionView extends MatchPhaseView {
         if (param0 >= -92) {
           this.onButtonClick(-102, 73);
         }
-        this.field_t.b(0, param1);
+        this.field_t.updateInput(0, param1);
         var9 = 0;
         var3Lifetime1 = var9;
         while (this.field_a.playerCount > var9) {
@@ -387,12 +387,12 @@ final class TeamSelectionView extends MatchPhaseView {
           this.field_o.field_lb = this.field_a.field_n.canJoinTeamZero((byte) 50, this.field_g);
           this.field_s.field_lb = this.field_a.field_n.canJoinTeamOne((byte) 79, this.field_g);
           if (0 != this.field_o.field_sb) {
-            this.field_o.b(0, param1);
+            this.field_o.updateInput(0, param1);
             this.a((byte) -109, 0);
             kj.a((byte) 98);
           }
           if (this.field_s.field_sb != 0) {
-            this.field_s.b(0, param1);
+            this.field_s.updateInput(0, param1);
             this.a((byte) -111, 1);
             kj.a((byte) -105);
           }

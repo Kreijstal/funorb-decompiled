@@ -30,8 +30,8 @@ final class ConsoleEvaluationException extends Exception {
         int var2 = (-640 + ea.field_a) / 2;
         int var3 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var4 = -(param1 * param1) + var3;
-        TrinketIcon.field_Cb.a(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
-        AuctionItem.field_p.a(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
+        TrinketIcon.field_Cb.setBounds(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
+        AuctionItem.field_p.setBounds(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
         int var5 = 66 % ((73 - param0) / 52);
     }
 

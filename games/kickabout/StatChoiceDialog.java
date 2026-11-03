@@ -23,7 +23,7 @@ final class StatChoiceDialog extends MessageDialog {
         int var3Lifetime1;
         var4 = Kickabout.field_G;
         this.field_I.resetPose((byte) 125);
-        this.field_L.b(0, param1);
+        this.field_L.updateInput(0, param1);
         for (var3 = 0; 3 > var3; var3++) {
           if (1 == this.field_O[var3].field_sb) {
             if (this.field_H != var3) {
@@ -85,7 +85,7 @@ final class StatChoiceDialog extends MessageDialog {
           this.field_L.field_mb = 110;
           for (var4_int = 0; 3 > var4_int; var4_int++) {
             this.field_O[var4_int] = new UiLayoutNode();
-            this.field_O[var4_int].a(true, 150, 0, var4_int * 40, 30);
+            this.field_O[var4_int].setBounds(true, 150, 0, var4_int * 40, 30);
             stackIn_5_0 = this.field_O[var4_int];
             stackIn_6_1 = !(this.field_M[var4_int] >= 100);
             stackIn_5_0.field_lb = stackIn_6_1;
@@ -326,7 +326,7 @@ final class StatChoiceDialog extends MessageDialog {
         super.a((byte) -70, param1, param2);
         this.field_L.field_J = 95 + param2;
         this.field_L.field_s = param1 + 180;
-        this.field_L.b(0, true);
+        this.field_L.updateInput(0, true);
         PacketBuffer.a(-65, c.field_b);
         SoftwareRasterizer.clearFramebuffer();
         this.field_I.renderModel(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);

@@ -39,7 +39,7 @@ final class ContextMenu extends UiLayoutNode {
         int var3;
         int var5;
         var5 = Kickabout.field_G;
-        this.b(0, param1);
+        this.updateInput(0, param1);
         if (!param1) {
           return -2;
         }
@@ -83,7 +83,7 @@ final class ContextMenu extends UiLayoutNode {
         var7Lifetime1 = this.field_Fb + this.field_Ab * this.field_Cb + this.field_Fb;
         var8Lifetime1 = StripedProgressBar.b(var6, param2, param1, param0 ^ 127);
         var9 = nj.a(param3, param4, var7Lifetime1, 29079);
-        this.a(true, var6, var8Lifetime1, var9, var7Lifetime1);
+        this.setBounds(true, var6, var8Lifetime1, var9, var7Lifetime1);
         for (var10 = param0; var10 < this.field_Ab; var10++) {
           this.field_Bb[var10].a(this.field_Eb, this.field_Hb, -(this.field_Mb * 2) + var6, this.field_Cb * var10 + this.field_Fb, this.field_Mb, 15114, this.field_Cb);
         }

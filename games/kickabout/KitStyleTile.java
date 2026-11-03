@@ -419,7 +419,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           this.field_Jb = new UiLayoutNode();
           this.addChild((byte) -128, this.field_Jb);
           this.field_q = 50;
-          this.field_Jb.a(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
+          this.field_Jb.setBounds(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
           this.field_Ib = this.field_Cb.a(ScrollContainer.field_Ib, (byte) 54, BufferedSocket.field_f);
           this.field_Kb = this.field_Cb.a(ScrollContainer.field_Ib, field_yb, (byte) -81);
         } catch (RuntimeException runtimeException) {

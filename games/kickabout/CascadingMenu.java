@@ -361,7 +361,7 @@ final class CascadingMenu extends UiLayoutNode {
         int var7Lifetime1;
         var9 = Kickabout.field_G;
         this.field_Bb = param1 * 2 + this.field_Gb;
-        this.a(true, this.field_Bb, param2, param4 - this.field_yb, this.field_yb);
+        this.setBounds(true, this.field_Bb, param2, param4 - this.field_yb, this.field_yb);
         if (this.field_Lb != param5) {
           this.field_Lb = param5;
           this.setSlideProgress(-119, this.field_zb);

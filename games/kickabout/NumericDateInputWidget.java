@@ -20,7 +20,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     final static void a(int param0, boolean param1) {
         if (null != field_J) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -SoftwareRasterizer.field_b + SoftwareRasterizer.field_c, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
-          field_J.a(param0 ^ 30543, param1);
+          field_J.draw(param0 ^ 30543, param1);
         }
         if (param0 != 30521) {
           NumericDateInputWidget.n(81);

@@ -136,10 +136,10 @@ final class rf {
         int var6 = 24;
         int var7 = 5;
         this.field_b.a(true, param3, param0, var6, var7, param2, param1);
-        du.field_f.a(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
+        du.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
-        AlphaContainer.field_E.a(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
-        ph.field_f.a(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, sh.field_c + 2, 18);
+        AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
+        ph.field_f.setBounds(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, sh.field_c + 2, 18);
         ei.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
         TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }

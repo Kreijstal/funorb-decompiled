@@ -91,8 +91,8 @@ final class FormationView extends MatchPhaseView {
           RowRangeRequest.field_f.c(var5Lifetime1, var6Lifetime1);
         }
         if (this.isButtonEnabled(0, param0 + 49)) {
-          this.field_k.a(102, false);
-          this.field_p.a(param0 + 126, false);
+          this.field_k.draw(102, false);
+          this.field_p.draw(param0 + 126, false);
         }
         var4Lifetime3 = 110;
         var5Lifetime2 = 230;
@@ -196,8 +196,8 @@ final class FormationView extends MatchPhaseView {
         if (-2 != this.field_g) {
           this.field_k.field_lb = this.isButtonEnabled(1, 50);
           this.field_p.field_lb = this.isButtonEnabled(2, 50);
-          this.field_k.b(0, param1);
-          this.field_p.b(0, param1);
+          this.field_k.updateInput(0, param1);
+          this.field_p.updateInput(0, param1);
           if (this.field_k.field_sb != 0) {
             kj.a((byte) -121);
             this.g(8, 0);

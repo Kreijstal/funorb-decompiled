@@ -83,7 +83,7 @@ final class PlayerContextMenu {
     }
 
     final void hideMenu(boolean param0, boolean param1) {
-        this.field_j.a(47, param0);
+        this.field_j.draw(47, param0);
         if (param1) {
           this.showMenu(97);
         }
