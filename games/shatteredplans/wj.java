@@ -152,8 +152,8 @@ final class wj extends IntrusiveNode {
           } else {
             stackIn_16_4 = 0;
           }
-          ((Sprite) (Object) stackIn_13_0).c(stackIn_13_1, stackIn_13_2, stackIn_13_3 * stackIn_16_4 >> 8);
-          WeightedCacheEntry.field_u.c(0, var4, var6);
+          ((Sprite) (Object) stackIn_13_0).drawAdditive(stackIn_13_1, stackIn_13_2, stackIn_13_3 * stackIn_16_4 >> 8);
+          WeightedCacheEntry.field_u.drawAdditive(0, var4, var6);
           var11 = MenuButton.field_C;
           var7 = var11;
           for (var8 = 0; var11.length > var8; var8++) {

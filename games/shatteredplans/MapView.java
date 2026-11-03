@@ -968,7 +968,7 @@ final class MapView extends MapViewState {
                 if (var5 > 48) {
                   return;
                 }
-                this.field_Kb[var5 / 4].c(-var3_int - var6 / 2 + this.field_i[param0.field_p], -var4 + (-(var6 / 2) + this.field_J[param0.field_p]), 128);
+                this.field_Kb[var5 / 4].drawAdditive(-var3_int - var6 / 2 + this.field_i[param0.field_p], -var4 + (-(var6 / 2) + this.field_J[param0.field_p]), 128);
               }
               return;
             }
@@ -978,7 +978,7 @@ final class MapView extends MapViewState {
               if (var5 > 48) {
                 return;
               }
-              this.field_Mb[var5 / 4].c(-var3_int - var6Lifetime2 / 2 + this.field_i[param0.field_p], this.field_J[param0.field_p] - var6Lifetime2 / 2 - var4, 128);
+              this.field_Mb[var5 / 4].drawAdditive(-var3_int - var6Lifetime2 / 2 + this.field_i[param0.field_p], this.field_J[param0.field_p] - var6Lifetime2 / 2 - var4, 128);
             }
             return;
           }
@@ -986,7 +986,7 @@ final class MapView extends MapViewState {
           ImageProducerRasterBuffer.field_k[0].drawScaled(-var3_int + (this.field_i[param0.field_p] - var6Lifetime1 / 2), -var4 + this.field_J[param0.field_p] - var6Lifetime1 / 2, var6Lifetime1, var6Lifetime1);
           if (4 < var5 &&
             var5 <= 48) {
-            this.field_xb[var5 / 4].c(-var3_int - var6Lifetime1 / 2 + this.field_i[param0.field_p], -(var6Lifetime1 / 2) + this.field_J[param0.field_p] - var4, 128);
+            this.field_xb[var5 / 4].drawAdditive(-var3_int - var6Lifetime1 / 2 + this.field_i[param0.field_p], -(var6Lifetime1 / 2) + this.field_J[param0.field_p] - var4, 128);
             return;
           }
           return;
@@ -1504,7 +1504,7 @@ final class MapView extends MapViewState {
           var3 = this.field_ib[var2].field_k;
           this.field_ib[var2].field_v = (Sprite) ((Object) new ArgbSprite(cf.field_F.field_o, cf.field_F.field_p));
           this.field_ib[var2].field_v.bindAsRenderTarget();
-          cf.field_F.b(0, 0, var3);
+          cf.field_F.drawColourised(0, 0, var3);
           for (var4 = 0; var4 < cf.field_F.field_B.length; var4++) {
             this.field_ib[var2].field_v.field_B[var4] = we.intAnd(-16777216, cf.field_F.field_B[var4]) + we.intAnd(16777215, this.field_ib[var2].field_v.field_B[var4]);
           }
@@ -1522,13 +1522,13 @@ final class MapView extends MapViewState {
           }
           this.field_ib[var2].field_o = new Sprite(10, 12);
           this.field_ib[var2].field_o.bindAsRenderTarget();
-          wo.field_b.b(1, 1, var3);
+          wo.field_b.drawColourised(1, 1, var3);
           this.field_ib[var2].field_p = new Sprite(12, 12);
           this.field_ib[var2].field_p.bindAsRenderTarget();
-          oo.field_a.b(1, 1, var3);
+          oo.field_a.drawColourised(1, 1, var3);
           this.field_ib[var2].field_r = new Sprite(12, 12);
           this.field_ib[var2].field_r.bindAsRenderTarget();
-          ab.field_e.b(1, 1, var3);
+          ab.field_e.drawColourised(1, 1, var3);
           this.field_ib[var2].field_e = new Sprite(128, 128);
           this.field_ib[var2].field_e.bindAsRenderTarget();
           TextFieldWidget.field_L.drawTinted(0, 0, var3);
@@ -1540,10 +1540,10 @@ final class MapView extends MapViewState {
           }
           this.field_ib[var2].field_c = new Sprite(18, 12);
           this.field_ib[var2].field_c.bindAsRenderTarget();
-          bd.field_G.b(1, 1, var3);
+          bd.field_G.drawColourised(1, 1, var3);
           this.field_ib[var2].field_d = new Sprite(16, 10);
           this.field_ib[var2].field_d.bindAsRenderTarget();
-          bd.field_G.b(0, 0, var3);
+          bd.field_G.drawColourised(0, 0, var3);
           this.field_ib[var2].field_o.addOutline(16777215);
           this.field_ib[var2].field_p.addOutline(16777215);
           this.field_ib[var2].field_r.addOutline(16777215);
@@ -1580,7 +1580,7 @@ final class MapView extends MapViewState {
           var4 = this.field_Z[var3_int];
           if (var4 != null) {
             if (param1 != this.field_p) {
-              this.field_ob.b((int)((double)(this.field_i[var3_int] + 1) - 345.0 * this.field_wb / 2.0), (int)(-(this.field_wb * 400.0 / 2.0) + (double)(this.field_J[var3_int] + 1)), var4.field_s);
+              this.field_ob.drawColourised((int)((double)(this.field_i[var3_int] + 1) - 345.0 * this.field_wb / 2.0), (int)(-(this.field_wb * 400.0 / 2.0) + (double)(this.field_J[var3_int] + 1)), var4.field_s);
               if (this.field_X) {
                 if (!tl.field_u) {
                   return;
@@ -1588,7 +1588,7 @@ final class MapView extends MapViewState {
                 this.field_Ib.drawAlpha((int)((double)(this.field_i[var3_int] + 1) - 345.0 * this.field_wb / 2.0), (int)((double)(this.field_J[var3_int] + 1) - 400.0 * this.field_wb / 2.0), RasterBuffer.field_f);
               }
             } else {
-              this.field_Ib.b((int)(-(345.0 * this.field_wb / 2.0) + (double)(this.field_i[var3_int] + 1)), (int)((double)(this.field_J[var3_int] + 1) - this.field_wb * 400.0 / 2.0), var4.field_s);
+              this.field_Ib.drawColourised((int)(-(345.0 * this.field_wb / 2.0) + (double)(this.field_i[var3_int] + 1)), (int)((double)(this.field_J[var3_int] + 1) - this.field_wb * 400.0 / 2.0), var4.field_s);
             }
           } else {
             if (param1 != this.field_p) {

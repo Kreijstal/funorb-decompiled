@@ -268,15 +268,15 @@ final class sm {
         }
         SoftwareRasterizer.restoreClip(var25);
         if (kb.field_A > var4) {
-          bg.field_a.c(param0 - (-TutorialVictoryChecker.field_r[this.field_a] + 26), -35 + (TutorialVictoryChecker.field_t[this.field_a] + param1), 256);
+          bg.field_a.drawAdditive(param0 - (-TutorialVictoryChecker.field_r[this.field_a] + 26), -35 + (TutorialVictoryChecker.field_t[this.field_a] + param1), 256);
           if (BattleContribution.field_o == -3) {
-            bg.field_a.c(TutorialVictoryChecker.field_r[this.field_a] + param0 - 26, param1 + TutorialVictoryChecker.field_t[this.field_a] - 35, 256);
+            bg.field_a.drawAdditive(TutorialVictoryChecker.field_r[this.field_a] + param0 - 26, param1 + TutorialVictoryChecker.field_t[this.field_a] - 35, 256);
           }
         }
         if (0 < var4) {
-          WidgetTheme.field_k.c(-26 + (param0 + TutorialVictoryChecker.field_r[this.field_a]), 5 + param1, 256);
+          WidgetTheme.field_k.drawAdditive(-26 + (param0 + TutorialVictoryChecker.field_r[this.field_a]), 5 + param1, 256);
           if (BattleContribution.field_o == -2) {
-            WidgetTheme.field_k.c(TutorialVictoryChecker.field_r[this.field_a] + (param0 - 26), param1 + 5, 256);
+            WidgetTheme.field_k.drawAdditive(TutorialVictoryChecker.field_r[this.field_a] + (param0 - 26), param1 + 5, 256);
           }
         }
         var9Lifetime1 = -(21 * var5) + 310;
@@ -315,7 +315,7 @@ final class sm {
             bs.a(var20, 125);
             rs.field_Cb.a(var15_ref_String, 1 + rs.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
             cg.i(0);
-            var20.c(var18, var19, 256 * var14_intLifetime1 / 12);
+            var20.drawAdditive(var18, var19, 256 * var14_intLifetime1 / 12);
           }
           param1 = param1 + var13;
         }
@@ -339,7 +339,7 @@ final class sm {
           cg.i(param2 ^ 7552);
           var18Lifetime1 = var6 - 14;
           var19Lifetime1 = (-var15 + var11Lifetime1 >> 1) + 16 + param1;
-          var17.c(var18Lifetime1, var19Lifetime1, (int)(2.67 * (double)var13Lifetime1));
+          var17.drawAdditive(var18Lifetime1, var19Lifetime1, (int)(2.67 * (double)var13Lifetime1));
         }
         return;
     }
@@ -1169,9 +1169,9 @@ final class sm {
                 var13 = cl.field_n % 104;
                 if (4 < var13 &&
                   48 >= var13) {
-                  MenuLabel.field_y[var13 / 4].c(var12 - 15, param0 - 15, 30, 30, 128);
+                  MenuLabel.field_y[var13 / 4].drawScaledAdditive(var12 - 15, param0 - 15, 30, 30, 128);
                 } else {
-                  MenuLabel.field_y[12].c(-15 + var12, -15 + param0, 30, 30, 128);
+                  MenuLabel.field_y[12].drawScaledAdditive(-15 + var12, -15 + param0, 30, 30, 128);
                 }
                 rs.field_Cb.drawString(or.field_d[0], var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 return;
@@ -1299,8 +1299,8 @@ final class sm {
                       var20 += 5;
                     }
                     cg.i(0);
-                    var34.c(param3 + 7, param0 + 15, var17_intLifetime2);
-                    var34.c(param3 + 7, 15 + param0, var18_intLifetime1);
+                    var34.drawAdditive(param3 + 7, param0 + 15, var17_intLifetime2);
+                    var34.drawAdditive(param3 + 7, 15 + param0, var18_intLifetime1);
                   } else {
                     if (var16_intLifetime2 == 2) {
                       var35 = new Sprite(var10_ref_om.field_z + 30, var10_ref_om.field_w);
@@ -1314,13 +1314,13 @@ final class sm {
                         var20 += 5;
                       }
                       cg.i(0);
-                      var35.c(param3 + 3, 15 + param0, var17_intLifetime2);
-                      var35.c(param3 + 3, param0 + 15, var18_intLifetime1);
+                      var35.drawAdditive(param3 + 3, 15 + param0, var17_intLifetime2);
+                      var35.drawAdditive(param3 + 3, param0 + 15, var18_intLifetime1);
                     }
                   }
                 } else {
-                  var10_ref_om.c(15 + param3, param0 + 15, var17_intLifetime2);
-                  var10_ref_om.c(15 + param3, param0 + 15, var18_intLifetime1);
+                  var10_ref_om.drawAdditive(15 + param3, param0 + 15, var17_intLifetime2);
+                  var10_ref_om.drawAdditive(15 + param3, param0 + 15, var18_intLifetime1);
                 }
                 var36 = fr.field_F;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
@@ -1951,31 +1951,31 @@ final class sm {
               bs.a(var10_ref_bi, 112);
               var30.c(0, 0, 48, 48);
               cg.i(0);
-              var8Lifetime2.c(var4 - 32, var3 - 32, 96, 96, var7_int << 1);
-              var10_ref_bi.c(var4 - 8, -8 + var3, 256);
+              var8Lifetime2.drawScaledAdditive(var4 - 32, var3 - 32, 96, 96, var7_int << 1);
+              var10_ref_bi.drawAdditive(var4 - 8, -8 + var3, 256);
             } else {
               if (RasterBuffer.field_e == var6) {
                 if (-1 == an.field_c) {
-                  var28.c(-16 + var4, var3 - 16, var7_int);
-                  var29.c(var4, var3, 256);
-                  var29.c(var4, var3, 128);
+                  var28.drawAdditive(-16 + var4, var3 - 16, var7_int);
+                  var29.drawAdditive(var4, var3, 256);
+                  var29.drawAdditive(var4, var3, 128);
                 } else {
-                  var28.c(var4 - 16, var3 - 16, var7_int);
-                  var29.c(var4, var3, 256);
+                  var28.drawAdditive(var4 - 16, var3 - 16, var7_int);
+                  var29.drawAdditive(var4, var3, 256);
                 }
               } else {
                 if (an.field_c == -1) {
-                  var28.c(var4 - 16, var3 - 16, var7_int);
-                  var29.c(var4, var3, 256);
+                  var28.drawAdditive(var4 - 16, var3 - 16, var7_int);
+                  var29.drawAdditive(var4, var3, 256);
                 } else {
-                  var28.c(var4 - 16, -16 + var3, var7_int >> 1);
-                  var29.c(var4, var3, 128);
+                  var28.drawAdditive(var4 - 16, -16 + var3, var7_int >> 1);
+                  var29.drawAdditive(var4, var3, 128);
                 }
               }
             }
           } else {
-            var28.c(-16 + var4, var3 - 16, var7_int * le.field_b / 32);
-            var29.c(var4, var3, (le.field_b << 8) / 32);
+            var28.drawAdditive(-16 + var4, var3 - 16, var7_int * le.field_b / 32);
+            var29.drawAdditive(var4, var3, (le.field_b << 8) / 32);
           }
           var4 += 42;
           if (12 == var6 % 13) {
@@ -2030,8 +2030,8 @@ final class sm {
         var17 = 113 / ((87 - param0) / 34);
         SoftwareRasterizer.fillRoundedRectAlpha(-(var16 >> 5) - (var16 >> 1) + var14, var15 + 6, var16 + (var16 >> 4), 136, 10, 0, 128);
         SoftwareRasterizer.drawRoundedRect(-(var16 >> 1) + (var14 - (var16 >> 5)), 6 + var15, (var16 >> 4) + var16, 136, 10, SolVictoryChecker.blendColours(3974311, 0, -95, 128));
-        il.field_gb.c(-var16 + var14, -54 + var15, var16 << 1, 256, var9);
-        DisplayModeInfo.field_h.c(var14 - (var16 >> 1), 10 + var15, var16, 128, 256);
+        il.field_gb.drawScaledAdditive(-var16 + var14, -54 + var15, var16 << 1, 256, var9);
+        DisplayModeInfo.field_h.drawScaledAdditive(var14 - (var16 >> 1), 10 + var15, var16, 128, 256);
         var18 = 350;
         var2Lifetime1 = 24 + this.b(false) + (this.c(32) + 16) - var18;
         var19 = 136;

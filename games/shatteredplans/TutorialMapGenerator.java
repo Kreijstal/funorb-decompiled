@@ -647,7 +647,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
           fr.f((byte) -115);
           var1_int = SecondaryNodeHashTable.field_f.field_o;
           var2 = SecondaryNodeHashTable.field_f.field_p;
-          SecondaryNodeHashTable.field_f.c((-var1_int + 640) / 2, (param0 - var2) / 2, 256);
+          SecondaryNodeHashTable.field_f.drawAdditive((-var1_int + 640) / 2, (param0 - var2) / 2, 256);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vi.G(" + param0 + ')');
         }

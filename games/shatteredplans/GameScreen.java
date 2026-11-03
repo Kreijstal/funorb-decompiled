@@ -2287,7 +2287,7 @@ final class GameScreen {
                 if (256 < var7) {
                   var7 = 512 - var7;
                 }
-                this.field_eb.c(6 + this.field_k.field_k, var5 - 4, var7);
+                this.field_eb.drawAdditive(6 + this.field_k.field_k, var5 - 4, var7);
               }
             }
           }
@@ -2303,25 +2303,25 @@ final class GameScreen {
           var5Lifetime1 = SolVictoryChecker.blendColours(16777215, 16711680, -125, var4Lifetime1);
           if (this.field_e.field_A &&
             this.field_mb.field_s) {
-            GameKeyHandler.field_b.b(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
+            GameKeyHandler.field_b.drawColourised(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
           }
           if (null != this.field_j &&
             this.field_j.field_A &&
             this.field_S.field_s) {
-            ArchiveIndex.field_p.b(this.field_S.field_k, this.field_S.field_t, var5Lifetime1);
+            ArchiveIndex.field_p.drawColourised(this.field_S.field_k, this.field_S.field_t, var5Lifetime1);
           }
           if (this.field_cb.field_A &&
             this.field_W.field_s) {
-            us.field_a.b(this.field_W.field_k, this.field_W.field_t, var5Lifetime1);
+            us.field_a.drawColourised(this.field_W.field_k, this.field_W.field_t, var5Lifetime1);
           }
           if (this.field_J.field_A &&
             this.field_n.field_s) {
-            NodeHashTableIterator.field_b.b(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
+            NodeHashTableIterator.field_b.drawColourised(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
           }
           if (null != this.field_nb &&
             this.field_nb.field_A &&
             this.field_g.field_s) {
-            je.field_f.b(this.field_g.field_k, this.field_g.field_t, var5Lifetime1);
+            je.field_f.drawColourised(this.field_g.field_k, this.field_g.field_t, var5Lifetime1);
           }
           var3 = (MenuComponent) (this.field_y.startReverse(3725));
           boolean decompiledNaturalLoopExit0 = false;

@@ -37,9 +37,9 @@ final class hd extends IntrusiveNode {
           SoftwareRasterizer.clear();
           var2 = 300 - di.field_m;
           var1_int = -25 + var2 / 8;
-          DualLinkDeque.field_a.b(var1_int, 0, 33023);
+          DualLinkDeque.field_a.drawColourised(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
-          Dialog.field_D.b(var1_intLifetime1, 0, 4227327);
+          Dialog.field_D.drawColourised(var1_intLifetime1, 0, 4227327);
           oi.field_d.drawAlpha(var1_intLifetime1, 0, QuickChatCategoryDefinition.field_r / 8);
           var7 = MenuButton.field_y;
           var3 = var7;
@@ -50,7 +50,7 @@ final class hd extends IntrusiveNode {
             }
           }
           var1_intLifetime2 = -250 + var2 / 4;
-          vm.field_Jb.b(var1_intLifetime2, 120, 8421631);
+          vm.field_Jb.drawColourised(var1_intLifetime2, 120, 8421631);
           SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, QuickChatCategoryDefinition.field_r / 4);
           sr.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatCategoryDefinition.field_r);
           var3Lifetime1 = MenuButton.field_H;

@@ -1534,7 +1534,7 @@ public final class ShatteredPlansClient extends tl {
           }
           so.a(param0 - 67, (640 - SecondaryNodeHashTable.field_f.field_o) / 2, 10, jf.field_a);
           var2Lifetime1 = (int)var3;
-          SecondaryNodeHashTable.field_f.c((640 - SecondaryNodeHashTable.field_f.field_o) / 2, 10, 256);
+          SecondaryNodeHashTable.field_f.drawAdditive((640 - SecondaryNodeHashTable.field_f.field_o) / 2, 10, 256);
           return;
         }
     }
