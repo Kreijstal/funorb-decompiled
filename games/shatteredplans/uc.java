@@ -124,7 +124,7 @@ final class uc extends MenuComponent {
             return (hh) (stackIn_2_0);
           }
           var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
-          pd.a(param1 ^ param1);
+          TertiaryListSequence.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,7 +156,7 @@ final class uc extends MenuComponent {
           if (param8 != -87) {
             uc.e((byte) -47);
           }
-          ScrollPane.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, dn.field_l, StellarBombEvent.field_j, new v(param7));
+          ScrollPane.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, DualLinkDequeSequence.field_l, StellarBombEvent.field_j, new v(param7));
           kb.a(param6, true, param12, param14, param5);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');

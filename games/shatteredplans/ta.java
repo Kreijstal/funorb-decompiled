@@ -96,9 +96,9 @@ final class ta {
         field_c = (String) null;
     }
 
-    final static nk c(byte param0) {
-        nk var1 = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], hd.field_q[0], eo.field_fb);
-        pd.a(0);
+    final static IndexedSprite c(byte param0) {
+        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], hd.field_q[0], eo.field_fb);
+        TertiaryListSequence.a(0);
         if (param0 > 82) {
           return var1;
         }

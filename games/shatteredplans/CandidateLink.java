@@ -57,7 +57,7 @@ final class CandidateLink extends IntrusiveNode {
           }
           if (param0.field_f != null) {
             ConquestVictoryChecker.field_o = param0.field_b;
-            bq.field_e = param0.field_p;
+            IndexedSpriteState.field_e = param0.field_p;
             uo.field_f = param0.field_f;
             tl.field_D = param0.field_n;
           }

@@ -63,7 +63,7 @@ final class v {
     }
 
     final static void a(byte param0) {
-        cf.a(pd.field_f, (byte) 39);
+        cf.a(TertiaryListSequence.field_f, (byte) 39);
         int var1 = -68 % ((param0 + 66) / 40);
     }
 

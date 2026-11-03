@@ -934,7 +934,7 @@ final class Archive {
             if (null != bj.field_K &&
               bj.field_K.field_c) {
               BufferedCacheFile.c(0);
-              DialWidget.field_I.a(true, new bo(DialWidget.field_I, bg.field_f));
+              DialWidget.field_I.addDialog(true, new bo(DialWidget.field_I, bg.field_f));
             }
             return;
           }
@@ -942,7 +942,7 @@ final class Archive {
             field_h = (String) null;
           }
           DialWidget.field_I.a(BattleEvent.field_o, true, QuickChatCategoryRegistry.field_b, (byte) 0);
-          DialWidget.field_I.i(125);
+          DialWidget.field_I.updateDialogs(125);
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             DialWidget.field_I.a(oq.field_j, ho.field_h, true);
           }

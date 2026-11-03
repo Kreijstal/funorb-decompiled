@@ -148,10 +148,10 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           if (ArchiveSourceManager.field_b == var4) {
             return false;
           }
-          if (var4 == pd.field_h) {
+          if (var4 == TertiaryListSequence.field_h) {
             return false;
           }
-          if (un.field_i != var4) {
+          if (IntrusiveDequeSequence.field_i != var4) {
             return true;
           }
           return false;
@@ -578,7 +578,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
             return true;
           }
           if (98 == param0) {
-            stackIn_6_0 = this.a(param3, true);
+            stackIn_6_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_6_0;
           }
           if (param2 != 13) {
@@ -587,7 +587,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           if (param0 != 99) {
             return false;
           }
-          stackIn_12_0 = this.a(param3, -96);
+          stackIn_12_0 = this.isAfterFocusedChild(param3, -96);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

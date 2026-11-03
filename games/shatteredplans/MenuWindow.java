@@ -224,7 +224,7 @@ final class MenuWindow extends MenuComponent {
           DerelictMapGenerator.field_m = so.field_q.field_d;
         }
         if (!(pg.field_J <= 0)) {
-          bq.a(125);
+          IndexedSpriteState.a(125);
         }
         if (param0 < 57) {
           field_B = (String) null;

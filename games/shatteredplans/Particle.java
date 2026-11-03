@@ -17,9 +17,9 @@ final class Particle extends IntrusiveNode {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(pd.field_j);
-          param1.removeMouseMotionListener(pd.field_j);
-          param1.removeFocusListener(pd.field_j);
+          param1.removeMouseListener(TertiaryListSequence.field_j);
+          param1.removeMouseMotionListener(TertiaryListSequence.field_j);
+          param1.removeFocusListener(TertiaryListSequence.field_j);
           v.field_d = 0;
           int var2_int = -125 % ((param0 + 60) / 36);
         } catch (RuntimeException runtimeException) {

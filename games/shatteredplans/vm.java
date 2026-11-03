@@ -186,7 +186,7 @@ final class vm extends AnimatedPanel {
               }
               String var8 = (String) null;
               ih.a(gi.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
-              un.a(gi.field_a, (byte) 123, hd.field_k, ProductionContent.field_h, var5);
+              IntrusiveDequeSequence.a(gi.field_a, (byte) 123, hd.field_k, ProductionContent.field_h, var5);
               jp.g((byte) 119);
               GameState.a(-5883);
             } else {

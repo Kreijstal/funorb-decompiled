@@ -88,7 +88,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (pg.field_J <= 0) {
             return;
           }
-          bq.a(127);
+          IndexedSpriteState.a(127);
           tg.field_c.a(param3, -20429);
           if (null != wi.field_c) {
             if (bg.field_g) {
@@ -109,7 +109,7 @@ final class PasswordValidator extends TextFieldValidator {
             }
           }
           if (pr.field_c.field_rb != 0) {
-            DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, (String) null, 0L);
+            DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, (String) null, 0L);
           }
           var9 = SolMapReader.a(false, param2, tg.field_a, cr.field_c);
           if (var9 != null) {
@@ -122,7 +122,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (var8 == null) {
             return;
           }
-          dn.field_k = var8;
+          DualLinkDequeSequence.field_k = var8;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -292,7 +292,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = ab.field_b;
             return stackIn_6_0;
           }
-          if (hb.a(var5, -31654)) {
+          if (NodeSequence.a(var5, -31654)) {
             stackIn_10_0 = WeightedLruCache.field_d;
             return stackIn_10_0;
           }

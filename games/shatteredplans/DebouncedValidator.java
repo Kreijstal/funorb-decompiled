@@ -22,7 +22,7 @@ abstract class DebouncedValidator implements ValidationSource {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -30106) {
-            stackIn_6_0 = (hb.a((byte) -90, param1) != null);
+            stackIn_6_0 = (NodeSequence.a((byte) -90, param1) != null);
             return stackIn_6_0;
           }
           return false;
@@ -106,11 +106,11 @@ abstract class DebouncedValidator implements ValidationSource {
 
     public final ValidationState c(int param0) {
         if (this.a(16647)) {
-          return un.field_i;
+          return IntrusiveDequeSequence.field_i;
         }
         int var2 = -29 / ((-80 - param0) / 35);
         if (!(this.field_b + 350L <= pr.currentTimeMillis(14274))) {
-          return pd.field_h;
+          return TertiaryListSequence.field_h;
         }
         return this.a(false);
     }

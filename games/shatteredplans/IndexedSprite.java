@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends bq {
+final class IndexedSprite extends IndexedSpriteState {
     byte[] field_j;
     int[] field_k;
 
@@ -46,7 +46,7 @@ final class nk extends bq {
           var5 <= 0) {
           return;
         }
-        nk.b(SoftwareRasterizer.field_h, this.field_j, this.field_k, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.b(SoftwareRasterizer.field_h, this.field_j, this.field_k, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -137,7 +137,7 @@ final class nk extends bq {
         }
     }
 
-    nk(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_d = param0;
         this.field_c = param1;
         this.field_a = param2;
@@ -189,10 +189,10 @@ final class nk extends bq {
           var6 <= 0) {
           return;
         }
-        nk.a(SoftwareRasterizer.field_h, this.field_j, this.field_k, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.a(SoftwareRasterizer.field_h, this.field_j, this.field_k, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    nk(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_i = param0;
         this.field_d = param0;
         this.field_g = param1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends hb {
+final class DualLinkDequeSequence extends NodeSequence {
     static String field_k;
     static MenuComponent field_h;
     private DualLinkDeque field_i;
@@ -120,7 +120,7 @@ final class dn extends hb {
         return this.field_i.size((byte) -73);
     }
 
-    dn(DualLinkDeque param0) {
+    DualLinkDequeSequence(DualLinkDeque param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {

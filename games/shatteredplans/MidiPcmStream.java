@@ -458,7 +458,7 @@ final class MidiPcmStream extends PcmStream {
           var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
           var8 = SingleChildWidget.field_y.field_xb.field_M;
           if (param1 <= 109) {
-            MidiPcmStream.a((nk[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
+            MidiPcmStream.a((IndexedSprite[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
           }
           var9 = pr.currentTimeMillis(14274);
           var11 = null;
@@ -498,7 +498,7 @@ final class MidiPcmStream extends PcmStream {
               var12.addChild(4, var12.field_Mb);
               var12.field_xb = new AnimatedPanel[ProductionContent.field_k];
               var12.field_Bb = new AnimatedPanel(0L, (AnimatedPanel) null);
-              if ((1 << cp.field_q & var14) != 0) {
+              if ((1 << CanvasResizeController.field_q & var14) != 0) {
                 var12.field_Mb.addChild(4, var12.field_Bb);
               }
               var12.field_oc = new AnimatedPanel(0L, (AnimatedPanel) null);
@@ -673,7 +673,7 @@ final class MidiPcmStream extends PcmStream {
               var12.field_Pb.setTarget(78, cr.field_c, (byte) 85, var31, 70);
               if (var12.field_Pb.field_L &&
                 !var12.field_Pb.field_z.equals(var32)) {
-                dn.field_k = var32;
+                DualLinkDequeSequence.field_k = var32;
               }
               var12.field_Rb.field_z = Integer.toString(var12.field_Lb);
               if (var12.field_mc) {
@@ -692,7 +692,7 @@ final class MidiPcmStream extends PcmStream {
               var33_intLifetime1 = stackIn_71_0;
               var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
               var34_int = TextLayout.field_b;
-              if ((var14Lifetime1 & 1 << cp.field_q) != 0) {
+              if ((var14Lifetime1 & 1 << CanvasResizeController.field_q) != 0) {
                 var50_ref = uk.field_b[var12.field_nc];
                 var12.field_Bb.field_pb = var50_ref;
                 var12.field_Bb.setTarget(var50_ref.field_o, var12.field_Mb.field_mb, (byte) 111, 0, var34_int);
@@ -827,9 +827,9 @@ final class MidiPcmStream extends PcmStream {
                   }
                 }
                 if (var35 == null) {
-                  dn.field_k = SoundPlayback.field_l[var34_intLifetime2];
+                  DualLinkDequeSequence.field_k = SoundPlayback.field_l[var34_intLifetime2];
                 } else {
-                  dn.field_k = SoundPlayback.field_l[var34_intLifetime2] + " - " + (String) (var35);
+                  DualLinkDequeSequence.field_k = SoundPlayback.field_l[var34_intLifetime2] + " - " + (String) (var35);
                 }
               }
             }
@@ -839,7 +839,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 var34 = mk.field_e[var12.field_nc];
               }
-              dn.field_k = SolMapGenerator.field_r + " - " + var34;
+              DualLinkDequeSequence.field_k = SolMapGenerator.field_r + " - " + var34;
             }
             if (var12.field_Kb.field_L) {
               if (!var12.field_ec) {
@@ -847,7 +847,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 stackIn_155_0 = le.field_c;
               }
-              dn.field_k = stackIn_155_0;
+              DualLinkDequeSequence.field_k = stackIn_155_0;
             }
             if (var12.field_oc.field_L) {
               if (!var12.field_cc &&
@@ -860,7 +860,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 stackIn_165_0 = ns.field_qb;
               }
-              dn.field_k = stackIn_165_0;
+              DualLinkDequeSequence.field_k = stackIn_165_0;
             }
             if (var12.field_ac.field_L) {
               if (var12.field_Fb == 2) {
@@ -868,7 +868,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 stackIn_170_0 = wd.field_K;
               }
-              dn.field_k = stackIn_170_0;
+              DualLinkDequeSequence.field_k = stackIn_170_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_rb != 0 &&
@@ -904,7 +904,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(nk[] param0, int param1, Archive param2, int[] param3, Sprite[][] param4, String[] param5, int param6, Archive param7, byte[] param8, String[][] param9, Archive param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, Sprite[][] param16) {
+    final static void a(IndexedSprite[] param0, int param1, Archive param2, int[] param3, Sprite[][] param4, String[] param5, int param6, Archive param7, byte[] param8, String[][] param9, Archive param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, Sprite[][] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -1091,7 +1091,7 @@ final class MidiPcmStream extends PcmStream {
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         ij.a(3974311, param4, true, param2, param0, param1);
         if (param3 > -57) {
-          MidiPcmStream.a((nk[]) null, 95, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
+          MidiPcmStream.a((IndexedSprite[]) null, 95, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
         }
     }
 

@@ -8,20 +8,20 @@ final class pl {
     final static void a(boolean param0, byte param1) {
         if (param1 != -26) {
           field_a = (String) null;
-          if (bq.field_h == null) {
+          if (IndexedSpriteState.field_h == null) {
             return;
           }
-          if (bq.field_h.c(param0, -1)) {
-            bq.field_h = null;
+          if (IndexedSpriteState.field_h.c(param0, -1)) {
+            IndexedSpriteState.field_h = null;
             return;
           }
           return;
         }
-        if (bq.field_h == null) {
+        if (IndexedSpriteState.field_h == null) {
           return;
         }
-        if (bq.field_h.c(param0, -1)) {
-          bq.field_h = null;
+        if (IndexedSpriteState.field_h.c(param0, -1)) {
+          IndexedSpriteState.field_h = null;
           return;
         }
     }

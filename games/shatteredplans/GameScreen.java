@@ -1506,13 +1506,13 @@ final class GameScreen {
             if (4 > var9) {
               var10 = this.field_ob[var9];
               stackIn_40_0 = ~var7;
-              stackIn_40_1 = ~pd.field_k;
+              stackIn_40_1 = ~TertiaryListSequence.field_k;
               if (var13 != 0) {
                 break scanLoop1;
               }
               if (stackIn_40_0 < stackIn_40_1 ||
                 !(var8 <= bb.field_b) ||
-                !(190 + var7 > pd.field_k) ||
+                !(190 + var7 > TertiaryListSequence.field_k) ||
                 !(bb.field_b <= var8 + var10) ||
                 var13 != 0) {
                 var8 = var8 + (var10 + 8);
@@ -1521,8 +1521,8 @@ final class GameScreen {
               }
             }
             wj.a(this.field_B, (byte) -112);
-            if (dn.field_h != null) {
-              var10_ref_Integer = (Integer) (dn.field_h.field_h);
+            if (DualLinkDequeSequence.field_h != null) {
+              var10_ref_Integer = (Integer) (DualLinkDequeSequence.field_h.field_h);
               var11_int = var10_ref_Integer.intValue();
               this.a(var11_int, (byte) -116);
               if (this.field_hb.isSelected(244874369)) {
@@ -1537,7 +1537,7 @@ final class GameScreen {
               if (this.field_a.isSelected(244874369)) {
                 this.field_a.toggle((byte) 9);
               }
-              var12 = (ToggleButton) (dn.field_h);
+              var12 = (ToggleButton) (DualLinkDequeSequence.field_h);
               var12.toggle((byte) 102);
             }
             stackIn_40_0 = 4;
@@ -2900,24 +2900,24 @@ final class GameScreen {
             var8 = var8 + SliderPainter.field_k;
           }
           rs.field_Cb.drawString(var8.toUpperCase(), 10 + var4, rs.field_Cb.field_J + var5, 16777215, -1);
-          ij.a(0, -rs.field_Cb.field_J + 450 + 1, true, var4 + rs.field_Cb.field_J / 2, 10 + hb.field_b[0].field_w, rs.field_Cb.field_J + var5 + 5);
+          ij.a(0, -rs.field_Cb.field_J + 450 + 1, true, var4 + rs.field_Cb.field_J / 2, 10 + NodeSequence.field_b[0].field_w, rs.field_Cb.field_J + var5 + 5);
           var10 = 0;
           if (null != this.field_s.field_n) {
             var10 = this.field_s.field_n.field_x;
           }
-          var11 = new Sprite(hb.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + hb.field_b[0].field_z / 2));
+          var11 = new Sprite(NodeSequence.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + NodeSequence.field_b[0].field_z / 2));
           RandomAccessCacheFile.a(param0 ^ -5630);
           var11.bindAsRenderTarget();
           SoftwareRasterizer.fillRectGradient(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
           cg.i(param0 ^ param0);
           var11.rotate90();
           var11.drawAlpha(5 + (rs.field_Cb.field_J / 2 + var4), rs.field_Cb.field_J + var5 + 10, 64);
-          var12 = new ArgbSprite(hb.field_b[0].field_z, hb.field_b[0].field_w);
+          var12 = new ArgbSprite(NodeSequence.field_b[0].field_z, NodeSequence.field_b[0].field_w);
           var13_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(hb.field_b[var10].field_B.length > var13_int)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(NodeSequence.field_b[var10].field_B.length > var13_int)))) {
             if (var16 == 0) {
-              if ((-16777216 & hb.field_b[var10].field_B[var13_int]) != 0) {
+              if ((-16777216 & NodeSequence.field_b[var10].field_B[var13_int]) != 0) {
                 var12.field_B[var13_int] = -16777216;
               } else {
                 var12.field_B[var13_int] = 0;
@@ -2928,11 +2928,11 @@ final class GameScreen {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            var12.draw(5 + (var4 + rs.field_Cb.field_J / 2) + (var11.field_z - hb.field_b[0].field_z / 2), 10 + var5 + rs.field_Cb.field_J);
-            hb.field_b[var10].drawAlpha(-(hb.field_b[0].field_z / 2) + (var11.field_z + rs.field_Cb.field_J / 2) + (var4 + 5), rs.field_Cb.field_J + (var5 + 10), 64);
+            var12.draw(5 + (var4 + rs.field_Cb.field_J / 2) + (var11.field_z - NodeSequence.field_b[0].field_z / 2), 10 + var5 + rs.field_Cb.field_J);
+            NodeSequence.field_b[var10].drawAlpha(-(NodeSequence.field_b[0].field_z / 2) + (var11.field_z + rs.field_Cb.field_J / 2) + (var4 + 5), rs.field_Cb.field_J + (var5 + 10), 64);
           }
           var13 = QuickChatCategoryRegistry.a(eo.field_hb, 4371, new String[]{Integer.toString(1 + this.field_s.field_P.field_O)});
-          var14 = 10 + hb.field_b[0].field_w + (var5 + (20 + mp.field_b.field_J));
+          var14 = 10 + NodeSequence.field_b[0].field_w + (var5 + (20 + mp.field_b.field_J));
           mp.field_b.drawCentred(var13, 320, var14, 16777215, -1);
           var15 = -32 + this.field_u;
           if (var15 > 0) {
@@ -3095,8 +3095,8 @@ final class GameScreen {
         GameApplet stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hb.field_a != null) {
-            stackIn_2_0 = hb.field_a;
+          if (NodeSequence.field_a != null) {
+            stackIn_2_0 = NodeSequence.field_a;
             return stackIn_2_0;
           }
           if (param0 < 123) {
@@ -3312,12 +3312,12 @@ final class GameScreen {
             }
           }
           if ((decompiledFrameCompleted3) &&
-            (decompiledFrameRemainder1 = (null != dn.field_h))) {
-            stackIn_73_0 = dn.field_h.field_h instanceof MenuWindow;
+            (decompiledFrameRemainder1 = (null != DualLinkDequeSequence.field_h))) {
+            stackIn_73_0 = DualLinkDequeSequence.field_h.field_h instanceof MenuWindow;
           }
           if (decompiledFrameRemainder1) {
             if (stackIn_73_0) {
-              var4_ref_qh = (MenuWindow) (dn.field_h.field_h);
+              var4_ref_qh = (MenuWindow) (DualLinkDequeSequence.field_h.field_h);
               var4_ref_qh.field_s = false;
               if (var4_ref_qh == this.field_e) {
                 this.field_mb.field_o = StarLinkPlanner.field_b;
@@ -3343,7 +3343,7 @@ final class GameScreen {
               stackIn_92_0 = var3_int;
               return stackIn_92_0 != 0;
             }
-            if (dn.field_h == this.field_mb) {
+            if (DualLinkDequeSequence.field_h == this.field_mb) {
               if (!this.field_e.field_s) {
                 this.a(93, this.field_e);
                 this.field_mb.field_o = ep.field_b;
@@ -3361,7 +3361,7 @@ final class GameScreen {
               stackIn_103_0 = var3_int;
               return stackIn_103_0 != 0;
             }
-            if (this.field_S == dn.field_h) {
+            if (this.field_S == DualLinkDequeSequence.field_h) {
               boolean decompiledSharedTail2 = !(this.field_j.field_s);
               if (!decompiledSharedTail2) {
                 this.field_S.field_o = n.field_j;
@@ -3378,7 +3378,7 @@ final class GameScreen {
               stackIn_114_0 = var3_int;
               return stackIn_114_0 != 0;
             }
-            if (dn.field_h == this.field_n) {
+            if (DualLinkDequeSequence.field_h == this.field_n) {
               boolean decompiledSharedTail1 = !(this.field_J.field_s);
               if (!decompiledSharedTail1) {
                 this.field_n.field_o = rk.field_o;
@@ -3395,7 +3395,7 @@ final class GameScreen {
               stackIn_125_0 = var3_int;
               return stackIn_125_0 != 0;
             }
-            if (this.field_W == dn.field_h) {
+            if (this.field_W == DualLinkDequeSequence.field_h) {
               if (!this.field_cb.field_s) {
                 this.a(-113, this.field_cb);
                 this.field_W.field_o = ArchiveSource.field_d;
@@ -3413,7 +3413,7 @@ final class GameScreen {
               stackIn_136_0 = var3_int;
               return stackIn_136_0 != 0;
             }
-            if (dn.field_h == this.field_g) {
+            if (DualLinkDequeSequence.field_h == this.field_g) {
               if (!this.field_nb.field_s) {
                 this.a(40, this.field_nb);
                 this.field_nb.field_s = true;
@@ -3431,19 +3431,19 @@ final class GameScreen {
               stackIn_147_0 = var3_int;
               return stackIn_147_0 != 0;
             }
-            if (dn.field_h == this.field_bb) {
+            if (DualLinkDequeSequence.field_h == this.field_bb) {
               this.g((byte) 121);
               stackIn_152_0 = var3_int;
               return stackIn_152_0 != 0;
             }
-            if (this.field_f == dn.field_h) {
+            if (this.field_f == DualLinkDequeSequence.field_h) {
               stackIn_160_0 = !(ImageProducerRasterBuffer.field_n);
               ImageProducerRasterBuffer.field_n = stackIn_160_0;
               this.field_f.toggle((byte) 33);
               stackIn_161_0 = var3_int;
               return stackIn_161_0 != 0;
             }
-            if (this.field_N == dn.field_h) {
+            if (this.field_N == DualLinkDequeSequence.field_h) {
               boolean decompiledFrameRemainder0 = true;
               this.field_N.toggle((byte) 37);
               if (this.field_N.isSelected(244874369)) {
@@ -3486,7 +3486,7 @@ final class GameScreen {
               stackIn_190_0 = var3_int;
               return stackIn_190_0 != 0;
             }
-            if (dn.field_h == this.field_X) {
+            if (DualLinkDequeSequence.field_h == this.field_X) {
               if (null != this.field_s.field_Q) {
                 this.field_X.toggle((byte) 97);
               }
@@ -3518,7 +3518,7 @@ final class GameScreen {
               stackIn_213_0 = var3_int;
               return stackIn_213_0 != 0;
             }
-            if (dn.field_h == this.field_d) {
+            if (DualLinkDequeSequence.field_h == this.field_d) {
               this.field_d.toggle((byte) 73);
               if (this.field_d.isSelected(244874369)) {
                 this.field_d.field_o = de.field_k;
@@ -3539,7 +3539,7 @@ final class GameScreen {
               while (!(var5_int >= var4_ref_em.field_f.length)) {
                 var6_ref_lp = var4_ref_em.field_f[var5_int];
                 var7 = (Territory) (var6_ref_lp.field_h);
-                stackOut_231_0 = var6_ref_lp.isOrContains((byte) -10, dn.field_h);
+                stackOut_231_0 = var6_ref_lp.isOrContains((byte) -10, DualLinkDequeSequence.field_h);
                 stackIn_289_0 = stackOut_231_0 ? 1 : 0;
                 stackIn_232_0 = stackOut_231_0;
                 if (var9 != 0) {
@@ -3568,7 +3568,7 @@ final class GameScreen {
                 var4_ref_rh = (ProjectsContent) (this.field_j.field_x);
                 var5_intLifetime1 = 0;
                 while (!(var4_ref_rh.field_c.length <= var5_intLifetime1)) {
-                  stackOut_255_0 = var4_ref_rh.field_c[var5_intLifetime1].isOrContains((byte) 24, dn.field_h);
+                  stackOut_255_0 = var4_ref_rh.field_c[var5_intLifetime1].isOrContains((byte) 24, DualLinkDequeSequence.field_h);
                   stackIn_289_0 = stackOut_255_0 ? 1 : 0;
                   stackIn_256_0 = stackOut_255_0;
                   if (var9 != 0) {
@@ -3596,7 +3596,7 @@ final class GameScreen {
                   }
                   if ((var8 != this.field_s.field_n ||
                     var9 != 0) &&
-                    (var7_ref.isOrContains((byte) -118, dn.field_h) &&
+                    (var7_ref.isOrContains((byte) -118, DualLinkDequeSequence.field_h) &&
                     !this.field_s.field_n.field_h[var8.field_x])) {
                     this.field_s.proposeAlliance(var8, (byte) 54);
                   }
@@ -3641,11 +3641,11 @@ final class GameScreen {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 10 + pd.field_k;
+          var3_int = 10 + TertiaryListSequence.field_k;
           var4 = bb.field_b + 20;
           var5 = rs.field_Cb.stringWidth(param1);
           if (13 + var4 > 480) {
-            var3_int = pd.field_k;
+            var3_int = TertiaryListSequence.field_k;
             var4 = -15 + bb.field_b;
           }
           if (10 + (var5 + var3_int) > 639) {
@@ -4833,7 +4833,7 @@ final class GameScreen {
           rs.field_Cb.drawString("=", (-var7 + param1) / 2 + (param0 + 64), 13 + var6, 16777215, -1);
           rs.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + (param1 - var7) / 2 + param0, var6 + 19, 16777215, -1);
           var6 += 52;
-          cp.field_t.drawScaled(param0 + (param1 - var7) / 2, var6 - 24, 64, 64);
+          CanvasResizeController.field_t.drawScaled(param0 + (param1 - var7) / 2, var6 - 24, 64, 64);
           rs.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(5)}), 75 + ((-var7 + param1) / 2 + param0), var6 + 7, 16777215, -1);
           rs.field_Cb.drawString("=", 64 + param0 + (-var7 + param1) / 2, 13 + var6, 16777215, -1);
           rs.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(5)}), param0 - (-((-var7 + param1) / 2) - 75), 19 + var6, 16777215, -1);

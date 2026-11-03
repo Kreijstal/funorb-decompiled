@@ -205,7 +205,7 @@ final class ch implements wr {
             }
             var1_int = 1;
           }
-          ns.field_nb.a(-1, ch.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, pd.field_k));
+          ns.field_nb.a(-1, ch.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, TertiaryListSequence.field_k));
           if (ns.field_nb.a((byte) 36)) {
             var1_int = 1;
           }

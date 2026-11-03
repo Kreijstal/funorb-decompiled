@@ -27,7 +27,7 @@ final class wj extends IntrusiveNode {
           if (param1 >= -68) {
             return false;
           }
-          PlacementOrder.field_w = as.a(param0, bb.field_b, (byte) 115, pd.field_k);
+          PlacementOrder.field_w = as.a(param0, bb.field_b, (byte) 115, TertiaryListSequence.field_k);
           if (1 == je.field_d) {
             jb.field_b = 0;
             am.field_Gb = PointsVictoryChecker.field_p;
@@ -39,10 +39,10 @@ final class wj extends IntrusiveNode {
           if (AllianceExpiredEvent.field_n == 1) {
             jb.field_b = jb.field_b + 1;
             if (rs.field_Db != null) {
-              rs.field_Db.b(pd.field_k, bb.field_b, -498);
+              rs.field_Db.b(TertiaryListSequence.field_k, bb.field_b, -498);
               return true;
             }
-            var2_int = (-pd.field_k + am.field_Gb) * (am.field_Gb - pd.field_k) + (-bb.field_b + DialogRoot.field_C) * (DialogRoot.field_C - bb.field_b);
+            var2_int = (-TertiaryListSequence.field_k + am.field_Gb) * (am.field_Gb - TertiaryListSequence.field_k) + (-bb.field_b + DialogRoot.field_C) * (DialogRoot.field_C - bb.field_b);
             if (5 < jb.field_b &&
               25 < var2_int &&
               wl.field_f != null) {
@@ -55,12 +55,12 @@ final class wj extends IntrusiveNode {
           if ((rs.field_Db == null ||
             !(jb.field_b >= 5)) &&
             rr.a(wl.field_f, param0, (byte) 64)) {
-            dn.field_h = wl.field_f;
-            if (null != dn.field_h) {
-              dn.field_h.a(bb.field_b - dn.field_h.field_t, 0, -dn.field_h.field_k + pd.field_k);
+            DualLinkDequeSequence.field_h = wl.field_f;
+            if (null != DualLinkDequeSequence.field_h) {
+              DualLinkDequeSequence.field_h.a(bb.field_b - DualLinkDequeSequence.field_h.field_t, 0, -DualLinkDequeSequence.field_h.field_k + TertiaryListSequence.field_k);
             }
           } else {
-            dn.field_h = null;
+            DualLinkDequeSequence.field_h = null;
           }
           rs.field_Db = null;
           wl.field_f = null;

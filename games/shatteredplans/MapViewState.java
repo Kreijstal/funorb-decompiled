@@ -518,7 +518,7 @@ abstract class MapViewState {
         Star[] var4 = var9;
         for (var5 = 0; var9.length > var5; var5++) {
           var6 = var9[var5];
-          if (cp.a(0, param2, this.field_D[var6.field_p], this.field_h[var6.field_p], param0)) {
+          if (CanvasResizeController.a(0, param2, this.field_D[var6.field_p], this.field_h[var6.field_p], param0)) {
             return var6;
           }
         }
@@ -718,7 +718,7 @@ abstract class MapViewState {
                 var4_ref.c(true);
                 var4_ref = (BattleSnapshot) (this.field_m.nextForward((byte) -71));
               }
-              this.field_o.showStatusText(10, 0, pd.field_g);
+              this.field_o.showStatusText(10, 0, TertiaryListSequence.field_g);
             } else {
               if (param0 != 2) {
                 if (param0 != 3) {

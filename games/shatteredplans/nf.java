@@ -101,7 +101,7 @@ final class nf {
             return stackIn_11_0;
           }
           if (var2_int == 0) {
-            stackIn_14_0 = bq.field_f;
+            stackIn_14_0 = IndexedSpriteState.field_f;
             return stackIn_14_0;
           }
           if (1 == var2_int) {

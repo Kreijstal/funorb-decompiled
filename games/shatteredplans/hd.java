@@ -153,7 +153,7 @@ final class hd extends IntrusiveNode {
         }
         ld var2 = new ld();
         SectorCacheStore.field_d.addLast((byte) -113, var2);
-        cp.a(param0, 1);
+        CanvasResizeController.a(param0, 1);
         return var2;
     }
 

@@ -226,11 +226,11 @@ final class pe extends WidgetContainer implements op, ButtonListener {
             return true;
           }
           if (98 == param0) {
-            stackIn_5_0 = this.a(param3, true);
+            stackIn_5_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_5_0;
           }
           if (param0 == 99) {
-            stackIn_10_0 = this.a(param3, -97);
+            stackIn_10_0 = this.isAfterFocusedChild(param3, -97);
             return stackIn_10_0;
           }
           return false;

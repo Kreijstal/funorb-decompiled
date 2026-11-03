@@ -355,10 +355,10 @@ final class ScrollPane extends AnimatedPanel {
           } else {
             lh.d((byte) 44);
           }
-          if (pd.field_k < 540) {
+          if (TertiaryListSequence.field_k < 540) {
             ArchiveIndex.field_o = false;
           } else {
-            if (pd.field_k >= 620) {
+            if (TertiaryListSequence.field_k >= 620) {
               ArchiveIndex.field_o = false;
             } else {
               if (440 > bb.field_b) {

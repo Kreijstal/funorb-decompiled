@@ -87,7 +87,7 @@ abstract class Dialog extends WidgetContainer {
         ArchiveIndex.field_r.drawAlpha(this.field_m + param3, this.field_q + param2, this.field_G);
     }
 
-    boolean k(int param0) {
+    boolean isClosed(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           field_D = (Sprite) null;
@@ -97,15 +97,15 @@ abstract class Dialog extends WidgetContainer {
         return stackIn_6_0;
     }
 
-    final UiWidget i(int param0) {
-        UiWidget var2 = super.i(param0);
+    final UiWidget findFocusedChild(int param0) {
+        UiWidget var2 = super.findFocusedChild(param0);
         if (var2 != null) {
           return var2;
         }
         return (UiWidget) (this);
     }
 
-    boolean a(byte param0) {
+    boolean animate(byte param0) {
         int var2;
         int var3;
         boolean stackIn_10_0 = false;
@@ -123,7 +123,7 @@ abstract class Dialog extends WidgetContainer {
         return stackIn_10_0;
     }
 
-    final void b(int param0, int param1, byte param2) {
+    final void centre(int param0, int param1, byte param2) {
         if (param2 >= -103) {
           Dialog.clearStatics(11);
         }
@@ -229,7 +229,7 @@ abstract class Dialog extends WidgetContainer {
         if (param0) {
           this.drawLayer(-109, -11, -57, 34);
         }
-        return this.field_E ? this != this.field_F.g((byte) 119) ? 0 : 256 : 0;
+        return this.field_E ? this != this.field_F.getActiveDialog((byte) 119) ? 0 : 256 : 0;
     }
 
     abstract void a(int param0, int param1, int param2);
@@ -243,7 +243,7 @@ abstract class Dialog extends WidgetContainer {
           var1 = id.a(-106);
         }
         if (var1.length() == 0) {
-          var1 = hb.field_c;
+          var1 = NodeSequence.field_c;
         }
         return var1;
     }

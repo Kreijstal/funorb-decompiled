@@ -68,7 +68,7 @@ final class MenuButton extends MenuComponent {
         }
     }
 
-    final static void a(boolean param0, byte[] param1, byte[] param2, int param3, int[] param4, String[] param5, int param6, Archive param7, Archive param8, String[][] param9, Archive param10, Sprite[][] param11, String[] param12, Sprite[][] param13, String[][] param14, nk[] param15, int param16, int[] param17, String[] param18, int param19) {
+    final static void a(boolean param0, byte[] param1, byte[] param2, int param3, int[] param4, String[] param5, int param6, Archive param7, Archive param8, String[][] param9, Archive param10, Sprite[][] param11, String[] param12, Sprite[][] param13, String[][] param14, IndexedSprite[] param15, int param16, int[] param17, String[] param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -104,7 +104,7 @@ final class MenuButton extends MenuComponent {
         RuntimeException var20 = null;
         try {
           StrongCacheEntry.a((byte) -52, param17, param10, param15, param8);
-          bq.a(27770, param8);
+          IndexedSpriteState.a(27770, param8);
           if (param16 > -113) {
             MenuButton.clearStatics(125);
           }

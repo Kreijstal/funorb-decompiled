@@ -282,16 +282,16 @@ final class ObjectList {
               var12.field_Ob.setTarget(40, cr.field_c, (byte) 126, var19, var12.field_K - 40);
               if (var12.field_Ab.field_L &&
                 var22 != 0) {
-                dn.field_k = var12.field_Cb;
+                DualLinkDequeSequence.field_k = var12.field_Cb;
                 if (NetworkArchiveRequest.field_v != null &&
                   null != NetworkArchiveRequest.field_v[var12.field_Lb]) {
-                  dn.field_k = dn.field_k + " - " + NetworkArchiveRequest.field_v[var12.field_Lb];
+                  DualLinkDequeSequence.field_k = DualLinkDequeSequence.field_k + " - " + NetworkArchiveRequest.field_v[var12.field_Lb];
                 }
               } else {
                 if (var12.field_Ab.field_L &&
                   NetworkArchiveRequest.field_v != null &&
                   NetworkArchiveRequest.field_v[var12.field_Lb] != null) {
-                  dn.field_k = NetworkArchiveRequest.field_v[var12.field_Lb];
+                  DualLinkDequeSequence.field_k = NetworkArchiveRequest.field_v[var12.field_Lb];
                 }
               }
               var19 = var19 + cr.field_c;
@@ -476,7 +476,7 @@ final class ObjectList {
                   var27 = np.field_a.field_Xb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatCategoryRegistry.a(ve.field_Gb, 4371, new String[]{var27});
                 }
-                dn.field_k = (String) (var24Lifetime2);
+                DualLinkDequeSequence.field_k = (String) (var24Lifetime2);
               }
             }
             var11 = var12;

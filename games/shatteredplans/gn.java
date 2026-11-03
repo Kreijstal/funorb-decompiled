@@ -27,9 +27,9 @@ final class gn extends WidgetTheme {
           AnimatedPanel var5 = (AnimatedPanel) null;
           gn.a(122, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
-        if (bq.field_h != null &&
+        if (IndexedSpriteState.field_h != null &&
           13 == oq.field_j) {
-          bq.field_h = null;
+          IndexedSpriteState.field_h = null;
           return true;
         }
         if (!sr.field_h) {

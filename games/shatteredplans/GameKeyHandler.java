@@ -31,7 +31,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int >= 0) {
               StrongCacheEntry.field_x[qn.field_c] = ~var2_int;
               qn.field_c = 1 + qn.field_c & 127;
-              if (qn.field_c == hb.field_e) {
+              if (qn.field_c == NodeSequence.field_e) {
                 qn.field_c = -1;
               }
             }
@@ -78,7 +78,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               0 <= var2_int) {
               StrongCacheEntry.field_x[qn.field_c] = var2_int;
               qn.field_c = 1 + qn.field_c & 127;
-              if (hb.field_e == qn.field_c) {
+              if (NodeSequence.field_e == qn.field_c) {
                 qn.field_c = -1;
               }
             }

@@ -111,7 +111,7 @@ class UiWidget extends IntrusiveNode {
         } else {
           if (so.field_o != 0 &&
             var5 != 0) {
-            this.a(0, bb.field_b, pd.field_k, this, param2, param0, so.field_o);
+            this.a(0, bb.field_b, TertiaryListSequence.field_k, this, param2, param0, so.field_o);
           }
           if (je.field_d != 0) {
             if (!this.handlePress(je.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
@@ -124,7 +124,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (AllianceExpiredEvent.field_n == 0 &&
             so.field_m != 0) {
-            this.handleRelease(pd.field_k, param2, param0, bb.field_b, -600269855, this);
+            this.handleRelease(TertiaryListSequence.field_k, param2, param0, bb.field_b, -600269855, this);
             var6 = oa.field_b;
             if (var6 != null) {
               if (var6.field_u instanceof lf) {
@@ -285,7 +285,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.containsPoint(pd.field_k, 62, bb.field_b, param1, param0) ? 1 : 0;
+          var5_int = this.containsPoint(TertiaryListSequence.field_k, 62, bb.field_b, param1, param0) ? 1 : 0;
           stackIn_3_0 = (this.field_k) ? 0 : 1;
           if (stackIn_3_0 == var5_int) {
             stackIn_7_1 = (var5_int != 0);

@@ -231,7 +231,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         if (param0 != 1) {
           return true;
         }
-        return null != this.a(2) ? true : false;
+        return null != this.findFocusedWidget(2) ? true : false;
     }
 
     final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
@@ -344,7 +344,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         }
     }
 
-    UiWidget a(int param0) {
+    UiWidget findFocusedWidget(int param0) {
         UiWidget var2 = null;
         UiWidget var2Lifetime1;
         if (param0 != 2) {

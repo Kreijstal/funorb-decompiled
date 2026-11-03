@@ -393,7 +393,7 @@ final class SolVictoryChecker extends VictoryChecker {
                 mq.field_c = aj.a(param5, false, false, param3);
               } else {
                 var10 = (String) null;
-                mq.field_c = dd.a(false, param3, (String) null, 4684, pd.field_l);
+                mq.field_c = dd.a(false, param3, (String) null, 4684, TertiaryListSequence.field_l);
               }
               js.field_f.position = 0;
               js.field_f.writeByte(14, (byte) -80);
@@ -448,7 +448,7 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (SolMapReader.field_c == Wormhole.field_j &&
               uc.d((byte) -46)) {
-              pd.field_l = sa.field_a.readLong(46);
+              TertiaryListSequence.field_l = sa.field_a.readLong(46);
               di.field_q = param3;
               bs.field_b = sa.field_a.readUnsignedByte(-85);
               CellVertex.field_i = sa.field_a.readUnsignedByte(-89);
@@ -507,7 +507,7 @@ final class SolVictoryChecker extends VictoryChecker {
                 }
               } else {
                 try {
-                  ll.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{pd.a((byte) -67, pd.field_l)}, -116);
+                  ll.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{TertiaryListSequence.a((byte) -67, TertiaryListSequence.field_l)}, -116);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

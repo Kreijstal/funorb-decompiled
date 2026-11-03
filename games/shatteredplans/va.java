@@ -194,7 +194,7 @@ final class va {
           if (param1 != -1) {
             field_g = (UrlLoader) null;
           }
-          var3 = dn.a(param0, true);
+          var3 = DualLinkDequeSequence.a(param0, true);
           if (param2.indexOf(param0) != -1) {
             return true;
           }

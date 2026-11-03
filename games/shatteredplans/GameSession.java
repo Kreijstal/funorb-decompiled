@@ -1327,8 +1327,8 @@ final class GameSession implements AiHost {
             if (je.field_d == 1) {
               this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
-            this.handleMapPointer(-3587, pd.field_k, bb.field_b);
-            this.field_z.a(this.field_m, 0, pd.field_k, bb.field_b);
+            this.handleMapPointer(-3587, TertiaryListSequence.field_k, bb.field_b);
+            this.field_z.a(this.field_m, 0, TertiaryListSequence.field_k, bb.field_b);
           }
           var3 = this.field_z.field_k;
           var4 = this.field_z.field_E;
@@ -1382,7 +1382,7 @@ final class GameSession implements AiHost {
           }
           if (decompiledFrameRemainder1) {
             if (this.field_G) {
-              var6 = -this.field_z.field_db + pd.field_k;
+              var6 = -this.field_z.field_db + TertiaryListSequence.field_k;
               var7 = -this.field_z.field_e + bb.field_b;
               var3 = var3 - this.field_z.field_I * (float)var6 / 300.0f;
               if (0.0f > var3) {
@@ -1401,7 +1401,7 @@ final class GameSession implements AiHost {
             }
             this.field_z.field_e = bb.field_b;
             this.field_G = true;
-            this.field_z.field_db = pd.field_k;
+            this.field_z.field_db = TertiaryListSequence.field_k;
           }
           if (var2_int == 0 &&
             so.field_o != 0) {
@@ -1410,7 +1410,7 @@ final class GameSession implements AiHost {
             boolean decompiledFrameRemainder0 = true;
             var6Lifetime1 = 320;
             var7Lifetime1 = this.field_Y.getAreaHeight((byte) 14) / 2;
-            var8 = var3 + (float)(pd.field_k - var6Lifetime1) * this.field_z.field_I / 300.0f;
+            var8 = var3 + (float)(TertiaryListSequence.field_k - var6Lifetime1) * this.field_z.field_I / 300.0f;
             var9 = (float)(bb.field_b - var7Lifetime1) * this.field_z.field_I / 300.0f + var4;
             if (0 >= so.field_o) {
               var10 = 2 * so.field_o;
@@ -1446,7 +1446,7 @@ final class GameSession implements AiHost {
             }
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameCompleted0)) {
-              var3 = var8 - var5 * (float)(-var6Lifetime1 + pd.field_k) / 300.0f;
+              var3 = var8 - var5 * (float)(-var6Lifetime1 + TertiaryListSequence.field_k) / 300.0f;
               var4 = var9 - var5 * (float)(bb.field_b - var7Lifetime1) / 300.0f;
             }
             if (0.0f > var3) {
@@ -1482,7 +1482,7 @@ final class GameSession implements AiHost {
             (this.field_z.field_S != null)) {
             discarded$0 = this.handleFleetClick((byte) 121, this.field_z.field_S);
           }
-          this.field_z.c(pd.field_k, bb.field_b, param0 ^ 69);
+          this.field_z.c(TertiaryListSequence.field_k, bb.field_b, param0 ^ 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

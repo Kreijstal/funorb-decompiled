@@ -24,7 +24,7 @@ final class vj extends SingleChildWidget {
         try {
           if (GzipInflater.field_c == -1 &&
             cb.field_n == -1) {
-            GzipInflater.field_c = pd.field_k;
+            GzipInflater.field_c = TertiaryListSequence.field_k;
             cb.field_n = bb.field_b;
           }
           boolean decompiledFrameRemainder0 = true;

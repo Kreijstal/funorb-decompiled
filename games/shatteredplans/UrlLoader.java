@@ -216,7 +216,7 @@ final class UrlLoader implements Runnable {
           }
           var3 = new ByteArrayNode(param0);
           MapView.field_vb.addLast((byte) -113, var3);
-          dn.a(param2, var3, (byte) 13);
+          DualLinkDequeSequence.a(param2, var3, (byte) 13);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

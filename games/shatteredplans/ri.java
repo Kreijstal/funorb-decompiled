@@ -64,13 +64,13 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a(param3, true);
+            stackIn_6_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param3, 102);
+          stackIn_9_0 = this.isAfterFocusedChild(param3, 102);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

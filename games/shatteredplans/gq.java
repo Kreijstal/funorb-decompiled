@@ -213,9 +213,9 @@ final class gq {
           var7Lifetime1 = 0;
           var8Lifetime1 = je.sine(var6Lifetime1, (byte) -104) >> 8;
           var9Lifetime1 = IntrusiveNode.cosine(var6Lifetime1, -123) >> 8;
-          if (-1 != pd.field_k &&
+          if (-1 != TertiaryListSequence.field_k &&
             bb.field_b != -1) {
-            var7Lifetime1 = pd.field_k - 320;
+            var7Lifetime1 = TertiaryListSequence.field_k - 320;
             var9Lifetime1 = -128;
             var8Lifetime1 = 240 - bb.field_b;
           }
@@ -266,7 +266,7 @@ final class gq {
           var3[var4_int] = eo.field_fb[we.intAnd((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
-        pd.a(0);
+        TertiaryListSequence.a(0);
         return var4;
     }
 

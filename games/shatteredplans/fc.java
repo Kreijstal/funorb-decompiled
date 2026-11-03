@@ -134,7 +134,7 @@ final class fc {
         if (param1 != 17) {
           return false;
         }
-        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
+        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -244,7 +244,7 @@ final class fc {
             param1 == 2) && po.field_b == 2) {
             var7 = this.a(-121);
             var4 = var7;
-            var5 = hb.a((byte) -90, this.field_k);
+            var5 = NodeSequence.a((byte) -90, this.field_k);
             var6 = IntrusiveNodeHashTable.a(this.field_k, true) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {

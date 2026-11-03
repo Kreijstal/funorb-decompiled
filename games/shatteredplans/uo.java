@@ -27,7 +27,7 @@ final class uo {
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           le.field_e.a(kd.field_a, true, oo.field_e, (byte) 0);
-          le.field_e.i(120);
+          le.field_e.updateDialogs(120);
           if (param0 != -75) {
             stackIn_3_0 = -107;
             return stackIn_3_0;
@@ -196,15 +196,15 @@ final class uo {
             var6 = aq.field_j;
             aq.field_j.field_mb = 0;
             var6.field_K = 0;
-            dn.field_f.field_mb = 0;
-            var7 = dn.field_f;
+            DualLinkDequeSequence.field_f.field_mb = 0;
+            var7 = DualLinkDequeSequence.field_f;
             var7.field_K = 0;
             if (!SecondaryNodeDequeIterator.a((byte) -94)) {
               var9_ref_String = np.field_a.field_Xb;
               ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
-              dn.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
-              dn.field_f.field_z = QuickChatCategoryRegistry.a(gq.field_a, 4371, new String[]{var9_ref_String});
-              var8 = dn.field_f;
+              DualLinkDequeSequence.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
+              DualLinkDequeSequence.field_f.field_z = QuickChatCategoryRegistry.a(gq.field_a, 4371, new String[]{var9_ref_String});
+              var8 = DualLinkDequeSequence.field_f;
             } else {
               ArchiveSourceManager.field_f.field_z = n.field_m.toUpperCase();
               var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
@@ -390,9 +390,9 @@ final class uo {
                     aq.field_j.field_s = false;
                     if (!(!aq.field_j.field_v)) {
                       if (n.field_h.field_d.field_zb == 0) {
-                        dn.field_k = IntrusiveDequeCursor.field_a;
+                        DualLinkDequeSequence.field_k = IntrusiveDequeCursor.field_a;
                       } else {
-                        dn.field_k = QuickChatCategoryRegistry.a(jr.field_l, param0 ^ 4356, new String[]{QuickChatPhraseRegistry.field_c});
+                        DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(jr.field_l, param0 ^ 4356, new String[]{QuickChatPhraseRegistry.field_c});
                       }
                     }
                   }
@@ -430,7 +430,7 @@ final class uo {
                       var14 = QuickChatCategoryRegistry.a(js.field_h, 4371, new String[]{(String) (var11)});
                     }
                   }
-                  dn.field_k = "<col=A00000>" + var13_ref + "<br>" + var14;
+                  DualLinkDequeSequence.field_k = "<col=A00000>" + var13_ref + "<br>" + var14;
                 }
               }
             }

@@ -32,7 +32,7 @@ final class HuffmanCodec {
           var2 = (Dialog.d(true)) ? 0 : 1;
         }
         if (null == BoundsRect.field_p &&
-          cp.field_u) {
+          CanvasResizeController.field_u) {
           SoundPlayback.a(param0, 125, var2);
         }
     }

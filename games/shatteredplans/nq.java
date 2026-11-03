@@ -20,7 +20,7 @@ abstract class nq extends DualLinkNode {
     private static int field_w;
     private static String[] field_D;
     private static int field_s;
-    private bq[] field_z;
+    private IndexedSpriteState[] field_z;
     int field_J;
     private static int field_A;
     private static int field_u;
@@ -150,7 +150,7 @@ abstract class nq extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        bq var11_ref_bq = null;
+        IndexedSpriteState var11_ref_bq = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -502,7 +502,7 @@ abstract class nq extends DualLinkNode {
 
     abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    final void a(bq[] param0, int[] param1) {
+    final void a(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();

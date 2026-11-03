@@ -513,11 +513,11 @@ final class GameState {
           if (!this.field_o.field_i) {
             var5 = (Territory) (var4.field_i.startForward(0));
             while (var5 != null) {
-              vf.a(127, var5);
+              QuaternaryListSequence.a(127, var5);
               var5 = (Territory) (var4.field_i.nextForward((byte) -71));
             }
           } else {
-            vf.a(127, var4.field_m);
+            QuaternaryListSequence.a(127, var4.field_m);
           }
         }
     }
@@ -2385,7 +2385,7 @@ final class GameState {
           }
           param1.field_f = new int[this.field_r + 1];
           param1.field_h = new boolean[this.field_r + 1];
-          vf.a(126, param1.field_m);
+          QuaternaryListSequence.a(126, param1.field_m);
           SolMapReader.a(param1.field_m, param0);
           var3 = new Player[this.field_r + 1];
           var4 = new String[this.field_r + 1];
@@ -2596,12 +2596,12 @@ final class GameState {
           if (!this.field_o.field_i) {
             var5 = (Territory) (var4.field_i.startForward(0));
             while (var5 != null) {
-              vf.a(param0 ^ 127, var5);
+              QuaternaryListSequence.a(param0 ^ 127, var5);
               SolMapReader.a(var5, param0 - 5);
               var5 = (Territory) (var4.field_i.nextForward((byte) -71));
             }
           } else {
-            vf.a(param0 ^ 125, var4.field_m);
+            QuaternaryListSequence.a(param0 ^ 125, var4.field_m);
             SolMapReader.a(var4.field_m, -5);
           }
         }
@@ -2836,12 +2836,12 @@ final class GameState {
           if (!this.field_o.field_i) {
             var18 = (Territory) (param1.field_i.startForward(0));
             while (var18 != null) {
-              vf.a(120, var18);
+              QuaternaryListSequence.a(120, var18);
               SolMapReader.a(var18, -5);
               var18 = (Territory) (param1.field_i.nextForward((byte) -71));
             }
           } else {
-            vf.a(122, param1.field_m);
+            QuaternaryListSequence.a(122, param1.field_m);
             SolMapReader.a(param1.field_m, -5);
           }
           var11 = (FleetMove) (param0.startForward(0));

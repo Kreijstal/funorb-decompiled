@@ -18,7 +18,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == pd.field_j) {
+          if (null == TertiaryListSequence.field_j) {
             return;
           }
           ql.field_q = 0;
@@ -60,7 +60,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == pd.field_j) {
+          if (null == TertiaryListSequence.field_j) {
             return;
           }
           ql.field_q = 0;
@@ -84,7 +84,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (pd.field_j != null) {
+          if (TertiaryListSequence.field_j != null) {
             ql.field_q = 0;
             aj.field_f = param0.getX();
             AllianceExpiredEvent.field_i = param0.getY();
@@ -133,7 +133,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             var3 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9);
           }
-          pd.a(0);
+          TertiaryListSequence.a(0);
           return (Sprite) (var3);
         }
         MouseInputHandler.a(79);
@@ -154,7 +154,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           var3Lifetime1 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9Lifetime1);
         }
-        pd.a(0);
+        TertiaryListSequence.a(0);
         return (Sprite) (var3Lifetime1);
     }
 
@@ -205,7 +205,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           return true;
         }
-        if (!LegacyAi.a(2, uo.field_f, ConquestVictoryChecker.field_o, tl.field_D, bq.field_e)) {
+        if (!LegacyAi.a(2, uo.field_f, ConquestVictoryChecker.field_o, tl.field_D, IndexedSpriteState.field_e)) {
           if (oq.field_j == 10) {
             if (var3 != 0) {
               return false;
@@ -245,7 +245,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var3 != 0) {
           return false;
         }
-        return NetworkArchiveRequest.a(bq.field_e, ConquestVictoryChecker.field_o, false, uo.field_f, tl.field_D);
+        return NetworkArchiveRequest.a(IndexedSpriteState.field_e, ConquestVictoryChecker.field_o, false, uo.field_f, tl.field_D);
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
@@ -255,7 +255,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == pd.field_j) {
+          if (null == TertiaryListSequence.field_j) {
             return;
           }
           ql.field_q = 0;
@@ -285,7 +285,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != pd.field_j) {
+          if (null != TertiaryListSequence.field_j) {
             ql.field_q = 0;
             v.field_d = 0;
             kh.field_Lb = true;
@@ -324,7 +324,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != pd.field_j) {
+          if (null != TertiaryListSequence.field_j) {
             ql.field_q = 0;
             ArchiveSource.field_c = param0.getX();
             TertiaryNodeList.field_e = param0.getY();
@@ -371,7 +371,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == pd.field_j) {
+          if (null == TertiaryListSequence.field_j) {
             return;
           }
           v.field_d = 0;

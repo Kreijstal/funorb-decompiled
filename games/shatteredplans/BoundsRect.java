@@ -6,7 +6,7 @@ final class BoundsRect extends IntrusiveNode {
     static String field_r;
     static String field_n;
     int field_q;
-    static cp field_p;
+    static CanvasResizeController field_p;
     static AnimatedPanel field_k;
     int field_l;
     int field_o;

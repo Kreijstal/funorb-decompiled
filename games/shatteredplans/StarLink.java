@@ -81,11 +81,11 @@ final class StarLink extends IntrusiveNode implements Orderable {
         field_h = null;
     }
 
-    final static nk a(byte param0, nk param1, int[] param2) {
+    final static IndexedSprite a(byte param0, IndexedSprite param1, int[] param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        nk var4 = null;
-        nk stackIn_1_0 = null;
+        IndexedSprite var4 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -94,7 +94,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 70 / ((param0 + 38) / 36);
-          var4 = new nk(0, 0, 0);
+          var4 = new IndexedSprite(0, 0, 0);
           var4.field_g = param1.field_g;
           var4.field_i = param1.field_i;
           var4.field_k = param2;

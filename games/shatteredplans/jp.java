@@ -515,7 +515,7 @@ final class jp extends AnimatedPanel {
         try {
           if (MouseInputHandler.field_h == null) {
             MouseInputHandler.field_h = new eo(le.field_e, tl.field_z);
-            le.field_e.a(true, MouseInputHandler.field_h);
+            le.field_e.addDialog(true, MouseInputHandler.field_h);
           }
           MouseInputHandler.field_h.a(param3, param0, 65536, param1);
           if (param2 <= 118) {

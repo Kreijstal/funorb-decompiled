@@ -132,7 +132,7 @@ final class qf {
     }
 
     final static void b(byte param0) {
-        ToggleButton.a(SpriteState.field_u, ho.field_j, un.field_g, VictoryChecker.field_d, 0);
+        ToggleButton.a(SpriteState.field_u, ho.field_j, IntrusiveDequeSequence.field_g, VictoryChecker.field_d, 0);
         int var1 = -114 / ((param0 - 34) / 56);
     }
 

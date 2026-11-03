@@ -59,7 +59,7 @@ final class SecondaryNodeHashTable {
             field_f = (Sprite) null;
           }
           var2 = new th(param1, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, eo.field_fb, hd.field_q);
-          pd.a(param0 - 15);
+          TertiaryListSequence.a(param0 - 15);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -578,12 +578,12 @@ final class SecondaryNodeHashTable {
     }
 
     final static void a(byte param0) {
-        cp.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
+        CanvasResizeController.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
         if (ns.field_pb) {
-          cp.field_a.addChild(4, nm.field_c);
+          CanvasResizeController.field_a.addChild(4, nm.field_c);
         }
-        cp.field_a.addChild(4, MenuList.field_v);
-        Archive.field_g = new wh(ds.field_a, cp.field_a);
+        CanvasResizeController.field_a.addChild(4, MenuList.field_v);
+        Archive.field_g = new wh(ds.field_a, CanvasResizeController.field_a);
         if (param0 != -83) {
           field_i = (Sprite) null;
         }

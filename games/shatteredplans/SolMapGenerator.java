@@ -133,7 +133,7 @@ final class SolMapGenerator extends StandardMapGenerator {
     }
 
     final static void a(byte param0, Archive param1, Archive param2, Archive param3) {
-        nk[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
         Sprite var18 = null;
@@ -153,11 +153,11 @@ final class SolMapGenerator extends StandardMapGenerator {
         CipherPacketBuffer.field_p = (nq) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
         Sprite var17 = new Sprite(param3.getFileByName(true, "", "button.gif"), (java.awt.Component) ((Object) tm.field_i));
         GameApplet.a("commonui", -108, param1, "dropdown");
-        nk[] var5 = SliderPainter.a("commonui", param1, "screen_options", (byte) -118);
-        ValidationIndicator.field_E = new nk[4];
-        EmailValidator.field_o = new nk[4];
-        AnimatedPanel.field_A = new nk[4];
-        nk[][] var6 = new nk[][]{AnimatedPanel.field_A, ValidationIndicator.field_E, EmailValidator.field_o};
+        IndexedSprite[] var5 = SliderPainter.a("commonui", param1, "screen_options", (byte) -118);
+        ValidationIndicator.field_E = new IndexedSprite[4];
+        EmailValidator.field_o = new IndexedSprite[4];
+        AnimatedPanel.field_A = new IndexedSprite[4];
+        IndexedSprite[][] var6 = new IndexedSprite[][]{AnimatedPanel.field_A, ValidationIndicator.field_E, EmailValidator.field_o};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;
@@ -171,7 +171,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         var19[3][var8Lifetime1] = 4767999;
         for (var9 = 0; var9 < 3; var9++) {
           var14 = var6[var9];
-          nk[] var10 = var14;
+          IndexedSprite[] var10 = var14;
           for (var11_int = 0; var14.length > var11_int; var11_int++) {
             var14[var11_int] = StarLink.a((byte) 27, var5[var9], var19[var11_int]);
           }

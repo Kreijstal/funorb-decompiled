@@ -132,7 +132,7 @@ final class LinkPainter implements WidgetPainter {
             stackIn_13_0 = param0 + param0;
             break;
           }
-          pd.a(stackIn_13_0);
+          TertiaryListSequence.a(stackIn_13_0);
           stackIn_14_0 = var1;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -301,10 +301,10 @@ final class LinkPainter implements WidgetPainter {
                       var5 = var7;
                     } else if (var7.field_Cb.field_L &&
                       var15 != 0) {
-                      dn.field_k = var7.field_Ab;
+                      DualLinkDequeSequence.field_k = var7.field_Ab;
                     }
                   } else {
-                    dn.field_k = var7.field_Bb;
+                    DualLinkDequeSequence.field_k = var7.field_Bb;
                   }
                   var6 = var7;
                   var7 = (ve) (var4.nextForward((byte) -71));

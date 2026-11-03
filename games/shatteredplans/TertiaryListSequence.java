@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends hb {
+final class TertiaryListSequence extends NodeSequence {
     static MouseInputHandler field_j;
     private TertiaryNodeList field_i;
     static ValidationState field_h;
@@ -13,7 +13,7 @@ final class pd extends hb {
 
     final IntrusiveNode a(byte param0) {
         if (param0 <= 99) {
-          pd.clearStatics(11);
+          TertiaryListSequence.clearStatics(11);
           return (IntrusiveNode) ((Object) this.field_i.a(true));
         }
         return (IntrusiveNode) ((Object) this.field_i.a(true));
@@ -69,7 +69,7 @@ final class pd extends hb {
         return this.field_i.b(0);
     }
 
-    pd(TertiaryNodeList param0) {
+    TertiaryListSequence(TertiaryNodeList param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
@@ -95,7 +95,7 @@ final class pd extends hb {
           eo.field_fb = null;
           return;
         }
-        pd.clearStatics(-53);
+        TertiaryListSequence.clearStatics(-53);
         cf.field_H = null;
         WeightedCacheEntry.field_s = null;
         sj.field_a = null;

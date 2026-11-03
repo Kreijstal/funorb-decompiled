@@ -65,7 +65,7 @@ final class uk {
           if (var2_int != 8) {
             throw new RuntimeException("No image for this type of system: " + param1.field_B);
           }
-          stackIn_30_0 = cp.field_t;
+          stackIn_30_0 = CanvasResizeController.field_t;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,7 +232,7 @@ final class uk {
             if (!param7.field_i) {
               var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.startForward(0));
               while (var21_ref_sd != null) {
-                vf.a(127, var21_ref_sd);
+                QuaternaryListSequence.a(127, var21_ref_sd);
                 SolMapReader.a(var21_ref_sd, -5);
                 var22_ref_lnLifetime1 = var21_ref_sd.firstStar(18229);
                 while (var22_ref_lnLifetime1 != null) {
@@ -243,7 +243,7 @@ final class uk {
               }
             } else {
               if (null != param4[var20Lifetime1].field_m) {
-                vf.a(123, param4[var20Lifetime1].field_m);
+                QuaternaryListSequence.a(123, param4[var20Lifetime1].field_m);
                 SolMapReader.a(param4[var20Lifetime1].field_m, -5);
                 var21_ref_ln = param4[var20Lifetime1].field_m.firstStar(18229);
                 while (var21_ref_ln != null) {

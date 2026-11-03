@@ -66,7 +66,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ds.field_c = rr.a(param0, bb.field_b, pd.field_k, 2);
+          ds.field_c = rr.a(param0, bb.field_b, TertiaryListSequence.field_k, 2);
           if (param1 != 39) {
             field_D = -63;
           }
@@ -78,7 +78,7 @@ final class cf extends WidgetContainer implements ButtonListener {
               } else {
                 PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
                 if (null != PlayerEliminatedEvent.field_h) {
-                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.field_l + pd.field_k, -PlayerEliminatedEvent.field_h.field_h + bb.field_b, -30872);
+                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.field_l + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.field_h + bb.field_b, -30872);
                 }
               }
               BattleSnapshot.field_s = null;
@@ -86,14 +86,14 @@ final class cf extends WidgetContainer implements ButtonListener {
             } else {
               uq.field_i = uq.field_i + 1;
               if (il.field_bb == null) {
-                var2_int = (ba.field_c - bb.field_b) * (ba.field_c - bb.field_b) + (-pd.field_k + ck.field_e) * (-pd.field_k + ck.field_e);
+                var2_int = (ba.field_c - bb.field_b) * (ba.field_c - bb.field_b) + (-TertiaryListSequence.field_k + ck.field_e) * (-TertiaryListSequence.field_k + ck.field_e);
                 if (5 < var2_int &&
                   uq.field_i > 5) {
                   il.field_bb = BattleSnapshot.field_s;
                 }
               }
               if (il.field_bb != null) {
-                il.field_bb.c(bb.field_b - il.field_bb.field_h, 2, -il.field_bb.field_l + pd.field_k);
+                il.field_bb.c(bb.field_b - il.field_bb.field_h, 2, -il.field_bb.field_l + TertiaryListSequence.field_k);
               }
             }
           } else {

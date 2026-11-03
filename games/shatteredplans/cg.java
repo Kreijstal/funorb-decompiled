@@ -124,7 +124,7 @@ final class cg extends SingleChildWidget {
             return false;
           }
           var8 = new oj(le.field_e, param5);
-          le.field_e.a(true, var8);
+          le.field_e.addDialog(true, var8);
           if (TextFieldWidget.j(0)) {
             var8.f(false);
             return true;

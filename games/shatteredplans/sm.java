@@ -71,7 +71,7 @@ final class sm {
         int var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        BattleContribution.field_o = this.b(-100, pd.field_k, bb.field_b);
+        BattleContribution.field_o = this.b(-100, TertiaryListSequence.field_k, bb.field_b);
         if (param0 <= 115) {
           return;
         }
@@ -790,7 +790,7 @@ final class sm {
           var6 = 2805974;
           var7 = 16 + var5 + rs.field_Cb.field_J;
           rs.field_Cb.drawCentred(BoundsRect.field_r, BattleSnapshot.field_r[1] + var4, var7, var6, -1);
-          rs.field_Cb.drawCentred(un.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
+          rs.field_Cb.drawCentred(IntrusiveDequeSequence.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(ld.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
           rs.field_Cb.drawCentred(hc.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(eo.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
@@ -864,7 +864,7 @@ final class sm {
           ScrollBar.field_zb == null) {
           ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
-        this.field_d.a(this.a(bb.field_b, (byte) -109, pd.field_k), param0, param2, 59);
+        this.field_d.a(this.a(bb.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
         this.field_h = 0;
         an.field_c = -1;
         if (param1 <= 14) {
@@ -1141,7 +1141,7 @@ final class sm {
                 var9Lifetime1 = 295 + param3;
                 var10Lifetime1 = 220;
                 var11 = 16711680;
-                hb.field_d.drawOpaque(param3 + 5, param0 + 5);
+                NodeSequence.field_d.drawOpaque(param3 + 5, param0 + 5);
                 this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, md.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
                 this.a(-5, nn.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
                 this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
@@ -1627,7 +1627,7 @@ final class sm {
             this.a(-16084);
           }
           v.a((byte) -128);
-          this.field_d.a(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(bb.field_b, (byte) -109, pd.field_k));
+          this.field_d.a(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(bb.field_b, (byte) -109, TertiaryListSequence.field_k));
           if (this.field_d.field_c != -1) {
             this.a(true, this.field_d.field_c, false);
           }
@@ -1662,7 +1662,7 @@ final class sm {
     private final void a(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
-        RasterBuffer.field_e = this.d(param0 + 16191, pd.field_k, bb.field_b);
+        RasterBuffer.field_e = this.d(param0 + 16191, TertiaryListSequence.field_k, bb.field_b);
         if (param0 != -16084) {
           discarded$0 = this.b(true);
         }
@@ -1789,7 +1789,7 @@ final class sm {
             }
             if (this.field_d.b((byte) -50)) {
               var6 = this.b(param1, true) + this.a(true, param1) + IsolationistAi.field_t - 120 >> 1;
-              var7 = pd.field_k - var6;
+              var7 = TertiaryListSequence.field_k - var6;
               var8 = 256 * var7 / 120;
               if (0 < var8) {
                 if (var8 < 256) {
@@ -1832,7 +1832,7 @@ final class sm {
                 stackIn_92_1 = this.b(param1, true);
                 stackIn_93_3 = !(param2);
                 var6 = stackIn_92_0 + (stackIn_92_1 - (-this.a(stackIn_93_3, param1) - IsolationistAi.field_t)) >> 1;
-                var7Lifetime1 = pd.field_k - var6;
+                var7Lifetime1 = TertiaryListSequence.field_k - var6;
                 var8Lifetime1 = 256 * var7Lifetime1 / 120;
                 if (var8Lifetime1 <= 0) {
                   DiskArchiveRequest.c(127, 0);

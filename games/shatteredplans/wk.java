@@ -311,13 +311,13 @@ final class wk {
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        param1.addMouseListener(pd.field_j);
+        param1.addMouseListener(TertiaryListSequence.field_j);
         if (param0 != -58) {
           return;
         }
         try {
-          param1.addMouseMotionListener(pd.field_j);
-          param1.addFocusListener(pd.field_j);
+          param1.addMouseMotionListener(TertiaryListSequence.field_j);
+          param1.addFocusListener(TertiaryListSequence.field_j);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

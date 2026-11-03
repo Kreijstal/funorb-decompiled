@@ -18,10 +18,10 @@ final class ks {
           nf var3 = (nf) null;
           ks.a((nf) null, -105);
           if (WeightedLruCache.field_g != null) {
-            if (pd.field_k < e.field_f) {
+            if (TertiaryListSequence.field_k < e.field_f) {
               return false;
             }
-            if (pd.field_k >= ei.field_e) {
+            if (TertiaryListSequence.field_k >= ei.field_e) {
               return false;
             }
             if (ByteArrayNode.field_k > bb.field_b) {
@@ -52,10 +52,10 @@ final class ks {
           if (null == PanelNode.field_q) {
             return false;
           }
-          if (pd.field_k < e.field_f) {
+          if (TertiaryListSequence.field_k < e.field_f) {
             return false;
           }
-          if (pd.field_k >= ei.field_e) {
+          if (TertiaryListSequence.field_k >= ei.field_e) {
             return false;
           }
           if (ByteArrayNode.field_k <= bb.field_b) {
@@ -87,10 +87,10 @@ final class ks {
           if (null == PanelNode.field_q) {
             return false;
           }
-          if (pd.field_k < e.field_f) {
+          if (TertiaryListSequence.field_k < e.field_f) {
             return false;
           }
-          if (pd.field_k < ei.field_e &&
+          if (TertiaryListSequence.field_k < ei.field_e &&
             ByteArrayNode.field_k <= bb.field_b) {
             if (AttackTask.field_o <= bb.field_b) {
               return false;
@@ -116,8 +116,8 @@ final class ks {
           }
           return false;
         }
-        if (pd.field_k >= e.field_f &&
-          pd.field_k < ei.field_e &&
+        if (TertiaryListSequence.field_k >= e.field_f &&
+          TertiaryListSequence.field_k < ei.field_e &&
           ByteArrayNode.field_k <= bb.field_b) {
           if (AttackTask.field_o <= bb.field_b) {
             return false;

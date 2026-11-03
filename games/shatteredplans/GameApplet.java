@@ -45,9 +45,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
-          if (null != hb.field_a &&
-            hb.field_a != this) {
-            stackIn_10_0 = hb.field_a.getAppletContext();
+          if (null != NodeSequence.field_a &&
+            NodeSequence.field_a != this) {
+            stackIn_10_0 = NodeSequence.field_a.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();
@@ -332,8 +332,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = ts.field_G;
-                if (hb.field_a != null) {
-                  var1 = hb.field_a;
+                if (NodeSequence.field_a != null) {
+                  var1 = NodeSequence.field_a;
                 }
                 var2_ref = PlatformTaskDispatcher.field_v;
                 if (null != var2_ref) {
@@ -419,9 +419,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != uf.field_b) {
           return null;
         }
-        if (null != hb.field_a &&
-          this != hb.field_a) {
-          return hb.field_a.getCodeBase();
+        if (null != NodeSequence.field_a &&
+          this != NodeSequence.field_a) {
+          return NodeSequence.field_a.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -490,9 +490,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (hb.field_a != null &&
-            hb.field_a != this) {
-            stackIn_8_0 = hb.field_a.getParameter(param0);
+          if (NodeSequence.field_a != null &&
+            NodeSequence.field_a != this) {
+            stackIn_8_0 = NodeSequence.field_a.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -548,9 +548,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
-          if (null != hb.field_a &&
-            hb.field_a != this) {
-            stackIn_8_0 = hb.field_a.getDocumentBase();
+          if (null != NodeSequence.field_a &&
+            NodeSequence.field_a != this) {
+            stackIn_8_0 = NodeSequence.field_a.getDocumentBase();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getDocumentBase();
@@ -684,7 +684,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          hb.field_a = param0;
+          NodeSequence.field_a = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -700,12 +700,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static nk a(String param0, int param1, Archive param2, String param3) {
+    final static IndexedSprite a(String param0, int param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        nk stackIn_1_0 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -957,8 +957,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             fc.field_a = true;
           }
-          if (null != hb.field_a) {
-            hb.field_a.destroy();
+          if (null != NodeSequence.field_a) {
+            NodeSequence.field_a.destroy();
           }
           try {
             this.shutdown(false);
@@ -1050,15 +1050,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (null == cg.field_K) {
             if (null == uf.field_b) {
-              if (hb.field_a == null) {
+              if (NodeSequence.field_a == null) {
                 var2 = ts.field_G;
                 if (var4 != 0) {
-                  var2 = hb.field_a;
+                  var2 = NodeSequence.field_a;
                   var2 = uf.field_b;
                   var2 = cg.field_K;
                 }
               } else {
-                var2 = hb.field_a;
+                var2 = NodeSequence.field_a;
                 if (var4 != 0) {
                   var2 = uf.field_b;
                   var2 = cg.field_K;

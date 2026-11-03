@@ -19,9 +19,9 @@ final class DialWidget extends FocusableWidget {
         return wm.field_d[DebouncedValidator.field_g - 1];
     }
 
-    final static hb a(int param0, QuaternaryNodeList param1) {
+    final static NodeSequence a(int param0, QuaternaryNodeList param1) {
         RuntimeException var2 = null;
-        vf stackIn_3_0 = null;
+        QuaternaryListSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -30,8 +30,8 @@ final class DialWidget extends FocusableWidget {
           if (param0 >= -102) {
             DialWidget.h(-96);
           }
-          stackIn_3_0 = new vf(param1);
-          return (hb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new QuaternaryListSequence(param1);
+          return (NodeSequence) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

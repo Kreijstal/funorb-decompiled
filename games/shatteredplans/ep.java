@@ -10,12 +10,12 @@ final class ep {
     final static boolean a(int param0) {
         if (param0 != 640) {
           ep.a(78);
-          if (null == bq.field_h) {
+          if (null == IndexedSpriteState.field_h) {
             return QuickChatCategoryDefinition.field_t ? true : false;
           }
           return true;
         }
-        if (null != bq.field_h) {
+        if (null != IndexedSpriteState.field_h) {
           return true;
         }
         if (!QuickChatCategoryDefinition.field_t) {

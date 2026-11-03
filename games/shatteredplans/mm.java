@@ -25,7 +25,7 @@ final class mm extends TextFieldValidator {
             var4 = (String) null;
             this.a(true, (String) null);
           }
-          stackIn_6_0 = dn.field_g;
+          stackIn_6_0 = DualLinkDequeSequence.field_g;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,11 +69,11 @@ final class mm extends TextFieldValidator {
 
     final static void d(int param0) {
         if (param0 == -16705) {
-          bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
+          IndexedSpriteState.field_h = new dg(ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
           return;
         }
         field_n = false;
-        bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
+        IndexedSpriteState.field_h = new dg(ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
     }
 
     final ValidationState b(int param0, String param1) {

@@ -125,9 +125,9 @@ final class GzipInflater {
           }
           var4_ref_StringLifetime1 = var1.readString(-1);
           var5Lifetime1 = var1.readString(-1);
-          var6Lifetime1 = hb.a((byte) -90, var4_ref_StringLifetime1);
+          var6Lifetime1 = NodeSequence.a((byte) -90, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = hb.a((byte) -90, var5Lifetime1);
+            var6Lifetime1 = NodeSequence.a((byte) -90, var5Lifetime1);
             if (null != var6Lifetime1) {
               BattleEvent.field_q.put((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0).hashCode(), var6Lifetime1, true);
             }

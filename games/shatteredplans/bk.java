@@ -247,7 +247,7 @@ final class bk {
               var10 = ho.field_f.stringWidth(var5);
               if (!BattleEvent.a((byte) 110)) {
                 if (uq.field_j.field_L &&
-                  var10 > (-uq.field_j.field_B + pd.field_k)) {
+                  var10 > (-uq.field_j.field_B + TertiaryListSequence.field_k)) {
                   if (bg.field_g) {
                     var1 = "Broken!";
                   } else {

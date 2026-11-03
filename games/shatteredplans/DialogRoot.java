@@ -15,7 +15,7 @@ final class DialogRoot extends SingleChildWidget {
         this.field_H = new IntrusiveDeque();
     }
 
-    final void k(int param0) {
+    final void deactivateAll(int param0) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 <= 77) {
           return;
@@ -29,21 +29,21 @@ final class DialogRoot extends SingleChildWidget {
         this.field_z = null;
     }
 
-    final void i(int param0) {
+    final void updateDialogs(int param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         Dialog var3 = (Dialog) (var2.a(2));
         while (var3 != null) {
-          if (var3.a((byte) 92)) {
+          if (var3.animate((byte) 92)) {
             var3.unlink((byte) -80);
           }
           var3 = (Dialog) (var2.a((byte) 125));
         }
         int var4 = 18 % ((46 - param0) / 54);
-        this.field_z = (UiWidget) ((Object) this.g((byte) 115));
+        this.field_z = (UiWidget) ((Object) this.getActiveDialog((byte) 115));
     }
 
-    final Dialog g(byte param0) {
+    final Dialog getActiveDialog(byte param0) {
         IntrusiveDequeCursor var2;
         Dialog var3;
         int var4;
@@ -132,7 +132,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final void a(boolean param0, UiWidget param1) {
+    final void addDialog(boolean param0, UiWidget param1) {
         Dialog var3 = null;
         try {
           if (!(param1 instanceof Dialog)) {
@@ -147,13 +147,13 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final void h(byte param0) {
+    final void removeClosedDialogs(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         int var4 = 71 % ((param0 + 34) / 44);
         Dialog var3 = (Dialog) (var2.a(2));
         while (var3 != null) {
-          if (var3.k(0)) {
+          if (var3.isClosed(0)) {
             var3.unlink((byte) -101);
           }
           var3 = (Dialog) (var2.a((byte) 47));
@@ -441,7 +441,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final UiWidget a(int param0) {
+    final UiWidget findFocusedWidget(int param0) {
         IntrusiveDequeCursor var2;
         Dialog var3;
         int var4;
@@ -450,7 +450,7 @@ final class DialogRoot extends SingleChildWidget {
         var3 = (Dialog) (var2.a(param0));
         while (var3 != null) {
           if (var3.field_E) {
-            return var3.i(param0 ^ 3);
+            return var3.findFocusedChild(param0 ^ 3);
           }
           var3 = (Dialog) (var2.a((byte) 115));
         }
@@ -509,9 +509,9 @@ final class DialogRoot extends SingleChildWidget {
         kh.field_Mb = SoftwareRasterizer.field_b;
         nj.a(438);
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
-        nm.field_c.setTarget(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
+        nm.field_c.setTarget(CanvasResizeController.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
         int var1 = cr.field_c + 2;
-        MenuList.field_v.setTarget(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
+        MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
         vm.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
         sg.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);

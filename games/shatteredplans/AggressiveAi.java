@@ -326,9 +326,9 @@ final class AggressiveAi extends StandardAi {
             }
             if (ByteArrayNode.field_p[0][2].field_v) {
               if (!SecondaryNodeDequeIterator.a((byte) -126)) {
-                dn.field_k = QuickChatCategoryRegistry.a(ef.field_b, 4371, new String[]{np.field_a.field_Xb});
+                DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(ef.field_b, 4371, new String[]{np.field_a.field_Xb});
               } else {
-                dn.field_k = po.field_c;
+                DualLinkDequeSequence.field_k = po.field_c;
               }
             }
           }
@@ -522,7 +522,7 @@ final class AggressiveAi extends StandardAi {
                 }
                 var9 = stackIn_156_0;
                 if (var9 != null) {
-                  dn.field_k = var9;
+                  DualLinkDequeSequence.field_k = var9;
                 }
               }
               stackIn_160_0 = var30;
@@ -791,7 +791,7 @@ final class AggressiveAi extends StandardAi {
                   }
                 }
                 if (var21 != null) {
-                  dn.field_k = (String) (var21);
+                  DualLinkDequeSequence.field_k = (String) (var21);
                 }
               }
               if (param1) {

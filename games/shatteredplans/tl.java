@@ -98,7 +98,7 @@ abstract class tl extends GameApplet {
                   bf.a((byte) -127, var5_intLifetime2, nl.field_c);
                   nl.field_c = null;
                 } else {
-                  GarrisonTask.field_o = pd.field_l;
+                  GarrisonTask.field_o = TertiaryListSequence.field_l;
                   LinkPainter.c(98);
                   eh.field_P = false;
                   SoundPlayback.field_i = 10;
@@ -274,7 +274,7 @@ abstract class tl extends GameApplet {
                       }
                     }
                   } else {
-                    vf.d((byte) -117);
+                    QuaternaryListSequence.d((byte) -117);
                   }
                 }
               }

@@ -90,20 +90,20 @@ final class ConquestVictoryChecker extends VictoryChecker {
         return -1;
     }
 
-    final static nk[] c(boolean param0) {
+    final static IndexedSprite[] c(boolean param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        nk[] var1 = new nk[en.field_c];
+        IndexedSprite[] var1 = new IndexedSprite[en.field_c];
         for (var2 = 0; en.field_c > var2; var2++) {
-          var1[var2] = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], hd.field_q[var2], eo.field_fb);
+          var1[var2] = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], hd.field_q[var2], eo.field_fb);
         }
         if (param0) {
-          pd.a(0);
+          TertiaryListSequence.a(0);
           return var1;
         }
         String var4 = (String) null;
         ConquestVictoryChecker.a((byte) 73, 51, (String) null);
-        pd.a(0);
+        TertiaryListSequence.a(0);
         return var1;
     }
 

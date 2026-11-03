@@ -51,7 +51,7 @@ final class fr extends SingleChildWidget {
           if ((!(this.field_z instanceof FocusableWidget) ||
             ((FocusableWidget) (this.field_z)).field_y) &&
             this.field_o == 1) {
-            var5_int = -param0 + (pd.field_k - this.field_A);
+            var5_int = -param0 + (TertiaryListSequence.field_k - this.field_A);
             var6 = -this.field_G + (bb.field_b - param1);
             if (this.field_m != var5_int ||
               var6 != this.field_q) {

@@ -202,11 +202,11 @@ class FocusableWidget extends UiWidget {
             if (AllianceExpiredEvent.field_n == this.field_o) {
               return;
             }
-            if (this.containsPoint(pd.field_k, 72, bb.field_b, param1, param0) &&
+            if (this.containsPoint(TertiaryListSequence.field_k, 72, bb.field_b, param1, param0) &&
               AllianceExpiredEvent.field_n == 0) {
-              this.fireAction(this.field_o, pd.field_k - param0, -param1 + bb.field_b, (byte) -109);
+              this.fireAction(this.field_o, TertiaryListSequence.field_k - param0, -param1 + bb.field_b, (byte) -109);
             }
-            this.handleRelease(pd.field_k, param1, param0, bb.field_b, -600269855, param2);
+            this.handleRelease(TertiaryListSequence.field_k, param1, param0, bb.field_b, -600269855, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kg.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

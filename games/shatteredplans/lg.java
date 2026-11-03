@@ -11,11 +11,11 @@ final class lg extends IOException {
     static int[] field_d;
     static int[] field_a;
 
-    final static nk[] a(int param0, Archive param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        nk[] stackIn_5_0 = null;
-        nk[] stackIn_7_0 = null;
+        IndexedSprite[] stackIn_5_0 = null;
+        IndexedSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -23,13 +23,13 @@ final class lg extends IOException {
         try {
           if (!MenuComponent.a(param3, param1, param2, 2)) {
             stackIn_2_0 = null;
-            return (nk[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param0 == -20435) {
             stackIn_7_0 = ConquestVictoryChecker.c(true);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (nk[]) null;
+          stackIn_5_0 = (IndexedSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,10 +45,10 @@ final class lg extends IOException {
         }
     }
 
-    final static nk a(int param0, int param1, int param2, Archive param3) {
+    final static IndexedSprite a(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
-        nk stackIn_5_0 = null;
-        nk stackIn_7_0 = null;
+        IndexedSprite stackIn_5_0 = null;
+        IndexedSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -61,7 +61,7 @@ final class lg extends IOException {
             stackIn_7_0 = ta.c((byte) 118);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (nk) null;
+          stackIn_5_0 = (IndexedSprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

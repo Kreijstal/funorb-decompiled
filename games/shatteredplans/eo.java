@@ -32,7 +32,7 @@ final class eo extends jl {
           this.field_gb = param1;
           if (this.field_gb != null) {
             var3_int = CipherPacketBuffer.field_p.textHeight(this.field_gb, 260, CipherPacketBuffer.field_p.field_J);
-            this.b(150 + var3_int, 300, (byte) -122);
+            this.centre(150 + var3_int, 300, (byte) -122);
           }
           this.field_bb = new md(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_bb.field_L = true;

@@ -93,7 +93,7 @@ class TextFieldWidget extends FocusableWidget {
         try {
           if (super.handlePress(param0, param1, (byte) 100, param3, param4, param5, param6) &&
             this.field_p instanceof WidgetMetrics) {
-            var8_int = ((WidgetMetrics) ((Object) this.field_p)).getCharacterIndexAt(param4, pd.field_k, param5, (UiWidget) (this), true, bb.field_b);
+            var8_int = ((WidgetMetrics) ((Object) this.field_p)).getCharacterIndexAt(param4, TertiaryListSequence.field_k, param5, (UiWidget) (this), true, bb.field_b);
             stackIn_5_1 = 119;
             if (var8_int == -1) {
               stackIn_6_2 = 0;
@@ -420,7 +420,7 @@ class TextFieldWidget extends FocusableWidget {
           if (1 == this.field_o) {
             if (this.field_p instanceof WidgetMetrics) {
               var5 = (WidgetMetrics) ((Object) this.field_p);
-              var6 = var5.getCharacterIndexAt(param0, pd.field_k, param1, (UiWidget) (this), true, bb.field_b);
+              var6 = var5.getCharacterIndexAt(param0, TertiaryListSequence.field_k, param1, (UiWidget) (this), true, bb.field_b);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_R > var6 &&

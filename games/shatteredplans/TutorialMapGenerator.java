@@ -974,7 +974,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_name_add", 511);
                 if (null != var2) {
-                  vf.field_f = IterableNodeHashTable.a(var2, 17746);
+                  QuaternaryListSequence.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_name_rm", 511);
                 if (var2 != null) {
@@ -1654,7 +1654,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("ra_explanation", 511);
                 if (var2 != null) {
-                  dn.field_j = IterableNodeHashTable.a(var2, 17746);
+                  DualLinkDequeSequence.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_pillar_0", 511);
                 if (null != var2) {
@@ -2384,7 +2384,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_emailvalid", 511);
                 if (var2 != null) {
-                  dn.field_g = IterableNodeHashTable.a(var2, 17746);
+                  DualLinkDequeSequence.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_account_success", 511);
                 if (var2 != null) {
@@ -3258,7 +3258,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rating_played", 511);
                 if (var2 != null) {
-                  un.field_j = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeSequence.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_won", 511);
                 if (var2 != null) {
@@ -3562,7 +3562,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("DEFAULT_PLAYER_NAME", 511);
                 if (var2 != null) {
-                  hb.field_c = IterableNodeHashTable.a(var2, 17746);
+                  NodeSequence.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin1", 511);
                 if (null != var2) {

@@ -15,7 +15,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
     final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.updateHover(param0, param1, param2, param3);
-          this.field_U = pd.field_k - (this.field_m + param0);
+          this.field_U = TertiaryListSequence.field_k - (this.field_m + param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -32,7 +32,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         if (this.field_v == null) {
           return null;
         }
-        ScrollBar.a(bb.field_b, !param0 ? true : false, this.field_x - this.field_U + pd.field_k);
+        ScrollBar.a(bb.field_b, !param0 ? true : false, this.field_x - this.field_U + TertiaryListSequence.field_k);
         if (param0) {
           return this.field_v;
         }

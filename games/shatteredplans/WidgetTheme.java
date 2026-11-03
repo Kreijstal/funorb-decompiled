@@ -417,7 +417,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             stackIn_6_0 = StandardAi.field_f;
             return stackIn_6_0;
           }
-          var8 = hb.a((byte) -90, param2);
+          var8 = NodeSequence.a((byte) -90, param2);
           if (var8 == null) {
             stackIn_9_0 = QuickChatCategoryRegistry.a(us.field_e, 4371, new String[]{param2});
             return stackIn_9_0;

@@ -67,7 +67,7 @@ final class as extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, v param3) {
         try {
           StarAbandonedEvent.field_h = param3;
-          dn.field_l = param0;
+          DualLinkDequeSequence.field_l = param0;
           StellarBombEvent.field_j = param2;
           if (param1 != 20) {
             field_i = (String) null;

@@ -49,7 +49,7 @@ class qe extends IntrusiveNode {
         if (DialWidget.field_I == null) {
           return false;
         }
-        if (DialWidget.field_I.g((byte) 105) == null) {
+        if (DialWidget.field_I.getActiveDialog((byte) 105) == null) {
           return false;
         }
         return true;

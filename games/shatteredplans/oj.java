@@ -111,27 +111,27 @@ final class oj extends ns implements ButtonListener {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean animate(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
         if (!this.field_E) {
           var2 = -50 / ((param0 + 23) / 52);
-          return super.a((byte) 30);
+          return super.animate((byte) 30);
         }
         if (this.field_Hb) {
           var2Lifetime1 = -50 / ((param0 + 23) / 52);
-          return super.a((byte) 30);
+          return super.animate((byte) 30);
         }
         kj var2_ref_kj = MusicPatch.a(65536);
         if (var2_ref_kj != null) {
           this.a(17, false, var2_ref_kj);
           var2Lifetime2 = -50 / ((param0 + 23) / 52);
-          return super.a((byte) 30);
+          return super.animate((byte) 30);
         }
         var2Lifetime3 = -50 / ((param0 + 23) / 52);
-        return super.a((byte) 30);
+        return super.animate((byte) 30);
     }
 
     oj(DialogRoot param0, aa param1) {

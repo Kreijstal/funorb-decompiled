@@ -32,7 +32,7 @@ class StandardMapGenerator implements MapGenerator {
         try {
           og.a(-119, this.field_f, this.field_c, this.field_b);
           var3_int = nn.a(param0.field_e, 0);
-          vf.a(this.field_c, var3_int, (int)(200.0 * ProjectsContent.field_d / 2.0), true, param0.field_e, param0.field_j, this.field_f);
+          QuaternaryListSequence.a(this.field_c, var3_int, (int)(200.0 * ProjectsContent.field_d / 2.0), true, param0.field_e, param0.field_j, this.field_f);
           var8 = param0.field_e;
           for (var5 = 0; var8.length > var5; var5++) {
             var11 = var8[var5];

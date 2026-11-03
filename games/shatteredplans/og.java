@@ -87,12 +87,12 @@ final class og implements WidgetPainter {
         if (param0) {
           field_b = (bg) null;
         }
-        if (null == pd.field_j) {
+        if (null == TertiaryListSequence.field_j) {
           return;
         }
-        var1 = pd.field_j;
+        var1 = TertiaryListSequence.field_j;
         synchronized (var1) {
-          pd.field_j = null;
+          TertiaryListSequence.field_j = null;
         }
     }
 

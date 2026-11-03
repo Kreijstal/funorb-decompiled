@@ -40,7 +40,7 @@ abstract class il extends jl {
           if (param0 <= -5) {
             return;
           }
-          this.k(-80);
+          this.isClosed(-80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ abstract class il extends jl {
         }
     }
 
-    boolean a(byte param0) {
+    boolean animate(byte param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -149,7 +149,7 @@ abstract class il extends jl {
         int var2Lifetime1Lifetime1;
         if (null == this.field_ab) {
           var2 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         if (NanoFrameTimer.field_j == this.field_ab) {
           fieldTemp$0 = this.field_Z + 1;
@@ -157,18 +157,18 @@ abstract class il extends jl {
           if (this.field_X != fieldTemp$0) {
             this.field_eb.field_J = -((this.field_Z << 8) / this.field_X) + 256;
             var2Lifetime1 = -108 % ((param0 + 23) / 52);
-            return super.a((byte) 81);
+            return super.animate((byte) 81);
           }
           this.field_ab = hd.field_s;
           this.b(-127, this.field_mb, 12 + this.field_ib.field_x, this.field_ib.field_n + this.field_db + 12);
           this.field_Z = 0;
           this.field_eb.field_J = 0;
           var2Lifetime1Lifetime1 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         if (this.field_ab != je.field_a) {
           var2Lifetime2 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         int fieldTemp$1 = this.field_Z + 1;
         this.field_Z = this.field_Z + 1;
@@ -176,11 +176,11 @@ abstract class il extends jl {
           this.field_eb.field_J = 256;
           this.field_ab = null;
           var2Lifetime3 = -108 % ((param0 + 23) / 52);
-          return super.a((byte) 81);
+          return super.animate((byte) 81);
         }
         this.field_eb.field_J = (this.field_Z << 8) / this.field_jb;
         var2Lifetime4 = -108 % ((param0 + 23) / 52);
-        return super.a((byte) 81);
+        return super.animate((byte) 81);
     }
 
     void b(UiWidget param0, int param1) {
@@ -221,7 +221,7 @@ abstract class il extends jl {
     final void n(int param0) {
         if (null != this.field_ab) {
           if (this.field_ab != je.field_a) {
-            this.b(12 + this.field_db + this.field_ib.field_n, 12 + this.field_ib.field_x, (byte) -109);
+            this.centre(12 + this.field_db + this.field_ib.field_n, 12 + this.field_ib.field_x, (byte) -109);
             this.a(-107, this.field_ib);
           }
           this.field_eb.field_J = 256;
@@ -310,12 +310,12 @@ abstract class il extends jl {
         }
     }
 
-    final boolean k(int param0) {
+    final boolean isClosed(int param0) {
         if (param0 != 0) {
           return true;
         }
         this.n(7489);
-        return super.k(0);
+        return super.isClosed(0);
     }
 
     static {

@@ -26,7 +26,7 @@ abstract class ms {
         RuntimeException var3_ref = null;
         try {
           param2 = fr.a(param2, 1, '_', "");
-          var3 = dn.a(param0, true);
+          var3 = DualLinkDequeSequence.a(param0, true);
           if (param1 != -53) {
             var4 = (String) null;
             ms.a((String) null, (byte) 116, (String) null);

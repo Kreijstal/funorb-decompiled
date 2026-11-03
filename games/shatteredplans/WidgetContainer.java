@@ -69,7 +69,7 @@ class WidgetContainer extends UiWidget implements ni {
           var12 = new IntrusiveDequeCursor(this.field_A);
           if (param2 < 95) {
             var11 = (UiWidget) null;
-            this.a((UiWidget) null, -47);
+            this.isAfterFocusedChild((UiWidget) null, -47);
           }
           var9 = (UiWidget) (var12.a(2));
           while (var9 != null) {
@@ -131,9 +131,9 @@ class WidgetContainer extends UiWidget implements ni {
             return false;
           }
           if (di.field_p[81]) {
-            stackIn_18_0 = this.a(param3, true);
+            stackIn_18_0 = this.isBeforeFocusedChild(param3, true);
           } else {
-            stackIn_18_0 = this.a(param3, param2 + 105);
+            stackIn_18_0 = this.isAfterFocusedChild(param3, param2 + 105);
           }
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -150,7 +150,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    UiWidget i(int param0) {
+    UiWidget findFocusedChild(int param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
@@ -172,7 +172,7 @@ class WidgetContainer extends UiWidget implements ni {
     void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         super.setBounds(param0, param1, (byte) 103, param3, param4);
         if (param2 < 99) {
-          this.i(-8);
+          this.findFocusedChild(-8);
         }
         this.h(-87);
     }
@@ -286,7 +286,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final boolean a(UiWidget param0, boolean param1) {
+    final boolean isBeforeFocusedChild(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -337,7 +337,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean isAfterFocusedChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         UiWidget var5 = null;
@@ -634,7 +634,7 @@ class WidgetContainer extends UiWidget implements ni {
         if (param0 != 1) {
           field_z = (String) null;
         }
-        return this.i(1) != null ? true : false;
+        return this.findFocusedChild(1) != null ? true : false;
     }
 
     static {

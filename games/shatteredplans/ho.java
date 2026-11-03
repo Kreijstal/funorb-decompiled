@@ -14,9 +14,9 @@ final class ho {
     static int[] field_e;
 
     final static void a(boolean param0, int param1) {
-        if (null != bq.field_h) {
+        if (null != IndexedSpriteState.field_h) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l - SoftwareRasterizer.field_i, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
-          bq.field_h.drawFullRaster(param0, -100);
+          IndexedSpriteState.field_h.drawFullRaster(param0, -100);
           if (param1 != 8323199) {
             ho.a(-86);
             return;

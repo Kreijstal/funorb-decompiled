@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vf extends hb {
+final class QuaternaryListSequence extends NodeSequence {
     static String field_f;
     private QuaternaryNodeList field_g;
 
@@ -265,7 +265,7 @@ final class vf extends hb {
 
     final IntrusiveNode a(boolean param0) {
         if (param0) {
-          vf.d((byte) 82);
+          QuaternaryListSequence.d((byte) 82);
         }
         return (IntrusiveNode) ((Object) this.field_g.d(-115));
     }
@@ -351,12 +351,12 @@ final class vf extends hb {
     public static void clearStatics(int param0) {
         if (param0 != 17593) {
           Territory var2 = (Territory) null;
-          vf.a(-89, (Territory) null);
+          QuaternaryListSequence.a(-89, (Territory) null);
         }
         field_f = null;
     }
 
-    vf(QuaternaryNodeList param0) {
+    QuaternaryListSequence(QuaternaryNodeList param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {

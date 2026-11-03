@@ -14,7 +14,7 @@ final class gi {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hb.a(param0, -31654)) {
+          if (NodeSequence.a(param0, -31654)) {
             return false;
           }
           if (IntrusiveDeque.a(param0, (byte) 24)) {

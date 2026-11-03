@@ -160,7 +160,7 @@ final class kb extends MenuComponent {
             DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
           vo.field_b = ri.field_O - (DiskCacheWorker.field_b >> 1);
-          ns.field_nb.a(ch.a(-15073, bb.field_b, pd.field_k), 0, param0, 123);
+          ns.field_nb.a(ch.a(-15073, bb.field_b, TertiaryListSequence.field_k), 0, param0, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

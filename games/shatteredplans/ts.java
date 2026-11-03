@@ -462,7 +462,7 @@ class ts extends FocusableWidget {
           super.updateHover(param0, param1, param2, param3);
           this.field_I = null;
           if (this.field_k) {
-            var5_int = -this.field_m + (-param0 + pd.field_k);
+            var5_int = -this.field_m + (-param0 + TertiaryListSequence.field_k);
             var6 = bb.field_b - param1 - this.field_q;
             this.field_I = this.b(var5_int, var6, (byte) -66);
           }

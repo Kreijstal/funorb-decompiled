@@ -227,7 +227,7 @@ final class oq {
         try {
           var4 = (ByteArrayNode) (MapView.field_vb.startForward(0));
           while (var4 != null) {
-            dn.a(param0, var4, (byte) 13);
+            DualLinkDequeSequence.a(param0, var4, (byte) 13);
             var4 = (ByteArrayNode) (MapView.field_vb.nextForward((byte) -71));
           }
           var2 = SectorCacheStore.field_d.startForward(0);
@@ -235,7 +235,7 @@ final class oq {
             field_i = (String[]) null;
           }
           while (var2 != null) {
-            cp.a(param0, 1);
+            CanvasResizeController.a(param0, 1);
             var2 = SectorCacheStore.field_d.nextForward((byte) -71);
           }
           return;

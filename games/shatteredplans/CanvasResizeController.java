@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cp {
+final class CanvasResizeController {
     private int field_r;
     private int field_m;
     static int field_q;
@@ -19,7 +19,7 @@ final class cp {
     static boolean field_u;
     private int field_c;
     private int field_l;
-    private bn field_s;
+    private CanvasResizeListener field_s;
     private int field_e;
     static AnimatedPanel field_a;
     private float field_v;
@@ -156,7 +156,7 @@ final class cp {
           }
           if (param0 != 0) {
             var6 = (BoundsRect) null;
-            cp.a(-93, -33, (int[]) null, (BoundsRect) null, 124);
+            CanvasResizeController.a(-93, -33, (int[]) null, (BoundsRect) null, 124);
           }
           stackIn_7_0 = aj.a(1, param4, param1, param2);
           return stackIn_7_0;
@@ -253,7 +253,7 @@ final class cp {
         this.field_c = param0;
     }
 
-    private cp() throws Throwable {
+    private CanvasResizeController() throws Throwable {
         throw new Error();
     }
 

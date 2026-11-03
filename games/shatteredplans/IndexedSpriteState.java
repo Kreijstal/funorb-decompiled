@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bq {
+abstract class IndexedSpriteState {
     int field_b;
     int field_g;
     static String field_f;
@@ -19,7 +19,7 @@ abstract class bq {
         try {
           BufferedSocket.field_i = id.a(2, param1, "basic", "display_name_changed");
           d.field_a = new am(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
-          wg.field_a = new am(0L, ih.field_g, vf.field_f, TutorialVictoryChecker.field_o);
+          wg.field_a = new am(0L, ih.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
           cg.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);
           RecklessAi.field_p = new AnimatedPanel(0L, SpriteState.field_u);
           RecklessAi.field_p.field_y = 1;
@@ -61,7 +61,7 @@ abstract class bq {
         field_f = null;
         if (param0 != 1) {
           Archive var2 = (Archive) null;
-          bq.a(30, (Archive) null);
+          IndexedSpriteState.a(30, (Archive) null);
           field_h = null;
           return;
         }

@@ -6,7 +6,7 @@ final class EmailValidator extends TextFieldValidator {
     static nq field_x;
     static boolean field_r;
     static String field_u;
-    static nk[] field_o;
+    static IndexedSprite[] field_o;
     static String[] field_w;
     static sq[] field_q;
     static String field_v;
@@ -120,7 +120,7 @@ final class EmailValidator extends TextFieldValidator {
             stackIn_12_0 = ab.field_d;
             return stackIn_12_0;
           }
-          stackIn_14_0 = dn.field_g;
+          stackIn_14_0 = DualLinkDequeSequence.field_g;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

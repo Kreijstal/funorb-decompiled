@@ -30,8 +30,8 @@ final class mj extends AnimatedPanel {
     static SoundCache field_Sb;
 
     final static void a(int param0, boolean param1) {
-        if (dn.field_k != null) {
-          dk.a((byte) 54, dn.field_k);
+        if (DualLinkDequeSequence.field_k != null) {
+          dk.a((byte) 54, DualLinkDequeSequence.field_k);
         }
         if (DerelictVictoryChecker.field_m != null) {
           DerelictVictoryChecker.field_m.a(13505, param1);

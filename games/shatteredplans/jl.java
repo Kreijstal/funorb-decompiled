@@ -24,7 +24,7 @@ abstract class jl extends Dialog {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (0 >= param1) {
-          this.b(param3, param2, (byte) -121);
+          this.centre(param3, param2, (byte) -121);
           return;
         }
         this.field_L = this.field_x;
@@ -159,12 +159,12 @@ abstract class jl extends Dialog {
         }
     }
 
-    boolean k(int param0) {
+    boolean isClosed(int param0) {
         if (param0 != 0) {
           return true;
         }
         this.n(param0 + 7489);
-        return super.k(0);
+        return super.isClosed(0);
     }
 
     void n(int param0) {
@@ -174,7 +174,7 @@ abstract class jl extends Dialog {
         if (this.field_P <= 0) {
           return;
         }
-        this.b(this.field_K, this.field_T, (byte) -114);
+        this.centre(this.field_K, this.field_T, (byte) -114);
         this.field_P = 0;
         this.g((byte) -103);
     }
@@ -231,7 +231,7 @@ abstract class jl extends Dialog {
 
     }
 
-    boolean a(byte param0) {
+    boolean animate(byte param0) {
         int var3 = 0;
         int fieldTemp$0 = 0;
         int var4 = 0;
@@ -253,10 +253,10 @@ abstract class jl extends Dialog {
             var3 = var4 * (-this.field_R + this.field_K) / var5 + this.field_R;
             var2 = (this.field_T - this.field_L) * var4 / var5 + this.field_L;
           }
-          this.b(var3, var2, (byte) -104);
+          this.centre(var3, var2, (byte) -104);
         }
         var2Lifetime1 = -57 / ((param0 + 23) / 52);
-        return super.a((byte) 88);
+        return super.animate((byte) 88);
     }
 
     final static int a(nf param0, byte param1) {

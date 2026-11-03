@@ -210,8 +210,8 @@ final class fb extends AnimatedPanel {
         if (PlacementOrder.field_t > param9) {
           TaskAi.a(param0, param9 ^ -26671, param5, param2);
         }
-        dn.field_f.field_y = 1;
-        dn.field_f.field_kb = fg.field_b.field_kb;
+        DualLinkDequeSequence.field_f.field_y = 1;
+        DualLinkDequeSequence.field_f.field_kb = fg.field_b.field_kb;
         if (Archive.field_b > 0) {
           bb.a(param5, param0, (byte) -2, param2);
         }

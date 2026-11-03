@@ -342,11 +342,11 @@ final class di extends IntrusiveNode {
             }
             if (var6.field_Db != null &&
               var6.field_Db.field_L) {
-              dn.field_k = var6.field_Bb;
+              DualLinkDequeSequence.field_k = var6.field_Bb;
             } else {
               if (var6.field_Cb.field_L &&
                 var11 != 0) {
-                dn.field_k = var6.field_Ab;
+                DualLinkDequeSequence.field_k = var6.field_Ab;
               }
             }
             var5 = var6;

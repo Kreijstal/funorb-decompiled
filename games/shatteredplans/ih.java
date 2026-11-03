@@ -44,7 +44,7 @@ final class ih {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = pd.a((byte) 102, oq.a(5722, param0));
+          var2 = TertiaryListSequence.a((byte) 102, oq.a(5722, param0));
           if (var2 == null) {
             var2 = "";
           }

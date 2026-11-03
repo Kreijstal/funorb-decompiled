@@ -8,10 +8,10 @@ abstract class FrameTimer {
 
     abstract long a(int param0);
 
-    final static hb a(IntrusiveDeque param0, int param1) {
+    final static NodeSequence a(IntrusiveDeque param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
-        un stackIn_3_0 = null;
+        IntrusiveDequeSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -21,8 +21,8 @@ abstract class FrameTimer {
             var3 = (int[]) null;
             FrameTimer.a(-79, 121, 76, -123, 0, -125, (int[]) null, -35, -114);
           }
-          stackIn_3_0 = new un(param0);
-          return (hb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new IntrusiveDequeSequence(param0);
+          return (NodeSequence) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

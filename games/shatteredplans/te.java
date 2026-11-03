@@ -14,7 +14,7 @@ final class te {
     }
 
     final static void a(boolean param0) {
-        bq.a(127);
+        IndexedSpriteState.a(127);
         hr.a(BoundsRect.field_m[0].field_o, cr.field_c, tg.field_a, 113, pe.field_K, MusicVoiceMixer.field_l);
         if (!param0) {
           v var2 = (v) null;

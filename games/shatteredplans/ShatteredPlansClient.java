@@ -23,7 +23,7 @@ public final class ShatteredPlansClient extends tl {
           if (param0 != 16) {
             return false;
           }
-          var4 = hb.a((byte) -90, param2);
+          var4 = NodeSequence.a((byte) -90, param2);
           if (var4 != null &&
             var4.field_xb != null) {
             return true;
@@ -766,7 +766,7 @@ public final class ShatteredPlansClient extends tl {
         FrameTimer.clearStatics((byte) 47);
         uh.clearStatics(param0 ^ -24161);
         FullscreenFocusCanvas.clearStatics(-1314558012);
-        cp.clearStatics(false);
+        CanvasResizeController.clearStatics(false);
         ArchiveNetworkClient.a(16967);
         DiskCacheWorker.clearStatics(true);
         ArchiveSourceManager.clearStatics((byte) 124);
@@ -878,7 +878,7 @@ public final class ShatteredPlansClient extends tl {
         StellarBombEvent.a(0);
         StarAbandonedEvent.clearStatics((byte) 48);
         TurnEventLog.clearStatics(0);
-        hb.clearStatics((byte) -122);
+        NodeSequence.clearStatics((byte) -122);
         sf.a((byte) 82);
         DualLinkDeque.clearStatics(param0 ^ -8957);
         QuaternaryNodeList.clearStatics(-79);
@@ -910,7 +910,7 @@ public final class ShatteredPlansClient extends tl {
         ck.clearStatics(100);
         eh.clearStatics(-105);
         DualLinkNode.clearStatics(9768448);
-        bq.clearStatics(1);
+        IndexedSpriteState.clearStatics(1);
         SpriteState.e(997342595);
         eq.clearStatics((byte) -70);
         RandomAccessCacheFile.clearStatics(false);
@@ -1090,10 +1090,10 @@ public final class ShatteredPlansClient extends tl {
         jm.clearStatics(22595);
         ee.a(false);
         cl.clearStatics(16777215);
-        un.clearStatics(11);
-        dn.clearStatics((byte) -107);
-        pd.clearStatics(0);
-        vf.clearStatics(17593);
+        IntrusiveDequeSequence.clearStatics(11);
+        DualLinkDequeSequence.clearStatics((byte) -107);
+        TertiaryListSequence.clearStatics(0);
+        QuaternaryListSequence.clearStatics(17593);
         wa.clearStatics(param0 ^ -14291);
         ih.clearStatics(-1);
         rk.clearStatics(-13095);

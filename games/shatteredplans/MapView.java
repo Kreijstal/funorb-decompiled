@@ -700,7 +700,7 @@ final class MapView extends MapViewState {
             var7 = this.field_i[var6] - var4;
             var8 = -var5 + this.field_J[var6];
             var9 = (float)Math.sqrt((double)((float)(var7 * var7 + var8 * var8) + this.field_I * this.field_I)) / 300.0f;
-            var3.field_i.a((byte) 120, (int)((float)(CheckboxPainter.field_p * pd.field_m.field_a << 6) / (var9 * 96.0f)));
+            var3.field_i.a((byte) 120, (int)((float)(CheckboxPainter.field_p * TertiaryListSequence.field_m.field_a << 6) / (var9 * 96.0f)));
             var3 = (so) (this.field_Y.nextForward((byte) -71));
           }
           this.a(-3, param0);
@@ -3599,20 +3599,20 @@ final class MapView extends MapViewState {
         }
     }
 
-    final static hb a(byte param0, DualLinkDeque param1) {
+    final static NodeSequence a(byte param0, DualLinkDeque param1) {
         RuntimeException var2 = null;
-        hb stackIn_2_0 = null;
-        dn stackIn_4_0 = null;
+        NodeSequence stackIn_2_0 = null;
+        DualLinkDequeSequence stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 26) {
-            stackIn_4_0 = new dn(param1);
-            return (hb) ((Object) stackIn_4_0);
+            stackIn_4_0 = new DualLinkDequeSequence(param1);
+            return (NodeSequence) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (hb) null;
+          stackIn_2_0 = (NodeSequence) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

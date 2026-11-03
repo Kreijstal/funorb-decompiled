@@ -4,7 +4,7 @@
 final class ValidationIndicator extends FocusableWidget {
     private ValidationSource field_G;
     static String field_H;
-    static nk[] field_E;
+    static IndexedSprite[] field_E;
     private int field_F;
     static String field_J;
     static AnimatedPanel field_K;
@@ -206,7 +206,7 @@ final class ValidationIndicator extends FocusableWidget {
           return;
         }
         var8 = this.field_G.c(param1 + 11730);
-        if (pd.field_h != var8 &&
+        if (TertiaryListSequence.field_h != var8 &&
           lm.field_d != var8) {
           if (ArchiveSourceManager.field_b == var8) {
             var13 = MenuList.field_w[2];

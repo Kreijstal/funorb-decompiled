@@ -20,9 +20,9 @@ final class eh extends ArrayWidgetGroup implements ButtonListener {
         }
     }
 
-    final static hb a(int param0, TertiaryNodeList param1) {
+    final static NodeSequence a(int param0, TertiaryNodeList param1) {
         RuntimeException var2 = null;
-        pd stackIn_3_0 = null;
+        TertiaryListSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -31,8 +31,8 @@ final class eh extends ArrayWidgetGroup implements ButtonListener {
           if (param0 != 25) {
             field_N = (String) null;
           }
-          stackIn_3_0 = new pd(param1);
-          return (hb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new TertiaryListSequence(param1);
+          return (NodeSequence) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -71,7 +71,7 @@ final class eh extends ArrayWidgetGroup implements ButtonListener {
           return;
         }
         try {
-          vf.a(this.field_J.l(88), this.field_J.f((byte) 96), 4, this.field_J.d(false));
+          QuaternaryListSequence.a(this.field_J.l(88), this.field_J.f((byte) 96), 4, this.field_J.d(false));
           if (param1 != 6) {
             field_Q = -62;
           }

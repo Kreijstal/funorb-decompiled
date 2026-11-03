@@ -16,7 +16,7 @@ final class AchievementProgress {
     static AnimatedPanel field_i;
     static String field_c;
 
-    final static void a(hb param0, int param1, hb param2, hb param3, CipherPacketBuffer param4) {
+    final static void a(NodeSequence param0, int param1, NodeSequence param2, NodeSequence param3, CipherPacketBuffer param4) {
         int var9 = 0;
         int var10 = 0;
         RuntimeException stackIn_32_0 = null;

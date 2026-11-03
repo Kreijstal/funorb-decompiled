@@ -121,12 +121,12 @@ final class bb {
             var5 = aq.field_j;
             aq.field_j.field_mb = 0;
             var5.field_K = 0;
-            var6 = dn.field_f;
-            dn.field_f.field_mb = 0;
+            var6 = DualLinkDequeSequence.field_f;
+            DualLinkDequeSequence.field_f.field_mb = 0;
             var6.field_K = 0;
             ArchiveSourceManager.field_f.field_z = le.field_c.toUpperCase();
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
-            dn.field_f.setTarget(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
+            DualLinkDequeSequence.field_f.setTarget(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
             aq.field_j.setTarget(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
             if (nl.field_a.length == 1 &&
               2 == nl.field_a[0]) {
@@ -170,19 +170,19 @@ final class bb {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = dn.field_f.field_nb.stringWidth(var16) + 3 * dn.field_f.field_nb.charWidth('.');
-              dn.field_f.field_kb = (-var10Lifetime1 + dn.field_f.field_K) / 2;
+              var10Lifetime1 = DualLinkDequeSequence.field_f.field_nb.stringWidth(var16) + 3 * DualLinkDequeSequence.field_f.field_nb.charWidth('.');
+              DualLinkDequeSequence.field_f.field_kb = (-var10Lifetime1 + DualLinkDequeSequence.field_f.field_K) / 2;
               if (16 == (Star.field_w & 48)) {
                 var9 = var16 + ".";
               }
-              dn.field_f.field_y = 0;
+              DualLinkDequeSequence.field_f.field_y = 0;
               if ((48 & Star.field_w) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if ((48 & Star.field_w) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              dn.field_f.field_z = (String) (var9);
+              DualLinkDequeSequence.field_f.field_z = (String) (var9);
               aq.field_j.field_z = fb.field_bc.toUpperCase();
             } else {
               stackIn_25_0 = aq.field_j;
@@ -199,7 +199,7 @@ final class bb {
                 stackIn_29_1 = qp.field_v;
               }
               stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
-              dn.field_f.field_z = wg.field_b;
+              DualLinkDequeSequence.field_f.field_z = wg.field_b;
               DialPainter.field_g.field_s = true;
               wg.field_d = true;
               if (null != pe.field_D) {
@@ -244,7 +244,7 @@ final class bb {
                       }
                     }
                   }
-                  dn.field_k = "<col=A00000>" + gg.field_c + "<br>" + ji.field_F + (String) (var9);
+                  DualLinkDequeSequence.field_k = "<col=A00000>" + gg.field_c + "<br>" + ji.field_F + (String) (var9);
                 }
               }
             }

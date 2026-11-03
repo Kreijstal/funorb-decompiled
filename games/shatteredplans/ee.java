@@ -1175,7 +1175,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_animating_combat", 102);
                 if (var2 != null) {
-                  pd.field_g = IterableNodeHashTable.a(var2, 17746);
+                  TertiaryListSequence.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_animating_results", 115);
                 if (var2 != null) {
@@ -1435,7 +1435,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tutorial_lost_none", 102);
                 if (null != var2) {
-                  bq.field_f = IterableNodeHashTable.a(var2, 17746);
+                  IndexedSpriteState.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_lost_single", 123);
                 if (var2 != null) {

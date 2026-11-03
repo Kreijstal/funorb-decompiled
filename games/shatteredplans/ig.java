@@ -72,16 +72,16 @@ final class ig {
     }
 
     final static void a(int param0) {
-        le.field_e.k(81);
+        le.field_e.deactivateAll(81);
         if (param0 != 7655) {
           return;
         }
         if (MouseInputHandler.field_h != null) {
-          le.field_e.a(true, MouseInputHandler.field_h);
+          le.field_e.addDialog(true, MouseInputHandler.field_h);
           return;
         }
         MouseInputHandler.field_h = new eo(le.field_e, tl.field_z);
-        le.field_e.a(true, MouseInputHandler.field_h);
+        le.field_e.addDialog(true, MouseInputHandler.field_h);
     }
 
     static {

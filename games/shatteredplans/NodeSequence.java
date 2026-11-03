@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hb {
+abstract class NodeSequence {
     static Sprite field_d;
     static java.applet.Applet field_a;
     static Sprite[] field_b;

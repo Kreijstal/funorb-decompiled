@@ -136,7 +136,7 @@ class MenuLabel extends MenuComponent {
         MenuButton.f(-1);
         oe.field_f = true;
         TertiaryNodeList.field_b = true;
-        le.field_e.k(99);
+        le.field_e.deactivateAll(99);
         if (param0 > -12) {
           return;
         }

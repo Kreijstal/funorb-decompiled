@@ -237,7 +237,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
             return true;
           }
           if (param0 == 98) {
-            stackIn_5_0 = this.a(param3, true);
+            stackIn_5_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_5_0;
           }
           if (param2 != 13) {
@@ -247,7 +247,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           if (99 != param0) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, 92);
+          stackIn_10_0 = this.isAfterFocusedChild(param3, 92);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

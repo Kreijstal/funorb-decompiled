@@ -107,7 +107,7 @@ final class IntrusiveNodeHashTable {
             var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var16));
           }
         }
-        pd.a(0);
+        TertiaryListSequence.a(0);
         return var1;
     }
 

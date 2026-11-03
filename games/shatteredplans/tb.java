@@ -240,10 +240,10 @@ final class tb {
           }
           TextFieldWidget.field_I = new AnimatedPanel(0L, IsaacBackedRandom.field_a);
           aq.field_j = new AnimatedPanel(0L, IsaacBackedRandom.field_a);
-          dn.field_f = new AnimatedPanel(0L, fg.field_b);
-          dn.field_f.copyFrom(SpriteState.field_u, false);
-          var17 = dn.field_f;
-          dn.field_f.field_G = 1;
+          DualLinkDequeSequence.field_f = new AnimatedPanel(0L, fg.field_b);
+          DualLinkDequeSequence.field_f.copyFrom(SpriteState.field_u, false);
+          var17 = DualLinkDequeSequence.field_f;
+          DualLinkDequeSequence.field_f.field_G = 1;
           var17.field_y = 1;
           IntrusiveDeque.field_g = new AnimatedPanel(0L, (AnimatedPanel) null);
           IntrusiveDeque.field_g.addChild(param13 + 7970, ArchiveSourceManager.field_f);
@@ -263,8 +263,8 @@ final class tb {
           }
           IntrusiveDeque.field_g.addChild(4, TextFieldWidget.field_I);
           IntrusiveDeque.field_g.addChild(param13 + 7970, aq.field_j);
-          IntrusiveDeque.field_g.addChild(4, dn.field_f);
-          ValidationIndicator.field_K = new AnimatedPanel(0L, un.field_g, ListContent.field_c.toUpperCase());
+          IntrusiveDeque.field_g.addChild(4, DualLinkDequeSequence.field_f);
+          ValidationIndicator.field_K = new AnimatedPanel(0L, IntrusiveDequeSequence.field_g, ListContent.field_c.toUpperCase());
           oo.field_c = new AnimatedPanel(0L, DelegatingCanvas.field_f, uq.field_n.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

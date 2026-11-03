@@ -76,11 +76,11 @@ final class we {
               for (var2 = 0; var2 < 112; var2++) {
                 di.field_p[var2] = false;
               }
-              qn.field_c = hb.field_e;
+              qn.field_c = NodeSequence.field_e;
             } else {
-              while (hb.field_e != qn.field_c) {
-                var2 = StrongCacheEntry.field_x[hb.field_e];
-                hb.field_e = 127 & 1 + hb.field_e;
+              while (NodeSequence.field_e != qn.field_c) {
+                var2 = StrongCacheEntry.field_x[NodeSequence.field_e];
+                NodeSequence.field_e = 127 & 1 + NodeSequence.field_e;
                 if (var2 < 0) {
                   di.field_p[~var2] = false;
                   continue;

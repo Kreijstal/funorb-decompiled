@@ -114,7 +114,7 @@ final class kh extends AnimatedPanel {
             this.field_Ab.field_y = 1;
             this.field_Ab.field_x = 11184810;
             this.field_Cb.addChild(4, this.field_Ab);
-            this.field_Fb = new AnimatedPanel(0L, param8, dn.field_j);
+            this.field_Fb = new AnimatedPanel(0L, param8, DualLinkDequeSequence.field_j);
             this.field_Fb.field_y = 1;
             this.field_Fb.field_x = 11184810;
             this.field_Cb.addChild(4, this.field_Fb);
@@ -383,8 +383,8 @@ final class kh extends AnimatedPanel {
           return;
         }
         us.a(param1, param0);
-        if (dn.field_k != null) {
-          dk.a((byte) 121, dn.field_k);
+        if (DualLinkDequeSequence.field_k != null) {
+          dk.a((byte) 121, DualLinkDequeSequence.field_k);
         }
     }
 

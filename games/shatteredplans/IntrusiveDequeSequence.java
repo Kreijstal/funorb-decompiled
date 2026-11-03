@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class un extends hb {
+final class IntrusiveDequeSequence extends NodeSequence {
     private static int[] field_f;
     private static int[] field_k;
     private IntrusiveDeque field_h;
@@ -45,7 +45,7 @@ final class un extends hb {
         }
     }
 
-    un(IntrusiveDeque param0) {
+    IntrusiveDequeSequence(IntrusiveDeque param0) {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
@@ -59,7 +59,7 @@ final class un extends hb {
         field_k = null;
         field_j = null;
         if (param0 != 11) {
-          un.a((String) null, (byte) -25, 15L, -37, -9);
+          IntrusiveDequeSequence.a((String) null, (byte) -25, 15L, -37, -9);
         }
         field_i = null;
     }

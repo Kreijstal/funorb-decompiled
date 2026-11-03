@@ -21,7 +21,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         boolean stackIn_9_0 = false;
         if (param0 < 111) {
           var2 = (Archive) null;
-          StrongCacheEntry.a((byte) -50, (int[]) null, (Archive) null, (nk[]) null, (Archive) null);
+          StrongCacheEntry.a((byte) -50, (int[]) null, (Archive) null, (IndexedSprite[]) null, (Archive) null);
         }
         stackIn_9_0 = ((IsolationistAi.field_r &&
           MusicCrossfadeStream.field_q) ||
@@ -221,18 +221,18 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
     }
 
-    final static void a(byte param0, int[] param1, Archive param2, nk[] param3, Archive param4) {
+    final static void a(byte param0, int[] param1, Archive param2, IndexedSprite[] param3, Archive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
         Sprite[] dupTemp$3 = null;
-        nk[] var5 = null;
-        nk[] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        nk[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -268,7 +268,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var5 = var20;
           ClientException.field_d = var20.length;
           if (param3 != null) {
-            var6 = new nk[param3.length + ClientException.field_d];
+            var6 = new IndexedSprite[param3.length + ClientException.field_d];
             for (var7_int = 0; ClientException.field_d > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
@@ -333,8 +333,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var12 = QuickChatCategoryRegistry.a(ae.a(124, "lobby", param4, "popup_mouseover"), 117);
           var13 = ae.a(32, "lobby", param4, "button");
           var14 = QuickChatCategoryRegistry.a(ae.a(-97, "lobby", param4, "tab_active"), 82);
-          un.field_g = new AnimatedPanel(0L, var8);
-          un.field_g.field_F = var14;
+          IntrusiveDequeSequence.field_g = new AnimatedPanel(0L, var8);
+          IntrusiveDequeSequence.field_g.field_F = var14;
           po.field_d = new AnimatedPanel(0L, (AnimatedPanel) null);
           po.field_d.field_pb = id.a(2, param4, "lobby", "closebutton");
           po.field_d.field_fb = id.a(2, param4, "lobby", "closebutton_mouseover");

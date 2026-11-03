@@ -40,7 +40,7 @@ final class cq extends WidgetContainer implements ButtonListener {
             }
             var2 = 1;
           }
-          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(pd.field_k, bb.field_b, 16777215));
+          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(TertiaryListSequence.field_k, bb.field_b, 16777215));
           if (GameState.field_l.a((byte) -76)) {
             var1_int = 1;
           }
@@ -78,7 +78,7 @@ final class cq extends WidgetContainer implements ButtonListener {
 
     final static void a(int param0) {
         if (null != le.field_e) {
-          le.field_e.h((byte) 121);
+          le.field_e.removeClosedDialogs((byte) 121);
         }
         if (param0 == -50) {
           if (MouseInputHandler.field_h != null) {
@@ -102,13 +102,13 @@ final class cq extends WidgetContainer implements ButtonListener {
             return true;
           }
           if (param0 == 98) {
-            stackIn_7_0 = this.a(param3, true);
+            stackIn_7_0 = this.isBeforeFocusedChild(param3, true);
             return stackIn_7_0;
           }
           if (99 != param0) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, param2 ^ -74);
+          stackIn_10_0 = this.isAfterFocusedChild(param3, param2 ^ -74);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

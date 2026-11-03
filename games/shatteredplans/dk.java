@@ -28,7 +28,7 @@ final class dk {
         int var8 = 0;
         int var9 = 0;
         try {
-          var2_int = pd.field_k;
+          var2_int = TertiaryListSequence.field_k;
           var3 = bb.field_b;
           var4 = SpriteState.field_u.field_nb.lineCount(param1, 500);
           int var5 = 7 % ((-9 - param0) / 60);
