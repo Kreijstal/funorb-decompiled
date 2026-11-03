@@ -37,7 +37,7 @@ final class BallDebugOverlay implements eb {
           }
           var6 = param4.getParameter("currency");
           if (var6 != null &&
-            AgeValidator.a(10, (CharSequence) ((Object) var6))) {
+            AgeValidator.isFriend(10, (CharSequence) ((Object) var6))) {
             qg.field_e = GameApplet.a((byte) 63, (CharSequence) ((Object) var6));
           } else {
             qg.field_e = 2;
@@ -93,7 +93,7 @@ final class BallDebugOverlay implements eb {
           stackIn_2_3 = this.field_a.renderTransform;
           stackIn_2_4 = (int[]) (param0);
           stackIn_3_5 = (this.field_e == this.field_h.currentShot(param1 ^ -32240).field_I);
-          ((BallSkin) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_3_5);
+          ((BallSkin) (Object) stackIn_2_0).drawBallAndShadow(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_3_5);
           if ((LinkButtonPainter.field_i & 4L) != 0L) {
             this.field_a.f(param1 ^ 32245);
             if (this.field_a.velocityX != 0 ||

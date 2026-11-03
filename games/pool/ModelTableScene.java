@@ -140,7 +140,7 @@ abstract class ModelTableScene extends TableScene {
         }
     }
 
-    abstract void c(boolean param0);
+    abstract void initializeScene(boolean param0);
 
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
@@ -312,7 +312,7 @@ abstract class ModelTableScene extends TableScene {
     void buildTableGeometry(PoolGameModel param0, int param1) {
         try {
           super.buildTableGeometry(param0, param1 ^ 0);
-          this.c(true);
+          this.initializeScene(true);
           this.d(16);
           if (param1 != 21894) {
             int[] var4 = (int[]) null;

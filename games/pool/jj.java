@@ -165,7 +165,7 @@ final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_S = null;
         enterignoreDel = null;
         hidePlayersInXsGame = null;
@@ -181,7 +181,7 @@ final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
         }
         try {
           if (!param0) {
-            jj.i(82);
+            jj.releaseStatics(82);
           }
           ReportAbuseDialog.a(-121, this.field_N.getYear(37), this.field_N.getMonthIndex(25), this.field_N.getDay((byte) -119));
         } catch (RuntimeException runtimeException) {

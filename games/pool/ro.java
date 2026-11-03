@@ -51,8 +51,8 @@ final class ro {
           var3 = param1.readBits(12, 82);
           var4 = new nj[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!FullscreenErrorDialog.a((byte) 118, param1)) {
-              var6 = param1.readBits(fr.a(16, -1 + var5), 105);
+            if (!FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
+              var6 = param1.readBits(fr.bitLength(16, -1 + var5), 105);
               var4[var5] = var4[var6];
             } else {
               var6_ref_nj = new nj();

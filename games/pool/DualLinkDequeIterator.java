@@ -59,7 +59,7 @@ final class DualLinkDequeIterator implements Iterator {
         if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.lastReturned.a(false);
+        this.lastReturned.unlinkNode(false);
         this.lastReturned = null;
     }
 

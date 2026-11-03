@@ -10,11 +10,11 @@ final class fl extends IntrusiveNode {
     static int field_l;
     static String quickchatLobby;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         endOfGamePressEscapeToContinue = null;
         field_q = null;
         if (param0 != 59) {
-          fl.a(-121);
+          fl.clearSharedReferences(-121);
           quickchatLobby = null;
           return;
         }

@@ -508,7 +508,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (AgeValidator.a(10, (CharSequence) ((Object) var4)) &&
+                      if (AgeValidator.isFriend(10, (CharSequence) ((Object) var4)) &&
                         !(GameApplet.a((byte) 105, (CharSequence) ((Object) var4)) >= 10)) {
                         this.redirectToErrorPage((byte) -89, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -569,7 +569,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.recreateCanvas((byte) 55);
                 OpacityWidget.field_P = id.createRasterBuffer(ml.field_d, ArchiveIndex.field_c, -44, (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
                 this.initializeGame((byte) -46);
-                MessageScreen.field_J = SocketArchiveNetworkClient.e(0);
+                MessageScreen.field_J = SocketArchiveNetworkClient.createTickClock(0);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (rm.field_c != 0L) {

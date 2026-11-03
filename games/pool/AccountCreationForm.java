@@ -309,7 +309,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         return DualLinkDeque.field_f.content;
     }
 
-    private final int a(int param0, String param1, UiWidget param2, String param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultMessageWidth(int param0, String param1, UiWidget param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -467,8 +467,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         var3 = var3 + this.a((byte) 44, this.emailInput, var3, 170, ThreeSliceButtonPainter.createEmail);
         var3 = var3 + (5 + this.a(lo.createEmailConfirm, this.emailConfirmInput, 20, 170, "", var3, (byte) -76));
         var3 = var3 + this.a((byte) 44, this.passwordInput, var3, 170, PolarBallSkin.createPassword);
-        var3 = var3 + (5 + this.a(35, e.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
-        var3 = var3 + (5 + this.a(35, KillerBallSkin.createDisplayname, this.displayNameInput, LongAndTextLoginPayload.createDisplaynameHint, 170, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, e.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, KillerBallSkin.createDisplayname, this.displayNameInput, LongAndTextLoginPayload.createDisplaynameHint, 170, var3));
         var3 = var3 + this.a(MusicPatch.createAge, (byte) -114, 170, var3, this.ageInput);
         LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.widgetWidth, 25, this.newsOptInCheckbox, true, -120 + this.widgetWidth, 5, PoolUiText.field_a, 11579568, ab.createOptinNews);
         this.addChild(true, var4);

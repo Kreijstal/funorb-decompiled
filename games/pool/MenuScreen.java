@@ -583,7 +583,7 @@ class MenuScreen extends jh {
                                                                         var5 = 1;
                                                                         AgeValidator.a(true, 256);
                                                                       }
-                                                                      if (this.selection.c((byte) 111)) {
+                                                                      if (this.selection.isPointerHeld((byte) 111)) {
                                                                         var6 = this.getButtonLeft(0, param2) + (this.getButtonRight(false, param2) + Ball.field_H) - 120 >> 1;
                                                                         var7 = -var6 + wn.field_i;
                                                                         var8 = 256 * var7 / 120;
@@ -609,7 +609,7 @@ class MenuScreen extends jh {
                                                                         var5 = 1;
                                                                       }
                                                                       if ((var5 != 0)) {
-                                                                        if (this.selection.c((byte) 103) &&
+                                                                        if (this.selection.isPointerHeld((byte) 103) &&
                                                                           SocialListEntry.field_Tb <= field_D) {
                                                                           break regionExit2;
                                                                         }
@@ -624,7 +624,7 @@ class MenuScreen extends jh {
                                                                         if (this.selection.isEndKey(103)) {
                                                                           QuickChatPhraseDefinition.a(256, 3815994);
                                                                         }
-                                                                        if (this.selection.c((byte) 105)) {
+                                                                        if (this.selection.isPointerHeld((byte) 105)) {
                                                                           var6 = this.getButtonLeft(0, param2) + this.getButtonRight(false, param2) + Ball.field_H - 120 >> 1;
                                                                           var7 = wn.field_i - var6;
                                                                           var8 = 256 * var7 / 120;

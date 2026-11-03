@@ -1708,7 +1708,7 @@ final class TriangleRasterizer {
         var19 = var42;
         if (var19 != null &&
           blendAlpha <= 10) {
-          field_h = textureProvider.a(param18, 55);
+          field_h = textureProvider.isSize64(param18, 55);
           stackIn_6_0 = (textureProvider.a(param18, (byte) -91) == 0);
           field_l = stackIn_6_0;
           var20 = param4 - param3;
@@ -2290,7 +2290,7 @@ final class TriangleRasterizer {
           }
           return;
         }
-        var20Lifetime1 = textureProvider.b(108, param18);
+        var20Lifetime1 = textureProvider.getTextureId(108, param18);
         TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.scaleHslLightness(var20Lifetime1, param6), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param7), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param8));
     }
 

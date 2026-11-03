@@ -96,7 +96,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         this.replaceContent(var2Lifetime1, param0 + 63);
     }
 
-    public static void n(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 >= -62) {
           playerYouX2AreGroupName = (String) null;
           tutorialEightBallStartPlaceCueball = null;

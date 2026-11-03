@@ -64,7 +64,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 break;
               }
               var7_ref_String = param2.substring(var6_int + 2, var5);
-              if (!AgeValidator.a(10, (CharSequence) ((Object) var7_ref_String))) {
+              if (!AgeValidator.isFriend(10, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -97,7 +97,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
               break;
             }
             var9 = param2.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!AgeValidator.a(10, (CharSequence) ((Object) var9))) {
+            if (!AgeValidator.isFriend(10, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {

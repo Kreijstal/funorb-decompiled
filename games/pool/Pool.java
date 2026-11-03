@@ -501,7 +501,7 @@ public final class Pool extends NetworkGameClient {
         TriangleRasterizer.releaseStatics();
         TextureCache.releaseStatics(param0 ^ -3723);
         bq.releaseStatics((byte) -101);
-        IntrusiveDeque.d(-102);
+        IntrusiveDeque.releaseStatics(-102);
         ab.b(-75);
         il.releaseStatics(param0 ^ 41);
         l.releaseStatics(19545);
@@ -513,7 +513,7 @@ public final class Pool extends NetworkGameClient {
         ag.releaseStatics(0);
         TableScene.releaseStatics(-15631);
         TikiTableScene.m(112);
-        PolarTableScene.e((byte) 76);
+        PolarTableScene.clearSharedReferences((byte) 76);
         MenuScreen.releaseStatics((byte) 107);
         MessageScreen.releaseStatics(false);
         KeyHandler.releaseStatics(-1);
@@ -558,7 +558,7 @@ public final class Pool extends NetworkGameClient {
         UiComponent.releaseStatics((byte) 8);
         hh.releaseStatics(28882);
         hg.releaseStatics(false);
-        c.a(-13679);
+        c.releaseStatics(-13679);
         MeshBuilder.releaseStatics();
         BitmapFont.a();
         SoundCache.releaseStatics(param0 + 28774);
@@ -607,18 +607,18 @@ public final class Pool extends NetworkGameClient {
         GzipDecoder.releaseStatics((byte) -92);
         ArchiveProvider.a((byte) -41);
         je.a((byte) -125);
-        DialogLayer.g((byte) -47);
+        DialogLayer.releaseStatics((byte) -47);
         fq.releaseStatics(param0 + 33);
         ProgressDialog.releaseStatics(7585);
         AccountContentDialog.releaseStatics(-124);
-        MessageDialog.n((byte) -86);
+        MessageDialog.clearSharedReferences((byte) -86);
         AccountCreationForm.releaseStatics((byte) 4);
         AccountWelcomePanel.releaseStatics(20868);
-        LoginForm.a(-31360);
+        LoginForm.clearSharedReferences(-31360);
         DisplayNamePanel.releaseStatics(false);
         LoginTextValue.releaseStatics(false);
         mj.releaseStatics((byte) -83);
-        ii.a(127);
+        ii.releaseStatics(127);
         ModelMesh.releaseStatics();
         ModelInstance.releaseStatics(75);
         BallDebugOverlay.a((byte) 116);
@@ -637,14 +637,14 @@ public final class Pool extends NetworkGameClient {
         PlayerContextMenu.c((byte) -116);
         ScrollPane.releaseStatics(param0 + 28);
         ReportAbuseDialog.f((byte) -93);
-        vi.b(-115);
+        vi.clearSharedReferences(-115);
         da.b((byte) 108);
         AlignedIconLabel.releaseStatics((byte) -102);
         vn.a(true);
         fh.releaseStatics((byte) 62);
         td.releaseStatics((byte) 86);
         HuffmanCodec.a(false);
-        jh.a(21546);
+        jh.releaseStatics(21546);
         tp.releaseStatics(0);
         IndexedSpriteState.a((byte) -118);
         NineSliceFrame.releaseStatics(false);
@@ -652,7 +652,7 @@ public final class Pool extends NetworkGameClient {
         w.releaseStatics(62);
         ue.releaseStatics(false);
         wn.releaseStatics(true);
-        jj.i(100);
+        jj.releaseStatics(100);
         uj.releaseStatics((byte) 33);
         QuickChatHelpDialog.releaseStatics(56);
         ll.releaseStatics(-69);
@@ -676,7 +676,7 @@ public final class Pool extends NetworkGameClient {
         ah.releaseStatics(false);
         un.releaseStatics((byte) -101);
         ModernTableScene.releaseStatics((byte) 71);
-        PlasmaTableScene.m(param0 - 100);
+        PlasmaTableScene.releaseStatics(param0 - 100);
         SpaceTableScene.e((byte) -116);
         ClassicBallSkin.releaseStatics(1);
         nn.releaseStatics(param0 + 16034);
@@ -689,14 +689,14 @@ public final class Pool extends NetworkGameClient {
         TimeTrialSelectScreen.releaseStatics(param0 - 73);
         PauseMenuScreen.f(8);
         lb.releaseStatics(-79);
-        HighscoresScreen.g(-126);
+        HighscoresScreen.clearSharedReferences(-126);
         RankingsScreen.releaseStatics(0);
         InstructionsScreen.releaseStatics((byte) -90);
         AchievementsScreen.releaseStatics(false);
         LoginRequiredScreen.releaseStatics(false);
         MembershipBenefitsScreen.b(true);
         LocalGameSetupScreen.releaseStatics((byte) 74);
-        ThemeSelectScreen.f(param0 ^ -506724219);
+        ThemeSelectScreen.clearSharedReferences(param0 ^ -506724219);
         TutorialSelectScreen.releaseStatics((byte) -103);
         SocketArchiveNetworkClient.releaseStatics(param0 ^ 80);
         DualLinkDeque.a(true);
@@ -844,7 +844,7 @@ public final class Pool extends NetworkGameClient {
         WireframeQuad.a(127);
         qf.releaseStatics(true);
         he.a(param0 ^ 23);
-        fl.a(59);
+        fl.clearSharedReferences(59);
         oi.releaseStatics((byte) -124);
         ln.releaseStatics(param0 ^ -27827);
         kg.releaseStatics((byte) -103);
@@ -857,7 +857,7 @@ public final class Pool extends NetworkGameClient {
         PasswordValidator.releaseStatics(true);
         EmailValidator.releaseStatics((byte) 113);
         EmailAvailabilityValidator.b(true);
-        AgeValidator.b(true);
+        AgeValidator.releaseStatics(true);
         MatchingTextValidator.releaseStatics((byte) 15);
         cd.releaseStatics(param0 ^ -94);
         qa.releaseStatics((byte) 33);
@@ -1596,7 +1596,7 @@ public final class Pool extends NetworkGameClient {
             sa.field_h = he.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialish12");
             ModernTableScene.field_Z = he.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialbold14");
             id.field_c = new CueStick();
-            id.field_c.a(2);
+            id.field_c.buildSegments(2);
             SoundCache.a(0, ViewportController.field_q);
             ScrollPane.a((byte) 27, rl.field_h);
             Camera.field_j = WidgetStyleLayer.loadSprite("basic", (byte) 83, "locked", Under13NoticePanel.field_R);
@@ -1702,10 +1702,10 @@ public final class Pool extends NetworkGameClient {
                                             this.paintFrame((byte) 120);
                                             IntKeyLookup.a(true);
                                             qg.field_g = new SoundCache(WeightedLruCache.field_d, he.field_b);
-                                            il.field_c[0] = qg.field_g.a("interface_mouseover_menuitems", true, "");
-                                            il.field_c[1] = qg.field_g.a("interface_music_level_change", true, "");
-                                            il.field_c[2] = qg.field_g.a("interface_SFX_level_change_chalk", true, "");
-                                            il.field_c[3] = qg.field_g.a("interface_select_ballroll_transition", true, "");
+                                            il.field_c[0] = qg.field_g.getVorbisSound("interface_mouseover_menuitems", true, "");
+                                            il.field_c[1] = qg.field_g.getVorbisSound("interface_music_level_change", true, "");
+                                            il.field_c[2] = qg.field_g.getVorbisSound("interface_SFX_level_change_chalk", true, "");
+                                            il.field_c[3] = qg.field_g.getVorbisSound("interface_select_ballroll_transition", true, "");
                                             for (var3Lifetime1 = 0; var3Lifetime1 < nn.field_b.length; var3Lifetime1++) {
                                               nn.field_b[var3Lifetime1].loadSounds(qg.field_g, 124);
                                             }

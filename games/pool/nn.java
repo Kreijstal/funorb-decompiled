@@ -17,7 +17,7 @@ final class nn {
         if (null != LoginPayloadKind.field_a.field_a) {
           LoginPayloadKind.field_a.field_j[vn.field_e] = (ModelMesh) (LoginPayloadKind.field_a.field_a[vn.field_e].createModelMeshTransformed(96, 1031, -1024, -1024, -10240, tp.field_h));
         }
-        LoginPayloadKind.field_a.a(tp.field_h, CushionSegment.field_i, vn.field_e, -3637);
+        LoginPayloadKind.field_a.drawBall(tp.field_h, CushionSegment.field_i, vn.field_e, -3637);
         PoolMatchController var3 = AccountContentDialog.field_ub;
         if (var3 == null) {
           var3 = TextWidgetPainter.field_e;

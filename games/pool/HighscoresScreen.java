@@ -547,7 +547,7 @@ final class HighscoresScreen extends MenuScreen {
         return this.g(param0, 53) ? ln.field_s : super.getButtonFrameSprites(param0, -34);
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 31 % ((param0 + 47) / 54);
         field_M = null;
         field_J = null;

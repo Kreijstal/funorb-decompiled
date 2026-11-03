@@ -242,7 +242,7 @@ final class DialogLayer extends SingleChildWidget {
         DialogLayer.i(15975);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         connectionlostWithreason = null;
         playerListLast = null;
         field_T = null;
@@ -299,12 +299,12 @@ final class DialogLayer extends SingleChildWidget {
           jq.field_c.clear((byte) 48);
           var2 = AimTarget.field_b.firstForIteration((byte) -125);
           while (var2 != null) {
-            var2.a(false);
+            var2.unlinkNode(false);
             var2 = AimTarget.field_b.nextForIteration(83);
           }
           var2Lifetime1 = gd.field_c.firstForIteration((byte) -125);
           while (var2Lifetime1 != null) {
-            var2Lifetime1.a(false);
+            var2Lifetime1.unlinkNode(false);
             var2Lifetime1 = gd.field_c.nextForIteration(68);
           }
           th.field_a = 0;

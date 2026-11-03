@@ -51,11 +51,11 @@ final class MenuSelection {
         int var1 = 11 / ((42 - param0) / 35);
     }
 
-    final boolean c(byte param0) {
+    final boolean isPointerHeld(byte param0) {
         if (param0 >= 77) {
           return this.heldCode != 0 ? true : false;
         }
-        this.c((byte) -114);
+        this.isPointerHeld((byte) -114);
         return this.heldCode != 0 ? true : false;
     }
 

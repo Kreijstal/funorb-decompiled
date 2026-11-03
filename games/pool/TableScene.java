@@ -54,7 +54,7 @@ abstract class TableScene {
 
     void d(int param0) {
         if (param0 != 16) {
-          this.b(3, 108);
+          this.updateHumPitch(3, 108);
         }
     }
 
@@ -95,7 +95,7 @@ abstract class TableScene {
         }
     }
 
-    void a(byte param0, int[] param1) {
+    void setViewMatrix(byte param0, int[] param1) {
         try {
           int var3_int = -56 % ((-64 - param0) / 52);
         } catch (RuntimeException runtimeException) {
@@ -811,13 +811,13 @@ abstract class TableScene {
         }
     }
 
-    void i(int param0) {
+    void buildPalettes(int param0) {
         if (param0 != 25879) {
           this.field_G = -36;
         }
     }
 
-    void c(boolean param0) {
+    void initializeScene(boolean param0) {
         if (!param0) {
           this.field_z = -0.5056021213531494f;
         }
@@ -1275,14 +1275,14 @@ abstract class TableScene {
         }
     }
 
-    void a(boolean param0) {
+    void stopLoopSounds(boolean param0) {
         if (param0) {
           Pocket[] var3 = (Pocket[]) null;
           this.buildPocketMarkers((Pocket[]) null, 70);
         }
     }
 
-    void c(int param0, ResourceArchive param1) {
+    void loadSceneSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
             TableScene.releaseStatics(-78);
@@ -1309,7 +1309,7 @@ abstract class TableScene {
         }
     }
 
-    void b(int param0, int param1) {
+    void updateHumPitch(int param0, int param1) {
         int var3 = -12 / ((11 - param0) / 52);
     }
 

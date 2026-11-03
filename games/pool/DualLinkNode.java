@@ -60,7 +60,7 @@ class DualLinkNode extends IntrusiveNode {
         return il.a(1, 1, param4, 3, 4, 1, param0, param3, param1);
     }
 
-    final void a(boolean param0) {
+    final void unlinkNode(boolean param0) {
         if (param0) {
           return;
         }

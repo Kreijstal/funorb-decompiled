@@ -70,7 +70,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         menuSettings = null;
         resign = null;
         muChatLobbyShowAll = null;

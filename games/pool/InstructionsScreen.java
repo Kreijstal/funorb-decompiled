@@ -159,7 +159,7 @@ final class InstructionsScreen extends MenuScreen {
         if (param0 == -34) {
           stackIn_7_0 = (this.isButtonVisible(2, 102)) ? 2 : 1;
           var3 = stackIn_7_0;
-          if (!this.selection.c((byte) 102)) {
+          if (!this.selection.isPointerHeld((byte) 102)) {
             if (IterableDualLinkDeque.field_a == 96) {
               if (this.selection.selectedIndex <= var2) {
                 this.selection.a(var3, (byte) 1);
@@ -185,7 +185,7 @@ final class InstructionsScreen extends MenuScreen {
         this.getButtonRight(false, 51);
         stackIn_48_0 = (this.isButtonVisible(2, 102)) ? 2 : 1;
         var3Lifetime1 = stackIn_48_0;
-        if (!this.selection.c((byte) 102)) {
+        if (!this.selection.isPointerHeld((byte) 102)) {
           if (IterableDualLinkDeque.field_a == 96) {
             if (this.selection.selectedIndex <= var2) {
               this.selection.a(var3Lifetime1, (byte) 1);

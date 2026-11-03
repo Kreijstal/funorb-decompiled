@@ -855,7 +855,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

@@ -109,7 +109,7 @@ final class PlasmaBallSkin extends BallSkin {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            this.a((int[]) null, (int[]) null, 93, 33);
+            this.drawBall((int[]) null, (int[]) null, 93, 33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -441,7 +441,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final void h(int param0) {
+    final void updateAnimation(int param0) {
         int[] dupTemp$2 = null;
         int var7 = 0;
         int[] dupTemp$0 = null;
@@ -526,7 +526,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final void a(int param0, PoolGameModel param1) {
+    final void prepareForGame(int param0, PoolGameModel param1) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -753,7 +753,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final void a(int[] param0, int[] param1, int param2, int param3) {
+    final void drawBall(int[] param0, int[] param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -880,7 +880,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final void a(int param0, int param1, int[] param2, int[] param3, boolean param4) {
+    final void drawBallAndShadow(int param0, int param1, int[] param2, int[] param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;

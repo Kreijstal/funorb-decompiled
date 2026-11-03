@@ -132,7 +132,7 @@ final class jd {
           if (IterableNodeHashTable.a(param2, -106)) {
             return false;
           }
-          if (SpaceTableScene.a(param2, 28350)) {
+          if (SpaceTableScene.hasInvalidPasswordLength(param2, 28350)) {
             return false;
           }
           if (param0 >= -24) {

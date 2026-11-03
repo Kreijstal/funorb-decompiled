@@ -13,7 +13,7 @@ final class fr extends IntrusiveNode {
     static int field_u;
     static int field_t;
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (param1 == 0) {
@@ -121,7 +121,7 @@ final class fr extends IntrusiveNode {
         muOptionsWhocanjoin = null;
         field_o = null;
         if (param0 < 39) {
-          fr.a(-16, 120);
+          fr.bitLength(-16, 120);
         }
     }
 

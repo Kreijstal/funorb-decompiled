@@ -77,7 +77,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var7 = (dg) (this.requestQueue.b((byte) -97));
+              var7 = (dg) (this.requestQueue.next((byte) -97));
             }
           }
           var4.field_Q = param1.read((byte) -110, param2);

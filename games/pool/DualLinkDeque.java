@@ -38,7 +38,7 @@ final class DualLinkDeque {
             this.field_e = (DualLinkNode) null;
           }
           if (param0.field_n != null) {
-            param0.a(param1);
+            param0.unlinkNode(param1);
           }
           param0.field_q = this.field_d;
           param0.field_n = this.field_d.field_n;
@@ -87,7 +87,7 @@ final class DualLinkDeque {
         if (this.field_d == var2) {
           return null;
         }
-        var2.a(false);
+        var2.unlinkNode(false);
         if (param0 == 0) {
           return var2;
         }
@@ -101,7 +101,7 @@ final class DualLinkDeque {
         this.field_d.field_n = this.field_d;
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode next(byte param0) {
         if (param0 > -66) {
           return (DualLinkNode) null;
         }

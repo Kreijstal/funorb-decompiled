@@ -28,8 +28,8 @@ final class PolarTableScene extends ModelTableScene {
     private PcmSample field_V;
     private PcmSample field_eb;
 
-    final void i(int param0) {
-        super.i(param0);
+    final void buildPalettes(int param0) {
+        super.buildPalettes(param0);
     }
 
     final void updatePottedBalls(int param0, PoolMatchController param1) {
@@ -253,14 +253,14 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         ballsetUsa8Group1 = null;
         int var1 = 104 / ((param0 + 10) / 36);
         timerHoursMinutesSecondsFractions = null;
         field_nb = null;
     }
 
-    final void c(boolean param0) {
+    final void initializeScene(boolean param0) {
         so dupTemp$497 = null;
         so dupTemp$498 = null;
         so dupTemp$499 = null;
@@ -1012,7 +1012,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void c(int param0, ResourceArchive param1) {
+    final void loadSceneSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
             this.field_T = (PcmSample) null;
@@ -1036,7 +1036,7 @@ final class PolarTableScene extends ModelTableScene {
         try {
           var3_int = param1.camera.b(-128);
           if (!param0) {
-            PolarTableScene.e((byte) -126);
+            PolarTableScene.clearSharedReferences((byte) -126);
           }
           var4 = this.field_B.field_z << 1;
           var5 = this.field_B.field_A << 1;
@@ -1093,24 +1093,24 @@ final class PolarTableScene extends ModelTableScene {
 
     final void loadSounds(SoundCache param0, int param1) {
         try {
-          this.field_mb = param0.a("", "polar_blackball_collision1", (byte) 127);
-          this.field_jb = param0.a("polar_pot_ball_pocket2", true, "");
-          this.field_S = param0.a("", "polar_respot_the_white1", (byte) 126);
-          param0.a("", "polar_respot_the_white_penguin", (byte) 121);
-          this.field_ib = param0.a("", "polar_ball_cushion1", (byte) 122);
-          this.field_cb = param0.a("", "polar_ball_cushion2", (byte) 126);
-          this.field_ab = param0.a("", "polar_ball_cushion3", (byte) 123);
-          param0.a("", "polar_ball_cushion4", (byte) 125);
-          param0.a("", "polar_bg_ice_crack1", (byte) 127);
-          this.field_eb = param0.a("", "polar_bg_wave1", (byte) 126);
-          this.field_Z = param0.a("", "polar_bg_wave2", (byte) 124);
-          this.field_kb = param0.a("", "polar_bg_wave3", (byte) 123);
-          this.field_V = param0.a("", "polar_bg_wind1", (byte) 126);
+          this.field_mb = param0.getSynthesizedSound("", "polar_blackball_collision1", (byte) 127);
+          this.field_jb = param0.getVorbisSound("polar_pot_ball_pocket2", true, "");
+          this.field_S = param0.getSynthesizedSound("", "polar_respot_the_white1", (byte) 126);
+          param0.getSynthesizedSound("", "polar_respot_the_white_penguin", (byte) 121);
+          this.field_ib = param0.getSynthesizedSound("", "polar_ball_cushion1", (byte) 122);
+          this.field_cb = param0.getSynthesizedSound("", "polar_ball_cushion2", (byte) 126);
+          this.field_ab = param0.getSynthesizedSound("", "polar_ball_cushion3", (byte) 123);
+          param0.getSynthesizedSound("", "polar_ball_cushion4", (byte) 125);
+          param0.getSynthesizedSound("", "polar_bg_ice_crack1", (byte) 127);
+          this.field_eb = param0.getSynthesizedSound("", "polar_bg_wave1", (byte) 126);
+          this.field_Z = param0.getSynthesizedSound("", "polar_bg_wave2", (byte) 124);
+          this.field_kb = param0.getSynthesizedSound("", "polar_bg_wave3", (byte) 123);
+          this.field_V = param0.getSynthesizedSound("", "polar_bg_wind1", (byte) 126);
           int var3_int = -10 % ((param1 - 39) / 38);
-          this.field_W = param0.a("", "polar_bg_wind2", (byte) 122);
-          this.field_T = param0.a("", "polar_bg_wind3", (byte) 123);
-          this.field_db = param0.a("", "polar_bg_wind4", (byte) 121);
-          this.field_fb = param0.a("", "polar_bg_wind5", (byte) 125);
+          this.field_W = param0.getSynthesizedSound("", "polar_bg_wind2", (byte) 122);
+          this.field_T = param0.getSynthesizedSound("", "polar_bg_wind3", (byte) 123);
+          this.field_db = param0.getSynthesizedSound("", "polar_bg_wind4", (byte) 121);
+          this.field_fb = param0.getSynthesizedSound("", "polar_bg_wind5", (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

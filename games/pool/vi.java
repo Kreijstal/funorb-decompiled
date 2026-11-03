@@ -425,13 +425,13 @@ final class vi {
         return (byte) var2;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         loginUsernameEmail = null;
         highscoreHeaderTime = null;
         field_c = null;
         searchingForOpponentsPlural = null;
         if (param0 > -14) {
-          vi.b(-20);
+          vi.clearSharedReferences(-20);
         }
     }
 

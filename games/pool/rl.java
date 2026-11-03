@@ -133,7 +133,7 @@ final class rl {
                 } else {
                   var26.unlink((byte) -117);
                 }
-                var26.a(false);
+                var26.unlinkNode(false);
               }
               return;
             }
@@ -141,7 +141,7 @@ final class rl {
               var34 = (LobbyPlayer) (IntrusiveNode.field_i.last((byte) -72));
               while (var34 != null) {
                 var34.unlink((byte) -117);
-                var34.a(false);
+                var34.unlinkNode(false);
                 var34 = (LobbyPlayer) (IntrusiveNode.field_i.previous((byte) -5));
               }
               PoolMatchController.field_jb = 0;
@@ -172,14 +172,14 @@ final class rl {
                 var16_ref.field_Mb = AudioService.field_f;
                 var16_ref.field_Fc = var5_int;
               }
-              var33.a(false);
+              var33.unlinkNode(false);
               return;
             }
             if (var2 == 10) {
               var35 = (LobbyGame) (NetworkGameClient.field_A.last((byte) 83));
               while (var35 != null) {
                 var35.unlink((byte) -117);
-                var35.a(false);
+                var35.unlinkNode(false);
                 var35 = (LobbyGame) (NetworkGameClient.field_A.previous((byte) -5));
               }
               return;
@@ -242,7 +242,7 @@ final class rl {
                       var27.field_gc = AudioService.field_f;
                       var27.field_hc = var6Lifetime1;
                     }
-                    var27.a(false);
+                    var27.unlinkNode(false);
                     HighscoresScreen.field_L.field_mc = HighscoresScreen.field_L.field_mc - 1;
                     return;
                   }
@@ -325,7 +325,7 @@ final class rl {
           var4_ref_im = (LobbyPlayer) (ck.field_W.last((byte) -33));
           while (var4_ref_im != null) {
             var4_ref_im.unlink((byte) -117);
-            var4_ref_im.a(false);
+            var4_ref_im.unlinkNode(false);
             var4_ref_im = (LobbyPlayer) (ck.field_W.previous((byte) -5));
           }
           var4_ref_imLifetime1 = (LobbyPlayer) (ln.field_n.firstForIteration((byte) -126));

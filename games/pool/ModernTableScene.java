@@ -429,7 +429,7 @@ final class ModernTableScene extends ModelTableScene {
           var27 = this.field_R;
           if (param0 != -55) {
             var15 = (ResourceArchive) null;
-            this.c(92, (ResourceArchive) null);
+            this.loadSceneSprites(92, (ResourceArchive) null);
           }
           var57 = GzipDecoder.field_d;
           var27.a((byte) -112, 0, var27.field_j.length, var57);
@@ -543,7 +543,7 @@ final class ModernTableScene extends ModelTableScene {
         }
     }
 
-    final void c(boolean param0) {
+    final void initializeScene(boolean param0) {
         int incrementValue$10 = 0;
         int incrementValue$9 = 0;
         so dupTemp$0 = null;
@@ -777,12 +777,12 @@ final class ModernTableScene extends ModelTableScene {
         return;
     }
 
-    final void i(int param0) {
-        super.i(param0);
+    final void buildPalettes(int param0) {
+        super.buildPalettes(param0);
         this.field_v = 5609813;
     }
 
-    final void c(int param0, ResourceArchive param1) {
+    final void loadSceneSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
             this.field_U = (so) null;
@@ -840,7 +840,7 @@ final class ModernTableScene extends ModelTableScene {
         try {
           var3_int = 128 + param1.camera.b(-127);
           if (param0) {
-            this.c(true);
+            this.initializeScene(true);
           }
           if (var3_int > 0) {
             stackIn_6_0 = param1.camera;
@@ -1150,15 +1150,15 @@ final class ModernTableScene extends ModelTableScene {
 
     final void loadSounds(SoundCache param0, int param1) {
         try {
-          this.field_X = param0.a("ball_hard", true, "");
-          this.field_Q = param0.a("ball_soft", true, "");
-          this.field_fb = param0.a("cue_hard", true, "");
+          this.field_X = param0.getVorbisSound("ball_hard", true, "");
+          this.field_Q = param0.getVorbisSound("ball_soft", true, "");
+          this.field_fb = param0.getVorbisSound("cue_hard", true, "");
           int var3_int = 84 / ((param1 - 39) / 38);
-          this.field_W = param0.a("cue_soft", true, "");
-          this.field_Y = param0.a("pot_ball_pocket", true, "");
-          this.field_db = param0.a("pot_ball_mechanism", true, "");
-          this.field_cb = param0.a("respot_the_white", true, "");
-          this.field_V = param0.a("cushion", true, "");
+          this.field_W = param0.getVorbisSound("cue_soft", true, "");
+          this.field_Y = param0.getVorbisSound("pot_ball_pocket", true, "");
+          this.field_db = param0.getVorbisSound("pot_ball_mechanism", true, "");
+          this.field_cb = param0.getVorbisSound("respot_the_white", true, "");
+          this.field_V = param0.getVorbisSound("cushion", true, "");
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ni.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

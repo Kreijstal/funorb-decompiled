@@ -211,7 +211,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
         }
     }
 
-    final static TickClock e(int param0) {
+    final static TickClock createTickClock(int param0) {
         if (param0 != 0) {
           return (TickClock) null;
         }
@@ -423,7 +423,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               this.outgoingControl.writeLong40(var2.field_m, 24136);
               this.socket.a(this.outgoingControl.payload, (byte) -97, this.outgoingControl.payload.length, 0);
               this.urgentInFlight.a(var2, false);
-              var2 = (NetworkArchiveRequest) (this.urgentPending.b((byte) -116));
+              var2 = (NetworkArchiveRequest) (this.urgentPending.next((byte) -116));
             }
             var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.a((byte) 117));
             while (var2Lifetime1 != null) {
@@ -432,7 +432,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               this.outgoingControl.writeLong40(var2Lifetime1.field_m, 24136);
               this.socket.a(this.outgoingControl.payload, (byte) 55, this.outgoingControl.payload.length, 0);
               this.prefetchInFlight.a(var2Lifetime1, false);
-              var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.b((byte) -112));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.next((byte) -112));
             }
             if (param0 != -2147483648) {
               var17 = (BitmapFont) null;
@@ -471,7 +471,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                   this.currentRequest.responseBuffer.position = this.currentRequest.responseBuffer.position + var6;
                   this.currentRequest.blockPosition = this.currentRequest.blockPosition + var6;
                   if (this.currentRequest.responseBuffer.position == var5) {
-                    this.currentRequest.a(false);
+                    this.currentRequest.unlinkNode(false);
                     this.currentRequest.pending = false;
                     this.currentRequest = null;
                   } else {
@@ -522,7 +522,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.urgentInFlight.b((byte) -87));
+                          var14_ref = (NetworkArchiveRequest) (this.urgentInFlight.next((byte) -87));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
@@ -533,7 +533,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                           if (var12 == var14_ref.field_m) {
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.prefetchInFlight.b((byte) -99));
+                          var14_ref = (NetworkArchiveRequest) (this.prefetchInFlight.next((byte) -99));
                         }
                       }
                       if (var14_ref == null) {

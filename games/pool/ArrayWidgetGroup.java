@@ -404,8 +404,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           if (param0 != -16336) {
             ArrayWidgetGroup.releaseStatics(-31);
           }
-          var3 = FullscreenErrorDialog.a((byte) 118, param1) ? 1 : 0;
-          var4 = FullscreenErrorDialog.a((byte) 118, param1) ? 1 : 0;
+          var3 = FullscreenErrorDialog.readBooleanBit((byte) 118, param1) ? 1 : 0;
+          var4 = FullscreenErrorDialog.readBooleanBit((byte) 118, param1) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.vertexCount = (short)param1.readBits(16, 98);
           var5.vertexX = LobbyGame.a(16, var5.vertexX, (byte) 127, param1);
@@ -432,10 +432,10 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
             var5.field_P = LobbyGame.a(16, var5.field_P, (byte) 104, param1);
             var5.field_z = LobbyGame.a(16, var5.field_z, (byte) 102, param1);
           }
-          if (FullscreenErrorDialog.a((byte) 118, param1)) {
+          if (FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
             var5.field_H = LobbyGame.a(16, var5.field_H, (byte) 110, param1);
           }
-          if (FullscreenErrorDialog.a((byte) 118, param1)) {
+          if (FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
             var5.field_K = cb.a(50, 16, param1, var5.field_K);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_K.length; var7++) {

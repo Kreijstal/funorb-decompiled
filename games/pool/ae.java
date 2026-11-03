@@ -42,7 +42,7 @@ final class ae {
             return stackIn_11_0;
           }
           var8.unlink((byte) -117);
-          var8.a(false);
+          var8.unlinkNode(false);
           TextHotspotRegion.field_t = TextHotspotRegion.field_t - 1;
           if (param0 != -3266) {
             var7 = (String) null;

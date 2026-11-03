@@ -138,7 +138,7 @@ final class TextureCache implements in {
         return 0;
     }
 
-    public final int b(int param0, int param1) {
+    public final int getTextureId(int param0, int param1) {
         if (param0 < 44) {
           return -97;
         }
@@ -200,14 +200,14 @@ final class TextureCache implements in {
         }
     }
 
-    public final boolean a(int param0, int param1) {
+    public final boolean isSize64(int param0, int param1) {
         if (param1 != 55) {
           return true;
         }
         return 64 == this.field_b ? true : false;
     }
 
-    public final boolean a(byte param0, int param1) {
+    public final boolean isTextureReady(byte param0, int param1) {
         if (param0 <= 97) {
           TextureCache.a(72, -96, -108, 104, -44, -64, -2, -66);
           return true;

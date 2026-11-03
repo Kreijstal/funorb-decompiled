@@ -1448,7 +1448,7 @@ final class PoolGameModel {
           if (var5 == null) {
             stackIn_10_0 = var4.last((byte) -92);
           } else {
-            stackIn_10_0 = var4.a(var5.previous, false);
+            stackIn_10_0 = var4.startForwardAt(var5.previous, false);
           }
           var5Lifetime1 = (ShotRecord) (stackIn_10_0);
           while (var5Lifetime1 != null) {

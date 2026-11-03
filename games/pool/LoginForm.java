@@ -376,7 +376,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         createOptinNewsTooltip = null;
         field_V = null;
         textRemovedFromGame = null;

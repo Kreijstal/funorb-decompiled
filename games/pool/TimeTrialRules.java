@@ -65,7 +65,7 @@ final class TimeTrialRules extends GameRules {
         return 1;
     }
 
-    private final boolean o(int param0) {
+    private final boolean isOnlyEightBallLeft(int param0) {
         int var2 = 0;
         int var3;
         var3 = Pool.field_O;
@@ -111,14 +111,14 @@ final class TimeTrialRules extends GameRules {
         if (param1 < 122) {
           return true;
         }
-        return this.a(param0, param2, (byte) -111);
+        return this.isSameGroupAsBall(param0, param2, (byte) -111);
     }
 
     final int initialGroup(int param0) {
         if (param0 != -1) {
           field_f = -63;
         }
-        return this.o(24812) ? 2 : 0;
+        return this.isOnlyEightBallLeft(24812) ? 2 : 0;
     }
 
     final int groupMessageIndex(ShotRecord param0, int param1) {
@@ -176,7 +176,7 @@ final class TimeTrialRules extends GameRules {
         return 1;
     }
 
-    final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, boolean param6, String param7, PlatformTaskDispatcher param8, int param9, int param10, int param11, int param12, long param13) {
+    final static void configureClientConnection(int param0, int param1, byte param2, boolean param3, int param4, int param5, boolean param6, String param7, PlatformTaskDispatcher param8, int param9, int param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -241,7 +241,7 @@ final class TimeTrialRules extends GameRules {
     public static void p(int param0) {
         playerNameYouHaveAnExtraShot = null;
         if (param0 != -9) {
-          TimeTrialRules.a(89, 15, (byte) -50, true, -63, 93, true, (String) null, (PlatformTaskDispatcher) null, -10, -14, -81, -56, -98L);
+          TimeTrialRules.configureClientConnection(89, 15, (byte) -50, true, -63, 93, true, (String) null, (PlatformTaskDispatcher) null, -10, -14, -81, -56, -98L);
         }
     }
 
@@ -278,7 +278,7 @@ final class TimeTrialRules extends GameRules {
         }
     }
 
-    private final boolean a(int param0, int param1, byte param2) {
+    private final boolean isSameGroupAsBall(int param0, int param1, byte param2) {
         if (param2 != -111) {
           field_f = 46;
         }

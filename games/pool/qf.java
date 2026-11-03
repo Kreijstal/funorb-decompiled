@@ -171,8 +171,8 @@ final class qf {
             var6_int = param5[0].field_w;
             var7 = param5[2].field_w;
             var8 = param5[1].field_w;
-            param5[0].e(param2, param0, param1);
-            param5[2].e(-var7 + (param2 + param4), param0, param1);
+            param5[0].drawAlpha(param2, param0, param1);
+            param5[2].drawAlpha(-var7 + (param2 + param4), param0, param1);
             SoftwareRasterizer.saveClip(GameRules.field_a);
             SoftwareRasterizer.intersectClip(var6_int + param2, param0, param4 + (param2 - var7), param0 + param5[1].field_y);
             var9 = param2 + var6_int;
@@ -182,7 +182,7 @@ final class qf {
               qf.a(-32, 78, -31, (byte) 16, 88, (Sprite[]) null);
             }
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-              param5[1].e(param2, param0, param1);
+              param5[1].drawAlpha(param2, param0, param1);
             }
             SoftwareRasterizer.restoreClip(GameRules.field_a);
             return;

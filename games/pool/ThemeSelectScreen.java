@@ -85,7 +85,7 @@ final class ThemeSelectScreen extends MenuScreen {
         return param0 < 5 ? true : false;
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         createDisplaynameTooltip = null;
         createAlertInvalidage = null;
         muXWithdrewRequest = null;

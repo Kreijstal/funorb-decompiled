@@ -177,7 +177,7 @@ final class HalloweenBallSkin extends BallSkin {
             break;
           }
           var8.unlink((byte) -117);
-          var8.a(false);
+          var8.unlinkNode(false);
           AccountWelcomePanel.field_S = AccountWelcomePanel.field_S - 1;
           var9 = JaggrabDownloader.field_j;
           var9.writeCipheredOpcode(false, param2);

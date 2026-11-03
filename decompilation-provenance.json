@@ -11044,17 +11044,17 @@
       "inputTreeSha256": "65ca5eebdd8552ccbd86cc55f34b6fce02c4599831c581d38731a88a55795e47",
       "sources": {
         "files": 429,
-        "sha256": "98377b9f93dc6c623b6b8f5abff9c6884bde68c85643b1e1e9185d19b29162e7"
+        "sha256": "1bdfcd554c04f5dcfbacee6ea078d3e8b1ca37d59352fbb09b6fe1ab0fc00bd4"
       },
       "dictionary": {
         "path": "decompilation/pool-naming.json",
-        "sha256": "33a4ac540921f18b4de13c62eaadaa322257d29f9ad6d18c23cb79870b091bf1"
+        "sha256": "7a361f90a58e8f938fcf1b94b933c50d76ad120a3cd58a60534a169786c8af8d"
       },
       "readingGuide": {
         "path": "games/pool/README.md",
         "sha256": "7ef716077341e39aff88e8cdf25659811166540cbbce59f278bfa2bfd4652d46"
       },
-      "rulesSha256": "e4fcb7b122db63a24895cfde9a29e59b801020600089f406b2e3bf1da39907fd",
+      "rulesSha256": "70295dee3688621d00aebe2a82aa191be3bef6279cf5758c041502a5e8308fef",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12835,7 +12835,7 @@
         },
         "publishedSources": {
           "files": 429,
-          "sha256": "98377b9f93dc6c623b6b8f5abff9c6884bde68c85643b1e1e9185d19b29162e7"
+          "sha256": "1bdfcd554c04f5dcfbacee6ea078d3e8b1ca37d59352fbb09b6fe1ab0fc00bd4"
         }
       },
       "shatteredplans": {

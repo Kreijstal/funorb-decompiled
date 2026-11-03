@@ -38,7 +38,7 @@ final class WeightedLruCache {
         try {
           if (param1 != null) {
             param1.unlink((byte) -117);
-            param1.a(false);
+            param1.unlinkNode(false);
             this.remainingCapacity = this.remainingCapacity + param1.weight;
           }
           if (param0 == 0) {
@@ -99,7 +99,7 @@ final class WeightedLruCache {
           Object var5 = var9;
           if (var9 == null) {
             var8.unlink((byte) -117);
-            var8.a(false);
+            var8.unlinkNode(false);
             this.remainingCapacity = this.remainingCapacity + var8.weight;
             return null;
           }
@@ -113,7 +113,7 @@ final class WeightedLruCache {
           this.lruQueue.addLast((byte) -36, var6);
           ((CacheEntry) ((Object) var6)).field_m = 0L;
           var8.unlink((byte) -117);
-          var8.a(!param1 ? true : false);
+          var8.unlinkNode(!param1 ? true : false);
           return var9;
         }
         CacheEntry var10 = (CacheEntry) (this.entriesByKey.findByKey(-28010, param0));
@@ -123,7 +123,7 @@ final class WeightedLruCache {
         Object var11 = var10.getValue((byte) 121);
         if (var11 == null) {
           var10.unlink((byte) -117);
-          var10.a(false);
+          var10.unlinkNode(false);
           this.remainingCapacity = this.remainingCapacity + var10.weight;
           return null;
         }
@@ -137,7 +137,7 @@ final class WeightedLruCache {
         this.lruQueue.addLast((byte) -36, var6Lifetime1);
         ((CacheEntry) ((Object) var6Lifetime1)).field_m = 0L;
         var10.unlink((byte) -117);
-        var10.a(!param1 ? true : false);
+        var10.unlinkNode(!param1 ? true : false);
         return var11;
     }
 

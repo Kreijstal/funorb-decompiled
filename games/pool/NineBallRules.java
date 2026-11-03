@@ -21,23 +21,23 @@ final class NineBallRules extends GameRules {
         }
         var3 = var2.ballInHandMode;
         if (var3 == 2) {
-          return this.q(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_Q;
+          return this.baseResolutionFlags(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_Q;
         }
         if (3 == var3) {
-          return this.q(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_V;
+          return this.baseResolutionFlags(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_V;
         }
         if (var3 == 1) {
-          return this.q(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_R;
+          return this.baseResolutionFlags(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_R;
         }
         if (var3 != 0) {
         }
-        return this.q(10);
+        return this.baseResolutionFlags(10);
     }
 
     final void updateGroupLabels(int param0) {
         int discarded$0 = 0;
         if (param0 > -25) {
-          discarded$0 = this.p(60);
+          discarded$0 = this.foulFlagsNoContact(60);
         }
     }
 
@@ -90,14 +90,14 @@ final class NineBallRules extends GameRules {
         chatviewscrolledup = null;
     }
 
-    final static int c(byte param0) {
+    final static int achievementNameCount(byte param0) {
         if (param0 >= -6) {
-          NineBallRules.c((byte) -21);
+          NineBallRules.achievementNameCount((byte) -21);
         }
         return !pp.a(true) ? -1 + md.achievementNames.length : md.achievementNames.length;
     }
 
-    private final int q(int param0) {
+    private final int baseResolutionFlags(int param0) {
         if (param0 != 10) {
           field_j = (UiComponent) null;
         }
@@ -289,21 +289,21 @@ final class NineBallRules extends GameRules {
         var3 = 0;
         if (this.field_d.isCueBallPotted((byte) 118)) {
           var9.addEvent(3, -14, new int[]{this.field_d.field_A});
-          var3 = var3 | (this.d((byte) -47) | um.field_c);
+          var3 = var3 | (this.foulFlagsCueBallPotted((byte) -47) | um.field_c);
           var9.field_t = true;
           var9.field_w = (byte)(var9.field_w - 1);
         }
         if (var9.field_n != -1) {
           if (this.field_f != var9.field_n) {
             var9.addEvent(8, -14, new int[]{});
-            var3 = var3 | this.o(0);
+            var3 = var3 | this.foulFlagsWrongBallFirst(0);
             var9.field_w = (byte)(var9.field_w - 1);
             var9.field_t = true;
           }
         } else {
           var9.addEvent(7, -14, new int[]{var8.playerIndex});
           var9.field_t = true;
-          var3 = var3 | this.p(75);
+          var3 = var3 | this.foulFlagsNoContact(75);
           var9.field_w = (byte)(var9.field_w - 1);
         }
         var4 = 74 % ((-37 - param0) / 60);
@@ -390,12 +390,12 @@ final class NineBallRules extends GameRules {
         }
     }
 
-    private final int o(int param0) {
+    private final int foulFlagsWrongBallFirst(int param0) {
         int discarded$0 = 0;
         if (param0 != 0) {
-          discarded$0 = this.o(-69);
+          discarded$0 = this.foulFlagsWrongBallFirst(-69);
         }
-        return this.q(param0 + 10);
+        return this.baseResolutionFlags(param0 + 10);
     }
 
     final int ballCount(int param0) {
@@ -444,9 +444,9 @@ final class NineBallRules extends GameRules {
         return (byte)param0;
     }
 
-    private final int d(byte param0) {
+    private final int foulFlagsCueBallPotted(byte param0) {
         int var2 = 94 / ((param0 - 5) / 44);
-        return this.q(10);
+        return this.baseResolutionFlags(10);
     }
 
     final boolean isBallInGroup(int param0, byte param1, int param2) {
@@ -456,11 +456,11 @@ final class NineBallRules extends GameRules {
         return param2 > 0 ? true : false;
     }
 
-    private final int p(int param0) {
+    private final int foulFlagsNoContact(int param0) {
         if (param0 < 8) {
-          NineBallRules.c((byte) -24);
+          NineBallRules.achievementNameCount((byte) -24);
         }
-        return this.q(10);
+        return this.baseResolutionFlags(10);
     }
 
     final boolean isTargetVisible(int param0, int param1) {

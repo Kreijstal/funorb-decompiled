@@ -146,7 +146,7 @@ final class t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (!MouseHandler.a(param0 - 6709)) {
+          if (!MouseHandler.hasAccountOverlay(param0 - 6709)) {
             if (MatchingTextValidator.field_u != null &&
               MatchingTextValidator.field_u.focusLost) {
               tq.d((byte) -124);

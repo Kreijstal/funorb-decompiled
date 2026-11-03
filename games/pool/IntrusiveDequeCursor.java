@@ -131,7 +131,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, boolean param1) {
+    final IntrusiveNode startForwardAt(IntrusiveNode param0, boolean param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_2_0 = null;

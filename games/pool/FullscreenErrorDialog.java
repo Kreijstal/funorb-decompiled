@@ -19,7 +19,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         }
     }
 
-    final static boolean a(byte param0, CipherPacketBuffer param1) {
+    final static boolean readBooleanBit(byte param0, CipherPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

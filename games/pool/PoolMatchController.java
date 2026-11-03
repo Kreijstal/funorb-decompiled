@@ -433,7 +433,7 @@ final class PoolMatchController {
               }
             }
           }
-          LobbyGame.field_gc.a(false);
+          LobbyGame.field_gc.stopLoopSounds(false);
           if (param0 != 256) {
             this.setAimAzimuth(-75, -111);
           }
@@ -1449,7 +1449,7 @@ final class PoolMatchController {
           ea.field_p = ea.field_p & 31;
           this.updateRackBalls((byte) 127);
           LobbyGame.field_gc.updatePottedBalls(10, this);
-          dq.field_a.h(-56);
+          dq.field_a.updateAnimation(-56);
           NetworkGameClient.a((byte) -73, this);
           this.updateStatusBarSlide(87);
           if (SocialListEntry.field_Tb % 100 == 0) {
@@ -1784,7 +1784,7 @@ final class PoolMatchController {
               var4.updateRenderTransform(param0 ^ 34);
               dq.field_a.buildBallModel(false, var4.renderTransform, var3);
             }
-            dq.field_a.a(param0 - 1912602401, var3, var4.renderTransform, sa.field_m, false);
+            dq.field_a.drawBallAndShadow(param0 - 1912602401, var3, var4.renderTransform, sa.field_m, false);
           }
           if (param0 != 32) {
             this.cueAim = (CueAim) null;
@@ -2029,7 +2029,7 @@ final class PoolMatchController {
               this.raiseCueBlockedWarning(97);
             } else {
               this.cueAim.field_n = param1;
-              LobbyGame.field_gc.b(99, this.cueAim.field_n);
+              LobbyGame.field_gc.updateHumPitch(99, this.cueAim.field_n);
               this.cueAim.field_e = var3[2];
               this.cueAim.field_d = var3[1];
               this.cueAim.polarAngle = var3[0];
@@ -2090,7 +2090,7 @@ final class PoolMatchController {
         try {
           if (this.viewMatrixDirty) {
             this.camera.writeViewMatrix(this.viewMatrix, true);
-            LobbyGame.field_gc.a((byte) -123, this.viewMatrix);
+            LobbyGame.field_gc.setViewMatrix((byte) -123, this.viewMatrix);
             this.viewMatrixDirty = false;
             this.lastHoverMouseX = -1;
             this.lastHoverMouseY = -1;
@@ -2822,7 +2822,7 @@ final class PoolMatchController {
               this.keyPowerRamp = this.keyPowerRamp + (var4 << 15);
             }
             this.cueAim.field_n = this.cuePower;
-            LobbyGame.field_gc.b(101, this.cueAim.field_n);
+            LobbyGame.field_gc.updateHumPitch(101, this.cueAim.field_n);
             if (this.keyPowerRamp >= 0) {
               this.powerPulseTick = 75;
             } else {
@@ -3962,7 +3962,7 @@ final class PoolMatchController {
           if (PoolGameModel.field_B[param0] != dq.field_a) {
             dq.field_a.e(-26707);
             dq.field_a = PoolGameModel.field_B[param0];
-            dq.field_a.a(2147483647, this.gameModel);
+            dq.field_a.prepareForGame(2147483647, this.gameModel);
             this.markBallTransformsDirty(0);
           }
           return;
@@ -4828,7 +4828,7 @@ final class PoolMatchController {
           this.cueAim.field_n = this.cuePower;
           this.idleOrbitStep = -1;
           LobbyGame.field_gc.playTableSound(9, 256, (byte) -112, 128);
-          LobbyGame.field_gc.b(-50, this.cueAim.field_n);
+          LobbyGame.field_gc.updateHumPitch(-50, this.cueAim.field_n);
           this.powerPulseTick = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5025,18 +5025,18 @@ final class PoolMatchController {
           if (PoolGameModel.field_B[param0] == dq.field_a) {
             if (dq.field_a.field_j == null ||
               dq.field_a.field_j.length != this.gameModel.balls.length) {
-              dq.field_a.a(2147483647, this.gameModel);
+              dq.field_a.prepareForGame(2147483647, this.gameModel);
             }
           } else {
             if (dq.field_a != null) {
               dq.field_a.e(-26707);
             }
             dq.field_a = PoolGameModel.field_B[param0];
-            dq.field_a.a(2147483647, this.gameModel);
+            dq.field_a.prepareForGame(2147483647, this.gameModel);
           }
           id.field_c = LobbyGame.field_gc.field_A;
           id.field_c.field_g = true;
-          LobbyGame.field_gc.a((byte) -116, this.viewMatrix);
+          LobbyGame.field_gc.setViewMatrix((byte) -116, this.viewMatrix);
           this.gameModel.rules.updateGroupLabels(-83);
           for (var4_int = 0; this.gameModel.balls.length > var4_int; var4_int++) {
             this.gameModel.balls[var4_int].a(120);
@@ -5246,9 +5246,9 @@ final class PoolMatchController {
             id.field_c = LobbyGame.field_gc.field_A;
             id.field_c.field_g = true;
             dq.field_a = PoolGameModel.field_B[param1];
-            dq.field_a.a(2147483647, this.gameModel);
+            dq.field_a.prepareForGame(2147483647, this.gameModel);
             LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
-            LobbyGame.field_gc.a((byte) 115, this.viewMatrix);
+            LobbyGame.field_gc.setViewMatrix((byte) 115, this.viewMatrix);
             this.gameModel.rules.updateGroupLabels(-42);
           }
           if (param0 != 124) {
@@ -6960,10 +6960,10 @@ final class PoolMatchController {
               (decompiledFrameRemainder42) &&
               (decompiledFrameRemainder41)) {
               dq.field_a.allocateMeshes(7096);
-              dq.field_a.a(2147483647, this.gameModel);
-              LobbyGame.field_gc.i(25879);
+              dq.field_a.prepareForGame(2147483647, this.gameModel);
+              LobbyGame.field_gc.buildPalettes(25879);
               LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
-              LobbyGame.field_gc.a((byte) -128, this.viewMatrix);
+              LobbyGame.field_gc.setViewMatrix((byte) -128, this.viewMatrix);
               if (var8 == 0) {
                 return;
               }
@@ -7769,9 +7769,9 @@ final class PoolMatchController {
     private final void rebuildBallSkinMeshes(int param0) {
         try {
           dq.field_a.allocateMeshes(7096);
-          dq.field_a.a(2147483647, this.gameModel);
+          dq.field_a.prepareForGame(2147483647, this.gameModel);
           LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
-          LobbyGame.field_gc.a((byte) 0, this.viewMatrix);
+          LobbyGame.field_gc.setViewMatrix((byte) 0, this.viewMatrix);
           int var2_int = 90 % ((-12 - param0) / 58);
           this.markBallTransformsDirty(0);
         } catch (RuntimeException runtimeException) {
@@ -8140,7 +8140,7 @@ final class PoolMatchController {
           var2_int = 0;
           do {
             if (!(this.gameModel.balls.length > var2_int)) {
-              dq.field_a.a(param0 ^ 2147483630, this.gameModel);
+              dq.field_a.prepareForGame(param0 ^ 2147483630, this.gameModel);
               id.field_c.field_g = true;
               hh.field_c = true;
               break;
@@ -8173,7 +8173,7 @@ final class PoolMatchController {
               this.lastHoverMouseX = -1;
               this.lastHoverMouseY = -1;
             }
-            id.field_c.a(32624, this.viewMatrix);
+            id.field_c.drawSegments(32624, this.viewMatrix);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8748,7 +8748,7 @@ final class PoolMatchController {
           if (param0 != 3) {
             field_W = -119;
           }
-          LobbyGame.field_gc.c(true);
+          LobbyGame.field_gc.initializeScene(true);
           while (true) {
             if (LobbyGame.field_gc.field_H < LobbyGame.field_gc.field_G) {
               LobbyGame.field_gc.buildSceneryLayers(2);

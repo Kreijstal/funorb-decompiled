@@ -130,7 +130,7 @@ final class CueStick {
         var4.writeByteLengthPrefix(var4.position - var5, true);
     }
 
-    final void a(int param0) {
+    final void buildSegments(int param0) {
         int var3 = 0;
         int var4 = 0;
         double var5 = 0.0;
@@ -175,7 +175,7 @@ final class CueStick {
         this.field_d = new int[this.segmentOffsets.length][3];
     }
 
-    final void a(int param0, int[] param1) {
+    final void drawSegments(int param0, int[] param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -288,19 +288,19 @@ final class CueStick {
 
     final void update(int param0, PoolMatchController param1) {
         try {
-          this.a(param1, (byte) 95);
-          this.a((byte) 112);
+          this.positionSegments(param1, (byte) 95);
+          this.bakeSegments((byte) 112);
           this.field_g = false;
           if (param0 != 0) {
             int[] var4 = (int[]) null;
-            this.a(-44, (int[]) null);
+            this.drawSegments(-44, (int[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jk.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(PoolMatchController param0, byte param1) {
+    private final void positionSegments(PoolMatchController param0, byte param1) {
         int var11 = 0;
         double var3_double = 0.0;
         double var5 = 0.0;
@@ -327,7 +327,7 @@ final class CueStick {
             this.field_d[var11][2] = (this.field_l[2] >> 13) + PotEvent.a(4885, var12 * var5);
           }
           if (param1 < 11) {
-            this.a((byte) 65);
+            this.bakeSegments((byte) 65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,7 +344,7 @@ final class CueStick {
         }
     }
 
-    private final void a(byte param0) {
+    private final void bakeSegments(byte param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
         for (var2 = 0; this.segments.length > var2; var2++) {

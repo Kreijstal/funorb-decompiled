@@ -10,7 +10,7 @@ class jh {
     static int field_c;
     static String addXToIgnore;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         muGameoptWithdrawInviteToX = null;
         muLobbyName = null;
         field_d = null;
@@ -76,7 +76,7 @@ class jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 108) {
-            jh.a(92);
+            jh.releaseStatics(92);
           }
           stackIn_3_0 = qg.extendIntArray(123, 0, param2, param0);
           return stackIn_3_0;

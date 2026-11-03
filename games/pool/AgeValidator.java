@@ -25,7 +25,7 @@ final class AgeValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!AgeValidator.a(10, var4)) {
+          if (!AgeValidator.isFriend(10, var4)) {
             stackIn_2_0 = gp.field_d;
             return stackIn_2_0;
           }
@@ -54,7 +54,7 @@ final class AgeValidator extends TextInputValidator {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         unableToAddFriend = null;
         createAlertPasscontainsnamePartial = null;
         gameoptCannotbecombined1 = null;
@@ -66,7 +66,7 @@ final class AgeValidator extends TextInputValidator {
         }
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean isFriend(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

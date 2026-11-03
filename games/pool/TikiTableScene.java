@@ -34,7 +34,7 @@ final class TikiTableScene extends ModelTableScene {
     PcmSample field_bb;
     private PcmSample field_Q;
 
-    final void c(boolean param0) {
+    final void initializeScene(boolean param0) {
         this.field_l = sa.progressJungleBulk;
         this.field_G = 17;
         this.field_H = 0;
@@ -595,7 +595,7 @@ final class TikiTableScene extends ModelTableScene {
         pr.c((byte) 90);
     }
 
-    final void c(int param0, ResourceArchive param1) {
+    final void loadSceneSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
             this.field_pb = (PcmSample) null;
@@ -1059,31 +1059,31 @@ final class TikiTableScene extends ModelTableScene {
     final void loadSounds(SoundCache param0, int param1) {
         try {
           int var3_int = 86 / ((param1 - 39) / 38);
-          this.field_bb = param0.a("jungle_ball_hard", true, "");
-          param0.a("jungle_ball_med", true, "");
-          this.field_S = param0.a("jungle_ball_soft", true, "");
-          this.field_rb = param0.a("jungle_cue_hard", true, "");
-          this.field_mb = param0.a("jungle_cue_soft", true, "");
-          this.field_sb = param0.a("jungle_pot", true, "");
-          this.field_W = param0.a("jungle_respot_the_white", true, "");
-          this.field_Q = param0.a("jungle_ball_cushion1", true, "");
-          this.field_ib = param0.a("jungle_ball_cushion2", true, "");
-          this.field_jb = param0.a("jungle_ball_cushion3", true, "");
-          this.field_db = param0.a("", "jungle_bg_bird1", (byte) 122);
-          this.field_nb = param0.a("", "jungle_bg_cricket1", (byte) 126);
-          this.field_kb = param0.a("", "jungle_bg_cricket2", (byte) 123);
-          this.field_pb = param0.a("", "jungle_bg_cricket3", (byte) 123);
-          this.field_T = param0.a("", "jungle_bg_frog1", (byte) 127);
-          this.field_Z = param0.a("", "jungle_bg_snake1", (byte) 125);
-          this.field_ab = param0.a("", "jungle_bg_snake2", (byte) 124);
-          this.field_X = param0.a("jungle_monkey1", true, "");
-          this.field_cb = param0.a("jungle_monkey2", true, "");
-          this.field_Y = param0.a("jungle_monkey3", true, "");
-          this.field_gb = param0.a("jungle_monkey4", true, "");
-          this.field_R = param0.a("", "jungle_bg_wind1", (byte) 122);
-          this.field_hb = param0.a("", "jungle_bg_wind2", (byte) 123);
-          this.field_lb = param0.a("", "jungle_bg_wind3", (byte) 121);
-          this.field_qb = param0.a("", "jungle_bg_wind4", (byte) 124);
+          this.field_bb = param0.getVorbisSound("jungle_ball_hard", true, "");
+          param0.getVorbisSound("jungle_ball_med", true, "");
+          this.field_S = param0.getVorbisSound("jungle_ball_soft", true, "");
+          this.field_rb = param0.getVorbisSound("jungle_cue_hard", true, "");
+          this.field_mb = param0.getVorbisSound("jungle_cue_soft", true, "");
+          this.field_sb = param0.getVorbisSound("jungle_pot", true, "");
+          this.field_W = param0.getVorbisSound("jungle_respot_the_white", true, "");
+          this.field_Q = param0.getVorbisSound("jungle_ball_cushion1", true, "");
+          this.field_ib = param0.getVorbisSound("jungle_ball_cushion2", true, "");
+          this.field_jb = param0.getVorbisSound("jungle_ball_cushion3", true, "");
+          this.field_db = param0.getSynthesizedSound("", "jungle_bg_bird1", (byte) 122);
+          this.field_nb = param0.getSynthesizedSound("", "jungle_bg_cricket1", (byte) 126);
+          this.field_kb = param0.getSynthesizedSound("", "jungle_bg_cricket2", (byte) 123);
+          this.field_pb = param0.getSynthesizedSound("", "jungle_bg_cricket3", (byte) 123);
+          this.field_T = param0.getSynthesizedSound("", "jungle_bg_frog1", (byte) 127);
+          this.field_Z = param0.getSynthesizedSound("", "jungle_bg_snake1", (byte) 125);
+          this.field_ab = param0.getSynthesizedSound("", "jungle_bg_snake2", (byte) 124);
+          this.field_X = param0.getVorbisSound("jungle_monkey1", true, "");
+          this.field_cb = param0.getVorbisSound("jungle_monkey2", true, "");
+          this.field_Y = param0.getVorbisSound("jungle_monkey3", true, "");
+          this.field_gb = param0.getVorbisSound("jungle_monkey4", true, "");
+          this.field_R = param0.getSynthesizedSound("", "jungle_bg_wind1", (byte) 122);
+          this.field_hb = param0.getSynthesizedSound("", "jungle_bg_wind2", (byte) 123);
+          this.field_lb = param0.getSynthesizedSound("", "jungle_bg_wind3", (byte) 121);
+          this.field_qb = param0.getSynthesizedSound("", "jungle_bg_wind4", (byte) 124);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1147,8 +1147,8 @@ final class TikiTableScene extends ModelTableScene {
         return;
     }
 
-    final void i(int param0) {
-        super.i(param0);
+    final void buildPalettes(int param0) {
+        super.buildPalettes(param0);
         this.field_v = 5609813;
     }
 

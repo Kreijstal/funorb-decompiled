@@ -142,14 +142,14 @@ final class IterableDualLinkDeque implements Iterable {
           IterableDualLinkDeque.a((byte) -89);
           var2 = this.sentinel.field_q;
           if (this.sentinel != var2) {
-            var2.a(false);
+            var2.unlinkNode(false);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.sentinel.field_q;
         if (this.sentinel != var2Lifetime1) {
-          var2Lifetime1.a(false);
+          var2Lifetime1.unlinkNode(false);
           return var2Lifetime1;
         }
         return null;
@@ -191,7 +191,7 @@ final class IterableDualLinkDeque implements Iterable {
     final void addLast(byte param0, DualLinkNode param1) {
         try {
           if (param1.field_n != null) {
-            param1.a(false);
+            param1.unlinkNode(false);
           }
           if (param0 > -31) {
             field_g = -32;

@@ -69,7 +69,7 @@ final class PlasmaTableScene extends TableScene {
             }
           }
           LimitedRandomAccessFile.field_i = ta.buildGradientPalette(new int[]{0, 16744383, 256, 0}, param1 - 22022);
-          this.o(10);
+          this.buildWireframeGrid(10);
           this.field_K = new ji[12];
           for (var3_intLifetime2 = 0; var3_intLifetime2 < 6; var3_intLifetime2++) {
             var4 = param0.cushionSegments[(var3_intLifetime2 * 4 + 3) % param0.cushionSegments.length];
@@ -426,19 +426,19 @@ final class PlasmaTableScene extends TableScene {
 
     final void loadSounds(SoundCache param0, int param1) {
         try {
-          this.field_P = param0.a("", "plasma_ball_hard", (byte) 121);
-          this.field_Y = param0.a("", "plasma_ball_soft", (byte) 126);
-          this.field_W = param0.a("", "plasma_cue_hard", (byte) 126);
+          this.field_P = param0.getSynthesizedSound("", "plasma_ball_hard", (byte) 121);
+          this.field_Y = param0.getSynthesizedSound("", "plasma_ball_soft", (byte) 126);
+          this.field_W = param0.getSynthesizedSound("", "plasma_cue_hard", (byte) 126);
           int var3_int = -128 % ((39 - param1) / 38);
-          this.field_Q = param0.a("", "plasma_cue_soft", (byte) 127);
-          this.field_J = param0.a("", "plasma_pot", (byte) 123);
-          this.field_O = param0.a("", "plasma_respot_the_white", (byte) 125);
-          this.field_hb = param0.a("", "plasma_cushion1", (byte) 127);
-          this.field_N = param0.a("", "plasma_cushion2", (byte) 124);
-          this.field_db = param0.a("", "plasma_cushion3", (byte) 124);
-          this.field_T = param0.a("", "plasma_cushion4", (byte) 122);
-          this.field_fb = param0.a("", "plasma_loop", (byte) 125);
-          this.field_U = param0.a("", "plasma_shot_mode_loop", (byte) 123);
+          this.field_Q = param0.getSynthesizedSound("", "plasma_cue_soft", (byte) 127);
+          this.field_J = param0.getSynthesizedSound("", "plasma_pot", (byte) 123);
+          this.field_O = param0.getSynthesizedSound("", "plasma_respot_the_white", (byte) 125);
+          this.field_hb = param0.getSynthesizedSound("", "plasma_cushion1", (byte) 127);
+          this.field_N = param0.getSynthesizedSound("", "plasma_cushion2", (byte) 124);
+          this.field_db = param0.getSynthesizedSound("", "plasma_cushion3", (byte) 124);
+          this.field_T = param0.getSynthesizedSound("", "plasma_cushion4", (byte) 122);
+          this.field_fb = param0.getSynthesizedSound("", "plasma_loop", (byte) 125);
+          this.field_U = param0.getSynthesizedSound("", "plasma_shot_mode_loop", (byte) 123);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -563,7 +563,7 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final void a(byte param0, int[] param1) {
+    final void setViewMatrix(byte param0, int[] param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -611,21 +611,21 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void updateHumPitch(int param0, int param1) {
         if (this.field_bb != null) {
           this.field_bb.setSampleStepMagnitude(64 * param1 / 4096 + 256);
         }
         int var3 = -113 % ((param0 - 11) / 52);
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         mbCaptionTitle = null;
         field_cb = null;
         field_gb = null;
         int var1 = -122 / ((param0 + 65) / 38);
     }
 
-    private final void a(boolean param0, int[] param1, PoolMatchController param2) {
+    private final void drawCue(boolean param0, int[] param1, PoolMatchController param2) {
         int stackIn_26_0 = 0;
         int stackIn_29_1 = 0;
         RuntimeException stackIn_34_0 = null;
@@ -1044,7 +1044,7 @@ final class PlasmaTableScene extends TableScene {
             }
             wn.$cfr$intArgs$a$2435eea43ef1(stackIn_18_0, stackIn_21_1, var6, this.field_X, 127, 0, this.field_R, this.field_M);
           }
-          this.b((byte) 44, var16);
+          this.drawWireframeGrid((byte) 44, var16);
           this.a(var16, (byte) 79, false, var14, false);
           this.a(77, var16);
           this.c((byte) -25, var16);
@@ -1071,7 +1071,7 @@ final class PlasmaTableScene extends TableScene {
             this.c((byte) 102, (int[]) null);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
-            this.a(false, var16, param1);
+            this.drawCue(false, var16, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1209,7 +1209,7 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    private final void b(byte param0, int[] param1) {
+    private final void drawWireframeGrid(byte param0, int[] param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1253,7 +1253,7 @@ final class PlasmaTableScene extends TableScene {
         this.field_M = new int[2];
     }
 
-    private final void o(int param0) {
+    private final void buildWireframeGrid(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1279,7 +1279,7 @@ final class PlasmaTableScene extends TableScene {
         }
     }
 
-    final void a(boolean param0) {
+    final void stopLoopSounds(boolean param0) {
         if (null != this.field_bb) {
           TickClock.a((byte) -110, this.field_bb);
           this.field_bb = null;

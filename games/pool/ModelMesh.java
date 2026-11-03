@@ -1294,7 +1294,7 @@ final class ModelMesh extends fa {
           for (var9 = 0; var9 < this.field_P; var9++) {
             var10 = param0.field_L[var9];
             if (var10 != -1 &&
-              TriangleRasterizer.textureProvider.a((byte) 104, var10)) {
+              TriangleRasterizer.textureProvider.isTextureReady((byte) 104, var10)) {
               this.field_Z[var9] = (short)var10;
             } else {
               this.field_Z[var9] = (short)-1;

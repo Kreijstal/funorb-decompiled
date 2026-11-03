@@ -670,7 +670,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           while (var4 != null) {
             if (var4.hasKeyboardFocus(-112)) {
               var5 = new IntrusiveDequeCursor(this.children);
-              var5.a(var4, false);
+              var5.startForwardAt(var4, false);
               var6 = (UiWidget) (var5.previous(-90));
               while (var6 != null) {
                 if (var6.requestKeyboardFocus(param0, (byte) -108)) {

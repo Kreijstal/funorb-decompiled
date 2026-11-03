@@ -9,7 +9,7 @@ final class ii {
     static String muXCannotJoinInprogress;
     static String gameoptTrychanging1;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         createPasswordConfirmTooltip = null;
         if (param0 <= 126) {
           return;
@@ -78,7 +78,7 @@ final class ii {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 97) {
-            ii.a(66);
+            ii.releaseStatics(66);
           }
           var3 = new ProxySocketConnector();
           ((SocketConnector) ((Object) var3)).field_a = param2;

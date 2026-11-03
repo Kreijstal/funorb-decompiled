@@ -67,7 +67,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         var4Lifetime1 = 0;
         var5 = -UsernameAvailabilityValidator.field_r.field_w + td.field_g.field_w >> 3;
-        for (var6 = 0; var6 < NineBallRules.c((byte) -9); var6++) {
+        for (var6 = 0; var6 < NineBallRules.achievementNameCount((byte) -9); var6++) {
           var7 = this.getIconX(-45, var6);
           var8 = this.getIconY(var6, true);
           if (var6 == IntrusiveNodeHashTable.field_j) {
@@ -194,7 +194,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         var10 = stackIn_3_0;
         var5 = var10;
-        for (var6 = 0; NineBallRules.c((byte) -108) > var6; var6++) {
+        for (var6 = 0; NineBallRules.achievementNameCount((byte) -108) > var6; var6++) {
           if (!t.a(0, var10, var6) ||
             !param1) {
             var7 = this.getIconX(-55, var6);
@@ -301,7 +301,7 @@ final class AchievementsScreen extends MenuScreen {
         return this.buttonTop;
     }
 
-    final static int a(int param0, CharSequence param1, int param2) {
+    final static int parseIntWithRadix(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

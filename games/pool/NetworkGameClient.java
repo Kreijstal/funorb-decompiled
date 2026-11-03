@@ -378,7 +378,7 @@ abstract class NetworkGameClient extends GameApplet {
         this.setBackground(java.awt.Color.black);
         ProgressBarWidget.field_S = this.field_E;
         th.a((byte) -94, ProgressBarWidget.field_S);
-        TimeTrialRules.a(this.field_u, this.field_D, (byte) 86, this.field_r, ProgressBarWidget.field_S, this.field_B, param5, this.field_t, StatefulTextPainter.field_s, 5000, this.field_q, 5000, param6, this.field_o);
+        TimeTrialRules.configureClientConnection(this.field_u, this.field_D, (byte) 86, this.field_r, ProgressBarWidget.field_S, this.field_B, param5, this.field_t, StatefulTextPainter.field_s, 5000, this.field_q, 5000, param6, this.field_o);
         je.a(StatefulTextPainter.field_s, param6, this.field_D, this.field_B, this.field_t, (byte) -96, this.field_u, ProgressBarWidget.field_S, this.field_q);
         fl.registerPunctuationKeyCodes(true);
         ClientException.field_a = nn.b(96);

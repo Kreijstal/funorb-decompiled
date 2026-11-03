@@ -214,7 +214,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasAccountOverlay(int param0) {
         if (param0 != -6720) {
           return false;
         }

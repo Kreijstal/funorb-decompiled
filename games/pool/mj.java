@@ -71,7 +71,7 @@ final class mj {
           }
           var3 = (LobbyPlayer) (ln.field_n.firstForIteration((byte) -127));
           while (var3 != null) {
-            var3.a(false);
+            var3.unlinkNode(false);
             var3 = (LobbyPlayer) (ln.field_n.nextForIteration(param0 ^ 29));
           }
           ln.field_n = null;

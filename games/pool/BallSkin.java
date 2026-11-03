@@ -14,7 +14,7 @@ abstract class BallSkin {
     static cd field_h;
     static int[] field_c;
 
-    void a(int[] param0, int[] param1, int param2, int param3) {
+    void drawBall(int[] param0, int[] param1, int param2, int param3) {
         try {
           this.field_j[param2].b(param1, param0);
           if (param3 != -3637) {
@@ -34,7 +34,7 @@ abstract class BallSkin {
 
     abstract int ballColor(int param0, boolean param1);
 
-    void a(int param0, int param1, int[] param2, int[] param3, boolean param4) {
+    void drawBallAndShadow(int param0, int param1, int[] param2, int[] param3, boolean param4) {
         if (param0 != -1912602369) {
           return;
         }
@@ -239,7 +239,7 @@ abstract class BallSkin {
     void loadTopBarSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != 198123656) {
-            this.h(32);
+            this.updateAnimation(32);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -306,7 +306,7 @@ abstract class BallSkin {
         }
     }
 
-    void h(int param0) {
+    void updateAnimation(int param0) {
         int var2 = -55 % ((29 - param0) / 44);
     }
 
@@ -358,7 +358,7 @@ abstract class BallSkin {
         return (byte) 0;
     }
 
-    void a(int param0, PoolGameModel param1) {
+    void prepareForGame(int param0, PoolGameModel param1) {
         try {
           if (param0 != 2147483647) {
             this.field_j = (ModelMesh[]) null;

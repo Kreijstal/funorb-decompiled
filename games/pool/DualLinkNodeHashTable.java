@@ -166,7 +166,7 @@ final class DualLinkNodeHashTable {
         DualLinkNode var5 = null;
         try {
           if (param2.field_n != null) {
-            param2.a(false);
+            param2.unlinkNode(false);
           }
           if (param0 != -6946) {
             java.applet.Applet var6 = (java.applet.Applet) null;

@@ -242,7 +242,7 @@ final class PasswordValidator extends TextInputValidator {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (SpaceTableScene.a(var5, 28350)) {
+          if (SpaceTableScene.hasInvalidPasswordLength(var5, 28350)) {
             stackIn_5_0 = Bzip2DecoderState.createAlertPasslength;
             return stackIn_5_0;
           }

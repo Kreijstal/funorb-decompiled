@@ -249,7 +249,7 @@ final class ResourceArchive {
         var2 = Pool.field_O;
         try {
           for (var1_int = 0; var1_int < nn.field_b.length; var1_int++) {
-            nn.field_b[var1_int].i(25879);
+            nn.field_b[var1_int].buildPalettes(25879);
           }
           var3 = param0;
           var1_intLifetime1 = var3;

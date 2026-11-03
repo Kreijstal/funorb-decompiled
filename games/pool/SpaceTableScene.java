@@ -6,7 +6,7 @@ import java.util.*;
 final class SpaceTableScene extends ModelTableScene {
     static String waitingforFonts;
 
-    final void a(byte param0, int[] param1) {
+    final void setViewMatrix(byte param0, int[] param1) {
         int[] var3 = null;
         int var11 = 0;
         int[] var12 = null;
@@ -91,20 +91,20 @@ final class SpaceTableScene extends ModelTableScene {
 
     final void loadSounds(SoundCache param0, int param1) {
         try {
-          ie.field_f = param0.a("space_ball_1", true, "");
-          Bzip2DecoderState.field_i = param0.a("space_ball_2", true, "");
-          IntrusiveNode.field_a = param0.a("space_ball_3", true, "");
+          ie.field_f = param0.getVorbisSound("space_ball_1", true, "");
+          Bzip2DecoderState.field_i = param0.getVorbisSound("space_ball_2", true, "");
+          IntrusiveNode.field_a = param0.getVorbisSound("space_ball_3", true, "");
           int var3_int = -40 / ((39 - param1) / 38);
-          hj.field_j = param0.a("space_ball_4", true, "");
-          wn.field_b = param0.a("space_ball_cushion1", true, "");
-          PotEvent.field_o = param0.a("space_ball_cushion2", true, "");
-          PacketBuffer.field_q = param0.a("space_ball_cushion3", true, "");
-          IterableDualLinkDeque.field_f = param0.a("space_ball_cushion4", true, "");
-          PolarBallSkin.field_l = param0.a("space_respot_the_white", true, "");
-          bh.field_a = param0.a("", "space_ball_pot", (byte) 125);
-          Ball.field_L = param0.a("", "space_cue_hard", (byte) 126);
-          IsaacCipher.field_l = param0.a("", "space_cue_soft", (byte) 126);
-          param0.a("", "cueball_rolling_loop", (byte) 125);
+          hj.field_j = param0.getVorbisSound("space_ball_4", true, "");
+          wn.field_b = param0.getVorbisSound("space_ball_cushion1", true, "");
+          PotEvent.field_o = param0.getVorbisSound("space_ball_cushion2", true, "");
+          PacketBuffer.field_q = param0.getVorbisSound("space_ball_cushion3", true, "");
+          IterableDualLinkDeque.field_f = param0.getVorbisSound("space_ball_cushion4", true, "");
+          PolarBallSkin.field_l = param0.getVorbisSound("space_respot_the_white", true, "");
+          bh.field_a = param0.getSynthesizedSound("", "space_ball_pot", (byte) 125);
+          Ball.field_L = param0.getSynthesizedSound("", "space_cue_hard", (byte) 126);
+          IsaacCipher.field_l = param0.getSynthesizedSound("", "space_cue_soft", (byte) 126);
+          param0.getSynthesizedSound("", "cueball_rolling_loop", (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gh.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -299,7 +299,7 @@ final class SpaceTableScene extends ModelTableScene {
         waitingforFonts = null;
         if (param0 != -116) {
           String var2 = (String) null;
-          SpaceTableScene.a((String) null, 16);
+          SpaceTableScene.hasInvalidPasswordLength((String) null, 16);
         }
     }
 
@@ -661,7 +661,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void c(int param0, ResourceArchive param1) {
+    final void loadSceneSprites(int param0, ResourceArchive param1) {
         ThreeSliceButtonPainter.field_t = NameEntryPopup.a(0, "", param1, "space_stars");
         NodeHashTableIterator.field_k = WidgetStyleLayer.loadSprite("", (byte) 103, "shuttle_planet", param1);
         if (param0 != -23569) {
@@ -674,7 +674,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean hasInvalidPasswordLength(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -844,7 +844,7 @@ final class SpaceTableScene extends ModelTableScene {
           }
           pp.a(this.field_O[da.field_b], (short) -8246, true, this.field_M[da.field_b], SingleChildWidget.field_I);
           if (param1 >= -43) {
-            this.c(false);
+            this.initializeScene(false);
           }
           pp.a(this.field_O[StatefulTextPainter.field_x], (short) -8246, true, this.field_M[StatefulTextPainter.field_x], ContextMenu.field_Ub);
           hi.field_h = new byte[32][this.field_O[om.field_w].faceCount];
@@ -874,7 +874,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void c(boolean param0) {
+    final void initializeScene(boolean param0) {
         so[] var12 = null;
         int[] var25 = null;
         so[] var14 = null;
@@ -977,7 +977,7 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           if (param0 != 1) {
             ResourceArchive var4 = (ResourceArchive) null;
-            this.c(63, (ResourceArchive) null);
+            this.loadSceneSprites(63, (ResourceArchive) null);
           }
           this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_space");
           this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_space_win_jingle");
@@ -987,8 +987,8 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void i(int param0) {
-        super.i(param0);
+    final void buildPalettes(int param0) {
+        super.buildPalettes(param0);
         int[] var3 = ta.buildGradientPalette(new int[]{0, 0, 9, 13426175}, 47);
         int[] var2 = var3;
         dg.field_K = ta.buildGradientPalette(new int[]{0, var3[0], 128, var3[1], 192, var3[2], 224, var3[4], 256, var3[8]}, -122);
