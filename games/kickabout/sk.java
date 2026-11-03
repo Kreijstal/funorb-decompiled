@@ -55,12 +55,12 @@ final class sk {
         var1Lifetime1.c((byte) -109);
     }
 
-    final static void a(int param0, int param1, lv param2) {
+    final static void a(int param0, int param1, PopupCard param2) {
         if (param1 != 16586) {
           return;
         }
         try {
-          ScrollPane.field_Jb.a(new MessageDialog(param0, param2), 3);
+          ScrollPane.field_Jb.addLast(new MessageDialog(param0, param2), 3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -21,7 +21,7 @@ abstract class AppScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           PacketBuffer.a(-94, param2);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 202);
           param0.a(0, param1, 0, 0, 0, 0, 0, 700);
@@ -80,9 +80,9 @@ abstract class AppScreen {
           GzipDecoder.field_f = param1;
           wo.field_k = param5;
           or.field_c = param3;
-          ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new tb());
+          ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           SplashScreen.field_i = new DiskCacheWorker(param2);
-          al.field_Ab = new ArchiveManager(ParticipantStatus.field_t, SplashScreen.field_i);
+          FriendsListPanel.field_Ab = new ArchiveManager(ParticipantStatus.field_t, SplashScreen.field_i);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "js.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -191,7 +191,7 @@ abstract class AppScreen {
               LoginMethod.field_e = param4;
               ScrollContainer.field_Ib = un.field_e.readUnsignedByte((byte) -118);
               bl.field_c = un.field_e.readUnsignedByte((byte) -112);
-              WeightedLruCache.field_d = un.field_e.a((byte) 81);
+              WeightedLruCache.field_d = un.field_e.readUnsignedShort((byte) 81);
               var11 = un.field_e.a(true);
               var7 = un.field_e.readUnsignedByte((byte) -106);
               if ((1 & var7) != 0) {
@@ -213,7 +213,7 @@ abstract class AppScreen {
                   un.field_e.readUnsignedByte((byte) -118);
                   vp.field_h = un.field_e.readUnsignedByte((byte) -124);
                   un.field_e.readInt(4);
-                  field_e = un.field_e.a((byte) 81);
+                  field_e = un.field_e.readUnsignedShort((byte) 81);
                   KitStyleTile.field_yb = new byte[field_e];
                   for (var8 = 0; var8 < field_e; var8++) {
                     KitStyleTile.field_yb[var8] = un.field_e.readByte((byte) -114);
@@ -226,7 +226,7 @@ abstract class AppScreen {
                   un.field_e.readUnsignedByte((byte) -118);
                   vp.field_h = un.field_e.readUnsignedByte((byte) -124);
                   un.field_e.readInt(4);
-                  field_e = un.field_e.a((byte) 81);
+                  field_e = un.field_e.readUnsignedShort((byte) 81);
                   KitStyleTile.field_yb = new byte[field_e];
                   for (var8 = 0; var8 < field_e; var8++) {
                     KitStyleTile.field_yb[var8] = un.field_e.readByte((byte) -114);
@@ -268,11 +268,11 @@ abstract class AppScreen {
               if (WeightedLruCache.field_d > 0) {
                 GrowableIntList.field_c = true;
               }
-              or.field_d.a((byte) 117, UrlRequest.field_f);
+              or.field_d.installCipher((byte) 117, UrlRequest.field_f);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 UrlRequest.field_f[var8Lifetime1] = UrlRequest.field_f[var8Lifetime1] + 50;
               }
-              un.field_e.a((byte) 125, UrlRequest.field_f);
+              un.field_e.installCipher((byte) 125, UrlRequest.field_f);
               stackIn_91_0 = so.field_b;
               return stackIn_91_0;
             }

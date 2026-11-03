@@ -232,9 +232,9 @@ class ri extends TextWidgetPainter {
           var7 = Checkbox.a("largefont", param0, 75, "lobby", param4);
           ServerMessageScreen.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
           CheckboxLabelWidget.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
-          var7.a(var5, var25);
-          ServerMessageScreen.field_E.a(var5, var25);
-          CheckboxLabelWidget.field_Ab.a(var5, var25);
+          var7.setInlineImages(var5, var25);
+          ServerMessageScreen.field_E.setInlineImages(var5, var25);
+          CheckboxLabelWidget.field_Ab.setInlineImages(var5, var25);
           var8 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var8.field_y = 16777215;
           var8.field_X = (BitmapFont) ((Object) var7);
@@ -302,9 +302,9 @@ class ri extends TextWidgetPainter {
           kr.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
           kr.field_b.field_kb = 2;
           AuctionSettingsDialog.field_J = new UiLayoutNode(0L, ip.field_c);
-          AuctionSettingsDialog.field_J.a(ul.field_c, (byte) -100);
+          AuctionSettingsDialog.field_J.applyStyle(ul.field_c, (byte) -100);
           mp.field_f = new UiLayoutNode(0L, kr.field_b);
-          mp.field_f.a(ul.field_c, (byte) -85);
+          mp.field_f.applyStyle(ul.field_c, (byte) -85);
           var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
           su.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
           MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
@@ -408,7 +408,7 @@ class ri extends TextWidgetPainter {
           IterableDualLinkDeque.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
           IterableDualLinkDeque.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
           uk.field_b = new VerticalScrollbar(0L, sd.field_a, IterableDualLinkDeque.field_b, ScrollPane.field_Hb, ts.field_a);
-          BroadcastServerCommand.field_D = new al(0L, (UiLayoutNode) null, SoundCache.field_b, uk.field_b, um.field_d, (String) null, (String) null);
+          BroadcastServerCommand.field_D = new FriendsListPanel(0L, (UiLayoutNode) null, SoundCache.field_b, uk.field_b, um.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -506,12 +506,12 @@ class ri extends TextWidgetPainter {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         try {
           if (param1) {
             kj.a(12105912, param2 + param3.field_g, param3.field_t + param4, param3.field_i, param3.field_n);
           }
-          super.a(-21, param1, param2, param3, param4);
+          super.drawWidget(-21, param1, param2, param3, param4);
           int var6_int = 92 % ((59 - param0) / 53);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -576,8 +576,8 @@ class ri extends TextWidgetPainter {
             var7.field_q = 0;
             IterableDualLinkDeque.field_h.field_E = qn.field_d.toUpperCase();
             var8 = (2 + AuctionItem.field_p.field_q) / 2;
-            nv.field_F.a(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
-            GoalStateAgent.field_k.a(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
+            nv.field_F.setBounds(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
+            GoalStateAgent.field_k.setBounds(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
             if (rn.field_d.length == 1 &&
               rn.field_d[0] == 2) {
               var9 = 0;
@@ -703,15 +703,15 @@ class ri extends TextWidgetPainter {
           stackIn_65_0 = TrinketIcon.field_Cb;
           stackIn_65_1 = 0;
           stackIn_66_2 = (param2) && (!param1) && (!TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
+          ((UiLayoutNode) (Object) stackIn_65_0).updateInput(stackIn_65_1, stackIn_66_2);
           stackIn_70_0 = AuctionItem.field_p;
           stackIn_70_1 = 0;
           stackIn_71_2 = (param2) && (!param1) && (!TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_70_0).b(stackIn_70_1, stackIn_71_2);
+          ((UiLayoutNode) (Object) stackIn_70_0).updateInput(stackIn_70_1, stackIn_71_2);
           stackIn_75_0 = tn.field_f;
           stackIn_75_1 = 0;
           stackIn_76_2 = (param2) && (!param1) && (TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_75_0).b(stackIn_75_1, stackIn_76_2);
+          ((UiLayoutNode) (Object) stackIn_75_0).updateInput(stackIn_75_1, stackIn_76_2);
           ni.field_l.field_b.h((byte) 118);
           if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
@@ -810,6 +810,6 @@ class ri extends TextWidgetPainter {
         field_s = "Pending";
         field_v = "to go straight into a multiplayer Exhibition Game with a preset team";
         field_r = 200;
-        field_u = (SortCriterion) ((Object) new ba());
+        field_u = (SortCriterion) ((Object) new TrinketCountSortCriterion());
     }
 }

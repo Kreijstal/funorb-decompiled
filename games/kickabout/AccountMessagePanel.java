@@ -15,7 +15,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
     static String field_F;
     private TextButton[] field_J;
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -45,7 +45,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
             IndexedSpriteState.b(38, this.field_M[var6_int]);
             return;
           }
-          this.field_E.q(-77);
+          this.field_E.closeDialog(-77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,8 +94,8 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
         this.field_N = param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         this.field_B.a(this.field_D, 14 + (param2 + this.field_t), 10 + (this.field_g + param3), -28 + this.field_n, this.field_i, 16777215, -1, 0, 0, this.field_B.field_G);
     }
 
@@ -119,8 +119,8 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           var4 = new TextButton(param0, param1);
           var4.field_r = (WidgetPainter) ((Object) new op());
           var5 = -2 + this.field_i;
-          this.a(34 + this.field_i, 1, 0, this.field_n, 0);
-          var4.a(30, param2 ^ 78, 7, this.field_n - 14, var5);
+          this.setBounds(34 + this.field_i, 1, 0, this.field_n, 0);
+          var4.setBounds(30, param2 ^ 78, 7, this.field_n - 14, var5);
           this.a(-102, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -169,7 +169,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           this.field_E = param0;
           this.field_B = param1;
           var4_int = null == this.field_D ? 0 : this.field_B.paragraphHeight(this.field_D, 260, this.field_B.field_G);
-          this.a(22 + var4_int, 1, 0, 288, 0);
+          this.setBounds(22 + var4_int, 1, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

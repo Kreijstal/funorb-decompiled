@@ -30,8 +30,8 @@ final class ConsoleEvaluationException extends Exception {
         int var2 = (-640 + ea.field_a) / 2;
         int var3 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var4 = -(param1 * param1) + var3;
-        TrinketIcon.field_Cb.a(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
-        AuctionItem.field_p.a(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
+        TrinketIcon.field_Cb.setBounds(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));
+        AuctionItem.field_p.setBounds(true, 438, var4 * 438 / var3 + (202 + var2), 0, -124 + SoftwareRasterizer.field_f);
         int var5 = 66 % ((73 - param0) / 52);
     }
 
@@ -56,8 +56,8 @@ final class ConsoleEvaluationException extends Exception {
                 lp.a(SplashScreen.field_m, (byte) -64);
               }
               if (ArchiveIndex.field_h == null &&
-                cv.field_e) {
-                ba.a(param0, param1 + 6, var2);
+                MeshObject.field_e) {
+                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
               }
               return;
             }
@@ -67,8 +67,8 @@ final class ConsoleEvaluationException extends Exception {
               var2 = 2;
               lp.a(SplashScreen.field_m, (byte) -64);
               if (ArchiveIndex.field_h == null &&
-                cv.field_e) {
-                ba.a(param0, param1 + 6, var2);
+                MeshObject.field_e) {
+                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
               }
               return;
             }
@@ -80,16 +80,16 @@ final class ConsoleEvaluationException extends Exception {
             if (!PlayArea.a(100)) {
               var2 = 1;
               if (ArchiveIndex.field_h == null &&
-                cv.field_e) {
-                ba.a(param0, param1 + 6, var2);
+                MeshObject.field_e) {
+                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
                 return;
               }
               return;
             }
             var2 = 0;
             if (ArchiveIndex.field_h == null &&
-              cv.field_e) {
-              ba.a(param0, param1 + 6, var2);
+              MeshObject.field_e) {
+              TrinketCountSortCriterion.a(param0, param1 + 6, var2);
               return;
             }
             return;
@@ -110,10 +110,10 @@ final class ConsoleEvaluationException extends Exception {
         if (ArchiveIndex.field_h != null) {
           return;
         }
-        if (!cv.field_e) {
+        if (!MeshObject.field_e) {
           return;
         }
-        ba.a(param0, param1 + 6, var2);
+        TrinketCountSortCriterion.a(param0, param1 + 6, var2);
     }
 
     ConsoleEvaluationException(String param0) {

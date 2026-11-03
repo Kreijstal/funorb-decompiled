@@ -10,16 +10,16 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
     static int[] field_C;
     private TextButton field_D;
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_D.field_y = this.field_G.a((byte) -125).getValidationState(-24407) == LobbyPlayerRow.field_yb ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ib.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         if (param3 < 64) {
           return;
         }
@@ -62,16 +62,16 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
 
     final void a(byte param0) {
         int var2 = 250;
-        this.field_G.a(25, param0 + 119, -var2 + this.field_n >> 1, 140, 20 + this.field_i - 25 >> 1);
-        this.field_D.a(30, 1, 140 + (this.field_n - var2 >> 1) + 10, 100, (20 + (this.field_i - 30) >> 1) + 2);
+        this.field_G.setBounds(25, param0 + 119, -var2 + this.field_n >> 1, 140, 20 + this.field_i - 25 >> 1);
+        this.field_D.setBounds(30, 1, 140 + (this.field_n - var2 >> 1) + 10, 100, (20 + (this.field_i - 30) >> 1) + 2);
         if (param0 == -118) {
           return;
         }
         field_C = (int[]) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         EmailSyntaxValidator.field_k.a(DebugConsole.field_v, 4 + param2 + this.field_t, 4 + EmailSyntaxValidator.field_k.field_G + (this.field_g + param3), 16777215, -1);
     }
 
@@ -82,7 +82,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         this.field_D = new TextButton(RowRangeRequest.field_g, (UiListener) (this));
         this.field_w = new UiWidget[]{(UiWidget) ((Object) this.field_G), (UiWidget) ((Object) this.field_D)};
         this.field_D.field_r = (WidgetPainter) ((Object) new op());
-        this.e(-1947);
+        this.refreshLayout(-1947);
     }
 
     public static void a(int param0) {

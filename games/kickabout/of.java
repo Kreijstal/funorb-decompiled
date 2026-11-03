@@ -4,7 +4,7 @@
 final class of {
     static int field_e;
     static UiLayoutNode[] field_d;
-    static vn field_f;
+    static MeshData field_f;
     static String field_b;
     static String field_c;
     static int field_a;
@@ -15,7 +15,7 @@ final class of {
         field_c = null;
         field_d = null;
         if (param0) {
-          field_f = (vn) null;
+          field_f = (MeshData) null;
         }
     }
 

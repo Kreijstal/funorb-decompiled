@@ -94,7 +94,7 @@ final class ih {
             var5 = DemoIntegersCommand.field_F.field_H[var4];
             var6 = DemoIntegersCommand.field_F.field_d[var4];
             var7 = DemoIntegersCommand.field_F.field_Q[var4];
-            var8 = AuctionsHelpScreen.a(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).b(100, 4369, 20, -56, -20);
+            var8 = AuctionsHelpScreen.a(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).createModelMesh(100, 4369, 20, -56, -20);
             GameSoundEffect.field_j[var4] = new Sprite(200, 200);
             PacketBuffer.a(param0 - 124, GameSoundEffect.field_j[var4]);
             TriangleRasterizer.useRasterClip();

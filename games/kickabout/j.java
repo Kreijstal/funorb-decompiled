@@ -24,7 +24,7 @@ final class j {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = bo.a(-1, param1);
+          var3 = QuickChatKeysHelpPanel.reverseString(-1, param1);
           var4 = -111 % ((-20 - param0) / 49);
           if (-1 != param2.indexOf(param1)) {
             return true;
@@ -57,9 +57,9 @@ final class j {
     final static Sprite a(int param0) {
         if (param0 != -5275) {
           field_a = (String[]) null;
-          return cv.field_b[ih.field_c][RankingsScreen.field_C];
+          return MeshObject.field_b[ih.field_c][RankingsScreen.field_C];
         }
-        return cv.field_b[ih.field_c][RankingsScreen.field_C];
+        return MeshObject.field_b[ih.field_c][RankingsScreen.field_C];
     }
 
     final void a(int param0, int param1, int param2) {
@@ -67,7 +67,7 @@ final class j {
         if (ia.field_c) {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
           PacketBuffer.a(param0 + 39, wa.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
           TeamManagementScreen.e(127);
           wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
@@ -78,7 +78,7 @@ final class j {
           return;
         }
         PacketBuffer.a(param0 + 39, wa.field_a);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
         TeamManagementScreen.e(127);
         wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
@@ -145,7 +145,7 @@ final class j {
           var3.field_R = 31;
           var3.field_k = 16;
         }
-        vn var4 = AuctionItem.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
+        MeshData var4 = AuctionItem.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
         this.field_b = new RenderedFootballer(var4, var2, false);
         this.field_b.directionMask = 8;
         this.field_b.field_R = 1536;

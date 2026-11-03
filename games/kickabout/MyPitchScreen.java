@@ -92,7 +92,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           }
         }
         RankingRowNode.field_Gb.field_s = 665;
-        RankingRowNode.field_Gb.b(0, false);
+        RankingRowNode.field_Gb.updateInput(0, false);
     }
 
     public static void releaseStatics(int param0) {
@@ -116,7 +116,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         for (var4 = 0; var4 < RankingRowNode.field_Gb.field_jb.f(606511077).length; var4++) {
           ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.f(param0 ^ -606511074)[var4])).j(0);
         }
-        RankingRowNode.field_Gb.a(96, false);
+        RankingRowNode.field_Gb.draw(96, false);
         if (!this.field_F) {
           SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 228);
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
@@ -143,7 +143,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           field_G = -0.01516130877366001;
         }
         RankingRowNode.field_Gb = new UiLayoutNode();
-        RankingRowNode.field_Gb.a(true, 390, 25, 100, 440);
+        RankingRowNode.field_Gb.setBounds(true, 390, 25, 100, 440);
     }
 
     final void drawOverlay(boolean param0, int param1) {
@@ -160,7 +160,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         var4 = Kickabout.field_G;
         super.updateScreen((byte) 101, param1);
         RankingRowNode.field_Gb.field_s = this.slideOffsetX + 25;
-        RankingRowNode.field_Gb.b(0, param1);
+        RankingRowNode.field_Gb.updateInput(0, param1);
         var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.g(24009));
         while (var3_ref_jt != null) {
           var3_ref_jt.c(3784, param1);
@@ -226,7 +226,7 @@ final class MyPitchScreen extends TeamManagementScreen {
               ImageProducerRasterBuffer.a(or.field_c, GzipDecoder.field_f, var2, -3210, wo.field_k);
               var2.writeByte(param0 + 52, 15);
               var2.writeInt(param0 ^ -44, gg.field_Db);
-              AnimationSkeleton.field_e.a(13, (byte) -127, 0, var2.field_f);
+              AnimationSkeleton.field_e.write(13, (byte) -127, 0, var2.field_f);
               IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
               LoginRequiredDialog.field_I = 30000L + nj.monotonicMillis(93);
             }
@@ -249,7 +249,7 @@ final class MyPitchScreen extends TeamManagementScreen {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            ParticipantStatus.field_t.a(AnimationSkeleton.field_e, 20, TrinketUnlockNotice.field_f);
+            ParticipantStatus.field_t.attachSocket(AnimationSkeleton.field_e, 20, TrinketUnlockNotice.field_f);
             AnimationSkeleton.field_e = null;
             IterableDualLinkDeque.field_a = 0;
             iv.field_o = null;

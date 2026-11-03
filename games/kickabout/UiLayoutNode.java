@@ -101,7 +101,7 @@ class UiLayoutNode extends iv {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void layoutVerticalContent(int param0, int param1, int param2, boolean param3) {
         UiLayoutNode var10_ref_hd = null;
         int var9 = 0;
         int var11 = Kickabout.field_G;
@@ -176,14 +176,14 @@ class UiLayoutNode extends iv {
         return var3;
     }
 
-    final void a(int param0, boolean param1) {
-        this.a(true, -105, false, 0, false, 0, param1, SoftwareRasterizer.field_g, false, false, SoftwareRasterizer.field_f);
+    final void draw(int param0, boolean param1) {
+        this.drawTree(true, -105, false, 0, false, 0, param1, SoftwareRasterizer.field_g, false, false, SoftwareRasterizer.field_f);
         if (param0 <= 45) {
           this.field_y = 117;
         }
     }
 
-    final void a(UiLayoutNode param0, byte param1) {
+    final void applyStyle(UiLayoutNode param0, byte param1) {
         boolean stackIn_87_1 = false;
         RuntimeException stackIn_106_0 = null;
         StringBuilder stackIn_106_1 = null;
@@ -324,10 +324,10 @@ class UiLayoutNode extends iv {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void updateInput(int param0, boolean param1) {
         ic.field_f = !param1 ? true : false;
         UnreadMessagesScreen.field_D = !param1 ? true : false;
-        this.a(0, ~param0, true, SoftwareRasterizer.field_f, param0, SoftwareRasterizer.field_g);
+        this.updateInputTree(0, ~param0, true, SoftwareRasterizer.field_f, param0, SoftwareRasterizer.field_g);
     }
 
     final static boolean a(boolean param0, int param1, int param2) {
@@ -382,7 +382,7 @@ class UiLayoutNode extends iv {
           } else {
             if (AuctionLogEntry.field_m.length() > 0) {
               var4_ref_String = AuctionLogEntry.field_m.toString();
-              if (tb.a(var4_ref_String, -125)) {
+              if (SocketArchiveNetworkClient.a(var4_ref_String, -125)) {
                 TextButton.a((String) null, (String) null, 0, 2, ng.field_i, -125);
                 TextButton.a((String) null, (String) null, 0, 2, mg.field_e, -126);
               } else {
@@ -475,7 +475,7 @@ class UiLayoutNode extends iv {
         field_ib = null;
     }
 
-    final int g(byte param0) {
+    final int getPreferredWidth(byte param0) {
         int var2 = -9 % ((56 - param0) / 35);
         return this.computeContentWidth(2147483647, 0);
     }
@@ -484,7 +484,7 @@ class UiLayoutNode extends iv {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    private final void updateInputTree(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         boolean stackIn_31_1 = false;
         boolean stackIn_39_1 = false;
         int var7;
@@ -564,7 +564,7 @@ class UiLayoutNode extends iv {
         if (null != this.field_jb) {
           var13 = (UiLayoutNode) (this.field_jb.last(param1 ^ 9032));
           while (var13 != null) {
-            var13.a(this.field_F, param1 ^ 0, param2, this.field_mb, this.field_T, this.field_q);
+            var13.updateInputTree(this.field_F, param1 ^ 0, param2, this.field_mb, this.field_T, this.field_q);
             var13 = (UiLayoutNode) (this.field_jb.e(33));
           }
         }
@@ -598,7 +598,7 @@ class UiLayoutNode extends iv {
         }
     }
 
-    final void a(boolean param0, int param1, UiLayoutNode param2, UiLayoutNode param3) {
+    final void positionAfter(boolean param0, int param1, UiLayoutNode param2, UiLayoutNode param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -615,7 +615,7 @@ class UiLayoutNode extends iv {
             param2.field_J = param3.field_mb + param3.field_J + param1;
           }
           if (!param0) {
-            this.a(false, -45, -58, 26, 35);
+            this.setBounds(false, -45, -58, 26, 35);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -646,7 +646,7 @@ class UiLayoutNode extends iv {
           return;
         }
         try {
-          this.field_jb.a(param1, 3);
+          this.field_jb.addLast(param1, 3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -668,7 +668,7 @@ class UiLayoutNode extends iv {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
         this.field_fb = 0;
         this.field_v = 0;
         if (!param0) {
@@ -682,7 +682,7 @@ class UiLayoutNode extends iv {
         this.field_q = param1;
     }
 
-    private final void a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10) {
+    private final void drawTree(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10) {
         boolean stackIn_6_0 = false;
         int var12;
         int var13;
@@ -858,7 +858,7 @@ class UiLayoutNode extends iv {
         if (null != this.field_jb) {
           var23_ref = (UiLayoutNode) (this.field_jb.g(24009));
           while (var23_ref != null) {
-            var23_ref.a(param0, -114, this.field_wb, var20 + this.field_T, param4, var19 + this.field_F, param6, this.field_q, param8, param9, this.field_mb);
+            var23_ref.drawTree(param0, -114, this.field_wb, var20 + this.field_T, param4, var19 + this.field_F, param6, this.field_q, param8, param9, this.field_mb);
             var23_ref = (UiLayoutNode) (this.field_jb.c(33));
           }
         }
@@ -938,7 +938,7 @@ class UiLayoutNode extends iv {
           this.field_a = param0;
           this.field_J = param3;
           this.field_q = param4;
-          this.a(param1, (byte) -86);
+          this.applyStyle(param1, (byte) -86);
           if (param6 != null) {
             this.field_E = param6;
           }

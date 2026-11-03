@@ -31,7 +31,7 @@ abstract class TextLayout {
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a((byte) -114);
+              var6 = var5.width((byte) -114);
               if (var2 < var6) {
                 var2 = var6;
               }
@@ -56,7 +56,7 @@ abstract class TextLayout {
     }
 
     final static int a(byte param0, int param1, int param2, int param3, int param4) {
-        Sprite var5 = tb.field_q[param3 % 10];
+        Sprite var5 = SocketArchiveNetworkClient.field_q[param3 % 10];
         if (param0 >= -66) {
           return -2;
         }
@@ -200,7 +200,7 @@ abstract class TextLayout {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static int $cfr$intArgs$a$8e2a9e3a0d15(int param0, int param1, int param2, int param3, int param4) {
-        Sprite var5 = tb.field_q[param3 % 10];
+        Sprite var5 = SocketArchiveNetworkClient.field_q[param3 % 10];
         if (param0 >= -66) {
           return -2;
         }

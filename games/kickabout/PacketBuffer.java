@@ -4,7 +4,7 @@
 class PacketBuffer extends IntrusiveNode {
     byte[] field_f;
     static int[] field_e;
-    static vn[] field_m;
+    static MeshData[] field_m;
     static String field_j;
     int field_n;
     static Sprite[] field_h;
@@ -143,7 +143,7 @@ class PacketBuffer extends IntrusiveNode {
     final int readUnsignedShortOrInt(byte param0) {
         int var2 = 82 % ((55 - param0) / 41);
         if (0 <= this.field_f[this.field_n]) {
-          return this.a((byte) 81);
+          return this.readUnsignedShort((byte) 81);
         }
         return 2147483647 & this.readInt(4);
     }
@@ -225,7 +225,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           if (param2 != -6) {
             var7 = (int[]) null;
-            this.a(105, (int[]) null, false, -34);
+            this.xteaDecryptRange(105, (int[]) null, false, -34);
           }
           for (var5_int = param1; var5_int < param3 + param1; var5_int++) {
             fieldTemp$0 = this.field_n;
@@ -396,15 +396,15 @@ class PacketBuffer extends IntrusiveNode {
         return PainterStyle.a((byte) -123, var4, var2, this.field_f);
     }
 
-    final int a(byte param0) {
+    final int readUnsignedShort(byte param0) {
         this.field_n = this.field_n + 2;
         if (param0 != 81) {
-          field_m = (vn[]) null;
+          field_m = (MeshData[]) null;
         }
         return (255 & this.field_f[-1 + this.field_n]) + (this.field_f[-2 + this.field_n] << 8 & 65280);
     }
 
-    final void a(int param0, int[] param1, boolean param2, int param3) {
+    final void xteaDecryptRange(int param0, int[] param1, boolean param2, int param3) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -429,7 +429,7 @@ class PacketBuffer extends IntrusiveNode {
           while (true) {
             if (var7 >= var6) {
               if (!param2) {
-                this.a((byte) 126);
+                this.readUnsignedShort((byte) 126);
               }
               this.field_n = var5_int;
               return;
@@ -489,7 +489,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_f[-param1 + (this.field_n - 1)] = (byte)param1;
     }
 
-    final int l(int param0) {
+    final int readVarInt(int param0) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;
@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 < 128) {
           return -64 + this.readUnsignedByte((byte) -113);
         }
-        return this.a((byte) 81) - 49152;
+        return this.readUnsignedShort((byte) 81) - 49152;
     }
 
     final void writeBase38Password(byte param0, String param1) {
@@ -707,7 +707,7 @@ class PacketBuffer extends IntrusiveNode {
             break;
           }
           if (var2 == null) {
-            rp.field_B.a(param1, 3);
+            rp.field_B.addLast(param1, 3);
           } else {
             ug.a(var2, 16737894, param1);
           }
@@ -836,7 +836,7 @@ class PacketBuffer extends IntrusiveNode {
         if (128 > var2) {
           return this.readUnsignedByte((byte) -105);
         }
-        return -32768 + this.a((byte) 81);
+        return -32768 + this.readUnsignedShort((byte) 81);
     }
 
     PacketBuffer(byte[] param0) {
@@ -849,7 +849,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     static {
-        field_m = new vn[5];
+        field_m = new MeshData[5];
         field_e = new int[73];
         field_j = "This player is already in an auction";
         field_k = "Camera Attached";

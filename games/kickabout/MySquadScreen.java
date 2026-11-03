@@ -30,7 +30,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_V.field_jb = new IntrusiveDeque();
         this.field_L = new SquadGridWidget(ic.field_h);
         this.field_V.addChild((byte) -113, (UiLayoutNode) (this.field_L));
-        this.field_V.a(true, 12 + this.field_L.field_q, 3, 60, 12 + this.field_L.field_mb + 30);
+        this.field_V.setBounds(true, 12 + this.field_L.field_q, 3, 60, 12 + this.field_L.field_mb + 30);
         this.field_L.field_J = 36;
         this.field_L.field_s = 6;
         for (var4 = 0; var4 < 9; var4++) {
@@ -102,7 +102,7 @@ final class MySquadScreen extends TeamManagementScreen {
         super.updateScreen((byte) -55, param1);
         this.field_R.field_s = this.slideOffsetX;
         this.field_L.update(48);
-        this.field_R.b(0, param1);
+        this.field_R.updateInput(0, param1);
         if (this.field_S != this.field_L.field_Fb) {
           this.field_S = this.field_L.field_Fb;
           this.rebuildPlayerPanel(-49);
@@ -208,7 +208,7 @@ final class MySquadScreen extends TeamManagementScreen {
           if (var7 != null) {
             ((Sprite) ((Object) var7)).c(var8 - (((Sprite) ((Object) var7)).field_o >> 1), -(((Sprite) ((Object) var7)).field_v >> 1) + var9);
           } else {
-            jr.a(var8, param0 - 94, var9);
+            ReceivedAuctionItemRow.a(var8, param0 - 94, var9);
           }
           var10 = 60 + this.field_I.field_F;
           var11 = 44 + this.field_I.field_T;
@@ -263,7 +263,7 @@ final class MySquadScreen extends TeamManagementScreen {
             if (var15_ref != null &&
               !PlayArea.a(param0 + 105)) {
               if (!ValidationIndicator.field_F) {
-                jr.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
+                ReceivedAuctionItemRow.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
               } else {
                 var16Lifetime2 = var28.field_v;
                 for (var17_int = 0; 3 > var17_int; var17_int++) {
@@ -309,7 +309,7 @@ final class MySquadScreen extends TeamManagementScreen {
             var5.a(BufferedCacheFile.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
           }
         }
-        this.field_R.a(param0 + 129, false);
+        this.field_R.draw(param0 + 129, false);
         if (var4 != null) {
           if (TextFieldValidator.f(-1)) {
             stackIn_61_0 = -1;
@@ -386,23 +386,23 @@ final class MySquadScreen extends TeamManagementScreen {
             }
           }
         }
-        this.field_R.b(0, false);
+        this.field_R.updateInput(0, false);
     }
 
     final void buildWidgets(int param0) {
         this.field_V = new UiLayoutNode();
         this.field_Y = new UiLayoutNode();
-        this.field_Y.a(true, 452, 180, 60, 358);
+        this.field_Y.setBounds(true, 452, 180, 60, 358);
         this.field_I = new UiLayoutNode();
-        this.field_I.a(true, 234, 6, 6, 84);
+        this.field_I.setBounds(true, 234, 6, 6, 84);
         this.field_G = new UiLayoutNode();
-        this.field_G.a(true, 234, 6, 96, 124);
+        this.field_G.setBounds(true, 234, 6, 96, 124);
         this.field_W = new UiLayoutNode();
-        this.field_W.a(true, 200, 246, 6, 100);
+        this.field_W.setBounds(true, 200, 246, 6, 100);
         this.field_P = new UiLayoutNode();
-        this.field_P.a(true, 200, 246, 112, 108);
+        this.field_P.setBounds(true, 200, 246, 112, 108);
         this.field_X = new UiLayoutNode();
-        this.field_X.a(true, 440, 6, 226, 126);
+        this.field_X.setBounds(true, 440, 6, 226, 126);
         if (param0 != -38) {
           this.field_L = (SquadGridWidget) null;
         }
@@ -422,7 +422,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_Y.addChild((byte) -115, this.field_P);
         this.field_Y.addChild((byte) -104, this.field_G);
         this.field_R = new UiLayoutNode();
-        this.field_R.a(true, 640, 640, 0, 480);
+        this.field_R.setBounds(true, 640, 640, 0, 480);
         this.field_R.addChild((byte) -125, this.field_V);
         this.field_R.addChild((byte) -109, this.field_Y);
     }

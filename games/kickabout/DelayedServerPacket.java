@@ -64,11 +64,11 @@ final class DelayedServerPacket extends IntrusiveNode {
         if (param0 <= 25) {
           DelayedServerPacket.a(111);
           pc.field_c = nj.monotonicMillis(82);
-          cv.field_d = 0;
+          MeshObject.field_d = 0;
           return;
         }
         pc.field_c = nj.monotonicMillis(82);
-        cv.field_d = 0;
+        MeshObject.field_d = 0;
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -89,7 +89,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         var6 = Kickabout.field_G;
         try {
           if (null != GameModesHelpScreen.field_G) {
-            cv.a((byte) 78);
+            MeshObject.a((byte) 78);
           }
           if (AuctionLogEntry.field_h.screenId == param0) {
             return;
@@ -135,9 +135,9 @@ final class DelayedServerPacket extends IntrusiveNode {
                 } else {
                   stackIn_38_1 = 1;
                 }
-                if ((stackIn_35_0 == stackIn_38_1 && (tb.field_v != 1 ||
+                if ((stackIn_35_0 == stackIn_38_1 && (SocketArchiveNetworkClient.field_v != 1 ||
                   GameLoopApplet.field_E.field_L)) &&
-                  (decompiledFrameRemainder0 = (tb.field_v == 0))) {
+                  (decompiledFrameRemainder0 = (SocketArchiveNetworkClient.field_v == 0))) {
                   decompiledFrameRemainder0 = !(!GameLoopApplet.field_E.field_L);
                 }
               }
@@ -147,7 +147,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               if (ei.field_n) {
                 var3_int = var3_int | 1;
               }
-              if (tb.field_v == 1) {
+              if (SocketArchiveNetworkClient.field_v == 1) {
                 var3_int = var3_int | 2;
               }
               if (ByteStorage.field_c) {

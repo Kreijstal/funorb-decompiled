@@ -13,14 +13,14 @@ final class NumericDateInputWidget extends DateInputWidget {
     static int[] field_M;
     private TextInputWidget field_P;
     static int field_R;
-    static bo field_J;
+    static QuickChatKeysHelpPanel field_J;
     private boolean field_U;
     static String field_S;
 
     final static void a(int param0, boolean param1) {
         if (null != field_J) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -SoftwareRasterizer.field_b + SoftwareRasterizer.field_c, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
-          field_J.a(param0 ^ 30543, param1);
+          field_J.draw(param0 ^ 30543, param1);
         }
         if (param0 != 30521) {
           NumericDateInputWidget.n(81);
@@ -63,8 +63,8 @@ final class NumericDateInputWidget extends DateInputWidget {
         return true;
     }
 
-    final String f(int param0) {
-        String var2 = this.field_K.f(param0);
+    final String getTooltip(int param0) {
+        String var2 = this.field_K.getTooltip(param0);
         if (var2 != null) {
           return var2;
         }
@@ -80,7 +80,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         Throwable decompiledCaughtException = null;
         try {
           if (param0 != 48) {
-            this.a(-35, -39, 1, -65);
+            this.drawLayer(-35, -39, 1, -65);
           }
           stackIn_3_0 = -1 + Integer.parseInt(this.field_K.field_q);
           return stackIn_3_0;
@@ -145,7 +145,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     NumericDateInputWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param5, 1, param2, param4, param3);
+          this.setBounds(param5, 1, param2, param4, param3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -176,21 +176,21 @@ final class NumericDateInputWidget extends DateInputWidget {
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1 + 0, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1 + 0, param2, param3, param4);
         int var6 = -130 + param3 >> 1;
         if (this.field_U) {
-          this.field_K.a(param0, 1, var6, 25, 0);
-          this.field_L.a(param0, param1 + 0, 45 + var6, 25, 0);
+          this.field_K.setBounds(param0, 1, var6, 25, 0);
+          this.field_L.setBounds(param0, param1 + 0, 45 + var6, 25, 0);
         } else {
-          this.field_L.a(param0, 1, var6, 25, 0);
-          this.field_K.a(param0, param1 + 0, var6 + 45, 25, 0);
+          this.field_L.setBounds(param0, 1, var6, 25, 0);
+          this.field_K.setBounds(param0, param1 + 0, var6 + 45, 25, 0);
         }
-        this.field_P.a(param0, param1, 90 + var6, 40, 0);
+        this.field_P.setBounds(param0, param1, 90 + var6, 40, 0);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (param0 != 0) {
           return;
         }

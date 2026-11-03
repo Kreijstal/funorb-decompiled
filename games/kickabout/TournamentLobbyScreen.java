@@ -682,8 +682,8 @@ final class TournamentLobbyScreen extends AppScreen {
             this.field_S[var5].readFromPacket((byte) -119, param0);
           }
           this.field_W = param0.readUnsignedByte((byte) -108);
-          this.field_v = param0.a((byte) 81);
-          this.field_x = param0.a((byte) 81);
+          this.field_v = param0.readUnsignedShort((byte) 81);
+          this.field_x = param0.readUnsignedShort((byte) 81);
           stackIn_7_1 = (param0.readUnsignedByte((byte) -128) == 1);
           this.field_z = stackIn_7_1;
           if (dc.field_c == -1) {
@@ -884,7 +884,7 @@ final class TournamentLobbyScreen extends AppScreen {
           if (null != this.field_y) {
             for (var6Lifetime2 = 0; var6Lifetime2 < this.field_y.length; var6Lifetime2++) {
               if (null == this.field_y[var6Lifetime2]) {
-                jr.a(410, -89, 250);
+                ReceivedAuctionItemRow.a(410, -89, 250);
               } else {
                 this.field_y[var6Lifetime2].a(98);
               }
@@ -1117,7 +1117,7 @@ final class TournamentLobbyScreen extends AppScreen {
             } else {
               stackIn_77_4 = var8 >> 1;
             }
-            SoftwareRasterizer.b(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3 + stackIn_77_4, 65793);
+            SoftwareRasterizer.drawLine(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3 + stackIn_77_4, 65793);
             stackIn_79_0 = (var5 >> 1) + var11;
             stackIn_79_1 = var12;
             stackIn_79_2 = var11 + ((var7 << 1) - (var5 >> 1));
@@ -1126,7 +1126,7 @@ final class TournamentLobbyScreen extends AppScreen {
             } else {
               stackIn_80_3 = var8 >> 1;
             }
-            SoftwareRasterizer.b(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3 + var12, 65793);
+            SoftwareRasterizer.drawLine(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3 + var12, 65793);
             stackIn_82_0 = var11 + (var5 >> 1);
             stackIn_82_1 = var12 + 1;
             stackIn_82_2 = -(var5 >> 1) + (var11 + (var7 << 1));
@@ -1137,7 +1137,7 @@ final class TournamentLobbyScreen extends AppScreen {
             } else {
               stackIn_83_5 = -(var8 >> 1);
             }
-            SoftwareRasterizer.b(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3 + (stackIn_82_4 + stackIn_83_5), 65793);
+            SoftwareRasterizer.drawLine(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3 + (stackIn_82_4 + stackIn_83_5), 65793);
           }
           var12 = var12 + var8;
           if (var14_int == -8 + var2 ||
@@ -1236,7 +1236,7 @@ final class TournamentLobbyScreen extends AppScreen {
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
           AuctionListing.a(40 + (du.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
-          SoftwareRasterizer.a(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, al.a(false, (byte) -96));
+          SoftwareRasterizer.a(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
           ScrollPane.a(var4, -123, 14 + var3);
           ScrollPane.a(var4, param0 + 113, du.field_n + (30 + var3));
           var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{mk.field_b[il.field_h]});
@@ -1276,15 +1276,15 @@ final class TournamentLobbyScreen extends AppScreen {
           var4 = 0;
           int var5 = 37 % ((param0 - 72) / 36);
           while (var4 < var3_int) {
-            this.field_M[var4] = param1.a((byte) 81);
-            this.field_p[var4] = param1.a((byte) 81);
-            this.field_w[var4] = param1.a((byte) 81);
-            this.field_B[var4] = param1.a((byte) 81);
-            this.field_l[var4] = param1.a((byte) 81);
-            this.field_o[var4] = param1.a((byte) 81);
-            this.field_t[var4] = param1.a((byte) 81);
-            this.field_P[var4] = param1.a((byte) 81);
-            this.field_J[var4] = param1.a((byte) 81);
+            this.field_M[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_p[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_w[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_B[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_l[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_o[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_t[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_P[var4] = param1.readUnsignedShort((byte) 81);
+            this.field_J[var4] = param1.readUnsignedShort((byte) 81);
             this.field_I[var4] = param1.readUnsignedByte((byte) -127);
             var4++;
           }

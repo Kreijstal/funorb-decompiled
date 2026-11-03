@@ -20,31 +20,31 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     BitmapFont field_a;
     int field_b;
 
-    private final void a(int param0, UiWidget param1, int param2, int param3) {
+    private final void drawText(int param0, UiWidget param1, int param2, int param3) {
         try {
           if (param2 > -59) {
             UiWidget var6 = (UiWidget) null;
-            this.a((UiWidget) null, -115);
+            this.preferredWidth((UiWidget) null, -115);
           }
-          this.a(this.field_b, this.field_j, param3, 118, param1, 0, 0, param0);
+          this.drawStyledText(this.field_b, this.field_j, param3, 118, param1, 0, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qv.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         if (this.field_a == null) {
           return;
         }
         try {
-          this.a(param2, param3, -88, param4);
+          this.drawText(param2, param3, -88, param4);
           int var6_int = 66 / ((59 - param0) / 53);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(TextWidgetPainter param0, byte param1) {
+    final void copyStyleTo(TextWidgetPainter param0, byte param1) {
         param0.field_a = this.field_a;
         param0.field_b = this.field_b;
         param0.field_i = this.field_i;
@@ -67,7 +67,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final void d(byte param0, UiWidget param1) {
+    private final void layoutSingleLine(byte param0, UiWidget param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -84,13 +84,13 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           if (param0 > -60) {
             var8 = (UiWidget) null;
-            this.b(-77, (UiWidget) null);
+            this.preferredHeight(-77, (UiWidget) null);
           }
           if (null == param1.field_h) {
             param1.field_h = (TextLayout) ((Object) new CachedTextLayout());
           }
-          var3_int = this.a((byte) -124, param1);
-          var4 = this.c((byte) -110, param1);
+          var3_int = this.contentWidth((byte) -124, param1);
+          var4 = this.contentHeight((byte) -110, param1);
           var6 = this.field_m;
           if (var6 != 0) {
             if (var6 != 2) {
@@ -111,7 +111,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               if (!(param1.field_h instanceof CachedTextLayout)) {
                 return;
               }
-              ((CachedTextLayout) (param1.field_h)).a(1, var3_int >> 1, this.field_a, this.b((byte) -71, param1), var5);
+              ((CachedTextLayout) (param1.field_h)).a(1, var3_int >> 1, this.field_a, this.displayText((byte) -71, param1), var5);
               return;
             }
             if (var6Lifetime1 != 2) {
@@ -120,11 +120,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!(param1.field_h instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param1.field_h)).a((byte) 123, this.b((byte) -112, param1), var5, var3_int, this.field_a);
+            ((CachedTextLayout) (param1.field_h)).a((byte) 123, this.displayText((byte) -112, param1), var5, var3_int, this.field_a);
             return;
           }
           if (param1.field_h instanceof CachedTextLayout) {
-            ((CachedTextLayout) (param1.field_h)).a(0, this.b((byte) -85, param1), (byte) 80, this.field_a, var5);
+            ((CachedTextLayout) (param1.field_h)).a(0, this.displayText((byte) -85, param1), (byte) 80, this.field_a, var5);
             return;
           }
           return;
@@ -146,7 +146,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int a(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
+    public final int characterIndexAtPosition(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -154,11 +154,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(5035, param1);
+          this.ensureTextLayout(5035, param1);
           if (param5 != 0) {
             field_n = (UiLayoutNode) null;
           }
-          stackIn_3_0 = param1.field_h.a(param0 - this.a(true, param1, param4), param2 - this.a(param1, param3, -1), 29889);
+          stackIn_3_0 = param1.field_h.a(param0 - this.textOriginY(true, param1, param4), param2 - this.textOriginX(param1, param3, -1), 29889);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,7 +174,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void drawCaret(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var7 = 0;
         TextLayoutLine var8 = null;
         int var9 = 0;
@@ -193,16 +193,16 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param4.b(67)) {
-            var13 = this.a(5035, param4);
+          if (param4.isFocused(67)) {
+            var13 = this.ensureTextLayout(5035, param4);
             var14 = var13;
             var7 = var14.a(0, param0);
             var8 = var13.field_c[var7];
             var9 = var14.b(0, param0);
-            var10 = this.b(-31112, param4, param1, var9);
-            var11 = this.a(true, param4, param2) + Math.max(0, var8.field_g);
-            stackIn_3_0 = this.a(true, param4, param2);
-            stackIn_3_1 = this.c((byte) -120, param4);
+            var10 = this.textXForOffset(-31112, param4, param1, var9);
+            var11 = this.textOriginY(true, param4, param2) + Math.max(0, var8.field_g);
+            stackIn_3_0 = this.textOriginY(true, param4, param2);
+            stackIn_3_1 = this.contentHeight((byte) -120, param4);
             stackIn_3_2 = var8.field_d;
             if (1 + var7 >= var14.field_c.length) {
               stackIn_4_3 = var8.field_d;
@@ -211,7 +211,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
             AuctionListing.a(param1 - (-param4.field_t - param4.field_n), -22914, param1 + param4.field_t, param4.field_i + (param2 + param4.field_g), param2 + param4.field_g);
-            GameSoundEffect.field_i.a(this.field_i, var12, var10, var11, var10, param3);
+            GameSoundEffect.field_i.drawWidgetLine(this.field_i, var12, var10, var11, var10, param3);
             TeamManagementScreen.e(127);
           }
           if (!param3) {
@@ -232,14 +232,14 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(byte param0) {
+    public final int lineHeight(byte param0) {
         if (param0 != -76) {
           this.field_o = -10;
         }
         return this.field_a.field_p + this.field_a.field_G;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6, int param7) {
+    private final void drawStyledText(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6, int param7) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -254,14 +254,14 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var13 = Kickabout.field_G;
         try {
           AuctionListing.a(param2 + param4.field_t + param4.field_n, -22914, param2 + param4.field_t, param4.field_g + (param7 + param4.field_i), param4.field_g + param7);
-          var9_int = this.a((byte) -124, param4);
+          var9_int = this.contentWidth((byte) -124, param4);
           if (param3 <= 71) {
             this.field_o = 4;
           }
           boolean decompiledFrameRemainder0 = true;
-          var10 = this.c((byte) -123, param4);
+          var10 = this.contentHeight((byte) -123, param4);
           if (this.field_k) {
-            this.field_a.a(this.b((byte) -64, param4), this.b(-31112, param4, param2, param6), this.a(param7, (byte) 90, param4, param5), var9_int, var10, param0, param1, this.field_e, this.field_m, this.field_p);
+            this.field_a.a(this.displayText((byte) -64, param4), this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5), var9_int, var10, param0, param1, this.field_e, this.field_m, this.field_p);
           } else {
             var12 = this.field_m;
             if (var12 != 0) {
@@ -280,16 +280,16 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_a.d(this.b((byte) -123, param4), this.b(-31112, param4, param2, param6) + (var9_int >> 1), var11 + this.a(param7, (byte) 90, param4, param5), param0, param1);
+                this.field_a.d(this.displayText((byte) -123, param4), this.textXForOffset(-31112, param4, param2, param6) + (var9_int >> 1), var11 + this.textYForOffset(param7, (byte) 90, param4, param5), param0, param1);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_a.c(this.b((byte) -113, param4), var9_int + this.b(-31112, param4, param2, param6), this.a(param7, (byte) 90, param4, param5) + var11, param0, param1);
+                  this.field_a.c(this.displayText((byte) -113, param4), var9_int + this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5) + var11, param0, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_a.a(this.b((byte) -103, param4), this.b(-31112, param4, param2, param6), this.a(param7, (byte) 90, param4, param5) + var11, param0, param1);
+              this.field_a.a(this.displayText((byte) -103, param4), this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5) + var11, param0, param1);
             }
           }
           TeamManagementScreen.e(126);
@@ -308,7 +308,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final int b(int param0, UiWidget param1, int param2, int param3) {
+    private final int textXForOffset(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -337,7 +337,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(UiWidget param0, int param1, int param2) {
+    public final int textOriginX(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -348,7 +348,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param2 != -1) {
             this.field_m = 106;
           }
-          stackIn_3_0 = this.b(-31112, param0, param1, 0);
+          stackIn_3_0 = this.textXForOffset(-31112, param0, param1, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -364,7 +364,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(boolean param0, UiWidget param1, int param2) {
+    public final int textOriginY(boolean param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -374,7 +374,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_4_0 = this.a(param2, (byte) 90, param1, 0);
+            stackIn_4_0 = this.textYForOffset(param2, (byte) 90, param1, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -103;
@@ -403,7 +403,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         field_g = null;
     }
 
-    public final int a(byte param0, UiWidget param1) {
+    public final int contentWidth(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -432,7 +432,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int b(int param0, UiWidget param1) {
+    public final int preferredHeight(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -443,7 +443,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param0 != 3) {
             field_f = true;
           }
-          this.a(5035, param1);
+          this.ensureTextLayout(5035, param1);
           stackIn_3_0 = param1.field_h.a(-1761) + this.field_q + this.field_o;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -460,7 +460,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(UiWidget param0, int param1) {
+    public final int preferredWidth(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -469,7 +469,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(5035, param0);
+          this.ensureTextLayout(5035, param0);
           var3_int = -96 % ((-65 - param1) / 56);
           stackIn_1_0 = param0.field_h.a((byte) -25) + this.field_h + this.field_l;
           return stackIn_1_0;
@@ -487,7 +487,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final int a(int param0, byte param1, UiWidget param2, int param3) {
+    private final int textYForOffset(int param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         int stackIn_3_0 = 0;
@@ -498,7 +498,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           if (param1 != 90) {
             var6 = (UiWidget) null;
-            this.a((UiWidget) null, 89);
+            this.preferredWidth((UiWidget) null, 89);
           }
           stackIn_3_0 = param2.field_o + (this.field_q + param2.field_g + param0) + param3;
           return stackIn_3_0;
@@ -635,7 +635,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 var18.operationErrors[var5] = -5;
               }
             }
-            nv.field_N.a(var18, 3);
+            nv.field_N.addLast(var18, 3);
             if (param2 != -1) {
               field_g = (String) null;
             }
@@ -665,7 +665,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    String b(byte param0, UiWidget param1) {
+    String displayText(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -694,7 +694,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final int c(byte param0, UiWidget param1) {
+    private final int contentHeight(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         int stackIn_3_0 = 0;
@@ -705,7 +705,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           if (param0 > -109) {
             var4 = (UiWidget) null;
-            this.b(-71, (UiWidget) null);
+            this.preferredHeight(-71, (UiWidget) null);
           }
           stackIn_3_0 = -this.field_o + (param1.field_i - this.field_q);
           return stackIn_3_0;
@@ -723,7 +723,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    public final void drawSelection(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -750,8 +750,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param4 < 86) {
             return;
           }
-          if (param3.b(125)) {
-            var17 = this.a(5035, param3);
+          if (param3.isFocused(125)) {
+            var17 = this.ensureTextLayout(5035, param3);
             var18 = var17;
             if (param1 > param2) {
               var8 = param2;
@@ -781,7 +781,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 }
               }
               var15 = stackIn_19_0;
-              GameSoundEffect.field_i.a(this.b(-31112, param3, param0, var14), var13.field_d, this.field_c, var15 - var14, var13.field_g + (this.field_q + param5) + (param3.field_g + param3.field_o), this.field_c >>> 24, (byte) -2);
+              GameSoundEffect.field_i.fillWidgetRectangleAlpha(this.textXForOffset(-31112, param3, param0, var14), var13.field_d, this.field_c, var15 - var14, var13.field_g + (this.field_q + param5) + (param3.field_g + param3.field_o), this.field_c >>> 24, (byte) -2);
             }
             TeamManagementScreen.e(125);
             return;
@@ -801,7 +801,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final TextLayout a(int param0, UiWidget param1) {
+    public final TextLayout ensureTextLayout(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         TextLayout stackIn_5_0 = null;
         TextLayout stackIn_10_0 = null;
@@ -818,9 +818,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             return stackIn_5_0;
           }
           if (this.field_k) {
-            ((CachedTextLayout) (param1.field_h)).a(this.a((byte) -124, param1), this.field_a, this.field_m, this.c((byte) -120, param1), this.field_e, (byte) 102, this.b((byte) -97, param1), this.field_p);
+            ((CachedTextLayout) (param1.field_h)).a(this.contentWidth((byte) -124, param1), this.field_a, this.field_m, this.contentHeight((byte) -120, param1), this.field_e, (byte) 102, this.displayText((byte) -97, param1), this.field_p);
           } else {
-            this.d((byte) -66, param1);
+            this.layoutSingleLine((byte) -66, param1);
           }
           stackIn_10_0 = param1.field_h;
           return stackIn_10_0;

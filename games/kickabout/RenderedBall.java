@@ -162,7 +162,7 @@ final class RenderedBall extends BallAgent {
         this.field_E = param3;
     }
 
-    final int j(int param0) {
+    final int getRenderedScale(int param0) {
         int var3 = 0;
         if (param0 != -1) {
           return 110;
@@ -181,7 +181,7 @@ final class RenderedBall extends BallAgent {
         return var2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawBall(int param0, int param1, int param2, int param3, int param4) {
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(param1, param2);
         if (param4 != 300) {
@@ -193,7 +193,7 @@ final class RenderedBall extends BallAgent {
           this.field_L = false;
         }
         if (this.field_J != param3) {
-          this.a((byte) -113, param3, 300);
+          this.setRotationMatrix((byte) -113, param3, 300);
         }
         EmailSyntaxValidator.field_l[this.modelId].a(this.field_D, this.field_G);
     }
@@ -308,7 +308,7 @@ final class RenderedBall extends BallAgent {
         }
     }
 
-    final int c(boolean param0) {
+    final int getRenderedY(boolean param0) {
         if (!param0) {
           this.field_L = false;
         }
@@ -370,7 +370,7 @@ final class RenderedBall extends BallAgent {
         }
     }
 
-    final void l(int param0) {
+    final void drawShadow(int param0) {
         int var2 = 0;
         int var8 = Kickabout.field_G;
         int var2Lifetime1;
@@ -444,7 +444,7 @@ final class RenderedBall extends BallAgent {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void setRotationMatrix(byte param0, int param1, int param2) {
         int var4 = ei.sine(param2, (byte) -23);
         int var5 = we.cosine(param2, false);
         this.field_J = param1;
@@ -646,21 +646,21 @@ final class RenderedBall extends BallAgent {
         }
     }
 
-    final void h(int param0) {
+    final void render(int param0) {
         if (param0 != 64) {
           return;
         }
-        int var2 = this.j(-1);
+        int var2 = this.getRenderedScale(-1);
         int var3 = ug.a(0, this.getRenderedX(param0 + 14899));
-        int var4 = IntKeyLookup.a((byte) -107, this.c(true));
-        if (tb.field_v != 1) {
+        int var4 = IntKeyLookup.a((byte) -107, this.getRenderedY(true));
+        if (SocketArchiveNetworkClient.field_v != 1) {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;
-          this.a(300, var3, var4, var2, 300);
+          this.drawBall(300, var3, var4, var2, 300);
         } else {
           PacketBuffer.a(-115, kw.field_f);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
-          this.a(300, 64, 64, var2, 300);
+          this.drawBall(300, 64, 64, var2, 300);
           TeamManagementScreen.e(118);
           kw.field_f.drawHalfSize(var3 - 32, -32 + var4);
         }
@@ -674,7 +674,7 @@ final class RenderedBall extends BallAgent {
           this.field_Q = new FixedQuaternion();
           this.field_Q.toRotationMatrix(8, this.field_G);
           this.field_D = new int[12];
-          this.a((byte) 127, 1200, 300);
+          this.setRotationMatrix((byte) 127, 1200, 300);
           this.field_N = this.positionX;
           this.field_M = this.height;
           this.field_E = this.positionY;

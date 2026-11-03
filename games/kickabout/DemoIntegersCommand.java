@@ -83,10 +83,10 @@ final class DemoIntegersCommand extends ConsoleCommand {
             return;
           }
           WeightedLruCache.a(0);
-          g.field_a.b(0, param0);
+          g.field_a.updateInput(0, param0);
           if (null != PlayArea.field_a) {
             if (PacketBuffer.field_l) {
-              PlayArea.field_a.a(g.field_a.field_T, 31947, g.field_a.field_F, param0);
+              PlayArea.field_a.processPointerFrame(g.field_a.field_T, 31947, g.field_a.field_F, param0);
             } else {
               PlayArea.field_a = null;
             }
@@ -122,7 +122,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

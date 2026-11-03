@@ -17,7 +17,7 @@ abstract class PopupDialog extends IntrusiveNode {
     private String[] field_o;
     private int field_m;
 
-    abstract void a(byte param0, int param1, int param2);
+    abstract void drawBody(byte param0, int param1, int param2);
 
     final void b(int param0, boolean param1) {
         int var3 = 0;
@@ -31,18 +31,18 @@ abstract class PopupDialog extends IntrusiveNode {
         if (param0 != -16536) {
           return;
         }
-        this.a(3, param1);
+        this.onUpdate(3, param1);
         this.field_j.a(param0 ^ 4642, this.a(true, us.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
-          ShopPlayerSlot.c(this.a(false), -104);
+          ShopPlayerSlot.c(this.getOpenSoundId(false), -104);
         }
         if (this.field_n != 0) {
           if (this.field_n == 1) {
             for (var3 = 0; this.field_i.length > var3; var3++) {
               stackIn_22_0 = (var3 != this.field_j.selectedIndex) ? 0 : 1;
               var4 = stackIn_22_0;
-              this.field_i[var3].b(0, param1);
+              this.field_i[var3].updateInput(0, param1);
               stackIn_25_0 = this.field_i[var3];
               stackIn_26_1 = (this.field_i[var3].field_lb) && (var4 != 0);
               stackIn_25_0.field_gb = stackIn_26_1;
@@ -116,7 +116,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var3 = var12;
           while (this.field_i.length > var12) {
             var4 = this.field_i[var12];
-            var4.a(100, false);
+            var4.draw(100, false);
             var12++;
           }
         } else {
@@ -132,8 +132,8 @@ abstract class PopupDialog extends IntrusiveNode {
             var8.field_s = var8.field_s - this.field_p;
             var10 = var8.field_J;
             var8.field_J = var8.field_J - this.field_k;
-            var8.b(0, false);
-            var8.a(74, false);
+            var8.updateInput(0, false);
+            var8.draw(74, false);
             var8.field_J = var10;
             var8.field_s = var9;
           }
@@ -146,7 +146,7 @@ abstract class PopupDialog extends IntrusiveNode {
         }
     }
 
-    abstract void a(int param0, boolean param1);
+    abstract void onUpdate(int param0, boolean param1);
 
     abstract int dialogHeight(byte param0);
 
@@ -188,7 +188,7 @@ abstract class PopupDialog extends IntrusiveNode {
         return true;
     }
 
-    abstract int a(boolean param0);
+    abstract int getOpenSoundId(boolean param0);
 
     private final int a(boolean param0, int param1, int param2) {
         int var4;
@@ -245,7 +245,7 @@ abstract class PopupDialog extends IntrusiveNode {
         try {
           this.field_n = 0;
           if (param2 != 1054928844) {
-            this.a(46, true);
+            this.onUpdate(46, true);
           }
           this.field_q = 0;
           this.field_e = this.dialogWidth(-1379118556);
@@ -258,7 +258,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var5 = -(95 * var4_int) - 5 * (var4_int - 1) + 640 >> 1;
           for (var6 = 0; this.field_i.length > var6; var6++) {
             param1[var6] = param1[var6].toLowerCase();
-            this.field_i[var6] = eo.a(param1[var6], 7126504, un.field_d, 90, false);
+            this.field_i[var6] = eo.createRenderedButton(param1[var6], 7126504, un.field_d, 90, false);
             var7 = this.field_k + this.field_r + (-this.field_i[var6].field_mb - 10);
             this.field_i[var6].field_s = 100 * var6 + var5;
             this.field_i[var6].field_J = var7;
@@ -278,7 +278,7 @@ abstract class PopupDialog extends IntrusiveNode {
           mk.field_a.d(var4 + param1, param2 + this.field_r - 480);
         }
         AuctionLogEntry.field_j.e(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
-        this.a((byte) -29, param1, param2);
+        this.drawBody((byte) -29, param1, param2);
         SoftwareRasterizer.c(param1, param2, this.field_e, this.field_r, 2, 65793);
         TeamManagementScreen.e(124);
     }

@@ -6,7 +6,7 @@ class ColumnTableWidget extends UiLayoutNode {
     static int field_Gb;
     SortCriterion[] field_zb;
     static String field_yb;
-    private im[] field_Fb;
+    private ListRow[] field_Fb;
     private int field_Eb;
     private UiLayoutNode field_Ab;
     private ScrollContainer field_Cb;
@@ -16,11 +16,11 @@ class ColumnTableWidget extends UiLayoutNode {
         int var3_int = 0;
         int var4 = 0;
         int var6;
-        im[] var3;
-        im var5;
-        im[] var7;
+        ListRow[] var3;
+        ListRow var5;
+        ListRow[] var7;
         var6 = Kickabout.field_G;
-        this.field_Cb.a(32 * StatefulTextPainter.field_v, param1, (byte) -108, 32);
+        this.field_Cb.advanceScroll(32 * StatefulTextPainter.field_v, param1, (byte) -108, 32);
         for (var3_int = 0; var3_int < this.field_Bb.length; var3_int++) {
           if (this.field_Bb[var3_int].field_sb == 1) {
             ShopPlayerSlot.c(45, 81);
@@ -31,7 +31,7 @@ class ColumnTableWidget extends UiLayoutNode {
         var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          var5.c(0, param0);
+          var5.updateRow(0, param0);
         }
     }
 
@@ -55,7 +55,7 @@ class ColumnTableWidget extends UiLayoutNode {
           if (param0 != 2280703) {
             field_Gb = 6;
           }
-          var4_int = param1.l(param3, 59);
+          var4_int = param1.readBits(param3, 59);
           if (var4_int == 0) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
@@ -64,11 +64,11 @@ class ColumnTableWidget extends UiLayoutNode {
             param2.length != var4_int) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.l(3, 59);
-          var6 = (byte)param1.l(8, 59);
+          var5 = param1.readBits(3, 59);
+          var6 = (byte)param1.readBits(8, 59);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (byte)(var6 + param1.l(var5, 59));
+              param2[var7] = (byte)(var6 + param1.readBits(var5, 59));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
@@ -104,7 +104,7 @@ class ColumnTableWidget extends UiLayoutNode {
         this.field_Ab.field_J = param1;
     }
 
-    final void a(im[] param0, int param1) {
+    final void a(ListRow[] param0, int param1) {
         try {
           this.a(param1, (byte) -47, param0, param0.length);
         } catch (RuntimeException runtimeException) {
@@ -112,25 +112,25 @@ class ColumnTableWidget extends UiLayoutNode {
         }
     }
 
-    final void a(int param0, byte param1, im[] param2, int param3) {
+    final void a(int param0, byte param1, ListRow[] param2, int param3) {
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        im[] var5 = null;
+        ListRow[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
         int var6 = 0;
-        im[] var6_ref_im__ = null;
+        ListRow[] var6_ref_im__ = null;
         int var7_int = 0;
-        im[] var7 = null;
-        im var7_ref = null;
-        im var8_ref_im = null;
-        im var9 = null;
+        ListRow[] var7 = null;
+        ListRow var7_ref = null;
+        ListRow var8_ref_im = null;
+        ListRow var9 = null;
         int var10 = 0;
-        im[] var11 = null;
-        im[] var12 = null;
+        ListRow[] var11 = null;
+        ListRow[] var12 = null;
         int var13 = 0;
         int var6Lifetime1;
         int var7_intLifetime1;
@@ -197,14 +197,14 @@ class ColumnTableWidget extends UiLayoutNode {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.a(true, this.field_q, param3, param2, param0);
+        this.setBounds(true, this.field_q, param3, param2, param0);
         if (param1 > -108) {
-          this.field_Fb = (im[]) null;
+          this.field_Fb = (ListRow[]) null;
         }
-        this.field_Ab.a(true, this.field_q - 25, 0, 0, this.field_Ab.field_mb);
-        this.field_Cb.a(15, 5, 0, (byte) -103, -20 + param0, 15 + this.field_Ab.field_q, 20);
-        this.field_Cb.field_Eb.a(true, 15, -15 + this.field_Cb.field_q, 5, this.field_Cb.field_mb - 10);
-        this.field_Cb.field_Eb.b(-this.field_Cb.field_Db.field_J, this.field_Cb.field_Db.field_mb, 100, this.field_Cb.field_Gb.field_mb);
+        this.field_Ab.setBounds(true, this.field_q - 25, 0, 0, this.field_Ab.field_mb);
+        this.field_Cb.setLayout(15, 5, 0, (byte) -103, -20 + param0, 15 + this.field_Ab.field_q, 20);
+        this.field_Cb.field_Eb.setBounds(true, 15, -15 + this.field_Cb.field_q, 5, this.field_Cb.field_mb - 10);
+        this.field_Cb.field_Eb.layoutThumb(-this.field_Cb.field_Db.field_J, this.field_Cb.field_Db.field_mb, 100, this.field_Cb.field_Gb.field_mb);
     }
 
     final int h(byte param0) {
@@ -223,8 +223,8 @@ class ColumnTableWidget extends UiLayoutNode {
         int var5 = 0;
         int var4 = 0;
         int var3_int = 0;
-        im[] var4_ref_im__ = null;
-        im var6 = null;
+        ListRow[] var4_ref_im__ = null;
+        ListRow var6 = null;
         int var7 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -242,7 +242,7 @@ class ColumnTableWidget extends UiLayoutNode {
             var3_int = var3_int + (5 + this.field_Eb);
           }
           if (param1 <= 30) {
-            this.field_Fb = (im[]) null;
+            this.field_Fb = (ListRow[]) null;
           }
           this.field_Db = -1;
           for (var4 = 0; this.field_zb.length > var4; var4++) {
@@ -283,7 +283,7 @@ class ColumnTableWidget extends UiLayoutNode {
         ScrollBar var2_ref_ji;
         int var2;
         int var4;
-        im var5;
+        ListRow var5;
         int var5_int;
         int var6;
         int var7;
@@ -293,7 +293,7 @@ class ColumnTableWidget extends UiLayoutNode {
         Sprite var11;
         int var12;
         UiLayoutNode var13;
-        im[] var14;
+        ListRow[] var14;
         int var2Lifetime1;
         int var4Lifetime1;
         int var6Lifetime1;
@@ -381,7 +381,7 @@ class ColumnTableWidget extends UiLayoutNode {
               }
             }
           }
-          var5.b(0, var6Lifetime1);
+          var5.drawRow(0, var6Lifetime1);
         }
         TeamManagementScreen.e(127);
     }
@@ -430,7 +430,7 @@ class ColumnTableWidget extends UiLayoutNode {
           var5_int = 5;
           for (var6_int = 0; var6_int < this.field_Bb.length; var6_int++) {
             this.field_Bb[var6_int] = new UiLayoutNode();
-            this.field_Bb[var6_int].a(true, param0[var6_int], var5_int, 0, 20);
+            this.field_Bb[var6_int].setBounds(true, param0[var6_int], var5_int, 0, 20);
             this.field_Bb[var6_int].field_E = param1[var6_int];
             var5_int = var5_int + param0[var6_int];
           }

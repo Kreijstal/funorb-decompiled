@@ -28,11 +28,11 @@ final class ds {
         int var7 = 0;
         var7 = Kickabout.field_G;
         try {
-          var2_int = param0.l(8, 59);
+          var2_int = param0.readBits(8, 59);
           if (0 < var2_int) {
             return null;
           }
-          var3 = param0.l(12, 59);
+          var3 = param0.readBits(12, 59);
           var4 = new gf[var3];
           if (param1 != -4) {
             stackIn_6_0 = (gf[]) null;
@@ -41,16 +41,16 @@ final class ds {
           for (var5 = 0; var3 > var5; var5++) {
             if (ContentTransitionDialog.a(param0, (byte) -39)) {
               var6 = new gf();
-              param0.l(24, param1 ^ -57);
-              param0.l(24, 59);
-              var6.field_g = param0.l(24, 59);
-              param0.l(9, 59);
-              param0.l(12, param1 ^ -57);
-              param0.l(12, 59);
-              param0.l(12, 59);
+              param0.readBits(24, param1 ^ -57);
+              param0.readBits(24, 59);
+              var6.field_g = param0.readBits(24, 59);
+              param0.readBits(9, 59);
+              param0.readBits(12, param1 ^ -57);
+              param0.readBits(12, 59);
+              param0.readBits(12, 59);
               var4[var5] = var6;
             } else {
-              var6_int = param0.l(WriteIntegersCommand.a(-1 + var5, false), param1 ^ -57);
+              var6_int = param0.readBits(WriteIntegersCommand.a(-1 + var5, false), param1 ^ -57);
               var4[var5] = var4[var6_int];
             }
           }

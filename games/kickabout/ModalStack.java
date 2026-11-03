@@ -7,7 +7,7 @@ final class ModalStack extends SingleChildContainer {
     static String field_B;
 
     public ModalStack() {
-        super(0, 0, il.field_b, im.field_Ab, (WidgetPainter) null, (UiListener) null);
+        super(0, 0, il.field_b, ListRow.field_Ab, (WidgetPainter) null, (UiListener) null);
         this.field_A = new IntrusiveDeque();
     }
 
@@ -179,7 +179,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_Fb.field_ub = var11;
                   var7.field_Fb.field_N = DirectByteStorage.field_n;
                   var12 = 1;
-                  var7.field_Fb.a(true, 3 + DirectByteStorage.field_n.field_o, 0, var9, sh.field_c);
+                  var7.field_Fb.setBounds(true, 3 + DirectByteStorage.field_n.field_o, 0, var9, sh.field_c);
                 }
                 var7.field_Ab.field_H = var11;
                 var7.field_Bb.field_H = var11;
@@ -202,7 +202,7 @@ final class ModalStack extends SingleChildContainer {
                   stackIn_37_1 = var7.field_Gb;
                 }
                 stackIn_36_0.field_E = stackIn_37_1;
-                var7.field_Bb.a(true, var14, var13, var9, sh.field_c);
+                var7.field_Bb.setBounds(true, var14, var13, var9, sh.field_c);
                 stackIn_40_0 = var7.field_Ab;
                 if (var7.field_zb == null) {
                   stackIn_41_1 = TextInputWidget.field_K;
@@ -210,7 +210,7 @@ final class ModalStack extends SingleChildContainer {
                   stackIn_41_1 = var7.field_zb;
                 }
                 stackIn_40_0.field_E = stackIn_41_1;
-                var7.field_Ab.a(true, 80, var7.field_q - 80, var9, sh.field_c);
+                var7.field_Ab.setBounds(true, 80, var7.field_q - 80, var9, sh.field_c);
                 stackIn_45_0 = (var7.field_Bb.field_E.equals(var7.field_Gb)) ? 0 : 1;
                 var15 = stackIn_45_0;
                 var9 = var9 + sh.field_c;
@@ -218,7 +218,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_L = -var7.field_mb + var9;
                 }
                 if (var8 != 0) {
-                  ei.field_d.field_yb.a(true, 2, var7, (UiLayoutNode) (var6));
+                  ei.field_d.field_yb.positionAfter(true, 2, var7, (UiLayoutNode) (var6));
                 }
                 var6 = var7;
                 if (var7.field_Fb != null &&
@@ -286,7 +286,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
@@ -298,12 +298,12 @@ final class ModalStack extends SingleChildContainer {
             return;
           }
           if (null != this.field_r) {
-            this.field_r.a(113, true, param3, (UiWidget) (this), param2);
+            this.field_r.drawWidget(113, true, param3, (UiWidget) (this), param2);
           }
           var5 = new IntrusiveDequeCursor(this.field_A);
           var6 = (UiWidget) (var5.b(0));
           while (null != var6) {
-            var6.a(param0, 65, param2 + this.field_t, this.field_g + param3);
+            var6.drawLayer(param0, 65, param2 + this.field_t, this.field_g + param3);
             var6 = (UiWidget) (var5.b((byte) 46));
             if (var7 != 0) {
               return;
@@ -401,7 +401,7 @@ final class ModalStack extends SingleChildContainer {
             this.field_A = (IntrusiveDeque) null;
           }
           var3.field_C = true;
-          var3.a((UiWidget) (this), 0);
+          var3.requestKeyboardFocus((UiWidget) (this), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -528,7 +528,7 @@ final class ModalStack extends SingleChildContainer {
             if (var4 != 0) {
               return;
             }
-            if (var3.k(-1)) {
+            if (var3.advanceDialogAnimation(-1)) {
               var3.c((byte) -109);
             }
             var3 = (ModalPanel) (var2.a(0));

@@ -24,7 +24,7 @@ final class DoSomethingCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;
@@ -55,7 +55,7 @@ final class DoSomethingCommand extends ConsoleCommand {
 
     final static void a(int param0, PlayerStats param1, int param2) {
         try {
-          ScrollPane.field_Jb.a(new SellPlayerDialog(param2, param1), 3);
+          ScrollPane.field_Jb.addLast(new SellPlayerDialog(param2, param1), 3);
           int var3_int = -77 % ((param0 + 44) / 63);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -66,7 +66,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             MatchTransitionScreen.a(-31, (String) null, true);
           }
           if (!param2) {
-            stackIn_6_0 = cv.field_f.a(param1);
+            stackIn_6_0 = MeshObject.field_f.a(param1);
             return stackIn_6_0;
           }
           stackIn_4_0 = MainMenuScreen.field_F.a(param1);

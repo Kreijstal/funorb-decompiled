@@ -129,7 +129,7 @@ final class ListingRowCache {
           var5 = (CachedListingRow) (AuctionListingDialog.field_L[param1.category].a(true, (long)param1.rowId));
           if (var5 == null) {
             var5 = new CachedListingRow(param1, vs.a(-1090519040, param2));
-            AuctionListingDialog.field_L[param1.category].a(var5, -116, (long)param1.rowId);
+            AuctionListingDialog.field_L[param1.category].put(var5, -116, (long)param1.rowId);
             mt.field_f[param1.category] = mt.field_f[param1.category] + 1;
           } else {
             var5.field_g = param1;

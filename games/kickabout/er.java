@@ -15,10 +15,10 @@ final class er extends IntrusiveNode {
     final static void a(byte param0, boolean param1) {
         if (param0 <= 21) {
           field_k = 101;
-          ContentTransitionDialog.field_Y.a(97, param1);
+          ContentTransitionDialog.field_Y.draw(97, param1);
           return;
         }
-        ContentTransitionDialog.field_Y.a(97, param1);
+        ContentTransitionDialog.field_Y.draw(97, param1);
     }
 
     final static double a(byte param0, ea param1) {

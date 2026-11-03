@@ -15,7 +15,7 @@ final class ContextMenuItem extends UiLayoutNode {
     static int field_Hb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(true, param2, param4, param3, param6);
+        this.setBounds(true, param2, param4, param3, param6);
         this.a(param0, -90, param1);
         if (param5 != 15114) {
           field_Hb = -18;
@@ -129,7 +129,7 @@ final class ContextMenuItem extends UiLayoutNode {
     private final void a(int param0, int param1, int param2) {
         int var4 = -param0;
         if (this.field_Bb != null) {
-          var4 = this.field_Bb.g((byte) -74);
+          var4 = this.field_Bb.getPreferredWidth((byte) -74);
         }
         if (param1 > -61) {
           ContextMenuItem.a(-96);
@@ -152,7 +152,7 @@ final class ContextMenuItem extends UiLayoutNode {
         if (this.field_Bb == null) {
           if (null == this.field_yb) {
           } else {
-            this.field_yb.a(true, var5, param0 + var4 + param2, 0, this.field_mb);
+            this.field_yb.setBounds(true, var5, param0 + var4 + param2, 0, this.field_mb);
             this.field_yb.field_p = this.field_p;
             if (this.field_Bb == null) {
               this.field_yb.field_A = this.field_A;
@@ -162,12 +162,12 @@ final class ContextMenuItem extends UiLayoutNode {
           }
           return;
         }
-        this.field_Bb.a(true, var4, param2, 0, this.field_mb);
+        this.field_Bb.setBounds(true, var4, param2, 0, this.field_mb);
         this.field_Bb.field_p = this.field_p;
         if (null == this.field_yb) {
           return;
         }
-        this.field_yb.a(true, var5, param0 + var4 + param2, 0, this.field_mb);
+        this.field_yb.setBounds(true, var5, param0 + var4 + param2, 0, this.field_mb);
         this.field_yb.field_p = this.field_p;
         if (this.field_Bb != null) {
           this.field_yb.field_A = 0;
@@ -184,22 +184,22 @@ final class ContextMenuItem extends UiLayoutNode {
         if (param1 == 0) {
           var4 = -param0;
           if (null != this.field_Bb) {
-            var4 = this.field_Bb.g((byte) -92);
+            var4 = this.field_Bb.getPreferredWidth((byte) -92);
           }
           var5 = -param0;
           if (this.field_yb != null) {
-            var5 = this.field_yb.g((byte) -23);
+            var5 = this.field_yb.getPreferredWidth((byte) -23);
           }
           return param2 + param0 + (param2 + var4 + var5);
         }
         this.a(-30, -44, -56, 15, -21, -62, 40);
         var4Lifetime1 = -param0;
         if (null != this.field_Bb) {
-          var4Lifetime1 = this.field_Bb.g((byte) -92);
+          var4Lifetime1 = this.field_Bb.getPreferredWidth((byte) -92);
         }
         var5Lifetime1 = -param0;
         if (this.field_yb != null) {
-          var5Lifetime1 = this.field_yb.g((byte) -23);
+          var5Lifetime1 = this.field_yb.getPreferredWidth((byte) -23);
         }
         return param2 + param0 + (param2 + var4Lifetime1 + var5Lifetime1);
     }
@@ -214,7 +214,7 @@ final class ContextMenuItem extends UiLayoutNode {
           }
           nj.a(param1, -128);
           if (null != ck.field_b) {
-            ck.field_b.a(104, param1);
+            ck.field_b.draw(104, param1);
           }
           NumericDateInputWidget.a(30521, param1);
           return;
@@ -225,7 +225,7 @@ final class ContextMenuItem extends UiLayoutNode {
         }
         nj.a(param1, -128);
         if (null != ck.field_b) {
-          ck.field_b.a(104, param1);
+          ck.field_b.draw(104, param1);
         }
         NumericDateInputWidget.a(30521, param1);
     }

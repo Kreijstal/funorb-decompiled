@@ -149,20 +149,20 @@ final class OffscreenPlayerArrow {
           var7 = var2 * ei.sine(-var3 + this.field_a, (byte) -23) * 40 >> 24;
           var8 = 40 * (var2 * we.cosine(var3 + this.field_a, false)) >> 24;
           var9 = 40 * var2 * ei.sine(var3 + this.field_a, (byte) -23) >> 24;
-          if (0 == tb.field_v) {
+          if (0 == SocketArchiveNetworkClient.field_v) {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.field_b, this.field_d);
             TriangleRasterizer.a(this.field_d, var7 + this.field_d, this.field_d + var5, this.field_b, -var6 + this.field_b, -var4 + this.field_b, 4487082);
             TriangleRasterizer.a(this.field_d, var9 + this.field_d, this.field_d + var5, this.field_b, this.field_b - var8, -var4 + this.field_b, 85);
           } else {
             PacketBuffer.a(param0 + 112, UiWidget.field_e);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, -(var6 << 1) + TextInputWidget.field_P, TextInputWidget.field_P - (var4 << 1), -16777216);
             TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var9 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, TextInputWidget.field_P - (var8 << 1), -(var4 << 1) + TextInputWidget.field_P, -16777216);
             TeamManagementScreen.e(param0 + 116);
             PacketBuffer.a(param0 ^ 68, TextInputWidget.field_N);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(TextInputWidget.field_P, TextInputWidget.field_P);
             TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, TextInputWidget.field_P - (var6 << 1), -(var4 << 1) + TextInputWidget.field_P, 153);

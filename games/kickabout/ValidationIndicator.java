@@ -17,16 +17,16 @@ final class ValidationIndicator extends TextButton {
         field_I = null;
     }
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_L = this.field_L + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         if (param0 != -1) {
           field_G = (Sprite[]) null;
           if (this.field_m) {
@@ -40,7 +40,7 @@ final class ValidationIndicator extends TextButton {
         return null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var13 = null;
@@ -49,7 +49,7 @@ final class ValidationIndicator extends TextButton {
         int var11 = Kickabout.field_G;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (param0 != 0) {
           return;
         }
@@ -85,7 +85,7 @@ final class ValidationIndicator extends TextButton {
             return;
           }
           PacketBuffer.a(116, TournamentChampionDialog.field_G);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
           TeamManagementScreen.e(120);
           TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
@@ -120,7 +120,7 @@ final class ValidationIndicator extends TextButton {
             return;
           }
           PacketBuffer.a(116, TournamentChampionDialog.field_G);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
           TeamManagementScreen.e(120);
           TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
@@ -138,7 +138,7 @@ final class ValidationIndicator extends TextButton {
         var12.drawAdditive(-(var12.field_q >> 1) + var5, var6 - (var12.field_w >> 1), 256);
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

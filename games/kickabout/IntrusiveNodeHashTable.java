@@ -15,7 +15,7 @@ final class IntrusiveNodeHashTable {
         return this.a(-1);
     }
 
-    final void a(IntrusiveNode param0, int param1, long param2) {
+    final void put(IntrusiveNode param0, int param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param0.field_b != null) {

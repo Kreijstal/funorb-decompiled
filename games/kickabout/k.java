@@ -13,7 +13,7 @@ final class k extends IntrusiveNode {
     static String field_h;
 
     final static void a(boolean param0, int param1) {
-        ScrollPane.field_Jb.a(new PromotionDialog(param1), 3);
+        ScrollPane.field_Jb.addLast(new PromotionDialog(param1), 3);
         if (!param0) {
           k.loadStreetScenery(-78);
         }
@@ -25,23 +25,23 @@ final class k extends IntrusiveNode {
         }
         if (param0 > -121) {
           k.a(true, -119);
-          if (bo.field_Cb.a(false, "street")) {
+          if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
             vk.field_b = true;
-            oo.field_b = ng.a("cars", "street", 2, bo.field_Cb);
-            so.field_d = ng.a("signs", "street", 2, bo.field_Cb);
-            PacketBuffer.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
+            oo.field_b = ng.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+            so.field_d = ng.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+            PacketBuffer.field_h = ng.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
             return -1;
           }
-          return bo.field_Cb.getGroupProgressByName("street", -16248);
+          return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("street", -16248);
         }
-        if (bo.field_Cb.a(false, "street")) {
+        if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
           vk.field_b = true;
-          oo.field_b = ng.a("cars", "street", 2, bo.field_Cb);
-          so.field_d = ng.a("signs", "street", 2, bo.field_Cb);
-          PacketBuffer.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
+          oo.field_b = ng.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+          so.field_d = ng.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+          PacketBuffer.field_h = ng.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }
-        return bo.field_Cb.getGroupProgressByName("street", -16248);
+        return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("street", -16248);
     }
 
     public static void a(int param0) {

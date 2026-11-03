@@ -136,10 +136,10 @@ final class rf {
         int var6 = 24;
         int var7 = 5;
         this.field_b.a(true, param3, param0, var6, var7, param2, param1);
-        du.field_f.a(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
+        du.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
-        AlphaContainer.field_E.a(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
-        ph.field_f.a(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, sh.field_c + 2, 18);
+        AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
+        ph.field_f.setBounds(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, sh.field_c + 2, 18);
         ei.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
         TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
@@ -194,15 +194,15 @@ final class rf {
             var14[var3Lifetime1] = var4Lifetime1Lifetime1;
           }
           kj.field_b = new byte[210][];
-          qi.field_n = new int[16];
+          PlayerStatSortCriterion.field_n = new int[16];
           TrinketUnlockNotice.field_a = new byte[16][];
           for (var3Lifetime2 = 0; var3Lifetime2 < 210; var3Lifetime2++) {
             kj.field_b[var3Lifetime2] = eo.a(var13, var3Lifetime2, 210);
           }
           var4Lifetime2 = -20 % ((param0 + 71) / 47);
           for (var3Lifetime3 = 0; var3Lifetime3 < 16; var3Lifetime3++) {
-            qi.field_n[var3Lifetime3] = (-(90 * var3Lifetime3) + 1440 >> 4) + 72;
-            TrinketUnlockNotice.field_a[var3Lifetime3] = eo.a(var14, var3Lifetime3, 16, qi.field_n[var3Lifetime3]);
+            PlayerStatSortCriterion.field_n[var3Lifetime3] = (-(90 * var3Lifetime3) + 1440 >> 4) + 72;
+            TrinketUnlockNotice.field_a[var3Lifetime3] = eo.a(var14, var3Lifetime3, 16, PlayerStatSortCriterion.field_n[var3Lifetime3]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

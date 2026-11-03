@@ -94,7 +94,7 @@ final class vr {
           PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
           if (rp.field_B != null) {
-            rp.field_B.b(param0 + 22999);
+            rp.field_B.clear(param0 + 22999);
             rp.field_B = null;
           }
           if (param0 != -2) {
@@ -102,12 +102,12 @@ final class vr {
           }
           SquadPickerDialog.field_N = null;
           if (SquadSlotWidget.field_yb != null) {
-            SquadSlotWidget.field_yb.b(param0 ^ -22997);
+            SquadSlotWidget.field_yb.clear(param0 ^ -22997);
             SquadSlotWidget.field_yb = null;
           }
           SortCriterion.field_f = null;
           if (null != ProxyAuthenticationRequiredException.field_d) {
-            ProxyAuthenticationRequiredException.field_d.b(param0 ^ -22997);
+            ProxyAuthenticationRequiredException.field_d.clear(param0 ^ -22997);
             ProxyAuthenticationRequiredException.field_d = null;
           }
           TrinketSlot.field_Eb = null;
@@ -129,7 +129,7 @@ final class vr {
     }
 
     final static void b(byte param0) {
-        ScrollPane.field_Jb.a(new TutorialChoiceDialog(), 3);
+        ScrollPane.field_Jb.addLast(new TutorialChoiceDialog(), 3);
         if (param0 > -114) {
           vr.releaseStatics((byte) -74);
         }
@@ -147,7 +147,7 @@ final class vr {
         Object var3;
         String var5;
         String var6;
-        if (null != cv.field_b[param1][param0]) {
+        if (null != MeshObject.field_b[param1][param0]) {
           return -1;
         }
         var3 = null;
@@ -165,17 +165,17 @@ final class vr {
         if (param2 > -48) {
           vr.a(22);
         }
-        if (!bo.field_Cb.a(false, var6)) {
-          return bo.field_Cb.getGroupProgressByName(var6, -16248);
+        if (!QuickChatKeysHelpPanel.field_Cb.a(false, var6)) {
+          return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName(var6, -16248);
         }
-        cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
+        MeshObject.field_b[param1][param0] = wa.a((byte) 113, var6, QuickChatKeysHelpPanel.field_Cb, "");
         if (param1 != 1) {
           return -1;
         }
         if (param0 != 3) {
           return -1;
         }
-        nh.adjustSpriteHsv(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
+        nh.adjustSpriteHsv(MeshObject.field_b[param1][param0], 0.0, 1.6, 1.0);
         return -1;
     }
 

@@ -188,7 +188,7 @@ final class rp extends ri {
         super(param0, param1);
     }
 
-    final String b(byte param0, UiWidget param1) {
+    final String displayText(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -217,10 +217,10 @@ final class rp extends ri {
 
     final static ff[] b(int param0) {
         if (param0 == -27666) {
-          return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+          return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
         }
         field_A = true;
-        return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, tb.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
+        return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, k.field_l};
     }
 
     rp(int param0) {

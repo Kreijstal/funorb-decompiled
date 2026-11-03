@@ -87,7 +87,7 @@ final class pg {
             var4 = -PlayingView.field_o + nj.monotonicMillis(param0 ^ -51);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
-              ba.a(true, 6, 5);
+              TrinketCountSortCriterion.a(true, 6, 5);
               var3 = 2;
             }
           }

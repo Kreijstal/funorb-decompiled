@@ -40,30 +40,30 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3 = ca.field_f.length;
         if (!LoginMethod.b(param0 - 15) ||
           !wn.a((byte) 50) &&
-          !c.a(bo.field_Ab[32], 0, BufferedSocket.field_f)) {
+          !c.a(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
           var3--;
         }
         for (var4 = 0; var4 < var3; var4++) {
           var5 = new UiLayoutNode();
-          var5.a(true, Trinket.field_d.field_q, 20, 44 + var4 * 44 - 10, Trinket.field_d.field_w);
+          var5.setBounds(true, Trinket.field_d.field_q, 20, 44 + var4 * 44 - 10, Trinket.field_d.field_w);
           var5.field_N = (Sprite) ((Object) Trinket.field_d);
           var12.addChild((byte) -121, var5);
           var6 = ca.field_f[var4];
           for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
-            if (hv.field_a[bo.field_Ab[var2 + var7]] &&
-              !c.a(bo.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
+            if (hv.field_a[QuickChatKeysHelpPanel.field_Ab[var2 + var7]] &&
+              !c.a(QuickChatKeysHelpPanel.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
               var6--;
             }
           }
           var7Lifetime1 = 0;
           for (var8 = 0; var8 < ca.field_f[var4]; var8++) {
             var9 = 0;
-            if (hv.field_a[bo.field_Ab[var2]] &&
-              !c.a(bo.field_Ab[var2], 0, BufferedSocket.field_f)) {
+            if (hv.field_a[QuickChatKeysHelpPanel.field_Ab[var2]] &&
+              !c.a(QuickChatKeysHelpPanel.field_Ab[var2], 0, BufferedSocket.field_f)) {
               var9 = 1;
             }
             if (var9 == 0) {
-              var10 = new SelectableTrinketIcon(bo.field_Ab[var2]);
+              var10 = new SelectableTrinketIcon(QuickChatKeysHelpPanel.field_Ab[var2]);
               stackIn_30_0 = var10;
               stackIn_30_1 = true;
               stackIn_30_2 = 32;
@@ -73,7 +73,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               } else {
                 stackIn_31_4 = 0;
               }
-              ((SelectableTrinketIcon) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_30_2, stackIn_30_3 + (stackIn_31_4 + var7Lifetime1 * 50), 10 + 44 * var4, 32);
+              ((SelectableTrinketIcon) (Object) stackIn_30_0).setBounds(stackIn_30_1, stackIn_30_2, stackIn_30_3 + (stackIn_31_4 + var7Lifetime1 * 50), 10 + 44 * var4, 32);
               var2++;
               var7Lifetime1++;
               var12.addChild((byte) -121, (UiLayoutNode) (var10));
@@ -82,7 +82,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             }
           }
         }
-        var12.a(true, 300, 0, 0, 48 * (var3 - 1) + 40);
+        var12.setBounds(true, 300, 0, 0, 48 * (var3 - 1) + 40);
         return var12;
     }
 
@@ -185,12 +185,12 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         }
         if (this.pageIndex == 3) {
           for (var5Lifetime1 = 0; var5Lifetime1 < 9; var5Lifetime1++) {
-            this.field_K[var5Lifetime1].b(0, param1);
+            this.field_K[var5Lifetime1].updateInput(0, param1);
             this.field_K[var5Lifetime1].a(31, 11, (byte) 126, 16, this.field_F[var5Lifetime1]);
           }
           this.field_E.field_s = this.slideOffsetX + 220;
-          this.field_E.b(0, param1);
-          this.field_E.a(32 * StatefulTextPainter.field_v, true, (byte) -115, 32);
+          this.field_E.updateInput(0, param1);
+          this.field_E.advanceScroll(32 * StatefulTextPainter.field_v, true, (byte) -115, 32);
         }
     }
 
@@ -238,7 +238,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         }
         for (var2 = 0; ip.field_b.length > var2; var2++) {
           PacketBuffer.a(73, UrlRequest.field_k);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           if (var2 != 3 &&
             var2 != 4) {
             stackIn_9_0 = 700;
@@ -446,9 +446,9 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3.experience = 98;
         var3.speed = 35;
         UiLayoutNode var4 = new UiLayoutNode();
-        var4.a(true, 350, 0, 0, 350);
+        var4.setBounds(true, 350, 0, 0, 350);
         this.field_E = new ScrollContainer(0L, var4, new UiLayoutNode(), rr.field_b);
-        this.field_E.a(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
+        this.field_E.setLayout(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
     }
 
     public static void g(int param0) {
@@ -504,7 +504,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var13 = Kickabout.field_G;
         stackIn_3_0 = (null == AccountRegistrationPanel.field_C) ? 0 : 1;
         var2 = stackIn_3_0;
-        IsSixCommand.field_C.a(jr.field_Fb, 60 + this.slideOffsetX, 136, 16777215, -1);
+        IsSixCommand.field_C.a(ReceivedAuctionItemRow.field_Fb, 60 + this.slideOffsetX, 136, 16777215, -1);
         var3 = this.slideOffsetX + 40;
         if (param0 != 96) {
           this.field_F = (PlayerStats[]) null;
@@ -520,7 +520,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var5 = stackIn_9_0 + stackIn_10_1;
           un.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, UrlRequest.field_k);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           bk.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
           TeamManagementScreen.e(param0 ^ 24);
           var6 = bk.field_a[var4].directionMask;
@@ -675,13 +675,13 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         ListingRowCache.a(-1, 178, 45 + this.slideOffsetX, (byte) -96, var2);
         for (var3Lifetime1 = 0; var3Lifetime1 < 9; var3Lifetime1++) {
           this.field_K[var3Lifetime1].field_s = this.slideOffsetX + 45 + var3Lifetime1 % 3 * 52;
-          this.field_K[var3Lifetime1].b(0, false);
+          this.field_K[var3Lifetime1].updateInput(0, false);
           this.field_K[var3Lifetime1].h((byte) -122);
         }
         SoftwareRasterizer.a(this.slideOffsetX + 40, 120, 560, 50, 10, 65793, 140);
         IsSixCommand.field_C.a(sh.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);
         SoftwareRasterizer.a(this.slideOffsetX + 210, 178, 390, 225, 10, 65793, 140);
-        this.field_E.a(94, false);
+        this.field_E.draw(94, false);
         AuctionListing.a(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
         var3Lifetime2 = this.field_E.field_F + 10;
         var4 = 30 + this.field_E.field_Db.field_T;
@@ -696,7 +696,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var6Lifetime1 = -10 - var4 + var5;
         if (var6Lifetime1 != this.field_E.field_Db.field_mb) {
           this.field_E.field_Db.field_mb = var6Lifetime1;
-          this.field_E.a(15, 0, 0);
+          this.field_E.layoutScrollbars(15, 0, 0);
         }
         TeamManagementScreen.e(param0 + 8617);
     }

@@ -12,11 +12,11 @@ class MessageDialog extends PopupDialog {
     int field_y;
     String field_u;
     static double field_B;
-    lv field_t;
+    PopupCard field_t;
     static long field_z;
     Sprite field_D;
 
-    void a(int param0, boolean param1) {
+    void onUpdate(int param0, boolean param1) {
         if (param0 != 3) {
           MessageDialog.f(-13);
         }
@@ -174,7 +174,7 @@ class MessageDialog extends PopupDialog {
         }
     }
 
-    final int a(boolean param0) {
+    final int getOpenSoundId(boolean param0) {
         if (this.field_y == 1) {
           return 46;
         }
@@ -253,7 +253,7 @@ class MessageDialog extends PopupDialog {
     int dialogWidth(int param0) {
         int var2 = 290;
         if (null != this.field_t) {
-          var2 = var2 + (15 + this.field_t.b(0));
+          var2 = var2 + (15 + this.field_t.getWidth(0));
         }
         if (param0 == -1379118556) {
           if (this.field_D != null) {
@@ -279,10 +279,10 @@ class MessageDialog extends PopupDialog {
     }
 
     MessageDialog(int param0) {
-        this(param0, (lv) null);
+        this(param0, (PopupCard) null);
     }
 
-    void a(byte param0, int param1, int param2) {
+    void drawBody(byte param0, int param1, int param2) {
         int var4 = 10 + param1;
         int var5 = 45 + param2;
         int var6 = -20 + this.dialogWidth(-1379118556);
@@ -298,7 +298,7 @@ class MessageDialog extends PopupDialog {
         }
         IsSixCommand.field_C.a(this.field_v, -15 + this.dialogWidth(-1379118556) + (param1 + (-10 - this.field_s)), var8, this.field_s, this.field_C, 16777215, -1, 0, 1, 16);
         if (this.field_t != null) {
-          this.field_t.a((var7 >> 1) + var5, 23, (this.field_t.b(0) >> 1) + (var4 + 15));
+          this.field_t.drawCentered((var7 >> 1) + var5, 23, (this.field_t.getWidth(0) >> 1) + (var4 + 15));
           return;
         }
         if (null != this.field_D) {
@@ -307,7 +307,7 @@ class MessageDialog extends PopupDialog {
         }
     }
 
-    final void a(String param0, lv param1, Sprite param2, int param3, String param4) {
+    final void a(String param0, PopupCard param1, Sprite param2, int param3, String param4) {
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
         int stackIn_12_1 = 0;
@@ -333,7 +333,7 @@ class MessageDialog extends PopupDialog {
             this.dialogHeight((byte) 40);
           }
           if (this.field_t != null) {
-            this.field_s = this.field_s - (15 + this.field_t.b(0));
+            this.field_s = this.field_s - (15 + this.field_t.getWidth(0));
           } else {
             if (null != this.field_D) {
               this.field_s = this.field_s - (this.field_D.field_o + 15);
@@ -349,7 +349,7 @@ class MessageDialog extends PopupDialog {
           this.field_C = Math.max(stackIn_9_1, stackIn_10_2);
           stackIn_12_1 = this.field_C;
           if (this.field_t != null) {
-            stackIn_13_2 = this.field_t.a(15);
+            stackIn_13_2 = this.field_t.getHeight(15);
           } else {
             stackIn_13_2 = 0;
           }
@@ -392,7 +392,7 @@ class MessageDialog extends PopupDialog {
         }
     }
 
-    MessageDialog(int param0, lv param1) {
+    MessageDialog(int param0, PopupCard param1) {
         this(param0, param1, IsSixCommand.field_G[param0], ListingRowCache.field_e[param0]);
     }
 
@@ -410,7 +410,7 @@ class MessageDialog extends PopupDialog {
         }
     }
 
-    MessageDialog(int param0, lv param1, String param2, String param3) {
+    MessageDialog(int param0, PopupCard param1, String param2, String param3) {
         try {
           this.field_y = param0;
           this.a(param3, param1, MusicPatchNode.b(2, this.field_y), -125, param2);

@@ -59,7 +59,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -110,7 +110,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_l < 0 || this.field_l >= ((PcmSample) (this.field_h)).field_i.length << 8;
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
@@ -1046,7 +1046,7 @@ final class PcmSampleStream extends PcmStream {
         this.rampVolumeAndPan(param0, param1, this.k());
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         if (this.field_j == 0 &&
           this.field_k == 0) {
           return 0;
@@ -1229,7 +1229,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_l = ((PcmSample) (this.field_h)).field_i.length - 1 << 8;
     }
 
-    final synchronized void i(int param0) {
+    final synchronized void setSamplePositionFixed(int param0) {
         int var2 = ((PcmSample) (this.field_h)).field_i.length << 8;
         if (param0 < -1) {
           param0 = -1;
@@ -1702,7 +1702,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized boolean n() {
+    final synchronized boolean hasRemainingRampFrames() {
         return this.field_k != 0;
     }
 
@@ -1718,7 +1718,7 @@ final class PcmSampleStream extends PcmStream {
         this.setVolumeAndPan(param0 << 6, this.k());
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_p = param0;
     }
 

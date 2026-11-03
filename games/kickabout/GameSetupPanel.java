@@ -45,7 +45,7 @@ final class GameSetupPanel extends UiLayoutNode {
 
     final int h(byte param0) {
         int var2 = 106 % ((35 - param0) / 37);
-        return (int)this.f((byte) 98);
+        return (int)this.getSecondaryKey((byte) 98);
     }
 
     public static void a(int param0) {

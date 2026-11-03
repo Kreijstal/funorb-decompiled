@@ -253,17 +253,17 @@ final class SplashScreen extends AppScreen {
                 ScrollPane.a(38) &&
                 ~var12.field_Ab != ~AnimationPlayer.field_c) {
                 if (null != var12.field_Tb.field_E) {
-                  var26 = var12.field_Tb.g((byte) 122) + DiskCacheWorker.field_b * 2;
-                  var12.field_Tb.a(true, var26, var25_int, var19, sh.field_c);
+                  var26 = var12.field_Tb.getPreferredWidth((byte) 122) + DiskCacheWorker.field_b * 2;
+                  var12.field_Tb.setBounds(true, var26, var25_int, var19, sh.field_c);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Hb.field_E) {
                   if (param0 != ClientException.field_c) {
-                    var26Lifetime2 = var12.field_Hb.g((byte) 113) + DiskCacheWorker.field_b * 2;
+                    var26Lifetime2 = var12.field_Hb.getPreferredWidth((byte) 113) + DiskCacheWorker.field_b * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_Hb.a(true, var26Lifetime2, var25_int, var19, sh.field_c);
+                  var12.field_Hb.setBounds(true, var26Lifetime2, var25_int, var19, sh.field_c);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -275,9 +275,9 @@ final class SplashScreen extends AppScreen {
               } else {
                 stackIn_99_3 = 0;
               }
-              ((UiLayoutNode) (Object) stackIn_98_0).a(stackIn_98_1, stackIn_98_2 - stackIn_99_3 + var12.field_q, var25_int, var19, sh.field_c);
+              ((UiLayoutNode) (Object) stackIn_98_0).setBounds(stackIn_98_1, stackIn_98_2 - stackIn_99_3 + var12.field_q, var25_int, var19, sh.field_c);
               var12.field_Ob.field_E = Integer.toString(var12.field_Qb);
-              var12.field_Ob.a(true, 40, -40 + var12.field_q, var19, sh.field_c);
+              var12.field_Ob.setBounds(true, 40, -40 + var12.field_q, var19, sh.field_c);
               var19 = var19 + sh.field_c;
               if (var12.field_Lb.field_gb &&
                 var22 != 0) {
@@ -305,14 +305,14 @@ final class SplashScreen extends AppScreen {
               var24_intLifetime1 = var12.field_zb.field_X.b(var23, -DiskCacheWorker.field_b + var12.field_q - DiskCacheWorker.field_b);
               var12.field_zb.field_E = var23;
               var12.field_zb.field_U = var12.field_Jb * 256 / mg.field_c;
-              var12.field_zb.a(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var19, sh.field_c * var24_intLifetime1);
+              var12.field_zb.setBounds(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var19, sh.field_c * var24_intLifetime1);
               var19 = var19 + var24_intLifetime1 * sh.field_c;
             }
             if (var9Lifetime1 == 0) {
               var12.field_L = var19 - var12.field_mb;
             }
             if (var13 != 0) {
-              param0.field_Ab.a(true, 2, var12, (UiLayoutNode) (var11));
+              param0.field_Ab.positionAfter(true, 2, var12, (UiLayoutNode) (var11));
             }
             if (var12.field_sb != 0 &&
               !var12.h(-13356)) {

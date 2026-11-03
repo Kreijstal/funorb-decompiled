@@ -89,10 +89,10 @@ final class PlayerModelPreview extends IntrusiveNode {
           param0 = 6 - param0;
         }
         this.field_h.a(param0, 111);
-        ModelMesh var5 = (ModelMesh) (this.field_h.a(this.field_p, false, true, true));
+        ModelMesh var5 = (ModelMesh) (this.field_h.applyCurrentFrame(this.field_p, false, true, true));
         nh.a(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + UiWidget.field_f.length, UiWidget.field_f);
         PacketBuffer.a(103, ok.field_d);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         TriangleRasterizer.useRasterClip();
         int var4 = 950;
         TriangleRasterizer.setProjectionCenter(128, 240);
@@ -114,7 +114,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param1.l(1, 59);
+          var6_int = param1.readBits(1, 59);
           if (param3 == var6_int) {
             if (param5 != 0) {
               stackIn_13_0 = IsaacRandom.a(param5, -30273, param1);

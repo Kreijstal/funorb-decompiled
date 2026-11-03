@@ -72,7 +72,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(15, 0, 8128, param1, !param2 ? 0 : 1);
     }
 
-    final boolean b(int param0) {
+    final boolean hasFullscreenSupport(int param0) {
         if (!this.field_l) {
           return false;
         }
@@ -245,7 +245,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_b = var13;
                         var13.setResizable(false);
                         if (this.field_f) {
-                          this.field_k.a(var8.field_d >>> 16, 65535 & var8.field_e, var8.field_d & 65535, var13, var8.field_e >> 16, -2147483648);
+                          this.field_k.enterFullscreen(var8.field_d >>> 16, 65535 & var8.field_e, var8.field_d & 65535, var13, var8.field_e >> 16, -2147483648);
                         } else {
                           Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_i, new Object[]{var13, new Integer(var8.field_d >>> 16), new Integer(65535 & var8.field_d), new Integer(var8.field_e >> 16), new Integer(var8.field_e & 65535)});
                         }
@@ -340,7 +340,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(19, 0, 8128, param1, 0);
     }
 
-    final PlatformTask a(int param0, int param1, boolean param2, int param3, int param4) {
+    final PlatformTask requestEnterFullscreen(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
           return (PlatformTask) null;
         }
@@ -418,7 +418,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(java.net.URL param0, byte param1) {
+    final PlatformTask requestUrl(java.net.URL param0, byte param1) {
         if (param1 > -17) {
           String var4 = (String) null;
           PlatformTaskDispatcher.a(92, -82, (String) null, (String) null);
@@ -553,7 +553,7 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        CacheFileLocator.a(field_e, (byte) -99, field_d);
+        CacheFileLocator.initializeCacheEnvironment(field_e, (byte) -99, field_d);
         if (this.field_l) {
           this.field_q = new RandomAccessCacheFile(CacheFileLocator.a("random.dat", (String) null, field_d, false), "rw", 25L);
           this.field_c = new RandomAccessCacheFile(CacheFileLocator.a("main_file_cache.dat2", 0), "rw", 314572800L);

@@ -45,7 +45,7 @@ final class bl {
         if (this.field_f) {
           SoftwareRasterizer.a(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
           PacketBuffer.a(-47, k.field_j);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           un.field_d.a(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           un.field_d.a(du.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           TeamManagementScreen.e(121);
@@ -54,10 +54,10 @@ final class bl {
         if (param0 < 63) {
           this.field_e = (LobbyGameRecord) null;
         }
-        SquadPickerDialog.field_Q.b(var2, var3, al.a(false, (byte) 14));
+        SquadPickerDialog.field_Q.b(var2, var3, FriendsListPanel.a(false, (byte) 14));
         if (this.field_e.field_f == 4) {
           PacketBuffer.a(-45, DraggableWidget.field_K);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           ea.a(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
           TeamManagementScreen.e(119);
           DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
@@ -78,13 +78,13 @@ final class bl {
               }
               var5Lifetime1 = this.field_e.field_e[var6][var8][1] >> 16;
               SoftwareRasterizer.d(var2 - (-1 - var4Lifetime1), var5Lifetime1 + var3 + 1, 3, var9);
-              SoftwareRasterizer.c(var4Lifetime1 + (var2 + 1), var5Lifetime1 + 1 + var3, 3, 65793);
+              SoftwareRasterizer.drawCircle(var4Lifetime1 + (var2 + 1), var5Lifetime1 + 1 + var3, 3, 65793);
             }
           }
           var4Lifetime2 = this.field_e.field_n >> 16;
           var5Lifetime2 = this.field_e.field_l >> 16;
           SoftwareRasterizer.d(var2 + 1 + var4Lifetime2, var5Lifetime2 + var3 + 1, 3, 16777215);
-          SoftwareRasterizer.c(var4Lifetime2 + (var2 + 1), 1 + var3 + var5Lifetime2, 3, 65793);
+          SoftwareRasterizer.drawCircle(var4Lifetime2 + (var2 + 1), 1 + var3 + var5Lifetime2, 3, 65793);
           TeamManagementScreen.e(119);
         } else {
           if (0 > this.field_e.field_f) {
@@ -131,10 +131,10 @@ final class bl {
         if (param0 != -94) {
           return false;
         }
-        if (!bo.field_Cb.ensureFileAvailableByName("scenery", "bleachers", (byte) -10)) {
+        if (!QuickChatKeysHelpPanel.field_Cb.ensureFileAvailableByName("scenery", "bleachers", (byte) -10)) {
           return false;
         }
-        TeamSelectionAgent.field_p = ng.a("bleachers", "scenery", 2, bo.field_Cb);
+        TeamSelectionAgent.field_p = ng.a("bleachers", "scenery", 2, QuickChatKeysHelpPanel.field_Cb);
         return true;
     }
 

@@ -137,7 +137,7 @@ final class LobbyGameRecord {
             this.field_k = param1.readByte((byte) -104);
           }
           if (this.field_f == 4) {
-            this.field_h = param1.a((byte) 81) - 1;
+            this.field_h = param1.readUnsignedShort((byte) 81) - 1;
             this.field_n = param1.readUnsignedByte((byte) -112);
             this.field_l = param1.readUnsignedByte((byte) -111);
             for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {

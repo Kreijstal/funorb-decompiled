@@ -50,7 +50,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           return;
         }
         if (null == this.field_Db) {
-          jr.a(this.field_F + (this.field_q >> 1), -36, (this.field_mb >> 1) + this.field_T);
+          ReceivedAuctionItemRow.a(this.field_F + (this.field_q >> 1), -36, (this.field_mb >> 1) + this.field_T);
           if (!this.field_Hb) {
             if (param0 >= -114) {
               this.h((byte) -68);
@@ -78,7 +78,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           return;
         }
         PacketBuffer.a(85, dc.field_b);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         var5 = new int[4];
         var4 = var5;
         var3 = var4;

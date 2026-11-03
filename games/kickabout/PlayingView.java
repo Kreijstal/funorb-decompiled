@@ -364,7 +364,7 @@ final class PlayingView extends MatchPhaseView {
         return new LoginText(LobbyPlayerRow.a(320), TextLine.a(false));
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void queueMouseMove(int param0, int param1, int param2) {
         int var8;
         int stackIn_10_0 = 0;
         int var4;
@@ -409,7 +409,7 @@ final class PlayingView extends MatchPhaseView {
         this.a((IntrusiveDeque) null, (byte) -126);
     }
 
-    private final void n(int param0) {
+    private final void pollMovementKeys(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_18_0 = 0;
@@ -610,7 +610,7 @@ final class PlayingView extends MatchPhaseView {
             if (var4.action == 1) {
               if (var2 == 0 &&
                 var3 == 0) {
-                this.c(this.field_z, this.field_G, -1);
+                this.queueMouseMove(this.field_z, this.field_G, -1);
               }
             } else {
               if (-1 != ArrayWidgetContainer.field_x ||
@@ -618,7 +618,7 @@ final class PlayingView extends MatchPhaseView {
                 if (!this.field_a.c(this.field_g, -115)) {
                   if (var2 != 0 &&
                     var4.d((byte) 102)) {
-                    this.c(this.field_z, this.field_G, -1);
+                    this.queueMouseMove(this.field_z, this.field_G, -1);
                     this.field_k = false;
                   }
                   if (this.field_m) {
@@ -683,22 +683,22 @@ final class PlayingView extends MatchPhaseView {
           if (null == this.field_r) {
             this.field_r = new IntrusiveDeque();
           } else {
-            this.field_r.b(22997);
+            this.field_r.clear(22997);
           }
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4_int = 0; var4_int < 5; var4_int++) {
-              this.field_r.a(TextHotspotWidget.a((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
+              this.field_r.addLast(TextHotspotWidget.a((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
             }
           }
-          this.field_r.a(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
-          this.field_r.a(re.a(true, 115), 3);
+          this.field_r.addLast(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
+          this.field_r.addLast(re.a(true, 115), 3);
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
-          this.field_r.a(re.a(false, 92), 3);
+          this.field_r.addLast(re.a(false, 92), 3);
           if (param0 != null) {
             var4 = (ak) (param0.g(24009));
             while (var4 != null) {
               var4.c((byte) -109);
-              this.field_r.a(var4, 3);
+              this.field_r.addLast(var4, 3);
               var4 = (ak) (param0.c(33));
             }
           }
@@ -766,7 +766,7 @@ final class PlayingView extends MatchPhaseView {
         PlayerStats var13_ref_up = null;
         int var13 = 0;
         int var14_int = 0;
-        vn var14 = null;
+        MeshData var14 = null;
         RenderedFootballer var15 = null;
         int var16 = 0;
         var16 = Kickabout.field_G;
@@ -911,7 +911,7 @@ final class PlayingView extends MatchPhaseView {
         } else {
           var4_ref_ob = (RenderedBall) (this.field_a.field_V);
           var5 = var4_ref_ob.positionX >> 16;
-          var6 = var4_ref_ob.c(true) + (var4_ref_ob.positionY >> 16) >> 1;
+          var6 = var4_ref_ob.getRenderedY(true) + (var4_ref_ob.positionY >> 16) >> 1;
           var7_double = (double)var3.field_kb / 65536.0;
           var9 = (double)var3.field_bb / 65536.0;
           var11 = (double)(this.field_q + 40);
@@ -1085,7 +1085,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void k(int param0) {
+    private final void drawStartCountdown(int param0) {
         Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1096,7 +1096,7 @@ final class PlayingView extends MatchPhaseView {
           this.onButtonClick(-113, 91);
         }
         if (var2 < 120) {
-          var3 = tb.field_q[var2 / 40 + 1];
+          var3 = SocketArchiveNetworkClient.field_q[var2 / 40 + 1];
           var4 = var3.field_o;
           var5 = var3.field_v;
           var2 = var2 % 40;
@@ -1264,7 +1264,7 @@ final class PlayingView extends MatchPhaseView {
             Trinket.a((RenderedFootballer) (this.field_a.field_P[var2][var3]), 100);
           }
         }
-        ((RenderedBall) (this.field_a.field_V)).l(param0 - 13);
+        ((RenderedBall) (this.field_a.field_V)).drawShadow(param0 - 13);
         gs.b(0);
         if (param0 != 1) {
           return;
@@ -1299,7 +1299,7 @@ final class PlayingView extends MatchPhaseView {
         }
         if (this.field_f &&
           this.field_a.timeLimit < this.field_a.phaseTime) {
-          this.k(0);
+          this.drawStartCountdown(0);
         }
         if (this.isLocalParticipantActive((byte) 13) &&
           !this.field_l) {
@@ -1410,7 +1410,7 @@ final class PlayingView extends MatchPhaseView {
     final void update(int param0, boolean param1) {
         this.field_u = param1 ? true : false;
         if (this.field_u) {
-          this.n(-122);
+          this.pollMovementKeys(-122);
           this.pollLocalInput(16623);
         }
         if (this.field_g == this.field_a.field_V.field_j &&
@@ -1420,7 +1420,7 @@ final class PlayingView extends MatchPhaseView {
         this.a(true, this.field_a);
         if (this.field_a.bigHeadMode != this.field_n) {
           this.field_n = this.field_a.bigHeadMode;
-          this.j(-90);
+          this.refreshFootballerSprites(-90);
         }
         FootballerAgent var4 = this.field_a.getBallCarrier((byte) -96);
         if (var4 != null) {
@@ -1438,7 +1438,7 @@ final class PlayingView extends MatchPhaseView {
         PlayerShopScreen.a(false);
     }
 
-    private final void j(int param0) {
+    private final void refreshFootballerSprites(int param0) {
         int var6 = 0;
         int stackIn_27_0 = 0;
         int var2;
@@ -1452,7 +1452,7 @@ final class PlayingView extends MatchPhaseView {
         PlayerStats var11_ref_up;
         int var11;
         int var12_int;
-        vn var12;
+        MeshData var12;
         int var13;
         var13 = Kickabout.field_G;
         var2 = 0;
@@ -1540,7 +1540,7 @@ final class PlayingView extends MatchPhaseView {
             AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.g((byte) 60), SumIntegersCommand.field_A, pe.a((byte) 92));
           } else {
             if (!TournamentChampionDialog.i(-86)) {
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearFramebuffer();
               ValidationState.a(320, 240, (byte) 122);
               su.a(27744, 0, 0, param0);
             } else {

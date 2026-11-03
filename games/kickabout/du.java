@@ -18,7 +18,7 @@ final class du implements WidgetPainter {
     private int field_b;
     static int field_n;
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var11 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -46,7 +46,7 @@ final class du implements WidgetPainter {
           var7 = param3.field_n - var13.field_H * 2;
           var8 = var13.field_H + param4 + param3.field_t;
           var9 = var13.field_J + (param2 + param3.field_g);
-          SoftwareRasterizer.b(var8, var9, var8 + var7, var9, this.field_h);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_h);
           var10 = 47 / ((59 - param0) / 53);
           for (var11 = var13.a((byte) 31) - 1; 0 <= var11; var11--) {
             SoftwareRasterizer.d(var13.a((byte) -120, var11) * var7 / var13.h((byte) -88) + var8, var9, this.field_d, this.field_l);

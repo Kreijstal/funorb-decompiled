@@ -47,7 +47,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         return var2 + param1;
     }
 
-    void m(int param0) {
+    void finishTransition(int param0) {
         if (this.field_O <= 0) {
           return;
         }
@@ -67,7 +67,7 @@ abstract class ResizableModalPanel extends ModalPanel {
     }
 
     boolean a(int param0) {
-        this.m(4000);
+        this.finishTransition(4000);
         if (param0 >= -11) {
           return true;
         }
@@ -91,7 +91,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         this.field_L = 0;
         this.field_K = param2;
         if (param0 > 0) {
-          this.k(-115);
+          this.advanceDialogAnimation(-115);
         }
         this.field_I = this.field_n;
     }
@@ -254,7 +254,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         return (byte)(param1 + 1);
     }
 
-    boolean k(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -277,7 +277,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           }
           this.a((byte) 125, var3, var2);
         }
-        return super.k(-1);
+        return super.advanceDialogAnimation(-1);
     }
 
     static {

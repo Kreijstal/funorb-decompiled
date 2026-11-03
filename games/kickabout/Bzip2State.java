@@ -243,10 +243,10 @@ final class Bzip2State {
           var21Lifetime1 = -param3[0] + param2[0];
           var22Lifetime1 = param2[1] - param3[1];
           var23Lifetime1 = param2[2] - param3[2];
-          var9 = var23Lifetime1 * param3[5] + param3[4] * var22Lifetime1 + param3[3] * var21Lifetime1 >> -im.field_yb + 16;
+          var9 = var23Lifetime1 * param3[5] + param3[4] * var22Lifetime1 + param3[3] * var21Lifetime1 >> -ListRow.field_yb + 16;
           var11 = var23Lifetime1 * param3[11] + param3[9] * var21Lifetime1 + param3[10] * var22Lifetime1 >> 16;
           var24Lifetime1 = -48 / ((9 - param4) / 45);
-          var10 = param3[8] * var23Lifetime1 + var21Lifetime1 * param3[6] + param3[7] * var22Lifetime1 >> -im.field_yb + 16;
+          var10 = param3[8] * var23Lifetime1 + var21Lifetime1 * param3[6] + param3[7] * var22Lifetime1 >> -ListRow.field_yb + 16;
           var21Lifetime2 = TriangleRasterizer.field_p;
           var22Lifetime2 = TriangleRasterizer.field_e;
           var23Lifetime2 = 0;
@@ -256,8 +256,8 @@ final class Bzip2State {
               var24Lifetime2 = param0.field_f[var23Lifetime2];
               var25Lifetime1 = param0.field_r[var23Lifetime2];
               var26Lifetime1 = param0.field_P[var23Lifetime2];
-              var27Lifetime1 = (var26Lifetime1 * var18 + var24Lifetime2 * var12 + var25Lifetime1 * var15 >> 16 - im.field_yb) + var9;
-              var28Lifetime1 = (var26Lifetime1 * var19 + var24Lifetime2 * var13 + var16 * var25Lifetime1 >> 16 - im.field_yb) + var10;
+              var27Lifetime1 = (var26Lifetime1 * var18 + var24Lifetime2 * var12 + var25Lifetime1 * var15 >> 16 - ListRow.field_yb) + var9;
+              var28Lifetime1 = (var26Lifetime1 * var19 + var24Lifetime2 * var13 + var16 * var25Lifetime1 >> 16 - ListRow.field_yb) + var10;
               var29Lifetime1 = (var25Lifetime1 * var17 + (var24Lifetime2 * var14 + var20 * var26Lifetime1) >> 16) + var11;
               stackIn_56_0 = ~var29Lifetime1;
               stackIn_56_1 = -51;
@@ -283,8 +283,8 @@ final class Bzip2State {
                   ld.field_e[var23Lifetime2] = -2147483648;
                 }
                 if (param1) {
-                  BuyPitchDialog.field_M[var23Lifetime2] = var27Lifetime1 >> im.field_yb;
-                  MatchTransitionScreen.field_B[var23Lifetime2] = var28Lifetime1 >> im.field_yb;
+                  BuyPitchDialog.field_M[var23Lifetime2] = var27Lifetime1 >> ListRow.field_yb;
+                  MatchTransitionScreen.field_B[var23Lifetime2] = var28Lifetime1 >> ListRow.field_yb;
                   bw.field_f[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -355,7 +355,7 @@ final class Bzip2State {
                   var20 = param0.field_I[var18];
                   var21Lifetime2 = param0.field_v[var18];
                   HelpTipDialog.field_F[var18] = var9 * var19 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
-                  ba.field_q[var18] = var16 * var21Lifetime2 + (var19 * var10 + var13 * var20) >> 16;
+                  TrinketCountSortCriterion.field_q[var18] = var16 * var21Lifetime2 + (var19 * var10 + var13 * var20) >> 16;
                   BytePlusOneCommand.field_E[var18] = var14 * var20 + (var11 * var19 + var21Lifetime2 * var17) >> 16;
                   var18++;
                 }

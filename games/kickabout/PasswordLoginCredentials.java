@@ -65,13 +65,13 @@ final class PasswordLoginCredentials extends LoginCredentials {
     }
 
     final static void a(boolean param0, byte param1) {
-        g.field_a.a(97, param0);
+        g.field_a.draw(97, param0);
         DateOfBirthPanel var2 = PlayArea.field_a;
         if (param1 >= -27) {
           PasswordLoginCredentials.b((byte) 111);
         }
         if (var2 != null) {
-          var2.a(g.field_a.field_T, g.field_a.field_F, (byte) -120);
+          var2.renderWidgetPassesAndTooltip(g.field_a.field_T, g.field_a.field_F, (byte) -120);
         }
     }
 

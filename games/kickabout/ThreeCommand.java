@@ -7,7 +7,7 @@ final class ThreeCommand extends ConsoleCommand {
     static String field_C;
     static int[] field_A;
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -43,7 +43,7 @@ final class ThreeCommand extends ConsoleCommand {
           NamedValueContainer.a(63, param0);
           if (gs.field_b) {
             SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
-            ni.field_l.field_b.a(122, param0);
+            ni.field_l.field_b.draw(122, param0);
             PasswordLoginCredentials.a(param0, (byte) -93);
             return;
           }
@@ -56,7 +56,7 @@ final class ThreeCommand extends ConsoleCommand {
           return;
         }
         SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
-        ni.field_l.field_b.a(122, param0);
+        ni.field_l.field_b.draw(122, param0);
         PasswordLoginCredentials.a(param0, (byte) -93);
     }
 

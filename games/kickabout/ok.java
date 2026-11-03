@@ -23,14 +23,14 @@ final class ok {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        vn var11 = null;
-        vn var12 = null;
+        MeshData var11 = null;
+        MeshData var12 = null;
         short[] var13 = null;
         short[] var15 = null;
         int[] var18 = null;
         var10 = Kickabout.field_G;
         try {
-          var11 = new vn(gw.field_f[param1], true, false, true, true);
+          var11 = new MeshData(gw.field_f[param1], true, false, true, true);
           var12 = var11;
           var15 = var12.field_p;
           var13 = var15;
@@ -49,7 +49,7 @@ final class ok {
           var18 = ParticipantStatus.field_f;
           var8 = var18[0] * TriangleRasterizer.field_o[1024] >> 16;
           var9 = TriangleRasterizer.field_f[1024] * var18[0] >> 16;
-          stackIn_10_0 = var11.b(var18[2], var18[3], var8, var18[1], var9);
+          stackIn_10_0 = var11.createModelMesh(var18[2], var18[3], var8, var18[1], var9);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

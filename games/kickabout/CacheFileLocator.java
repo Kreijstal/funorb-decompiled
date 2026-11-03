@@ -27,7 +27,7 @@ public class CacheFileLocator {
         throw new Error();
     }
 
-    public static void a(String param0, byte param1, int param2) {
+    public static void initializeCacheEnvironment(String param0, byte param1, int param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
         field_b = param2;

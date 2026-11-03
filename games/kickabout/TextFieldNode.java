@@ -198,7 +198,7 @@ final class TextFieldNode extends UiLayoutNode {
                 var8[var6] = or.field_d.field_f[var6];
               }
               var6_ref_jm = new DelayedServerPacket((long)var4 + var2_long, or.field_d.field_n, var17);
-              DualLinkNode.field_g.a(var6_ref_jm, 3);
+              DualLinkNode.field_g.addLast(var6_ref_jm, 3);
               or.field_d.field_n = 0;
             }
             var9 = (DelayedServerPacket) (DualLinkNode.field_g.g(24009));
@@ -698,9 +698,9 @@ final class TextFieldNode extends UiLayoutNode {
             }
             var4_int = stackIn_28_0;
             var5 = Math.abs(-this.field_yb.field_s + var3);
-            this.field_Nb.a(true, var5, var4_int + this.field_Lb.field_D, 2, this.field_Ab);
+            this.field_Nb.setBounds(true, var5, var4_int + this.field_Lb.field_D, 2, this.field_Ab);
           } else {
-            this.field_Nb.a(true, 0, this.field_yb.field_s, 2, this.field_Ab);
+            this.field_Nb.setBounds(true, 0, this.field_yb.field_s, 2, this.field_Ab);
           }
           if (this.field_Gb != null &&
             this.field_Gb.field_a != 0) {
@@ -726,9 +726,9 @@ final class TextFieldNode extends UiLayoutNode {
         if (param0 != -630) {
           field_Db = (GameSoundEffect[]) null;
         }
-        this.a(true, param4, param1, param2, param3);
-        this.field_Lb.a(true, param4, 0, 0, param3);
-        this.field_yb.a(true, param4, 0, 0, param3);
+        this.setBounds(true, param4, param1, param2, param3);
+        this.field_Lb.setBounds(true, param4, 0, 0, param3);
+        this.field_yb.setBounds(true, param4, 0, 0, param3);
         this.field_Ab = param3 - 4;
     }
 

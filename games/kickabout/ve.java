@@ -32,17 +32,17 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         if (BallAgent.field_u) {
           return -1;
         }
-        if (bo.field_Cb.a(param0, "park")) {
+        if (QuickChatKeysHelpPanel.field_Cb.a(param0, "park")) {
           BallAgent.field_u = true;
-          LeaguesScreen.field_E = ng.a("benches", "park", 2, bo.field_Cb);
-          ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 70, "hotdog");
-          pi.field_a = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 59, "swing");
-          RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 114, "slide");
-          ng.field_j = ng.a("trees", "park", 2, bo.field_Cb);
-          gw.field_d = ng.a("stains", "park", 2, bo.field_Cb);
+          LeaguesScreen.field_E = ng.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");
+          pi.field_a = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
+          RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
+          ng.field_j = ng.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          gw.field_d = ng.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }
-        return bo.field_Cb.getGroupProgressByName("park", -16248);
+        return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("park", -16248);
     }
 
     final static void a(GameSetupPanel param0, byte param1) {
@@ -68,7 +68,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             break;
           }
           if (var2 == null) {
-            SquadSlotWidget.field_yb.a(param0, 3);
+            SquadSlotWidget.field_yb.addLast(param0, 3);
             return;
           }
           ug.a(var2, 16737894, param0);
@@ -106,9 +106,9 @@ final class ve extends ResizableModalPanel implements ButtonListener {
             field_S = (UiLayoutNode) null;
           }
           this.field_i = this.field_i + 38;
-          var4.a(30, param0 ^ -54, 15, -16 + (this.field_n - 14), var5);
+          var4.setBounds(30, param0 ^ -54, 15, -16 + (this.field_n - 14), var5);
           this.a(param0 - 12, var4);
-          this.e(-1947);
+          this.refreshLayout(-1947);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,7 +248,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           }
           if (SplashScreen.field_j >= 18) {
             SplashScreen.field_j = 18;
-            var7 = (FadingChatMessage) (AppScreen.field_d.b((byte) 126));
+            var7 = (FadingChatMessage) (AppScreen.field_d.removeFirst((byte) 126));
             if (var7 != null) {
               MatchingTextValidator.a(var7, false);
             }
@@ -269,7 +269,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         TextButton discarded$1 = null;
         RuntimeException var6 = null;
         String var7 = null;

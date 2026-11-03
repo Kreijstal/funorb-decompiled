@@ -19,8 +19,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     static String[] field_M;
 
     final void focusFields(byte param0) {
-        this.field_N.i((byte) -55);
-        this.field_J.i((byte) -70);
+        this.field_N.clearInputText((byte) -55);
+        this.field_J.clearInputText((byte) -70);
         if (param0 >= -65) {
           this.field_C = false;
         }
@@ -59,17 +59,17 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param0 != 70) {
             LoginForm.a((byte) -2);
           }
-          ia.field_d.a(param2, param0 - 67);
+          ia.field_d.addLast(param2, param0 - 67);
           mp.a(125, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(int param0, TextInputWidget param1) {
+    public final void onEnterPressed(int param0, TextInputWidget param1) {
         try {
           if (this.field_N == param1) {
-            this.field_J.a((UiWidget) (this), 0);
+            this.field_J.requestKeyboardFocus((UiWidget) (this), 0);
           }
           if (this.field_J == param1) {
             this.submitLogin(60);
@@ -80,17 +80,17 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_D != null) {
           gf.field_a.a(this.field_D, 20 + param2 + this.field_t, 15 + param3 + this.field_g, -40 + this.field_n, this.field_i, 16777215, -1, 1, 0, gf.field_a.field_G);
         }
         if (null != this.field_L) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 10, param3 + 134, -20 + this.field_n, 4210752);
         }
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -136,7 +136,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -148,7 +148,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param1 > -60) {
             this.field_H = true;
           }
-          if (super.a(param0, (byte) -62, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -62, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
@@ -181,8 +181,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var3 = this.field_N;
           var4 = param0;
           int var5 = 25 % ((33 - param1) / 48);
-          var3.a(var4, (byte) -17, false);
-          this.field_J.i((byte) -41);
+          var3.setInputText(var4, (byte) -17, false);
+          this.field_J.clearInputText((byte) -41);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -198,7 +198,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         field_M = null;
     }
 
-    public final void a(byte param0, TextInputWidget param1) {
+    public final void onTextChanged(byte param0, TextInputWidget param1) {
         try {
           if (param0 < 65) {
             this.focusFields((byte) -105);
@@ -258,7 +258,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ba.field_o;
+              stackIn_19_3 = TrinketCountSortCriterion.field_o;
             }
             this.field_F = new TextButton(stackIn_19_3, (UiListener) null);
             if (this.field_I) {
@@ -323,27 +323,27 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_F.field_k = (UiListener) (this);
           }
           if (this.field_L == null) {
-            this.field_K.a(30, 1, 8, -10 + (-6 + this.field_n), this.field_g);
+            this.field_K.setBounds(30, 1, 8, -10 + (-6 + this.field_n), this.field_g);
             this.field_g = this.field_g + 35;
           } else {
-            this.field_K.a(30, 1, 85, -95 + this.field_n, this.field_g);
+            this.field_K.setBounds(30, 1, 85, -95 + this.field_n, this.field_g);
             this.field_g = this.field_g + 60;
           }
           if (null != this.field_L) {
-            this.field_L.a(30, 1, 8, -16 + this.field_n, this.field_g);
+            this.field_L.setBounds(30, 1, 8, -16 + this.field_n, this.field_g);
             this.field_g = this.field_g + 35;
           }
           if (this.field_F != null) {
             if (!this.field_H &&
               !this.field_C) {
-              this.field_F.a(20, 1, 8, 40, this.field_g);
+              this.field_F.setBounds(20, 1, 8, 40, this.field_g);
               this.field_g = this.field_g + 25;
             } else {
-              this.field_F.a(30, 1, 8, -10 + (this.field_n - 6), this.field_g);
+              this.field_F.setBounds(30, 1, 8, -10 + (this.field_n - 6), this.field_g);
               this.field_g = this.field_g + 35;
             }
           }
-          this.a(this.field_g + 3, 1, 0, this.field_n, 0);
+          this.setBounds(this.field_g + 3, 1, 0, this.field_n, 0);
           this.a(-63, this.field_K);
           if (null != this.field_L) {
             this.a(-42, this.field_L);
@@ -375,7 +375,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     final String getUsername(int param0) {
         if (param0 <= 84) {
           UiWidget var3 = (UiWidget) null;
-          this.a('f', (byte) 111, (UiWidget) null, -119);
+          this.handleKeyInput('f', (byte) 111, (UiWidget) null, -119);
         }
         if (null == this.field_N.field_q) {
           return "";

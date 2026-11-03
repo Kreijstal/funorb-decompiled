@@ -83,7 +83,7 @@ final class PlayerContextMenu {
     }
 
     final void hideMenu(boolean param0, boolean param1) {
-        this.field_j.a(47, param0);
+        this.field_j.draw(47, param0);
         if (param1) {
           this.showMenu(97);
         }
@@ -298,7 +298,7 @@ final class PlayerContextMenu {
         if (null == this.field_j) {
           return false;
         }
-        if (this.field_j.a(-2)) {
+        if (this.field_j.consumeSelection(-2)) {
           return true;
         }
         return false;
@@ -446,7 +446,7 @@ final class PlayerContextMenu {
         }
         var3 = var5.field_ec;
         if (var5.field_hc) {
-          this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, tb.field_u, new String[]{var3}));
+          this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocketArchiveNetworkClient.field_u, new String[]{var3}));
           this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ReceivedAuctionItem.field_z, new String[]{var3}));
           if (param0 == 1) {
             return;

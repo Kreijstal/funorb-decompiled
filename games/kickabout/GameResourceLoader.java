@@ -27,7 +27,7 @@ final class GameResourceLoader implements LoadingSequence {
             }
             var2_ref_oi = (IntValueNode) (LoginText.field_f.c(param0 ^ -27629));
           }
-          ok.field_a.b(22997);
+          ok.field_a.clear(22997);
           RasterBuffer.a(20164);
         }
         if (param0 != -27598) {
@@ -95,17 +95,17 @@ final class GameResourceLoader implements LoadingSequence {
         }
         if (v.field_b != null) {
           CipherPacketBuffer.k(61, 2);
-          eo.field_q = wa.a((byte) 124, "lobby", bo.field_Cb, "logo");
-          eo.field_p = ModalStack.a(bo.field_Cb, -28, "lobby", "time");
-          eo.field_j = ModalStack.a(bo.field_Cb, -121, "lobby", "tournament_icons");
+          eo.field_q = wa.a((byte) 124, "lobby", QuickChatKeysHelpPanel.field_Cb, "logo");
+          eo.field_p = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -28, "lobby", "time");
+          eo.field_j = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "tournament_icons");
           eo.field_j[0] = new Sprite(0, 0);
-          eo.field_m = ModalStack.a(bo.field_Cb, -121, "lobby", "exhibition_icons");
+          eo.field_m = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "exhibition_icons");
           eo.field_m[0] = new Sprite(0, 0);
-          eo.field_f = DemoIntegersCommand.a(bo.field_Cb, 17369, "lobby", "orb_icons");
-          ModalStack.a(bo.field_Cb, -127, "lobby", "players");
+          eo.field_f = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "lobby", "orb_icons");
+          ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -127, "lobby", "players");
           IntrusiveDeque.field_e = eo.field_q;
-          un.field_d = RenderedFootballer.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
-          ConsoleTokenCursor.field_d = Checkbox.a("font", v.field_b, 75, "fonts", bo.field_Cb);
+          un.field_d = RenderedFootballer.a(v.field_b, 10, "font2", QuickChatKeysHelpPanel.field_Cb, "fonts");
+          ConsoleTokenCursor.field_d = Checkbox.a("font", v.field_b, 75, "fonts", QuickChatKeysHelpPanel.field_Cb);
           IsSixCommand.field_C = Checkbox.a("", var17, 105, "arialish12", var16);
           var4 = new Sprite(16, 9);
           PacketBuffer.a(-64, var4);
@@ -113,37 +113,37 @@ final class GameResourceLoader implements LoadingSequence {
           SoftwareRasterizer.d(4, 4, 2, 13421772);
           TeamManagementScreen.e(122);
           var5 = eo.toIndexedSprite(var4);
-          IsSixCommand.field_C.a(new IndexedSprite[]{var5}, new int[]{10});
+          IsSixCommand.field_C.setInlineImages(new IndexedSprite[]{var5}, new int[]{10});
           sk.a(83, 100, 10);
           var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
-          LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
+          LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
           sh.field_g = nh.downscaleArgbByHalf(nh.a(var6));
-          AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 69, "divider"));
-          tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
-          GameAppletShell.field_l = wa.a((byte) 106, "menu", bo.field_Cb, "button_middle_shine");
+          AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 69, "divider"));
+          tt.field_e = wa.a((byte) 122, "menu", QuickChatKeysHelpPanel.field_Cb, "button_left_shine");
+          GameAppletShell.field_l = wa.a((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "button_middle_shine");
           sk.a(-109, 100, 20);
-          cg.field_K = wa.a((byte) 107, "menu", bo.field_Cb, "button_right_shine");
-          kh.field_r = wa.a((byte) 116, "menu", bo.field_Cb, "button_small_shine");
-          MatchScreen.field_l = wa.a((byte) 101, "menu", bo.field_Cb, "button_large_shine");
-          ig.field_a = ModalStack.a(bo.field_Cb, -119, "menu", "digifont");
+          cg.field_K = wa.a((byte) 107, "menu", QuickChatKeysHelpPanel.field_Cb, "button_right_shine");
+          kh.field_r = wa.a((byte) 116, "menu", QuickChatKeysHelpPanel.field_Cb, "button_small_shine");
+          MatchScreen.field_l = wa.a((byte) 101, "menu", QuickChatKeysHelpPanel.field_Cb, "button_large_shine");
+          ig.field_a = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -119, "menu", "digifont");
           sk.a(90, 100, 25);
-          ArrayWidgetContainer.field_z = ng.a("swatch_overlay", "menu", 2, bo.field_Cb);
-          var7 = ng.a("arrows", "menu", 2, bo.field_Cb);
+          ArrayWidgetContainer.field_z = ng.a("swatch_overlay", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          var7 = ng.a("arrows", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           eo.field_k = new ArgbSprite[]{(ArgbSprite) (var7[0]), (ArgbSprite) (var7[2]), (ArgbSprite) (var7[4])};
           eo.field_i = new ArgbSprite[]{(ArgbSprite) (var7[1]), (ArgbSprite) (var7[3]), (ArgbSprite) (var7[5])};
           sk.a(86, 100, 30);
           sk.a(103, 100, 35);
           sk.a(-94, 100, 40);
-          tb.field_q = ng.a("digits", "hud", 2, bo.field_Cb);
-          MouseInputHandler.field_g = ModalStack.a(bo.field_Cb, -121, "hud", "cones");
-          SpriteState.field_p = ng.a("tutorial", "hud", 2, bo.field_Cb);
-          tn.field_e = wa.a((byte) 114, "hud", bo.field_Cb, "arrow");
-          IntrusiveDequeCursor.a(-128, wa.a((byte) 114, "hud", bo.field_Cb, "cursor"));
+          SocketArchiveNetworkClient.field_q = ng.a("digits", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
+          MouseInputHandler.field_g = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "hud", "cones");
+          SpriteState.field_p = ng.a("tutorial", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
+          tn.field_e = wa.a((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "arrow");
+          IntrusiveDequeCursor.a(-128, wa.a((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "cursor"));
           sk.a(86, 100, 45);
-          TickClock.field_k = ng.a("dialog_icon", "menu", 2, bo.field_Cb);
-          ArrayWidgetContainer.field_y = wa.a((byte) 107, "menu", bo.field_Cb, "star");
+          TickClock.field_k = ng.a("dialog_icon", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          ArrayWidgetContainer.field_y = wa.a((byte) 107, "menu", QuickChatKeysHelpPanel.field_Cb, "star");
           sk.a(-48, 100, 60);
-          var8 = ng.a("trinkets", "menu", 2, bo.field_Cb);
+          var8 = ng.a("trinkets", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           ScrollContainer.field_Fb = new ArgbSprite[4][6];
           var9 = 0;
           for (var10_int = 0; var10_int < 3; var10_int++) {
@@ -159,24 +159,24 @@ final class GameResourceLoader implements LoadingSequence {
           for (var10_intLifetime2 = 0; var10_intLifetime2 < ca.field_c.length; var10_intLifetime2++) {
             ca.field_c[var10_intLifetime2] = ri.a(ScrollContainer.field_Fb[var10_intLifetime2][0], param0);
           }
-          ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 96, "help_up"));
-          QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
-          SquadGridWidget.a(ModalStack.a(bo.field_Cb, -124, "menu", "tickbox"), true);
+          ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 96, "help_up"));
+          QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 100, "help_dwn");
+          SquadGridWidget.a(ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -124, "menu", "tickbox"), true);
           sk.a(80, 100, 75);
-          WeightedLruCache.field_h = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 93, "hammer_icon"));
-          CipherPacketBuffer.field_q = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy"));
+          WeightedLruCache.field_h = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "hammer_icon"));
+          CipherPacketBuffer.field_q = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 89, "hammer_icon_buy"));
           sk.a(113, 100, 70);
-          TextLayoutLine.field_f = QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 60, "tactics_pitch");
-          fc.field_h = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 109, "lock_icon"));
+          TextLayoutLine.field_f = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 60, "tactics_pitch");
+          fc.field_h = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 109, "lock_icon"));
           sk.a(90, 100, 80);
-          RowRangeRequest.field_f = QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 78, "kit");
-          WriteIntegersCommand.field_E = ng.a("cups", "menu", 2, bo.field_Cb);
-          DelayedServerPacket.field_i = ng.a("cups_empty", "menu", 2, bo.field_Cb);
+          RowRangeRequest.field_f = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "kit");
+          WriteIntegersCommand.field_E = ng.a("cups", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          DelayedServerPacket.field_i = ng.a("cups_empty", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           sk.a(102, 100, 90);
-          Trinket.field_d = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 88, "shelf"));
-          rk.field_g = QuickChatPhraseDefinition.a("menu", bo.field_Cb, (byte) 76, "scroll_button");
-          LeaguesScreen.field_B = this.a("menu", bo.field_Cb, (byte) 26, "scroll_bar");
-          su.field_a = wa.a((byte) 106, "menu", bo.field_Cb, "mini_ball");
+          Trinket.field_d = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 88, "shelf"));
+          rk.field_g = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "scroll_button");
+          LeaguesScreen.field_B = this.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 26, "scroll_bar");
+          su.field_a = wa.a((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "mini_ball");
           sk.a(-91, 100, 95);
           var10 = eo.field_f;
           var11 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
@@ -273,7 +273,7 @@ final class GameResourceLoader implements LoadingSequence {
         if (param0 != 115) {
           return;
         }
-        wc.field_k = new UrlRequest(AnimationClip.field_g);
+        WidgetTheme.field_k = new UrlRequest(AnimationClip.field_g);
     }
 
     final static void a(byte param0) {
@@ -539,8 +539,8 @@ final class GameResourceLoader implements LoadingSequence {
               var3.field_y[var4] = PainterStyle.a(var3.field_y[var4], -16777216);
             }
           }
-          var3.a(-16777216);
-          var3.a(2130706432);
+          var3.addOutline(-16777216);
+          var3.addOutline(2130706432);
           MySquadScreen.field_U[var2] = (Sprite) ((Object) nh.downscaleArgbByHalf(var3));
         }
         CipherPacketBuffer.k(61, 11);
@@ -579,14 +579,14 @@ final class GameResourceLoader implements LoadingSequence {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         var7 = Kickabout.field_G;
-        if (wc.field_k == null) {
+        if (WidgetTheme.field_k == null) {
           return true;
         }
-        if (!wc.field_k.isDone((byte) -109)) {
+        if (!WidgetTheme.field_k.isDone((byte) -109)) {
           return false;
         }
-        var8 = wc.field_k.getResult(false);
-        wc.field_k = null;
+        var8 = WidgetTheme.field_k.getResult(false);
+        WidgetTheme.field_k = null;
         if (var8 == null) {
           IntKeyLookup.field_b = null;
           DelayedServerPacket.field_g = null;
@@ -637,7 +637,7 @@ final class GameResourceLoader implements LoadingSequence {
         }
         MySquadScreen.field_H = ImageProducerRasterBuffer.a((byte) -126, 3);
         StatefulTextPainter.field_y = ImageProducerRasterBuffer.a((byte) -128, 11);
-        bo.field_Cb = ImageProducerRasterBuffer.a((byte) -128, 5);
+        QuickChatKeysHelpPanel.field_Cb = ImageProducerRasterBuffer.a((byte) -128, 5);
         v.field_b = ImageProducerRasterBuffer.a((byte) -125, 6);
         IterableNodeHashTable.field_c = ImageProducerRasterBuffer.a((byte) -127, 7);
         d.field_b = ImageProducerRasterBuffer.a((byte) -128, 8);
@@ -657,25 +657,25 @@ final class GameResourceLoader implements LoadingSequence {
         mp.field_h.a(var4, BufferedSocket.field_q, -6869, "basic", CommonGame.field_M);
         mp.field_h.a(ResourceArchive.field_f, BufferedSocket.field_q, -6869, "", CommonGame.field_M);
         mp.field_h.a(var4, BufferedSocket.field_q, -6869, "arialish12", CommonGame.field_M);
-        mp.field_h.a(bo.field_Cb, TextLine.field_l, -6869, "fonts", CommonGame.field_M);
+        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, TextLine.field_l, -6869, "fonts", CommonGame.field_M);
         mp.field_h.a(v.field_b, TextLine.field_l, -6869, "fonts", te.field_b);
         mp.field_h.a(var3, TextLine.field_l, -6869, "arialish12", te.field_b);
         mp.field_h.a(var3, TextLine.field_l, -6869, "lobby", te.field_b);
-        mp.field_h.a(bo.field_Cb, LoggedPossession.field_a, -6869, "menu", CommonGame.field_M);
-        mp.field_h.a(bo.field_Cb, sm.field_j, param0 - 14181, "hud", CommonGame.field_M);
-        mp.field_h.a(bo.field_Cb, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
+        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, LoggedPossession.field_a, -6869, "menu", CommonGame.field_M);
+        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, sm.field_j, param0 - 14181, "hud", CommonGame.field_M);
+        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
         mp.field_h.a(var4, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
         if (ih.field_c == 0) {
-          mp.field_h.a(bo.field_Cb, pi.field_c, param0 - 14181, "park", CommonGame.field_M);
-          mp.field_h.a(bo.field_Cb, pi.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
+          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, pi.field_c, param0 - 14181, "park", CommonGame.field_M);
+          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, pi.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
         }
         if (ih.field_c == 1) {
-          mp.field_h.a(bo.field_Cb, th.field_b, -6869, "beach", CommonGame.field_M);
-          mp.field_h.a(bo.field_Cb, th.field_b, -6869, "beach_surface0", CommonGame.field_M);
+          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, th.field_b, -6869, "beach", CommonGame.field_M);
+          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, th.field_b, -6869, "beach_surface0", CommonGame.field_M);
         }
         if (ih.field_c == 2) {
-          mp.field_h.a(bo.field_Cb, h.field_d, param0 - 14181, "street", CommonGame.field_M);
-          mp.field_h.a(bo.field_Cb, h.field_d, -6869, "beach_surface0", CommonGame.field_M);
+          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, h.field_d, param0 - 14181, "street", CommonGame.field_M);
+          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, h.field_d, -6869, "beach_surface0", CommonGame.field_M);
         }
         mp.field_h.a(IterableNodeHashTable.field_c, (byte) -115, us.field_f, TextLayoutLine.field_c);
         mp.field_h.a(TextLayoutLine.field_c, d.field_b, -100);

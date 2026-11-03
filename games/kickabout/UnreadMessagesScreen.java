@@ -85,7 +85,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
             }
             CachedTextLayout.field_m = kr.a(new CharSequence[]{(CharSequence) ((Object) CachedTextLayout.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LobbyPlayerRow.field_Kb)}, false);
           }
-          rk.field_f.q(-105);
+          rk.field_f.closeDialog(-105);
           fj.a(param0 ^ 44);
         }
     }
@@ -144,7 +144,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
               stackIn_14_2 = null;
               stackIn_14_5 = ds.field_b;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var10).toString()), (byte) -29);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var10).toString()), (byte) -29);
             while (var4.field_a == 0) {
               aj.a(1L, param2 + 0);
             }

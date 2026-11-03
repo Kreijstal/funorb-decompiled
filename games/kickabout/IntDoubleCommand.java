@@ -8,7 +8,7 @@ final class IntDoubleCommand extends ConsoleCommand {
     static long field_A;
     static int field_D;
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -260,8 +260,8 @@ final class IntDoubleCommand extends ConsoleCommand {
           if (param3 < 71) {
             IntDoubleCommand.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);
           }
-          AnimationClip.field_d.a(param1, param0, 9255, param2);
-          SoftwareRasterizer.b();
+          AnimationClip.field_d.setProgress(param1, param0, 9255, param2);
+          SoftwareRasterizer.clearFramebuffer();
           oa.a((byte) -106, true);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

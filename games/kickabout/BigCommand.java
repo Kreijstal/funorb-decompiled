@@ -18,7 +18,7 @@ final class BigCommand extends ConsoleCommand {
         return ep.field_b;
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;
@@ -28,7 +28,7 @@ final class BigCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(qi.b(3));
+            stackIn_4_0 = new ConsoleValue(PlayerStatSortCriterion.b(3));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

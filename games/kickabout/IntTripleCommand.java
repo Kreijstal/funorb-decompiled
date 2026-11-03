@@ -35,7 +35,7 @@ final class IntTripleCommand extends ConsoleCommand {
         return -GameSoundEffect.field_k + so.field_e;
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

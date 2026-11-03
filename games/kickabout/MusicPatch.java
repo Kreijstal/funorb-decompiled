@@ -29,16 +29,16 @@ final class MusicPatch extends IntrusiveNode {
         var1 = nj.monotonicMillis(-128);
         var3 = var1 - pc.field_c;
         if (30000L < var3) {
-          cv.field_d = 0;
+          MeshObject.field_d = 0;
           pc.field_c = var1;
           return true;
         }
         var5 = 3000;
-        if (cv.field_d >= 7) {
+        if (MeshObject.field_d >= 7) {
           var5 = 12000;
         } else {
-          if (cv.field_d < 5) {
-            if (cv.field_d >= 3) {
+          if (MeshObject.field_d < 5) {
+            if (MeshObject.field_d >= 3) {
               var5 = 6000;
             }
           } else {
@@ -49,7 +49,7 @@ final class MusicPatch extends IntrusiveNode {
           return false;
         }
         pc.field_c = var1;
-        cv.field_d = cv.field_d + 1;
+        MeshObject.field_d = MeshObject.field_d + 1;
         return true;
     }
 
@@ -85,18 +85,18 @@ final class MusicPatch extends IntrusiveNode {
           if (param0 != 16777215) {
             MusicPatch.a(32);
           }
-          SquadPickerDialog.field_Q.b(var1_int, var2, al.a(false, (byte) 51));
-          if (tb.field_w != null) {
+          SquadPickerDialog.field_Q.b(var1_int, var2, FriendsListPanel.a(false, (byte) 51));
+          if (SocketArchiveNetworkClient.field_w != null) {
             AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
             for (var3_int = 0; 2 > var3_int; var3_int++) {
               if (mk.field_c != -2) {
-                stackIn_17_0 = (var3_int != tb.field_w.field_g[mk.field_c].field_p) ? 0 : 1;
+                stackIn_17_0 = (var3_int != SocketArchiveNetworkClient.field_w.field_g[mk.field_c].field_p) ? 0 : 1;
               } else {
                 stackIn_17_0 = (var3_int != 0) ? 0 : 1;
               }
               var4 = stackIn_17_0;
               for (var5 = 0; var5 < 5; var5++) {
-                var11 = (RenderedFootballer) (tb.field_w.field_P[var3_int][var5]);
+                var11 = (RenderedFootballer) (SocketArchiveNetworkClient.field_w.field_P[var3_int][var5]);
                 stackIn_22_0 = (var4 != 0) ? 2271999 : 16716032;
                 var7 = stackIn_22_0;
                 if (var5 == 0) {
@@ -111,14 +111,14 @@ final class MusicPatch extends IntrusiveNode {
                 var9 = 23 * var9 >> 8;
                 var8 = var8 * 23 >> 8;
                 SoftwareRasterizer.d(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
-                SoftwareRasterizer.c(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
+                SoftwareRasterizer.drawCircle(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
               }
             }
-            var3 = (RenderedBall) (tb.field_w.field_V);
+            var3 = (RenderedBall) (SocketArchiveNetworkClient.field_w.field_V);
             var4Lifetime1 = var3.field_N >> 16;
             var5Lifetime1 = var3.field_E >> 16;
-            if (tb.field_w.field_V.possessorTeam != -1) {
-              var12 = (RenderedFootballer) (tb.field_w.getBallCarrier((byte) -96));
+            if (SocketArchiveNetworkClient.field_w.field_V.possessorTeam != -1) {
+              var12 = (RenderedFootballer) (SocketArchiveNetworkClient.field_w.getBallCarrier((byte) -96));
               stackIn_34_0 = (!var12.isMovingDiagonally(false)) ? 40 : 30;
               var7Lifetime1 = stackIn_34_0;
               var5Lifetime1 = (var12.field_bb >> 16) + var12.directionY * var7Lifetime1;
@@ -131,7 +131,7 @@ final class MusicPatch extends IntrusiveNode {
             var5Lifetime1 = var5Lifetime1 * 23 >> 8;
             var4Lifetime1 = var4Lifetime1 * 23 >> 8;
             SoftwareRasterizer.d(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
-            SoftwareRasterizer.c(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
+            SoftwareRasterizer.drawCircle(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
             TeamManagementScreen.e(125);
             return;
           }
@@ -496,7 +496,7 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = -1;
               }
-              var22 = var38.l(-35);
+              var22 = var38.readVarInt(-35);
             }
             this.field_r[var23] = (short)(this.field_r[var23] + (TextLayoutLine.b(-1 + var22, 2) << 14));
             this.field_q[var23] = var22;

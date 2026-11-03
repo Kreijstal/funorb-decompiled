@@ -12,10 +12,10 @@ final class IsaacRandom {
     static int field_c;
     private int field_b;
 
-    final int b(byte param0) {
+    final int nextInt(byte param0) {
         int var2 = 102 / ((2 - param0) / 62);
         if (this.field_e == 0) {
-          this.a(256);
+          this.generateResults(256);
           this.field_e = 256;
         }
         int fieldTemp$0 = this.field_e - 1;
@@ -34,7 +34,7 @@ final class IsaacRandom {
           if (param1 != -30273) {
             field_f = (int[]) null;
           }
-          stackIn_3_0 = (param2.l(param0, 59) ^ 1 << param0 - 1) - (1 << param0 - 1);
+          stackIn_3_0 = (param2.readBits(param0, 59) ^ 1 << param0 - 1) - (1 << param0 - 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class IsaacRandom {
           this.field_i[6 + var2Lifetime2] = var9;
           this.field_i[7 + var2Lifetime2] = var10;
         }
-        this.a(256);
+        this.generateResults(256);
         this.field_e = 256;
     }
 
@@ -280,10 +280,10 @@ final class IsaacRandom {
         if (!param0) {
           return 17;
         }
-        return (int)jr.field_Gb;
+        return (int)ReceivedAuctionItemRow.field_Gb;
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;

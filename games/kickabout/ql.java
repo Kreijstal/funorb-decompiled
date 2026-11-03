@@ -19,12 +19,12 @@ final class ql {
 
     final static void a(int param0) {
         if (param0 == 31663) {
-          ScrollPane.field_Jb.a(new WelcomeDialog(), 3);
+          ScrollPane.field_Jb.addLast(new WelcomeDialog(), 3);
           return;
         }
         String var2 = (String) null;
         ql.a((byte) 32, false, (String) null);
-        ScrollPane.field_Jb.a(new WelcomeDialog(), 3);
+        ScrollPane.field_Jb.addLast(new WelcomeDialog(), 3);
     }
 
     final static SocketConnector a(String param0, int param1, int param2) {
@@ -110,10 +110,10 @@ final class ql {
           if (param0 != 96) {
             field_d = (String) null;
           }
-          var3_int = al.a(false, (byte) 71);
+          var3_int = FriendsListPanel.a(false, (byte) 71);
           if (4 == vt.field_c.phase) {
             sk.a(1, var3_int);
-            od.a(param2, var3_int, vt.field_c.participantStatus, 14839);
+            PlayerValueSortCriterion.a(param2, var3_int, vt.field_c.participantStatus, 14839);
             if (ContextMenuItem.field_Cb == -2 ||
               !vt.field_c.participantStatus[ContextMenuItem.field_Cb].isActive(3511)) {
               ig.a(param1, 16777215, var3_int);

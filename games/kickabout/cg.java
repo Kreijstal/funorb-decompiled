@@ -115,10 +115,10 @@ final class cg extends SingleChildContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_t + param2;
         int var6 = param3 + this.field_g;
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (0 != param0) {
           return;
         }
@@ -126,10 +126,10 @@ final class cg extends SingleChildContainer {
         this.field_I.a(this.field_A, var5 + (var7 + this.field_J), this.field_J + var6, -this.field_J + this.field_M, this.field_i - this.field_J * 2, this.field_C, -1, this.field_B ? 0 : 2, 1, this.field_I.field_G);
     }
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         int var2 = this.field_z.field_m ? 1 : 0;
         this.field_z.field_m = this.field_m;
-        String var3 = this.field_z.f(param0);
+        String var3 = this.field_z.getTooltip(param0);
         this.field_z.field_m = var2 != 0 ? true : false;
         return var3;
     }
@@ -162,7 +162,7 @@ final class cg extends SingleChildContainer {
           var12_int = this.field_M - this.field_J;
           var13 = this.field_I.paragraphHeight(param10, var12_int, this.field_I.field_G) + 2 * this.field_J;
           if (param3 < var13) {
-            this.a(var13, 1, param0, param2, param1);
+            this.setBounds(var13, 1, param0, param2, param1);
           } else {
             var13 = param3;
           }
@@ -172,7 +172,7 @@ final class cg extends SingleChildContainer {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_z.a(-(this.field_J * 2) + param3, 1, var14, -this.field_M + (param2 - this.field_J * 3), this.field_J + (var13 - param3 >> 1));
+          this.field_z.setBounds(-(this.field_J * 2) + param3, 1, var14, -this.field_M + (param2 - this.field_J * 3), this.field_J + (var13 - param3 >> 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

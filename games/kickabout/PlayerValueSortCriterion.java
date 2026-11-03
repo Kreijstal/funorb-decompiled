@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends SortCriterion {
+final class PlayerValueSortCriterion extends SortCriterion {
     static Sprite field_p;
     static boolean field_n;
     static String field_o;
 
-    od() {
+    PlayerValueSortCriterion() {
     }
 
     final int compare(int param0, Object param1, Object param2) {
@@ -167,8 +167,8 @@ final class od extends SortCriterion {
                 } else {
                   var17 = 644 + (-et.field_c + 10);
                   var18 = ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12]);
-                  SoftwareRasterizer.b(var17, -2 + (var13 - TextPromptDialog.field_yb), var18 + var17, var13 - 1, 13382451);
-                  SoftwareRasterizer.b(var17, -1 + var13, var17 + var18, -2 - TextPromptDialog.field_yb + var13, 13382451);
+                  SoftwareRasterizer.drawLine(var17, -2 + (var13 - TextPromptDialog.field_yb), var18 + var17, var13 - 1, 13382451);
+                  SoftwareRasterizer.drawLine(var17, -1 + var13, var17 + var18, -2 - TextPromptDialog.field_yb + var13, 13382451);
                 }
                 var11++;
                 if (JaggrabDownloader.field_c) {

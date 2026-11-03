@@ -10,20 +10,20 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
     static String field_x;
     static int[][] field_v;
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 != 65) {
-          this.f((byte) -56);
+          this.getLastRenderPass((byte) -56);
         }
         if (0 == param0 &&
           null != this.field_r) {
-          this.field_r.a(121, true, param3, (UiWidget) (this), param2);
+          this.field_r.drawWidget(121, true, param3, (UiWidget) (this), param2);
         }
         if (null != this.field_z) {
-          this.field_z.a(param0, 65, param2 + this.field_t, param3 + this.field_g);
+          this.field_z.drawLayer(param0, 65, param2 + this.field_t, param3 + this.field_g);
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 <= 10) {
           return true;
         }
@@ -33,7 +33,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
     UiWidget a(int param0) {
         UiWidget var2 = this.field_z;
         if (var2 != null &&
-          var2.b(19)) {
+          var2.isFocused(19)) {
           return var2;
         }
         if (param0 == 0) {
@@ -43,7 +43,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         return null;
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -54,7 +54,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           if (param1 != 0) {
             SingleChildContainer.j(-18);
           }
-          stackIn_6_0 = (null != this.field_z) && (this.field_z.a(param0, 0));
+          stackIn_6_0 = (null != this.field_z) && (this.field_z.requestKeyboardFocus(param0, 0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           if (param0 != 99) {
             field_y = (Calendar) null;
           }
-          stackIn_7_0 = (this.field_z != null) && (!this.field_z.b(param0 ^ 113)) && (this.field_z.a(param1, 0));
+          stackIn_7_0 = (this.field_z != null) && (!this.field_z.isFocused(param0 ^ 113)) && (this.field_z.requestKeyboardFocus(param1, 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,11 +101,11 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final int f(byte param0) {
+    final int getLastRenderPass(byte param0) {
         if (param0 != 118) {
-          this.f(60);
+          this.getTooltip(60);
         }
-        return this.field_z == null ? 0 : this.field_z.f((byte) 118);
+        return this.field_z == null ? 0 : this.field_z.getLastRenderPass((byte) 118);
     }
 
     final static int a(boolean param0, int param1) {
@@ -119,7 +119,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         return var2;
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
@@ -132,8 +132,8 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
             field_y = (Calendar) null;
           }
           if (null != this.field_z &&
-            this.field_z.b(81) &&
-            this.field_z.a(param0, (byte) -114, param2, param3)) {
+            this.field_z.isFocused(81) &&
+            this.field_z.handleKeyInput(param0, (byte) -114, param2, param3)) {
             return true;
           }
           var5_int = param3;
@@ -162,10 +162,10 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
 
     void a(byte param0) {
         if (param0 != -32) {
-          this.a(43, 116, 100, 117, -104);
+          this.setBounds(43, 116, 100, 117, -104);
         }
         if (this.field_z != null) {
-          this.field_z.e(-1947);
+          this.field_z.refreshLayout(-1947);
         }
     }
 
@@ -175,7 +175,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         return var3 + (param1 + (param1 >>> 31)) % param2;
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerWheel(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_5_0 = false;
@@ -185,7 +185,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = 53 / ((63 - param6) / 56);
-          stackIn_5_0 = (null != this.field_z) && (this.field_z.b(126)) && (this.field_z.a(param0, param1, param2, param3, param4, param5, 123));
+          stackIn_5_0 = (null != this.field_z) && (this.field_z.isFocused(126)) && (this.field_z.handlePointerWheel(param0, param1, param2, param3, param4, param5, 123));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -251,7 +251,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
             discarded$28 = param2.append(' ');
           }
           if (this.field_z != null) {
-            this.field_z.a(17883, param3 + 1, param0, param2);
+            this.field_z.appendDebugTree(17883, param3 + 1, param0, param2);
           } else {
             discarded$27 = param2.append("null");
           }
@@ -286,7 +286,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -75 / ((18 - param0) / 53);
-          stackIn_5_0 = (null != this.field_z) && (!this.field_z.b(30)) && (this.field_z.a(param1, 0));
+          stackIn_5_0 = (null != this.field_z) && (!this.field_z.isFocused(30)) && (this.field_z.requestKeyboardFocus(param1, 0));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -302,7 +302,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -315,8 +315,8 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           if (param0 != 17883) {
             SingleChildContainer.j(31);
           }
-          if (this.a(1, param3, param2, param1)) {
-            this.b(param1, param3, param2, -18568);
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
+            this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
             this.a(param2, 124, param3, param1);
           }
           stackIn_5_0 = (StringBuilder) (param3);
@@ -341,16 +341,16 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final void g(int param0) {
+    final void clearKeyboardFocus(int param0) {
         if (null != this.field_z) {
-          this.field_z.g(84);
+          this.field_z.clearKeyboardFocus(84);
         }
         if (param0 != 84) {
-          this.a(99, 40, 102, 127, 55);
+          this.setBounds(99, 40, 102, 127, 55);
         }
     }
 
-    void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -361,7 +361,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
             field_y = (Calendar) null;
           }
           if (this.field_z != null) {
-            this.field_z.a(this.field_g + param0, param1, param2, param3, -1, this.field_t + param5);
+            this.field_z.handlePointerRelease(this.field_g + param0, param1, param2, param3, -1, this.field_t + param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -378,11 +378,11 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    void a(byte param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           if (null != this.field_z) {
-            this.field_z.a((byte) 12, param1, this.field_t + param2, param3 + this.field_g);
+            this.field_z.updatePointerState((byte) 12, param1, this.field_t + param2, param3 + this.field_g);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ct.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -434,19 +434,19 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         field_y = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a((byte) -32);
     }
 
-    String f(int param0) {
+    String getTooltip(int param0) {
         String var3 = null;
         if (param0 != -1) {
-          this.a(82, -102, -71, 69, -83);
+          this.setBounds(82, -102, -71, 69, -83);
         }
-        String var2 = super.f(param0 + 0);
+        String var2 = super.getTooltip(param0 + 0);
         if (null != this.field_z) {
-          var3 = this.field_z.f(-1);
+          var3 = this.field_z.getTooltip(-1);
           if (var3 != null) {
             return var3;
           }

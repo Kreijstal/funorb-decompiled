@@ -61,7 +61,7 @@ final class cr implements WidgetPainter {
         return false;
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -79,14 +79,14 @@ final class cr implements WidgetPainter {
         try {
           var7 = 43 / ((59 - param0) / 53);
           if (!param3.field_m &&
-            !param3.b(45)) {
+            !param3.isFocused(45)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
           this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_q + "</u>", param4 + param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6_int, -1, this.field_a, this.field_i, this.field_h.field_p + this.field_h.field_G);
-          if (!param3.b(93)) {
+          if (!param3.isFocused(93)) {
             return;
           }
           var8 = this.field_h.a(param3.field_q);

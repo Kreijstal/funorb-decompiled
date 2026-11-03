@@ -10,7 +10,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
     static wp[] field_F;
 
     final void buildWidgets(int param0) {
-        this.field_A = eo.a("", 7126504, un.field_d, -1, false);
+        this.field_A = eo.createRenderedButton("", 7126504, un.field_d, -1, false);
         if (param0 != -38) {
           this.updateScreen((byte) -76, false);
         }
@@ -21,7 +21,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         int var6 = Kickabout.field_G;
         super.drawOverlay(param0, 116);
         SoftwareRasterizer.a(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
-        this.field_A.a(50, param0);
+        this.field_A.draw(50, param0);
         String var3 = SingleChildContainer.field_w.toLowerCase();
         int var4 = (int)Math.abs(-(nj.monotonicMillis(-58) / 1000L % 6L) + 3L);
         un.field_d.c(hv.field_d.toUpperCase(), (this.field_A.field_q >> 1) + this.field_A.field_F, this.field_A.field_T + (this.field_A.field_mb >> 1) + 6, 16777215, -1, this.field_C);
@@ -85,7 +85,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
 
     private final void a(boolean param0) {
         if (!param0) {
-          this.field_A.a(true, this.field_A.field_q, (f.field_d >> 1) - (this.field_A.field_q >> 1), 100 + (ReceivedAuctionItem.field_B >> 1), this.field_A.field_mb);
+          this.field_A.setBounds(true, this.field_A.field_q, (f.field_d >> 1) - (this.field_A.field_q >> 1), 100 + (ReceivedAuctionItem.field_B >> 1), this.field_A.field_mb);
           return;
         }
     }
@@ -104,7 +104,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
 
     final void updateScreen(byte param0, boolean param1) {
         super.updateScreen((byte) 122, param1);
-        this.field_A.b(0, param1);
+        this.field_A.updateInput(0, param1);
         int var3 = -96 % ((param0 - 38) / 60);
         if (1 != this.field_A.field_sb) {
           return;

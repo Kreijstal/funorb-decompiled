@@ -61,11 +61,11 @@ final class PromotionDialog extends MessageDialog {
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          wd.field_l.a(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
+          wd.field_l.processPointerFrame(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
           var1_int = -43 % ((param0 + 39) / 43);
           wd.field_l.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            wd.field_l.a(il.field_c, (byte) -88, FixedQuaternion.field_e);
+            wd.field_l.dispatchKeyInput(il.field_c, (byte) -88, FixedQuaternion.field_e);
           }
           if (BlackFadeScreen.field_j != -1) {
             var2 = BlackFadeScreen.field_j;

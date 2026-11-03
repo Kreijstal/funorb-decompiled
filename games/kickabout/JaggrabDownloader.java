@@ -38,7 +38,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_b == 0) {
           if (this.field_l == null) {
-            this.field_l = this.field_a.a(this.field_k, (byte) -122);
+            this.field_l = this.field_a.requestUrl(this.field_k, (byte) -122);
           }
           if (this.field_l.field_a == 0) {
             return false;

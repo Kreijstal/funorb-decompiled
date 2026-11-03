@@ -80,7 +80,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           param2.readBytes(param3.field_Eb, 0, (byte) -6, param3.field_Eb.length);
           stackIn_28_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
-          param3.field_Ob = param2.a((byte) 81);
+          param3.field_Ob = param2.readUnsignedShort((byte) 81);
           param3.field_Fb = nj.monotonicMillis(-128) - (long)param2.readInt(4);
           if (var5 != 0) {
             param3.field_ac = param2.readInt(4);
@@ -260,7 +260,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           ListingRowCache.a(-1, 178, this.slideOffsetX + 45, (byte) -96, var11);
           for (var12Lifetime4 = 0; var12Lifetime4 < 9; var12Lifetime4++) {
             this.field_K[var12Lifetime4].field_s = this.slideOffsetX + 45 + var12Lifetime4 % 3 * 52;
-            this.field_K[var12Lifetime4].b(0, false);
+            this.field_K[var12Lifetime4].updateInput(0, false);
             this.field_K[var12Lifetime4].h((byte) -123);
           }
           SoftwareRasterizer.a(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
@@ -392,7 +392,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               } else {
                 stackIn_67_3 = -(var18 >> 1);
               }
-              SoftwareRasterizer.b(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
+              SoftwareRasterizer.drawLine(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
               stackIn_69_0 = var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1);
               stackIn_69_1 = 1 + var13Lifetime2Lifetime1;
               stackIn_69_2 = var12Lifetime2Lifetime1 - (-(var17 << 1) + (var15Lifetime1Lifetime1 >> 1));
@@ -402,7 +402,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               } else {
                 stackIn_70_4 = -(var18 >> 1);
               }
-              SoftwareRasterizer.b(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
+              SoftwareRasterizer.drawLine(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
             }
             var13Lifetime2Lifetime1 = var13Lifetime2Lifetime1 + var18;
             if (var21 == var14Lifetime2 - 8 ||
@@ -457,7 +457,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         int var3 = -118 / ((param0 - 38) / 60);
         if (this.pageIndex == 0) {
           for (var4_int = 0; 9 > var4_int; var4_int++) {
-            this.field_K[var4_int].b(0, param1);
+            this.field_K[var4_int].updateInput(0, param1);
             this.field_K[var4_int].a(31, 11, (byte) 125, 16, this.field_M[var4_int]);
           }
         }

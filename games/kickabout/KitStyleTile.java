@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class KitStyleTile extends UiLayoutNode implements lv {
+final class KitStyleTile extends UiLayoutNode implements PopupCard {
     private ModelMesh field_Eb;
     UiLayoutNode field_Jb;
     private int field_Db;
@@ -122,21 +122,21 @@ final class KitStyleTile extends UiLayoutNode implements lv {
 
     }
 
-    public final int a(int param0) {
+    public final int getHeight(int param0) {
         if (param0 != 15) {
           return 38;
         }
         return 120;
     }
 
-    public final int b(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != 0) {
           field_zb = (int[]) null;
         }
         return 110;
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void drawCentered(int param0, int param1, int param2) {
         AppScreen.renderModelToSprite(this.field_Eb, this.field_Db, PlayArea.field_e, -83);
         eo.a(PlayArea.field_e, 131586);
         eo.a(PlayArea.field_e, 16777215);
@@ -288,7 +288,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
         if (null == this.field_Eb ||
           var3 != this.field_Fb ||
           this.field_Ab != var4) {
-          this.field_Eb = AuctionsHelpScreen.a(this.field_Cb.field_m, LongPlusOneCommand.field_B[var4], true, LongPlusOneCommand.field_B[var3]).b(100, 4369, 20, -56, -20);
+          this.field_Eb = AuctionsHelpScreen.a(this.field_Cb.field_m, LongPlusOneCommand.field_B[var4], true, LongPlusOneCommand.field_B[var3]).createModelMesh(100, 4369, 20, -56, -20);
           this.field_Fb = var3;
           this.field_Ab = var4;
         }
@@ -343,7 +343,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
             if (!this.field_Kb) {
               kj.a((byte) 81);
             } else {
-              tb.a((byte) 126, 36);
+              SocketArchiveNetworkClient.a((byte) 126, 36);
             }
           }
         }
@@ -419,7 +419,7 @@ final class KitStyleTile extends UiLayoutNode implements lv {
           this.field_Jb = new UiLayoutNode();
           this.addChild((byte) -128, this.field_Jb);
           this.field_q = 50;
-          this.field_Jb.a(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
+          this.field_Jb.setBounds(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
           this.field_Ib = this.field_Cb.a(ScrollContainer.field_Ib, (byte) 54, BufferedSocket.field_f);
           this.field_Kb = this.field_Cb.a(ScrollContainer.field_Ib, field_yb, (byte) -81);
         } catch (RuntimeException runtimeException) {

@@ -1208,7 +1208,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = bo.a(s.j(61), (byte) -98, PlayingView.f(-1));
+            var5_int = QuickChatKeysHelpPanel.a(s.j(61), (byte) -98, PlayingView.f(-1));
             if (-1 != var5_int) {
               LeagueWinnerDialog.a(ValidatedTextWidget.field_X, var5_int, ListingRowCache.field_b, -1);
               ListingRowCache.field_b = null;
@@ -1284,7 +1284,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             bq.a((byte) 125, so.a(51));
           }
           if (var4 == 12) {
-            im.a(so.a(-85), 114, IsaacRandom.c(71));
+            ListRow.openUrlInBrowser(so.a(-85), 114, IsaacRandom.c(71));
           }
           if (13 == var4) {
             try {
@@ -1343,7 +1343,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         String var10 = null;
         try {
           try {
-            if (!this.d((byte) 118)) {
+            if (!this.isHostAllowed((byte) 118)) {
               return;
             }
             this.field_z = this.getCodeBase().getHost();
@@ -1374,7 +1374,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.field_r = Integer.parseInt(var9);
             }
             DualLinkDeque.field_d = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param1, param3, this.field_B, (byte) -126, param2, param0, 32);
+            this.startAppletShell(param1, param3, this.field_B, (byte) -126, param2, param0, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
@@ -1400,7 +1400,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     final static void k(int param0) {
         if (DebugConsole.field_s) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_c - SoftwareRasterizer.field_b, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
-          LeaguesHelpScreen.field_E.a(46, false);
+          LeaguesHelpScreen.field_E.draw(46, false);
         }
         if (param0 != 1) {
           CharSequence var2 = (CharSequence) null;

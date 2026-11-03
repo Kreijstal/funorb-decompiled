@@ -11,7 +11,7 @@ final class MusicTrackMixer extends PcmStream {
     int field_o;
     private int[] field_i;
 
-    final int d() {
+    final int getSchedulingCost() {
         return 2;
     }
 
@@ -148,7 +148,7 @@ final class MusicTrackMixer extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
@@ -226,10 +226,10 @@ final class MusicTrackMixer extends PcmStream {
             var4 = param1;
           }
           var6 = new WhirlpoolHasher();
-          var6.a(true);
-          var6.a((byte) 126, (long)(param0 * 8), var4);
+          var6.reset(true);
+          var6.updateBits((byte) 126, (long)(param0 * 8), var4);
           var7 = new byte[64];
-          var6.a(var7, 21024, 0);
+          var6.finishDigest(var7, 21024, 0);
           stackIn_7_0 = var7;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -298,7 +298,7 @@ final class MusicTrackMixer extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 

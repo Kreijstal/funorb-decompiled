@@ -49,7 +49,7 @@ final class c {
             }
             if (or.field_d.field_n > 0) {
               try {
-                op.field_y.a(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
+                op.field_y.write(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
                 mp.field_i = nj.monotonicMillis(-117);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

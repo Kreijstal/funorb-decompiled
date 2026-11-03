@@ -42,7 +42,7 @@ final class MenuButton {
                 AuctionsScreen.startComputerMatch(10, true);
               }
             } else {
-              tb.a((byte) 126, 5);
+              SocketArchiveNetworkClient.a((byte) 126, 5);
             }
           } else {
             if (this.kind != 1) {
@@ -138,8 +138,8 @@ final class MenuButton {
                                                                                       }
                                                                                     } else {
                                                                                       if (30 == this.kind) {
-                                                                                        stackIn_76_0 = (tb.field_v != 1) ? 1 : 0;
-                                                                                        tb.field_v = stackIn_76_0;
+                                                                                        stackIn_76_0 = (SocketArchiveNetworkClient.field_v != 1) ? 1 : 0;
+                                                                                        SocketArchiveNetworkClient.field_v = stackIn_76_0;
                                                                                       } else {
                                                                                         if (this.kind == 15) {
                                                                                           AppScreen.openQuitPage(20338, so.a(101));
@@ -168,7 +168,7 @@ final class MenuButton {
                                                                   }
                                                                 } else {
                                                                   um.field_e.leaveMatch(param1, 18);
-                                                                  al.field_Db = true;
+                                                                  FriendsListPanel.field_Db = true;
                                                                 }
                                                               } else {
                                                                 if (SplashScreen.field_m == null) {
@@ -221,10 +221,10 @@ final class MenuButton {
             } else {
               if (!PlayArea.a(100)) {
                 if (!GameLoopApplet.field_E.field_J[0]) {
-                  tb.a((byte) 126, 26);
+                  SocketArchiveNetworkClient.a((byte) 126, 26);
                 } else {
                   if (!GameLoopApplet.field_E.d((byte) 64)) {
-                    tb.a((byte) 126, 5);
+                    SocketArchiveNetworkClient.a((byte) 126, 5);
                   } else {
                     MouseWheelInput.a(-1822);
                   }
@@ -342,12 +342,12 @@ final class MenuButton {
         var6 = Kickabout.field_G;
         try {
           if (ug.field_c == null) {
-            if (!bo.field_Cb.a(false, "stadium_icon")) {
+            if (!QuickChatKeysHelpPanel.field_Cb.a(false, "stadium_icon")) {
               return;
             }
-            var7 = ModalStack.a(bo.field_Cb, 53, "stadium_icon", "park");
-            var8 = ModalStack.a(bo.field_Cb, param0 ^ 20, "stadium_icon", "beach");
-            var3 = ModalStack.a(bo.field_Cb, -121, "stadium_icon", "street");
+            var7 = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, 53, "stadium_icon", "park");
+            var8 = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, param0 ^ 20, "stadium_icon", "beach");
+            var3 = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "stadium_icon", "street");
             var4 = new Sprite[12];
             for (var5 = 0; var5 < 4; var5++) {
               var4[var5] = var7[var5];
@@ -357,18 +357,18 @@ final class MenuButton {
             IntrusiveNodeHashTable.a(true, var4);
           }
           if (null == DirectByteStorage.field_g) {
-            if (!bo.field_Cb.a(false, "instructions")) {
+            if (!QuickChatKeysHelpPanel.field_Cb.a(false, "instructions")) {
               return;
             }
-            var9 = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 119, "arrowkey");
-            var10 = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 43, "key");
+            var9 = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 119, "arrowkey");
+            var10 = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 43, "key");
             AccountRegistrationPanel.field_C = AuctionsScreen.a(3, var9);
             DebugConsole.field_y = new Sprite[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
             lt.field_d = new Sprite[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(param0 - 2, ip.field_d[1], var10, 50)[1]};
-            DirectByteStorage.field_g = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 78, "mouse");
-            RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 108, "mouse_left");
-            PlayerInputEvent.field_q = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 103, "mouse_right");
-            ak.field_f = QuickChatPhraseDefinition.a("instructions", bo.field_Cb, (byte) 106, "mouse_roller");
+            DirectByteStorage.field_g = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "mouse");
+            RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "mouse_left");
+            PlayerInputEvent.field_q = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 103, "mouse_right");
+            ak.field_f = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 106, "mouse_roller");
           }
           if (param0 != 2) {
             field_l = 67;
@@ -434,7 +434,7 @@ final class MenuButton {
             this.field_p = ((String) (Object) stackIn_40_1[stackIn_41_2]).toLowerCase();
           } else {
             if (this.kind == 30) {
-              this.field_p = TextWidgetPainter.field_d[tb.field_v].toLowerCase();
+              this.field_p = TextWidgetPainter.field_d[SocketArchiveNetworkClient.field_v].toLowerCase();
             } else {
               if (this.kind == 9) {
                 this.field_p = NumericDateInputWidget.field_N.toLowerCase();

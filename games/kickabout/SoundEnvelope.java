@@ -54,8 +54,8 @@ final class SoundEnvelope {
         this.field_e = new int[this.field_c];
         this.field_i = new int[this.field_c];
         for (var2 = 0; var2 < this.field_c; var2++) {
-          this.field_e[var2] = param0.a((byte) 81);
-          this.field_i[var2] = param0.a((byte) 81);
+          this.field_e[var2] = param0.readUnsignedShort((byte) 81);
+          this.field_i[var2] = param0.readUnsignedShort((byte) 81);
         }
     }
 

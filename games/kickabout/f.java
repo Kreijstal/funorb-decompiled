@@ -14,34 +14,34 @@ final class f {
           param4 = f.$cfr$intArgs$a$8e2a9e3a0d15(120, param1 / 10, param2, param3, param4);
         }
         if (param0 > 109) {
-          var5 = tb.field_q[param1 % 10];
+          var5 = SocketArchiveNetworkClient.field_q[param1 % 10];
           var5.drawAdditive(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;
         }
         f.$cfr$intArgs$a$8e2a9e3a0d15(-108, -67, -1, 23, 75);
-        var5Lifetime1 = tb.field_q[param1 % 10];
+        var5Lifetime1 = SocketArchiveNetworkClient.field_q[param1 % 10];
         var5Lifetime1.drawAdditive(-var5Lifetime1.field_s + param4, param3, param2);
         return var5Lifetime1.field_q + param4 + 3;
     }
 
     final static void a(ResourceArchive param0, byte param1) {
         try {
-          ad.field_d[0] = MusicTrack.a(param0, "", "KaB_park_menu");
+          ad.field_d[0] = MusicTrack.load(param0, "", "KaB_park_menu");
           sk.a(80, 8, 0);
-          ad.field_d[1] = MusicTrack.a(param0, "", "KaB_beach_atmospherics_loop_lvl1_2");
+          ad.field_d[1] = MusicTrack.load(param0, "", "KaB_beach_atmospherics_loop_lvl1_2");
           sk.a(73, 8, 1);
           int var2_int = 109 / ((param1 - 28) / 61);
-          ad.field_d[2] = MusicTrack.a(param0, "", "KaB_park_atmospherics_loop_lvl1_2");
+          ad.field_d[2] = MusicTrack.load(param0, "", "KaB_park_atmospherics_loop_lvl1_2");
           sk.a(94, 8, 2);
-          ad.field_d[3] = MusicTrack.a(param0, "", "KaB_street_atmospherics_loop_lvl1_2");
+          ad.field_d[3] = MusicTrack.load(param0, "", "KaB_street_atmospherics_loop_lvl1_2");
           sk.a(-119, 8, 3);
-          ad.field_d[4] = MusicTrack.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl3");
+          ad.field_d[4] = MusicTrack.load(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl3");
           sk.a(83, 8, 4);
-          ad.field_d[5] = MusicTrack.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl3");
+          ad.field_d[5] = MusicTrack.load(param0, "", "KaB_crowd_loop_END_PITCH_lvl3");
           sk.a(98, 8, 5);
-          ad.field_d[6] = MusicTrack.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl4");
+          ad.field_d[6] = MusicTrack.load(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl4");
           sk.a(-53, 8, 6);
-          ad.field_d[7] = MusicTrack.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
+          ad.field_d[7] = MusicTrack.load(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "f.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -67,12 +67,12 @@ final class f {
           param4 = f.$cfr$intArgs$a$8e2a9e3a0d15(120, param1 / 10, param2, param3, param4);
         }
         if (param0 > 109) {
-          var5 = tb.field_q[param1 % 10];
+          var5 = SocketArchiveNetworkClient.field_q[param1 % 10];
           var5.drawAdditive(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;
         }
         f.$cfr$intArgs$a$8e2a9e3a0d15(-108, -67, -1, 23, 75);
-        var5Lifetime1 = tb.field_q[param1 % 10];
+        var5Lifetime1 = SocketArchiveNetworkClient.field_q[param1 % 10];
         var5Lifetime1.drawAdditive(-var5Lifetime1.field_s + param4, param3, param2);
         return var5Lifetime1.field_q + param4 + 3;
     }

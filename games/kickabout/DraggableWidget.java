@@ -67,7 +67,7 @@ final class DraggableWidget extends SingleChildContainer {
               LobbyGameRecord.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
             }
             PacketBuffer.a(-56, LobbyGameRecord.field_m);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
             var7.c(4, 4);
             nh.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
             eo.a(LobbyGameRecord.field_m, 65793);
@@ -115,14 +115,14 @@ final class DraggableWidget extends SingleChildContainer {
         try {
           if (!param0) {
             var9 = (StringBuilder) null;
-            this.a(-45, -42, (Hashtable) null, (StringBuilder) null);
+            this.appendDebugTree(-45, -42, (Hashtable) null, (StringBuilder) null);
           }
           var8_int = super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_B) {
             return true;
           }
-          if (!this.a((byte) 58, param5, param1, param2, param4)) {
+          if (!this.containsPointer((byte) 58, param5, param1, param2, param4)) {
             stackIn_13_0 = var8_int;
             return stackIn_13_0 != 0;
           }
@@ -147,7 +147,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_22_1 = 0;
@@ -175,7 +175,7 @@ final class DraggableWidget extends SingleChildContainer {
             }
           } else {
             if (!this.field_L) {
-              super.a(param0, param1, param2, param3);
+              super.updatePointerState(param0, param1, param2, param3);
               return;
             }
             if (this.field_t != this.field_H) {
@@ -207,7 +207,7 @@ final class DraggableWidget extends SingleChildContainer {
               this.field_g = stackIn_22_1 + stackIn_25_2;
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,9 +223,9 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
-          super.a(param0, param1, param2, param3, param4 ^ 0, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4 ^ 0, param5);
           this.field_p = 0;
           if (param4 != -1) {
             this.field_L = false;
@@ -235,7 +235,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
@@ -247,8 +247,8 @@ final class DraggableWidget extends SingleChildContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(1, param3, param2, param1)) {
-            this.b(param1, param3, param2, -18568);
+          if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
+            this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
             this.a(param2, 127, param3, param1);
             discarded$64 = param3.append(" revert=").append(this.field_L);
             if (this.field_H != 2147483647 &&
@@ -296,7 +296,7 @@ final class DraggableWidget extends SingleChildContainer {
 
     final void a(byte param0) {
         super.a(param0);
-        this.field_z.a(this.field_i, 1, 0, this.field_n, 0);
+        this.field_z.setBounds(this.field_i, 1, 0, this.field_n, 0);
         this.field_H = this.field_t;
         this.field_C = this.field_g;
     }
@@ -305,7 +305,7 @@ final class DraggableWidget extends SingleChildContainer {
         if (!DebugConsole.field_s) {
           return;
         }
-        LeaguesHelpScreen.field_E.b(0, param2);
+        LeaguesHelpScreen.field_E.updateInput(0, param2);
         int var4 = dr.field_g.h(-113) ? 1 : 0;
         if (WidgetContainer.field_A != 0 &&
           var4 == 0) {
@@ -313,13 +313,13 @@ final class DraggableWidget extends SingleChildContainer {
           hq.b((byte) 114);
         }
         if (param2) {
-          dr.field_g.b(param3, param0, (byte) -127);
+          dr.field_g.processClicks(param3, param0, (byte) -127);
         }
         int var6 = -116 % ((param1 - 17) / 36);
         if (var4 != 0) {
-          LeaguesHelpScreen.field_E.b(0, param2);
+          LeaguesHelpScreen.field_E.updateInput(0, param2);
         }
-        int var5 = dr.field_g.h((byte) 49) + dr.field_g.field_F;
+        int var5 = dr.field_g.getTotalWidth((byte) 49) + dr.field_g.field_F;
         if (var5 > 640) {
           NumericDateInputWidget.field_I = NumericDateInputWidget.field_I + 5;
         } else {

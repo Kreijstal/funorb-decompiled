@@ -146,50 +146,50 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var21 = InstrumentNoteMask.field_i * (LoggedGoal.field_o.field_o + 78) >> 8;
           if (var6 != 0 &&
             var7 != 0) {
-            im.a(-12376, -var21 + var14, var15 - var5, FadingSoundPlayer.field_p);
-            im.a(-12376, var14 - var19, var15 - var18, c.field_f[0]);
+            ListRow.a(-12376, -var21 + var14, var15 - var5, FadingSoundPlayer.field_p);
+            ListRow.a(-12376, var14 - var19, var15 - var18, c.field_f[0]);
           }
           if (var8 != 0 &&
             var7 != 0) {
-            im.a(-12376, var16, var15 - var5, ConsoleCommand.field_z);
-            im.a(-12376, var16, -var18 + var15, c.field_f[1]);
+            ListRow.a(-12376, var16, var15 - var5, ConsoleCommand.field_z);
+            ListRow.a(-12376, var16, -var18 + var15, c.field_f[1]);
           }
           for (var22 = 0; var22 < 2; var22++) {
             if (var7 != 0) {
-              im.a(-12376, var14 + var12 * var22, -var5 + var15, od.field_p);
+              ListRow.a(-12376, var14 + var12 * var22, -var5 + var15, PlayerValueSortCriterion.field_p);
               AuctionsScreen.a(-840618968, var12 * var22 + var14, DualLinkNode.field_h[var1_int], -var18 + var15);
             }
             if (var9 != 0) {
-              im.a(-12376, var12 * var22 + var14, var17, TextLayoutLine.field_a);
+              ListRow.a(-12376, var12 * var22 + var14, var17, TextLayoutLine.field_a);
               AuctionsScreen.a(-840618968, var14 + var22 * var12, ModalPanel.field_G[var1_int], var17 + var5);
             }
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < 3; var22Lifetime1++) {
             if (var6 != 0) {
-              im.a(-12376, -var21 + var14, var13 * var22Lifetime1 + var15, LoggedGoal.field_o);
+              ListRow.a(-12376, -var21 + var14, var13 * var22Lifetime1 + var15, LoggedGoal.field_o);
               AuctionsScreen.a(-840618968, -var19 + var14, hl.field_e[var1_int], var22Lifetime1 * var13 + var15);
             }
             if (var8 != 0) {
-              im.a(-12376, var16, var13 * var22Lifetime1 + var15, mt.field_d);
+              ListRow.a(-12376, var16, var13 * var22Lifetime1 + var15, mt.field_d);
               AuctionsScreen.a(-840618968, var16 + var4, hq.field_e[var1_int], var15 + var22Lifetime1 * var13);
             }
           }
           if (var6 != 0 &&
             var9 != 0) {
-            im.a(-12376, -var21 + var14, var17, LineupView.field_x);
-            im.a(-12376, var14 - var19, var17, c.field_f[2]);
+            ListRow.a(-12376, -var21 + var14, var17, LineupView.field_x);
+            ListRow.a(-12376, var14 - var19, var17, c.field_f[2]);
           }
           if (var8 != 0 &&
             var9 != 0) {
-            im.a(-12376, var16, var17, ByteStorage.field_b);
-            im.a(-12376, var16, var17, c.field_f[3]);
+            ListRow.a(-12376, var16, var17, ByteStorage.field_b);
+            ListRow.a(-12376, var16, var17, c.field_f[3]);
           }
           var22Lifetime2 = MySquadScreen.c(-82, -130);
           var23 = MySquadScreen.c(-70, 998);
           for (var24 = 0; var24 < 8; var24++) {
             var25 = go.a(40 + (-22 + ManagerAction.field_f.field_v) * var24, (byte) -56);
-            im.a(-12376, var22Lifetime2, var25, ManagerAction.field_f);
-            im.a(-12376, var23, var25, MusicPatchNode.field_m);
+            ListRow.a(-12376, var22Lifetime2, var25, ManagerAction.field_f);
+            ListRow.a(-12376, var23, var25, MusicPatchNode.field_m);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

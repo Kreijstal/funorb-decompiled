@@ -703,7 +703,7 @@ final class GameOverView extends MatchPhaseView {
                 var7 = this.field_o[var6_int].field_Eb;
                 SoftwareRasterizer.a(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
                 this.field_o[var6_int].h((byte) -116);
-                this.field_s[var6_int].a(59, true);
+                this.field_s[var6_int].draw(59, true);
                 if (var7.power >= 100 &&
                   100 <= var7.speed &&
                   100 <= var7.tackle) {
@@ -732,15 +732,15 @@ final class GameOverView extends MatchPhaseView {
           }
           if (decompiledNaturalLoopExit0) {
             param4 += 6;
-            SoftwareRasterizer.b(159, param4 + 36, 159, 63 + param4, 4473924);
-            SoftwareRasterizer.b(160, param4 + 35, 160, 64 + param4, 11184810);
-            SoftwareRasterizer.b(161, 36 + param4, 161, param4 + 63, 4473924);
-            SoftwareRasterizer.b(469, 36 + param4, 469, param4 + 63, 4473924);
-            SoftwareRasterizer.b(470, param4 + 35, 470, param4 + 64, 11184810);
-            SoftwareRasterizer.b(471, param4 + 36, 471, 63 + param4, 4473924);
-            SoftwareRasterizer.b(33, param4 + 71, 602, param4 + 71, 4473924);
-            SoftwareRasterizer.b(32, 72 + param4, 603, param4 + 72, 11184810);
-            SoftwareRasterizer.b(33, 73 + param4, 602, 73 + param4, 4473924);
+            SoftwareRasterizer.drawLine(159, param4 + 36, 159, 63 + param4, 4473924);
+            SoftwareRasterizer.drawLine(160, param4 + 35, 160, 64 + param4, 11184810);
+            SoftwareRasterizer.drawLine(161, 36 + param4, 161, param4 + 63, 4473924);
+            SoftwareRasterizer.drawLine(469, 36 + param4, 469, param4 + 63, 4473924);
+            SoftwareRasterizer.drawLine(470, param4 + 35, 470, param4 + 64, 11184810);
+            SoftwareRasterizer.drawLine(471, param4 + 36, 471, 63 + param4, 4473924);
+            SoftwareRasterizer.drawLine(33, param4 + 71, 602, param4 + 71, 4473924);
+            SoftwareRasterizer.drawLine(32, 72 + param4, 603, param4 + 72, 11184810);
+            SoftwareRasterizer.drawLine(33, 73 + param4, 602, 73 + param4, 4473924);
             stackIn_25_0 = param3;
             stackIn_25_1 = 119;
           }
@@ -1071,9 +1071,9 @@ final class GameOverView extends MatchPhaseView {
                     stackIn_74_2 = 0;
                   }
                   var9 = stackIn_76_0 + (stackIn_73_1 - stackIn_74_2);
-                  this.field_o[var8Lifetime1].a(true, 50, var9, 100, 100);
-                  this.field_s[var8Lifetime1] = eo.a(so.field_a.toLowerCase(), 7126504, un.field_d, 80, true);
-                  this.field_s[var8Lifetime1].a(true, this.field_s[var8Lifetime1].field_q, var9 - 15, 230, this.field_s[var8Lifetime1].field_mb);
+                  this.field_o[var8Lifetime1].setBounds(true, 50, var9, 100, 100);
+                  this.field_s[var8Lifetime1] = eo.createRenderedButton(so.field_a.toLowerCase(), 7126504, un.field_d, 80, true);
+                  this.field_s[var8Lifetime1].setBounds(true, this.field_s[var8Lifetime1].field_q, var9 - 15, 230, this.field_s[var8Lifetime1].field_mb);
                   var8Lifetime1++;
                 }
               }
@@ -1257,7 +1257,7 @@ final class GameOverView extends MatchPhaseView {
           }
           dupTemp$3 = GameLoopApplet.field_E.squad[this.field_hb[param2]];
           dupTemp$3.experience = dupTemp$3.experience - 100;
-          this.field_gb.a(param1, 3);
+          this.field_gb.addLast(param1, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1732,7 +1732,7 @@ final class GameOverView extends MatchPhaseView {
         int var9 = 0;
         var9 = Kickabout.field_G;
         try {
-          if (!param4.b(param0 ^ 9073)) {
+          if (!param4.hasFullscreenSupport(param0 ^ 9073)) {
             stackIn_5_0 = null;
             return (java.awt.Frame) (stackIn_5_0);
           }
@@ -1774,7 +1774,7 @@ final class GameOverView extends MatchPhaseView {
               return (java.awt.Frame) (stackIn_38_0);
             }
           }
-          var6_ref = param4.a(param2, param3, false, param1, param5);
+          var6_ref = param4.requestEnterFullscreen(param2, param3, false, param1, param5);
           if (param0 != -9027) {
             stackIn_41_0 = (java.awt.Frame) null;
             return stackIn_41_0;
@@ -2039,9 +2039,9 @@ final class GameOverView extends MatchPhaseView {
               }
               if (this.field_hb[var13] != -1) {
                 var14 = GameLoopApplet.field_E.squad[this.field_hb[var13]];
-                this.field_o[var13].b(0, param1);
+                this.field_o[var13].updateInput(0, param1);
                 this.field_o[var13].a(this.field_a.field_Q[this.field_h], this.field_a.field_H[this.field_h], (byte) 126, this.field_a.field_d[this.field_h], var14);
-                this.field_s[var13].b(0, param1);
+                this.field_s[var13].updateInput(0, param1);
                 if (100 > var14.experience) {
                   this.field_s[var13].field_lb = false;
                 } else {

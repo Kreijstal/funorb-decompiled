@@ -69,7 +69,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         int var6 = 0;
         var6 = Kickabout.field_G;
         try {
-          this.field_y.b(22997);
+          this.field_y.clear(22997);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -86,12 +86,12 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
               this.field_F[var5] = new TextButton(this.field_H[var5], (UiListener) (this));
               this.field_F[var5].field_r = (WidgetPainter) ((Object) var4);
               this.field_F[var5].field_u = TextHotspotWidget.field_G;
-              this.field_F[var5].a(15, 1, 0, 80, var5 * 16 + 20);
+              this.field_F[var5].setBounds(15, 1, 0, 80, var5 * 16 + 20);
               this.a(-23, this.field_F[var5]);
             }
             this.field_F[var3_int] = new TextButton(PlayingView.field_K, (UiListener) (this));
             this.field_F[var3_int].field_r = (WidgetPainter) ((Object) var4);
-            this.field_F[var3_int].a(15, 1, 0, 100, 20 + 16 * (var3_int + 1));
+            this.field_F[var3_int].setBounds(15, 1, 0, 100, 20 + 16 * (var3_int + 1));
             this.a(-52, this.field_F[var3_int]);
             return;
           }
@@ -111,7 +111,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -123,7 +123,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           if (param1 > -60) {
             NameSuggestionsPanel.a((byte) -18);
           }
-          if (super.a(param0, (byte) -87, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -87, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
@@ -176,8 +176,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         return ArchiveManager.field_e;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, (int) (char)param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (0 != param0) {
           return;
         }
@@ -187,7 +187,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -202,11 +202,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
           }
           for (var6_int = 0; this.field_H.length > var6_int; var6_int++) {
             if (param1 == this.field_F[var6_int]) {
-              this.field_C.a(this.field_H[var6_int], 15);
+              this.field_C.onSuggestionChosen(this.field_H[var6_int], 15);
             }
           }
           if (param1 == this.field_F[this.field_H.length]) {
-            this.field_C.a(-1);
+            this.field_C.onRefreshSuggestions(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

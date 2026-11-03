@@ -93,7 +93,7 @@ final class kr {
           var23 = il.field_d[1];
           var29Lifetime1Lifetime2 = var23;
           var29Lifetime1Lifetime3 = var23;
-          var22 = bo.field_Bb;
+          var22 = QuickChatKeysHelpPanel.field_Bb;
           var21.field_j.addItemWithIcon(var22, true, 12, var23);
           var24 = TextButton.field_v;
           var26 = il.field_d[2];
@@ -125,7 +125,7 @@ final class kr {
           var5 = param0.field_T;
           var6 = param0.field_q;
           var7 = param0.field_mb;
-          var36.field_j.a(0, var6, var4, var5, var7);
+          var36.field_j.layoutItems(0, var6, var4, var5, var7);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -261,7 +261,7 @@ final class kr {
         int[] var10 = null;
         var7 = Kickabout.field_G;
         try {
-          if (!param1.b(82)) {
+          if (!param1.hasFullscreenSupport(82)) {
             stackIn_4_0 = new cl[]{};
             return stackIn_4_0;
           }

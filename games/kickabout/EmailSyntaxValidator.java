@@ -10,23 +10,23 @@ final class EmailSyntaxValidator extends TextFieldValidator {
 
     final static IntrusiveDeque d(byte param0) {
         IntrusiveDeque var1 = new IntrusiveDeque();
-        var1.a(new SumIntegersCommand("sumIntegers", new Class[]{int[].class}, (String) null), 3);
-        var1.a(new WriteIntegersCommand("writeIntegers", new Class[]{int[].class}, (String) null), 3);
-        var1.a(new DemoIntegersCommand("demoIntegers", new Class[]{}, (String) null), 3);
-        var1.a(new DoSomethingCommand("doSomething", new Class[]{String.class}, "Do something clever to a string to annoy TdR."), param0 - 23);
-        var1.a(new ThreeCommand("three", new Class[]{}, (String) null), param0 ^ 25);
-        var1.a(new IsSixCommand("isSix", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
+        var1.addLast(new SumIntegersCommand("sumIntegers", new Class[]{int[].class}, (String) null), 3);
+        var1.addLast(new WriteIntegersCommand("writeIntegers", new Class[]{int[].class}, (String) null), 3);
+        var1.addLast(new DemoIntegersCommand("demoIntegers", new Class[]{}, (String) null), 3);
+        var1.addLast(new DoSomethingCommand("doSomething", new Class[]{String.class}, "Do something clever to a string to annoy TdR."), param0 - 23);
+        var1.addLast(new ThreeCommand("three", new Class[]{}, (String) null), param0 ^ 25);
+        var1.addLast(new IsSixCommand("isSix", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
         if (param0 != 26) {
           EmailSyntaxValidator.a(42, -71L, -88L);
         }
-        var1.a(new NotCommand("not", new Class[]{Boolean.TYPE}, (String) null), param0 - 23);
-        var1.a(new IntDoubleCommand("intDouble", new Class[]{Integer.TYPE}, (String) null), 3);
-        var1.a(new IntTripleCommand("intTriple", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
-        var1.a(new LongPlusOneCommand("LongPlusOne", new Class[]{Long.TYPE}, "Returns a long value. Useful for testing the auto-casts."), 3);
-        var1.a(new BytePlusOneCommand("BytePlusOne", new Class[]{Byte.TYPE}, "Returns a byte. Should lose precision."), 3);
-        var1.a(new BigCommand("big", new Class[]{}, (String) null), param0 - 23);
-        var1.a(new SetLagCommand("set_lag", new Class[]{Integer.TYPE}, (String) null), param0 ^ 25);
-        var1.a(new BroadcastServerCommand("broadcast_server", new Class[]{String.class}, "Send a broadcast to ALL players in games and the lobby. Only for emergencies, it's filtered too incase someone tries to swear."), 3);
+        var1.addLast(new NotCommand("not", new Class[]{Boolean.TYPE}, (String) null), param0 - 23);
+        var1.addLast(new IntDoubleCommand("intDouble", new Class[]{Integer.TYPE}, (String) null), 3);
+        var1.addLast(new IntTripleCommand("intTriple", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
+        var1.addLast(new LongPlusOneCommand("LongPlusOne", new Class[]{Long.TYPE}, "Returns a long value. Useful for testing the auto-casts."), 3);
+        var1.addLast(new BytePlusOneCommand("BytePlusOne", new Class[]{Byte.TYPE}, "Returns a byte. Should lose precision."), 3);
+        var1.addLast(new BigCommand("big", new Class[]{}, (String) null), param0 - 23);
+        var1.addLast(new SetLagCommand("set_lag", new Class[]{Integer.TYPE}, (String) null), param0 ^ 25);
+        var1.addLast(new BroadcastServerCommand("broadcast_server", new Class[]{String.class}, "Send a broadcast to ALL players in games and the lobby. Only for emergencies, it's filtered too incase someone tries to swear."), 3);
         return var1;
     }
 

@@ -47,7 +47,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void b() {
+    final static void clearFramebuffer() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1269,7 +1269,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.a(0, 0, 0, 0, 0, var15, var5, var22, field_a, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void drawCircle(int param0, int param1, int param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4;
@@ -1953,7 +1953,7 @@ final class SoftwareRasterizer {
         return;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var5Lifetime1;

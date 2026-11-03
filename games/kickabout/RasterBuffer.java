@@ -112,7 +112,7 @@ abstract class RasterBuffer {
 
     final static void a(int param0) {
         ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, it.field_m);
-        ContextMenuItem.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
+        ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 != 20164) {
           field_c = 125;
         }
@@ -208,7 +208,7 @@ abstract class RasterBuffer {
     }
 
     final static void a(boolean param0) {
-        ScrollPane.field_Jb.a(new SaveChangesDialog(), 3);
+        ScrollPane.field_Jb.addLast(new SaveChangesDialog(), 3);
         if (param0) {
           RasterBuffer.a(false);
         }

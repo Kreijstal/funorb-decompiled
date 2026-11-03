@@ -32,7 +32,7 @@ final class WeightedLruCache {
         int var1 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var2 = -(pg.field_b * pg.field_b) + var1;
         int var3 = c.field_c + var2 * (-c.field_c + VerticalScrollbar.field_Ab) / var1;
-        g.field_a.a(true, 640, AuctionsHelpScreen.field_H, var3, 120);
+        g.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, var3, 120);
         RankingRowNode.a(124, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
     }
 
@@ -69,7 +69,7 @@ final class WeightedLruCache {
     }
 
     private final void remove(byte param0, long param1) {
-        WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_e.a(param1, (byte) 111));
+        WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_e.get(param1, (byte) 111));
         if (param0 == 90) {
           this.removeEntry(var4, -64);
           return;
@@ -105,7 +105,7 @@ final class WeightedLruCache {
             this.removeEntry(var6, param2 - 126);
           }
           var6_ref = new StrongCacheEntry(param1, param0);
-          this.field_e.a(var6_ref, -78, param3);
+          this.field_e.put(var6_ref, -78, param3);
           this.field_i.addLast(-8545, var6_ref);
           ((WeightedCacheEntry) ((Object) var6_ref)).field_l = (long)param2;
         } catch (RuntimeException runtimeException) {
@@ -130,7 +130,7 @@ final class WeightedLruCache {
         Object var8;
         Object var9;
         StrongCacheEntry var6Lifetime1;
-        var7 = (WeightedCacheEntry) (this.field_e.a(param0, (byte) 69));
+        var7 = (WeightedCacheEntry) (this.field_e.get(param0, (byte) 69));
         if (param1 == 43) {
           if (var7 == null) {
             return null;
@@ -144,7 +144,7 @@ final class WeightedLruCache {
           }
           if (var7.h((byte) 113)) {
             var6 = new StrongCacheEntry(var9, var7.field_o);
-            this.field_e.a(var6, param1 ^ -27, var7.field_a);
+            this.field_e.put(var6, param1 ^ -27, var7.field_a);
             this.field_i.addLast(-8545, var6);
             ((WeightedCacheEntry) ((Object) var6)).field_l = 0L;
             var7.c((byte) -109);
@@ -168,7 +168,7 @@ final class WeightedLruCache {
         }
         if (var7.h((byte) 113)) {
           var6Lifetime1 = new StrongCacheEntry(var8, var7.field_o);
-          this.field_e.a(var6Lifetime1, param1 ^ -27, var7.field_a);
+          this.field_e.put(var6Lifetime1, param1 ^ -27, var7.field_a);
           this.field_i.addLast(-8545, var6Lifetime1);
           ((WeightedCacheEntry) ((Object) var6Lifetime1)).field_l = 0L;
           var7.c((byte) -109);

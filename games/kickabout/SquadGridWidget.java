@@ -207,7 +207,7 @@ final class SquadGridWidget extends UiLayoutNode {
           }
           AnimationSkeleton.field_k = var5;
           TrinketSlot.field_Db[AnimationSkeleton.field_k] = var3_int;
-          AuctionTableWidget.field_Hb.field_Db.a(true, 317, AuctionTableWidget.field_Hb.field_Db.field_s, AuctionTableWidget.field_Hb.field_Db.field_J, var3_int * 18 + 6);
+          AuctionTableWidget.field_Hb.field_Db.setBounds(true, 317, AuctionTableWidget.field_Hb.field_Db.field_s, AuctionTableWidget.field_Hb.field_Db.field_J, var3_int * 18 + 6);
           if (var6 != 0) {
             stackIn_14_0 = 0;
           } else {
@@ -217,7 +217,7 @@ final class SquadGridWidget extends UiLayoutNode {
           if (param0 != -105) {
             return;
           }
-          AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) -114, 230, 344, 170);
+          AuctionTableWidget.field_Hb.setLayout(15, 20, 2, (byte) -114, 230, 344, 170);
           AuctionTableWidget.field_Hb.field_Db.field_J = var8Lifetime1;
           if (param2) {
             var9 = -1;
@@ -442,7 +442,7 @@ final class SquadGridWidget extends UiLayoutNode {
           this.field_mb = 225;
           for (var2_int = 0; var2_int < 9; var2_int++) {
             this.field_Eb[var2_int] = new SquadSlotWidget();
-            this.field_Eb[var2_int].a(true, 52, this.slotX((byte) -53, var2_int), this.slotY(var2_int, -96), 75);
+            this.field_Eb[var2_int].setBounds(true, 52, this.slotX((byte) -53, var2_int), this.slotY(var2_int, -96), 75);
             this.addChild((byte) -117, (UiLayoutNode) (this.field_Eb[var2_int]));
           }
           return;
@@ -637,7 +637,7 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[8] = IconLabel.field_Eb;
         MatchingTextValidator.field_o[27] = DebouncedValidationProvider.field_c;
         MatchingTextValidator.field_o[9] = NumericDateInputWidget.field_N;
-        MatchingTextValidator.field_o[0] = bo.field_zb;
+        MatchingTextValidator.field_o[0] = QuickChatKeysHelpPanel.field_zb;
         MatchingTextValidator.field_o[6] = ConsoleEvaluationException.field_a;
         MatchingTextValidator.field_o[5] = MenuButton.field_i;
         MatchingTextValidator.field_o[1] = h.field_c;
@@ -790,7 +790,7 @@ final class SquadGridWidget extends UiLayoutNode {
           }
           AnimationSkeleton.field_k = var5;
           TrinketSlot.field_Db[AnimationSkeleton.field_k] = var3_int;
-          AuctionTableWidget.field_Hb.field_Db.a(true, 317, AuctionTableWidget.field_Hb.field_Db.field_s, AuctionTableWidget.field_Hb.field_Db.field_J, var3_int * 18 + 6);
+          AuctionTableWidget.field_Hb.field_Db.setBounds(true, 317, AuctionTableWidget.field_Hb.field_Db.field_s, AuctionTableWidget.field_Hb.field_Db.field_J, var3_int * 18 + 6);
           if (var6 != 0) {
             stackIn_14_0 = 0;
           } else {
@@ -800,7 +800,7 @@ final class SquadGridWidget extends UiLayoutNode {
           if (param0 != -105) {
             return;
           }
-          AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) -114, 230, 344, 170);
+          AuctionTableWidget.field_Hb.setLayout(15, 20, 2, (byte) -114, 230, 344, 170);
           AuctionTableWidget.field_Hb.field_Db.field_J = var8Lifetime1;
           if (param2) {
             var9 = -1;

@@ -12,7 +12,7 @@ final class pi {
           return;
         }
         try {
-          ScrollPane.field_Jb.a(new BuyPlayerDialog(param1), 3);
+          ScrollPane.field_Jb.addLast(new BuyPlayerDialog(param1), 3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pi.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -49,16 +49,16 @@ final class pi {
         return true;
     }
 
-    final static vn a(int param0, int param1, int param2, PlayerStats param3, int param4, boolean param5) {
+    final static MeshData a(int param0, int param1, int param2, PlayerStats param3, int param4, boolean param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        vn var11 = null;
-        vn stackIn_2_0 = null;
-        vn stackIn_4_0 = null;
+        MeshData var11 = null;
+        MeshData stackIn_2_0 = null;
+        MeshData stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -66,7 +66,7 @@ final class pi {
         try {
           var6_int = param3.archetype;
           if (param0 <= 90) {
-            stackIn_2_0 = (vn) null;
+            stackIn_2_0 = (MeshData) null;
             return stackIn_2_0;
           }
           var7 = param3.appearance;

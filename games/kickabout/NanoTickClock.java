@@ -38,23 +38,23 @@ final class NanoTickClock extends TickClock {
         int var8 = 0;
         var8 = Kickabout.field_G;
         try {
-          var2_int = param1.l(8, 59);
+          var2_int = param1.readBits(8, 59);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
           var4 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
           var5 = new TriangleMesh();
-          var5.field_b = (short)param1.l(16, 59);
+          var5.field_b = (short)param1.readBits(16, 59);
           var5.field_f = TournamentChampionDialog.a(var5.field_f, param1, 16, -72);
           var5.field_r = TournamentChampionDialog.a(var5.field_r, param1, 16, -61);
           var5.field_P = TournamentChampionDialog.a(var5.field_P, param1, 16, -92);
-          var5.field_g = (short)param1.l(16, 59);
+          var5.field_g = (short)param1.readBits(16, 59);
           var5.field_n = TournamentChampionDialog.a(var5.field_n, param1, 16, 105);
           var5.field_z = TournamentChampionDialog.a(var5.field_z, param1, 16, 48);
           var5.field_T = TournamentChampionDialog.a(var5.field_T, param1, 16, 109);
           if (var3 != 0) {
-            var5.field_k = (short)param1.l(16, 59);
+            var5.field_k = (short)param1.readBits(16, 59);
             var5.field_F = TournamentChampionDialog.a(var5.field_F, param1, 16, -66);
             var5.field_I = TournamentChampionDialog.a(var5.field_I, param1, 16, 109);
             var5.field_v = TournamentChampionDialog.a(var5.field_v, param1, 16, -79);
@@ -63,7 +63,7 @@ final class NanoTickClock extends TickClock {
             var5.field_l = TournamentChampionDialog.a(var5.field_l, param1, 16, -106);
           }
           if (var4 != 0) {
-            param1.l(16, 59);
+            param1.readBits(16, 59);
             var5.field_p = TournamentChampionDialog.a(var5.field_p, param1, 16, 116);
             var5.field_E = TournamentChampionDialog.a(var5.field_E, param1, 16, -104);
             var5.field_N = TournamentChampionDialog.a(var5.field_N, param1, 16, -76);
@@ -196,8 +196,8 @@ final class NanoTickClock extends TickClock {
         QuickChatPhraseCache.field_d = true;
     }
 
-    final long b(byte param0) {
-        this.field_p = this.field_p + this.a(false);
+    final long delayMillis(byte param0) {
+        this.field_p = this.field_p + this.averageFrameNanos(false);
         if (param0 != -36) {
           field_n = true;
         }
@@ -207,7 +207,7 @@ final class NanoTickClock extends TickClock {
         return 0L;
     }
 
-    final void b(int param0) {
+    final void resetTiming(int param0) {
         this.field_u = 0L;
         if (param0 != -1) {
           field_s = -62;
@@ -217,7 +217,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    private final long a(boolean param0) {
+    private final long averageFrameNanos(boolean param0) {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         long var2 = System.nanoTime();
@@ -250,7 +250,7 @@ final class NanoTickClock extends TickClock {
         field_o = null;
     }
 
-    final int a(int param0, long param1) {
+    final int advanceTicks(int param0, long param1) {
         int var4;
         int var5;
         int var6;

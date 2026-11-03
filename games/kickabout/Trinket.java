@@ -259,7 +259,7 @@ final class Trinket {
             48 + var3 >= 0 &&
             640 >= -48 + var2_int &&
             48 + var2_int >= 0) {
-            if (tb.field_v != 0 &&
+            if (SocketArchiveNetworkClient.field_v != 0 &&
               FormationAgent.field_l >= 2) {
               var4 = param0.field_U;
               var5 = param0.field_ob;
@@ -326,7 +326,7 @@ final class Trinket {
           var1 = new Sprite(540, 140);
           PacketBuffer.a(param0 + 26, var1);
           TriangleRasterizer.useRasterClip();
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           PlayerStats.field_p = 0;
           AuctionItem.a((byte) -112);
           var2 = var1.copy();
@@ -554,7 +554,7 @@ final class Trinket {
           }
           if (~NodeHashTableIterator.field_b == param0 &&
             !LoggedPlayer.b(param0 - 3194)) {
-            boolean decompiledSharedTail1 = !(IntKeyLookup.a(qi.field_o, -39));
+            boolean decompiledSharedTail1 = !(IntKeyLookup.a(PlayerStatSortCriterion.field_o, -39));
             if (!decompiledSharedTail1) {
               var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_c, new String[]{TrinketTile.field_Kb});
               decompiledSharedTail1 = (var10 != 0);

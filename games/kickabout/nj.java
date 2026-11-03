@@ -10,13 +10,13 @@ final class nj {
     final static void a(boolean param0, int param1) {
         if (param1 < -126) {
           if (k.field_m != null) {
-            k.field_m.a(73, param0);
+            k.field_m.draw(73, param0);
           }
           return;
         }
         nj.monotonicMillis(108);
         if (k.field_m != null) {
-          k.field_m.a(73, param0);
+          k.field_m.draw(73, param0);
         }
     }
 

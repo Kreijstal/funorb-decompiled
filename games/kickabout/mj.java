@@ -27,26 +27,26 @@ final class mj {
             LoginForm.a(c.field_f[var2_int], 20684);
             DelayedServerPacket.a(100, 9863, var2_int + 96);
           }
-          var7 = al.field_Bb[ih.field_c];
+          var7 = FriendsListPanel.field_Bb[ih.field_c];
           var6 = var7;
           var5 = var6;
           double[] var2 = var5;
           LineupView.field_x = Trinket.field_f.h();
           LoggedGoal.field_o = TrinketPickerDialog.field_J.copy();
-          od.field_p = LoginMethod.field_g.copy();
+          PlayerValueSortCriterion.field_p = LoginMethod.field_g.copy();
           nh.adjustHsv(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
           nh.adjustHsv(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
-          nh.adjustHsv(od.field_p.field_y, var7[0], var7[1], var7[2]);
-          FadingSoundPlayer.field_p = eo.b(LineupView.field_x);
-          ConsoleCommand.field_z = eo.a(FadingSoundPlayer.field_p);
-          ByteStorage.field_b = eo.b(ConsoleCommand.field_z);
+          nh.adjustHsv(PlayerValueSortCriterion.field_p.field_y, var7[0], var7[1], var7[2]);
+          FadingSoundPlayer.field_p = eo.mirrorVertically(LineupView.field_x);
+          ConsoleCommand.field_z = eo.mirrorHorizontally(FadingSoundPlayer.field_p);
+          ByteStorage.field_b = eo.mirrorVertically(ConsoleCommand.field_z);
           mt.field_d = new Sprite(ConsoleCommand.field_z.field_o, LoggedGoal.field_o.field_v);
-          TextLayoutLine.field_a = new Sprite(od.field_p.field_o, LineupView.field_x.field_v);
+          TextLayoutLine.field_a = new Sprite(PlayerValueSortCriterion.field_p.field_o, LineupView.field_x.field_v);
           PacketBuffer.a(-70, mt.field_d);
           LoggedGoal.field_o.d(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
           TeamManagementScreen.e(param0 + 158);
           PacketBuffer.a(-42, TextLayoutLine.field_a);
-          od.field_p.d(0, -od.field_p.field_v + SoftwareRasterizer.field_f);
+          PlayerValueSortCriterion.field_p.d(0, -PlayerValueSortCriterion.field_p.field_v + SoftwareRasterizer.field_f);
           TeamManagementScreen.e(118);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');

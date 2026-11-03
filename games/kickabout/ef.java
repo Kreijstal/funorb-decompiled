@@ -106,8 +106,8 @@ final class ef extends DualLinkNode {
           var28 = this.field_r[var16];
           var5_ref_iw = new PacketBuffer(var28);
           var5_ref_iw.field_n = 1;
-          var6 = var5_ref_iw.a((byte) 81);
-          var2 = var2 != 0 & gs.field_d.b(var6, 119) ? 1 : 0;
+          var6 = var5_ref_iw.readUnsignedShort((byte) 81);
+          var2 = var2 != 0 & gs.field_d.ensureFlatFileAvailable(var6, 119) ? 1 : 0;
           var16++;
         }
         if (var2 == 0) {
@@ -122,7 +122,7 @@ final class ef extends DualLinkNode {
           var30 = this.field_r[var7];
           var9 = new PacketBuffer(var30);
           var9.field_n = 1;
-          var10 = var9.a((byte) 81);
+          var10 = var9.readUnsignedShort((byte) 81);
           var11 = null;
           var12 = (AnimationSkeleton) (var3.g(24009));
           while (var12 != null) {
@@ -134,9 +134,9 @@ final class ef extends DualLinkNode {
             break;
           }
           if (var11 == null) {
-            var15 = new AnimationSkeleton(var10, gs.field_d.a(0, var10));
+            var15 = new AnimationSkeleton(var10, gs.field_d.getSingleFile(0, var10));
             var11 = var15;
-            var3.a(var15, 3);
+            var3.addLast(var15, 3);
           }
           this.field_q[var29[var7]] = new AnimationFrame(var30, (AnimationSkeleton) (var11));
         }

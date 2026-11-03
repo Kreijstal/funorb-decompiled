@@ -61,7 +61,7 @@ final class GrowableIntList {
         }
         int[] var4 = new int[this.nextCapacity(param0, 20151)];
         int[] var3 = var4;
-        ArrayOperations.a(this.field_d, 0, var4, 0, this.field_d.length);
+        ArrayOperations.copyInts(this.field_d, 0, var4, 0, this.field_d.length);
         this.field_d = var4;
     }
 
@@ -96,25 +96,25 @@ final class GrowableIntList {
           if (param0 != 5464) {
             field_b = (ChatMessage[]) null;
           }
-          var11.a(new IntValueNode(0), 3);
+          var11.addLast(new IntValueNode(0), 3);
           if (0 == param1) {
-            var11.a(new IntValueNode(2), 3);
+            var11.addLast(new IntValueNode(2), 3);
           }
           if (param1 == 1) {
-            var11.a(new IntValueNode(3), 3);
+            var11.addLast(new IntValueNode(3), 3);
           }
           if (2 == param1) {
-            var11.a(new IntValueNode(4), 3);
+            var11.addLast(new IntValueNode(4), 3);
           }
           if (param2 == 1 ||
             param2 == 2) {
-            var11.a(new IntValueNode(1), param0 - 5461);
+            var11.addLast(new IntValueNode(1), param0 - 5461);
           }
           if (param2 == 2) {
-            var11.a(new IntValueNode(5), 3);
+            var11.addLast(new IntValueNode(5), 3);
           }
           if (param2 == 3) {
-            var11.a(new IntValueNode(6), 3);
+            var11.addLast(new IntValueNode(6), 3);
           }
           var4 = 100.0 / (double)var11.a(false);
           var6 = 0.0;
@@ -156,7 +156,7 @@ final class GrowableIntList {
             return;
           }
           if (param1 != this.field_g) {
-            ArrayOperations.a(this.field_d, param1 + 1, this.field_d, param1, this.field_g - param1);
+            ArrayOperations.copyInts(this.field_d, param1 + 1, this.field_d, param1, this.field_g - param1);
           }
           this.field_g = this.field_g - 1;
           return;

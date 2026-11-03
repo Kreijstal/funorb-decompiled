@@ -42,7 +42,7 @@ final class TrinketShopDialog extends MessageDialog {
             var8.addChild((byte) -114, (UiLayoutNode) (var6));
           }
         }
-        var8.a(true, 270, 0, 0, var3);
+        var8.setBounds(true, 270, 0, 0, var3);
         return var8;
     }
 
@@ -64,16 +64,16 @@ final class TrinketShopDialog extends MessageDialog {
         return 500;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawBody(byte param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = Kickabout.field_G;
-        super.a((byte) -25, param1, param2);
+        super.drawBody((byte) -25, param1, param2);
         ScrollContainer var11 = this.field_L;
-        this.field_L.a(true, 210, param1 + 250, param2 + 55, 240);
-        this.field_L.b(0, true);
+        this.field_L.setBounds(true, 210, param1 + 250, param2 + 55, 240);
+        this.field_L.updateInput(0, true);
         SoftwareRasterizer.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
         if (param0 >= -11) {
           return;
@@ -97,33 +97,33 @@ final class TrinketShopDialog extends MessageDialog {
           var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.c(33));
         }
         if (this.field_t != var5) {
-          this.a(this.field_v, (lv) (var5), (Sprite) null, -94, this.field_u);
+          this.a(this.field_v, (PopupCard) (var5), (Sprite) null, -94, this.field_u);
         }
         TeamManagementScreen.e(123);
         if (null != this.field_H) {
           var6 = 130 + param1;
           var7 = 160 + param2;
-          var8 = this.field_H.field_Cb.b(0);
-          var9 = this.field_H.field_Cb.a(15);
+          var8 = this.field_H.field_Cb.getWidth(0);
+          var9 = this.field_H.field_Cb.getHeight(15);
           SoftwareRasterizer.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
-          this.field_H.field_Cb.a(var7, 23, var6);
+          this.field_H.field_Cb.drawCentered(var7, 23, var6);
           IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
             IsSixCommand.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }
         }
-        this.field_L.a(117, false);
+        this.field_L.draw(117, false);
         IsSixCommand.field_C.d(CheckboxLabelWidget.field_Bb, (this.dialogWidth(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
     final static void g(int param0) {
-        ScrollPane.field_Jb.a(new TrinketPickerDialog(), 3);
+        ScrollPane.field_Jb.addLast(new TrinketPickerDialog(), 3);
         if (param0 != -29315) {
           TrinketShopDialog.b(true, -105, 126);
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void onUpdate(int param0, boolean param1) {
         UiLayoutNode stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var3;
@@ -134,8 +134,8 @@ final class TrinketShopDialog extends MessageDialog {
           this.field_K = this.field_K - 1;
         }
         var3 = this.field_L.field_Db.field_J;
-        this.field_L.b(0, param1);
-        this.field_L.a(StatefulTextPainter.field_v * 32, true, (byte) -78, 32);
+        this.field_L.updateInput(0, param1);
+        this.field_L.advanceScroll(StatefulTextPainter.field_v * 32, true, (byte) -78, 32);
         if (var3 < this.field_L.field_Db.field_J &&
           this.field_K == 0) {
           ShopPlayerSlot.c(59, 52);
@@ -147,7 +147,7 @@ final class TrinketShopDialog extends MessageDialog {
           this.field_K = 10;
         }
         if (param0 != 3) {
-          this.a((byte) 5, 15, 25);
+          this.drawBody((byte) 5, 15, 25);
         }
         var4 = (TrinketTile) (this.field_L.field_Db.field_jb.g(param0 + 24006));
         while (var4 != null) {
@@ -174,7 +174,7 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
         this.field_L = new ScrollContainer(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, it.field_m);
-        this.field_L.a(15, 0, 2, (byte) 2, 240, 210, 0);
+        this.field_L.setLayout(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }
 

@@ -56,7 +56,7 @@ class TextHotspotWidget extends TextButton {
         er var7 = this.b(var5, 2, var6);
         if (var7 != null &&
           null != this.field_k) {
-          ((TextHotspotListener) ((Object) this.field_k)).a(this, param0, var7.field_i, 40);
+          ((TextHotspotListener) ((Object) this.field_k)).onHotspotClicked(this, param0, var7.field_i, 40);
         }
     }
 
@@ -85,7 +85,7 @@ class TextHotspotWidget extends TextButton {
         if (param0 != -1) {
           field_H = (String) null;
         }
-        this.a(((WidgetTextLayout) ((Object) this.field_r)).b(param0 + 4, (UiWidget) (this)), 1, param2, param1, param3);
+        this.setBounds(((WidgetTextLayout) ((Object) this.field_r)).preferredHeight(param0 + 4, (UiWidget) (this)), 1, param2, param1, param3);
     }
 
     TextHotspotWidget(String param0, WidgetPainter param1) {
@@ -117,7 +117,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    String f(int param0) {
+    String getTooltip(int param0) {
         if (null == this.field_I) {
           return null;
         }
@@ -133,11 +133,11 @@ class TextHotspotWidget extends TextButton {
         return this.field_J[this.field_I.field_i];
     }
 
-    void a(byte param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_I = null;
           if (this.field_m) {
             var5_int = -param2 + (BytePlusOneCommand.field_A - this.field_t);
@@ -176,8 +176,8 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1 ^ 0, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1 ^ 0, param2, param3, param4);
         this.a((byte) -41);
         if (param1 != 1) {
           field_H = (String) null;
@@ -228,7 +228,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -253,18 +253,18 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         if (0 != param0) {
           return;
         }
         WidgetTextLayout var5 = (WidgetTextLayout) ((Object) this.field_r);
         er var6 = this.field_I;
         if (var6 != null) {
-          var7 = var5.a((UiWidget) (this), param2, -1);
-          var8 = var5.a(true, (UiWidget) (this), param3);
+          var7 = var5.textOriginX((UiWidget) (this), param2, -1);
+          var8 = var5.textOriginY(true, (UiWidget) (this), param3);
           do {
             RenderedBall.b(param1 - 63, 2 + var6.field_e, var6.field_m + (var8 - 2), var6.field_f + 2, -2 + (var7 + var6.field_g));
             var6 = var6.field_j;
@@ -295,7 +295,7 @@ class TextHotspotWidget extends TextButton {
         this.field_E = new IntrusiveDeque();
         var2 = 0;
         var3 = (WidgetTextLayout) ((Object) this.field_r);
-        var4 = var3.a(param0 ^ -4996, (UiWidget) (this));
+        var4 = var3.ensureTextLayout(param0 ^ -4996, (UiWidget) (this));
         if (param0 != -41) {
           field_H = (String) null;
         }
@@ -329,12 +329,12 @@ class TextHotspotWidget extends TextButton {
               }
             }
             var14 = stackIn_14_0;
-            var15 = new er(var7Lifetime1, var13, var12.field_g, -var13 + var14, Math.max(var3.a((byte) -76), -var12.field_g + var12.field_d));
+            var15 = new er(var7Lifetime1, var13, var12.field_g, -var13 + var14, Math.max(var3.lineHeight((byte) -76), -var12.field_g + var12.field_d));
             if (var10 != null) {
               ((er) (var10)).field_j = var15;
             }
             var10 = var15;
-            this.field_E.a(var15, param0 + 44);
+            this.field_E.addLast(var15, param0 + 44);
           }
         }
     }

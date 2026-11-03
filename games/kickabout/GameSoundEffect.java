@@ -7,7 +7,7 @@ final class GameSoundEffect {
     static int field_b;
     static int field_k;
     static String field_g;
-    static wc field_i;
+    static WidgetTheme field_i;
     PcmSample field_l;
     static int[] field_e;
     static Sprite[] field_j;
@@ -60,7 +60,7 @@ final class GameSoundEffect {
           return false;
         }
         if (param0 == 32) {
-          this.field_l = VorbisSample.a(SortCriterion.field_h, this.field_a, "").decodeAllToPcm();
+          this.field_l = VorbisSample.loadNamed(SortCriterion.field_h, this.field_a, "").decodeAllToPcm();
           this.field_d = true;
           return true;
         }

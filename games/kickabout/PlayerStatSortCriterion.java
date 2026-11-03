@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends SortCriterion {
+final class PlayerStatSortCriterion extends SortCriterion {
     static String field_o;
     static int[] field_n;
     static int field_p;
@@ -73,7 +73,7 @@ final class qi extends SortCriterion {
         return 6;
     }
 
-    qi() {
+    PlayerStatSortCriterion() {
     }
 
     final static int b(int param0) {
@@ -86,7 +86,7 @@ final class qi extends SortCriterion {
     final static int a(boolean param0) {
         wk.a(nj.monotonicMillis(-100), 0);
         if (param0) {
-          qi.b((byte) -67);
+          PlayerStatSortCriterion.b((byte) -67);
         }
         return oa.field_a.get(5);
     }
@@ -147,8 +147,8 @@ final class qi extends SortCriterion {
             param3[var6] = var7;
             param4[param1] = param4[var6];
             param4[var6] = var8;
-            qi.a(param0, -1 + var6, param2 + 0, param3, param4);
-            qi.a(var6 + 1, param1, -1, param3, param4);
+            PlayerStatSortCriterion.a(param0, -1 + var6, param2 + 0, param3, param4);
+            PlayerStatSortCriterion.a(var6 + 1, param1, -1, param3, param4);
             return;
           }
           return;

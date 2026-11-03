@@ -101,8 +101,8 @@ final class ParticipantStatus extends MatchAgent {
           if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;
           }
-          this.controlledSlot = -1 + param0.l(3, 59);
-          this.field_p = param0.l(3, param1 ^ 58) - param1;
+          this.controlledSlot = -1 + param0.readBits(3, 59);
+          this.field_p = param0.readBits(3, param1 ^ 58) - param1;
           this.field_k = ContentTransitionDialog.a(param0, (byte) -39);
           this.offerDraw = ContentTransitionDialog.a(param0, (byte) -39);
           this.resigned = ContentTransitionDialog.a(param0, (byte) -39);
@@ -110,7 +110,7 @@ final class ParticipantStatus extends MatchAgent {
           this.loadedPitch = ContentTransitionDialog.a(param0, (byte) -39);
           this.rewardEligible = ContentTransitionDialog.a(param0, (byte) -39);
           this.megamode = ContentTransitionDialog.a(param0, (byte) -39);
-          this.field_l = param0.l(8, 59);
+          this.field_l = param0.readBits(8, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final void a(byte param0, MatchAgent param1) {
+    final void copyStateFrom(byte param0, MatchAgent param1) {
         RuntimeException runtimeException = null;
         ParticipantStatus var3 = null;
         RuntimeException stackIn_7_0 = null;

@@ -77,22 +77,22 @@ abstract class TickClock {
     }
 
     final int a(byte param0, long param1) {
-        long var4 = this.b((byte) -36);
+        long var4 = this.delayMillis((byte) -36);
         if (var4 > 0L) {
           aj.a(var4, 1);
         }
         if (param0 <= -51) {
-          return this.a(114, param1);
+          return this.advanceTicks(114, param1);
         }
         TickClock.a(19);
-        return this.a(114, param1);
+        return this.advanceTicks(114, param1);
     }
 
-    abstract int a(int param0, long param1);
+    abstract int advanceTicks(int param0, long param1);
 
-    abstract long b(byte param0);
+    abstract long delayMillis(byte param0);
 
-    abstract void b(int param0);
+    abstract void resetTiming(int param0);
 
     final static double a(double param0, double param1, boolean param2) {
         if (param2) {

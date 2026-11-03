@@ -24,7 +24,7 @@ final class SetLagCommand extends ConsoleCommand {
           if (param0 < 12) {
             return true;
           }
-          var3 = bo.a(-1, param1);
+          var3 = QuickChatKeysHelpPanel.reverseString(-1, param1);
           stackIn_8_0 = (param2.indexOf(param1) != -1) || (-1 != param2.indexOf(var3));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,7 +88,7 @@ final class SetLagCommand extends ConsoleCommand {
             var8 = stackIn_8_0;
             ConsoleTokenCursor.field_d.d(var7, SoftwareRasterizer.field_g >> 1, -4 + SoftwareRasterizer.field_f, var8, -1);
             TeamManagementScreen.e(117);
-            var5[var6].a(65793);
+            var5[var6].addOutline(65793);
           }
           stackIn_10_0 = var5;
           return stackIn_10_0;
@@ -116,7 +116,7 @@ final class SetLagCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;
@@ -162,7 +162,7 @@ final class SetLagCommand extends ConsoleCommand {
               if (param1 - un.field_e.field_n < var2) {
                 var2 = -un.field_e.field_n + param1;
               }
-              op.field_y.a(un.field_e.field_f, var2, un.field_e.field_n, -4847);
+              op.field_y.readFully(un.field_e.field_f, var2, un.field_e.field_n, -4847);
               IterableDualLinkDeque.field_c = nj.monotonicMillis(-128);
               un.field_e.field_n = un.field_e.field_n + var2;
               if (param1 > un.field_e.field_n) {
@@ -194,13 +194,13 @@ final class SetLagCommand extends ConsoleCommand {
           throw new IllegalStateException();
         }
         if (null != rk.field_f) {
-          rk.field_f.q(-96);
+          rk.field_f.closeDialog(-96);
         }
         String var1 = TextFieldNode.a(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);
         wd.field_l.a(we.field_a, false);
         we.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));
-        we.field_a.m(4000);
+        we.field_a.finishTransition(4000);
     }
 
     final static ResourceArchive a(int param0, byte param1, int param2, boolean param3, boolean param4, boolean param5) {
@@ -231,7 +231,7 @@ final class SetLagCommand extends ConsoleCommand {
               }
               var8 = new SectorCacheStore(param0, RandomAccessCacheFile.field_h, JaggrabDownloader.field_j[param0], 2097152);
             }
-            var9 = al.field_Ab.a((SectorCacheStore) (var8), -122, param0, param4, (SectorCacheStore) (var7));
+            var9 = FriendsListPanel.field_Ab.a((SectorCacheStore) (var8), -122, param0, param4, (SectorCacheStore) (var7));
             if (param3) {
               var9.b((byte) 55);
             }

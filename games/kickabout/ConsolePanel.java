@@ -70,7 +70,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    public void a(int param0) {
+    public void paint(int param0) {
         int var6 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -97,14 +97,14 @@ abstract class ConsolePanel implements OverlayLayer {
             SoftwareRasterizer.c(0, var3, f.field_d, 0, var4 << 5);
             var3--;
           }
-          this.field_l.a(127, 0 == (this.field_n & 8) ? true : false);
+          this.field_l.draw(127, 0 == (this.field_n & 8) ? true : false);
         }
         var2Lifetime1 = 20 / ((50 - param0) / 45);
         if (null != this.field_c &&
           this.field_h) {
           var3Lifetime1 = this.field_l.field_J + this.field_l.field_mb;
           this.field_j.field_J = var3Lifetime1;
-          this.field_j.a(78, false);
+          this.field_j.draw(78, false);
           var3Lifetime1 = var3Lifetime1 + (5 + this.field_f);
           var6 = 0;
           var4Lifetime1 = var6;
@@ -171,7 +171,7 @@ abstract class ConsolePanel implements OverlayLayer {
             else {
               param1 = null;
             }
-            var4.a(new TextLine(var6), param0 ^ 3);
+            var4.addLast(new TextLine(var6), param0 ^ 3);
           }
           stackIn_20_0 = var4;
           return stackIn_20_0;
@@ -209,7 +209,7 @@ abstract class ConsolePanel implements OverlayLayer {
         try {
           this.field_g.field_Ab.addChild((byte) -109, this.a(param1, param2, -73));
           if (!(256 >= this.field_g.field_Ab.field_jb.a(false))) {
-            this.field_g.field_Ab.field_jb.b((byte) 125);
+            this.field_g.field_Ab.field_jb.removeFirst((byte) 125);
           }
           var4_int = 5;
           var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.g(24009));
@@ -228,7 +228,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         UiLayoutNode discarded$0 = null;
         if (param0 < 63) {
           discarded$0 = this.a(40, -60, 5);
@@ -236,7 +236,7 @@ abstract class ConsolePanel implements OverlayLayer {
         return this.field_h;
     }
 
-    public boolean a(int param0, int param1, char param2) {
+    public boolean handleKeyTyped(int param0, int param1, char param2) {
         IntrusiveNode stackIn_26_1 = null;
         UiLayoutNode var5;
         int var6;
@@ -312,7 +312,7 @@ abstract class ConsolePanel implements OverlayLayer {
             this.field_m.a(0, new TextLine(param0));
           }
           if (this.field_m.a(false) > param1) {
-            this.field_m.h(-124);
+            this.field_m.removeLast(-124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -342,7 +342,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var4 = new UiLayoutNode(0L, (UiLayoutNode) null, param1);
           var4.field_X = this.field_d;
           var4.field_y = param0;
-          var4.a(true, this.field_d.a(var4.field_E), 5, 0, this.field_f);
+          var4.setBounds(true, this.field_d.a(var4.field_E), 5, 0, this.field_f);
           if (param2 > 0) {
             var5 = (String) null;
             this.a((String) null, (byte) -100);
@@ -415,7 +415,7 @@ abstract class ConsolePanel implements OverlayLayer {
         int var2;
         boolean stackIn_10_0 = false;
         var1 = bk.a(2);
-        var2 = qi.a(false);
+        var2 = PlayerStatSortCriterion.a(false);
         if (param0 < 45) {
           field_q = (UiLayoutNode) null;
         }
@@ -445,7 +445,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         int var4 = 0;
         int var3;
         int var5;
@@ -486,8 +486,8 @@ abstract class ConsolePanel implements OverlayLayer {
           }
         }
         this.field_n = this.field_n + 1;
-        this.field_l.b(0, param1);
-        this.field_g.a(this.field_f, StatefulTextPainter.field_v * (this.field_f * 2), true, 0);
+        this.field_l.updateInput(0, param1);
+        this.field_g.updateScroll(this.field_f, StatefulTextPainter.field_v * (this.field_f * 2), true, 0);
         this.field_k.updatePointer(11570);
     }
 
@@ -525,13 +525,13 @@ abstract class ConsolePanel implements OverlayLayer {
           var11 = this.a(4, 2263074);
           var12 = this.a(65793, 200, 2236962);
           this.field_l = new UiLayoutNode(0L, var5);
-          this.field_l.a(true, f.field_d, 0, -200, 200);
+          this.field_l.setBounds(true, f.field_d, 0, -200, 200);
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new UiLayoutNode();
           var14.field_jb = new IntrusiveDeque();
           this.field_g = new ScrollPane(0L, var14, var6, var13);
           this.field_g.field_Ab.field_jb = new IntrusiveDeque();
-          this.field_g.a(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
+          this.field_g.setLayout(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
           this.field_l.addChild((byte) -118, (UiLayoutNode) (this.field_g));
           var15 = new UiLayoutNode();
           var15.field_y = 13421772;

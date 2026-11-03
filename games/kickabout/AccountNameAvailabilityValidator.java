@@ -190,7 +190,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var9 = param0;
           var10 = param4;
           var11 = param2;
-          var12.field_j.a(0, var10, var8, var9, var11);
+          var12.field_j.layoutItems(0, var10, var8, var9, var11);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bv.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

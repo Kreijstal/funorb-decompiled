@@ -14,7 +14,7 @@ final class ScrollBar extends UiLayoutNode {
     private UiLayoutNode field_Bb;
     private UiLayoutNode field_Fb;
 
-    final int a(int param0, int param1, boolean param2, int param3) {
+    final int getDraggedOffsetHorizontal(int param0, int param1, boolean param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var5 = param1;
@@ -44,14 +44,14 @@ final class ScrollBar extends UiLayoutNode {
         return var5;
     }
 
-    final boolean b(int param0) {
+    final boolean pollScrollBackward(int param0) {
         if (this.field_Bb.field_sb != 0) {
           this.field_Gb = 20;
           return true;
         }
         if (0 == this.field_Bb.field_qb) {
           if (param0 > -47) {
-            this.j(69);
+            this.isThumbHeld(69);
             return false;
           }
           return false;
@@ -64,13 +64,13 @@ final class ScrollBar extends UiLayoutNode {
           return true;
         }
         if (param0 > -47) {
-          this.j(69);
+          this.isThumbHeld(69);
           return false;
         }
         return false;
     }
 
-    final boolean h(int param0) {
+    final boolean pollScrollForward(int param0) {
         if (this.field_Fb.field_sb != 0) {
           this.field_Gb = 20;
           return true;
@@ -97,16 +97,16 @@ final class ScrollBar extends UiLayoutNode {
         this(param0, param1.field_Bb, param1.field_Fb, param1.field_Ab, param1.field_yb, param2);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void layoutThumb(int param0, int param1, int param2, int param3) {
         if (this.field_Cb) {
-          this.a(true, param0, param3, param1);
+          this.layoutVertical(true, param0, param3, param1);
           if (param2 < 13) {
             field_Db = (int[]) null;
             return;
           }
           return;
         }
-        this.c(param0, 2, param1, param3);
+        this.layoutHorizontal(param0, 2, param1, param3);
         if (param2 < 13) {
           field_Db = (int[]) null;
           return;
@@ -125,7 +125,7 @@ final class ScrollBar extends UiLayoutNode {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-            tn.field_f.a(125, param1);
+            tn.field_f.draw(125, param1);
             return;
           }
           if (fj.field_a > 0) {
@@ -133,7 +133,7 @@ final class ScrollBar extends UiLayoutNode {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-            tn.field_f.a(125, param1);
+            tn.field_f.draw(125, param1);
             return;
           }
           if (ee.field_b <= 0) {
@@ -141,7 +141,7 @@ final class ScrollBar extends UiLayoutNode {
           }
           if (TrinketCatalog.field_b) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-            tn.field_f.a(125, param1);
+            tn.field_f.draw(125, param1);
           }
           return;
         }
@@ -158,7 +158,7 @@ final class ScrollBar extends UiLayoutNode {
           }
         } else {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-          TriangleMesh.field_j.a(77, param1);
+          TriangleMesh.field_j.draw(77, param1);
           if (param0 <= 10) {
             field_Eb = (String) null;
           }
@@ -176,7 +176,7 @@ final class ScrollBar extends UiLayoutNode {
           }
         }
         SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
-        tn.field_f.a(125, param1);
+        tn.field_f.draw(125, param1);
     }
 
     private ScrollBar(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, boolean param5) {
@@ -248,7 +248,7 @@ final class ScrollBar extends UiLayoutNode {
         }
     }
 
-    private final void c(int param0, int param1, int param2, int param3) {
+    private final void layoutHorizontal(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var9 = 0;
@@ -436,7 +436,7 @@ final class ScrollBar extends UiLayoutNode {
         field_Eb = null;
     }
 
-    final boolean i(int param0) {
+    final boolean pollPageForward(int param0) {
         if (this.field_Ib.field_sb != 0) {
           this.field_Gb = 20;
           return true;
@@ -464,7 +464,7 @@ final class ScrollBar extends UiLayoutNode {
         this(vb.a(0, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5);
     }
 
-    final int a(int param0, boolean param1, byte param2, int param3) {
+    final int getDraggedOffsetVertical(int param0, boolean param1, byte param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -494,18 +494,18 @@ final class ScrollBar extends UiLayoutNode {
         if (param2 == -95) {
           return var5;
         }
-        this.c(29, 92, -42, -36);
+        this.layoutHorizontal(29, 92, -42, -36);
         return var5;
     }
 
-    final boolean j(int param0) {
+    final boolean isThumbHeld(int param0) {
         if (param0 != 0) {
           return false;
         }
         return 0 != this.field_yb.field_qb ? true : false;
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3) {
+    private final void layoutVertical(boolean param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -657,7 +657,7 @@ final class ScrollBar extends UiLayoutNode {
         var20Lifetime1.field_s = 0;
     }
 
-    final boolean c(boolean param0) {
+    final boolean pollPageBackward(boolean param0) {
         if (this.field_Ab.field_sb != 0) {
           this.field_Gb = 20;
           return true;
@@ -683,10 +683,10 @@ final class ScrollBar extends UiLayoutNode {
         th.a((byte) -99);
         if (param0 != 0) {
           field_Eb = (String) null;
-          StrongCacheEntry.field_z.b(22997);
+          StrongCacheEntry.field_z.clear(22997);
           return;
         }
-        StrongCacheEntry.field_z.b(22997);
+        StrongCacheEntry.field_z.clear(22997);
     }
 
     static {

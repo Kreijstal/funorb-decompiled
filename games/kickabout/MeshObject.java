@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cv {
+abstract class MeshObject {
     static int field_d;
     static boolean field_e;
     static Sprite[][] field_b;
@@ -230,9 +230,9 @@ abstract class cv {
             SortCriterion.field_l = null;
             TextButton.field_B = false;
           }
-          if (al.field_Db) {
+          if (FriendsListPanel.field_Db) {
             um.field_e = null;
-            al.field_Db = false;
+            FriendsListPanel.field_Db = false;
             oa.b(-23217);
             mv.$cfr$intArgs$a$6121ff5511c4(119);
             BytePlusOneCommand.g(0);
@@ -283,7 +283,7 @@ abstract class cv {
         field_a = null;
         field_b = (Sprite[][]) null;
         if (param0 > -5) {
-          cv.a(117);
+          MeshObject.a(117);
         }
     }
 

@@ -13,7 +13,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
     private TextButton field_E;
     static Sprite field_C;
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -88,7 +88,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_E = new TextButton(ConsoleEvaluationException.field_f, (UiListener) null);
         this.field_J = new TextButton(vb.field_e, (UiListener) null);
-        this.field_H = new TextButton(ba.field_o, (UiListener) null);
+        this.field_H = new TextButton(TrinketCountSortCriterion.field_o, (UiListener) null);
         op var1 = new op();
         this.field_E.field_r = (WidgetPainter) ((Object) var1);
         this.field_J.field_r = (WidgetPainter) ((Object) var1);
@@ -96,9 +96,9 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_J.a(30, 1, this.field_n - var3 >> 1, var4, -var2 + (this.field_i - 48));
-        this.field_H.a(30, 1, var4 + ((-var3 + this.field_n >> 1) + var2), var4, -48 + (this.field_i - var2));
-        this.field_E.a(30, 1, this.field_n - var3 >> 1, var3, -(var2 * 2) + (this.field_i - 78));
+        this.field_J.setBounds(30, 1, this.field_n - var3 >> 1, var4, -var2 + (this.field_i - 48));
+        this.field_H.setBounds(30, 1, var4 + ((-var3 + this.field_n >> 1) + var2), var4, -48 + (this.field_i - var2));
+        this.field_E.setBounds(30, 1, this.field_n - var3 >> 1, var3, -(var2 * 2) + (this.field_i - 78));
         this.field_J.field_k = (UiListener) (this);
         this.field_E.field_k = (UiListener) (this);
         this.field_H.field_k = (UiListener) (this);
@@ -109,7 +109,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         this.a(-54, this.field_H);
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_14_0 = false;
@@ -118,7 +118,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -101, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -101, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
@@ -147,11 +147,11 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_t;
         int var6 = param3 + this.field_g;
         gf.field_a.a(vb.field_i, 20 + var5, 20 + var6, this.field_n - 40, this.field_i - 50, 16777215, -1, 1, 0, gf.field_a.field_G);
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
     }
 
     static {

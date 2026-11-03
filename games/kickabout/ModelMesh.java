@@ -723,7 +723,7 @@ final class ModelMesh extends ModelMeshBase {
         }
     }
 
-    private final static int d(int param0) {
+    private final static int clampHslLightness(int param0) {
         if (param0 < 2) {
           param0 = 2;
         } else {
@@ -942,7 +942,7 @@ final class ModelMesh extends ModelMeshBase {
           }
         }
         if (field_l) {
-          qi.a(0, var7 - 1, -1, field_J, field_k);
+          PlayerStatSortCriterion.a(0, var7 - 1, -1, field_J, field_k);
           if (this.field_w == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.e(field_k[var8Lifetime2]);
@@ -1965,7 +1965,7 @@ final class ModelMesh extends ModelMeshBase {
         this.field_eb = 0;
     }
 
-    ModelMesh(vn param0, int param1, int param2, int param3, int param4, int param5) {
+    ModelMesh(MeshData param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;
@@ -1996,8 +1996,8 @@ final class ModelMesh extends ModelMeshBase {
         this.field_L = 0;
         this.field_ab = 0;
         this.field_eb = 0;
-        param0.b();
-        param0.a();
+        param0.calculateNormals();
+        param0.buildSkinGroups();
         this.field_L = param0.field_m;
         this.field_T = param0.field_t;
         this.field_N = param0.field_H;
@@ -2112,7 +2112,7 @@ final class ModelMesh extends ModelMeshBase {
               } else {
                 var19 = param0.field_J[var16];
                 var14 = param1 + (param3 * var19.field_f + param4 * var19.field_a + param5 * var19.field_g) / (var8 + var8 / 2);
-                this.field_kb[var16] = ModelMesh.d(var14);
+                this.field_kb[var16] = ModelMesh.clampHslLightness(var14);
                 this.field_n[var16] = -1;
               }
             } else {
@@ -2123,7 +2123,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_gb[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_kb[var16] = ModelMesh.d(var14);
+              this.field_kb[var16] = ModelMesh.clampHslLightness(var14);
               if (param0.field_q != null &&
                 param0.field_q[this.field_S[var16]] != null) {
                 var13 = param0.field_q[this.field_S[var16]];
@@ -2131,7 +2131,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_S[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_v[var16] = ModelMesh.d(var14);
+              this.field_v[var16] = ModelMesh.clampHslLightness(var14);
               if (param0.field_q != null &&
                 param0.field_q[this.field_h[var16]] != null) {
                 var13 = param0.field_q[this.field_h[var16]];
@@ -2139,7 +2139,7 @@ final class ModelMesh extends ModelMeshBase {
                 var13 = param0.field_i[this.field_h[var16]];
               }
               var14 = param1 + (param3 * var13.field_a + param4 * var13.field_b + param5 * var13.field_f) / (var8 * var13.field_g);
-              this.field_n[var16] = ModelMesh.d(var14);
+              this.field_n[var16] = ModelMesh.clampHslLightness(var14);
             }
           } else {
             if (var10Lifetime2 != 0) {

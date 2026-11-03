@@ -85,9 +85,9 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         }
     }
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_ab = -param2 + BytePlusOneCommand.field_A - this.field_t;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mr.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -127,7 +127,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         }
     }
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         if (!this.field_m) {
           return null;
         }
@@ -135,7 +135,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           return null;
         }
         if (param0 != -1) {
-          this.f(54);
+          this.getTooltip(54);
         }
         TournamentChampionDialog.b(ArchiveManager.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
         return this.field_u;

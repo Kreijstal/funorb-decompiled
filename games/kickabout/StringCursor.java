@@ -35,7 +35,7 @@ final class StringCursor {
             var4Lifetime1 = TextButton.field_v;
             var5 = sm.field_q;
             var6 = ReceivedAuctionItem.field_y;
-            var4Lifetime1.field_j.a(0, 0, var5, var6, 0);
+            var4Lifetime1.field_j.layoutItems(0, 0, var5, var6, 0);
           }
           ug.a(param2, 2, param0);
           return;

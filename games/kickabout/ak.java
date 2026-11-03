@@ -161,7 +161,7 @@ final class ak extends IntrusiveNode {
               this.field_m.d(false);
             } else {
               if (this.field_j == 2) {
-                this.field_h.h(param0 ^ 128);
+                this.field_h.render(param0 ^ 128);
               }
             }
           }

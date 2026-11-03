@@ -195,7 +195,7 @@ final class ResourceArchive {
           this.field_e[param0] = AuctionLogEntry.a(this.field_i.b(param0, 4), false, 136);
         }
         if (param1 < 31) {
-          this.b(-52, ((int[]) (this.field_e[5]))[1]);
+          this.ensureFlatFileAvailable(-52, ((int[]) (this.field_e[5]))[1]);
         }
     }
 
@@ -342,7 +342,7 @@ final class ResourceArchive {
         throw new IllegalArgumentException(Integer.toString(param1));
     }
 
-    final synchronized byte[] a(int param0, int param1) {
+    final synchronized byte[] getSingleFile(int param0, int param1) {
         if (!this.ensureIndex(param0 - 56)) {
           return null;
         }
@@ -394,7 +394,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final synchronized boolean b(int param0, int param1) {
+    final synchronized boolean ensureFlatFileAvailable(int param0, int param1) {
         if (!this.ensureIndex(-107)) {
           return false;
         }
@@ -555,7 +555,7 @@ final class ResourceArchive {
         int var4Lifetime1;
         var5 = Kickabout.field_G;
         if (param0 != -8185) {
-          this.b(-94, -79);
+          this.ensureFlatFileAvailable(-94, -79);
         }
         if (!this.ensureIndex(param0 + 8092)) {
           return 0;
@@ -756,7 +756,7 @@ final class ResourceArchive {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(var26.field_f.length, param1, true, 5);
+            var26.xteaDecryptRange(var26.field_f.length, param1, true, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -820,7 +820,7 @@ final class ResourceArchive {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    ArrayOperations.a(var43, var17, var44, var14_intLifetime1, var19);
+                    ArrayOperations.copyBytes(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -858,7 +858,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.readInt(4);
-                  ArrayOperations.a(var43, var16, var40[var19], var39[var19], var18);
+                  ArrayOperations.copyBytes(var43, var16, var40[var19], var39[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
                 }

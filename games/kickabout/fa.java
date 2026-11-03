@@ -13,7 +13,7 @@ final class fa extends IntrusiveNode {
     final static void b(int param0) {
         DebugConsole.field_s = false;
         if (dr.field_g != null) {
-          dr.field_g.a(5075);
+          dr.field_g.resetSelection(5075);
         }
         int var1 = -60 % ((-56 - param0) / 56);
         if (0 != NodeHashTableIterator.field_b) {

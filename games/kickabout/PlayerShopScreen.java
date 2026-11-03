@@ -37,7 +37,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_J.h((byte) -48);
         SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
-        this.field_I.a(new IntValueNode(param0 | param3 << 16), 3);
+        this.field_I.addLast(new IntValueNode(param0 | param3 << 16), 3);
         this.rebuildShopRows(true);
         this.field_J.a(var6, 94);
         this.field_J.a(true, var5);
@@ -76,10 +76,10 @@ final class PlayerShopScreen extends TeamManagementScreen {
           var6.field_Lb = true;
         }
         this.field_Q.addChild((byte) -126, (UiLayoutNode) (this.field_T));
-        this.field_Q.a(true, 12 + this.field_T.field_q, 3, 54, 30 + this.field_T.field_mb + 12);
+        this.field_Q.setBounds(true, 12 + this.field_T.field_q, 3, 54, 30 + this.field_T.field_mb + 12);
         this.field_T.field_J = 36;
         this.field_T.field_s = 6;
-        this.field_G.a(true, this.field_Q.field_q, this.field_Q.field_s, 5 + (this.field_Q.field_mb + this.field_Q.field_J), 97);
+        this.field_G.setBounds(true, this.field_Q.field_q, this.field_Q.field_s, 5 + (this.field_Q.field_mb + this.field_Q.field_J), 97);
         this.rebuildShopRows(true);
         this.field_J.field_Db = -1;
         this.field_J.b(2, 104);
@@ -105,7 +105,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         tc.a(ic.field_h.field_x, 5464);
         this.field_J.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
-        this.field_L.b(0, param1);
+        this.field_L.updateInput(0, param1);
         this.field_T.update(48);
         if (this.field_T.field_Fb != -1 &&
           this.field_T.getSelectedSlot((byte) 21).field_Eb.isEmpty(-2)) {
@@ -131,7 +131,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
             if (ic.field_h.hasEmptySquadSlot((byte) -86)) {
               pi.a(6022, this.field_F[var7]);
             } else {
-              tb.a((byte) 126, 0);
+              SocketArchiveNetworkClient.a((byte) 126, 0);
             }
           }
           var7++;
@@ -230,7 +230,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
                   }
                   var7 = (IntValueNode) (this.field_I.c(33));
                 }
-                var10.a(new ShopPlayerSlot(var5, MusicPatchNode.field_x, var3, var4_int, var6 != 0), 3);
+                var10.addLast(new ShopPlayerSlot(var5, MusicPatchNode.field_x, var3, var4_int, var6 != 0), 3);
               }
             }
             var3++;
@@ -270,7 +270,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_Q = new UiLayoutNode();
         this.field_G = new UiLayoutNode();
         this.field_L = new UiLayoutNode();
-        this.field_L.a(true, 640, 640, 0, 480);
+        this.field_L.setBounds(true, 640, 640, 0, 480);
         this.field_L.addChild((byte) -110, (UiLayoutNode) (this.field_J));
         this.field_L.addChild((byte) -111, this.field_Q);
         this.field_L.addChild((byte) -111, this.field_G);
@@ -288,7 +288,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         un.field_d.a(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
         RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
         this.field_J.a(-120);
-        this.field_L.a(75, false);
+        this.field_L.draw(75, false);
     }
 
     static {

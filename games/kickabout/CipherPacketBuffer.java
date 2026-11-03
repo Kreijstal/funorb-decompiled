@@ -53,7 +53,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void b(int param0, byte param1) {
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
-        this.field_f[fieldTemp$0] = (byte)(param0 + this.field_p.b((byte) 100));
+        this.field_f[fieldTemp$0] = (byte)(param0 + this.field_p.nextInt((byte) 100));
         int var3 = -46 % ((param1 - 13) / 59);
     }
 
@@ -123,7 +123,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param3; var5_int++) {
             fieldTemp$0 = this.field_n;
             this.field_n = this.field_n + 1;
-            param2[param1 + var5_int] = (byte)(this.field_f[fieldTemp$0] - this.field_p.b((byte) 119));
+            param2[param1 + var5_int] = (byte)(this.field_f[fieldTemp$0] - this.field_p.nextInt((byte) 119));
           }
           if (param0 != -30) {
             this.field_u = -126;
@@ -164,7 +164,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
         pa.b((byte) 92);
         tn.field_d.a(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
-        ConsoleValue.field_a.a(true, WhirlpoolHasher.field_m.field_q, 0, 0, sh.field_c);
+        ConsoleValue.field_a.setBounds(true, WhirlpoolHasher.field_m.field_q, 0, 0, sh.field_c);
         var1 = sh.field_c + 2;
         if (param0) {
           var4 = (ResourceArchive) null;
@@ -185,30 +185,30 @@ final class CipherPacketBuffer extends PacketBuffer {
         } else {
           stackIn_11_6 = var1;
         }
-        ((UiLayoutNode) (Object) stackIn_4_0).a(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
+        ((UiLayoutNode) (Object) stackIn_4_0).setBounds(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
         ClientException.a(0);
-        MouseWheelInput.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
-        AuctionItem.field_o.a(true, af.field_d.field_q, 0, 0, 30);
+        MouseWheelInput.field_a.setBounds(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
+        AuctionItem.field_o.setBounds(true, af.field_d.field_q, 0, 0, 30);
         stackIn_13_0 = bt.field_b;
         stackIn_14_1 = (param0) ? false : true;
-        ((UiLayoutNode) (Object) stackIn_13_0).a(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
-        PlayingView.field_w.a(true, 68, 5, 5, 30);
-        LoginRequiredDialog.field_G.a(true, 78, 75, 5, 30);
-        TextWidgetPainter.field_n.a(true, 48, 155, 5, 30);
-        AuctionsHelpScreen.field_G.a(true, 48, 205, 5, 30);
+        ((UiLayoutNode) (Object) stackIn_13_0).setBounds(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
+        PlayingView.field_w.setBounds(true, 68, 5, 5, 30);
+        LoginRequiredDialog.field_G.setBounds(true, 78, 75, 5, 30);
+        TextWidgetPainter.field_n.setBounds(true, 48, 155, 5, 30);
+        AuctionsHelpScreen.field_G.setBounds(true, 48, 205, 5, 30);
         stackIn_17_0 = (ui.field_t) ? 250 : 200;
         var2 = stackIn_17_0;
         stackIn_19_0 = DateInputWidget.field_D;
         stackIn_20_1 = (param0) ? false : true;
-        ((UiLayoutNode) (Object) stackIn_19_0).a(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
-        RegistrationRequestDialog.field_lb.a(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
-        ShopPlayerSlot.field_Jb.a(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
+        ((UiLayoutNode) (Object) stackIn_19_0).setBounds(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
+        RegistrationRequestDialog.field_lb.setBounds(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
+        ShopPlayerSlot.field_Jb.setLayout(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
         var3 = (2 + af.field_d.field_q) / 2;
-        dr.field_d.a(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);
+        dr.field_d.setBounds(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);
         if (!ui.field_t) {
           var3 = 0;
         }
-        LoginCredentials.field_b.a(true, -var3 + af.field_d.field_q, var3, -40 + af.field_d.field_mb, 40);
+        LoginCredentials.field_b.setBounds(true, -var3 + af.field_d.field_q, var3, -40 + af.field_d.field_mb, 40);
     }
 
     final static void k(int param0, int param1) {
@@ -254,10 +254,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
-        return this.field_f[fieldTemp$0] - this.field_p.b((byte) 126) & 255;
+        return this.field_f[fieldTemp$0] - this.field_p.nextInt((byte) 126) & 255;
     }
 
-    final int l(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Kickabout.field_G;
         int var3 = this.field_o >> 3;
@@ -282,7 +282,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var5;
     }
 
-    final void a(byte param0, int[] param1) {
+    final void installCipher(byte param0, int[] param1) {
         try {
           this.field_p = new IsaacRandom(param1);
           if (param0 <= 99) {

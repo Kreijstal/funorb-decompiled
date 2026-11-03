@@ -19,7 +19,7 @@ final class ui extends vv {
         RuntimeException var3 = null;
         try {
           if (null != rk.field_f) {
-            rk.field_f.q(-123);
+            rk.field_f.closeDialog(-123);
           }
           IsSixCommand.field_E = new LoginForm(param0, param2, false, true, true);
           we.field_a.a((byte) -122, (UiWidget) (IsSixCommand.field_E));

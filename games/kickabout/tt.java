@@ -83,7 +83,7 @@ final class tt {
               fieldTemp$0 = StripedProgressBar.field_y;
               StripedProgressBar.field_y = StripedProgressBar.field_y + 1;
               var6.field_Cb = fieldTemp$0;
-              qn.field_b.a(var6, 3);
+              qn.field_b.addLast(var6, 3);
             }
             var6.field_Eb = var7;
             var6.field_yb = var5;
@@ -141,7 +141,7 @@ final class tt {
             fieldTemp$1 = ListingRow.field_d;
             ListingRow.field_d = ListingRow.field_d + 1;
             var6Lifetime1.field_Cb = fieldTemp$1;
-            GameplayHelpScreen.field_I.a(var6Lifetime1, 3);
+            GameplayHelpScreen.field_I.addLast(var6Lifetime1, 3);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -178,7 +178,7 @@ final class tt {
             }
             break;
           }
-          GameplayHelpScreen.field_I.a(var6Lifetime1, 3);
+          GameplayHelpScreen.field_I.addLast(var6Lifetime1, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

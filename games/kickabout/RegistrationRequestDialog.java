@@ -99,46 +99,46 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    final boolean k(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         wn var2 = null;
         wn var2Lifetime1;
         if (param0 != -1) {
           RegistrationRequestDialog.releaseStatics(-114);
           if (!this.field_C) {
-            return super.k(-1);
+            return super.advanceDialogAnimation(-1);
           }
           if (this.field_pb) {
-            return super.k(-1);
+            return super.advanceDialogAnimation(-1);
           }
           var2 = uf.a(param0 - 1459);
           if (var2 == null) {
-            return super.k(-1);
+            return super.advanceDialogAnimation(-1);
           }
           this.a(false, var2, (byte) -71);
-          return super.k(-1);
+          return super.advanceDialogAnimation(-1);
         }
         if (!this.field_C) {
-          return super.k(-1);
+          return super.advanceDialogAnimation(-1);
         }
         if (this.field_pb) {
-          return super.k(-1);
+          return super.advanceDialogAnimation(-1);
         }
         var2Lifetime1 = uf.a(param0 - 1459);
         if (var2Lifetime1 == null) {
-          return super.k(-1);
+          return super.advanceDialogAnimation(-1);
         }
         this.a(false, var2Lifetime1, (byte) -71);
-        return super.k(-1);
+        return super.advanceDialogAnimation(-1);
     }
 
-    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+    public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         if (this.field_nb) {
           bl.a(false, true, (byte) -121);
           return;
         }
         try {
           oh.a(-87);
-          this.q(-96);
+          this.closeDialog(-96);
           if (param3 <= 64) {
             field_rb = (r) null;
           }
@@ -163,7 +163,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             if (param1.field_f != null) {
               var4 = ModalStack.field_B;
               if (null != this.field_mb) {
-                this.field_mb.a(-1);
+                this.field_mb.onRefreshSuggestions(-1);
               }
             } else {
               var4 = param1.field_d;

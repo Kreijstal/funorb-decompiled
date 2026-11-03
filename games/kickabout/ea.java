@@ -53,7 +53,7 @@ final class ea {
           var16 = Integer.toString(var8);
           var10 = var16;
           if (!(2 <= var16.length())) {
-            var10 = LeaguesScreen.a('0', (byte) -83) + var16;
+            var10 = LeaguesScreen.charToString('0', (byte) -83) + var16;
           }
           var11 = -25 + param3 - (var7 >= 10 ? 0 : 3);
           var12 = -4 + (param1 + 20);
@@ -68,7 +68,7 @@ final class ea {
           SoftwareRasterizer.a(-var13 + param3, param1, var13, var14, 2, 0, param4);
           if (256 != var9) {
             PacketBuffer.a(-122, ph.field_b);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
           }
           var15 = un.field_d;
           if (nj.monotonicMillis(107) % 1000L < 500L) {

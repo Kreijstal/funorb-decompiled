@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jr extends im {
+final class ReceivedAuctionItemRow extends ListRow {
     private String field_Ib;
     static String field_Fb;
     static int field_Mb;
@@ -14,7 +14,7 @@ final class jr extends im {
     private UiLayoutNode field_Jb;
     private TrinketSlot[] field_Eb;
 
-    final void c(int param0, boolean param1) {
+    final void updateRow(int param0, boolean param1) {
         int var4 = 0;
         int stackIn_8_0 = 0;
         UiLayoutNode stackIn_18_0 = null;
@@ -45,27 +45,27 @@ final class jr extends im {
           }
           if (this.field_Jb.field_sb == 1) {
             if (GameLoopApplet.field_E.hasOwnEntry(param0 ^ 1, this.field_Hb.field_a)) {
-              tb.a((byte) 126, 31);
+              SocketArchiveNetworkClient.a((byte) 126, 31);
               ShopPlayerSlot.c(53, param0 - 9);
             } else {
               if (GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79)) {
-                tb.a((byte) 126, 3);
+                SocketArchiveNetworkClient.a((byte) 126, 3);
                 ShopPlayerSlot.c(53, -3);
               } else {
                 if (GameLoopApplet.field_E.canStartAuction(-3)) {
                   if (GameLoopApplet.field_E.d(-1) == -1) {
-                    tb.a((byte) 126, 2);
+                    SocketArchiveNetworkClient.a((byte) 126, 2);
                     ShopPlayerSlot.c(53, 112);
                   } else {
                     if (this.field_Hb.field_i > GameLoopApplet.field_E.field_x) {
-                      tb.a((byte) 126, 4);
+                      SocketArchiveNetworkClient.a((byte) 126, 4);
                       ShopPlayerSlot.c(53, 9);
                     } else {
                       LoadingProgressDialog.a(-45, this.field_Hb);
                     }
                   }
                 } else {
-                  tb.a((byte) 126, 6);
+                  SocketArchiveNetworkClient.a((byte) 126, 6);
                   ShopPlayerSlot.c(53, 34);
                 }
               }
@@ -74,7 +74,7 @@ final class jr extends im {
           if (this.field_Cb.field_sb == 1) {
             if (GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79)) {
               if (this.field_Hb.field_t > GameLoopApplet.field_E.field_x) {
-                tb.a((byte) 126, 4);
+                SocketArchiveNetworkClient.a((byte) 126, 4);
                 ShopPlayerSlot.c(53, -113);
               } else {
                 ca.a(this.field_Hb, 255);
@@ -82,23 +82,23 @@ final class jr extends im {
             } else {
               if (!GameLoopApplet.field_E.hasOwnEntry(param0 + 1, this.field_Hb.field_a)) {
                 if (this.field_Hb.field_t > GameLoopApplet.field_E.field_x) {
-                  tb.a((byte) 126, 4);
+                  SocketArchiveNetworkClient.a((byte) 126, 4);
                   ShopPlayerSlot.c(53, -12);
                 } else {
                   if (GameLoopApplet.field_E.canStartAuction(-3)) {
                     if (GameLoopApplet.field_E.d(-1) == -1) {
-                      tb.a((byte) 126, 2);
+                      SocketArchiveNetworkClient.a((byte) 126, 2);
                       ShopPlayerSlot.c(53, 40);
                     } else {
                       is.a((byte) -123, this.field_Hb);
                     }
                   } else {
-                    tb.a((byte) 126, 6);
+                    SocketArchiveNetworkClient.a((byte) 126, 6);
                     ShopPlayerSlot.c(53, 111);
                   }
                 }
               } else {
-                tb.a((byte) 126, 31);
+                SocketArchiveNetworkClient.a((byte) 126, 31);
                 ShopPlayerSlot.c(53, 54);
               }
             }
@@ -106,7 +106,7 @@ final class jr extends im {
         }
         if (param0 != 0) {
           var6 = (ResourceArchive) null;
-          jr.a((ResourceArchive) null, 41, 84);
+          ReceivedAuctionItemRow.a((ResourceArchive) null, 41, 84);
         }
     }
 
@@ -119,7 +119,7 @@ final class jr extends im {
         return stackIn_6_0;
     }
 
-    final void b(int param0, int param1) {
+    final void drawRow(int param0, int param1) {
         PlayerStats stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         PlayerStats stackIn_14_0;
@@ -173,7 +173,7 @@ final class jr extends im {
             if (var5 != null) {
               var5.c(1 + var4, this.field_T + 4);
             } else {
-              jr.a(1 + var4 + 19, -97, this.field_T + 4 + 23);
+              ReceivedAuctionItemRow.a(1 + var4 + 19, -97, this.field_T + 4 + 23);
             }
             this.field_X.a(var12.getDisplayName(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[0];
@@ -241,7 +241,7 @@ final class jr extends im {
             if (-1 != var8Lifetime1) {
               stackIn_58_0 = ad.formatCurrencyAmount(var8Lifetime1, 26300);
             } else {
-              stackIn_58_0 = im.field_zb;
+              stackIn_58_0 = ListRow.field_zb;
             }
             var9 = stackIn_58_0;
             this.field_X.d(var9, (this.field_Db[5] >> 1) + var4, -7 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
@@ -255,7 +255,7 @@ final class jr extends im {
               IsSixCommand.field_C.d(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
             }
           } else {
-            jr.a(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);
+            ReceivedAuctionItemRow.a(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);
           }
           return;
         }
@@ -286,7 +286,7 @@ final class jr extends im {
             stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
-          var4 = param0.a(0, param1);
+          var4 = param0.getSingleFile(0, param1);
           var3 = var4;
           if (var4 != null) {
             stackIn_7_0 = new MusicPatch(var4);
@@ -315,11 +315,11 @@ final class jr extends im {
         }
     }
 
-    private jr() {
+    private ReceivedAuctionItemRow() {
         this.field_Lb = true;
     }
 
-    jr(String param0) {
+    ReceivedAuctionItemRow(String param0) {
         try {
           this.field_Ib = param0;
           this.field_Lb = true;
@@ -328,7 +328,7 @@ final class jr extends im {
         }
     }
 
-    jr(int[] param0) {
+    ReceivedAuctionItemRow(int[] param0) {
         try {
           this.field_Lb = true;
           this.field_Db = param0;
@@ -337,7 +337,7 @@ final class jr extends im {
         }
     }
 
-    jr(ReceivedAuctionItem param0, int[] param1) {
+    ReceivedAuctionItemRow(ReceivedAuctionItem param0, int[] param1) {
         int var8 = 0;
         int stackIn_11_0 = 0;
         Object stackIn_14_0 = null;
@@ -347,7 +347,7 @@ final class jr extends im {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jr var3 = null;
+        ReceivedAuctionItemRow var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object var5 = null;
@@ -358,9 +358,9 @@ final class jr extends im {
         int var11 = 0;
         int var12 = 0;
         try {
-          var3 = (jr) (bk.field_f.b((byte) 126));
+          var3 = (ReceivedAuctionItemRow) (bk.field_f.removeFirst((byte) 126));
           if (var3 == null) {
-            var3 = new jr();
+            var3 = new ReceivedAuctionItemRow();
           }
           this.field_mb = 50;
           this.field_Hb = param0;
@@ -381,8 +381,8 @@ final class jr extends im {
             stackIn_14_0 = un.field_d;
           }
           var5 = stackIn_14_0;
-          this.field_Jb = eo.a(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
-          this.field_Cb = eo.a(TickClock.field_f, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Jb = eo.createRenderedButton(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Cb = eo.createRenderedButton(TickClock.field_f, 7126504, (BitmapFont) (var5), 50, true);
           this.addChild((byte) -117, this.field_Jb);
           this.addChild((byte) -120, this.field_Cb);
           this.field_Jb.field_J = this.field_T + 20;

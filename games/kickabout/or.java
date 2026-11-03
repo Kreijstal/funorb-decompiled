@@ -29,7 +29,7 @@ final class or {
           }
           for (var2 = 1; var2 < ArchivePreloader.field_b.length; var2++) {
             var3 = ArchivePreloader.field_b[var2];
-            ArrayOperations.a(GameSoundEffect.field_e, var2 << 4, GameSoundEffect.field_e, var1_int, var3);
+            ArrayOperations.copyInts(GameSoundEffect.field_e, var2 << 4, GameSoundEffect.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

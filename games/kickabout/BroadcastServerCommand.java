@@ -3,7 +3,7 @@
  */
 final class BroadcastServerCommand extends ConsoleCommand {
     static int[][] field_E;
-    static al field_D;
+    static FriendsListPanel field_D;
     static String field_A;
     static String field_C;
     static String field_F;
@@ -110,7 +110,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
         field_E = (int[][]) null;
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;

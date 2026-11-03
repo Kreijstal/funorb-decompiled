@@ -67,9 +67,9 @@ final class StripedProgressBar extends UiWidget {
           var10.p(-111);
           SaveChangesDialog.field_H = ds.a(var10, (byte) -4);
           sm.field_l = new int[var3][];
-          ba.field_n = new TriangleMesh[var3];
+          TrinketCountSortCriterion.field_n = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
-            ba.field_n[var4] = NanoTickClock.a((byte) 80, var8);
+            TrinketCountSortCriterion.field_n[var4] = NanoTickClock.a((byte) 80, var8);
           }
           var10.l((byte) -63);
           if (param0 != 49) {
@@ -78,7 +78,7 @@ final class StripedProgressBar extends UiWidget {
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
-            var5 = ba.field_n[var9];
+            var5 = TrinketCountSortCriterion.field_n[var9];
             var5.scale(6, 6, 256, 1, 6);
             var5.computeBounds(false);
             var6 = new int[]{var5.field_h + var5.field_y >> 1, var5.field_s + var5.field_x >> 1, var5.field_t + var5.field_w >> 1};
@@ -101,7 +101,7 @@ final class StripedProgressBar extends UiWidget {
         }
     }
 
-    private final void a(Sprite param0, int param1, byte param2, int param3) {
+    private final void drawStripedBar(Sprite param0, int param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -167,7 +167,7 @@ final class StripedProgressBar extends UiWidget {
         wk.field_f = vj.field_a;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setColors(byte param0, int param1, int param2) {
         this.field_A = param1;
         this.field_F = 8355711 & param2 >> 1;
         if (param0 != 21) {
@@ -176,12 +176,12 @@ final class StripedProgressBar extends UiWidget {
         }
         this.field_E = param2;
         this.field_x = (16711422 & param1) >> 1;
-        this.a((byte) 121);
+        this.rebuildSprites((byte) 121);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        this.a((byte) 121);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
+        this.rebuildSprites((byte) 121);
     }
 
     private final Sprite a(int param0, int param1, int param2) {
@@ -238,24 +238,24 @@ final class StripedProgressBar extends UiWidget {
         return -param0 + SoftwareRasterizer.field_g;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (0 != param0) {
           return;
         }
         int var5 = this.field_t + param2;
         int var6 = param3 + this.field_g;
-        this.a(this.field_z[0], var5, (byte) 124, var6);
+        this.drawStripedBar(this.field_z[0], var5, (byte) 124, var6);
         if (param1 != 65) {
           this.field_x = 38;
         }
         if (65536 > this.field_C) {
           AuctionListing.a(var5 + this.field_n, -22914, var5 + (this.field_C * this.field_n >> 16), this.field_i + var6, var6);
-          this.a(this.field_z[1], var5, (byte) 124, var6);
+          this.drawStripedBar(this.field_z[1], var5, (byte) 124, var6);
           TeamManagementScreen.e(127);
         }
     }
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -287,7 +287,7 @@ final class StripedProgressBar extends UiWidget {
         }
     }
 
-    private final void a(byte param0) {
+    private final void rebuildSprites(byte param0) {
         if (param0 != 121) {
           return;
         }
@@ -310,7 +310,7 @@ final class StripedProgressBar extends UiWidget {
         this.field_A = param6;
         this.field_F = param7;
         this.field_E = param5;
-        this.a(param3, 1, param0, param2, param1);
+        this.setBounds(param3, 1, param0, param2, param1);
     }
 
     static {

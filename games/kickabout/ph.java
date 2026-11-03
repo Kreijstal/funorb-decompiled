@@ -78,7 +78,7 @@ final class ph {
         if (!ng.a(-4)) {
           return;
         }
-        ba.a(false, 6, 4);
+        TrinketCountSortCriterion.a(false, 6, 4);
         int var1 = -31 / ((param0 - 88) / 33);
     }
 

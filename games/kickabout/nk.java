@@ -94,7 +94,7 @@ final class nk extends dg {
             var2 = (ManagerAction) (MusicPatchNode.field_h.c(param0 ^ -23));
           }
           or.field_d.backpatchShortLength(or.field_d.field_n - var1_int, param0 + 118);
-          MusicPatchNode.field_h.b(param0 + 23053);
+          MusicPatchNode.field_h.clear(param0 + 23053);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nk.F(" + param0 + ')');
         }

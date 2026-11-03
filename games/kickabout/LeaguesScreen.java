@@ -34,7 +34,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         TournamentChampionDialog.b(AnimationSkeleton.field_k, 500);
     }
 
-    final static String a(char param0, byte param1) {
+    final static String charToString(char param0, byte param1) {
         if (param1 != -83) {
           LeaguesScreen.releaseStatics(77);
         }
@@ -47,7 +47,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           if (param2 >= -28) {
             field_F = (String[]) null;
           }
-          MenuButton.field_e.a(true, 640, this.slideOffsetX, 0, 480);
+          MenuButton.field_e.setBounds(true, 640, this.slideOffsetX, 0, 480);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bn.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -79,7 +79,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           this.field_D = this.field_D - 1;
         }
         var3 = AuctionTableWidget.field_Hb.field_Db.field_J;
-        MenuButton.field_e.b(0, param1);
+        MenuButton.field_e.updateInput(0, param1);
         DialogOverlay.field_b.updatePointer(11570);
         var4 = -32 % ((38 - param0) / 60);
         if (FadingSoundPlayer.field_w > 0) {
@@ -122,8 +122,8 @@ final class LeaguesScreen extends ButtonMenuScreen {
           stackIn_29_0 = false;
         }
         PlayerContextMenu.field_f = stackIn_29_0;
-        AuctionTableWidget.field_Hb.b(0, param1);
-        AuctionTableWidget.field_Hb.a(32 * StatefulTextPainter.field_v, false, (byte) -111, 32);
+        AuctionTableWidget.field_Hb.updateInput(0, param1);
+        AuctionTableWidget.field_Hb.advanceScroll(32 * StatefulTextPainter.field_v, false, (byte) -111, 32);
         if (var6 == 0) {
           var7 = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
           LineupView.field_y.evictExpired(30 + var7, -20 + var7, -108);
@@ -169,16 +169,16 @@ final class LeaguesScreen extends ButtonMenuScreen {
           }
         }
         MenuButton.field_e = new UiLayoutNode();
-        MenuButton.field_e.a(true, 640, 0, 0, 480);
+        MenuButton.field_e.setBounds(true, 640, 0, 0, 480);
         UiLayoutNode var8 = new UiLayoutNode();
         var8.field_A = 1;
         var8.field_p = 1;
         var8.field_y = 16777215;
         var8.field_X = (BitmapFont) ((Object) ConsoleTokenCursor.field_d);
         UiLayoutNode var3 = new UiLayoutNode();
-        var3.a(true, 317, 5, 5, 18);
+        var3.setBounds(true, 317, 5, 5, 18);
         AuctionTableWidget.field_Hb = new ScrollContainer(0L, var3, var8, rr.field_b);
-        AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) 37, 230, 344, 175);
+        AuctionTableWidget.field_Hb.setLayout(15, 20, 2, (byte) 37, 230, 344, 175);
         AuctionTableWidget.field_Hb.field_A = 1;
         AuctionTableWidget.field_Hb.field_y = 16777215;
         AuctionTableWidget.field_Hb.field_p = 1;
@@ -194,11 +194,11 @@ final class LeaguesScreen extends ButtonMenuScreen {
         var8.field_X = (BitmapFont) ((Object) ConsoleTokenCursor.field_d);
         DialogOverlay.field_b.field_R = null;
         ScrollPane.field_Cb = eo.a(ic.field_j, 7126504);
-        ScrollPane.field_Cb.a(true, ScrollPane.field_Cb.field_q, 310, 61, ScrollPane.field_Cb.field_mb);
+        ScrollPane.field_Cb.setBounds(true, ScrollPane.field_Cb.field_q, 310, 61, ScrollPane.field_Cb.field_mb);
         WelcomeDialog.field_H = new UiLayoutNode[7];
         for (var6 = 6; var6 >= 0; var6--) {
           WelcomeDialog.field_H[var6] = new UiLayoutNode();
-          WelcomeDialog.field_H[var6].a(true, 48, 20 + 50 * var6, 96, 48);
+          WelcomeDialog.field_H[var6].setBounds(true, 48, 20 + 50 * var6, 96, 48);
           MenuButton.field_e.addChild((byte) -127, WelcomeDialog.field_H[var6]);
         }
         MenuButton.field_e.addChild((byte) -126, (UiLayoutNode) (AuctionTableWidget.field_Hb));
@@ -223,7 +223,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
     final boolean handleKey(int param0, int param1, char param2) {
         String var4 = null;
         if (param1 > -5) {
-          LeaguesScreen.a('c', (byte) -84);
+          LeaguesScreen.charToString('c', (byte) -84);
         }
         boolean discarded$3 = super.handleKey(param0, -11, param2);
         if (!PlayArea.a(100) &&
@@ -295,7 +295,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         stackIn_26_0 = MenuButton.field_e;
         stackIn_26_1 = 85;
         stackIn_27_2 = (StrongCacheEntry.g(2368)) && (nj.monotonicMillis(127) % 500L < 250L);
-        ((UiLayoutNode) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2);
+        ((UiLayoutNode) (Object) stackIn_26_0).draw(stackIn_26_1, stackIn_27_2);
         if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
           AuctionListing.a(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);
           var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.g(24009));
@@ -311,7 +311,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             if (!PlayerContextMenu.field_f) {
               un.field_d.d(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
             } else {
-              jr.a(this.slideOffsetX + 194, -65, 290);
+              ReceivedAuctionItemRow.a(this.slideOffsetX + 194, -65, 290);
             }
           } else {
             IsSixCommand.field_C.d(sh.field_b, this.slideOffsetX + 194, 290, 16777215, -1);

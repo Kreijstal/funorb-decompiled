@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PlayerStats implements lv {
+final class PlayerStats implements PopupCard {
     static String field_d;
     static ResourceArchive field_m;
     int archetype;
@@ -178,7 +178,7 @@ final class PlayerStats implements lv {
         try {
           param1.readUnsignedByte((byte) -126);
           this.archetype = (7 & param1.readUnsignedByte((byte) -127)) - 1;
-          this.appearance = param1.a((byte) 81);
+          this.appearance = param1.readUnsignedShort((byte) 81);
           this.initialIndex = param1.readUnsignedByte((byte) -112);
           this.surnameIndex = param1.readUnsignedByte((byte) -118);
           this.power = param1.readUnsignedByte((byte) -122);
@@ -327,7 +327,7 @@ final class PlayerStats implements lv {
         return false;
     }
 
-    public final int a(int param0) {
+    public final int getHeight(int param0) {
         if (param0 != 15) {
           this.f(71);
         }
@@ -430,7 +430,7 @@ final class PlayerStats implements lv {
         if (param1 >= -65) {
           PlayerStats.a(-79, -94);
         }
-        g.field_a.a(true, 640, AuctionsHelpScreen.field_H, param0, 120);
+        g.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, param0, 120);
         RankingRowNode.a(119, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
     }
 
@@ -619,7 +619,7 @@ final class PlayerStats implements lv {
         }
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void drawCentered(int param0, int param1, int param2) {
         ClubState var7 = null;
         if (this.isEmpty(-2)) {
           return;
@@ -636,7 +636,7 @@ final class PlayerStats implements lv {
           var6 = var7.field_R;
           var5 = var7.field_k;
         }
-        this.a((byte) 70, -(this.b(0) >> 1) + param2, false, var6, var4, var5, -(this.a(param1 ^ 24) >> 1) + param0, false);
+        this.a((byte) 70, -(this.getWidth(0) >> 1) + param2, false, var6, var4, var5, -(this.getHeight(param1 ^ 24) >> 1) + param0, false);
     }
 
     final void clear(byte param0) {
@@ -943,7 +943,7 @@ final class PlayerStats implements lv {
         stackIn_20_1 = 3;
         stackIn_21_2 = (!param2) ? 0 : 20;
         stackIn_20_0[stackIn_20_1] = stackIn_21_2;
-        var13 = this.b(0);
+        var13 = this.getWidth(0);
         var14 = 0;
         var15 = param6;
         var16_int = 0;
@@ -981,7 +981,7 @@ final class PlayerStats implements lv {
         }
         var16 = kj.a(stackIn_31_0, stackIn_31_1, this, stackIn_31_3, stackIn_31_4, stackIn_36_5);
         if (var16 == null) {
-          jr.a(param1 + 24, -103, -19 + (param6 + 50));
+          ReceivedAuctionItemRow.a(param1 + 24, -103, -19 + (param6 + 50));
         } else {
           var16.c(7 + param1, 50 + param6 - (var16.field_v + 1));
         }
@@ -1071,7 +1071,7 @@ final class PlayerStats implements lv {
         field_k = null;
     }
 
-    public final int b(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != 0) {
           field_p = 95;
         }

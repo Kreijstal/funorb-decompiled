@@ -97,12 +97,12 @@ final class RankingRowNode extends UiLayoutNode {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var7Lifetime1;
-        LeaguesHelpScreen.field_E.a(true, param2, param3, param6, param5);
+        LeaguesHelpScreen.field_E.setBounds(true, param2, param3, param6, param5);
         if (null == dr.field_g) {
           var7 = 80 / ((68 - param0) / 48);
           return;
         }
-        dr.field_g.a(false, param4, param4 - NumericDateInputWidget.field_I, param1, param5, param5);
+        dr.field_g.setLayout(false, param4, param4 - NumericDateInputWidget.field_I, param1, param5, param5);
         var7Lifetime1 = 80 / ((68 - param0) / 48);
     }
 
@@ -138,12 +138,12 @@ final class RankingRowNode extends UiLayoutNode {
     final void c(boolean param0) {
         if (param0) {
           this.h((byte) 103);
-          cu.field_a.a((IntrusiveNode) (this), 3);
+          cu.field_a.addLast((IntrusiveNode) (this), 3);
           return;
         }
         this.field_Bb = (String) null;
         this.h((byte) 103);
-        cu.field_a.a((IntrusiveNode) (this), 3);
+        cu.field_a.addLast((IntrusiveNode) (this), 3);
     }
 
     final void h(byte param0) {

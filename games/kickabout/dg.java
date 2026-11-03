@@ -21,7 +21,7 @@ class dg {
 
     final static void a(byte param0, int param1, int param2, PlayerStats param3) {
         try {
-          ScrollPane.field_Jb.a(new StatChoiceDialog(param2, param1, param3), 3);
+          ScrollPane.field_Jb.addLast(new StatChoiceDialog(param2, param1, param3), 3);
           if (param0 != -120) {
             PlayerStats var5 = (PlayerStats) null;
             dg.a((byte) 119, -53, 107, (PlayerStats) null);
@@ -107,10 +107,10 @@ class dg {
           var9Lifetime2 = "0";
         }
         if (0 >= var10.length()) {
-          return var14.toString() + bo.a(-1, var9Lifetime2) + bo.a(-1, var10.toString());
+          return var14.toString() + QuickChatKeysHelpPanel.reverseString(-1, var9Lifetime2) + QuickChatKeysHelpPanel.reverseString(-1, var10.toString());
         }
         discarded$3 = var10.append(var7);
-        return var14.toString() + bo.a(-1, var9Lifetime2) + bo.a(-1, var10.toString());
+        return var14.toString() + QuickChatKeysHelpPanel.reverseString(-1, var9Lifetime2) + QuickChatKeysHelpPanel.reverseString(-1, var10.toString());
     }
 
     public static void a(byte param0) {

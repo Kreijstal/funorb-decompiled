@@ -136,7 +136,7 @@ final class HuffmanCodec {
         }
     }
 
-    final int a(int param0, byte[] param1, int param2, byte[] param3, int param4, boolean param5) {
+    final int decompress(int param0, byte[] param1, int param2, byte[] param3, int param4, boolean param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;

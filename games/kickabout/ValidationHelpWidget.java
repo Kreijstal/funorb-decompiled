@@ -12,7 +12,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     static String field_P;
     static int field_U;
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         if (param0 == -1) {
           return null;
         }
@@ -70,10 +70,10 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final void a(byte param0, UiWidget param1, int param2, int param3) {
+    final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_S = this.field_S + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ju.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -91,7 +91,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         return Character.toTitleCase(param1);
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         Sprite[] var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -123,7 +123,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         try {
           this.field_R = param0;
           this.field_O = param1;
-          this.a(param5, 1, param2, param4, param3);
+          this.setBounds(param5, 1, param2, param4, param3);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -136,7 +136,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         field_P = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
         ValidationState var6;
         WidgetTextLayout var8;
@@ -164,11 +164,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           this.field_q = var5;
           this.a((byte) -41);
         }
-        super.a(param0, (int) (char)param1, param2, param3);
+        super.drawLayer(param0, (int) (char)param1, param2, param3);
         var6Lifetime1 = this.field_R.getValidationState(-24407);
         var8 = (WidgetTextLayout) ((Object) this.field_r);
         var9 = param2 + this.field_t;
-        var10 = var8.a(true, (UiWidget) (this), param3) + (var8.a(5035, (UiWidget) (this)).a(-1761) >> 1);
+        var10 = var8.textOriginY(true, (UiWidget) (this), param3) + (var8.ensureTextLayout(5035, (UiWidget) (this)).a(-1761) >> 1);
         if (var6Lifetime1 != mn.field_c &&
           var6Lifetime1 != en.field_p) {
           if (PitchOptionTile.field_Bb == var6Lifetime1) {
@@ -186,7 +186,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_Q.field_q >= var11 &&
             this.field_Q.field_w >= var12) {
             PacketBuffer.a(param1 ^ -19, this.field_Q);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearFramebuffer();
           } else {
             this.field_Q = new Sprite(var11, var12);
             PacketBuffer.a(70, this.field_Q);

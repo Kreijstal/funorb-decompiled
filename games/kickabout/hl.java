@@ -35,7 +35,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
         }
     }
 
-    public final void a(int param0, TextInputWidget param1) {
+    public final void onEnterPressed(int param0, TextInputWidget param1) {
         try {
           int var3_int = -20 % ((8 - param0) / 47);
         } catch (RuntimeException runtimeException) {
@@ -131,7 +131,7 @@ final class hl extends DebouncedValidationProvider implements TextInputListener,
         return this.field_g.b(true);
     }
 
-    public final void a(byte param0, TextInputWidget param1) {
+    public final void onTextChanged(byte param0, TextInputWidget param1) {
         try {
           this.validationChanged(113);
           if (param0 <= 65) {

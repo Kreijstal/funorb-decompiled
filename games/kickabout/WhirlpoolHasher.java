@@ -19,7 +19,7 @@ final class WhirlpoolHasher {
     static boolean field_h;
     private long[] field_n;
 
-    private final void a(byte param0) {
+    private final void compressBlock(byte param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -116,23 +116,23 @@ final class WhirlpoolHasher {
           if (NodeHashTableIterator.field_b == 2) {
             MySquadScreen.field_N.field_E = IntrusiveNodeHashTable.field_f;
           } else {
-            MySquadScreen.field_N.field_E = im.field_Bb;
+            MySquadScreen.field_N.field_E = ListRow.field_Bb;
           }
           var9_int = 495;
           var10 = 5;
-          Kickabout.field_H.a(true, var9_int - 10, 5, var10, param6);
-          ei.field_b.a(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
-          WeightedCacheEntry.field_s.a(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q, 0, param6);
+          Kickabout.field_H.setBounds(true, var9_int - 10, 5, var10, param6);
+          ei.field_b.setBounds(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
+          WeightedCacheEntry.field_s.setBounds(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q, 0, param6);
           var10 = var10 + (param7 + param6);
-          gl.field_c.a(true, gl.field_c.g((byte) -99), 5, var10, param3);
-          var11 = MySquadScreen.field_N.g((byte) -19);
-          MySquadScreen.field_N.a(true, var11, -5 + (var9_int - var11), var10, param3);
-          h.field_e.a(true, var9_int, 0, 0, param1);
+          gl.field_c.setBounds(true, gl.field_c.getPreferredWidth((byte) -99), 5, var10, param3);
+          var11 = MySquadScreen.field_N.getPreferredWidth((byte) -19);
+          MySquadScreen.field_N.setBounds(true, var11, -5 + (var9_int - var11), var10, param3);
+          h.field_e.setBounds(true, var9_int, 0, 0, param1);
           var12 = 5 + (var10 + param3);
-          PagedHelpScreen.field_D.a(true, var9_int, 0, param1, var12);
+          PagedHelpScreen.field_D.setBounds(true, var9_int, 0, param1, var12);
           var12 = var12 + param1;
           PagedHelpScreen.field_D.field_R = fs.a(PagedHelpScreen.field_D.field_mb, 3, 2105376, 11579568, 8421504, (byte) 118);
-          ContentTransitionDialog.field_Y.a(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
+          ContentTransitionDialog.field_Y.setBounds(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
           if (param0 != 49) {
             field_f = (boolean[]) null;
           }
@@ -260,7 +260,7 @@ final class WhirlpoolHasher {
               ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                wc.a((byte) -50, so.a(-71));
+                WidgetTheme.a((byte) -50, so.a(-71));
                 ListingRowCache.field_b = ld.field_i;
                 FormationView.b((byte) -116);
                 ContextMenuItem.field_Db = false;
@@ -281,7 +281,7 @@ final class WhirlpoolHasher {
           if (StatefulTextPainter.field_t == un.field_c) {
             var9Lifetime2 = 2;
             if (SetLagCommand.a((byte) -96, var9Lifetime2)) {
-              var10Lifetime1 = un.field_e.a((byte) 81);
+              var10Lifetime1 = un.field_e.readUnsignedShort((byte) 81);
               un.field_e.field_n = 0;
               if (SetLagCommand.a((byte) -118, var10Lifetime1)) {
                 var11 = ValidatedTextWidget.field_X.length;
@@ -358,7 +358,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2) {
+    final void finishDigest(byte[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -381,7 +381,7 @@ final class WhirlpoolHasher {
               this.field_l = this.field_l + 1;
               this.field_e[fieldTemp$0] = (byte) 0;
             }
-            this.a((byte) 18);
+            this.compressBlock((byte) 18);
             this.field_l = 0;
           }
           while (32 > this.field_l) {
@@ -393,8 +393,8 @@ final class WhirlpoolHasher {
             var9 = (String) null;
             WhirlpoolHasher.a(64, (LoginText) null, (LoginText) null, -29, false, (String) null, true);
           }
-          ArrayOperations.a(this.field_j, 0, this.field_e, 32, 32);
-          this.a((byte) 18);
+          ArrayOperations.copyBytes(this.field_j, 0, this.field_e, 32, 32);
+          this.compressBlock((byte) 18);
           var4_int = 0;
           var5 = param2;
           while (var4_int < 8) {
@@ -435,7 +435,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(byte param0, long param1, byte[] param2) {
+    final void updateBits(byte param0, long param1, byte[] param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -476,7 +476,7 @@ final class WhirlpoolHasher {
               this.field_o = this.field_o + (8 - var7);
               this.field_l = this.field_l + 1;
               if (512 == this.field_o) {
-                this.a((byte) 18);
+                this.compressBlock((byte) 18);
                 this.field_l = 0;
                 this.field_o = 0;
               }
@@ -501,7 +501,7 @@ final class WhirlpoolHasher {
             param1 = param1 - (long)(8 - var7);
             this.field_o = this.field_o + (8 - var7);
             if (512 == this.field_o) {
-              this.a((byte) 18);
+              this.compressBlock((byte) 18);
               this.field_o = 0;
               this.field_l = 0;
             }
@@ -523,7 +523,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(boolean param0) {
+    final void reset(boolean param0) {
         int var2 = 0;
         int var3 = Kickabout.field_G;
         int var2Lifetime1;

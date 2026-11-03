@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ba extends SortCriterion {
+final class TrinketCountSortCriterion extends SortCriterion {
     static dg field_p;
     static int[] field_q;
     static TriangleMesh[] field_n;
@@ -130,7 +130,7 @@ final class ba extends SortCriterion {
           AccountChoicePanel.field_D = true;
           ck.field_a = param2;
           if (ck.field_a == 0) {
-            var3_int = SpriteState.a(cv.field_f, tt.field_a, -46, TeamManagementScreen.field_C, vp.field_k);
+            var3_int = SpriteState.a(MeshObject.field_f, tt.field_a, -46, TeamManagementScreen.field_C, vp.field_k);
             var4 = 3 + var3_int;
             dk.field_g = new int[var4];
             WeightedLruCache.field_c = new String[var4];
@@ -149,7 +149,7 @@ final class ba extends SortCriterion {
             dk.field_g[-1 + var4] = 1;
             sh.field_f[1] = 5;
           } else if (ck.field_a == 1) {
-            var3_int = SpriteState.a(cv.field_f, tt.field_a, param1 ^ -44, TeamManagementScreen.field_C, vp.field_k);
+            var3_int = SpriteState.a(MeshObject.field_f, tt.field_a, param1 ^ -44, TeamManagementScreen.field_C, vp.field_k);
             var4 = 2 + var3_int;
             WeightedLruCache.field_c = new String[var4];
             dk.field_g = new int[var4];
@@ -167,9 +167,9 @@ final class ba extends SortCriterion {
           } else if (2 != ck.field_a) {
             if (ck.field_a == 3) {
               if (!oo.field_c.field_l) {
-                var3_int = SpriteState.a(cv.field_f, ValidatedTextWidget.field_bb, -46, TeamManagementScreen.field_C, vp.field_k);
+                var3_int = SpriteState.a(MeshObject.field_f, ValidatedTextWidget.field_bb, -46, TeamManagementScreen.field_C, vp.field_k);
               } else {
-                var3_int = SpriteState.a(cv.field_f, GrowableIntList.field_a, param1 - 52, TeamManagementScreen.field_C, vp.field_k);
+                var3_int = SpriteState.a(MeshObject.field_f, GrowableIntList.field_a, param1 - 52, TeamManagementScreen.field_C, vp.field_k);
               }
               var4 = 2 + var3_int;
               WeightedLruCache.field_c = new String[var4];
@@ -186,7 +186,7 @@ final class ba extends SortCriterion {
               dk.field_g[-1 + var4] = 0;
               sh.field_f[0] = 5;
             } else if (ck.field_a == 4) {
-              var3_int = SpriteState.a(cv.field_f, AnimationSkeleton.field_n, -46, TeamManagementScreen.field_C, vp.field_k);
+              var3_int = SpriteState.a(MeshObject.field_f, AnimationSkeleton.field_n, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = var3_int + 2;
               dk.field_g = new int[var4];
               WeightedLruCache.field_c = new String[var4];
@@ -205,7 +205,7 @@ final class ba extends SortCriterion {
               if (ck.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = SpriteState.a(cv.field_f, dr.field_b, -46, TeamManagementScreen.field_C, vp.field_k);
+              var3_int = SpriteState.a(MeshObject.field_f, dr.field_b, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = 3 + var3_int;
               WeightedLruCache.field_c = new String[var4];
               dk.field_g = new int[var4];
@@ -225,7 +225,7 @@ final class ba extends SortCriterion {
               sh.field_f[1] = 5;
             }
           } else {
-            var3_int = SpriteState.a(cv.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextFieldNode.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
+            var3_int = SpriteState.a(MeshObject.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextFieldNode.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
@@ -238,11 +238,11 @@ final class ba extends SortCriterion {
               throw new IllegalStateException();
             }
             TrinketIcon.field_Eb = new String[var4];
-            ArrayOperations.a(TeamManagementScreen.field_C, 0, TrinketIcon.field_Eb, 0, var4);
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 0, TrinketIcon.field_Eb, 0, var4);
             pg.field_a = new String[-1 + (-var4 + var3_int)];
-            ArrayOperations.a(TeamManagementScreen.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = SpriteState.a(cv.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
+            var3_int = SpriteState.a(MeshObject.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
                 continue;
@@ -254,9 +254,9 @@ final class ba extends SortCriterion {
               throw new IllegalStateException();
             }
             StrongCacheEntry.field_D = new String[var4];
-            ArrayOperations.a(TeamManagementScreen.field_C, 0, StrongCacheEntry.field_D, 0, var4);
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 0, StrongCacheEntry.field_D, 0, var4);
             cg.field_E = new String[var3_int - var4 - 1];
-            ArrayOperations.a(TeamManagementScreen.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
             if (StrongCacheEntry.field_D.length > TrinketIcon.field_Eb.length) {
               stackIn_22_0 = StrongCacheEntry.field_D.length;
             } else {
@@ -357,7 +357,7 @@ final class ba extends SortCriterion {
             }
             BufferedSocket.field_j = stackIn_114_0 + stackIn_115_1;
           }
-          uq.field_c = -(BufferedSocket.field_j >> 1) + tb.field_s;
+          uq.field_c = -(BufferedSocket.field_j >> 1) + SocketArchiveNetworkClient.field_s;
           ld.field_j = new int[WeightedLruCache.field_c.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = uq.field_c;
@@ -391,7 +391,7 @@ final class ba extends SortCriterion {
         }
     }
 
-    ba() {
+    TrinketCountSortCriterion() {
     }
 
     final static void a(int param0, boolean param1) {
@@ -401,7 +401,7 @@ final class ba extends SortCriterion {
         if (param1) {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
         }
-        ValidatedTextWidget.field_Z.a(0, 0, (byte) -103);
+        ValidatedTextWidget.field_Z.renderWidgetPassesAndTooltip(0, 0, (byte) -103);
         if (param0 <= 108) {
           field_n = (TriangleMesh[]) null;
         }
@@ -412,7 +412,7 @@ final class ba extends SortCriterion {
         field_q = null;
         field_p = null;
         if (param0 != -35) {
-          ba.a(27, -30, 62, (byte) -107);
+          TrinketCountSortCriterion.a(27, -30, 62, (byte) -107);
         }
         field_o = null;
     }
@@ -428,7 +428,7 @@ final class ba extends SortCriterion {
           var3 = Kickabout.field_G;
           try {
             if (null != ParticipantStatus.field_t) {
-              ParticipantStatus.field_t.b((byte) 109);
+              ParticipantStatus.field_t.closeSocket((byte) 109);
             }
             if (null != SplashScreen.field_i) {
               SplashScreen.field_i.shutdown(109);

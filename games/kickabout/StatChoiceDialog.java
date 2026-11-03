@@ -14,7 +14,7 @@ final class StatChoiceDialog extends MessageDialog {
     static String field_K;
     private UiLayoutNode[] field_O;
 
-    final void a(int param0, boolean param1) {
+    final void onUpdate(int param0, boolean param1) {
         int var3;
         int var4;
         int stackIn_8_1 = 0;
@@ -23,7 +23,7 @@ final class StatChoiceDialog extends MessageDialog {
         int var3Lifetime1;
         var4 = Kickabout.field_G;
         this.field_I.resetPose((byte) 125);
-        this.field_L.b(0, param1);
+        this.field_L.updateInput(0, param1);
         for (var3 = 0; 3 > var3; var3++) {
           if (1 == this.field_O[var3].field_sb) {
             if (this.field_H != var3) {
@@ -85,7 +85,7 @@ final class StatChoiceDialog extends MessageDialog {
           this.field_L.field_mb = 110;
           for (var4_int = 0; 3 > var4_int; var4_int++) {
             this.field_O[var4_int] = new UiLayoutNode();
-            this.field_O[var4_int].a(true, 150, 0, var4_int * 40, 30);
+            this.field_O[var4_int].setBounds(true, 150, 0, var4_int * 40, 30);
             stackIn_5_0 = this.field_O[var4_int];
             stackIn_6_1 = !(this.field_M[var4_int] >= 100);
             stackIn_5_0.field_lb = stackIn_6_1;
@@ -314,7 +314,7 @@ final class StatChoiceDialog extends MessageDialog {
         field_K = null;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawBody(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         int var6;
@@ -323,12 +323,12 @@ final class StatChoiceDialog extends MessageDialog {
         int var9;
         int var10;
         var10 = Kickabout.field_G;
-        super.a((byte) -70, param1, param2);
+        super.drawBody((byte) -70, param1, param2);
         this.field_L.field_J = 95 + param2;
         this.field_L.field_s = param1 + 180;
-        this.field_L.b(0, true);
+        this.field_L.updateInput(0, true);
         PacketBuffer.a(-65, c.field_b);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearFramebuffer();
         this.field_I.renderModel(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);
         if (param0 >= -11) {
           this.field_P = 5;

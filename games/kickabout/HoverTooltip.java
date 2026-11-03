@@ -38,14 +38,14 @@ final class HoverTooltip extends UiLayoutNode {
           this.addChild((byte) -116, this.field_Db);
           this.field_Db.field_V = "|";
           this.field_yb = new StringBuilder(12);
-          var9_int = this.field_Cb.g((byte) 116);
-          this.field_Cb.a(true, var9_int, 5, 3, sh.field_c);
-          this.field_Db.a(true, var9_int, 5, sh.field_c + 3, sh.field_c);
+          var9_int = this.field_Cb.getPreferredWidth((byte) 116);
+          this.field_Cb.setBounds(true, var9_int, 5, 3, sh.field_c);
+          this.field_Db.setBounds(true, var9_int, 5, sh.field_c + 3, sh.field_c);
           var10 = 5 + var9_int + 5;
           var11 = 3 + (sh.field_c * 2 + 3);
           var12 = StripedProgressBar.b(var10, param0, param2, 127);
           var13 = nj.a(param1, param3, var11, 29079);
-          this.a(true, var10, var12, var13, var11);
+          this.setBounds(true, var10, var12, var13, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class HoverTooltip extends UiLayoutNode {
         StringBuilder discarded$4 = null;
         int var4;
         var4 = Kickabout.field_G;
-        this.b(0, param1);
+        this.updateInput(0, param1);
         if (!param1) {
           if (param0 != 84) {
             this.field_Fb = 41;

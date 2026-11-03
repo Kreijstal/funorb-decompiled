@@ -119,7 +119,7 @@ final class pc {
     }
 
     final static void a(int param0) {
-        wc.a((byte) -44, so.a(param0 ^ -536871029));
+        WidgetTheme.a((byte) -44, so.a(param0 ^ -536871029));
         if (param0 != 536870912) {
           pc.a(36);
         }
@@ -127,7 +127,7 @@ final class pc {
 
     final static void a(byte param0) {
         if (rk.field_f != null) {
-          rk.field_f.q(-85);
+          rk.field_f.closeDialog(-85);
           PlayerInputEvent.field_n = new DisplayNameForm();
           if (param0 > -8) {
             pc.a((byte) -11);

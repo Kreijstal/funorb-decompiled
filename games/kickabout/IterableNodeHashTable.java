@@ -11,7 +11,7 @@ final class IterableNodeHashTable implements Iterable {
     static ResourceArchive field_b;
     int field_d;
 
-    final void a(IntrusiveNode param0, int param1, long param2) {
+    final void put(IntrusiveNode param0, int param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param0.field_b) {
@@ -31,7 +31,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(long param0, byte param1) {
+    final IntrusiveNode get(long param0, byte param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -119,7 +119,7 @@ final class IterableNodeHashTable implements Iterable {
           PlayArea.field_d = 2048.0;
         }
         var4 = CachedArchiveSource.field_C - UiLayoutNode.field_K;
-        var6 = -jr.field_Gb + AuctionLogEntry.field_f;
+        var6 = -ReceivedAuctionItemRow.field_Gb + AuctionLogEntry.field_f;
         if (param1 != 89) {
           field_c = (ResourceArchive) null;
           var8 = PlayArea.field_d - InstrumentNoteMask.field_f;
@@ -154,19 +154,19 @@ final class IterableNodeHashTable implements Iterable {
               UiLayoutNode.field_K = CachedArchiveSource.field_C;
             }
           }
-          stackIn_28_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
+          stackIn_28_0 = (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb)) ? 0 : 1;
           var12Lifetime2 = stackIn_28_0;
-          jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;
+          ReceivedAuctionItemRow.field_Gb = ReceivedAuctionItemRow.field_Gb + IntrusiveDeque.field_a;
           if (var12Lifetime2 != 0) {
-            if (jr.field_Gb > AuctionLogEntry.field_f ||
+            if (ReceivedAuctionItemRow.field_Gb > AuctionLogEntry.field_f ||
               var12Lifetime2 == 0 &&
-              AuctionLogEntry.field_f > jr.field_Gb) {
-              jr.field_Gb = AuctionLogEntry.field_f;
+              AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+              ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
             }
           } else {
             if (var12Lifetime2 == 0 &&
-              AuctionLogEntry.field_f > jr.field_Gb) {
-              jr.field_Gb = AuctionLogEntry.field_f;
+              AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+              ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
             }
           }
           stackIn_40_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
@@ -214,14 +214,14 @@ final class IterableNodeHashTable implements Iterable {
         if (var12Lifetime1 != 0) {
           if (UiLayoutNode.field_K > CachedArchiveSource.field_C) {
             UiLayoutNode.field_K = CachedArchiveSource.field_C;
-            stackIn_64_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
+            stackIn_64_0 = (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb)) ? 0 : 1;
             var12Lifetime1 = stackIn_64_0;
-            jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;
+            ReceivedAuctionItemRow.field_Gb = ReceivedAuctionItemRow.field_Gb + IntrusiveDeque.field_a;
             if (var12Lifetime1 != 0 &&
-              jr.field_Gb > AuctionLogEntry.field_f ||
+              ReceivedAuctionItemRow.field_Gb > AuctionLogEntry.field_f ||
               var12Lifetime1 == 0 &&
-              AuctionLogEntry.field_f > jr.field_Gb) {
-              jr.field_Gb = AuctionLogEntry.field_f;
+              AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+              ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
             }
             stackIn_74_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
             var12Lifetime1 = stackIn_74_0;
@@ -240,12 +240,12 @@ final class IterableNodeHashTable implements Iterable {
               UiLayoutNode.field_K < CachedArchiveSource.field_C) {
               UiLayoutNode.field_K = CachedArchiveSource.field_C;
             }
-            stackIn_91_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
+            stackIn_91_0 = (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb)) ? 0 : 1;
             var12Lifetime1 = stackIn_91_0;
-            jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;
+            ReceivedAuctionItemRow.field_Gb = ReceivedAuctionItemRow.field_Gb + IntrusiveDeque.field_a;
             if (var12Lifetime1 == 0) {
-              if (AuctionLogEntry.field_f > jr.field_Gb) {
-                jr.field_Gb = AuctionLogEntry.field_f;
+              if (AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+                ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
               }
               stackIn_98_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
               var12Lifetime1 = stackIn_98_0;
@@ -260,8 +260,8 @@ final class IterableNodeHashTable implements Iterable {
                 }
               }
             } else {
-              if (jr.field_Gb > AuctionLogEntry.field_f) {
-                jr.field_Gb = AuctionLogEntry.field_f;
+              if (ReceivedAuctionItemRow.field_Gb > AuctionLogEntry.field_f) {
+                ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
                 stackIn_131_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
                 var12Lifetime1 = stackIn_131_0;
                 InstrumentNoteMask.field_f = InstrumentNoteMask.field_f + DualLinkDeque.field_e;
@@ -276,8 +276,8 @@ final class IterableNodeHashTable implements Iterable {
                 }
               } else {
                 if (var12Lifetime1 == 0 &&
-                  AuctionLogEntry.field_f > jr.field_Gb) {
-                  jr.field_Gb = AuctionLogEntry.field_f;
+                  AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+                  ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
                 }
                 stackIn_117_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
                 var12Lifetime1 = stackIn_117_0;
@@ -296,13 +296,13 @@ final class IterableNodeHashTable implements Iterable {
           }
         } else {
           if (var12Lifetime1 != 0) {
-            stackIn_147_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
+            stackIn_147_0 = (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb)) ? 0 : 1;
             var12Lifetime1 = stackIn_147_0;
-            jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;
+            ReceivedAuctionItemRow.field_Gb = ReceivedAuctionItemRow.field_Gb + IntrusiveDeque.field_a;
             boolean decompiledFrameRemainder1 = true;
             if (var12Lifetime1 == 0) {
               if (var12Lifetime1 == 0) {
-                if (!(AuctionLogEntry.field_f > jr.field_Gb)) {
+                if (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb)) {
                   stackIn_174_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
                   var12Lifetime1 = stackIn_174_0;
                   InstrumentNoteMask.field_f = InstrumentNoteMask.field_f + DualLinkDeque.field_e;
@@ -324,14 +324,14 @@ final class IterableNodeHashTable implements Iterable {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  jr.field_Gb = AuctionLogEntry.field_f;
+                  ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
                 }
               }
             } else {
-              if (!(jr.field_Gb > AuctionLogEntry.field_f)) {
+              if (!(ReceivedAuctionItemRow.field_Gb > AuctionLogEntry.field_f)) {
                 if (var12Lifetime1 == 0 &&
-                  AuctionLogEntry.field_f > jr.field_Gb) {
-                  jr.field_Gb = AuctionLogEntry.field_f;
+                  AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+                  ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
                 }
                 stackIn_157_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
                 var12Lifetime1 = stackIn_157_0;
@@ -348,7 +348,7 @@ final class IterableNodeHashTable implements Iterable {
                 decompiledFrameRemainder1 = false;
               }
               else {
-                jr.field_Gb = AuctionLogEntry.field_f;
+                ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
               }
             }
             if (decompiledFrameRemainder1) {
@@ -374,14 +374,14 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             if (UiLayoutNode.field_K < CachedArchiveSource.field_C) {
               UiLayoutNode.field_K = CachedArchiveSource.field_C;
-              stackIn_218_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
+              stackIn_218_0 = (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb)) ? 0 : 1;
               var12Lifetime1 = stackIn_218_0;
-              jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;
+              ReceivedAuctionItemRow.field_Gb = ReceivedAuctionItemRow.field_Gb + IntrusiveDeque.field_a;
               if (var12Lifetime1 != 0 &&
-                jr.field_Gb > AuctionLogEntry.field_f ||
+                ReceivedAuctionItemRow.field_Gb > AuctionLogEntry.field_f ||
                 var12Lifetime1 == 0 &&
-                AuctionLogEntry.field_f > jr.field_Gb) {
-                jr.field_Gb = AuctionLogEntry.field_f;
+                AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+                ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
               }
               stackIn_228_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
               var12Lifetime1 = stackIn_228_0;
@@ -396,14 +396,14 @@ final class IterableNodeHashTable implements Iterable {
                 }
               }
             } else {
-              stackIn_242_0 = (!(AuctionLogEntry.field_f > jr.field_Gb)) ? 0 : 1;
+              stackIn_242_0 = (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb)) ? 0 : 1;
               boolean decompiledFrameRemainder0 = true;
               var12Lifetime1 = stackIn_242_0;
-              jr.field_Gb = jr.field_Gb + IntrusiveDeque.field_a;
+              ReceivedAuctionItemRow.field_Gb = ReceivedAuctionItemRow.field_Gb + IntrusiveDeque.field_a;
               if (var12Lifetime1 == 0) {
                 decompiledFrameRemainder0 = (var12Lifetime1 == 0);
                 if ((decompiledFrameRemainder0) &&
-                  (!(AuctionLogEntry.field_f > jr.field_Gb))) {
+                  (!(AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb))) {
                   stackIn_267_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
                   var12Lifetime1 = stackIn_267_0;
                   InstrumentNoteMask.field_f = InstrumentNoteMask.field_f + DualLinkDeque.field_e;
@@ -432,10 +432,10 @@ final class IterableNodeHashTable implements Iterable {
                   return;
                 }
               } else {
-                if (!(jr.field_Gb > AuctionLogEntry.field_f)) {
+                if (!(ReceivedAuctionItemRow.field_Gb > AuctionLogEntry.field_f)) {
                   if (var12Lifetime1 == 0 &&
-                    AuctionLogEntry.field_f > jr.field_Gb) {
-                    jr.field_Gb = AuctionLogEntry.field_f;
+                    AuctionLogEntry.field_f > ReceivedAuctionItemRow.field_Gb) {
+                    ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
                   }
                   stackIn_251_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
                   var12Lifetime1 = stackIn_251_0;
@@ -458,7 +458,7 @@ final class IterableNodeHashTable implements Iterable {
                 }
               }
               if (decompiledFrameRemainder0) {
-                jr.field_Gb = AuctionLogEntry.field_f;
+                ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
               }
               stackIn_285_0 = (!(PlayArea.field_d > InstrumentNoteMask.field_f)) ? 0 : 1;
               var12Lifetime1 = stackIn_285_0;

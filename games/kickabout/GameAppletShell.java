@@ -20,7 +20,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowActivated(java.awt.event.WindowEvent param0) {
     }
 
-    final boolean d(byte param0) {
+    final boolean isHostAllowed(byte param0) {
         return true;
     }
 
@@ -153,7 +153,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           VorbisSample.decodeSetup(param0.takeFileByName("", "headers.packvorbis", 110));
-          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
+          var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
           var3 = 116 % ((-33 - param1) / 60);
           return;
@@ -684,7 +684,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     abstract void runFrameStep(byte param0);
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, String param5, int param6) {
+    final void startAppletShell(int param0, int param1, int param2, byte param3, int param4, String param5, int param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_23_0 = null;

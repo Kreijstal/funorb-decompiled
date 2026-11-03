@@ -23,7 +23,7 @@ final class SectorCacheStore {
         field_e = null;
     }
 
-    final boolean a(byte param0, int param1, int param2, byte[] param3) {
+    final boolean write(byte param0, int param1, int param2, byte[] param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -465,7 +465,7 @@ final class SectorCacheStore {
               if (var5 == null) {
                 var9 = cu.a(false, 0, var3, var2, false, false);
                 var5 = var9;
-                var9.a(true, 327, 5, var4, 16);
+                var9.setBounds(true, 327, 5, var4, 16);
               }
               AuctionTableWidget.field_Hb.field_Db.addChild((byte) -109, (UiLayoutNode) (var5));
               var6 = LineupView.field_y.get(var2, (byte) 116, var3);
@@ -480,13 +480,13 @@ final class SectorCacheStore {
             }
             break;
           }
-          var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
+          var5Lifetime1 = (RankingRowNode) (var8.removeFirst((byte) 127));
           if (param0 < 82) {
             return;
           }
           while (var5Lifetime1 != null) {
             var5Lifetime1.c(true);
-            var5Lifetime1 = (RankingRowNode) (var8.b((byte) 127));
+            var5Lifetime1 = (RankingRowNode) (var8.removeFirst((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -13,7 +13,7 @@ final class ei implements WidgetPainter {
     private int field_a;
     private int field_g;
     private int field_l;
-    static al field_d;
+    static FriendsListPanel field_d;
     private int field_j;
     private int field_m;
 
@@ -27,7 +27,7 @@ final class ei implements WidgetPainter {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -69,7 +69,7 @@ final class ei implements WidgetPainter {
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_L) / (double)var15.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_J);
           var13Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_J);
-          SoftwareRasterizer.b(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var14 = this.field_h + (var15.field_J + var15.field_H);
             this.field_k.a(param3.field_q, param4 - (-param3.field_t - var14), param2 + (param3.field_g + this.field_a), -var14 - this.field_h + param3.field_n, param3.field_i - (this.field_h << 1), this.field_l, this.field_j, 1, 1, 0);
@@ -166,7 +166,7 @@ final class ei implements WidgetPainter {
           if (param5 != -125) {
             ei.a(0);
           }
-          var63 = ba.field_q;
+          var63 = TrinketCountSortCriterion.field_q;
           var61 = BytePlusOneCommand.field_E;
           for (var13 = 0; param6.field_k > var13; var13++) {
             var14 = param3 * var61[var13] + (var62[var13] * param1 + param0 * var63[var13]) >> 8;

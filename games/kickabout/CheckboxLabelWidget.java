@@ -64,7 +64,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           for (var2_int = 0; 2 > var2_int; var2_int++) {
             for (var3 = 1; 5 > var3; var3++) {
               et.field_d.field_P[var2_int][var3].directionMask = 0;
-              et.field_d.field_E.b(22997);
+              et.field_d.field_E.clear(22997);
             }
           }
           et.field_d.participantStatus[0].controlledSlot = 0;

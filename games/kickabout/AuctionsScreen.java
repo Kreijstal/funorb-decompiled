@@ -5,7 +5,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
     private UiLayoutNode field_P;
     private CheckboxLabelWidget[] field_E;
     static int field_Q;
-    private jr[] field_B;
+    private ReceivedAuctionItemRow[] field_B;
     static String field_M;
     static int field_A;
     private UiLayoutNode field_K;
@@ -33,19 +33,19 @@ final class AuctionsScreen extends ButtonMenuScreen {
         SortCriterion[] var6;
         var4 = Kickabout.field_G;
         this.field_L = new UiLayoutNode();
-        this.field_L.a(true, 640, 0, 0, 480);
+        this.field_L.setBounds(true, 640, 0, 0, 480);
         if (param0 != -38) {
-          this.field_B = (jr[]) null;
+          this.field_B = (ReceivedAuctionItemRow[]) null;
         }
-        this.field_R = eo.a(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
-        this.field_P = eo.a(vd.field_b, 16679959, un.field_d, 162, true);
+        this.field_R = eo.createRenderedButton(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
+        this.field_P = eo.createRenderedButton(vd.field_b, 16679959, un.field_d, 162, true);
         this.field_R.field_s = 10;
         this.field_R.field_J = 56;
         this.field_P.field_J = 86;
         this.field_P.field_s = 10;
         this.field_K = new UiLayoutNode();
         this.field_K.field_E = ArchiveNetworkClient.field_a.toLowerCase();
-        this.field_K.a(true, 420, 195, 51, 66);
+        this.field_K.setBounds(true, 420, 195, 51, 66);
         this.field_E = new CheckboxLabelWidget[4];
         for (var2 = 0; 4 > var2; var2++) {
           this.field_E[var2] = new CheckboxLabelWidget(uf.field_e[var2], IsSixCommand.field_C, 90);
@@ -64,7 +64,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         this.field_G = new AuctionTableWidget(gk.field_f, ClubState.field_l, var6, 50);
         this.field_G.a(300, (byte) -116, 122, 7);
-        this.field_B = new jr[]{};
+        this.field_B = new ReceivedAuctionItemRow[]{};
         this.field_G.a(this.field_B, 0);
         this.field_L.addChild((byte) -123, this.field_P);
         this.field_L.addChild((byte) -106, this.field_R);
@@ -144,7 +144,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         param1 = stackIn_5_0 & (stackIn_11_1 & stackIn_12_2) != 0;
         this.field_G.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
-        this.field_L.b(0, param1);
+        this.field_L.updateInput(0, param1);
         if (param1) {
           var4_long = nj.monotonicMillis(73);
           if (var4_long >= (this.field_H + 10000L)) {
@@ -304,7 +304,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         super.enterScreen(param0 ^ 0, param1, param2);
         IntrusiveNodeHashTable.a(GameLoopApplet.field_E.field_x, param0 + 415422632);
         this.field_N = true;
-        this.field_B = new jr[param0];
+        this.field_B = new ReceivedAuctionItemRow[param0];
         this.field_G.a(0, (byte) -47, this.field_B, 5);
         this.field_G.field_Db = -1;
         this.field_G.b(4, 113);
@@ -335,7 +335,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         try {
           var3 = (ReceivedAuctionItem) (this.field_T.g(24009));
           if (param1 != 640) {
-            this.field_B = (jr[]) null;
+            this.field_B = (ReceivedAuctionItemRow[]) null;
           }
           while (var3 != null) {
             if (var3.field_a == param0.field_a) {
@@ -379,7 +379,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.field_E[var3_int].a(false, (byte) 46);
         }
         this.field_G.a(-82);
-        this.field_L.a(63, false);
+        this.field_L.draw(63, false);
         if (this.field_N) {
           if (this.field_U == 0) {
             stackIn_8_0 = KeyedLoginCredentials.field_h;
@@ -444,21 +444,21 @@ final class AuctionsScreen extends ButtonMenuScreen {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        jr var9_ref_jr = null;
+        ReceivedAuctionItemRow var9_ref_jr = null;
         int var9 = 0;
-        jr var10_ref_jr = null;
+        ReceivedAuctionItemRow var10_ref_jr = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        jr var12_ref_jr = null;
+        ReceivedAuctionItemRow var12_ref_jr = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         Object var16 = null;
         IntrusiveDeque var17 = null;
         ReceivedAuctionItem var18 = null;
-        jr var10_ref_jrLifetime1;
-        jr var10_ref_jrLifetime2;
+        ReceivedAuctionItemRow var10_ref_jrLifetime1;
+        ReceivedAuctionItemRow var10_ref_jrLifetime2;
         int var12Lifetime1;
         int var12Lifetime2;
         int var9Lifetime1;
@@ -475,31 +475,31 @@ final class AuctionsScreen extends ButtonMenuScreen {
             while (var18 != null) {
               if (var7 >= param3) {
                 if (var7 == 0) {
-                  var10_ref_jr = new jr(nc.field_b);
+                  var10_ref_jr = new ReceivedAuctionItemRow(nc.field_b);
                   var10_ref_jr.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
                   var10_ref_jr.field_mb = 50;
                   var10_ref_jr.field_y = 16777215;
-                  var17.a(var10_ref_jr, 3);
+                  var17.addLast(var10_ref_jr, 3);
                   var8++;
                 }
-                var10_ref_jrLifetime2 = new jr(var18, gk.field_f);
+                var10_ref_jrLifetime2 = new ReceivedAuctionItemRow(var18, gk.field_f);
                 var10_ref_jrLifetime2.field_y = 16777215;
                 var10_ref_jrLifetime2.field_mb = 50;
                 var10_ref_jrLifetime2.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
                 var8++;
-                var17.a(var10_ref_jrLifetime2, 3);
+                var17.addLast(var10_ref_jrLifetime2, 3);
               }
               var7++;
               var18 = (ReceivedAuctionItem) (this.field_T.c(33));
             }
           }
           if (var7 > 0) {
-            var9_ref_jr = new jr(MenuSelection.field_k);
+            var9_ref_jr = new ReceivedAuctionItemRow(MenuSelection.field_k);
             var9_ref_jr.field_mb = 50;
             var9_ref_jr.field_y = 16777215;
             var9_ref_jr.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var8++;
-            var17.a(var9_ref_jr, 3);
+            var17.addLast(var9_ref_jr, 3);
           }
           if (!param0) {
             AuctionsScreen.h((byte) 106);
@@ -508,12 +508,12 @@ final class AuctionsScreen extends ButtonMenuScreen {
             if (this.containsAuction(ui.field_w[var9], (byte) 117)) {
               this.replaceAuctionEntry(ui.field_w[var9], 640);
             }
-            var10_ref_jrLifetime1 = new jr(ui.field_w[var9], gk.field_f);
+            var10_ref_jrLifetime1 = new ReceivedAuctionItemRow(ui.field_w[var9], gk.field_f);
             var10_ref_jrLifetime1.field_mb = 50;
             var10_ref_jrLifetime1.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var10_ref_jrLifetime1.field_y = 16777215;
             var6++;
-            var17.a(var10_ref_jrLifetime1, 3);
+            var17.addLast(var10_ref_jrLifetime1, 3);
           }
           var9Lifetime1 = param3;
           if (var9Lifetime1 > 5) {
@@ -532,22 +532,22 @@ final class AuctionsScreen extends ButtonMenuScreen {
           if (var10 < 0) {
             var10 = 0;
           }
-          this.field_B = new jr[var9Lifetime1 + (var6 - (-var8 - var10))];
+          this.field_B = new ReceivedAuctionItemRow[var9Lifetime1 + (var6 - (-var8 - var10))];
           var11 = var9Lifetime1;
           for (var12 = 0; var11 > var12; var12++) {
-            this.field_B[var12] = new jr(gk.field_f);
+            this.field_B[var12] = new ReceivedAuctionItemRow(gk.field_f);
             this.field_B[var12].field_mb = 50;
             this.field_B[var12].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12].field_y = 16777215;
           }
-          var12_ref_jr = (jr) (var17.g(24009));
+          var12_ref_jr = (ReceivedAuctionItemRow) (var17.g(24009));
           while (var12_ref_jr != null) {
             this.field_B[var11] = var12_ref_jr;
-            var12_ref_jr = (jr) (var17.c(33));
+            var12_ref_jr = (ReceivedAuctionItemRow) (var17.c(33));
             var11++;
           }
           for (var12Lifetime1 = var11; var12Lifetime1 < this.field_B.length; var12Lifetime1++) {
-            this.field_B[var12Lifetime1] = new jr(gk.field_f);
+            this.field_B[var12Lifetime1] = new ReceivedAuctionItemRow(gk.field_f);
             this.field_B[var12Lifetime1].field_mb = 50;
             this.field_B[var12Lifetime1].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12Lifetime1].field_y = 16777215;
@@ -568,7 +568,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           }
           ((AuctionTableWidget) (Object) stackIn_47_0).a(stackIn_48_1, (byte) -47, this.field_B, param2 + var14);
           this.field_G.a(param0, var12Lifetime2);
-          this.field_G.b(0, false);
+          this.field_G.updateInput(0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -635,11 +635,11 @@ final class AuctionsScreen extends ButtonMenuScreen {
               RankingsScreen.queueNewAuctionDialog(25);
               ShopPlayerSlot.c(49, 55);
             } else {
-              tb.a((byte) 126, 33);
+              SocketArchiveNetworkClient.a((byte) 126, 33);
               ShopPlayerSlot.c(53, -126);
             }
           } else {
-            tb.a((byte) 126, 6);
+            SocketArchiveNetworkClient.a((byte) 126, 6);
             ShopPlayerSlot.c(53, -120);
           }
         }
@@ -744,7 +744,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         try {
           this.field_T = new IntrusiveDeque();
           for (var3_int = 0; var3_int < param1.length; var3_int++) {
-            this.field_T.a(param1[var3_int], 3);
+            this.field_T.addLast(param1[var3_int], 3);
           }
           if (!param0) {
             this.drawScreen(68, false);

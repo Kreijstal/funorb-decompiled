@@ -47,7 +47,7 @@ final class bq {
           }
           ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
           ni.field_l.a(0, TrinketIcon.field_Cb.field_q, 0, -2 + (-40 + TrinketIcon.field_Cb.field_mb), (byte) -80);
-          ka.field_c.a(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
+          ka.field_c.setBounds(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
           stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
           stackIn_6_2 = AchievementsScreen.field_C.field_q;
@@ -56,12 +56,12 @@ final class bq {
           } else {
             stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);
           }
-          ((UiLayoutNode) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
-          DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
-          ClientException.field_c.a(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
-          TrinketUnlockNotice.field_b.a(true, TrinketIcon.field_Cb.field_q, 0, -40 + TrinketIcon.field_Cb.field_mb, 40);
-          IterableDualLinkDeque.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
-          sg.field_a.a(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
+          ((UiLayoutNode) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
+          DoSomethingCommand.field_D.setBounds(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
+          ClientException.field_c.setLayout(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
+          TrinketUnlockNotice.field_b.setBounds(true, TrinketIcon.field_Cb.field_q, 0, -40 + TrinketIcon.field_Cb.field_mb, 40);
+          IterableDualLinkDeque.field_h.setBounds(true, AuctionItem.field_p.field_q, 0, 0, 30);
+          sg.field_a.setBounds(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
           var2_int = 3 + ss.field_j;
           if (rn.field_d.length < 2) {
             var2_int--;
@@ -80,7 +80,7 @@ final class bq {
           if (param0 < 81) {
             field_b = (String) null;
           }
-          MouseInputHandler.field_d.a(true, -10 + sg.field_a.field_q, 5, 5, var4);
+          MouseInputHandler.field_d.setBounds(true, -10 + sg.field_a.field_q, 5, 5, var4);
           var5 = var4 + 5 + 2;
           for (var6 = 0; var6 < ss.field_j + 4; var6++) {
             if ((var6 != 1 ||
@@ -140,7 +140,7 @@ final class bq {
                     var16++;
                   }
                 } else {
-                  qr.field_b[var6].a(true, 103, 5, var5, var3);
+                  qr.field_b[var6].setBounds(true, 103, 5, var5, var3);
                   var8 = 110;
                   if (!param1) {
                     if (null != rf.field_c[var6][0]) {
@@ -163,12 +163,12 @@ final class bq {
               }
             }
           }
-          tn.field_f.a(true, 360, -360 + SoftwareRasterizer.field_g >> 1, 10, SoftwareRasterizer.field_f - 120 - 4 - 10 - 10);
-          is.field_b.a(true, tn.field_f.field_q, 0, 0, 24);
-          vj.field_g.a(true, tn.field_f.field_q, 0, 24, -24 + tn.field_f.field_mb);
+          tn.field_f.setBounds(true, 360, -360 + SoftwareRasterizer.field_g >> 1, 10, SoftwareRasterizer.field_f - 120 - 4 - 10 - 10);
+          is.field_b.setBounds(true, tn.field_f.field_q, 0, 0, 24);
+          vj.field_g.setBounds(true, tn.field_f.field_q, 0, 24, -24 + tn.field_f.field_mb);
           vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
-          TickClock.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
-          BlackFadeScreen.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
+          TickClock.field_d.setBounds(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
+          BlackFadeScreen.field_i.setBounds(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
           ClientException.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

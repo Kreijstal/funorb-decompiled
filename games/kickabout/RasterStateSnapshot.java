@@ -132,8 +132,8 @@ final class RasterStateSnapshot extends IntrusiveNode {
           StripedProgressBar.field_y = 0;
           ListingRow.field_d = 0;
           BufferedSocket.field_h = null;
-          GameplayHelpScreen.field_I.b(22997);
-          qn.field_b.b(22997);
+          GameplayHelpScreen.field_I.clear(22997);
+          qn.field_b.clear(22997);
           var1 = kw.field_b.b((byte) 72);
           while (var1 != null) {
             var1.unlinkSecondary(-104);

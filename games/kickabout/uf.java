@@ -44,7 +44,7 @@ final class uf {
         RuntimeException var20 = null;
         try {
           ri.a(param10, param16, param7 ^ -17016, param5, param6);
-          tb.a(-92, param6);
+          SocketArchiveNetworkClient.a(-92, param6);
           wp.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
           BufferedCacheFile.a(param3, param6, param1, 0);
           StringCursor.b((byte) -124);
@@ -219,7 +219,7 @@ final class uf {
                 var5 = 8947848;
               }
               PacketBuffer.a(-110, var8);
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearFramebuffer();
               SoftwareRasterizer.fillRect(SoftwareRasterizer.field_g - 6 >> 1, 26, 6, 10, var5);
               TeamManagementScreen.e(120);
               var6 = (var4 << 16) / 6;

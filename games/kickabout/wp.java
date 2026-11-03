@@ -107,7 +107,7 @@ final class wp {
             TickClock.field_d.addChild((byte) -107, ck.field_c);
           }
           TickClock.field_d.addChild((byte) -119, (UiLayoutNode) (LineupView.field_u));
-          LineupView.field_u.field_zb.a(ConsoleEvaluationException.field_e, (byte) -128);
+          LineupView.field_u.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) -128);
           var23 = LineupView.field_u.field_zb;
           var24 = var23;
           LineupView.field_u.field_zb.field_p = 1;
@@ -167,7 +167,7 @@ final class wp {
           TriangleMesh.field_j.addChild((byte) -112, CheckboxLabelWidget.field_Cb);
           TriangleMesh.field_j.addChild((byte) -113, RandomAccessCacheFile.field_a);
           DialogOverlay.field_e = new UiLayoutNode(0L, SoundCache.field_b);
-          DialogOverlay.field_e.a(ConsoleEvaluationException.field_e, (byte) -110);
+          DialogOverlay.field_e.applyStyle(ConsoleEvaluationException.field_e, (byte) -110);
           DialogOverlay.field_e.field_p = 1;
           var16 = DialogOverlay.field_e;
           var16.field_A = 1;
@@ -257,7 +257,7 @@ final class wp {
           DualLinkHashTable.field_d = new UiLayoutNode(0L, TextFieldNode.field_Qb);
           GoalStateAgent.field_k = new UiLayoutNode(0L, TextFieldNode.field_Qb);
           nv.field_F = new UiLayoutNode(0L, ip.field_c);
-          nv.field_F.a(ConsoleEvaluationException.field_e, (byte) -99);
+          nv.field_F.applyStyle(ConsoleEvaluationException.field_e, (byte) -99);
           var17 = nv.field_F;
           nv.field_F.field_p = 1;
           var17.field_A = 1;
@@ -565,7 +565,7 @@ final class wp {
           return;
         }
         try {
-          il.field_a.a(param1, 3);
+          il.field_a.addLast(param1, 3);
           te.a(param0, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

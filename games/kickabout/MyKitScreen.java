@@ -16,7 +16,7 @@ final class MyKitScreen extends TeamManagementScreen {
     private UiLayoutNode field_Y;
     private String field_T;
     private UiLayoutNode field_F;
-    private vn field_db;
+    private MeshData field_db;
     private int field_R;
     private UiLayoutNode[] field_J;
     private UiLayoutNode field_H;
@@ -42,9 +42,9 @@ final class MyKitScreen extends TeamManagementScreen {
         var7 = Kickabout.field_G;
         super.updateScreen((byte) -40, param1);
         this.field_P.field_s = this.slideOffsetX + 16;
-        this.field_P.b(0, param1);
+        this.field_P.updateInput(0, param1);
         this.field_ab.field_s = this.slideOffsetX;
-        this.field_ab.b(0, param1);
+        this.field_ab.updateInput(0, param1);
         var3 = 44 / ((38 - param0) / 60);
         this.handleScrollButtons(0);
         var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.g(24009));
@@ -91,7 +91,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var4Lifetime1 = stackIn_28_0 + stackIn_29_1;
         }
         if (var4Lifetime1 != 0) {
-          this.c(-75, var4Lifetime1);
+          this.stepSelection(-75, var4Lifetime1);
         }
         if (this.field_bb != ic.field_h.field_w ||
           this.field_N != ic.field_h.field_k ||
@@ -115,15 +115,15 @@ final class MyKitScreen extends TeamManagementScreen {
         var9 = Kickabout.field_G;
         super.enterScreen(0, param1, param2);
         this.field_P.field_s = 656;
-        this.field_P.b(0, false);
+        this.field_P.updateInput(0, false);
         this.field_ab.field_s = 640;
-        this.field_ab.b(param0 ^ 0, false);
+        this.field_ab.updateInput(param0 ^ 0, false);
         var11 = new IntrusiveDeque();
         var5_ref_rd__ = AnimationSkeleton.field_f;
         for (var6_int = 0; var5_ref_rd__.length > var6_int; var6_int++) {
           var7_ref_rd = var5_ref_rd__[var6_int];
           if (var7_ref_rd.a(ic.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
-            var11.a(new KitStyleTile(ic.field_h, var7_ref_rd), 3);
+            var11.addLast(new KitStyleTile(ic.field_h, var7_ref_rd), 3);
           }
         }
         this.field_F.field_jb = var11;
@@ -224,7 +224,7 @@ final class MyKitScreen extends TeamManagementScreen {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void stepSelection(int param0, int param1) {
         int var3 = this.field_U;
         this.field_U = this.field_U + param1;
         if (param0 >= -7) {
@@ -243,10 +243,10 @@ final class MyKitScreen extends TeamManagementScreen {
 
     final boolean handleKey(int param0, int param1, char param2) {
         if (param0 == 96) {
-          this.c(-22, -1);
+          this.stepSelection(-22, -1);
         }
         if (param0 == 97) {
-          this.c(-87, 1);
+          this.stepSelection(-87, 1);
         }
         if (param1 > -5) {
           this.drawScreen(78, true);
@@ -274,7 +274,7 @@ final class MyKitScreen extends TeamManagementScreen {
         for (var3 = 0; var3 < 2; var3++) {
           un.field_d.a(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
         }
-        this.field_P.a(114, false);
+        this.field_P.draw(114, false);
         AuctionListing.a(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
         var7 = (KitStyleTile) (this.field_F.field_jb.g(24009));
         while (var7 != null) {
@@ -308,9 +308,9 @@ final class MyKitScreen extends TeamManagementScreen {
         this.field_P = new UiLayoutNode();
         this.field_X = new UiLayoutNode();
         UiLayoutNode var7 = new UiLayoutNode();
-        this.field_P.a(true, 370, 16, 80, 330);
-        this.field_X.a(true, 370, 0, 0, 130);
-        var7.a(true, 370, 0, 140, 190);
+        this.field_P.setBounds(true, 370, 16, 80, 330);
+        this.field_X.setBounds(true, 370, 0, 0, 130);
+        var7.setBounds(true, 370, 0, 140, 190);
         this.field_P.addChild((byte) -115, this.field_X);
         this.field_P.addChild((byte) -113, var7);
         this.field_F = new UiLayoutNode();
@@ -322,7 +322,7 @@ final class MyKitScreen extends TeamManagementScreen {
         this.field_H.field_J = -this.field_eb.field_mb + this.field_X.field_mb >> 1;
         this.field_eb.field_J = -this.field_eb.field_mb + this.field_X.field_mb >> 1;
         this.field_G.addChild((byte) -114, this.field_F);
-        this.field_G.a(true, 290, 40, 38, 84);
+        this.field_G.setBounds(true, 290, 40, 38, 84);
         this.field_F.field_mb = this.field_G.field_mb;
         this.field_X.addChild((byte) -105, this.field_G);
         this.field_X.addChild((byte) -115, this.field_eb);
@@ -332,10 +332,10 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_J[var3] = new UiLayoutNode();
           for (var4_int = 0; var4_int < 32; var4_int++) {
             var5 = new ColourSwatchTile(ic.field_h, var3, var4_int);
-            var5.a(true, 22, 22 * (var4_int % 16), var4_int / 16 * 22, 22);
+            var5.setBounds(true, 22, 22 * (var4_int % 16), var4_int / 16 * 22, 22);
             this.field_J[var3].addChild((byte) -110, (UiLayoutNode) (var5));
           }
-          this.field_J[var3].a(true, 354, 8, 40, 58);
+          this.field_J[var3].setBounds(true, 354, 8, 40, 58);
           var7.addChild((byte) -123, this.field_J[var3]);
         }
         UiLayoutNode dupTemp$0 = this.field_J[1];
@@ -351,7 +351,7 @@ final class MyKitScreen extends TeamManagementScreen {
         this.field_ab = new UiLayoutNode();
         this.field_ab.addChild((byte) -106, this.field_Y);
         this.field_ab.addChild((byte) -105, this.field_K);
-        this.field_ab.a(true, 640, 0, 0, 480);
+        this.field_ab.setBounds(true, 640, 0, 0, 480);
         if (param0 != -38) {
           this.field_R = -25;
         }
@@ -453,12 +453,12 @@ final class MyKitScreen extends TeamManagementScreen {
           var12 = OffscreenPlayerArrow.field_f;
           var5 = TriangleRasterizer.field_o[var3] * var12[0] >> 16;
           var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
-          var7 = (ModelMesh) (this.field_cb.a(this.field_db.b(var12[2], var12[3], var5, var12[1], var6), false, true, true));
+          var7 = (ModelMesh) (this.field_cb.applyCurrentFrame(this.field_db.createModelMesh(var12[2], var12[3], var5, var12[1], var6), false, true, true));
           var7.a(0, var3, 0, 0, 0, 0, 0, 540);
           var8 = Math.max(120, IsSixCommand.field_C.a(this.field_T) + 30);
           SoftwareRasterizer.a(this.slideOffsetX + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
           IsSixCommand.field_C.d(this.field_T, 532 + this.slideOffsetX, 430, 16777215, -1);
-          this.field_ab.a(123, false);
+          this.field_ab.draw(123, false);
         }
     }
 

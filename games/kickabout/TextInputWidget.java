@@ -19,7 +19,7 @@ class TextInputWidget extends TextButton {
     static float field_R;
     static String field_K;
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         this.field_I = param0;
         if (!GameplayHelpScreen.field_G[81]) {
           this.field_Q = this.field_I;
@@ -66,7 +66,7 @@ class TextInputWidget extends TextButton {
 
     private final void m(int param0) {
         if (this.field_k instanceof TextInputListener) {
-          ((TextInputListener) (this.field_k)).a(-86, this);
+          ((TextInputListener) (this.field_k)).onEnterPressed(-86, this);
         }
         if (param0 <= 66) {
           this.field_Q = 66;
@@ -94,9 +94,9 @@ class TextInputWidget extends TextButton {
         return this.field_q.substring(var2, var3);
     }
 
-    private final void k(byte param0) {
+    private final void copySelectedTextToClipboard(byte param0) {
         if (param0 < 99) {
-          this.i((byte) 116);
+          this.clearInputText((byte) 116);
         }
         String var2 = this.getSelectedText(82);
         if (0 < var2.length()) {
@@ -104,7 +104,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void pasteFromClipboard(boolean param0) {
         try {
           String stackIn_4_1 = null;
           boolean stackIn_5_2 = false;
@@ -114,14 +114,14 @@ class TextInputWidget extends TextButton {
           String var3 = null;
           if (!param0) {
             var3 = (String) null;
-            this.a((String) null, (byte) -122, true);
+            this.setInputText((String) null, (byte) -122, true);
           }
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.i(-126);
+            this.deleteSelectedText(-126);
             stackIn_4_1 = var2;
             stackIn_5_2 = !(param0);
-            this.a(stackIn_4_1, stackIn_5_2);
+            this.insertTextAtCaret(stackIn_4_1, stackIn_5_2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -138,11 +138,11 @@ class TextInputWidget extends TextButton {
           this.m(49);
         }
         if (this.field_k instanceof TextInputListener) {
-          ((TextInputListener) (this.field_k)).a((byte) 113, this);
+          ((TextInputListener) (this.field_k)).onTextChanged((byte) 113, this);
         }
     }
 
-    final void a(String param0, byte param1, boolean param2) {
+    final void setInputText(String param0, byte param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -184,20 +184,20 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         WidgetTextLayout var8 = null;
         long var6 = 0L;
         if (null != this.field_r &&
           0 == param0) {
-          this.field_r.a(127, this.field_y, param3, (UiWidget) (this), param2);
+          this.field_r.drawWidget(127, this.field_y, param3, (UiWidget) (this), param2);
           if (this.field_r instanceof WidgetTextLayout) {
             var8 = (WidgetTextLayout) ((Object) this.field_r);
             if (this.field_I != this.field_Q) {
-              var8.a(param2, this.field_I, this.field_Q, (UiWidget) (this), 91, param3);
+              var8.drawSelection(param2, this.field_I, this.field_Q, (UiWidget) (this), 91, param3);
             }
             var6 = nj.monotonicMillis(30);
             if ((var6 - this.field_L) % 1000L < 500L) {
-              var8.a(this.field_I, param2, param3, true, (UiWidget) (this));
+              var8.drawCaret(this.field_I, param2, param3, true, (UiWidget) (this));
             }
           }
         }
@@ -206,7 +206,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    private final void i(int param0) {
+    private final void deleteSelectedText(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (param0 >= -117) {
@@ -231,7 +231,7 @@ class TextInputWidget extends TextButton {
         try {
           this.field_r = GameSoundEffect.field_i.field_h;
           this.field_S = param2;
-          this.a(param0, (byte) -17, true);
+          this.setInputText(param0, (byte) -17, true);
           this.field_H = true;
           this.field_L = nj.monotonicMillis(-123);
         } catch (RuntimeException runtimeException) {
@@ -239,7 +239,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final void i(byte param0) {
+    final void clearInputText(byte param0) {
         this.field_I = 0;
         this.field_q = "";
         if (param0 >= -11) {
@@ -259,7 +259,7 @@ class TextInputWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new ag(param0, param0);
-          LoginCredentials.field_a.a(var2, 3);
+          LoginCredentials.field_a.addLast(var2, 3);
           if (param1 <= 108) {
             field_U = (String) null;
           }
@@ -280,16 +280,16 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    void a(byte param0, UiWidget param1, int param2, int param3) {
+    void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         WidgetTextLayout var7 = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
-          this.j((byte) 110);
+          super.updatePointerState(param0, param1, param2, param3);
+          this.scrollCaretIntoView((byte) 110);
           if (this.field_p == 1) {
             if (this.field_r instanceof WidgetTextLayout) {
               var7 = (WidgetTextLayout) ((Object) this.field_r);
-              var6 = var7.a(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param2, param3, 0);
+              var6 = var7.characterIndexAtPosition(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param2, param3, 0);
               if (var6 != -1) {
                 if (this.field_G && var6 < this.field_T &&
                   this.field_Q < var6) {
@@ -322,19 +322,19 @@ class TextInputWidget extends TextButton {
           if (!(this.field_r instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((WidgetTextLayout) ((Object) this.field_r)).a(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param5, param1, 0);
+          var8_int = ((WidgetTextLayout) ((Object) this.field_r)).characterIndexAtPosition(ArchiveManager.field_m, (UiWidget) (this), BytePlusOneCommand.field_A, param5, param1, 0);
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
             stackIn_6_1 = var8_int;
           }
-          this.a(stackIn_6_1, 20);
+          this.moveCaret(stackIn_6_1, 20);
           var8_long = nj.monotonicMillis(95);
           stackIn_9_1 = !(var8_long - this.field_J >= 250L);
           this.field_G = stackIn_9_1;
           if (this.field_G) {
-            this.field_Q = this.l((byte) -55);
-            this.field_I = this.h((byte) 104);
+            this.field_Q = this.previousWordBoundary((byte) -55);
+            this.field_I = this.nextWordBoundary((byte) 104);
             if (this.field_I > 0 &&
               this.field_q.charAt(this.field_I - 1) == 32) {
               this.field_I = this.field_I - 1;
@@ -357,7 +357,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_33_1 = 0;
         int stackIn_40_1 = 0;
@@ -380,7 +380,7 @@ class TextInputWidget extends TextButton {
           if (32 <= param0 &&
             param0 <= 126) {
             if (this.field_Q != this.field_I) {
-              this.i(-125);
+              this.deleteSelectedText(-125);
             }
             if (this.field_S == -1 ||
               !(this.field_q.length() >= this.field_S)) {
@@ -401,17 +401,17 @@ class TextInputWidget extends TextButton {
           if (param3 != 85) {
             if (param3 != 101) {
               if (param3 == 13) {
-                this.i((byte) -107);
+                this.clearInputText((byte) -107);
                 return true;
               }
               if (96 != param3) {
                 if (param3 != 97) {
                   if (param3 == 102) {
-                    this.a(0, 20);
+                    this.moveCaret(0, 20);
                     return true;
                   }
                   if (param3 == 103) {
-                    this.a(this.field_q.length(), 20);
+                    this.moveCaret(this.field_q.length(), 20);
                     return true;
                   }
                   if (84 == param3) {
@@ -425,22 +425,22 @@ class TextInputWidget extends TextButton {
                   }
                   if (GameplayHelpScreen.field_G[82] &&
                     param3 == 66) {
-                    this.k((byte) 109);
+                    this.copySelectedTextToClipboard((byte) 109);
                     return true;
                   }
                   if (GameplayHelpScreen.field_G[82] &&
                     param3 == 67) {
-                    this.a(true);
+                    this.pasteFromClipboard(true);
                     return true;
                   }
                 } else {
                   if (this.field_I < this.field_q.length()) {
                     if (GameplayHelpScreen.field_G[82]) {
-                      stackIn_40_1 = this.h((byte) 37);
+                      stackIn_40_1 = this.nextWordBoundary((byte) 37);
                     } else {
                       stackIn_40_1 = 1 + this.field_I;
                     }
-                    this.a(stackIn_40_1, 20);
+                    this.moveCaret(stackIn_40_1, 20);
                     return true;
                   }
                 }
@@ -449,31 +449,31 @@ class TextInputWidget extends TextButton {
                   if (!GameplayHelpScreen.field_G[82]) {
                     stackIn_33_1 = -1 + this.field_I;
                   } else {
-                    stackIn_33_1 = this.l((byte) -55);
+                    stackIn_33_1 = this.previousWordBoundary((byte) -55);
                   }
-                  this.a(stackIn_33_1, 20);
+                  this.moveCaret(stackIn_33_1, 20);
                   return true;
                 }
               }
             } else {
               if (this.field_I != this.field_Q) {
-                this.i(-127);
+                this.deleteSelectedText(-127);
                 return true;
               }
               if (this.field_I < this.field_q.length()) {
                 this.field_Q = this.field_I + 1;
-                this.i(-126);
+                this.deleteSelectedText(-126);
                 return true;
               }
             }
           } else {
             if (this.field_Q != this.field_I) {
-              this.i(-128);
+              this.deleteSelectedText(-128);
               return true;
             }
             if (0 < this.field_I) {
               this.field_Q = -1 + this.field_I;
-              this.i(-123);
+              this.deleteSelectedText(-123);
               return true;
             }
           }
@@ -492,7 +492,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    private final int l(byte param0) {
+    private final int previousWordBoundary(byte param0) {
         int var2;
         int var3;
         var3 = Kickabout.field_G;
@@ -515,11 +515,11 @@ class TextInputWidget extends TextButton {
         if (param0 != -13630) {
           return;
         }
-        this.k((byte) 119);
-        this.i(-124);
+        this.copySelectedTextToClipboard((byte) 119);
+        this.deleteSelectedText(-124);
     }
 
-    private final int h(byte param0) {
+    private final int nextWordBoundary(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -540,7 +540,7 @@ class TextInputWidget extends TextButton {
         return var3;
     }
 
-    private final void a(String param0, boolean param1) {
+    private final void insertTextAtCaret(String param0, boolean param1) {
         int var3_int = 0;
         String var4 = null;
         RuntimeException stackIn_15_0 = null;
@@ -563,7 +563,7 @@ class TextInputWidget extends TextButton {
           }
           if (param1) {
             var4 = (String) null;
-            this.a((String) null, (byte) -99, true);
+            this.setInputText((String) null, (byte) -99, true);
           }
           this.field_I = this.field_I + param0.length();
           this.field_Q = this.field_I;
@@ -583,7 +583,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    private final void j(byte param0) {
+    private final void scrollCaretIntoView(byte param0) {
         int var3;
         TextLayout var4;
         int var5;
@@ -603,10 +603,10 @@ class TextInputWidget extends TextButton {
         }
         var10 = (WidgetTextLayout) ((Object) this.field_r);
         var3 = 21 / ((param0 - 45) / 37);
-        var4 = var10.a(5035, (UiWidget) (this));
+        var4 = var10.ensureTextLayout(5035, (UiWidget) (this));
         var5 = var4.a((byte) -25);
-        var6 = var10.a((byte) -124, (UiWidget) (this));
-        var7 = var10.a((byte) -76) >> 1;
+        var6 = var10.contentWidth((byte) -124, (UiWidget) (this));
+        var7 = var10.lineHeight((byte) -76) >> 1;
         if (var5 < var6 - var7) {
           this.field_s = 0;
           this.field_o = 0;

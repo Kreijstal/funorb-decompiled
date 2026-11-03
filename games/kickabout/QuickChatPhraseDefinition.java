@@ -34,7 +34,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               var4_int = param2.readUnsignedByte((byte) -122);
               this.field_n = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_n[var5] = param2.a((byte) 81);
+                this.field_n[var5] = param2.readUnsignedShort((byte) 81);
               }
             } else {
               if (param1 == 3) {
@@ -42,14 +42,14 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 this.field_t = new int[var4_int][];
                 this.field_p = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param2.a((byte) 81);
+                  var6 = param2.readUnsignedShort((byte) 81);
                   var7 = CascadingMenu.a((byte) 127, var6);
                   if (var7 != null) {
                     this.field_p[var5] = var6;
                     array$0 = new int[var7.field_d];
                     this.field_t[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_d; var8++) {
-                      this.field_t[var5][var8] = param2.a((byte) 81);
+                      this.field_t[var5][var8] = param2.readUnsignedShort((byte) 81);
                     }
                   }
                 }

@@ -131,7 +131,7 @@ final class CommonGame {
               }
               this.field_V.c(param0, 17);
               this.field_X.readState(param0, (byte) -65);
-              this.aiTick = param0.l(8, 59);
+              this.aiTick = param0.readBits(8, 59);
               break;
             }
             this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
@@ -1821,7 +1821,7 @@ final class CommonGame {
               }
               var3_int++;
             }
-            this.field_E.b(param1 + 22997);
+            this.field_E.clear(param1 + 22997);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2624,7 +2624,7 @@ final class CommonGame {
             return;
           }
           this.phase = param0;
-          this.phaseTime = cv.field_a[this.phase];
+          this.phaseTime = MeshObject.field_a[this.phase];
           if (this.phase == 0) {
             this.field_n = new TeamSelectionAgent(this.participantStatus);
             if (var7 == 0) {
@@ -2757,7 +2757,7 @@ final class CommonGame {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_E.a(param0, 3);
+          this.field_E.addLast(param0, 3);
           if (param1 >= -114) {
             this.toString();
           }
@@ -3028,11 +3028,11 @@ final class CommonGame {
           var4_int = 0;
           do {
             if (var4_int >= this.playerCount) {
-              this.phase = param0.l(3, param2 ^ 58);
+              this.phase = param0.readBits(3, param2 ^ 58);
               break;
             }
-            this.field_g[var4_int].field_h = param0.l(16, 59);
-            this.field_g[var4_int].field_f = param0.l(3, 59);
+            this.field_g[var4_int].field_h = param0.readBits(16, 59);
+            this.field_g[var4_int].field_f = param0.readBits(3, 59);
             var4_int++;
           } while (var7 == 0);
           if (this.phase > 0) {
@@ -3042,26 +3042,26 @@ final class CommonGame {
                 var4_int = 0;
                 break;
               }
-              this.field_g[var4_int].field_p = param0.l(1, 59);
+              this.field_g[var4_int].field_p = param0.readBits(1, 59);
               var4_int++;
             } while (var7 == 0);
             do {
               if (var4_int >= 2) {
-                this.surface = param0.l(2, 59);
+                this.surface = param0.readBits(2, 59);
                 break;
               }
-              this.field_H[var4_int] = param0.l(5, 59);
-              this.field_d[var4_int] = param0.l(5, param2 + 58);
-              this.field_Q[var4_int] = param0.l(5, 59);
+              this.field_H[var4_int] = param0.readBits(5, 59);
+              this.field_d[var4_int] = param0.readBits(5, param2 + 58);
+              this.field_Q[var4_int] = param0.readBits(5, 59);
               var4_int++;
             } while (var7 == 0);
-            this.tier = param0.l(2, 59);
+            this.tier = param0.readBits(2, 59);
           }
           boolean decompiledFrameCompleted2 = true;
           if (2 < this.phase) {
             var4_int = 0;
             while (var4_int < 2) {
-              this.field_r[var4_int] = param0.l(3, 59);
+              this.field_r[var4_int] = param0.readBits(3, 59);
               stackIn_38_0 = 0;
               if (var7 != 0) {
                 decompiledFrameCompleted2 = false;
@@ -3069,7 +3069,7 @@ final class CommonGame {
               }
               var5 = stackIn_38_0;
               while (4 > var5) {
-                this.field_i[var4_int][var5] = param0.l(3, TrinketShopDialog.b(param2, 58));
+                this.field_i[var4_int][var5] = param0.readBits(3, TrinketShopDialog.b(param2, 58));
                 var5++;
               }
               var4_int++;
@@ -3089,7 +3089,7 @@ final class CommonGame {
                 }
                 var5Lifetime1 = stackIn_51_0;
                 while (var5Lifetime1 < 4) {
-                  this.field_k[var4_int][var5Lifetime1] = param0.l(4, 59) - 1;
+                  this.field_k[var4_int][var5Lifetime1] = param0.readBits(4, 59) - 1;
                   var5Lifetime1++;
                 }
                 var4_int++;
@@ -3122,7 +3122,7 @@ final class CommonGame {
           }
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_64_0 <= this.phase) {
-            this.winner = param0.l(3, 59) - 3;
+            this.winner = param0.readBits(3, 59) - 3;
             var4_int = 0;
             while (this.playerCount > var4_int) {
               this.field_g[var4_int].field_l = ContentTransitionDialog.a(param0, (byte) -39);
@@ -3134,19 +3134,19 @@ final class CommonGame {
                 break;
               }
               if (stackIn_85_0 == stackIn_85_1) {
-                var5Lifetime2 = param0.l(1, 59);
+                var5Lifetime2 = param0.readBits(1, 59);
                 if (var5Lifetime2 != 1) {
                 }
-                param0.l(7, 59);
-                this.field_g[var4_int].field_g = param0.l(15, 59);
-                var5Lifetime2Lifetime1 = param0.l(1, 59);
-                this.field_g[var4_int].field_k = param0.l(6, 59);
+                param0.readBits(7, 59);
+                this.field_g[var4_int].field_g = param0.readBits(15, 59);
+                var5Lifetime2Lifetime1 = param0.readBits(1, 59);
+                this.field_g[var4_int].field_k = param0.readBits(6, 59);
                 if (var5Lifetime2Lifetime1 == 1) {
                   this.field_g[var4_int].field_k = -this.field_g[var4_int].field_k;
                 }
                 var6 = 0;
                 while (!(var6 >= this.field_g[var4_int].field_o.length)) {
-                  this.field_g[var4_int].field_o[var6] = param0.l(8, 59);
+                  this.field_g[var4_int].field_o[var6] = param0.readBits(8, 59);
                   var6++;
                 }
               }
@@ -3225,7 +3225,7 @@ final class CommonGame {
               }
               this.field_V.a(param0, (byte) -124);
               this.field_X.readState(param0, (byte) -84);
-              this.aiTick = param0.l(8, 59);
+              this.aiTick = param0.readBits(8, 59);
               break;
             }
             this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);

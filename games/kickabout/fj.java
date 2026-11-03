@@ -78,21 +78,21 @@ final class fj {
             if (34 != var4 &&
               var4 != 39) {
               if (40 == var4) {
-                var2.a(new ConsoleExpression(ReflectionCheck.field_g, -1 + var3.field_c), 3);
+                var2.addLast(new ConsoleExpression(ReflectionCheck.field_g, -1 + var3.field_c), 3);
                 continue;
               }
               if (41 == var4) {
-                var2.a(new ConsoleExpression(RasterBuffer.field_c, var3.field_c - 1), 3);
+                var2.addLast(new ConsoleExpression(RasterBuffer.field_c, var3.field_c - 1), 3);
                 continue;
               }
               if (var4 == 44) {
-                var2.a(new ConsoleExpression(ColumnTableWidget.field_Gb, -1 + var3.field_c), 3);
+                var2.addLast(new ConsoleExpression(ColumnTableWidget.field_Gb, -1 + var3.field_c), 3);
                 continue;
               }
-              var2.a(tl.a(var3, false), 3);
+              var2.addLast(tl.a(var3, false), 3);
               continue;
             }
-            var2.a(RankingRowNode.a(-9323, var3), 3);
+            var2.addLast(RankingRowNode.a(-9323, var3), 3);
           }
           stackIn_20_0 = var2;
           return stackIn_20_0;

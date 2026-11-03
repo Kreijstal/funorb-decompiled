@@ -10,7 +10,7 @@ abstract class ByteStorage {
 
     abstract byte[] a(int param0);
 
-    abstract void a(byte[] param0, int param1);
+    abstract void setBytes(byte[] param0, int param1);
 
     final static void a(int param0, dl param1, byte param2) {
         CipherPacketBuffer var4 = null;
@@ -47,11 +47,11 @@ abstract class ByteStorage {
           return;
         }
         try {
-          pl.field_d = param0.a((byte) 81) << 5;
+          pl.field_d = param0.readUnsignedShort((byte) 81) << 5;
           var2_int = param0.readUnsignedByte((byte) -125);
           pl.field_d = pl.field_d + (var2_int >> 3);
           AuctionsHelpScreen.field_E = 1835008 & var2_int << 18;
-          AuctionsHelpScreen.field_E = AuctionsHelpScreen.field_E + (param0.a((byte) 81) << 2);
+          AuctionsHelpScreen.field_E = AuctionsHelpScreen.field_E + (param0.readUnsignedShort((byte) 81) << 2);
           var2_intLifetime1 = param0.readUnsignedByte((byte) -126);
           MenuButton.field_j = 2064384 & var2_intLifetime1 << 15;
           AuctionsHelpScreen.field_E = AuctionsHelpScreen.field_E + (var2_intLifetime1 >> 6);
@@ -59,7 +59,7 @@ abstract class ByteStorage {
           var2_intLifetime2 = param0.readUnsignedByte((byte) -105);
           MenuButton.field_j = MenuButton.field_j + (var2_intLifetime2 >> 1);
           FormationView.field_r = (var2_intLifetime2 & 1) << 16;
-          FormationView.field_r = FormationView.field_r + param0.a((byte) 81);
+          FormationView.field_r = FormationView.field_r + param0.readUnsignedShort((byte) 81);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

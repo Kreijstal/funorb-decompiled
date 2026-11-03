@@ -25,7 +25,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (param0 == null) {
             this.field_ab = new AlphaContainer();
           } else {
-            param0.a(param0.field_i, 1, 6, param0.field_n, this.field_R + 6);
+            param0.setBounds(param0.field_i, 1, 6, param0.field_n, this.field_R + 6);
             this.field_ab = new AlphaContainer(param0);
           }
           this.a(-83, this.field_ab);
@@ -35,9 +35,9 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    final void m(int param0) {
+    final void finishTransition(int param0) {
         if (null == this.field_X) {
-          super.m(param0);
+          super.finishTransition(param0);
           return;
         }
         if (wn.field_b != this.field_X) {
@@ -46,30 +46,30 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         } else {
           this.field_ab.field_F = 256;
           this.field_X = null;
-          super.m(param0);
+          super.finishTransition(param0);
           return;
         }
         this.field_ab.field_F = 256;
         this.field_X = null;
-        super.m(param0);
+        super.finishTransition(param0);
     }
 
-    boolean a(char param0, byte param1, UiWidget param2, int param3) {
+    boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -78, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -78, param2, param3)) {
             return true;
           }
           if (null != this.field_ab) {
             if (param3 == 98) {
-              this.field_ab.a(param2, 0);
+              this.field_ab.requestKeyboardFocus(param2, 0);
             }
             if (param3 == 99) {
-              this.field_ab.a(param2, 0);
+              this.field_ab.requestKeyboardFocus(param2, 0);
             }
           }
           if (param1 < -60) {
@@ -169,11 +169,11 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
 
     final boolean a(int param0) {
         if (param0 <= -11) {
-          this.m(4000);
+          this.finishTransition(4000);
           return super.a(-13);
         }
         this.n(55);
-        this.m(4000);
+        this.finishTransition(4000);
         return super.a(-13);
     }
 
@@ -191,7 +191,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    boolean k(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -199,62 +199,62 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (param0 != -1) {
           this.field_W = -80;
           if (this.field_X == null) {
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           if (ValidationState.field_e != this.field_X) {
             if (this.field_X != wn.field_b) {
-              return super.k(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             fieldTemp$0 = this.field_T + 1;
             this.field_T = this.field_T + 1;
             if (fieldTemp$0 != this.field_Z) {
               this.field_ab.field_F = (this.field_T << 8) / this.field_Z;
-              return super.k(param0 + 0);
+              return super.advanceDialogAnimation(param0 + 0);
             }
             this.field_X = null;
             this.field_ab.field_F = 256;
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$1 = this.field_T + 1;
           this.field_T = this.field_T + 1;
           if (this.field_W != fieldTemp$1) {
             this.field_ab.field_F = -((this.field_T << 8) / this.field_W) + 256;
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_X = LineupView.field_m;
           this.a((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
           this.field_ab.field_F = 0;
           this.field_T = 0;
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (this.field_X == null) {
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         if (ValidationState.field_e != this.field_X) {
           if (this.field_X != wn.field_b) {
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$2 = this.field_T + 1;
           this.field_T = this.field_T + 1;
           if (fieldTemp$2 != this.field_Z) {
             this.field_ab.field_F = (this.field_T << 8) / this.field_Z;
-            return super.k(param0 + 0);
+            return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_X = null;
           this.field_ab.field_F = 256;
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         int fieldTemp$3 = this.field_T + 1;
         this.field_T = this.field_T + 1;
         if (this.field_W != fieldTemp$3) {
           this.field_ab.field_F = -((this.field_T << 8) / this.field_W) + 256;
-          return super.k(param0 + 0);
+          return super.advanceDialogAnimation(param0 + 0);
         }
         this.field_X = LineupView.field_m;
         this.a((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
         this.field_ab.field_F = 0;
         this.field_T = 0;
-        return super.k(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
     final static boolean a(CipherPacketBuffer param0, byte param1) {
@@ -268,7 +268,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (param1 != -39) {
             field_Q = (int[]) null;
           }
-          stackIn_5_0 = (param0.l(1, param1 + 98) == 1);
+          stackIn_5_0 = (param0.readBits(1, param1 + 98) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

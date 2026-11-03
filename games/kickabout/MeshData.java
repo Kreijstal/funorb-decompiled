@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn extends cv {
+final class MeshData extends MeshObject {
     private byte[] field_N;
     rn[] field_q;
     short[] field_u;
@@ -41,7 +41,7 @@ final class vn extends cv {
     private int[] field_C;
     private byte field_F;
 
-    private final int a(vn param0, int param1, short param2) {
+    private final int a(MeshData param0, int param1, short param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -69,15 +69,15 @@ final class vn extends cv {
         return fieldTemp$0;
     }
 
-    final static vn a(ResourceArchive param0, String param1, String param2) {
+    final static MeshData load(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.takeFileByName(param2, param1, 28);
         if (var3 == null) {
           return null;
         }
-        return new vn(var3);
+        return new MeshData(var3);
     }
 
-    private final void b(byte[] param0) {
+    private final void decodeLegacyFormat(byte[] param0) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -141,18 +141,18 @@ final class vn extends cv {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var4.field_n = param0.length - 18;
-        var9 = var4.a((byte) 81);
-        var10 = var4.a((byte) 81);
+        var9 = var4.readUnsignedShort((byte) 81);
+        var10 = var4.readUnsignedShort((byte) 81);
         var11 = var4.readUnsignedByte((byte) -123);
         var12 = var4.readUnsignedByte((byte) -118);
         var13 = var4.readUnsignedByte((byte) -122);
         var14 = var4.readUnsignedByte((byte) -126);
         var15 = var4.readUnsignedByte((byte) -110);
         var16 = var4.readUnsignedByte((byte) -124);
-        var17 = var4.a((byte) 81);
-        var18 = var4.a((byte) 81);
-        var19 = var4.a((byte) 81);
-        var20 = var4.a((byte) 81);
+        var17 = var4.readUnsignedShort((byte) 81);
+        var18 = var4.readUnsignedShort((byte) 81);
+        var19 = var4.readUnsignedShort((byte) 81);
+        var20 = var4.readUnsignedShort((byte) 81);
         var21 = 0;
         var22 = var21;
         var21 = var21 + var9;
@@ -263,7 +263,7 @@ final class vn extends cv {
         var7.field_n = var28;
         var8.field_n = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
-          this.field_p[var38Lifetime1] = (short)var4.a((byte) 81);
+          this.field_p[var38Lifetime1] = (short)var4.readUnsignedShort((byte) 81);
           if (var12 == 1) {
             var39Lifetime1 = var5.readUnsignedByte((byte) -108);
             if ((var39Lifetime1 & 1) != 1) {
@@ -363,9 +363,9 @@ final class vn extends cv {
         var4.field_n = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_T[var42Lifetime2] = (byte) 0;
-          this.field_h[var42Lifetime2] = (short)var4.a((byte) 81);
-          this.field_B[var42Lifetime2] = (short)var4.a((byte) 81);
-          this.field_y[var42Lifetime2] = (short)var4.a((byte) 81);
+          this.field_h[var42Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+          this.field_B[var42Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+          this.field_y[var42Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
         }
         if (this.field_I != null) {
           var42Lifetime3 = 0;
@@ -396,11 +396,11 @@ final class vn extends cv {
         }
     }
 
-    final ModelMesh b(int param0, int param1, int param2, int param3, int param4) {
+    final ModelMesh createModelMesh(int param0, int param1, int param2, int param3, int param4) {
         return new ModelMesh(this, param0, param1, param2, param3, param4);
     }
 
-    final void b() {
+    final void calculateNormals() {
         ia dupTemp$0 = null;
         int var1;
         int var2;
@@ -504,7 +504,7 @@ final class vn extends cv {
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeExtendedFormat(byte[] param0) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -586,8 +586,8 @@ final class vn extends cv {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var2.field_n = param0.length - 23;
-        var9 = var2.a((byte) 81);
-        var10 = var2.a((byte) 81);
+        var9 = var2.readUnsignedShort((byte) 81);
+        var10 = var2.readUnsignedShort((byte) 81);
         var11 = var2.readUnsignedByte((byte) -118);
         var12 = var2.readUnsignedByte((byte) -120);
         stackIn_3_0 = ((var12 & 1) != 1) ? 0 : 1;
@@ -599,11 +599,11 @@ final class vn extends cv {
         var17 = var2.readUnsignedByte((byte) -112);
         var18 = var2.readUnsignedByte((byte) -114);
         var19 = var2.readUnsignedByte((byte) -128);
-        var20 = var2.a((byte) 81);
-        var21 = var2.a((byte) 81);
-        var22 = var2.a((byte) 81);
-        var23 = var2.a((byte) 81);
-        var24 = var2.a((byte) 81);
+        var20 = var2.readUnsignedShort((byte) 81);
+        var21 = var2.readUnsignedShort((byte) 81);
+        var22 = var2.readUnsignedShort((byte) 81);
+        var23 = var2.readUnsignedShort((byte) 81);
+        var24 = var2.readUnsignedShort((byte) 81);
         var25 = 0;
         var26 = 0;
         var27 = 0;
@@ -771,7 +771,7 @@ final class vn extends cv {
         var7.field_n = var37;
         var8.field_n = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
-          this.field_p[var53Lifetime1] = (short)var2.a((byte) 81);
+          this.field_p[var53Lifetime1] = (short)var2.readUnsignedShort((byte) 81);
           if (var13 != 0) {
             this.field_o[var53Lifetime1] = var3.readByte((byte) -125);
           }
@@ -785,7 +785,7 @@ final class vn extends cv {
             this.field_O[var53Lifetime1] = var6.readUnsignedByte((byte) -125);
           }
           if (var18 == 1) {
-            this.field_u[var53Lifetime1] = (short)(var7.a((byte) 81) - 1);
+            this.field_u[var53Lifetime1] = (short)(var7.readUnsignedShort((byte) 81) - 1);
           }
           if (this.field_I != null) {
             if (this.field_u[var53Lifetime1] == -1) {
@@ -870,28 +870,28 @@ final class vn extends cv {
         for (var57Lifetime2 = 0; var57Lifetime2 < var11; var57Lifetime2++) {
           var58Lifetime1 = this.field_T[var57Lifetime2] & 255;
           if (var58Lifetime1 == 0) {
-            this.field_h[var57Lifetime2] = (short)var2.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var2.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var2.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 81);
           }
           if (var58Lifetime1 == 1) {
-            this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_j[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
             this.field_x[var57Lifetime2] = var5.readByte((byte) -100);
             this.field_E[var57Lifetime2] = var6.readByte((byte) -58);
             this.field_Q[var57Lifetime2] = var7.readByte((byte) -48);
           }
           if (var58Lifetime1 == 2) {
-            this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_j[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
             this.field_x[var57Lifetime2] = var5.readByte((byte) -109);
             this.field_E[var57Lifetime2] = var6.readByte((byte) -113);
             this.field_Q[var57Lifetime2] = var7.readByte((byte) -111);
@@ -899,12 +899,12 @@ final class vn extends cv {
             this.field_G[var57Lifetime2] = var7.readByte((byte) -111);
           }
           if (var58Lifetime1 == 3) {
-            this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_B[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_y[var57Lifetime2] = (short)var3.a((byte) 81);
-            this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
+            this.field_h[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_B[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_y[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 81);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
+            this.field_j[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 81);
             this.field_x[var57Lifetime2] = var5.readByte((byte) -102);
             this.field_E[var57Lifetime2] = var6.readByte((byte) -102);
             this.field_Q[var57Lifetime2] = var7.readByte((byte) -76);
@@ -923,7 +923,7 @@ final class vn extends cv {
         }
     }
 
-    final void a() {
+    final void buildSkinGroups() {
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -992,24 +992,24 @@ final class vn extends cv {
         }
     }
 
-    final ModelMeshBase a(int param0, int param1, int param2, int param3, int param4) {
+    final ModelMeshBase createModel(int param0, int param1, int param2, int param3, int param4) {
         return (ModelMeshBase) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
-    private vn(byte[] param0) {
+    private MeshData(byte[] param0) {
         this.field_D = 0;
         this.field_m = 0;
         this.field_t = 0;
         this.field_F = (byte) 0;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
-          this.a(param0);
+          this.decodeExtendedFormat(param0);
         } else {
-          this.b(param0);
+          this.decodeLegacyFormat(param0);
         }
     }
 
-    vn(vn[] param0, int param1) {
+    MeshData(MeshData[] param0, int param1) {
         int incrementValue$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_13_0 = 0;
@@ -1033,22 +1033,22 @@ final class vn extends cv {
         int var8;
         int var9;
         int var10;
-        vn var10_ref_vn;
-        vn var11;
+        MeshData var10_ref_vn;
+        MeshData var11;
         int var12;
         int var13;
         int var14;
-        vn var15;
-        vn var16;
+        MeshData var15;
+        MeshData var16;
         int var17;
-        vn var18;
-        vn var19;
+        MeshData var18;
+        MeshData var19;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        vn var11Lifetime1;
+        MeshData var11Lifetime1;
         this.field_D = 0;
         this.field_m = 0;
         this.field_t = 0;
@@ -1260,7 +1260,7 @@ final class vn extends cv {
         }
     }
 
-    vn(vn param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    MeshData(MeshData param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6;
         int var6Lifetime1;
         int var6Lifetime2;

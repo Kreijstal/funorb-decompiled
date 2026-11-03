@@ -169,7 +169,7 @@ final class ClubState {
           var3 = (AuctionLogEntry) (param0.auctionLog.g(24009));
           while (var3 != null) {
             var4 = new AuctionLogEntry(var3.logType, var3.slotIndex, var3.auctionId);
-            this.auctionLog.a(var4, 3);
+            this.auctionLog.addLast(var4, 3);
             var3 = (AuctionLogEntry) (param0.auctionLog.c(33));
           }
           this.auctionListings = new IntrusiveDeque();
@@ -178,7 +178,7 @@ final class ClubState {
             var9 = new PlayerStats();
             var9.copyFrom((byte) -65, var8.getPlayerStats(-128));
             var5 = new AuctionListing(var8.getAuctionId(-29), var8.getListingType((byte) 37), var8.getSlotIndex(3), var8.b(6), var9);
-            this.auctionListings.a(var5, 3);
+            this.auctionListings.addLast(var5, 3);
             var8 = (AuctionListing) (param0.auctionListings.c(33));
           }
           this.field_p = param0.field_p;
@@ -650,7 +650,7 @@ final class ClubState {
         }
         int[] var6 = new int[9];
         int[] var4 = var6;
-        ArrayOperations.a(this.field_q, 0, var6, 0, 9);
+        ArrayOperations.copyInts(this.field_q, 0, var6, 0, 9);
         int var5 = var6[param2];
         var6[param2] = var6[param0];
         var6[param0] = var5;
@@ -1204,12 +1204,12 @@ final class ClubState {
           this.field_E = param1.readUnsignedMedium(-115);
           this.field_t = param1.readUnsignedByte((byte) -116);
           this.field_s = param1.readUnsignedByte((byte) -119);
-          this.field_G = param1.a((byte) 81);
+          this.field_G = param1.readUnsignedShort((byte) 81);
           param1.readInt(4);
           this.field_w = param1.readUnsignedByte((byte) -119);
           this.field_k = param1.readUnsignedByte((byte) -122);
           this.field_R = param1.readUnsignedByte((byte) -116);
-          var8Lifetime1 = param1.a((byte) 81);
+          var8Lifetime1 = param1.readUnsignedShort((byte) 81);
           var9 = 0;
           for (var10 = 0; var10 < 3; var10++) {
             for (var11 = 0; var11 < 4; var11++) {
@@ -1225,7 +1225,7 @@ final class ClubState {
           var8Lifetime2 = param1.readUnsignedByte((byte) -105);
           this.field_K = var8Lifetime2 & 15;
           this.field_o = var8Lifetime2 >> 4 & 15;
-          var10Lifetime1 = param1.a((byte) 81);
+          var10Lifetime1 = param1.readUnsignedShort((byte) 81);
           for (var11Lifetime1 = 0; var11Lifetime1 < 9; var11Lifetime1++) {
             this.squad[var11Lifetime1] = new PlayerStats();
             if ((1 & var10Lifetime1 >> var11Lifetime1) == 1) {
@@ -1239,23 +1239,23 @@ final class ClubState {
           var11Lifetime3 = param1.readUnsignedByte((byte) -114);
           for (var12Lifetime1 = 0; var12Lifetime1 < var11Lifetime3; var12Lifetime1++) {
             var13_ref_cq = new AuctionLogEntry(param1);
-            this.auctionLog.a(var13_ref_cq, 3);
+            this.auctionLog.addLast(var13_ref_cq, 3);
           }
           this.auctionListings = new IntrusiveDeque();
           var12Lifetime2 = param1.readUnsignedByte((byte) -108);
           for (var13 = 0; var12Lifetime2 > var13; var13++) {
             var14_ref_pt = new AuctionListing(param1);
-            this.auctionListings.a(var14_ref_pt, 3);
+            this.auctionListings.addLast(var14_ref_pt, 3);
           }
           for (var13Lifetime1 = 0; 40 > var13Lifetime1; var13Lifetime1++) {
             var14 = param1.readUnsignedByte((byte) -109);
             this.field_N[2 * var13Lifetime1] = TextLayoutLine.b(15, var14);
             this.field_N[1 + var13Lifetime1 * 2] = TextLayoutLine.b(241, var14) >> 4;
           }
-          this.field_C = param1.a((byte) 81);
-          this.field_b = param1.a((byte) 81);
-          this.field_B = param1.a((byte) 81);
-          this.field_z = param1.a((byte) 81);
+          this.field_C = param1.readUnsignedShort((byte) 81);
+          this.field_b = param1.readUnsignedShort((byte) 81);
+          this.field_B = param1.readUnsignedShort((byte) 81);
+          this.field_z = param1.readUnsignedShort((byte) 81);
           this.field_H = -1L + param1.readLong((byte) -124);
           this.field_j = param1.readUnsignedByte((byte) -128);
           this.field_u = param1.readUnsignedByte((byte) -125);
@@ -1265,12 +1265,12 @@ final class ClubState {
           param1.readInt(4);
           this.field_n = param1.readInt(4);
           if (param2 > 1) {
-            param1.a((byte) 81);
-            param1.a((byte) 81);
-            param1.a((byte) 81);
-            param1.a((byte) 81);
-            param1.a((byte) 81);
-            param1.a((byte) 81);
+            param1.readUnsignedShort((byte) 81);
+            param1.readUnsignedShort((byte) 81);
+            param1.readUnsignedShort((byte) 81);
+            param1.readUnsignedShort((byte) 81);
+            param1.readUnsignedShort((byte) 81);
+            param1.readUnsignedShort((byte) 81);
           }
           if (2 < param2) {
             stackIn_57_1 = (param1.readUnsignedByte((byte) -118) == 1);

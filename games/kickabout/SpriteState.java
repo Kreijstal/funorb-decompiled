@@ -106,13 +106,13 @@ abstract class SpriteState extends DualLinkNode {
             if (!ScrollPane.a(113)) {
               var9_ref_String = PlayerContextMenu.field_i.field_ec;
               IterableDualLinkDeque.field_h.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
-              nv.field_F.a(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
+              nv.field_F.setBounds(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
               nv.field_F.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
               var8 = nv.field_F;
             } else {
               IterableDualLinkDeque.field_h.field_E = TabStrip.field_zb.toUpperCase();
               var9 = (AuctionItem.field_p.field_q + 2) / 2;
-              DualLinkHashTable.field_d.a(true, var9 - 2, 0, -40 + AuctionItem.field_p.field_mb, 40);
+              DualLinkHashTable.field_d.setBounds(true, var9 - 2, 0, -40 + AuctionItem.field_p.field_mb, 40);
               if (PlayerContextMenu.field_i.field_bc <= PlayerContextMenu.field_i.field_gc) {
                 DualLinkHashTable.field_d.field_E = LeagueWinnerDialog.field_I.toUpperCase();
                 DualLinkHashTable.field_d.field_lb = false;
@@ -133,7 +133,7 @@ abstract class SpriteState extends DualLinkNode {
                   DualLinkHashTable.field_d.field_R = TextFieldNode.field_Qb.field_S;
                 }
               }
-              GoalStateAgent.field_k.a(true, AuctionItem.field_p.field_q - var9, var9, -40 + AuctionItem.field_p.field_mb, 40);
+              GoalStateAgent.field_k.setBounds(true, AuctionItem.field_p.field_q - var9, var9, -40 + AuctionItem.field_p.field_mb, 40);
               GoalStateAgent.field_k.field_E = BlankScreen.field_g.toUpperCase();
               stackIn_18_0 = GoalStateAgent.field_k;
               stackIn_19_1 = (param3) && (0L == TextFieldNode.field_Ib);
@@ -359,15 +359,15 @@ abstract class SpriteState extends DualLinkNode {
           stackIn_156_0 = TrinketIcon.field_Cb;
           stackIn_156_1 = param2 ^ param2;
           stackIn_157_2 = (param0) && (!param4) && (!TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_156_0).b(stackIn_156_1, stackIn_157_2);
+          ((UiLayoutNode) (Object) stackIn_156_0).updateInput(stackIn_156_1, stackIn_157_2);
           stackIn_161_0 = AuctionItem.field_p;
           stackIn_161_1 = 0;
           stackIn_162_2 = (param0) && (!param4) && (!TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_161_0).b(stackIn_161_1, stackIn_162_2);
+          ((UiLayoutNode) (Object) stackIn_161_0).updateInput(stackIn_161_1, stackIn_162_2);
           stackIn_166_0 = tn.field_f;
           stackIn_166_1 = 0;
           stackIn_167_2 = (param0) && (!param4) && (TrinketCatalog.field_b);
-          ((UiLayoutNode) (Object) stackIn_166_0).b(stackIn_166_1, stackIn_167_2);
+          ((UiLayoutNode) (Object) stackIn_166_0).updateInput(stackIn_166_1, stackIn_167_2);
           ni.field_l.field_b.h((byte) 71);
           if (null != PlayerContextMenu.field_i) {
             if (TrinketUnlockNotice.field_b.field_sb != 0) {

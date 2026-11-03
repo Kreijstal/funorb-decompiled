@@ -9,7 +9,7 @@ final class RenderedFootballer extends FootballerAgent {
     private double field_H;
     int field_R;
     private boolean field_jb;
-    private vn field_hb;
+    private MeshData field_hb;
     static String field_lb;
     private boolean field_eb;
     private boolean field_db;
@@ -130,7 +130,7 @@ final class RenderedFootballer extends FootballerAgent {
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
             if (var4 == null) {
-              jr.a(var5, -128, var6);
+              ReceivedAuctionItemRow.a(var5, -128, var6);
             } else {
               ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
@@ -179,7 +179,7 @@ final class RenderedFootballer extends FootballerAgent {
         int[] var3 = var6;
         int var4 = var6[0] * TriangleRasterizer.field_o[param0] >> 16;
         int var5 = TriangleRasterizer.field_f[param0] * var6[0] >> 16;
-        this.field_gb = this.field_hb.b(var6[2], var6[3], var4, var6[1], var5);
+        this.field_gb = this.field_hb.createModelMesh(var6[2], var6[3], var4, var6[1], var5);
     }
 
     final void setPosition(int param0, boolean param1, int param2, int param3) {
@@ -201,7 +201,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.field_W != this.field_R) {
           this.setFacingAngle(this.field_R, (byte) 79);
         }
-        ModelMesh var8 = (ModelMesh) (this.field_mb.a(this.field_gb, false, true, true));
+        ModelMesh var8 = (ModelMesh) (this.field_mb.applyCurrentFrame(this.field_gb, false, true, true));
         int var7 = this.field_R;
         if (this.field_V) {
           var7 = 2047 & var7 + 1024;
@@ -332,11 +332,11 @@ final class RenderedFootballer extends FootballerAgent {
           discarded$10 = var11_ref_StringBuilder.append(", ");
           GameResourceLoader.a(this.field_X, 100, var11_ref_StringBuilder);
           discarded$11 = var11_ref_StringBuilder.append(')');
-          var12 = this.stats.b(0);
-          var13 = this.stats.a(15);
+          var12 = this.stats.getWidth(0);
+          var13 = this.stats.getHeight(15);
           var14 = new Sprite(var12, 10 * var8_ref_String__.length + 5 + var13 + 20);
           PacketBuffer.a(-64, var14);
-          this.stats.a(var13 >> 1, 23, var12 >> 1);
+          this.stats.drawCentered(var13 >> 1, 23, var12 >> 1);
           var15 = ConsoleTokenCursor.field_d;
           var16 = var13 + 11;
           for (var17 = 0; var8_ref_String__.length > var17; var17++) {
@@ -378,11 +378,11 @@ final class RenderedFootballer extends FootballerAgent {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.megamode && (1 == tb.field_v ||
+        if (!this.megamode && (1 == SocketArchiveNetworkClient.field_v ||
           this.field_ab ||
           this.field_T)) {
           PacketBuffer.a(-88, kw.field_f);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.renderModel(var2, var8, 128, 190, (byte) -91);
           TeamManagementScreen.e(119);
@@ -418,7 +418,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
     }
 
-    RenderedFootballer(vn param0, int param1, boolean param2, FootballerAgent param3) {
+    RenderedFootballer(MeshData param0, int param1, boolean param2, FootballerAgent param3) {
         this(param0, param1, param2);
         try {
           this.applyPlayerStats(param3.member, param3.stats, 3);
@@ -447,7 +447,7 @@ final class RenderedFootballer extends FootballerAgent {
         try {
           var3 = new FadingChatMessage(param0, param1);
           if (SplashScreen.field_j < 18) {
-            AppScreen.field_d.a(var3, 3);
+            AppScreen.field_d.addLast(var3, 3);
           } else {
             MatchingTextValidator.a(var3, false);
           }
@@ -841,7 +841,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
     }
 
-    final void setModel(vn param0, byte param1) {
+    final void setModel(MeshData param0, byte param1) {
         try {
           this.field_hb = param0;
           if (param1 >= -80) {
@@ -946,7 +946,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
     }
 
-    RenderedFootballer(vn param0, int param1, boolean param2) {
+    RenderedFootballer(MeshData param0, int param1, boolean param2) {
         this.field_H = 0.0;
         this.field_ab = false;
         this.field_eb = false;

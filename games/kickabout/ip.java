@@ -28,7 +28,7 @@ final class ip {
         try {
           TriangleRasterizer.useRasterClip();
           ValidatedTextWidget.field_Y = new int[260];
-          im.field_yb = 11;
+          ListRow.field_yb = 11;
           var1_int = 0;
           if (param0) {
             return;

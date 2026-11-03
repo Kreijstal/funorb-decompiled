@@ -37,7 +37,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         field_Ub = null;
     }
 
-    final static int a(byte param0, int[] param1) {
+    final static int sumInts(byte param0, int[] param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -240,7 +240,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         }
     }
 
-    final void a(byte param0, String param1, String param2) {
+    final void setNames(byte param0, String param1, String param2) {
         CharSequence var5 = null;
         this.field_Rb = param2;
         if (param0 != -2) {

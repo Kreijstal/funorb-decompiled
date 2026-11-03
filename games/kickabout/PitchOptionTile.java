@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PitchOptionTile extends UiLayoutNode implements lv {
+final class PitchOptionTile extends UiLayoutNode implements PopupCard {
     private ClubState field_Cb;
     int field_Db;
     String field_Eb;
@@ -10,9 +10,9 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
     static ValidationState field_Bb;
     static int field_yb;
 
-    public final int a(int param0) {
+    public final int getHeight(int param0) {
         if (param0 != 15) {
-          this.a(81, -99, 126);
+          this.drawCentered(81, -99, 126);
           return 120;
         }
         return 120;
@@ -37,7 +37,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         var4 = new wd();
         var4.field_p = param0;
         var4.field_k = param2;
-        ak.field_i.a(var4, 3);
+        ak.field_i.addLast(var4, 3);
         if (param1 == 100) {
           TextFieldNode.a(true, var4, param3);
           return var4;
@@ -315,7 +315,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         return this.field_Cb.field_a[this.field_Db][this.field_zb];
     }
 
-    public final int b(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != 0) {
           this.j(66);
           return 110;
@@ -323,7 +323,7 @@ final class PitchOptionTile extends UiLayoutNode implements lv {
         return 110;
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void drawCentered(int param0, int param1, int param2) {
         int stackIn_11_0;
         boolean stackIn_11_1;
         int stackIn_11_2;

@@ -88,35 +88,35 @@ final class we {
           stackIn_51_0 = ss.field_c;
           stackIn_51_1 = 0;
           stackIn_52_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (null == ArchiveSource.field_b);
-          ((UiLayoutNode) (Object) stackIn_51_0).b(stackIn_51_1, stackIn_52_2);
+          ((UiLayoutNode) (Object) stackIn_51_0).updateInput(stackIn_51_1, stackIn_52_2);
           if (param2 > -37) {
             we.releaseStatics((byte) -81);
           }
           stackIn_60_0 = af.field_d;
           stackIn_60_1 = 0;
           stackIn_61_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (ArchiveSource.field_b == null);
-          ((UiLayoutNode) (Object) stackIn_60_0).b(stackIn_60_1, stackIn_61_2);
+          ((UiLayoutNode) (Object) stackIn_60_0).updateInput(stackIn_60_1, stackIn_61_2);
           stackIn_65_0 = TriangleMesh.field_j;
           stackIn_65_1 = 0;
           stackIn_66_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
-          ((UiLayoutNode) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
+          ((UiLayoutNode) (Object) stackIn_65_0).updateInput(stackIn_65_1, stackIn_66_2);
         } else {
           ConsoleValue.field_a.field_E = null;
           stackIn_7_0 = ss.field_c;
           stackIn_7_1 = 0;
           stackIn_8_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (null == ArchiveSource.field_b);
-          ((UiLayoutNode) (Object) stackIn_7_0).b(stackIn_7_1, stackIn_8_2);
+          ((UiLayoutNode) (Object) stackIn_7_0).updateInput(stackIn_7_1, stackIn_8_2);
           if (param2 > -37) {
             we.releaseStatics((byte) -81);
           }
           stackIn_16_0 = af.field_d;
           stackIn_16_1 = 0;
           stackIn_17_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (ArchiveSource.field_b == null);
-          ((UiLayoutNode) (Object) stackIn_16_0).b(stackIn_16_1, stackIn_17_2);
+          ((UiLayoutNode) (Object) stackIn_16_0).updateInput(stackIn_16_1, stackIn_17_2);
           stackIn_21_0 = TriangleMesh.field_j;
           stackIn_21_1 = 0;
           stackIn_22_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
-          ((UiLayoutNode) (Object) stackIn_21_0).b(stackIn_21_1, stackIn_22_2);
+          ((UiLayoutNode) (Object) stackIn_21_0).updateInput(stackIn_21_1, stackIn_22_2);
         }
         tn.field_d.field_b.h((byte) 47);
         if (MouseWheelInput.field_a.field_sb != 0) {

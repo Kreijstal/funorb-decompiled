@@ -15,7 +15,7 @@ abstract class PcmStream extends IntrusiveNode {
         return 255;
     }
 
-    abstract PcmStream c();
+    abstract PcmStream firstSubstream();
 
     final void b(int[] param0, int param1, int param2) {
         if (this.field_e) {
@@ -25,9 +25,9 @@ abstract class PcmStream extends IntrusiveNode {
         }
     }
 
-    abstract PcmStream b();
+    abstract PcmStream nextSubstream();
 
-    abstract int d();
+    abstract int getSchedulingCost();
 
     protected PcmStream() {
         this.field_e = true;

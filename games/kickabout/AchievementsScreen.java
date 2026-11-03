@@ -51,9 +51,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
         super.drawScreen(param0, param1);
         SoftwareRasterizer.a(ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_q, ContextMenuItem.field_Ib.field_mb, 8, 0, 96);
         SoftwareRasterizer.a(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
-        bq.field_d.a(46, false);
-        ModalPanel.field_D.a(97, false);
-        ContextMenuItem.field_Ib.a(param0 + 84, false);
+        bq.field_d.draw(46, false);
+        ModalPanel.field_D.draw(97, false);
+        ContextMenuItem.field_Ib.draw(param0 + 84, false);
         AuctionListing.a(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
         var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
         while (var3 != null) {
@@ -97,7 +97,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
             var10 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
             var11 = var8 + var10 * 16 + 5;
-            ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
+            ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
             var11 += 10;
             var12 = ProxyAuthenticationRequiredException.field_a[var5];
             if (th.field_a[var5]) {
@@ -106,10 +106,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var11 += 16;
             var13 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
             var18.c(ImageProducerRasterBuffer.field_l, var7 + var13, var11, 16777215, -1);
-            var18.a(Integer.toString(wc.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
+            var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
             var11 += 18;
             var18.c(po.field_d, var7 + var13, var11, 16777215, -1);
-            for (var14 = wc.field_g[var5] / 100; var14 > 0; var14--) {
+            for (var14 = WidgetTheme.field_g[var5] / 100; var14 > 0; var14--) {
               var15 = 5 * var14 + (var13 + (var7 - 2));
               PlayerShopScreen.field_R.drawHalfSize(var15, -14 + var11);
             }
@@ -125,7 +125,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           StrongCacheEntry.field_w.c(5 + this.slideOffsetX, 290);
           var10Lifetime2 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
           var11Lifetime2 = var8 + var10Lifetime2 * 16 + 5;
-          ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
           var11Lifetime2 += 10;
           var12Lifetime2 = ProxyAuthenticationRequiredException.field_a[var5];
           if (th.field_a[var5]) {
@@ -134,10 +134,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var11Lifetime2 += 16;
           var13Lifetime2 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
-          var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
+          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
           var11Lifetime2 += 18;
           var18.c(po.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
-          for (var14Lifetime3 = wc.field_g[var5] / 100; var14Lifetime3 > 0; var14Lifetime3--) {
+          for (var14Lifetime3 = WidgetTheme.field_g[var5] / 100; var14Lifetime3 > 0; var14Lifetime3--) {
             var15Lifetime2 = 5 * var14Lifetime3 + (var13Lifetime2 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime2, -14 + var11Lifetime2);
           }
@@ -154,7 +154,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var10Lifetime1 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
         var11Lifetime1 = var8 + var10Lifetime1 * 16 + 5;
         if (var6 == 0) {
-          ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
           var11Lifetime1 += 10;
           var12Lifetime1 = ProxyAuthenticationRequiredException.field_a[var5];
           if (th.field_a[var5]) {
@@ -163,10 +163,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var11Lifetime1 += 16;
           var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
+          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          for (var14Lifetime1 = wc.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
+          for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
           }
@@ -179,10 +179,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var11Lifetime1 += 16;
           var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
+          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          for (var14Lifetime1 = wc.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
+          for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
           }
@@ -211,7 +211,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         }
         bq.field_d.field_lb = false;
         ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, it.field_m);
-        ContextMenuItem.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
+        ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
           ResourceArchive.field_g = true;
           return;
@@ -232,16 +232,16 @@ final class AchievementsScreen extends ButtonMenuScreen {
         int var6 = Kickabout.field_G;
         int var4Lifetime1;
         super.updateScreen((byte) 101, param1);
-        bq.field_d.a(true, 32, 310 + this.slideOffsetX, 144, 32);
+        bq.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
         int var3 = 41 % ((param0 - 38) / 60);
-        ModalPanel.field_D.a(true, 32, this.slideOffsetX + 310, 176, 32);
-        ContextMenuItem.field_Ib.a(true, 300, 45 + this.slideOffsetX, 70, 200);
+        ModalPanel.field_D.setBounds(true, 32, this.slideOffsetX + 310, 176, 32);
+        ContextMenuItem.field_Ib.setBounds(true, 300, 45 + this.slideOffsetX, 70, 200);
         if (0 < this.field_B) {
           this.field_B = this.field_B - 1;
           var4 = ContextMenuItem.field_Ib.field_Db.field_J;
-          ContextMenuItem.field_Ib.b(0, param1);
-          bq.field_d.b(0, param1);
-          ModalPanel.field_D.b(0, param1);
+          ContextMenuItem.field_Ib.updateInput(0, param1);
+          bq.field_d.updateInput(0, param1);
+          ModalPanel.field_D.updateInput(0, param1);
           RenderedBall.field_C = -1;
           var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
           while (var5 != null) {
@@ -284,9 +284,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
           return;
         }
         var4Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_J;
-        ContextMenuItem.field_Ib.b(0, param1);
-        bq.field_d.b(0, param1);
-        ModalPanel.field_D.b(0, param1);
+        ContextMenuItem.field_Ib.updateInput(0, param1);
+        bq.field_d.updateInput(0, param1);
+        ModalPanel.field_D.updateInput(0, param1);
         RenderedBall.field_C = -1;
         var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
         while (var5 != null) {
@@ -476,12 +476,12 @@ final class AchievementsScreen extends ButtonMenuScreen {
     final void setTransitionProgress(int param0, boolean param1, int param2, AppScreen param3) {
         try {
           super.setTransitionProgress(param0, param1, -70, param3);
-          bq.field_d.a(true, 32, 310 + this.slideOffsetX, 144, 32);
-          ModalPanel.field_D.a(true, 32, 310 + this.slideOffsetX, 176, 32);
-          ContextMenuItem.field_Ib.a(true, 300, this.slideOffsetX + 45, 70, 200);
-          bq.field_d.b(0, false);
-          ModalPanel.field_D.b(0, false);
-          ContextMenuItem.field_Ib.b(0, false);
+          bq.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
+          ModalPanel.field_D.setBounds(true, 32, 310 + this.slideOffsetX, 176, 32);
+          ContextMenuItem.field_Ib.setBounds(true, 300, this.slideOffsetX + 45, 70, 200);
+          bq.field_d.updateInput(0, false);
+          ModalPanel.field_D.updateInput(0, false);
+          ContextMenuItem.field_Ib.updateInput(0, false);
           if (param2 >= -28) {
             field_C = (UiLayoutNode) null;
           }

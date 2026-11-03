@@ -121,7 +121,7 @@ final class re implements WidgetPainter {
               var1_int = var1_int + pr.field_d;
             }
             if (var4 < 0) {
-              cv.field_f.a(var6, var8Lifetime1, jl.field_d + var1_int, var5, -1);
+              MeshObject.field_f.a(var6, var8Lifetime1, jl.field_d + var1_int, var5, -1);
               var1_int = var1_int + PlayArea.field_c;
             } else {
               MainMenuScreen.field_F.a(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
@@ -276,7 +276,7 @@ final class re implements WidgetPainter {
               GameResourceLoader.a((byte) -48);
             }
             if (ih.field_c == 2) {
-              cv.a(11383);
+              MeshObject.a(11383);
             }
             vd.a(0, 10);
             vp.a(-4121, RankingsScreen.field_C);
@@ -323,7 +323,7 @@ final class re implements WidgetPainter {
           if (-param1 + param2 > 32) {
             param2 = 32 + param1;
           }
-          FullscreenFocusCanvas.field_g.b(22997);
+          FullscreenFocusCanvas.field_g.clear(22997);
           var4_int = 0;
           if (param0 <= 120) {
             field_c = (MenuSelection) null;
@@ -339,23 +339,23 @@ final class re implements WidgetPainter {
             } else {
               if (var5 > 0) {
                 var4_int++;
-                FullscreenFocusCanvas.field_g.a(new RowRangeRequest(param3, var6, var5), 3);
+                FullscreenFocusCanvas.field_g.addLast(new RowRangeRequest(param3, var6, var5), 3);
               }
               var5 = 0;
             }
           }
           if (var5 > 0) {
-            FullscreenFocusCanvas.field_g.a(new RowRangeRequest(param3, var6, var5), 3);
+            FullscreenFocusCanvas.field_g.addLast(new RowRangeRequest(param3, var6, var5), 3);
             var4_int++;
           }
           if (0 < var4_int) {
             or.field_d.b(53, (byte) 118);
             or.field_d.writeShort(-1207444472, 2 + 5 * var4_int);
             or.field_d.writeByte(121, var4_int);
-            var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.b((byte) 126));
+            var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.removeFirst((byte) 126));
             while (var9 != null) {
               var9.writeToPacket(or.field_d, (byte) 95);
-              var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.b((byte) 127));
+              var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.removeFirst((byte) 127));
             }
             or.field_d.writeByte(105, param3);
             PlayerContextMenu.field_f = true;
@@ -379,7 +379,7 @@ final class re implements WidgetPainter {
         return var2;
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         Checkbox var12 = null;
         int var7 = 0;
         int var8 = 0;
@@ -401,8 +401,8 @@ final class re implements WidgetPainter {
           SoftwareRasterizer.d(var8, var9, this.field_h, this.field_g, 5592405);
           SoftwareRasterizer.fillRect(var8, var9, this.field_h, this.field_g, var7);
           if (var12.field_A) {
-            SoftwareRasterizer.b(var8, var9, this.field_h + var8, this.field_g + var9, 1);
-            SoftwareRasterizer.b(var8 + this.field_h, var9, var8, this.field_g + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_h + var8, this.field_g + var9, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_h, var9, var8, this.field_g + var9, 1);
           }
           if (null != this.field_m) {
             var11 = this.field_h + (this.field_f + this.field_i);

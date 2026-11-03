@@ -36,7 +36,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         UiWidget var8 = null;
         var7 = Kickabout.field_G;
         try {
-          super.a(param0, (byte) -112);
+          super.copyStyleTo(param0, (byte) -112);
           if (param1) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_w[var4_int];
@@ -56,11 +56,11 @@ final class StatefulTextPainter extends TextWidgetPainter {
               }
             }
           } else {
-            ArrayOperations.a(this.field_w, 0, param0.field_w, 0, 6);
+            ArrayOperations.copyReferences(this.field_w, 0, param0.field_w, 0, 6);
           }
           if (param2 >= -97) {
             var8 = (UiWidget) null;
-            this.a(-126, true, -77, (UiWidget) null, 67);
+            this.drawWidget(-126, true, -77, (UiWidget) null, 67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,7 +270,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -320,7 +320,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
           }
           var8 = -44 / ((param0 - 59) / 53);
-          if (param3.b(15)) {
+          if (param3.isFocused(15)) {
             var14 = this.field_w[5];
             if (var14 != null) {
               var14.a(param2, -2147483648, this, param3, param4, this.field_x);

@@ -9,7 +9,7 @@ final class VorbisCodebook {
     int field_b;
     private int[] field_c;
 
-    private final static int a(int param0, int param1) {
+    private final static int lookup1ValueCount(int param0, int param1) {
         int var2 = 0;
         for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; WaitForPlayersView.b(var2, -11934, param1) > param0; var2--) {
         }
@@ -197,7 +197,7 @@ final class VorbisCodebook {
           if (var2Lifetime1 != 1) {
             var7 = this.field_a * this.field_b;
           } else {
-            var7 = VorbisCodebook.a(this.field_a, this.field_b);
+            var7 = VorbisCodebook.lookup1ValueCount(this.field_a, this.field_b);
           }
           this.field_d = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {

@@ -11,7 +11,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
     static String field_e;
     static byte[][] field_a;
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         if (param0 < 63) {
           TrinketUnlockNotice.releaseStatics((byte) 14);
           return false;
@@ -19,7 +19,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
         return false;
     }
 
-    public final void a(int param0) {
+    public final void paint(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (field_c != -1) {
@@ -34,7 +34,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
         var2Lifetime1 = 1 / ((50 - param0) / 45);
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         if (param0 != 11516) {
           field_f = false;
           return false;
@@ -56,7 +56,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
         field_b = null;
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         int var3;
         int var4;
         IntValueNode var5;
@@ -76,7 +76,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
           if (-1 != field_c) {
             field_c = -1;
           }
-          var5 = (IntValueNode) (LoginText.field_f.b((byte) -36));
+          var5 = (IntValueNode) (LoginText.field_f.removeFirst((byte) -36));
           if (var5 != null) {
             field_c = var5.field_j;
             TextLine.field_f = 335;

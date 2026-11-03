@@ -36,7 +36,7 @@ final class tc extends DualLinkNode {
               this.field_o = new int[var4_int];
               this.field_q = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_o[var5] = param2.a((byte) 81);
+                this.field_o[var5] = param2.readUnsignedShort((byte) 81);
                 var6 = param2.readByte((byte) -65);
                 stackIn_16_0 = this.field_q;
                 stackIn_16_1 = var5;
@@ -53,7 +53,7 @@ final class tc extends DualLinkNode {
                 this.field_n = new int[var4_int];
                 this.field_p = new char[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  this.field_n[var5] = param2.a((byte) 81);
+                  this.field_n[var5] = param2.readUnsignedShort((byte) 81);
                   var6 = param2.readByte((byte) -81);
                   stackIn_10_0 = this.field_p;
                   stackIn_10_1 = var5;

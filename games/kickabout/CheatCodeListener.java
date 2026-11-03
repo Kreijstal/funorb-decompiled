@@ -18,7 +18,7 @@ final class CheatCodeListener implements OverlayLayer {
     private final void a(int param0, int param1) {
         int var4 = 0;
         boolean[][][] var11 = null;
-        vn var6 = null;
+        MeshData var6 = null;
         int var7 = Kickabout.field_G;
         int var3 = param1 != 0 ? 0 : 1;
         for (var4 = 0; 4 > var4; var4++) {
@@ -81,7 +81,7 @@ final class CheatCodeListener implements OverlayLayer {
         return var1 != 0;
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         int var4Lifetime1;
@@ -115,7 +115,7 @@ final class CheatCodeListener implements OverlayLayer {
         return false;
     }
 
-    public final void a(int param0) {
+    public final void paint(int param0) {
         int stackIn_6_0 = 0;
         float stackIn_13_0 = 0.0f;
         float stackIn_16_0 = 0.0f;
@@ -152,7 +152,7 @@ final class CheatCodeListener implements OverlayLayer {
           var8 = (int)stackIn_16_0 + 320;
           var9 = (int)var7 + 140;
           PacketBuffer.a(-102, this.field_b);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearFramebuffer();
           this.field_i[var4].renderModel(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
           TeamManagementScreen.e(120);
           if (this.field_f > 136) {
@@ -175,15 +175,15 @@ final class CheatCodeListener implements OverlayLayer {
         field_d = null;
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         if (param0 <= 63) {
-          this.a(121, -18, '�');
+          this.handleKeyTyped(121, -18, '�');
           return false;
         }
         return false;
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
         if (this.field_f == 0) {

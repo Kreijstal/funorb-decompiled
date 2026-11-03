@@ -50,7 +50,7 @@ final class ArchiveIndex {
         int var1 = -125 / ((param0 - 27) / 54);
     }
 
-    private final void a(int param0, byte[] param1) {
+    private final void decode(int param0, byte[] param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -112,7 +112,7 @@ final class ArchiveIndex {
             if (var4 >= 7) {
               this.field_n = var18.readUnsignedShortOrInt((byte) 117);
             } else {
-              this.field_n = var18.a((byte) 81);
+              this.field_n = var18.readUnsignedShort((byte) 81);
             }
             stackIn_17_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -121,7 +121,7 @@ final class ArchiveIndex {
             this.field_b = new int[this.field_n];
             if (var4 < 7) {
               for (var10 = 0; this.field_n > var10; var10++) {
-                dupTemp$0 = var8 + var18.a((byte) 81);
+                dupTemp$0 = var8 + var18.readUnsignedShort((byte) 81);
                 var8 = dupTemp$0;
                 this.field_b[var10] = dupTemp$0;
                 if (this.field_b[var10] > var9) {
@@ -203,7 +203,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var11Lifetime3 = 0; this.field_n > var11Lifetime3; var11Lifetime3++) {
-                this.field_i[this.field_b[var11Lifetime3]] = var18.a((byte) 81);
+                this.field_i[this.field_b[var11Lifetime3]] = var18.readUnsignedShort((byte) 81);
               }
               for (var11Lifetime3 = 0; this.field_n > var11Lifetime3; var11Lifetime3++) {
                 var12 = this.field_b[var11Lifetime3];
@@ -213,7 +213,7 @@ final class ArchiveIndex {
                 this.field_r[var12] = array$5;
                 var14 = -1;
                 for (var15 = 0; var15 < var13; var15++) {
-                  dupTemp$6 = var8Lifetime1 + var18.a((byte) 81);
+                  dupTemp$6 = var8Lifetime1 + var18.readUnsignedShort((byte) 81);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_r[var12];
                   dupTemp$7[var15] = dupTemp$6;
@@ -286,7 +286,7 @@ final class ArchiveIndex {
               }
             }
           }
-          this.a(26, param0);
+          this.decode(26, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -87,7 +87,7 @@ class PcmPlayerService {
                       continue;
                     }
                     var11.field_e = true;
-                    var13 = var11.d();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_e = var12.field_e + var13;
@@ -95,12 +95,12 @@ class PcmPlayerService {
                     if (var4 >= this.field_j) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.c();
+                    var14Lifetime2 = var11.firstSubstream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_g;
                       while (var14Lifetime2 != null) {
                         this.a(var14Lifetime2, var15_int * var14Lifetime2.a() >> 8);
-                        var14Lifetime2 = var11.b();
+                        var14Lifetime2 = var11.nextSubstream();
                       }
                     }
                     var15 = var11.field_f;
@@ -166,10 +166,10 @@ class PcmPlayerService {
         if (param0.field_h != null) {
           param0.field_h.field_e = 0;
         }
-        PcmStream var1 = param0.c();
+        PcmStream var1 = param0.firstSubstream();
         while (var1 != null) {
           PcmPlayerService.b(var1);
-          var1 = param0.b();
+          var1 = param0.nextSubstream();
         }
     }
 

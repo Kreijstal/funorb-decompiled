@@ -130,11 +130,11 @@ final class NamedValueContainer {
             stackIn_5_0 = ss.field_c;
             stackIn_5_1 = 65;
             stackIn_6_2 = (param1) && (!TextWidgetPainter.field_f);
-            ((UiLayoutNode) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
+            ((UiLayoutNode) (Object) stackIn_5_0).draw(stackIn_5_1, stackIn_6_2);
             stackIn_9_0 = af.field_d;
             stackIn_9_1 = 121;
             stackIn_10_2 = (param1) && (!TextWidgetPainter.field_f);
-            ((UiLayoutNode) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+            ((UiLayoutNode) (Object) stackIn_9_0).draw(stackIn_9_1, stackIn_10_2);
             if (param0 == 63) {
               if (!(0 >= fj.field_a) ||
                 !(ee.field_b <= 0)) {
@@ -144,11 +144,11 @@ final class NamedValueContainer {
                 stackIn_19_0 = TrinketIcon.field_Cb;
                 stackIn_19_1 = 102;
                 stackIn_20_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
+                ((UiLayoutNode) (Object) stackIn_19_0).draw(stackIn_19_1, stackIn_20_2);
                 stackIn_23_0 = AuctionItem.field_p;
                 stackIn_23_1 = 49;
                 stackIn_24_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_24_2);
+                ((UiLayoutNode) (Object) stackIn_23_0).draw(stackIn_23_1, stackIn_24_2);
               }
               TeamManagementScreen.e(param0 + 62);
               return;
@@ -162,32 +162,32 @@ final class NamedValueContainer {
               stackIn_32_0 = TrinketIcon.field_Cb;
               stackIn_32_1 = 102;
               stackIn_33_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
+              ((UiLayoutNode) (Object) stackIn_32_0).draw(stackIn_32_1, stackIn_33_2);
               stackIn_36_0 = AuctionItem.field_p;
               stackIn_36_1 = 49;
               stackIn_37_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_37_2);
+              ((UiLayoutNode) (Object) stackIn_36_0).draw(stackIn_36_1, stackIn_37_2);
             } else {
               if (ee.field_b > 0) {
                 if (null == IntrusiveDeque.field_e) {
                   stackIn_44_0 = TrinketIcon.field_Cb;
                   stackIn_44_1 = 102;
                   stackIn_45_2 = (param1) && (!TrinketCatalog.field_b);
-                  ((UiLayoutNode) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2);
+                  ((UiLayoutNode) (Object) stackIn_44_0).draw(stackIn_44_1, stackIn_45_2);
                   stackIn_48_0 = AuctionItem.field_p;
                   stackIn_48_1 = 49;
                   stackIn_49_2 = (param1) && (!TrinketCatalog.field_b);
-                  ((UiLayoutNode) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
+                  ((UiLayoutNode) (Object) stackIn_48_0).draw(stackIn_48_1, stackIn_49_2);
                 } else {
                   IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
                   stackIn_53_0 = TrinketIcon.field_Cb;
                   stackIn_53_1 = 102;
                   stackIn_54_2 = (param1) && (!TrinketCatalog.field_b);
-                  ((UiLayoutNode) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2);
+                  ((UiLayoutNode) (Object) stackIn_53_0).draw(stackIn_53_1, stackIn_54_2);
                   stackIn_57_0 = AuctionItem.field_p;
                   stackIn_57_1 = 49;
                   stackIn_58_2 = (param1) && (!TrinketCatalog.field_b);
-                  ((UiLayoutNode) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_58_2);
+                  ((UiLayoutNode) (Object) stackIn_57_0).draw(stackIn_57_1, stackIn_58_2);
                 }
               }
             }
@@ -197,11 +197,11 @@ final class NamedValueContainer {
           stackIn_63_0 = ss.field_c;
           stackIn_63_1 = 65;
           stackIn_64_2 = (param1) && (!TextWidgetPainter.field_f);
-          ((UiLayoutNode) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
+          ((UiLayoutNode) (Object) stackIn_63_0).draw(stackIn_63_1, stackIn_64_2);
           stackIn_67_0 = af.field_d;
           stackIn_67_1 = 121;
           stackIn_68_2 = (param1) && (!TextWidgetPainter.field_f);
-          ((UiLayoutNode) (Object) stackIn_67_0).a(stackIn_67_1, stackIn_68_2);
+          ((UiLayoutNode) (Object) stackIn_67_0).draw(stackIn_67_1, stackIn_68_2);
         }
         if (param0 == 63) {
           if (0 < fj.field_a) {
@@ -209,21 +209,21 @@ final class NamedValueContainer {
               stackIn_140_0 = TrinketIcon.field_Cb;
               stackIn_140_1 = 102;
               stackIn_141_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_140_0).a(stackIn_140_1, stackIn_141_2);
+              ((UiLayoutNode) (Object) stackIn_140_0).draw(stackIn_140_1, stackIn_141_2);
               stackIn_144_0 = AuctionItem.field_p;
               stackIn_144_1 = 49;
               stackIn_145_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_144_0).a(stackIn_144_1, stackIn_145_2);
+              ((UiLayoutNode) (Object) stackIn_144_0).draw(stackIn_144_1, stackIn_145_2);
             } else {
               IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
               stackIn_149_0 = TrinketIcon.field_Cb;
               stackIn_149_1 = 102;
               stackIn_150_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_149_0).a(stackIn_149_1, stackIn_150_2);
+              ((UiLayoutNode) (Object) stackIn_149_0).draw(stackIn_149_1, stackIn_150_2);
               stackIn_153_0 = AuctionItem.field_p;
               stackIn_153_1 = 49;
               stackIn_154_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_153_0).a(stackIn_153_1, stackIn_154_2);
+              ((UiLayoutNode) (Object) stackIn_153_0).draw(stackIn_153_1, stackIn_154_2);
             }
           } else {
             if (ee.field_b > 0) {
@@ -231,21 +231,21 @@ final class NamedValueContainer {
                 stackIn_120_0 = TrinketIcon.field_Cb;
                 stackIn_120_1 = 102;
                 stackIn_121_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_120_0).a(stackIn_120_1, stackIn_121_2);
+                ((UiLayoutNode) (Object) stackIn_120_0).draw(stackIn_120_1, stackIn_121_2);
                 stackIn_124_0 = AuctionItem.field_p;
                 stackIn_124_1 = 49;
                 stackIn_125_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_124_0).a(stackIn_124_1, stackIn_125_2);
+                ((UiLayoutNode) (Object) stackIn_124_0).draw(stackIn_124_1, stackIn_125_2);
               } else {
                 IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
                 stackIn_129_0 = TrinketIcon.field_Cb;
                 stackIn_129_1 = 102;
                 stackIn_130_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_129_0).a(stackIn_129_1, stackIn_130_2);
+                ((UiLayoutNode) (Object) stackIn_129_0).draw(stackIn_129_1, stackIn_130_2);
                 stackIn_133_0 = AuctionItem.field_p;
                 stackIn_133_1 = 49;
                 stackIn_134_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_133_0).a(stackIn_133_1, stackIn_134_2);
+                ((UiLayoutNode) (Object) stackIn_133_0).draw(stackIn_133_1, stackIn_134_2);
               }
             }
           }
@@ -257,21 +257,21 @@ final class NamedValueContainer {
               stackIn_97_0 = TrinketIcon.field_Cb;
               stackIn_97_1 = 102;
               stackIn_98_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_97_0).a(stackIn_97_1, stackIn_98_2);
+              ((UiLayoutNode) (Object) stackIn_97_0).draw(stackIn_97_1, stackIn_98_2);
               stackIn_101_0 = AuctionItem.field_p;
               stackIn_101_1 = 49;
               stackIn_102_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_101_0).a(stackIn_101_1, stackIn_102_2);
+              ((UiLayoutNode) (Object) stackIn_101_0).draw(stackIn_101_1, stackIn_102_2);
             } else {
               IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
               stackIn_106_0 = TrinketIcon.field_Cb;
               stackIn_106_1 = 102;
               stackIn_107_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_106_0).a(stackIn_106_1, stackIn_107_2);
+              ((UiLayoutNode) (Object) stackIn_106_0).draw(stackIn_106_1, stackIn_107_2);
               stackIn_110_0 = AuctionItem.field_p;
               stackIn_110_1 = 49;
               stackIn_111_2 = (param1) && (!TrinketCatalog.field_b);
-              ((UiLayoutNode) (Object) stackIn_110_0).a(stackIn_110_1, stackIn_111_2);
+              ((UiLayoutNode) (Object) stackIn_110_0).draw(stackIn_110_1, stackIn_111_2);
             }
           } else {
             if (ee.field_b > 0) {
@@ -279,21 +279,21 @@ final class NamedValueContainer {
                 stackIn_86_0 = TrinketIcon.field_Cb;
                 stackIn_86_1 = 102;
                 stackIn_87_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
+                ((UiLayoutNode) (Object) stackIn_86_0).draw(stackIn_86_1, stackIn_87_2);
                 stackIn_90_0 = AuctionItem.field_p;
                 stackIn_90_1 = 49;
                 stackIn_91_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_90_0).a(stackIn_90_1, stackIn_91_2);
+                ((UiLayoutNode) (Object) stackIn_90_0).draw(stackIn_90_1, stackIn_91_2);
               } else {
                 IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
                 stackIn_77_0 = TrinketIcon.field_Cb;
                 stackIn_77_1 = 102;
                 stackIn_78_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_78_2);
+                ((UiLayoutNode) (Object) stackIn_77_0).draw(stackIn_77_1, stackIn_78_2);
                 stackIn_81_0 = AuctionItem.field_p;
                 stackIn_81_1 = 49;
                 stackIn_82_2 = (param1) && (!TrinketCatalog.field_b);
-                ((UiLayoutNode) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
+                ((UiLayoutNode) (Object) stackIn_81_0).draw(stackIn_81_1, stackIn_82_2);
               }
             }
           }
@@ -358,7 +358,7 @@ final class NamedValueContainer {
             return;
           }
           if (var3_ref == null) {
-            this.field_e.a(param0, 3);
+            this.field_e.addLast(param0, 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

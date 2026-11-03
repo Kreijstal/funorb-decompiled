@@ -386,7 +386,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a(int param0) {
+    final void addOutline(int param0) {
         int var4 = 0;
         int var5 = 0;
         int[] var2;
@@ -465,7 +465,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.b(SoftwareRasterizer.field_a, this.field_y, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.blitSilhouette(SoftwareRasterizer.field_a, this.field_y, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1226,7 +1226,7 @@ class Sprite extends SpriteState {
         return;
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawBilinearPixel(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
@@ -1713,7 +1713,7 @@ class Sprite extends SpriteState {
                     if (var37 >> 12 < this.field_q) {
                       var34 = var38 >> 12;
                       if (var38 >> 12 < this.field_w) {
-                        this.b(var23, var33, var34, var37, var38);
+                        this.drawBilinearPixel(var23, var33, var34, var37, var38);
                         var39++;
                         var37 = var37 + var28;
                         var38 = var38 + var27;
@@ -1777,7 +1777,7 @@ class Sprite extends SpriteState {
                     var33Lifetime3 = var37Lifetime3 >> 12;
                     if (var37Lifetime3 >> 12 < this.field_q) {
                       var34Lifetime3 = var38Lifetime3 >> 12;
-                      this.b(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
+                      this.drawBilinearPixel(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
                       var37Lifetime3 = var37Lifetime3 + var28;
                       var38Lifetime3 = var38Lifetime3 + var27;
@@ -1842,7 +1842,7 @@ class Sprite extends SpriteState {
                     var34Lifetime1 = var38Lifetime1 >> 12;
                     if (var38Lifetime1 >> 12 < this.field_w) {
                       var33Lifetime1 = var37Lifetime1 >> 12;
-                      this.b(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
+                      this.drawBilinearPixel(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
                       var37Lifetime1 = var37Lifetime1 + var28;
                       var38Lifetime1 = var38Lifetime1 + var27;
@@ -1906,7 +1906,7 @@ class Sprite extends SpriteState {
                   var38Lifetime2 >= -4096) {
                   var33Lifetime2 = var37Lifetime2 >> 12;
                   var34Lifetime2 = var38Lifetime2 >> 12;
-                  this.b(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
+                  this.drawBilinearPixel(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
                   var39Lifetime2++;
                   var37Lifetime2 = var37Lifetime2 + var28;
                   var38Lifetime2 = var38Lifetime2 + var27;
@@ -2357,7 +2357,7 @@ class Sprite extends SpriteState {
         return var1;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;

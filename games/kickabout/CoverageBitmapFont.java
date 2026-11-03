@@ -47,7 +47,7 @@ final class CoverageBitmapFont extends BitmapFont {
           if (!param6) {
             CoverageBitmapFont.b(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
           return;
         }
