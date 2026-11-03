@@ -305,7 +305,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         this.field_I = new FocusableWidget(ck.field_c, (WidgetListener) null);
         this.field_G = new FocusableWidget(fb.field_bc, (WidgetListener) null);
         this.field_H.field_v = WeightedLruCache.field_i;
-        this.field_H.a(new UsernameAvailabilityValidator(this.field_H), 8945);
+        this.field_H.setValidationSource(new UsernameAvailabilityValidator(this.field_H), 8945);
         this.field_I.field_y = false;
         this.field_I.field_p = (WidgetPainter) ((Object) new qp());
         this.field_G.field_p = (WidgetPainter) ((Object) new LinkPainter());

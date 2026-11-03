@@ -97,9 +97,9 @@ final class IsaacRandom {
         }
     }
 
-    final int d(int param0) {
+    final int nextInt(int param0) {
         if (this.field_c == 0) {
-          this.c(5);
+          this.refill(5);
           this.field_c = 256;
         }
         if (param0 != 13) {
@@ -110,7 +110,7 @@ final class IsaacRandom {
         return this.field_j[fieldTemp$0];
     }
 
-    private final void a(byte param0) {
+    private final void seed(byte param0) {
         int var2 = 0;
         int var11 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = -1640531527;
@@ -236,7 +236,7 @@ final class IsaacRandom {
           this.field_e[var2Lifetime2 + 6] = var9;
           this.field_e[var2Lifetime2 + 7] = var10;
         }
-        this.c(5);
+        this.refill(5);
         this.field_c = 256;
     }
 
@@ -290,7 +290,7 @@ final class IsaacRandom {
         np.field_f = new int[600];
     }
 
-    private final void c(int param0) {
+    private final void refill(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -325,7 +325,7 @@ final class IsaacRandom {
           this.field_j[var2] = dupTemp$2;
         }
         if (param0 != 5) {
-          this.a((byte) 6);
+          this.seed((byte) 6);
         }
     }
 
@@ -347,7 +347,7 @@ final class IsaacRandom {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_j[var2_int] = param0[var2_int];
           }
-          this.a((byte) 75);
+          this.seed((byte) 75);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

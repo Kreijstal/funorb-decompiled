@@ -270,12 +270,12 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         this.field_H.field_v = he.field_o;
         this.field_L.field_v = DerelictMapGenerator.field_p;
         this.field_K.field_v = PlayerEliminatedEvent.field_i;
-        this.field_Q.a(new UsernameAvailabilityValidator(this.field_Q), 8945);
-        this.field_F.a(new mm(this.field_F), 8945);
-        this.field_M.a(new EmailValidator(this.field_M, this.field_F), 8945);
-        this.field_J.a(new PasswordValidator(this.field_J, this.field_Q, this.field_F), 8945);
-        this.field_H.a(new MatchingTextValidator(this.field_H, this.field_J), 8945);
-        this.field_L.a(new AgeValidator(this.field_L), 8945);
+        this.field_Q.setValidationSource(new UsernameAvailabilityValidator(this.field_Q), 8945);
+        this.field_F.setValidationSource(new mm(this.field_F), 8945);
+        this.field_M.setValidationSource(new EmailValidator(this.field_M, this.field_F), 8945);
+        this.field_J.setValidationSource(new PasswordValidator(this.field_J, this.field_Q, this.field_F), 8945);
+        this.field_H.setValidationSource(new MatchingTextValidator(this.field_H, this.field_J), 8945);
+        this.field_L.setValidationSource(new AgeValidator(this.field_L), 8945);
         this.field_E.field_y = false;
         this.field_E.field_p = (WidgetPainter) ((Object) new qp());
         this.field_O.field_p = (WidgetPainter) ((Object) new LinkPainter());

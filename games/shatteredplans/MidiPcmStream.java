@@ -55,7 +55,7 @@ final class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_l);
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setPitchBend(int param0, int param1, int param2) {
         int var4 = -117 / ((param0 + 22) / 39);
         this.field_E[param2] = param1;
         this.field_u[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1));
@@ -1178,7 +1178,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_q[param1] = 32767;
           this.field_r[param1] = 256;
           this.field_t[param1] = 0;
-          this.a(70, 8192, param1);
+          this.setPitchBend(70, 8192, param1);
         }
     }
 
@@ -1418,10 +1418,10 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if (var6Lifetime4 == 17) {
-          this.a(-72, (var7Lifetime3 << 7) + (-16257 & this.field_E[var5Lifetime4]), var5Lifetime4);
+          this.setPitchBend(-72, (var7Lifetime3 << 7) + (-16257 & this.field_E[var5Lifetime4]), var5Lifetime4);
         }
         if (var6Lifetime4 == 49) {
-          this.a(46, (this.field_E[var5Lifetime4] & -128) + var7Lifetime3, var5Lifetime4);
+          this.setPitchBend(46, (this.field_E[var5Lifetime4] & -128) + var7Lifetime3, var5Lifetime4);
         }
     }
 
@@ -1689,7 +1689,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var8 == 0) {
             if (param2 != 2) {
-              this.a(-71, -84, -11);
+              this.setPitchBend(-71, -84, -11);
             }
             param3.field_K.a(param3.field_p, this.a(param3, -1481279096), this.a(param3, (byte) 122));
             return false;

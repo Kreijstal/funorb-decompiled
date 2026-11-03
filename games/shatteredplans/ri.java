@@ -140,7 +140,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    public final void a(TextFieldWidget param0, int param1) {
+    public final void onTextChanged(TextFieldWidget param0, int param1) {
         try {
           if (param1 != 95) {
             this.field_K = (FocusableWidget) null;
@@ -171,7 +171,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         super.drawLayer(param0, param1, param2, param3);
     }
 
-    public final void a(int param0, TextFieldWidget param1) {
+    public final void onEnter(int param0, TextFieldWidget param1) {
         Archive var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

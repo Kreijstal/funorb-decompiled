@@ -319,7 +319,7 @@ class TextFieldWidget extends FocusableWidget {
                     return true;
                   }
                   if (param0 == 84) {
-                    this.i((byte) 2);
+                    this.fireEnter((byte) 2);
                     return true;
                   }
                   if (di.field_p[82] &&
@@ -439,7 +439,7 @@ class TextFieldWidget extends FocusableWidget {
 
     void notifyTextChanged(int param0) {
         if (this.field_u instanceof TextFieldListener) {
-          ((TextFieldListener) (this.field_u)).a(this, 95);
+          ((TextFieldListener) (this.field_u)).onTextChanged(this, 95);
         }
         if (param0 != 5018) {
           this.field_N = -127;
@@ -653,11 +653,11 @@ class TextFieldWidget extends FocusableWidget {
         return var2;
     }
 
-    private final void i(byte param0) {
+    private final void fireEnter(byte param0) {
         String discarded$0 = null;
         String discarded$1 = null;
         if (this.field_u instanceof TextFieldListener) {
-          ((TextFieldListener) (this.field_u)).a(4340, this);
+          ((TextFieldListener) (this.field_u)).onEnter(4340, this);
           if (param0 != 2) {
             discarded$0 = this.getSelectedText((byte) -113);
             return;

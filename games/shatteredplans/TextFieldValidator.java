@@ -91,18 +91,18 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         }
     }
 
-    public final void a(int param0, TextFieldWidget param1) {
+    public final void onEnter(int param0, TextFieldWidget param1) {
         try {
           if (param0 != 4340) {
             TextFieldWidget var4 = (TextFieldWidget) null;
-            this.a(27, (TextFieldWidget) null);
+            this.onEnter(27, (TextFieldWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(TextFieldWidget param0, int param1) {
+    public final void onTextChanged(TextFieldWidget param0, int param1) {
         try {
           this.notifyChanged(-85);
           if (param1 != 95) {

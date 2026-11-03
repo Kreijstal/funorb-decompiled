@@ -700,7 +700,7 @@ final class MapView extends MapViewState {
             var7 = this.field_i[var6] - var4;
             var8 = -var5 + this.field_J[var6];
             var9 = (float)Math.sqrt((double)((float)(var7 * var7 + var8 * var8) + this.field_I * this.field_I)) / 300.0f;
-            var3.field_i.a((byte) 120, (int)((float)(CheckboxPainter.field_p * TertiaryListSequence.field_m.field_a << 6) / (var9 * 96.0f)));
+            var3.field_i.setVolume((byte) 120, (int)((float)(CheckboxPainter.field_p * TertiaryListSequence.field_m.field_a << 6) / (var9 * 96.0f)));
             var3 = (so) (this.field_Y.nextForward((byte) -71));
           }
           this.a(-3, param0);

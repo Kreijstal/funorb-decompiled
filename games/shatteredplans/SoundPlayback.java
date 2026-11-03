@@ -345,7 +345,7 @@ final class SoundPlayback extends IntrusiveNode {
         field_m = null;
     }
 
-    final void a(byte param0, int param1) {
+    final void setVolume(byte param0, int param1) {
         this.field_h = param1;
         this.field_p.setVolume(128 + CheckboxPainter.field_p * param1 >> 8);
         int var3 = 85 % ((param0 - 59) / 59);

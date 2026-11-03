@@ -2299,7 +2299,7 @@ class StandardAi implements Ai {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isChatEnabled(byte param0) {
         if (param0 >= -19) {
           this.b(102, -64);
         }

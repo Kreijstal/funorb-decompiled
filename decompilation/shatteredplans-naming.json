@@ -4948,6 +4948,14 @@
       "renamedSymbol": "M:fa.updateHover(IILUiWidget;B)V"
     },
     {
+      "symbol": "M:fa.a(Lgk;I)V",
+      "originalName": "a",
+      "to": "setValidationSource",
+      "evidence": "Stores the ValidationSource of the text field.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fa.setValidationSource(LValidationSource;I)V"
+    },
+    {
       "symbol": "M:fa.c(Z)Ljava/lang/String;",
       "originalName": "c",
       "to": "getTooltip",
@@ -5274,6 +5282,14 @@
       "evidence": "Abstract: advances the stream by a number of frames. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiPcmStream.skip(I)V"
+    },
+    {
+      "symbol": "M:ga.a(III)V",
+      "originalName": "a",
+      "to": "setPitchBend",
+      "evidence": "Stores the bend value of a channel and the matching 2 to the power of its scaled value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.setPitchBend(III)V"
     },
     {
       "symbol": "M:ga.a(Lbc;Lgh;IILio;)Z",
@@ -5724,6 +5740,14 @@
       "renamedSymbol": "M:SoundPlayback.clearStatics(B)V"
     },
     {
+      "symbol": "M:gm.a(BI)V",
+      "originalName": "a",
+      "to": "setVolume",
+      "evidence": "Stores the volume and applies a scaled value to the PcmSampleStream.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundPlayback.setVolume(BI)V"
+    },
+    {
       "symbol": "M:gn.b(Z)V",
       "originalName": "b",
       "to": "clearStatics",
@@ -5826,6 +5850,14 @@
       "evidence": "Copies the selected text to the system clipboard.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextFieldWidget.copyToClipboard(I)V"
+    },
+    {
+      "symbol": "M:go.i(B)V",
+      "originalName": "i",
+      "to": "fireEnter",
+      "evidence": "Calls the TextFieldListener onEnter callback for the Enter key.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.fireEnter(B)V"
     },
     {
       "symbol": "M:go.i(I)V",
@@ -6796,6 +6828,22 @@
       "renamedSymbol": "M:ja.isEmpty(I)Z"
     },
     {
+      "symbol": "M:ja.a(ILgo;)V",
+      "originalName": "a",
+      "to": "onEnter",
+      "evidence": "Called when the Enter key is pressed in the text field. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ja.onEnter(ILTextFieldWidget;)V"
+    },
+    {
+      "symbol": "M:ja.a(Lgo;I)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called when the text of the field changes. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ja.onTextChanged(LTextFieldWidget;I)V"
+    },
+    {
       "symbol": "M:ja.a(Z)Lu;",
       "originalName": "a",
       "to": "computeState",
@@ -7202,6 +7250,14 @@
       "evidence": "Creates the ProjectUse of kind 2 for the Ai's player.",
       "confidence": "reviewed",
       "renamedSymbol": "M:StandardAi.deployStellarBomb(Z)V"
+    },
+    {
+      "symbol": "M:ka.c(B)Z",
+      "originalName": "c",
+      "to": "isChatEnabled",
+      "evidence": "Returns the chat flag that setChatEnabled stores.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StandardAi.isChatEnabled(B)Z"
     },
     {
       "symbol": "M:ka.c(ILsd;)V",
@@ -8452,12 +8508,36 @@
       "renamedSymbol": "M:FleetMove.clearStatics(B)V"
     },
     {
+      "symbol": "M:mh.a(B)V",
+      "originalName": "a",
+      "to": "seed",
+      "evidence": "Mixes the seed words with the golden-ratio constant into the state array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.seed(B)V"
+    },
+    {
       "symbol": "M:mh.a(I)V",
       "originalName": "a",
       "to": "clearStatics",
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IsaacRandom.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:mh.c(I)V",
+      "originalName": "c",
+      "to": "refill",
+      "evidence": "Runs the ISAAC generation pass that fills the result array from the state array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.refill(I)V"
+    },
+    {
+      "symbol": "M:mh.d(I)I",
+      "originalName": "d",
+      "to": "nextInt",
+      "evidence": "Refills the 256-entry result array when empty and returns the next value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.nextInt(I)I"
     },
     {
       "symbol": "M:mi.a(B)V",
@@ -8482,6 +8562,22 @@
       "evidence": "Returns whether the bound field text is null or empty. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextFieldValidator.isEmpty(I)Z"
+    },
+    {
+      "symbol": "M:ml.a(ILgo;)V",
+      "originalName": "a",
+      "to": "onEnter",
+      "evidence": "Called when the Enter key is pressed in the text field. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldValidator.onEnter(ILTextFieldWidget;)V"
+    },
+    {
+      "symbol": "M:ml.a(Lgo;I)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called when the text of the field changes. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldValidator.onTextChanged(LTextFieldWidget;I)V"
     },
     {
       "symbol": "M:ml.a(Z)Lu;",
@@ -9322,6 +9418,22 @@
       "evidence": "Hook that closes the output line. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:JavaSoundAudioOutput.closeLine()V"
+    },
+    {
+      "symbol": "M:od.a(ILgo;)V",
+      "originalName": "a",
+      "to": "onEnter",
+      "evidence": "Called when the Enter key is pressed in the text field.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldListener.onEnter(ILTextFieldWidget;)V"
+    },
+    {
+      "symbol": "M:od.a(Lgo;I)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called when the text of the field changes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldListener.onTextChanged(LTextFieldWidget;I)V"
     },
     {
       "symbol": "M:oe.a(I)V",
@@ -10794,6 +10906,22 @@
       "evidence": "Paints layer 0 through the WidgetPainter and lets containers draw their children's layers. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ri.drawLayer(IIII)V"
+    },
+    {
+      "symbol": "M:ri.a(ILgo;)V",
+      "originalName": "a",
+      "to": "onEnter",
+      "evidence": "Called when the Enter key is pressed in the text field. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ri.onEnter(ILTextFieldWidget;)V"
+    },
+    {
+      "symbol": "M:ri.a(Lgo;I)V",
+      "originalName": "a",
+      "to": "onTextChanged",
+      "evidence": "Called when the text of the field changes. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ri.onTextChanged(LTextFieldWidget;I)V"
     },
     {
       "symbol": "M:rj.b(I)[I",
@@ -116249,7 +116377,7 @@
     },
     {
       "symbol": "L:fa.a(Lgk;I)V#0",
-      "renamedSymbol": "L:fa.a(LValidationSource;I)V#0",
+      "renamedSymbol": "L:fa.setValidationSource(LValidationSource;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -124466,7 +124594,7 @@
     },
     {
       "symbol": "L:ga.a(III)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(III)V#0",
+      "renamedSymbol": "L:MidiPcmStream.setPitchBend(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -135598,7 +135726,7 @@
     },
     {
       "symbol": "L:gm.a(BI)V#0",
-      "renamedSymbol": "L:SoundPlayback.a(BI)V#0",
+      "renamedSymbol": "L:SoundPlayback.setVolume(BI)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -137963,7 +138091,7 @@
     },
     {
       "symbol": "L:go.i(B)V#0",
-      "renamedSymbol": "L:TextFieldWidget.i(B)V#0",
+      "renamedSymbol": "L:TextFieldWidget.fireEnter(B)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -137974,7 +138102,7 @@
     },
     {
       "symbol": "L:go.i(B)V#1",
-      "renamedSymbol": "L:TextFieldWidget.i(B)V#1",
+      "renamedSymbol": "L:TextFieldWidget.fireEnter(B)V#1",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -162581,7 +162709,7 @@
     },
     {
       "symbol": "L:ja.a(ILgo;)V#0",
-      "renamedSymbol": "L:ja.a(ILTextFieldWidget;)V#0",
+      "renamedSymbol": "L:ja.onEnter(ILTextFieldWidget;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -162592,7 +162720,7 @@
     },
     {
       "symbol": "L:ja.a(Lgo;I)V#0",
-      "renamedSymbol": "L:ja.a(LTextFieldWidget;I)V#0",
+      "renamedSymbol": "L:ja.onTextChanged(LTextFieldWidget;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -212719,7 +212847,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#0",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#0",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -212730,7 +212858,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#1",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#1",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -212741,7 +212869,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#10",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#10",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -212752,7 +212880,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#11",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#11",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -212763,7 +212891,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#2",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#2",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -212774,7 +212902,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#3",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#3",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -212785,7 +212913,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#4",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#4",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#4",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -212796,7 +212924,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#5",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#5",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#5",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -212807,7 +212935,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#6",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#6",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -212818,7 +212946,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#7",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#7",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -212829,7 +212957,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#8",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#8",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -212840,7 +212968,7 @@
     },
     {
       "symbol": "L:mh.a(B)V#9",
-      "renamedSymbol": "L:IsaacRandom.a(B)V#9",
+      "renamedSymbol": "L:IsaacRandom.seed(B)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -213038,7 +213166,7 @@
     },
     {
       "symbol": "L:mh.c(I)V#0",
-      "renamedSymbol": "L:IsaacRandom.c(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.refill(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -213049,7 +213177,7 @@
     },
     {
       "symbol": "L:mh.c(I)V#1",
-      "renamedSymbol": "L:IsaacRandom.c(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.refill(I)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -213060,7 +213188,7 @@
     },
     {
       "symbol": "L:mh.c(I)V#2",
-      "renamedSymbol": "L:IsaacRandom.c(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.refill(I)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -213071,7 +213199,7 @@
     },
     {
       "symbol": "L:mh.c(I)V#3",
-      "renamedSymbol": "L:IsaacRandom.c(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.refill(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -213082,7 +213210,7 @@
     },
     {
       "symbol": "L:mh.c(I)V#4",
-      "renamedSymbol": "L:IsaacRandom.c(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.refill(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -213093,7 +213221,7 @@
     },
     {
       "symbol": "L:mh.c(I)V#5",
-      "renamedSymbol": "L:IsaacRandom.c(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.refill(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -213104,7 +213232,7 @@
     },
     {
       "symbol": "L:mh.c(I)V#6",
-      "renamedSymbol": "L:IsaacRandom.c(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.refill(I)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -213115,7 +213243,7 @@
     },
     {
       "symbol": "L:mh.d(I)I#0",
-      "renamedSymbol": "L:IsaacRandom.d(I)I#0",
+      "renamedSymbol": "L:IsaacRandom.nextInt(I)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -213951,7 +214079,7 @@
     },
     {
       "symbol": "L:ml.a(ILgo;)V#0",
-      "renamedSymbol": "L:TextFieldValidator.a(ILTextFieldWidget;)V#0",
+      "renamedSymbol": "L:TextFieldValidator.onEnter(ILTextFieldWidget;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -213962,7 +214090,7 @@
     },
     {
       "symbol": "L:ml.a(ILgo;)V#1",
-      "renamedSymbol": "L:TextFieldValidator.a(ILTextFieldWidget;)V#1",
+      "renamedSymbol": "L:TextFieldValidator.onEnter(ILTextFieldWidget;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -213973,7 +214101,7 @@
     },
     {
       "symbol": "L:ml.a(Lgo;I)V#0",
-      "renamedSymbol": "L:TextFieldValidator.a(LTextFieldWidget;I)V#0",
+      "renamedSymbol": "L:TextFieldValidator.onTextChanged(LTextFieldWidget;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -253155,7 +253283,7 @@
     },
     {
       "symbol": "L:ri.a(ILgo;)V#0",
-      "renamedSymbol": "L:ri.a(ILTextFieldWidget;)V#0",
+      "renamedSymbol": "L:ri.onEnter(ILTextFieldWidget;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -253166,7 +253294,7 @@
     },
     {
       "symbol": "L:ri.a(ILgo;)V#1",
-      "renamedSymbol": "L:ri.a(ILTextFieldWidget;)V#1",
+      "renamedSymbol": "L:ri.onEnter(ILTextFieldWidget;)V#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -253177,7 +253305,7 @@
     },
     {
       "symbol": "L:ri.a(ILgo;)V#2",
-      "renamedSymbol": "L:ri.a(ILTextFieldWidget;)V#2",
+      "renamedSymbol": "L:ri.onEnter(ILTextFieldWidget;)V#2",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -253188,7 +253316,7 @@
     },
     {
       "symbol": "L:ri.a(ILgo;)V#3",
-      "renamedSymbol": "L:ri.a(ILTextFieldWidget;)V#3",
+      "renamedSymbol": "L:ri.onEnter(ILTextFieldWidget;)V#3",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -253199,7 +253327,7 @@
     },
     {
       "symbol": "L:ri.a(ILgo;)V#4",
-      "renamedSymbol": "L:ri.a(ILTextFieldWidget;)V#4",
+      "renamedSymbol": "L:ri.onEnter(ILTextFieldWidget;)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -253210,7 +253338,7 @@
     },
     {
       "symbol": "L:ri.a(ILgo;)V#5",
-      "renamedSymbol": "L:ri.a(ILTextFieldWidget;)V#5",
+      "renamedSymbol": "L:ri.onEnter(ILTextFieldWidget;)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -253221,7 +253349,7 @@
     },
     {
       "symbol": "L:ri.a(ILgo;)V#6",
-      "renamedSymbol": "L:ri.a(ILTextFieldWidget;)V#6",
+      "renamedSymbol": "L:ri.onEnter(ILTextFieldWidget;)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -253265,7 +253393,7 @@
     },
     {
       "symbol": "L:ri.a(Lgo;I)V#0",
-      "renamedSymbol": "L:ri.a(LTextFieldWidget;I)V#0",
+      "renamedSymbol": "L:ri.onTextChanged(LTextFieldWidget;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -317813,9 +317941,9 @@
     },
     {
       "symbol": "M:fa.a(Lgk;I)V",
-      "renamedSymbol": "M:fa.a(LValidationSource;I)V",
+      "renamedSymbol": "M:fa.setValidationSource(LValidationSource;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setValidationSource",
       "declaration": {
         "file": "fa.java",
         "start": 1347,
@@ -319298,9 +319426,9 @@
     },
     {
       "symbol": "M:ga.a(III)V",
-      "renamedSymbol": "M:MidiPcmStream.a(III)V",
+      "renamedSymbol": "M:MidiPcmStream.setPitchBend(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setPitchBend",
       "declaration": {
         "file": "ga.java",
         "start": 1396,
@@ -320607,9 +320735,9 @@
     },
     {
       "symbol": "M:gm.a(BI)V",
-      "renamedSymbol": "M:SoundPlayback.a(BI)V",
+      "renamedSymbol": "M:SoundPlayback.setVolume(BI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setVolume",
       "declaration": {
         "file": "gm.java",
         "start": 13850,
@@ -320937,9 +321065,9 @@
     },
     {
       "symbol": "M:go.i(B)V",
-      "renamedSymbol": "M:TextFieldWidget.i(B)V",
+      "renamedSymbol": "M:TextFieldWidget.fireEnter(B)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "fireEnter",
       "declaration": {
         "file": "go.java",
         "start": 22410,
@@ -324611,9 +324739,9 @@
     },
     {
       "symbol": "M:ja.a(ILgo;)V",
-      "renamedSymbol": "M:ja.a(ILTextFieldWidget;)V",
+      "renamedSymbol": "M:ja.onEnter(ILTextFieldWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnter",
       "declaration": {
         "file": "ja.java",
         "start": 6343,
@@ -324622,9 +324750,9 @@
     },
     {
       "symbol": "M:ja.a(Lgo;I)V",
-      "renamedSymbol": "M:ja.a(LTextFieldWidget;I)V",
+      "renamedSymbol": "M:ja.onTextChanged(LTextFieldWidget;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "ja.java",
         "start": 256,
@@ -326426,9 +326554,9 @@
     },
     {
       "symbol": "M:ka.c(B)Z",
-      "renamedSymbol": "M:StandardAi.c(B)Z",
+      "renamedSymbol": "M:StandardAi.isChatEnabled(B)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "isChatEnabled",
       "declaration": {
         "file": "ka.java",
         "start": 78714,
@@ -331277,9 +331405,9 @@
     },
     {
       "symbol": "M:mh.a(B)V",
-      "renamedSymbol": "M:IsaacRandom.a(B)V",
+      "renamedSymbol": "M:IsaacRandom.seed(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "seed",
       "declaration": {
         "file": "mh.java",
         "start": 3640,
@@ -331332,9 +331460,9 @@
     },
     {
       "symbol": "M:mh.c(I)V",
-      "renamedSymbol": "M:IsaacRandom.c(I)V",
+      "renamedSymbol": "M:IsaacRandom.refill(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "refill",
       "declaration": {
         "file": "mh.java",
         "start": 10260,
@@ -331343,9 +331471,9 @@
     },
     {
       "symbol": "M:mh.d(I)I",
-      "renamedSymbol": "M:IsaacRandom.d(I)I",
+      "renamedSymbol": "M:IsaacRandom.nextInt(I)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "mh.java",
         "start": 3302,
@@ -331508,9 +331636,9 @@
     },
     {
       "symbol": "M:ml.a(ILgo;)V",
-      "renamedSymbol": "M:TextFieldValidator.a(ILTextFieldWidget;)V",
+      "renamedSymbol": "M:TextFieldValidator.onEnter(ILTextFieldWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnter",
       "declaration": {
         "file": "ml.java",
         "start": 3252,
@@ -331519,9 +331647,9 @@
     },
     {
       "symbol": "M:ml.a(Lgo;I)V",
-      "renamedSymbol": "M:TextFieldValidator.a(LTextFieldWidget;I)V",
+      "renamedSymbol": "M:TextFieldValidator.onTextChanged(LTextFieldWidget;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "ml.java",
         "start": 3628,
@@ -334170,9 +334298,9 @@
     },
     {
       "symbol": "M:od.a(ILgo;)V",
-      "renamedSymbol": "M:TextFieldListener.a(ILTextFieldWidget;)V",
+      "renamedSymbol": "M:TextFieldListener.onEnter(ILTextFieldWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnter",
       "declaration": {
         "file": "od.java",
         "start": 89,
@@ -334181,9 +334309,9 @@
     },
     {
       "symbol": "M:od.a(Lgo;I)V",
-      "renamedSymbol": "M:TextFieldListener.a(LTextFieldWidget;I)V",
+      "renamedSymbol": "M:TextFieldListener.onTextChanged(LTextFieldWidget;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "od.java",
         "start": 141,
@@ -339329,9 +339457,9 @@
     },
     {
       "symbol": "M:ri.a(ILgo;)V",
-      "renamedSymbol": "M:ri.a(ILTextFieldWidget;)V",
+      "renamedSymbol": "M:ri.onEnter(ILTextFieldWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onEnter",
       "declaration": {
         "file": "ri.java",
         "start": 6169,
@@ -339351,9 +339479,9 @@
     },
     {
       "symbol": "M:ri.a(Lgo;I)V",
-      "renamedSymbol": "M:ri.a(LTextFieldWidget;I)V",
+      "renamedSymbol": "M:ri.onTextChanged(LTextFieldWidget;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onTextChanged",
       "declaration": {
         "file": "ri.java",
         "start": 5057,
@@ -371834,7 +371962,7 @@
     },
     {
       "symbol": "P:fa.a(Lgk;I)V#0",
-      "renamedSymbol": "P:fa.a(LValidationSource;I)V#0",
+      "renamedSymbol": "P:fa.setValidationSource(LValidationSource;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -371845,7 +371973,7 @@
     },
     {
       "symbol": "P:fa.a(Lgk;I)V#1",
-      "renamedSymbol": "P:fa.a(LValidationSource;I)V#1",
+      "renamedSymbol": "P:fa.setValidationSource(LValidationSource;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -375211,7 +375339,7 @@
     },
     {
       "symbol": "P:ga.a(III)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setPitchBend(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -375222,7 +375350,7 @@
     },
     {
       "symbol": "P:ga.a(III)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setPitchBend(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -375233,7 +375361,7 @@
     },
     {
       "symbol": "P:ga.a(III)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.setPitchBend(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -379644,7 +379772,7 @@
     },
     {
       "symbol": "P:gm.a(BI)V#0",
-      "renamedSymbol": "P:SoundPlayback.a(BI)V#0",
+      "renamedSymbol": "P:SoundPlayback.setVolume(BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -379655,7 +379783,7 @@
     },
     {
       "symbol": "P:gm.a(BI)V#1",
-      "renamedSymbol": "P:SoundPlayback.a(BI)V#1",
+      "renamedSymbol": "P:SoundPlayback.setVolume(BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -380535,7 +380663,7 @@
     },
     {
       "symbol": "P:go.i(B)V#0",
-      "renamedSymbol": "P:TextFieldWidget.i(B)V#0",
+      "renamedSymbol": "P:TextFieldWidget.fireEnter(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389390,7 +389518,7 @@
     },
     {
       "symbol": "P:ja.a(ILgo;)V#0",
-      "renamedSymbol": "P:ja.a(ILTextFieldWidget;)V#0",
+      "renamedSymbol": "P:ja.onEnter(ILTextFieldWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389401,7 +389529,7 @@
     },
     {
       "symbol": "P:ja.a(ILgo;)V#1",
-      "renamedSymbol": "P:ja.a(ILTextFieldWidget;)V#1",
+      "renamedSymbol": "P:ja.onEnter(ILTextFieldWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -389412,7 +389540,7 @@
     },
     {
       "symbol": "P:ja.a(Lgo;I)V#0",
-      "renamedSymbol": "P:ja.a(LTextFieldWidget;I)V#0",
+      "renamedSymbol": "P:ja.onTextChanged(LTextFieldWidget;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389423,7 +389551,7 @@
     },
     {
       "symbol": "P:ja.a(Lgo;I)V#1",
-      "renamedSymbol": "P:ja.a(LTextFieldWidget;I)V#1",
+      "renamedSymbol": "P:ja.onTextChanged(LTextFieldWidget;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393592,7 +393720,7 @@
     },
     {
       "symbol": "P:ka.c(B)Z#0",
-      "renamedSymbol": "P:StandardAi.c(B)Z#0",
+      "renamedSymbol": "P:StandardAi.isChatEnabled(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -404548,7 +404676,7 @@
     },
     {
       "symbol": "P:mh.a(B)V#0",
-      "renamedSymbol": "P:IsaacRandom.a(B)V#0",
+      "renamedSymbol": "P:IsaacRandom.seed(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -404647,7 +404775,7 @@
     },
     {
       "symbol": "P:mh.c(I)V#0",
-      "renamedSymbol": "P:IsaacRandom.c(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.refill(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -404658,7 +404786,7 @@
     },
     {
       "symbol": "P:mh.d(I)I#0",
-      "renamedSymbol": "P:IsaacRandom.d(I)I#0",
+      "renamedSymbol": "P:IsaacRandom.nextInt(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -405054,7 +405182,7 @@
     },
     {
       "symbol": "P:ml.a(ILgo;)V#0",
-      "renamedSymbol": "P:TextFieldValidator.a(ILTextFieldWidget;)V#0",
+      "renamedSymbol": "P:TextFieldValidator.onEnter(ILTextFieldWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -405065,7 +405193,7 @@
     },
     {
       "symbol": "P:ml.a(ILgo;)V#1",
-      "renamedSymbol": "P:TextFieldValidator.a(ILTextFieldWidget;)V#1",
+      "renamedSymbol": "P:TextFieldValidator.onEnter(ILTextFieldWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -405076,7 +405204,7 @@
     },
     {
       "symbol": "P:ml.a(Lgo;I)V#0",
-      "renamedSymbol": "P:TextFieldValidator.a(LTextFieldWidget;I)V#0",
+      "renamedSymbol": "P:TextFieldValidator.onTextChanged(LTextFieldWidget;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -405087,7 +405215,7 @@
     },
     {
       "symbol": "P:ml.a(Lgo;I)V#1",
-      "renamedSymbol": "P:TextFieldValidator.a(LTextFieldWidget;I)V#1",
+      "renamedSymbol": "P:TextFieldValidator.onTextChanged(LTextFieldWidget;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -411830,7 +411958,7 @@
     },
     {
       "symbol": "P:od.a(ILgo;)V#0",
-      "renamedSymbol": "P:TextFieldListener.a(ILTextFieldWidget;)V#0",
+      "renamedSymbol": "P:TextFieldListener.onEnter(ILTextFieldWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -411841,7 +411969,7 @@
     },
     {
       "symbol": "P:od.a(ILgo;)V#1",
-      "renamedSymbol": "P:TextFieldListener.a(ILTextFieldWidget;)V#1",
+      "renamedSymbol": "P:TextFieldListener.onEnter(ILTextFieldWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -411852,7 +411980,7 @@
     },
     {
       "symbol": "P:od.a(Lgo;I)V#0",
-      "renamedSymbol": "P:TextFieldListener.a(LTextFieldWidget;I)V#0",
+      "renamedSymbol": "P:TextFieldListener.onTextChanged(LTextFieldWidget;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -411863,7 +411991,7 @@
     },
     {
       "symbol": "P:od.a(Lgo;I)V#1",
-      "renamedSymbol": "P:TextFieldListener.a(LTextFieldWidget;I)V#1",
+      "renamedSymbol": "P:TextFieldListener.onTextChanged(LTextFieldWidget;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424139,7 +424267,7 @@
     },
     {
       "symbol": "P:ri.a(ILgo;)V#0",
-      "renamedSymbol": "P:ri.a(ILTextFieldWidget;)V#0",
+      "renamedSymbol": "P:ri.onEnter(ILTextFieldWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424150,7 +424278,7 @@
     },
     {
       "symbol": "P:ri.a(ILgo;)V#1",
-      "renamedSymbol": "P:ri.a(ILTextFieldWidget;)V#1",
+      "renamedSymbol": "P:ri.onEnter(ILTextFieldWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424183,7 +424311,7 @@
     },
     {
       "symbol": "P:ri.a(Lgo;I)V#0",
-      "renamedSymbol": "P:ri.a(LTextFieldWidget;I)V#0",
+      "renamedSymbol": "P:ri.onTextChanged(LTextFieldWidget;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424194,7 +424322,7 @@
     },
     {
       "symbol": "P:ri.a(Lgo;I)V#1",
-      "renamedSymbol": "P:ri.a(LTextFieldWidget;I)V#1",
+      "renamedSymbol": "P:ri.onTextChanged(LTextFieldWidget;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -453451,7 +453579,7 @@
       "original": "aa.java",
       "renamed": "aa.java",
       "inputSha256": "35dc0e643c81c3b478fa5541e86482b3c744b465d03d2bd7253bf9b8357b149a",
-      "outputSha256": "59730c9d9814b0cc0ba3bc1962097efe0a9547caa352877c1e1e53b4c55b4e32",
+      "outputSha256": "4fc7d22c6865b674ec4f00da611a6efcb5c21a606190a48ecfd3994f9acb4297",
       "edits": [
         {
           "start": 61,
@@ -453860,11 +453988,32 @@
           "renamed": "PlayerEliminatedEvent"
         },
         {
+          "start": 10265,
+          "end": 10266,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
+        },
+        {
           "start": 10271,
           "end": 10273,
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "UsernameAvailabilityValidator"
+        },
+        {
+          "start": 10317,
+          "end": 10318,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
+        },
+        {
+          "start": 10369,
+          "end": 10370,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
         },
         {
           "start": 10375,
@@ -453874,6 +454023,13 @@
           "renamed": "EmailValidator"
         },
         {
+          "start": 10435,
+          "end": 10436,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
+        },
+        {
           "start": 10441,
           "end": 10443,
           "symbol": "C:cc",
@@ -453881,11 +454037,25 @@
           "renamed": "PasswordValidator"
         },
         {
+          "start": 10515,
+          "end": 10516,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
+        },
+        {
           "start": 10521,
           "end": 10523,
           "symbol": "C:fj",
           "original": "fj",
           "renamed": "MatchingTextValidator"
+        },
+        {
+          "start": 10581,
+          "end": 10582,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
         },
         {
           "start": 10587,
@@ -486535,7 +486705,7 @@
       "original": "ea.java",
       "renamed": "IsaacBackedRandom.java",
       "inputSha256": "04b3e6ab78693db69b5a0be0ba257e9a0bab0957af0610b85410d4b66773c7b6",
-      "outputSha256": "a42e5bc09be6ec273b4bc7f34ea8ee0e42c1467ed966355bdc08fcdae99bff9a",
+      "outputSha256": "bf9cb58562febcd10d4dfeda2199fde2360a0a0aa40d490ce8d679c97691eec5",
       "edits": [
         {
           "start": 71,
@@ -486746,6 +486916,13 @@
           "symbol": "M:bi.e()V",
           "original": "e",
           "renamed": "bindAsRenderTarget"
+        },
+        {
+          "start": 2057,
+          "end": 2058,
+          "symbol": "M:mh.d(I)I",
+          "original": "d",
+          "renamed": "nextInt"
         },
         {
           "start": 2215,
@@ -501066,7 +501243,7 @@
       "original": "fa.java",
       "renamed": "fa.java",
       "inputSha256": "b4ae4035be71c0fc4bbc797d03cf9ac65880b79a6eb88f27f9d3215c27d59996",
-      "outputSha256": "118cf9e332eba5dab0be8c050a86d31aae3c5312a62f7880646df663cabee656",
+      "outputSha256": "f97201a2c6b824c862ebe4c86a5d8e949ecef0d5f97a159549949dfd023735e9",
       "edits": [
         {
           "start": 61,
@@ -501193,6 +501370,13 @@
           "symbol": "M:gk.b(I)V",
           "original": "b",
           "renamed": "notifyChanged"
+        },
+        {
+          "start": 1347,
+          "end": 1348,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
         },
         {
           "start": 1349,
@@ -506238,7 +506422,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "c744674d552d724a36c90f0ebb50cc4084551151037f582f036cb6d5cfb34cae",
+      "outputSha256": "1241012a1dd5c1ec99cedfca447b7f4dda0fe5e0ff8840510319671f4e2489e5",
       "edits": [
         {
           "start": 50,
@@ -506330,6 +506514,13 @@
           "symbol": "C:tn",
           "original": "tn",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 1396,
+          "end": 1397,
+          "symbol": "M:ga.a(III)V",
+          "original": "a",
+          "renamed": "setPitchBend"
         },
         {
           "start": 1653,
@@ -508348,6 +508539,13 @@
           "renamed": "nextChild"
         },
         {
+          "start": 45749,
+          "end": 45750,
+          "symbol": "M:ga.a(III)V",
+          "original": "a",
+          "renamed": "setPitchBend"
+        },
+        {
           "start": 46028,
           "end": 46029,
           "symbol": "M:ga.b(IB)V",
@@ -508612,6 +508810,20 @@
           "symbol": "M:ee.a(II)I",
           "original": "a",
           "renamed": "intOr"
+        },
+        {
+          "start": 54806,
+          "end": 54807,
+          "symbol": "M:ga.a(III)V",
+          "original": "a",
+          "renamed": "setPitchBend"
+        },
+        {
+          "start": 54952,
+          "end": 54953,
+          "symbol": "M:ga.a(III)V",
+          "original": "a",
+          "renamed": "setPitchBend"
         },
         {
           "start": 55225,
@@ -508962,6 +509174,13 @@
           "symbol": "M:al.d(I)V",
           "original": "d",
           "renamed": "setSpeed"
+        },
+        {
+          "start": 64691,
+          "end": 64692,
+          "symbol": "M:ga.a(III)V",
+          "original": "a",
+          "renamed": "setPitchBend"
         },
         {
           "start": 64967,
@@ -512870,7 +513089,7 @@
       "original": "gm.java",
       "renamed": "SoundPlayback.java",
       "inputSha256": "bb32af6d82976e601c29fe9065d5dda4eb54987864d8f25ad4ad5bbc46795bf2",
-      "outputSha256": "76f9bb0f7626204aebf6ddbd78547a20b0e3626616ea4149b7bc831c737a0868",
+      "outputSha256": "c16c055db5d1006646aac6b74fcb8e14db7672a61928ba08ac4431a56e32ad80",
       "edits": [
         {
           "start": 50,
@@ -513573,6 +513792,13 @@
           "renamed": "clearStatics"
         },
         {
+          "start": 13850,
+          "end": 13851,
+          "symbol": "M:gm.a(BI)V",
+          "original": "a",
+          "renamed": "setVolume"
+        },
+        {
           "start": 13931,
           "end": 13932,
           "symbol": "M:al.e(I)V",
@@ -514111,7 +514337,7 @@
       "original": "go.java",
       "renamed": "TextFieldWidget.java",
       "inputSha256": "5390bf948886f70478332f30ccfa9c87a67fe4bc76c42823d15566ed553b9c2a",
-      "outputSha256": "e049c2a8168c76e3cbc6f98167a77b2fe1b80f849e4d0c181237aff9f8cdc56e",
+      "outputSha256": "6f49d035b572572914125b2c300a537845b3a3a4abee0206df15878468856f18",
       "edits": [
         {
           "start": 44,
@@ -514597,6 +514823,13 @@
           "renamed": "moveCaret"
         },
         {
+          "start": 10645,
+          "end": 10646,
+          "symbol": "M:go.i(B)V",
+          "original": "i",
+          "renamed": "fireEnter"
+        },
+        {
           "start": 10812,
           "end": 10813,
           "symbol": "M:go.h(B)V",
@@ -514821,6 +515054,13 @@
           "renamed": "TextFieldListener"
         },
         {
+          "start": 14559,
+          "end": 14560,
+          "symbol": "M:od.a(Lgo;I)V",
+          "original": "a",
+          "renamed": "onTextChanged"
+        },
+        {
           "start": 14693,
           "end": 14694,
           "symbol": "M:go.a(ILjava/lang/String;Z)V",
@@ -514975,6 +515215,13 @@
           "renamed": "findPreviousWordBoundary"
         },
         {
+          "start": 22410,
+          "end": 22411,
+          "symbol": "M:go.i(B)V",
+          "original": "i",
+          "renamed": "fireEnter"
+        },
+        {
           "start": 22533,
           "end": 22535,
           "symbol": "C:od",
@@ -514987,6 +515234,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "TextFieldListener"
+        },
+        {
+          "start": 22571,
+          "end": 22572,
+          "symbol": "M:od.a(ILgo;)V",
+          "original": "a",
+          "renamed": "onEnter"
         },
         {
           "start": 22646,
@@ -517350,7 +517604,7 @@
       "original": "hg.java",
       "renamed": "IsolationistAi.java",
       "inputSha256": "6e0af2d905846f3bf84593472aef08894cec23b0aa3d70281272dabe07f75f2e",
-      "outputSha256": "96dce2ec1f566706f3e5e6cded65c8684d8bb7f81438101c0db6cf118f156bff",
+      "outputSha256": "978650d67ebd8a10ddcf3cc3e8da9ef800fd13c0016315c6089738f41bdc5f44",
       "edits": [
         {
           "start": 50,
@@ -517624,6 +517878,13 @@
           "symbol": "C:ap",
           "original": "ap",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 8522,
+          "end": 8523,
+          "symbol": "M:ka.c(B)Z",
+          "original": "c",
+          "renamed": "isChatEnabled"
         },
         {
           "start": 9814,
@@ -531819,7 +532080,7 @@
       "original": "ir.java",
       "renamed": "ir.java",
       "inputSha256": "50ce331ef01209bb21fc9e647de5e0ef4a6d640751be4be533a03efe13620d86",
-      "outputSha256": "4114d0b7d407d23e17869b4f3d2b61ffad40a43749f37aedbcbcf0bd3c3abd96",
+      "outputSha256": "3eb5d1201d9574c7a16e4fcef542199479c2f5b75ae81448bff15490d555970a",
       "edits": [
         {
           "start": 61,
@@ -532508,6 +532769,13 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 11588,
+          "end": 11589,
+          "symbol": "M:fa.a(Lgk;I)V",
+          "original": "a",
+          "renamed": "setValidationSource"
+        },
+        {
           "start": 11594,
           "end": 11596,
           "symbol": "C:ec",
@@ -532930,7 +533198,7 @@
       "original": "ja.java",
       "renamed": "ja.java",
       "inputSha256": "c9cff46da1832c455766d1c39b4f543c05379a5c3df6627a1d6c89d97ffe3c18",
-      "outputSha256": "fd33f71709b4492ef2c0e548bd0ec6ef1b2dbeedf32e2bec68700ed23df5c1f7",
+      "outputSha256": "795919b8679749ac1d04fb1036e2bdb4518b8ae3a1e5cffd123805459381b036",
       "edits": [
         {
           "start": 61,
@@ -532945,6 +533213,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "TextFieldListener"
+        },
+        {
+          "start": 256,
+          "end": 257,
+          "symbol": "M:ja.a(Lgo;I)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 258,
@@ -533036,6 +533311,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 4408,
+          "end": 4409,
+          "symbol": "M:ja.a(Lgo;I)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 4411,
@@ -533155,6 +533437,13 @@
           "symbol": "C:p",
           "original": "p",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 6343,
+          "end": 6344,
+          "symbol": "M:ja.a(ILgo;)V",
+          "original": "a",
+          "renamed": "onEnter"
         },
         {
           "start": 6357,
@@ -538528,7 +538817,7 @@
       "original": "ka.java",
       "renamed": "StandardAi.java",
       "inputSha256": "e392b4b0bdcab0c5e133e95b8725ec17fec836a7aec524f7ab82d27a07b80ba0",
-      "outputSha256": "fad441a3908476a143278b6165f47a4456c542534edeecfe5093913522cb568f",
+      "outputSha256": "bd565e7c7fe683bc9a8ac1b1a9a402807dee8f89d9cda7d55b6f86f6871da951",
       "edits": [
         {
           "start": 44,
@@ -540951,6 +541240,13 @@
           "symbol": "M:nc.a(II)I",
           "original": "a",
           "renamed": "intXor"
+        },
+        {
+          "start": 78714,
+          "end": 78715,
+          "symbol": "M:ka.c(B)Z",
+          "original": "c",
+          "renamed": "isChatEnabled"
         },
         {
           "start": 78884,
@@ -575426,7 +575722,7 @@
       "original": "mh.java",
       "renamed": "IsaacRandom.java",
       "inputSha256": "e3c4c18016c8e878ce660658f3d50c1d479175cffb3f94bf60c65c017144612d",
-      "outputSha256": "7d36bc3ac4a2ea782a1f0c2efbd35fda4e63c23fd61cc3700c3c9269698e6aa2",
+      "outputSha256": "9af256772450142752a378295debb41f34b9aa46068f7dfcc37967a3585ffadd",
       "edits": [
         {
           "start": 69,
@@ -575576,11 +575872,39 @@
           "renamed": "TertiaryLinkNode"
         },
         {
+          "start": 3302,
+          "end": 3303,
+          "symbol": "M:mh.d(I)I",
+          "original": "d",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 3366,
+          "end": 3367,
+          "symbol": "M:mh.c(I)V",
+          "original": "c",
+          "renamed": "refill"
+        },
+        {
           "start": 3461,
           "end": 3463,
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3640,
+          "end": 3641,
+          "symbol": "M:mh.a(B)V",
+          "original": "a",
+          "renamed": "seed"
+        },
+        {
+          "start": 8370,
+          "end": 8371,
+          "symbol": "M:mh.c(I)V",
+          "original": "c",
+          "renamed": "refill"
         },
         {
           "start": 8749,
@@ -575716,6 +576040,13 @@
           "renamed": "IsaacRandom"
         },
         {
+          "start": 10260,
+          "end": 10261,
+          "symbol": "M:mh.c(I)V",
+          "original": "c",
+          "renamed": "refill"
+        },
+        {
           "start": 11263,
           "end": 11264,
           "symbol": "M:we.a(II)I",
@@ -575730,6 +576061,13 @@
           "renamed": "intAnd"
         },
         {
+          "start": 11569,
+          "end": 11570,
+          "symbol": "M:mh.a(B)V",
+          "original": "a",
+          "renamed": "seed"
+        },
+        {
           "start": 11622,
           "end": 11623,
           "symbol": "M:mh.a(I)V",
@@ -575742,6 +576080,13 @@
           "symbol": "M:mh.<init>([I)V",
           "original": "mh",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 12109,
+          "end": 12110,
+          "symbol": "M:mh.a(B)V",
+          "original": "a",
+          "renamed": "seed"
         },
         {
           "start": 12193,
@@ -576241,7 +576586,7 @@
       "original": "ml.java",
       "renamed": "TextFieldValidator.java",
       "inputSha256": "b85da2847b1e2a9127a0cef8ab3e8ae9b4f9e33d90afb9fbb58097ad59495af1",
-      "outputSha256": "42fbfd5bc14ccc65c73ac32656bd14bfecbd2cfe7dcaef3d564ada24deeb4aa2",
+      "outputSha256": "ae3392fdfe455f645a18bbd8761391e4c9b65489255088d9d2971bbbe1fbd62a",
       "edits": [
         {
           "start": 53,
@@ -576398,6 +576743,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 3252,
+          "end": 3253,
+          "symbol": "M:ml.a(ILgo;)V",
+          "original": "a",
+          "renamed": "onEnter"
+        },
+        {
           "start": 3266,
           "end": 3268,
           "symbol": "C:go",
@@ -576419,6 +576771,13 @@
           "renamed": "TextFieldWidget"
         },
         {
+          "start": 3375,
+          "end": 3376,
+          "symbol": "M:ml.a(ILgo;)V",
+          "original": "a",
+          "renamed": "onEnter"
+        },
+        {
           "start": 3382,
           "end": 3384,
           "symbol": "C:go",
@@ -576438,6 +576797,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 3628,
+          "end": 3629,
+          "symbol": "M:ml.a(Lgo;I)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 3630,
@@ -586971,7 +587337,7 @@
       "original": "od.java",
       "renamed": "TextFieldListener.java",
       "inputSha256": "7adc9d82f544a1ee632b8ec67e85a6558210f70243ab69e8404b4b3ab0cdf9d7",
-      "outputSha256": "946e594337d456f95762c8c3d4dafd02ded07cc3fcc42c5125d0d56674677d64",
+      "outputSha256": "bc5b87d972c280081bedbbcfef4214d2edcc9dbe5dfb3cdcef00a6d4e46a71f7",
       "edits": [
         {
           "start": 48,
@@ -586988,11 +587354,25 @@
           "renamed": "WidgetListener"
         },
         {
+          "start": 89,
+          "end": 90,
+          "symbol": "M:od.a(ILgo;)V",
+          "original": "a",
+          "renamed": "onEnter"
+        },
+        {
           "start": 103,
           "end": 105,
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 141,
+          "end": 142,
+          "symbol": "M:od.a(Lgo;I)V",
+          "original": "a",
+          "renamed": "onTextChanged"
         },
         {
           "start": 143,
@@ -610231,7 +610611,7 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "8f8b5ad2325108553cf90f8769ad363cad3625c04ae8063cfde58de11a16a5fc",
-      "outputSha256": "59c8155e2b3cf03162422e898954699e1aab039c20131f7edbe173faedfe8ae5",
+      "outputSha256": "6f7bba8747518bad81ddc7e789e75af11141819068484738368aaa020294acb6",
       "edits": [
         {
           "start": 61,
@@ -610423,6 +610803,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 5057,
+          "end": 5058,
+          "symbol": "M:ri.a(Lgo;I)V",
+          "original": "a",
+          "renamed": "onTextChanged"
+        },
+        {
           "start": 5059,
           "end": 5061,
           "symbol": "C:go",
@@ -610491,6 +610878,13 @@
           "symbol": "M:f.a(IIII)V",
           "original": "a",
           "renamed": "drawLayer"
+        },
+        {
+          "start": 6169,
+          "end": 6170,
+          "symbol": "M:ri.a(ILgo;)V",
+          "original": "a",
+          "renamed": "onEnter"
         },
         {
           "start": 6183,
@@ -620169,7 +620563,7 @@
       "original": "sl.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "b9f8181773bf3cdc42083760a19c5481e66415e0997c746a4f5932a756dbaf30",
-      "outputSha256": "b422f8fbddf46e40bc4041c7bd0d160d2f8472587fd1aa621f9af1ad1ce8e248",
+      "outputSha256": "0172a8ca562bb0f0f42a2cdc0d4400aaaaf4b31c22b1256b67b7974568abb69e",
       "edits": [
         {
           "start": 50,
@@ -620312,6 +620706,13 @@
           "renamed": "payload"
         },
         {
+          "start": 2127,
+          "end": 2128,
+          "symbol": "M:mh.d(I)I",
+          "original": "d",
+          "renamed": "nextInt"
+        },
+        {
           "start": 2219,
           "end": 2221,
           "symbol": "M:sl.<init>([B)V",
@@ -620345,6 +620746,13 @@
           "symbol": "F:ob.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 2942,
+          "end": 2943,
+          "symbol": "M:mh.d(I)I",
+          "original": "d",
+          "renamed": "nextInt"
         },
         {
           "start": 3484,
@@ -620548,6 +620956,13 @@
           "symbol": "F:ob.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 8646,
+          "end": 8647,
+          "symbol": "M:mh.d(I)I",
+          "original": "d",
+          "renamed": "nextInt"
         },
         {
           "start": 8786,
@@ -636658,7 +637073,7 @@
       "original": "tr.java",
       "renamed": "MapView.java",
       "inputSha256": "29cd01a632377441b8ea63adfd069a1c45dc04bc66f73e5e5aecd5fd7d116659",
-      "outputSha256": "bb7e1a038dae23b22d9ec02f73eb676c63eaa64bad71392bd700286e6a71f906",
+      "outputSha256": "def5e5c66f9e6fd4d0f19739b53f32d5ac51fe5dcf56b2e077a23f17a874e1e6",
       "edits": [
         {
           "start": 71,
@@ -637730,6 +638145,13 @@
           "symbol": "M:kq.d(B)I",
           "original": "d",
           "renamed": "getAreaHeight"
+        },
+        {
+          "start": 27575,
+          "end": 27576,
+          "symbol": "M:gm.a(BI)V",
+          "original": "a",
+          "renamed": "setVolume"
         },
         {
           "start": 27603,
@@ -673394,10 +673816,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "c9ee162903ce0971d38410c1c1a20a3f861ba4569eebd18781df0ae0e3cfe707",
+    "rulesSha256": "127b169e6aa6742d0ca88dc1d21a42a1696db96e8862a9c0543bc09c703c16ea",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "f15c92cd2c67b6defb2fa56763b622fa3cd299b9126b2d77d3d74f15df1e082a",
+    "outputTreeSha256": "83564d22ff67c1ab1a566d45fe8ee289b8fb62db7b58a7d0a300dc238ef24eef",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

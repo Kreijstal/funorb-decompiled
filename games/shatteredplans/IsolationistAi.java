@@ -247,7 +247,7 @@ final class IsolationistAi extends StandardAi {
             this.field_i[var4] = 3;
           }
         }
-        if (this.c((byte) -116)) {
+        if (this.isChatEnabled((byte) -116)) {
           this.g(-18484);
           for (var4Lifetime1 = 0; this.field_g.field_r > var4Lifetime1; var4Lifetime1++) {
             if (this.field_b[var4Lifetime1] < 0) {

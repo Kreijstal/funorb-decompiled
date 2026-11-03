@@ -9,7 +9,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
     static String field_k;
     static int[] field_i;
 
-    public final void a(TextFieldWidget param0, int param1) {
+    public final void onTextChanged(TextFieldWidget param0, int param1) {
         try {
           if (param1 != 95) {
             this.isEmpty(25);
@@ -129,7 +129,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
           var3 = this.field_m.f((byte) 119);
           if (param0 < 61) {
             var6 = (TextFieldWidget) null;
-            this.a((TextFieldWidget) null, 80);
+            this.onTextChanged((TextFieldWidget) null, 80);
           }
           var4 = this.field_m.l(115);
           var5 = BattleSnapshot.getCurrentYear(-13299);
@@ -188,7 +188,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
         return CachedArchiveSource.field_g;
     }
 
-    public final void a(int param0, TextFieldWidget param1) {
+    public final void onEnter(int param0, TextFieldWidget param1) {
         try {
           if (param0 != 4340) {
             field_l = (String) null;

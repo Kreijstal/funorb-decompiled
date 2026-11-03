@@ -56,7 +56,7 @@ final class IsaacBackedRandom extends Random {
     }
 
     protected final int next(int param0) {
-        return this.field_f.d(13) >> -param0 + 32;
+        return this.field_f.nextInt(13) >> -param0 + 32;
     }
 
     public final void setSeed(long param0) {
