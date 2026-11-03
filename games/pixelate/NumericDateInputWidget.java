@@ -159,22 +159,22 @@ final class NumericDateInputWidget extends DateInputWidget {
         return true;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) 77, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) 77, param2, param3, param4);
         int var6 = param0 - 130 >> 1;
         if (this.field_S) {
-          this.field_O.a(25, (byte) 29, 0, var6, param4);
-          this.field_U.a(25, (byte) 46, 0, var6 + 45, param4);
-          this.field_Q.a(40, (byte) 38, 0, 90 + var6, param4);
+          this.field_O.setBounds(25, (byte) 29, 0, var6, param4);
+          this.field_U.setBounds(25, (byte) 46, 0, var6 + 45, param4);
+          this.field_Q.setBounds(40, (byte) 38, 0, 90 + var6, param4);
           if (param1 < 19) {
             field_P = -61L;
             return;
           }
           return;
         }
-        this.field_U.a(25, (byte) 77, 0, var6, param4);
-        this.field_O.a(25, (byte) 48, 0, 45 + var6, param4);
-        this.field_Q.a(40, (byte) 38, 0, 90 + var6, param4);
+        this.field_U.setBounds(25, (byte) 77, 0, var6, param4);
+        this.field_O.setBounds(25, (byte) 48, 0, 45 + var6, param4);
+        this.field_Q.setBounds(40, (byte) 38, 0, 90 + var6, param4);
         if (param1 < 19) {
           field_P = -61L;
           return;
@@ -248,7 +248,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     NumericDateInputWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param4, (byte) 21, param3, param2, param5);
+          this.setBounds(param4, (byte) 21, param3, param2, param5);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

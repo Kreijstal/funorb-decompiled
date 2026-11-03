@@ -9,10 +9,10 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
     DateInputWidget field_g;
     static boolean field_i;
 
-    public final void a(int param0, EditableTextWidget param1) {
+    public final void onTextSet(int param0, EditableTextWidget param1) {
         try {
           int var3_int = -49 / ((-30 - param0) / 60);
-          this.b(2048);
+          this.markEdited(2048);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -125,15 +125,15 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return (-param0 & param0) == param0 ? true : false;
     }
 
-    final dj evaluateState(boolean param0) {
+    final ValidationState evaluateState(boolean param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        dj stackIn_3_0 = null;
-        dj stackIn_7_0 = null;
-        dj stackIn_10_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_g.getDay((byte) 90);
@@ -178,7 +178,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return this.field_g.m(-1);
     }
 
-    final String c(int param0) {
+    final String computeMessage(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;

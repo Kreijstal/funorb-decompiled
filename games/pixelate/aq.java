@@ -46,11 +46,11 @@ final class aq {
           var7.unlinkSecondary(param3 + 20884);
           aj.field_t = aj.field_t - 1;
           var5 = aa.field_f;
-          var5.g(param1, 15514);
+          var5.writeOpcode(param1, 15514);
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(160, 3);
-          var5.b((byte) -41, param0);
+          var5.writeString((byte) -41, param0);
           var5.backpatchByteLength(var5.position - var6, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);

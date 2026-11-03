@@ -11,7 +11,7 @@ final class GameModeSelectScreen extends MenuScreen {
     static String[] field_r;
     static String[] field_q;
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadTextTable(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2602_0;
             StringBuilder stackIn_2602_1;
@@ -3076,7 +3076,7 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -3085,13 +3085,13 @@ final class GameModeSelectScreen extends MenuScreen {
         try {
           var2_int = this.field_g.selectedIndex;
           if (param0 > -35) {
-            GameModeSelectScreen.a(-67, (ResourceArchive) null);
+            GameModeSelectScreen.loadTextTable(-67, (ResourceArchive) null);
           }
           if (ke.field_a != 96 &&
             ke.field_a != 97 &&
             ke.field_a != 98 &&
             99 != ke.field_a) {
-            super.b(-92);
+            super.handleNavigation(-92);
             if (var3 == 0) {
               return;
             }
@@ -3130,7 +3130,7 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final static void a(int param0, TriangleMesh param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void renderTriangleMesh(int param0, TriangleMesh param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_26_0 = 0;
         int[] stackIn_29_0 = null;
         int stackIn_30_1 = 0;

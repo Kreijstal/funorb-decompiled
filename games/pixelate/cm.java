@@ -126,11 +126,11 @@ final class cm extends IntrusiveNode {
         int var8 = 0;
         try {
           int var7_int = -86 % ((-33 - param0) / 49);
-          aa.field_f.g(param5, 15514);
+          aa.field_f.writeOpcode(param5, 15514);
           aa.field_f.position = aa.field_f.position + 1;
           var8 = aa.field_f.position;
           aa.field_f.writeLong(false, param2);
-          aa.field_f.b((byte) -41, param3);
+          aa.field_f.writeString((byte) -41, param3);
           aa.field_f.writeByte(160, param4);
           aa.field_f.writeByte(160, param1 ? 1 : 0);
           aa.field_f.backpatchByteLength(aa.field_f.position - var8, -1);

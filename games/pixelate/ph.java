@@ -32,7 +32,7 @@ final class ph extends IntrusiveNode {
           }
           try {
             if (0 == AchievementsScreen.field_q) {
-              KiteBackground.field_o = ef.field_e.a(20278, bl.field_e, ArchiveIndex.field_s);
+              KiteBackground.field_o = ef.field_e.requestSocket(20278, bl.field_e, ArchiveIndex.field_s);
               AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
             }
             if (1 == AchievementsScreen.field_q) {

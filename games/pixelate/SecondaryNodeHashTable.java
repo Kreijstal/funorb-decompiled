@@ -325,12 +325,12 @@ final class SecondaryNodeHashTable {
               decompiledFrameRemainder0 = (Pixelate.field_G == GameModeSelectScreen.field_s);
               if ((decompiledFrameRemainder0) && (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L))) {
-                aa.field_f.g(param0, 15514);
+                aa.field_f.writeOpcode(param0, 15514);
               }
             } else {
               if (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L)) {
-                aa.field_f.g(param0, 15514);
+                aa.field_f.writeOpcode(param0, 15514);
               }
             }
             if (decompiledFrameRemainder0) {

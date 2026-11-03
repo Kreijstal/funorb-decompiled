@@ -35,11 +35,11 @@ final class bl {
         stackIn_16_4 = (50 >= ce.field_g) ? false : true;
         wk.a(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, lp.field_i);
         if (of.field_c) {
-          aa.field_f.g(57, 15514);
+          aa.field_f.writeOpcode(57, 15514);
           of.field_c = false;
         }
         if (fc.field_a) {
-          aa.field_f.g(10, 15514);
+          aa.field_f.writeOpcode(10, 15514);
           fc.field_a = false;
         }
     }

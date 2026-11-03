@@ -12,8 +12,8 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
     final void a(int param0) {
         int var2 = 250;
         if (param0 == 14210) {
-          this.field_Q.a(140, (byte) 73, 20 + (this.field_C - 25) >> 1, this.field_E - var2 >> 1, 25);
-          this.field_O.a(100, (byte) 57, 2 + (-30 + (20 + this.field_C) >> 1), 10 + ((this.field_E - var2 >> 1) + 140), 30);
+          this.field_Q.setBounds(140, (byte) 73, 20 + (this.field_C - 25) >> 1, this.field_E - var2 >> 1, 25);
+          this.field_O.setBounds(100, (byte) 57, 2 + (-30 + (20 + this.field_C) >> 1), 10 + ((this.field_E - var2 >> 1) + 140), 30);
           return;
         }
     }
@@ -42,7 +42,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         try {
           super.updatePointer(param0 ^ 0, param1, param2, param3);
           stackIn_2_0 = this.field_O;
-          stackIn_3_1 = (this.field_Q.a(1).a((byte) 88) == qk.field_g);
+          stackIn_3_1 = (this.field_Q.a(1).getState((byte) 88) == qk.field_g);
           stackIn_2_0.field_H = stackIn_3_1;
           if (param0 == 40) {
             return;
@@ -65,7 +65,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
     }
 
     public final void onAction(TextButton param0, int param1, int param2, int param3, int param4) {
-        if (this.field_Q.a(1).a((byte) 69) != qk.field_g) {
+        if (this.field_Q.a(1).getState((byte) 69) != qk.field_g) {
           return;
         }
         try {
@@ -85,7 +85,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         this.field_O = new TextButton(MusicCrossfadeStream.field_J, (UiListener) (this));
         this.children = new UiComponent[]{(UiComponent) ((Object) this.field_Q), (UiComponent) ((Object) this.field_O)};
         this.field_O.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-        this.c((byte) 121);
+        this.refreshLayout((byte) 121);
     }
 
     final void drawLayer(int param0, int param1, int param2, byte param3) {

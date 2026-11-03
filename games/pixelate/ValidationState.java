@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj {
+final class ValidationState {
     static boolean field_c;
     static SceneWidget field_a;
     static int[] field_b;
@@ -10,7 +10,7 @@ final class dj {
         try {
           if (param0 >= -98) {
             BitmapFont var5 = (BitmapFont) null;
-            dj.a((byte) -124, (BitmapFont) null, (BitmapFont) null, -15);
+            ValidationState.a((byte) -124, (BitmapFont) null, (BitmapFont) null, -15);
           }
           MouseInputHandler.field_c = param3;
           StatusBar.field_j = param2;
@@ -31,7 +31,7 @@ final class dj {
           NodeHashTable.field_c = new sb(param2);
           AudioService.field_d = param1;
           MouseWheelHandler.field_d = param0;
-          dj.a(param3);
+          ValidationState.a(param3);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -49,7 +49,7 @@ final class dj {
           GzipDecoder.a(88);
           return;
         }
-        dj.releaseStatics(-112);
+        ValidationState.releaseStatics(-112);
         var1Lifetime1 = ResizableModalPanel.m(param0 + 1501881973);
         var2Lifetime1 = EmailCredentials.c(107);
         NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);

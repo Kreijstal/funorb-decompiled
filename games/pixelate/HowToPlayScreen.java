@@ -25,7 +25,7 @@ final class HowToPlayScreen extends MenuScreen {
         super.a(param0, 1, param2);
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         int var2;
         int var3;
         int var4;
@@ -119,7 +119,7 @@ final class HowToPlayScreen extends MenuScreen {
           this.a(param1, true);
         }
         if (param0 > -116) {
-          this.b(-71);
+          this.handleNavigation(-71);
         }
     }
 
@@ -237,7 +237,7 @@ final class HowToPlayScreen extends MenuScreen {
                     Js5NetworkRequest.field_C[var8_int].field_a[1].drawOpaque(280 + 30 * var8_int, 350);
                     Js5NetworkRequest.field_C[var8_int].field_a[0].drawOpaque(var8_int * 30 + 270, 340);
                   }
-                  ug.field_q.c((byte) 50);
+                  ug.field_q.draw((byte) 50);
                 } else {
                   if (this.field_r == 5) {
                     var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
@@ -264,7 +264,7 @@ final class HowToPlayScreen extends MenuScreen {
                       SoftwareRasterizer.setClip(0, 0, 640, 389);
                       PasswordValidator.field_r.draw(false);
                       an.field_b.draw(false);
-                      DiskCacheRequest.field_H.c((byte) 119);
+                      DiskCacheRequest.field_H.draw((byte) 119);
                       BoundedRandomAccessFile.field_g.a(55, 0, 0);
                       DialWidgetPainter.field_a.a(60, 0, 0);
                       SoftwareRasterizer.resetClip();
@@ -328,7 +328,7 @@ final class HowToPlayScreen extends MenuScreen {
 
     final void onCancel(byte param0) {
         if (param0 >= -13) {
-          this.b(-19);
+          this.handleNavigation(-19);
         }
         la.a(this.field_l, TickClock.field_a, false, -25528);
     }

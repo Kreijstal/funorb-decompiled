@@ -170,8 +170,8 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) 53, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) 53, param2, param3, param4);
         this.rebuildHotspots(1829);
         if (param1 < 19) {
           this.hotspotRegions = (IntrusiveDeque) null;
@@ -180,7 +180,7 @@ class TextHotspotWidget extends TextButton {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 70 / ((-33 - param3) / 58);
-        this.a(param1, (byte) 28, param2, param0, ((WidgetTextLayout) ((Object) this.field_y)).getPreferredWidth((UiComponent) (this), 4592));
+        this.setBounds(param1, (byte) 28, param2, param0, ((WidgetTextLayout) ((Object) this.field_y)).getPreferredWidth((UiComponent) (this), 4592));
     }
 
     final static void a(byte param0) {
@@ -216,11 +216,11 @@ class TextHotspotWidget extends TextButton {
         field_N = null;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void activate(boolean param0, int param1, int param2, int param3) {
         if (!param0) {
-          this.a(false, 78, -112, 21);
+          this.activate(false, 78, -112, 21);
         }
-        super.a(param0, param1, param2, param3);
+        super.activate(param0, param1, param2, param3);
         int var5 = -this.field_z + param3;
         int var6 = -this.field_p + param1;
         ni var7 = this.hotspotAt(var5, -22562, var6);

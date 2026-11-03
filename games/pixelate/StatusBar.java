@@ -19,7 +19,7 @@ abstract class StatusBar {
         int var5 = 0;
         CipherPacketBuffer var4 = aa.field_f;
         int var5Lifetime1;
-        var4.g(param1, 15514);
+        var4.writeOpcode(param1, 15514);
         if (param2 == -26231) {
           var4.position = var4.position + 1;
           var5 = var4.position;

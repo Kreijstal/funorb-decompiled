@@ -78,7 +78,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
 
     final void drawLayer(int param0, int param1, int param2, byte param3) {
         String var5;
-        dj var6;
+        ValidationState var6;
         int var14;
         Object var18;
         Object var24;
@@ -104,15 +104,15 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         int var12Lifetime2;
         int var13Lifetime1;
         int var13Lifetime2;
-        dj var6Lifetime1;
-        dj var6Lifetime2;
+        ValidationState var6Lifetime1;
+        ValidationState var6Lifetime2;
         var18 = null;
         var24 = null;
         var14 = Pixelate.field_H ? 1 : 0;
-        var6 = this.field_W.a((byte) 113);
+        var6 = this.field_W.getState((byte) 113);
         if (var6 != BufferedRandomAccessFile.field_b &&
           UiTheme.field_j != var6) {
-          var5 = this.field_W.b((byte) -7);
+          var5 = this.field_W.getMessage((byte) -7);
           if (var5 == null) {
             var5 = this.field_ab;
           }
@@ -121,7 +121,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         if (var5.equals(this.field_q)) {
           super.drawLayer(param0, param1, param2, (byte) -25);
-          var6Lifetime1 = this.field_W.a((byte) 97);
+          var6Lifetime1 = this.field_W.getState((byte) 97);
           var29 = (WidgetTextLayout) ((Object) this.field_y);
           var9 = this.field_z + param2;
           var10 = var29.getTextOriginY(param0, (UiComponent) (this), (byte) 107) + (var29.getTextLayout(-117, (UiComponent) (this)).getLayoutHeight(1) >> 1);
@@ -168,7 +168,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         this.field_q = var5;
         this.rebuildHotspots(1829);
         super.drawLayer(param0, param1, param2, (byte) -25);
-        var6Lifetime2 = this.field_W.a((byte) 97);
+        var6Lifetime2 = this.field_W.getState((byte) 97);
         var28 = (WidgetTextLayout) ((Object) this.field_y);
         var9Lifetime1 = this.field_z + param2;
         var10Lifetime1 = var28.getTextOriginY(param0, (UiComponent) (this), (byte) 107) + (var28.getTextLayout(-117, (UiComponent) (this)).getLayoutHeight(1) >> 1);
@@ -273,7 +273,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         try {
           this.field_ab = param1;
           this.field_W = param0;
-          this.a(param4, (byte) 121, param3, param2, param5);
+          this.setBounds(param4, (byte) 121, param3, param2, param5);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

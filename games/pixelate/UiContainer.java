@@ -77,7 +77,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var8 = (UiComponent) (var9.d(0));
           while (var8 != null) {
             if (var8.isLinked(0)) {
-              if (var8.b(true) &&
+              if (var8.containsFocus(true) &&
                 var8.onFocusedKey(param0, param1 + 0, param2, param3)) {
                 return true;
               }
@@ -134,7 +134,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var9 = (UiComponent) (var12.d(0));
           while (var9 != null) {
             if (var9.isLinked(0)) {
-              if (var9.b(true) &&
+              if (var9.containsFocus(true) &&
                 var9.onMouseWheel(param0, (byte) 112, param2, param3, param4, param5, param6)) {
                 return true;
               }
@@ -177,7 +177,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiComponent) (var3.b(~param0));
           while (var4 != null) {
-            if (var4.b(true)) {
+            if (var4.containsFocus(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.lastFrom((byte) -99, var4);
               var6 = (UiComponent) (var5.previous(-59));
@@ -262,7 +262,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var8 = new IntrusiveDequeCursor(this.children);
           var4 = (UiComponent) (var8.d(0));
           while (var4 != null) {
-            if (var4.b(true)) {
+            if (var4.containsFocus(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.firstFrom((byte) -87, var4);
               var6 = (UiComponent) (var5.first((byte) -104));
@@ -279,7 +279,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param0 == 10) {
             return false;
           }
-          this.k(-117);
+          this.getFocusedChild(-117);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,11 +309,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3, int param4) {
+    void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 <= 19) {
           this.children = (IntrusiveDeque) null;
         }
-        super.a(param0, (byte) 126, param2, param3, param4);
+        super.setBounds(param0, (byte) 126, param2, param3, param4);
         this.clearFocus(-8133);
     }
 
@@ -360,12 +360,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean containsFocus(boolean param0) {
         if (!param0) {
           StringBuilder var3 = (StringBuilder) null;
           this.appendDebugChildren(82, (Hashtable) null, -45, (StringBuilder) null);
         }
-        return null != this.k(-105) ? true : false;
+        return null != this.getFocusedChild(-105) ? true : false;
     }
 
     UiContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
@@ -404,7 +404,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiComponent) (var3.d(0));
           if (param1 != 27) {
-            this.b(false);
+            this.containsFocus(false);
           }
           while (var4 != null) {
             if (var4.focusNext(param0, 27)) {
@@ -538,12 +538,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         return null;
     }
 
-    UiComponent k(int param0) {
+    UiComponent getFocusedChild(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiComponent var3_ref_ng = (UiComponent) (var2.d(0));
         while (var3_ref_ng != null) {
-          if (var3_ref_ng.b(true)) {
+          if (var3_ref_ng.containsFocus(true)) {
             return var3_ref_ng;
           }
           var3_ref_ng = (UiComponent) (var2.first((byte) -104));
@@ -576,7 +576,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiComponent var3 = (UiComponent) (var2.d(param0 ^ param0));
         while (var3 != null) {
-          var3.c((byte) 51);
+          var3.refreshLayout((byte) 51);
           var3 = (UiComponent) (var2.first((byte) -104));
         }
     }

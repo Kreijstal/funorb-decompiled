@@ -26,7 +26,7 @@ final class MarkerSlider extends TextButton {
 
     final int f(byte param0) {
         int var2 = 108 / ((9 - param0) / 53);
-        return this.field_W.b(1);
+        return this.field_W.size(1);
     }
 
     final static void a(int param0) {
@@ -43,13 +43,13 @@ final class MarkerSlider extends TextButton {
 
     final int a(byte param0, int param1) {
         if (param1 < 0 ||
-          param1 >= this.field_W.b(1)) {
+          param1 >= this.field_W.size(1)) {
           return -1;
         }
         if (param0 > -84) {
           field_U = -103;
         }
-        return this.field_W.c(param1, -124);
+        return this.field_W.get(param1, -124);
     }
 
     final int k(int param0) {
@@ -92,8 +92,8 @@ final class MarkerSlider extends TextButton {
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_W.b(1); var12++) {
-              var13 = this.field_W.c(var12, -69) - var8_int;
+            for (var12 = 0; var12 < this.field_W.size(1); var12++) {
+              var13 = this.field_W.get(var12, -69) - var8_int;
               var13 = var13 * var13;
               if (var10 > var13) {
                 var11 = var12;
@@ -101,10 +101,10 @@ final class MarkerSlider extends TextButton {
               }
             }
             if (var11 >= 0) {
-              this.field_W.a((byte) -84, var11);
+              this.field_W.removeAt((byte) -84, var11);
             }
           } else {
-            this.field_W.a(true, var8_int);
+            this.field_W.add(true, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

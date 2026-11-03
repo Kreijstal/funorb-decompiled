@@ -25,7 +25,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     }
 
     final static void a(int param0, boolean param1) {
-        wa.field_c.a(0, 0, 120);
+        wa.field_c.drawLayers(0, 0, 120);
         if (param0 <= 73) {
           Js5NetworkRequest.releaseStatics((byte) 4);
         }

@@ -251,8 +251,8 @@ final class re {
             return false;
           }
           if (0 <= var4.field_b &&
-            !var4.field_d.a(var4.field_b, false)) {
-            this.a((byte) -96, var2, var4.field_d.a(var4.field_b, (byte) -78));
+            !var4.field_d.ensureGroupLoaded(var4.field_b, false)) {
+            this.a((byte) -96, var2, var4.field_d.getGroupProgress(var4.field_b, (byte) -78));
             return false;
           }
           if (var4.field_f != null &&

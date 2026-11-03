@@ -7,7 +7,7 @@ final class qk {
     static int field_e;
     private int field_b;
     private int field_h;
-    static dj field_g;
+    static ValidationState field_g;
     private int field_f;
     private int field_a;
     static int field_i;
@@ -93,7 +93,7 @@ final class qk {
 
     static {
         field_e = 0;
-        field_g = new dj();
+        field_g = new ValidationState();
         field_c = new int[4];
     }
 }

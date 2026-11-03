@@ -48,7 +48,7 @@ final class pe {
 
     final static void a(int param0, int param1, long param2) {
         CipherPacketBuffer var4 = aa.field_f;
-        var4.g(param1, 15514);
+        var4.writeOpcode(param1, 15514);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         var4.writeByte(160, param0);

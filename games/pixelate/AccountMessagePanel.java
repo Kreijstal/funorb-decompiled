@@ -59,7 +59,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           this.field_O = param1;
           this.field_N = param2;
           var4_int = this.field_N == null ? 0 : this.field_O.paragraphHeight(this.field_N, 260, this.field_O.maxAscent);
-          this.a(288, (byte) 55, 0, 0, 22 + var4_int);
+          this.setBounds(288, (byte) 55, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -136,8 +136,8 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
             this.buttonCount = 66;
           }
           var5 = -2 + this.field_C;
-          this.a(this.field_E, (byte) 63, 0, 0, this.field_C + 34);
-          var4.a(-14 + this.field_E, (byte) 81, var5, 7, 30);
+          this.setBounds(this.field_E, (byte) 63, 0, 0, this.field_C + 34);
+          var4.setBounds(-14 + this.field_E, (byte) 81, var5, 7, 30);
           this.addChild(var4, 80);
           stackIn_3_0 = var4;
           return stackIn_3_0;

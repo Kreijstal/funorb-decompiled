@@ -4,11 +4,11 @@
 final class HighscoresScreen extends MenuScreen {
     static rh field_p;
     static String field_s;
-    static dj field_o;
+    static ValidationState field_o;
     static char[] field_r;
     static Sprite field_q;
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6, BinaryBitmapFont param7, int param8, int param9, int param10) {
+    private final void drawRow(int param0, int param1, int param2, int param3, int param4, String param5, int param6, BinaryBitmapFont param7, int param8, int param9, int param10) {
         String stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -123,7 +123,7 @@ final class HighscoresScreen extends MenuScreen {
         return 20 + rk.field_e.textWidth(var3);
     }
 
-    final static void e(int param0) {
+    final static void readHighscoresPacket(int param0) {
         int stackIn_27_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -308,7 +308,7 @@ final class HighscoresScreen extends MenuScreen {
                           var8 = 16711680;
                         }
                         var4 = "";
-                        this.a(var9, var11[4 * var13 + 3], 540, var11[var13 * 4], var7, var23, var11[4 * var13 + 2], var21, var13, var8, var11[4 * var13 + 1]);
+                        this.drawRow(var9, var11[4 * var13 + 3], 540, var11[var13 * 4], var7, var23, var11[4 * var13 + 2], var21, var13, var8, var11[4 * var13 + 1]);
                       }
                       var7 = var7 + var6;
                       var13++;
@@ -321,7 +321,7 @@ final class HighscoresScreen extends MenuScreen {
                     var7 += 4;
                     var8 = 16711680;
                   }
-                  this.a(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
+                  this.drawRow(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
                   break;
                 }
                 if (var15 != 0) {
@@ -365,7 +365,7 @@ final class HighscoresScreen extends MenuScreen {
                     var7 += 4;
                     var8 = 16711680;
                   }
-                  this.a(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
+                  this.drawRow(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
                   break;
                 }
               }
@@ -416,7 +416,7 @@ final class HighscoresScreen extends MenuScreen {
                             var8Lifetime1 = 16711680;
                           }
                           var4Lifetime1 = "";
-                          this.a(var9Lifetime1, var11Lifetime1[4 * var13Lifetime1 + 3], 540, var11Lifetime1[var13Lifetime1 * 4], var7Lifetime1, var27, var11Lifetime1[4 * var13Lifetime1 + 2], var25, var13Lifetime1, var8Lifetime1, var11Lifetime1[4 * var13Lifetime1 + 1]);
+                          this.drawRow(var9Lifetime1, var11Lifetime1[4 * var13Lifetime1 + 3], 540, var11Lifetime1[var13Lifetime1 * 4], var7Lifetime1, var27, var11Lifetime1[4 * var13Lifetime1 + 2], var25, var13Lifetime1, var8Lifetime1, var11Lifetime1[4 * var13Lifetime1 + 1]);
                         }
                         var7Lifetime1 = var7Lifetime1 + var6Lifetime1;
                         var13Lifetime1++;
@@ -429,7 +429,7 @@ final class HighscoresScreen extends MenuScreen {
                       var7Lifetime1 += 4;
                       var8Lifetime1 = 16711680;
                     }
-                    this.a(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var25, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
+                    this.drawRow(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var25, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
                     break;
                   }
                   if (var15 != 0) {
@@ -475,7 +475,7 @@ final class HighscoresScreen extends MenuScreen {
                       var7Lifetime1 += 4;
                       var8Lifetime1 = 16711680;
                     }
-                    this.a(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var29, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
+                    this.drawRow(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var29, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
                     break;
                   }
                 }
@@ -520,7 +520,7 @@ final class HighscoresScreen extends MenuScreen {
                         var8Lifetime2 = 16711680;
                       }
                       var4Lifetime2 = "";
-                      this.a(var9Lifetime2, var11Lifetime2[4 * var13Lifetime2 + 3], 540, var11Lifetime2[var13Lifetime2 * 4], var7Lifetime2, var39, var11Lifetime2[4 * var13Lifetime2 + 2], var37, var13Lifetime2, var8Lifetime2, var11Lifetime2[4 * var13Lifetime2 + 1]);
+                      this.drawRow(var9Lifetime2, var11Lifetime2[4 * var13Lifetime2 + 3], 540, var11Lifetime2[var13Lifetime2 * 4], var7Lifetime2, var39, var11Lifetime2[4 * var13Lifetime2 + 2], var37, var13Lifetime2, var8Lifetime2, var11Lifetime2[4 * var13Lifetime2 + 1]);
                     }
                     var7Lifetime2 = var7Lifetime2 + var6Lifetime2;
                     var13Lifetime2++;
@@ -533,7 +533,7 @@ final class HighscoresScreen extends MenuScreen {
                   var7Lifetime2 += 4;
                   var8Lifetime2 = 16711680;
                 }
-                this.a(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
+                this.drawRow(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
                 break;
               }
               if (var15 != 0) {
@@ -577,7 +577,7 @@ final class HighscoresScreen extends MenuScreen {
                   var7Lifetime2 += 4;
                   var8Lifetime2 = 16711680;
                 }
-                this.a(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
+                this.drawRow(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
                 break;
               }
             }
@@ -597,7 +597,7 @@ final class HighscoresScreen extends MenuScreen {
         int var1 = 116 / ((param0 + 12) / 59);
     }
 
-    final static void e(int param0, int param1) {
+    final static void selectBackground(int param0, int param1) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -704,6 +704,6 @@ final class HighscoresScreen extends MenuScreen {
         field_p = null;
         field_r = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
         field_s = "Private";
-        field_o = new dj();
+        field_o = new ValidationState();
     }
 }

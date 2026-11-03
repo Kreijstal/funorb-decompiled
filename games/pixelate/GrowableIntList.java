@@ -13,7 +13,7 @@ final class GrowableIntList {
     static String field_b;
     private boolean field_c;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -48,7 +48,7 @@ final class GrowableIntList {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void removeAt(byte param0, int param1) {
         if (param1 >= 0 &&
           param1 <= this.field_a) {
           if (param0 != -84) {
@@ -63,18 +63,18 @@ final class GrowableIntList {
         throw new ArrayIndexOutOfBoundsException(param1);
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void set(int param0, byte param1, int param2) {
         if (this.field_a < param0) {
           this.field_a = param0;
         }
         if (param0 >= this.field_j.length) {
-          this.a(-114, param0);
+          this.resize(-114, param0);
         }
         this.field_j[param0] = param2;
         int var4 = -53 / ((-28 - param1) / 42);
     }
 
-    final int c(int param0, int param1) {
+    final int get(int param0, int param1) {
         if (param1 >= -50) {
           field_d = (int[]) null;
         }
@@ -197,10 +197,10 @@ final class GrowableIntList {
         field_d = null;
     }
 
-    final void a(boolean param0, int param1) {
-        this.a(1 + this.field_a, (byte) 41, param1);
+    final void add(boolean param0, int param1) {
+        this.set(1 + this.field_a, (byte) 41, param1);
         if (!param0) {
-          this.a((byte) -113, 40);
+          this.removeAt((byte) -113, 40);
         }
     }
 
@@ -226,7 +226,7 @@ final class GrowableIntList {
         return -50;
     }
 
-    private final void a(int param0, int param1) {
+    private final void resize(int param0, int param1) {
         int[] var5 = new int[this.a(param1, (byte) 120)];
         int[] var3 = var5;
         int var4 = 66 % ((55 - param0) / 63);
@@ -234,9 +234,9 @@ final class GrowableIntList {
         this.field_j = var5;
     }
 
-    final int b(int param0) {
+    final int size(int param0) {
         if (param0 != 1) {
-          this.a(false, -127);
+          this.add(false, -127);
         }
         return 1 + this.field_a;
     }

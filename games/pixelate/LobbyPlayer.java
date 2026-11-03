@@ -29,7 +29,7 @@ final class LobbyPlayer extends SceneWidget {
         CipherPacketBuffer var3 = null;
         try {
           var3 = aa.field_f;
-          var3.g(param0, 15514);
+          var3.writeOpcode(param0, 15514);
           if (param2 != 65536) {
             ue var4 = (ue) null;
             LobbyPlayer.a(-62, (ue) null, 81);

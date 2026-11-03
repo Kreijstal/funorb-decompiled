@@ -301,7 +301,7 @@ abstract class MenuScreen {
         }
     }
 
-    void b(int param0) {
+    void handleNavigation(int param0) {
         if (param0 >= -35) {
           return;
         }
@@ -536,7 +536,7 @@ abstract class MenuScreen {
         int var3;
         boolean stackIn_14_0 = false;
         var3 = Pixelate.field_H ? 1 : 0;
-        if (!dj.field_c &&
+        if (!ValidationState.field_c &&
           !LinkButtonPainter.field_d) {
           while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(121)) {
             if (ke.field_a == 13) {
@@ -549,7 +549,7 @@ abstract class MenuScreen {
               Match.field_u = stackIn_14_0;
               continue;
             }
-            this.b(-36);
+            this.handleNavigation(-36);
             if (-1 == this.field_g.selectedIndex) {
               continue;
             }

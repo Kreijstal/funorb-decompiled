@@ -94,7 +94,7 @@ class BackgroundScene {
             stackIn_7_0 = new bo[]{};
             return stackIn_7_0;
           }
-          var8 = param0.a(true);
+          var8 = param0.requestDisplayModes(true);
           while (0 == var8.field_b) {
             SecondaryNodeHashTable.a(10L, (byte) 23);
           }

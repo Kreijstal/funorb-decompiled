@@ -54,13 +54,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void writeOpcode(int param0, int param1) {
         int fieldTemp$1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param1 != 15514) {
-            this.f((byte) -21);
+            this.readOpcode((byte) -21);
           }
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
@@ -273,7 +273,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void o(int param0) {
+    final void endBitAccess(int param0) {
         try {
           this.position = (param0 + this.field_r) / 8;
         } catch (RuntimeException runtimeException) {
@@ -281,7 +281,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void a(int param0, int[] param1) {
+    final void initCipher(int param0, int[] param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -349,7 +349,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void n(int param0) {
+    final void startBitAccess(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -365,7 +365,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int f(byte param0) {
+    final int readOpcode(byte param0) {
         int fieldTemp$1 = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -385,7 +385,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int c(int param0, byte param1) {
+    final int readBits(int param0, byte param1) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;

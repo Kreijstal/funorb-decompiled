@@ -68,10 +68,10 @@ final class cn {
               }
               GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -49);
               GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -62);
-              GameModeSelectScreen.field_v.writeString((byte) -66, var14);
-              GameModeSelectScreen.field_v.writeString((byte) -66, var8);
+              GameModeSelectScreen.field_v.a((byte) -66, var14);
+              GameModeSelectScreen.field_v.a((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
-              GameModeSelectScreen.field_v.writeString((byte) -66, la.a((byte) 10, var15));
+              GameModeSelectScreen.field_v.a((byte) -66, la.a((byte) 10, var15));
               GameModeSelectScreen.field_v.writeShort(1276387944, param1);
               GameModeSelectScreen.field_v.writeByte(160, param5);
               GameModeSelectScreen.field_v.writeByte(160, var9);
@@ -82,7 +82,7 @@ final class cn {
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
-              aa.field_f.b((byte) -41, var11_ref_StringLifetime2);
+              aa.field_f.writeString((byte) -41, var11_ref_StringLifetime2);
               HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
               aa.field_f.backpatchShortLength(7519, aa.field_f.position - var10);
             } else {
@@ -96,7 +96,7 @@ final class cn {
               } else {
                 stackIn_14_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_13_0).writeString((byte) stackIn_13_1, stackIn_14_2);
+              ((PacketBuffer) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
               stackIn_16_0 = GameModeSelectScreen.field_v;
               stackIn_16_1 = -66;
               if (param4.b((byte) 127)) {
@@ -104,7 +104,7 @@ final class cn {
               } else {
                 stackIn_17_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_16_0).writeString((byte) stackIn_16_1, stackIn_17_2);
+              ((PacketBuffer) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
               aa.field_f.writeByte(160, 16);
               aa.field_f.position = aa.field_f.position + 1;
               var9 = aa.field_f.position;

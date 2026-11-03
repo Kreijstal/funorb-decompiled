@@ -35,7 +35,7 @@ final class AchievementsScreen extends MenuScreen {
     private final boolean c(int param0, byte param1) {
         boolean stackIn_9_0 = false;
         if (param1 <= 90) {
-          this.b(6);
+          this.handleNavigation(6);
         }
         stackIn_9_0 = ((8 == this.field_l &&
           !(param0 >= 16)) ||
@@ -283,7 +283,7 @@ final class AchievementsScreen extends MenuScreen {
         }
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         if (param0 > -35) {
           return;
         }

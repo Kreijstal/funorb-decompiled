@@ -123,7 +123,7 @@ final class LabeledField extends SingleChildContainer {
           if (var13 <= param3) {
             var13 = param3;
           } else {
-            this.a(param2, (byte) 20, param1, param0, var13);
+            this.setBounds(param2, (byte) 20, param1, param0, var13);
           }
           if (!this.field_O) {
             stackIn_10_0 = this.field_M + 2 * this.field_R;
@@ -131,7 +131,7 @@ final class LabeledField extends SingleChildContainer {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.child.a(-this.field_M + (param2 - 3 * this.field_R), (byte) 110, (var13 - param3 >> 1) + this.field_R, var14, -(this.field_R * 2) + param3);
+          this.child.setBounds(-this.field_M + (param2 - 3 * this.field_R), (byte) 110, (var13 - param3 >> 1) + this.field_R, var14, -(this.field_R * 2) + param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

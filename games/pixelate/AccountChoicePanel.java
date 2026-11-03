@@ -198,9 +198,9 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_N.a(var4, (byte) 98, -var2 + (this.field_C - 48), -var3 + this.field_E >> 1, 30);
-        this.field_L.a(var4, (byte) 85, -var2 + this.field_C - 48, var2 + (var4 + (-var3 + this.field_E >> 1)), 30);
-        this.field_J.a(var3, (byte) 103, -(2 * var2) + (this.field_C - 78), this.field_E - var3 >> 1, 30);
+        this.field_N.setBounds(var4, (byte) 98, -var2 + (this.field_C - 48), -var3 + this.field_E >> 1, 30);
+        this.field_L.setBounds(var4, (byte) 85, -var2 + this.field_C - 48, var2 + (var4 + (-var3 + this.field_E >> 1)), 30);
+        this.field_J.setBounds(var3, (byte) 103, -(2 * var2) + (this.field_C - 78), this.field_E - var3 >> 1, 30);
         this.field_N.field_n = (UiListener) (this);
         this.field_J.field_n = (UiListener) (this);
         this.field_J.field_l = KeyboardInputHandler.field_a;

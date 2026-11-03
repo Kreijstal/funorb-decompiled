@@ -26,16 +26,16 @@ final class DropTargetWidget extends SingleChildContainer {
           var8 = qf.field_a;
           var7 = var8;
           if (var8 != null) {
-            if (!this.a(param3 ^ 96, param1, param4, param0, param5)) {
+            if (!this.containsPoint(param3 ^ 96, param1, param4, param0, param5)) {
               return;
             }
             if (this.field_n instanceof WidgetDropListener) {
-              ((WidgetDropListener) (this.field_n)).a(116, var8, this);
+              ((WidgetDropListener) (this.field_n)).onDropped(116, var8, this);
               qf.field_a = null;
               return;
             }
             if (var8.field_n instanceof WidgetDropListener) {
-              ((WidgetDropListener) (var8.field_n)).a(param3 ^ -106, var8, this);
+              ((WidgetDropListener) (var8.field_n)).onDropped(param3 ^ -106, var8, this);
               qf.field_a = null;
               return;
             }

@@ -23,7 +23,7 @@ final class dc {
             dc.a((byte) 3, (java.awt.Frame) null, (PlatformTaskDispatcher) null);
           }
           while (true) {
-            var3 = param2.a(param1, -84);
+            var3 = param2.requestExitFullscreen(param1, -84);
             while (var3.field_b == 0) {
               SecondaryNodeHashTable.a(10L, (byte) 23);
             }

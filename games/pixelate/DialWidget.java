@@ -36,7 +36,7 @@ final class DialWidget extends TextButton {
 
     final static void a(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
         CipherPacketBuffer var6 = aa.field_f;
-        var6.g(param0, 15514);
+        var6.writeOpcode(param0, 15514);
         var6.position = var6.position + 1;
         int var7 = var6.position;
         var6.writeByte(160, 4);

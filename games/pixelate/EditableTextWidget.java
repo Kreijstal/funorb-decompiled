@@ -102,7 +102,7 @@ class EditableTextWidget extends TextButton {
             field_R = (CanvasRasterBuffer) null;
           }
           this.selectionAnchor = this.caretIndex;
-          this.n(param1 + 1392121585);
+          this.notifyTextSet(param1 + 1392121585);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    private final void r(int param0) {
+    private final void cut(int param0) {
         this.copySelection(false);
         if (param0 != -1) {
           return;
@@ -200,7 +200,7 @@ class EditableTextWidget extends TextButton {
                 this.caretIndex = dupTemp$0;
                 this.selectionAnchor = dupTemp$0;
               }
-              this.n(1392153825);
+              this.notifyTextSet(1392153825);
             }
             return true;
           }
@@ -217,7 +217,7 @@ class EditableTextWidget extends TextButton {
           } else {
             if (param0 != 101) {
               if (param0 == 13) {
-                this.p(127);
+                this.clear(127);
                 return true;
               }
               if (param0 != 96) {
@@ -241,12 +241,12 @@ class EditableTextWidget extends TextButton {
                     return true;
                   }
                   if (param0 == 84) {
-                    this.d((byte) -126);
+                    this.notifyTextChanged((byte) -126);
                     return true;
                   }
                   if (EmailValidator.field_m[82] &&
                     param0 == 65) {
-                    this.r(-1);
+                    this.cut(-1);
                     return true;
                   }
                   if (EmailValidator.field_m[82] &&
@@ -298,21 +298,21 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    void n(int param0) {
+    void notifyTextSet(int param0) {
         if (this.field_n instanceof TextInputListener) {
-          ((TextInputListener) (this.field_n)).a(-107, this);
+          ((TextInputListener) (this.field_n)).onTextSet(-107, this);
         }
         if (param0 != 1392153825) {
-          this.n(103);
+          this.notifyTextSet(103);
         }
     }
 
-    final void p(int param0) {
+    final void clear(int param0) {
         this.caretIndex = 0;
         this.selectionAnchor = 0;
         int var2 = 19 % ((52 - param0) / 55);
         this.field_q = "";
-        this.n(1392153825);
+        this.notifyTextSet(1392153825);
     }
 
     private final void scrollCaretIntoView(int param0) {
@@ -392,12 +392,12 @@ class EditableTextWidget extends TextButton {
           this.caretIndex = var2;
           this.selectionAnchor = var2;
           this.field_q = this.field_q.substring(0, var2) + this.field_q.substring(var3, this.field_q.length());
-          this.n(1392153825);
+          this.notifyTextSet(1392153825);
         }
         var2Lifetime1 = 96 / ((param0 - 64) / 46);
     }
 
-    private final void d(byte param0) {
+    private final void notifyTextChanged(byte param0) {
         if (this.field_n instanceof TextInputListener) {
           ((TextInputListener) (this.field_n)).onTextChanged(this, 4);
         }
@@ -491,7 +491,7 @@ class EditableTextWidget extends TextButton {
             EditableTextWidget.releaseStatics(97);
           }
           if (!param0) {
-            this.n(1392153825);
+            this.notifyTextSet(1392153825);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -37,7 +37,7 @@ final class PictureStrip {
           this.field_e = this.b((byte) -37);
           return;
         }
-        this.a((byte) -44);
+        this.isScrollFinished((byte) -44);
         this.field_e = this.b((byte) -37);
     }
 
@@ -109,7 +109,7 @@ final class PictureStrip {
         field_i = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean isScrollFinished(byte param0) {
         int var2 = -37 % ((param0 + 10) / 55);
         return 0 == this.field_c ? true : false;
     }
@@ -151,7 +151,7 @@ final class PictureStrip {
         return var3;
     }
 
-    final void c(byte param0) {
+    final void draw(byte param0) {
         int var7 = 0;
         int var2;
         int var3;
@@ -219,7 +219,7 @@ final class PictureStrip {
         SoftwareRasterizer.restoreClip(ProxyAuthenticationException.field_b);
     }
 
-    final void d(int param0) {
+    final void updateScroll(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -16888) {

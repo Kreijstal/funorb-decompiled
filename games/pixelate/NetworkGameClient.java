@@ -123,7 +123,7 @@ abstract class NetworkGameClient extends GameApplet {
             fc.a(AudioService.a(param0 + 13867), (byte) 19);
           }
           if (var4 == 10) {
-            aa.field_f.g(17, 15514);
+            aa.field_f.writeOpcode(17, 15514);
           }
           if (var4 == 11) {
             vf.a(AudioService.a(13867), 3279);
@@ -314,7 +314,7 @@ abstract class NetworkGameClient extends GameApplet {
               DebouncedValidator.field_e = null;
             } else {
               if (DebouncedValidator.field_e.ensureGroupAvailableByName("", ~param0)) {
-                GameModeSelectScreen.a(param0 + 31873, DebouncedValidator.field_e);
+                GameModeSelectScreen.loadTextTable(param0 + 31873, DebouncedValidator.field_e);
                 DebouncedValidator.field_e = null;
                 sf.a(param0 + 0);
               }
@@ -443,7 +443,7 @@ abstract class NetworkGameClient extends GameApplet {
             } else {
               if (var2 != 3) {
                 if (var2 == 4) {
-                  HighscoresScreen.e(-84);
+                  HighscoresScreen.readHighscoresPacket(-84);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {

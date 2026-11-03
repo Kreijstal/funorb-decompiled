@@ -45,12 +45,12 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.matchingField instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.matchingField)).a(1);
             if (var3 != null) {
-              if (var3.a((byte) 68) == qk.field_g &&
+              if (var3.getState((byte) 68) == qk.field_g &&
                 !param1.equals(this.matchingField.field_q)) {
                 stackIn_7_0 = sk.field_d;
                 return stackIn_7_0;
               }
-              stackIn_9_0 = var3.b((byte) -7);
+              stackIn_9_0 = var3.getMessage((byte) -7);
               return stackIn_9_0;
             }
           }
@@ -98,25 +98,25 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        dj stackIn_2_0 = null;
-        dj stackIn_9_0 = null;
-        dj stackIn_13_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_9_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_2_0 = (dj) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           if (this.matchingField instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.matchingField)).a(1);
             if (var3 != null &&
-              var3.a((byte) 69) != qk.field_g) {
+              var3.getState((byte) 69) != qk.field_g) {
               stackIn_9_0 = sk.field_a;
               return stackIn_9_0;
             }

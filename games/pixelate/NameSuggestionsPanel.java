@@ -154,12 +154,12 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               this.buttons[var5] = new TextButton(this.suggestions[var5], (UiListener) (this));
               this.buttons[var5].field_y = (WidgetPainter) ((Object) var4);
               this.buttons[var5].field_l = io.field_a;
-              this.buttons[var5].a(80, (byte) 63, 20 + 16 * var5, 0, 15);
+              this.buttons[var5].setBounds(80, (byte) 63, 20 + 16 * var5, 0, 15);
               this.addChild(this.buttons[var5], 80);
             }
             this.buttons[var3_int] = new TextButton(d.field_d, (UiListener) (this));
             this.buttons[var3_int].field_y = (WidgetPainter) ((Object) var4);
-            this.buttons[var3_int].a(100, (byte) 102, 16 + (16 * var3_int + 20), 0, 15);
+            this.buttons[var3_int].setBounds(100, (byte) 102, 16 + (16 * var3_int + 20), 0, 15);
             this.addChild(this.buttons[var3_int], 80);
             return;
           }

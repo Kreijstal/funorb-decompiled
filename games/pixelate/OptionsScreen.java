@@ -201,7 +201,7 @@ final class OptionsScreen extends MenuScreen {
         la.a(0, 16, false, -25528);
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         boolean discarded$0 = false;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
@@ -216,7 +216,7 @@ final class OptionsScreen extends MenuScreen {
         regionExit1: {
           if (ke.field_a != 98) {
             if (ke.field_a != 99) {
-              super.b(-72);
+              super.handleNavigation(-72);
               break regionExit1;
             }
             stackIn_12_0 = (98 != ke.field_a) ? 0 : 1;

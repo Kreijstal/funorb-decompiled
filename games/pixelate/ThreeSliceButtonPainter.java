@@ -181,7 +181,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             return;
           }
           if (!param0.field_D) {
-            stackIn_8_0 = (param0.b(true)) ? 1 : 0;
+            stackIn_8_0 = (param0.containsFocus(true)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }

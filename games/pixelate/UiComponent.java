@@ -66,7 +66,7 @@ class UiComponent extends IntrusiveNode {
           if (param0 != -58) {
             return false;
           }
-          if (!this.a(93, param5, param3, param6, param4)) {
+          if (!this.containsPoint(93, param5, param3, param6, param4)) {
             return false;
           }
           this.field_k = param2;
@@ -132,7 +132,7 @@ class UiComponent extends IntrusiveNode {
 
     void blur(int param0) {
         if (param0 != 2) {
-          this.a(-82, false, (byte) 61, -91);
+          this.handlePointerEvents(-82, false, (byte) 61, -91);
         }
     }
 
@@ -155,7 +155,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(param0 + 66, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) ? 1 : 0;
+          var5_int = this.containsPoint(param0 + 66, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) ? 1 : 0;
           stackIn_3_0 = (var5_int != 0) ? 0 : 1;
           if (this.field_D) {
             stackIn_6_1 = 0;
@@ -171,7 +171,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
           if (param0 != 40) {
-            this.b(true);
+            this.containsFocus(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,7 +206,7 @@ class UiComponent extends IntrusiveNode {
         field_w = null;
     }
 
-    boolean b(boolean param0) {
+    boolean containsFocus(boolean param0) {
         if (!param0) {
           field_u = -102;
           return false;
@@ -214,8 +214,8 @@ class UiComponent extends IntrusiveNode {
         return false;
     }
 
-    final void c(byte param0) {
-        this.a(this.field_E, (byte) 99, this.field_p, this.field_z, this.field_C);
+    final void refreshLayout(byte param0) {
+        this.setBounds(this.field_E, (byte) 99, this.field_p, this.field_z, this.field_C);
         if (param0 <= 48) {
           UiComponent var3 = (UiComponent) null;
           this.updatePointer(124, -118, -106, (UiComponent) null);
@@ -265,7 +265,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawLayers(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
@@ -322,12 +322,12 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final boolean a(char param0, int param1, boolean param2) {
+    final boolean processKey(char param0, int param1, boolean param2) {
         int var4;
         UiComponent var5;
         int var4Lifetime1;
         UiComponent var5Lifetime1;
-        if (!this.b(true)) {
+        if (!this.containsFocus(true)) {
           var4 = param1;
           if (var4 == 80) {
             return this.focusNext(this, 27);
@@ -354,7 +354,7 @@ class UiComponent extends IntrusiveNode {
         return false;
     }
 
-    final boolean a(int param0, boolean param1, byte param2, int param3) {
+    final boolean handlePointerEvents(int param0, boolean param1, byte param2, int param3) {
         int var5;
         DraggableWidget var6;
         int var7;
@@ -373,7 +373,7 @@ class UiComponent extends IntrusiveNode {
         regionExit1: {
           var7 = Pixelate.field_H ? 1 : 0;
           this.updatePointer(40, param0, param3, this);
-          var5 = this.b(true) ? 1 : 0;
+          var5 = this.containsFocus(true) ? 1 : 0;
           if (param1) {
             if (lp.field_i != 0) {
               if (var5 == 0) {
@@ -384,7 +384,7 @@ class UiComponent extends IntrusiveNode {
                     var10 = qf.field_a;
                     if (var10 != null) {
                       if (var10.field_n instanceof WidgetDropListener) {
-                        ((WidgetDropListener) (var10.field_n)).a(-92, var10, (DropTargetWidget) null);
+                        ((WidgetDropListener) (var10.field_n)).onDropped(-92, var10, (DropTargetWidget) null);
                       }
                       qf.field_a = null;
                     }
@@ -404,7 +404,7 @@ class UiComponent extends IntrusiveNode {
                       var6 = var8;
                       if (var8 != null) {
                         if (var8.field_n instanceof WidgetDropListener) {
-                          ((WidgetDropListener) (var8.field_n)).a(-92, var8, (DropTargetWidget) null);
+                          ((WidgetDropListener) (var8.field_n)).onDropped(-92, var8, (DropTargetWidget) null);
                         }
                         qf.field_a = null;
                       }
@@ -422,7 +422,7 @@ class UiComponent extends IntrusiveNode {
                       var6Lifetime3 = var9;
                       if (var9 != null) {
                         if (var9.field_n instanceof WidgetDropListener) {
-                          ((WidgetDropListener) (var9.field_n)).a(-92, var9, (DropTargetWidget) null);
+                          ((WidgetDropListener) (var9.field_n)).onDropped(-92, var9, (DropTargetWidget) null);
                         }
                         qf.field_a = null;
                       }
@@ -446,7 +446,7 @@ class UiComponent extends IntrusiveNode {
                 var6Lifetime1 = var11;
                 if (var11 != null) {
                   if (var11.field_n instanceof WidgetDropListener) {
-                    ((WidgetDropListener) (var11.field_n)).a(-92, var11, (DropTargetWidget) null);
+                    ((WidgetDropListener) (var11.field_n)).onDropped(-92, var11, (DropTargetWidget) null);
                   }
                   qf.field_a = null;
                 }
@@ -482,7 +482,7 @@ class UiComponent extends IntrusiveNode {
                   var12 = qf.field_a;
                   if (var12 != null) {
                     if (var12.field_n instanceof WidgetDropListener) {
-                      ((WidgetDropListener) (var12.field_n)).a(-92, var12, (DropTargetWidget) null);
+                      ((WidgetDropListener) (var12.field_n)).onDropped(-92, var12, (DropTargetWidget) null);
                     }
                     qf.field_a = null;
                   }
@@ -521,7 +521,7 @@ class UiComponent extends IntrusiveNode {
                   var6Lifetime2 = var14;
                   if (var14 != null) {
                     if (var14.field_n instanceof WidgetDropListener) {
-                      ((WidgetDropListener) (var14.field_n)).a(-92, var14, (DropTargetWidget) null);
+                      ((WidgetDropListener) (var14.field_n)).onDropped(-92, var14, (DropTargetWidget) null);
                     }
                     qf.field_a = null;
                   }
@@ -563,7 +563,7 @@ class UiComponent extends IntrusiveNode {
                 var6Lifetime2Lifetime1 = var13;
                 if (var13 != null) {
                   if (var13.field_n instanceof WidgetDropListener) {
-                    ((WidgetDropListener) (var13.field_n)).a(-92, var13, (DropTargetWidget) null);
+                    ((WidgetDropListener) (var13.field_n)).onDropped(-92, var13, (DropTargetWidget) null);
                   }
                   qf.field_a = null;
                 }
@@ -608,7 +608,7 @@ class UiComponent extends IntrusiveNode {
             var15 = qf.field_a;
             if (var15 != null) {
               if (var15.field_n instanceof WidgetDropListener) {
-                ((WidgetDropListener) (var15.field_n)).a(-92, var15, (DropTargetWidget) null);
+                ((WidgetDropListener) (var15.field_n)).onDropped(-92, var15, (DropTargetWidget) null);
               }
               qf.field_a = null;
             }
@@ -670,7 +670,7 @@ class UiComponent extends IntrusiveNode {
           if (this.field_D) {
             discarded$2 = param3.append(" mouseover");
           }
-          if (this.b(true)) {
+          if (this.containsFocus(true)) {
             discarded$3 = param3.append(" focused");
           }
           if (this.field_y != null) {
@@ -819,7 +819,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3, int param4) {
+    void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         this.field_E = param0;
         this.field_z = param3;
         this.field_C = param4;
@@ -870,7 +870,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_18_0 = false;
         if (param0 < 55) {
           this.field_y = (WidgetPainter) null;

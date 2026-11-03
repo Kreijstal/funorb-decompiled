@@ -108,7 +108,7 @@ final class ui {
           GameModeSelectScreen.field_v.writeByte(160, param3);
           GameModeSelectScreen.field_v.writeShort(1276387944, param2);
           GameModeSelectScreen.field_v.rsaEncrypt(SceneWidgetNode.field_t, AgeValidator.field_m, 0);
-          aa.field_f.g(18, 15514);
+          aa.field_f.writeOpcode(18, 15514);
           fieldTemp$0 = aa.field_f.position + 1;
           aa.field_f.position = aa.field_f.position + 1;
           var4 = fieldTemp$0;

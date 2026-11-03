@@ -121,7 +121,7 @@ final class ScoreMarkerBar extends StatusBar {
               ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + BlastFromThePastBackground.field_p[var15][var18];
             }
             TextButton.a(var17Lifetime1, StatusBar.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
-            GameModeSelectScreen.a(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);
+            GameModeSelectScreen.renderTriangleMesh(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

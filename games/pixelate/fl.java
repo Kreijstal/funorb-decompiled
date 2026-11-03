@@ -38,7 +38,7 @@ final class fl {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (ln.field_q) {
-          return td.field_b.a(DualLinkDeque.field_f, ke.field_a, false);
+          return td.field_b.processKey(DualLinkDeque.field_f, ke.field_a, false);
         }
         if (un.field_l) {
           return AccountMessagePanel.b(102, param2, param1);

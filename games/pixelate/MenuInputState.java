@@ -343,12 +343,12 @@ final class MenuInputState {
         RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          var2_int = param0.c(8, (byte) -34);
+          var2_int = param0.readBits(8, (byte) -34);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (jk[]) (stackIn_3_0);
           }
-          var3 = param0.c(12, (byte) -34);
+          var3 = param0.readBits(12, (byte) -34);
           var4 = new jk[var3];
           var5 = 0;
           if (param1 != 77) {
@@ -357,17 +357,17 @@ final class MenuInputState {
           }
           while (var3 > var5) {
             if (!tj.a(param0, -32)) {
-              var6 = param0.c(Matrix3.a(var5 - 1, 15598), (byte) -34);
+              var6 = param0.readBits(Matrix3.a(var5 - 1, 15598), (byte) -34);
               var4[var5] = var4[var6];
             } else {
               var6_ref_jk = new jk();
-              param0.c(24, (byte) -34);
-              param0.c(24, (byte) -34);
-              var6_ref_jk.field_b = param0.c(24, (byte) -34);
-              param0.c(9, (byte) -34);
-              param0.c(12, (byte) -34);
-              param0.c(12, (byte) -34);
-              param0.c(12, (byte) -34);
+              param0.readBits(24, (byte) -34);
+              param0.readBits(24, (byte) -34);
+              var6_ref_jk.field_b = param0.readBits(24, (byte) -34);
+              param0.readBits(9, (byte) -34);
+              param0.readBits(12, (byte) -34);
+              param0.readBits(12, (byte) -34);
+              param0.readBits(12, (byte) -34);
               var4[var5] = var6_ref_jk;
             }
             var5++;

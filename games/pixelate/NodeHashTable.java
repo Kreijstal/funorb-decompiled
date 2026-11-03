@@ -80,7 +80,7 @@ final class NodeHashTable {
             var9 = (byte[]) null;
             NodeHashTable.readPackedByteArray((CipherPacketBuffer) null, (byte[]) null, 62, -90);
           }
-          var4_int = param0.c(param2, (byte) -34);
+          var4_int = param0.readBits(param2, (byte) -34);
           if (var4_int == 0) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
@@ -89,15 +89,15 @@ final class NodeHashTable {
             var4_int != param1.length) {
             param1 = new byte[var4_int];
           }
-          var5 = param0.c(3, (byte) -34);
-          var6 = (byte)param0.c(8, (byte) -34);
+          var5 = param0.readBits(3, (byte) -34);
+          var6 = (byte)param0.readBits(8, (byte) -34);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param1[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (byte)(param0.c(var5, (byte) -34) + var6);
+              param1[var7] = (byte)(param0.readBits(var5, (byte) -34) + var6);
             }
           }
           stackIn_18_0 = (byte[]) (param1);

@@ -124,14 +124,14 @@ final class dk {
           var9 = new CipherPacketBuffer(param1.getNamedFile((byte) 24, "", "logo.fo3d"));
           var11 = var9;
           var3 = var11.readUnsignedByte(255);
-          var11.n(-110);
+          var11.startBitAccess(-110);
           qn.field_q = MenuInputState.a(var11, (byte) 77);
           ck.field_b = new TriangleMesh[var3];
           BlastFromThePastBackground.field_p = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             ck.field_b[var4] = pk.a(var9, -1);
           }
-          var11.o(7);
+          var11.endBitAccess(7);
           var10 = 0;
           var4Lifetime1 = var10;
           while (var10 < var3) {

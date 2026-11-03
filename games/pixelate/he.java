@@ -18,7 +18,7 @@ final class he {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = aa.field_f;
-          var3.g(param1, 15514);
+          var3.writeOpcode(param1, 15514);
           var3.writeByte(160, 2);
           var3.writeByte(160, 0);
           var3.writeByte(160, param2.field_p);

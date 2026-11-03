@@ -119,7 +119,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    abstract dj evaluateState(boolean param0);
+    abstract ValidationState evaluateState(boolean param0);
 
     final static boolean a(byte param0, SocialListEntry param1, SocialListEntry param2) {
         int var3_int = 0;
@@ -356,7 +356,7 @@ abstract class DebouncedValidator implements ValidationSource {
         field_b = null;
     }
 
-    public final dj a(byte param0) {
+    public final ValidationState getState(byte param0) {
         if (param0 < 57) {
           field_d = -88;
         }
@@ -369,14 +369,14 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.evaluateState(true);
     }
 
-    public final void b(int param0) {
+    public final void markEdited(int param0) {
         this.field_c = hm.a(64);
         if (param0 != 2048) {
           field_d = 74;
         }
     }
 
-    public final String b(byte param0) {
+    public final String getMessage(byte param0) {
         if (this.isInputEmpty(-22265)) {
           return null;
         }
@@ -387,10 +387,10 @@ abstract class DebouncedValidator implements ValidationSource {
           String var3 = (String) null;
           DebouncedValidator.a((byte) -36, (String[]) null, 126, (String) null);
         }
-        return this.c(param0 + 6);
+        return this.computeMessage(param0 + 6);
     }
 
-    abstract String c(int param0);
+    abstract String computeMessage(int param0);
 
     final static boolean a(int param0, int param1, int param2) {
         if (param2 != 0) {

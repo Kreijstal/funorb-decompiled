@@ -52,13 +52,13 @@ final class QuickChatCategoryCache {
             stackIn_33_1 = 0;
             stackIn_33_2 = param0;
             stackIn_34_3 = (param1) ? false : true;
-            var4 = ((ResourceArchive) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_34_3);
+            var4 = ((ResourceArchive) (Object) stackIn_33_0).getFile(stackIn_33_1, stackIn_33_2, stackIn_34_3);
           } else {
             stackIn_29_0 = this.field_b;
             stackIn_29_1 = 0;
             stackIn_29_2 = 32767 & param0;
             stackIn_30_3 = (param1) ? false : true;
-            var4 = ((ResourceArchive) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3);
+            var4 = ((ResourceArchive) (Object) stackIn_29_0).getFile(stackIn_29_1, stackIn_29_2, stackIn_30_3);
           }
           var6 = new QuickChatCategory();
           if (var4 != null) {
@@ -80,13 +80,13 @@ final class QuickChatCategoryCache {
           stackIn_11_1 = 0;
           stackIn_11_2 = param0;
           stackIn_12_3 = (param1) ? false : true;
-          var4Lifetime1 = ((ResourceArchive) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
+          var4Lifetime1 = ((ResourceArchive) (Object) stackIn_11_0).getFile(stackIn_11_1, stackIn_11_2, stackIn_12_3);
         } else {
           stackIn_7_0 = this.field_b;
           stackIn_7_1 = 0;
           stackIn_7_2 = 32767 & param0;
           stackIn_8_3 = (param1) ? false : true;
-          var4Lifetime1 = ((ResourceArchive) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+          var4Lifetime1 = ((ResourceArchive) (Object) stackIn_7_0).getFile(stackIn_7_1, stackIn_7_2, stackIn_8_3);
         }
         var5 = new QuickChatCategory();
         var3Lifetime2 = var5;
@@ -167,12 +167,12 @@ final class QuickChatCategoryCache {
           this.field_a = param1;
           this.field_b = param2;
           if (this.field_a != null) {
-            this.field_a.b(0, (byte) 63);
+            this.field_a.getFileCount(0, (byte) 63);
           }
           if (this.field_b == null) {
             return;
           }
-          this.field_b.b(0, (byte) 24);
+          this.field_b.getFileCount(0, (byte) 24);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -470,7 +470,7 @@ final class GameResultsScreen extends MenuScreen {
         field_t = null;
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         int var2;
         int var3;
         MenuInputState stackIn_16_0 = null;

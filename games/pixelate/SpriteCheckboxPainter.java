@@ -16,7 +16,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
             SpriteCheckboxPainter.releaseStatics(-63);
           }
           var3 = aa.field_f;
-          var3.g(param1, 15514);
+          var3.writeOpcode(param1, 15514);
           var3.writeByte(160, param2.field_m);
           var3.writeShort(param0 + 1276387975, param2.field_k);
         } catch (RuntimeException runtimeException) {
@@ -55,7 +55,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
             ((TextButton) (param0)).field_M) {
             var8.drawAdditive((-var8.field_A + param0.field_E >> 1) + var6_int + 1, var7 + (1 + (-var8.field_B + param0.field_C >> 1)), 256);
           }
-          if (!param0.b(true)) {
+          if (!param0.containsFocus(true)) {
             return;
           }
           ValidatedTextWidget.a(var6_int + 2, 2 + var7, (byte) -128, param0.field_E - 4, param0.field_C - 4);

@@ -45,7 +45,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final UiComponent l(int param0) {
+    final UiComponent getFocusedChild(int param0) {
         IntrusiveDequeCursor var2;
         ModalPanel var3;
         int var4;
@@ -57,7 +57,7 @@ final class ModalStack extends SingleChildContainer {
         var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
           if (var3.field_N) {
-            return var3.k(97);
+            return var3.getFocusedChild(97);
           }
           var3 = (ModalPanel) (var2.first((byte) -104));
         }

@@ -36,7 +36,7 @@ final class dq {
           }
           var5 = aa.field_f;
           CipherPacketBuffer var3 = var5;
-          var5.g(param0, 15514);
+          var5.writeOpcode(param0, 15514);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(160, 1);

@@ -7,15 +7,15 @@ final class AgeValidator extends TextFieldValidator {
     static java.math.BigInteger field_m;
     static String field_o;
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
         CharSequence var5 = null;
-        dj stackIn_3_0 = null;
-        dj stackIn_6_0 = null;
-        dj stackIn_11_0 = null;
-        dj stackIn_13_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_6_0 = null;
+        ValidationState stackIn_11_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -27,7 +27,7 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1) {
-            stackIn_6_0 = (dj) null;
+            stackIn_6_0 = (ValidationState) null;
             return stackIn_6_0;
           }
           var5 = (CharSequence) ((Object) param0);

@@ -423,14 +423,14 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(int param0, String param1, int param2) {
+    final PlatformTask requestSocket(int param0, String param1, int param2) {
         if (param0 != 20278) {
           this.field_n = (Object) null;
         }
-        return this.a(false, param2, false, param1);
+        return this.requestSocketInternal(false, param2, false, param1);
     }
 
-    final PlatformTask a(java.awt.Frame param0, int param1) {
+    final PlatformTask requestExitFullscreen(java.awt.Frame param0, int param1) {
         if (param1 >= -71) {
           String var4 = (String) null;
           PlatformTaskDispatcher.openPreferencesFile(112, (String) null, (String) null, 9);
@@ -438,7 +438,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(0, 7, -102, param0, 0);
     }
 
-    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask requestEnterFullscreen(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 27705) {
           String var7 = (String) null;
           PlatformTaskDispatcher.openPreferencesFile(-61, (String) null, (String) null, -124);
@@ -457,33 +457,33 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.field_s != null ? true : false;
     }
 
-    final PlatformTask a(String param0, Class param1, byte param2) {
+    final PlatformTask requestDeclaredField(String param0, Class param1, byte param2) {
         int var4 = -55 / ((param2 + 22) / 54);
         return this.enqueueTask(0, 9, 123, new Object[]{param1, param0}, 0);
     }
 
-    private final PlatformTask a(boolean param0, int param1, boolean param2, String param3) {
+    private final PlatformTask requestSocketInternal(boolean param0, int param1, boolean param2, String param3) {
         if (param2) {
           field_i = (String) null;
         }
         return this.enqueueTask(0, param0 ? 22 : 1, 34, param3, param1);
     }
 
-    final PlatformTask a(int param0, Runnable param1, byte param2) {
+    final PlatformTask startThread(int param0, Runnable param1, byte param2) {
         if (param2 != -123) {
           return (PlatformTask) null;
         }
         return this.enqueueTask(0, 2, param2 + 249, param1, param0);
     }
 
-    final PlatformTask a(boolean param0) {
+    final PlatformTask requestDisplayModes(boolean param0) {
         if (!param0) {
           return (PlatformTask) null;
         }
         return this.enqueueTask(0, 5, -110, (Object) null, 0);
     }
 
-    final PlatformTask a(byte param0, java.net.URL param1) {
+    final PlatformTask requestUrlStream(byte param0, java.net.URL param1) {
         if (param0 != -44) {
           this.field_n = (Object) null;
         }

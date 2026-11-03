@@ -276,11 +276,11 @@ final class mi extends MenuScreen {
               if (BufferedRandomAccessFile.field_j > 0) {
                 LobbyPlayer.field_Lb = true;
               }
-              aa.field_f.a(0, ModalPanel.field_L);
+              aa.field_f.initCipher(0, ModalPanel.field_L);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 ModalPanel.field_L[var8Lifetime1] = ModalPanel.field_L[var8Lifetime1] + 50;
               }
-              MusicCrossfadeStream.field_o.a(0, ModalPanel.field_L);
+              MusicCrossfadeStream.field_o.initCipher(0, ModalPanel.field_L);
               stackIn_79_0 = TextLayoutLine.field_e;
               return stackIn_79_0;
             }

@@ -84,20 +84,20 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         return Vector3.field_c.content;
     }
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         fl var3 = null;
         RuntimeException var3_ref = null;
-        dj stackIn_2_0 = null;
-        dj stackIn_5_0 = null;
-        dj stackIn_11_0 = null;
-        dj stackIn_16_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_11_0 = null;
+        ValidationState stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_2_0 = (dj) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           if (this.matchingValidator.validateText(param0, param1) == sk.field_a) {

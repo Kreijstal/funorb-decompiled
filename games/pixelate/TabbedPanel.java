@@ -140,7 +140,7 @@ final class TabbedPanel extends SceneWidget {
                   }
                   var17.field_r[var5] = var6_int;
                   var17.field_q[var5] = var9;
-                  var17.field_l[var5] = param3.a(var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var15, DraggableWidget.a(param0, 121)), (byte) -94);
+                  var17.field_l[var5] = param3.requestDeclaredField(var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var15, DraggableWidget.a(param0, 121)), (byte) -94);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -311,7 +311,7 @@ final class TabbedPanel extends SceneWidget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.b(param1, -110);
+          var4 = param0.getFirstFile(param1, -110);
           var3 = var4;
           if (param2 != -30805) {
             field_Gb = -114;

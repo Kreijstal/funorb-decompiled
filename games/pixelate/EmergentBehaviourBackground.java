@@ -84,7 +84,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         RuntimeException var4 = null;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          var4_int = param2.c(param3, (byte) -34);
+          var4_int = param2.readBits(param3, (byte) -34);
           if (0 == var4_int) {
             return null;
           }
@@ -96,15 +96,15 @@ final class EmergentBehaviourBackground extends BackgroundScene {
             stackIn_10_0 = (short[]) null;
             return stackIn_10_0;
           }
-          var5 = param2.c(4, (byte) -34);
-          var6 = (short)param2.c(16, (byte) -34);
+          var5 = param2.readBits(4, (byte) -34);
+          var6 = (short)param2.readBits(16, (byte) -34);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param0[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (short)(param2.c(var5, (byte) -34) + var6);
+              param0[var7] = (short)(param2.readBits(var5, (byte) -34) + var6);
             }
           }
           stackIn_19_0 = (short[]) (param0);

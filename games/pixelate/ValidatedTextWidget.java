@@ -315,10 +315,10 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final void n(int param0) {
-        super.n(param0 + 0);
+    final void notifyTextSet(int param0) {
+        super.notifyTextSet(param0 + 0);
         if (this.field_gb != null) {
-          this.field_gb.b(2048);
+          this.field_gb.markEdited(2048);
         }
         if (param0 != 1392153825) {
           UiComponent var3 = (UiComponent) null;

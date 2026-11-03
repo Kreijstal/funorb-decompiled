@@ -103,11 +103,11 @@ final class ff {
           }
           DialWidgetPainter.field_q = DialWidgetPainter.field_q - 1;
           var9 = aa.field_f;
-          var9.g(param0, 15514);
+          var9.writeOpcode(param0, 15514);
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(160, 1);
-          var9.b((byte) -41, param1);
+          var9.writeString((byte) -41, param1);
           var9.backpatchByteLength(-var5 + var9.position, -1);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);

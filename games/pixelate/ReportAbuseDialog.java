@@ -694,17 +694,17 @@ final class ReportAbuseDialog extends SceneWidget {
           jn.field_p.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("dragbar_mouseover", "lobby", (byte) 47, param1));
           jn.field_p.field_bb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("dragbar_mouseheld", "lobby", (byte) 47, param1));
           jn.field_p.field_M = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("dragbar_disabled", "lobby", (byte) 47, param1));
-          dj.field_a = new SceneWidget(0L, (SceneWidget) null);
-          dj.field_a.field_H = bi.a("lobby", "upbutton", param1, (byte) -78);
-          dj.field_a.field_B = bi.a("lobby", "upbutton_mouseover", param1, (byte) -126);
-          dj.field_a.field_ob = bi.a("lobby", "upbutton_mouseheld", param1, (byte) -43);
-          dj.field_a.field_xb = bi.a("lobby", "upbutton_disabled", param1, (byte) -58);
+          ValidationState.field_a = new SceneWidget(0L, (SceneWidget) null);
+          ValidationState.field_a.field_H = bi.a("lobby", "upbutton", param1, (byte) -78);
+          ValidationState.field_a.field_B = bi.a("lobby", "upbutton_mouseover", param1, (byte) -126);
+          ValidationState.field_a.field_ob = bi.a("lobby", "upbutton_mouseheld", param1, (byte) -43);
+          ValidationState.field_a.field_xb = bi.a("lobby", "upbutton_disabled", param1, (byte) -58);
           ek.field_b = new SceneWidget(0L, (SceneWidget) null);
           ek.field_b.field_H = bi.a("lobby", "downbutton", param1, (byte) -25);
           ek.field_b.field_B = bi.a("lobby", "downbutton_mouseover", param1, (byte) -71);
           ek.field_b.field_ob = bi.a("lobby", "downbutton_mouseheld", param1, (byte) -83);
           ek.field_b.field_xb = bi.a("lobby", "downbutton_disabled", param1, (byte) -97);
-          ug.field_s = new VerticalScrollbar(0L, dj.field_a, ek.field_b, LoginDialog.field_mb, jn.field_p);
+          ug.field_s = new VerticalScrollbar(0L, ValidationState.field_a, ek.field_b, LoginDialog.field_mb, jn.field_p);
           rm.field_a = new ScrollPaneWithFooter(0L, (SceneWidget) null, ff.field_g, ug.field_s, QuickChatPhraseCache.field_a, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

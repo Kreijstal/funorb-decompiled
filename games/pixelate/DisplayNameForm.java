@@ -116,7 +116,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     private final boolean passesSubmissionGate(boolean param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        dj var4 = null;
+        ValidationState var4 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -130,7 +130,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a((byte) 93);
+          var4 = var3.getState((byte) 93);
           stackIn_8_0 = (var4 == qk.field_g);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,21 +270,21 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         this.field_O.field_y = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         int var3 = 20;
         int var4 = 4;
-        var2.a(270, (byte) 51, var3, 20, 50);
+        var2.setBounds(270, (byte) 51, var3, 20, 50);
         int var5 = 200;
         this.addChild(var2, 80);
         var3 += 50;
         var3 = var3 + (5 + this.appendStandardValidatedField((byte) 52, var3, na.field_a, this.field_O, BufferedSocket.field_i, 170));
-        this.field_P.a(var5, (byte) 49, var3, 496 - var5 >> 1, 40);
-        this.field_N.a(60, (byte) 38, 15 + var3, 3 + var4, 40);
+        this.field_P.setBounds(var5, (byte) 49, var3, 496 - var5 >> 1, 40);
+        this.field_N.setBounds(60, (byte) 38, 15 + var3, 3 + var4, 40);
         this.field_N.field_n = (UiListener) (this);
         this.field_P.field_n = (UiListener) (this);
         this.addChild(this.field_P, 80);
         this.addChild(this.field_N, 80);
         this.field_S = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_S.a(-this.field_O.field_E + (-this.field_O.field_z + (this.field_E - 60)), (byte) 47, 20, this.field_O.field_z - (-this.field_O.field_E - 60), 150);
+        this.field_S.setBounds(-this.field_O.field_E + (-this.field_O.field_z + (this.field_E - 60)), (byte) 47, 20, this.field_O.field_z - (-this.field_O.field_E - 60), 150);
         this.addChild(this.field_S, 80);
-        this.a(496, (byte) 89, 0, 0, var4 + 55 + var3);
+        this.setBounds(496, (byte) 89, 0, 0, var4 + 55 + var3);
     }
 
     final static SocialListEntry findFriend(String param0, int param1) {

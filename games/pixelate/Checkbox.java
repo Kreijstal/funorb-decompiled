@@ -43,9 +43,9 @@ final class Checkbox extends TextButton {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void activate(boolean param0, int param1, int param2, int param3) {
         this.field_M = !this.field_M ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activate(param0, param1, param2, param3);
     }
 
     final static void a(int param0, Sprite param1) {

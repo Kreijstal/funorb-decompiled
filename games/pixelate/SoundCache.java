@@ -84,11 +84,11 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.musicSampleArchive.b((byte) -89)) {
+          if (1 == this.musicSampleArchive.getGroupCount((byte) -89)) {
             stackIn_3_0 = this.getMusicSample(65521, param1, param2, 0);
             return stackIn_3_0;
           }
-          if (this.musicSampleArchive.b(param2, (byte) 100) == 1) {
+          if (this.musicSampleArchive.getFileCount(param2, (byte) 100) == 1) {
             stackIn_7_0 = this.getMusicSample(65521, param1, 0, param2);
             return stackIn_7_0;
           }
@@ -177,7 +177,7 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.soundEffectArchive.b((byte) 98) == 1) {
+          if (this.soundEffectArchive.getGroupCount((byte) 98) == 1) {
             stackIn_2_0 = this.getSynthesizedSampleByIds(0, param0, param1, 0);
             return stackIn_2_0;
           }
@@ -185,7 +185,7 @@ final class SoundCache {
             stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
-          if (1 != this.soundEffectArchive.b(param0, (byte) 27)) {
+          if (1 != this.soundEffectArchive.getFileCount(param0, (byte) 27)) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.getSynthesizedSampleByIds(0, 0, param1, param0);

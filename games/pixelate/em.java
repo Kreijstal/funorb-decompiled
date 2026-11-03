@@ -23,7 +23,7 @@ final class em {
             em.a((String) null, 12L, (String) null, 43, (SceneWidget) null, -102, (ScrollContainer) null, (int[]) null, 46);
           }
           var3 = aa.field_f;
-          var3.g(param2, 15514);
+          var3.writeOpcode(param2, 15514);
           var3.writeByte(160, param1.field_k);
           var3.writeByte(160, param1.field_s);
         } catch (RuntimeException runtimeException) {

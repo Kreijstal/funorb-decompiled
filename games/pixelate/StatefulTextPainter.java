@@ -92,7 +92,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_r[0] = dupTemp$0;
         WidgetStyleLayer var1 = dupTemp$0;
-        var1.a(true);
+        var1.reset(true);
     }
 
     public final void drawWidget(UiComponent param0, byte param1, int param2, int param3, boolean param4) {
@@ -126,7 +126,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             param4 = param4 & var11.field_H;
           }
           var7 = this.field_r[0];
-          this.field_x.a(true);
+          this.field_x.reset(true);
           var7.applyTo(this.field_x, param3, this, (byte) 62, param2, param0);
           if (var11 != null) {
             if (var11.field_M) {
@@ -148,7 +148,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
               }
             }
           }
-          if (param0.b(true)) {
+          if (param0.containsFocus(true)) {
             var14 = this.field_r[5];
             if (var14 != null) {
               var14.applyTo(this.field_x, param3, this, (byte) -67, param2, param0);
@@ -160,7 +160,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
               var15.applyTo(this.field_x, param3, this, (byte) -118, param2, param0);
             }
           }
-          this.field_x.a(param2, param3, param0, (byte) 122, this);
+          this.field_x.paint(param2, param3, param0, (byte) 122, this);
           LinkButtonPainter.a((byte) 92);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,7 +395,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
                 } else {
                   stackIn_11_1 = var6;
                 }
-                ((WidgetStyleLayer) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 89);
+                ((WidgetStyleLayer) (Object) stackIn_10_0).copyTo(stackIn_11_1, (byte) 89);
               }
             }
             return;

@@ -30,7 +30,7 @@ final class qj {
         CipherPacketBuffer var3Lifetime1;
         if (!param0) {
           var3 = aa.field_f;
-          var3.g(param2, 15514);
+          var3.writeOpcode(param2, 15514);
           var3.writeByte(160, 3);
           var3.writeByte(160, 10);
           var3.writeShort(1276387944, param1);
@@ -38,7 +38,7 @@ final class qj {
         }
         qj.releaseStaticReferences(false);
         var3Lifetime1 = aa.field_f;
-        var3Lifetime1.g(param2, 15514);
+        var3Lifetime1.writeOpcode(param2, 15514);
         var3Lifetime1.writeByte(160, 3);
         var3Lifetime1.writeByte(160, 10);
         var3Lifetime1.writeShort(1276387944, param1);

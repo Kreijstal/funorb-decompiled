@@ -21,7 +21,7 @@ final class ValidationIndicator extends TextButton {
 
     final String getTooltip(byte param0) {
         if (this.field_D) {
-          return this.field_P.b((byte) -7);
+          return this.field_P.getMessage((byte) -7);
         }
         if (param0 > 16) {
           return null;
@@ -72,7 +72,7 @@ final class ValidationIndicator extends TextButton {
         int var21_int = 0;
         RuntimeException var21 = null;
         try {
-          dj.a((byte) -109, param15, param9, param6);
+          ValidationState.a((byte) -109, param15, param9, param6);
           BackgroundScene.a(param17, false, param0, param7, param18);
           OptionsScreen.b(param8, param20, true);
           lg.a(param5, param2, -118, param3, param4, param1);
@@ -122,7 +122,7 @@ final class ValidationIndicator extends TextButton {
         int var5;
         int var6;
         int var7;
-        dj var9;
+        ValidationState var9;
         int var10;
         int var11;
         int var12;
@@ -140,7 +140,7 @@ final class ValidationIndicator extends TextButton {
         var6 = -40 / ((param3 - 70) / 49);
         var5 = (this.field_E >> 1) + param2 + this.field_z;
         var7 = (this.field_C >> 1) + (this.field_p + param0);
-        var9 = this.field_P.a((byte) 110);
+        var9 = this.field_P.getState((byte) 110);
         if (BufferedRandomAccessFile.field_b == var9) {
           var17 = CanvasRasterBuffer.field_g[0];
           var10 = var17.field_A << 1;

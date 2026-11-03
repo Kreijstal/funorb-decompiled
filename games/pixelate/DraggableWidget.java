@@ -30,7 +30,7 @@ final class DraggableWidget extends SingleChildContainer {
             this.field_O) {
             return true;
           }
-          if (!this.a(param0 ^ -86, param5, param3, param6, param4)) {
+          if (!this.containsPoint(param0 ^ -86, param5, param3, param6, param4)) {
             stackIn_10_0 = var8_int;
             return stackIn_10_0 != 0;
           }
@@ -173,7 +173,7 @@ final class DraggableWidget extends SingleChildContainer {
               this.field_p = var6;
               this.field_z = var5_int;
               if (!(!(this.field_n instanceof WidgetDragListener))) {
-                ((WidgetDragListener) (this.field_n)).a(param2, this, param1, 31);
+                ((WidgetDragListener) (this.field_n)).onDragged(param2, this, param1, 31);
               }
             }
             decompiledFrameRemainder0 = false;
@@ -228,7 +228,7 @@ final class DraggableWidget extends SingleChildContainer {
 
     final void refreshChildLayout(int param0) {
         super.refreshChildLayout(0);
-        this.child.a(this.field_E, (byte) 67, param0, 0, this.field_C);
+        this.child.setBounds(this.field_E, (byte) 67, param0, 0, this.field_C);
         this.field_T = this.field_z;
         this.field_M = this.field_p;
     }

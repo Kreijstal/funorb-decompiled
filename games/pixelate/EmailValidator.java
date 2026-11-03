@@ -7,11 +7,11 @@ final class EmailValidator extends TextFieldValidator {
     static boolean[] field_m;
     static SceneWidget field_o;
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
-        dj stackIn_8_0 = null;
+        ValidationState stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

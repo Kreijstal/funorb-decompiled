@@ -177,8 +177,8 @@ final class StripedProgressBar extends UiComponent {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) 94, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) 94, param2, param3, param4);
         this.d((byte) 96);
         if (param1 < 19) {
           this.field_M = -109;
@@ -316,7 +316,7 @@ final class StripedProgressBar extends UiComponent {
         this.field_Z = param5;
         this.field_I = param6;
         this.field_M = param4;
-        this.a(param2, (byte) 33, param1, param0, param3);
+        this.setBounds(param2, (byte) 33, param1, param0, param3);
     }
 
     static {

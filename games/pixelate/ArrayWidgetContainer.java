@@ -12,7 +12,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
     static char[] field_I;
     static int field_J;
 
-    final boolean b(boolean param0) {
+    final boolean containsFocus(boolean param0) {
         if (!param0) {
           field_H = (Sprite) null;
         }
@@ -124,8 +124,8 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         return IconTextComponent.field_Nb;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) 75, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) 75, param2, param3, param4);
         this.a(14210);
         if (param1 < 19) {
           field_H = (Sprite) null;
@@ -150,7 +150,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -95) {
-            this.a(-13, (byte) -36, 75, -82, -49);
+            this.setBounds(-13, (byte) -36, 75, -82, -49);
           }
           stackIn_3_0 = this.focusBackwardBy(-18125, 1, param1);
           return stackIn_3_0;
@@ -264,7 +264,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         var11 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0 != -58) {
-            this.b(true);
+            this.containsFocus(true);
           }
           if (this.children == null) {
             return false;
@@ -345,10 +345,10 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
-          wa.field_c.a(hf.field_w, true, (byte) 99, ph.field_o);
+          wa.field_c.handlePointerEvents(hf.field_w, true, (byte) 99, ph.field_o);
           wa.field_c.d((byte) 112);
           while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(120)) {
-            wa.field_c.a(DualLinkDeque.field_f, ke.field_a, false);
+            wa.field_c.processKey(DualLinkDeque.field_f, ke.field_a, false);
           }
           if (QuickChatPhraseCache.field_h != -1) {
             var1_int = QuickChatPhraseCache.field_h;
@@ -451,7 +451,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           while (this.children.length > var4_int) {
             var5 = this.children[var4_int];
             if (null != var5 &&
-              var5.b(true)) {
+              var5.containsFocus(true)) {
               for (var4_int = var4_int + param2; var4_int < this.children.length; var4_int = var4_int + param2) {
                 var6 = this.children[var4_int];
                 if (null != var6 &&
@@ -542,7 +542,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         for (var3 = param0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.b(true)) {
+            var4.containsFocus(true)) {
             return var4;
           }
         }
@@ -628,7 +628,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
             var6Lifetime1 = var5;
             stackIn_8_0 = var5;
             if (stackIn_8_0 != null &&
-              var5.b(true)) {
+              var5.containsFocus(true)) {
               for (var4_int = var4_int - param1; var4_int >= 0; var4_int = var4_int - param1) {
                 var6Lifetime2 = this.children[var4_int];
                 if (var6Lifetime2 != null &&
@@ -684,7 +684,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null &&
-              var7.b(true) &&
+              var7.containsFocus(true) &&
               var7.onFocusedKey(param0, 3, param2, param3)) {
               return true;
             }
@@ -737,7 +737,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.b(true) &&
+              var10.containsFocus(true) &&
               var10.onMouseWheel(param0, (byte) 105, param2, param3, param4, param5, param6)) {
               return true;
             }

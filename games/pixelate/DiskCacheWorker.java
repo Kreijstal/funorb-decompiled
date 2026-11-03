@@ -252,7 +252,7 @@ final class DiskCacheWorker implements Runnable {
         this.field_c = 0;
         this.field_e = false;
         try {
-          var2 = param0.a(5, (Runnable) (this), (byte) -123);
+          var2 = param0.startThread(5, (Runnable) (this), (byte) -123);
           while (var2.field_b == 0) {
             SecondaryNodeHashTable.a(10L, (byte) 23);
           }

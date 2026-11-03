@@ -102,7 +102,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_n == 0) {
           if (this.field_e == null) {
-            this.field_e = this.field_h.a((byte) -44, this.field_b);
+            this.field_e = this.field_h.requestUrlStream((byte) -44, this.field_b);
           }
           if (this.field_e.field_b == 0) {
             return false;
@@ -116,7 +116,7 @@ final class JaggrabDownloader implements Runnable {
         boolean decompiledFrameRemainder0 = true;
         if (this.field_n == 1) {
           if (null == this.field_d) {
-            this.field_d = this.field_h.a(20278, this.field_b.getHost(), 443);
+            this.field_d = this.field_h.requestSocket(20278, this.field_b.getHost(), 443);
           }
           if (this.field_d.field_b == 0) {
             return false;
@@ -153,7 +153,7 @@ final class JaggrabDownloader implements Runnable {
             return true;
           }
           if (this.field_j == null) {
-            this.field_j = this.field_h.a(5, (Runnable) (this), (byte) -123);
+            this.field_j = this.field_h.startThread(5, (Runnable) (this), (byte) -123);
           }
           if (this.field_j.field_b == 0) {
             return false;

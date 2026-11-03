@@ -10,15 +10,15 @@ final class PasswordValidator extends TextFieldValidator {
     static String field_q;
     private EditableTextWidget field_p;
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        dj stackIn_2_0 = null;
-        dj stackIn_5_0 = null;
-        dj stackIn_8_0 = null;
-        dj stackIn_11_0 = null;
-        dj stackIn_13_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_8_0 = null;
+        ValidationState stackIn_11_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -27,7 +27,7 @@ final class PasswordValidator extends TextFieldValidator {
           var3 = this.field_n.field_q.toLowerCase();
           var4 = param0.toLowerCase();
           if (!param1) {
-            stackIn_2_0 = (dj) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           if (var4.length() == 0) {

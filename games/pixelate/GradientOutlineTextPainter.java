@@ -35,7 +35,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
             GradientOutlineTextPainter.d(110);
           }
           while (WidgetStyleLayer.a((byte) -91)) {
-            var1.g(8, 15514);
+            var1.writeOpcode(8, 15514);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

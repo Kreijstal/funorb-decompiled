@@ -12,8 +12,8 @@ abstract class ModalPanel extends UiContainer {
 
     abstract void drawDialogBackground(int param0, int param1, boolean param2);
 
-    final UiComponent k(int param0) {
-        UiComponent var2 = super.k(48);
+    final UiComponent getFocusedChild(int param0) {
+        UiComponent var2 = super.getFocusedChild(48);
         int var3 = -47 / ((-51 - param0) / 39);
         if (var2 != null) {
           return var2;
@@ -191,7 +191,7 @@ abstract class ModalPanel extends UiContainer {
     }
 
     final void a(int param0, byte param1, int param2) {
-        this.a(param2, (byte) 88, -param0 + IndexedSpriteState.field_c >> 1, ModalStack.field_O - param2 >> 1, param0);
+        this.setBounds(param2, (byte) 88, -param0 + IndexedSpriteState.field_c >> 1, ModalStack.field_O - param2 >> 1, param0);
         if (param1 != -110) {
           field_K = true;
         }

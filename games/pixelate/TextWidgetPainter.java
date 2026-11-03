@@ -36,7 +36,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           TextWidgetPainter.a(117, (byte) 117);
         }
         CipherPacketBuffer var2 = aa.field_f;
-        var2.g(param0, 15514);
+        var2.writeOpcode(param0, 15514);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(160, 5);
@@ -142,7 +142,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             stackIn_29_0 = (java.awt.Frame) null;
             return stackIn_29_0;
           }
-          var11 = param0.a(param1, param3, param2, 27705, param4);
+          var11 = param0.requestEnterFullscreen(param1, param3, param2, 27705, param4);
           while (var11.field_b == 0) {
             SecondaryNodeHashTable.a(10L, (byte) 23);
           }
@@ -402,7 +402,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param0 == param3) {
             return;
           }
-          if (param1.b(true)) {
+          if (param1.containsFocus(true)) {
             var18 = this.getTextLayout(param2 ^ 44, param1);
             var19 = var18;
             if (param0 >= param3) {
@@ -594,7 +594,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var13 = 0;
         try {
           int var6_int = 97 % ((-46 - param2) / 40);
-          if (param3.b(true)) {
+          if (param3.containsFocus(true)) {
             var7 = this.getTextLayout(-86, param3);
             var8 = var7.getLineIndex(false, param4);
             var9 = var7.lines[var8];

@@ -25,7 +25,7 @@ final class tj extends ah {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -32) {
-            stackIn_6_0 = (param0.c(1, (byte) -34) == 1);
+            stackIn_6_0 = (param0.readBits(1, (byte) -34) == 1);
             return stackIn_6_0;
           }
           return false;

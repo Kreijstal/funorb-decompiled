@@ -24,7 +24,7 @@ class TextButton extends UiComponent {
             field_J = (byte[]) null;
           }
           if (this.field_H &&
-            this.a(102, param5, param3, param6, param4)) {
+            this.containsPoint(102, param5, param3, param6, param4)) {
             this.focusNext(param1, 27);
             this.field_k = param2;
             if (this.field_n != null &&
@@ -83,7 +83,7 @@ class TextButton extends UiComponent {
         }
     }
 
-    void a(boolean param0, int param1, int param2, int param3) {
+    void activate(boolean param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
@@ -158,9 +158,9 @@ class TextButton extends UiComponent {
           super.updatePointer(param0, param1, param2, param3);
           if (this.field_k != 0 &&
             this.field_k != ef.field_b) {
-            if (this.a(78, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) &&
+            if (this.containsPoint(78, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) &&
               ef.field_b == 0) {
-              this.a(true, -param1 + StatusBar.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
+              this.activate(true, -param1 + StatusBar.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
             }
             this.handlePointerRelease(StatusBar.field_k, param2, param3, 0, param1, ProxyAuthenticationException.field_d);
           }
@@ -362,7 +362,7 @@ class TextButton extends UiComponent {
                   var25Lifetime1Lifetime1 = param0.field_P[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_u[var23Lifetime2];
                   ProxySocketConnector.field_l[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15) >> 16);
-                  dj.field_b[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1 >> 16);
+                  ValidationState.field_b[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1 >> 16);
                   kh.field_c[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_M[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_y[var23Lifetime2];
@@ -445,7 +445,7 @@ class TextButton extends UiComponent {
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean containsFocus(boolean param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -565,9 +565,9 @@ class TextButton extends UiComponent {
           if (param1 != 3) {
             return false;
           }
-          if (this.b(true) && (84 == param0 ||
+          if (this.containsFocus(true) && (84 == param0 ||
             83 == param0)) {
-            this.a(true, -1, 1, -1);
+            this.activate(true, -1, 1, -1);
             return true;
           }
           return false;

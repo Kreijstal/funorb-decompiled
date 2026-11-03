@@ -23,7 +23,7 @@ final class AlphaContainer extends SingleChildContainer {
     AlphaContainer(UiComponent param0) {
         super(param0.field_z, param0.field_p, param0.field_E, param0.field_C, (WidgetPainter) null, (UiListener) null);
         try {
-          param0.a(this.field_E, (byte) 89, 0, 0, this.field_C);
+          param0.setBounds(this.field_E, (byte) 89, 0, 0, this.field_C);
           this.field_O = 256;
           this.child = param0;
         } catch (RuntimeException runtimeException) {
@@ -179,7 +179,7 @@ final class AlphaContainer extends SingleChildContainer {
         try {
           var7 = aa.field_f;
           var8 = var7;
-          var8.g(param2, 15514);
+          var8.writeOpcode(param2, 15514);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(160, 1);
@@ -365,7 +365,7 @@ final class AlphaContainer extends SingleChildContainer {
         if (!param0) {
           return;
         }
-        var2.g(param1, 15514);
+        var2.writeOpcode(param1, 15514);
         var2.writeByte(160, 1);
         var2.writeByte(160, 0);
     }

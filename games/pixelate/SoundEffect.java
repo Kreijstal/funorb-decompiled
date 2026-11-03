@@ -47,7 +47,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, param2, true);
+        byte[] var3 = param0.getFile(param1, param2, true);
         if (var3 == null) {
           return null;
         }

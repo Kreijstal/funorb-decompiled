@@ -195,7 +195,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.writerTask) {
-              this.writerTask = this.field_e.a(3, (Runnable) (this), (byte) -123);
+              this.writerTask = this.field_e.startThread(3, (Runnable) (this), (byte) -123);
             }
             this.notifyAll();
           }

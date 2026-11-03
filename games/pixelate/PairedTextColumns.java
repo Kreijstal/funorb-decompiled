@@ -54,7 +54,7 @@ final class PairedTextColumns extends SceneWidget {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
-        var2.g(param1, 15514);
+        var2.writeOpcode(param1, 15514);
         var2.writeByte(160, param0);
         var2.writeByte(160, 1);
     }

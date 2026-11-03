@@ -45,7 +45,7 @@ final class bd {
             if (!ln.field_q) {
               td.field_b = null;
             } else {
-              td.field_b.a(ui.field_i.screenY, param1, (byte) 99, ui.field_i.field_tb);
+              td.field_b.handlePointerEvents(ui.field_i.screenY, param1, (byte) 99, ui.field_i.field_tb);
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {

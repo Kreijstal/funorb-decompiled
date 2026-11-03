@@ -49,11 +49,11 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_J.p(-86);
+          this.field_J.clear(-86);
           if (param0 != -10515) {
             this.field_L = (TextButton) null;
           }
-          this.field_O.p(param0 + 10639);
+          this.field_O.clear(param0 + 10639);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -892,7 +892,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var4 = param0;
           var3.setText(false, (byte) 87, var4);
-          this.field_O.p(-58);
+          this.field_O.clear(-58);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1858,32 +1858,32 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           boolean decompiledSharedTail1 = (null == this.field_Q);
           if (!decompiledSharedTail1) {
-            this.field_L.a(-95 + this.field_E, (byte) 62, this.field_p, 85, 30);
+            this.field_L.setBounds(-95 + this.field_E, (byte) 62, this.field_p, 85, 30);
             this.field_p = this.field_p + 60;
             decompiledSharedTail1 = (var11 != 0);
           }
           if (decompiledSharedTail1) {
-            this.field_L.a(-10 + this.field_E - 6, (byte) 115, this.field_p, 8, 30);
+            this.field_L.setBounds(-10 + this.field_E - 6, (byte) 115, this.field_p, 8, 30);
             this.field_p = this.field_p + 35;
           }
           if (null != this.field_Q) {
-            this.field_Q.a(-6 + (this.field_E - 10), (byte) 76, this.field_p, 8, 30);
+            this.field_Q.setBounds(-6 + (this.field_E - 10), (byte) 76, this.field_p, 8, 30);
             this.field_p = this.field_p + 35;
           }
           if (null != this.field_N) {
             boolean decompiledSharedTail0 = (this.field_I ||
               this.field_K);
             if (!decompiledSharedTail0) {
-              this.field_N.a(40, (byte) 98, this.field_p, 8, 20);
+              this.field_N.setBounds(40, (byte) 98, this.field_p, 8, 20);
               this.field_p = this.field_p + 25;
               decompiledSharedTail0 = (var11 != 0);
             }
             if (decompiledSharedTail0) {
-              this.field_N.a(-10 + (-6 + this.field_E), (byte) 24, this.field_p, 8, 30);
+              this.field_N.setBounds(-10 + (-6 + this.field_E), (byte) 24, this.field_p, 8, 30);
               this.field_p = this.field_p + 35;
             }
           }
-          this.a(this.field_E, (byte) 34, 0, 0, this.field_p + 3);
+          this.setBounds(this.field_E, (byte) 34, 0, 0, this.field_p + 3);
           this.addChild(this.field_L, 80);
           if (this.field_Q != null) {
             this.addChild(this.field_Q, 80);
@@ -1912,7 +1912,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    public final void a(int param0, EditableTextWidget param1) {
+    public final void onTextSet(int param0, EditableTextWidget param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;

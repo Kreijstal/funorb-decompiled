@@ -34,7 +34,7 @@ final class BoundedRandomAccessFile {
             var6 = (QuickChatCategory) null;
             BoundedRandomAccessFile.buildQuickChatCategoryMenu((SceneWidget) null, (SceneWidget) null, 33, (SceneWidget) null, (QuickChatCategory) null);
           }
-          stackIn_7_0 = param2 + " - " + param0.a(param4, (byte) -78) + "%";
+          stackIn_7_0 = param2 + " - " + param0.getGroupProgress(param4, (byte) -78) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

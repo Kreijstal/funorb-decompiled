@@ -336,7 +336,7 @@ final class ClientContextMenu {
         CipherPacketBuffer var3Lifetime1;
         if (param1 == -925) {
           var3 = aa.field_f;
-          var3.g(param0, 15514);
+          var3.writeOpcode(param0, 15514);
           var3.writeByte(160, 3);
           var3.writeByte(160, 8);
           var3.writeShort(1276387944, param2);
@@ -344,7 +344,7 @@ final class ClientContextMenu {
         }
         field_e = (String) null;
         var3Lifetime1 = aa.field_f;
-        var3Lifetime1.g(param0, 15514);
+        var3Lifetime1.writeOpcode(param0, 15514);
         var3Lifetime1.writeByte(160, 3);
         var3Lifetime1.writeByte(160, 8);
         var3Lifetime1.writeShort(1276387944, param2);

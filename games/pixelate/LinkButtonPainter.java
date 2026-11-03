@@ -126,7 +126,7 @@ final class LinkButtonPainter implements WidgetPainter {
         var11 = Pixelate.field_H ? 1 : 0;
         try {
           if (!param0.field_D &&
-            !param0.b(true)) {
+            !param0.containsFocus(true)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -136,7 +136,7 @@ final class LinkButtonPainter implements WidgetPainter {
           if (param1 != -124) {
             return;
           }
-          if (param0.b(true)) {
+          if (param0.containsFocus(true)) {
             var7 = this.font.textWidth(param0.field_q);
             var8 = this.font.maxDescent + this.font.maxAscent;
             var9 = param0.field_z + param3;

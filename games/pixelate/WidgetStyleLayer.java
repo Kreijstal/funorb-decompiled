@@ -27,8 +27,8 @@ final class WidgetStyleLayer {
         RuntimeException var7 = null;
         try {
           if (this.field_c) {
-            param0.a(param4, param1, param5, (byte) 116, param2);
-            param0.a(true);
+            param0.paint(param4, param1, param5, (byte) 116, param2);
+            param0.reset(true);
           }
           if (this.field_d != -2147483648) {
             param0.field_d = this.field_d;
@@ -114,7 +114,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer a(Sprite[] param0, byte param1) {
+    final WidgetStyleLayer setFrameSprites(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         WidgetStyleLayer stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -142,7 +142,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final void a(int param0, int param1, UiComponent param2, byte param3, StatefulTextPainter param4) {
+    final void paint(int param0, int param1, UiComponent param2, byte param3, StatefulTextPainter param4) {
         BitmapFont stackIn_18_0;
         String stackIn_18_1;
         int stackIn_18_2;
@@ -254,7 +254,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final void a(boolean param0) {
+    final void reset(boolean param0) {
         if (!param0) {
           return;
         }
@@ -267,7 +267,7 @@ final class WidgetStyleLayer {
         this.field_h = 0;
     }
 
-    final void a(WidgetStyleLayer param0, byte param1) {
+    final void copyTo(WidgetStyleLayer param0, byte param1) {
         try {
           param0.field_h = this.field_h;
           param0.field_e = this.field_e;

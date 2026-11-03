@@ -49,7 +49,7 @@ final class r {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
-        var2.g(param1, param0 ^ 15514);
+        var2.writeOpcode(param1, param0 ^ 15514);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(160, 2);

@@ -230,7 +230,7 @@ final class MatchController {
           !var6.i(param0 ^ 121)) {
           this.field_r = false;
           this.field_e.b(param0 ^ -431);
-          aa.field_f.g(64, 15514);
+          aa.field_f.writeOpcode(64, 15514);
         }
         if (this.field_u &&
           this.field_x > 0) {
@@ -284,7 +284,7 @@ final class MatchController {
         if (!AgeValidator.field_p) {
           throw new IllegalStateException();
         }
-        aa.field_f.g(60, 15514);
+        aa.field_f.writeOpcode(60, 15514);
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
@@ -319,7 +319,7 @@ final class MatchController {
         if (!AgeValidator.field_p) {
           throw new IllegalStateException();
         }
-        aa.field_f.g(61, 15514);
+        aa.field_f.writeOpcode(61, 15514);
         if (param0 <= 2) {
           this.field_w = 3;
         }
@@ -444,7 +444,7 @@ final class MatchController {
         }
         SocketJs5Transport.c(0);
         this.field_e.a(-82);
-        this.field_A.d(param0 - 16778);
+        this.field_A.updateScroll(param0 - 16778);
     }
 
     private final void j(int param0) {
@@ -525,7 +525,7 @@ final class MatchController {
           if (Match.field_u) {
             return;
           }
-          this.field_A.c((byte) 104);
+          this.field_A.draw((byte) 104);
           var16 = this.field_d;
           var3_ref_uh__ = var16;
           for (var4 = param1; var4 < var16.length; var4++) {
@@ -715,19 +715,19 @@ final class MatchController {
             if (1 != param0) {
               if (param0 != 2) {
                 if (param0 == 3) {
-                  HighscoresScreen.e(61, 2);
+                  HighscoresScreen.selectBackground(61, 2);
                 } else {
                   if (param0 == 4) {
-                    HighscoresScreen.e(-41, 3);
+                    HighscoresScreen.selectBackground(-41, 3);
                   } else {
                     if (param0 == 5) {
-                      HighscoresScreen.e(60, 4);
+                      HighscoresScreen.selectBackground(60, 4);
                     } else {
                       if (param0 == 6) {
-                        HighscoresScreen.e(-111, 5);
+                        HighscoresScreen.selectBackground(-111, 5);
                       } else {
                         if (param0 == 7) {
-                          HighscoresScreen.e(123, 6);
+                          HighscoresScreen.selectBackground(123, 6);
                         } else {
                           if (param0 != 8) {
                             if (9 == param0) {
@@ -766,7 +766,7 @@ final class MatchController {
                               }
                             }
                           } else {
-                            HighscoresScreen.e(51, 7);
+                            HighscoresScreen.selectBackground(51, 7);
                           }
                         }
                       }
@@ -774,10 +774,10 @@ final class MatchController {
                   }
                 }
               } else {
-                HighscoresScreen.e(104, 1);
+                HighscoresScreen.selectBackground(104, 1);
               }
             } else {
-              HighscoresScreen.e(-42, 0);
+              HighscoresScreen.selectBackground(-42, 0);
             }
           } else {
             if (EmailValidator.field_m[81]) {
@@ -1243,7 +1243,7 @@ final class MatchController {
           this.field_m = false;
         } else {
           if (this.field_f &&
-            this.field_A.a((byte) 85)) {
+            this.field_A.isScrollFinished((byte) 85)) {
             this.field_f = false;
             this.field_A = new PictureStrip(this.field_a.puzzle, 110, 240);
           }

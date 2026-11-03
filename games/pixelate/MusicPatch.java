@@ -226,7 +226,7 @@ final class MusicPatch extends IntrusiveNode {
         TextHotspotWidget.a((byte) -94);
         ep.c(-26721);
         if (KiteBackground.b(true)) {
-          aa.field_f.g(1, 15514);
+          aa.field_f.writeOpcode(1, 15514);
           SecondaryNodeHashTable.b(0, param0 + 10091);
         }
         na.a(true);

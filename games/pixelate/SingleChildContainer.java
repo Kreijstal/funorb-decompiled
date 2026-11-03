@@ -27,7 +27,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (param0 > -95) {
             this.refreshChildLayout(110);
           }
-          stackIn_7_0 = (this.child != null) && (!this.child.b(true)) && (this.child.focusNext(param1, 27));
+          stackIn_7_0 = (this.child != null) && (!this.child.containsFocus(true)) && (this.child.focusNext(param1, 27));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    UiComponent l(int param0) {
+    UiComponent getFocusedChild(int param0) {
         if (param0 <= 48) {
           field_G = (BitmapFont) null;
         }
@@ -51,7 +51,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         if (var2 == null) {
           return null;
         }
-        if (var2.b(true)) {
+        if (var2.containsFocus(true)) {
           return var2;
         }
         return null;
@@ -86,18 +86,18 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
 
     void refreshChildLayout(int param0) {
         if (this.child != null) {
-          this.child.c((byte) 99);
+          this.child.refreshLayout((byte) 99);
         }
         if (param0 != 0) {
           this.child = (UiComponent) null;
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean containsFocus(boolean param0) {
         if (!param0) {
           this.blur(43);
         }
-        return this.l(118) != null ? true : false;
+        return this.getFocusedChild(118) != null ? true : false;
     }
 
     final boolean onMouseWheel(int param0, byte param1, int param2, int param3, int param4, int param5, UiComponent param6) {
@@ -114,7 +114,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             var9 = (UiComponent) null;
             discarded$1 = this.focusNext((byte) -50, (UiComponent) null);
           }
-          stackIn_7_0 = (null != this.child) && (this.child.b(true)) && (this.child.onMouseWheel(param0, (byte) 68, param2, param3, param4, param5, param6));
+          stackIn_7_0 = (null != this.child) && (this.child.containsFocus(true)) && (this.child.onMouseWheel(param0, (byte) 68, param2, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,7 +242,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             var4 = (UiComponent) null;
             this.handlePointerRelease(-52, -66, (UiComponent) null, -50, -35, 36);
           }
-          stackIn_7_0 = (this.child != null) && (!this.child.b(true)) && (this.child.focusNext(param1, param0 - 11600));
+          stackIn_7_0 = (this.child != null) && (!this.child.containsFocus(true)) && (this.child.focusNext(param1, param0 - 11600));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -300,11 +300,11 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < 19) {
           return;
         }
-        super.a(param0, (byte) 113, param2, param3, param4);
+        super.setBounds(param0, (byte) 113, param2, param3, param4);
         this.refreshChildLayout(0);
     }
 
@@ -516,7 +516,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != this.child &&
-            this.child.b(true) &&
+            this.child.containsFocus(true) &&
             this.child.onFocusedKey(param0, param1 + 0, param2, param3)) {
             return true;
           }

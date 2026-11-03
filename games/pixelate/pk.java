@@ -141,23 +141,23 @@ final class pk {
         int var8 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          var2_int = param0.c(8, (byte) -34);
+          var2_int = param0.readBits(8, (byte) -34);
           if (~var2_int < param1) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = tj.a(param0, -32) ? 1 : 0;
           var4 = tj.a(param0, -32) ? 1 : 0;
           var5 = new TriangleMesh();
-          var5.vertexCount = (short)param0.c(16, (byte) -34);
+          var5.vertexCount = (short)param0.readBits(16, (byte) -34);
           var5.vertexX = EmergentBehaviourBackground.a(var5.vertexX, (byte) -128, param0, 16);
           var5.vertexY = EmergentBehaviourBackground.a(var5.vertexY, (byte) -128, param0, 16);
           var5.vertexZ = EmergentBehaviourBackground.a(var5.vertexZ, (byte) -128, param0, 16);
-          var5.field_j = (short)param0.c(16, (byte) -34);
+          var5.field_j = (short)param0.readBits(16, (byte) -34);
           var5.field_h = EmergentBehaviourBackground.a(var5.field_h, (byte) -128, param0, 16);
           var5.field_I = EmergentBehaviourBackground.a(var5.field_I, (byte) -128, param0, 16);
           var5.field_o = EmergentBehaviourBackground.a(var5.field_o, (byte) -128, param0, 16);
           if (var3 != 0) {
-            var5.field_a = (short)param0.c(16, (byte) -34);
+            var5.field_a = (short)param0.readBits(16, (byte) -34);
             var5.field_K = EmergentBehaviourBackground.a(var5.field_K, (byte) -128, param0, 16);
             var5.field_q = EmergentBehaviourBackground.a(var5.field_q, (byte) -128, param0, 16);
             var5.field_p = EmergentBehaviourBackground.a(var5.field_p, (byte) -128, param0, 16);
@@ -166,7 +166,7 @@ final class pk {
             var5.field_i = EmergentBehaviourBackground.a(var5.field_i, (byte) -128, param0, 16);
           }
           if (var4 != 0) {
-            param0.c(16, (byte) -34);
+            param0.readBits(16, (byte) -34);
             var5.field_D = EmergentBehaviourBackground.a(var5.field_D, (byte) -128, param0, 16);
             var5.field_L = EmergentBehaviourBackground.a(var5.field_L, (byte) -128, param0, 16);
             var5.field_S = EmergentBehaviourBackground.a(var5.field_S, (byte) -128, param0, 16);

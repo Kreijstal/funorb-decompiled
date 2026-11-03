@@ -12,7 +12,7 @@ final class dg {
     final static void a(boolean param0, int param1, int param2, String param3, String param4, int param5) {
         int var7 = 0;
         CipherPacketBuffer var8 = aa.field_f;
-        var8.g(param5, 15514);
+        var8.writeOpcode(param5, 15514);
         var8.position = var8.position + 1;
         if (!param0) {
           return;
@@ -21,7 +21,7 @@ final class dg {
           var7 = var8.position;
           var8.writeByte(160, param1);
           if (param1 == 2) {
-            var8.b((byte) -41, param4);
+            var8.writeString((byte) -41, param4);
           }
           if (param3 != null) {
             DebouncedValidator.a(!param0 ? true : false, param3, var8);

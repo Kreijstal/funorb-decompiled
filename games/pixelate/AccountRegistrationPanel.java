@@ -103,16 +103,16 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.addChild(this.field_M, 80);
         int var6 = 4;
         int var7 = 200;
-        this.field_R.a(var7, (byte) 68, var3, -var7 + 496 >> 1, 40);
-        this.field_K.a(60, (byte) 23, var3 + 15, var6 + 3, 40);
+        this.field_R.setBounds(var7, (byte) 68, var3, -var7 + 496 >> 1, 40);
+        this.field_K.setBounds(60, (byte) 23, var3 + 15, var6 + 3, 40);
         this.field_K.field_n = (UiListener) (this);
         this.field_R.field_n = (UiListener) (this);
         this.addChild(this.field_R, 80);
         this.addChild(this.field_K, 80);
         this.field_W = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_W.a(-this.field_U.field_E - this.field_U.field_z + (this.field_E - 60), (byte) 100, 20 + this.field_U.field_p, 60 + this.field_U.field_z + this.field_U.field_E, 150);
+        this.field_W.setBounds(-this.field_U.field_E - this.field_U.field_z + (this.field_E - 60), (byte) 100, 20 + this.field_U.field_p, 60 + this.field_U.field_z + this.field_U.field_E, 150);
         this.addChild(this.field_W, 80);
-        this.a(496, (byte) 28, 0, 0, var3 + 55 + var6);
+        this.setBounds(496, (byte) 28, 0, 0, var3 + 55 + var6);
     }
 
     private final int addLabeledField(String param0, int param1, UiComponent param2, int param3, int param4) {
@@ -172,7 +172,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           this.addChild(var9, 80);
           var7 = new ValidationIndicator(((ValidationProvider) ((Object) param2)).a(1));
           this.addChild(var7, 80);
-          var7.a(15, (byte) 73, (var9.field_C - 15 >> 1) + var9.field_p, var9.field_E + (var9.field_z + 3), 15);
+          var7.setBounds(15, (byte) 73, (var9.field_C - 15 >> 1) + var9.field_p, var9.field_E + (var9.field_z + 3), 15);
           var8 = -32 / ((param0 + 2) / 54);
           stackIn_1_0 = var9.field_C;
           return stackIn_1_0;
@@ -661,7 +661,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
     private final boolean isFieldReady(ValidationProvider param0, boolean param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        dj var4 = null;
+        ValidationState var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -671,7 +671,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a((byte) 112);
+          var4 = var3.getState((byte) 112);
           if (sk.field_a == var4) {
             return false;
           }

@@ -155,14 +155,14 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         field_o = null;
     }
 
-    final dj validateText(String param0, boolean param1) {
+    final ValidationState validateText(String param0, boolean param1) {
         id var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        dj stackIn_2_0 = null;
-        dj stackIn_5_0 = null;
-        dj stackIn_12_0 = null;
-        dj stackIn_17_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_12_0 = null;
+        ValidationState stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -174,7 +174,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_5_0 = (dj) null;
+            stackIn_5_0 = (ValidationState) null;
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {

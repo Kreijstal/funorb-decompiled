@@ -7,7 +7,7 @@ final class BufferedRandomAccessFile {
     private long field_g;
     private long physicalLength;
     private long filePosition;
-    static dj field_b;
+    static ValidationState field_b;
     private byte[] readBuffer;
     private int writeBufferLength;
     private byte[] writeBuffer;
@@ -490,7 +490,7 @@ final class BufferedRandomAccessFile {
     }
 
     static {
-        field_b = new dj();
+        field_b = new ValidationState();
         field_a = 0;
         field_d = "Hide lobby chat";
     }

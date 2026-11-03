@@ -40,7 +40,7 @@ final class fq extends MenuScreen {
         return this.field_m + var3 * 290;
     }
 
-    final void b(int param0) {
+    final void handleNavigation(int param0) {
         int var2;
         int var3;
         int var4;

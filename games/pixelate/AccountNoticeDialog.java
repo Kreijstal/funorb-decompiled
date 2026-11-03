@@ -21,12 +21,12 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = this.field_C - 6;
           this.field_C = this.field_C + 38;
-          var4.a(-16 + (this.field_E - 14), (byte) 64, var5, 15, 30);
+          var4.setBounds(-16 + (this.field_E - 14), (byte) 64, var5, 15, 30);
           if (param1 > -111) {
             field_bb = (String[]) null;
           }
           this.addChild(var4, 80);
-          this.c((byte) 121);
+          this.refreshLayout((byte) 121);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

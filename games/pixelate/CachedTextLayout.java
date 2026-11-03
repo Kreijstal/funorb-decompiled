@@ -329,7 +329,7 @@ final class CachedTextLayout extends TextLayout {
         }
         BirthDateEntryPanel var2 = td.field_b;
         if (var2 != null) {
-          var2.a(ui.field_i.screenY, ui.field_i.field_tb, 104);
+          var2.drawLayers(ui.field_i.screenY, ui.field_i.field_tb, 104);
         }
     }
 

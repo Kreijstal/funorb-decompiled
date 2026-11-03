@@ -137,7 +137,7 @@ final class AudioService implements Runnable {
                       param0.writeByte(160, 4);
                     } else {
                       param0.writeByte(160, 2);
-                      param0.b((byte) -41, (String) (var10));
+                      param0.writeString((byte) -41, (String) (var10));
                     }
                   } else {
                     if (4 == var6_int) {
@@ -287,7 +287,7 @@ final class AudioService implements Runnable {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
         int var3 = 77 % ((29 - param0) / 46);
-        var2.g(param1, 15514);
+        var2.writeOpcode(param1, 15514);
         var2.writeByte(160, 1);
         var2.writeByte(160, 0);
     }

@@ -14,7 +14,7 @@ final class Vector3 {
     static SceneWidget field_e;
 
     final static void a(int param0, int param1, int param2) {
-        aa.field_f.g(58, 15514);
+        aa.field_f.writeOpcode(58, 15514);
         if (param1 == -18656) {
           aa.field_f.writeShort(1276387944, param2);
           aa.field_f.writeByte(160, param0);

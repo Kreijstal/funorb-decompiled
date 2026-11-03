@@ -248,7 +248,7 @@ final class IsaacRandom {
           if (param2 != 48077700) {
             field_j = (String) null;
           }
-          stackIn_6_0 = LoginDialog.a(param3.a(param1, param4, true), param2 ^ 48077726);
+          stackIn_6_0 = LoginDialog.a(param3.getFile(param1, param4, true), param2 ^ 48077726);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

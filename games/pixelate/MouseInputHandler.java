@@ -52,7 +52,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (ra.field_b == null) {
-            ra.field_b = OptionsScreen.field_p.a(param0 ^ 20278, MatchController.field_B, gd.field_g);
+            ra.field_b = OptionsScreen.field_p.requestSocket(param0 ^ 20278, MatchController.field_B, gd.field_g);
           }
           if (param0 == ra.field_b.field_b) {
             return false;

@@ -109,14 +109,14 @@ final class wo {
         CipherPacketBuffer var2Lifetime1;
         if (param0 == -1) {
           var2 = aa.field_f;
-          var2.g(param1, 15514);
+          var2.writeOpcode(param1, 15514);
           var2.writeByte(160, 1);
           var2.writeByte(160, 3);
           return;
         }
         field_f = (byte[][]) null;
         var2Lifetime1 = aa.field_f;
-        var2Lifetime1.g(param1, 15514);
+        var2Lifetime1.writeOpcode(param1, 15514);
         var2Lifetime1.writeByte(160, 1);
         var2Lifetime1.writeByte(160, 3);
     }

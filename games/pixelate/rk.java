@@ -30,7 +30,7 @@ final class rk {
           if (param1) {
             return false;
           }
-          var5 = param2.a(param3, param0, true);
+          var5 = param2.getFile(param3, param0, true);
           var4 = var5;
           if (var5 == null) {
             return false;
