@@ -57,7 +57,7 @@ final class DualLinkDeque {
         if (var2 == this.field_b) {
           return null;
         }
-        var2.e(17);
+        var2.unlinkSecondary(17);
         if (param0 == 80) {
           return var2;
         }
@@ -112,7 +112,7 @@ final class DualLinkDeque {
     final void addLast(int param0, DualLinkNode param1) {
         try {
           if (param1.secondaryPrevious != null) {
-            param1.e(17);
+            param1.unlinkSecondary(17);
           }
           param1.secondaryPrevious = this.field_b.secondaryPrevious;
           param1.secondaryNext = this.field_b;

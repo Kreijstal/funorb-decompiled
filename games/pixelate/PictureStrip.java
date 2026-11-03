@@ -190,26 +190,26 @@ final class PictureStrip {
             }
             if (var7 == 0) {
               if (var3 > 0) {
-                HighscoresScreen.field_q.a(var9, var10 - HighscoresScreen.field_q.field_B, var3 >> 1);
+                HighscoresScreen.field_q.drawAlpha(var9, var10 - HighscoresScreen.field_q.field_B, var3 >> 1);
               }
               if (this.field_l.length - 1 == var7 &&
                 var4 > 0) {
-                of.field_h.a(var9, 100 + var10, var4 >> 1);
+                of.field_h.drawAlpha(var9, 100 + var10, var4 >> 1);
               }
             } else {
               if (this.field_l.length - 1 == var7 &&
                 var4 > 0) {
-                of.field_h.a(var9, 100 + var10, var4 >> 1);
+                of.field_h.drawAlpha(var9, 100 + var10, var4 >> 1);
               }
             }
           } else {
-            gb.field_b.a(var9, var10, 128);
+            gb.field_b.drawAlpha(var9, var10, 128);
             this.field_l[var8].b(this.field_h + var9, var10 + this.field_a, (byte) -106);
             if (0 == var7) {
-              HighscoresScreen.field_q.a(var9, var10 - HighscoresScreen.field_q.field_B, 128);
+              HighscoresScreen.field_q.drawAlpha(var9, var10 - HighscoresScreen.field_q.field_B, 128);
             }
             if (this.field_l.length - 1 == var7) {
-              of.field_h.a(var9, var10 + 100, 128);
+              of.field_h.drawAlpha(var9, var10 + 100, 128);
             }
           }
         }

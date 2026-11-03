@@ -273,16 +273,16 @@ final class StripedProgressBar extends UiComponent {
           }
           hp.a(this.rightCapMask.field_F + param2, this.field_C + param3, var5_int - this.rightCapMask.field_F, (byte) -112, param3);
           for (var6 = param2 - this.stripeOffset; var5_int > var6; var6 = var6 + param0.field_F) {
-            param0.b(var6, param3);
+            param0.drawTransparent(var6, param3);
           }
           LinkButtonPainter.a((byte) 92);
           if (this.rightCapMask.field_F + param2 >= SoftwareRasterizer.field_e) {
             Checkbox.a(-122, this.capWorkSurface);
-            param0.b(-this.stripeOffset, 0);
-            param0.b(-this.stripeOffset + this.field_M * 2, 0);
-            this.field_K.g(0, 0);
+            param0.drawTransparent(-this.stripeOffset, 0);
+            param0.drawTransparent(-this.stripeOffset + this.field_M * 2, 0);
+            this.field_K.drawMultiply(0, 0);
             LinkButtonPainter.a((byte) 92);
-            this.capWorkSurface.b(param2, param3);
+            this.capWorkSurface.drawTransparent(param2, param3);
           }
           if (-this.rightCapMask.field_F + var5_int > SoftwareRasterizer.field_h) {
             return;
@@ -290,11 +290,11 @@ final class StripedProgressBar extends UiComponent {
           Checkbox.a(param1 - 1177347371, this.capWorkSurface);
           for (var7 = this.field_E - (this.rightCapMask.field_F - this.stripeOffset); this.field_M * 2 < var7; var7 = var7 - 2 * this.field_M) {
           }
-          param0.b(-var7, 0);
-          param0.b(-var7 + this.field_M * 2, 0);
-          this.rightCapMask.g(0, 0);
+          param0.drawTransparent(-var7, 0);
+          param0.drawTransparent(-var7 + this.field_M * 2, 0);
+          this.rightCapMask.drawMultiply(0, 0);
           LinkButtonPainter.a((byte) 92);
-          this.capWorkSurface.b(-this.rightCapMask.field_F + var5_int, param3);
+          this.capWorkSurface.drawTransparent(-this.rightCapMask.field_F + var5_int, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

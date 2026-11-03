@@ -84,7 +84,7 @@ final class ig {
             e.field_a = 200;
             var2 = (cm) (bo.field_d.c(1504642273));
             while (var2 != null) {
-              if (!var2.field_k.b(0)) {
+              if (!var2.field_k.isLinked(0)) {
                 var2.unlink(2779);
               }
               var2 = (cm) (bo.field_d.last(1504642273));
@@ -92,7 +92,7 @@ final class ig {
             if (LoginCredentials.field_b != null) {
               var2Lifetime1 = (cm) (LoginCredentials.field_b.c(1504642273));
               while (var2Lifetime1 != null) {
-                if (!var2Lifetime1.field_k.b(0)) {
+                if (!var2Lifetime1.field_k.isLinked(0)) {
                   var2Lifetime1.unlink(2779);
                 }
                 var2Lifetime1 = (cm) (LoginCredentials.field_b.last(1504642273));

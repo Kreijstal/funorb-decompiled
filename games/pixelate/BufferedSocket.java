@@ -118,7 +118,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final int c(byte param0) throws IOException {
+    final int readUnsignedByte(byte param0) throws IOException {
         if (param0 != -81) {
           this.writeFailed = false;
         }
@@ -224,7 +224,7 @@ final class BufferedSocket implements Runnable {
         return this.input.available();
     }
 
-    final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {
+    final void readFully(byte[] param0, int param1, byte param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;

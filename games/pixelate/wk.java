@@ -57,7 +57,7 @@ final class wk extends LoginCredentials {
     final void a(byte param0, PacketBuffer param1) {
         try {
           param1.a((byte) -66, this.field_h);
-          param1.a(-129, this.field_k);
+          param1.writeBase38Name(-129, this.field_k);
           if (param0 != -12) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a((byte) -114, (PacketBuffer) null);

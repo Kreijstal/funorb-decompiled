@@ -162,7 +162,7 @@ final class ValidationIndicator extends TextButton {
               }
             }
           }
-          var17.a(112, 144, var17.field_A << 4, var17.field_B << 4, -this.field_Q << 10, 4096);
+          var17.drawRotatedAboutPivot(112, 144, var17.field_A << 4, var17.field_B << 4, -this.field_Q << 10, 4096);
           LinkButtonPainter.a((byte) 92);
           QuickChatPhraseCache.field_k.drawAdditive(var5 - var17.field_A, var7 - var17.field_B, 256);
           return;
@@ -200,7 +200,7 @@ final class ValidationIndicator extends TextButton {
             }
           }
         }
-        var16.a(112, 144, var16.field_A << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
+        var16.drawRotatedAboutPivot(112, 144, var16.field_A << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
         LinkButtonPainter.a((byte) 92);
         QuickChatPhraseCache.field_k.drawAdditive(var5 - var16.field_A, var7 - var16.field_B, 256);
     }

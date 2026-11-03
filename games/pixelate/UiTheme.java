@@ -337,14 +337,14 @@ final class UiTheme {
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);
-          var14.a(param0 + 107, var13.a());
-          var13.b();
+          var14.a(param0 + 107, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new StatefulTextPainter(var4, true);
-          var14Lifetime1.a(79, var13.a());
-          var13.b();
+          var14Lifetime1.a(79, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new StatefulTextPainter(var4, true);
-          var14Lifetime2.a(-8, var13.a());
-          var13.b();
+          var14Lifetime2.a(-8, var13.copy());
+          var13.rotateClockwise();
           var19 = new StatefulTextPainter(var4, true);
           var19.a(param0 ^ -20, var13);
         } catch (RuntimeException runtimeException) {

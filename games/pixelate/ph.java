@@ -61,7 +61,7 @@ final class ph extends IntrusiveNode {
                   return stackIn_30_0;
                 }
               } else {
-                var1_int = ConditionalTextValue.field_d.c((byte) -81);
+                var1_int = ConditionalTextValue.field_d.readUnsignedByte((byte) -81);
                 if (0 != var1_int) {
                   stackIn_26_0 = ce.a((byte) -124, var1_int);
                   return stackIn_26_0;

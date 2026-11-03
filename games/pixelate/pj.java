@@ -125,7 +125,7 @@ final class pj {
           this.field_e.makeRasterTarget();
           SoftwareRasterizer.clear();
           rk.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -181,17 +181,17 @@ final class pj {
             return;
           }
           if (this.field_h < 8) {
-            this.field_e.d(-(this.field_j >> 1) + this.field_c, -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g);
+            this.field_e.drawScaled(-(this.field_j >> 1) + this.field_c, -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g);
             return;
           }
           if (66 > this.field_h) {
-            this.field_e.b(this.field_c - (this.field_e.field_A >> 1), this.field_d - (this.field_e.field_B >> 1));
+            this.field_e.drawTransparent(this.field_c - (this.field_e.field_A >> 1), this.field_d - (this.field_e.field_B >> 1));
             return;
           }
           if (0 >= this.field_b) {
             return;
           }
-          this.field_e.c(this.field_c - (this.field_j >> 1), -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g, this.field_b);
+          this.field_e.drawScaledAlpha(this.field_c - (this.field_j >> 1), -(this.field_g >> 1) + this.field_d, this.field_j, this.field_g, this.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

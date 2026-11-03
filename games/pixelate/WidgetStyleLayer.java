@@ -183,7 +183,7 @@ final class WidgetStyleLayer {
             if (2 == param4.field_d) {
               var7 = var7 + (-this.field_j.field_B + param2.field_C);
             }
-            this.field_j.b(var6_int, var7);
+            this.field_j.drawTransparent(var6_int, var7);
           }
           var6 = param4.getDisplayText(param2, -472248767);
           if (param3 < 115) {

@@ -89,7 +89,7 @@ final class ki {
             var5 = null;
           }
           var10.position = var10.position + 4;
-          if (!var10.d((byte) 124)) {
+          if (!var10.verifyCrc32((byte) 124)) {
             na.a(true);
             return;
           }

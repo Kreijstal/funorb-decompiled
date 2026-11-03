@@ -18,9 +18,9 @@ final class qk {
         int var2 = 0;
         if (this.field_f < 12) {
           var2 = 120 - this.field_f * 10;
-          AccountRequestDialog.field_tb[this.field_b].a(42 * this.field_h + 148, 42 * (-1 + this.field_a) - 126, var2);
+          AccountRequestDialog.field_tb[this.field_b].drawAlpha(42 * this.field_h + 148, 42 * (-1 + this.field_a) - 126, var2);
         }
-        AccountRequestDialog.field_tb[this.field_b].a(148 + this.field_h * 42, -126 + 42 * this.field_a, 160);
+        AccountRequestDialog.field_tb[this.field_b].drawAlpha(148 + this.field_h * 42, -126 + 42 * this.field_a, 160);
         if (param0 >= 43) {
           return;
         }

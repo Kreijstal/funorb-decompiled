@@ -222,7 +222,7 @@ final class SocketJs5Transport extends Js5Transport {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.transport.a(this.field_c.field_D.payload, this.field_c.field_D.position, (byte) 119, var6);
+                  this.transport.readFully(this.field_c.field_D.payload, this.field_c.field_D.position, (byte) 119, var6);
                   if (this.field_a != 0) {
                     var17 = 0;
                     var7 = var17;
@@ -238,7 +238,7 @@ final class SocketJs5Transport extends Js5Transport {
                       this.field_c.field_H = 0;
                     }
                   } else {
-                    this.field_c.e(17);
+                    this.field_c.unlinkSecondary(17);
                     this.field_c.field_v = false;
                     this.field_c = null;
                   }
@@ -247,7 +247,7 @@ final class SocketJs5Transport extends Js5Transport {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.transport.a(this.field_g.payload, this.field_g.position, (byte) 119, var5);
+                  this.transport.readFully(this.field_g.payload, this.field_g.position, (byte) 119, var5);
                   if (0 != this.field_a) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.field_g.payload[var6 + this.field_g.position] = (byte)DraggableWidget.a((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_a);

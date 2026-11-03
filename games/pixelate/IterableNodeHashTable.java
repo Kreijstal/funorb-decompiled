@@ -32,7 +32,7 @@ final class IterableNodeHashTable implements Iterable {
         return var2;
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode findByKey(int param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;

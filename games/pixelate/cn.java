@@ -150,7 +150,7 @@ final class cn {
               if (QueuedInput.a(var10Lifetime1, false)) {
                 var11 = MatchController.field_y.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  MatchController.field_y[var12] = MusicCrossfadeStream.field_o.e(122);
+                  MatchController.field_y[var12] = MusicCrossfadeStream.field_o.readNullCircumfixedString(122);
                 }
                 na.a(true);
                 qj.field_b = false;
@@ -162,7 +162,7 @@ final class cn {
           if (GameModeSelectScreen.field_s == StatusBar.field_l &&
             MusicPatchNode.e(-18481)) {
             if (TextLayoutLine.field_e == 255) {
-              var9_ref_String = MusicCrossfadeStream.field_o.e((byte) 40);
+              var9_ref_String = MusicCrossfadeStream.field_o.readOptionalString((byte) 40);
               if (var9_ref_String != null) {
                 QueuedInput.a(var9_ref_String, 126, AudioService.a(13867));
               }

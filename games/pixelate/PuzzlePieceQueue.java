@@ -146,7 +146,7 @@ final class PuzzlePieceQueue {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         SoftwareRasterizer.drawRoundedRectangle(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
-        SoftwareRasterizer.a(535, -15 + this.field_o, 62, 15 + (this.field_b + 15), 6, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(535, -15 + this.field_o, 62, 15 + (this.field_b + 15), 6, 0, 128);
         li.field_d.drawAdditive(542, this.field_g - 8, 256);
         var2 = this.field_o;
         if (param0 != 550) {
@@ -160,28 +160,28 @@ final class PuzzlePieceQueue {
           } else {
             stackIn_7_1 = 1;
           }
-          ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).b(550, var2);
+          ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).drawTransparent(550, var2);
           stackIn_9_0 = LoginCredentials.field_e.field_a;
           if (var4[1]) {
             stackIn_10_1 = 1;
           } else {
             stackIn_10_1 = 0;
           }
-          ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).b(566, var2);
+          ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).drawTransparent(566, var2);
           stackIn_12_0 = LoginCredentials.field_e.field_a;
           if (var4[2]) {
             stackIn_13_1 = 1;
           } else {
             stackIn_13_1 = 0;
           }
-          ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).b(550, var2 + 16);
+          ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).drawTransparent(550, var2 + 16);
           stackIn_15_0 = LoginCredentials.field_e.field_a;
           if (!var4[3]) {
             stackIn_16_1 = 0;
           } else {
             stackIn_16_1 = 1;
           }
-          ((Sprite) (Object) stackIn_15_0[stackIn_16_1]).b(566, 16 + var2);
+          ((Sprite) (Object) stackIn_15_0[stackIn_16_1]).drawTransparent(566, 16 + var2);
           if (var3 < -1 + this.field_p) {
             SoftwareRasterizer.fillRectangleAlpha(550, var2, 32, 32, 0, 128);
           }

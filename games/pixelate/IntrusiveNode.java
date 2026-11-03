@@ -359,7 +359,7 @@ class IntrusiveNode {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isLinked(int param0) {
         if (this.previous == null) {
           return false;
         }

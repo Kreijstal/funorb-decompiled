@@ -60,11 +60,11 @@ abstract class CanvasRasterBuffer {
         }
     }
 
-    final void a(int param0) {
+    final void bindRaster(int param0) {
         if (param0 != 19692) {
           return;
         }
-        SoftwareRasterizer.a(this.field_e, this.field_a, this.field_i);
+        SoftwareRasterizer.setTarget(this.field_e, this.field_a, this.field_i);
     }
 
     public static void releaseStatics(boolean param0) {

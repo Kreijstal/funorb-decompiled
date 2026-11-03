@@ -258,7 +258,7 @@ final class InputQueue {
         try {
           var4 = null;
           for (var5 = 0; var5 < this.field_e.length; var5++) {
-            if (this.field_e[var5].b(0)) {
+            if (this.field_e[var5].isLinked(0)) {
               continue;
             }
             var4 = this.field_e[var5];

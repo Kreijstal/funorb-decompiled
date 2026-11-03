@@ -26,13 +26,13 @@ class DualLinkNode extends IntrusiveNode {
 
     final long a(boolean param0) {
         if (!param0) {
-          this.e(-120);
+          this.unlinkSecondary(-120);
           return this.field_q;
         }
         return this.field_q;
     }
 
-    final void e(int param0) {
+    final void unlinkSecondary(int param0) {
         if (null == this.secondaryPrevious) {
           return;
         }
@@ -47,7 +47,7 @@ class DualLinkNode extends IntrusiveNode {
 
     final boolean f(int param0) {
         if (param0 != 0) {
-          this.e(-41);
+          this.unlinkSecondary(-41);
           if (this.secondaryPrevious != null) {
             return true;
           }

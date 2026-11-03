@@ -58,7 +58,7 @@ final class ArchiveIndex {
           if (QuickChatCategoryCache.field_d != null) {
             var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a(-109));
             while (var3 != null) {
-              var3.e(17);
+              var3.unlinkSecondary(17);
               var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a((byte) 50));
             }
             QuickChatCategoryCache.field_d = null;

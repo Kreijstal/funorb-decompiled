@@ -137,7 +137,7 @@ final class KiteBackground extends BackgroundScene {
         jm[] var2 = this.field_n;
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
-          SocketConnector.field_c[var4.field_n].b((int)var4.field_m, var4.field_c, var4.field_a, var4.field_f, var4.field_t);
+          SocketConnector.field_c[var4.field_n].drawScaledWithOpacity((int)var4.field_m, var4.field_c, var4.field_a, var4.field_f, var4.field_t);
         }
         fo[] var2_array = this.field_m;
         int var6 = 0;

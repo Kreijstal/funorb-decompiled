@@ -50,7 +50,7 @@ final class AlphaContainer extends SingleChildContainer {
         int var6 = -5 % ((70 - param3) / 49);
         this.child.drawLayer(0, param1, 0, (byte) -79);
         LinkButtonPainter.a((byte) 92);
-        var7.a(this.field_z + param2, this.field_p + param0, this.field_O);
+        var7.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_O);
     }
 
     final static String a(String param0, int param1, String[] param2) {
@@ -304,11 +304,11 @@ final class AlphaContainer extends SingleChildContainer {
             var11 = var18.readUnsignedByte(255);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var18.a(0);
+                var8[var12] = var18.readByte(0);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var18.a(DraggableWidget.a((int) param0, -95));
+                  dupTemp$1 = var18.readByte(DraggableWidget.a((int) param0, -95));
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;
@@ -323,13 +323,13 @@ final class AlphaContainer extends SingleChildContainer {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var12 + var5 * var13] = var18.a(0);
+                  var8[var12 + var5 * var13] = var18.readByte(0);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var18.a(0);
+                    dupTemp$0 = var18.readByte(0);
                     var9[var12 + var13 * var5] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_47_0 = var10;

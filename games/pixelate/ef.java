@@ -121,7 +121,7 @@ final class ef {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var28.readUnsignedByte(255);
                   var21 = rh.field_u[var20].field_e;
-                  var22 = var28.a(false);
+                  var22 = var28.readLong(false);
                   var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
@@ -168,7 +168,7 @@ final class ef {
             var4.unlink(2779);
           } else if (var2 == 1) {
             var3 = var28.a((byte) -125);
-            var4_long = var28.a(false);
+            var4_long = var28.readLong(false);
             var6_ref_rh = (rh) (MenuScreen.field_b.c(1504642273));
             while (var6_ref_rh != null) {
               if (var3 != var6_ref_rh.field_o) {

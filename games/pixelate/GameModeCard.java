@@ -90,34 +90,34 @@ final class GameModeCard {
           this.field_c = -4;
           if (this.field_c <= 0) {
             if (this.field_c >= NodeHashTableIterator.field_f) {
-              lg.field_d[this.field_b].b(this.field_g, 170);
+              lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
               return;
             }
-            lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+            lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
             return;
           }
-          SoftwareRasterizer.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
+          SoftwareRasterizer.fillRadialPaletteCircle(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
           if (this.field_c >= NodeHashTableIterator.field_f) {
-            lg.field_d[this.field_b].b(this.field_g, 170);
+            lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
             return;
           }
-          lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+          lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
           return;
         }
         if (this.field_c > 0) {
-          SoftwareRasterizer.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
+          SoftwareRasterizer.fillRadialPaletteCircle(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
           if (this.field_c >= NodeHashTableIterator.field_f) {
-            lg.field_d[this.field_b].b(this.field_g, 170);
+            lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
             return;
           }
-          lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+          lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
           return;
         }
         if (this.field_c >= NodeHashTableIterator.field_f) {
-          lg.field_d[this.field_b].b(this.field_g, 170);
+          lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
           return;
         }
-        lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+        lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
     }
 
     final static rk a(int param0, int param1) {

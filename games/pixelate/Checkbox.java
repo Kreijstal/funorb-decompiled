@@ -51,7 +51,7 @@ final class Checkbox extends TextButton {
     final static void a(int param0, Sprite param1) {
         try {
           MidiPcmStream.a(false);
-          SoftwareRasterizer.a(param1.pixels, param1.field_A, param1.field_B);
+          SoftwareRasterizer.setTarget(param1.pixels, param1.field_A, param1.field_B);
           if (param0 >= -58) {
             field_V = (Sprite[]) null;
           }

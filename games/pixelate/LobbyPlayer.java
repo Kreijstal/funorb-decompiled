@@ -82,7 +82,7 @@ final class LobbyPlayer extends SceneWidget {
         stackIn_5_0 = (0 != (128 & var3));
         TextWidgetPainter.field_n = stackIn_5_0;
         BoundedRandomAccessFile.field_d = var8.readUnsignedByte(255);
-        cd.field_g = var8.a(false);
+        cd.field_g = var8.readLong(false);
         if (HowToPlayScreen.field_o == 2) {
           qf.field_b = var8.a((byte) 2);
           ModalStack.field_I = var8.readUnsignedMedium((byte) 13);

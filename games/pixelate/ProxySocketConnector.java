@@ -223,7 +223,7 @@ final class ProxySocketConnector extends SocketConnector {
             gd.field_f[var3].makeRasterTarget();
             var4 = (double)var3 * 6.283185307179586 / 50.0;
             var6 = (int)(16.0 * Math.sin(var4)) >> 1;
-            SoftwareRasterizer.a(512, 512, 48 + var6 << 4, 255, var13);
+            SoftwareRasterizer.fillRadialPaletteCircle(512, 512, 48 + var6 << 4, 255, var13);
             for (var7 = 0; SoftwareRasterizer.field_k.length > var7; var7++) {
               SoftwareRasterizer.field_k[var7] = 16777215 - SoftwareRasterizer.field_k[var7];
             }

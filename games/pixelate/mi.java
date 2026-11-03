@@ -175,7 +175,7 @@ final class mi extends MenuScreen {
             }
             if (GameModeSelectScreen.field_s == ke.field_b &&
               QueuedInput.a(8, false)) {
-              NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.a(false);
+              NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.readLong(false);
               MusicCrossfadeStream.field_o.position = 0;
               io.a(param4, -67, li.field_g, param3, param0);
               GameModeSelectScreen.field_s = BoardView.field_b;
@@ -208,12 +208,12 @@ final class mi extends MenuScreen {
             }
             if (e.field_d == GameModeSelectScreen.field_s &&
               MusicPatchNode.e(-18481)) {
-              vn.field_b = MusicCrossfadeStream.field_o.a(false);
+              vn.field_b = MusicCrossfadeStream.field_o.readLong(false);
               GameResultsScreen.field_t = param2;
               wo.field_h = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               BufferedRandomAccessFile.field_j = MusicCrossfadeStream.field_o.a((byte) -116);
-              var6 = MusicCrossfadeStream.field_o.e((byte) 79);
+              var6 = MusicCrossfadeStream.field_o.readOptionalString((byte) 79);
               var7 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 MarkerSlider.d((byte) -51);
@@ -238,7 +238,7 @@ final class mi extends MenuScreen {
                 BufferedSocket.field_k = MusicCrossfadeStream.field_o.a((byte) -115);
                 dc.field_b = new byte[BufferedSocket.field_k];
                 for (var8 = 0; BufferedSocket.field_k > var8; var8++) {
-                  dc.field_b[var8] = MusicCrossfadeStream.field_o.a(0);
+                  dc.field_b[var8] = MusicCrossfadeStream.field_o.readByte(0);
                 }
               }
               ModalStack.field_J = MusicCrossfadeStream.field_o.readString(5);

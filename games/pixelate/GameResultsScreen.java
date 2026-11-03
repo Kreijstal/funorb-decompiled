@@ -87,9 +87,9 @@ final class GameResultsScreen extends MenuScreen {
         Match var9;
         var8 = Pixelate.field_H ? 1 : 0;
         if (this.field_G != 1) {
-          NumericDateInputWidget.field_W[7].b(0, 45);
+          NumericDateInputWidget.field_W[7].drawTransparent(0, 45);
         } else {
-          NumericDateInputWidget.field_W[4].b(0, 45);
+          NumericDateInputWidget.field_W[4].drawTransparent(0, 45);
         }
         this.d((byte) -81);
         this.b((byte) -71);
@@ -101,9 +101,9 @@ final class GameResultsScreen extends MenuScreen {
           this.a((String) null, 91, (Match) null);
         }
         for (var5_int = 0; 5 > var5_int; var5_int++) {
-          LoginCredentials.field_e.field_a[0].f(var3, var4);
+          LoginCredentials.field_e.field_a[0].drawOpaque(var3, var4);
           var4 = var4 + var2;
-          LoginCredentials.field_e.field_a[1].f(var3 + (var2 >> 2), var4);
+          LoginCredentials.field_e.field_a[1].drawOpaque(var3 + (var2 >> 2), var4);
           var4 = var4 + var2;
         }
         var5 = rk.field_e;
@@ -384,10 +384,10 @@ final class GameResultsScreen extends MenuScreen {
         }
         CanvasRasterBuffer var6 = ClientException.field_f;
         ClientException.field_f = EditableTextWidget.field_R;
-        ClientException.field_f.a(19692);
+        ClientException.field_f.bindRaster(19692);
         this.c(0);
         ClientException.field_f = var6;
-        ClientException.field_f.a(19692);
+        ClientException.field_f.bindRaster(19692);
         SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
     }
 

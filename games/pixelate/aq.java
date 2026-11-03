@@ -43,7 +43,7 @@ final class aq {
             return stackIn_10_0;
           }
           var7.unlink(param3 ^ -23386);
-          var7.e(param3 + 20884);
+          var7.unlinkSecondary(param3 + 20884);
           aj.field_t = aj.field_t - 1;
           var5 = aa.field_f;
           var5.g(param1, 15514);

@@ -81,7 +81,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
           of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
           of.field_h.makeRasterTarget();
           HighscoresScreen.field_q.drawVerticalFlip(0, 0);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           return;
         }
         field_C = (BackgroundScene[]) null;
@@ -97,7 +97,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
         of.field_h.makeRasterTarget();
         HighscoresScreen.field_q.drawVerticalFlip(0, 0);
-        ClientException.field_f.a(19692);
+        ClientException.field_f.bindRaster(19692);
     }
 
     public static void releaseStatics(byte param0) {

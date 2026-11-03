@@ -142,12 +142,12 @@ final class bd {
           bq.field_b.e(-127);
           var1 = vm.field_b.a(-89);
           while (var1 != null) {
-            var1.e(17);
+            var1.unlinkSecondary(17);
             var1 = vm.field_b.a((byte) 50);
           }
           var1Lifetime1 = GameResultsScreen.field_q.a(-84);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.e(17);
+            var1Lifetime1.unlinkSecondary(17);
             var1Lifetime1 = GameResultsScreen.field_q.a((byte) 50);
           }
           ValidatedTextWidget.field_db = 0;

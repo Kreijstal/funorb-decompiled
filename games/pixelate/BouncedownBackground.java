@@ -123,7 +123,7 @@ final class BouncedownBackground extends BackgroundScene {
         int var5;
         vn[] var6;
         var5 = Pixelate.field_H ? 1 : 0;
-        ArrayWidgetContainer.field_H.f(0, 0);
+        ArrayWidgetContainer.field_H.drawOpaque(0, 0);
         var6 = this.field_n;
         var2 = var6;
         if (!param0) {

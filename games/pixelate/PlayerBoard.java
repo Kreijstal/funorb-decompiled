@@ -61,7 +61,7 @@ final class PlayerBoard {
             stackIn_10_0[stackIn_10_1] = stackIn_11_2;
           }
           for (var3_intLifetime1 = 0; this.cells.length > var3_intLifetime1; var3_intLifetime1++) {
-            this.cells[var3_intLifetime1] = param1.a(0);
+            this.cells[var3_intLifetime1] = param1.readByte(0);
           }
           for (var3_intLifetime2 = 0; this.field_u > var3_intLifetime2; var3_intLifetime2++) {
             JavaRandomHelpers.a(this.field_t, -104, 1);

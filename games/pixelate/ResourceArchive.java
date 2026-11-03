@@ -426,7 +426,7 @@ final class ResourceArchive {
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
-              var26.a(param2, 19324, 5, var26.payload.length);
+              var26.xteaDecryptRange(param2, 19324, 5, var26.payload.length);
               decompiledFrameRemainder1 = false;
             }
           }

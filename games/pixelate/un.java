@@ -21,8 +21,8 @@ final class un {
         if (-1 != MatchController.field_q) {
           var1 = -ValidatedTextWidget.field_bb + 50;
           SoftwareRasterizer.fillRectangleAlpha(var1, 70, MatchHud.field_a, 48, 65793, 160);
-          CanvasRasterBuffer.field_b.a(MatchHud.field_a + var1, 70, 160);
-          MenuScreen.field_c.a(var1 - 22, 70, 160);
+          CanvasRasterBuffer.field_b.drawAlpha(MatchHud.field_a + var1, 70, 160);
+          MenuScreen.field_c.drawAlpha(var1 - 22, 70, 160);
           oo.field_c[MatchController.field_q].drawQuarterSize(var1, 78);
           qj.field_e.drawText(GameApplet.field_n[MatchController.field_q], var1 + 16 + 32, 99, 16777215, -1);
         }

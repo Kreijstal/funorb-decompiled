@@ -61,7 +61,7 @@ final class SecondaryNodeHashTable {
         DualLinkNode var5 = null;
         try {
           if (param1.secondaryPrevious != null) {
-            param1.e(17);
+            param1.unlinkSecondary(17);
           }
           var5 = this.field_a[(int)((long)(this.field_h - 1) & param2)];
           param1.secondaryPrevious = var5.secondaryPrevious;

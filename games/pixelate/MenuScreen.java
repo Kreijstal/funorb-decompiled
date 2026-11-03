@@ -70,7 +70,7 @@ abstract class MenuScreen {
           }
           if (param4 > 0 &&
             param7 > 0) {
-            var21 = param3.a();
+            var21 = param3.copy();
             var30 = SoftwareRasterizer.field_k;
             var10 = SoftwareRasterizer.field_j;
             var11 = SoftwareRasterizer.field_d;
@@ -100,8 +100,8 @@ abstract class MenuScreen {
               }
               var13 = var13 + var14;
             }
-            var21.b(-param3.field_D, -param3.field_y);
-            SoftwareRasterizer.a(var30, var10, var11);
+            var21.drawTransparent(-param3.field_D, -param3.field_y);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;
           }
@@ -273,7 +273,7 @@ abstract class MenuScreen {
     }
 
     void c(int param0) {
-        EmergentBehaviourBackground.field_u.f(0, param0);
+        EmergentBehaviourBackground.field_u.drawOpaque(0, param0);
         rh.b((byte) -67);
     }
 
@@ -465,7 +465,7 @@ abstract class MenuScreen {
           }
           var15 = stackIn_45_0;
           var16 = Js5NetworkRequest.field_C[0].field_a;
-          var16[1].f(-7 + (var12 + var15), 7 + var10);
+          var16[1].drawOpaque(-7 + (var12 + var15), 7 + var10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -506,7 +506,7 @@ abstract class MenuScreen {
           if (param3 != -6) {
             field_n = -115;
           }
-          MusicPatch.field_m.b(var8, var9);
+          MusicPatch.field_m.drawTransparent(var8, var9);
           ConditionalTextValue.field_h.drawText(param1, var6_int + var8 + MusicPatch.field_m.field_A, var9 + ConditionalTextValue.field_h.maxAscent, var10, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -528,7 +528,7 @@ abstract class MenuScreen {
         }
         pe.field_b.makeRasterTarget();
         this.c(0);
-        ClientException.field_f.a(19692);
+        ClientException.field_f.bindRaster(19692);
         SpriteEffectHelpers.a(pe.field_b.pixels, var4, var5);
     }
 

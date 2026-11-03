@@ -127,7 +127,7 @@ final class TabbedPanel extends SceneWidget {
                       var12[var16] = ImageProducerRasterBuffer.loadClassOrPrimitive(var10[var16], -113);
                       var16++;
                     }
-                    var17.field_v[var5] = param3.a(0, var12, var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var19, -115));
+                    var17.field_v[var5] = param3.lookupMethod(0, var12, var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var19, -115));
                     var17.field_w[var5] = var20;
                   }
                 } else {

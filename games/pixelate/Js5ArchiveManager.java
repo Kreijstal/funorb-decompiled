@@ -60,7 +60,7 @@ final class Js5ArchiveManager {
         hp.a(SoftwareRasterizer.field_j - 640 >> 1, SoftwareRasterizer.field_d, 640 + SoftwareRasterizer.field_j >> 1, (byte) -91, 0);
         if (oo.field_b > 0) {
           if (CheckboxPainter.field_j != null) {
-            CheckboxPainter.field_j.f(GreenGrowTheRushesBackground.field_n.field_D, 0);
+            CheckboxPainter.field_j.drawOpaque(GreenGrowTheRushesBackground.field_n.field_D, 0);
           }
           stackIn_8_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_9_1 = (param1) && (!LobbyPlayer.field_Wb);
@@ -72,7 +72,7 @@ final class Js5ArchiveManager {
         if (!(vn.field_g <= 0) ||
           !(Checkbox.field_W <= 0)) {
           if (CheckboxPainter.field_j != null) {
-            CheckboxPainter.field_j.f(ff.field_h.field_D, 0);
+            CheckboxPainter.field_j.drawOpaque(ff.field_h.field_D, 0);
           }
           stackIn_23_0 = ff.field_h;
           stackIn_24_1 = (param1) && (!EmergentBehaviourBackground.field_o);

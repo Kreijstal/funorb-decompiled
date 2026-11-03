@@ -63,7 +63,7 @@ final class id {
             SocialListEntry.field_Hb[var1_int] = new Sprite(64, 64);
           }
           ProxySocketConnector.a((byte) 99);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           MatchController.field_p = new IndexedSprite[10];
           for (var1_intLifetime1 = 0; var1_intLifetime1 < MatchController.field_p.length; var1_intLifetime1++) {
             MatchController.field_p[var1_intLifetime1] = new IndexedSprite(64, 64, 2);

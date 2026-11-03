@@ -316,7 +316,7 @@ final class nk {
           LinkButtonPainter.field_h = param1;
           var2 = (cm) (bo.field_d.c(param0 ^ 1504642236));
           while (null != var2) {
-            stackIn_22_0 = var2.field_k.b(param0 - 93);
+            stackIn_22_0 = var2.field_k.isLinked(param0 - 93);
             if (var3 != 0) {
               while (true) {
                 if (!stackIn_22_0) {
@@ -346,7 +346,7 @@ final class nk {
               if (var3 != 0) {
                 return;
               }
-              stackIn_22_0Lifetime1 = var2Lifetime1.field_k.b(0);
+              stackIn_22_0Lifetime1 = var2Lifetime1.field_k.isLinked(0);
               if (!stackIn_22_0Lifetime1) {
                 var2Lifetime1.unlink(2779);
               } else {

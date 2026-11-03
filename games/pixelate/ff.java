@@ -97,7 +97,7 @@ final class ff {
             break;
           }
           var8.unlink(2779);
-          var8.e(17);
+          var8.unlinkSecondary(17);
           if (param2 != -106) {
             field_d = -123L;
           }

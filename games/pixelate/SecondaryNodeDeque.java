@@ -19,7 +19,7 @@ final class SecondaryNodeDeque implements Iterable {
         if (this.field_a == var2) {
           return null;
         }
-        var2.e(17);
+        var2.unlinkSecondary(17);
         return var2;
     }
 
@@ -60,9 +60,9 @@ final class SecondaryNodeDeque implements Iterable {
             ed.field_b = new PacketBuffer(var7_int);
           }
           ed.field_b.position = 0;
-          ed.field_b.a(param3, param2, -3493, param6);
-          ed.field_b.c(var7_int, param1);
-          ed.field_b.a(true, var13);
+          ed.field_b.writeBytes(param3, param2, -3493, param6);
+          ed.field_b.padToPosition(var7_int, param1);
+          ed.field_b.xteaEncrypt(true, var13);
           if (null == bi.field_d ||
             !(100 <= bi.field_d.payload.length)) {
             bi.field_d = new PacketBuffer(100);
@@ -76,9 +76,9 @@ final class SecondaryNodeDeque implements Iterable {
             var11++;
           }
           bi.field_d.writeShort(1276387944, param3);
-          bi.field_d.a(param4, param0, 0);
-          param5.a(bi.field_d.position, 0, -3493, bi.field_d.payload);
-          param5.a(ed.field_b.position, 0, -3493, ed.field_b.payload);
+          bi.field_d.rsaEncrypt(param4, param0, 0);
+          param5.writeBytes(bi.field_d.position, 0, -3493, bi.field_d.payload);
+          param5.writeBytes(ed.field_b.position, 0, -3493, ed.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,9 +134,9 @@ final class SecondaryNodeDeque implements Iterable {
         return var2;
     }
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void addLast(byte param0, DualLinkNode param1) {
         if (param1.secondaryPrevious != null) {
-          param1.e(17);
+          param1.unlinkSecondary(17);
         }
         param1.secondaryNext = this.field_a;
         if (param0 <= 0) {

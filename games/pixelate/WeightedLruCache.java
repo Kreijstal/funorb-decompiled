@@ -32,7 +32,7 @@ final class WeightedLruCache {
           }
           var6_ref = new tj(param0, param3);
           this.field_e.a(var6_ref, param2, -1);
-          this.field_g.a((byte) 99, var6_ref);
+          this.field_g.addLast((byte) 99, var6_ref);
           ((ah) ((Object) var6_ref)).field_q = 0L;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -58,7 +58,7 @@ final class WeightedLruCache {
     }
 
     private final void a(long param0, byte param1) {
-        ah var4 = (ah) (this.field_e.a(1, param0));
+        ah var4 = (ah) (this.field_e.findByKey(1, param0));
         if (param1 == 11) {
           this.removeEntry(var4, -26133);
           return;
@@ -72,7 +72,7 @@ final class WeightedLruCache {
         tj var6;
         ah var7;
         tj var6Lifetime1;
-        var7 = (ah) (this.field_e.a(param1 ^ 1, param0));
+        var7 = (ah) (this.field_e.findByKey(param1 ^ 1, param0));
         if (var7 == null) {
           return null;
         }
@@ -80,19 +80,19 @@ final class WeightedLruCache {
         if (param1 == 0) {
           if (var5 == null) {
             var7.unlink(2779);
-            var7.e(17);
+            var7.unlinkSecondary(17);
             this.remainingCapacity = this.remainingCapacity + var7.field_t;
             return null;
           }
           if (var7.isSoft(true)) {
             var6 = new tj(var5, var7.field_t);
             this.field_e.a(var6, var7.field_e, -1);
-            this.field_g.a((byte) 83, var6);
+            this.field_g.addLast((byte) 83, var6);
             ((ah) ((Object) var6)).field_q = 0L;
             var7.unlink(2779);
-            var7.e(param1 ^ 17);
+            var7.unlinkSecondary(param1 ^ 17);
           } else {
-            this.field_g.a((byte) 91, var7);
+            this.field_g.addLast((byte) 91, var7);
             var7.field_q = 0L;
           }
           return var5;
@@ -100,19 +100,19 @@ final class WeightedLruCache {
         WeightedLruCache.releaseStatics(107);
         if (var5 == null) {
           var7.unlink(2779);
-          var7.e(17);
+          var7.unlinkSecondary(17);
           this.remainingCapacity = this.remainingCapacity + var7.field_t;
           return null;
         }
         if (var7.isSoft(true)) {
           var6Lifetime1 = new tj(var5, var7.field_t);
           this.field_e.a(var6Lifetime1, var7.field_e, -1);
-          this.field_g.a((byte) 83, var6Lifetime1);
+          this.field_g.addLast((byte) 83, var6Lifetime1);
           ((ah) ((Object) var6Lifetime1)).field_q = 0L;
           var7.unlink(2779);
-          var7.e(param1 ^ 17);
+          var7.unlinkSecondary(param1 ^ 17);
         } else {
-          this.field_g.a((byte) 91, var7);
+          this.field_g.addLast((byte) 91, var7);
           var7.field_q = 0L;
         }
         return var5;
@@ -132,7 +132,7 @@ final class WeightedLruCache {
             return;
           }
           param0.unlink(2779);
-          param0.e(17);
+          param0.unlinkSecondary(17);
           this.remainingCapacity = this.remainingCapacity + param0.field_t;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

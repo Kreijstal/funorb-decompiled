@@ -73,7 +73,7 @@ final class OptionsScreen extends MenuScreen {
           var16.makeRasterTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param4);
         }
-        SoftwareRasterizer.a(var18, var7, var8);
+        SoftwareRasterizer.setTarget(var18, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
@@ -137,7 +137,7 @@ final class OptionsScreen extends MenuScreen {
     final void a(int param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        NumericDateInputWidget.field_W[4].b(0, 45);
+        NumericDateInputWidget.field_W[4].drawTransparent(0, 45);
         this.d((byte) 50);
         this.b((byte) -71);
         if (param0 != 11) {
@@ -402,7 +402,7 @@ final class OptionsScreen extends MenuScreen {
             if (0 == this.field_o) {
               this.field_r = 1;
             }
-            jm.field_i[this.field_r].b(IconTextComponent.field_Jb, 150);
+            jm.field_i[this.field_r].drawTransparent(IconTextComponent.field_Jb, 150);
           } else {
             if (var4 != 31) {
               if (var4 == 32) {
@@ -425,7 +425,7 @@ final class OptionsScreen extends MenuScreen {
                 if (this.a(true, param2 - 3)) {
                   stackIn_20_0 = ih.field_a;
                   stackIn_21_1 = (!param1) ? 0 : 1;
-                  ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).b(var8, this.b(118, param2));
+                  ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).drawTransparent(var8, this.b(118, param2));
                 }
                 SoftwareRasterizer.resetClip();
               }
@@ -433,7 +433,7 @@ final class OptionsScreen extends MenuScreen {
               if (DirectByteStorage.field_k == this.field_o) {
                 this.field_v = 1;
               }
-              jm.field_i[this.field_v + 4].b(IconTextComponent.field_Jb, 355);
+              jm.field_i[this.field_v + 4].drawTransparent(IconTextComponent.field_Jb, 355);
             }
           }
         } else {

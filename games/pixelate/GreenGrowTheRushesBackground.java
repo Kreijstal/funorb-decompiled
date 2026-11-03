@@ -56,7 +56,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
         if (param0) {
           return;
         }
-        jk.field_a.f(0, 0);
+        jk.field_a.drawOpaque(0, 0);
     }
 
     final static void a(java.applet.Applet param0, int param1) {

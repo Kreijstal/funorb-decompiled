@@ -46,7 +46,7 @@ class BackgroundScene {
           if (var4 > 0) {
             var6 = -((DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent) / 2) + 141;
             for (var7 = 0; 10 > var7; var7++) {
-              SoftwareRasterizer.a(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
+              SoftwareRasterizer.fillRadialPaletteCircle(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
             }
           }
         }
@@ -90,7 +90,7 @@ class BackgroundScene {
             stackIn_3_0 = (bo[]) null;
             return stackIn_3_0;
           }
-          if (!param0.a((byte) 115)) {
+          if (!param0.isFullscreenAvailable((byte) 115)) {
             stackIn_7_0 = new bo[]{};
             return stackIn_7_0;
           }
@@ -230,7 +230,7 @@ class BackgroundScene {
           DateInputWidget.field_L.drawCentered(this.field_l, 1 + var5Lifetime1, var6 + 1, 0, -1);
           SoftwareRasterizer.blurRectangle(ScrollPaneWithFooter.field_Jb, ScrollPaneWithFooter.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
           DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1, var6, 0, -1);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           this.field_g = new int[2][];
           for (var7 = 0; this.field_k.length > var7; var7++) {
             var8_int = 0;

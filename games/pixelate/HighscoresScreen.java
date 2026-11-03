@@ -264,7 +264,7 @@ final class HighscoresScreen extends MenuScreen {
         int[] var11Lifetime2;
         PaletteBitmapFont var16Lifetime1;
         var15 = Pixelate.field_H ? 1 : 0;
-        NumericDateInputWidget.field_W[8].b(0, 45);
+        NumericDateInputWidget.field_W[8].drawTransparent(0, 45);
         this.b((byte) -71);
         if (param0 != 11) {
           this.a((byte) -95, false, 89);

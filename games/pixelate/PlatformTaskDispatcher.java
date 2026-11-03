@@ -29,7 +29,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private DisplayModeEnumerator field_s;
     BoundedRandomAccessFile field_e;
 
-    private final PlatformTask a(int param0, int param1, int param2, Object param3, int param4) {
+    private final PlatformTask enqueueTask(int param0, int param1, int param2, Object param3, int param4) {
         PlatformTask var6 = null;
         int var8 = 0;
         Throwable decompiledCaughtException = null;
@@ -54,14 +54,14 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    final PlatformTask a(int param0, Class[] param1, String param2, Class param3) {
+    final PlatformTask lookupMethod(int param0, Class[] param1, String param2, Class param3) {
         if (param0 != 0) {
           return (PlatformTask) null;
         }
-        return this.a(0, 8, 19, new Object[]{param3, param2, param1}, 0);
+        return this.enqueueTask(0, 8, 19, new Object[]{param3, param2, param1}, 0);
     }
 
-    private final static BoundedRandomAccessFile a(int param0, String param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(int param0, String param1, String param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;
@@ -83,7 +83,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (param0 >= -98) {
             var9 = (String) null;
-            PlatformTaskDispatcher.a(120, (String) null, (String) null, 79);
+            PlatformTaskDispatcher.openPreferencesFile(120, (String) null, (String) null, 79);
           }
           var5 = new String[]{"c:/rscache/", "/rscache/", field_a, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           for (var6 = 0; var6 < var5.length; var6++) {
@@ -108,7 +108,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final void a(int param0) {
+    final void shutdown(int param0) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
@@ -321,11 +321,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref_lj = PlatformTaskDispatcher.a(-117, (String) (var8.field_g), "", field_t);
+                        var3_ref_lj = PlatformTaskDispatcher.openPreferencesFile(-117, (String) (var8.field_g), "", field_t);
                         var8.field_e = var3_ref_lj;
                         break;
                       case 12:
-                        var3_ref_lj = PlatformTaskDispatcher.a(-121, (String) (var8.field_g), field_r, field_t);
+                        var3_ref_lj = PlatformTaskDispatcher.openPreferencesFile(-121, (String) (var8.field_g), field_r, field_t);
                         var8.field_e = var3_ref_lj;
                         break;
                       case 5:
@@ -433,20 +433,20 @@ final class PlatformTaskDispatcher implements Runnable {
     final PlatformTask a(java.awt.Frame param0, int param1) {
         if (param1 >= -71) {
           String var4 = (String) null;
-          PlatformTaskDispatcher.a(112, (String) null, (String) null, 9);
+          PlatformTaskDispatcher.openPreferencesFile(112, (String) null, (String) null, 9);
         }
-        return this.a(0, 7, -102, param0, 0);
+        return this.enqueueTask(0, 7, -102, param0, 0);
     }
 
     final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 27705) {
           String var7 = (String) null;
-          PlatformTaskDispatcher.a(-61, (String) null, (String) null, -124);
+          PlatformTaskDispatcher.openPreferencesFile(-61, (String) null, (String) null, -124);
         }
-        return this.a(param4 + (param0 << 16), 6, param3 - 27832, (Object) null, param1 + (param2 << 16));
+        return this.enqueueTask(param4 + (param0 << 16), 6, param3 - 27832, (Object) null, param1 + (param2 << 16));
     }
 
-    final boolean a(byte param0) {
+    final boolean isFullscreenAvailable(byte param0) {
         int var2 = -64 % ((28 - param0) / 46);
         if (!this.field_x) {
           return false;
@@ -459,35 +459,35 @@ final class PlatformTaskDispatcher implements Runnable {
 
     final PlatformTask a(String param0, Class param1, byte param2) {
         int var4 = -55 / ((param2 + 22) / 54);
-        return this.a(0, 9, 123, new Object[]{param1, param0}, 0);
+        return this.enqueueTask(0, 9, 123, new Object[]{param1, param0}, 0);
     }
 
     private final PlatformTask a(boolean param0, int param1, boolean param2, String param3) {
         if (param2) {
           field_i = (String) null;
         }
-        return this.a(0, param0 ? 22 : 1, 34, param3, param1);
+        return this.enqueueTask(0, param0 ? 22 : 1, 34, param3, param1);
     }
 
     final PlatformTask a(int param0, Runnable param1, byte param2) {
         if (param2 != -123) {
           return (PlatformTask) null;
         }
-        return this.a(0, 2, param2 + 249, param1, param0);
+        return this.enqueueTask(0, 2, param2 + 249, param1, param0);
     }
 
     final PlatformTask a(boolean param0) {
         if (!param0) {
           return (PlatformTask) null;
         }
-        return this.a(0, 5, -110, (Object) null, 0);
+        return this.enqueueTask(0, 5, -110, (Object) null, 0);
     }
 
     final PlatformTask a(byte param0, java.net.URL param1) {
         if (param0 != -44) {
           this.field_n = (Object) null;
         }
-        return this.a(0, 4, 32, param1, 0);
+        return this.enqueueTask(0, 4, 32, param1, 0);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {

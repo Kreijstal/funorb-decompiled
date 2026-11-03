@@ -64,8 +64,8 @@ final class td {
             var6_int = param3[0].field_A;
             var7 = param3[2].field_A;
             var8 = param3[1].field_A;
-            param3[0].d(param0, param1, param5);
-            param3[2].d(param2 + param0 - var7, param1, param5);
+            param3[0].drawWithOpacity(param0, param1, param5);
+            param3[2].drawWithOpacity(param2 + param0 - var7, param1, param5);
             if (param4 != 121) {
               return;
             }
@@ -74,7 +74,7 @@ final class td {
             var9 = param0 + var6_int;
             var10 = -var7 + (param0 + param2);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
-              param3[1].d(param0, param1, param5);
+              param3[1].drawWithOpacity(param0, param1, param5);
             }
             SoftwareRasterizer.restoreClip(Matrix3.field_c);
             return;
@@ -134,7 +134,7 @@ final class td {
           }
           SoftwareRasterizer.fillRoundedRectangle(8, 8, 32, 32, 6, 16777215);
           SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

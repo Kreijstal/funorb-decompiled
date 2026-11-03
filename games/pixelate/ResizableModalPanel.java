@@ -234,7 +234,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         if (!param2) {
           this.field_U = -54;
         }
-        ge.field_g.b(param0 + (this.field_E - 90), 10 + param1);
+        ge.field_g.drawTransparent(param0 + (this.field_E - 90), 10 + param1);
         MatchController.drawThreeSliceBar(-10 + this.field_E, param1 + 35, 19571, 5 + param0, HowToPlayScreen.field_s);
         MatchController.drawThreeSliceBar(this.field_E, param1 + this.field_C - 22, 19571, param0, PlayerBoard.field_v);
         var5Lifetime2 = 169;

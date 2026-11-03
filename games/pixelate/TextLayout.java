@@ -144,7 +144,7 @@ abstract class TextLayout {
           } else {
             param1.field_nc = param3.readInt(param2 - 120);
           }
-          param1.field_kc = param3.a(false);
+          param1.field_kc = param3.readLong(false);
           var7 = param3.position;
           param1.field_pc = param3.readString(5);
           if (var6 != 0) {

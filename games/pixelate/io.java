@@ -186,7 +186,7 @@ final class io {
           }
           LinkButtonPainter.a((byte) 92);
           if (GameModeCard.field_f >= 150) {
-            th.field_b.a(var3 + 15, var4 + 10, var5);
+            th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
             re.field_b.drawHalfSize(var3, var4);
           }
@@ -199,7 +199,7 @@ final class io {
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
                 }
-                MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 8);
+                MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7 * var5 >> 8);
               }
               return;
             }
@@ -221,7 +221,7 @@ final class io {
             if (var6Lifetime3 < 20) {
               var7Lifetime3 = var6Lifetime3 * 256 / 20;
             }
-            MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime3 * var5 >> 8);
+            MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7Lifetime3 * var5 >> 8);
           }
           return;
         }
@@ -236,7 +236,7 @@ final class io {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           LinkButtonPainter.a((byte) 92);
           if (GameModeCard.field_f >= 150) {
-            th.field_b.a(var3 + 15, var4 + 10, var5);
+            th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
             re.field_b.drawHalfSize(var3, var4);
           }
@@ -258,7 +258,7 @@ final class io {
         } else {
           LinkButtonPainter.a((byte) 92);
           if (GameModeCard.field_f >= 150) {
-            th.field_b.a(var3 + 15, var4 + 10, var5);
+            th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
             var6Lifetime1 = GameModeCard.field_f - 125;
             if (var6Lifetime1 <= 0) {
               var6Lifetime1 = GameModeCard.field_f - 140;
@@ -267,7 +267,7 @@ final class io {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1 = var6Lifetime1 * 256 / 20;
                 }
-                MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
               }
             } else {
               if (var6Lifetime1 >= 50) {
@@ -277,7 +277,7 @@ final class io {
                   if (var6Lifetime1 < 20) {
                     var7Lifetime1 = var6Lifetime1 * 256 / 20;
                   }
-                  MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                  MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                 }
               } else {
                 if (var6Lifetime1 < 20) {
@@ -289,7 +289,7 @@ final class io {
                     if (var6Lifetime1 < 20) {
                       var7Lifetime1 = var6Lifetime1 * 256 / 20;
                     }
-                    MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                    MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                   }
                 } else {
                   if (var6Lifetime1 < 30) {
@@ -300,7 +300,7 @@ final class io {
                       if (var6Lifetime1 < 20) {
                         var7Lifetime1 = var6Lifetime1 * 256 / 20;
                       }
-                      MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                      MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                     }
                   } else {
                     var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
@@ -311,7 +311,7 @@ final class io {
                       if (var6Lifetime1 < 20) {
                         var7Lifetime1 = var6Lifetime1 * 256 / 20;
                       }
-                      MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                      MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                     }
                   }
                 }
@@ -342,7 +342,7 @@ final class io {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = var6Lifetime2 * 256 / 20;
           }
-          MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime2 * var5 >> 8);
+          MusicPatchNode.field_s.drawAlpha(15 + var3, 10 + var4, var7Lifetime2 * var5 >> 8);
         }
         return;
     }

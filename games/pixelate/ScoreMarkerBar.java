@@ -227,8 +227,8 @@ final class ScoreMarkerBar extends StatusBar {
           var2 = -1 + gd.field_h.length;
         }
         this.a(65, var2, this.field_m, this.field_n);
-        SoftwareRasterizer.f(320, this.field_m + 3, 19, 0, 128);
-        SoftwareRasterizer.f(321, 4 + this.field_m, 18, 16777215, 128);
+        SoftwareRasterizer.drawVerticalLineAlpha(320, this.field_m + 3, 19, 0, 128);
+        SoftwareRasterizer.drawVerticalLineAlpha(321, 4 + this.field_m, 18, 16777215, 128);
         if (this.field_v != this.field_A) {
           if (this.field_A <= this.field_v) {
             stackIn_11_0 = this.field_A;
@@ -255,8 +255,8 @@ final class ScoreMarkerBar extends StatusBar {
               var7 = 31;
               var7Lifetime1 = 31 - 31 * Math.abs(-this.field_v + var5) / Math.abs(-this.field_A + this.field_v);
               if (var7Lifetime1 > 0) {
-                SoftwareRasterizer.a(320 + var5 << 4, this.field_m - 7 << 4, 64, var7Lifetime1, var10);
-                SoftwareRasterizer.a(320 + var5 << 4, this.field_m + 30 << 4, 64, var7Lifetime1, var10);
+                SoftwareRasterizer.fillRadialPaletteCircle(320 + var5 << 4, this.field_m - 7 << 4, 64, var7Lifetime1, var10);
+                SoftwareRasterizer.fillRadialPaletteCircle(320 + var5 << 4, this.field_m + 30 << 4, 64, var7Lifetime1, var10);
               }
             }
           }
@@ -271,7 +271,7 @@ final class ScoreMarkerBar extends StatusBar {
         if (0 < this.field_v) {
           var3Lifetime1 = 2;
         }
-        JaggrabDownloader.field_m[var3Lifetime1].b(-8 + (this.field_v + 320), -10 + this.field_m);
+        JaggrabDownloader.field_m[var3Lifetime1].drawTransparent(-8 + (this.field_v + 320), -10 + this.field_m);
     }
 
     final void a(int param0, boolean param1) {

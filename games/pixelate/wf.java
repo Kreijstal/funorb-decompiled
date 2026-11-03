@@ -45,7 +45,7 @@ final class wf {
                 }
               }
             }
-            param1.a(24, 0, -3493, var2);
+            param1.writeBytes(24, 0, -3493, var2);
             if (param0 == 1) {
               return;
             }

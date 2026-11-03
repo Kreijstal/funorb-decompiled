@@ -189,7 +189,7 @@ final class HowToPlayScreen extends MenuScreen {
         var3 = DebouncedValidator.field_d;
         LoginCredentials.field_e = Js5NetworkRequest.field_C[0];
         DebouncedValidator.field_d = 0;
-        NumericDateInputWidget.field_W[1].b(0, 45);
+        NumericDateInputWidget.field_W[1].drawTransparent(0, 45);
         this.d((byte) 59);
         this.b((byte) -71);
         var4 = rk.field_e;
@@ -226,7 +226,7 @@ final class HowToPlayScreen extends MenuScreen {
                   } else {
                     stackIn_32_1 = 2;
                   }
-                  ((Sprite) (Object) stackIn_31_0[stackIn_32_1].field_f[var8_int % 2]).b(340 + 55 * var8_int, var9_int + 170);
+                  ((Sprite) (Object) stackIn_31_0[stackIn_32_1].field_f[var8_int % 2]).drawTransparent(340 + 55 * var8_int, var9_int + 170);
                 }
               } else {
                 if (4 == this.field_r) {
@@ -234,14 +234,14 @@ final class HowToPlayScreen extends MenuScreen {
                   var7 += 10;
                   var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
                   for (var8_int = 0; var8_int < 8; var8_int++) {
-                    Js5NetworkRequest.field_C[var8_int].field_a[1].f(280 + 30 * var8_int, 350);
-                    Js5NetworkRequest.field_C[var8_int].field_a[0].f(var8_int * 30 + 270, 340);
+                    Js5NetworkRequest.field_C[var8_int].field_a[1].drawOpaque(280 + 30 * var8_int, 350);
+                    Js5NetworkRequest.field_C[var8_int].field_a[0].drawOpaque(var8_int * 30 + 270, 340);
                   }
                   ug.field_q.c((byte) 50);
                 } else {
                   if (this.field_r == 5) {
                     var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
-                    MatchingTextValidator.field_v.b(470, 160);
+                    MatchingTextValidator.field_v.drawTransparent(470, 160);
                   } else {
                     if (6 != this.field_r) {
                       if (this.field_r == 7) {
@@ -280,22 +280,22 @@ final class HowToPlayScreen extends MenuScreen {
               var7 += 30;
               var4.drawRightAlignedText(ln.field_m[this.field_r][0], var8_int, var7 - 3, 0, -1);
               var5.drawCentered(ln.field_m[this.field_r][4], (var11 >> 1) + var8_int - (-var10_int - pk.field_c[0].field_A), -4 + var7, 16777215, 0);
-              pk.field_c[0].b(var8_int + var10_int, -pk.field_c[0].field_B + var7);
-              pk.field_c[1].b(var11 + var10_int + (var8_int + pk.field_c[0].field_A), var7 - pk.field_c[1].field_B);
+              pk.field_c[0].drawTransparent(var8_int + var10_int, -pk.field_c[0].field_B + var7);
+              pk.field_c[1].drawTransparent(var11 + var10_int + (var8_int + pk.field_c[0].field_A), var7 - pk.field_c[1].field_B);
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(ln.field_m[this.field_r][1], var8_int, 2 + var7, 0, -1);
               var5.drawCentered(ln.field_m[this.field_r][4], (var11 >> 1) + (pk.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
-              CachedTextLayout.field_p[0].b(var10_int + var8_int, var7 - CachedTextLayout.field_p[0].field_B);
-              CachedTextLayout.field_p[1].b(var11 + (var10_int + var8_int) + pk.field_c[0].field_A, -CachedTextLayout.field_p[1].field_B + var7);
+              CachedTextLayout.field_p[0].drawTransparent(var10_int + var8_int, var7 - CachedTextLayout.field_p[0].field_B);
+              CachedTextLayout.field_p[1].drawTransparent(var11 + (var10_int + var8_int) + pk.field_c[0].field_A, -CachedTextLayout.field_p[1].field_B + var7);
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(ln.field_m[this.field_r][2], var8_int, var7 + 2, 0, -1);
-              CachedTextLayout.field_p[2].b(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
+              CachedTextLayout.field_p[2].drawTransparent(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(ln.field_m[this.field_r][3], var8_int, 4 + var7, 0, -1);
-              CachedTextLayout.field_p[3].b(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
+              CachedTextLayout.field_p[3].drawTransparent(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
               var12 = 6;
-              Js5NetworkRequest.field_C[var12].field_f[0].b(70, 160);
-              Js5NetworkRequest.field_C[var12].field_f[1].b(470, 300);
+              Js5NetworkRequest.field_C[var12].field_f[0].drawTransparent(70, 160);
+              Js5NetworkRequest.field_C[var12].field_f[1].drawTransparent(470, 300);
             }
           }
         } else {

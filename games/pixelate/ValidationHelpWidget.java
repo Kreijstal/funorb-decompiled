@@ -36,7 +36,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           Pixelate.field_E = param1;
           QuickChatPhraseCache.field_f = new Sprite(Pixelate.field_E.field_A, Pixelate.field_E.field_B);
           QuickChatPhraseCache.field_f.makeRasterTarget();
-          Pixelate.field_E.f(0, 0);
+          Pixelate.field_E.drawOpaque(0, 0);
           var3_int = 5395026;
           var4 = SoftwareRasterizer.field_d;
           for (var5 = 0; SoftwareRasterizer.field_k.length > var5; var5++) {
@@ -50,11 +50,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           ClientException.field_g = new Sprite(640, 480);
           ClientException.field_g.makeRasterTarget();
-          param0.c(0, 0, 255, 80);
-          param0.c(320, 0, 255, 80);
-          param0.c(0, 240, 80, 0);
-          param0.c(320, 240, param2, 0);
-          ClientException.field_f.a(19692);
+          param0.drawWithVerticalAlphaGradient(0, 0, 255, 80);
+          param0.drawWithVerticalAlphaGradient(320, 0, 255, 80);
+          param0.drawWithVerticalAlphaGradient(0, 240, 80, 0);
+          param0.drawWithVerticalAlphaGradient(320, 240, param2, 0);
+          ClientException.field_f.bindRaster(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
             }
           }
-          var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -this.field_X << 10, 4096);
+          var27.drawRotatedAboutPivot(112, 144, var27.field_A << 4, var27.field_B << 4, -this.field_X << 10, 4096);
           LinkButtonPainter.a((byte) 92);
           this.field_Z.drawAdditive(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
           return;
@@ -186,7 +186,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_Z = new Sprite(var12Lifetime1, var13Lifetime1);
             Checkbox.a(-119, this.field_Z);
           }
-          var19.a(112, 144, var19.field_A << 4, var19.field_B << 4, -this.field_X << 10, 4096);
+          var19.drawRotatedAboutPivot(112, 144, var19.field_A << 4, var19.field_B << 4, -this.field_X << 10, 4096);
           LinkButtonPainter.a((byte) 92);
           this.field_Z.drawAdditive(-(var19.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var19.field_B, 256);
           return;
@@ -217,7 +217,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           this.field_Z = new Sprite(var12Lifetime2, var13Lifetime2);
           Checkbox.a(-119, this.field_Z);
         }
-        var20.a(112, 144, var20.field_A << 4, var20.field_B << 4, -this.field_X << 10, 4096);
+        var20.drawRotatedAboutPivot(112, 144, var20.field_A << 4, var20.field_B << 4, -this.field_X << 10, 4096);
         LinkButtonPainter.a((byte) 92);
         this.field_Z.drawAdditive(-(var20.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var20.field_B, 256);
         return;

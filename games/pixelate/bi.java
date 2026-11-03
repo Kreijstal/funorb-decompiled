@@ -16,7 +16,7 @@ final class bi {
         int var4;
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
-        SoftwareRasterizer.a(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
         SoftwareRasterizer.drawRoundedRectangle(this.field_f, this.field_e, 250, this.field_c, 12, 0);
         var2 = 4 + this.field_e + 8;
         if (!param0) {

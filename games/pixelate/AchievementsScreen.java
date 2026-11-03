@@ -97,7 +97,7 @@ final class AchievementsScreen extends MenuScreen {
           AchievementsScreen.b(-94, (byte) 78);
         }
         var4 = qj.field_e;
-        NumericDateInputWidget.field_W[6].b(0, 45);
+        NumericDateInputWidget.field_W[6].drawTransparent(0, 45);
         this.b((byte) -71);
         for (var5 = 0; var5 < GameApplet.field_n.length; var5++) {
           var6_ref_tf = this.b((byte) 37, var5);
@@ -106,7 +106,7 @@ final class AchievementsScreen extends MenuScreen {
             var7 = this.d(var5, (byte) -54);
             var8 = this.f(-111, var5);
             if (var5 == jm.field_j) {
-              SoftwareRasterizer.a(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
+              SoftwareRasterizer.fillRoundedRectangleBlended(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
             }
             if (var5 == jn.field_v) {
               SoftwareRasterizer.drawRoundedRectangle(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
@@ -130,7 +130,7 @@ final class AchievementsScreen extends MenuScreen {
             var3.drawCentered(PicturePreview.field_t, 320, var6 + 280, 1, -1);
           }
           var9 = this.b((byte) 37, var5Lifetime1);
-          var9.b(60, 120);
+          var9.drawTransparent(60, 120);
           var10 = var4.drawParagraph(this.a(true, var5Lifetime1), 120, 320, 400, 400, 16777215, 0, 0, 0, var7Lifetime1);
           var11 = 320 + (var7Lifetime1 * var10 + 24);
           var4.drawText(MainMenuScreen.field_p + ri.field_c[var5Lifetime1], 120, var11, 16777215, 0);
@@ -139,7 +139,7 @@ final class AchievementsScreen extends MenuScreen {
           var12 = var4.textWidth(DisplayNameForm.field_K) + 120;
           var13 = var11;
           for (var14 = 0; var14 < ri.field_e[var5Lifetime1]; var14++) {
-            vn.field_c.b((vn.field_c.field_A >> 1) * var14 + var12, -vn.field_c.field_B + (var13 + 4));
+            vn.field_c.drawTransparent((vn.field_c.field_A >> 1) * var14 + var12, -vn.field_c.field_B + (var13 + 4));
           }
         } else {
           var3.drawParagraph(th.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);

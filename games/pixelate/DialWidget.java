@@ -50,7 +50,7 @@ final class DialWidget extends TextButton {
         }
         try {
           var6.writeByte(160, var8);
-          var6.a(param1.length, 0, -3493, param1);
+          var6.writeBytes(param1.length, 0, -3493, param1);
           var6.f(var6.position - var7, param5 + 75);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

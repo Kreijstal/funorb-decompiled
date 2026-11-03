@@ -42,7 +42,7 @@ final class dq {
           var5.writeByte(160, 1);
           if (param2.field_k != null) {
             var5.writeByte(160, param2.field_k.length);
-            var5.a(param2.field_k.length, 0, param1 + 15496, param2.field_k);
+            var5.writeBytes(param2.field_k.length, 0, param1 + 15496, param2.field_k);
           } else {
             var5.writeByte(160, 0);
           }

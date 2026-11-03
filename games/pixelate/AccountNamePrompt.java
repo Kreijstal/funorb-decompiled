@@ -270,7 +270,7 @@ final class AccountNamePrompt extends SceneWidget {
           SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param5, param2);
           var10 = null;
           if (param0) {
-            var19 = var9.a();
+            var19 = var9.copy();
             var10 = var19;
             var19.makeRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
@@ -281,7 +281,7 @@ final class AccountNamePrompt extends SceneWidget {
           }
           var11 = null;
           if (param1) {
-            var20 = var9.a();
+            var20 = var9.copy();
             var11 = var20;
             var20.makeRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
@@ -290,14 +290,14 @@ final class AccountNamePrompt extends SceneWidget {
             SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
             SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
           }
-          SoftwareRasterizer.a(var16, var7, var8);
+          SoftwareRasterizer.setTarget(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_Kb = 20;
         SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param5, param2);
         var10 = null;
         if (param0) {
-          var17 = var9.a();
+          var17 = var9.copy();
           var10 = var17;
           var17.makeRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
@@ -308,7 +308,7 @@ final class AccountNamePrompt extends SceneWidget {
         }
         var11 = null;
         if (param1) {
-          var18 = var9.a();
+          var18 = var9.copy();
           var11 = var18;
           var18.makeRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
@@ -317,7 +317,7 @@ final class AccountNamePrompt extends SceneWidget {
           SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
           SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        SoftwareRasterizer.a(var16, var7, var8);
+        SoftwareRasterizer.setTarget(var16, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 

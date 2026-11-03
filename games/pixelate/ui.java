@@ -107,12 +107,12 @@ final class ui {
         if (param0 > 79) {
           GameModeSelectScreen.field_v.writeByte(160, param3);
           GameModeSelectScreen.field_v.writeShort(1276387944, param2);
-          GameModeSelectScreen.field_v.a(SceneWidgetNode.field_t, AgeValidator.field_m, 0);
+          GameModeSelectScreen.field_v.rsaEncrypt(SceneWidgetNode.field_t, AgeValidator.field_m, 0);
           aa.field_f.g(18, 15514);
           fieldTemp$0 = aa.field_f.position + 1;
           aa.field_f.position = aa.field_f.position + 1;
           var4 = fieldTemp$0;
-          aa.field_f.a(GameModeSelectScreen.field_v.position, 0, -3493, GameModeSelectScreen.field_v.payload);
+          aa.field_f.writeBytes(GameModeSelectScreen.field_v.position, 0, -3493, GameModeSelectScreen.field_v.payload);
           aa.field_f.f(-var4 + aa.field_f.position, -1);
           return;
         }

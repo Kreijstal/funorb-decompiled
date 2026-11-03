@@ -114,7 +114,7 @@ final class vn {
     }
 
     final void a(byte param0) {
-        DebouncedValidator.field_b.b(this.field_f, (int)this.field_a);
+        DebouncedValidator.field_b.drawTransparent(this.field_f, (int)this.field_a);
         if (param0 < 122) {
           field_g = -53;
         }

@@ -161,7 +161,7 @@ final class PicturePreview extends IntrusiveNode {
           this.field_l.makeRasterTarget();
           SoftwareRasterizer.clear();
           this.a(0, 0, (byte) 98);
-          ClientException.field_f.a(19692);
+          ClientException.field_f.bindRaster(19692);
           SoftwareRasterizer.restoreClip(NameSuggestionsPanel.field_N);
           SpriteEffectHelpers.a(this.field_l, param1, param3, param4, param2);
         }
@@ -205,14 +205,14 @@ final class PicturePreview extends IntrusiveNode {
                 } else {
                   stackIn_24_1 = 0;
                 }
-                ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).f(var4, var5);
+                ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).drawOpaque(var4, var5);
                 stackIn_26_0 = fq.field_o.field_a;
                 if (this.field_p[var7 * this.field_n + var8]) {
                   stackIn_27_1 = 1;
                 } else {
                   stackIn_27_1 = 0;
                 }
-                ((Sprite) (Object) stackIn_26_0[stackIn_27_1]).a(var4, var5, var6);
+                ((Sprite) (Object) stackIn_26_0[stackIn_27_1]).drawAlpha(var4, var5, var6);
               } else {
                 stackIn_18_0 = fq.field_o.field_a;
                 if (this.field_p[var8 + var7 * this.field_n]) {
@@ -220,7 +220,7 @@ final class PicturePreview extends IntrusiveNode {
                 } else {
                   stackIn_19_1 = 0;
                 }
-                ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).f(var4, var5);
+                ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).drawOpaque(var4, var5);
               }
             } else {
               stackIn_12_0 = LoginCredentials.field_e.field_a;
@@ -229,7 +229,7 @@ final class PicturePreview extends IntrusiveNode {
               } else {
                 stackIn_13_1 = 1;
               }
-              ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).f(var4, var5);
+              ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).drawOpaque(var4, var5);
             }
             var4 += 16;
           }

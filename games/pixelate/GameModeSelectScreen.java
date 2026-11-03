@@ -3463,7 +3463,7 @@ final class GameModeSelectScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          NumericDateInputWidget.field_W[3].b(0, 45);
+          NumericDateInputWidget.field_W[3].drawTransparent(0, 45);
           if (param0 != 11) {
             return;
           }

@@ -1006,7 +1006,7 @@ final class CachedTextLayout extends TextLayout {
           var5 = Matrix3.field_g[Vector3.field_b];
           boolean decompiledSharedTail1 = (var5 == null);
           if (!decompiledSharedTail1) {
-            var5.b(245, 199);
+            var5.drawTransparent(245, 199);
             decompiledSharedTail1 = (var4 != 0);
           }
           if ((decompiledSharedTail1) &&

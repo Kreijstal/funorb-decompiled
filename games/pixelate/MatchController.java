@@ -373,8 +373,8 @@ final class MatchController {
             var5_int = param4[0].field_A;
             var6 = param4[2].field_A;
             var7 = param4[1].field_A;
-            param4[0].b(param3, param1);
-            param4[2].b(-var6 + param0 + param3, param1);
+            param4[0].drawTransparent(param3, param1);
+            param4[2].drawTransparent(-var6 + param0 + param3, param1);
             SoftwareRasterizer.saveClip(Matrix3.field_c);
             SoftwareRasterizer.intersectClip(param3 + var5_int, param1, param0 + param3 - var6, param1 + param4[1].field_B);
             var8 = var5_int + param3;
@@ -384,7 +384,7 @@ final class MatchController {
               field_i = 19;
             }
             while (var9 > param3) {
-              param4[1].b(param3, param1);
+              param4[1].drawTransparent(param3, param1);
               param3 = param3 + var7;
             }
             SoftwareRasterizer.restoreClip(Matrix3.field_c);
@@ -519,8 +519,8 @@ final class MatchController {
             pe.field_b.makeRasterTarget();
             SoftwareRasterizer.clear();
             fq.field_o.a(false);
-            ClientException.field_f.a(19692);
-            pe.field_b.a(0, 0, DebouncedValidator.field_d);
+            ClientException.field_f.bindRaster(19692);
+            pe.field_b.drawAlpha(0, 0, DebouncedValidator.field_d);
           }
           if (Match.field_u) {
             return;

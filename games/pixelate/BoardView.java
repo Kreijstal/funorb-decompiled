@@ -179,7 +179,7 @@ final class BoardView {
         this.field_c.makeRasterTarget();
         SoftwareRasterizer.clear();
         this.drawCells(-20, 0, 0);
-        ClientException.field_f.a(19692);
+        ClientException.field_f.bindRaster(19692);
         for (var2Lifetime1 = 1; -1 + this.field_h > var2Lifetime1; var2Lifetime1++) {
           var6 = 1;
           var3Lifetime1 = var6;
@@ -306,13 +306,13 @@ final class BoardView {
                 }
                 var12 = stackIn_29_0;
                 if (var12 == 0) {
-                  LoginCredentials.field_e.field_k[var7 - 1].f(var10, var11);
+                  LoginCredentials.field_e.field_k[var7 - 1].drawOpaque(var10, var11);
                 } else {
                   if (var12 != 256) {
-                    LoginCredentials.field_e.field_k[-1 + var7].f(var10, var11);
-                    fq.field_o.field_k[var7 - 1].a(var10, var11, var12);
+                    LoginCredentials.field_e.field_k[-1 + var7].drawOpaque(var10, var11);
+                    fq.field_o.field_k[var7 - 1].drawAlpha(var10, var11, var12);
                   } else {
-                    fq.field_o.field_k[var7 - 1].f(var10, var11);
+                    fq.field_o.field_k[var7 - 1].drawOpaque(var10, var11);
                   }
                 }
                 if (var8 == 0) {
@@ -404,7 +404,7 @@ final class BoardView {
             this.field_v > 0) {
             SoftwareRasterizer.setClip(-4 + (this.field_A + this.field_t), this.field_u + this.field_x - 4, 640, 480);
           }
-          this.field_c.b(var2, var3);
+          this.field_c.drawTransparent(var2, var3);
           SoftwareRasterizer.restoreClip(DialWidgetPainter.field_d);
         } else {
           this.drawCells(-20, var3, var2);
@@ -445,8 +445,8 @@ final class BoardView {
               }
               stackIn_48_0 = (var9 != 0) ? 16777215 : 11184810;
               var14 = stackIn_48_0;
-              SoftwareRasterizer.e(var11 + 1, var12 + 1, -1 + var13, var14, 100);
-              SoftwareRasterizer.f(var11 + 1, 2 + var12, -2 + var13, var14, 100);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var11 + 1, var12 + 1, -1 + var13, var14, 100);
+              SoftwareRasterizer.drawVerticalLineAlpha(var11 + 1, 2 + var12, -2 + var13, var14, 100);
               SoftwareRasterizer.drawRectangle(var11, var12, var13, var13, 0);
             }
           }

@@ -120,7 +120,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
           this.b(false);
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.a(19692);
+          this.bindRaster(19692);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

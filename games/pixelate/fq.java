@@ -210,7 +210,7 @@ final class fq extends MenuScreen {
         String var2Lifetime1;
         regionExit1: {
           var16 = Pixelate.field_H ? 1 : 0;
-          NumericDateInputWidget.field_W[5].b(0, 45);
+          NumericDateInputWidget.field_W[5].drawTransparent(0, 45);
           this.b((byte) -71);
           this.d((byte) -63);
           if (ArrayWidgetContainer.a((byte) 74)) {

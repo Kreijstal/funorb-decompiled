@@ -133,10 +133,10 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           MidiPcmStream.a(param0);
           th.field_b = new Sprite(var3, 3 * var4 / 4);
           th.field_b.makeRasterTarget();
-          var2.f(0, 0);
+          var2.drawOpaque(0, 0);
           MusicPatchNode.field_s = new Sprite(var3, var4 - th.field_b.field_E);
           MusicPatchNode.field_s.makeRasterTarget();
-          var2.f(0, -th.field_b.field_E);
+          var2.drawOpaque(0, -th.field_b.field_E);
           MusicPatchNode.field_s.field_y = th.field_b.field_E;
           LinkButtonPainter.a((byte) 92);
         } catch (RuntimeException runtimeException) {

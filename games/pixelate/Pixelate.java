@@ -333,7 +333,7 @@ public final class Pixelate extends NetworkGameClient {
                 var13 = var17;
                 var22 = var13;
                 for (var11 = 0; var19.length > var11; var11++) {
-                  var13[var11] = MusicCrossfadeStream.field_o.a(0);
+                  var13[var11] = MusicCrossfadeStream.field_o.readByte(0);
                 }
                 ((MatchController) (var3_ref)).applyRemoteBoardState(var8, var6, var7Lifetime2, var4Lifetime1Lifetime1, (byte) 125, var5Lifetime2, var22);
                 continue;
@@ -343,7 +343,7 @@ public final class Pixelate extends NetworkGameClient {
                 continue;
               }
               if (62 == TextLayoutLine.field_e) {
-                var4Lifetime1Lifetime2 = MusicCrossfadeStream.field_o.a(0);
+                var4Lifetime1Lifetime2 = MusicCrossfadeStream.field_o.readByte(0);
                 var5Lifetime3 = MusicCrossfadeStream.field_o.a((byte) -116);
                 var6 = MusicCrossfadeStream.field_o.a((byte) -121);
                 ((MatchController) (var3_ref)).a(var5Lifetime3, var4Lifetime1Lifetime2, var6, false);
@@ -409,12 +409,12 @@ public final class Pixelate extends NetworkGameClient {
           stackIn_91_0 = (MusicCrossfadeStream.field_o.readUnsignedByte(255) == 0) ? 0 : 1;
           var3Lifetime1 = stackIn_91_0;
           var4_ref_String__ = new String[MusicCrossfadeStream.field_o.readUnsignedByte(255)];
-          var5Lifetime1 = MusicCrossfadeStream.field_o.a(0);
+          var5Lifetime1 = MusicCrossfadeStream.field_o.readByte(0);
           if (var5Lifetime1 < 0) {
             var5Lifetime1 = -2;
           }
           for (var6 = 0; var6 < var4_ref_String__.length; var6++) {
-            var4_ref_String__[var6] = MusicCrossfadeStream.field_o.e(118);
+            var4_ref_String__[var6] = MusicCrossfadeStream.field_o.readNullCircumfixedString(118);
           }
           var6 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
           var7Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
@@ -470,7 +470,7 @@ public final class Pixelate extends NetworkGameClient {
         JaggrabDownloader.releaseStatics((byte) -57);
         MouseInputHandler.releaseStatics(-116);
         MouseWheelHandler.releaseStatics(false);
-        SoftwareRasterizer.e();
+        SoftwareRasterizer.releaseStatics();
         ResourceArchive.releaseStatics(-34);
         BitmapFont.releaseStatics();
         wp.releaseStatics(param0 - 23028);
@@ -1449,17 +1449,17 @@ public final class Pixelate extends NetworkGameClient {
           if (var3Lifetime2 < 0) {
             var3Lifetime2 = 0;
           }
-          MusicPatchNode.field_B.a(0, 0, var3Lifetime2);
+          MusicPatchNode.field_B.drawAlpha(0, 0, var3Lifetime2);
         } else if (MidiPcmStream.field_t != fc.field_e &&
           fc.field_e == -2) {
           var3Lifetime2 = NameAvailabilityValidator.field_t << 4;
           if (var3Lifetime2 > 256) {
             var3Lifetime2 = 256;
           }
-          MusicPatchNode.field_B.a(0, 0, var3Lifetime2);
+          MusicPatchNode.field_B.drawAlpha(0, 0, var3Lifetime2);
         } else {
           if (fc.field_e != -2) {
-            MusicPatchNode.field_B.b(0, 0);
+            MusicPatchNode.field_B.drawTransparent(0, 0);
           }
         }
         un.a((byte) 87);
@@ -1729,7 +1729,7 @@ public final class Pixelate extends NetworkGameClient {
         SoftwareRasterizer.fillRoundedRectangle(-22, 0, 42, 48, 20, 65793);
         MenuScreen.field_c.makeRasterTarget();
         CanvasRasterBuffer.field_b.drawHorizontalFlip(0, 0);
-        ClientException.field_f.a(19692);
+        ClientException.field_f.bindRaster(19692);
         var7 = new Sprite[fo.field_u.length][];
         for (var8 = 0; fo.field_u.length > var8; var8++) {
           if (null != fo.field_u[var8]) {

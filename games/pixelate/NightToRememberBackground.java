@@ -20,12 +20,12 @@ final class NightToRememberBackground extends BackgroundScene {
     }
 
     final void a(boolean param0) {
-        ClientException.field_g.f(0, 0);
+        ClientException.field_g.drawOpaque(0, 0);
         int var2 = lg.field_a >> 3;
         SoftwareRasterizer.f(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));
         this.field_p.b((byte) -123);
         this.field_q.b((byte) -123);
-        Pixelate.field_E.b(0, -Pixelate.field_E.field_B + 480);
+        Pixelate.field_E.drawTransparent(0, -Pixelate.field_E.field_B + 480);
         if (param0) {
           return;
         }

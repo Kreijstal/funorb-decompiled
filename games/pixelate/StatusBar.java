@@ -123,7 +123,7 @@ abstract class StatusBar {
         SoftwareRasterizer.fillRectangle(var6, param2, param3 - 2 * ui.field_f.field_A, 25, 16711935);
         SoftwareRasterizer.saveClip(PicturePreview.field_r);
         SoftwareRasterizer.setClip(0, 0, 320, 480);
-        ui.field_f.b(var5, param2);
+        ui.field_f.drawTransparent(var5, param2);
         SoftwareRasterizer.setClip(320, 0, 640, 480);
         ui.field_f.drawHorizontalFlip(var7, param2);
         SoftwareRasterizer.restoreClip(PicturePreview.field_r);
@@ -134,18 +134,18 @@ abstract class StatusBar {
         mh.a(param2, gd.field_h[param1], var8, 0);
         SoftwareRasterizer.saveClip(PicturePreview.field_r);
         SoftwareRasterizer.setClip(0, 0, 320, 480);
-        NameAvailabilityValidator.field_q.a(var5 + 2, param2, 128);
+        NameAvailabilityValidator.field_q.drawAlpha(var5 + 2, param2, 128);
         SoftwareRasterizer.setClip(320, 0, 640, 480);
-        di.field_c.a(-1 + param3 + (var5 - di.field_c.field_A), param2, 128);
+        di.field_c.drawAlpha(-1 + param3 + (var5 - di.field_c.field_A), param2, 128);
         SoftwareRasterizer.restoreClip(PicturePreview.field_r);
         if (var7 <= var6) {
           return;
         }
         int var9 = -4 + (param3 - ui.field_f.field_A * 2);
-        SoftwareRasterizer.e(2 + var6, param2 + 3, var9, 16777215, 128);
-        SoftwareRasterizer.e(2 + var6, 25 + param2 - 2, var9, 16777215, 128);
-        SoftwareRasterizer.e(var6 + 2, param2 + 2, var9, 0, 128);
-        SoftwareRasterizer.e(2 + var6, param2 + 22, var9, 0, 128);
+        SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, param2 + 3, var9, 16777215, 128);
+        SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, 25 + param2 - 2, var9, 16777215, 128);
+        SoftwareRasterizer.drawHorizontalLineAlpha(var6 + 2, param2 + 2, var9, 0, 128);
+        SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, param2 + 22, var9, 0, 128);
         SpriteEffectHelpers.a(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
         if (this.field_h <= 0) {
           return;

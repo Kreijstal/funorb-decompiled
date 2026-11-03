@@ -43,7 +43,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var2.writeByte(160, io.field_c.field_ec);
         int var4 = io.field_c.field_Ib + (io.field_c.field_Tb << 6);
         var2.writeByte(160, var4);
-        var2.a(io.field_c.field_Eb.length, 0, -3493, io.field_c.field_Eb);
+        var2.writeBytes(io.field_c.field_Eb.length, 0, -3493, io.field_c.field_Eb);
         var2.f(var2.position - var3, -1);
     }
 
@@ -112,7 +112,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         PlatformTask var11 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
-          if (!param0.a((byte) -125)) {
+          if (!param0.isFullscreenAvailable((byte) -125)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }

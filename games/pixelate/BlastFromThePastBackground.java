@@ -42,7 +42,7 @@ final class BlastFromThePastBackground extends BackgroundScene {
         int var3 = 0;
         qk var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        ThreeSliceButtonPainter.field_w.f(0, 0);
+        ThreeSliceButtonPainter.field_w.drawOpaque(0, 0);
         qk[] var6 = this.field_o;
         qk[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {

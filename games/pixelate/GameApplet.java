@@ -606,7 +606,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (null != mc.field_k) {
             try {
-              mc.field_k.a(-1204);
+              mc.field_k.shutdown(-1204);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

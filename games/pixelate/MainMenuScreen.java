@@ -27,7 +27,7 @@ final class MainMenuScreen extends MenuScreen {
     }
 
     final void a(int param0) {
-        NumericDateInputWidget.field_W[0].b(0, 45);
+        NumericDateInputWidget.field_W[0].drawTransparent(0, 45);
         if (param0 != 11) {
           return;
         }

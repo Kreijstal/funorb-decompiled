@@ -75,11 +75,11 @@ final class up {
           this.b(16);
         }
         int var2 = (-this.field_b + 255) / 10;
-        this.field_l.a(-var2 + 80, 180, this.field_b);
+        this.field_l.drawAlpha(-var2 + 80, 180, this.field_b);
         if (BufferedRandomAccessFile.field_j <= 0 &&
           10 <= this.field_m) {
           var3 = 3 * this.field_b >> 2;
-          PlayerBoard.field_w.a(-var2 + 96, 196, var3);
+          PlayerBoard.field_w.drawAlpha(-var2 + 96, 196, var3);
           PlayerBoard.field_w.drawAdditive(-var2 + 96, 196, var3);
         }
     }
@@ -98,10 +98,10 @@ final class up {
         boolean[] var6 = ThreeSliceButtonPainter.a(var11, 21922);
         for (var7 = 0; var7 < var11.field_a; var7++) {
           for (var8 = 0; var8 < var11.field_f; var8++) {
-            var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
+            var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].drawOpaque(var8 * 32 + var4, 32 * var7 + var5);
           }
         }
-        ClientException.field_f.a(param0 + 19676);
+        ClientException.field_f.bindRaster(param0 + 19676);
     }
 
     up(int param0) {

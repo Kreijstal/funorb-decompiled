@@ -244,10 +244,10 @@ class UiComponent extends IntrusiveNode {
           SoftwareRasterizer.clear();
           GameModeCard.field_f = param0;
           ScoreMarkerBar.d((byte) 106);
-          var2 = var1.a();
+          var2 = var1.copy();
           var3 = 0;
           while (15 > var3) {
-            var2.e(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {

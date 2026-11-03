@@ -163,7 +163,7 @@ final class ck {
             var5 = 5;
           }
           if (SpriteCheckboxPainter.field_d) {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
+            SoftwareRasterizer.fillRoundedRectangleBlended((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
           } else {
             SoftwareRasterizer.fillRectangleAlpha((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
           }
@@ -171,7 +171,7 @@ final class ck {
           if (!SpriteCheckboxPainter.field_d) {
             SoftwareRasterizer.fillRectangleAlpha((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
           } else {
-            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
+            SoftwareRasterizer.fillRoundedRectangleBlended((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
           }
         }
     }
@@ -226,7 +226,7 @@ final class ck {
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          SoftwareRasterizer.a(var16, var5, var6);
+          SoftwareRasterizer.setTarget(var16, var5, var6);
           ContextActionMenu.field_Rb = BoundedRandomAccessFile.buildQuickChatCategoryMenu(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
           DraggableWidget.field_I.children = new IntrusiveDeque();
           return;

@@ -199,7 +199,7 @@ class EmailCredentials extends LoginCredentials {
             this.field_g = -108L;
           }
           param1.writeLong(false, this.field_g);
-          param1.a(-129, this.field_j);
+          param1.writeBase38Name(-129, this.field_j);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

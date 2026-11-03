@@ -81,7 +81,7 @@ final class MatchHud {
               var10.drawCenteredAlpha(this.field_e, 320, -var4Lifetime1 + 130, 0, -1, var5Lifetime1);
             }
             if (this.field_d > 0) {
-              Match.field_l[3 - this.field_d].d(-(this.field_c >> 1) + 320, 40, this.field_c, 90);
+              Match.field_l[3 - this.field_d].drawScaled(-(this.field_c >> 1) + 320, 40, this.field_c, 90);
             }
           }
         } else {
@@ -277,13 +277,13 @@ final class MatchHud {
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.makeRasterTarget();
-          var17.f(0, 0);
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.makeRasterTarget();
-          var17.f(var9Lifetime1 - var17.field_F, 0);
+          var17.drawOpaque(var9Lifetime1 - var17.field_F, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_F, var9Lifetime1);
           var12.makeRasterTarget();
-          var17.f(-var9Lifetime1, 0);
+          var17.drawOpaque(-var9Lifetime1, 0);
           LinkButtonPainter.a((byte) 92);
           fc.field_d = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

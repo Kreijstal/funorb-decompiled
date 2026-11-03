@@ -71,7 +71,7 @@ final class LinkButtonPainter implements WidgetPainter {
           if (var1 == null) {
             throw new IllegalStateException();
           }
-          SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
+          SoftwareRasterizer.setTarget(var1.field_t, var1.field_q, var1.field_u);
           SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
           var1.field_t = null;
           ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
@@ -80,7 +80,7 @@ final class LinkButtonPainter implements WidgetPainter {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
+        SoftwareRasterizer.setTarget(var1.field_t, var1.field_q, var1.field_u);
         SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
         var1.field_t = null;
         ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);

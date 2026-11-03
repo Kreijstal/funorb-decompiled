@@ -167,7 +167,7 @@ final class QueuedInput extends IntrusiveNode {
             if (!(-MusicCrossfadeStream.field_o.position + param0 >= var2_int)) {
               var2_int = param0 - MusicCrossfadeStream.field_o.position;
             }
-            NodeHashTableIterator.field_e.a(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
+            NodeHashTableIterator.field_e.readFully(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
             SpriteCheckboxPainter.field_c = hm.a(64);
             MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + var2_int;
             if (param0 > MusicCrossfadeStream.field_o.position) {
