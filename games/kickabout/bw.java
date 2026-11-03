@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bw {
-    static ut[] field_e;
+    static Sprite[] field_e;
     private static int[] field_d;
     static int[] field_a;
     static String field_c;
-    static sj field_b;
+    static ResourceArchive field_b;
     static int[] field_f;
 
     final static int a(long param0, int param1, long param2) {
@@ -35,7 +35,7 @@ final class bw {
           return (ak) null;
         }
         ak var6 = new ak(4);
-        var6.field_e = ((ot) (lu.field_p[param5 ? 1 : 0])).h();
+        var6.field_e = ((ArgbSprite) (SpriteState.field_p[param5 ? 1 : 0])).h();
         if (param2) {
           var6.field_e.g();
         }

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ug {
-    static ut[] field_c;
+    static Sprite[] field_c;
     static java.applet.Applet field_a;
-    static ut[][] field_b;
+    static Sprite[][] field_b;
     static String field_d;
     static wd field_e;
     static boolean[] field_f;
@@ -15,7 +15,7 @@ final class ug {
         field_d = null;
         field_c = null;
         field_a = null;
-        field_b = (ut[][]) null;
+        field_b = (Sprite[][]) null;
         if (param0 != -1) {
           IntrusiveNode var2 = (IntrusiveNode) null;
           ug.a((IntrusiveNode) null, 81, (IntrusiveNode) null);
@@ -29,7 +29,7 @@ final class ug {
         if (param0 != 0) {
           return -103;
         }
-        return b.c(-23, param1);
+        return MySquadScreen.c(-23, param1);
     }
 
     final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
@@ -53,13 +53,13 @@ final class ug {
         np stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
-        hd stackIn_18_0 = null;
+        UiLayoutNode stackIn_18_0 = null;
         String stackIn_19_1 = null;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        tf var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         gg var6 = null;
         int var7 = 0;
@@ -82,7 +82,7 @@ final class ug {
           var4 = nq.field_F.field_yb.field_jb;
           if (ts.field_d != 2 &&
             1 != ts.field_d) {
-            nq.field_F.field_Cb.field_zb.field_E = jw.field_yb;
+            nq.field_F.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             nq.field_F.field_lb = false;
             hl.a(true, nq.field_F.field_yb);
             return;
@@ -94,11 +94,11 @@ final class ug {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_jb) {
-              var6.field_Bb = new hd(0L, mp.field_f);
-              var6.a((byte) -109, var6.field_Bb);
-              var6.field_Fb = new hd(0L, mp.field_f);
-              var6.a((byte) -105, var6.field_Fb);
-              var6.b(false);
+              var6.field_Bb = new UiLayoutNode(0L, mp.field_f);
+              var6.addChild((byte) -109, var6.field_Bb);
+              var6.field_Fb = new UiLayoutNode(0L, mp.field_f);
+              var6.addChild((byte) -105, var6.field_Fb);
+              var6.invalidateChildren(false);
               var7 = 1;
             }
             var6.field_q = nq.field_F.field_yb.field_q;
@@ -119,7 +119,7 @@ final class ug {
             }
             stackIn_18_0 = var6.field_Bb;
             if (0 < var10) {
-              stackIn_19_1 = hu.a(var6.field_Bb.field_X, var6.field_Gb, var10);
+              stackIn_19_1 = BitmapFont.a(var6.field_Bb.field_X, var6.field_Gb, var10);
             } else {
               stackIn_19_1 = var6.field_Gb;
             }
@@ -131,7 +131,7 @@ final class ug {
               var6.field_L = -var6.field_mb + sh.field_c;
             }
             if (var7 != 0) {
-              nq.field_F.field_yb.a(true, 2, var6, (hd) (var5));
+              nq.field_F.field_yb.a(true, 2, var6, (UiLayoutNode) (var5));
             }
             if (var6.field_Fb != null &&
               var6.field_Fb.field_gb) {
@@ -143,26 +143,26 @@ final class ug {
               }
             }
             if (var6.field_sb != 0) {
-              el.a(var6, false, nq.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
-              var16 = wi.field_v;
-              var13_ref_String = pb.field_D;
+              BytePlusOneCommand.a(var6, false, nq.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
+              var16 = TextButton.field_v;
+              var13_ref_String = IsSixCommand.field_D;
               var16.field_j.a(0, 7, var13_ref_String);
-              var17 = wi.field_v;
+              var17 = TextButton.field_v;
               var13 = sm.field_q;
-              var14 = vc.field_y;
+              var14 = ReceivedAuctionItem.field_y;
               var17.field_j.a(0, 0, var13, var14, 0);
             }
             var5 = var6;
             var6 = (gg) (var4.c(33));
           }
           if (nq.field_F.field_Eb.field_sb != 0) {
-            k.field_m = new sl(nq.field_F.field_Eb.field_F, nq.field_F.field_Eb.field_T, nq.field_F.field_Eb.field_q, nq.field_F.field_Eb.field_mb, ParticipantStatus.field_j, pn.field_u, dw.field_e, dw.field_e);
+            k.field_m = new sl(nq.field_F.field_Eb.field_F, nq.field_F.field_Eb.field_T, nq.field_F.field_Eb.field_q, nq.field_F.field_Eb.field_mb, ParticipantStatus.field_j, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
             fs.field_b = 2;
           }
           if (0 == nq.field_F.field_zb.field_sb) {
             return;
           }
-          k.field_m = new sl(nq.field_F.field_zb.field_F, nq.field_F.field_zb.field_T, nq.field_F.field_zb.field_q, nq.field_F.field_zb.field_mb, oo.field_d, pn.field_u, dw.field_e, dw.field_e);
+          k.field_m = new sl(nq.field_F.field_zb.field_F, nq.field_F.field_zb.field_T, nq.field_F.field_zb.field_q, nq.field_F.field_zb.field_mb, oo.field_d, pn.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
           fs.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

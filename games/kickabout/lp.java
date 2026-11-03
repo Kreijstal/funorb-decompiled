@@ -8,7 +8,7 @@ final class lp {
           return;
         }
         try {
-          se.a(15282, (java.awt.Component) ((Object) param0));
+          ModalStack.a(15282, (java.awt.Component) ((Object) param0));
           if (ag.field_f != null) {
             ag.field_f.b((byte) -83, (java.awt.Component) ((Object) param0));
           }

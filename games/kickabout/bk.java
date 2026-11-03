@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    static gm[] field_a;
-    static gv[] field_c;
+    static RenderedFootballer[] field_a;
+    static FadingChatMessage[] field_c;
     static String field_g;
-    static tf field_f;
+    static IntrusiveDeque field_f;
     static long field_b;
     static String field_d;
     static int field_e;
@@ -34,7 +34,7 @@ final class bk {
         field_g = "Selling";
         field_b = 0L;
         field_d = "Close";
-        field_f = new tf();
+        field_f = new IntrusiveDeque();
         field_h = "This kit was bought for 10 coins on the Orb Downloads page.";
     }
 }

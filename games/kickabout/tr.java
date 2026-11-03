@@ -12,15 +12,15 @@ final class tr implements hc {
     static String[] field_f;
 
     final static void d(int param0) {
-        qg var1 = (qg) (tk.field_Ab.h(-125));
+        RasterStateSnapshot var1 = (RasterStateSnapshot) (tk.field_Ab.h(-125));
         if (var1 == null) {
-          var1 = new qg();
+          var1 = new RasterStateSnapshot();
         }
         if (param0 != -12974) {
           tr.a(true);
         }
-        var1.a((byte) -96, on.field_e, on.field_b, on.field_a, on.field_g, on.field_f, on.field_h, on.field_c);
-        ik.field_C.a(var1, 3);
+        var1.captureRasterState((byte) -96, SoftwareRasterizer.field_e, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
+        IntDoubleCommand.field_C.a(var1, 3);
     }
 
     public final boolean a(byte param0) {
@@ -28,7 +28,7 @@ final class tr implements hc {
         if (param0 <= 63) {
           field_e = (int[]) null;
         }
-        stackIn_6_0 = (od.field_n) && (sf.c(-3, -1));
+        stackIn_6_0 = (od.field_n) && (MainMenuScreen.isScreenShown(-3, -1));
         return stackIn_6_0;
     }
 
@@ -48,7 +48,7 @@ final class tr implements hc {
         var3 = g.field_a.field_T;
         if (!this.a((byte) 103) &&
           480 > var3) {
-          on.c(0, var3, 640, 0, 128);
+          SoftwareRasterizer.c(0, var3, 640, 0, 128);
         }
     }
 
@@ -62,7 +62,7 @@ final class tr implements hc {
         if (param0 != 0) {
           field_f = (String[]) null;
         }
-        String var6 = "(" + dj.field_A + " " + wb.field_n + " " + kq.field_Ab + ") " + so.field_b;
+        String var6 = "(" + PagedHelpScreen.field_A + " " + TeamSelectionView.field_n + " " + SquadSlotWidget.field_Ab + ") " + so.field_b;
         String var1 = var6;
         if (ms.field_b > 0) {
           var1 = var6 + ":";
@@ -112,15 +112,15 @@ final class tr implements hc {
         int var17 = 0;
         var17 = Kickabout.field_G;
         try {
-          var13 = fr.a(param2, ra.field_F, true);
-          var14 = fr.a(param2, tf.field_g, true);
-          var15 = fr.a(param2, gm.field_fb, true);
-          var16 = fr.a(param2, ao.field_i, true);
-          var7 = rq.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
+          var13 = NameSuggestionsPanel.a(param2, GameModesHelpScreen.field_F, true);
+          var14 = NameSuggestionsPanel.a(param2, IntrusiveDeque.field_g, true);
+          var15 = NameSuggestionsPanel.a(param2, RenderedFootballer.field_fb, true);
+          var16 = NameSuggestionsPanel.a(param2, RandomAccessCacheFile.field_i, true);
+          var7 = ServerMessageScreen.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
           var4 = jr.field_Mb;
-          var9 = rq.a(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
+          var9 = ServerMessageScreen.a(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
           var5 = jr.field_Mb;
-          var11 = rq.a(0, param2.field_e, (byte) -99, var15, param2, var13, var16, 1 + param2.field_k, var14);
+          var11 = ServerMessageScreen.a(0, param2.field_e, (byte) -99, var15, param2, var13, var16, 1 + param2.field_k, var14);
           var6 = jr.field_Mb;
           if (var9 <= var7 &&
             var7 >= var11) {
@@ -251,8 +251,8 @@ final class tr implements hc {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.a((byte) 94) && (!bt.field_e ||
-          !sf.c(-1, -1) &&
-          !sf.c(-2, -1))) {
+          !MainMenuScreen.isScreenShown(-1, -1) &&
+          !MainMenuScreen.isScreenShown(-2, -1))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -293,12 +293,12 @@ final class tr implements hc {
           }
           var3 = -(this.field_a * this.field_a) + 400;
           var4 = var3 * (-np.field_Bb + 480) / 400 + np.field_Bb;
-          up.a(var4, (byte) -124);
+          PlayerStats.a(var4, (byte) -124);
           this.field_h = this.field_h + 1;
           kp.a(-121);
           if (null != uv.field_i) {
-            if (sp.a(uv.field_i.field_Eb, -3, uv.field_i.field_bc, uv.field_i.field_gc)) {
-              stackIn_19_0 = (tu.field_E.d((byte) 46)) ? 1 : 0;
+            if (ShopPlayerSlot.a(uv.field_i.field_Eb, -3, uv.field_i.field_bc, uv.field_i.field_gc)) {
+              stackIn_19_0 = (GameLoopApplet.field_E.d((byte) 46)) ? 1 : 0;
             } else {
               stackIn_19_0 = 0;
             }
@@ -350,13 +350,13 @@ final class tr implements hc {
           this.field_a = -5;
         }
         if ((tk.field_Ib >= 2 || eq.field_d > 0) &&
-          ne.field_G[86]) {
+          GameplayHelpScreen.field_G[86]) {
           if (84 != param1) {
           } else {
-            if (null != e.field_m) {
-              fd.h(0);
+            if (null != SplashScreen.field_m) {
+              UiWidget.h(0);
             } else {
-              dw.a(true, param0 - 11516);
+              ConsoleEvaluationException.a(true, param0 - 11516);
             }
             return true;
           }

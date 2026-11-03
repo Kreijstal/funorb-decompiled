@@ -9,7 +9,7 @@ final class m {
     private byte[] field_e;
     private byte[] field_j;
     private int field_l;
-    static hd field_m;
+    static UiLayoutNode field_m;
     static boolean[] field_f;
     static String field_i;
     private int field_o;
@@ -113,10 +113,10 @@ final class m {
         RuntimeException var9 = null;
         try {
           h.field_e.field_E = param2;
-          if (ov.field_b == 2) {
-            b.field_N.field_E = IntrusiveNodeHashTable.field_f;
+          if (NodeHashTableIterator.field_b == 2) {
+            MySquadScreen.field_N.field_E = IntrusiveNodeHashTable.field_f;
           } else {
-            b.field_N.field_E = im.field_Bb;
+            MySquadScreen.field_N.field_E = im.field_Bb;
           }
           var9_int = 495;
           var10 = 5;
@@ -125,14 +125,14 @@ final class m {
           ij.field_s.a(true, ij.field_s.field_q, ei.field_b.field_q, 0, param6);
           var10 = var10 + (param7 + param6);
           gl.field_c.a(true, gl.field_c.g((byte) -99), 5, var10, param3);
-          var11 = b.field_N.g((byte) -19);
-          b.field_N.a(true, var11, -5 + (var9_int - var11), var10, param3);
+          var11 = MySquadScreen.field_N.g((byte) -19);
+          MySquadScreen.field_N.a(true, var11, -5 + (var9_int - var11), var10, param3);
           h.field_e.a(true, var9_int, 0, 0, param1);
           var12 = 5 + (var10 + param3);
-          dj.field_D.a(true, var9_int, 0, param1, var12);
+          PagedHelpScreen.field_D.a(true, var9_int, 0, param1, var12);
           var12 = var12 + param1;
-          dj.field_D.field_R = fs.a(dj.field_D.field_mb, 3, 2105376, 11579568, 8421504, (byte) 118);
-          mu.field_Y.a(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
+          PagedHelpScreen.field_D.field_R = fs.a(PagedHelpScreen.field_D.field_mb, 3, 2105376, 11579568, 8421504, (byte) 118);
+          ContentTransitionDialog.field_Y.a(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
           if (param0 != 49) {
             field_f = (boolean[]) null;
           }
@@ -191,7 +191,7 @@ final class m {
           var14 = param2.b(27939);
           var8 = param1.b(27939);
           if (null == op.field_y &&
-            !qo.a(false, (byte) 123)) {
+            !EmailSyntaxValidator.a(false, (byte) 123)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
@@ -200,112 +200,112 @@ final class m {
             or.field_d.field_n = 0;
             if (param5 == null) {
               gl.field_a.field_n = 0;
-              gl.field_a.b(-56, ac.field_d.nextInt());
-              gl.field_a.b(-34, ac.field_d.nextInt());
+              gl.field_a.writeInt(-56, ac.field_d.nextInt());
+              gl.field_a.writeInt(-34, ac.field_d.nextInt());
               stackIn_17_0 = gl.field_a;
               if (!param2.c(-95)) {
                 stackIn_18_1 = "";
               } else {
                 stackIn_18_1 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, (byte) -126);
+              ((PacketBuffer) (Object) stackIn_17_0).writeCircumfixedString(stackIn_18_1, (byte) -126);
               stackIn_20_0 = gl.field_a;
               if (!param1.c(-94)) {
                 stackIn_21_1 = "";
               } else {
                 stackIn_21_1 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_20_0).a(stackIn_21_1, (byte) -128);
-              or.field_d.a(106, 16);
+              ((PacketBuffer) (Object) stackIn_20_0).writeCircumfixedString(stackIn_21_1, (byte) -128);
+              or.field_d.writeByte(106, 16);
               or.field_d.field_n = or.field_d.field_n + 1;
               var9 = or.field_d.field_n;
-              om.a(hn.field_h, or.field_d, (byte) -89, gl.field_a, bb.field_Nb);
-              or.field_d.c(62, -var9 + or.field_d.field_n);
+              om.a(ManagerAction.field_h, or.field_d, (byte) -89, gl.field_a, bb.field_Nb);
+              or.field_d.backpatchByteLength(62, -var9 + or.field_d.field_n);
             } else {
               var9 = 0;
               if (param4) {
                 var9 = var9 | 1;
               }
               gl.field_a.field_n = 0;
-              gl.field_a.b(-62, ac.field_d.nextInt());
-              gl.field_a.b(-42, ac.field_d.nextInt());
-              gl.field_a.a(var14, (byte) -126);
-              gl.field_a.a(var8, (byte) -126);
+              gl.field_a.writeInt(-62, ac.field_d.nextInt());
+              gl.field_a.writeInt(-42, ac.field_d.nextInt());
+              gl.field_a.writeCircumfixedString(var14, (byte) -126);
+              gl.field_a.writeCircumfixedString(var8, (byte) -126);
               var15 = (CharSequence) ((Object) param5);
-              gl.field_a.a(ri.a(var15, (byte) -100), (byte) -125);
-              gl.field_a.g(-1207444472, param0);
-              gl.field_a.a(106, param3);
-              gl.field_a.a(125, var9);
-              or.field_d.a(123, 18);
+              gl.field_a.writeCircumfixedString(ri.a(var15, (byte) -100), (byte) -125);
+              gl.field_a.writeShort(-1207444472, param0);
+              gl.field_a.writeByte(106, param3);
+              gl.field_a.writeByte(125, var9);
+              or.field_d.writeByte(123, 18);
               or.field_d.field_n = or.field_d.field_n + 2;
               var10 = or.field_d.field_n;
-              var11_ref_String = sa.a(so.a(50), (byte) 123);
+              var11_ref_String = DelegatingCanvas.a(so.a(50), (byte) 123);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              or.field_d.a(14190, var11_ref_String);
-              om.a(hn.field_h, or.field_d, (byte) -94, gl.field_a, bb.field_Nb);
-              or.field_d.d(-var10 + or.field_d.field_n, 62);
+              or.field_d.writeString(14190, var11_ref_String);
+              om.a(ManagerAction.field_h, or.field_d, (byte) -94, gl.field_a, bb.field_Nb);
+              or.field_d.backpatchShortLength(-var10 + or.field_d.field_n, 62);
             }
             c.a(-1, false);
             un.field_c = pf.field_e;
           }
           if (pf.field_e == un.field_c &&
-            uj.a((byte) 55, 1)) {
-            var9Lifetime1 = un.field_e.h((byte) -116);
+            SetLagCommand.a((byte) 55, 1)) {
+            var9Lifetime1 = un.field_e.readUnsignedByte((byte) -116);
             un.field_e.field_n = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               un.field_c = id.field_t;
-              mr.field_X = new String[-100 + var9Lifetime1];
+              ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 wc.a((byte) -50, so.a(-71));
                 gd.field_b = ld.field_i;
-                lr.b((byte) -116);
+                FormationView.b((byte) -116);
                 vu.field_Db = false;
                 stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
-                uj.a((byte) 51, lt.a((byte) 40));
-                ep.field_f = new Boolean(ki.a(un.field_e, (byte) 93));
+                SetLagCommand.a((byte) 51, lt.a((byte) 40));
+                ep.field_f = new Boolean(PlayerInputEvent.a(un.field_e, (byte) 93));
                 un.field_e.field_n = 0;
               } else {
                 so.field_b = var9Lifetime1;
-                un.field_c = lm.field_N;
+                un.field_c = TournamentLobbyScreen.field_N;
                 ms.field_b = -1;
               }
             }
           }
           if (id.field_t == un.field_c) {
             var9Lifetime2 = 2;
-            if (uj.a((byte) -96, var9Lifetime2)) {
+            if (SetLagCommand.a((byte) -96, var9Lifetime2)) {
               var10Lifetime1 = un.field_e.a((byte) 81);
               un.field_e.field_n = 0;
-              if (uj.a((byte) -118, var10Lifetime1)) {
-                var11 = mr.field_X.length;
+              if (SetLagCommand.a((byte) -118, var10Lifetime1)) {
+                var11 = ValidatedTextWidget.field_X.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  mr.field_X[var12] = un.field_e.j(17);
+                  ValidatedTextWidget.field_X[var12] = un.field_e.readCircumfixedString(17);
                 }
-                lr.b((byte) -116);
+                FormationView.b((byte) -116);
                 vu.field_Db = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
             }
           }
-          if (lm.field_N == un.field_c &&
-            ps.a(180)) {
+          if (TournamentLobbyScreen.field_N == un.field_c &&
+            LoginCredentials.a(180)) {
             if (so.field_b != 255) {
-              gd.field_b = un.field_e.a(61);
+              gd.field_b = un.field_e.readString(61);
             } else {
               var9_ref_String = un.field_e.a(true);
               if (var9_ref_String != null) {
-                mp.a(so.a(62), true, var9_ref_String);
+                mp.writeSettingsCookie(so.a(62), true, var9_ref_String);
               }
             }
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             vu.field_Db = false;
             stackIn_53_0 = so.field_b;
             return stackIn_53_0;
@@ -316,7 +316,7 @@ final class m {
           }
           if (null == op.field_y) {
             if (vu.field_Db) {
-              if (30000L >= aa.c(29680)) {
+              if (30000L >= KeyedLoginCredentials.c(29680)) {
                 gd.field_b = ic.field_e;
               } else {
                 gd.field_b = md.field_h;
@@ -393,7 +393,7 @@ final class m {
             var9 = (String) null;
             m.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
           }
-          dv.a(this.field_j, 0, this.field_e, 32, 32);
+          ArrayOperations.a(this.field_j, 0, this.field_e, 32, 32);
           this.a((byte) 18);
           var4_int = 0;
           var5 = param2;
@@ -425,7 +425,7 @@ final class m {
         }
     }
 
-    final static void a(sj param0, sj param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         try {
           if (param2 != 5198) {
             field_a = 1.2037987668274452;

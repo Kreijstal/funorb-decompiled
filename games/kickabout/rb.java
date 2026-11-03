@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends hd {
+final class rb extends UiLayoutNode {
     static int field_yb;
     static int field_Bb;
     private StringBuilder field_Db;
-    private hd field_Lb;
-    private hd field_Cb;
+    private UiLayoutNode field_Lb;
+    private UiLayoutNode field_Cb;
     static String field_Hb;
-    private hd field_Nb;
-    private hd[] field_Jb;
+    private UiLayoutNode field_Nb;
+    private UiLayoutNode[] field_Jb;
     static int field_Kb;
     private om field_zb;
     static String field_Ib;
     long field_Eb;
-    private hd field_Ab;
-    private hd field_Fb;
+    private UiLayoutNode field_Ab;
+    private UiLayoutNode field_Fb;
     static int field_Mb;
     private int field_Ob;
-    private hd field_Gb;
+    private UiLayoutNode field_Gb;
 
     final static tv a(int param0, int param1, byte param2, int param3) {
         boolean stackIn_47_0 = false;
@@ -56,13 +56,13 @@ final class rb extends hd {
           }
           if (var9 != 0) {
             if (var8_ref_tv.field_s == null ||
-              wj.field_z) {
+              WidgetContainer.field_z) {
               if (var8_ref_tv.field_s != null) {
               }
-              var10 = ob.a((byte) -92, var8_ref_tv);
-              var11 = var10 + hu.c(var8_ref_tv.field_g);
-              var12 = qa.a(var8_ref_tv, 31100);
-              var8_ref_tv.field_s = new hd(0L, vv.field_o, var11);
+              var10 = RenderedBall.a((byte) -92, var8_ref_tv);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_tv.field_g);
+              var12 = LeaguesHelpScreen.a(var8_ref_tv, 31100);
+              var8_ref_tv.field_s = new UiLayoutNode(0L, vv.field_o, var11);
               var6 = var6 + param1;
               var8_ref_tv.field_s.field_X = FootballerAgent.field_i;
               var8_ref_tv.field_s.field_ub = -(8355711 & var12 >> 1) + var12 + (8355711 & vv.field_o.field_ub >> 1);
@@ -78,7 +78,7 @@ final class rb extends hd {
         for (var8 = 0; vb.field_j > var8; var8++) {
           var9_ref_tv = fu.field_b[var8];
           if (null != var9_ref_tv.field_s) {
-            pw.field_G.field_Ab.a((byte) -105, var9_ref_tv.field_s);
+            pw.field_G.field_Ab.addChild((byte) -105, var9_ref_tv.field_s);
             var9_ref_tv.field_s.a(true, var9_ref_tv.field_s.g((byte) -44), param3, var7Lifetime1, param1);
             var7Lifetime1 = var7Lifetime1 + param1;
             if (var9_ref_tv.field_s.field_sb != 0) {
@@ -89,21 +89,21 @@ final class rb extends hd {
         var8Lifetime1 = var6 - var7Lifetime1 + pw.field_G.field_Ab.field_L + pw.field_G.field_Ab.field_mb;
         pw.field_G.field_Ab.field_mb = pw.field_G.field_Ab.field_mb - var8Lifetime1;
         pw.field_G.field_Ab.field_J = pw.field_G.field_Ab.field_J + var8Lifetime1;
-        if (wj.field_z) {
+        if (WidgetContainer.field_z) {
           pw.field_G.field_Ab.field_mb = var7Lifetime1;
         }
         if (param2 != 26) {
           return (tv) null;
         }
         pw.field_G.field_Ab.field_L = var7Lifetime1 - pw.field_G.field_Ab.field_mb;
-        if (wj.field_z) {
+        if (WidgetContainer.field_z) {
           dg.field_a = true;
           pw.field_G.field_Ab.field_J = -pw.field_G.field_Ab.field_mb + pw.field_G.field_zb.field_mb;
-          wj.field_z = false;
+          WidgetContainer.field_z = false;
           pw.field_G.field_Ab.field_v = 0;
         }
         if (vg.field_Wb &&
-          mu.field_Y != null) {
+          ContentTransitionDialog.field_Y != null) {
           dg.field_a = true;
         }
         var9Lifetime1 = -pw.field_G.field_Ab.field_mb + (-pw.field_G.field_Ab.field_L + pw.field_G.field_zb.field_mb);
@@ -119,7 +119,7 @@ final class rb extends hd {
     final static void a(byte param0, String param1) {
         try {
           ek.field_M = param1;
-          qd.b(38, 12);
+          IndexedSpriteState.b(38, 12);
           if (param0 != -51) {
             field_Ib = (String) null;
           }
@@ -131,7 +131,7 @@ final class rb extends hd {
     final boolean b(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 26) {
-          this.field_Lb = (hd) null;
+          this.field_Lb = (UiLayoutNode) null;
         }
         stackIn_6_0 = (null != this.field_zb) && (this.field_zb.field_I);
         return stackIn_6_0;
@@ -149,7 +149,7 @@ final class rb extends hd {
         int var3 = 0;
         om stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        hd stackIn_15_0 = null;
+        UiLayoutNode stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         int var4;
         var4 = Kickabout.field_G;
@@ -164,7 +164,7 @@ final class rb extends hd {
             stackIn_6_0.field_I = stackIn_7_1;
           }
           this.field_Fb.field_q = -this.field_Fb.field_s + this.field_q;
-          for (var3 = 0; var3 < ob.field_B; var3++) {
+          for (var3 = 0; var3 < RenderedBall.field_B; var3++) {
             if (this.field_Jb[var3] != null) {
               stackIn_15_0 = this.field_Jb[var3];
               stackIn_16_1 = !(this.field_Db.length() <= 0);
@@ -180,7 +180,7 @@ final class rb extends hd {
           return -1;
         }
         if (param0 &&
-          0 != wj.field_A &&
+          0 != WidgetContainer.field_A &&
           this.field_sb == 0) {
           return -1;
         }
@@ -194,8 +194,8 @@ final class rb extends hd {
         return this.field_Db.toString();
     }
 
-    private final int a(int param0, String param1, int param2, hd param3, hd param4, byte param5) {
-        hd var7 = null;
+    private final int a(int param0, String param1, int param2, UiLayoutNode param3, UiLayoutNode param4, byte param5) {
+        UiLayoutNode var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -207,9 +207,9 @@ final class rb extends hd {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new hd(0L, param3, 0, param0, param2, 24, param1);
+          var7 = new UiLayoutNode(0L, param3, 0, param0, param2, 24, param1);
           param0 += 32;
-          param4.a((byte) -106, var7);
+          param4.addChild((byte) -106, var7);
           if (param5 < 4) {
             this.b(-117);
           }
@@ -248,7 +248,7 @@ final class rb extends hd {
         return param1 == 6 ? true : false;
     }
 
-    rb(int param0, int param1, int param2, int param3, int param4, hd param5, hd param6, hd param7, hd param8, om param9, hd param10, String param11, long param12) {
+    rb(int param0, int param1, int param2, int param3, int param4, UiLayoutNode param5, UiLayoutNode param6, UiLayoutNode param7, UiLayoutNode param8, om param9, UiLayoutNode param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
@@ -261,7 +261,7 @@ final class rb extends hd {
         om stackIn_8_1;
         om stackIn_8_2;
         String stackIn_8_5;
-        hd stackIn_14_0 = null;
+        UiLayoutNode stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -280,7 +280,7 @@ final class rb extends hd {
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var15_int = 0;
-        hd[] var15 = null;
+        UiLayoutNode[] var15 = null;
         RuntimeException var15_ref = null;
         int var16 = 0;
         int var17 = 0;
@@ -293,7 +293,7 @@ final class rb extends hd {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        hd[] var28 = null;
+        UiLayoutNode[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
         om stackIn_8_1Lifetime1;
@@ -318,25 +318,25 @@ final class rb extends hd {
         this.field_Ob = -2;
         try {
           this.field_Eb = param12;
-          this.field_Gb = new hd(0L, param6, fi.field_c.toUpperCase());
+          this.field_Gb = new UiLayoutNode(0L, param6, ConsoleParseException.field_c.toUpperCase());
           this.field_Gb.field_A = 1;
-          this.a((byte) -110, this.field_Gb);
-          this.field_Ab = new hd(0L, param7);
-          this.field_Gb.a((byte) -116, this.field_Ab);
-          this.field_Nb = new hd(0L, (hd) null);
-          this.a((byte) -111, this.field_Nb);
+          this.addChild((byte) -110, this.field_Gb);
+          this.field_Ab = new UiLayoutNode(0L, param7);
+          this.field_Gb.addChild((byte) -116, this.field_Ab);
+          this.field_Nb = new UiLayoutNode(0L, (UiLayoutNode) null);
+          this.addChild((byte) -111, this.field_Nb);
           if (param11 != null) {
-            this.field_Cb = new hd(0L, param8, cf.field_Ib);
+            this.field_Cb = new UiLayoutNode(0L, param8, cf.field_Ib);
             this.field_Cb.field_A = 1;
             this.field_Cb.field_y = 11184810;
-            this.field_Nb.a((byte) -110, this.field_Cb);
-            this.field_Lb = new hd(0L, param8, nc.field_d);
+            this.field_Nb.addChild((byte) -110, this.field_Cb);
+            this.field_Lb = new UiLayoutNode(0L, param8, nc.field_d);
             this.field_Lb.field_y = 11184810;
             this.field_Lb.field_A = 1;
-            this.field_Nb.a((byte) -116, this.field_Lb);
-            this.field_Fb = new hd(0L, param8);
+            this.field_Nb.addChild((byte) -116, this.field_Lb);
+            this.field_Fb = new UiLayoutNode(0L, param8);
             this.field_Fb.field_y = 16764006;
-            this.field_Nb.a((byte) -105, this.field_Fb);
+            this.field_Nb.addChild((byte) -105, this.field_Fb);
             this.field_Fb.field_V = "|";
             if (!(bl.field_c < 5) ||
               !(tk.field_Ib < 2)) {
@@ -363,25 +363,25 @@ final class rb extends hd {
                 stackIn_8_5 = mc.field_h;
               }
               this.field_zb = new om(stackIn_6_3, stackIn_6_4, stackIn_8_5);
-              this.field_Nb.a((byte) -118, (hd) (this.field_zb));
+              this.field_Nb.addChild((byte) -118, (UiLayoutNode) (this.field_zb));
             }
-            var28 = new hd[3];
+            var28 = new UiLayoutNode[3];
             var15 = var28;
-            var28[0] = new hd(0L, (hd) null);
-            this.field_Nb.a((byte) -105, var28[0]);
-            var28[1] = new hd(0L, (hd) null);
-            this.field_Nb.a((byte) -111, var28[1]);
-            var28[2] = new hd(0L, (hd) null);
-            this.field_Nb.a((byte) -127, var28[2]);
-            this.field_Jb = new hd[ob.field_B];
-            for (var16 = 0; ob.field_B > var16; var16++) {
-              if (null != bh.field_i[var16]) {
-                this.field_Jb[var16] = new hd(0L, param10, bh.field_i[var16]);
+            var28[0] = new UiLayoutNode(0L, (UiLayoutNode) null);
+            this.field_Nb.addChild((byte) -105, var28[0]);
+            var28[1] = new UiLayoutNode(0L, (UiLayoutNode) null);
+            this.field_Nb.addChild((byte) -111, var28[1]);
+            var28[2] = new UiLayoutNode(0L, (UiLayoutNode) null);
+            this.field_Nb.addChild((byte) -127, var28[2]);
+            this.field_Jb = new UiLayoutNode[RenderedBall.field_B];
+            for (var16 = 0; RenderedBall.field_B > var16; var16++) {
+              if (null != BufferedSocket.field_i[var16]) {
+                this.field_Jb[var16] = new UiLayoutNode(0L, param10, BufferedSocket.field_i[var16]);
                 this.field_Jb[var16].field_A = 0;
                 stackIn_14_0 = this.field_Jb[var16];
                 stackIn_15_1 = (param11 != null);
                 stackIn_14_0.field_lb = stackIn_15_1;
-                this.field_Nb.a((byte) -124, this.field_Jb[var16]);
+                this.field_Nb.addChild((byte) -124, this.field_Jb[var16]);
               }
             }
             this.field_Db = new StringBuilder(12);
@@ -393,7 +393,7 @@ final class rb extends hd {
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_X.a(cj.field_H);
+            var17Lifetime2 = param6.field_X.a(DateInputWidget.field_H);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -401,7 +401,7 @@ final class rb extends hd {
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; var17Lifetime4 < ob.field_B; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; var17Lifetime4 < RenderedBall.field_B; var17Lifetime4++) {
               if (this.field_Jb[var17Lifetime4] != null) {
                 var18 = this.field_Jb[var17Lifetime4].g((byte) -40);
                 if (var18 > var16Lifetime2) {
@@ -426,7 +426,7 @@ final class rb extends hd {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(var18Lifetime4, cj.field_H, var16Lifetime2, param6, var28[1], (byte) 119);
+            var18Lifetime4 = this.a(var18Lifetime4, DateInputWidget.field_H, var16Lifetime2, param6, var28[1], (byte) 119);
             var18Lifetime4 = this.a(-6305, this.field_Jb[16], var16Lifetime2, var18Lifetime4, var28[1]);
             var18Lifetime4 = this.a(-6305, this.field_Jb[17], var16Lifetime2, var18Lifetime4, var28[1]);
             var18Lifetime4 = this.a(-6305, this.field_Jb[18], var16Lifetime2, var18Lifetime4, var28[1]);
@@ -481,10 +481,10 @@ final class rb extends hd {
             this.a(true, var23, var25, var26, var24);
             return;
           }
-          this.field_Cb = new hd(0L, param8, sl.field_Bb);
+          this.field_Cb = new UiLayoutNode(0L, param8, sl.field_Bb);
           this.field_Cb.field_y = 11184810;
           this.field_Cb.field_A = 1;
-          this.field_Nb.a((byte) -110, this.field_Cb);
+          this.field_Nb.addChild((byte) -110, this.field_Cb);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Cb.field_X.b(this.field_Cb.field_E, var15_int);
@@ -548,7 +548,7 @@ final class rb extends hd {
         }
     }
 
-    private final int a(int param0, hd param1, int param2, int param3, hd param4) {
+    private final int a(int param0, UiLayoutNode param1, int param2, int param3, UiLayoutNode param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_3_0 = 0;
@@ -563,10 +563,10 @@ final class rb extends hd {
           if (param0 != -6305) {
             this.field_Db = (StringBuilder) null;
           }
-          var6_int = param1.field_X.c(param1.field_E, -(2 * param1.field_kb) + param2, param1.field_xb);
+          var6_int = param1.field_X.paragraphHeight(param1.field_E, -(2 * param1.field_kb) + param2, param1.field_xb);
           param1.a(true, param2, 0, param3, var6_int);
           param3 = param3 + (0 + var6_int);
-          param4.a((byte) -120, param1);
+          param4.addChild((byte) -120, param1);
           stackIn_3_0 = param3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -597,7 +597,7 @@ final class rb extends hd {
           this.field_Ob = -1;
         }
         if (param0 != 37) {
-          this.field_Cb = (hd) null;
+          this.field_Cb = (UiLayoutNode) null;
           return true;
         }
         return true;

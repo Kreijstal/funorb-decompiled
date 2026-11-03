@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends hd {
-    private hd field_Cb;
-    private hd field_Db;
+final class sl extends UiLayoutNode {
+    private UiLayoutNode field_Cb;
+    private UiLayoutNode field_Db;
     private int field_Fb;
     static boolean field_Eb;
     private StringBuilder field_yb;
@@ -11,7 +11,7 @@ final class sl extends hd {
     static String field_Ab;
     static String field_Bb;
 
-    sl(int param0, int param1, int param2, int param3, String param4, hd param5, hd param6, hd param7) {
+    sl(int param0, int param1, int param2, int param3, String param4, UiLayoutNode param5, UiLayoutNode param6, UiLayoutNode param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -31,11 +31,11 @@ final class sl extends hd {
         int var13 = 0;
         this.field_Fb = 0;
         try {
-          this.field_Cb = new hd(0L, param6, param4);
-          this.a((byte) -124, this.field_Cb);
-          this.field_Db = new hd(0L, param7);
+          this.field_Cb = new UiLayoutNode(0L, param6, param4);
+          this.addChild((byte) -124, this.field_Cb);
+          this.field_Db = new UiLayoutNode(0L, param7);
           this.field_Db.field_y = 16764006;
-          this.a((byte) -116, this.field_Db);
+          this.addChild((byte) -116, this.field_Db);
           this.field_Db.field_V = "|";
           this.field_yb = new StringBuilder(12);
           var9_int = this.field_Cb.g((byte) 116);
@@ -93,7 +93,7 @@ final class sl extends hd {
           }
           this.field_Db.field_E = this.field_yb.toString();
           if (param1 &&
-            wj.field_A != 0) {
+            WidgetContainer.field_A != 0) {
             if (this.field_sb != 0) {
               return this.field_Fb;
             }
@@ -108,7 +108,7 @@ final class sl extends hd {
               if (!param1) {
                 return this.field_Fb;
               }
-              if (wj.field_A == 0) {
+              if (WidgetContainer.field_A == 0) {
                 return this.field_Fb;
               }
               if (this.field_sb != 0) {
@@ -122,7 +122,7 @@ final class sl extends hd {
             if (!param1) {
               return this.field_Fb;
             }
-            if (wj.field_A == 0) {
+            if (WidgetContainer.field_A == 0) {
               return this.field_Fb;
             }
             if (this.field_sb != 0) {
@@ -133,7 +133,7 @@ final class sl extends hd {
           }
           if (cc.field_e == 85 &&
             0 < this.field_yb.length()) {
-            dj.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
+            PagedHelpScreen.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
           }
           if (id.a(false, (CharSequence) ((Object) this.field_yb), il.field_c)) {
             discarded$1 = this.field_yb.append(il.field_c);
@@ -215,7 +215,7 @@ final class sl extends hd {
                 discarded$9 = this.field_yb.append((char) var2);
               }
             }
-            if (se.a((byte) -118, (char) var2)) {
+            if (ModalStack.a((byte) -118, (char) var2)) {
               discarded$10 = this.field_yb.append((char) var2);
               var2 = -60 % ((-76 - param0) / 48);
               if (cc.field_e == 84) {
@@ -278,7 +278,7 @@ final class sl extends hd {
                 discarded$5 = this.field_yb.append((char) var2Lifetime1);
               }
             }
-            if (se.a((byte) -118, (char) var2Lifetime1)) {
+            if (ModalStack.a((byte) -118, (char) var2Lifetime1)) {
               discarded$7 = this.field_yb.append((char) var2Lifetime1);
               var2Lifetime1 = -60 % ((-76 - param0) / 48);
               if (cc.field_e == 84) {
@@ -326,7 +326,7 @@ final class sl extends hd {
           }
           return true;
         }
-        dj.a(this.field_yb.length() - 1, ' ', -11407, this.field_yb);
+        PagedHelpScreen.a(this.field_yb.length() - 1, ' ', -11407, this.field_yb);
         if (this.field_yb.length() >= 12) {
           var2Lifetime2 = -60 % ((-76 - param0) / 48);
           if (cc.field_e == 84) {
@@ -356,7 +356,7 @@ final class sl extends hd {
             discarded$1 = this.field_yb.append((char) var2Lifetime3);
           }
         }
-        if (se.a((byte) -118, (char) var2Lifetime3)) {
+        if (ModalStack.a((byte) -118, (char) var2Lifetime3)) {
           discarded$3 = this.field_yb.append((char) var2Lifetime3);
           var2Lifetime3 = -60 % ((-76 - param0) / 48);
           if (cc.field_e == 84) {

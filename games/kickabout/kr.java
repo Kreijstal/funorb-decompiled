@@ -4,8 +4,8 @@
 final class kr {
     static String field_c;
     static boolean field_e;
-    static hd field_b;
-    static jw field_a;
+    static UiLayoutNode field_b;
+    static CheckboxLabelWidget field_a;
     static String field_d;
 
     public static void a(int param0) {
@@ -18,84 +18,84 @@ final class kr {
         field_b = null;
     }
 
-    final static void a(hd param0, boolean param1, int param2) {
+    final static void a(UiLayoutNode param0, boolean param1, int param2) {
         uv var9 = null;
-        ut var11 = null;
+        Sprite var11 = null;
         String var10 = null;
         uv var12 = null;
-        ut var14 = null;
+        Sprite var14 = null;
         String var13 = null;
         uv var15 = null;
-        ut var17 = null;
+        Sprite var17 = null;
         String var16 = null;
         uv var18 = null;
-        ut var20 = null;
+        Sprite var20 = null;
         String var19 = null;
         uv var21 = null;
-        ut var23 = null;
+        Sprite var23 = null;
         String var22 = null;
         uv var24 = null;
-        ut var26 = null;
+        Sprite var26 = null;
         String var25 = null;
         uv var27 = null;
         String var28 = null;
         uv var30 = null;
-        ut var32 = null;
+        Sprite var32 = null;
         String var31 = null;
         uv var33 = null;
-        ut var35 = null;
+        Sprite var35 = null;
         String var34 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ut var29 = null;
-        ut var29Lifetime1;
-        ut var29Lifetime2;
-        ut var29Lifetime3;
-        ut var29Lifetime4;
-        ut var29Lifetime5;
-        ut var29Lifetime6;
-        ut var29Lifetime7;
-        ut var29Lifetime1Lifetime1;
-        ut var29Lifetime1Lifetime2;
-        ut var29Lifetime1Lifetime3;
-        ut var29Lifetime1Lifetime4;
-        ut var29Lifetime1Lifetime5;
-        el.a(param0, false, (np) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
+        Sprite var29 = null;
+        Sprite var29Lifetime1;
+        Sprite var29Lifetime2;
+        Sprite var29Lifetime3;
+        Sprite var29Lifetime4;
+        Sprite var29Lifetime5;
+        Sprite var29Lifetime6;
+        Sprite var29Lifetime7;
+        Sprite var29Lifetime1Lifetime1;
+        Sprite var29Lifetime1Lifetime2;
+        Sprite var29Lifetime1Lifetime3;
+        Sprite var29Lifetime1Lifetime4;
+        Sprite var29Lifetime1Lifetime5;
+        BytePlusOneCommand.a(param0, false, (np) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
         if (param2 == 0) {
-          var9 = wi.field_v;
+          var9 = TextButton.field_v;
           var11 = il.field_d[0];
           var29 = var11;
           var29Lifetime3 = var11;
           var10 = ig.field_b;
           var9.field_j.a(var10, param1, 11, var11);
-          var12 = wi.field_v;
+          var12 = TextButton.field_v;
           var14 = il.field_d[1];
           var29Lifetime4 = var14;
           var29Lifetime5 = var14;
           var13 = oi.field_h;
           var12.field_j.a(var13, param1, 12, var14);
-          var15 = wi.field_v;
+          var15 = TextButton.field_v;
           var17 = il.field_d[2];
           var29Lifetime6 = var17;
           var29Lifetime7 = var17;
-          var16 = fi.field_a;
+          var16 = ConsoleParseException.field_a;
           var15.field_j.a(var16, true, 13, var17);
         }
         if (param2 == 1) {
-          var18 = wi.field_v;
+          var18 = TextButton.field_v;
           var20 = il.field_d[0];
           var29Lifetime1 = var20;
           var29Lifetime1Lifetime1 = var20;
           var19 = ef.field_p;
           var18.field_j.a(var19, true, 11, var20);
-          var21 = wi.field_v;
+          var21 = TextButton.field_v;
           var23 = il.field_d[1];
           var29Lifetime1Lifetime2 = var23;
           var29Lifetime1Lifetime3 = var23;
           var22 = bo.field_Bb;
           var21.field_j.a(var22, true, 12, var23);
-          var24 = wi.field_v;
+          var24 = TextButton.field_v;
           var26 = il.field_d[2];
           var29Lifetime1Lifetime4 = var26;
           var29Lifetime1Lifetime5 = var26;
@@ -103,20 +103,20 @@ final class kr {
           var24.field_j.a(var25, param1, 13, var26);
         }
         if (param2 == 2) {
-          var27 = wi.field_v;
+          var27 = TextButton.field_v;
           var29Lifetime2 = il.field_d[0];
           var28 = gb.field_I;
           var27.field_j.a(var28, param1, 11, var29Lifetime2);
-          var30 = wi.field_v;
+          var30 = TextButton.field_v;
           var32 = il.field_d[1];
           var31 = fh.field_c;
           var30.field_j.a(var31, param1, 12, var32);
-          var33 = wi.field_v;
+          var33 = TextButton.field_v;
           var35 = il.field_d[2];
-          var34 = qv.field_g;
+          var34 = TextWidgetPainter.field_g;
           var33.field_j.a(var34, true, 13, var35);
         }
-        uv var36 = wi.field_v;
+        uv var36 = TextButton.field_v;
         int var4 = param0.field_F;
         if (!param1) {
           return;
@@ -151,11 +151,11 @@ final class kr {
         RuntimeException var3 = null;
         try {
           if (param1 == 1) {
-            stackIn_3_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, sp.field_Kb, new String[]{param0});
+            stackIn_3_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ShopPlayerSlot.field_Kb, new String[]{param0});
             return stackIn_3_0;
           }
           if (param1 == 2) {
-            stackIn_6_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, tm.field_r, new String[]{param0});
+            stackIn_6_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleCommand.field_r, new String[]{param0});
             return stackIn_6_0;
           }
           if (param1 == 3) {
@@ -179,7 +179,7 @@ final class kr {
             return stackIn_25_0;
           }
           if (param1 == 8) {
-            stackIn_28_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, iu.field_e, new String[]{param0});
+            stackIn_28_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, CachedListingRow.field_e, new String[]{param0});
             return stackIn_28_0;
           }
           if (param1 == 11) {
@@ -223,7 +223,7 @@ final class kr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = mf.a(param0.length, param0, 99, 0);
+            stackIn_4_0 = SquadGridWidget.a(param0.length, param0, 99, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -242,7 +242,7 @@ final class kr {
         }
     }
 
-    final static cl[] a(byte param0, bu param1) {
+    final static cl[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         cl[] stackIn_4_0 = null;
         cl[] stackIn_10_0 = null;
@@ -256,7 +256,7 @@ final class kr {
         cl[] var4 = null;
         cl var6 = null;
         int var7 = 0;
-        wu var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Kickabout.field_G;
@@ -274,7 +274,7 @@ final class kr {
             return stackIn_10_0;
           }
           if (param0 < 122) {
-            field_b = (hd) null;
+            field_b = (UiLayoutNode) null;
           }
           var10 = (int[]) (var8.field_b);
           var9 = var10;

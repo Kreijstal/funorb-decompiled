@@ -19,12 +19,12 @@ final class vr {
         int[] var3Lifetime1;
         int[] var2Lifetime1;
         if (param0 == -2) {
-          var3 = na.field_zb[rm.field_C];
+          var3 = na.field_zb[RankingsScreen.field_C];
           var2 = var3;
           return param1 < var3.length ? var3[param1] : 100;
         }
         field_b = (String) null;
-        var3Lifetime1 = na.field_zb[rm.field_C];
+        var3Lifetime1 = na.field_zb[RankingsScreen.field_C];
         var2Lifetime1 = var3Lifetime1;
         return param1 < var3Lifetime1.length ? var3Lifetime1[param1] : 100;
     }
@@ -90,9 +90,9 @@ final class vr {
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
-          hw.field_k = false;
+          InstrumentNoteMask.field_k = false;
           uv.field_i = null;
-          ow.field_b = null;
+          ArchiveSource.field_b = null;
           if (rp.field_B != null) {
             rp.field_B.b(param0 + 22999);
             rp.field_B = null;
@@ -101,9 +101,9 @@ final class vr {
             return;
           }
           pq.field_N = null;
-          if (kq.field_yb != null) {
-            kq.field_yb.b(param0 ^ -22997);
-            kq.field_yb = null;
+          if (SquadSlotWidget.field_yb != null) {
+            SquadSlotWidget.field_yb.b(param0 ^ -22997);
+            SquadSlotWidget.field_yb = null;
           }
           sr.field_f = null;
           if (null != lw.field_d) {
@@ -116,7 +116,7 @@ final class vr {
           }
           var3 = (he) (pq.field_N.b((byte) 72));
           while (var3 != null) {
-            var3.f(57);
+            var3.unlinkSecondary(57);
             var3 = (he) (pq.field_N.a(0));
           }
           pq.field_N = null;

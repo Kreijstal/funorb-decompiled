@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends hd {
+final class dn extends UiLayoutNode {
     static String field_Db;
     int field_Bb;
     static int field_yb;
-    static hd field_zb;
-    static hd field_Cb;
+    static UiLayoutNode field_zb;
+    static UiLayoutNode field_Cb;
     static String field_Ab;
     static String[] field_Eb;
 
@@ -16,11 +16,11 @@ final class dn extends hd {
 
     dn(int param0) {
         this.field_Bb = param0;
-        ut var3 = new ut(qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
-        ut var2 = var3;
+        Sprite var3 = new Sprite(qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
+        Sprite var2 = var3;
         PacketBuffer.a(-59, var3);
-        qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(0, 0);
-        ta.e(121);
+        qe.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(0, 0);
+        TeamManagementScreen.e(121);
         this.field_N = var2;
         this.field_mb = 5 + var2.field_v + 5;
         this.field_B = 5;
@@ -76,7 +76,7 @@ final class dn extends hd {
         if (param0 != -5) {
           field_Ab = (String) null;
         }
-        fw.field_G = (double)param1;
+        MyPitchScreen.field_G = (double)param1;
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
@@ -93,7 +93,7 @@ final class dn extends hd {
               CommonGame.a(119, ck.field_b.field_Eb, var3, param1, var4 != 0, ck.field_b.a(-15596));
             }
             ck.field_b = null;
-            da.b(108);
+            MusicPatchNode.b(108);
           }
         }
     }

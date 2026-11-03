@@ -7,7 +7,7 @@ final class kp {
     static String[] field_g;
     int field_k;
     int field_b;
-    static ut field_m;
+    static Sprite field_m;
     static String field_i;
     boolean field_d;
     int[] field_c;
@@ -31,10 +31,10 @@ final class kp {
             te.a(param0, var4, (byte) -112);
             var4 = (ii) (il.field_a.c(33));
           }
-          var2 = ap.field_j.g(24009);
+          var2 = MatchScreen.field_j.g(24009);
           while (var2 != null) {
-            lb.a((byte) -105, param0);
-            var2 = ap.field_j.c(33);
+            TextHotspotWidget.a((byte) -105, param0);
+            var2 = MatchScreen.field_j.c(33);
           }
           if (param1 > -36) {
             field_g = (String[]) null;
@@ -70,12 +70,12 @@ final class kp {
             }
             var1 = (he) (rp.field_B.c(33));
           }
-          var1_ref = (qb) (kq.field_yb.g(24009));
+          var1_ref = (qb) (SquadSlotWidget.field_yb.g(24009));
           while (var1_ref != null) {
             if (0 < var1_ref.field_Db) {
               var1_ref.field_Db = var1_ref.field_Db - 1;
               if (var1_ref.field_Db != 0) {
-                var1_ref = (qb) (kq.field_yb.c(33));
+                var1_ref = (qb) (SquadSlotWidget.field_yb.c(33));
                 continue;
               }
               var1_ref.field_Ab = 0;
@@ -83,7 +83,7 @@ final class kp {
                 var1_ref.c((byte) -109);
               }
             }
-            var1_ref = (qb) (kq.field_yb.c(33));
+            var1_ref = (qb) (SquadSlotWidget.field_yb.c(33));
           }
           var1Lifetime1 = (he) (lw.field_d.g(24009));
           while (var1Lifetime1 != null) {
@@ -125,25 +125,25 @@ final class kp {
           }
           this.field_c = new int[2];
           for (var3_int = 0; var3_int < 2; var3_int++) {
-            this.field_c[var3_int] = param1.j((byte) -94);
+            this.field_c[var3_int] = param1.readByte((byte) -94);
           }
-          stackIn_9_1 = (param1.h((byte) -111) == 1);
+          stackIn_9_1 = (param1.readUnsignedByte((byte) -111) == 1);
           this.field_d = stackIn_9_1;
-          this.field_f = param1.j((byte) -123);
-          this.field_j = param1.h((byte) -126);
-          this.field_b = param1.h((byte) -125);
+          this.field_f = param1.readByte((byte) -123);
+          this.field_j = param1.readUnsignedByte((byte) -126);
+          this.field_b = param1.readUnsignedByte((byte) -125);
           if (5 == this.field_f) {
-            this.field_o = param1.j((byte) -96);
-            this.field_k = param1.j((byte) -104);
+            this.field_o = param1.readByte((byte) -96);
+            this.field_k = param1.readByte((byte) -104);
           }
           if (this.field_f == 4) {
             this.field_h = param1.a((byte) 81) - 1;
-            this.field_n = param1.h((byte) -112);
-            this.field_l = param1.h((byte) -111);
+            this.field_n = param1.readUnsignedByte((byte) -112);
+            this.field_l = param1.readUnsignedByte((byte) -111);
             for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {
               for (var4 = 0; var4 < 5; var4++) {
-                this.field_e[var3_intLifetime1][var4][0] = param1.h((byte) -110);
-                this.field_e[var3_intLifetime1][var4][1] = param1.h((byte) -121);
+                this.field_e[var3_intLifetime1][var4][0] = param1.readUnsignedByte((byte) -110);
+                this.field_e[var3_intLifetime1][var4][1] = param1.readUnsignedByte((byte) -121);
               }
             }
             return;
@@ -258,7 +258,7 @@ final class kp {
 
     public static void a(byte param0) {
         if (param0 != 101) {
-          field_m = (ut) null;
+          field_m = (Sprite) null;
         }
         field_a = null;
         field_g = null;
@@ -322,8 +322,8 @@ final class kp {
         this.field_o = -2;
         this.field_k = -1;
         this.field_b = 0;
-        this.field_n = lj.a(448, false);
-        this.field_l = lj.a(672, false);
+        this.field_n = TextLine.a(448, false);
+        this.field_l = TextLine.a(672, false);
         this.field_f = -1;
         this.field_h = -1;
     }

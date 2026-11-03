@@ -7,12 +7,12 @@ final class fn {
     int field_k;
     static String[] field_j;
     static String field_i;
-    static ot field_f;
+    static ArgbSprite field_f;
     static int field_c;
     static int[] field_g;
-    static ot field_d;
-    static hd field_a;
-    static sj field_b;
+    static ArgbSprite field_d;
+    static UiLayoutNode field_a;
+    static ResourceArchive field_b;
 
     final boolean k(int param0) {
         RuntimeException var2 = null;
@@ -47,23 +47,23 @@ final class fn {
         }
     }
 
-    final ot d(boolean param0) {
+    final ArgbSprite d(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ot stackIn_2_0 = null;
-        ot stackIn_7_0 = null;
-        ot stackIn_9_0 = null;
+        ArgbSprite stackIn_2_0 = null;
+        ArgbSprite stackIn_7_0 = null;
+        ArgbSprite stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (ot) null;
+            stackIn_2_0 = (ArgbSprite) null;
             return stackIn_2_0;
           }
           if (0 == this.field_h) {
             stackIn_7_0 = ca.field_c[this.field_k];
             return stackIn_7_0;
           }
-          var2_int = jk.field_g[this.field_h];
+          var2_int = MusicPatch.field_g[this.field_h];
           stackIn_9_0 = tk.field_Fb[this.field_k][var2_int];
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ final class fn {
         RuntimeException var2 = null;
         try {
           var2_int = 100 % ((42 - param0) / 49);
-          stackIn_1_0 = de.field_b[this.field_h];
+          stackIn_1_0 = GameKeyHandler.field_b[this.field_h];
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
-            stackIn_4_0 = rv.field_b[this.field_h];
+            stackIn_4_0 = ValidationState.field_b[this.field_h];
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -229,7 +229,7 @@ final class fn {
         }
     }
 
-    final static void a(gm param0, int param1) {
+    final static void a(RenderedFootballer param0, int param1) {
         int stackIn_49_0 = 0;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
@@ -272,22 +272,22 @@ final class fn {
                   var9 != 0) {
                   var6_ref_byte__ = vf.field_K[var4][param0.field_mb.field_b / 3][param0.field_R >> 8];
                 }
-                boolean decompiledSharedTail0 = (hw.field_i != 256);
+                boolean decompiledSharedTail0 = (InstrumentNoteMask.field_i != 256);
                 if (!decompiledSharedTail0) {
                   eo.b(var6_ref_byte__, -48 + var2_int, var3 - 48, 96, 96);
                   decompiledSharedTail0 = (var9 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var7 = 96 * hw.field_i >> 8;
-                  var8 = 48 * hw.field_i >> 8;
+                  var7 = 96 * InstrumentNoteMask.field_i >> 8;
+                  var8 = 48 * InstrumentNoteMask.field_i >> 8;
                   eo.a(var6_ref_byte__, var2_int - var8, var3 - var8, 96, 96, var7, var7);
                 }
                 if (var9 == 0) {
                   return;
                 }
               }
-              if (256 != hw.field_i) {
-                stackIn_49_0 = 550400 / hw.field_i;
+              if (256 != InstrumentNoteMask.field_i) {
+                stackIn_49_0 = 550400 / InstrumentNoteMask.field_i;
               } else {
                 stackIn_49_0 = 2150;
               }
@@ -296,7 +296,7 @@ final class fn {
               nh.a(vf.field_F, var2_int - 48, var3 - 48);
               return;
             }
-            nh.a(var2_int << 4, var3 << 4, 28 * hw.field_i >> 4, 11, tr.field_e);
+            nh.a(var2_int << 4, var3 << 4, 28 * InstrumentNoteMask.field_i >> 4, 11, tr.field_e);
             return;
           }
           return;
@@ -316,35 +316,35 @@ final class fn {
 
     final static void d(byte param0) {
         RuntimeException runtimeException = null;
-        ut var1 = null;
-        ut var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          var1 = new ut(540, 140);
+          var1 = new Sprite(540, 140);
           PacketBuffer.a(param0 + 26, var1);
-          t.c();
-          on.b();
-          up.field_p = 0;
-          fp.a((byte) -112);
-          var2 = var1.b();
+          TriangleRasterizer.useRasterClip();
+          SoftwareRasterizer.b();
+          PlayerStats.field_p = 0;
+          AuctionItem.a((byte) -112);
+          var2 = var1.copy();
           var3 = 0;
           while (var3 < 15) {
             var2.a(-2, -2, 16777215);
-            on.b(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.b(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
             }
           }
           if (param0 != -128) {
-            field_b = (sj) null;
+            field_b = (ResourceArchive) null;
           }
-          tm.field_v.e();
-          var1.f(0, 0);
-          ta.e(127);
+          ConsoleCommand.field_v.e();
+          var1.drawHalfSize(0, 0);
+          TeamManagementScreen.e(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -394,10 +394,10 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
-          e.field_n = new v[param0];
+          SplashScreen.field_n = new v[param0];
           var1_int = 0;
-          while (e.field_n.length > var1_int) {
-            e.field_n[var1_int] = new v();
+          while (SplashScreen.field_n.length > var1_int) {
+            SplashScreen.field_n[var1_int] = new v();
             var1_int++;
             if (var2 != 0) {
               return;
@@ -423,18 +423,18 @@ final class fn {
         try {
           mn.field_a = param0;
           var3 = -110 / ((67 - param1) / 54);
-          var2 = (ag) (ps.field_a.g(24009));
+          var2 = (ag) (LoginCredentials.field_a.g(24009));
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (var2 != null) {
-              stackIn_19_0 = var2.field_k.e((byte) -113);
+              stackIn_19_0 = var2.field_k.isLinked((byte) -113);
               if (var4 != 0) {
                 while (true) {
                   if (stackIn_19_0) {
                     var2.field_i.b(var2.field_j * mn.field_a + 128 >> 8);
                   }
                   var2.c((byte) -109);
-                  var2 = (ag) (qd.field_c.c(33));
+                  var2 = (ag) (IndexedSpriteState.field_c.c(33));
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -447,26 +447,26 @@ final class fn {
                   var4 != 0) {
                   var2.field_i.b(128 + mn.field_a * var2.field_j >> 8);
                 }
-                var2 = (ag) (ps.field_a.c(33));
+                var2 = (ag) (LoginCredentials.field_a.c(33));
                 if (var4 == 0) {
                   continue;
                 }
               }
             }
             if ((decompiledFrameCompleted0) &&
-              (qd.field_c != null)) {
-              var2 = (ag) (qd.field_c.g(24009));
+              (IndexedSpriteState.field_c != null)) {
+              var2 = (ag) (IndexedSpriteState.field_c.g(24009));
               while (var2 != null) {
                 if (var4 != 0) {
                   break scanLoop1;
                 }
-                stackIn_19_0Lifetime1 = var2.field_k.e((byte) -113);
+                stackIn_19_0Lifetime1 = var2.field_k.isLinked((byte) -113);
                 if (stackIn_19_0Lifetime1) {
                   var2.field_i.b(var2.field_j * mn.field_a + 128 >> 8);
                 } else {
                   var2.c((byte) -109);
                 }
-                var2 = (ag) (qd.field_c.c(33));
+                var2 = (ag) (IndexedSpriteState.field_c.c(33));
               }
             }
             wd.field_n[1] = param0;
@@ -493,7 +493,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         try {
           te.a(true, param1);
-          ku.a(dh.field_g, 4, false);
+          MouseInputHandler.a(ImageProducerRasterBuffer.field_g, 4, false);
           if (param0 < 14) {
             field_c = -13;
           }
@@ -548,11 +548,11 @@ final class fn {
         try {
           var1 = null;
           var2 = null;
-          if (ov.field_b == 0 &&
-            null != ow.field_b) {
+          if (NodeHashTableIterator.field_b == 0 &&
+            null != ArchiveSource.field_b) {
             var2 = vp.field_g;
           }
-          if (~ov.field_b == param0 &&
+          if (~NodeHashTableIterator.field_b == param0 &&
             !LoggedPlayer.b(param0 - 3194)) {
             boolean decompiledSharedTail1 = !(lf.a(qi.field_o, -39));
             if (!decompiledSharedTail1) {
@@ -562,14 +562,14 @@ final class fn {
             if (decompiledSharedTail1) {
               var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ar.field_a, new String[]{at.field_Kb});
             }
-            if (kd.field_s) {
-              wi.a((String) null, (String) null, 0, 2, (String) (var2), -115);
+            if (DebugConsole.field_s) {
+              TextButton.a((String) null, (String) null, 0, 2, (String) (var2), -115);
               hq.b((byte) 110);
             }
           }
           if (null == var2 &&
             !dg.field_a &&
-            mu.field_Y == null) {
+            ContentTransitionDialog.field_Y == null) {
             var2 = et.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -578,15 +578,15 @@ final class fn {
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var3 = ow.field_e;
-            var3 = ga.a(false, var3);
+            var3 = ArchiveSource.field_e;
+            var3 = TextInputWidget.a(false, var3);
             var4 = "";
             var5 = "|";
-            var6 = ov.field_b;
+            var6 = NodeHashTableIterator.field_b;
             var7 = 0;
             if (var6 == 2) {
-              var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, b.field_F, new String[]{at.field_Kb});
-              var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hd.field_ib, new String[]{var3});
+              var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{at.field_Kb});
+              var8 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
               var7 = -485 + ij.field_s.field_q + (ei.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
               if (0 > var7) {
                 var7 = 0;
@@ -597,17 +597,17 @@ final class fn {
               if (var6 == 0) {
                 if (null == uv.field_i &&
                   uk.field_d) {
-                  var4 = "[" + qt.field_z + "] ";
+                  var4 = "[" + ButtonMenuScreen.field_z + "] ";
                 }
                 if (uv.field_i != null) {
-                  if (!ol.field_R ||
-                    ct.field_x == null) {
-                    var4 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, bv.field_m, new String[]{uv.field_i.field_ec}) + "] ";
+                  if (!GameOverView.field_R ||
+                    SingleChildContainer.field_x == null) {
+                    var4 = "[" + vo.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{uv.field_i.field_ec}) + "] ";
                     if (var10 != 0) {
-                      var4 = "[" + ct.field_x + "] ";
+                      var4 = "[" + SingleChildContainer.field_x + "] ";
                     }
                   } else {
-                    var4 = "[" + ct.field_x + "] ";
+                    var4 = "[" + SingleChildContainer.field_x + "] ";
                   }
                   var6 = 1;
                 }
@@ -626,16 +626,16 @@ final class fn {
                 decompiledSharedTail0 = (var10 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (kb.field_C)) {
-                var4 = "<col=999999>" + var4 + ru.field_t + "</col>";
+                (WriteIntegersCommand.field_C)) {
+                var4 = "<col=999999>" + var4 + MidiPcmStream.field_t + "</col>";
                 var5 = "";
               }
               var9 = FootballerAgent.field_i.a(var4);
               if (!vb.b(119)) {
                 if (ei.field_b.field_gb &&
-                  el.field_A - ei.field_b.field_F < var9) {
+                  BytePlusOneCommand.field_A - ei.field_b.field_F < var9) {
                   if (!PacketBuffer.field_l) {
-                    var1 = ru.field_t;
+                    var1 = MidiPcmStream.field_t;
                   } else {
                     var1 = "Broken!";
                   }
@@ -647,12 +647,12 @@ final class fn {
                 }
               }
             }
-            nv.a(var7, sg.field_c[var6], var4 + hu.c(cq.field_m.toString()), var5, (byte) 34);
+            nv.a(var7, sg.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
             if (!vg.field_Wb) {
               ij.field_s.field_gb = false;
             }
             if (ij.field_s.field_gb) {
-              var1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_s, new String[]{var3, at.field_Kb});
+              var1 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_s, new String[]{var3, at.field_Kb});
             }
           }
           stackIn_99_0 = var1;
@@ -670,7 +670,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 65) {
-            fn.a((gm) null, -74);
+            fn.a((RenderedFootballer) null, -74);
           }
           stackIn_7_0 = (this.field_h == 65);
           return stackIn_7_0;
@@ -689,7 +689,7 @@ final class fn {
           if (param0 != -9814) {
             field_g = (int[]) null;
           }
-          stackIn_10_0 = (this.field_h == 73) && (be.e((byte) 65));
+          stackIn_10_0 = (this.field_h == 73) && (ConsolePanel.e((byte) 65));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -703,7 +703,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          stackIn_1_0 = wq.field_a[this.field_k] + " [" + rv.field_b[this.field_h] + "]";
+          stackIn_1_0 = wq.field_a[this.field_k] + " [" + ValidationState.field_b[this.field_h] + "]";
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -737,7 +737,7 @@ final class fn {
           if (param0 != 62) {
             this.field_k = 120;
           }
-          stackIn_4_0 = jh.field_Ib[this.field_h];
+          stackIn_4_0 = AuctionTableWidget.field_Ib[this.field_h];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -774,7 +774,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            fn.a((gm) null, 63);
+            fn.a((RenderedFootballer) null, 63);
           }
           stackIn_7_0 = (this.field_h == 71);
           return stackIn_7_0;
@@ -843,7 +843,7 @@ final class fn {
           if (param0 < 124) {
             field_j = (String[]) null;
           }
-          stackIn_4_0 = wb.field_r[this.field_h];
+          stackIn_4_0 = TeamSelectionView.field_r[this.field_h];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

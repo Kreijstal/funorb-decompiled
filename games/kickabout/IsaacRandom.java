@@ -55,7 +55,7 @@ final class IsaacRandom {
         return ek.field_M;
     }
 
-    private final void a(byte param0) {
+    private final void initializeState(byte param0) {
         int var11 = Kickabout.field_G;
         int var6 = -1640531527;
         int var8 = -1640531527;
@@ -200,16 +200,16 @@ final class IsaacRandom {
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lk[] var2 = null;
+        ConsoleExpression[] var2 = null;
         RuntimeException var2_ref = null;
         StringBuilder var3 = null;
-        lk var5 = null;
+        ConsoleExpression var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         int var9 = 0;
         String var10 = null;
-        lk[] var11 = null;
+        ConsoleExpression[] var11 = null;
         var9 = Kickabout.field_G;
         try {
           var11 = w.a(param0, (byte) -21);
@@ -237,7 +237,7 @@ final class IsaacRandom {
                   if (pv.field_H == var5.field_k) {
                     discarded$1 = var3.append("<col=ffaaff>").append(var8).append("</col>");
                   } else {
-                    if (var5.field_k != ra.field_N) {
+                    if (var5.field_k != GameModesHelpScreen.field_N) {
                       discarded$2 = var3.append(var8);
                     } else {
                       discarded$3 = var3.append("<col=33ffaa>").append(var8).append("</col>");
@@ -342,7 +342,7 @@ final class IsaacRandom {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_a[var2_int] = param0[var2_int];
           }
-          this.a((byte) -113);
+          this.initializeState((byte) -113);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

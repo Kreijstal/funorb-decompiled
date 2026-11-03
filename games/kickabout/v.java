@@ -6,11 +6,11 @@ final class v {
     private int field_c;
     private int field_g;
     private int field_e;
-    static sj field_b;
+    static ResourceArchive field_b;
     private int field_h;
     private int field_j;
     int field_a;
-    private ut field_f;
+    private Sprite field_f;
     static int field_d;
 
     final void a(int param0) {
@@ -26,7 +26,7 @@ final class v {
         }
     }
 
-    final void a(gm param0, int param1, boolean param2) {
+    final void a(RenderedFootballer param0, int param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -41,10 +41,10 @@ final class v {
           this.field_g = 64;
           this.field_h = 96;
           PacketBuffer.a(74, this.field_f);
-          on.b();
-          var4_int = 486400 / hw.field_i;
+          SoftwareRasterizer.b();
+          var4_int = 486400 / InstrumentNoteMask.field_i;
           param0.a(var4_int, 300, this.field_g, this.field_h, (byte) -74);
-          ta.e(124);
+          TeamManagementScreen.e(124);
           if (param2) {
             return;
           }
@@ -74,8 +74,8 @@ final class v {
         if (param0 < -1) {
           return;
         }
-        gm var4 = (gm) null;
-        this.a((gm) null, 55, true);
+        RenderedFootballer var4 = (RenderedFootballer) null;
+        this.a((RenderedFootballer) null, 55, true);
     }
 
     final static Boolean d(int param0) {
@@ -94,10 +94,10 @@ final class v {
     }
 
     v() {
-        this.field_f = new ut(128, 128);
+        this.field_f = new Sprite(128, 128);
     }
 
-    final void a(int param0, byte param1, ob param2) {
+    final void a(int param0, byte param1, RenderedBall param2) {
         int var4_int = 0;
         try {
           this.field_g = 64;
@@ -107,11 +107,11 @@ final class v {
           this.field_j = param2.c(true);
           this.field_a = 17;
           PacketBuffer.a(-57, this.field_f);
-          on.b();
+          SoftwareRasterizer.b();
           int var5 = 64 / ((-64 - param1) / 38);
-          var4_int = (param2.j(-1) << 8) / hw.field_i;
+          var4_int = (param2.j(-1) << 8) / InstrumentNoteMask.field_i;
           param2.a(300, this.field_g, this.field_h, var4_int, 300);
-          ta.e(123);
+          TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

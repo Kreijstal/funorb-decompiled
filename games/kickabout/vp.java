@@ -4,7 +4,7 @@
 final class vp implements hc {
     private int field_i;
     static String field_d;
-    static sj field_j;
+    static ResourceArchive field_j;
     static String field_n;
     static ff field_o;
     static int field_f;
@@ -62,7 +62,7 @@ final class vp implements hc {
               cb.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
                 kh.a(var5, var12, var8 << 8, false, 2150);
-                cb.field_b[var5][var8] = ge.a(16, vf.field_F);
+                cb.field_b[var5][var8] = MatchingTextValidator.a(16, vf.field_F);
               }
               var12.a(var6, (byte) -107);
               var8Lifetime1 = (2 + var6.field_e.length) / 3;
@@ -71,10 +71,10 @@ final class vp implements hc {
                 var12.a(var9 * 3, -39);
                 for (var10 = 0; var10 < 8; var10++) {
                   kh.a(var5, var12, var10 << 8, false, 2150);
-                  vf.field_K[var5][var9][var10] = ge.a(16, vf.field_F);
+                  vf.field_K[var5][var9][var10] = MatchingTextValidator.a(16, vf.field_F);
                 }
                 var4Lifetime1++;
-                jm.a(var3, param0 + 13984, var4Lifetime1);
+                DelayedServerPacket.a(var3, param0 + 13984, var4Lifetime1);
               }
             }
             hq.field_a = true;
@@ -97,8 +97,8 @@ final class vp implements hc {
           return false;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (od.field_n && (sf.c(-1, param0 - 9) ||
-          sf.c(-2, param0 - 9))) {
+        if (od.field_n && (MainMenuScreen.isScreenShown(-1, param0 - 9) ||
+          MainMenuScreen.isScreenShown(-2, param0 - 9))) {
           stackIn_8_0 = true;
           decompiledFrameRemainder0 = false;
         }
@@ -112,16 +112,16 @@ final class vp implements hc {
         if (null == td.field_c) {
           return -1;
         }
-        if (param1 >= ik.field_D &&
-          ik.field_D + td.field_c.field_q > param1 &&
+        if (param1 >= IntDoubleCommand.field_D &&
+          IntDoubleCommand.field_D + td.field_c.field_q > param1 &&
           rp.field_w <= param0 &&
           param0 < rp.field_w + td.field_c.field_w) {
           return 0;
         }
         if (ha.field_G <= param1 &&
           ha.field_G + td.field_c.field_q > param1 &&
-          param0 >= lr.field_q &&
-          param0 < td.field_c.field_w + lr.field_q) {
+          param0 >= FormationView.field_q &&
+          param0 < td.field_c.field_w + FormationView.field_q) {
           return 1;
         }
         if (param2 < 0) {
@@ -152,23 +152,23 @@ final class vp implements hc {
         String var4;
         pe.b(0);
         var4 = (String) null;
-        vc.a((String) null, -1);
+        ReceivedAuctionItem.a((String) null, -1);
         if (param0 != -25) {
           field_a = -18;
         }
         if (this.b(8)) {
           if (sr.field_l == null) {
             if (um.field_e != null &&
-              um.field_e.field_A && (!um.field_e.e(param0 ^ 25) ||
+              um.field_e.field_A && (!um.field_e.isSpectator(param0 ^ 25) ||
               um.field_e.b(-21660))) {
               ui.h(param0 ^ 15419);
-              vc.a(wn.field_h, param0 ^ 24);
-              jh.a(6356832, (byte) -25);
+              ReceivedAuctionItem.a(wn.field_h, param0 ^ 24);
+              AuctionTableWidget.a(6356832, (byte) -25);
             }
           } else {
             ui.h(-15396);
-            vc.a(qr.field_g, -1);
-            jh.a(6356832, (byte) -25);
+            ReceivedAuctionItem.a(qr.field_g, -1);
+            AuctionTableWidget.a(6356832, (byte) -25);
           }
           this.field_i = this.field_i + 1;
           ul.a(true, 300, 320, param1);
@@ -189,7 +189,7 @@ final class vp implements hc {
         if (param0 != 11516) {
           return true;
         }
-        stackIn_6_0 = (this.b(param0 ^ 11508)) && (ud.a(13, 12, 17860, 15));
+        stackIn_6_0 = (this.b(param0 ^ 11508)) && (MatchTransitionScreen.a(13, 12, 17860, 15));
         return stackIn_6_0;
     }
 
@@ -220,7 +220,7 @@ final class vp implements hc {
         field_n = "Play rated game";
         field_d = "tournament lobby";
         field_o = new ff(8, 0, 4, 1);
-        de.b(50, (byte) -110);
+        GameKeyHandler.b(50, (byte) -110);
         field_l = "Loading animations";
         field_g = "Public chat is unavailable while setting up a rated game.";
         field_b = "Quick Chat Help";

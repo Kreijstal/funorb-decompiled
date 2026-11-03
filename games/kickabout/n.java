@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class n {
-    private bi field_g;
+    private ArchiveNetworkClient field_g;
     private PacketBuffer field_i;
-    static qv field_e;
+    static TextWidgetPainter field_e;
     static String[] field_f;
     static int field_m;
     private eb field_h;
@@ -12,7 +12,7 @@ final class n {
     private java.math.BigInteger field_l;
     static String field_j;
     static boolean field_c;
-    private wm[] field_k;
+    private CachedArchiveSource[] field_k;
     static int field_d;
     private ui field_a;
 
@@ -100,13 +100,13 @@ final class n {
         }
     }
 
-    n(bi param0, eb param1) {
+    n(ArchiveNetworkClient param0, eb param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final wm a(qh param0, int param1, int param2, boolean param3, qh param4) {
-        wm stackIn_9_0 = null;
-        wm stackIn_11_0 = null;
+    final CachedArchiveSource a(SectorCacheStore param0, int param1, int param2, boolean param3, SectorCacheStore param4) {
+        CachedArchiveSource stackIn_9_0 = null;
+        CachedArchiveSource stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -116,7 +116,7 @@ final class n {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        wm var9 = null;
+        CachedArchiveSource var9 = null;
         int var10 = 0;
         byte[] var14 = null;
         try {
@@ -130,12 +130,12 @@ final class n {
               return stackIn_9_0;
             }
             this.field_i.field_n = param2 * 72 + 6;
-            var6_int = this.field_i.k(4);
-            var7 = this.field_i.k(4);
+            var6_int = this.field_i.readInt(4);
+            var7 = this.field_i.readInt(4);
             var14 = new byte[64];
-            this.field_i.a(var14, 0, (byte) -6, 64);
+            this.field_i.readBytes(var14, 0, (byte) -6, 64);
             var10 = -31 / ((param1 - 39) / 51);
-            var9 = new wm(param2, param0, param4, this.field_g, this.field_h, var6_int, var14, var7, param3);
+            var9 = new CachedArchiveSource(param2, param0, param4, this.field_g, this.field_h, var6_int, var14, var7, param3);
             this.field_k[param2] = var9;
             stackIn_11_0 = var9;
             return stackIn_11_0;
@@ -167,17 +167,17 @@ final class n {
         int var5 = 0;
         int var6 = 0;
         try {
-          jw.field_Cb.field_E = param1;
-          qv.field_f = true;
+          CheckboxLabelWidget.field_Cb.field_E = param1;
+          TextWidgetPainter.field_f = true;
           var2_int = ea.field_f.field_a;
           var3 = ea.field_f.field_e;
           int var4 = 59 % ((param0 + 57) / 43);
-          var5 = jw.field_Cb.field_X.c(param1, 272, jw.field_Cb.field_xb);
+          var5 = CheckboxLabelWidget.field_Cb.field_X.paragraphHeight(param1, 272, CheckboxLabelWidget.field_Cb.field_xb);
           var6 = -103 + var3 / 2 - var5 / 2;
           kk.field_j.a(true, 320, (-320 + var2_int) / 2, var6, -120 + (var3 - 2 * var6));
           kk.field_j.field_R = fs.a(kk.field_j.field_mb, 3, 2105376, 11579568, 8421504, (byte) 126);
-          jw.field_Cb.a(true, -24 + kk.field_j.field_q - 24, 24, 16, -24 + (-20 + kk.field_j.field_mb));
-          ao.field_a.a(true, 80, 120, -20 + kk.field_j.field_mb - 24, 24);
+          CheckboxLabelWidget.field_Cb.a(true, -24 + kk.field_j.field_q - 24, 24, 16, -24 + (-20 + kk.field_j.field_mb));
+          RandomAccessCacheFile.field_a.a(true, 80, 120, -20 + kk.field_j.field_mb - 24, 24);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "n.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -216,15 +216,15 @@ final class n {
             var4 = (String) null;
             n.a('[', (String) null, (byte) 89, (String) null);
           }
-          if (qp.field_G == null ||
-            !(param1 <= qp.field_G.length)) {
-            qp.field_G = new int[param1 * 2];
+          if (AccountMessagePanel.field_G == null ||
+            !(param1 <= AccountMessagePanel.field_G.length)) {
+            AccountMessagePanel.field_G = new int[param1 * 2];
           }
-          if (null != fo.field_j &&
-            param1 <= fo.field_j.length) {
-            if (ln.field_B == null ||
-              !(ln.field_B.length >= param1)) {
-              ln.field_B = new int[2 * param1];
+          if (null != AgeValidator.field_j &&
+            param1 <= AgeValidator.field_j.length) {
+            if (DropTargetWidget.field_B == null ||
+              !(DropTargetWidget.field_B.length >= param1)) {
+              DropTargetWidget.field_B = new int[2 * param1];
             }
             if (null == w.field_a) {
               w.field_a = new int[param1 * 2];
@@ -273,17 +273,17 @@ final class n {
                 }
               }
             }
-            kt.field_g = -2147483648;
-            lm.field_V = -2147483648;
+            BlackFadeScreen.field_g = -2147483648;
+            TournamentLobbyScreen.field_V = -2147483648;
             er.field_k = 2147483647;
             vi.field_s = 2147483647;
-            wf.field_O = 0;
+            AuctionsScreen.field_O = 0;
             return;
           }
-          fo.field_j = new int[2 * param1];
-          if (ln.field_B == null ||
-            !(ln.field_B.length >= param1)) {
-            ln.field_B = new int[2 * param1];
+          AgeValidator.field_j = new int[2 * param1];
+          if (DropTargetWidget.field_B == null ||
+            !(DropTargetWidget.field_B.length >= param1)) {
+            DropTargetWidget.field_B = new int[2 * param1];
           }
           if (null == w.field_a ||
             !(param1 <= w.field_a.length)) {
@@ -307,15 +307,15 @@ final class n {
               var4 = (String) null;
               n.a('[', (String) null, (byte) 89, (String) null);
             }
-            if (qp.field_G == null ||
-              !(param1 <= qp.field_G.length)) {
-              qp.field_G = new int[param1 * 2];
+            if (AccountMessagePanel.field_G == null ||
+              !(param1 <= AccountMessagePanel.field_G.length)) {
+              AccountMessagePanel.field_G = new int[param1 * 2];
             }
-            if (null != fo.field_j &&
-              param1 <= fo.field_j.length) {
-              if (ln.field_B == null ||
-                !(ln.field_B.length >= param1)) {
-                ln.field_B = new int[2 * param1];
+            if (null != AgeValidator.field_j &&
+              param1 <= AgeValidator.field_j.length) {
+              if (DropTargetWidget.field_B == null ||
+                !(DropTargetWidget.field_B.length >= param1)) {
+                DropTargetWidget.field_B = new int[2 * param1];
               }
               if (null == w.field_a) {
                 w.field_a = new int[param1 * 2];
@@ -364,17 +364,17 @@ final class n {
                   }
                 }
               }
-              kt.field_g = -2147483648;
-              lm.field_V = -2147483648;
+              BlackFadeScreen.field_g = -2147483648;
+              TournamentLobbyScreen.field_V = -2147483648;
               er.field_k = 2147483647;
               vi.field_s = 2147483647;
-              wf.field_O = 0;
+              AuctionsScreen.field_O = 0;
               return;
             }
-            fo.field_j = new int[2 * param1];
-            if (ln.field_B == null ||
-              !(ln.field_B.length >= param1)) {
-              ln.field_B = new int[2 * param1];
+            AgeValidator.field_j = new int[2 * param1];
+            if (DropTargetWidget.field_B == null ||
+              !(DropTargetWidget.field_B.length >= param1)) {
+              DropTargetWidget.field_B = new int[2 * param1];
             }
             if (null == w.field_a ||
               !(param1 <= w.field_a.length)) {
@@ -398,15 +398,15 @@ final class n {
               var4 = (String) null;
               n.a('[', (String) null, (byte) 89, (String) null);
             }
-            if (qp.field_G == null ||
-              !(param1 <= qp.field_G.length)) {
-              qp.field_G = new int[param1 * 2];
+            if (AccountMessagePanel.field_G == null ||
+              !(param1 <= AccountMessagePanel.field_G.length)) {
+              AccountMessagePanel.field_G = new int[param1 * 2];
             }
-            if (null != fo.field_j &&
-              param1 <= fo.field_j.length) {
-              if (ln.field_B == null ||
-                !(ln.field_B.length >= param1)) {
-                ln.field_B = new int[2 * param1];
+            if (null != AgeValidator.field_j &&
+              param1 <= AgeValidator.field_j.length) {
+              if (DropTargetWidget.field_B == null ||
+                !(DropTargetWidget.field_B.length >= param1)) {
+                DropTargetWidget.field_B = new int[2 * param1];
               }
               if (null == w.field_a) {
                 w.field_a = new int[param1 * 2];
@@ -457,17 +457,17 @@ final class n {
                   }
                 }
               }
-              kt.field_g = -2147483648;
-              lm.field_V = -2147483648;
+              BlackFadeScreen.field_g = -2147483648;
+              TournamentLobbyScreen.field_V = -2147483648;
               er.field_k = 2147483647;
               vi.field_s = 2147483647;
-              wf.field_O = 0;
+              AuctionsScreen.field_O = 0;
               return;
             }
-            fo.field_j = new int[2 * param1];
-            if (ln.field_B == null ||
-              !(ln.field_B.length >= param1)) {
-              ln.field_B = new int[2 * param1];
+            AgeValidator.field_j = new int[2 * param1];
+            if (DropTargetWidget.field_B == null ||
+              !(DropTargetWidget.field_B.length >= param1)) {
+              DropTargetWidget.field_B = new int[2 * param1];
             }
             if (null == w.field_a ||
               !(param1 <= w.field_a.length)) {
@@ -479,21 +479,21 @@ final class n {
             }
             if (null != ug.field_f &&
               ug.field_f.length >= param1) {
-              kt.field_g = -2147483648;
-              lm.field_V = -2147483648;
+              BlackFadeScreen.field_g = -2147483648;
+              TournamentLobbyScreen.field_V = -2147483648;
               er.field_k = 2147483647;
               vi.field_s = 2147483647;
-              wf.field_O = 0;
+              AuctionsScreen.field_O = 0;
               return;
             }
             ug.field_f = new boolean[2 * param1];
           }
         }
-        kt.field_g = -2147483648;
-        lm.field_V = -2147483648;
+        BlackFadeScreen.field_g = -2147483648;
+        TournamentLobbyScreen.field_V = -2147483648;
         er.field_k = 2147483647;
         vi.field_s = 2147483647;
-        wf.field_O = 0;
+        AuctionsScreen.field_O = 0;
     }
 
     final boolean a(byte param0) {
@@ -525,7 +525,7 @@ final class n {
         }
         var10 = new PacketBuffer(this.field_a.b(param0 ^ -12847));
         var10.field_n = 5;
-        var3 = var10.h((byte) -116);
+        var3 = var10.readUnsignedByte((byte) -116);
         var10.field_n = var10.field_n + 72 * var3;
         var13 = new byte[var10.field_f.length - var10.field_n];
         var11 = var13;
@@ -533,7 +533,7 @@ final class n {
         if (param0 != -45) {
           return true;
         }
-        var10.a(var4, 0, (byte) -6, var13.length);
+        var10.readBytes(var4, 0, (byte) -6, var13.length);
         if (this.field_b == null) {
           var5 = var4;
         } else {
@@ -548,7 +548,7 @@ final class n {
                 throw new RuntimeException();
               }
             }
-            this.field_k = new wm[var3];
+            this.field_k = new CachedArchiveSource[var3];
             this.field_i = var10;
             return true;
           }
@@ -565,7 +565,7 @@ final class n {
             throw new RuntimeException();
           }
         }
-        this.field_k = new wm[var3];
+        this.field_k = new CachedArchiveSource[var3];
         this.field_i = var10;
         return true;
     }
@@ -574,16 +574,16 @@ final class n {
         if (param0) {
           return false;
         }
-        if (null == mr.field_Z) {
+        if (null == ValidatedTextWidget.field_Z) {
           return false;
         }
-        if (null == mr.field_Z.h((byte) 18)) {
+        if (null == ValidatedTextWidget.field_Z.h((byte) 18)) {
           return false;
         }
         return true;
     }
 
-    private n(bi param0, eb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private n(ArchiveNetworkClient param0, eb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

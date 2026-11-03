@@ -1,0 +1,1440 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ArgbSprite extends Sprite {
+    final void d(int param0, int param1, int param2) {
+        int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var5 = 0;
+        int var6 = this.field_w;
+        int var7 = this.field_q;
+        int var8 = SoftwareRasterizer.field_g - var7;
+        int var9 = 0;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
+          var6 = var6 - var10;
+          param1 = SoftwareRasterizer.field_e;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
+        }
+        if (param1 + var6 > SoftwareRasterizer.field_h) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_h);
+        }
+        if (param0 < SoftwareRasterizer.field_b) {
+          var10Lifetime1 = SoftwareRasterizer.field_b - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = SoftwareRasterizer.field_b;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
+        }
+        if (param0 + var7 > SoftwareRasterizer.field_c) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_c;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
+        }
+        if (var7 > 0) {
+          if (var6 <= 0) {
+            return;
+          }
+          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          return;
+        }
+    }
+
+    final void c(int param0, int param1) {
+        int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var4 = 0;
+        int var5 = this.field_w;
+        int var6 = this.field_q;
+        int var7 = SoftwareRasterizer.field_g - var6;
+        int var8 = 0;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var9 = SoftwareRasterizer.field_e - param1;
+          var5 = var5 - var9;
+          param1 = SoftwareRasterizer.field_e;
+          var4 = var4 + var9 * var6;
+          var3 = var3 + var9 * SoftwareRasterizer.field_g;
+        }
+        if (param1 + var5 > SoftwareRasterizer.field_h) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_h);
+        }
+        if (param0 < SoftwareRasterizer.field_b) {
+          var9Lifetime1 = SoftwareRasterizer.field_b - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = SoftwareRasterizer.field_b;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
+        }
+        if (param0 + var6 > SoftwareRasterizer.field_c) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_c;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
+        }
+        if (var6 > 0) {
+          if (var5 <= 0) {
+            return;
+          }
+          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          return;
+        }
+    }
+
+    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var15 = 0;
+        int var16 = 0;
+        int incrementValue$6 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        var10 = param9 >> 16 & 255;
+        var11 = param9 >> 8 & 255;
+        var12 = param9 & 255;
+        var13 = -(param5 >> 2);
+        param5 = -(param5 & 3);
+        var14 = var13 + var13 + var13 + var13 + param5;
+        for (var15 = -param6; var15 < 0; var15++) {
+          for (var16 = var14; var16 < 0; var16++) {
+            param2 = param1[param3++];
+            var17 = param2 >>> 24;
+            if (var17 == 0) {
+              param4++;
+            } else {
+              var19 = param2 >> 16 & 255;
+              var20 = param2 >> 8 & 255;
+              var21 = param2 & 255;
+              if (var19 == var20 &&
+                var20 == var21) {
+                if (var19 > 128) {
+                  var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
+                } else {
+                  var18 = (var19 * var10 >> 7 << 16) + (var20 * var11 >> 7 << 8) + (var21 * var12 >> 7);
+                }
+              } else {
+                var18 = param2;
+              }
+              var22 = 256 - var17;
+              var23 = param0[param4];
+              incrementValue$6 = param4;
+              param4++;
+              param0[incrementValue$6] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+            }
+          }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
+        }
+    }
+
+    final void d(int param0, int param1) {
+        int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var4 = 0;
+        int var5 = this.field_w;
+        int var6 = this.field_q;
+        int var7 = SoftwareRasterizer.field_g - var6;
+        int var8 = 0;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var9 = SoftwareRasterizer.field_e - param1;
+          var5 = var5 - var9;
+          param1 = SoftwareRasterizer.field_e;
+          var4 = var4 + var9 * var6;
+          var3 = var3 + var9 * SoftwareRasterizer.field_g;
+        }
+        if (param1 + var5 > SoftwareRasterizer.field_h) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_h);
+        }
+        if (param0 < SoftwareRasterizer.field_b) {
+          var9Lifetime1 = SoftwareRasterizer.field_b - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = SoftwareRasterizer.field_b;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
+        }
+        if (param0 + var6 > SoftwareRasterizer.field_c) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_c;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
+        }
+        if (var6 > 0) {
+          if (var5 <= 0) {
+            return;
+          }
+          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          return;
+        }
+    }
+
+    final void drawHalfSize(int param0, int param1) {
+        int var9 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int[] stackIn_20_0 = null;
+        int stackIn_20_1 = 0;
+        int stackIn_21_2 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var19Lifetime1;
+        var3 = this.field_q >> 1;
+        var4 = this.field_w >> 1;
+        param0 = param0 + this.field_s / 2;
+        param1 = param1 + this.field_n / 2;
+        if (param0 >= SoftwareRasterizer.field_b) {
+          stackIn_3_0 = 0;
+        } else {
+          stackIn_3_0 = SoftwareRasterizer.field_b - param0 << 1;
+        }
+        var5 = stackIn_3_0;
+        if (param0 + var3 <= SoftwareRasterizer.field_c) {
+          stackIn_6_0 = this.field_q - 2;
+        } else {
+          stackIn_6_0 = (SoftwareRasterizer.field_c - param0 << 1) - 2;
+        }
+        var6 = stackIn_6_0;
+        if (param1 >= SoftwareRasterizer.field_e) {
+          stackIn_9_0 = 0;
+        } else {
+          stackIn_9_0 = SoftwareRasterizer.field_e - param1 << 1;
+        }
+        var7 = stackIn_9_0;
+        if (param1 + var4 <= SoftwareRasterizer.field_h) {
+          stackIn_12_0 = this.field_w - 2;
+        } else {
+          stackIn_12_0 = (SoftwareRasterizer.field_h - param1 << 1) - 2;
+        }
+        var8 = stackIn_12_0;
+        for (var9 = var7; var9 <= var8; var9 += 2) {
+          var10 = var9 * this.field_q + var5;
+          var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.field_g + (param0 + (var5 >> 1));
+          var12 = var5;
+          while (var12 <= var6) {
+            var13 = 0;
+            var14 = 0;
+            var15 = 0;
+            var16 = 0;
+            var17 = 0;
+            var18 = 0;
+            for (var19 = 0; var19 < 4; var19++) {
+              stackIn_20_0 = this.field_y;
+              stackIn_20_1 = var10 + (var19 & 1);
+              if ((var19 & 2) != 0) {
+                stackIn_21_2 = 0;
+              } else {
+                stackIn_21_2 = this.field_q;
+              }
+              var13Lifetime1 = stackIn_20_0[stackIn_20_1 + stackIn_21_2];
+              var14Lifetime1 = var13Lifetime1 >>> 24;
+              var18 = var18 + var14Lifetime1;
+              var15 = var15 + var14Lifetime1 * (var13Lifetime1 >> 16 & 255);
+              var16 = var16 + var14Lifetime1 * (var13Lifetime1 >> 8 & 255);
+              var17 = var17 + var14Lifetime1 * (var13Lifetime1 & 255);
+            }
+            if (var18 != 0) {
+              var15 = (var15 / var18 << 16) + var17 / var18;
+              var16 = var16 / var18 << 8;
+              var19Lifetime1 = var18 >> 2;
+              var20 = 256 - var19Lifetime1;
+              var21 = SoftwareRasterizer.field_a[var11];
+              SoftwareRasterizer.field_a[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+            }
+            var12 += 2;
+            var11++;
+            var10 += 2;
+          }
+        }
+    }
+
+    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int incrementValue$0 = 0;
+        int var13 = param3;
+        for (var14 = -param8; var14 < 0; var14++) {
+          var15 = (param4 >> 16) * param11;
+          for (var16 = -param7; var16 < 0; var16++) {
+            var17 = param1[(param3 >> 16) + var15];
+            var18 = param0[param5];
+            var19 = (var17 >>> 24) * param12 >> 8;
+            var20 = 256 - var19;
+            incrementValue$0 = param5;
+            param5++;
+            param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
+            param3 = param3 + param9;
+          }
+          param4 = param4 + param10;
+          param3 = var13;
+          param5 = param5 + param6;
+        }
+    }
+
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        super(param0, param1, param2, param3, param4, param5, param6);
+    }
+
+    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$12 = 0;
+        int var14;
+        for (param8 = -param10; param8 < 0; param8++) {
+          for (param6 = -param9; param6 < 0; param6++) {
+            param0 = param4[param5++];
+            if (param0 == 0) {
+              param7++;
+            } else {
+              var14 = param13 * (param0 >>> 24) >> 8 & 255;
+              param1 = (param0 & 16711935) * var14;
+              param0 = (param1 & -16711936) + (param0 * var14 - param1 & 16711680) >>> 8;
+              param1 = param3[param7];
+              param2 = param0 + param1;
+              param0 = (param0 & 16711935) + (param1 & 16711935);
+              param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+              incrementValue$12 = param7;
+              param7++;
+              param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
+            }
+          }
+          param7 = param7 + param11;
+          param5 = param5 + param12;
+        }
+    }
+
+    final void drawAdditive(int param0, int param1, int param2) {
+        int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var5 = 0;
+        int var6 = this.field_w;
+        int var7 = this.field_q;
+        int var8 = SoftwareRasterizer.field_g - var7;
+        int var9 = 0;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
+          var6 = var6 - var10;
+          param1 = SoftwareRasterizer.field_e;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
+        }
+        if (param1 + var6 > SoftwareRasterizer.field_h) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_h);
+        }
+        if (param0 < SoftwareRasterizer.field_b) {
+          var10Lifetime1 = SoftwareRasterizer.field_b - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = SoftwareRasterizer.field_b;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
+        }
+        if (param0 + var7 > SoftwareRasterizer.field_c) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_c;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
+        }
+        if (var7 > 0) {
+          if (var6 <= 0) {
+            return;
+          }
+          ArgbSprite.b(0, 0, 0, SoftwareRasterizer.field_a, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          return;
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$8 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        double var7;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        double var24;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var32Lifetime1;
+        int var32Lifetime2;
+        int var32Lifetime3;
+        int var32Lifetime4;
+        int var33Lifetime1;
+        int var33Lifetime2;
+        int var33Lifetime3;
+        int var33Lifetime4;
+        int var34Lifetime1;
+        int var34Lifetime2;
+        int var34Lifetime3;
+        int var34Lifetime4;
+        int var35Lifetime1;
+        int var35Lifetime2;
+        int var35Lifetime3;
+        int var35Lifetime4;
+        int var36Lifetime1;
+        int var36Lifetime2;
+        int var36Lifetime3;
+        int var36Lifetime4;
+        int var37Lifetime1;
+        int var37Lifetime2;
+        int var37Lifetime3;
+        int var37Lifetime4;
+        int var38Lifetime1;
+        int var38Lifetime2;
+        int var38Lifetime3;
+        int var38Lifetime4;
+        int var39Lifetime1;
+        int var39Lifetime2;
+        int var39Lifetime3;
+        int var39Lifetime4;
+        int var40Lifetime1;
+        int var40Lifetime2;
+        int var40Lifetime3;
+        int var40Lifetime4;
+        int var41Lifetime1;
+        int var41Lifetime2;
+        int var41Lifetime3;
+        int var41Lifetime4;
+        int var32Lifetime5;
+        int var33Lifetime5;
+        int var33Lifetime6;
+        int var34Lifetime5;
+        int var34Lifetime6;
+        int var35Lifetime5;
+        int var35Lifetime6;
+        int var36Lifetime5;
+        int var36Lifetime6;
+        int var37Lifetime5;
+        int var37Lifetime6;
+        int var38Lifetime5;
+        int var38Lifetime6;
+        int var39Lifetime5;
+        int var39Lifetime6;
+        int var40Lifetime5;
+        int var40Lifetime6;
+        int var41Lifetime5;
+        int var41Lifetime6;
+        int var32Lifetime1Lifetime1;
+        int var32Lifetime1Lifetime2;
+        int var32Lifetime2Lifetime1;
+        int var32Lifetime3Lifetime1;
+        int var32Lifetime3Lifetime2;
+        int var32Lifetime3Lifetime3;
+        int var32Lifetime4Lifetime1;
+        int var32Lifetime4Lifetime2;
+        int var32Lifetime4Lifetime3;
+        int var33Lifetime1Lifetime1;
+        int var33Lifetime1Lifetime2;
+        int var34Lifetime1Lifetime1;
+        int var34Lifetime1Lifetime2;
+        int var35Lifetime1Lifetime1;
+        int var35Lifetime1Lifetime2;
+        int var36Lifetime1Lifetime1;
+        int var36Lifetime1Lifetime2;
+        int var37Lifetime1Lifetime1;
+        int var37Lifetime1Lifetime2;
+        int var38Lifetime1Lifetime1;
+        int var38Lifetime1Lifetime2;
+        int var39Lifetime1Lifetime1;
+        int var39Lifetime1Lifetime2;
+        int var40Lifetime1Lifetime1;
+        int var40Lifetime1Lifetime2;
+        int var41Lifetime1Lifetime1;
+        int var41Lifetime1Lifetime2;
+        int var32Lifetime6;
+        int var32Lifetime1Lifetime3;
+        int var32Lifetime5Lifetime1;
+        int var32Lifetime1Lifetime1Lifetime1;
+        int var32Lifetime1Lifetime1Lifetime2;
+        int var32Lifetime1Lifetime1Lifetime3;
+        int var32Lifetime1Lifetime2Lifetime1;
+        int var32Lifetime1Lifetime2Lifetime2;
+        int var32Lifetime1Lifetime2Lifetime3;
+        if (param5 == 0) {
+          return;
+        }
+        param0 = param0 - (this.field_s << 4);
+        param1 = param1 - (this.field_n << 4);
+        var7 = (double)(param4 & 65535) * 0.00009587379924285257;
+        var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
+        var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
+        var11 = -param0 * var10 + -param1 * var9;
+        var12 = -(-param0) * var9 + -param1 * var10;
+        var13 = ((this.field_q << 4) - param0) * var10 + -param1 * var9;
+        var14 = -((this.field_q << 4) - param0) * var9 + -param1 * var10;
+        var15 = -param0 * var10 + ((this.field_w << 4) - param1) * var9;
+        var16 = -(-param0) * var9 + ((this.field_w << 4) - param1) * var10;
+        var17 = ((this.field_q << 4) - param0) * var10 + ((this.field_w << 4) - param1) * var9;
+        var18 = -((this.field_q << 4) - param0) * var9 + ((this.field_w << 4) - param1) * var10;
+        if (var11 >= var13) {
+          var19 = var13;
+          var20 = var11;
+        } else {
+          var19 = var11;
+          var20 = var13;
+        }
+        if (var15 < var19) {
+          var19 = var15;
+        }
+        if (var17 < var19) {
+          var19 = var17;
+        }
+        if (var15 > var20) {
+          var20 = var15;
+        }
+        if (var17 > var20) {
+          var20 = var17;
+        }
+        if (var12 >= var14) {
+          var21 = var14;
+          var22 = var12;
+        } else {
+          var21 = var12;
+          var22 = var14;
+        }
+        if (var16 < var21) {
+          var21 = var16;
+        }
+        if (var18 < var21) {
+          var21 = var18;
+        }
+        if (var16 > var22) {
+          var22 = var16;
+        }
+        if (var18 > var22) {
+          var22 = var18;
+        }
+        var19 = var19 >> 12;
+        var20 = var20 + 4095 >> 12;
+        var21 = var21 >> 12;
+        var22 = var22 + 4095 >> 12;
+        var19 = var19 + param2;
+        var20 = var20 + param2;
+        var21 = var21 + param3;
+        var22 = var22 + param3;
+        var19 = var19 >> 4;
+        var20 = var20 + 15 >> 4;
+        var21 = var21 >> 4;
+        var22 = var22 + 15 >> 4;
+        if (var19 < SoftwareRasterizer.field_b) {
+          var19 = SoftwareRasterizer.field_b;
+        }
+        if (var20 > SoftwareRasterizer.field_c) {
+          var20 = SoftwareRasterizer.field_c;
+        }
+        if (var21 < SoftwareRasterizer.field_e) {
+          var21 = SoftwareRasterizer.field_e;
+        }
+        if (var22 > SoftwareRasterizer.field_h) {
+          var22 = SoftwareRasterizer.field_h;
+        }
+        var20 = var19 - var20;
+        if (var20 >= 0) {
+          return;
+        }
+        var22 = var21 - var22;
+        if (var22 >= 0) {
+          return;
+        }
+        var23 = var21 * SoftwareRasterizer.field_g + var19;
+        var24 = 16777216.0 / (double)param5;
+        var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
+        var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
+        var28 = (var19 << 4) + 8 - param2;
+        var29 = (var21 << 4) + 8 - param3;
+        var30 = (param0 << 8) - (var29 * var26 >> 4);
+        var31 = (param1 << 8) + (var29 * var27 >> 4);
+        if (var27 == 0) {
+          if (var26 == 0) {
+            var33 = var22;
+            while (var33 < 0) {
+              var34 = var23;
+              var35 = var30;
+              var36 = var31;
+              var37 = var20;
+              if (var35 >= 0 &&
+                var36 >= 0 &&
+                var35 - (this.field_q << 12) < 0 &&
+                var36 - (this.field_w << 12) < 0) {
+                while (var37 < 0) {
+                  var38 = this.field_y[(var36 >> 12) * this.field_q + (var35 >> 12)];
+                  var39 = SoftwareRasterizer.field_a[var34];
+                  var40 = var38 >>> 24;
+                  var41 = 256 - var40;
+                  incrementValue$8 = var34;
+                  var34++;
+                  SoftwareRasterizer.field_a[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                  var37++;
+                }
+              }
+              var33++;
+              var23 = var23 + SoftwareRasterizer.field_g;
+            }
+            return;
+          }
+          if (var26 >= 0) {
+            var33Lifetime5 = var22;
+            while (var33Lifetime5 < 0) {
+              var34Lifetime5 = var23;
+              var35Lifetime5 = var30;
+              var36Lifetime5 = var31 + (var28 * var26 >> 4);
+              var37Lifetime5 = var20;
+              if (var35Lifetime5 >= 0 &&
+                var35Lifetime5 - (this.field_q << 12) < 0) {
+                if (var36Lifetime5 < 0) {
+                  var32 = (var26 - 1 - var36Lifetime5) / var26;
+                  var37Lifetime5 = var37Lifetime5 + var32;
+                  var36Lifetime5 = var36Lifetime5 + var26 * var32;
+                  var34Lifetime5 = var34Lifetime5 + var32;
+                }
+                var32Lifetime6 = (1 + var36Lifetime5 - (this.field_w << 12) - var26) / var26;
+                if ((1 + var36Lifetime5 - (this.field_w << 12) - var26) / var26 > var37Lifetime5) {
+                  var37Lifetime5 = var32Lifetime6;
+                }
+                while (var37Lifetime5 < 0) {
+                  var38Lifetime5 = this.field_y[(var36Lifetime5 >> 12) * this.field_q + (var35Lifetime5 >> 12)];
+                  var39Lifetime5 = SoftwareRasterizer.field_a[var34Lifetime5];
+                  var40Lifetime5 = var38Lifetime5 >>> 24;
+                  var41Lifetime5 = 256 - var40Lifetime5;
+                  incrementValue$6 = var34Lifetime5;
+                  var34Lifetime5++;
+                  SoftwareRasterizer.field_a[incrementValue$6] = ((var38Lifetime5 & 16711935) * var40Lifetime5 + (var39Lifetime5 & 16711935) * var41Lifetime5 & -16711936) + ((var38Lifetime5 & 65280) * var40Lifetime5 + (var39Lifetime5 & 65280) * var41Lifetime5 & 16711680) >>> 8;
+                  var36Lifetime5 = var36Lifetime5 + var26;
+                  var37Lifetime5++;
+                }
+              }
+              var33Lifetime5++;
+              var30 = var30 - var26;
+              var23 = var23 + SoftwareRasterizer.field_g;
+            }
+            return;
+          }
+          var33Lifetime6 = var22;
+          while (var33Lifetime6 < 0) {
+            var34Lifetime6 = var23;
+            var35Lifetime6 = var30;
+            var36Lifetime6 = var31 + (var28 * var26 >> 4);
+            var37Lifetime6 = var20;
+            if (var35Lifetime6 >= 0 &&
+              var35Lifetime6 - (this.field_q << 12) < 0) {
+              var32Lifetime5 = var36Lifetime6 - (this.field_w << 12);
+              if (var36Lifetime6 - (this.field_w << 12) >= 0) {
+                var32Lifetime5 = (var26 - var32Lifetime5) / var26;
+                var37Lifetime6 = var37Lifetime6 + var32Lifetime5;
+                var36Lifetime6 = var36Lifetime6 + var26 * var32Lifetime5;
+                var34Lifetime6 = var34Lifetime6 + var32Lifetime5;
+              }
+              var32Lifetime5Lifetime1 = (var36Lifetime6 - var26) / var26;
+              if ((var36Lifetime6 - var26) / var26 > var37Lifetime6) {
+                var37Lifetime6 = var32Lifetime5Lifetime1;
+              }
+              while (var37Lifetime6 < 0) {
+                var38Lifetime6 = this.field_y[(var36Lifetime6 >> 12) * this.field_q + (var35Lifetime6 >> 12)];
+                var39Lifetime6 = SoftwareRasterizer.field_a[var34Lifetime6];
+                var40Lifetime6 = var38Lifetime6 >>> 24;
+                var41Lifetime6 = 256 - var40Lifetime6;
+                incrementValue$7 = var34Lifetime6;
+                var34Lifetime6++;
+                SoftwareRasterizer.field_a[incrementValue$7] = ((var38Lifetime6 & 16711935) * var40Lifetime6 + (var39Lifetime6 & 16711935) * var41Lifetime6 & -16711936) + ((var38Lifetime6 & 65280) * var40Lifetime6 + (var39Lifetime6 & 65280) * var41Lifetime6 & 16711680) >>> 8;
+                var36Lifetime6 = var36Lifetime6 + var26;
+                var37Lifetime6++;
+              }
+            }
+            var33Lifetime6++;
+            var30 = var30 - var26;
+            var23 = var23 + SoftwareRasterizer.field_g;
+          }
+          return;
+        }
+        if (var27 >= 0) {
+          if (var26 == 0) {
+            var33Lifetime1 = var22;
+            while (var33Lifetime1 < 0) {
+              var34Lifetime1 = var23;
+              var35Lifetime1 = var30 + (var28 * var27 >> 4);
+              var36Lifetime1 = var31;
+              var37Lifetime1 = var20;
+              if (var36Lifetime1 >= 0 &&
+                var36Lifetime1 - (this.field_w << 12) < 0) {
+                if (var35Lifetime1 < 0) {
+                  var32Lifetime1 = (var27 - 1 - var35Lifetime1) / var27;
+                  var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
+                  var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
+                  var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
+                }
+                var32Lifetime1Lifetime3 = (1 + var35Lifetime1 - (this.field_q << 12) - var27) / var27;
+                if ((1 + var35Lifetime1 - (this.field_q << 12) - var27) / var27 > var37Lifetime1) {
+                  var37Lifetime1 = var32Lifetime1Lifetime3;
+                }
+                while (var37Lifetime1 < 0) {
+                  var38Lifetime1 = this.field_y[(var36Lifetime1 >> 12) * this.field_q + (var35Lifetime1 >> 12)];
+                  var39Lifetime1 = SoftwareRasterizer.field_a[var34Lifetime1];
+                  var40Lifetime1 = var38Lifetime1 >>> 24;
+                  var41Lifetime1 = 256 - var40Lifetime1;
+                  incrementValue$2 = var34Lifetime1;
+                  var34Lifetime1++;
+                  SoftwareRasterizer.field_a[incrementValue$2] = ((var38Lifetime1 & 16711935) * var40Lifetime1 + (var39Lifetime1 & 16711935) * var41Lifetime1 & -16711936) + ((var38Lifetime1 & 65280) * var40Lifetime1 + (var39Lifetime1 & 65280) * var41Lifetime1 & 16711680) >>> 8;
+                  var35Lifetime1 = var35Lifetime1 + var27;
+                  var37Lifetime1++;
+                }
+              }
+              var33Lifetime1++;
+              var31 = var31 + var27;
+              var23 = var23 + SoftwareRasterizer.field_g;
+            }
+            return;
+          }
+          if (var26 >= 0) {
+            var33Lifetime1Lifetime1 = var22;
+            while (var33Lifetime1Lifetime1 < 0) {
+              var34Lifetime1Lifetime1 = var23;
+              var35Lifetime1Lifetime1 = var30 + (var28 * var27 >> 4);
+              var36Lifetime1Lifetime1 = var31 + (var28 * var26 >> 4);
+              var37Lifetime1Lifetime1 = var20;
+              if (var35Lifetime1Lifetime1 < 0) {
+                var32Lifetime1Lifetime1 = (var27 - 1 - var35Lifetime1Lifetime1) / var27;
+                var37Lifetime1Lifetime1 = var37Lifetime1Lifetime1 + var32Lifetime1Lifetime1;
+                var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27 * var32Lifetime1Lifetime1;
+                var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26 * var32Lifetime1Lifetime1;
+                var34Lifetime1Lifetime1 = var34Lifetime1Lifetime1 + var32Lifetime1Lifetime1;
+              }
+              var32Lifetime1Lifetime1Lifetime1 = (1 + var35Lifetime1Lifetime1 - (this.field_q << 12) - var27) / var27;
+              if ((1 + var35Lifetime1Lifetime1 - (this.field_q << 12) - var27) / var27 > var37Lifetime1Lifetime1) {
+                var37Lifetime1Lifetime1 = var32Lifetime1Lifetime1Lifetime1;
+              }
+              if (var36Lifetime1Lifetime1 < 0) {
+                var32Lifetime1Lifetime1Lifetime2 = (var26 - 1 - var36Lifetime1Lifetime1) / var26;
+                var37Lifetime1Lifetime1 = var37Lifetime1Lifetime1 + var32Lifetime1Lifetime1Lifetime2;
+                var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27 * var32Lifetime1Lifetime1Lifetime2;
+                var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26 * var32Lifetime1Lifetime1Lifetime2;
+                var34Lifetime1Lifetime1 = var34Lifetime1Lifetime1 + var32Lifetime1Lifetime1Lifetime2;
+              }
+              var32Lifetime1Lifetime1Lifetime3 = (1 + var36Lifetime1Lifetime1 - (this.field_w << 12) - var26) / var26;
+              if ((1 + var36Lifetime1Lifetime1 - (this.field_w << 12) - var26) / var26 > var37Lifetime1Lifetime1) {
+                var37Lifetime1Lifetime1 = var32Lifetime1Lifetime1Lifetime3;
+              }
+              while (var37Lifetime1Lifetime1 < 0) {
+                var38Lifetime1Lifetime1 = this.field_y[(var36Lifetime1Lifetime1 >> 12) * this.field_q + (var35Lifetime1Lifetime1 >> 12)];
+                var39Lifetime1Lifetime1 = SoftwareRasterizer.field_a[var34Lifetime1Lifetime1];
+                var40Lifetime1Lifetime1 = var38Lifetime1Lifetime1 >>> 24;
+                var41Lifetime1Lifetime1 = 256 - var40Lifetime1Lifetime1;
+                incrementValue$0 = var34Lifetime1Lifetime1;
+                var34Lifetime1Lifetime1++;
+                SoftwareRasterizer.field_a[incrementValue$0] = ((var38Lifetime1Lifetime1 & 16711935) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 16711935) * var41Lifetime1Lifetime1 & -16711936) + ((var38Lifetime1Lifetime1 & 65280) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 65280) * var41Lifetime1Lifetime1 & 16711680) >>> 8;
+                var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27;
+                var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26;
+                var37Lifetime1Lifetime1++;
+              }
+              var33Lifetime1Lifetime1++;
+              var30 = var30 - var26;
+              var31 = var31 + var27;
+              var23 = var23 + SoftwareRasterizer.field_g;
+            }
+            return;
+          }
+          var33Lifetime1Lifetime2 = var22;
+          while (var33Lifetime1Lifetime2 < 0) {
+            var34Lifetime1Lifetime2 = var23;
+            var35Lifetime1Lifetime2 = var30 + (var28 * var27 >> 4);
+            var36Lifetime1Lifetime2 = var31 + (var28 * var26 >> 4);
+            var37Lifetime1Lifetime2 = var20;
+            if (var35Lifetime1Lifetime2 < 0) {
+              var32Lifetime1Lifetime2 = (var27 - 1 - var35Lifetime1Lifetime2) / var27;
+              var37Lifetime1Lifetime2 = var37Lifetime1Lifetime2 + var32Lifetime1Lifetime2;
+              var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27 * var32Lifetime1Lifetime2;
+              var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26 * var32Lifetime1Lifetime2;
+              var34Lifetime1Lifetime2 = var34Lifetime1Lifetime2 + var32Lifetime1Lifetime2;
+            }
+            var32Lifetime1Lifetime2Lifetime1 = (1 + var35Lifetime1Lifetime2 - (this.field_q << 12) - var27) / var27;
+            if ((1 + var35Lifetime1Lifetime2 - (this.field_q << 12) - var27) / var27 > var37Lifetime1Lifetime2) {
+              var37Lifetime1Lifetime2 = var32Lifetime1Lifetime2Lifetime1;
+            }
+            var32Lifetime1Lifetime2Lifetime2 = var36Lifetime1Lifetime2 - (this.field_w << 12);
+            if (var36Lifetime1Lifetime2 - (this.field_w << 12) >= 0) {
+              var32Lifetime1Lifetime2Lifetime2 = (var26 - var32Lifetime1Lifetime2Lifetime2) / var26;
+              var37Lifetime1Lifetime2 = var37Lifetime1Lifetime2 + var32Lifetime1Lifetime2Lifetime2;
+              var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27 * var32Lifetime1Lifetime2Lifetime2;
+              var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26 * var32Lifetime1Lifetime2Lifetime2;
+              var34Lifetime1Lifetime2 = var34Lifetime1Lifetime2 + var32Lifetime1Lifetime2Lifetime2;
+            }
+            var32Lifetime1Lifetime2Lifetime3 = (var36Lifetime1Lifetime2 - var26) / var26;
+            if ((var36Lifetime1Lifetime2 - var26) / var26 > var37Lifetime1Lifetime2) {
+              var37Lifetime1Lifetime2 = var32Lifetime1Lifetime2Lifetime3;
+            }
+            while (var37Lifetime1Lifetime2 < 0) {
+              var38Lifetime1Lifetime2 = this.field_y[(var36Lifetime1Lifetime2 >> 12) * this.field_q + (var35Lifetime1Lifetime2 >> 12)];
+              var39Lifetime1Lifetime2 = SoftwareRasterizer.field_a[var34Lifetime1Lifetime2];
+              var40Lifetime1Lifetime2 = var38Lifetime1Lifetime2 >>> 24;
+              var41Lifetime1Lifetime2 = 256 - var40Lifetime1Lifetime2;
+              incrementValue$1 = var34Lifetime1Lifetime2;
+              var34Lifetime1Lifetime2++;
+              SoftwareRasterizer.field_a[incrementValue$1] = ((var38Lifetime1Lifetime2 & 16711935) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 16711935) * var41Lifetime1Lifetime2 & -16711936) + ((var38Lifetime1Lifetime2 & 65280) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 65280) * var41Lifetime1Lifetime2 & 16711680) >>> 8;
+              var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27;
+              var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26;
+              var37Lifetime1Lifetime2++;
+            }
+            var33Lifetime1Lifetime2++;
+            var30 = var30 - var26;
+            var31 = var31 + var27;
+            var23 = var23 + SoftwareRasterizer.field_g;
+          }
+          return;
+        }
+        if (var26 == 0) {
+          var33Lifetime2 = var22;
+          while (var33Lifetime2 < 0) {
+            var34Lifetime2 = var23;
+            var35Lifetime2 = var30 + (var28 * var27 >> 4);
+            var36Lifetime2 = var31;
+            var37Lifetime2 = var20;
+            if (var36Lifetime2 >= 0 &&
+              var36Lifetime2 - (this.field_w << 12) < 0) {
+              var32Lifetime2 = var35Lifetime2 - (this.field_q << 12);
+              if (var35Lifetime2 - (this.field_q << 12) >= 0) {
+                var32Lifetime2 = (var27 - var32Lifetime2) / var27;
+                var37Lifetime2 = var37Lifetime2 + var32Lifetime2;
+                var35Lifetime2 = var35Lifetime2 + var27 * var32Lifetime2;
+                var34Lifetime2 = var34Lifetime2 + var32Lifetime2;
+              }
+              var32Lifetime2Lifetime1 = (var35Lifetime2 - var27) / var27;
+              if ((var35Lifetime2 - var27) / var27 > var37Lifetime2) {
+                var37Lifetime2 = var32Lifetime2Lifetime1;
+              }
+              while (var37Lifetime2 < 0) {
+                var38Lifetime2 = this.field_y[(var36Lifetime2 >> 12) * this.field_q + (var35Lifetime2 >> 12)];
+                var39Lifetime2 = SoftwareRasterizer.field_a[var34Lifetime2];
+                var40Lifetime2 = var38Lifetime2 >>> 24;
+                var41Lifetime2 = 256 - var40Lifetime2;
+                incrementValue$5 = var34Lifetime2;
+                var34Lifetime2++;
+                SoftwareRasterizer.field_a[incrementValue$5] = ((var38Lifetime2 & 16711935) * var40Lifetime2 + (var39Lifetime2 & 16711935) * var41Lifetime2 & -16711936) + ((var38Lifetime2 & 65280) * var40Lifetime2 + (var39Lifetime2 & 65280) * var41Lifetime2 & 16711680) >>> 8;
+                var35Lifetime2 = var35Lifetime2 + var27;
+                var37Lifetime2++;
+              }
+            }
+            var33Lifetime2++;
+            var31 = var31 + var27;
+            var23 = var23 + SoftwareRasterizer.field_g;
+          }
+          return;
+        }
+        if (var26 >= 0) {
+          var33Lifetime3 = var22;
+          while (var33Lifetime3 < 0) {
+            var34Lifetime3 = var23;
+            var35Lifetime3 = var30 + (var28 * var27 >> 4);
+            var36Lifetime3 = var31 + (var28 * var26 >> 4);
+            var37Lifetime3 = var20;
+            var32Lifetime3 = var35Lifetime3 - (this.field_q << 12);
+            if (var35Lifetime3 - (this.field_q << 12) >= 0) {
+              var32Lifetime3 = (var27 - var32Lifetime3) / var27;
+              var37Lifetime3 = var37Lifetime3 + var32Lifetime3;
+              var35Lifetime3 = var35Lifetime3 + var27 * var32Lifetime3;
+              var36Lifetime3 = var36Lifetime3 + var26 * var32Lifetime3;
+              var34Lifetime3 = var34Lifetime3 + var32Lifetime3;
+            }
+            var32Lifetime3Lifetime1 = (var35Lifetime3 - var27) / var27;
+            if ((var35Lifetime3 - var27) / var27 > var37Lifetime3) {
+              var37Lifetime3 = var32Lifetime3Lifetime1;
+            }
+            if (var36Lifetime3 < 0) {
+              var32Lifetime3Lifetime2 = (var26 - 1 - var36Lifetime3) / var26;
+              var37Lifetime3 = var37Lifetime3 + var32Lifetime3Lifetime2;
+              var35Lifetime3 = var35Lifetime3 + var27 * var32Lifetime3Lifetime2;
+              var36Lifetime3 = var36Lifetime3 + var26 * var32Lifetime3Lifetime2;
+              var34Lifetime3 = var34Lifetime3 + var32Lifetime3Lifetime2;
+            }
+            var32Lifetime3Lifetime3 = (1 + var36Lifetime3 - (this.field_w << 12) - var26) / var26;
+            if ((1 + var36Lifetime3 - (this.field_w << 12) - var26) / var26 > var37Lifetime3) {
+              var37Lifetime3 = var32Lifetime3Lifetime3;
+            }
+            while (var37Lifetime3 < 0) {
+              var38Lifetime3 = this.field_y[(var36Lifetime3 >> 12) * this.field_q + (var35Lifetime3 >> 12)];
+              var39Lifetime3 = SoftwareRasterizer.field_a[var34Lifetime3];
+              var40Lifetime3 = var38Lifetime3 >>> 24;
+              var41Lifetime3 = 256 - var40Lifetime3;
+              incrementValue$3 = var34Lifetime3;
+              var34Lifetime3++;
+              SoftwareRasterizer.field_a[incrementValue$3] = ((var38Lifetime3 & 16711935) * var40Lifetime3 + (var39Lifetime3 & 16711935) * var41Lifetime3 & -16711936) + ((var38Lifetime3 & 65280) * var40Lifetime3 + (var39Lifetime3 & 65280) * var41Lifetime3 & 16711680) >>> 8;
+              var35Lifetime3 = var35Lifetime3 + var27;
+              var36Lifetime3 = var36Lifetime3 + var26;
+              var37Lifetime3++;
+            }
+            var33Lifetime3++;
+            var30 = var30 - var26;
+            var31 = var31 + var27;
+            var23 = var23 + SoftwareRasterizer.field_g;
+          }
+          return;
+        }
+        var33Lifetime4 = var22;
+        while (var33Lifetime4 < 0) {
+          var34Lifetime4 = var23;
+          var35Lifetime4 = var30 + (var28 * var27 >> 4);
+          var36Lifetime4 = var31 + (var28 * var26 >> 4);
+          var37Lifetime4 = var20;
+          var32Lifetime4 = var35Lifetime4 - (this.field_q << 12);
+          if (var35Lifetime4 - (this.field_q << 12) >= 0) {
+            var32Lifetime4 = (var27 - var32Lifetime4) / var27;
+            var37Lifetime4 = var37Lifetime4 + var32Lifetime4;
+            var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4;
+            var36Lifetime4 = var36Lifetime4 + var26 * var32Lifetime4;
+            var34Lifetime4 = var34Lifetime4 + var32Lifetime4;
+          }
+          var32Lifetime4Lifetime1 = (var35Lifetime4 - var27) / var27;
+          if ((var35Lifetime4 - var27) / var27 > var37Lifetime4) {
+            var37Lifetime4 = var32Lifetime4Lifetime1;
+          }
+          var32Lifetime4Lifetime2 = var36Lifetime4 - (this.field_w << 12);
+          if (var36Lifetime4 - (this.field_w << 12) >= 0) {
+            var32Lifetime4Lifetime2 = (var26 - var32Lifetime4Lifetime2) / var26;
+            var37Lifetime4 = var37Lifetime4 + var32Lifetime4Lifetime2;
+            var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4Lifetime2;
+            var36Lifetime4 = var36Lifetime4 + var26 * var32Lifetime4Lifetime2;
+            var34Lifetime4 = var34Lifetime4 + var32Lifetime4Lifetime2;
+          }
+          var32Lifetime4Lifetime3 = (var36Lifetime4 - var26) / var26;
+          if ((var36Lifetime4 - var26) / var26 > var37Lifetime4) {
+            var37Lifetime4 = var32Lifetime4Lifetime3;
+          }
+          while (var37Lifetime4 < 0) {
+            var38Lifetime4 = this.field_y[(var36Lifetime4 >> 12) * this.field_q + (var35Lifetime4 >> 12)];
+            var39Lifetime4 = SoftwareRasterizer.field_a[var34Lifetime4];
+            var40Lifetime4 = var38Lifetime4 >>> 24;
+            var41Lifetime4 = 256 - var40Lifetime4;
+            incrementValue$4 = var34Lifetime4;
+            var34Lifetime4++;
+            SoftwareRasterizer.field_a[incrementValue$4] = ((var38Lifetime4 & 16711935) * var40Lifetime4 + (var39Lifetime4 & 16711935) * var41Lifetime4 & -16711936) + ((var38Lifetime4 & 65280) * var40Lifetime4 + (var39Lifetime4 & 65280) * var41Lifetime4 & 16711680) >>> 8;
+            var35Lifetime4 = var35Lifetime4 + var27;
+            var36Lifetime4 = var36Lifetime4 + var26;
+            var37Lifetime4++;
+          }
+          var33Lifetime4++;
+          var30 = var30 - var26;
+          var31 = var31 + var27;
+          var23 = var23 + SoftwareRasterizer.field_g;
+        }
+        return;
+    }
+
+    final ArgbSprite h() {
+        int var3 = 0;
+        ArgbSprite var1 = new ArgbSprite(this.field_q, this.field_w);
+        var1.field_o = this.field_o;
+        var1.field_v = this.field_v;
+        var1.field_s = this.field_s;
+        var1.field_n = this.field_n;
+        int var2 = this.field_y.length;
+        for (var3 = 0; var3 < var2; var3++) {
+          var1.field_y[var3] = this.field_y[var3];
+        }
+        return var1;
+    }
+
+    ArgbSprite(byte[] param0, java.awt.Component param1) {
+        super(param0, param1);
+    }
+
+    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var18 = 0;
+        int incrementValue$0 = 0;
+        int var17 = 0;
+        int var12 = param3;
+        for (var13 = -param8; var13 < 0; var13++) {
+          var14 = (param4 >> 16) * param11;
+          for (var15 = -param7; var15 < 0; var15++) {
+            param2 = param1[(param3 >> 16) + var14];
+            var16 = param2 >>> 24;
+            if (var16 != 0) {
+              var17 = 256 - var16;
+              var18 = param0[param5];
+              incrementValue$0 = param5;
+              param5++;
+              param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
+            } else {
+              param5++;
+            }
+            param3 = param3 + param9;
+          }
+          param4 = param4 + param10;
+          param3 = var12;
+          param5 = param5 + param6;
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var14 = 0;
+        int var13 = 0;
+        int var15 = 0;
+        int var13Lifetime1;
+        int var13Lifetime2;
+        int var15Lifetime1;
+        int var15Lifetime2;
+        if (param2 > 0) {
+          if (param3 <= 0) {
+            return;
+          }
+          var5 = this.field_q;
+          var6 = this.field_w;
+          var7 = 0;
+          var8 = 0;
+          var9 = this.field_o;
+          var10 = this.field_v;
+          var11 = (var9 << 16) / param2;
+          var12 = (var10 << 16) / param3;
+          if (this.field_s > 0) {
+            var13 = ((this.field_s << 16) + var11 - 1) / var11;
+            param0 = param0 + var13;
+            var7 = var7 + (var13 * var11 - (this.field_s << 16));
+          }
+          if (this.field_n > 0) {
+            var13Lifetime1 = ((this.field_n << 16) + var12 - 1) / var12;
+            param1 = param1 + var13Lifetime1;
+            var8 = var8 + (var13Lifetime1 * var12 - (this.field_n << 16));
+          }
+          if (var5 < var9) {
+            param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+          }
+          if (var6 < var10) {
+            param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+          }
+          var13Lifetime2 = param0 + param1 * SoftwareRasterizer.field_g;
+          var14 = SoftwareRasterizer.field_g - param2;
+          if (param1 + param3 > SoftwareRasterizer.field_h) {
+            param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_h);
+          }
+          if (param1 < SoftwareRasterizer.field_e) {
+            var15 = SoftwareRasterizer.field_e - param1;
+            param3 = param3 - var15;
+            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.field_g;
+            var8 = var8 + var12 * var15;
+          }
+          if (param0 + param2 > SoftwareRasterizer.field_c) {
+            var15Lifetime1 = param0 + param2 - SoftwareRasterizer.field_c;
+            param2 = param2 - var15Lifetime1;
+            var14 = var14 + var15Lifetime1;
+          }
+          if (param0 < SoftwareRasterizer.field_b) {
+            var15Lifetime2 = SoftwareRasterizer.field_b - param0;
+            param2 = param2 - var15Lifetime2;
+            var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
+            var7 = var7 + var11 * var15Lifetime2;
+            var14 = var14 + var15Lifetime2;
+          }
+          ArgbSprite.b(SoftwareRasterizer.field_a, this.field_y, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          return;
+        }
+    }
+
+    final void drawQuarterSize(int param0, int param1) {
+        int var10 = 0;
+        int var11 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int[] var22;
+        int[] var23;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var15Lifetime1;
+        int var19Lifetime1;
+        int[] var23Lifetime1;
+        var3 = this.field_q >> 2;
+        var4 = this.field_w >> 2;
+        param0 = param0 + this.field_s / 4;
+        param1 = param1 + this.field_n / 4;
+        if (param0 >= SoftwareRasterizer.field_b) {
+          stackIn_3_0 = 0;
+        } else {
+          stackIn_3_0 = SoftwareRasterizer.field_b - param0 << 2;
+        }
+        var5 = stackIn_3_0;
+        if (param0 + var3 <= SoftwareRasterizer.field_c) {
+          stackIn_6_0 = this.field_q - 4;
+        } else {
+          stackIn_6_0 = (SoftwareRasterizer.field_c - param0 << 2) - 4;
+        }
+        var6 = stackIn_6_0;
+        if (param1 >= SoftwareRasterizer.field_e) {
+          stackIn_9_0 = 0;
+        } else {
+          stackIn_9_0 = SoftwareRasterizer.field_e - param1 << 2;
+        }
+        var7 = stackIn_9_0;
+        if (param1 + var4 <= SoftwareRasterizer.field_h) {
+          stackIn_12_0 = this.field_w - 4;
+        } else {
+          stackIn_12_0 = (SoftwareRasterizer.field_h - param1 << 2) - 4;
+        }
+        var8 = stackIn_12_0;
+        var23 = new int[16];
+        var22 = var23;
+        var9 = var22;
+        for (var10 = var7; var10 <= var8; var10 += 4) {
+          for (var11 = var5; var11 <= var6; var11 += 4) {
+            var12 = var10 * this.field_q + var11;
+            var13 = (param1 + (var10 >> 2)) * SoftwareRasterizer.field_g + (param0 + (var11 >> 2));
+            for (var14 = 0; var14 < 4; var14++) {
+              for (var15 = 0; var15 < 4; var15++) {
+                var9[(var14 << 2) + var15] = this.field_y[var12 + var14 * this.field_q + var15];
+              }
+            }
+            var23Lifetime1 = var22;
+            var14Lifetime1 = 0;
+            var15Lifetime1 = 0;
+            var16 = 0;
+            var17 = 0;
+            var18 = 0;
+            for (var19 = 0; var19 < 16; var19++) {
+              var14Lifetime2 = var23Lifetime1[var19] >>> 24;
+              var15Lifetime1 = var15Lifetime1 + var14Lifetime2;
+              var16 = var16 + var14Lifetime2 * (var23Lifetime1[var19] >> 16 & 255);
+              var17 = var17 + var14Lifetime2 * (var23Lifetime1[var19] >> 8 & 255);
+              var18 = var18 + var14Lifetime2 * (var23Lifetime1[var19] & 255);
+            }
+            if (var15Lifetime1 != 0) {
+              var16 = (var16 / var15Lifetime1 << 16) + var18 / var15Lifetime1;
+              var17 = var17 / var15Lifetime1 << 8;
+              var19Lifetime1 = var15Lifetime1 >> 4;
+              var20 = 256 - var19Lifetime1;
+              var21 = SoftwareRasterizer.field_a[var13];
+              SoftwareRasterizer.field_a[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
+            }
+          }
+        }
+    }
+
+    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var10 = 0;
+        int var11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var12;
+        int var13;
+        int var14;
+        var9 = -param5;
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = var9; var11 < 0; var11++) {
+            param2 = param1[param3++];
+            var12 = param2 >>> 24;
+            if (var12 == 0) {
+              param4++;
+            } else {
+              var13 = 256 - var12;
+              var14 = param0[param4];
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+            }
+          }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
+        }
+    }
+
+    final void d(int param0, int param1, int param2, int param3, int param4) {
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var15 = 0;
+        int var14 = 0;
+        int var16 = 0;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var16Lifetime1;
+        int var16Lifetime2;
+        if (param2 > 0) {
+          if (param3 <= 0) {
+            return;
+          }
+          var6 = this.field_q;
+          var7 = this.field_w;
+          var8 = 0;
+          var9 = 0;
+          var10 = this.field_o;
+          var11 = this.field_v;
+          var12 = (var10 << 16) / param2;
+          var13 = (var11 << 16) / param3;
+          if (this.field_s > 0) {
+            var14 = ((this.field_s << 16) + var12 - 1) / var12;
+            param0 = param0 + var14;
+            var8 = var8 + (var14 * var12 - (this.field_s << 16));
+          }
+          if (this.field_n > 0) {
+            var14Lifetime1 = ((this.field_n << 16) + var13 - 1) / var13;
+            param1 = param1 + var14Lifetime1;
+            var9 = var9 + (var14Lifetime1 * var13 - (this.field_n << 16));
+          }
+          if (var6 < var10) {
+            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+          }
+          if (var7 < var11) {
+            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+          }
+          var14Lifetime2 = param0 + param1 * SoftwareRasterizer.field_g;
+          var15 = SoftwareRasterizer.field_g - param2;
+          if (param1 + param3 > SoftwareRasterizer.field_h) {
+            param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_h);
+          }
+          if (param1 < SoftwareRasterizer.field_e) {
+            var16 = SoftwareRasterizer.field_e - param1;
+            param3 = param3 - var16;
+            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRasterizer.field_g;
+            var9 = var9 + var13 * var16;
+          }
+          if (param0 + param2 > SoftwareRasterizer.field_c) {
+            var16Lifetime1 = param0 + param2 - SoftwareRasterizer.field_c;
+            param2 = param2 - var16Lifetime1;
+            var15 = var15 + var16Lifetime1;
+          }
+          if (param0 < SoftwareRasterizer.field_b) {
+            var16Lifetime2 = SoftwareRasterizer.field_b - param0;
+            param2 = param2 - var16Lifetime2;
+            var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
+            var8 = var8 + var12 * var16Lifetime2;
+            var15 = var15 + var16Lifetime2;
+          }
+          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          return;
+        }
+    }
+
+    ArgbSprite(int param0, int param1) {
+        super(param0, param1);
+    }
+
+    final void b(int param0, int param1) {
+        int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        param0 = param0 + this.field_s;
+        param1 = param1 + (this.field_v - this.field_w - this.field_n);
+        int var3 = param0 + (param1 + this.field_w - 1) * SoftwareRasterizer.field_g;
+        int var4 = 0;
+        int var5 = this.field_w;
+        int var6 = this.field_q;
+        int var7 = -SoftwareRasterizer.field_g - var6;
+        int var8 = 0;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var5 = var5 - (SoftwareRasterizer.field_e - param1);
+          param1 = SoftwareRasterizer.field_e;
+        }
+        if (param1 + var5 > SoftwareRasterizer.field_h) {
+          var9 = param1 + var5 - SoftwareRasterizer.field_h;
+          var5 = var5 - var9;
+          var3 = var3 - var9 * SoftwareRasterizer.field_g;
+          var4 = var4 + var9 * var6;
+        }
+        if (param0 < SoftwareRasterizer.field_b) {
+          var9Lifetime1 = SoftwareRasterizer.field_b - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = SoftwareRasterizer.field_b;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
+        }
+        if (param0 + var6 > SoftwareRasterizer.field_c) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_c;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
+        }
+        if (var6 > 0) {
+          if (var5 <= 0) {
+            return;
+          }
+          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          return;
+        }
+    }
+
+    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int incrementValue$1 = 0;
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = -param5; var11 < 0; var11++) {
+            var12 = (param1[param3] >>> 24) * param9 >> 8;
+            var13 = 256 - var12;
+            var14 = param1[param3++];
+            var15 = param0[param4];
+            incrementValue$1 = param4;
+            param4++;
+            param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
+          }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
+        }
+    }
+
+    final void b(int param0, int param1, int param2) {
+        int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var5 = 0;
+        int var6 = this.field_w;
+        int var7 = this.field_q;
+        int var8 = SoftwareRasterizer.field_g - var7;
+        int var9 = 0;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
+          var6 = var6 - var10;
+          param1 = SoftwareRasterizer.field_e;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
+        }
+        if (param1 + var6 > SoftwareRasterizer.field_h) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_h);
+        }
+        if (param0 < SoftwareRasterizer.field_b) {
+          var10Lifetime1 = SoftwareRasterizer.field_b - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = SoftwareRasterizer.field_b;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
+        }
+        if (param0 + var7 > SoftwareRasterizer.field_c) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_c;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
+        }
+        if (var7 > 0) {
+          if (var6 <= 0) {
+            return;
+          }
+          ArgbSprite.d(SoftwareRasterizer.field_a, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          return;
+        }
+    }
+}

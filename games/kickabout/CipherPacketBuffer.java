@@ -5,7 +5,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static String[] field_s;
     private int field_u;
     static String[] field_t;
-    static ot field_q;
+    static ArgbSprite field_q;
     private int field_o;
     static int[] field_r;
     private IsaacRandom field_p;
@@ -28,23 +28,23 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_o = this.field_n * 8;
     }
 
-    final static void a(int param0, sj param1) {
-        ut var2 = null;
+    final static void a(int param0, ResourceArchive param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new ut(param1.a("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
+          var2 = new Sprite(param1.a("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
           var3 = var2.field_q;
           var4 = var2.field_w;
           tr.d(-12974);
-          js.field_a = new ut(var3, param0 * var4 / 4);
-          js.field_a.e();
+          AppScreen.field_a = new Sprite(var3, param0 * var4 / 4);
+          AppScreen.field_a.e();
           var2.d(0, 0);
-          po.field_e = new ut(var3, var4 - js.field_a.field_w);
+          po.field_e = new Sprite(var3, var4 - AppScreen.field_a.field_w);
           po.field_e.e();
-          var2.d(0, -js.field_a.field_w);
-          po.field_e.field_n = js.field_a.field_w;
-          ta.e(123);
+          var2.d(0, -AppScreen.field_a.field_w);
+          po.field_e.field_n = AppScreen.field_a.field_w;
+          TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -87,21 +87,21 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void o(int param0) {
-        fb.field_Q[47] = 73;
-        fb.field_Q[45] = 26;
-        fb.field_Q[46] = 72;
-        fb.field_Q[91] = 42;
-        fb.field_Q[93] = 43;
-        fb.field_Q[59] = 57;
-        fb.field_Q[44] = 71;
-        fb.field_Q[520] = 59;
-        fb.field_Q[222] = 58;
-        fb.field_Q[192] = 28;
+        NumericDateInputWidget.field_Q[47] = 73;
+        NumericDateInputWidget.field_Q[45] = 26;
+        NumericDateInputWidget.field_Q[46] = 72;
+        NumericDateInputWidget.field_Q[91] = 42;
+        NumericDateInputWidget.field_Q[93] = 43;
+        NumericDateInputWidget.field_Q[59] = 57;
+        NumericDateInputWidget.field_Q[44] = 71;
+        NumericDateInputWidget.field_Q[520] = 59;
+        NumericDateInputWidget.field_Q[222] = 58;
+        NumericDateInputWidget.field_Q[192] = 28;
         if (param0 != 255) {
           field_v = 'ￄ';
         }
-        fb.field_Q[92] = 74;
-        fb.field_Q[61] = 27;
+        NumericDateInputWidget.field_Q[92] = 74;
+        NumericDateInputWidget.field_Q[61] = 27;
     }
 
     final void l(byte param0) {
@@ -144,31 +144,31 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void c(boolean param0) {
-        hd stackIn_4_0 = null;
+        UiLayoutNode stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         int stackIn_7_2;
         int stackIn_7_3;
         int stackIn_8_4 = 0;
         int stackIn_10_5;
         int stackIn_11_6 = 0;
-        hd stackIn_13_0 = null;
+        UiLayoutNode stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         int stackIn_17_0 = 0;
-        hd stackIn_19_0 = null;
+        UiLayoutNode stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int var1;
         int var2;
         int var3;
-        sj var4;
-        ea.field_a = on.field_g;
-        bh.field_s = on.field_f;
+        ResourceArchive var4;
+        ea.field_a = SoftwareRasterizer.field_g;
+        BufferedSocket.field_s = SoftwareRasterizer.field_f;
         pa.b((byte) 92);
         tn.field_d.a(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
-        li.field_a.a(true, m.field_m.field_q, 0, 0, sh.field_c);
+        ConsoleValue.field_a.a(true, m.field_m.field_q, 0, 0, sh.field_c);
         var1 = sh.field_c + 2;
         if (param0) {
-          var4 = (sj) null;
-          CipherPacketBuffer.a(-41, (sj) null);
+          var4 = (ResourceArchive) null;
+          CipherPacketBuffer.a(-41, (ResourceArchive) null);
         }
         stackIn_4_0 = mc.field_d;
         stackIn_5_1 = (param0) ? false : true;
@@ -185,30 +185,30 @@ final class CipherPacketBuffer extends PacketBuffer {
         } else {
           stackIn_11_6 = var1;
         }
-        ((hd) (Object) stackIn_4_0).a(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
+        ((UiLayoutNode) (Object) stackIn_4_0).a(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
         ClientException.a(0);
-        rg.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
-        fp.field_o.a(true, af.field_d.field_q, 0, 0, 30);
+        MouseWheelInput.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
+        AuctionItem.field_o.a(true, af.field_d.field_q, 0, 0, 30);
         stackIn_13_0 = bt.field_b;
         stackIn_14_1 = (param0) ? false : true;
-        ((hd) (Object) stackIn_13_0).a(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
-        va.field_w.a(true, 68, 5, 5, 30);
+        ((UiLayoutNode) (Object) stackIn_13_0).a(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
+        PlayingView.field_w.a(true, 68, 5, 5, 30);
         qq.field_G.a(true, 78, 75, 5, 30);
-        qv.field_n.a(true, 48, 155, 5, 30);
-        df.field_G.a(true, 48, 205, 5, 30);
+        TextWidgetPainter.field_n.a(true, 48, 155, 5, 30);
+        AuctionsHelpScreen.field_G.a(true, 48, 205, 5, 30);
         stackIn_17_0 = (ui.field_t) ? 250 : 200;
         var2 = stackIn_17_0;
-        stackIn_19_0 = cj.field_D;
+        stackIn_19_0 = DateInputWidget.field_D;
         stackIn_20_1 = (param0) ? false : true;
-        ((hd) (Object) stackIn_19_0).a(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
-        jn.field_lb.a(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
-        sp.field_Jb.a(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
+        ((UiLayoutNode) (Object) stackIn_19_0).a(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
+        RegistrationRequestDialog.field_lb.a(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
+        ShopPlayerSlot.field_Jb.a(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
         var3 = (2 + af.field_d.field_q) / 2;
         dr.field_d.a(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);
         if (!ui.field_t) {
           var3 = 0;
         }
-        ps.field_b.a(true, -var3 + af.field_d.field_q, var3, -40 + af.field_d.field_mb, 40);
+        LoginCredentials.field_b.a(true, -var3 + af.field_d.field_q, var3, -40 + af.field_d.field_mb, 40);
     }
 
     final static void k(int param0, int param1) {

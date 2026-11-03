@@ -6,9 +6,9 @@ final class tn {
     static String field_c;
     static rf field_d;
     static long field_a;
-    static ut field_e;
+    static Sprite field_e;
     static int field_b;
-    static hd field_f;
+    static UiLayoutNode field_f;
     private static String field_z;
 
     public static void a(boolean param0) {

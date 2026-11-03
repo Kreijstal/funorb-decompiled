@@ -4,12 +4,12 @@
 final class cp implements Runnable {
     static r field_h;
     static String field_a;
-    static hd field_g;
+    static UiLayoutNode field_g;
     volatile boolean field_c;
     volatile boolean field_e;
-    bu field_f;
+    PlatformTaskDispatcher field_f;
     static long[] field_d;
-    volatile uh[] field_b;
+    volatile PcmPlayerService[] field_b;
 
     final static wn a(int param0, String param1) {
         int var2_int = 0;
@@ -23,19 +23,19 @@ final class cp implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 16 / ((param0 - 46) / 47);
-          if (mj.field_a == nr.field_f) {
+          if (mj.field_a == PlayerModelPreview.field_f) {
             stackIn_2_0 = null;
             return (wn) (stackIn_2_0);
           }
           if (mj.field_a == cr.field_d &&
             param1.equals(pr.field_c)) {
             mj.field_a = vj.field_a;
-            stackIn_9_0 = u.field_h;
+            stackIn_9_0 = JaggrabDownloader.field_h;
             return stackIn_9_0;
           }
-          mj.field_a = nr.field_f;
+          mj.field_a = PlayerModelPreview.field_f;
           pr.field_c = param1;
-          u.field_h = null;
+          JaggrabDownloader.field_h = null;
           stackIn_7_0 = null;
           return (wn) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class cp implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        uh var2 = null;
+        PcmPlayerService var2 = null;
         int var4 = Kickabout.field_G;
         this.field_c = true;
         try {
@@ -76,11 +76,11 @@ final class cp implements Runnable {
             }
             aj.a(10L, 1);
             Object var5 = (Object) null;
-            si.a((byte) 41, this.field_f, (Object) null);
+            ReflectionCheck.a((byte) 41, this.field_f, (Object) null);
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          bd.a((String) null, (Throwable) ((Object) exception), 1);
+          UnreadMessagesScreen.a((String) null, (Throwable) ((Object) exception), 1);
         } finally {
           this.field_c = false;
         }
@@ -104,7 +104,7 @@ final class cp implements Runnable {
     final static int a(int param0) {
         al.field_Ab.a(0);
         if (!ParticipantStatus.field_t.a((byte) -46)) {
-          return fw.h((byte) 66);
+          return MyPitchScreen.pollServerConnection((byte) 66);
         }
         if (param0 != 522) {
           field_h = (r) null;
@@ -114,7 +114,7 @@ final class cp implements Runnable {
     }
 
     cp() {
-        this.field_b = new uh[2];
+        this.field_b = new PcmPlayerService[2];
         this.field_e = false;
         this.field_c = false;
     }

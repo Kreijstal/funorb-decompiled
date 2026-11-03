@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pu extends hd implements lv {
-    private ot field_Cb;
+final class pu extends UiLayoutNode implements lv {
+    private ArgbSprite field_Cb;
     private String field_Hb;
     static em field_Eb;
     private String field_Gb;
@@ -15,7 +15,7 @@ final class pu extends hd implements lv {
 
     final void h(byte param0) {
         if (this.field_gb) {
-          je.a((byte) 100, this);
+          AnimationSkeleton.a((byte) 100, this);
         }
         if (param0 != 30) {
           this.h((byte) 44);
@@ -27,11 +27,11 @@ final class pu extends hd implements lv {
         int var5 = this.a(param1 ^ 24);
         int var6 = -(var4 >> 1) + param2;
         int var7 = -(var5 >> 1) + param0;
-        on.a(var6, var7, var4, var5, 52479, 60);
+        SoftwareRasterizer.a(var6, var7, var4, var5, 52479, 60);
         if (this.field_Bb.field_h != 0) {
-          on.a(var6, var7, var4, 50, 16777215, 60);
+          SoftwareRasterizer.a(var6, var7, var4, 50, 16777215, 60);
         }
-        on.e(var6, var7, var4, var5, 65793);
+        SoftwareRasterizer.e(var6, var7, var4, var5, 65793);
         q.field_d.c(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
         q.field_d.c(this.field_Hb, -10 + (var6 + var4), var7 + 36, 16777215, 65793);
         if (param1 != 23) {
@@ -39,7 +39,7 @@ final class pu extends hd implements lv {
         }
         this.field_Cb.c(var6 + 8, 9 + var7);
         if (0 != this.field_Bb.field_h) {
-          on.f(var6, var7 + 50, var4, 65793);
+          SoftwareRasterizer.drawHorizontalLine(var6, var7 + 50, var4, 65793);
           q.field_d.a(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);
         }
     }
@@ -98,7 +98,7 @@ final class pu extends hd implements lv {
         int var22Lifetime1;
         var23 = Kickabout.field_G;
         try {
-          var24 = new vn(new vn[]{qd.field_j[param1]}, 1);
+          var24 = new vn(new vn[]{IndexedSpriteState.field_j[param1]}, 1);
           var26 = var24;
           if (param0) {
             var8_int = wc.field_e[param1];
@@ -116,7 +116,7 @@ final class pu extends hd implements lv {
           if (param1 == 4) {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
-            stackIn_8_5 = es.field_k;
+            stackIn_8_5 = RowRangeRequest.field_k;
           } else {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
@@ -215,19 +215,19 @@ final class pu extends hd implements lv {
 
     final static void a(byte param0, int param1, int param2, int param3) {
         gl.field_a.field_n = 0;
-        gl.field_a.a(122, 12);
-        gl.field_a.b(-43, ac.field_d.nextInt());
-        gl.field_a.b(-111, ac.field_d.nextInt());
-        gl.field_a.a(102, param3);
-        gl.field_a.a(112, param2);
-        gl.field_a.g(-1207444472, param1);
-        gl.field_a.a(bb.field_Nb, hn.field_h, 38);
+        gl.field_a.writeByte(122, 12);
+        gl.field_a.writeInt(-43, ac.field_d.nextInt());
+        gl.field_a.writeInt(-111, ac.field_d.nextInt());
+        gl.field_a.writeByte(102, param3);
+        gl.field_a.writeByte(112, param2);
+        gl.field_a.writeShort(-1207444472, param1);
+        gl.field_a.rsaEncrypt(bb.field_Nb, ManagerAction.field_h, 38);
         or.field_d.b(18, (byte) -83);
         int fieldTemp$0 = or.field_d.field_n + 1;
         or.field_d.field_n = or.field_d.field_n + 1;
         int var4 = fieldTemp$0;
-        or.field_d.a(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
-        or.field_d.c(62, -var4 + or.field_d.field_n);
+        or.field_d.writeBytes(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
+        or.field_d.backpatchByteLength(62, -var4 + or.field_d.field_n);
         int var5 = 83 % ((40 - param0) / 43);
     }
 
@@ -237,7 +237,7 @@ final class pu extends hd implements lv {
           return -84;
         }
         if (this.field_Bb.field_h != 0) {
-          var2 = var2 + (20 + q.field_d.c(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
+          var2 = var2 + (20 + q.field_d.paragraphHeight(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
         }
         return var2;
     }
@@ -257,14 +257,14 @@ final class pu extends hd implements lv {
           this.field_q = 32;
           this.field_Bb = param0;
           this.field_Cb = param0.d(false);
-          this.field_N = (ut) ((Object) this.field_Cb);
+          this.field_N = (Sprite) ((Object) this.field_Cb);
           if (param1) {
             this.field_q = this.field_q >> 1;
             this.field_mb = this.field_mb >> 1;
-            this.field_N = (ut) ((Object) nh.b(this.field_Cb));
+            this.field_N = (Sprite) ((Object) nh.b(this.field_Cb));
           }
-          this.field_yb = rv.field_b[this.field_Bb.field_h].toUpperCase();
-          this.field_Hb = vo.$cfr$intArgs$a$53ce4ab4c593(-18, kd.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
+          this.field_yb = ValidationState.field_b[this.field_Bb.field_h].toUpperCase();
+          this.field_Hb = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DebugConsole.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
           if (0 == this.field_Bb.field_h) {
             this.field_yb = '(' + this.field_yb + ')';
           } else {

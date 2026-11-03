@@ -3,7 +3,7 @@
  */
 final class mp extends IntrusiveNode {
     static String field_k;
-    static jg field_g;
+    static DraggableWidget field_g;
     static int[] field_j;
     static int[] field_p;
     byte[] field_o;
@@ -13,9 +13,9 @@ final class mp extends IntrusiveNode {
     static qe field_h;
     static String field_l;
     int field_m;
-    static hd field_f;
+    static UiLayoutNode field_f;
 
-    final static void a(java.applet.Applet param0, boolean param1, String param2) {
+    final static void writeSettingsCookie(java.applet.Applet param0, boolean param1, String param2) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -57,12 +57,12 @@ final class mp extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              mm.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) 115);
+              AppletJavaScriptBridge.evaluateScript("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) 115);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            nt.a(param0, (byte) 103);
+            KitStyleTile.a(param0, (byte) 103);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -92,8 +92,8 @@ final class mp extends IntrusiveNode {
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = or.field_d;
         var2.b(param0, (byte) 109);
-        var2.a(127, 1);
-        var2.a(103, 3);
+        var2.writeByte(127, 1);
+        var2.writeByte(103, 3);
         if (param1 >= 76) {
           return;
         }
@@ -135,20 +135,20 @@ final class mp extends IntrusiveNode {
           return;
         }
         try {
-          var8.a(125, 1);
-          var8.g(-1207444472, param2.field_k);
-          var8.g(-1207444472, param2.field_g);
-          var8.g(-1207444472, param2.field_h);
-          var8.b(-79, param2.field_n);
-          var8.b(-81, param2.field_e);
-          var8.b(-120, param2.field_i);
-          var8.b(-49, param2.field_f);
-          var8.a(124, param2.field_r.length);
+          var8.writeByte(125, 1);
+          var8.writeShort(-1207444472, param2.field_k);
+          var8.writeShort(-1207444472, param2.field_g);
+          var8.writeShort(-1207444472, param2.field_h);
+          var8.writeInt(-79, param2.field_n);
+          var8.writeInt(-81, param2.field_e);
+          var8.writeInt(-120, param2.field_i);
+          var8.writeInt(-49, param2.field_f);
+          var8.writeByte(124, param2.field_r.length);
           for (var5 = 0; param2.field_r.length > var5; var5++) {
-            var7.b(-61, param2.field_r[var5]);
+            var7.writeInt(-61, param2.field_r[var5]);
           }
-          var8.a(var4, false);
-          var8.c(62, var8.field_n - var4);
+          var8.appendCrc32(var4, false);
+          var8.backpatchByteLength(62, var8.field_n - var4);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "mp.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

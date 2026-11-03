@@ -17,13 +17,13 @@ final class hp {
     }
 
     final static void b(int param0) {
-        ov.field_b = param0;
-        la.a(true);
+        NodeHashTableIterator.field_b = param0;
+        PlayArea.a(true);
     }
 
     static {
         field_b = false;
-        field_a = bn.a(' ', (byte) -83);
+        field_a = LeaguesScreen.a(' ', (byte) -83);
         field_c = "Press F10 to open Quick Chat.";
     }
 }

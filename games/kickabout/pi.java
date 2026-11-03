@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pi {
-    static gq field_b;
+    static PcmStreamMixer field_b;
     static String field_c;
     static String field_d;
-    static ut field_a;
+    static Sprite field_a;
 
-    final static void a(int param0, sp param1) {
+    final static void a(int param0, ShopPlayerSlot param1) {
         if (param0 != 6022) {
           return;
         }
@@ -49,7 +49,7 @@ final class pi {
         return true;
     }
 
-    final static vn a(int param0, int param1, int param2, up param3, int param4, boolean param5) {
+    final static vn a(int param0, int param1, int param2, PlayerStats param3, int param4, boolean param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -64,16 +64,16 @@ final class pi {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param3.field_q;
+          var6_int = param3.playerType;
           if (param0 <= 90) {
             stackIn_2_0 = (vn) null;
             return stackIn_2_0;
           }
-          var7 = param3.field_j;
+          var7 = param3.appearance;
           var8 = (4045 & var7) >> 8;
           var9 = (246 & var7) >> 4;
           var10 = (15 & var7) >> 0;
-          var11 = fp.a(param4, param2, var8, var6_int, var9, var10, param1, false, false, param5);
+          var11 = AuctionItem.a(param4, param2, var8, var6_int, var9, var10, param1, false, false, param5);
           stackIn_4_0 = var11;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

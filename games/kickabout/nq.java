@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nq extends i {
-    static ut field_G;
+    static Sprite field_G;
     static int field_I;
     static String field_H;
     static int field_J;
@@ -12,7 +12,7 @@ final class nq extends i {
         if (param0 >= -55) {
           field_H = (String) null;
         }
-        return 250 < up.field_p ? true : false;
+        return 250 < PlayerStats.field_p ? true : false;
     }
 
     final static boolean a(boolean param0, String param1, long param2) {
@@ -110,10 +110,10 @@ final class nq extends i {
     nq(String param0) {
         super(42);
         String var2 = null;
-        ut var3 = null;
+        Sprite var3 = null;
         try {
           var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[42], new String[]{param0});
-          var3 = kb.field_E[6];
+          var3 = WriteIntegersCommand.field_E[6];
           this.a(var2, this.field_t, var3, -99, this.field_u);
           this.a(ds.a(this.field_y, 1), pg.a(false, 42), 1054928844);
         } catch (RuntimeException runtimeException) {
@@ -137,10 +137,10 @@ final class nq extends i {
         RuntimeException var6 = null;
         try {
           if (param4 <= 36) {
-            field_G = (ut) null;
+            field_G = (Sprite) null;
           }
-          var6_int = param2.f(-95);
-          var7 = param2.a(true);
+          var6_int = param2.pixelX(-95);
+          var7 = param2.pixelY(true);
           stackIn_4_0 = (FootballerAgent) (param2);
           if (param1 + param0 < var7) {
             stackIn_5_1 = 4;
@@ -163,9 +163,9 @@ final class nq extends i {
           } else {
             stackIn_14_3 = 0;
           }
-          stackIn_4_0.field_G = stackIn_5_1 | (stackIn_13_2 | stackIn_14_3);
-          if (param2.field_G == 0) {
-            param2.a(param3, 26214);
+          stackIn_4_0.directionMask = stackIn_5_1 | (stackIn_13_2 | stackIn_14_3);
+          if (param2.directionMask == 0) {
+            param2.setDirectionFromMask(param3, 26214);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -183,20 +183,20 @@ final class nq extends i {
     }
 
     final static void b(int param0, int param1) {
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return;
         }
         if (uv.field_f) {
           return;
         }
         or.field_d.b(77, (byte) 85);
-        or.field_d.a(105, param0);
+        or.field_d.writeByte(105, param0);
         ri.field_t = param1;
         uv.field_f = true;
     }
 
     final static void b(int param0, int param1, int param2) {
-        lj.field_h = param0;
+        TextLine.field_h = param0;
         ji.field_Hb = param2;
         if (param1 != 0) {
           nq.h(-29);
@@ -205,7 +205,7 @@ final class nq extends i {
 
     public static void h(int param0) {
         if (param0 != 0) {
-          field_G = (ut) null;
+          field_G = (Sprite) null;
         }
         field_H = null;
         field_G = null;

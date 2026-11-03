@@ -18,7 +18,7 @@ final class us extends IntrusiveNode {
         return ck.field_d;
     }
 
-    final static void g(byte param0) {
+    final static void drawTutorialCaption(byte param0) {
         String var9 = null;
         String var3 = null;
         int var4 = 0;
@@ -29,12 +29,12 @@ final class us extends IntrusiveNode {
         if (null == et.field_d) {
           return;
         }
-        kb.h(-92);
+        WriteIntegersCommand.h(-92);
         if (mc.field_a == 0) {
           return;
         }
         Object var1 = null;
-        int var2 = je.a(false);
+        int var2 = AnimationSkeleton.a(false);
         if (var2 != -1) {
           var1 = rr.field_g[var2];
         }
@@ -48,7 +48,7 @@ final class us extends IntrusiveNode {
         if (dd.field_f < 60) {
           var9 = ep.field_c[var2];
           var3 = var9;
-          var4 = pb.field_C.b(var9, mc.field_a - 44);
+          var4 = IsSixCommand.field_C.b(var9, mc.field_a - 44);
           if (!(dd.field_f <= 0)) {
             var6 = 60;
             var7 = dd.field_f;
@@ -60,8 +60,8 @@ final class us extends IntrusiveNode {
             var3 = var9.substring(0, var8);
           }
           var5 = var4 != 1 ? var4 != 2 ? 0 : 6 : 16;
-          var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
-          pb.field_C.a(var3, (-mc.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
+          var3 = WidgetContainer.a("</>", "</shad></col>", true, WidgetContainer.a("<>", "<col=ffff00><shad=010101>", true, var3));
+          IsSixCommand.field_C.a(var3, (-mc.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
           return;
         }
     }

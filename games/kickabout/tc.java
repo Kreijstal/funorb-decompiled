@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends am {
+final class tc extends DualLinkNode {
     int[] field_n;
     boolean field_t;
     String field_r;
@@ -29,15 +29,15 @@ final class tc extends am {
         var7 = Kickabout.field_G;
         try {
           if (param0 == 1) {
-            this.field_r = param2.a(-118);
+            this.field_r = param2.readString(-118);
           } else {
             if (param0 == 2) {
-              var4_int = param2.h((byte) -105);
+              var4_int = param2.readUnsignedByte((byte) -105);
               this.field_o = new int[var4_int];
               this.field_q = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_o[var5] = param2.a((byte) 81);
-                var6 = param2.j((byte) -65);
+                var6 = param2.readByte((byte) -65);
                 stackIn_16_0 = this.field_q;
                 stackIn_16_1 = var5;
                 if (var6 != 0) {
@@ -49,12 +49,12 @@ final class tc extends am {
               }
             } else {
               if (3 == param0) {
-                var4_int = param2.h((byte) -109);
+                var4_int = param2.readUnsignedByte((byte) -109);
                 this.field_n = new int[var4_int];
                 this.field_p = new char[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
                   this.field_n[var5] = param2.a((byte) 81);
-                  var6 = param2.j((byte) -81);
+                  var6 = param2.readByte((byte) -81);
                   stackIn_10_0 = this.field_p;
                   stackIn_10_1 = var5;
                   if (0 != var6) {
@@ -130,18 +130,18 @@ final class tc extends am {
             dc.field_d = -cf.field_Db + param0;
           }
           if (dc.field_d == 0) {
-            if (wm.field_s > 1) {
-              wm.field_s = wm.field_s - 1;
+            if (CachedArchiveSource.field_s > 1) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             }
           } else {
-            if (wm.field_s < 18) {
-              wm.field_s = wm.field_s + 1;
+            if (CachedArchiveSource.field_s < 18) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
           if (wt.field_x > qj.field_e &&
             vo.field_cb.field_q + qj.field_e > wt.field_x &&
-            bi.field_i < us.field_j &&
-            nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            ArchiveNetworkClient.field_i < us.field_j &&
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, cf.field_Db, (byte) -113);
           }
           return;
@@ -160,18 +160,18 @@ final class tc extends am {
               dc.field_d = -cf.field_Db + param0;
             }
             if (dc.field_d == 0) {
-              if (wm.field_s > 1) {
-                wm.field_s = wm.field_s - 1;
+              if (CachedArchiveSource.field_s > 1) {
+                CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
               }
             } else {
-              if (wm.field_s < 18) {
-                wm.field_s = wm.field_s + 1;
+              if (CachedArchiveSource.field_s < 18) {
+                CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
               }
             }
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
-              bi.field_i < us.field_j &&
-              nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < us.field_j &&
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
@@ -187,18 +187,18 @@ final class tc extends am {
         }
         if (cf.field_Db + dc.field_d == param0) {
           if (dc.field_d == 0) {
-            if (wm.field_s > 1) {
-              wm.field_s = wm.field_s - 1;
+            if (CachedArchiveSource.field_s > 1) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             }
           } else {
-            if (wm.field_s < 18) {
-              wm.field_s = wm.field_s + 1;
+            if (CachedArchiveSource.field_s < 18) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
           if (wt.field_x > qj.field_e &&
             vo.field_cb.field_q + qj.field_e > wt.field_x &&
-            bi.field_i < us.field_j &&
-            nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            ArchiveNetworkClient.field_i < us.field_j &&
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, cf.field_Db, (byte) -113);
             return;
           }
@@ -206,23 +206,23 @@ final class tc extends am {
         }
         dc.field_d = -cf.field_Db + param0;
         if (dc.field_d == 0) {
-          if (wm.field_s > 1) {
-            wm.field_s = wm.field_s - 1;
+          if (CachedArchiveSource.field_s > 1) {
+            CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
-              bi.field_i < us.field_j &&
-              nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < us.field_j &&
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
           }
         } else {
-          if (wm.field_s < 18) {
-            wm.field_s = wm.field_s + 1;
+          if (CachedArchiveSource.field_s < 18) {
+            CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
-              bi.field_i < us.field_j &&
-              nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < us.field_j &&
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
@@ -234,14 +234,14 @@ final class tc extends am {
         if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
           return;
         }
-        if (bi.field_i < us.field_j &&
-          nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+        if (ArchiveNetworkClient.field_i < us.field_j &&
+          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
           ka.a(dc.field_d, cf.field_Db, (byte) -113);
           return;
         }
     }
 
-    final static boolean a(int param0, byte param1, int param2, FootballerAgent param3, int param4) {
+    final static boolean advanceToPoint(int param0, byte param1, int param2, FootballerAgent param3, int param4) {
         FootballerAgent stackIn_23_0 = null;
         int stackIn_24_1 = 0;
         int stackIn_27_2 = 0;
@@ -254,54 +254,54 @@ final class tc extends am {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if ((param3.field_G & 8) != 0 &&
-            param2 < param3.field_M) {
-            param3.field_M = param2;
+          if ((param3.directionMask & 8) != 0 &&
+            param2 < param3.positionX) {
+            param3.positionX = param2;
           }
-          if ((4 & param3.field_G) != 0 &&
-            param3.field_w < param4) {
-            param3.field_w = param4;
+          if ((4 & param3.directionMask) != 0 &&
+            param3.positionY < param4) {
+            param3.positionY = param4;
           }
-          if ((2 & param3.field_G) != 0 &&
-            param2 > param3.field_M) {
-            param3.field_M = param2;
+          if ((2 & param3.directionMask) != 0 &&
+            param2 > param3.positionX) {
+            param3.positionX = param2;
           }
-          if ((param3.field_G & 1) != 0 &&
-            param3.field_w > param4) {
-            param3.field_w = param4;
+          if ((param3.directionMask & 1) != 0 &&
+            param3.positionY > param4) {
+            param3.positionY = param4;
           }
           if (param1 <= 80) {
             return true;
           }
-          if (param2 == param3.field_M &&
-            param3.field_w == param4) {
-            param3.field_G = 0;
-            param3.a(param0, 26214);
+          if (param2 == param3.positionX &&
+            param3.positionY == param4) {
+            param3.directionMask = 0;
+            param3.setDirectionFromMask(param0, 26214);
             return true;
           }
           stackIn_23_0 = (FootballerAgent) (param3);
-          if (param4 > param3.field_w) {
+          if (param4 > param3.positionY) {
             stackIn_24_1 = 1;
           } else {
             stackIn_24_1 = 0;
           }
-          if (param3.field_M >= param2) {
+          if (param3.positionX >= param2) {
             stackIn_27_2 = 0;
           } else {
             stackIn_27_2 = 8;
           }
-          if (param3.field_M <= param2) {
+          if (param3.positionX <= param2) {
             stackIn_30_3 = 0;
           } else {
             stackIn_30_3 = 2;
           }
           stackIn_32_1 = stackIn_24_1 | (stackIn_27_2 | stackIn_30_3);
-          if (param3.field_w > param4) {
+          if (param3.positionY > param4) {
             stackIn_33_2 = 4;
           } else {
             stackIn_33_2 = 0;
           }
-          stackIn_23_0.field_G = stackIn_32_1 | stackIn_33_2;
+          stackIn_23_0.directionMask = stackIn_32_1 | stackIn_33_2;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -321,11 +321,11 @@ final class tc extends am {
         if (!param0) {
           param3 = 0;
         }
-        ir.a(rv.field_c[param2][param3][2], -88, rv.field_c[param2][param3][5], rv.field_c[param2][param3][4], rv.field_c[param2][param3][1], rv.field_c[param2][param3][0], rv.field_c[param2][param3][3]);
-        ic.a(rv.field_c[param2][param3][4], rv.field_c[param2][param3][5], rv.field_c[param2][param3][3], rv.field_c[param2][param3][0], rv.field_c[param2][param3][2], (byte) -113, rv.field_c[param2][param3][1]);
+        ThreeCommand.a(ValidationState.field_c[param2][param3][2], -88, ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][1], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][3]);
+        ic.a(ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][3], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][2], (byte) -113, ValidationState.field_c[param2][param3][1]);
         if (param1 != 8710) {
           FootballerAgent var5 = (FootballerAgent) null;
-          tc.a(117, (byte) -18, -15, (FootballerAgent) null, 51);
+          tc.advanceToPoint(117, (byte) -18, -15, (FootballerAgent) null, 51);
           return;
         }
     }
@@ -382,7 +382,7 @@ final class tc extends am {
         var4 = Kickabout.field_G;
         try {
           while (true) {
-            var3_int = param0.h((byte) -125);
+            var3_int = param0.readUnsignedByte((byte) -125);
             if (var3_int != 0) {
               this.a(var3_int, false, param0);
               continue;

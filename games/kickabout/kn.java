@@ -3,10 +3,10 @@
  */
 final class kn extends i {
     static String[] field_G;
-    static ut field_J;
-    static hd field_F;
+    static Sprite field_J;
+    static UiLayoutNode field_F;
     static String field_H;
-    private hd field_K;
+    private UiLayoutNode field_K;
     private dn[] field_I;
 
     public static void g(int param0) {
@@ -23,7 +23,7 @@ final class kn extends i {
         super(27);
         dn var3 = null;
         int incrementValue$0 = 0;
-        this.field_K = new hd();
+        this.field_K = new UiLayoutNode();
         this.field_I = new dn[ok.field_a.a(false)];
         int var1 = 0;
         oi var2 = (oi) (ok.field_a.g(24009));
@@ -31,7 +31,7 @@ final class kn extends i {
           var3 = new dn(var2.field_j);
           var3.field_J = var3.field_mb * (var1 / 5);
           var3.field_s = var1 % 5 * var3.field_q;
-          this.field_K.a((byte) -107, (hd) (var3));
+          this.field_K.addChild((byte) -107, (UiLayoutNode) (var3));
           incrementValue$0 = var1;
           var1++;
           this.field_I[incrementValue$0] = var3;
@@ -97,12 +97,12 @@ final class kn extends i {
           var6 = var13[var5];
           if (var6 != null &&
             var6.field_gb) {
-            on.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
-            on.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
+            SoftwareRasterizer.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
+            SoftwareRasterizer.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
             qe.field_i[PacketBuffer.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
             un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
             var7 = new String[16];
-            var8 = un.field_d.a(lw.field_a[var6.field_Bb], new int[]{240}, var7);
+            var8 = un.field_d.wrapText(lw.field_a[var6.field_Bb], new int[]{240}, var7);
             var9 = 0;
             var10 = un.field_d.field_p + un.field_d.field_L;
             for (var11 = 0; var11 < var8; var11++) {

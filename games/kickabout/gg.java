@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg extends hd {
+final class gg extends UiLayoutNode {
     int field_Cb;
-    hd field_Ab;
+    UiLayoutNode field_Ab;
     String field_Gb;
     String field_yb;
-    hd field_Bb;
+    UiLayoutNode field_Bb;
     String field_zb;
     String field_Eb;
     static int field_Db;
-    hd field_Fb;
+    UiLayoutNode field_Fb;
 
     final static void a(int param0, int param1, BallAgent param2) {
         int[] stackIn_3_0;
@@ -52,8 +52,8 @@ final class gg extends hd {
           }
           stackIn_3_2[stackIn_3_3] = stackIn_4_4;
           stackIn_3_0[stackIn_3_1] = stackIn_4_4;
-          var3_int = param2.a(true);
-          var4 = param2.c(param1 ^ 879306160);
+          var3_int = param2.pixelX(true);
+          var4 = param2.pixelY(param1 ^ 879306160);
           if (var3_int > 448) {
             var5 = kk.field_B[0];
             kk.field_B[0] = kk.field_B[1];
@@ -65,15 +65,15 @@ final class gg extends hd {
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
             var6 = -var3_int + kk.field_B[var5Lifetime1];
             var7 = -var4 + or.field_a[var5Lifetime1];
-            mu.field_Q[var5Lifetime1] = de.a(var6 * var6 + var7 * var7, (byte) -128);
+            ContentTransitionDialog.field_Q[var5Lifetime1] = GameKeyHandler.a(var6 * var6 + var7 * var7, (byte) -128);
           }
-          var5Lifetime2 = mu.field_Q[0] - 30;
+          var5Lifetime2 = ContentTransitionDialog.field_Q[0] - 30;
           var9 = 0;
           var6Lifetime1 = var9;
           while (var9 < 2) {
-            if (0 != mu.field_Q[var9]) {
-              kk.field_B[var9] = var5Lifetime2 * (-var3_int + kk.field_B[var9]) / mu.field_Q[var9] + var3_int;
-              or.field_a[var9] = var5Lifetime2 * (or.field_a[var9] - var4) / mu.field_Q[var9] + var4;
+            if (0 != ContentTransitionDialog.field_Q[var9]) {
+              kk.field_B[var9] = var5Lifetime2 * (-var3_int + kk.field_B[var9]) / ContentTransitionDialog.field_Q[var9] + var3_int;
+              or.field_a[var9] = var5Lifetime2 * (or.field_a[var9] - var4) / ContentTransitionDialog.field_Q[var9] + var4;
             }
             var9++;
           }
@@ -102,18 +102,18 @@ final class gg extends hd {
     }
 
     gg() {
-        super(0L, (hd) null);
+        super(0L, (UiLayoutNode) null);
     }
 
     final static void h(byte param0) {
-        hd.field_K = wm.field_C;
-        hw.field_f = la.field_d;
-        jr.field_Gb = cq.field_f;
-        up.field_f = 0.0;
-        o.field_e = 0.0;
+        UiLayoutNode.field_K = CachedArchiveSource.field_C;
+        InstrumentNoteMask.field_f = PlayArea.field_d;
+        jr.field_Gb = AuctionLogEntry.field_f;
+        PlayerStats.field_f = 0.0;
+        DualLinkDeque.field_e = 0.0;
         int var1 = -104 % ((param0 + 10) / 60);
-        hw.field_i = (int)hw.field_f >> 3;
-        tf.field_a = 0.0;
+        InstrumentNoteMask.field_i = (int)InstrumentNoteMask.field_f >> 3;
+        IntrusiveDeque.field_a = 0.0;
     }
 
     final static void a(int param0) {
@@ -139,12 +139,12 @@ final class gg extends hd {
           if (param1 != 88) {
             return;
           }
-          li.field_c = new String[args.length];
+          ConsoleValue.field_c = new String[args.length];
           for (var2_int = 0; var2_int < args.length; var2_int++) {
-            li.field_c[var2_int] = args[var2_int];
+            ConsoleValue.field_c[var2_int] = args[var2_int];
           }
-          if (li.field_c.length != 0) {
-            if (li.field_c.length == 1) {
+          if (ConsoleValue.field_c.length != 0) {
+            if (ConsoleValue.field_c.length == 1) {
               stackIn_10_0 = cl.field_g;
             } else {
               stackIn_10_0 = ka.field_d;
@@ -152,9 +152,9 @@ final class gg extends hd {
             gu.field_Jb = stackIn_10_0;
             var4 = 0;
             var2_intLifetime1 = var4;
-            while (var4 < li.field_c.length) {
-              gu.field_Jb = gu.field_Jb + li.field_c[var4];
-              if (li.field_c.length - 1 > var4) {
+            while (var4 < ConsoleValue.field_c.length) {
+              gu.field_Jb = gu.field_Jb + ConsoleValue.field_c[var4];
+              if (ConsoleValue.field_c.length - 1 > var4) {
                 gu.field_Jb = gu.field_Jb + "   ";
               }
               var4++;

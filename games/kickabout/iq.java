@@ -56,12 +56,12 @@ abstract class iq {
     }
 
     final static int a(byte param0, int param1, int param2, int param3, int param4) {
-        ut var5 = tb.field_q[param3 % 10];
+        Sprite var5 = tb.field_q[param3 % 10];
         if (param0 >= -66) {
           return -2;
         }
         param2 = param2 - var5.field_q;
-        var5.c(-var5.field_s + param2, param1, param4);
+        var5.drawAdditive(-var5.field_s + param2, param1, param4);
         param2 -= 3;
         if (param3 >= 10) {
           param2 = iq.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);
@@ -200,12 +200,12 @@ abstract class iq {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static int $cfr$intArgs$a$8e2a9e3a0d15(int param0, int param1, int param2, int param3, int param4) {
-        ut var5 = tb.field_q[param3 % 10];
+        Sprite var5 = tb.field_q[param3 % 10];
         if (param0 >= -66) {
           return -2;
         }
         param2 = param2 - var5.field_q;
-        var5.c(-var5.field_s + param2, param1, param4);
+        var5.drawAdditive(-var5.field_s + param2, param1, param4);
         param2 -= 3;
         if (param3 >= 10) {
           param2 = iq.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);

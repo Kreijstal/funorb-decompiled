@@ -3,8 +3,8 @@
  */
 final class eb implements Runnable {
     static ff field_c;
-    private o field_h;
-    static ot[] field_i;
+    private DualLinkDeque field_h;
+    static ArgbSprite[] field_i;
     int field_e;
     private Thread field_a;
     private boolean field_f;
@@ -92,7 +92,7 @@ final class eb implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              bd.a((String) null, (Throwable) ((Object) var2_ref), 1);
+              UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var2_ref), 1);
               var7.field_p = false;
             }
           }
@@ -103,7 +103,7 @@ final class eb implements Runnable {
         }
     }
 
-    final hi a(int param0, int param1, qh param2) {
+    final hi a(int param0, int param1, SectorCacheStore param2) {
         hi var4 = null;
         RuntimeException var4_ref = null;
         hi stackIn_2_0 = null;
@@ -139,7 +139,7 @@ final class eb implements Runnable {
         }
     }
 
-    final hi a(int param0, qh param1, int param2) {
+    final hi a(int param0, SectorCacheStore param1, int param2) {
         hi var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -222,7 +222,7 @@ final class eb implements Runnable {
         }
     }
 
-    final hi a(int param0, qh param1, byte[] param2, byte param3) {
+    final hi a(int param0, SectorCacheStore param1, byte[] param2, byte param3) {
         hi var5 = null;
         RuntimeException var5_ref = null;
         hi stackIn_2_0 = null;
@@ -267,9 +267,9 @@ final class eb implements Runnable {
         }
     }
 
-    eb(bu param0) {
-        wu var2 = null;
-        this.field_h = new o();
+    eb(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
+        this.field_h = new DualLinkDeque();
         this.field_e = 0;
         this.field_f = false;
         try {

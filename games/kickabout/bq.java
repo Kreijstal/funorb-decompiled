@@ -3,7 +3,7 @@
  */
 final class bq {
     static String field_b;
-    static hd field_d;
+    static UiLayoutNode field_d;
     static int field_c;
     static rj field_a;
 
@@ -12,7 +12,7 @@ final class bq {
         int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
-        hd stackIn_6_0 = null;
+        UiLayoutNode stackIn_6_0 = null;
         boolean stackIn_6_1 = false;
         int stackIn_6_2 = 0;
         int stackIn_7_3 = 0;
@@ -25,43 +25,43 @@ final class bq {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        hd var8_ref_hd = null;
+        UiLayoutNode var8_ref_hd = null;
         vu var9 = null;
         int var9_int = 0;
         vu var10 = null;
         int var10_int = 0;
         int var12 = 0;
         int var13 = 0;
-        hd var14 = null;
-        hd var15 = null;
+        UiLayoutNode var14 = null;
+        UiLayoutNode var15 = null;
         int var16 = 0;
         var13 = Kickabout.field_G;
         try {
-          bh.field_s = on.field_f;
-          ea.field_a = on.field_g;
+          BufferedSocket.field_s = SoftwareRasterizer.field_f;
+          ea.field_a = SoftwareRasterizer.field_g;
           stackIn_3_0 = 127;
           if (param1) {
             stackIn_4_1 = fj.field_a;
           } else {
             stackIn_4_1 = ee.field_b;
           }
-          dw.a(stackIn_3_0, stackIn_4_1);
+          ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
           ni.field_l.a(0, dn.field_Cb.field_q, 0, -2 + (-40 + dn.field_Cb.field_mb), (byte) -80);
-          ka.field_c.a(true, fm.field_C.field_q, 0, 0, sh.field_c);
-          stackIn_6_0 = bh.field_u;
+          ka.field_c.a(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
+          stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
-          stackIn_6_2 = fm.field_C.field_q;
+          stackIn_6_2 = AchievementsScreen.field_C.field_q;
           if (!ui.field_t) {
             stackIn_7_3 = 0;
           } else {
             stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);
           }
-          ((hd) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
-          jf.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (fm.field_C.field_q - 2), 2 + sh.field_c, 18);
-          ClientException.field_c.a(2, 124, -20 - sh.field_c + fm.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, fm.field_C.field_q, TeamSelectionAgent.field_f);
+          ((UiLayoutNode) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
+          DoSomethingCommand.field_D.a(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
+          ClientException.field_c.a(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
           ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);
-          ci.field_h.a(true, fp.field_p.field_q, 0, 0, 30);
-          sg.field_a.a(true, fp.field_p.field_q, 0, 30, -40 + (fp.field_p.field_mb - 2) - 30);
+          ci.field_h.a(true, AuctionItem.field_p.field_q, 0, 0, 30);
+          sg.field_a.a(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
           var2_int = 3 + ss.field_j;
           if (rn.field_d.length < 2) {
             var2_int--;
@@ -80,12 +80,12 @@ final class bq {
           if (param0 < 81) {
             field_b = (String) null;
           }
-          ku.field_d.a(true, -10 + sg.field_a.field_q, 5, 5, var4);
+          MouseInputHandler.field_d.a(true, -10 + sg.field_a.field_q, 5, 5, var4);
           var5 = var4 + 5 + 2;
           for (var6 = 0; var6 < ss.field_j + 4; var6++) {
             if ((var6 != 1 ||
               !(rn.field_d.length < 2)) && (var6 != 3 ||
-              !(ku.field_f <= 1))) {
+              !(MouseInputHandler.field_f <= 1))) {
               if (!param1 &&
                 var6 == 3) {
                 var14 = qr.field_b[var6];
@@ -113,8 +113,8 @@ final class bq {
               } else {
                 if (param1) {
                   if (var6 >= 4) {
-                    if (wi.field_z != null) {
-                      stackIn_49_0 = (wi.field_z[-4 + var6]) ? 1 : 0;
+                    if (TextButton.field_z != null) {
+                      stackIn_49_0 = (TextButton.field_z[-4 + var6]) ? 1 : 0;
                     } else {
                       stackIn_49_0 = 0;
                     }
@@ -152,7 +152,7 @@ final class bq {
                     rf.field_c[var6][0].a(mj.field_b, 2, 38, var5, var8, 15114, var3);
                     var8 += 40;
                   }
-                  var9_int = -3 + (fp.field_p.field_q - var8);
+                  var9_int = -3 + (AuctionItem.field_p.field_q - var8);
                   var10_int = rf.field_c[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var11 * var9_int / var10_int;
@@ -163,12 +163,12 @@ final class bq {
               }
             }
           }
-          tn.field_f.a(true, 360, -360 + on.field_g >> 1, 10, on.field_f - 120 - 4 - 10 - 10);
+          tn.field_f.a(true, 360, -360 + SoftwareRasterizer.field_g >> 1, 10, SoftwareRasterizer.field_f - 120 - 4 - 10 - 10);
           is.field_b.a(true, tn.field_f.field_q, 0, 0, 24);
           vj.field_g.a(true, tn.field_f.field_q, 0, 24, -24 + tn.field_f.field_mb);
           vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
           mc.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
-          kt.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
+          BlackFadeScreen.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
           ClientException.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

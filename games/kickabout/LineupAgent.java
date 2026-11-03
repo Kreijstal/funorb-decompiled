@@ -4,24 +4,24 @@
 final class LineupAgent extends MatchAgent {
     static boolean field_o;
     private it[] field_k;
-    private int field_h;
+    private int readyMask;
     static int field_n;
-    private up[][] field_i;
-    private int[][] field_j;
-    private int[][] field_m;
+    private PlayerStats[][] slotStats;
+    private int[][] slotChoice;
+    private int[][] slotOwner;
     private ParticipantStatus[] field_f;
     static boolean field_g;
     private boolean field_l;
 
-    final boolean a(boolean param0, int param1) {
+    final boolean hasChosenAllSlots(boolean param0, int param1) {
         int var4 = 0;
         int var3;
         int var5;
         var5 = Kickabout.field_G;
         var3 = this.field_k[param1].field_p;
         for (var4 = 0; var4 < 4; var4++) {
-          if (param1 == this.field_m[var3][var4] &&
-            -1 == this.field_j[var3][var4]) {
+          if (param1 == this.slotOwner[var3][var4] &&
+            -1 == this.slotChoice[var3][var4]) {
             return false;
           }
         }
@@ -32,7 +32,7 @@ final class LineupAgent extends MatchAgent {
         return true;
     }
 
-    final void a(CipherPacketBuffer param0, boolean param1) {
+    final void readState(CipherPacketBuffer param0, boolean param1) {
         int var6 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -42,10 +42,10 @@ final class LineupAgent extends MatchAgent {
         try {
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4 = 0; var4 < 4; var4++) {
-              this.field_j[var3_int][var4] = param0.l(4, 59) - 1;
+              this.slotChoice[var3_int][var4] = param0.l(4, 59) - 1;
             }
           }
-          this.field_h = param0.l(8, 59);
+          this.readyMask = param0.l(8, 59);
           param0.l((byte) 112);
           var3_intLifetime1 = 0;
           if (param1) {
@@ -55,7 +55,7 @@ final class LineupAgent extends MatchAgent {
             var6 = 0;
             var4Lifetime1 = var6;
             while (var6 < 4) {
-              this.field_i[var3_intLifetime1][var6].a(112, param0);
+              this.slotStats[var3_intLifetime1][var6].readFromPacket(112, param0);
               var6++;
             }
             var3_intLifetime1++;
@@ -80,13 +80,13 @@ final class LineupAgent extends MatchAgent {
         var5 = new StringBuilder("AgentLineup");
         for (var2 = 0; var2 < this.field_k.length; var2++) {
           discarded$61 = var5.append("\t" + var2 + "=");
-          if (!this.a(-83, var2)) {
+          if (!this.isReadyOrInactive(-83, var2)) {
             discarded$62 = var5.append(".");
           }
           discarded$63 = var5.append("[");
           for (var3 = 0; 4 > var3; var3++) {
-            if (~this.field_m[this.field_k[var2].field_p][var3] == ~var2) {
-              discarded$65 = var5.append(" " + var3 + "=" + this.field_j[this.field_k[var2].field_p][var3]);
+            if (~this.slotOwner[this.field_k[var2].field_p][var3] == ~var2) {
+              discarded$65 = var5.append(" " + var3 + "=" + this.slotChoice[this.field_k[var2].field_p][var3]);
             }
           }
           discarded$64 = var5.append(" ]");
@@ -94,7 +94,7 @@ final class LineupAgent extends MatchAgent {
         return var5.toString();
     }
 
-    private final boolean a(int param0, gr param1, int param2, int param3) {
+    private final boolean canSelectPlayer(int param0, ClubState param1, int param2, int param3) {
         int var6 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -106,7 +106,7 @@ final class LineupAgent extends MatchAgent {
         var7 = Kickabout.field_G;
         try {
           if (!this.field_l &&
-            param1.field_i[param0].c(-2)) {
+            param1.squad[param0].isEmpty(-2)) {
             return false;
           }
           if (!this.field_l &&
@@ -118,8 +118,8 @@ final class LineupAgent extends MatchAgent {
           }
           var5_int = this.field_k[param2].field_p;
           for (var6 = 0; var6 < 4; var6++) {
-            if (this.field_m[var5_int][var6] == param2 &&
-              param0 == this.field_j[var5_int][var6]) {
+            if (this.slotOwner[var5_int][var6] == param2 &&
+              param0 == this.slotChoice[var5_int][var6]) {
               return false;
             }
           }
@@ -138,7 +138,7 @@ final class LineupAgent extends MatchAgent {
         }
     }
 
-    final void a(gr param0, up[] param1, byte param2, int param3, int param4) {
+    final void autoSelectPlayer(ClubState param0, PlayerStats[] param1, byte param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         MatchAgent var8 = null;
@@ -157,8 +157,8 @@ final class LineupAgent extends MatchAgent {
             this.a((byte) -51, (MatchAgent) null);
           }
           while (var6_int < 9) {
-            if (this.a(var6_int, param0, param4, 4)) {
-              this.a(var6_int + 1 << 2 | param3, 0, param0, param1, param4);
+            if (this.canSelectPlayer(var6_int, param0, param4, 4)) {
+              this.applyCommand(var6_int + 1 << 2 | param3, 0, param0, param1, param4);
               return;
             }
             var6_int++;
@@ -184,9 +184,9 @@ final class LineupAgent extends MatchAgent {
         }
     }
 
-    final void a(int param0, int param1, gr param2, up[] param3, int param4) {
+    final void applyCommand(int param0, int param1, ClubState param2, PlayerStats[] param3, int param4) {
         int var10 = 0;
-        up stackIn_22_0 = null;
+        PlayerStats stackIn_22_0 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -197,10 +197,10 @@ final class LineupAgent extends MatchAgent {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        up var9 = null;
+        PlayerStats var9 = null;
         int var11 = 0;
         MatchAgent var12 = null;
-        up var13 = null;
+        PlayerStats var13 = null;
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         try {
@@ -210,12 +210,12 @@ final class LineupAgent extends MatchAgent {
             this.a((byte) 13, (MatchAgent) null);
           }
           if (-1 == param0) {
-            this.field_h = this.field_h ^ 1 << param4;
+            this.readyMask = this.readyMask ^ 1 << param4;
           } else {
             if (param0 != -2) {
               var7 = 3 & param0;
               var8 = (param0 >> 2) - 1;
-              if (this.field_m[var6_int][var7] != param4) {
+              if (this.slotOwner[var6_int][var7] != param4) {
                 return;
               }
               if (var8 >= -1 &&
@@ -223,13 +223,13 @@ final class LineupAgent extends MatchAgent {
                 if (var8 == -1) {
                   stackIn_22_0 = null;
                 } else {
-                  stackIn_22_0 = param2.field_i[var8];
+                  stackIn_22_0 = param2.squad[var8];
                 }
                 var13 = stackIn_22_0;
                 var9 = var13;
                 if (var8 != -1) {
                   if (!this.field_l) {
-                    if (var13.c(-2)) {
+                    if (var13.isEmpty(-2)) {
                       return;
                     }
                     if (param2.a((byte) 79, var8)) {
@@ -241,28 +241,28 @@ final class LineupAgent extends MatchAgent {
                 }
                 if (-1 != var8) {
                   for (var10 = 0; var10 < 4; var10++) {
-                    if (this.field_m[var6_int][var10] == param4 &&
-                      this.field_j[var6_int][var10] == var8) {
-                      this.field_j[var6_int][var10] = this.field_j[var6_int][var7];
-                      this.field_i[var6_int][var10].a((byte) -101, this.field_i[var6_int][var7]);
+                    if (this.slotOwner[var6_int][var10] == param4 &&
+                      this.slotChoice[var6_int][var10] == var8) {
+                      this.slotChoice[var6_int][var10] = this.slotChoice[var6_int][var7];
+                      this.slotStats[var6_int][var10].copyFrom((byte) -101, this.slotStats[var6_int][var7]);
                     }
                   }
-                  this.field_i[var6_int][var7].a((byte) -90, var9);
+                  this.slotStats[var6_int][var7].copyFrom((byte) -90, var9);
                 } else {
-                  this.field_i[var6_int][var7].b((byte) -7);
+                  this.slotStats[var6_int][var7].clear((byte) -7);
                 }
-                this.field_j[var6_int][var7] = var8;
-                this.field_h = this.field_h & ~(1 << param4);
+                this.slotChoice[var6_int][var7] = var8;
+                this.readyMask = this.readyMask & ~(1 << param4);
                 return;
               }
               return;
             }
-            if (!this.a(false, param4)) {
+            if (!this.hasChosenAllSlots(false, param4)) {
               for (var7Lifetime1 = 0; 4 > var7Lifetime1; var7Lifetime1++) {
-                if (this.field_m[var6_int][var7Lifetime1] == param4 &&
-                  this.field_j[var6_int][var7Lifetime1] == -1) {
-                  this.a(param2, param3, (byte) -78, var7Lifetime1, param4);
-                  this.field_h = this.field_h & ~(1 << param4);
+                if (this.slotOwner[var6_int][var7Lifetime1] == param4 &&
+                  this.slotChoice[var6_int][var7Lifetime1] == -1) {
+                  this.autoSelectPlayer(param2, param3, (byte) -78, var7Lifetime1, param4);
+                  this.readyMask = this.readyMask & ~(1 << param4);
                   return;
                 }
               }
@@ -298,36 +298,36 @@ final class LineupAgent extends MatchAgent {
         try {
           var3 = (LineupAgent) (param1);
           if (param0 > -52) {
-            this.field_m = (int[][]) null;
+            this.slotOwner = (int[][]) null;
           }
           for (var4 = 0; var4 < 2; var4++) {
             for (var5 = 0; var5 < 4; var5++) {
-              this.field_i[var4][var5].a((byte) -90, var3.field_i[var4][var5]);
-              this.field_j[var4][var5] = var3.field_j[var4][var5];
+              this.slotStats[var4][var5].copyFrom((byte) -90, var3.slotStats[var4][var5]);
+              this.slotChoice[var4][var5] = var3.slotChoice[var4][var5];
             }
           }
-          this.field_h = var3.field_h;
+          this.readyMask = var3.readyMask;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wl.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isReadyOrInactive(int param0, int param1) {
         boolean stackIn_7_0 = false;
         if (param0 >= -80) {
           return false;
         }
-        stackIn_7_0 = !(this.field_f[param1].d(3511)) || ((1 << param1 & this.field_h) != 0);
+        stackIn_7_0 = !(this.field_f[param1].isActive(3511)) || ((1 << param1 & this.readyMask) != 0);
         return stackIn_7_0;
     }
 
-    LineupAgent(boolean param0, it[] param1, ParticipantStatus[] param2, int[][] param3, int[][] param4, up[][] param5) {
+    LineupAgent(boolean param0, it[] param1, ParticipantStatus[] param2, int[][] param3, int[][] param4, PlayerStats[][] param5) {
         try {
           this.field_f = param2;
           this.field_k = param1;
-          this.field_j = param4;
-          this.field_m = param3;
-          this.field_i = param5;
+          this.slotChoice = param4;
+          this.slotOwner = param3;
+          this.slotStats = param5;
           this.field_l = param0 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ck {
-    static hd field_c;
+    static UiLayoutNode field_c;
     static String field_e;
     static int field_d;
     static rb field_b;

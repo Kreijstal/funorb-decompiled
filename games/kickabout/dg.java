@@ -7,24 +7,24 @@ class dg {
     static java.util.zip.CRC32 field_b;
     static String field_f;
     static boolean field_a;
-    private ut[] field_d;
+    private Sprite[] field_d;
     static boolean field_e;
     static String field_c;
 
     void a(int param0, int param1, int param2, int param3, int param4) {
         ea.a(param2, param1, param0, (byte) 22, this.field_d, param3);
         if (param4 != 3) {
-          up var7 = (up) null;
-          dg.a((byte) -66, -25, -85, (up) null);
+          PlayerStats var7 = (PlayerStats) null;
+          dg.a((byte) -66, -25, -85, (PlayerStats) null);
         }
     }
 
-    final static void a(byte param0, int param1, int param2, up param3) {
+    final static void a(byte param0, int param1, int param2, PlayerStats param3) {
         try {
           np.field_Jb.a(new rt(param2, param1, param3), 3);
           if (param0 != -120) {
-            up var5 = (up) null;
-            dg.a((byte) 119, -53, 107, (up) null);
+            PlayerStats var5 = (PlayerStats) null;
+            dg.a((byte) 119, -53, 107, (PlayerStats) null);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

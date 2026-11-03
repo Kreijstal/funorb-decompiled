@@ -5,7 +5,7 @@ import java.util.*;
 
 final class oa {
     static Calendar field_a;
-    static hd field_b;
+    static UiLayoutNode field_b;
 
     final static void b(int param0) {
         ee.b((byte) -25);
@@ -15,11 +15,11 @@ final class oa {
         }
     }
 
-    final static ut a(boolean param0, int param1, byte param2) {
-        kg[] var17 = null;
+    final static Sprite a(boolean param0, int param1, byte param2) {
+        IndexedSprite[] var17 = null;
         int[] var15 = null;
-        ut var16 = null;
-        kg[] var10 = null;
+        Sprite var16 = null;
+        IndexedSprite[] var10 = null;
         int var4 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -32,7 +32,7 @@ final class oa {
           var17 = var10;
           var4 = var10[0].field_a;
           var15 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
-          var16 = new ut(var15[1] * param1 + var15[0] + var15[2], var4);
+          var16 = new Sprite(var15[1] * param1 + var15[0] + var15[2], var4);
           PacketBuffer.a(-122, var16);
           var7 = 0;
           var10[0].a(var7, 0);
@@ -42,16 +42,16 @@ final class oa {
             var7 = var7 + var15[1];
           }
           var17[2].a(var7, 0);
-          ta.e(122);
-          pd.a(var16, 20684);
+          TeamManagementScreen.e(122);
+          LoginForm.a(var16, 20684);
           return var16;
         }
         oa.b(-53);
         var10 = ph.field_e[!param0 ? 3 : 1];
-        kg[] var14 = var10;
+        IndexedSprite[] var14 = var10;
         var4Lifetime1 = var10[0].field_a;
         int[] var12 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
-        ut var13 = new ut(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
+        Sprite var13 = new Sprite(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
         PacketBuffer.a(-122, var13);
         var7Lifetime1 = 0;
         var10[0].a(var7Lifetime1, 0);
@@ -61,8 +61,8 @@ final class oa {
           var7Lifetime1 = var7Lifetime1 + var12[1];
         }
         var14[2].a(var7Lifetime1, 0);
-        ta.e(122);
-        pd.a(var13, 20684);
+        TeamManagementScreen.e(122);
+        LoginForm.a(var13, 20684);
         return var13;
     }
 
@@ -79,15 +79,15 @@ final class oa {
           var10.b(param1, (byte) 120);
           var10.field_n = var10.field_n + 1;
           var7 = var10.field_n;
-          var10.a(124, 4);
-          var10.a(104, param2);
+          var10.writeByte(124, 4);
+          var10.writeByte(104, param2);
           var8 = param4;
           if (param3) {
             var8 += 128;
           }
-          var10.a(108, var8);
-          var10.a(0, param5.length, 1991220144, param5);
-          var10.c(62, -var7 + var10.field_n);
+          var10.writeByte(108, var8);
+          var10.writeBytes(0, param5.length, 1991220144, param5);
+          var10.backpatchByteLength(62, -var7 + var10.field_n);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -115,7 +115,7 @@ final class oa {
     final static void a(byte param0, boolean param1) {
         wd.field_l.a(0, 0, (byte) -114);
         if (param0 > -98) {
-          field_b = (hd) null;
+          field_b = (UiLayoutNode) null;
         }
     }
 

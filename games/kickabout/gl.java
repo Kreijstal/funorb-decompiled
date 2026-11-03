@@ -11,7 +11,7 @@ final class gl {
     int field_k;
     int field_j;
     int field_l;
-    static hd field_c;
+    static UiLayoutNode field_c;
     static int[] field_d;
     static String field_f;
     static String field_i;
@@ -143,16 +143,16 @@ final class gl {
                       var8 = 1344;
                     }
                   }
-                  var9 = param1.field_V.field_t;
-                  var10 = param1.field_V.field_p;
-                  param1.field_V.field_t = var7 << 16;
-                  param1.field_V.field_p = var8 << 16;
-                  vl.a(param1, (byte) -75);
-                  param1.field_V.field_t = var9;
-                  param1.field_V.field_p = var10;
+                  var9 = param1.field_V.positionX;
+                  var10 = param1.field_V.positionY;
+                  param1.field_V.positionX = var7 << 16;
+                  param1.field_V.positionY = var8 << 16;
+                  vl.computeCameraFocus(param1, (byte) -75);
+                  param1.field_V.positionX = var9;
+                  param1.field_V.positionY = var10;
                   ParticipantStatus.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);
-                  in.field_c[var2_int][var3][var4][var6][0] = ge.field_m[0];
-                  in.field_c[var2_int][var3][var4][var6][1] = ge.field_m[1];
+                  in.field_c[var2_int][var3][var4][var6][0] = MatchingTextValidator.field_m[0];
+                  in.field_c[var2_int][var3][var4][var6][1] = MatchingTextValidator.field_m[1];
                 }
               }
             }
@@ -172,7 +172,7 @@ final class gl {
         }
     }
 
-    final static ut[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = 34 % ((param1 - 38) / 37);
         return q.a(1, 1, param2, 1, 3, -1481, param4, param0, param3);
     }

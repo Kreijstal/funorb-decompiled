@@ -5,9 +5,9 @@ final class af {
     static int[] field_b;
     static dt[] field_a;
     static String field_c;
-    static hd field_d;
+    static UiLayoutNode field_d;
 
-    final static int a(up param0, int param1) {
+    final static int a(PlayerStats param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -16,7 +16,7 @@ final class af {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 5 * gp.a(param0, -576054046) / 3;
+          var2_int = 5 * PasswordLoginCredentials.a(param0, -576054046) / 3;
           if (param1 < ~var2_int) {
             var2_int = 30;
           }

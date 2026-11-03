@@ -5,7 +5,7 @@ final class sb {
     static String field_e;
     static int field_a;
     static String field_g;
-    static ut[] field_b;
+    static Sprite[] field_b;
     int field_c;
     static int[] field_h;
     private String field_f;
@@ -24,17 +24,17 @@ final class sb {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        gg var3 = se.a(param0, 2, param2);
+        gg var3 = ModalStack.a(param0, 2, param2);
         uv var4Lifetime1;
         if (!param1) {
           if (var3 != null) {
-            wi.field_v.a(false, 0);
-            var4 = wi.field_v;
-            var5_ref_String = qt.field_k;
+            TextButton.field_v.a(false, 0);
+            var4 = TextButton.field_v;
+            var5_ref_String = ButtonMenuScreen.field_k;
             var4.field_j.a(0, 5, var5_ref_String);
-            var4Lifetime1 = wi.field_v;
+            var4Lifetime1 = TextButton.field_v;
             var5 = sm.field_q;
-            var6 = vc.field_y;
+            var6 = ReceivedAuctionItem.field_y;
             var4Lifetime1.field_j.a(0, 0, var5, var6, 0);
           }
           ug.a(param2, 2, param0);
@@ -44,27 +44,27 @@ final class sb {
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 == 5) {
-          nr.field_j = param1;
+          PlayerModelPreview.field_j = param1;
           jl.field_d = param2;
-          lk.field_g = param0;
-          la.field_c = param3;
+          ConsoleExpression.field_g = param0;
+          PlayArea.field_c = param3;
           return;
         }
         field_h = (int[]) null;
-        nr.field_j = param1;
+        PlayerModelPreview.field_j = param1;
         jl.field_d = param2;
-        lk.field_g = param0;
-        la.field_c = param3;
+        ConsoleExpression.field_g = param0;
+        PlayArea.field_c = param3;
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3) {
         um.field_b = true;
         gk.field_g = param3;
-        mf.field_Db = null;
-        wb.field_j = param0 ? true : false;
+        SquadGridWidget.field_Db = null;
+        TeamSelectionView.field_j = param0 ? true : false;
         hh.field_f = param2;
-        ga.field_R = 0.0f;
-        jm.a(18, false, -2);
+        TextInputWidget.field_R = 0.0f;
+        DelayedServerPacket.a(18, false, -2);
         if (param1 > -85) {
           sb.b((byte) -66);
         }
@@ -77,39 +77,39 @@ final class sb {
     final static int a(int param0, int param1) {
         if (param1 > -121) {
           field_g = (String) null;
-          return t.field_o[2047 & param0];
+          return TriangleRasterizer.field_o[2047 & param0];
         }
-        return t.field_o[2047 & param0];
+        return TriangleRasterizer.field_o[2047 & param0];
     }
 
     final static void b(byte param0) {
-        bh.field_i = new String[ob.field_B];
-        bh.field_i[6] = lj.field_j;
-        bh.field_i[15] = sp.field_Eb;
-        bh.field_i[16] = gd.field_f;
-        bh.field_i[18] = aj.field_b;
-        bh.field_i[11] = aw.field_F;
-        bh.field_i[19] = vl.field_f;
+        BufferedSocket.field_i = new String[RenderedBall.field_B];
+        BufferedSocket.field_i[6] = TextLine.field_j;
+        BufferedSocket.field_i[15] = ShopPlayerSlot.field_Eb;
+        BufferedSocket.field_i[16] = gd.field_f;
+        BufferedSocket.field_i[18] = aj.field_b;
+        BufferedSocket.field_i[11] = aw.field_F;
+        BufferedSocket.field_i[19] = vl.field_f;
         if (param0 < -121) {
-          bh.field_i[9] = we.field_e;
-          bh.field_i[20] = vr.field_a;
-          bh.field_i[4] = fp.field_n;
-          bh.field_i[13] = ParticipantStatus.field_o;
-          bh.field_i[7] = ca.field_b;
-          bh.field_i[21] = mp.field_e;
-          bh.field_i[5] = fs.field_c;
-          bh.field_i[17] = dh.field_k;
+          BufferedSocket.field_i[9] = we.field_e;
+          BufferedSocket.field_i[20] = vr.field_a;
+          BufferedSocket.field_i[4] = AuctionItem.field_n;
+          BufferedSocket.field_i[13] = ParticipantStatus.field_o;
+          BufferedSocket.field_i[7] = ca.field_b;
+          BufferedSocket.field_i[21] = mp.field_e;
+          BufferedSocket.field_i[5] = fs.field_c;
+          BufferedSocket.field_i[17] = ImageProducerRasterBuffer.field_k;
           return;
         }
         field_e = (String) null;
-        bh.field_i[9] = we.field_e;
-        bh.field_i[20] = vr.field_a;
-        bh.field_i[4] = fp.field_n;
-        bh.field_i[13] = ParticipantStatus.field_o;
-        bh.field_i[7] = ca.field_b;
-        bh.field_i[21] = mp.field_e;
-        bh.field_i[5] = fs.field_c;
-        bh.field_i[17] = dh.field_k;
+        BufferedSocket.field_i[9] = we.field_e;
+        BufferedSocket.field_i[20] = vr.field_a;
+        BufferedSocket.field_i[4] = AuctionItem.field_n;
+        BufferedSocket.field_i[13] = ParticipantStatus.field_o;
+        BufferedSocket.field_i[7] = ca.field_b;
+        BufferedSocket.field_i[21] = mp.field_e;
+        BufferedSocket.field_i[5] = fs.field_c;
+        BufferedSocket.field_i[17] = ImageProducerRasterBuffer.field_k;
     }
 
     final char b(int param0) {

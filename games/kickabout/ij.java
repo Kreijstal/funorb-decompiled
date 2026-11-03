@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ij extends am {
+abstract class ij extends DualLinkNode {
     static String field_n;
     int field_o;
     static String field_r;
     static String field_q;
     static char[] field_p;
-    static hd field_s;
+    static UiLayoutNode field_s;
 
     abstract Object a(int param0);
 

@@ -4,8 +4,8 @@
 final class oo {
     static int[] field_e;
     static String field_g;
-    static bu field_c;
-    static ut[] field_b;
+    static PlatformTaskDispatcher field_c;
+    static Sprite[] field_b;
     static String field_h;
     static String field_a;
     static String field_d;

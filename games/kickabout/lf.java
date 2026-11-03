@@ -53,8 +53,8 @@ final class lf {
     }
 
     final static void a(int param0) {
-        nb.field_i = qa.h(-117);
-        wd.field_l = new se();
+        nb.field_i = LeaguesHelpScreen.h(-117);
+        wd.field_l = new ModalStack();
         if (param0 < -59) {
           bl.a(true, true, (byte) -72);
           return;

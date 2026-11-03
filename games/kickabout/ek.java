@@ -15,18 +15,18 @@ final class ek extends i {
         return param0 ^ param1;
     }
 
-    private final hd g(byte param0) {
+    private final UiLayoutNode g(byte param0) {
         int var4 = 0;
         int var3;
         fn var5;
         int var7;
-        hd var8;
+        UiLayoutNode var8;
         at var6;
         var7 = Kickabout.field_G;
-        var8 = new hd();
+        var8 = new UiLayoutNode();
         var3 = 0;
         if (param0 > -46) {
-          return (hd) null;
+          return (UiLayoutNode) null;
         }
         for (var4 = 0; var4 < pa.field_g.length; var4++) {
           var5 = pa.field_g[var4];
@@ -39,7 +39,7 @@ final class ek extends i {
             var6.field_s = 5;
             var6.field_J = var3;
             var3 = var3 + var6.field_mb;
-            var8.a((byte) -114, (hd) (var6));
+            var8.addChild((byte) -114, (UiLayoutNode) (var6));
           }
         }
         var8.a(true, 270, 0, 0, var3);
@@ -52,7 +52,7 @@ final class ek extends i {
         if (!param0) {
           return (ak) null;
         }
-        var3.field_e = (4 & (param2 ^ param1)) != 0 ? re.field_o : nn.field_K;
+        var3.field_e = (4 & (param2 ^ param1)) != 0 ? re.field_o : AccountChoicePanel.field_K;
         var3.field_g = param2 - 4;
         return var3;
     }
@@ -74,46 +74,46 @@ final class ek extends i {
         tk var11 = this.field_L;
         this.field_L.a(true, 210, param1 + 250, param2 + 55, 240);
         this.field_L.b(0, true);
-        on.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
+        SoftwareRasterizer.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
         if (param0 >= -11) {
           return;
         }
-        if (var11.field_Eb.e((byte) -113)) {
-          on.g(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
+        if (var11.field_Eb.isLinked((byte) -113)) {
+          SoftwareRasterizer.darkenRectangle(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
         }
-        pt.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
+        AuctionListing.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
         at var6_ref_at = (at) (this.field_L.field_Db.field_jb.g(24009));
         while (var6_ref_at != null) {
           if (this.field_H == var6_ref_at) {
-            on.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
-            on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
+            SoftwareRasterizer.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
+            SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
           } else {
             if (var6_ref_at.field_gb) {
-              on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
+              SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
             }
           }
           var6_ref_at.i((byte) -76);
           var6_ref_at = (at) (this.field_L.field_Db.field_jb.c(33));
         }
         if (this.field_t != var5) {
-          this.a(this.field_v, (lv) (var5), (ut) null, -94, this.field_u);
+          this.a(this.field_v, (lv) (var5), (Sprite) null, -94, this.field_u);
         }
-        ta.e(123);
+        TeamManagementScreen.e(123);
         if (null != this.field_H) {
           var6 = 130 + param1;
           var7 = 160 + param2;
           var8 = this.field_H.field_Cb.b(0);
           var9 = this.field_H.field_Cb.a(15);
-          on.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
+          SoftwareRasterizer.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
           this.field_H.field_Cb.a(var7, 23, var6);
-          pb.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
+          IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
-            pb.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
+            IsSixCommand.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }
         }
         this.field_L.a(117, false);
-        pb.field_C.d(jw.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
+        IsSixCommand.field_C.d(CheckboxLabelWidget.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
     final static void g(int param0) {
@@ -124,7 +124,7 @@ final class ek extends i {
     }
 
     final void a(int param0, boolean param1) {
-        hd stackIn_23_0 = null;
+        UiLayoutNode stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var3;
         at var4;
@@ -138,12 +138,12 @@ final class ek extends i {
         this.field_L.a(id.field_v * 32, true, (byte) -78, 32);
         if (var3 < this.field_L.field_Db.field_J &&
           this.field_K == 0) {
-          sp.c(59, 52);
+          ShopPlayerSlot.c(59, 52);
           this.field_K = 10;
         }
         if (this.field_L.field_Db.field_J < var3 &&
           this.field_K == 0) {
-          sp.c(60, -119);
+          ShopPlayerSlot.c(60, -119);
           this.field_K = 10;
         }
         if (param0 != 3) {
@@ -173,7 +173,7 @@ final class ek extends i {
         this.field_K = 0;
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
-        this.field_L = new tk(vb.a(0, var5), this.g((byte) -119), be.field_q, rr.field_b, it.field_m);
+        this.field_L = new tk(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, it.field_m);
         this.field_L.a(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }
@@ -186,7 +186,7 @@ final class ek extends i {
     }
 
     final int a(byte param0) {
-        hd discarded$0 = null;
+        UiLayoutNode discarded$0 = null;
         if (param0 <= 75) {
           discarded$0 = this.g((byte) 21);
         }
@@ -201,8 +201,8 @@ final class ek extends i {
         if (param1 == 0 &&
           null != this.field_H) {
           var3 = this.field_H.field_yb;
-          ge.a(var3, this.field_I, (byte) 123, this.field_F);
-          sp.c(50, -110);
+          MatchingTextValidator.a(var3, this.field_I, (byte) 123, this.field_F);
+          ShopPlayerSlot.c(50, -110);
         } else {
           ii.a((byte) -120);
         }

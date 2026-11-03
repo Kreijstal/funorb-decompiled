@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends hd {
+final class he extends UiLayoutNode {
     int field_Sb;
     static String field_Kb;
-    static rv field_yb;
-    hd field_Hb;
+    static ValidationState field_yb;
+    UiLayoutNode field_Hb;
     boolean field_Gb;
     static String field_Ub;
     String field_Rb;
     long field_Ab;
     String field_Nb;
     int field_Qb;
-    hd field_zb;
+    UiLayoutNode field_zb;
     static String field_Eb;
     int field_Mb;
     boolean field_Fb;
     long field_Ib;
-    hd field_Tb;
-    hd field_Lb;
+    UiLayoutNode field_Tb;
+    UiLayoutNode field_Lb;
     boolean field_Cb;
     int field_Db;
-    hd field_Ob;
+    UiLayoutNode field_Ob;
     int field_Jb;
     int field_Pb;
     static String field_Bb;
@@ -123,18 +123,18 @@ final class he extends hd {
     }
 
     final static String a(int param0) {
-        if (nr.field_f == wk.field_f) {
+        if (PlayerModelPreview.field_f == wk.field_f) {
           return ld.field_a;
         }
         if (param0 != 320) {
-          vm var2 = (vm) null;
-          he.a((vm) null, false);
+          PcmSampleStream var2 = (PcmSampleStream) null;
+          he.a((PcmSampleStream) null, false);
         }
-        if (!lc.field_e.a((byte) -80)) {
-          return lc.field_e.a(3);
+        if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
+          return DualLinkDequeIterator.field_e.a(3);
         }
-        if (mj.field_a == nr.field_f) {
-          return lc.field_e.a(param0 ^ 323);
+        if (mj.field_a == PlayerModelPreview.field_f) {
+          return DualLinkDequeIterator.field_e.a(param0 ^ 323);
         }
         return ep.field_b;
     }
@@ -148,17 +148,17 @@ final class he extends hd {
         dt var6 = null;
         int var7 = 0;
         int var9 = 0;
-        gm var10 = null;
+        RenderedFootballer var10 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var9 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            nw.field_b.participantStatus[ek.field_G].d(3511)) {
-            var10 = (gm) (nw.field_b.a((byte) -76, ek.field_G));
+            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
+            var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, ek.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
             var3 = lf.a((byte) -119, var10.field_bb >> 16);
-            if (!lb.a(var2, var3, param0 ^ 480)) {
+            if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
               var2 = 320;
               var3 = 240;
             }
@@ -166,9 +166,9 @@ final class he extends hd {
             for (var5 = 0; var5 < var4.length; var5++) {
               var6 = var4[var5];
               var7 = -1;
-              for (var8 = 0; nw.field_b.playerCount > var8; var8++) {
-                if (nw.field_b.field_g[ek.field_G].field_p == nw.field_b.field_g[var8].field_p &&
-                  var6.field_h == nw.field_b.participantStatus[var8].field_g) {
+              for (var8 = 0; IntrusiveDequeCursor.field_b.playerCount > var8; var8++) {
+                if (IntrusiveDequeCursor.field_b.field_g[ek.field_G].field_p == IntrusiveDequeCursor.field_b.field_g[var8].field_p &&
+                  var6.field_h == IntrusiveDequeCursor.field_b.participantStatus[var8].controlledSlot) {
                   var7 = var8;
                 }
                 var6.a(var2, var3, var7, -113);
@@ -185,7 +185,7 @@ final class he extends hd {
     }
 
     he(String param0, String param1, long param2) {
-        super(0L, (hd) null);
+        super(0L, (UiLayoutNode) null);
         CharSequence var6 = null;
         try {
           this.field_Ab = param2;
@@ -202,17 +202,17 @@ final class he extends hd {
         if (param0 != -13356) {
           this.field_Db = -100;
         }
-        return !this.a((byte) -60) ? true : false;
+        return !this.isSecondaryLinked((byte) -60) ? true : false;
     }
 
-    final static wh a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static FadingSoundPlayer a(int param0, boolean param1, int param2, int param3, int param4) {
         if (param2 != 240) {
           field_Ub = (String) null;
         }
-        return wt.a(param3, ga.field_O[param4], em.field_e ? !param1 ? true : false : param1, param4, param0, -121);
+        return wt.a(param3, TextInputWidget.field_O[param4], em.field_e ? !param1 ? true : false : param1, param4, param0, -121);
     }
 
-    final static void a(vm param0, boolean param1) {
+    final static void a(PcmSampleStream param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -220,7 +220,7 @@ final class he extends hd {
         RuntimeException var2 = null;
         try {
           if (null != vg.field_Bb) {
-            vg.field_Bb.b(param0);
+            vg.field_Bb.removeSubstream(param0);
           }
           if (!param1) {
             he.i(10);
@@ -260,6 +260,6 @@ final class he extends hd {
         field_Kb = "Visit the Account Management section on the main site to view.";
         field_Eb = "Bid";
         field_Bb = "MANAGEMENT";
-        field_yb = new rv();
+        field_yb = new ValidationState();
     }
 }

@@ -3,12 +3,12 @@
  */
 final class pn extends ij {
     private Object field_x;
-    static tf field_z;
+    static IntrusiveDeque field_z;
     static int field_y;
-    static hd field_u;
+    static UiLayoutNode field_u;
     static String field_v;
     static String field_B;
-    static ot field_w;
+    static ArgbSprite field_w;
     static String field_C;
     static String field_E;
     static int field_t;
@@ -39,7 +39,7 @@ final class pn extends ij {
         if (param0 != 2368) {
           return false;
         }
-        return null == e.field_m ? vb.field_k : true;
+        return null == SplashScreen.field_m ? vb.field_k : true;
     }
 
     pn(Object param0, int param1) {
@@ -68,7 +68,7 @@ final class pn extends ij {
     }
 
     static {
-        field_z = new tf();
+        field_z = new IntrusiveDeque();
         field_t = -1;
         field_v = "Please send me news and updates (I can unsubscribe at any time)";
         field_E = "<%0> has entered another game.";

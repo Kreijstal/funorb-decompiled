@@ -4,9 +4,9 @@
 final class r {
     static String field_e;
     static String[] field_a;
-    static kd field_d;
+    static DebugConsole field_d;
     static String[] field_b;
-    static hd field_c;
+    static UiLayoutNode field_c;
 
     final static int a(int param0, int param1) {
         int var2 = 0;
@@ -27,9 +27,9 @@ final class r {
     }
 
     final static void a(boolean param0) {
-        fd.h(0);
+        UiWidget.h(0);
         if (null != ic.field_d) {
-          hm.a(-120, ic.field_d);
+          SumIntegersCommand.a(-120, ic.field_d);
         }
         gs.d(98);
         vp.c(-107);
@@ -41,7 +41,7 @@ final class r {
           or.field_d.b(1, (byte) -106);
           c.a(0, false);
         }
-        lr.b((byte) -116);
+        FormationView.b((byte) -116);
     }
 
     public static void a(int param0) {
@@ -60,21 +60,21 @@ final class r {
     final boolean a(byte param0) {
         if (param0 >= -26) {
           this.a((byte) -81);
-          if (this == gr.field_c) {
+          if (this == ClubState.field_c) {
             return true;
           }
           if (this != bm.field_H) {
-            return jn.field_rb == this ? true : false;
+            return RegistrationRequestDialog.field_rb == this ? true : false;
           }
           return true;
         }
-        if (this == gr.field_c) {
+        if (this == ClubState.field_c) {
           return true;
         }
         if (this == bm.field_H) {
           return true;
         }
-        if (jn.field_rb != this) {
+        if (RegistrationRequestDialog.field_rb != this) {
           return false;
         }
         return true;

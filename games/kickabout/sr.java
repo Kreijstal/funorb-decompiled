@@ -7,55 +7,55 @@ abstract class sr {
     static String field_b;
     int field_i;
     static String field_c;
-    static lm field_l;
-    static lk[] field_a;
+    static TournamentLobbyScreen field_l;
+    static ConsoleExpression[] field_a;
     static em field_f;
     static String field_d;
-    static sj field_h;
+    static ResourceArchive field_h;
     static String field_m;
     static String[] field_g;
     static String field_e;
 
     final static void a(boolean param0, byte param1) {
-        cq.a(param0, 0);
+        AuctionLogEntry.a(param0, 0);
         if (param1 >= -20) {
-          field_a = (lk[]) null;
+          field_a = (ConsoleExpression[]) null;
         }
         vu.a(true, param0);
     }
 
     abstract int a(int param0);
 
-    final static kg[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
-        ut[] array$0 = null;
-        kg[][] stackIn_3_0 = null;
+    final static IndexedSprite[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
+        Sprite[] array$0 = null;
+        IndexedSprite[][] stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_26_0 = 0;
-        kg[] var6;
-        kg[][] var7;
-        ut[][] var8;
+        IndexedSprite[] var6;
+        IndexedSprite[][] var7;
+        Sprite[][] var8;
         int var9;
         int var10;
         int var11;
-        kg var11_ref_kg;
+        IndexedSprite var11_ref_kg;
         int var12;
         int var13;
         int var15;
-        kg var15_ref_kg;
-        ut var16;
+        IndexedSprite var15_ref_kg;
+        Sprite var16;
         int var16_int;
         int var17;
-        nr[] var18_ref_nr__;
+        PlayerModelPreview[] var18_ref_nr__;
         int var18;
         int var19;
-        nr var20;
+        PlayerModelPreview var20;
         int var21;
-        nr[][] var22;
-        ut var23;
-        nr[][] var24;
+        PlayerModelPreview[][] var22;
+        Sprite var23;
+        PlayerModelPreview[][] var24;
         int var10Lifetime1;
         int var15Lifetime1;
         int var15Lifetime2;
@@ -68,27 +68,27 @@ abstract class sr {
         int var19Lifetime1Lifetime1;
         int var9Lifetime1;
         var21 = Kickabout.field_G;
-        var6 = new kg[6];
+        var6 = new IndexedSprite[6];
         if (!param2) {
-          stackIn_3_0 = ps.field_c;
+          stackIn_3_0 = LoginCredentials.field_c;
         } else {
-          stackIn_3_0 = bf.field_s;
+          stackIn_3_0 = LineupView.field_s;
         }
         var7 = stackIn_3_0;
-        var8 = new ut[var7.length][];
+        var8 = new Sprite[var7.length][];
         for (var9 = 0; var9 < var8.length; var9++) {
-          array$0 = new ut[var7[var9].length];
+          array$0 = new Sprite[var7[var9].length];
           var8[var9] = array$0;
           for (var10 = 0; var10 < var8[var9].length; var10++) {
             var11_ref_kg = var7[var9][var10];
-            var8[var9][var10] = var11_ref_kg.a();
-            pd.a(var8[var9][var10], 20684);
+            var8[var9][var10] = var11_ref_kg.toRgbSprite();
+            LoginForm.a(var8[var9][var10], 20684);
           }
         }
         stackIn_12_0 = (!param2) ? 59 : 50;
         var9Lifetime1 = stackIn_12_0;
         if (param3 > -65) {
-          return (kg[]) null;
+          return (IndexedSprite[]) null;
         }
         stackIn_17_0 = (param2) ? 34 : 33;
         var10Lifetime1 = stackIn_17_0;
@@ -114,41 +114,41 @@ abstract class sr {
               var8[2][var15].c(var16_int, 0);
             }
           }
-          ta.e(123);
+          TeamManagementScreen.e(123);
           var15_ref_kg = eo.a(var23);
           for (var16_intLifetime2 = 0; var16_intLifetime2 < 6; var16_intLifetime2++) {
             var6[var16_intLifetime2] = var15_ref_kg;
           }
           return var6;
         }
-        var22 = new nr[var13][param5 + 2];
+        var22 = new PlayerModelPreview[var13][param5 + 2];
         var24 = var22;
         for (var15Lifetime1 = 0; var22.length > var15Lifetime1; var15Lifetime1++) {
           for (var16_intLifetime1 = 0; var16_intLifetime1 < var22[0].length; var16_intLifetime1++) {
             regionExit1: {
-              if (p.a((byte) -24, 256) <= param1) {
+              if (LoggedPossession.a((byte) -24, 256) <= param1) {
                 var17Lifetime1 = 39 + var16_intLifetime1 * var10Lifetime1 + var15Lifetime1;
                 var18 = var9Lifetime1 + var15Lifetime1 * var11;
-                var19 = p.a((byte) -24, 5);
+                var19 = LoggedPossession.a((byte) -24, 5);
                 if (param2) {
-                  var18 = var18 + p.a((byte) -24, 5);
+                  var18 = var18 + LoggedPossession.a((byte) -24, 5);
                 } else {
                   if (var15Lifetime1 == 0) {
                     if (0 != var19 &&
                       var19 != 2) {
-                      var22[var15Lifetime1][var16_intLifetime1] = new nr(var17Lifetime1, var18, var12, var19);
+                      var22[var15Lifetime1][var16_intLifetime1] = new PlayerModelPreview(var17Lifetime1, var18, var12, var19);
                       break regionExit1;
                     }
                     var19++;
                   }
                 }
-                var22[var15Lifetime1][var16_intLifetime1] = new nr(var17Lifetime1, var18, var12, var19);
+                var22[var15Lifetime1][var16_intLifetime1] = new PlayerModelPreview(var17Lifetime1, var18, var12, var19);
               }
             }
           }
         }
         for (var15Lifetime2 = 0; 6 > var15Lifetime2; var15Lifetime2++) {
-          jm.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
+          DelayedServerPacket.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
           var16 = oa.a(param2, param5, (byte) 95);
           PacketBuffer.a(-101, var16);
           for (var17Lifetime2 = 0; var13 > var17Lifetime2; var17Lifetime2++) {
@@ -171,7 +171,7 @@ abstract class sr {
               var8[2][var17Lifetime2].c(var18Lifetime1, 0);
             }
           }
-          ta.e(119);
+          TeamManagementScreen.e(119);
           var6[var15Lifetime2] = eo.a(var16);
         }
         return var6;

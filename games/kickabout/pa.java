@@ -4,7 +4,7 @@
 final class pa extends dg {
     static String field_i;
     private int field_h;
-    private ut field_k;
+    private Sprite field_k;
     static String field_j;
     static fn[] field_g;
 
@@ -37,21 +37,21 @@ final class pa extends dg {
           IntrusiveNode var7 = (IntrusiveNode) null;
           pa.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) 126);
           if (null == this.field_k) {
-            ae.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+            AccountRegistrationPanel.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
             return;
           }
           if (this.field_k.field_o != param3) {
-            ae.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+            AccountRegistrationPanel.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
             return;
           }
           return;
         }
         if (null == this.field_k) {
-          ae.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+          AccountRegistrationPanel.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
           return;
         }
         if (this.field_k.field_o != param3) {
-          ae.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+          AccountRegistrationPanel.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
           return;
         }
     }
@@ -65,13 +65,13 @@ final class pa extends dg {
         int var2 = rb.field_Bb * rb.field_Bb;
         int var3 = var2 - ns.field_a * ns.field_a;
         if (param0 > 81) {
-          ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (on.field_f - 124));
-          af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + on.field_f));
+          ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
+          af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
           return;
         }
         field_j = (String) null;
-        ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (on.field_f - 124));
-        af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + on.field_f));
+        ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
+        af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
     }
 
     static {

@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class sn {
-    static ut field_k;
-    private u field_h;
-    static hu field_a;
+    static Sprite field_k;
+    private JaggrabDownloader field_h;
+    static BitmapFont field_a;
     static int[] field_f;
     static String[] field_b;
     static String field_e;
-    static hu field_i;
+    static BitmapFont field_i;
     private PacketBuffer field_d;
     static String field_j;
     static Vector field_g;
@@ -70,7 +70,7 @@ final class sn {
               if (var2 == null) {
                 return;
               }
-              this.field_h = new u(oo.field_c, new java.net.URL(var2, "motd"), 100000);
+              this.field_h = new JaggrabDownloader(oo.field_c, new java.net.URL(var2, "motd"), 100000);
               return;
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ final class sn {
 
     final PacketBuffer a(boolean param0) {
         if (param0) {
-          field_a = (hu) null;
+          field_a = (BitmapFont) null;
           return this.field_d;
         }
         return this.field_d;

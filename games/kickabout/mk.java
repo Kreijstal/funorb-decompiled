@@ -4,7 +4,7 @@
 final class mk {
     static String[] field_b;
     static int field_c;
-    static ut field_a;
+    static Sprite field_a;
 
     public static void a(int param0) {
         if (param0 != 17437) {
@@ -61,15 +61,15 @@ final class mk {
         var42 = Kickabout.field_G;
         try {
           if (param1 >= 0 &&
-            t.field_k > param7) {
+            TriangleRasterizer.field_k > param7) {
             if (param0 < 0 &&
               param16 < 0 &&
               0 > param2) {
               return;
             }
-            if (param0 >= t.field_b &&
-              t.field_b <= param16 &&
-              param2 >= t.field_b) {
+            if (param0 >= TriangleRasterizer.field_b &&
+              TriangleRasterizer.field_b <= param16 &&
+              param2 >= TriangleRasterizer.field_b) {
               return;
             }
             if (param6) {
@@ -206,17 +206,17 @@ final class mk {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = t.field_q[param7];
+                var36Lifetime2 = TriangleRasterizer.field_q[param7];
                 while (param15 > param7) {
                   var37 = var17_int >> 16;
-                  if (var37 < t.field_b) {
+                  if (var37 < TriangleRasterizer.field_b) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (var38 != 0) {
                       var39 = (-var21 + var22) / var38;
                       var40 = (-var25 + var26) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (var37 + var38 >= t.field_b) {
-                        var38 = -1 + t.field_b - var37;
+                      if (var37 + var38 >= TriangleRasterizer.field_b) {
+                        var38 = -1 + TriangleRasterizer.field_b - var37;
                       }
                       if (0 > var37) {
                         ca.a(var39, var40, var36Lifetime2, var29 - var41 * var37, var21 - var37 * var39, 545806977, var38 + var37, var41, var25 - var40 * var37, param14);
@@ -225,16 +225,16 @@ final class mk {
                       }
                     } else {
                       if (var37 >= 0 &&
-                        t.field_b > var37) {
+                        TriangleRasterizer.field_b > var37) {
                         ca.a(0, 0, var37 + var36Lifetime2, var29, var21, 545806977, var38, 0, var25, param14);
                       }
                     }
                   }
                   param7++;
-                  if (t.field_k <= param7) {
+                  if (TriangleRasterizer.field_k <= param7) {
                     return;
                   }
-                  var36Lifetime2 = var36Lifetime2 + on.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_g;
                   var26 = var26 + var28;
                   var22 = var22 + var24;
                   var17_int = var17_int + var19;
@@ -293,17 +293,17 @@ final class mk {
               var18 = var18 + var20 * param7;
               param7 = 0;
             }
-            var35Lifetime1 = t.field_q[param7];
+            var35Lifetime1 = TriangleRasterizer.field_q[param7];
             while (param1 > param7) {
               var36Lifetime1 = var17_int >> 16;
-              if (t.field_b > var36Lifetime1) {
+              if (TriangleRasterizer.field_b > var36Lifetime1) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (t.field_b <= var36Lifetime1 + var37Lifetime1) {
-                    var37Lifetime1 = t.field_b - var36Lifetime1 - 1;
+                  if (TriangleRasterizer.field_b <= var36Lifetime1 + var37Lifetime1) {
+                    var37Lifetime1 = TriangleRasterizer.field_b - var36Lifetime1 - 1;
                   }
                   if (0 <= var36Lifetime1) {
                     ca.a(var38Lifetime1, var39Lifetime1, var36Lifetime1 + var35Lifetime1, var29, var21, 545806977, var37Lifetime1, var40Lifetime1, var25, param14);
@@ -312,17 +312,17 @@ final class mk {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    t.field_b > var36Lifetime1) {
+                    TriangleRasterizer.field_b > var36Lifetime1) {
                     ca.a(0, 0, var36Lifetime1 + var35Lifetime1, var29, var21, 545806977, var37Lifetime1, 0, var25, param14);
                   }
                 }
               }
               param7++;
-              if (t.field_k <= param7) {
+              if (TriangleRasterizer.field_k <= param7) {
                 return;
               }
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + on.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_g;
               var22 = var22 + var24;
               var21 = var21 + var23;
               var25 = var25 + var27;
@@ -352,25 +352,25 @@ final class mk {
         try {
           int var2_int = 0;
           int var3 = 0;
-          tf var4 = null;
+          IntrusiveDeque var4 = null;
           RuntimeException decompiledCaughtException = null;
           RuntimeException var1 = null;
           ak var2 = null;
           var3 = Kickabout.field_G;
           try {
-            var4 = new tf();
+            var4 = new IntrusiveDeque();
             if (param0 != -1622) {
               return;
             }
             var2_int = ks.field_e;
             if (1 != var2_int) {
               if (2 == var2_int) {
-                qd.a(-78, var4, new java.awt.Point[]{new java.awt.Point(354, 226), new java.awt.Point(542, 226), new java.awt.Point(542, 784), new java.awt.Point(354, 784)});
+                IndexedSpriteState.a(-78, var4, new java.awt.Point[]{new java.awt.Point(354, 226), new java.awt.Point(542, 226), new java.awt.Point(542, 784), new java.awt.Point(354, 784)});
                 var4.a(bw.a(448, 0, false, 544, 9103, true), 3);
                 var4.a(ss.field_b, 3);
               } else {
                 if (var2_int == 3) {
-                  qd.a(-55, var4, new java.awt.Point[]{new java.awt.Point(376, 206), new java.awt.Point(864, 206), new java.awt.Point(864, 634), new java.awt.Point(214, 634), new java.awt.Point(214, 786), new java.awt.Point(404, 786), new java.awt.Point(404, 1046), new java.awt.Point(864, 1046), new java.awt.Point(864, 1046), new java.awt.Point(864, 1174), new java.awt.Point(296, 1174), new java.awt.Point(296, 914), new java.awt.Point(6, 914), new java.awt.Point(6, 456), new java.awt.Point(586, 456), new java.awt.Point(586, 334), new java.awt.Point(376, 334)});
+                  IndexedSpriteState.a(-55, var4, new java.awt.Point[]{new java.awt.Point(376, 206), new java.awt.Point(864, 206), new java.awt.Point(864, 634), new java.awt.Point(214, 634), new java.awt.Point(214, 786), new java.awt.Point(404, 786), new java.awt.Point(404, 1046), new java.awt.Point(864, 1046), new java.awt.Point(864, 1046), new java.awt.Point(864, 1174), new java.awt.Point(296, 1174), new java.awt.Point(296, 914), new java.awt.Point(6, 914), new java.awt.Point(6, 456), new java.awt.Point(586, 456), new java.awt.Point(586, 334), new java.awt.Point(376, 334)});
                   var4.a(bw.a(680, 1, false, 310, 9103, false), param0 + 1625);
                   var4.a(bw.a(670, 2, false, 540, 9103, false), 3);
                   var4.a(bw.a(130, 3, true, 570, 9103, false), 3);
@@ -397,7 +397,7 @@ final class mk {
                             um.field_e.a((byte) -119, var4);
                             return;
                           }
-                          wv.a((byte) -108, 28, var4, new java.awt.Point[]{new java.awt.Point(-4, 186), new java.awt.Point(334, 186), new java.awt.Point(334, 86), new java.awt.Point(662, 86), new java.awt.Point(662, 186), new java.awt.Point(874, 186), new java.awt.Point(874, 724), new java.awt.Point(572, 724), new java.awt.Point(572, 824), new java.awt.Point(244, 824), new java.awt.Point(244, 724), new java.awt.Point(124, 724), new java.awt.Point(124, 986), new java.awt.Point(284, 986), new java.awt.Point(284, 886), new java.awt.Point(762, 886), new java.awt.Point(762, 986), new java.awt.Point(874, 986), new java.awt.Point(874, 1114), new java.awt.Point(762, 1114), new java.awt.Point(762, 1214), new java.awt.Point(284, 1214), new java.awt.Point(284, 1114), new java.awt.Point(-4, 1114), new java.awt.Point(-4, 596), new java.awt.Point(244, 596), new java.awt.Point(244, 496), new java.awt.Point(572, 496), new java.awt.Point(572, 596), new java.awt.Point(746, 596), new java.awt.Point(746, 314), new java.awt.Point(662, 314), new java.awt.Point(662, 414), new java.awt.Point(334, 414), new java.awt.Point(334, 314), new java.awt.Point(-4, 314)});
+                          AccountRequestDialog.a((byte) -108, 28, var4, new java.awt.Point[]{new java.awt.Point(-4, 186), new java.awt.Point(334, 186), new java.awt.Point(334, 86), new java.awt.Point(662, 86), new java.awt.Point(662, 186), new java.awt.Point(874, 186), new java.awt.Point(874, 724), new java.awt.Point(572, 724), new java.awt.Point(572, 824), new java.awt.Point(244, 824), new java.awt.Point(244, 724), new java.awt.Point(124, 724), new java.awt.Point(124, 986), new java.awt.Point(284, 986), new java.awt.Point(284, 886), new java.awt.Point(762, 886), new java.awt.Point(762, 986), new java.awt.Point(874, 986), new java.awt.Point(874, 1114), new java.awt.Point(762, 1114), new java.awt.Point(762, 1214), new java.awt.Point(284, 1214), new java.awt.Point(284, 1114), new java.awt.Point(-4, 1114), new java.awt.Point(-4, 596), new java.awt.Point(244, 596), new java.awt.Point(244, 496), new java.awt.Point(572, 496), new java.awt.Point(572, 596), new java.awt.Point(746, 596), new java.awt.Point(746, 314), new java.awt.Point(662, 314), new java.awt.Point(662, 414), new java.awt.Point(334, 414), new java.awt.Point(334, 314), new java.awt.Point(-4, 314)});
                           var4.a(bw.a(130, 1, false, 250, 9103, true), 3);
                           var4.a(bw.a(610, 0, false, 310, 9103, false), param0 ^ -1623);
                           var4.a(bw.a(610, 2, true, 210, 9103, false), param0 + 1625);
@@ -431,7 +431,7 @@ final class mk {
                             break;
                           }
                           if (!sl.field_Eb) {
-                            qd.a(-48, var4, new java.awt.Point[]{new java.awt.Point(286, 452), new java.awt.Point(864, 452), new java.awt.Point(864, 660), new java.awt.Point(286, 660)});
+                            IndexedSpriteState.a(-48, var4, new java.awt.Point[]{new java.awt.Point(286, 452), new java.awt.Point(864, 452), new java.awt.Point(864, 660), new java.awt.Point(286, 660)});
                           }
                           var4.a(ss.field_b, 3);
                           break;
@@ -440,7 +440,7 @@ final class mk {
                           break;
                         case 7:
                           if (!sl.field_Eb) {
-                            qd.a(-109, var4, new java.awt.Point[]{new java.awt.Point(46, 236), new java.awt.Point(314, 236), new java.awt.Point(314, 714), new java.awt.Point(46, 714)});
+                            IndexedSpriteState.a(-109, var4, new java.awt.Point[]{new java.awt.Point(46, 236), new java.awt.Point(314, 236), new java.awt.Point(314, 714), new java.awt.Point(46, 714)});
                           }
                           var4.a(ss.field_b, 3);
                           break;
@@ -453,7 +453,7 @@ final class mk {
                 }
               }
             } else {
-              qd.a(param0 ^ 1543, var4, new java.awt.Point[]{new java.awt.Point(354, 586), new java.awt.Point(542, 586), new java.awt.Point(542, 1214), new java.awt.Point(354, 1214)});
+              IndexedSpriteState.a(param0 ^ 1543, var4, new java.awt.Point[]{new java.awt.Point(354, 586), new java.awt.Point(542, 586), new java.awt.Point(542, 1214), new java.awt.Point(354, 1214)});
               var4.a(bw.a(490, 0, false, 1020, 9103, true), param0 ^ -1623);
               var4.a(bw.a(400, 0, false, 1020, 9103, true), param0 ^ -1623);
               var4.a(bw.a(448, 0, false, 820, 9103, true), param0 ^ -1623);
@@ -502,7 +502,7 @@ final class mk {
           } else {
             stackIn_8_4 = 0;
           }
-          stackIn_9_0 = nr.a(stackIn_5_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param3);
+          stackIn_9_0 = PlayerModelPreview.a(stackIn_5_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -520,8 +520,8 @@ final class mk {
 
     final static dk a(int param0, int param1) {
         dk var2 = new dk();
-        ap.field_j.a(var2, 3);
-        lb.a((byte) -105, param0);
+        MatchScreen.field_j.a(var2, 3);
+        TextHotspotWidget.a((byte) -105, param0);
         if (param1 != 26731) {
           mk.a(121, -110);
         }

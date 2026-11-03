@@ -1,0 +1,309 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DisplayNameForm extends WidgetContainer implements NameSuggestionListener, ButtonListener {
+    NameSuggestionsPanel field_G;
+    private TextButton field_E;
+    static UiLayoutNode field_F;
+    private TextButton field_B;
+    private ValidatedTextWidget field_C;
+
+    public final void a(String param0, int param1) {
+        ValidatedTextWidget var3 = null;
+        String var4 = null;
+        try {
+          if (param1 != 15) {
+            this.a(-18);
+          }
+          var3 = this.field_C;
+          var4 = param0;
+          ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
+        } catch (RuntimeException runtimeException) {
+          throw nb.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public final void a(int param0) {
+        if (param0 != -1) {
+          return;
+        }
+        ((AccountNameAvailabilityValidator) (this.field_C.a((byte) -116))).c((byte) 101);
+    }
+
+    private final int a(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
+        RuntimeException var8 = null;
+        ju var9 = null;
+        int var10 = 0;
+        cg var11 = null;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var11 = new cg(20, param5, param1 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param0);
+          this.a(-55, var11);
+          var9 = new ju(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
+          var9.field_k = (UiListener) (this);
+          var10 = -123 % ((param4 - 24) / 41);
+          this.a(-58, var9);
+          stackIn_1_0 = var9.field_i + var11.field_i;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_4_0 = var8;
+          stackIn_4_1 = new StringBuilder().append("mb.I(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
+        RuntimeException var6 = null;
+        String var7 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param3 <= 64) {
+            var7 = (String) null;
+            this.a((String) null, -65);
+          }
+          if (this.field_E == param1) {
+            AccountChoicePanel.a(-25085);
+            return;
+          }
+          if (param1 != this.field_B) {
+            return;
+          }
+          this.k(-81);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_10_0 = var6;
+          stackIn_10_1 = new StringBuilder().append("mb.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
+        RuntimeException var5 = null;
+        boolean stackIn_9_0 = false;
+        boolean stackIn_13_0 = false;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.a(param0, (byte) -108, param2, param3)) {
+            return true;
+          }
+          if (param1 > -60) {
+            this.field_B = (TextButton) null;
+          }
+          if (98 == param3) {
+            stackIn_9_0 = this.a(param2, (byte) -100);
+            return stackIn_9_0;
+          }
+          if (param3 != 99) {
+            return false;
+          }
+          stackIn_13_0 = this.b(param2, (byte) 123);
+          return stackIn_13_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_16_0 = var5;
+          stackIn_16_1 = new StringBuilder().append("mb.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    public DisplayNameForm() {
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_C = new ValidatedTextWidget("", (UiListener) null, 12);
+        TextWidgetPainter var1 = new TextWidgetPainter(EmailSyntaxValidator.field_k, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(vt.field_b, var1, (UiListener) null);
+        this.field_B = new TextButton(MatchScreen.field_x, (UiListener) null);
+        this.field_E = new TextButton(vt.field_a, (UiListener) null);
+        this.field_C.field_u = sr.field_b;
+        this.field_C.a(6, new AccountNameAvailabilityValidator(this.field_C));
+        this.field_B.field_y = false;
+        this.field_B.field_r = (WidgetPainter) ((Object) new op());
+        this.field_E.field_r = (WidgetPainter) ((Object) new cr());
+        this.field_C.field_r = (WidgetPainter) ((Object) new ri(10000536));
+        int var3 = 20;
+        int var4 = 4;
+        int var5 = 200;
+        var2.a(50, 1, 20, 270, var3);
+        this.a(-86, var2);
+        var3 += 50;
+        var3 = var3 + (5 + this.a(var3, MusicPatch.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
+        this.field_B.a(40, 1, -var5 + 496 >> 1, var5, var3);
+        this.field_E.a(40, 1, var4 + 3, 60, 15 + var3);
+        this.field_E.field_k = (UiListener) (this);
+        this.field_B.field_k = (UiListener) (this);
+        this.a(-50, this.field_B);
+        this.a(-84, this.field_E);
+        this.field_G = new NameSuggestionsPanel((NameSuggestionListener) (this));
+        this.field_G.a(150, 1, this.field_C.field_t + (this.field_C.field_n + 60), -this.field_C.field_n + this.field_n - this.field_C.field_t - 60, 20);
+        this.a(-16, this.field_G);
+        this.a(var4 + (var3 + 55), 1, 0, 496, 0);
+    }
+
+    private final boolean l(int param0) {
+        if (!this.a(param0 ^ 484, (ValidationProvider) (this.field_C))) {
+          return false;
+        }
+        if (param0 == 20) {
+          return true;
+        }
+        UiWidget var3 = (UiWidget) null;
+        this.a('L', (byte) 88, (UiWidget) null, -112);
+        return true;
+    }
+
+    private final int a(int param0, String param1, String param2, UiWidget param3, byte param4, int param5) {
+        RuntimeException var7 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param4 != 29) {
+            this.field_G = (NameSuggestionsPanel) null;
+          }
+          stackIn_3_0 = this.a(param2, param5, 35, param3, -93, param0, param1);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_6_0 = var7;
+          stackIn_6_1 = new StringBuilder().append("mb.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    public static void a(byte param0) {
+        if (param0 >= -35) {
+          DisplayNameForm.a((byte) 102);
+          field_F = null;
+          return;
+        }
+        field_F = null;
+    }
+
+    private final boolean a(int param0, ValidationProvider param1) {
+        ValidationSource var3 = null;
+        RuntimeException var3_ref = null;
+        ValidationState var4 = null;
+        boolean stackIn_9_0 = false;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3 = param1.a((byte) -116);
+          if (var3 == null) {
+            return true;
+          }
+          var4 = var3.getValidationState(-24407);
+          if (param0 == 496) {
+            stackIn_9_0 = (var4 == he.field_yb);
+            return stackIn_9_0;
+          }
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("mb.J(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
+        try {
+          super.a(param0, param1, param2, param3);
+          this.field_B.field_y = this.l(20);
+        } catch (RuntimeException runtimeException) {
+          throw nb.a((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    private final void k(int param0) {
+        if (!this.l(20)) {
+          return;
+        }
+        if (param0 < -58) {
+          fn.a((byte) 19, this.field_C.field_q);
+          return;
+        }
+        String var3 = (String) null;
+        this.a((String) null, -109);
+        fn.a((byte) 19, this.field_C.field_q);
+    }
+
+    static {
+    }
+}

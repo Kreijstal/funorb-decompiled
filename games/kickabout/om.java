@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends hd {
+final class om extends UiLayoutNode {
     static String field_Eb;
-    private hd field_Cb;
-    private hd field_Db;
+    private UiLayoutNode field_Cb;
+    private UiLayoutNode field_Db;
     static ff field_yb;
     static String field_Ab;
     static int field_Bb;
@@ -47,12 +47,12 @@ final class om extends hd {
         if (param0 == 0) {
           return this.field_Cb.g((byte) -24) - (-param1 - this.field_Db.g((byte) 113));
         }
-        this.field_Db = (hd) null;
+        this.field_Db = (UiLayoutNode) null;
         return this.field_Cb.g((byte) -24) - (-param1 - this.field_Db.g((byte) 113));
     }
 
-    om(long param0, ut param1, ut param2, int param3, hd param4, String param5) {
-        this(param0, (hd) null, param4, param5);
+    om(long param0, Sprite param1, Sprite param2, int param3, UiLayoutNode param4, String param5) {
+        this(param0, (UiLayoutNode) null, param4, param5);
         try {
           this.field_Cb.field_N = param2;
           this.field_Cb.field_p = param3;
@@ -77,34 +77,34 @@ final class om extends hd {
         var6 = Kickabout.field_G;
         try {
           var8 = un.field_e;
-          var2 = var8.h((byte) -114);
+          var2 = var8.readUnsignedByte((byte) -114);
           if (param0 == var2) {
             var3_ref_k = (k) (ci.field_f.g(param0 ^ 24009));
             if (var3_ref_k == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
-            var4_int = var8.h((byte) -112);
+            var4_int = var8.readUnsignedByte((byte) -112);
             if (0 != var4_int) {
               var12 = new byte[var4_int];
-              var8.a(var12, 0, (byte) -6, var4_int);
+              var8.readBytes(var12, 0, (byte) -6, var4_int);
             } else {
               var5 = null;
             }
             var8.field_n = var8.field_n + 4;
-            if (!var8.h(param0 + 0)) {
-              lr.b((byte) -116);
+            if (!var8.verifyCrc32(param0 + 0)) {
+              FormationView.b((byte) -116);
               return;
             }
             var3_ref_k.c((byte) -109);
             return;
           }
           if (var2 != 1) {
-            bd.a("A1: " + tr.b(0), (Throwable) null, param0 + 1);
-            lr.b((byte) -116);
+            UnreadMessagesScreen.a("A1: " + tr.b(0), (Throwable) null, param0 + 1);
+            FormationView.b((byte) -116);
             return;
           }
-          var3 = var8.k(4);
+          var3 = var8.readInt(4);
           var4 = (mp) (le.field_d.g(24009));
           while (var4 != null) {
             if (var4.field_m != var3) {
@@ -117,7 +117,7 @@ final class om extends hd {
             var4.c((byte) -109);
             return;
           }
-          lr.b((byte) -116);
+          FormationView.b((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,21 +141,21 @@ final class om extends hd {
           if (param2 > -59) {
             field_Ab = (String) null;
           }
-          ta.a(param1, param4, param3.field_n, 0, param3.field_f, 10, param0);
+          TeamManagementScreen.writeEncryptedLoginBlock(param1, param4, param3.field_n, 0, param3.field_f, 10, param0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "om.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private om(long param0, hd param1, hd param2, String param3) {
-        super(param0, (hd) null);
+    private om(long param0, UiLayoutNode param1, UiLayoutNode param2, String param3) {
+        super(param0, (UiLayoutNode) null);
         try {
-          this.field_Cb = new hd(0L, param1);
-          this.field_Db = new hd(0L, param2);
+          this.field_Cb = new UiLayoutNode(0L, param1);
+          this.field_Db = new UiLayoutNode(0L, param2);
           this.field_Db.field_E = param3;
-          this.a((byte) -107, this.field_Cb);
-          this.a((byte) -114, this.field_Db);
-          this.b(false);
+          this.addChild((byte) -107, this.field_Cb);
+          this.addChild((byte) -114, this.field_Db);
+          this.invalidateChildren(false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

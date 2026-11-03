@@ -11,13 +11,13 @@ final class rr {
     static String field_c;
     static ji field_b;
 
-    final static io[] a(int[] param0, io[] param1, int param2) {
+    final static MenuButton[] a(int[] param0, MenuButton[] param1, int param2) {
         int var4 = 0;
-        io[] var3 = null;
+        MenuButton[] var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        io[] var6 = null;
-        io[] stackIn_8_0 = null;
+        MenuButton[] var6 = null;
+        MenuButton[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -29,7 +29,7 @@ final class rr {
           if (param0 == null) {
             return null;
           }
-          var6 = new io[param0.length];
+          var6 = new MenuButton[param0.length];
           var3 = var6;
           for (var4 = param2; var4 < param0.length; var4++) {
             var6[var4] = param1[param0[var4]];
@@ -86,7 +86,7 @@ final class rr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 10) {
-            stackIn_4_0 = kt.a(param1, true, (byte) -103, 10);
+            stackIn_4_0 = BlackFadeScreen.a(param1, true, (byte) -103, 10);
             return stackIn_4_0;
           }
           stackIn_2_0 = -120;
@@ -123,11 +123,11 @@ final class rr {
           if (param1 != -70) {
             rr.a(36, '+');
           }
-          ov.field_b = 2;
+          NodeHashTableIterator.field_b = 2;
           var5 = (CharSequence) ((Object) param0);
           qi.field_o = MatchAgent.a(param1 ^ -70, var5);
-          ik.field_A = param2;
-          la.a(true);
+          IntDoubleCommand.field_A = param2;
+          PlayArea.a(true);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

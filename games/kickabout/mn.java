@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn implements gj {
-    static rv field_c;
+final class mn implements WidgetPainter {
+    static ValidationState field_c;
     static String field_d;
     static int[] field_b;
     static int field_a;
@@ -18,12 +18,12 @@ final class mn implements gj {
         field_e = null;
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ut var9 = null;
+        Sprite var9 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -34,14 +34,14 @@ final class mn implements gj {
           var8 = param3.field_g + param2;
           kj.a(12105912, var8, var6_int, param3.field_i, param3.field_n);
           var9 = LoggedPlayer.field_g[1];
-          if (param3 instanceof wi &&
-            ((wi) (param3)).field_A) {
-            var9.c((-var9.field_o + param3.field_n >> 1) + (1 + var6_int), 1 + (var8 + (-var9.field_v + param3.field_i >> 1)), 256);
+          if (param3 instanceof TextButton &&
+            ((TextButton) (param3)).field_A) {
+            var9.drawAdditive((-var9.field_o + param3.field_n >> 1) + (1 + var6_int), 1 + (var8 + (-var9.field_v + param3.field_i >> 1)), 256);
           }
           if (!param3.b(44)) {
             return;
           }
-          ob.b(2, param3.field_n - 4, var8 + 2, -4 + param3.field_i, 2 + var6_int);
+          RenderedBall.b(2, param3.field_n - 4, var8 + 2, -4 + param3.field_i, 2 + var6_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,7 +61,7 @@ final class mn implements gj {
         field_d = "Clan";
         field_a = 256;
         field_b = new int[4];
-        field_c = new rv();
+        field_c = new ValidationState();
         field_e = new ff(11, 0, 1, 2);
         field_f = "Accept";
     }

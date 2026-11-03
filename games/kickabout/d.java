@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class d {
-    static sj field_b;
+    static ResourceArchive field_b;
     static String[] field_c;
-    static ut field_a;
+    static Sprite field_a;
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 0) {
-          field_a = (ut) null;
+          field_a = (Sprite) null;
           field_c = null;
           return;
         }
@@ -22,14 +22,14 @@ final class d {
         if (param0 > 126) {
           td.field_d = -1;
           nc.field_a = false;
-          mh.field_o = null;
+          EmailAvailabilityValidator.field_o = null;
           ws.field_e = -1;
           return;
         }
         d.a((byte) -102);
         td.field_d = -1;
         nc.field_a = false;
-        mh.field_o = null;
+        EmailAvailabilityValidator.field_o = null;
         ws.field_e = -1;
     }
 

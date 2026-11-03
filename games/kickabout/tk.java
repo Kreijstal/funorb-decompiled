@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk extends hd {
+final class tk extends UiLayoutNode {
     private ji field_Kb;
-    hd field_Gb;
-    hd field_Db;
+    UiLayoutNode field_Gb;
+    UiLayoutNode field_Db;
     ji field_Eb;
-    static tf field_Ab;
+    static IntrusiveDeque field_Ab;
     static String field_yb;
     static String field_Hb;
     static String field_Lb;
@@ -15,7 +15,7 @@ final class tk extends hd {
     static String field_Cb;
     static String field_Bb;
     static int field_Ib;
-    static ot[][] field_Fb;
+    static ArgbSprite[][] field_Fb;
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         this.field_mb = param4;
@@ -26,7 +26,7 @@ final class tk extends hd {
         this.a(param0, param2, 0);
     }
 
-    tk(String param0, hd param1, hd param2, ji param3) {
+    tk(String param0, UiLayoutNode param1, UiLayoutNode param2, ji param3) {
         this(vb.a(0, (CharSequence) ((Object) param0)), param1, param2, param3);
     }
 
@@ -56,8 +56,8 @@ final class tk extends hd {
         var5 = stackIn_6_0;
         if (var4 != 0 &&
           var5 != 0) {
-          this.a((byte) -113, (hd) (this.field_Kb));
-          this.a((byte) -125, (hd) (this.field_Eb));
+          this.addChild((byte) -113, (UiLayoutNode) (this.field_Kb));
+          this.addChild((byte) -125, (UiLayoutNode) (this.field_Eb));
           this.field_Gb.field_mb = this.field_Gb.field_mb - (param0 + param1);
           this.field_Gb.field_q = this.field_Gb.field_q - (param1 + param0);
           this.field_Kb.a(true, -param0 + this.field_q, 0, this.field_mb - param0, param0);
@@ -67,13 +67,13 @@ final class tk extends hd {
         } else {
           if (var4 == 0) {
             if (var5 != 0) {
-              this.a((byte) -124, (hd) (this.field_Eb));
+              this.addChild((byte) -124, (UiLayoutNode) (this.field_Eb));
               this.field_Gb.field_q = this.field_Gb.field_q - (param1 + param0);
               this.field_Eb.a(true, param0, this.field_q - param0, 0, this.field_mb);
               this.field_Eb.b(-this.field_Db.field_J, this.field_Db.field_mb, 65, this.field_Gb.field_mb);
             }
           } else {
-            this.a((byte) -120, (hd) (this.field_Kb));
+            this.addChild((byte) -120, (UiLayoutNode) (this.field_Kb));
             this.field_Gb.field_mb = this.field_Gb.field_mb - (param0 + param1);
             this.field_Kb.a(true, this.field_q, 0, -param0 + this.field_mb, param0);
             this.field_Kb.b(-this.field_Db.field_s, this.field_Db.field_q, 77, this.field_Gb.field_q);
@@ -82,12 +82,12 @@ final class tk extends hd {
     }
 
     final static void h(byte param0) {
-        ku.field_c = null;
+        MouseInputHandler.field_c = null;
         lt.field_a = null;
         pq.field_O = (byte[][]) null;
         IsaacRandom.field_f = null;
         fc.field_g = null;
-        lo.field_j = null;
+        PasswordValidator.field_j = null;
         if (param0 >= -69) {
           tk.i((byte) 118);
         }
@@ -169,33 +169,33 @@ final class tk extends hd {
         this.field_Kb.b(-this.field_Db.field_s, this.field_Db.field_q, 54, this.field_Gb.field_q);
     }
 
-    tk(long param0, hd param1, hd param2, ji param3) {
-        super(param0, (hd) null);
+    tk(long param0, UiLayoutNode param1, UiLayoutNode param2, ji param3) {
+        super(param0, (UiLayoutNode) null);
         try {
-          this.field_Gb = new hd(0L, param2);
+          this.field_Gb = new UiLayoutNode(0L, param2);
           this.field_Eb = new ji(0L, param3, true);
           this.field_Kb = new ji(0L, param3, false);
-          this.a((byte) -126, this.field_Gb);
-          this.a((byte) -115, (hd) (this.field_Eb));
-          this.a((byte) -128, (hd) (this.field_Kb));
+          this.addChild((byte) -126, this.field_Gb);
+          this.addChild((byte) -115, (UiLayoutNode) (this.field_Eb));
+          this.addChild((byte) -128, (UiLayoutNode) (this.field_Kb));
           this.field_Db = param1;
-          this.field_Gb.a((byte) -117, param1);
+          this.field_Gb.addChild((byte) -117, param1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    tk(long param0, hd param1, hd param2, ji param3, ji param4) {
-        super(param0, (hd) null);
+    tk(long param0, UiLayoutNode param1, UiLayoutNode param2, ji param3, ji param4) {
+        super(param0, (UiLayoutNode) null);
         try {
-          this.field_Gb = new hd(0L, param2);
+          this.field_Gb = new UiLayoutNode(0L, param2);
           this.field_Eb = new ji(0L, param3, true);
           this.field_Kb = new ji(0L, param4, false);
-          this.a((byte) -115, this.field_Gb);
-          this.a((byte) -105, (hd) (this.field_Eb));
-          this.a((byte) -117, (hd) (this.field_Kb));
+          this.addChild((byte) -115, this.field_Gb);
+          this.addChild((byte) -105, (UiLayoutNode) (this.field_Eb));
+          this.addChild((byte) -117, (UiLayoutNode) (this.field_Kb));
           this.field_Db = param1;
-          this.field_Gb.a((byte) -110, param1);
+          this.field_Gb.addChild((byte) -110, param1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -207,16 +207,16 @@ final class tk extends hd {
         field_Hb = null;
         field_Ab = null;
         field_Cb = null;
-        field_Fb = (ot[][]) null;
+        field_Fb = (ArgbSprite[][]) null;
         field_yb = null;
         field_Lb = null;
         if (param0 != -69) {
-          field_Ab = (tf) null;
+          field_Ab = (IntrusiveDeque) null;
         }
     }
 
     static {
-        field_Ab = new tf();
+        field_Ab = new IntrusiveDeque();
         field_Jb = "Members";
         field_Cb = "Please check if address is correct";
         field_Lb = "You have <%0> unread messages!";

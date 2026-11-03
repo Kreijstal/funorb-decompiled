@@ -5,7 +5,7 @@ final class vi extends mc {
     private int field_m;
     private long field_u;
     private long[] field_w;
-    static la[] field_t;
+    static PlayArea[] field_t;
     private int field_r;
     private long field_v;
     private long field_p;
@@ -18,7 +18,7 @@ final class vi extends mc {
         if (param0 != 2915) {
           vi.c((byte) 16);
         }
-        return tf.field_f;
+        return IntrusiveDeque.field_f;
     }
 
     final static kk a(byte param0, CipherPacketBuffer param1) {
@@ -42,8 +42,8 @@ final class vi extends mc {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = mu.a(param1, (byte) -39) ? 1 : 0;
-          var4 = mu.a(param1, (byte) -39) ? 1 : 0;
+          var3 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
+          var4 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
           var5 = new kk();
           var5.field_b = (short)param1.l(16, 59);
           var5.field_f = nq.a(var5.field_f, param1, 16, -72);
@@ -70,11 +70,11 @@ final class vi extends mc {
             var5.field_i = nq.a(var5.field_i, param1, 16, -65);
             var5.field_K = nq.a(var5.field_K, param1, 16, -87);
           }
-          if (mu.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
             var5.field_o = nq.a(var5.field_o, param1, 16, 106);
           }
-          if (mu.a(param1, (byte) -39)) {
-            var5.field_G = bp.a(2280703, param1, var5.field_G, 16);
+          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+            var5.field_G = ColumnTableWidget.a(2280703, param1, var5.field_G, 16);
             var6 = 0;
             for (var7 = 0; var5.field_G.length > var7; var7++) {
               if (var6 < (var5.field_G[var7] & 255)) {
@@ -178,7 +178,7 @@ final class vi extends mc {
         int var1;
         var1 = -1;
         if (param0 != -59) {
-          field_t = (la[]) null;
+          field_t = (PlayArea[]) null;
         }
         if (null != um.field_e &&
           um.field_e.field_A) {
@@ -192,8 +192,8 @@ final class vi extends mc {
           return;
         }
         or.field_d.b(88, (byte) -46);
-        or.field_d.a(127, var1);
-        an.field_d = true;
+        or.field_d.writeByte(127, var1);
+        QuickChatPhraseCache.field_d = true;
     }
 
     final long b(byte param0) {
@@ -287,7 +287,7 @@ final class vi extends mc {
 
     static {
         field_q = new int[4];
-        field_t = new la[]{new la(0, 0, 896, 1344), new la(370, -45, 525, 1389, 0, 45)};
+        field_t = new PlayArea[]{new PlayArea(0, 0, 896, 1344), new PlayArea(370, -45, 525, 1389, 0, 45)};
         field_n = false;
         field_o = "<%0>: Unread Chat";
     }

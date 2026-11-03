@@ -2,35 +2,35 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg {
-    static uh field_d;
+    static PcmPlayerService field_d;
     static String field_c;
     static int field_b;
     static String[] field_a;
 
     final static void a(int param0, boolean param1) {
-        ni.field_l = param1 ? new rf(lb.field_H, w.field_e) : new rf(c.field_d, fm.field_C);
-        dn.field_Cb = new hd(0L, (hd) null);
+        ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, w.field_e) : new rf(c.field_d, AchievementsScreen.field_C);
+        dn.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (param0 == -35) {
-          dn.field_Cb.a((byte) -110, (hd) (ni.field_l.field_b));
-          dn.field_Cb.a((byte) -126, ac.field_b);
-          tn.field_f = new hd(0L, tv.field_e);
-          vj.field_g = new hd(0L, (hd) null);
-          tn.field_f.a((byte) -125, is.field_b);
-          tn.field_f.a((byte) -105, vj.field_g);
-          vj.field_g.a((byte) -124, mc.field_d);
-          vj.field_g.a((byte) -119, kt.field_i);
+          dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+          dn.field_Cb.addChild((byte) -126, ac.field_b);
+          tn.field_f = new UiLayoutNode(0L, tv.field_e);
+          vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
+          tn.field_f.addChild((byte) -125, is.field_b);
+          tn.field_f.addChild((byte) -105, vj.field_g);
+          vj.field_g.addChild((byte) -124, mc.field_d);
+          vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
           bq.a(93, param1);
           return;
         }
         field_c = (String) null;
-        dn.field_Cb.a((byte) -110, (hd) (ni.field_l.field_b));
-        dn.field_Cb.a((byte) -126, ac.field_b);
-        tn.field_f = new hd(0L, tv.field_e);
-        vj.field_g = new hd(0L, (hd) null);
-        tn.field_f.a((byte) -125, is.field_b);
-        tn.field_f.a((byte) -105, vj.field_g);
-        vj.field_g.a((byte) -124, mc.field_d);
-        vj.field_g.a((byte) -119, kt.field_i);
+        dn.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+        dn.field_Cb.addChild((byte) -126, ac.field_b);
+        tn.field_f = new UiLayoutNode(0L, tv.field_e);
+        vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
+        tn.field_f.addChild((byte) -125, is.field_b);
+        tn.field_f.addChild((byte) -105, vj.field_g);
+        vj.field_g.addChild((byte) -124, mc.field_d);
+        vj.field_g.addChild((byte) -119, BlackFadeScreen.field_i);
         bq.a(93, param1);
     }
 
@@ -59,7 +59,7 @@ final class pg {
             }
             var2 = 1;
           }
-          ll.field_k.a(-21174, sj.a(el.field_A, n.field_m, (byte) -96), sj.a(sm.field_q, vc.field_y, (byte) -101));
+          ll.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, n.field_m, (byte) -96), ResourceArchive.a(sm.field_q, ReceivedAuctionItem.field_y, (byte) -101));
           if (ll.field_k.c(-1)) {
             var1_int = 1;
           }
@@ -69,8 +69,8 @@ final class pg {
           }
           var3 = 0;
           if (var1_int != 0 &&
-            ll.field_k.field_e >= 0) {
-            var3 = sh.field_f[ll.field_k.field_e];
+            ll.field_k.selectedIndex >= 0) {
+            var3 = sh.field_f[ll.field_k.selectedIndex];
             if (var3 == 2) {
               oc.a((byte) -43);
             } else if (var3 == 5) {
@@ -84,7 +84,7 @@ final class pg {
           }
           if (var3 == 0 &&
             ck.field_a == 2) {
-            var4 = -va.field_o + nj.a(param0 ^ -51);
+            var4 = -PlayingView.field_o + nj.a(param0 ^ -51);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               ba.a(true, 6, 5);
@@ -102,7 +102,7 @@ final class pg {
 
     final static String[] a(boolean param0, int param1) {
         if (param1 == 1) {
-          return nn.field_I;
+          return AccountChoicePanel.field_I;
         }
         if (param1 == 9) {
           return rd.field_e;
@@ -111,7 +111,7 @@ final class pg {
           return rd.field_e;
         }
         if (param1 == 8) {
-          return ow.field_d;
+          return ArchiveSource.field_d;
         }
         if (param1 == 11) {
           return fs.field_a;
@@ -132,13 +132,13 @@ final class pg {
           return fs.field_a;
         }
         if (param1 == 25) {
-          return pd.field_M;
+          return LoginForm.field_M;
         }
         if (param0) {
           pg.a(false, -50);
         }
         if (23 == param1) {
-          return vq.field_i;
+          return FullscreenFocusCanvas.field_i;
         }
         if (param1 == 29) {
           return fs.field_a;
@@ -150,12 +150,12 @@ final class pg {
           return fs.field_a;
         }
         if (param1 == 21) {
-          return si.field_q;
+          return ReflectionCheck.field_q;
         }
         if (param1 == 20) {
           return fs.field_a;
         }
-        return fp.field_u;
+        return AuctionItem.field_u;
     }
 
     public static void b(int param0) {
@@ -167,41 +167,41 @@ final class pg {
         field_c = null;
     }
 
-    final static gm a(int param0, int param1, up param2, int param3, int param4) {
+    final static RenderedFootballer a(int param0, int param1, PlayerStats param2, int param3, int param4) {
         long var5_long = 0L;
         RuntimeException var5 = null;
-        gm stackIn_2_0 = null;
+        RenderedFootballer stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        up stackIn_8_0;
+        PlayerStats stackIn_8_0;
         int stackIn_8_1;
         int stackIn_8_2;
-        up stackIn_8_3;
+        PlayerStats stackIn_8_3;
         int stackIn_8_4;
         boolean stackIn_9_5 = false;
         boolean stackIn_13_3;
-        gm stackIn_14_0 = null;
+        RenderedFootballer stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -62) {
-            stackIn_2_0 = (gm) null;
+            stackIn_2_0 = (RenderedFootballer) null;
             return stackIn_2_0;
           }
           var5_long = nj.a(51);
           if (80L > -tr.field_d + var5_long) {
             stackIn_5_0 = null;
-            return (gm) (stackIn_5_0);
+            return (RenderedFootballer) (stackIn_5_0);
           }
           tr.field_d = var5_long;
-          stackIn_8_0 = (up) (param2);
+          stackIn_8_0 = (PlayerStats) (param2);
           stackIn_8_1 = param1;
           stackIn_8_2 = param4;
-          stackIn_8_3 = (up) (param2);
+          stackIn_8_3 = (PlayerStats) (param2);
           stackIn_8_4 = -107;
           stackIn_9_5 = !(param2.f(13467));
-          stackIn_13_3 = (((up) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (wn.a((byte) 34));
+          stackIn_13_3 = (((PlayerStats) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (wn.a((byte) 34));
           stackIn_14_0 = mg.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_13_3, param0, (byte) 106);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -61,13 +61,13 @@ final class fu {
         }
         int[] var4 = new int[this.b(param0, 20151)];
         int[] var3 = var4;
-        dv.a(this.field_d, 0, var4, 0, this.field_d.length);
+        ArrayOperations.a(this.field_d, 0, var4, 0, this.field_d.length);
         this.field_d = var4;
     }
 
-    final static ki a(int param0, byte param1, int param2) {
+    final static PlayerInputEvent a(int param0, byte param1, int param2) {
         int var3 = 3 % ((param1 - 62) / 40);
-        return new ki(7, param0, param2, (byte) 0, (byte) 0);
+        return new PlayerInputEvent(7, param0, param2, (byte) 0, (byte) 0);
     }
 
     public static void a(boolean param0) {
@@ -89,10 +89,10 @@ final class fu {
         oi var8 = null;
         int var9 = 0;
         int var10 = 0;
-        tf var11 = null;
+        IntrusiveDeque var11 = null;
         var10 = Kickabout.field_G;
         try {
-          var11 = new tf();
+          var11 = new IntrusiveDeque();
           if (param0 != 5464) {
             field_b = (tv[]) null;
           }
@@ -156,7 +156,7 @@ final class fu {
             return;
           }
           if (param1 != this.field_g) {
-            dv.a(this.field_d, param1 + 1, this.field_d, param1, this.field_g - param1);
+            ArrayOperations.a(this.field_d, param1 + 1, this.field_d, param1, this.field_g - param1);
           }
           this.field_g = this.field_g - 1;
           return;

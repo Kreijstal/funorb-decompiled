@@ -25,11 +25,11 @@ class IntrusiveNode {
           if (w.field_a[param2] > w.field_a[param3]) {
             return false;
           }
-          var4 = qp.field_G[param2] + (fo.field_j[param2] + ln.field_B[param2]);
+          var4 = AccountMessagePanel.field_G[param2] + (AgeValidator.field_j[param2] + DropTargetWidget.field_B[param2]);
           if (param0 != 8) {
             return false;
           }
-          var5 = ln.field_B[param3] + qp.field_G[param3] + fo.field_j[param3];
+          var5 = DropTargetWidget.field_B[param3] + AccountMessagePanel.field_G[param3] + AgeValidator.field_j[param3];
           if (var5 > var4) {
             return true;
           }
@@ -50,11 +50,11 @@ class IntrusiveNode {
         if (bl.field_m[param3] < bl.field_m[param2]) {
           return false;
         }
-        var4Lifetime1 = qp.field_G[param2] + (fo.field_j[param2] + ln.field_B[param2]);
+        var4Lifetime1 = AccountMessagePanel.field_G[param2] + (AgeValidator.field_j[param2] + DropTargetWidget.field_B[param2]);
         if (param0 != 8) {
           return false;
         }
-        var5Lifetime1 = ln.field_B[param3] + qp.field_G[param3] + fo.field_j[param3];
+        var5Lifetime1 = DropTargetWidget.field_B[param3] + AccountMessagePanel.field_G[param3] + AgeValidator.field_j[param3];
         if (var5Lifetime1 > var4Lifetime1) {
           return true;
         }
@@ -70,9 +70,9 @@ class IntrusiveNode {
     final static int d(byte param0) {
         if (param0 <= 44) {
           field_c = (String) null;
-          return bh.field_j;
+          return BufferedSocket.field_j;
         }
-        return bh.field_j;
+        return BufferedSocket.field_j;
     }
 
     public static void d(int param0) {
@@ -82,7 +82,7 @@ class IntrusiveNode {
         field_c = null;
     }
 
-    final boolean e(byte param0) {
+    final boolean isLinked(byte param0) {
         if (null == this.field_b) {
           return false;
         }
@@ -93,9 +93,9 @@ class IntrusiveNode {
     }
 
     final static void c(int param0) {
-        ow.field_e = un.field_e.a(-117);
-        CharSequence var2 = (CharSequence) ((Object) ow.field_e);
-        kd.field_w = MatchAgent.a(0, var2);
+        ArchiveSource.field_e = un.field_e.readString(-117);
+        CharSequence var2 = (CharSequence) ((Object) ArchiveSource.field_e);
+        DebugConsole.field_w = MatchAgent.a(0, var2);
         if (param0 != -49) {
           field_c = (String) null;
         }

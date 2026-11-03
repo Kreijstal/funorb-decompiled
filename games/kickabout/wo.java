@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wo extends aa {
-    static ut[] field_n;
+final class wo extends KeyedLoginCredentials {
+    static Sprite[] field_n;
     static int field_m;
     static int field_k;
     static String field_l;
     static String[] field_j;
     static int field_o;
 
-    final static void a(ot param0, gm param1, byte param2, int param3) {
+    final static void a(ArgbSprite param0, RenderedFootballer param1, byte param2, int param3) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -34,7 +34,7 @@ final class wo extends aa {
           var6 = param0.field_v;
           var7 = ug.a(0, param1.field_kb >> 16) - (var5 >> 1);
           var8 = -(var6 >> 1) + lf.a((byte) -101, param1.field_bb >> 16);
-          if (hw.field_i == 256) {
+          if (InstrumentNoteMask.field_i == 256) {
             if (1 == tb.field_v) {
               param0.b(var7, var8, param3);
               return;
@@ -42,7 +42,7 @@ final class wo extends aa {
             nh.a(param0, var7, var8);
             return;
           }
-          var9 = var5 * hw.field_i >> 8;
+          var9 = var5 * InstrumentNoteMask.field_i >> 8;
           if (tb.field_v == 1) {
             param0.d((-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9, param3);
             return;
@@ -73,11 +73,11 @@ final class wo extends aa {
         super(param0, param1);
     }
 
-    final kj a(byte param0) {
+    final kj getLoginKind(byte param0) {
         if (param0 > -77) {
           return (kj) null;
         }
-        return si.field_j;
+        return ReflectionCheck.field_j;
     }
 
     public static void a(boolean param0) {

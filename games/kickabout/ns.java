@@ -4,7 +4,7 @@
 final class ns {
     static String field_b;
     static int field_a;
-    static ut field_c;
+    static Sprite field_c;
     static String[] field_d;
 
     public static void a(byte param0) {

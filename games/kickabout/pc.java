@@ -40,10 +40,10 @@ final class pc {
               }
             }
             param0 = param0 << (var2 << 1);
-            return ko.field_f[param0 - 32768] >> var2;
+            return MenuSelection.field_f[param0 - 32768] >> var2;
           }
           if (131072 > param0) {
-            return ko.field_f[-32768 + param0];
+            return MenuSelection.field_f[-32768 + param0];
           }
           if (param0 >= 33554432) {
             if (param0 >= 536870912) {
@@ -59,7 +59,7 @@ final class pc {
             }
           }
           param0 = param0 >> (var2Lifetime3 << 1);
-          return ko.field_f[param0 - 32768] << var2Lifetime3;
+          return MenuSelection.field_f[param0 - 32768] << var2Lifetime3;
         }
         field_a = (pu) null;
         if (0 > param0) {
@@ -67,7 +67,7 @@ final class pc {
         }
         if (param0 >= 32768) {
           if (131072 > param0) {
-            return ko.field_f[-32768 + param0];
+            return MenuSelection.field_f[-32768 + param0];
           }
           if (param0 >= 33554432) {
             if (param0 >= 536870912) {
@@ -83,7 +83,7 @@ final class pc {
             }
           }
           param0 = param0 >> (var2Lifetime1 << 1);
-          return ko.field_f[param0 - 32768] << var2Lifetime1;
+          return MenuSelection.field_f[param0 - 32768] << var2Lifetime1;
         }
         if (param0 < 128) {
           if (param0 < 8) {
@@ -102,7 +102,7 @@ final class pc {
           }
         }
         param0 = param0 << (var2Lifetime2 << 1);
-        return ko.field_f[param0 - 32768] >> var2Lifetime2;
+        return MenuSelection.field_f[param0 - 32768] >> var2Lifetime2;
     }
 
     public static void b(int param0) {
@@ -128,22 +128,22 @@ final class pc {
     final static void a(byte param0) {
         if (rk.field_f != null) {
           rk.field_f.q(-85);
-          ki.field_n = new mb();
+          PlayerInputEvent.field_n = new DisplayNameForm();
           if (param0 > -8) {
             pc.a((byte) -11);
-            we.field_a.a((byte) -124, (fd) (ki.field_n));
+            we.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
             return;
           }
-          we.field_a.a((byte) -124, (fd) (ki.field_n));
+          we.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
           return;
         }
-        ki.field_n = new mb();
+        PlayerInputEvent.field_n = new DisplayNameForm();
         if (param0 <= -8) {
-          we.field_a.a((byte) -124, (fd) (ki.field_n));
+          we.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
           return;
         }
         pc.a((byte) -11);
-        we.field_a.a((byte) -124, (fd) (ki.field_n));
+        we.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
     }
 
     static {

@@ -8,7 +8,7 @@ final class ca {
     static String field_b;
     static String field_d;
     static String field_e;
-    static ot[] field_c;
+    static ArgbSprite[] field_c;
 
     public static void a(byte param0) {
         field_c = null;
@@ -30,17 +30,17 @@ final class ca {
         if (param0 == 3) {
           var2 = or.field_d;
           var2.b(param1, (byte) 119);
-          var2.a(124, 2);
-          var2.a(param0 ^ 106, 4);
-          var2.a(124, cq.a(1315216324));
+          var2.writeByte(124, 2);
+          var2.writeByte(param0 ^ 106, 4);
+          var2.writeByte(124, AuctionLogEntry.a(1315216324));
           return;
         }
         ca.a(false, 'F');
         var2Lifetime1 = or.field_d;
         var2Lifetime1.b(param1, (byte) 119);
-        var2Lifetime1.a(124, 2);
-        var2Lifetime1.a(param0 ^ 106, 4);
-        var2Lifetime1.a(124, cq.a(1315216324));
+        var2Lifetime1.writeByte(124, 2);
+        var2Lifetime1.writeByte(param0 ^ 106, 4);
+        var2Lifetime1.writeByte(124, AuctionLogEntry.a(1315216324));
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
@@ -94,12 +94,12 @@ final class ca {
         }
     }
 
-    final static void a(vc param0, int param1) {
+    final static void a(ReceivedAuctionItem param0, int param1) {
         try {
           np.field_Jb.a(new hk(param0, 37), param1 ^ 252);
           if (param1 != 255) {
-            vc var3 = (vc) null;
-            ca.a((vc) null, 5);
+            ReceivedAuctionItem var3 = (ReceivedAuctionItem) null;
+            ca.a((ReceivedAuctionItem) null, 5);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

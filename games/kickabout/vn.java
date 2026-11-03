@@ -69,7 +69,7 @@ final class vn extends cv {
         return fieldTemp$0;
     }
 
-    final static vn a(sj param0, String param1, String param2) {
+    final static vn a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, param1, 28);
         if (var3 == null) {
           return null;
@@ -143,12 +143,12 @@ final class vn extends cv {
         var4.field_n = param0.length - 18;
         var9 = var4.a((byte) 81);
         var10 = var4.a((byte) 81);
-        var11 = var4.h((byte) -123);
-        var12 = var4.h((byte) -118);
-        var13 = var4.h((byte) -122);
-        var14 = var4.h((byte) -126);
-        var15 = var4.h((byte) -110);
-        var16 = var4.h((byte) -124);
+        var11 = var4.readUnsignedByte((byte) -123);
+        var12 = var4.readUnsignedByte((byte) -118);
+        var13 = var4.readUnsignedByte((byte) -122);
+        var14 = var4.readUnsignedByte((byte) -126);
+        var15 = var4.readUnsignedByte((byte) -110);
+        var16 = var4.readUnsignedByte((byte) -124);
         var17 = var4.a((byte) 81);
         var18 = var4.a((byte) 81);
         var19 = var4.a((byte) 81);
@@ -234,18 +234,18 @@ final class vn extends cv {
         var36 = 0;
         var37 = 0;
         for (var38 = 0; var38 < var9; var38++) {
-          var39 = var4.h((byte) -126);
+          var39 = var4.readUnsignedByte((byte) -126);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.e(1);
+            var40 = var5.readSignedSmart(1);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.e(-10);
+            var41 = var6.readSignedSmart(-10);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.e(29);
+            var42 = var7.readSignedSmart(29);
           }
           this.field_H[var38] = var35 + var40;
           this.field_l[var38] = var36 + var41;
@@ -254,7 +254,7 @@ final class vn extends cv {
           var36 = this.field_l[var38];
           var37 = this.field_A[var38];
           if (var16 == 1) {
-            this.field_C[var38] = var8.h((byte) -122);
+            this.field_C[var38] = var8.readUnsignedByte((byte) -122);
           }
         }
         var4.field_n = var30;
@@ -265,7 +265,7 @@ final class vn extends cv {
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
           this.field_p[var38Lifetime1] = (short)var4.a((byte) 81);
           if (var12 == 1) {
-            var39Lifetime1 = var5.h((byte) -108);
+            var39Lifetime1 = var5.readUnsignedByte((byte) -108);
             if ((var39Lifetime1 & 1) != 1) {
               this.field_o[var38Lifetime1] = (byte) 0;
             } else {
@@ -285,13 +285,13 @@ final class vn extends cv {
             }
           }
           if (var13 == 255) {
-            this.field_z[var38Lifetime1] = var6.j((byte) -81);
+            this.field_z[var38Lifetime1] = var6.readByte((byte) -81);
           }
           if (var14 == 1) {
-            this.field_k[var38Lifetime1] = var7.j((byte) -70);
+            this.field_k[var38Lifetime1] = var7.readByte((byte) -70);
           }
           if (var15 == 1) {
-            this.field_O[var38Lifetime1] = var8.h((byte) -106);
+            this.field_O[var38Lifetime1] = var8.readUnsignedByte((byte) -106);
           }
         }
         this.field_t = -1;
@@ -302,13 +302,13 @@ final class vn extends cv {
         var40Lifetime1 = 0;
         var41Lifetime1 = 0;
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
-          var43 = var5.h((byte) -112);
+          var43 = var5.readUnsignedByte((byte) -112);
           if (var43 == 1) {
-            var38Lifetime2 = var4.e(29) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart(29) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.e(1) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart(1) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.e(-124) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-124) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_r[var42Lifetime1] = var38Lifetime2;
             this.field_L[var42Lifetime1] = var39Lifetime2;
@@ -325,7 +325,7 @@ final class vn extends cv {
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.e(-110) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-110) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_r[var42Lifetime1] = var38Lifetime2;
             this.field_L[var42Lifetime1] = var39Lifetime2;
@@ -336,7 +336,7 @@ final class vn extends cv {
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.e(15) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(15) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_r[var42Lifetime1] = var38Lifetime2;
             this.field_L[var42Lifetime1] = var39Lifetime2;
@@ -349,7 +349,7 @@ final class vn extends cv {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.e(-113) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-113) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_r[var42Lifetime1] = var38Lifetime2;
             this.field_L[var42Lifetime1] = var39Lifetime2;
@@ -396,8 +396,8 @@ final class vn extends cv {
         }
     }
 
-    final eg b(int param0, int param1, int param2, int param3, int param4) {
-        return new eg(this, param0, param1, param2, param3, param4);
+    final ModelMesh b(int param0, int param1, int param2, int param3, int param4) {
+        return new ModelMesh(this, param0, param1, param2, param3, param4);
     }
 
     final void b() {
@@ -588,17 +588,17 @@ final class vn extends cv {
         var2.field_n = param0.length - 23;
         var9 = var2.a((byte) 81);
         var10 = var2.a((byte) 81);
-        var11 = var2.h((byte) -118);
-        var12 = var2.h((byte) -120);
+        var11 = var2.readUnsignedByte((byte) -118);
+        var12 = var2.readUnsignedByte((byte) -120);
         stackIn_3_0 = ((var12 & 1) != 1) ? 0 : 1;
         var13 = stackIn_3_0;
         stackIn_6_0 = ((var12 & 2) != 2) ? 0 : 1;
         var14 = stackIn_6_0;
-        var15 = var2.h((byte) -121);
-        var16 = var2.h((byte) -126);
-        var17 = var2.h((byte) -112);
-        var18 = var2.h((byte) -114);
-        var19 = var2.h((byte) -128);
+        var15 = var2.readUnsignedByte((byte) -121);
+        var16 = var2.readUnsignedByte((byte) -126);
+        var17 = var2.readUnsignedByte((byte) -112);
+        var18 = var2.readUnsignedByte((byte) -114);
+        var19 = var2.readUnsignedByte((byte) -128);
         var20 = var2.a((byte) 81);
         var21 = var2.a((byte) 81);
         var22 = var2.a((byte) 81);
@@ -611,7 +611,7 @@ final class vn extends cv {
           this.field_T = new byte[var11];
           var2.field_n = 0;
           for (var28 = 0; var28 < var11; var28++) {
-            dupTemp$0 = var2.j((byte) -114);
+            dupTemp$0 = var2.readByte((byte) -114);
             this.field_T[var28] = dupTemp$0;
             var29 = dupTemp$0;
             if (var29 == 0) {
@@ -740,18 +740,18 @@ final class vn extends cv {
         var51 = 0;
         var52 = 0;
         for (var53 = 0; var53 < var9; var53++) {
-          var54 = var2.h((byte) -111);
+          var54 = var2.readUnsignedByte((byte) -111);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.e(-115);
+            var55 = var3.readSignedSmart(-115);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.e(-124);
+            var56 = var4.readSignedSmart(-124);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.e(57);
+            var57 = var5.readSignedSmart(57);
           }
           this.field_H[var53] = var50 + var55;
           this.field_l[var53] = var51 + var56;
@@ -760,7 +760,7 @@ final class vn extends cv {
           var51 = this.field_l[var53];
           var52 = this.field_A[var53];
           if (var19 == 1) {
-            this.field_C[var53] = var6.h((byte) -112);
+            this.field_C[var53] = var6.readUnsignedByte((byte) -112);
           }
         }
         var2.field_n = var39;
@@ -773,16 +773,16 @@ final class vn extends cv {
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
           this.field_p[var53Lifetime1] = (short)var2.a((byte) 81);
           if (var13 != 0) {
-            this.field_o[var53Lifetime1] = var3.j((byte) -125);
+            this.field_o[var53Lifetime1] = var3.readByte((byte) -125);
           }
           if (var15 == 255) {
-            this.field_z[var53Lifetime1] = var4.j((byte) -120);
+            this.field_z[var53Lifetime1] = var4.readByte((byte) -120);
           }
           if (var16 == 1) {
-            this.field_k[var53Lifetime1] = var5.j((byte) -96);
+            this.field_k[var53Lifetime1] = var5.readByte((byte) -96);
           }
           if (var17 == 1) {
-            this.field_O[var53Lifetime1] = var6.h((byte) -125);
+            this.field_O[var53Lifetime1] = var6.readUnsignedByte((byte) -125);
           }
           if (var18 == 1) {
             this.field_u[var53Lifetime1] = (short)(var7.a((byte) 81) - 1);
@@ -791,7 +791,7 @@ final class vn extends cv {
             if (this.field_u[var53Lifetime1] == -1) {
               this.field_I[var53Lifetime1] = (byte)-1;
             } else {
-              this.field_I[var53Lifetime1] = (byte)(var8.h((byte) -108) - 1);
+              this.field_I[var53Lifetime1] = (byte)(var8.readUnsignedByte((byte) -108) - 1);
             }
           }
         }
@@ -803,13 +803,13 @@ final class vn extends cv {
         var55Lifetime1 = 0;
         var56Lifetime1 = 0;
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
-          var58 = var3.h((byte) -124);
+          var58 = var3.readUnsignedByte((byte) -124);
           if (var58 == 1) {
-            var53Lifetime2 = var2.e(-117) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart(-117) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.e(60) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart(60) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.e(-116) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-116) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_r[var57Lifetime1] = var53Lifetime2;
             this.field_L[var57Lifetime1] = var54Lifetime1;
@@ -826,7 +826,7 @@ final class vn extends cv {
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.e(-127) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-127) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_r[var57Lifetime1] = var53Lifetime2;
             this.field_L[var57Lifetime1] = var54Lifetime1;
@@ -837,7 +837,7 @@ final class vn extends cv {
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.e(-115) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-115) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_r[var57Lifetime1] = var53Lifetime2;
             this.field_L[var57Lifetime1] = var54Lifetime1;
@@ -850,7 +850,7 @@ final class vn extends cv {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.e(-123) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-123) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_r[var57Lifetime1] = var53Lifetime2;
             this.field_L[var57Lifetime1] = var54Lifetime1;
@@ -881,9 +881,9 @@ final class vn extends cv {
             this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
             this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
             this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_x[var57Lifetime2] = var5.j((byte) -100);
-            this.field_E[var57Lifetime2] = var6.j((byte) -58);
-            this.field_Q[var57Lifetime2] = var7.j((byte) -48);
+            this.field_x[var57Lifetime2] = var5.readByte((byte) -100);
+            this.field_E[var57Lifetime2] = var6.readByte((byte) -58);
+            this.field_Q[var57Lifetime2] = var7.readByte((byte) -48);
           }
           if (var58Lifetime1 == 2) {
             this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
@@ -892,11 +892,11 @@ final class vn extends cv {
             this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
             this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
             this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_x[var57Lifetime2] = var5.j((byte) -109);
-            this.field_E[var57Lifetime2] = var6.j((byte) -113);
-            this.field_Q[var57Lifetime2] = var7.j((byte) -111);
-            this.field_N[var57Lifetime2] = var7.j((byte) -92);
-            this.field_G[var57Lifetime2] = var7.j((byte) -111);
+            this.field_x[var57Lifetime2] = var5.readByte((byte) -109);
+            this.field_E[var57Lifetime2] = var6.readByte((byte) -113);
+            this.field_Q[var57Lifetime2] = var7.readByte((byte) -111);
+            this.field_N[var57Lifetime2] = var7.readByte((byte) -92);
+            this.field_G[var57Lifetime2] = var7.readByte((byte) -111);
           }
           if (var58Lifetime1 == 3) {
             this.field_h[var57Lifetime2] = (short)var3.a((byte) 81);
@@ -905,18 +905,18 @@ final class vn extends cv {
             this.field_S[var57Lifetime2] = (short)var4.a((byte) 81);
             this.field_P[var57Lifetime2] = (short)var4.a((byte) 81);
             this.field_j[var57Lifetime2] = (short)var4.a((byte) 81);
-            this.field_x[var57Lifetime2] = var5.j((byte) -102);
-            this.field_E[var57Lifetime2] = var6.j((byte) -102);
-            this.field_Q[var57Lifetime2] = var7.j((byte) -76);
+            this.field_x[var57Lifetime2] = var5.readByte((byte) -102);
+            this.field_E[var57Lifetime2] = var6.readByte((byte) -102);
+            this.field_Q[var57Lifetime2] = var7.readByte((byte) -76);
           }
         }
         if (var14 != 0) {
           var2.field_n = var49;
-          var57Lifetime3 = var2.h((byte) -111);
+          var57Lifetime3 = var2.readUnsignedByte((byte) -111);
           if (var57Lifetime3 > 0) {
             var2.field_n = var2.field_n + 4 * var57Lifetime3;
           }
-          var58Lifetime2 = var2.h((byte) -121);
+          var58Lifetime2 = var2.readUnsignedByte((byte) -121);
           if (var58Lifetime2 > 0) {
             var2.field_n = var2.field_n + 4 * var58Lifetime2;
           }
@@ -992,8 +992,8 @@ final class vn extends cv {
         }
     }
 
-    final qc a(int param0, int param1, int param2, int param3, int param4) {
-        return (qc) ((Object) new eg(this, param0, param1, param2, param3, param4));
+    final ModelMeshBase a(int param0, int param1, int param2, int param3, int param4) {
+        return (ModelMeshBase) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
     private vn(byte[] param0) {

@@ -3,7 +3,7 @@
  */
 final class sd {
     static String field_e;
-    static hd field_a;
+    static UiLayoutNode field_a;
     static int field_b;
     static r field_d;
     static String field_c;
@@ -27,7 +27,7 @@ final class sd {
         return param0 ^ param1;
     }
 
-    final static void a(ut param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_15_0 = null;

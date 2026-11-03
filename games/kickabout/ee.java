@@ -17,30 +17,30 @@ final class ee {
     }
 
     final static void b(byte param0) {
-        if (rq.field_D != null) {
-          pi.field_b.b(rq.field_D);
+        if (ServerMessageScreen.field_D != null) {
+          pi.field_b.removeSubstream(ServerMessageScreen.field_D);
         }
         if (param0 == -25) {
-          qd.field_c = null;
+          IndexedSpriteState.field_c = null;
           vg.field_Bb = null;
-          rq.field_D = null;
+          ServerMessageScreen.field_D = null;
           return;
         }
         field_e = false;
-        qd.field_c = null;
+        IndexedSpriteState.field_c = null;
         vg.field_Bb = null;
-        rq.field_D = null;
+        ServerMessageScreen.field_D = null;
     }
 
     final static void a(int param0, int param1, int param2) {
         if (param0 != 653278209) {
           return;
         }
-        int var3 = hw.field_i * PacketBuffer.field_g.field_o >> 8;
-        int var4 = PacketBuffer.field_g.field_o * hw.field_i >> 8;
-        int var5 = hw.field_i * sa.field_e >> 8;
-        int var6 = lr.field_m * hw.field_i >> 8;
-        if (!rg.field_f) {
+        int var3 = InstrumentNoteMask.field_i * PacketBuffer.field_g.field_o >> 8;
+        int var4 = PacketBuffer.field_g.field_o * InstrumentNoteMask.field_i >> 8;
+        int var5 = InstrumentNoteMask.field_i * DelegatingCanvas.field_e >> 8;
+        int var6 = FormationView.field_m * InstrumentNoteMask.field_i >> 8;
+        if (!MouseWheelInput.field_f) {
           eo.a(PacketBuffer.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 - (var4 >> 1), var3, var4);
           return;
         }

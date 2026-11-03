@@ -10,10 +10,10 @@ final class vk {
         int var3;
         var3 = Kickabout.field_G;
         iv.field_o = null;
-        je.field_e = null;
+        AnimationSkeleton.field_e = null;
         ci.field_a = 0;
         var2 = nb.field_b;
-        nb.field_b = nr.field_e;
+        nb.field_b = PlayerModelPreview.field_e;
         if (param1 == 51) {
           ParticipantStatus.field_t.field_l = 2;
         } else {
@@ -23,7 +23,7 @@ final class vk {
             ParticipantStatus.field_t.field_l = 1;
           }
         }
-        nr.field_e = var2;
+        PlayerModelPreview.field_e = var2;
         ParticipantStatus.field_t.field_o = ParticipantStatus.field_t.field_o + 1;
         if (param0 >= -115) {
           return 120;

@@ -1,0 +1,177 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LongPlusOneCommand extends ConsoleCommand {
+    static int[] field_B;
+    static UiLayoutNode field_D;
+    static String field_A;
+
+    public static void g(int param0) {
+        field_B = null;
+        field_A = null;
+        if (param0 == 1) {
+          field_D = null;
+          return;
+        }
+        CommonGame var2 = (CommonGame) null;
+        LongPlusOneCommand.a((CommonGame) null, 1, -15);
+        field_D = null;
+    }
+
+    final static String h(int param0) {
+        if (PlayerModelPreview.field_f == wk.field_f) {
+          return wn.field_i;
+        }
+        if (param0 != 10326) {
+          LongPlusOneCommand.h(113);
+          return NetworkGameClient.field_y;
+        }
+        return NetworkGameClient.field_y;
+    }
+
+    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 == 84) {
+            stackIn_4_0 = new ConsoleValue(wq.a(param1[0].a(true), -126));
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (ConsoleValue) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("ev.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    LongPlusOneCommand(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final static void a(CommonGame param0, int param1, int param2) {
+        int var5 = 0;
+        int var6 = 0;
+        FootballerAgent var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = Kickabout.field_G;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var15Lifetime1;
+        int var16Lifetime1;
+        gg.a(param2, 0, param0.field_V);
+        int var3_int = ug.a(0, param0.field_V.pixelX(true));
+        int var4 = lf.a((byte) -110, param0.field_V.pixelY(879306160));
+        SoftwareRasterizer.e(var3_int, var4, ug.a(0, kk.field_B[0]), lf.a((byte) -70, or.field_a[0]), 16777215, 64);
+        SoftwareRasterizer.e(var3_int, var4, ug.a(0, kk.field_B[1]), lf.a((byte) -68, or.field_a[1]), 16777215, 64);
+        SoftwareRasterizer.b(ug.a(0, kk.field_B[0]), lf.a((byte) -92, or.field_a[0]), ug.a(0, kk.field_B[1]), lf.a((byte) -98, or.field_a[1]), 16777215);
+        if (param1 <= 22) {
+          return;
+        }
+        try {
+          var5 = ug.a(0, pu.field_zb[0]);
+          var6 = lf.a((byte) -102, pu.field_zb[1]);
+          SoftwareRasterizer.b(ug.a(0, kk.field_B[0] + kk.field_B[1] >> 1), lf.a((byte) -86, or.field_a[0] + or.field_a[1] >> 1), var5, var6, 16777215);
+          SoftwareRasterizer.b(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
+          SoftwareRasterizer.b(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
+          var7 = param0.field_P[param2][0];
+          SoftwareRasterizer.c(ug.a(0, 372), lf.a((byte) -110, var7.pixelY(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
+          var8 = 4474111;
+          var9 = var7.pixelX(-105) - param0.field_V.pixelX(true);
+          var10 = var7.pixelY(true) - param0.field_V.pixelY(879306160);
+          var11 = nb.keeperReach(var7, 170);
+          if (var11 * var11 > var10 * var10 + var9 * var9) {
+            var8 = 16711680;
+          }
+          var12 = var11 * InstrumentNoteMask.field_i >> 8;
+          SoftwareRasterizer.c(ug.a(0, var7.pixelX(-101)), lf.a((byte) -125, var7.pixelY(true)), var12, var8);
+          var12Lifetime1 = 28 * InstrumentNoteMask.field_i >> 8;
+          SoftwareRasterizer.c(ug.a(0, var7.pixelX(-120)), lf.a((byte) -64, var7.pixelY(true)), var12Lifetime1, 16777215);
+          var12Lifetime2 = 250 * InstrumentNoteMask.field_i >> 8;
+          var13 = 0 == param2 ? 1344 : 0;
+          var9Lifetime1 = -param0.field_V.pixelX(true) + 448;
+          var10Lifetime1 = -param0.field_V.pixelY(879306160) + var13;
+          var14 = 3407616;
+          if (var9Lifetime1 * var9Lifetime1 + var10Lifetime1 * var10Lifetime1 < 62500) {
+            var14 = 16711680;
+          }
+          SoftwareRasterizer.c(ug.a(0, 448), lf.a((byte) -65, var13), var12Lifetime2, var14);
+          if (-1 == param0.field_V.possessorTeam) {
+            if (param0.field_V.velocityY == 0) {
+            } else {
+              if (param2 != 1) {
+                var15 = (-param0.field_V.positionY + 88080384) / param0.field_V.velocityY;
+              } else {
+                var15 = -param0.field_V.positionY / param0.field_V.velocityY;
+              }
+              if (var15 > 0 &&
+                20 > var15) {
+                var16 = param0.field_V.positionX + var15 * param0.field_V.velocityX >> 16;
+                if (param2 != 1) {
+                  SoftwareRasterizer.drawVerticalLine(ug.a(0, var16) - 10, lf.a((byte) -126, 1344), 20, 16776960);
+                } else {
+                  SoftwareRasterizer.drawVerticalLine(-10 + ug.a(0, var16), lf.a((byte) -118, 0), 20, 16711935);
+                }
+              }
+            }
+          }
+          var15Lifetime1 = ug.a(0, var7.pixelX(-116));
+          var16Lifetime1 = lf.a((byte) -82, var7.pixelY(true));
+          SoftwareRasterizer.a(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
+          q.field_d.d("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.actionTime, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
+        } catch (RuntimeException runtimeException) {
+          throw nb.a((Throwable) ((Object) runtimeException), "ev.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        int var0 = 0;
+        int var1 = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        field_B = new int[32];
+        for (var0 = 0; var0 < 16; var0++) {
+          for (var1 = 0; var1 < 2; var1++) {
+            var2 = var0 << 2;
+            var3 = 7;
+            var4 = 0 == var1 ? 10 : 50;
+            if (var0 == 15) {
+              var3 = 0;
+              var4 = var1 * 123 + 1;
+              var2 = 0;
+            }
+            if (var0 == 14) {
+              var2 = 0;
+              var4 = 20 + 20 * var1;
+              var3 = 0;
+            }
+            field_B[var0 + 16 * var1] = hf.a(hf.a(var3 << 7, var2 << 10), var4);
+          }
+        }
+        field_A = "Passwords must be between 5 and 20 letters and numbers";
+    }
+}

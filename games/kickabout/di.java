@@ -6,8 +6,8 @@ final class di {
 
     final static void a(int param0, boolean param1, int param2) {
         RuntimeException runtimeException = null;
-        hn var3 = null;
-        hn var4 = null;
+        ManagerAction var3 = null;
+        ManagerAction var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = Kickabout.field_G;
@@ -15,16 +15,16 @@ final class di {
           if (!param1) {
             return;
           }
-          var3 = (hn) (da.field_h.d(-9033));
+          var3 = (ManagerAction) (MusicPatchNode.field_h.last(-9033));
           while (var3 != null) {
-            if (var3.field_i == 9) {
+            if (var3.actionType == 9) {
               var3.c((byte) -109);
-              var3 = (hn) (da.field_h.d(-9033));
+              var3 = (ManagerAction) (MusicPatchNode.field_h.last(-9033));
               continue;
             }
             break;
           }
-          var4 = ic.field_h.a(param2, -86, param0);
+          var4 = ic.field_h.createOrderSwapAction(param2, -86, param0);
           ii.a(var4, 85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

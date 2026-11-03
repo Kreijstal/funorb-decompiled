@@ -9,7 +9,7 @@ final class kh {
     private int field_h;
     private int field_e;
     private int field_o;
-    static ut field_r;
+    static Sprite field_r;
     static String field_t;
     private int field_p;
     private ro field_j;
@@ -22,13 +22,13 @@ final class kh {
     private int field_d;
     private int field_a;
     private float field_n;
-    static sj field_g;
+    static ResourceArchive field_g;
     private int field_f;
 
     final boolean e(int param0) {
         if (param0 != 0) {
           this.field_h = 72;
-          if (this.field_e > nw.field_d) {
+          if (this.field_e > IntrusiveDequeCursor.field_d) {
             return false;
           }
           if (0 < eq.field_d) {
@@ -36,7 +36,7 @@ final class kh {
           }
           return false;
         }
-        if (this.field_e > nw.field_d) {
+        if (this.field_e > IntrusiveDequeCursor.field_d) {
           return false;
         }
         if (0 < eq.field_d) {
@@ -45,25 +45,25 @@ final class kh {
         return false;
     }
 
-    final static ut[] a(byte param0, ut param1) {
-        ut[] var2 = null;
+    final static Sprite[] a(byte param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        ut[] var3 = null;
-        ut[] stackIn_2_0 = null;
-        ut[] stackIn_4_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ut[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param1;
           if (param0 < -82) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ut[]) null;
+          stackIn_2_0 = (Sprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class kh {
 
     final static void a(int param0, dd param1, int param2, boolean param3, int param4) {
         dd stackIn_2_0;
-        eg stackIn_2_1;
+        ModelMesh stackIn_2_1;
         boolean stackIn_2_2;
         boolean stackIn_2_3;
         boolean stackIn_3_4 = false;
@@ -91,17 +91,17 @@ final class kh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        eg var7 = null;
+        ModelMesh var7 = null;
         try {
           stackIn_2_0 = (dd) (param1);
-          stackIn_2_1 = kb.field_B[param0];
+          stackIn_2_1 = WriteIntegersCommand.field_B[param0];
           stackIn_2_2 = param3;
           stackIn_2_3 = true;
           stackIn_3_4 = !(param3);
-          var7 = (eg) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
+          var7 = (ModelMesh) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
           PacketBuffer.a(102, vf.field_F);
-          on.b();
-          t.c();
+          SoftwareRasterizer.b();
+          TriangleRasterizer.useRasterClip();
           if (FormationAgent.field_l == 3) {
             var6 = 256 + param2;
             if (var6 >= 2048) {
@@ -125,7 +125,7 @@ final class kh {
               var7.a(0, 0, 1280, 0, 0, 0, 0, param4);
             }
           }
-          ta.e(124);
+          TeamManagementScreen.e(124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,12 +141,12 @@ final class kh {
         }
     }
 
-    final vq b(int param0) {
+    final FullscreenFocusCanvas b(int param0) {
         this.field_v = f.field_d;
-        this.field_f = vc.field_B;
+        this.field_f = ReceivedAuctionItem.field_B;
         this.field_j.a(111, this.field_u, this.field_b);
-        mf.field_Ib = false;
-        vq var2 = gf.a(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
+        SquadGridWidget.field_Ib = false;
+        FullscreenFocusCanvas var2 = gf.a(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
         if (param0 != 30182) {
           this.c(119);
           if (var2 == null) {
@@ -170,14 +170,14 @@ final class kh {
           field_r = null;
           return;
         }
-        ut var2 = (ut) null;
-        kh.a((byte) -104, (ut) null);
+        Sprite var2 = (Sprite) null;
+        kh.a((byte) -104, (Sprite) null);
         field_r = null;
     }
 
     final void c(int param0) {
         int fieldTemp$0 = 0;
-        if (e.field_m != null) {
+        if (SplashScreen.field_m != null) {
           return;
         }
         if (eq.field_d <= param0) {
@@ -190,7 +190,7 @@ final class kh {
             return;
           }
           this.field_p = this.field_i;
-          if (this.field_e > nw.field_d) {
+          if (this.field_e > IntrusiveDequeCursor.field_d) {
             this.field_l = false;
           } else {
             this.a((byte) -113);
@@ -198,14 +198,14 @@ final class kh {
           return;
         }
         if (this.field_o > f.field_d) {
-          el.field_H = (this.field_o - f.field_d) / 2;
+          BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
         } else {
           if (0 < this.field_o) {
-            el.field_H = 0;
+            BytePlusOneCommand.field_H = 0;
           }
         }
         if (f.field_d == this.field_d &&
-          this.field_a == vc.field_B) {
+          this.field_a == ReceivedAuctionItem.field_B) {
           return;
         }
         this.field_j.a(127, this.field_d, this.field_a);
@@ -280,12 +280,12 @@ final class kh {
                 if (f.field_d != var2) {
                   this.field_j.a(101, var2, var3);
                 } else {
-                  if (vc.field_B != var3) {
+                  if (ReceivedAuctionItem.field_B != var3) {
                     this.field_j.a(101, var2, var3);
                   }
                 }
                 if (this.field_o > 0) {
-                  el.field_H = (this.field_o - f.field_d) / 2;
+                  BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
                 }
                 return;
               }
@@ -298,12 +298,12 @@ final class kh {
         if (f.field_d != var2) {
           this.field_j.a(101, var2, var3);
         } else {
-          if (vc.field_B != var3) {
+          if (ReceivedAuctionItem.field_B != var3) {
             this.field_j.a(101, var2, var3);
           }
         }
         if (this.field_o > 0) {
-          el.field_H = (this.field_o - f.field_d) / 2;
+          BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
         }
     }
 

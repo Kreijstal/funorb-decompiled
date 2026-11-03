@@ -7,7 +7,7 @@ final class dk extends IntrusiveNode {
     boolean field_f;
     static String[] field_h;
 
-    final static ut[] a(int param0, int param1, byte param2, sj param3) {
+    final static Sprite[] a(int param0, int param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -39,9 +39,9 @@ final class dk extends IntrusiveNode {
         int var6;
         int var7;
         int var8;
-        sj var9;
-        sj var9Lifetime1;
-        sj var9Lifetime2;
+        ResourceArchive var9;
+        ResourceArchive var9Lifetime1;
+        ResourceArchive var9Lifetime2;
         var5 = param4 * 52 + param0;
         var6 = var5 + 52;
         var7 = 75 * param3 + param2;
@@ -62,19 +62,19 @@ final class dk extends IntrusiveNode {
               if (0 < param3) {
                 var7++;
                 if (param1 > -95) {
-                  var9 = (sj) null;
-                  dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (ResourceArchive) null;
+                  dk.a(72, -51, (byte) 107, (ResourceArchive) null);
                 }
-                pt.a(var6, -22914, var5, var8, var7);
+                AuctionListing.a(var6, -22914, var5, var8, var7);
                 return;
               }
               if (param1 <= -95) {
-                pt.a(var6, -22914, var5, var8, var7);
+                AuctionListing.a(var6, -22914, var5, var8, var7);
                 return;
               }
-              var9Lifetime2 = (sj) null;
-              dk.a(72, -51, (byte) 107, (sj) null);
-              pt.a(var6, -22914, var5, var8, var7);
+              var9Lifetime2 = (ResourceArchive) null;
+              dk.a(72, -51, (byte) 107, (ResourceArchive) null);
+              AuctionListing.a(var6, -22914, var5, var8, var7);
               return;
             }
           }
@@ -90,10 +90,10 @@ final class dk extends IntrusiveNode {
           var7++;
         }
         if (param1 > -95) {
-          var9Lifetime1 = (sj) null;
-          dk.a(72, -51, (byte) 107, (sj) null);
+          var9Lifetime1 = (ResourceArchive) null;
+          dk.a(72, -51, (byte) 107, (ResourceArchive) null);
         }
-        pt.a(var6, -22914, var5, var8, var7);
+        AuctionListing.a(var6, -22914, var5, var8, var7);
     }
 
     public static void a(int param0) {

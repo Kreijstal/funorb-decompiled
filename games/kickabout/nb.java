@@ -8,14 +8,14 @@ final class nb {
     static int field_k;
     static String field_g;
     static wc field_i;
-    to field_l;
+    PcmSample field_l;
     static int[] field_e;
-    static ut[] field_j;
+    static Sprite[] field_j;
     boolean field_d;
     static String field_h;
     static boolean field_f;
 
-    final static int a(FootballerAgent param0, int param1) {
+    final static int keeperReach(FootballerAgent param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -60,7 +60,7 @@ final class nb {
           return false;
         }
         if (param0 == 32) {
-          this.field_l = tg.a(sr.field_h, this.field_a, "").c();
+          this.field_l = VorbisSample.a(sr.field_h, this.field_a, "").decodeAllToPcm();
           this.field_d = true;
           return true;
         }
@@ -71,7 +71,7 @@ final class nb {
         if (param0 != 64) {
           return false;
         }
-        return da.field_h.a(false) > 0 ? true : false;
+        return MusicPatchNode.field_h.a(false) > 0 ? true : false;
     }
 
     final static void a(byte param0) {
@@ -124,7 +124,7 @@ final class nb {
         }
     }
 
-    nb(to param0) {
+    nb(PcmSample param0) {
         this.field_l = null;
         this.field_d = false;
         try {

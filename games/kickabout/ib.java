@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib extends wt implements vh {
+final class ib extends wt implements ButtonListener {
     static String field_F;
     static String field_H;
-    private fb field_G;
+    private NumericDateInputWidget field_G;
     static boolean field_E;
     static String field_B;
     static int[] field_C;
-    private wi field_D;
+    private TextButton field_D;
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_D.field_y = this.field_G.a((byte) -125).c(-24407) == he.field_yb ? true : false;
+          this.field_D.field_y = this.field_G.a((byte) -125).getValidationState(-24407) == he.field_yb ? true : false;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ib.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final void a(int param0, wi param1, int param2, byte param3, int param4) {
+    public final void a(int param0, TextButton param1, int param2, byte param3, int param4) {
         if (param3 < 64) {
           return;
         }
-        if (this.field_G.a((byte) -125).c(-24407) != he.field_yb) {
+        if (this.field_G.a((byte) -125).getValidationState(-24407) != he.field_yb) {
           return;
         }
         try {
@@ -44,7 +44,7 @@ final class ib extends wt implements vh {
           if (param1 >= -79) {
             field_H = (String) null;
           }
-          stackIn_3_0 = up.field_m.a(param0, "", 120);
+          stackIn_3_0 = PlayerStats.field_m.a(param0, "", 120);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,16 +72,16 @@ final class ib extends wt implements vh {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, (int) (char)param1, param2, param3);
-        qo.field_k.a(kd.field_v, 4 + param2 + this.field_t, 4 + qo.field_k.field_G + (this.field_g + param3), 16777215, -1);
+        EmailSyntaxValidator.field_k.a(DebugConsole.field_v, 4 + param2 + this.field_t, 4 + EmailSyntaxValidator.field_k.field_G + (this.field_g + param3), 16777215, -1);
     }
 
     ib(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (gj) null);
-        this.field_G = new fb(new ri(10000536), field_E, 0, 0, 140, 25);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
+        this.field_G = new NumericDateInputWidget(new ri(10000536), field_E, 0, 0, 140, 25);
         this.field_G.a(new hl(), -20274);
-        this.field_D = new wi(es.field_g, (jv) (this));
-        this.field_w = new fd[]{(fd) ((Object) this.field_G), (fd) ((Object) this.field_D)};
-        this.field_D.field_r = (gj) ((Object) new op());
+        this.field_D = new TextButton(RowRangeRequest.field_g, (UiListener) (this));
+        this.field_w = new UiWidget[]{(UiWidget) ((Object) this.field_G), (UiWidget) ((Object) this.field_D)};
+        this.field_D.field_r = (WidgetPainter) ((Object) new op());
         this.e(-1947);
     }
 

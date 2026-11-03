@@ -11,30 +11,30 @@ final class ng {
     static String field_i;
     private int[] field_h;
     private int field_c;
-    static ut[] field_j;
+    static Sprite[] field_j;
     static boolean field_e;
 
-    final static kg[] a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
+    final static IndexedSprite[] a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         int var8_int = 0;
         int var10_int = 0;
         int stackIn_11_0 = 0;
-        kg[] var6;
-        kg var7_ref_kg;
+        IndexedSprite[] var6;
+        IndexedSprite var7_ref_kg;
         int var7;
-        tf var8;
+        IntrusiveDeque var8;
         int var9;
-        ut var10;
+        Sprite var10;
         int var11;
         int var12;
         int var13;
         int var14;
-        kg[] var15;
+        IndexedSprite[] var15;
         Object var16;
-        nr var17;
+        PlayerModelPreview var17;
         int var9Lifetime1;
         var16 = null;
         var14 = Kickabout.field_G;
-        var15 = new kg[6];
+        var15 = new IndexedSprite[6];
         var6 = var15;
         if (!vi.field_n) {
           var7_ref_kg = eo.a(bt.a(-126, param4, param3));
@@ -48,30 +48,30 @@ final class ng {
         }
         stackIn_11_0 = (!param4) ? 2 : 6;
         var7 = stackIn_11_0;
-        var8 = new tf();
+        var8 = new IntrusiveDeque();
         for (var9 = 0; var9 < 4; var9++) {
           for (var10_int = 0; 2 + param3 > var10_int; var10_int++) {
-            if (p.a((byte) -24, 256) <= param1) {
-              var11 = p.a((byte) -24, 5);
-              var12 = p.a((byte) -24, 5);
+            if (LoggedPossession.a((byte) -24, 256) <= param1) {
+              var11 = LoggedPossession.a((byte) -24, 5);
+              var12 = LoggedPossession.a((byte) -24, 5);
               var13 = var12 + (var9 * 36 + 20);
               if (!param4) {
                 var13 = ph.field_e[0][0].field_i - var13;
               }
-              var8.a(new nr(var13, var10_int * 26 + 63 + 11 * var9, var7, var11), 3);
+              var8.a(new PlayerModelPreview(var13, var10_int * 26 + 63 + 11 * var9, var7, var11), 3);
             }
           }
         }
         for (var9Lifetime1 = 0; var9Lifetime1 < 6; var9Lifetime1++) {
-          jm.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
+          DelayedServerPacket.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
           var10 = bt.a(-127, param4, param3);
           PacketBuffer.a(87, var10);
-          var17 = (nr) (var8.g(24009));
+          var17 = (PlayerModelPreview) (var8.g(24009));
           while (var17 != null) {
             var17.a(var9Lifetime1, -2);
-            var17 = (nr) (var8.c(33));
+            var17 = (PlayerModelPreview) (var8.c(33));
           }
-          ta.e(121);
+          TeamManagementScreen.e(121);
           var6[var9Lifetime1] = eo.a(var10);
         }
         return var6;
@@ -87,20 +87,20 @@ final class ng {
         RuntimeException var3 = null;
         var4 = Kickabout.field_G;
         try {
-          this.field_b = param0.j((byte) -104);
-          this.field_c = param0.h((byte) -123);
+          this.field_b = param0.readByte((byte) -104);
+          this.field_c = param0.readUnsignedByte((byte) -123);
           this.field_h = new int[this.field_c];
           this.field_g = new int[this.field_c];
           this.field_f = new String[this.field_c];
           if (param1 != -20363) {
-            field_j = (ut[]) null;
+            field_j = (Sprite[]) null;
           }
           for (var3_int = 0; this.field_c > var3_int; var3_int++) {
-            this.field_g[var3_int] = param0.h((byte) -108);
+            this.field_g[var3_int] = param0.readUnsignedByte((byte) -108);
             if (this.field_g[var3_int] != 0) {
-              this.field_h[var3_int] = param0.h((byte) -117);
+              this.field_h[var3_int] = param0.readUnsignedByte((byte) -117);
             } else {
-              this.field_f[var3_int] = param0.a(-117);
+              this.field_f[var3_int] = param0.readString(-117);
             }
           }
           return;
@@ -122,7 +122,7 @@ final class ng {
         if (param0 != -4) {
           field_e = false;
         }
-        return nn.field_D;
+        return AccountChoicePanel.field_D;
     }
 
     final String a(byte param0) {
@@ -156,14 +156,14 @@ final class ng {
             var2[var3] = this.field_f[var3];
           }
         }
-        return vo.$cfr$intArgs$a$53ce4ab4c593(-18, rv.field_d[this.field_b], var5);
+        return vo.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
     }
 
-    final static ut[] a(String param0, String param1, int param2, sj param3) {
+    final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ut[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -175,7 +175,7 @@ final class ng {
         try {
           var4_int = param3.b(param1, param2 - 3);
           if (param2 != 2) {
-            field_j = (ut[]) null;
+            field_j = (Sprite[]) null;
           }
           var5 = param3.a((byte) -104, param0, var4_int);
           stackIn_3_0 = dk.a(var4_int, var5, (byte) -123, param3);
@@ -208,7 +208,7 @@ final class ng {
 
     final static void a(int param0, int param1) {
         ig.field_d = param0;
-        mf.field_Db = null;
+        SquadGridWidget.field_Db = null;
         um.field_b = false;
         if (param1 <= 27) {
           field_k = (String[]) null;

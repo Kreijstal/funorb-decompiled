@@ -6,11 +6,11 @@ final class ih {
     static int field_c;
     static String field_b;
 
-    final static ut[] a(int param0, int param1, int param2) {
+    final static Sprite[] a(int param0, int param1, int param2) {
         if (param1 != 0) {
-          return (ut[]) null;
+          return (Sprite[]) null;
         }
-        return cq.a(1, param2, param0, 124);
+        return AuctionLogEntry.a(1, param2, param0, 124);
     }
 
     final static boolean a(CharSequence param0, boolean param1) {
@@ -26,7 +26,7 @@ final class ih {
             var3 = (CommonGame) null;
             ih.a(28, (CommonGame) null, 23);
           }
-          stackIn_3_0 = gv.a(false, param0, 0);
+          stackIn_3_0 = FadingChatMessage.a(false, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class ih {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        eg var8 = null;
+        ModelMesh var8 = null;
         int var9 = 0;
         int[] var10 = null;
         int[] var11 = null;
@@ -71,7 +71,7 @@ final class ih {
         RuntimeException var3_ref = null;
         var9 = Kickabout.field_G;
         try {
-          jo.field_F = param1;
+          DemoIntegersCommand.field_F = param1;
           k.field_g = param2;
           if (param0 != -3) {
             return;
@@ -88,19 +88,19 @@ final class ih {
             stackIn_6_2 = 1900;
           }
           stackIn_5_0[stackIn_5_1] = stackIn_6_2;
-          nb.field_j = new ut[2];
+          nb.field_j = new Sprite[2];
           var10[1] = -var12[0] + 2048;
           for (var4 = 0; var4 < 2; var4++) {
-            var5 = jo.field_F.field_H[var4];
-            var6 = jo.field_F.field_d[var4];
-            var7 = jo.field_F.field_Q[var4];
-            var8 = df.a(var5, ev.field_B[var7], true, ev.field_B[var6]).b(100, 4369, 20, -56, -20);
-            nb.field_j[var4] = new ut(200, 200);
+            var5 = DemoIntegersCommand.field_F.field_H[var4];
+            var6 = DemoIntegersCommand.field_F.field_d[var4];
+            var7 = DemoIntegersCommand.field_F.field_Q[var4];
+            var8 = AuctionsHelpScreen.a(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).b(100, 4369, 20, -56, -20);
+            nb.field_j[var4] = new Sprite(200, 200);
             PacketBuffer.a(param0 - 124, nb.field_j[var4]);
-            t.c();
-            t.b(on.field_g >> 1, 410);
+            TriangleRasterizer.useRasterClip();
+            TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 410);
             var8.a(0, var12[var4], 0, 0, 0, 0, 0, 350);
-            ta.e(127);
+            TeamManagementScreen.e(127);
             eo.a(nb.field_j[var4], 65793);
             eo.a(nb.field_j[var4], 66049);
             eo.a(nb.field_j[var4], 65793);

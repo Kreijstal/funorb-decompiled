@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uq {
-    static hd field_a;
-    static hd field_b;
+    static UiLayoutNode field_a;
+    static UiLayoutNode field_b;
     static ff field_d;
     static int field_c;
     static String field_e;
@@ -13,10 +13,10 @@ final class uq {
         vg.field_Wb = true;
         if (param0 != -122) {
           uq.a(-68);
-          ov.field_b = 0;
+          NodeHashTableIterator.field_b = 0;
           return;
         }
-        ov.field_b = 0;
+        NodeHashTableIterator.field_b = 0;
     }
 
     public static void a(int param0) {

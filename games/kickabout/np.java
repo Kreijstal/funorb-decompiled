@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class np extends hd {
+final class np extends UiLayoutNode {
     static int field_Bb;
     na field_Fb;
-    static tf field_Jb;
+    static IntrusiveDeque field_Jb;
     static String field_Eb;
-    hd field_Ab;
+    UiLayoutNode field_Ab;
     static String field_yb;
-    static hd field_Cb;
-    hd field_zb;
+    static UiLayoutNode field_Cb;
+    UiLayoutNode field_zb;
     static String field_Db;
-    static hd field_Hb;
+    static UiLayoutNode field_Hb;
     static String field_Ib;
     static String field_Gb;
 
@@ -167,7 +167,7 @@ final class np extends hd {
     final void a(int param0, int param1, boolean param2, int param3) {
         this.a(false, param1, param0, this.field_zb.field_mb, param2);
         if (param3 != 0) {
-          field_Cb = (hd) null;
+          field_Cb = (UiLayoutNode) null;
         }
     }
 
@@ -211,15 +211,15 @@ final class np extends hd {
         field_Ib = null;
     }
 
-    np(long param0, hd param1, hd param2, na param3) {
-        super(param0, (hd) null);
+    np(long param0, UiLayoutNode param1, UiLayoutNode param2, na param3) {
+        super(param0, (UiLayoutNode) null);
         try {
-          this.field_zb = new hd(0L, param2);
+          this.field_zb = new UiLayoutNode(0L, param2);
           this.field_Fb = new na(0L, param3);
-          this.a((byte) -109, this.field_zb);
-          this.a((byte) -113, (hd) (this.field_Fb));
+          this.addChild((byte) -109, this.field_zb);
+          this.addChild((byte) -113, (UiLayoutNode) (this.field_Fb));
           this.field_Ab = param1;
-          this.field_zb.a((byte) -125, param1);
+          this.field_zb.addChild((byte) -125, param1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "np.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -287,7 +287,7 @@ final class np extends hd {
           return;
         }
         if (eq.field_a != vu.field_Hb) {
-          if (bn.field_A != eq.field_a) {
+          if (LeaguesScreen.field_A != eq.field_a) {
             return;
           }
           fieldTemp$2 = vo.field_bb;
@@ -298,17 +298,17 @@ final class np extends hd {
           eq.field_a = eq.field_j;
           return;
         }
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           if (vs.field_g != null) {
-            pd.a((byte) 70, 3, vs.field_g);
+            LoginForm.a((byte) 70, 3, vs.field_g);
           }
-          dh.c((byte) -77);
-          if (dq.field_e) {
-            dq.field_e = false;
-            dw.a(false, 0);
+          ImageProducerRasterBuffer.c((byte) -77);
+          if (ProxySocketConnector.field_e) {
+            ProxySocketConnector.field_e = false;
+            ConsoleEvaluationException.a(false, 0);
           }
         }
-        eq.field_a = bn.field_A;
+        eq.field_a = LeaguesScreen.field_A;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -323,7 +323,7 @@ final class np extends hd {
     }
 
     final static void a(int param0, int param1, int param2) {
-        lo.a(0, param2, param0, true, (byte) -55);
+        PasswordValidator.a(0, param2, param0, true, (byte) -55);
         int var3 = -114 / ((param1 - 16) / 57);
     }
 
@@ -333,7 +333,7 @@ final class np extends hd {
         field_Db = "No";
         field_Eb = "Players: ";
         field_Ib = "decrease starting price by <%0>";
-        field_Jb = new tf();
+        field_Jb = new IntrusiveDeque();
         field_Gb = "gamemodes";
     }
 }

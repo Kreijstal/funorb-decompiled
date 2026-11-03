@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ll extends pf {
-    static ko field_k;
+    static MenuSelection field_k;
     static String field_h;
     private java.nio.ByteBuffer field_f;
     static String field_l;
-    static ut field_g;
-    static cn field_o;
+    static Sprite field_g;
+    static CoverageBitmapFont field_o;
     static int[] field_j;
     static int field_i;
-    static ut field_m;
-    static ut field_n;
+    static Sprite field_m;
+    static Sprite field_n;
 
     final static void c(byte param0) {
         NetworkGameClient.k((byte) -118);
         int var1 = 115 % ((param0 + 48) / 42);
-        ae.m(-19417);
+        AccountRegistrationPanel.m(-19417);
     }
 
     public static void b(byte param0) {
@@ -90,7 +90,7 @@ final class ll extends pf {
             return stackIn_3_0;
           }
           if (param1 <= 81) {
-            field_m = (ut) null;
+            field_m = (Sprite) null;
           }
           if (param2 == 1) {
             stackIn_8_0 = param0[param3.field_c][param4][param3.field_k] + (-param0[param3.field_c][param4][param3.field_e] - param0[param3.field_l][param4][param3.field_k]) + param0[param3.field_l][param4][param3.field_e];
@@ -124,7 +124,7 @@ final class ll extends pf {
 
     static {
         field_h = "Please try changing the following settings:  ";
-        field_k = new ko(1);
+        field_k = new MenuSelection(1);
         field_l = "Up to 16 players compete in <col=ffff00>1 vs 1 games</col> to be the ultimate winner in a <col=ffff00>knockout competition.</col>";
         field_j = new int[4];
         field_i = -1;

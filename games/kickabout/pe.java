@@ -23,10 +23,10 @@ final class pe {
           if (!gs.field_c.a(false, "commonui")) {
             return 60;
           }
-          if (!up.field_k.d(param0 - 179)) {
+          if (!PlayerStats.field_k.d(param0 - 179)) {
             return 70;
           }
-          if (!up.field_k.a(false)) {
+          if (!PlayerStats.field_k.a(false)) {
             return 80;
           }
         } else {
@@ -53,10 +53,10 @@ final class pe {
           if (!gs.field_c.a(false, "commonui")) {
             return 80;
           }
-          if (!up.field_k.d(-106)) {
+          if (!PlayerStats.field_k.d(-106)) {
             return 82;
           }
-          if (!up.field_k.a(false)) {
+          if (!PlayerStats.field_k.a(false)) {
             return 86;
           }
         }
@@ -73,20 +73,20 @@ final class pe {
         var2 = Kickabout.field_G;
         try {
           if (!n.a(false)) {
-            if (null != e.field_m &&
-              e.field_m.field_b) {
-              fd.h(0);
-              mr.field_Z.a(new ve(mr.field_Z, hf.field_a), false);
+            if (null != SplashScreen.field_m &&
+              SplashScreen.field_m.field_b) {
+              UiWidget.h(0);
+              ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, hf.field_a), false);
             }
             return;
           }
-          mr.field_Z.a(gw.field_c, 31947, nq.field_J, true);
+          ValidatedTextWidget.field_Z.a(gw.field_c, 31947, nq.field_J, true);
           if (param0 <= 104) {
             pe.b(104);
           }
-          mr.field_Z.n(2);
+          ValidatedTextWidget.field_Z.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            mr.field_Z.a(il.field_c, (byte) -91, cc.field_e);
+            ValidatedTextWidget.field_Z.a(il.field_c, (byte) -91, cc.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,19 +97,19 @@ final class pe {
     }
 
     final static void b(int param0) {
-        ol.field_R = false;
+        GameOverView.field_R = false;
         if (param0 != 0) {
           field_a = (String) null;
         }
     }
 
-    final static boolean a(la[] param0, byte param1, int[] param2) {
-        la[] var3 = null;
+    final static boolean isInsideAnyArea(PlayArea[] param0, byte param1, int[] param2) {
+        PlayArea[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        la var5 = null;
+        PlayArea var5 = null;
         int var6 = 0;
-        la[] var7 = null;
+        PlayArea[] var7 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -132,7 +132,7 @@ final class pe {
               return false;
             }
             var5 = var7[var4];
-            if (!var5.a(param2[0], param2[1], 703166480, param2[2])) {
+            if (!var5.containsPoint(param2[0], param2[1], 703166480, param2[2])) {
               var4++;
               continue;
             }
@@ -159,18 +159,18 @@ final class pe {
         }
     }
 
-    final static void a(eg param0, ut param1, int param2, int param3) {
+    final static void a(ModelMesh param0, Sprite param1, int param2, int param3) {
         try {
           PacketBuffer.a(-51, param1);
-          on.b();
+          SoftwareRasterizer.b();
           if (param3 != 40) {
             int[] var5 = (int[]) null;
-            pe.a((la[]) null, (byte) 103, (int[]) null);
+            pe.isInsideAnyArea((PlayArea[]) null, (byte) 103, (int[]) null);
           }
-          t.c();
-          t.b(on.field_g >> 1, 198);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 198);
           param0.a(0, 0, 0, 0, 0, 0, 0, 700);
-          ta.e(param3 + 77);
+          TeamManagementScreen.e(param3 + 77);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -181,7 +181,7 @@ final class pe {
           return;
         }
         try {
-          se.field_C = param1;
+          ModalStack.field_C = param1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -190,8 +190,8 @@ final class pe {
     final static void a(int param0, byte param1) {
         fn.a(param0, (byte) -32);
         if (param1 >= -114) {
-          ut var3 = (ut) null;
-          pe.a((eg) null, (ut) null, -104, -61);
+          Sprite var3 = (Sprite) null;
+          pe.a((ModelMesh) null, (Sprite) null, -104, -61);
         }
     }
 

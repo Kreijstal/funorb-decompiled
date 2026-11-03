@@ -4,14 +4,14 @@
 import java.util.*;
 
 final class ok {
-    static tf field_a;
-    static ut field_d;
+    static IntrusiveDeque field_a;
+    static Sprite field_d;
     static boolean field_c;
     static String[] field_b;
 
-    final static eg a(int param0, int param1, Random param2) {
+    final static ModelMesh a(int param0, int param1, Random param2) {
         int var7 = 0;
-        eg stackIn_10_0 = null;
+        ModelMesh stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -38,7 +38,7 @@ final class ok {
           if (param0 >= -8) {
             ok.a(-88);
           }
-          var5 = dq.$cfr$intArgs$a$7f8aad568c81(-34, 16777200, param2) + 1;
+          var5 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 16777200, param2) + 1;
           var5 = 8355711 & var5 >> 1;
           var6 = wk.a(var5, 63);
           for (var7 = 0; var7 < var15.length; var7++) {
@@ -47,8 +47,8 @@ final class ok {
             }
           }
           var18 = ParticipantStatus.field_f;
-          var8 = var18[0] * t.field_o[1024] >> 16;
-          var9 = t.field_f[1024] * var18[0] >> 16;
+          var8 = var18[0] * TriangleRasterizer.field_o[1024] >> 16;
+          var9 = TriangleRasterizer.field_f[1024] * var18[0] >> 16;
           stackIn_10_0 = var11.b(var18[2], var18[3], var8, var18[1], var9);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,7 +81,7 @@ final class ok {
         try {
           var2_int = param0.length();
           if (param1 != 106) {
-            field_d = (ut) null;
+            field_d = (Sprite) null;
           }
           var3 = new byte[var2_int];
           for (var4 = 0; var4 < var2_int; var4++) {
@@ -207,7 +207,7 @@ final class ok {
     }
 
     static {
-        field_a = new tf();
-        field_d = new ut(256, 256);
+        field_a = new IntrusiveDeque();
+        field_d = new Sprite(256, 256);
     }
 }

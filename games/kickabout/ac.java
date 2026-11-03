@@ -6,7 +6,7 @@ import java.util.*;
 final class ac implements hc {
     static Random field_d;
     private static int field_c;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static boolean field_f;
     static String field_e;
     static byte[][] field_a;
@@ -23,11 +23,11 @@ final class ac implements hc {
         int var2 = 0;
         int var2Lifetime1;
         if (field_c != -1) {
-          var2 = -wf.field_A + 20;
-          on.f(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
-          on.a(var2, 20, sh.field_d, 48, 10, 65793, 160);
+          var2 = -AuctionsScreen.field_A + 20;
+          SoftwareRasterizer.f(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
+          SoftwareRasterizer.a(var2, 20, sh.field_d, 48, 10, 65793, 160);
           if (qe.field_i != null) {
-            qe.field_i[PacketBuffer.field_e[field_c]].g(var2, 28);
+            qe.field_i[PacketBuffer.field_e[field_c]].drawQuarterSize(var2, 28);
           }
           un.field_d.a(kw.field_c[field_c], var2 + 16 + 32, 49, 16777215, -1);
         }
@@ -61,15 +61,15 @@ final class ac implements hc {
         int var4;
         oi var5;
         var4 = Kickabout.field_G;
-        if (0 != lj.field_f) {
-          lj.field_f = lj.field_f - 1;
-          if (lj.field_f < 16) {
-            var3 = 16 - lj.field_f;
-            wf.field_A = var3 * (sh.field_d + 20) * var3 >> 8;
+        if (0 != TextLine.field_f) {
+          TextLine.field_f = TextLine.field_f - 1;
+          if (TextLine.field_f < 16) {
+            var3 = 16 - TextLine.field_f;
+            AuctionsScreen.field_A = var3 * (sh.field_d + 20) * var3 >> 8;
           } else {
-            if (!(319 >= lj.field_f)) {
-              var3 = -319 + lj.field_f;
-              wf.field_A = var3 * ((sh.field_d + 20) * var3) >> 8;
+            if (!(319 >= TextLine.field_f)) {
+              var3 = -319 + TextLine.field_f;
+              AuctionsScreen.field_A = var3 * ((sh.field_d + 20) * var3) >> 8;
             }
           }
         } else {
@@ -79,9 +79,9 @@ final class ac implements hc {
           var5 = (oi) (ec.field_f.b((byte) -36));
           if (var5 != null) {
             field_c = var5.field_j;
-            lj.field_f = 335;
+            TextLine.field_f = 335;
             sh.field_d = un.field_d.a(kw.field_c[field_c]) + 56;
-            wf.field_A = 20 + sh.field_d;
+            AuctionsScreen.field_A = 20 + sh.field_d;
             if (param0 == -25) {
               return;
             }

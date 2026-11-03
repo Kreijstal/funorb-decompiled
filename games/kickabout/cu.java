@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cu {
-    static tf field_a;
+    static IntrusiveDeque field_a;
     static String[] field_f;
     static String field_g;
     static int field_c;
@@ -68,7 +68,7 @@ final class cu {
         return var6_refLifetime1;
     }
 
-    final static boolean a(int param0, sj param1, int param2, int param3) {
+    final static boolean a(int param0, ResourceArchive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -121,10 +121,10 @@ final class cu {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        hn var3 = new hn(3, new int[]{param1, param2});
+        ManagerAction var3 = new ManagerAction(3, new int[]{param1, param2});
         ii.a(var3, 106);
-        if (25 == cq.field_h.field_c) {
-          ((b) (cq.field_h)).h((byte) 84);
+        if (25 == AuctionLogEntry.field_h.screenId) {
+          ((MySquadScreen) (AuctionLogEntry.field_h)).refreshSelectedPlayer((byte) 84);
         }
         int var4 = -22 / ((param0 - 36) / 39);
     }
@@ -143,12 +143,12 @@ final class cu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 104) {
-            field_a = (tf) null;
+            field_a = (IntrusiveDeque) null;
           }
           var3_int = param2.field_n;
           var5 = (CharSequence) ((Object) param1);
           var4 = ok.a(var5, (byte) 106);
-          param2.f(-53, var4.length);
+          param2.writeUnsignedSmart(-53, var4.length);
           param2.field_n = param2.field_n + os.field_I.a(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
           stackIn_3_0 = param2.field_n - var3_int;
           return stackIn_3_0;
@@ -174,7 +174,7 @@ final class cu {
 
     static {
         field_f = new String[]{"By rating", "By win percentage"};
-        field_a = new tf();
+        field_a = new IntrusiveDeque();
         field_c = 0;
         field_b = "Waiting for animations";
         field_g = "kick";

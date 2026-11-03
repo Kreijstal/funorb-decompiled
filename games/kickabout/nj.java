@@ -4,7 +4,7 @@
 final class nj {
     static String field_c;
     static String field_b;
-    static hd field_d;
+    static UiLayoutNode field_d;
     static String field_a;
 
     final static void a(boolean param0, int param1) {
@@ -40,7 +40,7 @@ final class nj {
           var7 = Kickabout.field_G;
           try {
             try {
-              var3 = (String) (mm.a(param0 ^ 30858, "getcookies", param2));
+              var3 = (String) (AppletJavaScriptBridge.a(param0 ^ 30858, "getcookies", param2));
               var4 = FormationAgent.a(var3, param0 ^ 2, ';');
               for (var5 = param0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -83,11 +83,11 @@ final class nj {
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
-        if (!(jh.field_Kb <= var1)) {
-          in.field_b = in.field_b + (-var1 + jh.field_Kb);
+        if (!(AuctionTableWidget.field_Kb <= var1)) {
+          in.field_b = in.field_b + (-var1 + AuctionTableWidget.field_Kb);
         }
         int var3 = -67 / ((param0 + 10) / 32);
-        jh.field_Kb = var1;
+        AuctionTableWidget.field_Kb = var1;
         return var1 + in.field_b;
     }
 
@@ -104,19 +104,19 @@ final class nj {
     final static int a(int param0, int param1, int param2, int param3) {
         if (param3 != 29079) {
           field_b = (String) null;
-          if (param2 + (param1 + param0) <= on.field_f) {
+          if (param2 + (param1 + param0) <= SoftwareRasterizer.field_f) {
             return param1 + param0;
           }
           if (-param2 + param0 < 0) {
-            return on.field_f - param2;
+            return SoftwareRasterizer.field_f - param2;
           }
           return param0 - param2;
         }
-        if (param2 + (param1 + param0) <= on.field_f) {
+        if (param2 + (param1 + param0) <= SoftwareRasterizer.field_f) {
           return param1 + param0;
         }
         if (-param2 + param0 < 0) {
-          return on.field_f - param2;
+          return SoftwareRasterizer.field_f - param2;
         }
         return param0 - param2;
     }

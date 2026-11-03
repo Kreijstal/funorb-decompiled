@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vu extends hd {
-    private hd field_Bb;
-    static sj field_Eb;
+final class vu extends UiLayoutNode {
+    private UiLayoutNode field_Bb;
+    static ResourceArchive field_Eb;
     static int[] field_zb;
     static int field_Ab;
     static volatile int field_Fb;
     static int field_Cb;
     static boolean field_Db;
     static tk field_Ib;
-    hd field_yb;
+    UiLayoutNode field_yb;
     static String field_Gb;
     static int field_Hb;
 
@@ -59,7 +59,7 @@ final class vu extends hd {
         field_Ib = null;
     }
 
-    vu(long param0, hd param1, hd param2, hd param3, ut param4, String param5) {
+    vu(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -76,16 +76,16 @@ final class vu extends hd {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Bb = new hd(0L, param2);
+            this.field_Bb = new UiLayoutNode(0L, param2);
             this.field_Bb.field_N = param4;
-            this.a((byte) -112, this.field_Bb);
+            this.addChild((byte) -112, this.field_Bb);
           }
           if (param5 != null) {
-            this.field_yb = new hd(0L, param3, param5);
-            this.a((byte) -104, this.field_yb);
-            this.b(false);
+            this.field_yb = new UiLayoutNode(0L, param3, param5);
+            this.addChild((byte) -104, this.field_yb);
+            this.invalidateChildren(false);
           } else {
-            this.b(false);
+            this.invalidateChildren(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -136,7 +136,7 @@ final class vu extends hd {
         }
         int var5 = -param0;
         if (null != this.field_yb) {
-          var5 = this.field_yb.a(this.field_q - param2 - var4 - (param0 + param2), 0);
+          var5 = this.field_yb.computeContentWidth(this.field_q - param2 - var4 - (param0 + param2), 0);
         }
         int var6 = param2 + (var4 - (-param0 - var5)) + param2;
         if (var6 > this.field_q) {
@@ -209,25 +209,25 @@ final class vu extends hd {
           ar.a(15707, sn.field_e);
         }
         if (param0) {
-          if (wi.field_v != null) {
-            wi.field_v.a(param1, false);
+          if (TextButton.field_v != null) {
+            TextButton.field_v.a(param1, false);
           }
           nj.a(param1, -128);
           if (null != ck.field_b) {
             ck.field_b.a(104, param1);
           }
-          fb.a(30521, param1);
+          NumericDateInputWidget.a(30521, param1);
           return;
         }
         field_Db = true;
-        if (wi.field_v != null) {
-          wi.field_v.a(param1, false);
+        if (TextButton.field_v != null) {
+          TextButton.field_v.a(param1, false);
         }
         nj.a(param1, -128);
         if (null != ck.field_b) {
           ck.field_b.a(104, param1);
         }
-        fb.a(30521, param1);
+        NumericDateInputWidget.a(30521, param1);
     }
 
     static {

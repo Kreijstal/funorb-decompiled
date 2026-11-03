@@ -3,11 +3,11 @@
  */
 final class qj {
     int field_d;
-    static ut field_f;
+    static Sprite field_f;
     int field_g;
     static int field_e;
     int[] field_b;
-    static ut field_a;
+    static Sprite field_a;
     static String field_c;
 
     final int a(byte param0) {

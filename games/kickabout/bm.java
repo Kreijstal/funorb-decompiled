@@ -3,23 +3,23 @@
  */
 final class bm extends i {
     static IntrusiveNodeHashTable[] field_L;
-    pt field_J;
+    AuctionListing field_J;
     static String field_K;
     private boolean field_G;
     static int field_I;
     static r field_H;
     static String field_F;
 
-    bm(pt param0, boolean param1) {
-        super(21, !param0.e(-73).c(-2) ? param0.e(-128) : null);
+    bm(AuctionListing param0, boolean param1) {
+        super(21, !param0.getPlayerStats(-73).isEmpty(-2) ? param0.getPlayerStats(-128) : null);
         String var6 = null;
-        hd dupTemp$0 = null;
+        UiLayoutNode dupTemp$0 = null;
         String var4 = null;
         int var5 = 0;
         try {
           this.field_G = param1 ? true : false;
           this.field_J = param0;
-          var6 = qp.a(this.field_J.f((byte) 37), false, this.field_J.b(6));
+          var6 = AccountMessagePanel.a(this.field_J.getListingType((byte) 37), false, this.field_J.b(6));
           this.a(var6, this.field_t, this.field_D, -87, this.field_u);
           dupTemp$0 = this.field_i[0];
           dupTemp$0.field_s = dupTemp$0.field_s - 30;
@@ -38,15 +38,15 @@ final class bm extends i {
           return;
         }
         super.a(62, param1);
-        if (!la.a(100) &&
+        if (!PlayArea.a(100) &&
           this.field_G) {
           or.field_d.b(60, (byte) 104);
-          this.field_J.a(or.field_d, 5);
+          this.field_J.writeToPacket(or.field_d, 5);
         }
         ce.field_K.a(this.field_J, 3);
-        ((wf) (rn.a(-104, 16))).field_H = -1L;
+        ((AuctionsScreen) (rn.a(-104, 16))).field_H = -1L;
         if (param1 == 1) {
-          jm.a(16, true, -2);
+          DelayedServerPacket.a(16, true, -2);
         }
     }
 

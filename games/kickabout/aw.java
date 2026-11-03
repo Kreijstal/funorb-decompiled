@@ -17,22 +17,22 @@ final class aw extends i {
           field_I = null;
           return;
         }
-        sj var2 = (sj) null;
-        aw.a(90, 5, (sj) null, 24);
+        ResourceArchive var2 = (ResourceArchive) null;
+        aw.a(90, 5, (ResourceArchive) null, 24);
         field_K = null;
         field_I = null;
     }
 
-    final static rg g(byte param0) {
+    final static MouseWheelInput g(byte param0) {
         try {
           Throwable var1 = null;
-          rg stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 3) {
               aw.h((byte) -117);
             }
-            stackIn_3_0 = (rg) (Class.forName("rh").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("AwtMouseWheelInput").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,10 +46,10 @@ final class aw extends i {
         }
     }
 
-    final static kg a(int param0, int param1, sj param2, int param3) {
+    final static IndexedSprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        kg stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -57,12 +57,12 @@ final class aw extends i {
         try {
           if (!cu.a(param0, param2, param1, param3 ^ 123)) {
             stackIn_2_0 = null;
-            return (kg) (stackIn_2_0);
+            return (IndexedSprite) (stackIn_2_0);
           }
           if (param3 != 2) {
             field_G = (String) null;
           }
-          stackIn_6_0 = ub.h((byte) -128);
+          stackIn_6_0 = ModalPanel.h((byte) -128);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class aw extends i {
         if (param1 == 2) {
           return;
         }
-        wf.b(10, param1 == 0 ? true : false);
+        AuctionsScreen.startComputerMatch(10, param1 == 0 ? true : false);
         if (param0 > 60) {
           return;
         }

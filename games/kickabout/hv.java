@@ -17,7 +17,7 @@ final class hv {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = bg.a((byte) 116, LoggedPlayer.a(param1, param0));
+          var2 = QuickChatPhraseDefinition.decodeBase37Name((byte) 116, LoggedPlayer.a(param1, param0));
           if (param0) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
@@ -41,7 +41,7 @@ final class hv {
         }
     }
 
-    final static void a(boolean param0, CommonGame param1, int param2) {
+    final static void updateKeeperAI(boolean param0, CommonGame param1, int param2) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -75,11 +75,11 @@ final class hv {
           var4 = stackIn_4_0;
           stackIn_7_0 = (var4 != 0) ? 0 : 1344;
           var5 = stackIn_7_0;
-          var6 = var19.f(-95);
-          var7 = var19.a(param0);
-          var8 = param1.field_V.a(true);
-          var9 = param1.field_V.c(879306160);
-          var10 = param1.field_V.e(-107);
+          var6 = var19.pixelX(-95);
+          var7 = var19.pixelY(param0);
+          var8 = param1.field_V.pixelX(true);
+          var9 = param1.field_V.pixelY(879306160);
+          var10 = param1.field_V.horizontalSpeedSquared(-107);
           var11 = 448 - var8;
           var12 = -var9 + var5;
           stackIn_10_0 = (62500 <= var11 * var11 + var12 * var12) ? 0 : 1;
@@ -91,52 +91,52 @@ final class hv {
           }
           var14 = stackIn_16_0;
           if (3 == var19.action) {
-            var19.field_G = uv.a(true, var9 - var7, -var6 + var8);
-            if (-1 == param1.field_V.field_m) {
-              var19.a((byte) -31, 0);
+            var19.directionMask = uv.a(true, var9 - var7, -var6 + var8);
+            if (-1 == param1.field_V.possessorTeam) {
+              var19.setAction((byte) -31, 0);
               return;
             }
-            if (param1.field_V.field_m == param2 &&
-              param1.field_V.field_s == 0) {
-              var19.a((byte) -31, 10);
+            if (param1.field_V.possessorTeam == param2 &&
+              param1.field_V.possessorSlot == 0) {
+              var19.setAction((byte) -31, 10);
               return;
             }
             var15 = -448 + var6;
             var16 = -var5 + var7;
             if (62500 < var15 * var15 + var16 * var16) {
-              var19.field_L = 0;
+              var19.actionTime = 0;
               return;
             }
           } else {
             if (var14 == 0) {
               return;
             }
-            if (param1.field_V.field_m == param2 &&
-              param1.field_V.field_s == 0) {
-              lk.a(param2, param1, -96, var19);
+            if (param1.field_V.possessorTeam == param2 &&
+              param1.field_V.possessorSlot == 0) {
+              ConsoleExpression.a(param2, param1, -96, var19);
               return;
             }
             if (var13 != 0 &&
-              -1 == param1.field_V.field_m &&
+              -1 == param1.field_V.possessorTeam &&
               var10 < 400000) {
               var19.action = 0;
-              ue.a(4, var8, var19, var9);
+              ue.steerTowardsPoint(4, var8, var19, var9);
               return;
             }
-            if (wt.a(param1.field_V, var19, (byte) -75, param2)) {
+            if (wt.tryKeeperDive(param1.field_V, var19, (byte) -75, param2)) {
               return;
             }
             gg.a(param2, 0, param1.field_V);
-            ue.a(4, pu.field_zb[0], var18, pu.field_zb[1]);
+            ue.steerTowardsPoint(4, pu.field_zb[0], var18, pu.field_zb[1]);
             if (var19.action == 0 &&
-              0 == var19.field_G) {
-              var19.a((byte) -31, 14);
+              0 == var19.directionMask) {
+              var19.setAction((byte) -31, 14);
             }
             if (var13 != 0) {
-              es.a(-120, var19, param2, param1.b((byte) -96), param1.field_V);
+              RowRangeRequest.tryKeeperTackle(-120, var19, param2, param1.getBallCarrier((byte) -96), param1.field_V);
             }
             if (var19.action == 14) {
-              var19.a(uv.a(param0, -var19.a(true) + var9, var8 - var19.f(-98)), 26214);
+              var19.setDirectionFromMask(uv.a(param0, -var19.pixelY(true) + var9, var8 - var19.pixelX(-98)), 26214);
               return;
             }
           }
@@ -165,15 +165,15 @@ final class hv {
         field_c = (String[][]) null;
     }
 
-    final static void a(hu param0, int param1) {
+    final static void a(BitmapFont param0, int param1) {
         if (param1 != -448) {
           return;
         }
         try {
-          cq.field_e = param0;
-          ae.field_D = h.a(17475);
-          js.field_d = new tf();
-          bk.field_c = new gv[6];
+          AuctionLogEntry.field_e = param0;
+          AccountRegistrationPanel.field_D = h.a(17475);
+          AppScreen.field_d = new IntrusiveDeque();
+          bk.field_c = new FadingChatMessage[6];
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "hv.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -3,7 +3,7 @@
  */
 final class j {
     static String[] field_a;
-    private gm field_b;
+    private RenderedFootballer field_b;
 
     public static void a(boolean param0) {
         field_a = null;
@@ -54,12 +54,12 @@ final class j {
         }
     }
 
-    final static ut a(int param0) {
+    final static Sprite a(int param0) {
         if (param0 != -5275) {
           field_a = (String[]) null;
-          return cv.field_b[ih.field_c][rm.field_C];
+          return cv.field_b[ih.field_c][RankingsScreen.field_C];
         }
-        return cv.field_b[ih.field_c][rm.field_C];
+        return cv.field_b[ih.field_c][RankingsScreen.field_C];
     }
 
     final void a(int param0, int param1, int param2) {
@@ -67,10 +67,10 @@ final class j {
         if (ia.field_c) {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
           PacketBuffer.a(param0 + 39, wa.field_a);
-          on.b();
+          SoftwareRasterizer.b();
           this.field_b.a(1200, 300, 48, 90, (byte) -105);
-          ta.e(127);
-          wa.field_a.f(param2 - param0, -47 + param1);
+          TeamManagementScreen.e(127);
+          wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
           if (ia.field_c) {
             this.field_b.field_R = var4;
             return;
@@ -78,10 +78,10 @@ final class j {
           return;
         }
         PacketBuffer.a(param0 + 39, wa.field_a);
-        on.b();
+        SoftwareRasterizer.b();
         this.field_b.a(1200, 300, 48, 90, (byte) -105);
-        ta.e(127);
-        wa.field_a.f(param2 - param0, -47 + param1);
+        TeamManagementScreen.e(127);
+        wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
         if (!ia.field_c) {
           return;
         }
@@ -90,11 +90,11 @@ final class j {
 
     final void a(int param0, int param1) {
         if (param0 == 0) {
-          this.field_b.field_G = 0;
-          this.field_b.field_j = 1;
-          this.field_b.field_n = 0;
+          this.field_b.directionMask = 0;
+          this.field_b.directionX = 1;
+          this.field_b.directionY = 0;
           if (param0 != 129) {
-            this.field_b.a(2, (la[]) null, false, false);
+            this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
             if (param1 == 1) {
               this.field_b.g((byte) 125);
               return;
@@ -103,8 +103,8 @@ final class j {
             this.field_b.g((byte) 125);
             return;
           }
-          this.field_b.field_G = 3;
-          this.field_b.a(2, (la[]) null, false, false);
+          this.field_b.directionMask = 3;
+          this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
           if (param1 != 1) {
             field_a = (String[]) null;
             this.field_b.g((byte) 125);
@@ -113,10 +113,10 @@ final class j {
           this.field_b.g((byte) 125);
           return;
         }
-        this.field_b.field_G = 8;
+        this.field_b.directionMask = 8;
         if (param0 == 129) {
-          this.field_b.field_G = 3;
-          this.field_b.a(2, (la[]) null, false, false);
+          this.field_b.directionMask = 3;
+          this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
           if (param1 == 1) {
             this.field_b.g((byte) 125);
             return;
@@ -125,7 +125,7 @@ final class j {
           this.field_b.g((byte) 125);
           return;
         }
-        this.field_b.a(2, (la[]) null, false, false);
+        this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
         if (param1 == 1) {
           this.field_b.g((byte) 125);
           return;
@@ -136,7 +136,7 @@ final class j {
 
     j(int param0) {
         int var2 = 3;
-        gr var3 = new gr();
+        ClubState var3 = new ClubState();
         var3.field_w = 4;
         if (param0 != 0) {
           var3.field_k = 10;
@@ -145,9 +145,9 @@ final class j {
           var3.field_R = 31;
           var3.field_k = 16;
         }
-        vn var4 = fp.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
-        this.field_b = new gm(var4, var2, false);
-        this.field_b.field_G = 8;
+        vn var4 = AuctionItem.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
+        this.field_b = new RenderedFootballer(var4, var2, false);
+        this.field_b.directionMask = 8;
         this.field_b.field_R = 1536;
         this.field_b.b((byte) -128, 5);
         if (param0 == 0) {

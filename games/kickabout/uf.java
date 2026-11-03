@@ -4,11 +4,11 @@
 final class uf {
     static String field_d;
     static String field_a;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static PacketBuffer field_c;
     static String[] field_e;
 
-    final static void a(ut[][] param0, sj param1, int[] param2, boolean param3, byte[] param4, kg[] param5, sj param6, int param7, String[][] param8, String[][] param9, sj param10, byte[] param11, String[] param12, int param13, String[] param14, ut[][] param15, int[] param16, int param17, int param18, String[] param19) {
+    final static void a(Sprite[][] param0, ResourceArchive param1, int[] param2, boolean param3, byte[] param4, IndexedSprite[] param5, ResourceArchive param6, int param7, String[][] param8, String[][] param9, ResourceArchive param10, byte[] param11, String[] param12, int param13, String[] param14, Sprite[][] param15, int[] param16, int param17, int param18, String[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -46,13 +46,13 @@ final class uf {
           ri.a(param10, param16, param7 ^ -17016, param5, param6);
           tb.a(-92, param6);
           wp.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
-          ew.a(param3, param6, param1, 0);
+          BufferedCacheFile.a(param3, param6, param1, 0);
           sb.b((byte) -124);
           if (param7 != 16971) {
             uf.a((byte) -8);
           }
           na.h(0);
-          tq.g((byte) -47);
+          NotCommand.g((byte) -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ final class uf {
     final static boolean c(int param0) {
         if (param0 != 608) {
           String[] var2 = (String[]) null;
-          uf.a((ut[][]) null, (sj) null, (int[]) null, true, (byte[]) null, (kg[]) null, (sj) null, 32, (String[][]) null, (String[][]) null, (sj) null, (byte[]) null, (String[]) null, 71, (String[]) null, (ut[][]) null, (int[]) null, -120, 61, (String[]) null);
+          uf.a((Sprite[][]) null, (ResourceArchive) null, (int[]) null, true, (byte[]) null, (IndexedSprite[]) null, (ResourceArchive) null, 32, (String[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, 71, (String[]) null, (Sprite[][]) null, (int[]) null, -120, 61, (String[]) null);
           if (hl.field_d < 20) {
             return true;
           }
@@ -190,15 +190,15 @@ final class uf {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        ut var2 = null;
+        Sprite var2 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ut var8 = null;
+        Sprite var8 = null;
         var7 = Kickabout.field_G;
         try {
-          var8 = new ut(76, 92);
-          var2 = new ut(76, 92);
+          var8 = new Sprite(76, 92);
+          var2 = new Sprite(76, 92);
           if (param0 != -32) {
             return;
           }
@@ -209,26 +209,26 @@ final class uf {
               if (~var4 == ~var3) {
                 var5 = 16777215;
               }
-              if (ct.a(97, var4 - 1, 6) == var3) {
+              if (SingleChildContainer.a(97, var4 - 1, 6) == var3) {
                 var5 = 13619151;
               }
-              if (ct.a(param0 + 119, -2 + var4, 6) == var3) {
+              if (SingleChildContainer.a(param0 + 119, -2 + var4, 6) == var3) {
                 var5 = 11184810;
               }
-              if (var3 == ct.a(124, -3 + var4, 6)) {
+              if (var3 == SingleChildContainer.a(124, -3 + var4, 6)) {
                 var5 = 8947848;
               }
               PacketBuffer.a(-110, var8);
-              on.b();
-              on.a(on.field_g - 6 >> 1, 26, 6, 10, var5);
-              ta.e(120);
+              SoftwareRasterizer.b();
+              SoftwareRasterizer.fillRect(SoftwareRasterizer.field_g - 6 >> 1, 26, 6, 10, var5);
+              TeamManagementScreen.e(120);
               var6 = (var4 << 16) / 6;
               var8.a(608, 736, 608, 736, var6, 4096);
             }
-            w.field_f[-var3 + 5] = new ot(38, 46);
+            w.field_f[-var3 + 5] = new ArgbSprite(38, 46);
             eo.a(var2, w.field_f[5 - var3]);
           }
-          ta.e(param0 ^ -100);
+          TeamManagementScreen.e(param0 ^ -100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,7 +257,7 @@ final class uf {
         }
         if (wk.field_f == cr.field_d) {
           wk.field_f = vj.field_a;
-          return kl.field_a;
+          return ArchiveIndex.field_a;
         }
         return null;
     }

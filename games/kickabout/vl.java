@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vl {
-    static bu field_c;
+    static PlatformTaskDispatcher field_c;
     static String field_f;
     static String field_e;
-    static ut field_g;
+    static Sprite field_g;
     static String field_b;
     static boolean field_d;
     private String field_a;
@@ -145,7 +145,7 @@ final class vl {
         }
     }
 
-    final static void a(CommonGame param0, byte param1) {
+    final static void computeCameraFocus(CommonGame param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -153,8 +153,8 @@ final class vl {
         int var6 = 0;
         int var7 = 0;
         try {
-          var2_int = param0.field_V.a(true);
-          var3 = param0.field_V.c(879306160);
+          var2_int = param0.field_V.pixelX(true);
+          var3 = param0.field_V.pixelY(879306160);
           if (param1 >= -39) {
             vl.a(127);
           }
@@ -162,7 +162,7 @@ final class vl {
           var5 = -672 + var3;
           var6 = var4 * var4 + var5 * var5;
           if (var6 > 202500) {
-            var7 = de.a(var6, (byte) -118);
+            var7 = GameKeyHandler.a(var6, (byte) -118);
             var3 = 450 * var5 / var7 + 672;
             var2_int = 448 + var4 * 450 / var7;
           }
@@ -173,13 +173,13 @@ final class vl {
         }
     }
 
-    final static ut a(int param0, int param1, boolean param2, int param3) {
+    final static Sprite a(int param0, int param1, boolean param2, int param3) {
         int var4 = (param1 << 1) + 1;
-        ut var5 = new ut(var4, var4);
+        Sprite var5 = new Sprite(var4, var4);
         PacketBuffer.a(56, var5);
-        on.d(param1, param1, param1, param3);
-        on.d(param1, param1, param1 - param0, 0);
-        ta.e(120);
+        SoftwareRasterizer.d(param1, param1, param1, param3);
+        SoftwareRasterizer.d(param1, param1, param1 - param0, 0);
+        TeamManagementScreen.e(120);
         if (!param2) {
           vl.a(8);
         }
@@ -188,8 +188,8 @@ final class vl {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         dk.a(param2, -109, param1, param3 / param0, param3 % 3);
-        on.a(param2, param1, 156, 225, 10, 16777215, param4);
-        ta.e(126);
+        SoftwareRasterizer.a(param2, param1, 156, 225, 10, 16777215, param4);
+        TeamManagementScreen.e(126);
     }
 
     final static boolean a(boolean param0) {
@@ -197,7 +197,7 @@ final class vl {
         if (param0) {
           vl.a(12, -70, true, -119);
         }
-        stackIn_6_0 = (fp.field_e == -1) && (nq.g(0) < 10);
+        stackIn_6_0 = (AuctionItem.field_e == -1) && (nq.g(0) < 10);
         return stackIn_6_0;
     }
 

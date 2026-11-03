@@ -3,10 +3,10 @@
  */
 class i extends jb {
     String field_v;
-    static ut[] field_E;
+    static Sprite[] field_E;
     private int field_C;
     private int field_s;
-    static vc[] field_A;
+    static ReceivedAuctionItem[] field_A;
     static String field_w;
     static int field_x;
     int field_y;
@@ -14,7 +14,7 @@ class i extends jb {
     static double field_B;
     lv field_t;
     static long field_z;
-    ut field_D;
+    Sprite field_D;
 
     void a(int param0, boolean param1) {
         if (param0 != 3) {
@@ -37,14 +37,14 @@ class i extends jb {
         boolean stackIn_33_3 = false;
         int stackIn_35_2 = 0;
         boolean stackIn_36_3 = false;
-        ut[][][] stackIn_38_0 = null;
+        Sprite[][][] stackIn_38_0 = null;
         int stackIn_39_1 = 0;
-        ut[] stackIn_43_0 = null;
+        Sprite[] stackIn_43_0 = null;
         int stackIn_44_1 = 0;
         int stackIn_49_0 = 0;
-        ut[][] stackIn_51_0 = null;
+        Sprite[][] stackIn_51_0 = null;
         int stackIn_52_1 = 0;
-        ut[] stackIn_54_0 = null;
+        Sprite[] stackIn_54_0 = null;
         int stackIn_55_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -53,25 +53,25 @@ class i extends jb {
         FootballerAgent var3 = null;
         int var4 = 0;
         boolean[] var5 = null;
-        ut var5_ref = null;
+        Sprite var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int[] var8_ref_int__ = null;
         int var8 = 0;
         int[] var9_ref_int__ = null;
         int var9 = 0;
-        ut[][] var10 = null;
+        Sprite[][] var10 = null;
         int var12 = 0;
-        ut var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
         boolean[] var17 = null;
-        ut var18 = null;
+        Sprite var18 = null;
         int var4Lifetime1;
         var16 = Kickabout.field_G;
         try {
-          if (null == ae.field_C) {
+          if (null == AccountRegistrationPanel.field_C) {
             return;
           }
           if (param0 != 70) {
@@ -93,9 +93,9 @@ class i extends jb {
             var2 == 0) {
             return;
           }
-          var3 = et.field_d.a((byte) -90, 0);
+          var3 = et.field_d.getControlledFootballer((byte) -90, 0);
           if (var1_int != 0) {
-            var4 = var3.field_G;
+            var4 = var3.directionMask;
             array$0 = new boolean[4];
             stackIn_26_0 = array$0;
             stackIn_26_1 = array$0;
@@ -113,11 +113,11 @@ class i extends jb {
             stackIn_26_0[stackIn_35_2] = stackIn_36_3;
             var17 = stackIn_26_0;
             var5 = var17;
-            var6 = var3.f(-113);
-            var7 = -22 + var3.a(true);
+            var6 = var3.pixelX(-113);
+            var7 = -22 + var3.pixelY(true);
             var8_ref_int__ = new int[]{var6 - 60, var6 + 60, var6, var6};
             var9_ref_int__ = new int[]{var7, var7, -60 + var7, 60 + var7};
-            stackIn_38_0 = ae.field_C;
+            stackIn_38_0 = AccountRegistrationPanel.field_C;
             if (!cl.field_d) {
               stackIn_39_1 = 1;
             } else {
@@ -133,15 +133,15 @@ class i extends jb {
                 stackIn_44_1 = 1;
               }
               var13 = stackIn_43_0[stackIn_44_1];
-              var14 = hw.field_i * var13.field_o >> 8;
-              var15 = var13.field_v * hw.field_i >> 8;
+              var14 = InstrumentNoteMask.field_i * var13.field_o >> 8;
+              var15 = var13.field_v * InstrumentNoteMask.field_i >> 8;
               var13.b(ug.a(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), lf.a((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
             }
           }
           if (var2 != 0) {
             stackIn_49_0 = (4 != var3.action) ? 0 : 1;
             var4Lifetime1 = stackIn_49_0;
-            stackIn_51_0 = kd.field_y;
+            stackIn_51_0 = DebugConsole.field_y;
             if (!cl.field_d) {
               stackIn_52_1 = 1;
             } else {
@@ -156,14 +156,14 @@ class i extends jb {
             var18 = stackIn_54_0[stackIn_55_1];
             var5_ref = var18;
             if (var1_int != 0) {
-              var6 = var3.f(-101);
-              var7 = 70 + var3.a(true);
+              var6 = var3.pixelX(-101);
+              var7 = 70 + var3.pixelY(true);
             } else {
-              var6 = var3.f(-124);
-              var7 = var3.a(true) + 30;
+              var6 = var3.pixelX(-124);
+              var7 = var3.pixelY(true) + 30;
             }
-            var8 = hw.field_i * var18.field_o >> 8;
-            var9 = hw.field_i * var18.field_v >> 8;
+            var8 = InstrumentNoteMask.field_i * var18.field_o >> 8;
+            var9 = InstrumentNoteMask.field_i * var18.field_v >> 8;
             var5_ref.b(ug.a(0, var6) - (var8 >> 1), -(var9 >> 1) + lf.a((byte) -77, var7), var8, var9);
           }
           return;
@@ -287,7 +287,7 @@ class i extends jb {
         int var5 = 45 + param2;
         int var6 = -20 + this.b(-1379118556);
         int var7 = -20 + this.a((byte) 80) - 80;
-        on.a(var4, var5, var6, var7, 10, 65793, 140);
+        SoftwareRasterizer.a(var4, var5, var6, var7, 10, 65793, 140);
         un.field_d.a(this.field_u, 5 + var4, var5 - 12, 16777215, -1);
         int var8 = 25 + param2 + 35;
         if (27 == this.field_y) {
@@ -296,7 +296,7 @@ class i extends jb {
         if (param0 >= -11) {
           return;
         }
-        pb.field_C.a(this.field_v, -15 + this.b(-1379118556) + (param1 + (-10 - this.field_s)), var8, this.field_s, this.field_C, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.a(this.field_v, -15 + this.b(-1379118556) + (param1 + (-10 - this.field_s)), var8, this.field_s, this.field_C, 16777215, -1, 0, 1, 16);
         if (this.field_t != null) {
           this.field_t.a((var7 >> 1) + var5, 23, (this.field_t.b(0) >> 1) + (var4 + 15));
           return;
@@ -307,7 +307,7 @@ class i extends jb {
         }
     }
 
-    final void a(String param0, lv param1, ut param2, int param3, String param4) {
+    final void a(String param0, lv param1, Sprite param2, int param3, String param4) {
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
         int stackIn_12_1 = 0;
@@ -339,7 +339,7 @@ class i extends jb {
               this.field_s = this.field_s - (this.field_D.field_o + 15);
             }
           }
-          this.field_C = pb.field_C.c(this.field_v, this.field_s, 16);
+          this.field_C = IsSixCommand.field_C.paragraphHeight(this.field_v, this.field_s, 16);
           stackIn_9_1 = this.field_C;
           if (this.field_D != null) {
             stackIn_10_2 = this.field_D.field_v;
@@ -393,27 +393,27 @@ class i extends jb {
     }
 
     i(int param0, lv param1) {
-        this(param0, param1, pb.field_G[param0], gd.field_e[param0]);
+        this(param0, param1, IsSixCommand.field_G[param0], gd.field_e[param0]);
     }
 
     void a(int param0, int param1) {
         ii.a((byte) -125);
         if (param0 >= 60) {
           if (this.field_y == 40) {
-            wf.b(10, true);
+            AuctionsScreen.startComputerMatch(10, true);
           }
           return;
         }
         this.b(62);
         if (this.field_y == 40) {
-          wf.b(10, true);
+          AuctionsScreen.startComputerMatch(10, true);
         }
     }
 
     i(int param0, lv param1, String param2, String param3) {
         try {
           this.field_y = param0;
-          this.a(param3, param1, da.b(2, this.field_y), -125, param2);
+          this.a(param3, param1, MusicPatchNode.b(2, this.field_y), -125, param2);
           this.a(ds.a(this.field_y, 1), pg.a(false, this.field_y), 1054928844);
           if (this.field_y == 8) {
             this.a(wo.field_j, (byte) 90);
@@ -425,7 +425,7 @@ class i extends jb {
 
     static {
         field_w = "<%0> scores a goal, closing the gap to <%1> with a score of <%2> to <%3>.";
-        field_A = new vc[9];
+        field_A = new ReceivedAuctionItem[9];
         field_B = 0.0;
     }
 }

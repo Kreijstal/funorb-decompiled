@@ -4,7 +4,7 @@
 final class tt {
     static String field_a;
     static String field_d;
-    static ut field_e;
+    static Sprite field_e;
     static boolean field_c;
     static int field_b;
 
@@ -49,30 +49,30 @@ final class tt {
         var9 = Kickabout.field_G;
         try {
           var1 = un.field_e;
-          var2 = var1.h((byte) -115);
+          var2 = var1.readUnsignedByte((byte) -115);
           if (var2 == 0) {
             if (ni.field_m == null) {
               ni.field_m = new em(128);
               ou.field_y = 0;
             }
-            stackIn_12_0 = (var1.h((byte) -110) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte((byte) -110) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.a(-118);
+            var4_ref_String = var1.readString(-118);
             if (var3_int != 0) {
-              var5 = var1.a(-95);
+              var5 = var1.readString(-95);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = fm.a(var4_ref_String, 145);
-            var7 = var1.a(-113);
+            var6 = AchievementsScreen.a(var4_ref_String, 145);
+            var7 = var1.readString(-113);
             var8 = MatchAgent.a(0, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = fm.a(var7, 145);
+              var6 = AchievementsScreen.a(var7, 145);
               if (var6 != null) {
                 ni.field_m.a(var6, (byte) -4, (long)var8.hashCode());
               }
@@ -105,29 +105,29 @@ final class tt {
             }
             if (var2 == 4) {
               ts.field_d = 1;
-              var3 = var1.a(111);
-              bh.field_h = ((String) (var3)).intern();
-              var4 = var1.h((byte) -115);
+              var3 = var1.readString(111);
+              BufferedSocket.field_h = ((String) (var3)).intern();
+              var4 = var1.readUnsignedByte((byte) -115);
               en.a(var4, -1);
               return;
             }
-            bd.a("F1: " + tr.b(0), (Throwable) null, 1);
-            lr.b((byte) -116);
+            UnreadMessagesScreen.a("F1: " + tr.b(0), (Throwable) null, 1);
+            FormationView.b((byte) -116);
             if (param0 <= 38) {
-              field_e = (ut) null;
+              field_e = (Sprite) null;
             }
             return;
           }
           if (kw.field_b == null) {
             kw.field_b = new em(128);
-            bc.field_d = 0;
+            ListingRow.field_d = 0;
           }
-          var3Lifetime1 = var1.a(-126);
+          var3Lifetime1 = var1.readString(-126);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.a(34);
-          var5Lifetime1 = var1.a(-112);
+          var4_ref_StringLifetime1 = var1.readString(34);
+          var5Lifetime1 = var1.readString(-112);
           var6Lifetime1 = tr.a(var4_ref_StringLifetime1, (byte) 40);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = tr.a(var5Lifetime1, (byte) 40);
@@ -138,10 +138,10 @@ final class tt {
           if (null == var6Lifetime1) {
             var6Lifetime1 = new gg();
             kw.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
-            fieldTemp$1 = bc.field_d;
-            bc.field_d = bc.field_d + 1;
+            fieldTemp$1 = ListingRow.field_d;
+            ListingRow.field_d = ListingRow.field_d + 1;
             var6Lifetime1.field_Cb = fieldTemp$1;
-            ne.field_I.a(var6Lifetime1, 3);
+            GameplayHelpScreen.field_I.a(var6Lifetime1, 3);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -150,7 +150,7 @@ final class tt {
           var6Lifetime1.field_zb = (String) (var3Lifetime1);
           var6Lifetime1.field_Gb = var4_ref_StringLifetime1;
           var6Lifetime1.c((byte) -109);
-          var7_ref = (gg) (ne.field_I.g(24009));
+          var7_ref = (gg) (GameplayHelpScreen.field_I.g(24009));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7_ref) {
@@ -160,7 +160,7 @@ final class tt {
               decompiledFrameRemainder0 = (var9 == 0);
               if ((decompiledFrameRemainder0) &&
                 (po.$cfr$intArgs$a$d1a766881558(stackIn_61_0, stackIn_61_1, stackIn_61_2))) {
-                var7_ref = (gg) (ne.field_I.c(33));
+                var7_ref = (gg) (GameplayHelpScreen.field_I.c(33));
                 continue;
               }
             }
@@ -178,7 +178,7 @@ final class tt {
             }
             break;
           }
-          ne.field_I.a(var6Lifetime1, 3);
+          GameplayHelpScreen.field_I.a(var6Lifetime1, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,11 +187,11 @@ final class tt {
         }
     }
 
-    final static uo a(int param0, byte[] param1) {
-        uo var2 = null;
+    final static BinaryBitmapFont a(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_5_0 = null;
-        uo stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -202,9 +202,9 @@ final class tt {
           }
           if (param1 == null) {
             stackIn_5_0 = null;
-            return (uo) (stackIn_5_0);
+            return (BinaryBitmapFont) (stackIn_5_0);
           }
-          var2 = new uo(param1, IsaacRandom.field_f, fc.field_g, ku.field_c, lo.field_j, pq.field_O);
+          var2 = new BinaryBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, pq.field_O);
           tk.h((byte) -82);
           stackIn_7_0 = var2;
           return stackIn_7_0;

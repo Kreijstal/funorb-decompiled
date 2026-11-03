@@ -4,9 +4,9 @@
 final class ic {
     static String field_b;
     static boolean field_f;
-    static gr field_h;
+    static ClubState field_h;
     static String field_e;
-    static hd field_a;
+    static UiLayoutNode field_a;
     static boolean field_i;
     static String field_c;
     static String field_g;
@@ -34,7 +34,7 @@ final class ic {
         var13 = Kickabout.field_G;
         try {
           var8_int = param0 - 30;
-          var9 = 16 + pb.field_C.c(param1, var8_int, 16);
+          var9 = 16 + IsSixCommand.field_C.paragraphHeight(param1, var8_int, 16);
           if (param6) {
             param4 = param4 - (var9 >> 1);
           }
@@ -51,8 +51,8 @@ final class ic {
           while (var9 <= var12 << 1) {
             var12 = var12 >> 1;
           }
-          on.a(param7, param4, param0, var9, var12, 65793, 140);
-          pb.field_C.a(param1, var10, var11, var8_int, var9, 16777215, -1, 0, 0, 16);
+          SoftwareRasterizer.a(param7, param4, param0, var9, var12, 65793, 140);
+          IsSixCommand.field_C.a(param1, var10, var11, var8_int, var9, 16777215, -1, 0, 0, 16);
           if (param3 == null) {
             return;
           }
@@ -94,7 +94,7 @@ final class ic {
           field_d = null;
           return;
         }
-        field_h = (gr) null;
+        field_h = (ClubState) null;
         field_a = null;
         field_e = null;
         field_j = null;
@@ -107,12 +107,12 @@ final class ic {
         if (param5 == -113) {
           if (nm.field_k == null) {
             var7 = sk.field_d;
-            nm.field_k = new dp(var7);
+            nm.field_k = new ReverbPcmStream(var7);
             cb.field_d.a(nm.field_k);
           }
           nm.field_k.a(param3);
           nm.field_k.f(param6);
-          nm.field_k.c(param4);
+          nm.field_k.setDampingTimeMicros(param4);
           nm.field_k.b(param2);
           nm.field_k.e(param0);
           nm.field_k.d(param1);
@@ -127,6 +127,6 @@ final class ic {
         field_g = "Return to Main Menu";
         field_c = "You need a rating of <%1> to play with the current options.";
         field_j = "search";
-        field_h = new gr();
+        field_h = new ClubState();
     }
 }

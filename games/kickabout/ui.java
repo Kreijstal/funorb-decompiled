@@ -4,7 +4,7 @@
 final class ui extends vv {
     static boolean field_y;
     byte field_x;
-    static vc[] field_w;
+    static ReceivedAuctionItem[] field_w;
     static boolean field_t;
     PacketBuffer field_v;
     int field_u;
@@ -21,8 +21,8 @@ final class ui extends vv {
           if (null != rk.field_f) {
             rk.field_f.q(-123);
           }
-          pb.field_E = new pd(param0, param2, false, true, true);
-          we.field_a.a((byte) -122, (fd) (pb.field_E));
+          IsSixCommand.field_E = new LoginForm(param0, param2, false, true, true);
+          we.field_a.a((byte) -122, (UiWidget) (IsSixCommand.field_E));
           if (param1 != 111) {
             field_y = true;
           }
@@ -56,14 +56,14 @@ final class ui extends vv {
         var5 = Kickabout.field_G;
         var1 = 2147483647;
         var2 = 0;
-        for (var3 = param0; var3 < e.field_n.length; var3++) {
-          var4 = e.field_n[var3].field_a;
+        for (var3 = param0; var3 < SplashScreen.field_n.length; var3++) {
+          var4 = SplashScreen.field_n[var3].field_a;
           if (var1 > var4) {
             var1 = var4;
             var2 = var3;
           }
         }
-        return e.field_n[var2];
+        return SplashScreen.field_n[var2];
     }
 
     public static void a(boolean param0) {
@@ -75,9 +75,9 @@ final class ui extends vv {
     }
 
     final static void h(int param0) {
-        ol.field_R = true;
+        GameOverView.field_R = true;
         if (param0 != -15396) {
-          field_w = (vc[]) null;
+          field_w = (ReceivedAuctionItem[]) null;
         }
     }
 
@@ -86,7 +86,7 @@ final class ui extends vv {
           String var5 = (String) null;
           ui.a((String) null, (byte) 63, (String) null);
         }
-        mu.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
+        ContentTransitionDialog.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
     }
 
     final int a(int param0) {

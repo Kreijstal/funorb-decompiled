@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class du implements gj {
+final class du implements WidgetPainter {
     private int field_d;
     static int field_a;
     private int field_c;
     static int field_e;
     static int field_k;
-    static ut field_i;
-    private hu field_m;
-    static hd field_f;
+    static Sprite field_i;
+    private BitmapFont field_m;
+    static UiLayoutNode field_f;
     static int field_j;
     private int field_l;
     private int field_h;
@@ -18,7 +18,7 @@ final class du implements gj {
     private int field_b;
     static int field_n;
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var11 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -27,7 +27,7 @@ final class du implements gj {
         int var10 = 0;
         int var12 = 0;
         nv var13 = null;
-        fd stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -37,19 +37,19 @@ final class du implements gj {
           if (!(param3 instanceof nv)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (fd) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           }
           var13 = (nv) (stackIn_4_0);
-          on.a(param3.field_t + param4, param3.field_g + param2, param3.field_n, param3.field_i, this.field_b);
+          SoftwareRasterizer.fillRect(param3.field_t + param4, param3.field_g + param2, param3.field_n, param3.field_i, this.field_b);
           if (var13 != null) {
           }
           var7 = param3.field_n - var13.field_H * 2;
           var8 = var13.field_H + param4 + param3.field_t;
           var9 = var13.field_J + (param2 + param3.field_g);
-          on.b(var8, var9, var8 + var7, var9, this.field_h);
+          SoftwareRasterizer.b(var8, var9, var8 + var7, var9, this.field_h);
           var10 = 47 / ((59 - param0) / 53);
           for (var11 = var13.a((byte) 31) - 1; 0 <= var11; var11--) {
-            on.d(var13.a((byte) -120, var11) * var7 / var13.h((byte) -88) + var8, var9, this.field_d, this.field_l);
+            SoftwareRasterizer.d(var13.a((byte) -120, var11) * var7 / var13.h((byte) -88) + var8, var9, this.field_d, this.field_l);
           }
           if (null == this.field_m) {
             return;
@@ -79,7 +79,7 @@ final class du implements gj {
         field_i = null;
     }
 
-    du(hu param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    du(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_b = param4;
           this.field_m = param0;

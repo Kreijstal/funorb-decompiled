@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fv implements hc {
-    static ut field_b;
+    static Sprite field_b;
     static String field_a;
     static boolean field_d;
     static String field_c;
 
     public final boolean a(byte param0) {
         if (param0 < 63) {
-          field_b = (ut) null;
+          field_b = (Sprite) null;
           return false;
         }
         return false;
@@ -28,7 +28,7 @@ final class fv implements hc {
         var4 = Kickabout.field_G;
         try {
           try {
-            if (!bu.field_h.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_h.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&
@@ -85,7 +85,7 @@ final class fv implements hc {
         int var3Lifetime1;
         var5 = Kickabout.field_G;
         try {
-          if (ob.field_T[param0]) {
+          if (RenderedBall.field_T[param0]) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -112,7 +112,7 @@ final class fv implements hc {
             }
             var4++;
           }
-          ob.field_T[param0] = true;
+          RenderedBall.field_T[param0] = true;
           stackIn_23_0 = -1;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class fv implements hc {
         String stackIn_21_2 = null;
         int var2;
         int var3;
-        uo var4;
+        BinaryBitmapFont var4;
         int var5;
         String[] var6;
         int var6_int;
@@ -144,90 +144,90 @@ final class fv implements hc {
         int[] var27;
         int var9Lifetime1;
         var13 = Kickabout.field_G;
-        if (fp.field_e == -1) {
+        if (AuctionItem.field_e == -1) {
           return;
         }
         var2 = wt.field_x;
         var3 = us.field_j + 18;
         var5 = 44 / ((param0 - 50) / 45);
         var4 = q.field_d;
-        if (fp.field_e == 2) {
+        if (AuctionItem.field_e == 2) {
           var6 = new String[3];
-          var6[0] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, oj.field_Z, new String[]{ad.a(si.field_k, 26300)});
+          var6[0] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
           if (ag.field_h != 0) {
             stackIn_20_0 = var6;
             stackIn_20_1 = 1;
             if (0 >= ag.field_h) {
-              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, lc.field_b, new String[]{ad.a(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
             } else {
-              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.a(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }
           if (ag.field_h != 0) {
-            var6[2] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hg.field_F, new String[]{ad.a(ag.field_h + si.field_k, 26300)});
+            var6[2] = vo.$cfr$intArgs$a$53ce4ab4c593(-18, hg.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
           }
           var7 = 0;
           var8 = 0;
           for (var9 = 0; var6.length > var9; var9++) {
             if (null != var6[var9]) {
               var8++;
-              if (var7 < ((hu) ((Object) var4)).a(var6[var9])) {
-                var7 = ((hu) ((Object) var4)).a(var6[var9]);
+              if (var7 < ((BitmapFont) ((Object) var4)).a(var6[var9])) {
+                var7 = ((BitmapFont) ((Object) var4)).a(var6[var9]);
               }
             }
           }
           var9Lifetime1 = var7 + 10;
           var10 = 10 + 12 * var8;
-          var27 = ra.a(var2, var10, var9Lifetime1, 0, var3);
+          var27 = GameModesHelpScreen.a(var2, var10, var9Lifetime1, 0, var3);
           var3 = var27[1];
           var2 = var27[0];
-          on.a(4 + var2, 3 + var3, var9Lifetime1, var10, 65793, 128);
-          on.e(var2 - 1, var3 - 1, 2 + var9Lifetime1, var10 + 2, 65793);
-          on.a(var2, var3, var9Lifetime1, var10, 16777185);
+          SoftwareRasterizer.a(4 + var2, 3 + var3, var9Lifetime1, var10, 65793, 128);
+          SoftwareRasterizer.e(var2 - 1, var3 - 1, 2 + var9Lifetime1, var10 + 2, 65793);
+          SoftwareRasterizer.fillRect(var2, var3, var9Lifetime1, var10, 16777185);
           for (var12 = 0; var6.length > var12; var12++) {
             if (null != var6[var12]) {
-              ((hu) ((Object) var4)).a(var6[var12], var2 + 5, 5 + (12 * var12 + 12) + var3, 65793, -1);
+              ((BitmapFont) ((Object) var4)).a(var6[var12], var2 + 5, 5 + (12 * var12 + 12) + var3, 65793, -1);
             }
           }
         } else {
-          if (fp.field_e == 3) {
-            if (ai.field_G.c(-2)) {
+          if (AuctionItem.field_e == 3) {
+            if (AccountTermsPanel.field_G.isEmpty(-2)) {
               return;
             }
-            var6_int = 6 + ai.field_G.b(0);
-            var7 = ai.field_G.a(ok.field_c, iu.field_j, (byte) 77) + 7;
-            var24 = ra.a(var2, var7, var6_int, 0, var3);
+            var6_int = 6 + AccountTermsPanel.field_G.b(0);
+            var7 = AccountTermsPanel.field_G.a(ok.field_c, CachedListingRow.field_j, (byte) 77) + 7;
+            var24 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
             var3 = var24[1];
             var2 = var24[0];
-            on.a(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
-            ai.field_G.a((byte) 77, 3 + var2, ok.field_c, na.field_Ib, i.field_x, cr.field_c, var3 + 3, iu.field_j);
+            SoftwareRasterizer.a(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
+            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, na.field_Ib, i.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
-            if (fp.field_e == 6) {
+            if (AuctionItem.field_e == 6) {
               var6_int = pc.field_a.b(0) + 6;
               var7 = pc.field_a.a(15) + 7;
-              var26 = ra.a(var2, var7, var6_int, 0, var3);
+              var26 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
               var2 = var26[0];
               var3 = var26[1];
-              on.a(-2 + var2, var3 - 2, var6_int + 4, var7 + 4, 6, 65793, 200);
+              SoftwareRasterizer.a(-2 + var2, var3 - 2, var6_int + 4, var7 + 4, 6, 65793, 200);
               pc.field_a.a((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
             } else {
-              if (fp.field_e == 1) {
-                var6_int = ((hu) ((Object) var4)).b(wp.field_h, 200);
+              if (AuctionItem.field_e == 1) {
+                var6_int = ((BitmapFont) ((Object) var4)).b(wp.field_h, 200);
                 if (var6_int != 1) {
-                  var7 = 10 + ((hu) ((Object) var4)).a(wp.field_h, 200);
+                  var7 = 10 + ((BitmapFont) ((Object) var4)).maxLineWidth(wp.field_h, 200);
                   var8 = 12 * var6_int + 10;
                 } else {
                   var8 = 22;
-                  var7 = ((hu) ((Object) var4)).a(wp.field_h) + 10;
+                  var7 = ((BitmapFont) ((Object) var4)).a(wp.field_h) + 10;
                 }
-                var25 = ra.a(var2, var8, var7, 0, var3);
+                var25 = GameModesHelpScreen.a(var2, var8, var7, 0, var3);
                 var3 = var25[1];
                 var2 = var25[0];
-                on.a(3 + var2, var3 + 2, var7, var8, 65793, 128);
-                on.e(var2 - 1, -1 + var3, 2 + var7, var8 + 2, 65793);
-                on.a(var2, var3, var7, var8, 16777185);
-                ((hu) ((Object) var4)).a(wp.field_h, 5 + var2, -2 + var3 + 5, var7 - 10, var8, 65793, -1, 0, 0, 12);
+                SoftwareRasterizer.a(3 + var2, var3 + 2, var7, var8, 65793, 128);
+                SoftwareRasterizer.e(var2 - 1, -1 + var3, 2 + var7, var8 + 2, 65793);
+                SoftwareRasterizer.fillRect(var2, var3, var7, var8, 16777185);
+                ((BitmapFont) ((Object) var4)).a(wp.field_h, 5 + var2, -2 + var3 + 5, var7 - 10, var8, 65793, -1, 0, 0, 12);
               }
             }
           }
@@ -236,11 +236,11 @@ final class fv implements hc {
 
     public final void a(int param0, boolean param1) {
         if (!et.field_b) {
-          fp.field_e = -1;
+          AuctionItem.field_e = -1;
         }
         et.field_b = false;
         if (param0 != -25) {
-          field_b = (ut) null;
+          field_b = (Sprite) null;
         }
     }
 

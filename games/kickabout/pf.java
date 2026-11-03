@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class pf {
-    static ot field_b;
+    static ArgbSprite field_b;
     static String field_a;
     static r field_e;
     static int[] field_d;
@@ -18,9 +18,9 @@ abstract class pf {
           int var3_int = -84 / ((param2 + 50) / 61);
           var4 = or.field_d;
           var4.b(param0, (byte) -80);
-          var4.a(125, 2);
-          var4.a(119, 0);
-          var4.a(108, param1.field_e);
+          var4.writeByte(125, 2);
+          var4.writeByte(119, 0);
+          var4.writeByte(108, param1.field_e);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -48,18 +48,18 @@ abstract class pf {
         }
         try {
           pl.field_d = param0.a((byte) 81) << 5;
-          var2_int = param0.h((byte) -125);
+          var2_int = param0.readUnsignedByte((byte) -125);
           pl.field_d = pl.field_d + (var2_int >> 3);
-          df.field_E = 1835008 & var2_int << 18;
-          df.field_E = df.field_E + (param0.a((byte) 81) << 2);
-          var2_intLifetime1 = param0.h((byte) -126);
-          io.field_j = 2064384 & var2_intLifetime1 << 15;
-          df.field_E = df.field_E + (var2_intLifetime1 >> 6);
-          io.field_j = io.field_j + (param0.h((byte) -106) << 7);
-          var2_intLifetime2 = param0.h((byte) -105);
-          io.field_j = io.field_j + (var2_intLifetime2 >> 1);
-          lr.field_r = (var2_intLifetime2 & 1) << 16;
-          lr.field_r = lr.field_r + param0.a((byte) 81);
+          AuctionsHelpScreen.field_E = 1835008 & var2_int << 18;
+          AuctionsHelpScreen.field_E = AuctionsHelpScreen.field_E + (param0.a((byte) 81) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte((byte) -126);
+          MenuButton.field_j = 2064384 & var2_intLifetime1 << 15;
+          AuctionsHelpScreen.field_E = AuctionsHelpScreen.field_E + (var2_intLifetime1 >> 6);
+          MenuButton.field_j = MenuButton.field_j + (param0.readUnsignedByte((byte) -106) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte((byte) -105);
+          MenuButton.field_j = MenuButton.field_j + (var2_intLifetime2 >> 1);
+          FormationView.field_r = (var2_intLifetime2 & 1) << 16;
+          FormationView.field_r = FormationView.field_r + param0.a((byte) 81);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "pf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

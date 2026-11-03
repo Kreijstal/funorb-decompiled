@@ -10,7 +10,7 @@ final class ue extends IntrusiveNode {
     static String[] field_g;
     static vs[] field_f;
 
-    final static void a(int param0, int param1, FootballerAgent param2, int param3) {
+    final static void steerTowardsPoint(int param0, int param1, FootballerAgent param2, int param3) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -23,32 +23,32 @@ final class ue extends IntrusiveNode {
           if (param3 > 1324) {
             param3 = 1324;
           }
-          if (param2.a(true) > 10 + param3) {
-            param2.field_G = param2.field_G | 4;
+          if (param2.pixelY(true) > 10 + param3) {
+            param2.directionMask = param2.directionMask | 4;
           }
-          if (-10 + param3 > param2.a(true)) {
-            param2.field_G = param2.field_G | 1;
+          if (-10 + param3 > param2.pixelY(true)) {
+            param2.directionMask = param2.directionMask | 1;
           }
-          if (param2.f(-113) > 10 + param1) {
-            param2.field_G = param2.field_G | 2;
+          if (param2.pixelX(-113) > 10 + param1) {
+            param2.directionMask = param2.directionMask | 2;
           }
-          if (-10 + param1 > param2.f(-98)) {
-            param2.field_G = param2.field_G | 8;
+          if (-10 + param1 > param2.pixelX(-98)) {
+            param2.directionMask = param2.directionMask | 8;
           }
           if (param0 != 4) {
             field_g = (String[]) null;
           }
-          if (param1 > param2.f(param0 ^ -97)) {
-            param2.field_G = param2.field_G & -3;
+          if (param1 > param2.pixelX(param0 ^ -97)) {
+            param2.directionMask = param2.directionMask & -3;
           }
-          if (param1 < param2.f(param0 ^ -118)) {
-            param2.field_G = param2.field_G & -9;
+          if (param1 < param2.pixelX(param0 ^ -118)) {
+            param2.directionMask = param2.directionMask & -9;
           }
-          if (param2.a(true) < param3) {
-            param2.field_G = param2.field_G & -5;
+          if (param2.pixelY(true) < param3) {
+            param2.directionMask = param2.directionMask & -5;
           }
-          if (param3 < param2.a(true)) {
-            param2.field_G = param2.field_G & -2;
+          if (param3 < param2.pixelY(true)) {
+            param2.directionMask = param2.directionMask & -2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,17 +79,17 @@ final class ue extends IntrusiveNode {
         qb var4 = null;
         CipherPacketBuffer var5 = null;
         int var3 = 35 / ((23 - param1) / 35);
-        if (jm.field_h != param0) {
-          var4 = (qb) (sr.field_f.a(-3611, (long)jm.field_h));
+        if (DelayedServerPacket.field_h != param0) {
+          var4 = (qb) (sr.field_f.a(-3611, (long)DelayedServerPacket.field_h));
           if (var4 != null) {
             var4.field_Kb = null;
           }
-          jm.field_h = param0;
+          DelayedServerPacket.field_h = param0;
           var5 = or.field_d;
           var5.b(param2, (byte) -61);
-          var5.a(107, 3);
-          var5.a(118, 11);
-          var5.g(-1207444472, param0);
+          var5.writeByte(107, 3);
+          var5.writeByte(118, 11);
+          var5.writeShort(-1207444472, param0);
         }
     }
 
@@ -98,7 +98,7 @@ final class ue extends IntrusiveNode {
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
-        cn stackIn_31_0 = null;
+        CoverageBitmapFont stackIn_31_0 = null;
         String stackIn_32_1 = null;
         int[] stackIn_35_0 = null;
         int stackIn_36_1 = 0;
@@ -131,10 +131,10 @@ final class ue extends IntrusiveNode {
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         try {
-          if (40 > jo.field_F.field_X.goalCount) {
+          if (40 > DemoIntegersCommand.field_F.field_X.goalCount) {
             return;
           }
-          var1_int = -40 + jo.field_F.field_X.goalCount;
+          var1_int = -40 + DemoIntegersCommand.field_F.field_X.goalCount;
           var2 = 69;
           if (var1_int < 30) {
             var2 = var1_int * 69 / 30;
@@ -146,8 +146,8 @@ final class ue extends IntrusiveNode {
             var12 = (String) null;
             ue.a((String) null, (byte) -120);
           }
-          pt.a(640, -22914, 0, 229 + var2, -var2 + 229);
-          on.a(0, 229 - var2, 640, var2 << 1, 0, 128);
+          AuctionListing.a(640, -22914, 0, 229 + var2, -var2 + 229);
+          SoftwareRasterizer.a(0, 229 - var2, 640, var2 << 1, 0, 128);
           if (var1_int >= 30) {
             var1_int -= 30;
             var3 = 256;
@@ -187,18 +187,18 @@ final class ue extends IntrusiveNode {
               } else {
                 stackIn_32_1 = he.field_Ub;
               }
-              ((cn) (Object) stackIn_31_0).d(((String) (Object) stackIn_32_1).toUpperCase(), var14[var7], 290, 16777215, -1);
-              nb.field_j[var7].f(var14[var7] - 50, 170);
+              ((CoverageBitmapFont) (Object) stackIn_31_0).d(((String) (Object) stackIn_32_1).toUpperCase(), var14[var7], 290, 16777215, -1);
+              nb.field_j[var7].drawHalfSize(var14[var7] - 50, 170);
             }
-            tb.field_q[10].c(285, 180, var3);
-            stackIn_35_0 = jo.field_F.field_X.score;
+            tb.field_q[10].drawAdditive(285, 180, var3);
+            stackIn_35_0 = DemoIntegersCommand.field_F.field_X.score;
             if (var5Lifetime1 == 0) {
               stackIn_36_1 = 0;
             } else {
               stackIn_36_1 = 1;
             }
             var7Lifetime1 = stackIn_35_0[stackIn_36_1];
-            stackIn_38_0 = jo.field_F.field_X.score;
+            stackIn_38_0 = DemoIntegersCommand.field_F.field_X.score;
             if (var5Lifetime1 != 0) {
               stackIn_39_1 = 0;
             } else {
@@ -216,7 +216,7 @@ final class ue extends IntrusiveNode {
               var8 = 99;
             }
             stackIn_47_0 = (var5Lifetime1 == 0) ? 0 : 1;
-            if (stackIn_47_0 != jo.field_F.field_X.goalScorer) {
+            if (stackIn_47_0 != DemoIntegersCommand.field_F.field_X.goalScorer) {
               iq.$cfr$intArgs$a$8e2a9e3a0d15(-91, 180, 295, var7Lifetime1, var3);
               f.$cfr$intArgs$a$8e2a9e3a0d15(125, var8, var3, var4 + 180, 355);
               stackIn_54_0 = 122;
@@ -240,7 +240,7 @@ final class ue extends IntrusiveNode {
               f.$cfr$intArgs$a$8e2a9e3a0d15(119, var8, var3, 180, 355);
             }
           }
-          ta.e(121);
+          TeamManagementScreen.e(121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,10 +253,10 @@ final class ue extends IntrusiveNode {
         if (param0 < 78) {
           return (String) null;
         }
-        if (ow.field_e == null) {
+        if (ArchiveSource.field_e == null) {
           return "";
         }
-        return ow.field_e;
+        return ArchiveSource.field_e;
     }
 
     final static void a(String param0, byte param1) {

@@ -43,7 +43,7 @@ final class pl {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (var9 >= la.field_k.length) {
+              if (var9 >= PlayArea.field_k.length) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -52,7 +52,7 @@ final class pl {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var19 = la.field_k[var9];
+              var19 = PlayArea.field_k[var9];
               var18 = var19;
               var10 = var18;
               var11 = 0;
@@ -86,7 +86,7 @@ final class pl {
                     if (var13Lifetime1 >= param6) {
                       break scanLoop1;
                     }
-                    if (var14 != (hm.field_G[var13Lifetime1] & 255)) {
+                    if (var14 != (SumIntegersCommand.field_G[var13Lifetime1] & 255)) {
                       break scanLoop1;
                     }
                   }
@@ -150,7 +150,7 @@ final class pl {
                 }
                 for (var11 = 0; -1 + var17.length > var11; var11++) {
                   if (param6 != -1) {
-                    hm.field_G[param6] = (byte)var11;
+                    SumIntegersCommand.field_G[param6] = (byte)var11;
                   } else {
                     param3 = var11;
                   }
@@ -164,7 +164,7 @@ final class pl {
               if (param6 == -1) {
                 param3 = var11;
               } else {
-                hm.field_G[param6] = (byte)var11;
+                SumIntegersCommand.field_G[param6] = (byte)var11;
               }
               if (param6 == -1 &&
                 rn.field_d.length == 1) {

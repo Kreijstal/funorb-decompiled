@@ -5,7 +5,7 @@ final class vj {
     static int field_c;
     static vd field_a;
     static String field_f;
-    static hd field_g;
+    static UiLayoutNode field_g;
     static String field_d;
     static int field_b;
     static String field_e;
@@ -16,7 +16,7 @@ final class vj {
         field_a = null;
         field_e = null;
         if (param0 != 111) {
-          field_g = (hd) null;
+          field_g = (UiLayoutNode) null;
         }
         field_f = null;
     }
@@ -47,10 +47,10 @@ final class vj {
 
     final static void a(int param0, boolean param1) {
         int var2 = -25 % ((param0 - 38) / 59);
-        if (ra.field_G != null) {
+        if (GameModesHelpScreen.field_G != null) {
           cv.a((byte) 93);
         }
-        jm.a(cq.field_h.field_b, param1, -2);
+        DelayedServerPacket.a(AuctionLogEntry.field_h.previousScreenId, param1, -2);
     }
 
     final static void a(int param0) {
@@ -68,18 +68,18 @@ final class vj {
         int[] var13;
         int[] var14;
         int var12;
-        var14 = on.field_a;
+        var14 = SoftwareRasterizer.field_a;
         var13 = var14;
         var1 = var13;
-        for (var2 = 1; var2 < on.field_f - 2; var2++) {
-          for (var3 = 1; var3 < on.field_g - 2; var3++) {
-            var4 = on.field_g * var2 + var3;
+        for (var2 = 1; var2 < SoftwareRasterizer.field_f - 2; var2++) {
+          for (var3 = 1; var3 < SoftwareRasterizer.field_g - 2; var3++) {
+            var4 = SoftwareRasterizer.field_g * var2 + var3;
             var5 = var14[var4];
             var6 = var5 >>> 24;
             var7 = var1[var4 - 1] >>> 24;
             var8 = var1[var4 + 1] >>> 24;
-            var9 = var1[var4 - on.field_g] >>> 24;
-            var10 = var1[var4 + on.field_g] >>> 24;
+            var9 = var1[var4 - SoftwareRasterizer.field_g] >>> 24;
+            var10 = var1[var4 + SoftwareRasterizer.field_g] >>> 24;
             var11 = (var6 + var7 + var8 + var9 + var10) / 5;
             if (var11 > 0) {
               var11 = var11 | (var11 << 8 | var11 << 16);

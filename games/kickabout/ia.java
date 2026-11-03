@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ia {
-    static tf field_d;
+    static IntrusiveDeque field_d;
     int field_a;
     int field_g;
     static boolean field_c;
@@ -12,7 +12,7 @@ final class ia {
     static String field_b;
 
     final static void a(boolean param0, int param1) {
-        lc.field_e.a(param0, (byte) -124);
+        DualLinkDequeIterator.field_e.a(param0, (byte) -124);
         if (param1 != -23249) {
           field_c = true;
         }
@@ -26,7 +26,7 @@ final class ia {
         return param1 >>> 28 | param1 << 4;
     }
 
-    final static gq a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 55) {
           ia.a((byte) 3);
           return mg.field_a;
@@ -50,7 +50,7 @@ final class ia {
     static {
         field_h = "stats";
         field_c = false;
-        field_d = new tf();
+        field_d = new IntrusiveDeque();
         field_e = new char[]{(char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57, (char)48};
         field_b = "Don't mind";
     }

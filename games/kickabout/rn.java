@@ -27,7 +27,7 @@ final class rn {
         }
     }
 
-    final static qt a(int param0, int param1) {
+    final static ButtonMenuScreen a(int param0, int param1) {
         if (param0 < -43) {
           return un.field_b[param1];
         }
@@ -55,28 +55,28 @@ final class rn {
         try {
           var8 = (CharSequence) ((Object) param3);
           if (!ef.a(var8, -9907)) {
-            stackIn_3_0 = kq.field_Ib;
+            stackIn_3_0 = SquadSlotWidget.field_Ib;
             return stackIn_3_0;
           }
           if (param1 != ts.field_d) {
-            stackIn_7_0 = sp.field_Db;
+            stackIn_7_0 = ShopPlayerSlot.field_Db;
             return stackIn_7_0;
           }
-          var7 = fm.a(param0, 145);
+          var7 = AchievementsScreen.a(param0, 145);
           if (var7 == null) {
-            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, jf.field_A, new String[]{param0});
+            stackIn_10_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
             return stackIn_10_0;
           }
           var7.c((byte) -109);
-          var7.f(66);
+          var7.unlinkSecondary(66);
           ou.field_y = ou.field_y - 1;
           var5 = or.field_d;
           var5.b(param2, (byte) 110);
           var5.field_n = var5.field_n + 1;
           var6 = var5.field_n;
-          var5.a(105, 3);
-          var5.a(14190, param3);
-          var5.c(62, var5.field_n - var6);
+          var5.writeByte(105, 3);
+          var5.writeString(14190, param3);
+          var5.backpatchByteLength(62, var5.field_n - var6);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,11 +101,11 @@ final class rn {
 
     final static int b(int param0, int param1) {
         if (param1 == 3) {
-          return t.field_f[param0 & 2047];
+          return TriangleRasterizer.field_f[param0 & 2047];
         }
         String var3 = (String) null;
         rn.a((String) null, -48, 14, (String) null);
-        return t.field_f[param0 & 2047];
+        return TriangleRasterizer.field_f[param0 & 2047];
     }
 
     public static void a(int param0) {

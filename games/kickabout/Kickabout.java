@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Kickabout extends tu {
+public final class Kickabout extends GameLoopApplet {
     private boolean field_L;
-    static sj field_J;
+    static ResourceArchive field_J;
     static String field_I;
-    static hd field_H;
+    static UiLayoutNode field_H;
     static String field_F;
     public static int field_G;
 
     public final void a(int param0, boolean param1) {
         boolean stackIn_3_1 = false;
         boolean stackIn_17_0 = false;
-        js stackIn_30_0 = null;
+        AppScreen stackIn_30_0 = null;
         int stackIn_30_1 = 0;
         boolean stackIn_31_2 = false;
         boolean stackIn_59_0 = false;
@@ -21,22 +21,22 @@ public final class Kickabout extends tu {
         int var5;
         int var6;
         int var7;
-        pt var8;
-        pt var9;
+        AuctionListing var8;
+        AuctionListing var9;
         boolean stackIn_59_0Lifetime1;
         boolean stackIn_59_0Lifetime2;
         var7 = field_G;
         stackIn_3_1 = (param1);
         boolean decompiledFrameRemainder0 = true;
         this.field_L = stackIn_3_1;
-        gi.b(17702);
+        ColourSwatchTile.b(17702);
         if (pf.field_c &&
-          this.field_L && ((null != e.field_m ||
+          this.field_L && ((null != SplashScreen.field_m ||
           vb.field_k) &&
-          (ra.field_G != null &&
-          um.field_e == ra.field_G ||
-          cq.field_h == um.field_e &&
-          null == ra.field_G)) && um.field_e.f((byte) 29)) {
+          (GameModesHelpScreen.field_G != null &&
+          um.field_e == GameModesHelpScreen.field_G ||
+          AuctionLogEntry.field_h == um.field_e &&
+          null == GameModesHelpScreen.field_G)) && um.field_e.f((byte) 29)) {
           stackIn_17_0 = true;
           decompiledFrameRemainder0 = false;
         }
@@ -47,84 +47,84 @@ public final class Kickabout extends tu {
         re.b(param0 ^ -105);
         ((eh) (NetworkGameClient.field_t)).e(0);
         if (um.field_e == null &&
-          !wh.field_q &&
+          !FadingSoundPlayer.field_q &&
           !od.field_n ||
           null != um.field_e &&
-          ja.field_O) {
-          io.a(2);
+          MyKitScreen.field_O) {
+          MenuButton.a(2);
         }
         if (param0 != -25) {
-          this.c((byte) -89);
+          this.onShutdown((byte) -89);
         }
-        stackIn_30_0 = cq.field_h;
+        stackIn_30_0 = AuctionLogEntry.field_h;
         stackIn_30_1 = -96;
-        stackIn_31_2 = (this.field_L) && (null == ra.field_G);
-        ((js) (Object) stackIn_30_0).a((byte) stackIn_30_1, stackIn_31_2);
-        if (ra.field_G == null) {
+        stackIn_31_2 = (this.field_L) && (null == GameModesHelpScreen.field_G);
+        ((AppScreen) (Object) stackIn_30_0).updateScreen((byte) stackIn_30_1, stackIn_31_2);
+        if (GameModesHelpScreen.field_G == null) {
           if (um.field_e != null &&
-            cq.field_h != um.field_e) {
-            um.field_e.a((byte) 119, false);
+            AuctionLogEntry.field_h != um.field_e) {
+            um.field_e.updateScreen((byte) 119, false);
           } else {
             if (null != sr.field_l &&
-              sr.field_l != cq.field_h) {
-              sr.field_l.a((byte) -116, false);
+              sr.field_l != AuctionLogEntry.field_h) {
+              sr.field_l.updateScreen((byte) -116, false);
             }
           }
         } else {
           var3 = (ce.field_I << 8) / 24;
-          cq.field_h.a(var3, false, -53, ra.field_G);
-          ra.field_G.a(var3, true, -100, cq.field_h);
-          ra.field_G.a((byte) -51, false);
+          AuctionLogEntry.field_h.setTransitionProgress(var3, false, -53, GameModesHelpScreen.field_G);
+          GameModesHelpScreen.field_G.setTransitionProgress(var3, true, -100, AuctionLogEntry.field_h);
+          GameModesHelpScreen.field_G.updateScreen((byte) -51, false);
           if (!ka.field_b) {
             ce.field_I = ce.field_I + 1;
           }
           var4 = -ce.field_I + 24;
           var5 = (var4 * var4 << 8) / 576;
           var6 = -var5 + 256;
-          FormationAgent.field_f = var5 * po.a(cq.field_h, -4) + po.a(ra.field_G, -4) * var6 >> 8;
+          FormationAgent.field_f = var5 * po.a(AuctionLogEntry.field_h, -4) + po.a(GameModesHelpScreen.field_G, -4) * var6 >> 8;
           if (ce.field_I == 24) {
             cv.a((byte) 105);
           }
         }
-        dh.b(true);
+        ImageProducerRasterBuffer.b(true);
         if (this.field_L) {
-          var9 = (pt) (tu.field_E.field_g.g(24009));
+          var9 = (AuctionListing) (GameLoopApplet.field_E.auctionListings.g(24009));
           while (true) {
             if (var9 != null) {
               var9.c((byte) -109);
-              stackIn_59_0 = gi.a(param0 ^ -149, var9);
+              stackIn_59_0 = ColourSwatchTile.a(param0 ^ -149, var9);
               if (stackIn_59_0) {
                 gu.a((byte) -25, var9, true);
               }
-              var9 = (pt) (tu.field_E.field_g.c(33));
+              var9 = (AuctionListing) (GameLoopApplet.field_E.auctionListings.c(33));
               continue;
             }
             break;
           }
-          var8 = (pt) (vd.field_a.g(param0 + 24034));
+          var8 = (AuctionListing) (vd.field_a.g(param0 + 24034));
           while (var8 != null) {
             var8.c((byte) -109);
-            stackIn_59_0Lifetime1 = gi.a(140, var8);
+            stackIn_59_0Lifetime1 = ColourSwatchTile.a(140, var8);
             if (stackIn_59_0Lifetime1) {
               gu.a((byte) -25, var8, false);
             }
-            var8 = (pt) (vd.field_a.c(33));
+            var8 = (AuctionListing) (vd.field_a.c(33));
           }
-          stackIn_59_0Lifetime2 = tu.field_E.field_m;
+          stackIn_59_0Lifetime2 = GameLoopApplet.field_E.field_m;
           if (stackIn_59_0Lifetime2) {
             gw.c(0);
-            tu.field_E.field_m = false;
+            GameLoopApplet.field_E.field_m = false;
           }
-          this.u(param0 ^ 23294);
+          this.updateLogoHover(param0 ^ 23294);
         }
-        if (la.a(100) &&
+        if (PlayArea.a(100) &&
           ws.field_f) {
           ql.a(31663);
           ws.field_f = false;
         }
     }
 
-    private final void u(int param0) {
+    private final void updateLogoHover(int param0) {
         if (param0 != -23271) {
           return;
         }
@@ -132,57 +132,57 @@ public final class Kickabout extends tu {
           "" == lf.field_b) {
           return;
         }
-        if (ak.a(cq.field_h, param0 + 23275) == 0) {
+        if (ak.a(AuctionLogEntry.field_h, param0 + 23275) == 0) {
           return;
         }
-        ot var2 = jm.field_g == null ? (ot) (sf.field_C) : jm.field_g;
+        ArgbSprite var2 = DelayedServerPacket.field_g == null ? (ArgbSprite) (MainMenuScreen.field_C) : DelayedServerPacket.field_g;
         int var3 = -var2.field_o + 640 >> 1;
-        if (el.field_A >= var3 && var2.field_o + var3 >= el.field_A && 10 <= n.field_m &&
+        if (BytePlusOneCommand.field_A >= var3 && var2.field_o + var3 >= BytePlusOneCommand.field_A && 10 <= n.field_m &&
           !(n.field_m > (10 + var2.field_v))) {
-          qd.$cfr$intArgs$a$b6210757cdab(-67, lf.field_b);
+          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, lf.field_b);
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void onConnectionResult(int param0, byte param1) {
         int var3;
         int var4;
         var4 = field_G;
         kp.a(4, -120);
-        mf.a(7, (byte) -97);
-        if (cq.field_h instanceof sc) {
-          jm.a(0, false, -2);
+        SquadGridWidget.a(7, (byte) -97);
+        if (AuctionLogEntry.field_h instanceof FindingOpponentScreen) {
+          DelayedServerPacket.a(0, false, -2);
         }
         var3 = -37 % ((-39 - param1) / 32);
         if (param0 == 1) {
-          an.field_d = true;
+          QuickChatPhraseCache.field_d = true;
           ec.field_e = true;
         } else {
           if (od.field_n) {
-            wi.field_B = true;
+            TextButton.field_B = true;
             al.field_Db = true;
             k.field_k = true;
             if (null != um.field_e) {
-              if (!um.field_e.e(-2)) {
-                ka.a(2, uc.field_B);
+              if (!um.field_e.isSpectator(-2)) {
+                ka.a(2, IntTripleCommand.field_B);
                 ng.a(10, 113);
               } else {
                 ng.a(0, 104);
               }
-              jm.a(18, false, -2);
+              DelayedServerPacket.a(18, false, -2);
             } else {
               if (sr.field_l == null) {
-                jm.a(0, false, -2);
+                DelayedServerPacket.a(0, false, -2);
               } else {
-                ka.a(2, uc.field_B);
+                ka.a(2, IntTripleCommand.field_B);
                 ng.a(10, 112);
-                jm.a(18, false, -2);
+                DelayedServerPacket.a(18, false, -2);
               }
             }
             od.field_n = false;
             vr.b(1);
           }
           ec.field_e = false;
-          an.field_d = false;
+          QuickChatPhraseCache.field_d = false;
         }
     }
 
@@ -196,26 +196,26 @@ public final class Kickabout extends tu {
         }
     }
 
-    private final void w(int param0) {
+    private final void drawLogoBanner(int param0) {
         int var3;
         int var4;
         int var5;
         int var6;
-        ot var7;
+        ArgbSprite var7;
         Object stackIn_5_0 = null;
         if (param0 < 95) {
           return;
         }
-        if (null != jm.field_g) {
-          stackIn_5_0 = jm.field_g;
+        if (null != DelayedServerPacket.field_g) {
+          stackIn_5_0 = DelayedServerPacket.field_g;
         } else {
-          stackIn_5_0 = sf.field_C;
+          stackIn_5_0 = MainMenuScreen.field_C;
         }
-        var7 = (ot) (stackIn_5_0);
+        var7 = (ArgbSprite) (stackIn_5_0);
         var3 = 640 - var7.field_o >> 1;
-        var4 = ak.a(cq.field_h, 4);
-        if (ra.field_G != null) {
-          var5 = ak.a(ra.field_G, 4);
+        var4 = ak.a(AuctionLogEntry.field_h, 4);
+        if (GameModesHelpScreen.field_G != null) {
+          var5 = ak.a(GameModesHelpScreen.field_G, 4);
           if (var4 > var5) {
             var6 = Math.min(256, (ce.field_I << 9) / 24);
             var4 = var4 + ((-var4 + var5) * var6 >> 8);
@@ -267,19 +267,19 @@ public final class Kickabout extends tu {
         int var4;
         int var5;
         int var6_int;
-        js var6;
+        AppScreen var6;
         String[] var7_ref_String__;
         int var9;
         String[] var10;
         String var11;
-        hn var12;
+        ManagerAction var12;
         int var6_intLifetime1;
         int stackIn_146_0Lifetime1;
         int var6_intLifetime2;
         int var6_intLifetime3;
         var9 = field_G;
-        var4 = ne.field_G[82] ? 1 : 0;
-        var5 = ne.field_G[86] ? 1 : 0;
+        var4 = GameplayHelpScreen.field_G[82] ? 1 : 0;
+        var5 = GameplayHelpScreen.field_G[86] ? 1 : 0;
         if (ka.field_b &&
           83 == param1) {
           ce.field_I = ce.field_I + 1;
@@ -293,7 +293,7 @@ public final class Kickabout extends tu {
           tb.field_v == 0) {
           tb.field_v = 1;
         }
-        if (fm.a(false)) {
+        if (AchievementsScreen.a(false)) {
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder3 = true;
@@ -307,7 +307,7 @@ public final class Kickabout extends tu {
             }
             if (decompiledFrameRemainder0) {
               var11 = "The quick brown fox jumped over the lazy rabbit. Also this sentence is getting quite long with some long words that might not fit at end of a sentence/line but we shall see. Oooh double-barrel-ness, see how it deals with that.";
-              var10 = og.a(var11, 100, (byte) -69);
+              var10 = RasterBuffer.a(var11, 100, (byte) -69);
               var7_ref_String__ = var10;
               if (var7_ref_String__ == null) {
                 return true;
@@ -320,7 +320,7 @@ public final class Kickabout extends tu {
           }
           if (decompiledFrameRemainder0) {
             if (param2 == 96) {
-              r.field_d = new kd(qo.d((byte) 26), pb.field_C, oo.field_c);
+              r.field_d = new DebugConsole(EmailSyntaxValidator.d((byte) 26), IsSixCommand.field_C, oo.field_c);
               oa.a(false, r.field_d);
               return r.field_d.a(11516, param1, param2);
             }
@@ -332,12 +332,12 @@ public final class Kickabout extends tu {
             if ((decompiledFrameRemainder2) &&
               (var5 != 0)) {
               if (param1 == 1) {
-                nm.a(rm.field_C, param0 - 11592, false, ih.field_c);
+                nm.a(RankingsScreen.field_C, param0 - 11592, false, ih.field_c);
                 gs.a(0);
                 return true;
               }
               if (2 == param1) {
-                nm.a(rm.field_C, -76, true, ih.field_c);
+                nm.a(RankingsScreen.field_C, -76, true, ih.field_c);
                 gs.a(0);
                 return true;
               }
@@ -368,8 +368,8 @@ public final class Kickabout extends tu {
               }
               decompiledFrameRemainder1 = (param1 == 21);
               if (decompiledFrameRemainder1) {
-                for (var6_int = 0; tu.field_E.field_J.length > var6_int; var6_int++) {
-                  tu.field_E.field_J[var6_int] = true;
+                for (var6_int = 0; GameLoopApplet.field_E.field_J.length > var6_int; var6_int++) {
+                  GameLoopApplet.field_E.field_J[var6_int] = true;
                 }
                 decompiledFrameRemainder3 = false;
               }
@@ -405,17 +405,17 @@ public final class Kickabout extends tu {
             }
             decompiledFrameRemainder1 = (param1 == 21);
             if (decompiledFrameRemainder1) {
-              for (var6_intLifetime3 = 0; tu.field_E.field_J.length > var6_intLifetime3; var6_intLifetime3++) {
-                tu.field_E.field_J[var6_intLifetime3] = true;
+              for (var6_intLifetime3 = 0; GameLoopApplet.field_E.field_J.length > var6_intLifetime3; var6_intLifetime3++) {
+                GameLoopApplet.field_E.field_J[var6_intLifetime3] = true;
               }
             }
           }
           if ((decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
-            (!la.a(100))) {
+            (!PlayArea.a(100))) {
             var6_intLifetime2 = 0;
-            for (var7 = 0; var7 < tu.field_E.field_J.length; var7++) {
-              stackOut_139_0 = tu.field_E.field_J[var7];
+            for (var7 = 0; var7 < GameLoopApplet.field_E.field_J.length; var7++) {
+              stackOut_139_0 = GameLoopApplet.field_E.field_J[var7];
               stackIn_146_0 = stackOut_139_0 ? 1 : 0;
               stackIn_140_0 = stackOut_139_0;
               if (stackIn_140_0) {
@@ -423,7 +423,7 @@ public final class Kickabout extends tu {
               }
             }
             or.field_d.b(69, (byte) -54);
-            or.field_d.b(-88, var6_intLifetime2);
+            or.field_d.writeInt(-88, var6_intLifetime2);
           }
           if (decompiledFrameRemainder2) {
             stackIn_146_0Lifetime1 = -23;
@@ -463,12 +463,12 @@ public final class Kickabout extends tu {
               return true;
             }
             if (85 == param1) {
-              stackIn_183_0 = !(pb.field_B);
-              pb.field_B = stackIn_183_0;
+              stackIn_183_0 = !(IsSixCommand.field_B);
+              IsSixCommand.field_B = stackIn_183_0;
               return true;
             }
             if (35 == param1) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
             }
             if (param1 == 39) {
               stackIn_192_0 = !(pc.field_e);
@@ -476,24 +476,24 @@ public final class Kickabout extends tu {
               return true;
             }
             if (param1 == 40 &&
-              !la.a(param0 ^ 11416)) {
+              !PlayArea.a(param0 ^ 11416)) {
               or.field_d.b(85, (byte) 112);
               return true;
             }
             if (param1 == 41 &&
-              !la.a(100)) {
+              !PlayArea.a(100)) {
               or.field_d.b(80, (byte) 114);
               return true;
             }
             if (param1 == 56 &&
-              !la.a(100)) {
+              !PlayArea.a(100)) {
               or.field_d.b(81, (byte) 107);
               or.field_d.field_n = or.field_d.field_n + 2;
               var6_intLifetime1 = or.field_d.field_n;
-              or.field_d.a(113, 1);
-              var12 = new hn(3, new int[]{0, 0});
-              var12.a(1, or.field_d);
-              or.field_d.d(or.field_d.field_n - var6_intLifetime1, 62);
+              or.field_d.writeByte(113, 1);
+              var12 = new ManagerAction(3, new int[]{0, 0});
+              var12.writeToPacket(1, or.field_d);
+              or.field_d.backpatchShortLength(or.field_d.field_n - var6_intLifetime1, 62);
               return true;
             }
             if (param1 == 1) {
@@ -519,17 +519,17 @@ public final class Kickabout extends tu {
           }
           if (var5 != 0) {
             if (param1 == 1) {
-              nm.a(rm.field_C, -76, vi.field_n, 0);
+              nm.a(RankingsScreen.field_C, -76, vi.field_n, 0);
               gs.a(param0 ^ 11516);
               return true;
             }
             if (param1 == 2) {
-              nm.a(rm.field_C, -76, vi.field_n, 1);
+              nm.a(RankingsScreen.field_C, -76, vi.field_n, 1);
               gs.a(0);
               return true;
             }
             if (param1 == 3) {
-              nm.a(rm.field_C, param0 ^ -11448, vi.field_n, 2);
+              nm.a(RankingsScreen.field_C, param0 ^ -11448, vi.field_n, 2);
               gs.a(0);
               return true;
             }
@@ -543,51 +543,51 @@ public final class Kickabout extends tu {
             return true;
           }
         }
-        var6 = cq.field_h;
+        var6 = AuctionLogEntry.field_h;
         if (param0 != 11516) {
           return true;
         }
-        if (null != ra.field_G) {
-          var6 = ra.field_G;
+        if (null != GameModesHelpScreen.field_G) {
+          var6 = GameModesHelpScreen.field_G;
         }
         if (var6 == null) {
           stackIn_240_0 = false;
         } else {
-          stackIn_240_0 = var6.a(param1, -17, param2);
+          stackIn_240_0 = var6.handleKey(param1, -17, param2);
         }
         return stackIn_240_0;
     }
 
-    private final void v(int param0) {
-        on.a(0, 300, 640, 87, 0, 190);
-        int var2 = (int)(250.0f * ga.field_R / 100.0f);
+    private final void drawLoadingBar(int param0) {
+        SoftwareRasterizer.a(0, 300, 640, 87, 0, 190);
+        int var2 = (int)(250.0f * TextInputWidget.field_R / 100.0f);
         int var3 = var2 + 196;
-        un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[ih.field_c][rm.field_C].toUpperCase()}), 320, 332, 16777215, 0);
-        on.f(193, 348, 254, 19, 8, 268435455);
+        un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[ih.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
+        SoftwareRasterizer.f(193, 348, 254, 19, 8, 268435455);
         if (param0 != 81) {
           return;
         }
         if (var2 <= 16) {
-          pt.a((var2 >> 1) + 195, -22914, 0, 480, 0);
-          on.i(195, 350, 250, 15, 6, 268435455);
-          ta.e(117);
-          pt.a(640, -22914, (var2 >> 1) + 195, 480, 0);
-          on.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
-          ta.e(122);
+          AuctionListing.a((var2 >> 1) + 195, -22914, 0, 480, 0);
+          SoftwareRasterizer.i(195, 350, 250, 15, 6, 268435455);
+          TeamManagementScreen.e(117);
+          AuctionListing.a(640, -22914, (var2 >> 1) + 195, 480, 0);
+          SoftwareRasterizer.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
+          TeamManagementScreen.e(122);
         } else {
-          on.i(195, 350, var2, 15, 6, 268435455);
+          SoftwareRasterizer.i(195, 350, var2, 15, 6, 268435455);
         }
-        pt.a(640, -22914, var3, 480, 0);
-        q.field_d.d(mf.field_Db, 320, 362, 16777215, -1);
-        ta.e(126);
-        pt.a(var3, -22914, 0, 480, 0);
-        q.field_d.d(mf.field_Db, 320, 362, 65793, -1);
-        ta.e(param0 ^ 39);
+        AuctionListing.a(640, -22914, var3, 480, 0);
+        q.field_d.d(SquadGridWidget.field_Db, 320, 362, 16777215, -1);
+        TeamManagementScreen.e(126);
+        AuctionListing.a(var3, -22914, 0, 480, 0);
+        q.field_d.d(SquadGridWidget.field_Db, 320, 362, 65793, -1);
+        TeamManagementScreen.e(param0 ^ 39);
     }
 
     public Kickabout() {
         CharSequence var2 = (CharSequence) ((Object) gw.field_b);
-        tu.field_E = new gr(LoggedPlayer.a(var2, false));
+        GameLoopApplet.field_E = new ClubState(LoggedPlayer.a(var2, false));
         nm.field_g = this;
     }
 
@@ -603,20 +603,20 @@ public final class Kickabout extends tu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        ot var3 = null;
+        ArgbSprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        ot var11 = null;
+        ArgbSprite var11 = null;
         int stackIn_11_0Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
         var9 = field_G;
         try {
-          var11 = nn.field_B;
+          var11 = AccountChoicePanel.field_B;
           if (param0 != -826875391) {
             Kickabout.o((byte) -117);
           }
@@ -629,23 +629,23 @@ public final class Kickabout extends tu {
               var2++;
             }
           }
-          var3 = nn.field_B;
-          vq.field_d = new ut(((ut) ((Object) var3)).field_o, ((ut) ((Object) var3)).field_v);
+          var3 = AccountChoicePanel.field_B;
+          FullscreenFocusCanvas.field_d = new Sprite(((Sprite) ((Object) var3)).field_o, ((Sprite) ((Object) var3)).field_v);
           var10 = 0;
           var4Lifetime1 = var10;
           var5Lifetime1 = 0;
           while (true) {
-            stackIn_11_0 = ~((ut) ((Object) var3)).field_v;
+            stackIn_11_0 = ~((Sprite) ((Object) var3)).field_v;
             if (stackIn_11_0 >= ~var5Lifetime1) {
-              po.field_h = new ut(((ut) ((Object) var3)).field_o, ((ut) ((Object) var3)).field_v);
+              po.field_h = new Sprite(((Sprite) ((Object) var3)).field_o, ((Sprite) ((Object) var3)).field_v);
               return;
             }
             var6 = 0;
             var7 = 0;
-            for (var8 = 0; var8 < ((ut) ((Object) var3)).field_o; var8++) {
+            for (var8 = 0; var8 < ((Sprite) ((Object) var3)).field_o; var8++) {
               stackIn_11_0Lifetime1 = var6;
               if (stackIn_11_0Lifetime1 == 0 &&
-                (((ut) ((Object) var3)).field_y[var10] & -16777216) != 0) {
+                (((Sprite) ((Object) var3)).field_y[var10] & -16777216) != 0) {
                 incrementValue$0 = var7;
                 var7++;
                 if (5 < incrementValue$0) {
@@ -654,7 +654,7 @@ public final class Kickabout extends tu {
               }
               incrementValue$1 = var10;
               var10++;
-              stackIn_21_0 = vq.field_d.field_y;
+              stackIn_21_0 = FullscreenFocusCanvas.field_d.field_y;
               stackIn_21_1 = incrementValue$1;
               if (var6 != 0) {
                 stackIn_22_2 = -1;
@@ -672,7 +672,7 @@ public final class Kickabout extends tu {
         }
     }
 
-    final void c(byte param0) {
+    final void onShutdown(byte param0) {
         ph.a(4);
         if (param0 != -24) {
           return;
@@ -680,41 +680,41 @@ public final class Kickabout extends tu {
         r.a(true);
     }
 
-    final void g(byte param0) {
+    final void onStartup(byte param0) {
         if (param0 >= -23) {
-          this.g((byte) 116);
+          this.onStartup((byte) 116);
         }
-        this.a(1, 69, 0, 2, 18, (byte) -4, 4, true);
+        this.initialiseClient(1, 69, 0, 2, 18, (byte) -4, 4, true);
         this.a(107, new eh());
-        vq.a(oo.field_c, (byte) 23, (java.awt.Component) ((Object) ic.field_d));
-        bc.a((byte) -8, uc.field_A);
+        FullscreenFocusCanvas.a(oo.field_c, (byte) 23, (java.awt.Component) ((Object) ic.field_d));
+        ListingRow.a((byte) -8, IntTripleCommand.field_A);
     }
 
-    final void o(int param0) {
+    final void applyPendingNavigation(int param0) {
         if (2147483647 == op.field_v) {
         } else {
           if (op.field_v != -3) {
-            jm.a(op.field_v, false, -2);
+            DelayedServerPacket.a(op.field_v, false, -2);
           } else {
-            rg.a(-1822);
+            MouseWheelInput.a(-1822);
           }
         }
-        gm.i(0);
+        RenderedFootballer.i(0);
         if (param0 < 50) {
           field_I = (String) null;
         }
     }
 
-    final boolean m(byte param0) {
+    final boolean isConnectionBusy(byte param0) {
         boolean stackIn_8_0 = false;
         if (param0 >= -70) {
           return true;
         }
-        stackIn_8_0 = (od.field_n) || (ec.field_e) || (an.field_d);
+        stackIn_8_0 = (od.field_n) || (ec.field_e) || (QuickChatPhraseCache.field_d);
         return stackIn_8_0;
     }
 
-    final boolean a(int param0, CipherPacketBuffer param1, int param2) {
+    final boolean handlePacket(int param0, CipherPacketBuffer param1, int param2) {
         boolean stackIn_9_0 = false;
         boolean stackIn_10_1 = false;
         int stackIn_29_0 = 0;
@@ -738,7 +738,7 @@ public final class Kickabout extends tu {
         int stackIn_184_0 = 0;
         int stackIn_187_0 = 0;
         int stackIn_190_0 = 0;
-        ap stackIn_192_0 = null;
+        MatchScreen stackIn_192_0 = null;
         boolean stackIn_193_1 = false;
         int stackIn_242_0 = 0;
         int stackIn_245_0 = 0;
@@ -758,11 +758,11 @@ public final class Kickabout extends tu {
         int[] var4_array = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        vc[] var5_ref_vc__ = null;
+        ReceivedAuctionItem[] var5_ref_vc__ = null;
         int[] var5_ref_int__ = null;
         int var6 = 0;
         int[] var6_ref_int__ = null;
-        vc[] var7_ref_vc__ = null;
+        ReceivedAuctionItem[] var7_ref_vc__ = null;
         int var7 = 0;
         int var8_int = 0;
         tv var8 = null;
@@ -787,8 +787,8 @@ public final class Kickabout extends tu {
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        vc[] var30 = null;
-        vc[] var31 = null;
+        ReceivedAuctionItem[] var30 = null;
+        ReceivedAuctionItem[] var31 = null;
         String[] var32 = null;
         int[] var33 = null;
         int[] var34 = null;
@@ -798,7 +798,7 @@ public final class Kickabout extends tu {
         int[] var38 = null;
         int[] var39 = null;
         String var40 = null;
-        up[] var41 = null;
+        PlayerStats[] var41 = null;
         ng var42 = null;
         String var43 = null;
         String[] var44 = null;
@@ -810,7 +810,7 @@ public final class Kickabout extends tu {
         int[] var50 = null;
         int[] var51 = null;
         int[] var52 = null;
-        vc[] var5_ref_vc__Lifetime1;
+        ReceivedAuctionItem[] var5_ref_vc__Lifetime1;
         int[] var5_ref_int__Lifetime1;
         int[] var5_ref_int__Lifetime2;
         int[] var6_ref_int__Lifetime1;
@@ -848,7 +848,7 @@ public final class Kickabout extends tu {
         var22 = field_G;
         try {
           if (param2 != 1) {
-            this.m((byte) -8);
+            this.isConnectionBusy((byte) -8);
           }
           if (param0 == 90) {
             ((eh) (NetworkGameClient.field_t)).b((byte) 115);
@@ -856,7 +856,7 @@ public final class Kickabout extends tu {
           }
           if (param0 == 86) {
             stackIn_9_0 = false;
-            stackIn_10_1 = (param1.h((byte) -122) == 1);
+            stackIn_10_1 = (param1.readUnsignedByte((byte) -122) == 1);
             fj.a(stackIn_9_0, stackIn_10_1);
             return true;
           }
@@ -869,7 +869,7 @@ public final class Kickabout extends tu {
             return true;
           }
           if (param0 == 81) {
-            vd.field_a.a(new pt(un.field_e), param2 ^ 2);
+            vd.field_a.a(new AuctionListing(un.field_e), param2 ^ 2);
             return true;
           }
           if (71 != param0 &&
@@ -881,14 +881,14 @@ public final class Kickabout extends tu {
               stackIn_37_1 = (param1.l(1, 59) == 1);
               fj.a(stackIn_36_0, stackIn_37_1);
               param1.l((byte) 103);
-              var4_int = un.field_e.i(param2 ^ -97);
-              var5 = un.field_e.b(param2 ^ 65281);
-              var6 = un.field_e.h((byte) -119);
-              var7_ref_vc__ = new vc[var6];
+              var4_int = un.field_e.readUnsignedMedium(param2 ^ -97);
+              var5 = un.field_e.readSignedMedium(param2 ^ 65281);
+              var6 = un.field_e.readUnsignedByte((byte) -119);
+              var7_ref_vc__ = new ReceivedAuctionItem[var6];
               for (var8_int = 0; var8_int < var6; var8_int++) {
-                var7_ref_vc__[var8_int] = vc.a(param2 - 21833, un.field_e);
+                var7_ref_vc__[var8_int] = ReceivedAuctionItem.readAuctionItem(param2 - 21833, un.field_e);
               }
-              ((wf) (rn.a(param2 - 120, 16))).a(true, var7_ref_vc__, var4_int, var5);
+              ((AuctionsScreen) (rn.a(param2 - 120, 16))).updateAuctionRows(true, var7_ref_vc__, var4_int, var5);
               return true;
             }
             if (param0 == 76) {
@@ -898,13 +898,13 @@ public final class Kickabout extends tu {
               stackIn_46_1 = (param1.l(1, param2 ^ 58) == 1);
               fj.a(stackIn_45_0, stackIn_46_1);
               param1.l((byte) -84);
-              var4_intLifetime1 = un.field_e.h((byte) -125);
-              var30 = new vc[var4_intLifetime1];
+              var4_intLifetime1 = un.field_e.readUnsignedByte((byte) -125);
+              var30 = new ReceivedAuctionItem[var4_intLifetime1];
               var5_ref_vc__ = var30;
               for (var6Lifetime1 = 0; var6Lifetime1 < var4_intLifetime1; var6Lifetime1++) {
-                var5_ref_vc__[var6Lifetime1] = vc.a(-21832, un.field_e);
+                var5_ref_vc__[var6Lifetime1] = ReceivedAuctionItem.readAuctionItem(-21832, un.field_e);
               }
-              wh.a((byte) 99, var30);
+              FadingSoundPlayer.linkAuctionItemsToLog((byte) 99, var30);
               return true;
             }
             if (param0 == 80) {
@@ -914,24 +914,24 @@ public final class Kickabout extends tu {
               stackIn_56_1 = (param1.l(1, param2 + 58) == 1);
               fj.a(stackIn_55_0, stackIn_56_1);
               param1.l((byte) 112);
-              var4_intLifetime2 = un.field_e.h((byte) -125);
-              var31 = new vc[var4_intLifetime2];
+              var4_intLifetime2 = un.field_e.readUnsignedByte((byte) -125);
+              var31 = new ReceivedAuctionItem[var4_intLifetime2];
               var5_ref_vc__Lifetime1 = var31;
               for (var6Lifetime2 = 0; var6Lifetime2 < var4_intLifetime2; var6Lifetime2++) {
-                var5_ref_vc__Lifetime1[var6Lifetime2] = vc.a(ek.b(param2, -21831), un.field_e);
+                var5_ref_vc__Lifetime1[var6Lifetime2] = ReceivedAuctionItem.readAuctionItem(ek.b(param2, -21831), un.field_e);
               }
-              ((wf) (rn.a(-53, 16))).a(true, var31);
+              ((AuctionsScreen) (rn.a(-53, 16))).setAuctionList(true, var31);
               return true;
             }
             if (param0 == 77) {
-              var4_intLifetime3 = un.field_e.h((byte) -115);
+              var4_intLifetime3 = un.field_e.readUnsignedByte((byte) -115);
               k.a(true, var4_intLifetime3);
-              bh.field_k = var4_intLifetime3;
-              if (cq.field_h instanceof qs) {
-                if (null != ra.field_G) {
+              BufferedSocket.field_k = var4_intLifetime3;
+              if (AuctionLogEntry.field_h instanceof PlayerShopScreen) {
+                if (null != GameModesHelpScreen.field_G) {
                   return true;
                 }
-                ((qt) (cq.field_h)).a(param2 ^ 1, 0, true);
+                ((ButtonMenuScreen) (AuctionLogEntry.field_h)).enterScreen(param2 ^ 1, 0, true);
                 tb.a((byte) 126, 28);
               }
               return true;
@@ -940,28 +940,28 @@ public final class Kickabout extends tu {
               var32 = new String[param1.a((byte) 81)];
               var4 = var32;
               for (var5Lifetime1 = 0; var32.length > var5Lifetime1; var5Lifetime1++) {
-                var4[var5Lifetime1] = param1.a(ek.b(param2, -112));
+                var4[var5Lifetime1] = param1.readString(ek.b(param2, -112));
               }
               gg.a(var32, (byte) 88);
               return true;
             }
             if (70 == param0) {
               ui.field_y = true;
-              tu.field_E.a(85, param1, 4);
-              pf.field_c = tu.field_E.field_d;
-              if (tu.field_E.field_L) {
+              GameLoopApplet.field_E.readFromPacket(85, param1, 4);
+              pf.field_c = GameLoopApplet.field_E.field_d;
+              if (GameLoopApplet.field_E.field_L) {
                 tb.field_v = 1;
               } else {
                 tb.field_v = 0;
               }
-              ei.field_n = tu.field_E.field_A;
-              if (!iu.field_h) {
-                li.a(tu.field_E.field_p, (byte) 33);
-                pe.a(tu.field_E.field_F, (byte) -116);
+              ei.field_n = GameLoopApplet.field_E.field_A;
+              if (!CachedListingRow.field_h) {
+                ConsoleValue.a(GameLoopApplet.field_E.field_p, (byte) 33);
+                pe.a(GameLoopApplet.field_E.field_F, (byte) -116);
               }
-              if (cq.field_h instanceof ta &&
-                ra.field_G == null) {
-                ((qt) (cq.field_h)).a(0, 0, true);
+              if (AuctionLogEntry.field_h instanceof TeamManagementScreen &&
+                GameModesHelpScreen.field_G == null) {
+                ((ButtonMenuScreen) (AuctionLogEntry.field_h)).enterScreen(0, 0, true);
                 tb.a((byte) 126, 28);
               }
               param1.p(param2 ^ -105);
@@ -976,44 +976,44 @@ public final class Kickabout extends tu {
               return true;
             }
             if (param0 == 74) {
-              var4_intLifetime4 = param1.k(param2 + 3);
+              var4_intLifetime4 = param1.readInt(param2 + 3);
               if (um.field_e != null) {
                 um.field_e.a(-21573, param1);
               }
               or.field_d.b(57, (byte) -80);
-              or.field_d.b(param2 ^ -30, var4_intLifetime4);
+              or.field_d.writeInt(param2 ^ -30, var4_intLifetime4);
               return true;
             }
             if (param0 == 9) {
               cv.a((byte) 87);
               ec.field_e = false;
-              jm.a(10, false, -2);
-              ka.a(2, param1.a(param2 - 98));
+              DelayedServerPacket.a(10, false, -2);
+              ka.a(2, param1.readString(param2 - 98));
               return true;
             }
             if (param0 == 14) {
               cv.a((byte) 81);
-              q.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ow.field_c.length, 1024);
-              ln.a(64, qq.h((byte) -64), qt.f((byte) -63));
+              q.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
+              DropTargetWidget.a(64, qq.h((byte) -64), ButtonMenuScreen.f((byte) -63));
               ec.field_e = false;
               od.field_n = true;
-              if (!an.field_d) {
-                jm.a(-3, false, -2);
+              if (!QuickChatPhraseCache.field_d) {
+                DelayedServerPacket.a(-3, false, -2);
               }
               return true;
             }
             if (param0 == 15) {
               if (od.field_n) {
-                vc.f((byte) 119);
+                ReceivedAuctionItem.f((byte) 119);
                 vu.b(122);
-                jm.a(0, false, -2);
-                wi.field_B = true;
+                DelayedServerPacket.a(0, false, -2);
+                TextButton.field_B = true;
                 k.field_k = true;
                 od.field_n = false;
                 al.field_Db = true;
                 vr.b(1);
               }
-              an.field_d = false;
+              QuickChatPhraseCache.field_d = false;
               ec.field_e = false;
               return true;
             }
@@ -1028,13 +1028,13 @@ public final class Kickabout extends tu {
               var35 = var48;
               var4_array = var35;
               for (var5Lifetime2 = 0; 2 >= var5Lifetime2; var5Lifetime2++) {
-                var23[var5Lifetime2] = param1.k(ek.b(param2, 5));
+                var23[var5Lifetime2] = param1.readInt(ek.b(param2, 5));
               }
               var46 = var4_array;
               var33 = var46;
               var24 = var33;
               var5_ref_int__ = var24;
-              var47 = bh.field_f;
+              var47 = BufferedSocket.field_f;
               var34 = var47;
               var25 = var34;
               var6_ref_int__ = var25;
@@ -1047,7 +1047,7 @@ public final class Kickabout extends tu {
                   ok.field_a.a(new oi(var5Lifetime2Lifetime1), 3);
                 }
               }
-              var49 = bh.field_f;
+              var49 = BufferedSocket.field_f;
               var36 = var49;
               var26 = var36;
               var5_ref_int__Lifetime1 = var26;
@@ -1069,15 +1069,15 @@ public final class Kickabout extends tu {
               for (var7Lifetime4 = 0; var7Lifetime4 < 8; var7Lifetime4++) {
                 var28[var7Lifetime4] = hf.a(var51[var7Lifetime4], var52[var7Lifetime4]);
               }
-              if (sj.field_g) {
-                og.a(20164);
+              if (ResourceArchive.field_g) {
+                RasterBuffer.a(20164);
               }
               return true;
             }
             if (param0 == 75) {
-              var4_intLifetime5 = param1.h((byte) -114);
+              var4_intLifetime5 = param1.readUnsignedByte((byte) -114);
               for (var5Lifetime3 = 0; var5Lifetime3 < var4_intLifetime5; var5Lifetime3++) {
-                var40 = param1.a(80);
+                var40 = param1.readString(80);
                 r.field_d.a("  <col=99ccff># " + var40 + "</col", (byte) 94);
               }
               return true;
@@ -1086,19 +1086,19 @@ public final class Kickabout extends tu {
               param0 != 65) {
               if (param0 == 66) {
                 if (null != sr.field_l) {
-                  wi.field_B = true;
-                  jm.a(-3, false, -2);
+                  TextButton.field_B = true;
+                  DelayedServerPacket.a(-3, false, -2);
                   vr.b(1);
                 }
                 if (null != um.field_e &&
-                  um.field_e.field_t) {
-                  um.field_e.a(false, param2 ^ 19);
+                  um.field_e.isOnlineMatch) {
+                  um.field_e.leaveMatch(false, param2 ^ 19);
                   al.field_Db = true;
-                  wi.field_B = true;
-                  jm.a(-3, false, -2);
+                  TextButton.field_B = true;
+                  DelayedServerPacket.a(-3, false, -2);
                   vr.b(param2 ^ 0);
                 }
-                an.field_d = false;
+                QuickChatPhraseCache.field_d = false;
                 return true;
               }
               if (82 == param0) {
@@ -1106,26 +1106,26 @@ public final class Kickabout extends tu {
                 return true;
               }
               if (um.field_e != null &&
-                um.field_e.field_t) {
+                um.field_e.isOnlineMatch) {
                 if (69 == param0) {
-                  um.field_e.a((byte) -17, param1);
+                  um.field_e.readMatchState((byte) -17, param1);
                   return true;
                 }
                 if (68 == param0) {
-                  var4_intLifetime6 = param1.h((byte) -105);
+                  var4_intLifetime6 = param1.readUnsignedByte((byte) -105);
                   for (var5Lifetime4 = 0; var5Lifetime4 < var4_intLifetime6; var5Lifetime4++) {
-                    um.field_e.field_m.d(4);
+                    um.field_e.field_m.tick(4);
                   }
-                  var5Lifetime4 = param1.k(4);
+                  var5Lifetime4 = param1.readInt(4);
                   um.field_e.field_m.a(param1, -5);
-                  var6Lifetime3 = um.field_e.field_m.c(-98);
+                  var6Lifetime3 = um.field_e.field_m.computeChecksum(-98);
                   if (var5Lifetime4 != -1 &&
                     ~var6Lifetime3 != ~var5Lifetime4 &&
                     um.field_e.field_g) {
-                    bd.a("ChecksumError: server=" + Integer.toHexString(var5Lifetime4) + " client=" + Integer.toHexString(var6Lifetime3), (Throwable) ((Object) new IllegalStateException(um.field_e.field_m.toString())), 1);
+                    UnreadMessagesScreen.a("ChecksumError: server=" + Integer.toHexString(var5Lifetime4) + " client=" + Integer.toHexString(var6Lifetime3), (Throwable) ((Object) new IllegalStateException(um.field_e.field_m.toString())), 1);
                     um.field_e.field_g = false;
                   }
-                  um.field_e.field_i.a(um.field_e.field_m, (byte) 119);
+                  um.field_e.field_i.copyStateFrom(um.field_e.field_m, (byte) 119);
                   return true;
                 }
               }
@@ -1137,11 +1137,11 @@ public final class Kickabout extends tu {
                 param1.p(-114);
                 var5Lifetime4Lifetime1 = 0;
                 var4_intLifetime6Lifetime1 = 0;
-                stackIn_242_0 = (!mu.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_242_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
                 var4_intLifetime6Lifetime1 = stackIn_242_0;
-                stackIn_245_0 = (!mu.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_245_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
                 var5Lifetime4Lifetime1 = stackIn_245_0;
-                stackIn_248_0 = (!mu.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_248_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
                 var6Lifetime3Lifetime1 = stackIn_248_0;
                 param1.l((byte) -50);
                 stackIn_251_0 = (var6Lifetime3Lifetime1 != 0) ? 0 : 1;
@@ -1154,19 +1154,19 @@ public final class Kickabout extends tu {
                 if (!stackIn_257_0) {
                   throw new RuntimeException("Tried to init a lobby without the full state being sent [" + (var4_intLifetime6Lifetime1 != 0) + "," + (var5Lifetime4Lifetime1 != 0) + "," + (var6Lifetime3Lifetime1 != 0) + "]");
                 }
-                sr.field_l = new lm(param1);
-                da.a(-88);
-                if (null == ra.field_G ||
-                  ra.field_G.field_c != 18) {
-                  if (cq.field_h.field_c == -2) {
-                    cq.field_h = (js) ((Object) sr.field_l);
+                sr.field_l = new TournamentLobbyScreen(param1);
+                MusicPatchNode.a(-88);
+                if (null == GameModesHelpScreen.field_G ||
+                  GameModesHelpScreen.field_G.screenId != 18) {
+                  if (AuctionLogEntry.field_h.screenId == -2) {
+                    AuctionLogEntry.field_h = (AppScreen) ((Object) sr.field_l);
                   } else {
                     al.field_Db = true;
                     ng.a(-2, param2 ^ 71);
-                    jm.a(18, false, param2 - 3);
+                    DelayedServerPacket.a(18, false, param2 - 3);
                   }
                 }
-                an.field_d = false;
+                QuickChatPhraseCache.field_d = false;
                 return true;
               }
               if (null != sr.field_l &&
@@ -1175,15 +1175,15 @@ public final class Kickabout extends tu {
                 var6Lifetime3Lifetime2 = 0;
                 var4_intLifetime6Lifetime2 = 0;
                 var5Lifetime4Lifetime2 = 0;
-                stackIn_272_0 = (!mu.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_272_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
                 var4_intLifetime6Lifetime2 = stackIn_272_0;
-                stackIn_275_0 = (!mu.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_275_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
                 var5Lifetime4Lifetime2 = stackIn_275_0;
-                stackIn_278_0 = (!mu.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_278_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
                 var6Lifetime3Lifetime2 = stackIn_278_0;
                 param1.l((byte) 103);
                 if (var4_intLifetime6Lifetime2 != 0) {
-                  sr.field_l.a(param1, false);
+                  sr.field_l.readPlayerNames(param1, false);
                 }
                 if (var5Lifetime4Lifetime2 != 0) {
                   sr.field_l.a(param2 + 8, param1);
@@ -1197,58 +1197,58 @@ public final class Kickabout extends tu {
                 var42 = new ng();
                 var42.a(param1, param2 ^ -20364);
                 var43 = var42.a((byte) 51);
-                var44 = og.a(var43, 80, (byte) 123);
+                var44 = RasterBuffer.a(var43, 80, (byte) 123);
                 for (var7Lifetime1 = 0; var7Lifetime1 < var44.length; var7Lifetime1++) {
                   var8 = new tv(2, "", 0, "", var44[var7Lifetime1]);
-                  qh.a((byte) 94, var8);
+                  SectorCacheStore.a((byte) 94, var8);
                 }
                 return true;
               }
               if (param0 != 91) {
                 return false;
               }
-              var45 = param1.a(param2 - 108);
+              var45 = param1.readString(param2 - 108);
               if (um.field_e != null &&
                 um.field_e.field_A ||
                 sr.field_l != null) {
-                li.a(2009, var45);
+                ConsoleValue.a(2009, var45);
               }
               return true;
             }
             ok.field_a.b(22997);
             if (sr.field_l != null) {
-              wi.field_B = true;
+              TextButton.field_B = true;
             }
             var4_intLifetime7 = param1.field_n;
             cv.a((byte) 72);
-            stackIn_160_0 = (0 == param1.h((byte) -106)) ? 0 : 1;
+            stackIn_160_0 = (0 == param1.readUnsignedByte((byte) -106)) ? 0 : 1;
             var5Lifetime5 = stackIn_160_0;
-            stackIn_163_0 = (0 == param1.h((byte) -116)) ? 0 : 1;
+            stackIn_163_0 = (0 == param1.readUnsignedByte((byte) -116)) ? 0 : 1;
             var6Lifetime4 = stackIn_163_0;
-            var7Lifetime2 = param1.h((byte) -117);
-            var8_intLifetime1 = param1.h((byte) -126);
-            stackIn_166_0 = (param1.h((byte) -123) == 0) ? 0 : 1;
+            var7Lifetime2 = param1.readUnsignedByte((byte) -117);
+            var8_intLifetime1 = param1.readUnsignedByte((byte) -126);
+            stackIn_166_0 = (param1.readUnsignedByte((byte) -123) == 0) ? 0 : 1;
             var9 = stackIn_166_0;
-            stackIn_169_0 = (0 == param1.h((byte) -113)) ? 0 : 1;
+            stackIn_169_0 = (0 == param1.readUnsignedByte((byte) -113)) ? 0 : 1;
             var10 = stackIn_169_0;
-            var11 = param1.h((byte) -111);
+            var11 = param1.readUnsignedByte((byte) -111);
             var12 = new String[var11];
             for (var13 = 0; var12.length > var13; var13++) {
-              var12[var13] = param1.a(-111);
+              var12[var13] = param1.readString(-111);
             }
-            var13Lifetime1 = param1.j((byte) -64);
+            var13Lifetime1 = param1.readByte((byte) -64);
             var14 = null;
             if (var10 != 0 &&
               var13Lifetime1 >= 0) {
-              var41 = new up[9];
+              var41 = new PlayerStats[9];
               var14 = var41;
               for (var15 = 0; 9 > var15; var15++) {
-                ((Object[]) (var14))[var15] = new up();
-                var41[var15].a(39, param1);
+                ((Object[]) (var14))[var15] = new PlayerStats();
+                var41[var15].readFromPacket(39, param1);
               }
             }
             vs.field_g = null;
-            var15Lifetime1 = param1.h((byte) -128);
+            var15Lifetime1 = param1.readUnsignedByte((byte) -128);
             stackIn_181_0 = (0 == (var15Lifetime1 & 1)) ? 0 : 1;
             var16 = stackIn_181_0;
             stackIn_184_0 = ((var15Lifetime1 & 2) == 0) ? 0 : 1;
@@ -1257,23 +1257,23 @@ public final class Kickabout extends tu {
             var18 = stackIn_187_0;
             stackIn_190_0 = ((var15Lifetime1 & 8) == 0) ? 0 : 1;
             var19 = stackIn_190_0;
-            var20 = param1.j((byte) -87);
-            um.field_e = new ap(true, (up[]) (var14), var12, var13Lifetime1, var5Lifetime5 != 0, var6Lifetime4 != 0, var7Lifetime2, var8_intLifetime1, var9 != 0, var10 != 0, var16 != 0, var17 != 0, var18 != 0, var20, (gr) null);
+            var20 = param1.readByte((byte) -87);
+            um.field_e = new MatchScreen(true, (PlayerStats[]) (var14), var12, var13Lifetime1, var5Lifetime5 != 0, var6Lifetime4 != 0, var7Lifetime2, var8_intLifetime1, var9 != 0, var10 != 0, var16 != 0, var17 != 0, var18 != 0, var20, (ClubState) null);
             stackIn_192_0 = um.field_e;
             stackIn_193_1 = (var19 != 0);
             stackIn_192_0.field_v = stackIn_193_1;
-            da.a(-76);
-            if (ra.field_G == null ||
-              ra.field_G.field_c != 18) {
-              if (cq.field_h.field_c == -1) {
-                cq.field_h = (js) ((Object) um.field_e);
+            MusicPatchNode.a(-76);
+            if (GameModesHelpScreen.field_G == null ||
+              GameModesHelpScreen.field_G.screenId != 18) {
+              if (AuctionLogEntry.field_h.screenId == -1) {
+                AuctionLogEntry.field_h = (AppScreen) ((Object) um.field_e);
               } else {
-                wi.field_B = true;
+                TextButton.field_B = true;
                 ng.a(-1, param2 ^ 85);
-                jm.a(18, false, -2);
+                DelayedServerPacket.a(18, false, -2);
               }
             }
-            an.field_d = false;
+            QuickChatPhraseCache.field_d = false;
             var21 = param1.field_n - var4_intLifetime7;
             if (var21 != ms.field_b) {
               throw new RuntimeException("");
@@ -1284,7 +1284,7 @@ public final class Kickabout extends tu {
           stackIn_29_0 = -105;
           stackIn_29_1 = (CipherPacketBuffer) (param1);
           stackIn_30_2 = (83 == so.field_b);
-          mf.$cfr$intArgs$a$fbddc791f0bf(stackIn_29_0, stackIn_29_1, stackIn_30_2);
+          SquadGridWidget.$cfr$intArgs$a$fbddc791f0bf(stackIn_29_0, stackIn_29_1, stackIn_30_2);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1304,18 +1304,18 @@ public final class Kickabout extends tu {
         int incrementValue$0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
-        lm stackIn_44_0 = null;
+        TournamentLobbyScreen stackIn_44_0 = null;
         int stackIn_44_1 = 0;
         boolean stackIn_45_2 = false;
-        ap stackIn_53_0 = null;
+        MatchScreen stackIn_53_0 = null;
         int stackIn_53_1 = 0;
         boolean stackIn_54_2 = false;
-        js stackIn_63_0 = null;
+        AppScreen stackIn_63_0 = null;
         int stackIn_63_1 = 0;
         boolean stackIn_64_2 = false;
-        qt stackIn_74_0 = null;
+        ButtonMenuScreen stackIn_74_0 = null;
         boolean stackIn_75_1 = false;
-        js stackIn_85_0 = null;
+        AppScreen stackIn_85_0 = null;
         int stackIn_85_1 = 0;
         boolean stackIn_86_2 = false;
         int var2;
@@ -1332,13 +1332,13 @@ public final class Kickabout extends tu {
         var2 = 97 % ((param0 - 50) / 45);
         var3 = 0;
         if (0 < FormationAgent.field_f) {
-          stackIn_4_0 = (po.a(cq.field_h, -4) < 640) ? 0 : 1;
+          stackIn_4_0 = (po.a(AuctionLogEntry.field_h, -4) < 640) ? 0 : 1;
           var4 = stackIn_4_0;
           if ((var4 == 0 ||
-            ra.field_G != null) && 0 != tb.field_v) {
+            GameModesHelpScreen.field_G != null) && 0 != tb.field_v) {
             var3 = 240;
-            if ((ra.field_G != null)) {
-              stackIn_14_0 = (po.a(ra.field_G, -4) < 640) ? 0 : 1;
+            if ((GameModesHelpScreen.field_G != null)) {
+              stackIn_14_0 = (po.a(GameModesHelpScreen.field_G, -4) < 640) ? 0 : 1;
               var5 = stackIn_14_0;
               if (var4 != 0 &&
                 var5 != 0) {
@@ -1363,13 +1363,13 @@ public final class Kickabout extends tu {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (cq.field_h.field_c == -3 && (null == ra.field_G ||
-          18 == ra.field_G.field_c)) {
+        if (AuctionLogEntry.field_h.screenId == -3 && (null == GameModesHelpScreen.field_G ||
+          18 == GameModesHelpScreen.field_G.screenId)) {
           var4Lifetime1 = 0;
-          for (var5Lifetime1 = -on.field_a.length; var5Lifetime1 < 0; var5Lifetime1++) {
+          for (var5Lifetime1 = -SoftwareRasterizer.field_a.length; var5Lifetime1 < 0; var5Lifetime1++) {
             incrementValue$0 = var4Lifetime1;
             var4Lifetime1++;
-            on.field_a[incrementValue$0] = 65793;
+            SoftwareRasterizer.field_a[incrementValue$0] = 65793;
           }
           decompiledFrameRemainder0 = false;
         }
@@ -1378,69 +1378,69 @@ public final class Kickabout extends tu {
             hr.a((byte) -48);
           }
           if (sr.field_l != null &&
-            cq.field_h.field_c != 0 &&
-            cq.field_h.field_c != -1 &&
-            6 != cq.field_h.field_c) {
+            AuctionLogEntry.field_h.screenId != 0 &&
+            AuctionLogEntry.field_h.screenId != -1 &&
+            6 != AuctionLogEntry.field_h.screenId) {
             stackIn_44_0 = sr.field_l;
             stackIn_44_1 = -5;
-            stackIn_45_2 = (this.field_L) && (sr.field_l == cq.field_h) && (ra.field_G == null);
-            ((lm) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2);
+            stackIn_45_2 = (this.field_L) && (sr.field_l == AuctionLogEntry.field_h) && (GameModesHelpScreen.field_G == null);
+            ((TournamentLobbyScreen) (Object) stackIn_44_0).drawScreen(stackIn_44_1, stackIn_45_2);
           }
           if (um.field_e != null &&
-            cq.field_h.field_c != 0 &&
-            -2 != cq.field_h.field_c) {
+            AuctionLogEntry.field_h.screenId != 0 &&
+            -2 != AuctionLogEntry.field_h.screenId) {
             stackIn_53_0 = um.field_e;
             stackIn_53_1 = -5;
-            stackIn_54_2 = (this.field_L) && (um.field_e == cq.field_h) && (null == ra.field_G);
-            ((ap) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2);
+            stackIn_54_2 = (this.field_L) && (um.field_e == AuctionLogEntry.field_h) && (null == GameModesHelpScreen.field_G);
+            ((MatchScreen) (Object) stackIn_53_0).drawScreen(stackIn_53_1, stackIn_54_2);
           }
         }
-        pt.a(FormationAgent.field_f, -22914, 0, 480, 0);
-        var4Lifetime2 = -nn.field_B.field_o + FormationAgent.field_f;
+        AuctionListing.a(FormationAgent.field_f, -22914, 0, 480, 0);
+        var4Lifetime2 = -AccountChoicePanel.field_B.field_o + FormationAgent.field_f;
         if (var3 > 0) {
-          eo.a(po.field_h, vq.field_d, var4Lifetime2);
+          eo.a(po.field_h, FullscreenFocusCanvas.field_d, var4Lifetime2);
           eo.a(mk.field_a, 0, 0, FormationAgent.field_f, 480, var3, 0);
-          cq.field_j.c(-36, 50, 64);
+          AuctionLogEntry.field_j.drawAdditive(-36, 50, 64);
         }
-        if (cq.field_h instanceof qt) {
-          stackIn_63_0 = cq.field_h;
+        if (AuctionLogEntry.field_h instanceof ButtonMenuScreen) {
+          stackIn_63_0 = AuctionLogEntry.field_h;
           stackIn_63_1 = -5;
-          stackIn_64_2 = (this.field_L) && (null == ra.field_G);
-          ((js) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
+          stackIn_64_2 = (this.field_L) && (null == GameModesHelpScreen.field_G);
+          ((AppScreen) (Object) stackIn_63_0).drawScreen(stackIn_63_1, stackIn_64_2);
         }
-        if (ra.field_G instanceof qt) {
-          ra.field_G.a(-5, false);
+        if (GameModesHelpScreen.field_G instanceof ButtonMenuScreen) {
+          GameModesHelpScreen.field_G.drawScreen(-5, false);
         }
         if (FormationAgent.field_f > 0) {
           po.field_h.c(var4Lifetime2, 0);
-          nn.field_B.c(var4Lifetime2, 0);
+          AccountChoicePanel.field_B.c(var4Lifetime2, 0);
         }
-        ta.e(118);
-        if (cq.field_h instanceof qt) {
-          stackIn_74_0 = (qt) (cq.field_h);
-          stackIn_75_1 = (this.field_L) && (ra.field_G == null);
-          ((qt) (Object) stackIn_74_0).a(stackIn_75_1, 117);
+        TeamManagementScreen.e(118);
+        if (AuctionLogEntry.field_h instanceof ButtonMenuScreen) {
+          stackIn_74_0 = (ButtonMenuScreen) (AuctionLogEntry.field_h);
+          stackIn_75_1 = (this.field_L) && (GameModesHelpScreen.field_G == null);
+          ((ButtonMenuScreen) (Object) stackIn_74_0).drawOverlay(stackIn_75_1, 117);
         }
-        if (ra.field_G instanceof qt) {
-          ((qt) (ra.field_G)).a(false, 119);
+        if (GameModesHelpScreen.field_G instanceof ButtonMenuScreen) {
+          ((ButtonMenuScreen) (GameModesHelpScreen.field_G)).drawOverlay(false, 119);
         }
-        if (!(cq.field_h instanceof qt) &&
-          cq.field_h != um.field_e &&
-          cq.field_h != sr.field_l) {
-          stackIn_85_0 = cq.field_h;
+        if (!(AuctionLogEntry.field_h instanceof ButtonMenuScreen) &&
+          AuctionLogEntry.field_h != um.field_e &&
+          AuctionLogEntry.field_h != sr.field_l) {
+          stackIn_85_0 = AuctionLogEntry.field_h;
           stackIn_85_1 = -5;
-          stackIn_86_2 = (this.field_L) && (ra.field_G == null);
-          ((js) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_86_2);
+          stackIn_86_2 = (this.field_L) && (GameModesHelpScreen.field_G == null);
+          ((AppScreen) (Object) stackIn_85_0).drawScreen(stackIn_85_1, stackIn_86_2);
         }
-        if (ra.field_G != null &&
-          !(ra.field_G instanceof qt) &&
-          um.field_e != ra.field_G &&
-          sr.field_l != ra.field_G) {
-          ra.field_G.a(-5, false);
+        if (GameModesHelpScreen.field_G != null &&
+          !(GameModesHelpScreen.field_G instanceof ButtonMenuScreen) &&
+          um.field_e != GameModesHelpScreen.field_G &&
+          sr.field_l != GameModesHelpScreen.field_G) {
+          GameModesHelpScreen.field_G.drawScreen(-5, false);
         }
-        this.w(102);
-        if (pb.field_B) {
-          sc.g((byte) -119);
+        this.drawLogoBanner(102);
+        if (IsSixCommand.field_B) {
+          FindingOpponentScreen.g((byte) -119);
         }
         if (ka.field_b) {
           var5Lifetime2 = -ce.field_I + 24 << 4;
@@ -1449,15 +1449,15 @@ public final class Kickabout extends tu {
           }
           q.field_d.d("Transition: " + ce.field_I + " : " + var5Lifetime2, 320, 100, 16777215, 0);
         }
-        if (wh.field_q &&
-          cq.field_h.field_c != -4) {
-          this.v(81);
+        if (FadingSoundPlayer.field_q &&
+          AuctionLogEntry.field_h.screenId != -4) {
+          this.drawLoadingBar(81);
         }
         wq.a((byte) 71);
         gs.a((byte) -106);
     }
 
-    final void b(int param0) {
+    final void releaseStatics(int param0) {
         Kickabout.o((byte) -99);
         bw.a(false);
         uq.a(-91);
@@ -1465,12 +1465,12 @@ public final class Kickabout extends tu {
         et.a(121);
         w.b(23);
         ng.b(param0 ^ 126);
-        up.g(112);
-        hn.a((byte) 122);
-        pt.a((byte) 9);
+        PlayerStats.g(112);
+        ManagerAction.a((byte) 122);
+        AuctionListing.a((byte) 9);
         su.a((byte) -115);
-        gr.b((byte) 0);
-        fp.a(-23834);
+        ClubState.b((byte) 0);
+        AuctionItem.a(-23834);
         wk.a((byte) -67);
         pc.b(-13827);
         nd.a((byte) 115);
@@ -1478,25 +1478,25 @@ public final class Kickabout extends tu {
         pl.a(20177);
         pr.a(0);
         oi.a(false);
-        tf.a(param0 - 133);
-        on.c();
+        IntrusiveDeque.a(param0 - 133);
+        SoftwareRasterizer.c();
         jl.a(param0 ^ 8198);
         CipherPacketBuffer.m(0);
         gs.b((byte) -117);
         mi.a(param0 - 6);
         nc.a((byte) 72);
         ss.a((byte) -90);
-        tu.q(30907);
-        de.a(param0 + 3896);
+        GameLoopApplet.q(30907);
+        GameKeyHandler.a(param0 + 3896);
         gw.d(param0 + 92);
         qr.a(false);
         NetworkGameClient.d(true);
         ClientException.a((byte) -95);
         GameAppletShell.c(1);
-        u.a(param0 - 8);
-        ku.a(param0 - 7);
-        rg.a((byte) 66);
-        sj.c(param0 ^ -122);
+        JaggrabDownloader.a(param0 - 8);
+        MouseInputHandler.a(param0 - 7);
+        MouseWheelInput.a((byte) 66);
+        ResourceArchive.c(param0 ^ -122);
         fc.a(29136);
         td.a(false);
         PacketBuffer.g((byte) 88);
@@ -1512,29 +1512,29 @@ public final class Kickabout extends tu {
         ns.a((byte) 60);
         mc.a((byte) -116);
         qe.a(true);
-        vq.a((byte) 25);
+        FullscreenFocusCanvas.a((byte) 25);
         kh.d(param0 - 1712);
         sd.a(-1);
-        ap.a(true);
-        lm.a(true);
-        js.a((byte) 125);
-        kd.c(-1);
-        lu.g((byte) -28);
-        am.e(13421568);
+        MatchScreen.a(true);
+        TournamentLobbyScreen.a(true);
+        AppScreen.a((byte) 125);
+        DebugConsole.c(-1);
+        SpriteState.g((byte) -28);
+        DualLinkNode.e(13421568);
         IntrusiveNode.d(126);
-        hj.a(param0 + 50);
+        BlankScreen.a(param0 + 50);
         rd.a(true);
         ds.a(-49);
-        cq.b(110);
+        AuctionLogEntry.b(110);
         eh.d(1);
         ig.a((byte) -13);
         vb.a(0);
         fn.q(140);
-        hs.b(104);
+        MatchPhaseView.b(104);
         il.a((byte) 101);
         jb.c(false);
         ar.a((byte) -73);
-        gm.i((byte) 14);
+        RenderedFootballer.i((byte) 14);
         ak.a(17);
         vr.a((byte) -118);
         ca.a((byte) -72);
@@ -1548,52 +1548,52 @@ public final class Kickabout extends tu {
         le.a(false);
         bq.a((byte) -127);
         dg.a((byte) -90);
-        t.a();
+        TriangleRasterizer.releaseStatics();
         ep.a(0);
         ck.a(false);
         rj.a((byte) -116);
         ks.a(0);
-        uh.a();
+        PcmPlayerService.a();
         jj.a((byte) -99);
-        qt.c((byte) -107);
+        ButtonMenuScreen.c((byte) -107);
         fv.b((byte) 108);
         mt.a(param0 ^ 7);
         ji.a(-123);
-        hd.g(-14457);
-        io.a((byte) -6);
-        ko.a((byte) -22);
-        ew.d(81);
+        UiLayoutNode.g(-14457);
+        MenuButton.a((byte) -6);
+        MenuSelection.a((byte) -22);
+        BufferedCacheFile.d(81);
         te.a(true);
         ec.a(0);
         we.a((byte) -43);
         kr.a(param0 ^ -121);
         kj.b((byte) -118);
-        ps.b(-27680);
-        bh.c(param0 ^ -109);
-        kt.a(125);
-        e.a(-1);
-        ta.g((byte) 91);
-        sp.j(param0 - 246);
-        jt.h((byte) -17);
+        LoginCredentials.b(-27680);
+        BufferedSocket.c(param0 ^ -109);
+        BlackFadeScreen.a(125);
+        SplashScreen.a(-1);
+        TeamManagementScreen.g((byte) 91);
+        ShopPlayerSlot.j(param0 - 246);
+        PitchOptionTile.h((byte) -17);
         in.a(param0 ^ 31347);
-        ud.e(14513);
+        MatchTransitionScreen.e(14513);
         ParticipantStatus.a(true);
         LoggedGoal.a((byte) 119);
         qn.a((byte) -124);
-        hu.a();
+        BitmapFont.a();
         CommonGame.a(true);
         IsaacRandom.b(1);
         vj.a((byte) 111);
-        tg.a();
-        wh.a(0);
-        bd.f(param0 ^ -54);
+        VorbisSample.a();
+        FadingSoundPlayer.a(0);
+        UnreadMessagesScreen.f(param0 ^ -54);
         gk.a((byte) -127);
-        rm.f(-71);
+        RankingsScreen.f(-71);
         uf.b(param0 ^ 3547);
-        ne.g(29250);
+        GameplayHelpScreen.g(29250);
         cb.a((byte) -100);
-        ob.i(127);
-        la.a((byte) -124);
+        RenderedBall.i(127);
+        PlayArea.a((byte) -124);
         BallAgent.f(0);
         FootballerAgent.e((byte) -108);
         is.b(116);
@@ -1612,7 +1612,7 @@ public final class Kickabout extends tu {
         sk.a(-5514);
         ph.b(1114366657);
         ad.a(param0 - 6);
-        bn.e(-38);
+        LeaguesScreen.e(-38);
         so.a((byte) -113);
         jq.a(true);
         kp.a((byte) 101);
@@ -1620,45 +1620,45 @@ public final class Kickabout extends tu {
         pi.a((byte) -116);
         h.a(false);
         LoggedPlayer.a(48);
-        p.a(320);
+        LoggedPossession.a(320);
         it.c(92);
         TeamSelectionAgent.a((byte) -90);
         FormationAgent.a(true);
         GoalStateAgent.a((byte) -30);
-        ki.a(0);
+        PlayerInputEvent.a(0);
         MatchAgent.a(-3);
         po.a(0);
-        sc.e(130);
-        rq.a(true);
+        FindingOpponentScreen.e(130);
+        ServerMessageScreen.a(true);
         dc.a(-89);
         bo.a(param0 ^ 78);
         tt.a(false);
-        eg.d();
+        ModelMesh.releaseStatics();
         sh.a(320);
         ul.a(param0 ^ 125);
-        o.d(1603);
-        be.d((byte) -53);
-        lj.a(-64);
+        DualLinkDeque.d(1603);
+        ConsolePanel.d((byte) -53);
+        TextLine.a(-64);
         ts.a((byte) 123);
         vg.m(param0 + 90);
-        qd.a(-75);
+        IndexedSpriteState.a(-75);
         rk.a(0);
-        nr.a((byte) 126);
+        PlayerModelPreview.a((byte) 126);
         dr.a((byte) -127);
-        fm.g((byte) 81);
+        AchievementsScreen.g((byte) 81);
         eo.c();
         tk.i((byte) -69);
-        wf.h((byte) -53);
-        jw.a(0);
-        jh.k((byte) 68);
+        AuctionsScreen.h((byte) -53);
+        CheckboxLabelWidget.a(0);
+        AuctionTableWidget.k((byte) 68);
         jr.i(-25734);
         IntrusiveNodeHashTable.a((byte) -111);
-        b.f(-2010043359);
-        mf.i((byte) -127);
+        MySquadScreen.f(-2010043359);
+        SquadGridWidget.i((byte) -127);
         pu.i((byte) -108);
-        qs.h((byte) -111);
-        bp.c(false);
-        kq.i((byte) -123);
+        PlayerShopScreen.h((byte) -111);
+        ColumnTableWidget.c(false);
+        SquadSlotWidget.i((byte) -123);
         vu.a(-15410);
         rf.a(-97);
         kf.c(true);
@@ -1666,13 +1666,13 @@ public final class Kickabout extends tu {
         ac.b((byte) 16);
         wa.a((byte) 116);
         rr.a(param0 - 121);
-        ru.a((byte) -32);
-        kl.a(param0 ^ 6);
+        MidiPcmStream.a((byte) -32);
+        ArchiveIndex.a(param0 ^ 6);
         rc.a(113);
-        ow.a(false);
-        km.a();
+        ArchiveSource.a(false);
+        VorbisFloor.a();
         cp.a((byte) 60);
-        fw.f(-107);
+        MyPitchScreen.f(-107);
         i.f((byte) 90);
         pv.g((byte) -111);
         sq.g(13);
@@ -1684,7 +1684,7 @@ public final class Kickabout extends tu {
         no.g((byte) -93);
         pq.g(-14948);
         pw.g(-8332);
-        gi.h(-31922);
+        ColourSwatchTile.h(-31922);
         hk.g(0);
         rt.g(param0 ^ 25994);
         ie.h(24342);
@@ -1697,31 +1697,31 @@ public final class Kickabout extends tu {
         of.a(false);
         ih.a(66049);
         d.a(0);
-        se.m(-1);
-        jn.s(248);
-        oj.j((byte) 110);
+        ModalStack.m(-1);
+        RegistrationRequestDialog.releaseStatics(248);
+        LoadingProgressDialog.j((byte) 110);
         vo.j((byte) 53);
-        wv.j((byte) -108);
-        ae.a((byte) -94);
-        nn.k(2);
-        pd.k(param0 ^ -11205);
-        mb.a((byte) -94);
+        AccountRequestDialog.j((byte) -108);
+        AccountRegistrationPanel.a((byte) -94);
+        AccountChoicePanel.k(2);
+        LoginForm.k(param0 ^ -11205);
+        DisplayNameForm.a((byte) -94);
         wc.a(10);
         ee.a((byte) -100);
         th.a(false);
         ve.j((byte) 77);
         cd.a((byte) -98);
-        cm.o(1);
-        qv.a(true);
-        wi.a(79);
-        fd.g((byte) 88);
-        ub.a((byte) -103);
-        wj.i(param0 ^ -336184830);
-        nw.c((byte) -65);
+        ResizableModalPanel.o(1);
+        TextWidgetPainter.a(true);
+        TextButton.a(79);
+        UiWidget.g((byte) 88);
+        ModalPanel.a((byte) -103);
+        WidgetContainer.i(param0 ^ -336184830);
+        IntrusiveDequeCursor.c((byte) -65);
         iq.b(0);
-        ct.j(31068);
+        SingleChildContainer.j(31068);
         pg.b(127);
-        bi.f(param0 - 6);
+        ArchiveNetworkClient.f(param0 - 6);
         eb.a(2);
         n.b(-2147483648);
         gf.a(64);
@@ -1730,14 +1730,14 @@ public final class Kickabout extends tu {
         wq.a(-109);
         f.a((byte) -88);
         tl.c(0);
-        ao.b(113);
-        sa.a((byte) 125);
+        RandomAccessCacheFile.b(113);
+        DelegatingCanvas.a((byte) 125);
         di.a(-10);
         lf.a((byte) 94);
         pf.a((byte) 98);
-        au.a();
+        Bzip2Decoder.a();
         os.b(3);
-        si.a(0);
+        ReflectionCheck.a(0);
         un.a((byte) 106);
         re.a((byte) 109);
         id.a(-116);
@@ -1749,27 +1749,27 @@ public final class Kickabout extends tu {
         sg.a(false);
         bb.b(111);
         bt.a(true);
-        an.a(30297);
-        bg.a(71);
+        QuickChatPhraseCache.a(30297);
+        QuickChatPhraseDefinition.a(71);
         eq.a((byte) -32);
-        av.b(99);
+        SocketConnector.b(99);
         lw.a((byte) -125);
         vi.d(125);
-        dh.a((byte) -29);
+        ImageProducerRasterBuffer.a((byte) -29);
         hq.a(param0 + 55);
         cl.a(-1);
         tr.a(false);
-        ol.g(-39);
-        va.c((byte) -40);
-        wb.g(param0 - 119);
-        fk.f(1);
-        lr.f(param0 - 15646);
-        bf.b((byte) -113);
+        GameOverView.g(-39);
+        PlayingView.c((byte) -40);
+        TeamSelectionView.g(param0 - 119);
+        WaitForPlayersView.f(1);
+        FormationView.f(param0 - 15646);
+        LineupView.b((byte) -113);
         ib.a(param0 + 905215451);
         cv.b((byte) -39);
         ia.a((byte) 107);
         rn.a(-66);
-        je.a(-1);
+        AnimationSkeleton.a(-1);
         ok.a(param0 + 121);
         ef.h((byte) -31);
         db.a();
@@ -1780,54 +1780,54 @@ public final class Kickabout extends tu {
         us.f((byte) 40);
         ip.a(-123);
         vp.b((byte) 125);
-        da.a((byte) -80);
-        rs.b();
+        MusicPatchNode.a((byte) -80);
+        MidiFileReader.b();
         pp.a(false);
-        dj.e(param0 - 29110);
+        PagedHelpScreen.e(param0 - 29110);
         tb.c((byte) -115);
         ui.a(true);
-        qh.b(-1);
+        SectorCacheStore.b(-1);
         hi.g(-26236);
-        wm.a((byte) -119);
+        CachedArchiveSource.a((byte) -119);
         or.a((byte) 69);
         vv.g((byte) 18);
         af.a((byte) 105);
         cg.k(115);
-        mr.n((byte) 74);
-        ga.l(param0 - 6);
-        mu.p(12);
-        fr.a(param0 - 6);
-        lb.i(param0 + 9568);
+        ValidatedTextWidget.n((byte) 74);
+        TextInputWidget.l(param0 - 6);
+        ContentTransitionDialog.p(12);
+        NameSuggestionsPanel.a(param0 - 6);
+        TextHotspotWidget.i(param0 + 9568);
         gb.a((byte) 38);
         ju.h((byte) -120);
-        qk.a((byte) 108);
-        jd.b((byte) -124);
+        Checkbox.a((byte) 108);
+        TextFieldValidator.b((byte) -124);
         br.a(true);
-        ai.l(0);
+        AccountTermsPanel.l(0);
         bk.b(-79);
-        kv.a();
-        hw.a(96);
-        sf.f(90);
-        ra.g(128);
-        qa.g(60);
-        df.c(false);
-        ja.h(8);
+        SynthesizedSoundInstrument.releaseSynthesisBuffers();
+        InstrumentNoteMask.a(96);
+        MainMenuScreen.f(90);
+        GameModesHelpScreen.g(128);
+        LeaguesHelpScreen.g(60);
+        AuctionsHelpScreen.c(false);
+        MyKitScreen.h(8);
         um.a(123);
-        es.a((byte) -49);
+        RowRangeRequest.a((byte) -49);
         hl.f(param0 ^ -5);
-        fb.n(-23192);
+        NumericDateInputWidget.n(-23192);
         wt.b(false);
         go.a(99);
         mg.a(param0 ^ 136);
         hv.a(23);
-        jk.f((byte) -37);
+        MusicPatch.f((byte) -37);
         gl.a(93);
         m.a(0);
         s.i(-1);
         nv.j(696);
         st.b((byte) -103);
-        jg.h((byte) -112);
-        ln.k(31235);
+        DraggableWidget.h((byte) -112);
+        DropTargetWidget.k(31235);
         ll.b((byte) -56);
         fu.a(true);
         IterableNodeHashTable.a(false);
@@ -1835,17 +1835,17 @@ public final class Kickabout extends tu {
         ij.g((byte) -46);
         ff.a((byte) 101);
         pn.b(-1);
-        dq.a(false);
+        ProxySocketConnector.a(false);
         dt.a(43);
-        cj.a(param0 ^ -104);
+        DateInputWidget.a(param0 ^ -104);
         vt.a(-73);
-        as.a();
-        nt.i(4476);
-        ov.a(1);
-        lc.a(-119);
+        SoundFilter.a();
+        KitStyleTile.i(4476);
+        NodeHashTableIterator.a(1);
+        DualLinkDequeIterator.a(-119);
         nb.a(true);
         ag.a((byte) 100);
-        vc.g((byte) -126);
+        ReceivedAuctionItem.g((byte) -126);
         wd.a((byte) 122);
         ni.a(-1859);
         sm.a(0);
@@ -1855,16 +1855,16 @@ public final class Kickabout extends tu {
         ri.b(true);
         rp.a(102);
         mn.a((byte) 106);
-        pj.h((byte) 115);
+        AlphaContainer.h((byte) 115);
         oc.b((byte) -116);
         dk.a(7571);
         ii.a(84);
         bl.b((byte) -104);
-        lk.a(param0 - 6);
-        li.a((byte) -126);
-        tm.a(15);
-        fi.a((byte) 121);
-        dw.a(param0 ^ 6);
+        ConsoleExpression.a(param0 - 6);
+        ConsoleValue.a((byte) -126);
+        ConsoleCommand.a(15);
+        ConsoleParseException.a((byte) 121);
+        ConsoleEvaluationException.a(param0 ^ 6);
         sb.a(-127);
         q.b(-84);
         en.b((byte) 38);
@@ -1879,38 +1879,38 @@ public final class Kickabout extends tu {
         fa.a(param0 - 121);
         kw.d((byte) -122);
         r.a(param0 ^ -94);
-        jm.a(104);
+        DelayedServerPacket.a(104);
         vd.a(-5);
         wn.a(param0 ^ param0);
         ue.a(92);
         j.a(true);
         vl.a(120);
-        aa.b((byte) -104);
+        KeyedLoginCredentials.b((byte) -104);
         wo.a(false);
-        gp.c(85);
+        PasswordLoginCredentials.c(85);
         oh.b((byte) -47);
         vs.a(0);
         cf.a(-13);
-        iu.a((byte) -123);
+        CachedListingRow.a((byte) -123);
         gd.a(22897);
-        hm.g(10040319);
-        kb.g(1);
-        jo.g(param0 - 6);
-        jf.g(param0 + 121);
-        ir.a(false);
-        pb.g(50);
-        tq.g(115);
-        ik.g(param0 ^ -107);
-        uc.g(220);
-        ev.g(1);
-        el.g((byte) 52);
-        uj.a(false);
-        lh.g((byte) 96);
+        SumIntegersCommand.g(10040319);
+        WriteIntegersCommand.g(1);
+        DemoIntegersCommand.g(param0 - 6);
+        DoSomethingCommand.g(param0 + 121);
+        ThreeCommand.a(false);
+        IsSixCommand.g(50);
+        NotCommand.g(115);
+        IntDoubleCommand.g(param0 ^ -107);
+        IntTripleCommand.g(220);
+        LongPlusOneCommand.g(1);
+        BytePlusOneCommand.g((byte) 52);
+        SetLagCommand.a(false);
+        BroadcastServerCommand.g((byte) 96);
         ej.h((byte) 118);
         im.a(-18523);
         at.h((byte) -117);
         dn.c(true);
-        qp.a(14);
+        AccountMessagePanel.a(14);
         hh.a((byte) 121);
         qj.b((byte) -125);
         dl.a((byte) -61);
@@ -1919,16 +1919,16 @@ public final class Kickabout extends tu {
         mp.a(1);
         hf.a(true);
         v.b(0);
-        bv.g(-70);
-        lo.c((byte) -96);
-        qo.f((byte) -126);
-        mh.g(-29635);
-        fo.c((byte) 92);
-        ge.c((byte) 76);
+        AccountNameAvailabilityValidator.g(-70);
+        PasswordValidator.c((byte) -96);
+        EmailSyntaxValidator.f((byte) -126);
+        EmailAvailabilityValidator.g(-29635);
+        AgeValidator.c((byte) 92);
+        MatchingTextValidator.c((byte) 76);
         ic.a((byte) 68);
         er.a((byte) -94);
-        rv.a(-89);
-        lg.d(param0 ^ 344);
+        ValidationState.a(-89);
+        DebouncedValidationProvider.d(param0 ^ 344);
         ea.a(param0 ^ -110);
         ld.a((byte) 112);
         this.field_z = null;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ju extends lb {
+final class ju extends TextHotspotWidget {
     private String field_O;
     private int field_S;
     static boolean field_T;
-    private l field_R;
-    private ut field_Q;
+    private ValidationSource field_R;
+    private Sprite field_Q;
     static long[][] field_W;
     static long[] field_V;
     static String field_P;
@@ -21,7 +21,7 @@ final class ju extends lb {
         return null;
     }
 
-    final static void a(int param0, int param1, int param2, ut[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -45,14 +45,14 @@ final class ju extends lb {
             var7 = param3[1].field_o;
             param3[0].c(param0, param2);
             param3[2].c(param4 + param0 - var6, param2);
-            on.a(vi.field_q);
-            on.h(var5_int + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
+            SoftwareRasterizer.saveClip(vi.field_q);
+            SoftwareRasterizer.intersectClip(var5_int + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
             var8 = param0 + var5_int;
             var9 = param4 + (param0 - var6);
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
               param3[1].c(param0, param2);
             }
-            on.b(vi.field_q);
+            SoftwareRasterizer.restoreClip(vi.field_q);
             return;
           }
           return;
@@ -70,7 +70,7 @@ final class ju extends lb {
         }
     }
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_S = this.field_S + 1;
           super.a(param0, param1, param2, param3);
@@ -91,17 +91,17 @@ final class ju extends lb {
         return Character.toTitleCase(param1);
     }
 
-    final boolean a(fd param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        ut[] var4 = null;
+        Sprite[] var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (ut[]) null;
-            ju.a(-120, -71, -85, (ut[]) null, -72);
+            var4 = (Sprite[]) null;
+            ju.a(-120, -71, -85, (Sprite[]) null, -72);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,8 +118,8 @@ final class ju extends lb {
         }
     }
 
-    ju(l param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, fr.h((byte) 66));
+    ju(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
+        super(param1, NameSuggestionsPanel.h((byte) 66));
         try {
           this.field_R = param0;
           this.field_O = param1;
@@ -138,45 +138,45 @@ final class ju extends lb {
 
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
-        rv var6;
-        ke var8;
+        ValidationState var6;
+        WidgetTextLayout var8;
         int var9;
         int var10;
         int var11;
         int var12;
         int var13;
-        ut var14;
-        ut var15;
-        ut var16;
-        rv var6Lifetime1;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
+        ValidationState var6Lifetime1;
         var13 = Kickabout.field_G;
-        var6 = this.field_R.c(-24407);
+        var6 = this.field_R.getValidationState(-24407);
         if (var6 != mn.field_c &&
           var6 != en.field_p) {
-          var5 = this.field_R.b(param1 - 90);
+          var5 = this.field_R.getValidationMessage(param1 - 90);
           if (var5 == null) {
             var5 = this.field_O;
           }
         } else {
-          var5 = qh.field_a;
+          var5 = SectorCacheStore.field_a;
         }
         if (!var5.equals(this.field_q)) {
           this.field_q = var5;
           this.a((byte) -41);
         }
         super.a(param0, (int) (char)param1, param2, param3);
-        var6Lifetime1 = this.field_R.c(-24407);
-        var8 = (ke) ((Object) this.field_r);
+        var6Lifetime1 = this.field_R.getValidationState(-24407);
+        var8 = (WidgetTextLayout) ((Object) this.field_r);
         var9 = param2 + this.field_t;
-        var10 = var8.a(true, (fd) (this), param3) + (var8.a(5035, (fd) (this)).a(-1761) >> 1);
+        var10 = var8.a(true, (UiWidget) (this), param3) + (var8.a(5035, (UiWidget) (this)).a(-1761) >> 1);
         if (var6Lifetime1 != mn.field_c &&
           var6Lifetime1 != en.field_p) {
-          if (jt.field_Bb == var6Lifetime1) {
+          if (PitchOptionTile.field_Bb == var6Lifetime1) {
             var15 = LoggedPlayer.field_g[2];
-            var15.c(var9, var10 - (var15.field_w >> 1), 256);
+            var15.drawAdditive(var9, var10 - (var15.field_w >> 1), 256);
           } else if (var6Lifetime1 == he.field_yb) {
             var16 = LoggedPlayer.field_g[1];
-            var16.c(var9, var10 - (var16.field_w >> 1), 256);
+            var16.drawAdditive(var9, var10 - (var16.field_w >> 1), 256);
           }
         } else {
           var14 = LoggedPlayer.field_g[0];
@@ -186,28 +186,28 @@ final class ju extends lb {
             this.field_Q.field_q >= var11 &&
             this.field_Q.field_w >= var12) {
             PacketBuffer.a(param1 ^ -19, this.field_Q);
-            on.b();
+            SoftwareRasterizer.b();
           } else {
-            this.field_Q = new ut(var11, var12);
+            this.field_Q = new Sprite(var11, var12);
             PacketBuffer.a(70, this.field_Q);
           }
           var14.b(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
-          ta.e(126);
-          this.field_Q.c(-(var14.field_o >> 1) + var9, -var14.field_v + var10, 256);
+          TeamManagementScreen.e(126);
+          this.field_Q.drawAdditive(-(var14.field_o >> 1) + var9, -var14.field_v + var10, 256);
         }
     }
 
-    final static ut a(int param0, int param1, sj param2, byte param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
-        ut stackIn_2_0 = null;
-        ut stackIn_7_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -9) {
-            stackIn_2_0 = (ut) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (!cu.a(param1, param2, param0, param3 ^ -105)) {
@@ -234,7 +234,7 @@ final class ju extends lb {
           return;
         }
         try {
-          hw.field_j = param0;
+          InstrumentNoteMask.field_j = param0;
           ts.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ju.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

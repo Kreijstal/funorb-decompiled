@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ef extends am {
+final class ef extends DualLinkNode {
     private int field_o;
     static String field_p;
     static String field_n;
@@ -26,7 +26,7 @@ final class ef extends am {
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          if (!hw.a(param0, -26200, true)) {
+          if (!InstrumentNoteMask.isValidDisplayName(param0, -26200, true)) {
             return false;
           }
           if (param1 != -9907) {
@@ -63,7 +63,7 @@ final class ef extends am {
         int[] var2_ref_int__;
         int var2;
         int var3_int;
-        tf var3;
+        IntrusiveDeque var3;
         int var4;
         int var5;
         PacketBuffer var5_ref_iw;
@@ -71,10 +71,10 @@ final class ef extends am {
         PacketBuffer var9;
         int var10;
         Object var11;
-        je var12;
+        AnimationSkeleton var12;
         int var13;
         int[] var14;
-        je var15;
+        AnimationSkeleton var15;
         int var16;
         int[] var17;
         int[] var21;
@@ -114,7 +114,7 @@ final class ef extends am {
           return false;
         }
         var5 = 57 % ((param0 - 36) / 42);
-        var3 = new tf();
+        var3 = new IntrusiveDeque();
         var4 = gd.field_c.a(true, this.field_o);
         this.field_q = new db[var4];
         var29 = gd.field_c.c(this.field_o, 4);
@@ -124,21 +124,21 @@ final class ef extends am {
           var9.field_n = 1;
           var10 = var9.a((byte) 81);
           var11 = null;
-          var12 = (je) (var3.g(24009));
+          var12 = (AnimationSkeleton) (var3.g(24009));
           while (var12 != null) {
             if (~var12.field_l != ~var10) {
-              var12 = (je) (var3.c(33));
+              var12 = (AnimationSkeleton) (var3.c(33));
               continue;
             }
             var11 = var12;
             break;
           }
           if (var11 == null) {
-            var15 = new je(var10, gs.field_d.a(0, var10));
+            var15 = new AnimationSkeleton(var10, gs.field_d.a(0, var10));
             var11 = var15;
             var3.a(var15, 3);
           }
-          this.field_q[var29[var7]] = new db(var30, (je) (var11));
+          this.field_q[var29[var7]] = new db(var30, (AnimationSkeleton) (var11));
         }
         this.field_r = (byte[][]) null;
         return true;

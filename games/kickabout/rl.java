@@ -23,12 +23,12 @@ final class rl extends sr {
     }
 
     final int a(int param0, Object param1, Object param2) {
-        up var4 = null;
+        PlayerStats var4 = null;
         RuntimeException var4_ref = null;
-        up var5 = null;
+        PlayerStats var5 = null;
         String var6 = null;
         String var7 = null;
-        up var8 = null;
+        PlayerStats var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -37,14 +37,14 @@ final class rl extends sr {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ((sp) (param1)).field_Sb;
+          var8 = ((ShopPlayerSlot) (param1)).field_Sb;
           var4 = var8;
-          var5 = ((sp) (param2)).field_Sb;
-          var6 = uf.field_e[var8.field_q];
+          var5 = ((ShopPlayerSlot) (param2)).field_Sb;
+          var6 = uf.field_e[var8.playerType];
           if (param0 != 2) {
             field_q = 3;
           }
-          var7 = uf.field_e[var5.field_q];
+          var7 = uf.field_e[var5.playerType];
           stackIn_3_0 = var6.compareTo(var7) ^ this.field_i << 31;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

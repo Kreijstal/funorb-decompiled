@@ -3,7 +3,7 @@
  */
 final class gf {
     static volatile int field_b;
-    static hu field_a;
+    static BitmapFont field_a;
     static String field_i;
     int field_g;
     static String field_d;
@@ -78,20 +78,20 @@ final class gf {
         try {
           var15 = un.field_e;
           var2 = 123 % ((param0 + 25) / 60);
-          var3 = var15.h((byte) -106);
+          var3 = var15.readUnsignedByte((byte) -106);
           if (var3 == 0) {
             var12 = st.c(-23091);
             var4 = var12;
             var11 = var12;
             var5 = var11;
             var6 = var15;
-            var7 = ((PacketBuffer) ((Object) var6)).h((byte) -108);
+            var7 = ((PacketBuffer) ((Object) var6)).readUnsignedByte((byte) -108);
             for (var8 = 0; var7 > var8; var8++) {
-              var11[var8] = ((PacketBuffer) ((Object) var6)).k(4);
+              var11[var8] = ((PacketBuffer) ((Object) var6)).readInt(4);
             }
-            var13 = (dk) (ap.field_j.g(24009));
+            var13 = (dk) (MatchScreen.field_j.g(24009));
             if (var13 == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
             var13.field_e = var4;
@@ -105,17 +105,17 @@ final class gf {
               var14.c((byte) -109);
               return;
             }
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           if (2 != var3) {
-            bd.a("A1: " + tr.b(0), (Throwable) null, 1);
-            lr.b((byte) -116);
+            UnreadMessagesScreen.a("A1: " + tr.b(0), (Throwable) null, 1);
+            FormationView.b((byte) -116);
             return;
           }
-          var16_ref = (dk) (ap.field_j.g(24009));
+          var16_ref = (dk) (MatchScreen.field_j.g(24009));
           if (var16_ref == null) {
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           var16_ref.field_e = st.c(-23091);
@@ -129,25 +129,25 @@ final class gf {
         }
     }
 
-    final static vq a(bu param0, int param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        vq var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        vq stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ol.a(param1 ^ -9027, param4, param2, param3, param0, param5);
+          var8 = GameOverView.a(param1 ^ -9027, param4, param2, param3, param0, param5);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (vq) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new vq();
+          var7 = new FullscreenFocusCanvas();
           var7.field_c = var8;
           var7.field_c.add((java.awt.Component) ((Object) var7));
           var7.setBounds(param1, 0, param4, param2);
@@ -177,8 +177,8 @@ final class gf {
         field_a = null;
         field_h = null;
         if (param0 != 64) {
-          bu var2 = (bu) null;
-          gf.a((bu) null, 79, 33, -42, -123, 17);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          gf.a((PlatformTaskDispatcher) null, 79, 33, -42, -123, 17);
         }
     }
 
@@ -206,7 +206,7 @@ final class gf {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = gp.a((byte) -25, var3);
+            var5 = PasswordLoginCredentials.a((byte) -25, var3);
             if (var5 == null) {
               stackIn_12_0 = ie.a(var4, param0 - 64);
               return stackIn_12_0;

@@ -3,8 +3,8 @@
  */
 final class fc {
     static boolean field_f;
-    static gm field_c;
-    static ot field_h;
+    static RenderedFootballer field_c;
+    static ArgbSprite field_h;
     static String field_e;
     static int field_a;
     static String field_b;
@@ -42,7 +42,7 @@ final class fc {
               } else {
                 param0 = dt.field_j;
               }
-              pb.field_E.a(ep.field_b, (byte) 120);
+              IsSixCommand.field_E.a(ep.field_b, (byte) 120);
             }
             if (param1 == 10) {
               pc.a((byte) -126);
@@ -50,17 +50,17 @@ final class fc {
             }
             if (var4 != 0) {
               if (po.field_f) {
-                param0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, mh.field_l, new String[]{param0});
+                param0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, EmailAvailabilityValidator.field_l, new String[]{param0});
               }
               if (is.field_a) {
-                param0 = ai.field_L;
+                param0 = AccountTermsPanel.field_L;
               }
               rk.field_f.a(param1, 101, param0);
             }
             if (param1 != 256 &&
               param1 != 10 &&
               !hk.field_G) {
-              pb.field_E.h((byte) -76);
+              IsSixCommand.field_E.h((byte) -76);
               return;
             }
           }

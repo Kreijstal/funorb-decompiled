@@ -10,7 +10,7 @@ final class qr {
     static String field_a;
     static String field_d;
     static String field_g;
-    static hd[] field_b;
+    static UiLayoutNode[] field_b;
 
     final static void a(int param0) {
         int[] var1 = null;
@@ -71,9 +71,9 @@ final class qr {
             var4 = var3;
             var4 = var3;
           }
-          if (lu.field_t != null &&
-            !lu.field_t.equals(param0.getParameter("session"))) {
-            var4 = lu.field_t;
+          if (SpriteState.field_t != null &&
+            !SpriteState.field_t.equals(param0.getParameter("session"))) {
+            var4 = SpriteState.field_t;
           }
           stackIn_11_0 = rt.a(param1, (String) (var4), -1, (String) (var3), false);
           return stackIn_11_0;
@@ -101,7 +101,7 @@ final class qr {
         if (param1 != -1) {
           field_f = (String) null;
         }
-        return (int)((double)((-320 + param0 << 8) / hw.field_i) + hd.field_K);
+        return (int)((double)((-320 + param0 << 8) / InstrumentNoteMask.field_i) + UiLayoutNode.field_K);
     }
 
     final static void a(int param0, PacketBuffer param1) {
@@ -122,10 +122,10 @@ final class qr {
           try {
             var6 = new byte[param0];
             var2 = var6;
-            if (pd.field_G != null) {
+            if (LoginForm.field_G != null) {
               try {
-                pd.field_G.a((byte) 4, 0L);
-                pd.field_G.a(param0 ^ 64, var6);
+                LoginForm.field_G.a((byte) 4, 0L);
+                LoginForm.field_G.a(param0 ^ 64, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var2[var3_int]) {
                     continue;
@@ -135,7 +135,7 @@ final class qr {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param1.a(0, 24, param0 ^ 1991220136, var2);
+                param1.writeBytes(0, 24, param0 ^ 1991220136, var2);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class qr {
                 return;
               }
             }
-            param1.a(0, 24, param0 ^ 1991220136, var2);
+            param1.writeBytes(0, 24, param0 ^ 1991220136, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

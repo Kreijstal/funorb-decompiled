@@ -5,7 +5,7 @@ final class ec {
     static boolean field_e;
     private String field_b;
     private boolean field_c;
-    static tf field_f;
+    static IntrusiveDeque field_f;
     static String field_d;
     static String field_a;
     static String field_g;
@@ -45,23 +45,23 @@ final class ec {
         var5 = Kickabout.field_G;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            pj.field_C[var2_int] = 0;
+            AlphaContainer.field_C[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; vb.field_j > var2_intLifetime1; var2_intLifetime1++) {
             if (fu.field_b[var2_intLifetime1].field_c == param1.field_c) {
               dupTemp$3 = fu.field_b[var2_intLifetime1].b(80);
-              pj.field_C[dupTemp$3] = pj.field_C[dupTemp$3] + 1;
+              AlphaContainer.field_C[dupTemp$3] = AlphaContainer.field_C[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.b(80);
-          pj.field_C[dupTemp$0] = pj.field_C[dupTemp$0] + 1;
+          AlphaContainer.field_C[dupTemp$0] = AlphaContainer.field_C[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; vb.field_j > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (~param1.field_c == ~fu.field_b[var3].field_c) {
               var4 = fu.field_b[var3].b(80);
-              if (at.field_Hb < pj.field_C[var4]) {
-                pj.field_C[var4] = pj.field_C[var4] - 1;
+              if (at.field_Hb < AlphaContainer.field_C[var4]) {
+                AlphaContainer.field_C[var4] = AlphaContainer.field_C[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -184,7 +184,7 @@ final class ec {
     static {
         field_d = "Day";
         field_a = "Click";
-        field_f = new tf();
+        field_f = new IntrusiveDeque();
         field_g = "You cannot add yourself!";
     }
 }

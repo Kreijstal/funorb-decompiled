@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv extends wi {
+final class nv extends TextButton {
     static String field_G;
     private fu field_K;
     static int[] field_E;
     int field_H;
     static String[] field_I;
-    static tf field_N;
-    static ut[] field_L;
-    static hd field_F;
+    static IntrusiveDeque field_N;
+    static Sprite[] field_L;
+    static UiLayoutNode field_F;
     int field_J;
     private int field_M;
 
@@ -21,11 +21,11 @@ final class nv extends wi {
         return this.field_K.a(1);
     }
 
-    final static cn a(int param0, byte[] param1) {
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        cn var3 = null;
-        cn stackIn_4_0 = null;
+        CoverageBitmapFont var3 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -35,7 +35,7 @@ final class nv extends wi {
           if (param1 == null) {
             return null;
           }
-          var3 = new cn(param1, IsaacRandom.field_f, fc.field_g, ku.field_c, lo.field_j, lt.field_a, pq.field_O);
+          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, lt.field_a, pq.field_O);
           tk.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -58,14 +58,14 @@ final class nv extends wi {
         var8 = Kickabout.field_G;
         if (cu.field_c != 0) {
           if (param4 == 0) {
-            be.field_i = null;
+            ConsolePanel.field_i = null;
           }
         } else {
           if (param4 > 0) {
-            be.field_i = new tf();
+            ConsolePanel.field_i = new IntrusiveDeque();
           } else {
             if (param4 == 0) {
-              be.field_i = null;
+              ConsolePanel.field_i = null;
             }
           }
         }
@@ -73,14 +73,14 @@ final class nv extends wi {
         cu.field_c = param4;
         if (param3 != go.field_b) {
           if (0 == param0) {
-            am.field_g = null;
+            DualLinkNode.field_g = null;
           }
         } else {
           if (param0 > 0) {
-            am.field_g = new tf();
+            DualLinkNode.field_g = new IntrusiveDeque();
           } else {
             if (0 == param0) {
-              am.field_g = null;
+              DualLinkNode.field_g = null;
             }
           }
         }
@@ -126,7 +126,7 @@ final class nv extends wi {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, fd param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -141,7 +141,7 @@ final class nv extends wi {
         int var14 = 0;
         var14 = Kickabout.field_G;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_H - param5 + param2;
@@ -209,8 +209,8 @@ final class nv extends wi {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = or.field_d;
         var2.b(param0, (byte) -104);
-        var2.a(106, 1);
-        var2.a(117, 1);
+        var2.writeByte(106, 1);
+        var2.writeByte(117, 1);
         if (param1 == 32361) {
           return;
         }
@@ -234,6 +234,6 @@ final class nv extends wi {
         field_E = new int[]{100, 696, 796};
         field_I = new String[]{"Lacing up boots", "Practising dives", "Buffing silverware", "Group hugging", "Dressing the mascot", "Practising keepy-uppy", "Buying a half-time pie", "Memorising chants", "Never walking alone", "Learning offside", "Getting a glamorous girlfriend", "Cursing the ref", "Painting fans' faces", "Pacing the touchline", "Brushing up on clichès", "Learning formations", "Goading opposition fans", "Kissing our badges", "Finetuning longshots", "Wiping up dribbles", "Doing shuttle runs", "Dribbling round cones", "Warming up", "Stretching hamstrings", "Downloading smell of victory", "Loading boyish enthusiasm", "Downloading smell of grass", "Loading sheepskin coats", "Downloading the spirit of '66", "Loading Mexican waves", "Loading half-time talking to", "Loading referee's glasses", "Loading corner flags", "Loading goal celebrations", "Downloading post-game interviews", "Loading buckets and sponges", "Loading streakers", "Loading penalty shootouts", "Loading sudden death", "Loading golden goal", "Loading banana shots"};
         field_G = "auto-switch automatically switches player when you pass the ball";
-        field_N = new tf();
+        field_N = new IntrusiveDeque();
     }
 }

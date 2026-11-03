@@ -15,10 +15,10 @@ final class er extends IntrusiveNode {
     final static void a(byte param0, boolean param1) {
         if (param0 <= 21) {
           field_k = 101;
-          mu.field_Y.a(97, param1);
+          ContentTransitionDialog.field_Y.a(97, param1);
           return;
         }
-        mu.field_Y.a(97, param1);
+        ContentTransitionDialog.field_Y.a(97, param1);
     }
 
     final static double a(byte param0, ea param1) {
@@ -34,15 +34,15 @@ final class er extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_double = (double)fr.a(param1, ra.field_F, true);
-          var4 = (double)fr.a(param1, tf.field_g, true);
-          var6 = (double)fr.a(param1, gm.field_fb, true);
+          var2_double = (double)NameSuggestionsPanel.a(param1, GameModesHelpScreen.field_F, true);
+          var4 = (double)NameSuggestionsPanel.a(param1, IntrusiveDeque.field_g, true);
+          var6 = (double)NameSuggestionsPanel.a(param1, RenderedFootballer.field_fb, true);
           if (param0 <= 91) {
             stackIn_2_0 = 1.8026836499173446;
             return stackIn_2_0;
           }
-          var8 = -uc.field_C[param1.field_c][param1.field_i][param1.field_k] + (uc.field_C[param1.field_c][param1.field_i][param1.field_e] + (uc.field_C[param1.field_c][param1.field_d][param1.field_k] + (-uc.field_C[param1.field_l][param1.field_i][param1.field_e] + (-uc.field_C[param1.field_l][param1.field_d][param1.field_k] + uc.field_C[param1.field_l][param1.field_d][param1.field_e]) + uc.field_C[param1.field_l][param1.field_i][param1.field_k] - uc.field_C[param1.field_c][param1.field_d][param1.field_e])));
-          stackIn_4_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)fr.a(param1, ao.field_i, true);
+          var8 = -IntTripleCommand.field_C[param1.field_c][param1.field_i][param1.field_k] + (IntTripleCommand.field_C[param1.field_c][param1.field_i][param1.field_e] + (IntTripleCommand.field_C[param1.field_c][param1.field_d][param1.field_k] + (-IntTripleCommand.field_C[param1.field_l][param1.field_i][param1.field_e] + (-IntTripleCommand.field_C[param1.field_l][param1.field_d][param1.field_k] + IntTripleCommand.field_C[param1.field_l][param1.field_d][param1.field_e]) + IntTripleCommand.field_C[param1.field_l][param1.field_i][param1.field_k] - IntTripleCommand.field_C[param1.field_c][param1.field_d][param1.field_e])));
+          stackIn_4_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)NameSuggestionsPanel.a(param1, RandomAccessCacheFile.field_i, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -15,7 +15,7 @@ final class ws {
         }
         if (vj.field_c == 10 ||
           !vr.d(1)) {
-          uc.g((byte) -54);
+          IntTripleCommand.g((byte) -54);
           vj.field_c = 11;
         }
         m.field_h = true;
@@ -55,7 +55,7 @@ final class ws {
               return true;
             }
           }
-          var2Lifetime1 = tq.field_B;
+          var2Lifetime1 = NotCommand.field_B;
           for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime1.length; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (var4Lifetime1 == param0) {

@@ -5,7 +5,7 @@ final class qn {
     static String field_c;
     static dg field_a;
     static String field_d;
-    static tf field_b;
+    static IntrusiveDeque field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
@@ -28,13 +28,13 @@ final class qn {
           if (param0 != -24823) {
             field_c = (String) null;
           }
-          kd.field_z.a(true, param3 + 485 - (-2 - param5), 5, -param4 + var7, param4);
-          ei.field_b.a(true, -param3 + kd.field_z.field_q - ij.field_s.field_q, param3, 0, param4);
+          DebugConsole.field_z.a(true, param3 + 485 - (-2 - param5), 5, -param4 + var7, param4);
+          ei.field_b.a(true, -param3 + DebugConsole.field_z.field_q - ij.field_s.field_q, param3, 0, param4);
           ij.field_s.a(true, ij.field_s.field_q, ei.field_b.field_q + param3, 0, param4);
           var7 = var7 - (param4 + 2);
           pw.field_G.a(2, 110, var7 - 5, 5, 5, 485 + (param3 - (-2 - param5)), param5);
-          if (null != la.field_a) {
-            la.field_a.a(pw.field_G.field_mb, param0 ^ -24824, pw.field_G.field_s, pw.field_G.field_q, pw.field_G.field_J);
+          if (null != PlayArea.field_a) {
+            PlayArea.field_a.a(pw.field_G.field_mb, param0 ^ -24824, pw.field_G.field_s, pw.field_G.field_q, pw.field_G.field_J);
           }
           var8 = -var6_int + (-param3 + g.field_a.field_q);
           var9 = var8 / 2;
@@ -42,16 +42,16 @@ final class qn {
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
-              null != mr.field_W[var12]) {
-              var13 = (g.field_a.field_mb - 4) * var11 / (1 + hs.field_e) + 3;
+              null != ValidatedTextWidget.field_W[var12]) {
+              var13 = (g.field_a.field_mb - 4) * var11 / (1 + MatchPhaseView.field_e) + 3;
               var11++;
-              var7Lifetime1 = -var13 + (var11 * (-4 + g.field_a.field_mb) / (hs.field_e + 1) + 3 - 2);
+              var7Lifetime1 = -var13 + (var11 * (-4 + g.field_a.field_mb) / (MatchPhaseView.field_e + 1) + 3 - 2);
               if (var12 >= 5) {
                 uq.field_a.a(true, var8, var6_int, var13, var7Lifetime1);
               } else {
-                mr.field_W[var12].a(true, var8, var6_int, var13, var7Lifetime1);
-                kt.field_m[var12].a(true, -param3 + var9, param3, 0, var7Lifetime1);
-                av.field_b[var12].a(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
+                ValidatedTextWidget.field_W[var12].a(true, var8, var6_int, var13, var7Lifetime1);
+                BlackFadeScreen.field_m[var12].a(true, -param3 + var9, param3, 0, var7Lifetime1);
+                SocketConnector.field_b[var12].a(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
                 ds.field_a[var12].a(true, -var10 - param3 + var8, var10, param2, -param2 - param2 + var7Lifetime1);
               }
             }

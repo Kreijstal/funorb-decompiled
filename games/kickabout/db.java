@@ -5,7 +5,7 @@ final class db {
     int field_i;
     short[] field_f;
     private static byte[] field_k;
-    je field_e;
+    AnimationSkeleton field_e;
     private static short[] field_n;
     private static short[] field_g;
     byte[] field_j;
@@ -26,7 +26,7 @@ final class db {
         field_k = null;
     }
 
-    db(byte[] param0, je param1) {
+    db(byte[] param0, AnimationSkeleton param1) {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         PacketBuffer var4 = null;
@@ -47,9 +47,9 @@ final class db {
         try {
           var14 = new PacketBuffer(param0);
           var4 = new PacketBuffer(param0);
-          var14.h((byte) -126);
+          var14.readUnsignedByte((byte) -126);
           var14.field_n = var14.field_n + 2;
-          var5 = var14.h((byte) -112);
+          var5 = var14.readUnsignedByte((byte) -112);
           var6 = 0;
           var7 = -1;
           var8 = -1;
@@ -59,7 +59,7 @@ final class db {
             if (var10 == 0) {
               var7 = var9;
             }
-            var11 = var14.h((byte) -114);
+            var11 = var14.readUnsignedByte((byte) -114);
             if (var11 > 0) {
               if (var10 == 0) {
                 var8 = var9;
@@ -72,17 +72,17 @@ final class db {
               if ((var11 & 1) == 0) {
                 field_l[var6] = (short)var12;
               } else {
-                field_l[var6] = (short)var4.e(83);
+                field_l[var6] = (short)var4.readSignedSmart(83);
               }
               if ((var11 & 2) == 0) {
                 field_g[var6] = (short)var12;
               } else {
-                field_g[var6] = (short)var4.e(-120);
+                field_g[var6] = (short)var4.readSignedSmart(-120);
               }
               if ((var11 & 4) == 0) {
                 field_h[var6] = (short)var12;
               } else {
-                field_h[var6] = (short)var4.e(-119);
+                field_h[var6] = (short)var4.readSignedSmart(-119);
               }
               field_k[var6] = (byte)(var11 >>> 3 & 3);
               if (var10 == 2) {

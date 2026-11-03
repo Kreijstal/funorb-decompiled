@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends ct {
+final class cg extends SingleChildContainer {
     private int field_J;
     static String[] field_G;
     private String field_A;
-    private hu field_I;
-    static ut field_K;
+    private BitmapFont field_I;
+    static Sprite field_K;
     private boolean field_B;
     static String[] field_E;
     static int field_D;
@@ -30,15 +30,15 @@ final class cg extends ct {
           }
           k.field_i = k.field_i + 1;
           if (ji.field_Hb == -1 &&
-            lj.field_h == -1) {
-            ji.field_Hb = el.field_A;
-            lj.field_h = n.field_m;
+            TextLine.field_h == -1) {
+            ji.field_Hb = BytePlusOneCommand.field_A;
+            TextLine.field_h = n.field_m;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(mh.field_o));
+            decompiledFrameRemainder0 = !(param0.equals(EmailAvailabilityValidator.field_o));
           } else {
-            decompiledFrameRemainder0 = (null == mh.field_o);
+            decompiledFrameRemainder0 = (null == EmailAvailabilityValidator.field_o);
           }
           if (decompiledFrameRemainder0) {
             if (!nc.field_a) {
@@ -64,7 +64,7 @@ final class cg extends ct {
                 }
               }
             }
-            td.field_d = lj.field_h;
+            td.field_d = TextLine.field_h;
             ws.field_e = ji.field_Hb;
             if (param0 == null) {
               if (var2_int != 0) {
@@ -76,18 +76,18 @@ final class cg extends ct {
           }
           if (!nc.field_a &&
             us.field_e > k.field_i &&
-            el.field_C) {
+            BytePlusOneCommand.field_C) {
             k.field_i = 0;
-            td.field_d = lj.field_h;
+            td.field_d = TextLine.field_h;
             ws.field_e = ji.field_Hb;
           }
-          mh.field_o = param0;
+          EmailAvailabilityValidator.field_o = param0;
           if (nc.field_a &&
             k.field_i == nd.field_b) {
             k.field_i = 0;
             nc.field_a = false;
           }
-          lj.field_h = -1;
+          TextLine.field_h = -1;
           ji.field_Hb = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,8 +134,8 @@ final class cg extends ct {
         return var3;
     }
 
-    cg(int param0, int param1, int param2, int param3, fd param4, boolean param5, int param6, int param7, hu param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (gj) null, (jv) null);
+    cg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetPainter) null, (UiListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -160,7 +160,7 @@ final class cg extends ct {
           this.field_M = param6;
           this.field_I = param8;
           var12_int = this.field_M - this.field_J;
-          var13 = this.field_I.c(param10, var12_int, this.field_I.field_G) + 2 * this.field_J;
+          var13 = this.field_I.paragraphHeight(param10, var12_int, this.field_I.field_G) + 2 * this.field_J;
           if (param3 < var13) {
             this.a(var13, 1, param0, param2, param1);
           } else {

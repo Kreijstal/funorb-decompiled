@@ -47,12 +47,12 @@ final class sm extends IntrusiveNode {
         try {
           var1_int = -114 % ((32 - param0) / 47);
           var2 = un.field_e;
-          var3 = var2.h((byte) -123);
-          var4 = var2.h((byte) -112);
+          var3 = var2.readUnsignedByte((byte) -123);
+          var4 = var2.readUnsignedByte((byte) -112);
           if (0 == var3) {
-            var5 = (dl) (ru.field_M.g(24009));
+            var5 = (dl) (MidiPcmStream.field_M.g(24009));
             if (var5 == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
             var6 = -var2.field_n + ms.field_b;
@@ -63,17 +63,17 @@ final class sm extends IntrusiveNode {
               var6 = var12.length << 2;
             }
             for (var8 = 0; var6 > var8; var8++) {
-              var7[var8 >> 2] = var7[var8 >> 2] + (var2.h((byte) -118) << (qj.b(3, var8) << 8));
+              var7[var8 >> 2] = var7[var8 >> 2] + (var2.readUnsignedByte((byte) -118) << (qj.b(3, var8) << 8));
             }
             var5.c((byte) -109);
             return;
           }
           if (var3 != 1) {
-            bd.a("LR1: " + tr.b(0), (Throwable) null, 1);
-            lr.b((byte) -116);
+            UnreadMessagesScreen.a("LR1: " + tr.b(0), (Throwable) null, 1);
+            FormationView.b((byte) -116);
             return;
           }
-          var5_int = var2.e(85);
+          var5_int = var2.readSignedSmart(85);
           var6_ref_hr = (hr) (ti.field_c.g(24009));
           while (var6_ref_hr != null) {
             if (var6_ref_hr.field_j != var4 ||
@@ -87,7 +87,7 @@ final class sm extends IntrusiveNode {
             var6_ref_hr.c((byte) -109);
             return;
           }
-          lr.b((byte) -116);
+          FormationView.b((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

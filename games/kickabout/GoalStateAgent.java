@@ -7,13 +7,13 @@ final class GoalStateAgent extends MatchAgent {
     static String field_h;
     int[] score;
     static String field_i;
-    static hd field_k;
+    static UiLayoutNode field_k;
     static String field_f;
     int goalCount;
     static int field_l;
 
-    final void a(CipherPacketBuffer param0, byte param1) {
-        if (!mu.a(param0, (byte) -39)) {
+    final void readState(CipherPacketBuffer param0, byte param1) {
+        if (!ContentTransitionDialog.a(param0, (byte) -39)) {
           return;
         }
         try {
@@ -27,7 +27,7 @@ final class GoalStateAgent extends MatchAgent {
         }
     }
 
-    final void a(BallAgent param0, int param1) {
+    final void detectGoal(BallAgent param0, int param1) {
         RuntimeException runtimeException = null;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -43,17 +43,17 @@ final class GoalStateAgent extends MatchAgent {
             this.goalCount = this.goalCount + 1;
             return;
           }
-          if (param0.field_m == -1 &&
-            param0.a(true) >= 370) {
-            if (param0.a(true) > 525) {
+          if (param0.possessorTeam == -1 &&
+            param0.pixelX(true) >= 370) {
+            if (param0.pixelX(true) > 525) {
               return;
             }
-            if (param0.field_p < 0) {
+            if (param0.positionY < 0) {
               this.goalCount = 1;
               this.goalScorer = 0;
               return;
             }
-            if (param0.field_p <= 88080384) {
+            if (param0.positionY <= 88080384) {
               return;
             }
             this.goalCount = 1;
@@ -92,10 +92,10 @@ final class GoalStateAgent extends MatchAgent {
         return "AgentGoalState\tscore=[" + this.score[0] + "," + this.score[1] + "]\tgoal_count=" + this.goalCount + "\tgoal_scorer=" + this.goalScorer;
     }
 
-    final static kg[] a(int param0, int param1, sj param2, boolean param3) {
+    final static IndexedSprite[] a(int param0, int param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        kg[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -103,12 +103,12 @@ final class GoalStateAgent extends MatchAgent {
         try {
           if (!cu.a(param1, param2, param0, 114)) {
             stackIn_2_0 = null;
-            return (kg[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param3) {
             field_h = (String) null;
           }
-          stackIn_6_0 = fb.i((byte) 83);
+          stackIn_6_0 = NumericDateInputWidget.i((byte) 83);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class GoalStateAgent extends MatchAgent {
         }
     }
 
-    final int c(int param0) {
+    final int computeChecksum(int param0) {
         int var2 = 0;
         var2 = fj.a(-40, this.score[param0] ^ var2);
         var2 = fj.a(-40, this.score[1] ^ var2);

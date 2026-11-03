@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vo extends mu {
+final class vo extends ContentTransitionDialog {
     static String field_db;
-    static ut field_cb;
+    static Sprite field_cb;
     static int field_bb;
     static int[][] field_eb;
 
-    vo(se param0, fd param1) {
+    vo(ModalStack param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void a(byte param0, fd param1) {
+    final void a(byte param0, UiWidget param1) {
         try {
           if (param0 > -117) {
-            field_cb = (ut) null;
+            field_cb = (Sprite) null;
           }
           super.a((byte) -127, param1);
         } catch (RuntimeException runtimeException) {
@@ -63,7 +63,7 @@ final class vo extends mu {
                 break;
               }
               var7_ref_String = param1.substring(var6_int + 2, var5);
-              if (!gr.a((byte) 15, (CharSequence) ((Object) var7_ref_String))) {
+              if (!ClubState.a((byte) 15, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -100,7 +100,7 @@ final class vo extends mu {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!gr.a((byte) 15, (CharSequence) ((Object) var9))) {
+            if (!ClubState.a((byte) 15, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -186,42 +186,42 @@ final class vo extends mu {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.field_n = -2 + param1.length;
-          io.field_l = var17.a((byte) 81);
-          lo.field_j = new int[io.field_l];
-          rm.field_B = new boolean[io.field_l];
-          es.field_e = new byte[io.field_l][];
-          ku.field_c = new int[io.field_l];
-          IsaacRandom.field_f = new int[io.field_l];
-          fc.field_g = new int[io.field_l];
-          pq.field_O = new byte[io.field_l][];
-          var17.field_n = -(io.field_l * 8) + param1.length - 7;
+          MenuButton.field_l = var17.a((byte) 81);
+          PasswordValidator.field_j = new int[MenuButton.field_l];
+          RankingsScreen.field_B = new boolean[MenuButton.field_l];
+          RowRangeRequest.field_e = new byte[MenuButton.field_l][];
+          MouseInputHandler.field_c = new int[MenuButton.field_l];
+          IsaacRandom.field_f = new int[MenuButton.field_l];
+          fc.field_g = new int[MenuButton.field_l];
+          pq.field_O = new byte[MenuButton.field_l][];
+          var17.field_n = -(MenuButton.field_l * 8) + param1.length - 7;
           kw.field_i = var17.a((byte) 81);
-          ai.field_J = var17.a((byte) 81);
-          var3 = 1 + (var17.h((byte) -116) & 255);
-          for (var4 = 0; var4 < io.field_l; var4++) {
+          AccountTermsPanel.field_J = var17.a((byte) 81);
+          var3 = 1 + (var17.readUnsignedByte((byte) -116) & 255);
+          for (var4 = 0; var4 < MenuButton.field_l; var4++) {
             IsaacRandom.field_f[var4] = var16.a((byte) 81);
           }
-          for (var4Lifetime1 = 0; io.field_l > var4Lifetime1; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; MenuButton.field_l > var4Lifetime1; var4Lifetime1++) {
             fc.field_g[var4Lifetime1] = var17.a((byte) 81);
           }
-          for (var4Lifetime2 = 0; var4Lifetime2 < io.field_l; var4Lifetime2++) {
-            ku.field_c[var4Lifetime2] = var17.a((byte) 81);
+          for (var4Lifetime2 = 0; var4Lifetime2 < MenuButton.field_l; var4Lifetime2++) {
+            MouseInputHandler.field_c[var4Lifetime2] = var17.a((byte) 81);
           }
-          for (var4Lifetime3 = 0; var4Lifetime3 < io.field_l; var4Lifetime3++) {
-            lo.field_j[var4Lifetime3] = var17.a((byte) 81);
+          for (var4Lifetime3 = 0; var4Lifetime3 < MenuButton.field_l; var4Lifetime3++) {
+            PasswordValidator.field_j[var4Lifetime3] = var17.a((byte) 81);
           }
-          var17.field_n = -7 + (param1.length + (-(io.field_l * 8) - 3 * (-1 + var3)));
+          var17.field_n = -7 + (param1.length + (-(MenuButton.field_l * 8) - 3 * (-1 + var3)));
           lt.field_a = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            lt.field_a[var4Lifetime4] = var17.i(-123);
+            lt.field_a[var4Lifetime4] = var17.readUnsignedMedium(-123);
             if (lt.field_a[var4Lifetime4] == 0) {
               lt.field_a[var4Lifetime4] = 1;
             }
           }
           var17.field_n = 0;
-          for (var4Lifetime5 = 0; var4Lifetime5 < io.field_l; var4Lifetime5++) {
-            var5 = ku.field_c[var4Lifetime5];
-            var6 = lo.field_j[var4Lifetime5];
+          for (var4Lifetime5 = 0; var4Lifetime5 < MenuButton.field_l; var4Lifetime5++) {
+            var5 = MouseInputHandler.field_c[var4Lifetime5];
+            var6 = PasswordValidator.field_j[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
@@ -230,16 +230,16 @@ final class vo extends mu {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            es.field_e[var4Lifetime5] = var21;
+            RowRangeRequest.field_e[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.h((byte) -127);
+            var11 = var17.readUnsignedByte((byte) -127);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.j((byte) -86);
+                var8[var12] = var17.readByte((byte) -86);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.j((byte) -49);
+                  dupTemp$1 = var17.readByte((byte) -49);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;
@@ -254,13 +254,13 @@ final class vo extends mu {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var5 * var13 + var12] = var17.j((byte) -102);
+                  var8[var5 * var13 + var12] = var17.readByte((byte) -102);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.j((byte) -74);
+                    dupTemp$0 = var17.readByte((byte) -74);
                     var9[var12 + var13 * var5] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_47_0 = var10;
@@ -274,7 +274,7 @@ final class vo extends mu {
                 }
               }
             }
-            rm.field_B[var4Lifetime5] = var10 != 0;
+            RankingsScreen.field_B[var4Lifetime5] = var10 != 0;
           }
           var5Lifetime1 = 111 % ((param0 - 11) / 61);
           return;
@@ -356,7 +356,7 @@ final class vo extends mu {
                 break;
               }
               var7_ref_String = param1.substring(var6_int + 2, var5);
-              if (!gr.a((byte) 15, (CharSequence) ((Object) var7_ref_String))) {
+              if (!ClubState.a((byte) 15, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -393,7 +393,7 @@ final class vo extends mu {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!gr.a((byte) 15, (CharSequence) ((Object) var9))) {
+            if (!ClubState.a((byte) 15, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

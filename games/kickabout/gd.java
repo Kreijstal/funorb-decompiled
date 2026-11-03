@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gd {
-    static sj field_c;
+    static ResourceArchive field_c;
     static String field_g;
     static String field_d;
     static String field_b;
-    static sj field_h;
+    static ResourceArchive field_h;
     static String field_f;
     static String[] field_e;
     static boolean field_a;
 
-    final void a(int param0, bc[] param1, long param2) {
+    final void a(int param0, ListingRow[] param1, long param2) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -70,19 +70,19 @@ final class gd {
         var4 = 115 / ((-39 - param0) / 47);
         if (param2 == 0 &&
           param1 != ng.field_a) {
-          wj.field_z = true;
+          WidgetContainer.field_z = true;
           ng.field_a = param1;
           ca.a(3, param3);
         }
         if (param2 == 1 &&
           q.field_b != param1) {
           q.field_b = param1;
-          wj.field_z = true;
+          WidgetContainer.field_z = true;
           ca.a(3, param3);
         }
         if (param2 == 2 &&
           fc.field_a != param1) {
-          wj.field_z = true;
+          WidgetContainer.field_z = true;
           fc.field_a = param1;
           ca.a(3, param3);
         }
@@ -102,8 +102,8 @@ final class gd {
           for (var5_int = 0; var5_int < 3; var5_int++) {
             for (var6 = 0; 3 > var6; var6++) {
               dk.a(param2, -112, param1, var5_int, var6);
-              on.a(param2, param1, 156, 225, 10, 65793, 96);
-              ta.e(126);
+              SoftwareRasterizer.a(param2, param1, 156, 225, 10, 65793, 96);
+              TeamManagementScreen.e(126);
             }
           }
           if (param0 == param4) {
@@ -123,14 +123,14 @@ final class gd {
         }
     }
 
-    private final void a(byte param0, bc param1, long param2) {
-        iu var5 = null;
+    private final void a(byte param0, ListingRow param1, long param2) {
+        CachedListingRow var5 = null;
         try {
-          var5 = (iu) (bm.field_L[param1.field_j].a(true, (long)param1.field_g));
+          var5 = (CachedListingRow) (bm.field_L[param1.category].a(true, (long)param1.rowId));
           if (var5 == null) {
-            var5 = new iu(param1, vs.a(-1090519040, param2));
-            bm.field_L[param1.field_j].a(var5, -116, (long)param1.field_g);
-            mt.field_f[param1.field_j] = mt.field_f[param1.field_j] + 1;
+            var5 = new CachedListingRow(param1, vs.a(-1090519040, param2));
+            bm.field_L[param1.category].a(var5, -116, (long)param1.rowId);
+            mt.field_f[param1.category] = mt.field_f[param1.category] + 1;
           } else {
             var5.field_g = param1;
             var5.field_f = vs.a(-1090519040, param2);
@@ -143,7 +143,7 @@ final class gd {
 
     final void a(int param0, int param1, int param2) {
         int var5 = 0;
-        iu var6 = null;
+        CachedListingRow var6 = null;
         int var7 = 0;
         int var8 = Kickabout.field_G;
         if (param2 > -83) {
@@ -151,11 +151,11 @@ final class gd {
         }
         int var4 = vs.a(-1090519040, nj.a(85));
         for (var5 = 0; var5 < 7; var5++) {
-          var6 = (iu) (bm.field_L[var5].b(0));
+          var6 = (CachedListingRow) (bm.field_L[var5].b(0));
           while (var6 != null) {
             var7 = 5;
-            if (param1 > var6.field_g.field_g ||
-              var6.field_g.field_g > param0) {
+            if (param1 > var6.field_g.rowId ||
+              var6.field_g.rowId > param0) {
               if (256 <= mt.field_f[var5]) {
                 var7 = 0;
               } else {
@@ -166,12 +166,12 @@ final class gd {
               var6.c((byte) -109);
               mt.field_f[var5] = mt.field_f[var5] - 1;
             }
-            var6 = (iu) (bm.field_L[var5].a(-1));
+            var6 = (CachedListingRow) (bm.field_L[var5].a(-1));
           }
         }
     }
 
-    final bc a(int param0, byte param1, int param2) {
+    final ListingRow a(int param0, byte param1, int param2) {
         if (param1 != 116) {
           gd.a(124, -44, -97, (byte) 89, -100);
         }
@@ -181,7 +181,7 @@ final class gd {
         if (param2 >= 7) {
           return null;
         }
-        iu var4 = (iu) (bm.field_L[param2].a(true, (long)param0));
+        CachedListingRow var4 = (CachedListingRow) (bm.field_L[param2].a(true, (long)param0));
         return var4 == null ? null : var4.field_g;
     }
 

@@ -3,7 +3,7 @@
  */
 final class ss {
     static int field_j;
-    static hd field_c;
+    static UiLayoutNode field_c;
     static String field_f;
     static String field_i;
     static String[] field_a;
@@ -50,15 +50,15 @@ final class ss {
         if (param0 != 88) {
           return true;
         }
-        if (null != wi.field_v &&
-          wi.field_v.a((byte) -52)) {
-          da.b(param0 ^ 21);
+        if (null != TextButton.field_v &&
+          TextButton.field_v.a((byte) -52)) {
+          MusicPatchNode.b(param0 ^ 21);
           return true;
         }
         if (null != ck.field_b &&
           ck.field_b.h((byte) 37)) {
           ck.field_b = null;
-          da.b(85);
+          MusicPatchNode.b(85);
           return true;
         }
         if (br.a(param0 ^ 62)) {

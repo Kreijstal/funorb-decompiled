@@ -7,12 +7,12 @@ final class is {
     static boolean field_a;
     static int field_g;
     static int field_d;
-    static hd field_b;
+    static UiLayoutNode field_b;
     static Random field_e;
     static boolean field_c;
     static String field_f;
 
-    final static void a(hu param0, String param1, qj param2, int param3, int param4) {
+    final static void a(BitmapFont param0, String param1, qj param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -45,7 +45,7 @@ final class is {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param2.field_b[var7] = param2.field_b[0] + (var5_int >> 8) + param0.a(param1.substring(0, var7 + 1)) - param0.a((char) var8);
+              param2.field_b[var7] = param2.field_b[0] + (var5_int >> 8) + param0.a(param1.substring(0, var7 + 1)) - param0.charWidth((char) var8);
             }
             if (var8 == 62) {
               var6 = -1;
@@ -78,7 +78,7 @@ final class is {
         }
     }
 
-    final static void a(byte param0, vc param1) {
+    final static void a(byte param0, ReceivedAuctionItem param1) {
         try {
           int var2_int = 119 % ((-72 - param0) / 44);
           np.field_Jb.a(new hk(param1, 32), 3);
@@ -94,8 +94,8 @@ final class is {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          for (var1_int = 0; var1_int < e.field_n.length; var1_int++) {
-            e.field_n[var1_int].a(param0 - 7232);
+          for (var1_int = 0; var1_int < SplashScreen.field_n.length; var1_int++) {
+            SplashScreen.field_n[var1_int].a(param0 - 7232);
           }
           if (param0 != 7249) {
             field_e = (Random) null;

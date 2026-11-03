@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gu extends hd {
+final class gu extends UiLayoutNode {
     private int field_Cb;
     static String field_Ib;
     private int field_Hb;
-    private hd field_Lb;
-    private hd field_Nb;
+    private UiLayoutNode field_Lb;
+    private UiLayoutNode field_Nb;
     private int field_Fb;
-    static ut field_zb;
+    static Sprite field_zb;
     private int[] field_Kb;
     private int field_Ab;
-    private ut[] field_Ob;
+    private Sprite[] field_Ob;
     static char[] field_yb;
     static String field_Db;
     private int field_Eb;
@@ -31,7 +31,7 @@ final class gu extends hd {
         if (param0 != -20010) {
           field_Ib = (String) null;
         }
-        return mj.field_a == nr.field_f ? true : false;
+        return mj.field_a == PlayerModelPreview.field_f ? true : false;
     }
 
     final int a(byte param0, boolean param1) {
@@ -49,7 +49,7 @@ final class gu extends hd {
             return this.field_Kb[var4];
           }
         }
-        if (0 == wj.field_A) {
+        if (0 == WidgetContainer.field_A) {
           return this.field_Gb;
         }
         return -1;
@@ -66,9 +66,9 @@ final class gu extends hd {
         int var8Lifetime1;
         var11 = Kickabout.field_G;
         if (0 == this.field_Ab) {
-          this.field_Bb[this.field_Ab] = new vu(0L, (hd) null, (hd) null, this.field_Nb, (ut) null, ga.field_M);
+          this.field_Bb[this.field_Ab] = new vu(0L, (UiLayoutNode) null, (UiLayoutNode) null, this.field_Nb, (Sprite) null, TextInputWidget.field_M);
           this.field_Bb[this.field_Ab].field_p = 1;
-          this.a((byte) -111, (hd) (this.field_Bb[this.field_Ab]));
+          this.addChild((byte) -111, (UiLayoutNode) (this.field_Bb[this.field_Ab]));
           this.field_Kb[this.field_Ab] = -1;
           this.field_Ab = this.field_Ab + 1;
         }
@@ -91,11 +91,11 @@ final class gu extends hd {
 
     final void a(int param0, int param1, String param2) {
         try {
-          this.field_Bb[this.field_Ab] = new vu((long)param0, (hd) null, (hd) null, this.field_Lb, (ut) null, param2);
+          this.field_Bb[this.field_Ab] = new vu((long)param0, (UiLayoutNode) null, (UiLayoutNode) null, this.field_Lb, (Sprite) null, param2);
           this.field_Bb[this.field_Ab].field_S = this.field_Ob;
           this.field_Bb[this.field_Ab].field_ob = true;
           this.field_Bb[this.field_Ab].field_p = 1;
-          this.a((byte) -115, (hd) (this.field_Bb[this.field_Ab]));
+          this.addChild((byte) -115, (UiLayoutNode) (this.field_Bb[this.field_Ab]));
           this.field_Kb[this.field_Ab] = param1;
           this.field_Ab = this.field_Ab + 1;
         } catch (RuntimeException runtimeException) {
@@ -114,20 +114,20 @@ final class gu extends hd {
         return true;
     }
 
-    final static sj a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    final static ResourceArchive a(boolean param0, int param1, int param2, boolean param3, int param4) {
         if (param4 <= 107) {
-          return (sj) null;
+          return (ResourceArchive) null;
         }
-        return uj.a(param1, (byte) 112, param2, param0, false, param3);
+        return SetLagCommand.a(param1, (byte) 112, param2, param0, false, param3);
     }
 
-    final void a(String param0, boolean param1, int param2, ut param3) {
+    final void a(String param0, boolean param1, int param2, Sprite param3) {
         try {
-          this.field_Bb[this.field_Ab] = new vu(0L, (hd) null, (hd) null, this.field_Lb, param3, param0);
+          this.field_Bb[this.field_Ab] = new vu(0L, (UiLayoutNode) null, (UiLayoutNode) null, this.field_Lb, param3, param0);
           this.field_Bb[this.field_Ab].field_S = this.field_Ob;
           this.field_Bb[this.field_Ab].field_ob = param1 ? true : false;
           this.field_Bb[this.field_Ab].field_p = 1;
-          this.a((byte) -117, (hd) (this.field_Bb[this.field_Ab]));
+          this.addChild((byte) -117, (UiLayoutNode) (this.field_Bb[this.field_Ab]));
           this.field_Kb[this.field_Ab] = param2;
           this.field_Ab = this.field_Ab + 1;
         } catch (RuntimeException runtimeException) {
@@ -139,7 +139,7 @@ final class gu extends hd {
         this(param0, param0.field_Ob, param0.field_Nb, param0.field_Lb, param0.field_Mb, param0.field_Hb, param0.field_Eb, param0.field_Fb, param0.field_Cb);
     }
 
-    final static void a(byte param0, pt param1, boolean param2) {
+    final static void a(byte param0, AuctionListing param1, boolean param2) {
         jb var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -152,7 +152,7 @@ final class gu extends hd {
           var3 = (jb) (np.field_Jb.g(24009));
           while (var3 != null) {
             if (var3 instanceof bm &&
-              ((bm) (var3)).field_J.a(param1, param0 ^ -5275)) {
+              ((bm) (var3)).field_J.isSameListing(param1, param0 ^ -5275)) {
               return;
             }
             var3 = (jb) (np.field_Jb.c(33));
@@ -193,12 +193,12 @@ final class gu extends hd {
         }
         CipherPacketBuffer var3 = or.field_d;
         var3.b(param2, (byte) -76);
-        var3.a(111, 3);
-        var3.a(125, 9);
-        var3.g(-1207444472, param0);
+        var3.writeByte(111, 3);
+        var3.writeByte(125, 9);
+        var3.writeShort(-1207444472, param0);
     }
 
-    gu(hd param0, ut[] param1, hd param2, hd param3, int param4, int param5, int param6, int param7, int param8) {
+    gu(UiLayoutNode param0, Sprite[] param1, UiLayoutNode param2, UiLayoutNode param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Kb = new int[256];
         this.field_Bb = new vu[256];

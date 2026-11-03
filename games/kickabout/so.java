@@ -3,7 +3,7 @@
  */
 final class so {
     static int field_e;
-    static ut[] field_d;
+    static Sprite[] field_d;
     static int[][] field_f;
     static int field_b;
     static String field_c;
@@ -21,21 +21,21 @@ final class so {
               return;
             }
             if (!param3) {
-              gu.b(2, (byte) 60, vc.field_E[5]);
+              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              ui.a(2, 7, vc.field_E[4], 2147483647);
+              ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             }
             return;
           }
           if (param3) {
-            ui.a(2, 5, vc.field_E[4], 2147483647);
+            ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             if (param0 != 3) {
               return;
             }
-            ui.a(2, 7, vc.field_E[4], 2147483647);
+            ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             return;
           }
-          gu.b(2, (byte) 60, vc.field_E[5]);
+          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         } else {
           so.a(44, true, true, false);
           if (!param1) {
@@ -43,9 +43,9 @@ final class so {
           }
           if (2 == param0) {
             if (!param3) {
-              gu.b(2, (byte) 60, vc.field_E[5]);
+              gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              ui.a(2, 5, vc.field_E[4], 2147483647);
+              ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             }
           }
         }
@@ -53,15 +53,15 @@ final class so {
           return;
         }
         if (param3) {
-          ui.a(2, 7, vc.field_E[4], 2147483647);
+          ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
         } else {
-          gu.b(2, (byte) 60, vc.field_E[5]);
+          gu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         }
     }
 
-    final static boolean a(sj param0, boolean param1, sj param2, sj param3) {
+    final static boolean a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        sj var5 = null;
+        ResourceArchive var5 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -82,8 +82,8 @@ final class so {
             if (param3.d(-124) &&
               param3.a(false, "button.gif")) {
               if (!param1) {
-                var5 = (sj) null;
-                so.a((sj) null, true, (sj) null, (sj) null);
+                var5 = (ResourceArchive) null;
+                so.a((ResourceArchive) null, true, (ResourceArchive) null, (ResourceArchive) null);
               }
               return true;
             }
@@ -124,8 +124,8 @@ final class so {
           field_f = (int[][]) null;
           return;
         }
-        sj var2 = (sj) null;
-        so.a((sj) null, false, (sj) null, (sj) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        so.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
         field_a = null;
         field_c = null;
         field_d = null;
@@ -133,11 +133,11 @@ final class so {
     }
 
     final static java.applet.Applet a(int param0) {
-        if (null != qs.field_M) {
-          return qs.field_M;
+        if (null != PlayerShopScreen.field_M) {
+          return PlayerShopScreen.field_M;
         }
         int var1 = -80 / ((-28 - param0) / 43);
-        return (java.applet.Applet) ((Object) ap.field_p);
+        return (java.applet.Applet) ((Object) MatchScreen.field_p);
     }
 
     static {

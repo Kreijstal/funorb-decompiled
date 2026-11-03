@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gs {
-    static sj field_c;
+    static ResourceArchive field_c;
     static boolean field_b;
     static String field_f;
     static int[] field_a;
     static boolean field_g;
-    static sj field_d;
+    static ResourceArchive field_d;
     static boolean field_e;
 
     final static void a(byte param0) {
@@ -37,10 +37,10 @@ final class gs {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (nr.field_q != null) {
-          var1 = nr.field_q;
+        if (PlayerModelPreview.field_q != null) {
+          var1 = PlayerModelPreview.field_q;
           synchronized (var1) {
-            nr.field_q = null;
+            PlayerModelPreview.field_q = null;
           }
         }
         if (param0 != 98) {
@@ -55,8 +55,8 @@ final class gs {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          for (var1_int = param0; e.field_n.length > var1_int; var1_int++) {
-            e.field_n[var1_int].c(-118);
+          for (var1_int = param0; SplashScreen.field_n.length > var1_int; var1_int++) {
+            SplashScreen.field_n[var1_int].c(-118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,18 +68,18 @@ final class gs {
 
     final static void c(int param0) {
         PacketBuffer.field_l = false;
-        kb.field_C = un.field_e.h((byte) -111) == 0 ? true : false;
+        WriteIntegersCommand.field_C = un.field_e.readUnsignedByte((byte) -111) == 0 ? true : false;
         if (param0 == 25957) {
           return;
         }
-        field_c = (sj) null;
+        field_c = (ResourceArchive) null;
     }
 
     final static void a(int param0) {
-        gu.b(0, (byte) 60, vc.field_E[1]);
+        gu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
         ji.k(param0);
-        tc.a(vi.field_n, param0 ^ 8710, ih.field_c, rm.field_C);
-        ui.a(1, kn.a(ih.field_c, param0 ^ 77, vi.field_n, rm.field_C), vc.field_E[2], 2147483647);
+        tc.a(vi.field_n, param0 ^ 8710, ih.field_c, RankingsScreen.field_C);
+        ui.a(1, kn.a(ih.field_c, param0 ^ 77, vi.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
     }
 
     public static void b(byte param0) {

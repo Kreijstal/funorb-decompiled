@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ri extends qv {
+class ri extends TextWidgetPainter {
     static int field_t;
     static String field_s;
     static sr field_u;
     static String field_v;
     static int field_r;
 
-    final static void a(byte param0, int param1, CommonGame param2, int param3) {
+    final static void updateIdleMovement(byte param0, int param1, CommonGame param2, int param3) {
         FootballerAgent stackIn_17_0 = null;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -38,53 +38,53 @@ class ri extends qv {
           if (param0 != -93) {
             ri.a(113, false, true, 5);
           }
-          var6 = var16.f(param0 - 7);
-          var7 = var16.a(true);
-          var8 = param2.field_V.a(true);
-          var9 = param2.field_V.c(879306160);
+          var6 = var16.pixelX(param0 - 7);
+          var7 = var16.pixelY(true);
+          var8 = param2.field_V.pixelX(true);
+          var9 = param2.field_V.pixelY(879306160);
           if ((var5 & (1 << var16.aiWait) - 1) != 0) {
-            if ((1 & var16.field_G) != 0 &&
-              88080384 <= var16.field_w) {
-              var16.field_G = var16.field_G & -2;
-              var16.field_G = var16.field_G | 4;
+            if ((1 & var16.directionMask) != 0 &&
+              88080384 <= var16.positionY) {
+              var16.directionMask = var16.directionMask & -2;
+              var16.directionMask = var16.directionMask | 4;
             }
-            if ((4 & var16.field_G) != 0 &&
-              var16.field_w <= 0) {
-              var16.field_G = var16.field_G & -5;
-              var16.field_G = var16.field_G | 1;
+            if ((4 & var16.directionMask) != 0 &&
+              var16.positionY <= 0) {
+              var16.directionMask = var16.directionMask & -5;
+              var16.directionMask = var16.directionMask | 1;
             }
-            if (0 != (8 & var16.field_G) &&
-              58720256 <= var16.field_M) {
-              var16.field_G = var16.field_G & -9;
-              var16.field_G = var16.field_G | 2;
+            if (0 != (8 & var16.directionMask) &&
+              58720256 <= var16.positionX) {
+              var16.directionMask = var16.directionMask & -9;
+              var16.directionMask = var16.directionMask | 2;
             }
-            if ((var16.field_G & 2) != 0 &&
-              var16.field_M <= 0) {
-              var16.field_G = var16.field_G & -3;
-              var16.field_G = var16.field_G | 8;
+            if ((var16.directionMask & 2) != 0 &&
+              var16.positionX <= 0) {
+              var16.directionMask = var16.directionMask & -3;
+              var16.directionMask = var16.directionMask | 8;
             }
           } else {
             ParticipantStatus.a(param1, param3, (byte) 103, param2.field_r[param3]);
-            var10 = var6 - ge.field_m[0];
-            var11 = -ge.field_m[1] + var7;
+            var10 = var6 - MatchingTextValidator.field_m[0];
+            var11 = -MatchingTextValidator.field_m[1] + var7;
             var12 = 24;
             var13 = 24;
-            if ((10 & var16.field_G) == 0) {
+            if ((10 & var16.directionMask) == 0) {
               var12 = var12 << 1;
             }
-            if ((5 & var16.field_G) == 0) {
+            if ((5 & var16.directionMask) == 0) {
               var13 = var13 << 1;
             }
             if (Math.abs(var10) <= var12 &&
               Math.abs(var11) <= var13) {
               stackIn_17_0 = var16;
-              if (var16.field_G == 0) {
+              if (var16.directionMask == 0) {
                 stackIn_18_1 = 5;
               } else {
                 stackIn_18_1 = 7;
               }
               stackIn_17_0.aiWait = stackIn_18_1;
-              var16.field_G = 0;
+              var16.directionMask = 0;
             } else {
               var14 = 0;
               if (var12 < var10) {
@@ -99,21 +99,21 @@ class ri extends qv {
               if (-var13 > var11) {
                 var14 = var14 | 1;
               }
-              if (var16.field_G != var14) {
+              if (var16.directionMask != var14) {
                 var16.aiWait = 1;
               } else {
                 if (var16.aiWait < 4 &&
-                  var16.field_G == var14) {
+                  var16.directionMask == var14) {
                   var16.aiWait = var16.aiWait + 1;
                 }
               }
-              var16.field_G = var14;
+              var16.directionMask = var14;
             }
           }
-          if (var16.field_G == 0 &&
+          if (var16.directionMask == 0 &&
             0 == var16.action &&
             var5 % 10 == 0) {
-            var16.a(uv.a(true, -var7 + var9, -var6 + var8), 26214);
+            var16.setDirectionFromMask(uv.a(true, -var7 + var9, -var6 + var8), 26214);
             return;
           }
           return;
@@ -131,18 +131,18 @@ class ri extends qv {
         }
     }
 
-    final static void a(sj param0, int[] param1, int param2, kg[] param3, sj param4) {
-        ut[] dupTemp$0 = null;
-        ut[] dupTemp$1 = null;
-        ut[] dupTemp$2 = null;
-        ut[] dupTemp$3 = null;
-        kg[] var5 = null;
+    final static void a(ResourceArchive param0, int[] param1, int param2, IndexedSprite[] param3, ResourceArchive param4) {
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
+        IndexedSprite[] var5 = null;
         int[] var6 = null;
-        kg[] var6_array = null;
+        IndexedSprite[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var20 = null;
-        kg[] var21 = null;
+        IndexedSprite[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
@@ -158,27 +158,27 @@ class ri extends qv {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        uo var7 = null;
-        hd var8 = null;
-        hd var9 = null;
-        hd var10 = null;
-        hd var11 = null;
-        ut[] var12 = null;
-        ut[] var13 = null;
-        ut[] var14 = null;
-        hd var15 = null;
-        ut[] var16 = null;
-        ut[] var17 = null;
+        BinaryBitmapFont var7 = null;
+        UiLayoutNode var8 = null;
+        UiLayoutNode var9 = null;
+        UiLayoutNode var10 = null;
+        UiLayoutNode var11 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
+        UiLayoutNode var15 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         CommonGame var19 = null;
         int var7_intLifetime1;
         var18 = Kickabout.field_G;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var21 = jo.a(param4, 17369, "lobby", "crowns");
+          var21 = DemoIntegersCommand.a(param4, 17369, "lobby", "crowns");
           var5 = var21;
           bk.field_e = var21.length;
           if (param3 != null) {
-            var6_array = new kg[param3.length + bk.field_e];
+            var6_array = new IndexedSprite[param3.length + bk.field_e];
             for (var7_int = 0; var7_int < bk.field_e; var7_int++) {
               var6_array[var7_int] = var21[var7_int];
             }
@@ -227,188 +227,188 @@ class ri extends qv {
           sh.field_c = 15;
           eb.field_b = 4;
           ig.field_c = 11;
-          el.field_I = 2;
+          BytePlusOneCommand.field_I = 2;
           mj.field_b = 2;
-          var7 = qk.a("largefont", param0, 75, "lobby", param4);
-          rq.field_E = qk.a("generalfont", param0, 87, "lobby", param4);
-          jw.field_Ab = qk.a("chatfont", param0, 112, "lobby", param4);
+          var7 = Checkbox.a("largefont", param0, 75, "lobby", param4);
+          ServerMessageScreen.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
+          CheckboxLabelWidget.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
           var7.a(var5, var25);
-          rq.field_E.a(var5, var25);
-          jw.field_Ab.a(var5, var25);
-          var8 = new hd(0L, (hd) null);
+          ServerMessageScreen.field_E.a(var5, var25);
+          CheckboxLabelWidget.field_Ab.a(var5, var25);
+          var8 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var8.field_y = 16777215;
-          var8.field_X = (hu) ((Object) var7);
+          var8.field_X = (BitmapFont) ((Object) var7);
           var8.field_xb = sh.field_c;
           var8.field_p = 1;
           var9 = var8;
           var9.field_A = 1;
-          var10 = new hd(0L, (hd) null);
+          var10 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var10.field_y = 16777215;
           if (param2 > -51) {
             var19 = (CommonGame) null;
-            ri.a((byte) -76, -14, (CommonGame) null, 71);
+            ri.updateIdleMovement((byte) -76, -14, (CommonGame) null, 71);
           }
-          var10.field_X = (hu) ((Object) rq.field_E);
+          var10.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
           var10.field_xb = sh.field_c;
           var10.field_p = 1;
           var11 = var10;
           var11.field_A = 1;
-          qa.field_H = new hd(0L, var8);
-          qa.field_H.field_R = ClientException.a(se.a(param4, -22, "lobby", "heading"), (byte) 86);
-          jf.field_B = new hd(0L, (hd) null);
-          jf.field_B.field_R = tq.a(120, false, 8421504, 4210752, false, (byte) -46);
-          r.field_c = new hd(0L, (hd) null);
+          LeaguesHelpScreen.field_H = new UiLayoutNode(0L, var8);
+          LeaguesHelpScreen.field_H.field_R = ClientException.a(ModalStack.a(param4, -22, "lobby", "heading"), (byte) 86);
+          DoSomethingCommand.field_B = new UiLayoutNode(0L, (UiLayoutNode) null);
+          DoSomethingCommand.field_B.field_R = NotCommand.a(120, false, 8421504, 4210752, false, (byte) -46);
+          r.field_c = new UiLayoutNode(0L, (UiLayoutNode) null);
           r.field_c.field_R = fs.a(114, 3, 1, 6316128, 6316128, (byte) 92);
-          pn.field_u = new hd(0L, (hd) null);
-          pn.field_u.field_R = ClientException.a(se.a(param4, 81, "lobby", "popup"), (byte) 63);
-          var12 = ClientException.a(se.a(param4, -125, "lobby", "popup_mouseover"), (byte) -4);
-          var13 = se.a(param4, -122, "lobby", "button");
-          var14 = ClientException.a(se.a(param4, -122, "lobby", "tab_active"), (byte) 61);
-          ai.field_H = new hd(0L, var8);
-          ai.field_H.field_R = var14;
-          hl.field_f = new hd(0L, (hd) null);
+          pn.field_u = new UiLayoutNode(0L, (UiLayoutNode) null);
+          pn.field_u.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "popup"), (byte) 63);
+          var12 = ClientException.a(ModalStack.a(param4, -125, "lobby", "popup_mouseover"), (byte) -4);
+          var13 = ModalStack.a(param4, -122, "lobby", "button");
+          var14 = ClientException.a(ModalStack.a(param4, -122, "lobby", "tab_active"), (byte) 61);
+          AccountTermsPanel.field_H = new UiLayoutNode(0L, var8);
+          AccountTermsPanel.field_H.field_R = var14;
+          hl.field_f = new UiLayoutNode(0L, (UiLayoutNode) null);
           hl.field_f.field_N = wa.a((byte) 127, "lobby", param4, "closebutton");
           hl.field_f.field_vb = wa.a((byte) 114, "lobby", param4, "closebutton_mouseover");
-          oi.field_i = new hd(0L, var8);
-          oi.field_i.field_R = tq.a(40, true, 3815994, 2039583, true, (byte) -46);
-          dn.field_zb = new hd(0L, var10);
+          oi.field_i = new UiLayoutNode(0L, var8);
+          oi.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
+          dn.field_zb = new UiLayoutNode(0L, var10);
           dn.field_zb.field_kb = 2;
-          dn.field_zb.field_R = tq.a(30, false, 3815994, 2039583, true, (byte) -46);
-          gw.field_a = new hd(0L, var10);
+          dn.field_zb.field_R = NotCommand.a(30, false, 3815994, 2039583, true, (byte) -46);
+          gw.field_a = new UiLayoutNode(0L, var10);
           gw.field_a.field_kb = 2;
-          gw.field_a.field_R = tq.a(30, false, 3815994, 2039583, false, (byte) -46);
-          pq.field_P = new hd(0L, var10);
+          gw.field_a.field_R = NotCommand.a(30, false, 3815994, 2039583, false, (byte) -46);
+          pq.field_P = new UiLayoutNode(0L, var10);
           pq.field_P.field_kb = 2;
-          pq.field_P.field_R = tq.a(30, true, 3815994, 2039583, false, (byte) -46);
-          dw.field_e = new hd(0L, (hd) null);
-          dw.field_e.field_X = (hu) ((Object) rq.field_E);
-          dw.field_e.field_y = 13421772;
-          dw.field_e.field_xb = sh.field_c;
-          dw.field_e.field_p = 1;
-          ul.field_c = new hd(0L, dw.field_e);
+          pq.field_P.field_R = NotCommand.a(30, true, 3815994, 2039583, false, (byte) -46);
+          ConsoleEvaluationException.field_e = new UiLayoutNode(0L, (UiLayoutNode) null);
+          ConsoleEvaluationException.field_e.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
+          ConsoleEvaluationException.field_e.field_y = 13421772;
+          ConsoleEvaluationException.field_e.field_xb = sh.field_c;
+          ConsoleEvaluationException.field_e.field_p = 1;
+          ul.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           ul.field_c.field_hb = 8421504;
           ul.field_c.field_H = 16777215;
           ul.field_c.field_ab = 16777215;
           ul.field_c.field_ub = 16777215;
           ul.field_c.field_y = 16764006;
-          var15 = new hd(0L, ul.field_c);
+          var15 = new UiLayoutNode(0L, ul.field_c);
           var15.field_y = 16777215;
-          var15.field_X = (hu) ((Object) var7);
+          var15.field_X = (BitmapFont) ((Object) var7);
           var15.field_xb = sh.field_c;
-          ip.field_c = new hd(0L, dw.field_e);
-          ip.field_c.field_R = tq.a(16, false, 2236962, 2236962, false, (byte) -46);
+          ip.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+          ip.field_c.field_R = NotCommand.a(16, false, 2236962, 2236962, false, (byte) -46);
           ip.field_c.field_kb = 2;
-          kr.field_b = new hd(0L, dw.field_e);
-          kr.field_b.field_R = tq.a(16, false, 1513239, 1513239, false, (byte) -46);
+          kr.field_b = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+          kr.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
           kr.field_b.field_kb = 2;
-          pw.field_J = new hd(0L, ip.field_c);
+          pw.field_J = new UiLayoutNode(0L, ip.field_c);
           pw.field_J.a(ul.field_c, (byte) -100);
-          mp.field_f = new hd(0L, kr.field_b);
+          mp.field_f = new UiLayoutNode(0L, kr.field_b);
           mp.field_f.a(ul.field_c, (byte) -85);
-          var16 = se.a(param4, 108, "lobby", "button_mouseover");
-          su.field_b = new gu(pn.field_u, var12, dw.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
-          rg.field_e = new hd(0L, ul.field_c);
-          rg.field_e.field_R = var13;
-          rg.field_e.field_eb = 1;
-          rg.field_e.field_S = var16;
-          rg.field_e.field_O = 1;
-          rg.field_e.field_cb = 1;
-          rg.field_e.field_x = 1;
-          rg.field_e.field_rb = se.a(param4, 7, "lobby", "button_mouseheld");
-          rg.field_e.field_u = se.a(param4, -119, "lobby", "button_active");
-          rg.field_e.field_tb = se.a(param4, -119, "lobby", "button_disabled");
-          rg.field_e.field_A = 1;
-          ge.field_n = new hd(0L, ul.field_c);
-          ge.field_n.field_A = 1;
-          ge.field_n.field_R = ClientException.a(se.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
-          ge.field_n.field_S = ClientException.a(se.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
-          ge.field_n.field_u = var14;
-          ku.field_b = new hd(0L, (hd) null);
-          ku.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
-          cp.field_g = new hd(0L, (hd) null);
+          var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
+          su.field_b = new gu(pn.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
+          MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
+          MouseWheelInput.field_e.field_R = var13;
+          MouseWheelInput.field_e.field_eb = 1;
+          MouseWheelInput.field_e.field_S = var16;
+          MouseWheelInput.field_e.field_O = 1;
+          MouseWheelInput.field_e.field_cb = 1;
+          MouseWheelInput.field_e.field_x = 1;
+          MouseWheelInput.field_e.field_rb = ModalStack.a(param4, 7, "lobby", "button_mouseheld");
+          MouseWheelInput.field_e.field_u = ModalStack.a(param4, -119, "lobby", "button_active");
+          MouseWheelInput.field_e.field_tb = ModalStack.a(param4, -119, "lobby", "button_disabled");
+          MouseWheelInput.field_e.field_A = 1;
+          MatchingTextValidator.field_n = new UiLayoutNode(0L, ul.field_c);
+          MatchingTextValidator.field_n.field_A = 1;
+          MatchingTextValidator.field_n.field_R = ClientException.a(ModalStack.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
+          MatchingTextValidator.field_n.field_S = ClientException.a(ModalStack.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
+          MatchingTextValidator.field_n.field_u = var14;
+          MouseInputHandler.field_b = new UiLayoutNode(0L, (UiLayoutNode) null);
+          MouseInputHandler.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
+          cp.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
           cp.field_g.field_R = fs.a(290, 3, -1, 11579568, 6052956, (byte) 118);
-          vg.field_Qb = new hd(0L, var15);
+          vg.field_Qb = new UiLayoutNode(0L, var15);
           vg.field_Qb.field_A = 1;
           vg.field_Qb.field_eb = 1;
           vg.field_Qb.field_cb = 1;
           vg.field_Qb.field_x = 1;
           vg.field_Qb.field_O = 1;
-          dc.field_a = new hd(0L, vg.field_Qb);
-          um.field_d = new hd(0L, ul.field_c);
+          dc.field_a = new UiLayoutNode(0L, vg.field_Qb);
+          um.field_d = new UiLayoutNode(0L, ul.field_c);
           um.field_d.field_cb = 1;
           um.field_d.field_O = 1;
           um.field_d.field_A = 1;
           um.field_d.field_x = 1;
           um.field_d.field_eb = 1;
-          LoggedPlayer.field_r = new hd(0L, um.field_d);
-          mb.field_F = new hd(0L, um.field_d);
-          ev.field_D = new hd(0L, vg.field_Qb);
-          kn.field_F = new hd(0L, um.field_d);
-          nj.field_d = new hd(0L, um.field_d);
-          k.field_f = new hd(0L, um.field_d);
-          um.field_d.field_R = ClientException.a(se.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
-          um.field_d.field_S = ClientException.a(se.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
-          dupTemp$0 = ClientException.a(se.a(param4, -128, "lobby", "smallbutton_active"), (byte) -124);
+          LoggedPlayer.field_r = new UiLayoutNode(0L, um.field_d);
+          DisplayNameForm.field_F = new UiLayoutNode(0L, um.field_d);
+          LongPlusOneCommand.field_D = new UiLayoutNode(0L, vg.field_Qb);
+          kn.field_F = new UiLayoutNode(0L, um.field_d);
+          nj.field_d = new UiLayoutNode(0L, um.field_d);
+          k.field_f = new UiLayoutNode(0L, um.field_d);
+          um.field_d.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
+          um.field_d.field_S = ClientException.a(ModalStack.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
+          dupTemp$0 = ClientException.a(ModalStack.a(param4, -128, "lobby", "smallbutton_active"), (byte) -124);
           um.field_d.field_u = dupTemp$0;
           um.field_d.field_rb = dupTemp$0;
-          um.field_d.field_tb = ClientException.a(se.a(param4, 89, "lobby", "smallbutton_disabled"), (byte) 12);
-          dc.field_a.field_R = ClientException.a(se.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
-          dc.field_a.field_S = ClientException.a(se.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
-          dc.field_a.field_rb = ClientException.a(se.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
-          vg.field_Qb.field_R = ClientException.a(se.a(param4, 87, "lobby", "bigbutton"), (byte) 7);
-          vg.field_Qb.field_S = ClientException.a(se.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
-          vg.field_Qb.field_rb = ClientException.a(se.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
-          vg.field_Qb.field_tb = ClientException.a(se.a(param4, -123, "lobby", "bigbutton_disabled"), (byte) 126);
-          LoggedPlayer.field_r.field_R = ClientException.a(se.a(param4, -10, "lobby", "greenbutton"), (byte) 25);
-          LoggedPlayer.field_r.field_S = ClientException.a(se.a(param4, 92, "lobby", "greenbutton_mouseover"), (byte) -112);
-          LoggedPlayer.field_r.field_rb = ClientException.a(se.a(param4, -39, "lobby", "greenbutton_mouseheld"), (byte) -26);
-          mb.field_F.field_R = ClientException.a(se.a(param4, -123, "lobby", "redbutton"), (byte) 93);
-          mb.field_F.field_S = ClientException.a(se.a(param4, -124, "lobby", "redbutton_mouseover"), (byte) -121);
-          mb.field_F.field_rb = ClientException.a(se.a(param4, -37, "lobby", "redbutton_mouseheld"), (byte) -101);
-          ev.field_D.field_R = ClientException.a(se.a(param4, -127, "lobby", "backbutton"), (byte) -116);
-          ev.field_D.field_S = ClientException.a(se.a(param4, -119, "lobby", "backbutton_mouseover"), (byte) -110);
-          ev.field_D.field_rb = ClientException.a(se.a(param4, 25, "lobby", "backbutton_mouseheld"), (byte) -3);
-          ev.field_D.field_tb = ClientException.a(se.a(param4, 0, "lobby", "backbutton_disabled"), (byte) -99);
-          k.field_f.field_R = ClientException.a(se.a(param4, 8, "lobby", "gameoptionbutton"), (byte) -20);
-          k.field_f.field_S = ClientException.a(se.a(param4, 53, "lobby", "gameoptionbutton_mouseover"), (byte) -5);
-          dupTemp$1 = ClientException.a(se.a(param4, -124, "lobby", "gameoptionbutton_active"), (byte) -121);
+          um.field_d.field_tb = ClientException.a(ModalStack.a(param4, 89, "lobby", "smallbutton_disabled"), (byte) 12);
+          dc.field_a.field_R = ClientException.a(ModalStack.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
+          dc.field_a.field_S = ClientException.a(ModalStack.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
+          dc.field_a.field_rb = ClientException.a(ModalStack.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
+          vg.field_Qb.field_R = ClientException.a(ModalStack.a(param4, 87, "lobby", "bigbutton"), (byte) 7);
+          vg.field_Qb.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
+          vg.field_Qb.field_rb = ClientException.a(ModalStack.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
+          vg.field_Qb.field_tb = ClientException.a(ModalStack.a(param4, -123, "lobby", "bigbutton_disabled"), (byte) 126);
+          LoggedPlayer.field_r.field_R = ClientException.a(ModalStack.a(param4, -10, "lobby", "greenbutton"), (byte) 25);
+          LoggedPlayer.field_r.field_S = ClientException.a(ModalStack.a(param4, 92, "lobby", "greenbutton_mouseover"), (byte) -112);
+          LoggedPlayer.field_r.field_rb = ClientException.a(ModalStack.a(param4, -39, "lobby", "greenbutton_mouseheld"), (byte) -26);
+          DisplayNameForm.field_F.field_R = ClientException.a(ModalStack.a(param4, -123, "lobby", "redbutton"), (byte) 93);
+          DisplayNameForm.field_F.field_S = ClientException.a(ModalStack.a(param4, -124, "lobby", "redbutton_mouseover"), (byte) -121);
+          DisplayNameForm.field_F.field_rb = ClientException.a(ModalStack.a(param4, -37, "lobby", "redbutton_mouseheld"), (byte) -101);
+          LongPlusOneCommand.field_D.field_R = ClientException.a(ModalStack.a(param4, -127, "lobby", "backbutton"), (byte) -116);
+          LongPlusOneCommand.field_D.field_S = ClientException.a(ModalStack.a(param4, -119, "lobby", "backbutton_mouseover"), (byte) -110);
+          LongPlusOneCommand.field_D.field_rb = ClientException.a(ModalStack.a(param4, 25, "lobby", "backbutton_mouseheld"), (byte) -3);
+          LongPlusOneCommand.field_D.field_tb = ClientException.a(ModalStack.a(param4, 0, "lobby", "backbutton_disabled"), (byte) -99);
+          k.field_f.field_R = ClientException.a(ModalStack.a(param4, 8, "lobby", "gameoptionbutton"), (byte) -20);
+          k.field_f.field_S = ClientException.a(ModalStack.a(param4, 53, "lobby", "gameoptionbutton_mouseover"), (byte) -5);
+          dupTemp$1 = ClientException.a(ModalStack.a(param4, -124, "lobby", "gameoptionbutton_active"), (byte) -121);
           k.field_f.field_u = dupTemp$1;
           k.field_f.field_rb = dupTemp$1;
-          k.field_f.field_tb = ClientException.a(se.a(param4, 63, "lobby", "gameoptionbutton_disabled"), (byte) -109);
-          kn.field_F.field_R = ClientException.a(se.a(param4, 31, "lobby", "chatbutton"), (byte) -113);
-          kn.field_F.field_S = ClientException.a(se.a(param4, -127, "lobby", "chatbutton_mouseover"), (byte) 74);
-          dupTemp$2 = ClientException.a(se.a(param4, 11, "lobby", "chatbutton_active"), (byte) -124);
+          k.field_f.field_tb = ClientException.a(ModalStack.a(param4, 63, "lobby", "gameoptionbutton_disabled"), (byte) -109);
+          kn.field_F.field_R = ClientException.a(ModalStack.a(param4, 31, "lobby", "chatbutton"), (byte) -113);
+          kn.field_F.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatbutton_mouseover"), (byte) 74);
+          dupTemp$2 = ClientException.a(ModalStack.a(param4, 11, "lobby", "chatbutton_active"), (byte) -124);
           kn.field_F.field_u = dupTemp$2;
           kn.field_F.field_rb = dupTemp$2;
-          nj.field_d.field_R = ClientException.a(se.a(param4, -123, "lobby", "chatfilterbutton"), (byte) 9);
-          nj.field_d.field_S = ClientException.a(se.a(param4, -127, "lobby", "chatfilterbutton_mouseover"), (byte) 33);
-          dupTemp$3 = ClientException.a(se.a(param4, -123, "lobby", "chatfilterbutton_active"), (byte) -121);
+          nj.field_d.field_R = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton"), (byte) 9);
+          nj.field_d.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatfilterbutton_mouseover"), (byte) 33);
+          dupTemp$3 = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton_active"), (byte) -121);
           nj.field_d.field_u = dupTemp$3;
           nj.field_d.field_rb = dupTemp$3;
-          var17 = se.a(param4, -121, "lobby", "checkbox");
-          hs.field_d = new om(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
-          np.field_Hb = new hd(0L, (hd) null);
+          var17 = ModalStack.a(param4, -121, "lobby", "checkbox");
+          MatchPhaseView.field_d = new om(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
+          np.field_Hb = new UiLayoutNode(0L, (UiLayoutNode) null);
           np.field_Hb.field_R = kh.a((byte) -83, wa.a((byte) 98, "lobby", param4, "slideregion"));
           np.field_Hb.field_S = kh.a((byte) -96, wa.a((byte) 113, "lobby", param4, "slideregion_mouseover"));
           np.field_Hb.field_rb = kh.a((byte) -86, wa.a((byte) 116, "lobby", param4, "slideregion_mouseheld"));
           np.field_Hb.field_tb = kh.a((byte) -108, wa.a((byte) 127, "lobby", param4, "slideregion_disabled"));
-          ts.field_a = new hd(0L, (hd) null);
-          ts.field_a.field_R = ClientException.a(se.a(param4, 108, "lobby", "dragbar"), (byte) 8);
-          ts.field_a.field_S = ClientException.a(se.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
-          ts.field_a.field_rb = ClientException.a(se.a(param4, -119, "lobby", "dragbar_mouseheld"), (byte) -123);
-          ts.field_a.field_tb = ClientException.a(se.a(param4, -27, "lobby", "dragbar_disabled"), (byte) -127);
-          sd.field_a = new hd(0L, (hd) null);
+          ts.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
+          ts.field_a.field_R = ClientException.a(ModalStack.a(param4, 108, "lobby", "dragbar"), (byte) 8);
+          ts.field_a.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
+          ts.field_a.field_rb = ClientException.a(ModalStack.a(param4, -119, "lobby", "dragbar_mouseheld"), (byte) -123);
+          ts.field_a.field_tb = ClientException.a(ModalStack.a(param4, -27, "lobby", "dragbar_disabled"), (byte) -127);
+          sd.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
           sd.field_a.field_N = wa.a((byte) 110, "lobby", param4, "upbutton");
           sd.field_a.field_vb = wa.a((byte) 116, "lobby", param4, "upbutton_mouseover");
           sd.field_a.field_r = wa.a((byte) 117, "lobby", param4, "upbutton_mouseheld");
           sd.field_a.field_t = wa.a((byte) 99, "lobby", param4, "upbutton_disabled");
-          ci.field_b = new hd(0L, (hd) null);
+          ci.field_b = new UiLayoutNode(0L, (UiLayoutNode) null);
           ci.field_b.field_N = wa.a((byte) 108, "lobby", param4, "downbutton");
           ci.field_b.field_vb = wa.a((byte) 108, "lobby", param4, "downbutton_mouseover");
           ci.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
           ci.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
           uk.field_b = new na(0L, sd.field_a, ci.field_b, np.field_Hb, ts.field_a);
-          lh.field_D = new al(0L, (hd) null, rj.field_b, uk.field_b, um.field_d, (String) null, (String) null);
+          BroadcastServerCommand.field_D = new al(0L, (UiLayoutNode) null, rj.field_b, uk.field_b, um.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -442,44 +442,44 @@ class ri extends qv {
         }
     }
 
-    final static ot a(ot param0, boolean param1) {
+    final static ArgbSprite a(ArgbSprite param0, boolean param1) {
         int var3_int = 0;
-        ot stackIn_15_0 = null;
+        ArgbSprite stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ot var3 = null;
+        ArgbSprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         CharSequence var9 = null;
-        ut var10 = null;
+        Sprite var10 = null;
         int var11 = 0;
-        ut var12 = null;
+        Sprite var12 = null;
         int var4Lifetime1;
         var8 = Kickabout.field_G;
         try {
-          var10 = new ut(param0.field_o, param0.field_v);
+          var10 = new Sprite(param0.field_o, param0.field_v);
           var12 = var10;
           for (var3_int = 0; var3_int < var12.field_y.length; var3_int++) {
             if (param0.field_y[var3_int] >>> 24 > 170) {
               var10.field_y[var3_int] = 8947848;
             }
           }
-          var3 = new ot(param0.field_o, param0.field_v);
+          var3 = new ArgbSprite(param0.field_o, param0.field_v);
           PacketBuffer.a(-54, var3);
-          on.a(0, 0, on.field_g, on.field_f, 6710886);
+          SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 6710886);
           for (var4 = 2; 10 > var4; var4++) {
             var5 = (-var4 + 12 << 7) / 13;
             var6 = param0.field_o - var4;
             var7 = var4 / 4 + var4;
             var12.c(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
           }
-          ta.e(125);
+          TeamManagementScreen.e(125);
           if (!param1) {
             var9 = (CharSequence) null;
             ri.a((CharSequence) null, (byte) 122);
@@ -506,7 +506,7 @@ class ri extends qv {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         try {
           if (param1) {
             kj.a(12105912, param2 + param3.field_g, param3.field_t + param4, param3.field_i, param3.field_n);
@@ -524,28 +524,28 @@ class ri extends qv {
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
-        hd stackIn_23_0 = null;
+        UiLayoutNode stackIn_23_0 = null;
         String stackIn_24_1 = null;
-        hd stackIn_26_0 = null;
+        UiLayoutNode stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         String stackIn_27_2 = null;
         String stackIn_54_0 = null;
-        hd stackIn_65_0 = null;
+        UiLayoutNode stackIn_65_0 = null;
         int stackIn_65_1 = 0;
         boolean stackIn_66_2 = false;
-        hd stackIn_70_0 = null;
+        UiLayoutNode stackIn_70_0 = null;
         int stackIn_70_1 = 0;
         boolean stackIn_71_2 = false;
-        hd stackIn_75_0 = null;
+        UiLayoutNode stackIn_75_0 = null;
         int stackIn_75_1 = 0;
         boolean stackIn_76_2 = false;
         int stackIn_78_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        hd var5 = null;
-        hd var6 = null;
-        hd var7 = null;
+        UiLayoutNode var5 = null;
+        UiLayoutNode var6 = null;
+        UiLayoutNode var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
@@ -563,8 +563,8 @@ class ri extends qv {
         var13 = Kickabout.field_G;
         try {
           var4_int = -109 / ((-55 - param0) / 60);
-          dw.a(127, fj.field_a);
-          if (null != ow.field_b) {
+          ConsoleEvaluationException.a(127, fj.field_a);
+          if (null != ArchiveSource.field_b) {
             var5 = em.field_d;
             em.field_d.field_mb = 0;
             var5.field_q = 0;
@@ -575,9 +575,9 @@ class ri extends qv {
             var7 = nv.field_F;
             var7.field_q = 0;
             ci.field_h.field_E = qn.field_d.toUpperCase();
-            var8 = (2 + fp.field_p.field_q) / 2;
-            nv.field_F.a(true, -2 + var8, 0, -40 + fp.field_p.field_mb, 40);
-            GoalStateAgent.field_k.a(true, -var8 + fp.field_p.field_q, var8, -40 + fp.field_p.field_mb, 40);
+            var8 = (2 + AuctionItem.field_p.field_q) / 2;
+            nv.field_F.a(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
+            GoalStateAgent.field_k.a(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
             if (rn.field_d.length == 1 &&
               rn.field_d[0] == 2) {
               var9 = 0;
@@ -608,7 +608,7 @@ class ri extends qv {
               }
             }
             GoalStateAgent.field_k.field_lb = true;
-            if (hw.field_k) {
+            if (InstrumentNoteMask.field_k) {
               ac.field_b.field_lb = false;
               w.field_e.field_E = qr.field_c;
               if (var9 == 0) {
@@ -620,16 +620,16 @@ class ri extends qv {
               var10 = var15;
               var10 = var15;
               var10 = var15;
-              var11Lifetime1 = nv.field_F.field_X.a(var15) + nv.field_F.field_X.a('.') * 3;
-              if (16 == (de.field_c & 48)) {
+              var11Lifetime1 = nv.field_F.field_X.a(var15) + nv.field_F.field_X.charWidth('.') * 3;
+              if (16 == (GameKeyHandler.field_c & 48)) {
                 var10 = var15 + ".";
               }
               nv.field_F.field_A = 0;
               nv.field_F.field_kb = (nv.field_F.field_q - var11Lifetime1) / 2;
-              if ((de.field_c & 48) == 32) {
+              if ((GameKeyHandler.field_c & 48) == 32) {
                 var10 = (String) (var10) + "..";
               }
-              if (48 == (48 & de.field_c)) {
+              if (48 == (48 & GameKeyHandler.field_c)) {
                 var10 = (String) (var10) + "...";
               }
               nv.field_F.field_E = (String) (var10);
@@ -645,20 +645,20 @@ class ri extends qv {
               stackIn_26_0 = w.field_e;
               stackIn_26_1 = -18;
               if (var9 != 0) {
-                stackIn_27_2 = ko.field_j;
+                stackIn_27_2 = MenuSelection.field_j;
               } else {
                 stackIn_27_2 = vr.field_b;
               }
               stackIn_26_0.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
-              nv.field_F.field_E = jw.field_Db;
+              nv.field_F.field_E = CheckboxLabelWidget.field_Db;
               ac.field_b.field_lb = true;
               tt.field_c = true;
-              if (null != la.field_k) {
+              if (null != PlayArea.field_k) {
                 ee.field_e = false;
                 tt.field_c = false;
-                if (hm.field_G == null) {
+                if (SumIntegersCommand.field_G == null) {
                   m.field_f = new boolean[ss.field_j];
-                  hm.field_G = new byte[ss.field_j];
+                  SumIntegersCommand.field_G = new byte[ss.field_j];
                 }
                 var14 = 0;
                 var10_intLifetime1 = var14;
@@ -666,9 +666,9 @@ class ri extends qv {
                   m.field_f[var14] = false;
                   var14++;
                 }
-                pl.a(0, ss.field_j, ow.field_b, -1, (byte) -121, -1, -1, true);
+                pl.a(0, ss.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
                 if (!(2 > tk.field_Ib) &&
-                  ne.field_G[12]) {
+                  GameplayHelpScreen.field_G[12]) {
                   tt.field_c = true;
                 }
               }
@@ -677,7 +677,7 @@ class ri extends qv {
                 if (GoalStateAgent.field_k.field_Q) {
                   var10 = null;
                   if (ee.field_e) {
-                    var10 = "<col=A00000>" + qk.field_H + "</col>";
+                    var10 = "<col=A00000>" + Checkbox.field_H + "</col>";
                     var12 = var10;
                     var10 = var12;
                     var12Lifetime1 = var10;
@@ -703,29 +703,29 @@ class ri extends qv {
           stackIn_65_0 = dn.field_Cb;
           stackIn_65_1 = 0;
           stackIn_66_2 = (param2) && (!param1) && (!td.field_b);
-          ((hd) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
-          stackIn_70_0 = fp.field_p;
+          ((UiLayoutNode) (Object) stackIn_65_0).b(stackIn_65_1, stackIn_66_2);
+          stackIn_70_0 = AuctionItem.field_p;
           stackIn_70_1 = 0;
           stackIn_71_2 = (param2) && (!param1) && (!td.field_b);
-          ((hd) (Object) stackIn_70_0).b(stackIn_70_1, stackIn_71_2);
+          ((UiLayoutNode) (Object) stackIn_70_0).b(stackIn_70_1, stackIn_71_2);
           stackIn_75_0 = tn.field_f;
           stackIn_75_1 = 0;
           stackIn_76_2 = (param2) && (!param1) && (td.field_b);
-          ((hd) (Object) stackIn_75_0).b(stackIn_75_1, stackIn_76_2);
+          ((UiLayoutNode) (Object) stackIn_75_0).b(stackIn_75_1, stackIn_76_2);
           ni.field_l.field_b.h((byte) 118);
-          if (null != ow.field_b) {
+          if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
             if (stackIn_78_0 != ac.field_b.field_sb) {
               nv.a(param3, 32361);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
-              if (hw.field_k) {
+              if (InstrumentNoteMask.field_k) {
                 mp.a(param3, (byte) 79);
               } else {
-                up.a(param3, 0);
+                PlayerStats.a(param3, 0);
               }
             }
-            NetworkGameClient.a(param3, (byte) -127, ow.field_b, true);
+            NetworkGameClient.a(param3, (byte) -127, ArchiveSource.field_b, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -735,7 +735,7 @@ class ri extends qv {
         }
     }
 
-    ri(hu param0, int param1) {
+    ri(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 

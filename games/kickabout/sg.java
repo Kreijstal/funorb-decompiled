@@ -5,7 +5,7 @@ final class sg {
     static int[] field_c;
     static byte[][] field_b;
     static long[] field_d;
-    static hd field_a;
+    static UiLayoutNode field_a;
     private static String field_z;
 
     public static void a(boolean param0) {

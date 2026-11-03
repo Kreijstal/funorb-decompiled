@@ -10,16 +10,16 @@ final class tv {
     int field_c;
     String field_g;
     static String[] field_a;
-    static hd field_e;
+    static UiLayoutNode field_e;
     static String field_k;
     long field_d;
     String field_q;
     boolean field_m;
-    hd field_s;
+    UiLayoutNode field_s;
     int field_o;
     int[] field_r;
     int field_n;
-    static ut[] field_b;
+    static Sprite[] field_b;
     static int[][] field_f;
 
     public static void a(int param0) {
@@ -74,7 +74,7 @@ final class tv {
     tv(boolean param0) {
         this.field_l = vp.field_e;
         this.field_g = ee.field_a;
-        this.field_p = cj.field_G;
+        this.field_p = DateInputWidget.field_G;
         this.field_h = sr.field_d;
         this.field_n = oh.field_f;
         if (!param0) {
@@ -82,9 +82,9 @@ final class tv {
         } else {
           this.field_r = gk.field_b;
         }
-        this.field_c = jn.field_ob;
-        this.field_j = sc.field_E;
-        this.field_m = lo.field_l;
+        this.field_c = RegistrationRequestDialog.field_ob;
+        this.field_j = FindingOpponentScreen.field_E;
+        this.field_m = PasswordValidator.field_l;
         this.field_d = i.field_z;
         this.field_o = ie.field_F;
         this.field_q = hr.field_f;

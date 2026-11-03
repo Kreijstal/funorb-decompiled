@@ -1,35 +1,35 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends hd {
-    hd field_Rb;
+final class qb extends UiLayoutNode {
+    UiLayoutNode field_Rb;
     static String[] field_Qb;
-    hd field_kc;
-    hd field_Bb;
-    hd field_Lb;
+    UiLayoutNode field_kc;
+    UiLayoutNode field_Bb;
+    UiLayoutNode field_Lb;
     int field_Ab;
-    hd field_fc;
+    UiLayoutNode field_fc;
     boolean field_Cb;
-    hd field_dc;
+    UiLayoutNode field_dc;
     boolean field_Tb;
-    hd field_zb;
-    hd field_jc;
+    UiLayoutNode field_zb;
+    UiLayoutNode field_jc;
     long field_Nb;
     long field_Fb;
     int field_Mb;
     boolean field_Ub;
-    hd field_Zb;
-    hd field_Hb;
-    hd field_Ib;
+    UiLayoutNode field_Zb;
+    UiLayoutNode field_Hb;
+    UiLayoutNode field_Ib;
     int field_Db;
     boolean field_ic;
-    hd field_Gb;
-    hd field_cc;
+    UiLayoutNode field_Gb;
+    UiLayoutNode field_cc;
     int field_ac;
     int field_bc;
-    hd field_Yb;
-    hd field_Jb;
-    hd field_Pb;
+    UiLayoutNode field_Yb;
+    UiLayoutNode field_Jb;
+    UiLayoutNode field_Pb;
     boolean field_Xb;
     byte[] field_Eb;
     boolean field_hc;
@@ -39,7 +39,7 @@ final class qb extends hd {
     static String field_lc;
     boolean field_yb;
     int field_gc;
-    hd[] field_Sb;
+    UiLayoutNode[] field_Sb;
     int field_Wb;
     int field_Ob;
 
@@ -155,14 +155,14 @@ final class qb extends hd {
 
     final boolean b(int param0) {
         if (param0 == -7) {
-          return !this.a((byte) -60) ? true : false;
+          return !this.isSecondaryLinked((byte) -60) ? true : false;
         }
         this.field_Db = 32;
-        return !this.a((byte) -60) ? true : false;
+        return !this.isSecondaryLinked((byte) -60) ? true : false;
     }
 
     qb(int param0) {
-        super(0L, (hd) null);
+        super(0L, (UiLayoutNode) null);
         this.field_Eb = new byte[param0];
     }
 

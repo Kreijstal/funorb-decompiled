@@ -19,7 +19,7 @@ final class tl {
         if (param0 >= -115) {
           return -7;
         }
-        return lb.field_M;
+        return TextHotspotWidget.field_M;
     }
 
     final static void b(int param0) {
@@ -61,7 +61,7 @@ final class tl {
         var26 = Kickabout.field_G;
         try {
           var28 = un.field_e;
-          var2 = var28.h((byte) -120);
+          var2 = var28.readUnsignedByte((byte) -120);
           if (param0 != 2) {
             field_b = (String) null;
           }
@@ -76,26 +76,26 @@ final class tl {
               break;
             }
             if (var4 == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
-            var5 = var28.h((byte) -128);
+            var5 = var28.readUnsignedByte((byte) -128);
             if (var5 == 0) {
               var4.c((byte) -109);
               return;
             }
             var6 = var4.field_g;
-            sc.field_F[0].field_d = null;
+            FindingOpponentScreen.field_F[0].field_d = null;
             var7 = var4.field_j;
-            sc.field_F[0].field_b = ow.field_e;
-            sc.field_F[0].field_g = false;
+            FindingOpponentScreen.field_F[0].field_b = ArchiveSource.field_e;
+            FindingOpponentScreen.field_F[0].field_g = false;
             for (var8_int = 1; var8_int < var5; var8_int++) {
-              sc.field_F[var8_int].field_b = var28.a(param0 ^ 34);
-              sc.field_F[var8_int].field_g = false;
-              if (1 == var28.h((byte) -127)) {
-                sc.field_F[var8_int].field_d = var28.a(-108);
+              FindingOpponentScreen.field_F[var8_int].field_b = var28.readString(param0 ^ 34);
+              FindingOpponentScreen.field_F[var8_int].field_g = false;
+              if (1 == var28.readUnsignedByte((byte) -127)) {
+                FindingOpponentScreen.field_F[var8_int].field_d = var28.readString(-108);
               } else {
-                sc.field_F[var8_int].field_d = null;
+                FindingOpponentScreen.field_F[var8_int].field_d = null;
               }
             }
             var8 = new String[3][var6];
@@ -108,30 +108,30 @@ final class tl {
             var15 = 0;
             var16 = 0;
             var17 = 0;
-            var18 = var28.h((byte) -106);
+            var18 = var28.readUnsignedByte((byte) -106);
             if (0 >= var18) {
               var4.c((byte) -109);
               return;
             }
             for (var19 = 0; var18 > var19; var19++) {
-              var20 = var28.h((byte) -118);
-              var21 = sc.field_F[var20].field_b;
-              var22 = var28.i((byte) -124);
+              var20 = var28.readUnsignedByte((byte) -118);
+              var21 = FindingOpponentScreen.field_F[var20].field_b;
+              var22 = var28.readLong((byte) -124);
               var24 = var28.field_n;
               if (var19 < var6) {
                 var8[0][var12] = var21;
-                var9[0][var12] = sc.field_F[var20].field_d;
+                var9[0][var12] = FindingOpponentScreen.field_F[var20].field_d;
                 var35[0][var12] = var22;
                 var12++;
                 for (var25 = 0; var25 < var7; var25++) {
                   incrementValue$0 = var15;
                   var15++;
-                  var36[0][incrementValue$0] = var28.k(4);
+                  var36[0][incrementValue$0] = var28.readInt(4);
                 }
               }
               if (var21 != null &&
-                hm.a((byte) 78, var21)) {
-                var8[1][var13] = ow.field_e;
+                SumIntegersCommand.a((byte) 78, var21)) {
+                var8[1][var13] = ArchiveSource.field_e;
                 var9[1][var13] = null;
                 var35[1][var13] = var22;
                 var13++;
@@ -139,21 +139,21 @@ final class tl {
                 for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
-                  var36[1][incrementValue$1] = var28.k(4);
+                  var36[1][incrementValue$1] = var28.readInt(4);
                 }
               }
               if (var14 < var6 &&
-                !sc.field_F[var20].field_g) {
-                sc.field_F[var20].field_g = true;
+                !FindingOpponentScreen.field_F[var20].field_g) {
+                FindingOpponentScreen.field_F[var20].field_g = true;
                 var8[2][var14] = var21;
-                var9[2][var14] = sc.field_F[var20].field_d;
+                var9[2][var14] = FindingOpponentScreen.field_F[var20].field_d;
                 var35[2][var14] = var22;
                 var28.field_n = var24;
                 var14++;
                 for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                   incrementValue$2 = var17;
                   var17++;
-                  var36[2][incrementValue$2] = var28.k(4);
+                  var36[2][incrementValue$2] = var28.readInt(4);
                 }
               }
             }
@@ -162,7 +162,7 @@ final class tl {
           }
           if (var2 == 1) {
             var3Lifetime1 = var28.a((byte) 81);
-            var28.i((byte) -124);
+            var28.readLong((byte) -124);
             var4_ref = (sm) (ia.field_d.g(24009));
             while (var4_ref != null) {
               if (var3Lifetime1 != var4_ref.field_k) {
@@ -172,14 +172,14 @@ final class tl {
               break;
             }
             if (var4_ref == null) {
-              lr.b((byte) -116);
+              FormationView.b((byte) -116);
               return;
             }
             var4_ref.c((byte) -109);
             return;
           }
-          bd.a("HS1: " + tr.b(0), (Throwable) null, 1);
-          lr.b((byte) -116);
+          UnreadMessagesScreen.a("HS1: " + tr.b(0), (Throwable) null, 1);
+          FormationView.b((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -188,7 +188,7 @@ final class tl {
         }
     }
 
-    final static lk a(sb param0, boolean param1) {
+    final static ConsoleExpression a(sb param0, boolean param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -196,8 +196,8 @@ final class tl {
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
-        lk stackIn_3_0 = null;
-        lk stackIn_21_0 = null;
+        ConsoleExpression stackIn_3_0 = null;
+        ConsoleExpression stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -207,7 +207,7 @@ final class tl {
         var6 = Kickabout.field_G;
         try {
           if (param1) {
-            stackIn_3_0 = (lk) null;
+            stackIn_3_0 = (ConsoleExpression) null;
             return stackIn_3_0;
           }
           fieldTemp$2 = param0.field_c - 1;
@@ -236,9 +236,9 @@ final class tl {
               var4Lifetime1 = pv.field_H;
             }
           } else {
-            var4Lifetime1 = ra.field_N;
+            var4Lifetime1 = GameModesHelpScreen.field_N;
           }
-          stackIn_21_0 = new lk(var4Lifetime1, var2_int, var5);
+          stackIn_21_0 = new ConsoleExpression(var4Lifetime1, var2_int, var5);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

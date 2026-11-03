@@ -4,17 +4,17 @@
 final class sq extends i {
     static gf[] field_H;
     static boolean field_G;
-    static ut[] field_F;
+    static Sprite[] field_F;
 
     final static boolean b(int param0, int param1, int param2) {
-        int var3 = null != ow.field_b ? 1 : 0;
+        int var3 = null != ArchiveSource.field_b ? 1 : 0;
         if (cc.field_e == 9 &&
-          cb.a(ol.field_z, mv.field_a, (byte) -64, qs.field_S, nr.field_r)) {
-          if (ol.field_z != 2 &&
+          cb.a(GameOverView.field_z, mv.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
+          if (GameOverView.field_z != 2 &&
             var3 != 0) {
             return false;
           }
-          return mi.a(nr.field_r, mv.field_a, (byte) 124, ol.field_z, qs.field_S);
+          return mi.a(PlayerModelPreview.field_r, mv.field_a, (byte) 124, GameOverView.field_z, PlayerShopScreen.field_S);
         }
         int var4 = 1 % ((59 - param0) / 44);
         if (10 == cc.field_e) {
@@ -26,19 +26,19 @@ final class sq extends i {
         }
         if (11 == cc.field_e &&
           CommonGame.field_j) {
-          if (qs.field_K == 2 &&
-            !nq.a(false, oc.field_f, qh.field_c)) {
+          if (PlayerShopScreen.field_K == 2 &&
+            !nq.a(false, oc.field_f, SectorCacheStore.field_c)) {
             return false;
           }
-          if (2 != qs.field_K &&
+          if (2 != PlayerShopScreen.field_K &&
             var3 != 0) {
             return false;
           }
-          if (!jk.b(0)) {
+          if (!MusicPatch.b(0)) {
             return true;
           }
           String var5 = (String) null;
-          gp.a(vb.field_h, 101, qs.field_K, param2, oc.field_f, (String) null);
+          PasswordLoginCredentials.a(vb.field_h, 101, PlayerShopScreen.field_K, param2, oc.field_f, (String) null);
           return true;
         }
         return false;
@@ -53,11 +53,11 @@ final class sq extends i {
         super.a(127, param1);
         if (0 == param1) {
           nk.c((byte) -56);
-          jm.a(13, true, -2);
+          DelayedServerPacket.a(13, true, -2);
         } else {
           if (param1 == 1) {
-            wb.f(-120);
-            jm.a(13, true, -2);
+            TeamSelectionView.f(-120);
+            DelayedServerPacket.a(13, true, -2);
           } else {
             if (param1 != 2) {
             }

@@ -6,14 +6,14 @@ final class vb {
     static String field_e;
     static int field_b;
     static int field_d;
-    static ut[] field_a;
+    static Sprite[] field_a;
     static String field_i;
     static int field_j;
     static double field_c;
     static String field_f;
     static int field_h;
     static byte[][] field_g;
-    static ut field_l;
+    static Sprite field_l;
 
     final static long a(int param0, CharSequence param1) {
         int var5 = 0;
@@ -83,54 +83,54 @@ final class vb {
         int var5Lifetime1;
         var6 = Kickabout.field_G;
         try {
-          if (rm.field_C == 0) {
-            bv.field_l = null;
+          if (RankingsScreen.field_C == 0) {
+            AccountNameAvailabilityValidator.field_l = null;
           } else {
             if (!vi.field_n) {
-              bv.field_l = null;
+              AccountNameAvailabilityValidator.field_l = null;
             } else {
-              if (rm.field_C == 1) {
-                bv.field_l = new rk[30];
-                for (var1_int = 0; var1_int < bv.field_l.length; var1_int++) {
+              if (RankingsScreen.field_C == 1) {
+                AccountNameAvailabilityValidator.field_l = new rk[30];
+                for (var1_int = 0; var1_int < AccountNameAvailabilityValidator.field_l.length; var1_int++) {
                   stackIn_11_0 = (ih.field_c != 2) ? -60 : -120;
                   var2 = stackIn_11_0;
-                  var2 = el.a(29430, 15, var2);
+                  var2 = BytePlusOneCommand.a(29430, 15, var2);
                   var3 = 20 + var1_int * 45;
                   var4 = 6;
-                  if (0 == p.a((byte) -24, 2)) {
+                  if (0 == LoggedPossession.a((byte) -24, 2)) {
                     var4 = 2;
                     var2 = 896 - var2;
                   }
-                  bv.field_l[var1_int] = new rk(var2, var3, var4);
+                  AccountNameAvailabilityValidator.field_l[var1_int] = new rk(var2, var3, var4);
                 }
               } else {
-                if (rm.field_C == 2) {
-                  bv.field_l = new rk[34];
+                if (RankingsScreen.field_C == 2) {
+                  AccountNameAvailabilityValidator.field_l = new rk[34];
                   var1_int = 0;
                   for (var2 = 0; var2 < 17; var2++) {
-                    stackIn_21_0 = ~p.a((byte) -24, 3);
+                    stackIn_21_0 = ~LoggedPossession.a((byte) -24, 3);
                     stackIn_21_1 = -1;
                     if (stackIn_21_0 != stackIn_21_1) {
                       var3 = -170;
-                      var4 = p.a((byte) -24, 5);
-                      var5 = p.a((byte) -24, 100);
-                      bv.field_l[var2] = new rk(var4 + var1_int, var5 + var3, 0);
+                      var4 = LoggedPossession.a((byte) -24, 5);
+                      var5 = LoggedPossession.a((byte) -24, 100);
+                      AccountNameAvailabilityValidator.field_l[var2] = new rk(var4 + var1_int, var5 + var3, 0);
                     }
                     var1_int += 54;
                   }
                   var1_int = 0;
                   for (var2 = 17; var2 < 34; var2++) {
-                    if (p.a((byte) -24, 3) != 0) {
+                    if (LoggedPossession.a((byte) -24, 3) != 0) {
                       var3 = 1424;
-                      var4 = p.a((byte) -24, 5);
-                      var5Lifetime1 = p.a((byte) -24, 100);
-                      bv.field_l[var2] = new rk(var1_int + var4, var3 + var5Lifetime1, 4);
+                      var4 = LoggedPossession.a((byte) -24, 5);
+                      var5Lifetime1 = LoggedPossession.a((byte) -24, 100);
+                      AccountNameAvailabilityValidator.field_l[var2] = new rk(var1_int + var4, var3 + var5Lifetime1, 4);
                     }
                     var1_int += 54;
                   }
                 } else {
-                  if (rm.field_C == 3) {
-                    bv.field_l = null;
+                  if (RankingsScreen.field_C == 3) {
+                    AccountNameAvailabilityValidator.field_l = null;
                   }
                 }
               }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bo extends hd {
-    static sj field_Cb;
+final class bo extends UiLayoutNode {
+    static ResourceArchive field_Cb;
     static String field_zb;
     static String field_Db;
     static int[] field_Ab;
-    private hd field_yb;
+    private UiLayoutNode field_yb;
     static String field_Bb;
 
     final static String a(int param0, String param1) {
@@ -54,7 +54,7 @@ final class bo extends hd {
         boolean decompiledFrameRemainder0 = true;
         this.b(0, true);
         var3 = 118 % ((3 - param0) / 62);
-        if ((wj.field_A == 0 ||
+        if ((WidgetContainer.field_A == 0 ||
           0 != this.field_sb) && this.field_yb.field_sb == 0) {
           stackIn_7_0 = false;
           decompiledFrameRemainder0 = false;
@@ -112,7 +112,7 @@ final class bo extends hd {
         }
     }
 
-    bo(hd param0, hd param1, hd param2, hd param3, hd param4, hd param5) {
+    bo(UiLayoutNode param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, UiLayoutNode param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -129,35 +129,35 @@ final class bo extends hd {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        hd var8 = null;
-        hd var9 = null;
+        UiLayoutNode var8 = null;
+        UiLayoutNode var9 = null;
         int var10 = 0;
         int var11 = 0;
-        hd var13 = null;
-        hd var14 = null;
+        UiLayoutNode var13 = null;
+        UiLayoutNode var14 = null;
         int var15 = 0;
-        hd var17 = null;
+        UiLayoutNode var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new hd(0L, param1, vp.field_b.toUpperCase());
+          var17 = new UiLayoutNode(0L, param1, vp.field_b.toUpperCase());
           var17.field_A = 1;
-          this.field_yb = new hd(0L, param2);
-          var8 = new hd(0L, param3);
-          var9 = new hd(0L, param3, LoggedPlayer.field_l);
+          this.field_yb = new UiLayoutNode(0L, param2);
+          var8 = new UiLayoutNode(0L, param3);
+          var9 = new UiLayoutNode(0L, param3, LoggedPlayer.field_l);
           var9.field_A = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; var12 < r.field_b.length; var12++) {
-            var13 = new hd(0L, param3, ud.field_A[var12]);
-            var14 = new hd(0L, param3, r.field_b[var12]);
+            var13 = new UiLayoutNode(0L, param3, MatchTransitionScreen.field_A[var12]);
+            var14 = new UiLayoutNode(0L, param3, r.field_b[var12]);
             var15 = param3.field_X.a(r.field_b[var12]);
             if (var15 > var11) {
               var11 = var15;
             }
             var13.a(true, 65, 20, var10, 15);
             var14.a(true, 640, 90, var10, 15);
-            var8.a((byte) -115, var13);
-            var8.a((byte) -104, var14);
+            var8.addChild((byte) -115, var13);
+            var8.addChild((byte) -104, var14);
             var10 += 30;
           }
           var10 += 15;
@@ -167,10 +167,10 @@ final class bo extends hd {
           var8.a(true, this.field_q, 0, var17.field_mb, -var17.field_mb + this.field_mb);
           var9.a(true, this.field_q, 0, 20, 15);
           var8.field_R = fs.a(var8.field_mb, 3, 2105376, 11579568, 8421504, (byte) 83);
-          var17.a((byte) -110, this.field_yb);
-          var8.a((byte) -107, var9);
-          this.a((byte) -107, var17);
-          this.a((byte) -117, var8);
+          var17.addChild((byte) -110, this.field_yb);
+          var8.addChild((byte) -107, var9);
+          this.addChild((byte) -107, var17);
+          this.addChild((byte) -117, var8);
           this.field_s = 320 - (this.field_q >> 1);
           var10Lifetime1 = 240 - (this.field_mb >> 1);
           return;

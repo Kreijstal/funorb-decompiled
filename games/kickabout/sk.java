@@ -5,7 +5,7 @@ final class sk {
     static int field_c;
     static String field_b;
     static jj field_d;
-    static ut[] field_a;
+    static Sprite[] field_a;
 
     final static void a(int param0, int param1) {
         ea.a(vt.field_c.phaseTime, 5, true, 636, param1, -51);
@@ -16,7 +16,7 @@ final class sk {
 
     final static int a(byte param0) {
         if (param0 != 97) {
-          field_a = (ut[]) null;
+          field_a = (Sprite[]) null;
           return wd.field_n[0];
         }
         return wd.field_n[0];
@@ -31,27 +31,27 @@ final class sk {
           sk.a(-17, -97, 99);
           var1 = (fa) (FootballerAgent.field_f.g(24009));
           if (var1 == null) {
-            lr.b((byte) -116);
+            FormationView.b((byte) -116);
             return;
           }
           var2 = un.field_e;
-          var2.k(4);
-          var2.k(4);
-          var2.k(4);
-          var2.k(4);
+          var2.readInt(4);
+          var2.readInt(4);
+          var2.readInt(4);
+          var2.readInt(4);
           var1.c((byte) -109);
           return;
         }
         var1Lifetime1 = (fa) (FootballerAgent.field_f.g(24009));
         if (var1Lifetime1 == null) {
-          lr.b((byte) -116);
+          FormationView.b((byte) -116);
           return;
         }
         var2Lifetime1 = un.field_e;
-        var2Lifetime1.k(4);
-        var2Lifetime1.k(4);
-        var2Lifetime1.k(4);
-        var2Lifetime1.k(4);
+        var2Lifetime1.readInt(4);
+        var2Lifetime1.readInt(4);
+        var2Lifetime1.readInt(4);
+        var2Lifetime1.readInt(4);
         var1Lifetime1.c((byte) -109);
     }
 
@@ -73,7 +73,7 @@ final class sk {
           field_a = null;
           return;
         }
-        field_a = (ut[]) null;
+        field_a = (Sprite[]) null;
         field_d = null;
         field_b = null;
         field_a = null;
@@ -104,7 +104,7 @@ final class sk {
             var12 = var13 + " - " + var6 + "%";
           }
           ju.a(var11, var12, (byte) 30);
-          nm.field_g.b((byte) 118);
+          nm.field_g.paintFrame((byte) 118);
           return;
         }
     }

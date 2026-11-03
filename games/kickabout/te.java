@@ -7,7 +7,7 @@ final class te {
 
     final static void a(boolean param0, String param1) {
         try {
-          lh.field_A = param1;
+          BroadcastServerCommand.field_A = param1;
           if (!param0) {
             te.a(-69, -48, -126, true, -8);
           }
@@ -32,46 +32,46 @@ final class te {
           var5.b(param0, (byte) 114);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
-          var5.a(107, 1);
-          var5.a(param2 ^ -4, param1.field_g);
-          var5.a(param2 ^ -22, param1.field_f);
-          var5.b(-121, param1.field_e);
-          var5.b(-40, param1.field_k);
-          var5.b(-62, param1.field_i);
-          var5.b(-91, param1.field_j);
+          var5.writeByte(107, 1);
+          var5.writeByte(param2 ^ -4, param1.field_g);
+          var5.writeByte(param2 ^ -22, param1.field_f);
+          var5.writeInt(-121, param1.field_e);
+          var5.writeInt(-40, param1.field_k);
+          var5.writeInt(-62, param1.field_i);
+          var5.writeInt(-91, param1.field_j);
           if (param2 != -112) {
             field_b = (String) null;
           }
-          var5.a(var4, false);
-          var5.c(62, var5.field_n - var4);
+          var5.appendCrc32(var4, false);
+          var5.backpatchByteLength(62, var5.field_n - var4);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static ut[] a(int param0, int param1, int param2, boolean param3, int param4) {
-        ut[] var6 = new ut[9];
-        ut[] var5 = var6;
+    final static Sprite[] a(int param0, int param1, int param2, boolean param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
         if (param3) {
-          return (ut[]) null;
+          return (Sprite[]) null;
         }
-        ut dupTemp$0 = lh.a(param4, (byte) -96, param0);
+        Sprite dupTemp$0 = BroadcastServerCommand.a(param4, (byte) -96, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ut dupTemp$1 = lh.a(param2, (byte) -96, param0);
+        Sprite dupTemp$1 = BroadcastServerCommand.a(param2, (byte) -96, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param1 != 0) {
-          var6[4] = lh.a(param1, (byte) -96, 64);
+          var6[4] = BroadcastServerCommand.a(param1, (byte) -96, 64);
         }
         return var5;
     }
 
-    final static bb a(int param0, hd param1, int[] param2, hd param3, hd param4) {
+    final static bb a(int param0, UiLayoutNode param1, int[] param2, UiLayoutNode param3, UiLayoutNode param4) {
         int var10_int = 0;
         Object stackIn_7_0 = null;
         bb stackIn_11_0 = null;
@@ -92,9 +92,9 @@ final class te {
         bb[] var8 = null;
         int var9 = 0;
         Exception var10 = null;
-        bg var11 = null;
+        QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
-        hd var13 = null;
+        UiLayoutNode var13 = null;
         char[] var14 = null;
         char[] var15 = null;
         var12 = Kickabout.field_G;
@@ -108,8 +108,8 @@ final class te {
           var9 = 49;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = lm.field_j.a(119, param2[var10_int]);
-              var6[var10_int] = var11.g((byte) -79);
+              var11 = TournamentLobbyScreen.field_j.getPhrase(119, param2[var10_int]);
+              var6[var10_int] = var11.getDisplayText((byte) -79);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;
@@ -121,8 +121,8 @@ final class te {
             return (bb) (stackIn_7_0);
           }
           if (param0 >= -91) {
-            var13 = (hd) null;
-            te.a(-59, (hd) null, (int[]) null, (hd) null, (hd) null);
+            var13 = (UiLayoutNode) null;
+            te.a(-59, (UiLayoutNode) null, (int[]) null, (UiLayoutNode) null, (UiLayoutNode) null);
           }
           stackIn_11_0 = new bb(0L, param1, param4, param3, var8, param2, var6, var15);
           return stackIn_11_0;
@@ -163,7 +163,7 @@ final class te {
           ii var13 = (ii) null;
           te.a(80, (ii) null, (byte) -28);
         }
-        gm.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
+        RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }
 
     static {
@@ -177,6 +177,6 @@ final class te {
           ii var13 = (ii) null;
           te.a(80, (ii) null, (byte) -28);
         }
-        gm.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
+        RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }
 }

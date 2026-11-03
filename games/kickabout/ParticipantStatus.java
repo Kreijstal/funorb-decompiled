@@ -8,9 +8,9 @@ final class ParticipantStatus extends MatchAgent {
     boolean loadedPitch;
     boolean rewardEligible;
     boolean resigned;
-    static bi field_t;
+    static ArchiveNetworkClient field_t;
     static String field_m;
-    int field_g;
+    int controlledSlot;
     static String field_r;
     boolean offerDraw;
     static int field_w;
@@ -43,8 +43,8 @@ final class ParticipantStatus extends MatchAgent {
             var9 = var7 + (-var5 + 1344 - ws.field_c[param3][-1 + param0][1]);
             var8 = var6 - var4_int + (896 - ws.field_c[param3][param0 - 1][0]);
           }
-          ge.field_m[0] = Math.min(896, Math.max(0, var8));
-          ge.field_m[1] = Math.min(1344, Math.max(0, var9));
+          MatchingTextValidator.field_m[0] = Math.min(896, Math.max(0, var8));
+          MatchingTextValidator.field_m[1] = Math.min(1344, Math.max(0, var9));
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "gt.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -64,7 +64,7 @@ final class ParticipantStatus extends MatchAgent {
           }
           var2 = new ak(5);
           var1 = var2;
-          var2.field_e = ((ot) (lu.field_p[2])).h();
+          var2.field_e = ((ArgbSprite) (SpriteState.field_p[2])).h();
           stackIn_4_0 = var1;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,7 +74,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean isActive(int param0) {
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -98,18 +98,18 @@ final class ParticipantStatus extends MatchAgent {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mu.a(param0, (byte) -39)) {
+          if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;
           }
-          this.field_g = -1 + param0.l(3, 59);
+          this.controlledSlot = -1 + param0.l(3, 59);
           this.field_p = param0.l(3, param1 ^ 58) - param1;
-          this.field_k = mu.a(param0, (byte) -39);
-          this.offerDraw = mu.a(param0, (byte) -39);
-          this.resigned = mu.a(param0, (byte) -39);
-          this.departed = mu.a(param0, (byte) -39);
-          this.loadedPitch = mu.a(param0, (byte) -39);
-          this.rewardEligible = mu.a(param0, (byte) -39);
-          this.megamode = mu.a(param0, (byte) -39);
+          this.field_k = ContentTransitionDialog.a(param0, (byte) -39);
+          this.offerDraw = ContentTransitionDialog.a(param0, (byte) -39);
+          this.resigned = ContentTransitionDialog.a(param0, (byte) -39);
+          this.departed = ContentTransitionDialog.a(param0, (byte) -39);
+          this.loadedPitch = ContentTransitionDialog.a(param0, (byte) -39);
+          this.rewardEligible = ContentTransitionDialog.a(param0, (byte) -39);
+          this.megamode = ContentTransitionDialog.a(param0, (byte) -39);
           this.field_l = param0.l(8, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,7 +126,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final static wh a(boolean param0, int param1, byte param2, int param3) {
+    final static FadingSoundPlayer a(boolean param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_3_1 = false;
@@ -135,13 +135,13 @@ final class ParticipantStatus extends MatchAgent {
         int stackIn_7_0 = 0;
         boolean stackIn_7_1 = false;
         boolean stackIn_7_2 = false;
-        wh stackIn_8_0 = null;
+        FadingSoundPlayer stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
           var4_int = -54 / ((param2 - 2) / 63);
           stackIn_3_0 = nm.field_i[param3];
-          stackIn_3_1 = ga.field_O[param3];
+          stackIn_3_1 = TextInputWidget.field_O[param3];
           if (em.field_e) {
             stackIn_6_0 = stackIn_3_0;
             stackIn_6_1 = stackIn_3_1;
@@ -177,7 +177,7 @@ final class ParticipantStatus extends MatchAgent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -52) {
-            this.field_g = -97;
+            this.controlledSlot = -97;
           }
           var3 = (ParticipantStatus) (param1);
           this.offerDraw = var3.offerDraw;
@@ -185,7 +185,7 @@ final class ParticipantStatus extends MatchAgent {
           this.loadedPitch = var3.loadedPitch;
           this.departed = var3.departed;
           this.resigned = var3.resigned;
-          this.field_g = var3.field_g;
+          this.controlledSlot = var3.controlledSlot;
           this.field_k = var3.field_k;
           this.field_p = var3.field_p;
           this.rewardEligible = var3.rewardEligible;
@@ -255,7 +255,7 @@ final class ParticipantStatus extends MatchAgent {
             }
           } else {
             if (uv.field_i == null) {
-              if (null == ow.field_b) {
+              if (null == ArchiveSource.field_b) {
                 td.field_b = false;
                 if (fj.field_a > 0) {
                   fj.field_a = fj.field_a - 1;
@@ -564,7 +564,7 @@ final class ParticipantStatus extends MatchAgent {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static wh $cfr$intArgs$a$60f25194e713(boolean param0, int param1, int param2, int param3) {
+    final static FadingSoundPlayer $cfr$intArgs$a$60f25194e713(boolean param0, int param1, int param2, int param3) {
         int var4_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_3_1 = false;
@@ -573,13 +573,13 @@ final class ParticipantStatus extends MatchAgent {
         int stackIn_7_0 = 0;
         boolean stackIn_7_1 = false;
         boolean stackIn_7_2 = false;
-        wh stackIn_8_0 = null;
+        FadingSoundPlayer stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
           var4_int = -54 / ((param2 - 2) / 63);
           stackIn_3_0 = nm.field_i[param3];
-          stackIn_3_1 = ga.field_O[param3];
+          stackIn_3_1 = TextInputWidget.field_O[param3];
           if (em.field_e) {
             stackIn_6_0 = stackIn_3_0;
             stackIn_6_1 = stackIn_3_1;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op extends qv {
+final class op extends TextWidgetPainter {
     static int[] field_z;
-    static bh field_y;
+    static BufferedSocket field_y;
     private int field_s;
-    private ut[] field_r;
+    private Sprite[] field_r;
     private int field_w;
     static String field_t;
     private int field_x;
@@ -13,7 +13,7 @@ final class op extends qv {
     static int field_v;
 
     final static void a(int param0) {
-        jt.field_yb = 80;
+        PitchOptionTile.field_yb = 80;
         om.field_Bb = 120;
         hq.field_d = -om.field_Bb + 480 - 21;
         if (param0 != -363021503) {
@@ -25,32 +25,32 @@ final class op extends qv {
         int var4 = 48;
         int var5 = 48;
         int var6 = 21;
-        ut var7 = new ut(jt.field_yb << 1, om.field_Bb << 1);
+        Sprite var7 = new Sprite(PitchOptionTile.field_yb << 1, om.field_Bb << 1);
         PacketBuffer.a(97, var7);
-        on.b();
-        on.c(0, 0, jt.field_yb << 1, om.field_Bb << 1, 2, 16777215);
-        on.e(1, 1, -2 + (jt.field_yb << 1), (om.field_Bb << 1) - 2, 16777215);
-        on.f(0, om.field_Bb, jt.field_yb << 1, 16777215);
-        on.f(0, 1 + om.field_Bb, jt.field_yb << 1, 16777215);
-        vl.a(2, var1, true, 16777215).c(-var1 + jt.field_yb, om.field_Bb - var1);
-        on.c(jt.field_yb - (var2 >> 1), 1, var2, var4, 2, 16777215);
-        on.c(jt.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
-        on.c(jt.field_yb - (var2 >> 1), -1 + (-var4 + om.field_Bb) + om.field_Bb, var2, var4, 2, 16777215);
-        on.c(jt.field_yb - (var5 >> 1), -var6 + (om.field_Bb + om.field_Bb), var5, var6, 2, 16777215);
-        pt.a(jt.field_yb + jt.field_yb, -22914, 0, -var4 + (om.field_Bb + om.field_Bb), var4);
-        ut var8 = vl.a(2, var3, true, 16777215);
-        var8.c(-var3 + jt.field_yb, -var3 + var6);
-        var8.c(jt.field_yb - var3, -var3 + (om.field_Bb + om.field_Bb) - var6);
-        ta.e(param0 ^ -363021514);
-        ta.e(127);
-        pq.field_Q = new ut(2 + jt.field_yb, 2 + om.field_Bb);
+        SoftwareRasterizer.b();
+        SoftwareRasterizer.c(0, 0, PitchOptionTile.field_yb << 1, om.field_Bb << 1, 2, 16777215);
+        SoftwareRasterizer.e(1, 1, -2 + (PitchOptionTile.field_yb << 1), (om.field_Bb << 1) - 2, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, om.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, 1 + om.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
+        vl.a(2, var1, true, 16777215).c(-var1 + PitchOptionTile.field_yb, om.field_Bb - var1);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var2 >> 1), 1, var2, var4, 2, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var2 >> 1), -1 + (-var4 + om.field_Bb) + om.field_Bb, var2, var4, 2, 16777215);
+        SoftwareRasterizer.c(PitchOptionTile.field_yb - (var5 >> 1), -var6 + (om.field_Bb + om.field_Bb), var5, var6, 2, 16777215);
+        AuctionListing.a(PitchOptionTile.field_yb + PitchOptionTile.field_yb, -22914, 0, -var4 + (om.field_Bb + om.field_Bb), var4);
+        Sprite var8 = vl.a(2, var3, true, 16777215);
+        var8.c(-var3 + PitchOptionTile.field_yb, -var3 + var6);
+        var8.c(PitchOptionTile.field_yb - var3, -var3 + (om.field_Bb + om.field_Bb) - var6);
+        TeamManagementScreen.e(param0 ^ -363021514);
+        TeamManagementScreen.e(127);
+        pq.field_Q = new Sprite(2 + PitchOptionTile.field_yb, 2 + om.field_Bb);
         PacketBuffer.a(param0 + 363021421, pq.field_Q);
-        on.a(0, 0, on.field_g, on.field_f, 65793);
-        var7.f(1, 1);
-        ta.e(125);
+        SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
+        var7.drawHalfSize(1, 1);
+        TeamManagementScreen.e(125);
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -70,8 +70,8 @@ final class op extends qv {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof wi) {
-            param1 = param1 & ((wi) (param3)).field_y;
+          if (param3 instanceof TextButton) {
+            param1 = param1 & ((TextButton) (param3)).field_y;
           }
           if (!param1) {
             stackIn_13_0 = this.field_w;
@@ -162,7 +162,7 @@ final class op extends qv {
     }
 
     private op(int param0, int param1, int param2) {
-        this.field_r = nw.field_a;
+        this.field_r = IntrusiveDequeCursor.field_a;
         this.field_a = fj.field_b;
         this.field_s = param0;
         this.field_w = param2;

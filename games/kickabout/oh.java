@@ -8,7 +8,7 @@ final class oh {
     static double[][] field_a;
     static int field_f;
     private int field_e;
-    private ut field_c;
+    private Sprite field_c;
     static String field_h;
 
     final static boolean b(int param0) {
@@ -16,7 +16,7 @@ final class oh {
         if (param0 != -14954) {
           field_d = (dg) null;
         }
-        stackIn_6_0 = (op.field_y != null) && (jn.field_rb == un.field_c);
+        stackIn_6_0 = (op.field_y != null) && (RegistrationRequestDialog.field_rb == un.field_c);
         return stackIn_6_0;
     }
 
@@ -93,19 +93,19 @@ final class oh {
     final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        if (256 == hw.field_i) {
-          this.field_c.c(b.c(-62, this.field_b), go.a(this.field_e, (byte) -56));
+        if (256 == InstrumentNoteMask.field_i) {
+          this.field_c.c(MySquadScreen.c(-62, this.field_b), go.a(this.field_e, (byte) -56));
         } else {
-          var2 = this.field_c.field_o * hw.field_i >> 8;
-          var3 = hw.field_i * this.field_c.field_v >> 8;
-          this.field_c.a(b.c(-109, this.field_b), go.a(this.field_e, (byte) -56), var2, var3);
+          var2 = this.field_c.field_o * InstrumentNoteMask.field_i >> 8;
+          var3 = InstrumentNoteMask.field_i * this.field_c.field_v >> 8;
+          this.field_c.a(MySquadScreen.c(-109, this.field_b), go.a(this.field_e, (byte) -56), var2, var3);
         }
         if (param0 < 106) {
           field_a = (double[][]) null;
         }
     }
 
-    oh(ut param0, int param1, int param2) {
+    oh(Sprite param0, int param1, int param2) {
         try {
           this.field_b = param1;
           this.field_c = param0;

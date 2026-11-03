@@ -3,17 +3,17 @@
  */
 final class ag extends IntrusiveNode {
     static int field_h;
-    vm field_i;
+    PcmSampleStream field_i;
     static String field_l;
-    static rg field_f;
+    static MouseWheelInput field_f;
     static int field_e;
     int field_j;
     static int field_g;
     IntrusiveNode field_k;
 
-    final static hd a(int param0, int param1) {
-        hd var2 = new hd((long)param1, (hd) null);
-        var2.field_R = sp.a((byte) 26, param0);
+    final static UiLayoutNode a(int param0, int param1) {
+        UiLayoutNode var2 = new UiLayoutNode((long)param1, (UiLayoutNode) null);
+        var2.field_R = ShopPlayerSlot.a((byte) 26, param0);
         return var2;
     }
 
@@ -25,10 +25,10 @@ final class ag extends IntrusiveNode {
         }
     }
 
-    ag(vm param0, IntrusiveNode param1) {
+    ag(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_i = param0;
-          this.field_j = param0.m();
+          this.field_j = param0.getTargetVolume();
           this.field_k = param1;
           this.field_i.b(128 + mn.field_a * this.field_j >> 8);
         } catch (RuntimeException runtimeException) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class od extends sr {
-    static ut field_p;
+    static Sprite field_p;
     static boolean field_n;
     static String field_o;
 
@@ -24,8 +24,8 @@ final class od extends sr {
           if (param0 != 2) {
             field_n = false;
           }
-          var4_int = ((sp) (param1)).field_Gb;
-          var5 = ((sp) (param2)).field_Gb;
+          var4_int = ((ShopPlayerSlot) (param1)).field_Gb;
+          var5 = ((ShopPlayerSlot) (param2)).field_Gb;
           stackIn_3_0 = -var5 + var4_int ^ this.field_i << 31;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class od extends sr {
         StringBuilder stackIn_46_1 = null;
         String stackIn_47_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cn var4 = null;
+        CoverageBitmapFont var4 = null;
         RuntimeException var4_ref = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -128,53 +128,53 @@ final class od extends sr {
             var6[var9] = rn.field_c * var23[var9] + 4;
           }
           if (param3 != 14839) {
-            field_p = (ut) null;
+            field_p = (Sprite) null;
           }
           var7[var8Lifetime1] = 473 - var24[var8Lifetime1];
           var7[-var8Lifetime1 + 1] = -2 + var25[var8Lifetime1] - var6[-var8Lifetime1 + 1];
           for (var9Lifetime1 = 0; 2 > var9Lifetime1; var9Lifetime1++) {
-            on.a(-et.field_c + 644, var25[var9Lifetime1], et.field_c, var24[var9Lifetime1], 2, 0, param1);
-            on.a(643 - (et.field_c + rn.field_c + 2), var25[var9Lifetime1], rn.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
+            SoftwareRasterizer.a(-et.field_c + 644, var25[var9Lifetime1], et.field_c, var24[var9Lifetime1], 2, 0, param1);
+            SoftwareRasterizer.a(643 - (et.field_c + rn.field_c + 2), var25[var9Lifetime1], rn.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
             var10 = vt.field_c.field_X.score[var9Lifetime1];
             if (var10 > 99) {
               var10 = 99;
             }
-            ((hu) ((Object) var4)).d(Integer.toString(var10), -2 + (-rn.field_c + 644 - et.field_c + (rn.field_c >> 1)) + 1, (var24[var9Lifetime1] + rn.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
+            ((BitmapFont) ((Object) var4)).d(Integer.toString(var10), -2 + (-rn.field_c + 644 - et.field_c + (rn.field_c >> 1)) + 1, (var24[var9Lifetime1] + rn.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
             var11 = 0;
             for (var12 = 0; vt.field_c.playerCount > var12; var12++) {
               if (~var9Lifetime1 == ~vt.field_c.field_g[var12].field_p) {
                 var13 = 1 + (rb.field_yb + var11 * rn.field_c) + (var25[var9Lifetime1] + 2) + 3;
                 var14 = param0[var12];
-                var15 = ct.a(true, var14);
-                if (u.field_c &&
+                var15 = SingleChildContainer.a(true, var14);
+                if (JaggrabDownloader.field_c &&
                   644 - et.field_c < wt.field_x &&
                   wt.field_x < 640 &&
                   us.field_j > var13 - rn.field_c &&
                   us.field_j < var13) {
                   wa.a((byte) 52, vo.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{kn.field_G[var12], var14 + ""}));
                 }
-                stackIn_29_0 = (vt.field_c.participantStatus[var12].d(3511)) ? 16777215 : 11184810;
+                stackIn_29_0 = (vt.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;
-                ((hu) ((Object) var4)).a(kn.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
-                if (vt.field_c.participantStatus[var12].d(3511)) {
+                ((BitmapFont) ((Object) var4)).a(kn.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
+                if (vt.field_c.participantStatus[var12].isActive(3511)) {
                   if (vt.field_c.participantStatus[var12].offerDraw) {
-                    var17 = ((hu) ((Object) var4)).a(pj.field_A) + 12;
-                    pt.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
-                    on.a(642 - (et.field_c + (rn.field_c + var17)), var13 - rn.field_c + 3, var17 + 4, rn.field_c - 2, 6, 65793, param1);
-                    ((hu) ((Object) var4)).a(pj.field_A, 7 + (-et.field_c + 644 - rn.field_c - (2 + var17)), var13, 16777215, -1);
-                    ta.e(119);
+                    var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
+                    AuctionListing.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
+                    SoftwareRasterizer.a(642 - (et.field_c + (rn.field_c + var17)), var13 - rn.field_c + 3, var17 + 4, rn.field_c - 2, 6, 65793, param1);
+                    ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A, 7 + (-et.field_c + 644 - rn.field_c - (2 + var17)), var13, 16777215, -1);
+                    TeamManagementScreen.e(119);
                   }
                 } else {
                   var17 = 644 + (-et.field_c + 10);
-                  var18 = ((hu) ((Object) var4)).a(kn.field_G[var12]);
-                  on.b(var17, -2 + (var13 - rb.field_yb), var18 + var17, var13 - 1, 13382451);
-                  on.b(var17, -1 + var13, var17 + var18, -2 - rb.field_yb + var13, 13382451);
+                  var18 = ((BitmapFont) ((Object) var4)).a(kn.field_G[var12]);
+                  SoftwareRasterizer.b(var17, -2 + (var13 - rb.field_yb), var18 + var17, var13 - 1, 13382451);
+                  SoftwareRasterizer.b(var17, -1 + var13, var17 + var18, -2 - rb.field_yb + var13, 13382451);
                 }
                 var11++;
-                if (u.field_c) {
-                  on.a(629, var13 - 10, 6, 10, 0);
+                if (JaggrabDownloader.field_c) {
+                  SoftwareRasterizer.fillRect(629, var13 - 10, 6, 10, 0);
                   for (var17Lifetime1 = 0; var15 > var17Lifetime1; var17Lifetime1++) {
-                    on.f(630, var13 - var17Lifetime1 - 2, 4, am.field_i[var17Lifetime1]);
+                    SoftwareRasterizer.drawHorizontalLine(630, var13 - var17Lifetime1 - 2, 4, DualLinkNode.field_i[var17Lifetime1]);
                   }
                 }
               }

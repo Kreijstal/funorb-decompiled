@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr implements gj {
-    private hu field_h;
+final class cr implements WidgetPainter {
+    private BitmapFont field_h;
     private int field_a;
     static ff field_b;
     private int field_i;
@@ -31,7 +31,7 @@ final class cr implements gj {
         this.field_a = 1;
     }
 
-    cr(hu param0, int param1, int param2) {
+    cr(BitmapFont param0, int param1, int param2) {
         try {
           this.field_h = param0;
           this.field_a = param1;
@@ -61,7 +61,7 @@ final class cr implements gj {
         return false;
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -107,7 +107,7 @@ final class cr implements gj {
               var11 = var11 + (-var9 + param3.field_i >> 1);
             }
           }
-          ob.b(2, var8 + 4, 2 + var11, var9, var10 - 2);
+          RenderedBall.b(2, var8 + 4, 2 + var11, var9, var10 - 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

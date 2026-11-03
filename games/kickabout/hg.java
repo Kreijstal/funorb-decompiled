@@ -3,17 +3,17 @@
  */
 final class hg extends i {
     static String field_H;
-    static ut field_G;
+    static Sprite field_G;
     static int[] field_I;
     static String field_F;
 
     hg(int param0) {
         super(10);
-        String var6 = Integer.toString(ps.field_d[param0]);
+        String var6 = Integer.toString(LoginCredentials.field_d[param0]);
         String var2 = var6;
         String var3 = q.field_h[param0];
         String var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[10], new String[]{var6, var3});
-        ut var5 = kb.field_E[param0];
+        Sprite var5 = WriteIntegersCommand.field_E[param0];
         this.a(var4, this.field_t, var5, -110, this.field_u);
         this.a(ds.a(this.field_y, 1), pg.a(false, 10), 1054928844);
     }
@@ -34,10 +34,10 @@ final class hg extends i {
           if (param1 >= -120) {
             hg.h(96);
           }
-          var5 = (dl) (ru.field_M.g(24009));
+          var5 = (dl) (MidiPcmStream.field_M.g(24009));
           while (var5 != null) {
             pf.a(param0, var5, (byte) -114);
-            var5 = (dl) (ru.field_M.c(33));
+            var5 = (dl) (MidiPcmStream.field_M.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,15 +61,15 @@ final class hg extends i {
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          wd.field_l.a(cq.field_n, 31947, PacketBuffer.field_i, true);
+          wd.field_l.a(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
           var1_int = -43 % ((param0 + 39) / 43);
           wd.field_l.n(2);
           while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
             wd.field_l.a(il.field_c, (byte) -88, cc.field_e);
           }
-          if (kt.field_j != -1) {
-            var2 = kt.field_j;
-            qd.b(38, -1);
+          if (BlackFadeScreen.field_j != -1) {
+            var2 = BlackFadeScreen.field_j;
+            IndexedSpriteState.b(38, -1);
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
@@ -77,15 +77,15 @@ final class hg extends i {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (mj.field_a == nr.field_f) {
+          if (mj.field_a == PlayerModelPreview.field_f) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!lc.field_e.a((byte) -80)) {
+          if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (wk.field_f != nr.field_f) {
+          if (wk.field_f != PlayerModelPreview.field_f) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }
@@ -117,6 +117,6 @@ final class hg extends i {
         field_I = new int[8192];
         field_F = "total: <%0> ";
         field_H = "Class: ";
-        field_G = new ut(32, 64);
+        field_G = new Sprite(32, 64);
     }
 }

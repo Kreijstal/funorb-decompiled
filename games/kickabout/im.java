@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class im extends hd {
+abstract class im extends UiLayoutNode {
     static String field_Bb;
     static String field_zb;
     static int field_Ab;
@@ -32,11 +32,11 @@ abstract class im extends hd {
         java.awt.Canvas var1 = null;
         if (dr.field_a) {
           dr.field_a = false;
-          var1 = ln.l(param0 ^ 634588136);
+          var1 = DropTargetWidget.l(param0 ^ 634588136);
           oo.field_c.a((byte) 53, us.field_j, wt.field_x, (java.awt.Component) ((Object) var1));
           oo.field_c.a(-118, (java.awt.Component) ((Object) var1), true);
           n.field_m = us.field_j;
-          el.field_A = wt.field_x;
+          BytePlusOneCommand.field_A = wt.field_x;
         }
         if (param0 == 634588072) {
           return;
@@ -55,7 +55,7 @@ abstract class im extends hd {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 75 / ((66 - param0) / 50);
-          stackIn_1_0 = kt.a(param1, true, (byte) 125, param2);
+          stackIn_1_0 = BlackFadeScreen.a(param1, true, (byte) 125, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ abstract class im extends hd {
               }
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = qr.a(param0, var3, 3);
-              bv.a(0, var3.toString(), true, param0);
+              AccountNameAvailabilityValidator.openExternalUrl(0, var3.toString(), true, param0);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ abstract class im extends hd {
         }
     }
 
-    final static void a(int param0, int param1, int param2, ut param3) {
+    final static void a(int param0, int param1, int param2, Sprite param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -134,8 +134,8 @@ abstract class im extends hd {
           if (param0 != -12376) {
             field_Bb = (String) null;
           }
-          if (hw.field_i != 256) {
-            param3.a(param1, param2, hw.field_i * param3.field_o >> 8, hw.field_i * param3.field_v >> 8);
+          if (InstrumentNoteMask.field_i != 256) {
+            param3.a(param1, param2, InstrumentNoteMask.field_i * param3.field_o >> 8, InstrumentNoteMask.field_i * param3.field_v >> 8);
             return;
           }
           param3.c(param1, param2);

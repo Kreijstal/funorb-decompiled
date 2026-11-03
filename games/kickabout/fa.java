@@ -11,15 +11,15 @@ final class fa extends IntrusiveNode {
     static String[] field_g;
 
     final static void b(int param0) {
-        kd.field_s = false;
+        DebugConsole.field_s = false;
         if (dr.field_g != null) {
           dr.field_g.a(5075);
         }
         int var1 = -60 % ((-56 - param0) / 56);
-        if (0 != ov.field_b) {
+        if (0 != NodeHashTableIterator.field_b) {
           td.a(29);
         }
-        fb.field_I = 0;
+        NumericDateInputWidget.field_I = 0;
     }
 
     private fa() throws Throwable {
@@ -34,26 +34,26 @@ final class fa extends IntrusiveNode {
         int var1 = 81 % ((param0 + 6) / 41);
     }
 
-    final static ut[] a(int param0, byte param1, int param2, sj param3) {
+    final static Sprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        ut[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        ut[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -67) {
-            stackIn_2_0 = (ut[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (cu.a(param2, param3, param0, 122)) {
-            stackIn_7_0 = ub.i((byte) 78);
+            stackIn_7_0 = ModalPanel.i((byte) 78);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (ut[]) (stackIn_5_0);
+          return (Sprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

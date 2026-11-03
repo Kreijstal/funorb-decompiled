@@ -8,7 +8,7 @@ final class CommonGame {
     int phaseTime;
     int field_c;
     static String field_M;
-    tf field_E;
+    IntrusiveDeque field_E;
     private int field_U;
     boolean field_f;
     int timeLimit;
@@ -25,14 +25,14 @@ final class CommonGame {
     boolean field_h;
     boolean field_y;
     TeamSelectionAgent field_n;
-    up[][] field_b;
-    la[] field_B;
+    PlayerStats[][] field_b;
+    PlayArea[] field_B;
     FormationAgent field_C;
     boolean field_A;
     it[] field_g;
-    la[] field_x;
+    PlayArea[] field_x;
     boolean field_z;
-    private p field_ab;
+    private LoggedPossession field_ab;
     int winner;
     private boolean[] field_F;
     int surface;
@@ -92,7 +92,7 @@ final class CommonGame {
           }
           if (3 == this.phase) {
             this.field_o.b(param0, 4);
-            this.field_o.a(param0, false);
+            this.field_o.readState(param0, false);
           }
           if (this.phase == 4) {
             this.field_V.b(param0, 4);
@@ -123,18 +123,18 @@ final class CommonGame {
                 }
                 var4Lifetime1 = 0;
                 while (var4Lifetime1 < 5) {
-                  this.field_P[var3_int][var4Lifetime1].b(9, param0);
+                  this.field_P[var3_int][var4Lifetime1].readDeltaState(9, param0);
                   var4Lifetime1++;
                 }
                 var3_int++;
                 continue;
               }
               this.field_V.c(param0, 17);
-              this.field_X.a(param0, (byte) -65);
+              this.field_X.readState(param0, (byte) -65);
               this.aiTick = param0.l(8, 59);
               break;
             }
-            this.bigHeadMode = mu.a(param0, (byte) -39);
+            this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
           }
           param0.l((byte) 115);
           return;
@@ -152,7 +152,7 @@ final class CommonGame {
         }
     }
 
-    private final void b(byte param0, ki param1) {
+    private final void applyPlayingCommand(byte param0, PlayerInputEvent param1) {
         FootballerAgent stackIn_63_0 = null;
         boolean stackIn_64_1 = false;
         RuntimeException stackIn_69_0 = null;
@@ -175,15 +175,15 @@ final class CommonGame {
             this.timeLimit < this.phaseTime) {
             return;
           }
-          var3_int = param1.field_u;
+          var3_int = param1.participant;
           if (param0 <= 58) {
             this.a(95);
           }
-          var4 = param1.field_v & 255;
-          if (!this.participantStatus[var3_int].d(3511)) {
+          var4 = param1.value & 255;
+          if (!this.participantStatus[var3_int].isActive(3511)) {
             return;
           }
-          var5 = this.a((byte) 92, var3_int);
+          var5 = this.getControlledFootballer((byte) 92, var3_int);
           if (var4 >= 1 &&
             var4 <= 5 &&
             !this.field_h) {
@@ -191,12 +191,12 @@ final class CommonGame {
             this.participantStatus[var3_int].a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
           }
           if (0 == var4 &&
-            !this.field_A && (var5.field_N.c(var5.member, -73) ||
-            !this.c(var3_int, -32)) && (0 == var5.field_C &&
+            !this.field_A && (var5.stats.c(var5.member, -73) ||
+            !this.c(var3_int, -32)) && (0 == var5.dashCooldown &&
             0 == var5.action)) {
             var5.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
-            var5.a((byte) -31, 4);
-            var5.field_C = var5.a((byte) -99);
+            var5.setAction((byte) -31, 4);
+            var5.dashCooldown = var5.dashCooldown((byte) -99);
           }
           if (var4 != 6 ||
             this.field_y) {
@@ -209,11 +209,11 @@ final class CommonGame {
           }
           if (var5.action == 0 &&
             this.c(var3_int, -126)) {
-            var5.a((byte) -31, 1);
+            var5.setAction((byte) -31, 1);
             stackIn_63_0 = var5;
             stackIn_64_1 = (var4 == 7);
             stackIn_63_0.field_O = stackIn_64_1;
-            var5.field_L = var5.c((byte) -99);
+            var5.actionTime = var5.chargeKickDuration((byte) -99);
             var5.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
           }
           return;
@@ -231,7 +231,7 @@ final class CommonGame {
         }
     }
 
-    final int c(int param0) {
+    final int computeChecksum(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -254,14 +254,14 @@ final class CommonGame {
                 }
                 var4 = stackIn_16_0;
                 while (var4 < 5) {
-                  var2_int = var2_int ^ this.field_P[var3][var4].b((byte) -65);
+                  var2_int = var2_int ^ this.field_P[var3][var4].computeChecksum((byte) -65);
                   var4++;
                 }
                 var3++;
                 continue;
               }
-              var2_int = var2_int ^ this.field_X.c(0);
-              stackIn_16_0 = var2_int ^ this.field_V.d(121);
+              var2_int = var2_int ^ this.field_X.computeChecksum(0);
+              stackIn_16_0 = var2_int ^ this.field_V.computeChecksum(121);
               break;
             }
             var2_int = stackIn_16_0;
@@ -286,7 +286,7 @@ final class CommonGame {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        up var11 = null;
+        PlayerStats var11 = null;
         int var12 = 0;
         int var13 = 0;
         var13 = Kickabout.field_G;
@@ -312,7 +312,7 @@ final class CommonGame {
               stackIn_37_0 = param3;
               if (var13 == 0) {
                 if (stackIn_37_0 == this.field_i[var10][var9]) {
-                  var11 = this.field_P[var10][1 + var9].field_N;
+                  var11 = this.field_P[var10][1 + var9].stats;
                   var12 = this.field_P[var10][var9 + 1].member ? 1 : 0;
                   if (var11.a(true, param0, var12 != 0)) {
                     return true;
@@ -355,7 +355,7 @@ final class CommonGame {
             stackIn_16_1 = param1;
             if (var5 == 0) {
               if (stackIn_16_0 == stackIn_16_1 &&
-                this.participantStatus[var3_int].d(3511)) {
+                this.participantStatus[var3_int].isActive(3511)) {
                 stackIn_13_0 = var3_int;
                 return stackIn_13_0;
               }
@@ -378,7 +378,7 @@ final class CommonGame {
         }
     }
 
-    private final void a(int param0, ki param1) {
+    private final void applyTeamSelectionCommand(int param0, PlayerInputEvent param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -388,14 +388,14 @@ final class CommonGame {
           if (0 != this.phase) {
             return;
           }
-          if (!this.participantStatus[param1.field_u].d(param0 + 3510)) {
+          if (!this.participantStatus[param1.participant].isActive(param0 + 3510)) {
             return;
           }
           if (param0 != 1) {
             CommonGame.b(false);
           }
-          this.field_n.a(param1.field_u, 11678, param1.field_v);
-          this.field_n.a((MatchAgent) (this.field_g[param1.field_u]), (byte) 84);
+          this.field_n.applyCommand(param1.participant, 11678, param1.value);
+          this.field_n.a((MatchAgent) (this.field_g[param1.participant]), (byte) 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -411,7 +411,7 @@ final class CommonGame {
         }
     }
 
-    private final void b(int param0) {
+    private final void stepMatch(int param0) {
         int fieldTemp$0 = 0;
         LoggedPlayer dupTemp$1 = null;
         LoggedPlayer dupTemp$2 = null;
@@ -525,7 +525,7 @@ final class CommonGame {
           if (param0 != 11660) {
             field_D = (String) null;
           }
-          vl.a(this, (byte) -41);
+          vl.computeCameraFocus(this, (byte) -41);
           var2_int = 0;
           while (true) {
             stackIn_17_0 = -3;
@@ -536,16 +536,16 @@ final class CommonGame {
                 var3 = stackIn_61_0;
                 while (var3 < 5) {
                   var4_ref_nl = this.field_P[var2_int][var3];
-                  stackIn_17_0 = this.field_V.field_m;
+                  stackIn_17_0 = this.field_V.possessorTeam;
                   stackIn_17_1 = var2_int;
                   if (stackIn_17_0 == stackIn_17_1 &&
-                    ~var3 == ~this.field_V.field_s) {
+                    ~var3 == ~this.field_V.possessorSlot) {
                     stackIn_29_0 = 1;
                   } else {
                     stackIn_29_0 = 0;
                   }
                   var5_int = stackIn_29_0;
-                  var6 = this.a((byte) 6, var2_int, var3);
+                  var6 = this.findControllingParticipant((byte) 6, var2_int, var3);
                   if (-1 != var6 &&
                     this.participantStatus[var6].megamode) {
                     stackIn_36_0 = 1;
@@ -554,7 +554,7 @@ final class CommonGame {
                   }
                   boolean decompiledFrameRemainder0 = true;
                   var7 = stackIn_36_0;
-                  var4_ref_nl.a(2, this.field_x, var7 != 0, var5_int != 0);
+                  var4_ref_nl.stepMovement(2, this.field_x, var7 != 0, var5_int != 0);
                   if ((var2_int != 0 ||
                     !this.disableLocal) && (1 != var2_int ||
                     !this.disableOpponent)) {
@@ -566,10 +566,10 @@ final class CommonGame {
                   }
                   var8_int = stackIn_49_0;
                   if (var3 == 0) {
-                    hv.a(true, this, var2_int);
+                    hv.updateKeeperAI(true, this, var2_int);
                   } else {
                     if (var8_int == 0) {
-                      jt.a(this, (byte) -127, var3, var2_int);
+                      PitchOptionTile.updateOutfielderAI(this, (byte) -127, var3, var2_int);
                     }
                   }
                   var3++;
@@ -578,13 +578,13 @@ final class CommonGame {
                 continue;
               }
             } else {
-              this.field_V.a((byte) -97, this.surface, this.field_B);
-              this.field_X.a(this.field_V, -123);
+              this.field_V.stepPhysics((byte) -97, this.surface, this.field_B);
+              this.field_X.detectGoal(this.field_V, -123);
               stackIn_61_0 = -41;
             }
             if (stackIn_61_0 == ~this.field_X.goalCount) {
               this.field_X.score[this.field_X.goalScorer] = this.field_X.score[this.field_X.goalScorer] + 1;
-              this.field_V.field_m = -1;
+              this.field_V.possessorTeam = -1;
               this.field_V.uncatchable = 205;
               this.field_P[-this.field_X.goalScorer + 1][0].field_o = 0;
               this.a(param0 ^ 11662);
@@ -594,7 +594,7 @@ final class CommonGame {
             regionExit1: {
               boolean decompiledFrameCompleted5 = true;
               if (this.field_X.goalCount >= 245) {
-                this.a(-this.field_X.goalScorer + 1, 0);
+                this.placeKickoffPositions(-this.field_X.goalScorer + 1, 0);
                 this.field_X.goalCount = 0;
                 var2_int = 0;
                 while (!(var2_int >= this.field_X.score.length)) {
@@ -637,18 +637,18 @@ final class CommonGame {
                     stackIn_77_1Lifetime1Lifetime1 = 2;
                     boolean decompiledFrameRemainder3 = true;
                     if (stackIn_77_0Lifetime1Lifetime1 == stackIn_77_1Lifetime1Lifetime1 &&
-                      var4_ref_nlLifetime1.field_L == 20 &&
-                      ~var2_int == ~this.field_V.field_m &&
-                      ~var3Lifetime1 == ~this.field_V.field_s) {
+                      var4_ref_nlLifetime1.actionTime == 20 &&
+                      ~var2_int == ~this.field_V.possessorTeam &&
+                      ~var3Lifetime1 == ~this.field_V.possessorSlot) {
                       if (var4_ref_nlLifetime1.field_z < 0) {
-                        this.b(-var4_ref_nlLifetime1.field_z, (byte) -72);
+                        this.passToTeammate(-var4_ref_nlLifetime1.field_z, (byte) -72);
                       } else {
                         var5_intLifetime1 = var4_ref_nlLifetime1.a(var4_ref_nlLifetime1.field_z, (byte) -68);
-                        this.a(var5_intLifetime1, var4_ref_nlLifetime1.field_O, var4_ref_nlLifetime1.field_N.c(var4_ref_nlLifetime1.member, (byte) -62), var4_ref_nlLifetime1.field_x, (byte) -66, var4_ref_nlLifetime1.field_P);
+                        this.kickBall(var5_intLifetime1, var4_ref_nlLifetime1.field_O, var4_ref_nlLifetime1.stats.c(var4_ref_nlLifetime1.member, (byte) -62), var4_ref_nlLifetime1.field_x, (byte) -66, var4_ref_nlLifetime1.field_P);
                         this.field_V.a((MatchAgent) (var4_ref_nlLifetime1), (byte) 84);
                         var6_ref_nl = this.field_P[-var2_int + 1][0];
                         this.field_N.a(this, 32, this.phaseTime, var2_int, var4_ref_nlLifetime1, var5_intLifetime1, var6_ref_nl, this.field_V.field_o, var3Lifetime1);
-                        var7Lifetime1 = this.a((byte) 6, var2_int, var3Lifetime1);
+                        var7Lifetime1 = this.findControllingParticipant((byte) 6, var2_int, var3Lifetime1);
                         if (var7Lifetime1 != -1) {
                           if (!var4_ref_nlLifetime1.field_O) {
                             if (var5_intLifetime1 < 128) {
@@ -669,9 +669,9 @@ final class CommonGame {
                     }
                     boolean decompiledFrameRemainder2 = true;
                     if (0 != var4_ref_nlLifetime1.action &&
-                      var4_ref_nlLifetime1.field_L <= 0) {
-                      if (var2_int == this.field_V.field_m &&
-                        ~var3Lifetime1 == ~this.field_V.field_s) {
+                      var4_ref_nlLifetime1.actionTime <= 0) {
+                      if (var2_int == this.field_V.possessorTeam &&
+                        ~var3Lifetime1 == ~this.field_V.possessorSlot) {
                         stackIn_126_0 = 1;
                       } else {
                         stackIn_126_0 = 0;
@@ -679,39 +679,39 @@ final class CommonGame {
                       var5_intLifetime1Lifetime1 = stackIn_126_0;
                       if (var4_ref_nlLifetime1.action != 2) {
                         if (var4_ref_nlLifetime1.action == 1) {
-                          var4_ref_nlLifetime1.field_L = var4_ref_nlLifetime1.c((byte) -99);
+                          var4_ref_nlLifetime1.actionTime = var4_ref_nlLifetime1.chargeKickDuration((byte) -99);
                         } else {
                           if (var4_ref_nlLifetime1.action == 5) {
-                            var4_ref_nlLifetime1.a((byte) -31, 6);
+                            var4_ref_nlLifetime1.setAction((byte) -31, 6);
                           } else {
                             if (7 == var4_ref_nlLifetime1.action) {
-                              var4_ref_nlLifetime1.a((byte) -31, 8);
+                              var4_ref_nlLifetime1.setAction((byte) -31, 8);
                             } else {
                               if (var4_ref_nlLifetime1.action == 8) {
-                                var4_ref_nlLifetime1.a((byte) -31, 9);
+                                var4_ref_nlLifetime1.setAction((byte) -31, 9);
                               } else {
                                 if (var4_ref_nlLifetime1.action != 3 ||
                                   var5_intLifetime1Lifetime1 != 0) {
                                   if (var4_ref_nlLifetime1.action != 12) {
                                     if (var4_ref_nlLifetime1.action != 13 ||
-                                      0 != var4_ref_nlLifetime1.field_v) {
+                                      0 != var4_ref_nlLifetime1.height) {
                                       if (var4_ref_nlLifetime1.action == 14) {
-                                        var4_ref_nlLifetime1.field_L = 1;
+                                        var4_ref_nlLifetime1.actionTime = 1;
                                       } else {
-                                        var4_ref_nlLifetime1.a((byte) -31, 0);
+                                        var4_ref_nlLifetime1.setAction((byte) -31, 0);
                                       }
                                     } else {
-                                      var4_ref_nlLifetime1.a((byte) -31, 10);
+                                      var4_ref_nlLifetime1.setAction((byte) -31, 10);
                                     }
                                   } else {
-                                    var4_ref_nlLifetime1.a((byte) -31, 10);
+                                    var4_ref_nlLifetime1.setAction((byte) -31, 10);
                                     if ((var5_intLifetime1Lifetime1 == 0)) {
-                                      var4_ref_nlLifetime1.field_L = var4_ref_nlLifetime1.field_L + 60;
+                                      var4_ref_nlLifetime1.actionTime = var4_ref_nlLifetime1.actionTime + 60;
                                     }
                                   }
                                 } else {
-                                  var4_ref_nlLifetime1.a((byte) -31, 10);
-                                  var4_ref_nlLifetime1.field_L = var4_ref_nlLifetime1.field_L + 20;
+                                  var4_ref_nlLifetime1.setAction((byte) -31, 10);
+                                  var4_ref_nlLifetime1.actionTime = var4_ref_nlLifetime1.actionTime + 20;
                                 }
                               }
                             }
@@ -720,7 +720,7 @@ final class CommonGame {
                         decompiledFrameRemainder2 = false;
                       }
                       else {
-                        var4_ref_nlLifetime1.a((byte) -31, 0);
+                        var4_ref_nlLifetime1.setAction((byte) -31, 0);
                       }
                     }
                     var3Lifetime1++;
@@ -736,10 +736,10 @@ final class CommonGame {
             var2_int = stackIn_192_0;
             while (this.playerCount > var2_int) {
               if (var14 == 0) {
-                if (this.participantStatus[var2_int].d(3511) &&
+                if (this.participantStatus[var2_int].isActive(3511) &&
                   this.participantStatus[var2_int].field_p != 0 &&
                   !this.c(var2_int, -125)) {
-                  this.a(73, this.participantStatus[var2_int], this.participantStatus[var2_int].field_p, var2_int);
+                  this.switchControlledFootballer(73, this.participantStatus[var2_int], this.participantStatus[var2_int].field_p, var2_int);
                   this.participantStatus[var2_int].field_p = 0;
                 }
                 var2_int++;
@@ -753,17 +753,17 @@ final class CommonGame {
               boolean decompiledFrameCompleted2 = true;
               boolean decompiledFrameCompleted3 = true;
               regionExit3: {
-                var2 = this.b((byte) -96);
+                var2 = this.getBallCarrier((byte) -96);
                 if (var2 != null) {
-                  this.field_V.field_p = var2.field_w;
-                  this.field_V.field_v = var2.field_v;
-                  this.field_V.field_t = var2.field_M;
+                  this.field_V.positionY = var2.positionY;
+                  this.field_V.height = var2.height;
+                  this.field_V.positionX = var2.positionX;
                   if (var14 == 0) {
                     break regionExit3;
                   }
                 }
-                if (this.field_V.g(param0 ^ -11752)) {
-                  var3Lifetime2 = this.field_V.e(10);
+                if (this.field_V.canBeCaught(param0 ^ -11752)) {
+                  var3Lifetime2 = this.field_V.horizontalSpeedSquared(10);
                   var4 = 0;
                   while (true) {
                     stackIn_217_0 = 2;
@@ -793,15 +793,15 @@ final class CommonGame {
                         var6_ref_nlLifetime1.action != 7 &&
                         var6_ref_nlLifetime1.action != 8 &&
                         var6_ref_nlLifetime1.action != 9) {
-                        var8_intLifetime1 = var6_ref_nlLifetime1.f(-127) - this.field_V.a(true);
-                        var9 = var6_ref_nlLifetime1.a(true) - this.field_V.c(879306160);
+                        var8_intLifetime1 = var6_ref_nlLifetime1.pixelX(-127) - this.field_V.pixelX(true);
+                        var9 = var6_ref_nlLifetime1.pixelY(true) - this.field_V.pixelY(879306160);
                         if (var9 * var9 + var8_intLifetime1 * var8_intLifetime1 < 1600) {
                           this.field_V.a((MatchAgent) (var6_ref_nlLifetime1), (byte) 84);
-                          this.field_V.field_s = var5_intLifetime2;
+                          this.field_V.possessorSlot = var5_intLifetime2;
                           this.field_V.field_i = 0;
-                          this.field_V.field_m = var4;
+                          this.field_V.possessorTeam = var4;
                           if (0 != var5_intLifetime2) {
-                            this.a(-115, this.field_V, var5_intLifetime2, this.b((byte) 107, var4));
+                            this.switchControlledFootballer(-115, this.field_V, var5_intLifetime2, this.b((byte) 107, var4));
                           }
                         }
                       }
@@ -821,12 +821,12 @@ final class CommonGame {
                     if (var14 == 0) {
                       if (stackIn_294_0 != stackIn_294_1 &&
                         var4_ref_nlLifetime2.action != 3) {
-                        var5_intLifetime2Lifetime1 = this.field_V.a(true) - var4_ref_nlLifetime2.f(-102);
-                        var6Lifetime1 = this.field_V.c(879306160) - var4_ref_nlLifetime2.a(true);
+                        var5_intLifetime2Lifetime1 = this.field_V.pixelX(true) - var4_ref_nlLifetime2.pixelX(-102);
+                        var6Lifetime1 = this.field_V.pixelY(879306160) - var4_ref_nlLifetime2.pixelY(true);
                         var7Lifetime2 = var6Lifetime1 * var6Lifetime1 + var5_intLifetime2Lifetime1 * var5_intLifetime2Lifetime1;
                         if (var7Lifetime2 < 784) {
                           var8_intLifetime1 = uv.b(var6Lifetime1, var5_intLifetime2Lifetime1, (byte) 2);
-                          var9Lifetime2 = 511 & 693 * var4_ref_nlLifetime2.f(-99);
+                          var9Lifetime2 = 511 & 693 * var4_ref_nlLifetime2.pixelX(-99);
                           if (256 > var9Lifetime2) {
                             var9Lifetime2 -= 512;
                           }
@@ -834,18 +834,18 @@ final class CommonGame {
                           if (var4_ref_nlLifetime2.action == 5) {
                             stackIn_278_0 = (var3Lifetime2 == 0) ? 1024 : -1024;
                             var10 = stackIn_278_0;
-                            if ((var4_ref_nlLifetime2.field_G & 2) != 0) {
+                            if ((var4_ref_nlLifetime2.directionMask & 2) != 0) {
                               var8_intLifetime1 = 8191 & -var10 + (8192 + var8_intLifetime1);
                             }
-                            if (0 != (var4_ref_nlLifetime2.field_G & 8)) {
+                            if (0 != (var4_ref_nlLifetime2.directionMask & 8)) {
                               var8_intLifetime1 = 8191 & var10 + var8_intLifetime1 + 8192;
                             }
                           }
                           this.field_V.a((MatchAgent) (var4_ref_nlLifetime2), (byte) 84);
-                          var10Lifetime2 = pc.a(this.field_V.e(3), -524289) >> 8;
-                          this.field_V.field_q = (we.a(var8_intLifetime1, false) >> 8) * var10Lifetime2;
-                          this.field_V.field_h = var10Lifetime2 * (ei.a(var8_intLifetime1, (byte) -23) >> 8);
-                          this.field_V.a((byte) -78, this.surface, this.field_B);
+                          var10Lifetime2 = pc.a(this.field_V.horizontalSpeedSquared(3), -524289) >> 8;
+                          this.field_V.velocityX = (we.a(var8_intLifetime1, false) >> 8) * var10Lifetime2;
+                          this.field_V.velocityY = var10Lifetime2 * (ei.a(var8_intLifetime1, (byte) -23) >> 8);
+                          this.field_V.stepPhysics((byte) -78, this.surface, this.field_B);
                           if (var4_ref_nlLifetime2.field_o < 15) {
                             var4_ref_nlLifetime2.field_o = var4_ref_nlLifetime2.field_o + 1;
                           }
@@ -892,32 +892,32 @@ final class CommonGame {
                       if (stackIn_294_0Lifetime1Lifetime1 == stackIn_294_1Lifetime1Lifetime1 ||
                         var5.action == 13 ||
                         var14 != 0) {
-                        if (this.field_V.field_m == -1 &&
-                          Math.abs(-var5.field_v + this.field_V.field_v) >> 16 < 30 &&
+                        if (this.field_V.possessorTeam == -1 &&
+                          Math.abs(-var5.height + this.field_V.height) >> 16 < 30 &&
                           this.field_V.uncatchable == 0) {
-                          var6Lifetime1Lifetime1 = var5.f(param0 - 11776) - this.field_V.a(true);
-                          var7Lifetime2Lifetime1 = var5.a(true) - this.field_V.c(879306160);
+                          var6Lifetime1Lifetime1 = var5.pixelX(param0 - 11776) - this.field_V.pixelX(true);
+                          var7Lifetime2Lifetime1 = var5.pixelY(true) - this.field_V.pixelY(879306160);
                           var8_intLifetime1Lifetime1 = var7Lifetime2Lifetime1 * var7Lifetime2Lifetime1 + var6Lifetime1Lifetime1 * var6Lifetime1Lifetime1;
                           if (var8_intLifetime1Lifetime1 < 1600) {
                             this.field_V.a((MatchAgent) (var5), (byte) 84);
-                            var9Lifetime1 = (4 * var5.field_N.d(var5.member, 0) << 16) / 100 + 524288;
-                            var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, pc.a(this.field_V.e(-127), -524289)));
+                            var9Lifetime1 = (4 * var5.stats.d(var5.member, 0) << 16) / 100 + 524288;
+                            var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, pc.a(this.field_V.horizontalSpeedSquared(-127), -524289)));
                             this.field_V.uncatchable = 5;
-                            this.field_V.field_h = (int)((long)var5.field_m * var10_long / (long)var5.field_q);
-                            this.field_V.field_q = (int)(var10_long * (long)var5.field_k / (long)var5.field_q);
+                            this.field_V.velocityY = (int)((long)var5.field_m * var10_long / (long)var5.field_q);
+                            this.field_V.velocityX = (int)(var10_long * (long)var5.field_k / (long)var5.field_q);
                             var12 = 0;
                             while (true) {
                               if (var12 < this.playerCount) {
                                 stackIn_332_0 = this.field_g[var12].field_p;
                                 stackIn_332_1 = var3Lifetime2Lifetime1;
                                 if (stackIn_332_0 == stackIn_332_1 &&
-                                  ~this.participantStatus[var12].field_g == ~var4Lifetime1) {
+                                  ~this.participantStatus[var12].controlledSlot == ~var4Lifetime1) {
                                   this.field_V.field_j = var12;
                                 }
                                 var12++;
                                 continue;
                               }
-                              var12 = this.a((byte) 6, var3Lifetime2Lifetime1, var4Lifetime1);
+                              var12 = this.findControllingParticipant((byte) 6, var3Lifetime2Lifetime1, var4Lifetime1);
                               stackIn_332_0Lifetime1 = 13;
                               stackIn_332_1Lifetime1 = var5.action;
                               if (stackIn_332_0Lifetime1 == stackIn_332_1Lifetime1 &&
@@ -949,15 +949,15 @@ final class CommonGame {
                                 stackIn_356_6 = 3;
                               }
                               ((LoggedGoal) (Object) stackIn_355_0).a((byte) stackIn_355_1, stackIn_355_2, stackIn_355_3, stackIn_355_4, stackIn_355_5, stackIn_356_6, var3Lifetime2Lifetime1, this, var5);
-                              if (var5.field_F == -1) {
+                              if (var5.controllingParticipant == -1) {
                                 break;
                               }
                               if (var5.action == 13) {
-                                dupTemp$4 = this.field_q[var5.field_F];
+                                dupTemp$4 = this.field_q[var5.controllingParticipant];
                                 dupTemp$4.headers = dupTemp$4.headers + 1;
                                 break;
                               }
-                              dupTemp$5 = this.field_q[var5.field_F];
+                              dupTemp$5 = this.field_q[var5.controllingParticipant];
                               dupTemp$5.crosses = dupTemp$5.crosses + 1;
                               break;
                             }
@@ -984,42 +984,42 @@ final class CommonGame {
                                 if ((0 == var4Lifetime1 || (var3Lifetime2Lifetime1 != var6Lifetime1Lifetime1 ||
                                   !this.field_F[var6Lifetime1Lifetime1] ||
                                   var14 != 0)) && (0 == var4Lifetime1 || (var3Lifetime2Lifetime1 != var6Lifetime1Lifetime1 ||
-                                  var5.field_N.b(false, var5.member))) && (0 == var4Lifetime1 || (var6Lifetime1Lifetime1 != var3Lifetime2Lifetime1 ||
-                                  !var8.field_N.b(var8.member, (byte) -111)))) {
-                                  var9Lifetime1Lifetime1 = var5.f(-122) - var8.f(-94);
-                                  var10Lifetime1 = var5.a(true) - var8.a(true);
+                                  var5.stats.b(false, var5.member))) && (0 == var4Lifetime1 || (var6Lifetime1Lifetime1 != var3Lifetime2Lifetime1 ||
+                                  !var8.stats.b(var8.member, (byte) -111)))) {
+                                  var9Lifetime1Lifetime1 = var5.pixelX(-122) - var8.pixelX(-94);
+                                  var10Lifetime1 = var5.pixelY(true) - var8.pixelY(true);
                                   if (var9Lifetime1Lifetime1 * var9Lifetime1Lifetime1 + var10Lifetime1 * var10Lifetime1 < 1600 &&
                                     4 != var8.archetype) {
-                                    var8.a((byte) -31, 7);
-                                    var8.field_L = var8.field_L + var5.field_N.a(var5.member, false);
+                                    var8.setAction((byte) -31, 7);
+                                    var8.actionTime = var8.actionTime + var5.stats.a(var5.member, false);
                                     var8.a((MatchAgent) (var5), (byte) 84);
                                     if (var4Lifetime1 != 0) {
-                                      var11 = var5.field_L;
-                                      var5.a((byte) -31, 12);
-                                      var5.field_L = var11;
+                                      var11 = var5.actionTime;
+                                      var5.setAction((byte) -31, 12);
+                                      var5.actionTime = var11;
                                     }
-                                    var11Lifetime1 = this.a((byte) 6, var6Lifetime1Lifetime1, var7Lifetime2Lifetime1);
+                                    var11Lifetime1 = this.findControllingParticipant((byte) 6, var6Lifetime1Lifetime1, var7Lifetime2Lifetime1);
                                     if (var11Lifetime1 != -1) {
                                       dupTemp$6 = this.field_q[var11Lifetime1];
                                       dupTemp$6.field_a = dupTemp$6.field_a + 1;
                                     }
-                                    if (~var6Lifetime1Lifetime1 != ~this.field_V.field_m ||
-                                      this.field_V.field_s != var7Lifetime2Lifetime1) {
-                                      if ((-1 != var5.field_F)) {
-                                        dupTemp$7 = this.field_q[var5.field_F];
+                                    if (~var6Lifetime1Lifetime1 != ~this.field_V.possessorTeam ||
+                                      this.field_V.possessorSlot != var7Lifetime2Lifetime1) {
+                                      if ((-1 != var5.controllingParticipant)) {
+                                        dupTemp$7 = this.field_q[var5.controllingParticipant];
                                         dupTemp$7.field_c = dupTemp$7.field_c + 1;
                                       }
                                       decompiledFrameRemainder1 = false;
                                     }
                                     else {
-                                      this.field_V.field_s = var4Lifetime1;
-                                      this.field_V.field_m = var3Lifetime2Lifetime1;
-                                      if (this.field_V.field_s != 0 &&
-                                        this.a((byte) 6, var3Lifetime2Lifetime1, var4Lifetime1) == -1) {
-                                        this.a(-127, this.field_V, var4Lifetime1, this.b((byte) 49, var3Lifetime2Lifetime1));
+                                      this.field_V.possessorSlot = var4Lifetime1;
+                                      this.field_V.possessorTeam = var3Lifetime2Lifetime1;
+                                      if (this.field_V.possessorSlot != 0 &&
+                                        this.findControllingParticipant((byte) 6, var3Lifetime2Lifetime1, var4Lifetime1) == -1) {
+                                        this.switchControlledFootballer(-127, this.field_V, var4Lifetime1, this.b((byte) 49, var3Lifetime2Lifetime1));
                                       }
-                                      if (var5.field_F != -1) {
-                                        dupTemp$8 = this.field_q[var5.field_F];
+                                      if (var5.controllingParticipant != -1) {
+                                        dupTemp$8 = this.field_q[var5.controllingParticipant];
                                         dupTemp$8.field_m = dupTemp$8.field_m + 1;
                                       }
                                     }
@@ -1044,15 +1044,15 @@ final class CommonGame {
               (decompiledFrameCompleted0)) {
               stackIn_442_0 = 0;
             }
-            if (stackIn_442_0 != ~this.field_V.field_m &&
-              this.field_V.field_s != -1) {
+            if (stackIn_442_0 != ~this.field_V.possessorTeam &&
+              this.field_V.possessorSlot != -1) {
             }
-            if (null != this.b((byte) -96) &&
-              this.a((byte) 6, this.field_V.field_m, this.field_V.field_s) != -1) {
-              this.field_V.field_o = this.a((byte) 6, this.field_V.field_m, this.field_V.field_s);
+            if (null != this.getBallCarrier((byte) -96) &&
+              this.findControllingParticipant((byte) 6, this.field_V.possessorTeam, this.field_V.possessorSlot) != -1) {
+              this.field_V.field_o = this.findControllingParticipant((byte) 6, this.field_V.possessorTeam, this.field_V.possessorSlot);
             }
             if (this.field_ab != null) {
-              this.field_ab.a(-27626, this);
+              this.field_ab.recordTick(-27626, this);
             }
             return;
           }
@@ -1063,7 +1063,7 @@ final class CommonGame {
         }
     }
 
-    final void a(CommonGame param0, byte param1) {
+    final void copyStateFrom(CommonGame param0, byte param1) {
         int stackIn_21_0 = 0;
         int stackIn_65_0 = 0;
         RuntimeException stackIn_79_0 = null;
@@ -1096,7 +1096,7 @@ final class CommonGame {
               while (var4 < 4) {
                 this.field_i[var3_int][var4] = param0.field_i[var3_int][var4];
                 this.field_k[var3_int][var4] = param0.field_k[var3_int][var4];
-                this.field_b[var3_int][var4].a((byte) -89, param0.field_b[var3_int][var4]);
+                this.field_b[var3_int][var4].copyFrom((byte) -89, param0.field_b[var3_int][var4]);
                 var4++;
               }
               this.field_r[var3_int] = param0.field_r[var3_int];
@@ -1113,7 +1113,7 @@ final class CommonGame {
             break;
           }
           if (stackIn_21_0 != param0.phase) {
-            this.a(param0.phase, (byte) -125);
+            this.enterPhase(param0.phase, (byte) -125);
           }
           this.phaseTime = param0.phaseTime;
           var3_int = 0;
@@ -1163,7 +1163,7 @@ final class CommonGame {
           }
           if (decompiledFrameCompleted1) {
             if (this.field_N != null) {
-              this.field_N.a(-4, param0.field_N);
+              this.field_N.copyFrom(-4, param0.field_N);
             }
             decompiledFrameRemainder0 = (this.field_q != null);
             if (decompiledFrameRemainder0) {
@@ -1173,7 +1173,7 @@ final class CommonGame {
           if (decompiledFrameRemainder0) {
             var3_int = stackIn_65_0;
             while (this.field_q.length > var3_int) {
-              this.field_q[var3_int].a(true, param0.field_q[var3_int]);
+              this.field_q[var3_int].copyFrom(true, param0.field_q[var3_int]);
               var3_int++;
               if (var5 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1185,7 +1185,7 @@ final class CommonGame {
             (this.field_ab == null)) {
             return;
           }
-          this.field_ab.a(120, param0.field_ab);
+          this.field_ab.copyFrom(120, param0.field_ab);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1211,7 +1211,7 @@ final class CommonGame {
         var4 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            nw.field_b.participantStatus[ek.field_G].d(3511)) {
+            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
             var1 = af.field_a;
             var2 = 0;
             if (param0) {
@@ -1257,8 +1257,8 @@ final class CommonGame {
         int var9Lifetime1;
         var12 = Kickabout.field_G;
         try {
-          var3_int = param0.field_M;
-          var4 = param0.field_w;
+          var3_int = param0.positionX;
+          var4 = param0.positionY;
           var5 = new BallAgent();
           var5.a(this.field_V, false);
           var8 = -3 / ((param1 + 30) / 33);
@@ -1267,18 +1267,18 @@ final class CommonGame {
           var7Lifetime1 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var7Lifetime1 < param0.field_L) {
+            if (var7Lifetime1 < param0.actionTime) {
               var3_int = var3_int + param0.field_k;
               var4 = var4 + param0.field_m;
-              var5.a((byte) -85, this.surface, this.field_B);
+              var5.stepPhysics((byte) -85, this.surface, this.field_B);
               stackIn_12_0 = var7Lifetime1;
               stackIn_12_1 = 10;
               if (var12 != 0) {
                 break scanLoop1;
               }
               if (stackIn_12_0 > stackIn_12_1) {
-                var9 = -var3_int + var5.field_t >> 16;
-                var10 = var5.field_p - var4 >> 16;
+                var9 = -var3_int + var5.positionX >> 16;
+                var10 = var5.positionY - var4 >> 16;
                 var11 = var9 * var9 + var10 * var10;
                 decompiledFrameRemainder0 = !(var6 <= var11);
                 if (decompiledFrameRemainder0) {
@@ -1296,19 +1296,19 @@ final class CommonGame {
           }
           if (stackIn_12_0 < stackIn_12_1 &&
             var7Lifetime1 > 1) {
-            param0.field_B = (-param0.field_w + var5.field_p) / var7Lifetime1;
-            param0.field_L = var7Lifetime1 + 1;
-            param0.field_r = (var5.field_t - param0.field_M) / var7Lifetime1;
+            param0.field_B = (-param0.positionY + var5.positionY) / var7Lifetime1;
+            param0.actionTime = var7Lifetime1 + 1;
+            param0.field_r = (var5.positionX - param0.positionX) / var7Lifetime1;
             param0.field_s = true;
-            var9Lifetime1 = -param0.field_v + var5.field_v - 327680;
+            var9Lifetime1 = -param0.height + var5.height - 327680;
             if (var9Lifetime1 > 0 &&
-              param0.field_v == 0) {
-              param0.field_K = (var9Lifetime1 + (var7Lifetime1 * 26214 * var7Lifetime1 >> 1)) / var7Lifetime1;
-              if (458752 < param0.field_K) {
-                param0.field_K = 458752;
+              param0.height == 0) {
+              param0.verticalVelocity = (var9Lifetime1 + (var7Lifetime1 * 26214 * var7Lifetime1 >> 1)) / var7Lifetime1;
+              if (458752 < param0.verticalVelocity) {
+                param0.verticalVelocity = 458752;
               }
-              param0.a((byte) -31, 13);
-              param0.field_L = (param0.field_K << 1) / 26214;
+              param0.setAction((byte) -31, 13);
+              param0.actionTime = (param0.verticalVelocity << 1) / 26214;
             }
           }
           return;
@@ -1326,7 +1326,7 @@ final class CommonGame {
         }
     }
 
-    private final void b(boolean param0, ki param1) {
+    private final void applyMoveInput(boolean param0, PlayerInputEvent param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         FootballerAgent var4 = null;
@@ -1349,11 +1349,11 @@ final class CommonGame {
           if (!param0) {
             this.field_y = true;
           }
-          var3_int = param1.field_u;
-          if (this.participantStatus[var3_int].d(3511) &&
+          var3_int = param1.participant;
+          if (this.participantStatus[var3_int].isActive(3511) &&
             !this.field_Y) {
-            var4 = this.a((byte) -94, var3_int);
-            var4.field_G = param1.field_v;
+            var4 = this.getControlledFootballer((byte) -94, var3_int);
+            var4.directionMask = param1.value;
             var4.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
             return;
           }
@@ -1372,7 +1372,7 @@ final class CommonGame {
         }
     }
 
-    private final void a(boolean param0, ki param1) {
+    private final void a(boolean param0, PlayerInputEvent param1) {
         BallAgent stackIn_23_0 = null;
         int stackIn_24_1 = 0;
         BallAgent stackIn_31_0 = null;
@@ -1399,8 +1399,8 @@ final class CommonGame {
           if (this.phase != 4) {
             return;
           }
-          var3_int = param1.field_v;
-          var4 = this.participantStatus[param1.field_u];
+          var3_int = param1.value;
+          var4 = this.participantStatus[param1.participant];
           if (var3_int == 0) {
             var4.field_l = var4.field_l ^ 1;
           }
@@ -1450,7 +1450,7 @@ final class CommonGame {
             stackIn_47_0.modelId = stackIn_48_1;
           }
           if (param0) {
-            this.b((byte) -83);
+            this.getBallCarrier((byte) -83);
           }
           if (var3_int == 8) {
             stackIn_58_0 = this.field_V;
@@ -1502,7 +1502,7 @@ final class CommonGame {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param0, (byte) 74);
+          this.copyStateFrom(param0, (byte) 74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1598,20 +1598,20 @@ final class CommonGame {
         }
     }
 
-    final FootballerAgent b(byte param0) {
+    final FootballerAgent getBallCarrier(byte param0) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         FootballerAgent stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_V.field_m == -1) {
+          if (this.field_V.possessorTeam == -1) {
             stackIn_2_0 = null;
             return (FootballerAgent) (stackIn_2_0);
           }
           if (param0 != -96) {
             this.a((FootballerAgent) null, (byte) 6);
           }
-          stackIn_7_0 = this.field_P[this.field_V.field_m][this.field_V.field_s];
+          stackIn_7_0 = this.field_P[this.field_V.possessorTeam][this.field_V.possessorSlot];
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1626,9 +1626,9 @@ final class CommonGame {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -4) {
-            this.a((byte) 53, (ki) null);
+            this.applyKickCommand((byte) 53, (PlayerInputEvent) null);
           }
-          stackIn_10_0 = (this.field_g[param0].field_p == this.field_V.field_m) && (~this.field_V.field_s == ~this.participantStatus[param0].field_g);
+          stackIn_10_0 = (this.field_g[param0].field_p == this.field_V.possessorTeam) && (~this.field_V.possessorSlot == ~this.participantStatus[param0].controlledSlot);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1637,7 +1637,7 @@ final class CommonGame {
         }
     }
 
-    private final void c(int param0, ki param1) {
+    private final void applyParticipantEvent(int param0, PlayerInputEvent param1) {
         ParticipantStatus stackIn_37_0 = null;
         boolean stackIn_38_1 = false;
         ParticipantStatus stackIn_44_0 = null;
@@ -1652,14 +1652,14 @@ final class CommonGame {
         int var5 = 0;
         var5 = Kickabout.field_G;
         try {
-          var3_int = param1.field_u;
+          var3_int = param1.participant;
           if (param0 != 5) {
             return;
           }
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
-          var4 = param1.field_v;
+          var4 = param1.value;
           if (var4 != 0) {
             if ((var4 != 2 ||
               var5 != 0) &&
@@ -1675,8 +1675,8 @@ final class CommonGame {
               this.participantStatus[var3_int].resigned = true;
             }
             this.participantStatus[var3_int].a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
-            this.participantStatus[var3_int].field_g = -1;
-            this.b(10, var3_int);
+            this.participantStatus[var3_int].controlledSlot = -1;
+            this.handleParticipantLeft(10, var3_int);
             if (var5 == 0) {
               return;
             }
@@ -1684,7 +1684,7 @@ final class CommonGame {
           if ((decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            if (!this.participantStatus[var3_int].d(3511)) {
+            if (!this.participantStatus[var3_int].isActive(3511)) {
               return;
             }
             stackIn_37_0 = this.participantStatus[var3_int];
@@ -1710,10 +1710,10 @@ final class CommonGame {
             if (this.participantStatus[var3_int].resigned) {
               return;
             }
-            this.b(10, var3_int);
+            this.handleParticipantLeft(10, var3_int);
             this.participantStatus[var3_int].a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
             this.participantStatus[var3_int].resigned = true;
-            this.participantStatus[var3_int].field_g = -1;
+            this.participantStatus[var3_int].controlledSlot = -1;
             this.field_q[var3_int].resignTime = this.phaseTime;
             if (var5 == 0) {
               return;
@@ -1736,7 +1736,7 @@ final class CommonGame {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void placeKickoffPositions(int param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
         int stackIn_17_0 = 0;
@@ -1781,13 +1781,13 @@ final class CommonGame {
                   if ((var5 != 0 ||
                     !this.disableLocal) && (var5 == 0 ||
                     !this.disableOpponent)) {
-                    var6.field_M = ts.a(var4_int, param0, var3_int, 448) << 16;
-                    var6.field_w = cp.a((byte) 21, var4_int, var3_int, param0) << 16;
+                    var6.positionX = ts.a(var4_int, param0, var3_int, 448) << 16;
+                    var6.positionY = cp.a((byte) 21, var4_int, var3_int, param0) << 16;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    var6.field_M = sh.a(70, var4_int);
-                    var6.field_w = fm.a((byte) -27, var3_int);
+                    var6.positionX = sh.a(70, var4_int);
+                    var6.positionY = AchievementsScreen.a((byte) -27, var3_int);
                   }
                   var4_int++;
                 }
@@ -1796,7 +1796,7 @@ final class CommonGame {
               }
             } else {
               this.field_V.a(29360128, 0, (byte) 26, 44040192);
-              this.field_V.field_m = -1;
+              this.field_V.possessorTeam = -1;
               stackIn_35_0 = param1;
             }
             var3_int = stackIn_35_0;
@@ -1814,9 +1814,9 @@ final class CommonGame {
                 } else {
                   stackIn_47_1 = -1;
                 }
-                stackIn_46_0.field_n = stackIn_47_1;
-                var6Lifetime1.field_G = 0;
-                var6Lifetime1.field_j = 0;
+                stackIn_46_0.directionY = stackIn_47_1;
+                var6Lifetime1.directionMask = 0;
+                var6Lifetime1.directionX = 0;
                 var5Lifetime1++;
               }
               var3_int++;
@@ -1831,7 +1831,7 @@ final class CommonGame {
         }
     }
 
-    private final void a(byte param0, ki param1) {
+    private final void applyKickCommand(byte param0, PlayerInputEvent param1) {
         LoggedPlayer dupTemp$0 = null;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_52_0 = null;
@@ -1861,21 +1861,21 @@ final class CommonGame {
             this.timeLimit < this.phaseTime) {
             return;
           }
-          var3_int = param1.field_u;
-          if (!this.participantStatus[var3_int].d(3511)) {
+          var3_int = param1.participant;
+          if (!this.participantStatus[var3_int].isActive(3511)) {
             return;
           }
           if (param0 != 60) {
             return;
           }
           var4 = this.c(var3_int, -126) ? 1 : 0;
-          var5 = this.a((byte) -119, var3_int);
+          var5 = this.getControlledFootballer((byte) -119, var3_int);
           var6 = param1.field_o;
           var7 = param1.field_p;
           if (var6 == 0 &&
             var7 == 0) {
-            var6 = var5.field_j;
-            var7 = var5.field_n;
+            var6 = var5.directionX;
+            var7 = var5.directionY;
           }
           var5.a((MatchAgent) (this.field_g[var3_int]), (byte) 84);
           if (var4 == 0 ||
@@ -1890,11 +1890,11 @@ final class CommonGame {
               return;
             }
             var8 = uv.b(var7, var6, (byte) 2);
-            var5.b(var8, param0 - 61);
-            if (-1 == this.field_V.field_m) {
+            var5.startTackle(var8, param0 - 61);
+            if (-1 == this.field_V.possessorTeam) {
               this.a(var5, (byte) 115);
             }
-            var5.field_F = var3_int;
+            var5.controllingParticipant = var3_int;
             dupTemp$0 = this.field_q[var3_int];
             dupTemp$0.field_n = dupTemp$0.field_n + 1;
             if (Kickabout.field_G == 0) {
@@ -1903,19 +1903,19 @@ final class CommonGame {
           }
           var5.field_P = var7;
           var5.field_x = var6;
-          var5.field_z = param1.field_v;
-          var8Lifetime1 = var5.d(5339);
+          var5.field_z = param1.value;
+          var8Lifetime1 = var5.directionMask(5339);
           var9 = uv.a(true, var7, var6);
           stackIn_41_0 = (pq.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
           var10 = stackIn_41_0;
           var5.field_h = var9;
-          var5.a((byte) -31, 2);
+          var5.setAction((byte) -31, 2);
           if (var10 != 0) {
-            var5.field_L = var5.field_L + 16;
+            var5.actionTime = var5.actionTime + 16;
           }
           var11 = var5.a(var5.field_z, (byte) -68) - 128;
           if (var11 > 0) {
-            var5.field_L = var5.field_L + (16 * var11 >> 7);
+            var5.actionTime = var5.actionTime + (16 * var11 >> 7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1996,14 +1996,14 @@ final class CommonGame {
         }
     }
 
-    final FootballerAgent a(byte param0, int param1) {
+    final FootballerAgent getControlledFootballer(byte param0, int param1) {
         FootballerAgent stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
           var3_int = 48 / ((param0 - 27) / 62);
-          stackIn_1_0 = this.field_P[this.field_g[param1].field_p][this.participantStatus[param1].field_g];
+          stackIn_1_0 = this.field_P[this.field_g[param1].field_p][this.participantStatus[param1].controlledSlot];
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2012,7 +2012,7 @@ final class CommonGame {
         }
     }
 
-    final int a(byte param0, int param1, int param2) {
+    final int findControllingParticipant(byte param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -2031,13 +2031,13 @@ final class CommonGame {
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4_int >= this.field_g.length))) {
-            stackOut_6_0 = this.participantStatus[var4_int].d(3511);
+            stackOut_6_0 = this.participantStatus[var4_int].isActive(3511);
             stackIn_20_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var5 == 0) {
               if (stackIn_7_0 &&
                 param1 == this.field_g[var4_int].field_p &&
-                param2 == this.participantStatus[var4_int].field_g) {
+                param2 == this.participantStatus[var4_int].controlledSlot) {
                 stackIn_17_0 = var4_int;
                 return stackIn_17_0;
               }
@@ -2057,7 +2057,7 @@ final class CommonGame {
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void handleParticipantLeft(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -2074,7 +2074,7 @@ final class CommonGame {
           if (2 != this.phase &&
             4 == this.phase &&
             this.c(param1, -78)) {
-            this.field_V.field_m = -1;
+            this.field_V.possessorTeam = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2084,7 +2084,7 @@ final class CommonGame {
         }
     }
 
-    private final void a(int param0, MatchAgent param1, int param2, int param3) {
+    private final void switchControlledFootballer(int param0, MatchAgent param1, int param2, int param3) {
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -2108,7 +2108,7 @@ final class CommonGame {
             stackIn_13_1 = this.field_g[var6_int].field_p;
             if (var8 == 0) {
               if (stackIn_13_0 == stackIn_13_1 &&
-                param2 == this.participantStatus[var6_int].field_g) {
+                param2 == this.participantStatus[var6_int].controlledSlot) {
                 return;
               }
               var6_int++;
@@ -2121,16 +2121,16 @@ final class CommonGame {
             stackIn_13_1 = (param0 + 39) / 48;
           }
           var7_int = stackIn_13_0 % stackIn_13_1;
-          if (this.participantStatus[param3].field_g != -1) {
-            this.a((byte) 118, param3).aiWait = 6;
+          if (this.participantStatus[param3].controlledSlot != -1) {
+            this.getControlledFootballer((byte) 118, param3).aiWait = 6;
           }
-          if (this.participantStatus[param3].field_g != -1) {
-            var6 = this.field_P[var5_int][this.participantStatus[param3].field_g];
+          if (this.participantStatus[param3].controlledSlot != -1) {
+            var6 = this.field_P[var5_int][this.participantStatus[param3].controlledSlot];
             var7 = this.field_P[var5_int][param2];
-            var7.field_G = var6.field_G;
+            var7.directionMask = var6.directionMask;
           }
-          this.participantStatus[param3].field_g = param2;
-          this.a((byte) 91, param3).a(param1, (byte) 84);
+          this.participantStatus[param3].controlledSlot = param2;
+          this.getControlledFootballer((byte) 91, param3).a(param1, (byte) 84);
           this.participantStatus[param3].a(param1, (byte) 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2147,7 +2147,7 @@ final class CommonGame {
         }
     }
 
-    private final void a(ki param0, byte param1) {
+    private final void applyLineupCommand(PlayerInputEvent param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -2157,13 +2157,13 @@ final class CommonGame {
           if (3 != this.phase) {
             return;
           }
-          if (!this.participantStatus[param0.field_u].d(3511)) {
+          if (!this.participantStatus[param0.participant].isActive(3511)) {
             return;
           }
-          this.field_o.a(param0.field_v, 0, param0.field_t, param0.field_s, param0.field_u);
-          this.field_o.a((MatchAgent) (this.field_g[param0.field_u]), (byte) 84);
+          this.field_o.applyCommand(param0.value, 0, param0.field_t, param0.field_s, param0.participant);
+          this.field_o.a((MatchAgent) (this.field_g[param0.participant]), (byte) 84);
           if (param1 >= -8) {
-            this.c(-30);
+            this.computeChecksum(-30);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2180,7 +2180,7 @@ final class CommonGame {
         }
     }
 
-    private final void b(int param0, byte param1) {
+    private final void passToTeammate(int param0, byte param1) {
         long stackIn_15_0 = 0L;
         RuntimeException decompiledCaughtException = null;
         FootballerAgent var3 = null;
@@ -2196,16 +2196,16 @@ final class CommonGame {
         int var14 = 0;
         var14 = Kickabout.field_G;
         try {
-          var3 = this.field_P[this.field_V.field_m][param0];
-          var4 = var3.field_M;
-          var5 = var3.field_w;
-          if (this.field_V.field_m == 1 &&
+          var3 = this.field_P[this.field_V.possessorTeam][param0];
+          var4 = var3.positionX;
+          var5 = var3.positionY;
+          if (this.field_V.possessorTeam == 1 &&
             this.disableOpponent) {
             var5 = 44040192;
             var4 = 29360128;
           }
-          var6 = (var4 - this.field_V.field_t) * 3 >> 2;
-          var7 = (var5 - this.field_V.field_p) * 3 >> 2;
+          var6 = (var4 - this.field_V.positionX) * 3 >> 2;
+          var7 = (var5 - this.field_V.positionY) * 3 >> 2;
           var8 = sg.field_d[this.surface];
           var10 = var8;
           var12_int = 0;
@@ -2226,11 +2226,11 @@ final class CommonGame {
             stackIn_15_0 = (-var8 + 65536L << 16) / (-var10 + 65536L);
           }
           var12 = stackIn_15_0;
-          this.field_V.field_h = (int)((long)var7 * var12 >> 16);
-          this.field_V.field_n = 573440;
-          this.field_V.field_q = (int)((long)var6 * var12 >> 16);
+          this.field_V.velocityY = (int)((long)var7 * var12 >> 16);
+          this.field_V.verticalVelocity = 573440;
+          this.field_V.velocityX = (int)((long)var6 * var12 >> 16);
           this.field_V.uncatchable = 10;
-          this.field_V.field_m = -1;
+          this.field_V.possessorTeam = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2239,7 +2239,7 @@ final class CommonGame {
         }
     }
 
-    private final void a(int param0, boolean param1, boolean param2, int param3, byte param4, int param5) {
+    private final void kickBall(int param0, boolean param1, boolean param2, int param3, byte param4, int param5) {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
@@ -2263,13 +2263,13 @@ final class CommonGame {
             var9 = var9 + ((var9 * 3 >> 1) + 1280 * param0);
             this.field_V.highFriction = 25;
           }
-          var11 = de.a(param5 * param5 + param3 * param3, (byte) 84);
-          this.field_V.field_n = var10;
+          var11 = GameKeyHandler.a(param5 * param5 + param3 * param3, (byte) 84);
+          this.field_V.verticalVelocity = var10;
           if (var11 != 0) {
-            this.field_V.field_q = param3 * var9 / var11;
-            this.field_V.field_h = param5 * var9 / var11;
+            this.field_V.velocityX = param3 * var9 / var11;
+            this.field_V.velocityY = param5 * var9 / var11;
           }
-          this.field_V.field_m = -1;
+          this.field_V.possessorTeam = -1;
           if (param1) {
             this.field_V.uncatchable = 35;
             if (Kickabout.field_G == 0) {
@@ -2285,7 +2285,7 @@ final class CommonGame {
         }
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         ParticipantStatus dupTemp$0 = null;
         FootballerAgent dupTemp$1 = null;
         int stackIn_36_0 = 0;
@@ -2342,21 +2342,21 @@ final class CommonGame {
             stackIn_36_0 = ~this.phase;
           }
           if (stackIn_36_0 == -5) {
-            this.b(11660);
+            this.stepMatch(11660);
             var2_int = 0;
             while (var2_int < this.playerCount) {
               if (var4 != 0) {
                 return;
               }
               if (!this.participantStatus[var2_int].resigned &&
-                this.field_g[var2_int].field_p >= 0 && (!(this.participantStatus[var2_int].field_g < 0) ||
+                this.field_g[var2_int].field_p >= 0 && (!(this.participantStatus[var2_int].controlledSlot < 0) ||
                 var4 != 0)) {
-                var3 = this.a((byte) -39, var2_int);
+                var3 = this.getControlledFootballer((byte) -39, var2_int);
                 if (this.field_g[var2_int].field_p == 0 &&
-                  var3.a(true) < 672) {
+                  var3.pixelY(true) < 672) {
                 }
                 if (this.field_g[var2_int].field_p == 1 &&
-                  var3.a(true) <= 672) {
+                  var3.pixelY(true) <= 672) {
                 }
               }
               var2_int++;
@@ -2384,9 +2384,9 @@ final class CommonGame {
           or.field_d.b(param3, (byte) 77);
           or.field_d.field_n = or.field_d.field_n + 1;
           var7_int = or.field_d.field_n;
-          or.field_d.a(param1, -1781890008);
-          or.field_d.a(14190, param5);
-          or.field_d.a(118, param2);
+          or.field_d.writeLong(param1, -1781890008);
+          or.field_d.writeString(14190, param5);
+          or.field_d.writeByte(118, param2);
           stackIn_3_0 = or.field_d;
           stackIn_3_1 = 114;
           if (param4) {
@@ -2394,11 +2394,11 @@ final class CommonGame {
           } else {
             stackIn_4_2 = 0;
           }
-          ((CipherPacketBuffer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+          ((CipherPacketBuffer) (Object) stackIn_3_0).writeByte(stackIn_3_1, stackIn_4_2);
           if (param0 <= 101) {
             field_j = false;
           }
-          or.field_d.c(62, or.field_d.field_n - var7_int);
+          or.field_d.backpatchByteLength(62, or.field_d.field_n - var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2414,20 +2414,20 @@ final class CommonGame {
         }
     }
 
-    final void a(byte param0) {
+    final void processEventQueue(byte param0) {
         int stackIn_59_0 = 0;
         int stackIn_59_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ki var2 = null;
+        PlayerInputEvent var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         var4 = Kickabout.field_G;
         try {
-          var2 = (ki) (this.field_E.g(24009));
+          var2 = (PlayerInputEvent) (this.field_E.g(24009));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
-            var3 = var2.field_r;
+            var3 = var2.eventType;
             stackIn_59_0 = 2;
             stackIn_59_1 = var3;
             if (var4 == 0) {
@@ -2458,30 +2458,30 @@ final class CommonGame {
                                   break;
                               }
                             } else {
-                              this.a((byte) 60, var2);
+                              this.applyKickCommand((byte) 60, var2);
                               break regionExit1;
                             }
-                            this.b((byte) 125, var2);
+                            this.applyPlayingCommand((byte) 125, var2);
                             break regionExit1;
                           }
-                          this.b(true, var2);
+                          this.applyMoveInput(true, var2);
                           break regionExit1;
                         }
-                        this.a(1, var2);
+                        this.applyTeamSelectionCommand(1, var2);
                         break regionExit1;
                       }
-                      this.b(26214, var2);
+                      this.applyFormationCommand(26214, var2);
                       break regionExit1;
                     }
-                    this.a(var2, (byte) -34);
+                    this.applyLineupCommand(var2, (byte) -34);
                     break regionExit1;
                   }
-                  this.c(5, var2);
+                  this.applyParticipantEvent(5, var2);
                   break regionExit1;
                 }
                 this.a(false, var2);
               }
-              var2 = (ki) (this.field_E.c(33));
+              var2 = (PlayerInputEvent) (this.field_E.c(33));
               continue;
             }
             break;
@@ -2528,7 +2528,7 @@ final class CommonGame {
             stackIn_3_0 = ~this.participantStatus.length;
             stackIn_3_1 = ~var3;
             if (stackIn_3_0 < stackIn_3_1) {
-              stackOut_4_0 = this.participantStatus[var3].d(3511);
+              stackOut_4_0 = this.participantStatus[var3].isActive(3511);
               stackIn_19_0 = stackOut_4_0 ? 1 : 0;
               stackIn_5_0 = stackOut_4_0;
               if (var7 == 0) {
@@ -2540,7 +2540,7 @@ final class CommonGame {
                     stackIn_3_0 = var3;
                     stackIn_3_1 = this.field_i[var4][var6 - 1];
                     if (stackIn_3_0 == stackIn_3_1) {
-                      this.participantStatus[var3].field_g = var6;
+                      this.participantStatus[var3].controlledSlot = var6;
                       break;
                     }
                     var5++;
@@ -2557,7 +2557,7 @@ final class CommonGame {
               stackIn_21_0 = ~var3;
               stackIn_21_1 = -3;
               if (stackIn_21_0 > stackIn_21_1) {
-                stackOut_22_0 = this.participantStatus[this.field_i[var3][2]].d(3511);
+                stackOut_22_0 = this.participantStatus[this.field_i[var3][2]].isActive(3511);
                 stackIn_41_0 = stackOut_22_0 ? 1 : 0;
                 stackIn_23_0 = stackOut_22_0;
                 if (var7 == 0) {
@@ -2567,8 +2567,8 @@ final class CommonGame {
                       stackIn_21_0 = ~var3;
                       stackIn_21_1 = ~this.field_g[var4Lifetime1].field_p;
                       if (stackIn_21_0 == stackIn_21_1 &&
-                        this.participantStatus[var4Lifetime1].d(3511)) {
-                        this.participantStatus[var4Lifetime1].field_g = 3;
+                        this.participantStatus[var4Lifetime1].isActive(3511)) {
+                        this.participantStatus[var4Lifetime1].controlledSlot = 3;
                         break;
                       }
                       var4Lifetime1++;
@@ -2603,7 +2603,7 @@ final class CommonGame {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void enterPhase(int param0, byte param1) {
         LoggedPlayer stackIn_35_0 = null;
         boolean stackIn_36_1 = false;
         int stackIn_44_0 = 0;
@@ -2615,7 +2615,7 @@ final class CommonGame {
         int var5 = 0;
         int var6_int = 0;
         Object var6 = null;
-        up var6_ref = null;
+        PlayerStats var6_ref = null;
         int var7 = 0;
         int var3_intLifetime1;
         var7 = Kickabout.field_G;
@@ -2684,7 +2684,7 @@ final class CommonGame {
                         var6_ref = mv.b(false);
                       }
                       this.field_P[var3_intLifetime1][var4] = new FootballerAgent();
-                      this.field_P[var3_intLifetime1][var4].a(var5 != 0, var6_ref, 3);
+                      this.field_P[var3_intLifetime1][var4].applyPlayerStats(var5 != 0, var6_ref, 3);
                       if (var6_ref.a(var5 != 0, (byte) -111)) {
                         this.field_F[var3_intLifetime1] = true;
                       }
@@ -2696,7 +2696,7 @@ final class CommonGame {
                 } else {
                   this.field_V.modelId = mp.field_p[this.surface];
                   this.field_X = new GoalStateAgent();
-                  this.a(1, 0);
+                  this.placeKickoffPositions(1, 0);
                   this.a(2);
                 }
                 if (var7 == 0) {
@@ -2715,7 +2715,7 @@ final class CommonGame {
         }
     }
 
-    private final void b(int param0, ki param1) {
+    private final void applyFormationCommand(int param0, PlayerInputEvent param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_12_0 = null;
@@ -2729,12 +2729,12 @@ final class CommonGame {
           if (param0 != 26214) {
             this.field_V = (BallAgent) null;
           }
-          var3_int = this.field_g[param1.field_u].field_p;
-          if (~this.b((byte) 72, var3_int) != ~param1.field_u) {
+          var3_int = this.field_g[param1.participant].field_p;
+          if (~this.b((byte) 72, var3_int) != ~param1.participant) {
             return;
           }
-          this.field_C.a(var3_int, 1, param1.field_v);
-          this.field_C.a((MatchAgent) (this.field_g[param1.field_u]), (byte) 84);
+          this.field_C.applyCommand(var3_int, 1, param1.value);
+          this.field_C.a((MatchAgent) (this.field_g[param1.participant]), (byte) 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2750,7 +2750,7 @@ final class CommonGame {
         }
     }
 
-    final void a(ki param0, int param1) {
+    final void enqueueEvent(PlayerInputEvent param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -2823,7 +2823,7 @@ final class CommonGame {
         StringBuilder var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
-        ki var3_ref_ki = null;
+        PlayerInputEvent var3_ref_ki = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2849,7 +2849,7 @@ final class CommonGame {
           var2 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2 >= this.field_S.length))) {
-            discarded$5 = var1.append("\t" + var2 + " [" + this.field_g[var2].field_p + "]: " + this.field_S[var2] + "\t" + this.participantStatus[var2].field_g + " " + this.participantStatus[var2].field_p + " " + this.participantStatus[var2].field_l + "\t");
+            discarded$5 = var1.append("\t" + var2 + " [" + this.field_g[var2].field_p + "]: " + this.field_S[var2] + "\t" + this.participantStatus[var2].controlledSlot + " " + this.participantStatus[var2].field_p + " " + this.participantStatus[var2].field_l + "\t");
             stackOut_13_0 = this.participantStatus[var2].field_k;
             stackIn_42_0 = stackOut_13_0 ? 1 : 0;
             stackIn_14_0 = stackOut_13_0;
@@ -2887,10 +2887,10 @@ final class CommonGame {
           }
           if (stackIn_42_0 > 0) {
             discarded$14 = var1.append("\tEnqueued moves: " + var2 + "\n");
-            var3_ref_ki = (ki) (this.field_E.g(24009));
+            var3_ref_ki = (PlayerInputEvent) (this.field_E.g(24009));
             while (null != var3_ref_ki) {
               discarded$15 = var1.append("\t\t" + var3_ref_ki + "\n");
-              var3_ref_ki = (ki) (this.field_E.c(33));
+              var3_ref_ki = (PlayerInputEvent) (this.field_E.c(33));
               if (var6 == 0) {
                 continue;
               }
@@ -2976,7 +2976,7 @@ final class CommonGame {
                 var4 = 0;
                 while (var4 < 5) {
                   discarded$28 = var1.append("\n\t" + var3 + "." + var4 + " " + this.field_P[var3][var4]);
-                  var5 = this.a((byte) 6, var3, var4);
+                  var5 = this.findControllingParticipant((byte) 6, var3, var4);
                   stackIn_90_0 = ~var5;
                   if (var6 != 0) {
                     continue scanLoop4;
@@ -3108,7 +3108,7 @@ final class CommonGame {
               }
               var5Lifetime1Lifetime1 = stackIn_64_0;
               while (var5Lifetime1Lifetime1 < 4) {
-                this.field_b[var4_int][var5Lifetime1Lifetime1].a(param2 ^ 46, param0);
+                this.field_b[var4_int][var5Lifetime1Lifetime1].readFromPacket(param2 ^ 46, param0);
                 var5Lifetime1Lifetime1++;
               }
               var4_int++;
@@ -3125,8 +3125,8 @@ final class CommonGame {
             this.winner = param0.l(3, 59) - 3;
             var4_int = 0;
             while (this.playerCount > var4_int) {
-              this.field_g[var4_int].field_l = mu.a(param0, (byte) -39);
-              this.field_g[var4_int].field_i = mu.a(param0, (byte) -39);
+              this.field_g[var4_int].field_l = ContentTransitionDialog.a(param0, (byte) -39);
+              this.field_g[var4_int].field_i = ContentTransitionDialog.a(param0, (byte) -39);
               stackIn_85_0 = var4_int;
               stackIn_85_1 = param1;
               if (var7 != 0) {
@@ -3154,7 +3154,7 @@ final class CommonGame {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.a(this.phase, (byte) -124);
+            this.enterPhase(this.phase, (byte) -124);
             stackIn_85_0 = param2;
             stackIn_85_1 = 1;
           }
@@ -3186,7 +3186,7 @@ final class CommonGame {
           }
           if (3 == this.phase) {
             this.field_o.b(param0, 4);
-            this.field_o.a(param0, false);
+            this.field_o.readState(param0, false);
           }
           if (this.phase == 4) {
             this.field_V.b(param0, 4);
@@ -3217,18 +3217,18 @@ final class CommonGame {
                 }
                 var5Lifetime3Lifetime1 = 0;
                 while (var5Lifetime3Lifetime1 < 5) {
-                  this.field_P[var4_int][var5Lifetime3Lifetime1].a(param2 - 13919, param0);
+                  this.field_P[var4_int][var5Lifetime3Lifetime1].readFullState(param2 - 13919, param0);
                   var5Lifetime3Lifetime1++;
                 }
                 var4_int++;
                 continue;
               }
               this.field_V.a(param0, (byte) -124);
-              this.field_X.a(param0, (byte) -84);
+              this.field_X.readState(param0, (byte) -84);
               this.aiTick = param0.l(8, 59);
               break;
             }
-            this.bigHeadMode = mu.a(param0, (byte) -39);
+            this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
           }
           param0.l((byte) 95);
           return;
@@ -3268,7 +3268,7 @@ final class CommonGame {
         int var10_intLifetime2;
         var12 = Kickabout.field_G;
         this.phase = -1;
-        this.field_E = new tf();
+        this.field_E = new IntrusiveDeque();
         this.field_l = false;
         this.field_A = false;
         this.field_h = false;
@@ -3322,7 +3322,7 @@ final class CommonGame {
           }
           if (decompiledNaturalLoopExit0) {
             this.field_r = new int[2];
-            this.field_b = new up[2][4];
+            this.field_b = new PlayerStats[2][4];
             this.field_k = new int[2][4];
           }
           this.field_i = new int[2][4];
@@ -3335,7 +3335,7 @@ final class CommonGame {
               }
               var11 = stackIn_24_0;
               while (var11 < 4) {
-                this.field_b[var10_intLifetime1][var11] = new up();
+                this.field_b[var10_intLifetime1][var11] = new PlayerStats();
                 this.field_k[var10_intLifetime1][var11] = -1;
                 var11++;
               }
@@ -3347,7 +3347,7 @@ final class CommonGame {
             this.field_F = new boolean[2];
             this.field_Q = new int[2];
             this.field_N = new LoggedGoal();
-            this.field_ab = new p(this.playerCount);
+            this.field_ab = new LoggedPossession(this.playerCount);
             this.field_q = new LoggedPlayer[this.playerCount];
             stackIn_24_0 = 0;
             break;

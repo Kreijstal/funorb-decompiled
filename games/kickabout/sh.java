@@ -4,7 +4,7 @@
 final class sh {
     static int field_d;
     static String field_b;
-    static ot field_g;
+    static ArgbSprite field_g;
     static CommonGame field_a;
     static int[] field_f;
     static String field_e;

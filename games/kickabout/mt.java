@@ -5,7 +5,7 @@ final class mt {
     static int field_a;
     static String field_c;
     static String field_e;
-    static ut field_d;
+    static Sprite field_d;
     static int[] field_f;
     static String field_b;
 
@@ -19,8 +19,8 @@ final class mt {
             return false;
           }
           if (bo.field_Cb.a("scenery", "goal_bottom", (byte) -10)) {
-            IntrusiveNodeHashTable.field_g[1] = bg.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
-            IntrusiveNodeHashTable.field_g[0] = bg.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
+            IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
+            IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
             return true;
           }
           return false;
@@ -29,8 +29,8 @@ final class mt {
           return false;
         }
         if (bo.field_Cb.a("scenery", "goal_bottom", (byte) -10)) {
-          IntrusiveNodeHashTable.field_g[1] = bg.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
-          IntrusiveNodeHashTable.field_g[0] = bg.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
+          IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
+          IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
           return true;
         }
         return false;
