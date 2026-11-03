@@ -8,14 +8,14 @@ final class SoundCache {
     static SceneWidget field_c;
     static String field_j;
     private NodeHashTable field_g;
-    private ResourceArchive field_i;
+    private ResourceArchive musicSampleArchive;
     static SoundCache field_d;
     static IntrusiveDeque field_b;
     static String field_f;
-    private ResourceArchive field_a;
+    private ResourceArchive soundEffectArchive;
     private NodeHashTable field_h;
 
-    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample getMusicSample(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -44,7 +44,7 @@ final class SoundCache {
           }
           var9 = (VorbisSample) (this.field_g.a(-25484, var6));
           if (var9 == null) {
-            var9 = VorbisSample.load(this.field_i, param3, param2);
+            var9 = VorbisSample.load(this.musicSampleArchive, param3, param2);
             if (var9 == null) {
               return null;
             }
@@ -73,7 +73,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(byte param0, int[] param1, int param2) {
+    final PcmSample getMusicSampleById(byte param0, int[] param1, int param2) {
         PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         String var5 = null;
@@ -84,17 +84,17 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_i.b((byte) -89)) {
-            stackIn_3_0 = this.a(65521, param1, param2, 0);
+          if (1 == this.musicSampleArchive.b((byte) -89)) {
+            stackIn_3_0 = this.getMusicSample(65521, param1, param2, 0);
             return stackIn_3_0;
           }
-          if (this.field_i.b(param2, (byte) 100) == 1) {
-            stackIn_7_0 = this.a(65521, param1, 0, param2);
+          if (this.musicSampleArchive.b(param2, (byte) 100) == 1) {
+            stackIn_7_0 = this.getMusicSample(65521, param1, 0, param2);
             return stackIn_7_0;
           }
           if (param0 > -39) {
             var5 = (String) null;
-            discarded$1 = this.a((String) null, (int[]) null, (String) null, -73);
+            discarded$1 = this.loadSoundEffectByName((String) null, (int[]) null, (String) null, -73);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class SoundCache {
             param2[0] <= 0) {
             return null;
           }
-          var9 = SoundEffect.load(this.field_a, param3, param1);
+          var9 = SoundEffect.load(this.soundEffectArchive, param3, param1);
           if (var9 == null) {
             return null;
           }
@@ -167,7 +167,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(int param0, int[] param1, byte param2) {
+    final PcmSample loadSoundEffectById(int param0, int[] param1, byte param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_5_0 = null;
@@ -177,7 +177,7 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_a.b((byte) 98) == 1) {
+          if (this.soundEffectArchive.b((byte) 98) == 1) {
             stackIn_2_0 = this.getSynthesizedSampleByIds(0, param0, param1, 0);
             return stackIn_2_0;
           }
@@ -185,7 +185,7 @@ final class SoundCache {
             stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
-          if (1 != this.field_a.b(param0, (byte) 27)) {
+          if (1 != this.soundEffectArchive.b(param0, (byte) 27)) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.getSynthesizedSampleByIds(0, 0, param1, param0);
@@ -216,7 +216,7 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_4_0 = this.a(param2, (int[]) null, param1, -86);
+            stackIn_4_0 = this.loadSoundEffectByName(param2, (int[]) null, param1, -86);
             return stackIn_4_0;
           }
           stackIn_2_0 = (PcmSample) null;
@@ -287,7 +287,7 @@ final class SoundCache {
         return SocketConnector.field_g[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ib.field_c[var5Lifetime1] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
-    private final PcmSample a(String param0, int[] param1, String param2, int param3) {
+    private final PcmSample loadSoundEffectByName(String param0, int[] param1, String param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -307,12 +307,12 @@ final class SoundCache {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          var5_int = this.field_a.getGroupId(118, param0);
+          var5_int = this.soundEffectArchive.getGroupId(118, param0);
           if (var5_int < 0) {
             stackIn_5_0 = null;
             return (PcmSample) (stackIn_5_0);
           }
-          var6 = this.field_a.getFileId((byte) -117, param2, var5_int);
+          var6 = this.soundEffectArchive.getFileId((byte) -117, param2, var5_int);
           if (var6 < 0) {
             return null;
           }
@@ -358,8 +358,8 @@ final class SoundCache {
         this.field_g = new NodeHashTable(256);
         this.field_h = new NodeHashTable(256);
         try {
-          this.field_i = param1;
-          this.field_a = param0;
+          this.musicSampleArchive = param1;
+          this.soundEffectArchive = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "po.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

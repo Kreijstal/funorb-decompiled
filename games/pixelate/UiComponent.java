@@ -85,7 +85,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    int e(int param0) {
+    int getTopLayer(int param0) {
         if (param0 <= 31) {
           this.field_l = (String) null;
           return 0;
@@ -93,7 +93,7 @@ class UiComponent extends IntrusiveNode {
         return 0;
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5 = -54 / ((70 - param3) / 49);
         if (0 != param1) {
           return;
@@ -130,7 +130,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    void h(int param0) {
+    void blur(int param0) {
         if (param0 != 2) {
           this.a(-82, false, (byte) 61, -91);
         }
@@ -188,7 +188,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 == 0) {
           field_A = null;
@@ -222,7 +222,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    String b(byte param0) {
+    String getTooltip(byte param0) {
         if (param0 < 16) {
           return (String) null;
         }
@@ -271,11 +271,11 @@ class UiComponent extends IntrusiveNode {
         String var6 = null;
         int var7 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
-        var4 = this.e(63);
+        var4 = this.getTopLayer(63);
         var5 = 0;
         while (true) {
           if (var5 <= var4) {
-            this.a(param0, var5, param1, (byte) -63);
+            this.drawLayer(param0, var5, param1, (byte) -63);
             var5++;
             if (var7 == 0) {
               continue;
@@ -391,7 +391,7 @@ class UiComponent extends IntrusiveNode {
                     if (var7 != 0 &&
                       var5 != 0 &&
                       0 != IntrusiveDequeCursor.field_c) {
-                      this.h(2);
+                      this.blur(2);
                     }
                   }
                 } else {
@@ -411,7 +411,7 @@ class UiComponent extends IntrusiveNode {
                       if (var7 != 0 &&
                         var5 != 0 &&
                         0 != IntrusiveDequeCursor.field_c) {
-                        this.h(2);
+                        this.blur(2);
                       }
                     }
                   } else {
@@ -429,7 +429,7 @@ class UiComponent extends IntrusiveNode {
                       if (var7 != 0 &&
                         var5 != 0 &&
                         0 != IntrusiveDequeCursor.field_c) {
-                        this.h(2);
+                        this.blur(2);
                       }
                     }
                   }
@@ -453,16 +453,16 @@ class UiComponent extends IntrusiveNode {
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != IntrusiveDequeCursor.field_c) {
-                  this.h(2);
+                  this.blur(2);
                 }
               }
               TextHotspotWidget.field_R = ef.field_b;
               if (param2 == 99) {
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             if (!this.handlePointerPress((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, ji.field_c)) {
@@ -471,11 +471,11 @@ class UiComponent extends IntrusiveNode {
                   if (TextHotspotWidget.field_R == 0) {
                     TextHotspotWidget.field_R = ef.field_b;
                     if (param2 == 99) {
-                      ij.a(-5516, this.b((byte) 37));
+                      ij.a(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
@@ -489,27 +489,27 @@ class UiComponent extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != IntrusiveDequeCursor.field_c) {
-                    this.h(2);
+                    this.blur(2);
                     TextHotspotWidget.field_R = ef.field_b;
                     if (param2 == 99) {
-                      ij.a(-5516, this.b((byte) 37));
+                      ij.a(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                 }
                 TextHotspotWidget.field_R = ef.field_b;
                 if (param2 == 99) {
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.field_E = -110;
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
-              this.h(2);
+              this.blur(2);
               if (var7 != 0) {
                 param1 = false;
                 if (ef.field_b == 0) {
@@ -527,35 +527,35 @@ class UiComponent extends IntrusiveNode {
                   }
                   if (var5 != 0 &&
                     0 != IntrusiveDequeCursor.field_c) {
-                    this.h(2);
+                    this.blur(2);
                     TextHotspotWidget.field_R = ef.field_b;
                     if (param2 == 99) {
-                      ij.a(-5516, this.b((byte) 37));
+                      ij.a(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                 }
                 TextHotspotWidget.field_R = ef.field_b;
                 if (param2 == 99) {
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.field_E = -110;
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               if (ef.field_b == 0) {
                 if (TextHotspotWidget.field_R == 0) {
                   TextHotspotWidget.field_R = ef.field_b;
                   if (param2 == 99) {
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.field_E = -110;
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
@@ -570,24 +570,24 @@ class UiComponent extends IntrusiveNode {
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != IntrusiveDequeCursor.field_c) {
-                  this.h(2);
+                  this.blur(2);
                   TextHotspotWidget.field_R = ef.field_b;
                   if (param2 == 99) {
-                    ij.a(-5516, this.b((byte) 37));
+                    ij.a(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.field_E = -110;
-                  ij.a(-5516, this.b((byte) 37));
+                  ij.a(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
               }
               TextHotspotWidget.field_R = ef.field_b;
               if (param2 == 99) {
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             param1 = false;
@@ -597,11 +597,11 @@ class UiComponent extends IntrusiveNode {
             if (TextHotspotWidget.field_R == 0) {
               TextHotspotWidget.field_R = ef.field_b;
               if (param2 == 99) {
-                ij.a(-5516, this.b((byte) 37));
+                ij.a(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
@@ -618,14 +618,14 @@ class UiComponent extends IntrusiveNode {
           }
           if (var5 != 0 &&
             0 != IntrusiveDequeCursor.field_c) {
-            this.h(2);
+            this.blur(2);
             TextHotspotWidget.field_R = ef.field_b;
             if (param2 == 99) {
-              ij.a(-5516, this.b((byte) 37));
+              ij.a(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             this.field_E = -110;
-            ij.a(-5516, this.b((byte) 37));
+            ij.a(-5516, this.getTooltip((byte) 37));
             return param1;
           }
         }
@@ -633,7 +633,7 @@ class UiComponent extends IntrusiveNode {
         if (param2 != 99) {
           this.field_E = -110;
         }
-        ij.a(-5516, this.b((byte) 37));
+        ij.a(-5516, this.getTooltip((byte) 37));
         return param1;
     }
 
@@ -641,7 +641,7 @@ class UiComponent extends IntrusiveNode {
         this(param0, Checkbox.field_X.field_a, param1);
     }
 
-    final void a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    final void appendDebugBody(int param0, byte param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -783,8 +783,8 @@ class UiComponent extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(-59, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-59, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
           }
           if (param1) {
             field_o = (IndexedSprite[]) null;
@@ -831,7 +831,7 @@ class UiComponent extends IntrusiveNode {
         this.field_p = param2;
     }
 
-    final boolean a(int param0, int param1, StringBuilder param2, Hashtable param3) {
+    final boolean beginDebugDescription(int param0, int param1, StringBuilder param2, Hashtable param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;

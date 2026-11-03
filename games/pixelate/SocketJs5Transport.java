@@ -10,7 +10,7 @@ final class SocketJs5Transport extends Js5Transport {
     private BufferedSocket transport;
     static int[] field_q;
 
-    final void e(byte param0) {
+    final void reportIntegrityFailure(byte param0) {
         try {
           this.transport.close(-1);
         } catch (Exception exception) {
@@ -48,7 +48,7 @@ final class SocketJs5Transport extends Js5Transport {
           var6 = Pixelate.field_H ? 1 : 0;
           try {
             if (param2 != 8) {
-              this.e(-125);
+              this.sendOpcodeSixControlPacket(-125);
             }
             if (this.transport != null) {
               try {
@@ -60,7 +60,7 @@ final class SocketJs5Transport extends Js5Transport {
               this.transport = null;
             }
             this.transport = (BufferedSocket) (param0);
-            this.e(0);
+            this.sendOpcodeSixControlPacket(0);
             this.sendStateControlPacket((byte) 73, param1);
             this.field_g.position = 0;
             this.field_c = null;
@@ -354,7 +354,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    private final void e(int param0) {
+    private final void sendOpcodeSixControlPacket(int param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;

@@ -26,7 +26,7 @@ final class BoundedRandomAccessFile {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.b(-3)) {
+          if (!param0.ensureIndex(-3)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
@@ -169,7 +169,7 @@ final class BoundedRandomAccessFile {
         this.field_e = null;
     }
 
-    final void a(boolean param0, long param1) throws IOException {
+    final void seek(boolean param0, long param1) throws IOException {
         this.field_e.seek(param1);
         this.field_a = param1;
         if (param0) {

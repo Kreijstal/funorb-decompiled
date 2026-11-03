@@ -127,7 +127,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.a((byte) 24, "", "final_frame.jpg"), (java.awt.Component) ((Object) field_u));
+          var2 = new Sprite(param1.getNamedFile((byte) 24, "", "final_frame.jpg"), (java.awt.Component) ((Object) field_u));
           var3 = var2.field_F;
           var4 = var2.field_E;
           MidiPcmStream.a(param0);
@@ -169,7 +169,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!ResourceArchive.a((byte) 63, var4)) {
+          if (!ResourceArchive.ensureGroupAvailableByName((byte) 63, var4)) {
             stackIn_2_0 = sk.field_a;
             return stackIn_2_0;
           }

@@ -496,12 +496,12 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.field_N.field_E = this.field_E - 40;
           this.field_N.a(26, this.field_E - 40, var3, -118);
           var3 = var3 + (15 + this.field_N.field_C);
-          this.b(this.field_N, 80);
+          this.addChild(this.field_N, 80);
           var5 = 4;
           var6 = 200;
           this.field_K.a(var6, (byte) 105, var3, -var6 + 300 >> 1, 40);
           this.field_K.field_n = (UiListener) (this);
-          this.b(this.field_K, 80);
+          this.addChild(this.field_K, 80);
           this.a(300, (byte) 117, 0, 0, var3 + 55 + var5);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');

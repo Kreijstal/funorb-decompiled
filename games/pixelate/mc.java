@@ -120,10 +120,10 @@ final class mc extends IntrusiveNode {
         var10 = Pixelate.field_H ? 1 : 0;
         try {
           if (PictureStrip.field_n != null &&
-            PictureStrip.field_n.b(-3) &&
+            PictureStrip.field_n.ensureIndex(-3) &&
             PictureStrip.field_n.ensureGroupAvailableByName("benefits", -1) &&
             TimerBarDemo.field_p != null &&
-            TimerBarDemo.field_p.b(param0 - 15) &&
+            TimerBarDemo.field_p.ensureIndex(param0 - 15) &&
             TimerBarDemo.field_p.ensureGroupAvailableByName("benefits", -1)) {
             EmailCredentials.field_i = bi.a("benefits", "headline", PictureStrip.field_n, (byte) -79);
             SpriteCheckboxPainter.field_a = bi.a("benefits", "blurbpane", PictureStrip.field_n, (byte) -97);

@@ -81,7 +81,7 @@ final class StripedProgressBar extends UiComponent {
           LinkButtonPainter.a((byte) 92);
           return var11;
         }
-        this.a(-24, 16, 122, (byte) -10);
+        this.drawLayer(-24, 16, 122, (byte) -10);
         Sprite var10 = new Sprite(var2, this.field_C);
         Checkbox.a(-72, var10);
         for (var4Lifetime1 = 0; this.field_C > var4Lifetime1; var4Lifetime1++) {
@@ -114,7 +114,7 @@ final class StripedProgressBar extends UiComponent {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, (16711422 & param6) >> 1);
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         if (param1 != 0) {
           return;
         }

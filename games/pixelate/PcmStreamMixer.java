@@ -27,16 +27,16 @@ final class PcmStreamMixer extends PcmStream {
         Object var4 = null;
         do {
           if (this.field_q < 0) {
-            this.e(param0);
+            this.skipSubstreams(param0);
             return;
           }
           if (this.processedSamples + param0 < this.field_q) {
             this.processedSamples = this.processedSamples + param0;
-            this.e(param0);
+            this.skipSubstreams(param0);
             return;
           }
           var2 = this.field_q - this.processedSamples;
-          this.e(var2);
+          this.skipSubstreams(var2);
           param0 = param0 - var2;
           this.processedSamples = this.processedSamples + var2;
           this.normalizeListenerDeadlines();
@@ -107,7 +107,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    private final void e(int param0) {
+    private final void skipSubstreams(int param0) {
         PcmStream var2 = (PcmStream) (this.field_r.c(1504642273));
         while (var2 != null) {
           var2.skip(param0);

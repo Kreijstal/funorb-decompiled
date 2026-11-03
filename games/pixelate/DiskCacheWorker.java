@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskCacheWorker implements Runnable {
-    private DualLinkDeque field_b;
+    private DualLinkDeque requests;
     static el field_f;
     static SceneWidget field_a;
     private Thread field_d;
@@ -22,15 +22,15 @@ final class DiskCacheWorker implements Runnable {
           String var6 = null;
           var5 = Pixelate.field_H ? 1 : 0;
           while (!this.field_e) {
-            var2 = this.field_b;
+            var2 = this.requests;
             synchronized (var2) {
-              var7 = (DiskCacheRequest) (this.field_b.a((byte) 80));
+              var7 = (DiskCacheRequest) (this.requests.a((byte) 80));
               if (var7 != null) {
                 this.field_c = this.field_c - 1;
                 decompiledRegionSelector0 = 1;
               } else {
                 try {
-                  this.field_b.wait();
+                  this.requests.wait();
                 } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   interruptedException = (InterruptedException) (Object) decompiledCaughtException;
@@ -83,8 +83,8 @@ final class DiskCacheWorker implements Runnable {
           int var2 = 0;
           var2 = 62 % ((param0 - 18) / 56);
           this.field_e = true;
-          synchronized (this.field_b) {
-            this.field_b.notifyAll();
+          synchronized (this.requests) {
+            this.requests.notifyAll();
           }
           try {
             this.field_d.join();
@@ -99,13 +99,13 @@ final class DiskCacheWorker implements Runnable {
     }
 
     private final void a(byte param0, DiskCacheRequest param1) {
-        synchronized (this.field_b) {
+        synchronized (this.requests) {
           if (param0 < 63) {
             this.run();
           }
-          this.field_b.addLast(-115, param1);
+          this.requests.addLast(-115, param1);
           this.field_c = this.field_c + 1;
-          this.field_b.notifyAll();
+          this.requests.notifyAll();
         }
     }
 
@@ -119,7 +119,7 @@ final class DiskCacheWorker implements Runnable {
         field_f = null;
     }
 
-    final DiskCacheRequest a(int param0, SectorCacheStore param1, int param2) {
+    final DiskCacheRequest readNow(int param0, SectorCacheStore param1, int param2) {
         DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -135,9 +135,9 @@ final class DiskCacheWorker implements Runnable {
         try {
           var4 = new DiskCacheRequest();
           var4.field_C = 1;
-          var5 = this.field_b;
+          var5 = this.requests;
           synchronized (var5) {
-            var6 = (DiskCacheRequest) (this.field_b.c(72));
+            var6 = (DiskCacheRequest) (this.requests.c(72));
             while (var6 != null) {
               if (~var6.field_q == ~(long)param0 &&
                 param1 == var6.field_G &&
@@ -147,7 +147,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (DiskCacheRequest) (this.field_b.a(65151));
+              var6 = (DiskCacheRequest) (this.requests.a(65151));
             }
           }
           if (param2 < 53) {
@@ -248,7 +248,7 @@ final class DiskCacheWorker implements Runnable {
 
     DiskCacheWorker(PlatformTaskDispatcher param0) {
         PlatformTask var2 = null;
-        this.field_b = new DualLinkDeque();
+        this.requests = new DualLinkDeque();
         this.field_c = 0;
         this.field_e = false;
         try {

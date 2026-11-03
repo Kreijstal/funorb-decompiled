@@ -23,8 +23,8 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         field_J = null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) -24);
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
+        super.drawLayer(param0, param1, param2, (byte) -24);
         this.field_O.drawParagraph(this.field_N, 14 + (this.field_z + param2), this.field_p + param0 + 10, this.field_E - 28, this.field_C, 16777215, -1, 0, 0, this.field_O.maxAscent);
         int var5 = -57 / ((param3 - 70) / 49);
     }
@@ -138,7 +138,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           var5 = -2 + this.field_C;
           this.a(this.field_E, (byte) 63, 0, 0, this.field_C + 34);
           var4.a(-14 + this.field_E, (byte) 81, var5, 7, 30);
-          this.b(var4, 80);
+          this.addChild(var4, 80);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

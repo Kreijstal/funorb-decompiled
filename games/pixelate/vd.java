@@ -17,7 +17,7 @@ final class vd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = fl.field_b.a((byte) 24, param0, "");
+            stackIn_4_0 = fl.field_b.getNamedFile((byte) 24, param0, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

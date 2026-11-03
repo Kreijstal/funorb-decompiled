@@ -16,7 +16,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         if (!param0) {
           field_H = (Sprite) null;
         }
-        return null != this.m(0) ? true : false;
+        return null != this.getFocusedChild(0) ? true : false;
     }
 
     final boolean focusNext(UiComponent param0, int param1) {
@@ -152,7 +152,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           if (param0 >= -95) {
             this.a(-13, (byte) -36, 75, -82, -49);
           }
-          stackIn_3_0 = this.a(-18125, 1, param1);
+          stackIn_3_0 = this.focusBackwardBy(-18125, 1, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         UiComponent[] var2;
         int var3;
         Object var5;
@@ -229,7 +229,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         while (var7.length > var3) {
           var4 = var7[var3];
           if (var4 != null) {
-            var5_ref = var4.b((byte) 36);
+            var5_ref = var4.getTooltip((byte) 36);
             if (var5_ref != null) {
               return var5_ref;
             }
@@ -306,8 +306,8 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           if (param1) {
             field_F = (fp) null;
           }
-          if (this.a(-90, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-90, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             this.appendDebugChildren(param0, param3, (byte) 127, param2);
           }
           stackIn_5_0 = (StringBuilder) (param0);
@@ -384,7 +384,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final void h(int param0) {
+    final void blur(int param0) {
         int var3 = 0;
         UiComponent[] var2;
         UiComponent var4;
@@ -399,12 +399,12 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            var4.h(2);
+            var4.blur(2);
           }
         }
     }
 
-    final int e(int param0) {
+    final int getTopLayer(int param0) {
         int var4 = 0;
         int var2;
         UiComponent[] var3;
@@ -420,7 +420,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.e(61);
+            var6 = var5.getTopLayer(61);
             if (var6 > var2) {
               var2 = var6;
             }
@@ -446,7 +446,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           }
           var4_int = 0;
           if (param1 != -44) {
-            this.e(-60);
+            this.getTopLayer(-60);
           }
           while (this.children.length > var4_int) {
             var5 = this.children[var4_int];
@@ -527,7 +527,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    private final UiComponent m(int param0) {
+    private final UiComponent getFocusedChild(int param0) {
         int var3 = 0;
         UiComponent[] var2;
         UiComponent var4;
@@ -549,7 +549,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         return null;
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5;
         UiComponent var6;
         int var7;
@@ -563,7 +563,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           for (var5 = this.children.length - 1; 0 <= var5; var5--) {
             var6 = this.children[var5];
             if (var6 != null) {
-              var6.a(this.field_p + param0, param1, param2 + this.field_z, (byte) -95);
+              var6.drawLayer(this.field_p + param0, param1, param2 + this.field_z, (byte) -95);
             }
           }
         }
@@ -603,7 +603,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    private final boolean a(int param0, int param1, UiComponent param2) {
+    private final boolean focusBackwardBy(int param0, int param1, UiComponent param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiComponent var5 = null;
@@ -732,7 +732,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           var12 = this.children;
           var8 = var12;
           if (param1 < 61) {
-            this.h(91);
+            this.blur(91);
           }
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];

@@ -224,7 +224,7 @@ final class BoardView {
           }
           var5_int = param0.getGroupId(param2 + 123, param1);
           var6 = param0.getFileId((byte) -112, param3, var5_int);
-          stackIn_3_0 = IsaacRandom.a(param0, var5_int, 48077700, param4, var6);
+          stackIn_3_0 = IsaacRandom.loadFont(param0, var5_int, 48077700, param4, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

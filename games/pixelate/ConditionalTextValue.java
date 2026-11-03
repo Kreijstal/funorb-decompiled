@@ -33,31 +33,31 @@ final class ConditionalTextValue {
           return td.field_d;
         }
         if (null != DebouncedValidator.field_e) {
-          if (!DebouncedValidator.field_e.b(param0 ^ -16421)) {
+          if (!DebouncedValidator.field_e.ensureIndex(param0 ^ -16421)) {
             return hm.field_a;
           }
           return wa.field_a;
         }
-        if (!wk.field_j.b(-3)) {
+        if (!wk.field_j.ensureIndex(-3)) {
           return SocialListEntry.field_Mb;
         }
         if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
           return PasswordValidator.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
         }
-        if (!io.field_g.b(param0 ^ -16421)) {
+        if (!io.field_g.ensureIndex(param0 ^ -16421)) {
           return CanvasRasterBuffer.field_f;
         }
         if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
           return CipherPacketBuffer.field_x + " - " + io.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
         }
-        if (!MatchingTextValidator.field_u.b(-3)) {
+        if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
           return jd.field_p;
         }
         if (param0 != 16422) {
           ConditionalTextValue.b(34);
         }
-        if (!MatchingTextValidator.field_u.a((byte) 92)) {
-          return em.field_a + " - " + MatchingTextValidator.field_u.c(0) + "%";
+        if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
+          return em.field_a + " - " + MatchingTextValidator.field_u.getOverallProgress(0) + "%";
         }
         return GrowableIntList.field_b;
     }

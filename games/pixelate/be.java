@@ -775,7 +775,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
@@ -786,7 +786,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           if (this.field_Q != null) {
             SoftwareRasterizer.drawHorizontalLine(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
           }
-          super.a(param0, param1, param2, (byte) 6);
+          super.drawLayer(param0, param1, param2, (byte) 6);
           var5_int = 11 / ((param3 - 70) / 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1843,11 +1843,11 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           dupTemp$0 = new LabeledField(10, this.field_p, this.field_E - 20, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
           var10 = dupTemp$0;
-          this.b(dupTemp$0, 80);
+          this.addChild(dupTemp$0, 80);
           this.field_p = this.field_p + (((UiComponent) ((Object) var10)).field_C + 5);
           dupTemp$1 = new LabeledField(10, this.field_p, -20 + this.field_E, 25, this.field_O, false, 80, 3, var7, 16777215, AccountRequestDialog.field_qb);
           var10Lifetime1 = dupTemp$1;
-          this.b(dupTemp$1, 80);
+          this.addChild(dupTemp$1, 80);
           this.field_L.field_n = (UiListener) (this);
           this.field_p = this.field_p + (5 + ((UiComponent) ((Object) var10Lifetime1)).field_C);
           if (this.field_Q != null) {
@@ -1884,12 +1884,12 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
             }
           }
           this.a(this.field_E, (byte) 34, 0, 0, this.field_p + 3);
-          this.b(this.field_L, 80);
+          this.addChild(this.field_L, 80);
           if (this.field_Q != null) {
-            this.b(this.field_Q, 80);
+            this.addChild(this.field_Q, 80);
           }
           if (this.field_N != null) {
-            this.b(this.field_N, 80);
+            this.addChild(this.field_N, 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

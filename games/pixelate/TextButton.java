@@ -57,7 +57,7 @@ class TextButton extends UiComponent {
         try {
           if (this.field_H &&
             this.field_I) {
-            param0.h(2);
+            param0.blur(2);
             this.field_K = true;
             if (param1 != 27) {
               TextButton.a(-64, (sb) null, 111, 79, (sb) null, 120, -16, 109, (sb) null, 39, -126, (BitmapFont) null, 33, -16, (BitmapFont) null, -57, -112, -56, 119, 16);
@@ -117,8 +117,8 @@ class TextButton extends UiComponent {
           if (param1) {
             this.field_K = false;
           }
-          if (this.a(-89, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-89, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             if (this.field_M) {
               discarded$2 = param0.append(" active");
             }
@@ -533,7 +533,7 @@ class TextButton extends UiComponent {
         this.field_I = true;
     }
 
-    final void h(int param0) {
+    final void blur(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {

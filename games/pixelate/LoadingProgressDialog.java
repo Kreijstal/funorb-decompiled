@@ -37,7 +37,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_db = false;
           this.field_bb.field_Y = true;
           this.field_ab = false;
-          this.b(this.field_bb, 80);
+          this.addChild(this.field_bb, 80);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

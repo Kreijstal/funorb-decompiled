@@ -55,14 +55,14 @@ final class VorbisSample extends IntrusiveNode {
         field_P = 0;
     }
 
-    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample load(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
             param0.ensureFileAvailableByName(0, param1, param2);
             return null;
           }
-          byte[] var3 = param0.a((byte) 24, param2, param1);
+          byte[] var3 = param0.getNamedFile((byte) 24, param2, param1);
           if (var3 == null) {
             return null;
           }
@@ -211,7 +211,7 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a(param1, param2, -2);
+            param0.isFileAvailable(param1, param2, -2);
             return null;
           }
           byte[] var3 = param0.a(param1, param2, true);

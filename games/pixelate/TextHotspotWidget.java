@@ -8,19 +8,19 @@ class TextHotspotWidget extends TextButton {
     static boolean field_U;
     static byte[][] field_S;
     static int[] field_T;
-    private IntrusiveDeque field_Q;
-    private ni field_P;
+    private IntrusiveDeque hotspotRegions;
+    private ni hoveredHotspot;
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int param0, int param1, int param2, byte param3) {
         int var8 = 0;
         int var9 = 0;
-        super.a(param0, param1, param2, (byte) 119);
+        super.drawLayer(param0, param1, param2, (byte) 119);
         if (0 != param1) {
           return;
         }
         int var5 = -12 % ((70 - param3) / 49);
         WidgetTextLayout var6 = (WidgetTextLayout) ((Object) this.field_y);
-        ni var7 = this.field_P;
+        ni var7 = this.hoveredHotspot;
         if (var7 == null) {
         } else {
           var8 = var6.a((byte) 69, (UiComponent) (this), param2);
@@ -32,7 +32,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(int param0) {
+    final void rebuildHotspots(int param0) {
         ni discarded$0 = null;
         int var11 = 0;
         int stackIn_10_0 = 0;
@@ -53,10 +53,10 @@ class TextHotspotWidget extends TextButton {
         int var16;
         int var7Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
-        this.field_Q = new IntrusiveDeque();
+        this.hotspotRegions = new IntrusiveDeque();
         var2 = 0;
         if (param0 != 1829) {
-          discarded$0 = this.b(64, -98, -83);
+          discarded$0 = this.hotspotAt(64, -98, -83);
         }
         var3 = (WidgetTextLayout) ((Object) this.field_y);
         var4 = var3.getTextLayout(-124, (UiComponent) (this));
@@ -94,7 +94,7 @@ class TextHotspotWidget extends TextButton {
             if (var10 != null) {
               ((ni) (var10)).field_l = var15;
             }
-            this.field_Q.addFirst(22125, var15);
+            this.hotspotRegions.addFirst(22125, var15);
             var10 = var15;
           }
         }
@@ -128,7 +128,7 @@ class TextHotspotWidget extends TextButton {
           }
           this.hotspotTooltips[param2] = param0;
           if (param1 != 0) {
-            discarded$1 = this.b(70, 115, -84);
+            discarded$1 = this.hotspotAt(70, 115, -84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,7 +153,7 @@ class TextHotspotWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 27) {
-            this.a(123);
+            this.rebuildHotspots(123);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,9 +172,9 @@ class TextHotspotWidget extends TextButton {
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         super.a(param0, (byte) 53, param2, param3, param4);
-        this.a(1829);
+        this.rebuildHotspots(1829);
         if (param1 < 19) {
-          this.field_Q = (IntrusiveDeque) null;
+          this.hotspotRegions = (IntrusiveDeque) null;
         }
     }
 
@@ -199,7 +199,7 @@ class TextHotspotWidget extends TextButton {
 
     TextHotspotWidget(String param0, WidgetPainter param1) {
         super(param0, (UiListener) null);
-        this.field_P = null;
+        this.hoveredHotspot = null;
         try {
           this.field_y = param1;
         } catch (RuntimeException runtimeException) {
@@ -223,7 +223,7 @@ class TextHotspotWidget extends TextButton {
         super.a(param0, param1, param2, param3);
         int var5 = -this.field_z + param3;
         int var6 = -this.field_p + param1;
-        ni var7 = this.b(var5, -22562, var6);
+        ni var7 = this.hotspotAt(var5, -22562, var6);
         if (var7 != null &&
           this.field_n != null) {
           ((TextHotspotListener) ((Object) this.field_n)).a(var7.field_n, param2, -8894, this);
@@ -278,23 +278,23 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    String b(byte param0) {
-        if (null == this.field_P) {
+    String getTooltip(byte param0) {
+        if (null == this.hoveredHotspot) {
           return null;
         }
         if (this.hotspotTooltips == null) {
           return null;
         }
         if (param0 <= 16) {
-          this.field_P = (ni) null;
+          this.hoveredHotspot = (ni) null;
         }
-        if (this.field_P.field_n >= this.hotspotTooltips.length) {
+        if (this.hoveredHotspot.field_n >= this.hotspotTooltips.length) {
           return null;
         }
-        return this.hotspotTooltips[this.field_P.field_n];
+        return this.hotspotTooltips[this.hoveredHotspot.field_n];
     }
 
-    private final ni b(int param0, int param1, int param2) {
+    private final ni hotspotAt(int param0, int param1, int param2) {
         ni var4;
         ni var5;
         int var6;
@@ -302,7 +302,7 @@ class TextHotspotWidget extends TextButton {
         if (param1 != -22562) {
           field_R = 126;
         }
-        var4 = (ni) (this.field_Q.c(1504642273));
+        var4 = (ni) (this.hotspotRegions.c(1504642273));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -314,7 +314,7 @@ class TextHotspotWidget extends TextButton {
             }
             var5 = var5.field_l;
           }
-          var4 = (ni) (this.field_Q.last(1504642273));
+          var4 = (ni) (this.hotspotRegions.last(1504642273));
         }
         return null;
     }
@@ -386,11 +386,11 @@ class TextHotspotWidget extends TextButton {
         int var6 = 0;
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_P = null;
+          this.hoveredHotspot = null;
           if (this.field_D) {
             var5_int = ProxyAuthenticationException.field_d - (param2 + this.field_z);
             var6 = -param1 + (StatusBar.field_k - this.field_p);
-            this.field_P = this.b(var5_int, -22562, var6);
+            this.hoveredHotspot = this.hotspotAt(var5_int, -22562, var6);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "db.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

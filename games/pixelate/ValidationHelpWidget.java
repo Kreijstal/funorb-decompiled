@@ -9,7 +9,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     private ValidationSource field_W;
     private Sprite field_Z;
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         if (param0 > 16) {
           return null;
         }
@@ -76,7 +76,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         String var5;
         dj var6;
         int var14;
@@ -120,7 +120,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var5 = NameAvailabilityValidator.field_m;
         }
         if (var5.equals(this.field_q)) {
-          super.a(param0, param1, param2, (byte) -25);
+          super.drawLayer(param0, param1, param2, (byte) -25);
           var6Lifetime1 = this.field_W.a((byte) 97);
           var29 = (WidgetTextLayout) ((Object) this.field_y);
           var9 = this.field_z + param2;
@@ -166,8 +166,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           return;
         }
         this.field_q = var5;
-        this.a(1829);
-        super.a(param0, param1, param2, (byte) -25);
+        this.rebuildHotspots(1829);
+        super.drawLayer(param0, param1, param2, (byte) -25);
         var6Lifetime2 = this.field_W.a((byte) 97);
         var28 = (WidgetTextLayout) ((Object) this.field_y);
         var9Lifetime1 = this.field_z + param2;

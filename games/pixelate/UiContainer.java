@@ -295,7 +295,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final void h(int param0) {
+    final void blur(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != 2) {
           UiComponent var5 = (UiComponent) null;
@@ -304,7 +304,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiComponent var3 = (UiComponent) (var2.d(0));
         while (var3 != null) {
-          var3.h(2);
+          var3.blur(2);
           var3 = (UiComponent) (var2.a((byte) -104));
         }
     }
@@ -314,7 +314,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           this.children = (IntrusiveDeque) null;
         }
         super.a(param0, (byte) 126, param2, param3, param4);
-        this.j(-8133);
+        this.clearFocus(-8133);
     }
 
     final boolean handlePointerPress(byte param0, UiComponent param1, int param2, int param3, int param4, int param5, int param6) {
@@ -373,7 +373,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         this.children = new IntrusiveDeque();
     }
 
-    final void b(UiComponent param0, int param1) {
+    final void addChild(UiComponent param0, int param1) {
         try {
           this.children.addFirst(22125, param0);
           if (param1 != 80) {
@@ -476,8 +476,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param1) {
             field_G = (String) null;
           }
-          if (this.a(-60, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-60, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             this.appendDebugChildren(param2, param3, 32, param0);
           }
           stackIn_5_0 = (StringBuilder) (param0);
@@ -502,7 +502,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int param0, int param1, int param2, byte param3) {
         int var8 = Pixelate.field_H ? 1 : 0;
         if (param1 == 0 &&
           null != this.field_y) {
@@ -512,12 +512,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var7 = 101 % ((param3 - 70) / 49);
         UiComponent var6 = (UiComponent) (var5.b(-1));
         while (var6 != null) {
-          var6.a(this.field_p + param0, param1, this.field_z + param2, (byte) -68);
+          var6.drawLayer(this.field_p + param0, param1, this.field_z + param2, (byte) -68);
           var6 = (UiComponent) (var5.previous(-91));
         }
     }
 
-    String b(byte param0) {
+    String getTooltip(byte param0) {
         IntrusiveDequeCursor var2;
         UiComponent var3;
         String var4;
@@ -529,7 +529,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
         var3 = (UiComponent) (var2.d(0));
         while (var3 != null) {
-          var4 = var3.b((byte) 36);
+          var4 = var3.getTooltip((byte) 36);
           if (var4 != null) {
             return var4;
           }
@@ -552,7 +552,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         return null;
     }
 
-    final int e(int param0) {
+    final int getTopLayer(int param0) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         int var2 = 0;
@@ -562,7 +562,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         UiComponent var4 = (UiComponent) (var3.d(0));
         while (var4 != null) {
-          var5 = var4.e(58);
+          var5 = var4.getTopLayer(58);
           if (var2 < var5) {
             var2 = var5;
           }
@@ -571,7 +571,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         return var2;
     }
 
-    private final void j(int param0) {
+    private final void clearFocus(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiComponent var3 = (UiComponent) (var2.d(param0 ^ param0));

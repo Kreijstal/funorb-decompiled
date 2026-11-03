@@ -85,7 +85,7 @@ abstract class Js5Transport {
         return var8;
     }
 
-    abstract void e(byte param0);
+    abstract void reportIntegrityFailure(byte param0);
 
     final int b(int param0) {
         int var2 = 23 % ((58 - param0) / 55);
@@ -109,18 +109,18 @@ abstract class Js5Transport {
               SecondaryNodeDeque.field_f[2 + (0 + 8 * var3_int)] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_move3", "");
               SecondaryNodeDeque.field_f[3 + var3_int * 8] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_move4", "");
             } else {
-              SecondaryNodeDeque.field_f[0 + var3_int * 8 + 0] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move1").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[0 + 8 * var3_int + 1] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move2").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[2 + (0 + var3_int * 8)] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move3").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[3 + var3_int * 8] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_move4").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[0 + var3_int * 8 + 0] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move1").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[0 + 8 * var3_int + 1] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move2").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[2 + (0 + var3_int * 8)] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move3").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[3 + var3_int * 8] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_move4").decodeAllToPcm();
             }
             SecondaryNodeDeque.field_f[5 + var3_int * 8] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_landing_normal", "");
             if (7 == var3_int) {
               SecondaryNodeDeque.field_f[8 * var3_int + 6] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_landing_special", "");
               SecondaryNodeDeque.field_f[8 * var3_int + 7] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_picture_complete", "");
             } else {
-              SecondaryNodeDeque.field_f[6 + var3_int * 8] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_landing_special").decodeAllToPcm();
-              SecondaryNodeDeque.field_f[7 + var3_int * 8] = VorbisSample.a(param2, "", "pix_skin" + var4 + "_picture_complete").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[6 + var3_int * 8] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_landing_special").decodeAllToPcm();
+              SecondaryNodeDeque.field_f[7 + var3_int * 8] = VorbisSample.load(param2, "", "pix_skin" + var4 + "_picture_complete").decodeAllToPcm();
             }
             SecondaryNodeDeque.field_f[4 + 8 * var3_int] = param0.getSoundEffectByName(true, "pix_skin" + var4 + "_tile_rotate", "");
           }

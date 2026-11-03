@@ -173,11 +173,11 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         RuntimeException decompiledCaughtException = null;
         try {
           var11 = new LabeledField(20, param2, param0 + 120, 25, param1, false, 120, 3, he.field_d, 16777215, param5);
-          this.b(var11, 80);
+          this.addChild(var11, 80);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param1)).a(1), param3, 126, param2 + var11.field_C, 25 + param0, param6);
           var9.field_n = (UiListener) (this);
           var10 = 105 % ((param4 + 19) / 35);
-          this.b(var9, 80);
+          this.addChild(var9, 80);
           stackIn_1_0 = var11.field_C + var9.field_C;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -272,18 +272,18 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         int var4 = 4;
         var2.a(270, (byte) 51, var3, 20, 50);
         int var5 = 200;
-        this.b(var2, 80);
+        this.addChild(var2, 80);
         var3 += 50;
         var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, this.field_O, BufferedSocket.field_i, 170));
         this.field_P.a(var5, (byte) 49, var3, 496 - var5 >> 1, 40);
         this.field_N.a(60, (byte) 38, 15 + var3, 3 + var4, 40);
         this.field_N.field_n = (UiListener) (this);
         this.field_P.field_n = (UiListener) (this);
-        this.b(this.field_P, 80);
-        this.b(this.field_N, 80);
+        this.addChild(this.field_P, 80);
+        this.addChild(this.field_N, 80);
         this.field_S = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_S.a(-this.field_O.field_E + (-this.field_O.field_z + (this.field_E - 60)), (byte) 47, 20, this.field_O.field_z - (-this.field_O.field_E - 60), 150);
-        this.b(this.field_S, 80);
+        this.addChild(this.field_S, 80);
         this.a(496, (byte) 89, 0, 0, var4 + 55 + var3);
     }
 

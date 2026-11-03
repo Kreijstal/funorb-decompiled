@@ -19,7 +19,7 @@ final class ValidationIndicator extends TextButton {
         }
     }
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         if (this.field_D) {
           return this.field_P.b((byte) -7);
         }
@@ -118,7 +118,7 @@ final class ValidationIndicator extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5;
         int var6;
         int var7;
@@ -133,7 +133,7 @@ final class ValidationIndicator extends TextButton {
         int var10Lifetime1;
         int var11Lifetime1;
         var12 = Pixelate.field_H ? 1 : 0;
-        super.a(param0, param1, param2, (byte) 125);
+        super.drawLayer(param0, param1, param2, (byte) 125);
         if (param1 != 0) {
           return;
         }

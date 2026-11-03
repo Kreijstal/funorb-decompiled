@@ -31,7 +31,7 @@ final class AlphaContainer extends SingleChildContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         if (param1 != 0) {
           return;
         }
@@ -42,13 +42,13 @@ final class AlphaContainer extends SingleChildContainer {
           return;
         }
         if (256 == this.field_O) {
-          this.child.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 122);
+          this.child.drawLayer(param0 + this.field_p, param1, param2 + this.field_z, (byte) 122);
           return;
         }
         Sprite var7 = new Sprite(this.child.field_E, this.child.field_C);
         Checkbox.a(-111, var7);
         int var6 = -5 % ((70 - param3) / 49);
-        this.child.a(0, param1, 0, (byte) -79);
+        this.child.drawLayer(0, param1, 0, (byte) -79);
         LinkButtonPainter.a((byte) 92);
         var7.a(this.field_z + param2, this.field_p + param0, this.field_O);
     }

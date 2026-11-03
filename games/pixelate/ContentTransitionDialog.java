@@ -109,7 +109,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 59 % ((49 - param1) / 54);
-          stackIn_1_0 = ig.field_b.a((byte) 24, param0, "");
+          stackIn_1_0 = ig.field_b.getNamedFile((byte) 24, param0, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,7 +310,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             this.field_bb = new AlphaContainer();
           }
-          this.b(this.field_bb, 80);
+          this.addChild(this.field_bb, 80);
           this.field_db = null;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

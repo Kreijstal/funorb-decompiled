@@ -169,7 +169,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         if (!this.field_D) {
           return null;
         }

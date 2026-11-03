@@ -106,13 +106,13 @@ final class NumericDateInputWidget extends DateInputWidget {
           this.field_U.field_y = param0;
           this.field_S = param1 ? true : false;
           if (!this.field_S) {
-            this.b(this.field_U, 80);
-            this.b(this.field_O, 80);
+            this.addChild(this.field_U, 80);
+            this.addChild(this.field_O, 80);
           } else {
-            this.b(this.field_O, 80);
-            this.b(this.field_U, 80);
+            this.addChild(this.field_O, 80);
+            this.addChild(this.field_U, 80);
           }
-          this.b(this.field_Q, 80);
+          this.addChild(this.field_Q, 80);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -198,8 +198,8 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) -123);
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
+        super.drawLayer(param0, param1, param2, (byte) -123);
         if (param1 == 0) {
           param0 = param0 + this.field_p;
           int var5 = -46 / ((param3 - 70) / 49);
@@ -254,8 +254,8 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final String b(byte param0) {
-        String var2 = this.field_O.b((byte) 114);
+    final String getTooltip(byte param0) {
+        String var2 = this.field_O.getTooltip((byte) 114);
         if (var2 != null) {
           return var2;
         }

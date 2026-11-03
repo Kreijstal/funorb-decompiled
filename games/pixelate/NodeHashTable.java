@@ -154,27 +154,27 @@ final class NodeHashTable {
           return 0;
         }
         if (wo.field_d == 0) {
-          if (!wk.field_j.b(-3)) {
+          if (!wk.field_j.ensureIndex(-3)) {
             return 20;
           }
           if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 40;
           }
-          if (!io.field_g.b(-3)) {
+          if (!io.field_g.ensureIndex(-3)) {
             return 50;
           }
           if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 60;
           }
-          if (!MatchingTextValidator.field_u.b(-3)) {
+          if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
             return 70;
           }
-          if (!MatchingTextValidator.field_u.a((byte) 92)) {
+          if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
             return 80;
           }
         } else {
           if (null != DebouncedValidator.field_e) {
-            if (!DebouncedValidator.field_e.b(-3)) {
+            if (!DebouncedValidator.field_e.ensureIndex(-3)) {
               return 14;
             }
             if (!DebouncedValidator.field_e.hasGroupName(127, "")) {
@@ -184,22 +184,22 @@ final class NodeHashTable {
               return 29;
             }
           }
-          if (!wk.field_j.b(-3)) {
+          if (!wk.field_j.ensureIndex(-3)) {
             return 43;
           }
           if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 57;
           }
-          if (!io.field_g.b(-3)) {
+          if (!io.field_g.ensureIndex(-3)) {
             return 71;
           }
           if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 80;
           }
-          if (!MatchingTextValidator.field_u.b(-3)) {
+          if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
             return 82;
           }
-          if (!MatchingTextValidator.field_u.a((byte) 92)) {
+          if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
             return 86;
           }
         }

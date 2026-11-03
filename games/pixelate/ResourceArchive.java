@@ -11,7 +11,7 @@ final class ResourceArchive {
     boolean discardPackedGroups;
     private ArchiveProvider field_a;
     int field_e;
-    private Object[][] field_k;
+    private Object[][] unpackedFiles;
     static SceneWidget[] field_h;
 
     final int getGroupId(int param0, String param1) {
@@ -27,7 +27,7 @@ final class ResourceArchive {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-3)) {
+          if (!this.ensureIndex(-3)) {
             stackIn_2_0 = -1;
             return stackIn_2_0;
           }
@@ -72,7 +72,7 @@ final class ResourceArchive {
           if (param0 < 100) {
             this.index = (ArchiveIndex) (this.packedGroups[7]);
           }
-          if (!this.b(-3)) {
+          if (!this.ensureIndex(-3)) {
             stackIn_5_0 = 0;
             return stackIn_5_0;
           }
@@ -96,7 +96,7 @@ final class ResourceArchive {
     }
 
     private final synchronized boolean a(int param0, int param1) {
-        if (!this.b(param1 - 2)) {
+        if (!this.ensureIndex(param1 - 2)) {
           return false;
         }
         if (~param0 > param1 ||
@@ -113,7 +113,7 @@ final class ResourceArchive {
     final int b(int param0, byte param1) {
         byte[] discarded$0 = null;
         if (param1 < 22) {
-          discarded$0 = this.a(((int[]) (this.packedGroups[1]))[10], (int[]) null, 79, ((int[]) (this.packedGroups[0]))[1]);
+          discarded$0 = this.getFileWithKey(((int[]) (this.packedGroups[1]))[10], (int[]) null, 79, ((int[]) (this.packedGroups[0]))[1]);
         }
         if (!this.a(param0, -1)) {
           return 0;
@@ -130,7 +130,7 @@ final class ResourceArchive {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-3)) {
+          if (!this.ensureIndex(-3)) {
             return false;
           }
           param1 = param1.toLowerCase();
@@ -187,7 +187,7 @@ final class ResourceArchive {
             }
             if (param2 != -52) {
               var5 = (CharSequence) null;
-              ResourceArchive.a((byte) 28, (CharSequence) null);
+              ResourceArchive.ensureGroupAvailableByName((byte) 28, (CharSequence) null);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,7 +228,7 @@ final class ResourceArchive {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-3)) {
+          if (!this.ensureIndex(-3)) {
             return false;
           }
           if (param0 != 0) {
@@ -243,7 +243,7 @@ final class ResourceArchive {
           }
           var7 = (CharSequence) ((Object) param2);
           var5 = this.index.fileNameLookups[var4_int].a(WeightedLruCache.a(var7, (byte) 77), (byte) -67);
-          stackIn_10_0 = this.a(var4_int, var5, -2);
+          stackIn_10_0 = this.isFileAvailable(var4_int, var5, -2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,26 +269,26 @@ final class ResourceArchive {
         if (!param2) {
           ResourceArchive.a((PlatformTaskDispatcher) null, this.packedGroups[0], ((byte[]) (((Object[]) (this.packedGroups[0]))[1]))[2]);
         }
-        return this.a(-1, (int[]) null, param1, param0);
+        return this.getFileWithKey(-1, (int[]) null, param1, param0);
     }
 
-    final synchronized boolean b(int param0) {
+    final synchronized boolean ensureIndex(int param0) {
         if (null == this.index) {
           this.index = this.field_a.getIndex((byte) 36);
           if (this.index == null) {
             return false;
           }
           this.packedGroups = new Object[this.index.groupCapacity];
-          this.field_k = new Object[this.index.groupCapacity][];
+          this.unpackedFiles = new Object[this.index.groupCapacity][];
         }
         if (param0 != -3) {
-          this.a(-35, ((int[]) (this.packedGroups[0]))[8], 66);
+          this.isFileAvailable(-35, ((int[]) (this.packedGroups[0]))[8], 66);
           return true;
         }
         return true;
     }
 
-    final synchronized boolean a(byte param0) {
+    final synchronized boolean ensureAllGroupsAvailable(byte param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -299,7 +299,7 @@ final class ResourceArchive {
           var6 = (String) null;
           this.getGroupId(-33, (String) null);
         }
-        if (!this.b(-3)) {
+        if (!this.ensureIndex(-3)) {
           return false;
         }
         var2 = 1;
@@ -391,11 +391,11 @@ final class ResourceArchive {
           var34 = this.index.fileIds[param1];
           var24 = var34;
           var6 = var24;
-          if (null == this.field_k[param1]) {
+          if (null == this.unpackedFiles[param1]) {
             array$0 = new Object[this.index.field_i[param1]];
-            this.field_k[param1] = array$0;
+            this.unpackedFiles[param1] = array$0;
           }
-          var7 = this.field_k[param1];
+          var7 = this.unpackedFiles[param1];
           var8 = 1;
           for (var9_int = 0; var5_int > var9_int; var9_int++) {
             if (var6 == null) {
@@ -574,7 +574,7 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized byte[] a(int param0, int[] param1, int param2, int param3) {
+    private final synchronized byte[] getFileWithKey(int param0, int[] param1, int param2, int param3) {
         Object stackIn_26_0 = null;
         Object stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -584,24 +584,24 @@ final class ResourceArchive {
         byte[] var7 = null;
         try {
           if (param0 != -1) {
-            this.a((byte) 110);
+            this.ensureAllGroupsAvailable((byte) 110);
           }
-          if (!this.b(param2, 0, param3)) {
+          if (!this.isValidFileSlot(param2, 0, param3)) {
             return null;
           }
           var5 = null;
-          if ((null == this.field_k[param3] ||
-            this.field_k[param3][param2] == null) && !this.unpackGroup(param2, param3, param1, 0)) {
+          if ((null == this.unpackedFiles[param3] ||
+            this.unpackedFiles[param3][param2] == null) && !this.unpackGroup(param2, param3, param1, 0)) {
             this.b(param3, false);
             if (!this.unpackGroup(param2, param3, param1, 0)) {
               return null;
             }
           }
-          if (null == this.field_k[param3]) {
+          if (null == this.unpackedFiles[param3]) {
             throw new RuntimeException("");
           }
-          if (this.field_k[param3][param2] != null) {
-            var7 = UiTheme.a(false, false, this.field_k[param3][param2]);
+          if (this.unpackedFiles[param3][param2] != null) {
+            var7 = UiTheme.a(false, false, this.unpackedFiles[param3][param2]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -609,13 +609,13 @@ final class ResourceArchive {
           }
           if (var5 != null) {
             if (this.field_e == 1) {
-              this.field_k[param3][param2] = null;
+              this.unpackedFiles[param3][param2] = null;
               if (this.index.field_i[param3] == 1) {
-                this.field_k[param3] = null;
+                this.unpackedFiles[param3] = null;
               }
             } else {
               if (this.field_e == 2) {
-                this.field_k[param3] = null;
+                this.unpackedFiles[param3] = null;
               }
             }
           }
@@ -635,7 +635,7 @@ final class ResourceArchive {
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean ensureGroupAvailableByName(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
         Object var3 = null;
         boolean stackIn_3_0 = false;
@@ -674,11 +674,11 @@ final class ResourceArchive {
         if (null != this.packedGroups[param0]) {
           return 100;
         }
-        return this.field_a.b(param0, param1 ^ -8270);
+        return this.field_a.getGroupProgress(param0, param1 ^ -8270);
     }
 
     final synchronized byte[] b(int param0, int param1) {
-        if (!this.b(-3)) {
+        if (!this.ensureIndex(-3)) {
           return null;
         }
         if (this.index.field_i.length == 1) {
@@ -694,12 +694,12 @@ final class ResourceArchive {
         throw new RuntimeException();
     }
 
-    final synchronized boolean a(int param0, int param1, int param2) {
-        if (!this.b(param1, param2 ^ param2, param0)) {
+    final synchronized boolean isFileAvailable(int param0, int param1, int param2) {
+        if (!this.isValidFileSlot(param1, param2 ^ param2, param0)) {
           return false;
         }
-        if (this.field_k[param0] != null &&
-          this.field_k[param0][param1] != null) {
+        if (this.unpackedFiles[param0] != null &&
+          this.unpackedFiles[param0][param1] != null) {
           return true;
         }
         if (null != this.packedGroups[param0]) {
@@ -722,7 +722,7 @@ final class ResourceArchive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(param1 - 2)) {
+          if (!this.ensureIndex(param1 - 2)) {
             return false;
           }
           param0 = param0.toLowerCase();
@@ -764,14 +764,14 @@ final class ResourceArchive {
 
     final int b(byte param0) {
         int var2 = 75 / ((19 - param0) / 58);
-        if (!this.b(-3)) {
+        if (!this.ensureIndex(-3)) {
           return -1;
         }
         return this.index.field_i.length;
     }
 
-    private final synchronized boolean b(int param0, int param1, int param2) {
-        if (!this.b(-3)) {
+    private final synchronized boolean isValidFileSlot(int param0, int param1, int param2) {
+        if (!this.ensureIndex(-3)) {
           return false;
         }
         if (param2 >= param1 &&
@@ -797,12 +797,12 @@ final class ResourceArchive {
 
     private final synchronized void b(int param0, boolean param1) {
         if (param1) {
-          this.a(((byte[]) (this.packedGroups[4]))[1]);
+          this.ensureAllGroupsAvailable(((byte[]) (this.packedGroups[4]))[1]);
         }
         if (!this.discardPackedGroups) {
-          this.packedGroups[param0] = aj.a(false, this.field_a.a(param0, 103), -116);
+          this.packedGroups[param0] = aj.a(false, this.field_a.getEncodedGroup(param0, 103), -116);
         } else {
-          this.packedGroups[param0] = this.field_a.a(param0, -94);
+          this.packedGroups[param0] = this.field_a.getEncodedGroup(param0, -94);
         }
     }
 
@@ -829,7 +829,7 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
           var4_int = this.index.fileNameLookups[param2].a(WeightedLruCache.a(var5, (byte) 110), (byte) -67);
-          if (this.b(var4_int, 0, param2)) {
+          if (this.isValidFileSlot(var4_int, 0, param2)) {
             return var4_int;
           }
           stackIn_10_0 = -1;
@@ -862,14 +862,14 @@ final class ResourceArchive {
         return true;
     }
 
-    final synchronized int c(int param0) {
+    final synchronized int getOverallProgress(int param0) {
         int var2;
         int var3;
         int var4;
         int var5;
         int var4Lifetime1;
         var5 = Pixelate.field_H ? 1 : 0;
-        if (!this.b(-3)) {
+        if (!this.ensureIndex(-3)) {
           return 0;
         }
         var2 = param0;
@@ -887,7 +887,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final synchronized byte[] a(byte param0, String param1, String param2) {
+    final synchronized byte[] getNamedFile(byte param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -901,7 +901,7 @@ final class ResourceArchive {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(param0 - 27)) {
+          if (!this.ensureIndex(param0 - 27)) {
             return null;
           }
           if (param0 != 24) {

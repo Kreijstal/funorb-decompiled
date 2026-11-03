@@ -68,7 +68,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_vb = false;
           this.field_rb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_rb.field_Y = true;
-          this.b(this.field_rb, 80);
+          this.addChild(this.field_rb, 80);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

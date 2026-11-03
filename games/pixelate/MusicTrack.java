@@ -111,7 +111,7 @@ final class MusicTrack extends IntrusiveNode {
     }
 
     final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a((byte) 24, param2, param1);
+        byte[] var3 = param0.getNamedFile((byte) 24, param2, param1);
         if (var3 == null) {
           return null;
         }

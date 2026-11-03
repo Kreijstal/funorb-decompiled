@@ -309,7 +309,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (hf.field_q == 2) {
           if (DebouncedValidator.field_e != null &&
-            DebouncedValidator.field_e.b(-3)) {
+            DebouncedValidator.field_e.ensureIndex(-3)) {
             if (!DebouncedValidator.field_e.hasGroupName(param0 + 125, "")) {
               DebouncedValidator.field_e = null;
             } else {
@@ -362,8 +362,8 @@ abstract class NetworkGameClient extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (hf.field_q == 11) {
-          if (null != WidgetStyleLayer.field_f && (!WidgetStyleLayer.field_f.b(-3) ||
-            !WidgetStyleLayer.field_f.a((byte) 92))) {
+          if (null != WidgetStyleLayer.field_f && (!WidgetStyleLayer.field_f.ensureIndex(-3) ||
+            !WidgetStyleLayer.field_f.ensureAllGroupsAvailable((byte) 92))) {
             li.a(0.0f, -1, dk.a(wa.field_a, 0, hm.field_a, WidgetStyleLayer.field_f));
             decompiledFrameRemainder0 = false;
           }

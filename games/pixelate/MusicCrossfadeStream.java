@@ -66,7 +66,7 @@ final class MusicCrossfadeStream extends PcmStream {
               }
               this.field_q = param4;
               if (param4 != null) {
-                this.field_x.a(param4, -39, false);
+                this.field_x.playTrack(param4, -39, false);
                 this.a(-24762, param5, param0, this.field_x);
               }
             } else {
@@ -75,7 +75,7 @@ final class MusicCrossfadeStream extends PcmStream {
               }
               this.field_A = param4;
               if (param4 != null) {
-                this.field_H.a(param4, -39, false);
+                this.field_H.playTrack(param4, -39, false);
                 this.a(-24762, param5, param0, this.field_H);
               }
             }
@@ -116,7 +116,7 @@ final class MusicCrossfadeStream extends PcmStream {
               stackIn_50_1 = (MusicTrack) (param4);
               stackIn_50_2 = -39;
               stackIn_51_3 = !(param1);
-              ((MidiPcmStream) (Object) stackIn_50_0).a(stackIn_50_1, stackIn_50_2, stackIn_51_3);
+              ((MidiPcmStream) (Object) stackIn_50_0).playTrack(stackIn_50_1, stackIn_50_2, stackIn_51_3);
               this.a(-24762, param5, param0, this.field_H);
             }
             this.fadeStep = -param2;
@@ -130,7 +130,7 @@ final class MusicCrossfadeStream extends PcmStream {
               stackIn_41_1 = (MusicTrack) (param4);
               stackIn_41_2 = -39;
               stackIn_42_3 = !(param1);
-              ((MidiPcmStream) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_42_3);
+              ((MidiPcmStream) (Object) stackIn_41_0).playTrack(stackIn_41_1, stackIn_41_2, stackIn_42_3);
               this.a(-24762, param5, param0, this.field_x);
             }
             this.fadeStep = param2;
@@ -190,7 +190,7 @@ final class MusicCrossfadeStream extends PcmStream {
         field_E = null;
     }
 
-    private final void a(MidiPcmStream param0, byte param1, MidiPcmStream param2) {
+    private final void initializeSequencers(MidiPcmStream param0, byte param1, MidiPcmStream param2) {
         try {
           this.field_x = param0;
           this.field_H = param2;
@@ -521,7 +521,7 @@ final class MusicCrossfadeStream extends PcmStream {
         this.field_I = 0;
         this.field_D = 256;
         MidiPcmStream var1 = new MidiPcmStream();
-        this.a(var1, (byte) 26, new MidiPcmStream(var1));
+        this.initializeSequencers(var1, (byte) 26, new MidiPcmStream(var1));
     }
 
     static {

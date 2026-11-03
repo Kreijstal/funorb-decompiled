@@ -93,10 +93,10 @@ final class PaletteBitmapFont extends BitmapFont {
     }
 
     final int findNearestBasePaletteIndex(int param0) {
-        return PaletteBitmapFont.a(this.colorPalettes[0], param0);
+        return PaletteBitmapFont.findNearestPaletteIndex(this.colorPalettes[0], param0);
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int findNearestPaletteIndex(int[] param0, int param1) {
         int var4 = 0;
         int var2;
         int var3;
@@ -121,7 +121,7 @@ final class PaletteBitmapFont extends BitmapFont {
         return var2;
     }
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blitPaletteGlyphAlpha(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$16 = 0;
@@ -200,7 +200,7 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            PaletteBitmapFont.a(0, SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], this.colorPalettes[param5], var12, var9, param3, param4, var10, var11, param6);
+            PaletteBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], this.colorPalettes[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_k, this.glyphPaletteIndices[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }

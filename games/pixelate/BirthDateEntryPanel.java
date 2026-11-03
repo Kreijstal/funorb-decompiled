@@ -88,8 +88,8 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         this.c((byte) 121);
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) 119);
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
+        super.drawLayer(param0, param1, param2, (byte) 119);
         ep.field_b.drawText(UiComponent.field_v, 4 + param2 + this.field_z, ep.field_b.maxAscent + (param0 + this.field_p + 4), 16777215, -1);
         int var5 = -53 % ((70 - param3) / 49);
     }

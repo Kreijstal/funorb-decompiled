@@ -90,7 +90,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         var3 = var3 + (this.a(na.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
         var3 = var3 + this.addLabeledFieldWithValidationIcon((byte) 85, 170, this.field_Q, var3, TriangleMesh.field_O);
         LabeledField var4 = new LabeledField(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);
-        this.b(var4, 80);
+        this.addChild(var4, 80);
         var3 = var3 + var4.field_C;
         TextWidgetPainter var5 = new TextWidgetPainter(he.field_d, 0, 0, 0, 0, 16777215, -1, 0, 0, he.field_d.maxAscent, -1, 2147483647, true);
         this.field_M = new TextHotspotWidget(var2, var5);
@@ -100,18 +100,18 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_M.field_n = (UiListener) (this);
         this.field_M.a(46, -90 + this.field_E, var3, -93);
         var3 = var3 + (15 + this.field_M.field_C);
-        this.b(this.field_M, 80);
+        this.addChild(this.field_M, 80);
         int var6 = 4;
         int var7 = 200;
         this.field_R.a(var7, (byte) 68, var3, -var7 + 496 >> 1, 40);
         this.field_K.a(60, (byte) 23, var3 + 15, var6 + 3, 40);
         this.field_K.field_n = (UiListener) (this);
         this.field_R.field_n = (UiListener) (this);
-        this.b(this.field_R, 80);
-        this.b(this.field_K, 80);
+        this.addChild(this.field_R, 80);
+        this.addChild(this.field_K, 80);
         this.field_W = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_W.a(-this.field_U.field_E - this.field_U.field_z + (this.field_E - 60), (byte) 100, 20 + this.field_U.field_p, 60 + this.field_U.field_z + this.field_U.field_E, 150);
-        this.b(this.field_W, 80);
+        this.addChild(this.field_W, 80);
         this.a(496, (byte) 28, 0, 0, var3 + 55 + var6);
     }
 
@@ -128,7 +128,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new LabeledField(20, param4, param3 + 120, 25, param2, false, 120, 3, he.field_d, 16777215, param0);
-          this.b(var6, 80);
+          this.addChild(var6, 80);
           if (param1 <= -6) {
             stackIn_4_0 = var6.field_C;
             return stackIn_4_0;
@@ -169,9 +169,9 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new LabeledField(20, param3, 120 + param1, 25, param2, false, 120, 3, he.field_d, 16777215, param4);
-          this.b(var9, 80);
+          this.addChild(var9, 80);
           var7 = new ValidationIndicator(((ValidationProvider) ((Object) param2)).a(1));
-          this.b(var7, 80);
+          this.addChild(var7, 80);
           var7.a(15, (byte) 73, (var9.field_C - 15 >> 1) + var9.field_p, var9.field_E + (var9.field_z + 3), 15);
           var8 = -32 / ((param0 + 2) / 54);
           stackIn_1_0 = var9.field_C;
@@ -728,10 +728,10 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new LabeledField(20, param4, 120 + param3, 25, param1, false, 120, 3, he.field_d, 16777215, param0);
-          this.b(var10, 80);
+          this.addChild(var10, 80);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param1)).a(param5 - 125), param6, param5, var10.field_C + param4, 50 + param3, param2);
           var9.field_n = (UiListener) (this);
-          this.b(var9, 80);
+          this.addChild(var9, 80);
           stackIn_1_0 = var10.field_C + var9.field_C;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

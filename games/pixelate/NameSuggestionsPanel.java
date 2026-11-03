@@ -60,8 +60,8 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         field_O = null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, (byte) -79);
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
+        super.drawLayer(param0, param1, param2, (byte) -79);
         if (param1 != 0) {
           return;
         }
@@ -155,12 +155,12 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               this.buttons[var5].field_y = (WidgetPainter) ((Object) var4);
               this.buttons[var5].field_l = io.field_a;
               this.buttons[var5].a(80, (byte) 63, 20 + 16 * var5, 0, 15);
-              this.b(this.buttons[var5], 80);
+              this.addChild(this.buttons[var5], 80);
             }
             this.buttons[var3_int] = new TextButton(d.field_d, (UiListener) (this));
             this.buttons[var3_int].field_y = (WidgetPainter) ((Object) var4);
             this.buttons[var3_int].a(100, (byte) 102, 16 + (16 * var3_int + 20), 0, 15);
-            this.b(this.buttons[var3_int], 80);
+            this.addChild(this.buttons[var3_int], 80);
             return;
           }
           this.suggestions = null;

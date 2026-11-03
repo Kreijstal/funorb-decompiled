@@ -648,7 +648,7 @@ public final class Pixelate extends NetworkGameClient {
         DialWidgetPainter.releaseStatics(-26570);
         MarkerSliderPainter.releaseStatics(94);
         TextLayout.releaseStatics(-127);
-        UiComponent.f(param0 - 23118);
+        UiComponent.releaseStatics(param0 - 23118);
         TextButton.j(89);
         SingleChildContainer.releaseStatics(0);
         ResizableModalPanel.l(127);
@@ -1500,32 +1500,32 @@ public final class Pixelate extends NetworkGameClient {
         var9 = field_H ? 1 : 0;
         TextTableInitializer.a(-29810);
         if (ji.field_b != null) {
-          if (qn.field_l.b(-3) &&
+          if (qn.field_l.ensureIndex(-3) &&
             qn.field_l.ensureGroupAvailableByName("basic", -1)) {
-            if (qn.field_l.b(-3) &&
+            if (qn.field_l.ensureIndex(-3) &&
               qn.field_l.ensureGroupAvailableByName("arial13", -1)) {
-              if (dg.field_d.b(-3) &&
+              if (dg.field_d.ensureIndex(-3) &&
                 dg.field_d.ensureGroupAvailableByName("arial13", param1 ^ -5)) {
-                if (qn.field_l.b(-3) &&
+                if (qn.field_l.ensureIndex(-3) &&
                   qn.field_l.ensureGroupAvailableByName("lobby", -1)) {
-                  if (dg.field_d.b(param1 ^ -7) &&
+                  if (dg.field_d.ensureIndex(param1 ^ -7) &&
                     dg.field_d.ensureGroupAvailableByName("lobby", -1)) {
-                    if (ji.field_b.b(-3) &&
-                      ji.field_b.a((byte) 92)) {
-                      if (PacketBuffer.field_p.b(param1 ^ -7) &&
-                        PacketBuffer.field_p.a((byte) 92)) {
-                        if (ab.field_f.b(-3) &&
-                          ab.field_f.a((byte) 92)) {
-                          if (BoundedRandomAccessFile.field_c.b(-3) &&
-                            BoundedRandomAccessFile.field_c.a((byte) 92)) {
-                            if (MenuInputState.field_d.b(-3) &&
+                    if (ji.field_b.ensureIndex(-3) &&
+                      ji.field_b.ensureAllGroupsAvailable((byte) 92)) {
+                      if (PacketBuffer.field_p.ensureIndex(param1 ^ -7) &&
+                        PacketBuffer.field_p.ensureAllGroupsAvailable((byte) 92)) {
+                        if (ab.field_f.ensureIndex(-3) &&
+                          ab.field_f.ensureAllGroupsAvailable((byte) 92)) {
+                          if (BoundedRandomAccessFile.field_c.ensureIndex(-3) &&
+                            BoundedRandomAccessFile.field_c.ensureAllGroupsAvailable((byte) 92)) {
+                            if (MenuInputState.field_d.ensureIndex(-3) &&
                               MenuInputState.field_d.ensureGroupAvailableByName("basic", -1)) {
-                              if (PlayerBoard.field_c.b(param1 ^ -7) &&
+                              if (PlayerBoard.field_c.ensureIndex(param1 ^ -7) &&
                                 PlayerBoard.field_c.ensureGroupAvailableByName("basic", -1)) {
-                                if (SocketConnector.field_a.b(-3) &&
-                                  SocketConnector.field_a.a((byte) 92)) {
-                                  if (GameModeSelectScreen.field_u.b(-3) &&
-                                    GameModeSelectScreen.field_u.a((byte) 92)) {
+                                if (SocketConnector.field_a.ensureIndex(-3) &&
+                                  SocketConnector.field_a.ensureAllGroupsAvailable((byte) 92)) {
+                                  if (GameModeSelectScreen.field_u.ensureIndex(-3) &&
+                                    GameModeSelectScreen.field_u.ensureAllGroupsAvailable((byte) 92)) {
                                     li.a(85.0f, -1, rh.field_r);
                                     this.renderClient(param1 + 106);
                                     if (!param0) {
@@ -1608,7 +1608,7 @@ public final class Pixelate extends NetworkGameClient {
         }
         if (null == PlayerBoard.field_c) {
           if (SocketConnector.field_a != null) {
-            re.a(true, new HuffmanCodec(SocketConnector.field_a.a((byte) 24, "huffman", "")));
+            re.a(true, new HuffmanCodec(SocketConnector.field_a.getNamedFile((byte) 24, "huffman", "")));
             SocketConnector.field_a = null;
             sf.a(param1 - 4);
             return false;

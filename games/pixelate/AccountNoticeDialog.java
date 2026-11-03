@@ -25,7 +25,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           if (param1 > -111) {
             field_bb = (String[]) null;
           }
-          this.b(var4, 80);
+          this.addChild(var4, 80);
           this.c((byte) 121);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -122,7 +122,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_C = 80;
           var4.field_p = 50;
           var4.field_y = (WidgetPainter) ((Object) new TextWidgetPainter(ep.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(var4, 80);
+          this.addChild(var4, 80);
           this.field_ab = this.a(TabbedPanel.field_Hb, (byte) -126, (UiListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

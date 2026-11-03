@@ -80,16 +80,16 @@ abstract class ByteStorage {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.b(-3) &&
+          if (param2.ensureIndex(-3) &&
             param2.ensureGroupAvailableByName("commonui", -1)) {
-            if (!param0.b(-3)) {
+            if (!param0.ensureIndex(-3)) {
               return false;
             }
             if (!param0.ensureGroupAvailableByName("commonui", -1)) {
               return false;
             }
             var4_int = -3 / ((-26 - param1) / 51);
-            if (param3.b(-3) &&
+            if (param3.ensureIndex(-3) &&
               param3.ensureGroupAvailableByName("button.gif", -1)) {
               return true;
             }

@@ -22,7 +22,7 @@ final class ModalStack extends SingleChildContainer {
           var3 = (ModalPanel) (var2.a((byte) -104));
         }
         if (param0 < 99) {
-          this.a(-63, 101, 32, (byte) 105);
+          this.drawLayer(-63, 101, 32, (byte) 105);
         }
         this.child = (UiComponent) ((Object) this.n(640));
     }
@@ -64,7 +64,7 @@ final class ModalStack extends SingleChildContainer {
         return null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var8 = Pixelate.field_H ? 1 : 0;
         if (this.field_y != null) {
           this.field_y.drawWidget((UiComponent) (this), (byte) -124, param0, param2, true);
@@ -73,7 +73,7 @@ final class ModalStack extends SingleChildContainer {
         UiComponent var6 = (UiComponent) (var5.b(-1));
         int var7 = 47 / ((param3 - 70) / 49);
         while (var6 != null) {
-          var6.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 124);
+          var6.drawLayer(param0 + this.field_p, param1, param2 + this.field_z, (byte) 124);
           var6 = (UiComponent) (var5.previous(-105));
         }
     }

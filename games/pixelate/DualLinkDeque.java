@@ -17,8 +17,8 @@ final class DualLinkDeque {
           if (param1 != 14) {
             field_e = (int[]) null;
           }
-          VorbisSample.decodeSetup(param0.a((byte) 24, "", "headers.packvorbis"));
-          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
+          VorbisSample.decodeSetup(param0.getNamedFile((byte) 24, "", "headers.packvorbis"));
+          var2 = VorbisSample.load(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

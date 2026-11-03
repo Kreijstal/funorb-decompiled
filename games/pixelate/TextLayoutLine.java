@@ -126,7 +126,7 @@ final class TextLayoutLine {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.b(-3)) {
+          if (!param1.ensureIndex(-3)) {
             stackIn_3_0 = (String) (param4);
             return stackIn_3_0;
           }

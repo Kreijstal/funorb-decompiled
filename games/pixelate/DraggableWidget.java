@@ -68,8 +68,8 @@ final class DraggableWidget extends SingleChildContainer {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(-119, param2, param0, param3)) {
-            this.a(param2, (byte) -2, param3, param0);
+          if (this.beginDebugDescription(-119, param2, param0, param3)) {
+            this.appendDebugBody(param2, (byte) -2, param3, param0);
             this.appendDebugChild(param3, (byte) -91, param0, param2);
             discarded$64 = param0.append(" revert=").append(this.field_R);
             if (this.field_T != 2147483647 &&

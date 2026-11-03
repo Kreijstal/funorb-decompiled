@@ -246,7 +246,7 @@ final class re {
         while (this.field_i > this.field_j) {
           var4 = this.field_a[this.field_j];
           var2 = var4;
-          if (!var4.field_d.b(-3)) {
+          if (!var4.field_d.ensureIndex(-3)) {
             this.a((byte) 58, var4, 0);
             return false;
           }
@@ -263,8 +263,8 @@ final class re {
           if (var4.field_b < 0 &&
             null == var4.field_f &&
             var4.field_e != null &&
-            !var4.field_d.a((byte) 92)) {
-            this.a((byte) -102, var2, var4.field_d.c(param0 ^ 4567));
+            !var4.field_d.ensureAllGroupsAvailable((byte) 92)) {
+            this.a((byte) -102, var2, var4.field_d.getOverallProgress(param0 ^ 4567));
             return false;
           }
           this.field_j = this.field_j + 1;

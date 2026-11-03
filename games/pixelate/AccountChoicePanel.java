@@ -103,12 +103,12 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5 = this.field_z + param2;
         int var6 = this.field_p + param0;
         int var7 = 87 % ((70 - param3) / 49);
         he.field_d.drawParagraph(ClientContextMenu.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
-        super.a(param0, param1, param2, (byte) 122);
+        super.drawLayer(param0, param1, param2, (byte) 122);
     }
 
     final boolean onFocusedKey(int param0, int param1, UiComponent param2, char param3) {
@@ -206,9 +206,9 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         this.field_J.field_l = KeyboardInputHandler.field_a;
         this.field_L.field_n = (UiListener) (this);
         this.field_L.field_l = up.field_q;
-        this.b(this.field_N, 80);
-        this.b(this.field_J, 80);
-        this.b(this.field_L, 80);
+        this.addChild(this.field_N, 80);
+        this.addChild(this.field_J, 80);
+        this.addChild(this.field_L, 80);
     }
 
     public static void releaseStatics(byte param0) {

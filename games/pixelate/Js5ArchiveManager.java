@@ -181,7 +181,7 @@ final class Js5ArchiveManager {
         var2Lifetime1 = var4;
         while (var4 < this.field_h.length) {
           if (this.field_h[var4] != null) {
-            this.field_h[var4].b(0);
+            this.field_h[var4].maintainGroups(0);
           }
           var4++;
         }

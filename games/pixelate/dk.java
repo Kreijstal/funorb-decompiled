@@ -57,7 +57,7 @@ final class dk {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.b(-3)) {
+          if (!param3.ensureIndex(-3)) {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }
@@ -65,7 +65,7 @@ final class dk {
             var5 = (ResourceArchive) null;
             dk.a(-69, (ResourceArchive) null, 92, 117);
           }
-          stackIn_6_0 = param0 + " - " + param3.c(0) + "%";
+          stackIn_6_0 = param0 + " - " + param3.getOverallProgress(0) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,7 +121,7 @@ final class dk {
         int var4Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          var9 = new CipherPacketBuffer(param1.a((byte) 24, "", "logo.fo3d"));
+          var9 = new CipherPacketBuffer(param1.getNamedFile((byte) 24, "", "logo.fo3d"));
           var11 = var9;
           var3 = var11.readUnsignedByte(255);
           var11.n(-110);

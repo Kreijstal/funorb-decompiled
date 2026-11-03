@@ -13,7 +13,7 @@ final class LabeledField extends SingleChildContainer {
     static String field_L;
     private BitmapFont field_J;
 
-    final String b(byte param0) {
+    final String getTooltip(byte param0) {
         int var2 = 0;
         String var3 = null;
         String var3Lifetime1;
@@ -21,14 +21,14 @@ final class LabeledField extends SingleChildContainer {
         if (param0 >= 16) {
           var2 = this.child.field_D ? 1 : 0;
           this.child.field_D = this.field_D;
-          var3 = this.child.b((byte) 70);
+          var3 = this.child.getTooltip((byte) 70);
           this.child.field_D = var2 != 0 ? true : false;
           return var3;
         }
         this.field_O = false;
         var2Lifetime1 = this.child.field_D ? 1 : 0;
         this.child.field_D = this.field_D;
-        var3Lifetime1 = this.child.b((byte) 70);
+        var3Lifetime1 = this.child.getTooltip((byte) 70);
         this.child.field_D = var2Lifetime1 != 0 ? true : false;
         return var3Lifetime1;
     }
@@ -48,10 +48,10 @@ final class LabeledField extends SingleChildContainer {
         field_L = null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int param0, int param1, int param2, byte param3) {
         int var5 = param2 + this.field_z;
         int var6 = param0 + this.field_p;
-        super.a(param0, param1, param2, (byte) 125);
+        super.drawLayer(param0, param1, param2, (byte) 125);
         if (param1 != 0) {
           return;
         }

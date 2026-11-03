@@ -7,7 +7,7 @@ abstract class ArchiveProvider {
     static String field_d;
     static String field_c;
 
-    abstract byte[] a(int param0, int param1);
+    abstract byte[] getEncodedGroup(int param0, int param1);
 
     abstract ArchiveIndex getIndex(byte param0);
 
@@ -92,7 +92,7 @@ abstract class ArchiveProvider {
         }
     }
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupProgress(int param0, int param1);
 
     static {
         field_a = new int[8192];

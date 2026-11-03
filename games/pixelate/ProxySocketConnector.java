@@ -13,7 +13,7 @@ final class ProxySocketConnector extends SocketConnector {
     static java.awt.Frame field_i;
     static java.awt.Frame field_j;
 
-    private final java.net.Socket a(int param0, String param1, String param2, byte param3) throws IOException {
+    private final java.net.Socket openHttpTunnel(int param0, String param1, String param2, byte param3) throws IOException {
         java.net.Socket stackIn_11_0 = null;
         Object stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -483,7 +483,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_18_0 = this.a(var4.getPort(), var4.getHostName(), (String) (var5), (byte) 115);
+          stackIn_18_0 = this.openHttpTunnel(var4.getPort(), var4.getHostName(), (String) (var5), (byte) 115);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

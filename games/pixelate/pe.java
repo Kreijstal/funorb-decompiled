@@ -28,7 +28,7 @@ final class pe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -82) {
-            stackIn_4_0 = param0.a((byte) 92);
+            stackIn_4_0 = param0.ensureAllGroupsAvailable((byte) 92);
             return stackIn_4_0;
           }
           return true;

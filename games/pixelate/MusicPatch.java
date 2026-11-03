@@ -779,9 +779,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param0.a((byte) -46, param1, var9 >> 2);
+                    var7 = param0.getMusicSampleById((byte) -46, param1, var9 >> 2);
                   } else {
-                    var7 = param0.a(var9 >> 2, param1, (byte) 106);
+                    var7 = param0.loadSoundEffectById(var9 >> 2, param1, (byte) 106);
                   }
                   if (var7 == null) {
                     var5_int = 0;
