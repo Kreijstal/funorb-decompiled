@@ -28,7 +28,7 @@ final class wq {
           var4_int = param2.a(param1, (byte) 124);
           var5 = -82 % ((-79 - param0) / 37);
           var6 = param2.a(param3, var4_int, -1);
-          stackIn_1_0 = ka.a(-1, var6, var4_int, param2);
+          stackIn_1_0 = ChatMessage.a(-1, var6, var4_int, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -76,7 +76,7 @@ final class am {
         if (param3 != 1) {
           am.a('ﾘ', (byte) -57);
         }
-        return nk.a(no.field_Hb[param2][param0], param1, 255, param4);
+        return nk.a(QuickChatHelpDialog.field_Hb[param2][param0], param1, 255, param4);
     }
 
     static {

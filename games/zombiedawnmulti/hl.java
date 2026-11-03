@@ -163,7 +163,7 @@ final class hl {
           if (param1 != 75) {
             return;
           }
-          dm.field_Zb = -1;
+          LobbyPlayer.field_Zb = -1;
           cb.field_i = 0;
           bc.field_e = -1;
           if (null == param7.field_Cb) {

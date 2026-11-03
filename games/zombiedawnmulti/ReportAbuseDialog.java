@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ReportAbuseDialog extends UiComponent {
-    private mi field_Hb;
+    private StateIconLabel field_Hb;
     static String field_Ib;
     private UiComponent[] field_Jb;
     static Sprite[][] field_Qb;
@@ -38,7 +38,7 @@ final class ReportAbuseDialog extends UiComponent {
 
     final int updateAndPollReason(byte param0, boolean param1) {
         int var3 = 0;
-        mi stackIn_8_0 = null;
+        StateIconLabel stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         UiComponent stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
@@ -58,7 +58,7 @@ final class ReportAbuseDialog extends UiComponent {
             stackIn_9_1 = !(this.field_Hb.field_Ab);
             stackIn_8_0.field_Ab = stackIn_9_1;
           }
-          for (var3 = 0; var3 < mo.field_Kb; var3++) {
+          for (var3 = 0; var3 < AlignedIconLabel.field_Kb; var3++) {
             if (this.field_Jb[var3] != null) {
               stackIn_17_0 = this.field_Jb[var3];
               stackIn_18_1 = !(this.field_Nb.length() <= 0);
@@ -178,7 +178,7 @@ final class ReportAbuseDialog extends UiComponent {
               var2_int = param1 - s.field_e.position;
             }
             ki.field_h.a(var2_int, s.field_e.position, s.field_e.payload, 120);
-            mo.field_Gb = bl.a((byte) 80);
+            AlignedIconLabel.field_Gb = bl.a((byte) 80);
             s.field_e.position = s.field_e.position + var2_int;
             if (s.field_e.position < param1) {
               return false;
@@ -222,7 +222,7 @@ final class ReportAbuseDialog extends UiComponent {
         return param2 + "/" + param1;
     }
 
-    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, mi param9, UiComponent param10, String param11, long param12) {
+    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, StateIconLabel param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         int var15_int = 0;
@@ -233,14 +233,14 @@ final class ReportAbuseDialog extends UiComponent {
         int var20 = 0;
         int var21 = 0;
         Object stackIn_7_0;
-        mi stackIn_7_1;
-        mi stackIn_7_2;
+        StateIconLabel stackIn_7_1;
+        StateIconLabel stackIn_7_2;
         long stackIn_7_3;
-        mi stackIn_7_4;
+        StateIconLabel stackIn_7_4;
         Object stackIn_8_0;
         Object stackIn_9_0;
-        mi stackIn_9_1;
-        mi stackIn_9_2;
+        StateIconLabel stackIn_9_1;
+        StateIconLabel stackIn_9_2;
         String stackIn_9_5;
         UiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
@@ -270,8 +270,8 @@ final class ReportAbuseDialog extends UiComponent {
         UiComponent[] var28 = null;
         Object stackIn_7_0Lifetime1;
         Object stackIn_9_0Lifetime1;
-        mi stackIn_9_1Lifetime1;
-        mi stackIn_9_2Lifetime1;
+        StateIconLabel stackIn_9_1Lifetime1;
+        StateIconLabel stackIn_9_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -319,7 +319,7 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
-                stackIn_7_4 = (mi) (param9);
+                stackIn_7_4 = (StateIconLabel) (param9);
                 if (am.field_b < 7) {
                   stackIn_8_0 = this;
                   stackIn_7_0Lifetime1 = stackIn_8_0;
@@ -327,7 +327,7 @@ final class ReportAbuseDialog extends UiComponent {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
-                    stackIn_9_5 = dk.field_Kb;
+                    stackIn_9_5 = NameEntryPopup.field_Kb;
                     break regionExit1;
                   }
                 }
@@ -336,7 +336,7 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_9_2Lifetime1 = null;
                 stackIn_9_5 = jj.field_I;
               }
-              this.field_Hb = new mi(stackIn_7_3, stackIn_7_4, stackIn_9_5);
+              this.field_Hb = new StateIconLabel(stackIn_7_3, stackIn_7_4, stackIn_9_5);
               this.field_Rb.a((byte) 50, this.field_Hb);
             }
             var28 = new UiComponent[3];
@@ -347,8 +347,8 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_Rb.a((byte) 50, var28[1]);
             var28[2] = new UiComponent(0L, (UiComponent) null);
             this.field_Rb.a((byte) 50, var28[2]);
-            this.field_Jb = new UiComponent[mo.field_Kb];
-            for (var16 = 0; mo.field_Kb > var16; var16++) {
+            this.field_Jb = new UiComponent[AlignedIconLabel.field_Kb];
+            for (var16 = 0; AlignedIconLabel.field_Kb > var16; var16++) {
               if (nk.field_n[var16] != null) {
                 this.field_Jb[var16] = new UiComponent(0L, param10, nk.field_n[var16]);
                 this.field_Jb[var16].field_R = 0;
@@ -375,7 +375,7 @@ final class ReportAbuseDialog extends UiComponent {
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; var17Lifetime4 < mo.field_Kb; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; var17Lifetime4 < AlignedIconLabel.field_Kb; var17Lifetime4++) {
               if (null != this.field_Jb[var17Lifetime4]) {
                 var18 = this.field_Jb[var17Lifetime4].e(0);
                 if (var16Lifetime2 < var18) {

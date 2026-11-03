@@ -42,7 +42,7 @@ final class a {
           } else {
             TextInputWidget.field_P = vl.a(ResizableDialog.field_cb, new String[]{Integer.toString(var1)}, 2);
           }
-          TextInputWidget.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) TextInputWidget.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
+          TextInputWidget.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) TextInputWidget.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) StateIconLabel.field_Nb)}, 77);
         }
         PortalView.field_L.dismissDialog(-7435);
         sp.c(param0 + 1);

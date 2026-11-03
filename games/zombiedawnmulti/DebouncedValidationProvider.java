@@ -59,7 +59,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
           }
           if (HotspotTextWidget.field_N) {
             ce.a(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
-            lj.field_v.a(-11838, param7);
+            ClickMarker.field_v.a(-11838, param7);
             if (!param7) {
               return;
             }

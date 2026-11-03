@@ -180,7 +180,7 @@ final class m extends GradientOutlineTextPainter {
         }
         var1.capture(SoftwareRasterizer.clipTop, SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipRight, (byte) -120, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.width, SoftwareRasterizer.height);
         if (param0 == 540) {
-          mo.field_Fb.a(var1, false);
+          AlignedIconLabel.field_Fb.a(var1, false);
           return;
         }
     }

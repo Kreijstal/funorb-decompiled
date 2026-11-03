@@ -67,7 +67,7 @@ final class lh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        md var6 = null;
+        TriangleMesh var6 = null;
         int[] var7 = null;
         int var8 = 0;
         CipherPacketBuffer var9 = null;
@@ -87,7 +87,7 @@ final class lh {
           var11.k(-1136);
           qh.field_f = bo.a(30816, var11);
           lk.field_G = new int[var3][];
-          vn.field_c = new md[var3];
+          vn.field_c = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
             vn.field_c[var4] = s.a(var9, (byte) -111);
           }
@@ -98,7 +98,7 @@ final class lh {
           while (var10 < var3) {
             var6 = vn.field_c[var10];
             var6.a(6, 1, 6, 6, 2122);
-            var6.a((byte) -102);
+            var6.updateBounds((byte) -102);
             var7 = new int[]{var6.field_C + var6.field_D >> 1, var6.field_G + var6.field_l >> 1, var6.field_j + var6.field_r >> 1};
             lk.field_G[var10] = var7;
             var6.a(-var7[2], 3, -var7[0], -var7[1]);

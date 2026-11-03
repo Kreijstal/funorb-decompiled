@@ -122,13 +122,13 @@ final class qe {
           DisplayNamePanel.field_H = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo12", param0, param2));
           ke.field_h = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo14", param0, param2));
           ci.field_d = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo14bold", param0, param2));
-          var17 = new Sprite(param3.a("button.gif", "", false), (java.awt.Component) ((Object) dk.field_Ib));
+          var17 = new Sprite(param3.a("button.gif", "", false), (java.awt.Component) ((Object) NameEntryPopup.field_Ib));
           wq.a(-121, "commonui", param2, "dropdown");
           var5 = InflaterDecompressor.a("screen_options", param2, (byte) 19, "commonui");
           RandomAccessCacheFile.field_h = new IndexedSprite[4];
           lo.field_a = new IndexedSprite[4];
-          mo.field_Ob = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{lo.field_a, mo.field_Ob, RandomAccessCacheFile.field_h};
+          AlignedIconLabel.field_Ob = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{lo.field_a, AlignedIconLabel.field_Ob, RandomAccessCacheFile.field_h};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -524,7 +524,7 @@ final class qe {
         this.field_j = true;
         this.field_d = 0;
         this.field_n = 1.0f;
-        this.field_i = ah.field_e;
+        this.field_i = TranslatedUiText.field_e;
         this.f(112);
         this.b(this.field_c, 2394342);
         this.h(2);

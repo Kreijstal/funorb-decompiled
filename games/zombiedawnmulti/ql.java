@@ -60,7 +60,7 @@ final class ql {
     }
 
     final static void a(boolean param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (mo.field_Fb.a(param0));
+        RasterSnapshot var1 = (RasterSnapshot) (AlignedIconLabel.field_Fb.a(param0));
         if (var1 == null) {
           throw new IllegalStateException();
         }

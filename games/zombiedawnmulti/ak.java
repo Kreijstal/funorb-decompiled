@@ -11,7 +11,7 @@ final class ak {
         PortalEntryEvent var4 = null;
         PortalEntryEvent var4Lifetime1;
         if (param1 < -35) {
-          var4 = (PortalEntryEvent) (mi.field_Kb.g(72));
+          var4 = (PortalEntryEvent) (StateIconLabel.field_Kb.g(72));
           if (var4 == null) {
             var4 = new PortalEntryEvent();
           }
@@ -20,7 +20,7 @@ final class ak {
         }
         java.applet.Applet var5 = (java.applet.Applet) null;
         ak.a(88, (java.applet.Applet) null);
-        var4Lifetime1 = (PortalEntryEvent) (mi.field_Kb.g(72));
+        var4Lifetime1 = (PortalEntryEvent) (StateIconLabel.field_Kb.g(72));
         if (var4Lifetime1 == null) {
           var4Lifetime1 = new PortalEntryEvent();
         }

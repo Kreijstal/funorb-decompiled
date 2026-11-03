@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends IntrusiveNode {
+final class DelayedPacket extends IntrusiveNode {
     long field_j;
     static String field_h;
     static UiComponent field_k;
@@ -13,7 +13,7 @@ final class bb extends IntrusiveNode {
     static String field_i;
     byte[] field_f;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == -18535) {
           field_h = null;
           field_g = null;
@@ -24,7 +24,7 @@ final class bb extends IntrusiveNode {
           field_k = null;
           return;
         }
-        bb.c(-69);
+        DelayedPacket.c(-69);
         field_h = null;
         field_g = null;
         field_n = null;
@@ -44,7 +44,7 @@ final class bb extends IntrusiveNode {
         return s.field_a;
     }
 
-    bb(long param0, int param1, byte[] param2) {
+    DelayedPacket(long param0, int param1, byte[] param2) {
         try {
           this.field_j = param0;
           this.field_f = param2;

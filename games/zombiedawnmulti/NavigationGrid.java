@@ -356,7 +356,7 @@ final class NavigationGrid {
             return;
           }
           if (1 == var2) {
-            var13 = (MusicPatchNode) (ig.field_a.c(param0 ^ 73));
+            var13 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.c(param0 ^ 73));
             if (var13 == null) {
               ak.a((byte) -117);
               return;
@@ -756,8 +756,8 @@ final class NavigationGrid {
 
     final static void b(int param0) {
         ee.field_b = false;
-        if (null != VerticalScrollbar.field_Ib) {
-          VerticalScrollbar.field_Ib.c((byte) 123);
+        if (null != mj.field_Ib) {
+          mj.field_Ib.resetSelection((byte) 123);
         }
         if (0 != va.field_a) {
           pf.a(89);

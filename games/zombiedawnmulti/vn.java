@@ -9,7 +9,7 @@ final class vn {
     static Sprite field_h;
     static String[] field_d;
     static String field_a;
-    static md[] field_c;
+    static TriangleMesh[] field_c;
 
     public static void b(int param0) {
         field_a = null;

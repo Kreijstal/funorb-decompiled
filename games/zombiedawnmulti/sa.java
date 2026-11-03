@@ -44,7 +44,7 @@ final class sa extends IntrusiveNode {
           var5 = param2.length();
           var6 = param3.length();
           if (param1 <= 53) {
-            sa.a((md) null, (int[]) null, false, (int[]) null, (byte) -11, true, true);
+            sa.a((TriangleMesh) null, (int[]) null, false, (int[]) null, (byte) -11, true, true);
           }
           if (0 == var5) {
             throw new IllegalArgumentException("Key cannot have zero length");
@@ -229,7 +229,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    final static void a(md param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
+    final static void a(TriangleMesh param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
         int stackIn_60_0 = 0;
         int stackIn_60_1 = 0;
         RuntimeException stackIn_70_0 = null;

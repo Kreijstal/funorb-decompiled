@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends IntrusiveNode {
+final class ClickMarker extends IntrusiveNode {
     static int field_n;
     private int field_w;
     static String[] field_t;
@@ -76,7 +76,7 @@ final class lj extends IntrusiveNode {
             this.field_i == null) {
             stackIn_5_0 = 0;
           } else {
-            stackIn_5_0 = sd.b(126, var4, var3_int);
+            stackIn_5_0 = DropTargetWidget.b(126, var4, var3_int);
           }
           var5 = stackIn_5_0;
           if (this.field_g != null) {
@@ -156,7 +156,7 @@ final class lj extends IntrusiveNode {
         }
     }
 
-    lj(int param0, int param1, boolean param2) {
+    ClickMarker(int param0, int param1, boolean param2) {
         int stackIn_11_1 = 0;
         int var4;
         int var4Lifetime1;

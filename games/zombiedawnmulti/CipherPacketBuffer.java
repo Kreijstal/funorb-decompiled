@@ -92,14 +92,14 @@ final class CipherPacketBuffer extends PacketBuffer {
                 PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
               }
             }
-            md.a(var5, -109);
+            TriangleMesh.a(var5, -109);
             dupTemp$0 = new String[2][var5];
             var3.field_t = dupTemp$0;
             var6 = dupTemp$0;
             dupTemp$1 = new int[2][4 * var5];
             var3.field_k = dupTemp$1;
             var7 = dupTemp$1;
-            var8 = lj.field_n;
+            var8 = ClickMarker.field_n;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {

@@ -261,11 +261,11 @@ final class fd extends SceneObject {
               var11 = s.field_e.readNullableString((byte) -89);
               var7 = s.field_e.readUnsignedByte(31365);
               if ((var7 & 1) != 0) {
-                fj.a((byte) 85);
+                CheckboxWidget.a((byte) 85);
               }
               if (!param1) {
                 stackIn_52_0 = (0 != (4 & var7));
-                fj.field_M = stackIn_52_0;
+                CheckboxWidget.field_M = stackIn_52_0;
                 stackIn_55_0 = ((2 & var7) != 0);
                 SimPortal.field_L = stackIn_55_0;
                 stackIn_58_0 = ((var7 & 8) != 0);
@@ -316,7 +316,7 @@ final class fd extends SceneObject {
                 jh.a(StatefulTextPainter.b(0), param0 ^ -15, var11);
               }
               if (vl.field_h <= 0 &&
-                !fj.field_M) {
+                !CheckboxWidget.field_M) {
                 try {
                   JavaScriptBridge.b(StatefulTextPainter.b(0), 13093, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -334,11 +334,11 @@ final class fd extends SceneObject {
               if (vl.field_h > 0) {
                 cm.field_e = true;
               }
-              ma.field_a.a((byte) -77, VerticalScrollbar.field_Fb);
+              ma.field_a.a((byte) -77, mj.field_Fb);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
-                VerticalScrollbar.field_Fb[var8Lifetime1] = VerticalScrollbar.field_Fb[var8Lifetime1] + 50;
+                mj.field_Fb[var8Lifetime1] = mj.field_Fb[var8Lifetime1] + 50;
               }
-              s.field_e.a((byte) -116, VerticalScrollbar.field_Fb);
+              s.field_e.a((byte) -116, mj.field_Fb);
               stackIn_90_0 = PortalEntryEvent.field_i;
               return stackIn_90_0;
             }

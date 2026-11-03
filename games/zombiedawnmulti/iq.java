@@ -281,7 +281,7 @@ final class iq {
               var6 = hn.a(0, TextWidgetPainter.field_m[var3_int], true);
               var7 = am.field_c - (var6 >> 1);
               var4 = var4 + ResizableDialog.field_bb;
-              if (IntrusiveDeque.a(param0, var7 - no.field_Gb, param2, var6 + (no.field_Gb << 1), var4, (DateInputWidget.field_G << 1) + me.field_h, -18)) {
+              if (IntrusiveDeque.a(param0, var7 - QuickChatHelpDialog.field_Gb, param2, var6 + (QuickChatHelpDialog.field_Gb << 1), var4, (DateInputWidget.field_G << 1) + me.field_h, -18)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

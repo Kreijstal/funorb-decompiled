@@ -165,7 +165,7 @@ final class PowerupEvent extends GameEvent {
               case 13:
                 stackIn_80_0 = (GameScreen) (param1);
                 stackIn_81_1 = (this.field_o == 36);
-                ((GameScreen) (Object) stackIn_80_0).b(stackIn_81_1, 0, this.field_s, this.field_p);
+                ((GameScreen) (Object) stackIn_80_0).addClickMarker(stackIn_81_1, 0, this.field_s, this.field_p);
                 break;
               case 15:
               case 17:

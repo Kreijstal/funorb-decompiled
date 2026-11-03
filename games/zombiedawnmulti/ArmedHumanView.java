@@ -202,7 +202,7 @@ final class ArmedHumanView extends HumanView {
           vj.field_m = false;
           kd.field_b = s.field_f;
           vb.field_f = de.field_g;
-          ka.field_t = s.field_b;
+          ChatMessage.field_t = s.field_b;
           s.field_f = 0;
           if (param0 >= -82) {
             field_sb = (String) null;

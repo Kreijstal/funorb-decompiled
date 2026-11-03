@@ -32,20 +32,20 @@ final class rn {
           field_f = null;
           if (null != ng.field_g) {
             ng.field_g.d(-33);
-            dk.field_Ib.requestFocus();
+            NameEntryPopup.field_Ib.requestFocus();
             return;
           }
-          dk.field_Ib.requestFocus();
+          NameEntryPopup.field_Ib.requestFocus();
           return;
         }
         field_f.a(8192, ArrayWidgetGroup.field_J);
         field_f = null;
         if (null == ng.field_g) {
-          dk.field_Ib.requestFocus();
+          NameEntryPopup.field_Ib.requestFocus();
           return;
         }
         ng.field_g.d(-33);
-        dk.field_Ib.requestFocus();
+        NameEntryPopup.field_Ib.requestFocus();
     }
 
     final static UiComponent b(int param0) {

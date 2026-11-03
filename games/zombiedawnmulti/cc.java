@@ -29,7 +29,7 @@ final class cc {
           }
           var8 = new AccountCreationDialog(nb.field_a, param5);
           nb.field_a.showDialog(param4 ^ -8815, var8);
-          if (sd.h(3853)) {
+          if (DropTargetWidget.h(3853)) {
             var8.p(param4 ^ -10591);
             return true;
           }

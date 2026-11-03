@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class QuickChatPhraseDefinition extends DualLinkNode {
-    static ld field_t;
+    static QuickChatMenu field_t;
     static int field_v;
     private int[][] field_s;
     int[] field_r;
@@ -175,7 +175,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     public static void f(int param0) {
         field_t = null;
         if (param0 != 32768) {
-          field_t = (ld) null;
+          field_t = (QuickChatMenu) null;
         }
     }
 

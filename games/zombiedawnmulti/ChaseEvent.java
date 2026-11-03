@@ -10,7 +10,7 @@ final class ChaseEvent extends GameEvent {
         HumanView var5_ref = null;
         try {
           var5 = PortalEntryEvent.field_m.a(this.field_i, false);
-          ah.field_e.c(Integer.toString(this.field_f - param3), var5.getX(-41) - param2, -param0 + var5.getY(76), 4, -1);
+          TranslatedUiText.field_e.c(Integer.toString(this.field_f - param3), var5.getX(-41) - param2, -param0 + var5.getY(76), 4, -1);
         } catch (Exception exception) {
         }
         try {
@@ -18,7 +18,7 @@ final class ChaseEvent extends GameEvent {
             this.field_j = -25;
           }
           var5_ref = PortalEntryEvent.field_m.a(this.field_i, 105);
-          ah.field_e.c(Integer.toString(this.field_f - param3), var5_ref.getX(81) - param2, -param0 + var5_ref.getY(87), 4, -1);
+          TranslatedUiText.field_e.c(Integer.toString(this.field_f - param3), var5_ref.getX(81) - param2, -param0 + var5_ref.getY(87), 4, -1);
         } catch (Exception exception) {
         }
     }

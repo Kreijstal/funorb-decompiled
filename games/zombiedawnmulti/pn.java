@@ -39,7 +39,7 @@ final class pn {
           }
           while (hl.field_e.length > var2) {
             var3 = hl.field_e[var2];
-            ArrayOperations.a(ah.field_f, var2 << 4, ah.field_f, var1_int, var3);
+            ArrayOperations.a(TranslatedUiText.field_f, var2 << 4, TranslatedUiText.field_f, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
           }

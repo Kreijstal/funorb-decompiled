@@ -10,7 +10,7 @@ final class gk {
         if (param0 != 2) {
           field_c = 127;
         }
-        return VerticalScrollbar.field_Hb[param1];
+        return mj.field_Hb[param1];
     }
 
     public static void a(int param0) {
@@ -60,7 +60,7 @@ final class gk {
           }
           var6 = stackIn_4_0;
           if (ic.field_d == 0) {
-            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, lj.field_t, 480);
+            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, ClickMarker.field_t, 480);
             var8 = 3 + var7;
             dn.field_a = new int[var8];
             eo.field_e = new String[var8];
@@ -69,7 +69,7 @@ final class gk {
             }
             oq.field_x = new int[2];
             for (var9 = 0; var7 > var9; var9++) {
-              eo.field_e[var9] = lj.field_t[var9];
+              eo.field_e[var9] = ClickMarker.field_t[var9];
             }
             eo.field_e[-3 + var8] = "";
             eo.field_e[-2 + var8] = var6;
@@ -82,7 +82,7 @@ final class gk {
             if (1 != ic.field_d) {
               throw new IllegalArgumentException();
             }
-            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, lj.field_t, 480);
+            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, ClickMarker.field_t, 480);
             var8 = var7 + 2;
             dn.field_a = new int[var8];
             eo.field_e = new String[var8];
@@ -91,14 +91,14 @@ final class gk {
             }
             oq.field_x = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
-              eo.field_e[var9] = lj.field_t[var9];
+              eo.field_e[var9] = ClickMarker.field_t[var9];
             }
             eo.field_e[var8 - 2] = "";
             eo.field_e[-1 + var8] = ic.field_f;
             dn.field_a[var8 - 1] = 0;
             oq.field_x[0] = 2;
           }
-          mo.field_Jb.field_c = oq.field_x.length;
+          AlignedIconLabel.field_Jb.field_c = oq.field_x.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < eo.field_e.length; var8Lifetime1++) {
             stackIn_26_0 = !(dn.field_a[var8Lifetime1] < 0);
@@ -110,7 +110,7 @@ final class gk {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          ArrayWidgetGroup.field_F = mo.field_Jb.field_c * (MessageDialog.field_tb + pb.field_b << 1);
+          ArrayWidgetGroup.field_F = AlignedIconLabel.field_Jb.field_c * (MessageDialog.field_tb + pb.field_b << 1);
           RandomAccessCacheFile.field_e = NetworkGameClient.field_x - (-var7Lifetime1 + (var7Lifetime1 >> 1));
           IntrusiveDequeCursor.field_i = -(var7Lifetime1 >> 1) + NetworkGameClient.field_x;
           var8Lifetime2 = 0;
@@ -129,7 +129,7 @@ final class gk {
             gk.a((byte) -33);
           }
           eb.field_M = -(ArrayWidgetGroup.field_F >> 1) + TextInputWidget.field_Q;
-          mo.field_Jb.a(0, param0, -31458, aj.a(bo.field_d, false, MouseInputHandler.field_g));
+          AlignedIconLabel.field_Jb.a(0, param0, -31458, aj.a(bo.field_d, false, MouseInputHandler.field_g));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ka {
+final class ChatMessage {
     int field_o;
     int field_h;
     String field_n;
@@ -71,7 +71,7 @@ final class ka {
         nf.field_a = param0 * 100 / 150;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_s = null;
         if (param0 <= 112) {
@@ -97,7 +97,7 @@ final class ka {
           }
           if (param0 != -1) {
             var5 = (ResourceArchive) null;
-            ka.a(-91, -49, -2, (ResourceArchive) null);
+            ChatMessage.a(-91, -49, -2, (ResourceArchive) null);
           }
           stackIn_6_0 = lc.c((byte) 89);
           return stackIn_6_0;
@@ -115,7 +115,7 @@ final class ka {
         }
     }
 
-    ka(boolean param0) {
+    ChatMessage(boolean param0) {
         this.field_l = wc.field_N;
         this.field_h = BufferedFile.field_g;
         this.field_g = ContextMenu.field_Ib;
@@ -134,7 +134,7 @@ final class ka {
         }
     }
 
-    ka(int param0, String param1, int param2, String param3, String param4) {
+    ChatMessage(int param0, String param1, int param2, String param3, String param4) {
         try {
           this.field_j = param2;
           this.field_n = param1;

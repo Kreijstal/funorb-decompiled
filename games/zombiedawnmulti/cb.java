@@ -280,15 +280,15 @@ final class cb extends IntrusiveNode {
             pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
           } else {
             if (19 > this.field_m) {
-              var4 = wa.field_b[this.field_m];
+              var4 = MarkerSliderPainter.field_b[this.field_m];
             } else {
               if (32 > this.field_m) {
-                var4 = wa.field_b[26 + (this.field_m - 44)];
+                var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
               } else {
                 if (this.field_m > 38) {
-                  var4 = wa.field_b[26 + (this.field_m - 44)];
+                  var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                 } else {
-                  var4 = wa.field_b[-32 + (this.field_m + 19)];
+                  var4 = MarkerSliderPainter.field_b[-32 + (this.field_m + 19)];
                 }
               }
             }
@@ -304,18 +304,18 @@ final class cb extends IntrusiveNode {
               pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
             } else {
               if (19 > this.field_m) {
-                var4 = wa.field_b[this.field_m];
+                var4 = MarkerSliderPainter.field_b[this.field_m];
               } else {
                 if (32 > this.field_m) {
-                  var4 = wa.field_b[26 + (this.field_m - 44)];
+                  var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                 } else {
                   if (this.field_m > 38) {
-                    var4 = wa.field_b[26 + (this.field_m - 44)];
+                    var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                     var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                     g.d();
                     return;
                   }
-                  var4 = wa.field_b[-32 + (this.field_m + 19)];
+                  var4 = MarkerSliderPainter.field_b[-32 + (this.field_m + 19)];
                 }
               }
               var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
@@ -328,15 +328,15 @@ final class cb extends IntrusiveNode {
                 pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
               } else {
                 if (19 > this.field_m) {
-                  var4 = wa.field_b[this.field_m];
+                  var4 = MarkerSliderPainter.field_b[this.field_m];
                 } else {
                   if (32 > this.field_m) {
-                    var4 = wa.field_b[26 + (this.field_m - 44)];
+                    var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                   } else {
                     if (this.field_m > 38) {
-                      var4 = wa.field_b[26 + (this.field_m - 44)];
+                      var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                     } else {
-                      var4 = wa.field_b[-32 + (this.field_m + 19)];
+                      var4 = MarkerSliderPainter.field_b[-32 + (this.field_m + 19)];
                     }
                   }
                 }
@@ -348,12 +348,12 @@ final class cb extends IntrusiveNode {
                   if (19 <= this.field_m) {
                     if (32 <= this.field_m &&
                       this.field_m <= 38) {
-                      var4 = wa.field_b[-32 + (this.field_m + 19)];
+                      var4 = MarkerSliderPainter.field_b[-32 + (this.field_m + 19)];
                     } else {
-                      var4 = wa.field_b[26 + (this.field_m - 44)];
+                      var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                     }
                   } else {
-                    var4 = wa.field_b[this.field_m];
+                    var4 = MarkerSliderPainter.field_b[this.field_m];
                   }
                   var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                 } else {
@@ -365,19 +365,19 @@ final class cb extends IntrusiveNode {
                 if (this.field_s != 0) {
                   if (19 <= this.field_m) {
                     if (32 > this.field_m) {
-                      var4 = wa.field_b[26 + (this.field_m - 44)];
+                      var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                     } else {
                       if (this.field_m <= 38) {
-                        var4 = wa.field_b[-32 + (this.field_m + 19)];
+                        var4 = MarkerSliderPainter.field_b[-32 + (this.field_m + 19)];
                       } else {
-                        var4 = wa.field_b[26 + (this.field_m - 44)];
+                        var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                       }
                     }
                     var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                     g.d();
                     return;
                   }
-                  var4 = wa.field_b[this.field_m];
+                  var4 = MarkerSliderPainter.field_b[this.field_m];
                   var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                 } else {
                   SoftwareRasterizer.fillRectAlpha(5, 5, -10 + this.field_k, this.field_h - 10, 0, 96);

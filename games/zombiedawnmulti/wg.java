@@ -81,26 +81,26 @@ final class wg {
         try {
           var1_int = 0;
           while (MusicPatchPcmStream.c(-1)) {
-            mo.field_Jb.d(99);
-            if (!mo.field_Jb.c(-85)) {
+            AlignedIconLabel.field_Jb.d(99);
+            if (!AlignedIconLabel.field_Jb.c(-85)) {
               continue;
             }
             var1_int = 1;
           }
-          mo.field_Jb.a(aj.a(bo.field_d, false, MouseInputHandler.field_g), 56, aj.a(ka.field_t, false, vb.field_f));
+          AlignedIconLabel.field_Jb.a(aj.a(bo.field_d, false, MouseInputHandler.field_g), 56, aj.a(ChatMessage.field_t, false, vb.field_f));
           if (param0 >= -26) {
             stackIn_7_0 = 112;
             return stackIn_7_0;
           }
-          if (mo.field_Jb.c(-85)) {
+          if (AlignedIconLabel.field_Jb.c(-85)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            mo.field_Jb.field_d >= 0) {
-            var2 = oq.field_x[mo.field_Jb.field_d];
+            AlignedIconLabel.field_Jb.field_d >= 0) {
+            var2 = oq.field_x[AlignedIconLabel.field_Jb.field_d];
             if (var2 == 2) {
-              mo.i(-38);
+              AlignedIconLabel.i(-38);
             }
           }
           stackIn_16_0 = var2;
@@ -124,11 +124,11 @@ final class wg {
 
     final static void b(byte param0) {
         if (param0 > 36) {
-          io.a(8355711, MenuScreen.field_e, kc.field_c, wa.field_a, vo.field_m);
+          io.a(8355711, MenuScreen.field_e, kc.field_c, MarkerSliderPainter.field_a, vo.field_m);
           return;
         }
         field_a = (String) null;
-        io.a(8355711, MenuScreen.field_e, kc.field_c, wa.field_a, vo.field_m);
+        io.a(8355711, MenuScreen.field_e, kc.field_c, MarkerSliderPainter.field_a, vo.field_m);
     }
 
     static {

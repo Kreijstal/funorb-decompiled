@@ -623,10 +623,10 @@ class UiComponent extends qo {
           kd.field_b != 0 &&
           SoftwareRasterizer.clipLeft <= vb.field_f &&
           vb.field_f < SoftwareRasterizer.clipRight &&
-          ka.field_t >= SoftwareRasterizer.clipTop &&
-          ka.field_t < SoftwareRasterizer.clipBottom) {
+          ChatMessage.field_t >= SoftwareRasterizer.clipTop &&
+          ChatMessage.field_t < SoftwareRasterizer.clipBottom) {
           this.field_T = kd.field_b;
-          this.field_G = -this.field_qb + ka.field_t;
+          this.field_G = -this.field_qb + ChatMessage.field_t;
           this.field_jb = kd.field_b;
           var12 = 1;
           this.field_U = vb.field_f - this.field_w;
@@ -725,7 +725,7 @@ class UiComponent extends qo {
         return PortalEntryEvent.field_l;
     }
 
-    final static int a(ka param0, byte param1) {
+    final static int a(ChatMessage param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_17_0 = 0;

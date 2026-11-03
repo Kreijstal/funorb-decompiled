@@ -43,7 +43,7 @@ final class sf {
             return (LevelData) ((Object) stackIn_16_0);
           }
           if (4 == var2_int) {
-            stackIn_14_0 = ij.a(param1, 7);
+            stackIn_14_0 = CheckboxPainter.a(param1, 7);
             return (LevelData) ((Object) stackIn_14_0);
           }
           if (5 == var2_int) {
@@ -51,7 +51,7 @@ final class sf {
             return (LevelData) ((Object) stackIn_7_0);
           }
           if (var2_int == 6) {
-            stackIn_12_0 = no.a((byte) 104, param1);
+            stackIn_12_0 = QuickChatHelpDialog.a((byte) 104, param1);
             return (LevelData) ((Object) stackIn_12_0);
           }
           stackIn_10_0 = null;

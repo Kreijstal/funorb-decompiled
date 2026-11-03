@@ -38,7 +38,7 @@ final class pq extends IntrusiveNode {
         try {
           var3_int = param1.worldToScreenX(this.field_g, -20126);
           var4 = param1.worldToScreenY(this.field_l, param0 ^ 130);
-          this.field_q.setVolume(sd.b(12, var4, var3_int));
+          this.field_q.setVolume(DropTargetWidget.b(12, var4, var3_int));
           if (param0 >= ~var3_int &&
             var4 >= -256 &&
             var3_int <= 896 &&

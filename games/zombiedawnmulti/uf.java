@@ -211,20 +211,20 @@ final class uf {
               var17.field_j.a((byte) -118, var13_ref_String, 7);
               var18 = pk.field_b;
               var13 = vb.field_f;
-              var14 = ka.field_t;
+              var14 = ChatMessage.field_t;
               var18.field_j.layoutAtAnchor(4542, var13, 0, var14, 0);
             }
             var5 = var6;
             var6 = (ml) (var4.b(6));
           }
           if (0 != UsernameSuggestionsPanel.field_L.field_Gb.field_T) {
-            gi.field_i = new dk(UsernameSuggestionsPanel.field_L.field_Gb.field_w, UsernameSuggestionsPanel.field_L.field_Gb.field_qb, UsernameSuggestionsPanel.field_L.field_Gb.field_zb, UsernameSuggestionsPanel.field_L.field_Gb.field_z, ArrayWidgetGroup.field_K, kd.field_a, vo.field_m, vo.field_m);
+            gi.field_i = new NameEntryPopup(UsernameSuggestionsPanel.field_L.field_Gb.field_w, UsernameSuggestionsPanel.field_L.field_Gb.field_qb, UsernameSuggestionsPanel.field_L.field_Gb.field_zb, UsernameSuggestionsPanel.field_L.field_Gb.field_z, ArrayWidgetGroup.field_K, kd.field_a, vo.field_m, vo.field_m);
             ic.field_e = 2;
           }
           if (UsernameSuggestionsPanel.field_L.field_Hb.field_T == 0) {
             return;
           }
-          gi.field_i = new dk(UsernameSuggestionsPanel.field_L.field_Hb.field_w, UsernameSuggestionsPanel.field_L.field_Hb.field_qb, UsernameSuggestionsPanel.field_L.field_Hb.field_zb, UsernameSuggestionsPanel.field_L.field_Hb.field_z, DebouncedValidationProvider.field_d, kd.field_a, vo.field_m, vo.field_m);
+          gi.field_i = new NameEntryPopup(UsernameSuggestionsPanel.field_L.field_Hb.field_w, UsernameSuggestionsPanel.field_L.field_Hb.field_qb, UsernameSuggestionsPanel.field_L.field_Hb.field_zb, UsernameSuggestionsPanel.field_L.field_Hb.field_z, DebouncedValidationProvider.field_d, kd.field_a, vo.field_m, vo.field_m);
           ic.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

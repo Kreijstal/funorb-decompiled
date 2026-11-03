@@ -72,6 +72,6 @@ final class nf {
     }
 
     static {
-        ka.a(50, (byte) -110);
+        ChatMessage.a(50, (byte) -110);
     }
 }

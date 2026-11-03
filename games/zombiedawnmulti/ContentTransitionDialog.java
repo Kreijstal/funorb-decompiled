@@ -30,7 +30,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         int fieldTemp$1 = 0;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_pb != null) {
-          if (ld.field_Rb == this.field_pb) {
+          if (QuickChatMenu.field_Rb == this.field_pb) {
             fieldTemp$0 = this.field_lb + 1;
             this.field_lb = this.field_lb + 1;
             if (fieldTemp$0 != this.field_qb) {
@@ -136,7 +136,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     final void j(byte param0) {
         if (param0 >= -70) {
           field_ob = (int[]) null;
-          if (ld.field_Rb != this.field_pb) {
+          if (QuickChatMenu.field_Rb != this.field_pb) {
             this.field_pb = lf.field_a;
             this.field_lb = 0;
             this.installContent(this.field_kb, false);
@@ -146,7 +146,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           }
           return;
         }
-        if (ld.field_Rb != this.field_pb) {
+        if (QuickChatMenu.field_Rb != this.field_pb) {
           this.field_pb = lf.field_a;
           this.field_lb = 0;
           this.installContent(this.field_kb, false);
@@ -223,11 +223,11 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.field_lb = 0;
             return;
           }
-          if (ld.field_Rb == this.field_pb) {
+          if (QuickChatMenu.field_Rb == this.field_pb) {
             return;
           }
           this.field_lb = 0;
-          this.field_pb = ld.field_Rb;
+          this.field_pb = QuickChatMenu.field_Rb;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

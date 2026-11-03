@@ -182,7 +182,7 @@ final class LinkButtonPainter implements WidgetPainter {
         if (param0 != -22) {
           field_e = 45L;
         }
-        return -mo.field_Gb + bl.a((byte) 56);
+        return -AlignedIconLabel.field_Gb + bl.a((byte) 56);
     }
 
     static {

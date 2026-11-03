@@ -301,7 +301,7 @@ final class mg extends SceneObject {
           int var7_int = 73 % ((param2 + 45) / 36);
           var8 = MatchingTextValidator.field_w;
           Camera.field_w.c(param6, param3, param5);
-          wa.field_b[param0].c(param6 + 17, param3 + 21, param5);
+          MarkerSliderPainter.field_b[param0].c(param6 + 17, param3 + 21, param5);
           jq.a(cr.a(param0, -83), 33 + param3, (byte) 2, param4.field_t[param0], param5, -16 + param6);
           if (param1 != 255) {
             jq.a(cr.a(param1, -100), param3 + 21, (byte) 2, param4.field_t[param1], param5, param6 - 39);
@@ -374,7 +374,7 @@ final class mg extends SceneObject {
               SoftwareRasterizer.fillCircleAlpha(hp.field_l[var8] + var6, hp.field_g[var8] + var7, 6, 0, var11 * var9);
               SoftwareRasterizer.fillRadialGlow(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var10 * var11, hp.field_j[this.field_C]);
             }
-            wa.field_b[this.field_C].g(var4, var5);
+            MarkerSliderPainter.field_b[this.field_C].g(var4, var5);
             return;
           }
           return;

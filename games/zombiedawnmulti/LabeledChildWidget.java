@@ -71,7 +71,7 @@ final class LabeledChildWidget extends SingleChildWidget {
             if (io.field_b &&
               JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
               pd.field_b.field_Z = false;
-              hf.field_e.field_Jb.field_wb = ka.field_p;
+              hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
               ob.a(hf.field_e.field_Gb, 97);
             } else {
               hf.field_e.field_Jb.field_wb = null;
@@ -94,7 +94,7 @@ final class LabeledChildWidget extends SingleChildWidget {
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
-                hf.field_e.field_Jb.field_wb = ka.field_p;
+                hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                 ob.a(hf.field_e.field_Gb, 97);
               } else {
                 hf.field_e.field_Jb.field_wb = null;
@@ -112,7 +112,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                 if (io.field_b &&
                   JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
-                  hf.field_e.field_Jb.field_wb = ka.field_p;
+                  hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                   ob.a(hf.field_e.field_Gb, 97);
                 } else {
                   hf.field_e.field_Jb.field_wb = null;
@@ -130,7 +130,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                 } else {
                   if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                     pd.field_b.field_Z = false;
-                    hf.field_e.field_Jb.field_wb = ka.field_p;
+                    hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                     ob.a(hf.field_e.field_Gb, 97);
                   } else {
                     hf.field_e.field_Jb.field_wb = null;
@@ -143,7 +143,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           }
         } else {
           if (kp.field_l == SoftwareRasterizer.width) {
-            if (SoftwareRasterizer.height != dm.field_Qb &&
+            if (SoftwareRasterizer.height != LobbyPlayer.field_Qb &&
               SoftwareRasterizer.height == SocketConnector.field_h.field_f &&
               SocketConnector.field_h.field_h == SoftwareRasterizer.width) {
               if (null != JaggrabDownloader.field_c) {
@@ -173,7 +173,7 @@ final class LabeledChildWidget extends SingleChildWidget {
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
-                hf.field_e.field_Jb.field_wb = ka.field_p;
+                hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                 ob.a(hf.field_e.field_Gb, 97);
               } else {
                 hf.field_e.field_Jb.field_wb = null;
@@ -201,7 +201,7 @@ final class LabeledChildWidget extends SingleChildWidget {
               } else {
                 if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
-                  hf.field_e.field_Jb.field_wb = ka.field_p;
+                  hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                   ob.a(hf.field_e.field_Gb, 97);
                 } else {
                   hf.field_e.field_Jb.field_wb = null;
@@ -240,7 +240,7 @@ final class LabeledChildWidget extends SingleChildWidget {
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
-                hf.field_e.field_Jb.field_wb = ka.field_p;
+                hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                 ob.a(hf.field_e.field_Gb, 97);
               } else {
                 hf.field_e.field_Jb.field_wb = null;
@@ -263,7 +263,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                 if (io.field_b &&
                   JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
-                  hf.field_e.field_Jb.field_wb = ka.field_p;
+                  hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                   ob.a(hf.field_e.field_Gb, 97);
                 } else {
                   hf.field_e.field_Jb.field_wb = null;
@@ -281,7 +281,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                   if (io.field_b &&
                     JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                     pd.field_b.field_Z = false;
-                    hf.field_e.field_Jb.field_wb = ka.field_p;
+                    hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                     ob.a(hf.field_e.field_Gb, 97);
                   } else {
                     hf.field_e.field_Jb.field_wb = null;
@@ -299,7 +299,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                   } else {
                     if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                       pd.field_b.field_Z = false;
-                      hf.field_e.field_Jb.field_wb = ka.field_p;
+                      hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
                       ob.a(hf.field_e.field_Gb, 97);
                     } else {
                       hf.field_e.field_Jb.field_wb = null;

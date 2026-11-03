@@ -43,18 +43,18 @@ final class bc {
               var4 = -40 + er.field_j.width;
             }
           }
-          ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
+          CheckboxPainter.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
         }
     }
 
     final static void a(byte param0) {
         iq.a((byte) -78);
-        ok.field_l = ah.field_e.textWidth(we.field_g[12]);
-        int var1 = ah.field_e.textWidth(we.field_g[13]);
+        ok.field_l = TranslatedUiText.field_e.textWidth(we.field_g[12]);
+        int var1 = TranslatedUiText.field_e.textWidth(we.field_g[13]);
         if (!(var1 <= ok.field_l)) {
           ok.field_l = var1;
         }
-        ((ho) (VerticalScrollbar.field_Hb[1])).c((byte) 74);
+        ((ho) (mj.field_Hb[1])).c((byte) 74);
         if (param0 < 8) {
           bc.a((byte) -52);
         }
@@ -101,7 +101,7 @@ final class bc {
               var4 = -40 + er.field_j.width;
             }
           }
-          ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
+          CheckboxPainter.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
         }
     }
 }

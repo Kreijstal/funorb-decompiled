@@ -37,7 +37,7 @@ final class aa extends ii {
 
     final static void a(byte param0, boolean param1) {
         if (ki.field_e != null &&
-          ki.field_e.b(0, param1)) {
+          ki.field_e.updateAndPollDismissal(0, param1)) {
           ki.field_e = null;
         }
         if (param0 <= 113) {

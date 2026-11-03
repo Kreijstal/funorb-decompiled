@@ -48,8 +48,8 @@ final class lf {
         }
     }
 
-    final static void a(dm param0, boolean param1) {
-        dm var2 = null;
+    final static void a(LobbyPlayer param0, boolean param1) {
+        LobbyPlayer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -59,10 +59,10 @@ final class lf {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           param0.unlink(param1);
-          var2 = (dm) (cg.field_i.c(104));
+          var2 = (LobbyPlayer) (cg.field_i.c(104));
           while (var2 != null) {
             if (var2.a((byte) -117, param0)) {
-              var2 = (dm) (cg.field_i.b(6));
+              var2 = (LobbyPlayer) (cg.field_i.b(6));
               continue;
             }
             break;

@@ -30,7 +30,7 @@ final class ha extends IntrusiveNode {
     final static ob b(boolean param0) {
         int var1_int = 0;
         ob stackIn_2_0 = null;
-        ig stackIn_5_0 = null;
+        QuickChatCategoryRegistry stackIn_5_0 = null;
         ob stackIn_8_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
@@ -49,7 +49,7 @@ final class ha extends IntrusiveNode {
         stackIn_5_0 = ok.field_p;
         try {
           while (true) {
-            var2 = ((ig) (Object) stackIn_5_0).a(var1_int, 32767);
+            var2 = ((QuickChatCategoryRegistry) (Object) stackIn_5_0).a(var1_int, 32767);
             if (var2.field_y) {
               stackIn_8_0 = var2;
               return stackIn_8_0;

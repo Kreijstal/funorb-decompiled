@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo extends UiComponent {
+final class AlignedIconLabel extends UiComponent {
     static long field_Gb;
     private UiComponent field_Pb;
     static ao field_Lb;
@@ -14,12 +14,12 @@ final class mo extends UiComponent {
     static int field_Ib;
     static hh field_Jb;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setIconLabelBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.setBounds(param2, param5, param3, param4, -3344);
         if (param1 != 2) {
           return;
         }
-        this.a(param0, -17369, param6);
+        this.layoutIconLabel(param0, -17369, param6);
     }
 
     public static void h(int param0) {
@@ -132,11 +132,11 @@ final class mo extends UiComponent {
     final static void i(int param0) {
         jg.field_a = false;
         if (param0 > -2) {
-          mo.i(-59);
+          AlignedIconLabel.i(-59);
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutIconLabel(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -213,32 +213,32 @@ final class mo extends UiComponent {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param4 <= param2) {
           if (param2 < param6) {
-            ld.a(-12628, param6, param2, param5, param3, param4, param0, SoftwareRasterizer.pixels, param1);
+            QuickChatMenu.a(-12628, param6, param2, param5, param3, param4, param0, SoftwareRasterizer.pixels, param1);
           } else {
             if (param4 < param6) {
-              ld.a(-12628, param2, param6, param0, param3, param4, param5, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.a(-12628, param2, param6, param0, param3, param4, param5, SoftwareRasterizer.pixels, param1);
             } else {
-              ld.a(-12628, param2, param4, param0, param5, param6, param3, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.a(-12628, param2, param4, param0, param5, param6, param3, SoftwareRasterizer.pixels, param1);
             }
           }
         } else {
           if (param4 < param6) {
-            ld.a(-12628, param6, param4, param5, param0, param2, param3, SoftwareRasterizer.pixels, param1);
+            QuickChatMenu.a(-12628, param6, param4, param5, param0, param2, param3, SoftwareRasterizer.pixels, param1);
           } else {
             if (param6 > param2) {
-              ld.a(-12628, param4, param6, param3, param0, param2, param5, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.a(-12628, param4, param6, param3, param0, param2, param5, SoftwareRasterizer.pixels, param1);
             } else {
-              ld.a(-12628, param4, param2, param3, param5, param6, param0, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.a(-12628, param4, param2, param3, param5, param6, param0, SoftwareRasterizer.pixels, param1);
             }
           }
         }
         if (param7 > 30) {
           return;
         }
-        mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
+        AlignedIconLabel.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
     }
 
-    mo(long param0, UiComponent param1, UiComponent param2, UiComponent param3, Sprite param4, String param5) {
+    AlignedIconLabel(long param0, UiComponent param1, UiComponent param2, UiComponent param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

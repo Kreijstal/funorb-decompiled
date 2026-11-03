@@ -14,7 +14,7 @@ final class PortalEntryEvent extends GameEvent {
 
     final void a(byte param0) {
         super.a((byte) -54);
-        mi.field_Kb.a((IntrusiveNode) (this), false);
+        StateIconLabel.field_Kb.a((IntrusiveNode) (this), false);
         if (param0 > -47) {
           field_l = (String) null;
         }

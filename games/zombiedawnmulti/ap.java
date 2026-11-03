@@ -72,8 +72,8 @@ final class ap extends qb {
         }
         param0.field_j = false;
         param0.field_b = 0;
-        ok.field_p = new ig(var3_int, param0, param0);
-        MouseInputHandler.field_c = new an(var3_int, param0, param0, new dd());
+        ok.field_p = new QuickChatCategoryRegistry(var3_int, param0, param0);
+        MouseInputHandler.field_c = new QuickChatPhraseRegistry(var3_int, param0, param0, new dd());
         ob var5 = ha.b(false);
         if (var5 == null) {
           Throwable var12 = (Throwable) null;
@@ -84,7 +84,7 @@ final class ap extends qb {
           PowerupButton.a(var5, (byte) -19);
           BitmapFont var13 = (BitmapFont) null;
           tg.field_d = GameScreen.a(1127256, (BitmapFont) null, 65793, 1513239, 8947848, 4020342, 65793, (byte) 123, 0, 2245737, 65793, 1513239, 5138823);
-          bb.field_k = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 127, 16764006, 0, 0, 0, 0);
+          DelayedPacket.field_k = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 127, 16764006, 0, 0, 0, 0);
           GameWorld.field_x = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 122, 16777215, 0, 0, 0, 0);
           var6 = SoftwareRasterizer.width;
           var7 = SoftwareRasterizer.height;
@@ -95,7 +95,7 @@ final class ap extends qb {
             SoftwareRasterizer.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var17, var6, var7);
-          QuickChatPhraseDefinition.field_t = HuffmanCodec.a(false, tg.field_d, bb.field_k, GameWorld.field_x, var5);
+          QuickChatPhraseDefinition.field_t = HuffmanCodec.a(false, tg.field_d, DelayedPacket.field_k, GameWorld.field_x, var5);
           rp.field_l.field_Cb = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ap.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

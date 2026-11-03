@@ -9,11 +9,11 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
     static int field_ib;
     static String field_jb;
 
-    final static dm a(long param0, byte param1) {
+    final static LobbyPlayer a(long param0, byte param1) {
         if (param1 > -35) {
-          return (dm) null;
+          return (LobbyPlayer) null;
         }
-        return (dm) (kp.field_o.a(param0, -22877));
+        return (LobbyPlayer) (kp.field_o.a(param0, -22877));
     }
 
     private final void l(int param0) {
@@ -159,13 +159,13 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
     }
 
     final static void a(String param0, int param1, String param2, String param3, int param4, int param5) {
-        ka var6 = null;
+        ChatMessage var6 = null;
         try {
           if (param5 != 0) {
             String var7 = (String) null;
             vm.a((String) null, -13, (String) null, (String) null, -118, 91);
           }
-          var6 = new ka(param4, param0, param1, param2, param3);
+          var6 = new ChatMessage(param4, param0, param1, param2, param3);
           DialogLayer.a(var6, (byte) 83);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

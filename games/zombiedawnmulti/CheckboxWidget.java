@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends ButtonWidget {
+final class CheckboxWidget extends ButtonWidget {
     static boolean field_M;
 
-    private fj(String param0, WidgetListener param1) {
+    private CheckboxWidget(String param0, WidgetListener param1) {
         this(param0, ra.field_o.field_n, param1);
         try {
           this.painter = ra.field_o.field_k;
@@ -13,7 +13,7 @@ final class fj extends ButtonWidget {
         }
     }
 
-    private fj(String param0, WidgetPainter param1, WidgetListener param2) {
+    private CheckboxWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
           this.painter = ra.field_o.field_k;
@@ -85,7 +85,7 @@ final class fj extends ButtonWidget {
         }
     }
 
-    fj(String param0, WidgetListener param1, boolean param2) {
+    CheckboxWidget(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_G = param2 ? true : false;

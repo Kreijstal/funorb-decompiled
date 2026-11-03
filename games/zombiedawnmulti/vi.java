@@ -42,7 +42,7 @@ final class vi {
         IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        dm var12 = null;
+        LobbyPlayer var12 = null;
         int var13 = 0;
         UiComponent var14 = null;
         UiComponent var15 = null;
@@ -90,7 +90,7 @@ final class vi {
           var7 = 0;
           var8 = 0;
           if (null != JaggrabDownloader.field_c && (null != IntrusiveDequeCursor.field_g ||
-            sd.field_G != null ||
+            DropTargetWidget.field_G != null ||
             r.field_c != null ||
             null != na.field_J)) {
             for (var9 = 0; var9 < kj.field_h; var9++) {
@@ -100,9 +100,9 @@ final class vi {
                 IntrusiveDequeCursor.field_g[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (sd.field_G != null &&
-                null != sd.field_G[var9]) {
-                var11_int = sd.field_G[var9][var10_int];
+              if (DropTargetWidget.field_G != null &&
+                null != DropTargetWidget.field_G[var9]) {
+                var11_int = DropTargetWidget.field_G[var9][var10_int];
                 if (var11_int != 0 &&
                   !bo.field_e) {
                   var5_int = 1;
@@ -146,7 +146,7 @@ final class vi {
           var9Lifetime1 = stackIn_52_0;
           var10 = param3.field_Gb.field_Cb;
           var11 = null;
-          var12 = (dm) (var10.c(124));
+          var12 = (LobbyPlayer) (var10.c(124));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_Cb == null) {
@@ -322,7 +322,7 @@ final class vi {
                 UnitStateEvent.a(-21148, var12.field_ec, param1);
               } else {
                 if (var12.field_cc.field_T == 0) {
-                  WhirlpoolHasher.a(ka.field_t, param3, 0, 0, (byte) 81, vb.field_f, var12);
+                  WhirlpoolHasher.a(ChatMessage.field_t, param3, 0, 0, (byte) 81, vb.field_f, var12);
                 } else {
                   cg.a(param1, -27404, var12.field_ec);
                 }
@@ -334,14 +334,14 @@ final class vi {
               if (~var12.field_ec == ~ContentTransitionDialog.field_sb) {
                 if (var5_int != 0 &&
                   !var12.field_Nb) {
-                  var24Lifetime2 = lj.field_s;
+                  var24Lifetime2 = ClickMarker.field_s;
                 } else {
                   if (var7 > var12.field_Sb) {
                     var25_int = -var12.field_Sb + var7;
                     if (var25_int == 1) {
                       var24Lifetime2 = jk.field_a;
                     }
-                    var24Lifetime2 = vl.a(ij.field_f, new String[]{null, Integer.toString(var25_int)}, 2);
+                    var24Lifetime2 = vl.a(CheckboxPainter.field_f, new String[]{null, Integer.toString(var25_int)}, 2);
                     var30Lifetime1 = var24Lifetime2;
                     var25 = var30Lifetime1;
                     var24Lifetime2 = var25;
@@ -411,9 +411,9 @@ final class vi {
                     !var12.field_Nb) {
                     var29 = 1;
                   }
-                  if (sd.field_G != null &&
-                    sd.field_G[var27_int] != null) {
-                    var30_int = sd.field_G[var27_int][var28];
+                  if (DropTargetWidget.field_G != null &&
+                    DropTargetWidget.field_G[var27_int] != null) {
+                    var30_int = DropTargetWidget.field_G[var27_int][var28];
                     if (var30_int != 0 &&
                       !bo.field_e &&
                       !var12.field_Nb) {
@@ -472,13 +472,13 @@ final class vi {
                 if (bf.field_n == param3 &&
                   !hl.b(0)) {
                   var27 = JaggrabDownloader.field_c.field_Nb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vl.a(VerticalScrollbar.field_Ob, new String[]{var27}, param2 - 43);
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vl.a(mj.field_Ob, new String[]{var27}, param2 - 43);
                 }
                 ui.field_j = (String) (var24Lifetime2);
               }
             }
             var11 = var12;
-            var12 = (dm) (var10.b(6));
+            var12 = (LobbyPlayer) (var10.b(6));
           }
           if (param2 != 45) {
             var32 = (ScrollPane) null;

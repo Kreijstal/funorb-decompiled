@@ -61,7 +61,7 @@ final class qh {
           hh.field_h.c(param4 + 80, 36 + param3, param5);
           var9 = var7 * 31 / var8;
           SoftwareRasterizer.fillRectAlpha(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
-          wa.field_b[-44 + param0 + 26].c(18 + param4, param3 + 44, param5);
+          MarkerSliderPainter.field_b[-44 + param0 + 26].c(18 + param4, param3 + 44, param5);
           ((BitmapFont) ((Object) var6)).drawParagraphAlpha(gh.field_f[param0], param4 + 4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((BitmapFont) ((Object) var6)).maxAscent + ((BitmapFont) ((Object) var6)).maxDescent);
           var10 = new Random();
           if (var7 >= var8) {

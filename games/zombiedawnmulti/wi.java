@@ -54,14 +54,14 @@ final class wi extends IntrusiveNode {
         field_g = null;
     }
 
-    final static void a(byte param0, ld param1) {
+    final static void a(byte param0, QuickChatMenu param1) {
         if (param1 == null) {
           return;
         }
         try {
-          VerticalScrollbar.field_Ib = param1;
+          mj.field_Ib = param1;
           rp.field_l.field_Cb.e(-30986);
-          rp.field_l.a((byte) 50, VerticalScrollbar.field_Ib);
+          rp.field_l.a((byte) 50, mj.field_Ib);
           ee.field_b = true;
           if (param0 != 4) {
             wi.a(-50);

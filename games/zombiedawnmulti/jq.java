@@ -135,7 +135,7 @@ final class jq {
         JaggrabDownloader.field_i.a((byte) 50, BirthDateInputWidget.field_U.field_c);
         int var2 = 81 % ((65 - param1) / 60);
         JaggrabDownloader.field_i.a((byte) 50, jp.field_b);
-        qf.field_b = new UiComponent(0L, wa.field_a);
+        qf.field_b = new UiComponent(0L, MarkerSliderPainter.field_a);
         vb.field_c = new UiComponent(0L, (UiComponent) null);
         qf.field_b.a((byte) 50, mq.field_l);
         qf.field_b.a((byte) 50, vb.field_c);

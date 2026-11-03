@@ -143,7 +143,7 @@ abstract class HumanView extends UnitView {
             if (this.field_U.isSamplePositionOutOfRange()) {
               this.field_U = null;
             } else {
-              this.field_U.setVolume(sd.b(124, var4, var3_int));
+              this.field_U.setVolume(DropTargetWidget.b(124, var4, var3_int));
               this.field_U.f(pb.a(var4, var3_int, false));
             }
           }
@@ -167,7 +167,7 @@ abstract class HumanView extends UnitView {
             }
           }
           if (this.state != 17) {
-            stackIn_27_0 = ig.field_d[1];
+            stackIn_27_0 = QuickChatCategoryRegistry.field_d[1];
             stackIn_27_1 = 12;
             if (this.facing != 3) {
               stackIn_28_2 = -3 + var3_int;
@@ -248,7 +248,7 @@ abstract class HumanView extends UnitView {
             }
           }
           if (this.field_jb) {
-            ig.field_d[0].e(var3_int, var4, 128, 16711680);
+            QuickChatCategoryRegistry.field_d[0].e(var3_int, var4, 128, 16711680);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

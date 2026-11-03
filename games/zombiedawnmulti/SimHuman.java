@@ -707,8 +707,8 @@ abstract class SimHuman extends SimUnit {
           this.l((byte) 59);
         }
         while (-1 + this.field_lb > var4) {
-          this.field_ub[var4] = var2 + dm.field_dc[var4];
-          this.field_qb[var4] = dm.field_Ib[var4] + var3;
+          this.field_ub[var4] = var2 + LobbyPlayer.field_dc[var4];
+          this.field_qb[var4] = LobbyPlayer.field_Ib[var4] + var3;
           var4++;
         }
         this.field_ub[this.field_lb - 1] = var2;

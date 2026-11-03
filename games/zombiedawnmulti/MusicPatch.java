@@ -40,15 +40,15 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        nk.field_n = new String[mo.field_Kb];
+        nk.field_n = new String[AlignedIconLabel.field_Kb];
         nk.field_n[7] = kg.field_l;
         nk.field_n[5] = jk.field_e;
         nk.field_n[4] = hp.field_h;
         nk.field_n[18] = PortalEntryEvent.field_o;
-        nk.field_n[21] = lj.field_p;
-        nk.field_n[6] = ld.field_Lb;
+        nk.field_n[21] = ClickMarker.field_p;
+        nk.field_n[6] = QuickChatMenu.field_Lb;
         nk.field_n[16] = mn.field_n;
-        nk.field_n[19] = sd.field_E;
+        nk.field_n[19] = DropTargetWidget.field_E;
         nk.field_n[13] = vn.field_a;
         nk.field_n[20] = GameSimulation.field_c;
         if (param0 != 2) {

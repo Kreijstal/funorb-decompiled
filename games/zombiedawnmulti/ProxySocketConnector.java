@@ -187,7 +187,7 @@ final class ProxySocketConnector extends SocketConnector {
               var7Lifetime1 = var11 * (ImageProducerRasterBuffer.field_k.field_z - 4) / (1 + gi.field_l) + (1 - var13);
               if (5 > var12) {
                 la.field_h[var12].setBounds(var7Lifetime1, var13, var8, var6_int, param0 ^ -3342);
-                ij.field_k[var12].setBounds(var7Lifetime1, 0, var9 - param2, param2, param0 ^ -3342);
+                CheckboxPainter.field_k[var12].setBounds(var7Lifetime1, 0, var9 - param2, param2, param0 ^ -3342);
                 pf.field_d[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, param1, var9, -3344);
                 hh.field_l[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, var8 - (param2 + var10), var10, -3344);
               } else {

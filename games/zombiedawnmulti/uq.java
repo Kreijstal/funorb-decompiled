@@ -21,10 +21,10 @@ final class uq {
           if (param1 > -6) {
             uq.a(-91, -34);
           }
-          var4 = (kj) (md.field_u.c(121));
+          var4 = (kj) (TriangleMesh.field_u.c(121));
           while (var4 != null) {
             AgeValidator.a(var4, true, param0);
-            var4 = (kj) (md.field_u.b(6));
+            var4 = (kj) (TriangleMesh.field_u.b(6));
           }
           var5 = (nh) (pn.field_f.c(83));
           while (var5 != null) {

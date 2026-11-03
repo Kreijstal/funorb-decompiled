@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jk {
-    static mi field_h;
+    static StateIconLabel field_h;
     static int[] field_l;
     static int[] field_b;
     static String field_i;

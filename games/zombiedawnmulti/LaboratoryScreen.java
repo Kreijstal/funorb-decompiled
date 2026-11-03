@@ -44,7 +44,7 @@ final class LaboratoryScreen extends MenuScreen {
           if (255 != var6 &&
             var6 < 63) {
             var7 = FullscreenFocusCanvas.field_k.d(var6, param2 + 2992) ? 1 : 0;
-            wa.field_b[var6 - 18].g(429 + var5, 357);
+            MarkerSliderPainter.field_b[var6 - 18].g(429 + var5, 357);
             var8 = FullscreenFocusCanvas.field_k.field_t[var6];
             if (FullscreenFocusCanvas.field_k.d(var6, 53)) {
               var8 = cr.a(var6, -97);
@@ -94,7 +94,7 @@ final class LaboratoryScreen extends MenuScreen {
         int var5Lifetime1;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         super.a(param0);
-        b.field_a.a(41, b.field_a.field_zb, 850, wa.field_g);
+        b.field_a.a(41, b.field_a.field_zb, 850, MarkerSliderPainter.field_g);
         b.field_a.c(false, -1);
         DisplayNamePanel.field_O = -1;
         kn.field_b = -1;
@@ -179,14 +179,14 @@ final class LaboratoryScreen extends MenuScreen {
           var6 = null;
           if (lh.field_l >= 0 &&
             lh.field_l < 19) {
-            var6 = wa.field_b[lh.field_l];
+            var6 = MarkerSliderPainter.field_b[lh.field_l];
           } else if (32 <= lh.field_l &&
             lh.field_l <= 38) {
-            var6 = wa.field_b[lh.field_l - 32 + 19];
+            var6 = MarkerSliderPainter.field_b[lh.field_l - 32 + 19];
           } else {
             if (lh.field_l >= 44 &&
               lh.field_l <= 62) {
-              var6 = wa.field_b[-44 + (lh.field_l + 26)];
+              var6 = MarkerSliderPainter.field_b[-44 + (lh.field_l + 26)];
             }
           }
           if (var6 != null) {
@@ -417,7 +417,7 @@ final class LaboratoryScreen extends MenuScreen {
               if (var8 < 63) {
                 var10 = FullscreenFocusCanvas.field_k.d(var8, 53) ? 1 : 0;
                 var11 = FullscreenFocusCanvas.field_k.d(var9, param1 ^ -67) ? 1 : 0;
-                wa.field_b[var8].g(90 + var7, 354);
+                MarkerSliderPainter.field_b[var8].g(90 + var7, 354);
                 var12 = FullscreenFocusCanvas.field_k.field_t[var8];
                 if (var10 != 0) {
                   var12 = cr.a(var8, -111);
@@ -435,7 +435,7 @@ final class LaboratoryScreen extends MenuScreen {
                 SoftwareRasterizer.fillRect(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4);
                 if (var9 != 255) {
                   if (63 > var9) {
-                    wa.field_b[-13 + var9].g(90 + var7, 384);
+                    MarkerSliderPainter.field_b[-13 + var9].g(90 + var7, 384);
                     if (var6 != q.field_d) {
                     }
                     var12Lifetime1 = FullscreenFocusCanvas.field_k.field_t[var9];
@@ -518,7 +518,7 @@ final class LaboratoryScreen extends MenuScreen {
           }
           AgeValidator.field_u.field_ab = wc.field_M;
           cr.field_i.field_ab = FadingDialog.field_Q;
-          b.field_a = new VerticalScrollbar(0L, ih.field_d, var12, var9, AgeValidator.field_u, cr.field_i, false);
+          b.field_a = new mj(0L, ih.field_d, var12, var9, AgeValidator.field_u, cr.field_i, false);
           b.field_a.field_Q = 315;
           b.field_a.field_zb = 631;
           this.field_p = 0;
@@ -750,11 +750,11 @@ final class LaboratoryScreen extends MenuScreen {
                 FullscreenFocusCanvas.field_k.g(var13, 4)) {
                 stackIn_21_0 = on.field_bb[var13];
                 if (stackIn_21_0 == null) {
-                  var14 = param3 + var7 * param2 - wa.field_g;
+                  var14 = param3 + var7 * param2 - MarkerSliderPainter.field_g;
                   var15 = var11Lifetime1 + param1 + var12Lifetime1 * param0;
                   on.field_bb[var13] = new ki(var13, var14, var15);
                 }
-                on.field_bb[var13].field_q = -wa.field_g + (param3 + var7 * param2);
+                on.field_bb[var13].field_q = -MarkerSliderPainter.field_g + (param3 + var7 * param2);
                 on.field_bb[var13].a(true);
                 if (on.field_bb[var13].b((byte) 39) &&
                   lh.field_l == 255 &&
@@ -983,27 +983,27 @@ final class LaboratoryScreen extends MenuScreen {
           }
         }
         b.field_a.a(-11838, true);
-        wa.field_g = b.field_a.setScrollbarBounds(850, b.field_a.field_zb, -18367);
+        MarkerSliderPainter.field_g = b.field_a.a(850, b.field_a.field_zb, -18367);
         var4Lifetime1 = -10;
-        wa.field_g = wa.field_g + var4Lifetime1 * t.field_d;
+        MarkerSliderPainter.field_g = MarkerSliderPainter.field_g + var4Lifetime1 * t.field_d;
         var5Lifetime1 = -100;
-        if (b.field_a.pollLineUp(20)) {
-          wa.field_g = wa.field_g + var4Lifetime1;
+        if (b.field_a.k(20)) {
+          MarkerSliderPainter.field_g = MarkerSliderPainter.field_g + var4Lifetime1;
         }
         if (b.field_a.h(4690)) {
-          wa.field_g = wa.field_g - var4Lifetime1;
+          MarkerSliderPainter.field_g = MarkerSliderPainter.field_g - var4Lifetime1;
         }
         if (b.field_a.j(param0 ^ 64)) {
-          wa.field_g = wa.field_g + var5Lifetime1;
+          MarkerSliderPainter.field_g = MarkerSliderPainter.field_g + var5Lifetime1;
         }
         if (b.field_a.c((byte) -104)) {
-          wa.field_g = wa.field_g - var5Lifetime1;
+          MarkerSliderPainter.field_g = MarkerSliderPainter.field_g - var5Lifetime1;
         }
-        if (wa.field_g < 0) {
-          wa.field_g = 0;
+        if (MarkerSliderPainter.field_g < 0) {
+          MarkerSliderPainter.field_g = 0;
         }
-        if (wa.field_g > -b.field_a.field_zb + 850) {
-          wa.field_g = -b.field_a.field_zb + 850;
+        if (MarkerSliderPainter.field_g > -b.field_a.field_zb + 850) {
+          MarkerSliderPainter.field_g = -b.field_a.field_zb + 850;
         }
         if (1 == kd.field_b) {
           if (255 != DisplayNamePanel.field_O &&

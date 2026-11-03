@@ -70,7 +70,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param3 >= -117) {
             field_I = (String) null;
           }
-          var6 = ka.field_t;
+          var6 = ChatMessage.field_t;
           var13.field_j.layoutAtAnchor(4542, var5, 0, var6, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -262,7 +262,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var9 = me.a(-57, StatefulTextPainter.b(0));
           if (wp.field_b != var9) {
             if (RasterBuffer.field_c == var9) {
-              var8 = lj.field_f;
+              var8 = ClickMarker.field_f;
             }
           } else {
             var8 = ReportAbuseDialog.field_Gb;

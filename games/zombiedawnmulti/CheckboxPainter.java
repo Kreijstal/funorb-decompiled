@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij implements WidgetPainter {
+final class CheckboxPainter implements WidgetPainter {
     private int field_p;
     static String field_f;
     private int field_i;
@@ -25,7 +25,7 @@ final class ij implements WidgetPainter {
         field_f = null;
         if (!param0) {
           byte[] var2 = (byte[]) null;
-          ij.a((byte[]) null, 45);
+          CheckboxPainter.a((byte[]) null, 45);
         }
     }
 
@@ -111,7 +111,7 @@ final class ij implements WidgetPainter {
         gh var2 = new gh(true);
         if (param0) {
           byte[] var3 = (byte[]) null;
-          ij.a((byte[]) null, 33);
+          CheckboxPainter.a((byte[]) null, 33);
         }
         var2.field_e = param1 ? true : false;
         return var2;
@@ -129,14 +129,14 @@ final class ij implements WidgetPainter {
         int var9 = 0;
         int var10 = 0;
         Sprite var11 = null;
-        fj var12 = null;
+        CheckboxWidget var12 = null;
         try {
-          if (param4 instanceof fj) {
+          if (param4 instanceof CheckboxWidget) {
             stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
-          var12 = (fj) (stackIn_3_0);
+          var12 = (CheckboxWidget) (stackIn_3_0);
           if (var12 != null) {
             param0 = param0 & var12.field_F;
           }
@@ -151,7 +151,7 @@ final class ij implements WidgetPainter {
           SoftwareRasterizer.fillRect(var8, var9, this.field_l, this.field_i, var7);
           if (param2 != -15112) {
             var11 = (Sprite) null;
-            ij.a(100, -43, 108, -70, true, -27, -48, (Sprite) null, -23);
+            CheckboxPainter.a(100, -43, 108, -70, true, -27, -48, (Sprite) null, -23);
           }
           if (var12.field_G) {
             SoftwareRasterizer.drawLine(var8, var9, this.field_l + var8, var9 + this.field_i, 1);
@@ -176,7 +176,7 @@ final class ij implements WidgetPainter {
         }
     }
 
-    ij(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    CheckboxPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_c = 1;
         this.field_h = 1;
         try {

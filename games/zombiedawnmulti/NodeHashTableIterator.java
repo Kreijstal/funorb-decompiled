@@ -49,7 +49,7 @@ final class NodeHashTableIterator implements Iterator {
             if (var4 < 0) {
               var5 = kk.field_x;
             } else {
-              if (var4 == mo.field_Jb.field_d) {
+              if (var4 == AlignedIconLabel.field_Jb.field_d) {
                 var5 = DraggableWidget.field_N;
               } else {
                 var5 = IndexedSpriteState.field_c;
@@ -61,7 +61,7 @@ final class NodeHashTableIterator implements Iterator {
             var8 = -(var7 >> 1) + NetworkGameClient.field_x;
             if (var4 >= 0) {
               var2 = var2 + pb.field_b;
-              if (var4 == mo.field_Jb.field_d) {
+              if (var4 == AlignedIconLabel.field_Jb.field_d) {
                 stackIn_16_0 = DialogLayer.field_I;
               } else {
                 stackIn_16_0 = li.field_E;
@@ -116,8 +116,8 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static void a(boolean param0) {
-        dm.field_ac.setBounds(18, 0, -(GradientOutlineTextPainter.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
-        mo.field_Hb.setBounds(18, 0, 42 + DualLinkNode.field_o, -2 + (pd.field_b.field_zb + (-DualLinkNode.field_o - 40)), -3344);
+        LobbyPlayer.field_ac.setBounds(18, 0, -(GradientOutlineTextPainter.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
+        AlignedIconLabel.field_Hb.setBounds(18, 0, 42 + DualLinkNode.field_o, -2 + (pd.field_b.field_zb + (-DualLinkNode.field_o - 40)), -3344);
         if (param0) {
           field_g = (UiComponent) null;
         }

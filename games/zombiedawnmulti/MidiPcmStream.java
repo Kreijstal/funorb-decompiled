@@ -107,7 +107,7 @@ final class MidiPcmStream extends PcmStream {
           for (var6 = 1; var6 < param0.length / 4; var6++) {
             IntrusiveNode.a(3 + var6, var5, -127, ValidationState.a(param0, var6, (byte) 53));
           }
-          stackIn_8_0 = ij.a(var5, 7);
+          stackIn_8_0 = CheckboxPainter.a(var5, 7);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

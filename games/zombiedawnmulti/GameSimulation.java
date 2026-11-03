@@ -557,7 +557,7 @@ final class GameSimulation {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        md var4_ref_md = null;
+        TriangleMesh var4_ref_md = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -573,7 +573,7 @@ final class GameSimulation {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        md var17 = null;
+        TriangleMesh var17 = null;
         int var18 = 0;
         int var19 = 0;
         int stackIn_20_0 = 0;
@@ -595,7 +595,7 @@ final class GameSimulation {
               break;
             }
             var4_ref_md = vn.field_c[var3];
-            var4_ref_md.a((byte) -81);
+            var4_ref_md.updateBounds((byte) -81);
             TertiaryLinkDeque.a(var3, (byte) 75);
             var5 = var4_ref_md.field_D + var4_ref_md.field_C >> 1;
             var6 = var4_ref_md.field_G + var4_ref_md.field_l >> 1;

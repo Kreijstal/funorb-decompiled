@@ -81,7 +81,7 @@ final class UnitStateEvent extends GameEvent {
         }
         uc.field_b = new String[4];
         uc.field_b[2] = DateInputWidget.field_K;
-        uc.field_b[3] = bb.field_h;
+        uc.field_b[3] = DelayedPacket.field_h;
         uc.field_b[0] = Camera.field_b;
         we.field_g = new String[51];
         uc.field_b[1] = ji.field_a;
@@ -95,7 +95,7 @@ final class UnitStateEvent extends GameEvent {
         we.field_g[13] = DialogLayer.field_K;
         we.field_g[6] = qo.field_t;
         we.field_g[0] = Waypoint.field_f;
-        we.field_g[19] = ah.field_b;
+        we.field_g[19] = TranslatedUiText.field_b;
         we.field_g[5] = qo.field_t;
         we.field_g[15] = PowerupEvent.field_n;
         we.field_g[45] = ZombieDawnMulti.field_F;
@@ -112,7 +112,7 @@ final class UnitStateEvent extends GameEvent {
         we.field_g[50] = FadingDialog.field_L;
         we.field_g[48] = vl.field_j[0];
         we.field_g[40] = HuffmanCodec.field_c;
-        we.field_g[46] = lj.field_m;
+        we.field_g[46] = ClickMarker.field_m;
         we.field_g[41] = ic.field_l;
         we.field_g[38] = UiWidget.field_m;
         we.field_g[42] = u.field_j;
@@ -138,7 +138,7 @@ final class UnitStateEvent extends GameEvent {
         gh.field_f[16] = DisplayNamePanel.field_L;
         gh.field_f[15] = i.field_c;
         gh.field_f[12] = wi.field_m;
-        gh.field_f[5] = wa.field_j;
+        gh.field_f[5] = MarkerSliderPainter.field_j;
         gh.field_f[14] = vm.field_jb;
         gh.field_f[38] = ic.field_b;
         gh.field_f[51] = eb.field_e;
@@ -172,19 +172,19 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[2][0] = na.field_F;
         wq.field_g[3][0] = SimHuman.field_jb;
         wq.field_g[4][0] = qf.field_e;
-        wq.field_g[5][0] = ka.field_c;
+        wq.field_g[5][0] = ChatMessage.field_c;
         wq.field_g[6][0] = eb.field_i;
         wq.field_g[7][0] = s.field_d;
         wq.field_g[8][0] = SimPortal.field_P;
         wq.field_g[9][0] = me.field_c;
         wq.field_g[10][0] = ClientException.field_j;
         wq.field_g[11][0] = wp.field_a;
-        wq.field_g[12][0] = no.field_Kb;
+        wq.field_g[12][0] = QuickChatHelpDialog.field_Kb;
         wq.field_g[13][0] = SecondaryNodeDeque.field_f;
         wq.field_g[14][0] = TextInputValidator.field_n;
         wq.field_g[15][0] = LinkButtonPainter.field_c;
         wq.field_g[16][0] = ha.field_h;
-        wq.field_g[17][0] = bb.field_i;
+        wq.field_g[17][0] = DelayedPacket.field_i;
         wq.field_g[18][0] = UnitView.field_Z;
         wq.field_g[61][0] = fk.field_o;
         wq.field_g[60][0] = og.field_P;
@@ -195,7 +195,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[55][0] = PortalView.field_F;
         wq.field_g[54][0] = FadingDialog.field_O;
         wq.field_g[53][0] = PasswordValidator.field_u;
-        wq.field_g[52][0] = bb.field_m;
+        wq.field_g[52][0] = DelayedPacket.field_m;
         wq.field_g[51][0] = nk.field_f;
         wq.field_g[50][0] = SocketConnector.field_d;
         wq.field_g[49][0] = ContextMenu.field_Sb;
@@ -214,7 +214,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[0][1] = UiComponent.field_db;
         wq.field_g[1][1] = PortalEntryEvent.field_j;
         wq.field_g[2][1] = UiWidget.field_t;
-        wq.field_g[3][1] = hi.field_Nb;
+        wq.field_g[3][1] = VerticalScrollbar.field_Nb;
         wq.field_g[4][1] = ha.field_n;
         wq.field_g[5][1] = bl.field_d;
         wq.field_g[6][1] = lo.field_e;
@@ -230,7 +230,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[16][1] = ArrayWidgetGroup.field_D;
         wq.field_g[17][1] = NavigationGrid.field_e;
         wq.field_g[18][1] = vf.field_a;
-        wq.field_g[61][1] = lj.field_q;
+        wq.field_g[61][1] = ClickMarker.field_q;
         wq.field_g[60][1] = ih.field_b;
         wq.field_g[59][1] = vc.field_f;
         wq.field_g[58][1] = ok.field_i;
@@ -275,7 +275,7 @@ final class UnitStateEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3 = no.a(param0, -107, param2);
+          var3 = QuickChatHelpDialog.a(param0, -107, param2);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -370,7 +370,7 @@ final class UnitStateEvent extends GameEvent {
         IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        dm var18_ref = null;
+        LobbyPlayer var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
         UiComponent var22 = null;
@@ -408,11 +408,11 @@ final class UnitStateEvent extends GameEvent {
                 en.field_b.field_wb = p.field_c.toUpperCase();
                 en.field_b.field_Z = true;
                 if (var19 != 0) {
-                  en.field_b.field_wb = ka.field_p.toUpperCase();
+                  en.field_b.field_wb = ChatMessage.field_p.toUpperCase();
                   en.field_b.field_Z = false;
                 }
               } else {
-                en.field_b.field_wb = ka.field_p.toUpperCase();
+                en.field_b.field_wb = ChatMessage.field_p.toUpperCase();
                 en.field_b.field_Z = false;
               }
               en.field_b.field_ab = LinkButtonPainter.field_i.field_ab;
@@ -581,7 +581,7 @@ final class UnitStateEvent extends GameEvent {
                     var13_ref_String = vb.field_e;
                     boolean decompiledSharedTail0 = (var12 == 0);
                     if (!decompiledSharedTail0) {
-                      var14_ref_String = lj.field_k + (String) (var11_ref);
+                      var14_ref_String = ClickMarker.field_k + (String) (var11_ref);
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
@@ -592,7 +592,7 @@ final class UnitStateEvent extends GameEvent {
                 }
               }
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != IntrusiveDequeCursor.field_g ||
-                sd.field_G != null ||
+                DropTargetWidget.field_G != null ||
                 r.field_c != null ||
                 na.field_J != null)) {
                 var11 = 0;
@@ -613,9 +613,9 @@ final class UnitStateEvent extends GameEvent {
                     IntrusiveDequeCursor.field_g[var16][var17_int]) {
                     var11 = 1;
                   }
-                  if (null != sd.field_G &&
-                    sd.field_G[var16] != null) {
-                    var18_int = sd.field_G[var16][var17_int];
+                  if (null != DropTargetWidget.field_G &&
+                    DropTargetWidget.field_G[var16] != null) {
+                    var18_int = DropTargetWidget.field_G[var16][var17_int];
                     if (var18_int > var13Lifetime1) {
                       var13Lifetime1 = var18_int;
                     }
@@ -644,7 +644,7 @@ final class UnitStateEvent extends GameEvent {
                 if (decompiledFrameCompleted0) {
                   var16 = 0;
                   var17 = bf.field_n.field_Gb.field_Cb;
-                  var18_ref = (dm) (var17.c(81));
+                  var18_ref = (LobbyPlayer) (var17.c(81));
                   while (true) {
                     boolean decompiledFrameRemainder1 = true;
                     boolean decompiledFrameRemainder2 = true;
@@ -686,7 +686,7 @@ final class UnitStateEvent extends GameEvent {
                           }
                         }
                         if (decompiledFrameRemainder2) {
-                          var18_ref = (dm) (var17.b(6));
+                          var18_ref = (LobbyPlayer) (var17.b(6));
                           continue;
                         }
                       }
@@ -711,7 +711,7 @@ final class UnitStateEvent extends GameEvent {
                         break;
                       }
                     }
-                    ui.field_j = ka.field_s;
+                    ui.field_j = ChatMessage.field_s;
                     break;
                   }
                 }
@@ -775,7 +775,7 @@ final class UnitStateEvent extends GameEvent {
             if (pg.field_a.field_T != 0) {
               io.field_b = false;
             }
-            ld.a(JaggrabDownloader.field_c, false, param4, 1);
+            QuickChatMenu.a(JaggrabDownloader.field_c, false, param4, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

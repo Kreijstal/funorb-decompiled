@@ -534,14 +534,14 @@ final class rp {
               var9 != 0) {
               var5 = var1.readString((byte) -19);
             }
-            var6 = md.a((byte) -55, var4_ref_String);
+            var6 = TriangleMesh.a((byte) -55, var4_ref_String);
             var7 = var1.readString((byte) -89);
             var8 = tg.a((CharSequence) ((Object) var4_ref_String), false);
             if (var8 == null) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = md.a((byte) 105, var7);
+              var6 = TriangleMesh.a((byte) 105, var7);
               if (null != var6) {
                 bh.field_f.a(-1, var6, (long)var8.hashCode());
               }
@@ -624,7 +624,7 @@ final class rp {
               if (var9 != 0) {
                 break scanLoop1;
               }
-              if (md.a(stackIn_55_0, (byte) -49, var7_ref)) {
+              if (TriangleMesh.a(stackIn_55_0, (byte) -49, var7_ref)) {
                 var7_ref = (ml) (ro.field_M.b(6));
                 continue;
               }

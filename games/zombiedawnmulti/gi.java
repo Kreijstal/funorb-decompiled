@@ -11,7 +11,7 @@ final class gi extends IntrusiveNode {
     static String field_n;
     static String field_h;
     int field_k;
-    static dk field_i;
+    static NameEntryPopup field_i;
     static String field_p;
 
     public static void a(int param0) {
@@ -251,7 +251,7 @@ final class gi extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4) {
-            field_i = (dk) null;
+            field_i = (NameEntryPopup) null;
           }
           if (param1 != null &&
             0 != param1.length()) {

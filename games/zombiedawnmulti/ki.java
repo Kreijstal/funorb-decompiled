@@ -17,7 +17,7 @@ final class ki {
     static BufferedSocket field_h;
     static String field_j;
     static int[] field_d;
-    static no field_e;
+    static QuickChatHelpDialog field_e;
     static String field_l;
 
     public static void b(int param0) {
@@ -35,7 +35,7 @@ final class ki {
         field_f = null;
         field_m = null;
         if (param0 != -23636) {
-          field_e = (no) null;
+          field_e = (QuickChatHelpDialog) null;
         }
     }
 
@@ -69,9 +69,9 @@ final class ki {
         if (param0 != 26) {
           field_h = (BufferedSocket) null;
         }
-        if (km.field_cb != SocketConnector.field_h.field_f) {
-          vj.field_t = vj.field_t + (-km.field_cb + SocketConnector.field_h.field_f);
-          km.field_cb = SocketConnector.field_h.field_f;
+        if (ValidationMessageWidget.field_cb != SocketConnector.field_h.field_f) {
+          vj.field_t = vj.field_t + (-ValidationMessageWidget.field_cb + SocketConnector.field_h.field_f);
+          ValidationMessageWidget.field_cb = SocketConnector.field_h.field_f;
         }
         if (t.field_e > 0) {
           lk.g((byte) 63);
@@ -178,7 +178,7 @@ final class ki {
             param0 > 38) {
             var6 = 1993752;
             if (FullscreenFocusCanvas.field_k.c(127, param0)) {
-              var7 = wa.field_b[-44 + (param0 + 26)];
+              var7 = MarkerSliderPainter.field_b[-44 + (param0 + 26)];
             }
             var4 = 280577;
             var5 = 2306851;
@@ -213,7 +213,7 @@ final class ki {
             return;
           }
           if (FullscreenFocusCanvas.field_k.c(127, param0)) {
-            var7 = wa.field_b[-13 + param0];
+            var7 = MarkerSliderPainter.field_b[-13 + param0];
           }
           var6Lifetime3 = 8783880;
           var5Lifetime3 = 5053184;
@@ -278,7 +278,7 @@ final class ki {
             param0 > 38) {
             var6Lifetime1 = 1993752;
             if (FullscreenFocusCanvas.field_k.c(127, param0)) {
-              var7 = wa.field_b[-44 + (param0 + 26)];
+              var7 = MarkerSliderPainter.field_b[-44 + (param0 + 26)];
             }
             var4Lifetime1 = 280577;
             var5Lifetime1 = 2306851;
@@ -313,7 +313,7 @@ final class ki {
             return;
           }
           if (FullscreenFocusCanvas.field_k.c(127, param0)) {
-            var7 = wa.field_b[-13 + param0];
+            var7 = MarkerSliderPainter.field_b[-13 + param0];
           }
           var6Lifetime1Lifetime1 = 8783880;
           var5Lifetime1Lifetime1 = 5053184;
@@ -371,7 +371,7 @@ final class ki {
           return;
         }
         if (FullscreenFocusCanvas.field_k.c(127, param0)) {
-          var7 = wa.field_b[param0];
+          var7 = MarkerSliderPainter.field_b[param0];
         }
         var4Lifetime2 = 6575425;
         var5Lifetime2 = 3420451;

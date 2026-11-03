@@ -250,7 +250,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         param1 = param1 + this.field_i;
         this.drawCenteredLabel(wg.field_b, param3, param1, this.field_R, true);
         this.drawCenteredLabel(eo.field_a, param3, param1, this.field_T, true);
-        this.drawCenteredLabel(ij.field_a, param3, param1, this.field_Q, true);
+        this.drawCenteredLabel(CheckboxPainter.field_a, param3, param1, this.field_Q, true);
         if (param0 != -2) {
           field_cb = -58;
         }

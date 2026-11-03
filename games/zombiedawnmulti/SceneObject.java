@@ -78,20 +78,20 @@ abstract class SceneObject extends TertiaryLinkNode {
         return this.positionY >> 16;
     }
 
-    final static ld a(UiComponent param0, UiComponent param1, byte param2, int[] param3, UiComponent param4) {
+    final static QuickChatMenu a(UiComponent param0, UiComponent param1, byte param2, int[] param3, UiComponent param4) {
         int var10_int = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         String[] var6 = null;
         char[] var7 = null;
-        ld[] var8 = null;
+        QuickChatMenu[] var8 = null;
         int var9 = 0;
         QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
         Object stackIn_9_0 = null;
-        ld stackIn_11_0 = null;
+        QuickChatMenu stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -110,11 +110,11 @@ abstract class SceneObject extends TertiaryLinkNode {
           var14 = new char[var5_int];
           var13 = var14;
           var7 = var13;
-          var8 = new ld[var5_int];
+          var8 = new QuickChatMenu[var5_int];
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = MouseInputHandler.field_c.a(param3[var10_int], -11452);
+              var11 = MouseInputHandler.field_c.getDefinition(param3[var10_int], -11452);
               var6[var10_int] = var11.e(-18572);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
@@ -127,9 +127,9 @@ abstract class SceneObject extends TertiaryLinkNode {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_9_0 = null;
-            return (ld) (stackIn_9_0);
+            return (QuickChatMenu) (stackIn_9_0);
           }
-          stackIn_11_0 = new ld(0L, param0, param4, param1, var8, param3, var6, var14);
+          stackIn_11_0 = new QuickChatMenu(0L, param0, param4, param1, var8, param3, var6, var14);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

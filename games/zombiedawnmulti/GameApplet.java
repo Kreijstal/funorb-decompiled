@@ -86,10 +86,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (dk.field_Ib != null) {
+          if (NameEntryPopup.field_Ib != null) {
             try {
-              dk.field_Ib.removeFocusListener((java.awt.event.FocusListener) (this));
-              dk.field_Ib.getParent().remove((java.awt.Component) ((Object) dk.field_Ib));
+              NameEntryPopup.field_Ib.removeFocusListener((java.awt.event.FocusListener) (this));
+              NameEntryPopup.field_Ib.getParent().remove((java.awt.Component) ((Object) NameEntryPopup.field_Ib));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -268,10 +268,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (null != dk.field_Ib) {
-            dk.field_Ib.removeFocusListener((java.awt.event.FocusListener) (this));
-            dk.field_Ib.getParent().setBackground(java.awt.Color.black);
-            dk.field_Ib.getParent().remove((java.awt.Component) ((Object) dk.field_Ib));
+          if (null != NameEntryPopup.field_Ib) {
+            NameEntryPopup.field_Ib.removeFocusListener((java.awt.event.FocusListener) (this));
+            NameEntryPopup.field_Ib.getParent().setBackground(java.awt.Color.black);
+            NameEntryPopup.field_Ib.getParent().remove((java.awt.Component) ((Object) NameEntryPopup.field_Ib));
           }
           boolean decompiledFrameRemainder0 = true;
           if (FullscreenFocusCanvas.field_g != null) {
@@ -304,21 +304,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          dk.field_Ib = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) dk.field_Ib));
-          dk.field_Ib.setSize(ng.field_d, pi.field_i);
-          dk.field_Ib.setVisible(true);
+          NameEntryPopup.field_Ib = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) NameEntryPopup.field_Ib));
+          NameEntryPopup.field_Ib.setSize(ng.field_d, pi.field_i);
+          NameEntryPopup.field_Ib.setVisible(true);
           if (var2 == cg.field_m) {
             var3 = cg.field_m.getInsets();
-            dk.field_Ib.setLocation(bl.field_a + var3.left, var3.top + lo.field_d);
+            NameEntryPopup.field_Ib.setLocation(bl.field_a + var3.left, var3.top + lo.field_d);
             if (var4 != 0) {
-              dk.field_Ib.setLocation(bl.field_a, lo.field_d);
+              NameEntryPopup.field_Ib.setLocation(bl.field_a, lo.field_d);
             }
           } else {
-            dk.field_Ib.setLocation(bl.field_a, lo.field_d);
+            NameEntryPopup.field_Ib.setLocation(bl.field_a, lo.field_d);
           }
-          dk.field_Ib.addFocusListener((java.awt.event.FocusListener) (this));
-          dk.field_Ib.requestFocus();
+          NameEntryPopup.field_Ib.addFocusListener((java.awt.event.FocusListener) (this));
+          NameEntryPopup.field_Ib.requestFocus();
           FadingDialog.field_P = true;
           ro.field_L = true;
           UiComponent.field_ub = true;
@@ -391,7 +391,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (UnitView.a((byte) -121, (CharSequence) ((Object) var4)) &&
-                        !(md.a((CharSequence) ((Object) var4), -9159) >= 10)) {
+                        !(TriangleMesh.a((CharSequence) ((Object) var4), -9159) >= 10)) {
                         this.reportError(27200, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -429,7 +429,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_83_0 > stackIn_83_1) {
                     break;
                   }
-                  VerticalScrollbar.field_Rb = true;
+                  mj.field_Rb = true;
                   break;
                 }
               }
@@ -447,9 +447,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                wa.a((byte) 43);
+                MarkerSliderPainter.a((byte) 43);
                 this.f(-58);
-                SocketConnector.field_h = GameCharacter.createRasterBuffer(1, (java.awt.Component) ((Object) dk.field_Ib), ng.field_d, pi.field_i);
+                SocketConnector.field_h = GameCharacter.createRasterBuffer(1, (java.awt.Component) ((Object) NameEntryPopup.field_Ib), ng.field_d, pi.field_i);
                 this.initializeGame(73);
                 kj.field_r = hn.a((byte) -92);
                 do {
@@ -470,7 +470,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(ic.field_a > var3)) {
                       this.runDrawPass(false);
-                      de.a(ArrayWidgetGroup.field_J, (byte) 99, dk.field_Ib);
+                      de.a(ArrayWidgetGroup.field_J, (byte) 99, NameEntryPopup.field_Ib);
                       break;
                     }
                     this.runUpdateTick((byte) 114);
@@ -547,7 +547,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               pi.field_i = param4;
               lf.field_d = param4;
               ng.field_d = param1;
-              mi.field_Hb = param1;
+              StateIconLabel.field_Hb = param1;
               lo.field_d = 0;
               pn.field_b = param0;
               bl.field_a = 0;
@@ -652,17 +652,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             UiComponent.field_ub = true;
             mq.field_r = mq.field_r - 50;
-            dk.field_Ib.setSize(ng.field_d, pi.field_i);
-            dk.field_Ib.setVisible(true);
+            NameEntryPopup.field_Ib.setSize(ng.field_d, pi.field_i);
+            NameEntryPopup.field_Ib.setVisible(true);
             if (null != cg.field_m &&
               FullscreenFocusCanvas.field_g == null) {
               var6 = cg.field_m.getInsets();
-              dk.field_Ib.setLocation(var6.left + bl.field_a, lo.field_d + var6.top);
+              NameEntryPopup.field_Ib.setLocation(var6.left + bl.field_a, lo.field_d + var6.top);
               if (ZombieDawnMulti.field_E) {
-                dk.field_Ib.setLocation(bl.field_a, lo.field_d);
+                NameEntryPopup.field_Ib.setLocation(bl.field_a, lo.field_d);
               }
             } else {
-              dk.field_Ib.setLocation(bl.field_a, lo.field_d);
+              NameEntryPopup.field_Ib.setLocation(bl.field_a, lo.field_d);
             }
           }
           this.drawFrame(-30169);
@@ -849,11 +849,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == tg.field_i &&
             !NetworkGameClient.field_t) {
             UiComponent.field_ub = true;
-            if (VerticalScrollbar.field_Rb &&
+            if (mj.field_Rb &&
               bl.a((byte) 124) - eo.field_d > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (var2.width < mi.field_Hb) {
+                if (var2.width < StateIconLabel.field_Hb) {
                   return;
                 }
                 if (var2.height < lf.field_d) {

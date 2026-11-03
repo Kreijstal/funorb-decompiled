@@ -132,7 +132,7 @@ final class gg {
               if (var8 == 0) {
                 stackIn_25_1 = DualLinkNode.field_n;
               } else {
-                stackIn_25_1 = dk.field_Jb;
+                stackIn_25_1 = NameEntryPopup.field_Jb;
               }
               stackIn_24_0.field_wb = ((String) (Object) stackIn_25_1).toUpperCase();
               stackIn_27_0 = UiTheme.field_i;
@@ -219,7 +219,7 @@ final class gg {
                 AttackEvent.b(true, param0);
               }
             }
-            ld.a(BufferedSocket.field_n, true, param0, 1);
+            QuickChatMenu.a(BufferedSocket.field_n, true, param0, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends UiComponent {
+final class QuickChatMenu extends UiComponent {
     private char[] field_Pb;
     private int[] field_Qb;
     private int field_Hb;
@@ -9,25 +9,25 @@ final class ld extends UiComponent {
     private int field_Ob;
     private int field_Sb;
     private int field_Tb;
-    private ld field_Ib;
+    private QuickChatMenu field_Ib;
     private int field_Mb;
     static lf field_Rb;
-    private mo[] field_Gb;
+    private AlignedIconLabel[] field_Gb;
     private int field_Vb;
-    private ld[] field_Fb;
+    private QuickChatMenu[] field_Fb;
     private int field_Jb;
     static Sprite[] field_Ub;
     static String field_Lb;
     static long field_Kb;
 
-    final int i(int param0) {
+    final int getOpenChainWidth(int param0) {
         if (param0 != -29804) {
           this.field_Hb = 69;
         }
-        return this.field_Sb + (this.field_Ib != null ? this.field_Ib.i(-29804) : 0);
+        return this.field_Sb + (this.field_Ib != null ? this.field_Ib.getOpenChainWidth(-29804) : 0);
     }
 
-    private final void b(int param0, int param1) {
+    private final void setExpansionTicks(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -45,55 +45,55 @@ final class ld extends UiComponent {
     }
 
     final static void a(jh param0, boolean param1, int param2, int param3) {
-        mo dupTemp$0 = null;
+        AlignedIconLabel dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
-        mo stackIn_22_0 = null;
+        AlignedIconLabel stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
-        mo stackIn_29_0 = null;
+        AlignedIconLabel stackIn_29_0 = null;
         boolean stackIn_30_1 = false;
         int stackIn_43_0 = 0;
         int stackIn_51_0 = 0;
         int stackIn_59_0 = 0;
-        mo stackIn_76_0 = null;
+        AlignedIconLabel stackIn_76_0 = null;
         boolean stackIn_76_1 = false;
         boolean stackIn_77_2 = false;
-        mo stackIn_80_0 = null;
+        AlignedIconLabel stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
-        mo stackIn_84_0 = null;
+        AlignedIconLabel stackIn_84_0 = null;
         boolean stackIn_85_1 = false;
-        mo stackIn_89_0 = null;
+        AlignedIconLabel stackIn_89_0 = null;
         boolean stackIn_90_1 = false;
         int stackIn_94_0 = 0;
-        mo stackIn_108_0 = null;
+        AlignedIconLabel stackIn_108_0 = null;
         boolean stackIn_109_1 = false;
-        mo stackIn_113_0 = null;
+        AlignedIconLabel stackIn_113_0 = null;
         boolean stackIn_114_1 = false;
-        mo stackIn_117_0 = null;
+        AlignedIconLabel stackIn_117_0 = null;
         boolean stackIn_118_1 = false;
-        mo stackIn_121_0 = null;
+        AlignedIconLabel stackIn_121_0 = null;
         boolean stackIn_122_1 = false;
         String stackIn_139_0 = null;
-        mo stackIn_144_0 = null;
+        AlignedIconLabel stackIn_144_0 = null;
         boolean stackIn_145_1 = false;
-        mo stackIn_147_0 = null;
+        AlignedIconLabel stackIn_147_0 = null;
         boolean stackIn_148_1 = false;
         int stackIn_154_0 = 0;
         int stackIn_200_0 = 0;
         int stackIn_212_0 = 0;
-        mo stackIn_313_0 = null;
+        AlignedIconLabel stackIn_313_0 = null;
         boolean stackIn_313_1 = false;
         boolean stackIn_314_2 = false;
-        mo stackIn_317_0 = null;
+        AlignedIconLabel stackIn_317_0 = null;
         boolean stackIn_318_1 = false;
         int stackIn_321_1 = 0;
         byte stackIn_321_2 = 0;
         int stackIn_321_3 = 0;
-        mo stackIn_323_0 = null;
+        AlignedIconLabel stackIn_323_0 = null;
         boolean stackIn_324_1 = false;
-        mo stackIn_328_0 = null;
+        AlignedIconLabel stackIn_328_0 = null;
         boolean stackIn_329_1 = false;
         RuntimeException stackIn_338_0 = null;
         StringBuilder stackIn_338_1 = null;
@@ -106,7 +106,7 @@ final class ld extends UiComponent {
         int var7 = 0;
         int var8_int = 0;
         String var8 = null;
-        mo[] var8_array = null;
+        AlignedIconLabel[] var8_array = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -115,7 +115,7 @@ final class ld extends UiComponent {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        mo var17 = null;
+        AlignedIconLabel var17 = null;
         int var18 = 0;
         Object var18_ref = null;
         Object var19 = null;
@@ -128,9 +128,9 @@ final class ld extends UiComponent {
         String var25_ref = null;
         int var26 = 0;
         int var27 = 0;
-        mo var28 = null;
-        mo var29 = null;
-        mo[] var30 = null;
+        AlignedIconLabel var28 = null;
+        AlignedIconLabel var29 = null;
+        AlignedIconLabel[] var30 = null;
         String var31 = null;
         String var32 = null;
         Object var25Lifetime1;
@@ -347,9 +347,9 @@ final class ld extends UiComponent {
                   IntrusiveDequeCursor.field_g[var7][var9]) {
                   var10 = 1;
                 }
-                if (null != sd.field_G &&
-                  null != sd.field_G[var7]) {
-                  var16 = sd.field_G[var7][var9];
+                if (null != DropTargetWidget.field_G &&
+                  null != DropTargetWidget.field_G[var7]) {
+                  var16 = DropTargetWidget.field_G[var7][var9];
                   if (0 != var16 &&
                     !bo.field_e &&
                     vl.field_h <= 0) {
@@ -369,7 +369,7 @@ final class ld extends UiComponent {
                     var10 = 1;
                   }
                   if (var16Lifetime2 > 0 &&
-                    dm.field_Zb < var16Lifetime2) {
+                    LobbyPlayer.field_Zb < var16Lifetime2) {
                     var11 = 1;
                   }
                 }
@@ -484,7 +484,7 @@ final class ld extends UiComponent {
                 if (var13 == 0) {
                   if (var10 == 0) {
                     if (var11 != 0) {
-                      var22_int = r.field_c[var7][var9] - dm.field_Zb;
+                      var22_int = r.field_c[var7][var9] - LobbyPlayer.field_Zb;
                       if (var22_int != 1) {
                         var21 = vl.a(sc.field_c, new String[]{Integer.toString(var22_int)}, 2);
                       } else {
@@ -492,7 +492,7 @@ final class ld extends UiComponent {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = vl.a(dm.field_Rb, new String[]{Integer.toString(bc.field_e), Integer.toString(sd.field_G[var7][var9])}, 2);
+                      var31 = vl.a(LobbyPlayer.field_Rb, new String[]{Integer.toString(bc.field_e), Integer.toString(DropTargetWidget.field_G[var7][var9])}, 2);
                       var21 = var31;
                       var21 = var31;
                       if (var21 == null) {
@@ -629,7 +629,7 @@ final class ld extends UiComponent {
         }
     }
 
-    ld(long param0, UiComponent param1, UiComponent param2, UiComponent param3, ld[] param4, int[] param5, String[] param6, char[] param7) {
+    QuickChatMenu(long param0, UiComponent param1, UiComponent param2, UiComponent param3, QuickChatMenu[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -666,7 +666,7 @@ final class ld extends UiComponent {
           this.field_Jb = var18.maxDescent + (var18.maxAscent + 2);
           this.field_Nb = this.field_Ob * this.field_Jb;
           this.field_Vb = 0;
-          this.field_Gb = new mo[this.field_Ob];
+          this.field_Gb = new AlignedIconLabel[this.field_Ob];
           var11 = "<col=999999>";
           var12 = "</col>";
           for (var13 = 0; this.field_Ob > var13; var13++) {
@@ -678,7 +678,7 @@ final class ld extends UiComponent {
               -1 == this.field_Qb[var13]) {
               var14 = GradientOutlineTextPainter.field_v;
             }
-            this.field_Gb[var13] = new mo(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Gb[var13] = new AlignedIconLabel(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) 50, this.field_Gb[var13]);
             var15 = var17.textWidth(param6[var13]);
             if (this.field_Vb < var15) {
@@ -686,7 +686,7 @@ final class ld extends UiComponent {
             }
           }
           this.field_Vb = this.field_Vb + (GradientOutlineTextPainter.field_v.fullWidth + 10);
-          this.b(12, 11183);
+          this.setExpansionTicks(12, 11183);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -738,36 +738,36 @@ final class ld extends UiComponent {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void processPressedItems(int param0, int param1, int param2) {
         int var4_int = 0;
-        mo var5;
+        AlignedIconLabel var5;
         int var6;
-        mo stackIn_7_0 = null;
+        AlignedIconLabel stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        ld var4;
-        ld var7;
+        QuickChatMenu var4;
+        QuickChatMenu var7;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         for (var4_int = 0; this.field_Gb.length > var4_int; var4_int++) {
           var5 = this.field_Gb[var4_int];
           if (var5.field_T == 1) {
-            this.a(-115, var4_int, param0, param2);
+            this.activateItem(-115, var4_int, param0, param2);
             stackIn_7_0 = var5;
             stackIn_8_1 = (var4_int == this.field_Tb);
             stackIn_7_0.field_Ab = stackIn_8_1;
           }
         }
         if (param1 != 255) {
-          this.field_Ib = (ld) null;
+          this.field_Ib = (QuickChatMenu) null;
         }
         if (this.field_Tb != -1) {
           var7 = this.field_Fb[this.field_Tb];
           var4 = var7;
           if (var4 != null) {
-            var7.b(param0, 255, param2);
+            var7.processPressedItems(param0, 255, param2);
           }
         }
         if (this.field_Hb > 0) {
-          this.b(this.field_Hb - 1, 11183);
+          this.setExpansionTicks(this.field_Hb - 1, 11183);
         }
     }
 
@@ -783,7 +783,7 @@ final class ld extends UiComponent {
         try {
           if (param0 != 0) {
             var3 = (jh) null;
-            ld.a((jh) null, false, 60, 111);
+            QuickChatMenu.a((jh) null, false, 60, 111);
           }
           var2 = RandomAccessCacheFile.a(cq.a(0, param1), (byte) 26);
           if (var2 == null) {
@@ -805,7 +805,7 @@ final class ld extends UiComponent {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void layoutMenuChain(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -818,28 +818,28 @@ final class ld extends UiComponent {
         }
         if (param5 != this.field_Mb) {
           this.field_Mb = param5;
-          this.b(this.field_Hb, 11183);
+          this.setExpansionTicks(this.field_Hb, 11183);
         }
         for (var7 = 0; this.field_Ob > var7; var7++) {
-          this.field_Gb[var7].a(param3, 2, this.field_Jb, this.field_Sb, 0, this.field_Gb[var7].field_Q, param4);
+          this.field_Gb[var7].setIconLabelBounds(param3, 2, this.field_Jb, this.field_Sb, 0, this.field_Gb[var7].field_Q, param4);
         }
         if (-1 != this.field_Tb &&
           this.field_Fb[this.field_Tb] != null) {
           var7Lifetime1 = this.field_Fb[this.field_Tb].field_Ob;
           for (var8 = this.field_Q + this.field_Jb * (var7Lifetime1 + this.field_Tb); param1 < var8; var8 = var8 - this.field_Jb) {
           }
-          this.field_Fb[this.field_Tb].a(param0 + this.field_Sb, var8, -87, param3, param4, this.field_Gb[this.field_Tb].field_qb);
+          this.field_Fb[this.field_Tb].layoutMenuChain(param0 + this.field_Sb, var8, -87, param3, param4, this.field_Gb[this.field_Tb].field_qb);
         }
     }
 
-    final void c(byte param0) {
+    final void resetSelection(byte param0) {
         int var3 = 0;
-        mo var4 = null;
+        AlignedIconLabel var4 = null;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        mo[] var6 = this.field_Gb;
-        mo[] var2 = var6;
+        AlignedIconLabel[] var6 = this.field_Gb;
+        AlignedIconLabel[] var2 = var6;
         if (param0 < 107) {
-          this.a(31, 97, 11, 57);
+          this.activateItem(31, 97, 11, 57);
         }
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
@@ -847,12 +847,12 @@ final class ld extends UiComponent {
           var4.field_Ab = false;
         }
         if (this.field_Ib != null) {
-          this.field_Ib.c((byte) 108);
+          this.field_Ib.resetSelection((byte) 108);
           this.field_Ib.unlink(true);
         }
         this.field_Ib = null;
         this.field_Tb = -1;
-        this.b(12, 11183);
+        this.setExpansionTicks(12, 11183);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
@@ -1051,15 +1051,15 @@ final class ld extends UiComponent {
         }
     }
 
-    final boolean k(int param0) {
+    final boolean hasPressedItem(int param0) {
         int var4 = 0;
-        mo var5 = null;
+        AlignedIconLabel var5 = null;
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = 0;
         if (param0 != -26899) {
           return false;
         }
-        mo[] var3 = this.field_Gb;
+        AlignedIconLabel[] var3 = this.field_Gb;
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
           var2 = var2 | (0 != var5.field_T ? 1 : 0);
@@ -1067,7 +1067,7 @@ final class ld extends UiComponent {
         if (var2 == 0 &&
           this.field_Tb != -1 &&
           null != this.field_Fb[this.field_Tb]) {
-          var2 = this.field_Fb[this.field_Tb].k(param0 + 0) ? 1 : 0;
+          var2 = this.field_Fb[this.field_Tb].hasPressedItem(param0 + 0) ? 1 : 0;
         }
         return var2 != 0;
     }
@@ -1077,31 +1077,31 @@ final class ld extends UiComponent {
         field_Rb = null;
         if (param0 >= -104) {
           jh var2 = (jh) null;
-          ld.a((jh) null, false, 77, -3);
+          QuickChatMenu.a((jh) null, false, 77, -3);
         }
         field_Ub = null;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void activateItem(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
         String var8;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 > -93) {
-          this.field_Fb = (ld[]) null;
+          this.field_Fb = (QuickChatMenu[]) null;
         }
         if (param1 == this.field_Tb) {
-          this.c((byte) 127);
-          this.b(0, 11183);
+          this.resetSelection((byte) 127);
+          this.setExpansionTicks(0, 11183);
         } else {
           if (this.field_Fb[param1] != null) {
-            this.c((byte) 119);
-            this.b(0, 11183);
+            this.resetSelection((byte) 119);
+            this.setExpansionTicks(0, 11183);
             this.field_Tb = param1;
             this.field_Ib = this.field_Fb[this.field_Tb];
-            an.a((byte) 75, this.field_Ib);
-            this.field_Ib.b(12, 11183);
+            QuickChatPhraseRegistry.a((byte) 75, this.field_Ib);
+            this.field_Ib.setExpansionTicks(12, 11183);
           } else {
             if (this.field_Qb[param1] == -1) {
               GameScreen.c(4024);
@@ -1126,7 +1126,7 @@ final class ld extends UiComponent {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean handleShortcutKey(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -1139,14 +1139,14 @@ final class ld extends UiComponent {
         if (this.field_Ib != null) {
           if (var4 != 0 &&
             -1 == this.field_Ib.field_Tb) {
-            this.c((byte) 110);
-            this.b(0, 11183);
+            this.resetSelection((byte) 110);
+            this.setExpansionTicks(0, 11183);
             return true;
           }
-          return this.field_Ib.a(-119, param1, param2);
+          return this.field_Ib.handleShortcutKey(-119, param1, param2);
         }
         if (null == this.field_Ib &&
-          VerticalScrollbar.field_Ib == this &&
+          mj.field_Ib == this &&
           var4 != 0) {
           NavigationGrid.b(31706);
           return true;
@@ -1163,7 +1163,7 @@ final class ld extends UiComponent {
               var7++;
               continue;
             }
-            this.a(-105, var7, param1, param2);
+            this.activateItem(-105, var7, param1, param2);
             return true;
           }
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md {
+final class TriangleMesh {
     byte[] field_z;
     int[] field_i;
     short[] field_K;
@@ -51,16 +51,16 @@ final class md {
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          InfectionEvent.a(NodeHashTableIterator.field_d, -891231071, param0, true, lj.field_n, 0, MusicPatchNode.field_j);
-          for (var2_int = 0; var2_int < lj.field_n; var2_int++) {
+          InfectionEvent.a(NodeHashTableIterator.field_d, -891231071, param0, true, ClickMarker.field_n, 0, MusicPatchNode.field_j);
+          for (var2_int = 0; var2_int < ClickMarker.field_n; var2_int++) {
             la.field_c[var2_int + param0] = var2_int;
           }
           if (param1 > -27) {
             field_u = (IntrusiveDeque) null;
           }
-          InfectionEvent.a(MusicPatchPcmStream.field_m, -891231071, param0 + param0, false, param0 + lj.field_n, param0, VerticalScrollbar.field_Ub);
-          if (param0 < lj.field_n) {
-            lj.field_n = param0;
+          InfectionEvent.a(MusicPatchPcmStream.field_m, -891231071, param0 + param0, false, param0 + ClickMarker.field_n, param0, mj.field_Ub);
+          if (param0 < ClickMarker.field_n) {
+            ClickMarker.field_n = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class md {
         field_u = null;
     }
 
-    final void a(byte param0) {
+    final void updateBounds(byte param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -101,7 +101,7 @@ final class md {
         var5 = -32768;
         var6 = -32768;
         if (param0 >= -20) {
-          md.a(-5, 114);
+          TriangleMesh.a(-5, 114);
         }
         var7 = -32768;
         for (var8 = 0; this.field_n > var8; var8++) {
@@ -201,7 +201,7 @@ final class md {
         if (param4 != 2122) {
           this.field_v = (short[]) null;
         }
-        this.a(255);
+        this.invalidateBounds(255);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -212,7 +212,7 @@ final class md {
           this.field_E[var5] = (short)(this.field_E[var5] + param3);
           this.field_v[var5] = (short)(this.field_v[var5] + param0);
         }
-        this.a(255);
+        this.invalidateBounds(255);
         if (param1 != 3) {
           this.field_t = (int[]) null;
         }
@@ -229,7 +229,7 @@ final class md {
           if (param1 != -9159) {
             field_N = (Sprite[]) null;
           }
-          stackIn_3_0 = md.a(param0, 10, -31, true);
+          stackIn_3_0 = TriangleMesh.a(param0, 10, -31, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -297,9 +297,9 @@ final class md {
     }
 
     final static void a(String[] args, int param1, int[] param2, ResourceArchive param3, String[] param4, Sprite[][] param5, Sprite[][] param6, String[][] param7, byte[] param8, int param9, boolean param10, byte[] param11, String[] param12, int param13, String[][] param14) {
-        mo[] array$0 = null;
-        mo[] array$1 = null;
-        mo[] array$2 = null;
+        AlignedIconLabel[] array$0 = null;
+        AlignedIconLabel[] array$1 = null;
+        AlignedIconLabel[] array$2 = null;
         int var19 = 0;
         UiComponent stackIn_5_0;
         UiComponent stackIn_5_1;
@@ -369,17 +369,17 @@ final class md {
           we.field_j = pb.a("lobby", param3, -256, "allowspectators");
           t.field_c = new String[5];
           t.field_c[2] = ResizableDialog.field_W;
-          t.field_c[3] = dm.field_Xb;
+          t.field_c[3] = LobbyPlayer.field_Xb;
           t.field_c[4] = vo.field_s;
           t.field_c[0] = vb.field_g;
-          t.field_c[1] = ka.field_m;
+          t.field_c[1] = ChatMessage.field_m;
           pd.field_b = new UiComponent(0L, (UiComponent) null);
-          dm.field_ac = new UiComponent(0L, vd.field_a, GameScreen.field_r);
-          mo.field_Hb = new UiComponent(0L, pn.field_g, cg.field_j);
+          LobbyPlayer.field_ac = new UiComponent(0L, vd.field_a, GameScreen.field_r);
+          AlignedIconLabel.field_Hb = new UiComponent(0L, pn.field_g, cg.field_j);
           hf.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
-          pd.field_b.a((byte) 50, dm.field_ac);
+          pd.field_b.a((byte) 50, LobbyPlayer.field_ac);
           if (GradientOutlineTextPainter.field_u) {
-            pd.field_b.a((byte) 50, mo.field_Hb);
+            pd.field_b.a((byte) 50, AlignedIconLabel.field_Hb);
           }
           pd.field_b.a((byte) 50, hf.field_e);
           hf.field_e.field_Jb.copyStyle((byte) -32, vo.field_m);
@@ -419,7 +419,7 @@ final class md {
           cm.field_a.a((byte) 50, ro.field_O);
           if (!param10) {
             var22 = (CharSequence) null;
-            md.a((CharSequence) null, -24);
+            TriangleMesh.a((CharSequence) null, -24);
           }
           cm.field_a.a((byte) 50, ml.field_Lb);
           ml.field_Lb.a((byte) 50, PacketBuffer.field_g);
@@ -439,7 +439,7 @@ final class md {
           sc.field_j.field_lb = 0;
           sc.field_j.field_R = 1;
           kn.field_a = new UiComponent(0L, GameWorld.field_n, ji.field_e.toUpperCase());
-          SimHuman.field_gb = new UiComponent(0L, wa.field_a);
+          SimHuman.field_gb = new UiComponent(0L, MarkerSliderPainter.field_a);
           SimHuman.field_gb.a((byte) 50, sc.field_j);
           SimHuman.field_gb.a((byte) 50, kn.field_a);
           UiTheme.field_i = new UiComponent(0L, MenuScreen.field_e);
@@ -463,38 +463,38 @@ final class md {
           gg.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
           SocketConnector.field_a = new UiComponent(0L, cg.field_f);
           ik.field_d = new UiComponent(0L, EmailAvailabilityValidator.field_x, vb.field_d.toUpperCase());
-          mi.field_Ib = new UiComponent[4 + param9];
-          ma.field_b = new mo[param9 + 4][];
-          mi.field_Ib[0] = new UiComponent(0L, m.field_B, kg.field_f);
-          ma.field_b[0] = new mo[6];
+          StateIconLabel.field_Ib = new UiComponent[4 + param9];
+          ma.field_b = new AlignedIconLabel[param9 + 4][];
+          StateIconLabel.field_Ib[0] = new UiComponent(0L, m.field_B, kg.field_f);
+          ma.field_b[0] = new AlignedIconLabel[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            ma.field_b[0][1 + var17_int] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, MatchingTextValidator.field_u[var17_int], t.field_c[var17_int]);
+            ma.field_b[0][1 + var17_int] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, MatchingTextValidator.field_u[var17_int], t.field_c[var17_int]);
           }
           if (qo.field_r.length >= 2) {
-            mi.field_Ib[1] = new UiComponent(0L, m.field_B, gi.field_n);
-            array$0 = new mo[1 + qo.field_r.length];
+            StateIconLabel.field_Ib[1] = new UiComponent(0L, m.field_B, gi.field_n);
+            array$0 = new AlignedIconLabel[1 + qo.field_r.length];
             ma.field_b[1] = array$0;
-            ma.field_b[1][0] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb);
+            ma.field_b[1][0] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < qo.field_r.length; var17_intLifetime1++) {
-              ma.field_b[1][1 + var17_intLifetime1] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, Integer.toString(qo.field_r[var17_intLifetime1]));
+              ma.field_b[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, Integer.toString(qo.field_r[var17_intLifetime1]));
             }
           }
-          mi.field_Ib[2] = new UiComponent(0L, m.field_B, qj.field_j);
-          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[1], PowerupEvent.field_k)};
+          StateIconLabel.field_Ib[2] = new UiComponent(0L, m.field_B, qj.field_j);
+          ma.field_b[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb), new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[1], PowerupEvent.field_k)};
           if (r.field_f > 1) {
-            mi.field_Ib[3] = new UiComponent(0L, m.field_B, gj.field_d);
-            array$1 = new mo[r.field_f + 1];
+            StateIconLabel.field_Ib[3] = new UiComponent(0L, m.field_B, gj.field_d);
+            array$1 = new AlignedIconLabel[r.field_f + 1];
             ma.field_b[3] = array$1;
-            ma.field_b[3][0] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb);
+            ma.field_b[3][0] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < r.field_f; var17_intLifetime2++) {
-              ma.field_b[3][1 + var17_intLifetime2] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, um.field_b[var17_intLifetime2]);
+              ma.field_b[3][1 + var17_intLifetime2] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, um.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
-            mi.field_Ib[4 + var17_intLifetime3] = new UiComponent(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
-            array$2 = new mo[1 + ScrollPane.b(255, (int) ng.field_b[var17_intLifetime3])];
+            StateIconLabel.field_Ib[4 + var17_intLifetime3] = new UiComponent(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
+            array$2 = new AlignedIconLabel[1 + ScrollPane.b(255, (int) ng.field_b[var17_intLifetime3])];
             ma.field_b[var17_intLifetime3 + 4] = array$2;
-            ma.field_b[var17_intLifetime3 + 4][0] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, hi.field_Mb);
+            ma.field_b[var17_intLifetime3 + 4][0] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
             for (var18 = 0; var18 < (255 & ng.field_b[var17_intLifetime3]); var18++) {
               if (ZombieDawnMulti.field_L != null) {
                 if (null == ZombieDawnMulti.field_L[var17_intLifetime3]) {
@@ -514,12 +514,12 @@ final class md {
                   var20 = ResourceArchive.field_m[var17_intLifetime3][var18];
                 }
               }
-              ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new mo(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) (var19_ref), (String) (var20));
+              ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param9 + 4 > var17_intLifetime4; var17_intLifetime4++) {
-            if (mi.field_Ib[var17_intLifetime4] != null) {
-              mi.field_Ib[var17_intLifetime4].field_J = 11;
+            if (StateIconLabel.field_Ib[var17_intLifetime4] != null) {
+              StateIconLabel.field_Ib[var17_intLifetime4].field_J = 11;
             }
             if (null != ma.field_b[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; ma.field_b[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
@@ -545,7 +545,7 @@ final class md {
             if ((var18Lifetime2 != 1 ||
               !(qo.field_r.length < 2)) && (var18Lifetime2 != 3 ||
               !(r.field_f <= 1))) {
-              SocketConnector.field_a.a((byte) 50, mi.field_Ib[var18Lifetime2]);
+              SocketConnector.field_a.a((byte) 50, StateIconLabel.field_Ib[var18Lifetime2]);
               for (var19 = 0; ma.field_b[var18Lifetime2].length > var19; var19++) {
                 if (null != ma.field_b[var18Lifetime2][var19]) {
                   SocketConnector.field_a.a((byte) 50, ma.field_b[var18Lifetime2][var19]);
@@ -633,10 +633,10 @@ final class md {
         }
     }
 
-    private final void a(int param0) {
+    private final void invalidateBounds(int param0) {
         this.field_d = false;
         if (param0 != 255) {
-          md.b((byte) 18);
+          TriangleMesh.b((byte) 18);
         }
     }
 
@@ -661,7 +661,7 @@ final class md {
             param1 <= 36) {
             var4_int = 0;
             if (param2 >= -12) {
-              md.a((String[]) null, -25, (int[]) null, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (Sprite[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
+              TriangleMesh.a((String[]) null, -25, (int[]) null, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (Sprite[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
             }
             var5 = 0;
             var6 = 0;
@@ -723,7 +723,7 @@ final class md {
         }
     }
 
-    md() {
+    TriangleMesh() {
         this.field_d = false;
         this.field_m = (byte) 0;
     }

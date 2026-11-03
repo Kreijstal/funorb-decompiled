@@ -20,7 +20,7 @@ final class gh {
         return stackIn_7_0;
     }
 
-    final static void a(md param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(TriangleMesh param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_18_0 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_21_1 = 0;
@@ -65,7 +65,7 @@ final class gh {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        md var44 = null;
+        TriangleMesh var44 = null;
         int[] var49 = null;
         int[] var54 = null;
         byte[] var60 = null;
@@ -127,7 +127,7 @@ final class gh {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; AccountCreationDialog.field_Eb > var13Lifetime1; var13Lifetime1++) {
-            var14Lifetime1 = ah.field_f[var13Lifetime1];
+            var14Lifetime1 = TranslatedUiText.field_f[var13Lifetime1];
             var15Lifetime1 = param0.field_y[var14Lifetime1];
             var16 = param0.field_L[var14Lifetime1];
             var17 = param0.field_H[var14Lifetime1];
@@ -179,7 +179,7 @@ final class gh {
               var32 = var30 & 65280;
               var33 = (var28 * var31 & -16711894) >>> 8 | (16711900 & var32 * var28) >>> 8;
               var33 = var33 + var29 * 65793;
-              mo.a(var22, 8355711 & var33 >> 1, var23, var24, var25, var26, var27, (byte) 58);
+              AlignedIconLabel.a(var22, 8355711 & var33 >> 1, var23, var24, var25, var26, var27, (byte) 58);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -223,7 +223,7 @@ final class gh {
         if (param1 <= 4) {
           field_a = -9;
         }
-        return ah.field_a[(int)(32768.0 * param0 / 3.141592653589793) & 65535];
+        return TranslatedUiText.field_a[(int)(32768.0 * param0 / 3.141592653589793) & 65535];
     }
 
     final static boolean a(int param0, int param1) {

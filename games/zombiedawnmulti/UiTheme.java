@@ -77,7 +77,7 @@ final class UiTheme {
         StatefulTextPainter var6 = null;
         StatefulTextPainter var7 = null;
         bg discarded$0 = null;
-        wa discarded$1 = null;
+        MarkerSliderPainter discarded$1 = null;
         StatefulTextPainter var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
@@ -126,9 +126,9 @@ final class UiTheme {
           var7.field_d = 0;
           var7.setFrameSpritesForAllStates(nk.a(8947848, (byte) -98), false);
           var7.createStateLayer(1, (byte) -36).setFrameSprites(nk.a(11184810, (byte) 108), 2147483647).b(2236962, 0);
-          this.field_k = (WidgetPainter) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_k = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new bg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new wa(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var18.copyStyleTo(-3, var8);
           var8.createStateLayer(0, (byte) -36).setFrameSprites(vn.a(120, 10066329, 7829367, 15658734), 2147483647).b(1118481, 0).a((byte) 44, -1);
@@ -174,10 +174,10 @@ final class UiTheme {
         if (b.field_d != t.field_e) {
           var2 = b.field_d * b.field_d;
           var3 = -(t.field_e * t.field_e) + var2;
-          param1 = param1 + var3 * (-param1 + km.field_cb) / var2;
+          param1 = param1 + var3 * (-param1 + ValidationMessageWidget.field_cb) / var2;
         }
         ImageProducerRasterBuffer.field_k.setBounds(120, param1, 640, ck.field_a, -3344);
-        eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, km.field_cb - 24);
+        eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, ValidationMessageWidget.field_cb - 24);
         if (!param0) {
           return;
         }

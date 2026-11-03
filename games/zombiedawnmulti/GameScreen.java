@@ -954,7 +954,7 @@ final class GameScreen {
             }
           }
           if (param0 <= 14) {
-            this.b(false, -51, -45, 16);
+            this.addClickMarker(false, -51, -45, 16);
           }
           var6Lifetime1 = (GameCharacter) (var5.first((byte) 98));
           while (null != var6Lifetime1) {
@@ -999,7 +999,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void drawBackground(boolean param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1130,7 +1130,7 @@ final class GameScreen {
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void loadLocationAudio(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1530,12 +1530,12 @@ final class GameScreen {
         }
     }
 
-    final void b(boolean param0, int param1, int param2, int param3) {
+    final void addClickMarker(boolean param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return;
         }
         try {
-          this.field_O.a(new lj(param3, param2, param0), false);
+          this.field_O.a(new ClickMarker(param3, param2, param0), false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qd.UA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -2038,7 +2038,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3) {
+    private final void drawPlayerNameTag(int param0, byte param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         Sprite var5 = null;
         RuntimeException decompiledCaughtException = null;
@@ -2051,13 +2051,13 @@ final class GameScreen {
           }
           if (320 > param0) {
             var5.g(param0 - 24, param2);
-            ah.field_e.c(PortalEntryEvent.field_m.field_b[param3], param0 + 24, 48 + param2, 0, 0);
+            TranslatedUiText.field_e.c(PortalEntryEvent.field_m.field_b[param3], param0 + 24, 48 + param2, 0, 0);
             if (!ZombieDawnMulti.field_E) {
               return;
             }
           }
           var5.drawHorizontalFlip(param0 - 24, param2);
-          ah.field_e.a(PortalEntryEvent.field_m.field_b[param3], param0 - 24, 48 + param2, 0, 0);
+          TranslatedUiText.field_e.a(PortalEntryEvent.field_m.field_b[param3], param0 - 24, 48 + param2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2314,19 +2314,19 @@ final class GameScreen {
           if (FadingDialog.field_I) {
             if (!pp.field_n) {
               if (!PortalEntryEvent.field_m.hasUpgrade((byte) -128, 45, this.localTeam)) {
-                ah.a((byte) -86, 19);
+                TranslatedUiText.a((byte) -86, 19);
                 if (var14 != 0) {
-                  ah.a((byte) -86, 20);
-                  ah.a((byte) -86, 21);
+                  TranslatedUiText.a((byte) -86, 20);
+                  TranslatedUiText.a((byte) -86, 21);
                 }
               } else {
-                ah.a((byte) -86, 20);
+                TranslatedUiText.a((byte) -86, 20);
                 if (var14 != 0) {
-                  ah.a((byte) -86, 21);
+                  TranslatedUiText.a((byte) -86, 21);
                 }
               }
             } else {
-              ah.a((byte) -86, 21);
+              TranslatedUiText.a((byte) -86, 21);
             }
             iq.a(-1, (byte) 99);
           }
@@ -2366,7 +2366,7 @@ final class GameScreen {
           gj.a(param0 + 6956);
           this.camera = new Camera(this.navigation.pixelWidth, this.navigation.pixelHeight);
           this.camera.field_f = false;
-          this.d(param1.field_j, 3);
+          this.loadLocationAudio(param1.field_j, 3);
           this.field_fb = PortalEntryEvent.field_m.field_r;
           this.field_ib = 1;
           this.field_O = new IntrusiveDeque();
@@ -2538,7 +2538,7 @@ final class GameScreen {
             break;
           }
           var8_ref4 = HumanView.field_pb[hp.a((byte) -90, g.field_a, HumanView.field_pb.length)];
-          var9_ref2 = ah.field_e;
+          var9_ref2 = TranslatedUiText.field_e;
           this.field_y = new Sprite(var9_ref2.textWidth(var8_ref4), var9_ref2.maxAscent + var9_ref2.maxDescent);
           this.field_L = new Sprite(12 + this.field_y.width, this.field_y.height + 12);
           g.c(this.field_y);
@@ -3109,7 +3109,7 @@ final class GameScreen {
 
     final static void c(int param0) {
         try {
-          ki.field_e = new no(wa.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b);
+          ki.field_e = new QuickChatHelpDialog(MarkerSliderPainter.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b);
           if (param0 != 4024) {
             GameScreen.a(-96, (BitmapFont) null, 119, -9, -35, -122, 29, (byte) 90, -18, -112, -60, -50, 117);
           }
@@ -3128,7 +3128,7 @@ final class GameScreen {
           }
           this.field_lb = true;
           if (param1 != 24295) {
-            this.d(27, 73);
+            this.loadLocationAudio(27, 73);
           }
           LevelActorSpawner.a(false, 10, 126, sp.field_g);
           return;
@@ -3484,7 +3484,7 @@ final class GameScreen {
               this.navigation.a(3, false, this.camera, -1);
               break;
             }
-            ((lj) (var6)).a((byte) 103, this.camera);
+            ((ClickMarker) (var6)).a((byte) 103, this.camera);
             var6 = this.field_O.b(6);
           } while (var20 == 0);
           var6 = this.field_C.c(param1 + 107);
@@ -3770,7 +3770,7 @@ final class GameScreen {
               } else {
                 g.d();
                 g.c();
-                this.a(true);
+                this.drawBackground(true);
                 g.b();
               }
               break;
@@ -3834,7 +3834,7 @@ final class GameScreen {
             SoftwareRasterizer.fillRectAlpha(2 + var8_int, var9_int + 2, -4 + var10, -4 + var11, 3355647, 32);
           }
           boolean decompiledFrameRemainder0 = true;
-          var8 = ah.field_e;
+          var8 = TranslatedUiText.field_e;
           if (0 != PortalEntryEvent.field_m.phase) {
             if ((3 == PortalEntryEvent.field_m.phase) &&
               (decompiledFrameRemainder0 = !(this.field_d >= 225))) {
@@ -3885,7 +3885,7 @@ final class GameScreen {
           if (decompiledFrameRemainder0) {
             if (this.field_l <= 0) {
               var9_ref = Under13NoticePanel.field_J;
-              ah.field_e.b(var9_ref, 320, 240, 0, -1);
+              TranslatedUiText.field_e.b(var9_ref, 320, 240, 0, -1);
               decompiledFrameRemainder0 = (var20 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -3917,22 +3917,22 @@ final class GameScreen {
               var12 = 0;
               var13 = 160;
               var14Lifetime1 = 90;
-              this.a(var13, (byte) -99, var14Lifetime1, var12);
+              this.drawPlayerNameTag(var13, (byte) -99, var14Lifetime1, var12);
               if (PortalEntryEvent.field_m.teamCount > 1) {
                 var12++;
                 var14Lifetime1Lifetime1 = 270;
                 var13 = 640 - var13;
-                this.a(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
+                this.drawPlayerNameTag(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
                 if (2 < PortalEntryEvent.field_m.teamCount) {
                   var13 = 640 - var13;
                   var14Lifetime1Lifetime1 = 230;
                   var12++;
-                  this.a(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
+                  this.drawPlayerNameTag(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
                   if (3 < PortalEntryEvent.field_m.teamCount) {
                     var12++;
                     var13 = 640 - var13;
                     var14Lifetime1Lifetime1 = 130;
-                    this.a(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
+                    this.drawPlayerNameTag(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
                   }
                 }
               }
@@ -4358,7 +4358,7 @@ final class GameScreen {
         int stackIn_22_0 = 0;
         int stackIn_22_1 = 0;
         IntrusiveNode stackIn_33_0 = null;
-        lj stackIn_36_0 = null;
+        ClickMarker stackIn_36_0 = null;
         Object stackIn_38_0 = null;
         cg stackIn_41_0 = null;
         Object stackIn_43_0 = null;
@@ -4371,7 +4371,7 @@ final class GameScreen {
         boolean stackIn_66_0 = false;
         int stackIn_73_0 = 0;
         Throwable decompiledCaughtException = null;
-        lj stackOut_35_0;
+        ClickMarker stackOut_35_0;
         cg stackOut_40_0;
         pq stackOut_45_0;
         wc stackOut_50_0;
@@ -4381,7 +4381,7 @@ final class GameScreen {
         GameEvent var3_ref_ae = null;
         int var3 = 0;
         IntrusiveNode var3_ref_br = null;
-        lj var3_ref_lj = null;
+        ClickMarker var3_ref_lj = null;
         cg var3_ref_cg = null;
         pq var3_ref_pq = null;
         wc var3_ref_wc = null;
@@ -4458,11 +4458,11 @@ final class GameScreen {
             if (decompiledNaturalLoopExit5) {
               stackIn_33_0 = this.field_O.c(127);
             }
-            var3_ref_lj = (lj) (stackIn_33_0);
+            var3_ref_lj = (ClickMarker) (stackIn_33_0);
             boolean decompiledNaturalLoopExit4 = false;
             while (!(decompiledNaturalLoopExit4 = (null == var3_ref_lj))) {
               var3_ref_lj.a(-20587);
-              stackOut_35_0 = (lj) (this.field_O.b(6));
+              stackOut_35_0 = (ClickMarker) (this.field_O.b(6));
               stackIn_38_0 = stackOut_35_0;
               stackIn_36_0 = stackOut_35_0;
               if (var6 == 0) {
@@ -4763,7 +4763,7 @@ final class GameScreen {
         this.field_g = 1;
         try {
           PowerupButton.field_e = this;
-          VerticalScrollbar.field_Hb[2].field_g.field_d = 0;
+          mj.field_Hb[2].field_g.field_d = 0;
           DebouncedValidationProvider.field_h = !(param2 >= 0);
           tg.field_e = param1;
           stackIn_8_0 = (((int)(bl.a((byte) 124) / 86400000L) - 11745) % 7 == 5);

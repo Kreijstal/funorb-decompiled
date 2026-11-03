@@ -21,7 +21,7 @@ final class bh {
         field_f = null;
     }
 
-    final static String a(int param0, ka param1) {
+    final static String a(int param0, ChatMessage param1) {
         String stackIn_32_0 = null;
         Object stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -97,7 +97,7 @@ final class bh {
     }
 
     final static void a(int param0, int param1, int param2, jh param3, boolean param4, int param5, int param6, int param7) {
-        mo[][] stackIn_6_0 = null;
+        AlignedIconLabel[][] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_25_0 = 0;
         int stackIn_40_0 = 0;
@@ -107,7 +107,7 @@ final class bh {
         String stackIn_101_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        mo[] var8 = null;
+        AlignedIconLabel[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10 = null;
@@ -115,12 +115,12 @@ final class bh {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        mo var13_ref_mo = null;
+        AlignedIconLabel var13_ref_mo = null;
         int var14 = 0;
         int var15 = 0;
-        ka var16 = null;
-        mo[] var17 = null;
-        mo[] var18 = null;
+        ChatMessage var16 = null;
+        AlignedIconLabel[] var17 = null;
+        AlignedIconLabel[] var18 = null;
         int[] var19 = null;
         int[] var20 = null;
         int var10_intLifetime1;
@@ -128,8 +128,8 @@ final class bh {
         var15 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != -1712) {
-            var16 = (ka) null;
-            bh.a(-40, (ka) null);
+            var16 = (ChatMessage) null;
+            bh.a(-40, (ChatMessage) null);
           }
           if (param7 >= param5) {
             var8_int = 1;

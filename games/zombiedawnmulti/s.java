@@ -23,9 +23,9 @@ final class s {
         field_h = null;
     }
 
-    final static md a(CipherPacketBuffer param0, byte param1) {
+    final static TriangleMesh a(CipherPacketBuffer param0, byte param1) {
         int var8 = 0;
-        md stackIn_21_0 = null;
+        TriangleMesh stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -35,7 +35,7 @@ final class s {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        md var6 = null;
+        TriangleMesh var6 = null;
         int var7 = 0;
         int var9 = 0;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -47,7 +47,7 @@ final class s {
           }
           var4 = PhaseChangeEvent.a(-128, param0) ? 1 : 0;
           var5 = PhaseChangeEvent.a(-86, param0) ? 1 : 0;
-          var6 = new md();
+          var6 = new TriangleMesh();
           var6.field_n = (short)param0.readBits(16, 14862);
           var6.field_k = lo.a(16, var6.field_k, param0, (byte) -104);
           var6.field_E = lo.a(16, var6.field_E, param0, (byte) -120);
@@ -287,9 +287,9 @@ final class s {
 
     final static void a(int param0, byte param1, int param2) {
         int var3;
-        if (ka.field_f == null ||
-          !(ka.field_f.length >= param0)) {
-          ka.field_f = new int[param0 * 2];
+        if (ChatMessage.field_f == null ||
+          !(ChatMessage.field_f.length >= param0)) {
+          ChatMessage.field_f = new int[param0 * 2];
         }
         if (null == lb.field_c ||
           !(lb.field_c.length >= param0)) {
@@ -319,12 +319,12 @@ final class s {
           !(LevelData.field_c.length >= param0)) {
           LevelData.field_c = new boolean[param0 * 2];
         }
-        lj.field_n = 0;
+        ClickMarker.field_n = 0;
         MusicPatchPcmStream.field_m = -2147483648;
         NodeHashTableIterator.field_d = -2147483648;
         var3 = -105 / ((param1 - 6) / 47);
         MusicPatchNode.field_j = 2147483647;
-        VerticalScrollbar.field_Ub = 2147483647;
+        mj.field_Ub = 2147483647;
     }
 
     static {

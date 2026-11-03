@@ -52,7 +52,7 @@ final class jp {
           }
           if (var2 == null &&
             !sp.field_h &&
-            null == lj.field_v) {
+            null == ClickMarker.field_v) {
             var2 = IntrusiveDequeCursor.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -84,7 +84,7 @@ final class jp {
                 }
                 if (null != JaggrabDownloader.field_c) {
                   var6 = 1;
-                  boolean decompiledSharedTail1 = (!(wa.field_k) ||
+                  boolean decompiledSharedTail1 = (!(MarkerSliderPainter.field_k) ||
                     null == AgeValidator.field_t);
                   if (!decompiledSharedTail1) {
                     var4 = "[" + AgeValidator.field_t + "] ";

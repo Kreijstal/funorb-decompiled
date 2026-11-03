@@ -317,7 +317,7 @@ final class PowerupBar {
                 if (!this.field_g) {
                   if (this.field_c &&
                     this.field_d) {
-                    this.a(mi.field_Mb, (byte) 59, NetworkGameClient.field_u);
+                    this.a(StateIconLabel.field_Mb, (byte) 59, NetworkGameClient.field_u);
                   } else {
                     if (this.field_c) {
                       this.a(SectorCacheStore.field_a, (byte) 59, ii.field_c);
@@ -341,7 +341,7 @@ final class PowerupBar {
             }
             var3Lifetime2 = 4 + MouseInputHandler.field_g;
             var4 = 15 + bo.field_d;
-            wa.field_b[var2_intLifetime1].c(var3Lifetime2, var4, 255);
+            MarkerSliderPainter.field_b[var2_intLifetime1].c(var3Lifetime2, var4, 255);
             if (bk.field_g) {
               return;
             }
@@ -542,7 +542,7 @@ final class PowerupBar {
             if (!FadingDialog.field_I) {
               return true;
             }
-            ah.a((byte) -86, var3_int);
+            TranslatedUiText.a((byte) -86, var3_int);
             iq.a(var3_int, (byte) 99);
           } else {
             this.deselectActive(1);

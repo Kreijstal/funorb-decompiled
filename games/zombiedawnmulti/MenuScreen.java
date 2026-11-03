@@ -18,7 +18,7 @@ class MenuScreen {
         int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_d == 2) {
-          this.field_b = this.field_b - ah.field_e.maxAscent / 2;
+          this.field_b = this.field_b - TranslatedUiText.field_e.maxAscent / 2;
           this.field_j = new int[]{1, 12, 13, 34, 47, 4, 50, 3, 7};
           this.field_g = new hh(this.field_j.length);
         } else {
@@ -235,7 +235,7 @@ class MenuScreen {
                         if (var6 != 44) {
                           if (3 == var6) {
                             if (this.field_g.c(-85)) {
-                              ((ol) (VerticalScrollbar.field_Hb[4])).e(113);
+                              ((ol) (mj.field_Hb[4])).e(113);
                               var6 = param1 ? 1 : 0;
                               LevelActorSpawner.a(var6 != 0, 4, 125, sp.field_g);
                               vd.field_d = this.field_d;
@@ -359,14 +359,14 @@ class MenuScreen {
                                       switch (var6) {
                                         case 49:
                                           if (this.field_g.c(-85)) {
-                                            VerticalScrollbar.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 48;
-                                            sd.field_F = 1;
+                                            mj.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 48;
+                                            DropTargetWidget.field_F = 1;
                                           }
                                           break;
                                         case 18:
                                           if (this.field_g.c(-85) &&
                                             this.c(param2, 16777215)) {
-                                            ((ol) (VerticalScrollbar.field_Hb[4])).b(1, param1);
+                                            ((ol) (mj.field_Hb[4])).b(1, param1);
                                           }
                                           break;
                                         case 11:
@@ -419,7 +419,7 @@ class MenuScreen {
                                         case 17:
                                           if (this.field_g.c(-85) &&
                                             this.c(param2, 16777215)) {
-                                            ((ol) (VerticalScrollbar.field_Hb[4])).a(param1, (byte) -119);
+                                            ((ol) (mj.field_Hb[4])).a(param1, (byte) -119);
                                           }
                                           break;
                                         case 15:
@@ -437,8 +437,8 @@ class MenuScreen {
                                           break;
                                         case 48:
                                           if (this.field_g.c(-85)) {
-                                            VerticalScrollbar.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 49;
-                                            sd.field_F = 0;
+                                            mj.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 49;
+                                            DropTargetWidget.field_F = 0;
                                           }
                                           break;
                                         case 7:
@@ -457,7 +457,7 @@ class MenuScreen {
                           }
                         } else {
                           if (this.field_g.c(-85)) {
-                            VerticalScrollbar.field_Hb[15].onEnter(0, param1, 0);
+                            mj.field_Hb[15].onEnter(0, param1, 0);
                             var6 = param1 ? 1 : 0;
                             LevelActorSpawner.a(var6 != 0, 15, 126, sp.field_g);
                             vd.field_d = this.field_d;
@@ -604,8 +604,8 @@ class MenuScreen {
           }
         } else {
           nn.a(false);
-          var2 = 100 + ah.field_e.maxAscent;
-          var3 = 4 + ah.field_e.maxDescent + ah.field_e.field_J;
+          var2 = 100 + TranslatedUiText.field_e.maxAscent;
+          var3 = 4 + TranslatedUiText.field_e.maxDescent + TranslatedUiText.field_e.field_J;
           var4 = 16777215;
           pb.field_e.b(af.field_a, 320, var2, var4, -1);
           pb.field_e.b(FightEvent.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
@@ -668,7 +668,7 @@ class MenuScreen {
           var6Lifetime1 = 1;
         }
         if (var6Lifetime1 != -7) {
-          VerticalScrollbar.field_Hb[var6Lifetime1].b(0);
+          mj.field_Hb[var6Lifetime1].b(0);
         } else {
           wp.field_h.draw(true, 1);
           SoftwareRasterizer.clearRect(0, 0, 640, 480);
@@ -722,14 +722,14 @@ class MenuScreen {
             var5 = rm.field_b;
             synchronized (var5) {
               MessageDialogContent.field_L.a(param1, -1, false);
-              if (param3 == bb.field_g) {
+              if (param3 == DelayedPacket.field_g) {
                 return;
               }
               MessageDialogContent.field_L.g(2);
               rm.field_b.flush();
-              bb.field_g = param3;
-              if (bb.field_g != null) {
-                MessageDialogContent.field_L.a(bb.field_g, param0, 8361407);
+              DelayedPacket.field_g = param3;
+              if (DelayedPacket.field_g != null) {
+                MessageDialogContent.field_L.a(DelayedPacket.field_g, param0, 8361407);
               }
             }
           }
@@ -872,7 +872,7 @@ class MenuScreen {
           en.a(-1, 4);
         }
         if (var3Lifetime2 != 0) {
-          this.field_g.a(this.a(-6003, bo.field_d, MouseInputHandler.field_g), 42, this.a(-6003, ka.field_t, vb.field_f));
+          this.field_g.a(this.a(-6003, bo.field_d, MouseInputHandler.field_g), 42, this.a(-6003, ChatMessage.field_t, vb.field_f));
           if (this.field_g.field_d != -1) {
             this.b(12, this.field_g.field_d);
             this.handleMenuAction(-74, true, this.field_g.field_d);
@@ -987,17 +987,17 @@ class MenuScreen {
           if (param2 > -32) {
             this.field_f = false;
           }
-          var12 = -ah.field_e.maxDescent + (-ZombieDawnMulti.field_I[0].field_u + var9) + (-ZombieDawnMulti.field_I[6].field_u - ah.field_e.maxAscent);
+          var12 = -TranslatedUiText.field_e.maxDescent + (-ZombieDawnMulti.field_I[0].field_u + var9) + (-ZombieDawnMulti.field_I[6].field_u - TranslatedUiText.field_e.maxAscent);
           if (var6 != 12 &&
             13 != var6) {
-            ah.field_e.b(var7Lifetime2, var5 + (var8 >> 1), ZombieDawnMulti.field_I[0].field_u + var4 + ah.field_e.maxAscent + (var12 >> 1), var10, 0);
+            TranslatedUiText.field_e.b(var7Lifetime2, var5 + (var8 >> 1), ZombieDawnMulti.field_I[0].field_u + var4 + TranslatedUiText.field_e.maxAscent + (var12 >> 1), var10, 0);
             return;
           }
           stackIn_59_0 = (var6 != 12) ? 200 : 224;
           var13 = stackIn_59_0;
           var14 = 137 + ok.field_l;
           var15 = var5 + (-var14 + var8 >> 1);
-          ah.field_e.c(var7Lifetime2, var15, (var12 >> 1) + ah.field_e.maxAscent + var4 + ZombieDawnMulti.field_I[0].field_u, var10, 0);
+          TranslatedUiText.field_e.c(var7Lifetime2, var15, (var12 >> 1) + TranslatedUiText.field_e.maxAscent + var4 + ZombieDawnMulti.field_I[0].field_u, var10, 0);
           var15 = var15 + (8 + ok.field_l);
           SoftwareRasterizer.drawRect(var15, var9 / 2 + var4 - 1, 129, 2, var10);
           if (12 != var6) {

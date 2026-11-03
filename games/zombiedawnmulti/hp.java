@@ -89,7 +89,7 @@ final class hp extends IntrusiveNode {
           if (param1 != 1020) {
             hp.a(-13);
           }
-          stackIn_5_0 = (md.a((byte) -11, param0) != null);
+          stackIn_5_0 = (TriangleMesh.a((byte) -11, param0) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

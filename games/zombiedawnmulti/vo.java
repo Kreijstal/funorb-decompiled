@@ -19,13 +19,13 @@ final class vo extends MenuScreen {
           if (param1 != -5) {
             this.h(-39);
           }
-          ah.field_e.drawParagraph(param0, 60, param3, 520, 200, 4, 0, 1, 0, param2);
+          TranslatedUiText.field_e.drawParagraph(param0, 60, param3, 520, 200, 4, 0, 1, 0, param2);
           g.a(16777215);
           g.a(16777215);
           g.a(16777215);
           g.a(16777215);
           SoftwareRasterizer.blurRectangle(5, 5, 0, 0, 640, 480);
-          ah.field_e.drawParagraph(param0, 60, param3, 520, 200, 5, 0, 1, 0, param2);
+          TranslatedUiText.field_e.drawParagraph(param0, 60, param3, 520, 200, 5, 0, 1, 0, param2);
           SocketConnector.field_h.b((byte) 100);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vo.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -184,7 +184,7 @@ final class vo extends MenuScreen {
                       this.g(520);
                       if ((!(this.field_t <= 120)) &&
                         (!(this.field_t >= 388))) {
-                        pb.field_e.b(no.field_Fb, 320, 460, 16777215, 0);
+                        pb.field_e.b(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -208,14 +208,14 @@ final class vo extends MenuScreen {
             this.g(520);
             if (this.field_t > 120 &&
               this.field_t < 388) {
-              pb.field_e.b(no.field_Fb, 320, 460, 16777215, 0);
+              pb.field_e.b(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
             }
           }
         } else {
           this.g(520);
           if (this.field_t > 120 &&
             this.field_t < 388) {
-            pb.field_e.b(no.field_Fb, 320, 460, 16777215, 0);
+            pb.field_e.b(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
           }
         }
 
@@ -254,8 +254,8 @@ final class vo extends MenuScreen {
         if (param0 != 520) {
           vo.e(108);
         }
-        while (var5 < ah.field_c.length) {
-          var6 = -ah.field_c[var5] + this.field_t;
+        while (var5 < TranslatedUiText.field_c.length) {
+          var6 = -TranslatedUiText.field_c[var5] + this.field_t;
           if (var6 > 0 &&
             50 + (10 + ui.field_f[var5]) > var6) {
             var3 = 256;
@@ -270,7 +270,7 @@ final class vo extends MenuScreen {
           var5++;
         }
         if (var2 != null) {
-          stackIn_18_0 = ah.field_e.maxAscent + ah.field_e.maxDescent;
+          stackIn_18_0 = TranslatedUiText.field_e.maxAscent + TranslatedUiText.field_e.maxDescent;
           stackIn_18_1 = -5;
           var5Lifetime1 = stackIn_18_0 + stackIn_18_1;
           stackIn_21_0 = (var2 != DisplayNamePanel.field_R[5]) ? 0 : 1;
@@ -280,19 +280,19 @@ final class vo extends MenuScreen {
             var4 = 180;
           }
           if (var6Lifetime1 != 0) {
-            ah.field_e.drawParagraph(DisplayNamePanel.field_R[5], 60, var4, 520, 200, 1, 0, 1, 0, var5Lifetime1);
+            TranslatedUiText.field_e.drawParagraph(DisplayNamePanel.field_R[5], 60, var4, 520, 200, 1, 0, 1, 0, var5Lifetime1);
           }
           if (ml.field_Ob == null ||
             ml.field_Ob != var2) {
             this.a((String) (var2), -5, var5Lifetime1, var4);
           }
           if (var3 < 256) {
-            ah.field_e.drawParagraphAlpha((String) (var2), 60, var4, 520, 200, 1, 0, var3, 1, 0, var5Lifetime1);
+            TranslatedUiText.field_e.drawParagraphAlpha((String) (var2), 60, var4, 520, 200, 1, 0, var3, 1, 0, var5Lifetime1);
             if (var6Lifetime1 == 0) {
               g.a(ClientException.field_e, 0, 0, var3);
             }
           } else {
-            ah.field_e.drawParagraph((String) (var2), 60, var4, 520, 200, 1, 0, 1, 0, var5Lifetime1);
+            TranslatedUiText.field_e.drawParagraph((String) (var2), 60, var4, 520, 200, 1, 0, 1, 0, var5Lifetime1);
             if (var6Lifetime1 == 0) {
               g.a(ClientException.field_e, 0, 0);
             }

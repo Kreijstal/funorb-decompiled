@@ -43,7 +43,7 @@ final class ip {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = dk.field_Ib.getGraphics();
+            var9 = NameEntryPopup.field_Ib.getGraphics();
             if (null == GameCharacter.field_hb) {
               GameCharacter.field_hb = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -56,7 +56,7 @@ final class ip {
             }
             try {
               if (null == PhaseChangeEvent.field_i) {
-                PhaseChangeEvent.field_i = dk.field_Ib.createImage(304, 34);
+                PhaseChangeEvent.field_i = NameEntryPopup.field_Ib.createImage(304, 34);
               }
               var10 = PhaseChangeEvent.field_i.getGraphics();
               var10.setColor(param1);
@@ -97,7 +97,7 @@ final class ip {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            dk.field_Ib.repaint();
+            NameEntryPopup.field_Ib.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

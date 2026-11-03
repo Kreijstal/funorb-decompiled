@@ -75,7 +75,7 @@ final class oq extends TextWidgetPainter {
         } else {
           qj.field_p = true;
           if (pp.field_n) {
-            ah.a((byte) -86, 21);
+            TranslatedUiText.a((byte) -86, 21);
           }
         }
         if (param0 >= 117) {

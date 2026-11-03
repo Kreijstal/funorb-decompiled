@@ -235,10 +235,10 @@ final class rj extends SceneObject {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 69);
             var28.readLong((byte) -30);
-            var4_ref = (kj) (md.field_u.c(102));
+            var4_ref = (kj) (TriangleMesh.field_u.c(102));
             while (var4_ref != null) {
               if (var4_ref.field_i != var3Lifetime1) {
-                var4_ref = (kj) (md.field_u.b(6));
+                var4_ref = (kj) (TriangleMesh.field_u.b(6));
                 continue;
               }
               break;

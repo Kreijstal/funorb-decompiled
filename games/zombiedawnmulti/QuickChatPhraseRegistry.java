@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an {
+final class QuickChatPhraseRegistry {
     private io field_a;
     private ResourceArchive field_b;
     private ResourceArchive field_c;
 
-    final static void a(byte param0, ld param1) {
+    final static void a(byte param0, QuickChatMenu param1) {
         try {
           rp.field_l.a((byte) 50, param1);
           if (param0 < 42) {
-            ld var3 = (ld) null;
-            an.a((byte) 16, (ld) null);
+            QuickChatMenu var3 = (QuickChatMenu) null;
+            QuickChatPhraseRegistry.a((byte) 16, (QuickChatMenu) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "an.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final QuickChatPhraseDefinition a(int param0, int param1) {
+    final QuickChatPhraseDefinition getDefinition(int param0, int param1) {
         byte[] var4 = null;
         if (param1 != -11452) {
           return (QuickChatPhraseDefinition) null;
@@ -71,7 +71,7 @@ final class an {
         return new hf(gg.a(91), MusicPatch.c(128));
     }
 
-    an(int param0, ResourceArchive param1, ResourceArchive param2, dr param3) {
+    QuickChatPhraseRegistry(int param0, ResourceArchive param1, ResourceArchive param2, dr param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

@@ -107,7 +107,7 @@ final class bo {
             if (!UnitView.a((byte) -120, (CharSequence) ((Object) var6))) {
               hj.field_f = 2;
             } else {
-              hj.field_f = md.a((CharSequence) ((Object) var6), param2 ^ -9159);
+              hj.field_f = TriangleMesh.a((CharSequence) ((Object) var6), param2 ^ -9159);
             }
           }
           PlayerLoadout.field_e = param0;
@@ -204,7 +204,7 @@ final class bo {
           for (var2_intLifetime2 = 6; param0.length / 4 > var2_intLifetime2; var2_intLifetime2++) {
             IntrusiveNode.a(6 + var2_intLifetime2, var3, -111, ValidationState.a(param0, var2_intLifetime2, (byte) 112));
           }
-          stackIn_10_0 = no.a((byte) 104, var8);
+          stackIn_10_0 = QuickChatHelpDialog.a((byte) 104, var8);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -69,7 +69,7 @@ final class kj extends IntrusiveNode {
         field_o = null;
     }
 
-    final static void a(int param0, ka param1) {
+    final static void a(int param0, ChatMessage param1) {
         long stackIn_2_0;
         int stackIn_2_1;
         String stackIn_2_2;
@@ -146,7 +146,7 @@ final class kj extends IntrusiveNode {
           pk.field_b.addChatFilterActions(param1, param0 ^ -31808);
           var13 = pk.field_b;
           var3 = vb.field_f;
-          var4 = ka.field_t;
+          var4 = ChatMessage.field_t;
           var13.field_j.layoutAtAnchor(4542, var3, 0, var4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

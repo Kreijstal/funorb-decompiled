@@ -211,13 +211,13 @@ final class sc {
         if (param0 != 87) {
           field_f = -103;
           HotspotTextWidget.field_N = true;
-          lj.field_v = null;
+          ClickMarker.field_v = null;
           dp.field_c = null;
           IntrusiveNode.field_c = null;
           return;
         }
         HotspotTextWidget.field_N = true;
-        lj.field_v = null;
+        ClickMarker.field_v = null;
         dp.field_c = null;
         IntrusiveNode.field_c = null;
     }

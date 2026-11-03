@@ -136,7 +136,7 @@ final class na extends SingleChildWidget {
     }
 
     final static boolean a(int[] param0, byte param1, String param2, long param3, int param4) {
-        ld var6 = null;
+        QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
         RuntimeException stackIn_11_0 = null;
@@ -160,7 +160,7 @@ final class na extends SingleChildWidget {
           var7 = (CharSequence) ((Object) param2);
           ql.field_a = tg.a(var7, false);
           jj.field_M = param3;
-          var6 = SceneObject.a(GameWorld.field_x, bb.field_k, (byte) -65, param0, tg.field_d);
+          var6 = SceneObject.a(GameWorld.field_x, DelayedPacket.field_k, (byte) -65, param0, tg.field_d);
           wi.a((byte) 4, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

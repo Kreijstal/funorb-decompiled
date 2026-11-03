@@ -467,7 +467,7 @@ class HotspotTextWidget extends ButtonWidget {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var1_int, -no.field_Gb + var8Lifetime1, var7Lifetime1 + (no.field_Gb << 1), me.field_h + (DateInputWidget.field_G << 1), 12018);
+                var9.a(var1_int, -QuickChatHelpDialog.field_Gb + var8Lifetime1, var7Lifetime1 + (QuickChatHelpDialog.field_Gb << 1), me.field_h + (DateInputWidget.field_G << 1), 12018);
               }
               var1_int = var1_int + DateInputWidget.field_G;
             }

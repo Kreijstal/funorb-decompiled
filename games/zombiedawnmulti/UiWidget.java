@@ -202,7 +202,7 @@ class UiWidget extends IntrusiveNode {
                     if (!(var8.field_A instanceof vq)) {
                       qi.field_a = null;
                     } else {
-                      ((vq) (var8.field_A)).a(var8, (byte) 5, (sd) null);
+                      ((vq) (var8.field_A)).a(var8, (byte) 5, (DropTargetWidget) null);
                       qi.field_a = null;
                     }
                   }
@@ -219,7 +219,7 @@ class UiWidget extends IntrusiveNode {
                 }
                 return param3;
               }
-              if (!this.handlePointerPress(ka.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
+              if (!this.handlePointerPress(ChatMessage.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
                 if (var5 == 0) {
                   if (0 == pq.field_f &&
                     aj.field_j != 0) {
@@ -229,7 +229,7 @@ class UiWidget extends IntrusiveNode {
                       if (!(var9.field_A instanceof vq)) {
                         qi.field_a = null;
                       } else {
-                        ((vq) (var9.field_A)).a(var9, (byte) 5, (sd) null);
+                        ((vq) (var9.field_A)).a(var9, (byte) 5, (DropTargetWidget) null);
                         qi.field_a = null;
                       }
                     }
@@ -272,7 +272,7 @@ class UiWidget extends IntrusiveNode {
                     }
                     return param3;
                   }
-                  ((vq) (var10.field_A)).a(var10, (byte) 5, (sd) null);
+                  ((vq) (var10.field_A)).a(var10, (byte) 5, (DropTargetWidget) null);
                   qi.field_a = null;
                   if (var7 != 0 &&
                     var5 != 0 &&
@@ -319,7 +319,7 @@ class UiWidget extends IntrusiveNode {
                   if (!(var11.field_A instanceof vq)) {
                     qi.field_a = null;
                   } else {
-                    ((vq) (var11.field_A)).a(var11, (byte) 5, (sd) null);
+                    ((vq) (var11.field_A)).a(var11, (byte) 5, (DropTargetWidget) null);
                     qi.field_a = null;
                   }
                 }
@@ -336,7 +336,7 @@ class UiWidget extends IntrusiveNode {
               }
               return param3;
             }
-            if (!this.handlePointerPress(ka.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
+            if (!this.handlePointerPress(ChatMessage.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
               if (var5 == 0) {
                 if (0 == pq.field_f &&
                   aj.field_j != 0) {
@@ -346,7 +346,7 @@ class UiWidget extends IntrusiveNode {
                     if (!(var12.field_A instanceof vq)) {
                       qi.field_a = null;
                     } else {
-                      ((vq) (var12.field_A)).a(var12, (byte) 5, (sd) null);
+                      ((vq) (var12.field_A)).a(var12, (byte) 5, (DropTargetWidget) null);
                       qi.field_a = null;
                     }
                   }
@@ -379,7 +379,7 @@ class UiWidget extends IntrusiveNode {
                     break regionExit1;
                   }
                 } else {
-                  ((vq) (var13.field_A)).a(var13, (byte) 5, (sd) null);
+                  ((vq) (var13.field_A)).a(var13, (byte) 5, (DropTargetWidget) null);
                   qi.field_a = null;
                   if (var7 != 0 &&
                     var5 != 0 &&

@@ -9,8 +9,8 @@ final class n extends IntrusiveNode {
 
     final static void b(boolean param0) {
         rn.a(-54);
-        if (dk.field_Ib != null) {
-          SpriteState.a(95, dk.field_Ib);
+        if (NameEntryPopup.field_Ib != null) {
+          SpriteState.a(95, NameEntryPopup.field_Ib);
         }
         GradientOutlineTextPainter.b(4862);
         if (param0) {

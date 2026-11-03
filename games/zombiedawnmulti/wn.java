@@ -65,7 +65,7 @@ final class wn extends pp {
         int var3 = 0;
         int var2Lifetime1;
         int var3Lifetime1;
-        dm.field_Qb = SoftwareRasterizer.height;
+        LobbyPlayer.field_Qb = SoftwareRasterizer.height;
         kp.field_l = SoftwareRasterizer.width;
         v.a(param0 ^ 196);
         de.field_b.a(0, qe.field_k.field_zb, 0, (byte) -74, -40 + (qe.field_k.field_z - 2));

@@ -78,30 +78,30 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ka.field_f[lj.field_n] = param4;
-        la.field_c[lj.field_n] = lj.field_n;
-        lb.field_c[lj.field_n] = param3;
+        ChatMessage.field_f[ClickMarker.field_n] = param4;
+        la.field_c[ClickMarker.field_n] = ClickMarker.field_n;
+        lb.field_c[ClickMarker.field_n] = param3;
         if (MusicPatchNode.field_j > param3) {
-          VerticalScrollbar.field_Ub = param3;
+          mj.field_Ub = param3;
         }
         if (!(param3 <= NodeHashTableIterator.field_d)) {
           MusicPatchPcmStream.field_m = param3;
         }
-        DialogLayer.field_J[lj.field_n] = param2;
-        kj.field_p[lj.field_n] = param1;
-        ContentTransitionDialog.field_ob[lj.field_n] = param5;
+        DialogLayer.field_J[ClickMarker.field_n] = param2;
+        kj.field_p[ClickMarker.field_n] = param1;
+        ContentTransitionDialog.field_ob[ClickMarker.field_n] = param5;
         int var6 = param5 + param2 + param1;
         int var7 = var6 != 0 ? param2 * 1000 / var6 : 0;
-        hn.field_f[lj.field_n] = var7;
+        hn.field_f[ClickMarker.field_n] = var7;
         if (param0 != 1000) {
           field_h = (String) null;
         }
         if (!(var7 <= MusicPatchPcmStream.field_m)) {
           MusicPatchPcmStream.field_m = var7;
         }
-        lj.field_n = lj.field_n + 1;
-        if (var7 < VerticalScrollbar.field_Ub) {
-          VerticalScrollbar.field_Ub = var7;
+        ClickMarker.field_n = ClickMarker.field_n + 1;
+        if (var7 < mj.field_Ub) {
+          mj.field_Ub = var7;
         }
     }
 
@@ -166,7 +166,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void a(byte param0, boolean param1) {
-        dk.f(param1, 13758);
+        NameEntryPopup.f(param1, 13758);
         if (param0 < 108) {
           return;
         }

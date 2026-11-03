@@ -178,7 +178,7 @@ abstract class ng {
             stackIn_7_0 = SceneObject.field_A;
             return stackIn_7_0;
           }
-          var7 = md.a((byte) 90, param1);
+          var7 = TriangleMesh.a((byte) 90, param1);
           if (var7 == null) {
             stackIn_11_0 = vl.a(MouseWheelInput.field_a, new String[]{param1}, 2);
             return stackIn_11_0;

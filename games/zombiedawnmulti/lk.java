@@ -189,17 +189,17 @@ final class lk extends SceneObject {
         if (param0 >= 36) {
           var1 = b.field_d * b.field_d;
           var2 = -(t.field_e * t.field_e) + var1;
-          var3 = vj.field_t + var2 * (-vj.field_t + km.field_cb) / var1;
+          var3 = vj.field_t + var2 * (-vj.field_t + ValidationMessageWidget.field_cb) / var1;
           ImageProducerRasterBuffer.field_k.setBounds(120, var3, 640, ck.field_a, -3344);
-          eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, km.field_cb - 24);
+          eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, ValidationMessageWidget.field_cb - 24);
           return;
         }
         lk.b(false);
         var1Lifetime1 = b.field_d * b.field_d;
         var2Lifetime1 = -(t.field_e * t.field_e) + var1Lifetime1;
-        var3Lifetime1 = vj.field_t + var2Lifetime1 * (-vj.field_t + km.field_cb) / var1Lifetime1;
+        var3Lifetime1 = vj.field_t + var2Lifetime1 * (-vj.field_t + ValidationMessageWidget.field_cb) / var1Lifetime1;
         ImageProducerRasterBuffer.field_k.setBounds(120, var3Lifetime1, 640, ck.field_a, -3344);
-        eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, km.field_cb - 24);
+        eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, ValidationMessageWidget.field_cb - 24);
     }
 
     lk() {

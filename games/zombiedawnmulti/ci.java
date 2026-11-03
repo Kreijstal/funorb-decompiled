@@ -49,7 +49,7 @@ final class ci {
         int var4 = 0;
         String var8 = null;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        String var6 = "(" + PacketBuffer.field_k + " " + jp.field_e + " " + ij.field_d + ") " + PortalEntryEvent.field_i;
+        String var6 = "(" + PacketBuffer.field_k + " " + jp.field_e + " " + CheckboxPainter.field_d + ") " + PortalEntryEvent.field_i;
         String var1 = var6;
         if (param0 >= EmailAvailabilityValidator.field_q) {
         } else {
@@ -105,7 +105,7 @@ final class ci {
         int stackIn_6_2 = 0;
         int stackIn_7_3 = 0;
         Object stackIn_35_0 = null;
-        mo stackIn_35_1 = null;
+        AlignedIconLabel stackIn_35_1 = null;
         int stackIn_50_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -116,17 +116,17 @@ final class ci {
         int var7 = 0;
         int var8 = 0;
         UiComponent var8_ref_cj = null;
-        mo var9 = null;
+        AlignedIconLabel var9 = null;
         int var9_int = 0;
         int var10 = 0;
-        mo var10_ref_mo = null;
+        AlignedIconLabel var10_ref_mo = null;
         int var12 = 0;
         int var13 = 0;
         UiComponent var14 = null;
         UiComponent var15 = null;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          dm.field_Qb = SoftwareRasterizer.height;
+          LobbyPlayer.field_Qb = SoftwareRasterizer.height;
           kp.field_l = SoftwareRasterizer.width;
           if (param0) {
             stackIn_4_0 = HotspotTextWidget.field_Q;
@@ -173,8 +173,8 @@ final class ci {
               !(r.field_f <= 1))) {
               if (!param0 &&
                 var6 == 3) {
-                var15 = mi.field_Ib[var6];
-                mi.field_Ib[var6].field_z = 0;
+                var15 = StateIconLabel.field_Ib[var6];
+                StateIconLabel.field_Ib[var6].field_z = 0;
                 var15.field_zb = 0;
                 for (var8 = 0; ma.field_b[var6].length > var8; var8++) {
                   if (null != ma.field_b[var6][var8]) {
@@ -185,8 +185,8 @@ final class ci {
                 }
               } else if (param0 &&
                 var6 == 0) {
-                var14 = mi.field_Ib[var6];
-                mi.field_Ib[var6].field_z = 0;
+                var14 = StateIconLabel.field_Ib[var6];
+                StateIconLabel.field_Ib[var6].field_z = 0;
                 var14.field_zb = 0;
                 for (var8 = 0; ma.field_b[var6].length > var8; var8++) {
                   stackIn_35_0 = null;
@@ -200,8 +200,8 @@ final class ci {
               } else {
                 if (param0) {
                   if (var6 >= 4) {
-                    if (null != km.field_ab) {
-                      stackIn_50_0 = (km.field_ab[var6 - 4]) ? 1 : 0;
+                    if (null != ValidationMessageWidget.field_ab) {
+                      stackIn_50_0 = (ValidationMessageWidget.field_ab[var6 - 4]) ? 1 : 0;
                     } else {
                       stackIn_50_0 = 0;
                     }
@@ -213,8 +213,8 @@ final class ci {
                 }
                 var7 = stackIn_50_0;
                 if (var7 != 0) {
-                  var8_ref_cj = mi.field_Ib[var6];
-                  mi.field_Ib[var6].field_z = 0;
+                  var8_ref_cj = StateIconLabel.field_Ib[var6];
+                  StateIconLabel.field_Ib[var6].field_z = 0;
                   var8_ref_cj.field_zb = 0;
                   for (var9_int = 0; var9_int < ma.field_b[var6].length; var9_int++) {
                     if (ma.field_b[var6][var9_int] != null) {
@@ -224,7 +224,7 @@ final class ci {
                     }
                   }
                 } else {
-                  mi.field_Ib[var6].setBounds(var3, var5, 103, 5, -3344);
+                  StateIconLabel.field_Ib[var6].setBounds(var3, var5, 103, 5, -3344);
                   var8 = 110;
                   if (!param0) {
                     if (ma.field_b[var6][0] != null) {
@@ -233,14 +233,14 @@ final class ci {
                       var9.field_zb = 0;
                     }
                   } else {
-                    ma.field_b[var6][0].a(LevelFileCatalog.field_c, 2, var3, 38, var8, var5, 2);
+                    ma.field_b[var6][0].setIconLabelBounds(LevelFileCatalog.field_c, 2, var3, 38, var8, var5, 2);
                     var8 += 40;
                   }
                   var9_int = 2 + (-var8 + (-5 + LevelData.field_a.field_zb));
                   var10 = ma.field_b[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    ma.field_b[var6][var11 + 1].a(LevelFileCatalog.field_c, 2, var3, -var12 + var9_int * (var11 + 1) / var10 - 2, var8 + var12, var5, 2);
+                    ma.field_b[var6][var11 + 1].setIconLabelBounds(LevelFileCatalog.field_c, 2, var3, -var12 + var9_int * (var11 + 1) / var10 - 2, var8 + var12, var5, 2);
                   }
                   var5 = var5 + (2 + var3);
                 }

@@ -78,7 +78,7 @@ final class io {
           ec.field_b.field_xb = (8355711 & qq.field_f.field_xb >> 1) + wj.field_g - (8355711 & wj.field_g >> 1);
           ec.field_b.field_Db = (8355711 & qq.field_f.field_Db >> 1) + (wj.field_g - (8355711 & wj.field_g >> 1));
           ec.field_b.field_ob = wj.field_g - (8355711 & wj.field_g >> 1) + (qq.field_f.field_ob >> 1 & param0);
-          lj.field_v = new UiComponent(0L, param3);
+          ClickMarker.field_v = new UiComponent(0L, param3);
           SpriteState.field_t = new UiComponent(0L, param2);
           ValidationState.field_a = new UiComponent(0L, (UiComponent) null);
           IntrusiveNode.field_c = new UiComponent(0L, param1);
@@ -89,8 +89,8 @@ final class io {
           IntrusiveNode.field_c.a((byte) 50, DraggableWidget.field_E);
           dp.field_c = new UiComponent(0L, qq.field_f, bg.field_o);
           jk.field_d = new UiComponent(0L, qq.field_f);
-          lj.field_v.a((byte) 50, SpriteState.field_t);
-          lj.field_v.a((byte) 50, ValidationState.field_a);
+          ClickMarker.field_v.a((byte) 50, SpriteState.field_t);
+          ClickMarker.field_v.a((byte) 50, ValidationState.field_a);
           ValidationState.field_a.a((byte) 50, IntrusiveNode.field_c);
           ValidationState.field_a.a((byte) 50, dp.field_c);
           ValidationState.field_a.a((byte) 50, jk.field_d);

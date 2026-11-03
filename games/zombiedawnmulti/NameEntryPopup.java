@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends UiComponent {
+final class NameEntryPopup extends UiComponent {
     static java.awt.Canvas field_Ib;
     private StringBuilder field_Hb;
     private int field_Fb;
@@ -11,9 +11,9 @@ final class dk extends UiComponent {
     static String field_Kb;
 
     final static void f(boolean param0, int param1) {
-        lj.field_v.c(param0, -1);
+        ClickMarker.field_v.c(param0, -1);
         if (param1 != 13758) {
-          dk.f(false, 88);
+          NameEntryPopup.f(false, 88);
         }
     }
 
@@ -60,7 +60,7 @@ final class dk extends UiComponent {
         boolean stackIn_129_1 = false;
         Camera.a(SoftwareRasterizer.width - 640 >> 1, SoftwareRasterizer.height, (byte) 105, 640 + SoftwareRasterizer.width >> 1, 0);
         if (param1 != -7579) {
-          dk.c((byte) -88);
+          NameEntryPopup.c((byte) -88);
           if (0 < JaggrabDownloader.field_h) {
             if (null == vm.field_lb) {
               stackIn_6_0 = qe.field_k;
@@ -516,7 +516,7 @@ final class dk extends UiComponent {
         return 2;
     }
 
-    dk(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
+    NameEntryPopup(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

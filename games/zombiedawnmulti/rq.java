@@ -151,7 +151,7 @@ final class rq extends IntrusiveNode {
             ResourceArchive.field_e = false;
             Camera.b(param0 - 137, 47);
           }
-          ig.field_b.e(var4_int, var5_int, 128, 61264);
+          QuickChatCategoryRegistry.field_b.e(var4_int, var5_int, 128, 61264);
         }
         if (param0 != 9) {
           return;
@@ -204,7 +204,7 @@ final class rq extends IntrusiveNode {
             ResourceArchive.field_e = false;
             Camera.b(-127, 47);
           }
-          ig.field_b.e(var2Lifetime2, var3Lifetime2, 128, 61264);
+          QuickChatCategoryRegistry.field_b.e(var2Lifetime2, var3Lifetime2, 128, 61264);
         }
     }
 
@@ -232,8 +232,8 @@ final class rq extends IntrusiveNode {
             AccountCreationForm.field_W[var2_int] = g.b(BirthDateEntryPanel.field_M[var2_int]);
           }
           SocketConnector.field_c = InflaterDecompressor.a(9, np.field_l);
-          AccountCreationForm.field_U = InflaterDecompressor.a(param1 ^ -16777125, VerticalScrollbar.field_Sb);
-          mi.field_Mb = InflaterDecompressor.a(104, mq.field_o);
+          AccountCreationForm.field_U = InflaterDecompressor.a(param1 ^ -16777125, mj.field_Sb);
+          StateIconLabel.field_Mb = InflaterDecompressor.a(104, mq.field_o);
           NodeHashTableIterator.field_f = InflaterDecompressor.a(4, wm.field_U);
           la.field_j = InflaterDecompressor.a(70, vc.field_a);
           SectorCacheStore.field_a = InflaterDecompressor.a(-113, BufferedSocket.field_k);
@@ -241,7 +241,7 @@ final class rq extends IntrusiveNode {
           bf.field_f = g.b(SocketConnector.field_c);
           ap.field_t = g.b(AccountCreationForm.field_U);
           ii.field_c = g.b(SectorCacheStore.field_a);
-          NetworkGameClient.field_u = g.b(mi.field_Mb);
+          NetworkGameClient.field_u = g.b(StateIconLabel.field_Mb);
           kj.field_o = g.b(la.field_j);
           oq.field_t = g.b(NodeHashTableIterator.field_f);
           vl.field_k = g.b(wp.field_e);

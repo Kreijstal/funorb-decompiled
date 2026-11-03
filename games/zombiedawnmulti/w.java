@@ -165,7 +165,7 @@ final class w extends PcmStream {
         if (vc.a(param3 ^ 5010853)) {
           return true;
         }
-        if (sd.a(param2, (byte) 122, param0, param1)) {
+        if (DropTargetWidget.a(param2, (byte) 122, param0, param1)) {
           return true;
         }
         return false;

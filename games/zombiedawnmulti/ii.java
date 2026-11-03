@@ -14,7 +14,7 @@ abstract class ii {
           InflaterDecompressor.field_c = param4;
           vh.field_Hb = true;
           NavigationGrid.field_n = param0;
-          mi.field_Gb = param2;
+          StateIconLabel.field_Gb = param2;
           if (param1 > -108) {
             ii.b((byte) -126);
           }
@@ -58,7 +58,7 @@ abstract class ii {
             return;
           }
           ap.field_s = true;
-          var6 = VerticalScrollbar.field_Hb;
+          var6 = mj.field_Hb;
           var1 = var6;
           for (var2 = 0; var6.length > var2; var2++) {
             var3 = var6[var2];

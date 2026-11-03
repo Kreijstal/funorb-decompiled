@@ -3,7 +3,7 @@
  */
 final class b {
     static String field_e;
-    static VerticalScrollbar field_a;
+    static mj field_a;
     static LoginForm field_c;
     static int[] field_f;
     static int field_b;
@@ -19,7 +19,7 @@ final class b {
 
     final static int a(boolean param0) {
         if (!param0) {
-          field_a = (VerticalScrollbar) null;
+          field_a = (mj) null;
           return gi.field_m;
         }
         return gi.field_m;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no extends UiComponent {
+final class QuickChatHelpDialog extends UiComponent {
     static String field_Fb;
     static int field_Gb;
     static Sprite[][] field_Hb;
@@ -217,18 +217,18 @@ final class no extends UiComponent {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Fb = null;
         field_Jb = null;
         if (param0 != 15) {
           CharSequence var2 = (CharSequence) null;
-          no.a(false, -117, (CharSequence) null);
+          QuickChatHelpDialog.a(false, -117, (CharSequence) null);
         }
         field_Hb = (Sprite[][]) null;
         field_Kb = null;
     }
 
-    final boolean b(int param0, boolean param1) {
+    final boolean updateAndPollDismissal(int param0, boolean param1) {
         boolean stackIn_9_0 = false;
         if (param0 != 0) {
           return true;
@@ -246,7 +246,7 @@ final class no extends UiComponent {
         return stackIn_9_0;
     }
 
-    no(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
+    QuickChatHelpDialog(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -281,10 +281,10 @@ final class no extends UiComponent {
           var9.field_R = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; lj.field_h.length > var12; var12++) {
+          for (var12 = 0; ClickMarker.field_h.length > var12; var12++) {
             var13 = new UiComponent(0L, param3, cm.field_c[var12]);
-            var14 = new UiComponent(0L, param3, lj.field_h[var12]);
-            var15 = param3.field_yb.textWidth(lj.field_h[var12]);
+            var14 = new UiComponent(0L, param3, ClickMarker.field_h[var12]);
+            var15 = param3.field_yb.textWidth(ClickMarker.field_h[var12]);
             var13.setBounds(15, var10, 65, 20, -3344);
             if (var11 < var15) {
               var11 = var15;

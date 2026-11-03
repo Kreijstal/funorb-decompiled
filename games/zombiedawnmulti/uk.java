@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uk extends ButtonWidget {
-    static ka[] field_M;
+    static ChatMessage[] field_M;
     private int field_Q;
     static String field_R;
     static int field_S;
@@ -14,7 +14,7 @@ final class uk extends ButtonWidget {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != 127) {
-            field_M = (ka[]) null;
+            field_M = (ChatMessage[]) null;
           }
           var3 = ma.field_a;
           var3.b((byte) -35, param2);

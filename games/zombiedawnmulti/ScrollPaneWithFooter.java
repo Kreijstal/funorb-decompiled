@@ -26,7 +26,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         this.layoutPaneFooter(param4, (byte) -67, param1, param7);
     }
 
-    ScrollPaneWithFooter(long param0, UiComponent param1, UiComponent param2, hi param3, UiComponent param4, String param5, String param6) {
+    ScrollPaneWithFooter(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_Ib = new UiComponent(0L, (UiComponent) null);
@@ -77,13 +77,13 @@ final class ScrollPaneWithFooter extends UiComponent {
           if (param0 > -20) {
             return;
           }
-          if (ld.field_Ub == null) {
+          if (QuickChatMenu.field_Ub == null) {
             if (null != DebouncedValidationProvider.field_e) {
               DebouncedValidationProvider.field_e.drawParagraph(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = ld.field_Ub[DebouncedValidationProvider.field_g];
+          var6 = QuickChatMenu.field_Ub[DebouncedValidationProvider.field_g];
           if (var6 == null) {
             if (null != DebouncedValidationProvider.field_e) {
               DebouncedValidationProvider.field_e.drawParagraph(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
@@ -92,7 +92,7 @@ final class ScrollPaneWithFooter extends UiComponent {
             var6.g(245, 199);
           }
           if (nf.field_a > lb.field_a) {
-            var7 = ld.field_Ub[DebouncedValidationProvider.field_j];
+            var7 = QuickChatMenu.field_Ub[DebouncedValidationProvider.field_j];
             if (var7 != null) {
               var2_int = lb.field_a * (var7.fullWidth + 60) / nf.field_a;
               var3 = var2_int - 30;
@@ -107,8 +107,8 @@ final class ScrollPaneWithFooter extends UiComponent {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
-            while (var5 < ld.field_Ub.length) {
-              var8 = ld.field_Ub[var5];
+            while (var5 < QuickChatMenu.field_Ub.length) {
+              var8 = QuickChatMenu.field_Ub[var5];
               if (var8 != null && (var8.fullWidth != 365 ||
                 139 != var8.field_u)) {
                 if (var2 != null) {

@@ -29,7 +29,7 @@ final class InfectionEvent extends GameEvent {
           if (param2 == 255) {
             stackIn_9_0 = false;
             stackIn_10_1 = !(rj.field_J >= 13);
-            iq.field_c = ij.a(stackIn_9_0, stackIn_10_1);
+            iq.field_c = CheckboxPainter.a(stackIn_9_0, stackIn_10_1);
           } else {
             if (param2 < 100) {
               iq.field_c = p.a(-38, param3, param2);

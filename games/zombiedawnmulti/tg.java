@@ -431,13 +431,13 @@ final class tg implements Runnable {
               var8 = 0;
               var9 = 7;
               var10 = PowerupEvent.field_m / var7 % var9 + var8;
-              var19 = nk.a(no.field_Hb[var6][var10], FullscreenFocusCanvas.field_k.field_c[0], 255, FullscreenFocusCanvas.field_k.field_p[0]);
+              var19 = nk.a(QuickChatHelpDialog.field_Hb[var6][var10], FullscreenFocusCanvas.field_k.field_c[0], 255, FullscreenFocusCanvas.field_k.field_p[0]);
               og.h((byte) 126);
               var19.g(var4 - var18.field_zb / 4, var5);
               var7Lifetime2 = 45;
               var6Lifetime2 = 1;
               var10Lifetime1 = (PowerupEvent.field_m + 3) / var7Lifetime2 % var9 + var8;
-              var20 = nk.a(no.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
+              var20 = nk.a(QuickChatHelpDialog.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
               og.h((byte) 119);
               var20.drawHorizontalFlip(var18.field_zb / 4 + var4, var5);
               SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));

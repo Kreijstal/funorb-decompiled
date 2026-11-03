@@ -256,11 +256,11 @@ abstract class mp {
             }
             if ((decompiledNaturalLoopExit0) &&
               (eg.field_B.field_Gb.field_T != 0)) {
-              gi.field_i = new dk(eg.field_B.field_Gb.field_w, eg.field_B.field_Gb.field_qb, eg.field_B.field_Gb.field_zb, eg.field_B.field_Gb.field_z, ud.field_Z, kd.field_a, vo.field_m, vo.field_m);
+              gi.field_i = new NameEntryPopup(eg.field_B.field_Gb.field_w, eg.field_B.field_Gb.field_qb, eg.field_B.field_Gb.field_zb, eg.field_B.field_Gb.field_z, ud.field_Z, kd.field_a, vo.field_m, vo.field_m);
               ic.field_e = 0;
             }
             if (eg.field_B.field_Hb.field_T != 0) {
-              gi.field_i = new dk(eg.field_B.field_Hb.field_w, eg.field_B.field_Hb.field_qb, eg.field_B.field_Hb.field_zb, eg.field_B.field_Hb.field_z, AccountCreationForm.field_Q, kd.field_a, vo.field_m, vo.field_m);
+              gi.field_i = new NameEntryPopup(eg.field_B.field_Hb.field_w, eg.field_B.field_Hb.field_qb, eg.field_B.field_Hb.field_zb, eg.field_B.field_Hb.field_z, AccountCreationForm.field_Q, kd.field_a, vo.field_m, vo.field_m);
               ic.field_e = 1;
             }
             decompiledFrameRemainder0 = false;

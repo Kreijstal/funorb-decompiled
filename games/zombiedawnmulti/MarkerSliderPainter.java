@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa implements WidgetPainter {
+final class MarkerSliderPainter implements WidgetPainter {
     private int field_m;
     static UiComponent field_a;
     static boolean field_k;
@@ -69,19 +69,19 @@ final class wa implements WidgetPainter {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_j = null;
         field_a = null;
         if (param0 != 2) {
-          wa.a((byte) -21);
+          MarkerSliderPainter.a((byte) -21);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    wa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    MarkerSliderPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_e = param1;
           this.field_i = param4;

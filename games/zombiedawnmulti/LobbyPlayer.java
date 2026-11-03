@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends UiComponent {
+final class LobbyPlayer extends UiComponent {
     boolean field_Pb;
     int field_bc;
     UiComponent field_Ub;
@@ -29,7 +29,7 @@ final class dm extends UiComponent {
     static int field_Zb;
     static String field_Rb;
 
-    final boolean a(byte param0, dm param1) {
+    final boolean a(byte param0, LobbyPlayer param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_6_0 = false;
@@ -126,7 +126,7 @@ final class dm extends UiComponent {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Rb = null;
         field_Ib = null;
         field_ac = null;
@@ -138,7 +138,7 @@ final class dm extends UiComponent {
         }
     }
 
-    dm(String param0, String param1, long param2) {
+    LobbyPlayer(String param0, String param1, long param2) {
         super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {

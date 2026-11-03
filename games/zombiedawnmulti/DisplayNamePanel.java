@@ -280,7 +280,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
 
     private final int a(int param0, UiWidget param1, String param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
-        km var9 = null;
+        ValidationMessageWidget var9 = null;
         LabeledChildWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -297,7 +297,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           }
           var10 = new LabeledChildWidget(20, param0, 120 + param6, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
           this.b((byte) 115, var10);
-          var9 = new km(((ValidationProviderSource) ((Object) param1)).getValidationProvider((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
+          var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param1)).getValidationProvider((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
           var9.field_A = (WidgetListener) (this);
           this.b((byte) 91, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;

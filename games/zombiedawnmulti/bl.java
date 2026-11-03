@@ -134,7 +134,7 @@ final class bl {
             cg.field_l = false;
           }
           if (IntrusiveDequeCursor.field_k) {
-            ld.j(param0 + 1481707577);
+            QuickChatMenu.j(param0 + 1481707577);
             wc.i(-28264);
             UiWidget.d(-8328);
             IntrusiveDequeCursor.field_k = false;

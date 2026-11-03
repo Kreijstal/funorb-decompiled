@@ -206,7 +206,7 @@ final class ce extends IntrusiveNode {
           ValidationState.field_a.setBounds(var12, param3, var9_int, 0, -3344);
           var12 = var12 + param3;
           ValidationState.field_a.field_ab = tg.a(2105376, ValidationState.field_a.field_z, 8421504, 3, 11579568, 49);
-          lj.field_v.setBounds(var12, -(var12 / 2) + param5, var9_int, param2 - var9_int / 2, -3344);
+          ClickMarker.field_v.setBounds(var12, -(var12 / 2) + param5, var9_int, param2 - var9_int / 2, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

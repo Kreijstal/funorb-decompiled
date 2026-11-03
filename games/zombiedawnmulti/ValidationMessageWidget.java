@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends HotspotTextWidget {
+final class ValidationMessageWidget extends HotspotTextWidget {
     static ao field_W;
     private ValidationProvider field_Y;
     static boolean[] field_ab;
@@ -119,10 +119,10 @@ final class km extends HotspotTextWidget {
         RuntimeException var2 = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5 = (MusicPatchNode) (ig.field_a.c(92));
+          var5 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.c(92));
           while (var5 != null) {
             ih.a((byte) 99, var5, param0);
-            var5 = (MusicPatchNode) (ig.field_a.b(6));
+            var5 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.b(6));
           }
           var2_int = -37 / ((-63 - param1) / 58);
           var3 = UnitStateEvent.field_j.c(48);
@@ -142,7 +142,7 @@ final class km extends HotspotTextWidget {
         try {
           this.field_X = this.field_X + 1;
           if (param0 != -5407) {
-            km.i(56);
+            ValidationMessageWidget.i(56);
           }
           super.updatePointerState(param0 ^ 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
@@ -173,7 +173,7 @@ final class km extends HotspotTextWidget {
           PlayerContextMenu.field_c = new UiComponent(0L, pn.field_g, PowerupBar.field_h);
           lk.field_J = new UiComponent(0L, cm.field_b);
           if (param1 > -106) {
-            km.h(-103);
+            ValidationMessageWidget.h(-103);
           }
           SimUnit.field_O.a((byte) 50, dp.field_b);
           SimUnit.field_O.a((byte) 50, bi.field_f);
@@ -233,7 +233,7 @@ final class km extends HotspotTextWidget {
         a.field_b = param0;
     }
 
-    final static ka b(int param0, int param1, int param2, int param3) {
+    final static ChatMessage b(int param0, int param1, int param2, int param3) {
         boolean stackIn_43_0 = false;
         boolean stackIn_47_0 = false;
         boolean stackIn_56_0 = false;
@@ -247,9 +247,9 @@ final class km extends HotspotTextWidget {
         int var6;
         int var7;
         int var8;
-        ka var8_ref_ka;
+        ChatMessage var8_ref_ka;
         int var9;
-        ka var9_ref_ka;
+        ChatMessage var9_ref_ka;
         int var10;
         String var10_ref_String;
         String var11;
@@ -320,7 +320,7 @@ final class km extends HotspotTextWidget {
         tn.field_A.field_Gb.field_I = var7Lifetime1 - tn.field_A.field_Gb.field_z;
         if (!bn.field_b) {
           if (HotspotTextWidget.field_N) {
-            if (null == lj.field_v) {
+            if (null == ClickMarker.field_v) {
               var10Lifetime1 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
               if (!sp.field_h) {
                 tn.field_A.a(2 * (param2 * param1), 112, param2, true);
@@ -332,7 +332,7 @@ final class km extends HotspotTextWidget {
                 stackIn_72_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime1);
                 sp.field_h = stackIn_72_0;
               }
-              return (ka) (var4);
+              return (ChatMessage) (var4);
             }
             sp.field_h = true;
           }
@@ -347,7 +347,7 @@ final class km extends HotspotTextWidget {
             stackIn_83_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime1Lifetime1);
             sp.field_h = stackIn_83_0;
           }
-          return (ka) (var4);
+          return (ChatMessage) (var4);
         }
         tn.field_A.field_Gb.field_mb = 0;
         bn.field_b = false;
@@ -366,7 +366,7 @@ final class km extends HotspotTextWidget {
             sp.field_h = stackIn_47_0;
           }
         } else {
-          if (null != lj.field_v) {
+          if (null != ClickMarker.field_v) {
             sp.field_h = true;
           }
           var10Lifetime2 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
@@ -381,10 +381,10 @@ final class km extends HotspotTextWidget {
             sp.field_h = stackIn_56_0;
           }
         }
-        return (ka) (var4);
+        return (ChatMessage) (var4);
     }
 
-    km(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
+    ValidationMessageWidget(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, SimUnit.g((byte) 120));
         try {
           this.field_bb = param1;

@@ -8,7 +8,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     static String field_a;
     static Sprite field_e;
     static int field_g;
-    static an field_c;
+    static QuickChatPhraseRegistry field_c;
     static int field_d;
     static String field_b;
 
@@ -818,7 +818,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           try {
             var3 = "";
             if (param2) {
-              field_c = (an) null;
+              field_c = (QuickChatPhraseRegistry) null;
             }
             if (param1 != null) {
               var3 = ArmedHumanView.formatThrowable(-114, param1);

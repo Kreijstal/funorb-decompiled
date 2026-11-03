@@ -191,30 +191,30 @@ final class DiskCacheWorker implements Runnable {
           if (param1 != 110) {
             field_d = (String) null;
           }
-          while (65536 <= sd.a((byte) 120, DualLinkDeque.field_b, nf.field_b)) {
+          while (65536 <= DropTargetWidget.a((byte) 120, DualLinkDeque.field_b, nf.field_b)) {
             ClientException.field_c = ClientException.field_c + 1;
             DualLinkDeque.field_b = DualLinkDeque.field_b - nf.field_b;
           }
           var2_int = -1;
-          if (null == ld.field_Ub) {
+          if (null == QuickChatMenu.field_Ub) {
             if (null != ao.field_h) {
               var2_int = ao.field_h.length;
             }
           } else {
-            var2_int = ld.field_Ub.length;
+            var2_int = QuickChatMenu.field_Ub.length;
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
             if (lb.field_a < nf.field_c) {
               lb.field_a = lb.field_a + 1;
-              if (lb.field_a > nf.field_a && (null == ld.field_Ub ||
-                null == ld.field_Ub[DebouncedValidationProvider.field_g])) {
+              if (lb.field_a > nf.field_a && (null == QuickChatMenu.field_Ub ||
+                null == QuickChatMenu.field_Ub[DebouncedValidationProvider.field_g])) {
                 lb.field_a = lb.field_a - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (lb.field_a >= nf.field_c &&
-                  ld.field_Ub[(DebouncedValidationProvider.field_g + 1) % var2_int] == null) {
+                  QuickChatMenu.field_Ub[(DebouncedValidationProvider.field_g + 1) % var2_int] == null) {
                   lb.field_a = lb.field_a - 1;
                 }
               }
@@ -242,8 +242,8 @@ final class DiskCacheWorker implements Runnable {
             var3 = -(ReportAbuseDialog.field_Tb.field_u / 2) + 357;
             var4 = 0;
             if (kd.field_b != 0 &&
-              ka.field_t > var3 &&
-              ReportAbuseDialog.field_Tb.height + var3 > ka.field_t) {
+              ChatMessage.field_t > var3 &&
+              ReportAbuseDialog.field_Tb.height + var3 > ChatMessage.field_t) {
               if (269 - ReportAbuseDialog.field_Tb.width < vb.field_f &&
                 vb.field_f < 269) {
                 var4 = 1;
@@ -274,7 +274,7 @@ final class DiskCacheWorker implements Runnable {
           if (!param0) {
             return 0;
           }
-          UsernameSuggestionsPanel.field_H.a(ResizableDialog.c(bo.field_d, -1, MouseInputHandler.field_g), 104, ResizableDialog.c(ka.field_t, param1 - 111, vb.field_f));
+          UsernameSuggestionsPanel.field_H.a(ResizableDialog.c(bo.field_d, -1, MouseInputHandler.field_g), 104, ResizableDialog.c(ChatMessage.field_t, param1 - 111, vb.field_f));
           if (UsernameSuggestionsPanel.field_H.c(-85)) {
             if (UsernameSuggestionsPanel.field_H.field_d == 0) {
               stackIn_63_0 = 3;
@@ -462,23 +462,23 @@ final class DiskCacheWorker implements Runnable {
           return true;
         }
         if (InfectionEvent.field_p == 102) {
-          VerticalScrollbar.field_Ib.c((byte) 113);
+          mj.field_Ib.resetSelection((byte) 113);
           return true;
         }
         if (param0) {
           DiskCacheWorker.a(true, (byte) 112);
-          if (null == VerticalScrollbar.field_Ib) {
+          if (null == mj.field_Ib) {
             return false;
           }
-          if (VerticalScrollbar.field_Ib.a(96, param2, param1)) {
+          if (mj.field_Ib.handleShortcutKey(96, param2, param1)) {
             return true;
           }
           return false;
         }
-        if (null == VerticalScrollbar.field_Ib) {
+        if (null == mj.field_Ib) {
           return false;
         }
-        if (VerticalScrollbar.field_Ib.a(96, param2, param1)) {
+        if (mj.field_Ib.handleShortcutKey(96, param2, param1)) {
           return true;
         }
         return false;

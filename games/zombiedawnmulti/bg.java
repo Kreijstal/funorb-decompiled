@@ -59,7 +59,7 @@ final class bg implements WidgetPainter {
             var4.field_j.a((byte) -118, var5_ref_String, 5);
             var4Lifetime2 = pk.field_b;
             var5 = vb.field_f;
-            var6 = ka.field_t;
+            var6 = ChatMessage.field_t;
             var4Lifetime2.field_j.layoutAtAnchor(4542, var5, 0, var6, 0);
           }
           uf.a(param0, param2, (byte) 39);
@@ -74,7 +74,7 @@ final class bg implements WidgetPainter {
           var4Lifetime1.field_j.a((byte) -118, var5_ref_StringLifetime1, 5);
           var4Lifetime1Lifetime1 = pk.field_b;
           var5Lifetime1 = vb.field_f;
-          var6Lifetime1 = ka.field_t;
+          var6Lifetime1 = ChatMessage.field_t;
           var4Lifetime1Lifetime1.field_j.layoutAtAnchor(4542, var5Lifetime1, 0, var6Lifetime1, 0);
         }
         uf.a(param0, param2, (byte) 39);

@@ -11,7 +11,7 @@ final class ok {
     private float field_c;
     private int field_s;
     private int field_v;
-    static ig field_p;
+    static QuickChatCategoryRegistry field_p;
     private int field_o;
     private int field_d;
     private int field_k;
@@ -29,7 +29,7 @@ final class ok {
 
     public static void e(int param0) {
         if (param0 < 8) {
-          field_p = (ig) null;
+          field_p = (QuickChatCategoryRegistry) null;
         }
         field_i = null;
         field_m = null;
@@ -139,7 +139,7 @@ final class ok {
             GameApplet.field_b = fl.a("benefits", "headline", ArrayWidgetGroup.field_C, 11091);
             pn.field_a = fl.a("benefits", "blurbpane", ArrayWidgetGroup.field_C, 11091);
             ha.field_l = fl.a("benefits", "button", ArrayWidgetGroup.field_C, 11091);
-            ig.field_e = fl.a("benefits", "signup_text", ArrayWidgetGroup.field_C, 11091);
+            QuickChatCategoryRegistry.field_e = fl.a("benefits", "signup_text", ArrayWidgetGroup.field_C, 11091);
             PasswordValidator.field_y = fl.a("benefits", "menu_text", ArrayWidgetGroup.field_C, 11091);
             er.field_j = fl.a("benefits", "button_frame", ArrayWidgetGroup.field_C, 11091);
             ReportAbuseDialog.field_Tb = fl.a("benefits", "arrow", ArrayWidgetGroup.field_C, 11091);
@@ -173,7 +173,7 @@ final class ok {
               HotspotTextWidget.a(5, ao.field_h[var7].width, 3, ao.field_h[var7].height, ao.field_h[var7], 1, 0, 0);
             }
             nj.field_a = null;
-            kg.field_j = ig.field_e.copy();
+            kg.field_j = QuickChatCategoryRegistry.field_e.copy();
             kg.field_j.bindAsRenderTarget();
             pi.a((byte) -115, 0, 64, SoftwareRasterizer.width, SoftwareRasterizer.height * 2 / 3, 0);
             SoftwareRasterizer.setTarget(var27, var2, var3);
@@ -305,7 +305,7 @@ final class ok {
           if (ha.field_l != null &&
             er.field_j != null) {
             ha.field_l.g(231, 390);
-            var1 = ig.field_e;
+            var1 = QuickChatCategoryRegistry.field_e;
             if (UsernameSuggestionsPanel.field_H.field_d == 0) {
               var1 = kg.field_j;
             }

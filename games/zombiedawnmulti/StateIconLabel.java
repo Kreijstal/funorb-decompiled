@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends UiComponent {
+final class StateIconLabel extends UiComponent {
     static String field_Jb;
     private UiComponent field_Lb;
     static Sprite field_Mb;
@@ -12,7 +12,7 @@ final class mi extends UiComponent {
     static UiComponent[] field_Ib;
     static int field_Hb;
 
-    mi(long param0, Sprite param1, Sprite param2, int param3, UiComponent param4, String param5) {
+    StateIconLabel(long param0, Sprite param1, Sprite param2, int param3, UiComponent param4, String param5) {
         this(param0, (UiComponent) null, param4, param5);
         try {
           this.field_Lb.field_lb = param3;
@@ -23,29 +23,29 @@ final class mi extends UiComponent {
         }
     }
 
-    mi(long param0, mi param1, String param2) {
+    StateIconLabel(long param0, StateIconLabel param1, String param2) {
         this(param0, param1.field_Lb, param1.field_Fb, param2);
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
         this.setBounds(param5, param0, param3, param4, -3344);
         int var7 = 121 / ((param1 + 34) / 45);
-        this.e(true, param2);
+        this.layoutIconLabel(true, param2);
     }
 
     final int a(byte param0, int param1) {
         if (param0 <= 92) {
-          this.e(false, -106);
+          this.layoutIconLabel(false, -106);
           return param1 + (this.field_Lb.e(0) + this.field_Fb.e(0));
         }
         return param1 + (this.field_Lb.e(0) + this.field_Fb.e(0));
     }
 
-    private final void e(boolean param0, int param1) {
+    private final void layoutIconLabel(boolean param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         if (!param0) {
-          mi.b(-119, -84);
+          StateIconLabel.b(-119, -84);
           this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
           var3 = param1 + this.field_Lb.field_zb;
           this.field_Fb.setBounds(this.field_z, 0, this.field_zb - var3, var3, -3344);
@@ -56,7 +56,7 @@ final class mi extends UiComponent {
         this.field_Fb.setBounds(this.field_z, 0, this.field_zb - var3Lifetime1, var3Lifetime1, -3344);
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_Kb = null;
         field_Ib = null;
         if (!param0) {
@@ -65,7 +65,7 @@ final class mi extends UiComponent {
           field_Jb = null;
           return;
         }
-        mi.d(false);
+        StateIconLabel.releaseStatics(false);
         field_Nb = null;
         field_Mb = null;
         field_Jb = null;
@@ -113,7 +113,7 @@ final class mi extends UiComponent {
         }
     }
 
-    private mi(long param0, UiComponent param1, UiComponent param2, String param3) {
+    private StateIconLabel(long param0, UiComponent param1, UiComponent param2, String param3) {
         super(param0, (UiComponent) null);
         try {
           this.field_Lb = new UiComponent(0L, param1);

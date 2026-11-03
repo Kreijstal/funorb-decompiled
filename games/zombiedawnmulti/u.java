@@ -245,7 +245,7 @@ final class u extends IntrusiveNode {
             }
             var2 = 1;
           }
-          NetworkGameClient.field_B.a(iq.a(bo.field_d, -1, MouseInputHandler.field_g), 76, iq.a(ka.field_t, -1, vb.field_f));
+          NetworkGameClient.field_B.a(iq.a(bo.field_d, -1, MouseInputHandler.field_g), 76, iq.a(ChatMessage.field_t, -1, vb.field_f));
           if (param0 > -50) {
             stackIn_10_0 = 119;
             return stackIn_10_0;

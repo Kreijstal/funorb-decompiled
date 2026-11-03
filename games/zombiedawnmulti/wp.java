@@ -113,7 +113,7 @@ final class wp {
             if (MessageDialogContent.field_L.c(-119)) {
               return;
             }
-            bb.field_g = null;
+            DelayedPacket.field_g = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

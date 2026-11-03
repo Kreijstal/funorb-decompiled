@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ScrollPane extends UiComponent {
-    hi field_Ib;
+    VerticalScrollbar field_Ib;
     static String field_Fb;
     UiComponent field_Gb;
     static String field_Hb;
@@ -17,7 +17,7 @@ final class ScrollPane extends UiComponent {
         this.field_Gb.field_x = param0;
         this.field_Jb.field_z = this.field_z;
         this.field_Gb.field_zb = -param2 - param1 + this.field_zb;
-        this.field_Ib.a(this.field_Gb.field_z, 0, this.field_Jb.field_z, this.field_z, -1, -this.field_Gb.field_Q, param1, -param1 + this.field_zb);
+        this.field_Ib.setScrollbarBounds(this.field_Gb.field_z, 0, this.field_Jb.field_z, this.field_z, -1, -this.field_Gb.field_Q, param1, -param1 + this.field_zb);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -107,7 +107,7 @@ final class ScrollPane extends UiComponent {
         if (this.field_Ib.d(false)) {
           this.field_Gb.field_mb = this.field_Gb.field_mb + param0;
         }
-        if (this.field_Ib.e((byte) -37)) {
+        if (this.field_Ib.pollLineUp((byte) -37)) {
           this.field_Gb.field_mb = this.field_Gb.field_mb - param0;
         }
         if (this.field_Ib.d((byte) 37)) {
@@ -160,21 +160,21 @@ final class ScrollPane extends UiComponent {
           return;
         }
         if (this.field_Ib.j(120)) {
-          this.field_Gb.field_Q = -this.field_Ib.a(param3, (byte) -66, this.field_Jb.field_z, this.field_Gb.field_z);
+          this.field_Gb.field_Q = -this.field_Ib.getDraggedScrollOffset(param3, (byte) -66, this.field_Jb.field_z, this.field_Gb.field_z);
           this.field_Gb.field_mb = 0;
         }
-        this.field_Ib.a(this.field_Gb.field_z, -this.field_Gb.field_Q, (byte) 124, this.field_Jb.field_z);
+        this.field_Ib.layoutScrollbar(this.field_Gb.field_z, -this.field_Gb.field_Q, (byte) 124, this.field_Jb.field_z);
     }
 
     static int b(int param0, int param1) {
         return param0 & param1;
     }
 
-    ScrollPane(long param0, UiComponent param1, UiComponent param2, hi param3) {
+    ScrollPane(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3) {
         super(param0, (UiComponent) null);
         try {
           this.field_Jb = new UiComponent(0L, param2);
-          this.field_Ib = new hi(0L, param3);
+          this.field_Ib = new VerticalScrollbar(0L, param3);
           this.a((byte) 50, this.field_Jb);
           this.a((byte) 50, this.field_Ib);
           this.field_Gb = param1;

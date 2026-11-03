@@ -54,7 +54,7 @@ final class mq extends MenuScreen {
         var3 = ih.field_e;
         var4 = vg.field_n;
         var5 = nk.field_q;
-        var6 = ah.field_e;
+        var6 = TranslatedUiText.field_e;
         var7 = pb.field_e;
         if (this.field_d == 6) {
           var7.b(ContextMenu.field_Mb, 320, 300, 16777215, 0);

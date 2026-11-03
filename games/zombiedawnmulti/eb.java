@@ -378,9 +378,9 @@ final class eb {
               var8Lifetime1 = am.field_c - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + ResizableDialog.field_bb;
               uf.field_b[var4Lifetime3] = new int[4];
-              uf.field_b[var4Lifetime3][0] = var8Lifetime1 - no.field_Gb;
+              uf.field_b[var4Lifetime3][0] = var8Lifetime1 - QuickChatHelpDialog.field_Gb;
               uf.field_b[var4Lifetime3][1] = var5Lifetime3;
-              uf.field_b[var4Lifetime3][2] = var7Lifetime2 + (no.field_Gb << 1);
+              uf.field_b[var4Lifetime3][2] = var7Lifetime2 + (QuickChatHelpDialog.field_Gb << 1);
               uf.field_b[var4Lifetime3][3] = (DateInputWidget.field_G << 1) + me.field_h;
               var5Lifetime3 = var5Lifetime3 + ((DateInputWidget.field_G << 1) - (-ResizableDialog.field_bb - me.field_h));
             }

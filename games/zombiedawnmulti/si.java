@@ -302,11 +302,11 @@ final class si extends MenuScreen {
               }
               incrementValue$1 = var6;
               var6++;
-              param0 = ah.field_f[incrementValue$1];
+              param0 = TranslatedUiText.field_f[incrementValue$1];
               dupTemp$2 = param2[param0];
               dupTemp$3 = param3[dupTemp$2];
               param3[dupTemp$2] = dupTemp$3 + 1;
-              ah.field_f[dupTemp$3] = param0;
+              TranslatedUiText.field_f[dupTemp$3] = param0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -464,7 +464,7 @@ final class si extends MenuScreen {
         super.a(param0);
         var2 = 378;
         var3 = 0;
-        var4 = ah.field_e.maxAscent + ah.field_e.maxDescent;
+        var4 = TranslatedUiText.field_e.maxAscent + TranslatedUiText.field_e.maxDescent;
         this.field_E = 255;
         if (this.field_n == 0) {
           stackIn_3_0 = 255;
@@ -509,7 +509,7 @@ final class si extends MenuScreen {
             var17 = stackIn_28_0;
             stackIn_31_0 = (var9 >= var15) ? var15 : var9;
             var15Lifetime2 = stackIn_31_0;
-            stackIn_33_0 = ah.field_e;
+            stackIn_33_0 = TranslatedUiText.field_e;
             stackIn_33_1 = this.field_z.field_b[var13];
             stackIn_33_2 = 280;
             stackIn_33_3 = var10;
@@ -527,7 +527,7 @@ final class si extends MenuScreen {
             if (var16 != 0) {
               MatchingTextValidator.field_w.a(io.field_d, 90, var10 + 24, 11184810, 1, var6);
             } else {
-              stackIn_40_0 = ah.field_e;
+              stackIn_40_0 = TranslatedUiText.field_e;
               stackIn_40_1 = Integer.toString(this.field_y[var13]);
               stackIn_40_2 = 90;
               stackIn_40_3 = var10 + 28;
@@ -557,8 +557,8 @@ final class si extends MenuScreen {
               stackIn_51_0 = (!this.field_z.hasUpgrade((byte) -121, var19, var13)) ? 0 : 1;
               var20 = stackIn_51_0;
               if (var20 != 0) {
-                wa.field_b[-18 + var19].c(var18, var10 + 5, var6);
-                if (wa.field_b[var19 - 18].b(var18, 5 + var10, MouseInputHandler.field_g, bo.field_d)) {
+                MarkerSliderPainter.field_b[-18 + var19].c(var18, var10 + 5, var6);
+                if (MarkerSliderPainter.field_b[var19 - 18].b(var18, 5 + var10, MouseInputHandler.field_g, bo.field_d)) {
                   this.field_E = var19;
                 }
                 var18 += 28;
@@ -613,7 +613,7 @@ final class si extends MenuScreen {
           }
           if (!this.field_o) {
             if (this.field_z.field_i) {
-              pb.field_e.a(vl.a(ig.field_g, new String[]{Integer.toString(this.field_t)}, 2), 320, 365, 16776960, var3, var6);
+              pb.field_e.a(vl.a(QuickChatCategoryRegistry.field_g, new String[]{Integer.toString(this.field_t)}, 2), 320, 365, 16776960, var3, var6);
             } else {
               pb.field_e.a(aa.field_p, 320, 410, 16777096, var3, var6);
             }

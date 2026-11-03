@@ -270,7 +270,7 @@ final class jj extends SceneObject {
           var7 = PortalEntryEvent.field_m.field_D[var5][1];
           var8 = am.a(this.field_R, var7, this.field_C, param0 ^ -10135, var6);
           if (this.field_G) {
-            stackIn_9_0 = ig.field_d[1];
+            stackIn_9_0 = QuickChatCategoryRegistry.field_d[1];
             if (3 != this.field_J) {
               stackIn_10_1 = var3_int;
             } else {
@@ -284,7 +284,7 @@ final class jj extends SceneObject {
           if (!this.field_O) {
             return;
           }
-          ig.field_d[0].e(1 + var3_int, 2 + var4, 128, 16711680);
+          QuickChatCategoryRegistry.field_d[0].e(1 + var3_int, 2 + var4, 128, 16711680);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

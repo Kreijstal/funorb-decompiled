@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig {
+final class QuickChatCategoryRegistry {
     static IntrusiveDeque field_a;
     private io field_c;
     private ResourceArchive field_h;
@@ -41,13 +41,13 @@ final class ig {
         field_e = null;
         field_a = null;
         if (param0) {
-          ig.a((byte) -89, 58, false, -109);
+          QuickChatCategoryRegistry.a((byte) -89, 58, false, -109);
         }
         field_b = null;
         field_g = null;
     }
 
-    ig(int param0, ResourceArchive param1, ResourceArchive param2) {
+    QuickChatCategoryRegistry(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -94,16 +94,16 @@ final class ig {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        ka var9 = null;
+        ChatMessage var9 = null;
         int var6Lifetime1;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (t.field_e < b.field_d) {
             t.field_e = t.field_e + 1;
           }
-          if (km.field_cb != SocketConnector.field_h.field_f) {
-            vj.field_t = vj.field_t + (SocketConnector.field_h.field_f - km.field_cb);
-            km.field_cb = SocketConnector.field_h.field_f;
+          if (ValidationMessageWidget.field_cb != SocketConnector.field_h.field_f) {
+            vj.field_t = vj.field_t + (SocketConnector.field_h.field_f - ValidationMessageWidget.field_cb);
+            ValidationMessageWidget.field_cb = SocketConnector.field_h.field_f;
           }
           if (0 >= t.field_e) {
             return;
@@ -129,9 +129,9 @@ final class ig {
             }
           }
           if (nn.field_b.field_T != 0) {
-            bk.field_i = new ReportAbuseDialog(nn.field_b.field_w, nn.field_b.field_qb, nn.field_b.field_zb, nn.field_b.field_z, param3, wa.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b, (String) null, 0L);
+            bk.field_i = new ReportAbuseDialog(nn.field_b.field_w, nn.field_b.field_qb, nn.field_b.field_zb, nn.field_b.field_z, param3, MarkerSliderPainter.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b, (String) null, 0L);
           }
-          var9 = km.b(-7, param1, jk.field_f, nj.field_h);
+          var9 = ValidationMessageWidget.b(-7, param1, jk.field_f, nj.field_h);
           if (var9 != null) {
             kj.a(-31806, var9);
           }

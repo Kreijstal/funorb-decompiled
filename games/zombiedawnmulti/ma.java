@@ -4,11 +4,11 @@
 final class ma {
     static int field_d;
     static CipherPacketBuffer field_a;
-    static mo[][] field_b;
+    static AlignedIconLabel[][] field_b;
     static String field_c;
 
     public static void a(int param0) {
-        field_b = (mo[][]) null;
+        field_b = (AlignedIconLabel[][]) null;
         field_a = null;
         field_c = null;
         if (param0 != 64) {

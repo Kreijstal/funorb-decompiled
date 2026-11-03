@@ -137,7 +137,7 @@ final class ee {
         }
         dupTemp$2 = bl.a((byte) 90);
         UiWidget.field_g = dupTemp$2;
-        mo.field_Gb = dupTemp$2;
+        AlignedIconLabel.field_Gb = dupTemp$2;
         if (param1) {
           return false;
         }
@@ -160,14 +160,14 @@ final class ee {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         ui.field_j = null;
-        no.c((byte) 75);
+        QuickChatHelpDialog.c((byte) 75);
         param8 = ih.a(param10, 4, param3, param2, param7, param8, param4);
         LabeledChildWidget.a(param9, param13, param12, 2, param8, param0, param6, param2, param5, param11);
         if (!param1) {
           ee.a(-102, true, -123, -91, -93, false, false, -65, false, 82, -99, true, 54, true);
         }
         bg.a(param12, (byte) 101, param6);
-        ig.a((byte) -114, param12, param8, param7);
+        QuickChatCategoryRegistry.a((byte) -114, param12, param8, param7);
     }
 
     static {

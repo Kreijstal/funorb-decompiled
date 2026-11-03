@@ -150,7 +150,7 @@ final class BufferedSocket implements Runnable {
         }
         cr var2 = new cr();
         TabbedPane.field_Gb.a(var2, false);
-        mi.b(1, param1);
+        StateIconLabel.b(1, param1);
         return var2;
     }
 

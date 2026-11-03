@@ -145,7 +145,7 @@ final class fk extends MenuScreen {
         String[] var11Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         super.a(param0);
-        var2 = ah.field_e;
+        var2 = TranslatedUiText.field_e;
         var3 = ((BitmapFont) ((Object) var2)).maxAscent + ((BitmapFont) ((Object) var2)).maxDescent;
         if (RandomAccessCacheFile.field_i != null) {
           regionExit1: {
@@ -166,17 +166,17 @@ final class fk extends MenuScreen {
                   SoftwareRasterizer.fillRectAlpha(30, -35 + var7, 186, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7, 111, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7 - 35, 65, 225, 0, 64);
-                  ah.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7, var10, 1);
-                  ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7, var10, 1);
-                  ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7, var10, 1);
-                  ah.field_e.b("%W", SpriteState.field_q[3], var7, var10, 1);
-                  ah.field_e.b("%L", SpriteState.field_q[4], var7, var10, 1);
-                  ah.field_e.b("%D", SpriteState.field_q[5], var7, var10, 1);
+                  TranslatedUiText.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7, var10, 1);
+                  TranslatedUiText.field_e.b(ub.field_tb, SpriteState.field_q[1], var7, var10, 1);
+                  TranslatedUiText.field_e.b(ke.field_e, SpriteState.field_q[2], var7, var10, 1);
+                  TranslatedUiText.field_e.b("%W", SpriteState.field_q[3], var7, var10, 1);
+                  TranslatedUiText.field_e.b("%L", SpriteState.field_q[4], var7, var10, 1);
+                  TranslatedUiText.field_e.b("%D", SpriteState.field_q[5], var7, var10, 1);
                   ak.a(586, 231, -5, 27, var7 - 38);
                   var7 = var7 + (4 + var6);
                   var4 = GameKeyHandler.field_d;
-                  var17 = RandomAccessCacheFile.field_i.field_t[sd.field_F];
-                  var12 = RandomAccessCacheFile.field_i.field_k[sd.field_F];
+                  var17 = RandomAccessCacheFile.field_i.field_t[DropTargetWidget.field_F];
+                  var12 = RandomAccessCacheFile.field_i.field_k[DropTargetWidget.field_F];
                   var13 = 0;
                   for (var14 = 0; var14 < 10; var14++) {
                     var18 = var17[var14];
@@ -226,18 +226,18 @@ final class fk extends MenuScreen {
                   SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime1, 186, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime1, 111, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime1 - 35, 65, 225, 0, 64);
-                  ah.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b("%W", SpriteState.field_q[3], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b("%L", SpriteState.field_q[4], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b("%D", SpriteState.field_q[5], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.b("%W", SpriteState.field_q[3], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.b("%L", SpriteState.field_q[4], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.b("%D", SpriteState.field_q[5], var7Lifetime1, var10Lifetime1, 1);
                   ak.a(586, 231, -5, 27, var7Lifetime1 - 38);
                   var7Lifetime1 = var7Lifetime1 + (4 + var6Lifetime1);
                   var4Lifetime1 = GameKeyHandler.field_d;
-                  var19 = RandomAccessCacheFile.field_i.field_t[sd.field_F];
+                  var19 = RandomAccessCacheFile.field_i.field_t[DropTargetWidget.field_F];
                   var11 = var19;
-                  var12Lifetime1 = RandomAccessCacheFile.field_i.field_k[sd.field_F];
+                  var12Lifetime1 = RandomAccessCacheFile.field_i.field_k[DropTargetWidget.field_F];
                   var13Lifetime1 = 0;
                   for (var14Lifetime1 = 0; var14Lifetime1 < 10; var14Lifetime1++) {
                     var20 = var19[var14Lifetime1];
@@ -294,18 +294,18 @@ final class fk extends MenuScreen {
         SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime2, 186, 225, 0, 64);
         SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime2, 111, 225, 0, 64);
         SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime2 - 35, 65, 225, 0, 64);
-        ah.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b("%W", SpriteState.field_q[3], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b("%L", SpriteState.field_q[4], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b("%D", SpriteState.field_q[5], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.b("%W", SpriteState.field_q[3], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.b("%L", SpriteState.field_q[4], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.b("%D", SpriteState.field_q[5], var7Lifetime2, var10Lifetime2, 1);
         ak.a(586, 231, -5, 27, var7Lifetime2 - 38);
         var7Lifetime2 = var7Lifetime2 + (4 + var6Lifetime2);
         var4Lifetime3 = GameKeyHandler.field_d;
-        var23 = RandomAccessCacheFile.field_i.field_t[sd.field_F];
+        var23 = RandomAccessCacheFile.field_i.field_t[DropTargetWidget.field_F];
         var11Lifetime1 = var23;
-        var12Lifetime2 = RandomAccessCacheFile.field_i.field_k[sd.field_F];
+        var12Lifetime2 = RandomAccessCacheFile.field_i.field_k[DropTargetWidget.field_F];
         var13Lifetime2 = 0;
         for (var14Lifetime2 = 0; var14Lifetime2 < 10; var14Lifetime2++) {
           var24 = var23[var14Lifetime2];
@@ -336,11 +336,11 @@ final class fk extends MenuScreen {
         String var3Lifetime1;
         if (param0 == -95) {
           var3 = we.field_g[this.field_j[param1]];
-          return 20 + ah.field_e.textWidth(var3);
+          return 20 + TranslatedUiText.field_e.textWidth(var3);
         }
         field_m = (int[]) null;
         var3Lifetime1 = we.field_g[this.field_j[param1]];
-        return 20 + ah.field_e.textWidth(var3Lifetime1);
+        return 20 + TranslatedUiText.field_e.textWidth(var3Lifetime1);
     }
 
     final int d(int param0, int param1) {

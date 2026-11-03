@@ -284,7 +284,7 @@ final class GameCharacter extends UnitView {
             this.field_nb &&
             ~this.team == ~PowerupButton.field_e.localTeam) {
             MidiPcmStream.field_B = PowerupButton.field_d[PowerupEvent.field_m % PowerupButton.field_d.length];
-            mo.field_Ib = BufferedSocket.field_p[PowerupEvent.field_m % BufferedSocket.field_p.length];
+            AlignedIconLabel.field_Ib = BufferedSocket.field_p[PowerupEvent.field_m % BufferedSocket.field_p.length];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -350,7 +350,7 @@ final class GameCharacter extends UnitView {
               return;
             }
             MidiPcmStream.field_B = 13421772;
-            mo.field_Ib = 13421772;
+            AlignedIconLabel.field_Ib = 13421772;
           }
           if (param0 != 2) {
             this.field_ub = 112;
@@ -577,10 +577,10 @@ final class GameCharacter extends UnitView {
               }
               if (this.state == 8) {
                 MidiPcmStream.field_B = PortalEntryEvent.field_m.field_D[this.team][0];
-                mo.field_Ib = PortalEntryEvent.field_m.field_D[this.team][1];
+                AlignedIconLabel.field_Ib = PortalEntryEvent.field_m.field_D[this.team][1];
                 this.n(0);
                 this.s(2);
-                var12_ref_ja = nk.a(ig.field_d[var6 + (gg.field_l[var5] + this.field_fb)], mo.field_Ib, 255, MidiPcmStream.field_B);
+                var12_ref_ja = nk.a(QuickChatCategoryRegistry.field_d[var6 + (gg.field_l[var5] + this.field_fb)], AlignedIconLabel.field_Ib, 255, MidiPcmStream.field_B);
                 var12_ref_ja.g(var7 + this.field_mb - 3, var8 + this.field_cb - 3);
                 return;
               }
@@ -588,7 +588,7 @@ final class GameCharacter extends UnitView {
               }
               if (null != this.field_U) {
                 if (!this.field_U.isSamplePositionOutOfRange()) {
-                  this.field_U.setVolume(sd.b(-49, var8, var7));
+                  this.field_U.setVolume(DropTargetWidget.b(-49, var8, var7));
                   this.field_U.f(pb.a(var8, var7, false));
                 } else {
                   this.field_U = null;
@@ -600,7 +600,7 @@ final class GameCharacter extends UnitView {
               }
               if (17 != this.state &&
                 !this.field_Gb) {
-                stackIn_191_0 = ig.field_d[1];
+                stackIn_191_0 = QuickChatCategoryRegistry.field_d[1];
                 stackIn_191_1 = 12;
                 if (this.facing != 3) {
                   stackIn_192_2 = var7;
@@ -614,11 +614,11 @@ final class GameCharacter extends UnitView {
               if (this.field_Cb ||
                 33 == this.state) {
                 if (nk.field_h == null) {
-                  g.c(bb.field_n);
+                  g.c(DelayedPacket.field_n);
                   nk.field_h = new ea();
                   g.d();
                 }
-                g.c(bb.field_n);
+                g.c(DelayedPacket.field_n);
                 SoftwareRasterizer.clear();
                 SoftwareRasterizer.fillCircle(SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, 1);
                 if (0 >= this.field_yb) {
@@ -631,19 +631,19 @@ final class GameCharacter extends UnitView {
                 nk.field_h.a(2, (double)var15 / 7.0, var14_ref_int__);
                 g.d();
                 if (this.field_Cb) {
-                  bb.field_n.c(var7, var8, 200);
+                  DelayedPacket.field_n.c(var7, var8, 200);
                 } else {
                   if (this.field_yb < 0) {
-                    var12 = bb.field_n.width * -this.field_yb / 100;
+                    var12 = DelayedPacket.field_n.width * -this.field_yb / 100;
                   } else if (this.field_yb > 0) {
-                    var12 = this.field_yb * bb.field_n.width / 100;
+                    var12 = this.field_yb * DelayedPacket.field_n.width / 100;
                   } else {
                     this.positionY = this.field_vb;
                     this.positionX = this.field_Ob;
                   }
                   var13 = -(var12 / 2) + 24;
                   if (var12 != 0) {
-                    bb.field_n.f(var7 + var13, var8 + var13, var12, var12);
+                    DelayedPacket.field_n.f(var7 + var13, var8 + var13, var12, var12);
                   }
                 }
               }
@@ -679,7 +679,7 @@ final class GameCharacter extends UnitView {
                     }
                   }
                   MidiPcmStream.field_B = PortalEntryEvent.field_m.field_D[var16][0];
-                  mo.field_Ib = PortalEntryEvent.field_m.field_D[var16][1];
+                  AlignedIconLabel.field_Ib = PortalEntryEvent.field_m.field_D[var16][1];
                   this.n(param0 + 10136);
                   this.s(2);
                 } else {
@@ -696,7 +696,7 @@ final class GameCharacter extends UnitView {
                       decompiledFrameRemainder2 = !(decompiledFrameRemainder1);
                     }
                   } else {
-                    mo.field_Ib = 2473480;
+                    AlignedIconLabel.field_Ib = 2473480;
                     MidiPcmStream.field_B = 12222482;
                     break regionExit1;
                   }
@@ -704,26 +704,26 @@ final class GameCharacter extends UnitView {
                     (decompiledFrameRemainder1) &&
                     (decompiledFrameRemainder0)) {
                     MidiPcmStream.field_B = 11498997;
-                    mo.field_Ib = 8165621;
+                    AlignedIconLabel.field_Ib = 8165621;
                     break regionExit1;
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder1)) {
-                    mo.field_Ib = 13843485;
+                    AlignedIconLabel.field_Ib = 13843485;
                     MidiPcmStream.field_B = 13542477;
                     break regionExit1;
                   }
                   if (decompiledFrameRemainder1) {
                     MidiPcmStream.field_B = 9796223;
-                    mo.field_Ib = 16054718;
+                    AlignedIconLabel.field_Ib = 16054718;
                     break regionExit1;
                   }
                   MidiPcmStream.field_B = 3178624;
-                  mo.field_Ib = 3176576;
+                  AlignedIconLabel.field_Ib = 3176576;
                 }
               }
               var16 = this.field_C;
-              var17 = no.field_Hb;
+              var17 = QuickChatHelpDialog.field_Hb;
               if (var4 != 0 &&
                 !this.field_wb) {
                 var17 = wq.field_c;
@@ -752,11 +752,11 @@ final class GameCharacter extends UnitView {
               }
               var18 = stackIn_330_0;
               if (var18 == 0) {
-                nk.a(var17[var16][var15], mo.field_Ib, param0 + 10391, MidiPcmStream.field_B);
+                nk.a(var17[var16][var15], AlignedIconLabel.field_Ib, param0 + 10391, MidiPcmStream.field_B);
               } else {
                 g.c(vb.field_b);
                 var19 = 117;
-                var20_ref_ja = no.field_Hb[var16][var15];
+                var20_ref_ja = QuickChatHelpDialog.field_Hb[var16][var15];
                 var21 = 6;
                 var22 = 3;
                 if (ic.field_h.length > var15) {
@@ -769,7 +769,7 @@ final class GameCharacter extends UnitView {
                 }
                 SoftwareRasterizer.clear();
                 var20_ref_ja.g(3, 3);
-                no.field_Hb[var16][var19].g(var21, var22);
+                QuickChatHelpDialog.field_Hb[var16][var19].g(var21, var22);
                 var23 = SoftwareRasterizer.pixels;
                 var24 = 0;
                 while (var24 < var23.length) {
@@ -781,7 +781,7 @@ final class GameCharacter extends UnitView {
                     if ((var25 & 65535) != 0) {
                       if (0 == (16711935 & var25)) {
                         var26 = var25 >> 8;
-                        var23[var24] = cr.b(cr.b(ScrollPane.b(65280, ScrollPane.b(255, mo.field_Ib >> 8) * var26), ScrollPane.b(mo.field_Ib, 255) * var26 >> 8), ScrollPane.b(16711777, (ScrollPane.b(mo.field_Ib, 16754034) >> 16) * var26 << 8));
+                        var23[var24] = cr.b(cr.b(ScrollPane.b(65280, ScrollPane.b(255, AlignedIconLabel.field_Ib >> 8) * var26), ScrollPane.b(AlignedIconLabel.field_Ib, 255) * var26 >> 8), ScrollPane.b(16711777, (ScrollPane.b(AlignedIconLabel.field_Ib, 16754034) >> 16) * var26 << 8));
                       }
                     } else {
                       var26 = var25 >> 16;
@@ -856,29 +856,29 @@ final class GameCharacter extends UnitView {
                 vb.field_b.c(-3 + var7, -3 + var8, this.exitCountdown);
               }
               if (this.field_zb) {
-                ig.field_d[0].e(1 + var7, var8 + 2, 128, 16711680);
+                QuickChatCategoryRegistry.field_d[0].e(1 + var7, var8 + 2, 128, 16711680);
               } else {
                 if (!this.field_Bb) {
                   if ((this.field_eb)) {
-                    ig.field_d[0].c(var7, var8 + 2, 96);
+                    QuickChatCategoryRegistry.field_d[0].c(var7, var8 + 2, 96);
                   }
                   decompiledFrameRemainder5 = false;
                 }
                 else {
                   if (!(param1.zoom > 1.25f)) {
-                    ig.field_d[0].g(var7, var8 + 3);
+                    QuickChatCategoryRegistry.field_d[0].g(var7, var8 + 3);
                     if ((0 != this.field_Kb)) {
-                      MatchingTextValidator.field_w.drawCharacter((char)(48 + this.field_Kb), 1 + (var7 - (-ig.field_d[0].width - 9)), var8 + 7 + ig.field_d[0].height + 1, 0);
-                      MatchingTextValidator.field_w.drawCharacter((char)(48 + this.field_Kb), 9 + var7 + ig.field_d[0].width, 7 + (var8 + ig.field_d[0].height), 16777215);
+                      MatchingTextValidator.field_w.drawCharacter((char)(48 + this.field_Kb), 1 + (var7 - (-QuickChatCategoryRegistry.field_d[0].width - 9)), var8 + 7 + QuickChatCategoryRegistry.field_d[0].height + 1, 0);
+                      MatchingTextValidator.field_w.drawCharacter((char)(48 + this.field_Kb), 9 + var7 + QuickChatCategoryRegistry.field_d[0].width, 7 + (var8 + QuickChatCategoryRegistry.field_d[0].height), 16777215);
                     }
                     decompiledFrameRemainder5 = false;
                   }
                   else {
-                    ig.field_d[0].f(var7, var8 + 3, 1);
-                    ig.field_d[0].f(var7, var8, 16777215);
+                    QuickChatCategoryRegistry.field_d[0].f(var7, var8 + 3, 1);
+                    QuickChatCategoryRegistry.field_d[0].f(var7, var8, 16777215);
                     if (0 != this.field_Kb) {
-                      pb.field_e.drawCharacter((char)(this.field_Kb + 48), var7 - (-ig.field_d[0].width - 9) + 1, ig.field_d[0].height + (7 + (var8 + 1)), 0);
-                      pb.field_e.drawCharacter((char)(48 + this.field_Kb), 9 + (ig.field_d[0].width + var7), 7 + (var8 + ig.field_d[0].height), 16777215);
+                      pb.field_e.drawCharacter((char)(this.field_Kb + 48), var7 - (-QuickChatCategoryRegistry.field_d[0].width - 9) + 1, QuickChatCategoryRegistry.field_d[0].height + (7 + (var8 + 1)), 0);
+                      pb.field_e.drawCharacter((char)(48 + this.field_Kb), 9 + (QuickChatCategoryRegistry.field_d[0].width + var7), 7 + (var8 + QuickChatCategoryRegistry.field_d[0].height), 16777215);
                     }
                   }
                 }
@@ -1563,7 +1563,7 @@ final class GameCharacter extends UnitView {
                       }
                       this.animationFrame = 0;
                       this.field_xb = false;
-                      PowerupButton.field_e.b(this.field_Hb, 0, this.getY(-71), this.getX(-88));
+                      PowerupButton.field_e.addClickMarker(this.field_Hb, 0, this.getY(-71), this.getX(-88));
                       this.b(false);
                       if (var3 == 0) {
                         break regionExit1;

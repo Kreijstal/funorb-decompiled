@@ -47,7 +47,7 @@ final class WhirlpoolHasher {
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
-        dm var9 = null;
+        LobbyPlayer var9 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], 128 >>> ScrollPane.b(this.field_f, 7));
@@ -70,8 +70,8 @@ final class WhirlpoolHasher {
           this.a(-2);
           var4_int = 0;
           if (param1 != 1) {
-            var9 = (dm) null;
-            WhirlpoolHasher.a(-29, (ScrollPane) null, -43, 102, (byte) 41, -126, (dm) null);
+            var9 = (LobbyPlayer) null;
+            WhirlpoolHasher.a(-29, (ScrollPane) null, -43, 102, (byte) 41, -126, (LobbyPlayer) null);
           }
           var5 = param2;
           while (var4_int < 8) {
@@ -306,7 +306,7 @@ final class WhirlpoolHasher {
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         var3 = 1;
         if (!sp.field_h &&
-          lj.field_v == null) {
+          ClickMarker.field_v == null) {
           var3 = 0;
         }
         if (va.field_a == 0 &&
@@ -385,7 +385,7 @@ final class WhirlpoolHasher {
                 var7Lifetime6 = "[" + MessageDialog.field_vb + "] ";
               }
               if (JaggrabDownloader.field_c != null) {
-                if (wa.field_k &&
+                if (MarkerSliderPainter.field_k &&
                   AgeValidator.field_t != null) {
                   var7Lifetime6 = "[" + AgeValidator.field_t + "] ";
                 } else {
@@ -397,7 +397,7 @@ final class WhirlpoolHasher {
             var5Lifetime1 = var5Lifetime1 - w.field_A.textWidth(var20);
           } else {
             var22 = (CharSequence) ((Object) qf.field_g);
-            var18 = vl.a(v.field_c, new String[]{ld.a((byte) 0, var22)}, 2);
+            var18 = vl.a(v.field_c, new String[]{QuickChatMenu.a((byte) 0, var22)}, 2);
             var7Lifetime6 = var18;
             var7Lifetime6 = var18;
             var8 = vl.a(lc.field_n, new String[]{var16}, 2);
@@ -418,7 +418,7 @@ final class WhirlpoolHasher {
         return true;
     }
 
-    final static void a(int param0, ScrollPane param1, int param2, int param3, byte param4, int param5, dm param6) {
+    final static void a(int param0, ScrollPane param1, int param2, int param3, byte param4, int param5, LobbyPlayer param6) {
         PlayerContextMenu var13 = null;
         int var8 = 0;
         int var9 = 0;

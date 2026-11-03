@@ -22,7 +22,7 @@ final class ContextMenu extends UiComponent {
     static Sprite[] field_Nb;
     static String field_Gb;
     private int field_Vb;
-    private mo[] field_Tb;
+    private AlignedIconLabel[] field_Tb;
 
     final void layoutAtAnchor(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
@@ -35,7 +35,7 @@ final class ContextMenu extends UiComponent {
         int var8Lifetime1;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         if (0 == this.field_Vb) {
-          this.field_Tb[this.field_Vb] = new mo(0L, (UiComponent) null, (UiComponent) null, this.field_Fb, (Sprite) null, bg.field_a);
+          this.field_Tb[this.field_Vb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Fb, (Sprite) null, bg.field_a);
           this.field_Tb[this.field_Vb].field_lb = 1;
           this.a((byte) 50, this.field_Tb[this.field_Vb]);
           this.field_Xb[this.field_Vb] = -1;
@@ -57,7 +57,7 @@ final class ContextMenu extends UiComponent {
         var9 = IntrusiveNode.a(true, param3, param2, var7Lifetime1);
         this.setBounds(var7Lifetime1, var9, var6, var8Lifetime1, -3344);
         for (var10 = 0; this.field_Vb > var10; var10++) {
-          this.field_Tb[var10].a(this.field_Kb, param0 - 4540, this.field_Wb, var6 - this.field_Jb * 2, this.field_Jb, this.field_Wb * var10 + this.field_Qb, this.field_Pb);
+          this.field_Tb[var10].setIconLabelBounds(this.field_Kb, param0 - 4540, this.field_Wb, var6 - this.field_Jb * 2, this.field_Jb, this.field_Wb * var10 + this.field_Qb, this.field_Pb);
         }
         return;
     }
@@ -146,7 +146,7 @@ final class ContextMenu extends UiComponent {
         super(0L, param0);
         this.field_Ob = -2;
         this.field_Xb = new int[256];
-        this.field_Tb = new mo[256];
+        this.field_Tb = new AlignedIconLabel[256];
         try {
           this.field_Rb = param3;
           this.field_Ub = param1;
@@ -163,7 +163,7 @@ final class ContextMenu extends UiComponent {
 
     final void a(byte param0, String param1, int param2) {
         try {
-          this.field_Tb[this.field_Vb] = new mo(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, (Sprite) null, param1);
+          this.field_Tb[this.field_Vb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, (Sprite) null, param1);
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;
           this.field_Tb[this.field_Vb].field_ib = true;
           this.field_Tb[this.field_Vb].field_lb = 1;
@@ -180,7 +180,7 @@ final class ContextMenu extends UiComponent {
 
     final void a(Sprite param0, int param1, String param2, boolean param3) {
         try {
-          this.field_Tb[this.field_Vb] = new mo(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, param0, param2);
+          this.field_Tb[this.field_Vb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, param0, param2);
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;
           this.field_Tb[this.field_Vb].field_ib = param3 ? true : false;
           this.field_Tb[this.field_Vb].field_lb = 1;

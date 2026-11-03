@@ -9,7 +9,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     static ResourceArchive field_L;
     private on field_T;
     UsernameSuggestionsPanel field_J;
-    private fj field_H;
+    private CheckboxWidget field_H;
     private on field_N;
     private HotspotTextWidget field_G;
     static Sprite[] field_W;
@@ -87,7 +87,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           }
           var2 = TabbedPane.field_Gb.c(84);
           while (var2 != null) {
-            mi.b(1, param1);
+            StateIconLabel.b(1, param1);
             var2 = TabbedPane.field_Gb.b(6);
           }
           return;
@@ -392,7 +392,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
 
     private final int a(int param0, boolean param1, UiWidget param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
-        km var9 = null;
+        ValidationMessageWidget var9 = null;
         LabeledChildWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -409,7 +409,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             this.field_J = (UsernameSuggestionsPanel) null;
           }
           this.b((byte) 86, var10);
-          var9 = new km(((ValidationProviderSource) ((Object) param2)).getValidationProvider((byte) -109), param4, 126, param5 + var10.field_w, 50 + param6, param0);
+          var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param2)).getValidationProvider((byte) -109), param4, 126, param5 + var10.field_w, 50 + param6, param0);
           var9.field_A = (WidgetListener) (this);
           this.b((byte) 49, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;
@@ -489,11 +489,11 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.field_I = new on("", (WidgetListener) null, 20);
         this.field_N = new on("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_H = new fj("", (WidgetListener) null, var1 != 0);
+        this.field_H = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.field_S = new ButtonWidget(ip.field_a, (WidgetListener) null);
         this.field_O = new ButtonWidget(oq.field_v, (WidgetListener) null);
         this.field_V.field_x = bi.field_d;
-        this.field_M.field_x = mo.field_Nb;
+        this.field_M.field_x = AlignedIconLabel.field_Nb;
         this.field_T.field_x = IsaacRandom.field_d;
         this.field_P.field_x = ki.field_f;
         this.field_I.field_x = bh.field_e;
@@ -517,7 +517,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         m dupTemp$1 = new m(10000536);
         this.field_I.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.field_P.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = vl.a(wa.field_d, new String[]{this.h((byte) 3), this.g((byte) -109)}, 2);
+        String var2 = vl.a(MarkerSliderPainter.field_d, new String[]{this.h((byte) 3), this.g((byte) -109)}, 2);
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_M, var3, 73, InflaterDecompressor.field_i);
         var3 = var3 + (5 + this.a(20, true, this.field_T, cq.field_d, "", var3, 170));

@@ -234,7 +234,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-125, "waitingfor_patches");
                 if (null != var2) {
-                  bb.field_o = qe.a(-2739, var2);
+                  DelayedPacket.field_o = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "loading_patches");
                 if (null != var2) {
@@ -910,7 +910,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-127, "esc_to_skip");
                 if (var2 != null) {
-                  no.field_Fb = qe.a(-2739, var2);
+                  QuickChatHelpDialog.field_Fb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "instructions,0,0");
                 if (null != var2) {
@@ -1102,7 +1102,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-127, "benefits_2");
                 if (var2 != null) {
-                  bb.field_h = qe.a(-2739, var2);
+                  DelayedPacket.field_h = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "offer_rematch");
                 if (null != var2) {
@@ -1188,7 +1188,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "name_POWERUP_SCREECH");
                 if (var2 != null) {
-                  wa.field_j = qe.a(-2739, var2);
+                  MarkerSliderPainter.field_j = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "name_POWERUP_TOUGH");
                 if (null != var2) {
@@ -1367,7 +1367,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-122, "teaser_POWERUP_SCREECH");
                 if (var2 != null) {
-                  ka.field_c = qe.a(-2739, var2);
+                  ChatMessage.field_c = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "teaser_POWERUP_TOUGH");
                 if (var2 != null) {
@@ -1395,7 +1395,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-126, "teaser_POWERUP_QUAKE");
                 if (null != var2) {
-                  no.field_Kb = qe.a(-2739, var2);
+                  QuickChatHelpDialog.field_Kb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "teaser_POWERUP_FIREBALL");
                 if (var2 != null) {
@@ -1415,7 +1415,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-127, "teaser_POWERUP_COUNTER");
                 if (var2 != null) {
-                  bb.field_i = qe.a(-2739, var2);
+                  DelayedPacket.field_i = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "teaser_POWERUP_TELEPORT");
                 if (null != var2) {
@@ -1459,7 +1459,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "teaser_TRAIT_PREPARED");
                 if (null != var2) {
-                  bb.field_m = qe.a(-2739, var2);
+                  DelayedPacket.field_m = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "teaser_TRAIT_GENERAL");
                 if (var2 != null) {
@@ -1535,7 +1535,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "tip_POWERUP_DISGUISE");
                 if (var2 != null) {
-                  hi.field_Nb = qe.a(-2739, var2);
+                  VerticalScrollbar.field_Nb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "tip_POWERUP_DETONATE");
                 if (null != var2) {
@@ -1599,7 +1599,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-124, "tip_TRAIT_HUNGRY");
                 if (null != var2) {
-                  lj.field_q = qe.a(-2739, var2);
+                  ClickMarker.field_q = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "tip_TRAIT_HUMAN_LOVER");
                 if (null != var2) {
@@ -1699,7 +1699,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-126, "nextlevel");
                 if (var2 != null) {
-                  ah.field_b = qe.a(-2739, var2);
+                  TranslatedUiText.field_b = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "retry");
                 if (null != var2) {
@@ -1779,7 +1779,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "researchpoints");
                 if (var2 != null) {
-                  ig.field_g = qe.a(-2739, var2);
+                  QuickChatCategoryRegistry.field_g = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "zombiesacross");
                 if (null != var2) {
@@ -1811,7 +1811,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = qe.a(-128, "selectazombieenemy");
                 if (var2 != null) {
-                  VerticalScrollbar.field_Sb = qe.a(-2739, var2);
+                  mj.field_Sb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "selectahuman");
                 if (null != var2) {
@@ -2530,7 +2530,7 @@ final class PortalView extends SceneObject {
           var3_int = param1.worldToScreenX(this.getX(113), -20126);
           var4 = param1.worldToScreenY(this.getY(123), 121);
           if (null != this.field_N) {
-            this.field_N.setVolume(sd.b(param0 ^ -10218, var4, var3_int));
+            this.field_N.setVolume(DropTargetWidget.b(param0 ^ -10218, var4, var3_int));
             this.field_N.f(pb.a(var4, var3_int, false));
           }
           if (!io.a(var3_int, var4, (byte) -86, param1) &&

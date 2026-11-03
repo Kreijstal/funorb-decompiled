@@ -74,10 +74,10 @@ final class PlayerContextMenu {
     }
 
     final void a(boolean param0, byte param1) {
-        dm var4;
+        LobbyPlayer var4;
         String var5;
         int var6;
-        dm var7;
+        LobbyPlayer var7;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         if (null == this.field_f) {
           if (param1 < -80) {
@@ -276,7 +276,7 @@ final class PlayerContextMenu {
         return true;
     }
 
-    final void addChatFilterActions(ka param0, int param1) {
+    final void addChatFilterActions(ChatMessage param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -382,7 +382,7 @@ final class PlayerContextMenu {
         if (param0 != param1) {
           return false;
         }
-        bk.field_i = new ReportAbuseDialog(this.field_e.field_w, this.field_e.field_qb, this.field_e.field_zb, this.field_e.field_z, param2, wa.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b, this.field_f, this.field_i);
+        bk.field_i = new ReportAbuseDialog(this.field_e.field_w, this.field_e.field_qb, this.field_e.field_zb, this.field_e.field_z, param2, MarkerSliderPainter.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b, this.field_f, this.field_i);
         return true;
     }
 
@@ -415,7 +415,7 @@ final class PlayerContextMenu {
             ~ContentTransitionDialog.field_sb != ~this.field_i) {
             var3 = this.getTargetName(-20516);
             var2 = var3;
-            this.field_j.a((byte) -118, vl.a(mi.field_Jb, new String[]{var3}, 2), 17);
+            this.field_j.a((byte) -118, vl.a(StateIconLabel.field_Jb, new String[]{var3}, 2), 17);
           }
           return;
         }
@@ -424,7 +424,7 @@ final class PlayerContextMenu {
           ~ContentTransitionDialog.field_sb != ~this.field_i) {
           var3 = this.getTargetName(-20516);
           var2Lifetime1 = var3;
-          this.field_j.a((byte) -118, vl.a(mi.field_Jb, new String[]{var3}, 2), 17);
+          this.field_j.a((byte) -118, vl.a(StateIconLabel.field_Jb, new String[]{var3}, 2), 17);
         }
     }
 

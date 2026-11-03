@@ -79,17 +79,17 @@ final class en extends IOException {
         }
     }
 
-    final static dm a(byte param0, long param1) {
+    final static LobbyPlayer a(byte param0, long param1) {
         RuntimeException var3 = null;
-        dm stackIn_2_0 = null;
-        dm stackIn_4_0 = null;
+        LobbyPlayer stackIn_2_0 = null;
+        LobbyPlayer stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 50) {
-            stackIn_4_0 = (dm) (TextWidgetPainter.field_c.a(param1, -22877));
+            stackIn_4_0 = (LobbyPlayer) (TextWidgetPainter.field_c.a(param1, -22877));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (dm) null;
+          stackIn_2_0 = (LobbyPlayer) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class en extends IOException {
         }
     }
 
-    final static void a(UiComponent param0, UiComponent param1, BitmapFont param2, UiComponent param3, UiComponent param4, UiComponent param5, boolean param6, hi param7, int param8, UiComponent param9, UiComponent param10, UiComponent param11) {
+    final static void a(UiComponent param0, UiComponent param1, BitmapFont param2, UiComponent param3, UiComponent param4, UiComponent param5, boolean param6, VerticalScrollbar param7, int param8, UiComponent param9, UiComponent param10, UiComponent param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
@@ -178,7 +178,7 @@ final class en extends IOException {
           SimEntity.field_z.a((byte) 50, DraggableWidget.field_E);
           la.field_h = new UiComponent[5];
           pf.field_d = new UiComponent[5];
-          ij.field_k = new UiComponent[5];
+          CheckboxPainter.field_k = new UiComponent[5];
           hh.field_l = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -207,12 +207,12 @@ final class en extends IOException {
               }
               if (decompiledFrameRemainder0) {
                 la.field_h[var18] = new UiComponent(0L, param11);
-                ij.field_k[var18] = new UiComponent(0L, qq.field_f, var19);
+                CheckboxPainter.field_k[var18] = new UiComponent(0L, qq.field_f, var19);
                 pf.field_d[var18] = new UiComponent(0L, (UiComponent) null);
                 pf.field_d[var18].field_lb = 1;
                 hh.field_l[var18] = new UiComponent(0L, qq.field_f);
                 hh.field_l[var18].field_lb = 1;
-                la.field_h[var18].a((byte) 50, ij.field_k[var18]);
+                la.field_h[var18].a((byte) 50, CheckboxPainter.field_k[var18]);
                 la.field_h[var18].a((byte) 50, pf.field_d[var18]);
                 la.field_h[var18].a((byte) 50, hh.field_l[var18]);
                 la.field_h[var18].markDescendantsToInheritVisualState(-128);

@@ -31,24 +31,24 @@ final class tm {
         if (cr.a((byte) -114)) {
           param0 = false;
         }
-        dk.e(param0, -7579);
+        NameEntryPopup.e(param0, -7579);
         if (sa.field_f) {
           SoftwareRasterizer.clearRect(BirthDateInputWidget.field_U.field_c.field_x, BirthDateInputWidget.field_U.field_c.field_Q, BirthDateInputWidget.field_U.field_c.field_zb, BirthDateInputWidget.field_U.field_c.field_z);
           BirthDateInputWidget.field_U.field_c.c(param0, -1);
           if (param1) {
             field_a = (String[]) null;
-            an.a(1, param0);
+            QuickChatPhraseRegistry.a(1, param0);
             return;
           }
-          an.a(1, param0);
+          QuickChatPhraseRegistry.a(1, param0);
           return;
         }
         if (!param1) {
-          an.a(1, param0);
+          QuickChatPhraseRegistry.a(1, param0);
           return;
         }
         field_a = (String[]) null;
-        an.a(1, param0);
+        QuickChatPhraseRegistry.a(1, param0);
     }
 
     static {

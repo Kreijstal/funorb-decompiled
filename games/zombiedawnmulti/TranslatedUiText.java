@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ah {
+final class TranslatedUiText {
     static int[] field_f;
     static int[] field_c;
     static String field_b;
@@ -127,7 +127,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("ticketing_gotowebsite", (byte) 83);
                 if (null != var2) {
-                  mi.field_Nb = qe.a(-2739, var2);
+                  StateIconLabel.field_Nb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("ticketing_waitingformessages", (byte) 83);
                 if (var2 != null) {
@@ -326,7 +326,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("mu_options_dontmind", (byte) 83);
                 if (var2 != null) {
-                  hi.field_Mb = qe.a(-2739, var2);
+                  VerticalScrollbar.field_Mb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("mu_options_allow_spectate", (byte) 83);
                 if (var2 != null) {
@@ -422,7 +422,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("report_x_for_abuse", (byte) 83);
                 if (null != var2) {
-                  mi.field_Jb = qe.a(-2739, var2);
+                  StateIconLabel.field_Jb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("unable_to_send_message_password_a", (byte) 83);
                 if (null != var2) {
@@ -518,7 +518,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("find_opponents_plural", (byte) 83);
                 if (null != var2) {
-                  dk.field_Jb = qe.a(-2739, var2);
+                  NameEntryPopup.field_Jb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("rated_game_tips_setup_singular", (byte) 83);
                 if (var2 != null) {
@@ -538,7 +538,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("game_full", (byte) 83);
                 if (null != var2) {
-                  ka.field_p = qe.a(-2739, var2);
+                  ChatMessage.field_p = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("join_requests_one", (byte) 83);
                 if (null != var2) {
@@ -698,7 +698,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("multiconst_clan", (byte) 83);
                 if (var2 != null) {
-                  ka.field_m = qe.a(-2739, var2);
+                  ChatMessage.field_m = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("multiconst_friends", (byte) 83);
                 if (null != var2) {
@@ -706,7 +706,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("multiconst_similar_rating", (byte) 83);
                 if (var2 != null) {
-                  dm.field_Xb = qe.a(-2739, var2);
+                  LobbyPlayer.field_Xb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("multiconst_open", (byte) 83);
                 if (var2 != null) {
@@ -806,7 +806,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_needrating", (byte) 83);
                 if (var2 != null) {
-                  dm.field_Rb = qe.a(-2739, var2);
+                  LobbyPlayer.field_Rb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_unratedonly", (byte) 83);
                 if (var2 != null) {
@@ -830,7 +830,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_younotmember", (byte) 83);
                 if (null != var2) {
-                  lj.field_s = qe.a(-2739, var2);
+                  ClickMarker.field_s = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_playerneedsrating", (byte) 83);
                 if (var2 != null) {
@@ -846,7 +846,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_youneedratedgames", (byte) 83);
                 if (var2 != null) {
-                  ij.field_f = qe.a(-2739, var2);
+                  CheckboxPainter.field_f = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_playerneeds1ratedgame", (byte) 83);
                 if (null != var2) {
@@ -882,11 +882,11 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_mightchange", (byte) 83);
                 if (var2 != null) {
-                  VerticalScrollbar.field_Ob = qe.a(-2739, var2);
+                  mj.field_Ob = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_playersdontqualify", (byte) 83);
                 if (null != var2) {
-                  ka.field_s = qe.a(-2739, var2);
+                  ChatMessage.field_s = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_playersdontqualify_selectgametab", (byte) 83);
                 if (var2 != null) {
@@ -914,7 +914,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("gameopt_inviteplayers_or_trychanging2", (byte) 83);
                 if (var2 != null) {
-                  lj.field_k = qe.a(-2739, var2);
+                  ClickMarker.field_k = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("gameopt_novalidcombos", (byte) 83);
                 if (null != var2) {
@@ -936,7 +936,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("ra_suggestmute", (byte) 83);
                 if (null != var2) {
-                  dk.field_Kb = qe.a(-2739, var2);
+                  NameEntryPopup.field_Kb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("ra_intro", (byte) 83);
                 if (null != var2) {
@@ -956,7 +956,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("rule_0_0", (byte) 83);
                 if (var2 != null) {
-                  ld.field_Lb = qe.a(-2739, var2);
+                  QuickChatMenu.field_Lb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("rule_0_1", (byte) 83);
                 if (var2 != null) {
@@ -996,7 +996,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("rule_1_3", (byte) 83);
                 if (var2 != null) {
-                  sd.field_E = qe.a(-2739, var2);
+                  DropTargetWidget.field_E = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("rule_1_4", (byte) 83);
                 if (var2 != null) {
@@ -1012,7 +1012,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("rule_2_1", (byte) 83);
                 if (var2 != null) {
-                  lj.field_p = qe.a(-2739, var2);
+                  ClickMarker.field_p = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("rule_2_2", (byte) 83);
                 if (null != var2) {
@@ -1348,7 +1348,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("year", (byte) 83);
                 if (var2 != null) {
-                  ij.field_a = qe.a(-2739, var2);
+                  CheckboxPainter.field_a = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("monthnames,0", (byte) 83);
                 if (null != var2) {
@@ -1480,7 +1480,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_agreeterms", (byte) 83);
                 if (null != var2) {
-                  wa.field_d = qe.a(-2739, var2);
+                  MarkerSliderPainter.field_d = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_u13terms", (byte) 83);
                 if (null != var2) {
@@ -1492,7 +1492,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("login_username", (byte) 83);
                 if (var2 != null) {
-                  lj.field_f = qe.a(-2739, var2);
+                  ClickMarker.field_f = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("login_email", (byte) 83);
                 if (null != var2) {
@@ -1556,7 +1556,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("create_email_tooltip", (byte) 83);
                 if (null != var2) {
-                  mo.field_Nb = qe.a(-2739, var2);
+                  AlignedIconLabel.field_Nb = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("create_email_confirm_tooltip", (byte) 83);
                 if (var2 != null) {
@@ -1902,7 +1902,7 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("tutorial", (byte) 83);
                 if (var2 != null) {
-                  lj.field_m = qe.a(-2739, var2);
+                  ClickMarker.field_m = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("playtutorial", (byte) 83);
                 if (null != var2) {
@@ -2490,27 +2490,27 @@ final class ah {
                 }
                 var2 = ChaseEvent.a("quickchat_shortcut_help,0", (byte) 83);
                 if (null != var2) {
-                  lj.field_h[0] = qe.a(-2739, var2);
+                  ClickMarker.field_h[0] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("quickchat_shortcut_help,1", (byte) 83);
                 if (null != var2) {
-                  lj.field_h[1] = qe.a(-2739, var2);
+                  ClickMarker.field_h[1] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("quickchat_shortcut_help,2", (byte) 83);
                 if (var2 != null) {
-                  lj.field_h[2] = qe.a(-2739, var2);
+                  ClickMarker.field_h[2] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("quickchat_shortcut_help,3", (byte) 83);
                 if (null != var2) {
-                  lj.field_h[3] = qe.a(-2739, var2);
+                  ClickMarker.field_h[3] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("quickchat_shortcut_help,4", (byte) 83);
                 if (null != var2) {
-                  lj.field_h[4] = qe.a(-2739, var2);
+                  ClickMarker.field_h[4] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("quickchat_shortcut_help,5", (byte) 83);
                 if (var2 != null) {
-                  lj.field_h[5] = qe.a(-2739, var2);
+                  ClickMarker.field_h[5] = qe.a(-2739, var2);
                 }
                 var2 = ChaseEvent.a("quickchat_shortcut_keys,0", (byte) 83);
                 if (null != var2) {
@@ -3152,7 +3152,7 @@ final class ah {
             FadingDialog.a(-17306, 0);
           }
           if (param0 != -86) {
-            ah.a((byte) 4, 55);
+            TranslatedUiText.a((byte) 4, 55);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

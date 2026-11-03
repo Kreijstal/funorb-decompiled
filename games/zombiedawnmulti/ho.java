@@ -55,7 +55,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    final static void a(md param0, int param1, int param2, boolean param3, int param4) {
+    final static void a(TriangleMesh param0, int param1, int param2, boolean param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_30_0 = 0;
@@ -153,7 +153,7 @@ final class ho extends MenuScreen {
                         stackIn_41_0Lifetime1 = var17;
                         stackIn_41_1Lifetime1 = var16 << 4;
                         var18 = stackIn_41_0Lifetime1 + stackIn_41_1Lifetime1;
-                        ah.field_f[var18] = var8;
+                        TranslatedUiText.field_f[var18] = var8;
                         hl.field_e[var16] = var17 + 1;
                         if (param0.field_m > 0 &&
                           param0.field_z != null) {
@@ -231,7 +231,7 @@ final class ho extends MenuScreen {
           if (param2 != 3) {
             field_p = (String) null;
           }
-          stackIn_4_0 = md.a(param0, param1, -105, true);
+          stackIn_4_0 = TriangleMesh.a(param0, param1, -105, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -391,9 +391,9 @@ final class ho extends MenuScreen {
           SoftwareRasterizer.resetClip();
           vh.field_Lb.a(this.field_n, 136);
           vh.field_Lb.a(this.field_n, 6);
-          dm.field_Wb.a(640 - this.field_n, 6);
-          dm.field_Wb.a(-this.field_n + 640, 134);
-          no.field_Jb.a(0, 0);
+          LobbyPlayer.field_Wb.a(640 - this.field_n, 6);
+          LobbyPlayer.field_Wb.a(-this.field_n + 640, 134);
+          QuickChatHelpDialog.field_Jb.a(0, 0);
           super.a(param0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ho.H(" + param0 + ')');
@@ -423,14 +423,14 @@ final class ho extends MenuScreen {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(this.field_g.field_c > var2_int)))) {
             var3 = we.field_g[this.field_j[var2_int]];
-            var4 = ah.field_e.textWidth(var3);
+            var4 = TranslatedUiText.field_e.textWidth(var3);
             stackIn_29_0 = this.field_j[var2_int];
             stackIn_29_1 = 50;
             if (var9 == 0) {
               if (stackIn_29_0 == stackIn_29_1) {
-                var5 = ah.field_e.textWidth(InflaterDecompressor.field_f);
-                var6 = ah.field_e.textWidth(FightEvent.field_l);
-                var7 = ah.field_e.textWidth(jp.field_a);
+                var5 = TranslatedUiText.field_e.textWidth(InflaterDecompressor.field_f);
+                var6 = TranslatedUiText.field_e.textWidth(FightEvent.field_l);
+                var7 = TranslatedUiText.field_e.textWidth(jp.field_a);
                 stackIn_12_0 = (var5 > var6) ? var5 : var6;
                 var8 = stackIn_12_0;
                 stackIn_16_0 = (var8 > var7) ? var8 : var7;

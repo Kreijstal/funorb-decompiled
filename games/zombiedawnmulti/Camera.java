@@ -195,10 +195,10 @@ final class Camera {
 
     final static double a(int param0, double param1) {
         if (param0 == 0) {
-          return ah.field_d[65535 & (int)(32768.0 * param1 / 3.141592653589793)];
+          return TranslatedUiText.field_d[65535 & (int)(32768.0 * param1 / 3.141592653589793)];
         }
         field_w = (Sprite) null;
-        return ah.field_d[65535 & (int)(32768.0 * param1 / 3.141592653589793)];
+        return TranslatedUiText.field_d[65535 & (int)(32768.0 * param1 / 3.141592653589793)];
     }
 
     final void updateKeyScroll(boolean param0, boolean param1, boolean param2, boolean param3, byte param4, boolean param5) {

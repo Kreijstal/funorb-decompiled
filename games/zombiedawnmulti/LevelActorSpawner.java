@@ -407,7 +407,7 @@ final class LevelActorSpawner extends LevelData {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new Sprite(param1.a("final_frame.jpg", "", false), (java.awt.Component) ((Object) dk.field_Ib));
+          var2 = new Sprite(param1.a("final_frame.jpg", "", false), (java.awt.Component) ((Object) NameEntryPopup.field_Ib));
           var3 = var2.width;
           var4 = var2.height;
           m.c(540);

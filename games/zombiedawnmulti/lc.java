@@ -94,7 +94,7 @@ final class lc extends IntrusiveNode {
           }
           var7Lifetime1 = 3 * var3_int / 4;
           SoftwareRasterizer.fillRadialGlow(var4 << 4, var5 << 4, var3_int << 4, 33, var10);
-          wa.field_b[this.field_h].a(-var7Lifetime1 + var4, var5 - var7Lifetime1, var7Lifetime1 * 2, var7Lifetime1 * 2, 40 + var3_int);
+          MarkerSliderPainter.field_b[this.field_h].a(-var7Lifetime1 + var4, var5 - var7Lifetime1, var7Lifetime1 * 2, var7Lifetime1 * 2, 40 + var3_int);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -376,7 +376,7 @@ final class lc extends IntrusiveNode {
           SpriteState.field_v.field_gb = dupTemp$3;
           SpriteState.field_v.field_S = dupTemp$3;
           var17 = pb.a("lobby", param1, -256, "checkbox");
-          jk.field_h = new mi(0L, var17[1], var17[0], 1, cm.field_b, (String) null);
+          jk.field_h = new StateIconLabel(0L, var17[1], var17[0], 1, cm.field_b, (String) null);
           MusicPatch.field_k = new UiComponent(0L, (UiComponent) null);
           MusicPatch.field_k.field_ab = GameEvent.a(fl.a("lobby", "slideregion", param1, param0 + 23126), 27117);
           MusicPatch.field_k.field_X = GameEvent.a(fl.a("lobby", "slideregion_mouseover", param1, 11091), 27117);
@@ -387,17 +387,17 @@ final class lc extends IntrusiveNode {
           qq.field_c.field_X = hc.a(pb.a("lobby", param1, -256, "dragbar_mouseover"), 0);
           qq.field_c.field_S = hc.a(pb.a("lobby", param1, -256, "dragbar_mouseheld"), param0 + 12035);
           qq.field_c.field_Bb = hc.a(pb.a("lobby", param1, -256, "dragbar_disabled"), param0 ^ -12035);
-          VerticalScrollbar.field_Mb = new UiComponent(0L, (UiComponent) null);
-          VerticalScrollbar.field_Mb.field_rb = fl.a("lobby", "upbutton", param1, 11091);
-          VerticalScrollbar.field_Mb.field_K = fl.a("lobby", "upbutton_mouseover", param1, 11091);
-          VerticalScrollbar.field_Mb.field_nb = fl.a("lobby", "upbutton_mouseheld", param1, 11091);
-          VerticalScrollbar.field_Mb.field_cb = fl.a("lobby", "upbutton_disabled", param1, 11091);
+          mj.field_Mb = new UiComponent(0L, (UiComponent) null);
+          mj.field_Mb.field_rb = fl.a("lobby", "upbutton", param1, 11091);
+          mj.field_Mb.field_K = fl.a("lobby", "upbutton_mouseover", param1, 11091);
+          mj.field_Mb.field_nb = fl.a("lobby", "upbutton_mouseheld", param1, 11091);
+          mj.field_Mb.field_cb = fl.a("lobby", "upbutton_disabled", param1, 11091);
           qq.field_b = new UiComponent(0L, (UiComponent) null);
           qq.field_b.field_rb = fl.a("lobby", "downbutton", param1, 11091);
           qq.field_b.field_K = fl.a("lobby", "downbutton_mouseover", param1, 11091);
           qq.field_b.field_nb = fl.a("lobby", "downbutton_mouseheld", param1, 11091);
           qq.field_b.field_cb = fl.a("lobby", "downbutton_disabled", param1, 11091);
-          td.field_f = new hi(0L, VerticalScrollbar.field_Mb, qq.field_b, MusicPatch.field_k, qq.field_c);
+          td.field_f = new VerticalScrollbar(0L, mj.field_Mb, qq.field_b, MusicPatch.field_k, qq.field_c);
           BirthDateEntryPanel.field_Q = new ScrollPaneWithFooter(0L, (UiComponent) null, MenuScreen.field_e, td.field_f, tj.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

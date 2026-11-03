@@ -87,7 +87,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          lj.a(param6, param4, param15, 61);
+          ClickMarker.a(param6, param4, param15, 61);
           SimEntity.a(param16, param0, 1829947600, param9, param10);
           AttackEvent.a(param13, param1, 1633);
           if (!param20) {

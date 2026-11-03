@@ -82,7 +82,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = md.a(var13, -9159);
+                                  var10 = TriangleMesh.a(var13, -9159);
                                   var11_ref_sb = this.inlineSprites[var10];
                                   if (this.inlineSpriteBaselines == null) {
                                     stackIn_27_0 = var11_ref_sb.field_a;
@@ -288,7 +288,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = md.a(var18, -9159);
+                                    var16_int = TriangleMesh.a(var18, -9159);
                                     var4 = var4 + this.inlineSprites[var16_int].field_f;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -499,7 +499,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                currentAlpha = md.a(var4, -9159);
+                currentAlpha = TriangleMesh.a(var4, -9159);
               }
             } else {
               currentTextColor = defaultTextColor;
@@ -662,7 +662,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = md.a(var10, -9159);
+                                  var9_int = TriangleMesh.a(var10, -9159);
                                   var4 = var4 + this.inlineSprites[var9_int].field_f;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {

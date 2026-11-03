@@ -69,7 +69,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             var3_int = param1.length;
             this.field_G = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_G[var4_int] = ld.a((byte) 0, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_G[var4_int] = QuickChatMenu.a((byte) 0, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new LinkButtonPainter(ke.field_h, 0, 1);
             this.field_I = new ButtonWidget[var3_int + 1];

@@ -54,9 +54,9 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    final static void a(ka param0, int param1) {
+    final static void a(ChatMessage param0, int param1) {
         int var2_int = 0;
-        ka var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -81,7 +81,7 @@ final class bf extends IntrusiveNode {
             }
           }
           if (param0.field_r != null) {
-            ld.field_Kb = param0.field_a;
+            QuickChatMenu.field_Kb = param0.field_a;
             SectorCacheStore.field_f = param0.field_e;
             GradientOutlineTextPainter.field_t = param0.field_r;
             en.field_c = param0.field_l;

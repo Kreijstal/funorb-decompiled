@@ -60,7 +60,7 @@ final class vl extends IntrusiveNode {
                 continue;
               }
               var5++;
-              var8 = md.a((CharSequence) ((Object) var7_ref_String), -9159);
+              var8 = TriangleMesh.a((CharSequence) ((Object) var7_ref_String), -9159);
               var4 = var4 + (var6_int - (var5 - param1[var8].length()));
               continue;
             }
@@ -97,7 +97,7 @@ final class vl extends IntrusiveNode {
               continue;
             }
             var5Lifetime1++;
-            var10 = md.a((CharSequence) ((Object) var9), param2 ^ -9157);
+            var10 = TriangleMesh.a((CharSequence) ((Object) var9), param2 ^ -9157);
             discarded$1 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$2 = var6.append(param1[var10]);
@@ -125,7 +125,7 @@ final class vl extends IntrusiveNode {
     final static void a(pd param0, pd param1, int param2, int param3, int param4, int param5) {
         try {
           DateInputWidget.field_G = param4;
-          no.field_Gb = param3;
+          QuickChatHelpDialog.field_Gb = param3;
           ResizableDialog.field_bb = param5;
           RandomAccessCacheFile.field_a = param0;
           en.field_d = param1;

@@ -79,9 +79,9 @@ final class dd implements dr {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        bb var4_ref_bb = null;
+        DelayedPacket var4_ref_bb = null;
         int var4 = 0;
-        bb var5 = null;
+        DelayedPacket var5 = null;
         int var7 = 0;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -94,7 +94,7 @@ final class dd implements dr {
           }
           if (SimArmedHuman.field_Db != 0 &&
             fd.field_F < 0) {
-            var4_ref_bb = (bb) (LinkButtonPainter.field_k.c(60));
+            var4_ref_bb = (DelayedPacket) (LinkButtonPainter.field_k.c(60));
             if (var4_ref_bb != null &&
               var4_ref_bb.field_j < var2_long) {
               var4_ref_bb.unlink(true);
@@ -104,8 +104,8 @@ final class dd implements dr {
                 s.field_e.payload[var5_int] = var4_ref_bb.field_f[var5_int];
               }
               PacketBuffer.field_k = jp.field_e;
-              jp.field_e = ij.field_d;
-              ij.field_d = PortalEntryEvent.field_i;
+              jp.field_e = CheckboxPainter.field_d;
+              CheckboxPainter.field_d = PortalEntryEvent.field_i;
               PortalEntryEvent.field_i = var4_ref_bb.field_l;
               return true;
             }
@@ -139,8 +139,8 @@ final class dd implements dr {
             }
             if (SimArmedHuman.field_Db == 0) {
               PacketBuffer.field_k = jp.field_e;
-              jp.field_e = ij.field_d;
-              ij.field_d = PortalEntryEvent.field_i;
+              jp.field_e = CheckboxPainter.field_d;
+              CheckboxPainter.field_d = PortalEntryEvent.field_i;
               PortalEntryEvent.field_i = fd.field_F;
               fd.field_F = -1;
               return true;
@@ -152,7 +152,7 @@ final class dd implements dr {
                 var4 = 0;
               }
             }
-            var5 = new bb(var2_long + (long)var4, fd.field_F, new byte[EmailAvailabilityValidator.field_q]);
+            var5 = new DelayedPacket(var2_long + (long)var4, fd.field_F, new byte[EmailAvailabilityValidator.field_q]);
             for (var6 = 0; EmailAvailabilityValidator.field_q > var6; var6++) {
               var5.field_f[var6] = s.field_e.payload[var6];
             }
@@ -223,7 +223,7 @@ final class dd implements dr {
           } else {
             stackIn_4_0 = false;
             stackIn_5_1 = !(rj.field_J >= 13);
-            DiskCacheWorker.field_g = ij.a(stackIn_4_0, stackIn_5_1);
+            DiskCacheWorker.field_g = CheckboxPainter.a(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             jk.a(0, (String[]) null);
           }

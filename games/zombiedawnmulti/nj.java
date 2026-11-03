@@ -27,7 +27,7 @@ final class nj {
         field_a = null;
     }
 
-    final static ka a(boolean param0, byte param1) {
+    final static ChatMessage a(boolean param0, byte param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_25_0 = null;
@@ -82,11 +82,11 @@ final class nj {
         if (!param0) {
           pg.field_b = jg.a(var8, 80, 3460);
           af.field_g = null;
-          return new ka(param0);
+          return new ChatMessage(param0);
         }
         var5 = var8.readUnsignedShort((byte) 69);
         try {
-          var9 = MouseInputHandler.field_c.a(var5, -11452);
+          var9 = MouseInputHandler.field_c.getDefinition(var5, -11452);
           pg.field_b = var9.e(-18572);
           if (!IntrusiveDequeCursor.field_h.equals(ProgressDialog.field_lb)) {
             stackIn_25_0 = var9.field_r;
@@ -100,9 +100,9 @@ final class nj {
           MouseInputHandler.a("CC1", (Throwable) ((Object) var6), false);
           pg.field_b = null;
           af.field_g = null;
-          return new ka(param0);
+          return new ChatMessage(param0);
         }
-        return new ka(param0);
+        return new ChatMessage(param0);
     }
 
     static {

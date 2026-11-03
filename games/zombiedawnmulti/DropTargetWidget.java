@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends SingleChildWidget {
+final class DropTargetWidget extends SingleChildWidget {
     static int field_F;
     static String field_E;
     static int[][] field_G;
@@ -29,13 +29,13 @@ final class sd extends SingleChildWidget {
         if (param1 > 67) {
           return WhirlpoolHasher.a(param0, 59, param2);
         }
-        sd.a((byte) 79, 66, 86);
+        DropTargetWidget.a((byte) 79, 66, 86);
         return WhirlpoolHasher.a(param0, 59, param2);
     }
 
     final static boolean h(int param0) {
         if (param0 != 3853) {
-          sd.h(-41);
+          DropTargetWidget.h(-41);
           return ho.a(StatefulTextPainter.b(0), 61);
         }
         return ho.a(StatefulTextPainter.b(0), 61);
@@ -50,7 +50,7 @@ final class sd extends SingleChildWidget {
         return param2 * var3 + var6 * var4 + (var7 * var4 >> 16);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -81) {
           field_F = -88;
           field_E = null;
@@ -84,7 +84,7 @@ final class sd extends SingleChildWidget {
         }
     }
 
-    private sd(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6) {
+    private DropTargetWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_B = param6;

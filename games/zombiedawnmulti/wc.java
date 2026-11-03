@@ -23,7 +23,7 @@ final class wc extends SceneObject {
     }
 
     final static void i(int param0) {
-        dm var1 = null;
+        LobbyPlayer var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -48,10 +48,10 @@ final class wc extends SceneObject {
           }
           kp.field_o = null;
           if (TextWidgetPainter.field_c != null) {
-            var1 = (dm) (TextWidgetPainter.field_c.a((byte) 7));
+            var1 = (LobbyPlayer) (TextWidgetPainter.field_c.a((byte) 7));
             while (var1 != null) {
               var1.a(param0 ^ 32692);
-              var1 = (dm) (TextWidgetPainter.field_c.c((byte) 97));
+              var1 = (LobbyPlayer) (TextWidgetPainter.field_c.c((byte) 97));
             }
             TextWidgetPainter.field_c = null;
           }
@@ -115,7 +115,7 @@ final class wc extends SceneObject {
         boolean stackIn_167_1 = false;
         boolean stackIn_168_2 = false;
         int var2;
-        hi.h(2);
+        VerticalScrollbar.h(2);
         if (null == JaggrabDownloader.field_c) {
           var2 = 0;
           stackIn_17_0 = 1;
@@ -262,13 +262,13 @@ final class wc extends SceneObject {
         try {
           var3_int = param1.worldToScreenX(this.getX(param0 ^ -10199), -20126);
           var4 = param1.worldToScreenY(this.getY(-109), 116);
-          ah.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
+          TranslatedUiText.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
           if (null != this.field_R) {
             if (this.field_R.isSamplePositionOutOfRange()) {
               this.field_R = null;
               this.field_L = null;
             } else {
-              var5 = sd.b(125, var4, var3_int);
+              var5 = DropTargetWidget.b(125, var4, var3_int);
               this.field_R.setVolume(var5);
               if (this.field_L != null) {
                 this.field_L.setVolume(var5);

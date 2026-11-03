@@ -214,9 +214,9 @@ final class vj extends MenuScreen {
         if (kd.field_b != 1) {
           if (kd.field_b == 1 &&
             30 < vb.field_f &&
-            142 < ka.field_t &&
+            142 < ChatMessage.field_t &&
             90 > vb.field_f &&
-            ka.field_t < 194) {
+            ChatMessage.field_t < 194) {
             this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
             this.field_q = this.field_q == 3 ? 4 : 3;
           }
@@ -262,9 +262,9 @@ final class vj extends MenuScreen {
         if (vb.field_f <= 30) {
           if (kd.field_b == 1 &&
             30 < vb.field_f &&
-            142 < ka.field_t &&
+            142 < ChatMessage.field_t &&
             90 > vb.field_f &&
-            ka.field_t < 194) {
+            ChatMessage.field_t < 194) {
             this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
             this.field_q = this.field_q == 3 ? 4 : 3;
           }
@@ -307,12 +307,12 @@ final class vj extends MenuScreen {
           this.field_r.i(-31);
           return;
         }
-        if (ka.field_t <= 60) {
+        if (ChatMessage.field_t <= 60) {
           if (kd.field_b == 1 &&
             30 < vb.field_f &&
-            142 < ka.field_t &&
+            142 < ChatMessage.field_t &&
             90 > vb.field_f &&
-            ka.field_t < 194) {
+            ChatMessage.field_t < 194) {
             this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
             this.field_q = this.field_q == 3 ? 4 : 3;
           }
@@ -358,9 +358,9 @@ final class vj extends MenuScreen {
         if (vb.field_f >= 90) {
           if (kd.field_b == 1 &&
             30 < vb.field_f &&
-            142 < ka.field_t &&
+            142 < ChatMessage.field_t &&
             90 > vb.field_f &&
-            ka.field_t < 194) {
+            ChatMessage.field_t < 194) {
             this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
             this.field_q = this.field_q == 3 ? 4 : 3;
           }
@@ -403,7 +403,7 @@ final class vj extends MenuScreen {
           this.field_r.i(-31);
           return;
         }
-        if (ka.field_t < 112) {
+        if (ChatMessage.field_t < 112) {
           this.field_r.field_Ob = this.field_q != 1 ? this.field_o : this.field_n;
           this.field_q = this.field_q != 1 ? 1 : 2;
         }
@@ -487,7 +487,7 @@ final class vj extends MenuScreen {
           this.field_r.i(-31);
           return;
         }
-        if (142 >= ka.field_t) {
+        if (142 >= ChatMessage.field_t) {
           var2Lifetime6 = 100;
           var3Lifetime6 = 60;
           var4Lifetime6 = 20;
@@ -567,7 +567,7 @@ final class vj extends MenuScreen {
           this.field_r.i(-31);
           return;
         }
-        if (ka.field_t < 194) {
+        if (ChatMessage.field_t < 194) {
           this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
           this.field_q = this.field_q == 3 ? 4 : 3;
         }
@@ -699,9 +699,9 @@ final class vj extends MenuScreen {
               var9 = stackIn_31_0;
             }
           } else {
-            if (ka.field_t > param7 &&
+            if (ChatMessage.field_t > param7 &&
               vb.field_f < param6 + param0 &&
-              param5 + param7 > ka.field_t) {
+              param5 + param7 > ChatMessage.field_t) {
               this.field_r.field_Ob = param3;
               this.field_q = param1;
               stackIn_42_0 = (this.field_q != param1) ? 6710886 : 14540253;

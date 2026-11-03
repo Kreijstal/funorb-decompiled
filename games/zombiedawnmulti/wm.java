@@ -39,9 +39,9 @@ final class wm extends ButtonWidget {
     final static ao[] b(boolean param0) {
         if (!param0) {
           wm.b(false);
-          return new ao[]{EmailAvailabilityValidator.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, EmailAvailabilityValidator.field_w, oa.field_a, eb.field_w};
+          return new ao[]{EmailAvailabilityValidator.field_r, sf.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, ha.field_i, cn.field_j, EmailAvailabilityValidator.field_w, oa.field_a, eb.field_w};
         }
-        return new ao[]{EmailAvailabilityValidator.field_r, sf.field_d, UnitStateEvent.field_o, km.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, EmailAvailabilityValidator.field_w, oa.field_a, eb.field_w};
+        return new ao[]{EmailAvailabilityValidator.field_r, sf.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, ha.field_i, cn.field_j, EmailAvailabilityValidator.field_w, oa.field_a, eb.field_w};
     }
 
     final int g(byte param0) {

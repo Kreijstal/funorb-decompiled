@@ -181,12 +181,12 @@ final class PowerupButton {
         }
         LabeledChildWidget.field_H[this.field_a].c(this.field_m, -this.field_h + 480, var3);
         if (this.field_a != 2) {
-          var4 = wa.field_b[this.field_n].height - wa.field_b[this.field_n].height * (-this.field_c + this.field_l) / this.field_l;
-          wa.field_b[this.field_n].c(this.field_m + 8, -this.field_h + 504, var3);
+          var4 = MarkerSliderPainter.field_b[this.field_n].height - MarkerSliderPainter.field_b[this.field_n].height * (-this.field_c + this.field_l) / this.field_l;
+          MarkerSliderPainter.field_b[this.field_n].c(this.field_m + 8, -this.field_h + 504, var3);
           var9 = new int[4];
           SoftwareRasterizer.saveClip(var9);
-          SoftwareRasterizer.setClip(8 + this.field_m, -var4 + (wa.field_b[this.field_n].height + 24) + (480 - this.field_h), wa.field_b[this.field_n].width + 8 + this.field_m, wa.field_b[this.field_n].height + (24 - this.field_h + 480));
-          wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 504);
+          SoftwareRasterizer.setClip(8 + this.field_m, -var4 + (MarkerSliderPainter.field_b[this.field_n].height + 24) + (480 - this.field_h), MarkerSliderPainter.field_b[this.field_n].width + 8 + this.field_m, MarkerSliderPainter.field_b[this.field_n].height + (24 - this.field_h + 480));
+          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 504);
           SoftwareRasterizer.restoreClip(var9);
           return;
         }
@@ -194,45 +194,45 @@ final class PowerupButton {
           if (this.field_k) {
             LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
           }
-          wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
-            wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
           LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
           return;
         }
         var4Lifetime1 = (this.field_i + this.field_m / 3) % 50;
         if (25 < var4Lifetime1) {
-          SoftwareRasterizer.fillCircleAlpha(wa.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - wa.field_b[this.field_n].height / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
-          SoftwareRasterizer.fillCircleAlpha(wa.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + wa.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
+          SoftwareRasterizer.fillCircleAlpha(MarkerSliderPainter.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - MarkerSliderPainter.field_b[this.field_n].height / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
+          SoftwareRasterizer.fillCircleAlpha(MarkerSliderPainter.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + MarkerSliderPainter.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
           if (this.field_k) {
             LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
-            wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+            MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
             if (this.field_k) {
-              wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+              MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
             }
             LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
             return;
           }
-          wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
-            wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
           LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
           return;
         }
         if (!this.field_k) {
-          wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
-            wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
           LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
           return;
         }
         LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
-        wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+        MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
         if (this.field_k) {
-          wa.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+          MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
         }
         LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
     }

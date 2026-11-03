@@ -52,7 +52,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (bi.field_a) {
           return -1;
         }
-        var2 = fd.a(14, true, this.field_s, bb.c(-19385), s.a((byte) 32), this.field_q);
+        var2 = fd.a(14, true, this.field_s, DelayedPacket.c(-19385), s.a((byte) 32), this.field_q);
         if (var2 == -1) {
           return -1;
         }
@@ -88,7 +88,7 @@ abstract class NetworkGameClient extends GameApplet {
         jj.a(this.field_p, this.field_y, this.field_v, p.field_e, this.field_A, ArrayWidgetGroup.field_J, param5, this.field_o, (byte) -106);
         vc.a((byte) 116);
         FullscreenFocusCanvas.field_a = LabeledChildWidget.b(false);
-        qi.a(100, dk.field_Ib);
+        qi.a(100, NameEntryPopup.field_Ib);
         m.field_z = param3;
         ContextMenu.field_Lb = param2;
         PortalView.field_G = param0;
@@ -277,7 +277,7 @@ abstract class NetworkGameClient extends GameApplet {
     final void j(int param0) {
         boolean stackIn_33_0 = false;
         int var2;
-        ka var3;
+        ChatMessage var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -13) {
@@ -379,7 +379,7 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = PowerupEvent.a(RasterBuffer.a((byte) -118), an.a(param0 ^ -2198), 32475);
+            var5_int = PowerupEvent.a(RasterBuffer.a((byte) -118), QuickChatPhraseRegistry.a(param0 ^ -2198), 32475);
             if (var5_int != -1) {
               dd.a(0, hb.field_b, ol.field_q, var5_int);
               ol.field_q = null;
@@ -391,7 +391,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = SimEntity.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
+            var5_intLifetime1 = SimEntity.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, DelayedPacket.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
             if (var5_intLifetime1 != -1) {
               InfectionEvent.a(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
               hb.field_b = null;
@@ -407,7 +407,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (param1) {
               bi.field_a = false;
             } else {
-              var5_intLifetime2 = fd.a(param0 + 2211, false, this.field_s, bb.c(param0 ^ 17196), s.a((byte) 32), this.field_q);
+              var5_intLifetime2 = fd.a(param0 + 2211, false, this.field_s, DelayedPacket.c(param0 ^ 17196), s.a((byte) 32), this.field_q);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   bf.a(true, var5_intLifetime2, ol.field_q);
@@ -649,7 +649,7 @@ abstract class NetworkGameClient extends GameApplet {
             DisplayNamePanel.field_P.a((byte) -126)) {
             if (DisplayNamePanel.field_P.a("", 2)) {
               if (DisplayNamePanel.field_P.a(false, "")) {
-                ah.a(true, DisplayNamePanel.field_P);
+                TranslatedUiText.a(true, DisplayNamePanel.field_P);
                 DisplayNamePanel.field_P = null;
                 IsaacRandom.d(26673);
               }
@@ -727,9 +727,9 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!param1 &&
           hn.field_h) {
-          SpriteState.a(95, dk.field_Ib);
+          SpriteState.a(95, NameEntryPopup.field_Ib);
           this.f(-58);
-          qi.a(100, dk.field_Ib);
+          qi.a(100, NameEntryPopup.field_Ib);
         }
         if (wj.field_l[8]) {
           wp.a(param0 ^ -10926);
@@ -818,7 +818,7 @@ abstract class NetworkGameClient extends GameApplet {
             uq.a(3, -79);
           }
           if (wj.field_l[3]) {
-            km.a(4, (byte) 73);
+            ValidationMessageWidget.a(4, (byte) 73);
           }
           if (wj.field_l[4]) {
             UsernameSuggestionsPanel.b(true, 5);

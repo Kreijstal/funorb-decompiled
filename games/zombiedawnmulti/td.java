@@ -8,7 +8,7 @@ final class td {
     static Sprite[] field_c;
     static long field_g;
     static MusicTrack field_b;
-    static hi field_f;
+    static VerticalScrollbar field_f;
     int field_h;
 
     public static void a(byte param0) {

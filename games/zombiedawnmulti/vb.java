@@ -88,7 +88,7 @@ final class vb {
           if (param15) {
             return;
           }
-          km.a(param14, (byte) -125);
+          ValidationMessageWidget.a(param14, (byte) -125);
           stackIn_4_0 = (String[]) (param7);
           stackIn_4_1 = param13;
           stackIn_4_2 = (int[]) (param6);
@@ -100,7 +100,7 @@ final class vb {
           stackIn_4_8 = (byte[]) (param8);
           stackIn_4_9 = param0;
           stackIn_5_10 = !(param15);
-          md.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_5_10, param18, param3, param11, param5);
+          TriangleMesh.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_5_10, param18, param3, param11, param5);
           t.a(param17, param14, 0, param4);
           MusicPatch.a(2);
           PowerupEvent.a(6835);

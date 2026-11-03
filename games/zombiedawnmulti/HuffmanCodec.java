@@ -75,11 +75,11 @@ final class HuffmanCodec {
         return;
     }
 
-    final static ld a(boolean param0, UiComponent param1, UiComponent param2, UiComponent param3, ob param4) {
+    final static QuickChatMenu a(boolean param0, UiComponent param1, UiComponent param2, UiComponent param3, ob param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        ld stackIn_27_0 = null;
+        QuickChatMenu stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -97,7 +97,7 @@ final class HuffmanCodec {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        ld[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
         ob var13_ref_ob = null;
         int var13 = 0;
@@ -139,7 +139,7 @@ final class HuffmanCodec {
           var21 = new int[var7];
           var19 = var21;
           var10 = var19;
-          var11 = new ld[var7];
+          var11 = new QuickChatMenu[var7];
           if (null != param4.field_x) {
             for (var12 = 0; param4.field_x.length > var12; var12++) {
               var13_ref_ob = ok.field_p.a(param4.field_x[var12], 32767);
@@ -158,7 +158,7 @@ final class HuffmanCodec {
                 var9[var14 + var12Lifetime1] = param4.field_D[var14];
                 var10[var12Lifetime1 + var14] = param4.field_B[var14];
               } else {
-                var16 = MouseInputHandler.field_c.a(var15, -11452);
+                var16 = MouseInputHandler.field_c.getDefinition(var15, -11452);
                 var8[var12Lifetime1 + var14] = var16.e(-18572);
                 var9[var12Lifetime1 + var14] = param4.field_D[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
@@ -169,7 +169,7 @@ final class HuffmanCodec {
               }
             }
           }
-          stackIn_27_0 = new ld(0L, param3, param1, param2, var11, var21, var8, var22);
+          stackIn_27_0 = new QuickChatMenu(0L, param3, param1, param2, var11, var21, var8, var22);
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
