@@ -6676,6 +6676,14 @@
       "renamedSymbol": "M:TaskAi.moveFleets(IBLStar;LStar;)V"
     },
     {
+      "symbol": "M:hi.a(ILjava/util/Random;I)I",
+      "originalName": "a",
+      "to": "randomBelow",
+      "evidence": "Returns a random integer from zero up to but excluding the bound.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TaskAi.randomBelow(ILjava/util/Random;I)I"
+    },
+    {
       "symbol": "M:hi.a(ILln;I)V",
       "originalName": "a",
       "to": "queuePlacement",
@@ -6690,6 +6698,22 @@
       "evidence": "Checks that the task's star is in a territory of the player and plans the defence.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TaskAi.performDefendTask(LDefendTask;ZI)V"
+    },
+    {
+      "symbol": "M:hi.a(Lfs;B)V",
+      "originalName": "a",
+      "to": "sendWarningChat",
+      "evidence": "Picks a warning phrase for a player with a negative score and sends it through the host. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TaskAi.sendWarningChat(LPlayer;B)V"
+    },
+    {
+      "symbol": "M:hi.a(Lfs;I)V",
+      "originalName": "a",
+      "to": "sendTurnChat",
+      "evidence": "Picks a chat phrase from the player's score and alliance state and sends it through the host. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TaskAi.sendTurnChat(LPlayer;I)V"
     },
     {
       "symbol": "M:hi.a(Lln;I)V",
@@ -7898,6 +7922,22 @@
       "evidence": "Plans placements and moves for one territory with a given number of unplaced fleets.",
       "confidence": "reviewed",
       "renamedSymbol": "M:StandardAi.planTerritory(ILTerritory;B)V"
+    },
+    {
+      "symbol": "M:ka.a(Lfs;B)V",
+      "originalName": "a",
+      "to": "sendWarningChat",
+      "evidence": "Picks a warning phrase for a player with a negative score and sends it through the host. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StandardAi.sendWarningChat(LPlayer;B)V"
+    },
+    {
+      "symbol": "M:ka.a(Lfs;I)V",
+      "originalName": "a",
+      "to": "sendTurnChat",
+      "evidence": "Picks a chat phrase from the player's score and alliance state and sends it through the host. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StandardAi.sendTurnChat(LPlayer;I)V"
     },
     {
       "symbol": "M:ka.a(Lln;B)I",
@@ -12028,6 +12068,14 @@
       "renamedSymbol": "M:AllianceExpiredEvent.clearStatics(Z)V"
     },
     {
+      "symbol": "M:rg.a(IIB)I",
+      "originalName": "a",
+      "to": "randomInRange",
+      "evidence": "Returns a random integer between the two bounds inclusive.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ClientException.randomInRange(IIB)I"
+    },
+    {
       "symbol": "M:rg.b(I)V",
       "originalName": "b",
       "to": "clearStatics",
@@ -13210,6 +13258,22 @@
       "evidence": "Sends a chat phrase kind through the AiHost to every other player.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Ai.broadcastChat(I)V"
+    },
+    {
+      "symbol": "M:uj.a(Lfs;B)V",
+      "originalName": "a",
+      "to": "sendWarningChat",
+      "evidence": "Picks a warning phrase for a player with a negative score and sends it through the host.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Ai.sendWarningChat(LPlayer;B)V"
+    },
+    {
+      "symbol": "M:uj.a(Lfs;I)V",
+      "originalName": "a",
+      "to": "sendTurnChat",
+      "evidence": "Picks a chat phrase from the player's score and alliance state and sends it through the host.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Ai.sendTurnChat(LPlayer;I)V"
     },
     {
       "symbol": "M:uj.a(Z)I",
@@ -145415,7 +145479,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#0",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#0",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -145426,7 +145490,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#1",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#1",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -145437,7 +145501,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#10",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#10",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -145448,7 +145512,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#2",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#2",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -145459,7 +145523,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#3",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#3",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -145470,7 +145534,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#4",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#4",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -145481,7 +145545,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#5",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#5",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#5",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -145492,7 +145556,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#6",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#6",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#6",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -145503,7 +145567,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#7",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#7",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#7",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -145514,7 +145578,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#8",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#8",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#8",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -145525,7 +145589,7 @@
     },
     {
       "symbol": "L:hi.a(ILjava/util/Random;I)I#9",
-      "renamedSymbol": "L:TaskAi.a(ILjava/util/Random;I)I#9",
+      "renamedSymbol": "L:TaskAi.randomBelow(ILjava/util/Random;I)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -145888,7 +145952,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#0",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#0",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -145899,7 +145963,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#1",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#1",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -145910,7 +145974,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#10",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#10",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -145921,7 +145985,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#11",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#11",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -145932,7 +145996,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#2",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#2",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -145943,7 +146007,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#3",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#3",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#3",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -145954,7 +146018,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#4",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#4",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#4",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -145965,7 +146029,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#5",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#5",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#5",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -145976,7 +146040,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#6",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#6",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -145987,7 +146051,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#7",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#7",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -145998,7 +146062,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#8",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#8",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -146009,7 +146073,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;B)V#9",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;B)V#9",
+      "renamedSymbol": "L:TaskAi.sendWarningChat(LPlayer;B)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -146020,7 +146084,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#0",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#0",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#0",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -146031,7 +146095,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#1",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#1",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#1",
       "originalName": "stackIn_41_1",
       "renamedName": "stackIn_41_1",
       "declaration": {
@@ -146042,7 +146106,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#10",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#10",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -146053,7 +146117,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#11",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#11",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -146064,7 +146128,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#2",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#2",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#2",
       "originalName": "stackIn_42_2",
       "renamedName": "stackIn_42_2",
       "declaration": {
@@ -146075,7 +146139,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#3",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#3",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -146086,7 +146150,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#4",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#4",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#4",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -146097,7 +146161,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#5",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#5",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -146108,7 +146172,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#6",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#6",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -146119,7 +146183,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#7",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#7",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -146130,7 +146194,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#8",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#8",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -146141,7 +146205,7 @@
     },
     {
       "symbol": "L:hi.a(Lfs;I)V#9",
-      "renamedSymbol": "L:TaskAi.a(LPlayer;I)V#9",
+      "renamedSymbol": "L:TaskAi.sendTurnChat(LPlayer;I)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -173124,7 +173188,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#0",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#0",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -173135,7 +173199,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#1",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#1",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -173146,7 +173210,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#10",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#10",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -173157,7 +173221,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#11",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#11",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -173168,7 +173232,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#2",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#2",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -173179,7 +173243,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#3",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#3",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -173190,7 +173254,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#4",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#4",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#4",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -173201,7 +173265,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#5",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#5",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#5",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -173212,7 +173276,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#6",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#6",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#6",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -173223,7 +173287,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#7",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#7",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -173234,7 +173298,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#8",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#8",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -173245,7 +173309,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;B)V#9",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;B)V#9",
+      "renamedSymbol": "L:StandardAi.sendWarningChat(LPlayer;B)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -173256,7 +173320,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#0",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#0",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#0",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -173267,7 +173331,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#1",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#1",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#1",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -173278,7 +173342,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#10",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#10",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -173289,7 +173353,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#11",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#11",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -173300,7 +173364,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#2",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#2",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#2",
       "originalName": "stackIn_46_2",
       "renamedName": "stackIn_46_2",
       "declaration": {
@@ -173311,7 +173375,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#3",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#3",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -173322,7 +173386,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#4",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#4",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#4",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -173333,7 +173397,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#5",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#5",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -173344,7 +173408,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#6",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#6",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -173355,7 +173419,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#7",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#7",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -173366,7 +173430,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#8",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#8",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -173377,7 +173441,7 @@
     },
     {
       "symbol": "L:ka.a(Lfs;I)V#9",
-      "renamedSymbol": "L:StandardAi.a(LPlayer;I)V#9",
+      "renamedSymbol": "L:StandardAi.sendTurnChat(LPlayer;I)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -323406,9 +323470,9 @@
     },
     {
       "symbol": "M:hi.a(ILjava/util/Random;I)I",
-      "renamedSymbol": "M:TaskAi.a(ILjava/util/Random;I)I",
+      "renamedSymbol": "M:TaskAi.randomBelow(ILjava/util/Random;I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "randomBelow",
       "declaration": {
         "file": "hi.java",
         "start": 59370,
@@ -323439,9 +323503,9 @@
     },
     {
       "symbol": "M:hi.a(Lfs;B)V",
-      "renamedSymbol": "M:TaskAi.a(LPlayer;B)V",
+      "renamedSymbol": "M:TaskAi.sendWarningChat(LPlayer;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendWarningChat",
       "declaration": {
         "file": "hi.java",
         "start": 42938,
@@ -323450,9 +323514,9 @@
     },
     {
       "symbol": "M:hi.a(Lfs;I)V",
-      "renamedSymbol": "M:TaskAi.a(LPlayer;I)V",
+      "renamedSymbol": "M:TaskAi.sendTurnChat(LPlayer;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendTurnChat",
       "declaration": {
         "file": "hi.java",
         "start": 23609,
@@ -327663,9 +327727,9 @@
     },
     {
       "symbol": "M:ka.a(Lfs;B)V",
-      "renamedSymbol": "M:StandardAi.a(LPlayer;B)V",
+      "renamedSymbol": "M:StandardAi.sendWarningChat(LPlayer;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendWarningChat",
       "declaration": {
         "file": "ka.java",
         "start": 22060,
@@ -327674,9 +327738,9 @@
     },
     {
       "symbol": "M:ka.a(Lfs;I)V",
-      "renamedSymbol": "M:StandardAi.a(LPlayer;I)V",
+      "renamedSymbol": "M:StandardAi.sendTurnChat(LPlayer;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendTurnChat",
       "declaration": {
         "file": "ka.java",
         "start": 51458,
@@ -340599,9 +340663,9 @@
     },
     {
       "symbol": "M:rg.a(IIB)I",
-      "renamedSymbol": "M:ClientException.a(IIB)I",
+      "renamedSymbol": "M:ClientException.randomInRange(IIB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "randomInRange",
       "declaration": {
         "file": "rg.java",
         "start": 7368,
@@ -346297,9 +346361,9 @@
     },
     {
       "symbol": "M:uj.a(Lfs;B)V",
-      "renamedSymbol": "M:Ai.a(LPlayer;B)V",
+      "renamedSymbol": "M:Ai.sendWarningChat(LPlayer;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendWarningChat",
       "declaration": {
         "file": "uj.java",
         "start": 218,
@@ -346308,9 +346372,9 @@
     },
     {
       "symbol": "M:uj.a(Lfs;I)V",
-      "renamedSymbol": "M:Ai.a(LPlayer;I)V",
+      "renamedSymbol": "M:Ai.sendTurnChat(LPlayer;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendTurnChat",
       "declaration": {
         "file": "uj.java",
         "start": 271,
@@ -384676,7 +384740,7 @@
     },
     {
       "symbol": "P:hi.a(ILjava/util/Random;I)I#0",
-      "renamedSymbol": "P:TaskAi.a(ILjava/util/Random;I)I#0",
+      "renamedSymbol": "P:TaskAi.randomBelow(ILjava/util/Random;I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -384687,7 +384751,7 @@
     },
     {
       "symbol": "P:hi.a(ILjava/util/Random;I)I#1",
-      "renamedSymbol": "P:TaskAi.a(ILjava/util/Random;I)I#1",
+      "renamedSymbol": "P:TaskAi.randomBelow(ILjava/util/Random;I)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -384698,7 +384762,7 @@
     },
     {
       "symbol": "P:hi.a(ILjava/util/Random;I)I#2",
-      "renamedSymbol": "P:TaskAi.a(ILjava/util/Random;I)I#2",
+      "renamedSymbol": "P:TaskAi.randomBelow(ILjava/util/Random;I)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -384775,7 +384839,7 @@
     },
     {
       "symbol": "P:hi.a(Lfs;B)V#0",
-      "renamedSymbol": "P:TaskAi.a(LPlayer;B)V#0",
+      "renamedSymbol": "P:TaskAi.sendWarningChat(LPlayer;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -384786,7 +384850,7 @@
     },
     {
       "symbol": "P:hi.a(Lfs;B)V#1",
-      "renamedSymbol": "P:TaskAi.a(LPlayer;B)V#1",
+      "renamedSymbol": "P:TaskAi.sendWarningChat(LPlayer;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -384797,7 +384861,7 @@
     },
     {
       "symbol": "P:hi.a(Lfs;I)V#0",
-      "renamedSymbol": "P:TaskAi.a(LPlayer;I)V#0",
+      "renamedSymbol": "P:TaskAi.sendTurnChat(LPlayer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -384808,7 +384872,7 @@
     },
     {
       "symbol": "P:hi.a(Lfs;I)V#1",
-      "renamedSymbol": "P:TaskAi.a(LPlayer;I)V#1",
+      "renamedSymbol": "P:TaskAi.sendTurnChat(LPlayer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -394631,7 +394695,7 @@
     },
     {
       "symbol": "P:ka.a(Lfs;B)V#0",
-      "renamedSymbol": "P:StandardAi.a(LPlayer;B)V#0",
+      "renamedSymbol": "P:StandardAi.sendWarningChat(LPlayer;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -394642,7 +394706,7 @@
     },
     {
       "symbol": "P:ka.a(Lfs;B)V#1",
-      "renamedSymbol": "P:StandardAi.a(LPlayer;B)V#1",
+      "renamedSymbol": "P:StandardAi.sendWarningChat(LPlayer;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -394653,7 +394717,7 @@
     },
     {
       "symbol": "P:ka.a(Lfs;I)V#0",
-      "renamedSymbol": "P:StandardAi.a(LPlayer;I)V#0",
+      "renamedSymbol": "P:StandardAi.sendTurnChat(LPlayer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -394664,7 +394728,7 @@
     },
     {
       "symbol": "P:ka.a(Lfs;I)V#1",
-      "renamedSymbol": "P:StandardAi.a(LPlayer;I)V#1",
+      "renamedSymbol": "P:StandardAi.sendTurnChat(LPlayer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425244,7 +425308,7 @@
     },
     {
       "symbol": "P:rg.a(IIB)I#0",
-      "renamedSymbol": "P:ClientException.a(IIB)I#0",
+      "renamedSymbol": "P:ClientException.randomInRange(IIB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425255,7 +425319,7 @@
     },
     {
       "symbol": "P:rg.a(IIB)I#1",
-      "renamedSymbol": "P:ClientException.a(IIB)I#1",
+      "renamedSymbol": "P:ClientException.randomInRange(IIB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425266,7 +425330,7 @@
     },
     {
       "symbol": "P:rg.a(IIB)I#2",
-      "renamedSymbol": "P:ClientException.a(IIB)I#2",
+      "renamedSymbol": "P:ClientException.randomInRange(IIB)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -439885,7 +439949,7 @@
     },
     {
       "symbol": "P:uj.a(Lfs;B)V#0",
-      "renamedSymbol": "P:Ai.a(LPlayer;B)V#0",
+      "renamedSymbol": "P:Ai.sendWarningChat(LPlayer;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -439896,7 +439960,7 @@
     },
     {
       "symbol": "P:uj.a(Lfs;B)V#1",
-      "renamedSymbol": "P:Ai.a(LPlayer;B)V#1",
+      "renamedSymbol": "P:Ai.sendWarningChat(LPlayer;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -439907,7 +439971,7 @@
     },
     {
       "symbol": "P:uj.a(Lfs;I)V#0",
-      "renamedSymbol": "P:Ai.a(LPlayer;I)V#0",
+      "renamedSymbol": "P:Ai.sendTurnChat(LPlayer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -439918,7 +439982,7 @@
     },
     {
       "symbol": "P:uj.a(Lfs;I)V#1",
-      "renamedSymbol": "P:Ai.a(LPlayer;I)V#1",
+      "renamedSymbol": "P:Ai.sendTurnChat(LPlayer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -478163,7 +478227,7 @@
       "original": "d.java",
       "renamed": "d.java",
       "inputSha256": "ab618e4226766859014f80c779a54120af86ce8bf0746bcafe7ce6aa69c074bf",
-      "outputSha256": "2f11734535f22a97ae796b56360f2e764a04393ebc2a521456865bb824444998",
+      "outputSha256": "44c6d3df298a35449d6d05415ce3bc971a0dc6e649be0eb240653e6c919fdd40",
       "edits": [
         {
           "start": 154,
@@ -478297,6 +478361,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "TaskAi"
+        },
+        {
+          "start": 4178,
+          "end": 4179,
+          "symbol": "M:hi.a(ILjava/util/Random;I)I",
+          "original": "a",
+          "renamed": "randomBelow"
         },
         {
           "start": 4748,
@@ -489437,7 +489508,7 @@
       "original": "eb.java",
       "renamed": "FullscreenFocusCanvas.java",
       "inputSha256": "6c0e7e6cb433a45a90d474d557205c6ac7729938ba0b20ed3fb34798e47c46ca",
-      "outputSha256": "96b002d95f62fb82abd116f9aacf9f61ab5f6bb97367708ed1fd1d2228637db8",
+      "outputSha256": "cf8509fe116680edb6f203bbcacfe4f61d198ff7998e120b4c4fabb9a49886b0",
       "edits": [
         {
           "start": 50,
@@ -489643,6 +489714,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 8189,
+          "end": 8190,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
+        },
+        {
           "start": 8365,
           "end": 8367,
           "symbol": "C:gf",
@@ -489662,6 +489740,13 @@
           "symbol": "C:rg",
           "original": "rg",
           "renamed": "ClientException"
+        },
+        {
+          "start": 8467,
+          "end": 8468,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
         },
         {
           "start": 8680,
@@ -489685,6 +489770,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 8771,
+          "end": 8772,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
+        },
+        {
           "start": 9001,
           "end": 9003,
           "symbol": "C:gf",
@@ -489704,6 +489796,13 @@
           "symbol": "C:rg",
           "original": "rg",
           "renamed": "ClientException"
+        },
+        {
+          "start": 9108,
+          "end": 9109,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
         },
         {
           "start": 9320,
@@ -520342,7 +520441,7 @@
       "original": "hg.java",
       "renamed": "IsolationistAi.java",
       "inputSha256": "6e0af2d905846f3bf84593472aef08894cec23b0aa3d70281272dabe07f75f2e",
-      "outputSha256": "cb85a64f97c04442885a4e73f3b06a2c8db656fdd42048c0cf81600d7c5e5153",
+      "outputSha256": "545a801aeb67a59d2174abc246cab8c728f5103a3b4e49941b2d8049b7ee2aa5",
       "edits": [
         {
           "start": 50,
@@ -520658,6 +520757,13 @@
           "symbol": "C:rg",
           "original": "rg",
           "renamed": "ClientException"
+        },
+        {
+          "start": 9817,
+          "end": 9818,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
         },
         {
           "start": 10035,
@@ -521219,7 +521325,7 @@
       "original": "hi.java",
       "renamed": "TaskAi.java",
       "inputSha256": "7b49ed2c4fa5aec97049a69d8983851483d329444750cf4bb8ce9a60d4f11881",
-      "outputSha256": "369053c91989d8d89f572957583a4fe8032a13d8a0c74028d679f1d07133b995",
+      "outputSha256": "4250cc4a95b6f0754f7267db48ef930b5c2f2cc7fb138ba8b1647a2d309fd24b",
       "edits": [
         {
           "start": 71,
@@ -521332,6 +521438,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 1120,
+          "end": 1121,
+          "symbol": "M:hi.a(Lfs;B)V",
+          "original": "a",
+          "renamed": "sendWarningChat"
         },
         {
           "start": 1123,
@@ -522540,6 +522653,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 23609,
+          "end": 23610,
+          "symbol": "M:hi.a(Lfs;I)V",
+          "original": "a",
+          "renamed": "sendTurnChat"
+        },
+        {
           "start": 23611,
           "end": 23613,
           "symbol": "C:fs",
@@ -523536,6 +523656,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 42938,
+          "end": 42939,
+          "symbol": "M:hi.a(Lfs;B)V",
+          "original": "a",
+          "renamed": "sendWarningChat"
+        },
+        {
           "start": 42940,
           "end": 42942,
           "symbol": "C:fs",
@@ -524094,6 +524221,20 @@
           "symbol": "C:rg",
           "original": "rg",
           "renamed": "ClientException"
+        },
+        {
+          "start": 59211,
+          "end": 59212,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
+        },
+        {
+          "start": 59370,
+          "end": 59371,
+          "symbol": "M:hi.a(ILjava/util/Random;I)I",
+          "original": "a",
+          "renamed": "randomBelow"
         },
         {
           "start": 59939,
@@ -541905,7 +542046,7 @@
       "original": "ka.java",
       "renamed": "StandardAi.java",
       "inputSha256": "e392b4b0bdcab0c5e133e95b8725ec17fec836a7aec524f7ab82d27a07b80ba0",
-      "outputSha256": "f9c6ab7ee652a23d8658aa5656f94013539b7b92cee6f0f980bd3799e4d58b03",
+      "outputSha256": "19deeaf9d80c0271299c211e7d4c8b7776ee26395a438490b7f8d52e0f029ecc",
       "edits": [
         {
           "start": 44,
@@ -542641,6 +542782,13 @@
           "symbol": "M:dc.a(Lpf;ILpf;Lpf;)V",
           "original": "a",
           "renamed": "restorePendingOrders"
+        },
+        {
+          "start": 22060,
+          "end": 22061,
+          "symbol": "M:ka.a(Lfs;B)V",
+          "original": "a",
+          "renamed": "sendWarningChat"
         },
         {
           "start": 22062,
@@ -543649,6 +543797,13 @@
           "renamed": "nextStar"
         },
         {
+          "start": 51458,
+          "end": 51459,
+          "symbol": "M:ka.a(Lfs;I)V",
+          "original": "a",
+          "renamed": "sendTurnChat"
+        },
+        {
           "start": 51460,
           "end": 51462,
           "symbol": "C:fs",
@@ -544209,6 +544364,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 73935,
+          "end": 73936,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
+        },
+        {
           "start": 74085,
           "end": 74087,
           "symbol": "C:ln",
@@ -544256,6 +544418,13 @@
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "FleetMove"
+        },
+        {
+          "start": 75421,
+          "end": 75422,
+          "symbol": "M:ka.a(Lfs;B)V",
+          "original": "a",
+          "renamed": "sendWarningChat"
         },
         {
           "start": 75424,
@@ -549669,7 +549838,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "a51538cac85743c4f602e805badf9539b0092ecd3952e2276af3a1dedfd71183",
+      "outputSha256": "733a6705ac575877c2598395caf6b8c8806f0c2327ca1b592843605e0411704a",
       "edits": [
         {
           "start": 50,
@@ -552626,6 +552795,13 @@
           "renamed": "Player"
         },
         {
+          "start": 76331,
+          "end": 76332,
+          "symbol": "M:uj.a(Lfs;I)V",
+          "original": "a",
+          "renamed": "sendTurnChat"
+        },
+        {
           "start": 76402,
           "end": 76403,
           "symbol": "M:km.a(ZILln;Lln;)V",
@@ -553380,6 +553556,20 @@
           "symbol": "M:km.a(Lfs;B)V",
           "original": "a",
           "renamed": "proposeAlliance"
+        },
+        {
+          "start": 98960,
+          "end": 98961,
+          "symbol": "M:uj.a(Lfs;B)V",
+          "original": "a",
+          "renamed": "sendWarningChat"
+        },
+        {
+          "start": 99719,
+          "end": 99720,
+          "symbol": "M:uj.a(Lfs;I)V",
+          "original": "a",
+          "renamed": "sendTurnChat"
         },
         {
           "start": 100463,
@@ -554775,6 +554965,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 131626,
+          "end": 131627,
+          "symbol": "M:uj.a(Lfs;B)V",
+          "original": "a",
+          "renamed": "sendWarningChat"
         },
         {
           "start": 132461,
@@ -604583,7 +604780,7 @@
       "original": "qf.java",
       "renamed": "qf.java",
       "inputSha256": "291068786772e48a3faeeda1b201291fd43643cb7b85c205574f55d1a611a7dd",
-      "outputSha256": "072c1acd30a258d89ac9ac99441c7abae2ad81db079979f5887367410534cee2",
+      "outputSha256": "3396ddb052bb6872b0f31da2fdefbd90a19e7b0b64b238fbe95b6bb7594366bb",
       "edits": [
         {
           "start": 97,
@@ -604808,6 +605005,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "TaskAi"
+        },
+        {
+          "start": 2730,
+          "end": 2731,
+          "symbol": "M:hi.a(ILjava/util/Random;I)I",
+          "original": "a",
+          "renamed": "randomBelow"
         },
         {
           "start": 3261,
@@ -614348,7 +614552,7 @@
       "original": "rg.java",
       "renamed": "ClientException.java",
       "inputSha256": "0ffbf12e08c0e178917d532be6faed471cdee72780c06ee822c1e7afb7ed9020",
-      "outputSha256": "6b61b9096529fb61ef660940b3a4d758e6fc2474bb5e0ca0dc1234c1c1b36d19",
+      "outputSha256": "beaa1920395440497f479e07ef679ad124b9aaf9ee82ef66c27fc0b1096d7b8c",
       "edits": [
         {
           "start": 71,
@@ -614589,6 +614793,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 7368,
+          "end": 7369,
+          "symbol": "M:rg.a(IIB)I",
+          "original": "a",
+          "renamed": "randomInRange"
+        },
+        {
           "start": 7479,
           "end": 7481,
           "symbol": "C:hi",
@@ -614596,11 +614807,25 @@
           "renamed": "TaskAi"
         },
         {
+          "start": 7482,
+          "end": 7483,
+          "symbol": "M:hi.a(ILjava/util/Random;I)I",
+          "original": "a",
+          "renamed": "randomBelow"
+        },
+        {
           "start": 7560,
           "end": 7562,
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "TaskAi"
+        },
+        {
+          "start": 7563,
+          "end": 7564,
+          "symbol": "M:hi.a(ILjava/util/Random;I)I",
+          "original": "a",
+          "renamed": "randomBelow"
         },
         {
           "start": 7646,
@@ -651136,7 +651361,7 @@
       "original": "uj.java",
       "renamed": "Ai.java",
       "inputSha256": "cdd97561ed2df1364999bef126a1babb0366676aa6b7b086c8ecc188362631cf",
-      "outputSha256": "9460c77db761b9ae35ed02163b8ca12d168fc4eb83126c33b78609ea995e2988",
+      "outputSha256": "c550aee457a0e30b90b5fe999a0b093d0e5a24f52bb881457c043f0f4411b8e0",
       "edits": [
         {
           "start": 48,
@@ -651167,11 +651392,25 @@
           "renamed": "setChatEnabled"
         },
         {
+          "start": 218,
+          "end": 219,
+          "symbol": "M:uj.a(Lfs;B)V",
+          "original": "a",
+          "renamed": "sendWarningChat"
+        },
+        {
           "start": 220,
           "end": 222,
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 271,
+          "end": 272,
+          "symbol": "M:uj.a(Lfs;I)V",
+          "original": "a",
+          "renamed": "sendTurnChat"
         },
         {
           "start": 273,
@@ -655305,7 +655544,7 @@
       "original": "vc.java",
       "renamed": "vc.java",
       "inputSha256": "9290b76a78aaa85a75268b86c463b295cc7c53a104a5c751617d86abe2716552",
-      "outputSha256": "58280516f06bbc48afb49f6f0395070a48f0535e658f8b5b08b1c5878477f332",
+      "outputSha256": "fadfdecbcbedcc155b2943421c5af8848f4baf8f548f7b797f6ff06ed0d9243a",
       "edits": [
         {
           "start": 87,
@@ -655336,11 +655575,25 @@
           "renamed": "TaskAi"
         },
         {
+          "start": 324,
+          "end": 325,
+          "symbol": "M:hi.a(ILjava/util/Random;I)I",
+          "original": "a",
+          "renamed": "randomBelow"
+        },
+        {
           "start": 377,
           "end": 379,
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "TaskAi"
+        },
+        {
+          "start": 380,
+          "end": 381,
+          "symbol": "M:hi.a(ILjava/util/Random;I)I",
+          "original": "a",
+          "renamed": "randomBelow"
         },
         {
           "start": 438,
@@ -678955,10 +679208,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "61dcba527f14c51294eef339d0bc407e73f126ce78079cd9903e70c10dfee9e2",
+    "rulesSha256": "739063b0515cdaebc14bd54456e4c57788069df0028d148555e6425f24c9c719",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "13ebd216861f7e8f4c6a2e506a8bedd3830ab9dfb9fbae8b57c8625497e65c9c",
+    "outputTreeSha256": "628d3ec646259d136155d66240d8f132a59c6d6d0089c510fd303932e60a7cf1",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

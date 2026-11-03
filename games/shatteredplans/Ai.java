@@ -8,9 +8,9 @@ interface Ai {
 
     public abstract void setChatEnabled(boolean param0, int param1);
 
-    public abstract void a(Player param0, byte param1);
+    public abstract void sendWarningChat(Player param0, byte param1);
 
-    public abstract void a(Player param0, int param1);
+    public abstract void sendTurnChat(Player param0, int param1);
 
     public abstract int getPersonality(boolean param0);
 

@@ -119,7 +119,7 @@ final class d {
           if (param0 != -12) {
             d.clearStatics(-116);
           }
-          stackIn_3_0 = param1 + TaskAi.a(1 - param1 + param2, param3, -11);
+          stackIn_3_0 = param1 + TaskAi.randomBelow(1 - param1 + param2, param3, -11);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

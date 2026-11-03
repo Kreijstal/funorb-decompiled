@@ -615,7 +615,7 @@ class StandardAi implements Ai {
         return;
     }
 
-    public final void a(Player param0, byte param1) {
+    public final void sendWarningChat(Player param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var7 = 0;
@@ -1500,7 +1500,7 @@ class StandardAi implements Ai {
         }
     }
 
-    public final void a(Player param0, int param1) {
+    public final void sendTurnChat(Player param0, int param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -2153,7 +2153,7 @@ class StandardAi implements Ai {
               }
               if (var5 != -1) {
                 this.field_j.a(0, (byte) 93, var4, this.field_n, var5);
-                this.field_c[this.field_k] = ClientException.a(6, 3, (byte) 121);
+                this.field_c[this.field_k] = ClientException.randomInRange(6, 3, (byte) 121);
               }
             }
             this.field_j.a((byte) -63, this.field_n, var4);
@@ -2199,7 +2199,7 @@ class StandardAi implements Ai {
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 >= -124) {
-          this.a((Player) null, (byte) -78);
+          this.sendWarningChat((Player) null, (byte) -78);
         }
         var4 = 0;
         var5 = ik.a(ValidationState.field_c, this.field_o, (byte) 49);

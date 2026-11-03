@@ -241,7 +241,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             var25 = -var9 + di.field_m;
             var26 = var6 - var9;
             var27_int = 440 * var25 / var26;
-            var28 = var27_int + ClientException.a(64, -64, (byte) 109);
+            var28 = var27_int + ClientException.randomInRange(64, -64, (byte) 109);
             if (var28 < 0) {
               var28 = 0;
             }
@@ -249,7 +249,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var28 = 255;
             }
             SoftwareRasterizer.setPixel(16 + var17, var19 + 2, (var28 >> 2) * 65793);
-            var28Lifetime1 = -40 + (var27_int + ClientException.a(64, -64, (byte) 114));
+            var28Lifetime1 = -40 + (var27_int + ClientException.randomInRange(64, -64, (byte) 114));
             if (var28Lifetime1 < 0) {
               var28Lifetime1 = 0;
             }
@@ -257,7 +257,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var28Lifetime1 = 255;
             }
             SoftwareRasterizer.setPixel(3 + var17, var19 + 3, 65793 * (var28Lifetime1 >> 2));
-            var28Lifetime2 = ClientException.a(64, -64, (byte) 98) + (var27_int - 80);
+            var28Lifetime2 = ClientException.randomInRange(64, -64, (byte) 98) + (var27_int - 80);
             if (var28Lifetime2 < 0) {
               var28Lifetime2 = 0;
             }
@@ -265,7 +265,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var28Lifetime2 = 255;
             }
             SoftwareRasterizer.setPixel(var17 + 12, var19, 65793 * (var28Lifetime2 >> 2));
-            var28Lifetime3 = -120 + var27_int + ClientException.a(64, -64, (byte) 126);
+            var28Lifetime3 = -120 + var27_int + ClientException.randomInRange(64, -64, (byte) 126);
             if (var28Lifetime3 < 0) {
               var28Lifetime3 = 0;
             }

@@ -276,7 +276,7 @@ final class IsolationistAi extends StandardAi {
                 }
                 if (var6 != -1) {
                   this.field_j.a(0, (byte) -118, var5, this.field_n, var6);
-                  this.field_c[var4Lifetime1] = ClientException.a(6, 3, (byte) 118);
+                  this.field_c[var4Lifetime1] = ClientException.randomInRange(6, 3, (byte) 118);
                 }
               }
               this.field_j.a((byte) -63, this.field_n, var5);

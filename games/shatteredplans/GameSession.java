@@ -1973,7 +1973,7 @@ final class GameSession implements AiHost {
             this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
-            this.field_s[param1.field_x].a(param0, 7686);
+            this.field_s[param1.field_x].sendTurnChat(param0, 7686);
           }
           if (!param2) {
             this.queueFleetMove(true, 25, (Star) null, (Star) null);
@@ -2529,7 +2529,7 @@ final class GameSession implements AiHost {
           param2.field_A = param2.field_A | 1 << param1.field_x;
           if ((1 << param2.field_x & param1.field_A) != 0) {
             if (null != this.field_s[param2.field_x]) {
-              this.field_s[param2.field_x].a(param1, (byte) -42);
+              this.field_s[param2.field_x].sendWarningChat(param1, (byte) -42);
             }
             param1.field_f[param2.field_x] = 3;
             param1.field_h[param2.field_x] = true;
@@ -2545,7 +2545,7 @@ final class GameSession implements AiHost {
             }
           }
           if (this.field_s[param2.field_x] != null) {
-            this.field_s[param2.field_x].a(param1, param0 ^ -7737);
+            this.field_s[param2.field_x].sendTurnChat(param1, param0 ^ -7737);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3417,7 +3417,7 @@ final class GameSession implements AiHost {
           }
           this.a(this.field_n, param1 + 27510);
           if (null != this.field_s[param0.field_x]) {
-            this.field_s[param0.field_x].a(param2, (byte) -42);
+            this.field_s[param0.field_x].sendWarningChat(param2, (byte) -42);
           }
           if (param1 != -27584) {
             this.field_J = (int[]) null;
